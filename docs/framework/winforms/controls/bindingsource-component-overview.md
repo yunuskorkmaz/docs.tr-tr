@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917819"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource Bileşenine Genel Bakış
 <xref:System.Windows.Forms.BindingSource> Bileşen, denetimleri temel alınan bir veri kaynağına bağlama işlemini basitleştirmek için tasarlanmıştır. <xref:System.Windows.Forms.BindingSource> Bileşen hem bir iletken hem de diğer denetimlerin bağlanacağı bir veri kaynağı olarak davranır. Temel alınan veri listesine geçiş yaparken formunuzun veri bağlantısının bir soyutlamasını sağlar. Ayrıca, doğrudan buna veri ekleyebilirsiniz, böylece bileşen bir veri kaynağı olarak çalışır.  
@@ -25,7 +25,7 @@ ms.locfileid: "68364455"
  ![Bağlama kaynağı ve veri bağlama mimarisi](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  Tasarım zamanında, bir veritabanı tablosunun bir veri penceresinden boş bir form üzerine sürüklenmesi gibi bazı eylemler, <xref:System.Windows.Forms.BindingSource> bileşeni oluşturur, temel alınan veri kaynağına bağlar ve tek bir işlemde veri kullanan denetimleri ekler. Ayrıca bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+> Tasarım zamanında, bir veritabanı tablosunun bir veri penceresinden boş bir form üzerine sürüklenmesi gibi bazı eylemler, <xref:System.Windows.Forms.BindingSource> bileşeni oluşturur, temel alınan veri kaynağına bağlar ve tek bir işlemde veri kullanan denetimleri ekler. Ayrıca bkz. [Visual Studio 'da verilere Windows Forms denetimleri bağlama](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>Veri kaynağı olarak BindingSource bileşeni  
  Önce bağlanacak bir liste belirtmeden <xref:System.Windows.Forms.BindingSource> bileşen eklemeye başlayabilirsiniz, bileşen bir liste stili veri kaynağı gibi davranır ve bu eklenen öğeleri kabul eder.  

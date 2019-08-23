@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 525c8332d2884415ccf883dae03866776510f354
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650173"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923320"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>XPathNavigator Kullanarak Düğümleri Eşleştirme
-<xref:System.Xml.XPath.XPathNavigator> Sağlar sınıfını <xref:System.Xml.XPath.XPathNavigator.Matches%2A> bir düğüm bir XPath ifadesi eşleşip eşleşmediğini belirlemek için yöntemi. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi bir XPath ifadesini girdi olarak alır ve döndürür bir <xref:System.Boolean> geçerli düğüm, belirli bir XPath ifadesi eşleşip eşleşmediğini gösterir veya derlenmiş verilen <xref:System.Xml.XPath.XPathExpression> nesne.  
+<xref:System.Xml.XPath.XPathNavigator> Sınıfı ,<xref:System.Xml.XPath.XPathNavigator.Matches%2A> bir düğümün bir XPath ifadesiyle eşleşip eşleşmediğini belirleme yöntemini sağlar. Yöntemi <xref:System.Xml.XPath.XPathNavigator.Matches%2A> , giriş olarak bir XPath ifadesi alır ve geçerli düğümün <xref:System.Boolean> verilen XPath ifadesiyle veya belirtilen derlenmiş <xref:System.Xml.XPath.XPathExpression> nesneyle eşleşip eşleşmediğini gösteren bir döndürür.  
   
-## <a name="matching-nodes"></a>Eşleşen düğümleri  
- <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi döndürür `true` belirtilen XPath ifadesi geçerli düğüm eşleşmesi durumunda. Örneğin, aşağıdaki kod örneğinde <xref:System.Xml.XPath.XPathNavigator.Matches%2A> yöntemi döndürür `true` geçerli düğüm öğesi ise `b`ve öğe `b` öznitelikle `c`.  
+## <a name="matching-nodes"></a>Eşleşen düğümler  
+ Yöntemi, geçerli düğüm belirtilen XPath ifadesiyle eşleşiyorsa döndürür `true`. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Örneğin, aşağıdaki kod örneğinde, <xref:System.Xml.XPath.XPathNavigator.Matches%2A> geçerli düğüm öğesi `b`ise ve öğesinin `b` bir özniteliği `true` `c`varsa yöntemi döndürülür.  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi durumunu değiştirmez <xref:System.Xml.XPath.XPathNavigator>.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Yöntemi ,<xref:System.Xml.XPath.XPathNavigator>öğesinin durumunu değiştirmez.  
   
 ```vb  
 Dim document as XPathDocument = New XPathDocument("input.xml")  

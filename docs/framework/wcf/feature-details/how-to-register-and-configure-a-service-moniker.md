@@ -5,40 +5,40 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: f1f2b462ef0412b0f11a9ba5074f7546e6ee84f2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d14facf435d575b9db5129b732938658c921f97f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643766"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934315"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Nasıl yapılır: Hizmet Bilinen Adını Kaydetme ve Yapılandırma
-Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen adını COM uygulamasından kullanmadan önce gerekli öznitelik türleri COM ile kaydetme ve COM uygulaması ve ad gerekli bağlama ile yapılandırmanız gerekir yapılandırma.  
+Türü belirlenmiş bir sözleşmeyle bir COM uygulaması içinde Windows Communication Foundation (WCF) hizmet bilinen adını kullanmadan önce, gerekli öznitelikli türleri COM 'a kaydetmeniz ve COM uygulamasını ve bilinen bağlamayı gerekli bağlamaya göre yapılandırmanız gerekir yapılandırmada.  
   
-### <a name="to-register-the-required-attributed-types-with-com"></a>Gerekli öznitelik türleri COM ile kaydetmek için  
+### <a name="to-register-the-required-attributed-types-with-com"></a>Gerekli türleri COM 'a kaydetmek için  
   
-1. Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) meta veri sözleşmesi WCF hizmetinden almak için aracı. Bir WCF istemcisi derleme ve bir istemci uygulama yapılandırma dosyası için kaynak kodu oluşturur.  
+1. WCF hizmetinden meta veri sözleşmesini almak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracını kullanın. Bu, bir WCF istemci derlemesi ve bir istemci uygulama yapılandırma dosyası için kaynak kodu oluşturur.  
   
-2. Derlemedeki türleri olarak işaretlendiğinden emin olun `ComVisible`. Bunu yapmak için Visual Studio projesinde AssemblyInfo.cs dosyası şu özniteliği ekleyin.  
+2. Derlemedeki türlerin olarak `ComVisible`işaretlendiğinden emin olun. Bunu yapmak için, Visual Studio projenizdeki AssemblyInfo.cs dosyasına aşağıdaki özniteliği ekleyin.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3. Yönetilen WCF istemcisini bir tanımlayıcı adlı bütünleştirilmiş kodu olarak derle. Bu şifreleme anahtar çifti ile imzalama gerektirir. Daha fazla bilgi için [bir derlemeyi tanımlayıcı adla imzalama](https://go.microsoft.com/fwlink/?LinkId=94874) .NET Geliştirici Kılavuzu'nda.  
+3. Yönetilen WCF istemcisini tanımlayıcı adlı bir derleme olarak derleyin. Bu, bir şifreleme anahtar çiftiyle imza gerektirir. Daha fazla bilgi için bkz. .NET geliştirici kılavuzunda [güçlü bir ada sahip bir derlemeyi imzalama](https://go.microsoft.com/fwlink/?LinkId=94874) .  
   
-4. Derleme kaydı (Regasm.exe) aracını `/tlb` seçenek türleri derleme com ile kaydetmek için  
+4. Derlemeyi com ile derlemeye kaydetme `/tlb` seçeneğiyle birlikte derleme kaydı (Regasm. exe) aracını kullanın.  
   
-5. Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için Genel Derleme Önbelleği (Gacutil.exe) aracını kullanın.  
+5. Derlemeyi genel bütünleştirilmiş kod önbelleğine eklemek için genel bütünleştirilmiş kod önbelleği (Gacutil. exe) aracını kullanın.  
   
     > [!NOTE]
-    >  Derleme imzalama ve Genel Derleme Önbelleği'ne ekleyerek isteğe bağlı adımlardır ancak bunlar derleme zamanında doğru konumda yükleme işlemini kolaylaştırabilir.  
+    > Derlemeyi imzalama ve genel bütünleştirilmiş kod önbelleğine ekleme isteğe bağlı adımlardır, ancak çalışma zamanında derlemeyi doğru konumdan yükleme işlemini basitleştirebilir.  
   
-### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>COM uygulaması ve ad gerekli bağlama yapılandırması ile yapılandırmak için  
+### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>COM uygulamasını ve bilinen bağlamayı gereken bağlama yapılandırması ile yapılandırmak için  
   
-- Bağlama tanımları yerleştirin (tarafından oluşturulan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) oluşturulan istemci uygulama yapılandırma dosyasında) istemci uygulamanın yapılandırma dosyası. Örneğin, bir Visual Basic CallCenterClient.exe adlı 6.0 için yürütülebilir, yapılandırma, yürütülebilir dosya ile aynı dizine içinde CallCenterConfig.exe.config adındaki bir dosyaya yerleştirilmelidir. İstemci uygulaması artık bir ad kullanabilirsiniz. Bağlama yapılandırması bağlama WCF tarafından sağlanan türler standardını birini kullanıyorsanız, gerekli olmadığına dikkat edin.  
+- İstemci uygulamasının yapılandırma dosyasındaki bağlama tanımlarını (oluşturulan istemci uygulama yapılandırma dosyasında bulunan [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan) yerleştirin. Örneğin, CallCenterClient. exe adlı bir Visual Basic 6,0 yürütülebilir dosyası için yapılandırma, yürütülebilir dosya ile aynı dizin içinde CallCenterConfig. exe. config adlı bir dosyaya yerleştirilmelidir. İstemci uygulaması artık bilinen adı kullanabilir. WCF tarafından sunulan standart bağlama türlerinden birini kullanıyorsanız bağlama yapılandırmasının gerekli olmadığını unutmayın.  
   
-     Şu tür kaydedilir.  
+     Aşağıdaki tür kaydedilir.  
   
     ```  
     using System.ServiceModel;  
@@ -55,7 +55,7 @@ Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen ad
     }  
     ```  
   
-     Uygulama kullanılarak açılır bir `wsHttpBinding` bağlama. Aşağıdaki örnek ad dizeleri, belirtilen tür ve uygulama yapılandırması için kullanılır.  
+     Uygulama, `wsHttpBinding` bağlama kullanılarak gösterilir. Verilen tür ve uygulama yapılandırması için aşağıdaki örnek bilinen ad dizeleri kullanılır.  
   
     ```  
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -67,7 +67,7 @@ Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen ad
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
-     Bu ad dizeleri içeren derlemeyi bir başvuru ekledikten sonra bir Visual Basic 6.0 uygulamadaki kullanabilirsiniz `IMathService` türleri, aşağıdaki örnek kodda gösterildiği gibi.  
+     Aşağıdaki örnek kodda gösterildiği gibi, `IMathService` türleri içeren derlemeye bir başvuru ekledikten sonra, bir Visual Basic 6,0 uygulaması içinden bu bilinen ad dizelerinin birini kullanabilirsiniz.  
   
     ```  
     Dim MathProxy As IMathService  
@@ -81,21 +81,21 @@ Yazılı sözleşme ile Windows Communication Foundation (WCF) hizmet bilinen ad
     result = MathProxy.Add(3, 5)  
     ```  
   
-     Bu örnekte, bağlama yapılandırması için tanım `Binding1` vb6appname.exe.config gibi istemci uygulaması için uygun şekilde adlandırılmış yapılandırma dosyasında depolanır.  
+     Bu örnekte, bağlama yapılandırması `Binding1` tanımı, istemci uygulaması için vb6appname. exe. config gibi bir uygun şekilde adlı yapılandırma dosyasında depolanır.  
   
     > [!NOTE]
-    >  C#, C++ veya başka bir .NET dil uygulama benzer kodu kullanabilirsiniz.  
+    > Benzer bir kodu, C# C++bir, veya başka bir .NET dil uygulamasında kullanabilirsiniz.  
   
     > [!NOTE]
-    >  : Bilinen ad hatalı veya hizmet kullanılamıyor durumunda çağrısı `GetObject` "Söz dizimi geçersiz" hatası döndürür. Bu hata iletisini alırsanız kullandığınız ad doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
+    > : Bilinen ad yanlış biçimlendirilmişse veya hizmet kullanılamıyorsa, çağrısı `GetObject` "geçersiz sözdizimi" hatası döndürür. Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
-     Bu konu hizmet bilinen adı VB 6.0 koddan kullanmaya odaklanmıştır olsa da, diğer dillerdeki hizmet bilinen adı kullanabilirsiniz. Bir bilinen ad alanından kullanırken C++ oluşturulan derleme aşağıdaki kodda gösterildiği gibi "ile no_namespace named_guids raw_interfaces_only" aktarılacaksa Svcutil.exe kod.  
+     Bu konu, VB 6,0 kodundaki hizmet bilinen adını kullanmaya odaklansa da diğer dillerden bir hizmet bilinen adı kullanabilirsiniz. Koddan bilinen bir ad kullanırken C++ , Svcutil. exe tarafından oluşturulan derleme aşağıdaki kodda gösterildiği gibi "no_namespace named_guids raw_interfaces_only" ile içeri aktarılmalıdır.  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     Tüm yöntemler döndürür, bu içeri aktarılan Arabirim tanımları değiştirir bir `HResult`. Herhangi bir dönüş değeri, out parametreleri içine dönüştürülür. Genel yöntemler yürütülmesini aynı kalır. Bu proxy üzerinde bir yöntemi çağırırken özel durumun nedenini belirlemenize olanak sağlar. Bu işlev, yalnızca C++ kodundan kullanılabilir.  
+     Bu, içeri aktarılan arabirim tanımlarını tüm yöntemlerin bir `HResult`döndürmesini sağlayacak şekilde değiştirir. Diğer tüm dönüş değerleri Out parametrelerine dönüştürülür. Yöntemlerin genel yürütülmesi aynı kalır. Bu, proxy üzerinde bir yöntemi çağırırken bir özel durumun nedenini belirlemenizi sağlar. Bu işlevsellik yalnızca C++ koddan kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

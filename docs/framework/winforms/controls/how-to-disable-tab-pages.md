@@ -9,30 +9,30 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 888228c28dce591b237be16b6a321afee0105208
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013458"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967146"
 ---
 # <a name="how-to-disable-tab-pages"></a>Nasıl yapılır: Sekme Sayfalarını Devre Dışı Bırakma
-Bazı durumlarda, Windows Forms uygulamanızın içinden kullanılabilir verilere erişimi kısıtlamak isteyebilirsiniz. Sekme denetimi sekmesi sayfalarında görüntülenen verileri varsa, bunun bir örneği olabilir; Yöneticiler, konuk veya alt düzey kullanıcılardan kısıtlamak istiyorsanız bir sekme sayfası hakkında bilgi olabilir.  
+Bazı durumlarda Windows Forms uygulamanızda bulunan verilere erişimi kısıtlamak isteyeceksiniz. Bunun bir örneği, bir sekme denetiminin sekme sayfalarında görüntülenecek verileriniz olabilir. Yöneticiler, Konuk veya alt düzey kullanıcılardan kısıtlamak istediğiniz bir sekme sayfası hakkında bilgi sağlayabilir.  
   
-### <a name="to-disable-tab-pages-programmatically"></a>Program aracılığıyla sekme sayfalarını devre dışı bırakmak için  
+### <a name="to-disable-tab-pages-programmatically"></a>Sekme sayfalarını programlı olarak devre dışı bırakmak için  
   
-1. Sekme denetim işlemek için kod yazma <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> olay. Kullanıcı sekmeden diğerine geçtiğinde başlatan olay budur.  
+1. Sekme denetiminin <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> olayını işlemek için kod yazın. Bu, Kullanıcı bir sekmeden sonrakine geçtiğinde oluşturulan olaydır.  
   
-2. Kimlik bilgilerini denetleyin. Sunulan bilgilere bağlı olarak, sekmesini görüntülemek kullanıcı izin vermeden önce kullanıcı ile oturum açmış kullanıcı adı veya diğer türde bir kimlik bilgileri denetlemek isteyebilirsiniz.  
+2. Kimlik bilgilerini denetleyin. Sunulan bilgilere bağlı olarak, kullanıcının sekmeyi görüntülemesine izin vermeden önce kullanıcının oturum açtığı Kullanıcı adını veya başka bir kimlik bilgileri biçimini denetlemek isteyebilirsiniz.  
   
-3. Kullanıcı kimlik bilgilerinin doğru olduğundan, tıklandığını sekmeyi görüntüler. Kullanıcı uygun kimlik bilgilerine sahip değilse, bir ileti kutusu görüntülemek veya gösteren başka bir kullanıcı arabirimi olmayan erişimi ve ilk sekmesine geri dönün.  
+3. Kullanıcının uygun kimlik bilgileri varsa, tıklanan sekmeyi görüntüleyin. Kullanıcı uygun kimlik bilgilerine sahip değilse, bir ileti kutusu veya erişimleri olmadığını belirten başka bir kullanıcı arabirimi görüntüleyin ve ilk sekmesine geri dönün.  
   
     > [!NOTE]
-    >  Üretim uygulamalarınızı bu işlevselliği uygulamak, formun sırasında bu kimlik bilgisi denetimi gerçekleştirebilir <xref:System.Windows.Forms.Form.Load> olay. Bu, bir çok daha net yaklaşım programlamaya olduğu herhangi bir kullanıcı arabirimi gösterilmeden önce sekmesini gizlemek olanak tanır. Aşağıda kullanılan metodolojiyi (kimlik denetimi ve sekme sırasında devre dışı bırakma <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> olay) yalnızca tanım amaçlıdır.  
+    > Bu işlevselliği üretim uygulamalarınızda uyguladığınızda, formun <xref:System.Windows.Forms.Form.Load> olayında bu kimlik bilgisi denetimini gerçekleştirebilirsiniz. Bu, programlama için çok daha temiz bir yaklaşım olan herhangi bir kullanıcı arabirimi gösterilmeden önce sekmeyi gizlemenizi sağlar. Aşağıda kullanılan metodolojide ( <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> olay sırasında, kimlik bilgilerinin denetlenmesi ve sekmenin devre dışı bırakılması) tanım amaçlıdır.  
   
-4. İkiden fazla sekme sayfaları varsa, isteğe bağlı olarak orijinal olandan arklı bir sekme sayfası görüntüler.  
+4. İsteğe bağlı olarak, ikiden fazla sekme sayfanız varsa orijinalden farklı bir sekme sayfası görüntüleyin.  
   
-     Aşağıdaki örnekte bir <xref:System.Windows.Forms.CheckBox> denetimi, uygulama tarafından erişim için sekmesinde değişir için kimlik bilgileri ölçüt olarak denetimi yerine kullanılır. Zaman <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> olayı oluşturulur, kimlik bilgisi onay true ise (diğer bir deyişle, onay kutusu işaretliyse) ve seçili `TabPage2` (Bu örnekte, gizli bilgilerle sekme), ardından `TabPage2` görüntülenir. Aksi takdirde, `TabPage3` görüntülenir ve bunlar yoktu uygun erişim ayrıcalıkları belirten kullanıcıya bir ileti kutusu gösterilir. Aşağıdaki kod bir formla varsayar bir <xref:System.Windows.Forms.CheckBox> denetimi (`CredentialCheck`) ve bir <xref:System.Windows.Forms.TabControl> üç sekme sayfaları denetimi.  
+     Aşağıdaki örnekte, sekmeye erişim ölçütleri <xref:System.Windows.Forms.CheckBox> uygulamaya göre farklılık gösterebileceğinden, kimlik bilgilerini denetlemek yerine bir denetim kullanılır. Olay ortaya çıktığında, kimlik bilgisi denetimi true ise (yani, onay kutusu işaretliyse) ve seçili sekme (gizli bilgilerin bulunduğu sekme) `TabPage2` ise `TabPage2` görüntülenir. <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> Aksi takdirde `TabPage3` , görüntülenir ve kullanıcıya uygun erişim ayrıcalıklarına sahip olmadığını belirten bir ileti kutusu gösterilir. Aşağıdaki kod, <xref:System.Windows.Forms.CheckBox> denetimi (`CredentialCheck`) ve <xref:System.Windows.Forms.TabControl> üç sekme sayfası olan bir denetimi olan bir formu varsayar.  
   
     ```vb  
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged  
@@ -89,7 +89,7 @@ Bazı durumlarda, Windows Forms uygulamanızın içinden kullanılabilir veriler
        }  
     ```  
   
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.tabControl1.SelectedIndexChanged +=   
@@ -105,5 +105,5 @@ Bazı durumlarda, Windows Forms uygulamanızın içinden kullanılabilir veriler
 
 - [TabControl Denetimine Genel Bakış](tabcontrol-control-overview-windows-forms.md)
 - [Nasıl yapılır: Sekme sayfasına denetim ekleme](how-to-add-a-control-to-a-tab-page.md)
-- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleyip](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Nasıl yapılır: Windows Forms Tabcontrol'un görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Windows Forms TabControl ile sekme ekleme ve kaldırma](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Nasıl yapılır: Windows Forms TabControl görünümünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

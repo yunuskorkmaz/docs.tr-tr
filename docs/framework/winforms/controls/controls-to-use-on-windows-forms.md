@@ -5,18 +5,18 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930205"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows Forms'ta Kullanılacak Denetimler
 Aşağıda, Windows Forms kullanılabilen denetimlerin ve bileşenlerin alfabetik bir listesi verilmiştir. Bu bölümde ele alınan Windows Forms denetimlerine ek olarak, Windows Forms için ActiveX ve özel denetimler ekleyebilirsiniz. Burada listelenmesi gereken denetimi bulamazsanız, kendi kendinize de oluşturabilirsiniz. Ayrıntılar için bkz. [tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md). İhtiyacınız olan denetimi seçme hakkında daha fazla bilgi için bkz. [Windows Forms denetimleri işleve göre](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Visual Basic denetimleri, .NET Framework tarafından sunulan sınıfları temel alır.  
+> Visual Basic denetimleri, .NET Framework tarafından sunulan sınıfları temel alır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)  

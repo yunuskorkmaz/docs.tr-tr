@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939021"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize Yöntemi
-Bu okuyucu modülü dosya adının yanı sıra, ile ilişkili meta verileri alma arabirimiyle sembol okuyucu başlatır.  
+Sembol okuyucuyu, bu okuyucunun ilişkilendirildiği meta veri alma arabirimiyle birlikte modülün dosya adı ile başlatır.  
   
 > [!NOTE]
->  Bu yöntem yalnızca bir kez çağrılabilir ve diğer okuyucu yöntemleri önce çağrılmalıdır.  
+> Bu yöntem yalnızca bir kez çağrılabilir ve diğer herhangi bir okuyucu yönteminden önce çağrılmalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,25 +42,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametreler  
  `importer`  
- [in] İle bu okuyucu ilişkilendirilecek olan meta verileri alma arabirim.  
+ 'ndaki Bu okuyucunun ilişkilendirileceği meta veri alma arabirimi.  
   
  `filename`  
- [in] Modül dosya adı. Kullanabileceğiniz `pIStream` parametresi yerine.  
+ 'ndaki Modülün dosya adı. Bunun yerine `pIStream` parametresini kullanabilirsiniz.  
   
  `searchPath`  
- [in] Arama yolu. Bu parametre isteğe bağlıdır.  
+ 'ndaki Arama yolu. Bu parametre isteğe bağlıdır.  
   
  `pIStream`  
- [in] Filename parametresi bir alternatif olarak kullanılan dosya akışı.  
+ 'ndaki Dosya akışı, filename parametresine alternatif olarak kullanılır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAIL veya başka bir hata kodu.  
+ Yöntem başarılı olursa S_OK; Aksi takdirde, E_FAıL veya diğer bir hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yalnızca birini belirtmeniz gereken `filename` veya `pIStream` parametreleri, her ikisini birden değil. `searchPath` Parametresi isteğe bağlıdır.  
+ `filename` Ya`pIStream` da parametrelerinden yalnızca birini belirtmeniz gerekir. `searchPath` Parametresi isteğe bağlıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

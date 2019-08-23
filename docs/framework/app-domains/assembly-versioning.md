@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d295f394a9ce7f038e2c64d42193e2d18040a98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921660"
 ---
 # <a name="assembly-versioning"></a>Derleme Sürümü Oluşturma
 Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma işlemi, derleme düzeyinde gerçekleşir. Bir derlemenin belirli sürümü ve bağımlı derlemelerin sürümleri, derlemenin bildirimine kaydedilir. Çalışma zamanı için varsayılan sürüm ilkesi, yapılandırma dosyalarındaki sürüm ilkelerinde açıkça geçersiz kılınmadığı sürece (uygulama yapılandırma dosyası, yayımcı ilke dosyası ve bilgisayar yöneticisinin yapılandırma dosyası) uygulamaların yalnızca yapılandırıldığı ve test edildiği sürümlerle çalışmasıdır.  
   
 > [!NOTE]
->  Sürüm oluşturma yalnızca tanımlayıcı ada sahip derlemeler üzerinde yapılır.  
+> Sürüm oluşturma yalnızca tanımlayıcı ada sahip derlemeler üzerinde yapılır.  
   
  Çalışma zamanı, bir derleme bağlama isteğini çözmek için birkaç adım gerçekleştirir:  
   
@@ -31,13 +31,13 @@ Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma i�
   
 3. Orijinal derleme başvurusundan ve yapılandırma dosyalarında belirtilen yeniden yönlendirmelerden doğru derlemeyi belirler ve çağıran derlemeye bağlanacak olan sürümü belirler.  
   
-4. Genel derleme önbelleğini, kod tabanlarında belirtilen yapılandırma dosyalarını ve uygulamanın dizinini ve alt dizinleri algılama kurallarını kullanarak içinde açıklanan ardından denetimleri [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+4. Yapılandırma dosyalarında belirtilen genel derleme önbelleğini ve kod temellerini denetler ve [çalışma zamanının derlemeleri nasıl](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)konumlandırdığını açıklanan yoklama kurallarını kullanarak uygulamanın dizinini ve alt dizinlerini denetler.  
   
- Bu adımlar aşağıda gösterilmiştir:  
+ Aşağıdaki çizimde bu adımlar gösterilmektedir:  
   
- ![Derlemede bağlama isteği çözüm adımları gösteren diyagram.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
+ ![Derleme bağlama isteği çözümlemesindeki adımları gösteren diyagram.](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
- Uygulamaları yapılandırma hakkında daha fazla bilgi için bkz. [yapılandırma uygulamaları](../../../docs/framework/configure-apps/index.md). Bağlama ilkesi hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Uygulamaları yapılandırma hakkında daha fazla bilgi için bkz. [uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md). Bağlama ilkesi hakkında daha fazla bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="version-information"></a>Sürüm Bilgileri  
  Her derlemenin sürüm bilgisini ifade etmek için iki farklı yolu vardır:  
@@ -49,7 +49,7 @@ Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma i�
 ### <a name="assembly-version-number"></a>Derleme Sürüm Numarası  
  Her derleme, kimliğinin bir parçası olarak bir sürüm numarasına sahiptir. Bu nedenle, sürüm numarası farklı olan iki derleme, çalışma zamanı tarafından tamamen farklı derlemeler olarak değerlendirilir. Bu sürüm numarası, fiziksel olarak aşağıdaki biçime sahip dört bölümlü bir dize olarak temsil edilir:  
   
- \<*ana sürüm*>.\< *podverze*>.\< *derleme numarası*>.\< *düzeltme*>  
+ \<*ana sürüm*>. *ikincil sürüm >.* \< *Yapı numarası >.* \< \< *Düzeltme*>  
   
  Örneğin, 1.5.1254.0 sürümü ana sürüm olarak 1, alt sürüm olarak 5, yapı numarası olarak 1254 ve düzeltme numarası olarak da 0 belirtir.  
   
@@ -59,15 +59,15 @@ Ortak dil çalışma zamanını kullanan tüm derlemelerin sürüm oluşturma i�
   
  Çalışma zamanı, normal ve tanımlayıcı ada sahip derlemeleri sürüm oluşturma amacıyla ayırt eder. Sürüm denetleme yalnızca tanımlayıcı ada sahip derlemelerde gerçekleşir.  
   
- Sürüm bağlama ilkeleri belirtme hakkında daha fazla bilgi için bkz: [yapılandırma uygulamaları](../../../docs/framework/configure-apps/index.md). Çalışma zamanı sürüm bilgileri belirli bir derlemeyi bulmak için kullanma hakkında daha fazla bilgi için bkz: [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Sürüm bağlama ilkelerini belirtme hakkında bilgi için bkz. [uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md). Çalışma zamanının belirli bir derlemeyi bulmak için sürüm bilgilerini nasıl kullandığı hakkında bilgi için bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 ### <a name="assembly-informational-version"></a>Derleme Bilgilendirme Sürümü  
  Bilgilendirme sürümü, bir derlemeye yalnızca bilgilendirme amacıyla ek sürüm bilgileri ekleyen bir dizedir; bu bilgi çalışma zamanında kullanılmaz. Metin tabanlı bilgilendirme sürümü, ürünün pazarlama belgelerine, paketlemesine veya ürün adına karşılık gelir ve çalışma zamanı tarafından kullanılmaz. Örneğin, bir bilgilendirme sürümü "Ortak Dil Çalışma Zamanı sürüm 1.0" veya "NET Control SP 2" olabilir. Microsoft Windows'daki dosya özellikleri iletişim kutusunun Sürüm sekmesinde, bu bilgi "Ürün Sürümü" öğesinde görünür.  
   
 > [!NOTE]
->  Herhangi bir metni ayarlayabilseniz de dize derleme sürüm numarası tarafından kullanılan biçimde değilse veya o biçimdeyse ancak jokerler içeriyorsa derleme esnasında bir uyarı iletisi görünür. Bu uyarı zararsızdır.  
+> Herhangi bir metni ayarlayabilseniz de dize derleme sürüm numarası tarafından kullanılan biçimde değilse veya o biçimdeyse ancak jokerler içeriyorsa derleme esnasında bir uyarı iletisi görünür. Bu uyarı zararsız olur.  
   
- Bilgilendirme sürümü <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> özel özniteliği kullanılarak temsil edilir. Bilgilendirme sürümü özniteliği hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md).  
+ Bilgilendirme sürümü <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> özel özniteliği kullanılarak temsil edilir. Bilgilendirici sürüm özniteliği hakkında daha fazla bilgi için bkz. [derleme özniteliklerini ayarlama](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

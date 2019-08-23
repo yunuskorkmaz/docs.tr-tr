@@ -2,87 +2,87 @@
 title: SystemWebRouting Tümleştirme Örneği
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 032be700beaa38ed6c08ed1940aab558b2106591
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650995"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964490"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting Tümleştirme Örneği
-Bu örnek, sınıflarda barındırma katmanın tümleştirmesiyle gösterir <xref:System.Web.Routing> ad alanı. Sınıflarda <xref:System.Web.Routing> ad alanı, doğrudan fiziksel kaynağa karşılık gelmeyen URL'lerini kullanacak şekilde bir uygulama izin verin. Web yönlendirme kullanarak geri gerçek WCF hizmetleri ardından eşlenen HTTP sanal adresleri oluşturmak Geliştirici sağlar. Bu, bir WCF hizmeti bir fiziksel dosya ya da kaynağa gerek kalmadan barındırılması gerekir veya hizmetleri gibi .html veya .aspx dosyaları içermeyen URL'lerle erişilmesi gerektiğinde kullanışlıdır. Bu örnek nasıl kullanılacağını gösterir <xref:System.Web.Routing.RouteTable> global.asax dosyasında tanımlanmış hizmetleri çalıştırmak için eşlenen sanal bir URI'leri oluşturmak için sınıf. 
+Bu örnek, barındırma katmanının <xref:System.Web.Routing> ad alanındaki sınıflarla tümleşmesini gösterir. <xref:System.Web.Routing> Ad alanındaki sınıflar, bir uygulamanın bir fiziksel kaynağa doğrudan karşılık gelen URL 'leri kullanmasına izin verir. Web yönlendirme kullanımı, geliştiricinin daha sonra gerçek WCF hizmetlerine geri eşlenmiş HTTP için sanal adresler oluşturmasına izin verir. Bu, bir WCF hizmeti fiziksel bir dosya veya kaynak gerektirmeden barındırılması gerektiğinde veya. html veya. aspx gibi dosyalar içermeyen URL 'Ler ile erişilmesi gerektiğinde faydalıdır. Bu örnek, <xref:System.Web.Routing.RouteTable> Global. asax içinde tanımlanan çalışan hizmetlerle eşlenen sanal URI 'ler oluşturmak için sınıfını nasıl kullanacağınızı gösterir. 
 
 > [!NOTE]
->  Sınıflarda <xref:System.Web.Routing> ad alanı yalnızca iş için HTTP üzerinden barındırılan hizmetler.  
+> <xref:System.Web.Routing> Ad alanındaki sınıflar yalnızca http üzerinden barındırılan hizmetler için çalışır.  
   
-Bu örnek, iki RSS akışlarını oluşturmak için WCF kullanır: bir `movies` akışı ve `channels` akış. URL'leri, hizmetleri etkinleştirmek için bir uzantı içermiyor ve kayıtlı `Application_Start` yöntemi `Global` türetilmiş sınıf <xref:System.Web.HttpApplication> sınıfı.  
+Bu örnek `movies` `channels` , iki RSS akışı oluşturmak için WCF kullanır: bir akış ve akış. Hizmetleri etkinleştirmeye yönelik URL 'ler bir uzantı içermez ve `Application_Start` <xref:System.Web.HttpApplication> sınıfından türetilen `Global` sınıfın yöntemine kaydedilir.  
   
 > [!NOTE]
->  Bu örnek yalnızca Internet Information Services (IIS) 7.0 çalışır ve daha sonra IIS 6. 0 ' farklı bir yöntem uzantısız URL'lerin desteklemek için kullanır.  
+> Bu örnek yalnızca Internet Information Services (IIS) 7,0 ve üzeri sürümlerde çalışarak IIS 6,0, uzantı-daha seyrek URL 'Leri desteklemek için farklı bir yöntem kullanır.  
 
 #### <a name="to-download-this-sample"></a>Bu örneği indirmek için
   
-Bu örnek, bilgisayarınızda zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+Bu örnek bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+ Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1. Visual Studio kullanarak, WebRoutingIntegration.sln dosyasını açın.  
+1. Visual Studio 'yu kullanarak WebRoutingIntegration. sln dosyasını açın.  
   
-2. Çözümü çalıştırın ve Web geliştirme sunucusunu başlatmak için F5 tuşuna basın.  
+2. Çözümü çalıştırmak ve Web geliştirme sunucusunu başlatmak için F5 'e basın.  
   
-     Bir dizin için örnek listesi görüntülenir. Hiçbir dosya .svc dosya uzantısına sahip olduğuna dikkat edin.  
+     Örnek için bir dizin listesi görüntülenir. . Svc dosya uzantısına sahip bir dosya olmadığını unutmayın.  
   
-3. Adres çubuğuna ekleyin `movies` URL'ye yapılır; bu nedenle BT'nin okur `http://localhost:[port]/movies` ve ENTER tuşuna basın.  
+3. Adres çubuğunda URL 'ye ekleyin `movies` , böylece okur `http://localhost:[port]/movies` ve ENTER tuşuna basın.  
   
-     Film akışı tarayıcıda görüntülenir.  
+     Filmler akışı tarayıcıda görüntülenir.  
   
-4. Adres çubuğuna ekleyin `channels` URL'ye yapılır; bu nedenle olan okuma `http://localhost:[port]/channels` ve ENTER tuşuna basın.  
+4. Adres çubuğunda URL 'ye ekleyin `channels` , böylece okur `http://localhost:[port]/channels` ve ENTER tuşuna basın.  
   
-     Kanalları akış tarayıcıda görüntülenir.  
+     Kanallar akışı tarayıcıda görüntülenir.  
   
-5. ALT + F4 tuşuna basarak Web tarayıcısını kapatın.  
+5. ALT + F4 tuşlarına basarak Web tarayıcısını kapatın.  
   
-     Geliştirme Sunucusu çıkıldı değil, bildirim alanı simgesine sağ tıklayıp **Durdur**.  
+     Geliştirme sunucusu çıkmadığından, bildirim alanı simgesine sağ tıklayın ve **Durdur**' u seçin.  
   
-#### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS içinde barındırıldığında Bu örneği kullanmak için  
+#### <a name="to-use-this-sample-when-hosted-in-iis"></a>IIS 'de barındırıldığında bu örneği kullanmak için  
   
-1. Visual Studio kullanarak, WebRoutingIntegration.sln dosyasını açın.  
+1. Visual Studio 'yu kullanarak WebRoutingIntegration. sln dosyasını açın.  
   
-2. CTRL + SHIFT + B tuşlarına basarak projeyi oluşturun.  
+2. CTRL + SHIFT + B tuşlarına basarak projeyi derleyin.  
   
-3. Internet Information Services (IIS) Yöneticisi'nde bir Web uygulaması oluşturun.  
+3. Internet Information Services (IIS) Yöneticisi 'nde bir Web uygulaması oluşturun.  
   
-    1. IIS Yöneticisi'nde sağ tıklayın **varsayılan Web sitesi** seçip **uygulama ekleme**.  
+    1. IIS Yöneticisi 'nde **varsayılan Web sitesine** sağ tıklayın ve **Uygulama Ekle**' yi seçin.  
   
-    2. İçin **diğer**, yazın `WebRoutingIntegration`.  
+    2. **Diğer ad**için, yazın `WebRoutingIntegration`.  
   
-    3. İçin **fiziksel yolu**, projenin içinde hizmet klasörü seçin.  
+    3. **Fiziksel yol**için, projenin içindeki hizmet klasörünü seçin.  
   
     4. Tuşuna **Tamam**.  
   
-4. Web uygulaması'nı sağ tıklatıp seçerek, uygulamayı başlatmak **uygulamasını Yönet** ardından **Gözat**.  
+4. Web uygulamasına sağ tıklayıp **Uygulamayı Yönet** ' i seçerek uygulamayı başlatın ve sonra da ' yi **inceleyin**.  
   
-5. Adres çubuğuna ekleyin `movies` URL'ye yapılır; bu nedenle olan okuma `http://localhost:[port]/movies` ve ENTER tuşuna basın.  
+5. Adres çubuğunda URL 'ye ekleyin `movies` , böylece okur `http://localhost:[port]/movies` ve ENTER tuşuna basın.  
   
-     Film akışı tarayıcıda görüntülenir.  
+     Filmler akışı tarayıcıda görüntülenir.  
   
-6. Adres çubuğuna ekleyin `channels` URL'ye yapılır; bu nedenle olan okuma `http://localhost:[port]/channels` ve ENTER tuşuna basın.  
+6. Adres çubuğunda URL 'ye ekleyin `channels` , böylece okur `http://localhost:[port]/channels` ve ENTER tuşuna basın.  
   
-     Kanalları akış tarayıcıda görüntülenir.  
+     Kanallar akışı tarayıcıda görüntülenir.  
   
-7. ALT + F4 tuşuna basarak Web tarayıcısını kapatın.  
+7. ALT + F4 tuşlarına basarak Web tarayıcısını kapatın.  
   
- Bu örnek, barındırma katman sınıfları ile oluşturma kapasitesine sahip olduğunu gösterir. <xref:System.Web.Routing> istekler HTTP üzerinden barındırılan hizmetlerin yönlendirme için ad alanı.  
+ Bu örnek, barındırma katmanının http üzerinden barındırılan hizmet isteklerini yönlendirmek için <xref:System.Web.Routing> ad alanındaki sınıflarla birlikte oluşturma yeteneğine sahip olduğunu gösterir.  
   
 > [!NOTE]
->  Varsayılan uygulama havuzu sürüme güncelleştirmelisiniz [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] sürüm 2 ayarlarsanız.  
+> Sürüm 2 olarak ayarlandıysa varsayılan uygulama havuzu sürümünü [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] güncelleştirmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric barındırma ve kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

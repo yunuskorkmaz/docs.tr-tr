@@ -1,5 +1,5 @@
 ---
-title: Şifreleme ve şifresini çözme Visual Basic'de dizeleri
+title: Visual Basic dizeleri şifreleme ve şifresini çözme
 ms.date: 07/20/2015
 helpviewer_keywords:
 - encryption [Visual Basic], strings
@@ -7,72 +7,72 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8691fedb537d1aa588eaac61624b445da64d1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024488"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944421"
 ---
-# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>İzlenecek yol: Şifreleme ve şifresini çözme Visual Basic'de dizeleri
-Bu izlenecek yol size nasıl kullanılacağını gösterir <xref:System.Security.Cryptography.DESCryptoServiceProvider> şifreleme ve şifre çözme şifreleme hizmeti sağlayıcısı (CSP) sürümünü Üçlü Veri şifreleme standardı kullanarak dizeleri için sınıfı (<xref:System.Security.Cryptography.TripleDES>) algoritması. İlk adım, 3DES algoritmasını kapsüller ve şifrelenmiş verileri base-64 kodlu bir dize depolayan basit bir sarmalayıcı sınıf oluşturmaktır. Daha sonra bu sarmalayıcı, güvenli bir şekilde bir ortak olarak erişilebilen bir metin dosyasına özel kullanıcı verilerini depolamak için kullanılır.  
+# <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>İzlenecek yol: Visual Basic dizeleri şifreleme ve şifresini çözme
+Bu izlenecek yol, Üçlü Veri şifreleme standardı <xref:System.Security.Cryptography.DESCryptoServiceProvider> (<xref:System.Security.Cryptography.TripleDES>) algoritmasının şifreleme hizmeti sağlayıcısı (CSP) sürümünü kullanarak dizeleri şifrelemek ve şifrelerini çözmek için sınıfını nasıl kullanacağınızı gösterir. İlk adım, 3DES algoritmasını kapsülleyen bir basit sarmalayıcı sınıfı oluşturmak ve şifrelenmiş verileri Base-64 kodlu bir dize olarak depolar. Daha sonra, bu sarmalayıcı özel kullanıcı verilerini genel olarak erişilebilen bir metin dosyasında güvenli bir şekilde depolamak için kullanılır.  
   
- Şifreleme (parolalar gibi) kullanıcı parolalarını korumak için ve kimlik bilgileri yetkisiz kullanıcılar tarafından okunamaz hale getirmek için kullanabilirsiniz. Bu kullanıcının varlıkları korur ve takası sağlayan çalınmasını, gelen bir yetkili kullanıcı kimliğinin koruyabilirsiniz. Şifreleme, ayrıca yetkisiz kullanıcılar tarafından erişilebilir bir kullanıcının verileri koruyabilirsiniz.  
+ Şifreleme kullanarak Kullanıcı gizli dizilerini koruyabilir (örneğin, parolalar) ve kimlik bilgilerini yetkisiz kullanıcılar tarafından okunamaz hale getirebilirsiniz. Bu, kullanıcının varlıklarını koruyan ve Red olmayan bir kullanıcının kimliğinin çalınma karşı korunmasına izin verebilir. Şifreleme, kullanıcının verilerine yetkisiz kullanıcıların erişmesini da koruyabilir.  
   
- Daha fazla bilgi için [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md).  
+ Daha fazla bilgi için bkz. [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
->  Daha fazla olduğundan Rijndael (artık Gelişmiş Şifreleme Standardı [AES] adlandırılır) ve Üçlü Veri Şifreleme Standardı (3DES) algoritmaları DES değerinden daha yüksek güvenlik sağlanabilmesi işlem bakımından yoğun. Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.DES> ve <xref:System.Security.Cryptography.Rijndael>.  
+> Rijndadel (şimdi Gelişmiş Şifreleme Standardı [AES] olarak adlandırılır) ve üçlü veri şifreleme standardı (3DES) algoritmaları, daha fazla hesaplama yoğunluğu sağladığından DES 'ten daha fazla güvenlik sağlar. Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.DES> ve <xref:System.Security.Cryptography.Rijndael>.  
   
-### <a name="to-create-the-encryption-wrapper"></a>Şifreleme sarmalayıcı oluşturmak için  
+### <a name="to-create-the-encryption-wrapper"></a>Şifreleme sarmalayıcısı oluşturmak için  
   
-1. Oluşturma `Simple3Des` şifreleme ve şifre çözme yöntemleri yalıtılacak sınıfı.  
+1. Şifreleme ve şifre çözme yöntemlerini kapsüllemek için sınıfıoluşturun.`Simple3Des`  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. Şifreleme ad alanı alma içeren dosyasının başlangıcına ekleyin `Simple3Des` sınıfı.  
+2. `Simple3Des` Sınıfını içeren dosyanın başlangıcına şifreleme ad alanı için bir içeri aktarma ekleyin.  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. İçinde `Simple3Des` sınıfında, 3DES şifreleme hizmeti sağlayıcısı depolamak için özel bir alan ekleyin.  
+3. `Simple3Des` Sınıfında, 3DES şifreleme hizmeti sağlayıcısını depolamak için bir özel alan ekleyin.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4. Belirtilen anahtarı karmada bir bayt dizisi olarak belirtilen uzunlukta oluşturan özel bir yöntem ekleyin.  
+4. Belirtilen anahtarın karmasından belirtilen uzunlukta bir bayt dizisi oluşturan özel bir yöntem ekleyin.  
   
      [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5. 3DES şifreleme hizmeti sağlayıcısı'nı başlatmak için bir oluşturucu ekleyin.  
+5. 3DES şifreleme hizmeti sağlayıcısını başlatmak için bir Oluşturucu ekleyin.  
   
-     `key` Parametre denetimlerini `EncryptData` ve `DecryptData` yöntemleri.  
+     `key` Parametresi `EncryptData` ve yöntemlerini`DecryptData` denetler.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6. Bir dize şifreler genel bir yöntem ekleyin.  
+6. Bir dizeyi şifreleyen ortak bir yöntem ekleyin.  
   
      [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7. Bir dize şifresini çözer genel bir yöntem ekleyin.  
+7. Bir dizenin şifresini çözdüğü bir genel yöntem ekleyin.  
   
      [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
-     Sarmalayıcı sınıf artık kullanıcı varlıkları korumak için kullanılabilir. Bu örnekte, güvenli bir şekilde bir ortak olarak erişilebilen bir metin dosyasına özel kullanıcı verilerini depolamak için kullanılır.  
+     Sarmalayıcı sınıfı artık Kullanıcı varlıklarını korumak için kullanılabilir. Bu örnekte, özel kullanıcı verilerini genel olarak erişilebilen bir metin dosyasında güvenli bir şekilde depolamak için kullanılır.  
   
-### <a name="to-test-the-encryption-wrapper"></a>Şifreleme sarmalayıcı test etmek için  
+### <a name="to-test-the-encryption-wrapper"></a>Şifreleme sarmalayıcısı 'ı test etmek için  
   
-1. Ayrı bir sınıf sarmalayıcının kullanan bir yöntem ekleyin `EncryptData` kullanıcının Belgelerim klasörünü string'i şifreleyin ve kullanıcıya yazmak için yöntemi.  
+1. Ayrı bir sınıfta, bir dizeyi şifrelemek ve kullanıcının Belgelerim klasörüne yazmak için `EncryptData` sarmalayıcının yöntemini kullanan bir yöntem ekleyin.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. Kullanıcıdan şifreli dize okuyan bir yöntem, kullanıcının Belgelerim klasörünü ve sarmalayıcının dizesiyle şifresini çözer ekleme `DecryptData` yöntemi.  
+2. Kullanıcının Belgelerim klasöründeki şifreli dizeyi okuyan ve sarmalayıcı `DecryptData` yöntemiyle dizenin şifresini çözdüğü bir yöntem ekleyin.  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. Çağırmak için kullanıcı arabirimi kod ekleyin `TestEncoding` ve `TestDecoding` yöntemleri.  
+3. `TestEncoding` Ve`TestDecoding` yöntemlerini çağırmak için Kullanıcı arabirimi kodu ekleyin.  
   
 4. Uygulamayı çalıştırın.  
   
-     Uygulamayı test ettiğinizde, yanlış parola sağlarsanız, bu verilerin şifresini çözecek değil, dikkat edin.  
+     Uygulamayı test ettiğinizde, yanlış parola sağlarsanız verilerin şifresini çözmediğine dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

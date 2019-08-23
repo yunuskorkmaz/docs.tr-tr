@@ -11,15 +11,15 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: 8374cdf6526061dfd463574887c2e98d25010910
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c027964d185d7f69c0a56a4386bedc2d8f9d2eac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912331"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit Deyimi (Visual Basic)
-Bir dosyadaki tüm değişkenleri açık bildirimini zorlar ya da örtük değişkenler bildirimleri sağlar.  
+Bir dosyadaki tüm değişkenlerin açık bildirimini zorlar veya değişken örtülü bildirimlere izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,38 +29,38 @@ Option Explicit { On | Off }
   
 ## <a name="parts"></a>Bölümler  
  `On`  
- İsteğe bağlı. Sağlar `Option Explicit` denetleniyor. Varsa `On` veya `Off` belirtilmezse, varsayılan `On`.  
+ İsteğe bağlı. Denetlemeye `Option Explicit` izin vermez. Veya belirtilmemişse, varsayılan olur `On`. `On` `Off`  
   
  `Off`  
- İsteğe bağlı. Devre dışı bırakır `Option Explicit` denetleniyor.  
+ İsteğe bağlı. Denetlemeyi `Option Explicit` devre dışı bırakır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Zaman `Option Explicit On` veya `Option Explicit` gerekir açıkça bildirdiğiniz tüm değişkenleri kullanarak bir dosyada görünür `Dim` veya `ReDim` deyimleri. Bildirilmemiş bir değişken adını kullanmayı denerseniz, derleme sırasında bir hata oluşur. `Option Explicit Off` İfadesi örtük bir değişken bildirimi sağlar.  
+ Ya da bir dosyada göründüğünde, ya `ReDim` da `Dim` deyimlerini kullanarak tüm değişkenleri açıkça bildirmeniz gerekir. `Option Explicit` `Option Explicit On` Bildirilmemiş bir değişken adı kullanmaya çalışırsanız, derleme zamanında bir hata oluşur. İfade `Option Explicit Off` , değişkenlerin örtük bildirimine izin verir.  
   
- Kullandıysanız, `Option Explicit` deyimi, bir dosyada başka bir kaynak kod deyimlerini önce görünmelidir.  
+ Kullanıldıysa, `Option Explicit` deyimi diğer kaynak kodu deyimlerinden önce bir dosyada görünmelidir.  
   
 > [!NOTE]
->  Ayarı `Option Explicit` için `Off` genellikle iyi bir uygulama değildir. Bir değişken adı program çalıştırıldığında bu beklenmeyen sonuçlara neden olduğu bir veya daha fazla konumda yazsanız.  
+> Ayarı `Option Explicit`,genellikleiyi biruygulamadır.`Off` Bir veya daha fazla konumda değişken adı yanlış yazdığınızda, program çalıştırıldığında beklenmedik sonuçlara neden olabilir.  
   
-## <a name="when-an-option-explicit-statement-is-not-present"></a>Ne zaman Option Explicit deyimi mevcut değil  
- Kaynak kodu içermiyorsa bir `Option Explicit` deyimi **Option Explicit** ayarını [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisini kullanılıyorsa [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneği kullanılır.  
+## <a name="when-an-option-explicit-statement-is-not-present"></a>Açık bir seçenek Ifade yoksa  
+ Kaynak kodu bir `Option Explicit` ifade içermiyorsa, derleme sayfasındaki **Açık ayar seçeneği** , [Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa, [/OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneği kullanılır.  
   
-#### <a name="to-set-option-explicit-in-the-ide"></a>Option Explicit IDE içinde ayarlamak için  
+#### <a name="to-set-option-explicit-in-the-ide"></a>IDE 'de Option Explicit ayarlamak için  
   
-1. İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Tıklayın **derleme** sekmesi.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Değer kümesindeki **Option Explicit** kutusu.  
+3. **Açık** kutuda değeri ayarlayın.  
   
- Yeni bir proje oluşturduğunuzda **Option Explicit** ayarını **derleme** sekmesinde ayarlanmış **Option Explicit** ayarı **VB varsayılanları**iletişim kutusu. Erişim için **VB varsayılanları** iletişim kutusundaki **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarda **VB varsayılanları** olduğu `On`.  
+ Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **Açık ayar seçeneği** , **vb varsayılanlar** iletişim kutusunda **Açık seçenek** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. Vb`On`varsayılan olarak ilk varsayılan ayar.  
   
-#### <a name="to-set-option-explicit-on-the-command-line"></a>Option Explicit komut satırında ayarlamak için  
+#### <a name="to-set-option-explicit-on-the-command-line"></a>Komut satırında Explicit seçeneğini ayarlamak için  
   
-- Dahil [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneğini **vbc** komutu.  
+- **Vbc** komutuna [/OptionExplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md) derleyici seçeneğini ekleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Option Explicit` tüm değişkenleri açık bildirimini zorlamak için deyimi. Bildirilmemiş bir değişken kullanılmaya çalışılıyor derleme zamanında bir hataya neden olur.  
+ Aşağıdaki örnek, `Option Explicit` tüm değişkenlerin açık bildirimini zorlamak için bildirimini kullanır. Bildirilmemiş bir değişkeni kullanma girişimi, derleme sırasında hataya neden olur.  
   
  [!code-vb[VbVbalrStatements#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#47)]  
   

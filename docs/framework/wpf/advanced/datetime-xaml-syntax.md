@@ -9,42 +9,42 @@ helpviewer_keywords:
 - DateTime XAML text [WPF]
 - DateTime XAML syntax [WPF], format strings for
 ms.assetid: 5901710a-609b-40c8-9d65-f0016cd9090b
-ms.openlocfilehash: d7fe5f15f79ab068e88c3fb6f7b7cac0986aa636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36066d6b2405051a3d35befffe53af8895e26220
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052930"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964829"
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime XAML Sözdizimi
-Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker>, kullandığınız özelliklere sahip <xref:System.DateTime> türü. Genellikle bir ilk tarih veya saat bu denetimleri için arka plan kod çalışma zamanında belirttiğiniz olsa da, XAML içinde bir başlangıç tarihi veya saati belirtebilirsiniz. WPF XAML ayrıştırıcı ayrıştırılmasını işler <xref:System.DateTime> yerleşik bir XAML metni söz dizimini kullanarak değerleri. Bu konunun ayrıntılarını açıklar <xref:System.DateTime> XAML metni söz dizimi.  
+<xref:System.Windows.Controls.Calendar> <xref:System.DateTime> Ve gibibazıdenetimlerin,türükullananözelliklerivardır<xref:System.Windows.Controls.DatePicker>. Çalışma zamanında arka plan kodunda bu denetimler için bir başlangıç tarihi veya saati belirtseniz de, XAML 'de bir başlangıç tarihi veya saati belirtebilirsiniz. WPF XAML ayrıştırıcısı, yerleşik xaml metin <xref:System.DateTime> sözdizimi kullanarak değerlerin ayrıştırılmasını işler. Bu konuda <xref:System.DateTime> xaml metin sözdiziminin özellikleri açıklanmaktadır.  
 
 <a name="where_datetime_xaml_syntax_is_used"></a>   
-## <a name="when-to-use-datetime-xaml-syntax"></a>DateTime XAML söz dizimini kullanacak şekilde ne zaman  
- XAML içinde tarihlerinin ayarlanması, her zaman gerekli değildir ve hatta istenmeyebilir. Örneğin, kullanabileceğinizi <xref:System.DateTime.Now%2A?displayProperty=nameWithType> çalıştırma veya bir tarihte başlatmak için özellik yapmak tüm tarih ayarlamaları Takvim kullanıcı girişini temel alarak gerideki kod içinde. Bununla birlikte, burada isteyebilirsiniz kod sabit tarihler senaryo vardır bir <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker> bir denetim şablonu içinde. <xref:System.DateTime> Bu senaryolar için XAML söz dizimi kullanılmalıdır.  
+## <a name="when-to-use-datetime-xaml-syntax"></a>DateTime XAML sözdizimi ne zaman kullanılır?  
+ XAML 'de tarihlerin ayarlanması her zaman gerekli değildir ve istenmeyebilir. Örneğin, çalışma zamanında bir tarih başlatmak <xref:System.DateTime.Now%2A?displayProperty=nameWithType> için özelliğini kullanabilir veya kullanıcı girdisine göre arka plan kod içindeki bir takvime ait tüm tarih ayarlamalarınızı yapabilirsiniz. Ancak, bir denetim şablonunda tarihleri bir <xref:System.Windows.Controls.Calendar> ve <xref:System.Windows.Controls.DatePicker> içinde sabit kodlarda bırakmak isteyebileceğiniz senaryolar vardır. <xref:System.DateTime> Xaml söz dizimi Bu senaryolar için kullanılmalıdır.  
   
 ### <a name="datetime-xaml-syntax-is-a-native-behavior"></a>DateTime XAML söz dizimi yerel bir davranıştır  
- <xref:System.DateTime> CLR temel sınıf kitaplıklarında tanımlanan bir sınıftır. Temel sınıf kitaplıklarının CLR geri kalanı için nasıl ilişkilendirilmesi nedeniyle, bunu uygulamak mümkün değildir <xref:System.ComponentModel.TypeConverterAttribute> sınıfı ve XAML dizeleri işlemek ve dönüştürmek için bir tür dönüştürücüsü kullanımına <xref:System.DateTime> çalışma süresi nesne modeli. Yok hiçbir `DateTimeConverter` sınıf dönüştürme davranışını sağlar; bu konuda açıklanan dönüştürme için WPF XAML ayrıştırıcı yerel bir davranıştır.  
+ <xref:System.DateTime>, CLR 'nin temel sınıf kitaplıklarında tanımlanan bir sınıftır. Temel sınıf kitaplıklarının clr 'nin geri kalanıyla ilişkilendirilmesi nedeniyle, sınıfa uygulanamaz <xref:System.ComponentModel.TypeConverterAttribute> ve xaml 'den dizeleri işlemek ve çalışma zamanı nesne modelinde dönüştürmek <xref:System.DateTime> üzere bir tür dönüştürücüsü kullanmak mümkün değildir. Dönüştürme davranışını sağlayan bir sınıfyoktur;bukonudaaçıklanandönüştürmedavranışıWPFXAMLayrıştırıcısındayereldir.`DateTimeConverter`  
   
 <a name="format_strings_for_datetime_xaml_syntax"></a>   
 ## <a name="format-strings-for-datetime-xaml-syntax"></a>DateTime XAML sözdizimi için biçim dizeleri  
- Biçimini belirtebileceğiniz bir <xref:System.DateTime> bir biçim dizesi ile. Biçim dizeleri bir değer oluşturmak için kullanılan metin sözdizimi resmileştirin. <xref:System.DateTime> varolan WPF genellikle yalnızca kullanım tarihi bileşenlerini denetimleri için değerleri <xref:System.DateTime> ve saat bileşenlerini değil.  
+ Biçim dizesiyle bir <xref:System.DateTime> biçimini belirtebilirsiniz. Biçim dizeleri bir değer oluşturmak için kullanılabilen metin sözdizimini şekilleştir. <xref:System.DateTime>Mevcut WPF denetimlerinin değerleri genellikle, saat bileşenlerinden değil yalnızca öğesinin <xref:System.DateTime> Tarih bileşenlerini kullanır.  
   
- Belirtirken bir <xref:System.DateTime> XAML içinde herhangi bir biçim dizesi birbirinin yerine kullanabilirsiniz.  
+ XAML içinde bir <xref:System.DateTime> belirtildiğinde, biçim dizelerinden herhangi birini birbirinin yerine kullanabilirsiniz.  
   
- Biçimleri ve bu konuda özellikle gösterilmeyen biçim dizeleri de kullanabilirsiniz. Teknik olarak, XAML herhangi <xref:System.DateTime> değeri belirtilen ve sonra da WPF XAML tarafından ayrıştırılan kullanan bir iç çağrı <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, bu nedenle kabul eden herhangi bir dize kullanabileceğinizi <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> , XAML için giriş. Daha fazla bilgi için bkz. <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.  
+ Bu konuda özellikle gösterilen biçimleri ve biçim dizelerini de kullanabilirsiniz. Teknik olarak, belirtilen ve daha <xref:System.DateTime> sonra WPF XAML ayrıştırıcısı tarafından ayrıştırılmış bir değer için XAML, için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>bir iç çağrı kullanır, bu nedenle XAML girişinde tarafından <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> kabul edilen herhangi bir dizeyi kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>.  
   
 > [!IMPORTANT]
->  DateTime XAML söz dizimi her zaman kullanan `en-us` olarak <xref:System.Globalization.CultureInfo> kendi yerel dönüşümü için. Bu tarafından etkilenir değil <xref:System.Windows.FrameworkElement.Language%2A> değeri veya `xml:lang` XAML özniteliği düzeyinde tür dönüştürme bu bağlamı karıncaların XAML içinde değer. Kültürel farklılıkları, gün ve ay görünme sırasını gibi nedeniyle burada gösterilen biçim dizeleri enterpolasyon çalışmayın. Burada gösterilen biçim dizeleri, diğer kültür ayarlarına bakılmaksızın XAML ayrıştırma kullanılması tam biçim dizelerdir.  
+> DateTime xaml sözdizimi her zaman kendi `en-us` yerel dönüştürmesi <xref:System.Globalization.CultureInfo> için olarak kullanır. Xaml öznitelik düzeyi tür dönüştürmesi bu bağlam `xml:lang` olmadan davrandığı için XAML içindeki değerveyadeğerbundanetkilenmez.<xref:System.Windows.FrameworkElement.Language%2A> Burada gösterilen biçim dizelerini, gün ve ayın sırası gibi kültürel değişimler nedeniyle, burada gösterilen biçim dizelerini enterpolalemeye çalışmayın. Burada gösterilen biçim dizeleri, diğer kültür ayarlarından bağımsız olarak XAML ayrıştırılırken kullanılan tam biçim dizeleridir.  
   
- Aşağıdaki bölümlerde bazı yaygın açıklanmaktadır <xref:System.DateTime> biçim dizeleri.  
+ Aşağıdaki bölümlerde bazı ortak <xref:System.DateTime> biçim dizeleri açıklanır.  
   
-### <a name="short-date-pattern-d"></a>Kısa tarih deseni ("d")  
- Aşağıdaki kısa tarih biçimini gösterir bir <xref:System.DateTime> XAML içinde:  
+### <a name="short-date-pattern-d"></a>Kısa tarih deseninin ("d")  
+ Aşağıda bir <xref:System.DateTime> xaml içindeki için kısa tarih biçimi gösterilmektedir:  
   
  `M/d/YYYY`  
   
- Bu tipik kullanımları için gerekli tüm bilgileri WPF denetimleri tarafından belirtir ve yanlışlıkla saat dilimi farkları saat bileşeni ile tarafından etkilenmez ve diğer biçimlere göre bu nedenle önerilir en basit biçimidir.  
+ Bu, WPF denetimleri tarafından tipik kullanımlar için gerekli tüm bilgileri belirten en basit biçimdir ve yanlışlıkla saat dilimi uzaklıkları bir zaman bileşeni ile etkilenmez ve bu nedenle diğer biçimler üzerinde önerilir.  
   
  Örneğin, 1 Haziran 2010 tarihini belirtmek için şu dizeyi kullanın:  
   
@@ -52,26 +52,26 @@ Gibi bazı denetimleri <xref:System.Windows.Controls.Calendar> ve <xref:System.W
   
  Daha fazla bilgi için bkz. <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType>.  
   
-### <a name="sortable-datetime-pattern-s"></a>Sıralanabilir tarih/saat deseni ("s")  
- Aşağıdaki sıralanabilir gösterir <xref:System.DateTime> XAML Desen:  
+### <a name="sortable-datetime-pattern-s"></a>Sıralanabilir DateTime kriteri ("s")  
+ XAML 'de sıralanabilir <xref:System.DateTime> desenler aşağıda gösterilmiştir:  
   
  `yyyy'-'MM'-'dd'T'HH':'mm':'ss`  
   
- Örneğin, 1 Haziran 2010 tarihini belirtmek için (bileşenleri tüm 0 girilen saati) aşağıdaki dizeyi kullanın:  
+ Örneğin, 1 Haziran 2010 tarihini belirtmek için aşağıdaki dizeyi kullanın (zaman bileşenleri 0 olarak girilir):  
   
  `2010-06-01T000:00:00`  
   
-### <a name="rfc1123-pattern-r"></a>Desen: RFC1123 ("r")  
- Desen: RFC1123 yararlıdır, çünkü Desen: RFC1123 kültür nedenleri için de diğer tarih oluşturucuları gelen bir dize girişi olabilir. Aşağıdaki RFC1123 gösterir <xref:System.DateTime> XAML Desen:  
+### <a name="rfc1123-pattern-r"></a>RFC1123 kalıbı ("r")  
+ RFC1123 deseninin kullanılması faydalı olur çünkü kültür sabiti nedenleriyle RFC1123 modelini de kullanan diğer tarih oluşturucularından bir dize girişi olabilir. Aşağıda, XAML 'de RFC1123 <xref:System.DateTime> deseninin gösterildiği görülmektedir:  
   
  `ddd, dd MMM yyyy HH':'mm':'ss 'UTC'`  
   
- Örneğin, 1 Haziran 2010 tarihini belirtmek için (bileşenleri tüm 0 girilen saati) aşağıdaki dizeyi kullanın:  
+ Örneğin, 1 Haziran 2010 tarihini belirtmek için aşağıdaki dizeyi kullanın (zaman bileşenleri 0 olarak girilir):  
   
  `Mon, 01 Jun 2010 00:00:00 UTC`  
   
-### <a name="other-formats-and-patterns"></a>Diğer biçimler ve modeller  
- Daha önce belirtildiği gibi bir <xref:System.DateTime> XAML içinde kabul edilebilir bir dize belirtilmesi için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu, resmileştirilmiş diğer biçimlere içerir (örneğin <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) ve belirli bir HTTP'dir değil biçimleri <xref:System.Globalization.DateTimeFormatInfo> formu. Örneğin, form `YYYY/mm/dd` kabul edilebilir için giriş olarak <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Bu konu, çalışan ve bunun yerine standart bir yöntem olarak kısa tarih deseni önerir tüm olası biçimleri açıklamak denemez.  
+### <a name="other-formats-and-patterns"></a>Diğer biçimler ve desenler  
+ Daha önce belirtildiği gibi, <xref:System.DateTime> xaml içindeki bir, için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>girdi olarak kabul edilebilir herhangi bir dize olarak belirtilebilir. Bu, diğer biçim biçimlerini (örneğin <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>,) ve belirli <xref:System.Globalization.DateTimeFormatInfo> bir form olarak biçimsiz olmayan biçimleri içerir. Örneğin, formu `YYYY/mm/dd` için <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>giriş olarak kabul edilebilir. Bu konu, çalışan tüm olası biçimleri açıklamaya çalışmaz ve bunun yerine kısa tarih deseninin standart bir uygulama olarak kullanılmasını önerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

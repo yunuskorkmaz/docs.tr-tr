@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941729"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 
@@ -55,7 +55,7 @@ Kod, en yüksek performans için yerel koda .NET Framework kodda statik olarak b
 
 Örneğin, veri bağlama bir uygulamanın özellik adlarını işlevlerle eşleştirebilmesini gerektirir. Windows Mağazası uygulamaları için .NET sürümünde ortak dil çalışma zamanı, bu özelliği yönetilen türler ve genel kullanıma açık yerel türler için otomatik olarak yansıma kullanır. .NET Native, derleyici, verileri bağlacağınız türler için otomatik olarak meta veriler içerir.
 
-.NET Native derleyici, <xref:System.Collections.Generic.List%601> ve gibi yaygın olarak kullanılan genel türleri de işleyebilir ve <xref:System.Collections.Generic.Dictionary%602>herhangi bir ipucu veya yönergesi gerekmeden çalışır. [Dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) anahtar sözcüğü belirli sınırlar içinde de desteklenir.
+.NET Native derleyici, <xref:System.Collections.Generic.List%601> ve gibi yaygın olarak kullanılan genel türleri de işleyebilir ve <xref:System.Collections.Generic.Dictionary%602>herhangi bir ipucu veya yönergesi gerekmeden çalışır. [Dynamic](../../csharp/language-reference/keywords/dynamic.md) anahtar sözcüğü belirli sınırlar içinde de desteklenir.
 
 > [!NOTE]
 > Uygulamanızı .NET Native taşıma sırasında tüm dinamik kod yollarını iyice test etmelisiniz.
@@ -67,7 +67,7 @@ Kod, en yüksek performans için yerel koda .NET Framework kodda statik olarak b
 - Derleyici örneklemeleri belirleyemediği için, üzerinde yansıtmak istediğiniz genel bir türün çalışma zamanı yönergeleri tarafından belirtilmesi gerekir. Bu, tüm kodun dahil olması gerektiğinden, ancak genel türlerde yansıma bir sonsuz döngüye (örneğin, genel bir tür üzerinde çağrıldığında genel bir yöntem çağrıldığında) sahip olduğu için bu değildir.
 
 > [!NOTE]
-> Çalışma zamanı yönergeleri, çalışma zamanı yönergeleri (. RD. xml) dosyasında tanımlanmıştır. Bu dosyayı kullanma hakkında genel bilgi için [bkz. Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md). Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
+> Çalışma zamanı yönergeleri, çalışma zamanı yönergeleri (. RD. xml) dosyasında tanımlanmıştır. Bu dosyayı kullanma hakkında genel bilgi için bkz. [](../../../docs/framework/net-native/getting-started-with-net-native.md)Başlarken. Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native Ayrıca, geliştiricinin varsayılan küme dışında hangi türlerin yansıma destekleceğini belirlemesine yardımcı olan profil oluşturma araçlarını içerir.
 
@@ -129,7 +129,7 @@ Aşağıdaki bölümlerde, HTTPClient ve Windows Communication Foundation (WCF) 
 
 - Çok boyutlu dizilerin dinamik olarak oluşturulması desteklenmez. Bu tür diziler genellikle bir <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> `lengths` parametre içeren veya <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> yöntemi çağırarak yönteminin aşırı yüklemesi çağırarak oluşturulur.
 
-- Dört veya daha fazla boyut içeren çok boyutlu diziler desteklenmez; diğer bir deyişle, <xref:System.Array.Rank%2A?displayProperty=nameWithType> Özellik değeri dört veya daha büyüktür. Bunun yerine [pürüzlü dizileri](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (dizi dizileri) kullanın. Örneğin, `array[x,y,z]` geçersizdir, ancak `array[x][y][z]` değil.
+- Dört veya daha fazla boyut içeren çok boyutlu diziler desteklenmez; diğer bir deyişle, <xref:System.Array.Rank%2A?displayProperty=nameWithType> Özellik değeri dört veya daha büyüktür. Bunun yerine [pürüzlü dizileri](../../csharp/programming-guide/arrays/jagged-arrays.md) (dizi dizileri) kullanın. Örneğin, `array[x,y,z]` geçersizdir, ancak `array[x][y][z]` değil.
 
 - Çok boyutlu dizilerin varyansı desteklenmez ve çalışma zamanında bir <xref:System.InvalidCastException> özel duruma neden olur.
 
@@ -668,4 +668,4 @@ Windows Mağazası uygulamaları projesi için bir birim testi kitaplığı üze
 - [Başlarken](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

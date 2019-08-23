@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 9674e4d3f465cd3bad55a32d0a13136e6cff974d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946372"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Derleme Bağlayıcı)
 
 Assembly Linker, modül veya kaynak dosyalar olan bir veya daha fazla dosyadan, derleme bildirimi içeren bir dosya oluşturur. Modül, derleme bildirimi içermeyen bir ara dil (IL) dosyasıdır.
 
 > [!NOTE]
-> Visual Studio 2008 ile başlayarak, hem C# hem de Visual Basic derleyicileri derlemeye otomatik olarak bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [/win32manifestC# (derleyici seçenekleri)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Visual Studio 2008 ile başlayarak, hem C# hem de Visual Basic derleyicileri derlemeye otomatik olarak bir Win32 bildirimi katıştırır. Daha fazla bilgi için bkz. [/win32manifestC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -41,7 +41,7 @@ Aşağıdakilerden birini veya `sources`birkaçını belirtebilirsiniz.
 | ------ | ----------- |
 |`file`[,`target`]|`file` (Bir modül) içeriğini tarafından `target`belirtilen dosya adına kopyalar. Kopyaladıktan sonra, *al. exe* bir `target` derlemeye derlenir.|
 |**/embed [kaynak]:** `file`[,`name`[,`private`]]|Tarafından `file` belirtilen kaynağı, derleme bildirimini içeren görüntüde katıştırır; *Al. exe* , içeriğini `file` Taşınabilir çalıştırılabilir (PE) görüntüsüne kopyalar.<br /><br /> `name` Parametresi, kaynak için bir iç tanıtıcıdır. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> Örneğin, [kaynak dosya Oluşturucu (*Resgen. exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources>içindeki üyeleriyle erişilebilir. `file` Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, çalışma zamanında `GetManifestResource`kaynağa erişmek <xref:System.Reflection.Assembly> için içindeki * yöntemlerini kullanın.<br /><br /> *Al. exe*' ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
-|**/Link [kaynak]:** `file`[,`name`[,`target`[,`private`]]]|Kaynak dosyayı bir derlemeye bağlar. Tarafından `file` belirtilen kaynak derlemenin bir parçası haline gelir; dosya kopyalanmaz. `file` Parametresi herhangi bir dosya biçiminde olabilir. Örneğin, `file` parametresi olarak bir yerel dll belirtebilirsiniz. Bu, yerel DLL'yi derlemenin parçası haline getirir, böylece genel derleme önbelleğine yüklenebilir ve derlemedeki yönetilen koddan erişilebilir. Bunu, **/linkresource** derleyici seçeneğini kullanarak da yapabilirsiniz. Daha fazla bilgi için bkz. [/linkresourceC# (derleyici seçenekleri)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> `name` Parametresi, kaynak için bir iç tanıtıcıdır. Parametresi, *al. exe* ' nin kopyaladığı yolu ve dosya adını belirtir *.* `target` `file` Kopyaladıktan sonra, *al. exe* bir `target` derlemeye derlenir. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> Örneğin, kaynak dosya Oluşturucu (*Resgen. exe*) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. `file` Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, çalışma zamanında `GetManifestResource` kaynağa erişmek üzere <xref:System.Reflection.Assembly> sınıfındaki * yöntemlerini kullanın.<br /><br /> *Al. exe*' ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
+|**/Link [kaynak]:** `file`[,`name`[,`target`[,`private`]]]|Kaynak dosyayı bir derlemeye bağlar. Tarafından `file` belirtilen kaynak derlemenin bir parçası haline gelir; dosya kopyalanmaz. `file` Parametresi herhangi bir dosya biçiminde olabilir. Örneğin, `file` parametresi olarak bir yerel dll belirtebilirsiniz. Bu, yerel DLL'yi derlemenin parçası haline getirir, böylece genel derleme önbelleğine yüklenebilir ve derlemedeki yönetilen koddan erişilebilir. Bunu, **/linkresource** derleyici seçeneğini kullanarak da yapabilirsiniz. Daha fazla bilgi için bkz. [/linkresourceC# (derleyici seçenekleri)](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> `name` Parametresi, kaynak için bir iç tanıtıcıdır. Parametresi, *al. exe* ' nin kopyaladığı yolu ve dosya adını belirtir *.* `target` `file` Kopyaladıktan sonra, *al. exe* bir `target` derlemeye derlenir. Varsayılan olarak, kaynaklar derleme içinde geneldir (başka derlemeler tarafından görülür). Belirtme `private` , kaynağı diğer derlemelere görünmez hale getirir.<br /><br /> Örneğin, kaynak dosya Oluşturucu (*Resgen. exe*) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. `file` Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager>. Diğer tüm kaynaklar için, çalışma zamanında `GetManifestResource` kaynağa erişmek üzere <xref:System.Reflection.Assembly> sınıfındaki * yöntemlerini kullanın.<br /><br /> *Al. exe*' ye yalnızca kaynak dosyaları geçirilirse, çıkış dosyası bir uydu kaynak derlemesidir.|
 
 Aşağıdakileri `options`belirtebilirsiniz; **/Out**belirtmeniz gerekir.
 

@@ -5,61 +5,61 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911666"
 ---
 # <a name="ui-automation-events-for-clients"></a>İstemciler İçin UI Otomasyon Olayları
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu açıklar nasıl [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] olayları UI Otomasyon istemcileri tarafından kullanılır.  
+ Bu konuda, olayların [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UI Otomasyon istemcileri tarafından nasıl kullanıldığı açıklanmaktadır.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] İlgilendiğiniz olaylara abone etmesine olanak tanır. Bu özellik tüm sürekli yoklama yapma ihtiyacını ortadan kaldırarak performansını geliştirir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sistemde herhangi bir bilgi, yapı veya durumu değişip değişmediğini öğeleri.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]istemcilerin ilgilendiğiniz olaylara abone olmalarını sağlar. Bu özellik, herhangi bir bilgi, yapı veya durumun değişip değişmediğini görmek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] için sistemdeki tüm öğeleri sürekli olarak yoklamaya gerek gereksinimini ortadan kaldırarak performansı geliştirir.  
   
- Verimliliği tarafından tanımlanan kapsam içinde yalnızca olayları dinler olanağı da gelişmiştir. Örneğin, bir istemci tüm odak değişiklik olayları dinleyebilirsiniz [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğeleri ağacında ya da yalnızca bir öğe ve alt öğeleri.  
+ Verimlilik Ayrıca yalnızca tanımlı bir kapsamdaki olayları dinlemek için de geliştirilmiştir. Örneğin, bir istemci, ağaç içindeki tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğelerde veya yalnızca bir öğe ve alt öğeleri üzerinde odak değişikliği olaylarını dinleyebilir.  
   
 > [!NOTE]
->  Tüm olası olayları tarafından yükseltilir varsaymayın bir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sağlayıcısı. Örneğin, tüm özellik değişiklikleri için standart proxy sağlayıcıları tarafından harekete geçirilen olayları neden [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrol eder.  
+> Tüm olası olayların bir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sağlayıcı tarafından gerçekleştiğini varsaymayın. Örneğin, tüm özellik değişiklikleri, olayların standart proxy sağlayıcıları [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ve [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] denetimleri tarafından oluşturulmasına neden olmaz.  
   
- Daha geniş bir görünüm için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları görmek [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olayların daha geniş bir görünümü için bkz. [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Olaylara abone olma  
- İstemci uygulamaları, belirli türde olaylar için aşağıdaki yöntemlerden birini kullanarak bir olay işleyicisi kaydederek abone olun.  
+ İstemci uygulamaları, aşağıdaki yöntemlerden birini kullanarak bir olay işleyicisini kaydederek belirli bir türdeki olaylara abone olur.  
   
-|Yöntem|Olay türü|Olay bağımsız değişkenleri|Temsilci türü|  
+|Yöntem|Olay türü|Olay bağımsız değişkenleri türü|Temsilci türü|  
 |------------|----------------|--------------------------|-------------------|  
-|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Odak Değiştir|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Odak değişikliği|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Özellik değişikliği|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Yapı değişiklik|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Tarafından tanımlanan tüm diğer olaylar bir <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> veya <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Yapı değişikliği|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Tarafından tanımlanan tüm diğer olaylar<xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> veya <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
- Yöntemini çağırmadan önce olayı işlemek için bir temsilci yöntemi oluşturmanız gerekir. İsterseniz, farklı türde tek bir yöntem olayları işlemek ve bu yöntem yöntemlerinden tablosunda birden çok çağrı geçirin. Örneğin, bir tek <xref:System.Windows.Automation.AutomationEventHandler> farklı aşağıdakilere göre çeşitli olayları işlemek için ayarlanabilir <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
+ Yöntemi çağırmadan önce, olayı işlemek için bir temsilci yöntemi oluşturmanız gerekir. İsterseniz, farklı türdeki olayları tek bir yöntemde işleyebilir ve bu yöntemi tablodaki yöntemlerden birine birden çok çağrıda geçirebilirsiniz. Örneğin, tek <xref:System.Windows.Automation.AutomationEventHandler> bir, çeşitli olayları <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>öğesine göre farklı şekilde işlemek üzere ayarlanabilir.  
   
 > [!NOTE]
->  Pencere kapalı olayları işlemek için olay işleyicisi olarak geçirilen bağımsız değişken türü dönüştürme <xref:System.Windows.Automation.WindowClosedEventArgs>. Çünkü [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] için pencere öğesi artık geçerli değil; kullanamazsınız `sender` ; bilgi almak için parametre kullanmak <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> yerine.  
+> Pencere kapalı olaylarını işlemek için, olay işleyicisine geçirilen bağımsız değişken türünü olarak <xref:System.Windows.Automation.WindowClosedEventArgs>atayın. Pencerenin öğesi artık geçerli olmadığından, bilgileri almak için `sender` parametresini kullanamazsınız; bunun yerine kullanın <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]  
   
 > [!CAUTION]
->  Uygulamanızı olayları kendi alabilirse [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], uygulamanızın kullanmayın [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] olaylara abone veya aboneliğinizi iptal etmek için iş parçacığı. Bunun yapılması, beklenmedik davranışa neden olabilir. Daha fazla bilgi için [UI Otomasyon iş parçacığı oluşturma sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+>  Uygulamanız kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]etkinliklerini alabilir, olaylara abone olmak veya aboneliği kaldırmak için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] uygulamanızın iş parçacığını kullanmayın. Bunun yapılması öngörülemeyen davranışlara neden olabilirler. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
- Kapatma sırasında veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları artık uygulama ilgi, UI Otomasyon istemcileri aşağıdaki yöntemlerden birini çağırmalıdır.  
+ Kapatılırken veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar uygulamaya artık ilgilenmeyen Kullanıcı Arabirimi Otomasyonu istemcileri aşağıdaki yöntemlerden birini çağırmalıdır.  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Kullanılarak kaydedilen bir olay işleyicisi kaydını siler <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Kullanılarak kaydedilen bir olay işleyicisi kaydını siler <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Kullanılarak kaydedilen bir olay işleyicisi kaydını siler <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Kullanılarak <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>kaydedilmiş bir olay işleyicisinin kaydını siler.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Kullanılarak <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>kaydedilmiş bir olay işleyicisinin kaydını siler.|  
+|<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Kullanılarak <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>kaydedilmiş bir olay işleyicisinin kaydını siler.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Tüm kayıtlı olay işleyicilerinin kaydını siler.|  
   
- Örnek kod için bkz: [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Örnek kod için bkz. [UI Otomasyon olaylarına abone olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [UI Otomasyonu Olaylarına Abone Olma](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
 - [UI Otomasyonu Olaylarına Genel Bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
 - [UI Otomasyonu Özelliklerine Genel Bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
-- [TrackFocus örnek](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus örneği](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

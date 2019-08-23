@@ -2,17 +2,17 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe57cb84cfa70b1f6b92abf1dbac89ddad9d4dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700884"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925705"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions >
-Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç nokta kaydeder veya uygulama yapılandırma dosyası. Kullanarak, bu koleksiyona bir standart uç nokta ekleyebilirsiniz `add` anahtar sözcüğü ve ayarı `type` uç nokta türü için bir öğenin özniteliği hem de `name` öznitelik standart bitiş noktası adını.  
+Bu bölüm, bir makinedeki veya uygulama yapılandırma dosyasındaki uzantılar bölümünde yeni bir standart uç nokta kaydeder. `add` Anahtar sözcüğünü kullanarak bu koleksiyona standart bir uç nokta ekleyebilir ve öğesi `type` özniteliğini, standart uç nokta adına `name` özniteliğini ve öğesini de uç nokta türüne ayarlayarak ekleyebilirsiniz.  
   
- Aşağıdaki örnekte `add` öğesi hem de `name` özniteliği için bir standart uç nokta eklemek için `<endpointExtensions>` yapılandırma dosyasının.  
+ Aşağıdaki örnek, yapılandırma dosyasının `add` `<endpointExtensions>` bölümüne standart bir uç nokta eklemek `name` için öğesini ve özniteliğini kullanır.  
   
 ```xml  
 <system.serviceModel>
@@ -25,7 +25,7 @@ Bu bölümde, bir makine uzantıları bölümünde yeni bir standart uç nokta k
 </system.serviceModel>
 ```  
   
- Standart uç nokta kaydedildikten sonra aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz. İçinde [ \<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi `kind` özniteliği belirtir, kayıtlı standart uç nokta türü `<endpointExtensions>` bölümü. `endpointConfiguration` Özniteliği aynı olacaktır `name` standart uç nokta yapılandırma öğesinin özniteliği `<standardEndpoints>` bölümü.  
+ Standart uç nokta kaydedildikten sonra, aşağıdaki örnekte gösterildiği gibi kullanabilirsiniz. `<endpointExtensions>` Endpoint > öğesinde`kind` öznitelik, bölümünde kayıtlı olan standart uç nokta türünü belirtir. [ \<](endpoint-element.md) Özniteliği, `<standardEndpoints>` bölümündeki standart uç noktanın yapılandırma `name` öğesinin özniteliğiyle aynı olacaktır. `endpointConfiguration`  
   
 ```xml  
 <system.serviceModel>

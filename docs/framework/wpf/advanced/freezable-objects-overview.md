@@ -9,132 +9,132 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: b2ef3c3dbbfbcef08f58c47948f76cb2c238b48a
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: d1fd626921cd17987770ced822be104fb2a42906
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937495"
 ---
 # <a name="freezable-objects-overview"></a>Freezable Nesnelerine Genel Bakış
-Bu konu, etkili bir şekilde kullanmak ve oluşturmak üzere açıklar <xref:System.Windows.Freezable> uygulama performansını iyileştirmeye yardımcı olabilecek özel özellikleri sağlayan nesne. Freezable nesneleri Fırçalar, kalemler, dönüştürmeleri, geometri ve animasyonları örneklerindendir.  
+Bu konu, uygulama performansının artırılmasına yardımcı olabilecek özel <xref:System.Windows.Freezable> özellikler sağlayan nesneleri etkin bir şekilde kullanmayı ve oluşturmayı açıklar. Freezable nesne örnekleri, fırçalar, kalemler, dönüşümler, geometriler ve animasyonları içerir.  
   
 <a name="whatisafreezable"></a>   
 ## <a name="what-is-a-freezable"></a>Freezable nedir?  
- A <xref:System.Windows.Freezable> iki durumlu nesnesi özel bir türdür: çözülmüş ve donmuş. Çözülmüş, bir <xref:System.Windows.Freezable> herhangi bir nesne gibi davranır. Dondurulmuş, bir <xref:System.Windows.Freezable> artık değiştirilebilir.  
+ <xref:System.Windows.Freezable> , İki durumu olan özel bir nesne türüdür: dondurulmamış ve dondurulmuş. Dondurulmamış olduğunda, diğer <xref:System.Windows.Freezable> herhangi bir nesne gibi davranır görünür. Dondurulduktan sonra, <xref:System.Windows.Freezable> bir daha değiştirilemez.  
   
- A <xref:System.Windows.Freezable> sağlayan bir <xref:System.Windows.Freezable.Changed> nesne herhangi bir değişiklik olduğunda gözlemcileri bildirmek üzere olay. Dondurma bir <xref:System.Windows.Freezable> kaynaklar üzerinde değişiklik bildirimleri harcama artık gerektiğinden, performansı geliştirebilir. Dondurulmuş <xref:System.Windows.Freezable> çözülmüş bir yandan iş parçacıkları arasında paylaşılabilir <xref:System.Windows.Freezable> olamaz.  
+ , Nesne üzerinde <xref:System.Windows.Freezable.Changed> yapılan herhangi bir değişiklik için gözlemcilerin 'a bildirimde bulunan bir olay sağlar.<xref:System.Windows.Freezable> Yalnızca değişiklik <xref:System.Windows.Freezable> bildirimleri üzerinde kaynakları harcaması gerekmediği için, bir performansı dondurabilir. Dondurulmuş <xref:System.Windows.Freezable> bir şekilde, bir dondurulmamış <xref:System.Windows.Freezable> olsa da iş parçacıkları arasında paylaşılabilir.  
   
- Ancak <xref:System.Windows.Freezable> sınıfına sahip birçok uygulama, en <xref:System.Windows.Freezable> nesneler [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik alt sistemi ile ilişkilidir.  
+ Sınıfında birçok uygulama olsa da, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çoğu <xref:System.Windows.Freezable> nesne grafik alt sistemiyle ilgilidir. <xref:System.Windows.Freezable>  
   
- <xref:System.Windows.Freezable> Sınıfı, belirli grafik sistem nesnelerin kullanımını kolaylaştırır ve uygulama performansının artırılmasına yardımcı olabilir. Devralınan tür örnekleri, <xref:System.Windows.Freezable> dahil <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, ve <xref:System.Windows.Media.Geometry> sınıfları. Yönetilmeyen kaynakları içerdiğinden, sistem bu nesneleri yapılan değişiklikleri izlemek ve özgün nesneye bir değişiklik olduğunda ardından ilgili yönetilmeyen kaynaklarını güncelleştirmeniz gerekir. Aslında grafik sistem nesnesini değiştirmez bile değiştirmeniz durumunda sistem hala bazı izleme nesnesi kaynaklarını ayırmanız gerekir.  
+ Sınıfı <xref:System.Windows.Freezable> , belirli grafik sistem nesnelerinin kullanılmasını kolaylaştırır ve uygulama performansının artırılmasına yardımcı olabilir. Öğesinden <xref:System.Windows.Freezable> devraldığı türlerin örnekleri <xref:System.Windows.Media.Brush>, <xref:System.Windows.Media.Transform>, ve <xref:System.Windows.Media.Geometry> sınıflarını içerir. Yönetilmeyen kaynaklar içerdiğinden, sistemin bu nesneleri değişikliklere karşı izlemesi gerekir ve özgün nesnede bir değişiklik olduğunda ilgili yönetilmeyen kaynaklarını güncelleştirmelidir. Bir grafik sistemi nesnesini gerçekten değiştirmese de, sistemin değişiklik yapması durumunda nesneyi izleyen bazı kaynakları harcaması gerekir.  
   
- Örneğin, oluşturduğunuz düşünün bir <xref:System.Windows.Media.SolidColorBrush> fırça ve düğmenin arka plan boyama için kullanın.  
+ Örneğin, bir <xref:System.Windows.Media.SolidColorBrush> fırça oluşturup bir düğmenin arka planını boyamak için bunu kullandığınızı varsayalım.  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
   
- Düğme işlendiğinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik alt sistemi piksel bir düğmenin görünümünü oluşturmak için bir grup boyamak için sağlanan bilgileri kullanır. Tek renk Fırçası düğme nasıl boyanacağını açıklamak için kullanılan olsa da, tek renk Fırçası gerçekten boyama yapmaz. Grafik sistem düğme ve fırça için hızlı, düşük düzey nesneleri oluşturur ve gerçekten ekrandaki nesnelere olur.  
+ Düğme işlendiğinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik alt sistemi, bir düğmenin görünümünü oluşturmak üzere bir piksel grubunu boyamak için verdiğiniz bilgileri kullanır. Düğmenin nasıl boyanması gerektiğini betimleyen bir düz renk fırçası kullansanız da, düz renk fırçanızı gerçekten boyama yapmaz. Grafik sistemi, düğme ve fırça için hızlı, alt düzey nesneler oluşturur ve aslında ekranda görünen nesnelerdir.  
   
- Fırça değiştirmek olsaydı, alt düzey nesneleri yeniden oluşturulması gerekir. Ne fırça karşılık gelen oluşturulan, alt düzey nesneleri bulmak için ve değişiklik yapıldığında, onları güncelleştirme olanağı sunar freezable sınıftır. Bu özellik etkinleştirildiğinde, fırça "Çözülmüş" olarak kabul edilir  
+ Fırçayı değiştirmek istiyorsanız, bu alt düzey nesnelerin yeniden oluşturulması gerekir. Freezable sınıfı, bir fırçaya karşılık gelen oluşturulan, alt düzey nesneleri bulma ve değişiklik yaparken bunları güncelleştirme olanağı sunar. Bu özellik etkinleştirildiğinde, fırça "dondurulmamış" olarak kabul edilir.  
   
- Freezable'nın <xref:System.Windows.Freezable.Freeze%2A> yöntemi kendi kendini güncelleştirme özelliği devre dışı bırakmanızı sağlar. "Dondurulmuş" veya değiştirilemeyen fırçanın hale getirmek için bu yöntemi kullanabilirsiniz.  
+ Freezable 'ın <xref:System.Windows.Freezable.Freeze%2A> yöntemi bu kendi kendini güncelleştirme yeteneğini devre dışı bırakmanızı sağlar. Fırçayı "dondurulmuş" veya değiştirilemez hale getirmek için bu yöntemi kullanabilirsiniz.  
   
 > [!NOTE]
->  Dondurulmuş her Freezable nesne. Üretilmesini önlemek için bir <xref:System.InvalidOperationException>, Freezable nesnenin değerini kontrol edin <xref:System.Windows.Freezable.CanFreeze%2A> özelliği, bu dondurma çalışmadan önce dondurulmuş olup olmadığını belirlemek için.  
+> Her Freezable nesnesi dondurulamıyor. Bir <xref:System.InvalidOperationException>oluşturmamaya kaçınmak için, dondurmadan önce dondurulmuş olup olmadığını öğrenmek <xref:System.Windows.Freezable.CanFreeze%2A> için Freezable nesnesinin özelliğinin değerini kontrol edin.  
   
  [!code-csharp[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart2)]
  [!code-vb[freezablesample_procedural#FrozenExamplePart2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart2)]  
   
- Freezable değiştirmek, artık ihtiyacınız olduğunda dondurmayı performans avantajlar sağlar. Bu örnekte fırça dondurmak için olsaydı, değişiklikleri izlemek artık grafik sistemi gerekir. Fırça değişmez bildiğinden grafik sistemi diğer iyileştirmeler de yapabilirsiniz.  
+ Freezable 'ı değiştirmenize gerek kalmadığında performans avantajları sağlar. Bu örnekteki fırçayı dondurursanız, grafik sisteminin artık değişiklikleri izlemek zorunda kalmaz. Fırçanın değişmediği bildiğinden, grafik sistemi başka iyileştirmeler de yapabilir.  
   
 > [!NOTE]
->  Kolaylık olması için açıkça dondurun sürece freezable nesneleri çözülmüş olarak kalır.  
+> Daha kolay bir şekilde dondurmadığınız takdirde, Freezable nesneler dondurulmamış olarak kalır.  
   
 <a name="frozenfreezables"></a>   
-## <a name="using-freezables"></a>Freezable'ı kullanma  
- Bir çözülmüş kullanarak freezable başka türde bir nesne gibi kullanmaktır. Aşağıdaki örnekte, rengi bir <xref:System.Windows.Media.SolidColorBrush> düğmenin arka boyamak için kullanılan sonra sarı kırmızı değiştirilir. Grafik sistemi düğmeyi sarı kırmızı ekranın bir sonraki yenilenmesinde otomatik olarak değiştirmek için arka planda çalışır.  
+## <a name="using-freezables"></a>Freezable nesneleri kullanma  
+ Dondurulmamış bir Freezable kullanmak, herhangi bir nesne türünü kullanmak gibidir. Aşağıdaki örnekte, bir düğmenin arka planını boyamak için <xref:System.Windows.Media.SolidColorBrush> kullanıldıktan sonra a 'nın rengi sarı olarak kırmızıya değiştirilir. Grafik sistemi, ekranın arkasında bir sonraki sefer yenilendiğinde düğme sarıdan kırmızıya otomatik olarak değiştirilmesini sağlar.  
   
  [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
  [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
   
-### <a name="freezing-a-freezable"></a>Freezable dondurma  
- Yapmak için bir <xref:System.Windows.Freezable> değiştirilemeyen, arama, <xref:System.Windows.Freezable.Freeze%2A> yöntemi. Freezable nesneleri içeren bir nesne dondurma, bu nesneler de dondurulmuş. Örneğin, dondurma, bir <xref:System.Windows.Media.PathGeometry>, rakamları ve içerdiği kesimleri çok dondurulmuş olması.  
+### <a name="freezing-a-freezable"></a>Freezable 'ı dondurma  
+ Değiştirilemez yapmak <xref:System.Windows.Freezable> için <xref:System.Windows.Freezable.Freeze%2A> yöntemini çağırın. Freezable nesneleri içeren bir nesneyi dondurursanız, bu nesneler de dondurulur. Örneğin, bir <xref:System.Windows.Media.PathGeometry>dondurursanız, içerdiği şekiller ve segmentler de dondurulur.  
   
- Bir Freezable **olamaz** aşağıdakilerden biri doğruysa, dondurulmuş:  
+ Aşağıdakilerden biri doğruysa Freezable dondurulamıyor:  
   
-- Animasyonlu veya veri ilişkili özellikleri.  
+- Animasyonlu veya veri bağlantılı özelliklere sahiptir.  
   
-- Dinamik bir kaynak tarafından ayarlanan özellikler var. (Bkz [XAML kaynakları](xaml-resources.md) dinamik kaynaklar hakkında daha fazla bilgi için.)  
+- Dinamik bir kaynak tarafından ayarlanan özelliklere sahiptir. (Dinamik kaynaklar hakkında daha fazla bilgi için bkz. [xaml kaynakları](xaml-resources.md) .)  
   
-- İçerdiği <xref:System.Windows.Freezable> nelze zmrazit alt nesneler.  
+- Dondurulamayan alt nesneler içerir <xref:System.Windows.Freezable> .  
   
- Bu koşullar false ise ve değiştirmek istemediğiniz <xref:System.Windows.Freezable>, daha önce açıklanan performans avantajlarını elde etmek için dondurun.  
+ Bu koşullar yanlışsa ve değiştirmek <xref:System.Windows.Freezable>istemiyorsanız, daha önce açıklanan performans avantajlarını kazanmak için bu koşulları dondurmanız gerekir.  
   
- Freezable'nın arama sonra <xref:System.Windows.Freezable.Freeze%2A> yöntemi, artık değiştirilebilir. Dondurulmuş değiştirmeye nesne neden bir <xref:System.InvalidOperationException> oluşturulması için. Şu fırçanın dondurulmuş olup sonra değiştirme girişimi nedeniyle, aşağıdaki kod bir özel durum oluşturur.  
+ Freezable <xref:System.Windows.Freezable.Freeze%2A> metodunu çağırdığınızda, artık değiştirilemez. Dondurulmuş bir nesneyi değiştirme girişimi bir <xref:System.InvalidOperationException> oluşturulmasına neden olur. Aşağıdaki kod bir özel durum oluşturur, çünkü bir fırçayı dondurulmuş olduktan sonra değiştirmeyi deneiyoruz.  
   
  [!code-csharp[freezablesample_procedural#ExceptionExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#exceptionexample)]
  [!code-vb[freezablesample_procedural#ExceptionExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#exceptionexample)]  
   
- Bu özel durum önlemek için kullanabileceğiniz <xref:System.Windows.Freezable.IsFrozen%2A> belirlemek için yöntemi olup olmadığını bir <xref:System.Windows.Freezable> dondurulmuş.  
+ Bu özel durumun üretilmesini önlemek için <xref:System.Windows.Freezable.IsFrozen%2A> yöntemini kullanarak bir <xref:System.Windows.Freezable> , dondurulmuş olup olmadığını belirleyebilirsiniz.  
   
  [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
  [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]  
   
- Önceki kod örneğinde bir dondurulmuş nesnesini kullanarak değiştirilebilir bir kopyası yapılır <xref:System.Windows.Freezable.Clone%2A> yöntemi. Sonraki bölümde, kopyalamayı daha ayrıntılı olarak açıklanır.  
+ Yukarıdaki kod örneğinde, dondurulmuş bir nesne <xref:System.Windows.Freezable.Clone%2A> yöntemi kullanılarak değiştirilebilir bir kopya yapılmıştır. Sonraki bölümde kopyalamayı daha ayrıntılı olarak ele alınmaktadır.  
   
- **Not** çünkü dondurulmuş freezable hareketlendirilemeyebilir, animasyon sistemi değiştirilebilir klonlar, otomatik olarak oluşturacak dondurulmuş <xref:System.Windows.Freezable> nesnelerinin kendileri ile animasyon çalıştığınızda bir <xref:System.Windows.Media.Animation.Storyboard>. Kopyalayarak ek yükü nedeniyle performans ortadan kaldırmak için animasyon eklemek istiyorsanız, çözülmüş bir nesne bırakın. Görsel Taslaklar ile animasyon ekleme hakkında daha fazla bilgi için bkz. [görsel taslaklara genel bakış](../graphics-multimedia/storyboards-overview.md).  
+ **Göz önünde** Dondurulmuş bir Freezable animasyon oluşturamadığı için animasyon sistemi, bir <xref:System.Windows.Freezable> <xref:System.Windows.Media.Animation.Storyboard>ile animasyon oluşturmaya çalıştığınızda dondurulmuş nesnelerin değiştirilebilir klonlarını otomatik olarak oluşturur. Kopyalamanın neden olduğu performans yükünü ortadan kaldırmak için, hareketlendirmek istiyorsanız nesne dondurulmamış olarak bırakın. Görsel taslaklara animasyon ekleme hakkında daha fazla bilgi için bkz. görsel taslaklara [genel bakış](../graphics-multimedia/storyboards-overview.md)  
   
 ### <a name="freezing-from-markup"></a>Biçimlendirmeden dondurma  
- Dondurmak için bir <xref:System.Windows.Freezable> nesne kullandığınız biçimlendirme içinde bildirilen `PresentationOptions:Freeze` özniteliği. Aşağıdaki örnekte, bir <xref:System.Windows.Media.SolidColorBrush> sayfa kaynağı bildirildi ve donmuş. Ardından, bir düğmenin arka planı ayarlamak için kullanılır.  
+ Biçimlendirme içinde belirtilen <xref:System.Windows.Freezable> bir nesneyi dondurmak için `PresentationOptions:Freeze` özniteliğini kullanırsınız. Aşağıdaki örnekte, bir <xref:System.Windows.Media.SolidColorBrush> sayfa kaynağı olarak bildirilmiştir ve donuktur. Daha sonra bir düğmenin arka planını ayarlamak için kullanılır.  
   
  [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
   
- Kullanılacak `Freeze` özniteliği, sunum seçenekleri ad alanına eşleme gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions` Bu ad alanı eşlemesi için önerilen ön eki şöyledir:  
+ `Freeze` Özniteliğini kullanmak için, sunu seçenekleri ad alanına eşlemeniz gerekir: `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`. `PresentationOptions`Bu ad alanını eşlemek için önerilen önek:  
   
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
   
- Bu öznitelik tüm XAML okuyucular tanınmadığı kullanmanız önerilir [mc: Ignorable özniteliği](mc-ignorable-attribute.md) işaretlemek için `Presentation:Freeze` olarak Ignorable özniteliği:  
+ Tüm xaml okuyucuları bu özniteliği tanımadığından, `Presentation:Freeze` özniteliği yoksayılabilir olarak işaretlemek için [mc: Ignorable özniteliğini](mc-ignorable-attribute.md) kullanmanız önerilir:  
   
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- Daha fazla bilgi için [mc: Ignorable özniteliği](mc-ignorable-attribute.md) sayfası.  
+ Daha fazla bilgi için bkz. [mc: Ignorable özniteliği](mc-ignorable-attribute.md) sayfası.  
   
-### <a name="unfreezing-a-freezable"></a>"Freezable'ı"Dondurmama"  
- Bir kez dondurulmuş, bir <xref:System.Windows.Freezable> hiçbir zaman değiştirilebilir veya çözülmüş; ancak kullanarak çözülmüş bir kopya oluşturabilirsiniz <xref:System.Windows.Freezable.Clone%2A> veya <xref:System.Windows.Freezable.CloneCurrentValue%2A> yöntemi.  
+### <a name="unfreezing-a-freezable"></a>Freezable "dondurmayı kaldırma"  
+ Dondurulmuş bir şekilde, <xref:System.Windows.Freezable> a hiçbir şekilde değiştirilemez veya çözülemez; ancak, <xref:System.Windows.Freezable.Clone%2A> veya <xref:System.Windows.Freezable.CloneCurrentValue%2A> yöntemini kullanarak dondurulmamış bir kopya oluşturabilirsiniz.  
   
- Aşağıdaki örnekte, düğmenin arka plan fırça ile ayarlanır ve bu fırça ardından dondurulmuş. Fırça kullanarak çözülmüş bir kopya yapılmadı <xref:System.Windows.Freezable.Clone%2A> yöntemi. Kopya değiştirilebilir ve düğmenin arka plan sarı kırmızı ile değiştirmek için kullanılır.  
+ Aşağıdaki örnekte, düğmenin arka planı fırçayla ayarlanır ve bu fırça daha sonra dondurulur. <xref:System.Windows.Freezable.Clone%2A> Metodu kullanılarak, dondurulmamış bir kopya fırçayla yapılır. Kopya değiştirilir ve düğmenin arka planını sarıdan kırmızıya değiştirmek için kullanılır.  
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  Kullandığınız kopya yönteminden bağımsız olarak, animasyonları hiçbir zaman yeni kopyalanan <xref:System.Windows.Freezable>.  
+> Kullandığınız kopya yönteminden bağımsız olarak, animasyonlar hiçbir şekilde yeni <xref:System.Windows.Freezable>bir şekilde kopyalanmaz.  
   
- <xref:System.Windows.Freezable.Clone%2A> Ve <xref:System.Windows.Freezable.CloneCurrentValue%2A> yöntemleri üretmek freezable derin kopya. Freezable'nın diğer freezable nesneleri dondurulmuş içeriyorsa, bunlar da kopyalandı ve değiştirilebilir yapılır. Örneğin, dondurulmuş kopyalarsanız <xref:System.Windows.Media.PathGeometry> değiştirilebilir hale getirmek için rakamları ve içerdiği segmentleri kopyalanır ve yapılan değiştirilebilir.  
+ <xref:System.Windows.Freezable.Clone%2A> Ve<xref:System.Windows.Freezable.CloneCurrentValue%2A> yöntemleri, Freezable 'ın derin kopyalarını oluşturur. Freezable diğer dondurulmuş Freezable nesnelerini içeriyorsa, bunlar da klonlanır ve değiştirilebilir hale getirilir. Örneğin, değiştirilebilir hale getirmek için dondurulmuş <xref:System.Windows.Media.PathGeometry> bir kopya yaparsanız, içerdiği şekiller ve segmentler de kopyalanır ve değiştirilebilir hale getirilir.  
   
 <a name="createyourownfreezableclass"></a>   
-## <a name="creating-your-own-freezable-class"></a>Freezable sınıfınızı oluşturma  
- Türetilen bir sınıf <xref:System.Windows.Freezable> aşağıdaki özellikleri elde etti.  
+## <a name="creating-your-own-freezable-class"></a>Kendi Freezable sınıfınızı oluşturma  
+ Öğesinden <xref:System.Windows.Freezable> türetilen bir sınıf aşağıdaki özellikleri kazandığında.  
   
-- Özel durumlar: salt okunur (donduruldu) ve yazılabilir bir durumda.  
+- Özel durumlar: salt okunurdur (dondurulmuş) ve yazılabilir bir durumdur.  
   
-- İş parçacığı güvenliği: dondurulmuş <xref:System.Windows.Freezable> iş parçacıkları arasında paylaşılabilir.  
+- İş parçacığı güvenliği: dondurulmuş <xref:System.Windows.Freezable> bir şekilde iş parçacıkları arasında paylaşılabilir.  
   
-- Ayrıntılı değişiklik bildirimi: Diğer aksine <xref:System.Windows.DependencyObject>s, Freezable nesneleri sağlar değişiklik bildirimleri alt özellik değerleri değiştiğinde.  
+- Ayrıntılı değişiklik bildirimi: Diğer <xref:System.Windows.DependencyObject>nesnelerin aksine, Freezable nesneleri alt özellik değerleri değiştiğinde değişiklik bildirimleri sağlar.  
   
-- Kolay kopyalama: Freezable sınıfı ayrıntılı kopyaları oluşturan çeşitli yöntemler zaten uygulamıştır.  
+- Kolay kopyalama: Freezable sınıfı derin kopyalar üreten birkaç yöntemi zaten uygulamıştır.  
   
- A <xref:System.Windows.Freezable> bir tür <xref:System.Windows.DependencyObject>ve bu nedenle bağımlılık özelliği sistem kullanır. Sınıf özelliklerinin bağımlılık özellikleri olması gerekmez, ancak bağımlılık özellikleri kullanmak zorunda yazma çünkü kod miktarını azaltır <xref:System.Windows.Freezable> sınıfı aklınızda bağımlılık özellikleriyle tasarlanmıştır. Bağımlılık özelliği sistemi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
+ ,Bir<xref:System.Windows.DependencyObject>türüdür ve bu nedenle bağımlılık özellik sistemini kullanır. <xref:System.Windows.Freezable> Sınıf özelliklerinin bağımlılık özellikleri olması gerekmez, ancak bağımlılık özelliklerinin kullanılması, <xref:System.Windows.Freezable> sınıf bağımlılık özellikleriyle birlikte tasarlandığından, yazmanız gereken kod miktarını azaltır. Bağımlılık özelliği sistemi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md).  
   
- Her <xref:System.Windows.Freezable> öğesinin alt sınıfı geçersiz kılması gerekir <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi. Sınıfınız için onunla ilişkili tüm verileri bağımlılık özellikleri kullanıyorsa, işiniz bitmiştir.  
+ Her <xref:System.Windows.Freezable> alt sınıf <xref:System.Windows.Freezable.CreateInstanceCore%2A> yöntemi geçersiz kılmalıdır. Sınıfınız tüm verileri için bağımlılık özelliklerini kullanıyorsa işiniz tamamlanmıştır.  
   
- Bağımlılık özelliği olmayan veri üyeleri sınıfınız varsa, aşağıdaki yöntemleri geçersiz kılmanız gerekir:  
+ Sınıfınız bağımlılık olmayan özellik verisi üyeleri içeriyorsa, aşağıdaki yöntemleri de geçersiz kılmanız gerekir:  
   
 - <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -146,20 +146,20 @@ mc:Ignorable="PresentationOptions"
   
 - <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- Ayrıca erişme ve bağımlılık özellikleri olmayan veri üyelerine yazma için aşağıdaki kurallara uymanız gerekir:  
+ Bağımlılık özellikleri olmayan veri üyelerine erişmek ve bunlara yazmak için aşağıdaki kuralları da gözlemleyebilirsiniz:  
   
-- Bağımlılık özelliği olmayan veri üyelerini okuyan herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemi.  
+- Bağımlılık olmayan özellik veri üyelerini okuyan herhangi bir API 'nin başlangıcında <xref:System.Windows.Freezable.ReadPreamble%2A> yöntemini çağırın.  
   
-- Bağımlılık özelliği olmayan veri üyeleri Yazar herhangi bir API'yi başlangıcında, çağrı <xref:System.Windows.Freezable.WritePreamble%2A> yöntemi. (Çağırdıktan sonra <xref:System.Windows.Freezable.WritePreamble%2A> bir API, ek bir çağrı yapmak gerekmez <xref:System.Windows.Freezable.ReadPreamble%2A> de bağımlılık özelliği olmayan veri üyelerini okuyorsanız.)  
+- Bağımlılık olmayan özellik veri üyelerini yazan herhangi bir API 'nin başlangıcında <xref:System.Windows.Freezable.WritePreamble%2A> yöntemini çağırın. (Bir API 'de çağrıldıktan <xref:System.Windows.Freezable.WritePreamble%2A> sonra, bağımlılık olmayan özellik veri üyelerini de okuyabilirsiniz, için <xref:System.Windows.Freezable.ReadPreamble%2A> ek bir çağrı yapmanız gerekmez.)  
   
-- Çağrı <xref:System.Windows.Freezable.WritePostscript%2A> bağımlılık özelliği olmayan veri üyelerine yazma yöntemleri çıkmadan önce yöntemi.  
+- Bağımlılık olmayan özellik veri üyelerine yazan yöntemleri çıkmadan önce yönteminiçağırın.<xref:System.Windows.Freezable.WritePostscript%2A>  
   
- Sınıfınıza olan bağımlılık özelliği veri üyeleri içerip içermediğini <xref:System.Windows.DependencyObject> nesnelerini ayrıca çağırmalısınız <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> yöntemi, kendi değerlerden birine üye ayarlamak bile her değiştirdiğinizde `null`.  
+ Sınıfınız <xref:System.Windows.DependencyObject> nesneler olan bağımlılık dışı özellik veri üyelerini içeriyorsa, üyesini olarak `null`ayarlasanız bile, her bir değerini her <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> değiştirdiğinizde yöntemi de çağırmanız gerekir.  
   
 > [!NOTE]
->  Her başlamak çok önemli olduğu <xref:System.Windows.Freezable> geçersiz kılmanız taban uygulamasını çağrısıyla yöntemi.  
+> Geçersiz kıldığınız her <xref:System.Windows.Freezable> yöntemin temel uygulamaya yönelik bir çağrı ile başlaması çok önemlidir.  
   
- Özel bir örneği için <xref:System.Windows.Freezable> sınıfı [özel animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=159981).  
+ Özel <xref:System.Windows.Freezable> bir sınıfa bir örnek için bkz. [özel animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

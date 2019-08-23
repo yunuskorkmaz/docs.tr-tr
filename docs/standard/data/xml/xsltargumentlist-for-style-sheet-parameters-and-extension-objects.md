@@ -8,56 +8,56 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c9a3b43f81f00a7b6a3a0b3a8e1c102aafe0c0e
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910316"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList
-<xref:System.Xml.Xsl.XsltArgumentList> Sınıfı içeren Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) parametreleri ve XSLT genişletme nesneleri için. Yöntemlere geçirilen zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, bu parametreleri ve genişletme nesneleri stil sayfası içinden çağrılan.  
+Sınıfı <xref:System.Xml.Xsl.XsltArgumentList> , dönüşümler (XSLT) parametreleri ve XSLT uzantı nesneleri için Genişletilebilir Stil sayfası dili içerir. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Ve <xref:System.Xml.Xsl.XsltArgumentList> sınıfları .NET Framework 2.0 sürümünde artık kullanılmıyor. Kullanarak XSLT dönüşümleri gerçekleştirebilirsiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bkz: [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [geçirme gelen XslTransform sınıfı](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) daha fazla bilgi için.  
+> <xref:System.Xml.Xsl.XslTransform> Ve<xref:System.Xml.Xsl.XsltArgumentList> sınıfları .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak XSLT dönüştürmeleri yapabilirsiniz. Daha fazla bilgi için, bkz. [XslCompiledTransform sınıfını kullanma](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) ve [XslTransform sınıfından geçiş](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) .  
   
- <xref:System.Xml.Xsl.XsltArgumentList> Sınıfı XSLT parametreleri ve XSLT genişletme nesneleri içerir. Yöntemlere geçirilen zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi, bu parametreleri ve genişletme nesneleri stil sayfası içinden çağrılan.  
+ <xref:System.Xml.Xsl.XsltArgumentList> Sınıf xslt parametreleri ve XSLT uzantı nesneleri içerir. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemine geçirildiğinde, bu parametreler ve uzantı nesneleri stil sayfalarından çağrılabilir.  
   
- Katıştırılmış bir betik kullanmak yerine bir nesne geçirme avantajları şunlardır:  
+ Bir katıştırılmış betik kullanmak yerine bir nesne geçirmenin avantajları aşağıda verilmiştir:  
   
-- Daha iyi kapsülleme ve sınıfları kullanılmasını sağlar.  
+- Sınıfların daha iyi kapsüllemesini ve yeniden kullanılmasını sağlar.  
   
-- Stil sayfaları, daha küçük ve daha rahat olmasını sağlar.  
+- Stil sayfalarının daha küçük ve sürdürülebilir olmasını sağlar.  
   
-- Desteklenen dizi içinde tanımlanan dışındaki ad alanlarına ait sınıfların yöntemleri çağırma destekler <xref:System> ad alanları.  
+- Desteklenen <xref:System> ad alanları kümesi içinde tanımlananlardan farklı ad alanlarına ait sınıflarda çağırma yöntemlerini destekler.  
   
-- Sonucu ağacı parçalarını kullanımını ile stil sayfası geçirerek destekler <xref:System.Xml.XPath.XPathNodeIterator>.  
+- , <xref:System.Xml.XPath.XPathNodeIterator>İle birlikte stil sayfasına sonuç ağacı parçalarının geçirilmesini destekler.  
   
 ## <a name="xslt-style-sheet-parameters"></a>XSLT stil sayfası parametreleri  
- XSLT parametreleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi. Bir tam adı ve ad alanı Tekdüzen Kaynak Tanımlayıcısı (URI), o anda parametresi nesnesi ile ilişkilendirilmiş.  
+ XSLT parametreleri <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi kullanılarak öğesine eklenir. Tam ad ve ad alanı Tekdüzen Kaynak tanımlayıcısı (URI), parametre nesnesiyle ilişkili zamanda ilişkilendirilir.  
   
- Parametre nesnesine bir World Wide Web Consortium (W3C) türüne karşılık gelmelidir. Eşdeğeri .NET Framework sınıfları (tür), aşağıdaki tablo W3C türleri karşılık gelen gösterir ve W3C türün bir XML yolu dil (XPath) türü veya XSLT türü olup.  
+ Parameter nesnesi bir World Wide Web Konsorsiyumu (W3C) türüne karşılık gelmelidir. Aşağıdaki tablo, karşılık gelen W3C türlerini, eşdeğer .NET Framework sınıfları (türü) ve W3C türünün bir XML Path Language (XPath) türü ya da XSLT türü olup olmadığını gösterir.  
   
-|W3C türü|Eşdeğeri .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
+|W3C türü|Eşdeğer .NET Framework sınıfı (tür)|XPath türü veya XSLT türü|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Dize|System.String|XPath|  
-|Boole değeri|System.Boolean|XPath|  
-|Sayı|System.Double|XPath|  
-|Sonuç ağacı parçası|System.Xml.XPath.XPathNavigator|XSLT|  
+|Dize|System. String|XPath|  
+|Boole değeri|System. Boolean|XPath|  
+|Sayı|System. Double|XPath|  
+|Sonuç ağacı parçası|System. xml. XPath. XPathNavigator|XSLT|  
 |Düğüm kümesi|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- Parametre nesnesine yukarıdaki sınıflardan biri değilse, bunu Double veya dizesi için uygun şekilde zorlanır. Int16, Uınt16, Int32, Uınt32, Int64, UInt64, tek ve ondalık türleri için bir Double zorlanır. Diğer tüm türlerin bir dizeye zorlanır kullanarak `ToString` yöntemi.  
+ Parametre nesnesi yukarıdaki sınıflardan biri değilse, uygun şekilde bir Double veya String öğesine zorlanır. Int16, UInt16, Int32, UInt32, Int64, UInt64, tek ve ondalık türler Double 'a zorlanır. Diğer tüm türler `ToString` yöntemi kullanılarak bir dizeye zorlanır.  
   
-#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT parametresini kullanmak için kullanıcı şunları yapmanız gerekir:  
+#### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>XSLT parametresini kullanmak için, kullanıcının şunları yapması gerekir:  
   
-1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. <xref:System.Xml.Xsl.XsltArgumentList> Kullanarak<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>nesneleri oluşturun ve ekleyin.  
   
-2. Stil sayfası parametreleri çağırın.  
+2. Stil sayfasından parametreleri çağırın.  
   
-3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Yöntemini<xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirin.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> yöntemi hesaplanan indirimi tarihini tutmak için bir parametre oluşturun. İndirimi tarihini, sipariş tarihi 20 gün olarak hesaplanır.  
+ Aşağıdaki örnek, bir hesaplanan <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> indirim tarihini tutacak bir parametre oluşturmak için yöntemini kullanır. İndirim tarihi, sipariş tarihinden itibaren 20 gün olacak şekilde hesaplanır.  
   
 ```vb  
 Imports System  
@@ -140,7 +140,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
- Order.XML  
+ Order. xml  
   
 ```xml  
 <!--Represents a customer order-->  
@@ -156,7 +156,7 @@ public class Sample
 </order>  
 ```  
   
- discount.xsl  
+ Discount. Xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">  
@@ -181,24 +181,24 @@ public class Sample
 ```  
   
 ## <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri  
- XSLT genişletme nesneleri eklenir <xref:System.Xml.Xsl.XsltArgumentList> kullanarak <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. Bir tam adı ve ad alanı URI o anda uzantısı nesnesi ile ilişkilendirilmiş.  
+ XSLT uzantı nesneleri, <xref:System.Xml.Xsl.XsltArgumentList> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak öğesine eklenir. Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.  
   
- Bir nesne eklendiğinde, çağıran <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> güvenlik ilkesinde tam olarak güvenilir olması gerekir. Çağıranın kısmen güvenilen ise, ayrıca başarısız olur.  
+ Bir nesne eklendiğinde, ' ın <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> çağıranı güvenlik ilkesinde tam güvenilir olmalıdır. Arayan yarı güvenilir ise, ekleme başarısız olur.  
   
- Nesne başarıyla eklendi ancak bunu yürütme başarılı olacağını garanti etmez. Zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çağrıldığında, izin verilen kanıt karşı hesaplandığı <xref:System.Xml.Xsl.XslTransform.Load%2A> zaman ve izin kümesi için tüm dönüştürme süreci atanır. Kümede bulunamadı izinleri gerektiren bir eylem başlatmak bir uzantı nesnesi çalışırsa, bir özel durum oluşturulur.  
+ Bir nesne başarıyla eklenirse, yürütmenin başarılı olacağını garanti etmez. Yöntemi çağrıldığında, izinler <xref:System.Xml.Xsl.XslTransform.Load%2A> zamanında verilen kanıtla karşı hesaplanır ve bu izin kümesi tüm dönüştürme işlemine atanır. <xref:System.Xml.Xsl.XslTransform.Transform%2A> Uzantı nesnesi, küme içinde bulunamayan izinleri gerektiren bir eylem başlatmaya çalışırsa, bir özel durum oluşturulur.  
   
- Uzantı nesnelerinden döndürülen veri türleri, sayı, dize, Boolean ve düğüm kümesinin dört temel XPath veri türleri biridir.  
+ Uzantı nesnelerinden döndürülen veri türleri, sayı, dize, Boolean ve düğüm kümesinin dört temel XPath veri türünden biridir.  
   
-#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT uzantı nesnesini kullanmak için kullanıcı aşağıdakileri yapmanız gerekir:  
+#### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>XSLT Uzantı nesnesini kullanmak için, kullanıcının şunları yapması gerekir:  
   
-1. Oluşturma bir <xref:System.Xml.Xsl.XsltArgumentList> ve uzantısını kullanarak nesne eklemek <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. <xref:System.Xml.Xsl.XsltArgumentList> Kullanarak<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>Uzantı nesnesini oluşturun ve ekleyin.  
   
-2. Stil sayfası uzantısı nesneden çağırın.  
+2. Uzantı nesnesini stil sayfasından çağırın.  
   
-3. Geçirmek <xref:System.Xml.Xsl.XsltArgumentList> için <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi.  
+3. <xref:System.Xml.Xsl.XsltArgumentList> Yöntemini<xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemine geçirin.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, RADIUS verilmiş bir daire çevresi hesaplar.  
+ Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplar.  
   
 ```vb  
 Imports System  
@@ -308,7 +308,7 @@ public class Sample
 ```  
   
 ### <a name="input"></a>Giriş  
- Number.XML  
+ Number. xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -322,7 +322,7 @@ public class Sample
 </data>    
 ```  
   
- Circle.xsl  
+ Circle. Xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  

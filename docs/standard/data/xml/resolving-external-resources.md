@@ -5,52 +5,52 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918201"
 ---
 # <a name="resolving-external-resources"></a>Dış Kaynakları Çözümleme
-**XmlResolver** özelliği **XmlDocument** tarafından kullanılan **XmlDocument** XML verisindeki dış belge türü gibi satır içi olmayan kaynakları bulmak için sınıfı tanımları (DTD'ler), varlıkları ve şemalar. Bu öğeleri bir ağ veya yerel bir sürücüde bulunan olabilir ve bir Tekdüzen Kaynak Tanımlayıcısı (URI) tarafından tanımlanabilir. Böylece **XmlDocument** çözümlenecek **EntityReference** belgede mevcut olduğundan ve doğrulamak belgenin dış DTD'nin veya şema göre düğümleri.  
+**XmlDocument** 'un **XMLRESOLVER** özelliği, XML verilerinde satır içi olmayan kaynakları bulmak için **XmlDocument** sınıfı tarafından, dış belge türü tanımları (DTD 'ler), varlıklar ve şemalar gibi kullanılır. Bu öğeler bir ağda veya yerel bir sürücüde bulunabilir ve bir Tekdüzen Kaynak tanımlayıcısı (URI) ile tanımlanabilir. Bu, **XmlDocument** 'nin belgede bulunan **EntityReference** düğümlerini ÇÖZÜMLEMESINE ve belgeyi dış DTD veya şemaya göre doğrulamasına olanak sağlar.  
   
-## <a name="fully-trusted-xmldocument"></a>XmlDocument tam güvenilir  
- **XmlResolver** özelliği işlevselliğini etkiler **XmlDocument.Load** yöntemi. Aşağıdaki tabloda gösterildiği nasıl **XmlDocument.XmlResolver** özelliği çalışır **XmlDocument** nesne tam güvenilir değil. Aşağıdaki tabloda **XmlDocument.Load** yük giriş olduğunda yöntemleri bir **TextReader**, **dize**, **Stream**, veya  **URI**. Bu tablo için geçerli değildir **yük** yöntemi varsa **XmlDocument** gelen yüklü olduğu bir **XmlReader**.  
-  
-|XmlResolver özelliği|İşlev|Notlar|  
-|--------------------------|--------------|-----------|  
-|Özellik ayarlamak bir **XmlResolver** daha önce oluşturduğunuz ve zaten üzerinde kullanıcı tarafından ayarlanan özellikler olan sınıf.|**XmlDocument** kullanan **XmlResolver** DTD'ler ve varlık şemalarını gibi dış kaynaklara başvuruları çözümlemek için dosya adlarını çözümlemek için verilir.<br /><br /> **XmlResolver** ekleme veya düğümleri düzenlerken gereken dış kaynakları çözümleme yaparken de kullanılan **XmlDocument**.|**XmlResolver** verilen **XmlDocument** bulunan ve çözümlenen dış kaynaklara ihtiyaç duyduğunuzda, kullanılan çözümleyici.|  
-|Özellik kümesine **null** (**hiçbir şey** Microsoft Visual Basic. NET'te).|Bir dış kaynağa gerektiren özellikler, dış bir şema veya DTD'nin bulma gibi desteklenmez. Ya da dış varlıklar çözümlenir ve gerçekleştirme İşlevler, düzenleme çözülmesi gereken varlık düğümleri ekleme gibi desteklenmez.|**XmlDocument** yükleri anonim olarak dosyaları ve diğer tüm kaynakları çözmek çalışmaz.|  
-|Özelliği ayarlamak, ancak kalan varsayılan durumunda.|Bir **XmlUrlResolver** NULL ile kimlik bilgileri örneği ve tarafından kullanılan **XmlDocument** dış DTD, varlıkları ve şemaları, bulma, dosya adları çözümlerken ve **null** düğümleri düzenlerken kimlik bilgileri kullanılır.||  
-  
- Aşağıdaki tabloda **XmlDocument.Load** yöntemi, giriş **yük** olduğu bir **XmlReader** ve **XmlDocument** olduğu tam olarak güvenilir.  
+## <a name="fully-trusted-xmldocument"></a>Tam güvenilir XmlDocument  
+ **XmlResolver** özelliği, **XmlDocument. Load** yönteminin işlevlerini etkiler. Aşağıdaki tabloda, XmlDocument nesnesi tam olarak güvenilir olduğunda **XmlDocument. XmlResolver** özelliğinin nasıl çalıştığı gösterilmektedir. Aşağıdaki tabloda, Load girişi bir **TextReader**, **String**, **Stream**veya **URI**olduğunda **XmlDocument. Load** yöntemleri gösterilmektedir. **XmlDocument** bir **XmlReader**'dan yüklenirse, bu tablo **Load** yöntemine uygulanmaz.  
   
 |XmlResolver özelliği|İşlev|Notlar|  
 |--------------------------|--------------|-----------|  
-|**XmlResolver** sınıfı tarafından kullanılan **XmlDocument** tarafından kullanılan aynı sınıfta **XmlReader**.|**XmlDocument** kullanan **XmlResolver** için atanma **XmlReader**.<br /><br /> **XmlDocument.Resolver** özelliği ayarlanmışsa, bakılmaksızın olamaz **XmlDocument** hale geliyor çünkü güven düzeyi, bir **XmlResolver** gelen  **XmlReader**. Ayarlarını geçersiz kılma girişiminde olamaz **XmlReaders**' **XmlResolver** ayarlayarak **XmlResolver** özelliği **XmlDocument**.|**XmlReader** olabilir **XmlTextReader**, **XmlValidatingReader**, veya özel olarak yazılmış bir okuyucu. Kullanılan okuyucu varlık çözümleme destekliyorsa, dış varlıklar çözümlenir. Okuyucu aktarılırsa varlık başvuruları, ardından başvuruları çözümlenmedi varlık desteklemez.|  
+|Özelliği, daha önce oluşturulmuş bir **XmlResolver** sınıfına ayarlanır ve Kullanıcı tarafından önceden ayarlanmış özellikler vardır.|**XmlDocument** , DTD 'ler, varlıklar ve şemalar gibi dış kaynaklara yönelik başvuruları çözümlemek için dosya adlarını çözümlemek Için verilen **XmlResolver** 'ı kullanır.<br /><br /> **XmlResolver** , **XmlDocument**içindeki düğümleri eklerken veya düzenlenirken gereken dış kaynakları çözümlerken de kullanılır.|**XmlDocument** 'A verilen **XmlResolver** , dış kaynakların bulunması ve çözümlenmesi gerektiğinde kullanılan çözümleyicindedir.|  
+|Özelliği **null** (Microsoft Visual Basic .net 'te**hiçbir şey** ) olarak ayarlanır.|Dış bir kaynak gerektiren özellikler desteklenmez, örneğin bir dış şemayı veya DTD 'yi bulma. Dış varlıklar da çözülür ve çözümleme gerektiren varlık düğümleri ekleme gibi Düzenle işlevlerinin gerçekleştirilmesi desteklenmez.|**XmlDocument** dosyaları anonim olarak yükler ve diğer kaynakları çözmeyi denemez.|  
+|Özellik ayarlanmadı, ancak varsayılan durumunda kaldı.|NULL kimlik bilgilerine sahip bir **XmlUrlResolver** , dosya adlarını çözümlemede, dış DTD 'lerin, varlıkların ve şemaların yerini alırken ve düğüm düzenlenirken **null** kimlik bilgileri kullanılırken **XmlDocument** tarafından oluşturulur.||  
+  
+ Aşağıdaki tabloda, **Load** girişi bir **XmlReader** olduğunda ve **XmlDocument** tam güvenilir olduğunda **XmlDocument. Load** yöntemi gösterilmektedir.  
+  
+|XmlResolver özelliği|İşlev|Notlar|  
+|--------------------------|--------------|-----------|  
+|**XmlDocument** tarafından kullanılan **XmlResolver** sınıfı, **XmlReader**tarafından kullanılan sınıftır.|**XmlDocument** , **XmlReader**'a atanan **XmlResolver** 'ı kullanır.<br /><br /> XmlDocument **. Resolver** özelliği, **XmlReader**'dan bir **XmlResolver** alındığından, **XmlDocument** güven düzeyinden bağımsız olarak ayarlanamaz. **XmlDocument**'un **XmlResolver** özelliğini ayarlayarak **xmlokuyucuları**' **XmlResolver** 'ın ayarlarını geçersiz kılmayı deneyemezsiniz.|**XmlReader** , **XmlTextReader**, **XmlValidatingReader**veya özel yazılı bir okuyucu olabilir. Kullanılan okuyucu varlık çözünürlüğünü destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvurularını desteklemiyorsa, varlık başvuruları çözümlenmez.|  
   
 ## <a name="semi-trusted-xmldocument"></a>Yarı güvenilir XmlDocument  
- Aşağıdaki tabloda nasıl **XmlDocument.XmlResolver** özelliği, nesne yarı güvenilir olduğunda çalışır. Bu tabloda uygulandığı **XmlDocument.Load** yük giriş olduğunda yöntemleri bir **TextReader**, **dize**, **Stream**, veya  **URI**. Bu tablo için geçerli değildir **yük** yöntemi varsa **XmlDocument** gelen yüklü olduğu bir **XmlReader**.  
+ Aşağıdaki tabloda, nesne yarı güvenilir olduğunda **XmlDocument. XmlResolver** özelliğinin nasıl çalıştığı gösterilmektedir. Bu tablo, Load girişi bir **TextReader**, **String**, **Stream**veya **URI**olduğunda **XmlDocument. Load** yöntemleri için geçerlidir. **XmlDocument** bir **XmlReader**'dan yüklenirse, bu tablo **Load** yöntemine uygulanmaz.  
   
 |XmlResolver özelliği|İşlev|Notlar|  
 |--------------------------|--------------|-----------|  
-|Yarı güvenilir senaryoda **XmlResolver** null dışında hiçbir şeye özelliği ayarlanamaz.|Bir **XmlUrlResolver** ile **null** örneği ve tarafından kullanılan kimlik bilgilerini **XmlDocument** dış DTD, varlıklar, bulma, dosya adları çözümlerken ve şemaları ve **null** düğümleri düzenlerken kimlik bilgileri kullanılır.|Bu davranış, davranıştır aynıdır, **XmlResolver** özelliği değil ayarlayın, ancak kalan varsayılan durumunda.<br /><br /> **XmlDocument** tüm eylemler için anonim izinleri kullanır.|  
-|Özellik kümesine **null** (**hiçbir şey** Microsoft Visual Basic. NET'te).|Bir dış şema veya DTD'nin bulma gibi bir dış kaynağa gerektiren herhangi bir özellik desteklenir. Ya da dış varlıklar çözümlenir ve gerçekleştirme, çözülmesi gereken varlık düğümleri ekleme gibi işlevleri düzenleme desteklenmiyor.|Özelliği olduğunda **null**, bakılmaksızın aynı ise davranıştır **XmlDocument** tam olarak güvenilen veya yarı güvenilir.|  
-|Özelliği ayarlamak, ancak kalan varsayılan durumunda.|Bir **XmlUrlResolver** ile **null** örneği ve tarafından kullanılan kimlik bilgilerini **XmlDocument** dış DTD, varlıklar, bulma, dosya adları çözümlerken ve şemaları ve **null** düğümleri düzenlerken kimlik bilgileri kullanılır.|**XmlDocument** tüm eylemler için anonim izinleri kullanır.|  
+|Yarı güvenilir senaryoda, **XmlResolver** özelliği null dışında bir şeye ayarlanamaz.|**Null** kimlik bilgilerine sahip bir **XmlUrlResolver** , dosya adlarını çözümlemede, dış DTD 'lerin, varlıkların ve şemaların yerini alırken ve düğüm düzenlenirken **null** kimlik bilgileri kullanılırken **XmlDocument** tarafından oluşturulur.|Bu davranış, **XmlResolver** özelliği ayarlanmamışsa, ancak varsayılan durumunda bırakılırsa, davranışla aynıdır.<br /><br /> **XmlDocument** tüm eylemler için anonim izinleri kullanır.|  
+|Özelliği **null** (Microsoft Visual Basic .net 'te**hiçbir şey** ) olarak ayarlanır.|Dış bir şemayı veya DTD 'yi bulma gibi bir dış kaynak gerektirmeyen hiçbir özellik desteklenmez. Dış varlıklar da çözümlenir ve çözümleme gerektiren varlık düğümleri ekleme gibi işlevleri de gerçekleştirmek desteklenmez.|Özelliği **null**olduğunda, **XmlDocument** tamamen güvenilir veya yarı güvenilir olmasına bakılmaksızın davranış aynı olur.|  
+|Özellik ayarlanmadı, ancak varsayılan durumunda kaldı.|**Null** kimlik bilgilerine sahip bir **XmlUrlResolver** , dosya adlarını çözümlemede, dış DTD 'lerin, varlıkların ve şemaların yerini alırken ve düğüm düzenlenirken **null** kimlik bilgileri kullanılırken **XmlDocument** tarafından oluşturulur.|**XmlDocument** tüm eylemler için anonim izinleri kullanır.|  
   
- Bu tabloda uygulandığı **XmlDocument.Load** yöntemi, giriş **yük** olan bir **XmlReader**ve **XmlDocument** olan Yarı güvenilir.  
+ Bu tablo, **Load** girişi bir **XmlReader**olduğunda ve **XmlDocument** yarı güvenilir olduğunda **XmlDocument. Load** yöntemi için geçerlidir.  
   
 |XmlResolver özelliği|İşlev|Notlar|  
 |--------------------------|--------------|-----------|  
-|**XmlResolver** sınıfı tarafından kullanılan **XmlDocument** tarafından kullanılan hizmet örneğiyle aynı olan **XmlReader**.|**XmlDocument** kullanan **XmlResolver** için atanma **XmlReader**.<br /><br /> **XmlDocument.Resolver** özelliği ayarlanmışsa, bakılmaksızın olamaz **XmlDocument** hale geliyor çünkü güven düzeyi, bir **XmlResolver** gelen  **XmlReader**. Ayarlarını geçersiz kılma girişiminde olamaz **XmlReaders** **XmlResolver** ayarlayarak **XmlResolver** özelliği **XmlDocument**.|**XmlReader** olabilir **XmlTextReader**, doğrulama <xref:System.Xml.XmlReader>, veya özel olarak yazılmış bir okuyucu. Kullanılan okuyucu varlık çözümleme destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvuruları desteklemiyorsa, varlık başvuruları çözümlenmiyor.|  
+|**XmlDocument** tarafından kullanılan **XmlResolver** sınıfı, **XmlReader**tarafından kullanılan bir.|**XmlDocument** , **XmlReader**'a atanan **XmlResolver** 'ı kullanır.<br /><br /> XmlDocument **. Resolver** özelliği, **XmlReader**'dan bir **XmlResolver** alındığından, **XmlDocument** güven düzeyinden bağımsız olarak ayarlanamaz. **XmlDocument**'un **XmlResolver** özelliğini ayarlayarak **xmlokuyucuları** **XmlResolver** 'ın ayarlarını geçersiz kılmayı deneyemezsiniz.|**XmlReader** , **XmlTextReader**, doğrulama <xref:System.Xml.XmlReader>veya özel yazılı bir okuyucu olabilir. Kullanılan okuyucu varlık çözünürlüğünü destekliyorsa, dış varlıklar çözümlenir. Geçirilen okuyucu varlık başvurularını desteklemiyorsa, varlık başvuruları çözümlenmez.|  
   
- XmlResolver doğru kimlik bilgilerini içerecek şekilde ayarlanması, dış kaynaklara erişim sağlar.  
+ XmlResolver 'ın doğru kimlik bilgilerini içerecek şekilde ayarlanması, dış kaynaklara erişime izin verir.  
   
 > [!NOTE]
->  Alınacak bir yolu yoktur **XmlResolver** özelliği. Bir kullanıcının Engellemesi yardımcı olan bir **XmlResolver** hangi kimlik bilgilerini ayarlayın. Ayrıca, bir **XmlTextReader** veya doğrulama <xref:System.Xml.XmlReader> yüklemek için kullanılan **XmlDocument** ve **XmlDocument** gelen Çözümleyicileri ayarlanmış bir çözümleyici sahip Bu okuyucular tarafından önbelleğe alınmaz **XmlDocument** sonra **yük** aşama olduğundan, bu da güvenlik riski oluşturur.  
+> **XmlResolver** özelliğini almanın bir yolu yoktur. Bu, bir kullanıcının kimlik bilgilerinin ayarlandığı bir **XmlResolver** 'ı yeniden kullanmasını önlemeye yardımcı olur. Ayrıca, **XmlDocument** 'yi yüklemek için bir **XmlTextReader** veya doğrulama <xref:System.Xml.XmlReader> kullanılıyorsa ve **XmlDocument** ayarlanmış bir çözümleyici 'ye sahipse, bu okuyuculardan gelen çözümleyiciler,Bu, bir güvenlik riski da sunduğundan, yükleme aşaması.  
   
- Daha fazla bilgi için Açıklamalar bölümüne bakın. <xref:System.Xml.XmlResolver> başvuru sayfası.  
+ Daha fazla bilgi için <xref:System.Xml.XmlResolver> başvuru sayfasının açıklamalar bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

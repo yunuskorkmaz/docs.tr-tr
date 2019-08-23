@@ -2,18 +2,18 @@
 title: <add> / <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920023"
 ---
-# <a name="add-of-serviceactivations"></a>\<Ekle >, \<serviceActivations >
+# <a name="add-of-serviceactivations"></a>\<\<serviceetkinleştirmeleri > ekleyin >
 
-Windows Communication Foundation (WCF) hizmet türlerinizi eşleştiren sanal hizmet aktivasyon ayarlarını tanımlamanıza olanak sağlayan bir yapılandırma öğesi. Bu WAS içinde barındırılan hizmetleri etkinleştirmeniz mümkün kılar / IIS .svc dosyası olmadan.
+Windows Communication Foundation (WCF) hizmet türlerine eşlenen sanal hizmet etkinleştirme ayarlarını tanımlamanızı sağlayan bir yapılandırma öğesi. Bu,. svc dosyası olmadan WAS/IIS ' de barındırılan hizmetlerin etkinleştirilmesi mümkün olur.
 
-\<sistemi. ServiceModel > \
+\<sistemin. ServiceModel > \
 \<serviceHostingEnvironment >
 
 ## <a name="syntax"></a>Sözdizimi
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) hizmet türlerinizi eşleştiren sanal hi
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|Fabrika|Bir hizmet aktivasyon öğesini üreten üretici CLR tür adını belirten dize.|
-|hizmet|(Tam nitelikli tür adı veya kısa Typename (App_Code klasörü içinde yerleştirilir olduğunda). hizmeti uygulayan ServiceType|
-|relativeAddress|Geçerli bir IIS uygulama - örneğin "Service.svc" içinde göreli adresi. WCF 4. 0'göreli bu adresi bir bilinen dosya uzantıları (.svc .xamlx,...) içeren var. Fiziksel dosya için relativeUrl var olması|
+|Çar|Bir hizmet etkinleştirme öğesi üreten fabrika 'nin CLR türü adını belirten bir dize.|
+|hizmet|Hizmeti uygulayan ServiceType (tam nitelenmiş TypeName veya Short TypeName (App_Code klasörüne yerleştirildiğinde).|
+|relativeAddress|Geçerli IIS uygulamasındaki göreli adres (örneğin, "Service. svc"). WCF 4,0 ' de, bu göreli adresin bilinen dosya uzantılarından birini (. svc,. xamlx,...) içermesi gerekir. RelativeUrl 'Si için fiziksel dosya yok|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -47,11 +47,11 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Aktivasyon ayarlarını tanımlayan bir yapılandırma bölümü.|
+|[\<serviceHostingEnvironment >](servicehostingenvironment.md)|Etkinleştirme ayarlarını açıklayan bir yapılandırma bölümü.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Aşağıdaki örnekte, web.config dosyasında etkinleştirme ayarlarının nasıl yapılandırılacağı gösterilmektedir.
+Aşağıdaki örnek, Web. config dosyanızda etkinleştirme ayarlarının nasıl yapılandırılacağını gösterir.
 
 ```xml
 <configuration>
@@ -65,11 +65,11 @@ Aşağıdaki örnekte, web.config dosyasında etkinleştirme ayarlarının nası
 </configuration>
 ```
 
-Bu yapılandırmayı kullanarak .svc dosyası kullanmadan GreetingService etkinleştirebilirsiniz.
+Bu yapılandırmayı kullanarak, bir. svc dosyası kullanmadan, bu hizmetleri etkinleştirebilirsiniz.
 
-Unutmayın `<serviceHostingEnvironment>` uygulama düzeyinde yapılandırma. Yerleştirmek sahip olduğunuz `web.config` sanal uygulama kökü altındaki yapılandırmasını içeren. Ayrıca, `serviceHostingEnvironment` machineToApplication devralınabilir bölümüdür. Tek bir hizmette makine kökündeki kaydolursanız, uygulamadaki her hizmet bu hizmeti devralır.
+Bu `<serviceHostingEnvironment>` , bir uygulama düzeyi yapılandırması olduğunu unutmayın. Yapılandırma `web.config` içeren yapılandırmayı sanal uygulamanın köküne yerleştirmeniz gerekir. Ayrıca, `serviceHostingEnvironment` bir MachineToApplication devralınabilir bölümüdür. Makinenin köküne tek bir hizmet kaydettiğinizde, uygulamadaki her hizmet bu hizmeti devralmasını sağlayacaktır.
 
-Yapılandırma temelli etkinleştirme, etkinleştirme hem http hem de olmayan http protokolü üzerinden destekler. Yani .svc, .xoml veya .xamlx relativeAddress uzantılarında gerektiriyor. Sonra hizmeti uzantıyı etkinleştirmek üzere olanak sağlayacak bilinen buildProviders kendi uzantılarınızı eşleyebilirsiniz. Çakışma, bağlı `<serviceActivations>` bölüm .svc kayıtları geçersiz kılar.
+Yapılandırma tabanlı etkinleştirme, hem http hem de http olmayan protokol üzerinde etkinleştirmeyi destekler. RelativeAddress, yani. svc,. xoml veya. xamlx için Uzantılar gerektirir. Kendi uzantılarınızı, bilinen bir tür buildProviders ile eşleyebilirsiniz ve bu sayede hizmeti herhangi bir uzantı üzerinden etkinleştirmenizi sağlar. Çakışma sonrasında, `<serviceActivations>` bölüm. svc kayıtlarını geçersiz kılar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,21 +2,21 @@
 title: <add> / <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926695"
 ---
-# <a name="add-of-filters"></a>\<Ekle >, \<filtreleri >
+# <a name="add-of-filters"></a>\<\<filtrelerin > ekleyin >
 Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.  
   
  \<system.ServiceModel>  
 \<Tanılama >  
 \<messageLogging >  
-\<filtreleri >  
-\<Ekle >  
+\<Filtreler >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,7 +33,7 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|filtre|Bir XPath 1.0 ifade tarafından tanımlanan bir XML belgesi üzerinde bir sorgu belirten bir dize. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|filtre|Bir XPath 1,0 ifadesi tarafından tanımlanan bir XML belgesi üzerinde bir sorgu belirten bir dize. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,19 +42,19 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<filtreleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Hangi tür iletilerin günlüğe denetlemek için kullanılan XPath filtrelerinin bir koleksiyonunu içerir.|  
+|[\<Filtreler >](filters.md)|Ne tür bir ileti günlüğe kaydedileceğini denetlemek için kullanılan XPath filtreleri koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Filtreler yalnızca Aktarım katmanında, tarafından belirtilen uygulanır `logMessagesAtTransportLevel` olduğu `true`. Hizmet düzeyi ve hatalı biçimlendirilmiş bir ileti günlüğü filtreler tarafından etkilenmez.  
+ Filtreler yalnızca tarafından `logMessagesAtTransportLevel` `true`belirtilen aktarım katmanında uygulanır. Hizmet düzeyi ve hatalı biçimlendirilmiş ileti günlüğe kaydetme, filtrelerle etkilenmez.  
   
- Koleksiyona bir filtre eklemek için `add` anahtar sözcüğü. Bir veya daha fazla filtre tanımlandığında, en az bir filtre ile eşleşen iletileri günlüğe kaydedilir. Filtre boş tanımlıysa, tüm iletileri geçirir.  
+ Koleksiyona bir filtre eklemek için `add` anahtar sözcüğünü kullanın. Bir veya daha fazla filtre tanımlandığında yalnızca filtrelerden en az biriyle eşleşen mesajlar günlüğe kaydedilir. Hiçbir filtre tanımlanmamışsa, tüm iletiler geçer.  
   
- Filtreler XPath tamamını destekler ve yapılandırma dosyasında göründükleri sırayla uygulanır. Sözdizimsel olarak yanlış bir filtre yapılandırma bir özel durum oluşur.  
+ Filtreler tam XPath söz dizimini destekler ve yapılandırma dosyasında göründükleri sırada uygulanır. Sözdizimi yanlış bir filtre, yapılandırma özel durumuyla sonuçlanır.  
   
- Yalnızca bir SOAP üst bilgisi bölümü olan iletiler kaydeden filtre yapılandırmak nasıl bir örnek verilmiştir.  
+ Aşağıda, yalnızca bir SOAP üstbilgisi bölümüne sahip iletileri kaydeden bir filtrenin nasıl yapılandırılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Yalnızca bir SOAP üst bilgisi bölümü olan iletiler kaydeden filtre yapılandırmak nasıl bir örnek verilmiştir.  
+ Aşağıda, yalnızca bir SOAP üstbilgisi bölümüne sahip iletileri kaydeden bir filtrenin nasıl yapılandırılacağı gösterilmektedir.  
   
 ```xml  
 <messageLogging logEntireMessage="true"
@@ -79,5 +79,5 @@ Günlüğe kaydedilecek ileti türünü belirten bir XPath filtresi.
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging >](messagelogging.md)

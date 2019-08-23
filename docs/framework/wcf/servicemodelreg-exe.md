@@ -2,15 +2,15 @@
 title: ServiceModel Kayıt Aracı (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 5fab1a356cd035ed006bfe90d713e179907e0137
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 519f303507ed873266cc05a7556073887b66ba6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051799"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923024"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>ServiceModel Kayıt Aracı (ServiceModelReg.exe)
-Bu komut satırı aracı, WCF ve WF bileşenleri tek bir makinede kaydını yönetme olanağı sağlar. Normal koşullar altında bu aracı WCF kullanın gerekmez ve WF bileşenler yüklendiğinde yapılandırılmıştır. Ancak, hizmeti etkinleştirme ile ilgili sorunlar yaşıyorsanız, bu aracı kullanarak bileşenleri kaydetmek deneyebilirsiniz.  
+Bu komut satırı aracı, WCF ve WF bileşenlerinin tek bir makinede kaydını yönetme olanağı sağlar. Normal koşullarda, WCF ve WF bileşenleri yüklendiğinde yapılandırıldığı için bu aracı kullanmanız gerekmez. Ancak hizmet etkinleştirme ile ilgili sorun yaşıyorsanız, bu aracı kullanarak bileşenleri kaydetmeyi deneyebilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -19,30 +19,30 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aracı şu konumda bulunabilir:  
+ Araç aşağıdaki konumda bulunabilir:  
   
- %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
+ %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
   
 > [!NOTE]
->  ServiceModel kayıt aracı çalıştığında [!INCLUDE[wv](../../../includes/wv-md.md)], **Windows özellikleri** iletişim değil yansıtmak, **Windows Communication Foundation HTTP etkinleştirme** seçeneğinde**Microsoft .NET Framework 3.0** açıktır. **Windows özellikleri** tıklayarak iletişim erişilebilir **Başlat**, ardından **çalıştırma** ardından yazarak **OptionalFeatures**.  
+> ServiceModel [!INCLUDE[wv](../../../includes/wv-md.md)]kayıt aracı üzerinde çalıştırıldığında, **Windows özellikleri** iletişim kutusu **Microsoft .NET Framework 3,0** altında **Windows Communication Foundation HTTP Etkinleştirme** seçeneğinin açık olduğunu yansıtmayabilir. **Windows özellikleri** Iletişim kutusuna **Başlat**' a ve ardından **Çalıştır** ' a tıklayıp **OptionalFeatures**yazarak erişilebilir.  
   
- Aşağıdaki tablolar ile ServiceModelReg.exe kullanılabilir seçenekleri açıklar.  
+ Aşağıdaki tablolar, ServiceModelReg. exe ile kullanılabilen seçenekleri anlatmaktadır.  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`-ia`|WCF ve WF tüm bileşenlerini yükler.|  
-|`-ua`|Tüm WCF ve WF bileşenleri kaldırır.|  
-|`-r`|Tüm WCF ve WF bileşenleri onarır.|  
-|`-i`|– C ile belirtilen WCF ve WF bileşenlerini yükler.|  
-|`-u`|– C ile belirtilen WCF ve WF bileşenleri kaldırır.|  
-|`-c`|Yükler veya bir bileşeni kaldırır:<br /><br /> -httpnamespace – HTTP Namespace ayırma<br />-tcpportsharing – TCP bağlantı noktası Paylaşım Hizmeti<br />-tcpactivation – TCP Etkinleştirme Hizmeti (.NET 4 istemci profili üzerinde desteklenmez)<br />-namedpipeactivation – adlandırılmış kanal etkinleştirmesi hizmet (.NET 4 istemci profili üzerinde desteklenmiyor<br />-msmqactivation – MSMQ Etkinleştirme Hizmeti (.NET 4 istemci profili üzerinde desteklenmiyor<br />-etw – ETW olay izleme bildirimleri (Windows Vista veya üzeri)|  
-|`-q`|Sessiz modu (yalnızca görünen hata günlüğü)|  
-|`-v`|Ayrıntılı modu.|  
+|`-ia`|Tüm WCF ve WF bileşenlerini yükleme.|  
+|`-ua`|Tüm WCF ve WF bileşenlerini kaldırır.|  
+|`-r`|Tüm WCF ve WF bileşenlerini onarır.|  
+|`-i`|– C ile belirtilen WCF ve WF bileşenlerini yükleme.|  
+|`-u`|– C ile belirtilen WCF ve WF bileşenlerini kaldırır.|  
+|`-c`|Bir bileşeni yüklüyor veya kaldırır:<br /><br /> -httpnamespace – HTTP ad alanı ayırma<br />-tcpportsharing – TCP bağlantı noktası paylaşım hizmeti<br />-tcpactivation – TCP etkinleştirme hizmeti (.NET 4 Istemci profilinde desteklenmez)<br />-namedpipeactivation-adlandırılmış kanal etkinleştirme hizmeti (.NET 4 Istemci profilinde desteklenmez<br />-MsmqActivation – MSMQ etkinleştirme hizmeti (.NET 4 Istemci profilinde desteklenmez<br />-ETW – ETW olay izleme bildirimleri (Windows Vista veya üzeri)|  
+|`-q`|Sessiz mod (yalnızca hata günlüğünü görüntüle)|  
+|`-v`|Ayrıntılı mod.|  
 |`-nologo`|Telif hakkı ve başlık iletisini bastırır.|  
-|`-?`|Yardım metni görüntüler|  
+|`-?`|Yardım metnini görüntüler|  
   
-## <a name="fixing-the-fileloadexception-error"></a>FileLoadException hata düzeltme  
- WCF'ın önceki sürümlerini makinenizde yüklü değilse, alabilirsiniz bir `FileLoadFoundException` yeni bir yükleme kaydedilecek ServiceModelReg aracı'nı çalıştırdığınızda hata. El ile dosyaları önceki yükle kaldırıldı ancak machine.config ayarları dokunulmadan olsa bile bu durum oluşabilir.  
+## <a name="fixing-the-fileloadexception-error"></a>FileLoadException hatası düzeltiliyor  
+ Daha önceki WCF sürümlerini makinenize yüklediyseniz, yeni bir yükleme kaydetmek için ServiceModelReg aracını çalıştırdığınızda `FileLoadFoundException` bir hata alabilirsiniz. Bu, önceki yüklemeden dosyaları el ile kaldırmış olsanız, ancak Machine. config ayarlarından ayrılsanız bile gerçekleşebilir.  
   
  Hata iletisi aşağıdakine benzer.  
   
@@ -51,24 +51,24 @@ Error: System.IO.FileLoadException: Could not load file or assembly 'System.Serv
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
   
- System.ServiceModel sürüm 2.0.0.0 derleme yüklendiğini hata iletisindeki unutmamalısınız erken bir müşteri Technology Preview (CTP) sürümü tarafından. Geçerli yayımlanan System.ServiceModel derlemenin 3.0.0.0 yerine sürümüdür. Resmi WCF yayın burada WCF erken bir CTP sürümü yüklü, ancak tamamen kaldırılmış bir makineye yüklemek istediğinizde, bu nedenle, bu sorunla karşılaşılır.  
+ System. ServiceModel sürüm 2.0.0.0 derlemesinin erken bir müşteri teknolojisi Önizleme (CTP) sürümü tarafından yüklendiği hata iletisinden emin olmalısınız. System. ServiceModel derlemesinin geçerli sürümü bunun yerine 3.0.0.0. Bu nedenle, bir WCF 'nin ilk CTP sürümünün yüklendiği ancak tamamen kaldırılmadığı bir makineye resmi WCF sürümü yüklemek istediğinizde bu sorunla karşılaşıldı.  
   
- ServiceModelReg.exe önceki sürümünü girdilerin temizlenmesini olamaz ya da yeni sürümün girişleri kaydedebilirsiniz. Machine.config el ile düzenlemek için yalnızca çözüm olabilir. Bu dosya şu konumda bulabilirsiniz.  
+ ServiceModelReg. exe önceki sürüm girdilerini temizleyemiyor veya yeni sürümün girdilerini kaydedemezler. Tek geçici çözüm, Machine. config dosyasını el ile düzenlemedir. Bu dosyayı aşağıdaki konumda bulabilirsiniz.  
   
 ```  
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
- WCF 64 bit makine üzerinde çalıştırıyorsanız, aynı dosyanın bu konumda da düzenlemeniz gerekir.  
+ WCF 'yi 64 bitlik bir makinede çalıştırıyorsanız aynı dosyayı da bu konumda düzenlemeniz gerekir.  
   
 ```  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   
 ```  
   
- Bu dosyadaki başvuran hiçbir XML düğümüyle bulun "System.ServiceModel, sürüm 2.0.0.0 =", bunları ve tüm alt düğümleri silin. Dosyayı kaydedin ve ServiceModelReg.exe yeniden çalıştırmak bu sorunu çözer.  
+ Bu dosyadaki "System. ServiceModel, Version = 2.0.0.0" öğesine başvuran XML düğümlerini bulun, bunları ve tüm alt düğümleri silin. Dosyayı kaydedin ve ServiceModelReg. exe ' yi yeniden çalıştırın bu sorunu çözer.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki örnekler, en yaygın seçenekler ServiceModelReg.exe aracı kullanmayı gösterir.  
+ Aşağıdaki örneklerde ServiceModelReg. exe aracının en yaygın seçeneklerinin nasıl kullanılacağı gösterilmektedir.  
   
 ```  
 ServiceModelReg.exe -ia  

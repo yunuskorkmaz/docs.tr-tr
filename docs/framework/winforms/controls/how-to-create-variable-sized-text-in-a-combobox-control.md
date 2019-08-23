@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 1fa9b04063d8f606f674cc54190dad5a669adbeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c0dc40f6cac0af1f88e72089865caa3a17fcf2a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914744"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Nasıl yapılır: ComboBox Denetiminde Değişken Boyutlu Metin Oluşturma
-Bu örnek özel çizim metin gösterir bir <xref:System.Windows.Forms.ComboBox> denetimi. Bir öğenin belirli bir ölçütü karşıladığında bir büyük yazı tipiyle çizilmiş ve kırmızı açık.  
+Bu örnek, bir <xref:System.Windows.Forms.ComboBox> denetimdeki metnin özel çizimini gösterir. Bir öğe belirli bir ölçütü karşıladığında, daha büyük bir yazı tipiyle çizilir ve kırmızı renkte olur.  
   
 ## <a name="example"></a>Örnek  
   
@@ -56,16 +56,16 @@ End Sub
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
 - Bir Windows formu.  
   
-- A <xref:System.Windows.Forms.ComboBox> adlı Denetim `ListBox1` üç öğelerle <xref:System.Windows.Forms.ComboBox.Items%2A> özelliği. Bu örnekte, üç öğeye adlandırılır `"One", Two", and Three"`. <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Özelliği `ComboBox1` ayarlanmalıdır <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
+- Özelliğindeki üç öğeyle `ListBox1` <xref:System.Windows.Forms.ComboBox> adlıbirdenetim<xref:System.Windows.Forms.ComboBox.Items%2A> . Bu örnekte, üç öğe adlandırılır `"One", Two", and Three"`. <xref:System.Windows.Forms.ComboBox.DrawMode%2A> Özelliği`ComboBox1` olarak ayarlanmalıdır<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.  
   
     > [!NOTE]
-    >  Bu teknik de geçerlidir <xref:System.Windows.Forms.ListBox> denetim — yerini alabilecek bir <xref:System.Windows.Forms.ListBox> için <xref:System.Windows.Forms.ComboBox>.  
+    > Bu teknik Ayrıca <xref:System.Windows.Forms.ListBox> denetim için de geçerlidir — için <xref:System.Windows.Forms.ComboBox>bir <xref:System.Windows.Forms.ListBox> kullanabilirsiniz.  
   
-- Başvurular <xref:System.Windows.Forms?displayProperty=nameWithType> ve <xref:System.Drawing?displayProperty=nameWithType> ad alanları.  
+- <xref:System.Windows.Forms?displayProperty=nameWithType> Ve<xref:System.Drawing?displayProperty=nameWithType> ad alanlarına başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

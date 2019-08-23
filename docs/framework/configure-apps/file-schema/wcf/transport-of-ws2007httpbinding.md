@@ -2,22 +2,22 @@
 title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788303"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911981"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<Aktarım >, \<ws2007HttpBinding >
-HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.  
+# <a name="transport-of-ws2007httpbinding"></a>\<\<WS2007HttpBinding > taşıma >
+HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<ws2007HttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,40 +37,40 @@ HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`clientCredentialType`|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|`proxyCredentialType`|Bir etki alanı Ara sunucusu istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir. Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulaması bölgesi. Varsayılan değer boş bir dizedir.<br /><br /> Bir kimlik doğrulaması bölgesi, kimlik doğrulaması yapan bir ana bilgisayar adı en az belirtir. Ayrıca, erişime sahip kullanıcılar bir koleksiyonu da belirtebilirsiniz. Bir kullanıcı kimlik doğrulaması bölgesi, birkaç olası kullanıcı adları ve parolalar hangisinin kullanılacağını belirlemek için sorgulayabilirsiniz.|  
+|`clientCredentialType`|Hizmetin istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|`proxyCredentialType`|Bir etki alanı ara sunucusu için istemcinin kimliğini doğrulamak için kullanılan kimlik bilgisini belirtir. Bu öznitelik türü <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|`realm`|Özet veya temel kimlik doğrulaması için kimlik doğrulama bölgesi. Varsayılan değer boş bir dizedir.<br /><br /> Kimlik doğrulama bölgesi, kimlik doğrulamasını gerçekleştiren konağın en azından adını belirtir. Ayrıca, erişimi olan bir kullanıcı koleksiyonu da belirtebilir. Kullanıcı, birkaç olası Kullanıcı adı ve parolanın kullanılabileceğini belirleyebilmek için kimlik doğrulama bölgesini sorgulayabilir.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
-|Temel|Temel kimlik doğrulaması kullanır.|  
-|Özet|Özet kimlik doğrulaması kullanır.|  
-|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kimlik doğrulaması kullanır.|  
-|Windows|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
-|Sertifika|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|  
+|Temel|Temel kimlik doğrulamasını kullanır.|  
+|Bilgisi|Özet kimlik doğrulaması kullanır.|  
+|NT|Windows etki alanı ile geri dönüş olarak NTLM kimlik doğrulamasını kullanır.|  
+|Windows|Tümleşik Windows kimlik doğrulamasını kullanır.|  
+|Sertifika|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
-|Temel|Temel kimlik doğrulaması kullanır.|  
-|Özet|Özet kimlik doğrulaması kullanır.|  
-|NTLM|Bir Windows etki alanı ile bir geri dönüş olarak NTLM kullanır.|  
-|Windows|Tümleşik Windows kimlik doğrulaması olarak kullanır.|  
-|Sertifika|İstemcinin kimliğini doğrulamak için X.509 sertifikaları kullanır.|  
+|Temel|Temel kimlik doğrulamasını kullanır.|  
+|Bilgisi|Özet kimlik doğrulaması kullanır.|  
+|NT|Windows etki alanı ile geri dönüş olarak NTLM kullanır.|  
+|Windows|Tümleşik Windows kimlik doğrulamasını kullanır.|  
+|Sertifika|İstemcinin kimliğini doğrulamak için X. 509.440 sertifikalarını kullanır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Güvenlik özelliklerini gösteren [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) öğesi.|  
+|[\<Güvenlik >](security-of-ws2007httpbinding.md)|WS2007HttpBinding > öğesinin güvenlik yeteneklerini [ \<](ws2007httpbinding.md) temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -78,8 +78,8 @@ HTTP taşıma için kimlik doğrulama ayarlarını tanımlar.
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

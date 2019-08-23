@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eeb92845d9b4eb40eef496ffaf5b35e38ed91423
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fd74da9be6d6b02817c8969befdc292f6e814628
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968699"
 ---
 # <a name="encrypting-data"></a>Veri Şifreleme
-Simetrik şifreleme ve asimetrik şifreleme kullanarak farklı işlemler gerçekleştirilir. Simetrik şifreleme akışların gerçekleştirilir ve bu nedenle büyük miktarlarda verileri şifrelemek kullanışlıdır. Asimetrik şifreleme küçük bir bayt sayısına gerçekleştirilir ve bu nedenle yalnızca küçük miktarlarda veri için kullanışlıdır.  
+Simetrik şifreleme ve asimetrik şifreleme farklı süreçler kullanılarak gerçekleştirilir. Simetrik şifreleme, akışlarda gerçekleştirilir ve bu nedenle büyük miktarlarda veriyi şifrelemek yararlı olur. Asimetrik şifreleme, az sayıda bayt üzerinde gerçekleştirilir ve bu nedenle yalnızca küçük miktarlarda veri için yararlıdır.  
   
 ## <a name="symmetric-encryption"></a>Simetrik şifreleme  
- Yönetilen simetrik şifreleme sınıfları adlı bir özel akış sınıf ile kullanılan bir <xref:System.Security.Cryptography.CryptoStream> akışa okunan verileri şifreler. **CryptoStream** sınıfı, yönetilen bir akışı sınıfıyla başlatılır, bir sınıfın uyguladığı <xref:System.Security.Cryptography.ICryptoTransform> arabirimi (bir şifreleme algoritması uygulayan bir sınıftan oluşturulan) ve bir <xref:System.Security.Cryptography.CryptoStreamMode> numaralandırma, izin verilen erişim türünü açıklayan **CryptoStream**. **CryptoStream** sınıfı türetilen herhangi bir sınıf kullanarak başlatılabilir <xref:System.IO.Stream> dahil olmak üzere, sınıf <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream>, ve <xref:System.Net.Sockets.NetworkStream>. Bu sınıflar kullanma, simetrik şifreleme akışı nesneleri çeşitli üzerinde gerçekleştirebilirsiniz.  
+ Yönetilen simetrik şifreleme sınıfları, akışa okunan verileri şifreleyen, adlı özel bir <xref:System.Security.Cryptography.CryptoStream> akış sınıfıyla kullanılır. **CryptoStream** sınıfı yönetilen bir akış sınıfıyla başlatılır, bir sınıf <xref:System.Security.Cryptography.ICryptoTransform> arabirimi (bir şifreleme algoritması uygulayan bir sınıftan oluşturulur) ve erişim türünü açıklayan bir <xref:System.Security.Cryptography.CryptoStreamMode> sabit listesi uygular **CryptoStream**için izin verildi. **CryptoStream** sınıfı, <xref:System.IO.Stream> , ve <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> dahilolmaküzeresınıfındantüretilenherhangibirsınıfkullanılarakbaşlatılabilir.<xref:System.Net.Sockets.NetworkStream> Bu sınıfları kullanarak, çeşitli Stream nesnelerinde simetrik şifreleme yapabilirsiniz.  
   
- Aşağıdaki örnek yeni bir örneğini oluşturma işlemini gösterir <xref:System.Security.Cryptography.RijndaelManaged> Rijndael şifreleme algoritmasını uygulayan sınıf ve şifreleme gerçekleştirileceği kullanan bir **CryptoStream** sınıfı. Bu örnekte, **CryptoStream** adlı bir akış nesnesi ile başlatılmış `myStream` yönetilen bir akışı herhangi bir türde olabilir. **CreateEncryptor** yönteminden **RijndaelManaged** sınıf anahtarı ve IV'yi şifreleme için kullanılan iletilir. Bu durumda, varsayılan anahtar ve IV üretilen `rmCrypto` kullanılır. Son olarak, **CryptoStreamMode.Write** , yazma erişimi stream belirtme geçirilir.  
+ Aşağıdaki örnek, bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfının yeni bir örneğinin nasıl oluşturulacağını gösterir. Bu, rijnbael şifreleme algoritmasını uygular ve bunu bir **CryptoStream** sınıfında şifrelemeyi gerçekleştirmek için kullanır. Bu örnekte, **CryptoStream** , herhangi bir tür yönetilen akış olabilecek adlı `myStream` bir Stream nesnesi ile başlatılır. **Rijndadelmanaged** sınıfından **CreateEncryptor** yöntemi, şifreleme IÇIN kullanılan anahtar ve IV ' i geçti. Bu durumda, varsayılan anahtar ve IV tarafından `rmCrypto` oluşturulan IV kullanılır. Son olarak, bir akışa yazma erişimi belirterek **CryptoStreamMode. Write** işlemi geçirilir.  
   
 ```vb  
 Dim rmCrypto As New RijndaelManaged()  
@@ -38,12 +38,12 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateEncryptor(), CryptoStreamMode.Write);  
 ```  
   
- Bu kod, yazılan tüm veriler yürütüldükten sonra **CryptoStream** nesne Rijndael şifreleme algoritması kullanılarak şifrelenir.  
+ Bu kod yürütüldükten sonra, **CryptoStream** nesnesine yazılan tüm veriler Rijndadel algoritması kullanılarak şifrelenir.  
   
- Aşağıdaki örnek, bir akış oluşturma, akış şifreleme, akışına yazma ve akış kapatılırken tüm işlemi gösterilmektedir. Bu örnek kullanılarak şifrelenmiş bir ağ akış oluşturur **CryptoStream** sınıfı ve **RijndaelManaged** sınıfı. Bir ileti ile şifrelenmiş akışına yazılır <xref:System.IO.StreamWriter> sınıfı.  
+ Aşağıdaki örnek, bir akış oluşturma, akışı şifreleme, akışa yazma ve akışı kapatma sürecinin tamamını gösterir. Bu örnekte, **CryptoStream** sınıfı ve **Rijndadelmanaged** sınıfı kullanılarak şifrelenen bir ağ akışı oluşturulur. Şifrelenmiş akışa <xref:System.IO.StreamWriter> bir ileti yazılır.  
   
 > [!NOTE]
->  Bu örnek, bir dosyaya yazmak için de kullanabilirsiniz. Bunu yapmak için silme <xref:System.Net.Sockets.TcpClient> değiştirin ve başvuru <xref:System.Net.Sockets.NetworkStream> ile bir <xref:System.IO.FileStream>.  
+> Bu örneği bir dosyaya yazmak için de kullanabilirsiniz. Bunu yapmak için <xref:System.Net.Sockets.TcpClient> başvuruyu silin ve <xref:System.Net.Sockets.NetworkStream> ile <xref:System.IO.FileStream>değiştirin.  
   
 ```vb  
 Imports System  
@@ -158,22 +158,22 @@ public class main
 }  
 ```  
   
- Önceki örneğin başarıyla yürütmek için olmalıdır IP adresi üzerinde dinleme işlemini ve belirtilen bağlantı noktası numarası <xref:System.Net.Sockets.TcpClient> sınıfı. Dinleme işlemi varsa, kod dinleme işlemi bağlanmak, Rijndael Simetrik algoritma kullanarak akış şifrelemek ve "Hello World!" yazma akışa. Kodu başarılı ise, konsola aşağıdaki metni görüntüler:  
+ Önceki örneğin başarıyla yürütülmesi için, <xref:System.Net.Sockets.TcpClient> sınıfında belirtilen IP adresini ve bağlantı noktası numarasını dinleyen bir işlem olmalıdır. Bir dinleme işlemi varsa, kod dinleme işlemine bağlanır, Rijndavel simetrik algoritmasını kullanarak akışı şifreler ve "Merhaba Dünya!" yazacaktır. akışa. Kod başarılı olursa konsola aşağıdaki metni görüntüler:  
   
 ```  
 The message was sent.  
 ```  
   
- Ancak, dinleme işlem bulunamadı veya bir özel durum kodu aşağıdaki metni konsola görüntüler:  
+ Ancak, bir dinleme işlemi bulunamazsa veya bir özel durum harekete geçirilir, kod konsola aşağıdaki metni gösterir:  
   
 ```  
 The connection failed.  
 ```  
   
 ## <a name="asymmetric-encryption"></a>Asimetrik şifreleme  
- Asimetrik algoritmalar genellikle küçük miktarlarda veri gibi bir simetrik anahtar ve IV şifrelenmesi şifrelemek için kullanılır. Genellikle, tek bir gerçekleştirme asimetrik şifreleme başka bir şahıs tarafından oluşturulan ortak anahtarı kullanır. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Sınıfı, bu amaç için .NET Framework tarafından sağlanır.  
+ Asimetrik algoritmalar genellikle simetrik anahtar ve IV Şifrelemesi gibi küçük miktarlarda verileri şifrelemek için kullanılır. Genellikle, bir asimetrik şifreleme gerçekleştiren bir kişi, başka bir tarafın oluşturduğu ortak anahtarı kullanır. <xref:System.Security.Cryptography.RSACryptoServiceProvider> Sınıfı, bu amaçla .NET Framework tarafından sağlanır.  
   
- Aşağıdaki örnek, bir simetrik anahtar ve IV şifrelemek için ortak anahtar bilgilerini kullanır. İki bayt dizileri, bir üçüncü taraf ortak anahtarını temsil eden başlatılır. Bir <xref:System.Security.Cryptography.RSAParameters> nesne, bu değerleri başlatılır. Ardından, **RSAParameters** (birlikte ortak anahtar temsil ettiği) nesnenin içine aktarılır bir **RSACryptoServiceProvider** kullanarak <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> yöntemi. Son olarak, özel anahtar ve IV tarafından oluşturulan bir <xref:System.Security.Cryptography.RijndaelManaged> sınıfı şifrelenir. Bu örnek, sistemleri, 128 bit şifreleme yüklü olmasını gerektirir.  
+ Aşağıdaki örnek, bir simetrik anahtar ve IV şifrelemek için ortak anahtar bilgilerini kullanır. Üçüncü bir tarafın ortak anahtarını temsil eden iki baytlık diziler başlatılır. Bir <xref:System.Security.Cryptography.RSAParameters> nesne bu değerlere başlatılır. Ardından, **RSAParameters** nesnesi (temsil ettiği ortak anahtarla birlikte) <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> yöntemi kullanılarak bir **RSACryptoServiceProvider** içine aktarılır. Son olarak, bir <xref:System.Security.Cryptography.RijndaelManaged> sınıf tarafından oluşturulan özel anahtar ve IV şifrelenir. Bu örnek, sistemlerde 128 bit şifrelemenin yüklü olmasını gerektirir.  
   
 ```vb  
 Imports System  

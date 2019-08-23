@@ -2,22 +2,22 @@
 title: Karmaşık Türler Kullanan AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: cde7e48d0f0c44d68266d60399ac197d322a42cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d33c250be31ac43eef6d76ade997a30af87090
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923687"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Karmaşık Türler Kullanan AJAX Hizmeti Örneği
-Bu örnek, Windows Communication Foundation (WCF) karmaşık türler örneklerini oluşturur ve bunları arasındaki hizmet ve istemci JavaScript nesne gösterimi (JSON) olarak gönderir, bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturma için nasıl kullanılacağını gösterir. JavaScript kodu bir Web tarayıcısı istemcisini kullanarak bir AJAX hizmete erişebilir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
+Bu örnek, karmaşık türlerin örneklerini oluşturan ve bunları JavaScript Nesne Gösterimi (JSON) olarak hizmet ve istemci arasında gönderen bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti oluşturmak için Windows Communication Foundation (WCF) öğesinin nasıl kullanılacağını gösterir. Bir Web tarayıcısı istemcisinden JavaScript kodu kullanarak bir AJAX hizmetine erişebilirsiniz. Bu örnek, [temel Ajax hizmet](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örneğinde oluşturulur.  
   
- WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize <xref:System.Web.UI.ScriptManager> denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).  
+ WCF 'de Ajax desteği, <xref:System.Web.UI.ScriptManager> ASP.NET AJAX ile denetim aracılığıyla kullanılmak üzere iyileştirilmiştir. WCF 'yi ASP.NET AJAX ile kullanmayla ilgili bir örnek için bkz. [Ajax örnekleri](ajax.md).  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Aşağıdaki örnekte bir WCF Hizmeti AJAX özgü kod olmadan hizmetidir. Çünkü <xref:System.ServiceModel.Web.WebGetAttribute> öznitelik uygulanmadı, varsayılan HTTP fiili ("POST") kullanılır. Tek bir işlem hizmeti olan `DoMath`, adlı karmaşık bir tür döndüren `MathResult`. Karmaşık tür AJAX özgü kod içeren bir standart veri anlaşması türü ' dir.  
+ Aşağıdaki örnekteki hizmet, AJAX 'a özgü kod içermeyen bir WCF hizmetidir. <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliği uygulanmadığından, varsayılan http fiili ("Post") kullanılır. Hizmette, adlı `MathResult`bir karmaşık tür `DoMath`döndüren bir işlem vardır. Karmaşık tür, AJAX 'a özgü kod içermeyen standart bir veri anlaşması türüdür.  
 
 ```csharp
 [DataContract]  
@@ -34,11 +34,11 @@ public class MathResult
 }  
 ```
 
- Kullanarak, hizmette bir AJAX uç noktası oluşturma <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, yalnızca temel AJAX hizmeti örneği olduğu gibi.  
+ Temel Ajax hizmet örneğinde olduğu gibi, kullanarak <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>hizmette bir AJAX uç noktası oluşturun.  
   
- İstemci Web sayfası ComplexTypeClientPage.aspx kullanıcı tıkladığında hizmeti çağırmak için ASP.NET ve JavaScript kodu içeren **hesaplamayı** sayfasında düğme. Hizmet çağırmak için kodu JSON gövdesi oluşturur ve benzer HTTP POST kullanarak gönderir [hizmet HTTP POST kullanan AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) örnek.  
+ ComplexTypeClientPage. aspx istemci Web sayfası, Kullanıcı sayfadaki **hesaplamayı gerçekleştir** düğmesine tıkladığında hizmeti çağırmak için ASP.net ve JavaScript kodunu içerir. Hizmeti çağırmak için kod bir JSON gövdesi oluşturur ve http post örneği [kullanılarak Ajax hizmetine](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) benzer şekılde http post kullanarak gönderir.  
   
- Hizmet çağrısı başarılı olduktan sonra bireysel veri üyeleri erişebilir (`sum`, `difference`, `product` ve `quotient`) üzerinde oluşturulan JavaScript nesnesi.  
+ Hizmet çağrısı başarılı olduktan sonra, sonuçta elde edilen JavaScript nesnesine bireysel veri üyelerine`sum`( `difference`, `product` , `quotient`ve) erişebilirsiniz.  
 
 ```javascript
 function onSuccess(mathResult){  
@@ -49,20 +49,20 @@ function onSuccess(mathResult){
 }  
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. ' % S'çözüm ComplexTypeAjaxService.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümünde açıklandığı gibi ComplexTypeAjaxService. sln çözümünü oluşturun.  
   
-3. Gidin `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (ComplexTypeClientPage.aspx proje dizininden tarayıcıda aç değil).  
+3. `http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx` (ComplexTypeClientPage. aspx ' i tarayıcıda proje dizininden açmayın) bölümüne gidin.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\ComplexTypeAjaxService`  
   

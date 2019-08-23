@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
-ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b98c5e6ea49695015eb566ca2176b23c5260017a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928706"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>Nasıl yapılır: Bilgileri Salt Okunur Olarak Alma
-Verileri değiştirmek istemediğiniz zaman, salt okunur sonuçları arayan tarafından sorguların performansını artırabilirsiniz.  
+Verileri değiştirmeyi düşünmüyorsanız, salt okuma sonuçları girerek sorguların performansını artırabilirsiniz.  
   
- Salt okunur işleme ayarlayarak uygulamak <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> için `false`.  
+ Öğesini olarak <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> `false`ayarlayarak salt okuma işlemini uygulayabilirsiniz.  
   
 > [!NOTE]
->  Zaman <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> ayarlanır `false`, <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> örtük olarak ayarlandığında `false`.  
+> , Olarak `false`ayarlandığında, örtük<xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> olarak olarak ayarlanır. `false` <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, çalışan işe alma tarihleri salt okunur bir koleksiyonunu alır.  
+ Aşağıdaki kod, çalışan işe alma tarihlerinin salt okunurdur bir koleksiyonunu alır.  
   
  [!code-csharp[DLinqQuerying#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQuerying/cs/Program.cs#2)]
  [!code-vb[DLinqQuerying#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#2)]  

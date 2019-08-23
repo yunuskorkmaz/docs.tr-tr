@@ -16,40 +16,40 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3fb1bf3f61c78f4eb157b93363b1c06b25bee04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8fe1a25c4bc1f5e19f49f0d660d0aad5a180ea2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987954"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911896"
 ---
 # <a name="icordebugmodule2-interface"></a>ICorDebugModule2 Arabirimi
 
-Icordebugmodule arabirimi mantıksal uzantısı olarak görev yapar.  
+ICorDebugModule arabirimine bir mantıksal uzantı görevi görür.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ApplyChanges Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Meta veri değişiklikleri ve Microsoft Ara dil (MSIL) kodu değişiklikleri çalışan işlemi için geçerlidir.|  
-|[GetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Just-in-time (JIT) derlenmesi için bu denetim bayrakları alır `ICorDebugModule2`.|  
-|[ResolveAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Belirtilen meta veri belirteci tarafından başvurulan derlemenin çözümler.|  
-|[SetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|Bunun için JIT derlemesi denetleyen bayraklar ayarlar `ICorDebugModule2`.|  
-|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Bu tüm yöntemleri tüm sınıflara yalnızca benim kodum (JMC) durumunu ayarlar `ICorDebugModule2` hariç belirtilen değere `pTokens` dizisi karşı değer olarak ayarlar.|  
+|[ApplyChanges Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|Meta verilerde yapılan değişiklikleri ve Microsoft ara dili (MSIL) kodundaki değişiklikleri çalışan işleme uygular.|  
+|[GetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|Bunun `ICorDebugModule2`için tam zamanında (JIT) derlemeyi denetleyen bayrakları alır.|  
+|[ResolveAssembly Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|Belirtilen meta veri belirtecinin başvurduğu derlemeyi çözer.|  
+|[SetJITCompilerFlags Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|Bu `ICorDebugModule2`için JIT derlemesini denetleyen bayrakları ayarlar.|  
+|[SetJMCStatus Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|Bu, `pTokens` dizideki tüm yöntemlerin tüm yöntemlerinin yalnızca kendi kodum (JMC) durumunu, dizideki değerler hariç `ICorDebugModule2` , bu değerin ters değere göre ayarlanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

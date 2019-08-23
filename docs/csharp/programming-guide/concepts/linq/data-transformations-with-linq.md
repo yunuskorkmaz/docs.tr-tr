@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5ed45580819ff037a3258eada767dd400b9d9e51
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594720"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924310"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]yalnızca verileri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorgu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sorguların en güçlü özelliği yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
@@ -93,7 +93,7 @@ ms.locfileid: "69594720"
  Çıkış sırası, kaynak dizisinden herhangi bir öğe veya öğe özelliği içermeyebilir. Çıktı bunun yerine, kaynak öğeleri giriş bağımsız değişkenleri olarak kullanılarak hesaplanan bir değer dizisi olabilir. Aşağıdaki basit sorgu, yürütüldüğü zaman, değerleri türündeki `double`öğelerin kaynak dizisine göre hesaplamayı temsil eden bir dize dizisi verir.  
   
 > [!NOTE]
->  Sorgu başka bir etki alanına çevrilecektir sorgu ifadelerinde çağırma yöntemi desteklenmez. Örneğin, SQL Server için bir bağlam olmadığından sıradan C# bir yöntem [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] çağrılamaz. Ancak, saklı yordamları yöntemlere eşleyebilir ve bunları çağırabilirsiniz. Daha fazla bilgi için bkz. [saklı yordamlar](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
+> Sorgu başka bir etki alanına çevrilecektir sorgu ifadelerinde çağırma yöntemi desteklenmez. Örneğin, SQL Server için bir bağlam olmadığından sıradan C# bir yöntem [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] çağrılamaz. Ancak, saklı yordamları yöntemlere eşleyebilir ve bunları çağırabilirsiniz. Daha fazla bilgi için bkz. [saklı yordamlar](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   

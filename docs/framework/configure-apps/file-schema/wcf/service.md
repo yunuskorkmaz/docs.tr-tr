@@ -2,19 +2,19 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936518"
 ---
-# <a name="service"></a>\<Hizmet >
-`service` Öğesi Windows Communication Foundation (WCF) hizmetinin ayarlarını içerir. Ayrıca, açığa çıkaran hizmet uç noktaları içerir.  
+# <a name="service"></a>\<hizmet >
+`service` Öğesi bir Windows Communication Foundation (WCF) hizmetinin ayarlarını içerir. Ayrıca hizmeti kullanıma sunan uç noktaları da içerir.  
   
  \<system.ServiceModel>  
-\<Hizmetleri >  
-\<Hizmet >  
+\<Hizmetler >  
+\<hizmet >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,31 +31,31 @@ ms.locfileid: "61670410"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|behaviorConfiguration|Hizmeti örneklemek için kullanılacak davranış adını içeren bir dize. Davranış adı, hizmet tanımlı bir noktada kapsam içinde olması gerekir. Varsayılan değer boş bir dizedir.|  
-|name|Oluşturulacak hizmet türünü belirten bir dize özniteliği gerekli. Bu ayar, geçerli bir tür için değer gerekir. Biçiminde olmalıdır `Namespace.Class.`|  
+|behaviorConfiguration|Hizmeti başlatmak için kullanılacak davranışın davranış adını içeren bir dize. Davranış adı, hizmetin tanımlandığı noktada kapsamda olmalıdır. Varsayılan değer boş bir dizedir.|  
+|name|Oluşturulacak hizmetin türünü belirten gerekli dize özniteliği. Bu ayar geçerli bir türe eşit olmalıdır. Biçim şu şekilde olmalıdır`Namespace.Class.`|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Bir koleksiyonu `endpoint` kullanıma sunan bu hizmet öğeleri.|  
-|[\<konak >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Bu hizmet örneğinin konak belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<uç nokta >](endpoint-element.md)|Bu hizmeti kullanıma `endpoint` sunan öğelerin koleksiyonu.|  
+|[\<Ana bilgisayar >](host.md)|Bu hizmet örneğinin konağını belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Hizmetleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Tüm WCF yapılandırma öğelerinin kök öğe.|  
+|[\<Hizmetler >](services.md)|Tüm WCF yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hizmetleri tanımlanmış `services` yapılandırma dosyasının. Derleme Hizmetleri herhangi bir sayıda içerebilir. Her hizmet kendi sahip `service` yapılandırma bölümü. Bu bölümde ve içeriğini hizmet sözleşmesini, davranış ve belirli bir hizmet uç noktaları tanımlayın.  
+ Hizmetler, yapılandırma dosyasının `services` bölümünde tanımlanmıştır. Bir derleme, herhangi bir sayıda hizmeti içerebilir. Her hizmetin kendi `service` yapılandırma bölümü vardır. Bu bölüm ve içeriği, belirli bir hizmetin hizmet sözleşmesini, davranışını ve uç noktalarını tanımlar.  
   
- `behaviorConfiguration` Öğesi, aynı zamanda isteğe bağlıdır. Bu hizmetin davranışı tanımlar kullanır. Bu öznitelikte belirtilen davranışı kapsamında aynı yapılandırma dosyasında bir davranış bağlanmanız gerekir.  
+ `behaviorConfiguration` Öğesi de isteğe bağlıdır. Hizmetin kullandığı davranışı tanımlar. Bu öznitelikte belirtilen davranışın, aynı yapılandırma dosyasındaki kapsamdaki bir davranışa bağlanması gerekir.  
   
- Her hizmet kendi adres ve bağlama sahip olduğu bir veya daha fazla uç nokta kullanıma sunar. Yapılandırma dosyasının içinde kullanılan tüm bağlamaları dosya kapsamında tanımlanmış olması gerekir. Bağlama özniteliklerinin birleşimiyle uç noktalarına bağlı olan `name` ve `bindingConfiguration`. `name` Özniteliği bağlama tanımlanmış bölümünde açıklanmaktadır. `bindingConfiguration` Özniteliği, bağlama bölüm içindeki hangi yapılandırma kullanıldığını tanımlar. Bir bağlama bölümü birkaç yapılandırmaları tanımlayabilirsiniz.  
+ Her hizmet kendi adresine ve bağlamaya sahip bir veya daha fazla bitiş noktası sunar. Yapılandırma dosyası içinde kullanılan tüm bağlamalar, dosyanın kapsamında tanımlanmalıdır. Bağlama, özniteliklerin `name` ve `bindingConfiguration`öğelerinin birleşimi aracılığıyla uç noktalara bağlanır. `name` Özniteliği, bağlamanın tanımlandığı bölümü tanımlar. `bindingConfiguration` Özniteliği, bağlama bölümünde hangi yapılandırmanın kullanıldığını tanımlar. Bağlama bölümü, birkaç yapılandırma tanımlayabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu, bir hizmet yapılandırması örneğidir.  
+ Bu, hizmet yapılandırmasına bir örnektir.  
   
 ```xml  
 <service behaviorConfiguration="testChannelBehavior"
@@ -71,4 +71,4 @@ ms.locfileid: "61670410"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [Hizmetleri Yapılandırma](../../../../../docs/framework/wcf/configuring-services.md)
+- [Hizmetleri Yapılandırma](../../../wcf/configuring-services.md)

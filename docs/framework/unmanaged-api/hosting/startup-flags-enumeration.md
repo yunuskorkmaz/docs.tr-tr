@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737268"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916228"
 ---
-# <a name="startupflags-enumeration"></a>STARTUP_FLAGS Numaralandırması
-Ortak dil çalışma zamanı (CLR) başlangıç davranışını gösteren değerleri içerir. Varsayılan olarak, atık toplama eşzamanlı olmayan ve yalnızca temel sınıf kitaplığı alan-bağımsız alanına yüklenir.  
+# <a name="startup_flags-enumeration"></a>STARTUP_FLAGS Numaralandırması
+Ortak dil çalışma zamanının (CLR) başlangıç davranışını gösteren değerleri içerir. Varsayılan olarak, atık toplama eşzamanlı değildir ve yalnızca temel sınıf kitaplığı, etki alanı nötr alanına yüklenir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -57,31 +57,31 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`STARTUP_CONCURRENT_GC`|Eş zamanlı çöp toplama kullanılması gerektiğini belirtir. İş istasyonu yapısı ve eşzamanlı olmayan çöp toplama çağıran bir tek işlemcili makinede sunucu yapısı ve eşzamanlı çöp toplama için isterse, bunun yerine çalıştırılır. **Not:**  Eş zamanlı çöp toplama, WOW64 çalışan uygulamalarda desteklenmez x86 Intel Itanium mimarisini (eski adıyla IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde öykünücüsü. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [çalışan 32-bit uygulamaları](/windows/desktop/WinProg64/running-32-bit-applications).|  
-|`STARTUP_LOADER_OPTIMIZATION_MASK`|Yükleyici iyileştirmesi yapılacağını belirtir.|  
-|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Hiçbir derlemeyi etki alanından bağımsız olarak yüklendiğini belirtir.|  
+|`STARTUP_CONCURRENT_GC`|Eşzamanlı atık toplamanın kullanılması gerektiğini belirtir. Arayan, tek işlemcili bir makinede sunucu derlemesini ve eşzamanlı atık toplamayı isterse, bunun yerine iş istasyonu oluşturma ve eşzamanlı olmayan çöp toplama çalıştırılır. **Not:**  Intel Itanium mimarisini (daha önce IA-64 olarak adlandırılmıştır) uygulayan 64 bitlik sistemlerde WOW64 x86 öykünücüsünü çalıştıran uygulamalarda eşzamanlı çöp toplama desteklenmez. 64 bit Windows sistemlerinde WOW64 kullanma hakkında daha fazla bilgi için bkz. [32-bit uygulamaları çalıştırma](/windows/desktop/WinProg64/running-32-bit-applications).|  
+|`STARTUP_LOADER_OPTIMIZATION_MASK`|Yükleyici iyileştirmesinin gerçekleşeceğini belirtir.|  
+|`STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`|Etki alanı nötr olarak hiçbir derlemenin yüklenmediğini belirtir.|  
 |`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`|Tüm derlemelerin etki alanından bağımsız olarak yüklendiğini belirtir.|  
-|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Güçlü adlı tüm derlemelerin etki alanından bağımsız yüklendiğini belirtir.|  
-|`STARTUP_LOADER_SAFEMODE`|CLR sürümü ilkesinin geçilen sürüme uygulanmaz olduğunu belirtir. CLR belirtilen tam sürümü yüklenir. Dolgu en yeni uyumlu sürümü belirlemek üzere ilkeyi değerlendirmez.|  
-|`STARTUP_LOADER_SETPREFERENCE`|Tercih edilen çalışma zamanı ayarlanacağını ancak başlatılmayacağını olduğunu belirtir.|  
-|`STARTUP_SERVER_GC`|Sunucu çöp toplama kullanılması gerektiğini belirtir.|  
-|`STARTUP_HOARD_GC_VM`|Çöp toplamanın kullanılan sanal adresi tutacağını belirtir.|  
-|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Bir barındırma arabiriminin karıştırılmasına izin verilmeyeceğini olduğunu belirtir.|  
-|`STARTUP_LEGACY_IMPERSONATION`|Kimliğe bürünme arasında zaman uyumsuz noktalar varsayılan olarak akmaması gerektiğini belirtir.|  
-|`STARTUP_DISABLE_COMMITTHREADSTACK`|İş parçacığı çalışmaya başladığında iş parçacığı yığınının tamamının taahhüt gerektiğini belirtir.|  
-|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Yönetilen kimliğe bürünmelerin ve platform gerçekleştirilen çağırma belirtir bürünmelerin zaman uyumsuz noktalar arasında. Varsayılan olarak, yalnızca yönetilen kimliğe bürünmeler uyumsuz noktalarda akacaktır.|  
-|`STARTUP_TRIM_GC_COMMIT`|Sistem belleği yetersiz olduğunda çöp toplamanın daha az kaydedilmiş alan kullanacağını belirtir. Bkz: `gcTrimCommitOnLowMemory` içinde [paylaşılan Web barındırma için iyileştirme](../../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
-|`STARTUP_ETW`|Ortak dil çalışma zamanı olayları için olay izleme için Windows (ETW) etkinleştirildiğini belirtir. Bu bayrağın hiçbir etkisi için Windows Vista ile başlayarak, olay izleme her zaman etkindir. Bkz: [.NET Framework günlük kaydını denetleme](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemesinin etkin olduğunu belirtir. Bkz: <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> özelliği ve [ \<appDomainResourceMonitoring > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
+|`STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`|Tüm tanımlayıcı adlı derlemelerin etki alanı nötr olarak yüklendiğini belirtir.|  
+|`STARTUP_LOADER_SAFEMODE`|CLR sürüm ilkesinin geçirilen sürüme uygulanmayacak olduğunu belirtir. CLR 'nin belirtilen tam sürümü yüklenir. Dolgu, en son uyumlu sürümü belirlemede ilkeyi değerlendirmez.|  
+|`STARTUP_LOADER_SETPREFERENCE`|Tercih edilen çalışma zamanının ayarlanacağını ancak gerçekten başlatıllamayacağını belirtir.|  
+|`STARTUP_SERVER_GC`|Sunucu çöp toplama işleminin kullanılacağını belirtir.|  
+|`STARTUP_HOARD_GC_VM`|Çöp toplamanın kullanılan sanal adresi tutacaksınız.|  
+|`STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`|Barındırma arabirimini karıştırmaya izin verilmeyeceğini belirtir.|  
+|`STARTUP_LEGACY_IMPERSONATION`|Kimliğe bürünme özelliğinin, varsayılan olarak zaman uyumsuz noktalara akmamalıdır belirtir.|  
+|`STARTUP_DISABLE_COMMITTHREADSTACK`|Tam iş parçacığı yığınının iş parçacığı çalışmaya başladığında uygulanmamalıdır.|  
+|`STARTUP_ALWAYSFLOW_IMPERSONATION`|Platform çağırma aracılığıyla elde edilen yönetilen ımpersonations ve ımpersontiklerde zaman uyumsuz noktalarda akacağı belirtir. Varsayılan olarak, yalnızca yönetilen ımpersontiklerde zaman uyumsuz noktalarda akış yapılır.|  
+|`STARTUP_TRIM_GC_COMMIT`|Çöp toplamanın sistem belleği azaldığında daha az işlenmiş alan kullanacağınızı belirtir. Bkz `gcTrimCommitOnLowMemory` . [Paylaşılan Web barındırma için iyileştirme](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_ETW`|Windows için olay izlemenin (ETW) ortak dil çalışma zamanı olayları için etkinleştirildiğini belirtir. Windows Vista ile başlayarak, olay izleme her zaman etkindir, bu nedenle bu bayrağın bir etkisi yoktur. Bkz. [.NET Framework günlüğünü denetleme](../../../../docs/framework/performance/controlling-logging.md).|  
+|`STARTUP_ARM`|Uygulama etki alanı kaynak izlemenin etkinleştirildiğini belirtir. Bkz. [ \<özellikveappdomainresourcemonitoring > öğesi.](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** MSCorEE.dll  
+ **Kitaplığı** MSCorEE. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,85 +2,85 @@
 title: WCF Visual Studio Şablonları
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 2e192e671d37e096e4199b295d4f533194ab89b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916786"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio Şablonları
-Windows Communication Foundation (WCF) Visual Studio önceden tanımlanmış proje ve öğe şablonlarını Visual Studio'da WCF hizmetleri ve kapsayıcı uygulamaları hızlıca oluşturmak için kullanabileceğiniz şablonlardır.  
+Windows Communication Foundation (WCF) Visual Studio şablonları, Visual Studio 'da kolayca WCF Hizmetleri ve çevreleyen uygulamalar oluşturmak için kullanabileceğiniz, önceden tanımlanmış proje ve öğe şablonlarıdır.  
   
 ## <a name="using-the-wcf-templates"></a>WCF şablonlarını kullanma  
- WCF Visual Studio şablonları, hizmet geliştirme için bir temel sınıf yapısı sağlar. Özellikle, bu şablonları, hizmet sözleşmesi, veri sözleşmesi, hizmet uygulaması ve yapılandırma için temel tanımları sağlar. Daha gelişmiş hizmetler için bir yapı taşı yanı sıra, çok az kod etkileşimi ile basit bir hizmet oluşturmak için bu şablonları kullanabilirsiniz.  
+ WCF Visual Studio şablonları, hizmet geliştirme için temel bir sınıf yapısı sağlar. Özellikle, bu şablonlar hizmet sözleşmesi, veri sözleşmesi, hizmet uygulama ve yapılandırma için temel tanımları sağlar. Bu şablonları, en az kod etkileşimi ile basit bir hizmet ve daha gelişmiş hizmetler için bir yapı taşı oluşturmak üzere kullanabilirsiniz.  
   
 ### <a name="wcf-service-library-project-template"></a>WCF hizmet kitaplığı proje şablonu  
- Yeni Proje iletişim kutusu altında WCF hizmet kitaplığı proje şablonu kullanılabilir **Visual C# \WCF** ve **Visual Basic\WCF**.  
+ WCF hizmet kitaplığı proje şablonu, **Visual C#\Wcf** ve **Visual Basic\WCF**altındaki yeni proje iletişim kutusunda kullanılabilir.  
   
- Kullanarak yeni bir proje oluşturduğunuzda **WCF Hizmeti** yeni proje şablonu, aşağıdaki üç dosyayı otomatik olarak içerir:  
+ **WCF hizmeti** şablonunu kullanarak yeni bir proje oluşturduğunuzda, yeni proje otomatik olarak aşağıdaki üç dosyayı içerir:  
   
-- Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb). Hizmet sözleşme dosyası uygulanan WCF Hizmeti özniteliklere sahip bir arayüzdür. Bu dosya, hizmetlerinizi tanımlama göstermek için basit bir hizmet tanımının sağlar ve parametre tabanlı işlemler ve basit veri sözleşme örneği içerir. Bu, bir WCF Hizmeti projesini oluşturduktan sonra Kod Düzenleyicisi'nde görüntülenen varsayılan dosyasıdır.  
+- Hizmet sözleşmesi dosyası (IService1.cs veya IService1. vb). Hizmet sözleşmesi dosyası, WCF hizmeti özniteliklerinin uygulandığı bir arabirimdir. Bu dosya, hizmetlerinizi nasıl tanımlayacağınızı gösteren basit bir hizmetin tanımını sağlar ve parametre tabanlı işlemler ve basit bir veri sözleşmesi örneği içerir. Bu, bir WCF hizmeti projesi oluşturulduktan sonra kod düzenleyicisinde oluşturulan varsayılan dosyadır.  
   
-- Hizmet uygulama dosyasını (Service1.cs veya gt;service1.vb). Hizmet uygulama dosyasını hizmet sözleşme dosyasında tanımlanan sözleşme uygular.  
+- Hizmet uygulama dosyası (Service1.cs veya Service1. vb). Hizmet uygulama dosyası, hizmet sözleşmesi dosyasında tanımlanan sözleşmeyi uygular.  
   
-- Uygulama yapılandırma dosyasına (App.config). Yapılandırma dosyasını güvenli bir HTTP bağlaması ile temel bir WCF service model öğelerini sağlar. Ayrıca, hizmet için bir uç noktası içerir ve meta veri değişimi sağlar.  
-  
-> [!NOTE]
->  Visual Studio projesi için yapılandırma dosyası App.config dosyasını kullanarak çalıştırıldığında tanımak için yapılandırılmış [WCF hizmet Konağı (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), varsayılan yapılandırmayı olduğu. Bir yürütülebilir dosya hizmeti kitaplıkta barındırıyorsanız, DLL'ler için yapılandırma dosyalarını geçerli olmadığından yapılandırma kodu yürütülebilir yapılandırma dosyasına taşımak zorunda.  
-  
-### <a name="wcf-service-application-template"></a>WCF Hizmeti Uygulaması şablonu  
- Yeni Proje iletişim kutusunun altında WCF Hizmeti Uygulaması şablonu kullanılabilir **Visual C# \WCF** ve **Visual Basic\WCF**.  
-  
- Kullanarak yeni bir proje oluşturduğunuzda **WCF Web uygulaması hizmeti** şablon, proje aşağıdaki dört dosyaları içerir:  
-  
-- Hizmet ana bilgisayar dosyası (service1.svc'yi).  
-  
-- Hizmet sözleşme dosyası (Iservice1.cs veya Iservice1.vb).  
-  
-- Hizmet uygulama dosyasını (gt;service1.svc.cs veya Service1.svc.vb).  
-  
-- Web yapılandırma dosyası (Web.config).  
-  
- Şablon, otomatik olarak (bir sanal dizin ile dağıtılması için) bir Web sitesi oluşturur ve bir hizmette barındırır.  
-  
-### <a name="wcf-web-site-template"></a>WCF Web Site şablonu  
- Yeni Proje iletişim kutusunun altında WCF Web Site şablonunu kullanılabilir **Visual C# \Web Site\WCF hizmet** ve **Visual Basic\Web Site\WCF hizmeti**. Bu işlem, WCF Hizmeti Uygulaması şablonu ile aynı dosyaları oluşturur ancak bir ASP.NET web sitesi gibi göre düzenler. App_Code ve App_Data klasörünün oluşturulur.  
-  
-### <a name="wcf-service-item-template"></a>WCF hizmet öğe şablonu  
- WCF hizmet öğe şablonu mevcut Visual Studio projelerine WCF hizmetleri eklemek için hızlı bir yolunu sağlayan özel bir şablonudur.  
-  
- Bu şablonu kullanmak için Git **Çözüm Gezgini** bölmesinde, projenizin adına sağ tıklayın, fareyle **Ekle**ve ardından **yeni öğe** başlatmak için **yeni Ekle Öğe** iletişim kutusu.  
-  
- Hizmet arabirimi ve uygulama dosyalarının kök proje klasöründe yer alır.  
-  
- Uyumlu türlerde olmaları durumunda şablon var olan bir yapılandırma dosyasının yeni hizmetinin yapılandırma bölümü birleştirmeye çalışıyor.  
-  
- Bir Web projesi var olan proje ise bir hizmet ana bilgisayar dosyası (service1.svc'yi) da oluşturulur.  
-  
-### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmeti proje ve öğe şablonu.  
- Bu şablonlar, olduğu gibi bir web hizmeti erişilebilir bir iş akışı, bir iş akışı hizmeti barındıran WCF hizmetleri oluşturun. Ayrı şablonlar, XAML veya zorunlu programlama modelleri için mevcut. Şablonları kullanarak, sıralı veya Durum makinesi iş akışı oluşturabilirsiniz. Bu tür bir iş akışı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir iş akışı oluşturmak](../windows-workflow-foundation/how-to-create-a-workflow.md). İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
-  
- İş akışları kullanılan XOML türü yerine kodunu olanları temel visual Studio tasarımcısı daha değişkendir. XOML, oluşturulacak varsayılan iş akışı türü akışıdır.  
-  
-### <a name="wcf-syndication-service-library-template"></a>WCF dağıtım hizmet kitaplığı şablonu  
- Bu şablon akışınızı RSS veya ATOM biçimindeki bir WCF hizmeti olarak kullanıma sunmanıza olanak sağlar. Daha fazla bilgi için [WCF dağıtımı](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
-  
-#### <a name="changing-the-address-of-the-feed"></a>Akış adresini değiştirme  
- Dağıtım şablonu yürütme sırasında Internet Explorer'ı kullanır. Projenize sağ tıkladığınızda **Çözüm Gezgini** Visual Studio'da **özellikleri**, ardından **hata ayıklama** sekmesine tıkladığınızda varsayılan adresini görebilirsiniz şablonu. Internet Explorer, bu adresteki akış açmayı dener.  
-  
- Akışınızı adresini değiştirirseniz, adres, ayrıca değiştirmeli **hata ayıklama** sekmesi. Bunu yaparsanız, Internet Explorer Akış varsayılan adresinde açın ve başarısız dener.  
-  
-### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX etkin WCF Hizmeti öğe şablonu  
- Bu şablon bir AJAX denetimi bir WCF hizmeti olarak kullanıma sunar. AJAX denetimleri hakkında daha fazla bilgi için bkz. [AJAX denetim belgeleri](https://go.microsoft.com/fwlink/?LinkId=96717).  
-  
-### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight etkinleştirilmiş WCF Hizmeti öğe şablonu  
- Bu şablonu kullanarak bir Silverlight istemcisi veya ön uç verileri sağlayan bir Web hizmeti oluşturur. Hizmet kodu ve bir Silverlight istemcisi ile iletişim kurmasını destekleyen yapılandırması içeren bir WCF hizmeti oluşturmak için bir Web sitesi veya Web uygulaması projesi şablonu eklenebilir. Ardından **hizmet Başvurusu Ekle** istemciye bir hizmetin istemci proxy ekleyin ve Silverlight istemcisini Silverlight etkinleştirilmiş WCF hizmeti arasında veri değişimi.  
-  
- Bu şablon erişmek için bir Web sitesi veya Web uygulama projesinde sağ **Çözüm Gezgini**, tıklayın **yeni bir öğe eklemek**, tıklatıp **Silverlight özellikli bir WCF Hizmeti**.  
+- Uygulama yapılandırma dosyası (App. config). Yapılandırma dosyası, bir WCF hizmeti modelinin, güvenli bir HTTP bağlaması olan temel öğelerini sağlar. Ayrıca hizmet için bir uç nokta içerir ve meta veri değişimi etkinleştirilir.  
   
 > [!NOTE]
->  Silverlight özellikli bir WCF hizmeti sunan bir `basicHttpBinding` güvenlik ayarlarını etkinleştirmeden uç noktası. Bu nedenle, hizmeti hakkında bilgi için bu hizmeti bağlanan tüm istemciler tarafından alınabilir. Hizmet ve istemci arasında alınıp verilen iletileri imzalanmış veya şifrelenmiş da güncelleştirilmez. Uç nokta düzgün güvenliğini sağlamak için ASP.NET kimlik doğrulaması, HTTPS veya başka mekanizmalar kullanmanız gerekir.  
+> Visual Studio, varsayılan yapılandırma olan [WCF hizmet ana bilgisayarı (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)kullanılarak çalıştırıldığında proje için yapılandırma dosyası olarak App. config dosyasını tanıyacak şekilde yapılandırılmıştır. Hizmet kitaplığını bir yürütülebilir dosyada barındırdıysanız, dll 'Ler için yapılandırma dosyaları geçerli olmadığından, yapılandırma kodunu yürütülebilir dosyanın yapılandırma dosyasına taşımanız gerekir.  
+  
+### <a name="wcf-service-application-template"></a>WCF hizmeti uygulama şablonu  
+ WCF hizmeti uygulama şablonu, **Visual C#\Wcf** ve **Visual Basic\wcf**altındaki yeni proje iletişim kutusunda kullanılabilir.  
+  
+ **WCF Web uygulaması hizmet** şablonunu kullanarak yeni bir proje oluşturduğunuzda, proje aşağıdaki dört dosyayı içerir:  
+  
+- Hizmet ana bilgisayar dosyası (Service1. svc).  
+  
+- Hizmet sözleşmesi dosyası (IService1.cs veya IService1. vb).  
+  
+- Hizmet uygulama dosyası (Service1.svc.cs veya Service1. svc. vb).  
+  
+- Web yapılandırma dosyası (Web. config).  
+  
+ Şablon otomatik olarak bir Web sitesi oluşturur (sanal bir dizine dağıtılacak) ve içinde bir hizmet barındırır.  
+  
+### <a name="wcf-web-site-template"></a>WCF Web sitesi şablonu  
+ WCF Web sitesi şablonu, **Visual C#\Web site\wcf hizmeti** ve **Visual basic\web Site\wcf hizmeti**altındaki yeni proje iletişim kutusunda kullanılabilir. Bu, WCF hizmeti uygulama şablonuyla aynı dosyaları oluşturur, ancak bir ASP.NET Web sitesi gibi düzenler. App_Code ve App_Data klasörleri oluşturulur.  
+  
+### <a name="wcf-service-item-template"></a>WCF hizmeti öğe şablonu  
+ WCF hizmeti öğe şablonu, var olan Visual Studio projelerinize WCF hizmetleri eklemenin hızlı bir yolunu sağlayan özel bir şablondur.  
+  
+ Bu şablonu kullanmak için **Çözüm Gezgini** bölmesine gidin, proje adına sağ tıklayın, **Ekle**' nin üzerine gelin ve ardından **Yeni öğe** ' ye tıklayarak **Yeni öğe Ekle** iletişim kutusunu başlatın.  
+  
+ Hizmet arabirimi ve uygulama dosyaları kök proje klasörüne yerleştirilir.  
+  
+ Şablon, yeni hizmetin yapılandırma bölümünü, uyumlu türlerse, mevcut yapılandırma dosyası ile birleştirmeye çalışır.  
+  
+ Mevcut proje bir Web projem ise, bir hizmet ana bilgisayar dosyası (Service1. svc) de oluşturulur.  
+  
+### <a name="wcf-wf-service-project-and-item-template"></a>WCF WF hizmeti projesi ve öğe şablonu.  
+ Bu şablonlar, bir Web hizmeti gibi erişilebilen bir iş akışı olan Iş akışı hizmetini barındıran WCF Hizmetleri oluşturur. XAML veya kesinlik temelli programlama modelleri için ayrı şablonlar var. Şablonları kullanarak sıralı veya eyalet makinesi iş akışı oluşturabilirsiniz. Bu iş akışı türleri hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir Iş akışı](../windows-workflow-foundation/how-to-create-a-workflow.md)oluşturun. İş akışı projeleri oluşturma hakkında daha fazla bilgi için bkz. [eski Iş akışı projeleri oluşturma](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+  
+ Visual Studio Tasarımcısı, kod tabanlı olanlar yerine XOML türü iş akışları kullanıldığında daha hızlı yanıt verir. XOML iş akışı oluşturulacak varsayılan iş akışı türüdür.  
+  
+### <a name="wcf-syndication-service-library-template"></a>WCF dağıtım hizmeti kitaplık şablonu  
+ Bu şablon, akışınızı RSS veya ATOM biçiminde bir WCF hizmeti olarak kullanıma sunmanızı sağlar. Daha fazla bilgi için bkz. [WCF dağıtımı](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+  
+#### <a name="changing-the-address-of-the-feed"></a>Akışın adresini değiştirme  
+ Dağıtım şablonu, yürütme sırasında Internet Explorer 'ı kullanır. Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıkladığınızda **Özellikler**' i seçin, ardından **Hata Ayıkla** sekmesini seçin ve şablonun varsayılan adresini görebilirsiniz. Internet Explorer bu adreste akışı açmaya çalışır.  
+  
+ Akışlarınızın adresini değiştirirseniz, **Hata Ayıkla** sekmesindeki adresi de değiştirmelisiniz. Bunu yapmazsanız, Internet Explorer akışı varsayılan adreste açmaya çalışır ve başarısız olur.  
+  
+### <a name="ajax-enabled-wcf-service-item-template"></a>AJAX etkin WCF hizmeti öğe şablonu  
+ Bu şablon, bir AJAX denetimini WCF hizmeti olarak kullanıma sunar. AJAX denetimleri hakkında daha fazla bilgi için bkz. [AJAX denetim belgeleri](https://go.microsoft.com/fwlink/?LinkId=96717).  
+  
+### <a name="silverlight-enabled-wcf-service-item-template"></a>Silverlight etkin WCF hizmeti öğe şablonu  
+ Bu şablon, bir Silverlight istemcisine veya ön uca veri sağlayan bir Web hizmeti oluşturur. Şablon bir Web sitesine veya Web uygulaması projesine, bir Silverlight istemcisiyle iletişim kuran hizmet kodu ve yapılandırmasını içeren bir WCF hizmeti oluşturmak için eklenebilir. Daha sonra **hizmet başvurusu Ekle** kullanarak istemciye hizmetin istemci proxy 'sini ekleyebilir ve Silverlight Istemcisi ile SILVERLIGHT özellikli WCF hizmeti arasında veri alışverişi yapabilirsiniz.  
+  
+ Bu şablona erişmek için **Çözüm Gezgini**' de bir Web sitesine veya Web uygulaması projesine sağ tıklayın, **Yeni öğe Ekle**' ye tıklayın ve **Silverlight etkin WCF hizmeti**' ne tıklayın.  
+  
+> [!NOTE]
+> Silverlight etkin WCF hizmeti herhangi bir güvenlik ayarını `basicHttpBinding` etkinleştirmeden bir uç nokta gösterir. Bu nedenle, hizmet hakkındaki bilgiler, bu hizmete bağlanan tüm istemciler tarafından elde edilebilir. Hizmet ve istemci arasında değiş tokuş edilen iletiler de imzalanmamıştır veya şifrelenmez. Uç noktanın düzgün şekilde güvenliğini sağlamak için ASP.NET Authentication, HTTPS veya diğer mekanizmaların kullanılması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

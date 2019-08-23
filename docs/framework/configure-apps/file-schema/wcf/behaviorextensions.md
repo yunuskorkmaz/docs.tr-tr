@@ -2,15 +2,15 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcf1f1dcdba50c3e7fba8eb170132d0cf47c4271
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919815"
 ---
 # <a name="behaviorextensions"></a>\<behaviorExtensions >
-Davranış uzantıları, kullanıcı tanımlı davranış öğelerini oluşturmak kullanıcının etkinleştirir. Bu öğeleri, standart Windows Communication Foundation (WCF) davranışı öğeleri ile birlikte kullanılabilir. `behaviorExtensions` Bölümü öğe yapılandırmasında kullanılabilir olacağı şekilde tanımlar. Normal davranış uzantısı örneği aşağıda verilmiştir.  
+Davranış uzantıları, kullanıcının Kullanıcı tanımlı davranış öğeleri oluşturmasını sağlar. Bu öğeler, standart Windows Communication Foundation (WCF) davranış öğelerinden daha fazla kullanılabilir. `behaviorExtensions` Bölümü, öğesini yapılandırmada kullanılabilecek şekilde tanımlar. Tipik bir davranış uzantısının örneği aşağıda verilmiştir.  
   
 ```xml  
 <system.serviceModel>
@@ -24,9 +24,9 @@ Davranış uzantıları, kullanıcı tanımlı davranış öğelerini oluşturma
 </system.serviceModel>
 ```  
   
- Yapılandırma yeteneklerini öğesine eklemek için yazma ve yapılandırma öğesi kaydetmeniz gerekir. Bunun hakkında daha fazla bilgi için bkz. <xref:System.Configuration> belgeleri.  
+ Öğeye yapılandırma becerileri eklemek için bir yapılandırma öğesi yazmanız ve kaydetmeniz gerekir. Bunun hakkında daha fazla bilgi için <xref:System.Configuration> belgelerine bakın.  
   
- Öğesi ve kendi yapılandırma türü tanımlandıktan sonra uzantısı, aşağıdaki örnekte gösterildiği gibi kullanılabilir.  
+ Öğesi ve yapılandırma türü tanımlandıktan sonra, aşağıdaki örnekte gösterildiği gibi uzantı kullanılabilir.  
   
 ```xml  
 <behaviors>
@@ -43,15 +43,15 @@ Davranış uzantıları, kullanıcı tanımlı davranış öğelerini oluşturma
 ```  
   
 ## <a name="security"></a>Güvenlik  
- Türlerinde kaydederken tam olarak nitelenmiş derleme adları kullanmanız önemle tavsiye edilir `machine.config` ve `app.config` dosyaları. Türü benzersiz olarak tanımlı değilse, CLR türü Yükleyicisi için belirtilen sırayla aşağıdaki konumlarda arar:  
+ `machine.config` Ve`app.config` dosyalarına türleri kaydederken tam nitelikli derleme adlarını kullanmanız önemle tavsiye edilir. Tür benzersiz olarak tanımlanmamışsa CLR tür yükleyicisi, belirtilen sırada aşağıdaki konumlarda bunu arar:  
   
- Derleme türü bilinen yükleyici yapılandırma bilgilerini ve uygulama temel dizinini kullanarak geçerli derleme yapılandırma dosyanın yeniden yönlendirme konumları, GAC arar. Derleme bilinmiyorsa, geçerli derleme, mscorlib ve tarafından döndürülen konum yükleyici arar `TypeResolve` olay işleyicisi. Bu CLR arama sırası gibi tür iletme mekanizması ve AppDomain.TypeResolve olay kancaları ile değiştirilebilir.  
+ Türün derlemesi biliniyorsa, yükleyici yapılandırma dosyasının yeniden yönlendirme konumlarını, GAC 'yi, yapılandırma bilgilerini kullanarak geçerli derlemeyi ve uygulama temel dizinini arar. Derleme bilinmiyorsa, yükleyici geçerli derlemeyi, mscorlib 'yi ve `TypeResolve` olay işleyicisi tarafından döndürülen konumu arar. Bu CLR arama sırası tür Iletme mekanizması ve AppDomain. TypeResolve Event gibi kancalar ile değiştirilebilir.  
   
- Bir saldırgan, CLR arama sırası yararlanma ve yetkisiz bir kod yürütün. (Güçlü) tam olarak nitelenmiş adlar benzersiz olarak kullanarak, bir tür tanımlar ve sisteminizin güvenliği daha da artırır.  
+ Bir saldırgan CLR arama siparişinden yararlanabilir ve yetkisiz kod yürütebilir. Tam nitelikli (tanımlayıcı) adların kullanılması, bir türü benzersiz bir şekilde tanımlar ve sisteminizin güvenliğini artırır.  
   
- Daha fazla bilgi için [çalışma zamanı derlemeleri nasıl konumlandırır](https://go.microsoft.com/fwlink/?LinkId=95336) ve <xref:System.AppDomain.TypeResolve>.  
+ Daha fazla bilgi için bkz. [çalışma zamanı derlemeleri](https://go.microsoft.com/fwlink/?LinkId=95336) ve <xref:System.AppDomain.TypeResolve>öğesini nasıl konumlandırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -2,31 +2,31 @@
 title: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 2968641538bf0b4d0e136d5784bf69e5e7fcb3a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80b0d034b92123862d0500106f81d4a566cac467
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972893"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968777"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
-Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz durumlar vardır. Hizmeti çağırmak istediğinizde bir MEX uç noktası ve DLL COM birlikte çalışması için kayıtlı olmayabilir WCF istemcisini açığa çıkarmamak. Bu durumlarda, hizmeti tanımlayan bir WSDL dosyası oluşturun ve WCF hizmet bilinen adını geçirin. Bu konu, bir WSDL WCF bilinen adını kullanarak çalışmaya WCF başlama örneği çağrılacak açıklar.  
+Tamamen kendi kendine bağımsız bir COM birlikte çalışma istemcisine sahip olmak isteyebileceğiniz durumlar vardır. Çağırmak istediğiniz hizmet bir MEX uç noktası açığa sunmayabilir ve WCF istemci DLL 'SI COM birlikte çalışması için kaydedilmemiş olabilir. Bu durumlarda, hizmeti açıklayan bir WSDL dosyası oluşturabilir ve bunu WCF hizmeti bilinen adına geçirebilirsiniz. Bu konu, bir WCF WSDL bilinen adı kullanılarak Başlarken WCF örneğinin nasıl çağrılacağını açıklar.  
   
-### <a name="using-the-wsdl-service-moniker"></a>WSDL hizmet bilinen adı kullanma  
+### <a name="using-the-wsdl-service-moniker"></a>WSDL hizmeti bilinen adını kullanma  
   
-1. Açın ve GettingStarted örnek Çözümü derleyin.  
+1. GettingStarted örnek çözümünü açın ve oluşturun.  
   
-2. Internet Explorer'ı açın ve `http://localhost/ServiceModelSamples/Service.svc` hizmetinin çalıştığından emin olmak için.  
+2. Internet Explorer 'ı açın ve hizmetin `http://localhost/ServiceModelSamples/Service.svc` çalıştığından emin olmak için öğesine gidin.  
   
-3. Adını da dosyasında CalculatorService sınıfında aşağıdaki özniteliği ekleyin:  
+3. Service.cs dosyasında, Hesaplatorservice sınıfına aşağıdaki özniteliği ekleyin:  
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4. Bir bağlama ad alanı, App.config hizmete ekleyin:  
+4. Service App. config dosyasına bir bağlama ad alanı ekleyin:  
 
-5. Uygulamanın okuma WSDL dosyası oluşturun. Adım 3 ve 4 ad alanlarını eklenmiş olduğundan, hizmetin tüm WSDL açıklaması göz atarak sorgulamak için IE kullanabilirsiniz `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Dosyayı serviceWSDL.xml Internet Explorer'dan kaydedin. Adım 3 ve 4 ad belirtmezseniz, yukarıdaki URL'yi sorgulamasını döndürülen WSDL belgesinde tam WSDL olmayacaktır. WSDL belgesi döndürülen diğer WSDL belgeleri içe birkaç içeri aktarma deyimlerini içerir. Her içeri aktarma deyimi aracılığıyla gidin ve tam bir WSDL belgesi oluşturmak WSDL içe WSDL ile hizmetten döndürülen birleştirme gerekir.  
+5. Uygulamanın okuması için bir WSDL dosyası oluşturun. Ad alanları 3 ve 4. adımlarda eklendiğinden, ' a giderek hizmetin `http://localhost/ServiceModelSamples/Service.svc?wsdl`WSDL açıklamasının TAMAMıNı sorgulamak için IE kullanabilirsiniz. Dosyayı daha sonra serviceWSDL. xml olarak Internet Explorer 'dan kaydedebilirsiniz. Adım 3 ve 4 ' te ad alanlarını belirtmezseniz, yukarıdaki URL 'yi sorgulamadan döndürülen WSDL belgesi, WSDL 'nin tamamını belirtmeyecektir. Döndürülen WSDL belgesi, diğer WSDL belgelerini içeri aktaracak birkaç içeri aktarma deyimi içerir. Her bir içeri aktarma ekstresini ilerlemenize ve WSDL 'yi içeri aktarılan wsdl ile birleştiren WSDL belgesinin tamamını derlemeniz gerekir.  
   
-6. Visual Basic 6.0 açın ve yeni bir standart .exe dosyası oluşturun. Forma bir düğme ekleyin ve aşağıdaki kodu için tıklama işleyicisi eklemek için Ekle düğmesine çift tıklayın:  
+6. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
     ```  
     ' Open the WSDL contract file and read it all into the wsdlContract string.  
@@ -50,9 +50,9 @@ Tamamen bağımsız bir COM birlikte çalışma istemciniz isteyebileceğiniz du
     ```  
   
     > [!NOTE]
-    >  Bilinen ad hatalı veya hizmet kullanılamıyorsa çağrısı `GetObject` "Geçersiz sözdizimi" belirten bir hata döndürür.  Bu hata iletisini alırsanız kullandığınız ad doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
+    > Bilinen ad hatalı biçimlendirilmiş veya hizmet kullanılamıyorsa `GetObject` , "geçersiz söz dizimi" belirten bir hata döndürür.  Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
-7. Visual Basic uygulamasını çalıştırın. Bir ileti kutusu arama çıkarma (145, 76.54) sonuçlarını görüntülenir.  
+7. Visual Basic uygulamasını çalıştırın. Çıkarma çağrısı sonuçlarıyla birlikte bir ileti kutusu görüntülenir (145, 76,54).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

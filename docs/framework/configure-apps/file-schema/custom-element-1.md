@@ -1,5 +1,5 @@
 ---
-title: Singletagsectionhandler özel öğesi
+title: SingleTagSectionHandler için özel öğe
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301149"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927497"
 ---
-# <a name="custom-element-for-singletagsectionhandler"></a>Singletagsectionhandler özel öğesi
+# <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler için özel öğe
 
-Ayarları tarafından tanımlanan özel bir yapılandırma bölümünü tanımlayan bir \<bölüm > öğesi ve kullanımları <xref:System.Configuration.SingleTagSectionHandler> sınıfı.
+Bir \<Bölüm > öğesi tarafından tanımlanan ve <xref:System.Configuration.SingleTagSectionHandler> sınıfını kullanan özel bir yapılandırma bölümünde ayarları tanımlar.
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+[ **\<Yapılandırma >** ](configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -30,13 +30,13 @@ Ayarları tarafından tanımlanan özel bir yapılandırma bölümünü tanımla
 
 ## <a name="attributes"></a>Öznitelikler
 
-Kullanıcı tanımlı öznitelikler ve öznitelik değerleri var.
+Öznitelikler ve öznitelik değerleri Kullanıcı tanımlı ' dır.
 
 ## <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
+| [ **\<Yapılandırma >** ](configuration-element.md) | Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -44,11 +44,11 @@ Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**\<SectionName >** öğedir tarafından tanımlanan özel bir öğe bir [  **\<bölüm >** ](~/docs/framework/configure-apps/file-schema/section-element.md) içindeki [  **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) öğesi. Yapılandırma sistemi döndürür bir <xref:System.Collections.IDictionary> nesne çağırdığınızda <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+SectionName > öğesi, [**configSections \<>** ](configsections-element-for-configuration.md) öğesinde bir [ **\<Bölüm >** ](section-element.md) etiketi tarafından tanımlanan özel bir öğedir.  **\<** Yapılandırma sistemi, çağırdığınızda <xref:System.Collections.IDictionary> <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>bir nesne döndürür.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte adlı özel bir öğe bildirir  **\<sampleSection >** tarafından okunur ayarları içeren <xref:System.Configuration.SingleTagSectionHandler> sınıfı:
+Aşağıdaki örnek, <xref:System.Configuration.SingleTagSectionHandler> sınıf tarafından okunan ayarları içeren  **\<sampleSection >** adlı özel bir öğe bildirir:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Aşağıdaki örnekte adlı özel bir öğe bildirir  **\<sampleSection >** tara
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework için yapılandırma dosyası şeması](index.md)

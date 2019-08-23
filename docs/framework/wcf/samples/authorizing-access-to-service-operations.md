@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: 857e1ebe21dcb37764ddf60570a00ec35b205c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0ea82c876b3bd8c2a3218f84399fbb69e1d0080
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932505"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Hizmet İşlemlerine Erişimi Yetkilendirme
-Bu örnek nasıl kullanılacağını gösterir [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) kullanımını etkinleştirmek için <xref:System.Security.Permissions.PrincipalPermissionAttribute> hizmet işlemleri erişim yetkisi vermek için özniteliği. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) örnek. Hizmet ve istemci kullanarak yapılandırılan [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). `mode` Özniteliği [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) ayarlanmış `Message` ve `clientCredentialType` ayarlanmış `Windows`. <xref:System.Security.Permissions.PrincipalPermissionAttribute> Her hizmet yönteme uygulanır ve her işlem için erişimi kısıtlamak için kullanılır. Çağıranın her işlem erişmek için bir Windows Yöneticisi olması gerekir.  
+Bu örnek, <xref:System.Security.Permissions.PrincipalPermissionAttribute> [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) hizmet işlemlerine erişim yetkisi vermek için özniteliğinin kullanımını etkinleştirmek üzere ServiceAuthorization > nasıl kullanacağınızı gösterir. Bu örnek, [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) başlama örneğine dayalıdır. Hizmet ve istemci, [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)kullanılarak yapılandırılır. `mode` Güvenlik>`Message` özniteliği olarakayarlanmıştır`clientCredentialType` ve olarak ayarlanmıştır.`Windows` [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) <xref:System.Security.Permissions.PrincipalPermissionAttribute> Her bir hizmet yöntemine uygulanır ve her bir işleme erişimi kısıtlamak için kullanılır. Çağıranın her bir işleme erişmesi için bir Windows Yöneticisi olması gerekir.  
   
- Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet yapılandırma dosyasını kullanan [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) ayarlanacak `principalPermissionMode` özniteliği:  
+ Hizmet yapılandırma dosyası, `principalPermissionMode` özelliği ayarlamak için [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) kullanır:  
   
 ```xml  
 <behaviors>  
@@ -37,9 +37,9 @@ Bu örnek nasıl kullanılacağını gösterir [ \<serviceAuthorization >](../..
 </behaviors>  
 ```  
   
- Ayarı `principalPermissionMode` için `UseWindowsGroups` kullanımını etkinleştirir <xref:System.Security.Permissions.PrincipalPermissionAttribute> Windows grubu adlarına göre.  
+ <xref:System.Security.Permissions.PrincipalPermissionAttribute> İçin `principalPermissionMode` ayarı`UseWindowsGroups` , Windows Grup adlarına göre kullanımını sağlar.  
   
- <xref:System.Security.Permissions.PrincipalPermissionAttribute> Her işlem aşağıdaki örnek kodda gösterildiği gibi çağıranın Windows administrators grubunun bir parçası olmasını gerektirecek şekilde uygulanır.  
+ , <xref:System.Security.Permissions.PrincipalPermissionAttribute> Aşağıdaki örnek kodda gösterildiği gibi çağıranın Windows yöneticileri grubunun bir parçası olmasını gerektirmek için her bir işleme uygulanır.  
   
 ```csharp
 [PrincipalPermission(SecurityAction.Demand,   
@@ -51,14 +51,14 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. Yöneticiler grubunun bir parçası olan bir hesabı altında çalışıyorsa, istemci her işlemi ile başarıyla iletişim kurar; Aksi takdirde, erişim reddedildi. Yetkilendirme hatası ile denemeler yapmak için istemci Yöneticiler grubunun bir parçası olmayan bir hesap altında çalıştırın. Konsol penceresinde istemci kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemci, Yöneticiler grubunun parçası olan bir hesabın altında çalışıyorsa, her işlemle birlikte başarıyla iletişim kurar; Aksi takdirde, erişim reddedilir. Yetkilendirme hatasıyla denemeler yapmak için istemciyi Yöneticiler grubunun parçası olmayan bir hesap altında çalıştırın. İstemcisini kapatmak için konsol penceresinde ENTER tuşuna basın.  
   
- Hizmet yetkilendirme hatalarının uygulayarak bildirilebilir bir <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Bkz: [genişletme denetiminin üzerine hata işleme ve Raporlama](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md) uygulama hakkında bilgi için `IErrorHandler`.  
+ Bir hizmet, bir <xref:System.ServiceModel.Dispatcher.IErrorHandler>hizmeti uygulayarak yetkilendirme hatalarından haberdar olabilir. Uygulama`IErrorHandler`hakkında bilgi Için bkz. [hata Işleme ve raporlama üzerinde denetimi genişletme](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md) .  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  

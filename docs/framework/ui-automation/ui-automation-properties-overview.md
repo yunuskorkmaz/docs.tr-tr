@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 0468a2f47b9f270e37ad800b83d70c475cbed2c6
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796618"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914508"
 ---
 # <a name="ui-automation-properties-overview"></a>UI Otomasyon Özelliklerine Genel Bakış
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  UI Otomasyon sağlayıcıları öğeleri üzerinde [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] özellikler sunar. Bu özellikler, UI Otomasyonu istemci uygulamalarının hem statik hem de dinamik veriler de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]dahil olmak üzere, özellikle denetimlerin parçaları hakkında bilgi bulmasına olanak tanır.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68796618"
  **Özellik erişim** sütunu, <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ve <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>' a ek olarak her bir özellik için diğer erişimcileri listeler. İstemci uygulamasında Özellikler alma hakkında daha fazla bilgi için bkz. [istemciler Için UI Otomasyon özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
->  Her özellik hakkında belirli bilgiler için, **özellik erişim** sütunundaki bağlantıyı izleyin.  
+> Her özellik hakkında belirli bilgiler için, **özellik erişim** sütunundaki bağlantıyı izleyin.  
   
 ### <a name="display-characteristics"></a>Görüntü özellikleri  
   

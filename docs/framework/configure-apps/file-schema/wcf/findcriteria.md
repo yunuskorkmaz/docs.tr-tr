@@ -2,15 +2,15 @@
 title: <findCriteria>
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: eaa3998d3d0b1642c0c92380ec1228eea69d4da8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb8ff3905f7696f4c71a79e31db1b8f82c9f0d3b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700897"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925592"
 ---
 # <a name="findcriteria"></a>\<findCriteria >
-Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt, arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütünü (ne kadar süreyle arama son) bulun.  
+Bir bulma hizmetini aramak için bir istemci uygulaması tarafından kullanılan bir ölçüt kümesi sağlayan yapılandırma öğesi. Ölçütler, arama ölçütlerine göre gruplandırılabilir (hangi hizmetleri aradığınızı belirtebilir) ve sonlandırma ölçütlerini (aramanın en son ne kadar süreyle) bulabilirsiniz.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -49,23 +49,23 @@ Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanıla
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|süre|Ağdaki hizmetlerden yanıtları için beklenecek en uzun süreyi belirten bir Timespan değeri. Varsayılan süre 20 saniyedir.|  
-|maxresults bağımsız değişkenini|İçin bir ağ veya Internet üzerinde hizmetlerden beklenilecek en fazla sayısını belirten bir tamsayı. En yüksek yanıt belirtilen değerden önce almış `duration` özniteliği geçti, bulma işlemi sona erer.|  
-|scopeMatchBy|Kapsamlar araştırma iletisi ve onun uç noktasında alanları eşleştirirken kullanılan eşleştirme algoritmasını belirleyen bir URI.<br /><br /> Desteklenen beş kapsam eşleştirme kuralları vardır. Bir kapsam eşleşen kural belirtmezseniz `ScopeMatchByPrefix` kullanılır. Bu hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Discovery.FindCriteria>.|  
+|süre|Ağdaki hizmetlerden gelen yanıtlar için beklenecek en uzun süreyi belirten bir TimeSpan değeri. Varsayılan süre 20 saniyedir.|  
+|maxResults|Ağ veya Internet üzerindeki hizmetlerden, beklenecek en fazla yanıt sayısını belirten bir tamsayı. `duration` Öznitelikte belirtilen değerin süresi geçtiğinde en fazla yanıt alınmışsa, bulma işlemi sonlanır.|  
+|scopeMatchBy|Araştırma iletisindeki kapsamları uç noktayla eşleştirirken kullanılacak eşleşen algoritmayı belirten bir URI.<br /><br /> Desteklenen beş kapsam eşleştirme kuralı vardır. Kapsam eşleştirme kuralı belirtmezseniz, `ScopeMatchByPrefix` kullanılır. Bu hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Discovery.FindCriteria>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|İş akışı hizmeti sözleşmesi türlerinin adlarını içeren yapılandırma öğelerinin koleksiyonu.|  
-|\<Uzantılar >, \<findCriteria >|XML öğesi uzantıları sağlayan bir nesneleri koleksiyonu.|  
-|[\<kapsamları >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Mutlak bir URI'leri içeren bir bulma işlemi sırasında belirli bir hizmet veya hizmetleri bulmak için kullanılan nesneleri koleksiyonu.<br /><br /> Hizmete bulunursa başarılı bir eşleşme hizmet URI'si ile eşleşen zorluklar işleyen kapsam kuralları yardımıyla bazen kapsam URI arasındaki yapıldı.|  
+|[\<contractTypeNames >](contracttypenames.md)|İş akışı hizmeti sözleşme türlerinin adlarını içeren yapılandırma öğelerinin koleksiyonu.|  
+|\<\<FindCriteria > Uzantıları >|Uzantıları sağlayan XML öğe nesneleri koleksiyonu.|  
+|[\<kapsamlar >](scopes.md)|Belirli bir hizmet veya hizmeti bulmak için bulma işlemi sırasında kullanılan mutlak URI 'Ler içeren nesneler koleksiyonu.<br /><br /> Belirli bir hizmet bulunursa, hizmet URI 'si ile kapsam URI 'SI arasında başarılı bir eşleşme yapılmıştır, bazen eşleştirmeyi ele alan kapsam kurallarının yardımıyla.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Hizmet keşif işlemine bir istemci olarak katılmak için bir uygulama tarafından gerekli olan ayarları içerir.|  
+|[\<standardEndpoints >](standardendpoints.md)|Bir uygulama tarafından hizmet keşif işlemine bir istemci olarak katılmak için gerekli olan ayarları içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

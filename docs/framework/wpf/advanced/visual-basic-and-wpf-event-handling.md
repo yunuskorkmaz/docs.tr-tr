@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 4ff006099dd2fa706cb575eec18e135d6e74ad46
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 8407958ec76be7e402025ece57371e67581e5291
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972316"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942126"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic ve WPF Olay İşleme
 Özel olarak Microsoft Visual Basic .net dili için, özniteliklerle olay işleyicileri eklemek veya `Handles` <xref:System.Windows.UIElement.AddHandler%2A> yöntemi kullanmak yerine, olay işleyicilerini örneklerle ilişkilendirmek için dile özgü anahtar sözcüğünü kullanabilirsiniz. Ancak, `Handles` işleyicileri örneklere ekleme tekniği bazı sınırlamalara sahiptir, `Handles` çünkü söz dizimi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sisteminin bazı belirli yönlendirilmiş olay özelliklerini desteklenemez.  
@@ -34,13 +34,13 @@ ms.locfileid: "68972316"
  `Handles`zaten işlenmiş olarak işaretlenmiş olaylar için çağrılan işleyiciler iliştirilemez. Bunun yerine, kodu kullanmanız ve ' nin `handledEventsToo` <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>aşırı yüklemesini çağırmanız gerekir.  
   
 > [!NOTE]
->  XAML 'de aynı olay `Handles` için bir olay işleyicisi belirttiğinizde Visual Basic kodunuzda söz dizimini kullanmayın. Bu durumda, olay işleyicisi iki kez çağırılır.  
+> XAML 'de aynı olay `Handles` için bir olay işleyicisi belirttiğinizde Visual Basic kodunuzda söz dizimini kullanmayın. Bu durumda, olay işleyicisi iki kez çağırılır.  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF "Handles" Işlevselliğini nasıl uygular  
  Bir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sayfa derlendiğinde, ara dosya sayfadaki bir <xref:System.Windows.FrameworkContentElement.Name%2A> özellik kümesi `Friend` (veya [x:Name yönergesinin](../../xaml-services/x-name-directive.md) bildirildiği) bulunan her öğeye başvuruları bildirir `WithEvents` . Her bir adlandırılmış örnek potansiyel olarak bir işleyiciye `Handles`atanabileceği bir öğedir.  
   
 > [!NOTE]
->  IntelliSense [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]içinde, bir sayfada bir başvuru için hangi öğelerin kullanılabildiği hakkında bir `Handles` tamamlama gösterebilir. Ancak, bu, ara dosyanın tüm `Friends` başvuruları doldurabilmesi için bir derleme geçişi alabilir.  
+> IntelliSense [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]içinde, bir sayfada bir başvuru için hangi öğelerin kullanılabildiği hakkında bir `Handles` tamamlama gösterebilir. Ancak, bu, ara dosyanın tüm `Friends` başvuruları doldurabilmesi için bir derleme geçişi alabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

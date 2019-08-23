@@ -1,18 +1,18 @@
 ---
-title: ICorDebugVirtualUnwinder::Next yöntemi
+title: 'ICorDebugVirtualUnwinder:: Next yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd12861b34d577a002fbf0cc8a7962b7bfc35fe1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20a3d4bac42731bc94ecef7a0756392c8c0882fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775334"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967929"
 ---
-# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder::Next yöntemi
-Arayanın bağlam ilerler.  
+# <a name="icordebugvirtualunwindernext-method"></a>ICorDebugVirtualUnwinder:: Next yöntemi
+Çağıranın bağlamına ilerletir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,24 +24,24 @@ HRESULT Next();
  Yok.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` geriye doğru izleme başarıyla oluştuysa veya `CORDBG_S_AT_END_OF_STACK` daha fazla çerçeve olmadığından geriye doğru izleme tamamlanamıyorsa.  
+ `S_OK`geriye doğru izleme işlemi başarılı olduysa veya `CORDBG_S_AT_END_OF_STACK` daha fazla çerçeve olmadığından geriye doğru tamamlanamıyor.  
   
- Döndürülen HRESULT başarısız olan bir Icordebug API'leri döndürür `CORDBG_E_DATA_TARGET_ERROR`.  
+ Başarısız bir HRESULT döndürülürse, ICorDebug API 'Leri `CORDBG_E_DATA_TARGET_ERROR`döndürülür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yığın değişkeni, ilerleme, bu sonuç kılar emin olmalısınız çağrısı `Next` başarısız döndüreceği HRESULT veya `CORDBG_S_AT_END_OF_STACK`. Döndüren `S_OK` süresiz olarak sonsuz bir döngüye neden olabilir.  
+ Yığın denetçisi ilerlemeye devam ettiğinden emin olunması gerekir, bu yüzden bir çağrısının `Next` başarısız bir HRESULT veya `CORDBG_S_AT_END_OF_STACK`geri dönmesi gerekir. Süresiz `S_OK` olarak döndürmek sonsuz döngüye neden olabilir.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

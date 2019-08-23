@@ -7,38 +7,38 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7484e67202c430df6ec2d4bea9cff5a850720ff5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593609"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921556"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Nasıl yapılır: Tanımlayıcı Adlı Atlama Özelliğini Devre Dışı Bırakma
-İle .NET Framework sürüm 3.5 Service Pack 1 (SP1) başlayarak, tam güvene bir derleme yüklendiğinde tanımlayıcı ad imzaları doğrulanmaz <xref:System.AppDomain> gibi varsayılan nesne <xref:System.AppDomain> için `MyComputer` bölge. Bu atlama özelliğini tanımlayıcı ad adlandırılır. İçin tam güven ortamında, talepleri <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalı için tam güven derlemeleri imzalarına bağımsız olarak her zaman başarılı. Tek kısıtlama, kendi bölgesine tam güvenilir olduğundan derleme tam güvenilir olması gerekliliğidir. Tanımlayıcı adı bir faktör Bu koşullar altında olmadığı için bunu doğrulanması için bir neden yoktur. Tanımlayıcı ad imzası doğrulama atlama önemli performans geliştirmeleri sunar.  
+.NET Framework sürüm 3,5 hizmet paketi 1 ' den (SP1) başlayarak, bir derleme bir tam güven <xref:System.AppDomain> nesnesine yüklendiğinde (örneğin, `MyComputer` bölge için varsayılan <xref:System.AppDomain> ) tanımlayıcı ad imzaları doğrulanmaz. Bu, tanımlayıcı ad atlama özelliği olarak adlandırılır. Tam güven ortamında, <xref:System.Security.Permissions.StrongNameIdentityPermission> imzalarından bağımsız olarak imzalı, tam güvenle derlemeler için her zaman başarılı olur. Tek kısıtlama, kendi bölgesi tam güvenilir olduğu için derlemenin tam güvenilir olması gerekir. Tanımlayıcı ad bu koşullar altında bir belirleme faktörü olmadığından, bunun doğrulanması için bir neden yoktur. Tanımlayıcı ad imzalarının doğrulanmasını atlamak, önemli performans iyileştirmeleri sağlar.  
   
- Bu gecikme-imzalı değil ve bir tam güvene yüklenen herhangi bir tam güven derleme atlama özelliğini uygular <xref:System.AppDomain> tarafından belirtilen dizinden kendi <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği.  
+ Atlama özelliği, gecikmeli imzalanmış olmayan ve <xref:System.AppDomain> <xref:System.AppDomainSetup.ApplicationBase%2A> özelliği tarafından belirtilen dizinden herhangi bir tam güvenle yüklenmiş tüm tam güven derlemeleri için geçerlidir.  
   
- Bir kayıt defteri anahtarı değerini ayarlayarak bir bilgisayarda tüm uygulamalar için atlama özelliğini geçersiz kılabilirsiniz. Uygulama yapılandırma dosyası kullanarak tek bir uygulama ayarı geçersiz kılabilirsiniz. Kayıt defteri anahtarı tarafından devre dışı bırakılırsa atlama özelliği tek bir uygulama için yeniden devreye sokmanız olamaz.  
+ Bir kayıt defteri anahtarı değeri ayarlayarak, bir bilgisayardaki tüm uygulamalar için atlama özelliğini geçersiz kılabilirsiniz. Bir uygulama yapılandırma dosyası kullanarak tek bir uygulama için ayarı geçersiz kılabilirsiniz. Kayıt defteri anahtarı tarafından devre dışı bırakılmışsa, tek bir uygulama için atlama özelliğini eski durumuna getiremezsiniz.  
   
- Atlama özelliğini geçersiz kıldığınızda, tanımlayıcı ad doğruluğu yalnızca doğrulanır. için işaretli bir <xref:System.Security.Permissions.StrongNameIdentityPermission>. Belirli bir tanımlayıcı ad doğrulamak istiyorsanız bu onay ayrı olarak yapmanız gerekir.  
+ Atlama özelliğini geçersiz kıldığınızda, tanımlayıcı ad yalnızca doğruluk için onaylanır; bir <xref:System.Security.Permissions.StrongNameIdentityPermission>için onay değildir. Belirli bir tanımlayıcı adı doğrulamak istiyorsanız, bu denetimi ayrı yapmanız gerekir.  
   
 > [!IMPORTANT]
->  Tanımlayıcı ad doğrulama zorlama olanağı, aşağıdaki yordamda açıklandığı gibi bir kayıt defteri anahtarı bağlıdır. Bir uygulama bu kayıt defteri anahtarına erişim için erişim denetim listesi (ACL) iznine sahip olmayan bir hesap altında çalışıyorsa, verimsiz bir ayardır. Böylece tüm derlemeler için okunabilir ACL hakları bu anahtar için yapılandırıldığından emin olmanız gerekir.  
+> Güçlü ad doğrulamasını zorlama özelliği, aşağıdaki yordamda açıklandığı gibi bir kayıt defteri anahtarına bağlıdır. Bir uygulama, bu kayıt defteri anahtarına erişim denetim listesi (ACL) iznine sahip olmayan bir hesap altında çalışıyorsa, ayar etkisiz olur. Tüm derlemeler için okunabilmesi için ACL haklarının bu anahtar için yapılandırıldığından emin olmanız gerekir.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Tanımlayıcı ad atlama özelliği tüm uygulamalar için devre dışı bırakmak için  
+### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Tüm uygulamalar için tanımlayıcı adı atlama özelliğini devre dışı bırakmak için  
   
-- 32-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework anahtarı.  
+- 32 bit bilgisayarlarda, sistem kayıt defterinde, HKEY_LOCAL_MACHINE\Software\Microsoft `AllowStrongNameBypass` \\altında adlı 0 değerine sahip bir DWORD girişi oluşturun. NETFramework anahtarı.  
   
-- 64-bit bilgisayarlarda, sistem kayıt defterinde DWORD girişini adlı 0 değeri ile oluşturma `AllowStrongNameBypass` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft altında\\. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
+- 64 bit bilgisayarlarda, sistem kayıt defterinde, HKEY_LOCAL_MACHINE\Software\Microsoft `AllowStrongNameBypass` \\altında adlı 0 değerine sahip bir DWORD girişi oluşturun. NETFramework ve HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework anahtarları.  
   
-### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Tanımlayıcı ad atlama özelliği tek bir uygulama için devre dışı bırakmak için  
+### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Tek bir uygulama için tanımlayıcı adı atlama özelliğini devre dışı bırakmak için  
   
-1. Uygulama yapılandırma dosyasını oluşturun veya açın.  
+1. Uygulama yapılandırma dosyasını açın veya oluşturun.  
   
-     Uygulama yapılandırma dosyaları bölümünde bu dosya hakkında daha fazla bilgi için bkz. [yapılandırma uygulamaları](../../../docs/framework/configure-apps/index.md).  
+     Bu dosya hakkında daha fazla bilgi için [uygulamaları yapılandırma](../../../docs/framework/configure-apps/index.md)konusundaki uygulama yapılandırma dosyaları bölümüne bakın.  
   
-2. Şu girişi ekleyin:  
+2. Aşağıdaki girişi ekleyin:  
   
     ```xml  
     <configuration>  
@@ -48,10 +48,10 @@ ms.locfileid: "64593609"
     </configuration>  
     ```  
   
- Yapılandırma dosyası ayarı kaldırarak veya öznitelik "true" ayarını, uygulama için atlama özelliğini geri yükleyebilirsiniz.  
+ Yapılandırma dosyası ayarını kaldırarak veya özniteliğini "true" olarak ayarlayarak, uygulamanın atlama özelliğini geri yükleyebilirsiniz.  
   
 > [!NOTE]
->  Yalnızca bilgisayar için atlama özelliği etkinse, bir uygulama için tanımlayıcı ad doğrulama açıp kapatabilirsiniz. Atlama özelliği, bilgisayarı kapatılmış, tüm uygulamalar için güçlü adlar doğrulanır ve tek bir uygulama için doğrulamayı atlayamazsınız.  
+> Yalnızca bilgisayar için atlama özelliği etkinse, bir uygulama için tanımlayıcı ad doğrulamayı açıp kapatabilirsiniz. Bilgisayar için atlama özelliği kapatılmışsa, tüm uygulamalar için tanımlayıcı adlar onaylanır ve tek bir uygulama için doğrulamayı atlayamazsınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

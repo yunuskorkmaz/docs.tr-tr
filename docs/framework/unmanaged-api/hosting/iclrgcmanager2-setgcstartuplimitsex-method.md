@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 356678afb537ab5e5e1653c4f71140ce704e55ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0d881c71d4725e1a73d743aa098aecc053182947
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918601"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx Yöntemi
-Bir çöp toplama kesim boyutunu ve çöp toplama sistemin nesil 0 en büyük boyutunu ayarlar.  
+Çöp toplama kesiminin boyutunu ve çöp toplama sisteminin oluşturma 0 ' nın en büyük boyutunu ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,43 +38,43 @@ HRESULT SetGCStartupLimitsEx (
   
 ## <a name="parameters"></a>Parametreler  
  `SegmentSize`  
- [in] Bir çöp toplama kesim belirtilen boyutu.  
+ 'ndaki Bir çöp toplama kesiminin belirtilen boyutu.  
   
- En düşük kesim boyutu 4 MB'dir. Parçaları, 1 MB'lık artışlarla daha yüksek veya daha büyük olabilir.  
+ En küçük kesim boyutu 4 MB 'tır. Segmentler, 1 MB veya daha büyük artışlarla artırılabilir.  
   
  `MaxGen0Size`  
- [in] Nesil 0 için belirtilen en büyük boyutu.  
+ 'ndaki Oluşturma 0 için belirtilen en büyük boyut.  
   
- En düşük nesil 0, 64 KB büyüklüğünde.  
+ Minimum nesil 0 boyutu 64 KB 'tır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık E_FAIL bir yöntemin dönüşünün ardından, işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`SetGCStartupLimitsEx`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Değerleri, `SetGCStartupLimitsEx` kümeleri yalnızca ana bilgisayar başlatılmadan önce belirtilebilir. Sonraki çağrılar `SetGCStartupLimitsEx` göz ardı edilir.  
+ `SetGCStartupLimitsEx` Ayarlayan değerler yalnızca konak başlatılmadan önce belirtilebilir. Daha sonraki çağrıları `SetGCStartupLimitsEx` yok sayılır.  
   
- Her iki parametre, diğer planı etkilemeden ayarlamak için değiştirmek istemiyorsanız parametresi için 0 (sıfır) belirtin.  
+ Diğerini etkilemeden parametre ayarlamak için değiştirmek istemediğiniz parametre için 0 (sıfır) değerini belirtin.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Otomatik Bellek Yönetimi](../../../../docs/standard/automatic-memory-management.md)
-- [Atık Toplama](../../../../docs/standard/garbage-collection/index.md)
+- [Otomatik Bellek Yönetimi](../../../standard/automatic-memory-management.md)
+- [Atık Toplama](../../../standard/garbage-collection/index.md)
 - [ICLRControl Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager2 Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

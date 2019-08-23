@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629934"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964889"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -36,12 +36,12 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
 |Piksel yapısı|Bir görüntü cihazının piksel düzenlemesini açıklar.|  
 |Metin karşıtlığı düzeyi|Görünen metnin kontrast düzeyini açıklar.|  
   
- Bu ayarlara, tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarlarına nasıl başvurulacağını bilen bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar ayrıca, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek oluşturulabilir veya değiştirilebilir.  
+ Bu ayarlara, tanımlanan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType kayıt defteri ayarlarına nasıl başvurulacağını bilen bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, Windows kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek da oluşturulabilir veya değiştirilebilir.  
   
- ClearType kayıt defteri ayarları ayarlanmamışsa (varsayılan durum) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , uygulama, yazı tipi yumuşatma ayarları için [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] sistem parametreleri bilgilerini sorgular. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
+ ClearType kayıt defteri ayarları ayarlanmamışsa (varsayılan durum) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , uygulama, yazı tipi yumuşatma ayarları için Windows sistem parametreleri bilgilerini sorgular. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
+> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>ClearType düzeyi  
@@ -59,7 +59,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
  ![Kayıt defteri düzenleyicisinde ClearType ayarları.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, ClearType ile ve olmayan iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde gri ölçekli işleme olarak adlandırılır.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]uygulamalar, ClearType ile ve olmayan iki moddan birinde metin işler. Metin ClearType olmadan işlendiğinde gri ölçekli işleme olarak adlandırılır.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gama düzeyi  
@@ -89,7 +89,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
  Piksel yapısı, 0 ile 2 arasında değişen bir tamsayı değerine karşılık gelir. Varsayılan düzey, düz bir piksel yapısını temsil eden 0 ' dır.  
   
 > [!NOTE]
->  Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
+> Görüntüleme cihaz adlarını numaralandırma hakkında bilgi için bkz `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] . işlevi.  
   
 ### <a name="registry-setting"></a>Kayıt defteri ayarı  
  Piksel yapısına yönelik kayıt defteri ayarı konumu, belirli bir görüntü aygıtı adına karşılık gelen bir yerel makine ayarıdır:  

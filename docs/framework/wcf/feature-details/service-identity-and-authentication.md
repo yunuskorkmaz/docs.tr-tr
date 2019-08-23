@@ -7,110 +7,110 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 695b6c24700fe42664944d6f9c1e03010248d86a
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: f9ed2a7c284588a0fb481d41dca61e663fd090b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969242"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
-Bir hizmetin *uç noktası kimlik* oluşturulan Web Hizmetleri Açıklama Dili (WSDL) hizmetinden bir değerdir. Herhangi bir istemciye yayılır. Bu değer, hizmet kimlik doğrulaması için kullanılır. İstemci bir uç nokta için bir iletişim başlatır ve hizmeti kendisi için istemci kimlik doğrulaması sonra istemci uç noktası kimlik değeri uç nokta kimlik doğrulama işlemi döndürdü gerçek değerle karşılaştırır. Eşleşiyorlarsa istemci beklenen hizmet uç noktası başvurduğunu sağlanmıştır. Bu olarak karşı koruma işlev *kimlik avı* bir istemcinin kötü amaçlı bir hizmeti tarafından barındırılan bir uç noktaya yönlendirilmesini engelleyerek.  
+Hizmetin *uç nokta kimliği* , hizmet Web Hizmetleri Açıklama DILI (wsdl) tarafından oluşturulan bir değerdir. Bu değer, herhangi bir istemciye yayılan, hizmetin kimliğini doğrulamak için kullanılır. İstemci bir uç noktaya iletişim başlattıktan ve hizmet istemcinin kimliğini doğruladıktan sonra, uç nokta kimlik değerini, uç nokta kimlik doğrulama işleminin döndürdüğü gerçek değer ile karşılaştırır. Eşleşiyorlarsa, istemci beklenen hizmet uç noktasıyla iletişim kurduysa emin olur. Bu, bir istemcinin kötü amaçlı bir hizmet tarafından barındırılan bir uç noktaya yeniden yönlendirilmesini önlemek yoluyla *kimlik avına* karşı koruma olarak çalışır.  
   
- Kimlik ayarı gösteren örnek bir uygulama için bkz. [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Uç noktaları ve uç nokta adresleri hakkında daha fazla bilgi için bkz: [adresleri](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
+ Kimlik ayarını gösteren örnek bir uygulama için bkz. [hizmet kimliği örneği](../../../../docs/framework/wcf/samples/service-identity-sample.md). Uç noktalar ve uç nokta adresleri hakkında daha fazla bilgi için bkz. [adresler](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
 > [!NOTE]
->  NT LanMan (NTLM) kimlik doğrulaması için kullandığınızda, istemci NTLM altında sunucunun kimliğini doğrulayamıyor olduğundan hizmet kimliği işaretlenmemiştir. NTLM, bilgisayarların bir Windows çalışma grubunun parçası olduğunda veya Kerberos kimlik doğrulaması desteği olmayan Windows daha eski bir sürümünü çalıştırırken kullanılır.  
+> Kimlik doğrulaması için NT LanMan (NTLM) kullandığınızda, NTLM altında istemci sunucunun kimliğini doğrulayamadığından hizmet kimliği denetlenmez. Bilgisayarlar bir Windows çalışma grubunun parçası olduğunda veya Kerberos kimlik doğrulamasını desteklemeyen eski bir Windows sürümü çalıştırıldığında NTLM kullanılır.  
   
- İstemci için bir hizmet üzerinde bir ileti göndermek için güvenli bir kanal başlattığında Windows Communication Foundation (WCF) altyapısı hizmeti kimlik doğrulaması ve hizmet kimliği uç noktasında belirtilen kimlikle eşleşmesi durumunda, yalnızca ileti gönderir istemci adres kullanır.  
+ İstemci, üzerinden bir hizmete ileti göndermek için güvenli bir kanal başlattığında, Windows Communication Foundation (WCF) altyapısı hizmetin kimliğini doğrular ve yalnızca hizmet kimliği uç noktada belirtilen kimlikle eşleşiyorsa iletiyi gönderir istemcinin kullandığı adres.  
   
  Kimlik işleme aşağıdaki aşamalardan oluşur:  
   
-- Tasarım zamanında istemci geliştiricisinin hizmetin kimliğini (WSDL kullanıma sunulan) uç noktanın meta verilerden belirler.  
+- Tasarım zamanında, istemci geliştiricisi uç noktanın meta verilerindeki hizmetin kimliğini (WSDL aracılığıyla gösterilir) belirler.  
   
-- Çalışma zamanında, istemci uygulama hizmetine herhangi bir ileti göndermeden önce hizmetin güvenlik kimlik bilgileri taleplerini denetler.  
+- Çalışma zamanında istemci uygulaması, hizmete herhangi bir ileti göndermeden önce hizmetin güvenlik kimlik bilgileri taleplerini kontrol eder.  
   
- İstemcide işleme kimliği, istemci kimlik doğrulaması hizmetine benzer. İstemcinin kimlik doğrulamasından kadar güvenli bir hizmetin kod çalıştırılmaz. Benzer şekilde, istemci hangi önceden hizmet meta verilerinden bilinen üzerinde hizmet kimlik bilgilerini doğrulanmadıkça hizmete ileti tabanlı göndermez.  
+ İstemci üzerindeki kimlik işleme, hizmette istemci kimlik doğrulamasına benzer. Güvenli bir hizmet, istemci kimlik bilgilerinin kimliği doğrulanana kadar kodu çalıştırmaz. Benzer şekilde, istemci, hizmet kimlik bilgilerinin kimliği, hizmetin meta verilerinden öncelikli olarak bilinene kadar hizmetine ileti göndermez.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> Özelliği <xref:System.ServiceModel.EndpointAddress> sınıfı, istemci tarafından adlı hizmetin kimliğini temsil eder. Hizmet yayımlar <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta. Bir istemci geliştiricisinin çalıştığında [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) karşı hizmet uç noktası, oluşturulan yapılandırma hizmetin değerini içeren <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği. WCF altyapıyı (güvenlik ile yapılandırılmışsa), hizmet belirtilen kimlik sahip olduğunu doğrular.  
+ <xref:System.ServiceModel.EndpointAddress> Sınıfının özelliği, istemci tarafından çağrılan hizmetin kimliğini temsil eder. <xref:System.ServiceModel.EndpointAddress.Identity%2A> Hizmeti meta verilerinde yayımlar <xref:System.ServiceModel.EndpointAddress.Identity%2A> . İstemci geliştiricisi, hizmet uç noktasında [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırdığında, oluşturulan yapılandırma hizmetin <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliğinin değerini içerir. WCF altyapısı (güvenlikle yapılandırıldıysa), hizmetin belirtilen kimliğe sahip olduğunu doğrular.  
   
 > [!IMPORTANT]
->  Meta veri, beklenen hizmet kimliğini içeriyor, bu nedenle, hizmet meta verileri güvenli araçlarla, örneğin, hizmet için bir HTTPS uç noktası oluşturarak ortaya önerilir. Daha fazla bilgi için [nasıl yapılır: Meta veri uç noktalarını güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+> Meta veriler hizmetin beklenen kimliğini içerir, bu nedenle hizmet meta verilerini güvenli yollarla kullanıma sunabilmeniz önerilir, örneğin, hizmet için bir HTTPS uç noktası oluşturarak. Daha fazla bilgi için [nasıl yapılır: Güvenli meta veri](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)uç noktaları.  
   
 ## <a name="identity-types"></a>Kimlik türleri  
- Hizmet kimlikleri altı tür sağlar. İçinde bulunan bir öğeye karşılık gelen her bir kimlik türü `<identity>` yapılandırma öğesi. Kullanılan türü, senaryo ve hizmetin güvenlik gereksinimlerine bağlıdır. Aşağıdaki tabloda her bir kimlik türü açıklar.  
+ Bir hizmet, altı tür kimlik sağlayabilir. Her kimlik türü, `<identity>` yapılandırmada öğesinin içinde yer alan bir öğeye karşılık gelir. Kullanılan tür senaryoya ve hizmetin güvenlik gereksinimlerine bağlıdır. Aşağıdaki tabloda her kimlik türü açıklanmaktadır.  
   
-|Kimlik türü|Açıklama|Tipik bir senaryo|  
+|Kimlik türü|Açıklama|Tipik senaryo|  
 |-------------------|-----------------|----------------------|  
-|Etki Alanı Adı Sistemi (DNS)|Bu öğe, X.509 sertifikaları veya Windows hesapları kullanın. Bu kimlik bilgisi bu öğesinde belirtilen değere belirtilen DNS adı ile karşılaştırır.|Bir DNS denetimi ile DNS sertifikaları kullanmanıza olanak tanır veya konu adları. Sertifika konu adı ve aynı DNS ile yeniden, kimlik denetimi hala geçerli olur. Bir sertifika yeniden, yeni bir RSA anahtarı alır ancak aynı DNS veya konu adı korur. Başka bir deyişle, istemciler kendi hizmet kimlik bilgilerini güncelleştirmek gerekmez.|  
-|Sertifika. Varsayılan zaman `ClientCredentialType` sertifikayı ayarlayın.|Bu öğe, istemci ile karşılaştırılacak bir Base64 ile kodlanmış X.509 Sertifika değerini belirtir.<br /><br /> Ayrıca bir CardSpace hizmet kimlik doğrulaması için kimlik bilgisi olarak kullanırken bu öğeyi kullanırsınız.|Bu öğe, tek bir sertifika parmak izi değerini temel kimlik doğrulaması kısıtlar. Parmak izi değerleri benzersiz olduğu için bu katı kimlik doğrulamasını etkinleştirir. Bu, bir uyarı ile birlikte gelir: Sertifika ile aynı konu adı belirtecin yeniden, ayrıca yeni bir parmak izi sahiptir. Bu nedenle, istemciler yeni parmak izini bilinen sürece hizmet doğrulayabiliyor değildir. Bir sertifikanın parmak izi bulma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
-|Sertifika başvurusu|Daha önce açıklanan sertifikası seçeneğini aynıdır. Ancak, bu öğe, bir sertifika adını belirtin ve sertifika alınacağı konum depolamak sağlar.|Daha önce açıklanan sertifika senaryosu ile aynıdır.<br /><br /> Sertifika depolama konumu değiştirebilirsiniz avantajdır.|  
-|RSA|Bu öğe, istemci ile Karşılaştırılacak RSA anahtar değeri belirtir. Bu sertifika seçeneği benzer ancak sertifikanın parmak izi kullanmak yerine, sertifikanın RSA anahtarı yerine kullanılır.|RSA onay, özellikle RSA anahtarıyla dayalı tek bir sertifika kimlik doğrulaması sınırlamanıza olanak sağlar. Bu, belirli bir RSA anahtarı RSA anahtar değeri değişirse, mevcut istemciler artık çalışır hizmetini çoğaltamaz katı kimlik doğrulaması sağlar.|  
-|Kullanıcı asıl adı (UPN). Varsayılan zaman `ClientCredentialType` ayarlanır ve Windows hizmet işlemi sistem hesaplarından birisini altında çalışmıyor.|Bu öğe hizmetinin altında çalışmakta olduğu UPN belirtir. Kerberos protokolü ve kimlik bölümüne bakın [kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Bu hizmet, belirli bir Windows kullanıcı hesabı altında çalıştığından sağlar. Kullanıcı hesabı, geçerli oturum açmış kullanıcı veya belirli bir kullanıcı hesabı altında çalışan bir hizmet olabilir.<br /><br /> Hizmeti Active Directory ortamında etki alanı hesabı altında çalışıyorsa bu ayar Windows Kerberos güvenlik yararlanır.|  
-|Hizmet asıl adı (SPN). Varsayılan zaman `ClientCredentialType` ayarlanır Windows ve hizmeti için işlem bir sistem hesabı altında çalışıyor — LocalService, LocalSystem veya NetworkService.|Bu öğe hizmet hesabı ile ilişkili SPN belirtir. Kerberos protokolü ve kimlik bölümüne bakın [kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Bu, SPN ve SPN ile ilişkili belirli Windows hesabının hizmetinizi tanımlamak sağlar.<br /><br /> Hizmetin kullanıcı hesabı için bir makine hesabı ilişkilendirmek için Setspn.exe Aracı'nı kullanabilirsiniz.<br /><br /> Bu ayar Active Directory ortamında etki alanının bir üyesi Windows hizmet ve bilgisayar ile ilişkili bir SPN ada sahip bir etki alanı hesabı altında ya da bir sistem hesabı altında çalışıyorsa, güvenlik Kerberos yararlanır.|  
+|Etki Alanı Adı Sistemi (DNS)|Bu öğeyi X. 509.440 sertifikaları veya Windows hesaplarıyla kullanın. Kimlik bilgilerinde belirtilen DNS adını bu öğede belirtilen değerle karşılaştırır.|DNS denetimi, sertifikaları DNS veya konu adlarıyla kullanmanıza olanak sağlar. Bir sertifika aynı DNS veya konu adıyla yeniden kullanılıyorsa, kimlik denetimi hala geçerli olur. Bir sertifika yeniden yayımlandığında, yeni bir RSA anahtarı alır, ancak aynı DNS veya konu adını korur. Bu, istemcilerin hizmet hakkındaki kimlik bilgilerini güncelleştirmesi gerekmediği anlamına gelir.|  
+|Sertifika. Varsayılan `ClientCredentialType` olarak, sertifika olarak ayarlanır.|Bu öğe, istemcisiyle karşılaştırmak için Base64 kodlamalı bir X. 509.440 sertifika değeri belirtir.<br /><br /> Ayrıca, hizmet kimliğini doğrulamak için bir CardSpace kimlik bilgisi olarak kullanılırken bu öğeyi kullanın.|Bu öğe, kimlik doğrulamasını parmak izi değerine göre tek bir sertifikayla kısıtlar. Bu, parmak izi değerleri benzersiz olduğundan daha sıkı kimlik doğrulama imkanı sunar. Bu bir desteklenmediği uyarısıyla ile birlikte gelir: Sertifika aynı konu adıyla yeniden bırakılırsa, yeni bir parmak Izi de vardır. Bu nedenle, yeni parmak izi tanınmadığı takdirde istemciler hizmeti doğrulayamayabilir. Bir sertifikanın parmak izini bulma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir sertifikanın](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)parmak izini alın.|  
+|Sertifika başvurusu|Daha önce açıklanan sertifika seçeneğiyle aynı. Ancak, bu öğe, sertifikanın alınacağı bir sertifika adı ve depolama konumu belirtmenize olanak sağlar.|Daha önce açıklanan sertifika senaryosuna benzer.<br /><br /> Avantaj, sertifika depolama konumunun değişebilir.|  
+|RSA|Bu öğe, istemcisiyle Karşılaştırılacak bir RSA anahtar değeri belirtir. Bu, sertifika seçeneğine benzer, ancak sertifikanın parmak izini kullanmak yerine sertifikanın RSA anahtarı kullanılır.|Bir RSA denetimi, kimlik doğrulamasını, RSA anahtarına bağlı olarak tek bir sertifika ile kısıtlamanıza olanak sağlar. Bu, hizmet masrafına belirli bir RSA anahtarının daha sıkı şekilde doğrulanmasını sağladığından, RSA anahtar değeri değişirse artık mevcut istemcilerle birlikte çalışmaz.|  
+|Kullanıcı asıl adı (UPN). Varsayılan değer Windows olarak `ClientCredentialType` ayarlandığında ve hizmet işlemi sistem hesaplarından biri altında çalışmadığı zaman varsayılandır.|Bu öğe, hizmetin altında çalıştığı UPN 'yi belirtir. [Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılan](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)Kerberos protokolü ve kimlik bölümüne bakın.|Bu, hizmetin belirli bir Windows Kullanıcı hesabı altında çalıştığından emin olmanızı sağlar. Kullanıcı hesabı, geçerli oturum açmış kullanıcı veya belirli bir kullanıcı hesabı altında çalışan hizmet olabilir.<br /><br /> Bu ayar, hizmet Active Directory ortamında bir etki alanı hesabı altında çalışıyorsa Windows Kerberos güvenliğinin avantajlarından yararlanır.|  
+|Hizmet asıl adı (SPN). Varsayılan değer Windows olarak `ClientCredentialType` ayarlandığında ve hizmet işlemi sistem hesaplarından biri (LocalService, LocalSystem veya NetworkService) altında çalışıyorsa varsayılandır.|Bu öğe, hizmetin hesabıyla ilişkili SPN 'YI belirtir. [Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılan](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)Kerberos protokolü ve kimlik bölümüne bakın.|Bu, SPN 'nin ve SPN ile ilişkili belirli Windows hesabının hizmeti belirlemesine de sağlar.<br /><br /> Setspn. exe aracını kullanarak hizmetin Kullanıcı hesabı için bir makine hesabını ilişkilendirebilirsiniz.<br /><br /> Bu ayar, hizmet sistem hesaplarından biri altında veya bununla ilişkili bir SPN adına sahip bir etki alanı hesabı altında çalışıyorsa ve bilgisayar Active Directory ortamındaki bir etki alanının üyesiyse Windows Kerberos güvenliğinin avantajlarından yararlanır.|  
   
-## <a name="specifying-identity-at-the-service"></a>Hizmet kimlik belirtme  
- Genellikle, istemci kimlik bilgisi türü seçiminde kimlik hizmeti metaveri türünü belirler. çünkü bir hizmette kimlik ayarlamak gerekmez. Hizmet kimliği belirtin veya geçersiz kılma hakkında daha fazla bilgi için bkz. [kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
+## <a name="specifying-identity-at-the-service"></a>Hizmette kimlik belirtme  
+ Genellikle, bir hizmetin kimliğini ayarlamanız gerekmez, çünkü bir istemci kimlik bilgisi türü seçimi, hizmet meta verilerinde sunulan kimlik türünü belirler. Hizmet kimliğini geçersiz kılma veya belirtme hakkında daha fazla bilgi için bkz. [kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
-## <a name="using-the-identity-element-in-configuration"></a>Kullanarak \<kimlik > yapılandırma öğesi  
- Daha önce gösterilen bağlamasında istemci kimlik bilgileri türünü değiştirirseniz `Certificate,` oluşturulan WSDL seri hale getirilmiş bir Base64 içeriyorsa aşağıdaki kodda gösterildiği gibi kimlik değeri için X.509 sertifikası. Windows dışındaki tüm istemci kimlik bilgisi türleri için varsayılan değer budur.  
+## <a name="using-the-identity-element-in-configuration"></a>\<Yapılandırmada kimlik > öğesi kullanma  
+ Daha önce gösterilen `Certificate,` bağlamadaki istemci kimlik bilgisi türünü değiştirirseniz oluşturulan wsdl, kimlik değeri için aşağıdaki kodda gösterildiği gibi Base64 serileştirilmiş X. 509.440 sertifikası içerir. Bu, Windows dışındaki tüm istemci kimlik bilgisi türleri için varsayılandır.  
 
- Varsayılan hizmet kimliği değerini değiştirin ya da kullanarak kimlik türünü değiştirme `<identity>` öğesi yapılandırma veya kod kimliği ayarlama. Bir etki alanı adı sistemi (DNS) kimlik değerine sahip aşağıdaki yapılandırma kodunu ayarlar `contoso.com`.  
+ Yapılandırma içindeki `<identity>` öğeyi kullanarak veya koddaki kimliği ayarlayarak, varsayılan hizmet kimliğinin değerini değiştirebilir veya kimliğin türünü değiştirebilirsiniz. Aşağıdaki yapılandırma kodu, bir etki alanı adı sistemi (DNS) kimliğini değeriyle `contoso.com`ayarlar.  
 
-## <a name="setting-identity-programmatically"></a>Kimlik programlı olarak ayarlama  
- WCF formu otomatik olarak belirlediğinden hizmetiniz bir kimlik açıkça belirtmek yok. Ancak, WCF, bir kimlik bir uç nokta belirtmek gerekirse sağlar. Aşağıdaki kod, belirli bir DNS kimliği ile yeni bir hizmet uç noktası ekler.  
+## <a name="setting-identity-programmatically"></a>Kimliği programlı olarak ayarlama  
+ WCF tarafından otomatik olarak belirlediği için hizmetiniz bir kimlik belirtmek zorunda değildir. Ancak, WCF, gerekirse bir uç nokta üzerinde kimlik belirtmenize olanak tanır. Aşağıdaki kod, belirli bir DNS kimliğine sahip yeni bir hizmet uç noktası ekler.  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
-## <a name="specifying-identity-at-the-client"></a>İstemci kimliğini belirtme  
- Tasarım zamanında, bir istemci geliştiricisinin genellikle kullanan [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci yapılandırması oluşturmak için. Oluşturulan yapılandırma dosyası (hedeflenen istemci tarafından kullanılmak üzere), sunucunun kimliğini içerir. Örneğin, aşağıdaki kod önceki örnekte gösterildiği gibi bir DNS kimliğini belirten bir hizmetten oluşturulur. İstemci uç noktası kimlik değeri hizmet eşleşmesini unutmayın. Bu durumda, istemci hizmeti için Windows (Kerberos) kimlik bilgilerini aldığında, değerin olmasını bekler `contoso.com`.  
+## <a name="specifying-identity-at-the-client"></a>Istemcide kimlik belirtme  
+ Tasarım zamanında, istemci geliştiricisi istemci yapılandırması oluşturmak için genellikle [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. Oluşturulan yapılandırma dosyası (istemci tarafından kullanılmak üzere tasarlanmıştır) sunucunun kimliğini içerir. Örneğin, aşağıdaki kod, önceki örnekte gösterildiği gibi bir DNS kimliğini belirten bir hizmetten oluşturulmuştur. İstemcinin uç nokta kimliği değerinin, hizmetin ile eşleştiğini unutmayın. Bu durumda, istemci hizmetin Windows (Kerberos) kimlik bilgilerini aldığında değerin olmasını `contoso.com`bekler.  
 
- Windows, yerine hizmeti bir sertifika istemci kimlik bilgileri türünü belirtir ve sertifikanın DNS özelliği değeri olması beklenir, `contoso.com`. (Veya DNS özelliği ise `null`, sertifikanın konu adı olmalıdır `contoso.com`.)  
+ Windows yerine hizmet, istemci kimlik bilgileri türü olarak bir sertifika belirtiyorsa, sertifikanın DNS özelliğinin değeri `contoso.com`olması beklenir. (Veya DNS özelliği ise `null`, sertifikanın konu adı `contoso.com`olmalıdır.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Kimlik için belirli bir değer kullanma  
- Aşağıdaki istemci yapılandırma dosyası, hizmetin kimliğini nasıl belirli bir değer olması bekleniyorsa gösterir. Aşağıdaki örnekte, istemci iki uç noktaları ile iletişim kurabilir. Birinci, ikinci bir sertifika parmak izi ile bir sertifika RSA anahtarıyla tanımlanır. Diğer bir deyişle, yalnızca bir genel anahtar/özel içeren bir sertifika anahtar çiftini ancak güvenilir bir yetkili tarafından verilmemiş.  
+ Aşağıdaki istemci yapılandırma dosyasında hizmetin kimliğinin belirli bir değer olması beklenildiği gösterilmektedir. Aşağıdaki örnekte, istemci iki uç nokta ile iletişim kurabilir. Birincisi bir sertifika parmak iziyle ve ikincisi bir sertifika RSA anahtarıyla tanımlanır. Diğer bir deyişle, yalnızca ortak anahtar/özel anahtar çifti içeren, ancak güvenilen bir yetkili tarafından verilmemiş bir sertifikadır.  
 
-## <a name="identity-checking-at-run-time"></a>Çalışma zamanında kimlik  
- Tasarım zamanında, bir istemci geliştiricisinin sunucunun kimliği ile meta verilerini belirler. Çalışma zamanında, hizmette uç çağırmadan önce kimlik denetimi gerçekleştirilir.  
+## <a name="identity-checking-at-run-time"></a>Çalışma zamanında kimlik denetimi  
+ Tasarım zamanında, bir istemci geliştiricisi sunucunun meta verilerini kullanarak kimliğini belirler. Çalışma zamanında, kimlik denetimi, hizmette herhangi bir uç nokta çağrılmadan önce gerçekleştirilir.  
   
- Kimlik değeri meta verileri tarafından belirtilen kimlik doğrulaması türü bağlıdır; diğer bir deyişle, hizmet için kullanılan kimlik bilgileri türü.  
+ Kimlik değeri meta veriler tarafından belirtilen kimlik doğrulaması türüne bağlıdır; diğer bir deyişle, hizmet için kullanılan kimlik bilgilerinin türü.  
   
- Kanal iletisi veya aktarım düzeyinde Güvenli Yuva Katmanı (SSL) X.509 sertifikalarıyla için kimlik doğrulamasını kullanarak kimlik doğrulaması için yapılandırılmışsa, aşağıdaki kimlik değerleri geçerlidir:  
+ Kanal, kimlik doğrulaması için X. 509.440 sertifikaları ile ileti veya aktarım düzeyi Güvenli Yuva Katmanı (SSL) kullanarak kimlik doğrulaması yapacak şekilde yapılandırıldıysa, aşağıdaki kimlik değerleri geçerlidir:  
   
-- DNS. WCF sağlar SSL el sıkışması sırasında sağlanan sertifikanın DNS içerdiğini veya `CommonName` (CN) öznitelik istemcisindeki DNS kimliği belirtilen değere eşittir. Sunucu sertifikasının geçerliliğini belirlemek için bu denetimler ayrıca yapıldığını unutmayın. Varsayılan olarak, WCF, sunucu sertifikasının güvenilen kök yetkilisi tarafından verildiğini doğrular.  
+- BKZ. WCF, SSL el sıkışması sırasında sağlanmış sertifikanın, istemcideki DNS kimliğinde belirtilen değere `CommonName` eşit bir DNS veya (CN) özniteliği içerdiğinden emin olmanızı sağlar. Bu denetimlerin, sunucu sertifikasının geçerliliğini belirlemeye ek olarak yapıldığını unutmayın. Varsayılan olarak, WCF, sunucu sertifikasının güvenilen bir kök yetkili tarafından verildiğini doğrular.  
   
-- Sertifika. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen tam sertifika değer sağlar, WCF sağlar.  
+- Sertifika. SSL el sıkışması sırasında, WCF, uzak uç noktanın kimlik içinde belirtilen tam sertifika değerini sağladığından emin olmanızı sağlar.  
   
-- Sertifika başvurusu. Sertifika ile aynıdır.  
+- Sertifika başvurusu. Sertifikayla aynı.  
   
-- RSA. SSL el sıkışması sırasında uzak uç nokta kimliğinde belirtilen RSA anahtarı tam sağlar, WCF sağlar.  
+- RSA. SSL el sıkışması sırasında, WCF, uzak uç noktanın kimlik içinde belirtilen tam RSA anahtarını sağladığından emin olmanızı sağlar.  
   
- Hizmet, ileti veya aktarım düzeyi SSL kimlik doğrulaması için bir Windows kimlik bilgisi ile kullanarak kimliğini doğrular ve kimlik bilgisi belirleyici, aşağıdaki kimlik değerleri geçerlidir:  
+ Hizmet kimlik doğrulaması için bir Windows kimlik bilgisi ile ileti veya aktarım düzeyi SSL kullanarak kimlik doğrulaması gerçekleştiriyorsa ve kimlik bilgisini görüşür, aşağıdaki kimlik değerleri geçerlidir:  
   
-- DNS. DNS adı denetlenebilir böylece anlaşma, sunucunun hizmetin SPN'si geçirir. SPN biçimindedir `host/<dns name>`.  
+- BKZ. Bu anlaşma, DNS adının denetlenebilmesi için hizmetin SPN 'sini geçirir. SPN, formundadır `host/<dns name>`.  
   
-- SPN. SPN döndürülür, örneğin, bir açık hizmeti `host/myservice`.  
+- SPN. Örneğin, `host/myservice`açık bir Service SPN döndürülür.  
   
-- UPN. Hizmet hesabının UPN'si. UPN formundadır `username` @ `domain`. Örneğin, bir kullanıcı hesabı hizmet çalışırken, olabilir `username@contoso.com`.  
+- 'LE. Hizmet hesabının UPN 'si. UPN, formundadır `username`. @ `domain` Örneğin, hizmet bir kullanıcı hesabında çalışırken, bu `username@contoso.com`olabilir.  
   
- Kimliğini programlı olarak belirtme (kullanarak <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği) isteğe bağlıdır. Hiçbir kimlik belirtilmedi ve Windows istemci kimlik bilgisi türüdür, varsayılan bir ana bilgisayar adı ön ekine sahip hizmet uç noktası adresi parçası için ayarlanan değer ile SPN'dir "konak /" değişmez. Hiçbir kimlik belirtilmedi ve istemci kimlik bilgisi türü bir sertifika varsa varsayılan değer `Certificate`. Bu, her iki ileti ve aktarım düzeyi güvenlik için geçerlidir.  
+ Kimliği programlı olarak belirtme ( <xref:System.ServiceModel.EndpointAddress.Identity%2A> özelliği kullanılarak) isteğe bağlıdır. Kimlik belirtilmemişse ve istemci kimlik bilgisi türü Windows ise, varsayılan olarak SPN, "Host/" değişmez değeri ön eki olan hizmet uç noktası adresinin konak adı bölümüne ayarlanmıştır. Kimlik belirtilmezse ve istemci kimlik bilgisi türü bir sertifikadır, varsayılan olarak olur `Certificate`. Bu hem ileti hem de aktarım düzeyi güvenlik için geçerlidir.  
   
 ## <a name="identity-and-custom-bindings"></a>Kimlik ve özel bağlamalar  
- Bir hizmetin kimliğini kullanılan bağlama türüne bağlı olduğundan, uygun bir kimliği özel bağlama oluştururken maruz kalmamasını sağlamak. Güvenli konuşma başlatma bağlaması için kimliği uç noktasında bağlamaya kimlik eşleşmediğinden Örneğin, aşağıdaki kod örneğinde gösterilen kimlik güvenlik türüyle uyumlu değil. DNS kimlik güvenli konuşma bağlama ayarlar sırada <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> UPN veya SPN kimliğini ayarlar.  
+ Bir hizmetin kimliği kullanılan bağlama türüne bağlı olduğundan, özel bağlama oluştururken uygun bir kimliğin sunulduğundan emin olun. Örneğin, aşağıdaki kod örneğinde, sunulan kimlik güvenlik türüyle uyumlu değildir, çünkü güvenli konuşma önyükleme bağlamasının kimliği, uç noktasındaki bağlamanın kimliğiyle eşleşmez. Güvenli konuşma bağlaması DNS kimliğini ayarlar, ancak <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement> UPN veya SPN kimliğini ayarlar.  
   
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- Yığın bağlama hakkında daha fazla bilgi için öğeler doğru özel bağlama için bkz [Creating User-Defined bağlamaları](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Özel bağlama ile oluşturma hakkında daha fazla bilgi için <xref:System.ServiceModel.Channels.SecurityBindingElement>, bkz: [nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Özel bir bağlama için bağlama öğelerinin doğru bir şekilde nasıl yığılabilecek hakkında daha fazla bilgi için bkz. [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). İle <xref:System.ServiceModel.Channels.SecurityBindingElement>özel bir bağlama oluşturma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Belirtilen kimlik doğrulama modu](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)için bir SecurityBindingElement oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için bir SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Nasıl yapılır: Özel bir Istemci Kimliği Doğrulayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Kimlik Bilgisi Türü Seçme](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Nasıl yapılır: Bir sertifikanın parmak izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Nasıl yapılır: Bir sertifikanın parmak Izini alma](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -2,22 +2,22 @@
 title: <windowsAuthentication> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81793b0d58a95166bc23f98d46ce94a5f1e1d018
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769700"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940286"
 ---
-# <a name="windowsauthentication-of-servicecredentials"></a>\<ServiceCredentials >, \<issuedTokenAuthentication >
-Bir Windows hizmeti kimlik bilgisi ayarlarını belirtir.  
+# <a name="windowsauthentication-of-servicecredentials"></a>\<\<ServiceCredentials > > WindowsAuthentication
+Bir Windows hizmeti kimlik bilgisinin ayarlarını belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
-\<ServiceCredentials >  
+\<windowsAuthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,8 +33,8 @@ Bir Windows hizmeti kimlik bilgisi ayarlarını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`includeWindowsGroups`|Sistemin Windows gruplarını güvenlik bağlamına dahil olup olmadığını belirten isteğe bağlı bir Boolean özniteliği. Varsayılan, `true` değeridir.<br /><br /> Bu öznitelik ayarını `true` tam Grup genişletme içinde sonuçları gibi bir performans etkisi vardır. Bu öznitelik ayarlanan `false` gruplarının listesini oluşturmak ihtiyacınız yoksa bir kullanıcıya ait.|  
-|`allowAnonymousLogons`|Anonim, kimliği doğrulanmamış çağıranlara izin verilip verilmeyeceğini belirten isteğe bağlı bir Boolean özniteliği. Varsayılan, `false` değeridir.<br /><br /> Zaman `clientCredentialType` bağlama özniteliği `Windows`, sistem anonim bir çağırıcıya izin vermeyen. Bu, yalnızca etki alanı veya çalışma grubu kimliği doğrulanmış anlamına gelir çağıranlar sisteme erişmek için izin verilir. Bu özniteliği kullanarak bu davranışı geçersiz kılabilirsiniz.<br /><br /> Bu ayarı dikkatli kullanın.|  
+|`includeWindowsGroups`|Sistemin güvenlik bağlamındaki Windows gruplarını içerip içermediğini belirten isteğe bağlı bir Boolean özniteliği. Varsayılan, `true` değeridir.<br /><br /> Bu özniteliğin olarak `true` ayarlanması, tam grup genişlemesiyle sonuçlandığından performans etkisine sahiptir. Bir kullanıcının ait olduğu `false` grupların listesini oluşturmanız gerekmiyorsa, bu özniteliği olarak ayarlayın.|  
+|`allowAnonymousLogons`|Anonim, kimliği doğrulanmamış çağıranlara izin verilip verilmeyeceğini belirten isteğe bağlı bir Boolean özniteliği. Varsayılan, `false` değeridir.<br /><br /> Bir bağlamanın `Windows`özniteliği olarak ayarlandığında, sistem anonim arayanlara izin vermez. `clientCredentialType` Bu, yalnızca etki alanı veya çalışma grubu kimliği doğrulanmış çağıranların sisteme erişimine izin verildiği anlamına gelir. Bu davranışı, bu özniteliği kullanarak geçersiz kılabilirsiniz.<br /><br /> Bu ayarı, çok dikkatli bir şekilde kullanın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,10 +43,10 @@ Bir Windows hizmeti kimlik bilgisi ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows kullanıcıları anonim erişim ayarlayarak izin verilip verilmeyeceğini belirtmek için bu öğeyi kullanırsınız `allowAnonymousLogons` özniteliği. Ayrıca kullanıcıların ait olduğu grubu bilgileri ayarlayarak içinde AuthorizationContext eklenip eklenmeyeceğini belirtebilirsiniz `includeWindowsGroups` özniteliği. Bu ayarlanırsa `true` (varsayılan ayar), hizmet istemcinin ait olduğu Windows grupları belirleyebilirsiniz.  
+ `allowAnonymousLogons` Özniteliğini ayarlayarak anonim Windows kullanıcılarına erişime izin verilip verilmeyeceğini belirtmek için bu öğeyi kullanın. Ayrıca, `includeWindowsGroups` özniteliğini ayarlayarak kullanıcıların AuthorizationContext 'e ait olduğu grup bilgilerinin eklenip eklenmeyeceğini belirtebilirsiniz. (Varsayılan ayar) olarak `true` ayarlandıysa, hizmet istemcinin ait olduğu Windows gruplarını belirleyebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

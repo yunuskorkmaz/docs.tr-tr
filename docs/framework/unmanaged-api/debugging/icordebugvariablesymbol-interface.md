@@ -4,39 +4,39 @@ ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c7cdababd1e4b5fae4f5e48a654f861b708a6e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fb2538894184c19bc107ce52cbef3ac86a97345
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930123"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967976"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol Arabirimi
-Bir değişken için hata ayıklama bilgilerini alır.  
+Bir değişken için hata ayıklama sembol bilgisini alır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetName Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getname-method.md)|Bir değişkenin adını alır.|  
-|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|Bir değişken boyutu bayt cinsinden alır.|  
-|[GetSlotIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|Yerel bir değişken yönetilen yuvası dizinini alır.|  
-|[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|Bir bayt dizisi olarak bir değişkenin değerini alır.|  
-|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|Bir bayt dizisi değeri bir değişkene atar.|  
+|[GetSize Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|Bir değişkenin boyutunu bayt cinsinden alır.|  
+|[GetSlotIndex Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|Yerel bir değişkenin yönetilen yuva dizinini alır.|  
+|[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|Bir değişkenin değerini bir bayt dizisi olarak alır.|  
+|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|Bir bayt dizisinin değerini bir değişkene atar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim yalnızca .NET Native ile kullanılabilir. Bu arabirim .NET Native dışında Icordebug senaryoları için uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
+> Bu arabirim yalnızca .NET Native kullanılabilir. Bu arabirimi .NET Native dışında ICorDebug senaryolarında uygularsanız, ortak dil çalışma zamanı bu arabirimi yoksayar.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

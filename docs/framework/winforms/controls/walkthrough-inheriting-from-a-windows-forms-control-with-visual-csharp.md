@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: df88f9ae0b32ecd3b79686f3271e09b92ad7d4fd
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040187"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931016"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C ile Windows Forms denetiminden devralma\#
 Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilirsiniz. Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz. Bu kılavuzda, adlı `ValueButton`basit bir devralınmış denetim oluşturacaksınız. Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve adlı `ButtonValue`özel bir özelliği kullanıma sunacaktır.
@@ -42,7 +42,7 @@ Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilir
 8. Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.
 
     > [!NOTE]
-    >  Görsel tasarımcı artık kullanılamıyor. <xref:System.Windows.Forms.Button> Denetim kendi boyadığı için tasarımcıda görünümünü değiştiremedik. Görsel temsili, kodda değiştirilmediği sürece (yani, <xref:System.Windows.Forms.Button>) devraldığı sınıftan tamamen aynı olacaktır. Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.
+    > Görsel tasarımcı artık kullanılamıyor. <xref:System.Windows.Forms.Button> Denetim kendi boyadığı için tasarımcıda görünümünü değiştiremedik. Görsel temsili, kodda değiştirilmediği sürece (yani, <xref:System.Windows.Forms.Button>) devraldığı sınıftan tamamen aynı olacaktır. Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Devralınan Denetiecekseniz özellik ekleme
  Devralınan Windows Forms denetimlerinin olası bir kullanımı, standart Windows Forms denetimlerinin görünümü ve hisde aynı olan, ancak özel özellikler sunan denetimlerin oluşturulması. Bu bölümde, denetimi adlı `ButtonValue` bir özellik ekleyeceksiniz.

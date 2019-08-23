@@ -2,21 +2,21 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704212"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925658"
 ---
-# <a name="entries"></a>\<Giriş >
-Bir yönlendirme girişi, ne zaman eşleşen filtre ileti göndermek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içerir.  
+# <a name="entries"></a>\<girdiler >
+Filtre eşleştiğinde iletileri göndermek için yönlendirme filtreleri ve hedef uç noktalar arasında eşlemeler içeren bir yönlendirme girişi.  
   
  \<system.serviceModel>  
 \<Yönlendirme >  
 \<routingTables >  
 \<Tablo >  
-\<Giriş >  
+\<girdiler >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,13 +45,13 @@ Bir yönlendirme girişi, ne zaman eşleşen filtre ileti göndermek için hedef
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<filtreleri >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Bu önceden tanımlanmış bir istemci uç noktası için bir filtre eşler. Bu filtreyle eşleşen iletileri bu hedefe gönderilir.|  
+|[\<Filtreler >](filters-of-routing.md)|Daha önce tanımlanan bir istemci uç noktasına bir filtre eşler. Bu filtreyle eşleşen iletiler, bu hedefe gönderilecek.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yönlendirme >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Bir yönlendirme tablosu içeren bir yapılandırma bölümü.|  
+|[\<Yönlendirme >](routing.md)|Yönlendirme tablosu içeren bir yapılandırma bölümü.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

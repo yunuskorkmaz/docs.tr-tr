@@ -6,44 +6,44 @@ helpviewer_keywords:
 - UI Automation, Scroll Item control pattern
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
-ms.openlocfilehash: 377b383cb6dc583ab5b3ad9479f03eb552c5babe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4883184d75a21efbc08947008baddf31346d7951
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651852"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935752"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI Otomasyon ScrollItem Denetim Düzeni Uygulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IScrollItemProvider>, özellikler, yöntemler ve olaylar hakkında bilgiler dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.  
+ Bu konuda özellikler, Yöntemler ve olaylar hakkında bilgiler <xref:System.Windows.Automation.Provider.IScrollItemProvider>de dahil olmak üzere uygulama yönergeleri ve kuralları tanıtılmaktadır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- <xref:System.Windows.Automation.ScrollItemPattern> Denetim düzeni uygulama kapsayıcılarının tek alt denetimler desteklemek için kullanılan <xref:System.Windows.Automation.Provider.IScrollProvider>. Bu denetim düzeni, bir iletişim kanalı arasındaki bir alt denetimin ve alt denetim görüntülemek için Görünüm penceresi içinde şu anda görünür içeriğe (veya bölge) kapsayıcı değiştirebilirsiniz emin olmak için kendi kapsayıcı görevi görür. Bu denetim düzeni uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Denetim stili, uygulayan <xref:System.Windows.Automation.Provider.IScrollProvider>kapsayıcıların tek tek alt denetimlerini desteklemek için kullanılır. <xref:System.Windows.Automation.ScrollItemPattern> Bu denetim stili, kapsayıcının kendi görünüm içindeki görünür içeriği (veya bölgeyi) alt denetimi görüntüleyecek şekilde değiştirebildiğinden emin olmak için bir alt denetim ve kapsayıcısı arasında bir iletişim kanalı işlevi görür. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
- Kaydırma öğesi denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Kaydırma öğesi denetim modelini uygularken aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- Bir pencere veya Tuval denetimi içinde bulunan öğeleri IScrollItemProvider arabirim uygulamak için gerekli değildir. Alternatif olarak, ancak bunlar için geçerli bir konum açığa çıkarmalıdır <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Bunu kullanmak UI otomasyon istemci uygulaması sağlayacak <xref:System.Windows.Automation.ScrollPattern> denetim alt öğeyi görüntülemek için kapsayıcı üzerindeki deseni yöntemleri.  
+- Bir pencere veya tuval denetiminde bulunan öğelerin ıcrollitemprovider arabirimini uygulaması için gerekli değildir. Ancak alternatif olarak, için <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>geçerli bir konum kullanıma sunmaları gerekir. Bu, bir UI Otomasyonu istemci uygulamasının alt öğeyi göstermek için <xref:System.Windows.Automation.ScrollPattern> kapsayıcıda denetim deseninin yöntemlerini kullanmasına izin verir.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
-## <a name="required-members-for-iscrollitemprovider"></a>Gerekli üyeleri IScrollItemProvider için  
- Aşağıdaki yöntem IScrollProvider arabirim uygulamak için gereklidir.  
+## <a name="required-members-for-iscrollitemprovider"></a>Icrollitemprovider için gerekli Üyeler  
+ IScrollProvider arabirimini uygulamak için aşağıdaki yöntem gereklidir.  
   
-|Gerekli üyeleri|Üye türü|Notlar|  
+|Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Yöntemi|None|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Yöntemi|Yok.|  
   
- Bu denetim düzeni hiçbir ilişkili özellikleri veya olayları vardır.  
+ Bu denetim deseninin ilişkili özellikleri veya olayları yok.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcıları, aşağıdaki özel durumlar gerekir.  
+ Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel Durum Türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|Bir öğe görünüme kaydırılan olamaz varsa:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
+|<xref:System.InvalidOperationException>|Bir öğe görünüme kaydırılayoksa:<br /><br /> -   <xref:System.Windows.Automation.ScrollItemPattern.ScrollIntoView%2A>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

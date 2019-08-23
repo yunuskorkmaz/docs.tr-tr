@@ -6,16 +6,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 361d6d684485e07a958e8272997bb989b8e4fc1b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: dd5f744a67481b03802887ff2baa0571b30e4b5d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965243"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>İstemci Tarafı UI Otomasyon Sağlayıcıyı Uygulama
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  , Ve [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] dahilolmak[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]üzere işletim sistemlerinde birçok farklı çerçeve kullanımda. [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]istemciler için Kullanıcı arabirimi öğeleri hakkında bilgi gösterir. Ancak, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bu çerçevelerde bulunan farklı denetim türlerini ve onlardan bilgi ayıklamak için gereken teknikleri kendi kendine tanıma sahip değildir. Bunun yerine, bu görevi sağlayıcılar adlı nesnelere bırakır. Sağlayıcı, belirli bir denetimdeki bilgileri ayıklar ve bu bilgileri öğesine [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]sunar, böylece istemciye tutarlı bir şekilde sunulur.  
   

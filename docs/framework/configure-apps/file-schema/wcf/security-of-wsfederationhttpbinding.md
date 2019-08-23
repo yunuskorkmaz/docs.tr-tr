@@ -2,18 +2,18 @@
 title: <security> / <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 75e3910473a353c2ef110106c34b4e92c018b51c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 875ce7d548d59f32465da817e9e956217f346f60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670423"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936533"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<Güvenlik >, \<wsFederationHttpBinding >
-Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+# <a name="security-of-wsfederationhttpbinding"></a>\<\<WSFederationHttpBinding > Güvenlik >
+WSFederationHttpBinding > güvenlik ayarlarını [ \<](wsfederationhttpbinding.md)tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<wsFederatedBinding >  
 \<bağlama >  
 \<Güvenlik >  
@@ -85,27 +85,27 @@ Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../d
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer `Message` şeklindedir. Bu öznitelik türünde <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|Mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Varsayılan değer `Message` şeklindedir. Bu öznitelik türü <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>mod özniteliği  
+## <a name="mode-attribute"></a>Mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|SOAP ileti aktarım sırasında güvenli değildir.|  
-|İleti|SOAP ileti güveliği kullanarak bütünlüğü, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması sağlanır. Varsayılan olarak, gövde imzalı ve şifrelenir. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması güvenlik belirteci hizmeti tarafından istemciye verilen belirtecin dayanır|  
-|TransportWithMessageCredential|Bütünlüğü, gizliliği ve sunucu kimlik doğrulaması HTTPS tarafından sağlanır. Hizmeti bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması yoluyla SOAP ileti güvenliği sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirtecin dayanır.|  
+|Yok.|Aktarım sırasında SOAP iletisi güvenli değildir.|  
+|`Message`|Bütünlük, gizlilik, sunucu kimlik doğrulaması ve istemci kimlik doğrulaması, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, gövde şifrelenir ve imzalanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, bir güvenlik belirteci hizmeti tarafından istemciye verilen belirteci temel alır|  
+|TransportWithMessageCredential|Bütünlük, gizlilik ve sunucu kimlik doğrulaması, HTTPS tarafından sağlanır. Hizmetin bir sertifikayla yapılandırılması gerekir. İstemci kimlik doğrulaması, SOAP iletisi güvenliği aracılığıyla sağlanır ve istemciye bir güvenlik belirteci hizmeti tarafından verilen belirteci temel alır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İleti >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|İleti düzeyi güvenlik ayarları tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<ileti >](message-element-of-wsfederationhttpbinding.md)|İleti düzeyinde güvenlik için ayarları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Tüm bağlama yeteneklerini tanımlar [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
+|[\<bağlama >](../../../misc/binding.md)|WSDualHttpBinding > Tüm bağlama yeteneklerini [ \<](wsdualhttpbinding.md)tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -113,10 +113,10 @@ Güvenlik ayarlarını tanımlar [ \<wsFederationHttpBinding >](../../../../../d
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Nasıl yapılır: WSFederationHttpBinding oluşturma](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Kimlik Bilgisi Türü Seçme](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

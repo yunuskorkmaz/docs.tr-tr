@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad2209c6e28c7749bd149902e5b696955ee7f13f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c2ed5529151a7ea18ccaffc2202ad6c69bcbd9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988683"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910224"
 ---
 # <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue Arabirimi
 
-"Tüm değerlere uygulanır Icordebugvalue" öğesinin. Bu arabirim, değer için Alma ve Ayarlama yöntemlerini sağlar.  
+Tüm değerler için geçerli olan "ICorDebugValue" öğesinin bir alt sınıfı. Bu arabirim, değer için Alma ve Ayarlama yöntemlerini sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
 |[GetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|Değeri belirtilen arabelleğe kopyalar.|  
-|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Yeni bir değer belirtilen arabellek kopyalar.|  
+|[SetValue Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|Belirtilen arabellekteki yeni bir değer kopyalar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugGenericValue` erişilemeyen olduğu için alt arabirimidir.  
+ `ICorDebugGenericValue`, Uzaktan erişilemeyen için bir alt arabirimdir.  
   
- Başvuru türleri için başvuru içeriği yerine başvuru değerdir.  
+ Başvuru türleri için, değer başvurunun içeriği yerine başvurudur.  
   
- Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+ Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

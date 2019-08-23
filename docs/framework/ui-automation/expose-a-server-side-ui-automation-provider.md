@@ -9,20 +9,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider, exposing
 - server-side UI Automation provider, exposing
 ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
-ms.openlocfilehash: 61515c4c87638d7e2bde63f0ca9faac58128f2e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8583c82efe341e8ae08ca5ee60bcf1dc8bd40865
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609808"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965170"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Sunucu Tarafı UI Otomasyon Sağlayıcıyı Gösterme
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu içinde barındırılan bir sunucu tarafı UI Otomasyon sağlayıcıyı gösterme gösteren örnek kodu içeren bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> penceresi.  
+ Bu konu, bir <xref:System.Windows.Forms.Control?displayProperty=nameWithType> pencerede barındırılan sunucu tarafı UI Otomasyon sağlayıcısını açığa çıkarmak için örnek kodu içerir.  
   
- İleti WM_GETOBJECT, yakalamak için pencere yordamını gönderilen örnek geçersiz kılmaları [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bir istemci uygulama penceresi hakkında bilgi istediğinde çekirdek hizmet.  
+ Örnek, bir istemci uygulaması pencere hakkında bilgi istediğinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çekirdek hizmet tarafından gönderilen ileti olan tuzak WM_GETOBJECT için pencere yordamını geçersiz kılar.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[UIAFragmentProvider_snip#116](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAFragmentProvider_snip/CSharp/ListFragment.cs#116)]

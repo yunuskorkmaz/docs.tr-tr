@@ -8,29 +8,29 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966622"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965886"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Bir XML Belgesinde XmlNodeChangedEventArgs Kullanarak Olay İşleme
-**XmlNodeChangedEventArgs** kayıtlı olay işleyicileri için geçirilen bağımsız değişkenler kapsülleyen **XmlDocument** olayları işlemek için nesne. Olayları ve ne zaman tetiklenir açıklaması aşağıdaki tabloda verilmiştir.  
+**XmlNodeChangedEventArgs** , olayları Işlemek için **XmlDocument** nesnesinde kayıtlı olan olay işleyicilerine geçirilen bağımsız değişkenleri kapsüller. Olaylar ve tetiklendiklerinde bir açıklama aşağıdaki tabloda verilmiştir.  
   
-|Olay|Tetiklendi|  
+|Olay|Belirtildiği|  
 |-----------|-----------|  
-|<xref:System.Xml.XmlDocument.NodeInserting>|Geçerli belgeye ait bir düğüm hakkında başka bir düğüme eklenecek olduğunda.|  
-|<xref:System.Xml.XmlDocument.NodeInserted>|Zaman içinde başka bir düğüme geçerli belgeye ait bir düğüm eklenmiş.|  
+|<xref:System.Xml.XmlDocument.NodeInserting>|Geçerli belgeye ait bir düğüm başka bir düğüme Eklenme konusunda olduğunda.|  
+|<xref:System.Xml.XmlDocument.NodeInserted>|Geçerli belgeye ait bir düğüm başka bir düğüme eklendiyse.|  
 |<xref:System.Xml.XmlDocument.NodeRemoving>|Bu belgeye ait bir düğüm belgeden kaldırılmak üzere olduğunda.|  
-|<xref:System.Xml.XmlDocument.NodeRemoved>|Ne zaman bu belgeye ait bir düğümü üst öğesinden kaldırıldı.|  
-|<xref:System.Xml.XmlDocument.NodeChanging>|Bir düğümün değerini değiştirilmek üzere olduğunda.|  
-|<xref:System.Xml.XmlDocument.NodeChanged>|Ne zaman bir düğümün değerini değiştirildi.|  
+|<xref:System.Xml.XmlDocument.NodeRemoved>|Bu belgeye ait bir düğüm, üst öğesinden kaldırıldığında.|  
+|<xref:System.Xml.XmlDocument.NodeChanging>|Bir düğümün değeri değiştirilme için olduğunda.|  
+|<xref:System.Xml.XmlDocument.NodeChanged>|Bir düğümün değeri değiştirildiğinde.|  
   
 > [!NOTE]
->  Varsa **XmlDataDocument** bellek kullanımı kullanmak için iyileştirilmiş tam olarak **veri kümesi** depolama **XmlDataDocument** herhangi bir değişiklik olduğunda, yukarıda listelenen olaylar tetikleyebilir değil temel alınan yapılan **veri kümesi**. Bu olaylar gerekiyorsa, bütün geçiş **XmlDocument** tam olmayan en iyi duruma getirilmiş bellek kullanımı yapmak için bir kez.  
+> **XmlDataDocument** bellek kullanımı, **veri kümesi** depolamayı kullanmak için tamamen iyileştirilirse, temel alınan **veri kümesinde**değişiklik yapıldığında **XmlDataDocument** , yukarıda listelenen olayları tetiklemeyebilir. Bu olaylara ihtiyacınız varsa, bellek kullanımını tam olarak iyileştirilmemiş hale getirmek için **XmlDocument** 'ın tamamına bir kez geçiş yapmanız gerekir.  
   
- Aşağıdaki kod örneği, bir olay işleyicisi tanımlama ve bir olay için olay işleyicisi ekleme gösterir.  
+ Aşağıdaki kod örneği bir olay işleyicisinin nasıl tanımlanacağını ve olay işleyicisinin bir olaya nasıl ekleneceğini gösterir.  
   
 ```vb  
 ' Attach the event handler, NodeInsertedHandler, to the NodeInserted  
@@ -73,9 +73,9 @@ void NodeInsertedHandler(Object src, XmlNodeChangedEventArgs args)
 }  
 ```  
   
- Bazı XML belge nesne modeli (DOM) işlemler içinde birden çok olayı harekete sonuçlanabilen bileşik işlemlerdir. Örneğin, **AppendChild** önceki üst öğesinden eklenen düğümünü kaldırmak de olabilir. Bu durumda, gördüğünüz bir **NodeRemoved** önce tetiklenen olayı arkasından bir **NodeInserted** olay. İşlem ayarı ister **sınıfının InnerXml** içinde birden çok olayı neden olabilir.  
+ Bazı XML Belge Nesne Modeli (DOM) işlemleri, birden çok olayın tetikedilmesine neden olan bileşik işlemlerdir. Örneğin, **AppendChild** 'ın önceki üst öğesinden eklenen düğümü kaldırmak da gerekebilir. Bu durumda, önce tetiklenen bir **Noderetaşınmış** olay, ardından **nodeınsertedbir** olay görürsünüz. **InnerXml** ayarı gibi işlemler birden çok olay oluşmasına neden olabilir.  
   
- Aşağıdaki kod örneği, olay işleyicisi oluşturmayı ve işlenmesi gösterir **NodeInserted** olay.  
+ Aşağıdaki kod örneğinde, olay işleyicisinin oluşturulması ve **Nodeınsertedetkinliğin** işlenmesi gösterilmektedir.  
   
 ```vb  
 Imports System  

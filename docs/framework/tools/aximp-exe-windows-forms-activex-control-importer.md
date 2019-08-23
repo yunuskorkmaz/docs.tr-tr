@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915428"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Windows Forms ActiveX Denetim İçeri Aktarıcı)
 ActiveX Denetimi Alma Programı, ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Formları denetimine dönüştürür.  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Microsoft başlangıç başlığı görüntüsünü bastırır.|  
 |`/out:`*dosya adı*|Oluşturulacak derlemenin adını belirtir.|  
 |`/publickey:`*dosya adı*|Elde edilen denetimi dosya *adı*tarafından belirtilen dosyada bulunan ortak anahtarı kullanarak tanımlayıcı bir adla imzalar.|  
-|`/rcw:`*dosya adı*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:`*dosya adı*|Yeni birini üretmek yerine, belirtilen çalışma zamanı çağrılabilir sarmalayıcısını kullanır. Birden çok örnek belirtebilirsiniz. Geçerli dizin, göreli yollar için kullanılır. Daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Başarı iletilerinin görüntülenmesini bastırır.|  
 |`/source`|Windows Formları sarmalayıcısı için C# kaynak kodu üretir.|  
 |`/verbose`|Ayrıntılı modu belirtir; ek ilerleme bilgilerini görüntüler.|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  ActiveX denetimleri için proxy Windows Forms (AX 'in ActiveX 'i belirtir): AX*ProgID*. dll  
   
 > [!NOTE]
->  ActiveX denetiminin bir üyesinin adı .NET Framework'te tanımlanan bir adla eşleşirse, AxHost türetilmiş sınıfını oluşturduğunda, Aximp.exe ada "Ctl" önekini ekler. Örneğin, ActiveX denetiminizin "Layout" adlı bir üyesi varsa, Layout olayı .NET Framework içinde tanımlandığından, AxHost türetilen sınıfında "CtlLayout" olarak yeniden adlandırılır.  
+> ActiveX denetiminin bir üyesinin adı .NET Framework'te tanımlanan bir adla eşleşirse, AxHost türetilmiş sınıfını oluşturduğunda, Aximp.exe ada "Ctl" önekini ekler. Örneğin, ActiveX denetiminizin "Layout" adlı bir üyesi varsa, Layout olayı .NET Framework içinde tanımlandığından, AxHost türetilen sınıfında "CtlLayout" olarak yeniden adlandırılır.  
   
  Bu oluşturulan dosyaları [ıldadsm. exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)gibi araçlarla inceleyebilirsiniz.  
   

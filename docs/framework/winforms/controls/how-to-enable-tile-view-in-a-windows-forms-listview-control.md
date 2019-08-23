@@ -11,28 +11,28 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: bd152d19567806cf1cc7b1b38d9a3c0e47d2a960
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 44d34ddb00005a0fb86b2d06c4c14e2a5b949819
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966686"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Döşeme Görünümünü Etkinleştirme
-Döşeme görünümü özelliği ile <xref:System.Windows.Forms.ListView> denetimi, grafik ve metinsel bilgileri arasında görsel bir denge sağlayabilir. Kutucuk görünümde bir öğe için görüntülenen metin tabanlı bilgiler tanımlanan ayrıntı görünümü için sütun bilgileri ile aynıdır. Kutucuk görünümü gruplandırma veya ekleme işareti özellikleri ile birlikte çalışır <xref:System.Windows.Forms.ListView> denetimi.  
+<xref:System.Windows.Forms.ListView> Denetimin kutucuk görünümü özelliği ile grafik ve metin bilgileri arasında bir görsel denge sağlayabilirsiniz. Kutucuk görünümündeki bir öğe için görünen metin bilgileri, Ayrıntılar görünümü için tanımlanan sütun bilgileri ile aynıdır. Kutucuk görünümü, <xref:System.Windows.Forms.ListView> denetimdeki gruplandırma ya da ekleme işareti özellikleriyle birlikte kullanılır.  
   
- Kutucuk görünümü aşağıdaki görüntüde gösterildiği gibi bir 32 x 32 piksel simgesi ve birkaç satırlık metin kullanır.  
+ Kutucuk görünümü, aşağıdaki görüntülerde gösterildiği gibi bir 32 x 32 piksel simgesi ve birkaç satırlık metin kullanır.  
   
- ![Görünüm ListView denetiminde döşeme](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "döşeme görünümü simge ve metin")  
+ ![ListView denetimindeki kutucuk görünümü](./media/how-to-enable-tile-view-in-a-windows-forms-listview-control/tile-view-in-listview-control.gif "Kutucuk görünümü simgeleri ve metni")  
  
- Kutucuk görünümü etkinleştirmek için <xref:System.Windows.Forms.ListView.View%2A> özelliğini <xref:System.Windows.Forms.View.Tile>. Kutucukların boyutunu ayarlayarak yapabilirsiniz <xref:System.Windows.Forms.ListView.TileSize%2A> özelliği ve metin satırı ayarlayarak kutucuğunda görüntülenen <xref:System.Windows.Forms.ListView.Columns%2A> koleksiyonu.  
+ Kutucuk görünümünü etkinleştirmek için <xref:System.Windows.Forms.ListView.View%2A> özelliğini olarak <xref:System.Windows.Forms.View.Tile>ayarlayın. <xref:System.Windows.Forms.ListView.TileSize%2A> Özelliği ayarlayarak kutucukların boyutunu ve <xref:System.Windows.Forms.ListView.Columns%2A> koleksiyonu ayarlayarak kutucukta görünen metin çizgilerinin sayısını ayarlayabilirsiniz.  
   
 > [!NOTE]
->  Kutucuk görünümü yalnızca üzerinde kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde kutucuk görünümüne ilgili herhangi bir kod bir etkisi yoktur ve <xref:System.Windows.Forms.ListView> denetimi büyük simge görünümünde görüntüler. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
+> Kutucuk görünümü yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi çağırdığında kullanılabilir. Önceki işletim sistemlerinde, kutucuk görünümüyle ilgili tüm kodlar etkisizdir ve <xref:System.Windows.Forms.ListView> denetim büyük simge görünümünde görüntülenir. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType>.  
   
-### <a name="to-set-tile-view-programmatically"></a>Kutucuk görünümü program üzerinden ayarlamak için  
+### <a name="to-set-tile-view-programmatically"></a>Kutucuk görünümünü programlı bir şekilde ayarlamak için  
   
-1. Kullanım <xref:System.Windows.Forms.View> numaralandırması <xref:System.Windows.Forms.ListView> denetimi.  
+1. <xref:System.Windows.Forms.ListView> Denetimin <xref:System.Windows.Forms.View> numaralandırmasını kullanın.  
   
     ```vb  
     ListView1.View = View.Tile  
@@ -43,18 +43,18 @@ Döşeme görünümü özelliği ile <xref:System.Windows.Forms.ListView> deneti
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod tam örneği kutucuk görünümü kutucukları içeren üç satır metin göstermek için değişiklik gösterir. Satır kaydırma önlemek için döşeme boyutunu ayarlandı.  
+ Aşağıdaki kod örneği, üç satırlık metin göstermek için değiştirilen kutucukları içeren kutucuk görünümünü gösterir. Kutucuk boyutu, satır kaydırmayı engelleyecek şekilde ayarlandı.  
   
  [!code-cpp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CPP/listviewtilingexample.cpp#1)]
  [!code-csharp[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/CS/listviewtilingexample.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Tiling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Tiling/VB/listviewtilingexample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System ve System. Windows. Forms derlemelerine başvurular.  
   
-- Bir simge dosyası yürütülebilir dosyayla aynı dizinde book.ico adı.  
+- Yürütülebilir dosya ile aynı dizinde Book. ico adlı bir simge dosyası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

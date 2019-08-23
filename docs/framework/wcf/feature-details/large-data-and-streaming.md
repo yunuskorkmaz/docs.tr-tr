@@ -2,81 +2,81 @@
 title: Büyük Veriler ve Akış Yapma
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 55001904557efa1c3136a4f619348296681986ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b35fa4a6ca694fc9611869c7fcb03debf911542d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911861"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
-Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıdır. XML veri yaygın olarak tanımlanan standart metin biçiminde kodlanmış çünkü [XML 1.0 belirtimi](https://go.microsoft.com/fwlink/?LinkId=94838), bağlı sistemleri geliştiricilere ve mimarlara genellikle açısından gönderilen iletileri kablo ayak izini (veya boyut) hakkında arasında Ağ ve metin tabanlı XML kodlama verimli ikili veri aktarımı için özel zorlukları doğurur.  
+Windows Communication Foundation (WCF), XML tabanlı bir iletişim altyapısıdır. XML verileri yaygın olarak [xml 1,0 belirtiminde](https://go.microsoft.com/fwlink/?LinkId=94838)tanımlanan standart metin biçiminde kodlandığı için, bağlı sistemler geliştiricileri ve mimarları, genellikle ağ üzerinden gönderilen iletilerin Tel kaplama (veya boyutu) ile ilgilidir ve XML 'nin metin tabanlı kodlaması, ikili verilerin etkili bir şekilde aktarılması için özel zorluk doğurur.  
   
-## <a name="basic-considerations"></a>Temel konuları  
- WCF için aşağıdaki bilgileri hakkında bilgiler sağlamak için bu bölümde bazı genel endişelerinizi ve konuları için Kodlamalar, ikili veri vurgular ve, genellikle akışı bağlantılı sistemlerde altyapıları için geçerlidir.  
+## <a name="basic-considerations"></a>Temel konular  
+ WCF için aşağıdaki bilgiler hakkında arka plan bilgileri sağlamak için bu bölümde, genellikle bağlı sistem altyapılarına uygulanan kodlamalar, ikili veriler ve akışa yönelik bazı genel sorunlar ve önemli noktalar vurgulanmıştır.  
   
-### <a name="encoding-data-text-vs-binary"></a>Veri kodlama: Metin vs. İkili  
- Yaygın olarak ifade edilen Geliştirici sorunları önemli ölçüde daha büyük olacak şekilde kodlama sayısal değerleri değerlendirilir XML etiketleri başlangıç ve bitiş etiketleri, yinelenen niteliği nedeniyle İkili biçimler karşılaştırıldığında önemli ölçüde olduğunu markanızın içerir çünkü metin değerleri ifade edilir ve bir metin biçiminde eklemek için özel kodlanmalı çünkü bu ikili verileri verimli bir şekilde ifade.  
+### <a name="encoding-data-text-vs-binary"></a>Kodlama verileri: Metin ile İkili  
+ Yaygın olarak ifade edilen geliştirici sorunları, başlangıç etiketlerinin ve bitiş etiketlerinin yinelenen doğası nedeniyle XML 'nin önemli ölçüde ek yüke neden olduğu konusunda, sayısal değerler kodlamasının büyük ölçüde daha büyük olduğu kabul edilir Bunlar metin değerlerinde ifade edildiğinden ve bu ikili veriler etkin bir şekilde ifade edilemediğinden, metin biçiminde katıştırılması için özel olarak kodlanmalıdır.  
   
- Ortamı genellikle çoğu bu ve benzer ilgiliyse sırada geçerli olduğundan, bir XML Web Hizmetleri ortamda kodlanmış XML metin iletileri ve eski uzak yordam çağrısı (RPC) ikili kodlanmış iletileri gerçek birbirinden çok daha az önemli. ilk göz önünde bulundurarak önerebilir.  
+ Bu ve benzer kaygılardan birçoğu geçerli olsa da, bir XML Web Hizmetleri ortamındaki XML metin kodlamalı iletiler ve eski bir uzak yordam çağrısı (RPC) ortamındaki ikili kodlu iletiler arasındaki gerçek fark, genellikle bu değerden çok daha az önem taşıyor ilk değerlendirme önergelebilir.  
   
- XML-text kodlanmış iletileri saydam ve "insan tarafından okunabilir", ikili ileti genellikle oldukça karşılaştırmaya belirsiz ve araçları kod çözme daha zor. Bu fark Okunaklılık bir ikili iletileri çoğunlukla satır içi meta veri XML metin iletileri gibi olduğu yükü ekler yükünde gerçekleştirmeniz kolayca gözden kaçabilir yol açar. İkili dosya biçimleri için bu özellikle doğrudur kaybetmiş bağlantısından ve dinamik çağırma özellikler sağlamak için hedeflenir.  
+ XML metin kodlamalı iletiler saydam ve "insanlar okunabilir" olsa da, ikili iletiler genellikle büyük bir şekilde karşılaştırılmakta ve araç olmadan çözülmesi zor olur. Okunabilirliği içinde bu fark, tek bir deyişle, ikili iletilerin, genellikle XML metin iletileriyle olduğu gibi ek yük ekleyen satır içi meta verileri de daha fazla görünmesini sağlar. Bu, gevşek bir ve dinamik çağırma özellikleri sağlamaya yönelik ikili biçimler için özellikle doğrudur.  
   
- Ancak, ikili biçimler genellikle gibi açıklayıcı meta veri bilgileri "veri düzeni aşağıdaki veri kayıtları için de bildiren bir başlık" içinde taşır. Yük, ardından bu daha az yük ile ortak meta veri blok bildirim izler. Buna karşılık, kapsayan meta veriler her bir seri hale getirilmiş yükü nesne için art arda dahildir böylece bir öğe veya öznitelik XML her veri öğesini alır. Tek bir seri hale getirilmiş yükü nesnenin boyutu hem de paylaşılan meta veri açıklamasını her ikili biçimi avantajlarından ancak bazı açıklayıcı meta verileri ifade edilmelidir gibi ikili değer ifadelerinden mi metne karşılaştırılırken sonuç olarak, benzer ek daha düşük toplam yükü nedeniyle aktarılan yükü nesnesi.  
+ Ancak, ikili biçimler genellikle bu tür açıklayıcı meta veri bilgilerini, aşağıdaki veri kayıtları için de veri düzeni bildiren bir "üstbilgiye" taşır. Yük daha sonra bu ortak meta veri bloğu bildirimini daha az ek yük ile izler. Buna karşılık XML, bir öğe veya öznitelik içindeki her bir veri öğesini, kapsayan meta verilerin her seri hale getirilmiş yük nesnesine dahil kaldı olmasını sağlayacak şekilde barındırır. Sonuç olarak, tek bir seri hale getirilmiş yük nesnesinin boyutu metin ikili gösterimlerle karşılaştırılırken benzerdir, ancak her ikisi için de bazı tanımlayıcı meta veriler belirtilmelidir, ancak her ek ile paylaşılan meta veri açıklamadan ikili biçim avantajları alt genel yük nedeniyle aktarılan yük nesnesi.  
   
- Yine de sayı gibi veri türleri için belirli bir sabit boyutlu, ikili sayısal gösterimleri kullanılarak dezavantajı olabilir, 128 bit ondalık gibi bir türü yerine düz metin, düz metin olarak gösterimi birkaç bayt daha küçük olabilir. Metin veri seçenekleri, kodlama, bazı ikili biçimler .NET ikili XML biçimi geçerli değil, 16 bit veya 32 bit bile Unicode varsayılan ancak genellikle daha esnek XML metin boyutu avantajından da olabilir.  
+ Yine de, sayılar gibi belirli veri türleri için, düz metin temsili birkaç bayt daha küçük olabileceğinden, düz metin yerine 128 bitlik ondalık tür gibi sabit boyutlu, ikili sayısal gösterimler kullanmanın bir dezavantajı olabilir. Metin verileri, genellikle daha esnek XML metin kodlama seçimlerinden de boyut avantajlarına sahip olabilir, ancak bazı ikili biçimler, .NET Ikili XML biçimi için de olmayan 16 bit veya hatta 32 bit Unicode olarak varsayılan olabilir.  
   
- Sonuç olarak, metin veya ikili arasında karar ikili ileti her zaman XML metin iletileri küçük olduğunu varsayarak olarak oldukça kolay değil.  
+ Sonuç olarak, ikili iletilerin her zaman XML-metin iletilerinden daha küçük olduğu varsayımıyla, metin veya ikili arasında seçim yapma oldukça kolay değildir.  
   
- XML metin iletileri Temizle bir avantajı, standartlara dayalı ve seçenek yelpazesinden birlikte çalışabilirlik seçenekleri ve platform desteği sunan sağlamasıdır. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Kodlamalar" bölümüne bakın.  
+ XML metinlerinden oluşan net bir avantaj, standartlara dayalıdır ve en geniş birlikte çalışabilirlik seçenekleri ve platform desteği sunar. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "kodlamalar" bölümüne bakın.  
   
-### <a name="binary-content"></a>İkili içerik  
- İkili Kodlamalar nerede elde edilen ileti boyutu bakımından metin tabanlı kodlamaları için üstün bir alan olan resim, video, ses klipleri veya herhangi bir biçimde hizmetleri arasında alınıp opak, ikili veri gibi büyük ikili veri öğeleri ve bunların Tüketici. Bu tür verilerin XML metin sığdırmak için yaygın Base64 kodlaması kullanarak bunları kodlanacak yaklaşımdır.  
+### <a name="binary-content"></a>İkili Içerik  
+ İkili kodlamaları, sonuçta elde edilen ileti boyutu açısından metin tabanlı kodlamalar için üst düzey olan bir alan; resimler, videolar, ses klipleri veya hizmetler arasında alışverişi gereken diğer donuk, ikili veriler gibi büyük ikili veri öğeleridir. tüketicilere. Bu veri türlerini XML metnine uydurmak için, yaygın yaklaşım, Base64 kodlaması kullanarak bunları kodlayamalıdır.  
   
- Base64 ile kodlanmış bir dize içinde 6 bitlik kuralı tarafından yaygın olarak eklenen ek biçimlendirme karakterleri (satır başı/satır besleme) sayılmaz 4:3 kodlama yükü oranı, Base64 için sonuçlanır özgün 8 bitlik veri her bir karakteri temsil eder. Birden fazla 33 500 MB veri iletirken % boyutu kazanç önemi XML ve ikili Kodlamalar arasındaki farklar, genellikle senaryoya bağlıdır, ancak genellikle kabul edilebilir değil.  
+ Base64 ile kodlanmış bir dizede, her karakter orijinal 8 bit 4:3 verilerin 6 bitlik kısmını temsil eder. Bu, genellikle kural tarafından eklenen fazladan biçimlendirme karakterlerini (satır başı/satır akışı) saymaz. XML ve ikili kodlamalar arasındaki farklığın önemi genellikle senaryoya bağlı olsa da, 500 MB yük aktarılırken genellikle% 33 ' den büyük bir boyut kazanımı kabul edilemez.  
   
- Bu ek yükü, ileti aktarım en iyi duruma getirme mekanizması (MTOM) kodlama önlemek için standart bir iletideki büyük veri öğeleri harici hale getirerek ve bunları iletinin tüm özel kodlamadan ikili veri taşıyan sağlar. MTOM ile ilgili iletiler ve Basit Posta Aktarım Protokolü (SMTP) e-posta iletilerini ekler veya katıştırılmış içeriği (Resimler ve diğer eklenen içeriği); ile benzer bir biçimde değiştirilir MTOM iletileri multipart/related MIME dizileri gerçek SOAP iletisi olan bir kök bölümü ile paketlenmiştir.  
+ Bu kodlama yüküyle karşılaşmamak için Ileti Iletimi Iyileştirme mekanizması (MTOM) standardı, bir iletide yer alan büyük veri öğelerinin ve bunları özel bir kodlama olmadan iletiyi ikili veri olarak taşıyan bir ileti ile taşımak için izin verir. MTOM ile iletiler, ekler veya katıştırılmış içerik (Resimler ve diğer ekli içerik) ile Basit Posta Aktarım Protokolü (SMTP) e-posta iletilerine benzer şekilde değiştirilir; MTOM iletileri, asıl SOAP iletisi olan kök bölüm olan çok parçalı/ilgili MIME dizileri olarak paketlenir.  
   
- Böylece ilgili MIME bölümü başvuran özel öğesi etiketleri ikili veri içeren bir ileti özgün öğeleri gerçekleşmesi MTOM SOAP iletisi, hazırlanmamış kodlanmış sürümünden değiştirildi. Bunun sonucunda, SOAP iletisi ile gönderilen MIME bölümü işaret ederek ikili içerik başvuruyor, ancak Aksi durumda yalnızca XML metin verileri taşır. Bu model tanınmış bir SMTP modeliyle yakından hizalanır olduğundan geniş kodlama ve son derece birlikte çalışabilen bir seçim getiren birçok platformda MTOM iletileri kodunu çözme için araç desteği.  
+ Bir MTOM SOAP iletisi, karşılık gelen MIME bölümlerine başvuran özel öğe etiketlerinin, ikili verileri içeren iletideki özgün öğelerin yerini alması için, yönetilmeyen sürümden değiştirilir. Sonuç olarak, SOAP iletisi, onunla birlikte gönderilen MIME parçalarını işaret ederek ikili içeriğe başvurur, aksi halde XML metin verilerini taşır. Bu model iyi şekilde belirlenmiş SMTP modeliyle yakından hizalandığından, MTOM iletilerini çok sayıda platformda kodlamak ve kodunu çözmek için çok yönlü bir seçenek sunan geniş bir araç vardır.  
   
- Böylece MTOM kullanmanın avantajları, yalnızca bir ikili veri öğesi boyutu yaklaşık 1 KB aştığında görüldüğünde yine de, Base64 olarak MTOM da MIME için gereken bazı ek yükü ile birlikte gönderilir. Ek yükü nedeniyle, iletileri MTOM kodlu ikili yük olarak bu eşiğin altında kalırsa ikili veriler için Base64 kodlaması kullanan iletileri büyük olabilir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Kodlamalar" bölümüne bakın.  
+ Yine de Base64 ile olduğu gibi, MTOM kullanmanın avantajları yalnızca bir ikili veri öğesinin boyutu yaklaşık 1 KB 'yi aştığında görülür. Ek yük nedeniyle, MTOM kodlu iletiler ikili veriler için Base64 kodlaması kullanan iletilerden daha büyük olabilir, ikili yük ise bu eşiğin altında kalır. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "kodlamalar" bölümüne bakın.  
   
-### <a name="large-data-content"></a>Büyük veri içeriği  
- Kablo Ayak izi CPU'nun, daha önce bahsedilen 500 MB'lık yükü de hizmet ve istemci için en büyük yerel zor doğurur. Varsayılan olarak, WCF iletileri işleyen *arabellekli modu*. Bu, bir iletinin tüm içeriği mevcut bellekte gönderilmeden önce veya alındıktan sonra olduğu anlamına gelir. Çoğu senaryo için iyi bir stratejisi ve dijital imzalar ve güvenilir teslim gibi Mesajlaşma özellikleri için gerekli olmakla birlikte, büyük iletiler bir sistem kaynaklarının tüketebileceği.  
+### <a name="large-data-content"></a>Büyük veri Içeriği  
+ Tel kaplama, daha önce bahsedilen 500 MB yükü de hizmet ve istemci için harika bir yerel zorluk doğurur. Varsayılan olarak, WCF iletileri *arabellekli modda*işler. Bu, bir iletinin tüm içeriğinin gönderilmeden veya alındıktan sonra bellekte bulunduğu anlamına gelir. Bu pek çok senaryo için iyi bir stratejidir ve dijital imzalar ve güvenilir teslim gibi mesajlaşma özellikleri için gerekli olsa da, büyük mesajlar sistemin kaynaklarını tüketebilir.  
   
- Büyük yükleriyle başa çıkmak için strateji akış. Hata iletileri, özellikle XML biçiminde, ifade yaygın olarak düşünülebilir nispeten küçük veri paketleri olacak şekilde, bir ileti birden çok gigabayt boyutunda olması ve bir veri paketi birden çok sürekli veri akışı benzer. Veri akış modunda arabellekli modu yerine aktarıldığında gönderen ileti gövdesi içeriğini bir akış şeklinde alıcı kullandırır ve bu duruma ileti altyapısı sürekli olarak veri gönderenden alıcıya iletir kullanılabilir.  
+ Büyük yükleri ele alma stratejisi akışdır. Özellikle de XML olarak ifade edilen iletiler görece veri paketleri olarak düşünülirken, bir ileti boyutu birden fazla gigabayt olabilir ve bir veri paketinden sürekli bir veri akışına benzer. Veriler, akış modunda, ara belleğe alınmış mod yerine aktarıldığında, gönderen ileti gövdesinin içeriğini bir akış biçiminde kullanılabilir hale getirir ve ileti altyapısı, verileri gönderenin bulunduğu haliyle alıcıya sürekli iletir kullanılabileceğini.  
   
- Aktarımları oluşan büyük veriler içeriklerin ikili veri aktarımları olduğu en yaygın senaryo nesneler:  
+ Bu büyük veri içeriği aktarımlarının oluştuğu en yaygın senaryo, şu şekilde olan ikili veri nesnelerinin aktarımları:  
   
-- Kolayca bir ileti sırasına bölünmesi olamaz.  
+- Bir ileti dizisine kolayca ayrılabilir.  
   
-- Zamanında teslim edilmelidir.  
+- Zamanında teslim edilmesi gerekir.  
   
-- Aktarım başlatıldığında, tamamen kullanılamaz.  
+- , Aktarım başlatıldığında tamamen kullanılamaz.  
   
- Bu kısıtlamaları olmayan veriler için daha büyük bir ileti bir oturuma kapsamında dizileri ileti göndermek genellikle daha iyi. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Veri akışı" bölümüne bakın.  
+ Bu kısıtlamalara sahip olmayan veriler için, bir oturumun kapsamındaki ileti dizilerini bir büyük ileti olarak göndermek genellikle daha iyidir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "veri akışı" bölümüne bakın.  
   
- Büyük miktarlarda veri gönderilirken kurmanız gerekecektir `maxAllowedContentLength` IIS ayarını (daha fazla bilgi için [yapılandırma IIS istek sınırları](https://go.microsoft.com/fwlink/?LinkId=253165)) ve `maxReceivedMessageSize` ayarı bağlama (örneğin [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). `maxAllowedContentLength` 28.6 M özelliği varsayılan olarak ve `maxReceivedMessageSize` özelliği varsayılan olarak 64 KB.  
+ Büyük miktarlarda veri gönderirken IIS ayarını ayarlamanız gerekir (daha fazla bilgi `maxAllowedContentLength` için bkz. [IIS istek sınırlarını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=253165)) ve `maxReceivedMessageSize` bağlama ayarı (örneğin [ System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Özelliğin `maxAllowedContentLength` varsayılan değeri 28,6, olur `maxReceivedMessageSize` ve özellik varsayılan olarak 64 KB olur.  
   
 ## <a name="encodings"></a>Kodlamalar  
- Bir *kodlama* kablo iletileri sunmak nasıl hakkında kurallar kümesi tanımlar. Bir *Kodlayıcı* böyle bir kodlama uygular ve bellek içi kapatmak için Gönderen tarafında, sorumlu <xref:System.ServiceModel.Channels.Message> bayt akışı veya ağ üzerinden gönderilen bayt arabelleği. Alıcı tarafında Kodlayıcı bir bellek içi iletisi Bayt dizisine dönüştürür.  
+ Bir *kodlama* , iletileri tel sunma hakkında bir kural kümesi tanımlar. *Kodlayıcı* böyle bir kodlama uygular ve gönderici tarafında, bir belleği <xref:System.ServiceModel.Channels.Message> bir bayt akışına veya bayt arabelleğine, ağ üzerinden gönderilebilecek bir bayt arabelleğine dönüştürmek için sorumludur. Alıcı tarafında, kodlayıcı bir bayt dizisini bellekteki bir iletiye dönüştürür.  
   
- WCF üç kodlayıcılar içerir ve gerekirse, yazma ve kendi kodlayıcılara takın olanak tanır.  
+ WCF üç kodlayıcı içerir ve gerekirse kendi kodlayıcılarınızı yazmanızı ve eklemenizi sağlar.  
   
- Her standart bağlamaları bağlamaları Net * önekiyle ikili Kodlayıcı yapabildiği kullanın, önceden yapılandırılmış bir kodlayıcı içerir (ekleyerek <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> sınıfı) sırada <xref:System.ServiceModel.BasicHttpBinding> ve <xref:System.ServiceModel.WSHttpBinding> sınıfları kullanın (, metin ileti kodlayıcı <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı) varsayılan olarak.  
+ Standart bağlamalardan her biri, ağ * ön ekine sahip bağlamaların ikili Kodlayıcısı ( <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> sınıfını dahil ederek) <xref:System.ServiceModel.BasicHttpBinding> kullandığı, ve <xref:System.ServiceModel.WSHttpBinding> sınıfları metin iletisi kodlayıcısını ( <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı) varsayılan olarak.  
   
 |Kodlayıcı bağlama öğesi|Açıklama|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Metin iletisi Kodlayıcı, birlikte çalışabilirlik en önemli olduğu tüm HTTP tabanlı bağlantılar için varsayılan kodlayıcı ve tüm özel bağlamalar için uygun seçim işliyor. Bu Kodlayıcı okur ve standart SOAP 1.1/SOAP 1.2 kısa mesaj ile ikili veriler için hiçbir özel işlem yazar. Varsa <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> ileti özelliği <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, SOAP Zarfı sarmalayıcı çıktısı atlanır ve yalnızca ileti gövdesi içeriği seri hale.|  
-|<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM ileti Kodlayıcı ikili veriler için özel işleme uygular ve kesinlikle bir olay iyileştirme yardımcı olduğundan varsayılan herhangi bir standart bağlamalar tarafından kullanılmadığından bir metin Kodlayıcı olur. İletinin nerede MTOM kodlama avantaj verir bir eşiği aştığında ikili veri içeriyorsa, verileri bir MIME bölümü aşağıdaki ileti zarfı içinde te dış. Bu bölümün sonraki kısımlarında etkinleştirme MTOM bakın.|  
-|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|WCF iletişim kuran iki taraf dayalı ne zaman ikili ileti Kodlayıcısı Net * bağlamaları ve uygun seçeneği için varsayılan kodlayıcı açıktır. İkili ileti Kodlayıcısı .NET ikili XML biçimi, Microsoft'a özgü ikili temsili, genellikle bir daha küçük kaplama alanı eşdeğer XML 1.0 gösterimi daha verir ve ikili verileri bir bayt olarak kodlar XML bilgi kümesi (Infosets) kullanır. Akış.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|SMS mesajı Kodlayıcısı, tüm HTTP tabanlı bağlamalar için varsayılan kodlayıcıdır ve birlikte çalışabilirliği en yüksek sorun olduğu tüm özel bağlamalar için uygun seçenektir. Bu kodlayıcı, ikili veriler için özel bir işleme olmadan standart SOAP 1.1/SOAP 1,2 metin iletilerini okur ve yazar. Bir iletinin <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>özelliği olarak ayarlandıysa, SOAP Zarf sarmalayıcı çıktısından çıkarılır ve yalnızca ileti gövdesi içeriği serileştirilir. <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>|  
+|<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM ileti Kodlayıcısı, ikili veriler için özel işleme uygulayan ve yalnızca büyük/küçük harfe göre iyileştirme yardımcı programı olduğu için standart bağlamalarda varsayılan olarak kullanılmayan bir metin kodlayıcıdır. İleti, MTOM kodlamasının bir avantaj sağladığı bir eşiği aşan ikili veriler içeriyorsa, veriler ileti zarfının ardından bir MIME bölümüne externalized. Bu bölümde daha sonra MTOM 'yi etkinleştirme bölümüne bakın.|  
+|<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|İkili ileti Kodlayıcısı, ağ * bağlamaları için varsayılan kodlayıcı ve iletişim kuran her iki taraf da WCF 'yi temel alan uygun seçenektir. İkili ileti Kodlayıcısı, genellikle eşdeğer XML 1,0 gösteriminden daha küçük bir kaplama veren ve ikili verileri bayt olarak kodlayan XML bilgi kümeleri (Infosets) için Microsoft 'a özgü bir ikili gösterim olan .NET Binary XML biçimini kullanır ka.|  
   
- Metin iletisi kodlaması genellikle en iyi birlikte çalışabilirlik, ikili ileti kodlama başka bir iletişim yol için en iyi seçenek olduğu sürece gerektiren herhangi bir iletişim yolu için seçenektir. İkili ileti kodlama, genellikle daha küçük ileti boyutları bir tek ileti ve hatta aşamalı olarak daha küçük ileti metni boyutları iletişim oturum süresi boyunca karşılaştırıldığında verir. Metin kodlaması, aksine ikili kodlama gibi Base64 kullanarak ikili veriler için özel işlem kullanmak zorunda değildir ancak bayt bayt olarak temsil eder.  
+ Kısa mesaj kodlaması genellikle birlikte çalışabilirlik gerektiren herhangi bir iletişim yolu için en iyi seçenektir; ikili ileti kodlaması ise diğer iletişim yolları için en iyi seçenektir. İkili ileti kodlaması genellikle, bir iletişim oturumu süresince tek bir iletinin metniyle ve aşamalı olarak daha küçük ileti boyutlarına kıyasla daha küçük ileti boyutları verir. Metin kodlamasının aksine, ikili kodlamanın ikili veriler için Base64 kullanma gibi özel işleme kullanması gerekmez, ancak baytları bayt olarak temsil eder.  
   
- Çözümünüzü birlikte çalışabilirlik, gerekli değildir ancak yine de HTTP aktarımı kullanmak istiyorsanız, oluşturabileceğiniz <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> kullanan özel bir bağlama içine <xref:System.ServiceModel.Channels.HttpTransportBindingElement> taşıma için sınıf. Birlikte çalışabilirlik hizmetinizdeki istemciler ihtiyacınız varsa, her etkin ilgili istemciler için uygun bir taşıma ve kodlama seçenekleri vardır paralel uç noktalarını kullanıma önerilir.  
+ Çözümünüz birlikte çalışabilirlik gerektirmiyorsa, ancak yine de HTTP taşıması kullanmak istiyorsanız, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> öğesini taşıma için <xref:System.ServiceModel.Channels.HttpTransportBindingElement> sınıfını kullanan özel bir bağlama içinde oluşturabilirsiniz. Hizmetinizdeki bir dizi istemci birlikte çalışabilirlik gerektiriyorsa, her birinin ilgili istemcilerin etkinleştirildiği uygun taşıma ve kodlama seçeneklerine sahip olan paralel uç noktaları kullanıma sunuyorsanız önerilir.  
   
-### <a name="enabling-mtom"></a>MTOM etkinleştirme  
- Ne zaman birlikte çalışabilirlik bir gereksinimdir ve büyük ikili veri gönderilmelidir sonra standart etkinleştirebilirsiniz stratejisi kodlama alternatif olan ileti MTOM kodlama <xref:System.ServiceModel.BasicHttpBinding> veya <xref:System.ServiceModel.WSHttpBinding> ilgili ayarlayarak bağlamaları `MessageEncoding` özelliğini <xref:System.ServiceModel.WSMessageEncoding.Mtom> veya oluşturma <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> içine bir <xref:System.ServiceModel.Channels.CustomBinding>. Aşağıdaki örnek kod, ayıklanan [MTOM kodlama](../../../../docs/framework/wcf/samples/mtom-encoding.md) örnek yapılandırmada MTOM etkinleştirme gösterir.  
+### <a name="enabling-mtom"></a>MTOM etkinleştiriliyor  
+ Birlikte çalışabilirlik bir gereksinimdir ve büyük ikili verilerin gönderilmesi gerekir, bu durumda MTOM ileti kodlaması, standart <xref:System.ServiceModel.BasicHttpBinding> veya <xref:System.ServiceModel.WSHttpBinding> bağlamalarda ilgili `MessageEncoding` ' a <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.CustomBinding>veya ' a oluşturarak özelliği. <xref:System.ServiceModel.WSMessageEncoding.Mtom> [MTOM kodlama](../../../../docs/framework/wcf/samples/mtom-encoding.md) örneğinden ayıklanan aşağıdaki örnek kod, yapılandırmada MTOM 'i nasıl etkinleştireceğinizi gösterir.  
   
 ```xml  
 <system.serviceModel>  
@@ -90,14 +90,14 @@ Windows Communication Foundation (WCF) iletişimleri XML tabanlı bir altyapıd�
 <system.serviceModel>  
 ```  
   
- Daha önce bahsedildiği gibi karar MTOM kodlama gönderdiğiniz veri hacmine bağlıdır. Ayrıca, MTOM etkinleştirme MTOM bağlama düzeyinde etkinleştirilmiş olduğundan, belirli bir noktadaki tüm işlemleri etkiler.  
+ Daha önce belirtildiği gibi, MTOM kodlamasını kullanma kararı, gönderdiğiniz veri hacmine bağlıdır. Ayrıca, MTOM bağlama düzeyinde etkinleştirildiğinden, MTOM 'in etkinleştirilmesi belirli bir uç noktasındaki tüm işlemleri etkiler.  
   
- MTOM Kodlayıcısı her zaman ikili veri olup olmadığını te dış yukarı sona erer bağımsız olarak bir MTOM kodlu MIME/çok-part iletiyi yayar olduğundan, genellikle yalnızca MTOM iletileri ile 1 KB'tan ikili veri değişimi uç noktalar için etkinleştirmeniz gerekir. Ayrıca, MTOM etkin uç noktaları ile kullanılmak üzere tasarlanmış hizmet sözleşmelerini mümkün olduğunda, bu tür veri aktarımı işlemleri belirtmek için kısıtlı olabilir gerekir. İlgili denetim işlevselliği, ayrı bir sözleşme bulunmalıdır. "Yalnızca MTOM" Bu kuralı yalnızca MTOM etkin uç nokta gönderilen iletiler için geçerlidir; MTOM Kodlayıcısı, kod çözme ve gelen MTOM olmayan iletileri de ayrıştırılamıyor.  
+ MTOM Kodlayıcısı, ikili verilerin externalized olup olmamasına bakılmaksızın her zaman MTOM kodlamalı bir MIME/çok parçalı ileti yayar, genellikle yalnızca 1 KB 'den fazla ikili veri içeren iletileri değiş tokuş eden uç noktalar için MTOM 'yi etkinleştirmelisiniz. Ayrıca, MTOM özellikli uç noktalarla kullanılmak üzere tasarlanan hizmet sözleşmeleri, mümkün olduğunda, bu tür veri aktarımı işlemleri belirtilerek sınırlandırılmalıdır. İlgili denetim işlevleri ayrı bir sözleşmede bulunmalıdır. Bu "yalnızca MTOM" kuralı yalnızca MTOM özellikli bir uç nokta aracılığıyla gönderilen iletiler için geçerlidir; MTOM-Encoder, gelen MTOM olmayan iletileri de çözebilir ve ayrıştırılabilir.  
   
- MTOM Kodlayıcısı kullanarak diğer tüm WCF özelliklerle uyumludur. Bu oturum desteği gerekli olduğunda gibi tüm durumlarda, bu kural gözlemlemek mümkün olmayabilir olduğunu unutmayın.  
+ MTOM Encoder 'ın kullanılması diğer tüm WCF özellikleriyle uyumludur. Bu kuralın, oturum desteğinin gerekli olduğu durumlar gibi her durumda gözlemlenebilir olabileceğini unutmayın.  
   
 ### <a name="programming-model"></a>Programlama Modeli  
- Uygulamanızda kullandığınız üç yerleşik kodlayıcılarda bağımsız olarak, bir programlama deneyimi ikili veri aktarımı bakımından aynı olduğu. WCF veri türlerini verileri nasıl işlediğini içinde farktır.  
+ Uygulamanızda kullandığınız üç yerleşik kodlayıcıdan hangisi olursa olsun, programlama deneyimi ikili verileri aktarmaya benzer şekilde aynıdır. Fark, WCF 'nin verileri veri türlerine göre işleme biçimi.  
   
 ```  
 [DataContract]  
@@ -110,32 +110,32 @@ class MyData
 }   
 ```  
   
- MTOM kullanırken, önceki veri anlaşması aşağıdaki kurallara göre sıralanır:  
+ MTOM kullanılırken, önceki veri sözleşmesi aşağıdaki kurallara göre serileştirilir:  
   
-- Varsa `binaryBuffer` değil `null` ve ayrı ayrı MTOM externalization Yükü (MIME üst bilgileri ve benzeri) yaslamak için yeterli veri içeren Base64 karşılaştırıldığında kodlama, veriler te dış ve ikili bir MIME bölümü olarak iletiyi içeren bir denetim. Eşik, verileri Base64 kodlanmış.  
+- `binaryBuffer` Değil`null` ve tek başına, MTOM dışsallaştırılması ek yükünü (MIME üst bilgileri vb.) iki farklı veri içeriyorsa, veri externalized olur ve bir ikili MIME parçası olarak iletiyle birlikte taşınır. Eşik aşılırsa, veriler Base64 olarak kodlanır.  
   
-- Dize (ve ikili olmayan diğer tüm türleri) her zaman boyutundan bağımsız olarak, ileti gövdesi içindeki bir dizeyle gösterilir.  
+- Dize (ve ikili olmayan tüm diğer türler), boyutu ne olursa olsun ileti gövdesinin içinde her zaman bir dize olarak temsil edilir.  
   
- MTOM kodlama aynı önceki örnekte gösterilen şekilde bir açık veri anlaşması kullanıp bir işlemde bir parametre listesini kullanın, iç içe veri sözleşmelerine sahiptir veya bir veri anlaşması nesnesi bir koleksiyon içine aktarmak etkisidir. Bayt dizileri her zaman en iyi duruma getirme için aday olduğunu ve en iyi duruma getirme eşikleri karşılandığında iyileştirilmiştir.  
+ MTOM Encoding üzerindeki etkisi, yukarıdaki örnekte gösterildiği gibi, bir işlemdeki parametre listesini kullanma, iç içe geçmiş veri sözleşmeleri kullanma veya bir koleksiyon içinde veri sözleşme nesnesi aktarma gibi açık bir veri sözleşmesi kullanmanıza bakılmaksızın aynıdır. Bayt dizileri her zaman iyileştirme için adaylardır ve iyileştirme eşikleri karşılanıyorsa en iyi duruma getirilir.  
   
 > [!NOTE]
->  Değil kullanması gerektiğini <xref:System.IO.Stream?displayProperty=nameWithType> türetilmiş türleri veri sözleşmeleri içinde. Aşağıdaki "Veri akışı" bölümünde açıklandığı gibi akış modelini kullanarak Stream veri bildirilmesi.  
+> Veri sözleşmeleri içinde türetilmiş türleri <xref:System.IO.Stream?displayProperty=nameWithType> kullanmıyor olmanız gerekir. Akış verileri aşağıdaki "akış verileri" bölümünde açıklanan akış modeli kullanılarak iletilmelidir.  
   
-## <a name="streaming-data"></a>Akış verileri  
- Büyük miktarda veri aktarmak için akış aktarım WCF arabelleğe alma ve iletilerini tamamen belleğindeki işleme varsayılan davranışına uygun bir alternatif modundadır.  
+## <a name="streaming-data"></a>Veri akışı  
+ Aktarılacak büyük miktarda veriniz olduğunda, WCF 'deki akış aktarım modu, iletilerin arabelleğe alınması ve işlenmesi için varsayılan davranış için uygun bir alternatiftir.  
   
- Daha önce bahsedildiği gibi ileti vakitli şekilde teslim edilmelidir, verileri, kesimlere olamaz veya aktarım başlatıldığında verileri henüz tam olarak kullanılabilir değil (metin veya ikili içerik ile) büyük iletiler için yalnızca akış etkinleştirin.  
+ Daha önce bahsedildiği gibi, verilerin bölünmediği durumlarda yalnızca büyük iletiler (metin veya ikili içerikle) için akışı etkinleştirin. iletinin zamanında teslim edilmesi gerekiyorsa veya aktarım başlatıldığında veriler henüz tam olarak kullanılamıyorsa.  
   
 ### <a name="restrictions"></a>Kısıtlamalar  
- Akış etkinleştirildiğinde WCF özellikleri önemli sayıda kullanamazsınız:  
+ Akış etkinleştirildiğinde önemli sayıda WCF özelliği kullanamazsınız:  
   
-- Tüm ileti içeriği üzerinde karma hesaplaması gerektirdiğinden ileti gövdesi için dijital imzalar gerçekleştirilemiyor. Akış ile içerik ileti üstbilgilerini oluşturulan ve gönderilen ve bu nedenle, bir dijital imza hesaplanamıyor, tam olarak kullanılamaz.  
+- İleti gövdesi için dijital imzalar, tüm ileti içerikleri için bir karma bilgi işlem gerektirdiğinden gerçekleştirilemiyor. Akış ile, ileti üst bilgileri oluşturulduğunda ve gönderildiğinde içerik tam olarak kullanılabilir değildir ve bu nedenle, dijital imza hesaplanamıyor.  
   
-- Şifreleme verileri doğru şekilde reconstructed olduğunu doğrulamak için dijital imzalar bağlıdır.  
+- Şifreleme, verilerin doğru şekilde yeniden yapılandırıldığını doğrulamak için dijital imzalara bağımlıdır.  
   
-- Güvenilir oturum aktarımı bir ileti kaybedildiğinde gönderilen iletiler yeniden teslim istemcide arabellek gerekir ve iletileri hizmette mesajları durumunda ileti sırası korumak için hizmet uygulaması için teslim etmeden önce saklamak gerekir Çıkış dizi.  
+- Bir ileti aktarım sırasında kaybedilirse ve iletiler teslim edildiğinde ileti sırasını korumak üzere hizmet uygulamasına teslim etmeden önce, güvenilir oturumların istemciye yeniden teslim için gönderilen iletileri arabelleğe alması gerekir sıra dışı.  
   
- Bu işlev kısıtlamaları nedeniyle yalnızca aktarım düzeyi güvenlik seçenekleri akış ve güvenilir oturumları kapatamıyor kullanabilirsiniz. Akış yalnızca aşağıdaki sistem tanımlı bağlamalarla kullanılabilir:  
+ Bu işlevsel kısıtlamalar nedeniyle, akış için yalnızca aktarım düzeyi güvenlik seçeneklerini kullanabilirsiniz ve güvenilir oturumları açık duruma getirebilirsiniz. Akış yalnızca aşağıdaki sistem tanımlı bağlamalarla kullanılabilir:  
   
 - <xref:System.ServiceModel.BasicHttpBinding>  
   
@@ -145,28 +145,28 @@ class MyData
   
 - <xref:System.ServiceModel.WebHttpBinding>  
   
- Çünkü, temel alınan taşımalarına <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> devralınan güvenilir teslim ve bağlantı tabanlı oturum desteği HTTP, bu iki bağlamaları yalnızca en düşük düzeyde uygulamada bu kısıtlamaları etkilenir.  
+ Ve ' ın temel aktarımları <xref:System.ServiceModel.NetTcpBinding> , <xref:System.ServiceModel.NetNamedPipeBinding> http 'den farklı olarak, devralınan ve bağlantı tabanlı oturum desteğinin bulunduğu için, bu iki bağlama yalnızca bu kısıtlamalardan en düşük düzeyde etkilenir, pratikte.  
   
- Akış ile Message Queuing (MSMQ) aktarma kullanılamıyor ve bu nedenle kullanılamaz <xref:System.ServiceModel.NetMsmqBinding> veya <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> sınıfı. Diğer tüm aktarımları senaryoları büyük çoğunluğu için herhangi bir pratik ileti boyutu sınır yoktur ancak Message Queuing taşıma arabelleğe alınan veri aktarımları kısıtlanmış ileti boyutu, yalnızca destekler.  
+ Message Queuing (MSMQ) aktarımında akış kullanılamaz ve bu nedenle <xref:System.ServiceModel.NetMsmqBinding> <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> veya sınıfıyla kullanılamaz. Message Queuing taşıması yalnızca kısıtlanmış bir ileti boyutuyla arabellekli veri aktarımlarını destekler, ancak diğer tüm taşımalar senaryoların çoğunluğu için hiçbir pratik ileti boyutu sınırına sahip değildir.  
   
- Akış kullanılamıyor ayrıca eş kanal taşımasını kullanarak bu nedenle olmadığında kullanılabilen <xref:System.ServiceModel.NetPeerTcpBinding>.  
+ Eş kanal taşıması kullanılırken akış de kullanılamaz, bu nedenle ile <xref:System.ServiceModel.NetPeerTcpBinding>kullanılamaz.  
   
 #### <a name="streaming-and-sessions"></a>Akış ve oturumlar  
- Oturum tabanlı bir bağlamayla çağrıları akışı yapılırken beklenmeyen davranışı elde edebilirsiniz. Tüm akış çağrılar kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, oturumları desteklemiyor tek kanalı (veri birimi kanal) yapılır. Birden çok istemci aynı hizmet nesnesi akış çağrıları üzerinden oturum tabanlı bir bağlama yapın ve hizmet nesnenin eşzamanlılık modu ayarlamak tek ve kendi örnek bağlamı modu değeri PerSession olarak ayarlandığında, tüm çağrıları, veri birimi kanal ve bu nedenle yalnızca biri aracılığıyla gitmeniz gerekir Çağrı teker teker işlenir. Bir veya daha fazla istemciler daha sonra zaman aşımına uğrayabilir. Her iki hizmet nesnenin örnek bağlamı modu PerCall ya da birden fazla eşzamanlılık ayarlayarak bu sorunu geçici olarak çalışabilir.  
+ Oturum tabanlı bağlama ile çağrı akışı yaparken beklenmedik bir davranış alabilirsiniz. Kullanılan bağlama oturumları kullanacak şekilde yapılandırılmış olsa bile, tüm akış çağrıları, oturumları desteklemeyen tek bir kanal (Datagram kanalı) aracılığıyla yapılır. Birden çok istemci, oturum tabanlı bir bağlama üzerinden aynı hizmet nesnesine akış çağrıları yapar ve hizmet nesnesinin eşzamanlılık modu tek olarak ayarlanır ve örnek bağlam modu PerSession olarak ayarlanır, tüm çağrılar veri birimi kanalında gelmelidir ve bu nedenle yalnızca bir çağrı bir seferde işlenir. Daha sonra bir veya daha fazla istemci zaman aşımına uğrar. Hizmet nesnesinin örnek bağlam modunu PerCall veya eşzamanlılık olarak birden çok olarak ayarlayarak bu soruna geçici bir çözüm bulabilirsiniz.  
   
 > [!NOTE]
->  Kullanılabilir tek bir "oturum" olduğundan MaxConcurrentSessions bu durumda hiçbir etkisi olmaz.  
+> Yalnızca bir "oturum" var olduğundan, MaxConcurrentSessions bu durumda hiçbir etkiye sahip değildir.  
   
-### <a name="enabling-streaming"></a>Akış'ı etkinleştirme  
- Aşağıdaki yollarla akış etkinleştirebilirsiniz:  
+### <a name="enabling-streaming"></a>Akışı etkinleştirme  
+ Akışı aşağıdaki yollarla etkinleştirebilirsiniz:  
   
-- Gönder ve akış modunda isteklerini kabul etmek okuyup kabul edin ve yanıtların arabelleğe alınan modunda döndürür (<xref:System.ServiceModel.TransferMode.StreamedRequest>).  
+- İstekleri akış modunda gönderin ve kabul edin ve yanıtları, arabelleğe alınmış modda (<xref:System.ServiceModel.TransferMode.StreamedRequest>) kabul edin ve geri döndürün.  
   
-- Gönder ve arabelleğe alınan modda isteklerini kabul etmek okuyup kabul edin ve akış modunda yanıtlarını döndürmek (<xref:System.ServiceModel.TransferMode.StreamedResponse>).  
+- İstekleri arabelleğe alınmış modda gönderin ve kabul edin, yanıtları kabul edin ve akış modunda (<xref:System.ServiceModel.TransferMode.StreamedResponse>) geri döndürün.  
   
-- Gönderin ve her iki yönde de akış modunda isteklerini ve yanıtlarını alın. (<xref:System.ServiceModel.TransferMode.Streamed>).  
+- İstekleri ve yanıtları her iki yönde de akışlı modda gönderin ve alın. (<xref:System.ServiceModel.TransferMode.Streamed>).  
   
- Aktarım modunu ayarlayarak akış devre dışı bırakabilir <xref:System.ServiceModel.TransferMode.Buffered>, tüm bağlamaları varsayılan ayarı olduğu. Aşağıdaki kod, aktarım modunun yapılandırmada ayarlamak gösterilmektedir.  
+ Aktarım modunu, tüm bağlamalarda varsayılan ayar olan olarak <xref:System.ServiceModel.TransferMode.Buffered>ayarlayarak akışı devre dışı bırakabilirsiniz. Aşağıdaki kod, yapılandırma içinde aktarım modunun nasıl ayarlanacağını gösterir.  
   
 ```xml  
 <system.serviceModel>  
@@ -180,15 +180,15 @@ class MyData
 <system.serviceModel>  
 ```  
   
- Kod bağlamanızda başlattığınızda, ilgili ayarlamalısınız `TransferMode` özelliği bağlama (veya özel bir bağlama oluşturuyorsanız aktarım bağlama öğesinin) yukarıda belirtilen değerlerden biri olarak.  
+ Kod içinde Bağlamalarınızın örneğini oluşturduğunuzda, daha önce bahsedilen değerlerden birine bağlamanın `TransferMode` ilgili özelliğini (veya özel bir bağlama oluşturuyorsanız taşıma bağlama öğesini) ayarlamanız gerekir.  
   
- İstekleri ve yanıtları veya her iki tarafındaki bağımsız olarak her iki yönde iletişim kuran tarafların işlevselliğini etkilemeden akışını kapatabilirsiniz. Ancak, aktarılan veri boyutunun akış etkinleştirme iletişim bağlantının her iki bitiş noktasında karardır kadar önemli olduğunu her zaman varsaymanız gerekir. Uç noktalardan biri burada WCF ile uygulanmadı, platformlar arası iletişim için akış kullanma olanağı platformun akış özelliklerine bağlıdır. Nadir başka bir özel durum burada bir istemci veya hizmet çalışma kümesi en aza indirmeniz gerekir ve yalnızca küçük bir arabellek boyutları gücünüze senaryo odaklı bir bellek tüketimi olabilir.  
+ İşlevselliği etkilemeden, istek ve yanıtlar için akışı veya iletişim tarafların her iki tarafında bağımsız olarak her iki yönü de etkinleştirebilirsiniz. Bununla birlikte, aktarılan veri boyutunun her zaman bir iletişim bağlantısının her iki uç noktasında akış kullanılmasına olanak tanıyan önemli olduğunu varsaymalısınız. Uç noktalardan birinin WCF ile uygulanmadığı platformlar arası iletişim için, akış kullanma özelliği platformun akış özelliklerine bağlıdır. Başka bir nadir özel durum, bir istemci veya hizmetin çalışma kümesini en aza indirecek ve yalnızca küçük arabellek boyutlarına uygun olması gereken bellek tüketimi temelli bir senaryo olabilir.  
   
-### <a name="enabling-asynchronous-streaming"></a>Zaman uyumsuz akış'ı etkinleştirme  
- Zaman uyumsuz akış etkinleştirmek için eklemeniz <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> kümesini ve hizmet ana bilgisayarı için uç nokta davranışı, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini `true`. Doğru zaman uyumsuz gönderme tarafında akış özelliği de ekledik. Bu senaryolarda bazıları nedeni Ağ Tıkanıklığı okuma yavaşsa veya hiç okunmuyor birden çok istemciye iletileri burada akış hizmetinin ölçeklenebilirliği artırır. Bu senaryolarda biz artık istemci başına hizmetine tek tek iş parçacıklarını engellemez. Bu, hizmet birden çok daha fazla istemci böylece hizmetinin ölçeklenebilirliği artırma işleminin olmasını sağlar.  
+### <a name="enabling-asynchronous-streaming"></a>Zaman uyumsuz akışı etkinleştirme  
+ Zaman uyumsuz akışı etkinleştirmek için, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç nokta davranışını hizmet konağına ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini olarak `true`ayarlayın. Ayrıca gönderme tarafına doğru zaman uyumsuz akış özelliği ekledik. Bu, hizmetin, büyük olasılıkla ağ tıkanıklığı nedeniyle veya hiç okunmayan çok sayıda istemciye ileti akışı yaptığı senaryolarda hizmetin ölçeklenebilirliğini geliştirir. Bu senaryolarda, artık istemci başına hizmette tek tek iş parçacıklarını engelliyoruz. Bu, hizmetin daha fazla istemciyi işleyebilmesini sağlar ve bu sayede hizmetin ölçeklenebilirliğini geliştirir.  
   
-### <a name="programming-model-for-streamed-transfers"></a>Akış aktarımları programlama modeli  
- Akış için programlama modeli oldukça basittir. Akış veri almak için tek bir sahip bir işlem anlaşması belirtin <xref:System.IO.Stream> giriş parametresi türü belirtilmiş. Akış veri döndürmek için dönüş bir <xref:System.IO.Stream> başvuru.  
+### <a name="programming-model-for-streamed-transfers"></a>Akışlı aktarımlar için programlama modeli  
+ Akışa yönelik programlama modeli basittir. Akış verileri almak için, tek <xref:System.IO.Stream> bir türü belirtilmiş giriş parametresine sahip olan bir işlem sözleşmesi belirtin. Akan verileri döndürmek için bir <xref:System.IO.Stream> başvuru döndürün.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -203,11 +203,11 @@ public interface IStreamedService
 }  
 ```  
   
- İşlemi `Echo` önceki örnekte alır ve bir akışı döndürür ve bir bağlamayla üzerinde kullanılmalıdır <xref:System.ServiceModel.TransferMode.Streamed>. İşlem için `RequestInfo`, <xref:System.ServiceModel.TransferMode.StreamedResponse> yalnızca döndürdüğü için en uygun olan bir <xref:System.IO.Stream>. Tek yönlü işlem için en uygun <xref:System.ServiceModel.TransferMode.StreamedRequest>.  
+ Önceki örnekteki `Echo` işlem bir akış alır ve döndürür ve bu nedenle, ile <xref:System.ServiceModel.TransferMode.Streamed>bağlamada kullanılmalıdır. <xref:System.IO.Stream>İşlem `RequestInfo` için,yalnızcabirdöndüreniçineniyiseçenektir.<xref:System.ServiceModel.TransferMode.StreamedResponse> Tek yönlü işlem için <xref:System.ServiceModel.TransferMode.StreamedRequest>en uygun seçenektir.  
   
- Unutmayın, ikinci parametresinin aşağıdaki ekleme `Echo` veya `ProvideInfo` işlemleri için arabelleğe alınan bir strateji geri dönmek ve akışı çalışma zamanı serileştirme gösterimini kullanmak hizmet modeli neden olur. Yalnızca tek bir giriş akışı parametre işlemleriyle akış uçtan uca istekle uyumlu değildir.  
+ Aşağıdaki `Echo` veya`ProvideInfo` işlemlerine ikinci bir parametre eklemek, hizmet modelinin arabelleğe alınmış bir stratejiye geri dönmesini ve akışın çalışma zamanı serileştirme gösterimini kullanmasını sağlar. Yalnızca tek bir giriş akışı parametresine sahip işlemler uçtan uca istek akışı ile uyumludur.  
   
- Bu kural için ileti sözleşmeleri benzer şekilde uygular. Aşağıdaki ileti anlaşması gösterildiği gibi bir akışı, ileti anlaşması yalnızca tek bir gövde üyesi olabilir. Ek bilgi stream ile iletişim kurmak istiyorsanız, bu bilgileri bir taşınan ileti üst bilgilerinde olması gerekir. İleti gövdesi, içerik akışı için özel olarak ayrılmıştır.  
+ Benzer şekilde, bu kural ileti sözleşmeleri için geçerlidir. Aşağıdaki ileti sözleşmesinde gösterildiği gibi, ileti sözleşmeniz için akış olan tek bir gövde üyesine sahip olabilirsiniz. Akışa ek bilgi iletmek istiyorsanız, bu bilgilerin bir taşınan ileti üstbilgileri olması gerekir. İleti gövdesi, akış içeriği için özel olarak ayrılmıştır.  
   
 ```  
 [MessageContract]  
@@ -220,23 +220,23 @@ public class UploadStreamMessage
 }   
 ```  
   
- Akış dosya sonu (EOF) ulaştığında akış aktarımları uç ve ileti kapatılır. İleti gönderilirken (bir değer döndüren veya bir işlemi çağırma) geçirebilirsiniz bir <xref:System.IO.FileStream> ve akış tamamen okunan ve EOF sınırına kadar WCF altyapısı tüm veriler daha sonra bu akıştan çeker. Akış veri kaynağı için aktarmak için hiçbir gibi önceden oluşturulmuş <xref:System.IO.Stream> türetilmiş sınıf mevcut, bu tür bir sınıf oluşturmak, akış kaynağınızı o sınıfın kaplama ve, bağımsız değişken ya da dönüş değeri kullanın.  
+ Akış, dosyanın sonuna ulaştığında (EOF) ileti kapatılır. İleti gönderilirken (bir değer döndüren veya bir işlemi çağırma) geçirebilirsiniz bir <xref:System.IO.FileStream> ve akış tamamen okunan ve EOF sınırına kadar WCF altyapısı tüm veriler daha sonra bu akıştan çeker. Önceden oluşturulmuş <xref:System.IO.Stream> türetilmiş bir sınıf mevcut olmayan kaynağa yönelik akışlı verileri aktarmak için, böyle bir sınıf oluşturun, akış kaynağınız üzerinde bu sınıfı bir üst üste koyun ve bunu bağımsız değişken veya dönüş değeri olarak kullanın.  
   
- Bir ileti alındığında, WCF bir akış Base64 ile kodlanmış ileti gövdesi içeriğini (veya MTOM kullanıyorsanız ilgili MIME bölümü) oluşturur ve içeriği okurken akışın EOF ulaşır.  
+ Bir ileti alınırken WCF, Base64 kodlamalı ileti gövdesi içeriği (veya MTOM kullanılıyorsa ilgili MIME bölümü) üzerinden bir akış oluşturur ve içerik okunarak akış EOF 'a ulaşırsa.  
   
- Aktarım düzeyi akış aynı zamanda tüm diğer ileti anlaşması türü (parametre listeleri, veri sözleşme bağımsız değişkenleri ve açık bir ileti anlaşması) çalışır, ancak serileştirme ve seri durumundan çıkarma Bu tür iletileri yazdığınız için seri hale getirici tarafından arabelleğe almayı gerektirir , böyle bir sözleşme çeşitleri kullanılması önerilebilir değildir.  
+ Aktarım düzeyi akış, diğer herhangi bir ileti sözleşme türü (parametre listeleri, veri sözleşmesi bağımsız değişkenleri ve açık ileti sözleşmesi) ile de birlikte çalışarak, ancak bu tür iletilerin serileştirilmesi ve seri hale getiricisi tarafından arabelleğe alınması gerekir Bu tür sözleşme varyantları kullanılması önerilmez.  
   
 ### <a name="special-security-considerations-for-large-data"></a>Büyük veriler için özel güvenlik konuları  
- Tüm bağlamalar, hizmet reddi saldırılarını önlemek için gelen iletiler boyutunu sınırlamak sağlar. <xref:System.ServiceModel.BasicHttpBinding>, Örneğin, bir [System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) gelen iletilerin boyutu için sınır ve bu nedenle de en çok erişilen bellek miktarını sınırların özelliği iletiyi işlerken. Bu birimi, varsayılan değeri 65.536 bayt bayt cinsinden ayarlanır.  
+ Tüm bağlamalar, hizmet reddi saldırılarını önlemeye yönelik gelen ileti boyutunu sınırlandırmaya olanak tanır. Örneğin,, gelen iletinin boyutunu izleyen bir [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) özelliği sunar ve bu nedenle, işlem sırasında erişilen maksimum bellek miktarını da sınırlar <xref:System.ServiceModel.BasicHttpBinding> İleti. Bu birim, varsayılan değer olan 65.536 baytlık bir bayt olarak ayarlanır.  
   
- Büyük verileri akış senaryosuna özgü bir güvenlik tehdidi alıcı akışını beklerken arabelleğe alınan verilerin eskimesine yol tarafından hizmet reddine neden. Örneğin, WCF her zaman bir iletinin SOAP üstbilgileri arabelleğe alır ve bu nedenle bir saldırganın arabelleğe alınan verileri zorlamak için tamamen üst bilgilerini içeren büyük bir kötü amaçlı iletisi oluşturabilir. Akış etkinleştirildiğinde `MaxReceivedMessageSize` alıcı asla bellekte aynı anda arabelleğe alınan iletinin tamamı beklediği için son derece büyük bir değere ayarlanabilir. WCF ileti arabellek zorlanır bellek taşması ortaya çıkar.  
+ Büyük veri akışı senaryosuna özgü bir güvenlik tehdidi, alıcı akışının akışını beklediği zaman verilerin arabelleğe yazılmasına neden olarak bir hizmet reddi sağlar. Örneğin, WCF her zaman bir iletinin SOAP üstbilgilerini arabelleğe alır ve bu nedenle bir saldırgan, verilerin arabelleğe alınmasını zorlamak için tamamen üst bilgilerden oluşan büyük bir kötü amaçlı ileti oluşturabilir. Akış etkinleştirildiğinde `MaxReceivedMessageSize` , alıcı tüm iletiyi bellekte aynı anda arabelleğe almak zorunda olmadığından, son derece büyük bir değere ayarlanabilir. WCF, iletiyi arabelleğe almak için zorlanırsa, bir bellek taşması oluşur.  
   
- Bu nedenle, en büyük gelen ileti boyutu sınırlama, bu durumda yeterli değildir. `MaxBufferSize` Özelliği, bellek, WCF arabellekler sınırlamak için gereklidir. Bu güvenli bir değere ayarlayın (veya varsayılan değerinde tutmak) önemli olduğunu akış olduğunda. Örneğin, hizmetiniz alması gerekir varsayalım. en fazla 4 GB boyutundaki dosyaları ve bunları yerel diskte depolar. Ayrıca, bellek, yalnızca 64 KB veri teker teker arabellek şekilde sınırlıdır varsayalım. Ayarlarsınız sonra `MaxReceivedMessageSize` 4 GB ve `MaxBufferSize` 64 KB. Ayrıca, hizmet uygulamanızda, yalnızca 64 KB'lık parçalar halinde gelen akış okuma ve önceki kaldırıldı önce İleri öbek okunmaz emin olmalısınız diske yazılan ve bellek atıldı.  
+ Bu nedenle, en büyük gelen ileti boyutunu kısıtlamak bu durumda yeterli değildir. WCF arabelleklerinin belleğini kısıtlamak için özelliğigereklidir.`MaxBufferSize` Akış sırasında bunu güvenli bir değere ayarlamanız (veya varsayılan değerde tutmanız) önemlidir. Örneğin, hizmetinizin Boyutu 4 GB 'a kadar dosyaları alması ve bunları yerel diskte depolaması gerektiğini varsayalım. Ayrıca, aynı anda yalnızca 64 KB 'lık verileri arabelleğe almanız için belleğinizin kısıtlı olduğunu varsayalım. Ardından, `MaxReceivedMessageSize` 4 GB ve `MaxBufferSize` 64 KB olarak ayarlanır. Ayrıca, hizmet uygulamanızda, 64 KB 'lık öbeklerdeki gelen akıştan okuduğunuzdan ve önceki bir disk diske yazılmadan ve bellekten atılmadan önce bir sonraki öbeği okuduğunuzdan emin olmalısınız.  
   
- Bu aynı zamanda WCF tarafından yapılan arabelleğe alma Bu kota yalnızca sınırlar anlamak önemlidir ve tüm kendi hizmet veya istemci uygulamasında yaptığınız arabelleğe karşı koruyamaz. Ek güvenlik konuları hakkında daha fazla bilgi için bkz: [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+ Bu kotanın, yalnızca WCF tarafından yapılan arabelleğe alma işleminin sınırlandırdığından ve kendi hizmette veya istemci uygulamanızda yaptığınız herhangi bir arabelleğe karşı sizi koruyamadığı anlaşılması de önemlidir. Ek güvenlik konuları hakkında daha fazla bilgi için bkz. [veriler Için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
 > [!NOTE]
->  Arabelleğe alınan ya da akış aktarımları karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden veya proxy sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Hizmet arabirimi açıklamasında aktarım modunu ayarlama yansıtılmaz. Bir hizmeti bir WCF istemcisi oluşturduktan sonra akış aktarımları ile modu ayarlamak için kullanılması hedeflenen hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama olarak yayılır.  
+> Ara belleğe alınmış veya akış aktarımları kullanma kararı, uç noktanın yerel bir karardır. HTTP aktarımları için, aktarım modu bir bağlantı veya proxy sunucuları ile diğer aracılar arasında yayılmaz. Aktarım modunun ayarlanması, hizmet arabiriminin açıklamasına yansıtılmaz. Bir hizmet için WCF istemcisi oluşturduktan sonra, modu ayarlamak için akışlı aktarımlarla kullanılması amaçlanan hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımları için, aktarım modu bir ilke onaylama işlemi olarak dağıtılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,24 +2,24 @@
 title: <add> / <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
-ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 939718e8dacca2698b6f71a3bdc1262a5dc3ee20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704706"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926674"
 ---
-# <a name="add-of-knowncertificates"></a>\<Ekle >, \<knownCertificates >
-Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.  
+# <a name="add-of-knowncertificates"></a>\<\<KnownCertificates > ekleyin >
+Bilinen sertifika koleksiyonuna bir X. 509.440 sertifikası ekler.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
-\<ServiceCredentials >  
+\<IssuedTokenAuthentication >  
 \<knownCertificates >  
-\<Ekle >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,34 +39,34 @@ Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|findValue|dize. Aranacak değer.|  
-|storeLocation|Sabit listesi. İki birini aranacak konumların depolayın.|  
-|storeName|Sabit listesi. Aranacak bir sistemin depolar.|  
-|X509FindType|Sabit listesi. Aranacak sertifika alanlardan biri.|  
+|findValue|Dizisinde. Aranacak değer.|  
+|storeLocation|Listelenen. Arama yapılacak iki depolama konumundan biri.|  
+|storeName|Listelenen. Arama yapmak için sistem mağazalarından biri.|  
+|x509FindType|Listelenen. Arama yapılacak sertifika alanlarından biri.|  
   
 ## <a name="findvalue-attribute"></a>findValue özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Dize|Değer (X509FindType özniteliği tarafından belirtilen) alan bağlıdır Aranan. Örneğin, bir parmak izi için arama değeri bir dize onaltılık bir sayı olmalıdır.|  
+|Dize|Değer, aranmakta olan alana bağlıdır (X509FindType özniteliğiyle belirtilir). Örneğin, bir parmak izi arıyorsanız, değerin onaltılık sayı dizesi olması gerekir.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Sabit Listesi|Değerler şunlardır: Findbyparmak izi, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, Findbytımenotyetvalid, FindBySerialNumber, Findbytimedoldu, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|LocalMachine ya da CurrentUser.|  
+|Sabit Listesi|CurrentUser veya LocalMachine.|  
   
 ## <a name="storename-attribute"></a>storeName özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: Adres Defteri, AuthRoot, CertificateAuthority, My izni, kök, TrustedPeople ve TrustedPublisher.|  
+|Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -75,12 +75,12 @@ Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)|Doğrulama güvenlik belirteçleri için bir güvenlik belirteci hizmeti (STS) tarafından sağlanan X.509 Sertifika koleksiyonunu temsil eder.|  
+|[\<knownCertificates >](knowncertificates.md)|Güvenlik belirteçleri doğrulaması için bir güvenlik belirteci hizmeti (STS) tarafından sunulan X. 509.440 sertifikalarının bir koleksiyonunu temsil eder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Verilen belirteç senaryo üç aşamadan oluşur. Bir istemci bir hizmeti erişmeye ilk aşamada, başvurulan bir *güvenli belirteç hizmeti*. Güvenli belirteç hizmeti daha sonra istemci kimliğini doğrular ve bundan sonra istemci genellikle bir güvenlik onaylama işaretleme dili (SAML) belirteci bir belirteç verir. İstemci, ardından belirteci ile hizmetine döndürür. Belirteç için belirteç ve bu nedenle istemci kimliğini doğrulamak hizmet veren bir veri hizmeti inceler. Belirteç kimlik doğrulaması için sertifika hizmete güvenli belirteç hizmeti kullandığı olarak bilinmesi gerekir.  
+ Verilen belirteç senaryosunda üç aşama vardır. İlk aşamada, bir hizmete erişmeye çalışan bir istemciye *güvenli bir belirteç hizmeti*denir. Güvenli belirteç hizmeti daha sonra istemcinin kimliğini doğrular ve ardından istemciye, genellikle bir güvenlik onaylama işlemi Işaretleme dili (SAML) belirteci olarak bir belirteç verir. İstemci daha sonra belirtece sahip hizmete geri döner. Hizmet, hizmetin, belirtecin kimliğini doğrulamasına ve dolayısıyla istemcisinde istemciye izin veren verilerin belirtecini inceler. Belirtecin kimliğini doğrulamak için, güvenli belirteç hizmetinin kullandığı sertifika hizmet tarafından bilinmelidir.  
   
- [ \<ServiceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md) depo gibi herhangi bir güvenli belirteç hizmeti sertifika için bir öğedir. Sertifikaları eklemek için [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md). INSERT bir [ \<Ekle > öğesi \<knownCertificates > öğesi](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md) aşağıdaki örnekte gösterildiği gibi her sertifika için.  
+ IssuedTokenAuthentication > öğesi, bu tür güvenli belirteç hizmeti sertifikalarının deposıdır. [ \<](issuedtokenauthentication-of-servicecredentials.md) Sertifika eklemek için, [ \<KnownCertificates >](knowncertificates.md)kullanın. Aşağıdaki örnekte gösterildiği gibi her sertifika için bir [ \<Add > element \<KnownCertificates > öğesi](add-of-knowncertificates.md) ekleyin.  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -93,12 +93,12 @@ Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.
 </issuedTokenAuthentication>
 ```  
   
- Varsayılan olarak, sertifikaları güvenli bir belirteci Hizmeti'nden alınmalıdır. Bu "sertifikalar, istemciler yalnızca yasal olun bilinen" bir hizmete erişebilir.  
+ Varsayılan olarak, sertifikaların güvenli bir belirteç hizmetinden alınması gerekir. Bu "bilinen" sertifikalar yalnızca meşru istemcilerin bir hizmete erişebilmesini güvence altına alabilir.  
   
- Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi yanı sıra, bir Federasyon Hizmeti tarafından doğrulanması bir istemci için gereken koşulları gözden geçirmek için bkz: [nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md). Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Bir istemcinin Federasyon Hizmeti tarafından doğrulanması ve bu yapılandırma öğesini kullanma hakkında daha fazla bilgi için gereken koşulları gözden geçirmek için bkz [. nasıl yapılır: Federasyon Hizmeti](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)kimlik bilgilerini yapılandırın. Federasyon senaryoları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, herhangi bir STS sertifika deposu için sertifika ekler.  
+ Aşağıdaki örnek, herhangi bir STS sertifikası için depoya sertifika ekler.  
   
 ```xml  
 <serviceBehaviors>
@@ -126,8 +126,8 @@ Bilinen sertifika koleksiyonuna bir X.509 sertifikası ekler.
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection>
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
-- [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [\<knownCertificates >](knowncertificates.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

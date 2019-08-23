@@ -2,44 +2,44 @@
 title: Bağlam Değişimi Protokolü
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19780cccc74f8c3615dc844e47be7613ca5f8bc1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911201"
 ---
 # <a name="context-exchange-protocol"></a>Bağlam Değişimi Protokolü
-Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 sürümünde tanıtılan bağlam değişimi Protokolü açıklanmaktadır. Bu protokol, istemci bir hizmeti tarafından sağlanan bir bağlam kabul edin ve bu hizmet aynı istemci kanal örneği gönderilen tüm istekler geçerli kanala sağlar. Bağlam değişimi Protokolü uygulanmasının sunucu ve istemci arasında bağlamı yaymak için aşağıdaki iki mekanizma birini kullanabilirsiniz: HTTP tanımlama bilgileri veya bir SOAP üst bilgisi.  
+Bu bölümde, sürüm 3,5 ' de Windows Communication Foundation (WCF) sürümü .NET Framework tanıtılan bağlam Değişim Protokolü açıklanmaktadır. Bu protokol, istemci kanalının bir hizmet tarafından sağlanan bağlamı kabul etmesine ve bu hizmetin aynı istemci kanalı örneği üzerinden gönderilen sonraki tüm isteklere uygulanmasına olanak tanır. Bağlam değişimi Protokolü uygulaması, sunucu ile istemci arasında bağlamı yaymak için aşağıdaki iki mekanizmadan birini kullanabilir: HTTP tanımlama bilgileri veya bir SOAP üst bilgisi.  
   
- Bağlam değişimi protokolü, bir özel kanal katmana uygulanır. Kanal bağlamı uygulama katmanını kullanarak gelen ve giden iletişim kuran bir <xref:System.ServiceModel.Channels.ContextMessageProperty> özelliği. Uç noktalar arasında iletim için bağlam değerini kanal katmanında SOAP üst bilgi olarak seri hale getirilmiş, veya ya da bir HTTP isteği ve yanıtı temsil eden ileti özelliklerinden dönüştürülür. İkinci durumda, kanal katmanlarda birini HTTP istek ve yanıt iletisi özellikleri HTTP tanımlama bilgileri, gelen ve giden sırasıyla dönüştürdüğü beklenmektedir. Bağlam değişimi için kullanılan mekanizma seçimi yapılır kullanarak <xref:System.ServiceModel.Channels.ContextExchangeMechanism> özellikte <xref:System.ServiceModel.Channels.ContextBindingElement>. Geçerli değerler `HttpCookie` veya `SoapHeader`.  
+ Bağlam değişimi Protokolü özel bir kanal katmanında uygulanır. Kanal, <xref:System.ServiceModel.Channels.ContextMessageProperty> özelliği kullanarak uygulama katmanından ve öğesinden bağlamı iletişim kurar. Uç noktalar arasındaki iletim için bağlam değeri, kanal katmanında bir SOAP üst bilgisi olarak serileştirilir veya bir HTTP isteğini ve yanıtını temsil eden ileti özelliklerinden veya bu özelliklerden dönüştürülür. İkinci durumda, temel alınan kanal katmanlarından birinin HTTP istek ve yanıt iletisi özelliklerini sırasıyla HTTP tanımlama bilgilerine dönüştürdüğü beklenmektedir. Bağlamını değiştirmek için kullanılan mekanizmanın seçimi, <xref:System.ServiceModel.Channels.ContextExchangeMechanism> <xref:System.ServiceModel.Channels.ContextBindingElement>üzerindeki özelliği kullanılarak yapılır. Geçerli değerler veya `HttpCookie` `SoapHeader`' dir.  
   
- İstemcide, bir kanal örneği ayarlara göre kanal özelliği iki modda çalışabilir <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>.  
+ İstemcide, kanalın bir örneği, kanal özelliğindeki ayarlara bağlı olarak <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A>iki modda çalışabilir.  
   
-## <a name="mode-1-channel-context-management"></a>Modu 1'de: Kanal içerik yönetimi  
- Bu varsayılan moddur burada <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> ayarlanır `true`. Bu modda içerik kanalı bağlamı yönetir ve yaşam süresi boyunca içeriği önbelleğe alır. Bağlam, kanal özelliği aracılığıyla bir kanaldan alınabilir `IContextManager` çağırarak `GetContext` yöntemi. Kanal ayrıca çağırarak açılmasını önce belirli bağlamı ile önceden başlatılmış olabilir `SetContext` kanal özellik yöntemi. Kanal bağlamıyla başlatıldıktan sonra sıfırlanamaz.  
+## <a name="mode-1-channel-context-management"></a>1\. mod: Kanal bağlam yönetimi  
+ Bu, olarak `true`ayarlandığı varsayılan moddur <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> . Bu modda bağlam kanalı bağlamı yönetir ve ömrü boyunca bağlamı önbelleğe alır. Bağlam, `IContextManager` `GetContext` yöntemi çağırarak kanaldan Kanal özelliği aracılığıyla alınabilir. Kanal, `SetContext` yöntemi Kanal özelliği üzerinde çağırarak açılmadan önce belirli bağlamla önceden başlatılabilir. Kanal, bağlamı ile başlatıldıktan sonra sıfırlanamaz.  
   
- Bu modda okuduğunuzda listesi verilmiştir:  
+ Aşağıda, bu moddaki ınvarıant 'ların bir listesi verilmiştir:  
   
-- Yapmaya bağlamını kullanarak sıfırlamak `SetContext` kanal açılan oluşturur sonra bir <xref:System.InvalidOperationException>.  
+- Kanal açıldıktan sonra kullanarak `SetContext` bağlamı sıfırlama girişimleri bir <xref:System.InvalidOperationException>oluşturur.  
   
-- Yapmaya kullanarak içerik göndermeye <xref:System.ServiceModel.Channels.ContextMessageProperty> giden iletisinde oluşturur bir <xref:System.InvalidOperationException>.  
+- Giden bir iletide öğesini kullanarak <xref:System.ServiceModel.Channels.ContextMessageProperty> bağlamı gönderme girişimleri bir <xref:System.InvalidOperationException>oluşturur.  
   
-- Kanalı ile belirli bir bağlam zaten başlatılmış, belirli bir içerik sunucusundan bir ileti alındığında, sonuçlanır bir <xref:System.ServiceModel.ProtocolException>.  
+- Belirli bir içeriğe sahip sunucudan bir ileti alındığında, Kanal belirli bir içerikle zaten başlatılmış olduğunda, bu bir <xref:System.ServiceModel.ProtocolException>ile sonuçlanır.  
   
     > [!NOTE]
-    >  Yalnızca açık olarak herhangi bir bağlam olmadan kanal açıldığında bir başlangıç bağlamı sunucudan almak uygundur.  
+    > Yalnızca Kanal açıkça herhangi bir bağlam kümesi olmadan açılırsa sunucudan ilk bağlam almak uygun olur.  
   
-- <xref:System.ServiceModel.Channels.ContextMessageProperty> Üzerinde gelen iletilerin her zaman null şeklindedir.  
+- <xref:System.ServiceModel.Channels.ContextMessageProperty> Gelen ileti her zaman null olur.  
   
-## <a name="mode-2-application-context-management"></a>2. modu: Uygulama içerik yönetimi  
- Bu modu etkin olduğunda <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> ayarlanır `false`. Bu modda, bağlam içerik kanalı yönetmez. Bunu almak, yönetmek ve bağlamı kullanarak uygulamak için uygulamanın sorumluluğundadır <xref:System.ServiceModel.Channels.ContextMessageProperty>. Çağrılacak yapmaya `GetContext` veya `SetContext` sonuçlanır bir <xref:System.InvalidOperationException>.  
+## <a name="mode-2-application-context-management"></a>Mod 2: Uygulama bağlamı yönetimi  
+ Bu mod <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> olarak `false`ayarlanır. Bu modda bağlam kanalı bağlamı yönetmez. Kullanarak bağlamı alma, yönetme ve uygulama sorumluluğu uygulamanın sorumluluğundadır <xref:System.ServiceModel.Channels.ContextMessageProperty>. Herhangi bir çağrı `GetContext` yapmaya veya `SetContext` bir <xref:System.InvalidOperationException>ile sonuçlanır.  
   
- İstemci kanal fabrikası destekler ne olursa olsun, hangi modu seçilen <xref:System.ServiceModel.Channels.IRequestChannel>, <xref:System.ServiceModel.Channels.IRequestSessionChannel>, ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel> exchange desenleri iletisi.  
+ Hangi modun seçildiği, istemci kanalı fabrikası, ve <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Channels.IDuplexSessionChannel> ileti değişimi modellerini <xref:System.ServiceModel.Channels.IRequestSessionChannel>destekler.  
   
- Hizmette örneğini kanal, gelen iletiler için istemci tarafından sağlanan bağlam oluşturmaktan sorumludur <xref:System.ServiceModel.Channels.ContextMessageProperty>. İleti özelliği daha sonra uygulama katmanı tarafından erişilebilir veya diğer kanallar daha fazla çağrı yığınında yukarı. Hizmet kanalları da ekleyerek istemciye dağıtılmasını yeni bir bağlam değeri belirtmek uygulama katmanı izin bir <xref:System.ServiceModel.Channels.ContextMessageProperty> yanıt iletisi. Bu özellik SOAP üst bilgi veya bağlamı, bağlama yapılandırmasına bağlıdır içeren HTTP tanımlama bilgisi dönüştürülür. Hizmet kanal dinleyicisi destekler <xref:System.ServiceModel.Channels.IReplyChannel>, <xref:System.ServiceModel.Channels.IReplySessionChannel>, ve <xref:System.ServiceModel.Channels.IReplySessionChannel> exchange desenleri iletisi.  
+ Hizmette, gelen iletilerde istemci tarafından sağlanan bağlamın öğesine <xref:System.ServiceModel.Channels.ContextMessageProperty>dönüştürülmesi, kanalın bir örneği sorumludur. İleti özelliğine daha sonra uygulama katmanı veya diğer kanallar tarafından çağrı yığınında daha fazla erişilebilir. Hizmet kanalları aynı zamanda uygulama katmanının yanıt iletisine bir <xref:System.ServiceModel.Channels.ContextMessageProperty> ekleyerek istemciye geri yayılacağı yeni bir içerik değeri belirtmesini de sağlar. Bu özellik, bağlamanın yapılandırmasına bağlı olarak, bağlamını içeren SOAP üstbilgisine veya HTTP tanımlama bilgisine dönüştürülür. Hizmet kanalı dinleyicisi, <xref:System.ServiceModel.Channels.IReplyChannel> <xref:System.ServiceModel.Channels.IReplySessionChannel>, ve <xref:System.ServiceModel.Channels.IReplySessionChannel> ileti değişimi düzenlerini destekler.  
   
- Bağlam değişimi Protokolü yeni kullanıma sunuyor `wsc:Context` bağlam yaymak için HTTP tanımlama bilgileri kullanılmaz, bağlam bilgilerini temsil etmek için SOAP üstbilgisi. Herhangi bir sayıda alt öğeleri, her bir dize anahtarı ve dize içerik için içerik üstbilgisi şemasının sağlar. Bağlam üst bilgisi bir örnek verilmiştir.  
+ Bağlam değişimi Protokolü, http tanımlama bilgileri `wsc:Context` bağlamı yaymakta olmadığında bağlam bilgilerini temsil eden yeni bir SOAP üst bilgisi tanıtır. Bağlam üst bilgisi şeması, her biri dize anahtarı ve dize içeriği olan herhangi bir sayıda alt öğe sağlar. Aşağıda bir bağlam üst bilgisi örneği verilmiştir.  
   
  `<Context xmlns="http://schemas.microsoft.com/ws/2006/05/context">`  
   
@@ -47,13 +47,13 @@ Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 
   
  `</Context>`  
   
- Zaman içinde `HttpCookie` modu, tanımlama bilgisi kullanılarak ayarlanır `SetCookie` başlığı. Tanımlama bilgisi adı `WscContext`. Tanımlama bilgisinin değeri bir Base64 değeri kodlamasını `wsc:Context` başlığı. Bu değer tırnak işaretleri içine alınır.  
+ Modundayken, tanımlama bilgileri `SetCookie` üst bilgi kullanılarak ayarlanır. `HttpCookie` Tanımlama bilgisi adı `WscContext`. Tanımlama bilgisinin değeri, `wsc:Context` üst bilginin Base64 kodlamasıdır. Bu değer tırnak içine alınır.  
   
- WS-Addressing üst bilgileri aynı nedenle aktarım sırasında korunur context değeri değişikliklere karşı korunması gerekir: Başlık hizmetine isteğin gönderileceği yerini belirlemek için kullanılır. `wsc:Context` Üst bilgisi, bu nedenle dijital olarak imzalı veya imzalı ve bağlama iletisi koruma özelliği sunar SOAP veya aktarım düzeyinde şifreli gereklidir. HTTP tanımlama bilgileri, bağlam yaymak için kullanıldığında, aktarım güvenliği kullanarak korunmalıdır.  
+ Bağlam değeri, aktarım sırasında, WS-Addressing üst bilgilerinin korunduğu sırada değişiklik yapılmasının korunması gerekir – isteğin hizmette nereye dağıtılacağını belirlemekte kullanılacak üst bilgi kullanılır. Bu nedenle, bağlama ileti koruma özelliği sunduğunda, üstbilgininSOAPveyaAktarımdüzeyindedijitalolarakimzalanmasıyadaimzalanmasıveşifrelenmesigerekir.`wsc:Context` Bağlam yaymakta HTTP tanımlama bilgileri kullanıldığında, bunların aktarım güvenliği kullanılarak korunması gerekir.  
   
- Bağlam değişimi protokolü için destek gerektiren bir hizmet uç noktaları, yayımlanmış bir ilke içinde açık zorlaştırabilir. Bağlam değişimi Protokolü SOAP düzeyinde desteklemek veya HTTP tanımlama bilgisi desteğini etkinleştirmek için istemci gereksinimi temsil etmek için iki yeni ilke onaylamalarını tanıtılmıştır. Deyimlerinize hizmetine ilke oluşturulmasını değeri tarafından denetlenen <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> özelliğini aşağıdaki gibi:  
+ Bağlam değişimi Protokolü için destek gerektiren hizmet uç noktaları, yayımlanan ilkede açık hale gelir. İstemcinin SOAP düzeyinde bağlam değişim protokolünü destekleme veya HTTP tanımlama bilgisi desteğini etkinleştirme gereksinimini temsil eden iki yeni ilke onayı eklenmiştir. Bu onayların hizmette ilke üzerinde oluşturulması, <xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> özelliğin değeri tarafından aşağıdaki gibi denetlenir:  
   
-- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>, aşağıdaki onay oluşturulur:  
+- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader>aşağıdaki onaylama oluşturulmuştur:  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ Bu bölümde, Windows Communication Foundation (WCF) .NET Framework sürüm 3.5 
     protectionLevel="Sign" />  
     ```  
   
-- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>, aşağıdaki onay oluşturulur:  
+- İçin <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie>aşağıdaki onaylama oluşturulmuştur:  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  

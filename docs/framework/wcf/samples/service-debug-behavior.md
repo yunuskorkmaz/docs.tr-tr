@@ -2,22 +2,22 @@
 title: Hizmet Hata Ayıklama Davranışı
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 2f2eefb01e66efddea05116f640a60defe78de1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75c53d567e3f16310f9623b416279decb6bee541
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964567"
 ---
 # <a name="service-debug-behavior"></a>Hizmet Hata Ayıklama Davranışı
-Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılabileceğini göstermektedir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), uygulayan `ICalculator` hizmet sözleşmesi. Bu örnek, hizmet hata ayıklama davranışı yapılandırma dosyasında açıkça tanımlar. Bunu de kesin kod içinde yapılabilir.  
+Bu örnek, hizmet hata ayıklama davranışı ayarlarının nasıl yapılandırılacağını gösterir. Örnek, `ICalculator` hizmet sözleşmesini uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır. Bu örnek, yapılandırma dosyasında hizmet hata ayıklama davranışını açıkça tanımlar. Ayrıca, kod içinde imperatively de yapılabilir.  
   
- Bu örnekte, istemci bir konsol uygulaması (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Sunucu için Web.config dosyasının yardım sayfasına ve aşağıdaki örnekte gösterildiği gibi özel durum işlemeyi etkinleştirmek için hizmet hata ayıklama davranışı tanımlar.  
+ Sunucu için Web. config dosyası, aşağıdaki örnekte gösterildiği gibi yardım sayfası ve özel durum işlemeyi etkinleştirmek için hizmet hata ayıklama davranışını tanımlar.  
   
 ```xml  
 <behaviors>  
@@ -31,30 +31,30 @@ Bu örnek, hizmet hata ayıklama davranışı ayarları nasıl yapılandırılab
 </behaviors>  
 ```  
   
- [\<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) hizmet hata ayıklama davranışı özelliklerini değiştirme sağlayan yapılandırma öğesi. Kullanıcı şunları gerçekleştirmek için bu davranışı değiştirebilirsiniz:  
+ serviceDebug >, hizmet hata ayıklama davranışı özelliklerinin değiştirilmesini sağlayan yapılandırma öğesidir. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Kullanıcı bu davranışı değiştirerek aşağıdakileri elde edebilir:  
   
-- Böylece, özel durum kullanarak bildirilmedi bile uygulama kodu tarafından oluşturulan tüm özel durum döndürülecek hizmetin <xref:System.ServiceModel.FaultContractAttribute>. Ayarlayarak yapılır `includeExceptionDetailInFaults` için `true`. Bu ayar, sunucu beklenmeyen bir özel durum burada atma durumlarda hata ayıklama sırasında yararlıdır.  
+- Bu, özel durum kullanılarak <xref:System.ServiceModel.FaultContractAttribute>bildirilmemiş olsa bile hizmetin uygulama kodu tarafından oluşturulan herhangi bir özel durumu döndürmesini sağlar. `includeExceptionDetailInFaults` Ayarıyla`true`yapılır. Bu ayar, sunucunun beklenmeyen bir özel durum oluşturan durumlarda hata ayıklaması yaparken faydalıdır.  
   
     > [!IMPORTANT]
-    >  Bir üretim ortamında bu ayarı etkinleştirmek için güvenli değildir. Beklenmeyen sunucu özel durum istemci ve bunu ayarlama hedeflenmemiştir bazı bilgiler olabilir `includeExceptionDetailsInFaults` için `true` içinde bilgi sızıntısı neden olabilir.  
+    >  Bu ayarı bir üretim ortamında açmak güvenli değildir. Beklenmeyen bir sunucu özel durumu, istemciye yönelik amaçlı olmayan bazı bilgiler içerebilir ve bu nedenle ayarı `includeExceptionDetailsInFaults` `true` bilgi sızıntısına neden olabilir.  
   
-- [ \<ServiceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) de etkinleştirmek veya devre dışı yardım sayfasına açmasına olanak sağlar. Her bir hizmet, isteğe bağlı olarak hizmet için WSDL almak için uç nokta gibi hizmet hakkındaki bilgileri içeren bir Yardım sayfası kullanıma sunabilirsiniz. Bu ayarlayarak etkinleştirilebilir `httpHelpPageEnabled` için `true`. Bu hizmetin taban adresi için bir GET isteği için döndürülecek yardım sayfasına sağlar. Başka bir özniteliğini ayarlayarak bu adresi değişebilir `httpHelpPageUrl`. Bu HTTP yerine HTTPS kullanarak güvenli hale getirebilirsiniz. Bu ayarlayarak yapılabilir `httpsHelpPageEnabled` ve `httpsHelpPageUrl`.  
+- ServiceDebug > Ayrıca bir kullanıcının yardım sayfasını etkinleştirmesine veya devre dışı bırakmasına izin verir. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md) Her hizmet, isteğe bağlı olarak hizmetle ilgili WSDL 'yi almak için uç nokta dahil olmak üzere hizmet hakkındaki bilgileri içeren bir yardım sayfası sunabilir. Bu, ayarına `httpHelpPageEnabled` `true`göre etkinleştirilebilir. Bu, yardım sayfasının, hizmetin temel adresine yönelik bir GET isteğine döndürülmesini sağlar. Başka bir öznitelik `httpHelpPageUrl`ayarlayarak bu adresi değiştirebilirsiniz. Bunu HTTP yerine HTTPS kullanarak güvenli hale getirebilirsiniz. Bu, ve `httpsHelpPageEnabled` `httpsHelpPageUrl`ayarı ile yapılabilir.  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İlk üç işlemleri (ekleme, çıkarma ve Çarp) başarılı olması gerekir. Son işlem ("bölme") bir bölme sıfır özel durum ile başarısız olur.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İlk üç işlem (ekleme, çıkarma ve çarpma) başarılı olmalıdır. Son işlem ("Böl"), sıfıra bölme özel durumuyla başarısız olur.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - conversions [C#], byte array to int
 - byte arrays [C#], converting to int
 ms.assetid: d6ac20e2-448e-4aea-99b9-faf04c6f1e79
-ms.openlocfilehash: 6d272a1a20cc5eb35edc7f6d971cbffbd9bfdbae
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ffb00325bc04aad79d61558925546e0aa8544551
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921757"
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>Nasıl yapılır: Byte dizisini int 'e dönüştürme (C# Programlama Kılavuzu)
 Bu örnek, bir bayt dizisini [int](../../language-reference/builtin-types/integral-numeric-types.md) 'e <xref:System.BitConverter> ve bir bayt dizisine geri dönüştürmek için sınıfını nasıl kullanacağınızı gösterir. Örneğin, ağ dışı baytları okuduktan sonra bayttan bir yerleşik veri türüne dönüştürmeniz gerekebilir. Örnekteki [ToInt32 (Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemine ek olarak, aşağıdaki tablo, <xref:System.BitConverter> sınıftaki baytları (bayt dizisinden bir diziyle) diğer yerleşik türlere dönüştüren sınıf içindeki yöntemleri listelemektedir.  
@@ -33,7 +33,7 @@ Bu örnek, bir bayt dizisini [int](../../language-reference/builtin-types/integr
  Bu örnek, bir bayt dizisini başlatır, bilgisayar mimarisi az endian ise diziyi tersine çevirir (yani, ilk olarak en az önemli bayt depolanır) ve ardından dönüştürmek için [ToInt32 (Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) yöntemini çağırır dizideki dört bayt `int`. [ToInt32 (Byte\[\], Int32)](xref:System.BitConverter.ToInt32(System.Byte[],System.Int32)) için ikinci bağımsız değişken bayt dizisinin başlangıç dizinini belirtir.  
   
 > [!NOTE]
->  Çıktı, bilgisayarınızın mimarisinin bitiminden birine bağlı olarak farklılık gösterebilir.  
+> Çıktı, bilgisayarınızın mimarisinin bitiminden birine bağlı olarak farklılık gösterebilir.  
   
  [!code-csharp[csProgGuideTypes#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#22)]  
   
@@ -41,7 +41,7 @@ Bu örnek, bir bayt dizisini [int](../../language-reference/builtin-types/integr
  Bu örnekte, <xref:System.BitConverter.GetBytes%28System.Int32%29> <xref:System.BitConverter> sınıfının yöntemi bir `int` bayt dizisine dönüştürmek için çağırılır.  
   
 > [!NOTE]
->  Çıktı, bilgisayarınızın mimarisinin bitiminden birine bağlı olarak farklılık gösterebilir.  
+> Çıktı, bilgisayarınızın mimarisinin bitiminden birine bağlı olarak farklılık gösterebilir.  
   
  [!code-csharp[csProgGuideTypes#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#23)]  
   

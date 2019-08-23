@@ -3,12 +3,12 @@ title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c46d1fb9eb853e57c7ad1b97eb9a22556cdfb7d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613398"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913106"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException >
 Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapılacak eylem belirtmenize olanak tanıyan bir hizmet davranışı.  
@@ -16,7 +16,7 @@ Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapı
 \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<workflowUnhandledException >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,7 +38,7 @@ Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapı
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Eylem|İşlenmeyen bir özel durum oluştuğunda yapılacak eylem belirten bir dize. Bu öznitelik türünde <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
+|Eylem|İşlenmeyen bir özel durum oluştuğunda gerçekleştirilecek eylemi belirten bir dize. Bu öznitelik türü<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,7 +47,7 @@ Bir iş akışı hizmeti içinde işlenmeyen bir özel durum oluştuğunda yapı
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranış >, \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
+|[\<\<ServiceBehavior > davranış >](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

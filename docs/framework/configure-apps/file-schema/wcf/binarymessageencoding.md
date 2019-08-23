@@ -2,18 +2,18 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6b74200c807e6523ed3f7250945040bd12658d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919803"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding >
-Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan bir ikili ileti Kodlayıcısı tanımlar.  
+Tel Windows Communication Foundation (WCF) iletilerini kodlayan bir ikili ileti Kodlayıcısı tanımlar.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<binaryMessageEncoding >  
@@ -34,27 +34,27 @@ Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan bir 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|maxReadPoolSize|İleti sayısını tanımlayan bir tamsayı yeni okuyucu ayırmadan aynı anda okuyabilirsiniz. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. 64 varsayılandır.|  
-|maxSessionSize|Bir pozitif tamsayı kodlamak için kullanılan arabelleğin bayt cinsinden boyutunu ayarlar. Daha büyük bir arabellek çalışma kümesi boyutu çoğaltamaz kodlama hızını artırır. 2048 varsayılandır.|  
-|maxWritePoolSize|İleti sayısını tanımlayan bir tamsayı, yeni yazıcı ayırmadan aynı anda gönderilebilecek. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Varsayılan değer 16'dır.|  
-|messageVersion|SOAP iletisi ve kullanılan veya beklenen WS-Addressing sürümleri belirtir.|  
+|maxReadPoolSize|Yeni okuyucular ayırmadan aynı anda okunabilecek ileti sayısını tanımlayan bir tamsayı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Varsayılan değer 64 ' dir.|  
+|maxSessionSize|Kodlama için kullanılan arabelleğin bayt cinsinden boyutunu ayarlayan pozitif bir tamsayı. Daha büyük bir arabellek, çalışma kümesinin boyutunun masrafına göre kodlama hızını artırır. Varsayılan değer 2048 ' dir.|  
+|maxWritePoolSize|Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti sayısını tanımlayan bir tamsayı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Varsayılan değer 16 ' dır.|  
+|messageVersion|Kullanılan veya beklenen SOAP iletisini ve WS-Addressing sürümlerini belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kodlama bir ileti bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç türlerini içerir: Metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
+ Kodlama bir iletiyi bir bayt dizisine dönüştürme işlemidir. Kod çözme işlemi ters işlemdir. Windows Communication Foundation (WCF), SOAP iletileri için üç tür kodlama içerir: Metin, Ikili ve Ileti Iletimi Iyileştirme mekanizması (MTOM).  
   
- `binaryMessageEncoding` Öğesi için XML .NET ikili biçimini belirtir ve karakter kodlamasını belirtmek için seçenekleri ve kullanılmak üzere SOAP ve WS-Addressing sürümü vardır. İkili ileti Kodlayıcısı Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan. Bu kodlama ileti çok hızlı aktarımını sonuçları karşın, birlikte çalışabilirlik tabanlı WS - üzerinde * standartları kaybolur.  
+ `binaryMessageEncoding` Öğesi, XML için .NET ikili biçimini belirtir ve karakter kodlamasını ve kullanılacak soap ve ws-Addressing sürümünü belirtme seçeneklerine sahiptir. İkili ileti Kodlayıcısı, Windows Communication Foundation (WCF) iletilerini kablo üzerinde ikili olarak kodlar. Bu kodlama, iletilerin çok hızlı aktarılmasına neden olsa da, WS-* standartlarına dayalı olarak birlikte çalışabilirlik kaybedilir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -70,9 +70,9 @@ Kablodaki ikili Windows Communication Foundation (WCF) iletilerini kodlayan bir 
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [İleti Kodlama](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [İleti Kodlama](message-encoding.md)
+- [İleti Kodlayıcı Seçme](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

@@ -13,56 +13,56 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917251"
 ---
 # <a name="key-security-concepts"></a>Temel Güvenlik Kavramları
-Microsoft .NET Framework mobil kod ile ilgili güvenlik endişelerini adresi yardımcı olmak için rol tabanlı güvenlik sunar ve yapmak için yetkili kullanıcıların ne belirlemek bileşenler sağlayan destek sağlar.  
+Microsoft .NET Framework, mobil kodla ilgili güvenlik kaygılarını ele almak ve bileşenlerin hangi kullanıcılara izin verildiğini belirlemesini sağlayan destek sağlamak için rol tabanlı güvenlik sunar.  
   
-## <a name="type-safety-and-security"></a>Tür güvenliği ve emniyeti  
- Tür kullanımı uyumlu kod yalnızca erişmek için yetkili bellek konumlarına erişir. (Bu tartışma için tür güvenliği özellikle bellek türü güvenliğine başvurur ve daha geniş bir açısından tür güvenliği ile karıştırılmamalıdır.) Örneğin, tür kullanımı uyumlu kod başka nesnenin özel alanlarındaki değerleri okuyamıyor. Bu türler yalnızca iyi tanımlanmış, izin verilen şekilde erişir.  
+## <a name="type-safety-and-security"></a>Tür güvenliği ve güvenlik  
+ Tür kullanımı uyumlu kod yalnızca erişim yetkisi olan bellek konumlarına erişir. (Bu tartışma için, tür güvenliği özellikle bellek türü güvenliğine başvurur ve tür güvenliği daha geniş bir bakımdan karıştırılmamalıdır.) Örneğin, tür kullanımı uyumlu kod başka bir nesnenin özel alanlarından değerleri okuyamıyor. Yalnızca iyi tanımlanmış, izin verilen yöntemlerle türlere erişir.  
   
- Just-ın-time (JIT) derleme sırasında isteğe bağlı doğrulama işlemi, yerel makine tür güvenli olduklarını doğrulamak için kod içine JIT olarak derlenmiş olması, bir yöntemin meta verileri ve Microsoft Ara dilini (MSIL) inceler. Bu işlem, kod doğrulamayı atlama izni varsa atlanır. Doğrulama hakkında daha fazla bilgi için bkz: [Managed Execution Process](../../../docs/standard/managed-execution-process.md).  
+ Tam zamanında (JıT) derleme sırasında, isteğe bağlı bir doğrulama işlemi, güvenli türde olduklarını doğrulamak için yerel makine koduna JıT olarak derlenmek üzere bir yöntemin meta verilerini ve Microsoft ara dili 'ni (MSIL) inceler. Bu işlem, kodun doğrulamayı atlama izni varsa atlanır. Doğrulama hakkında daha fazla bilgi için bkz. [yönetilen yürütme işlemi](../../../docs/standard/managed-execution-process.md).  
   
- Tür güvenliği doğrulamasının yönetilen kodu çalıştırma zorunlu olmasa da, tür güvenliği derleme yalıtımında ve güvenlik zorlamada çok önemli bir rol oynar. Kod tür bakımından güvenli olduğunda, ortak dil çalışma zamanı derlemeleri birbirinden tamamen ayırabilirsiniz. Bu yalıtım, derlemelerin birbirini olumsuz olamaz ve uygulama güvenilirliği artırır emin olun yardımcı olur. Farklı düzeylerde güvenilir olsalar bile, tür açısından güvenli bileşenler aynı işlem içinde güvenli bir şekilde yürütebilirsiniz. Kod tür bakımından güvenli olmadığında, istenmeyen yan etkiler oluşabilir. Örneğin, çalışma zamanı yönetilen kodun yerel (yönetilmeyen) koda çağrılmasını ve kötü amaçlı işlemler gerçekleştirmesini önleyemez. Kod tür bakımından güvenli olduğunda, bunu yapmak için izne sahip olmadığı sürece, yerel kod erişmez çalışma zamanı güvenlik zorlama mekanizması sağlar. Tür bakımından güvenli değil tüm kodun vermiş olması gerekir <xref:System.Security.Permissions.SecurityPermission> geçirilen numaralandırma üyesi ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> çalıştırılacak.  
+ Tür güvenliği doğrulaması yönetilen kodu çalıştırmak için zorunlu olmasa da, tür güvenliği derleme yalıtımı ve güvenlik zorlaması için önemli bir rol oynar. Kod tür güvenolduğunda, ortak dil çalışma zamanı derlemeleri tamamen tamamen yalıtabilir. Bu yalıtım, derlemelerin birbirini olumsuz şekilde etkilememesini sağlar ve uygulama güvenilirliğini artırır. Tür açısından güvenli bileşenler, farklı düzeylerde güvenilir olsalar bile aynı işlemde güvenli bir şekilde çalıştırılabilir. Kod türü güvenli olmadığında istenmeyen yan etkiler meydana gelebilir. Örneğin, çalışma zamanı yönetilen kodun yerel (yönetilmeyen) koda çağrılmasını ve kötü amaçlı işlemler gerçekleştirmesini engellemez. Kod türü güvenli olduğunda, çalışma zamanının güvenlik zorlama mekanizması, bunu yapmak için izne sahip olmadığı müddetçe yerel koda erişemez. Türü güvenli olmayan tüm kodlar, geçirilen enum üyesine <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionAttribute.SkipVerification%2A> çalıştırılacak şekilde verilmiş olmalıdır.  
   
- Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../../docs/framework/misc/code-access-security-basics.md).  
+ Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../docs/framework/misc/code-access-security-basics.md).  
   
 ## <a name="principal"></a>Asıl  
- Sorumlu Kimliği ve kullanıcı rolünü temsil eden ve kullanıcı adına hareket eder. .NET Framework'teki rol tabanlı güvenlik sorumluları üç tür destekler:  
+ Bir sorumlu bir kullanıcının kimliğini ve rolünü temsil eder ve kullanıcının adına davranır. .NET Framework rol tabanlı güvenlik, üç tür sorumlusu destekler:  
   
-- Genel ilkeleri, kullanıcılar ve Windows kullanıcıları ve rolleri, bağımsız kayıtlı rolleri temsil eder.  
+- Genel sorumlular, Windows kullanıcıları ve rollerinden bağımsız olarak bulunan kullanıcıları ve rolleri temsil eder.  
   
-- Windows sorumluları Windows kullanıcıları ve rolleri (veya kendi Windows grupları) temsil eder. Bir Windows asıl sorumlusu, kimlik sunmak için kullanıcının bağlı olduğu sırada bir kullanıcı adına bir kaynakta erişebileceği anlamına gelir başka bir kullanıcının kimliğine bürünebilirsiniz.  
+- Windows sorumluları Windows kullanıcılarını ve rollerini (veya Windows gruplarını) temsil eder. Bir Windows sorumlusu başka bir kullanıcının kimliğine bürünerek, sorumlu bu kullanıcıya ait olan kimliği sunarken kullanıcının adına bir kaynağa erişebileceği anlamına gelir.  
   
-- Özel ilkeleri, belirli bir uygulama için gerekli herhangi bir şekilde bir uygulama tarafından tanımlanabilir. Bunlar, sorumlunun kimliğini ve rolleri temel kavramı genişletebilirsiniz.  
+- Özel sorumlular, belirli bir uygulama için gerekli olan herhangi bir şekilde bir uygulama tarafından tanımlanabilir. Bu kişiler, sorumlu kimlik ve rollerinin temel kavramının kapsamını genişletebilirler.  
   
- Daha fazla bilgi için [asıl ve kimlik nesneleri](../../../docs/standard/security/principal-and-identity-objects.md).  
+ Daha fazla bilgi için bkz. [Principal ve Identity Objects](../../../docs/standard/security/principal-and-identity-objects.md).  
   
 ## <a name="authentication"></a>Kimlik doğrulaması  
- Kimlik doğrulaması bulma ve kullanıcının kimlik bilgilerini inceleyerek ve bu kimlik bilgilerini bir yetkili karşı doğrulama sorumlu kimliğini doğrulama işlemidir. Kimlik doğrulaması sırasında elde edilen bilgilerin kodunuz tarafından doğrudan kullanılabilir. .NET Framework rol tabanlı güvenlik, geçerli kullanıcının kimliğini doğrulamak ve kodunuzu erişmek bu sorumlusunun izin verilip verilmeyeceğini belirlemek için de kullanabilirsiniz. Aşırı yüklemeleri bkz <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> belirli rolleri için asıl kimlik doğrulaması yapmayı örnekleri için yöntemi. Örneğin, kullanabileceğiniz <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> geçerli kullanıcının Administrators grubunun üyesi olup olmadığını belirlemek için aşırı yükleme.  
+ Kimlik doğrulaması, kullanıcının kimlik bilgilerini inceleyerek ve bu kimlik bilgilerini bazı yetkililerle doğrulayarak sorumlu kimliğini bulma ve doğrulama işlemidir. Kimlik doğrulama sırasında elde edilen bilgiler, kodunuz tarafından doğrudan kullanılabilir. Ayrıca, geçerli kullanıcının kimliğini doğrulamak ve bu sorumlunun kodunuza erişmesine izin verip vermeyeceğinizi anlamak için rol tabanlı güvenlik .NET Framework de kullanabilirsiniz. Belirli roller için sorumlunun <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> nasıl doğrulanacağını gösteren örnekler için, yönteminin aşırı yüklerini inceleyin. Örneğin, geçerli kullanıcının Yöneticiler grubunun bir <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> üyesi olup olmadığını anlamak için aşırı yüklemeyi kullanabilirsiniz.  
   
- Kimlik doğrulama mekanizmaları çeşitli bugün kullanılıyorsa, çoğu .NET Framework rol tabanlı güvenlik ile kullanılabilir. En sık kullanılan mekanizma bazı temel, Özet, Passport, (örneğin, NTLM veya Kerberos) işletim sistemi veya uygulama tanımlı mekanizmaları.  
+ Günümüzde çok çeşitli kimlik doğrulama mekanizmaları kullanılır ve rol tabanlı güvenlik .NET Framework kullanılabilir. En yaygın olarak kullanılan mekanizmalardan bazıları temel, Özet, Passport, işletim sistemi (NTLM veya Kerberos gibi) veya uygulama tanımlı mekanizmalarda oluşur.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, etkin sorumlunun yönetici olmasını gerektirir. `name` Parametresi `null`, bir yönetici talebi geçirilecek herhangi bir kullanıcı sağlar.  
+ Aşağıdaki örnek, etkin sorumlunun yönetici olmasını gerektirir. `name` Parametresi,yöneticiolanherhangibirkullanıcının`null`talebi geçmesine izin verir.  
   
 > [!NOTE]
->  Windows Vista'da, kullanıcı hesabı denetimi (UAC) bir kullanıcının ayrıcalıkları belirler. Yerleşik Yöneticiler grubunun bir üyesi iseniz, size iki çalışma zamanı erişim belirteci atanır: Standart kullanıcı erişim belirteci ve yönetici erişim belirteci. Varsayılan olarak, standart kullanıcı rolünde olursunuz. Yönetici olmasını gerektiren kodları yürütmek için öncelikle, standart kullanıcıdan yöneticiye ayrıcalıklarını gerekir. Uygulama simgesine tıklayıp yönetici olarak çalıştırmak istediğiniz belirten bir uygulamayı başlattığınızda bunu yapabilirsiniz.  
+> Windows Vista 'da, Kullanıcı hesabı denetimi (UAC) bir kullanıcının ayrıcalıklarını belirler. Yerleşik Yöneticiler grubunun bir üyesi iseniz, size iki çalışma zamanı erişim belirteci atanır: Standart kullanıcı erişim belirteci ve yönetici erişim belirteci. Varsayılan olarak, standart kullanıcı rolünde olursunuz. Yönetici olmanızı gerektiren kodu yürütmek için öncelikle standart Kullanıcı olan ayrıcalıklarınızı yöneticiye yükseltmeniz gerekir. Uygulamayı başlattığınızda uygulama simgesine sağ tıklayıp yönetici olarak çalıştırmak istediğinizi belirterek bunu yapabilirsiniz.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]
  [!code-vb[Classic PrincipalPermission Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/VB/source.vb#1)]  
   
- Aşağıdaki örnek, asıl ve sorumlusuna kullanılabilir rolleri kimliğini belirlemek nasıl gösterir. Geçerli kullanıcının uygulamanızı kullanmak için izin rol olduğunu onaylamak için bu örnek, bir uygulama olabilir.  
+ Aşağıdaki örnek, sorumlunun kimliğinin ve asıl için kullanılabilen rollerin nasıl belirleneceğini göstermektedir. Bu örneğin bir uygulaması, geçerli kullanıcının uygulamanızı kullanmaya izin veren bir rolde olduğunu doğrulamak olabilir.  
   
  [!code-cpp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CPP/source.cpp#1)]
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
 ## <a name="authorization"></a>Yetkilendirme  
- Yetkilendirme, bir sorumlunun istenen eylemi gerçekleştirmek için izin verilip verilmeyeceğini belirleme işlemidir. Yetkilendirme kimlik doğrulamasından sonra gerçekleşir ve sorumlusunun kimlik ve rolleri hakkında bilgi sorumluya erişmek hangi kaynakları belirlemek için kullanır. .NET Framework rol tabanlı güvenlik, kimlik doğrulaması uygulamak için kullanabilirsiniz.
+ Yetkilendirme, bir sorumlunun istenen eylemi gerçekleştirmesine izin verilip verilmeyeceğini belirleme işlemidir. Kimlik doğrulamasından sonra yetkilendirme oluşur ve sorumlunun erişebileceği kaynakları belirlemek için sorumlunun kimliği ve rolleri hakkında bilgi kullanır. Yetkilendirmeyi uygulamak için rol tabanlı güvenlik .NET Framework kullanabilirsiniz.

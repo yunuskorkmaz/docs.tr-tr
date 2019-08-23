@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457533"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935249"
 ---
 # <a name="bitmap-effects"></a>Bit Eşlem Efektleri
-Bu bölümdeki konular, bit eşlem görüntüleri kullanarak görsel efektler uygulanacağını açıklar [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+Bu bölümdeki konularda, kullanarak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]bit eşlem görüntülerine görsel efektlerin nasıl uygulanacağı açıklanır.  
   
 > [!IMPORTANT]
->  .NET Framework 4 veya sonraki sürümlerde, <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor. Kullanmayı denerseniz <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı, geçersiz bir özel durum alırsınız. Gereksiz olmayan alternatif <xref:System.Windows.Media.Effects.BitmapEffect> sınıfı <xref:System.Windows.Media.Effects.Effect> sınıfı. Çoğu durumda <xref:System.Windows.Media.Effects.Effect> sınıfı, önemli ölçüde daha hızlıdır.  
+> .NET Framework 4 veya sonraki sürümlerde, <xref:System.Windows.Media.Effects.BitmapEffect> sınıf artık kullanılmıyor. <xref:System.Windows.Media.Effects.BitmapEffect> Sınıfını kullanmaya çalışırsanız, eski bir özel durum alırsınız. <xref:System.Windows.Media.Effects.BitmapEffect> Sınıfın<xref:System.Windows.Media.Effects.Effect> kullanımdan kalkmamış alternatifi sınıfı. Çoğu durumda, <xref:System.Windows.Media.Effects.Effect> sınıfı önemli ölçüde daha hızlıdır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Bit Eşlem Etkilerine Genel Bakış](bitmap-effects-overview.md)  

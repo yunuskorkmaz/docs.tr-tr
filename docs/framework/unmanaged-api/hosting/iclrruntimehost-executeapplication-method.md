@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965351"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication Yöntemi
-ClickOnce dağıtım senaryolarında bildirim tabanlı yeni bir etki alanı etkinleştirilmesi için uygulamayı belirtmek için kullanılır. Bu senaryolar hakkında daha fazla bilgi için bkz: [ClickOnce güvenliği ve dağıtımı](/visualstudio/deployment/clickonce-security-and-deployment).  
+Yeni bir etki alanında etkinleştirilecek uygulamayı belirtmek için bildirim tabanlı ClickOnce dağıtım senaryolarında kullanılır. Bu senaryolar hakkında daha fazla bilgi için bkz. [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,50 +42,50 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Parametreler  
  `pwzAppFullName`  
- [in] İçin tanımlandığı gibi uygulamanın tam adını <xref:System.ApplicationIdentity>.  
+ 'ndaki Uygulamanın tanımlandığı <xref:System.ApplicationIdentity>şekliyle tam adı.  
   
  `dwManifestPaths`  
- [in] Dize içindeki sayısı `ppwzManifestPaths` dizisi.  
+ 'ndaki `ppwzManifestPaths` Dizide bulunan dizelerin sayısı.  
   
  `ppwzManifestPaths`  
- [in] İsteğe bağlı. Uygulama için bildirim yolları içeren bir dize dizisi.  
+ 'ndaki Seçim. Uygulamanın bildirim yollarını içeren bir dize dizisi.  
   
  `dwActivationData`  
- [in] Dize içindeki sayısı `ppwzActivationData` dizisi.  
+ 'ndaki `ppwzActivationData` Dizide bulunan dizelerin sayısı.  
   
  `ppwzActivationData`  
- [in] İsteğe bağlı. Web üzerinden dağıtılan uygulamalar için URL sorgu dizesi kısmı gibi uygulamanın etkinleştirme verileri içeren bir dize dizisi.  
+ 'ndaki Seçim. Web üzerinde dağıtılan uygulamalar için URL 'nin sorgu dizesi kısmı gibi uygulamanın etkinleştirme verilerini içeren bir dize dizisi.  
   
  `pReturnValue`  
- [out] Uygulamanın giriş noktasından döndürülen değer.  
+ dışı Uygulamanın giriş noktasından döndürülen değer.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. CLR, artık bir yöntem E_FAIL döndürürse, işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`ExecuteApplication`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürürse, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ExecuteApplication` Yeni oluşturulan uygulama etki alanındaki ClickOnce uygulamaları etkinleştirmek için kullanılır.  
+ `ExecuteApplication`, yeni oluşturulan bir uygulama etki alanında ClickOnce uygulamalarını etkinleştirmek için kullanılır.  
   
- `pReturnValue` Çıkış parametresi uygulama tarafından döndürülen değere ayarlanır. Null değeri sağlarsanız `pReturnValue`, `ExecuteApplication` başarısız olmaz, ancak bir değer döndürmez.  
+ `pReturnValue` Output parametresi, uygulama tarafından döndürülen değere ayarlanır. `pReturnValue` İçin`ExecuteApplication` null değeri sağlarsanız, başarısız olmaz, ancak bir değer döndürmez.  
   
 > [!IMPORTANT]
->  Çağırmayın [Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemi çağırmadan önce `ExecuteApplication` bildirim tabanlı bir uygulamayı etkinleştirmek için yöntemi. Varsa `Start` yöntemi önce çağrılır `ExecuteApplication` yöntem çağrısı başarısız olur.  
+> Bildirim tabanlı bir uygulamayı etkinleştirmek için `ExecuteApplication` yöntemini çağırmadan önce [Start yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemini çağırmayın. Yöntemi ilk kez `ExecuteApplication` çağrılırsa Yöntem çağrısı başarısız olur. `Start`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

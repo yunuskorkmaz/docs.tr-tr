@@ -2,19 +2,19 @@
 title: <endpoint> / <client>
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: 3af41ad5b5681b08aac44d984372ab5ac66caf5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bf59972ff2f75995e94a3c1934e88944d65fcc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919107"
 ---
-# <a name="endpoint-of-client"></a>\<uç noktası >'ın \<istemci >
-Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktalarının adres özelliklerini belirtir.  
+# <a name="endpoint-of-client"></a>\<\<istemci > uç noktası >
+İstemciler tarafından sunucudaki hizmet uç noktalarına bağlanmak için kullanılan kanal uç noktasının sözleşme, bağlama ve adres özelliklerini belirtir.  
   
  \<system.ServiceModel>  
 \<İstemci >  
-\<uç noktası >  
+\<uç nokta >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,30 +37,30 @@ Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|adres|Gerekli dize özniteliği.<br /><br /> Uç nokta adresini belirtir. Varsayılan değer boş bir dizedir. Adres mutlak URI olmalıdır.|  
-|behaviorConfiguration|Uç noktayı örneklemek için kullanılacak davranış adını içeren bir dize. Davranış adı, hizmet tanımlı bir noktada kapsam içinde olması gerekir. Varsayılan değer boş bir dizedir.|  
-|bağlama|Gerekli dize özniteliği.<br /><br /> Kullanılacak bağlamanın türünü belirten bir dize. Türü, başvurulabilmesi için kayıtlı yapılandırma bölümü olmalıdır. Türü bölüm adına göre yerine bağlama türü adına göre kaydedilir.|  
-|bindingConfiguration|İsteğe bağlı. Uç nokta örneklendiğinde kullanılan bağlama yapılandırmasının adını içeren bir dize. Bağlama yapılandırma uç noktaları kapsamında olması gerekir. Varsayılan değer boş bir dizedir.<br /><br /> Bu öznitelik ile birlikte kullanılan `binding` yapılandırma dosyasındaki belirli bağlama yapılandırması başvurmak için. Özel bağlama kullanmaya çalışıyorsunuz. Bu özniteliği ayarlayın. Aksi takdirde, bir özel durum.|  
-|Sözleşme|Gerekli dize özniteliği.<br /><br /> Hangi anlaşmanın gösteren bir dize bu koncový bod vystavuje. Derleme sözleşme türünü uygulamalıdır.|  
-|endpointConfiguration|Tarafından ayarlanan standart bitiş noktası adını belirten bir dize `kind` bu standart bitiş noktası ek yapılandırma bilgilerinie başvuran öznitelik. Aynı ada tanımlanmalıdır `<standardEndpoints>` bölümü.|  
-|tür|Uygulanan standart bitiş noktası türünü belirten bir dize. Türü kayıtlı olmalıdır `<extensions>` bölüm veya machine.config. Hiçbir şey belirtilmezse, ortak bir kanal uç noktası oluşturulur.|  
-|name|İsteğe bağlı dize özniteliği. Bu öznitelik, bir uç nokta verilen bir sözleşme için benzersiz olarak tanımlar. Verilen bir sözleşme türü için birden çok istemci tanımlayabilirsiniz. Her tanımı bir benzersiz yapılandırma adına göre ayırt edilebilir. Bu öznitelik belirtilmezse, karşılık gelen uç noktası belirtilen sözleşme türü ile ilişkili varsayılan uç nokta olarak kullanılır. Varsayılan değer boş bir dizedir.<br /><br /> `name` Bağlama özniteliği WSDL dışa aktarım tanımı için kullanılır.|  
+|adres|Gerekli dize özniteliği.<br /><br /> Uç noktanın adresini belirtir. Varsayılan değer boş bir dizedir. Adres, mutlak bir URI olmalıdır.|  
+|behaviorConfiguration|Uç noktanın örneğini oluşturmak için kullanılacak davranışın davranış adını içeren bir dize. Davranış adı, hizmetin tanımlandığı noktada kapsamda olmalıdır. Varsayılan değer boş bir dizedir.|  
+|bağlama|Gerekli dize özniteliği.<br /><br /> Kullanılacak bağlamanın türünü gösteren bir dize. Bu tür, başvurulmak üzere kayıtlı bir yapılandırma bölümüne sahip olmalıdır. Tür, bağlamanın tür adı yerine bölüm adı tarafından kaydedilir.|  
+|bindingConfiguration|İsteğe bağlı. Uç nokta örneği oluşturulurken kullanılacak bağlama yapılandırmasının adını içeren bir dize. Bağlama yapılandırması, bitiş noktasının tanımlandığı noktada kapsam içinde olmalıdır. Varsayılan değer boş bir dizedir.<br /><br /> Bu öznitelik, yapılandırma dosyasındaki belirli bir `binding` bağlama yapılandırmasına başvurmak için ile birlikte kullanılır. Özel bir bağlama kullanmaya çalışıyorsanız bu özniteliği ayarlayın. Aksi takdirde, bir özel durum oluşabilir.|  
+|Sözleşmesi|Gerekli dize özniteliği.<br /><br /> Bu uç noktanın hangi sözleşmeyi açığa çıkardığını belirten bir dize. Derlemenin anlaşma türünü uygulaması gerekir.|  
+|endpointConfiguration|Bu standart uç noktanın ek yapılandırma bilgilerine başvuran `kind` özniteliği tarafından ayarlanan standart uç nokta adını belirten bir dize. `<standardEndpoints>` Bölümünde aynı ad tanımlanmalıdır.|  
+|denetlenmesi|Uygulanan standart bitiş noktası türünü belirten bir dize. Tür, `<extensions>` bölümüne veya Machine. config dosyasında kayıtlı olmalıdır. Hiçbir şey belirtilmemişse, ortak bir kanal uç noktası oluşturulur.|  
+|name|İsteğe bağlı dize özniteliği. Bu öznitelik, belirli bir sözleşme için bir uç noktayı benzersiz olarak tanımlar. Belirli bir sözleşme türü için birden çok istemci tanımlayabilirsiniz. Her tanım benzersiz bir yapılandırma adıyla farklılaştıralınmalıdır. Bu öznitelik atlanırsa, ilgili uç nokta belirtilen anlaşma türüyle ilişkili varsayılan uç nokta olarak kullanılır. Varsayılan değer boş bir dizedir.<br /><br /> Bir `name` bağlamanın özniteliği WSDL aracılığıyla tanım dışarı aktarma için kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<üstbilgiler >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Adres üst bilgileri koleksiyonu.|  
-|[\<Kimliği >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Onunla mesaj alışverişleri diğer uç noktalar tarafından bir uç nokta kimlik doğrulaması sağlayan bir kimlik.|  
+|[\<üst bilgiler >](headers.md)|Adres üst bilgileri koleksiyonu.|  
+|[\<kimlik >](identity.md)|Diğer uç noktalar tarafından ileti alışverişi yapan bir uç noktanın kimlik doğrulamasını sağlayan bir kimlik.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İstemci >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|Bir istemcinin bağlanabileceği uç noktaları listesi tanımlayan bir yapılandırma bölümü.|  
+|[\<İstemci >](client.md)|Bir istemcinin bağlanabileceği uç noktaların listesini tanımlayan bir yapılandırma bölümü.|  
   
 ## <a name="example"></a>Örnek  
- Bu, bir kanal uç nokta yapılandırması örneğidir.  
+ Bu bir kanal uç noktası yapılandırmasına bir örnektir.  
   
 ```xml  
 <endpoint address="/HelloWorld/"
@@ -78,5 +78,5 @@ Sözleşmeyi, bağlamayı ve istemciler tarafından sunucu üzerinde hizmet uç 
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElementCollection>
 - <xref:System.ServiceModel.Configuration.ClientSection.Endpoints%2A>
 - <xref:System.ServiceModel.Configuration.ChannelEndpointElement>
-- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF İstemci Yapılandırması](../../../wcf/feature-details/client-configuration.md)
+- [İstemciler](../../../wcf/feature-details/clients.md)

@@ -15,25 +15,25 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-ms.openlocfilehash: 78ad06107155408b2aca854a8251c21a24c6577a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbb4e5d7171c50c06f55706df90240ffa205ee73
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967616"
 ---
 # <a name="web-and-socket-permissions"></a>Web ve Yuva İzinleri
-Internet güvenliği kullanan uygulamalar için <xref:System.Net> ad alanı tarafından sağlanır <xref:System.Net.WebPermission> ve <xref:System.Net.SocketPermission> sınıfları. **WebPermission** sınıfı uygulama isteği verilerini Sağdan bir URI veya Internet'e bir URI sunmak için denetler. **SocketPermission** sınıfını kullanmak doğru uygulama denetimleri bir <xref:System.Net.Sockets.Socket> verileri bir yerel bağlantı noktasında kabul etmek için veya başka bir adreste bağlantı noktası numarası, konak temel alınarak bir aktarım protokolünü kullanarak uzak aygıtıyla bağlantı kurmayı ve Yuva Aktarımı Protokolü.  
+<xref:System.Net> Ad alanını kullanan uygulamalar için Internet güvenliği, <xref:System.Net.WebPermission> ve <xref:System.Net.SocketPermission> sınıfları tarafından sağlanır. **WebPermission** sınıfı bir URI 'den veri istemek veya bir URI 'yi Internet 'e sağlamak için bir uygulamanın hakkını denetler. **SocketPermission** sınıfı, bir uygulamanın, bir <xref:System.Net.Sockets.Socket> yerel bağlantı noktasındaki verileri kabul etmek veya başka bir adreste bir aktarım protokolü kullanarak uzak cihazlara iletişim kurmak için, ' ın ana bilgisayar, bağlantı noktası numarası ve aktarım protokolüne bağlı olarak kullanılması hakkını denetler yuvasının.  
   
- Kullandığınız hangi izin sınıfı uygulama türüne bağlıdır. Kullanan uygulamalar <xref:System.Net.WebRequest> ve alt öğelerini kullanması gereken **WebPermission** izinleri yönetmek için sınıf. Yuva düzeyinde erişim kullanan uygulamaların kullanması gereken **SocketPermission** izinleri yönetmek için sınıf.  
+ Kullandığınız izin sınıfı, uygulama türüne bağlıdır. Ve alt öğeleri kullanan uygulamaların, izinleri yönetmek için **WebPermission** sınıfını kullanması gerekir. <xref:System.Net.WebRequest> Yuva düzeyi erişim kullanan uygulamaların, izinleri yönetmek için **SocketPermission** sınıfını kullanması gerekir.  
   
- **WebPermission** ve **SocketPermission** iki izinleri tanımlayın: kabul edin ve bağlanın. Kabul etmek uygulamanın başka bir tarafın gelen bağlantının yanıt verme hakkı tanımaz. Connect uygulama başka bir tarafa bağlantı verme hakkı tanımaz.  
+ **WebPermission** ve **SocketPermission** iki izin tanımlar: Accept ve Connect. Accept, uygulamayı başka bir taraftan gelen bir bağlantıyı yanıtlamak için hak verir. Connect, uygulamaya başka bir tarafa bağlantı başlatma hakkı verir.  
   
- İçin **SocketPermission** örnekleri, bir uygulamanın yerel gelen bağlantıları kabul edebilir anlamına gelir kabul Aktarım adresi; bağlandıkları bir uygulamanın bazı Uzak (veya yerel) aktarım adresine bağlanabileceği anlamına gelir.  
+ **SocketPermission** örnekleri için kabul et, bir uygulamanın yerel bir aktarım adresinde gelen bağlantıları kabul edebileceği anlamına gelir; Connect, bir uygulamanın bir uzak (veya yerel) aktarım adresine bağlanabileceği anlamına gelir.  
   
- İçin **WebPermission** örnekleri, bir uygulama tarafından denetlenen URI verebilirsiniz anlamına gelir kabul **WebPermission** uygulama (olup bu URI'ye erişebileceği anlamına gelir; dünya bağlanma Uzak veya yerel).  
+ **WebPermission** örnekleri için kabul et, bir uygulamanın **WebPermission** tarafından denetlenen URI 'yi dünyaya dışa verebileceği anlamına gelir; bağlantı, bir uygulamanın bu URI 'ye erişebileceği anlamına gelir (uzak veya yerel olsun).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik](../../../docs/standard/security/index.md)
+- [Güvenlik](../../standard/security/index.md)
 - [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)

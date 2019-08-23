@@ -6,50 +6,50 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: 81be2c07f9fd3cc449527c389b0e6bf46182c382
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fa0de86ee59a48d0d64156b41ad2db794dff761
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968880"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI Otomasyon GridItem Denetim Düzeni Uygulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IGridItemProvider>, özellikler hakkında bilgiler dahil olmak üzere. Ek başvurular bağlantılar genel bakış sonunda listelenmiştir.  
+ Bu konu, özellikler hakkında bilgiler de dahil <xref:System.Windows.Automation.Provider.IGridItemProvider>olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları genel bakış sonunda listelenir.  
   
- <xref:System.Windows.Automation.GridItemPattern> Denetim düzeni uygulama kapsayıcılarının tek alt denetimler desteklemek için kullanılan <xref:System.Windows.Automation.Provider.IGridProvider>. Bu denetim düzeni uygulama denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Denetim stili, uygulayan <xref:System.Windows.Automation.Provider.IGridProvider>kapsayıcıların tek tek alt denetimlerini desteklemek için kullanılır. <xref:System.Windows.Automation.GridItemPattern> Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
- Uygularken <xref:System.Windows.Automation.Provider.IGridProvider>, aşağıdaki yönergeleri ve kuralları dikkat edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Uygulama <xref:System.Windows.Automation.Provider.IGridProvider>sırasında, aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- Kılavuz koordinatları (0, 0) koordinatlarına sahip üst sol hücre sıfır tabanlıdır.  
+- Izgara koordinatları, koordinatlara (0, 0) sahip üstteki sol hücreyle sıfır tabanlıdır.  
   
-- Birleştirilmiş hücreler rapor kendi <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> ve <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> özelliklerine UI Otomasyonu sağlayıcı tarafından tanımlandığı şekilde, temel alınan bağlantı hücreye bağlı. Genellikle, en üstteki ve soldaki satır veya sütun olacaktır.  
+- Birleştirilmiş hücreler, Kullanıcı arabirimi <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> Otomasyonu <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> sağlayıcısı tarafından tanımlanan temel alınan bağlantı hücrelerine göre ve özelliklerini raporlar. Genellikle, en üstteki ve en soldaki satır veya sütun olacaktır.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> birleştirme veya hücre bölme gibi kılavuzunun etkin işleme için sağlamaz.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider>, hücreleri birleştirme veya bölme gibi, kılavuzun etkin olarak düzenlenmesini sağlamaz.  
   
-- Denetimleri uygulayan <xref:System.Windows.Automation.Provider.IGridItemProvider> genellikle çevrilebilen (diğer bir deyişle UI Otomasyonu istemci bitişik denetimlere taşıyabilirsiniz) klavye kullanarak.  
+- Uygulayan <xref:System.Windows.Automation.Provider.IGridItemProvider> denetimler genellikle, klavyeyi kullanarak (bir UI Otomasyon istemcisi bitişik denetimlere taşınabilir) geçebilir.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
-## <a name="required-members-for-igriditemprovider"></a>Gerekli üyeleri IGridItemProvider için  
- Aşağıdaki özellikleri ve yöntemleri uygulamak için gerekli olan <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider için gerekli Üyeler  
+ Uygulamak <xref:System.Windows.Automation.Provider.IGridItemProvider>için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
-|Gerekli üyeleri|Üye türü|Notlar|  
+|Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Özellik|Yok.|  
   
- Bu denetim düzeni ilişkili yöntem ya da olaylar vardır.  
+ Bu denetim deseninin ilişkili yöntemleri veya olayları yok.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Bu denetim düzeni ilişkili hiçbir özel durum vardır.  
+ Bu denetim deseninin ilişkili özel durumları yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

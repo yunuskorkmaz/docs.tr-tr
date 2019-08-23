@@ -9,29 +9,29 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c456137f84c6fa657ba5a09727eae052a45376
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781283"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911684"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Nasıl yapılır: Bir Şekli Resim Dokusuyla Doldurma
-Kullanarak kapalı şekil bir doku ile doldurabilirsiniz <xref:System.Drawing.Image> sınıfı ve <xref:System.Drawing.TextureBrush> sınıfı.  
+Bir kapalı şekli, <xref:System.Drawing.Image> sınıfını <xref:System.Drawing.TextureBrush> ve sınıfını kullanarak bir dokuyla doldurabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir elips görüntü ile doldurur. Kod oluşturur bir <xref:System.Drawing.Image> nesnesi ve ardından, söz konusu adreslerinde <xref:System.Drawing.Image> nesne bağımsız değişkeni olarak bir <xref:System.Drawing.TextureBrush.%23ctor%2A> Oluşturucusu. Üçüncü deyim görüntüyü ölçeklendirir ve dördüncü deyimi yinelenen kopyaları Ölçeklendirilen görüntünün bir elips doldurur.  
+ Aşağıdaki örnek bir elipsi görüntüyle doldurur. Kod bir <xref:System.Drawing.Image> nesne oluşturur ve sonra bu <xref:System.Drawing.Image> nesnenin adresini bir <xref:System.Drawing.TextureBrush.%23ctor%2A> oluşturucuya bağımsız değişken olarak geçirir. Üçüncü ifade resmi ölçeklendirir ve dördüncü ifade, elipsi ölçeklenmiş görüntünün yinelenen kopyalarıyla doldurur.  
   
- Aşağıdaki kodda, <xref:System.Drawing.TextureBrush.Transform%2A> çizildiğinde önce görüntüye uygulanan dönüşüm özelliği içerir. Özgün resmin 640 piksel genişliği ve yüksekliği 480 piksel sahip olduğunu varsayın. Dönüştürme, görüntü yatay ve dikey ölçekleme değerleri ayarlayarak 75 × 75 küçültür.  
+ Aşağıdaki kodda, <xref:System.Drawing.TextureBrush.Transform%2A> özelliği, çizilmeden önce görüntüye uygulanan dönüştürmeyi içerir. Orijinal görüntünün genişliği 640 piksel ve 480 piksel yüksekliğinde olduğunu varsayalım. Dönüştürme, yatay ve dikey ölçekleme değerlerini ayarlayarak görüntüyü 75 × 75 ' e küçültür.  
   
 > [!NOTE]
->  Aşağıdaki örnekte, 75 x 75 görüntü boyutu olduğundan ve 150 × 250 elips boyutudur. Görüntü doldurma elipsin daha küçük olduğu için üç nokta ile görüntü döşenir. Görüntüyü yatay ve dikey olarak şekli sınırına kadar yinelenir, anlamına gelir döşeme ulaşıldı. Döşeme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir şekli bir görüntüyle döşeme](how-to-tile-a-shape-with-an-image.md).  
+> Aşağıdaki örnekte, görüntü boyutu 75 × 75 ve elips boyutu 150 × 250 ' dir. Görüntü, doldurdukları elipsin daha küçük olduğundan, elips görüntüyle döşenir. Döşeme, şeklin sınırına ulaşılana kadar görüntünün yatay ve dikey olarak yinelenme anlamına gelir. Döşeme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Görüntüyle](how-to-tile-a-shape-with-an-image.md)bir şekil döşeme.  
   
  [!code-csharp[System.Drawing.UsingABrush#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.Control.Paint> olay işleyicisinin bir parametresi olan gerektirir `e`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

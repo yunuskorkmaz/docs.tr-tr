@@ -2,22 +2,22 @@
 title: <transport> / <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af5852c3c7850f91686d50294c8846f85574e909
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788394"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918630"
 ---
-# <a name="transport-of-basichttpbinding"></a>\<Aktarım >, \<basicHttpBinding >
-HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
+# <a name="transport-of-basichttpbinding"></a>\<\<BasicHttpBinding > taşıma >
+HTTP taşıması için kimlik doğrulama parametrelerini denetleyen özellikleri tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<basicHttpBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,32 +46,32 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|clientCredentialType|-HTTP kimlik doğrulaması kullanarak istemci kimlik doğrulaması yapılırken kullanılacak kimlik bilgisi türünü belirtir.  Varsayılan, `None` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-Gelen istemci kimlik doğrulaması Ara sunucu kullanarak HTTP üzerinden bir etki alanı içinde gerçekleştirirken kullanılacak kimlik bilgisi türünü belirtir. Bu özniteliği yalnızca uygun olduğunda, `mode` üst öğenin özniteliğini `security` öğesi `Transport` veya `TransportCredentialsOnly`. Bu öznitelik türünde <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|Bölge|HTTP kimlik doğrulama şemasının Özet veya temel kimlik doğrulaması için kullanılan ölge belirten bir dize. Varsayılan değer boş bir dizedir.|  
-|policyEnforcement|Bu sabit listesi ne zaman belirtir <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zorlanmalıdır.<br /><br /> 1.  Hiçbir zaman – hiçbir zaman ilkenin uygulanıp (genişletilmiş koruma devre dışı).<br />2.  Yalnızca istemci genişletilmiş koruma destekliyorsa WhenSupported – ilke zorunlu tutulur.<br />3.  Her zaman – ilke her zaman uygulanmaz. Genişletilmiş Koruma desteklemeyen istemciler kimlik doğrulaması başarısız olur.|  
-|protectionScenario|Bu numaralandırma, ilke tarafından zorunlu koruma senaryosu belirtir.|  
+|clientCredentialType|-HTTP kimlik doğrulaması kullanarak istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir.  Varsayılan, `None` değeridir. Bu öznitelik türü <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|-HTTP üzerinden proxy kullanan bir etki alanı içinden istemci kimlik doğrulaması gerçekleştirirken kullanılacak kimlik bilgisinin türünü belirtir. Bu öznitelik yalnızca `mode` üst `security` öğenin `Transport` özniteliği veya `TransportCredentialsOnly`olduğunda geçerlidir. Bu öznitelik türü <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|bölgesindeki|Özet veya temel kimlik doğrulaması için HTTP kimlik doğrulama düzeni tarafından kullanılan bölgeyi belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|policyEnforcement|Bu numaralandırma, <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> ne zaman uygulanacağını belirtir.<br /><br /> 1.  Hiçbir süre – ilke hiçbir şekilde zorlanmaz (genişletilmiş koruma devre dışı bırakılır).<br />2.  WhenSupported – ilke yalnızca istemci genişletilmiş korumayı destekliyorsa zorlanır.<br />3.  Her zaman – ilke her zaman zorlanır. Genişletilmiş korumayı desteklemeyen istemciler kimlik doğrulaması yapamaz.|  
+|protectionScenario|Bu numaralandırma, ilke tarafından zorlanan koruma senaryosunu belirtir.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|İleti aktarımı sırasında sağlanmaz.|  
-|Temel|Temel kimlik doğrulaması belirtir.|  
-|Özet|Özet kimlik doğrulaması belirtir.|  
-|NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
-|Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
+|Yok.|Aktarım sırasında iletiler güvenli değildir.|  
+|Temel|Temel kimlik doğrulamasını belirtir.|  
+|Bilgisi|Özet kimlik doğrulamasını belirtir.|  
+|NT|Mümkünse NTLM kimlik doğrulamasını belirtir ve Windows kimlik doğrulaması başarısız olursa.|  
+|Windows|Windows tümleşik kimlik doğrulamasını belirtir.|  
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Yok.|-Sıradaki iletiler, aktarım sırasında sağlanmaz.|  
-|Temel|Temel kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
-|Özet|Özet kimlik doğrulaması, RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan belirtir: Temel ve Özet kimlik doğrulama.|  
-|NTLM|Mümkün olduğunda ve Windows kimlik doğrulaması başarısız olursa, NTLM kimlik doğrulaması belirtir.|  
-|Windows|Windows tümleşik kimlik doğrulaması belirtir.|  
-|Sertifika|Bir sertifika kullanarak bir istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca çalışır `Mode` üst öğenin özniteliğini `security` öğe taşıma imkanı kullanılarak ayarlanır ve TransportCredentialOnly için ayarlanmışsa çalışmaz.|  
+|Yok.|-İletiler aktarım sırasında güvenli değildir.|  
+|Temel|RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan temel kimlik doğrulamasını belirtir: Temel ve Özet kimlik doğrulaması.|  
+|Bilgisi|RFC 2617 – HTTP kimlik doğrulaması tarafından tanımlanan Özet kimlik doğrulamasını belirtir: Temel ve Özet kimlik doğrulaması.|  
+|NT|Mümkünse NTLM kimlik doğrulamasını belirtir ve Windows kimlik doğrulaması başarısız olursa.|  
+|Windows|Windows tümleşik kimlik doğrulamasını belirtir.|  
+|Sertifika|Bir sertifika kullanarak istemci kimlik doğrulaması gerçekleştirir. Bu seçenek yalnızca `Mode` üst `security` öğenin özniteliği Transport olarak ayarlandıysa ve yalnızca transportcredentialolarak ayarlandıysa işe yarar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -80,10 +80,10 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|İçin güvenlik özelliklerini tanımlar [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<Güvenlik >](security-of-basichttpbinding.md)|[ \<BasicHttpBinding >](basichttpbinding.md)için güvenlik yeteneklerini tanımlar.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, basit bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Varsayılan olarak, HTTP iletişimi için temel bağlamayı destekler.  
+ Aşağıdaki örnek, temel bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Varsayılan olarak, temel bağlama HTTP iletişimini destekler.  
   
 ```xml  
 <system.serviceModel>
@@ -123,8 +123,8 @@ HTTP taşıma için kimlik doğrulama parametrelerini denetleyen özellikleri ta
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

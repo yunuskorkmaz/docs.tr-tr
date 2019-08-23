@@ -2,32 +2,32 @@
 title: Taşıma Güvenliği ile BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: adc6d7c2a2784e0552587761a291e647239897d3
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8904c9460e6a54f092d60b4f735c8afe34466f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968736"
 ---
 # <a name="basicbinding-with-transport-security"></a>Taşıma Güvenliği ile BasicBinding
-Bu örnek, basit bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  
+Bu örnek, temel bağlama ile SSL Aktarım güvenliği kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`  
   
-## <a name="sample-details"></a>Örnek Ayrıntıları  
- Varsayılan olarak, HTTP iletişimi için temel bağlamayı destekler. Örnek temel bağlama için Aktarım güvenliği etkinleştirme gösterir. Örneği çalıştırmadan önce bir sertifika oluşturun ve Web sunucusu sertifikası Sihirbazı'nı kullanarak atamanız gerekir.  
+## <a name="sample-details"></a>Örnek Ayrıntılar  
+ Varsayılan olarak, temel bağlama HTTP iletişimini destekler. Örnek, temel bağlama için taşıma güvenliğinin nasıl etkinleştirileceğini gösterir. Örneği çalıştırmadan önce, bir sertifika oluşturmanız ve Web sunucusu Sertifika Sihirbazı 'Nı kullanarak atamanız gerekir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek program kodunda olarak aynıdır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmeti. Uç nokta tanımı ve bağlama yapılandırma dosyası ayarlarının tanımında güvenli iletişim sağlamak için aşağıdaki örnek yapılandırmada gösterildiği gibi değiştirilir.  
+ Örnekteki program kodu, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetindekilerle aynıdır. Yapılandırma dosyası ayarlarındaki uç nokta tanımı ve bağlama tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi güvenli iletişim sağlamak için değiştirilir.  
   
 ```xml  
 <system.serviceModel>  
@@ -54,7 +54,7 @@ Bu örnek, basit bağlama ile SSL Aktarım güvenliği kullanımını gösterir.
 </system.serviceModel>  
 ```  
   
- Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulan bir test sertifikası olduğundan, bir HTTPS erişmeye çalıştığınızda bir güvenlik uyarısı görünür: tarayıcınızda gibi adres https://localhost/servicemodelsamples/service.svc. Bir test sertifikası ile iş Windows Communication Foundation (WCF) istemci izin vermek için bazı ek kod güvenlik uyarıyı gizlemek için istemciye eklenir. Bu kod, eşlik eden sınıfı değil ve gerekli gerçek sertifikalar kullanıldığında.  
+ Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızda https://localhost/servicemodelsamples/service.svc bir https: adresine erişmeye çalıştığınızda bir güvenlik uyarısı görünür. Windows Communication Foundation (WCF) istemcisinin bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenir. Gerçek sertifikalar kullanılırken bu kod ve eşlik eden sınıf gerekli değildir.  
 
 ```csharp
 // This code is required only for test certificates such as those   
@@ -62,7 +62,7 @@ Bu örnek, basit bağlama ile SSL Aktarım güvenliği kullanımını gösterir.
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```
 
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -73,18 +73,18 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin:  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 'yi yükler:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Gerçekleştirdiğinizden emin olmak [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. [Internet Information Services (IIS) sunucu sertifikası yükleme yönergelerini](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizden emin olun.  
   
-4. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-5. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  

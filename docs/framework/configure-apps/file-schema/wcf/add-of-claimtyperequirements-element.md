@@ -1,23 +1,23 @@
 ---
-title: <add> ' ın <claimTypeRequirements> öğesi
+title: <add><claimTypeRequirements> öğesinin
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 249227c20dd1610cba088017ae39e84d6cb683d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701157"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920203"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<Ekle >, \<claimTypeRequirements > öğesi
-Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetleri, belirli bir talep türleri kümesini sahip olması gerekir gelen kimlik gereksinimleri belirtin.  
+# <a name="add-of-claimtyperequirements-element"></a>\<\<ClaimTypeRequirements > öğesi > ekleyin
+Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir. Örneğin, hizmetler, belirli bir talep türü kümesine sahip olması gereken gelen kimlik bilgileri için gereksinimleri durum.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<wsFederatedBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<İleti >  
+\<ileti >  
 \<claimTypeRequirements >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -36,8 +36,8 @@ Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağl
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ClaimType|Bir talep türünü tanımlayan URI. Örneğin, bir Web sitesine ait bir ürün satın almak için kullanıcının yeterli kredi sınırına geçerli bir kredi kartı sunması gerekir. Talep türü URI kredi kartı olacaktır.|  
-|isteğe bağlıdır|Bu isteğe bağlı bir talep olup olmadığını belirten bir Boole değeri. Bu öznitelik ayarlanan `false` bu gerekli bir talep ise.<br /><br /> Hizmet için bazı bilgiler ister, ancak gerekli olmadığı durumlarda bu özniteliği kullanabilirsiniz. Örneğin, kullanıcının ilk adını girmesini gerekiyorsa, ad ve adres son ancak telefon numarası isteğe bağlı olduğuna karar.|  
+|claimType|Bir talebin türünü tanımlayan URI. Örneğin, bir ürünün bir Web sitesinden satın alınması için, kullanıcının yeterli kredi limiti olan geçerli bir kredi kartı sunması gerekir. Talep türü kredi kartı URI 'SI olacaktır.|  
+|IsOptional|Bunun isteğe bağlı bir talep olup olmadığını belirten bir Boolean değer. Bu gerekli bir talep `false` ise, bu özniteliği olarak ayarlayın.<br /><br /> Hizmet bazı bilgileri istediğinde ancak bunu gerektirmiyorsa bu özniteliği kullanabilirsiniz. Örneğin, kullanıcının adını, soyadını ve adresini girmesini gerektiriyorsa, ancak telefon numarasının isteğe bağlı olduğuna karar verin.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -46,13 +46,13 @@ Birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağl
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Gerekli talep türlerinin koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Federe bir senaryoda, hizmetleri gereksinimlerine gelen kimlik bilgilerini belirtin. Örneğin, gelen kimlik bilgileri, belirli bir talep türleri kümesini sahip olması gerekir. Bu koleksiyondaki her öğe bir birleştirilmiş kimlik bilgisinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
+|[\<claimTypeRequirements >](claimtyperequirements-for-message.md)|Gerekli talep türlerinin koleksiyonunu belirtir. Her öğe türündedir <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu koleksiyondaki her öğe, bir Federasyon kimlik bilgilerinde görünmesi beklenen gerekli ve isteğe bağlı taleplerin türlerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Federe bir senaryoda, hizmetleri gereksinimlerine gelen kimlik bilgilerini belirtin. Örneğin, gelen kimlik bilgileri, belirli bir talep türleri kümesini sahip olması gerekir. Bu gereksinim, bir güvenlik ilkesinde bildirilen. Buna göre gereksinimlerini karşılayan kimlik Federasyon Hizmeti verebilir böylece istemci istekleri kimlik bilgileri, bir Federasyon Hizmeti (örneğin, CardSpace) bir belirteç isteğini (RequestSecurityToken) gereksinimleri koyar.  
+ Federasyon senaryosunda, hizmetler gelen kimlik bilgileri için gereksinimleri durum olarak alır. Örneğin, gelen kimlik bilgileri belirli bir talep türü kümesine sahip olmalıdır. Bu gereksinim bir güvenlik ilkesinde oluşturulur. İstemci Federasyon hizmetinden kimlik bilgilerini istediğinde (örneğin, CardSpace), Federasyon hizmetinin gereksinimleri karşılayan kimlik bilgilerini vermesi için gereksinimleri bir belirteç isteğine (RequestSecurityToken) koyar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma, güvenlik bağlama iki talep türü gereksinimleri ekler.  
+ Aşağıdaki yapılandırma, bir güvenlik bağlamaya iki talep türü gereksinimi ekler.  
   
 ```xml  
 <bindings>

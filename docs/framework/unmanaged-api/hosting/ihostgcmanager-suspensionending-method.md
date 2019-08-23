@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a815d1a5e8b40aee84ca2b9971ae4be7fb2c725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9f65f924b872195000f73bf29b267d1fc30b74f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937724"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding Yöntemi
-Konak, ortak dil çalışma zamanı (CLR) askıya alındığı için çöp toplama iş parçacığı üzerinde görevlerin yürütülmesi sürdürülmekte bildirir.  
+Ana bilgisayara ortak dil çalışma zamanının (CLR) bir çöp toplama işlemi için askıya alınmış iş parçacıklarında görevlerin yürütülmesini sürdürmesinin devam ettirdiğinizi bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,33 +37,33 @@ HRESULT SuspensionEnding (
   
 ## <a name="parameters"></a>Parametreler  
  `generation`  
- [in] Yalnızca tamamlama, çöp toplama oluşturma iş parçacığı içinden sürdürüyor.  
+ 'ndaki İş parçacığının devam etmesinden önce son kullanılan çöp toplama oluşturma.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`SuspensionEnding` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`SuspensionEnding`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR çağrıları `SuspensionEnding` sonra ana iş parçacığı yürütme sürdürülmekte bildirmek için bir atık toplama gerçekleştirir.  
+ CLR, bir `SuspensionEnding` atık toplama gerçekleştirdikten sonra, Konağı iş parçacığının yürütmeyi sürdürmesini bildirmek için çağırır.  
   
 > [!IMPORTANT]
->  Yöntem çağrısı yapılan iş parçacığı yeniden değil.  
+> Yöntem çağrısının yapıldığı iş parçacığını yeniden zamanlamayın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

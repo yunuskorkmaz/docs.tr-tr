@@ -2,22 +2,22 @@
 title: <connectionPoolSettings> / <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 787b50296b7ed4f6fdceef244a99dffffae63c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423165"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919394"
 ---
-# <a name="connectionpoolsettings-of-tcptransport"></a>\<Namedpipetransport >, \<Connectionpoolsettings >
+# <a name="connectionpoolsettings-of-tcptransport"></a>\<\<TcpTransport > ConnectionPoolSettings >
 TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
-\<Connectionpoolsettings >  
-\<Namedpipetransport >  
+\<tcpTransport >  
+\<connectionPoolSettings >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,10 +35,10 @@ TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`groupName`|Giden kanallar için kullanılan bağlantı havuzu adını tanımlayan bir dize. Akış modunda bağlantıları, bağlantı havuzu devre dışı anlamına gelir paylaşılmaz. Varsayılan bir "varsayılan" dizesidir. Belirli bir istemci bağlantılarını ayrı gruplar halinde ayırmak için bu değeri değiştirebilirsiniz.|  
-|`idleTimeout`|Bir pozitif <xref:System.TimeSpan> bağlantı boşta kalabileceği kesilmeden önce en uzun süreyi belirtir. Varsayılan değer 00:02:00 ' dir.|  
-|`leaseTimeout`|A <xref:System.TimeSpan> etkin bir bağlantı kapalı geçecek süreyi belirtir. Varsayılan değer 00:05:00 ' dir.<br /><br /> Bağlantı önbelleğe ve etkin aktarım sırasında değil döndürüldü sonra bir bağlantı kapalı. Yeni bağlantı kümesi tarafından önbellek sınıra kadar her uç nokta için gereken TCP taşıma tarafından kullanılan bağlantı önbelleği oluşturur `maxOutboundConnectionsPerEndpoint.`|  
-|`maxOutboundConnectionsPerEndpoint`|En fazla hizmet tarafından başlatılan bir uzak uç noktasına bağlantı sayısını belirten pozitif bir tamsayı. Sınırı aşan bağlantılar, sınırın altına bir alan kullanılabilir duruma gelene kadar kuyruğa alınır. `idleTimeout` Hangi bağlantıları kalır sıraya alınan bir özel durum önce süresini sınırlar. Varsayılan değer 10'dur.<br /><br /> Bu öznitelik istemcisi eşzamanlı etkin bağlantılar için belirli hizmet uç noktası sayısını sınırlar. Bu değer daha etkin istemci bağlantıları sağlayarak aşılıyorsa, hizmetin istemciye yanıt vermeyen görünebilir. Bu durumda, bu değeri belirli bir uç nokta için beklenen eşzamanlı istemci bağlantısına maksimum sayısını aşmaya ayarlanması.|  
+|`groupName`|Giden kanallar için kullanılan bağlantı havuzu adını tanımlayan bir dize. Akışlı modda bağlantılar paylaşılmaz, yani bağlantı havuzunun devre dışı bırakıldığı anlamına gelir. Varsayılan değer "default" dizesidir. Belirli bir istemcinin bağlantılarını ayrı gruplar halinde yalıtmak için bu değeri değiştirebilirsiniz.|  
+|`idleTimeout`|Bağlantı kesilmeden <xref:System.TimeSpan> önce bağlantının boşta kalabileceği en uzun süreyi belirten pozitif bir değer. Varsayılan değer 00:02:00 ' dir.|  
+|`leaseTimeout`|Etkin <xref:System.TimeSpan> bir bağlantının kapatıldığı zamanı belirten bir. Varsayılan değer 00:05:00 ' dir.<br /><br /> Bağlantı, etkin iletim sırasında değil bağlantı önbelleğine döndürülmeden sonra kapatılır. TCP aktarımı tarafından kullanılan bağlantı önbelleği, her bir uç nokta için gerektiği şekilde, tarafından ayarlanan önbellek sınırına kadar yeni bağlantılar oluşturur.`maxOutboundConnectionsPerEndpoint.`|  
+|`maxOutboundConnectionsPerEndpoint`|Hizmet tarafından başlatılan bir uzak uç noktaya bağlantı sayısını belirten pozitif bir tamsayı. Sınırın üzerindeki bağlantılar, sınırın altındaki bir boşluk kullanılabilir olana kadar sıraya alınır. Bir özel durum oluşturulmadan önce bağlantıların sırada kalacağı süreyi sınırlandırır.`idleTimeout` Varsayılan değer 10 ' dur.<br /><br /> Bu öznitelik, eşzamanlı etkin bağlantı sayısını istemciden belirli bir hizmet uç noktasına sınırlandırır. Bu değer, daha etkin istemci bağlantılarına sahip olacak şekilde aşılırsa, hizmet istemciye yanıt vermemeye başlayabilir. Bu durumda, bu değerin belirli bir uç nokta ile beklenen eşzamanlı istemci bağlantısı sayısı üst sınırını aşmayacak şekilde ayarlanması gerekir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,7 +47,7 @@ TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Adlandırılmış kanalları kullanarak ileti aktarılması bir kanal neden olan bir taşıma tanımlar.|  
+|[\<namedPipeTransport >](namedpipetransport.md)|Bir kanalın adlandırılmış kanallar kullanarak ileti aktarmasına neden olan bir taşıma tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -56,9 +56,9 @@ TCP aktarımı için ek bağlantı havuzu ayarlarını belirtir.
 - <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Taşımalar](../../../wcf/feature-details/transports.md)
+- [Taşıma Seçme](../../../wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

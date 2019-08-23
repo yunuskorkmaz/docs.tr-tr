@@ -8,74 +8,74 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 5a69605901eef7366c7a9ff9930e5f4ec6cece23
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f50f32ad65dd621dee3847d72b5a186afcc4a86d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878769"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969155"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid Denetimi (Windows Forms)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler `DataGrid` denetler; ancak, `DataGrid` denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Denetim yerini alır ve `DataGrid` `DataGrid` denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms `DataGrid` denetim tablosal verileri görüntüleme ve etkinleştirme güncelleştirmeleri veri kaynağına ADO.NET veri kümeleri, bir kullanıcı arabirimi sağlar.  
+ Windows Forms `DataGrid` denetim, ADO.NET veri kümelerine bir kullanıcı arabirimi sağlar, tablo verilerini görüntüler ve veri kaynağında güncelleştirmeleri etkinleştirir.  
   
- Zaman `DataGrid` denetimi, geçerli bir veri kaynağı için ayarlandığında, sütunları ve satırları şeklindeki veri temel oluşturma, denetim otomatik olarak doldurulur. `DataGrid` Denetimi, tek bir tablo veya tablo kümesini arasındaki hiyerarşik ilişkileri görüntülemek için kullanılabilir.  
+ `DataGrid` Denetim geçerli bir veri kaynağına ayarlandığında, denetim otomatik olarak doldurulur ve verilerin şekline göre sütunlar ve satırlar oluşturulur. Denetim `DataGrid` , bir tablo kümesi arasındaki tek bir tabloyu ya da hiyerarşik ilişkileri göstermek için kullanılabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataGrid Denetimine Genel Bakış](datagrid-control-overview-windows-forms.md)  
- Temel özellikleri açıklanmıştır `DataGrid` denetimi.  
+ `DataGrid` Denetimin temel özelliklerini açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGrid Tasarımcısı'nı kullanarak denetimine tablolar ve sütunlar ekleme](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
- Tablolar ve sütunlar ekleme işlemi açıklanmaktadır `DataGrid` Tasarımcısı'nı kullanarak denetim.  
+ [Nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
+ Tasarımcı kullanılarak `DataGrid` denetime nasıl tablo ve sütun ekleneceğini açıklar.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- Tablolar ve sütunlar ekleme işlemi açıklanmaktadır `DataGrid` programlı olarak denetleme.  
+ `DataGrid` Denetime program aracılığıyla nasıl tablo ve sütun ekleneceğini açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGrid denetimi Tasarımcısı'nı kullanarak bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
- Bir ADO.NET veri kümesi için bağlama işlemini açıklamaktadır `DataGrid` Tasarımcısı'nı kullanarak denetim.  
+ [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGrid denetimini bir veri kaynağına bağlama](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ ADO.NET veri kümesinin `DataGrid` Tasarımcıyı kullanarak denetime nasıl bağlanacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- Bir ADO.NET veri kümesi için bağlama işlemini açıklamaktadır `DataGrid` denetimi.  
+ [Nasıl yapılır: Windows Forms DataGrid denetimini bir veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ Bir ADO.NET veri kümesinin `DataGrid` denetime nasıl bağlanacağını açıklar.  
   
- [Nasıl yapılır: Windows Forms DataGrid denetiminde çalışma zamanında görüntülenen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)  
- Program verilerin nasıl değiştirilebileceğini açıklar `DataGrid` denetimi.  
+ [Nasıl yapılır: Windows Forms DataGrid denetimindeki çalışma zamanında görünen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)  
+ `DataGrid` Denetimdeki verilerin programlı olarak nasıl değiştirileceğini açıklar.  
   
- [Nasıl yapılır: Windows Forms Tasarımcısı'nı kullanarak DataGrid denetimi ile ana-Ayrıntılar listeleri oluşturma](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
- İki tablo, iki ayrı bir üst/alt ilişkisi birlikte bağlı görüntülenecek açıklar `DataGrid` Tasarımcısı'nı kullanarak denetler.  
+ [Nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGrid denetimiyle ana ayrıntılar listesi oluşturma](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ Bir üst/alt ilişkisiyle birbirine bağlı iki tablonun, Tasarımcıyı kullanarak iki ayrı `DataGrid` denetime nasıl görüntüleneceğini açıklar.  
   
- Nasıl yapılır: Windows Forms DataGrid denetimi ile ana-Ayrıntılar listeleri oluşturma  
- İki tablo, iki ayrı bir üst/alt ilişkisi birlikte bağlı görüntülenecek açıklar `DataGrid` kontrol eder.  
+ Nasıl yapılır: Windows Forms DataGrid denetimiyle ana ayrıntılar listesi oluşturma  
+ İki ayrı `DataGrid` denetimin üst/alt ilişkisiyle birbirine bağlı iki tablonun nasıl görüntüleneceğini açıklar.  
   
- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- Sütunları kaldırmayı açıklar `DataGrid` denetimi.  
+ [Nasıl yapılır: Windows Forms DataGrid denetimindeki sütunları silme veya gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ `DataGrid` Denetimdeki sütunların nasıl kaldırılacağını açıklar.  
   
- [Nasıl yapılır: Tasarımcı kullanarak Windows Forms DataGrid denetimini biçimlendirme](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
- Görünüm ilgili özelliklerini değiştirmek açıklar `DataGrid` Tasarımcısı'nı kullanarak denetim.  
+ [Nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGrid denetimini biçimlendirme](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
+ Tasarımcı kullanarak `DataGrid` denetimin ilişkili özelliklerinin nasıl değiştirileceğini açıklar.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetimini biçimlendirme](how-to-format-the-windows-forms-datagrid-control.md)  
- Görünüm ilgili özelliklerini değiştirmek açıklar `DataGrid` denetimi.  
+ `DataGrid` Denetimin görünümle ilgili özelliklerinin nasıl değiştirileceğini açıklar.  
   
  [Windows Forms DataGrid Denetimi için Klavye Kısayolları](keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
- Metinde gezinme kısayolları listeler `DataGrid` denetimi.  
+ `DataGrid` Denetimde gezinmek için kısayolları listeler.  
   
- [Nasıl yapılır: Windows Forms DataGrid denetiminde Tıklamalara yanıt verme](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
- Bir kullanıcının hangi hücresi içinde tıklamıştır olmadığının nasıl belireneceğini açıklar `DataGrid` denetimi.  
+ [Nasıl yapılır: Windows Forms DataGrid denetimindeki tıklamalarına yanıt verme](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
+ Kullanıcının `DataGrid` denetimde tıklamış olduğu hücreyi nasıl belirleyebileceğinizi açıklar.  
   
  [Nasıl yapılır: Windows Forms DataGrid denetimiyle girişi doğrulama](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
- Bağlı veri girişi doğrulama açıklar `DataGrid` denetimi.  
+ `DataGrid` Denetime bağlanacak veri kümesindeki girişin nasıl doğrulanacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGrid>  
- Genel bir bakış sağlar <xref:System.Windows.Forms.DataGrid> sınıfı.  
+ <xref:System.Windows.Forms.DataGrid> Sınıfına genel bir bakış sağlar.  
   
  <xref:System.Windows.Forms.DataGrid.DataSource%2A>  
- Bağlamak için bu özelliği kullanmayla ilgili ayrıntıları sağlayan <xref:System.Windows.Forms.DataGrid> veri denetimi.  
+ <xref:System.Windows.Forms.DataGrid> Denetimi verilere bağlamak için bu özelliği kullanma hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms Veri Bağlama](../windows-forms-data-binding.md)  
- Windows Forms veri bağlama konulara bağlantılar sağlar.  
+ Windows Forms veri bağlama hakkındaki konuların bağlantılarını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

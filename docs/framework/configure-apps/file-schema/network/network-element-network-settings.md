@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920968"
 ---
 # <a name="network-element-network-settings"></a>\<Ağ > öğesi (ağ ayarları)
 Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçeneklerini yapılandırır.  
@@ -70,7 +70,7 @@ Harici bir Basit Posta Aktarım Protokolü (SMTP) sunucusu için ağ seçenekler
  SMTP sunucusunda kimlik doğrulaması yapmak için temel kimlik doğrulaması (bir Kullanıcı adı ve parola) de kullanabilirsiniz. Bu seçeneği kullanmak için, belirtilen SMTP sunucusu için geçerli bir Kullanıcı adı ve parola belirtmeniz gerekir.  
   
 > [!NOTE]
->  Temel kimlik doğrulaması, `userName` ve `password` değerlerini sunucuya şifrelenmemiş şekilde gönderir. Ağ trafiğini izleyen herkes, kimlik bilgilerinizi görüntüleyip sunucuya bağlanmak için kullanabilir. Kerberos veya NT LAN Manager (NTLM) gibi daha güvenli bir kimlik doğrulama mekanizması kullanmayı göz önünde bulundurmanız gerekir. `defaultCredentials` İse`true`, sunucu bu protokolleri destekliyorsa Kerberos veya NTLM kullanılacaktır.  
+> Temel kimlik doğrulaması, `userName` ve `password` değerlerini sunucuya şifrelenmemiş şekilde gönderir. Ağ trafiğini izleyen herkes, kimlik bilgilerinizi görüntüleyip sunucuya bağlanmak için kullanabilir. Kerberos veya NT LAN Manager (NTLM) gibi daha güvenli bir kimlik doğrulama mekanizması kullanmayı göz önünde bulundurmanız gerekir. `defaultCredentials` İse`true`, sunucu bu protokolleri destekliyorsa Kerberos veya NTLM kullanılacaktır.  
   
  Temel kimlik doğrulaması ve varsayılan ağ kimlik bilgileri seçenekleri birbirini dışlıyor; `defaultCredentials` olarak`true` ayarlarsanız ve bir Kullanıcı adı ve parola belirtirseniz, varsayılan ağ kimlik bilgileri kullanılır ve temel kimlik doğrulama verileri yok sayılır.  
   

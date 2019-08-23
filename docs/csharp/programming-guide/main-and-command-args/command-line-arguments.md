@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 3264be0ae6159563ae19ac8aeb1bf3dc90ac68df
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 345840ad45add21c6088abd0fb45e2e591b7df21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588930"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923880"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 Yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak `Main` yöntemine bağımsız değişkenler gönderebilirsiniz:  
@@ -20,7 +20,7 @@ Yöntemi aşağıdaki yöntemlerden biriyle tanımlayarak `Main` yöntemine bağ
  [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]  
   
 > [!NOTE]
->  Bir Windows Forms uygulamasındaki `Main` yönteminde komut satırı bağımsız değişkenlerini etkinleştirmek için, program.cs `Main` içindeki imzasını el ile değiştirmeniz gerekir. Windows Forms Tasarımcısı tarafından oluşturulan kod, giriş parametresi olmadan `Main` bir oluşturur. Ayrıca, komut satırı <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> bağımsız <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> değişkenlerine konsol veya Windows uygulamasındaki herhangi bir noktadan erişmek için de kullanabilirsiniz.  
+> Bir Windows Forms uygulamasındaki `Main` yönteminde komut satırı bağımsız değişkenlerini etkinleştirmek için, program.cs `Main` içindeki imzasını el ile değiştirmeniz gerekir. Windows Forms Tasarımcısı tarafından oluşturulan kod, giriş parametresi olmadan `Main` bir oluşturur. Ayrıca, komut satırı <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> bağımsız <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> değişkenlerine konsol veya Windows uygulamasındaki herhangi bir noktadan erişmek için de kullanabilirsiniz.  
   
  `Main` Yönteminin parametresi, komut satırı bağımsız değişkenlerini <xref:System.String> temsil eden bir dizidir. Genellikle, `Length` özelliği test ederek bağımsız değişkenlerin mevcut olup olmadığını belirlersiniz. Örneğin:  
   
@@ -70,7 +70,7 @@ long num = Convert.ToInt64(s);
 5. Komut bu çıktıyı üretir:`The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
+> Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
   
  Komut satırı bağımsız değişkenlerinin nasıl kullanılacağı hakkında daha fazla örnek için bkz [. nasıl yapılır: Komut satırını](../concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)kullanarak derlemeleri oluşturun ve kullanın.  
   

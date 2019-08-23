@@ -2,18 +2,18 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a1d776730053cd6af3c930a33e13582a8906c4d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940393"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding >
-Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabilir ve bir Windows Communication Foundation (WCF) bağlaması içinde kullanıldığında yazılan için "ham" ikili içeriğin sağlar.  
+Düz metin XML, JavaScript Nesne Gösterimi (JSON) ileti kodlamaları ve "ham" ikili içeriğin Windows Communication Foundation (WCF) bağlamasında kullanıldığı zaman okunmalarını ve yazılmasını sağlar.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<webMessageEncoding >  
@@ -33,34 +33,34 @@ Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabi
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`maxReadPoolSize`|Yeni okuyucu ayırmadan aynı anda okunabilecek ileti miktarı. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Her iç kodlayıcılarda (yalnızca metin, JSON ve "ham") için 64 okuyucular varsayılandır.<br /><br /> Bu sayı arttıkça bellek tüketimi artırılması, ancak yenilerini oluşturmak yerine, önceden oluşturulan okuyucular havuzundan kullanmanız mümkün olduğundan, gelen iletilerin ani artışları ile dağıtılacak Kodlayıcı hazırlar.|  
-|`maxWritePoolSize`|Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti miktarı. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Her iç kodlayıcılarda (yalnızca metin, JSON ve "ham") için 16 yazıcılar varsayılandır.<br /><br /> Bu sayı arttıkça bellek tüketimi artırılması, ancak yenilerini oluşturmak yerine, önceden oluşturulan yazıcılar havuzundan kullanmanız mümkün olduğundan, giden iletilerin ani artışları ile uğraşmak için Kodlayıcı hazırlar.|  
-|`writeEncoding`|Bağlamadaki yayma iletileri için kullanılacak kodlama karakter kümesini belirtir. Geçerli değerler şunlardır:<br /><br /> -   UnicodeFffeTextEncoding: Unicode büyük Endian kodlaması.<br />-   Utf16TextEncoding: Unicode kodlaması.<br />-   Utf8TextEncoding: 8-bit kodlaması.<br /><br /> Utf8TextEncoding varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
+|`maxReadPoolSize`|Yeni okuyucu ayırmadan aynı anda okunabilecek ileti miktarı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Her iç kodlayıcıda (Text, JSON ve "RAW") her biri için varsayılan değer 64 okuyucudır.<br /><br /> Bu sayının artırılması, bellek tüketimini artırır, ancak yeni bir tane oluşturmak yerine zaten oluşturulmuş olan havuzdan okuyucuları kullanabildiğinden, Encoder 'ı gelen iletilerin ani patlayıcılarıyla uğraşmak üzere hazırlar.|  
+|`maxWritePoolSize`|Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti miktarı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Her iç kodlayıcıda (Text, JSON ve "RAW") her biri için varsayılan değer 16 yazıcıdır.<br /><br /> Bu sayının artırılması bellek tüketimini artırır, ancak yeni olanlar oluşturmak yerine zaten oluşturulan havuzdan yazarları kullanabilmesi nedeniyle kodlayıcıyı, giden iletilerin ani burdıklarıyla uğraşmak üzere hazırlar.|  
+|`writeEncoding`|Bağlamadaki ileti yayma için kullanılacak karakter kümesi kodlamasını belirtir. Geçerli değerler şunlardır:<br /><br /> -Unicodefffebir kodlama: Unicode Big endian kodlaması.<br />- Utf16TextEncoding: Unicode kodlaması.<br />- Utf8TextEncoding: 8 bit kodlama.<br /><br /> Varsayılan değer Utf8TextEncoding ' dir. Bu öznitelik türü <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kodlama bir ileti bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Bu işlemler, bir karakter kodlaması belirtimi gerektirir.  
+ Kodlama bir iletiyi bir bayt dizisine dönüştürme işlemidir. Kod çözme işlemi ters işlemdir. Bu süreçler bir karakter kodlamasının belirtimini gerektirir.  
   
- `webMessageEncoding` Düz metin XML ve JSON Kodlamalar ve "ham" ikili verileri işlemek için bir dizi iç kodlayıcılar için temsilci atayarak çalışır. Bu temsilci bileşik ileti Kodlayıcı tarafından gerçekleştirilir.  
+ `webMessageEncoding` Öğesi, düz metin XML ve JSON kodlamaları ve "ham" ikili verileri işlemek için bir dizi iç kodlayıcıya temsilci seçerek işe yarar. Bu temsili bir bileşik ileti Kodlayıcısı tarafından yapılır.  
   
- Bu bağlama öğesi ve kendi bileşik Kodlayıcı tarafından kullanılan SOAP ileti kullanmayan senaryolarda kodlama denetlemek için kullanılan `webHttpBinding` öğesi. Bu senaryolar, "Düz eski XML" (POX), temsili durum aktarımı (REST), gerçekten basit dağıtım (RSS) ve Atom dağıtım ve zaman uyumsuz JavaScript ve XML (AJAX) içerir. Bileşik ileti Kodlayıcı SOAP veya WS-Addressing desteklemez.  
+ Bu bağlama öğesi ve onun bileşik Kodlayıcı, `webHttpBinding` öğesi tarafından kullanılan soap mesajlaşma kullanmayan senaryolarda kodlamayı denetlemek için kullanılır. Bu senaryolar "düz eski XML" (POX), temsili durum aktarımı (REST), gerçekten basit dağıtım (RSS) ve Atom dağıtımı ve zaman uyumsuz JavaScript ve XML (AJAX) içerir. Bileşik ileti Kodlayıcısı SOAP veya WS-Addressing desteklemez.  
   
- Bağlama öğesi, bir yazma karakter kullanarak kodlaması ile yapılandırılabilir `writeEncoding` özniteliği. Sağlanan <xref:System.Text.Encoding> değeri JSON ve XML metinsel çalışmalarının yazma davranışını belirtir. Okuma sırasında tüm geçerli ileti kodlama ve metin kodlaması anladım.  
+ Bağlama öğesi `writeEncoding` özniteliği kullanılarak bir yazma karakteri kodlaması ile yapılandırılabilir. Sağlanan <xref:System.Text.Encoding> değer, JSON ve metin XML durumları için yazma davranışını belirtir. Okuma sırasında, herhangi bir geçerli ileti kodlaması ve metin kodlaması anlaşılmıştır.  
   
- `maxReadPoolSize` ve `maxWritePoolSize` okuyucular ve yazıcılar sırasıyla ayrılacak en fazla sayısını ayarlamak için de kullanılabilir. Varsayılan olarak, 64 okuyucular ve yazıcılar 16 ayrılır.  
+ `maxReadPoolSize``maxWritePoolSize` Ayrıca, sırasıyla ayrılacak en fazla okuyucu ve yazıcı sayısını ayarlamak için de kullanılabilir. Varsayılan olarak 64 okuyucular ve 16 yazıcı ayrılır.  
   
- Varsayılan karmaşıklığı kısıtlamaları, kullanılarak da ayarlanır [ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) öğesi bir sınıf hizmet (DOS) reddi karşı korumak için uç nokta işlemeyi bağlamak için ileti karmaşıklığı kullanmak için bu girişim saldırıları kaynaklar.  
+ Varsayılan Karmaşıklık kısıtlamaları Ayrıca, uç nokta işleme kaynaklarını bağlamak üzere ileti karmaşıklığı kullanmayı deneyen bir hizmet reddi (DOS) saldırısı sınıfına karşı korumak için, [ \<ReaderQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) öğesi kullanılarak da ayarlanır.  
   
 ## <a name="example"></a>Örnek  
   
@@ -77,9 +77,9 @@ Düz metin XML'i, JavaScript nesne gösterimi (JSON) ileti Kodlamalar ve okunabi
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [İleti Kodlama](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [İleti Kodlama](message-encoding.md)
+- [İleti Kodlayıcı Seçme](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

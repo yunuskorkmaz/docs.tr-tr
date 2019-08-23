@@ -2,16 +2,16 @@
 title: <issuerChannelBehaviors> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0e41b4f6d66cd4455c43dda7c77798553f2b58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929935"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > öğesi
+# <a name="issuerchannelbehaviors-element"></a>\<ıssuerchanneldavranışlar > öğesi
 
-Belirtilen hizmet belirteci Hizmetleri ile iletişim kurarken kullanılacak Windows Communication Foundation (WCF) istemci uç nokta davranışları (yapılandırmasında tanımlı) bir koleksiyonunu içerir. Tanımlı davranışları herhangi içeremez [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğeleri.
+Belirtilen hizmet belirteci hizmetleriyle iletişim kurulurken kullanılacak Windows Communication Foundation (WCF) istemci uç noktası davranışları (yapılandırmada tanımlanır) koleksiyonunu içerir. Tanımlı davranışlar herhangi bir [ \<ClientCredentials >](clientcredentials.md) öğesi içeremez.
 
 ```xml
 <system.ServiceModel>
@@ -44,17 +44,17 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Bir davranış koleksiyona ekler.|
+|[\<> Ekle](add-of-issuerchannelbehaviors.md)|Koleksiyona bir davranış ekler.|
 
 ### <a name="parent-elements"></a>Üst Öğeler
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<IssuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan özel simgeyi belirtir.|
+|[\<IssuedToken >](issuedtoken.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu herhangi bir öğesinin kullanımına davranışları (içeren davranışlar dışında `<clientCredentials>` öğeleri) bir hizmetle iletişim kurmak için kullanılması gerekir. Örneğin, bir [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) davranış öğesi dahil edilmesi gerekir.
+Bir hizmet ile iletişim kurmak için herhangi bir davranış ( `<clientCredentials>` öğeler içeren davranışlar dışında) kullanılması gereken bu öğeyi kullanın. Örneğin, bir [ \<DataContractSerializer >](datacontractserializer-element.md) Behavior öğesi eklenmelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -62,11 +62,11 @@ Bu herhangi bir öğesinin kullanımına davranışları (içeren davranışlar 
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [Kimlik Doğrulama ile Hizmet Kimliği](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Kimlik Doğrulama ile Hizmet Kimliği](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Nasıl yapılır: Federe Istemci oluşturma](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Yerel veren yapılandırma](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)

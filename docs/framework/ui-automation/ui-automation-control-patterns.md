@@ -7,18 +7,18 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: a4e3492b4ff4a0eb670d2f1e0c0f8daab269cb7b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4b4817c9b5cd59486c0ce5288d7860933405664
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982676"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941277"
 ---
 # <a name="ui-automation-control-patterns"></a>UI Otomasyon Denetim Düzenleri
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu bölümde nasıl kullanılacağı hakkında ayrıntılı bilgi [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] denetim desenleri.  
+ Bu bölüm, denetim düzenlerini kullanma [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [UI Otomasyonu Dock Denetim Desenini Uygulama](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  

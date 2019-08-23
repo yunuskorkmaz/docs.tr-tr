@@ -5,59 +5,59 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615307"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910486"
 ---
 # <a name="xslt-security-considerations"></a>XSLT Güvenlik Konuları
-XSLT dili, güç ve esneklik büyük ölçüde size özellikleri zengin sahiptir. Bu, dış kaynaklar tarafından kullanışlı olsa da yararlanılabilir birçok özellik içerir. XSLT güvenli bir şekilde kullanmak için XSLT kullanma ortaya çıkan güvenlik sorunlarını ve bu riskleri azaltmak için uygulayabileceğiniz temel stratejiler türlerini anlamanız gerekir.  
+XSLT dili, size harika bir güç ve esneklik sağlayan zengin bir özellik kümesine sahiptir. Bu, yararlı olsa da dış kaynaklar tarafından da yararlanılabilen birçok özellik içerir. XSLT 'yi güvenli bir şekilde kullanabilmek için XSLT kullanırken ortaya çıkan güvenlik sorunlarının türlerini ve bu riskleri azaltmak için kullanabileceğiniz temel stratejileri anlamanız gerekir.  
   
 ## <a name="xslt-extensions"></a>XSLT uzantıları  
- İki popüler XSLT stil sayfası komut dosyası ve uzantı nesneleri uzantılarıdır. Bu uzantılar, kod yürütmek için XSLT işlemci izin verin.  
+ En popüler iki XSLT uzantısı stil sayfası komut dosyası ve uzantı nesneleridir. Bu uzantılar XSLT işlemcisinin kod yürütmesine izin verir.  
   
-- Genişletme nesneleri için XSL Dönüşümleri programlama özellikleri ekleyin.  
+- Uzantı nesneleri, XSL dönüşümlerine programlama özellikleri ekler.  
   
-- Betikler, stil sayfası kullanarak gömülebilir `msxsl:script` uzantı öğesi.  
+- Betikler, `msxsl:script` uzantı öğesi kullanılarak stil sayfasına gömülebilir.  
   
-### <a name="extension-objects"></a>Genişletme nesneleri  
- Genişletme nesneleri kullanarak eklenir <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi. FullTrust izin kümesi, genişletme nesneleri desteklemek için gereklidir. Bu uzantı nesne kod yürütüldüğünde izinler yükselmesi gerçekleşmez sağlar. Arama girişimi <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi olmadan oluşturulan bir güvenlik özel durumu FullTrust izinlerini sonuçlanır.  
+### <a name="extension-objects"></a>Uzantı nesneleri  
+ Uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir. Uzantı nesnelerini desteklemek için FullTrust izin kümesi gereklidir. Bu, uzantı nesne kodu yürütüldüğünde izinlerin yükselmesinin gerçekleşmemesini sağlar. Metodu FullTrust izinleri olmadan <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> çağırmaya çalışmak, bir güvenlik özel durumunun oluşturulması durumunda oluşur.  
   
 ### <a name="style-sheet-scripts"></a>Stil sayfası betikleri  
- Betikler, stil sayfası kullanılarak içinde gömülebilir `msxsl:script` uzantı öğesi. Betik desteği üzerinde isteğe bağlı bir özellik olan <xref:System.Xml.Xsl.XslCompiledTransform> varsayılan olarak devre dışıdır sınıfı. Komut dosyası kullanılarak etkinleştirilebilir ayarlayarak <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> özelliğini `true` ve geçirerek <xref:System.Xml.Xsl.XsltSettings> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi.  
+ Betikler `msxsl:script` uzantı öğesi kullanılarak bir stil sayfasına gömülebilir. Komut dosyası desteği varsayılan olarak devre dışı bırakılan <xref:System.Xml.Xsl.XslCompiledTransform> sınıf üzerinde isteğe bağlı bir özelliktir. Komut dosyası, <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> özelliği olarak `true` ayarlanarak ve <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemine <xref:System.Xml.Xsl.XsltSettings> nesnesine geçirerek etkinleştirilebilir.  
   
 #### <a name="guidelines"></a>Kuralları  
- Stil sayfası güvenilir bir kaynaktan geldiğinden, yalnızca komut dosyasını etkinleştirin. Stil sayfası kaynak doğrulanamıyor veya stil sayfası, güvenilen bir kaynaktan geliyor değil, geçirin `null` XSLT ayarları bağımsız değişkeni.  
+ Komut dosyasını yalnızca stil sayfası güvenilen bir kaynaktan geldiğinde etkinleştirin. Stil sayfasının kaynağını doğrulayamezseniz veya stil sayfası güvenilir bir kaynaktan geliyorsa XSLT ayarları bağımsız değişkenine geçiş `null` yapın.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
- XSLT dili gibi özelliklere sahip `xsl:import`, `xsl:include`, veya `document()` işlemci gereken yere URI başvuruları çözümlemek için işlevi. <xref:System.Xml.XmlResolver> Sınıfı dış kaynakları çözümleme için kullanılır. Dış Kaynaklar aşağıdaki iki durumda da çözülmesi gerekebilir:  
+ XSLT dili, `xsl:import` `xsl:include`, veya `document()` gibi özelliklere sahiptir; burada işlemci, URI başvurularını çözümlemek için gereklidir. Sınıfı <xref:System.Xml.XmlResolver> , dış kaynakları çözümlemek için kullanılır. Dış kaynakların aşağıdaki iki durumda çözümlenmesi gerekebilir:  
   
-- Bir stil sayfası derlenirken <xref:System.Xml.XmlResolver> için kullanılan `xsl:import` ve `xsl:include` çözümleme.  
+- Bir stil sayfası <xref:System.Xml.XmlResolver> derlerken, ve `xsl:include` çözümü için `xsl:import` kullanılır.  
   
-- Dönüştürme yürütülürken <xref:System.Xml.XmlResolver> çözümlemek için kullanılan `document()` işlevi.  
+- Dönüşüm <xref:System.Xml.XmlResolver> yürütürken `document()` işlevi çözümlemek için kullanılır.  
   
     > [!NOTE]
-    >  `document()` İşlevi varsayılan olarak devre dışıdır üzerinde <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Bu özellik, ayarlayarak etkinleştirilebilir <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> özelliğini `true` ve geçirerek <xref:System.Xml.Xsl.XsltSettings> nesnesini <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi.  
+    > İşlev, <xref:System.Xml.Xsl.XslCompiledTransform> sınıfında varsayılan olarak devre dışıdır. `document()` Bu özellik, <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> özelliği olarak `true` ayarlanarak ve <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemine <xref:System.Xml.Xsl.XsltSettings> nesnesine geçirerek etkinleştirilebilir.  
   
- <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> Ve <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> yöntemleri, her dahil kabul eden aşırı yüklemeler bir <xref:System.Xml.XmlResolver> bağımsız değişkenlerinden biri olarak. Varsa bir <xref:System.Xml.XmlResolver> belirtilmezse, varsayılan <xref:System.Xml.XmlUrlResolver> ile herhangi bir kimlik bilgisi kullanılır.  
+ Ve yöntemlerinin her biri bağımsız değişkenlerinden biri <xref:System.Xml.XmlResolver> olarak kabul eden aşırı yüklemeleri içerir. <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> Belirtilmemişse, kimlik bilgileri olmayan bir varsayılan <xref:System.Xml.XmlUrlResolver> kullanılır. <xref:System.Xml.XmlResolver>  
   
 #### <a name="guidelines"></a>Kuralları  
- Etkinleştirme `document()` stil sayfası güvenilir bir kaynaktan geldiğinde işlev.  
+ `document()` İşlevi yalnızca, stil sayfası güvenilir bir kaynaktan geldiğinde etkinleştirin.  
   
- Aşağıdaki listede, ne zaman belirtmek isteyebilirsiniz açıklar bir <xref:System.Xml.XmlResolver> nesnesi:  
+ Aşağıdaki listede bir <xref:System.Xml.XmlResolver> nesne belirtmek isteyebileceğiniz zaman açıklanmaktadır:  
   
-- XSLT işlemi bir ağ kaynağına erişmesi gerekiyorsa, kimlik doğrulama gerektiren, kullanabileceğiniz bir <xref:System.Xml.XmlResolver> gerekli kimlik bilgileriyle.  
+- XSLT işleminin kimlik doğrulaması gerektiren bir ağ kaynağına erişmesi gerekiyorsa, gerekli kimlik bilgileriyle bir <xref:System.Xml.XmlResolver> kullanabilirsiniz.  
   
-- XSLT işlemi erişebildiği kaynakları kısıtlamak istiyorsanız, kullanabileceğiniz bir <xref:System.Xml.XmlSecureResolver> ile doğru izni ayarlayın. Kullanım <xref:System.Xml.XmlSecureResolver> değil denetleyen veya güvenilmeyen olan bir kaynak açmanız gerekirse sınıfı.  
+- XSLT işleminin erişebileceği kaynakları kısıtlamak istiyorsanız, doğru izin kümesiyle bir <xref:System.Xml.XmlSecureResolver> kullanabilirsiniz. Denetlediğiniz veya güvenilmeyen bir kaynağı açmanız gerekiyorsa sınıfınıkullanın.<xref:System.Xml.XmlSecureResolver>  
   
-- Davranışını özelleştirmek istiyorsanız, kendi uygulayabileceğiniz <xref:System.Xml.XmlResolver> sınıfı ve kaynakları çözümlemek için kullanın.  
+- Davranışı özelleştirmek istiyorsanız kendi <xref:System.Xml.XmlResolver> sınıfınızı uygulayabilir ve kaynakları çözümlemek için kullanabilirsiniz.  
   
-- Belirtebileceğiniz hiçbir dış kaynaklara erişildiğini sağlamak istiyorsanız, `null` için <xref:System.Xml.XmlResolver> bağımsız değişken.  
+- Hiçbir dış kaynağa erişilmemesini sağlamak istiyorsanız `null` <xref:System.Xml.XmlResolver> bağımsız değişkeni için belirtebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT İşleme Sırasında Dış Kaynakları Çözümleme](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)
+- [Kod erişim güvenliği](../../../../docs/framework/misc/code-access-security.md)

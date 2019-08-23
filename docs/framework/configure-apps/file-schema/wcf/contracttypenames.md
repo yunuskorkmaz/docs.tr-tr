@@ -2,15 +2,15 @@
 title: <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 5ec5efc6-87f8-4160-9be0-dcd2e01df3df
-ms.openlocfilehash: b1cec9272a1de029ab72ea4d5f36c74630e5b93a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12f9d4eca02ae3b306646826667c4eafef51a95c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919373"
 ---
 # <a name="contracttypenames"></a>\<contractTypeNames >
-Aranan hizmetleri sözleşmesi adlarıdır, sözleşme türü adları ve genellikle bir hizmet için ararken kullanılan ölçütü listesi belirten bir yapılandırma bölümü. Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen gönderecektir. Windows Communication Foundation (WCF), bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
+Aranan hizmetlerin sözleşme adları ve genellikle bir hizmet ararken kullanılan ölçütler olan anlaşma türü adlarının listesini belirten bir yapılandırma bölümü. Birden fazla sözleşme adı belirtilmişse, yalnızca tüm sözleşmelerle eşleşen hizmet uç noktaları yanıtlanacak. Windows Communication Foundation (WCF) ' de bir uç noktanın yalnızca bir sözleşmeyi destekleyebileceğini unutmayın.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -52,13 +52,13 @@ Aranan hizmetleri sözleşmesi adlarıdır, sözleşme türü adları ve genelli
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Sözleşme türü adı genellikle bir hizmet için ararken kullanılan ölçüt kümesine başvuran bir özelliktir.|  
+|[\<> Ekle](contracttypenames.md)|Anlaşma türü adı, genellikle bir hizmeti ararken kullanılan ölçüt kümesini ifade eden bir özelliktir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<findCriteria >](../../../../../docs/framework/configure-apps/file-schema/wcf/findcriteria.md)|Keşif hizmeti için bir istemci uygulaması tarafından aramak için kullanılan ölçüt kümesi sağlayan bir yapılandırma öğesi. Ölçüt, arama ölçütleri (aradığınız hangi hizmetlerin belirtme) toplanabilir ve sonlandırma ölçütünü (ne kadar süreyle arama son) bulun.|  
+|[\<findCriteria >](findcriteria.md)|Bir bulma hizmetini aramak için bir istemci uygulaması tarafından kullanılan bir ölçüt kümesi sağlayan yapılandırma öğesi. Ölçütler, arama ölçütlerine göre gruplandırılabilir (hangi hizmetleri aradığınızı belirtebilir) ve sonlandırma ölçütlerini (aramanın en son ne kadar süreyle) bulabilirsiniz.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

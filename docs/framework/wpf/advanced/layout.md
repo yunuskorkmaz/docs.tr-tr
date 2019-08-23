@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666761"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918292"
 ---
 # <a name="layout"></a>Düzen
 Bu konuda Windows Presentation Foundation (WPF) Düzen sistemi açıklanmaktadır. Düzen hesaplamalarının nasıl ve ne zaman gerçekleşeceğini anlamak, WPF 'de Kullanıcı arabirimleri oluşturmak için önemlidir.  
@@ -89,7 +89,7 @@ Bu konuda Windows Presentation Foundation (WPF) Düzen sistemi açıklanmaktadı
  İkinci olarak, üzerinde <xref:System.Windows.FrameworkElement> tanımlanan çerçeve özellikleri işlenir ve bu `constraintSize`değerini etkiler. Bu özellikler genellikle,,, ve <xref:System.Windows.UIElement> <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.FrameworkElement.Margin%2A>gibitemeldekiboyut özelliklerinianlatmaktadır<xref:System.Windows.FrameworkElement.Style%2A>. Bu özelliklerin her biri, öğesini göstermek için gereken alanı değiştirebilir. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>daha sonra parametresi `constraintSize` olarak çağırılır.  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkElement.Height%2A> Ve ve özelliklerinin özellikleri <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> arasında<xref:System.Windows.FrameworkElement.ActualWidth%2A>bir farklılık vardır. Örneğin, <xref:System.Windows.FrameworkElement.ActualHeight%2A> özellik diğer yükseklik girdilerine ve Düzen sistemine göre hesaplanan bir değerdir. Değer, gerçek bir işleme geçişine göre düzen sisteminin kendisi tarafından ayarlanır ve bu nedenle, örneğin <xref:System.Windows.FrameworkElement.Height%2A>, giriş değişikliğinin temelini oluşturan özellikler kümesi değeri biraz daha geride olabilir.  
+> <xref:System.Windows.FrameworkElement.Height%2A> Ve ve özelliklerinin özellikleri <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualHeight%2A> arasında<xref:System.Windows.FrameworkElement.ActualWidth%2A>bir farklılık vardır. Örneğin, <xref:System.Windows.FrameworkElement.ActualHeight%2A> özellik diğer yükseklik girdilerine ve Düzen sistemine göre hesaplanan bir değerdir. Değer, gerçek bir işleme geçişine göre düzen sisteminin kendisi tarafından ayarlanır ve bu nedenle, örneğin <xref:System.Windows.FrameworkElement.Height%2A>, giriş değişikliğinin temelini oluşturan özellikler kümesi değeri biraz daha geride olabilir.  
 >   
 >  Hesaplanan <xref:System.Windows.FrameworkElement.ActualHeight%2A> bir değer olduğundan, Düzen sistemine göre çeşitli işlemlere neden olarak, üzerinde birden fazla veya artımlı bildirilen değişiklik olduğunu bilmelisiniz. Düzen sistemi, alt öğeler için gerekli ölçü alanını, üst öğeye göre kısıtlamaları ve bu şekilde hesaplamayı gösterebilir.  
   

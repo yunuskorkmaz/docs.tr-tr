@@ -8,31 +8,31 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6010d52750b20c07db51917621f8643e9d9b47d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968599"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Nasıl yapılır: Arabelleğe Alınan Grafikleri Elle Yönetme
-Daha gelişmiş çift arabelleğe alma senaryolar için .NET Framework sınıfları kendi iki kez arabelleğe alma mantığını uygulamak için kullanabilirsiniz. Ayırma ve tek bir grafik arabellekleri yönetmekten sorumlu bir sınıfı <xref:System.Drawing.BufferedGraphicsContext> sınıfı. Her uygulamanın kendi varsayılan sahip <xref:System.Drawing.BufferedGraphicsContext> , yöneten tüm çift bu uygulama için arabelleğe varsayılan. Çağırarak bu örneğe bir başvuru alabilirsiniz <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
+Daha gelişmiş çift arabelleğe alma senaryolarında, kendi çift arabelleğe alma mantığınızı uygulamak için .NET Framework sınıflarını kullanabilirsiniz. Tek grafik arabelleklerinin <xref:System.Drawing.BufferedGraphicsContext> dağıtılmasından ve yönetiminden sorumlu sınıf, sınıftır. Her uygulamanın, bu uygulama için <xref:System.Drawing.BufferedGraphicsContext> varsayılan iki arabelleğe alma işleminin tümünü yöneten kendi varsayılanı vardır. Çağırarak, <xref:System.Drawing.BufferedGraphicsManager.Current%2A>bu örneğe bir başvuru alabilirsiniz.  
   
-### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>BufferedGraphicsContext varsayılan bir başvuru almak için  
+### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Varsayılan BufferedGraphicsContext öğesine bir başvuru almak için  
   
-- Ayarlama <xref:System.Drawing.BufferedGraphicsManager.Current%2A> özelliği, aşağıdaki kod örneğinde gösterildiği gibi.  
+- Aşağıdaki kod örneğinde gösterildiği gibi özelliğiayarlayın.<xref:System.Drawing.BufferedGraphicsManager.Current%2A>  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#11)]  
   
     > [!NOTE]
-    >  Çağrı gerekmez `Dispose` metodunda <xref:System.Drawing.BufferedGraphicsContext> , alırsınız başvuru <xref:System.Drawing.BufferedGraphicsManager> sınıfı. <xref:System.Drawing.BufferedGraphicsManager> Tüm bellek ayırma ve dağıtım için varsayılan işleme <xref:System.Drawing.BufferedGraphicsContext> örnekleri.  
+    > Sınıfından aldığınız <xref:System.Drawing.BufferedGraphicsContext> `Dispose` başvuruüzerindeyönteminiçağırmanızgerekmez<xref:System.Drawing.BufferedGraphicsManager> . , <xref:System.Drawing.BufferedGraphicsManager> Varsayılan<xref:System.Drawing.BufferedGraphicsContext> örnekler için tüm bellek ayırmayı ve dağıtımını işler.  
   
-     Animasyon gibi grafik açısından yoğun uygulamalar için bazen bir adanmış kullanarak performansı artırabilir <xref:System.Drawing.BufferedGraphicsContext> yerine <xref:System.Drawing.BufferedGraphicsContext> tarafından sağlanan <xref:System.Drawing.BufferedGraphicsManager>. Bu, oluşturmak ve uygulama tarafından kullanılan bellek daha büyük olacaktır ancak uygulamanız ile ilişkili tüm diğer arabelleğe alınan grafikleri yönetme performans yükü olmaksızın grafik arabellekleri tek tek yönetmek sağlar.  
+     Animasyon gibi grafiksel olarak yoğun uygulamalarda, bazen tarafından <xref:System.Drawing.BufferedGraphicsContext> <xref:System.Drawing.BufferedGraphicsContext> <xref:System.Drawing.BufferedGraphicsManager>sağlanması yerine adanmış bir kullanarak performansı artırabilirsiniz. Bu, uygulama tarafından tüketilen bellek daha büyük olsa da, uygulama ile ilişkili diğer tüm arabelleğe alınmış grafiklerin yönetilmesi için performans yükünü tek tek oluşturup yönetmenize olanak sağlar.  
   
-### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Adanmış BufferedGraphicsContext oluşturmak için  
+### <a name="to-create-a-dedicated-bufferedgraphicscontext"></a>Adanmış bir BufferedGraphicsContext oluşturmak için  
   
-- Bildirme ve yeni bir örneğini oluşturma <xref:System.Drawing.BufferedGraphicsContext> , aşağıdaki kod örneğinde gösterildiği gibi sınıf.  
+- Aşağıdaki kod örneğinde gösterildiği gibi, <xref:System.Drawing.BufferedGraphicsContext> sınıfının yeni bir örneğini bildirin ve oluşturun.  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
@@ -41,4 +41,4 @@ Daha gelişmiş çift arabelleğe alma senaryolar için .NET Framework sınıfla
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [İki Kez Arabelleğe Alınan Grafikler](double-buffered-graphics.md)
-- [Nasıl yapılır: Arabelleğe alınan grafikleri elle işleme](how-to-manually-render-buffered-graphics.md)
+- [Nasıl yapılır: Arabelleğe alınan grafikleri elle Işleme](how-to-manually-render-buffered-graphics.md)

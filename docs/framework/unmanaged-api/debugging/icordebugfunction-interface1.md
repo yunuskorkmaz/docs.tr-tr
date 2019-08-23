@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550b85474c1ccd7e125549e86df906439caf410e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae65c59efe1d925b5e058e8664d1e093fdfec875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621491"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917200"
 ---
 # <a name="icordebugfunction-interface"></a>ICorDebugFunction Arabirimi
 
@@ -31,35 +31,35 @@ Yönetilen bir işlevi veya yöntemi temsil eder.
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateBreakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Bu işlevin başında bir kesme noktası oluşturur.|  
-|[GetClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Bu işlev bir üyesi, sınıfın temsil ettiği bir Icordebugclass nesnesini alır.|  
-|[GetCurrentVersionNumber Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Bu işleve yapılan en son düzenleme sürüm numarasını alır.|  
-|[GetILCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Bu işlev için Microsoft Ara dil (MSIL) kodu alır.|  
-|[GetLocalVarSigToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Yerel değişken bu tarafından temsil edilen işlev imzası için meta veri belirteci alır `ICorDebugFunction` örneği.|  
-|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Bu işlev tanımlandığı modül alır.|  
-|[GetNativeCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Yerel kod için bu işlevi alır.|  
-|[GetToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Meta veriler, bu işlev için belirteç alır.|  
+|[CreateBreakpoint Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-createbreakpoint-method.md)|Bu işlevin başlangıcında bir kesme noktası oluşturur.|  
+|[GetClass Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getclass-method.md)|Bu işlevin üyesi olduğu sınıfı temsil eden bir ICorDebugClass nesnesi alır.|  
+|[GetCurrentVersionNumber Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)|Bu işlevde yapılan en son düzenlemenin sürüm numarasını alır.|  
+|[GetILCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getilcode-method.md)|Bu işlev için Microsoft ara dili (MSIL) kodunu alır.|  
+|[GetLocalVarSigToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getlocalvarsigtoken-method.md)|Bu `ICorDebugFunction` örnekle temsil edilen işlevin yerel değişken imzası için meta veri belirtecini alır.|  
+|[GetModule Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Bu işlevin tanımlandığı modülü alır.|  
+|[GetNativeCode Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getnativecode-method.md)|Bu işlev için yerel kodu alır.|  
+|[GetToken Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-gettoken-method.md)|Bu işlev için meta veri belirtecini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugFunction` Arabirimi, genel tür parametreleri olan bir işlevi temsil etmiyor. Örneğin, bir `ICorDebugFunction` örneği gösterir `Func<T>` ama `Func<string>`. Çağrı [Icordebugılframe2::enumeratetypeparameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) genel tür parametreleri alınamıyor.  
+ Arabirim `ICorDebugFunction` , genel tür parametrelerine sahip bir işlevi temsil etmiyor. Örneğin, bir `ICorDebugFunction` örnek temsil eder `Func<T>` ancak değil `Func<string>`. Genel tür parametrelerini almak için [ICorDebugILFrame2:: EnumerateTypeParameters](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md) çağırın.  
   
- Bir yöntemin meta veri belirteci arasındaki ilişkiyi `mdMethodDef`ve bir yöntemin `ICorDebugFunction` Düzenle ve devam et izin verilip işlev üzerinde nesne bağlıdır:  
+ Yöntemin meta veri belirteci, `mdMethodDef`ve `ICorDebugFunction` yöntemin nesnesi arasındaki ilişki, işlevde Düzenle ve devam et iznine sahip olup olmadığına bağlıdır:  
   
-- Düzenle ve devam et izin verilmez, işlev arasında bire bir ilişki var. `ICorDebugFunction` nesne ve `mdMethodDef` belirteci. Diğer bir deyişle, bir işleve sahip `ICorDebugFunction` nesnesi ve bir `mdMethodDef` belirteci.  
+- İşlevde Düzenle ve devam et izin verilmiyorsa, `ICorDebugFunction` nesne `mdMethodDef` ve belirteç arasında bire bir ilişki bulunur. Diğer bir deyişle, işlevde bir `ICorDebugFunction` nesne ve bir `mdMethodDef` belirteç vardır.  
   
-- Düzenle ve devam et izin veriliyorsa işlev arasında çok bir ilişkinin var. `ICorDebugFunction` nesne ve `mdMethodDef` belirteci. İşlevin birçok örneğini diğer bir deyişle, olabilir `ICorDebugFunction`, işlevin her sürüm için ancak tek `mdMethodDef` belirteci.  
+- İşlevde Düzenle ve devam et izni varsa, `ICorDebugFunction` nesne `mdMethodDef` ve belirteç arasında çoktan bire bir ilişki bulunur. Diğer bir deyişle, işlev işlevin her sürümü için bir `ICorDebugFunction`tane olmak üzere birçok örneğine, ancak yalnızca bir `mdMethodDef` belirtece sahip olabilir.  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:**  CorGuids.lib  
+ **Kitaplığı**  Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,19 +2,19 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c323a65ace332d2ecd1e03330dddbe7ca17ff5bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701001"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926364"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions >
-Bu bölümde bir makineden özel bağlama öğesinin kullanımını etkinleştirir veya uygulama yapılandırma dosyası. Özel bağlama öğesini kullanarak bu koleksiyona ekleyebilirsiniz `add` anahtar sözcüğü ve ayarı `type` bir bağlama öğesi uzantısı için bir öğenin özniteliği hem de `name` özniteliği için özel bir bağlama öğesi.  
+Bu bölüm, bir makineden ya da uygulama yapılandırma dosyasından özel bağlama öğesinin kullanımını sunar. `add` Anahtar sözcüğünü kullanarak bu koleksiyona özel bir bağlama öğesi ekleyebilir ve öğesinin `type` özniteliğini bir bağlama öğesi uzantısına `name` ve özniteliği de özel bağlama öğesine ayarlayabilirsiniz.  
   
- Bağlama uzantıları, özel bağlamalar bir parçası olarak kullanmak için kullanıcı tanımlı bağlama öğeleri oluşturmak kullanıcının etkinleştirir. Programlı olarak soyut sınıf uygulayan bir tür bir bağlama uzantısı olan <xref:System.ServiceModel.Channels.BindingElement>. Yapılandırma dosyasında `bindingElementExtensions` bölümü, bir uzantı öğesi tanımlamak için kullanılır.  
+ Bağlama uzantıları, kullanıcının özel bağlamaların parçası olarak kullanılmak üzere Kullanıcı tanımlı bağlama öğeleri oluşturmasını sağlar. Programlı olarak, bağlama uzantısı soyut sınıfı <xref:System.ServiceModel.Channels.BindingElement>uygulayan bir türdür. Yapılandırma dosyasında, `bindingElementExtensions` bölümü bir uzantı öğesi tanımlamak için kullanılır.  
   
- Aşağıdaki örnekte `add` öğesi hem de `name` özniteliği bir bağlama uzantının ekleneceği `bindingElementExtensions` yapılandırma dosyasının.  
+ Aşağıdaki örnek, yapılandırma dosyasının `add` `bindingElementExtensions` bölümüne bir bağlama uzantısı eklemek için `name` öğesini ve özniteliğini kullanır.  
   
 ```xml  
 <system.serviceModel>
@@ -28,9 +28,9 @@ Bu bölümde bir makineden özel bağlama öğesinin kullanımını etkinleştir
 </system.serviceModel>
 ```  
   
- Yapılandırma yeteneklerini öğesine eklemek için yazmak ve kaydetmek kullanıcı gerekli bir `bindingElementExtensionSection` öğesi. Bunun hakkında daha fazla bilgi için bkz. <xref:System.Configuration> belgeleri.  
+ Öğeye yapılandırma becerileri eklemek için, kullanıcının bir `bindingElementExtensionSection` öğesi yazması ve kaydetmesi gerekir. Bunun hakkında daha fazla bilgi için <xref:System.Configuration> belgelerine bakın.  
   
- Öğesi ve kendi yapılandırma türü tanımlandıktan sonra uzantıyı aşağıdaki örnekte gösterildiği gibi özel bir bağlama bir parçası olarak kullanılabilir.  
+ Öğesi ve yapılandırma türü tanımlandıktan sonra uzantı, aşağıdaki örnekte gösterildiği gibi özel bağlamanın bir parçası olarak kullanılabilir.  
   
 ```xml  
 <customBinding>
@@ -46,4 +46,4 @@ Bu bölümde bir makineden özel bağlama öğesinin kullanımını etkinleştir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)

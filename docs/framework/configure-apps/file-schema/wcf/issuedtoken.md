@@ -2,20 +2,20 @@
 title: <issuedToken>
 ms.date: 03/30/2017
 ms.assetid: b6eae4b7-a6cd-4e1a-b0f6-f407022550b0
-ms.openlocfilehash: 83061b283c9430af7bcda9cbc832811fa805ed4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68e3a0802a10b14148188a81ee24ed901caa147f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925376"
 ---
 # <a name="issuedtoken"></a>\<IssuedToken >
-Bir hizmete istemcinin kimliğini doğrulamak için kullanılan özel simgeyi belirtir.  
+Bir hizmette istemcinin kimliğini doğrulamak için kullanılan özel bir belirteci belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-endpointBehaviors bölümü  
-\<davranışı >  
+Endpointdavranışlar bölümü  
+\<davranış >  
 \<clientCredentials >  
 \<IssuedToken >  
   
@@ -38,30 +38,30 @@ endpointBehaviors bölümü
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`cacheIssuedTokens`|Belirteçleri önbelleğe yazılıp yazılmayacağını belirten isteğe bağlı Boolean özniteliği. Varsayılan, `true` değeridir.|  
-|`defaultKeyEntropyMode`|Hangi rastgele değerlerin (entropilerin) el sıkışma işlemlerinde kullanılacağını belirten isteğe bağlı dize özniteliği. Değerler `ClientEntropy`, `ServerEntropy`, ve `CombinedEntropy`, varsayılan `CombinedEntropy`. Bu öznitelik türünde <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`issuedTokenRenewalThresholdPercentage`|Geçerli saat (belirteç vericisi tarafından sağlanan) bir belirtecin yenilenmesinden önce geçebilecek çerçeve yüzdesini belirten isteğe bağlı tamsayı özniteliği. Değerler 0 ile 100 arasındadır. 60 yenileme denenmeden önce %60 zaman geçiş belirten varsayılandır.|  
-|`issuerChannelBehaviors`|Verici ile iletişim kurarken kullanılacak kanal davranışlarını belirten isteğe bağlı öznitelik.|  
-|`localIssuerChannelBehaviors`|Yerel verici ile iletişim kurarken kullanılacak kanal davranışlarını belirten isteğe bağlı öznitelik.|  
-|`maxIssuedTokenCachingTime`|Verilen belirteçler süreyi belirten isteğe bağlı Timespan özniteliği önbelleğe belirteç vericisinin (STS) bir süre belirtmediği. Varsayılan değer "10675199.02:48:05.4775807."|  
+|`cacheIssuedTokens`|Belirteçlerin önbelleğe alınıp alınmayacağını belirten isteğe bağlı Boolean özniteliği. Varsayılan, `true` değeridir.|  
+|`defaultKeyEntropyMode`|El sıkışma işlemleri için hangi rastgele değerlerin (entropler) kullanıldığını belirten isteğe bağlı dize özniteliği. `ClientEntropy`Değerleri, `ServerEntropy`, ve`CombinedEntropy`değerleridir .varsayılandeğer.`CombinedEntropy` Bu öznitelik türü <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
+|`issuedTokenRenewalThresholdPercentage`|Bir belirtecin yenilenmesinden önce geçebilen geçerli bir zaman çerçevesinin (belirteç veren tarafından sağlanan) yüzdesini belirten isteğe bağlı tamsayı özniteliği. Değerler 0 ile 100 arasında değerlerdir. Yenileme deneninceye kadar geçen sürenin% 60 ' i belirten varsayılan değer 60 ' dir.|  
+|`issuerChannelBehaviors`|Verenle iletişim kurarken kullanılacak kanal davranışlarını belirten isteğe bağlı öznitelik.|  
+|`localIssuerChannelBehaviors`|Yerel veren ile iletişim kurarken kullanılacak kanal davranışlarını belirten isteğe bağlı öznitelik.|  
+|`maxIssuedTokenCachingTime`|Belirteç veren (STS) bir süre belirtmezse verilen belirteçlerin önbelleğe alındığı süreyi belirten isteğe bağlı TimeSpan özniteliği. Varsayılan değer "10675199.02:48:05.4775807" ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Belirteç uç noktası ile iletişim kurmak için kullanılan bağlama ve yerel dağıtımcının adresini belirtir.|  
-|[\<issuerChannelBehaviors>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|Yerel verici ile iletişim kurarken kullanılacak uç nokta davranışlarını belirtir.|  
+|[\<LocalIssuer >](localissuer.md)|Belirtecin yerel veren adresinin ve uç noktayla iletişim kurmak için kullanılan bağlamanın adresini belirtir.|  
+|[\<ıssuerchanneldavranışlar >](issuerchannelbehaviors-element.md)|Yerel bir veren ile iletişim kurulurken kullanılacak uç nokta davranışlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
+|[\<clientCredentials >](clientcredentials.md)|Bir hizmette istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Verilen bir belirteç, örneğin, ile bir güvenli belirteç hizmeti (STS) bir Federasyon senaryosunda kimlik doğrulaması için kullanılan bir özel kimlik bilgisi türüdür. Varsayılan olarak, SAML belirteci bir belirteçtir. Daha fazla bilgi için [Federasyon ve verilen belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md). ve [Federasyon ve verilen belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Verilen belirteç, bir Federasyon senaryosunda güvenli bir belirteç hizmeti (STS) ile kimlik doğrulaması yapılırken kullanılan özel bir kimlik bilgisi türüdür. Varsayılan olarak, belirteç bir SAML belirtecidir. Daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md). ve [Federasyon ve verilen belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md).  
   
- Bu bölümde, belirteçleri veya güvenlik belirteci hizmeti ile kullanılan davranışlar yerel yayımlayan yapılandırma için kullanılan öğeleri içerir. Yerel yayımlayan kullanmak bir istemci yapılandırma yönergeleri için bkz: [nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Bu bölüm, bir güvenlik belirteci hizmeti ile kullanılan bir belirteçleri yerel olarak veren veya davranışları yapılandırmak için kullanılan öğeleri içerir. Bir istemciyi yerel bir veren kullanmak üzere yapılandırmaya ilişkin yönergeler için bkz [. nasıl yapılır: Yerel bir veren](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)yapılandırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -71,10 +71,10 @@ endpointBehaviors bölümü
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.IssuedToken%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential>
-- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Federasyon ve Verilen Belirteçler](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Nasıl yapılır: Federe Istemci oluşturma](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Yerel veren yapılandırma](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federasyon ve Verilen Belirteçler](../../../wcf/feature-details/federation-and-issued-tokens.md)

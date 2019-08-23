@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b1d80887186466044acdb088d7f45a386b37f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: eb16097ab5a452a554cc7dfe039db1858e46de00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967199"
 ---
 # <a name="reflection-and-generic-types"></a>Yansıma ve Genel Türler
 <a name="top"></a>Yansıma görünüm noktasından, genel bir tür ve sıradan bir tür arasındaki fark, genel bir türün bir tür parametreleri kümesiyle (genel tür tanımı ise) veya tür bağımsız değişkenlerine (oluşturulmuş bir tür ise) ilişkilendirilme türüdür. Genel bir yöntem aynı şekilde sıradan bir yöntemden farklıdır.  
@@ -32,7 +32,7 @@ ms.locfileid: "68364036"
 - Genel tür tanımlarının ve genel yöntem tanımlarının tür parametreleri, <xref:System.Type> sınıfının örnekleri tarafından temsil edilir.  
   
     > [!NOTE]
-    >  <xref:System.Type> Bir<xref:System.Type> nesne genel bir tür parametresini temsil ettiğinde birçok özellik ve yönteminin farklı davranışları vardır. Bu farklılıklar, özellik ve Yöntem konularında belgelenmiştir. Örneğin, bkz <xref:System.Type.IsAutoClass%2A> . ve <xref:System.Type.DeclaringType%2A>. Ayrıca, bazı üyeler yalnızca bir <xref:System.Type> nesne genel tür parametresini temsil ettiğinde geçerlidir. Örneğin, bkz <xref:System.Type.GetGenericTypeDefinition%2A>.  
+    > <xref:System.Type> Bir<xref:System.Type> nesne genel bir tür parametresini temsil ettiğinde birçok özellik ve yönteminin farklı davranışları vardır. Bu farklılıklar, özellik ve Yöntem konularında belgelenmiştir. Örneğin, bkz <xref:System.Type.IsAutoClass%2A> . ve <xref:System.Type.DeclaringType%2A>. Ayrıca, bazı üyeler yalnızca bir <xref:System.Type> nesne genel tür parametresini temsil ettiğinde geçerlidir. Örneğin, bkz <xref:System.Type.GetGenericTypeDefinition%2A>.  
   
 - Bir örneği <xref:System.Type> bir genel türü temsil ediyorsa, tür parametrelerini (genel tür tanımları için) veya tür bağımsız değişkenlerini (oluşturulmuş türler için) temsil eden bir tür dizisi içerir. Aynı, bir genel yöntemi temsil eden <xref:System.Reflection.MethodInfo> sınıfının bir örneğinin aynısıdır.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68364036"
   
  Örneğin, burada ele alınan yöntemleri gösteren kod için bkz [. nasıl yapılır: Yansıma](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)ile genel türleri Inceleyin ve örnek oluşturun.  
   
- Aşağıdaki tartışmada, tür parametreleri ve bağımsız değişkenler ile açık veya kapalı oluşturulmuş türler arasındaki fark gibi genel türlerde terminoloji hakkında bilgi sahibi olduğu varsayılır. Daha fazla bilgi için bkz. [Genel türler](../../../docs/standard/generics/index.md).  
+ Aşağıdaki tartışmada, tür parametreleri ve bağımsız değişkenler ile açık veya kapalı oluşturulmuş türler arasındaki fark gibi genel türlerde terminoloji hakkında bilgi sahibi olduğu varsayılır. Daha fazla bilgi için bkz. [Genel türler](../../standard/generics/index.md).  
   
  Bu genel bakış aşağıdaki bölümlerden oluşur:  
   
@@ -131,7 +131,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  Özelliği, varyansı ( <xref:System.Reflection.GenericParameterAttributes> Kovaryans veya değişken varyans) ve bir tür parametresinin özel kısıtlamalarını gösteren bir değer alır. <xref:System.Type.GenericParameterAttributes%2A>  
   
 #### <a name="covariance-and-contravariance"></a>Kovaryans ve Kontravaryans  
- Bir tür parametresinin birlikte değişken veya değişken karşıtı olduğunu anlamak için, <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> maskesini <xref:System.Reflection.GenericParameterAttributes> <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen değere uygulayın. Sonuç ise <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>tür parametresi sabit olur. Bkz. [Kovaryans ve değişken varyansı](../../../docs/standard/generics/covariance-and-contravariance.md).  
+ Bir tür parametresinin birlikte değişken veya değişken karşıtı olduğunu anlamak için, <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> maskesini <xref:System.Reflection.GenericParameterAttributes> <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen değere uygulayın. Sonuç ise <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>tür parametresi sabit olur. Bkz. [Kovaryans ve değişken varyansı](../../standard/generics/covariance-and-contravariance.md).  
   
 #### <a name="special-constraints"></a>Özel kısıtlamalar  
  Bir tür parametresinin özel kısıtlamalarını öğrenmek için, <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> maskesini <xref:System.Reflection.GenericParameterAttributes> <xref:System.Type.GenericParameterAttributes%2A> özelliği tarafından döndürülen değere uygulayın. Sonuç ise <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>özel bir kısıtlama yoktur. Bir tür parametresi, bir başvuru türü, null yapılamayan bir değer türü ve parametresiz bir oluşturucuya sahip olacak şekilde kısıtlanabilir.  
@@ -150,6 +150,6 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[Nasıl yapılır: Yansıma ile genel türleri İnceleme ve örnek oluşturma](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Genel türleri incelemek için <xref:System.Type> ve <xref:System.Reflection.MethodInfo> özelliklerinin ve yöntemlerinin nasıl kullanılacağını gösterir.|  
-|[Genel Türler](../../../docs/standard/generics/index.md)|Genel türler özelliğini ve .NET Framework nasıl desteklendiğini açıklar.|  
+|[Genel Türler](../../standard/generics/index.md)|Genel türler özelliğini ve .NET Framework nasıl desteklendiğini açıklar.|  
 |[Nasıl yapılır: Yansıma Yayma ile genel bir tür tanımlama](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Dinamik derlemelerde genel türler oluşturmak için yansıma yayma 'nın nasıl kullanılacağını gösterir.|  
 |[Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Sınıfını açıklar ve oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar <xref:System.Type> hakkında bilgi edinmek için çeşitli yansıma sınıflarıyla birlikte nasıl kullanılacağını gösteren kod örnekleri sağlar. <xref:System.Type>|

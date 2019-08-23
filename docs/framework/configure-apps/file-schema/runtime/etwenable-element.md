@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f24e9a06137744dbc97d5f34cda7ad6eab873700
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920773"
 ---
 # <a name="etwenable-element"></a>\<etwEnable > öğesi
 Ortak dil çalışma zamanı olayları için Windows için olay izlemenin (ETW) etkinleştirilip etkinleştirilmeyeceğini belirtir.  
@@ -57,7 +57,7 @@ Ortak dil çalışma zamanı olayları için Windows için olay izlemenin (ETW) 
  Windows Vista ile başlayarak ETW varsayılan olarak etkindir. Bir uygulama için ETW 'yi devre dışı bırakmak için bu öğeyi kullanın. Windows 'un önceki sürümlerinde bu öğeyi kullanarak bir uygulama için ETW 'yi etkinleştirin.  
   
 > [!NOTE]
->  ETW, bir kayıt defteri ayarı kullanılarak bir sunucuda küresel olarak etkinleştirilebilir veya devre dışı bırakılabilir. Bkz. [.NET Framework günlüğünü denetleme](../../../performance/controlling-logging.md).  
+> ETW, bir kayıt defteri ayarı kullanılarak bir sunucuda küresel olarak etkinleştirilebilir veya devre dışı bırakılabilir. Bkz. [.NET Framework günlüğünü denetleme](../../../performance/controlling-logging.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte, bir uygulama için ETW izlemenin nasıl etkinleştirileceği gösterilmektedir.  

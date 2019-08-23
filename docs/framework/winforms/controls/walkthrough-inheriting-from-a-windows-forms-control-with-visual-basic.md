@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 0891b64fdb26953ab90f3da931f04513ac9e8bcf
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 378d7b0c67791e6c48e9859e0546594df3ccc85e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040221"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931011"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi'nden Devralma
 Visual Basic, *Devralma*aracılığıyla güçlü özel denetimler oluşturabilirsiniz. Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz. Bu kılavuzda, adlı `ValueButton`basit bir devralınmış denetim oluşturacaksınız. Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve adlı `ButtonValue`özel bir özelliği kullanıma sunacaktır.
@@ -29,7 +29,7 @@ Visual Basic, *Devralma*aracılığıyla güçlü özel denetimler oluşturabili
 
 2. Visual Basic projeleri listesinden **Windows Forms denetim kitaplığı** proje şablonunu seçin ve `ValueButtonLib` **ad** kutusuna yazın.
 
-     Proje adı `ValueButtonLib`, varsayılan olarak kök ad alanına da atanır. Kök ad alanı, derlemedeki bileşenlerin adlarını nitelemek için kullanılır. Örneğin, iki derleme adlı `ValueButton`bileşenler içeriyorsa, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`belirtebilirsiniz. Daha fazla bilgi için bkz. [Visual Basic ad alanları](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).
+     Proje adı `ValueButtonLib`, varsayılan olarak kök ad alanına da atanır. Kök ad alanı, derlemedeki bileşenlerin adlarını nitelemek için kullanılır. Örneğin, iki derleme adlı `ValueButton`bileşenler içeriyorsa, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`belirtebilirsiniz. Daha fazla bilgi için bkz. [Visual Basic ad alanları](../../../visual-basic/programming-guide/program-structure/namespaces.md).
 
 3. **Çözüm Gezgini**' de, **UserControl1. vb**öğesine sağ tıklayın ve ardından kısayol menüsünde **Yeniden Adlandır** ' ı seçin. Dosya adını olarak `ValueButton.vb`değiştirin. ' UserControl1 ' kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
 
@@ -46,7 +46,7 @@ Visual Basic, *Devralma*aracılığıyla güçlü özel denetimler oluşturabili
      Görsel tasarımcı 'nın artık mevcut olmadığını unutmayın. <xref:System.Windows.Forms.Button> Denetim kendi boyadığı için tasarımcıda görünümünü değiştiremedik. Görsel temsili, kodda değiştirilmediği sürece (yani, <xref:System.Windows.Forms.Button>) devraldığı sınıftan tamamen aynı olacaktır.
 
 > [!NOTE]
->  Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.
+> Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.
 
 ## <a name="adding-a-property-to-your-inherited-control"></a>Devralınan Denetiecekseniz özellik ekleme
  Devralınan Windows Forms denetimlerinin olası bir kullanımı, standart Windows Forms denetimlerine benzer görünüm ve davranışta (göz atın) ve özel özellikleri kullanıma sunan denetimlerin oluşturulması. Bu bölümde, denetimi adlı `ButtonValue` bir özellik ekleyeceksiniz.
@@ -148,4 +148,4 @@ Visual Basic, *Devralma*aracılığıyla güçlü özel denetimler oluşturabili
 - [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
 - [Nasıl yapılır: Araç kutusu öğelerini Seç Iletişim kutusunda bir denetim görüntüle](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
-- [Devralma Temelleri (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Devralma Temelleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

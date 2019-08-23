@@ -2,39 +2,39 @@
 title: WCF Yapılandırma Şeması
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
-ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d7b4cbad1876888e7a22a92bdb28a17b880e159
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925398"
 ---
 # <a name="wcf-configuration-schema"></a>WCF Yapılandırma Şeması
-Windows Communication Foundation (WCF) yapılandırma öğeleri WCF hizmet ve istemci uygulamaları yapılandırmanıza olanak sağlar. Kullanabileceğiniz [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) oluşturup istemciler ve hizmetler için yapılandırma dosyalarını değiştirin. Yapılandırma dosyaları XML olarak biçimlendirilir olduğundan, bir metin düzenleyicisi kullanarak bunları el ile düzenlemek istiyorsanız, XML'e alışık olmanız gerekir. Aksi takdirde içine sorunları unfound XML öğesi etiketi veya öznitelik gibi çalışabilir. Bunun nedeni, XML öğesi etiketleri ve öznitelikleri duyarlıdır.  
+Windows Communication Foundation (WCF) yapılandırma öğeleri, WCF hizmetini ve istemci uygulamalarını yapılandırmanızı sağlar. İstemci ve hizmet yapılandırma dosyalarını oluşturmak ve değiştirmek için [yapılandırma Düzenleyicisi aracını (SvcConfigEditor. exe)](../../../wcf/configuration-editor-tool-svcconfigeditor-exe.md) kullanabilirsiniz. Yapılandırma dosyaları XML olarak biçimlendirildiğinden, bunları bir metin düzenleyicisi kullanarak el ile düzenlemek istiyorsanız XML ile ilgili bilgi sahibi olmanız gerekir. Aksi takdirde, bulunamayan bir XML öğesi etiketi veya özniteliği gibi sorunlar yaşayabilirsiniz. Bunun nedeni, XML öğesi etiketlerinin ve özniteliklerin büyük/küçük harfe duyarlıdır.  
   
- WCF yapılandırma sistemi dayanır <xref:System.Configuration> ad alanı. Bu nedenle, tarafından sağlanan tüm standart özellikler kullanabilirsiniz <xref:System.Configuration> kilitleme, şifreleme ve uygulamanız ve yapılandırmasına güvenliğini artırmak için birleştirme yapılandırması gibi bir ad alanı. Bu kavramlarla ilgili daha fazla bilgi için aşağıdaki konulara bakın.  
+ WCF yapılandırma sistemi, <xref:System.Configuration> ad alanını temel alır. Bu nedenle, uygulamanızın güvenliğini ve yapılandırmasını artırmak için yapılandırma kilitleme, <xref:System.Configuration> şifreleme ve birleştirme gibi ad alanı tarafından sunulan tüm standart özellikleri kullanabilirsiniz. Bu kavramlar hakkında daha fazla bilgi için aşağıdaki konulara bakın.  
   
- [Şifreleme yapılandırma bilgileri](https://go.microsoft.com/fwlink/?LinkId=95337)  
+ [Yapılandırma bilgilerini şifreleme](https://go.microsoft.com/fwlink/?LinkId=95337)  
   
- [Kilitleme yapılandırma ayarları](https://go.microsoft.com/fwlink/?LinkId=95338)  
+ [Yapılandırma ayarlarını kilitleme](https://go.microsoft.com/fwlink/?LinkId=95338)  
   
- Bu bölümde, her bir yapılandırma öğesinin tüm olası değerlerini ve diğer WCF yapılandırma öğeleri ile nasıl etkileşim kurduğunu açıklar. Aşağıdaki harita WCF yapılandırma şeması gösterilmektedir:  
+ Bu bölüm, her yapılandırma öğesinin olası tüm değerlerini ve diğer WCF yapılandırma öğeleriyle nasıl etkileşime gireceğini açıklar. Aşağıdaki haritada WCF yapılandırma şeması gösterilmektedir:  
   
- ![WCF yapılandırma şeması gösteren diyagram.](./media/index/windows-communication-foundation-configuration-schema.gif)  
+ ![WCF yapılandırma şemasını gösteren diyagram.](./media/index/windows-communication-foundation-configuration-schema.gif)  
   
 > [!CAUTION]
->  WCF yapılandırma bölümlerini, uygulama yapılandırma dosyalarında (app.config) ile uygun erişim denetim listeleri (tüm olası güvenlik tehditlerini önlemek için ACL) korur.  Örneğin, yalnızca uygun kişilerle erişme veya uygulama bağlamaları veya hizmet modeli bölümü yapılandırma dosyasının bir hizmet için güvenlik ayarlarını değiştirme emin olmanız gerekir.  
+>  Olası güvenlik tehditlerini engellemek için uygulama yapılandırma dosyalarınızda (App. config) WCF yapılandırma bölümlerini uygun Access Control listeleriyle (ACL) korumanız gerekir.  Örneğin, yalnızca uygun kişilerin uygulama bağlamalarında güvenlik ayarlarına veya bir hizmetin yapılandırma dosyasının hizmet modeli bölümüne erişebildiğinizden veya değiştirebilmelidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
+ [\<system.serviceModel>](system-servicemodel.md)  
  Açıklayan `ServiceModel` öğesi.  
   
- [\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)  
- SMSvcHost.exe aracı yapılandırır.  
+ [\<system.serviceModel.activation>](system-servicemodel-activation.md)  
+ SMSvcHost. exe aracını yapılandırır.  
   
- [\<System.Runtime.Serialization >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
- Seri hale getiricileri genişletme gibi kullanırken seçenekleri ayarlamak için üst düzey öğe <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ [\<System. Runtime. Serialization >](system-runtime-serialization.md)  
+ Gibi serileştiriciler <xref:System.Runtime.Serialization.DataContractSerializer>kullanılırken seçenekleri ayarlamak için en üst düzey öğe.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Communication Foundation uygulamaları için yapılandırma](../../../wcf/configuring-services.md)  
- WCF hizmetleri ve istemcilerin nasıl yapılandırılacağını açıklar.
+ [Windows Communication Foundation uygulamalarını yapılandırma](../../../wcf/configuring-services.md)  
+ WCF Hizmetleri ve istemcilerinin nasıl yapılandırılacağını açıklar.

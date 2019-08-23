@@ -16,26 +16,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f336ac45e4bf5894c667412ff89acde4b9524c80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 597381c8ab31e86a02f870a24f165676d200b66e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965022"
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor Arabirimi
-Bir uygulama etki alanının bellek ve CPU kullanımını denetlemek için yöntemler sağlar.  
+Bir uygulama etki alanının belleğini ve CPU kullanımını denetleyen yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetCurrentAllocated Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|Toplam boyutu bayt cinsinden, atık olarak toplanmış bellek çıkararak olmadan oluşturulduktan sonra uygulama etki alanı tarafından yapılan tüm bellek ayırmaları alır.|  
-|[GetCurrentSurvived Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|Atık toplamayı engelleme son tam kurtulan ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.|  
-|[GetCurrentCpuTime Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Geçerli uygulama etki alanında, uygulama etki alanı oluşturulmasından bu yana yürütülürken tüm iş parçacıkları tarafından kullanılmış olan toplam işlemci zamanı alır.|  
+|[GetCurrentAllocated Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentallocated-method.md)|, Atık olarak toplanmış olan belleği çıkarmadan, uygulama etki alanı tarafından yapılan tüm bellek ayırmalarının bayt cinsinden toplam boyutunu alır.|  
+|[GetCurrentSurvived Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentsurvived-method.md)|Son tam ve çöp toplamayı engelleyen ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.|  
+|[GetCurrentCpuTime Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-getcurrentcputime-method.md)|Uygulama etki alanı oluşturulduğundan bu yana geçerli uygulama etki alanında yürütme sırasında tüm iş parçacıkları tarafından kullanılan toplam işlemci süresini alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICLRAppDomainResourceMonitor` Arabirimi aşağıdaki yönetilen özelliklerine benzer işlevsellik sağlar:  
+ `ICLRAppDomainResourceMonitor` Arabirimi, aşağıdaki yönetilen özelliklere benzer işlevler sağlar:  
   
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
   
@@ -48,17 +48,17 @@ Bir uygulama etki alanının bellek ve CPU kullanımını denetlemek için yönt
 - <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [\<appDomainResourceMonitoring > öğesi](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)
-- [Uygulama Etki Alanı Kaynak İzleme](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Uygulama Etki Alanı Kaynak İzleme](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

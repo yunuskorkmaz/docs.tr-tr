@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 86ac3f7d8f49f4817f725aa9a9aa68045285e826
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ec48b9ff5a9ebe352bf0361b9e52ee0fb48576a8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923976"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Nasıl yapılır: Bir dizin ağacında yineleme (C# Programlama Kılavuzu)
 "Bir dizin ağacını yineleme" ifadesi, belirtilen kök klasörü altındaki her bir dosyaya her bir dosyanın herhangi bir derinliğine erişmesi anlamına gelir. Her bir dosyayı açmak zorunda değilsiniz. Dosya veya alt dizinin adını yalnızca bir `string`olarak alabilir veya bir <xref:System.IO.FileInfo?displayProperty=nameWithType> veya <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> nesnesi biçiminde ek bilgiler alabilirsiniz.  
   
 > [!NOTE]
->  Windows 'da, "Directory" ve "Folder" terimleri birbirinin yerine kullanılır. Çoğu belge ve Kullanıcı arabirimi metni "Folder" terimini kullanır, ancak .NET Framework sınıf kitaplığı "Dizin" terimini kullanır.  
+> Windows 'da, "Directory" ve "Folder" terimleri birbirinin yerine kullanılır. Çoğu belge ve Kullanıcı arabirimi metni "Folder" terimini kullanır, ancak .NET Framework sınıf kitaplığı "Dizin" terimini kullanır.  
   
  En basit durumda, belirli bir kök altındaki tüm dizinler için erişim izinleriniz olduğunu bildiğiniz, `System.IO.SearchOption.AllDirectories` bayrağını kullanabilirsiniz. Bu bayrak, belirtilen Düzenle eşleşen tüm iç içe geçmiş alt dizinleri döndürür. Aşağıdaki örnek, bu bayrağın nasıl kullanılacağını göstermektedir.  
   
@@ -34,7 +34,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Dosyalar ve klasörler üzerinde çeşitli işlemler gerçekleştirmeniz gerekiyorsa, işlemi tek bir temsilci kullanarak çağırabileceğiniz ayrı işlevlere yeniden düzenleyerek bu örnekleri modüle dönüştürebilirsiniz.  
   
 > [!NOTE]
->  NTFS dosya sistemleri, *birleşme noktaları*, *Simgesel bağlantılar*ve *sabit bağlantılar*biçiminde *yeniden ayrıştırma noktaları* içerebilir. <xref:System.IO.DirectoryInfo.GetFiles%2A> Ve<xref:System.IO.DirectoryInfo.GetDirectories%2A> gibi .NET Framework Yöntemler, yeniden ayrıştırma noktası altında herhangi bir alt dizin döndürmez. Bu davranış, iki yeniden ayrıştırma noktası birbirine başvururken sonsuz döngüye girme riskiyle karşı koruma sağlar. Genel olarak, dosyaları istem dışı olarak değiştirmeyin veya sildiğinizden emin olmak için yeniden ayrıştırma noktalarıyla uğraşdığınızda olağanüstü dikkatli olmanız gerekir. Yeniden ayrıştırma noktaları üzerinde tam denetime ihtiyacınız varsa, doğrudan ilgili Win32 dosya sistemi yöntemlerini çağırmak için platform çağırma veya yerel kod kullanın.  
+> NTFS dosya sistemleri, *birleşme noktaları*, *Simgesel bağlantılar*ve *sabit bağlantılar*biçiminde *yeniden ayrıştırma noktaları* içerebilir. <xref:System.IO.DirectoryInfo.GetFiles%2A> Ve<xref:System.IO.DirectoryInfo.GetDirectories%2A> gibi .NET Framework Yöntemler, yeniden ayrıştırma noktası altında herhangi bir alt dizin döndürmez. Bu davranış, iki yeniden ayrıştırma noktası birbirine başvururken sonsuz döngüye girme riskiyle karşı koruma sağlar. Genel olarak, dosyaları istem dışı olarak değiştirmeyin veya sildiğinizden emin olmak için yeniden ayrıştırma noktalarıyla uğraşdığınızda olağanüstü dikkatli olmanız gerekir. Yeniden ayrıştırma noktaları üzerinde tam denetime ihtiyacınız varsa, doğrudan ilgili Win32 dosya sistemi yöntemlerini çağırmak için platform çağırma veya yerel kod kullanın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, özyineleme kullanarak bir dizin ağacına nasıl yol gösterir. Özyinelemeli yaklaşım zarif, ancak dizin ağacı büyük ve derin iç içe ise bir yığın taşması özel durumuna neden olur.  

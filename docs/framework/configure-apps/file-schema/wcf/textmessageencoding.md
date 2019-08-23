@@ -2,18 +2,18 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e6e6d1907d89a09a72594a836f2192e9ad9c4290
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2fec2c2e5979b08ed0d832f636b3d0847b9a5dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758294"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915654"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding >
-Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletileri için kullanılan belirtir.  
+Metin tabanlı XML iletileri için kullanılan karakter kodlamasını ve ileti sürüm oluşturmayı belirtir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<textMessageEncoding >  
@@ -34,27 +34,27 @@ Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletile
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|maxReadPoolSize|İleti sayısını belirten bir tamsayı yeni okuyucu ayırmadan aynı anda okuyabilirsiniz. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. 64 varsayılandır.|  
-|maxWritePoolSize|İleti sayısını belirten bir tamsayı, yeni yazıcı ayırmadan aynı anda gönderilebilecek. Daha büyük havuz boyutları sistemi daha büyük bir çalışma kümesi, etkinlik artışlarını daha dayanıklı hale getirmek. Varsayılan değer 16'dır.|  
-|messageVersion|Bağlama kullanılarak gönderilen iletilerin SOAP sürümünü belirtir. Geçerli değerler:<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br />-Soap11<br />-Soap12<br /><br />Soap12Addressing10 varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Bağlamadaki yayma iletileri için kullanılacak kodlama karakter kümesini belirtir. Geçerli değerler:<br /><br /> -   UnicodeFffeTextEncoding: Unicode kodlama BigEndian<br />-   Utf16TextEncoding: Unicode kodlama<br />-   Utf8TextEncoding: 8-bit kodlama<br /><br /> Utf8TextEncoding varsayılandır. Bu öznitelik türünde <xref:System.Text.Encoding>.|  
+|maxReadPoolSize|Yeni okuyucu ayırmadan aynı anda okunabilecek ileti sayısını belirten bir tamsayı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Varsayılan değer 64 ' dir.|  
+|maxWritePoolSize|Yeni yazıcı ayırmadan aynı anda gönderilebilecek ileti sayısını belirten bir tamsayı. Daha büyük havuz boyutları, daha büyük bir çalışma kümesinin maliyetinde sistem etkinliğini daha dayanıklı hale getirir. Varsayılan değer 16 ' dır.|  
+|messageVersion|Bağlama kullanılarak gönderilen iletilerin SOAP sürümünü belirtir. Geçerli değerler şunlardır<br /><br /> - Soap11Addressing10<br />- Soap12Addressing10<br />- Soap11<br />- Soap12<br /><br />Varsayılan değer Soap12Addressing10 ' dir. Bu öznitelik türü <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|writeEncoding|Bağlamadaki ileti yayma için kullanılacak karakter kümesi kodlamasını belirtir. Geçerli değerler şunlardır<br /><br /> -Unicodefffebir kodlama: Unicode Bigenyen kodlaması<br />- Utf16TextEncoding: Unicode kodlaması<br />- Utf8TextEncoding: 8 bit kodlama<br /><br /> Varsayılan değer Utf8TextEncoding ' dir. Bu öznitelik türü <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kodlama bir ileti bir dizi bayta dönüştürme işlemidir. Kod çözme ters işlemidir. Windows Communication Foundation (WCF) için SOAP iletilerini kodlama üç türlerini içerir: Metin, ikili ve ileti aktarım en iyi duruma getirme mekanizması (MTOM).  
+ Kodlama bir iletiyi bir bayt dizisine dönüştürme işlemidir. Kod çözme işlemi ters işlemdir. Windows Communication Foundation (WCF), SOAP iletileri için üç tür kodlama içerir: Metin, Ikili ve Ileti Iletimi Iyileştirme mekanizması (MTOM).  
   
- Metin kodlaması ile temsil edilen `textMessageEncoding` öğedir en birlikte çalışabilir, ancak XML iletileri için en az verimli Kodlayıcı.  Metin Kodlayıcı kablo metin tabanlı iletileri oluşturur. Bu Kodlayıcı tarafından üretilen iletileri, WS - için uygun * Interop bağlı. Web hizmeti veya Web hizmeti istemcisi, metinsel XML genellikle anlayabilirsiniz. Ancak, büyük metin olarak ikili veri blokları iletme XML iletileri kodlama az verimli yöntemdir.  
+ `textMessageEncoding` Öğesi tarafından temsil edilen metin kodlaması en çok çalışabilen, ancak xml iletileri için en az verimli kodlayıcıdır.  Metin Kodlayıcısı, tel üzerinde metin tabanlı iletiler oluşturur. Bu kodlayıcı tarafından üretilen iletiler WS-* tabanlı birlikte çalışma için uygundur. Web hizmeti veya Web hizmeti istemcisi, genellikle metinsel XML 'i anlayabilir. Ancak, büyük ikili veri bloklarını metin olarak iletme, XML iletilerini kodlamak için en düşük verimli yöntemdir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -71,9 +71,9 @@ Karakter kodlamasını ve ileti sürüm oluşturmayı metin tabanlı XML iletile
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
-- [İleti Kodlayıcı Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [İleti Kodlama](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [İleti Kodlayıcı Seçme](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [İleti Kodlama](message-encoding.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

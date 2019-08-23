@@ -11,24 +11,24 @@ helpviewer_keywords:
 - drop and drag [Windows Forms], insertion marks
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
-ms.openlocfilehash: f3dff351052eaaf70737c6410c1367ab568f6fd0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f5de00fd41b24fc1a7f1ff4484c3a126e98952a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967828"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetiminde Ekleme İşareti Görüntüleme
-Ekleme işareti <xref:System.Windows.Forms.ListView> denetim noktası sürüklenen öğeler burada eklenecek kullanıcıları gösterir. Bir kullanıcı bir öğeyi bir noktaya diğer iki öğe sürüklediğinde ekleme işareti öğenin beklenen yeni konumu gösterir.  
+<xref:System.Windows.Forms.ListView> Denetimdeki ekleme işareti kullanıcılara sürüklenen öğelerin ekleneceği noktayı gösterir. Bir Kullanıcı bir öğeyi diğer iki öğe arasındaki bir noktaya sürüklendiğinde, ekleme işareti öğenin beklenen yeni konumunu gösterir.  
   
 > [!NOTE]
->  Yalnızca ekleme işareti özellik kullanılabilir [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanızı çağırdığında <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi. Önceki işletim sistemlerinde ekleme işareti için ilgili herhangi bir kod etkiye sahip değildir ve ekleme işareti görüntülenmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListViewInsertionMark>.  
+> Ekleme işareti özelliği yalnızca [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] uygulamanız <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi çağırdığında kullanılabilir. Önceki işletim sistemlerinde, ekleme işaretiyle ilgili tüm kodlar etkisizdir ve ekleme işareti görünmez. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.ListViewInsertionMark>.  
   
- Aşağıdaki görüntüde ekleme işareti gösterilmektedir:  
+ Aşağıdaki görüntüde bir ekleme işareti gösterilmektedir:  
   
- ![Bir ListView ekleme işareti gösteren ekran görüntüsü. ](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")  
+ ![ListView ekleme işaretini gösteren ekran görüntüsü.](./media/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control/listview-insertion-mark.gif "ListViewInsertion")  
   
- Aşağıdaki kod örneği, bu özelliğin nasıl kullanılacağı gösterilmektedir.  
+ Aşağıdaki kod örneğinde, bu özelliğin nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/CPP/listviewinsertionmarkexample.cpp#1)]
@@ -36,9 +36,9 @@ Ekleme işareti <xref:System.Windows.Forms.ListView> denetim noktası sürüklen
  [!code-vb[System.Windows.Forms.ListView.InsertionMark#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.InsertionMark/VB/listviewinsertionmarkexample.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem ve System.Windows.Forms öğelerini derlemelerine başvurular.  
+- System ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -47,4 +47,4 @@ Ekleme işareti <xref:System.Windows.Forms.ListView> denetim noktası sürüklen
 - <xref:System.Windows.Forms.ListViewInsertionMark>
 - [ListView Denetimi](listview-control-windows-forms.md)
 - [ListView Denetimine Genel Bakış](listview-control-overview-windows-forms.md)
-- [İzlenecek yol: Windows Forms'ta sürükle ve bırak işlemi gerçekleştirme](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+- [İzlenecek yol: Windows Forms bir sürükle ve bırak Işlemi gerçekleştirme](../advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

@@ -2,20 +2,20 @@
 title: <add> / <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920041"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<Ekle >, \<transportConfigurationType >
-Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.  
+# <a name="add-of-transportconfigurationtype"></a>\<\<TransportConfigurationType > > ekleyin
+Bu öğe, belirli bir taşımanın türünü tanımlayan bir anahtar/değer çiftidir.  
   
  \<system.ServiceModel>  
-\<serviceHostingEnvironment >  
+\<ServiceHostingEnvironment >  
 \<transportConfigurationTypes >  
-\<Ekle >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,8 +35,8 @@ Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Dize özniteliği gerekli.<br /><br /> Aktarım Türü benzersiz olarak tanıtan bir kullanıcı tanımlı bir anahtar içeriyor.|  
-|transportConfigurationType|Belirli taşıma uygulayan türü içeren bir dize.|  
+|name|Gerekli dize özniteliği.<br /><br /> , Aktarım türünü benzersiz bir şekilde tanımlayan Kullanıcı tanımlı bir anahtar içerir.|  
+|transportConfigurationType|Belirli bir taşımayı uygulayan türü içeren bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -45,7 +45,7 @@ Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Belirli taşıma uygulayan türler koleksiyonudur.|  
+|[\<transportConfigurationTypes >](transportconfigurationtypes.md)|Belirli bir aktarımı uygulayan türlerin bir koleksiyonu.|  
   
 ## <a name="example"></a>Örnek  
   
@@ -63,4 +63,4 @@ Belirli bir türünü tanımlayan bir anahtar/değer çifti öğesidir.
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Barındırma](../../../wcf/feature-details/hosting.md)

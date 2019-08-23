@@ -2,15 +2,15 @@
 title: <headers> öğesi
 ms.date: 03/30/2017
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
-ms.openlocfilehash: 90d6d7f981f176348a14ddc6b0af39378239eebd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da4475cf6c1deb10afccd740c3686afe4e233475
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918798"
 ---
-# <a name="headers-element"></a>\<üstbilgiler > öğesi
-Bu, yerel dağıtımcının doğru bir şekilde çözmek için gerekli adres üstbilgileri koleksiyonunu içerir. Kullanabileceğiniz `add` anahtar sözcüğü, bir üst bilgisi bu koleksiyona eklenecek.  
+# <a name="headers-element"></a>\<üst bilgiler > öğesi
+Bu, yerel sertifikayı vereni doğru bir şekilde ele almak için gerekli olan bir adres üst bilgileri koleksiyonu içerir. Bu koleksiyona bir üst `add` bilgi eklemek için anahtar sözcüğünü kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -19,5 +19,5 @@ Bu, yerel dağıtımcının doğru bir şekilde çözmek için gerekli adres üs
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Headers%2A>
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection>
-- [Nasıl yapılır: Yerel yayımlayan yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Nasıl yapılır: Yerel veren yapılandırma](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Noktalarının Adresler, bağlamalar ve sözleşmeler](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

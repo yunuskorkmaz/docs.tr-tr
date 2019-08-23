@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629565"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914386"
 ---
 # <a name="ui-automation-providers-overview"></a>UI Otomasyon Sağlayıcılara Genel Bakış
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  UI Otomasyon sağlayıcıları, kullanıcıların UI Otomasyonu istemci uygulamalarıyla iletişim kurmasını sağlar. Genel olarak, içindeki [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] her denetim veya diğer ayrı öğe bir sağlayıcı tarafından temsil edilir. Sağlayıcı, öğesi hakkında bilgi gösterir ve isteğe bağlı olarak, istemci uygulamanın denetimle etkileşime geçmesini sağlayan denetim düzenlerini uygular.  
   

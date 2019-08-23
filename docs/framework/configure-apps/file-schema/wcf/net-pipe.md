@@ -2,18 +2,18 @@
 title: <net.pipe>
 ms.date: 03/30/2017
 ms.assetid: 6a0f0318-f8f6-466c-9fae-199d7274a82e
-ms.openlocfilehash: 885cfad7be42f7c48b4c061f3293d667eb5d4ad8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d868d84318db8c9fe188293154dc275060a3952
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933176"
 ---
-# <a name="netpipe"></a>\<NET.pipe >
-Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısının yaşam yönetir ve Adlandırılmış Kanallar üzerinden erişen aktivasyon isteklerini işleyen hizmeti için yapılandırma ayarlarını belirtir.  
+# <a name="netpipe"></a>\<net. pipe >
+Named Pipe 'ın süresini yöneten ve adlandırılmış kanallar üzerinden gelen etkinleştirme isteklerini işleyen adlandırılmış kanal etkinleştirme hizmeti için yapılandırma ayarlarını belirtir.  
   
  \<system.serviceModel.activation>  
-\<NET.pipe >  
+\<net. pipe >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,21 +50,21 @@ Adlandırılmış kanal etkinleştirme adlandırılmış kanal bağlantısının
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`maxPendingAccepts`|Hizmetler için olan uç noktaları en fazla bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı. Varsayılan değer 2'dir.|  
-|`maxPendingConnections`|Gönderme için bekleyebileceği bağlantı maksimum sayısını belirten bir tamsayı. Varsayılan değer 100'dür.|  
-|`receiveTimeout`|A <xref:System.TimeSpan> ve çerçeveleme verilerini okumak ve altı çizili bağlantılardan bağlantı dağıtımını gerçekleştirmek için zaman aşımını belirtir. Varsayılan değer "00: 00:10"|  
+|`maxPendingAccepts`|Paylaşım hizmeti için dinleme uç noktasındaki en fazla bekleyen eşzamanlı iş parçacığı sayısını belirten bir tamsayı. Varsayılan değer 2 ' dir.|  
+|`maxPendingConnections`|Dağıtım için bekilebilecek en fazla bağlantı sayısını belirten bir tamsayı. Varsayılan değer 100'dür.|  
+|`receiveTimeout`|Çerçeveleme <xref:System.TimeSpan> verilerini okumak ve alt çizgi bağlantılarından bağlantı dağıtma işlemini gerçekleştirmek için zaman aşımını belirten bir. Varsayılan değer "00:00:10" dır|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için kullanıcı hesabı belirtmek için özniteliği.|  
+|[\<allowAccounts >](allowaccounts.md)|WCF hizmetlerini barındıran işlemlere yönelik kullanıcı hesaplarını belirtmek `securityIdentifier` için bir özniteliği içeren yapılandırma öğelerinin bir koleksiyonu ve paylaşım hizmetine bağlantı erişimi verilir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|SMSvcHost. exe dinleyici işleminin yapılandırma ayarlarını içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

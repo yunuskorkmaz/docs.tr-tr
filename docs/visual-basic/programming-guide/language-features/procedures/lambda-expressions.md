@@ -9,64 +9,64 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 5e59b0284ad1c05c16c33d520bc4c223e6ddace1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e688beac18e782367bf39ddec8339df2b2735225
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928900"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda İfadeleri (Visual Basic)
-A *lambda ifadesi* bir işlevi veya alt yordam bir temsilci geçerli olduğu yerlerde kullanılabilmesi için bir ad olmadan. Lambda ifadeleri, işlev veya alt yordamlar olabilir ve tek satır veya çok satırlı olabilir. Bir lambda ifadesi olan geçerli kapsamını değer geçirebilirsiniz.  
+*Lambda ifadesi* , bir temsilcinin geçerli olduğu her yerde kullanılabilecek bir ada sahip olmayan bir işlev veya alt yordam 'dir. Lambda ifadeleri işlevler veya alt yordamlar olabilir ve tek satırlık veya çok satırlı olabilir. Geçerli kapsamdan bir lambda ifadesine değer geçirebilirsiniz.  
   
 > [!NOTE]
->  `RemoveHandler` Deyimi, bir özel durum. Temsilci parametresi için bir lambda ifadesinde geçirilemez `RemoveHandler`.  
+> `RemoveHandler` İfade bir özel durumdur. Temsilci parametresi `RemoveHandler`için içinde bir lambda ifadesi geçirilemez.  
   
- Lambda ifadeleri kullanarak oluşturduğunuz `Function` veya `Sub` anahtar sözcüğü, bir standart işlevi veya alt yordamlar oluşturma gibi. Ancak, lambda ifadeleri bir deyimde dahil edilir.  
+ Bir standart işlev veya alt yordam oluştururken `Function` olduğu `Sub` gibi, veya anahtar sözcüğünü kullanarak lambda ifadeleri oluşturursunuz. Ancak, lambda ifadeleri bir ifadeye dahil edilir.  
   
- Aşağıdaki örnek bağımsız değişkeni artırır ve değer döndüren bir lambda ifadesidir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi söz dizimi işlevi için gösterir.  
+ Aşağıdaki örnek, bağımsız değişkenini artıran ve değeri döndüren bir lambda ifadesidir. Örnek, bir işlev için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir.  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
- Aşağıdaki örnek bir değer konsola bir lambda ifadesidir. Bu örnek, hem tek satır ve çok satırlı lambda ifadesi sözdizimi bir alt yordam gösterir.  
+ Aşağıdaki örnek, konsoluna bir değer yazan bir lambda ifadesidir. Örnek, bir altyordam için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir.  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
- Önceki örneklerde bir değişken lambda ifadeleri atanmış olduğuna dikkat edin. Değişkenine başvuruda bulunduğunuzda, lambda ifadesini çağırmak. Bildirme ve aşağıdaki örnekte gösterildiği gibi aynı zamanda bir lambda ifadesini çağırmak.  
+ Önceki örneklerde lambda ifadelerinin bir değişken adına atandığını fark edersiniz. Değişkenine başvurduğunuzda, lambda ifadesini çağırılır. Ayrıca, aşağıdaki örnekte gösterildiği gibi bir lambda ifadesini aynı anda bildirebilir ve çağırabilirsiniz.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
- Bir lambda ifadesi bir işlev çağrısı değeri olarak döndürülebilir (örnekte gösterildiği gibi [bağlam](#context) bu konunun ilerleyen bölümlerinde), veya bağımsız değişken olarak bir temsilci türü alan parametresi aşağıda gösterildiği gibi geçirilen örnek.  
+ Bir lambda ifadesi, bir işlev çağrısının değeri olarak döndürülebilir (Bu konunun ilerleyen bölümlerinde yer alan [bağlam](#context) bölümünde gösterildiği gibi) veya aşağıdaki örnekte gösterildiği gibi bir temsilci türü alan parametreye bağımsız değişken olarak geçirilmiş olabilir.  
   
  [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
- Bir lambda ifadesi sözdizimi standart işlevi veya alt yordam benzer. Farklar aşağıdaki gibidir:  
+ Bir lambda ifadesinin sözdizimi, standart bir işlev veya alt yordamın sözdizimine benzer. Farklar şunlardır:  
   
-- Bir lambda ifadesi, bir adı yok.  
+- Lambda ifadesinin adı yoktur.  
   
-- Lambda ifadeleri içeremez değiştiriciler, gibi `Overloads` veya `Overrides`.  
+- Lambda ifadelerinin `Overloads` veya `Overrides`gibi değiştiriciler olamaz.  
   
-- Tek satırlı lambda işlevleri kullanmayın bir `As` dönüş türü belirtmek için yan tümcesi. Bunun yerine, tür lambda ifadesinin gövdesinin değerlendiren değerinden algılanır. Örneğin, lambda ifadesinin gövdesinin ise `cust.City = "London"`, kendi dönüş türü `Boolean`.  
+- Tek satırlık Lambda işlevleri, dönüş türünü belirlemek için `As` bir yan tümce kullanmaz. Bunun yerine, tür lambda ifadesinin gövdesinin değerlendirilen değerden oluşur. Örneğin, lambda ifadesinin gövdesi ise `cust.City = "London"`, dönüş türü olur. `Boolean`  
   
-- Çok satırlı lambda işlevleri'nde ya da dönüş türü kullanarak belirtebilirsiniz bir `As` yan tümcesi veya çıkarın `As` yan tümcesi böylece dönüş türü algılanır. Zaman `As` çok satırlı lambda işlevi için yan tümcesi atlanırsa, dönüş türü çıkarımı yapılan tüm baskın türü `Return` deyimleri çok satırlı lambda işlevi içinde. *Baskın tür* için diğer tüm türlerin genişleyebileceği benzersiz bir türüdür. Bu benzersiz tür belirlenemiyorsa, baskın tür, dizideki diğer tüm türler için daraltabilirsiniz benzersiz türüdür. Bu benzersiz türlerden hiçbiri belirlenemezse, baskın türdür `Object`. Bu durumda, `Option Strict` ayarlanır `On`, bir derleyici hatası oluşur.  
+- Çok satırlı lambda işlevlerinde, bir `As` yan tümce kullanarak bir dönüş türü belirtebilir veya dönüş türünün çıkarsanabilmesi için `As` yan tümceyi atlayabilirsiniz. Bir çok satırlı Lambda işlevi için `Return` yantümceatlandığında,dönüştürü,çoksatırlılambdaişlevindekitümdeyimlerdenbaskıntürolarakalgılanır.`As` *Baskın tür* , diğer tüm türlerin genişletip benzersiz bir türdür. Bu benzersiz tür belirlenemiyorsa, baskın tür, dizideki diğer tüm türlerin daraltabileceği benzersiz türdür. Bu benzersiz türlerden hiçbiri belirlenemiyorsa, baskın tür olur `Object`. Bu durumda `Option Strict` , olarak `On`ayarlandıysa, bir derleyici hatası oluşur.  
   
-     Örneğin, sağlanan ifadeleri `Return` deyim türü değerleri içeren `Integer`, `Long`, ve `Double`, ortaya çıkan dizi türünde `Double`. Her ikisi de `Integer` ve `Long` genişletmek için `Double` ve yalnızca `Double`. Bu nedenle, `Double` baskın türdür. Daha fazla bilgi için [Widening ve daraltma dönüşümleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+     Örneğin `Return` , deyimi için sağlanan ifadeler, `Long`ve `Double`türünde `Integer`değerler içeriyorsa, sonuç olarak elde edilen dizi türüdür `Double`. Her ikisi `Integer` ve `Double` yalnızca ve`Double`'akadar. `Long` Bu nedenle `Double` , baskın türdür. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-- Tek satırlı bir işlev gövdesini deyim olmayan bir değer döndüren bir ifade olmalıdır. Var olan hiçbir `Return` tek satırlı işlevleri için bildirimi. Tek satırlı işlevi tarafından döndürülen değer işlev gövdesi içindeki ifade bir değerdir.  
+- Tek satırlık bir işlevin gövdesi bir deyim değil, bir değer döndüren bir ifade olmalıdır. Tek satır işlevleri için bir ifadeyoktur.`Return` Tek satır işlevi tarafından döndürülen değer, işlevin gövdesinde ifadenin değeridir.  
   
-- Tek satır alt yordam gövdesi tek satır deyim olmalıdır.  
+- Tek satırlık alt yordamın gövdesi tek satırlık bir ifade olmalıdır.  
   
-- Tek satırlı işlevleri ve alt yordamlar içermez bir `End Function` veya `End Sub` deyimi.  
+- Tek satırlı işlevler ve alt yordamlar bir `End Function` veya `End Sub` ifadesini içermez.  
   
-- Bir lambda ifadesi parametre veri türü kullanarak belirtebilirsiniz `As` anahtar sözcük veya parametresinin veri türü nelze odvodit. Tüm parametre ya da veri türleri veya tüm anlaşılmalıdır belirtilmelidir.  
+- `As` Anahtar sözcüğünü kullanarak bir lambda ifadesi parametresinin veri türünü belirtebilir veya parametresinin veri türü çıkarsanamıyor. Tüm parametrelerin belirtilmiş veri türleri olmalıdır veya hepsi çıkarsanmalıdır.  
   
-- `Optional` ve `Paramarray` parametreleri izin verilmez.  
+- `Optional`ve `Paramarray` parametrelerine izin verilmez.  
   
-- Genel Parametreler izin verilmez.  
+- Genel parametrelere izin verilmiyor.  
   
 ## <a name="async-lambdas"></a>Zaman Uyumsuz Lambdalar  
- İçeren kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz [zaman uyumsuz](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcükleri. Örneğin, aşağıdaki Windows Forms örneği, çağıran ve bekleyen zaman uyumsuz bir yöntem, bir olay işleyici içerir `ExampleMethodAsync`.  
+ [Async](../../../../visual-basic/language-reference/modifiers/async.md) ve [Await işleci](../../../../visual-basic/language-reference/operators/await-operator.md) anahtar sözcüklerini kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz. Örneğin, aşağıdaki Windows Forms örnek, zaman uyumsuz bir yöntemi `ExampleMethodAsync`çağıran ve bekleden bir olay işleyicisi içerir.  
   
 ```vb  
 Public Class Form1  
@@ -85,7 +85,7 @@ Public Class Form1
 End Class  
 ```  
   
- İçinde zaman uyumsuz lambda kullanarak aynı olay işleyicisini ekleyebilirsiniz bir [AddHandler deyimi](../../../../visual-basic/language-reference/statements/addhandler-statement.md). Bu işleyiciyi eklemek için Ekle bir `Async` aşağıdaki örnekte göründüğü gibi lambda parametre listesinden önce değiştiricisi.  
+ Bir [AddHandler ifadesinde](../../../../visual-basic/language-reference/statements/addhandler-statement.md)zaman uyumsuz lambda kullanarak aynı olay işleyicisini ekleyebilirsiniz. Bu işleyiciyi eklemek için aşağıdaki örnekte gösterildiği `Async` gibi Lambda parametre listesinden önce bir değiştirici ekleyin.  
   
 ```vb  
 Public Class Form1  
@@ -107,58 +107,58 @@ Public Class Form1
 End Class  
 ```  
   
- Oluşturma ve zaman uyumsuz yöntemler kullanma hakkında daha fazla bilgi için bkz. [Async ve Await ile zaman uyumsuz programlama](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ Zaman uyumsuz yöntemlerin nasıl oluşturulacağı ve kullanılacağı hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
-## <a name="context"></a> Bağlam  
- Bir lambda ifadesi, kendi bağlam içinde tanımlandığı kapsamıyla paylaşır. Bu, kapsayan kapsam içinde yazılan herhangi bir kod aynı erişim haklarına sahiptir. Bu üye değişkenleri, işlevleri ve alt öğeler, erişimi içerir `Me`, parametreleri ve kapsayan kapsamda yerel değişkenlere ve.  
+## <a name="context"></a>Bağlam  
+ Lambda ifadesi bağlamını kapsam içinde paylaşır. Bu, kapsayan kapsamda yazılan kod ile aynı erişim haklarına sahiptir. Bu, üye değişkenlerine, işlevlere ve alt öğeleri `Me`, ve parametreleri ve kapsayan kapsamdaki yerel değişkenlere erişimi içerir.  
   
- Yerel değişkenler ve parametreler kapsayan kapsamda erişim, kapsamı ömründen uzun genişletebilirsiniz. Bir lambda ifadesi başvuran bir temsilci çöp toplama için kullanılabilir olmayan sürece özgün ortam değişkenlerine erişimi korunur. Aşağıdaki örnekte, değişken `target` için yerel `makeTheGame`, yöntem, lambda ifadesi `playTheGame` tanımlanır. Döndürülen lambda ifadesi, atanan Not `takeAGuess` içinde `Main`, hala yerel değişkene erişimi vardır `target`.  
+ Yerel değişkenlere ve kapsayan kapsamdaki parametrelere erişim, bu kapsamın yaşam süresinden daha fazla uzatabilirler. Lambda ifadesine başvuran bir temsilci çöp toplama için kullanılabilir olmadığından, özgün ortamdaki değişkenlere erişim korunur. Aşağıdaki örnekte, değişkeni `target` `makeTheGame`yereldir, lambda ifadesinin `playTheGame` tanımlandığı yöntem. `target`İçinde `takeAGuess` öğesineatanandöndürülenlambdaifadesininyereldeğişkenehalaerişimiolduğunuunutmayın.`Main`  
   
  [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]  
   
- Aşağıdaki örnek, çeşitli iç içe geçmiş lambda ifadesinin erişim haklarını gösterir. Ne zaman döndürülen lambda ifadesi yürütülmediyse `Main` olarak `aDel`, bu öğeleri erişir:  
+ Aşağıdaki örnek, iç içe lambda ifadesinin çok çeşitli erişim haklarını gösterir. Döndürülen lambda ifadesi sürümünden `Main` `aDel`yürütüldüğünde, şu öğelere erişir:  
   
-- İçinde tanımlandığı sınıfının bir alanı: `aField`  
+- İçinde tanımlandığı sınıfın alanı:`aField`  
   
-- İçinde tanımlandığı sınıfın bir özelliği: `aProp`  
+- İçinde tanımlandığı sınıfın bir özelliği:`aProp`  
   
-- Yönteminin bir parametresi `functionWithNestedLambda`, içinde tanımlandığı: `level1`  
+- Tanımlı yöntemin `functionWithNestedLambda`parametresi:`level1`  
   
-- Bir yerel değişken `functionWithNestedLambda`: `localVar`  
+- Yerel değişkeni `functionWithNestedLambda`:`localVar`  
   
-- Yer alan bir lambda ifadesi parametre: `level2`  
+- İçinde iç içe yerleştirilmiş olan lambda ifadesinin parametresi:`level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
-## <a name="converting-to-a-delegate-type"></a>Bir temsilci türüne dönüştürme  
- Bir lambda ifadesi bir uyumlu temsilci türüne örtük olarak dönüştürülebilir. Uyumluluk için genel gereksinimler hakkında daha fazla bilgi için bkz. [gevşek temsilci dönüşümü](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Örneğin, aşağıdaki kod örneği dönüştürür örtük olarak bir lambda ifadesi gösterir `Func(Of Integer, Boolean)` veya eşleşen bir temsilci imzası.  
+## <a name="converting-to-a-delegate-type"></a>Temsilci türüne dönüştürme  
+ Lambda ifadesi örtük olarak uyumlu bir temsilci türüne dönüştürülebilir. Uyumluluk için genel gereksinimler hakkında daha fazla bilgi için bkz. [gevşek temsilci dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md). Örneğin, aşağıdaki kod örneği dolaylı olarak `Func(Of Integer, Boolean)` veya eşleşen bir temsilci imzasına dönüştüren bir lambda ifadesi gösterir.  
   
  [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]  
   
- Aşağıdaki kod örneği için örtük olarak dönüştüren bir lambda ifadesi gösterir `Sub(Of Double, String, Double)` veya eşleşen bir temsilci imzası.  
+ Aşağıdaki kod örneği, örtülü olarak `Sub(Of Double, String, Double)` veya eşleşen bir temsilci imzasına dönüştüren bir lambda ifadesini gösterir.  
   
  [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]  
   
- Lambda ifadeleri için temsilci atama ya da yordamlar için bağımsız değişken olarak geçirileceğini parametre adları belirtin ama temsilciden alınması türlerine izin vererek veri türlerini atlayın.  
+ Temsilcilere lambda ifadeleri atadığınızda veya bunları yordamlara bağımsız değişkenler olarak geçirdiğinizde, parametre adlarını belirtebilir, ancak veri türlerini atlayabilirsiniz, böylece türlerin temsilciden alınmasını sağlayabilirsiniz.  
   
 ## <a name="examples"></a>Örnekler  
   
-- Aşağıdaki örnek döndüren bir lambda ifadesi tanımlar `True` bağımsız değişkeni boş değer atanabilir bir atanan değer varsa ve `False` değerini ise `Nothing`.  
+- Aşağıdaki örnek, null atanabilir bağımsız değişkeni atanan bir `True` değere sahipse ve `False` değeri ise `Nothing`, döndüren bir lambda ifadesini tanımlar.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
-- Aşağıdaki örnek, bir dizi içinde son öğenin dizinini döndüren bir lambda ifadesi tanımlar.  
+- Aşağıdaki örnek, bir dizideki son öğenin dizinini döndüren bir lambda ifadesini tanımlar.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Yordamlar](./index.md)
-- [Visual Basic'de LINQ'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Visual Basic LINQ 'e giriş](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Temsilciler](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Function Deyimi](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub Deyimi](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Boş Değer Atanabilen Değer Türleri](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Nasıl yapılır: Visual Basic'de başka bir yordama yordam geçirin](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Nasıl yapılır: Lambda ifadesi oluşturma](./how-to-create-a-lambda-expression.md)
+- [Nasıl yapılır: Yordamları Visual Basic başka bir yordama geçirin](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Nasıl yapılır: Lambda Ifadesi oluşturma](./how-to-create-a-lambda-expression.md)
 - [Gevşek Temsilci Dönüştürme](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

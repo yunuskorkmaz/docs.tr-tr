@@ -2,22 +2,22 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758138"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918672"
 ---
-# <a name="transactedbatching"></a>\<transactedBatching >
+# <a name="transactedbatching"></a>\<Transactedtoplu işlem >
 
-Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir alma işlemleri.
+İşlem toplu işleminin alma işlemleri için desteklenip desteklenmediğini belirtir.
 
-\<sistemi. ServiceModel > \
+\<sistemin. ServiceModel > \
 \<davranışlar > \
-\<endpointBehaviors>\
+\<Endpointdavranışlar > \
 \<davranış > \
-\<transactedBatching >
+\<Transactedtoplu işlem >
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -33,7 +33,7 @@ Hareket işlem grubu oluşturma için desteklenip desteklenmediğini belirtir al
 
 |Öznitelik|Açıklama|
 |---------------|-----------------|
-|`maxBatchSize`|En fazla sayısını belirten bir tamsayı gruplanabilecek operations birlikte tek bir işlemle alırsınız. Varsayılan değer 0'dır.|
+|`maxBatchSize`|Tek bir işlemde birlikte toplu olarak oluşturulabilecek en fazla alma işlemi sayısını belirten bir tamsayı. Varsayılan değer 0 ' dır.|
 
 ### <a name="child-elements"></a>Alt Öğeler
 
@@ -43,15 +43,15 @@ Yok.
 
 |Öğe|Açıklama|
 |-------------|-----------------|
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir uç nokta davranışı belirtir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Birkaç batch girişimleri toplu işlem ile yapılandırılmış bir taşıma işlemlerini tek bir işleme alırsınız. Bunu, bir işlem oluşturmak ve bunu yapmadan görece yüksek maliyeti yaparak her alma işlemi engellenir.
+İşlem toplu işlemi ile yapılandırılan bir aktarım, birkaç alma işlemini tek bir işlemde toplu olarak dener. Bu şekilde, bir işlem oluşturmanın ve her alma işleminde gerçekleştiren görece yüksek maliyetli bir işlemdir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir hizmet yapılandırma dosyasında işlenen toplu işleme davranışını eklemek gösterilmektedir.
+Aşağıdaki örnek, bir yapılandırma dosyasındaki bir hizmete işlenen toplu işlem davranışının nasıl ekleneceğini gösterir.
 
 ```xml
 <system.serviceModel>

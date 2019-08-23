@@ -2,22 +2,22 @@
 title: <transport> / <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e76d0962ea7b4714ef6ca1f9d4c4c3e23df5b6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788355"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934679"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<transport> of \<netNamedPipeBinding>
-Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.  
+# <a name="transport-of-netnamedpipebinding"></a>\<\<NetNamedPipeBinding > aktarma >
+Adlandırılmış bir kanal için taşıma güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<netNamedPipeBinding>  
 \<bağlama >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|protectionLevel|Adlandırılmış kanal koruma düzeyini tanımlar. İleti imzalama, bir üçüncü taraf aktarılırken iletinin oynama riskini azaltır. Şifreleme, aktarım sırasında verileri düzeyinde gizlilik sağlar. Geçerli değerler şunlardır:<br /><br /> -Yok: Koruma yok.<br />-Oturum: İmzalı iletiler.<br />-   EncryptAndSign: İletileri şifrelenir ve imzalanmış.<br /><br /> EncryptAndSign varsayılan değerdir.|  
+|protectionLevel|Adlandırılmış kanalın koruma düzeyini tanımlar. İmzalama iletileri, üçüncü bir tarafın aktarılırken ileti üzerinde izinsiz değişiklik yaptığı riski azaltır. Şifreleme, aktarım sırasında veri düzeyinde gizlilik sağlar. Geçerli değerler şunlardır:<br /><br /> Seçim Koruma yok.<br />İmzalayabilirsiniz İletiler imzalanır.<br />EncryptAndSign özelliğini İletiler şifrelenir ve imzalanır.<br /><br /> Varsayılan değer EncryptAndSign ' dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,7 +47,7 @@ Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Bir bağlama için güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](security-of-netnamedpipebinding.md)|Bağlama için güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -55,8 +55,8 @@ Adlandırılmış kanal taşıma güvenlik ayarlarını tanımlar.
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportSecurityElement>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

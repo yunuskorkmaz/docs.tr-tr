@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 73afa1880bac5db7f8e28070afa878e70d263bd5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 25c9c1c81db0bb6775aa9226318d7ec726a93e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666507"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924934"
 ---
 # <a name="xslt-extension-objects"></a>XSLT Genişletme Nesneleri
 Uzantı nesneleri stil sayfalarının işlevlerini genişletmek için kullanılır. Uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> sınıfı tarafından korunur.  
@@ -24,7 +24,7 @@ Uzantı nesneleri stil sayfalarının işlevlerini genişletmek için kullanıl�
  XSLT uzantı nesneleri <xref:System.Xml.Xsl.XsltArgumentList> nesnesine <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> yöntemi kullanılarak eklenir. Tam ad ve ad alanı URI 'SI, o zaman uzantı nesnesiyle ilişkilendirilir.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Yöntemi çağırmak için FullTrust izin kümesi gereklidir. Daha fazla bilgi için bkz. [kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+> <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> Yöntemi çağırmak için FullTrust izin kümesi gereklidir. Daha fazla bilgi için bkz. [kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md) ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  Uzantı nesnelerinden döndürülen `number`veri türleri `Boolean`, `string`,, ve `node set`' nin dört temel XPath veri türünden biridir.  
   

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775787"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913737"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes Numaralandırması
-Sembol Okuyucu için arama yaparken kullanılacak ilkeyi belirtir. Bu sabitler tarafından kullanılan [Isymunmanagedbinder2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) ve [Isymunmanagedbinder3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri.  
+Sembol okuyucu ararken kullanılacak ilkeyi belirtir. Bu sabitler, [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) ve [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) yöntemleri tarafından kullanılır.  
   
 > [!IMPORTANT]
->  Bu, güvenilmeyen bir kaynaktan bir program veritabanı (PDB) dosyası açmak için bir güvenlik riski oluşturur.  
+> Güvenilmeyen bir kaynaktan program veritabanı (PDB) dosyasını açmak için bir güvenlik riskidir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -45,13 +45,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Simge arama yolu için kayıt defterini sorgular.|  
-|`AllowSymbolServerAccess`|Bir sembol sunucusu erişir.|  
-|`AllowOriginalPathAccess`|Hata ayıklama dizin için belirtilen yol arar.|  
-|`AllowReferencePathAccess`|PDB .exe dosyasının bulunduğu yerde arar.|  
+|`AllowRegistryAccess`|Sembol arama yolları için kayıt defterini sorgular.|  
+|`AllowSymbolServerAccess`|Bir sembol sunucusuna erişir.|  
+|`AllowOriginalPathAccess`|Hata ayıklama dizininde belirtilen yolu arar.|  
+|`AllowReferencePathAccess`|PDB 'yi. exe dosyasının olduğu yerde arar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** CorSym.idl, CorSym.h  
+ **Üst bilgi** CorSym. IDL, CorSym. h  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

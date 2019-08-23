@@ -3,20 +3,20 @@ title: <add>
 ms.date: 03/30/2017
 ms.assetid: 4712a888-f154-4395-8887-ef14a88a6497
 author: BrucePerlerMS
-ms.openlocfilehash: 34643d10ef1ed2e87152e5013634e62859e0594e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9505970c1fd7fcdfe62d3c6ef58f5d653fab4106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791774"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941989"
 ---
-# <a name="add"></a>\<Ekle >
-Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekler.  
+# <a name="add"></a>\<> Ekle
+Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
-\<Ekle >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,25 +40,25 @@ Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekl
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Belirteci işleyicisi eklenecek CLR türü adı. Belirtme hakkında daha fazla bilgi için `type` özniteliği için bkz: [özel tür başvurularını](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
+|türü|Eklenecek belirteç işleyicisinin CLR tür adı. `type` Özniteliği belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|İçin yapılandırma sağlar <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> sınıfı <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıfı veya türetilmiş bir sınıf ya da bu sınıflarının biri.|  
-|[\<sessionTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessiontokenrequirement.md)|İçin yapılandırma sağlar <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> sınıfı veya türetilmiş sınıflar.|  
-|[\<userNameSecurityTokenHandlerRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/usernamesecuritytokenhandlerrequirement.md)|İçin yapılandırma sağlar <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> sınıfı veya türetilmiş sınıflar.|  
-|[\<x509SecurityTokenHandlerRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/x509securitytokenhandlerrequirement.md)|İsteğe bağlı yapılandırma için sağlar <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> sınıfı veya türetilmiş sınıflar.|  
+|[\<samlSecurityTokenRequirement >](samlsecuritytokenrequirement.md)|<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Sınıf<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , sınıf veya bu sınıfların herhangi birinin türetilmiş bir sınıfı için yapılandırma sağlar.|  
+|[\<sessionTokenRequirement >](sessiontokenrequirement.md)|<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.|  
+|[\<userNameSecurityTokenHandlerRequirement >](usernamesecuritytokenhandlerrequirement.md)|<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.|  
+|[\<x509SecurityTokenHandlerRequirement >](x509securitytokenhandlerrequirement.md)|<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Sınıf veya türetilmiş sınıflar için isteğe bağlı yapılandırma sağlar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Uç noktası ile kayıtlı bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
+|[\<securityTokenHandlers >](securitytokenhandlers.md)|Uç nokta ile kaydedilmiş bir güvenlik belirteci işleyicileri koleksiyonunu belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<add>` Öğesi belirteç işleyici yapılandırması belirten tek bir alt öğe alabilir. Bu bağımlı olup olmadığını işleyicisi sınıfı aracılığıyla başvurulan üzerinde `type` özniteliği `<add>` öğesi, bu özellik için destek sağlar. Bu özelliği sağlayan belirteci işleyicisi sınıflar alan bir oluşturucu kullanıma gereken bir <xref:System.Xml.XmlElement> nesne.  
+ `<add>` Öğesi, belirteç işleyicisinin yapılandırmasını belirten tek bir alt öğe alabilir. Bu, `type` `<add>` öğesinin özniteliği aracılığıyla başvurulan işleyici sınıfının bu özellik için destek sağlar. Bu özelliği sağlayan belirteç işleyici sınıfları bir <xref:System.Xml.XmlElement> nesne alan oluşturucuyu kullanıma sunmalıdır.  
   
 ```  
 public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHandler  
@@ -69,15 +69,15 @@ public class CustomTokenHandler : Microsoft.IdentityModel.Tokens.SecurityTokenHa
 }  
 ```  
   
- Birkaç yerleşik güvenlik belirteci işleyici sınıflarını, bu işlevselliği sağlar. Bu sınıflar <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, ve <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>.  
+ Yerleşik güvenlik belirteci işleyici sınıflarından birkaçı bu işlevselliği sağlar. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>Bu sınıflar <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> ,<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>,, ve<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>' dir. <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler>  
   
 > [!IMPORTANT]
->  Belirteci işleyicisi koleksiyon, yalnızca belirli herhangi bir türde tek bir işleyici içerebilir. Türetilen bir işleyici eklemek istiyorsanız, örneğin, yani <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıfı koleksiyona önce kaldırmalısınız <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, koleksiyondan varsayılan olarak, mevcut olduğu. Kullanabilirsiniz [ \<kaldırma >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md) tek bir işleyici koleksiyonu veya kullanım kaldırmak için öğeyi [ \<Temizle >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md) tüm işleyiciler Koleksiyondan kaldırılacak öğe.  
+> Belirteç işleyici koleksiyonu verilen herhangi bir tür için yalnızca tek bir işleyici içerebilir. Bu, örneğin, koleksiyona <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıfından türetilmiş bir işleyici eklemek istiyorsanız, öncelikle varsayılan olarak bulunan öğesini koleksiyondan <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>kaldırmanız gerektiği anlamına gelir. Koleksiyondan tek bir işleyiciyi kaldırmak veya [ \<Clear >](clear.md) öğesini kullanarak koleksiyondan tüm işleyicileri kaldırmak için [ \<Remove >](remove.md) öğesini kullanabilirsiniz.  
   
- Belirtilen bir işleyici ayarları geçersiz kılma eşdeğer ayarlar altında belirteci işleyicisi koleksiyonu belirtilen [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) öğesi ve altında hizmet düzeyinde belirtilenlerden [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi.  
+ Bir işleyicide belirtilen ayarlar, [ \<SecurityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md) öğesi altındaki belirteç işleyici koleksiyonunda belirtilen eşdeğer ayarları geçersiz kılar ve [ \< IdentityConfiguration >](identityconfiguration.md) öğesi.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML kullanımını gösterir `<add>` ve `<remove>` öğeleri varsayılan oturum belirteci işleyicisi bir özel oturum belirteci işleyicisi ile değiştirilecek. XML alınır `ClaimsAwareWebFarm` örnek.  
+ Aşağıdaki XML, varsayılan oturum belirteci işleyicisini özel `<add>` bir `<remove>` oturum belirteci işleyicisiyle değiştirmek için ve öğelerinin kullanımını gösterir. XML `ClaimsAwareWebFarm` örnekten alınır.  
   
 ```xml  
 <securityTokenHandlers>  

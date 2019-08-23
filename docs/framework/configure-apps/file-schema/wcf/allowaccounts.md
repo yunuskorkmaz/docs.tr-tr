@@ -2,15 +2,15 @@
 title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: f9def3004b116afdc629de136cdfe0b0eb6e75c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c62f29c53d807cab397ff09c6163d924a71ea319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926607"
 ---
 # <a name="allowaccounts"></a>\<allowAccounts >
-Kullanıcı işlemleri için Windows Communication Foundation (WCF) hizmetlerini barındıran hesapları ve Paylaşım Hizmeti bağlantı erişim izni verilen belirten yapılandırma öğelerinin bir koleksiyonunu içerir.  
+Windows Communication Foundation (WCF) hizmetlerini barındıran işlemlere yönelik kullanıcı hesaplarını belirten ve paylaşım hizmetine bağlantı erişimi verilen yapılandırma öğelerinin bir koleksiyonunu içerir.  
   
  \<system.serviceModel.activation>  
   
@@ -32,13 +32,13 @@ Kullanıcı işlemleri için Windows Communication Foundation (WCF) hizmetlerini
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|WCF hizmetleri barındırır ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için bir kullanıcı hesabı ekler|  
+|[\<> Ekle](add-of-allowaccounts.md)|WCF hizmetlerini barındıran işlemlere yönelik bir kullanıcı hesabı ekler ve paylaşım hizmetine bağlantı erişimi verilir|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<NET.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) veya [ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Net kanal veya paylaşım hizmetlerinin TCP için yapılandırma ayarlarını belirtir.|  
+|net. pipe > veya [ \<](net-pipe.md) [ \<net. TCP >](net-tcp.md)|Ağ kanalı veya TCP paylaşım hizmetleri için yapılandırma ayarlarını belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,39 +8,39 @@ helpviewer_keywords:
 - XML comments, recommended tags [Visual Basic]
 - comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
-ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d6519af8ca1a0e2d59131eec4d63646dce7318b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940874"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913498"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Belge Açıklamaları için Önerilen XML Etiketleri (Visual Basic)
-Visual Basic Derleyicisi, bir XML dosyasına kod belge açıklamaları işleyebilir. Belgeleme XML dosyasını işlemek için ek araçları kullanabilirsiniz.  
+Visual Basic Derleyicisi, kodunuzdaki belge açıklamalarını bir XML dosyasına işleyebilir. XML dosyasını belgelere işlemek için ek araçlar kullanabilirsiniz.  
   
- XML açıklamaları kod yapıları türleri gibi izin verilen ve tür üyelerini. Üyeleri yorum hiçbir sınırlama olsa kısmi türleri için XML açıklamaları, türü yalnızca bir parçası olabilir.  
+ Türler ve tür üyeleri gibi kod yapılarında XML yorumlarına izin verilir. Kısmi türler için, türünün yalnızca bir kısmı XML yorumlarına sahip olabilir, ancak üyelerini açıklama eklemek için herhangi bir kısıtlama yoktur.  
   
 > [!NOTE]
->  Belge açıklamaları ad alanları için uygulanamaz. Nedeni, bir ad alanı, çeşitli derlemeler yayılabilir ve tüm derlemeleri, aynı anda yüklü olmak zorunda olmasıdır.  
+> Belge açıklamaları ad alanlarına uygulanamaz. Bunun nedeni, bir ad alanının birçok derlemeyi yaymasına ve tüm derlemelerin aynı anda yüklenebilmesidir.  
   
- Derleyici, geçerli bir XML değil herhangi bir etiket işler. Aşağıdaki kullanıcı belgeleri, yaygın olarak kullanılan işlevler sunar.  
+ Derleyici geçerli XML olan herhangi bir etiketi işler. Aşağıdaki Etiketler kullanıcı belgelerinde yaygın olarak kullanılan işlevleri sağlar.  
   
 ||||  
 |---|---|---|  
-|[\<c >](../../../visual-basic/language-reference/xmldoc/c.md)|[\<kod >](../../../visual-basic/language-reference/xmldoc/code.md)|[\<Örnek >](../../../visual-basic/language-reference/xmldoc/example.md)|  
-|[\<Özel Durum >](../../../visual-basic/language-reference/xmldoc/exception.md) <sup>1</sup>|[\<Ekle >](../../../visual-basic/language-reference/xmldoc/include.md) <sup>1</sup>|[\<listesi >](../../../visual-basic/language-reference/xmldoc/list.md)|  
-|[\<para >](../../../visual-basic/language-reference/xmldoc/para.md)|[\<param >](../../../visual-basic/language-reference/xmldoc/param.md) <sup>1</sup>|[\<paramref >](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
-|[\<izni >](../../../visual-basic/language-reference/xmldoc/permission.md) <sup>1</sup>|[\<REMARKS >](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
-|[\<bkz: >](../../../visual-basic/language-reference/xmldoc/see.md) <sup>1</sup>|[\<SeeAlso >](../../../visual-basic/language-reference/xmldoc/seealso.md) <sup>1</sup>|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
-|[\<typeparam >](../../../visual-basic/language-reference/xmldoc/typeparam.md) <sup>1</sup>|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
+|[\<c >](../../../visual-basic/language-reference/xmldoc/c.md)|[\<kod >](../../../visual-basic/language-reference/xmldoc/code.md)|[\<örnek >](../../../visual-basic/language-reference/xmldoc/example.md)|  
+|özel durum > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/exception.md)|dahil > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/include.md)|[\<Liste >](../../../visual-basic/language-reference/xmldoc/list.md)|  
+|[\<Para >](../../../visual-basic/language-reference/xmldoc/para.md)|param > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/param.md)|[\<paramref >](../../../visual-basic/language-reference/xmldoc/paramref.md)|  
+|izin > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/permission.md)|[\<açıklamalar >](../../../visual-basic/language-reference/xmldoc/remarks.md)|[\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md)|  
+|bkz. > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/see.md)|seede > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/seealso.md)|[\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md)|  
+|typeparam > <sup>1</sup> [ \<](../../../visual-basic/language-reference/xmldoc/typeparam.md)|[\<value>](../../../visual-basic/language-reference/xmldoc/value.md)||  
   
- (<sup>1</sup> derleyici sözdizimini doğrular.)  
+ (<sup>1</sup> derleyici söz dizimini doğrular.)  
   
 > [!NOTE]
->  Açılı belgeleri açıklama metninde görünmesini istiyorsanız kullanın `&lt;` ve `&gt;`. Örneğin, dize `"&lt;text in angle brackets&gt;"` olarak görünür `<text in angle brackets>`.  
+> Bir belge açıklamasının metninde Açılı ayraçların görünmesini istiyorsanız, ve `&lt;` `&gt;`kullanın. Örneğin, dize `"&lt;text in angle brackets&gt;"` olarak `<text in angle brackets>`görünür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML ile Kodunuzu Belgeleme](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Nasıl yapılır: XML belgeleri oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

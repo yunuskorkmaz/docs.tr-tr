@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 7ffa939d94d0e7aabe07ee85422c4b9b740d7cdc
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69603060"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922507"
 ---
 # <a name="-debug-c-compiler-options"></a>-Debug (C# derleyici seçenekleri)
 **-Debug** seçeneği derleyicinin hata ayıklama bilgileri oluşturmasına ve bunu çıkış dosyasına veya dosyalarına yerleştirmesine neden olur.  
@@ -38,7 +38,7 @@ ms.locfileid: "69603060"
  **-Debug: Full**KULLANıRSANıZ, JIT ile iyileştirilmiş kodun hız ve boyutunu ve **-Debug: Full**ile kod kalitesiyle ilgili küçük bir etkisi olduğunu unutmayın. **Hata ayıklamanızı öneririz: yalnızca pdbonly** veya sürüm kodu oluşturmak için pdb yok.  
   
 > [!NOTE]
->  **-Debug: pdbonly** ve **-Debug: Full** arasında bir farklılık vardır **-hata** ayıklama: Full derleyici, JIT derleyicisine <xref:System.Diagnostics.DebuggableAttribute>hata ayıklama bilgilerinin kullanılabilir olduğunu bildirmek için kullanılan bir yayar. Bu nedenle, <xref:System.Diagnostics.DebuggableAttribute> **-Debug: Full**kullanırsanız kodunuz false olarak ayarla ' yı içeriyorsa bir hata alırsınız.  
+> **-Debug: pdbonly** ve **-Debug: Full** arasında bir farklılık vardır **-hata** ayıklama: Full derleyici, JIT derleyicisine <xref:System.Diagnostics.DebuggableAttribute>hata ayıklama bilgilerinin kullanılabilir olduğunu bildirmek için kullanılan bir yayar. Bu nedenle, <xref:System.Diagnostics.DebuggableAttribute> **-Debug: Full**kullanırsanız kodunuz false olarak ayarla ' yı içeriyorsa bir hata alırsınız.  
   
  Bir uygulamanın hata ayıklama performansını yapılandırma hakkında daha fazla bilgi için bkz. [bir görüntüyü hata ayıklamayı kolaylaştırın](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   

@@ -1,23 +1,23 @@
 ---
-title: <message> öğesi <ws2007FederationHttpBinding>
+title: <message>öğesi<ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 52cd941d-e230-4c82-8b29-333a7d20eca8
-ms.openlocfilehash: f05bd90bd2e4c7e1fd606518d9e5cb8d4e5ad974
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4340727026cb151f2efe813dfa005c1c5a1908be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931618"
 ---
-# <a name="message-element-of-ws2007federationhttpbinding"></a>\<İleti > öğesi \<ws2007FederationHttpBinding >
-İleti düzeyi güvenlik ayarlarını tanımlar [ \<ws2007FederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğesi.  
+# <a name="message-element-of-ws2007federationhttpbinding"></a>\<ileti > \<WS2007FederationHttpBinding > öğesi
+WS2007FederationHttpBinding > öğesi için [ \<](ws2007federationhttpbinding.md) ileti düzeyi güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<ws2007FederationHttpBinding >  
 \<bağlama >  
 \<Güvenlik >  
-\<İleti >  
+\<ileti >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -86,46 +86,46 @@ ms.locfileid: "61767578"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`algorithmSuite`|İsteğe bağlı. İleti şifreleme, imza ve anahtar-wrap algoritmaları ayarlar. Algoritmalar ve anahtar boyutları tarafından belirlenen <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> sınıfı. Bu algoritmalar, güvenlik ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen platformlarla eşlenir.<br /><br /> Olası değerler için aşağıdaki tabloya bakın. Basic256 varsayılan değerdir.|  
-|`issuedKeyType`|Kesilecek anahtar türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -   SymmetricKey<br />-   PublicKey<br />-   BearerKey<br /><br /> SymmetricKey varsayılandır. Bu öznitelik türünde <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
-|`issuedTokenType`|Verilmesi için belirteç türünü belirten bir URI. Varsayılan, `null` değeridir.|  
-|`negotiateServiceCredential`|Hizmet kimlik bilgisi anlaşmasının bir parçası değiştirilen veya bant dışından mevcut olup olmadığını belirten bir değeri. Varsayılan `true`, hizmet kimlik bilgisi anlaşılır anlamına gelir.|  
+|`algorithmSuite`|İsteğe bağlı. İleti şifrelemesini, imzayı ve anahtar sarması algoritmalarını ayarlar. Algoritmalar ve anahtar boyutları <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> sınıfına göre belirlenir. Bu algoritmalar güvenlik Ilkesi dili (WS-SecurityPolicy) belirtiminde belirtilen olanlarla eşlenir.<br /><br /> Olası değerler için aşağıdaki tabloya bakın. Varsayılan değer Basic256 ' dir.|  
+|`issuedKeyType`|Verilecek anahtarın türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -SymmetricKey<br />-PublicKey<br />-Yataerkey<br /><br /> Varsayılan değer SymmetricKey ' dir. Bu öznitelik türü <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|`issuedTokenType`|Verilecek belirtecin türünü belirten bir URI. Varsayılan, `null` değeridir.|  
+|`negotiateServiceCredential`|Hizmet kimlik bilgisinin, anlaşmanın parçası olarak alınıp alınmayacağını veya bant dışı kullanılabilir olup olmadığını belirten bir değer. Varsayılan `true`olarak, hizmet kimlik bilgisinin anlaşıldığı anlamına gelir.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Basic128|İleti özeti için Sha1 ve Rsa oaep mgf1p Aes128 şifreleme anahtarı kaydırma için kullanın.|  
-|Basic192|İleti özeti, anahtar kaydırma için Rsa-oaep mgf1p için Sha1 Aes192 şifrelemesi kullanın.|  
-|Basic256|İleti özeti, anahtar kaydırma için Rsa-oaep mgf1p için Sha1 Aes256 şifrelemesi kullanın.|  
-|Basic256Rsa15|İleti şifreleme, ileti özeti için Sha1 ve anahtar kaydırma için Rsa15 Aes256 kullanın.|  
-|Basic192Rsa15|İleti şifreleme, ileti özeti için Sha1 ve anahtar kaydırma için Rsa15 Aes192 kullanın.|  
-|TripleDes|İleti özeti, anahtar kaydırma için Rsa-oaep mgf1p için Sha1 TripleDes şifrelemesi kullanın.|  
-|Basic128Rsa15|İleti özeti için Sha1 ve anahtar kaydırma için Rsa15 ileti şifreleme için Aes128'i kullanın.|  
-|TripleDesRsa15|İleti özeti için Sha1 ve anahtar kaydırma için Rsa15 TripleDes şifrelemesi kullanın.|  
-|Basic128Sha256|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa-oaep mgf1p Aes256 kullanın.|  
-|Basic192Sha256|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa-oaep mgf1p Aes192 kullanın.|  
-|Basic256Sha256|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa-oaep mgf1p Aes256 kullanın.|  
-|TripleDesSha256|TripleDes ileti özeti için Sha256 ve anahtar kaydırma için Rsa-oaep mgf1p ileti şifreleme için kullanın.|  
-|Basic128Sha256Rsa15|İleti özeti için Sha256 ve anahtar kaydırma için Rsa15 ileti şifreleme için Aes128'i kullanın.|  
-|Basic192Sha256Rsa15|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa15 Aes192 kullanın.|  
-|Basic256Sha256Rsa15|İleti şifreleme, ileti özeti için Sha256 ve anahtar kaydırma için Rsa15 Aes256 kullanın.|  
-|TripleDesSha256Rsa15|TripleDes ileti özeti için Sha256 ve anahtar kaydırma için Rsa15 ileti şifreleme için kullanın.|  
+|Basic128|Anahtar kaydırması için AES128 şifrelemesi, ileti özeti için SHA1 ve rsa-oaep-mgf1p kullanın.|  
+|Basic192|Anahtar kaydırması için Aes192 şifrelemesi, ileti özeti için SHA1, rsa-oaep-mgf1p kullanın.|  
+|Basic256|Anahtar kaydırması için AES256 şifrelemesi, ileti özeti için SHA1, rsa-oaep-mgf1p kullanın.|  
+|Basic256Rsa15|İleti şifreleme için AES256, ileti özeti için SHA1 ve anahtar kaydırması için Rsa15 kullanın.|  
+|Basic192Rsa15|İleti şifreleme için Aes192, ileti özeti için SHA1 ve anahtar kaydırması için Rsa15 kullanın.|  
+|TripleDes|Anahtar kaydırması için, TripleDes şifrelemesi, ileti özeti için SHA1, rsa-oaep-mgf1p kullanın.|  
+|Basic128Rsa15|İleti şifreleme için AES128, ileti özeti için SHA1 ve anahtar kaydırması için Rsa15 kullanın.|  
+|TripleDesRsa15|TripleDes şifrelemesi, ileti özeti için SHA1 ve anahtar kaydırması için Rsa15 kullanın.|  
+|Basic128Sha256|İleti için AES256, ileti özeti için SHA256, anahtar kaydırması için rsa-oaep-mgf1p kullanın.|  
+|Basic192Sha256|İleti için Aes192, ileti özeti için SHA256, anahtar kaydırması için rsa-oaep-mgf1p kullanın.|  
+|Basic256Sha256|İleti için AES256, ileti özeti için SHA256, anahtar kaydırması için rsa-oaep-mgf1p kullanın.|  
+|TripleDesSha256|İleti şifreleme için TripleDes, SHA256 for Message Digest ve rsa-oaep-mgf1p için anahtar kaydırması kullanın.|  
+|Basic128Sha256Rsa15|İleti şifreleme için AES128, ileti özeti için SHA256 ve anahtar kaydırması için Rsa15 kullanın.|  
+|Basic192Sha256Rsa15|İleti şifreleme için Aes192, ileti özeti için SHA256 ve anahtar kaydırması için Rsa15 kullanın.|  
+|Basic256Sha256Rsa15|İleti şifreleme için AES256, ileti özeti için SHA256 ve anahtar kaydırması için Rsa15 kullanın.|  
+|TripleDesSha256Rsa15|İleti şifreleme için TripleDes, SHA256 for Message Digest ve Rsa15 anahtar kaydırması için kullanın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Bu bağlama için talep türlerinin koleksiyonunu belirtir. Her öğe türünde <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
-|[\<veren >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Bir güvenlik belirteci veren bir uç noktasını belirtir. Bu öğe türünde <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
-|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Verenin uç nokta adresini belirtir.|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Belirteç isteği parametreleri koleksiyonu. Her bir XML öğesi parametredir.|  
+|[\<claimTypeRequirements >](claimtyperequirements-element.md)|Bu bağlama için bir talep türleri koleksiyonu belirtir. Her öğe türündedir <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
+|[\<veren >](issuer.md)|Bir güvenlik belirteci veren bir uç nokta belirtir. Bu öğe türündedir <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
+|[\<IssuerMetadata >](issuermetadata.md)|Verenin uç nokta adresini belirtir.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Belirteç isteği parametrelerinin bir koleksiyonu. Her parametre bir XML öğesidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md)|Bir bağlama için güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](security-element-of-ws2007federationhttpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -133,8 +133,8 @@ ms.locfileid: "61767578"
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

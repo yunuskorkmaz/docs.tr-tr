@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3424e7a412a79266d3bd9f20061ff4a0cd89115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61873736"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965754"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Derleme Bağlama Yönlendirmesini Yapılandırma
-Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma zamanı sürümü ile birlikte .NET Framework derlemeleri kümesini kullanın. Kullanabileceğiniz **appliesTo** özniteliği [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) derleme bağlama başvurularının nasıl belirli bir .NET sürümünü yeniden yönlendirmek için bir uygulama yapılandırma dosyasında öğesi Framework derlemeleri. İsteğe bağlı bu öznitelik, bir .NET Framework sürüm numarası geçerli hangi sürüm olduğunu belirlemek için kullanır. Hayır ise **appliesTo** özniteliği belirtilirse,  **\<assemblyBinding >** öğe tüm .NET Framework sürümleri için geçerlidir.  
+Uygulamalar, varsayılan olarak, uygulamayı derlemek için kullanılan çalışma zamanı sürümüyle birlikte gelen .NET Framework derlemeleri kümesini kullanır. Derleme bağlama başvurularını .NET Framework derlemelerinin belirli bir sürümüne yönlendirmek için bir uygulama yapılandırma dosyasındaki [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) öğesinde **AppliesTo** özniteliğini kullanabilirsiniz. Bu isteğe bağlı öznitelik, hangi sürümün uygulanacağını göstermek için .NET Framework bir sürüm numarası kullanır. Hiçbir **AppliesTo** özniteliği belirtilmemişse,  **\<assemblyBinding >** öğesi .NET Framework tüm sürümleri için geçerlidir.  
   
- **AppliesTo** özniteliği, .NET Framework sürüm 1.1 sunulmuştur; .NET Framework sürüm 1.0 tarafından göz ardı edilir. Bunun anlamı tüm  **\<assemblyBinding >** öğeleri kullanırken bile, .NET Framework sürüm 1.0 uygulanır bir **appliesTo** özniteliği belirtildi.  
+ **AppliesTo** özniteliği .NET Framework sürüm 1,1 ' de tanıtılmıştı; .NET Framework 1,0 sürümü tarafından yok sayılır. Bu, bir **AppliesTo** özniteliği belirtilmiş olsa bile, .NET Framework sürüm 1,0 kullanılırken tüm  **\<assemblyBinding >** öğelerinin uygulandığı anlamına gelir.  
   
 > [!NOTE]
->  Kullanım **appliesTo** belirli bir çalışma zamanı sürümünü derleme bağlama yeniden yönlendirme sınırlamak için özniteliği.  
+> Derleme bağlama yeniden yönlendirmesini, çalışma zamanının belirli bir sürümüyle sınırlamak için **AppliesTo** özniteliğini kullanın.  
   
- Örneğin, derleme için bir .NET Framework sürüm 1.0 derleme bağlamasına yönlendirmek için aşağıdaki XML kodunu uygulama yapılandırma dosyanızda verilebilir.  
+ Örneğin, .NET Framework sürüm 1,0 derlemesi için derleme bağlamayı yeniden yönlendirmek için, uygulama yapılandırma dosyanıza aşağıdaki XML kodunu dahil edersiniz.  
   
 ```xml  
 <runtime>  
@@ -34,9 +34,10 @@ Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma 
 </runtime>  
 ```  
   
- **\<AssemblyBinding >** sipariş duyarlı öğeleridir. Herhangi bir .NET Framework sürüm 1.1 derlemeler için derleme bağlama yönlendirme bilgisini ardından herhangi bir .NET Framework sürüm 1.0 derlemeler için derleme bağlama yönlendirme bilgisini ilk olarak girmeniz gerekir. Son olarak, kullanılmayan tüm .NET Framework derleme yeniden yönlendirmesi için derleme bağlama yönlendirme bilgisini girin **appliesTo** özniteliği ve bu nedenle tüm .NET Framework sürümleri için geçerlidir. Yeniden yönlendirme bir çakışma olması durumunda, yapılandırma dosyasındaki eşleşen ilk yönlendirme cümlesi kullanılır.  
+ **
+          \<AssemblyBinding >** sipariş duyarlı öğeleridir. Önce .NET Framework herhangi bir sürüm 1,0 derlemesi için derleme bağlama yeniden yönlendirme bilgilerini, ardından herhangi bir .NET Framework sürümü 1,1 derlemesi için derleme bağlama yeniden yönlendirme bilgilerini girmeniz gerekir. Son olarak, **AppliesTo** özniteliğini kullanmayan ve bu nedenle .NET Framework tüm sürümleri için geçerli olan tüm .NET Framework bütünleştirilmiş kod yönlendirmesi için derleme bağlama yeniden yönlendirme bilgilerini girin. Yeniden yönlendirmenin bir çakışma olması durumunda, yapılandırma dosyasındaki ilk eşleşen yeniden yönlendirme ekstresi kullanılır.  
   
- Örneğin, .NET Framework sürüm 1.0 derlemesine bir başvuru ve başka bir başvuru bir .NET Framework sürüm 1.1 derlemesine yönlendirmek için aşağıdaki sözde kod gösterilen yöntemi kullanın.  
+ Örneğin, bir başvuruyu .NET Framework sürüm 1,0 derlemesine ve .NET Framework sürüm 1,1 derlemesine başka bir başvuruya yeniden yönlendirmek için aşağıdaki sözde kodda gösterilen kalıbı kullanacaksınız.  
   
 ```xml  
 <assemblyBinding xmlns="..." appliesTo="v1.0.3705">   
@@ -53,10 +54,10 @@ Varsayılan olarak, uygulamalar, uygulama derlemek için kullanılan çalışma 
 ```  
   
 ## <a name="debugging-configuration-file-errors"></a>Yapılandırma Dosyası Hatalarını Ayıklama  
- Uygulama etki alanı oluşturulduğunda ve kodu, uygulama etki alanına yükler, çalışma zamanı yapılandırma dosyalarını bir kez ayrıştırır. Ortak dil çalışma zamanı, giriş yoksayarak bir yapılandırma dosyası hatalarını ele alır. Hatalı biçimlendirilmiş XML içeriyorsa, çalışma zamanı, tüm yapılandırma dosyası yok sayar. Geçersiz XML için yalnızca geçersiz bölümlere göz ardı edilir.  
+ Çalışma zamanı, bir uygulama etki alanı oluşturulduğunda yapılandırma dosyalarını bir kez ayrıştırır ve kodu bu uygulama etki alanına yükler. Ortak dil çalışma zamanı, girdiyi yoksayarak bir yapılandırma dosyasındaki hataları işler. Çalışma zamanı, hatalı biçimlendirilmiş XML içeriyorsa tüm yapılandırma dosyalarını yoksayar. Geçersiz XML için yalnızca geçersiz bölümler yok sayılır.  
   
- Derleme bağlama yeniden yönlendirmeleri gerçekleşen olup olmadığını bir yapılandırma dosyası belirleyerek kullanılıp kullanılmadığını belirleyebilirsiniz. Kullanım [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) hangi derlemelerin yüklenen görmek için. Tüm derleme bağlamalarını öğrenmek için bir giriş ayarlamak **ForceLog** kayıt defteri.  
+ Derleme bağlama yeniden yönlendirmelerinin oluşup oluşmadığını belirleyerek bir yapılandırma dosyasının kullanılıp kullanılmadığını belirleyebilirsiniz. Hangi derlemelerin yüklenmekte olduğunu görmek için [derleme bağlama günlüğü görüntüleyicisini (Fuslogvw. exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) kullanın. Tüm derleme bağlamalarını görmek için kayıt defterinde **ForceLog** için bir girdi ayarlamanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmesini devre dışı bırakma ve etkinleştirme](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Nasıl yapılır: Otomatik bağlama yeniden yönlendirmeyi etkinleştirme ve devre dışı bırakma](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

@@ -3,18 +3,18 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793828"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942405"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate >
-Şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasını yapılandırır.  
+Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasını yapılandırır.  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
 \<serviceCertificate >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -38,16 +38,16 @@ ms.locfileid: "61793828"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<certificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir.|  
+|[\<certificateReference >](certificatereference.md)|Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Federationconfiguration'a >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Yapılandırma ayarları içeren <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration >](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfab) <xref:System.IdentityModel.Services.SessionAuthenticationModule> ve (Sam) yapılandırma ayarlarını içerir.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML kullanımını gösterir \<serviceCertificate > öğesi. XML alınır `CustomToken` örnek.  
+ Aşağıdaki XML, \<ServiceCertificate > öğesinin kullanımını gösterir. XML `CustomToken` örnekten alınır.  
   
 ```xml  
 <serviceCertificate>  

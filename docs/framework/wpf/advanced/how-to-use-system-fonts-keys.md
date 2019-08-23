@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7283e4225b75909322fa312583e9f1a0679762e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918381"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>Nasıl yapılır: Sistem Yazı Tipleri Tuşlarını Kullanma
-Sistem ayarları ile tutarlı, görsel oluşturmak geliştiriciler yardımcı olacak kaynaklar olarak sistem kaynaklarının sistem ölçümlerini sayısını kullanıma sunar. <xref:System.Windows.SystemFonts> Sistem yazı tipi değerleri hem değerlere bağlama sistem yazı tipi kaynakları içeren bir sınıf — Örneğin, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> ve <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>.  
+Sistem kaynakları, geliştiricilerin sistem ayarlarıyla tutarlı görseller oluşturmalarına yardımcı olmak için çeşitli sistem ölçümlerini kaynak olarak kullanıma sunar. <xref:System.Windows.SystemFonts>, hem sistem yazı tipi değerlerini hem de değerleri bağlayan sistem yazı tipi kaynaklarını içeren bir sınıftır — Örneğin, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> ve. <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>  
   
- Sistem yazı tipi ölçümleri statik veya dinamik kaynakları olarak kullanılabilir. Yazı tipi ölçüsünün uygulama çalışırken otomatik olarak güncelleştirmek istiyorsanız, bir dinamik kaynak kullanmak çalışır; Aksi takdirde bir statik kaynak kullanın.  
+ Sistem yazı tipi ölçümleri, statik veya dinamik kaynaklar olarak kullanılabilir. Yazı tipi ölçüsünün uygulama çalışırken otomatik olarak güncelleştirilmesini istiyorsanız dinamik bir kaynak kullanın; Aksi halde statik kaynak kullanın.  
   
 > [!NOTE]
->  Dinamik kaynaklara sahip anahtar sözcüğü *anahtar* özellik adına eklenir.  
+> Dinamik kaynaklarda, özellik adının sonuna anahtar sözcük *anahtarı* eklenir.  
   
- Aşağıdaki örnek, bir düğmeye stil veya sistem yazı tipi dinamik kaynaklarına erişmek ve gösterilmektedir. Bu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örneği oluşturur atayan bir düğme stili <xref:System.Windows.SystemFonts> değerleri.  
+ Aşağıdaki örnek, bir düğmeye stil eklemek veya özelleştirmek için sistem yazı tipi dinamik kaynaklarının nasıl erişebileceğini ve kullanılacağını gösterir. Bu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnek, bir düğmeye değerler atayan <xref:System.Windows.SystemFonts> bir düğme stili oluşturur.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  

@@ -1,5 +1,5 @@
 ---
-title: << İşleci (Visual Basic)
+title: < < Işleci (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: e11dbc453934f1aac4a8092cdc6539ec11f0cc21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6b186ad519bcd7cf82cce12523f2d75e09317cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663182"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966894"
 ---
-# <a name="-operator-visual-basic"></a>\<\< İşleci (Visual Basic)
-Bir bit desenine aritmetik sola kaydırma uygular.  
+# <a name="-operator-visual-basic"></a>\<\<İşleç (Visual Basic)
+Bit bir düzende aritmetik sola kaydırma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,57 +26,57 @@ result = pattern << amount
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Tamsayı sayısal değer. Bit deseninin kaydırma sonucu. Veri türü, aynı olduğu `pattern`.  
+ Gerekli. Integral sayısal değeri. Bit deseninin kaydırinme sonucu. Veri türü, ile `pattern`aynıdır.  
   
  `pattern`  
- Gerekli. Tamsayı sayısal ifade. Kaydırılmasına bit deseni. Veri türü tamsayı türü olmalıdır (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, veya `ULong`).  
+ Gerekli. Integral sayısal ifadesi. Kaydırılan bit deseninin. `SByte`Veri türü bir integral türü (, `UShort` `Short` `Byte`,,, `Integer` `UInteger`, ,`Long`, veya`ULong`) olmalıdır.  
   
  `amount`  
- Gerekli. Sayısal ifade. Bit deseninin kaydırılacak bit sayısı. Veri türü olmalıdır `Integer` veya genişletmek için `Integer`.  
+ Gerekli. Sayısal ifade. Bit deseninin kaydırılacak bit sayısı. Veri türü `Integer` veya olarak `Integer`ayarlanmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sonucu ucunu kaydırılacak bitlerin diğer sonunda yeniden girmesini yok anlamına gelir özelliği aritmetik kaydırmalar döngüsel, değildir. Aritmetik sola kaydırma, sonuç veri türü aralığının dışında kaydırılacak bitlerin atılır ve sağ tarafta işleci boşaltılmış bit konumları sıfır olarak ayarlanır.  
+ Aritmetik vardiyalar dairesel değildir, bu da sonucun bir sonunun dışına sürüklenen bitlerin diğer uçta yeniden tanıtılmadığını gösterir. Aritmetik sola kaydırma içinde, sonuç veri türü aralığının ötesinde kaydırılan bitler atılır ve sağdaki bit konumları sıfır olarak ayarlanır.  
   
- Bir sonuç tutabileceğinden daha fazla bit kaydırma önlemek için Visual Basic değerini maskeleri `amount` veri türüne karşılık gelen bir boyut maskesiyle `pattern`. İkili ve bu değerleri değiştirme miktarı için kullanılır. Boyutu maskeleri aşağıdaki gibidir:  
+ Vardiyanın, sonucun tutabileceğinden daha fazla bit olmasını engellemek için, ' ın değerini `amount` , veri `pattern`türüne karşılık gelen bir boyut maskesiyle Visual Basic. Bu değerlerin ikili dosyası ve kaydırma miktarı için kullanılır. Boyut maskeleri aşağıdaki gibidir:  
   
-|Veri türü `pattern`|Boyutu maskesi (ondalık)|Boyutu maskesi (onaltılık)|  
+|Veri türü`pattern`|Boyut maskesi (ondalık)|Boyut maskesi (onaltılık)|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|15|&AMP; H0000000F|  
-|`Integer`, `UInteger`|31|&AMP; H0000001F|  
-|`Long`, `ULong`|63|&AMP; H0000003F|  
+|`SByte`, `Byte`|7|& H00000007|  
+|`Short`, `UShort`|15|& H0000000F|  
+|`Integer`, `UInteger`|31|& H0000001F|  
+|`Long`, `ULong`|63|& H0000003F|  
   
- Varsa `amount` değeri sıfır olan `result` değeri olarak aynı `pattern`. Varsa `amount` olan negatif, işaretsiz bir değer olarak yapılan ve uygun boyutta maske ile maskelenir.  
+ Sıfırsa, değeri değeri ile aynıdır `pattern`. `result` `amount` `amount` Negatifse, işaretsiz bir değer olarak alınır ve uygun boyut maskesiyle maskelenir.  
   
- Aritmetik kaydırmalar hiçbir zaman taşması özel durumları oluşturur.  
+ Aritmetik vardiyalar hiçbir şekilde taşma özel durumu oluşturmaz.  
   
 > [!NOTE]
->  `<<` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> İşleç aşırı yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `<<` Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `<<` kaydırmalar sol tam sayı değerleri üzerinde aritmetik işlemleri için işleci. Sonucu her zaman aynı veri türüne, kaydırılacak ifade sahiptir.  
+ Aşağıdaki örnek, tam sayı `<<` değerlerinde aritmetik sol vardiyaları gerçekleştirmek için işlecini kullanır. Sonuç, kaydırılan deyimden her zaman aynı veri türüne sahiptir.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- Önceki örneği sonuçları aşağıdaki gibidir:  
+ Önceki örneğin sonuçları aşağıdaki gibidir:  
   
-- `result1` 192 (0000 0000 1100 0000) olur.  
+- `result1`192 ' dir (0000 0000 1100 0000).  
   
-- `result2` 3072 (0000 1100 0000 0000) olan.  
+- `result2`3072 ' dir (0000 1100 0000 0000).  
   
-- `result3` -32768 (1000 0000 0000 0000) olur.  
+- `result3`-32768 (1000 0000 0000 0000).  
   
-- `result4` 384 (0000 0001 1000 0000) olur.  
+- `result4`384 ' dir (0000 0001 1000 0000).  
   
-- `result5` (sol ötelenen 15 basamak) 0'dır.  
+- `result5`0 ' dır (sola kaydırılacağı 15 konum).  
   
- Değiştirme miktarı için `result4` 17 ' hesaplanır ve hangi eşittir 1 15.  
+ İçin `result4` kaydırma miktarı 17 ve 15 olarak hesaplanır, 1 eşittir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bit Kaydırma İşleçleri](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Atama İşleçleri](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [<<= İşleci](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic'de aritmetik işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5481a9bce01e84ce4f078335c8cd15a747a3c51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054975"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917213"
 ---
 # <a name="is-operator-visual-basic"></a>Is İşleci (Visual Basic)
-İki nesne başvurusu değişkenini karşılaştırır.  
+İki nesne başvuru değişkenini karşılaştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,34 +27,34 @@ result = object1 Is object2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Tüm `Boolean` değeri.  
+ Gerekli. Herhangi `Boolean` bir değer.  
   
  `object1`  
- Gerekli. Tüm `Object` adı.  
+ Gerekli. Herhangi `Object` bir ad.  
   
  `object2`  
- Gerekli. Tüm `Object` adı.  
+ Gerekli. Herhangi `Object` bir ad.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Is` İşleci iki nesne başvurusunun aynı nesneye başvuruyorsa, belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. Varsa `object1` ve `object2` hem de tam aynı nesne örneği için bkz `result` olduğu `True`; Eğer öyleyse, `result` olduğu `False`.  
+ `Is` İşleci iki nesne başvurusunun aynı nesneye başvurmasını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1` Ve her`object2` ikisi de`result` tam aynınesne`result` örneğine `True` başvurur,`False`ise, olur.  
   
- `Is` ile de kullanılabilir `TypeOf` yapmak için anahtar sözcüğü bir `TypeOf`... `Is` ifadesi, bir nesne değişkeninin veri türü ile uyumlu olup olmadığını test eder.  
+ `Is`Ayrıca, `TypeOf` `TypeOf`... yapmak için anahtar sözcükle birlikte kullanılabilir. `Is` bir nesne değişkeninin bir veri türüyle uyumlu olup olmadığını test eden ifadesi.  
   
 > [!NOTE]
->  `Is` Anahtar sözcüğü kullanılan ayrıca [seçin... Case deyimi](../../../visual-basic/language-reference/statements/select-case-statement.md).  
+> `Is` Anahtar sözcüğü, [Select... içinde de kullanılır. Case bildirisi](../../../visual-basic/language-reference/statements/select-case-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Is` nesne başvuruları çiftlerini karşılaştırmak için işleci. Sonuçları atanan bir `Boolean` iki nesnenin aynı olup olmadığını değerini temsil eden.  
+ Aşağıdaki örnek, nesne başvuruları `Is` çiftlerini karşılaştırmak için işlecini kullanır. Sonuçlar, iki nesnenin aynı olup `Boolean` olmadığını temsil eden bir değere atanır.  
   
  [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- Yukarıdaki örnekte de gösterildiği gibi kullanabileceğiniz `Is` işleci hem de test etmek için erken bağlı ve nesneler'geç bağlama.  
+ Yukarıdaki örnekte gösterildiği gibi, `Is` işlecini kullanarak hem erken hem de geç bağlantılı nesneleri test edebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TypeOf İşleci](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [IsNot İşleci](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic'de Karşılaştırma işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [İşleçler ve İfadeler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a7e381a90d56ca220e275d9179a50502b4969ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61958892"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916086"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection ile XML Şeması (XSD) Doğrulaması
-Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> bir XML belgesi XML Şeması Tanım Dili (XSD) şemaları karşı doğrulamak için. <xref:System.Xml.Schema.XmlSchemaCollection> Her zaman doğrulama gerçekleşir belleğe yüklenen olmadıkları için koleksiyonda şemaları depolayarak performansı artırır. Şema şema koleksiyonunda varsa `schemaLocation` özniteliği şema koleksiyonunda aramak için kullanılır.  
+XML şeması tanım dili <xref:System.Xml.Schema.XmlSchemaCollection> (xsd) şemalarında XML belgesini doğrulamak için kullanabilirsiniz. , <xref:System.Xml.Schema.XmlSchemaCollection> Şemaları, her doğrulama gerçekleştiğinde belleğe yüklenebilmeleri için, koleksiyonda depolayarak performansı geliştirir. Şema, şema koleksiyonunda varsa, `schemaLocation` koleksiyonda şemayı aramak için özniteliği kullanılır.  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> Sınıf artık kullanımdan kalkmıştır ve ile değiştirilmiştir <xref:System.Xml.Schema.XmlSchemaSet> sınıfı. Hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet> sınıfı bakın [şema derleme için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> Sınıf artık kullanımdan kalkmıştır ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfıyla değiştirilmiştir. <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.Schema.XmlSchemaSet> Sınıf hakkında daha fazla bilgi için bkz. [şema derlemesi için XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  Aşağıdaki örnek, bir veri dosyasının kök öğesini gösterir.  
   
@@ -30,9 +30,9 @@ Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaCollection> bir XML belgesi
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- Bu örneğin değerini `targetNamespace` özniteliği `urn:bookstore-schema`, şemaya eklerken kullanılan aynı ad olduğu <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ Bu örnekte, `targetNamespace` `urn:bookstore-schema`özniteliğinin değeri, şemasına <xref:System.Xml.Schema.XmlSchemaCollection>eklenirken kullanılan ad alanı olan.  
   
- Aşağıdaki kod örneği bir XML şemaya ekler <xref:System.Xml.Schema.XmlSchemaCollection>.  
+ Aşağıdaki kod örneği öğesine <xref:System.Xml.Schema.XmlSchemaCollection>bir XML şeması ekler.  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -52,9 +52,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- `targetNamespace` Özniteliği eklediğinizde, genellikle kullanılan `namespaceURI` özelliğinde <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection>. Şemaya eklemeden önce bir null başvuru belirtebilirsiniz <xref:System.Xml.Schema.XmlSchemaCollection>. Boş bir dize ("") ad alanı olmayan şemaları için kullanılmalıdır. <xref:System.Xml.Schema.XmlSchemaCollection> Yalnızca bir şema ad alanı olmayan olabilir.  
+ Özniteliği, `namespaceURI`özelliğiiçinyöntemineeklediğinizde genelliklekullanılır.<xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> <xref:System.Xml.Schema.XmlSchemaCollection> `targetNamespace` Şemasını öğesine <xref:System.Xml.Schema.XmlSchemaCollection>eklemeden önce bir null başvurusu belirtebilirsiniz. Boş bir dize ("") ad alanı olmayan şemalar için kullanılmalıdır. , <xref:System.Xml.Schema.XmlSchemaCollection> Ad alanı olmayan yalnızca bir şemaya sahip olabilir.  
   
- Aşağıdaki kod örneği için bir XML Şeması HeadCount.xsd, ekler <xref:System.Xml.Schema.XmlSchemaCollection> ve HeadCount.xml doğrular.  
+ Aşağıdaki kod örneği, bir XML şeması olan Headcount. xsd öğesini öğesine <xref:System.Xml.Schema.XmlSchemaCollection> ekler ve Headcount. xml ' i doğrular.  
   
 ```vb  
 Imports System  
@@ -125,7 +125,7 @@ namespace ValidationSample
 }  
 ```  
   
- Doğrulanacak HeadCount.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.  
+ Aşağıda, doğrulama için HeadCount. xml giriş dosyasının içeriği özetlenmektedir.  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -135,7 +135,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- Karşı doğrulanacak HeadCount.xsd, XML şema dosyasının içeriğini açıklar.  
+ Aşağıda, tarafından doğrulanacak olan HeadCount. xsd XML şema dosyasının içeriği özetlenmektedir.  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -149,7 +149,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- Aşağıdaki kod örneği oluşturur bir <xref:System.Xml.XmlValidatingReader> almayan bir <xref:System.Xml.XmlTextReader>. Giriş dosyası, sample4.xml, XML şemasına göre doğrulanır sample4.xsd.  
+ Aşağıdaki kod örneği, <xref:System.Xml.XmlValidatingReader> <xref:System.Xml.XmlTextReader>alan oluşturur. Sample4. xml giriş dosyası, sample4. xsd XML şemasına göre onaylanır.  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -173,7 +173,7 @@ while(vr.Read()) {
     }  
 ```  
   
- Doğrulanacak sample4.xml, girdi dosyasının içeriği aşağıda açıklanmaktadır.  
+ Aşağıda, doğrulanacak sample4. xml girdi dosyasının içeriği özetlenmektedir.  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -183,7 +183,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- Karşı doğrulanacak sample4.xsd, XML şema dosyasının içeriğini açıklar.  
+ Aşağıda, sample4. xsd XML şema dosyasının içeriğine göre doğrulanacak olan içerikleri özetlenmektedir.  
   
 ```xml  
 <xs:schema   

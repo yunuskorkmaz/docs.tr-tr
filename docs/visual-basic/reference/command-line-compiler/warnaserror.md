@@ -6,15 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796181"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937246"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
-Derleyici ilk geçtiği bir uyarı hata olarak değerlendirilecek neden olur.  
+Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,36 +26,36 @@ Derleyici ilk geçtiği bir uyarı hata olarak değerlendirilecek neden olur.
   
 |Terim|Tanım|  
 |---|---|  
-|+ &#124; -|İsteğe bağlı. Varsayılan olarak, `-warnaserror-` olan etkin; uyarıları derleyicinin bir çıktı dosyası üretir gelen engellemez. `-warnaserror` Aynı olan seçenek olarak `-warnaserror+`, uyarıları hata olarak kabul edilmesine neden olur.|  
-|`numberList`|İsteğe bağlı. Uyarı Kimliği virgülle ayrılmış listesi olduğu numaraları `-warnaserror` seçeneği uygular. Uyarı kimliği yok belirtilirse, `-warnaserror` seçenek, tüm uyarıları için geçerlidir.|  
+|+ &#124; -|İsteğe bağlı. Varsayılan olarak etkin `-warnaserror-` olur; uyarılar derleyicinin bir çıkış dosyası üretmasını engellemez. `-warnaserror` İle`-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.|  
+|`numberList`|İsteğe bağlı. `-warnaserror` Seçeneğin uygulandığı uyarı kimliği numaralarının virgülle ayrılmış listesi. Hiçbir uyarı kimliği belirtilmemişse, `-warnaserror` Bu seçenek tüm uyarılar için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-warnaserror` Seçeneği, tüm uyarıları hata olarak değerlendirir. Bunun yerine uyarıları hata olarak bildirilen gibi normalde bildirilebilecek iletiler. Derleyici karşılaşıldığında aynı uyarı uyarı olarak bildirir.  
+ `-warnaserror` Seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
   
- Varsayılan olarak, `-warnaserror-` uyarıları yalnızca bilgilendirici olması neden olur, etkilidir. `-warnaserror` Aynı olan seçenek olarak `-warnaserror+`, uyarıları hata olarak kabul edilmesine neden olur.  
+ Varsayılan olarak, `-warnaserror-` uyarıların yalnızca bilgilendirici olmasına neden olan, etkin olur. `-warnaserror` İle`-warnaserror+`aynı olan seçeneği, uyarıların hata olarak işlenmesine neden olur.  
   
- İsterseniz hata olarak kabul edilmesi için yalnızca birkaç belirli uyarıları hata olarak değerlendirilecek uyarıların virgülle ayrılmış bir listesini belirtebilirsiniz.  
+ Yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz.  
   
 > [!NOTE]
->  `-warnaserror` Seçeneği uyarıları nasıl görüntüleneceğini denetlemez. Kullanım [- nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) uyarıları devre dışı bırakma seçeneği.  
+> Bu `-warnaserror` seçenek uyarıların nasıl görüntülendiğini denetlemez. Uyarıları devre dışı bırakmak için [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) seçeneğini kullanın.  
   
-|-Tüm uyarıları Visual Studio IDE'deki hata olarak değerlendir warnaserror ayarlamak için|  
+|Visual Studio IDE 'de tüm uyarıları hata olarak değerlendirmek için-warnaserror öğesini ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**. <br />2.  Tıklayın **derleme** sekmesi.<br />3.  Emin **tüm uyarıları devre dışı bırak** onay kutusu olarak işaretli değildir.<br />4.  Denetleme **tüm uyarıları hata olarak değerlendir** onay kutusu.|  
+|1.  **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2.  **Derle** sekmesine tıklayın.<br />3.  **Tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4.  **Tüm uyarıları hata olarak değerlendir** onay kutusunu işaretleyin.|  
   
-|-Belirli uyarıları Visual Studio IDE'deki hata olarak değerlendir warnaserror ayarlamak için|  
+|Visual Studio IDE 'de belirli uyarıları hata olarak değerlendirmek için-warnaserror 'yi ayarlamak için|  
 |---|  
-|1.  Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünü tıklatın **özellikleri**.<br />2.  Tıklayın **derleme** sekmesi.<br />3.  Emin **tüm uyarıları devre dışı bırak** onay kutusu olarak işaretli değildir.<br />4.  Emin **tüm uyarıları hata olarak değerlendir** onay kutusu olarak işaretli değildir.<br />5.  Seçin **hata** gelen **bildirim** hata olarak değerlendirilip uyarı bitişik sütun.|  
+|1.  **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2.  **Derle** sekmesine tıklayın.<br />3.  **Tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4.  **Tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5.  Hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `In.vb` ve bulduğu her uyarı ilk geçtiği yeri bulunmadığında hata gösterilecekse derleyici yönlendirir.  
+ Aşağıdaki kod, derleyicisini derler `In.vb` ve bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
   
 ```console
 vbc -warnaserror in.vb  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `T2.vb` ve yalnızca kullanılmayan yerel değişkenler (42024) için uyarı hata olarak değerlendirir.  
+ Aşağıdaki kod, bir `T2.vb` hata olarak yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı derler ve değerlendirir.  
   
 ```console
 vbc -warnaserror:42024 t2.vb  

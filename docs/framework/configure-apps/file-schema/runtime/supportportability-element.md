@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab9feaa1c46a45471395fd4c6158490a24882a65
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927254"
 ---
-# <a name="supportportability-element"></a>\<supportPortability > öğesi
-Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul eder varsayılan davranışı devre dışı bırakarak aynı derlemenin iki farklı uygulamalarında .NET Framework'ün başvurabileceğini belirtir.  
+# <a name="supportportability-element"></a>\<Supporttaşınabilirlik > öğesi
+Bir uygulamanın, uygulama taşınabilirlik amaçları doğrultusunda derlemeleri eşdeğer olarak ele alan varsayılan davranışı devre dışı bırakarak, .NET Framework iki farklı uygulamasındaki aynı derlemeye başvurabildiklerini belirtir.  
   
  \<Yapılandırma > öğesi  
 \<çalışma zamanı > öğesi  
 \<assemblyBinding > öğesi  
-\<supportPortability > öğesi  
+\<Supporttaşınabilirlik > öğesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,15 +35,15 @@ Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul e
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|PKT|Gerekli öznitelik.<br /><br /> Etkilenen derlemenin genel anahtar belirtecini bir dize olarak belirtir.|  
-|Etkin|İsteğe bağlı öznitelik.<br /><br /> Belirtilen .NET Framework derlemesinin uygulamaları arasında taşınabilirlik desteğinin etkinleştirilip etkinleştirilmeyeceğini belirtir.|  
+|PKT|Gerekli öznitelik.<br /><br /> Etkilenen derlemenin ortak anahtar belirtecini bir dize olarak belirtir.|  
+|etkinletir|İsteğe bağlı öznitelik.<br /><br /> Belirtilen .NET Framework derlemesinin uygulamaları arasında taşınabilirlik desteğinin etkin olup olmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|true|Belirtilen .NET Framework derlemesinin uygulamaları arasındaki taşınabilir desteğini etkinleştirin. Bu varsayılandır.|  
-|false|Belirtilen .NET Framework derlemesinin uygulamaları arasındaki taşınabilir desteğini devre dışı bırakın. Bu, uygulamanın belirtilen derlemenin çoklu uygulamalarına başvurulara sahip olmasını sağlar.|  
+|true|Belirtilen .NET Framework derlemesinin uygulamaları arasında taşınabilirlik desteğini etkinleştir. Bu varsayılandır.|  
+|false|Belirtilen .NET Framework derlemesinin uygulamaları arasında taşınabilirlik desteğini devre dışı bırakın. Bu, uygulamanın belirtilen derlemenin birden çok uygulamasına başvurmasını sağlar.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -57,15 +57,15 @@ Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul e
 |`assemblyBinding`|Derleme sürümü yeniden yönlendirmesi ve derlemelerin konumları hakkında bilgi içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ile başlayarak, destek otomatik olarak .NET Framework'ün iki uygulamasından birini kullanan uygulamalar için sağlanan örnek ya da .NET Framework uygulaması veya Silverlight uygulaması için .NET Framework. Belirli bir .NET Framework derlemesinin iki uygulaması derleme cildiyle eşdeğer olarak görülür. Birkaç senaryoda bu uygulama taşınabilirlik özelliği sorunlara neden olur. Bu senaryolarda `<supportPortability>` öğesi özelliği devre dışı bırakmak için kullanılabilir.  
+ .NET Framework 4 ' ten başlayarak, .NET Framework iki uygulamalarından birini (örneğin .NET Framework uygulaması veya Silverlight uygulaması için .NET Framework) kullanan uygulamalar için destek otomatik olarak sağlanır. Belirli bir .NET Framework derlemesinin iki uygulaması, derleme Bağlayıcısı tarafından eşdeğer olarak görülür. Birkaç senaryoda, bu uygulama taşınabilirlik özelliği sorun oluşmasına neden olur. Bu senaryolarda, `<supportPortability>` özelliği devre dışı bırakmak için öğesi kullanılabilir.  
   
- Bu tür senaryolardan hem .NET Framework uygulamasına hem de belirli bir başvuru derlemesinin Silverlight için .NET Framework başvurması gereken bir derlemedir. Örneğin, Windows Presentation Foundation (WPF) yazılı bir XAML tasarımcının hem WPF masaüstü uygulaması için tasarımcının kullanıcı arabirimi ve Silverlight uygulamasında gelen WPF alt kümesi başvuru gerekebilir. Varsayılan olarak, derleme bağlama iki derlemeyi eşdeğer olarak gördüğünden ayrı başvurular bir derleyici hatasına neden olur. Bu öğe, varsayılan davranışı devre dışı bırakır ve derlemenin başarılı olması sağlar.  
+ Bu tür bir senaryo, hem .NET Framework uygulamasına hem de belirli bir başvuru derlemesinin Silverlight uygulamasına .NET Framework başvuran bir derlemedir. Örneğin, Windows Presentation Foundation (WPF) yazılmış bir XAML tasarımcısının, tasarımcı 'nın Kullanıcı arabirimi için hem WPF Masaüstü uygulamasına hem de Silverlight uygulamasında bulunan WPF 'nin alt kümesine başvurması gerekebilir. Varsayılan olarak, derleme bağlaması iki derlemeyi eşdeğer olarak gördüğü için ayrı başvurular bir derleyici hatasına neden olur. Bu öğe varsayılan davranışı devre dışı bırakır ve derlemenin başarılı olmasını sağlar.  
   
 > [!IMPORTANT]
->  Derleyicinin ortak dil çalışma zamanının derleme bağlama mantığına bilgi geçirmek için sırada kullanmalısınız `/appconfig` derleyici seçeneği, bu öğenin bulunduğu app.config dosyasının konumunu belirtmek için.  
+> Derleyicinin bilgileri ortak dil çalışma zamanının derleme bağlama mantığına geçirmesi için, bu öğeyi içeren App. config dosyasının konumunu belirtmek için `/appconfig` derleyici seçeneğini kullanmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de her iki uygulamada da bulunan herhangi bir .NET Framework derlemesinin Silverlight için .NET Framework başvuru olanak sağlar. `/appconfig` Derleyici seçeneği, bu app.config dosyasının konumunu belirtmek için kullanılmalıdır.  
+ Aşağıdaki örnek, bir uygulamanın hem .NET Framework uygulamasına hem de her iki uygulamada bulunan herhangi bir .NET Framework derlemesinin Silverlight uygulamasına .NET Framework başvurularına sahip olmasını sağlar. `/appconfig` Derleyici seçeneğinin bu app. config dosyasının konumunu belirtmek için kullanılması gerekir.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Bir uygulama derlemeleri uygulama taşınabilirliği amacıyla eşdeğer kabul e
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [/ appConfig (C# Derleyici Seçenekleri)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET framework derleme birleştirmeye genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/appconfig (C# derleyici seçenekleri)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [.NET Framework derleme birleşme genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

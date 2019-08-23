@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964730"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre Olarak XML Değerleri Belirtme
-Sorgu değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiricilerin bir örneğini kullanarak bu değeri sağlayabilir **SqlXml** veri türü. Gerçekten vardır hiçbir püf noktaları; SQL Server'da XML sütunları, diğer veri türleri ile aynı şekilde parametre değerleri kabul edin.  
+Bir sorgu, değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiriciler bu değeri **sqlxml** veri türünün bir örneğini kullanarak sağlayabilir. Gerçekten bir püf noktası yoktur; SQL Server XML sütunları, parametre değerlerini diğer veri türleriyle tamamen aynı şekilde kabul eder.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki konsol uygulamasında yeni bir tablo oluşturur **AdventureWorks** veritabanı. Yeni Tablo adlı bir sütun içeren **SalesId** ve adlı bir XML sütunu **SalesInfo**.  
+ Aşağıdaki konsol uygulaması **AdventureWorks** veritabanında yeni bir tablo oluşturur. Yeni tablo **SalesId** adlı bir sütun ve **SALESıNFO**adlı bir xml sütunu içerir.  
   
 > [!NOTE]
->  **AdventureWorks** örnek veritabanı, SQL Server'ı yüklediğinizde varsayılan olarak yüklenmedi. SQL Server Kurulumu çalıştırarak yükleyebilirsiniz.  
+> SQL Server yüklediğinizde **AdventureWorks** örnek veritabanı varsayılan olarak yüklenmez. SQL Server kurulumunu çalıştırarak yükleyebilirsiniz.  
   
- Örnek hazırlayan bir <xref:System.Data.SqlClient.SqlCommand> nesne yeni tabloda bir satır ekleyin. Kaydedilen bir dosya için gerekli olan XML verileri sağlayan **SalesInfo** sütun.  
+ Örnek, yeni tabloya <xref:System.Data.SqlClient.SqlCommand> bir satır eklemek için bir nesne hazırlar. Kayıtlı bir dosya, **SalesInfo** sütunu IÇIN gereken XML verilerini sağlar.  
   
- Örneğin çalıştırmak için gereken dosya oluşturmak için projeniz gibi aynı klasörde yeni bir metin dosyası oluşturun. ' % S'dosyası MyTestStoreData.xml adı. Not Defteri'ni ve kopya dosyasını açın ve aşağıdaki metni yapıştırın:  
+ Çalıştırmak üzere gereken dosyayı oluşturmak için, projenizle aynı klasörde yeni bir metin dosyası oluşturun. Dosyayı MyTestStoreData. xml olarak adlandırın. Dosyayı Not defteri 'nde açın ve aşağıdaki metni kopyalayıp yapıştırın:  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -163,4 +163,4 @@ class Class1
 
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server'da XML Verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

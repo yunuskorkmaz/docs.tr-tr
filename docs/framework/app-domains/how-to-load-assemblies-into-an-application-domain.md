@@ -11,36 +11,36 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d785ae9b3bce0b5c77414057ef063d6e9d3e14a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f21126361ce69ab14d18e12d2787b2c264116b02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593585"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921533"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme
-Uygulama etki alanına bir derlemeyi yüklemek için birkaç yolu vardır. Kullanmak için önerilen yoldur `static` (`Shared` Visual Basic'te) <xref:System.Reflection.Assembly.Load%2A> yöntemi <xref:System.Reflection.Assembly?displayProperty=nameWithType> sınıfı. Derlemeleri yüklenebilir diğer yolları:  
+Bir uygulama etki alanına bir derlemeyi yüklemek için birkaç yol vardır. Önerilen yol `static` ,`Shared` sınıfının<xref:System.Reflection.Assembly?displayProperty=nameWithType> (Visual Basic) <xref:System.Reflection.Assembly.Load%2A> sınıfında kullanılır. Derlemelerin yüklenebilme diğer yolları şunlardır:  
   
-- <xref:System.Reflection.Assembly.LoadFrom%2A> Yöntemi <xref:System.Reflection.Assembly> sınıfı, dosya konumu verilen bir derleme yükler. Bu yöntemle derlemeler yüklemek, farklı yükleme bağlamı kullanır.  
+- Sınıfının<xref:System.Reflection.Assembly> yöntemi, <xref:System.Reflection.Assembly.LoadFrom%2A> dosya konumu verilen bir derlemeyi yükler. Derlemeleri bu yöntemle yüklemek farklı bir yük bağlamı kullanır.  
   
-- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> Ve <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri salt yansıma bağlamına bir derlemeyi yüklemek. Bu bağlamı yüklenen derlemeler incelenir, ancak yürütülmedi, diğer platformları hedefleyen derlemeleri incelenmesi izin verme. Bkz: [nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
-  
-> [!NOTE]
->  Yalnızca yansıma bağlamı, .NET Framework 2.0 sürümünde yenidir.  
-  
-- Yöntemler gibi <xref:System.AppDomain.CreateInstance%2A> ve <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> , <xref:System.AppDomain> sınıfı, bir uygulama etki alanına derlemeler yükleyebilir.  
-  
-- <xref:System.Type.GetType%2A> Yöntemi <xref:System.Type> sınıfı derlemeleri yükleyebilir.  
-  
-- <xref:System.AppDomain.Load%2A> Yöntemi <xref:System.AppDomain?displayProperty=nameWithType> sınıfı derlemeleri yükleyebilirsiniz ancak öncelikle COM birlikte çalışabilirlik için kullanılır. İçinden çağrıldığı uygulama etki alanından başka bir uygulama etki alanına derlemeler yüklemek için kullanılmamalıdır.  
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> Ve<xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> yöntemleri bir derlemeyi yalnızca yansıma bağlamına yükler. Bu içeriğe yüklenen derlemeler incelenebilir ancak yürütülmeyebilir, diğer platformları hedefleyen derlemelerin incelenmesi sağlanır. Bkz [. nasıl yapılır: Derlemeleri yalnızca yansıma bağlamına](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)yükleyin.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 ile başlayarak, çalışma zamanı şu anda yüklü çalışma zamanı daha yüksek bir sürüm numarasına sahip .NET Framework sürümü ile derlenen bütünleştirilmiş yüklemez. Bu sürüm numarasının büyük ve küçük bileşenleri birleşimi için geçerlidir.  
+> Yalnızca yansıma bağlamı .NET Framework sürüm 2,0 ' de yenidir.  
   
- Uygulama etki alanları arasında paylaşılan just-in-time (JIT) derlenmiş kodunun yüklenen derlemelerin yolu belirtebilirsiniz. Daha fazla bilgi için [uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies).  
+- <xref:System.AppDomain.CreateInstance%2A> Sınıfının ve <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> gibi yöntemleri bir uygulama etki alanına derlemeler yükleyebilir. <xref:System.AppDomain>  
+  
+- <xref:System.Type> Sınıfının <xref:System.Type.GetType%2A> yöntemi derlemeleri yükleyebilir.  
+  
+- <xref:System.AppDomain?displayProperty=nameWithType> Sınıfının yöntemi derlemeleri yükleyebilir, ancak birincil olarak com birlikte çalışabilirlik için kullanılır. <xref:System.AppDomain.Load%2A> Derlemeleri, çağrıldığı uygulama etki alanından başka bir uygulama etki alanına yüklemek için kullanılmamalıdır.  
+  
+> [!NOTE]
+> .NET Framework sürüm 2,0 ' den başlayarak, çalışma zamanı, yüklü olan çalışma zamanından daha yüksek bir sürüm numarasına sahip .NET Framework bir sürümle derlenen bir derlemeyi yüklemez. Bu, sürüm numarasının büyük ve küçük bileşenlerinin birleşimi için geçerlidir.  
+  
+ Yüklenen derlemelerdeki tam zamanında (JıT) derlenmiş kodun uygulama etki alanları arasında paylaşılma şeklini belirtebilirsiniz. Daha fazla bilgi için bkz. [uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod yüklerini geçerli uygulama etki alanına "example.exe" veya "example.dll" adlı bir derleme adlı bir tür alır `Example` adlı bir parametresiz yöntemin, derlemenin alır `MethodA` , yazın ve yöntemini yürütür. Kapsamlı bir açıklama yüklenen derlemeden bilgi edinme hakkında bilgi için bkz: [dinamik olarak yükleme ve türleri kullanarak](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
+ Aşağıdaki kod, geçerli uygulama etki alanına "example. exe" veya "example. dll" adlı bir derlemeyi yükler, derlemeden adlı `Example` bir tür alır, bu tür için adlı `MethodA` parametresiz bir yöntemi alır ve yöntemini yürütür. Yüklü bir derlemeden bilgi alma hakkında ayrıntılı bir tartışma için bkz. [dinamik olarak yükleme ve türleri kullanma](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
  [!code-cpp[System.AppDomain.Load#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.appdomain.load/cpp/source2.cpp#2)]
  [!code-csharp[System.AppDomain.Load#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source2.cs#2)]
@@ -52,5 +52,5 @@ Uygulama etki alanına bir derlemeyi yüklemek için birkaç yolu vardır. Kulla
 - [Uygulama etki alanlarıyla programlama](application-domains.md#programming-with-application-domains)
 - [Yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Uygulama Etki Alanlarını Kullanma](../../../docs/framework/app-domains/use.md)
-- [Nasıl yapılır: Salt yansıma bağlamına derlemeleri yükleme](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Nasıl yapılır: Derlemeleri yalnızca yansıma Içeriğine yükle](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Uygulama etki alanları ve derlemeler](application-domains.md#application-domains-and-assemblies)

@@ -1,24 +1,24 @@
 ---
-title: <activityScheduledQueries> WCF
+title: <activityScheduledQueries>WCF
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
-ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83e71e2038377ae4c1c3b17334eece3f30c919f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701131"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920329"
 ---
-# <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries > WCF
-Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu zamanlanmış etkinlik kayıtlarına abone olmak izleme Katılımcısı için gereklidir.  
+# <a name="activityscheduledqueries-of-wcf"></a>\<WCF > activityScheduledQueries
+Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.  
   
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<activityScheduledQueries >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -50,17 +50,17 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](activityscheduledquery-of-wcf.md)|Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorgu.|  
+|[\<activityScheduledQuery >](activityscheduledquery-of-wcf.md)|Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgu.|  
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
+|[\<iş akışı >](../windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

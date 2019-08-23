@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2486316cf582da09eaa8998d06efb8a4e4ea3a88
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967219"
 ---
 # <a name="runtime-profiling"></a>Çalışma Zamanı Profili Oluşturma
 Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda performans verileri toplama yöntemidir. Bu bölüm, uygulama performansı hakkında bilgi toplamak isteyen geliştiricilere ve sistem yöneticilerine yöneliktir.  
@@ -49,12 +49,12 @@ Profil oluşturma, herhangi bir geliştirme veya dağıtım senaryosunda perform
      Çalışma zamanının birden çok sürümünü ayırt etmek veya aynı ada sahip birden çok uygulamayı kesinleştirmeniz için bir kayıt defteri anahtarını da değiştirmelisiniz. Daha fazla bilgi için bkz. [performans sayaçları ve Işlem Içi yan yana uygulamalar](../../../docs/framework/debug-trace-profile/performance-counters-and-in-process-side-by-side-applications.md).  
   
 > [!NOTE]
->  Performans konsolu çalışırken yeni performans sayaçları yüklendiğinde, yeni sayaçların görünür olması için Performans konsolunu durdurup yeniden başlatın.  
+> Performans konsolu çalışırken yeni performans sayaçları yüklendiğinde, yeni sayaçların görünür olması için Performans konsolunu durdurup yeniden başlatın.  
   
  Bir bölgede veya uzak paylaşımda bulunan bir derlemenin profilini oluşturmak istiyorsanız, uzak derlemenin performans sayaçlarını çalıştıran bilgisayarda tam güvene sahip olduğundan emin olun. Derlemenin yeterli güveni yoksa, performans sayaçları çalışmaz. Farklı bölgelere güven verme hakkında daha fazla bilgi için bkz. [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
+> .NET Framework 4 ' ün yüklendiği sistemlerde, performans Izleyicisi .net **clr verileri** ve **.NET CLR ağı**gibi bazı kategorilerdeki performans sayaçlarındaki verileri .NET kullanılarak geliştirilmiş uygulamalar için görüntülemeyebilir Framework 1,1. Bu durumda, [ \<forcePerformanceCounterUniqueSharedMemoryReads >](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) öğesini uygulamanın yapılandırma dosyasına ekleyerek performans izleyicisini bu verileri görüntüleyecek şekilde yapılandırabilirsiniz.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programlı olarak performans sayaçlarını okuma ve oluşturma  
  .NET Framework, Performans konsolunda bulunan performans bilgilerine programlı bir şekilde erişmek için kullanabileceğiniz sınıflar sağlar. Özel performans sayaçları oluşturmak için bu sınıfları da kullanabilirsiniz. Aşağıdaki tabloda .NET Framework belirtilen bazı performans izleme sınıfları açıklanmaktadır.  

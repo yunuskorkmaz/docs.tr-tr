@@ -9,18 +9,18 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b3ad3d0c3223d5baf937ca22fd48d46a80979aac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913677"
 ---
 # <a name="how-to-localize-an-application"></a>Nasıl yapılır: Bir Uygulamayı Yerelleştirme
 Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanın nasıl oluşturulacağı açıklanmaktadır.  
   
 > [!NOTE]
->  LocBaml aracı üretime yönelik olarak hazırlanmayan bir uygulama değildir. Bu, yerelleştirme API 'Lerinden bazılarını kullanan bir örnek olarak sunulur ve yerelleştirme aracını nasıl yazacağınızı gösterir.  
+> LocBaml aracı üretime yönelik olarak hazırlanmayan bir uygulama değildir. Bu, yerelleştirme API 'Lerinden bazılarını kullanan bir örnek olarak sunulur ve yerelleştirme aracını nasıl yazacağınızı gösterir.  
   
 <a name="Introduction"></a>   
 ## <a name="overview"></a>Genel Bakış  
@@ -28,9 +28,9 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 <a name="Requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu tartışma sırasında, komut satırından çalışan bir derleyici olan [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]' i kullanacaksınız.  
+ Bu tartışma sırasında, komut satırından çalışan bir derleyici olan Microsoft Build Engine (MSBuild) kullanacaksınız.  
   
- Ayrıca, bir proje dosyası kullanmanız istenir. Ve proje dosyalarının kullanımına [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] ilişkin yönergeler için bkz. [derleme ve dağıtma](../app-development/building-and-deploying-wpf-applications.md).  
+ Ayrıca, bir proje dosyası kullanmanız istenir. MSBuild ve proje dosyalarını kullanma hakkında yönergeler için bkz. [derleme ve dağıtma](../app-development/building-and-deploying-wpf-applications.md).  
   
  Bu tartışmadaki tüm örnekler kültür olarak en-US (Ingilizce-US) kullanır. Bu, farklı bir dil yüklemeden örneklerin adımlarında çalışabilmenizi sağlar.  
   
@@ -40,7 +40,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
   
 1. Uygulamanızı yerelleştirmeye başlamak istediğiniz noktaya geliştirin.  
   
-2. Bağımsız dil kaynaklarını içermesi için bir ana derleme ve uydu [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] derlemesi (. resources. dll uzantılı bir dosya) oluşturacak şekilde proje dosyasında geliştirme dilini belirtin. HelloApp örneğindeki proje dosyası HelloApp. csproj ' dır. Bu dosyada, aşağıdaki şekilde tanımlanan geliştirme dilini bulacaksınız:  
+2. MSBuild 'in, bağımsız dil kaynaklarını içermesi için bir ana derleme ve uydu derlemesi (. resources. dll uzantılı bir dosya) oluşturması için proje dosyasında geliştirme dilini belirtin. HelloApp örneğindeki proje dosyası HelloApp. csproj ' dır. Bu dosyada, aşağıdaki şekilde tanımlanan geliştirme dilini bulacaksınız:  
   
      `<UICulture>en-US</UICulture>`  
   
@@ -108,7 +108,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
     - **seçeneini** Ayrıntılı mod bilgilerini görüntüler.  
   
     > [!NOTE]
-    >  Aracı çalıştırırken seçenekler listesine ihtiyacınız varsa **LocBaml. exe** YAZıN ve ENTER tuşuna basın.  
+    > Aracı çalıştırırken seçenekler listesine ihtiyacınız varsa **LocBaml. exe** YAZıN ve ENTER tuşuna basın.  
   
 <a name="parse_dll"></a>   
 ## <a name="use-locbaml-to-parse-a-file"></a>Bir dosyayı ayrıştırmak için LocBaml Kullanma  
@@ -121,7 +121,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
      **LocBaml. exe/Parse HelloApp. resources. dll/out: Merhaba. csv**  
   
     > [!NOTE]
-    >  HelloApp. resources. dll giriş dosyası LocBaml. exe ile aynı dizinde değilse, her iki dosyanın de aynı dizinde olması için dosyalardan birini taşıyın.  
+    > HelloApp. resources. dll giriş dosyası LocBaml. exe ile aynı dizinde değilse, her iki dosyanın de aynı dizinde olması için dosyalardan birini taşıyın.  
   
 3. Dosyaları ayrıştırmak için LocBaml çalıştırdığınızda, çıktı virgüller (. csv dosyaları) veya sekmeler (. txt dosyaları) ile ayrılmış yedi alandan oluşur. Aşağıda, HelloApp. resources. dll için ayrıştırılmış. csv dosyası gösterilmektedir:
 
@@ -172,7 +172,7 @@ Bu öğreticide, LocBaml aracı kullanılarak yerelleştirilmiş bir uygulamanı
      **LocBaml. exe/Generate HelloApp. resources. dll/Trans: Hello. csv/Out: c:\/Cul: en-US**  
   
     > [!NOTE]
-    >  Hello. csv giriş dosyası yürütülebilir dosya, LocBaml. exe ile aynı dizinde değilse, her iki dosyanın de aynı dizinde olması için dosyalardan birini taşıyın.  
+    > Hello. csv giriş dosyası yürütülebilir dosya, LocBaml. exe ile aynı dizinde değilse, her iki dosyanın de aynı dizinde olması için dosyalardan birini taşıyın.  
   
 2. C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll dizinindeki eski HelloApp. resources. dll dosyasını yeni oluşturduğunuz HelloApp. resources. dll dosyası ile değiştirin.  
   

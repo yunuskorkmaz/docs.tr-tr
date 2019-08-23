@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e0b0b01a3c6da0680a3ec5fcd591344e04658a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917614"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Sütununun Türünü Değiştirme
 Bazen Windows Forms <xref:System.Windows.Forms.DataGridView> denetimine eklenmiş bir sütunun türünü değiştirmek isteyeceksiniz. Örneğin, denetimi bir veri kaynağına bağladığınızda otomatik olarak oluşturulan sütunlardan bazılarının türlerini değiştirmek isteyebilirsiniz. Bu, görüntülenen tabloda ilgili tablodaki satırlara yabancı anahtarlar içeren sütunlar olduğunda faydalıdır. Bu durumda, bu yabancı anahtarları görüntüleyen metin kutusu sütunlarını, ilişkili tablodan daha anlamlı değerler görüntüleyen Birleşik giriş kutusu sütunları ile değiştirmek isteyebilirsiniz.
@@ -28,7 +28,7 @@ Bazen Windows Forms <xref:System.Windows.Forms.DataGridView> denetimine eklenmi�
 3. **Sütun özellikleri** kılavuzunda, `ColumnType` özelliği yeni sütun türü olarak ayarlayın.
 
     > [!NOTE]
-    >  `ColumnType` Özelliği, sütun türünü temsil eden sınıfı gösteren bir yalnızca tasarım zamanı özelliğidir. Bir sütun sınıfında tanımlanan gerçek bir özellik değildir.
+    > `ColumnType` Özelliği, sütun türünü temsil eden sınıfı gösteren bir yalnızca tasarım zamanı özelliğidir. Bir sütun sınıfında tanımlanan gerçek bir özellik değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

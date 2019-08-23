@@ -3,26 +3,26 @@ title: <variable>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 46cc8cbc-10ec-4625-8813-3f5cd6c6afde
-ms.openlocfilehash: c85f3c57739c48566c97c8b1debfb7f2c3912bdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8f66f950db1edf8cd6ec21400785fb7e01b878e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613527"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947271"
 ---
 # <a name="variable"></a>\<değişken >
 Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.  
   
- Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<activityStateQueries >  
-\<activityStateQuery>  
-\<değişken >  
+\<activityStateQuery >  
+\<değişkenler >  
 \<değişken >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -49,7 +49,7 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Değişkenin adını belirten dize.|  
+|name|Değişkenin adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,10 +58,10 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<değişken >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/variable.md)|Bir etkinlik durumu sorgusu ile ilişkili bir değişkeni.|  
+|[\<değişken >](variable.md)|Bir etkinlik durumu sorgusu ile ilişkili bir değişkeni.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir benzersiz bir ActivityStateQuery bir iş akışı yürütülmesini izlerken veri çıkarma özelliğidir. İzleme erişme post düzenlediğinizde bu yürütme ek bağlam sağlar. Kullanabileceğiniz [ \<bağımsız değişkenleri >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) ve [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) öğeleri herhangi bir değişken veya bağımsız değişken ayıklamak için bir iş akışındaki herhangi bir etkinlikten. Aşağıdaki örnek, değişkenler ve bağımsız değişkenler ayıklar bir etkinlik durumu sorgusu gösterir, etkinliğin `Closed` izleme kaydını yayılan. Değişkenler ve bağımsız değişkenler yalnızca bir ActivityStateRecord ile ayıklanabileceği ve bu nedenle içinde bir izleme abone olduğunuz kullanarak profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
+ Bir ActivityStateQuery 'nin benzersiz bir özelliği, bir iş akışının yürütülmesi izlenirken veri ayıklama yeteneğidir. Bu, izleme kayıtlarına erişim sonrası yürütme sırasında ek bağlam sağlar. Bir iş akışındaki herhangi bir etkinlikten herhangi bir değişken veya bağımsız değişkeni ayıklamak için >, [ \<>](states.md) ve [ \<durumlar >](states.md) öğeleri için [ \<bağımsız değişkenleri](arguments.md)kullanabilirsiniz. Aşağıdaki örnekte, etkinliğin `Closed` izleme kaydı yayıldığınızda değişkenleri ve bağımsız değişkenleri çıkaran bir etkinlik durumu sorgusu gösterilmektedir. Değişkenler ve bağımsız değişkenler yalnızca bir ActivityStateRecord ile ayıklanabilir ve bu nedenle [ \<ActivityStateQuery >](activitystatequery.md)kullanılarak bir izleme profili içinde abone olunmuş olur.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -81,5 +81,5 @@ Bu etkinlik sorguyla ilişkilendirilen değişkeni koleksiyonunu temsil eder.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.VariableElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

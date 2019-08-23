@@ -2,21 +2,21 @@
 title: <wsdlImporter>
 ms.date: 03/30/2017
 ms.assetid: 986b2165-8430-4dba-b1b8-00396841bb96
-ms.openlocfilehash: 1f34486296465b3ea0b5b05bd9492062c85ad8c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13c9400874f1e02fac3ce0c3010153ad7806288c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670254"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915184"
 ---
-# <a name="wsdlimporter"></a>\<WsdlImporter >
-WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran tüm WSDL ımporters belirtir.  
+# <a name="wsdlimporter"></a>\<Wsdlıter >
+WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini içe aktaran tüm WSDL Importers 'ları belirtir.  
   
 \<system.ServiceModel>  
 \<İstemci >  
 \<meta veri >  
 \<wsdlImporters >  
-\<WsdlImporter >  
+\<Wsdlıter >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,10 +44,10 @@ WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe akta
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<wsdlImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdlimporters.md)|WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe aktaran tüm WSDL ımporters belirtir.|  
+|[\<wsdlImporters >](wsdlimporters.md)|WS-Policy ekleriyle Web Hizmetleri Açıklama Dili (WSDL) 1,1 meta verilerini içe aktaran tüm WSDL Importers 'ları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir WSDL içeri Aktarıcı yanı sıra meta veri alma, bu sözleşmeyi temsil eden çeşitli sınıf bilgilerini ve uç nokta bilgileri dönüştürmek için kullanılır. Sözleşmeyi ve uç nokta bilgilerini ve kullanıma alma hataları ve içeri aktarma ve dönüştürme işlemi için uygun tür bilgilerini kabul özellikleri seçerek alabilirsiniz. İçeri aktarma bağlama bilgileri ve ilke belgeleri, WSDL belgeleri, WSDL uzantıları ve XML Şeması belgeleri için erişim sağlayan özellikleri de destekler.  
+ Bir WSDL İçeri Aktarıcı, meta verileri içeri aktarmak ve bu bilgileri sözleşme ve uç nokta bilgilerini temsil eden çeşitli sınıflara dönüştürmek için kullanılır. İçeri aktarma hatalarını ortaya çıkaran ve içeri aktarma ve dönüştürme işlemiyle ilgili tür bilgilerini kabul eden sözleşme ve uç nokta bilgilerini ve özelliklerini seçerek içeri aktarabilirsiniz. Ayrıca, herhangi bir ilke belgelerine, WSDL belgelerine, WSDL uzantılarına ve XML şema belgelerine erişim sağlayan bağlama bilgilerini ve özelliklerini içeri aktarmayı destekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -56,5 +56,5 @@ WS-Policy ekli Web Hizmetleri Açıklama Dili (WSDL) 1.1 meta verileri içe akta
 - <xref:System.ServiceModel.Configuration.WsdlImporterElementCollection>
 - <xref:System.ServiceModel.Description.MetadataImporter>
 - <xref:System.ServiceModel.Description.WsdlImporter>
-- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF İstemci Yapılandırması](../../../wcf/feature-details/client-configuration.md)
+- [İstemciler](../../../wcf/feature-details/clients.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cbf82f1481ee9779cec5cfbf3fb057b7ea399a1c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 9eb762a9691a6127e2419f9ddc25f3010d3383fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966519"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Nasıl yapılır: Windows Forms'a Denetimleri Kilitleme
 Windows uygulamanızın kullanıcı arabirimini (UI) tasarladığınızda, denetimleri doğru konumlandırıldıktan sonra kilitleyebilir, böylece diğer özellikleri ayarlarken farkında olmadan taşıyamazsınız veya yeniden boyutlandıramazsınız.
@@ -24,14 +24,14 @@ Windows uygulamanızın kullanıcı arabirimini (UI) tasarladığınızda, denet
      Alternatif olarak, denetimi sağ tıklatın ve **denetimleri kilitle**' yi seçin.
 
     > [!NOTE]
-    >  Denetimleri kilitlemek, bunların tasarım yüzeyinde yeni bir boyuta veya konuma sürüklemesini önler. Ancak, denetimlerin boyutunu veya konumunu **Özellikler** penceresi veya kod içinde de değiştirebilirsiniz.
+    > Denetimleri kilitlemek, bunların tasarım yüzeyinde yeni bir boyuta veya konuma sürüklemesini önler. Ancak, denetimlerin boyutunu veya konumunu **Özellikler** penceresi veya kod içinde de değiştirebilirsiniz.
 
 ## <a name="to-lock-all-the-controls-on-a-form"></a>Form üzerindeki tüm denetimleri kilitlemek için
 
 1. **Biçim** menüsünde, **denetimleri kilitle**' yi seçin.
 
     > [!NOTE]
-    >  Form bir denetim olduğundan, bu komut formun boyutunu da kilitler.
+    > Form bir denetim olduğundan, bu komut formun boyutunu da kilitler.
 
 ## <a name="to-unlock-all-locked-controls-on-a-form"></a>Form üzerindeki tüm kilitli denetimlerin kilidini açmak için
 

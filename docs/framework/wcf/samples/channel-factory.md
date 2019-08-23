@@ -2,20 +2,20 @@
 title: Kanal Fabrikası
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 0bcaa739a51d168e18c809804b7da6948ab61e9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6479c4bb057ad73b0aeb84c882cbed8dec306ce6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002423"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911696"
 ---
 # <a name="channel-factory"></a>Kanal Fabrikası
-Bu örnek, bir istemci uygulaması ile bir kanalı nasıl oluşturacağınızı gösterir. <xref:System.ServiceModel.ChannelFactory> yerine oluşturulmuş istemci sınıfı. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan.  
+Bu örnek, bir istemci uygulamanın oluşturulan istemci yerine <xref:System.ServiceModel.ChannelFactory> sınıfı ile bir kanal nasıl oluşturacağınızı gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnekte <xref:System.ServiceModel.ChannelFactory%601> hizmet uç noktası için bir kanal oluşturmak için sınıf. Genellikle, bir hizmet uç noktası için bir kanal oluşturmak için bir istemci türü ile oluşturduğunuz [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ve oluşturulan türün bir örneğini oluşturun. Kullanarak bir kanalı oluşturabilirsiniz <xref:System.ServiceModel.ChannelFactory%601> , bu örnekte gösterildiği gibi sınıf. Aşağıdaki örnek kod tarafından oluşturulan hizmet hizmette aynı [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Bu örnek, <xref:System.ServiceModel.ChannelFactory%601> bir hizmet uç noktasına kanal oluşturmak için sınıfını kullanır. Genellikle, bir hizmet uç noktasına kanal oluşturmak için, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ile bir istemci türü oluşturun ve oluşturulan türün bir örneğini oluşturun. Ayrıca, bu örnekte gösterildiği gibi <xref:System.ServiceModel.ChannelFactory%601> sınıfını kullanarak bir kanal oluşturabilirsiniz. Aşağıdaki örnek kod tarafından oluşturulan hizmet, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)hizmeti ile aynıdır.  
   
 ```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
@@ -26,9 +26,9 @@ ICalculator channel = factory.CreateChannel();
 ```  
   
 > [!IMPORTANT]
->  Bu örnek bir çapraz makine senaryosunda çalıştırıyorsanız, önceki kodda, "localhost" hizmetini çalıştıran makinenin tam adıyla değiştirmelisiniz. Bu örnek, bu kod yapılmalıdır için uç nokta adresi ayarlamak için yapılandırma kullanmaz.  
+>  Bu örneği bir çapraz makine senaryosunda çalıştırıyorsanız, yukarıdaki koddaki "localhost" hizmetini hizmeti çalıştıran makinenin tam adı ile değiştirmelisiniz. Bu örnek, uç nokta adresini ayarlamak için yapılandırma kullanmaz, bu nedenle bu işlem kodda yapılmalıdır.  
   
- Kanal oluşturulduktan sonra hizmet işlemleri ile oluşturulan bir istemci olarak çağrılabilir.  
+ Kanal oluşturulduktan sonra, hizmet işlemleri, oluşturulan bir istemcide olduğu gibi çağrılabilir.  
   
 ```csharp  
 // Call the Add service operation.  
@@ -38,14 +38,14 @@ double result = channel.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
- Kanal kapatmak için önce için dönüştürülmelidir bir <xref:System.ServiceModel.IClientChannel> arabirimi. Oluşturulan kanal istemcisi kullanılarak uygulama bildirilmiş olmasıdır `ICalculator` yöntemleri olan arabirimi gibi `Add` ve `Subtract` ama `Close`. `Close` Yöntemi kaynaklanan üzerinde <xref:System.ServiceModel.ICommunicationObject> arabirimi.  
+ Kanalı kapatmak için öncelikle bir <xref:System.ServiceModel.IClientChannel> arabirime dönüştürülmesi gerekir. Bunun nedeni, kanalın `ICalculator` oluşturulduğu gibi, ve `Add` `Subtract` `Close`gibi yöntemlere sahip olan arabirimini kullanarak istemci uygulamasında bildirildiği anlamına gelir. `Close` Yöntemi <xref:System.ServiceModel.ICommunicationObject> arayüzden kaynaklanır.  
   
 ```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci uygulamayı kapatın istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemci uygulamasını kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -56,27 +56,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md). Bu örnek meta veri yayımlama etkinleştirmez unutmayın. Meta veri yayımlama istemci türünü yeniden oluşturmak Bu örnek için önce etkinleştirmeniz gerekir.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin. Bu örneğin meta veri yayımlamayı etkinleştirmediğini unutmayın. İstemci türünü yeniden oluşturmak için önce Bu örnek için meta veri yayımlamayı etkinleştirmeniz gerekir.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-### <a name="to-run-the-sample-cross-machine"></a>Örneği çalıştırmak için makine çapraz  
+### <a name="to-run-the-sample-cross-machine"></a>Örnek çapraz makineyi çalıştırmak için  
   
-1. Aşağıdaki kodda "localhost" hizmetini çalıştıran makinenin tam adıyla değiştirin.  
+1. Aşağıdaki kodda yer alan "localhost" değerini hizmeti çalıştıran makinenin tam adı ile değiştirin.  
   
     ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  

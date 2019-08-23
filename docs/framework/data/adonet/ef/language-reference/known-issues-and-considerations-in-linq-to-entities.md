@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 66af3395d7ba7271323ad6461e8e1fb8c823a1c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913910"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities Hakkında Bilinen Sorunlar ve Dikkat Edilmesi Gerekenler
-Bu bölümde, LINQ to Entities sorgularında bilinen sorunlar hakkında bilgi sağlar.  
+Bu bölüm LINQ to Entities sorgularıyla ilgili bilinen sorunlar hakkında bilgi sağlar.  
   
-- [LINQ sorguları, önbelleğe alınamaz](#LINQQueriesThatAreNotCached)  
+- [Önbelleğe alınabilecek LINQ sorguları](#LINQQueriesThatAreNotCached)  
   
-- [Kayıp bilgileri sıralama](#OrderingInfoLost)  
+- [Sipariş bilgileri kayıp](#OrderingInfoLost)  
   
 - [İşaretsiz tamsayılar desteklenmiyor](#UnsignedIntsUnsupported)  
   
 - [Tür dönüştürme hataları](#TypeConversionErrors)  
   
-- [Desteklenmeyen skaler olmayan değişkenleri başvurma](#RefNonScalarClosures)  
+- [Skalar olmayan değişkenlere başvurma desteklenmiyor](#RefNonScalarClosures)  
   
-- [SQL Server 2000 ile iç içe geçmiş sorgular başarısız olabilir](#NestedQueriesSQL2000)  
+- [İç içe geçmiş sorgular SQL Server 2000 ile başarısız olabilir](#NestedQueriesSQL2000)  
   
-- [Anonim bir tür için yansıtma](#ProjectToAnonymousType)  
+- [Anonim bir türe yansıtma](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
-## <a name="linq-queries-that-cannot-be-cached"></a>LINQ sorguları, önbelleğe alınamaz  
- .NET Framework 4.5 ile başlayarak, LINQ to Entities sorgularında otomatik olarak önbelleğe alınır. Ancak LINQ to Entities sorgularında, geçerli `Enumerable.Contains` işleci bellek içi koleksiyonlara otomatik olarak önbelleğe alınmaz. Bellek içi koleksiyonları derlenmiş LINQ sorgularında ayrıca kümesini parametreleştirme izin verilmez.  
+## <a name="linq-queries-that-cannot-be-cached"></a>Önbelleğe alınabilecek LINQ sorguları  
+ .NET Framework 4,5 ' den başlayarak LINQ to Entities sorguları otomatik olarak önbelleğe alınır. Ancak, bu işleci, `Enumerable.Contains` bellek içi koleksiyonlara uygulayan LINQ to Entities sorguları otomatik olarak önbelleğe alınmaz. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametreleştirmeye izin verilmez.  
   
 <a name="OrderingInfoLost"></a>   
-## <a name="ordering-information-lost"></a>Kayıp bilgileri sıralama  
- Sütunlar anonim bir tür yansıtma sıralama "80" bir uyumluluk düzeyine ayarlanmış bir SQL Server 2005 veritabanı karşı yürütülen sorgular kaybolur bilgilere neden olur.  Order by listesi bir sütun adı bir sütun adı Seçici içinde eşleştiğinde aşağıdaki örnekte gösterildiği gibi oluşur:  
+## <a name="ordering-information-lost"></a>Sipariş bilgileri kayıp  
+ Sütunları anonim bir türde yansıtma, bir SQL Server 2005 veritabanına karşı yürütülen bazı sorgularda sıralama bilgilerinin "80" uyumluluk düzeyine ayarlanmış olarak kaybolmasına neden olur.  Bu durum, aşağıdaki örnekte gösterildiği gibi, order by listesindeki bir sütun adı seçicideki bir sütun adıyla eşleştiğinde meydana gelir:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>İşaretsiz tamsayılar desteklenmiyor  
- Bir işaretsiz tamsayı türü bir LINQ to Entities sorgusunda belirtilmesi desteklenmez çünkü [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] işaretsiz tamsayılar desteklemez. İşaretsiz bir tamsayı belirtmeniz durumunda bir <xref:System.ArgumentException> özel durumu aşağıdaki örnekte gösterildiği gibi sorgu ifade çevirisi sırasında oluşturulur. Bu örnek sorguları bir sipariş kimliği 48000 için.  
+ İşaretsiz tamsayılar desteklemediğinden LINQ to Entities sorgusunda işaretsiz bir tamsayı türü belirtilmesi desteklenmez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] . İşaretsiz bir tamsayı belirtirseniz, aşağıdaki örnekte gösterildiği <xref:System.ArgumentException> gibi sorgu ifadesi çevirisi sırasında bir özel durum atılır. Bu örnek 48000 KIMLIKLI bir sipariş için sorgular.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
   
 <a name="TypeConversionErrors"></a>   
 ## <a name="type-conversion-errors"></a>Tür dönüştürme hataları  
- Visual Basic'te, bir özellik SQL Server bit türünde bir sütun 1'i kullanarak bir değer ile eşlendiğinde `CByte` işlevi, bir <xref:System.Data.SqlClient.SqlException> "aritmetik taşma hata" iletisi ile oluşturulur. Aşağıdaki örnek sorgularda `Product.MakeFlag` üzerinden sorgu sonuçları yinelendiğinde sütununda AdventureWorks örnek veritabanı ve bir özel durum harekete geçirilir.  
+ Visual Basic, bir özellik `CByte` işlevi kullanılarak 1 değeri olan SQL Server bit türünde bir sütunla eşlendiğinde, bir <xref:System.Data.SqlClient.SqlException> "aritmetik taşma hatası" iletisiyle oluşturulur. Aşağıdaki örnek, AdventureWorks örnek `Product.MakeFlag` veritabanındaki sütununu sorgular ve sorgu sonuçları üzerinden yineedildiğinde bir özel durum oluşturulur.  
   
  [!code-vb[DP L2E Conceptual Examples#SBUDT544355](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt544355)]  
   
 <a name="RefNonScalarClosures"></a>   
-## <a name="referencing-non-scalar-variables-not-supported"></a>Desteklenmeyen skaler olmayan değişkenleri başvurma  
- Bir varlıkta bir sorgu gibi bir skaler olmayan değişkenleri başvuran desteklenmiyor. Bu tür bir sorgu yürütüldüğünde, bir <xref:System.NotSupportedException> bildiren bir ileti ile özel durum oluştu "türünde bir sabit değer oluşturulamıyor `EntityType`. Yalnızca ilkel türler ('Örneğin Int32, String ve Guid') bu bağlamda desteklenir."  
+## <a name="referencing-non-scalar-variables-not-supported"></a>Skalar olmayan değişkenlere başvurma desteklenmiyor  
+ Bir sorgu içindeki bir varlık gibi skaler olmayan değişkenlere başvurma desteklenmez. Böyle bir sorgu yürütüldüğünde, <xref:System.NotSupportedException> "türün `EntityType`sabit değeri oluşturulamıyor" iletisini içeren bir özel durum oluşturulur. Bu bağlamda yalnızca ilkel türler (Int32, String ve Guid gibi) destekleniyor. "  
   
 > [!NOTE]
->  Skalar değişkenler koleksiyonunu başvuran desteklenir.  
+> Skaler değişkenler koleksiyonuna başvurmak desteklenir.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  
   
 <a name="NestedQueriesSQL2000"></a>   
-## <a name="nested-queries-may-fail-with-sql-server-2000"></a>SQL Server 2000 ile iç içe geçmiş sorgular başarısız olabilir  
- Üç veya daha fazla düzeyleri derin iç içe geçmiş Transact-SQL sorguları ürettikleri ile SQL Server 2000, LINQ to Entities sorgularında başarısız olabilir.  
+## <a name="nested-queries-may-fail-with-sql-server-2000"></a>İç içe geçmiş sorgular SQL Server 2000 ile başarısız olabilir  
+ SQL Server 2000 ile, üç veya daha fazla düzey derinlikli iç içe Transact-SQL sorguları oluşturduklarında LINQ to Entities sorguları başarısız olabilir.  
   
 <a name="ProjectToAnonymousType"></a>   
-## <a name="projecting-to-an-anonymous-type"></a>Anonim bir tür için yansıtma  
- İlgili nesneler kullanarak eklemek için ilk sorgu yolunuzu tanımlarsanız, <xref:System.Data.Objects.ObjectQuery%601.Include%2A> metodunda <xref:System.Data.Objects.ObjectQuery%601> ve ardından döndürülen nesneleri anonim bir tür projeye LINQ kullanmak için dahil etme yöntemi belirtilen nesnelerin sorguda yer almaz Sonuç.  
+## <a name="projecting-to-an-anonymous-type"></a>Anonim bir türe yansıtma  
+ Üzerinde yöntemi<xref:System.Data.Objects.ObjectQuery%601.Include%2A> kullanarak ilgili nesneleri dahil etmek için ilk sorgu yolunu tanımlayabilir veardındandöndürülennesnelerianonimbirtüreeklemekiçinLINQkullanıyorsanız,Includeyöntemindebelirtilennesnelersorguyaeklenmez<xref:System.Data.Objects.ObjectQuery%601> sonucunun.  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype1)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype1)]  
   
- İlgili nesneler almak için döndürülen türleri anonim bir tür için proje değil.  
+ İlgili nesneleri almak için, döndürülen türleri bir anonim türe proje olarak değiştirmeyin.  
   
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  

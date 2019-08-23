@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 46dd947ac6ff5a45c7d952acaa55e25c3a46969c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 8f75783f004f3667644a126930fbfbca4acb0787
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588051"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921688"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML Belgeleri Yorumları (C# Programlama Kılavuzu)
 Visual C#'de, kaynak kodda doğrudan açıklamaların başvurduğu kod bloğunun hemen öncesindeki özel açıklama alanlarına (üç eğik çizgiyle gösterilir) XML öğeleri ekleyerek, kodunuz için belge oluşturabilirsiniz, örneğin:  
@@ -34,7 +34,7 @@ public class MyClass {}
  XML öğelerine başvurmak için (örneğin, işleviniz bir XML belge açıklamasında açıklama eklemek istediğiniz belirli XML öğelerini işler), standart tırnak işareti mekanizmasını (`<` ve `>`) kullanabilirsiniz.  Kod başvurusu (`cref`) öğelerinde genel tanımlayıcılara başvurmak için, kaçış karakterlerini (örneğin, `cref="List&lt;T&gt;"`) veya küme ayracı (`cref="List{T}"`) kullanabilirsiniz.  Özel bir durum olarak, derleyici, genel tanımlayıcılara başvururken belge açıklamasının yazar için daha az sıkıcı olması için, derleyici tireleri açılı ayraçlar olarak ayrıştırır.  
   
 > [!NOTE]
->  XML belge açıklamaları meta veri değildir; oluşturulan derlemeye dahil edilmezler ve bu nedenle yansıtma üzerinden erişilemezler.  
+> XML belge açıklamaları meta veri değildir; oluşturulan derlemeye dahil edilmezler ve bu nedenle yansıtma üzerinden erişilemezler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a62bd3507c14e42798c903ae51edb0187e666c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920816"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<Enableampmparseayarlaması > öğesi
 Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesini içeren Tarih dizelerini ayrıştırmak için ayarlanmış bir kural kümesi kullanıp kullanmadığını belirler.  
@@ -68,7 +68,7 @@ Tarih ve saat ayrıştırma yöntemlerinin, gün, ay, saat ve PM/PM göstergesin
  Öğesinin,<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> ,ve<xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> yöntemleri üzerinde hiçbir etkisi yoktur. <xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType> `<EnableAmPmParseAdjustment>` <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>  
   
 > [!IMPORTANT]
->  .NET Core ve .NET Native 'de, ayarlanan saat/PM ayrıştırma kuralları varsayılan olarak etkindir.  
+> .NET Core ve .NET Native 'de, ayarlanan saat/PM ayrıştırma kuralları varsayılan olarak etkindir.  
   
  Ayrıştırma ayarlama kuralı etkinleştirilmemişse, dizenin ilk basamak, 12 saatlik saatin saati olarak yorumlanır ve bu dizenin geri kalanı, ı/PM göstergesi hariç sayılır. Ayrıştırma yöntemi tarafından döndürülen tarih ve saat, geçerli tarih ve Tarih dizesinden çıkarılan günün saati içerir.  
   

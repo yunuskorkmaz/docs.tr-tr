@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044934"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965783"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter Arabirimi
-Belirtilen belirteç işleneceğini belirtmek için bir yöntem sağlar.  
+Belirtilen belirtecin işleneceğini göstermek için bir yöntem sağlar.  
   
 > [!NOTE]
->  `IHostFilter` İstemci tarafından arabirimi uygulanır.  
+> `IHostFilter` Arabirimin istemci tarafından uygulanması gerekir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Belirtilen meta veri belirteci işleneceğini gösterir.|  
+|[MarkToken Yöntemi](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Belirtilen meta veri belirtecinin işleneceğini belirtir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

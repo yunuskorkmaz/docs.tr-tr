@@ -2,37 +2,37 @@
 title: Kullanıcı AdıParola Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 16e5f854dbe76150945145c0ce81d0d5fa4ac0d0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: b02533641785b24019f10a3c224b09e252cbb2ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421820"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966779"
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
-Bu örnek bir özel UserNamePassword Doğrulayıcıyı uygulamak nasıl gösterir. Bu, yerleşik UserNamePassword doğrulama modları hiçbiri uygulama gereksinimlerini için uygun olduğu durumlarda kullanışlıdır. Örneğin, ne zaman kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış deposunda depolanır. Bu örnek için iki belirli bir kullanıcı adı/parola çiftleri denetleyen özel Doğrulayıcı sağlayıcısı olan bir hizmete gösterir. İstemci hizmete kimlik doğrulaması için bu tür bir kullanıcı adı/parola çift kullanır.
+Bu örnek, nasıl özel bir UserNamePassword doğrulayıcısı uygulanacağını gösterir. Bu, yerleşik UserNamePassword doğrulama modlarından hiçbirinin uygulamanın gereksinimlerine uygun olmadığı durumlarda faydalıdır; Örneğin, Kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış depoda depolanır. Bu örnek, iki belirli Kullanıcı adı/parola çiftini denetleyen özel bir doğrulayıcısı olan bir hizmeti gösterir. İstemci, hizmette kimlik doğrulamak için böyle bir Kullanıcı adı/parola çifti kullanır.
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  Herkes özel Doğrulayıcı kabul eden kullanıcı adı/parola çiftleri kullanan bir kullanıcı adı kimlik bilgisi oluşturmak için standart UserNamePassword doğrulayıcı tarafından sağlanan varsayılan davranışını daha az güvenli bir hizmettir. Standart UserNamePassword Doğrulayıcı sağlanan kullanıcı adı/parola çifti için bir Windows hesabı eşlemeye çalışır ve bu Eşleme başarısız kimlik doğrulaması başarısız olur. Bu örnekte UserNamePassword Doğrulayıcı üretim kodunda kullanılmamalıdır özel, buna yalnızca gösterim amacıyla var.
+> Herkes özel Doğrulayıcının kabul ettiği Kullanıcı adı/parola çiftlerini kullanan bir Kullanıcı adı kimlik bilgisi oluşturabileceğinden, hizmet standart UserNamePassword doğrulayıcısı tarafından sunulan varsayılan davranıştan daha az güvenlidir. Standart UserNamePassword Doğrulayıcısı, belirtilen Kullanıcı adı/parola çiftini bir Windows hesabıyla eşlemeye çalışır ve bu eşleme başarısız olursa kimlik doğrulaması başarısız olur. Bu örnekteki özel UserNamePassword doğrulayıcısı üretim kodunda kullanılmamalıdır, yalnızca çizim amaçlıdır.
 
- Özet olarak, bu örnek gösterir nasıl:
+ Özet bölümünde bu örnek şunları gösterir:
 
-- İstemci, bir kullanıcı adı belirteci kullanılarak doğrulanabilir.
+- İstemcinin kimliği, bir Kullanıcı adı belirteci kullanılarak yapılabilir.
 
-- Sunucu, istemci kimlik bilgileri bir özel usernamepasswordvalidator değerini ve istemciye kullanıcı adını ve parolayı Doğrulama mantığı özel hata yaymak nasıl karşı doğrular.
+- Sunucu, istemci kimlik bilgilerini özel bir Usernamepassworddoğrulayıcısı ile doğrular ve özel hataları Kullanıcı adı ve parola doğrulama mantığındaki istemciye nasıl yayılır.
 
-- Sunucu sunucusunun X.509 sertifikasını kullanarak kimlik doğrulaması yapılır.
+- Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılır.
 
- Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için tek bir uç noktayı kullanıma sunar. Uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsHttpBinding` , varsayılan olarak WS-güvenlik ve kullanıcı adı kimlik doğrulaması için kullanılacak. Hizmet davranışı belirtir `Custom` doğrulamak için istemci kullanıcı adı/parola çiftleri Doğrulayıcı sınıfını türünü birlikte modu. Sunucu sertifikası kullanarak davranışı da belirtir `serviceCertificate` öğesi. Sunucu sertifikası için aynı değeri içermesi gerekir `SubjectName` olarak `findValue` içinde [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, varsayılan olarak WS-güvenlik `wsHttpBinding` ve Kullanıcı adı kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, istemci kullanıcı `Custom` adı/parola çiftlerini Doğrulayıcı sınıfının türüyle birlikte doğrulama modunu belirtir. Davranışı, `serviceCertificate` öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, `SubjectName` `findValue` [ServiceCertificate > için aynı \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)değeri içermesi vardır.
 
 ```xml
 <system.serviceModel>
@@ -88,7 +88,7 @@ Bu örnek bir özel UserNamePassword Doğrulayıcıyı uygulamak nasıl gösteri
 </system.serviceModel>
 ```
 
- İstemci uç nokta yapılandırması mutlak bir adres için hizmet uç noktası, bağlama ve sözleşmenin bir yapılandırma adı oluşur. Bağlama istemcinin uygun modu ve şu iletiyle yapılandırıldığı `clientCredentialType`.
+ İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama uygun mod ve iletiyle `clientCredentialType`yapılandırılır.
 
 ```xml
 <system.serviceModel>
@@ -137,7 +137,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
   </system.serviceModel>
 ```
 
- İstemci uygulaması, bir kullanıcı adı ve parola girmesini ister.
+ İstemci uygulama kullanıcıdan bir Kullanıcı adı ve parola girmesini ister.
 
 ```
 // Get the username and password
@@ -197,7 +197,7 @@ try
 }
 ```
 
- Bu örnek, kullanıcı adı/parola çiftlerini doğrulamak için özel bir usernamepasswordvalidator değerini kullanır. Örnek uygulayan `CustomUserNamePasswordValidator`, türetilmiş <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Belgelerine bakın <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> daha fazla bilgi için. Bu belirli özel Doğrulayıcı sağlayıcısı örnek uygulayan `Validate` aşağıdaki kodda gösterildiği gibi iki belirli bir kullanıcı adı/parola çiftlerini kabul etmek için yöntemi.
+ Bu örnek, Kullanıcı adı/parola çiftlerini doğrulamak için özel bir UserNamePasswordValidator kullanır. Örnek `CustomUserNamePasswordValidator`, öğesinden <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>türetilir. Daha fazla bilgi <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> için belgelerine bakın. Bu özel Doğrulayıcı örneği, `Validate` aşağıdaki kodda gösterildiği gibi iki belirli Kullanıcı adı/parola çiftini kabul etmek için yöntemini uygular.
 
 ```
 public class CustomUserNameValidator : UserNamePasswordValidator
@@ -222,14 +222,14 @@ public class CustomUserNameValidator : UserNamePasswordValidator
  }
 ```
 
- Doğrulayıcı hizmeti kodunda uygulandıktan sonra hizmet ana bilgisayarı kullanmak için Doğrulayıcı örneği hakkında bilgilendirilmesi gerekir. Bu yapılır aşağıdaki kodu kullanarak.
+ Doğrulayıcı hizmet koduna uygulandıktan sonra, hizmet ana bilgisayarının kullanılacak Doğrulayıcı örneği hakkında bilgilendirilmesi gerekir. Bu, aşağıdaki kod kullanılarak yapılır.
 
 ```
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
 
- Ya da aynı şeyi yapılandırmasında şu şekilde yapabilirsiniz.
+ Ya da yapılandırma ile aynı şeyi aşağıdaki şekilde yapabilirsiniz.
 
 ```xml
 <behaviors>
@@ -247,16 +247,16 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 </behaviors>
 ```
 
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci başarıyla tüm yöntemlerini çağırmanız gerekir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemci tüm yöntemleri başarıyla çağırmalıdır. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
-## <a name="setup-batch-file"></a>Kurulum toplu iş dosyası
- Bu örnekle dahil Setup.bat toplu iş dosyası ile ilgili sertifika sunucusu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası makinelerde çalışmaya veya kendi kendine barındırılan bir durumda çalışması için değiştirilmesi gerekir.
+## <a name="setup-batch-file"></a>Toplu Iş dosyası kurulumu
+ Bu örneğe eklenen Setup. bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyası makineler arasında çalışacak şekilde değiştirilmelidir veya şirket içinde olmayan bir durumda çalışır.
 
- Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.
+ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar.
 
 - Sunucu sertifikası oluşturuluyor:
 
-     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. % Sunucu_adı % değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost varsayılan değerdir.
+     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. % SERVER_NAME% değişkeni sunucu adını belirtiyor. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Varsayılan değer localhost 'tur.
 
     ```
     echo ************
@@ -268,55 +268,55 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme:
 
-     İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
+     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
-#### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için
+#### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
 
-1. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
 
-2. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için aşağıdaki yönergeleri kullanın.
+2. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için
 
-1. Setup.bat içinde bir Visual Studio 2012 komut istemi örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1. Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
+    >  Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.  
   
-2. Service.exe service\bin ' başlatın.  
+2. Service\bin. adresinden Service. exe ' yi Başlat  
   
-3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
+#### <a name="to-run-the-sample-across-machines"></a>Örneği makineler arasında çalıştırmak için  
   
-1. Hizmet makinede hizmet ikili dosyaları için bir dizin oluşturun.  
+1. Hizmet ikili dosyaları için hizmet makinesinde bir dizin oluşturun.  
   
-2. Hizmet program dosyaları hizmeti makinede hizmet dizine kopyalayın. Ayrıca hizmeti makineye Setup.bat ve Cleanup.bat dosyaları kopyalayın.  
+2. Hizmet programı dosyalarını hizmet makinesindeki hizmet dizinine kopyalayın. Ayrıca Setup. bat ve Cleanup. bat dosyalarını hizmet makinesine kopyalayın.  
   
-3. Makinenin tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası gerekir. Sunucu Yapılandırma dosyası, bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir.  
+3. Makinenin tam etki alanı adını içeren konu adına sahip bir sunucu sertifikasına ihtiyacınız vardır. Sunucu yapılandırma dosyasının bu yeni sertifika adını yansıtması için güncelleştirilmeleri gerekir.  
   
-4. Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Yalnızca sunucu sertifikası güvenilir bir veren tarafından yazılmazsa yapmanız gerekir.  
+4. Sunucu sertifikasını istemcinin CurrentUser-Trustedkişilerim deposuna kopyalayın. Bunu yalnızca, sunucu sertifikası güvenilen bir veren tarafından verilmiyorsa yapmanız gerekir.  
   
-5. Hizmeti makinede App.config dosyasında taban adresi localhost yerine tam makine adını değiştirin.  
+5. Hizmet makinesindeki App. config dosyasında, temel adresin değerini localhost yerine tam nitelikli bir makine adı belirtecek şekilde değiştirin.  
   
-6. Bir komut istemi penceresinden Service.exe hizmeti makinede başlatın.  
+6. Hizmet makinesinde, bir komut istemi penceresinden Service. exe ' yi başlatın.  
   
-7. İstemci program dosyaları \client\bin\ klasöründen, dile özgü klasörünün altındaki istemci makineye kopyalayın.  
+7. İstemci program dosyalarını dile özgü klasörün altındaki \client\bin\ klasöründen istemci makinesine kopyalayın.  
   
-8. İstemci makinesinde Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+8. İstemci makinesindeki Client. exe. config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin.  
   
-9. İstemci makinesinde bir komut istemi penceresinden Client.exe başlatın.  
+9. İstemci makinesinde, bir komut istemi penceresinden Client. exe ' yi başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın. Bu sunucu sertifikası sertifika deposundan kaldırır.  
+1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın. Bu, sunucu sertifikasını sertifika deposundan kaldırır.  

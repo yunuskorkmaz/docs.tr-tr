@@ -1,26 +1,26 @@
 ---
-title: <workflowInstanceQueries> WCF
+title: <workflowInstanceQueries>WCF
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: feae65a75f9f0b2b1b398f3f9e80ac4c8d971dcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915309"
 ---
-# <a name="workflowinstancequeries-of-wcf"></a>\<Workflowınstancequeries > WCF
+# <a name="workflowinstancequeries-of-wcf"></a>\<WCF > WorkflowInstanceQueries
 
-Başlatılmamış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişiklikleri izleme yapılandırma öğelerinin bir koleksiyonunu temsil eder.  
+Başlatılmış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişikliklerini izleyen yapılandırma öğelerinin bir koleksiyonunu temsil eder.  
   
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
-\<Workflowınstancequeries >  
+\<iş akışı >  
+\<WorkflowInstanceQueries >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -54,13 +54,13 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Workflowınstancequery >](workflowinstancequery-of-wcf.md)|İş akışı örneği yaşam döngüsü değişiklikleri izlemek için kullanılan sorgu.|  
+|[\<WorkflowInstanceQuery >](workflowinstancequery-of-wcf.md)|İş akışı örneği yaşam döngüsü değişikliklerini izlemek için kullanılan bir sorgu.|  
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi [activityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) özelliği.|  
+|[\<iş akışı >](../windows-workflow-foundation/workflow.md)|[ActivityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) özelliği tarafından tanımlanan belirli bir iş akışı için tüm sorguları içeren bir yapılandırma öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar
 
@@ -78,7 +78,7 @@ Yok.
   
 ## <a name="example"></a>Örnek  
 
-İş akışı örnek düzeyi kayıtları için izleme için aşağıdaki yapılandırma abone `Started` bu sorguyu kullanarak örnek durumu.  
+Aşağıdaki yapılandırma bu sorguyu kullanarak `Started` örnek durumu için iş akışı örnek düzeyi izleme kayıtlarına abone olur.  
   
 ```xml  
 <workflowInstanceQueries>
@@ -94,5 +94,5 @@ Yok.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

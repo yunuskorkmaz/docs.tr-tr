@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d89b26016213872250bcb4dbee96d7376afd3fcb
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8fc88b06ee1e206208e6d6950f640966f53df3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666395"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924914"
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
 <a name="top"></a>Görev paralel kitaplığı (TPL), eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri, her toplu olarak *TPL veri akışı kitaplığı*olarak adlandırılır. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri, TPL 'nin türler ve Zamanlama altyapısında derleyin ve zaman uyumsuz programlama için C#, Visual Basic ve F# dil desteğiyle tümleştirin. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü çerçevelerini iyileştirdiği gibi, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek, veri akışı bileşenleri için bir işlem *hattı* oluşturabilirsiniz. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  
@@ -53,7 +53,7 @@ ms.locfileid: "69666395"
  Bir kaynağı hedefe bağlamak için <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A?displayProperty=nameWithType> yöntemini çağırdığınızda, hedef bloğun bir iletiyi değerine göre kabul edeceğini veya reddedeceğini belirleyen bir temsilci sağlayabilirsiniz. Bu filtreleme mekanizması, bir veri akışı bloğunun yalnızca belirli değerleri almasını sağlamak için kullanışlı bir yoldur. Çoğu önceden tanımlı veri akışı bloğu türünde, eğer bir kaynak blok birden çok hedef bloğa bağlı ise, bir hedef blok iletiyi reddettiğinde kaynak o iletiyi sonraki hedefe sunar. Kaynağın hedeflere iletileri hangi sırayla sunacağı kaynak tarafından tanımlanır ve kaynağın türüne göre farklılık gösterebilir. Çoğu kaynak blok türü, bir hedef iletiyi kabul ettiğinde o iletiyi sunmayı bırakır. Bazı hedefler iletiyi reddetse her iletiyi tüm hedeflere sunan <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> sınıfı, bu kural için bir istisnadır. Yalnızca belirli iletileri işlemek için filtrelemeyi kullanan bir örnek için bkz [. İzlenecek yol: Windows Forms uygulamasında](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)veri akışı kullanma.  
   
 > [!IMPORTANT]
->  Önceden tanımlı veri akışı bloklarının her biri iletilerin alındıkları sırayla gönderilmesini sağladığından, kaynak bloğun sonraki iletiyi işleyebilmesi için kaynak bloktaki her ileti okunmalıdır. Bu nedenle, birden çok hedefi tek bir kaynağa bağlamak için filtreleme kullandığınızda her iletiyi en az bir hedef bloğun aldığından emin olun. Aksi halde, uygulamanız kilitlenebilir.  
+> Önceden tanımlı veri akışı bloklarının her biri iletilerin alındıkları sırayla gönderilmesini sağladığından, kaynak bloğun sonraki iletiyi işleyebilmesi için kaynak bloktaki her ileti okunmalıdır. Bu nedenle, birden çok hedefi tek bir kaynağa bağlamak için filtreleme kullandığınızda her iletiyi en az bir hedef bloğun aldığından emin olun. Aksi halde, uygulamanız kilitlenebilir.  
   
 ### <a name="message-passing"></a>İleti Geçirme  
  Veri akışı programlama modeli, *ileti geçirme*kavramı ile ilgilidir. Bu, bir programın bağımsız bileşenlerinin iletiler göndererek birbirleriyle iletişim kuracağı kavramdır. Uygulama bileşenleri arasında ileti yayın bir yolu, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> hedef veri akışı blokları gönderine ileti göndermek için ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> yöntemlerini çağırmanız (<xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> zaman uyumlu olarak çalışır) zaman uyumsuz olarak davranır) <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A>kaynak bloklarında ileti almak için, ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A> yöntemleri. <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> Giriş verilerini baş düğüme (bir hedef bloğu) gönderip, çıkış verilerini ardışık düzenin terminal düğümünden veya ağın terminal düğümlerinden (bir veya daha fazla kaynak blok) alarak, bu yöntemleri veri akışı ardışık düzenleri veya ağlarla birleştirebilirsiniz. Ayrıca, verilere sahip olan kullanılabilir kaynakların ilkinden okuyup o veri üzerinde işlem yapabilmek için <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Choose%2A> yöntemini de kullanabilirsiniz.  
@@ -235,7 +235,7 @@ ms.locfileid: "69666395"
  Varsayılan <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> değeri 1'dir ve tüm veri akışı boklarının aynı anda tek bir ileti işlemesini sağlar. Bu özelliği 1'den daha büyük bir değere ayarlayarak veri akışı bloğunun birden çok iletiyi eşzamanlı olarak işlemesini sağlayabilirsiniz. Bu özelliği <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.Unbounded?displayProperty=nameWithType> olarak ayarlamak, temelde yatan görev zamanlayıcısının en büyük eşzamanlılık derecesini yönetmesini sağlar.  
   
 > [!IMPORTANT]
->  1 ' den büyük bir paralellik derecesi belirttiğinizde, birden fazla ileti eşzamanlı olarak işlenir ve bu nedenle iletiler alındıkları sırada işlenmeyebilir. Ancak, iletilerin bloktan çıkış sırası olduğu sıra, ancak bunların alındıkları bir sıradır.  
+> 1 ' den büyük bir paralellik derecesi belirttiğinizde, birden fazla ileti eşzamanlı olarak işlenir ve bu nedenle iletiler alındıkları sırada işlenmeyebilir. Ancak, iletilerin bloktan çıkış sırası olduğu sıra, ancak bunların alındıkları bir sıradır.  
   
  <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions.MaxDegreeOfParallelism%2A> özelliği en büyük paralellik derecesini temsil ettiğinden, veri akışı bloğu belirttiğinizden daha düşük derecede paralellikle çalışabilir. Veri akışı bloğu işlevsel gereksinimlerini karşılamak için veya yeterli kullanılabilir sistem kaynağı olmaması nedeniyle daha düşük bir paralellik derecesi kullanabilir Bir veri akışı bloğu asla belirttiğinizden daha fazla paralellik seçmez.  
   

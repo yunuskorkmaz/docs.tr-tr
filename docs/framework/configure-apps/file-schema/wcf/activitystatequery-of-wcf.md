@@ -1,25 +1,25 @@
 ---
-title: <activityStateQuery> WCF
+title: <activityStateQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 97fce512415ad6ae165b29c7e8eff3394d5e675a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce7505896b9c5bb605bb0f67d735cb324f4fd493
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926907"
 ---
-# <a name="activitystatequery-of-wcf"></a>\<activityStateQuery > WCF
+# <a name="activitystatequery-of-wcf"></a>\<WCF > activityStateQuery
 
-Yaşam döngüsü değişiklikleri bir iş akışı örneği oluşturan etkinliklerinin izlemek için kullanılan bir sorgu temsil eder. Örneğin, "E-posta Gönder" etkinlik içinde bir iş akışı örneği tamamlanan her zaman izlemek isteyebilirsiniz. Bu sorgu, etkinlik durumu kayıt nesnelerine abone olmak izleme Katılımcısı için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.  
+Bir iş akışı örneği oluşturan etkinliklerin yaşam döngüsü değişikliklerini izlemek için kullanılan bir sorguyu temsil eder. Örneğin, bir iş akışı örneği içinde "e-posta gönder" etkinliğinin tamamlandığı her seferinde izlemek isteyebilirsiniz. Bu sorgu, bir izleme katılımcısı için etkinlik durumu kayıt nesnelerine abone olmak için gereklidir. Abone olmak için kullanılabilir durumları ActivityStates belirtilir.  
   
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
 
-\<system.serviceModel> \<tracking>  
-\<profilleri > \<trackingProfile >  
-\<İş akışı >  
+\<System. ServiceModel > \<izleme >  
+\<> \<TrackingProfile > profilleri  
+\<iş akışı >  
 \<activityStateQueries >  
-\<activityStateQuery>  
+\<activityStateQuery >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -55,25 +55,25 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profille
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityName|Filtrelemek için etkinliğin adını belirten bir dize <xref:System.Activities.Tracking.ActivityStateRecord> üzerinde örnekleri.|  
+|activityName|Örnekleri filtreleyecek <xref:System.Activities.Tracking.ActivityStateRecord> etkinliğin adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt öğeleri  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağımsız değişken >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md)|Bu etkinlik sorgusu ile ilişkili bağımsız değişken koleksiyonu.|  
-|[\<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Kendisi için bir izleme kaydını yayılan abone olunan etkinliğin durumları içeren yapılandırma öğelerinin koleksiyonu.|  
-|[\<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|Bu etkinlik sorguyla ilişkilendirilen değişkenlerinin koleksiyonu.|  
+|[\<bağımsız değişkenler >](../windows-workflow-foundation/arguments.md)|Bu etkinlik sorgusu ile ilişkili bağımsız değişken koleksiyonu.|  
+|[\<durumlar >](../windows-workflow-foundation/states.md)|Bir izleme kaydının yayılmasına yönelik abone olunan etkinliğin durumlarını içeren yapılandırma öğelerinin bir koleksiyonu.|  
+|[\<durumlar >](../windows-workflow-foundation/states.md)|Bu etkinlik sorguyla ilişkilendirilen değişkenlerinin koleksiyonu.|  
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Bir alt etkinlik üst etkinliği tarafından iptal etmek için istekleri izlemek için kullanılan yapılandırma öğeleri listesini temsil eder. Sorgu istek kayıt nesneleri iptal etmek için abone olmak izleme Katılımcısı için gereklidir.|  
+|[\<faultPropagationQuery >](../windows-workflow-foundation/faultpropagationquery.md)|Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan yapılandırma öğelerinin listesini temsil eder. Sorgu, istek kaydı nesnelerine abone olmak için bir izleme katılımcısı için gereklidir.|  
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bir benzersiz bir ActivityStateQuery bir iş akışı yürütülmesini izlerken veri çıkarma özelliğidir. İzleme erişme post düzenlediğinizde bu yürütme ek bağlam sağlar. Kullanabileceğiniz [ \<bağımsız değişkenleri >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) ve [ \<durumları >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) öğeleri herhangi bir değişken veya bağımsız değişken ayıklamak için bir iş akışındaki herhangi bir etkinlikten. Aşağıdaki örnek, değişkenler ve bağımsız değişkenler ayıklar bir etkinlik durumu sorgusu gösterir, etkinliğin `Closed` izleme kaydını yayılan. Değişkenler ve bağımsız değişkenler yalnızca bir ActivityStateRecord ile ayıklanabileceği ve bu nedenle içinde bir izleme abone olduğunuz kullanarak profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
+Bir ActivityStateQuery 'nin benzersiz bir özelliği, bir iş akışının yürütülmesi izlenirken veri ayıklama yeteneğidir. Bu, izleme kayıtlarına erişim sonrası yürütme sırasında ek bağlam sağlar. Bir iş akışındaki herhangi bir etkinlikten herhangi bir değişken veya bağımsız değişkeni ayıklamak için >, [ \<>](../windows-workflow-foundation/states.md) ve [ \<durumlar >](../windows-workflow-foundation/states.md) öğeleri için [ \<bağımsız değişkenleri](../windows-workflow-foundation/arguments.md)kullanabilirsiniz. Aşağıdaki örnekte, etkinliğin `Closed` izleme kaydı yayıldığınızda değişkenleri ve bağımsız değişkenleri çıkaran bir etkinlik durumu sorgusu gösterilmektedir. Değişkenler ve bağımsız değişkenler yalnızca bir ActivityStateRecord ile ayıklanabilir ve bu nedenle [ \<ActivityStateQuery >](../windows-workflow-foundation/activitystatequery.md)kullanılarak bir izleme profili içinde abone olunmuş olur.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">
@@ -93,5 +93,5 @@ Bir benzersiz bir ActivityStateQuery bir iş akışı yürütülmesini izlerken 
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement>
 - <xref:System.Activities.Tracking.ActivityStateQuery>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

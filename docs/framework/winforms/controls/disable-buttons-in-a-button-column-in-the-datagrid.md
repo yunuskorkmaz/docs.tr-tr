@@ -9,29 +9,29 @@ helpviewer_keywords:
 - buttons [Windows Forms], disabling in button columns
 - DataGridView control [Windows Forms], disabling button cells
 ms.assetid: 5c344d01-013a-4a6b-8f8d-62ec9321d81e
-ms.openlocfilehash: 7d6223e4d75524044e701ea4cf34dcc7487ccd25
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b8bb503186e41c682b0685e4c9c4bf0bb3adcbe8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967390"
 ---
 # <a name="how-to-disable-buttons-in-a-button-column-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimindeki Bir Düğme Sütununda Düğmeleri Devre Dışı Bırakma
-<xref:System.Windows.Forms.DataGridView> Denetimi içeren <xref:System.Windows.Forms.DataGridViewButtonCell> hücre bir düğme gibi bir kullanıcı arabirimi (UI) görüntülemek için sınıf. Ancak, <xref:System.Windows.Forms.DataGridViewButtonCell> hücrenin tarafından görüntülenen düğmesinin devre dışı bırakmak için bir yöntem sağlamaz.  
+Denetim, bir düğme <xref:System.Windows.Forms.DataGridViewButtonCell> gibi bir kullanıcı arabirimi (UI) ile hücreleri görüntülemek için sınıfını içerir. <xref:System.Windows.Forms.DataGridView> Ancak, <xref:System.Windows.Forms.DataGridViewButtonCell> hücre tarafından görünen düğmenin görünümünü devre dışı bırakmak için bir yol sağlamaz.  
   
- Aşağıdaki kod örneğinde nasıl özelleştirileceğini gösterir <xref:System.Windows.Forms.DataGridViewButtonCell> devre dışı görünebilen düğmeleri görüntülemek için sınıf. Örnek yeni bir hücre türü tanımlar `DataGridViewDisableButtonCell`, türetilen <xref:System.Windows.Forms.DataGridViewButtonCell>. Bu hücre türü yeni bir sağlar `Enabled` ayarlanabilir özelliği `false` hücrede devre dışı bırakılmış bir düğme çizmek için. Örnek ayrıca yeni bir sütun türü tanımlar `DataGridViewDisableButtonColumn`, görüntüleyen `DataGridViewDisableButtonCell` nesneleri. Göstermek için bu yeni hücreyi ve sütun türü, her geçerli değerini <xref:System.Windows.Forms.DataGridViewCheckBoxCell> üst <xref:System.Windows.Forms.DataGridView> belirler olmadığını `Enabled` özelliği `DataGridViewDisableButtonCell` aynı sırada `true` veya `false`.  
+ Aşağıdaki kod örneği, devre dışı görünebilen düğmeleri <xref:System.Windows.Forms.DataGridViewButtonCell> göstermek için sınıfının nasıl özelleştirileceğini gösterir. Örnek, `DataGridViewDisableButtonCell`' den <xref:System.Windows.Forms.DataGridViewButtonCell>türetilen yeni bir hücre türü tanımlar. Bu hücre türü, hücrede devre `Enabled` dışı bir düğme çizmek için olarak `false` ayarlanabilir yeni bir özellik sağlar. Örnek ayrıca, nesneleri görüntüleyen `DataGridViewDisableButtonColumn` `DataGridViewDisableButtonCell` yeni bir sütun türü tanımlar. Bu yeni hücreyi ve sütun türünü göstermek için, <xref:System.Windows.Forms.DataGridViewCheckBoxCell> üst öğede <xref:System.Windows.Forms.DataGridView> her birinin geçerli değeri, aynı satırdaki `Enabled` öğesinin `DataGridViewDisableButtonCell` özelliğinin veya `false`olduğunu `true` belirler.  
   
 > [!NOTE]
->  Olduğunda, türetilen <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> ve türetilmiş sınıf için yeni özellikler eklemek için geçersiz kılmak mutlaka `Clone` kopyalama işlemleri sırasında yeni özellikleri kopyalamak için yöntemi. Ayrıca temel sınıfın çağırmalıdır `Clone` yöntemi, böylece yeni hücresinde veya sütununda için temel sınıf özelliklerini kopyalanır.  
+> Türetilmiş sınıfa türeten <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> yeni özellikler eklediğinizde, kopyalama işlemleri sırasında yeni özellikleri kopyalamak için `Clone` yöntemi geçersiz kıldığınızdan emin olun. Ayrıca temel sınıfın özelliklerini yeni hücreye veya sütuna `Clone` kopyalamak için temel sınıfın yöntemini çağırmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Windows.Forms.DataGridView.DisabledButtons#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.DataGridView.DisabledButtons#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.DisabledButtons/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing, System.Windows.Forms ve System.Windows.Forms.VisualStyles derlemelerine başvurular.  
+- System, System. Drawing, System. Windows. Forms ve System. Windows. Forms. VisualStyles derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

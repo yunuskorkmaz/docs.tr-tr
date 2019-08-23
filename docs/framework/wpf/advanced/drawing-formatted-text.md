@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937687"
 ---
 # <a name="drawing-formatted-text"></a>Biçimlendirilmiş Metin Çizme
 Bu konu, <xref:System.Windows.Media.FormattedText> nesnesinin özelliklerine genel bir bakış sağlar. Bu nesne, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarda metin çizmek için alt düzey denetim sağlar.  
@@ -26,7 +26,7 @@ Bu konu, <xref:System.Windows.Media.FormattedText> nesnesinin özelliklerine gen
  ![FormattedText nesnesi kullanılarak görünen metin](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 'den geçiş yapan geliştiriciler için, [Win32 geçiş](#win32_migration) bölümündeki tablo, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText bayraklarını ve içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yaklaşık eşdeğerini listeler.  
+> [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 'den geçiş yapan geliştiriciler için, [Win32 geçiş](#win32_migration) bölümündeki tablo, [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText bayraklarını ve içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]yaklaşık eşdeğerini listeler.  
   
 ### <a name="reasons-for-using-formatted-text"></a>Biçimli metin kullanma nedenleri  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ekrana metin çizme için birden çok denetim içerir. Her denetim farklı bir senaryoya yöneliktir ve kendi özellik ve kısıtlama listesine sahiptir. Genel <xref:System.Windows.Controls.TextBlock> olarak, öğesinde kısa bir cümle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gibi sınırlı metin desteği gerektiğinde öğesi kullanılmalıdır. <xref:System.Windows.Controls.Label>en az metin desteği gerekli olduğunda kullanılabilir. Daha fazla bilgi için bkz. [WPF Içindeki belgeler](documents-in-wpf.md).  
@@ -96,14 +96,14 @@ Metnin yol geometrisini izleyen Sphere
 |DT_EDITCONTROL|Yok.|Gerekli değildir. Boşluk genişliği ve son satır işleme, çerçeve düzenleme denetimindeki ile aynıdır.|  
 |DT_END_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|<xref:System.Windows.Media.FormattedText.Trimming%2A> Özelliğini değeriyle<xref:System.Windows.TextTrimming.CharacterEllipsis>kullanın.<br /><br /> DT_WORD_ELIPSIS <xref:System.Windows.TextTrimming.WordEllipsis> End üç [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] nokta ile DT_END_ELLIPSIS almak için kullanın — Bu durumda, karakter üç nokta yalnızca tek bir satıra sığmayan sözcüklerde oluşur.|  
 |DT_EXPAND_TABS|Yok.|Gerekli değildir. Sekmeler, 8 dilden bağımsız karakterlerin yaklaşık genişliği olan her 4 EMS 'yi durdurmak üzere otomatik olarak genişletilir.|  
-|DT_EXTERNALLEADING|None|Gerekli değildir. Dış lider her zaman satır aralığına dahildir. Kullanıcı tanımlı satır aralığı oluşturmak için özelliğinikullanın.<xref:System.Windows.Media.FormattedText.LineHeight%2A>|  
+|DT_EXTERNALLEADING|Yok.|Gerekli değildir. Dış lider her zaman satır aralığına dahildir. Kullanıcı tanımlı satır aralığı oluşturmak için özelliğinikullanın.<xref:System.Windows.Media.FormattedText.LineHeight%2A>|  
 |DT_HIDEPREFIX|Yok.|Desteklenmez. <xref:System.Windows.Media.FormattedText> Nesneyi oluşturmadan önce dizeden ' & ' öğesini kaldırın.|  
 |DT_LEFT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|Bu, varsayılan metin hizalamasıdır. <xref:System.Windows.Media.FormattedText.TextAlignment%2A> Özelliğini olarak<xref:System.Windows.TextAlignment.Left>ayarlanan değerle kullanın. (Yalnızca WPF)|  
-|DT_MODIFYSTRING|None|Desteklenmez.|  
+|DT_MODIFYSTRING|Yok.|Desteklenmez.|  
 |DT_NOCLIP|<xref:System.Windows.Media.Visual.VisualClip%2A>|Kırpma otomatik olarak gerçekleşmez. Metni kırpmak istiyorsanız <xref:System.Windows.Media.Visual.VisualClip%2A> özelliğini kullanın.|  
-|DT_NOFULLWIDTHCHARBREAK|None|Desteklenmez.|  
+|DT_NOFULLWIDTHCHARBREAK|Yok.|Desteklenmez.|  
 |DT_NOPREFIX|Yok.|Gerekli değildir. Dizelerdeki ' & ' karakteri her zaman normal karakter olarak değerlendirilir.|  
-|DT_PATHELLIPSIS|None|<xref:System.Windows.Media.FormattedText.Trimming%2A> Özelliğini değeriyle<xref:System.Windows.TextTrimming.WordEllipsis>kullanın.|  
+|DT_PATHELLIPSIS|Yok.|<xref:System.Windows.Media.FormattedText.Trimming%2A> Özelliğini değeriyle<xref:System.Windows.TextTrimming.WordEllipsis>kullanın.|  
 |DT_PREFIX|Yok.|Desteklenmez. Bir Hızlandırıcı tuşu veya bağlantı gibi metin için alt çizgi kullanmak istiyorsanız <xref:System.Windows.Media.FormattedText.SetTextDecorations%2A> yöntemini kullanın.|  
 |DT_PREFIXONLY|Yok.|Desteklenmez.|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|<xref:System.Windows.Media.FormattedText.TextAlignment%2A> Özelliğini olarak<xref:System.Windows.TextAlignment.Right>ayarlanan değerle kullanın. (Yalnızca WPF)|  

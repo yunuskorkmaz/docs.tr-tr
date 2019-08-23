@@ -16,61 +16,61 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c04cd0928eb83aabcd1f0f4b1b43f8ae6d356d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969332"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Birlikte Çalışabilirlik İle İlgili Sorun Giderme (Visual Basic)
-COM ve .NET Framework'ün yönetilen kod birlikte çalışmak, bir veya daha fazla aşağıdaki yaygın sorunların karşılaşabilirsiniz.  
+.NET Framework COM ile yönetilen kod arasında birlikte çalışırken, aşağıdaki yaygın sorunlardan biri veya birkaçı olabilir.  
   
-## <a name="vbconinteroperabilitymarshalinganchor1"></a> Birlikte çalışma hazırlama  
- Bazen, .NET Framework'ün bir parçası olmayan veri türlerini kullanmak zorunda kalabilirsiniz. Birlikte çalışma bütünleştirilmiş kodları COM nesneleri için işin çoğunu işlemek, ancak yönetilen nesneleri com'a kullanılan veri türlerini denetlemek olabilir Örneğin, sınıf kitaplıkları yapılarda belirtmelisiniz `BStr` yönetilmeyen Visual Basic 6.0 ve önceki sürümleri ile oluşturulan COM nesnelerini gönderilen dizelerde türü. Bu gibi durumlarda, kullandığınız <xref:System.Runtime.InteropServices.MarshalAsAttribute> neden yönetilmeyen tür açığa yönetilen türler için öznitelik.  
+## <a name="vbconinteroperabilitymarshalinganchor1"></a>Birlikte çalışabilirlik sıralaması  
+ Her zaman, .NET Framework parçası olmayan veri türlerini kullanmanız gerekebilir. Birlikte çalışma derlemeleri, COM nesneleri için çalışmanın çoğunu işler, ancak yönetilen nesneler COM 'a sunulduğunda kullanılan veri türlerini kontrol etmeniz gerekebilir. Örneğin, sınıf kitaplıklarındaki yapılar, Visual Basic 6,0 ve önceki `BStr` sürümlerde oluşturulan com nesnelerine gönderilen dizelerde yönetilmeyen türü belirtmelidir. Bu gibi durumlarda, yönetilen türlerin yönetilmeyen türler <xref:System.Runtime.InteropServices.MarshalAsAttribute> olarak gösterilmesini sağlamak için özniteliğini kullanabilirsiniz.  
   
-## <a name="vbconinteroperabilitymarshalinganchor2"></a> Sabit uzunluklu dizeler yönetilmeyen koda dışarı aktarma  
- Visual Basic 6.0 ve önceki sürümlerinde, sonlandırma boş karakteri olmadan bayt dizisi olarak dizeleri için COM nesneleri dışarı aktarılır. Diğer dilleri ile uyumluluk için Visual Basic .NET dizeleri dışarı aktarılırken bir sonlandırma karakter içerir. Bu uyumsuzluk yönelik en iyi yolu bir sonlandırma karakter dizileri eksik dizeleri dışa aktarılmamasıdır `Byte` veya `Char`.  
+## <a name="vbconinteroperabilitymarshalinganchor2"></a>Sabit uzunluklu dizeleri yönetilmeyen koda verme  
+ Visual Basic 6,0 ve önceki sürümlerde dizeler, COM nesnelerine null sonlandırma karakteri olmayan bayt dizileri olarak aktarılmalıdır. Diğer dillerle uyumluluk için, .NET Visual Basic dizeleri dışarı aktarırken sonlandırma karakteri içerir. Bu uyumsuzluğun en iyi yolu, sonlandırma karakteri olmayan dizeleri `Byte` veya `Char`dizileri olarak dışa aktarmak.  
   
-## <a name="vbconinteroperabilitymarshalinganchor3"></a> Devralma hiyerarşilerini dışarı aktarma  
- Sınıf Hiyerarşiler COM nesneleri olarak kullanıma sunulan zaman düzleştirmek kullanıma yönetilen. Örneğin, bir temel sınıf üyesi ile tanımlayın ve ardından bir COM nesnesi olarak sunulan bir türetilmiş sınıf içinde temel sınıf devralma, türetilmiş sınıf içinde COM nesnesi kullanan istemciler devralınan üyeleri kullanmak mümkün olmayacaktır. Temel sınıf üyelerinin erişilebilir COM nesneleri yalnızca bir temel sınıfın bir örneği ve yalnızca temel sınıfı bir COM nesnesi olarak da oluşturulur.  
+## <a name="vbconinteroperabilitymarshalinganchor3"></a>Devralma hiyerarşileri dışarı aktarılıyor  
+ Yönetilen sınıf hiyerarşileri, COM nesneleri olarak sunulduğunu düzleştirebilir. Örneğin, bir üye içeren bir temel sınıf tanımlarsanız ve sonra bir COM nesnesi olarak sunulan türetilmiş bir sınıfta temel sınıfı devraldıysanız, COM nesnesinde türetilmiş sınıfı kullanan istemciler devralınan üyeleri kullanamaz. Temel sınıf üyelerine yalnızca bir temel sınıfın örnekleri olarak COM nesnelerinden erişilebilir ve ardından yalnızca temel sınıf de bir COM nesnesi olarak oluşturulur.  
   
 ## <a name="overloaded-methods"></a>Aşırı yüklenmiş yöntemler  
- Visual Basic ile aşırı yüklenmiş yöntemler oluşturabilirsiniz, ancak bunlar COM tarafından desteklenmiyor Aşırı yüklenmiş yöntemler içeren bir sınıfı bir COM nesnesi olarak sunulduğunda, yeni yöntem adları için aşırı yüklenmiş yöntemler oluşturulur.  
+ Visual Basic aşırı yüklenmiş yöntemler oluşturabilseniz de, COM tarafından desteklenmez. Aşırı yüklenmiş yöntemler içeren bir sınıf bir COM nesnesi olarak kullanıma sunulduğunda, aşırı yüklenmiş yöntemler için yeni yöntem adları oluşturulur.  
   
- Örneğin, iki aşırı yüklemesi olan bir sınıf düşünün `Synch` yöntemi. Sınıfı bir COM nesnesi olarak sunulduğunda, yeni oluşturulan yöntem adları olabilir `Synch` ve `Synch_2`.  
+ Örneğin, `Synch` yöntemin iki aşırı yüküne sahip bir sınıfı düşünün. Sınıf bir com nesnesi olarak kullanıma sunulduğunda, yeni oluşturulan yöntem adları ve `Synch` `Synch_2`olabilir.  
   
- Yeniden adlandırma, COM nesnesinin Tüketiciler için iki sorunlara neden olabilir.  
+ Yeniden adlandırma, COM nesnesinin tüketicileri için iki soruna neden olabilir.  
   
-1. İstemciler, oluşturulan yöntem adları edemeyeceğiniz.  
+1. İstemciler oluşturulan yöntem adlarını beklememeyebilir.  
   
-2. Yeni aşırı sınıf ya da onun temel sınıfından eklendiğinde bir COM nesnesi olarak kullanıma sunulan sınıfında oluşturulan yöntem adlarını değiştirebilirsiniz. Bu sürüm sorunlara neden olabilir.  
+2. Bir COM nesnesi olarak sunulan sınıfta oluşturulan yöntem adları, sınıfa veya temel sınıfına yeni aşırı yüklemeler eklendiğinde değişebilir. Bu, sürüm oluşturma sorunlarına neden olabilir.  
   
- Her iki sorunları çözmek için her bir yöntemin COM nesneleri olarak kullanıma sunulacak nesneleri geliştirirken, aşırı yükleme yerine benzersiz bir ad verin.  
+ Her iki sorunu da çözümlemek için, COM nesneleri olarak kullanıma sunulacak nesneleri geliştirirken, her yönteme, aşırı yükleme kullanmak yerine benzersiz bir ad verin.  
   
-## <a name="vbconinteroperabilitymarshalinganchor4"></a> Birlikte çalışma derlemeleriyle COM nesnelerinin kullanın  
- Yönetilen kod değişikliklerini temsil ettikleri COM nesneleri için neredeyse olmaları durumunda gibi birlikte çalışma bütünleştirilmiş kodları kullanın. Ancak, bunlar sarmalayıcılar ve gerçek COM nesneleri olduğundan, birlikte çalışma bütünleştirilmiş kodları ve standart derlemeler arasındaki bazı farklar vardır. Bu alanlar fark, sınıflar ve veri türleri için parametreler ve dönüş değerleri açığa içerir.  
+## <a name="vbconinteroperabilitymarshalinganchor4"></a>Birlikte çalışma derlemeleri aracılığıyla COM nesnelerinin kullanımı  
+ Birlikte çalışma derlemelerini, temsil ettikleri COM nesneleri için yönetilen kod değiştirmeleri gibi neredeyse kullanırsınız. Ancak, sarmalayıcılar olduklarından ve gerçek COM nesneleri olmadığından, birlikte çalışma derlemeleri ve standart derlemelerin kullanılması arasında bazı farklılıklar vardır. Bu fark alanlarında sınıfların pozlaması ve parametreler ve dönüş değerleri için veri türleri yer alır.  
   
-## <a name="vbconinteroperabilitymarshalinganchor5"></a> Her iki arabirimi olarak kullanıma sunulan sınıfları ve sınıfları  
- Standart derlemelerde sınıflardan farklı olarak, COM sınıfları birlikte çalışma derlemelerini bir arabirim hem COM sınıfı temsil eden bir sınıf olarak kullanıma sunulur. Arabirim adı, COM sınıfı için aynıdır. Birlikte çalışma sınıfın adını, özgün COM sınıfı aynıdır, ancak "Class" sözcüğüyle eklenir. Örneğin, bir COM nesnesi için bir birlikte çalışma derlemesine bir başvuru içeren bir proje olduğunu varsayalım. COM sınıfı adlandırılmışsa `MyComClass`, IntelliSense ve Nesne Tarayıcısı adlı bir arabirim göster `MyComClass` ve adlı bir sınıf `MyComClassClass`.  
+## <a name="vbconinteroperabilitymarshalinganchor5"></a>Hem arabirimler hem de sınıflar olarak gösterilen sınıflar  
+ Standart derlemelerdeki sınıfların aksine COM sınıfları, birlikte çalışma derlemelerindeki bir arabirim ve COM sınıfını temsil eden bir sınıf olarak sunulur. Arabirimin adı, COM sınıfıyla aynıdır. Birlikte çalışma sınıfının adı, özgün COM sınıfının, ancak "Class" sözcüğünün eklendiği ile aynıdır. Örneğin, bir COM nesnesi için birlikte çalışma derlemesine başvuru içeren bir projeniz olduğunu varsayalım. COM sınıfı adlandırılmışsa `MyComClass`, IntelliSense ve nesne tarayıcısı adlı bir `MyComClass` arabirimi ve adlı bir sınıfı `MyComClassClass`gösterir.  
   
-## <a name="vbconinteroperabilitymarshalinganchor6"></a> Bir .NET Framework sınıf örneklerini oluşturma  
- Genellikle, .NET Framework kullanarak sınıfı bir örneğini oluşturduğunuz `New` deyimi ile bir sınıf adı. Birlikte çalışma derlemesi tarafından temsil edilen bir COM sınıfı sahip olduğu kullandığınız bir `New` deyimi bir arabirime sahip. COM sınıfı ile kullanmadığınız sürece bir `Inherits` deyimi, bir sınıf yaptığınız gibi arabirimini kullanabilirsiniz. Aşağıdaki kod nasıl oluşturulacağını gösterir. bir `Command` Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru sahip olan bir projeyi nesnesinde:  
+## <a name="vbconinteroperabilitymarshalinganchor6"></a>.NET Framework sınıfının örneklerini oluşturma  
+ Genellikle, sınıf adı olan `New` ifadesini kullanarak bir .NET Framework sınıfının örneğini oluşturursunuz. Bir birlikte çalışma derlemesi tarafından temsil edilen com sınıfının olması, bu `New` ifadeyi bir arabirimiyle kullanabileceğiniz bir durumdur. COM sınıfını bir `Inherits` ifadesiyle kullanmadığınız sürece, arabirimi tıpkı bir sınıf gibi kullanabilirsiniz. Aşağıdaki kod, bir projede Microsoft ActiveX Data Objects 2,8 `Command` Library com nesnesine yönelik bir başvuruya sahip bir nesne oluşturmayı gösterir:  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
- Ancak, COM sınıfı türetilmiş bir sınıf için temel olarak kullanıyorsanız, aşağıdaki kodda gösterildiği gibi bir COM sınıfı temsil eden birlikte çalışma sınıfı kullanmanız gerekir:  
+ Ancak, bir türetilmiş sınıf için temel olarak COM sınıfını kullanıyorsanız, aşağıdaki kodda olduğu gibi COM sınıfını temsil eden birlikte çalışma sınıfını kullanmanız gerekir:  
   
  [!code-vb[VbVbalrInterop#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#21)]  
   
 > [!NOTE]
->  Birlikte çalışma bütünleştirilmiş kodları COM sınıfları temsil eden arabirimler örtük olarak uygulayın. Kullanılacak denememelisiniz `Implements` deyimi bu arabirimleri ya da hata uygulamak için neden olur.  
+> Birlikte çalışma derlemeleri, COM sınıflarını temsil eden arabirimleri örtülü olarak uygular. Bu arabirimleri uygulamak için `Implements` ifadesini kullanmayı denememelisiniz veya bir hata ortaya kalacak.  
   
-## <a name="vbconinteroperabilitymarshalinganchor7"></a> Veri türleri için parametreler ve dönüş değerleri  
- Standart derlemeler üyelerinin farklı olarak, özgün nesne bildirimde kullanılan farklı veri türleri birlikte çalışma derlemesi üyeleri olabilir. Birlikte çalışma derlemelerini uyumlu ortak dil çalışma zamanı türleri için örtük olarak COM türlerini dönüştürülse de her iki çalışma zamanı hataları önlemek için kullanılan veri türlerine dikkat. Örneğin, Visual Basic 6.0 ve önceki sürümlerinde, türü değerlerinin oluşturulan COM nesnelerinde `Integer` .NET Framework eşdeğeri türü varsayar `Short`. Kullanmadan önce içeri aktarılan üye özellikleri incelemek için Nesne Tarayıcısı kullanmanız önerilir.  
+## <a name="vbconinteroperabilitymarshalinganchor7"></a>Parametreler ve dönüş değerleri için veri türleri  
+ Standart derlemelerin üyelerinin aksine, birlikte çalışma derleme üyeleri özgün nesne bildiriminde kullanılanlardan farklı veri türlerine sahip olabilir. Birlikte çalışma derlemeleri dolaylı olarak COM türlerini uyumlu ortak dil çalışma zamanı türlerine dönüştürse de, çalışma zamanı hatalarını engellemek için her iki taraf tarafından kullanılan veri türlerine dikkat etmeniz gerekir. Örneğin, Visual Basic 6,0 ve önceki sürümlerde oluşturulan com nesnelerinde, tür `Integer` değerleri .NET Framework denk `Short`türü varsayar. İçeri aktarılan üyelerin özelliklerini kullanmadan önce incelemek için Nesne Tarayıcısı kullanmanız önerilir.  
   
-## <a name="vbconinteroperabilitymarshalinganchor8"></a> Modül düzeyi COM yöntemleri  
- Bir COM sınıfı kullanmanın bir örneğini oluşturarak çoğu COM nesneleri kullanılan `New` anahtar sözcüğü ve ardından nesnenin yöntemleri çağırma. Bu kuralın tek özel durum içeren bir COM nesneleri içerir `AppObj` veya `GlobalMultiUse` COM sınıfları. Bu tür sınıflar, Visual Basic .NET sınıflarını Modül düzeyinde yöntemleri benzer. Örtük olarak Visual Basic 6.0 ve önceki sürümleri bu tür nesnelerin örneklerini, kendi yöntemlerini çağıran ilk kez oluşturun. Örneğin, Visual Basic 6. 0'çağrısı ve Microsoft DAO 3.6 Nesne Kitaplığı için başvuru ekleyebileceğiniz `DBEngine` örneği ilk oluşturmadan yöntemi:  
+## <a name="vbconinteroperabilitymarshalinganchor8"></a>Modül düzeyi COM yöntemleri  
+ Çoğu com nesnesi, `New` anahtar sözcüğünü kullanarak com sınıfının bir örneğini oluşturarak ve sonra nesnenin yöntemlerini çağırarak kullanılır. Bu kural için bir özel durum, `AppObj` veya `GlobalMultiUse` com sınıfları içeren com nesnelerini içerir. Bu sınıflar, Visual Basic .NET sınıflarında modül düzeyi yöntemlere benzer. Visual Basic 6,0 ve önceki sürümler, yöntemlerinden birini ilk kez çağırdığınızda bu nesnelerin örneklerini örtülü olarak oluşturur. Örneğin, Visual Basic 6,0 ' de, Microsoft DAO 3,6 nesne kitaplığına bir başvuru ekleyebilir ve öncelikle bir örnek oluşturmadan `DBEngine` yöntemi çağırabilirsiniz:  
   
 ```vb  
 Dim db As DAO.Database  
@@ -79,52 +79,52 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ' Use the database object.  
 ```  
   
- Visual Basic .NET, kendi yöntemlerini kullanabilmeniz için önce her zaman COM nesnelerinin örneklerini oluşturmanızı gerektirir. Visual Basic'te bu yöntemi kullanmak için istenen sınıfının bir değişken bildirmek ve nesne nesne değişkenine atamak için new anahtar sözcüğünü kullanın. `Shared` Anahtar sözcüğü emin olmak istediğiniz zaman kullanılabilir sınıf, yalnızca bir örneği oluşturulur.  
+ Visual Basic .NET, yöntemlerini kullanabilmeniz için her zaman COM nesneleri örnekleri oluşturmanızı gerektirir. Bu yöntemleri Visual Basic ' de kullanmak için, istenen sınıfın bir değişkenini bildirin ve yeni anahtar sözcüğünü kullanarak nesneyi nesne değişkenine atayın. Anahtar `Shared` sözcüğü, sınıfın yalnızca bir örneğinin oluşturulduğundan emin olmak istediğinizde kullanılabilir.  
   
  [!code-vb[VbVbalrInterop#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#23)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor9"></a> Olay işleyicileri işlenmeyen hatalar  
- Birlikte çalışma yaygın sorunlardan biri, COM nesneleri tarafından oluşturulan olayları işleyen olay işleyicileri hataları içerir. Özellikle kullanarak hataları kontrol sürece bu tür hatalar yoksayılır `On Error` veya `Try...Catch...Finally` deyimleri. Örneğin, aşağıdaki örnekte Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru içeren bir Visual Basic .NET projesi arasındadır.  
+## <a name="vbconinteroperabilitymarshalinganchor9"></a>Olay Işleyicilerde işlenmeyen hatalar  
+ Ortak bir birlikte çalışma sorunu, COM nesneleri tarafından oluşturulan olayları işleyen olay işleyicilerindeki hataları içerir. Bu tür hatalar, veya `On Error` `Try...Catch...Finally` deyimlerini kullanarak hataları özellikle denetmediğiniz takdirde yok sayılır. Örneğin, aşağıdaki örnek, Microsoft ActiveX Data Objects 2,8 Library COM nesnesine yönelik bir başvuruya sahip Visual Basic bir .NET projesinden verilmiştir.  
   
  [!code-vb[VbVbalrInterop#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#24)]  
   
- Bu örnekte, beklendiği gibi bir hata oluşturur. Ancak, aynı örnek olmadan çalışırsanız `Try...Catch...Finally` gibi kullandıysanız bloğu hata yoksayıldı `OnError Resume Next` deyimi. Hata işleme olmadan, sıfıra bölünme sessizce başarısız olur. Bu tür hatalar hiçbir zaman işlenmeyen özel durum hatalarına yükseltmek için özel durum olayları COM nesnelerini işlemek olay işleyicileri'ndeki işleme biçimi kullanmak önemlidir.  
+ Bu örnek, beklenen şekilde bir hata oluşturur. Ancak, `Try...Catch...Finally` blok olmadan aynı örneği denerseniz, hata, `OnError Resume Next` ifadesini kullanmış gibi yok sayılır. Hata işleme olmadan, sıfıra kadar bölme sessizce başarısız olur. Bu tür hatalar hiçbir şekilde işlenmemiş özel durum hatalarını yükseltmediği için, COM nesnelerinden olayları işleyen olay işleyicilerinde özel durum işlemenin bir biçimini kullanmanız önemlidir.  
   
 ### <a name="understanding-com-interop-errors"></a>COM birlikte çalışma hatalarını anlama  
- Hata işleme olmadan, birlikte çalışma çağrıları, genellikle az bilgi sağlayan hatalar oluşturur. Mümkün olduğunda ortaya çıkan sorunlar hakkında daha fazla bilgi sağlamak için yapılandırılmış hata işleme kullanın. Uygulamaların hatalarını ayıklarken bu özellikle yararlı olabilir. Örneğin:  
+ Hata işleme olmadan, birlikte çalışma çağrıları genellikle az bilgi sağlayan hatalar oluşturur. Mümkün olduğunda, oluşma sorunları hakkında daha fazla bilgi sağlamak için yapılandırılmış hata işlemeyi kullanın. Bu, özellikle uygulamalarda hata ayıklarken yararlı olabilir. Örneğin:  
   
  [!code-vb[VbVbalrInterop#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#25)]  
   
- Özel durum nesnesi içeriğini inceleyerek, hata açıklaması ve HRESULT COM hatalarını kaynağı gibi daha fazla bilgi bulabilirsiniz.  
+ Özel durum nesnesinin içeriğini inceleyerek hata açıklaması, HRESULT ve COM hatalarının kaynağı gibi bilgileri bulabilirsiniz.  
   
-## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX denetimi sorunları  
- Visual Basic 6.0 ile çalışan çoğu ActiveX denetimlerini, Visual Basic .NET ile sorun çalışır. Kapsayıcı denetimleri veya görsel olarak diğer denetimleri içeren denetimleri ana özel durumları olan. Visual Studio ile doğru şekilde çalışmaz eski denetimleri bazı örnekleri aşağıdaki gibidir:  
+## <a name="vbconinteroperabilitymarshalinganchor10"></a>ActiveX denetim sorunları  
+ Visual Basic 6,0 ile çalışan çoğu ActiveX denetimleri, sorun olmaksızın Visual Basic .NET ile çalışır. Ana özel durumlar, kapsayıcı denetimleridir veya görsel olarak diğer denetimleri içeren denetimlerdir. Visual Studio ile düzgün çalışmayan eski denetimlerin bazı örnekleri şunlardır:  
   
-- Microsoft Forms 2.0 çerçeve denetimi  
+- Microsoft Forms 2,0 çerçeve denetimi  
   
-- Yukarı-Aşağı denetimi olarak da bilinen döndürme denetimi  
+- Aşağı açılan denetim, döndürme denetimi olarak da bilinir  
   
-- Sheridan sekme denetimi  
+- Sheridan Tab denetimi  
   
- Desteklenmeyen ActiveX denetimi sorunları için yalnızca birkaç geçici çözümler vardır. Özgün kaynak kodunun sahibi sizseniz, mevcut denetimleri için Visual Studio geçirebilirsiniz. Aksi takdirde, güncelleştirilmiş yazılım satıcıları ile kontrol edebilirsiniz. NET uyumlu sürümlerini değiştirmek için denetim ActiveX denetimlerini desteklenmiyor.  
+ Desteklenmeyen ActiveX denetim sorunları için yalnızca birkaç geçici çözüm vardır. Özgün kaynak koda sahipseniz, varolan denetimleri Visual Studio 'ya geçirebilirsiniz. Aksi takdirde, yazılım satıcılarıyla güncelleştirilmiş olup olmadığını kontrol edebilirsiniz. Desteklenmeyen ActiveX denetimlerinin yerini alacak denetimlerin NET uyumlu sürümleri.  
   
-## <a name="vbconinteroperabilitymarshalinganchor11"></a> Salt okunur özelliklerini denetimleri ByRef geçirme  
- Visual Basic .NET geçirdiğinizde COM hataları gibi "Hata 0x800A017F CTL_E_SETNOTSUPPORTED" bazen başlatır `ReadOnly` bazı eski ActiveX denetimlerinin özelliklerini `ByRef` diğer yordamlar için parametreler. Visual Basic 6.0 yordamı çağrılarından benzer bir hata harekete geçirmeyin ve değer olarak geçilemez gibi parametreleri değerlendirilir. Bir özelliğe sahip olmayan bir özellik değiştirmeye çalıştığınız Visual Basic .NET hata iletisi gösterir `Set` yordamı.  
+## <a name="vbconinteroperabilitymarshalinganchor11"></a>Denetimlerin ReadOnly özelliklerinin geçirilmesi ByRef  
+ Bazı eski ActiveX denetimlerinin özelliklerini diğer yordamlara parametre olarak `ReadOnly` `ByRef` geçirdiğinizde, .NET Visual Basic bazen "hata 0x800A017F CTL_E_SETNOTSUPPORTED" gibi com hataları oluşturur. Visual Basic 6,0 ' den benzer yordam çağrıları bir hata oluşturmaz ve parametreleri değere göre geçirmiş gibi kabul edilir. Visual Basic .NET hata iletisi, özellik `Set` yordamı olmayan bir özelliği değiştirmeye çalıştığınız anlamına gelir.  
   
- Çağrılan yordama erişiminiz varsa kullanarak bu hatayı önleyebilirsiniz `ByVal` kabul parametreleri bildirmek için anahtar sözcüğü `ReadOnly` özellikleri. Örneğin:  
+ Çağrılan yordama erişiminiz varsa, özellikleri kabul `ByVal` `ReadOnly` eden parametreleri bildirmek için anahtar sözcüğünü kullanarak bu hatayı önleyebilirsiniz. Örneğin:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   
- Çağrılan yordam için kaynak koduna erişim yoksa özelliğini çağıran yordama ayraç fazladan bir dizi ekleyerek değere göre geçirilecek şekilde zorlayabilirsiniz. Örneğin, Microsoft ActiveX veri nesneleri 2.8 kitaplığı COM nesnesine bir başvuru içeren bir proje kullanabilirsiniz:  
+ Çağrılmakta olan yordamın kaynak koduna erişiminiz yoksa, çağıran yordamın çevresine fazladan bir parantez kümesi ekleyerek özelliği değere göre geçirilecek şekilde zorlayabilirsiniz. Örneğin, Microsoft ActiveX Data Objects 2,8 Library COM nesnesine bir başvuru içeren bir projede şunları kullanabilirsiniz:  
   
  [!code-vb[VbVbalrInterop#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#27)]  
   
-## <a name="vbconinteroperabilitymarshalinganchor12"></a> Kullanıma sunan birlikte çalışma derlemeleri dağıtma  
- COM arabirimleri kullanıma derlemeleri dağıtma bazı benzersiz zorluklar teşkil etmektedir. Olası bir sorunu gibi ayrı uygulamalar aynı COM derlemesine başvuru oluşur. Bu durum, bir derlemenin yeni bir sürümü yüklü olduğundan ve başka bir uygulama derleme eski sürümünü kullanmaya devam yaygındır. Bir DLL paylaşan bir derlemeyi kaldırmak, yanlışlıkla, kullanılamayan diğer derlemeler için zorlaştırabilir.  
+## <a name="vbconinteroperabilitymarshalinganchor12"></a>Birlikte çalışabilirliği sunan derlemeleri dağıtma  
+ COM arabirimlerini sunan derlemelerin dağıtımı bazı benzersiz güçlükler sunar. Örneğin, ayrı uygulamalar aynı COM derlemesine başvuru yaparken olası bir sorun oluşur. Bu durum, bir derlemenin yeni bir sürümü yüklendiğinde ve başka bir uygulamanın derlemenin eski sürümünü kullanmaya devam ediyorsa yaygın bir durumdur. DLL 'yi paylaşan bir derlemeyi kaldırırsanız, yanlışlıkla diğer derlemeler için kullanılamaz hale getirebilirsiniz.  
   
- Bu sorundan kaçınmak için paylaşılan derlemeler genel derleme önbelleği (GAC) yükleyin ve bir MergeModule bileşen için kullanın. Uygulama GAC'de yükleyemezse, bir sürüme özgü alt dizinde Commonfılesfolder için yüklenmelidir.  
+ Bu sorundan kaçınmak için, paylaşılan derlemeleri genel derleme önbelleği 'ne (GAC) yüklemeli ve bileşen için bir MergeModule kullanmalısınız. Uygulamayı GAC 'ye yükleyemezseniz, sürüme özgü bir alt dizinde Commonfilesklasörüne yüklenmelidir.  
   
- Paylaşılmayan derlemeleri yan yana çağıran uygulama dizinde yer almalıdır.  
+ Paylaşılmayan derlemeler, çağıran uygulamayla birlikte dizinde yan yana yerleştirilmelidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,103 +8,103 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 343abf450a49ad222c403c28e46c6e3aac33e1b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966161"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Tanımlayıcı Ad Oluşturma (Yönetilmeyen API Başvurusu)
-Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci tanımlayıcı adlandırma API sağlar.  
+Güçlü adlandırma API 'SI, bir istemcinin derlemeler için tanımlayıcı ad imzalamayı yönetmesine olanak sağlar.  
   
- Bir derlemeyi katı bir adla imzalamak, dosyaya derleme bildirimini içeren ortak bir anahtar şifrelemesi ekler. Tanımlayıcı ad imzalama ad benzersizliğini doğrulamaya yardımcı olan ad sahtekarlığını engeller ve bir referans çözüldüğünde çağıranlar benzersiz bir kimliği sağlar. Ancak, hiçbir güven düzeyi güçlü bir adla ilişkilidir.  
+ Bir derlemeyi katı bir adla imzalamak, dosyaya derleme bildirimini içeren ortak bir anahtar şifrelemesi ekler. Tanımlayıcı ad imzalama, ad benzersizliği doğrulamaya yardımcı olur, ad yanıltmasını önler ve bir başvuru çözüldüğünde çağıranlar benzersiz bir kimlik sağlar. Ancak, tanımlayıcı bir adla ilişkili güven düzeyi yoktur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 > [!NOTE]
->  Bu işlevlerin tümü .NET Framework 4 ile başlayarak kullanım dışı bırakıldı. Önerilen alternatifleri için bkz: [Iclrstrongname](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) arabirimi.  
+> Bu işlevlerin tümü .NET Framework 4 ' den itibaren kullanımdan kaldırılmıştır. Önerilen alternatifler için [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) arabirimine bakın.  
   
  [GetHashFromAssemblyFile İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
- Belirtilen karma algoritması kullanılarak, belirtilen derleme dosyasının bir karmasını alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen karma algoritmasını kullanarak belirtilen derleme dosyasının karmasını alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [GetHashFromAssemblyFileW İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
- Belirtilen karma algoritması kullanılarak bir Unicode dize olarak belirtilen derleme dosyasının bir karmasını alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen karma algoritmasını kullanarak, Unicode dizesi olarak belirtilen derleme dosyasının karmasını alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [GetHashFromBlob İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
- Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen karma algoritmasını kullanarak, belirtilen bellek adresindeki derlemenin karmasını alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [GetHashFromFile İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
- Belirtilen dosyanın içeriğini bir karma oluşturur.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [GetHashFromFileW İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
- Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [GetHashFromHandle İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
- Belirtilen dosya tanıtıcısıyla belirtilen karma algoritması kullanarak bir dosyanın içeriğini üzerinden bir karma oluşturur.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen karma algoritmasını kullanarak, belirtilen dosya tanıtıcısına sahip dosyanın içeriği üzerinde bir karma oluşturur.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameCompareAssemblies İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
- İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler. .NET Framework 4 ile başlayarak kullanım dışı.  
+ İki derlemenin yalnızca kendi tanımlayıcı ad imzalarına göre farklı olup olmadığını belirler. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameErrorInfo İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
- Tanımlayıcı ad işlevlerden biri tarafından tetiklendi son hata kodu alır.  
+ Tanımlayıcı ad işlevlerinden biri tarafından oluşturulan son hata kodunu alır.  
   
  [StrongNameFreeBuffer İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
- Önceki bir tanımlayıcı ad işlev çağrısı ile ayrıldı bellek serbest bırakma [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md), veya [StrongNameSignatureGeneration ](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).   .NET Framework 4 ile başlayarak kullanım dışı.  
+ [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)veya [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)gibi bir tanımlayıcı ad işlevine daha önceki bir çağrı ile ayrılmış belleği serbest bırakır.   .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameGetBlob İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
- Belirtilen arabellek, yürütülebilir dosyanın belirtilen adreste ikili gösterimini ile doldurur. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen adresteki yürütülebilir dosyanın ikili gösterimiyle belirtilen arabelleği doldurur. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameGetBlobFromImage İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
- Belirtilen bellek adresinde derleme yansıma ikili gösterimini alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen bellek adresindeki derleme görüntüsünün ikili gösterimini alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameGetPublicKey İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
- Private/public anahtar çiftinden ortak anahtarı alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Özel/ortak anahtar çiftinden ortak anahtarı alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameHashSize İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
- Belirtilen karma algoritması kullanarak bir karma için gerekli arabellek boyutunu alır.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen karma algoritmasını kullanarak bir karma için gereken arabellek boyutunu alır.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameKeyDelete İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
- Belirtilen anahtar kapsayıcısında siler. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen anahtar kapsayıcısını siler. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameKeyGen İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
- Tanımlayıcı ad kullanmak için yeni bir ortak/özel anahtar çifti oluşturur.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Tanımlayıcı ad kullanımı için yeni bir ortak/özel anahtar çifti oluşturur.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameKeyGenEx İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
- Tanımlayıcı ad kullanmak için belirtilen anahtar boyutu ile yeni bir ortak/özel anahtar çifti oluşturur. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Tanımlayıcı ad kullanımı için belirtilen anahtar boyutuyla yeni bir ortak/özel anahtar çifti oluşturur. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameKeyInstall İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
- Bir ortak/özel anahtar çifti bir kapsayıcının içine aktarır.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Bir kapsayıcıya ortak/özel anahtar çifti aktarır.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureGeneration İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
- Tanımlayıcı ad imzası için belirtilen derlemeyi oluşturur.   .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen derleme için bir tanımlayıcı ad imzası oluşturur.   .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureGenerationEx İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
- Belirtilen bayraklar üzerinde göre belirtilen derleme için tanımlayıcı ad imzası oluşturur.    .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen bayrakları temel alarak, belirtilen derleme için bir tanımlayıcı ad imzası oluşturur.    .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureSize İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
- Tanımlayıcı ad imzası boyutunu döndürür. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Tanımlayıcı ad imzasının boyutunu döndürür. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureVerification İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
- Sağlanan yol, derleme bildirimi belirtilen bayraklar göre doğrulanan bir tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen bayrağa göre doğrulanan bir tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureVerificationEx İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
- Sağlanan yol, derleme bildirimi tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen yoldaki Derleme bildiriminin tanımlayıcı ad imzası içerip içermediğini gösteren bir değer alır.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameSignatureVerificationFromImage İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
- Bellek zaten eşleştirilmiş bir derleme için ilişkili ortak anahtar geçerli olduğunu doğrular. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Zaten bellekle eşlenmiş bir derlemenin ilişkili ortak anahtar için geçerli olduğunu doğrular. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameTokenFromAssembly İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
- Belirtilen derleme dosyasından bir güçlü ad simgesi oluşturur.  .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen derleme dosyasından bir tanımlayıcı ad belirteci oluşturur.  .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameTokenFromAssemblyEx İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
- Belirtilen derleme dosyasından tanımlayıcı ad belirteci oluşturur ve ortak anahtarını döndürür. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Belirtilen derleme dosyasından bir tanımlayıcı ad belirteci oluşturur ve ortak anahtarı döndürür. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [StrongNameTokenFromPublicKey İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
- Bir ortak anahtar temsil eden bir belirteç alır. .NET Framework 4 ile başlayarak kullanım dışı.  
+ Ortak anahtarı temsil eden bir belirteç alır. .NET Framework 4 ile başlayarak kullanım dışıdır.  
   
  [PublicKeyBlob Yapısı](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
- Bir ortak/özel anahtar çifti ikili biçimindeki ortak anahtarı temsil eder.  
+ İkili biçimdeki ortak/özel anahtar çiftinin ortak anahtarını temsil eder.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

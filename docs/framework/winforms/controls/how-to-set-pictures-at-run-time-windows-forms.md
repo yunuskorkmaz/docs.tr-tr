@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Windows Forms) çalışma zamanında resimleri ayarlama'
+title: 'Nasıl yapılır: Çalışma zamanında resimleri ayarlama (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917523"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: (Windows Forms) çalışma zamanında resimleri ayarlama
-Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyim <xref:System.Windows.Forms.PictureBox> denetimi.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Nasıl yapılır: Çalışma zamanında resimleri ayarlama (Windows Forms)
+Windows Forms <xref:System.Windows.Forms.PictureBox> denetimi tarafından görünen görüntüyü programlı bir şekilde ayarlayabilirsiniz.  
   
-### <a name="to-set-a-picture-programmatically"></a>Bir resmi program üzerinden ayarlamak için  
+### <a name="to-set-a-picture-programmatically"></a>Bir resmi programlı bir şekilde ayarlamak için  
   
-- Ayarlama <xref:System.Windows.Forms.PictureBox.Image%2A> özelliğini kullanarak <xref:System.Drawing.Image.FromFile%2A> yöntemi <xref:System.Drawing.Image> sınıfı.  
+- <xref:System.Windows.Forms.PictureBox.Image%2A> Sınıfının yöntemini<xref:System.Drawing.Image.FromFile%2A>kullanaraközelliğiayarlayın. <xref:System.Drawing.Image>  
   
-     Aşağıdaki örnekte, görüntüsünün konumunu ayarlayın Belgelerim klasörünü yoludur. Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizin içerdiğini varsayar çünkü bu, gerçekleştirilir. Bu, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar. Aşağıdaki örnekte bir form varsayar bir <xref:System.Windows.Forms.PictureBox> denetim zaten eklendi.  
+     Aşağıdaki örnekte, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır. Aşağıdaki örnekte, bir <xref:System.Windows.Forms.PictureBox> denetimin zaten eklendiği bir form varsayılır.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -65,9 +65,9 @@ Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyi
        }  
     ```  
   
-### <a name="to-clear-a-graphic"></a>Grafik temizlemek için  
+### <a name="to-clear-a-graphic"></a>Grafiği temizlemek için  
   
-- İlk olarak, görüntü tarafından kullanılan belleği serbest ve grafik temizleyin. Bellek yönetimi, bir sorun olduğunda çöp toplama belleği daha sonra ücretsiz.  
+- İlk olarak, görüntü tarafından kullanılan belleği serbest bırakın ve grafiği temizleyin. Bellek yönetimi bir sorun haline gelirse çöp toplama belleği daha sonra boşaltacaktır.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,9 +93,9 @@ Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyi
     ```  
   
     > [!NOTE]
-    >  Neden hakkında daha fazla bilgi için kullanmalısınız <xref:System.Drawing.Image.Dispose%2A> bkz bu şekilde [Cleaning Up Unmanaged Resources](../../../standard/garbage-collection/unmanaged.md).  
+    > <xref:System.Drawing.Image.Dispose%2A> Yöntemi bu şekilde nasıl kullanmanız gerektiği hakkında daha fazla bilgi için bkz. [yönetilmeyen kaynakları temizleme](../../../standard/garbage-collection/unmanaged.md).  
   
-     Grafik tasarım zamanında denetimin içine yüklenen olsa bile bu kodu görüntü temizler.  
+     Bu kod, tasarım zamanında denetime bir grafik yüklense bile görüntüyü temizler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -103,5 +103,5 @@ Bir Windows Forms tarafından görüntülenen resmi programla ayarlayabilir miyi
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [PictureBox Denetimine Genel Bakış](picturebox-control-overview-windows-forms.md)
 - [Nasıl yapılır: Tasarımcıyı kullanarak resim yükleme](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Nasıl yapılır: Çalışma zamanında resmin yerleştirme ve boyutunu değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Nasıl yapılır: Çalışma zamanında bir resmin boyutunu veya yerleşimini değiştirme](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox Denetimi](picturebox-control-windows-forms.md)

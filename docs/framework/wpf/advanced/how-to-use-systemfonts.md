@@ -9,29 +9,29 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7438705a82faee464649b5f6f577627a379e9a8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918357"
 ---
 # <a name="how-to-use-systemfonts"></a>Nasıl yapılır: SystemFonts Kullanma
-Bu örnek, statik kaynakları kullanmayı gösterir. <xref:System.Windows.SystemFonts> stil veya bir düğmeyi özelleştirmek için sınıf.  
+Bu örnek, bir düğmeye stil eklemek veya özelleştirmek için <xref:System.Windows.SystemFonts> sınıfının statik kaynaklarının nasıl kullanılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Sistem kaynakları sistem ayarları ile tutarlı, görsel oluşturmanıza yardımcı olmak için birkaç sistem tarafından belirlenen değeri hem kaynak hem de özellikleri olarak kullanıma sunar. <xref:System.Windows.SystemFonts> statik özellikler ve bu değerleri çalışma zamanında dinamik olarak erişmek için kullanılan kaynak anahtarlarını başvuran özellikleri olarak her iki sistem yazı tipi değerlerini içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> olduğu bir <xref:System.Windows.SystemFonts> değeri ve <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> karşılık gelen bir kaynak anahtarı.  
+ Sistem kaynakları, sistem ayarlarıyla tutarlı görseller oluşturmanıza yardımcı olmak için, sistem tarafından belirlenen birkaç değeri hem kaynak hem de özellikler olarak kullanıma sunar. <xref:System.Windows.SystemFonts>, hem statik özellikler olarak sistem yazı tipi değerlerini hem de çalışma zamanında dinamik olarak bu değerlere erişmek için kullanılabilecek kaynak anahtarlarına başvuruda bulunan özellikleri içeren bir sınıftır. Örneğin, <xref:System.Windows.SystemFonts.CaptionFontFamily%2A> bir <xref:System.Windows.SystemFonts> değerdir ve <xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A> karşılık gelen bir kaynak anahtarıdır.  
   
- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], üyelerinin kullanabileceği <xref:System.Windows.SystemFonts> statik özellikler veya dinamik kaynak başvuruları (statik özellik değeriyle anahtar olarak). Yazı tipi ölçüsünün uygulama çalışırken otomatik olarak güncelleştirmek istiyorsanız, bir dinamik kaynak başvurusu kullanmak çalışır; Aksi takdirde, statik bir referans kullanın.  
+ ' [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]De, <xref:System.Windows.SystemFonts> üyelerini statik özellikler ya da dinamik kaynak başvuruları (anahtar olarak statik özellik değeri ile) olarak kullanabilirsiniz. Yazı tipi ölçüsünün uygulama çalışırken otomatik olarak güncelleştirilmesini istiyorsanız dinamik bir kaynak başvurusu kullanın; Aksi takdirde, statik bir değer başvurusu kullanın.  
   
 > [!NOTE]
->  Kaynak anahtarları için özellik adı "Anahtarını" eklenen son ekine sahip.  
+> Kaynak anahtarları, özellik adının sonuna "Key" önekini sahiptir.  
   
- Aşağıdaki örnek, erişme ve özelliklerini kullanma işlemi gösterilmektedir <xref:System.Windows.SystemFonts> stil veya bir düğmeyi özelleştirmek için statik bir değer olarak. Bu işaretleme örnek atar <xref:System.Windows.SystemFonts> değerleri.  
+ Aşağıdaki örnek, bir düğmeye stil eklemek veya özelleştirmek için statik değerler <xref:System.Windows.SystemFonts> olarak özelliklerinin nasıl erişebileceğini ve kullanılacağını gösterir. Bu biçimlendirme örneği bir <xref:System.Windows.SystemFonts> düğmeye değerler atar.  
   
  [!code-xaml[SystemRes_snip#FontStaticResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml#fontstaticresources)]  
   
- Değerlerini kullanılacak <xref:System.Windows.SystemFonts> kod içinde statik bir değer veya bir dinamik kaynak başvurusu kullanmanız gerekmez. Bunun yerine, anahtar olmayan özelliklerini kullanma <xref:System.Windows.SystemFonts> sınıfı. Anahtar olmayan özellikler statik özellik olarak, çalışma zamanı davranışını görünüşe göre tanımlanmasına rağmen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sistem tarafından barındırılan olarak gerçek zamanlı özelliklerinde yeniden değerlendirir ve düzgün şekilde sistem değerleri kullanıcı tarafından yapılan değişiklikleri hesaba katmayacak. Aşağıdaki örnek, bir düğme yazı tipi ayarlarını belirtmek gösterilmektedir.  
+ Kodda değerlerini <xref:System.Windows.SystemFonts> kullanmak için, statik bir değer veya dinamik kaynak başvurusu kullanmak zorunda değilsiniz. Bunun yerine, <xref:System.Windows.SystemFonts> sınıfının anahtar olmayan özelliklerini kullanın. Anahtar olmayan özellikler statik özellikler olarak tanımlanmasa da, sistem tarafından barındırılan olarak ' nin çalışma zamanı davranışı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellikleri gerçek zamanlı olarak yeniden değerlendirerek, sistem değerlerinde Kullanıcı odaklı değişiklikler için düzgün şekilde hesaba sahip olur. Aşağıdaki örnek, bir düğmenin yazı tipi ayarlarının nasıl ekleneceğini gösterir.  
   
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  

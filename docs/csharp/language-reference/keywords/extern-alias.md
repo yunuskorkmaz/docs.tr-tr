@@ -9,18 +9,18 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 749386f08cb6ab6ab79896aca3c1eb1e98ca5472
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a701ae02adebfa2dda8fb65053dbf2ebbe83328b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924691"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
 Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gerekebilir. Örneğin, bir derlemenin iki veya daha fazla sürümünü aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, her derlemeden ad alanları, diğer ad tarafından adlandırılan ve aynı dosyada kullanılmasına olanak sağlayan kök düzeyi ad alanları içinde sarmalanabilir.  
   
 > [!NOTE]
->  [Extern](./extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
+> [Extern](./extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
   
  Aynı tam tür adlarıyla iki derlemeye başvurmak için, bir diğer ad aşağıdaki gibi bir komut isteminde belirtilmelidir:  
   

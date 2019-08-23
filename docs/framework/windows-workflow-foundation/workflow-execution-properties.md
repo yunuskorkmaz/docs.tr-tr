@@ -2,22 +2,22 @@
 title: İş Akışı Yürütme Özellikleri
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61bf53d9cab3ddefae3709958bd1e445fb4e69dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669387"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913605"
 ---
 # <a name="workflow-execution-properties"></a>İş Akışı Yürütme Özellikleri
-İş parçacığı yerel depolama ile (TLS), her iş parçacığı için bir yürütme bağlamı CLR tutar. Bu yürütme bağlamı iş parçacığı kimliği, ortam işlem gibi bilinen iş parçacığı özellikleri yönetir ve geçerli izin ayrıca gibi kullanıcı tanımlı bir iş parçacığı özellikleri kümesine yuvaları adlı.  
+İş parçacığı yerel depolaması (TLS) aracılığıyla CLR her iş parçacığı için bir yürütme bağlamı tutar. Bu yürütme bağlamı iş parçacığı kimliği, ortam işlemi ve geçerli izin kümesi gibi bilinen iş parçacığı özelliklerinin yanı sıra adlandırılmış yuvalar gibi Kullanıcı tanımlı iş parçacığı özelliklerine ek olarak yönetir.  
   
- Doğrudan CLR'yi hedefleyen programlar farklı olarak, iş akışı hiyerarşik olarak kapsamlı bir iş parçacığı geçişte sorun yaşamaz ortamında yürütme etkinlikleri ağaçları programlardır. Bu, standart TLS mekanizmaları hangi bağlam belirli iş öğesi için kapsamda olduğunu belirlemek için doğrudan kullanılamaz anlamına gelir. Örneğin, farklı işlem yürütme iki paralel dallarından kullanabilir henüz Zamanlayıcı, aynı CLR iş parçacığı üzerinde yürütülmesi ayırma değeri.  
+ Programların CLR 'yi doğrudan hedeflemesini, iş akışı programlarının aksine, iş parçacığı belirsiz bir ortamda yürütülen etkinliklerin hiyerarşik olarak kapsamlı ağaçları vardır. Bu, belirli bir iş öğesi için kapsamda hangi bağlamın olduğunu belirlemek üzere Standart TLS mekanizmalarının doğrudan kullanılamayacağını gösterir. Örneğin, yürütmenin iki paralel dalı farklı işlemler kullanabilir, ancak Zamanlayıcı, yürütmelerini aynı CLR iş parçacığı üzerinde ayırmada sağlayabilir.  
   
- İş akışı yürütme özellikleri etkinliğin ortama özgü özellikleri bağlam eklemek için bir mekanizma sağlar. Bu bir etkinlik bildirmek hangi özellikler, alt ağacı kapsamı içinde ve ayrıca ayarlama ve CLR nesnesi ile düzgün çalışmak için TLS aşağı bozmadan kancaları sağlar sağlar.  
+ İş akışı yürütme özellikleri, bir etkinliğin ortamına bağlama özgü özellikler eklemek için bir mekanizma sağlar. Bu, bir etkinliğin alt ağacı için kapsamda hangi özelliklerin olduğunu bildirme ve ayrıca CLR nesneleriyle düzgün şekilde birlikte çalışmak üzere TLS ayarlama ve test etme için kancalar sağladığını sağlar.  
   
-## <a name="creating-and-using-workflow-execution-properties"></a>Oluşturma ve iş akışı yürütme özellikleri kullanma  
- İş akışı yürütme özellikleri genellikle uygulama <xref:System.Activities.IExecutionProperty> mesajlaşmayı odaklı özellikleri uygulayabilir, arabirim <xref:System.ServiceModel.Activities.ISendMessageCallback> ve <xref:System.ServiceModel.Activities.IReceiveMessageCallback> yerine. Bir iş akışı yürütme özelliği oluşturmak için uygulayan bir sınıf oluşturma <xref:System.Activities.IExecutionProperty> arabirim ve üyelerini uygulama <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> ve <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Bu üyeleri yürütme özelliği düzgün şekilde ayarlanır ve her pulse herhangi bir alt etkinlik dahil olmak üzere bu özelliği içeren etkinliğin çalışma sırasında iş parçacığı yerel depolama ayırma olanağı sağlar. Bu örnekte, bir `ConsoleColorProperty` bu kümeleri oluşturan `Console.ForegroundColor`.  
+## <a name="creating-and-using-workflow-execution-properties"></a>Iş akışı yürütme özellikleri oluşturma ve kullanma  
+ İş akışı yürütme özellikleri genellikle <xref:System.Activities.IExecutionProperty> arabirimini uygular, ancak mesajlaşmaya odaklanan özellikler de uygulayabilir <xref:System.ServiceModel.Activities.IReceiveMessageCallback> <xref:System.ServiceModel.Activities.ISendMessageCallback> ve bunun yerine kullanılabilir. Bir iş akışı yürütme özelliği oluşturmak için, <xref:System.Activities.IExecutionProperty> arabirimini uygulayan ve üyeleri <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> ve <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>uygulayan bir sınıf oluşturun. Bu Üyeler, tüm alt etkinlikler dahil olmak üzere, özelliği içeren etkinliğin her bir aşamasında iş parçacığı yerel depolama alanını düzgün bir şekilde ayarlama ve ayırma fırsatı ile yürütme özelliğini sağlar. Bu örnekte, ' ı `ConsoleColorProperty` `Console.ForegroundColor`ayarlayan oluşturulur.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  
@@ -45,7 +45,7 @@ class ConsoleColorProperty : IExecutionProperty
 }  
 ```  
   
- Etkinlik yazarlar içinde kaydederek bu özelliği kullanabilir etkinliğin geçersiz kılma yürütün. Bu örnekte, bir `ConsoleColorScope` etkinliği kaydeden tanımlanır `ConsoleColorProperty` ekleyerek <xref:System.Activities.NativeActivityContext.Properties%2A> geçerli koleksiyonunu <xref:System.Activities.NativeActivityContext>.  
+ Etkinlik yazarları bu özelliği etkinliğin yürütme geçersiz kılması ile kaydederek kullanabilir. Bu örnekte, öğesini geçerli `ConsoleColorScope` `ConsoleColorProperty` <xref:System.Activities.NativeActivityContext.Properties%2A> birkoleksiyonunaekleyerekkaydeden<xref:System.Activities.NativeActivityContext>bir etkinlik tanımlanmıştır.  
   
 ```csharp  
 public sealed class ConsoleColorScope : NativeActivity  
@@ -70,7 +70,7 @@ public sealed class ConsoleColorScope : NativeActivity
 }  
 ```  
   
- Etkinliğin gövdesi bir pulse iş başlatıldığında <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> özelliğinin yöntemi çağrılır ve pulse iş tamamlandığında, <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> çağrılır. Bu örnekte, bir iş akışı kullanan oluşturulur bir <xref:System.Activities.Statements.Parallel> üç dallarıyla etkinlik. İlk iki dalları kullanma `ConsoleColorScope` etkinliği ve üçüncü dal desteklemez. Tüm üç iki dalları <xref:System.Activities.Statements.WriteLine> etkinlikleri ve <xref:System.Activities.Statements.Delay> etkinlik. Zaman <xref:System.Activities.Statements.Parallel> etkinliği yürütür, dalları yer alan faaliyetleri şekilde bir araya eklemeli yürütme, ancak her bir alt etkinlik yürütme sırasında doğru konsol renk tarafından uygulanır `ConsoleColorProperty`.  
+ Etkinliğin gövdesi bir iş <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> darbesi başlattığında, özelliğin yöntemi çağrılır ve iş darbesi tamamlandığında <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> , çağırılır. Bu örnekte, üç dalla bir <xref:System.Activities.Statements.Parallel> etkinlik kullanan bir iş akışı oluşturulur. İlk iki dal `ConsoleColorScope` etkinliği kullanır ve üçüncü dal değildir. Üç dal de iki <xref:System.Activities.Statements.WriteLine> etkinlik ve bir <xref:System.Activities.Statements.Delay> etkinlik içerir. Etkinlik yürütüldüğünde, dallardaki etkinlikler araya eklemeli bir şekilde yürütülür, ancak her alt etkinlik her bir alt etkinlik `ConsoleColorProperty`tarafından çalıştırıldığında doğru konsol rengi tarafından uygulanır. <xref:System.Activities.Statements.Parallel>  
   
 ```csharp  
 Activity wf = new Parallel  
@@ -145,7 +145,7 @@ Activity wf = new Parallel
 WorkflowInvoker.Invoke(wf);  
 ```  
   
- İş akışı çağrıldığında, konsol penceresinde aşağıdaki çıktıyı yazılır.  
+ İş akışı çağrıldığında, aşağıdaki çıktı konsol penceresine yazılır.  
   
 ```  
 Start blue text.  
@@ -157,9 +157,9 @@ End default text.
 ```  
   
 > [!NOTE]
->  Önceki çıktısında gösterilmese konsol penceresinde metnin her satırının belirtilen renkte görüntülenir.  
+> Önceki çıktıda gösterilmese de, konsol penceresindeki her metin satırı, belirtilen renkte görüntülenir.  
   
- İş akışı yürütme özellikleri özel etkinlik yazarları tarafından kullanılabilir ve ayrıca tanıtıcısı yönetimi etkinlikleri için bir mekanizma gibi sağlarlar <xref:System.ServiceModel.Activities.CorrelationScope> ve <xref:System.Activities.Statements.TransactionScope> etkinlikler.  
+ İş akışı yürütme özellikleri özel etkinlik yazarları tarafından kullanılabilir ve ayrıca, <xref:System.ServiceModel.Activities.CorrelationScope> ve <xref:System.Activities.Statements.TransactionScope> etkinlikleri gibi etkinlikler için tanıtıcı yönetimi mekanizmasını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

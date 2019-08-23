@@ -4,37 +4,37 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786005"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912696"
 ---
 # <a name="message-filters"></a>İleti Filtreleri
-İçerik tabanlı yönlendirme uygulamak için yönlendirme hizmeti kullanan <xref:System.ServiceModel.Dispatcher.MessageFilter> adresi, uç nokta adı ya da belirli bir XPath ifadesi gibi bir ileti belirli bölümlerini inceleyin uygulamaları. İleti filtreleri hiçbiri ile sağlanmışsa [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] ihtiyaçlarınızı karşılamak, temel yeni bir uygulama oluşturarak özel filtre oluşturabilir <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı.  
+İçerik tabanlı yönlendirme uygulamak için, yönlendirme hizmeti, iletinin adresi <xref:System.ServiceModel.Dispatcher.MessageFilter> , uç nokta adı veya belirli bir XPath ekstresi gibi belirli bölümlerini denetleyen uygulamalar kullanır. Gereksinimlerinizi karşılayacak şekilde [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] sağlanmayan ileti filtrelerinden hiçbiri, temel <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfın yeni bir uygulamasını oluşturarak özel bir filtre oluşturabilirsiniz.  
   
- Yönlendirme hizmeti yapılandırırken, filtre öğelerini tanımlamanız gerekir (<xref:System.ServiceModel.Routing.Configuration.FilterElement> nesneleri) türünü açıklayan **MessageFilter** ve aramak için belirli bir dize değerleri gibi bir filtre oluşturmak için gerekli destek verileri için ileti içinde. Filtre öğesi oluşturarak yalnızca tek bir ileti filtreleri tanımladığını unutmayın; değerlendirmek ve filtreleme tablosu da tanımlamalısınız iletileri yönlendirmek için filtrelerini kullanma (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ Yönlendirme hizmetini yapılandırırken, ileti içinde arama yapmak için belirli dize değerleri<xref:System.ServiceModel.Routing.Configuration.FilterElement> gibi, **MessageFilter** türünü ve filtreyi oluşturmak için gereken tüm destekleyici verileri tanımlayan filtre öğelerini (nesneleri) tanımlamanız gerekir . Filtre öğelerinin oluşturulması yalnızca ayrı ileti filtrelerini tanımlar; iletileri değerlendirmek ve yönlendirmek için filtreleri kullanmak üzere bir filtre tablosu (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>) tanımlamanız gerekir.  
   
- Filtre tablosundaki her girişin bir filtre öğesi atıfta bulunan ve İleti Filtresi eşleşmesi durumunda bir ileti için yönlendirilir istemci uç noktasını belirtir. Filtre tablo girişleri de Yedekleme uç noktaları koleksiyonu belirlemenize olanak tanır (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>), bir ileti için bir iletim hatası durumunda birincil uç noktasına gönderilirken aktarılmaz uç noktaları listesi tanımlar. Bu uç noktaları, başarılı olana kadar belirtilen sırayla denenir.  
+ Filtre tablosundaki her giriş bir filtre öğesine başvurur ve ileti filtreyle eşleşiyorsa iletinin yönlendirileceği istemci uç noktasını belirtir. Filtre tablosu girdileri Ayrıca, birincil uç noktaya gönderilirken bir iletim hatası olması durumunda iletinin<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>iletibileceği bitiş noktaları listesini tanımlayan bir yedekleme uç noktası () koleksiyonu belirtmenize de olanak tanır. Bu uç noktalar, bir başarılı olana kadar belirtilen sırada denenir.  
   
 ## <a name="message-filters"></a>İleti Filtreleri  
- Yönlendirme hizmeti tarafından kullanılan ileti filtreleri SOAP eylemi veya adres veya iletinin gönderildiği adres ön eki için bir ileti gönderildi uç nokta adı değerlendirme gibi ortak ileti seçimi işlevselliği sağlar. Filtreler de birleştirilebileceği ile bir `AND` koşul böylece ileti iki filtrelerle eşleşen iletileri yalnızca bir uç noktasına iletilir. Ayrıca, kendi uygulaması oluşturarak özel filtreler oluşturabilirsiniz <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
+ Yönlendirme hizmeti tarafından kullanılan ileti filtreleri, bir iletinin gönderildiği uç noktanın adını, SOAP eylemini veya iletinin gönderildiği adres ya da adres önekini değerlendirmek gibi ortak ileti seçimi işlevlerini sağlar. Filtreler aynı zamanda bir `AND` koşula dahil edilebilir, böylece ileti her iki filtreyle de eşleşiyorsa iletiler yalnızca bir uç noktaya yönlendirilir. Kendi uygulamanızı <xref:System.ServiceModel.Dispatcher.MessageFilter>oluşturarak özel filtreler de oluşturabilirsiniz.  
   
- Aşağıdaki tabloda <xref:System.ServiceModel.Routing.Configuration.FilterType> yönlendirme hizmeti ile özel ileti filtresi ve gerekli uygulayan sınıf kullanılan <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> parametreleri.  
+ Aşağıdaki tabloda, yönlendirme hizmeti <xref:System.ServiceModel.Routing.Configuration.FilterType> tarafından kullanılan, belirli ileti filtresi uygulayan sınıf ve gerekli <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A> parametreler listelenmektedir.  
   
-|Filtre türü|Açıklama|Filtre verileri anlama|Örnek filtresi|  
+|Filtre türü|Açıklama|Veri filtreleme anlamı|Örnek filtre|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Eylem|Kullanan <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> belirli bir eylemi içeren iletileri eşleşmesi için sınıf.|Temel filtre uygulamak için eylem.|\<Filtre adı "action1" filterType = "Action" filterData = = "http://namespace/contract/operation" / >|  
-|EndpointAddress|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` içeren belirli bir adresi iletileri eşleştirilecek.|Filtreleme (Kime üstbilgisinde) adresi.|\<Filtre adı "Adresi1" filterType = "EndpointAddress" filterData = = "http://host/vdir/s.svc/b" / >|  
-|EndpointAddressPrefix|Kullanan <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> sınıfı ile <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` belirli adres ön eki içeren iletileri eşleştirilecek.|Eşleşen en uzun ön ek kullanımı üzerine filtre adresi.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|And|Kullanan <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> döndürmeden önce her iki koşul her zaman değerlendirilir sınıfı.|filterData kullanılmaz; Bunun yerine Filtre1 ve Filtresi2 olması gereken karşılık gelen ileti filtreleri (Ayrıca tabloda) adlarını sahip **ve**ed birlikte.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|Özel|Genişleten ve kullanıcı tanımlı bir tür <xref:System.ServiceModel.Dispatcher.MessageFilter> sınıfı ve bir dize alan bir oluşturucusu vardır.|CustomType öznitelik sınıfı oluşturmak için tam olarak nitelenmiş tür adıdır; Filtre veri filtresi oluştururken oluşturucuya geçirilecek dizedir.|\<Filtre adı "custom1" filterType = "Özel" customType="CustomAssembly.CustomMsgFilter, CustomAssembly =" filterData = "Özel veri" / >|  
-|EndpointName|Kullanan <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> gelen üzerinde hizmet uç noktası adını temel iletileri eşleşmesi için sınıf.|Hizmet uç noktası adı örneğin: "serviceEndpoint1".  Bu, yönlendirme hizmeti üzerinde kullanıma sunulan uç noktalardan biri olmalıdır.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
-|MatchAll|Kullanan <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> sınıfı. Bu filtre ile eşleşen tüm gelen iletileri.|filterData kullanılmaz. Bu filtre, her zaman tüm iletiler aynı olacaktır.|\<Filtre adı "matchAll1" filterType = = "MatchAll" / >|  
-|XPath|Kullanan <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> ileti içinde belirli bir XPath sorguları eşleştirilecek sınıfı.|İletileri eşleştirme yapılırken kullanılacak XPath sorgusu.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|Eylem|, <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> Belirli bir eylemi içeren iletileri eşleştirmek için sınıfını kullanır.|Üzerine filtreleyecek eylem.|\<Filter ad = "action1" filterType = "Action" FilterData = "http://namespace/contract/operation"/>|  
+|EndpointAddress|, Belirli bir adresi içeren <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A> iletileri eşleştirmek için ile  ==  `true`sınıfınıkullanır <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> .|Filtrelemeye yönelik adres (-üst bilgisinde).|\<filter name = "Address1" filterType = "EndpointAddress" FilterData = "http://host/vdir/s.svc/b"/>|  
+|EndpointAddressPrefix|, Belirli bir adres ön <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A> ekini içeren iletileri eşleştirmek için ile  ==  `true`sınıfınıkullanır <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> .|En uzun ön ek eşleştirme kullanılarak filtrelenecek adres.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|And|, <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> Döndürmeden önce her iki koşulu da değerlendiren sınıfını kullanır.|filterData kullanılmaz; Bunun yerine, filter1 ve filter2 karşılık gelen ileti filtrelerinin (aynı zamanda tablo içinde) adlarına sahiptir **ve**bu, birlikte olmalıdır.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Özel|<xref:System.ServiceModel.Dispatcher.MessageFilter> Sınıfını genişleten ve dize alan bir oluşturucuya sahip olan Kullanıcı tanımlı bir tür.|CustomType özniteliği, oluşturulacak sınıfın tam tür adıdır; filterData, filtre oluşturulurken oluşturucuya geçirilecek dizedir.|\<filter name = "Özel1" filterType = "Custom" customType = "CustomAssembly. CustomMsgFilter, CustomAssembly" filterData = "özel veriler"/>|  
+|EndpointName|, <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> Gelen hizmet uç noktasının adına göre iletileri eşleştirmek için sınıfını kullanır.|Hizmet uç noktasının adı, örneğin: "serviceEndpoint1".  Bu, yönlendirme hizmetinde açığa çıkarılan uç noktalardan biri olmalıdır.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> Sınıfını kullanır. Bu filtre tüm gelen iletilerle eşleşir.|filterData kullanılmıyor. Bu filtre, her zaman tüm iletilerle eşleşir.|\<filter name = "matchAll1" filterType = "MatchAll"/>|  
+|XPath|İleti içindeki belirli XPath sorgularını eşleştirmek için sınıfınıkullanır.<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>|İletileri eşleştirirken kullanılacak XPath sorgusu.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
- Aşağıdaki örnek, XPath Uçnoktaadı ve PrefixEndpointAddress ileti filtreleri kullanan filtre girişler tanımlar. Bu örnek ayrıca RoundRobinFilter1 ve RoundRobinFilter2 girişleri için özel bir filtre kullanarak gösterir.  
+ Aşağıdaki örnek, XPath, EndpointName ve PrefixEndpointAddress ileti filtrelerini kullanan filtre girdilerini tanımlar. Bu örnek ayrıca RoundRobinFilter1 ve RoundRobinFilter2 girdileri için özel bir filtre kullanmayı da gösterir.  
   
 ```xml  
 <filters>  
@@ -54,14 +54,14 @@ ms.locfileid: "61786005"
 ```  
   
 > [!NOTE]
->  Yalnızca bir filtreyi tanımlayan filtre karşı değerlendirilecek iletileri neden olmaz. Filtre ise bir filtre tabloya eklenmelidir yönlendirme hizmeti tarafından kullanıma sunulan hizmet uç noktası ile ilişkili.  
+> Yalnızca bir filtre tanımlamanız, iletilerin filtreye göre değerlendirilmemesine neden olmaz. Filtrenin bir filtre tablosuna eklenmesi gerekir, bu, daha sonra yönlendirme hizmeti tarafından açığa çıkarılan hizmet uç noktasıyla ilişkilendirilir.  
   
-### <a name="namespace-table"></a>Namespace tablo  
- Bir XPath filtresi kullanırken, XPath sorgusu içeren filtre veri alanlarının kullanımı nedeniyle son derece büyük hale gelebilir. Bu sorunu gidermeyi yönlendirme hizmeti ad alanı tablosunu kullanarak kendi ad alanı öneklerini tanımlama yeteneği sağlar.  
+### <a name="namespace-table"></a>Ad alanı tablosu  
+ XPath filtresi kullanılırken, XPath sorgusunu içeren filtre verileri, ad alanlarının kullanımı nedeniyle son derece büyük olabilir. Bu sorunu gidermek için yönlendirme hizmeti, ad alanı kullanarak kendi ad alanı öneklerinizi tanımlama yeteneği sağlar.  
   
- Ad alanı tablo oluşan bir koleksiyondur <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> XPath içinde kullanılabilen ortak ad alanları için ad alanı öneklerini tanımlayan nesne. Ad alanı tabloda bulunan varsayılan ad alanları ve ad alanı öneklerini aşağıda verilmiştir.  
+ Ad alanı tablosu, bir XPath 'te <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> kullanılabilen ortak ad alanları için ad alanı öneklerini tanımlayan bir nesne koleksiyonudur. Ad alanı tablosunda yer alan varsayılan ad alanları ve ad alanı önekleri aşağıda verilmiştir.  
   
-|Ön eki|Ad Alanı|  
+|Koy|Ad Alanı|  
 |------------|---------------|  
 |s11|`http://schemas.xmlsoap.org/soap/envelope`|  
 |s12|`http://www.w3.org/2003/05/soap-envelope`|  
@@ -69,9 +69,9 @@ ms.locfileid: "61786005"
 |wsa10|`http://www.w3.org/2005/08/addressing`|  
 |SM|`http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions`|  
 |tempuri|`http://tempuri.org`|  
-|Hiz|`http://schemas.microsoft.com/2003/10/Serialization`|  
+|hiz|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- XPath sorgularınızdaki belirli bir ad alanı kullanarak bildiğinizde, bir benzersiz ad alanı öneki ile birlikte ad alanı tablo ekleyin ve herhangi bir XPath sorgusu yerine tam ad alanı önekini kullanın. Aşağıdaki örnek, ad alanı için "özel" öneki tanımlar `"http://my.custom.namespace"`, ardından kullanılan filterData içinde yer alan XPath sorgusu.  
+ XPath sorgularınızda belirli bir ad alanı kullanacağınızı bildiğiniz zaman, benzersiz bir ad alanı önekiyle birlikte ad alanı tablosuna ekleyebilir ve öneki tam ad alanı yerine herhangi bir XPath sorgusunda kullanabilirsiniz. Aşağıdaki örnek, ad alanı `"http://my.custom.namespace"`için "Custom" önekini tanımlar, daha sonra FilterData içinde bulunan XPath sorgusunda kullanılır.  
   
 ```xml  
 <namespaceTable>  
@@ -82,8 +82,8 @@ ms.locfileid: "61786005"
 </filters>  
 ```  
   
-## <a name="filter-tables"></a>Filtre tabloları  
- İletiye uygulanacak bir mantıksal karşılaştırma her filtre öğe tanımlar, ancak filtre tabloda filtre öğesi ve hedef istemci uç noktası arasındaki ilişki gösterilmektedir. Bir filtre tablosu adlandırılmış bir koleksiyonudur <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement> yedekleme alternatif uç noktaları listesini bir filtre ve birincil hedef uç nokta arasındaki ilişkiyi tanımlayan nesne. Filtre tablo girişleri her filtre koşulu için isteğe bağlı bir öncelik belirtmenizi sağlar. Aşağıdaki örnek, iki filtre tanımlar ve sonra her bir filtrenin bir hedef uç nokta ile ilişkilendiren bir filtre tablo tanımlar.  
+## <a name="filter-tables"></a>Tabloları filtrele  
+ Her filtre öğesi bir iletiye uygulanabilen bir mantıksal karşılaştırma tanımladığından, filtre tablosu filtre öğesi ile hedef istemci uç noktası arasındaki ilişkilendirmeyi sağlar. Filtre tablosu, bir filtre, birincil hedef <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement> uç noktası ve alternatif yedekleme bitiş noktaları listesi arasındaki ilişkiyi tanımlayan nesnelerin adlandırılmış bir koleksiyonudur. Filtre tablosu girdileri, her bir filtre koşulu için isteğe bağlı bir öncelik belirtmenize de olanak tanır. Aşağıdaki örnek iki filtre tanımlar ve ardından her bir filtreyi bir hedef uç noktasıyla ilişkilendiren bir filtre tablosu tanımlar.  
   
 ```xml  
 <routing>  
@@ -102,15 +102,15 @@ ms.locfileid: "61786005"
 </routing>  
 ```  
   
-### <a name="filter-evaluation-priority"></a>Filtre değerlendirme önceliği  
- Varsayılan olarak, filtre tablodaki tüm girişleri eşzamanlı olarak değerlendirilir ve değerlendirilen ileti eşleşen her filtre girişle ilişkili uç noktalarına yönlendirilir. Birden çok filtre sonucunu verirse `true`ve tek yönlü veya çift yönlü iletiyi, ileti eşleşen tüm filtreleri için uç noktaya yayın. İstek-yanıt iletileri, yalnızca bir yanıtı istemciye döndürülen için çok noktaya yayın olamaz.  
+### <a name="filter-evaluation-priority"></a>Değerlendirme önceliğini filtrele  
+ Varsayılan olarak, filtre tablosundaki tüm girişler eşzamanlı olarak değerlendirilir ve değerlendirilen ileti, eşleşen her filtre girdisiyle ilişkili uç noktalara yönlendirilir. Birden çok filtre değerlendirmesi `true`yaptıysanız ve ileti tek yönlü veya çift yönlü ise, ileti tüm eşleşen filtreler için uç noktalara çok noktaya yayın yapılır. İstemciye yalnızca bir yanıt döndürülemediğinden, istek-yanıt iletileri çok noktaya geçirilemez.  
   
- Daha karmaşık yönlendirme mantığı, her bir filtrenin öncelik düzeyleri belirterek uygulanabilir; Yönlendirme hizmeti, en yüksek öncelik düzeyinde tüm filtreleri ilk önce değerlendirir. Bir ileti bu düzeyi filtresi eşleşirse, daha düşük bir öncelik filtre işlenir. Örneğin, tek yönlü gelen ileti önceliği 2 olan tüm filtreleri karşı ilk olarak değerlendirilir. Bu nedenle sonraki ileti önceliği 1 ile filtrelere göre karşılaştırılır ileti bu öncelik düzeyinde herhangi bir filtre eşleşmiyor. İletinin iki öncelik 1 filtrelerle eşleşen ve tek yönlü bir ileti olduğu için her iki hedef Uç noktalara yönlendirilir.  Öncelik 1 filtreler arasında bir eşleşme bulunamadığından, öncelik 0 filtre değerlendirilir.  
+ Her filtrenin öncelik düzeyleri belirtilerek daha karmaşık yönlendirme mantığı uygulanabilir; Yönlendirme hizmeti, ilk olarak tüm filtreleri en yüksek öncelik düzeyinde değerlendirir. Bir ileti bu düzeyin bir filtresiyle eşleşiyorsa, daha düşük önceliğe sahip hiçbir filtre işlenmez. Örneğin, gelen tek yönlü bir ileti, öncelikle 2 önceliğine sahip tüm filtrelere karşı değerlendirilir. İleti, bu öncelik düzeyindeki herhangi bir filtreyle eşleşmez, bu nedenle ileti önceliği 1 olan filtrelere göre karşılaştırılır. İki öncelik 1 filtresi iletiyle eşleşir ve tek yönlü bir ileti olduğundan, her iki hedef uç noktasına yönlendirilir.  Öncelik 1 filtreleri arasında bir eşleşme bulunduğundan, öncelik 0 filtresi değerlendirilmez.  
   
 > [!NOTE]
->  Eğer öncelik belirtilmezse, varsayılan öncelik 0 kullanılır.  
+> Hiçbir öncelik belirtilmemişse, varsayılan 0 önceliği kullanılır.  
   
- Aşağıdaki örnekte, 2, 1 ve 0 başvurulan filtreleri için öncelikleri tablodaki belirten bir filtre tablo tanımlar.  
+ Aşağıdaki örnek, tabloda başvurulan filtreler için 2, 1 ve 0 önceliklerini belirten bir filtre tablosu tanımlar.  
   
 ```xml  
 <filterTables>  
@@ -127,13 +127,13 @@ ms.locfileid: "61786005"
 </filterTables>  
 ```  
   
- Yukarıdaki örnekte, bir ileti XPathFilterElement eşleşirse, için roundingCalcEndpoint yönlendirilir ve diğer tüm filtreleri daha düşük bir öncelik olduğundan tabloda daha fazla filtre değerlendirilir. İleti XPathFilterElement eşleşmiyorsa ancak bunu daha sonra tüm filtreleri sonraki daha düşük öncelikli karşı EndpointNameFilter ve PrefixAddressFilter değerlendirilir.  
+ Yukarıdaki örnekte, bir ileti XPathFilter ile eşleşirse, bu, roundingCalcEndpoint 'e yönlendirilir ve diğer tüm filtreler daha düşük bir önceliğe sahip olduğundan tablodaki başka bir filtre değerlendirilmez. Ancak, ileti XPathFilter ile eşleşmezse, daha sonra bir sonraki düşük önceliğin, EndpointNameFilter ve PrefixAddressFilter tüm filtrelerine göre değerlendirilir.  
   
 > [!NOTE]
->  Mümkün olduğunda, bir öncelik öncelik değerlendirme içinde performans düşüşü sağladığından belirtmek yerine özel filtreler kullanın.  
+> Mümkün olduğunda öncelikli bir öncelik belirtmek yerine özel filtreler kullanın, çünkü öncelik değerlendirmesi performans düşüşüne neden olabilir.  
   
-### <a name="backup-lists"></a>Yedekleme listeler  
- Filtre tablodaki her bir filtrenin isteğe bağlı olarak adlandırılmış uç noktaları koleksiyonudur yedek bir liste belirtin (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>). Bu koleksiyon, sıralı bir ileti için durumunda aktarılmaz uç noktaları listesi içeren bir <xref:System.ServiceModel.CommunicationException> belirtilen birincil uç noktasına gönderilirken <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>. Aşağıdaki örnek, "iki uç nokta içeren backupServiceEndpoints" adlı bir yedekleme listesi tanımlar.  
+### <a name="backup-lists"></a>Yedekleme listeleri  
+ Filtre tablosundaki her bir filtre, isteğe bağlı olarak bir uç nokta (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>) koleksiyonu olan bir yedekleme listesi belirtebilir. Bu koleksiyon, iletinin ' de <xref:System.ServiceModel.CommunicationException> <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A>belirtilen birincil uç noktaya gönderilirken bir olayında iletilebilecek uç noktaların sıralı bir listesini içerir. Aşağıdaki örnek, iki uç nokta içeren "backupServiceEndpoints" adlı bir yedekleme listesini tanımlar.  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ ms.locfileid: "61786005"
 </backupLists>  
 ```  
   
- Birincil uç nokta "Hedef" gönderme başarısız olursa, önceki örnekte, yönlendirme hizmeti listelendikleri sırayla her bir uç noktaya gönderme, ilk backupServiceQueue için gönderme ve alternateServiceQueue için sonradan göndermeyi deneyecek backupServiceQueue gönderme başarısız olur. Tüm yedekleme uç noktalar başarısız olursa, bir hata döndürülür.
+ Yukarıdaki örnekte, birincil uç nokta "hedef" e-posta gönderme başarısız olursa, yönlendirme hizmeti listelenen sırayla her bir uç noktaya göndermeye çalışır, önce backupServiceQueue öğesine gönderilir ve ardından backupServiceQueue 'a gönderme başarısız olur. Tüm yedekleme uç noktaları başarısız olursa, bir hata döndürülür.

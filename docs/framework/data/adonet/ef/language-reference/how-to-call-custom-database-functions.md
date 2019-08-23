@@ -5,62 +5,62 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ddd6ebc6215ec17fa416fb0de8f81cf631365db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936038"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Nasıl yapılır: Özel Veritabanı İşlevleri Çağırma
-Bu konu, veritabanı içinde LINQ to Entities sorgularında tanımlanan özel işlevleri çağırmak açıklar.  
+Bu konu, LINQ to Entities sorguları içinden veritabanında tanımlanan özel işlevlerin nasıl çağrılacağını açıklar.  
   
- Entities sorgularında LINQ çağrılan veritabanı işlevleri veritabanında yürütülür. İşlevler veritabanında yürütmek, uygulama performansını iyileştirebilir.  
+ LINQ to Entities sorgulardan çağrılan veritabanı işlevleri veritabanında yürütülür. Veritabanındaki işlevlerin yürütülmesi, uygulama performansını iyileştirebilir.  
   
- Aşağıdaki yordam, bir özel veritabanı işlevi çağırmak için İleri düzey bir özeti sağlar. Aşağıdaki örnek, bu yordamdaki adımları hakkında daha fazla ayrıntı sağlar.  
+ Aşağıdaki yordam, özel bir veritabanı işlevini çağırmak için üst düzey bir ana hat sağlar. Aşağıdaki örnek, yordamdaki adımlar hakkında daha fazla ayrıntı sağlar.  
   
 ### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>Veritabanında tanımlanan özel işlevleri çağırmak için  
   
-1. Özel bir işlev veritabanınızı oluşturun.  
+1. Veritabanınızda özel bir işlev oluşturun.  
   
-     SQL Server özel işlevler oluşturma hakkında daha fazla bilgi için bkz. [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
+     SQL Server özel işlevler oluşturma hakkında daha fazla bilgi için bkz. [create FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
-2. .Edmx dosyanızın depo şeması tanım dili (SSDL) bir işlevde bildirin. İşlev adı veritabanında bildirilen işlev adı ile aynı olmalıdır.  
+2. . Edmx dosyanızın mağaza şeması tanım dili (SSDL) içinde bir işlev bildirin. İşlevin adı, veritabanında belirtilen işlevin adı ile aynı olmalıdır.  
   
-     Daha fazla bilgi için [işlevi öğesi (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
+     Daha fazla bilgi için bkz. [Işlev öğesi (ssdl)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
-3. Karşılık gelen bir yöntem uygulama kodunuzda bir sınıf ekleyin ve geçerli bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> yönteme unutmayın <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> öznitelik parametreleri: kavramsal modelin ad alanı adı ve kavramsal işlev adı Sırasıyla model. LINQ için ad çözümlemesi işlevi büyük/küçük harfe duyarlıdır.  
+3. Uygulama kodunuzda bir sınıfa karşılık gelen bir yöntemi ekleyin ve yöntemine bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> uygulayın; <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> bu özniteliğin ve <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametrelerinin kavramsal modelin ad alanı adı ve kavram içindeki işlev adı olduğunu unutmayın. sırasıyla model. LINQ için işlev adı çözümlemesi büyük/küçük harfe duyarlıdır.  
   
-4. Bir LINQ to Entities sorgusunda yöntemi çağırın.  
+4. Yöntemi bir LINQ to Entities sorgusunda çağırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir özel veritabanı işlevden içinde bir LINQ to Entities sorgusunda çağırmak nasıl gösterir. Örneğin, okul modeli kullanır. Okul modeli hakkında daha fazla bilgi için bkz: [School örnek veritabanını oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) ve [Okul .edmx dosyası oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ Aşağıdaki örnek, bir LINQ to Entities sorgusunun içinden özel bir veritabanı işlevinin nasıl çağrılacağını gösterir. Örnek, okul modelini kullanır. Okul modeli hakkında daha fazla bilgi için bkz. [okul örnek veritabanı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) ve [okul. edmx dosyası](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100))oluşturma.  
   
- Aşağıdaki kodu ekler `AvgStudentGrade` School örnek veritabanını işlevi.  
+ Aşağıdaki kod, okul örnek `AvgStudentGrade` veritabanına işlevi ekler.  
   
 > [!NOTE]
->  Özel veritabanını işlevi çağırmak için adımları veritabanı sunucusu bağımsız olarak aynıdır. Ancak, aşağıdaki kod, bir SQL Server veritabanında bir işlev oluşturmak için özeldir. Diğer veritabanı sunucuları özel bir işlev oluşturma kodunu farklı olabilir.  
+> Özel bir veritabanı işlevini çağırma adımları veritabanı sunucusundan bağımsız olarak aynıdır. Ancak, aşağıdaki kod SQL Server veritabanında bir işlev oluşturmak için özeldir. Diğer veritabanı sunucularında özel bir işlev oluşturma kodu farklılık gösterebilir.  
   
  [!code-sql[DP L2E MapToDBFunction#1](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp l2e maptodbfunction/tsql/create_avgstudentgrade.sql#1)]  
   
 ## <a name="example"></a>Örnek  
- Ardından, .edmx dosyanızın depo şeması tanım dili (SSDL) bir işlevde bildirin. Aşağıdaki kod bildirir `AvgStudentGrade` SSDL işlevinde:  
+ Sonra,. edmx dosyanızın mağaza şeması tanım dili (SSDL) içinde bir işlev bildirin. Aşağıdaki kod, SSDL içindeki `AvgStudentGrade` işlevi bildirir:  
   
  [!code-xml[DP L2E MapToDBFunction#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/school.edmx#2)]  
   
 ## <a name="example"></a>Örnek  
- Artık bir yöntem oluşturma ve SSDL içinde bildirilen işlev eşleyin. Aşağıdaki sınıf yöntemi (yukarıda) SSDL kullanılarak tanımlanmış işlevi eşlenmiş bir <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Bu yöntem çağrıldığında, veritabanında ilgili işlev yürütülür.  
+ Şimdi bir yöntem oluşturun ve bu yöntemi SSDL öğesinde belirtilen işlevle eşleyin. Aşağıdaki sınıftaki yöntemi, kullanarak <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>SSDL (yukarıda) içinde tanımlanan işlevle eşlenir. Bu yöntem çağrıldığında, veritabanındaki karşılık gelen işlev yürütülür.  
   
  [!code-csharp[DP L2E MapToDBFunction#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#3)]
  [!code-vb[DP L2E MapToDBFunction#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
- Son olarak, bir LINQ to Entities sorgusunda yöntemi çağırın. Aşağıdaki kod, konsola öğrencilerinin adların ve ortalama derece görüntüler:  
+ Son olarak, yöntemi bir LINQ to Entities sorgusunda çağırın. Aşağıdaki kod, öğrenciler için en son adları ve ortalama bir not konsolunu görüntüler:  
   
  [!code-csharp[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp l2e maptodbfunction/cs/program.cs#4)]
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

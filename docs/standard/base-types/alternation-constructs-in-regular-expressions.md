@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968567"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 <a name="top"></a>Değişim yapıları,/veya veya koşullu eşleştirmeyi etkinleştirmek için bir normal ifadeyi değiştirir. .NET üç değişim yapılarını destekler:  
@@ -52,7 +52,7 @@ ms.locfileid: "68331757"
 |<code>(a&#124;e)</code>|Bir "a" veya "e" ile eşleş.|  
 |`y\b`|Bir sözcük sınırında "y" ile eşleşir.|  
   
- Karakter `|` , ya da karakter değişmez değerleri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, bir ABD `|` 'yi ayıklamak için karakteri kullanır Bir 9 basamaklı bir sayı olan sosyal güvenlik numarası (SSN), *ddd*-*gg*-*gggg*veya ABD 7 basamaklı bir sayı -olan işveren kimlik numarası (EIN *).*  
+ Karakter `|` , ya da karakter değişmez değerleri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, bir ABD `|` 'yi ayıklamak için karakteri kullanır Bir 9 basamaklı bir sayı olan sosyal güvenlik numarası (SSN), *ddd*-*gg*-*gggg*veya ABD 7 basamaklı bir sayı-olan işveren kimlik numarası (EIN).  
   
  [!code-csharp[RegularExpressions.Language.Alternation#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
  [!code-vb[RegularExpressions.Language.Alternation#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -71,16 +71,16 @@ ms.locfileid: "68331757"
 ## <a name="conditional-matching-with-an-expression"></a>İfade Kullanarak Koşullu Eşleştirme  
  Bu dil öğesi, bir başlangıç deseniyle eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:  
   
- `(?(`*ifade*  *Evet* Hayır `)` `|``)`  
+ `(?(`*ifade* *Evet* Hayır `)` `|``)`  
   
  Burada *ifadesi* eşleşmek üzere başlangıç düzensiyse, *Evet* *ifadesi* eşleşiyorsa eşleşen bir modeldir ve *hiçbir* değer *ifade* eşleşmezse eşleşen isteğe bağlı bir modeldir. Normal ifade altyapısı, *ifadeyi* sıfır genişlikli bir onaylama olarak değerlendirir; diğer bir deyişle, normal ifade altyapısı, *ifade*değerlendirdikten sonra giriş akışında ilerlemez. Bu nedenle, bu yapı aşağıdaki ile eşdeğerdir:  
   
- `(?(?=`*ifade*  *Evet* Hayır `)` `|``)`  
+ `(?(?=`*ifade* *Evet* Hayır `)` `|``)`  
   
- Burada `(?=`  ifadesi`)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) veya içinde de bulunan bir alt ifade olması gerekir. *Evet*. Aksi halde, *Evet* deseninin eşleştirilemez.  
+ Burada `(?=` ifadesi`)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) veya içinde de bulunan bir alt ifade olması gerekir. *Evet*. Aksi halde, *Evet* deseninin eşleştirilemez.  
   
 > [!NOTE]
->  *İfade*adlandırılmış veya numaralandırılmış yakalama grubsiyse, değişim yapısı yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna göre koşullu eşleme](#Conditional_Group)başlıklı sonraki bölüme bakın. Diğer bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleştirmeye çalışmaz, bunun yerine grubun varlığını veya yokluğunu sınar.  
+> *İfade*adlandırılmış veya numaralandırılmış yakalama grubsiyse, değişim yapısı yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna göre koşullu eşleme](#Conditional_Group)başlıklı sonraki bölüme bakın. Diğer bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleştirmeye çalışmaz, bunun yerine grubun varlığını veya yokluğunu sınar.  
   
  Aşağıdaki örnek, [ile &#124; eşleşen bir/veya desenli](#Either_Or) bir örnek çeşitlemesi olan bir örnektir. Bir sözcük sınırından sonraki ilk üç karakterin, kısa çizgi ve sonrasında iki basamak olup olmadığını anlamak için koşullu eşleştirmeyi kullanır. Varsa, bir ABD ile eşleştirmeye çalışır İşveren Kimlik numarası (EIN). Aksi takdirde, bir ABD ile eşleştirmeye çalışır Sosyal güvenlik numarası (SSK).  
   
@@ -103,11 +103,11 @@ ms.locfileid: "68331757"
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Yakalanan Geçerli Bir Gruba Göre Koşullu Eşleştirme  
  Bu dil öğesi, belirtilen bir yakalama grubuyla eşleşip eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:  
   
- `(?(`*ad*  *Evet* Hayır `)` `|``)`  
+ `(?(`*ad* *Evet* Hayır `)` `|``)`  
   
  veya  
   
- `(?(`*sayı*  *Evet* Hayır `)` `|``)`  
+ `(?(`*sayı* *Evet* Hayır `)` `|``)`  
   
  Burada *ad* , ad ve *sayı* bir yakalama grubu numarasıdır, *Evet* , *ad* veya *sayı* bir eşleşme içeriyorsa ve *Hayır* ise eşleşmesi gereken isteğe bağlı ifadedir.  
   

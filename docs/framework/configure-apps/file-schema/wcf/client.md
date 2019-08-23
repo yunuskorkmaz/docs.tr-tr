@@ -5,15 +5,15 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704303"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919534"
 ---
 # <a name="client"></a>\<İstemci >
-`client` Öğesi, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.  
+Öğesi `client` , bir istemcinin bağlanabileceği uç noktaların listesini tanımlar.  
   
  \<system.ServiceModel>  
 \<İstemci >  
@@ -41,19 +41,19 @@ ms.locfileid: "61704303"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<uç noktası >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Bu istemcinin bağlanabileceği uç noktaları belirttiğiniz bitiş noktası öğelerinin bir koleksiyonunu içerir.|  
-|[\<meta veri >](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|İşleme meta veri ayarlarını içerir.|  
+|[\<uç nokta >](endpoint-of-client.md)|Bu istemcinin bağlanabileceği uç noktaları belirten bir uç nokta öğeleri koleksiyonu içerir.|  
+|[\<meta veri >](metadata.md)|Meta verileri işlemeye yönelik ayarları içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğe.|  
+|[\<system.serviceModel>](system-servicemodel.md)|Tüm Windows Communication Foundation (WCF) yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `client` Bölümü, bir istemcinin bağlanabileceği uç noktaların listesini tanımlar. Kendi bağlama davranışı ve sözleşme istemci bölümünde listelenen her bir uç nokta tanımlar. Birleşimiyle benzersiz şekilde tanımlanır `name` ve `contract` öznitelikleri. İstemci kodu belirtir `name` uygulayan istemci hizmeti için bir uç noktaya bağlanmak için. Varsa `name` özniteliği atlanırsa, uç nokta sözleşmesinin varsayılan uç nokta, uygular işlevi görür.  
+ Bölümü `client` , bir istemcinin bağlanabileceği uç noktaların listesini tanımlar. İstemci bölümünde listelenen her bir uç nokta kendi bağlamasını, davranışını ve sözleşmesini tanımlar. `name` Ve`contract` özniteliklerinin birleşimiyle benzersiz şekilde tanımlanır. İstemci kodu, `name` istemcinin uyguladığı hizmet için bir uç noktaya bağlanmak üzere öğesini belirtir. `name` Özniteliği atlanırsa, uç noktası uyguladığı sözleşmenin varsayılan uç noktası olarak davranır.  
   
- Ayrıca, bu bölümde Ayrıca işlem meta veri ayarlarını belirtir.  
+ Ayrıca, bu bölüm meta verileri işlemeye yönelik ayarları da belirtir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -76,5 +76,5 @@ ms.locfileid: "61704303"
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF İstemci Yapılandırması](../../../wcf/feature-details/client-configuration.md)
+- [İstemciler](../../../wcf/feature-details/clients.md)

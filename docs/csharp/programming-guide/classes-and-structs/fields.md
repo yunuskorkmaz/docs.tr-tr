@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 722e028311530336749d259207c681ac3f9a0f34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597062"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924527"
 ---
 # <a name="fields-c-programming-guide"></a>Alanlar (C# Programlama Kılavuzu)
 *Alan* , bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/keywords/struct.md)içinde doğrudan tanımlanmış herhangi bir türdeki değişkendir. Alanlar, kapsayan türlerinin *üyeleridir* .  
@@ -36,7 +36,7 @@ ms.locfileid: "69597062"
  Alanlar, nesne örneği Oluşturucusu çağrılmadan hemen önce başlatılır. Oluşturucu bir alanın değerini atadığında, alan bildirimi sırasında verilen değerin üzerine yazar. Daha fazla bilgi için bkz. [oluşturucular kullanma](./using-constructors.md).  
   
 > [!NOTE]
->  Alan başlatıcısı diğer örnek alanlarına başvuramaz.  
+> Alan başlatıcısı diğer örnek alanlarına başvuramaz.  
   
  Alanlar [ortak](../../language-reference/keywords/public.md), [özel](../../language-reference/keywords/private.md), [korunan](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md) veya [özel korumalı](../../language-reference/keywords/private-protected.md)olarak işaretlenebilir. Bu erişim değiştiricileri, sınıfın kullanıcılarının alanlara nasıl erişebileceğini tanımlar. Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   

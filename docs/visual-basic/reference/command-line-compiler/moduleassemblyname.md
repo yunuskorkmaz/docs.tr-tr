@@ -6,15 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 70cef109e4f2947fb4e38b9bfd19433257cce136
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052d6937846df39bd94d532e1b63ebe522dbf6c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964683"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
-Bu modül bir parçası olacağı derlemenin adını belirtir.  
+Bu modülün bir parçası olacağı derlemenin adını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,25 +26,25 @@ Bu modül bir parçası olacağı derlemenin adını belirtir.
   
 |Terim|Tanım|  
 |---|---|  
-|`assembly_name`|Bu modül bir parçası olacağı derlemenin adı.|  
+|`assembly_name`|Bu modülün bir parçası olacağı derlemenin adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici işlemleri `-moduleassemblyname` seçeneği yalnızca şu durumlarda `-target:module` seçeneği belirtilmedi. Bu modülü oluşturmak derleyicinin neden olur. Yalnızca belirtilen derleme için geçerli olduğundan derleyici tarafından oluşturulan Modülü `-moduleassemblyname` seçeneği. Farklı bir derlemede modülü yerleştirirseniz, çalışma zamanı hataları oluşur.  
+ Derleyici, `-moduleassemblyname` seçeneği yalnızca `-target:module` seçenek belirtilmişse işler. Bu, derleyicinin bir modül oluşturmasına neden olur. Derleyici tarafından oluşturulan modül yalnızca `-moduleassemblyname` seçeneğiyle belirtilen derleme için geçerlidir. Modülü farklı bir derlemeye yerleştirirseniz, çalışma zamanı hataları oluşur.  
   
- `-moduleassemblyname` Seçeneği, yalnızca aşağıdaki true olduğunda gereklidir:  
+ `-moduleassemblyname` Seçeneği yalnızca aşağıdakilerin doğru olması durumunda gereklidir:  
   
-- Modül bir veri türü erişmesi gereken bir `Friend` başvurulan bir derleme türü.  
+- Modüldeki bir veri türünün başvurulan derlemedeki bir `Friend` türe erişmesi gerekir.  
   
-- Başvurulan derleme modülü derlenecek olan derlemeye arkadaş derleme erişim verildi.  
+- Başvurulan derleme, modülün derleyecek olduğu derlemeye arkadaş bütünleştirilmiş kodu erişimi verdi.  
   
- Bir modül oluşturma hakkında daha fazla bilgi için bkz. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Arkadaş bütünleştirilmiş kodları hakkında daha fazla bilgi için bkz: [arkadaş derlemeleri](../../../standard/assembly/friend-assemblies.md).  
+ Modül oluşturma hakkında daha fazla bilgi için bkz. [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Arkadaş derlemeleri hakkında daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend-assemblies.md).  
   
 > [!NOTE]
->  `-moduleassemblyname` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca bir komut istemi'nden derleme yaptığınızda kullanılabilir.  
+> Bu `-moduleassemblyname` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca bir komut isteminden derlerken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir çoklu dosya derlemesi oluşturun](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [Nasıl yapılır: Çoklu dosya derlemesi oluşturma](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)

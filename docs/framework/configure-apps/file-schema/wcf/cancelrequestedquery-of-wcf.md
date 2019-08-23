@@ -1,25 +1,25 @@
 ---
-title: <cancelRequestedQuery> WCF
+title: <cancelRequestedQuery>WCF
 ms.date: 03/30/2017
 ms.assetid: b690d870-02eb-4c56-8bc3-e5ca99d7097b
-ms.openlocfilehash: bd6157e63761efa954744ab08ea6c66535def514
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7952520edbf799e5fab6864e50962c6ec2860928
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673369"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919642"
 ---
-# <a name="cancelrequestedquery-of-wcf"></a>\<cancelRequestedQuery > WCF
+# <a name="cancelrequestedquery-of-wcf"></a>\<WCF için cancelRequestedQuery >
 
-Bir alt etkinlik üst etkinliği tarafından iptal etmek için istekleri izlemek için kullanılan bir sorgu temsil eder. Sorgu istek kayıt nesneleri iptal etmek için abone olmak izleme Katılımcısı için gereklidir.  
+Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan bir sorgu temsil eder. Sorgu, istek kaydı nesnelerine abone olmak için bir izleme katılımcısı için gereklidir.  
   
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<cancelRequestedQueries >  
 \<cancelRequestedQuery >  
   
@@ -48,8 +48,8 @@ Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profille
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`activityName`|İptal isteyen etkinliğin adını belirten dize.|  
-|`childActivityName`|Kendisi için İptal istendi alt etkinliğin adını belirten dize.|  
+|`activityName`|İptali isteyen etkinliğin adını belirten bir dize.|  
+|`childActivityName`|İptalin istendiği alt etkinliğin adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt öğeleri
 
@@ -59,11 +59,11 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cancelRequestedQueries >](cancelrequestedqueries-of-wcf.md)|Bir alt etkinlik üst etkinliği tarafından iptal etmek için istekleri izlemek için kullanılan sorguları koleksiyonunu temsil eder.|  
+|[\<cancelRequestedQueries >](cancelrequestedqueries-of-wcf.md)|Üst etkinlik tarafından bir alt etkinliği iptal etmek için istekleri izlemek üzere kullanılan bir sorgu koleksiyonunu temsil eder.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CancelRequestedQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CancelRequestedQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

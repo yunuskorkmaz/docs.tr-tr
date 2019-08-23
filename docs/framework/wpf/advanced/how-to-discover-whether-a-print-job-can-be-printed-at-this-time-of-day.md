@@ -10,65 +10,65 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 859dc75169e443d07361951692a428507886fa2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859715"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947807"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Nasıl yapılır: Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme
-Yazdırma sıralarını her zaman günde 24 saat kullanılabilir değil. Günün belirli zamanlarında kullanılamaz duruma getirmek için ayarlanabilir başlangıç ve bitiş zamanı özellikleri sahiptirler. Bu özellik, örneğin, belirli bir bölüm 17: 00 sonra özel kullanım için bir yazıcı ayırmak için kullanılabilir. Bu bölüm Kullan yazıcı diğer departmanlardan bakım farklı bir sıra yoktur. Sıra diğer bölümler için 17: 00 sonra kullanılamaz olarak ayarlanması, ayrıcalıklı bölümün sırası olarak ayarlanması sırada her kullanılabilir zaman.  
+Yazdırma kuyrukları her zaman günde 24 saat boyunca kullanılabilir değildir. Bunlar, günün belirli saatlerinde kullanılamaz hale getirmek için ayarlanabilecekleri başlangıç ve bitiş zamanı özelliklerine sahiptirler. Bu özellik, örneğin, 5 P.M. sonra belirli bir departmanın özel kullanımı için bir yazıcı ayırmak üzere kullanılabilir. Bu bölümün, yazıcıya hizmet veren farklı bir kuyruğu vardır. Diğer Departmanlar için sıra 5 P.M. sonra kullanılamaz, ancak sık kırmızı bölüm kuyruğu her zaman kullanılabilir olacak şekilde ayarlanabilir.  
   
- Ayrıca, yazdırma işlerini kendilerini yalnızca bir belirtilen bir zaman aralığı içinde yazdırılabilir olacak şekilde ayarlanabilir.  
+ Üstelik, yazdırma işlerinin kendileri yalnızca belirtilen zaman aralığında yazdırılabilir olarak ayarlanabilir.  
   
- <xref:System.Printing.PrintQueue> Ve <xref:System.Printing.PrintSystemJobInfo> kullanıma sunulan API'ler, Microsoft .NET Framework sınıfları uzaktan bir yazdırma işi şu anda belirli bir kuyruğa yazdırabilir olup olmadığını denetlemek için bir yol sağlar.  
+ Microsoft .net <xref:System.Printing.PrintQueue> Framework <xref:System.Printing.PrintSystemJobInfo> API 'lerinde sunulan ve sınıfları, belirli bir yazdırma işinin geçerli zamanda belirli bir sıraya göre yazdırıp yazdıramayacağını uzaktan denetlemek için bir yol sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir yazdırma işi sorunlarını tanılayabilirsiniz bir örnektir.  
+ Aşağıdaki örnek, bir yazdırma işiyle ilgili sorunları tanılamak için bir örnektir.  
   
- Aşağıdaki şekilde bu tür bir işlev için iki ana adım vardır.  
+ Bu tür bir işlev için aşağıdaki gibi iki önemli adım vardır.  
   
-1. Okuma <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintQueue> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
+1. Geçerli saatin aralarında <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> olup olmadığını öğrenmek <xref:System.Printing.PrintQueue> için öğesinin veözellikleriniokuyun.<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>  
   
-2. Okuma <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> ve <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> özelliklerini <xref:System.Printing.PrintSystemJobInfo> geçerli saati bunlar arasında olup olmadığını belirlemek için.  
+2. Geçerli saatin aralarında <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> olup olmadığını öğrenmek <xref:System.Printing.PrintSystemJobInfo> için öğesinin veözellikleriniokuyun.<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>  
   
- Ancak zorluklar bu özellikleri olmayan zorluk ortaya çıkan <xref:System.DateTime> nesneleri. Bunun yerine oldukları <xref:System.Int32> gece yarısından itibaren dakika sayısı arttıkça günün saatini express nesneleri. Ayrıca, bu gece yarısı geçerli saat dilimi ancak gece yarısı UTC (Eşgüdümlü Evrensel Saat) değil.  
+ Ancak bu özelliklerin nesneler olmadığı <xref:System.DateTime> gerçeden karmaşıklıklar ortaya çıkar. Bunun yerine, <xref:System.Int32> günün saatini gece yarısından beri geçen dakika sayısı olarak ifade eden nesnelerdir. Üstelik, bu, geçerli saat diliminde gece yarısı, ancak gece yarısı UTC (Eşgüdümlü Evrensel Saat).  
   
- Statik yöntemini ilk kod örneği sunar **ReportQueueAndJobAvailability**, hangi geçirilen bir <xref:System.Printing.PrintSystemJobInfo> ve iş şu anda yazdırabilir olup olmadığını belirlemek için yardımcı yöntemler çağırır ve değil, ne zaman yazdırabilirsiniz. Dikkat bir <xref:System.Printing.PrintQueue> yöntemine geçirilir. Bunun nedeni, <xref:System.Printing.PrintSystemJobInfo> kuyrukta bir başvuru içeriyor, <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> özelliği.  
+ İlk kod örneği, gönderilen <xref:System.Printing.PrintSystemJobInfo> **ReportQueueAndJobAvailability**statik yöntemini gösterir ve işin geçerli saatte yazdırıp yazdıramayacağını ve ne zaman yazdırılacağını ve ne zaman yazdıramayacağını belirleyen yardımcı yöntemleri çağırır. Yöntemine bir <xref:System.Printing.PrintQueue> yönteminin geçirilmediğine dikkat edin. Bunun nedeni, <xref:System.Printing.PrintSystemJobInfo> öğesinin <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> özelliğindeki sıraya bir başvuru içereceğinden oluşur.  
   
- İkincil yöntemler Aşırı yüklenen dahil **ReportAvailabilityAtThisTime** alabilen yöntemi bir <xref:System.Printing.PrintQueue> veya <xref:System.Printing.PrintSystemJobInfo> bir parametre olarak. Ayrıca bir **TimeConverter.ConvertToLocalHumanReadableTime**. Bu yöntemlerin tümü, aşağıda ele alınmıştır.  
+ Alt yöntemler, bir <xref:System.Printing.PrintQueue> veya bir <xref:System.Printing.PrintSystemJobInfo> parametresini parametre olarak ele geçirebilen aşırı yüklenmiş **ReportAvailabilityAtThisTime** yöntemini içerir. Ayrıca bir **TimeConverter. ConvertToLocalHumanReadableTime**vardır. Bu yöntemlerin hepsi aşağıda ele alınmıştır.  
   
- **ReportQueueAndJobAvailability** yöntemi, kuyruk veya yazdırma işi şu anda kullanılabilir olup olmadığını kontrol ederek başlar. Bunlardan birini kullanılamıyorsa, ardından bakar sıranın kullanılamaz. Kullanılabilir durumda değilse, yöntem bu olgu ve ne zaman sıranın tekrar kullanılabilir hale gelecektir zaman bildirir. Ardından işin denetler ve kullanılabilir durumda değilse, sonraki açışınızda rapor yazdırabileceği sırasında yazdırabilirsiniz. Son olarak, yöntem, işin ne zaman yazdırabilir en erken zamanı raporlar. Sonraki iki kez budur.  
+ **ReportQueueAndJobAvailability** yöntemi, sıranın veya yazdırma işinin Şu anda kullanılabilir olup olmadığını kontrol ederek başlar. Bunlardan biri kullanılamıyorsa, sıranın kullanılamıyor olup olmadığını kontrol eder. Kullanılabilir değilse, yöntemi bu olguyu ve kuyruğun yeniden kullanılabilir olacağı saati raporlar. Ardından işi denetler ve kullanılabilir değilse, bir sonraki sefer, yazdırane zaman zaman dilimi bildirir. Son olarak, yöntemi işin yazdırabileceği en erken zamanı bildirir. Bu, aşağıdaki iki kez daha oluşur.  
   
-- Yazdırma sırasını sonraki kullanılabilir olduğunda zaman.  
+- Yazdırma sırasının bir sonraki kullanıma hazır olduğu zaman.  
   
-- Yazdırma işi sonraki kullanılabilir olduğunda zaman.  
+- Yazdırma işinin bir sonraki kullanıma hazır olduğu zaman.  
   
- Saatlerinde bildirirken <xref:System.DateTime.ToShortTimeString%2A> yöntemi olarak da adlandırılır çünkü bu yöntem, yıl, ay ve gün çıktısından bastırır. Belirli bir yıl, ay ve gün için yazdırma sırası ya da bir yazdırma işi kullanılabilirliğini kısıtlayamazsınız.  
+ Günün raporlanması sırasında <xref:System.DateTime.ToShortTimeString%2A> yöntem de çağrılır, çünkü bu yöntem çıktısından yıl, ay ve günü bastırır. Bir yazdırma sırasının veya bir yazdırma işinin kullanılabilirliğini belirli yıl, ay veya günlere göre kısıtlayamazsınız.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- İki overloads biri **ReportAvailabilityAtThisTime** yöntemi yalnızca bunların geçirilen türler hariç aynıdır <xref:System.Printing.PrintQueue> sürümü aşağıda sunulur.  
+ **ReportAvailabilityAtThisTime** yönteminin iki aşırı yüklemesi, geçirilen tür haricinde aynıdır, bu nedenle yalnızca <xref:System.Printing.PrintQueue> sürüm aşağıda sunulmuştur.  
   
 > [!NOTE]
->  Neden bir genel yöntem yöntem türü dışında aynı olması, soru başlatır **ReportAvailabilityAtThisTime\<T >** . Böyle bir yöntemi olan bir sınıf olması gerekirdi nedeni **StartTimeOfDay** ve **UntilTimeOfDay** yöntemi çağıran özellikleri, ancak genel bir yöntem yalnızca sınırlı bir tek bir sınıf ve ortak tek sınıf <xref:System.Printing.PrintQueue> ve <xref:System.Printing.PrintSystemJobInfo> devralma ağacıdır <xref:System.Printing.PrintSystemObject> gibi özellikleri vardır.  
+> Metodun tür hariç özdeş olması, örneğin, örnek **\<ReportAvailabilityAtThisTime T >** genel bir yöntem oluşturmamasının sorusunu oluşturur. Bunun nedeni, bu yöntemin, **StartTimeOfDay** ve yöntemin çağırdığı **UntilTimeOfDay** özelliklerine sahip bir sınıfla sınırlandırılmalıdır, ancak genel bir yöntem yalnızca tek bir sınıfla ve her ikisi için ortak olan tek sınıfla kısıtlanabilir Devralma ağacında Butür<xref:System.Printing.PrintSystemObject>özellikleriyoktur. <xref:System.Printing.PrintQueue> <xref:System.Printing.PrintSystemJobInfo>  
   
- **ReportAvailabilityAtThisTime** yöntemi (aşağıdaki kod örneğinde gösterilen) başlar başlatarak bir <xref:System.Boolean> sentinel değişkenine `true`. İçin sıfırlanır `false`, kuyruk yoksa.  
+ **ReportAvailabilityAtThisTime** yöntemi (Aşağıdaki kod örneğinde sunulan), için <xref:System.Boolean> `true`bir Sentinel değişkeni başlatılarak başlar. Sıra kullanılamıyorsa, olarak `false`sıfırlanır.  
   
- Ardından, yöntemi olup olmadığını denetler başlangıç ve "kadar" kez aynıdır. Böyle bir durumda, yöntem döndürecek şekilde sıranın her zaman kullanılabilir `true`.  
+ Sonra, yöntemi başlangıç ve "Until" zamanlarının aynı olup olmadığını denetler. Varsa, kuyruk her zaman kullanılabilir olduğundan, yöntemi döndürür `true`.  
   
- Sıranın her zaman kullanılabilir durumda değilse, statik kullanmaktadır <xref:System.DateTime.UtcNow%2A> özelliği olarak geçerli zamanı almak için bir <xref:System.DateTime> nesne. (Yerel saat çünkü ihtiyacımız yok <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> ve <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özelliklerdir kendilerini UTC saati.)  
+ Sıra her zaman kullanılabilir değilse, yöntemi geçerli saati bir <xref:System.DateTime.UtcNow%2A> <xref:System.DateTime> nesne olarak almak için static özelliğini kullanır. ( <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> Ve<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> özellikleri UTC saat içinde olduğundan yerel saate ihtiyacım yoktur.)  
   
- Ancak, bu iki özellik olmayan <xref:System.DateTime> nesneleri. Bunlar <xref:System.Int32>zamanı dakika sonra UTC gece sayıda ifade s. Biz dönüştürmek zorunda bizim <xref:System.DateTime> dakika sonra gece yarısına nesne. Tamamlandığında, yöntemi yalnızca "şimdi olmadığını" görmek için "kadar" false "şimdi ise" sentinel arasında iki kez değildir ve sentinel döndürür kümeleri kez sıranın başlangıç arasında denetler.  
+ Ancak, bu iki özellik nesne değildir <xref:System.DateTime> . <xref:System.Int32>Bu, saati saat-UTC-gece yarısı olarak ifade ederler. Bu nedenle nesnemizi <xref:System.DateTime> dakika sonra gece yarısından dönüştürmemiz gerekir. Bu işlem tamamlandığında, yöntemi "Şimdi" kuyruğun başlangıç ve "Until" zamanları arasında olup olmadığını denetler, "Şimdi" iki kez değilse Sentinel değerini false olarak ayarlar ve Sentinel değerini döndürür.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** yöntemi (aşağıdaki kod örneğinde gösterilen) tartışma kısa, bu nedenle, Microsoft .NET Framework ile sunulan tüm yöntemleri kullanamaz. Çift dönüştürme görevi yöntemi vardır: dakika sonra gece yarısı ifade eden bir tamsayı olması gerekir ve bir kullanıcı tarafından okunabilen saate dönüştürün ve bu yerel saate dönüştürmeniz gerekir. Bu ilk oluşturarak gerçekleştirir bir <xref:System.DateTime> ve sonra kullanan gece yarısı olarak ayarlıdır nesne <xref:System.DateTime.AddMinutes%2A> yöntemine iletilmiş dakika eklemek için yöntemi. Bu yeni bir döndürür <xref:System.DateTime> metoduna geçirildi özgün zamanı ifade. <xref:System.DateTime.ToLocalTime%2A> Yöntemi sonra yerel saat olarak bu dönüştürür.  
+ **TimeConverter. ConvertToLocalHumanReadableTime** yöntemi (Aşağıdaki kod örneğinde sunulan) Microsoft .NET Framework ile tanıtılan herhangi bir yöntemi kullanmaz. bu nedenle, tartışma kısa olur. Yöntemin bir çift dönüştürme görevi vardır: dakika sonra gece yarısından sonra bir tamsayı almalıdır ve bunu insanla okunabilir bir zamana dönüştürür ve bunu yerel saate dönüştürmelidir. Önce gece yarısı UTC olarak ayarlanmış bir <xref:System.DateTime> nesne oluşturarak bunu gerçekleştirir ve ardından yöntemine geçirilen dakikaları eklemek için <xref:System.DateTime.AddMinutes%2A> yöntemini kullanır. Bu, yönteme geçirilen <xref:System.DateTime> özgün saati ifade eden yeni bir ifade döndürür. <xref:System.DateTime.ToLocalTime%2A> Yöntemi daha sonra bunu yerel saate dönüştürür.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

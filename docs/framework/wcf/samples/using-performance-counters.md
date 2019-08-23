@@ -2,22 +2,22 @@
 title: Performans Sayaçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2c5042d497a09984a6f6c398a943b443ee9aafb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007610"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966762"
 ---
 # <a name="using-performance-counters"></a>Performans Sayaçlarını Kullanma
-Bu örnek, kullanıcı tanımlı performans Sayaçlarınızı oluşturma işlemleri ve Windows Communication Foundation (WCF) performans sayaçlarını nasıl gösterir. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nasıl erişileceğini ve Kullanıcı tanımlı performans sayaçlarının nasıl oluşturulacağını gösterir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnekte, dört yöntemlerinin istemci çağrıları `ICalculator` hizmeti. İstemci, kullanıcı tarafından kesintiye kadar devam eder. Hizmet değişmeden kalır.  
+ Bu örnekte istemci, `ICalculator` hizmetin dört yöntemini çağırır. İstemci, Kullanıcı tarafından kesintiye gelinceye kadar bunu yapmaya devam eder. Hizmet değişmeden kalır.  
   
- Performans sayaçları hizmeti için Web.config dosyasının tanılama bölümünde şu örnek yapılandırmada gösterildiği etkinleştirilir.  
+ Aşağıdaki örnek yapılandırmada gösterildiği gibi, hizmetinin Web. config dosyasının Tanılama bölümünde performans sayaçları etkinleştirilir.  
   
 ```xml  
 <configuration>  
@@ -27,55 +27,55 @@ Bu örnek, kullanıcı tanımlı performans Sayaçlarınızı oluşturma işleml
 </configuration>  
 ```  
   
- Bu görevi de yapılabilir kullanarak [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Bu görev, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak da yapılabilir.  
   
- Performans sayaçlarını etkin olduğunda, tüm WCF performans sayaçları dizisi için hizmet etkinleştirilir. .NET Framework, üç düzeyde performans verilerini otomatik olarak bulundurur: `ServiceModelService`, `ServiceModelEndpoint` ve `ServiceModelOperation`. Bu düzeylerinin her biri "Çağrıları", "Çağrıları saniye başına" ve "Güvenlik çağrıları yetkilendirilmedi" gibi performans sayaçları sahiptir.  
+ Performans sayaçları etkinleştirildiğinde, hizmet için tüm WCF performans sayacı paketi etkinleştirilir. .NET Framework, performans verilerini otomatik olarak üç düzeyde tutar: `ServiceModelService`, `ServiceModelEndpoint` ve `ServiceModelOperation`. Bu düzeylerin her biri, "çağrı", "saniyedeki çağrı" ve "güvenlik çağrıları yetkilendirilmemiş" gibi performans sayaçlarına sahiptir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 ### <a name="to-view-performance-data"></a>Performans verilerini görüntülemek için  
   
-1. Tıklayarak Performans İzleyicisi Aracı'nı başlatın **Başlat**, **Çalıştır...** , girin `perfmon` tıklatıp **Tamam** veya Denetim Masası'ndan seçin **Yönetimsel Araçlar** ve çift **performans**.  
+1. Sırasıyla **Başlat**, **Çalıştır..** `perfmon` . ' a tıklayarak Performans İzleyicisi aracını başlatın, Tamam ' a tıklayın, **Tamam** ' a tıklayın veya denetim masasından, **Yönetim Araçları** ' nı seçin ve **performans**' ı çift  
   
     > [!NOTE]
-    >  Örnek kodunu çalıştıran dek sayaçları ekleyemezsiniz.  
+    >  Örnek kod çalışmadığı sürece sayaç ekleyemezsiniz.  
   
-2. Bunları seçerek ve Delete tuşuna basarak listelenen performans sayaçlarını kaldırın.  
+2. Seçerek listelenen performans sayaçlarını kaldırın ve Sil tuşuna basın.  
   
-3. Grafik bölmesi sağ tıklatıp seçerek WCF sayaçları ekleyin **Sayaç Ekle**. İçinde **Sayaç Ekle** iletişim kutusunda **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 veya ServiceModelService 3.0.0.0** performans nesnesinde açılan liste kutusu. Listeden görüntülemek istediğiniz sayaçları seçin.  
+3. Grafik bölmesine sağ tıklayıp **Sayaç Ekle**' yı seçerek WCF sayaçlarını ekleyin. **Sayaç Ekle** iletişim kutusunda, performans nesnesi açılan listesi kutusunda **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 veya ServiceModelService 3.0.0.0 öğesini** seçin. Listeden görüntülemek istediğiniz sayaçları seçin.  
   
     > [!NOTE]
-    >  Bilgisayarda çalışan bir WCF Hizmeti yok ise hiçbir WCF performans sayaçları için bir hizmet vardır.  
+    >  Bilgisayarda çalışan bir WCF hizmeti yoksa, bir hizmet için WCF performans sayacı yoktur.  
   
-### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Sayaçları etkinleştirmek için yapılandırma Düzenleyicisi'ni kullanmak için  
+### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Sayaçları etkinleştirmek üzere yapılandırma düzenleyicisini kullanmak için  
   
-1. SvcConfigEditor.exe örneği açın.  
+1. SvcConfigEditor. exe ' nin bir örneğini açın.  
   
-2. Dosya menüsünde **açık** ve ardından **yapılandırma dosyası...** .  
+2. Dosya menüsünde **Aç** ' a ve ardından **yapılandırma dosyası...** öğesine tıklayın.  
   
-3. Örnek uygulama hizmeti klasörüne gidin ve Web.config dosyasını açın.  
+3. Örnek uygulamanın hizmet klasörüne gidin ve Web. config dosyasını açın.  
   
-4. Tıklayın **tanılama** yapılandırma ağaç.  
+4. Yapılandırma ağacında **Tanılamalar** ' a tıklayın.  
   
-5. İki durumlu **performans sayacı** içinde **tanılama** 'All' gösterilecek penceresi.  
+5. **Tanılama** penceresindeki **performans sayacını** ' tümünü ' gösterecek şekilde değiştirin.  
   
 6. Yapılandırma dosyasını kaydedin ve düzenleyiciden çıkın.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

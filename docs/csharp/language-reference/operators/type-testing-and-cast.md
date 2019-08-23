@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572332"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922291"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Tür-test ve atama işleçleri (C# başvuru)
 
@@ -115,7 +115,7 @@ Desteklenen açık dönüştürmeler hakkında daha fazla bilgi için, [ C# dil 
 
 Ayrıca, [bir yöntemi çağırmak veya bir temsilciyi çağırmak](member-access-operators.md#invocation-operator-)için parantezleri de kullanabilirsiniz.
 
-Diğer parantez kullanımı, bir ifadede işlemlerin değerlendirileceği sırayı belirtmektir. Daha fazla bilgi için [işleçler](../../programming-guide/statements-expressions-operators/operators.md) makalesinin [parantezler ekleme](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) bölümüne bakın. Öncelik düzeyine göre sıralanan işleçlerin listesi için bkz [ C# . işleçler](index.md).
+Diğer parantez kullanımı, bir ifadede işlemlerin değerlendirileceği sırayı ayarlamadır. Daha fazla bilgi için bkz [ C# . işleçler](index.md).
 
 ## <a name="typeof-operator"></a>typeof işleci
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912484"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Ayrıştırıcı)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|Özgün kaynak satırları için başvurular içerir.|
 |**/Nobar**|Parçalara ayırma işleminin ilerleme durumu açılır penceresini gizler.|
 |**/Noca**|Özel özniteliklerin çıkışını gizler.|
-|**/Project**|Meta verileri, yerel Windows Çalışma Zamanı görünme şekli yerine, yönetilen koda göründüğü şekilde görüntüler. Bir Windows meta veri ( *. winmd*) dosyası değilse, bu seçeneğin hiçbir etkisi yoktur. `PEfilename` Bkz. [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/Project**|Meta verileri, yerel Windows Çalışma Zamanı görünme şekli yerine, yönetilen koda göründüğü şekilde görüntüler. Bir Windows meta veri ( *. winmd*) dosyası değilse, bu seçeneğin hiçbir etkisi yoktur. `PEfilename` Bkz. [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**yalnızca/pub**|Yalnızca genel türleri ve üyeleri ayrıştırır. **/Visibility: pub**ile eşdeğerdir.|
 |**/quoteallnames**|Tüm adları tek tırnak işaretleri içine alır.|
 |**/raweh**|Özel durum işleme yan tümcelerini ham biçimde gösterir.|
@@ -188,5 +188,5 @@ ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib
 
 - [Araçlar](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (IL Derleyici)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Yönetilen Yürütme İşlemi](../../../docs/standard/managed-execution-process.md)
+- [Yönetilen Yürütme İşlemi](../../standard/managed-execution-process.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

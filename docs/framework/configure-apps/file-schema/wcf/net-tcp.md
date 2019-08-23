@@ -2,18 +2,18 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933045"
 ---
-# <a name="nettcp"></a>\<NET.TCP >
-Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı birden çok işlem aynı TCP bağlantı noktasını paylaşmasına izin veren hizmeti.  
+# <a name="nettcp"></a>\<net. TCP >
+NET için yapılandırma ayarlarını belirtir. Birden çok işlemin aynı TCP bağlantı noktasını paylaşmasına izin veren TCP bağlantı noktası paylaşım hizmeti.  
   
  \<system.serviceModel.activation>  
-\<NET.TCP >  
+\<net. TCP >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -52,29 +52,29 @@ Ağ yapılandırma ayarlarını belirtir. TCP bağlantı noktası paylaşımı b
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`listenBacklog`|Paylaşılan bağlantıdan kabul edilir, ancak henüz Windows Communication Foundation (WCF) hizmetlerine gönderilen değil bekleyen en yüksek bağlantı belirten bir tamsayı. Varsayılan değer 10'dur.|  
-|`maxPendingAccepts`|Hizmetler için olan uç noktaları en fazla bekleyen eşzamanlı kabul iş parçacığı belirten bir tamsayı. Varsayılan değer 2'dir.|  
-|`MaxPendingConnections`|Uygulama tarafından kabul edilmeyi bekliyor dinleyicinin sahip olabileceği bağlantıları sayısı. Bu kota değeri aşıldığında, yeni gelen bağlantılar kesilir yerine kabul edilmeyi bekliyor. Bağlantı özellikleri ileti güvenliği gibi birden fazla bağlantı açmak bir istemci neden olabilir. Hizmet yöneticileri, bu ek bağlantılar için bu kota değeri ayarlarken hesap. Varsayılan değer 10'dur.|  
-|`receiveTimeout`|A <xref:System.TimeSpan> ve çerçeveleme verilerini okumak ve altı çizili bağlantılardan bağlantı dağıtımını gerçekleştirmek için zaman aşımını belirtir. Varsayılan değer "00: 00:10".|  
-|`teredoEnabled`|Hizmet bağlantı noktası WCF hizmetlerinin adına TCP bağlantı noktalarında dinlemek için Microsoft Teredo hizmetini kullanıp kullanmadığını gösteren bir Boole değeri. Varsayılan, `false` değeridir.|  
+|`listenBacklog`|Paylaşılan bağlantıdan kabul edilen ancak henüz Windows Communication Foundation (WCF) hizmetlerine dağıtılan en fazla bekleyen bağlantıları belirten bir tamsayı. Varsayılan değer 10 ' dur.|  
+|`maxPendingAccepts`|Paylaşım hizmeti için dinleme uç noktasındaki en fazla bekleyen eşzamanlı iş parçacığı sayısını belirten bir tamsayı. Varsayılan değer 2 ' dir.|  
+|`MaxPendingConnections`|Dinleyicinin uygulama tarafından kabul edilmesini bekleye, en fazla bağlantı sayısı. Bu kota değeri aşıldığında, kabul edilmesini beklemek yerine yeni gelen bağlantılar bırakılır. İleti güvenliği gibi bağlantı özellikleri istemcinin birden fazla bağlantı açmasına neden olabilir. Bu kota değerini ayarlarken hizmet yöneticileri bu ek bağlantıları dikkate almalıdır. Varsayılan değer 10 ' dur.|  
+|`receiveTimeout`|Çerçeveleme <xref:System.TimeSpan> verilerini okumak ve alt çizgi bağlantılarından bağlantı dağıtma işlemini gerçekleştirmek için zaman aşımını belirten bir. Varsayılan değer "00:00:10" dır.|  
+|`teredoEnabled`|Bağlantı noktası paylaşım hizmetinin, WCF Hizmetleri adına TCP bağlantı noktalarında dinlemek için Microsoft Teredo hizmetini kullanıp kullanmadığını gösteren bir Boolean değer. Varsayılan, `false` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<allowAccounts >](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Bir koleksiyon içeren yapılandırma öğelerinin bir `securityIdentifier` barındıran WCF hizmetleri ve Paylaşım Hizmeti bağlantı erişim izni verilen işlemleri için kullanıcı hesabı belirtmek için özniteliği.|  
+|[\<allowAccounts >](allowaccounts.md)|WCF hizmetlerini barındıran işlemlere yönelik kullanıcı hesaplarını belirtmek `securityIdentifier` için bir özniteliği içeren yapılandırma öğelerinin bir koleksiyonu ve paylaşım hizmetine bağlantı erişimi verilir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Dinleyici işlem SMSvcHost.exe için yapılandırma ayarlarını içerir.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|SMSvcHost. exe dinleyici işleminin yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bağlantı noktası paylaşma ile ilgili daha fazla bilgi için bkz: [Net.TCP bağlantı noktası paylaşma](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Bağlantı noktası hizmetini yapılandırma hakkında bilgi almak için bkz. [Net.TCP bağlantı noktası paylaşım hizmetini yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
+ Bağlantı noktası paylaşımı hakkında daha fazla bilgi için bkz. [net. TCP bağlantı noktası paylaşma](../../../wcf/feature-details/net-tcp-port-sharing.md). Bağlantı noktası paylaşım hizmetini nasıl yapılandıracağınızı anlamak için bkz. [net. TCP bağlantı noktası paylaşım hizmetini yapılandırma](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Net.TCP Bağlantı Noktası Paylaşımı](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Net.TCP Bağlantı Noktası Paylaşımı](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

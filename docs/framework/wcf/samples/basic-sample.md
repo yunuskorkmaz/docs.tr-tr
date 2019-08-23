@@ -2,21 +2,21 @@
 title: Temel Örnek
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d227b3ac64108901b8280ac7887adc30b0fab13e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002644"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915444"
 ---
 # <a name="basic-sample"></a>Temel Örnek
-Bu örnek, bir hizmet bulunabilir hale getirme ve arayın ve kayıtlı bir bulunabilir hizmet çağırmak nasıl gösterir. Bu örnek iki projeden oluşan: hizmet ve istemci.
+Bu örnek, bir hizmetin bulunabilir hale getirme ve keşfedilebilir bir hizmeti nasıl arayılacağını gösterir. Bu örnek iki projeden oluşur: hizmet ve istemci.
 
 > [!NOTE]
->  Bu örnek, kod içinde bulma uygular.  Yapılandırmada bulma uygulayan bir örnek için bkz. [yapılandırma](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+> Bu örnek kodda bulma işlemini uygular.  Yapılandırmada bulmayı uygulayan bir örnek için bkz. [yapılandırma](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
 ## <a name="service"></a>Hizmet  
- Bu bir basit hesap makinesi hizmet uygulamasıdır. Kod içinde bulunabilir bulma ilgili `Main` burada bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmet ana bilgisayarına eklenir ve <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> aşağıdaki kodda gösterildiği gibi eklenir.  
+ Bu, basit bir Hesaplayıcı hizmet uygulamasıdır. Bulma ile ilgili kod, hizmet ana bilgisayarına `Main` eklenen ve <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> aşağıdaki kodda gösterildiği gibi eklenen yerlerde bulunabilir.  
   
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
@@ -34,7 +34,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ```  
   
 ## <a name="client"></a>İstemci  
- İstemcinin kullandığı bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> hizmetini bulamadı. <xref:System.ServiceModel.Discovery.DynamicEndpoint>, Bir standart uç nokta, istemci açıldığında hizmetinin uç noktası giderir. Bu durumda, <xref:System.ServiceModel.Discovery.DynamicEndpoint> hizmet sözleşmesine dayalı hizmet arar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Üzerinden arama yapar bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> varsayılan olarak. Hizmet uç noktası bulduktan sonra istemci bu hizmet için belirtilen bağlama üzerinden bağlanır.  
+ İstemci, hizmetini bulmak <xref:System.ServiceModel.Discovery.DynamicEndpoint> için bir kullanır. <xref:System.ServiceModel.Discovery.DynamicEndpoint>Standart bir uç nokta, istemci açıldığında hizmetin uç noktasını çözer. Bu durumda <xref:System.ServiceModel.Discovery.DynamicEndpoint> , hizmet sözleşmesini temel alan hizmeti arar. Aramayı varsayılan olarak bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> olarak yapar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Bir hizmet uç noktası bulduktan sonra istemci, belirtilen bağlama üzerinden bu hizmete bağlanır.  
   
 ```csharp  
 public static void Main()  
@@ -44,7 +44,7 @@ public static void Main()
 }              
 ```  
   
- İstemci adı verilen bir yöntem tanımlar `InvokeCalculatorService` kullanan <xref:System.ServiceModel.Discovery.DiscoveryClient> Hizmetleri aramak için sınıf. <xref:System.ServiceModel.Discovery.DynamicEndpoint> Devraldığı <xref:System.ServiceModel.Description.ServiceEndpoint>, bu nedenle, geçirilebilir `InvokeCalculatorService` yöntemi. Ardından örnekte <xref:System.ServiceModel.Discovery.DynamicEndpoint> bir örneğini oluşturmak için `CalculatorServiceClient` ve çeşitli işlemler hesaplayıcı hizmeti çağırır.  
+ İstemci, hizmetleri aramak için `InvokeCalculatorService` <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfını kullanan adlı bir yöntemi tanımlar. , <xref:System.ServiceModel.Discovery.DynamicEndpoint> `InvokeCalculatorService` Öğesinden <xref:System.ServiceModel.Description.ServiceEndpoint>devralır, bu nedenle yöntemine geçirilebilirler. Örnek daha sonra `CalculatorServiceClient` örneğini oluşturmak <xref:System.ServiceModel.Discovery.DynamicEndpoint> için öğesini kullanır ve hesap makinesi hizmetinin çeşitli işlemlerini çağırır.  
   
 ```csharp  
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)  
@@ -82,21 +82,21 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1. Bu örnek HTTP uç noktaları kullanır ve bu örneği çalıştırmak için doğru URL ACL eklenmesi gerekir. Daha fazla bilgi için [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Bu örnek HTTP uç noktalarını kullanır ve bu örneği çalıştırmak için uygun URL ACL 'Leri eklenmelidir. Daha fazla bilgi için bkz. [http ve https yapılandırma](https://go.microsoft.com/fwlink/?LinkId=70353). Yükseltilmiş bir ayrıcalıkta aşağıdaki komutu yürütmek uygun ACL 'Leri eklememelidir. Komutu olduğu gibi çalışmazsa, etki alanınızı ve Kullanıcı adınızı aşağıdaki bağımsız değişkenler için yerine koymak isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2. Visual Studio 2012 kullanarak Basic.sln açın ve örnek oluşturma.  
+2. Visual Studio 2012 kullanarak, Basic. sln ' yi açın ve örneği derleyin.  
   
-3. Service.exe uygulamayı çalıştırın.  
+3. Service. exe uygulamasını çalıştırın.  
   
-4. Hizmet başlatıldıktan sonra client.exe çalıştırın.  
+4. Hizmet başladıktan sonra Client. exe ' yi çalıştırın.  
   
-5. İstemci hizmet adresini bilmeden bulamadı gözlemleyin.  
+5. İstemcinin adresini bilmeden hizmeti bulabildiğinin gözlemleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  

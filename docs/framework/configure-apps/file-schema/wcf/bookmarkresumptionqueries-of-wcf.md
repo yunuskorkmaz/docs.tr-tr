@@ -1,25 +1,25 @@
 ---
-title: <bookmarkResumptionQueries> WCF
+title: <bookmarkResumptionQueries>WCF
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: 4b11543e240b482d52c157083d1184db4f81bb04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ec9827e9862866096265da576c91b10573012d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673439"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919736"
 ---
-# <a name="bookmarkresumptionqueries-of-wcf"></a>\<bookmarkResumptionQueries > WCF
+# <a name="bookmarkresumptionqueries-of-wcf"></a>\<WCF 'nin bookmarkResumptionQueries >
   
-İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu için yer imi sürdürme kayıtları abone olmak izleme Katılımcısı için gereklidir.  
+Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.  
   
-Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [izleme profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md).
   
 \<system.serviceModel>  
 \<İzleme >  
-\<profilleri >  
+\<Profiller >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<bookmarkResumptionQueries >  
 \<bookmarkResumptionQuery >  
   
@@ -51,17 +51,17 @@ Yok.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|İş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan sorgu. Sorgu için yer imi sürdürme kayıtları abone olmak izleme Katılımcısı için gereklidir.|  
+|[\<bookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|Bir iş akışı örneği içinde yer işaretinin sürdürme izlemek için kullanılan sorgu. Sorgu, bir izleme katılımcısı için yer işareti sürdürme kayıtlarına abone olmak için gereklidir.|  
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<İş akışı >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
+|[\<iş akışı >](../windows-workflow-foundation/workflow.md)|Belirli bir iş akışı tarafından tanımlanan tüm sorgularında içeren bir yapılandırma öğesi `activityDefinitionId` özelliği.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.BookmarkResumptionQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.BookmarkResumptionQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

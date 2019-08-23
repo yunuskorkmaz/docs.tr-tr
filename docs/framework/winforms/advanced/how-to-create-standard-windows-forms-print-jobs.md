@@ -10,25 +10,25 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 96122302610d143c34404eac105ca9794b1cb15a
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 44673e6b26f088e71813aaac26c4b9a03429597a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053665"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938236"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Nasıl yapılır: Standart Windows Forms Yazdırma İşleri Oluşturma
-Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> bileşeni — daha açık belirtmek gerekirse <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay. İşlemek için kod yazarak <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay ne yazdırma ve yazdırma nasıl belirtebilirsiniz.  
+Windows Forms ' de yazdırma temeli <xref:System.Drawing.Printing.PrintDocument> bileşeni, özellikle <xref:System.Drawing.Printing.PrintDocument.PrintPage> de olaydır. <xref:System.Drawing.Printing.PrintDocument.PrintPage> Olayı işlemek için kod yazarak neyin yazdırılacağını ve nasıl yazdırılacağını belirtebilirsiniz.  
   
 ### <a name="to-create-a-print-job"></a>Bir yazdırma işi oluşturmak için  
   
-1. Ekleme bir <xref:System.Drawing.Printing.PrintDocument> formunuza bileşen.  
+1. Formunuza bir <xref:System.Drawing.Printing.PrintDocument> bileşen ekleyin.  
   
-2. İşlemek için kod yazma <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay.  
+2. <xref:System.Drawing.Printing.PrintDocument.PrintPage> Olayı işlemek için kod yazın.  
   
-     Yazdırma mantığınızı kod gerekecektir. Ayrıca, yazdırılması malzeme belirtin gerekecektir.  
+     Kendi yazdırma mantığınızı kodlarınızın olması gerekir. Ayrıca, yazdırılacak malzemeleri belirtmeniz gerekir.  
   
-     Aşağıdaki kod örneği, örnek grafik kırmızı bir dikdörtgen şeklinde oluşturulan <xref:System.Drawing.Printing.PrintDocument.PrintPage> yazdırılması malzeme olarak görev yapacak bir olay işleyicisi.  
+     Aşağıdaki kod örneğinde, yazdırılacak malzeme olarak davranacak şekilde <xref:System.Drawing.Printing.PrintDocument.PrintPage> olay işleyicisinde kırmızı dikdörtgen şeklindeki bir örnek grafik oluşturulur.  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -55,7 +55,7 @@ Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> b
        }  
     ```  
   
-     (Visual C# ve görsel C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C# ve görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -69,12 +69,12 @@ Windows Forms'ta baskı temelidir <xref:System.Drawing.Printing.PrintDocument> b
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-     İçin kod yazma isteyebilirsiniz <xref:System.Drawing.Printing.PrintDocument.BeginPrint> ve <xref:System.Drawing.Printing.PrintDocument.EndPrint> belki de her bir sayfa olarak azaltılır yazdırmak için sayfaların toplam sayısını temsil eden bir tamsayı gibi etkinlikler.  
+     Ayrıca, her sayfanın yazdırıldığı şekilde azallanan <xref:System.Drawing.Printing.PrintDocument.BeginPrint> toplam <xref:System.Drawing.Printing.PrintDocument.EndPrint> sayfa sayısını temsil eden bir tamsayı de dahil olmak üzere, ve olayları için kod yazmak isteyebilirsiniz.  
   
     > [!NOTE]
-    >  Ekleyebileceğiniz bir <xref:System.Windows.Forms.PrintDialog> kullanıcılarınız için bir temiz ve verimli bir kullanıcı arabirimi (UI) sağlamak için formunuza bileşen. Ayarı <xref:System.Windows.Forms.PrintDialog.Document%2A> özelliği <xref:System.Windows.Forms.PrintDialog> yazdırmak için ilgili özellikleri ayarlamak için belge bileşen etkinleştirir, form üzerinde çalıştığınız. Hakkında daha fazla bilgi için <xref:System.Windows.Forms.PrintDialog> bileşeni Bkz [PrintDialog bileşeni](../controls/printdialog-component-windows-forms.md).  
+    > Kullanıcılarınıza temiz ve verimli <xref:System.Windows.Forms.PrintDialog> bir kullanıcı arabirimi (UI) sağlamak için formunuza bir bileşen ekleyebilirsiniz. <xref:System.Windows.Forms.PrintDialog> Bileşenin özelliğinin ayarlanması, formunuz üzerinde çalıştığınız yazdırma belgesiyle ilgili özellikleri ayarlamanıza olanak sağlar. <xref:System.Windows.Forms.PrintDialog.Document%2A> <xref:System.Windows.Forms.PrintDialog> Bileşen hakkında daha fazla bilgi için bkz. [PrintDialog bileşeni](../controls/printdialog-component-windows-forms.md).  
   
-     Daha fazla Windows Forms hakkında bilgi için ayrıntıları yazdırma işlerini yazdırma işi programlama yoluyla oluşturma da dahil olmak üzere, bkz. <xref:System.Drawing.Printing.PrintPageEventArgs>.  
+     Program aracılığıyla yazdırma işi oluşturma da dahil olmak üzere Windows Forms Yazdırma işlerinin özellikleri hakkında daha fazla bilgi için bkz <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

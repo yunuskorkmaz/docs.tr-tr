@@ -2,18 +2,18 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206a684e1279871eee4aed95a087921123f8efb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758034"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918656"
 ---
 # <a name="transactionflow"></a>\<transactionFlow >
-Özel bağlama için işlem akış desteğini belirler.  
+Özel bağlama için işlem akış desteğini belirtir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<transactionFlow >  
@@ -31,7 +31,7 @@ ms.locfileid: "61758034"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|transactionProtocol|Kullanılacak işlem protokolünü belirler. Geçerli değerler şunlardır:<br /><br /> -OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> OleTransactions varsayılandır.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.TransactionProtocol>.|  
+|transactionProtocol|Kullanılacak işlem protokolünü belirtir. Geçerli değerler şunlardır:<br /><br /> -OleTransactions<br />- WSAtomicTransactionOctober2004<br /><br /> Varsayılan değer OleTransactions 'dir.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.TransactionProtocol>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -40,22 +40,22 @@ ms.locfileid: "61758034"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, etkinleştirme veya devre dışı gelen işlem akışı uç noktanın bağlama ayarları'nda, aynı zamanda gelen işlemler için istenen protokole biçimini belirtmek için sağlar. Bu yapılandırma öğesi kullanma hakkında daha fazla bilgi için bkz. [ServiceModel işlem Yapılandırması](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) ve [işlem akışını etkinleştirme](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
+ Bu öğe, bir uç noktanın bağlama ayarlarında gelen işlem akışını etkinleştirmenizi veya devre dışı bırakmanızı, ayrıca gelen işlemler için istenen protokol biçimini belirtmenizi sağlar. Bu yapılandırma öğesini kullanma hakkında daha fazla bilgi için bkz. [ServiceModel Işlem yapılandırması](../../../wcf/feature-details/servicemodel-transaction-configuration.md) ve [işlem akışını etkinleştirme](../../../wcf/feature-details/enabling-transaction-flow.md).  
   
 > [!CAUTION]
->  Kullanırken `OleTransactions` akış işlemleri için uç nokta endpoint protokol, hedef uç nokta yeniden dışında herhangi bir protokol kullanarak akış çalışırsa işlem zaman aşımı kaybolabilir `OleTransactions`. Bu, OleTransactions atlama sonra zaman aşımına beklenenden daha sonra tüm alt düzey düğümleri neden olabilir.  
+>  Uç noktadan uç `OleTransactions` noktaya işlem akışı yapmak için protokolü kullanırken, hedef uç noktası dışında `OleTransactions`herhangi bir protokolü kullanarak yeniden akışı denerse, işlem zaman aşımı kaybolabilir. Bu, OleTransactions atından sonra beklenden sonra zaman aşımına uğradıktan sonra tüm alt düzey düğümlerin oluşmasına neden olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [ServiceModel İşlem Yapılandırması](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
-- [İşlem Akışını Etkinleştirme](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [ServiceModel İşlem Yapılandırması](../../../wcf/feature-details/servicemodel-transaction-configuration.md)
+- [İşlem Akışını Etkinleştirme](../../../wcf/feature-details/enabling-transaction-flow.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

@@ -9,29 +9,29 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 4e5e6b77cdb13c17557f176a37fbb9e7d42ab667
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15c59f3ee7cbefafef7a304cfd1477685fff68f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047795"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968456"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Nasıl yapılır: Bir Sınıf veya Yapı için Temel Bir Veri Sözleşmesi Oluşturma
-Bu konu, temel bir sınıf veya yapıda kullanarak bir veri sözleşmesi oluşturma adımlarını gösterir. Veri sözleşmeleri ve bunların nasıl kullanıldığı hakkında daha fazla bilgi için bkz. [kullanarak veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
+Bu konu başlığı altında, bir sınıf veya yapı kullanarak bir veri sözleşmesi oluşturmaya yönelik temel adımlar gösterilmektedir. Veri sözleşmeleri ve bunların nasıl kullanıldığı hakkında daha fazla bilgi için bkz. [Veri Sözleşmelerini Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
   
- Temel Windows Communication Foundation (WCF) hizmet ve istemci oluşturma adımlarında size kılavuzluk eder bir öğretici için bkz [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Bir temel hizmet ve istemci oluşan bir çalışan örnek uygulama için bkz. [temel veri anlaşması](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
+ Temel Windows Communication Foundation (WCF) hizmet ve istemci oluşturma adımlarında izlenecek bir öğretici için bkz. [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md). Temel bir hizmet ve istemciden oluşan çalışan bir örnek uygulama için bkz. [temel veri sözleşmesi](../../../../docs/framework/wcf/samples/basic-data-contract.md).  
   
-### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>Bir sınıf veya yapı için temel bir veri sözleşmesi oluşturma  
+### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>Bir sınıf veya yapı için temel veri sözleşmesi oluşturmak için  
   
-1. Uygulayarak türü veri anlaşması olduğunu bildirmek <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik sınıfı. Öznitelikler olmadan dahil olmak üzere tüm ortak türlerin seri hale getirilebilir olduğunu unutmayın. <xref:System.Runtime.Serialization.DataContractSerializer> , Bir veri anlaşması çıkarsar <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği eksik. Daha fazla bilgi için [Serializable türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+1. Sınıfına <xref:System.Runtime.Serialization.DataContractAttribute> özniteliğini uygulayarak türün bir veri sözleşmesine sahip olduğunu bildirin. Öznitelikleri olmayanlar dahil olmak üzere tüm genel türlerin serileştirilebilir olduğunu unutmayın. Özniteliğiyoksa<xref:System.Runtime.Serialization.DataContractAttribute> bir <xref:System.Runtime.Serialization.DataContractSerializer> veri sözleşmesini anlar. Daha fazla bilgi için bkz. [serileştirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
-2. Uygulama tarafından seri hale üyeleri (özelliklere, alanlara veya olayları) tanımlamak <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik her üyesine. Bu üyeler, veri üyeleri olarak adlandırılır. Varsayılan olarak, tüm ortak türlerin seri hale getirilebilir. Daha fazla bilgi için [Serializable türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+2. Her üyeye <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulanarak serileştirilmiş olan üyeleri (özellikler, alanlar veya olaylar) tanımlayın. Bu üyelere veri üyeleri denir. Varsayılan olarak, tüm genel türler serileştirilebilir değildir. Daha fazla bilgi için bkz. [serileştirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
     > [!NOTE]
-    >  Uygulayabileceğiniz <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği için özel alanlar, verilerin diğerlerine gösterilmesine neden olur. Üye hassas veriler içermediğinden emin olun.  
+    > <xref:System.Runtime.Serialization.DataMemberAttribute> Özniteliği özel alanlara uygulayabilir ve verilerin başkalarına gösterilmesini sağlayabilirsiniz. Üyenin gizli veriler içermediğinden emin olun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir veri anlaşması için oluşturma işlemi gösterilmektedir `Person` uygulayarak türü <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> sınıfını ve üyelerini için öznitelikler.  
+ Aşağıdaki örnek, `Person` <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliklerini sınıfına ve üyelerine uygulayarak tür için bir veri sözleşmesinin nasıl oluşturulacağını gösterir.  
   
  [!code-csharp[DataContractAttribute#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#2)]
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  

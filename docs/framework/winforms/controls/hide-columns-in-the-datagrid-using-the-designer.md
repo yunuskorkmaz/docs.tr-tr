@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: d502a89913e108254848151e9058ac6ae83a9638
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 35aa1cdeef919d4267cb27da79f183c4c52aefa2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916388"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Gizleme
 Bazen Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde kullanılabilir olan sütunlardan yalnızca bazılarını göstermek isteyeceksiniz. Örneğin, yönetim kimlik bilgilerine sahip kullanıcılara bir çalışan maaş sütununu diğer kullanıcılardan gizleyerek göstermek isteyebilirsiniz. Alternatif olarak, denetimi çok sayıda sütun içeren bir veri kaynağına bağlamak isteyebilirsiniz, yalnızca bir kısmı görüntülenir. Bu durumda, genellikle bu sütunları gizlemek yerine, görüntüleme konusunda İlgilendiğiniz sütunları kaldırırsınız. Daha fazla bilgi için [nasıl yapılır: Tasarımcıyı](add-and-remove-columns-in-the-datagrid-using-the-designer.md)kullanarak Windows Forms DataGridView denetiminde sütun ekleyin ve kaldırın.
@@ -28,7 +28,7 @@ Bazen Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde kullan�
 3. **Sütun özellikleri** kılavuzunda, <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> özelliğini olarak `false`ayarlayın.
 
     > [!NOTE]
-    >  **Sütun Ekle** Iletişim kutusundaki **görünür** onay kutusunu temizleyerek bir sütunu eklerken de gizleyebilirsiniz.
+    > **Sütun Ekle** Iletişim kutusundaki **görünür** onay kutusunu temizleyerek bir sütunu eklerken de gizleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,69 +6,69 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: dadce167de31ad033e5e062c57f1d735af75648d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 22bb78040b023a59fd46f0a2be45659d6d7220b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914520"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>UI Otomasyonu Kaydırma Denetim Düzenini Uygulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu, yönergeleri ve uygulama kuralları tanıtır <xref:System.Windows.Automation.Provider.IScrollProvider>, olayları ve özellikleri hakkında bilgi dahil olmak üzere. Ek başvurular bağlantılar konunun sonunda listelenmiştir.  
+ Bu konu, olaylar ve özellikler hakkında bilgiler <xref:System.Windows.Automation.Provider.IScrollProvider>de dahil olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- <xref:System.Windows.Automation.ScrollPattern> Denetim düzeni, alt nesne koleksiyonu için kaydırılabilir bir kapsayıcı görevi gören bir denetimini desteklemek için kullanılır. Denetimin kaydırma işlevleri desteklemek için yaygın olarak yapmasına rağmen kaydırma çubukları kullanmak için gerekli değildir.  
+ <xref:System.Windows.Automation.ScrollPattern> Denetim stili, alt nesnelerin bir koleksiyonu için kaydırılabilir kapsayıcı olarak davranan bir denetimi desteklemek için kullanılır. Denetim, kayan işlevselliği desteklemek için, yaygın olarak olsa da, kaydırma çubuklarını kullanmak için gerekli değildir.  
   
- ![Kaydırma çubukları olmadan kaydırma denetim. ](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
-Kaydırma çubukları kullanmayan kayan denetimi örneği  
+ Kaydırma ![çubuğu olmadan kaydırma denetimi.](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+Kaydırma çubuğu kullanmayan bir kaydırma denetimi örneği  
   
- Bu denetimi uygulamak denetimleri örnekleri için bkz: [denetim düzeni eşlemesi için UI Otomasyonu istemcileri](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Bu denetimi uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama yönergeleri ve kuralları  
- Kaydırma denetim düzeni uygularken aşağıdaki yönergeler ve kuralları dikkat edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Kaydırma denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
   
-- Bu denetimin alt uygulamalıdır <xref:System.Windows.Automation.Provider.IScrollItemProvider>.  
+- Bu denetimin alt öğelerinin uygulanması <xref:System.Windows.Automation.Provider.IScrollItemProvider>gerekir.  
   
-- Bir kapsayıcı denetimin kaydırma çubukları desteklemeyen <xref:System.Windows.Automation.ScrollPattern> denetim düzeni. Desteklemeleri gereken <xref:System.Windows.Automation.RangeValuePattern> deseni denetimi.  
+- Bir kapsayıcı denetiminin kaydırma çubukları <xref:System.Windows.Automation.ScrollPattern> denetim düzenlerini desteklemez. Bunun yerine <xref:System.Windows.Automation.RangeValuePattern> denetim modelini desteklemesi gerekir.  
   
-- Kaydırma yüzde olarak ölçülür, tüm değerleri veya tutarlar Mezuniyet kaydırmak için 0 ile 100 arası bir aralığa normalleştirilmiş ilgili.  
+- Kaydırma yüzde cinsinden ölçülerek, Scroll mezuniyet ile ilgili tüm değerler veya tutarlar 0 ile 100 arasında normalleştirilmelidir.  
   
-- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> bağımsız <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> ' den bağımsızdır <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
-- Varsa <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty>  =  `false` ardından <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> % 100'e ayarlanması gerekir ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> ayarlanmalıdır <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Benzer şekilde, varsa <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  `false` ardından <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> yüzde 100 olarak ayarlayın ve <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> ayarlanmalıdır <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Bu özellik değerleri içinde kullanmak UI Otomasyonu istemci böylece <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> önleme sırasında yöntemi bir [yarış durumu](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) yön istemci ilginizi değilse, kaydırma etkin hale gelir.  
+- <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> Dahasonra<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> % 100 olarak ayarlanmalıdır ve<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> olarak ayarlanmalıdır<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>.  =  `false` Benzer şekilde, <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>  =  yüzde100`false` olarak ayarlanmalıdır ve<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> olarak<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>ayarlanmalıdır. <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> Bu, bir UI Otomasyonu istemcisinin bu özellik değerlerini <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> yöntem içinde kullanmasına izin verir, çünkü istemcinin kaydırma ile ilgilenmediği bir yön etkinleştirildiğinde bir [yarış durumu](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) önlemez.  
   
-- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> yerel ayara özgü olur. HorizontalScrollPercent ayarlama = 100.0 ayarlamanız gerekir denetimin kaydırma konumunu en sağdaki konumuna soldan sağa okuma İngilizce gibi diller için eşdeğeri. Alternatif olarak, sağ oku Arapça gibi diller için sola HorizontalScrollPercent ayarlama = 100.0 kaydırma konumu en soldaki konuma ayarlamanız gerekir.  
+- <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>yerel ayara özgüdür. HorizontalScrollPercent = 100,0 ayarı, denetimin kaydırma konumunu, Ingilizce gibi, soldan sağa doğru okunan diller için en sağdaki konumunun eşdeğerine ayarlamanız gerekir. Alternatif olarak, sağdan sola okunan Arapça gibi diller için, HorizontalScrollPercent = 100,0 ayarı, kaydırma konumunu en soldaki konuma ayarlamanız gerekir.  
   
 <a name="Required_Members_for_IScrollProvider"></a>   
-## <a name="required-members-for-iscrollprovider"></a>Gerekli üyeleri IScrollProvider için  
- Aşağıdaki özellikleri ve yöntemleri uygulamak için gerekli olan <xref:System.Windows.Automation.Provider.IScrollProvider>.  
+## <a name="required-members-for-iscrollprovider"></a>IScrollProvider için gerekli Üyeler  
+ Uygulamak <xref:System.Windows.Automation.Provider.IScrollProvider>için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
 |Gerekli üye|Üye türü|Notlar|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Özellik|Yok.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Özellik|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Özellik|Yok.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Özellik|Yok.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Yöntem|Yok.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Yöntem|Yok.|  
   
- Bu denetim düzeni, ilişkili olay vardır.  
+ Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Özel Durumlar  
- Sağlayıcıları, aşağıdaki özel durumlar gerekir.  
+ Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel Durum Türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> bir denetim destekliyorsa, bu özel durum oluşturur <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> yatay veya dikey kaydırma, değerleri yalnızca ancak <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> değeri geçirilir.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> double'a dönüştürülemeyecek bir değer olarak geçirildiğinde, bu özel durum oluşturur.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> bir değer 100'den büyük veya 0'dan geçirildiğinde, bu özel durum oluşturur (eşdeğerdir -1 dışındaki <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
-|<xref:System.InvalidOperationException>|Her ikisi de <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> ve <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> desteklenmeyen bir yönde kaydırmak için denemesi yapıldığında bu özel durum.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>bir denetim yalnızca yatay veya dikey kaydırma <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> için değerleri destekliyorsa bu özel durumu oluşturur, ancak bir <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> değer geçirilir.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>Double değerine dönüştürülemeyen bir değer geçirildiğinde bu özel durumu oluşturur.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>100 'den büyük veya 0 ' dan küçük bir değer geçirildiğinde bu özel durumu oluşturur (ile eşdeğer <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>olan-1 hariç).|  
+|<xref:System.InvalidOperationException>|Her <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> ikisi <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> de, desteklenmeyen bir yönde kaydırmak için bir deneme yapıldığında bu özel durumu oluşturur.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

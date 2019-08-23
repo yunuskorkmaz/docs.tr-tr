@@ -2,29 +2,29 @@
 title: Keşif Duyuruları ve Duyuru İstemcisi
 ms.date: 03/30/2017
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74362343dc1fd5df6d1b91537f7fed5bc08f8fe0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968823"
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>Keşif Duyuruları ve Duyuru İstemcisi
-WCF bulma özelliği, kendi duyurmaktan mutluluk bileşenleri sağlar. Bunu yapmak için yapılandırılmışsa, bir hizmeti Merhaba ve Bye duyuruları gönderir. İstemciler veya diğer bileşenleri, böyle bir duyuru iletiler için dinleme yapan ve bunlar üzerinde harekete. Bu, istemcilerin hizmetleri kullanan alternatif bir yöntem sağlar. Duyuru işlevselliği birkaç kullanımı vardır, örneğin, hizmetleri girin ve bir ağ sık bırakın, duyuruları arama hizmetleri için daha iyi bir alternatif olabilir. Bu yaklaşım ağ trafiği azaltılır ve duyuruları alındıktan hemen sonra istemci varlığı veya hizmetin ayrılma hakkında bilgi edinebilirsiniz.  
+WCF bulma özelliği, bileşenlerin kullanılabilirliğini duyurmalarını sağlar. Bunu yapmak için yapılandırıldıysa, bir hizmet Hello ve bye duyuruları gönderir. İstemciler veya diğer bileşenler bu tür duyuru iletilerini dinleyebilir ve üzerinde işlem yapabilir. Bu, istemcilerin hizmetlerden haberdar olması için alternatif bir yöntem sağlar. Duyuru işlevselliğinin birçok kullanımı vardır. Örneğin, hizmetler bir ağı girip bir kez daha bırakıyorsanız, Duyurular hizmetler aranırken daha iyi bir alternatif olabilir. Bu yaklaşımda, ağ trafiği azalır ve istemci, Duyurular alındıktan hemen sonra, hizmetin varlığı veya ayrılış hakkında bilgi alabilir.  
   
-## <a name="discovery-announcements"></a>Keşif duyuruları  
- Duyuruları için yapılandırılmış bir hizmet bir ağa katılır ve bulunabilir hale gelir, dinleme istemcilere, kullanılabilirlik Duyurusu Hello ileti gönderir. İletisini içeren bulma ilgili sözleşmesi, uç nokta adresi gibi hizmet hakkındaki bilgileri ve kapsamları. Duyurunun ileti ile burada gönderilir belirtebilirsiniz <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıfı. Duyuru uç nokta ise bir <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> Bye ve Hello uygun şekilde çok noktaya yayın veya tek noktaya yayın Duyurusu uç nokta ise belirtilen uç noktaya doğrudan iletiler gönderilir.  
+## <a name="discovery-announcements"></a>Keşif Duyuruları  
+ Duyurular için yapılandırılmış bir hizmet bir ağa katıldığında ve bulunabilir hale geldiğinde, istemcileri dinlemek için kullanılabilirliğini duyuran bir Hello iletisi gönderir. İleti, hizmet hakkında, sözleşme, uç nokta adresi ve ilişkili kapsamlar gibi bulma ile ilgili bilgileri içerir. Duyuru iletisinin <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> sınıf ile nereye gönderileceğini belirtebilirsiniz. Duyuru uç noktası bir <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ise, Merhaba ve bye çok noktaya yayın ise veya duyuru uç noktası tek noktaya ise, iletiler doğrudan belirtilen uç noktaya gönderilir.  
   
 > [!NOTE]
->  Hizmet Konağı açar ve kapandığında duyuru gönderilir. Bu çağrılar düzgün bitmeyebilir, duyuru yapılacak gönderilmemesi. Örneğin, Bye Duyurunun ileti gönderilmedi sonra hizmet hataları durumunda.  
+> Duyurular, hizmet ana bilgisayarı açılıp kapandığında gönderilir. Bu çağrılar düzgün tamamlanmazsa, duyuru iletisi gönderilemeyebilir. Örneğin, hizmet hataları varsa, Bye duyuru iletisi gönderilmez.  
   
 > [!TIP]
->  Seçtiğiniz her duyuruları göndermenizi sağlayan, duyuru işlevselliği özelleştirebilirsiniz.  
+>  Duyuru işlevini özelleştirerek, her seçerken Duyurular göndermenize olanak sağlayabilirsiniz.  
   
- [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] tanımlar <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> hizmetler ve istemcileri kolayca Merhaba ve Bye duyuruları göndermek için izin vermek için standart uç noktalar olarak.  
+ [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]hizmetlerin ve istemcilerin <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> kolayca Hello ve bye duyuruları göndermesini sağlamak için vestandartuçnoktalarıtanımlar.<xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
-### <a name="announcements-on-the-service"></a>Hizmet duyuruları  
- Duyurular göndermek üzere hizmetini yapılandırmak için Ekle bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> bir duyuru uç noktası ile. Aşağıdaki örnekte, program aracılığıyla hizmet ana bilgisayarı için bu davranışı eklemek gösterilmektedir. Bu örnekte `UdpAnnouncementEndpoint`, duyuruları bu standart bitiş noktası tarafından belirtilen bir konuma çok noktaya yayın anlamına gelir.  
+### <a name="announcements-on-the-service"></a>Hizmette Duyurular  
+ Hizmeti Duyurular gönderecek şekilde yapılandırmak için bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> duyuru uç noktası ekleyin. Aşağıdaki örnek, bu davranışın hizmet ana bilgisayarına programlı bir şekilde nasıl ekleneceğini gösterir. Bu örnek, bildirilerinin `UdpAnnouncementEndpoint`çok noktaya yayın olduğunu belirten, bu standart uç nokta tarafından belirtilen bir konuma kadar olan öğesini kullanır.  
   
 ```  
 ServiceDiscoveryBehavior serviceDiscoveryBehavior = new ServiceDiscoveryBehavior();
@@ -32,7 +32,7 @@ serviceDiscoveryBehavior.AnnouncementEndpoints.Add(new UdpAnnouncementEndpoint()
 serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 ```  
   
- Aşağıdaki örnekte gösterildiği gibi davranış yanı, yapılandırma dosyasında yapılandırılabilir.  
+ Aşağıdaki örnekte gösterildiği gibi, davranış yapılandırma dosyasında da yapılandırılabilir.  
   
 ```xml  
 <services>
@@ -55,10 +55,10 @@ serviceHost.Description.Behaviors.Add(serviceDiscoveryBehavior);
 </behaviors>  
 ```  
   
- Önceki örneklerde otomatik olarak Duyurunun ileti göndermek için bir hizmet yapılandırın. Ayrıca Duyurusu iletileri açıkça kullanarak gönderebilirsiniz <xref:System.ServiceModel.Discovery.AnnouncementClient> sınıfı.  
+ Yukarıdaki örneklerde, bir hizmet otomatik olarak duyuru iletileri gönderecek şekilde yapılandırılır. Ayrıca, <xref:System.ServiceModel.Discovery.AnnouncementClient> sınıfını kullanarak bildiri iletilerini açıkça de gönderebilirsiniz.  
   
-### <a name="announcements-on-the-client"></a>İstemci üzerindeki duyuruları  
- Bir istemci uygulaması Merhaba ve Bye iletileri yanıtlayıp abone için bir Duyurunun hizmeti ana bilgisayar <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> ve <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> olayları. Aşağıdaki örnek bunun nasıl yapılacağı gösterilmektedir.  
+### <a name="announcements-on-the-client"></a>Istemcideki Duyurular  
+ İstemci uygulaması, Merhaba ve bye iletilerine yanıt vermek ve <xref:System.ServiceModel.Discovery.AnnouncementService.OnlineAnnouncementReceived> ve <xref:System.ServiceModel.Discovery.AnnouncementService.OfflineAnnouncementReceived> olaylarına abone olmak için bir duyuru hizmeti barındırmalıdır. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
   
 ```  
 // Create an AnnouncementService instance
@@ -80,7 +80,7 @@ using (ServiceHost announcementServiceHost = new ServiceHost(announcementService
 }  
 ```  
   
- Merhaba veya Bye bir ileti alındığında, uç nokta bulma meta veriler aracılığıyla erişebileceğiniz <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> aşağıdaki örnekte gösterildiği gibi.  
+ Bir Hello veya bye iletisi alındığında, aşağıdaki örnekte gösterildiği <xref:System.ServiceModel.Discovery.AnnouncementEventArgs> gibi, uç nokta bulgu meta verilerine erişebilirsiniz.  
   
 ```  
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)

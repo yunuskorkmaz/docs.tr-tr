@@ -3,20 +3,20 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 6e8267f170dbb26381564be7b66df5f617156885
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2851820460a34d62175929b48ad57914df557059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790448"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945177"
 ---
 # <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement >
-İsteğe bağlı yapılandırma için sağlar <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> sınıfı veya türetilmiş sınıflar.  
+<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> Sınıf veya türetilmiş sınıflar için isteğe bağlı yapılandırma sağlar.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
-\<Ekle >  
+\<> Ekle  
 \<x509SecurityTokenHandlerRequirement >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -46,11 +46,11 @@ ms.locfileid: "61790448"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Certificatevalidationmode'u|Bir <xref:System.ServiceModel.Security.X509CertificateValidationMode> X.509 sertifikası için kullanılacak doğrulama modu belirten bir değer. "PeerOrChainTrust" varsayılan değerdir.|  
-|mapToWindows|Belirteci işleyicisi doğrulama belirteci için bir Windows hesabı gelen UPN Talebi kullanarak eşlemelisiniz olup olmadığını belirtir. Varsayılan değer "false" dir.|  
-|revocationMode|Bir <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> X.509 sertifikası için İptal modu belirten bir değer. Varsayılan değer "Çevrimiçi" olur.|  
-|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 Sertifika deposunun belirten bir değer. "LocalMachine" varsayılan değerdir.|  
-|certificateValidator|Öğesinden türetilen özel bir tür <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Varsa `certificateValidationMode` özniteliktir "Özel", bu türden veren sertifika doğrulaması için kullanılır.|  
+|certificateValidationMode|X <xref:System.ServiceModel.Security.X509CertificateValidationMode> . 509.440 sertifikası için kullanılacak doğrulama modunu belirten bir değer. Varsayılan değer "PeerOrChainTrust" dır.|  
+|mapToWindows|Belirteç işleyicisinin, gelen UPN talebini kullanarak doğrulama belirtecini bir Windows hesabına eşlemenizi isteyip istemediğinizi belirtir. Varsayılan değer "false" dır.|  
+|Revocationmodu|X <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> . 509.440 sertifikası için kullanılacak iptal modunu belirten bir değer. Varsayılan değer "çevrimiçi" dır.|  
+|trustedStoreLocation|X <xref:System.Security.Cryptography.X509Certificates.StoreLocation> . 509.440 sertifika deposunu belirten bir değer. Varsayılan değer "LocalMachine" dır.|  
+|certificateValidator|Öğesinden <xref:System.IdentityModel.Selectors.X509CertificateValidator>türetilen özel bir tür. `certificateValidationMode` Öznitelik "Custom" ise, bu türün bir örneği veren sertifika doğrulaması için kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -59,7 +59,7 @@ ms.locfileid: "61790448"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekler.|  
+|[\<> Ekle](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
   
 ## <a name="example"></a>Örnek  
   

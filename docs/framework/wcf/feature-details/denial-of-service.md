@@ -4,80 +4,80 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: f67a8b2977e84e24654b4b65c0cdd03bcbcb1b20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486933"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968830"
 ---
 # <a name="denial-of-service"></a>Hizmet Reddi
-Hizmet reddi bir sistemde iletilerin işleneceğini veya oldukça yavaş işlenir şekilde doludur oluşur.  
+Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hizmet reddi oluşur.  
   
 ## <a name="excess-memory-consumption"></a>Aşırı bellek tüketimi  
- Çok sayıda benzersiz yerel ad, ad alanları veya ön ekleri bir XML belgesi okunurken bir sorun oluşabilir. Türetilen bir sınıf kullanıyorsa <xref:System.Xml.XmlReader>, ve çağırın ya da <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> veya <xref:System.Xml.XmlReader.NamespaceURI%2A> özelliği her öğe için döndürülen dizeyi eklenen bir <xref:System.Xml.NameTable>. Tutulan koleksiyonun <xref:System.Xml.NameTable> hiçbir zaman boyutu oluşturma bir sanal azaltır "bellek sızıntısı" dize işler.  
+ Çok sayıda benzersiz yerel ad, ad alanı veya ön ek içeren bir XML belgesi okunurken bir sorun oluşabilir. Öğesinden <xref:System.Xml.XmlReader>türetilen bir sınıf kullanıyorsanız ve her öğe için ya da <xref:System.Xml.XmlReader.NamespaceURI%2A> özelliğini çağırdığınızda <xref:System.Xml.XmlReader.LocalName%2A> <xref:System.Xml.XmlReader.Prefix%2A> döndürülen dize bir <xref:System.Xml.NameTable>öğesine eklenir. Tarafından tutulan koleksiyon, dize <xref:System.Xml.NameTable> tanıtıcılarının sanal bir "bellek sızıntısı" oluşturma, hiçbir şekilde boyut azaltmaktadır.  
   
- Risk azaltma işlemleri şunlardır:  
+ Azaltmaları şunları içerir:  
   
-- Öğesinden türetilen <xref:System.Xml.NameTable> sınıfı ve en fazla boyut kotasını zorlayın. (Kullanımını önleyemez bir <xref:System.Xml.NameTable> veya geçiş <xref:System.Xml.NameTable> tam olduğunda.)  
+- <xref:System.Xml.NameTable> Sınıfından türeten en büyük boyut kotasını zorunlu tutun. (Bir <xref:System.Xml.NameTable> veya ' ın dolu olduğu zaman, <xref:System.Xml.NameTable> ' ın kullanımını engellemez.)  
   
-- Belirtilen özellikleri kullanmaktan kaçının ve bunun yerine kullanın <xref:System.Xml.XmlReader.MoveToAttribute%2A> yöntemiyle <xref:System.Xml.XmlReader.IsStartElement%2A> yöntemi mümkün olduğunda; bu yöntemleri değil dönün dizeleri ve bu nedenle overfilling sorununu önlemek <xref:System.Xml.NameTable> koleksiyonu.  
+- Belirtilen özellikleri kullanmaktan kaçının ve bunun yerine <xref:System.Xml.XmlReader.MoveToAttribute%2A> yöntemi <xref:System.Xml.XmlReader.IsStartElement%2A> mümkün olduğunda kullanın; Bu yöntemler dizeleri döndürmez ve bu nedenle <xref:System.Xml.NameTable> koleksiyonun üzerine gelme sorununu önleyin.  
   
-## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Kötü amaçlı bir istemci aşırı lisans istekleri hizmetine gönderir.  
- Kötü amaçlı bir istemci aşırı lisans istekleri hizmetiyle bombards, aşırı bellek kullanılacak sunucuyu neden olabilir.  
+## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Kötü amaçlı Istemci hizmete aşırı lisans Isteği gönderir  
+ Kötü amaçlı bir istemci aşırı lisans isteği içeren bir hizmet içeriyorsa, sunucunun aşırı bellek kullanmasına neden olabilir.  
   
- Azaltma: Aşağıdaki özellikleri kullanın <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> sınıfı:  
+ Mayı <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> Sınıfının aşağıdaki özelliklerini kullanın:  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: zaman sınırlı maksimum sayısını kontrol `SecurityContextToken`sonra sunucunun önbelleğe alan s `SPNego` veya `SSL` anlaşması.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: sunucunun, `SecurityContextToken` `SPNego` veya `SSL` anlaşmasına göre önbelleğe aldığı en fazla zaman sınırlı sayısını denetler.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: ömrünü denetimleri `SecurityContextTokens` , aşağıdaki sunucu sorunlarını `SPNego` veya `SSL` anlaşması. Sunucu önbelleklerini `SecurityContextToken`bu süre boyunca s.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: sunucunun, takip `SecurityContextTokens` `SPNego` eden veya `SSL` anlaşmasına verdiği kullanım ömrünü denetler. Sunucu, `SecurityContextToken`s 'yi bu süre için önbelleğe alır.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: sunucuda oluşturulan ancak hiçbir uygulama iletisi işlenen en fazla güvenli konuşma sayısını denetler. Bu kota, istemcilerin hizmette güvenli konuşmalar kurmasını engeller ve böylece hizmetin istemci başına durum korumasını sağlar, ancak hiçbir zaman onları kullanmıyor.  
   
-- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: hizmet tutan bir güvenli konuşma Canlı konuşma için istemcideki bir uygulama iletisi almadan en uzun süreyi denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylece istemci başına durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: hizmetin istemciden konuşma için bir uygulama iletisi almadan güvenli bir konuşmayı canlı olarak sakladığı en uzun süreyi denetler. Bu kota, istemcilerin hizmette güvenli konuşmalar kurmasını engeller ve böylece hizmetin istemci başına durum korumasını sağlar, ancak hiçbir zaman onları kullanmıyor.  
   
-## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding veya çift özel bağlamalar istemci kimlik doğrulaması gerektir  
- Varsayılan olarak, <xref:System.ServiceModel.WSDualHttpBinding> sahip güvenlik etkin. Mümkündür, ancak olması durumunda istemci kimlik doğrulaması tarafından devre dışı ayarı <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> özelliğini <xref:System.ServiceModel.MessageCredentialType.None>, kötü niyetli bir kullanıcı bir hizmet reddi saldırısı üçüncü bir hizmet üzerinde neden olabilir. Kötü amaçlı bir istemci bir akışı üçüncü hizmet vermek için ileti göndermek için yönlendirebilirsiniz çünkü bu durum oluşabilir.  
+## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding veya Ikili özel bağlamalar Istemci kimlik doğrulaması gerektirir  
+ Varsayılan <xref:System.ServiceModel.WSDualHttpBinding> olarak, güvenlik etkindir. Ancak, istemci kimlik doğrulaması <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> özelliği olarak <xref:System.ServiceModel.MessageCredentialType.None>ayarlanarak devre dışı bırakılmışsa, kötü niyetli bir Kullanıcı üçüncü bir hizmette hizmet reddi saldırısına neden olabilir. Kötü amaçlı bir istemci hizmeti bir üçüncü hizmete ileti akışı göndermek üzere yönlendirebilir, bu durum oluşabilir.  
   
- Bunu azaltmak için özellik ayarlanmamışsa `None`. Özel bağlamayı oluşturmak için bir ikili ileti deseni sahip olduğunda bu olasılığını unutmayın.  
+ Bunu azaltmak için özelliğini olarak `None`ayarlamayın. Ayrıca, Çift ileti düzenine sahip özel bir bağlama oluştururken bu olasılığa de dikkat edin.  
   
-## <a name="auditing-event-log-can-be-filled"></a>Olay günlüğü denetim doldurulur  
- Kötü niyetli bir kullanıcı denetiminin etkin olduğundan bilirse, bu saldırgan denetim girişleri yazılmasına neden geçersiz iletileri gönderebilir. Denetim günlüğü bu şekilde doldurulur denetim sistemi başarısız olur.  
+## <a name="auditing-event-log-can-be-filled"></a>Denetim olayı günlüğü doldurulabilir  
+ Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini anladıysa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur.  
   
- Bunu azaltmak için ayarlanmış <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi'ni özelliklerini kullanın. Olay günlükleri görüntüleme ve yönetme için Olay Görüntüleyicisi'ni kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi'ni](https://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için [denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+ Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini olarak `true` ayarlayın ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Olay günlüklerini görüntülemek ve yönetmek için Olay Görüntüleyicisi kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi](https://go.microsoft.com/fwlink/?LinkId=186123). Daha fazla bilgi için bkz. [Denetim](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Geçersiz IAuthorizationPolicy uygulamaları hizmet yanıt veremez duruma gelmesine neden olabilir  
- Çağırma <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> hatalı bir uygulaması metodunda <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimi hizmet yanıt veremez duruma gelmesine neden olabilir.  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Geçersiz IAuthorizationPolicy uygulamaları hizmetin yanıt vermemesine neden olabilir  
+ Yöntemi, <xref:System.IdentityModel.Policy.IAuthorizationPolicy> arabirimin hatalı bir uygulamasında çağırmak hizmetin yanıt vermemesine neden olabilir. <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>  
   
- Azaltma: Yalnızca güvenilen kod kullanın. Güvenilen bir sağlayıcısından gelen veya diğer bir deyişle, yazılan ve test edilen kodu kullanın. Güvenilmeyen uzantılar, izin verme <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuzla son olmadan takılı için göz önünde bulundurarak. Bu, bir hizmet uygulaması içinde kullanılan tüm uzantılar için geçerlidir. WCF genişletilebilirlik noktaları kullanarak uygulama kodu ve takılı olduğundan yabancı kodu arasında hiçbir ayrım yapmaz.  
+ Mayı Yalnızca güvenilir kodu kullan. Diğer bir deyişle, yalnızca yazdığınız ve test ettiğiniz veya güvenilir bir sağlayıcıdan gelen kodu kullanın. Güvenilmeyen uzantıların <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kodunuza hiçbir süre olmaksızın takılmasına izin vermeyin. Bu, hizmet uygulamasında kullanılan tüm uzantılar için geçerlidir. WCF, uygulama kodu ve genişletilebilirlik noktaları kullanılarak takılan yabancı kod arasında ayrım yapmaz.  
   
-## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos en büyük simge boyutu yeniden boyutlandırma gerekebilir  
- Bir istemci çok sayıda gruplarına ait olup olmadığını (yaklaşık 900 gerçek sayı gruplara bağlı olarak farklılık gösterir ancak), ileti üst bilginin blok 64 KB'ı aştığında bir sorun ortaya çıkabilir. Bu durumda, Microsoft Support makalesini içinde anlatıldığı gibi Kerberos belirteci boyut sınırını artırabilirsiniz "[Internet Explorer Kerberos kimlik doğrulaması, IIS bağlama bir yetersiz arabellek nedeniyle çalışmıyor](https://go.microsoft.com/fwlink/?LinkId=89176)." Büyük Kerberos belirteci uyum sağlamak için WCF ileti boyutunu artırmanız gerekebilir.  
+## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Kerberos en büyük belirteç boyutu yeniden boyutlandırılmasına gerek olabilir  
+ İstemci çok sayıda gruba aitse (yaklaşık 900, ancak gerçek sayı gruplara bağlı olarak farklılık gösterir), bir ileti üstbilgisinin bloğu 64 kilobayt değerini aştığında bir sorun ortaya çıkabilir. Bu durumda,[Internet Explorer Kerberos kimlik doğrulaması, IIS 'e bağlanan yetersiz bir arabellek nedeniyle](https://go.microsoft.com/fwlink/?LinkId=89176)Microsoft desteği makalesinde açıklandığı şekilde, en yüksek Kerberos belirteç boyutunu artırabilirsiniz. Daha büyük Kerberos belirtecine uyum sağlamak için, en büyük WCF ileti boyutunu da artırmanız gerekebilir.  
   
-## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Makine için aynı konu adına sahip birden çok sertifika otomatik kaydını sonuçları  
- *Autoenrollment* yeteneğini olan [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] kullanıcılar ve bilgisayarlar için sertifikaları otomatik olarak kaydedilecek. Bir makine özelliği etkin bir etki alanında olduğunda, hedeflenen amacı, istemci kimlik doğrulaması ile bir X.509 sertifikası otomatik olarak oluşturulur ve yeni bir makine katıldığından her yerel bilgisayarın kişisel sertifika deposuna eklendi. Ağ. Ancak, otomatik kayıt, önbellekte oluşturduğu tüm sertifikalar aynı konu adı kullanır.  
+## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>Otomatik kayıt, makine için aynı konu adına sahip birden çok sertifika ile sonuçlanır  
+ Otomatik *kayıt* , kullanıcıların ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] bilgisayarların sertifikalara otomatik olarak kaydedilmesi özelliğidir. Bir makine, özelliğin etkinleştirildiği bir etki alanında olduğunda, istemci kimlik doğrulamasının amaçlanan amacını taşıyan bir X. 509.440 sertifikası otomatik olarak oluşturulur ve yeni bir makine her katıldığında yerel bilgisayarın kişisel sertifika deposuna eklenir. Network. Ancak otomatik kayıt, önbellekte oluşturduğu tüm sertifikalar için aynı konu adını kullanır.  
   
- Autoenrollment etki alanlarıyla açmak WCF hizmetleri başarısız olabileceği etkisidir. Bu durum, mevcut makinenin tam etki alanı adı sistemi (DNS) ada sahip birden fazla sertifika olduğundan varsayılan hizmet X.509 kimlik bilgisi arama ölçütlerini belirsiz olabilir kaynaklanır. Bir sertifika otomatik kaydını kaynaklanan; diğer Self verilen bir sertifika olabilir.  
+ Etkisi, WCF hizmetlerinin otomatik kayıt ile etki alanlarında açılmasının başarısız olmasına neden olabilir. Bu durum, makinenin tam etki alanı adı sistemi (DNS) adına sahip birden çok sertifika olduğu için varsayılan Service X. 509.440 kimlik bilgileri arama ölçütleri belirsiz olabileceğinden belirsizdir. Bir sertifika otomatik kaydın kaynağı; diğeri kendisi tarafından verilen bir sertifika olabilir.  
   
- Bunu azaltmak için üzerinde daha kesin bir arama ölçütü'ı kullanarak tam sertifika başvuru [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md). Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçenek ve sertifikayı benzersiz parmak izi (karma) belirtin.  
+ Bunu azaltmak için, [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)üzerinde daha kesin bir arama ölçütü kullanarak kullanmak üzere tam sertifikaya başvurun. Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneğini kullanın ve sertifikayı benzersiz parmak izine (karma) göre belirtin.  
   
- Otomatik özelliği hakkında daha fazla bilgi için bkz. [Windows Server 2003'te Autoenrollment sertifikasını](https://go.microsoft.com/fwlink/?LinkId=95166).  
+ Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz. [Windows Server 'Da sertifika otomatik kaydı 2003](https://go.microsoft.com/fwlink/?LinkId=95166).  
   
-## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Son yetkilendirme için kullanılan birden fazla alternatif konu adları  
- X.509 sertifikası birden fazla alternatif konu adı içerir ve alternatif konu adı kullanarak Yetkilendirme, yetkilendirme başarısız olabilir, nadir durumda.  
+## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Yetkilendirme için kullanılan birden çok alternatif konu adının son sayısı  
+ Bir X. 509.440 sertifikası birden çok alternatif konu adı içerdiğinde ve alternatif konu adını kullanarak yetkilendirdiğiniz durumlarda, yetkilendirme başarısız olabilir.  
   
-## <a name="protect-configuration-files-with-acls"></a>ACL'ler ile yapılandırma dosyaları koruma  
- Verilen belirteçler CardSpace için kod ve yapılandırma dosyalarında gerekli ve isteğe bağlı taleplerin belirtebilirsiniz. İçinde yayılan karşılık gelen öğelerle sonuçlanır `RequestSecurityToken` Security'ye gönderilen iletileri belirteç hizmeti. Bir saldırganın kod veya yapılandırma gerekli veya isteğe bağlı taleplerin kaldırmak için potansiyel olarak hedef hizmete erişmesine izin vermeyen bir belirteç vermek için güvenlik belirteci hizmeti başlama değiştirebilirsiniz.  
+## <a name="protect-configuration-files-with-acls"></a>Yapılandırma dosyalarını ACL 'lerle koruma  
+ Gerekli ve isteğe bağlı talepleri, CardSpace tarafından verilen belirteçler için kod ve yapılandırma dosyalarında belirtebilirsiniz. Bu, ilgili öğelerin güvenlik belirteci hizmetine gönderilen `RequestSecurityToken` iletilerde yayılmasına neden olur. Saldırgan, gerekli veya isteğe bağlı talepleri kaldırmak için kodu veya yapılandırmayı değiştirebilir, bu da güvenlik belirteci hizmetini hedef hizmete erişime izin verilmeyen bir belirteç verecek şekilde alabilir.  
   
- Azaltmak için: Yapılandırma dosyasını değiştirme bilgisayara erişim gerektirir. Yapılandırma dosyaları güvenli hale getirmek için listeleri (ACL'ler) dosya erişimi denetimi kullan. WCF kodların yapılandırmasından yüklenmesine izin verir önce kod uygulama dizini veya genel derleme önbelleği içinde olmasını gerektirir. Dizin ACL dizinleri güvenliğini sağlamak için kullanın.  
+ Azaltmak için: Yapılandırma dosyasını değiştirmek için bilgisayara erişim gerektir. Yapılandırma dosyalarını güvenli hale getirmek için dosya erişim denetim listelerini (ACL 'Ler) kullanın. WCF, kodun yapılandırmadan yüklenmesine izin vermeden önce kodun uygulama dizininde veya genel derleme önbelleğinde olmasını gerektirir. Dizinlerin güvenliğini sağlamak için Dizin ACL 'Lerini kullanın.  
   
-## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Güvenli oturumlar için bir hizmet sayısı üst sınırına  
- Bir istemci bir hizmet tarafından başarıyla doğrulandıktan ve güvenli bir oturum hizmetiyle kurulur, hizmet istemci iptal eder ya da oturum süresinin sona kadar oturum izler. Belirlenen her oturum için en fazla bir hizmetle etkin eşzamanlı oturum sayısını sınırından düşülür. Bu sınıra ulaşıldığında, hizmetle yeni bir oturum oluşturmayı denerseniz istemciler kadar reddedilir veya daha fazla etkin oturumlar sona veya bir istemci tarafından iptal edildi. Bir istemci bir hizmeti ile birden çok oturumu olabilir ve bu oturumları her biri sınırında sayılır.  
+## <a name="maximum-number-of-secure-sessions-for-a-service-is-reached"></a>Bir hizmet için en fazla güvenli oturum sayısına ulaşıldı  
+ Bir istemci bir hizmet tarafından başarıyla doğrulandığında ve hizmetle güvenli bir oturum yapıldığında, istemci tarafından iptal edilene veya oturumun süresi dolana kadar, hizmet oturumu izler. Belirlenen her oturum, bir hizmet ile en fazla etkin eşzamanlı oturum sayısı sınırına göre sayılır. Bu sınıra ulaşıldığında, bir veya daha fazla etkin oturumun süresi dolana veya bir istemci tarafından iptal edilene kadar bu hizmetle yeni bir oturum oluşturmayı deneyen istemciler reddedilir. Bir istemcide bir hizmetle birden fazla oturum olabilir ve bu oturumlardan her biri sınıra doğru sayılır.  
   
 > [!NOTE]
->  Durum bilgisi olan oturumlar kullandığınızda, önceki paragrafta geçerli değildir. Durum bilgisi olan oturumlar hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Durum bilgisi olan oturumlar kullandığınızda, önceki paragraf uygulanmaz. Durum bilgisi olan oturumlar hakkında daha fazla bilgi [için bkz. nasıl yapılır: Güvenli bir oturum](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)Için güvenlik bağlamı belirteci oluşturun.  
   
- Bunu azaltmak için etkin oturumlar sayısı sınırı ve en fazla ömrü boyunca oturum ayarlayarak <xref:System.ServiceModel.Channels.SecurityBindingElement> özelliği <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfı.  
+ Bunu azaltmak için, <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıfının özelliğini ayarlayarak, en fazla etkin oturum sayısı ve bir oturumun maksimum yaşam süresi sınırını ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

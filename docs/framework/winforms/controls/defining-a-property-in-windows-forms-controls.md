@@ -8,26 +8,26 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: f2f36cc7fe59262e1e16b913e18daa7363240847
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a641b1e7565842a1edf6aeec88bdc37ee0786ab4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969124"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Özellik Tanımlama
-Özellikleri genel bakış için bkz. [özelliklerine genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Bir özellik tanımlarken birkaç önemli nokta vardır:  
+Özelliklere genel bakış için bkz. [özelliklere genel bakış](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)). Bir özellik tanımlarken dikkat etmeniz gereken birkaç önemli nokta vardır:  
   
-- Özellikleri için tanımladığınız öznitelikleri uygulamanız gerekir. Bir özellik Tasarımcısı'nı nasıl görüntülenmelidir öznitelikleri belirtin. Ayrıntılar için bkz [bileşenler için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+- Tanımladığınız özelliklere öznitelikler uygulamanız gerekir. Öznitelikler, tasarımcının bir özelliği nasıl görüntülemesi gerektiğini belirtir. Ayrıntılar için bkz. [Bileşenler Için tasarım zamanı öznitelikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
-- Özelliği değiştirmeyi denetimin görünümünü etkiler, çağrı <xref:System.Windows.Forms.Control.Invalidate%2A> yöntemi (denetiminiz devralınan <xref:System.Windows.Forms.Control>) öğesinden `set` erişimcisi. <xref:System.Windows.Forms.Control.Invalidate%2A> sırayla çağırır <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi denetimi yeniden çizer. Birden çok çağrılar <xref:System.Windows.Forms.Control.Invalidate%2A> sonucu tek bir çağrıda <xref:System.Windows.Forms.Control.OnPaint%2A> verimlilik için.  
+- Özelliği değiştirmek denetimin görsel görüntüsünü etkiliyorsa, <xref:System.Windows.Forms.Control.Invalidate%2A> `set` erişimcinden (denetiminizin <xref:System.Windows.Forms.Control>Devralındığı) yöntemi çağırın. <xref:System.Windows.Forms.Control.Invalidate%2A>öğesinde, denetimi yeniden <xref:System.Windows.Forms.Control.OnPaint%2A> gösteren yöntemini çağırır. Birden çok çağrı <xref:System.Windows.Forms.Control.Invalidate%2A> , verimlilik <xref:System.Windows.Forms.Control.OnPaint%2A> için tek bir çağrıda sonuçlanır.  
   
-- .NET Framework sınıf kitaplığı, tamsayı, ondalık sayılar, Boole değerleri ve diğerleri gibi ortak veri türleri için tür dönüştürücüleri sağlar. Genellikle amacı bir tür dönüştürücüsü, dize değeri dönüştürme (gelen dize verileri diğer veri türleri için) sağlamaktır. Ortak veri türleri, değerleri dizeler ve uygun veri türlerini dizelere dönüştürme varsayılan tür dönüştürücüleri ile ilişkilidir. Özel bir özellik tanımlarsanız (diğer bir deyişle, standart dışı) veri türü, bu özellik ile ilişkilendirilecek tür dönüştürücüsünü belirten bir öznitelik uygulamak gerekir. Bir öznitelik, bir Özel UI türü Düzenleyici bir özellik ile ilişkilendirmek için de kullanabilirsiniz. UI türü Düzenleyici, özellik ya da veri türünü düzenlemek için bir kullanıcı arabirimi sağlar. Bir renk seçici, UI türü Düzenleyici örneğidir. Bu konunun sonunda öznitelikleri örnekleri verilir.  
+- .NET Framework sınıf kitaplığı, tamsayılar, ondalık sayılar, Boole değerleri ve diğerleri gibi ortak veri türleri için tür dönüştürücüler sağlar. Bir tür dönüştürücünün amacı genellikle dizeden değere dönüştürme (dize verilerinden diğer veri türlerine) sağlamaktır. Ortak veri türleri, değerleri dizelere ve dizilere uygun veri türlerine dönüştüren varsayılan tür dönüştürücülerle ilişkilendirilir. Özel (Standart olmayan) veri türü olan bir özellik tanımlarsanız, bu özellik ile ilişkilendirilecek tür dönüştürücüsünü belirten bir öznitelik uygulamanız gerekir. Özel bir UI türü düzenleyicisini bir özelliği ile ilişkilendirmek için de bir özniteliği kullanabilirsiniz. Kullanıcı arabirimi tür Düzenleyicisi, bir özellik veya veri türü düzenleme için bir kullanıcı arabirimi sağlar. Renk Seçici, UI türü düzenleyicinin bir örneğidir. Bu konunun sonunda özniteliklerin örnekleri verilmiştir.  
   
     > [!NOTE]
-    >  Bir tür dönüştürücüsü veya UI türü Düzenleyici, özel bir özellik için kullanılabilir değilse, bir bölümünde anlatıldığı gibi uygulayabileceğiniz [tasarım zamanı desteğini genişletmek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)).  
+    > Özel özellik için bir tür dönüştürücü veya Kullanıcı arabirimi türü Düzenleyicisi yoksa, [Tasarım zamanı desteğini genişletme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))bölümünde açıklandığı gibi bir tane uygulayabilirsiniz.  
   
- Aşağıdaki kod parçası adlı bir özel özellik tanımlar `EndColor` özel denetim için `FlashTrackBar`.  
+ Aşağıdaki kod parçası, özel denetim `EndColor` `FlashTrackBar`için adlı özel bir özelliği tanımlar.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -95,7 +95,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- Aşağıdaki kod parçası bir tür dönüştürücüsü ve UI türü Düzenleyici özelliğiyle ilişkilendirir `Value`. Bu durumda `Value` tamsayı ve bir varsayılan tür dönüştürücüsü ancak <xref:System.ComponentModel.TypeConverterAttribute> özniteliği geçerli bir özel tür dönüştürücüsü (`FlashTrackBarValueConverter`) yüzde olarak görüntülemek tasarımcı sağlar. UI türü düzenleyici `FlashTrackBarValueEditor`, görsel olarak görüntülenecek yüzdesini sağlar. Bu örnek ayrıca, bir tür dönüştürücüsü veya Düzenleyicisi tarafından belirtilen gösterir <xref:System.ComponentModel.TypeConverterAttribute> veya <xref:System.ComponentModel.EditorAttribute> öznitelik varsayılan dönüştürücü geçersiz kılar.  
+ Aşağıdaki kod parçası, bir tür dönüştürücüsünü ve bir UI türü düzenleyicisini özelliği `Value`ile ilişkilendirir. Bu örnekte `Value` bir tamsayı ve varsayılan bir tür dönüştürücüsü vardır <xref:System.ComponentModel.TypeConverterAttribute> ancak öznitelik, tasarımcının bir yüzde olarak görüntülenmesini sağlayan özel bir tür`FlashTrackBarValueConverter`Dönüştürücüsü () uygular. UI türü Düzenleyici `FlashTrackBarValueEditor`, yüzdenin görsel olarak görüntülenmesine izin verir. Bu örnek ayrıca, <xref:System.ComponentModel.TypeConverterAttribute> ya <xref:System.ComponentModel.EditorAttribute> da özniteliği tarafından belirtilen tür dönüştürücüsünün ya da düzenleyicinin varsayılan dönüştürücüyü geçersiz kıldığını gösterir.  
   
 ```vb  
 <Category("Flash"), _  

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: 26e8ae7d0c560d8539b17e29d47545894cb4bb0f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 6a77b81cab34b1824b23b1e3e050ecf034ab7700
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545203"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932165"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI Otomasyon MultipleView Denetim Düzeni Uygulama
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Bu konu, olaylar ve özellikler hakkında bilgiler <xref:System.Windows.Automation.Provider.IMultipleViewProvider>de dahil olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   

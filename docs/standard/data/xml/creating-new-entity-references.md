@@ -5,22 +5,22 @@ ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d8d4e9e1e2dfd9882504c935912bcf235608485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934515"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965907"
 ---
 # <a name="creating-new-entity-references"></a>Yeni Öğe Başvuruları Oluşturma
-**CreateEntityReference** yöntemi yeni bir oluşturur **XmlEntityReference** düğümü. Başvurulan varlık adı zaten bildirildi, XML belge nesne modeli (DOM) bakar. Varsa, alt düğümleri **XmlEntityReference** düğüm varlık bildirimi düğümden kopyalanır. Eşleşen hiçbir varlık bildirimi varsa, bir boş metin düğümü tek varlık referans düğümün alt öğesi eklenir. Çünkü alt düğümlerin **XmlEntityReference** düğümü diğer düğümlere kopyalarını, bu alt düğümlerin salt okunurdur ve değiştirilemez.  
+**CreateEntityReference** yöntemi yeni bir **XmlEntityReference** düğümü oluşturur. XML Belge Nesne Modeli (DOM), başvurulmakta olan varlık adının zaten bildirilip toplanmadığını görmek için bakar. Varsa, **XmlEntityReference** düğümünün alt düğümleri varlık bildirimi düğümünden kopyalanır. Eşleşen bir varlık bildirimi yoksa, bir boş metin düğümü varlık başvurusu düğümünün tek alt öğesi olarak iliştirilir. **XmlEntityReference** düğümünün alt düğümleri diğer düğümlerin kopyaları olduğundan, bu alt düğümler salt okunurdur ve değiştirilemez.  
   
- Düğümleri kopyalandığında olabilir bir ad alanı kapsamında noktasında varlık başvurusu. Bu ad alanı yapılandırmasını oluşturulan herhangi bir öğe veya öznitelik düğümleri etkiler.  
+ Düğümler kopyalandığında, Varlık başvurusunun noktasındaki kapsamda bir ad alanı olabilir. Bu ad alanı, oluşturulan herhangi bir öğe veya öznitelik düğümünün yapılandırmasını etkiler.  
   
 > [!NOTE]
->  DOM alt düğüm ekler **EntityReference** eklediğinizde yalnızca **EntityReference** belge düğümü. Yeni oluşturulan **EntityReference** düğümünüz alt düğüm yok.  
+> DOM, yalnızca **EntityReference** düğümünü belgeye eklediğinizde alt düğümleri **EntityReference** 'a ekler. Yeni oluşturulan **EntityReference** düğümlerinde alt düğüm yok.  
   
- Olsa da **XmlDataDocument** türetilmiş bir sınıf **XmlDocument**, **XmlDataDocument** varlık başvuruları oluşturulmasını desteklemiyor. Bunun nedeni, **EntityReference** alt öğesi olan salt okunur. Alt bir **EntityReference** düğüm, birden fazla bölgeye yayılabilir. Bu durumda, bir satırın bir parçası bir bölümünü içeren bir bölge ile ilişkili bir **EntityReference** salt okunur olacaktır.  
+ **XmlDataDocument** , **XmlDocument**'ın türetilmiş bir sınıfı olsa da, **XmlDataDocument** varlık başvurularının oluşturulmasını desteklemez. Bunun nedeni, **EntityReference** alt öğelerinden salt okunurdur. Bir **EntityReference** düğümünün alt öğeleri birden fazla bölgeye yayılabilirler. Bu durumda, bir **EntityReference** 'ın parçasını içeren Bölgeyle ilişkili bir satırın parçası salt okunurdur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

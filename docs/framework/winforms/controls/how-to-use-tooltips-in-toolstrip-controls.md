@@ -6,34 +6,34 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: b009d19ed949edbd52ec02252ba1e2271e4cb738
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3f383b6cccba7825637ea65a0e13280b91b406c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939728"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>Nasıl yapılır: ToolStrip Denetiminde ToolTips Kullanma
-Görüntüleyebileceğiniz bir <xref:System.Windows.Forms.ToolTip> için <xref:System.Windows.Forms.ToolStrip> denetimin ayarlayarak denetimi <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> özelliğini `true`.  
+<xref:System.Windows.Forms.ToolTip> <xref:System.Windows.Forms.ToolStrip> Denetimin özelliğiniolarak`true`ayarlayarak istediğiniz denetim için bir görüntüleyebilirsiniz. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-### <a name="to-display-a-tooltip"></a>Bir araç ipucunu görüntülemek için  
+### <a name="to-display-a-tooltip"></a>Araç Ipucunu görüntüleme  
   
-- Ayarlama <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> denetimin özellik `true`.  
+- Denetiminin özelliğini olarak `true`ayarlayın. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-     Varsayılan değer olan <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> olduğu `true`, varsayılan değeri <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> ve <xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType> olduğu `false`.  
+     Varsayılan değeri <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A?displayProperty=nameWithType> `true`, <xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A?displayProperty=nameWithType> ve varsayılan<xref:System.Windows.Forms.StatusStrip.ShowItemToolTips%2A?displayProperty=nameWithType>değeridir . `false`  
   
-### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>Tooltıptext özelliği bir ToolStripButton için araç ipucu metni kullanmak için  
+### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>ToolStripButton araç Ipucu metni için ToolTipText özelliğini kullanmak için  
   
-1. Ayarlama <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A> özelliği düğmenin `true`.  
+1. Düğmenin özelliğini olarak `true`ayarlayın. <xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>  
   
-2. Ayarlama <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType> özelliği düğmenin `false`.  
+2. Düğmenin özelliğini olarak `false`ayarlayın. <xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType>  
   
-     `AutoToolTip` Özelliği `true` için varsayılan olarak <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripDropDownButton>, ve <xref:System.Windows.Forms.ToolStripSplitButton>.  
+     <xref:System.Windows.Forms.ToolStripButton> `true` Özelliği,,ve<xref:System.Windows.Forms.ToolStripSplitButton>için Varsayılanolarakolur.<xref:System.Windows.Forms.ToolStripDropDownButton> `AutoToolTip`  
   
-     A <xref:System.Windows.Forms.ToolStripButton> kullanır, `Text` özelliği <xref:System.Windows.Forms.ToolTip> varsayılan metin. Özel metin görüntülemek için bu yordamı kullanın. bir <xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolTip>.  
+     , Varsayılan olarak `Text` <xref:System.Windows.Forms.ToolTip> metin için özelliğini kullanır.<xref:System.Windows.Forms.ToolStripButton> <xref:System.Windows.Forms.ToolStripButton> İçinde<xref:System.Windows.Forms.ToolTip>özel metin göstermek için bu yordamı kullanın.  
   
 > [!NOTE]
->  Ayarlarsanız <xref:System.Windows.Forms.ToolStripItemDisplayStyle> için <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> veya <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>metin düğmesinde görüntülenir, ancak araç ipucu görünmeye devam eder.  
+> Veya <xref:System.Windows.Forms.ToolStripItemDisplayStyle> <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None> olarak ayarlarsanız,düğmeüzerindehiçbirmetingörünmez,ancakaraçipucugörünmeyedevameder.<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Image>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

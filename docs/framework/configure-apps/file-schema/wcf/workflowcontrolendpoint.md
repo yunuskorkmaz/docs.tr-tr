@@ -2,15 +2,15 @@
 title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
-ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c9774217b835acdb9ebf7374b964d838497fc9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769648"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915328"
 ---
 # <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint >
-Bu yapılandırma öğesi, iş akışı örnekleri yürütülmesini denetlemek için bir standart uç nokta tanımlar. (oluşturma, çalıştırma, askıya alma, sonlandırma, vb.).  
+Bu yapılandırma öğesi, iş akışı örneklerinin yürütülmesini denetlemek için standart bir uç nokta tanımlar (oluşturma, çalıştırma, askıya alma, sonlandırma, vb.).  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -34,7 +34,7 @@ Bu yapılandırma öğesi, iş akışı örnekleri yürütülmesini denetlemek i
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Standart uç nokta yapılandırmasını adını belirten dize. Adı kullanılıyor `endpointConfiguration` özniteliği bir standart uç noktası yapılandırmasına bağlamak için hizmet uç noktası.|  
+|name|Standart uç nokta yapılandırmasının adını belirten bir dize. Ad, bir standart uç noktayı `endpointConfiguration` yapılandırmaya bağlamak için hizmet uç noktasının özniteliğinde kullanılır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ Bu yapılandırma öğesi, iş akışı örnekleri yürütülmesini denetlemek i
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.|  
+|[\<standardEndpoints >](standardendpoints.md)|Özelliklerinden biri veya daha fazlası (adres, bağlama, sözleşme) düzeltilen, önceden tanımlanmış uç noktalar koleksiyonu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

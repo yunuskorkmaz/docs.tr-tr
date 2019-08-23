@@ -7,56 +7,56 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922916"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Nasıl yapılır: FlowLayoutPanel Denetiminde Alt Denetimleri Sabitleme ve Yerleştirme
-<xref:System.Windows.Forms.FlowLayoutPanel> Denetim destekler <xref:System.Windows.Forms.Control.Anchor%2A> ve <xref:System.Windows.Forms.Control.Dock%2A> kendi alt denetimlerindeki özellikler.  
+Denetim, <xref:System.Windows.Forms.Control.Anchor%2A> alt denetimlerinde ve <xref:System.Windows.Forms.Control.Dock%2A> özelliklerini destekler. <xref:System.Windows.Forms.FlowLayoutPanel>  
   
-### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Sabitleme ve yerleştirme FlowLayoutPanel denetiminde alt denetimleri için  
+### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>FlowLayoutPanel denetiminde alt denetimleri bağlamak ve yerleştirmek için  
   
-1. Oluşturma bir <xref:System.Windows.Forms.FlowLayoutPanel> formunuzdaki denetimi.  
+1. Formunuzda bir <xref:System.Windows.Forms.FlowLayoutPanel> denetim oluşturun.  
   
-2. Ayarlama <xref:System.Windows.Forms.Control.Width%2A> , <xref:System.Windows.Forms.FlowLayoutPanel> denetimini **300**ve onun <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> için <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. <xref:System.Windows.Forms.FlowDirection.TopDown> <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Denetimin değerini 300 olarak ayarlayın ve öğesini olarak ayarlayın. <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel>  
   
-3. İki <xref:System.Windows.Forms.Button> denetler ve yerleştirebilirsiniz <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
+3. İki <xref:System.Windows.Forms.Button> denetim oluşturun ve bunları <xref:System.Windows.Forms.FlowLayoutPanel> denetime yerleştirin.  
   
-4. Ayarlama <xref:System.Windows.Forms.Control.Width%2A> ilk düğmenin **200**.  
+4. İlk düğmenin öğesini 200 olarak ayarlayın. <xref:System.Windows.Forms.Control.Width%2A>  
   
-5. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliği ikinci düğmenin <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. İkinci düğmenin <xref:System.Windows.Forms.DockStyle.Fill>özelliğini olarak ayarlayın. <xref:System.Windows.Forms.Control.Dock%2A>  
   
     > [!NOTE]
-    >  İlk düğmeyi aynı genişlikte ikinci düğme varsayar. Genişliği boyunca genişlemez <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
+    > İkinci düğme, ilk düğmeyle aynı genişliği varsayar. <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin genişliğine göre genişlemez.  
   
-6. Ayarlama <xref:System.Windows.Forms.Control.Dock%2A> özelliği ikinci düğmenin `None`. Bu, özgün genişliği varsaymak düğme neden olur.  
+6. İkinci düğmenin `None`özelliğini olarak ayarlayın. <xref:System.Windows.Forms.Control.Dock%2A> Bu, düğmenin orijinal genişliğini varsaymasına neden olur.  
   
-7. Ayarlama <xref:System.Windows.Forms.Control.Anchor%2A> özelliği ikinci düğmenin `Left, Right`.  
+7. İkinci düğmenin `Left, Right`özelliğini olarak ayarlayın. <xref:System.Windows.Forms.Control.Anchor%2A>  
   
     > [!IMPORTANT]
-    >  İlk düğmeyi aynı genişlikte ikinci düğme varsayar. Genişliği boyunca genişlemez <xref:System.Windows.Forms.FlowLayoutPanel> denetimi. Sabitleme ve yerleştirme içinde için genel bir kural budur <xref:System.Windows.Forms.FlowLayoutPanel> denetimi: dikey akış yönergeleri için <xref:System.Windows.Forms.FlowLayoutPanel> denetim geniş bir alt denetimin sütunda bir örtük sütun genişliğini hesaplar. Tüm bu sütunla denetimlerinde <xref:System.Windows.Forms.Control.Anchor%2A> veya <xref:System.Windows.Forms.Control.Dock%2A> hizalı ya da örtük bu sütunu sığdırmak için uzatılmış özellikleri. Davranış yatay akış yönleri için benzer bir şekilde çalışır. <xref:System.Windows.Forms.FlowLayoutPanel> Denetim satırdaki en uzun alt denetiminden örtük bir satırın yüksekliğini hesaplar ve bu satırdaki tüm yerleşik veya bağlantılı alt denetimler hizalı veya zımni satırın sığması için boyutu.  
+    >  İkinci düğme, ilk düğmeyle aynı genişliği varsayar. <xref:System.Windows.Forms.FlowLayoutPanel> Denetimin genişliğine göre genişlemez. Bu, <xref:System.Windows.Forms.FlowLayoutPanel> denetimdeki sabitleme ve yerleştirme için genel bir kuraldır: Dikey Akış yönleri için <xref:System.Windows.Forms.FlowLayoutPanel> , denetimin kapsanan bir sütunun genişliğini sütunundaki en geniş alt denetimden hesaplar. Bu sütunda <xref:System.Windows.Forms.Control.Anchor%2A> veya <xref:System.Windows.Forms.Control.Dock%2A> özelliklerde bulunan diğer tüm denetimler, bu kapsanan sütuna uyacak şekilde hizalanır veya uzatılır. Davranış, yatay akış yönlerine benzer bir şekilde çalışabilir. <xref:System.Windows.Forms.FlowLayoutPanel> Denetim, satırdaki en uzun alt denetimden kapsanan bir satırın yüksekliğini hesaplar ve bu satırdaki tüm sabitlenmiş veya bağlantılı alt denetimler, kapsanan satıra sığacak şekilde hizalanır veya boyutlandırılır.  
   
 ## <a name="example"></a>Örnek  
- Bağlantılı ve göreli mavi bir düğme yerleştirilmiş dört düğme aşağıdaki çizimde bir <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Olduğu <xref:System.Windows.Forms.FlowDirection.LeftToRight>.  
+ Aşağıdaki çizimde, içindeki <xref:System.Windows.Forms.FlowLayoutPanel>mavi düğmeye göre sabitlenmiş ve yerleştirilmiş dört düğme gösterilmektedir. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> . <xref:System.Windows.Forms.FlowDirection.LeftToRight>  
   
- ![FlowLayoutPanel bağlama](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
+ ![FlowLayoutPanel sabitleme](./media/net-flpanchorexp.gif "NET_FLPanchorExp")  
   
- Bağlantılı ve göreli mavi bir düğme yerleştirilmiş dört düğme aşağıdaki çizimde bir <xref:System.Windows.Forms.FlowLayoutPanel>. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> Olduğu <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+ Aşağıdaki çizimde, içindeki <xref:System.Windows.Forms.FlowLayoutPanel>mavi düğmeye göre sabitlenmiş ve yerleştirilmiş dört düğme gösterilmektedir. <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> . <xref:System.Windows.Forms.FlowDirection.TopDown>  
   
- ![FlowLayoutPanel bağlama](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
+ ![FlowLayoutPanel sabitleme](./media/vs-flpanchor2.gif "VS_FLPanchor2")  
   
- Aşağıdaki kod örneği, çeşitli gösterir <xref:System.Windows.Forms.Control.Anchor%2A> özellik değerleri için bir <xref:System.Windows.Forms.Button> denetimine bir <xref:System.Windows.Forms.FlowLayoutPanel> denetimi.  
+ Aşağıdaki kod örneği, bir <xref:System.Windows.Forms.Control.Anchor%2A> <xref:System.Windows.Forms.FlowLayoutPanel> denetimdeki <xref:System.Windows.Forms.Button> denetim için çeşitli özellik değerlerini gösterir.  
   
  [!code-csharp[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/CS/FlpAnchorExampleForm.cs#1)]
  [!code-vb[System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlowLayoutPanel.AnchorExampleForm/VB/FlpAnchorExampleForm.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

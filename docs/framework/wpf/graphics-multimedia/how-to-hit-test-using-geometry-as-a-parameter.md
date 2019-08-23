@@ -9,33 +9,33 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bed7784b00f49178c9a87def74b62f7ce620ec7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947374"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923401"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>Nasıl yapılır: Geometriyi Parametre Olarak Kullanan Tıklama Testi
-Bu örnek gösterir kullanarak visual nesne üzerinde bir isabet testi gerçekleştirmek nasıl bir <xref:System.Windows.Media.Geometry> parametre isabet testi.  
+Bu örnek, bir isabet testi parametresi olarak kullanarak bir <xref:System.Windows.Media.Geometry> görsel nesnesi üzerinde bir isabet testinin nasıl gerçekleştirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir isabet sınaması kullanılarak ayarlanan gösterilmiştir <xref:System.Windows.Media.GeometryHitTestParameters> için <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi. <xref:System.Windows.Point> Geçirilen değer `OnMouseDown` yöntemi oluşturmak için kullanılan bir <xref:System.Windows.Media.Geometry> isabet sınaması aralığını genişletmek için nesne.  
+ Aşağıdaki örnek, <xref:System.Windows.Media.GeometryHitTestParameters> <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> yöntemi için kullanarak bir isabet testinin nasıl ayarlanacağını gösterir. Yönteminegeçirilen`OnMouseDown`değer, isabet testinin aralığını genişletmek için bir <xref:System.Windows.Media.Geometry> nesne oluşturmak için kullanılır. <xref:System.Windows.Point>  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet10)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet10)]  
   
- <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> Özelliği <xref:System.Windows.Media.GeometryHitTestResult> kullanan isabet sınaması sonuçlarıyla ilgili bilgi sağlar bir <xref:System.Windows.Media.Geometry> parametre isabet testi. İsabet testi geometrisi (mavi daire) ve işlenmiş içeriği hedef visual nesnenin (kırmızı kare) arasındaki ilişki aşağıda gösterilmiştir.  
+ Özelliği, <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> bir isabet testi parametresi olarak kullanan bir <xref:System.Windows.Media.Geometry> isabet testinin sonuçlarıyla ilgili bilgiler sağlar.<xref:System.Windows.Media.GeometryHitTestResult> Aşağıdaki çizimde, hedef görsel nesnesinin (kırmızı kare) isabet testi geometrisi (mavi daire) ve işlenmiş içeriği arasındaki ilişki gösterilmektedir.  
   
- ![İsabet sınaması kullanılan IntersectionDetail gösteren diyagram.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
+ ![İsabet testinde kullanılan IntersectionDetail gösteren diyagram.](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
- Aşağıdaki örnek, bir isabet sınaması geri çağırmanızı uygulamak gösterilmektedir, bir <xref:System.Windows.Media.Geometry> isabet sınaması parametre olarak kullanılır. `result` Parametre türünden bir <xref:System.Windows.Media.GeometryHitTestResult> değerini almak için <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> özelliği. Özellik değeri, belirlemenize olanak tanır <xref:System.Windows.Media.Geometry> isabet sınaması parametresi tamamen veya kısmen yer alan isabet sınaması hedef işlenmiş içeriği içinde. Bu durumda, örnek kod için tam olarak hedef sınırları içinde bulunan görselleri listesine yalnızca isabet testi sonuçlarını eklemektir.  
+ Aşağıdaki örnek, bir isabet testi parametresi olarak kullanıldığında bir <xref:System.Windows.Media.Geometry> isabet testi geri çağrısının nasıl uygulanacağını gösterir. Parametresi, özelliğin değerini almak için <xref:System.Windows.Media.GeometryHitTestResult> bir olarak öğesine dönüştürüldü. <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A> `result` Özellik değeri, isabet sınama parametresinin, isabet testi <xref:System.Windows.Media.Geometry> hedefinin işlenmiş içeriği içinde tam mı yoksa kısmen mi olduğunu belirlemenizi sağlar. Bu durumda, örnek kod yalnızca hedef sınırın içinde tam olarak bulunan görsellerin listesine vuruş testi sonuçları ekler.  
   
  [!code-csharp[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/GeometryHitTest.cs#hittestingoverviewsnippet11)]
  [!code-vb[HitTestingOverview#HitTestingOverviewSnippet11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/geometryhittest.vb#hittestingoverviewsnippet11)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.HitTestResult> Kesişimi ayrıntı olduğunda geri çağırma çağırılmalıdır <xref:System.Windows.Media.IntersectionDetail.Empty>.  
+> Kesişim ayrıntısı olduğunda geri çağırma çağrılmamalıdır. <xref:System.Windows.Media.IntersectionDetail.Empty> <xref:System.Windows.Media.HitTestResult>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

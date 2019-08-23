@@ -6,15 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-ms.openlocfilehash: f6d896fb0d41a8fa3ed613d29bc3fca2bd14cc5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b3899462af7c4aa8e0f77377a8d7485975f9867
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937267"
 ---
 # <a name="-verbose"></a>-verbose
-Ayrıntılı durum ve hata iletileri oluşturmak derleyicinin neden olur.  
+Derleyicinin ayrıntılı durum ve hata iletileri oluşturmasına neden olur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,16 +24,16 @@ Ayrıntılı durum ve hata iletileri oluşturmak derleyicinin neden olur.
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- İsteğe bağlı. Belirtme `-verbose` belirtmekle aynı `-verbose+`, ayrıntılı iletiler dönüştüğünde derleyicinin neden olur. Bu seçenek için varsayılan değer `-verbose-`.  
+ İsteğe bağlı. Belirtme `-verbose` , derleyicinin ayrıntılı iletiler yaymasına neden olan, belirtilerek `-verbose+`aynı şekilde belirlenir. Bu seçenek `-verbose-`için varsayılan değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `-verbose` Seçeneği derleyici tarafından verilen hatalarının toplam sayısını hakkında bilgi, hangi derlemelerin modülü tarafından yüklenen raporları ve hangi dosyaların şu anda derlenen görüntüler.  
+ `-verbose` Seçeneği derleyici tarafından verilen toplam hata sayısı, bir modül tarafından hangi derlemelerin yüklendiğini raporlar ve şu anda derlenen dosyaları görüntüler.  
   
 > [!NOTE]
->  `-verbose` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
+> Bu `-verbose` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod derlenir `In.vb` ve ayrıntılı durum bilgilerini görüntülemek için derleyicinin yönlendirir.  
+ Aşağıdaki kod derlenir `In.vb` ve derleyicinin ayrıntılı durum bilgilerini görüntülemesi için yönlendirir.  
   
 ```console  
 vbc -verbose in.vb  

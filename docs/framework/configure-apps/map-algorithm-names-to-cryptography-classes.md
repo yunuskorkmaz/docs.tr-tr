@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 49f4b5b4b3634df5e648b5208448d644168e9d19
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 513000169504473aa6dd46feaca214f58502ffd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566729"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912864"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Algoritma Adlarını Şifreleme Sınıflarıyla Eşleştirme
 Bir geliştiricinin Windows SDK kullanarak bir şifreleme nesnesi oluştur, dört yolu vardır:  
@@ -58,16 +58,16 @@ Bir geliştiricinin Windows SDK kullanarak bir şifreleme nesnesi oluştur, dör
 </configuration>  
 ```  
   
- [< CryptoClass\> öğesinde](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) özniteliğin adını belirtebilirsiniz (önceki örnek, özniteliğini `MySHA1Hash`adlandırır). CryptoClass > öğesindeki özniteliğin  **\<** değeri, ortak dil çalışma zamanının sınıfı bulmak için kullandığı bir dizedir. [Tam nitelikli tür adlarını belirtirken](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan herhangi bir dizeyi kullanabilirsiniz.  
+ [< CryptoClass\> öğesinde](./file-schema/cryptography/cryptoclass-element.md) özniteliğin adını belirtebilirsiniz (önceki örnek, özniteliğini `MySHA1Hash`adlandırır). CryptoClass > öğesindeki özniteliğin  **\<** değeri, ortak dil çalışma zamanının sınıfı bulmak için kullandığı bir dizedir. [Tam nitelikli tür adlarını belirtirken](../reflection-and-codedom/specifying-fully-qualified-type-names.md)belirtilen gereksinimleri karşılayan herhangi bir dizeyi kullanabilirsiniz.  
   
- Birçok algoritma adı aynı sınıfa eşleyebilir. NameEntry > öğesi bir sınıfı bir kolay algoritma adıyla eşleştirir. [ \<](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) **Name** özniteliği, **System. Security. Cryptography. CryptoConfig. CreateFromName** yöntemi veya <xref:System.Security.Cryptography> ad alanındaki bir soyut şifreleme sınıfının adı çağrılırken kullanılan bir dize olabilir. **Sınıf** özniteliğinin değeri,  **\<CryptoClass >** öğesindeki özniteliğin adıdır.  
+ Birçok algoritma adı aynı sınıfa eşleyebilir. NameEntry > öğesi bir sınıfı bir kolay algoritma adıyla eşleştirir. [ \<](./file-schema/cryptography/nameentry-element.md) **Name** özniteliği, **System. Security. Cryptography. CryptoConfig. CreateFromName** yöntemi veya <xref:System.Security.Cryptography> ad alanındaki bir soyut şifreleme sınıfının adı çağrılırken kullanılan bir dize olabilir. **Sınıf** özniteliğinin değeri,  **\<CryptoClass >** öğesindeki özniteliğin adıdır.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Veya **Security. CryptoConfig. CreateFromName ("SHA1")** yöntemini çağırarak bir SHA1 algoritması edinebilirsiniz. Her yöntem yalnızca SHA1 algoritmasını uygulayan bir nesne döndüren garantisi verir. Bir algoritmaların kolay adlarını yapılandırma dosyasındaki aynı sınıfa eşlemek zorunda değilsiniz.  
+> <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> Veya **Security. CryptoConfig. CreateFromName ("SHA1")** yöntemini çağırarak bir SHA1 algoritması edinebilirsiniz. Her yöntem yalnızca SHA1 algoritmasını uygulayan bir nesne döndüren garantisi verir. Bir algoritmaların kolay adlarını yapılandırma dosyasındaki aynı sınıfa eşlemek zorunda değilsiniz.  
   
  Varsayılan adların ve eşlendikleri sınıfların listesi için bkz <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
-- [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Şifreleme Hizmetleri](../../standard/security/cryptographic-services.md)
+- [Şifreleme Sınıflarını Yapılandırma](configure-cryptography-classes.md)
