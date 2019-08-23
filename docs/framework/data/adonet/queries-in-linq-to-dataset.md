@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: bf3e15527fb3b6979e9363810dbffc05f164715c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: f6677e894e09b41e1f406d6b6485abf4168b5d6e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662091"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946254"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet Sorguları
-Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellikle ilişkisel veritabanları için SQL ve XML için XQuery gibi bir özel sorgu dilinde ifade edilir. Bu nedenle, geliştiriciler, her veri kaynağı veya veri biçimi, bunlar sorgu türü için yeni bir sorgu dili öğrenmek zorunda kalmışlardır. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] çeşitli veri kaynakları ve biçimler arasında verilerle çalışmak için daha basit ve tutarlı bir modeli sunar. İçinde bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu, çalıştığınız her zaman programlama nesneleri.  
+Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]çeşitli veri kaynakları ve biçimler genelinde verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorguda, her zaman programlama nesneleriyle çalışırsınız.  
   
- A [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sorgu işlemi üç eylemden oluşur: sorguyu veri kaynağından veya kaynaklarından elde etmek ve sorgu oluşturun.  
+ [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Sorgu işlemi üç eylemden oluşur: veri kaynağını veya kaynaklarını alın, sorguyu oluşturun ve sorguyu yürütün.  
   
- Veri kaynakları uygulayan <xref:System.Collections.Generic.IEnumerable%601> genel arabirimi aracılığıyla sorgulanabilen [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Çağırma <xref:System.Data.DataTableExtensions.AsEnumerable%2A> üzerinde bir <xref:System.Data.DataTable> genel uygulayan bir nesne döndürür <xref:System.Collections.Generic.IEnumerable%601> veri kaynağı olarak DataSet sorgularında LINQ için hizmet veren arabirimi.  
+ Genel arabirimi uygulayan veri kaynakları <xref:System.Collections.Generic.IEnumerable%601> , aracılığıyla [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]sorgulanabilir. <xref:System.Collections.Generic.IEnumerable%601> Bir <xref:System.Data.DataTableExtensions.AsEnumerable%2A> üzerindeçağırmak,LINQtoDataSetsorgularıiçinverikaynağıgörevigörengenelarabirimiuygulayanbirnesnedöndürür.<xref:System.Data.DataTable>  
   
- Sorgu, veri kaynağından almak istediğiniz bilgi tam olarak belirtin. Bir sorgu, ayrıca nasıl bu bilgileri sıralanmış, gruplandırılmış ve döndürülmeden önce şeklinde belirtebilirsiniz. İçinde [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], sorguda bir değişkende depolanır. Değerleri bir dizisini döndürmek için sorguyu tasarlanmışsa, sorgu değişkeni sıralanabilir bir tür olmalıdır. Bu sorgu değişkeni hiç eylem almaması ve veri döndürmemesidir; yalnızca, sorgu bilgileri depolar. Bir sorguyu oluşturduktan sonra herhangi bir veri almak için bu sorguyu yürütmeniz gerekir.  
+ Sorguda, tam olarak veri kaynağından almak istediğiniz bilgileri belirtirsiniz. Bir sorgu, döndürülmeden önce bu bilgilerin nasıl sıralanacağını, gruplanacağını ve şekillendirilmiş olduğunu da belirtebilir. ' [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]De, bir sorgu bir değişkende depolanır. Sorgu bir değer dizisi döndürecek şekilde tasarlanmışsa, sorgu değişkeninin kendisi sıralanabilir bir tür olması gerekir. Bu sorgu değişkeni hiçbir eylemde bulunmaz ve veri döndürmez; yalnızca sorgu bilgilerini depolar. Bir sorgu oluşturduktan sonra, verileri almak için bu sorguyu yürütmeniz gerekir.  
   
- Değerler döndüren bir sorgu, sorgu değişkeninin kendisi asla sorgu sonuçlarını tutar ve yalnızca sorgu komutlarını depolar. Sorgu yürütme sorgu değişkeni yinelenir kadar ertelenmiş bir `foreach` veya `For Each` döngü. Bu adlandırılır *ertelenmiş yürütme*; diğer bir deyişle, sorgu yürütme, sorgu oluşturulmuş sonra biraz zaman oluşur. Başka bir deyişle, bir sorgu istediğiniz sıklıkta yürütebilirsiniz. Örneğin, diğer uygulamalar tarafından güncelleştirilmiş bir veritabanı varsa, bu yararlıdır. Uygulamanızda döndüren güncelleştirilmiş bilgileri her zaman en son bilgileri almak ve sorguyu tekrar tekrar yürütmenin bir sorgu oluşturabilirsiniz.  
+ Bir dizi değer döndüren sorguda, sorgu değişkeni sorgu sonuçlarını hiçbir şekilde tutmayın ve yalnızca sorgu komutlarını depolar. Sorgunun yürütülmesi sorgu değişkeni bir `foreach` veya `For Each` döngüsünde yinelenene kadar ertelenir. Bu, *ertelenmiş yürütme*olarak adlandırılır; diğer bir deyişle sorgu yürütme, sorgu oluşturulduktan sonra bir süre oluşur. Bu, bir sorguyu istediğiniz sıklıkta yürütebileceğiniz anlamına gelir. Bu, örneğin, diğer uygulamalar tarafından güncelleştirilmekte olan bir veritabanınız olduğunda faydalıdır. Uygulamanızda, en son bilgileri almak için bir sorgu oluşturabilir ve sorguyu sürekli olarak yürütebilir ve güncelleştirilmiş bilgileri her seferinde geri alabilirsiniz.  
   
- Değerleri bir dizisini döndürmek, ertelenmiş sorguları aksine, bir tek değer döndüren sorgular hemen çalıştırılır. Bazı örnekler tek sorgu <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A>, ve <xref:System.Linq.Enumerable.First%2A>. Sorgu sonuçları tekil sonucu hesaplamak için gerekli olduğundan bu hemen yürütün. Ortalama işlevi çalışmak üzere giriş verilerini, örneğin, sorgu sonuçlarının ortalamasını bulmak için sorgu yürütülmelidir. Ayrıca <xref:System.Linq.Enumerable.ToList%2A> veya <xref:System.Linq.Enumerable.ToArray%2A> tek bir değer üretmiyor bir sorgu hemen yürütülmesini zorlamak için bir sorgu yöntemleri. Hemen yürütme zorlamak için bu teknikler, bir sorgunun sonuçlarını önbelleğe almak istediğiniz durumlarda yararlı olabilir.
+ Bir değer sırası döndüren ertelenmiş sorgulara karşılık olarak, tek bir değer döndüren sorgular hemen yürütülür. <xref:System.Linq.Enumerable.Count%2A>Tekil sorguların bazı örnekleri <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Average%2A>,, ve <xref:System.Linq.Enumerable.First%2A>' dir. Bu, tek sonuç hesaplamak için sorgu sonuçlarının gerekli olduğu için hemen yürütülür. Örneğin, sorgu sonuçlarının ortalamasını bulmak için sorgu yürütülmesi gerekir, böylece Average işlevinin birlikte çalışmak için giriş verileri vardır. Tek bir değer üretmeyen <xref:System.Linq.Enumerable.ToList%2A> bir <xref:System.Linq.Enumerable.ToArray%2A> sorgunun hemen yürütülmesini zorlamak için bir sorgu üzerinde veya yöntemlerini de kullanabilirsiniz. Hemen yürütmeye zorlamak için bu teknikler, bir sorgunun sonuçlarını önbelleğe almak istediğinizde yararlı olabilir.
   
 ## <a name="queries"></a>Sorgular  
- LINQ to DataSet sorgularında iki farklı sözdizimini içinde ifade: sorgu ifadesi söz dizimi ve metot tabanlı sorgu söz dizimi.  
+ LINQ to DataSet sorguları iki farklı Sözdizimde formüllenebilir: sorgu ifadesi sözdizimi ve Yöntem tabanlı sorgu söz dizimi.  
   
-### <a name="query-expression-syntax"></a>Sorgu ifadesi söz dizimi  
- Sorgu ifadeleri bir bildirim temelli bir sorgu söz dizimi var. Bu sözdizimi, C# veya Visual Basic'te bir SQL'e benzer bir biçimde sorgular yazmak bir geliştirici sağlar. Sorgu ifadesi söz dizimi kullanarak daha karmaşık filtreleme, sıralama ve gruplandırma işlemleri olabildiğince az kodla veri kaynaklarında gerçekleştirebilirsiniz. Daha fazla bilgi için [LINQ Sorgu ifadeleri](../../../csharp/linq/index.md#query-expression-overview) ve [temel sorgu işlemleri (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+### <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi  
+ Sorgu ifadeleri bildirime dayalı bir sorgu sözdizimidir. Bu sözdizimi, C# BIR geliştiricinin SQL 'e benzer bir biçimde veya Visual Basic sorguları yazmasına olanak sağlar. Sorgu ifadesi söz dizimini kullanarak, çok az kodlu veri kaynakları üzerinde bile karmaşık filtreleme, sıralama ve gruplama işlemleri gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [LINQ sorgu ifadeleri](../../../csharp/linq/index.md#query-expression-overview) ve [temel sorgu işlemleri (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
   
- .NET Framework ortak dil çalışma zamanı (CLR), sorgu ifade sözdizimi kendisini okunamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR anlayan bir şey için çevrilmiş: yöntemi çağırır. Bu yöntemler olarak adlandırılır *standart sorgu işleçleri*. Bir geliştirici olarak, doğrudan sorgu söz dizimi yerine yöntem sözdizimi kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için [sorgu sözdizimi ve yöntem sözdizimi LINQ](~/docs/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz: [standart sorgu işleçlerine genel bakış](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ .NET Framework ortak dil çalışma zamanı (CLR), sorgu ifadesi sözdiziminin kendisini okuyamıyor. Bu nedenle, derleme zamanında sorgu ifadeleri CLR 'nin anlayabileceği bir şeye çevrilir: Yöntem çağrıları. Bu yöntemlere *Standart sorgu işleçleri*denir. Bir geliştirici olarak, sorgu sözdizimini kullanmak yerine, bunları doğrudan yöntem sözdizimini kullanarak çağırma seçeneğiniz vardır. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md). Standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Select%2A> bulunan tüm satırlar döndürülecek `Product` tablo ve ürün adlarını görüntüler.  
+ Aşağıdaki örnek, `Product` tablosundan <xref:System.Linq.Enumerable.Select%2A> tüm satırları döndürmek ve ürün adlarını göstermek için kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#selectsimple1)]
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
-### <a name="method-based-query-syntax"></a>Metot tabanlı sorgu söz dizimi  
- DataSet sorgularında LINQ formüle etmek için diğer bir yolu, yöntem temelli sorgular kullanmaktır. Metot tabanlı sorgu söz dizimi bir doğrudan yöntem çağrısına sırasıdır [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleci yöntemleri, lambda ifadeleri parametre olarak geçirerek. Daha fazla bilgi için [Lambda ifadeleri](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+### <a name="method-based-query-syntax"></a>Yöntem tabanlı sorgu söz dizimi  
+ LINQ to DataSet sorguları formületmenin diğer yolu Yöntem tabanlı sorguları kullanmaktır. Yöntem tabanlı sorgu söz dizimi, işleç yöntemlerine yönelik [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] doğrudan yöntem çağrılarının bir dizidir ve lambda ifadeleri parametre olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
- Bu örnekte <xref:System.Linq.Enumerable.Select%2A> bulunan tüm satırlar döndürülecek `Product` ve ürün adlarını görüntüler.  
+ Bu örnek, <xref:System.Linq.Enumerable.Select%2A> içindeki `Product` tüm satırları döndürmek ve ürün adlarını göstermek için kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#SelectAnonymousTypes_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#selectanonymoustypes_mq)]
  [!code-vb[DP LINQ to DataSet Examples#SelectAnonymousTypes_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectanonymoustypes_mq)]  
   
-## <a name="composing-queries"></a>Sorguları oluşturma  
- Sorgu değerleri bir dizisini döndürmek için tasarlanmıştır, bu konunun önceki kısımlarında belirtildiği gibi sorgu değişkeni yalnızca sorgu komutlarını depolar. Sorgu hemen yürütme neden olacak bir yöntem içermiyorsa, sorgunun gerçek yürütmesi içindeki sorgu değişkeni üzerinde yineleme kadar ertelenmiştir bir `foreach` veya `For Each` döngü. Ertelenmiş yürütme birleştirilecek birden çok sorgu veya sorgu genişletilmesi sağlar. Bir sorgu genişletildiğinde, yeni işlemler dahil etmek için değiştiren ve nihai yürütme değişiklikleri yansıtır. Aşağıdaki örnekte, ilk sorgu, tüm ürünleri döndürür. İkinci sorgu kullanarak ilk genişletir `Where` "L" boyuttaki tüm ürünleri döndürmek için:  
+## <a name="composing-queries"></a>Sorgu oluşturma  
+ Bu konuda daha önce bahsedildiği gibi, sorgu değişkeni yalnızca sorgu bir değer dizisi döndürecek şekilde tasarlandıysa sorgu komutlarını depolar. Sorgu, hemen yürütmeye neden olacak bir yöntem içermiyorsa, bir `foreach` veya `For Each` döngüsünde sorgu değişkeni üzerinde yineleme yapana kadar sorgunun gerçek yürütmesi ertelenir. Ertelenmiş yürütme, birden çok sorgunun birleştirilmesi veya bir sorgunun genişletilmesini sağlar. Bir sorgu genişletildiğinde, yeni işlemleri içerecek şekilde değiştirilir ve nihai yürütme değişiklikleri yansıtır. Aşağıdaki örnekte, ilk sorgu tüm ürünleri döndürür. İkinci sorgu, "L" boyutundaki tüm `Where` ürünleri döndürmek için kullanarak birincisini genişletir:  
   
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- Sonra bir sorgu yürütüldüğü, ek sorgu yok oluşabilir ve izleyen tüm sorgular bellek içinde kullanacağınız [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleçleri. Sorgu yürütme içindeki sorgu değişkeni üzerinde yineleme yaptığınızda oluşacak bir `foreach` veya `For Each` deyimi veya biri için bir çağrı tarafından [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] hemen yürütme neden dönüştürme işleçleri. Bu işleçler şunlardır: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A>, ve <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Bir Sorgu yürütüldükten sonra ek sorgu oluşturulamaz ve sonraki tüm sorgular bellek [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] içi işleçleri kullanacaktır. Sorgu, bir `foreach` veya `For Each` deyimindeki sorgu değişkeni üzerinde yineleme yaptığınızda veya anında yürütmeye neden olan [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] dönüştürme işleçlerinden birine yapılan bir çağrı ile gerçekleşir. Bu işleçler şunları içerir <xref:System.Linq.Enumerable.ToList%2A>:, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A>, ve <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
- Aşağıdaki örnekte, ilk sorgu fiyat listesi tarafından sıralanan tüm ürünleri döndürür. <xref:System.Linq.Enumerable.ToArray%2A> Yöntemi anlık sorgu yürütme zorlamak için kullanılır:  
+ Aşağıdaki örnekte, ilk sorgu liste fiyatına göre sıralanmış tüm ürünleri döndürür. <xref:System.Linq.Enumerable.ToArray%2A> Yöntemi hemen sorgu yürütmeye zorlamak için kullanılır:  
   
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
@@ -63,5 +63,5 @@ Bir sorgu, verileri bir veri kaynağından alır bir ifadedir. Sorgular genellik
 
 - [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [C#'de LINQ Kullanmaya Başlama](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Visual Basic'te lınq'e Başlarken](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C#'de LINQ Kullanmaya Başlama](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Visual Basic LINQ ile çalışmaya başlama](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

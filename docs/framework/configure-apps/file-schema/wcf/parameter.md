@@ -2,22 +2,22 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f2179835ad1232e115cad0decdd3d41bbdc160
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932842"
 ---
-# <a name="parameter"></a>\<Parametresi >
-Bildirilen tür genel bir tür olduğunda genel parametre belirler.  
+# <a name="parameter"></a>\<parametre >
+Tanımlanmış bir tür genel bir tür olduğunda genel parametreyi belirtir.  
   
- \<System.Runtime.Serialization >  
+ \<System. Runtime. Serialization >  
 \<dataContractSerializer >  
 \<declaredTypes > öğesi  
-\<Ekle > öğesi için \<declaredTypes >  
+\<DeclaredTypes > için \<> öğesi ekleme  
 \<knownType > öğesi  
-\<parametresi > öğesi  
+\<Parameter > öğesi  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,15 +33,15 @@ Bildirilen tür genel bir tür olduğunda genel parametre belirler.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|dizin|Bildirilen tür genel bir tür olduğunda, bilinen türü döndüren genel parametre belirler.|  
-|türü|Serileştirme ve seri durumundan çıkarma için kullanılan bilinen türü tanımlayan bir dize.|  
+|dizin|Belirtilen tür genel bir tür olduğunda, bilinen türü döndürecek genel parametreyi belirtir.|  
+|türü|Serileştirme ve seri durumdan çıkarma için kullanılan bilinen türü tanımlayan bir dize.|  
   
-## <a name="index-attribute"></a>Dizin öznitelik  
+## <a name="index-attribute"></a>Index özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|"0"|İlk genel tür parametre. Örneğin, bir <xref:System.Collections.Generic.List%601> yalnızca bir parametresi vardır. Bildirilen tür olarak kullanılıyorsa, dizin "0" olarak ayarlanır.|  
-|"1"|İkinci bir genel tür parametresi. Örneğin, bir <xref:System.Collections.Generic.Dictionary%602> iki parametreye sahiptir. İkinci parametre tarafından döndürülen bilinen türü, "1" dizini özniteliği ayarlayın.|  
+|"0"|Genel türdeki ilk parametre. Örneğin, a <xref:System.Collections.Generic.List%601> yalnızca bir parametreye sahiptir. Belirtilen tür olarak kullanılırsa, Dizin "0" olarak ayarlanır.|  
+|"1"|Genel türde ikinci parametre. Örneğin, bir <xref:System.Collections.Generic.Dictionary%602> iki parametreye sahiptir. Bilinen tür ikinci parametre tarafından döndürülürse, Dizin özniteliğini "1" olarak ayarlayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -50,18 +50,18 @@ Bildirilen tür genel bir tür olduğunda genel parametre belirler.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<knownType >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|Bir alan veya özellik bildirilen türü tarafından döndürülen bilinen bir türünü belirtir.|  
+|[\<knownType >](knowntype.md)|Tanımlı türün bir alanı veya özelliği tarafından döndürülebilecek bilinen bir türü belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bilinen türler hakkında daha fazla bilgi için bkz: [veri sözleşme bilinen türleri](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Bilinen türler hakkında daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../wcf/feature-details/data-contract-known-types.md) ve <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
- Bkz: [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) bu öğe kullanma örneği için.  
+ Bu öğenin kullanılmasıyla ilgili bir örnek için bkz. [ DataContractSerializer>.\<](datacontractserializer-element.md)  
   
- Bu yapılandırma öğesi, her iki öznitelik aynı anda sahip olamaz. Her iki öznitelik ayarlanırsa, bir <xref:System.Configuration.ConfigurationErrorsException> gerçekleşir.  
+ Bu yapılandırma öğesinin her iki özniteliği de aynı anda olamaz. Her iki öznitelik de ayarlanırsa, bir <xref:System.Configuration.ConfigurationErrorsException> gerçekleşir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [Veri Anlaşması Bilinen Türler](../../../wcf/feature-details/data-contract-known-types.md)
+- [\<dataContractSerializer >](datacontractserializer-element.md)
+- [\<> Ekle](add-of-declaredtypes-element.md)

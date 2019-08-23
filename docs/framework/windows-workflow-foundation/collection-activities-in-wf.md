@@ -1,31 +1,31 @@
 ---
-title: WF etkinliklerini koleksiyonu
+title: WF 'de koleksiyon etkinlikleri
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945983"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935453"
 ---
-# <a name="collection-activities-in-wf"></a>WF etkinliklerini koleksiyonu
-Koleksiyon etkinlikler, bir iş akışında koleksiyon nesnelerini çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ekleme ve bir koleksiyondaki öğeleri kaldırma, bir koleksiyondaki bir öğenin bulunup bulunmadığını test ve bir koleksiyon temizlemek için sistem tarafından sağlanan etkinlikler vardır. `ExistsInCollection` ve `RemoveFromCollection` sahip bir <xref:System.Activities.OutArgument%601> türü <xref:System.Boolean>, sonucu gösterir.  
+# <a name="collection-activities-in-wf"></a>WF 'de koleksiyon etkinlikleri
+Koleksiyon etkinlikleri, bir iş akışındaki koleksiyon nesneleriyle çalışmak için kullanılır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]bir koleksiyondan öğe eklemek ve kaldırmak, bir koleksiyondaki bir öğenin varlığını test etmek ve bir koleksiyonu temizlemek için sistem tarafından sağlanmış etkinlikleri vardır. `ExistsInCollection`ve `RemoveFromCollection` sonucu gösteren <xref:System.Activities.OutArgument%601> bir türü <xref:System.Boolean>vardır.  
   
 > [!IMPORTANT]
->  Temel alınan koleksiyon nesnesi ayarlamadan önce bir toplama etkinliği yürütülürse bir <xref:System.InvalidOperationException> oluşturulur ve etkinlik hatalarını.  
+> Temel koleksiyon nesnesi ayarlamadan önce bir koleksiyon etkinliği yürütülürse, bir <xref:System.InvalidOperationException> oluşturulur ve etkinlik hataları oluşur.  
   
 ## <a name="collection-activities"></a>Koleksiyon etkinlikleri  
   
 |||  
 |-|-|  
-|<xref:System.Activities.Statements.AddToCollection%601>|Belirtilen bir koleksiyona bir öğe ekler.|  
-|<xref:System.Activities.Statements.ClearCollection%601>|Belirtilen bir koleksiyondaki tüm öğeleri kaldırır.|  
-|<xref:System.Activities.Statements.ExistsInCollection%601>|Döndürür `true` bir koleksiyondaki bir öğe zaten varsa.|  
-|<xref:System.Activities.Statements.RemoveFromCollection%601>|Belirtilen bir koleksiyondaki bir öğeyi kaldırır ve döndürür `true` öğe başarıyla kaldırıldıysa.|  
+|<xref:System.Activities.Statements.AddToCollection%601>|Belirtilen koleksiyona bir öğe ekler.|  
+|<xref:System.Activities.Statements.ClearCollection%601>|Belirtilen koleksiyondaki tüm öğeleri temizler.|  
+|<xref:System.Activities.Statements.ExistsInCollection%601>|Koleksiyonda `true` bir öğe varsa döndürür.|  
+|<xref:System.Activities.Statements.RemoveFromCollection%601>|Belirtilen koleksiyondan bir öğeyi kaldırır ve öğe başarıyla kaldırılmışsa `true` döndürür.|  
   
-## <a name="using-collection-activities"></a>Koleksiyon etkinlikleri kullanma  
- Aşağıdaki kod örneği, bir iş akışı değişkeni olarak bildirilen bir koleksiyon etkileşim gösterilmektedir. Kullanılan koleksiyonu bir <xref:System.Collections.Generic.List%601> , <xref:System.String> adlı nesneleri `fruitList`.  
+## <a name="using-collection-activities"></a>Koleksiyon etkinliklerini kullanma  
+ Aşağıdaki kod örneği, bir iş akışı değişkeni olarak belirtilen bir koleksiyonla nasıl etkileşim kuracağınızı gösterir. Kullanılan koleksiyon adlı <xref:System.Collections.Generic.List%601> <xref:System.String> bir`fruitList`nesne.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- Yukarıdaki kod örnekleri kullanılarak da oluşturulabilir <xref:Microsoft.CSharp.Activities.CSharpValue%601> yerine <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ Yukarıdaki kod örnekleri, yerine kullanılarak <xref:Microsoft.CSharp.Activities.CSharpValue%601> da oluşturulabilir<xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  

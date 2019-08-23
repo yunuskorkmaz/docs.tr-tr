@@ -2,45 +2,45 @@
 title: XAML içinde WPF ve WF tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: 8ad8d615a407f53e5f31f739db4c991b07290ac5
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 8b461ee3185aa60e885d7cc107124c37d9ffacef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170004"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948958"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML içinde WPF ve WF tümleştirmesi
-Bu örnek, tek bir XAML belgesi içinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu yapmak için Windows Workflow Foundation (WF) ve XAML genişletilebilirlik örnek kullanır.
+Bu örnek, tek bir XAML belgesinde Windows Presentation Foundation (WPF) ve Windows Workflow Foundation (WF) özelliklerini kullanan bir uygulamanın nasıl oluşturulacağını gösterir. Bunu gerçekleştirmek için örnek Windows Workflow Foundation (WF) ve XAML genişletilebilirliği kullanır.
 
-## <a name="sample-details"></a>Örnek Ayrıntıları
- İçine ShowWindow.xaml dosyası seri durumdan çıkarır bir <xref:System.Activities.Statements.Sequence> sırasının etkinlikleri tarafından yönetilen iki dize değişkeni etkinlikli: `ShowWindow` ve `WriteLine`. <xref:System.Activities.Statements.WriteLine> Etkinlik atar ifadesi konsol penceresine çıkarır <xref:System.Activities.Statements.WriteLine.Text%2A> özelliği. `ShowWindow` Etkinliği bir WPF penceresi yürütme mantığını bir parçası olarak görüntüler. <xref:System.Activities.ActivityContext.DataContext%2A> Pencerenin sırada bildirilen değişkenler içerir. Pencerenin denetimleri bildirilen `ShowWindow` etkinliği değişkenlere işlemek için veri bağlama kullanın. Son olarak, bir düğme denetimi penceresi içerir. `Click` Düğme olayı tarafından işlenir bir <xref:System.Activities.ActivityDelegate> adlı `MarkupExtension` içeren bir `CloseWindow` etkinlik. `MarkUpExtension` çağıran tarafından tanımlanan herhangi bir nesne bağlamı olarak sağlayan içerilen bir etkinliği bir `x:Name`, hem de <xref:System.Activities.ActivityContext.DataContext%2A> içeren penceresinin. Bu nedenle, `CloseWindow.InArgument<Window>` pencerenin adına başvuran bir ifade kullanarak bağlanabilir.
+## <a name="sample-details"></a>Örnek Ayrıntılar
+ ShowWindow. xaml dosyası, sıranın etkinlikleri tarafından yönetilen iki <xref:System.Activities.Statements.Sequence> dize değişkeni ile bir etkinliğin serisini kaldırır: `ShowWindow` ve `WriteLine`. Etkinlik, konsol penceresine, <xref:System.Activities.Statements.WriteLine.Text%2A> özelliğe atadığı ifadeyi verir. <xref:System.Activities.Statements.WriteLine> Etkinlik `ShowWindow` , yürütme mantığının bir parçası olarak bir WPF penceresi görüntüler. Pencerenin <xref:System.Activities.ActivityContext.DataContext%2A> , dizide belirtilen değişkenleri içerir. `ShowWindow` Etkinlikte belirtilen pencerenin denetimleri, bu değişkenleri işlemek için veri bağlamayı kullanır. Son olarak, pencere bir düğme denetimi içerir. Düğme olayı, etkinlik`CloseWindow` içeren bir <xref:System.Activities.ActivityDelegate> adlandırılmış `MarkupExtension` tarafından işlenir. `Click` `MarkUpExtension`bağlam, tarafından `x:Name`tanımlanan tüm nesneler ve kapsayan pencerenin yanı sıra <xref:System.Activities.ActivityContext.DataContext%2A> içerilen etkinlikleri çağırır. `CloseWindow.InArgument<Window>` Bu nedenle, pencere adına başvuran bir ifade kullanılarak bağlanabilir.
 
- `ShowWindow` Etkinlik türetilir <xref:System.Activities.AsyncCodeActivity%601> WPF penceresini görüntülemek için sınıf ve penceresi kapatıldığında tamamlar. `Window` Özelliği türüdür `Func<Window>` her etkinliği yürütülmesi için isteğe bağlı olarak oluşturulacak penceresi sağlar. `Window` Özelliği kullanan bir <xref:System.Xaml.XamlDeferringLoader> bu ertelenmiş Değerlendirme modelini etkinleştirecek şekilde. `FuncFactoryDeferringLoader` Sağlayan bir `XamlReader` serileştirme sırasında yakalanan ve sonra da etkinlik yürütme sırasında okuyun.
+ Etkinlik, bir WPF penceresini <xref:System.Activities.AsyncCodeActivity%601> göstermek ve pencere kapatıldığında tamamlanması için sınıfından türetilir. `ShowWindow` Özelliği, etkinliğin her yürütmesi için isteğe bağlı olarak pencerenin oluşturulmasına izin veren türdür `Func<Window>`. `Window` Özelliği `Window` , bu ertelenmiş <xref:System.Xaml.XamlDeferringLoader> değerlendirme modelini etkinleştirmek için bir kullanır. , `FuncFactoryDeferringLoader` Seri hale `XamlReader` getirme sırasında yakalanmasına izin verir ve sonra Etkinlik yürütme sırasında okumaya devam edin.
 
- İyi yazılmış bir etkinlik, hiçbir zaman Zamanlayıcı iş parçacığını engeller. Ancak, `ShowWindow` etkinliği görüntüleme penceresi kapatılana kadar tamamlayamıyor. `ShowWindow` Etkinlik türeterek bu davranışı elde <xref:System.Activities.AsyncCodeActivity>çağırarak <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> yönteminde <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> yöntemi ve pencerenin kalıcı olarak gösteriliyor. Temsilci WPF çağrılan <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>. `ShowWindow` Etkinlik atar <xref:System.Activities.ActivityContext.DataContext%2A> özelliğini `Window.DataContext` kapsamındaki değişkenlere herhangi bir veri sağlamak için özellik bağlı erişimi denetler.
+ İyi yazılmış bir etkinlik zamanlayıcı iş parçacığını hiçbir şekilde engelmez. Ancak, `ShowWindow` görüntülenen pencere kapanana kadar etkinlik tamamlanamaz. Etkinlik, öğesinden <xref:System.Activities.AsyncCodeActivity>türeterek, yöntemi yöntemi içinde <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> çağırarak <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A> ve pencere yönetimini genel olarak göstererek bu davranışa erişir. `ShowWindow` Temsilci WPF <xref:System.ServiceModel.InstanceContext.SynchronizationContext%2A>aracılığıyla çağrılır. Etkinlik, tüm veri <xref:System.Activities.ActivityContext.DataContext%2A> bağlantılı denetimleri kapsam `Window.DataContext` içi değişkenlere erişimi sağlamak için özelliği özelliğine atar. `ShowWindow`
 
- Bu örnekte ilgi son nokta bir <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension> adlı `DelegateActivityExtension`. `ProvideValue` Yöntemi bu işaretleme uzantısı, katıştırılmış bir etkinlik çağıran bir temsilci döndürür. WPF veri bağlamı ve herhangi bir ortamda bu etkinlik çalıştırmalarını `x:Name` kapsam değerleri. İçinde `GenericInvoke` yöntemi, bu ortama etkinliğine sağlanır bir <xref:System.Activities.Hosting.SymbolResolver> uzantısı. Bu uzantı eklenir bir <xref:System.Activities.WorkflowInvoker> sonra biçimlendirme uzantının temsilci çağrılır her katıştırılmış etkinlik çağırmak için kullanılır.
+ Bu örnekteki son ilgilendiğiniz noktaya bir <xref:System.Workflow.ComponentModel.Serialization.MarkupExtension> çağırılır. `DelegateActivityExtension` Bu `ProvideValue` biçimlendirme uzantısının yöntemi, katıştırılmış etkinlik çağıran bir temsilci döndürür. Bu etkinlik, WPF veri bağlamını ve kapsamdaki tüm `x:Name` değerleri içeren bir ortamda çalışır. Yönteminde, bu ortam bir <xref:System.Activities.Hosting.SymbolResolver> uzantı aracılığıyla etkinliğe sağlanır. `GenericInvoke` Bu uzantı, biçimlendirme uzantısının temsilcisi <xref:System.Activities.WorkflowInvoker> çağrıldığında gömülü etkinliği çağırmak için kullanılan bir öğesine eklenir.
 
 > [!NOTE]
->  Varsayılan Tasarımcı ShowWindow etkinlik desteklemiyor; Bu nedenle, ShowWindow.Xaml dosya Tasarımcısı'nda düzgün görüntülenmiyor.
+> Varsayılan Tasarımcı ShowWindow etkinliğini desteklemez; Bu nedenle, ShowWindow. xaml dosyası tasarımcıda doğru şekilde görüntülenmez.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010 kullanarak WPFWFIntegration.sln çözüm dosyasını açın.
+1. Visual Studio 2010 kullanarak, Wpfwfintefin. sln çözüm dosyasını açın.
 
 2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
-3. Çözümü çalıştırmak için F5 tuşuna basın.
+3. Çözümü çalıştırmak için F5 'e basın.
 
-4. İlk ve son adınızı iletişim kutusuna yazın.
+4. İletişim kutusuna adınızı ve soyadınızı yazın.
 
-5. İletişim kutusunu kapatın ve konsol adınızı görüntülemektedir.
+5. İletişim kutusunu kapatın ve konsol adınızı yankılar.
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

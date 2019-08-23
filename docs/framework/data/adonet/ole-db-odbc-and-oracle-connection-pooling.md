@@ -2,74 +2,74 @@
 title: OLE DB, ODBC ve Oracle Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929248"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle Bağlantı Havuzu
-Bağlantı havuzu performans ve ölçeklenebilirlik, uygulamanızın önemli ölçüde artırabilirsiniz. Bu bölümde, bağlantı için OLE DB, ODBC ve Oracle için .NET Framework veri sağlayıcıları havuzu açıklanmaktadır.  
+Havuzlama bağlantıları, uygulamanızın performansını ve ölçeklenebilirliğini önemli ölçüde geliştirebilir. Bu bölümde, OLE DB, ODBC ve Oracle .NET Framework veri sağlayıcıları için bağlantı havuzu ele alınmaktadır.  
   
-## <a name="connection-pooling-for-oledb"></a>Bağlantı için OleDb havuzu  
- OLE DB için .NET Framework veri sağlayıcısı, OLE DB oturum havuzunu kullanan bağlantı otomatik olarak havuza ekler. Bağlantı dizesi bağımsız değişkenleri, etkinleştirme veya devre dışı OLE DB hizmetleri havuzu dahil olmak üzere kullanılabilir. Örneğin, aşağıdaki bağlantı dizesi OLE DB oturum havuzu ve otomatik bir işlem kaydı devre dışı bırakır.  
+## <a name="connection-pooling-for-oledb"></a>OleDb için bağlantı havuzu oluşturma  
+ OLE DB için .NET Framework Veri Sağlayıcısı, OLE DB oturum havuzu kullanarak bağlantıları otomatik olarak havuza. Bağlantı dizesi bağımsız değişkenleri, havuz dahil OLE DB hizmetlerini etkinleştirmek veya devre dışı bırakmak için kullanılabilir. Örneğin, aşağıdaki bağlantı dizesi OLE DB oturum kuyruğunu ve otomatik işlem kaydı 'nı devre dışı bırakır.  
   
 ```  
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
 ```  
   
- Her zaman kapatın veya havuzuna bağlantı döndürmek için kullanarak tamamladığınızda bir bağlantı dispose öneririz. Açıkça kapanmamış bağlantıları havuza geri. Örneğin, bir bağlantı, kapsam dışına geçti, ancak bu değil açıkça kapatıldı yalnızca bağlantı havuzuna maksimum havuz boyutuna ulaştı ve bağlantı hala geçerli ise döndürülür.  
+ Havuzun bağlantısını döndürmek için kullanmayı bitirdiğinizde bir bağlantıyı her zaman kapatmanızı veya atmayı öneririz. Açıkça kapatılmayan bağlantılar havuza döndürülmeyebilir. Örneğin, kapsam dışına çıkan ancak açıkça kapatılmayan bir bağlantı yalnızca en büyük havuz boyutuna ulaşılmışsa ve bağlantı hala geçerliyse bağlantı havuzuna döndürülür.  
   
- OLE DB oturumu veya kaynak havuzu hem de havuzu OLE DB sağlayıcı hizmet varsayılanlarını geçersiz kılma ile devre dışı bırakma hakkında daha fazla bilgi için bkz: [OLE DB Programcı Kılavuzu](https://go.microsoft.com/fwlink/?linkid=45232).  
+ OLE DB oturum veya kaynak havuzlama hakkında daha fazla bilgi için ve OLE DB sağlayıcısı hizmet varsayılanlarını geçersiz kılarak havuzlamayı devre dışı bırakma hakkında daha fazla bilgi için bkz. [OLE DB Programcı Kılavuzu](https://go.microsoft.com/fwlink/?linkid=45232).  
   
-## <a name="connection-pooling-for-odbc"></a>Bağlantı için ODBC havuzu  
- ODBC için .NET Framework veri sağlayıcısı için bağlantı havuzu ODBC sürücü bağlantısı için kullanılır ve ODBC için .NET Framework veri sağlayıcısı tarafından etkilenmez Yöneticisi tarafından yönetilir.  
+## <a name="connection-pooling-for-odbc"></a>ODBC için bağlantı havuzu  
+ ODBC için .NET Framework Veri Sağlayıcısı bağlantı havuzu, bağlantı için kullanılan ODBC Sürücü Yöneticisi tarafından yönetilir ve ODBC için .NET Framework Veri Sağlayıcısı bundan etkilenmez.  
   
- Etkinleştirmek veya devre dışı bağlantı havuzu için açık **ODBC Veri Kaynağı Yöneticisi** Yönetimsel Araçlar klasörünü Denetim Masası'nda. **Bağlantı havuzu** sekme bağlantı parametrelerini yüklü her ODBC sürücüsü havuzu belirtmenize olanak sağlar. Belirli bir ODBC sürücü için bağlantı havuzu değişiklikleri, ODBC sürücüsünü kullanan tüm uygulamalar etkileyeceğini unutmayın.  
+ Bağlantı havuzunu etkinleştirmek veya devre dışı bırakmak için, Denetim Masası 'nın Yönetimsel Araçlar klasöründe **ODBC veri kaynağı Yöneticisi** ' ni açın. **Bağlantı havuzu oluşturma** sekmesi, yüklü her ODBC sürücüsü için bağlantı havuzu oluşturma parametrelerini belirtmenize olanak tanır. Belirli bir ODBC sürücüsünün bağlantı havuzu değişikliklerinin o ODBC sürücüsünü kullanan tüm uygulamaları etkilediğini unutmayın.  
   
-## <a name="connection-pooling-for-oracleclient"></a>Bağlantı için OracleClient havuzu  
- Oracle için .NET Framework veri sağlayıcısı, bağlantı otomatik olarak ADO.NET istemci uygulamanız için havuzu sağlar. Bağlantı havuzu davranışını denetlemek için çeşitli bağlantı dizesi değiştiriciler de sağlayabilirsiniz (Bu konunun ilerleyen bölümlerinde "Denetleme bağlantı havuzu ile bağlantı dizesi anahtar sözcükler" konusuna bakın).  
+## <a name="connection-pooling-for-oracleclient"></a>OracleClient için bağlantı havuzu  
+ Oracle için .NET Framework Veri Sağlayıcısı, ADO.NET istemci uygulamanız için otomatik olarak bağlantı havuzu sağlar. Ayrıca, bağlantı havuzu davranışlarını denetlemek için çeşitli bağlantı dizesi değiştiricileri sağlayabilirsiniz (Bu konunun ilerleyen kısımlarında "bağlantı dizesi anahtar kelimeleri ile bağlantı havuzunu denetleme" konusuna bakın).  
   
 ### <a name="pool-creation-and-assignment"></a>Havuz oluşturma ve atama  
- Bağlantı açıldığında bir bağlantı havuzu bağlantı dizesiyle bağlantı havuzu ilişkilendiren tam bir eşleştirme algoritmasını temel alınarak oluşturulur. Her bağlantı havuzu bir ayrı bir bağlantı dizesi ile ilişkilidir. Yeni bir bağlantı açıldığında, bağlantı dizesi, mevcut bir havuza tam bir eşleşme değilse, yeni bir havuz oluşturulur.  
+ Bir bağlantı açıldığında, havuzu bağlantıdaki bağlantı dizesiyle ilişkilendiren tam bir eşleşen algoritmaya dayalı bir bağlantı havuzu oluşturulur. Her bağlantı havuzu ayrı bir bağlantı dizesiyle ilişkilendirilir. Yeni bir bağlantı açıldığında, bağlantı dizesi var olan bir havuza tam eşleşme değilse yeni bir havuz oluşturulur.  
   
- Etkin İşlem sonlandırılana kadar oluşturulduktan sonra bağlantı havuzları yok edilmez. Etkin olmayan veya boş havuzu koruma çok az sayıda sistem kaynaklarını kullanır.  
+ Oluşturulduktan sonra, bağlantı havuzları etkin işlem bitene kadar yok edilmez. Etkin olmayan veya boş havuzların saklanması çok az sistem kaynağı kullanır.  
   
 ### <a name="connection-addition"></a>Bağlantı ekleme  
- Her benzersiz bir bağlantı dizesi için bir bağlantı havuzu oluşturulur. Bir havuz oluşturulduğunda, birden çok bağlantı nesneleri oluşturulur ve böylece en az bir havuz boyutu gereksinimini memnun havuzuna eklenmiş. Bağlantılar, en büyük havuz boyutu aşmayacak şekilde gerektiğinde havuzuna eklenir.  
+ Her benzersiz bağlantı dizesi için bir bağlantı havuzu oluşturulur. Bir havuz oluşturulduğunda, en düşük havuz boyutu gereksiniminin karşılanması için birden fazla bağlantı nesnesi oluşturulur ve havuza eklenir. Bağlantı, en fazla havuz boyutuna kadar gerektiği şekilde havuza eklenir.  
   
- Olduğunda bir <xref:System.Data.OracleClient.OracleConnection> istenen nesneyi, kullanılabilir bir bağlantı varsa havuzundan elde edilir. Kullanılabilir olması için bağlantı gerekir şu anda kullanılmayan, eşleşen bir işlem bağlamına sahip veya değil herhangi bir işlem bağlamı ile ilişkili ve sunucu için geçerli bir bağlantı vardır.  
+ Bir <xref:System.Data.OracleClient.OracleConnection> nesne istendiğinde, kullanılabilir bir bağlantı varsa havuzdan alınır. Kullanılabilir olması için bağlantının Şu anda kullanılmamış olması, eşleşen bir işlem bağlamına sahip olması veya hiçbir işlem içeriğiyle ilişkili olmaması ve sunucuya geçerli bir bağlantısı olması gerekir.  
   
- Maksimum havuz boyutuna ulaştı ve kullanılabilir bağlantı yok, isteği sıraya alınır. Bağlantı havuzlayıcı havuza yayınlandıkça bağlantıları tahsis Bu istekler karşılar. Kapalı veya elden bağlantıları geri havuzuna serbest bırakılır.  
+ En büyük havuz boyutuna ulaşılmışsa ve kullanılabilir bir bağlantı yoksa, istek sıraya alınır. Bağlantı havuzlayıcı, havuza geri yayımlandıklarında bağlantıları yeniden bulmaya yönelik bu istekleri karşılar. Bağlantılar, kapalı veya atılmış olmaları durumunda havuza geri yayımlanır.  
   
 ### <a name="connection-removal"></a>Bağlantı kaldırma  
- Uzun süre boşta kaldıktan sonra ya da sunucu ile bağlantı yazıyordunuz havuzlayıcı algılarsa, bağlantı havuzlayıcı havuzdan bir bağlantıyı kaldırır. Bu sunucu ile iletişim kurmak yalnızca denemeden sonra algılanabilmesi olduğunu unutmayın. Artık sunucuya bağlı bir bağlantı bulunması durumunda geçersiz olarak işaretlendi. Bağlantı havuzlayıcı havuzuna serbest bırakılmış ve geçersiz olarak işaretlenmiş nesneler için arayan bağlantı havuzları düzenli aralıklarla tarar. Bu bağlantılar kalıcı olarak kaldırılır.  
+ Bağlantı havuzlayıcı, uzun bir süre boşta kaldıktan sonra havuzdan bir bağlantıyı kaldırır veya havuzlayıcı sunucuyla bağlantının bozulmuş olduğunu algılarsa. Bu, yalnızca sunucusuyla iletişim kurmaya çalıştıktan sonra algılanabileceğini unutmayın. Artık sunucuya bağlı olmayan bir bağlantı bulunursa, geçersiz olarak işaretlenir. Bağlantı havuzlayıcı, havuzda yayınlanan ve geçersiz olarak işaretlenmiş nesneleri arayan bağlantı havuzlarını düzenli olarak tarar. Bu bağlantılar daha sonra kalıcı olarak kaldırılır.  
   
- Bağlantı kayboldu bir sunucuya varsa, bu bağlantı, bağlantı havuzlayıcı değil kesilen bağlantı algıladı ve geçersiz olarak işaretlenmiş, havuzdan kurulabilir. Bu durumda, bir özel durum oluşturulur. Ancak, tekrar havuza bırakın için bağlantı kapatmalısınız.  
+ Kaybolan bir sunucuya bağlantı varsa, bağlantı havuzlayıcı bağlantıyı algılamadıysa ve geçersiz olarak işaretlediği takdirde bu bağlantı havuzdan çizilebilirler. Bu gerçekleştiğinde, bir özel durum oluşturulur. Bununla birlikte, yine de havuzdan yeniden dağıtım yapmak için bağlantıyı kapatmanız gerekir.  
   
- Çağırmayın `Close` veya `Dispose` üzerinde bir `Connection`, `DataReader`, ya da diğer yönetilen nesnelere `Finalize` sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir `Finalize` sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
+ Sınıfınızın `Close` `Finalize` yönteminde bir, veya ya `Connection`da başka `DataReader`bir yönetilen nesneyi çağırmayın `Dispose` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir `Finalize` Yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>İşlem Desteği  
- Bağlantı havuzu ve da atanan göre işlem bağlamı çizilir. İstenen iş parçacığı ve atanmış bağlantı bağlamı eşleşmesi gerekir. Bu nedenle, her bir bağlantı havuzu gerçekten bağlantıları içine ve bunlarla ilişkili hiçbir işlem bağlamı ile ayrılır *N* alt bölümleri her belirli işlem bağlamı ile bağlantılar içerir.  
+ Bağlantılar havuzdan çizilir ve işlem bağlamına göre atanır. İstekte bulunan iş parçacığının ve atanan bağlantının bağlamı eşleşmelidir. Bu nedenle, her bağlantı havuzu kendileriyle ilişkili hiçbir işlem bağlamı olmadan bağlantılara ve her birinin belirli bir işlem bağlamına sahip bağlantıları içeren *N* alt bölümüne bölünmüştür.  
   
- Bağlantı kapalı olduğunda geri havuzu ve onun işlem bağlamına dayalı uygun alt yayımlanır. Dağıtılmış işlem yine de olsa bile bu nedenle, bağlantı oluşturulurken bir hata olmadan kapatabilirsiniz bekleniyor. Bu, tamamlama veya sonraki bir zamanda Dağıtılmış işlemi iptal etmenizi sağlar.  
+ Bir bağlantı kapatıldığında, havuza ve işlem bağlamına göre uygun alt bölüme geri gönderilir. Bu nedenle, dağıtılmış bir işlem hala beklense de bir hata oluşturmadan bağlantıyı kapatabilirsiniz. Bu, dağıtılmış işlemi daha sonra yürütmeniz veya iptal etmenizi sağlar.  
   
-### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Bağlantı dizesi anahtar sözcüklerle bağlantı havuzu denetleme  
- <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> Özelliği <xref:System.Data.OracleClient.OracleConnection> nesnesi için bağlantı havuzu mantıksal davranışını ayarlamak için kullanılan bağlantı dizesi anahtar/değer çiftleri destekler.  
+### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Bağlantı havuzu bağlantı dizesi anahtar sözcükleriyle denetleniyor  
+ <xref:System.Data.OracleClient.OracleConnection> Nesnesinin özelliği, bağlantı havuzu mantığının davranışını ayarlamak için kullanılabilen bağlantı dizesi anahtar/değer çiftlerini destekler. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>  
   
- Aşağıdaki tabloda açıklanmıştır <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> değerler bağlantı havuzu davranışı ayarlamak için kullanabilirsiniz.  
+ Aşağıdaki tabloda, bağlantı havuzu <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> davranışlarını ayarlamak için kullanabileceğiniz değerler açıklanmaktadır.  
   
 |Ad|Varsayılan|Açıklama|  
 |----------|-------------|-----------------|  
-|`Connection Lifetime`|0|Bir bağlantı, havuza geri döner, oluşturulma zamanı geçerli saati ile karşılaştırılır ve bu zaman aralığı (saniye cinsinden) tarafından belirtilen değeri aşarsa bağlantı edildiğinde `Connection Lifetime`. Bu, kümelenmiş yapılandırmalardaki çalışan bir sunucu ve yalnızca çevrimiçi bir sunucu arasında yük dengelemeyi zorlamak için kullanışlıdır.<br /><br /> Sıfır (0) değeri en büyük zaman aşımı havuza alınmış bağlantılarının kesilmesine neden olur.|  
-|`Enlist`|'true'|Zaman `true`, bir işlem bağlamı varsa havuzlayıcı geçerli işlem bağlamı oluşturma iş parçacığının bağlantı otomatik olarak kaydeder.|  
-|`Max Pool Size`|100|Havuzda izin verilen bağlantı sayısı.|  
-|`Min Pool Size`|0|Havuzda tutulan bağlantıları en küçük sayısı.|  
-|`Pooling`|'true'|Zaman `true`, bağlantı uygun havuzdan çizilmiş veya gerekirse, oluşturulan ve uygun havuzuna eklenmiş.|  
+|`Connection Lifetime`|0|Havuza bir bağlantı döndürüldüğünde, oluşturma süresi geçerli zamandan karşılaştırılır ve bu zaman aralığı (saniye cinsinden) tarafından `Connection Lifetime`belirtilen değeri aşarsa bağlantı yok edilir. Bu, çalışan bir sunucu ve daha önce çevrimiçi hale getirilen bir sunucu arasında yük dengelemeyi zorlamak için kümelenmiş yapılandırmalarda yararlıdır.<br /><br /> Sıfır (0) değeri, havuza alınan bağlantıların en uzun zaman aşımı süresine sahip olmasına neden olur.|  
+|`Enlist`|değeri|Ne `true`zaman, bir işlem bağlamı varsa, havuzlayıcı oluşturma iş parçacığının geçerli işlem bağlamındaki bağlantıyı otomatik olarak listeler.|  
+|`Max Pool Size`|100|Havuzda izin verilen en fazla bağlantı sayısı.|  
+|`Min Pool Size`|0|Havuzda tutulan en az bağlantı sayısı.|  
+|`Pooling`|değeri|Ne `true`zaman, bağlantı uygun havuzdan çizilir veya gerekirse, uygun havuza oluşturulur ve eklenir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

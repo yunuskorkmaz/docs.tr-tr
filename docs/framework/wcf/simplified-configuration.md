@@ -2,18 +2,18 @@
 title: Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 5aaca8ae8c456e2377326ee2e9e22c3dcf6a21a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967901"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923007"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
-Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık bir görev olabilir. Çok sayıda farklı seçeneğiniz vardır ve her zaman gerekli ayarları belirlemek kolay değildir. Yapılandırma dosyalarını WCF hizmetleri esnekliğini artırın, ancak bunlar ayrıca sorunları bulmak sabit bir çoğu için işlemcilerden kaynaklanıyor olabilir. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Bu sorunları giderir ve büyüklüğü ve karmaşıklığı ile hizmet yapılandırmasının azaltmak için bir yol sağlar.  
+Windows Communication Foundation (WCF) hizmetleri yapılandırmak karmaşık bir görev olabilir. Birçok farklı seçenek vardır ve hangi ayarların gerekli olduğunu belirlemek her zaman kolay değildir. Yapılandırma dosyaları WCF hizmetlerinin esnekliğini artırırken, ayrıca sorunları bulmak için çok zor olan kaynaktır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]Bu sorunları ele almaktadır ve hizmet yapılandırmasının boyutunu ve karmaşıklığını azaltmak için bir yol sağlar.  
   
 ## <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma  
- WCF hizmeti yapılandırma dosyalarında <`system.serviceModel`> bölüm içeren bir <`service`> barındırılan her hizmet için öğesi. <`service`> Öğesi içeren bir koleksiyon, <`endpoint`> her hizmet ve isteğe bağlı olarak bir dizi hizmet davranışları için açık Uç noktalara belirten öğeler. <`endpoint`> Elementleri bağlama, adresi ve Sözleşme, uç nokta ve isteğe bağlı olarak bağlama yapılandırması ve uç nokta davranışları ortaya. <`system.serviceModel`> Bölümü içerecek bir <`behaviors`> öğesi hizmet veya uç nokta davranışları belirtmenizi sağlar. Aşağıdaki örnekte gösterildiği <`system.serviceModel`> yapılandırma dosyasının.  
+ WCF hizmeti yapılandırma dosyalarında, <`system.serviceModel`> bölümü barındırılan her hizmet için bir <`service`> öğesi içerir. <`service`> Öğesi, her hizmet için sunulan uç`endpoint`noktaları ve isteğe bağlı olarak bir hizmet davranışı kümesini belirten < > öğelerinin bir koleksiyonunu içerir. <`endpoint`> Öğeleri, uç nokta tarafından kullanıma sunulan adresi, bağlamayı ve sözleşmeyi belirtir ve isteğe bağlı olarak yapılandırma ve uç nokta davranışları bağlama. <`system.serviceModel`> Bölümü Ayrıca hizmet veya uç nokta`behaviors`davranışları belirtmenize izin veren bir < > öğesi içerir. Aşağıdaki örnek, bir yapılandırma dosyasının`system.serviceModel`< > bölümünü gösterir.  
   
 ```  
 <system.serviceModel>  
@@ -46,13 +46,13 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] gereksinimini ortadan kaldırarak daha kolay bir WCF hizmeti yapılandırma yapar <`service`> öğesi. Değil eklerseniz bir <`service`> bölümünde veya tüm uç noktaların ekleme bir <`service`> bölüm ve hizmetinizi programlı olarak tanımlamıyor tüm uç noktaları ve hizmetiniz için birer tane olmak üzere otomatik olarak bir varsayılan uç nokta kümesine eklenir Hizmet temel adresi ve hizmetiniz tarafından uygulanan her bir sözleşme için. Her birinde Bu uç noktaları, uç nokta adresini temel adresine karşılık gelen, bağlama temel adres düzeni tarafından belirlenir ve hizmetiniz tarafından uygulanan bir sözleşmedir. Herhangi bir uç noktaları veya hizmet davranışları belirtin veya bağlama ayarı değişiklik gerekmez, hizmet yapılandırma dosyasını belirtmeniz gerekmez. Bir hizmeti iki sözleşmeleri uygular ve ana bilgisayar hem HTTP hem de TCP aktarımlarını etkinleştirir dört varsayılan uç noktalar, her aktarım kullanarak her bir sözleşme için bir hizmet konağı oluşturur. Hizmet ana bilgisayarı varsayılan uç noktalar oluşturmak için kullanılacak hangi bağlamaları bilmeniz gerekir. Bu ayarları belirtilmiş bir <`protocolMappings`> içinde bölümünde <`system.serviceModel`> bölümü. <`protocolMappings`> Bölümü, taşıma protokol şemaları bağlama türleri için eşlenmiş bir listesini içerir. Hizmet ana bilgisayarını kullanmak için hangi bağlama belirlemek için geçirilen temel adresler kullanır. Aşağıdaki örnekte <`protocolMappings`> öğesi.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<`service`> öğesi gereksinimini kaldırarak bir WCF hizmetini yapılandırmayı kolaylaştırır. Bir <`service`> bölümü ekleyemez veya bir <`service`> bölümünde herhangi bir uç nokta ekleyemez ve hizmetiniz program aracılığıyla herhangi bir uç nokta tanımlamıyorsa, her biri için bir tane olmak üzere hizmetinize otomatik olarak bir dizi varsayılan uç noktası eklenir. hizmet temel adresi ve hizmetiniz tarafından uygulanan her sözleşme için. Bu uç noktaların her birinde, uç nokta adresi temel adrese karşılık gelir, bağlama ise temel adres düzeni tarafından belirlenir ve sözleşme hizmetiniz tarafından uygulanan bir sözleşmedir. Herhangi bir uç nokta veya hizmet davranışı belirtmeniz veya herhangi bir bağlama ayarı değişikliği yapmanız gerekmiyorsa, bir hizmet yapılandırma dosyası belirtmeniz gerekmez. Bir hizmet iki sözleşme uygularsa ve ana bilgisayar hem HTTP hem de TCP taşımalarını etkinleştirse, hizmet ana bilgisayarı her bir taşıyıcı kullanan her bir sözleşme için dört varsayılan uç nokta oluşturur. Varsayılan uç noktalar oluşturmak için hizmet ana bilgisayarının hangi bağlamaları kullanacağınızı bilmeleri gerekir. Bu ayarlar, <`protocolMappings``system.serviceModel`> bölümünün içindeki bir < > bölümünde belirtilmiştir. <`protocolMappings`> Bölümü, bağlama türlerine eşlenmiş Aktarım Protokolü düzenlerinin bir listesini içerir. Hizmet ana bilgisayarı, hangi bağlamanın kullanılacağını belirleyen, kendisine geçirilen temel adresleri kullanır. Aşağıdaki örnek <`protocolMappings`> öğesini kullanır.  
   
 > [!WARNING]
->  Varsayılan bağlamaları veya davranışlar gibi yapılandırma öğelerini değiştirme, bu varsayılan bağlamaları ve davranışları kullanabilecek beri yapılandırma hiyerarşisinde daha düşük düzeylerde tanımlı hizmetleri etkileyebilir. Bu nedenle, kişi varsayılan bağlamaları ve davranışları değiştirir bu değişiklikleri hiyerarşideki diğer hizmetleri etkileyebilir farkında olması gerekir.  
+>  Bağlamalar veya davranışlar gibi varsayılan yapılandırma öğelerinin değiştirilmesi, bu varsayılan bağlamaları ve davranışları kullandıklarından, yapılandırma hiyerarşisinin daha düşük düzeylerinde tanımlanan Hizmetleri etkileyebilir. Bu nedenle, varsayılan bağlamaları ve davranışları değiştirmenin, bu değişikliklerin hiyerarşideki diğer hizmetleri etkileyebileceğini unutmayın.  
   
 > [!NOTE]
->  Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) altında barındırılan hizmetler, sanal dizin kendi taban adresi olarak kullanın.  
+> Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) altında barındırılan hizmetler, sanal dizini kendi temel adresleri olarak kullanır.  
   
 ```xml  
 <protocolMapping>  
@@ -63,11 +63,11 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 </protocolMapping>  
 ```  
   
- Önceki örnekte, "http" düzeni ile başlayan bir taban adresi ile bir uç nokta kullanan <xref:System.ServiceModel.BasicHttpBinding>. "Net.tcp" düzeni başlatan temel adresine sahip bir uç nokta kullanan <xref:System.ServiceModel.NetTcpBinding>. Yerel bir App.config veya Web.config dosyasındaki ayarları geçersiz kılabilirsiniz.  
+ Önceki örnekte, "http" düzeniyle başlayan temel adrese sahip bir uç nokta öğesini kullanır <xref:System.ServiceModel.BasicHttpBinding>. Temel adresi "net. TCP" düzeniyle başlayan bir uç nokta, <xref:System.ServiceModel.NetTcpBinding>kullanır. Yerel bir App. config veya Web. config dosyasındaki ayarları geçersiz kılabilirsiniz.  
   
- Her öğe içinde <`protocolMappings`> bölümü, bir şema ve bağlama belirtmelisiniz. İsteğe bağlı olarak belirtebilirsiniz bir `bindingConfiguration` içinde bir bağlama yapılandırmasını belirten Öznitelik <`bindings`> yapılandırma dosyası bölümünü. Hayır ise `bindingConfiguration` belirtilirse, uygun bağlama türü anonim bir bağlama yapılandırmasını kullanılır.  
+ <`protocolMappings`> Bölümündeki her öğe için bir şema ve bir bağlama belirtilmelidir. İsteğe bağlı olarak, yapılandırma `bindingConfiguration` dosyasının <`bindings`> bölümünde bir bağlama yapılandırması belirten bir özniteliği belirtebilir. Hayır `bindingConfiguration` belirtilirse, uygun bağlama türünün adsız bağlama yapılandırması kullanılır.  
   
- Hizmet davranışları, varsayılan uç noktaları için anonim kullanılarak yapılandırılır <`behavior`> içinde bölümler <`serviceBehaviors`> bölümler. Tüm adlandırılmamış <`behavior`> öğeleri içinde <`serviceBehaviors`> Hizmet davranışları yapılandırmak için kullanılır. Örneğin, aşağıdaki yapılandırma dosyası, konak içindeki tüm hizmetleri için hizmet meta verileri yayımlama sağlar.  
+ Hizmet davranışları, <`behavior``serviceBehaviors`> bölümleri içindeki anonim < > bölümleri kullanılarak varsayılan uç noktalar için yapılandırılır. `behavior`<`serviceBehaviors`> İçindeki adlandırılmamış < > öğeleri hizmet davranışlarını yapılandırmak için kullanılır. Örneğin, aşağıdaki yapılandırma dosyası konak içindeki tüm hizmetler için hizmet meta verileri yayımlamayı mümkün bir şekilde sunar.  
   
 ```xml  
 <system.serviceModel>  
@@ -82,9 +82,9 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
  </system.serviceModel>  
 ```  
   
- Uç nokta davranışları, anonim kullanılarak yapılandırılır <`behavior`> içinde bölümler <`serviceBehaviors`> bölümler.  
+ Uç nokta davranışları <`behavior``serviceBehaviors`> bölümleri içindeki anonim < > bölümleri kullanılarak yapılandırılır.  
   
- Aşağıdaki örnek, Basitleştirilmiş yapılandırma modelini kullanan bu konunun başında bir eşdeğer bir yapılandırma dosyasıdır.  
+ Aşağıdaki örnek, Basitleştirilmiş yapılandırma modelini kullanan bu konunun başındaki bir yapılandırma dosyasıdır.  
   
 ```xml  
 <system.serviceModel>
@@ -111,7 +111,7 @@ Windows Communication Foundation (WCF) hizmetlerini yapılandırmak, karmaşık 
 ```  
   
 > [!IMPORTANT]
->  Bu özellik yalnızca WCF Hizmeti Yapılandırması istemci yapılandırmasını ilişkilendirir. Çoğu durumda, WCF istemci yapılandırması svcutil.exe veya Visual Studio'dan bir hizmet başvurusu ekleme gibi bir araç tarafından oluşturulur. Bir WCF istemcisi elle yapılandırıyorsanız eklemeniz gerekecektir bir \<istemci > yapılandırma öğesi ve çağırmak istediğiniz uç nokta belirtin.  
+> Bu özellik yalnızca WCF hizmeti yapılandırmasıyla ilgilidir, istemci yapılandırması değildir. Çoğu kez, WCF istemci yapılandırması Svcutil. exe gibi bir araçla veya Visual Studio 'dan bir hizmet başvurusu eklenerek oluşturulacaktır. Bir WCF istemcisini el ile yapılandırıyorsanız, yapılandırmaya bir \<istemci > öğesi eklemeniz ve çağırmak istediğiniz uç noktaları belirtmeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,29 +2,29 @@
 title: model-declared function
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: a0bea36693122c77d9c1abdf4484ee8e68627a0c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943923"
 ---
 # <a name="model-declared-function"></a>model-declared function
-A *model olarak bildirilen işlev* kavramsal modelde bildirildi, ancak bu kavramsal modelde tanımlı değil, bir işlevdir. İşlevi barındırma veya depolama ortamında tanımlanabilir. Örneğin, bir model olarak bildirilen işlev dolayısıyla kavramsal modelde sunucu tarafında işlevselliği kullanıma sunma, bir veritabanında tanımlı bir işlev eşleştirilmiş olabilir.  
+Model olarak tanımlanmış bir *işlev* , kavramsal modelde belirtilen ancak bu kavramsal modelde tanımlı olmayan bir işlevdir. İşlev barındırma veya depolama ortamında tanımlanmış olabilir. Örneğin, model tarafından tanımlanan bir işlev, veritabanında tanımlanmış bir işlevle eşleştirilebilir ve bu nedenle kavramsal modelde sunucu tarafı işlevselliği ortaya çıkabilir.  
   
- Model olarak bildirilen bir işlevin bildirimi, aşağıdaki bilgileri içerir:  
+ Model tarafından tanımlanan bir işlevin bildirimi, aşağıdaki bilgileri içerir:  
   
-- İşlevin adı. (Gerekli)  
+- İşlevin adı. Istenir  
   
 - Dönüş değerinin türü. (İsteğe bağlı)  
   
     > [!NOTE]
-    >  Dönüş değeri belirtilmişse, dönüş türü void alır.  
+    > Dönüş değeri belirtilmemişse, dönüş türü void olur.  
   
-- Parametre adı ve türü de dahil olmak üzere, parametre bilgileri. (İsteğe bağlı)  
+- Parametre adı ve türü dahil olmak üzere parametre bilgileri. (İsteğe bağlı)  
   
 ## <a name="example"></a>Örnek  
- [ADO.NET Entity Framework](./ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) kavramsal modeller tanımlamak için. CSDL bir model olarak bildirilen bir işlevi bir işlev içeri aktarma uygulamasıdır (kullanarak [Functionımport öğesi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)). Aşağıdaki CSDL işlev tanımını içeri aktarma ile varlık kapsayıcısı tanımlar. Dönüş türü belirtildiği işlevi için dönüş türü void olduğunu unutmayın.  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. CSDL 'de, model tarafından tanımlanan bir işlevin bir uygulamasý bir işlev içeri aktarmasıdır ( [FunctionImport öğesi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#functionimport-element-csdl)kullanılarak). Aşağıdaki CSDL, bir işlev içeri aktarma tanımına sahip bir varlık kapsayıcısını tanımlar. Dönüş türü belirtilmediği için işlevin dönüş türünün void olduğunu unutmayın.  
   
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   

@@ -1,16 +1,16 @@
 ---
-title: < system.serviceModel > İş akışı
+title: < System. serviceModel > iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
-ms.openlocfilehash: 5580bf570c4c728b526bd62109b48c3ccc18943a
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: faa8154c4d7ac5c6aa2f9f1707cf8f0d39eefad5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422883"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947361"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel > İş akışı
+# <a name="systemservicemodel-of-workflow"></a>\<iş akışının System. serviceModel >
 Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -101,8 +101,8 @@ Bu yapılandırma bölümü tüm iş akışı yapılandırma öğeleri içerir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışlar >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behaviors-of-workflow.md)|Bu bölüm tanımlar **serviceBehaviors** koleksiyonu.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranışı öğesi kendi benzersiz tarafından tanımlanır **adı** özniteliği.|  
-|[\<İzleme >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|Bir iş akışı hizmeti için izleme ayarları tanımlamak için bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve kendi yapılandırmasını daha fazla bilgi için bkz: [takip ve izleme iş akışı](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [yapılandırma izleme için bir iş akışı](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
+|[\<davranışlar >](behaviors-of-workflow.md)|Bu bölüm **Servicedavranışlar** koleksiyonunu tanımlar.  Koleksiyondaki her öğe hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi, benzersiz **ad** özniteliği tarafından tanımlanır.|  
+|[\<İzleme >](tracking.md)|Bir iş akışı hizmeti için izleme ayarlarını tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.<br /><br /> İş akışı izleme ve yapılandırması hakkında daha fazla bilgi için bkz. iş akışı [izleme ve izleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md) ve [izleme yapılandırma](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md).|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

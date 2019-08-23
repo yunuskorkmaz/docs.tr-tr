@@ -2,42 +2,42 @@
 title: Sorgu Desteği
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: db3580d0a29353aac027bddd8f040d3085d674af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e281b5ae7a41bd282f8e7c7eb9db6f99ef5487f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948934"
 ---
 # <a name="support-for-queries"></a>Sorgu Desteği
-SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydeder. Kullanıcılar için sorgulayabilir örnekleri, bu özellikleri bağlı. Aşağıdaki liste, bazı iyi bilinen bu özellikleri içerir:  
+SQL Iş akışı örneği deposu depodaki bir dizi iyi bilinen özelliği kaydeder. Kullanıcılar, bu özelliklere göre örnekleri sorgulayabilir. Aşağıdaki listede, bu iyi bilinen özelliklerden bazıları yer almaktadır:  
   
 - **Site adı.** Hizmeti içeren Web sitesinin adı.  
   
-- **Uygulama göreli yolu.** Uygulamanın Web sitesini göreli yolu.  
+- **Göreli uygulama yolu.** Web sitesine göre uygulamanın yolu.  
   
-- **Hizmet göreli yolu.** Hizmet uygulaması göreli yolu.  
+- **Göreli hizmet yolu.** Uygulamaya göre hizmetin yolu.  
   
 - **Hizmet adı.** Hizmetin adı.  
   
-- **Hizmet Namespace.** Hizmetin kullandığı ad alanının adı.  
+- **Hizmet ad alanı.** Hizmetin kullandığı ad alanının adı.  
   
 - **Geçerli makine.**  
   
-- **Son makine**. İş akışı hizmet örneği son kez çalıştırıldığı bir bilgisayar.  
+- **Son makine**. İş akışı hizmeti örneğinin son çalıştırıldığı bilgisayar.  
   
 > [!NOTE]
->  İş akışı hizmeti konağı kullanarak şirket içinde barındırılan senaryoları için yalnızca son dört özellikleri doldurulur. İş akışı uygulama senaryoları için yalnızca en son özellik doldurulur.  
+> Iş akışı hizmeti ana bilgisayarı kullanan şirket içinde barındırılan senaryolar için yalnızca son dört Özellik doldurulur. Iş akışı uygulama senaryolarında yalnızca son özellik doldurulur.  
   
- İş akışı çalışma zamanı ilk üç özellikleri için değer sağlıyor. İş akışı hizmeti konağı için değer sağlayan **askıya alma nedeni** özelliği. SQL iş akışı örneği Store kendisi için değer sağlıyor **son güncelleştirilen makine** özelliği.  
+ İş akışı çalışma zamanı, ilk üç özellik için değerler sağlar. İş akışı hizmeti Konağı, **askıya alma nedeni** özelliğinin değerini sağlar. SQL Iş akışı örneği deposunun kendisi, **son güncelleştirilmiş makine** özelliği için değerler sağlar.  
   
- SQL iş akışı örneği Store özellik de Kalıcılık veritabanı ve belirttiğiniz değerleri depolamak kullanmak istediğiniz özel özellikler sorgularda kullanmak istediğinizi belirtmek olanak sağlar. Özel promosyonlar hakkında daha fazla bilgi için bkz: [Store genişletilebilirlik](store-extensibility.md).  
+ SQL Iş akışı örneği deposu özelliği ayrıca, değerlerini Kalıcılık veritabanında depolamak istediğiniz ve sorgularda kullanmak istediğiniz özel özellikleri belirtmenize imkan tanır. Özel promosyonlar hakkında daha fazla bilgi için bkz. [depolama genişletilebilirliği](store-extensibility.md).  
   
 ## <a name="views"></a>Görünümler  
- Örnek depo, aşağıdaki görünümleri içerir. Bkz: [Kalıcılık veritabanı şeması](persistence-database-schema.md) daha ayrıntılı bilgi için.  
+ Örnek deposu aşağıdaki görünümleri içerir. Daha fazla ayrıntı için bkz. [Kalıcılık veritabanı şeması](persistence-database-schema.md) .  
   
-### <a name="the-instances-view"></a>Örnekleri görüntüle  
- Örnekler görünümü, aşağıdaki alanları içerir:  
+### <a name="the-instances-view"></a>Örnekler görünümü  
+ Örnekler görünümü aşağıdaki alanları içerir:  
   
 1. **Kimlik**  
   
@@ -45,7 +45,7 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
   
 3. **CreationTime**  
   
-4. **lastUpdatedTime**  
+4. **LastUpdatedTime**  
   
 5. **ServiceDeploymentId**  
   
@@ -53,7 +53,7 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
   
 7. **SuspensionReason**  
   
-8. **ActiveBookmarks**  
+8. **Activeyer Işaretleri**  
   
 9. **CurrentMachine**  
   
@@ -61,9 +61,9 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
   
 11. **ExecutionStatus**  
   
-12. **Isınitialized**  
+12. **IsInitialized**  
   
-13. **IsSuspended**  
+13. **Isaskıya alındı**  
   
 14. **IsCompleted**  
   
@@ -77,21 +77,21 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
   
 19. **WriteOnlyComplexDataProperties**  
   
-### <a name="the-servicedeployments-view"></a>ServiceDeployments görüntüle  
- ServiceDeployments görünümü, aşağıdaki alanları içerir:  
+### <a name="the-servicedeployments-view"></a>Servicedağıtımlar görünümü  
+ Servicedağıtımlar görünümü aşağıdaki alanları içerir:  
   
-1. **Site adı**  
+1. **SiteName**  
   
 2. **RelativeServicePath**  
   
 3. **RelativeApplicationPath**  
   
-4. **serviceName**  
+4. **HizmetAdı**  
   
 5. **ServiceNamespace**  
   
-### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görüntüle  
- InstancePromotedProperties görünümü, aşağıdaki alanları içerir. Yükseltilen özellikleri hakkında ayrıntılı bilgi için bkz. [Store genişletilebilirlik](store-extensibility.md) konu.  
+### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties görünümü  
+ InstancePromotedProperties görünümü aşağıdaki alanları içerir. Yükseltilen özelliklerle ilgili ayrıntılar için bkz. [depolama genişletilebilirliği](store-extensibility.md) konusu.  
   
 1. **InstanceId**  
   
@@ -99,4 +99,4 @@ SQL iş akışı örneği Store iyi bilinen özellikler kümesi deposuna kaydede
   
 3. **PromotionName**  
   
-4. **Değer #** (alanlardan bir dizi **Value1** için **Value64**).
+4. **Değer #** ( **değer1** ile **Value64**arasında bir alan aralığı).

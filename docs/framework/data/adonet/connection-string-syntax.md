@@ -2,25 +2,25 @@
 title: Bağlantı Dizesi Söz Dizimi
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 4ec2b8a0a478f59ca66f8699e7846004a3a409cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583608"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949465"
 ---
 # <a name="connection-string-syntax"></a>Bağlantı Dizesi Söz Dizimi
-Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne <xref:System.Data.Common.DbConnection> sağlayıcıya özgü yanı sıra <xref:System.Data.Common.DbConnection.ConnectionString%2A> özelliği. Belirli bir bağlantı dizesi söz dizimi tüm sağlayıcılar için belgelenen kendi `ConnectionString` özelliği. Aşağıdaki tablo, .NET Framework'e dahil edilen dört veri sağlayıcıları listeler.  
+Her .NET Framework veri sağlayıcısının, sağlayıcıya `Connection` özgü <xref:System.Data.Common.DbConnection.ConnectionString%2A> bir özelliği ve <xref:System.Data.Common.DbConnection> öğesinden devralan bir nesnesi vardır. Her sağlayıcının özel bağlantı dizesi söz dizimi, `ConnectionString` özelliğinde belgelenmiştir. Aşağıdaki tabloda .NET Framework bulunan dört veri sağlayıcısı listelenmektedir.  
   
-|.NET framework veri sağlayıcısı|Açıklama|  
+|.NET Framework veri sağlayıcısı|Açıklama|  
 |----------------------------------|-----------------|  
-|<xref:System.Data.SqlClient>|Microsoft SQL Server için veri erişim sağlar. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.|  
-|<xref:System.Data.OleDb>|OLE DB kullanılarak kullanıma sunulan veri kaynakları için veri erişim sağlar. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>.|  
-|<xref:System.Data.Odbc>|ODBC kullanarak kullanıma sunulan veri kaynakları için veri erişim sağlar. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>.|  
-|<xref:System.Data.OracleClient>|Version 8.1.7 Oracle için veri erişimi sağlar veya üzeri. Bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.|  
+|<xref:System.Data.SqlClient>|Microsoft SQL Server için veri erişimi sağlar. Bağlantı dizesi sözdizimi hakkında daha fazla bilgi için bkz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.|  
+|<xref:System.Data.OleDb>|OLE DB kullanılarak sunulan veri kaynakları için veri erişimi sağlar. Bağlantı dizesi sözdizimi hakkında daha fazla bilgi için bkz <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>.|  
+|<xref:System.Data.Odbc>|ODBC kullanılarak sunulan veri kaynakları için veri erişimi sağlar. Bağlantı dizesi sözdizimi hakkında daha fazla bilgi için bkz <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A>.|  
+|<xref:System.Data.OracleClient>|Oracle sürüm 8.1.7 veya üzeri için veri erişimi sağlar. Bağlantı dizesi sözdizimi hakkında daha fazla bilgi için bkz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.|  
   
 ## <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular  
- ADO.NET 2.0, .NET Framework veri sağlayıcıları için aşağıdaki bağlantı dizesi oluşturucular kullanıma sunuldu.  
+ ADO.NET 2,0, .NET Framework veri sağlayıcıları için aşağıdaki bağlantı dizesi oluşturuculara tanıtılmıştır.  
   
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
@@ -30,10 +30,10 @@ Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Bağlantı dizesi Oluşturucular, kodunuzdaki bağlantı dizesi değerlerini el ile birleştirilecek zorunda kalmazsınız sözdizimsel açıdan geçerli bağlantı dizeleri çalışma zamanında oluşturmak olanak tanır. Daha fazla bilgi için [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Bağlantı dizesi oluşturucuları, çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturma izni verir, bu nedenle kodunuzda bağlantı dizesi değerlerini el ile birleştirmek zorunda değilsiniz. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Windows Kimlik Doğrulaması  
- Windows kimlik doğrulaması kullanmanızı öneririz (bazen denir *tümleşik güvenliği*) destekleyen veri kaynaklarına bağlanmak için. Bağlantı dizesinde kullanılan söz dizimi sağlayıcıya göre değişir. Aşağıdaki tablo, .NET Framework veri sağlayıcıları ile kullanılan Windows kimlik doğrulaması söz dizimini gösterir.  
+ Bunu destekleyen veri kaynaklarına bağlanmak için Windows kimlik doğrulaması (bazen *Tümleşik güvenlik*olarak adlandırılır) kullanmanızı öneririz. Bağlantı dizesinde kullanılan sözdizimi sağlayıcıya göre değişir. Aşağıdaki tabloda .NET Framework veri sağlayıcılarıyla kullanılan Windows kimlik doğrulama sözdizimi gösterilmektedir.  
   
 |Sağlayıcı|Sözdizimi|  
 |--------------|------------|  
@@ -43,16 +43,16 @@ Her .NET Framework veri sağlayıcısı sahip bir `Connection` devralınan nesne
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` ile kullanıldığında bir özel durum oluşturur `OleDb` sağlayıcısı.  
+> `Integrated Security=true``OleDb` sağlayıcıyla birlikte kullanıldığında bir özel durum oluşturur.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient bağlantı dizeleri  
-Söz diziminin bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi belirtilmiştir <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> özelliği. Kullanabileceğiniz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> alınacak veya ayarlanacak bir SQL Server veritabanı için bir bağlantı dizesi özelliği. SQL Server'ın önceki bir sürüme bağlanmanız gerekirse, OleDb için .NET Framework veri sağlayıcısı kullanmanız gerekir (<xref:System.Data.OleDb>). Çoğu bağlantı dizesi anahtar sözcükleri de özelliklerinde eşleyin <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+Bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesinin sözdizimi, <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> özelliğinde belgelenmiştir. Özelliği, <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> bir SQL Server veritabanı için bağlantı dizesi almak veya ayarlamak için kullanabilirsiniz. SQL Server önceki bir sürümüne bağlanmanız gerekiyorsa, OleDb için .NET Framework Veri Sağlayıcısı kullanmanız gerekir (<xref:System.Data.OleDb>). Birçok bağlantı dizesi anahtar sözcüğü, <xref:System.Data.SqlClient.SqlConnectionStringBuilder>içindeki özellikleriyle da eşlenir.  
 
 > [!IMPORTANT]
->  Varsayılan ayarı `Persist Security Info` anahtar sözcüğü `false`. Bu ayarın `true` veya `yes` bağlantı açıldıktan sonra bağlantıdan alınacağı kullanıcı kimliği ve parola gibi güvenlik bakımından hassas bilgiler sağlar. Tutun `Persist Security Info` kümesine `false` güvenilmeyen bir kaynağa erişim hassas bağlantı dizesi bilgilerini yok emin olmak için.  
+> `Persist Security Info` Anahtar sözcüğü için varsayılan ayar. `false` Bağlantı açıldıktan sonra `true` bağlantıdan `yes` alınabilmesi için, Kullanıcı kimliği ve parola dahil olmak üzere güvenliğe duyarlı bilgilerin olarak ayarlanması veya buna izin vermek için. Güvenilir olmayan bir `false` kaynağın hassas bağlantı dizesi bilgilerine erişimi olmadığından emin olmak için olarak ayarlayın.`Persist Security Info`  
 
-### <a name="windows-authentication-with-sqlclient"></a>Windows kimlik doğrulaması ile SqlClient 
- Bağlanmak için Windows kimlik doğrulaması kullanan her sözdizimi aşağıdaki biçimlerden birini **AdventureWorks** yerel bir sunucuda veritabanı.  
+### <a name="windows-authentication-with-sqlclient"></a>SqlClient ile Windows kimlik doğrulaması 
+ Aşağıdaki sözdizimi biçimlerinin her biri, yerel bir sunucuda **AdventureWorks** veritabanına bağlanmak Için Windows kimlik doğrulamasını kullanır.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -63,85 +63,85 @@ Söz diziminin bir <xref:System.Data.SqlClient.SqlConnection> bağlantı dizesi 
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-authentication-with-sqlclient"></a>SQL Server kimlik doğrulamasını SqlClient   
- Windows kimlik doğrulaması, SQL Server'a bağlanmak için tercih edilir. Ancak, SQL Server kimlik doğrulaması gerekiyorsa, bir kullanıcı adı ve parola belirtmek için aşağıdaki sözdizimini kullanın. Bu örnekte, yıldız işareti, geçerli kullanıcı adı ve parola temsil etmek için kullanılır.  
+### <a name="sql-server-authentication-with-sqlclient"></a>SqlClient SQL Server kimlik doğrulaması   
+ SQL Server bağlanmak için Windows kimlik doğrulaması tercih edilir. Ancak, SQL Server kimlik doğrulaması gerekliyse, bir Kullanıcı adı ve parola belirtmek için aşağıdaki sözdizimini kullanın. Bu örnekte, geçerli bir Kullanıcı adı ve parolasını göstermek için yıldız işaretleri kullanılır.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
 
-Ne zaman Azure SQL veritabanı veya Azure SQL Data warehouse'a bağlanmak ve biçiminde bir oturum açma adı sağlamak `user@servername`, emin `servername` oturum açma değeri eşler için sağlanan değer `Server=`.
+Azure SQL veritabanı veya Azure SQL veri ambarı 'na bağlanıp biçimde `user@servername`bir oturum açma sağladığınızda, oturum açma alanındaki `servername` değerin için `Server=`belirtilen değerle eşleştiğinden emin olun.
 
 > [!NOTE]
->  Windows kimlik doğrulaması SQL Server oturumları daha önceliklidir. Tümleşik güvenlik belirtmek iyi bir kullanıcı adı ve parola, kullanıcı adı ve parola yoksayılacak ve Windows kimlik doğrulaması kullanılır = true.  
+> Windows kimlik doğrulaması SQL Server oturum açma bilgilerine göre önceliklidir. Hem tümleşik güvenlik = doğru hem de bir Kullanıcı adı ve parola belirtirseniz, Kullanıcı adı ve parola yok sayılır ve Windows kimlik doğrulaması kullanılır.  
 
-### <a name="connect-to-a-named-instance-of-sql-server"></a>SQL Server'ın adlandırılmış bir örneğine bağlanın
-SQL Server'ın adlandırılmış bir örneğine bağlanmak için *sunucu adı\örnek adı* söz dizimi.  
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Adlandırılmış bir SQL Server örneğine bağlanma
+Adlandırılmış bir SQL Server örneğine bağlanmak için *sunucu adı \ örnek adı* sözdizimini kullanın.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
  
-Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> özelliği `SqlConnectionStringBuilder` bir bağlantı dizesi oluştururken örneği adı. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Özelliği bir <xref:System.Data.SqlClient.SqlConnection> nesne, salt okunur.  
+Ayrıca, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> `SqlConnectionStringBuilder` bir bağlantı dizesi oluştururken öğesinin özelliğini örnek adı olarak ayarlayabilirsiniz. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Bir<xref:System.Data.SqlClient.SqlConnection> nesnenin özelliği salt okunurdur.  
   
-### <a name="type-system-version-changes"></a>Tür sistemi sürüm değişikliği  
- `Type System Version` Anahtar sözcüğü bir <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> SQL Server türleri istemci-tarafı gösterimini belirtir. Bkz: <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> hakkında daha fazla bilgi için `Type System Version` anahtar sözcüğü.  
+### <a name="type-system-version-changes"></a>Sistem sürümü değişikliklerini yazın  
+ İçindeki anahtar sözcüğü SQL Server türlerinin istemci tarafı gösterimini belirler.<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> `Type System Version` Anahtar`Type System Version` sözcüğü hakkında daha fazla bilgi için bkz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> .  
   
-## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Express kullanıcı örnekleri bağlanmak ve SQL sunucusuna iliştiriliyor  
- Kullanıcı örnekleri, SQL Server Express özelliğidir. Ekleme ve yönetici ayrıcalıklarına gerek duymadan bir SQL Server veritabanını çalıştırmak bir en az ayrıcalıklı yerel Windows hesabı çalıştıran kullanıcının sağlarlar. Bir kullanıcı örneği, kullanıcının Windows kimlik bilgileri ile değil hizmet olarak yürütür.  
+## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express Kullanıcı örneklerine bağlanma ve Iliştirme  
+ Kullanıcı örnekleri SQL Server Express bir özelliktir. Bu kişiler, en az ayrıcalıklı yerel Windows hesabında çalışan bir kullanıcının yönetici ayrıcalıklarına gerek duymadan bir SQL Server veritabanı eklemesi ve çalıştırmasına izin verir. Kullanıcı örneği, bir hizmet olarak değil kullanıcının Windows kimlik bilgileriyle yürütülür.  
   
- Kullanıcı örnekleri ile çalışma hakkında daha fazla bilgi için bkz. [SQL Server Express kullanıcı örnekleri](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Kullanıcı örnekleriyle çalışma hakkında daha fazla bilgi için bkz. [SQL Server Express Kullanıcı örnekleri](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate kullanma  
- `TrustServerCertificate` Anahtar sözcüğü, yalnızca geçerli bir sertifika ile bir SQL Server örneğine bağlanırken geçerlidir. Zaman `TrustServerCertificate` ayarlanır `true`, Aktarım katmanı kanalını şifrelemek ve güven doğrulamak için sertifika zinciri walking atlamak için SSL kullanır.  
+ `TrustServerCertificate` Anahtar sözcüğü yalnızca geçerli bir sertifikayla SQL Server örneğine bağlanılırken geçerlidir. `TrustServerCertificate` , Olarak`true`ayarlandığında, aktarım katmanı, kanalı şifrelemek ve güveni doğrulamak üzere sertifika zincirini atlamak için SSL kullanır.  
   
 ```  
 "TrustServerCertificate=true;"   
 ```  
   
 > [!NOTE]
->  Varsa `TrustServerCertificate` ayarlanır `true` ve şifreleme açıktır, sunucuda belirtilen şifreleme düzeyini kullanılacak bile `Encrypt` ayarlanır `false` bağlantı dizesindeki. Aksi halde bağlantı başarısız olur.  
+> , Olarak `true` ayarlanmışsa ve şifreleme açıksa, bağlantı dizesinde olarak `false` ayarlanmış olsa bile `Encrypt` , sunucuda belirtilen şifreleme düzeyi kullanılır. `TrustServerCertificate` Aksi takdirde bağlantı başarısız olur.  
   
 ### <a name="enabling-encryption"></a>Şifrelemeyi etkinleştirme  
- Sunucuda bir sertifika sağlanmadığı durumlarda şifrelemeyi etkinleştirmek için **zorla Protokolü şifreleme** ve **güvenilir sunucu sertifikası** seçenekleri, SQL Server Yapılandırma Yöneticisi'nde ayarlanmış olması gerekir. Bu durumda, sunucuda doğrulanabilir sertifika sağladıysanız şifreleme otomatik olarak imzalanan sertifikasını doğrulama olmadan kullanın.  
+ Bir sertifika sunucuda sağlanmamışsa şifrelemeyi etkinleştirmek için, SQL Server Yapılandırma Yöneticisi ' de **zorlamalı protokol şifrelemesi** ve **güven sunucusu sertifikası** seçenekleri ayarlanmalıdır. Bu durumda, sunucuda herhangi bir doğrulanabilen sertifika sağlanmadıysa şifreleme, doğrulama olmadan otomatik olarak imzalanan bir sunucu sertifikası kullanacaktır.  
   
- Uygulama ayarları, SQL Server'da yapılandırılan güvenlik düzeyini indiremezsiniz, ancak isteğe bağlı olarak güçlendirebilirsiniz. Bir uygulama şifreleme ayarlayarak isteyebilir `TrustServerCertificate` ve `Encrypt` anahtar sözcükler `true`, olduğunda bile sunucu sertifikası sağlanmamış şifreleme gerçekleşir, güvence altına alır ve **zorla Protokolü şifreleme**  istemci için yapılandırılmadı. Ancak, varsa `TrustServerCertificate` etkin istemci yapılandırmasında sağlanan sunucu sertifikası hala gereklidir.  
+ Uygulama ayarları SQL Server ' de yapılandırılan güvenlik düzeyini azaltamaz, ancak isteğe bağlı olarak güçlendirebilirsiniz. Bir uygulama `TrustServerCertificate` , ve `Encrypt` anahtar sözcüklerini olarak `true`ayarlayarak şifrelemeyi isteyebilir, bir sunucu sertifikası sağlanmadıysa ve **zorlamalı protokol şifrelemesi** olmadığında bile şifrelemeyi garanti altına alır. istemci için yapılandırıldı. Ancak, `TrustServerCertificate` istemci yapılandırmasında etkinleştirilmemişse, sağlanan bir sunucu sertifikası yine de gereklidir.  
   
- Aşağıdaki tablo, tüm durumları açıklar.  
+ Aşağıdaki tabloda tüm durumlar açıklanmaktadır.  
   
-|Şifreleme Protokolü istemci ayarı zorla|Sunucu sertifikası istemci ayarı güven|Veri bağlantı dizesi/özniteliği için şifreleme kullan şifreleme|Güvenilir sunucu sertifikası bağlantı dizesi/özniteliği|Sonuç|  
+|Protokol şifrelemesini zorla istemci ayarı|Güven sunucusu sertifika istemci ayarı|Veri bağlantısı dizesi/özniteliği için şifrelemeyi şifreleme/kullanma|Güven sunucusu sertifika bağlantı dizesi/özniteliği|Sonuç|  
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
-|Hayır|Yok|Hayır (varsayılan)|Yoksayıldı|Şifreleme gerçekleşir.|  
-|Hayır|Yok|Evet|Hayır (varsayılan)|Şifreleme, yalnızca bağlantı denemesi başarısız doğrulanabilir sunucu sertifikası, aksi durumda ise oluşur.|  
-|Hayır|Yok|Evet|Evet|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
-|Evet|Hayır|Yoksayıldı|Yoksayıldı|Doğrulanabilen bir sunucu sertifikası yoksa, şifreleme oluşur; Aksi takdirde, bağlantı denemesi başarısız olur.|  
-|Evet|Evet|Hayır (varsayılan)|Yoksayıldı|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
-|Evet|Evet|Evet|Hayır (varsayılan)|Doğrulanabilen bir sunucu sertifikası yoksa, şifreleme oluşur; Aksi takdirde, bağlantı denemesi başarısız olur.|  
-|Evet|Evet|Evet|Evet|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan sertifikasını kullanabilir.|  
+|Hayır|Yok|Hayır (varsayılan)|Yoksayıldı|Şifreleme gerçekleşmez.|  
+|Hayır|Yok|Evet|Hayır (varsayılan)|Şifreleme yalnızca doğrulanabilir bir sunucu sertifikası varsa oluşur; Aksi takdirde bağlantı girişimi başarısız olur.|  
+|Hayır|Yok|Evet|Evet|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan bir sunucu sertifikası kullanabilir.|  
+|Evet|Hayır|Yoksayıldı|Yoksayıldı|Şifreleme yalnızca doğrulanabilir sunucu sertifikası varsa oluşur; Aksi takdirde bağlantı girişimi başarısız olur.|  
+|Evet|Evet|Hayır (varsayılan)|Yoksayıldı|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan bir sunucu sertifikası kullanabilir.|  
+|Evet|Evet|Evet|Hayır (varsayılan)|Şifreleme yalnızca doğrulanabilir sunucu sertifikası varsa oluşur; Aksi takdirde bağlantı girişimi başarısız olur.|  
+|Evet|Evet|Evet|Evet|Şifreleme her zaman gerçekleşir, ancak otomatik olarak imzalanan bir sunucu sertifikası kullanabilir.|  
   
- Daha fazla bilgi için [kullanarak şifreleme olmadan doğrulama](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+ Daha fazla bilgi için bkz. [doğrulama olmadan şifrelemeyi kullanma](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   
 ## <a name="oledb-connection-strings"></a>OleDb bağlantı dizeleri  
- <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Özelliği bir <xref:System.Data.OleDb.OleDbConnection> almak veya ayarlamak için bir OLE DB veri kaynağı Microsoft Access gibi bir bağlantı dizesi sağlar. Ayrıca oluşturabileceğiniz bir `OleDb` bağlantı dizesi kullanarak çalışma zamanında <xref:System.Data.OleDb.OleDbConnectionStringBuilder> sınıfı.  
+ <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> Bir<xref:System.Data.OleDb.OleDbConnection> öğesinin özelliği, Microsoft Access gibi bir OLE DB veri kaynağı için bağlantı dizesi almanıza veya ayarlamanıza olanak sağlar. Ayrıca, `OleDb` <xref:System.Data.OleDb.OleDbConnectionStringBuilder> sınıfını kullanarak çalışma zamanında bir bağlantı dizesi oluşturabilirsiniz.  
   
-### <a name="oledb-connection-string-syntax"></a>OleDb bağlantı dizesi söz dizimi  
- İçin bir sağlayıcı adı belirtmeniz gerekir bir <xref:System.Data.OleDb.OleDbConnection> bağlantı dizesi. Aşağıdaki bağlantı dizesi, Jet sağlayıcısını kullanarak bir Microsoft Access veritabanına bağlanır. Unutmayın `User ID` ve `Password` sözcükler veritabanına (varsayılan) güvenli olmayan isteğe bağlı.  
+### <a name="oledb-connection-string-syntax"></a>OleDb bağlantı dizesi sözdizimi  
+ <xref:System.Data.OleDb.OleDbConnection> Bağlantı dizesi için bir sağlayıcı adı belirtmeniz gerekir. Aşağıdaki bağlantı dizesi, Jet Sağlayıcısı kullanılarak bir Microsoft Access veritabanına bağlanır. Veritabanı güvenli değilse `User ID` ( `Password` varsayılan) ve anahtar kelimelerin isteğe bağlı olduğunu unutmayın.  
   
 ```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   
- Jet veritabanı kullanıcı düzeyinde güvenlik kullanarak güvenli hale getirilmişse, çalışma grubu bilgi dosyası (.mdw) konumu sağlamanız gerekir. Çalışma grubu bilgi dosyası bağlantı dizesinde sunulan kimlik bilgilerini doğrulamak için kullanılır.  
+ Jet veritabanının güvenliği, Kullanıcı düzeyinde güvenlik kullanılarak korunuyorsa, çalışma grubu bilgi dosyasının (. mdw) konumunu sağlamanız gerekir. Çalışma grubu bilgi dosyası, bağlantı dizesinde sunulan kimlik bilgilerini doğrulamak için kullanılır.  
   
 ```  
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System Database=d:\NorthwindSystem.mdw;User ID=*****;Password=*****;  
 ```  
   
 > [!IMPORTANT]
->  İlgili bağlantı bilgilerini sağlamak olası bir **OleDbConnection** evrensel veri bağlantısı (UDL) dosyasında; Bununla birlikte, kaçının bunu. UDL dosyaları şifreli olmayan ve düz metin bağlantı dizesi bilgilerini kullanıma sunar. UDL dosyası uygulamanız için bir dış dosya tabanlı kaynak olduğundan, .NET Framework kullanarak korunamıyor. UDL dosyaları için desteklenmez **SqlClient**.  
+> Bir evrensel veri bağlantısı (UDL) dosyasında bir **OleDbConnection** için bağlantı bilgilerini sağlamak mümkündür; Ancak bunu yapmaktan kaçınmalısınız. UDL dosyaları şifrelenmez ve bağlantı dizesi bilgilerini şifresiz metin olarak kullanıma sunar. Bir UDL dosyası uygulamanıza yönelik dış dosya tabanlı bir kaynak olduğundan .NET Framework kullanılarak güvenliği alınamaz. UDL dosyaları **SqlClient**için desteklenmez.  
   
-### <a name="using-datadirectory-to-connect-to-accessjet"></a>DataDirectory kullanarak erişim/Jet bağlanma  
- `DataDirectory` Özel değil `SqlClient`. İle de kullanılabilir <xref:System.Data.OleDb> ve <xref:System.Data.Odbc> .NET veri sağlayıcıları. Aşağıdaki örnek <xref:System.Data.OleDb.OleDbConnection> dize uygulamanın app_data klasöründe bulunan Northwind.mdb bağlanmak için gereken söz dizimini gösterir. Sistem veritabanı (System.mdw), ayrıca söz konusu konumda depolanır.  
+### <a name="using-datadirectory-to-connect-to-accessjet"></a>Access/Jet 'e bağlanmak için DataDirectory kullanma  
+ `DataDirectory`, için `SqlClient`özel değildir. Ayrıca, <xref:System.Data.OleDb> ve <xref:System.Data.Odbc> .NET veri sağlayıcılarıyla birlikte kullanılabilir. Aşağıdaki örnek <xref:System.Data.OleDb.OleDbConnection> dize, uygulamanın App_Data klasöründe bulunan Northwind. mdb ' ye bağlanmak için gereken söz dizimini gösterir. Sistem veritabanı (System. mdw) de o konumda depolanır.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -150,35 +150,35 @@ Jet OLEDB:System Database=|DataDirectory|\System.mdw;"
 ```  
   
 > [!IMPORTANT]
->  Bağlantı dizesinde sistem veritabanı konumunu belirtme, erişim/Jet veritabanı güvenli değilse gerekli değildir. Güvenlik varsayılan olarak, boş bir parola ile yerleşik yönetici kullanıcı olarak bağlanma tüm kullanıcılarla kapalıdır. Kullanıcı düzeyinde güvenliği daha doğru bir şekilde uygulandığından, Jet veritabanı saldırıya açık kalır. Bu nedenle, hassas bilgileri bir erişim/Jet veritabanı depolama, dosya tabanlı güvenlik düzeninin devralınan zayıflık nedeniyle önerilmez.  
+> Erişim/Jet veritabanı güvenli değilse, bağlantı dizesinde sistem veritabanının konumunu belirtmek gerekli değildir. Varsayılan ayar olarak, tüm kullanıcılar yerleşik yönetici kullanıcı olarak boş bir parolayla bağlantı kurarak. Kullanıcı düzeyi güvenlik doğru şekilde uygulansa bile, bir Jet veritabanı saldırılara karşı savunmasız kalır. Bu nedenle, bir erişim/Jet veritabanında gizli bilgilerin depolanması, dosya tabanlı güvenlik düzeninin büyük bir düzeyi nedeniyle önerilmez.  
   
-### <a name="connecting-to-excel"></a>Excel'e bağlanma  
- Microsoft Jet Sağlayıcısı, bir Excel çalışma kitabına bağlanmak için kullanılır. Aşağıdaki bağlantı dizesinde `Extended Properties` anahtar sözcüğü Excel'e özgü özelliklerini ayarlar. "HDR = Evet;" ilk satırı sütun adları, verileri değil, içerdiğini gösterir ve "IMEX = 1;" her zaman "Karıştırılmış" veri sütunları metin olarak okumak için sürücü söyler.  
+### <a name="connecting-to-excel"></a>Excel 'e bağlanma  
+ Microsoft Jet Sağlayıcısı, bir Excel çalışma kitabına bağlanmak için kullanılır. Aşağıdaki bağlantı dizesinde, `Extended Properties` anahtar sözcüğü Excel 'e özgü özellikleri ayarlar. "HDR = Yes;" değeri, ilk satırın sütun adlarını içerdiğini, veri ve "ıMEX = 1;" ise, sürücüye her zaman "karma" veri sütunlarını metin olarak okumasını söyler.  
   
 ```  
 Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MyExcel.xls;Extended Properties=""Excel 8.0;HDR=Yes;IMEX=1""  
 ```  
   
- Çift tırnak karakteri gerekli Not `Extended Properties` çift tırnak içine alınmalıdır.  
+ İçin `Extended Properties` gereken çift tırnak karakterinin Ayrıca çift tırnak işareti içine alınması gerektiğini unutmayın.  
   
-### <a name="data-shape-provider-connection-string-syntax"></a>Veri şekli sağlayıcısına bağlantı dizesi söz dizimi  
- İkisi de `Provider` ve `Data Provider` Microsoft Veri Şekli Sağlayıcısı kullanılırken anahtar sözcükleri. Aşağıdaki örnek, yerel bir SQL Server örneğine bağlanmak için Şekil sağlayıcısı kullanır.  
+### <a name="data-shape-provider-connection-string-syntax"></a>Veri şekli sağlayıcısı bağlantı dizesi sözdizimi  
+ Microsoft veri şekli `Provider` sağlayıcısını kullanırken `Data Provider` hem hem de anahtar sözcüklerini kullanın. Aşağıdaki örnek, SQL Server yerel bir örneğine bağlanmak için şekil sağlayıcısını kullanır.  
   
 ```  
 "Provider=MSDataShape;Data Provider=SQLOLEDB;Data Source=(local);Initial Catalog=pubs;Integrated Security=SSPI;"   
 ```  
   
 ## <a name="odbc-connection-strings"></a>ODBC bağlantı dizeleri  
- <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> Özelliği bir <xref:System.Data.Odbc.OdbcConnection> alınacak veya ayarlanacak bir OLE DB veri kaynağı için bir bağlantı dizesi sağlar. ODBC bağlantı dizeleri tarafından da desteklenir <xref:System.Data.Odbc.OdbcConnectionStringBuilder>.  
+ Öğesinin özelliği, <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A> bir OLE DB veri kaynağı için bağlantı dizesi almanıza veya ayarlamanıza olanaksağlar.<xref:System.Data.Odbc.OdbcConnection> ODBC bağlantı dizeleri de tarafından <xref:System.Data.Odbc.OdbcConnectionStringBuilder>desteklenir.  
   
- Aşağıdaki bağlantı dizesi, Microsoft metin sürücüsünü kullanır.  
+ Aşağıdaki bağlantı dizesi Microsoft metin sürücüsünü kullanır.  
   
 ```  
 Driver={Microsoft Text Driver (*.txt; *.csv)};DBQ=d:\bin  
 ```  
   
-### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>Visual FoxPro için bağlanmak için DataDirectory'ı kullanma  
- Aşağıdaki <xref:System.Data.Odbc.OdbcConnection> bağlantı dizesi örneği gösterir kullanarak `DataDirectory` bir Microsoft Visual FoxPro dosyasına bağlanmak için.  
+### <a name="using-datadirectory-to-connect-to-visual-foxpro"></a>Visual FoxPro 'ya bağlanmak için DataDirectory kullanma  
+ Aşağıdaki <xref:System.Data.Odbc.OdbcConnection> bağlantı dizesi örneği, bir Microsoft `DataDirectory` Visual FoxPro dosyasına bağlanmak için kullanımını gösterir.  
   
 ```  
 "Driver={Microsoft Visual FoxPro Driver};  
@@ -186,16 +186,16 @@ SourceDB=|DataDirectory|\MyData.DBC;SourceType=DBC;"
 ```  
   
 ## <a name="oracle-connection-strings"></a>Oracle bağlantı dizeleri  
- <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> Özelliği bir <xref:System.Data.OracleClient.OracleConnection> alınacak veya ayarlanacak bir OLE DB veri kaynağı için bir bağlantı dizesi sağlar. Oracle bağlantı dizeleri tarafından da desteklenir <xref:System.Data.OracleClient.OracleConnectionStringBuilder> .  
+ Öğesinin özelliği, <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> bir OLE DB veri kaynağı için bağlantı dizesi almanıza veya ayarlamanıza olanaksağlar.<xref:System.Data.OracleClient.OracleConnection> Oracle bağlantı dizeleri de tarafından <xref:System.Data.OracleClient.OracleConnectionStringBuilder> desteklenir.  
   
 ```  
 Data Source=Oracle9i;User ID=*****;Password=*****;  
 ```  
   
- ODBC bağlantı dizesi söz dizimi hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
+ ODBC bağlantı dizesi sözdizimi hakkında daha fazla bilgi için bkz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

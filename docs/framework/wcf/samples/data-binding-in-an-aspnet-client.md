@@ -2,38 +2,38 @@
 title: Bir ASP.NET İstemcisinde Veri Bağlama
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: 0cc6fee822ad300969ccf8556a3eeb410660f256
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b466c8282544f00ae314aa54845644e7215f8d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876990"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953506"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>Bir ASP.NET İstemcisinde Veri Bağlama
-Bu örnek, bir Web Forms uygulaması normal bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen verinin nasıl bağlanacağını gösterir.  
+Bu örnek, bir Web Forms uygulamasında tipik bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen verilerin nasıl bağlanacağını gösterir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygulayan bir hizmette gösterir. İstemci Web Forms uygulaması bir tarayıcı ve Internet Information Services (IIS) tarafından barındırılan bir WCF Hizmeti erişilebilir örnek oluşur.  
+ Bu örnek, istek-yanıt iletişim modelini tanımlayan bir sözleşmeyi uygulayan bir hizmeti gösterir. Örnek, bir tarayıcıdan erişilebilen bir istemci Web Forms uygulamasından ve Internet Information Services (IIS) tarafından barındırılan bir WCF hizmetinden oluşur.  
   
- Hizmet istek-yanıt iletişim deseni tanımlayan bir sözleşme uygular. Anlaşma tarafından tanımlanan `IWeatherService` adlı bir işlem sunan arabirimi `GetWeatherData`. Bu işlem, bir dizi şehirlerin kabul eder ve bir dizi döndürür `WeatherData` bir şehir için tahmin edilen yüksek ve düşük sıcaklık temsil eden nesneleri.  
+ Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, adlı `GetWeatherData`bir işlemi kullanıma `IWeatherService` sunan arabirim tarafından tanımlanır. Bu işlem bir şehir dizisini kabul eder ve bir şehirde yüksek ve `WeatherData` düşük tahmini sıcaklığın temsil ettiği nesne dizisini döndürür.  
   
- ASP.NET istemci .aspx sayfasında, hizmet tarafından döndürülen veri grafik temsilini içeren bir DataGrid Web denetimi tanımlanır. .Aspx sayfasında kod hava durumu verilerine yönelik WCF Hizmeti çağırır ve verileri için bir dizi döndürür `WeatherData` nesneleri. DataGrid ayarlayarak onun verilerinin alınacağı konumu belirtir, `DataSource` bu diziyi özelliği. DataGrid'in çağrısıyla veri bağlama gerçekleşir `DataBind` yöntemi. Tüm bu kod içinde bulunur.`aspx` sayfanın `Page_Load` yöntemi, her kullanıcının tarayıcı sayfasında, verileri yeniler. Bu nedenle, DataGrid'deki güncelleştirilir.  
+ ASP.NET Client. aspx sayfasında, hizmet tarafından döndürülen verilerin grafik gösterimini içeren bir DataGrid Web denetimi tanımlanmıştır. . Aspx sayfasındaki kod, hava durumu verileri için WCF hizmetini çağırır ve verileri bir `WeatherData` nesne dizisine döndürür. DataGrid, `DataSource` özelliğini bu diziye ayarlayarak verilerinin nereden alınacağını belirtir. Veri bağlama, DataGrid 'in `DataBind` yöntemine yapılan bir çağrıyla oluşur. Bu kodun tümü içinde bulunur.`aspx` `Page_Load` sayfanın yöntemi, bu nedenle Kullanıcı tarayıcı sayfasını her yenilediğinde veriler DataGrid 'de güncelleştirilir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Bu örnek'ın istemci Geliştirme Web sunucusu altında çalışan bir Web sitesidir. Geliştirme Web sunucusunu başlatmak için komut istemine aşağıdaki komutu yazın: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`. Ardından gözatın `http://localhost:8000/client`. Bilgisayarlar arasında bu örneği çalıştırmak için tüm başvuruları değiştirin `localhost` istemcinin Web.config dosyasında sunucusunun bilgisayar adına sahip.  
+3. Bu örnek istemci, bir geliştirme Web sunucusu altında çalışan bir Web sitesidir. Geliştirme Web sunucusunu başlatmak için komut istemine şunu yazın: `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`. Ardından öğesine `http://localhost:8000/client`gidin. Bu örneği bilgisayarlar arasında çalıştırmak için, istemcinin Web. config `localhost` dosyasındaki tüm başvuruları sunucusunun bilgisayar adıyla değiştirin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WebForms`

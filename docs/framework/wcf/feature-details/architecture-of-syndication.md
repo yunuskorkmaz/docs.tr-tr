@@ -2,15 +2,15 @@
 title: Dağıtım Mimarisi
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: 18719c1a6ece24008cc97f36278e3ea8d3355393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f93c7a11ed37e411fc584c8de16f141336c7f43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952637"
 ---
 # <a name="architecture-of-syndication"></a>Dağıtım Mimarisi
-Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazılmasına izin veren bir biçim nötr programlama modeli sağlamak için tasarlanmıştır. Aşağıdaki sınıflar soyut bir veri modeli oluşur:  
+Dağıtım API 'SI, dağıtılmış içeriğin çok sayıda biçimde kabloda yazılmasına izin veren biçim nötr bir programlama modeli sağlamak üzere tasarlanmıştır. Soyut veri modeli aşağıdaki sınıflardan oluşur:  
   
 - <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
@@ -22,60 +22,60 @@ Dağıtım API dağıtılmış içeriği, çeşitli biçimlerde hat açın yazı
   
 - <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
- Bazı adları farklı olmasına rağmen bu sınıfların Atom 1.0 belirtiminde tanımlanan yapıları yakından eşlenir.  
+ Bu sınıflar, bazı adların farklı olmasına rağmen Atom 1,0 belirtiminde tanımlanan yapılara yakın şekilde eşlenir.  
   
- Windows Communication Foundation (WCF), dağıtım akışlarını başka türde bir hizmet işlemi, bir dönüş türü olduğu türetilmiş sınıfları biri modellenir <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. Bir akış alma, bir istek-yanıt iletisi exchange modellenir. Bir istemci bir hizmet ve hizmet isteğine yanıt gönderir. İstek iletisi altyapı Protokolü (örneğin, ham HTTP) üzerinden ayarlanır ve anlaşılır dağıtım biçiminin (RSS 2.0 veya Atom 1.0) oluşan bir yükü yanıt iletisini içerir. Bu ileti alışverişlerinde uygulama Hizmetleri Dağıtım Hizmetleri olarak adlandırılır.  
+ Windows Communication Foundation (WCF) ' de, dağıtım akışları başka bir hizmet işlemi türü olarak modellenir, biri dönüş türünün türetilmiş sınıflarından <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>biridir. Bir akışın alınması, istek-yanıt iletisi değişimi olarak modellenir. İstemci hizmete bir istek gönderir ve hizmet yanıt verir. İstek iletisi bir altyapı Protokolü (örneğin, ham HTTP) üzerinde ayarlanır ve yanıt iletisi, yaygın olarak anlaşılan bir dağıtım biçiminden (RSS 2,0 veya Atom 1,0) oluşan bir yük içerir. Bu ileti alışverişlerini uygulayan hizmetlere, Dağıtım Hizmetleri adı verilir.  
   
- Bir dağıtım hizmeti sözleşmesi örneğini döndüren işlemlerinin kümesinden oluşur <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> sınıfı. Aşağıdaki örnek bir dağıtım hizmeti için bir arabirim bildirimi gösterir.  
+ Bir dağıtım hizmeti sözleşmesi, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> sınıfının bir örneğini döndüren bir dizi işlemden oluşur. Aşağıdaki örnek, bir dağıtım hizmeti için bir arabirim bildirimi gösterir.  
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- Dağıtım desteği, WCF REST programlama tanımlayan bir Model temelinde oluşturulmuştur <xref:System.ServiceModel.WebHttpBinding> ile birlikte kullanılan bağlama <xref:System.ServiceModel.Description.WebHttpBehavior> akışları Hizmetleri olarak kullanılabilir hale getirmek için. WCF REST programlama modeli hakkında daha fazla bilgi için bkz: [WCF Web HTTP programlama modeli genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
+ Dağıtım desteği, akışı hizmet olarak kullanılabilir hale getirmek için ile <xref:System.ServiceModel.WebHttpBinding> <xref:System.ServiceModel.Description.WebHttpBehavior> birlikte kullanılan bağlamayı tanımlayan WCF REST programlama modelinin üzerine kurulmuştur. WCF REST programlama modeli hakkında daha fazla bilgi için bkz. [WCF Web http programlama modeline genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md).  
   
 > [!NOTE]
->  Atom 1.0 belirtimi Kesirli saniye, tarih yapıları hiçbirinde belirtilmesine izin verir. WCF uygulaması, serileştirmek ve seri durumdan çıkarılırken zaman Kesirli saniye yok sayar.  
+> Atom 1,0 belirtimi, bir tarih yapılarından birinde kesirli saniye belirtilmesine izin verir. WCF uygulamasının serileştirilmesi ve serisi kaldırılırken Kesirli saniyeler yok sayılır.  
   
 ## <a name="object-model"></a>Nesne modeli  
- Dağıtım için nesne modeli sınıfları aşağıdaki tablolarda gruplarını oluşur.  
+ Dağıtım için nesne modeli, aşağıdaki tablolardaki sınıf gruplarından oluşur.  
   
- Biçimlendirme sınıflar:  
+ Sınıfları biçimlendirme:  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Serileştiren bir sınıf bir <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 biçim örneği.|  
-|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Serileştiren bir sınıf <xref:System.ServiceModel.Syndication.SyndicationFeed> Atom 1.0 biçimine türetilmiş sınıflar.|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|Serileştiren bir sınıf bir <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 biçim örneği.|  
-|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|Serileştiren bir sınıf <xref:System.ServiceModel.Syndication.SyndicationItem> Atom 1.0 biçimine türetilmiş sınıflar.|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|Serileştiren bir sınıf bir <xref:System.ServiceModel.Syndication.SyndicationFeed> RSS 2.0 biçim örneği.|  
-|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|Serileştiren bir sınıf <xref:System.ServiceModel.Syndication.SyndicationFeed> RSS 2.0 biçimine türetilmiş sınıflar.|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|Serileştiren bir sınıf bir <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 biçim örneği.|  
-|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|Serileştiren bir sınıf <xref:System.ServiceModel.Syndication.SyndicationItem> RSS 2.0 biçimine türetilmiş sınıflar.|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>|Bir <xref:System.ServiceModel.Syndication.SyndicationFeed> örneği Atom 1,0 biçimine serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601>|Türetilmiş sınıfları Atom 1,0 biçimine <xref:System.ServiceModel.Syndication.SyndicationFeed> serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter>|Bir <xref:System.ServiceModel.Syndication.SyndicationItem> örneği Atom 1,0 biçimine serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601>|Türetilmiş sınıfları Atom 1,0 biçimine <xref:System.ServiceModel.Syndication.SyndicationItem> serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>|Bir <xref:System.ServiceModel.Syndication.SyndicationFeed> örneği RSS 2,0 biçimine serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601>|Türetilmiş sınıfları bir RSS 2,0 <xref:System.ServiceModel.Syndication.SyndicationFeed> biçimine serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter>|Bir <xref:System.ServiceModel.Syndication.SyndicationItem> örneği RSS 2,0 biçimine serileştiren bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601>|Türetilmiş sınıfları bir RSS 2,0 <xref:System.ServiceModel.Syndication.SyndicationItem> biçimine serileştiren bir sınıf.|  
   
  Nesne modeli sınıfları:  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Bir dağıtım akışı kategorisini temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationContent>|Dağıtım içeriğini temsil eder bir temel sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Bir dağıtım öğesi uzantısı temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|Bir koleksiyonu <xref:System.ServiceModel.Syndication.SyndicationElementExtension> nesneleri.|  
-|<xref:System.ServiceModel.Syndication.SyndicationFeed>|Bir üst düzey akış nesnesini temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationItem>|Akış öğesi temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationLink>|Bir dağıtım akışı veya öğesi bir bağlantıyı temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationPerson>|Bir kişinin Atom yapısını temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.SyndicationVersions>|Desteklenen dağıtım protokol sürümleri temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|Tüm temsil eden bir sınıf <xref:System.ServiceModel.Syndication.SyndicationItem> içeriği son kullanıcıya görüntülenecek.|  
-|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|Farklı içerik desteklenen metin dağıtım türleri temsil eden bir sabit listesi.|  
-|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|Başka bir kaynak URL'sini içeren dağıtım içeriğini temsil eden sınıf.|  
-|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|Bir tarayıcıda gösterilmeyecek için dağıtım içeriğini temsil eden sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationCategory>|Bir dağıtım akışının kategorisini temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationContent>|Dağıtım içeriğini temsil eden bir temel sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtension>|Bir dağıtım öğesi uzantısını temsil eden sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationElementExtensionCollection>|<xref:System.ServiceModel.Syndication.SyndicationElementExtension> Nesneler koleksiyonu.|  
+|<xref:System.ServiceModel.Syndication.SyndicationFeed>|Üst düzey bir akış nesnesini temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationItem>|Bir akış öğesini temsil eden sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationLink>|Bir dağıtım akışı veya öğe içindeki bir bağlantıyı temsil eden sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationPerson>|Atom kişi yapısını temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.SyndicationVersions>|Desteklenen dağıtım protokolü sürümlerini temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContent>|Son kullanıcıya görüntülenecek <xref:System.ServiceModel.Syndication.SyndicationItem> içeriği temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.TextSyndicationContentKind>|Desteklenen farklı metin dağıtım içeriği türlerini temsil eden bir sabit listesi.|  
+|<xref:System.ServiceModel.Syndication.UrlSyndicationContent>|Başka bir kaynağa ait bir URL 'den oluşan bir dağıtım içeriğini temsil eden bir sınıf.|  
+|<xref:System.ServiceModel.Syndication.XmlSyndicationContent>|Bir tarayıcıda görüntülenmeyen dağıtım içeriğini temsil eden bir sınıf.|  
   
- Çekirdek veri nesne modelinde akışı ve karşılık gelen öğe özetlerdir <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> sınıfları. Bir akış, bir bilinmeyen uzantılarını depolamak için konum ve akışın bilgi içeriği kalan öğelerin kümesi (örneğin, başlık, açıklama ve yazar), bazı akış düzeyinde meta verileri kullanıma sunar. Bir öğenin bazı öğe düzeyinde meta veri (örneğin, başlık, Özet ve PublicationDate), bir bilinmeyen uzantılarını depolamak için konum ve içerik kullanılabilmesini öğenin bilgi içeriği geri kalanı içeren öğe. Akış öğesi ve çekirdek soyutlama Atom 1.0 ve RSS belirtimlerinde başvurulan ortak veri yapılarını temsil eden ek sınıfları tarafından desteklenir.  
+ Nesne modelindeki temel veri soyutlamaları, <xref:System.ServiceModel.Syndication.SyndicationFeed> ve <xref:System.ServiceModel.Syndication.SyndicationItem> sınıflarına karşılık gelen akış ve öğedir. Akış, bazı akış düzeyi meta verileri (örneğin, başlık, açıklama ve yazar), bilinmeyen uzantıları depolamak için bir konum ve akışın bilgi içeriğini oluşturan bir öğe kümesi sunar. Öğe, bazı öğe düzeyi meta verileri (örneğin, başlık, Özet ve PublicationDate), bilinmeyen uzantıları depolamak için bir konum ve öğenin bilgi içeriğinin geri kalanını içeren bir içerik öğesi sağlar. Akışın ve öğenin temel soyutlamaları, Atom 1,0 ve RSS belirtimlerinde başvurulan ortak veri yapılarını temsil eden ek sınıflar tarafından desteklenir.  
   
- Bir akışı örneğinde taşınan bilgiler çeşitli biçimlerde XML için dönüştürülebilir. XML'den ve dönüştürme işlemi tarafından yönetilen <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> sınıfı. Bu sınıf soyuttur; somut uygulamaları, Atom 1.0 ve RSS 2.0 için sağlanan <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>. Türetilmiş akışı sınıflarını kullanmak için kullanın <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> veya <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> akışı türetilen belirtmek izin. Türetilen öğesi sınıfları ya da kullanmayı <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> veya <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> belirlemenize olanak tanır şekilde türetilen öğesi sınıfı üçüncü tarafların kendi türetebilirsiniz <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> farklı dağıtım biçimlerini desteklemek için.  
+ Bir akış örneğinde taşınan bilgiler çeşitli XML biçimlerine dönüştürülebilir. XML 'e ve öğesinden dönüştürme işlemi <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> sınıfı tarafından yönetilir. Bu sınıf soyuttur; somut uygulamalar, <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> Atom 1,0 ve RSS 2,0 için sağlanır ve <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>. Türetilmiş akış sınıflarını kullanmak için ya <xref:System.ServiceModel.Syndication.Atom10FeedFormatter%601> <xref:System.ServiceModel.Syndication.Rss20FeedFormatter%601> da türetilmiş bir akış sınıfı belirtmenize izin veren olarak kullanın. Türetilmiş öğe sınıflarını kullanmak için ya <xref:System.ServiceModel.Syndication.Atom10ItemFormatter%601> <xref:System.ServiceModel.Syndication.Rss20ItemFormatter%601> da türetilmiş bir öğe sınıfını belirtmenizi sağlayan üçüncü taraflar, <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> farklı dağıtım biçimlerini desteklemek için kendi uygulamasını türetebilirler.  
   
 ## <a name="extensibility"></a>Genişletilebilirlik  
   
-- Bir anahtar dağıtım protokolleri genişletilebilirlik özelliğidir. Hem Atom 1.0 hem de RSS 2.0 öznitelikler ve öğeler'de tanımlanmayan, dağıtım akışlarını eklemenize olanak tanır. Özel öznitelikler ve Uzantılar ile çalışmaya ilişkin iki yöntem WCF dağıtım programlama modeli sağlar: yeni bir sınıf ve geniş yazılmış erişim türetme. Daha fazla bilgi için [dağıtım genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Dağıtım protokollerinin temel bir özelliği genişletilebilirlik ' dir. Hem Atom 1,0 hem de RSS 2,0, belirtimlerde tanımlanmayan dağıtım akışlarına öznitelikler ve öğeler eklemenize olanak tanır. WCF dağıtım programlama modeli, özel öznitelikler ve uzantılar ile çalışmanın iki yolunu sağlar: yeni bir sınıf türetiliyor ve gevşek olarak yazılmış erişim. Daha fazla bilgi için bkz. [Dağıtım Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

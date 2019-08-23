@@ -9,63 +9,63 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 1cf09b945a21ca51f73c3948ffdf86da4225ac22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3b109e3e6817c300af1e79258d555562dcba067a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751220"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951018"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama
-Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güvenlik bir görevdir. Örneğin, yalnızca belirli kullanıcılara bordro bilgilerini gibi hassas verilerin görüntülemeniz mümkün olması gerekir. Bu konu, zorlu bir yöntemi kullanıcının, önceden tanımlanmış bir gruba ait erişimini kısıtlamak nasıl açıklar. Çalışma örnek için bkz: [hizmet işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
+Bir Windows etki alanı bilgisayarındaki kaynaklara erişimi denetlemek, temel bir güvenlik görevidir. Örneğin, yalnızca belirli kullanıcılar, bordro bilgileri gibi hassas verileri görüntüleyebilmelidir. Bu konu, kullanıcının önceden tanımlanmış bir gruba ait olmasını sağlayarak bir yönteme erişimin nasıl kısıtlanacağını açıklar. Çalışan bir örnek için bkz. [hizmet Işlemlerine erişimi yetkilendirme](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md).  
   
- Görev, iki ayrı yordamlardan oluşmaktadır. İlk grubu oluşturur ve kullanıcıları ile doldurur. İkinci uygular <xref:System.Security.Permissions.PrincipalPermissionAttribute> grubu belirtmek için sınıf.  
+ Görev iki ayrı yordamdan oluşur. İlki grubu oluşturur ve kullanıcılarla doldurur. İkincisi, grubu belirtmek <xref:System.Security.Permissions.PrincipalPermissionAttribute> için sınıfını uygular.  
   
 ### <a name="to-create-a-windows-group"></a>Bir Windows grubu oluşturmak için  
   
-1. Açık **Bilgisayar Yönetimi** Konsolu.  
+1. **Bilgisayar Yönetimi** konsolunu açın.  
   
-2. Sol bölmede bulunan tıklayın **yerel kullanıcılar ve gruplar**.  
+2. Sol bölmede, **yerel kullanıcılar ve gruplar**' a tıklayın.  
   
-3. Sağ **grupları**, tıklatıp **yeni grup**.  
+3. **Gruplar**' a sağ tıklayın ve **Yeni Grup**' a tıklayın.  
   
-4. İçinde **grup adı** yeni grup için bir ad yazın.  
+4. **Grup adı** kutusuna yeni grup için bir ad yazın.  
   
-5. İçinde **açıklama** yeni grubun açıklamasını yazın.  
+5. **Açıklama** kutusuna yeni grubun açıklamasını yazın.  
   
-6. Tıklayın **Ekle** grubuna yeni üyeler eklemek için düğme.  
+6. Gruba yeni üyeler eklemek için **Ekle** düğmesine tıklayın.  
   
-7. Kendinizi gruba eklediğiniz ve aşağıdaki kodu test etmek istediğiniz, oturumu kapattığında gerekir ve tekrar açmaları gruba dahil.  
+7. Kendinizi gruba eklediyseniz ve aşağıdaki kodu test etmek istiyorsanız, bilgisayarın oturumunu kapatmanız ve gruba dahil etmek için yeniden oturum açmanız gerekir.  
   
 ### <a name="to-demand-user-membership"></a>İsteğe bağlı kullanıcı üyeliği  
   
-1. Uygulanan hizmet sözleşme kodu içeren Windows Communication Foundation (WCF) kod dosyasını açın. Bir sözleşme uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
+1. Uygulanan hizmet sözleşmesi kodunu içeren Windows Communication Foundation (WCF) kod dosyasını açın. Sözleşme uygulama hakkında daha fazla bilgi için bkz. [hizmet sözleşmelerini uygulama](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
-2. Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> öznitelik her yönteme belirli bir gruba sınırlı olmalıdır. Ayarlama <xref:System.Security.Permissions.SecurityAttribute.Action%2A> özelliğini <xref:System.Security.Permissions.SecurityAction.Demand> ve <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> özelliğini grubunun adı. Örneğin:  
+2. Özniteliği, <xref:System.Security.Permissions.PrincipalPermissionAttribute> belirli bir grupla kısıtlanması gereken her bir yönteme uygulayın. <xref:System.Security.Permissions.SecurityAttribute.Action%2A> Özelliğini<xref:System.Security.Permissions.SecurityAction.Demand>veözelliğinigrubunadınaayarlayın. <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> Örneğin:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
   
     > [!NOTE]
-    >  Uygularsanız, <xref:System.Security.Permissions.PrincipalPermissionAttribute> özniteliği bir sözleşmeyi bir <xref:System.Security.SecurityException> oluşturulur. Özniteliğin yöntem düzeyinde yalnızca uygulayabilirsiniz.  
+    > <xref:System.Security.Permissions.PrincipalPermissionAttribute> Özniteliği bir sözleşmeye uygularsanız, bir <xref:System.Security.SecurityException> oluşturulur. Özniteliği yalnızca Yöntem düzeyinde uygulayabilirsiniz.  
   
-## <a name="using-a-certificate-to-control-access-to-a-method"></a>Bir yönteme erişimi denetlemek için bir sertifika kullanıyor  
- Ayrıca `PrincipalPermissionAttribute` bir sertifika istemci kimlik bilgisi türü ise bir yönteme erişimi denetlemek için sınıf. Bunu yapmak için sertifikanın konu ve parmak izi olmalıdır.  
+## <a name="using-a-certificate-to-control-access-to-a-method"></a>Bir yönteme erişimi denetlemek için sertifika kullanma  
+ Ayrıca, `PrincipalPermissionAttribute` istemci kimlik bilgisi türü bir sertifika ise, bir yönteme erişimi denetlemek için sınıfını da kullanabilirsiniz. Bunu yapmak için sertifikanın konusu ve parmak izinin olması gerekir.  
   
- Sertifika özelliklerini incelemek için bkz: [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md). Parmak izi değerini bulmak için bkz: [nasıl yapılır: Bir sertifikanın parmak izini alma](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
+ Bir sertifikayı özelliklerine göre incelemek için bkz [. nasıl yapılır: MMC ek bileşeni](../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)ile sertifikaları görüntüleyin. Parmak izi değerini bulmak için bkz [. nasıl yapılır: Bir sertifikanın](../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)parmak izini alın.  
   
-#### <a name="to-control-access-using-a-certificate"></a>Bir sertifika kullanarak erişimi denetleme  
+#### <a name="to-control-access-using-a-certificate"></a>Bir sertifika kullanarak erişimi denetlemek için  
   
-1. Uygulama <xref:System.Security.Permissions.PrincipalPermissionAttribute> erişimi kısıtlamak istediğiniz yönteme sınıf.  
+1. Erişimi kısıtlamak istediğiniz yönteme sınıfıuygulayın.<xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2. Özniteliğin eylem <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>.  
+2. Özniteliği için eylemini olarak <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>ayarlayın.  
   
-3. Ayarlama `Name` konu adı ve sertifikanın parmak izi oluşan bir dize özelliği. İki değer, aşağıdaki örnekte gösterildiği gibi noktalı virgül ve boşluk ile ayırın:  
+3. `Name` Özelliği, konu adı ve sertifikanın parmak iziyle oluşan bir dizeye ayarlayın. Aşağıdaki örnekte gösterildiği gibi iki değeri noktalı virgül ve boşluk ile ayırın:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4. Ayarlama <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> özelliğini <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> yapılandırmasını aşağıda gösterildiği gibi:  
+4. Aşağıdaki yapılandırma örneğinde gösterildiği <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> gibi özelliğiniolarakayarlayın:<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>  
   
     ```xml  
     <behaviors>  
@@ -77,9 +77,9 @@ Bir Windows etki alanı bilgisayardaki kaynaklara erişimi denetleme temel güve
     </behaviors>  
     ```  
   
-     Bu değeri ayarlamak `UseAspNetRoles` belirten `Name` özelliği `PrincipalPermissionAttribute` dize karşılaştırma yapmak için kullanılır. Bir sertifika bir istemci kimlik bilgileri olarak kullanıldığında, varsayılan olarak sertifika ortak adını ve parmak izini istemcinin birincil kimlik için benzersiz bir değer oluşturmak için noktalı virgül ile WCF birleştirir. İle `UseAspNetRoles` yap `PrincipalPermissionMode` hizmette bu birincil kimlik değeri ile karşılaştırılır `Name` kullanıcı erişim haklarını belirlemek için özellik değeri.  
+     Bu değeri olarak `UseAspNetRoles` ayarlamak, `PrincipalPermissionAttribute` öğesinin `Name` özelliğinin bir dize karşılaştırması gerçekleştirmek için kullanılacağını gösterir. Bir sertifika istemci kimlik bilgileri olarak kullanıldığında, varsayılan olarak WCF, istemci birincil kimliği için benzersiz bir değer oluşturmak üzere sertifika ortak adını ve parmak izini noktalı virgülle birleştirir. Hizmet `UseAspNetRoles` `Name` olarak ayarlandığı ile, bu birincil kimlik değeri, kullanıcının erişim haklarını belirlemede özellik değeriyle karşılaştırılır. `PrincipalPermissionMode`  
   
-     Alternatif olarak, şirket içinde barındırılan hizmet oluşturulurken ayarlamak <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> aşağıdaki kodda gösterildiği gibi kodda özelliği:  
+     Alternatif olarak, şirket içinde barındırılan bir hizmet oluştururken aşağıdaki kodda gösterildiği <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> gibi koddaki özelliği ayarlayın:  
   
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  

@@ -8,74 +8,74 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 531e8f576dcbe0fc272c61a57a689d993fb03445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347388"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927906"
 ---
 # <a name="shadow-copying-assemblies"></a>Gölge Kopyalama Derlemeleri
-Gölge kopyalama etki alanını kaldırmadan güncelleştirilmesi için bir uygulama etki alanında kullanılan etkinleştirir derlemeler. Bu, özellikle sürekli olarak ASP.NET siteleri gibi kullanılabilir olması gereken uygulamalar için yararlıdır.  
+Gölge kopyalama, uygulama etki alanında kullanılan derlemelerin uygulama etki alanının kaldırılması gerekmeden güncelleştirilmesini sağlar. Bu özellikle, ASP.NET siteleri gibi sürekli kullanılabilir olması gereken uygulamalar için yararlıdır.  
   
 > [!IMPORTANT]
->  Gölge kopyalama desteklenmiyor [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
+> [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Uygulamalarda gölge kopyalama desteklenmez.  
   
- Ortak dil çalışma zamanı, derlemeyi bellekten kaldırılana kadar dosyası güncelleştirilemiyor şekilde derleme, yüklendiğinde bir derleme dosyası kilitler. Uygulama etki alanındaki bir derlemeyi kaldırmak için tek yolu uygulama etki alanı kaldırılarak, kullanmakta olduğunuz tüm uygulama etki alanları kadar normal koşullar altında bir derleme diskte güncelleştirilemiyor şekilde, kaldırıldı.  
+ Ortak dil çalışma zamanı, derleme yüklendiğinde bir derleme dosyasını kilitler, bu nedenle dosya derleme kaldırılana kadar güncelleştirilemez. Bir uygulama etki alanından bir derlemeyi kaldırmak için tek yol, uygulama etki alanını da kaldıracağından, normal koşullarda, kendisini kullanan tüm uygulama etki alanları kaldırılana kadar disk üzerinde bir derleme güncelleştirilemez.  
   
- Uygulama etki alanı gölge kopyaları için yapılandırıldığında, uygulama yolu derlemelerden başka bir konuma kopyalanır ve o konumdan yüklenir. Kopya kilitli, ancak orijinal derleme dosyası kilitli değil ve güncelleştirilebilir.  
+ Bir uygulama etki alanı, gölge kopya dosyalarına yapılandırıldığında, uygulama yolundan gelen derlemeler başka bir konuma kopyalanır ve bu konumdan yüklenir. Kopya kilitli, ancak özgün derleme dosyasının kilidi açık ve güncelleştirilmiş olabilir.  
   
 > [!IMPORTANT]
->  Gölge kopya olabilecek yalnızca bu uygulama dizininde depolanan veya belirtilen alt derlemelerdir <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> uygulama etki alanı yapılandırıldığında özellikleri. Gölge kopyalama derlemeleri genel derleme önbelleğinde depolanan değildir.  
+> Gölge kopyası olabilecek tek derlemeler, uygulama etki alanı yapılandırıldığında <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleriyle belirtilen uygulama dizininde veya alt dizinlerinde depolanırlar. Genel derleme önbelleğinde depolanan derlemeler gölge kopyası değildir.  
   
- Bu makalede, aşağıdaki bölümleri içerir:  
+ Bu makale aşağıdaki bölümleri içerir:  
   
-- [Etkinleştirme ve kullanma gölge kopyalama](#EnablingAndUsing) temel kullanımı ve gölge kopyalama için kullanılabilir seçenekleri açıklar.  
+- [Gölge kopyalamayı etkinleştirmek ve kullanmak](#EnablingAndUsing) , temel kullanımı ve gölge kopyalama için kullanılabilen seçenekleri açıklar.  
   
-- [Başlangıç performansı](#StartupPerformance) başlangıç performansı ve önceki sürümleri davranışa dönmek nasıl geliştirmek için .NET Framework 4'te kopyalama gölge yapılan değişiklikleri açıklar.  
+- [Başlangıç performansı](#StartupPerformance) , başlangıç performansını geliştirmek için .NET Framework 4 ' te gölge kopyalama için yapılan değişiklikleri ve önceki sürümlerin davranışına döndürmeyi açıklar.  
   
-- [Eski yöntemler](#ObsoleteMethods) özellikleri ve .NET Framework 2.0 sürümünde gölge kopyalama denetleyen yöntemleri için yapılan değişiklikleri açıklar.  
+- [Kullanılmayan Yöntemler](#ObsoleteMethods) , .NET Framework 2,0 ' de gölge kopyalamayı denetleyen özelliklerde ve yöntemlerde yapılan değişiklikleri açıklar.  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Gölge Kopyalamayı Etkinleştirme ve Kullanma  
- Özelliklerini kullanabilirsiniz <xref:System.AppDomainSetup> sınıfı şu şekilde gölge kopyalama için uygulama etki alanı yapılandırmak için:  
+ Gölge kopyalama için bir uygulama etki alanı <xref:System.AppDomainSetup> yapılandırmak üzere sınıfının özelliklerini aşağıdaki şekilde kullanabilirsiniz:  
   
-- Etkinleştirme gölge kopyalama ayarlayarak <xref:System.AppDomainSetup.ShadowCopyFiles%2A> dize özelliğini `"true"`.  
+- <xref:System.AppDomainSetup.ShadowCopyFiles%2A> Özelliği dize değerine `"true"`ayarlayarak gölge kopyalamayı etkinleştirin.  
   
-     Varsayılan olarak, bu ayar tüm derlemelerin yüklenmeden önce bir indirme önbelleğini için Kopyalanacak uygulama yolu neden olur. Bu diğer bilgisayarlardan indirilen dosyaları depolamak için ortak dil çalışma zamanı tarafından tutulan aynı önbellek ve artık gerekli olmadığında ortak dil çalışma zamanı dosyaları otomatik olarak siler.  
+     Varsayılan olarak, bu ayar, uygulama yolundaki tüm derlemelerin yüklenmeden önce bir indirme önbelleğine kopyalanmasını sağlar. Bu, diğer bilgisayarlardan indirilen dosyaları depolamak için ortak dil çalışma zamanı tarafından tutulan önbelleğidir ve artık gerekli olmadığında ortak dil çalışma zamanı dosyaları otomatik olarak siler.  
   
-- İsteğe bağlı olarak kullanarak gölge dosyaları için özel konum ayarlamak <xref:System.AppDomainSetup.CachePath%2A> özelliği ve <xref:System.AppDomainSetup.ApplicationName%2A> özelliği.  
+- İsteğe bağlı olarak, <xref:System.AppDomainSetup.CachePath%2A> özelliği <xref:System.AppDomainSetup.ApplicationName%2A> ve özelliğini kullanarak gölge kopyalanmış dosyalar için özel bir konum ayarlayın.  
   
-     Temel yol konumu için birleştirerek biçimlendirilmiş <xref:System.AppDomainSetup.ApplicationName%2A> özelliğini <xref:System.AppDomainSetup.CachePath%2A> özelliği olarak bir alt dizinidir. Temel yol için bu yolu alt dizinleri gölge derlemelerdir.  
-  
-    > [!NOTE]
-    >  Varsa <xref:System.AppDomainSetup.ApplicationName%2A> özelliği ayarlı değil, <xref:System.AppDomainSetup.CachePath%2A> özelliği yok sayılır ve indirme önbelleğini kullanılır. Hiçbir özel durum oluşturulur.  
-  
-     Özel bir konum belirtirseniz, dizinler temizlemek sizin sorumluluğunuzdadır ve artık gerekli değilse, dosyalar kopyalanır. Otomatik olarak silinmez.  
-  
-     Gölge kopya dosyaları için özel konum ayarlamak için neden isteyebileceğiniz birkaç neden vardır. Uygulamanız çok sayıda kopya oluşturursa gölge dosyaları için özel konum ayarlamak isteyebilirsiniz. Ortak dil çalışma zamanı hala kullanımda olan bir dosyayı silmek dener mümkün olacak şekilde indirme önbelleğini boyutuna göre yaşam süresi, tarafından değil sınırlıdır. Özel konum ayarlamak için başka bir nedeni, uygulamanızı çalıştıran kullanıcılar, ortak dil çalışma zamanı için indirme önbelleğini kullanır. dizin konumuna yazma erişimi yoktur andır.  
-  
-- İsteğe bağlı olarak kullanarak gölge kopyası derlemeleri sınırlamak <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliği.  
-  
-     Bir uygulama etki alanı için gölge kopyalama etkinleştirdiğinizde, tüm derlemeleri uygulama yolu kopyalama için varsayılandır — diğer bir deyişle, tarafından belirtilen dizinlerde <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleri. Gölge kopya istediğiniz dizinleri içeren bir dize oluşturarak ve dizeye atama için seçilen dizinleri kopyalama sınırlayabilirsiniz <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliği. Dizinlerin noktalı virgülle ayırın. Gölge kopyası yalnızca derlemeler seçilen dizinlerde olanlardır.  
+     Konumun temel yolu, özelliği bir alt dizin olarak özelliği ile <xref:System.AppDomainSetup.ApplicationName%2A> birleştirerek <xref:System.AppDomainSetup.CachePath%2A> oluşturulur. Derlemeler, temel yolun kendisi için değil, bu yolun alt dizinlerine kopyalanırlar.  
   
     > [!NOTE]
-    >  Bir dizeye atamazsanız <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliği veya bu özelliği ayarlamak `null`, tüm derlemelerin tarafından belirtilen dizinlerde <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> gölge özelliklerdir.  
+    > <xref:System.AppDomainSetup.ApplicationName%2A> Özellik ayarlanmamışsa<xref:System.AppDomainSetup.CachePath%2A> , özelliği yok sayılır ve indirme önbelleği kullanılır. Hiçbir özel durum oluşturulmaz.  
+  
+     Özel bir konum belirtirseniz, artık gerekli olmadığında dizinleri ve kopyalanan dosyaları temizlemek sizin sorumluluğunuzdadır. Bunlar otomatik olarak silinmez.  
+  
+     Gölge kopyalanmış dosyalar için özel bir konum ayarlamak isteyebileceğiniz birkaç neden vardır. Uygulamanız çok sayıda kopya oluşturursa gölge kopyalanmış dosyalar için özel bir konum ayarlamak isteyebilirsiniz. İndirme önbelleği, kullanım süresine göre değil, boyutla sınırlandırılır, bu nedenle ortak dil çalışma zamanının hala kullanımda olan bir dosyayı silmeye çalışmaları mümkündür. Özel bir konum ayarlamaya yönelik başka bir nedenden dolayı, uygulamanızı çalıştıran kullanıcıların indirme önbelleği için ortak dil çalışma zamanının kullandığı dizin konumuna yazma erişimi olmaz.  
+  
+- İsteğe bağlı olarak, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliğini kullanarak gölge kopyası olan derlemeleri sınırlayın.  
+  
+     Bir uygulama etki alanı için gölge kopyalamayı etkinleştirdiğinizde varsayılan değer, uygulama yolundaki tüm derlemeleri (diğer bir deyişle, <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleri tarafından belirtilen dizinlerde) kopyalamadır. Yalnızca gölge kopyalamak istediğiniz dizinleri içeren bir dize oluşturarak ve dizeyi <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> özelliğine atayarak seçili dizinlere kopyalamayı sınırlayabilirsiniz. Dizinleri noktalı virgülle ayırın. Gölge kopyası olan tek derlemeler seçili dizinlerdeki olanlardır.  
+  
+    > [!NOTE]
+    > <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> Özelliğe bir dize atamadıysanız veya bu özelliği olarak `null`ayarlarsanız, <xref:System.AppDomainSetup.ApplicationBase%2A> ve <xref:System.AppDomainSetup.PrivateBinPath%2A> özellikleri tarafından belirtilen dizinlerdeki tüm derlemeler gölge kopyalanır.  
   
     > [!IMPORTANT]
-    >  Noktalı virgül sınırlayıcı karakter olduğundan dizin yolları noktalı içermemelidir. Noktalı virgül için hiçbir kaçış karakteri var.  
+    >  Dizin yolları noktalı virgül içermemelidir, çünkü noktalı virgül sınırlayıcı karakterdir. Noktalı virgül için kaçış karakteri yoktur.  
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Başlangıç Performansı  
- Gölge kopyalama kullanan bir uygulama etki alanı başlatıldığında bir gecikme olur derlemeleri uygulama dizininde gölge kopya dizinine kopyalanır veya zaten bu konumda olup olmadıklarını doğrulandı. .NET Framework 4 önce tüm derlemelerin geçici bir dizine kopyalandı. Her derlemenin derleme adını doğrulamak için açıldı ve tanımlayıcı adı doğrulandı. Her derleme, gölge kopya dizinde kopyadan daha yakın zamanda güncelleştirilmişse olup olmadığını görmek için iade. Bu durumda, gölge kopya dizinine kopyalandığı. Son olarak, geçici kopya atıldı.  
+ Gölge kopyalama kullanan bir uygulama etki alanı başladığında, uygulama dizinindeki derlemeler gölge kopya dizinine kopyalanırken veya zaten o konumda olduklarında doğrulanırken bir gecikme olur. .NET Framework 4 ' den önce, tüm derlemeler geçici bir dizine kopyalandı. Her derleme, derleme adını doğrulamak için açıldı ve tanımlayıcı ad doğrulanmıştı. Her derleme, gölge kopya dizinindeki kopyadan daha yakın bir zamanda güncelleştirilip güncelleştirilmediğini görmek için denetlendi. Bu durumda, gölge kopya dizinine kopyalanmıştı. Son olarak, geçici kopyalar atılır.  
   
- .NET Framework 4 ile başlayarak, varsayılan başlangıç dosyası tarih ve saat dosya tarih ile uygulama dizinindeki her derleme ile gölge kopya dizin kopyalama süresi doğrudan Karşılaştırılacak davranışıdır. Derleme güncelleştirildiyse, .NET Framework'ün önceki sürümlerinde olduğu gibi aynı yordamı kullanarak kopyalanır; Aksi takdirde, gölge kopya dizin kopyalama yüklenir.  
+ .NET Framework 4 ' ten itibaren, varsayılan başlangıç davranışı, uygulama dizinindeki her derlemenin dosya tarih ve saatini, gölge kopya dizinindeki kopyanın dosya tarihi ve saati ile doğrudan karşılaştırmaktır. Derleme güncellendiyse, .NET Framework önceki sürümlerinde olduğu gibi aynı yordam kullanılarak kopyalanır; Aksi takdirde, gölge kopya dizinindeki kopya yüklenir.  
   
- Derlemeleri sık değiştirmeyin ve genellikle derlemeleri küçük bir kısmı değişiklikler uygulamaları için en büyük ortaya çıkan performans geliştirmesi. Bir uygulama değişikliği sık derlemelerde çoğunu, yeni varsayılan davranışı bir performans gerileme neden olabilir. .NET Framework'ün önceki sürümlerini başlangıç davranışını ekleyerek geri yükleyebilirsiniz [ \<shadowCopyVerifyByTimestamp > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) yapılandırma dosyasına sahip `enabled="false"`.  
+ Elde edilen performans iyileştirmesi, derlemelerin sık olarak değişmediğinden ve değişiklikler genellikle derlemelerin küçük bir alt kümesinde oluştuğu uygulamalar için en iyisidir. Bir uygulama içindeki derlemelerin büyük bir bölümü sıklıkla değiştiğinde yeni varsayılan davranış bir performans gerilemesine neden olabilir. Yapılandırma dosyasına [ \<shadowcopyverifybytimestamp > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) ekleyerek .NET Framework önceki sürümlerinin başlangıç davranışını geri yükleyebilirsiniz. `enabled="false"`  
   
 <a name="ObsoleteMethods"></a>   
 ## <a name="obsolete-methods"></a>Eski Yöntemler  
- <xref:System.AppDomain> Sınıfına sahip çeşitli yöntemler gibi <xref:System.AppDomain.SetShadowCopyFiles%2A> ve <xref:System.AppDomain.ClearShadowCopyPath%2A>, bir uygulama etki alanında gölge kopyalama denetlemek için kullanılabilir, ancak bu .NET Framework 2.0 sürümünde geçersiz olarak işaretlendi. Gölge kopyalama özelliklerini kullanmak için bir uygulama etki alanı yapılandırmak için önerilen yöntem <xref:System.AppDomainSetup> sınıfı.  
+ Sınıfı, <xref:System.AppDomain.SetShadowCopyFiles%2A> ve gibi çeşitli yöntemlere sahiptir ve <xref:System.AppDomain.ClearShadowCopyPath%2A>bu, bir uygulama etki alanında gölge kopyalamayı denetlemek için kullanılabilir, ancak bunlar .NET Framework sürüm 2,0 ' de artık kullanılmıyor olarak işaretlendi. <xref:System.AppDomain> Bir uygulama etki alanını gölge kopyalama için yapılandırmanın önerilen yolu, <xref:System.AppDomainSetup> sınıfının özelliklerini kullanmaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

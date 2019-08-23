@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963174"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
-Kullanarak verileri almak için bir **DataReader**, bir örneğini oluşturmak **komut** nesne ve oluşturup bir **DataReader** çağırarak **Command.ExecuteReader**  satırları bir veri kaynağından almak için. **DataReader** arabellekten çıkarılan bir yordam mantığı verimli bir şekilde bir veri kaynağından sonuçları sıralı olarak işlediğinden sağlayan veri akışını sağlar. **DataReader** verileri bellek içinde önbelleğe alınmamış çünkü büyük miktarlarda veri alınırken iyi bir seçimdir.
+**DataReader**kullanarak verileri almak Için, **komut** nesnesinin bir örneğini oluşturun ve sonra bir veri kaynağından satırları almak için **Command. ExecuteReader** çağırarak bir **DataReader** oluşturun. **DataReader** , yordamsal mantığın bir veri kaynağından oluşan sonuçları sırayla verimli bir şekilde işlemesini sağlayan, arabelleğe alınmamış bir veri akışı sağlar. Veriler bellekte önbelleğe alınmadığı için büyük miktarlarda veri alırken **DataReader** iyi bir seçimdir.
 
-Kullanarak aşağıdaki örnekte gösterildiği bir **DataReader**burada `reader` geçerli DataReader temsil eder ve `command` geçerli olan komut nesnesini temsil eder.  
+Aşağıdaki örnekte, `reader` geçerli bir DataReader temsil eden ve `command` geçerli bir komut nesnesini temsil eden bir **DataReader**kullanımı gösterilmektedir.  
 
 ```csharp
 reader = command.ExecuteReader();  
@@ -25,41 +25,41 @@ reader = command.ExecuteReader();
 reader = command.ExecuteReader()
 ```  
 
-Kullanım **DataReader.Read** satır öğesinden gelen soru sonuçları elde etmek için yöntemi. Döndürülen satırın her sütun adı veya sıra numarası sütununun geçirerek erişebileceğiniz **DataReader**. Ancak, en iyi performans için **DataReader** bir dizi kendi yerel veri türlerinde sütun değerleri erişmenize olanak tanıyan yöntemler sağlar (**GetDateTime**, **GetDouble**, **GetGuid**, **Getınt32**, vb.). Sağlayıcıya özgü veriler için belirlenmiş erişimci metotlarını bir listesi için **DataReaders**, bkz: <xref:System.Data.OleDb.OleDbDataReader> ve <xref:System.Data.SqlClient.SqlDataReader>. Temel alınan verileri bildiğiniz durumlarda yazılan erişimci yöntemlerini kullanarak türü sütun değeri alınırken gerekli tür dönüştürme miktarını azaltır.  
+Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kullanın. Döndürülen satırın her sütununa, sütunun ad veya sıra numarasını **DataReader**' a geçirerek erişebilirsiniz. Bununla birlikte, en iyi performans için, **DataReader** kendi yerel veri türlerindeki (**GetDateTime**, **GetDouble**, **GetGuid**, **GetInt32**vb.) sütun değerlerine erişmenize izin veren bir dizi yöntem sunar. Veri sağlayıcısına özgü **DataReaders**türü belirlenmiş erişimci yöntemlerinin bir listesi için bkz <xref:System.Data.OleDb.OleDbDataReader> . ve. <xref:System.Data.SqlClient.SqlDataReader> Temel alınan veri türünü bildiğiniz durumlarda türü belirlenmiş erişimci yöntemlerinin kullanılması, sütun değerini alırken gereken tür dönüştürme miktarını azaltır.  
   
- Aşağıdaki örnek gezinir bir **DataReader** nesnesi ve her satırdan iki sütun döndürür.  
+ Aşağıdaki örnek, bir **DataReader** nesnesi üzerinden yinelenir ve her satırdan iki sütun döndürür.  
   
  [!code-csharp[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.HasRows#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.HasRows/VB/source.vb#1)]  
   
-## <a name="closing-the-datareader"></a>DataReader kapatma  
- Her zaman çağrı **Kapat** kullanarak tamamladığınızda yöntemi **DataReader** nesne.  
+## <a name="closing-the-datareader"></a>DataReader kapatılıyor  
+ **DataReader** nesnesini kullanmayı bitirdiğinizde her zaman **Close** yöntemini çağırın.  
   
- Varsa, **komut** çıktısını içeren parametreleri veya dönüş değerleri, bu değerleri kullanılamaz kadar **DataReader** kapatılır.  
+ Komutunuz çıkış parametrelerini veya dönüş değerlerini Içeriyorsa, **DataReader** kapatılana kadar bu değerler kullanılamaz.  
   
- Ancak bir **DataReader** açıkken **bağlantı** , tarafından özel olarak **DataReader**. Herhangi bir komut yürütülemiyor **bağlantı**, başka bir oluşturma gibi **DataReader**, özgün kadar **DataReader** kapatılır.  
+ Bir **DataReader** açık olsa da **bağlantı** , bu **DataReader**tarafından özel olarak kullanılıyor. Özgün **DataReader** kapatılana kadar, başka bir **DataReader**oluşturma da dahil olmak üzere **bağlantı**için herhangi bir komut yürütemezsiniz.  
   
 > [!NOTE]
->  Çağırmayın **Kapat** veya **Dispose** üzerinde bir **bağlantı**, **DataReader**, ya da diğer yönetilen nesnelere **Finalize**  sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir **Finalize** sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
+> Bir **bağlantıyı**, bir **DataReader**'ı veya sınıfınızın **Finalize** yönteminde herhangi bir yönetilen nesneyi **kapatma** veya **atma** işlemini çağırmayın. Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir **Finalize** yöntemi eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
-## <a name="retrieving-multiple-result-sets-using-nextresult"></a>Birden çok sonuç alınırken NextResult kullanarak ayarlar  
- Varsa **DataReader** çağrısı birden çok sonuç kümesi döndürür **NextResult** sonucu yineleme yapmak için gereken yöntemini ayarlar sıralı olarak. Aşağıdaki örnekte gösterildiği <xref:System.Data.SqlClient.SqlDataReader> kullanarak iki SELECT deyimleri sonuçlarını işleme <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yöntemi.  
+## <a name="retrieving-multiple-result-sets-using-nextresult"></a>NextResult kullanarak birden çok sonuç kümesi alma  
+ **DataReader** birden çok sonuç kümesi döndürürse, sonuç kümelerini sırayla yinelemek Için **NextResult** yöntemini çağırın. Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yöntemi kullanılarak <xref:System.Data.SqlClient.SqlDataReader> iki SELECT deyimi sonuçlarının işlenme işlemini gösterir.  
   
  [!code-csharp[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
-## <a name="getting-schema-information-from-the-datareader"></a>DataReader gelen şema bilgilerini alma  
- Ancak bir **DataReader** olan şema bilgileri kullanılarak ayarlanan geçerli sonucu ile ilgili alabilirsiniz açık **GetSchemaTable** yöntemi. **GetSchemaTable** döndürür bir <xref:System.Data.DataTable> nesne satır ve geçerli sonuç kümesi için şema bilgileri içeren sütunlar ile doldurulur. **DataTable** sonuç kümesinin her bir sütun için bir satır içerir. Şema tablonun her sütunu eşleyen bir özelliğine döndürülen sütunlar sonuç satırlarını ayarlama, burada **ColumnName** özelliği adıdır ve özelliğinin değeri sütun değeridir. Aşağıdaki örnek, şema bilgileri için Yazar **DataReader**.  
+## <a name="getting-schema-information-from-the-datareader"></a>DataReader 'tan şema bilgileri alma  
+ Bir **DataReader** açıkken, **GetSchemaTable** yöntemini kullanarak geçerli sonuç kümesiyle ilgili şema bilgilerini alabilirsiniz. **GetSchemaTable** , geçerli <xref:System.Data.DataTable> sonuç kümesi için şema bilgilerini içeren satırlar ve sütunlar ile doldurulmuş bir nesne döndürür. **DataTable** , sonuç kümesinin her bir sütunu için bir satır içerir. Şema tablosunun her sütunu, sonuç kümesinin satırlarında döndürülen sütunların bir özelliğine eşlenir; burada sütunadı, özelliğin adıdır ve sütununun değeri özelliğin değeridir. Aşağıdaki örnek, **DataReader**için şema bilgilerini yazar.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
   
-## <a name="working-with-ole-db-chapters"></a>OLE DB bölümlerle çalışma  
- Hiyerarşik satır kümeleri ya da bölümlerini (OLE DB türü **DBTYPE_HCHAPTER**, ADO türü **adChapter**), kullanılarak alınabilir <xref:System.Data.OleDb.OleDbDataReader>. Olarak bölüm içeren bir sorgu döndürüldüğünde bir **DataReader**, bu bölümde, bir sütun olarak döndürülen **DataReader** ve olarak kullanıma sunulduğunu bir **DataReader** nesne.  
+## <a name="working-with-ole-db-chapters"></a>OLE DB bölümler ile çalışma  
+ Hiyerarşik satır kümeleri veya bölümler (OLE DB türü **dbtype_hchapter**, ADO türü **adbölüm**) kullanılarak <xref:System.Data.OleDb.OleDbDataReader>alınabilir. Bölüm içeren bir sorgu **DataReader**olarak döndürüldüğünde, bölüm bu **DataReader** 'da bir sütun olarak döndürülür ve bir **DataReader** nesnesi olarak sunulur.  
   
- ADO.NET **veri kümesi** hiyerarşik satır kümeleri tablolar arasındaki üst-alt ilişkileri kullanarak temsil etmek için de kullanılabilir. Daha fazla bilgi için [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ ADO.NET **veri kümesi** , tablolar arasında üst-alt ilişkilerini kullanarak hiyerarşik satır kümelerini temsil etmek için de kullanılabilir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
   
- Aşağıdaki kod örneği MSDataShape sağlayıcı bir bölüm sütunu her müşteriye ait siparişlerin müşterilerin listesini oluşturmak için kullanır.  
+ Aşağıdaki kod örneği, bir müşteri listesindeki her müşteri için siparişlerin bir bölüm sütununu oluşturmak üzere MSDataShape sağlayıcısını kullanır.  
   
 ```vb  
 Using connection As OleDbConnection = New OleDbConnection(
@@ -133,16 +133,16 @@ using (OleDbConnection connection = new OleDbConnection(
 }
 ```  
   
-## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF CURSOR sonuçlar döndürüyor  
- Oracle için .NET Framework veri sağlayıcısı, bir sorgu sonuç döndürmek için Oracle REF CURSOR kullanımını destekler. Bir Oracle REF CURSOR olarak döndürülen bir <xref:System.Data.OracleClient.OracleDataReader>.  
+## <a name="returning-results-with-oracle-ref-cursors"></a>Oracle REF IMLEÇLER ile sonuçları döndürme  
+ Oracle için .NET Framework Veri Sağlayıcısı, Oracle REF IMLEÇLER 'in bir sorgu sonucu döndürecek şekilde kullanılmasını destekler. Oracle REF CURSOR bir <xref:System.Data.OracleClient.OracleDataReader>olarak döndürülür.  
   
- Alabileceğiniz bir <xref:System.Data.OracleClient.OracleDataReader> kullanarak bir Oracle REF CURSOR temsil eden bir nesne <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> yöntemi. Ayrıca belirtebileceğiniz bir <xref:System.Data.OracleClient.OracleCommand> olarak bir veya daha fazla Oracle REF CURSOR döndüren **SelectCommand** için bir <xref:System.Data.OracleClient.OracleDataAdapter> doldurmak için kullanılan bir <xref:System.Data.DataSet>.  
+ Yöntemini kullanarak bir Oracle <xref:System.Data.OracleClient.OracleDataReader> başvuru imlecini temsil eden bir nesnesi alabilirsiniz. <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A> Ayrıca, bir veya daha <xref:System.Data.OracleClient.OracleCommand> fazla Oracle başvuru imleçlerini bir <xref:System.Data.DataSet>tane doldurdukları için <xref:System.Data.OracleClient.OracleDataAdapter> SelectCommand olarak döndüren bir de belirtebilirsiniz.  
   
- Bir Oracle veri kaynağından döndürülen bir REF CURSOR erişmek için oluşturun bir <xref:System.Data.OracleClient.OracleCommand> sorgunuz için ve REF CURSOR için başvuran çıkış parametresi ekleyin <xref:System.Data.OracleClient.OracleCommand.Parameters> koleksiyonunu, <xref:System.Data.OracleClient.OracleCommand>. Parametrenin adını sorgunuzda REF CURSOR parametrenin adı eşleşmelidir. Parametre türünü ayarlamak <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>. <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> Yöntemi, <xref:System.Data.OracleClient.OracleCommand> döndürür bir <xref:System.Data.OracleClient.OracleDataReader> REF CURSOR için.  
+ Oracle veri kaynağından döndürülen bir başvuru imlecine erişmek için, sorgunuz için bir <xref:System.Data.OracleClient.OracleCommand> oluşturun ve başvuru imlecine <xref:System.Data.OracleClient.OracleCommand.Parameters> <xref:System.Data.OracleClient.OracleCommand>başvuran bir çıkış parametresi ekleyin. Parametrenin adı Sorgunuzdaki REF CURSOR parametresinin adıyla eşleşmelidir. Parametresinin türünü olarak <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType>ayarlayın. ' In yöntemi başvuru imleci <xref:System.Data.OracleClient.OracleDataReader> için döndürür.<xref:System.Data.OracleClient.OracleCommand> <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType>  
   
- Varsa, <xref:System.Data.OracleClient.OracleCommand> birden çok REF CURSOR döndürür birden çok çıktı parametreleri ekleyin. Farklı REF CURSOR çağırarak erişebileceğiniz <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> yöntemi. Çağrı <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> döndürür bir <xref:System.Data.OracleClient.OracleDataReader> ilk REF CURSOR başvuruyor. Ardından çağırabilirsiniz <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> sonraki REF CURSOR erişmek için yöntemi. Ancak parametrelerinde, <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> koleksiyon eşleşme REF CURSOR parametreleri adıyla çıkış <xref:System.Data.OracleClient.OracleDataReader> bunları içinde eklendikleri için sırada erişir <xref:System.Data.OracleClient.OracleCommand.Parameters> koleksiyonu.  
+ Birden çok başvuru imleci döndürürse,birdençokçıkışparametresiekleyin.<xref:System.Data.OracleClient.OracleCommand> <xref:System.Data.OracleClient.OracleCommand.ExecuteReader?displayProperty=nameWithType> Yöntemini çağırarak farklı başvuru imleçlerinin erişimine erişebilirsiniz. Çağrısı <xref:System.Data.OracleClient.OracleCommand.ExecuteReader> , ilk başvuru imlecine <xref:System.Data.OracleClient.OracleDataReader> başvuran döndürür. Ardından, <xref:System.Data.OracleClient.OracleDataReader.NextResult?displayProperty=nameWithType> sonraki başvuru imleçlerini erişmek için yöntemini çağırabilirsiniz. Koleksiyonunuzdaki <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> parametreler, başvuru imleci çıkış parametreleriyle ada göre eşleşir <xref:System.Data.OracleClient.OracleDataReader> , ancak onlara <xref:System.Data.OracleClient.OracleCommand.Parameters> koleksiyona eklendikleri sırayla erişir.  
   
- Örneğin, aşağıdaki Oracle paket ve paket gövdesi göz önünde bulundurun.  
+ Örneğin, aşağıdaki Oracle paketini ve paket gövdesini göz önünde bulundurun.  
   
 ```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -162,7 +162,7 @@ CREATE OR REPLACE PACKAGE BODY CURSPKG AS
 END CURSPKG;   
 ```  
   
- Aşağıdaki kod oluşturur bir <xref:System.Data.OracleClient.OracleCommand> döndüren REF CURSOR önceki Oracle paketi türünde iki parametre ekleyerek <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> için <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> koleksiyonu.  
+ Aşağıdaki kod, <xref:System.Data.OracleClient.OracleCommand> <xref:System.Data.OracleClient.OracleCommand.Parameters?displayProperty=nameWithType> koleksiyona iki tür <xref:System.Data.OracleClient.OracleType.Cursor?displayProperty=nameWithType> parametre ekleyerek önceki Oracle paketinden başvuru imleçleri döndüren bir oluşturur.  
   
 ```vb  
 Dim cursCmd As OracleCommand = New OracleCommand("CURSPKG.OPEN_TWO_CURSORS", oraConn)  
@@ -176,7 +176,7 @@ cursCmd.Parameters.Add("EMPCURSOR", OracleType.Cursor).Direction = ParameterDire
 cursCmd.Parameters.Add("DEPTCURSOR", OracleType.Cursor).Direction = ParameterDirection.Output;  
 ```  
   
- Aşağıdaki kod, önceki komutla sonuçlarını döndürür <xref:System.Data.OracleClient.OracleDataReader.Read> ve <xref:System.Data.OracleClient.OracleDataReader.NextResult> yöntemlerinin <xref:System.Data.OracleClient.OracleDataReader>. REF CURSOR parametreleri sırayla döndürülür.  
+ Aşağıdaki kod, <xref:System.Data.OracleClient.OracleDataReader.Read> ve <xref:System.Data.OracleClient.OracleDataReader.NextResult> yöntemlerini <xref:System.Data.OracleClient.OracleDataReader>kullanarak önceki komutun sonucunu döndürür. REF CURSOR parametreleri sırayla döndürülür.  
   
 ```vb  
 oraConn.Open()  
@@ -232,7 +232,7 @@ reader.Close();
 oraConn.Close();  
 ```  
   
- Aşağıdaki örnek önceki komutun doldurmak için kullanır. bir <xref:System.Data.DataSet> Oracle paket sonuçlarla.  
+ Aşağıdaki örnek, Oracle paketinin sonuçlarıyla <xref:System.Data.DataSet> birlikte doldurmak için Previous komutunu kullanır.  
   
 ```vb  
 Dim ds As DataSet = New DataSet()  
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
->  Önlemek için bir **OverflowException**, değer depolanmadan önce her türünden dönüştürme Oracle numarası geçerli bir .NET Framework türü de ele öneririz bir <xref:System.Data.DataRow>. Kullanabileceğiniz <xref:System.Data.Common.DataAdapter.FillError> belirlemek için olay bir **OverflowException** oluştu. Daha fazla bilgi için <xref:System.Data.Common.DataAdapter.FillError> olay bkz [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Bir **OverflowException**'ı önlemek için, değeri bir <xref:System.Data.DataRow>içinde depolamadan önce Oracle Number türünden geçerli bir .NET Framework türüne dönüştürme işleminin de işlemesini öneririz. Bir OverflowException 'ın oluşup <xref:System.Data.Common.DataAdapter.FillError> oluşmadığını öğrenmek için olayını kullanabilirsiniz. <xref:System.Data.Common.DataAdapter.FillError> Olay hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

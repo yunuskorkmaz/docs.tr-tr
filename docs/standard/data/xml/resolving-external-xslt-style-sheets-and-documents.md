@@ -5,43 +5,43 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e956b96b27898e2cad4bed30996622ab0b86656
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 381b7c1eb091bafbcdc8ea842597c539c6be3a57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945628"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Dış XSLT Stil Sayfaları ile Belgelerini Çözümleme
-Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gerekebilir.  
+Dış kaynakları çözmeniz gerekebilmeniz için bir dönüştürme sırasında birkaç zaman vardır.  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> Sınıfı .NET Framework 2. 0'kullanılmıyor. Genişletilebilir Stil Sayfası Dil Dönüşümleri (XSLT) dönüştürmeleri için kullanarak gerçekleştirebileceğiniz <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı.  
+> <xref:System.Xml.Xsl.XslTransform> Sınıf .NET Framework 2,0 ' de kullanılmıyor. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfını kullanarak dönüşümler için Genişletilebilir Stil sayfası dili (XSLT) dönüşümleri gerçekleştirebilirsiniz.  
   
- Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gerekebilir:  
+ Dış kaynakları çözmeniz gerekebilmeniz için bir dönüştürme sırasında birkaç zaman vardır:  
   
-- Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> bir dış stil sayfası bulunamadı.  
+- Bir dış stil sayfasını bulmak için.<xref:System.Xml.Xsl.XslTransform.Load%2A>  
   
-- Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> herhangi çözümlenecek `<xsl:include>` veya `<xsl:import>` öğeleri stil sayfası bulunamadı.  
+- Stil <xref:System.Xml.Xsl.XslTransform.Load%2A> sayfasında bulunan `<xsl:include>` veya`<xsl:import>` öğelerinin çözümlenmesi sırasında.  
   
-- Sırasında <xref:System.Xml.Xsl.XslTransform.Transform%2A> herhangi çözümlenecek `document()` işlevleri.  
+- <xref:System.Xml.Xsl.XslTransform.Transform%2A> Tüm`document()` işlevleri çözümlemek için.  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver sınıfını kullanma  
- Bir ağ kaynağına erişmek için kimlik doğrulaması gerekiyorsa kullanın <xref:System.Xml.Xsl.XslTransform.Load%2A> içeren yöntemlerin bir <xref:System.Xml.XmlResolver> geçirilecek parametre <xref:System.Xml.XmlResolver> gerekli kimlik bilgisi özellikleri olan nesne.  
+ Bir ağ kaynağına erişmek için kimlik doğrulaması gerekiyorsa, <xref:System.Xml.Xsl.XslTransform.Load%2A> <xref:System.Xml.XmlResolver> nesneyi geçirmek için gerekli kimlik bilgisi özellikleri <xref:System.Xml.XmlResolver> ayarlanmış bir parametreye sahip yöntemleri kullanın.  
   
- Özel bir varsa <xref:System.Xml.XmlResolver> kullanmak istediğiniz veya farklı kimlik bilgileri belirtmeniz gerekiyorsa, dış kaynak çözümleme gerektiğinde bağlı olarak, gerekli görev aşağıdaki tabloda listelenmiştir.  
+ Kullanmak istediğiniz özel bir özel <xref:System.Xml.XmlResolver> varsa veya farklı kimlik bilgileri belirtmeniz gerekiyorsa, dış kaynağın çözümüne ne zaman ihtiyaç duydığına bağlı olarak, aşağıdaki tabloda gereken görev listelenmektedir.  
   
-|Hangi işlemin çözümlemesi gerektirir.|Gerekli görev|  
+|Hangi işlemin çözülmesi gerekir|Görev gerekiyor|  
 |--------------------------------------|-------------------|  
-|Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> stil sayfası bulunamadı.|Aşırı yüklenen belirtin <xref:System.Xml.Xsl.XslTransform.Load%2A> yönteminin, bir parametre olarak alan bir <xref:System.Xml.XmlResolver> stil sayfası kimlik bilgileri gerektiren bir kaynakta ise.|  
-|Sırasında <xref:System.Xml.Xsl.XslTransform.Load%2A> çözümlenecek `<xsl:include>` veya `<xsl:import>`.|Aşırı yüklenen belirtin <xref:System.Xml.Xsl.XslTransform.Load%2A> yönteminin, bir parametre olarak alan bir <xref:System.Xml.XmlResolver>. <xref:System.Xml.XmlResolver> Tarafından başvurulan stil sayfaları yüklemek için kullanılan `import` veya `include` deyimleri. İçinde geçirirseniz `null`, dış kaynaklara çözümlenmedi.|  
-|Tüm çözmek için bir dönüştürme sırasında `document()` işlevleri.|Belirtin <xref:System.Xml.XmlResolver> kullanarak dönüştürme sırasında <xref:System.Xml.Xsl.XslTransform.Transform%2A> gereken yöntemini bir <xref:System.Xml.XmlResolver> bağımsız değişken.|  
+|Stil sayfasını bulmak için. <xref:System.Xml.Xsl.XslTransform.Load%2A>|Stil sayfası, <xref:System.Xml.Xsl.XslTransform.Load%2A> kimlik bilgileri gerektiren bir kaynakta ise, bir parametresi <xref:System.Xml.XmlResolver> olarak alan aşırı yüklenmiş yöntemi belirtin.|  
+|Veya <xref:System.Xml.Xsl.XslTransform.Load%2A> `<xsl:include>`sorununuçözmekiçin. `<xsl:import>`|<xref:System.Xml.Xsl.XslTransform.Load%2A> Parametresi<xref:System.Xml.XmlResolver>olarak, olan aşırı yüklenmiş yöntemi belirtin. <xref:System.Xml.XmlResolver> , `import` Veya deyimleri`include` tarafından başvurulan stil sayfalarını yüklemek için kullanılır. ' `null`İ geçirirseniz, dış kaynaklar çözümlenmez.|  
+|Bir dönüşüm sırasında `document()` işlevleri çözün.|<xref:System.Xml.Xsl.XslTransform.Transform%2A> <xref:System.Xml.XmlResolver> Bir<xref:System.Xml.XmlResolver> bağımsız değişken alan yöntemi kullanarak dönüştürme sırasında öğesini belirtin.|  
   
- `document()` İşlevi alır. diğer XML kaynakları bir stil sayfası, ayrıca Giriş akışı tarafından sağlanan ilk XML verileri için. Bu işlev eklenmesi olabilir XML verileri, başka bir yerde, bulunan olanak tanıdığından bir <xref:System.Xml.XmlResolver> ile bir `null` için sağlanan değer <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi engeller `document()` yürütülmesini işlevi. Kullanmak istiyorsanız `document()` işlev, kullanın <xref:System.Xml.Xsl.XslTransform.Transform%2A> gereken yöntemini bir <xref:System.Xml.XmlResolver> uygun izinlere sahip olmaya ek olarak, bir parametre olarak ayarlayın.  
+ `document()` İşlevi, giriş akışı tarafından sunulan ilk XML verilerine ek olarak bir stil sayfasından diğer XML kaynaklarını alır. Bu işlev, başka bir yerde konumlandırılabilir XML verilerinin <xref:System.Xml.XmlResolver> eklenmesine izin verdiğinden, <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi `document()` için sağlanan bir `null` değer içeren bir değeri, işlevin yürütülmesini önler. `document()` İşlevini kullanmak istiyorsanız, uygun izin kümesine sahip olmanın yanı <xref:System.Xml.Xsl.XslTransform.Transform%2A> sıra parametresi <xref:System.Xml.XmlResolver> olarak alan yöntemi kullanın.  
   
- Daha fazla bilgi için <xref:System.Xml.Xsl.XslTransform.Load%2A> yöntemi ve kullanımı <xref:System.Xml.XmlResolver>, bkz: <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A> Yöntemi ve kullanımı <xref:System.Xml.XmlResolver>hakkında daha fazla bilgi için, bkz <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>.  
   
- Zaman <xref:System.Xml.Xsl.XslTransform.Transform%2A> yöntemi çağrıldığında, izinleri yükleme sırasında sağlanan kanıt karşı hesaplandığı ve izin kümesi atanan tüm dönüştürme işlemi. Varsa `document()` işlevi izinleri bulunamadı kümesinde bir özel durum gerektiren bir eylem başlatmak dener.  
+ <xref:System.Xml.Xsl.XslTransform.Transform%2A> Yöntemi çağrıldığında, izinler yükleme zamanında verilen kanıtla karşılaştırılır ve bu izin kümesi tüm dönüştürme işlemine atanır. `document()` İşlev, küme içinde bulunamayan izinleri gerektiren bir eylem başlatmaya çalışırsa, bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -50,7 +50,7 @@ Bazı birkaç kez dönüştürme sırasında dış kaynakları çözümleme gere
 - [XslTransform Çıkışları](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)
 - [Farklı Mağazalarda XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)
 - [Stil Sayfası Parametreleri ve Genişletme Nesneleri için XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)
-- [XSLT stil sayfası komut dosyalarını kullanarak \<msxsl: script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
+- [Msxsl: Script \<> kullanarak XSLT stil sayfası betiği oluşturma](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)
 - [msxsl:node-set() İşlevi Desteği](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)
 - [Dönüşümlerde XPathNavigator](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)
 - [Dönüşümlerde XPathNodeIterator](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)

@@ -6,163 +6,163 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 7dec86c724479fde78fcb2e2881dce40b1bf747a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5768177401504f4776a34e499d07b7600597175a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877112"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957191"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>İzlenecek yol: Erişilebilir bir Windows Tabanlı Uygulama Oluşturma
 
-Erişilebilir bir uygulama oluşturma, önemli iş etkileri vardır. Birçok hükümetler yazılım satın alma için erişilebilirlik düzenlemeleri vardır. Windows için sertifikalıdır logosu erişilebilirlik gereksinimlerini içerir. ABD tek başına kaç tanesinin potansiyel müşteriler, tahmini bir 30 milyon yaşayanlar yazılım erişilebilirliğini tarafından etkilenir.
+Erişilebilir bir uygulama oluşturmak önemli iş etkilerine sahiptir. Birçok kamu yazılımı, yazılım satın alma için erişilebilirlik düzenlemelerine sahiptir. Certified for Windows logosu erişilebilirlik gereksinimlerini içerir. ABD 'deki tahmini bir 30.000.000 sakın tek başına, potansiyel müşterilerinin çoğu yazılım erişilebilirliğiyle etkilenir.
 
-Bu izlenecek yol, Windows için sertifikalıdır logosu beş erişilebilirlik gereksinimlerini ele alınacaktır. Bu gereksinimlerine göre erişilebilir bir uygulama olacaktır:
+Bu izlenecek yol, Windows için sertifikalı logosu için beş erişilebilirlik gereksinimini ele alacak. Bu gereksinimlere göre, erişilebilir bir uygulama şunları sağlar:
 
-- Denetim Masası boyutu, renk, yazı tipi desteği ve giriş ayarları. Kullanıcı Denetim Masası ayarları değiştiğinde menü çubuğunda, başlık çubuğu, kenarlık ve durum çubuğu tüm kendilerini boyutlandırılır. Bu uygulamada hiçbir ek değişiklikler denetimlerde veya kod gerekir.
+- Denetim Masası boyutunu, rengini, yazı tipini ve giriş ayarlarını destekler. Kullanıcı denetim masası ayarlarını değiştirdiğinde, menü çubuğu, başlık çubuğu, kenarlıklar ve durum çubuğunun hepsi kendini yeniden boyutlandıracaktır. Bu uygulamada denetimlerde veya kodda ek değişiklik yapılması gerekmez.
 
 - Yüksek Karşıtlık modunu destekler.
 
-- Tüm özellikleri belgelenmiş klavye erişim sağlar.
+- Tüm özelliklere belgelenmiş klavye erişimi sağlar.
 
-- Klavye odağı konumunu görsel olarak hem de programsal olarak kullanıma sunar.
+- Klavye odağının konumunu görsel ve programlı olarak ortaya çıkarın.
 
-- Tek başına sesle önemli bilgileri iletmek kaçının.
+- Önemli bilgileri seslerle tek başına vermekten kaçının.
 
-Daha fazla bilgi için [erişilebilir uygulamalar tasarlama için kaynaklar](/visualstudio/ide/reference/resources-for-designing-accessible-applications).
+Daha fazla bilgi için bkz. [erişilebilir uygulamalar tasarlama kaynakları](/visualstudio/ide/reference/resources-for-designing-accessible-applications).
 
-Değişen klavye düzenleri destekleme hakkında daha fazla bilgi için bkz: [dünya çapında kullanılmaya hazır uygulama geliştirmek için en iyi](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).
+Farklı klavye düzenlerini destekleme hakkında daha fazla bilgi için bkz. [Dünya çapında kullanılabilecek uygulamalar geliştirmek Için En Iyi uygulamalar](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md).
 
 ## <a name="creating-the-project"></a>Projeyi Oluşturma
 
-Bu izlenecek yolda pizza siparişler alan bir uygulama için kullanıcı arabirimi oluşturur. İçerdiği bir <xref:System.Windows.Forms.TextBox> müşterinin adı için bir <xref:System.Windows.Forms.RadioButton> pizza boyutu seçmek için Grup bir <xref:System.Windows.Forms.CheckedListBox> toppings seçmek için iki düğme denetimi etiketli sırasını ve iptal et ve çıkış komutu ile bir menü.
+Bu izlenecek yol, pizza siparişi alan bir uygulama için Kullanıcı arabirimi oluşturur. Bu, müşterinin adı <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.RadioButton> için, bir grup olan pizza boyutunu seçme, toppings seçmek için bir <xref:System.Windows.Forms.CheckedListBox> Grup, Order ve Cancel etiketli iki düğme denetimi ve çıkış komutuyla bir menü içerir.
 
-Kullanıcı, müşterinin adı, pizza ve istenen toppings boyutunu girer. Kullanıcı sipariş düğmesine tıkladığında, sırasını ve kendi maliyet özeti, bir ileti kutusunda görüntülenir ve denetimler temizlenir ve sonraki siparişi için hazır değil. Kullanıcı iptal düğmesine tıkladığında, denetimler, temizlenmiş ve sonraki siparişi için hazır değil. Kullanıcı çıkış menü öğesini tıkladığında, program kapatır.
+Kullanıcı müşterinin adını, pizza boyutunu ve toppings istenen şekilde girer. Kullanıcı sipariş düğmesine tıkladığında, siparişin Özeti ve maliyeti bir ileti kutusunda görüntülenir ve denetimler temizlenir ve bir sonraki sırada kullanılabilir. Kullanıcı Iptal düğmesine tıkladığında, denetimler temizlenir ve bir sonraki sıraya göre hazırlanalınır. Kullanıcı çıkış menü öğesine tıkladığında program kapanır.
 
-Bu kılavuzun Vurgu perakende sırada sistem, ancak kullanıcı arabirimi erişilebilirliği kodu değil. İzlenecek yol, birçok erişilebilirlik özelliğine düğmeleri, radyo düğmeleri, metin kutuları ve etiketler gibi denetimleri, sık kullanılan gösterir.
+Bu izlenecek yolun vurgusu, bir perakende sipariş sisteminin kodu değil, Kullanıcı arabiriminin erişilebilirliği değildir. İzlenecek yol, düğmeler, radyo düğmeleri, metin kutuları ve Etiketler dahil olmak üzere, sık kullanılan birçok denetimin erişilebilirlik özelliklerini gösterir.
 
-#### <a name="to-begin-making-the-application"></a>Uygulama yapmaya başlamak için
+#### <a name="to-begin-making-the-application"></a>Uygulamayı yapmaya başlamak için
 
-- Visual Basic veya Visual içinde yeni bir Windows uygulaması oluşturma C#. Projeyi adlandırın **PizzaOrder**. (Ayrıntılar için bkz. [oluşturma yeni çözümler ve projeler](/visualstudio/ide/creating-solutions-and-projects).)
+- Visual Basic veya görselde C#yeni bir Windows uygulaması oluşturun. Projeyi **PizzaOrder**olarak adlandırın. (Ayrıntılar için bkz. [yeni çözümler ve projeler oluşturma](/visualstudio/ide/creating-solutions-and-projects).)
 
-## <a name="adding-the-controls-to-the-form"></a>Formu için denetimler ekleme
+## <a name="adding-the-controls-to-the-form"></a>Forma denetim ekleme
 
-Forma denetim ekleme, erişilebilir bir uygulama yapmak için aşağıdaki yönergeleri dikkate alın:
+Denetimleri bir forma eklerken, erişilebilir bir uygulama oluşturmak için aşağıdaki yönergeleri aklınızda bulundurun:
 
-- Ayarlama <xref:System.Windows.Forms.Control.AccessibleDescription%2A> ve <xref:System.Windows.Forms.Control.AccessibleName%2A> özellikleri. Bu örnekte, varsayılan ayarı <xref:System.Windows.Forms.Control.AccessibleRole%2A> yeterlidir. Erişilebilirlik özellikleri hakkında daha fazla bilgi için bkz. [bir Windows formundaki denetimler için erişilebilirlik bilgileri sağlama](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A> Ve<xref:System.Windows.Forms.Control.AccessibleName%2A> özelliklerini ayarlayın. Bu örnekte, <xref:System.Windows.Forms.Control.AccessibleRole%2A> için varsayılan ayar yeterlidir. Erişilebilirlik özellikleri hakkında daha fazla bilgi için bkz. [Windows formundaki denetimler Için erişilebilirlik bilgileri sağlama](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md).
 
-- 10 noktalarına ya da daha büyük yazı tipi boyutunu ayarlayın.
+- Yazı tipi boyutunu 10 noktaya veya daha büyük olarak ayarlayın.
 
   > [!NOTE]
-  > Başlattığınızda 10 form yazı tipi boyutunu ayarlayın, tüm denetimler için form daha sonradan eklenen bir yazı tipi boyutu 10 yüklemeniz gerekir.
+  > Başlattığınız sırada formun yazı tipi boyutunu 10 olarak ayarlarsanız, daha sonra forma eklenen tüm denetimlerin 10 yazı tipi boyutu olur.
 
-- Hemen bir TextBox denetimi tanımlayan herhangi bir etiket denetimi TextBox denetimi içinde sekme sırası önündeki emin olun.
+- TextBox denetimini açıklayan etiket denetiminin, sekme düzeninde TextBox denetiminden hemen önce geldiğinden emin olun.
 
-- "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> gitmek istediğiniz kullanıcı denetiminin özelliği.
+- Kullanıcının gitmek isteyebileceğiniz herhangi bir denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğine, "&" karakterini kullanarak bir erişim anahtarı ekleyin.
 
-- "&" Karakteri kullanarak bir erişim anahtarı ekleme <xref:System.Windows.Forms.Control.Text%2A> önündeki kullanıcı gitmek isteyebilirsiniz bir denetim etiketinin özelliği. Etiketlerin ayarlamak <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `true`, böylece kullanıcı erişim tuşuna bastığında odağını sekme sırasında sonraki denetime ayarlanır.
+- Kullanıcının gitmek isteyebileceğiniz bir denetimin önündeki etiketin <xref:System.Windows.Forms.Control.Text%2A> özelliğine "&" karakterini kullanarak bir erişim anahtarı ekleyin. Kullanıcı erişim tuşuna bastığında <xref:System.Windows.Forms.Label.UseMnemonic%2A> , odağın `true`sekme sırasında bir sonraki denetime ayarlanabilmesi için etiketlerin ' özelliğini olarak ayarlayın.
 
-- Tüm menü öğeleri için erişim anahtarları ekleyin.
+- Tüm menü öğelerine erişim anahtarları ekleyin.
 
 #### <a name="to-make-your-windows-application-accessible"></a>Windows uygulamanızı erişilebilir hale getirmek için
 
-- Formu için denetimler ekleme ve aşağıda açıklandığı gibi özellikleri ayarlayın. Form üzerinde denetimleri düzenlemek nasıl bir model için tablonun sonuna resmi görürsünüz.
+- Denetimleri forma ekleyin ve aşağıda açıklandığı gibi özellikleri ayarlayın. Form üzerinde denetimlerin nasıl düzenlendiğini gösteren bir model için tablonun sonundaki resme bakın.
 
    |Nesne|Özellik|Değer|
    |------------|--------------|-----------|
-   |Form1|AccessibleDescription|Siparişi formu|
-   ||AccessibleName|Siparişi formu|
+   |Form1|Erişilebilir açıklama|Sipariş formu|
+   ||Erişilebilir ad|Sipariş formu|
    ||Yazı tipi boyutu|10|
-   ||Metin|Pizza siparişi formu|
-   |PictureBox|Ad|Logo|
-   ||AccessibleDescription|Pizza dilimin|
-   ||AccessibleName|Şirket logosu|
-   ||Görüntü|Herhangi bir simge ya da bit eşlem|
+   ||Metin|Pizza sırası formu|
+   |PictureBox|Ad|Le|
+   ||Erişilebilir açıklama|Pizza dilimi|
+   ||Erişilebilir ad|Şirket logosu|
+   ||Görüntü|Herhangi bir simge veya bit eşlem|
    |Etiketle|Ad|companyLabel|
-   ||Metin|İyi Pizza|
-   ||TabIndex|1.|
-   ||AccessibleDescription|Şirket adı|
-   ||AccessibleName|Şirket adı|
-   ||Arka plan rengi|Mavi|
-   ||ForeColor|Sarı|
+   ||Metin|İyi pizza|
+   ||Atan|1\.|
+   ||Erişilebilir açıklama|Şirket adı|
+   ||Erişilebilir ad|Şirket adı|
+   ||Rengi|Mavi|
+   ||ForeColor|Renkle|
    ||Yazı tipi boyutu|18|
    |Etiketle|Ad|customerLabel|
    ||Metin|& adı|
-   ||TabIndex|2|
-   ||AccessibleDescription|Müşteri adı etiketi|
-   ||AccessibleName|Müşteri adı etiketi|
-   ||UseMnemonic|Doğru|
-   |TextBox|Ad|CustomerName|
-   ||Metin|(hiçbiri)|
-   ||TabIndex|3|
-   ||AccessibleDescription|Müşteri adı|
-   ||AccessibleName|Müşteri adı|
+   ||Atan|2|
+   ||Erişilebilir açıklama|Müşteri adı etiketi|
+   ||Erişilebilir ad|Müşteri adı etiketi|
+   ||Useanımsatıcı|Doğru|
+   |TextBox|Ad|customerName|
+   ||Metin|seçim|
+   ||Atan|3|
+   ||Erişilebilir açıklama|Müşteri adı|
+   ||Erişilebilir ad|Müşteri adı|
    |GroupBox|Ad|sizeOptions|
-   ||AccessibleDescription|Pizza boyut seçenekleri|
-   ||AccessibleName|Pizza boyut seçenekleri|
+   ||Erişilebilir açıklama|Pizza boyut seçenekleri|
+   ||Erişilebilir ad|Pizza boyut seçenekleri|
    ||Metin|Pizza boyutu|
-   ||TabIndex|4|
+   ||Atan|4|
    |RadioButton|Ad|smallPizza|
-   ||Metin|& küçük $6.00|
+   ||Metin|& küçük $6,00|
    ||İşaretli|Doğru|
-   ||TabIndex|0|
-   ||AccessibleDescription|Küçük pizza|
-   ||AccessibleName|Küçük pizza|
+   ||Atan|0|
+   ||Erişilebilir açıklama|Küçük pizza|
+   ||Erişilebilir ad|Küçük pizza|
    |RadioButton|Ad|largePizza|
    ||Metin|& büyük $10,00|
-   ||TabIndex|1.|
-   ||AccessibleDescription|Büyük pizza|
-   ||AccessibleName|Büyük pizza|
+   ||Atan|1\.|
+   ||Erişilebilir açıklama|Büyük pizza|
+   ||Erişilebilir ad|Büyük pizza|
    |Etiketle|Ad|toppingsLabel|
-   ||Metin|& toppings ($0,75 her)|
-   ||TabIndex|5|
-   ||AccessibleDescription|Toppings etiketi|
-   ||AccessibleName|Toppings etiketi|
-   ||UseMnemonic|Doğru|
+   ||Metin|& toppings ($0,75)|
+   ||Atan|5|
+   ||Erişilebilir açıklama|Toppings etiketi|
+   ||Erişilebilir ad|Toppings etiketi|
+   ||Useanımsatıcı|Doğru|
    |CheckedListBox|Ad|toppings|
-   ||TabIndex|6|
-   ||AccessibleDescription|Kullanılabilir toppings|
-   ||AccessibleName|Kullanılabilir toppings|
-   ||Öğeler|Pepperoni Sausage, Mushrooms|
+   ||Atan|6|
+   ||Erişilebilir açıklama|Kullanılabilir toppings|
+   ||Erişilebilir ad|Kullanılabilir toppings|
+   ||Öğeler|Pepperoni, sausage, Mushodalar|
    |Düğme|Ad|sıra|
    ||Metin|& sırası|
-   ||TabIndex|7|
-   ||AccessibleDescription|Toplam sırası|
-   ||AccessibleName|Toplam sırası|
+   ||Atan|7|
+   ||Erişilebilir açıklama|Siparişin toplamı|
+   ||Erişilebilir ad|Toplam sıra|
    |Düğme|Ad|İptal|
-   ||Metin|& iptal et|
-   ||TabIndex|8|
-   ||AccessibleDescription|Siparişi iptal etme|
-   ||AccessibleName|Siparişi iptal etme|
-   |MainMenu|Ad|theMainMenu|
+   ||Metin|& Iptal et|
+   ||Atan|8|
+   ||Erişilebilir açıklama|Siparişi iptal et|
+   ||Erişilebilir ad|Siparişi iptal et|
+   |MainMenu|Ad|Birmainmenu|
    |MenuItem|Ad|fileCommands|
-   ||Metin|& dosya|
+   ||Metin|& dosyası|
    |MenuItem|Ad|exitApp|
-   ||Metin|Çı &|
+   ||Metin|E & çı|
 
-   Formunuza, aşağıdaki görüntüde aşağıdakine benzer:
+   Formunuz aşağıdaki görüntüye benzer bir şekilde görünür:
 
-   ![Ad metin, boyut ve toppings seçimi pizza sipariş formla.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
+   ![Name metin kutusu ve size ve toppings seçimiyle pizza Order form.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)
 
-## <a name="supporting-high-contrast-mode"></a>Yüksek Karşıtlık modunu kullanmak destekleme
+## <a name="supporting-high-contrast-mode"></a>Yüksek Karşıtlık modunu destekleme
 
-Yüksek Karşıtlık modunu kullanmak, karşıt renklerden ve görme engelli kullanıcılar için yararlı olan yazı tipi boyutlarını kullanarak okunabilirliğini artırır bir Windows sistemi ayarıdır. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Özelliği, yüksek karşıtlık modunu ayarlanmış olup olmadığını belirlemek için sağlanır.
+Yüksek Karşıtlık modu, görme engelli kullanıcılar için faydalı olan karşıt renkler ve yazı tipi boyutlarını kullanarak okunabilirliği artıran bir Windows sistem ayarıdır. <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Özelliği, yüksek karşıtlık modunun ayarlanmış olup olmadığını belirlemesi için sağlanır.
 
-SystemInformation.HighContrast ise `true`, uygulamanın gerekir:
+SystemInformation. highkarşıtlıklı ise `true`, uygulamanın şunları yapmanız gerekir:
 
-- Sistem renk düzenini kullanarak tüm kullanıcı arabirimi öğeleri görüntüleme
+- Sistem renk şemasını kullanarak tüm Kullanıcı arabirimi öğelerini görüntüleme
 
-- Görsel ipuçları tarafından iletmek veya ses renk ilettiği tüm bilgileri. Kırmızı bir yazı tipi kullanarak belirli bir liste öğelerini vurgulanır, böylece kullanıcı öğeler vurgulanmıştır bir renk olmayan işaret gibi de kalın yazı ekleyebilirsiniz.
+- Görsel ipuçlarıyla veya renk aracılığıyla ileten tüm bilgileri sesleyerek bir şekilde dolaşın. Örneğin, belirli liste öğeleri kırmızı bir yazı tipi kullanılarak vurgulanmışsa, yazı tipine de kalın ekleyebilirsiniz, böylece kullanıcının öğelerin vurgulandığı bir Color olmayan ipucu vardır.
 
-- Herhangi bir görüntü veya metin arkasında desen atla
+- Metnin arkasındaki görüntüleri veya desenleri atlayın
 
-Uygulama ayarını denetlesin <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> uygulamanın ne zaman başlar ve sistem olaya yanıt <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Olayı her değeri <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> değişiklikler.
+Uygulamanın, uygulamanın başladığı ve sistem olayına <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>yanıt verdiği ayarı denetlemesi gerekir. Olay her <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> değişiklik değeri her değiştiğinde tetiklenir. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged>
 
-Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompanyName`. <xref:System.Drawing.SystemColors> Sınıfı kullanıcı tarafından seçilen sistem renkleri için renk ayarlarını etiketin değiştirmek için kullanılır.
+Uygulamamızda, Color `lblCompanyName`için sistem ayarlarını kullanmayan tek öğe. <xref:System.Drawing.SystemColors> Sınıfı, etiketin renk ayarlarını kullanıcı tarafından seçilen sistem renkleriyle değiştirmek için kullanılır.
 
-#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Etkili bir şekilde yüksek karşıtlık modunu etkinleştirmek için
+#### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Yüksek Karşıtlık modunu etkili bir şekilde etkinleştirmek için
 
-1. Sistem renkleri için etiket renklerini ayarlamak için bir yöntem oluşturun.
+1. Etiketin renklerini sistem renkleriyle ayarlamak için bir yöntem oluşturun.
 
     ```vb
     ' Visual Basic
@@ -194,7 +194,7 @@ Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompan
     }
     ```
 
-2. Çağrı `SetColorScheme` form Oluşturucu yordamda (`Public Sub New()` Visual Basic'te ve `public class Form1` görselde C#). Visual Basic'te Oluşturucusu erişmek için etiketli bölgeyi Genişlet gerekecektir **Windows Form Designer üretilen kod**.
+2. Form oluşturucusunda`Public Sub New()` C#yordamı çağırın (Visual Basic ve `public class Form1` görselde). `SetColorScheme` Visual Basic oluşturucuya erişmek için, **Windows Form Tasarımcısı tarafından üretilen kod**etiketli bölgeyi genişletmeniz gerekecektir.
 
     ```vb
     ' Visual Basic
@@ -214,7 +214,7 @@ Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompan
     }
     ```
 
-3. Yanıt vermek için uygun imzaya sahip bir olay yordamı oluşturma <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> olay.
+3. <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> Olaya yanıt vermek için uygun imzayla bir olay yordamı oluşturun.
 
     ```vb
     ' Visual Basic
@@ -233,7 +233,7 @@ Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompan
     }
     ```
 
-4. Çağrısından sonra form Oluşturucu için kod ekleme `InitializeComponents`, sistem olay olay yordamına bağlama. Bu yöntemin çağırdığı `SetColorScheme` yordamı.
+4. Olay yordamını sistem olayına bağlamak için, çağrısından `InitializeComponents`sonra form oluşturucusuna kod ekleyin. Bu yöntem `SetColorScheme` yordamı çağırır.
 
     ```vb
     ' Visual Basic
@@ -258,10 +258,10 @@ Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompan
     }
     ```
 
-5. Forma kod eklemek <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi çağırmadan önce <xref:System.Windows.Forms.Control.Dispose%2A> yöntemi uygulama kapandığında olay serbest bırakmak için temel sınıf. Erişim için <xref:System.Windows.Forms.Control.Dispose%2A> yöntem Visual Basic'te Windows Form Designer üretilen kod etiketli bölgesini genişletin gerekir.
+5. Uygulama kapandığında olayı serbest bırakmak <xref:System.Windows.Forms.Control.Dispose%2A> için, temel sınıfın <xref:System.Windows.Forms.Control.Dispose%2A> yöntemine çağrıdan önce, form yöntemine kod ekleyin. Visual Basic <xref:System.Windows.Forms.Control.Dispose%2A> yönteme erişmek için, Windows Form Tasarımcısı tarafından üretilen kod etiketli bölgeyi genişletmeniz gerekecektir.
 
     > [!NOTE]
-    > Sistem olay kodu, ana uygulamadan ayrı bir iş parçacığı çalıştırır. Olay sunmamayı ise bile programın kapatıldıktan sonra olaya kanca kodu çalıştırın.
+    > Sistem olay kodu, ana uygulamadan ayrı bir iş parçacığı çalıştırır. Olayı yayınlamayın, olaya yedeklediğiniz kod Program kapatıldıktan sonra bile çalışacaktır.
 
     ```vb
     ' Visual Basic
@@ -297,38 +297,38 @@ Uygulamamızı, renk için sistem ayarları kullanmayan tek öğe ise `lblCompan
 
 6. Uygulamayı çalıştırmak için F5'e basın.
 
-## <a name="conveying-important-information-by-means-other-than-sound"></a>Ses dışındaki bir yöntemle önemli bilgileri iletmek
+## <a name="conveying-important-information-by-means-other-than-sound"></a>Önemli bilgileri ses dışındaki yollarla uygulamaya göre
 
-Bu uygulamada hiçbir bilgi ses başına aktarılır. Uygulamanızda ses kullanıyorsanız, bazı diğer yöntemlerle de bilgileri vermeniz gerekir.
+Bu uygulamada, hiçbir bilgi yalnızca ses ile değil. Uygulamanızda ses kullanıyorsanız, bu bilgileri başka bir yöntemle de sağlamanız gerekir.
 
-#### <a name="to-supply-information-by-some-other-means-than-sound"></a>Başka bir şekilde ses daha bilgi sağlamak için
+#### <a name="to-supply-information-by-some-other-means-than-sound"></a>Daha fazla bilgi için sesinden farklı bir şekilde bilgi sağlamak için
 
-1. Başlık çubuğunda FlashWindow Windows API işlevi kullanarak flash olun. Windows API işlevleri çağırmak nasıl bir örnek için bkz [izlenecek yol: Windows API'larını çağırma](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).
+1. Windows API işlevi FlashWindow kullanarak başlık çubuğunu Flash yapın. Windows API işlevlerinin nasıl çağrılacağını gösteren bir örnek için bkz [. İzlenecek yol: Windows API 'Leri](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)çağırma.
 
     > [!NOTE]
-    > Kullanıcının, ayrıca bilgisayarın yerleşik Konuşmacı sistem seslerini yürütüldüğünde flash pencereye neden olur etkinse, Windows Nöbetçisi hizmet olabilir.
+    > Kullanıcının Windows Ses Nöbetçisi hizmeti etkin olabilir, bu da sistem seslerinin bilgisayarın yerleşik konuşmacı aracılığıyla çalınması durumunda pencerenin yanıp sönmesine neden olur.
 
-2. Kullanıcı buna yanıt verebilir böylece önemli bilgileri kalıcı olmayan küçük penceresinde görüntüler.
+2. Kullanıcının yanıt verebilmesi için, önemli bilgileri kalıcı olmayan bir pencerede görüntüleyin.
 
-3. Klavye odağı alması bir ileti kutusu görüntüler. Bu yöntem, kullanıcının yazma sırasında kaçının.
+3. Klavye odağını elde eden bir ileti kutusu görüntüler. Kullanıcı yazmayabilir, bu yöntemden kaçının.
 
-4. Görev durum bildirim alanında bir durum göstergesi görüntüler. Ayrıntılar için bkz [Windows Forms Notifyıcon bileşeni taskbar'na uygulama simgeleri ekleme](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).
+4. Görev çubuğunun durum bildirimi alanında bir durum göstergesi görüntüleyin. Ayrıntılar için bkz. [Windows Forms NotifyIcon bileşeni Ile görev çubuğuna uygulama simgeleri ekleme](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).
 
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme
 
-Uygulamayı dağıtmadan önce uyguladıysanız erişilebilirlik özellikleri test etmeniz gerekir.
+Uygulamayı dağıtılmadan önce, uygulamakta olduğunuz erişilebilirlik özelliklerini sınamalısınız.
 
 #### <a name="to-test-accessibility-features"></a>Erişilebilirlik özelliklerini test etmek için
 
-1. Klavye erişimi test etmek için fare çıkarın ve yalnızca klavye kullanma her bir özellik için kullanıcı arabirimi gidin. Tüm görevler yalnızca klavyeyi kullanarak gerçekleştirilebilir emin olun.
+1. Klavye erişimini test etmek için fare bağlantısını çıkarın ve yalnızca klavyeyi kullanarak her bir özellik için Kullanıcı arabirimine gidin. Tüm görevlerin yalnızca klavye kullanılarak gerçekleştirildiğinden emin olun.
 
-2. Yüksek Karşıtlık desteğini test etmek için Denetim Masası'ndaki Erişilebilirlik seçenekleri simgesini seçin. Görüntü sekmesini tıklatın ve Yüksek Karşıtlık kullan onay kutusunu seçin. Renk ve yazı tipi değişikliklerin yansıtıldığından emin olmak için tüm kullanıcı arabirimi öğeleri arasında gezinebilirsiniz. Ayrıca, görüntü veya metin çizilmiş desenleri atlanır emin olun.
+2. Yüksek Karşıtlık desteğini test etmek için Denetim Masası 'nda erişilebilirlik seçenekleri simgesini seçin. Görüntü sekmesine tıklayın ve Yüksek Karşıtlık Kullan onay kutusunu seçin. Renk ve yazı tipi değişikliklerinin yansıtıldığından emin olmak için tüm Kullanıcı Arabirimi öğelerine gidin. Ayrıca, metnin arkasında çizilen görüntülerin veya desenlerin atlandığından emin olun.
 
     > [!NOTE]
-    > Windows NT 4, Denetim Masası'ndaki Erişilebilirlik Seçenekleri simge yok. Bu nedenle, SystemInformation.HighContrast ayarı değiştirmek için bu yordamı Windows NT 4'te çalışmıyor.
+    > Windows NT 4 ' te Denetim Masası 'nda bir erişilebilirlik seçenekleri simgesi yoktur. Bu nedenle, SystemInformation. Highkarşıtlık ayarını değiştirmeye yönelik bu yordam Windows NT 4 ' te çalışmaz.
 
-3. Diğer araçları uygulama erişilebilirliğini test etmek için hazırdır.
+3. Diğer araçlar, bir uygulamanın erişilebilirliğini test etmek için hazırdır.
 
-4. Klavye odağı gösterme test etmek için Büyüteç'i çalıştırın. (Açmak için tıklayın **Başlat** menüsünde **programlar**, işaret **Donatılar**, işaret **erişilebilirlik**ve 'yetıklayın **Büyüteç'i**). Sekmeyle gitmeyi klavye ve fareyi kullanarak kullanıcı arabirimi gidin. Tüm gezinti üzerinde düzgün şekilde izlenir olun **Büyüteç**.
+4. Klavye odağını ortaya çıkaran test etmek için büyüteci çalıştırın. (Açmak için **Başlat** menüsüne tıklayın, **Programlar**' ın, **Donatılar**' ın, **Erişilebilirlik**' in üzerine gelin ve ardından **Büyüteç**' e tıklayın). Kullanıcı arabiriminde hem klavye sekmeyi hem de fareyi kullanarak gezinin. Tüm gezintinin **Büyüteç**'te düzgün şekilde izlendiğinden emin olun.
 
-5. İfşa edildi ekran öğelerini test etmek için İncele çalıştırın ve her öğe ulaşmak için fare hem SEKME tuşunu kullanın. İnceleyin penceresinin adı, durumu, rol, konum ve değer alanlarda sunulan bilgiler, kullanıcı arabiriminde her nesne için anlamlı olduğundan emin olun.
+5. Ekran öğelerini ortaya çıkarmayı test etmek için Inceleme çalıştırın ve her bir öğeye ulaşmak için hem fareyi hem de sekme tuşunu kullanın. Inceleme penceresinin Ad, durum, rol, konum ve değer alanlarında sunulan bilgilerin, Kullanıcı ARABIRIMINDEKI her nesne için anlamlı olduğundan emin olun.

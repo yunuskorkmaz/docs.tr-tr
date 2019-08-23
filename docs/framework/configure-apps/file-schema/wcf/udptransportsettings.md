@@ -2,15 +2,15 @@
 title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed87db92bcbfa0aa9016e36f391d707c5b17bf2b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934490"
 ---
-# <a name="udptransportsettings"></a>\<udpTransportSettings>
-Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
+# <a name="udptransportsettings"></a>\<udpTransportSettings >
+Bu yapılandırma öğesi, [ \<UdpDiscoveryEndpoint >](udpdiscoveryendpoint.md)için UDP taşıma ayarlarını gösterir.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -45,15 +45,15 @@ Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpDiscoveryEnd
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|duplicateMessageHistoryLength|Yinelenen iletileri tanımlamak için taşıma tarafından kullanılan ileti karmaları en fazla sayısını belirten bir tamsayı.  Yinelenen algılama TransportManager düzeyinde gerçekleştirilir. Bu özelliğin 0 olarak ayarlanması, yinelenen algılama devre dışı bırakır.<br /><br /> Bu öznitelik, sistem yöneticileri veya yinelenen ileti algılama algoritmalarını etkinleştirmek için geliştiricilerin sağlar. Bu, kendi yinelenen algılama algoritması uygulamak istiyorsanız istenebilir.<br /><br /> 4112 varsayılandır.|  
-|maxBufferPoolSize|Taşıma tarafından kullanılan tüm arabellek havuzu en büyük boyutunu belirten bir tamsayı.|  
-|maxMulticastRetransmitCount|İleti (ek olarak ilk gönderme) iletilmelidir maksimum sayısını belirten bir tamsayı.<br /><br /> Varsayılan değer 2'dir.|  
-|maxPendingMessageCount|Aldı, ancak henüz bir tek bir kanalı örneği için InputQueue kaldırılır iletilerinin maksimum sayısını belirten bir tamsayı.  InputQueue bekleyen ileti sayısı sınırına erişti, ileti bırakılır.<br /><br /> Varsayılan değer 32'dir.|  
-|maxReceivedMessageSize|Bağlama tarafından işlenebilen bir ileti boyut üst sınırını belirten bir tamsayı.<br /><br /> 65507 varsayılan değerdir.|  
-|maxUnicastRetransmitCount|İleti (ek olarak ilk gönderme) iletilmelidir maksimum sayısını belirten bir tamsayı.  İleti bir tek noktaya yayın adresine gönderilir ve karşılık gelen bir RelatesTo üst bilgisi ile bir yanıt iletisi alındığında, yeniden iletim erken (yapılandırılmış kaç kez yeniden göndermeden önce) sonlandırabilir.<br /><br /> Varsayılan değer 1’dir.|  
-|multicastInterfaceId|Çok noktaya yayın trafiğine çok ana bilgisayarlı makinelerde gönderip kullanılmalıdır ağ bağdaştırıcısı benzersiz olarak tanımlayan bir dize. Çalışma zamanında, ardından ayarlamak için kullanılan arabirim dizinini aramak için bu öznitelik değeri aktarımını kullanacak `IP_MULTICAST_IF` ve `IPV6_MULTICAST_IF` yuva seçenekleri.  Aynı arabirim dizinini çok noktaya yayın grubu birleştirilirken varsa kullanılır.<br /><br /> Varsayılan değer `null` şeklindedir.|  
-|socketReceiveBufferSize|Temel alınan WinSock yuva alma arabellek boyutunu belirten bir tamsayı.<br /><br /> Bir kullanıcı teslim alma kanal veri aldığında sistem nasıl davranacağını denetlemek için Binding üstündeki bu özniteliği kullanabilirsiniz.  Örneğin, gelen WCF iletileri en yüksek eşik kullanan bir uygulamayı göz önünde bulundurulduğunda, bu öznitelik için daha yüksek bir değer kullanarak uygulamayı bunları işleyebilmesi için beklenirken WinSock arabellekteki karşılaştırın iletileri çalıştırmasına olanak tanır.  Daha düşük bir değere aynı durumda kullanarak bırakılmak iletilerinde neden olur. Bu öznitelik temel alınan WinSock sunan `SO_RCVBUF` yuva seçeneği. Bu öznitelik değeri en az boyutu olmalıdır `maxReceivedMessageSize`.   Bu daha küçük bir değere ayarlanması `maxReceivedMessageSize` bir çalışma zamanı özel durumuna neden.<br /><br /> 65536 varsayılan değerdir.|  
-|timeToLive|Çok noktaya yayın paketi erişebilen ağ segment durak sayısını belirten bir tamsayı.  Bu öznitelik ile ilişkili işlevselliği kullanıma sunan `IP_MULTICAST_TTL` ve `IP_TTL` yuva seçenekleri.<br /><br /> Varsayılan değer 1’dir.|  
+|Duplicatemessagegeçmişini uzunluğu|Yinelenen iletileri tanımlamak için taşıma tarafından kullanılan en fazla ileti karması sayısını belirten bir tamsayı.  Yinelenen algılama işlemi, TransportManager düzeyinde yapılır. Bu özelliğin 0 olarak ayarlanması yinelenen algılamayı devre dışı bırakır.<br /><br /> Bu öznitelik, sistem yöneticilerinin veya geliştiricilerin yinelenen ileti algılama algoritmalarını kapatmasına izin verir. Kendi yinelenen algılama algoritmanızı uygulamak istiyorsanız bu işlem istenebilir.<br /><br /> Varsayılan değer 4112 ' dir.|  
+|maxBufferPoolSize|Taşıma tarafından kullanılan tüm arabellek havuzlarının en büyük boyutunu belirten bir tamsayı.|  
+|maxMulticastRetransmitCount|İletinin en fazla kaç kez yeniden gönderilmesi gerektiğini belirten bir tamsayı (ilk gönderme 'ya ek olarak).<br /><br /> Varsayılan değer 2 ' dir.|  
+|maxPendingMessageCount|Tek bir kanal örneği için InputQueue öğesinden alınmış ancak henüz kaldırılmayan en fazla ileti sayısını belirten bir tamsayı.  InputQueue, bekleyen ileti sayısı sınırına ulaşmışsa ileti bırakılır.<br /><br /> Varsayılan değer 32 ' dir.|  
+|maxReceivedMessageSize|Bağlama tarafından işlenebilecek bir iletinin en büyük boyutunu belirten bir tamsayı.<br /><br /> Varsayılan değer 65507 ' dir.|  
+|maxUnicastRetransmitCount|İletinin en fazla kaç kez yeniden gönderilmesi gerektiğini belirten bir tamsayı (ilk gönderme 'ya ek olarak).  İleti bir tek noktaya yayın adresine gönderilirse ve karşılık gelen bir RelatesTo üstbilgisiyle yanıt iletisi alındığında, yeniden iletim erken sonlandırılabilir (yapılandırılan sayıda yeniden gönderilmeden önce).<br /><br /> Varsayılan değer 1’dir.|  
+|multicastInterfaceId|Çoklu bilgisayarlı makinelerde çok noktaya yayın trafiği gönderirken ve alırken kullanılması gereken ağ bağdaştırıcısını benzersiz şekilde tanımlayan bir dize. Çalışma zamanında, aktarım bu öznitelik değerini, daha sonra `IP_MULTICAST_IF` ve `IPV6_MULTICAST_IF` yuva seçeneklerini ayarlamak için kullanılan arabirim dizinini aramak için kullanır.  Varsa, çok noktaya yayın grubuna katılırken de aynı arabirim dizini kullanılacaktır.<br /><br /> Varsayılan değer `null` şeklindedir.|  
+|socketReceiveBufferSize|Temeldeki WinSock yuvasında Alım arabelleği boyutunu belirten bir tamsayı.<br /><br /> Alma kanalının bir kullanıcısı, verileri alırken sistemin nasıl davranacağını denetlemek için bağlama üzerinde bu özniteliği kullanabilir.  Örneğin, bu öznitelik için daha yüksek bir değere sahip gelen WCF iletilerini kullanan bir uygulama, iletilerin, uygulamanın onları işlemesini beklerken WinSock arabelleğine yığmasını sağlar.  Aynı durumda daha düşük bir değer kullanılması, iletilerin bırakılmasına neden olur. Bu öznitelik, temeldeki Winsock `SO_RCVBUF` yuva seçeneğini gösterir. Bu öznitelik değeri en az boyut `maxReceivedMessageSize`olmalıdır.   Değerinden küçük bir değere ayarlanması, `maxReceivedMessageSize` çalışma zamanı özel durumuna neden olur.<br /><br /> Varsayılan değer 65536 ' dir.|  
+|timeToLive|Çok noktaya yayın paketinin geçebileceğine yönelik ağ segmenti atlamalarının sayısını belirten bir tamsayı.  Bu öznitelik, `IP_MULTICAST_TTL` ve `IP_TTL` yuva seçenekleriyle ilişkili işlevselliği gösterir.<br /><br /> Varsayılan değer 1’dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -62,7 +62,7 @@ Bu yapılandırma öğesi için UDP taşıma ayarları sunan [ \<udpDiscoveryEnd
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)|Bulma bağlama sözleşme ve UDP taşıma düzeltmiştir standart bitiş noktası.|  
+|[\<udpDiscoveryEndpoint >](udpdiscoveryendpoint.md)|Sabit bulma sözleşmesi ve UDP aktarım bağlama içeren standart bir uç nokta.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

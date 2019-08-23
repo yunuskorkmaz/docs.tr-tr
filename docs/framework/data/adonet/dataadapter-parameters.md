@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: 0cdca872e9e76b7491dc571209292a692a06d8f8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 772763b5927ca845d6c2ccba50382652e410ae4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951237"
 ---
 # <a name="dataadapter-parameters"></a>DataAdapter Parametreleri
-<xref:System.Data.Common.DbDataAdapter> Verileri almak ve verileri için veri kaynağını güncelleştirmek için kullanılan dört özelliklere sahiptir: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> özelliği veri kaynağından; veri döndürür ve <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikleri. `SelectCommand` Özelliği çağırmadan önce ayarlanmalıdır `Fill` yöntemi `DataAdapter`. `InsertCommand`, `UpdateCommand`, Veya `DeleteCommand` özelliklerini ayarlamak, önce `Update` yöntemi `DataAdapter` , hangi değişiklikleri verilerde yapılan bağlı olarak adlandırılır <xref:System.Data.DataTable>. Satırlar eklenir, örneğin, `InsertCommand` çağırmadan önce ayarlanmalıdır `Update`. Zaman `Update` eklenen, güncelleştirilen veya silinen satır işleme `DataAdapter` ilgili kullanan `Command` eylemi işlemek için özellik. Değiştirilen satır hakkında güncel bilgiler geçirildiğinde `Command` nesnesi aracılığıyla `Parameters` koleksiyonu.  
+, <xref:System.Data.Common.DbDataAdapter> Veri kaynağına veri almak ve verileri güncelleştirmek için kullanılan dört özelliğe sahiptir <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> : özelliği <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> veri kaynağından veri döndürür;, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, ve <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> özellikleri yönetmek için kullanılır veri kaynağındaki değişiklikler. Yöntemini çağırmadan önce `SelectCommand` özelliğin ayarlanması gerekir `DataAdapter`. `Fill` `Update` ,,`DataAdapter` Veya özelliklerinin,<xref:System.Data.DataTable>içindeki verilerde yapılan değişikliklere bağlı olarak çağrılmadan önce ayarlanması gerekir. `DeleteCommand` `InsertCommand` `UpdateCommand` Örneğin, satırlar eklendiyse `InsertCommand` , çağrısından `Update`önce ayarlanmalıdır. Ekli, güncelleştirilmiş veya silinmiş bir satırı `DataAdapter` işlerken, eylemi işlemek için ilgili `Command` özelliği kullanır. `Update` Değiştirilen satır hakkındaki güncel bilgiler `Command` nesneye `Parameters` koleksiyon aracılığıyla geçirilir.  
   
- Veri kaynağındaki satırı güncelleştirmek, güncelleştirilecek tablosundaki bir satırı tanımlamak için benzersiz bir tanımlayıcı kullanır UPDATE deyiminin çağırın. Benzersiz tanımlayıcı genellikle bir birincil anahtar alanı değeridir. UPDATE deyimini aşağıdaki Transact-SQL deyiminde gösterildiği gibi benzersiz tanımlayıcısı ve sütunları hem güncelleştirilmesi için değerleri içeren parametrelerini kullanır.  
+ Veri kaynağındaki bir satırı güncelleştirdiğinizde, güncelleştirilecek tablodaki satırı tanımlamak için benzersiz bir tanımlayıcı kullanan UPDATE ifadesini çağırın. Benzersiz tanımlayıcı genellikle birincil anahtar alanının değeridir. UPDATE ifadesinde, aşağıdaki Transact-SQL bildiriminde gösterildiği gibi, her iki benzersiz tanımlayıcıyı ve güncelleştirilecek sütunları ve değerleri içeren parametreler kullanılır.  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName   
@@ -23,9 +23,9 @@ UPDATE Customers SET CompanyName = @CompanyName
 ```  
   
 > [!NOTE]
->  Parametre yer tutucuları sözdizimi veri kaynağına bağlıdır. Bu örnek, bir SQL Server veri kaynağı için yer tutucular gösterir. Soru işareti (?) yer tutucuları kullanan <xref:System.Data.OleDb> ve <xref:System.Data.Odbc> parametreleri.  
+> Parametre yer tutucuları için sözdizimi veri kaynağına bağlıdır. Bu örnekte bir SQL Server veri kaynağı için yer tutucular gösterilmektedir. <xref:System.Data.OleDb> Ve<xref:System.Data.Odbc> parametreleri için soru işareti (?) yer tutucuları kullanın.  
   
- Bu Visual Basic örnekte `CompanyName` alanın değeriyle güncelleştirilir `@CompanyName` parametre satır için burada `CustomerID` değeri eşittir `@CustomerID` parametresi. Değiştirilen satır kullanımından parametreleri bilgileri almak <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> özelliği <xref:System.Data.SqlClient.SqlParameter> nesne. Önceki örnek UPDATE deyimi için Parametreler aşağıda verilmiştir. Kod olduğunu varsayar değişkeni `adapter` temsil eden geçerli bir <xref:System.Data.SqlClient.SqlDataAdapter> nesne.  
+ Bu Visual Basic `CompanyName` örnekte, alanı `@CustomerID` parametresinin değerine `CustomerID` eşit olan satır için `@CompanyName` parametresinin değeri ile güncellenir. Parametreler, <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> <xref:System.Data.SqlClient.SqlParameter> nesne özelliğini kullanarak değiştirilen satırdan bilgi alır. Önceki örnek UPDATE ifadesinin parametreleri aşağıda verilmiştir. Kod, değişkenin `adapter` geçerli <xref:System.Data.SqlClient.SqlDataAdapter> bir nesneyi temsil ettiğini varsayar.  
   
 ```vb
 adapter.Parameters.Add( _  
@@ -36,33 +36,33 @@ Dim parameter As SqlParameter = _
 parameter.SourceVersion = DataRowVersion.Original  
 ```  
   
- `Add` Yöntemi `Parameters` koleksiyon parametresi adını veri türü boyutu (türüne varsa) ve adını alır <xref:System.Data.Common.DbParameter.SourceColumn%2A> gelen `DataTable`. Dikkat <xref:System.Data.Common.DbParameter.SourceVersion%2A> , `@CustomerID` parametrenin ayarlanmış `Original`. Bu tanımlayıcı sütun veya sütunlar değerini değiştirilmişse, veri kaynağı olarak var olan satır güncelleştirilir garanti eder, değiştirilmiş <xref:System.Data.DataRow>. Bu durumda, `Original` satır değeri, geçerli değerin veri kaynağında eşleşir ve `Current` satır değeri, güncelleştirilmiş değeri içerecektir. `SourceVersion` İçin `@CompanyName` parametre ayarlı değil ve varsayılan olarak kullandığı `Current` satır değeri.  
+ Koleksiyonun yöntemi, parametrenin adını, veri türünü, boyutunu (Eğer varsa) <xref:System.Data.Common.DbParameter.SourceColumn%2A> ve öğesinden `DataTable`adını alır. `Add` `Parameters` Parametresinin olarak ayarlandığınıunutmayın`Original`. <xref:System.Data.Common.DbParameter.SourceVersion%2A> `@CustomerID` Bu, tanımlayıcı sütun veya sütunların değeri değiştirilen <xref:System.Data.DataRow>' de değiştirilmişse veri kaynağındaki mevcut satırın güncelleştirilmesini güvence altına alır. Bu durumda, `Original` satır değeri veri kaynağındaki geçerli değerle eşleşir `Current` ve satır değeri güncelleştirilmiş değeri içerir. Parametresi için ayarlanmamış ve varsayılan, `Current` satır değeri kullanır. `SourceVersion` `@CompanyName`  
   
 > [!NOTE]
->  Her ikisi için de `Fill` işlemlerini `DataAdapter` ve `Get` yöntemlerinin `DataReader`, .NET Framework türü .NET Framework Veri Sağlayıcısı'ndan döndürülen tür gösterilir. Çıkarsanan .NET Framework türlerini ve Microsoft SQL Server, OLE DB ve ODBC veri türleri için erişimci metotlarını açıklanan [ADO.NET'te veri türü eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+> Ve yöntemlerinin her `Fill`iki işlemiiçin,.NETFrameworktürü.NETFrameworkverisağlayıcısındandöndürülentürdenalgılanır.`Get` `DataAdapter` `DataReader` Microsoft SQL Server, OLE DB ve ODBC veri türleri için çıkarılan .NET Framework türleri ve erişimci yöntemleri, [ADO.net Içindeki veri türü eşlemelerinde](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)açıklanmıştır.  
   
-## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
- `SourceColumn` Ve `SourceVersion` bağımsız değişken olarak geçirilebilir `Parameter` oluşturucu veya varolan özellikleri kümesi `Parameter`. `SourceColumn` Adıdır <xref:System.Data.DataColumn> gelen <xref:System.Data.DataRow> nerede değerini `Parameter` alınır. `SourceVersion` Belirtir `DataRow` sürümü, `DataAdapter` değerini almak için kullanır.  
+## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter. SourceColumn, parametre. SourceVersion  
+ Ve, oluşturucuya bağımsız değişken olarak `Parameter`geçirilebilir veya var olan bir özellik olarak ayarlanabilir. `Parameter` `SourceVersion` `SourceColumn` , Değerinin <xref:System.Data.DataColumn> alınacağıyerin<xref:System.Data.DataRow> adından oluşur. `Parameter` `SourceColumn` , `SourceVersion` Değerini almak `DataRow` için `DataAdapter` kullandığı sürümü belirtir.  
   
- Aşağıdaki tabloda <xref:System.Data.DataRowVersion> numaralandırma değerleri için kullanılabilir kullanın ile `SourceVersion`.  
+ Aşağıdaki tabloda ile birlikte <xref:System.Data.DataRowVersion> `SourceVersion`kullanılabilecek sabit listesi değerleri gösterilmektedir.  
   
 |DataRowVersion numaralandırması|Açıklama|  
 |--------------------------------|-----------------|  
-|`Current`|Parametresi, geçerli sütun değeri kullanır. Bu varsayılandır.|  
-|`Default`|Parametre kullanan `DefaultValue` sütun.|  
-|`Original`|Parametresi özgün sütununun değerini kullanır.|  
-|`Proposed`|Önerilen değer parametresini kullanır.|  
+|`Current`|Parametresi, sütunun geçerli değerini kullanır. Bu varsayılandır.|  
+|`Default`|Parametresi, sütununun öğesini `DefaultValue` kullanır.|  
+|`Original`|Parametresi, sütunun orijinal değerini kullanır.|  
+|`Proposed`|Parametresi önerilen değeri kullanır.|  
   
- `SqlClient` Sonraki bölümde kod örneği için bir parametre tanımlayan bir <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> hangi `CustomerID` sütun olarak kullanılan bir `SourceColumn` iki parametre için: `@CustomerID` (`SET CustomerID = @CustomerID`), ve `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). `@CustomerID` Güncelleştirmek için kullanılan parametre **CustomerID** sütun geçerli değeri `DataRow`. Sonuç olarak, `CustomerID` `SourceColumn` ile bir `SourceVersion` , `Current` kullanılır. `@OldCustomerID` Parametresi veri kaynağındaki geçerli satırı tanımlamak için kullanılır. Eşleşen sütun değeri bulunur çünkü `Original` satır aynı sürümünü `SourceColumn` (`CustomerID`) ile bir `SourceVersion` , `Original` kullanılır.  
+ `@CustomerID` <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> `SourceColumn` `SET CustomerID = @CustomerID``WHERE CustomerID = @OldCustomerID` `@OldCustomerID` Sonraki bölümde `CustomerID` kod örneği, sütununun iki parametre için olarak kullanıldığı bir parametresi tanımlar: () ve (). `SqlClient` Parametresi, **MüşteriNo sütununu** içindeki geçerli değere güncelleştirmek için kullanılır. `DataRow` `@CustomerID` `CustomerID` Sonuç olarak, ' `SourceColumn` a `SourceVersion` ilebirliktekullanılır`Current` . `@OldCustomerID` Parametresi, veri kaynağındaki geçerli satırı tanımlamak için kullanılır. Eşleşen sütun `Original` değeri satırın sürümünde bulunduğundan, ile `SourceVersion` `Original` aynı `SourceColumn` (`CustomerID`) kullanılır.  
   
-## <a name="working-with-sqlclient-parameters"></a>SqlClient parametreleri ile çalışma  
- Aşağıdaki örnek nasıl oluşturulacağını gösterir. bir <xref:System.Data.SqlClient.SqlDataAdapter> ayarlayıp <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> için <xref:System.Data.MissingSchemaAction.AddWithKey> veritabanından ek şema bilgilerini almak için. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, Ve <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> özellikleri kümesi ve bunlara karşılık gelen <xref:System.Data.SqlClient.SqlParameter> eklenen nesneleri <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> koleksiyonu. Yöntem döndürür bir `SqlDataAdapter` nesne.  
+## <a name="working-with-sqlclient-parameters"></a>SqlClient parametreleriyle çalışma  
+ Aşağıdaki örnek, <xref:System.Data.SqlClient.SqlDataAdapter> <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> bir oluşturma ve veritabanından ek şema bilgileri almak için <xref:System.Data.MissingSchemaAction.AddWithKey> öğesini olarak ayarlama işlemlerinin nasıl yapılacağını gösterir. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> <xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> , ,<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>Ve özelliklerikümesi<xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> ve bunlara karşılık gelen nesneler koleksiyona eklenir. <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> Yöntemi bir `SqlDataAdapter` nesnesi döndürür.  
   
  [!code-csharp[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/CS/source.cs#1)]
  [!code-vb[Classic WebData SqlDataAdapter.SqlDataAdapter Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/Classic WebData SqlDataAdapter.SqlDataAdapter Example/VB/source.vb#1)]  
   
 ## <a name="oledb-parameter-placeholders"></a>OleDb parametre yer tutucuları  
- İçin <xref:System.Data.OleDb.OleDbDataAdapter> ve <xref:System.Data.Odbc.OdbcDataAdapter> nesnelerini parametrelerini belirlemek için soru işareti (?) yer tutucuları kullanmalısınız.  
+ <xref:System.Data.OleDb.OleDbDataAdapter> Ve<xref:System.Data.Odbc.OdbcDataAdapter> nesneleri için, parametreleri tanımlamak üzere soru işareti (?) yer tutucuları kullanmanız gerekir.  
   
 ```vb  
 Dim selectSQL As String = _  
@@ -89,9 +89,9 @@ string updateSQL =
 string deleteSQL = "DELETE FROM Customers WHERE CustomerID = ?";  
 ```  
   
- Parametreli sorgu deyimi, giriş tanımlar ve çıkış parametreleri oluşturulması gerekir. Bir parametreyi oluşturmak üzere kullanmak `Parameters.Add` yöntemi veya `Parameter` sütun adı, veri türü ve boyutunu belirlemek için oluşturucu. İç veri türleri gibi `Integer`, boyuta dahil gerekmez veya varsayılan boyutu belirtebilirsiniz.  
+ Parametreli sorgu deyimleri hangi giriş ve çıkış parametrelerinin oluşturulması gerektiğini tanımlar. Bir parametre oluşturmak için, sütun adı `Parameters.Add` , veri türü `Parameter` ve boyutunu belirtmek üzere yöntemini veya oluşturucuyu kullanın. Gibi iç veri türleri `Integer`için, boyutu eklemeniz gerekmez veya varsayılan boyutu belirtebilirsiniz.  
   
- Aşağıdaki kod örneği bir SQL deyimi için parametreleri oluşturur ve ardından dolduran bir `DataSet`.  
+ Aşağıdaki kod örneği, bir SQL deyimin parametrelerini oluşturur ve sonra bir `DataSet`doldurur.  
   
 ## <a name="oledb-example"></a>OleDb örneği  
   
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Parametre adı için bir parametre sağlanmazsa, parametre parametresinin bir artımlı varsayılan ad verilir*N* *,* "Parametre1" ile başlayan. Parametre kaçınmanızı öneririz*N* bir parametre adı sağlayın, mevcut bir varsayılan parametre adı ile sağladığınız ad çakışması nedeniyle adlandırma kuralı `ParameterCollection`. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
+> Parametre için bir parametre adı sağlanmadığında parametreye, "parametre1" ile başlayarak*N* parametresinin artımlı bir varsayılan adı verilir. Bir parametre adı belirlediğinizde parametre*N* adlandırma kuralını kullanmaktan kaçınmanızı öneririz, çünkü sağladığınız ad içinde `ParameterCollection`varolan bir varsayılan parametre adıyla çakışabilir. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -171,4 +171,4 @@ adapter.Fill(customers, "Customers");
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
 - [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - presence of WPT [WPF], detecting
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
-ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e307125a2a8de3edc4df2fc1022c6e3de1904879
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960251"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>Nasıl yapılır: .NET Framework 3.0'in Yüklü Olup Olmadığını Algılama
-Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan önce ilk olarak, .NET Framework çalışma zamanı mevcut olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.  
+Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtabilmek için önce .NET Framework çalışma zamanının mevcut olduğunu doğrulamamalıdır. Bu konuda, yöneticilerin bir sistemde .NET Framework olup olmadığını belirlemede kullanabilecekleri HTML/JavaScript 'te yazılmış bir komut dosyası sağlanmaktadır.  
   
 > [!NOTE]
->  Yükleme hakkında daha ayrıntılı bilgi için dağıtma ve Microsoft .NET Framework algılama içindeki tartışmalara bakın [dağıtma Microsoft .NET Framework sürüm 3.0](https://go.microsoft.com/fwlink/?LinkId=96739).  
+> Microsoft .NET çerçevesini yükleme, dağıtma ve algılamayla ilgili daha ayrıntılı bilgi için bkz. [Microsoft .NET Framework sürüm 3,0](https://go.microsoft.com/fwlink/?LinkId=96739)' i dağıtma.  
   
 <a name="content_expiration"></a>   
-## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" kullanıcı aracısı dizesi algılama  
- .NET Framework yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası, .NET Framework yüklü ve arama sonuçlarını temel durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.  
+## <a name="detect-the-net-clr-user-agent-string"></a>".NET CLR" Kullanıcı aracısı dizesini Algıla  
+ .NET Framework yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesine ekler. Aşağıdaki örnek, basit bir HTML sayfasına eklenmiş bir betiği gösterir. Betik, .NET Framework yüklenip yüklenmediğini ve aramanın sonuçlarında bir durum iletisi görüntüleyip oluşturulmayacağını anlamak için UserAgent dizesini arar.  
   
 ```  
 <HTML>  
@@ -113,13 +113,13 @@ Yöneticiler bir sistemde Microsoft .NET Framework uygulamaları dağıtmadan ö
 </HTML>  
 ```  
   
- ".NET CLR" sürümü için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:  
+ ".NET CLR" sürümü için arama başarılı olursa aşağıdaki tür durum iletisi görüntülenir:  
   
  `This machine has the correct version of the .NET Framework 3.0: 3.0.04425.00`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 1.1.4322; InfoPath.1; .NET CLR 2.0.50727; .NET CLR 3.0.04425.00).`  
   
- Aksi takdirde, aşağıdaki türde durum iletisi görüntülenir:  
+ Aksi takdirde, aşağıdaki tür durum iletisi görüntülenir:  
   
  `This machine does not have correct version of the .NET Framework 3.0.`  
   

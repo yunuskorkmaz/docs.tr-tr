@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları (WCF Veri Hizmetleri) yürütme'
+title: 'Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: f89a5004afeffe5aa9a28cb2d43374aede8a935e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5530dea50a6fab8478639def9624f8715ae3f3e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952389"
 ---
-# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları (WCF Veri Hizmetleri) yürütme
-Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, sorgu yürütme ile değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilir. Daha fazla bilgi için [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+# <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
->  Nereye geri çağırma gerekir çağrılacak belirli bir iş parçacığında bir uygulamada, açıkça yürütülmesini sıralamanız gerekir <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemi. Daha fazla bilgi için [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+> Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yönteminin yürütülmesini açıkça sıramalısınız. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, zaman uyumsuz sorgu çağırarak yürütmek gösterilmektedir <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> sorguyu başlatmak için yöntemi. Satır içi temsilci seçme çağrıları <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgu sonuçlarını görüntülemek için yöntemi.  
+ Aşağıdaki örnek, sorguyu başlatmak için <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemini çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir. Satır içi temsilci, sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sonuçlarını göstermek için yöntemini çağırır.  
   
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
  [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  

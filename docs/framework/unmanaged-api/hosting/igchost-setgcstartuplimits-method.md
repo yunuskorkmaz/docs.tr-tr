@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9104550438a2a066cdf052b8d6592e86b831194
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749989"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928672"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits Yöntemi
-Nesil 0 için kesim boyutu ve en büyük boyutunu ayarlar.  
+Oluşturma 0 ' nın segment boyutunu ve en büyük boyutunu ayarlar.  
   
 > [!IMPORTANT]
->  .NET Framework 4.5 ile başlayarak, kesim boyutu ve en fazla nesil 0 boyut değerleri büyük ayarlayabilirsiniz `DWORD` kullanarak [Igchost2::setgcstartuplimitsex](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemi.  
+> 4,5 .NET Framework başlayarak, segment boyutunu ve en fazla nesil 0 boyutunu [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) yöntemini kullanarak daha büyük `DWORD` değerlere ayarlayabilirsiniz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,22 +41,22 @@ HRESULT SetGCStartupLimits (
   
 ## <a name="parameters"></a>Parametreler  
  `SegmentSize`  
- [in] Çöp toplama sistem tarafından kullanılan kesim boyutu.  
+ 'ndaki Çöp toplama sistemi tarafından kullanılan segmentin boyutu.  
   
  `MaxGen0Size`  
- [in] Nesil 0 en büyük boyutu.  
+ 'ndaki 0 üretimi için en büyük boyut.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `SetGCStartupLimits` Yöntemi çağrılabilir yalnızca bir kez. Bu değerler daha sonra değiştirilemez.  
+ `SetGCStartupLimits` Yöntemi yalnızca bir kez çağrılabilir. Bu değerler daha sonra değiştirilemez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** GCHost.idl, GCHost.h  
+ **Üst bilgi** GCHost. IDL, GCHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,26 +2,26 @@
 title: 'Nasıl yapılır: Hizmet Verilerini Bölümlendirme'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947866"
 ---
 # <a name="how-to-service-data-partitioning"></a>Nasıl yapılır: Hizmet Verilerini Bölümlendirme
-Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için gerekli temel adımlar açıklanmaktadır. Hizmet verilerini bölümlendirme, genellikle daha iyi hizmet kalitesini sağlamak için bir hizmeti ölçeklendirmek gerektiğinde veya farklı müşterilerden gelen istekleri belirli bir şekilde işlemek üzere gerektiğinde kullanılır. Örneğin, yüksek bir değer veya "Altın" müşteriler gelen iletileri, standart bir müşteri iletilerden daha yüksek bir önceliğe işlenecek gerekebilir.  
+Bu konu başlığı altında, aynı hedef hizmetin birden çok örneğinde iletileri bölümlemek için gereken temel adımlar özetlenmektedir. Hizmet verileri bölümlendirme genellikle, daha iyi hizmet kalitesi sağlamak için veya belirli bir şekilde farklı müşterilerden gelen istekleri işleyebilmeniz gerektiğinde kullanılır. Örneğin, yüksek değerden veya "altın" müşterilerden gelen iletilerin, standart müşteriden gelen iletilerden daha yüksek bir önceliğe göre işlenmesi gerekebilir.  
   
- Bu örnekte, iletilerin regularCalc hizmetin iki örneği birine yönlendirilir. Her iki hizmetin örneklerini aynıdır; ancak yüksek değerli müşterilerden hesaplayıcı 2 uç nokta calculator1 uç nokta işlemleri iletiler tarafından temsil edilen hizmet diğer müşterilerden gelen iletileri işleme alınan  
+ Bu örnekte, iletiler regularCalc hizmetinin iki örneklerinden birine yönlendirilir. Hizmetin her iki örneği de aynıdır; Ancak, Calculator1 uç noktası tarafından temsil edilen hizmet, yüksek değerli müşterilerden alınan iletileri işlediğinde, hesaplayıcı 2 uç noktası diğer müşterilerden gelen iletileri işler  
   
- İstemciden gönderilen ileti için ileti yönlendirileceğini hangi hizmet örneğini tanımlamak için kullanılan herhangi bir benzersiz veri yok. Her bir istemciye belirli hedef hizmet için rota verilerini izin vermek için ileti almak için kullanılacak olan iki hizmet uç noktaları uygular.  
+ İstemciden gönderilen iletinin, iletinin hangi hizmet örneğine yönlendirildiğini belirlemek için kullanılabilecek benzersiz verileri yok. Her bir istemcinin verileri belirli bir hedef hizmete yönlendirmesine izin vermek için, ileti almak için kullanılacak iki hizmet uç noktası uygulayacağız.  
   
 > [!NOTE]
->  Bu örnek verileri bölümlemek için özel uç noktaları kullanırken, bu da üst bilgi veya gövdesinde veri gibi ileti kendisi içinde yer alan bilgileri kullanarak sağlayabilirsiniz.  
+> Bu örnek, verileri bölümlemek için belirli uç noktaları kullandığında, bu da ileti içinde başlık veya gövde verileri gibi bilgiler kullanılarak da gerçekleştirilebilir.  
   
-### <a name="implement-service-data-partitioning"></a>Uygulama hizmeti veri bölümleme  
+### <a name="implement-service-data-partitioning"></a>Hizmet veri bölümlendirme uygulama  
   
-1. Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktaları belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılan iki uç nokta tanımlar. Ayrıca, regularCalc hizmet örnekleri için ileti göndermek için kullanılan istemci uç noktalarını tanımlar.  
+1. Hizmet tarafından sunulan hizmet uç noktalarını belirterek temel yönlendirme hizmeti yapılandırmasını oluşturun. Aşağıdaki örnek, ileti almak için kullanılacak iki uç nokta tanımlar. Ayrıca, regularCalc hizmeti örneklerine ileti göndermek için kullanılan istemci uç noktalarını tanımlar.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
      </client>  
     ```  
   
-2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, Uçnoktaadı filtre, hangi hizmet uç noktası iletisi aldı belirlemek için kullanılır. Aşağıdaki örnek, gerekli yönlendirme bölüm ve filtreleri tanımlar.  
+2. İletileri hedef uç noktalara yönlendirmek için kullanılan filtreleri tanımlayın.  Bu örnek için, EndpointName filtresi, iletiyi hangi hizmet uç noktasının aldığını tespit etmek için kullanılır. Aşağıdaki örnek, gerekli Yönlendirme bölümünü ve filtreleri tanımlar.  
   
     ```xml  
     <filters>  
@@ -71,9 +71,9 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
     </filters>  
     ```  
   
-3. Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. Bu örnekte, ileti üzerinde alındı belirli bir uç göre yönlendirilir. İletinin yalnızca iki olası filtrelerden birini eşleşebilir olduğundan, hangi filtrelerde değerlendirilir sırasını denetlemek için filtre önceliği kullanma gerek yoktur.  
+3. Her bir filtreyi bir istemci uç noktasıyla ilişkilendiren filtre tablosunu tanımlayın. Bu örnekte ileti, aldığı belirli uç noktaya göre yönlendirilir. İleti yalnızca iki olası filtreden birini eşleştirebilir, ancak filtrelerin değerlendirileceği sırayı denetlemek için filtre önceliği kullanılmasına gerek yoktur.  
   
-     Aşağıdaki filtre tabloyu tanımlayan ve daha önce tanımlanan filtreler ekler.  
+     Aşağıda, filtre tablosu tanımlanmaktadır ve daha önce tanımlanan filtreler eklenir.  
   
     ```xml  
     <filterTables>  
@@ -85,7 +85,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
     </filterTables>  
     ```  
   
-4. Tabloda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, hizmet uç noktaları ile ilişkilendirmeyi "filterTable1" gösterir:  
+4. Gelen iletileri tabloda yer alan filtrelere karşı değerlendirmek için, yönlendirme davranışını kullanarak filtre tablosunu hizmet uç noktalarıyla ilişkilendirmeniz gerekir. Aşağıdaki örnek, "filterTable1" ın hizmet uç noktaları ile ilişkilendirilmesini gösterir:  
   
     ```xml  
     <behaviors>  
@@ -99,7 +99,7 @@ Bu konuda, birden çok hedef hizmetin aynı örneğine bölüm iletileri için g
     ```  
   
 ## <a name="example"></a>Örnek  
- Yapılandırma dosyasının tam bir listesi verilmiştir.  
+ Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948735"
 ---
 # <a name="generics-in-net"></a>.NET içindeki Genel Türler
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666442"
 - Visual Basic, C#ve ' de C++, tüm kapsayan türlerin tür parametrelerine atanmış türler yoksa, ve ' de genel tür içine alınmış iç içe bir tür başlatılamaz. Bu, yansıma içinde, bu diller kullanılarak tanımlanan bir iç içe türün, kapsayan tüm türlerin tür parametrelerini içerir. Bu, kapsayan türlerin tür parametrelerinin iç içe geçmiş bir türün üye tanımlarında kullanılmasına izin verir. Daha fazla bilgi için içindeki <xref:System.Type.MakeGenericType%2A>"iç içe türler" başlığına bakın.  
   
     > [!NOTE]
-    >  Dinamik bir derlemede kod göndererek veya [Ilasm. exe (Il Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) kullanılarak tanımlanan iç içe bir tür, kapsayan türlerin tür parametrelerini içermesi gerekmez; Ancak, bunları içermiyorsa, tür parametreleri iç içe yerleştirilmiş sınıftaki kapsam içinde değildir.  
+    > Dinamik bir derlemede kod göndererek veya [Ilasm. exe (Il Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) kullanılarak tanımlanan iç içe bir tür, kapsayan türlerin tür parametrelerini içermesi gerekmez; Ancak, bunları içermiyorsa, tür parametreleri iç içe yerleştirilmiş sınıftaki kapsam içinde değildir.  
   
      Daha fazla bilgi için içindeki <xref:System.Type.MakeGenericType%2A>"iç içe türler" başlığına bakın.  
   

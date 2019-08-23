@@ -2,19 +2,19 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 7a4bae0def6599ab577656e970abbe20dd10692f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cb8488a1c633f9b7158f9bebfa617381b407a63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778033"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933058"
 ---
-# <a name="netmsmqbinding"></a>\<netMsmqBinding>
-Çapraz makine haberleşmesi için kuyruğa alınan bir bağlama tanımlar.  
+# <a name="netmsmqbinding"></a>\<netMsmqBinding >
+Makineler arası iletişim için uygun bir sıraya alınmış bağlamayı tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
-\<netMsmqBinding>  
+\<bağlama >  
+\<netMsmqBinding >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -66,42 +66,42 @@ ms.locfileid: "61778033"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`closeTimeout`|A <xref:System.TimeSpan> bir kapatma işlemi tamamlamak sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
-|`customDeadLetterQueue`|Aktarım veya teslim başarısız olan veya süresi dolmuş olan iletileri yerleştirildiği uygulama başına yitirmiş kuyruk konumunu içeren bir URI.<br /><br /> Teslim edilemeyen bir kuyruğa gönderen bir uygulama teslim başarısız olmuş süresi dolan iletileri için Kuyruk yöneticisi kuyruğudur.<br /><br /> Tarafından belirtilen URI <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> net.msmq şeması kullanması gerekir.|  
-|`deadLetterQueue`|A <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> varsa kullanmak için eski ileti sırası türünü belirten değer.<br /><br /> Eski ileti sırası uygulamaya teslim edilmesi için başarısız olan iletileri burada aktarılacak yerdir.<br /><br /> Gerektiren iletileri `exactlyOnce` güvencesi (diğer bir deyişle, `exactlyOnce` özniteliği `true`), bu öznitelik varsayılan olarak, MSMQ sistem genelinde işlem eski ileti sırası için.<br /><br /> Bu öznitelik varsayılan olarak hiçbir Güvenceleri gerektiren iletileri `null`.|  
-|`durable`|Sürekli veya geçici sırasındaki ileti olup olmadığını belirten bir Boole değeri. Geçici bir ileti çalışmazken kalıcı bir ileti kuyruğu manager kilitlenme devam eder. Uygulamalar düşük gecikme süresi gerektirir ve ara sıra kayıp iletiler tolere edebilen geçici iletileri yararlıdır. Varsa `exactlyOnce` özniteliği `true`, iletileri dayanıklı olması gerekir. Varsayılan, `true` değeridir.|  
-|`exactlyOnce`|Bu bağlama tarafından işlenen her ileti yalnızca bir kere teslim olup olmadığını gösteren bir Boole değeri. Gönderen sonra teslim hatalarının bildirilir. Zaman `durable` olduğu `false`, bu öznitelik yoksayılır ve iletileri teslim güvencesi aktarılır. Varsayılan, `true` değeridir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
-|`maxBufferPoolSize`|Bu bağlama için en fazla arabellek havuzunun boyutunu belirten bir tamsayı. Varsayılan değer 8'dir.|  
-|`maxReceivedMessageSize`|Bu bağlama tarafından işlenen en büyük ileti boyutu, üst bilgiler, dahil, bayt cinsinden tanımlayan pozitif bir tamsayı. Bu sınırı aşan bir ileti gönderen bir SOAP hatasını alırsınız. Alıcı, iletiyi bırakır ve izleme günlüğüne etkinliğin bir giriş oluşturur. 65536 varsayılandır. Bu ileti boyutuna bağlı hizmet reddi (DoS) saldırılarına maruz kalma riskinizi sınırlamak içindir.|  
-|`maxRetryCycles`|Poison ileti algılama özelliği tarafından kullanılan yeniden deneme döngüsü sayısını belirten bir tamsayı. Tüm döngüleri, tüm teslim denemesi başarısız olduğunda bir ileti zehirli ileti haline gelir. Varsayılan değer 3'tür. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Gerekli öznitelik. Bağlama yapılandırma adını içeren bir dize. Bağlama için bir tanımlayıcı olarak kullanıldığından, bu değer benzersiz olmalıdır. İle başlayarak [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bağlamalar ve davranışları için gerekli değildir bir ada sahip. Varsayılan yapılandırma ve adsız bağlamaları ve davranışları hakkında daha fazla bilgi için bkz: [Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/simplified-configuration.md) ve [WCF hizmetleri için Basitleştirilmiş yapılandırma](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`openTimeout`|A <xref:System.TimeSpan> tamamlamak açık işlem için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
-|`QueueTransferProtocol`|Geçerli bir <xref:System.ServiceModel.QueueTransferProtocol> bu bağlamanın kullandığı sıraya konmuş iletişim kanal taşımasını belirten bir değer. MSMQ Active Directory SOAP Güvenilir Mesajlaşma Protokolü kullanılırken adresleme desteklemez. Bu nedenle, bu öznitelik ayarlanmamalıdır `Srmp` veya `Srmps` olduğunda `useActiveDirectory` özniteliği `true`.|  
-|`receiveErrorHandling`|A <xref:System.ServiceModel.ReceiveErrorHandling> poison ve nondispatchable iletileri nasıl işlendiğini belirten bir değer.|  
-|`receiveRetryCount`|En fazla kaç kez belirten bir tamsayı, yeniden deneme kuyruğa aktarmadan önce bir ileti göndermek sıra yöneticisini denemelidir.|  
-|`receiveTimeout`|A <xref:System.TimeSpan> tamamlamak alma işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:10:00 ' dir.|  
-|`retryCycleDelay`|Anında teslim edilemeyen bir iletiyi teslim etmeye çalışırken deneme arasındaki gecikmeyi belirten bir TimeSpan değeri dolaşır. En düşük bekleyin yalnızca zaman gerçek bir bekleme süresi uzun olabilir çünkü değeri tanımlar. Varsayılan değer 00:10:00 ' dir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
-|`sendTimeout`|A <xref:System.TimeSpan> tamamlamak bir gönderme işlemi için sağlanan zaman aralığını belirten bir değer. Bu değer, büyük veya buna eşit olmalıdır <xref:System.TimeSpan.Zero>. Varsayılan değer 00:01:00 ' dir.|  
-|`timeToLive`|Ne kadar ileti belirten bir TimeSpan değeri geçerli süreleri dolmadan ve teslim edilemeyen kuyruğa alınan önce. 1.00:00:00 varsayılandır.<br /><br /> Bu öznitelik, bunlar alıcı uygulamalar tarafından işlenmeden önce zamana duyarlı iletileri eski hale gelmediğinden emin olmak için ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki bir iletiyi süresi dolmuş kabul edilir. Süresi dolan iletileri geçerliliğini yitirmiş kuyruk adı verilen özel kuyruğa gönderilir. Geçerliliğini yitirmiş kuyruk konumu ile ayarlanır `DeadLetterQueue` özniteliği veya uygun varsayılana dayalı Güvenceleri üzerinde.|  
-|`usingActiveDirectory`|Kuyruk adreslerinin Active Directory kullanılarak dönüştürülüp dönüştürülmemesi olmadığını belirten bir Boole değeri.<br /><br /> MSMQ kuyruk adresleri yol adları veya doğrudan biçim adlarından oluşabilir. Doğrudan biçim adı ile DNS, NetBIOS veya IP kullanarak bilgisayar adını MSMQ çözümler. Bir yol adı ile MSMQ Active Directory kullanarak bilgisayar adını çözümler.<br /><br /> Varsayılan olarak, Windows Communication Foundation (WCF) aktarım dönüştürür doğrudan biçim adını bir ileti kuyruğuna URI'sini kuyruğa alındı. Ayarlayarak `UseActiveDirectory` özelliği true olarak bir uygulama belirtebilirsiniz sıraya alınan aktarım Active Directory yerine DNS, NetBIOS veya IP kullanarak bilgisayar adını çözümlenmelidir.|  
-|`useMsmqTracing`|İletileri bu bağlama tarafından işlenen olup olmadığını belirten bir Boole değeri izlenip izlenmemesini gerektiğini. Varsayılan, `false` değeridir. İzleme etkin olduğunda, rapor iletileri oluşturulur ve rapor kuyruğa gönderilen ileti ayrıldığında ya da bir Message Queuing bilgisayar ulaştığında her zaman.|  
-|`useSourceJournal`|Bu bağlama tarafından işlenen iletilerin kopyalarını belirten bir Boole değeri kaynak günlüğü depolanması gerekir. Varsayılan, `false` değeridir.<br /><br /> Bilgisayarın giden sırasının bıraktıysanız iletileri kaydını tutmak istediğiniz sıraya alınmış uygulamalar iletilerin günlük kuyruğuna kopyalayabilirsiniz. Giden sırasının bir iletiyi bırakır ve ileti hedef bilgisayarda alındı bir bildirim alındıktan sonra iletinin bir kopyasını gönderen bilgisayarın sistem günlüğü kuyrukta tutulur.|  
+|`closeTimeout`|Bir <xref:System.TimeSpan> kapatma işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit <xref:System.TimeSpan.Zero>olmalıdır. Varsayılan değer 00:01:00 ' dir.|  
+|`customDeadLetterQueue`|Zaman aşımına uğradı veya başarısız aktarım ya da teslimi olan iletilerin yerleştirildiği, uygulama başına atılacak mektup sırasının konumunu içeren bir URI.<br /><br /> Sahipsiz sıra, teslim edilemeyen süre dolmayan iletiler için gönderen uygulamanın kuyruk yöneticisinde bir sıradır.<br /><br /> Tarafından <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirtilen URI 'nin net. MSMQ şemasını kullanması gerekir.|  
+|`deadLetterQueue`|Varsa <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> , ne tür bir atılacak ileti sırasının kullanılacağını belirten bir değer.<br /><br /> Atılacak ileti sırası, uygulamaya teslim edilemeyen iletilerin aktarılacağı yerdir.<br /><br /> Güvence gerektiren `exactlyOnce` iletiler (yani `exactlyOnce` , özniteliği olarak `true`ayarlanır) için, bu öznitelik MSMQ 'daki sistem genelinde işlem atılacak ileti sırasını varsayılan olarak belirler.<br /><br /> Herhangi bir değer gerektirmeyen iletiler için, bu öznitelik varsayılan olarak `null`olur.|  
+|`durable`|İletinin kuyrukta dayanıklı mi yoksa geçici mi olduğunu belirten bir Boole değeri. Kalıcı bir ileti bir sıra Yöneticisi kilitlenmesiyle çalışır, geçici bir ileti değildir. Geçici iletiler, uygulamalar daha düşük gecikme süresi gerektirdiğinde ve zaman zaman kaybolmuş iletileri kabul edebildiği durumlarda faydalıdır. `exactlyOnce` Özniteliği olarak`true`ayarlandıysa, iletilerin dayanıklı olması gerekir. Varsayılan, `true` değeridir.|  
+|`exactlyOnce`|Bu bağlama tarafından işlenen her bir iletinin yalnızca bir kez teslim edilip edilmediğini gösteren Boolean bir değer. Ardından, gönderen teslim arızalarına göre bilgilendirilir. Ne zaman `durable` , bu öznitelik yok sayılır ve iletiler teslim güvencesi olmadan aktarılır. `false` Varsayılan, `true` değeridir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
+|`maxBufferPoolSize`|Bu bağlama için en büyük arabellek havuzu boyutunu belirten bir tamsayı. Varsayılan değer 8 ' dir.|  
+|`maxReceivedMessageSize`|Bu bağlama tarafından işlenen üst bilgiler dahil olmak üzere bayt cinsinden en büyük ileti boyutunu tanımlayan pozitif bir tamsayı. Bu sınırı aşan bir iletiyi gönderen bir SOAP hatası alır. Alıcı, iletiyi bırakır ve izleme günlüğünde olayın bir girişini oluşturur. Varsayılan değer 65536 ' dir. İleti boyutu sınırı, hizmet reddi (DoS) saldırılarına maruz kalma olasılığını sınırlandırmaya yöneliktir.|  
+|`maxRetryCycles`|Zarar iletisi algılama özelliği tarafından kullanılan yeniden deneme döngüsü sayısını belirten bir tamsayı. Tüm Döngülerde tüm teslim denemeleri başarısız olduğunda bir ileti bir zarar iletisi haline gelir. Varsayılan değer 3 ' dir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
+|`name`|Gerekli öznitelik. Bağlamanın yapılandırma adını içeren bir dize. Bağlama için bir kimlik olarak kullanıldığından, bu değer benzersiz olmalıdır. İle [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]başlayarak, bağlamaların ve davranışların bir ada sahip olması gerekmez. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.|  
+|`openTimeout`|Bir <xref:System.TimeSpan> açık işlemin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit <xref:System.TimeSpan.Zero>olmalıdır. Varsayılan değer 00:01:00 ' dir.|  
+|`QueueTransferProtocol`|Bu bağlamanın <xref:System.ServiceModel.QueueTransferProtocol> kullandığı sıraya alınmış iletişim kanalı aktarımını belirten geçerli bir değer. MSMQ, SOAP Güvenilir Mesajlaşma Protokolü kullanırken Active Directory adreslemeyi desteklemez. Bu nedenle, `Srmp` bu özniteliği `useActiveDirectory` özniteliği olarak `true`ayarlandığında veya `Srmps` olarak ayarlamanız gerekir.|  
+|`receiveErrorHandling`|Zebilen ve dağıtılabilir iletilerin nasıl işleneceğini belirten bir <xref:System.ServiceModel.ReceiveErrorHandling> değer.|  
+|`receiveRetryCount`|Sıra yöneticisinin yeniden deneme kuyruğuna aktarmadan önce bir ileti göndermek için kaç kez denemesi gerektiğini belirten bir tamsayı.|  
+|`receiveTimeout`|Alma <xref:System.TimeSpan> işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit <xref:System.TimeSpan.Zero>olmalıdır. Varsayılan değer 00:10:00 ' dir.|  
+|`retryCycleDelay`|Anında teslim edilmemiş bir iletiyi teslim etmeye çalışırken yeniden deneme döngüleri arasındaki gecikme süresini belirten bir TimeSpan değeri. Değer yalnızca en düşük bekleme süresini tanımlar çünkü gerçek bekleme süresi daha uzun olabilir. Varsayılan değer 00:10:00 ' dir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
+|`sendTimeout`|Bir <xref:System.TimeSpan> gönderme işleminin tamamlanabilmesi için belirtilen zaman aralığını belirten bir değer. Bu değer, değerinden büyük veya buna eşit <xref:System.TimeSpan.Zero>olmalıdır. Varsayılan değer 00:01:00 ' dir.|  
+|`timeToLive`|İletilerin süre dolmadan önce ne kadar süreyle geçerli olduğunu belirten bir TimeSpan değeri ve atılacak ileti kuyruğuna yerleştirirsiniz. Varsayılan değer 1.00:00:00 ' dır.<br /><br /> Bu öznitelik, zaman duyarlı iletilerin, alıcı uygulamalar tarafından işlenmeden önce eski hale gelmemesini sağlamak üzere ayarlanır. Belirtilen zaman aralığı içinde alıcı uygulama tarafından tüketilmeyen bir kuyruktaki ileti, süresi dolmaya yönelik olarak kabul edilir. Süre dolmayan iletiler, atılacak ileti sırası adlı özel bir kuyruğa gönderilir. Etkin olmayan ileti sırasının konumu, `DeadLetterQueue` özniteliğiyle veya uygun varsayılan değer ile belirlenir.|  
+|`usingActiveDirectory`|Sıra adreslerinin Active Directory kullanılarak dönüştürülmesi gerekip gerekmediğini belirten bir Boole değeri.<br /><br /> MSMQ kuyruğu adresleri, yol adlarından veya doğrudan biçim adlarından oluşabilir. Doğrudan biçim adıyla, MSMQ, DNS, NetBIOS veya IP kullanarak bilgisayar adını çözer. Bir yol adıyla, MSMQ Active Directory kullanarak bilgisayar adını çözer.<br /><br /> Varsayılan olarak, Windows Communication Foundation (WCF) sıraya alınan aktarım, bir ileti sırasının URI 'sini doğrudan biçim adına dönüştürür. `UseActiveDirectory` Özelliği true olarak ayarlayarak, bir uygulama sıraya alınan taşımanın DNS, NetBIOS veya IP yerine Active Directory kullanarak bilgisayar adını çözmesi gerektiğini belirtebilir.|  
+|`useMsmqTracing`|Bu bağlama tarafından işlenen iletilerin izlenip izlenmeyeceğini belirten bir Boole değeri. Varsayılan, `false` değeridir. İzleme etkinleştirildiğinde, ileti Message Queuing bilgisayara her ayrıldığında veya ulaştığında rapor iletileri oluşturulur ve rapor kuyruğuna gönderilir.|  
+|`useSourceJournal`|Bu bağlama tarafından işlenen iletilerin kopyalarını belirten bir Boole değeri, kaynak günlüğünde depolanmalıdır. Varsayılan, `false` değeridir.<br /><br /> Bilgisayarın giden sırasının ayrılmasına sahip bir ileti kaydını tutmak isteyen sıraya alınmış uygulamalar iletileri bir günlük kuyruğuna kopyalayabilir. İleti, giden sırasından ayrıldığında ve iletinin hedef bilgisayarda alındığı bir bildirim alındıktan sonra iletinin bir kopyası gönderen bilgisayarın sistem günlüğü kuyruğunda tutulur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bir bitiş noktası tarafından işlenen SOAP iletilerinin karmaşıklığını kısıtlamalar tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<Güvenlik >](security-of-netmsmqbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlamaları >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Bu öğe, standart ve özel bağlamalar koleksiyonunu tutar.|  
+|[\<bağlama >](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `netMsmqBinding` Bağlama Microsoft Message Queuing (MSMQ) bir aktarım olarak yararlanarak queuing için destek sağlar ve gevşek bağlantılı uygulamalar, hata Yalıtımı seviyelendirme ve bağlantısı kesilmiş işlemleri yükler için destek sağlar. Bu özellikler için bkz [wcf'de kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ Bağlama `netMsmqBinding` , bir taşıma olarak Microsoft Message Queuing (MSMQ) kullanarak sıraya alma desteği sağlar ve gevşek olarak bağlanmış uygulamalar, hata yalıtımı, yük dengeleme ve bağlantısı kesik işlemler için destek sağlar. Bu özelliklerle ilgili bir tartışma için bkz. [WCF 'de kuyruklar](../../../wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Örnek  
   
@@ -141,8 +141,8 @@ ms.locfileid: "61778033"
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [WCF'de Kuyruklar](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [\<bağlama >](../../../misc/binding.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [WCF'de Kuyruklar](../../../wcf/feature-details/queues-in-wcf.md)

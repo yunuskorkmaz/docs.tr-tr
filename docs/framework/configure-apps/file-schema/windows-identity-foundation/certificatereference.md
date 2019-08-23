@@ -3,18 +3,18 @@ title: <certificateReference>
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-ms.openlocfilehash: c7dc9cfff15e70eff0086cfd98a19f3360ab8bb0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: da8ea128466457409334cd0b4ee3246a923f969a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941926"
 ---
 # <a name="certificatereference"></a>\<certificateReference >
-Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir.  
+Bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirtir.  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
 \<serviceCertificate >  
 \<certificateReference >  
   
@@ -43,11 +43,11 @@ Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için ku
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|storeName|X.509 Sertifika deposunun adı. Varsayılan değer "My". İsteğe bağlı.|  
-|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 Sertifika deposunun konumunu belirten bir değer. "LocalMachine" varsayılan değerdir. İsteğe bağlı.|  
-|X509FindType|Bir <xref:System.Security.Cryptography.X509Certificates.X509FindType> yürütüleceğini arama türünü belirten bir değer. "FindBySubjectDistinguishedName" varsayılandır. İsteğe bağlı.|  
-|findValue|X.509 sertifika deposunda aranacak değer. İsteğe bağlı.|  
-|isChainIncluded|Sertifika zinciri kullanarak doğrulama gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Varsayılan değer: "true"; Sertifika zinciri kullanarak doğrulama gerçekleştirilir. İsteğe bağlı.|  
+|storeName|X. 509.440 sertifika deposunun adı. Varsayılan değer "My" dır. İsteğe bağlı.|  
+|storeLocation|X <xref:System.Security.Cryptography.X509Certificates.StoreLocation> . 509.440 sertifika deposunun konumunu belirten bir değer. Varsayılan değer "LocalMachine" dır. İsteğe bağlı.|  
+|x509FindType|Yürütülecek <xref:System.Security.Cryptography.X509Certificates.X509FindType> arama türünü belirten bir değer. Varsayılan değer "FindBySubjectDistinguishedName" dır. İsteğe bağlı.|  
+|findValue|X. 509.440 sertifika deposunda Aranacak değer. İsteğe bağlı.|  
+|Ischaindahil|Doğrulamanın sertifika zinciri kullanılarak gerçekleştirilip gerçekleştirilmeyeceğini belirtir. Varsayılan değer "true" 'dur; doğrulama, sertifika zinciri kullanılarak gerçekleştirilir. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -56,7 +56,7 @@ Bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için ku
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Şifreleme ve belirteç şifre çözme için kullanılan sertifikayı yapılandırır.|  
+|[\<serviceCertificate >](servicecertificate.md)|Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan sertifikayı yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `<certificateReference>` Öğesi bulmak ve bir sertifika deposunda bir X.509 sertifikasını doğrulamak için kullanılan ayarları belirtir. Bunu belirtildiğinde alt öğesi olarak `<serviceCertificate>` öğesi, şifreleme ve belirteç şifre çözme için kullanılan X.509 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>` Öğesi tarafından temsil edilen <xref:System.ServiceModel.Configuration.CertificateReferenceElement> sınıfı.
+ Öğesi `<certificateReference>` , bir sertifika deposundaki bir X. 509.440 sertifikasını bulmak ve doğrulamak için kullanılan ayarları belirler. `<serviceCertificate>` Öğesinin alt öğesi olarak belirtildiğinde, belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasının konumunu ve doğrulama ayarlarını belirtir. `<certificateReference>` Öğesi sınıfı<xref:System.ServiceModel.Configuration.CertificateReferenceElement> tarafından temsil edilir.

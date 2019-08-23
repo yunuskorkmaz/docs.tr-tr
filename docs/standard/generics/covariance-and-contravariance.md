@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 26a1df8829a9b6398876658bdb5697ab3e6f87c8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08e6458f0a14b78c6d05f706afa710931d60094a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948795"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 <a name="top"></a>Kovaryans ve değişken Varyans, başlangıçta belirtilenden daha fazla türetilmiş bir tür (daha fazla özel) veya daha az türetilmiş bir tür (daha az özel) kullanma olanağına işaret eden terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf `Base` ve adlı `Derived`türetilmiş bir sınıf varsayılır.  
@@ -110,7 +110,7 @@ ms.locfileid: "69666451"
  .NET Framework 4 `Func` ' te, gibi genel temsilcilerin <xref:System.Func%602>birlikte değişken dönüş türleri ve değişken karşıtı parametre türleri vardır. Gibi genel temsilcilerin <xref:System.Action%602>değişken karşıtı parametre türleri vardır. `Action` Bu, temsilcilerin daha fazla türetilmiş parametre türüne sahip değişkenlere atanabileceği ve ( `Func` Genel Temsilciler söz konusu olduğunda) daha az türetilmiş dönüş türlerinden atanabileceği anlamına gelir.  
   
 > [!NOTE]
->  `Func` Genel temsilcilerin son genel tür parametresi, temsilci imzasında döndürülen değerin türünü belirtir. Değişkenle birlikte değişken (`out` anahtar sözcük) ve diğer genel tür parametreleri değişken karşıtı (`in` anahtar sözcük).  
+> `Func` Genel temsilcilerin son genel tür parametresi, temsilci imzasında döndürülen değerin türünü belirtir. Değişkenle birlikte değişken (`out` anahtar sözcük) ve diğer genel tür parametreleri değişken karşıtı (`in` anahtar sözcük).  
   
  Aşağıdaki kod bunu göstermektedir. İlk kod parçası adlı `Base`bir sınıfı, devralan `Base`adlı `Derived` bir sınıfı ve adlı `MyMethod`bir `static` yöntemi (`Shared` Visual Basic) olan başka bir sınıfı tanımlar. Yöntemi bir örneğini `Base` alır ve bir `Derived`örneğini döndürür. (Bağımsız değişken öğesinin `Derived`bir örneği ise, `MyMethod` döndürür; bağımsız değişken öğesinin `Base`bir örneği ise, `MyMethod` yeni bir örneğini `Derived`döndürür.) ' `Main()`De, örnek, öğesini temsil `MyMethod`eden `Func<Base, Derived>` (`Func(Of Base, Derived)` Visual Basic olarak) bir örneğini oluşturur ve bunu değişkende `f1`depolar.  
   
@@ -149,12 +149,12 @@ ms.locfileid: "69666451"
  .NET Framework 4 ' ten başlayarak, Visual Basic ve C# arabirimlerin ve temsilcilerin genel tür parametrelerini birlikte değişken veya değişken karşıtı olarak işaretlemenizi sağlayan anahtar sözcüklere sahip olursunuz.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. .NET Framework 4 ' ten önce, bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu, sınıfı [Ilasm. exe (Il Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) ile derleyerek veya dinamik bir derlemede yayarak Microsoft ara dili 'NI (MSIL) kullanmaktır.  
+> .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. .NET Framework 4 ' ten önce, bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu, sınıfı [Ilasm. exe (Il Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) ile derleyerek veya dinamik bir derlemede yayarak Microsoft ara dili 'NI (MSIL) kullanmaktır.  
   
  Birlikte değişken `out` tür parametresi, [MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)derleyicisi `+` için Visual Basic anahtar sözcüğüyle`Out` (anahtar sözcüğüyle) işaretlenir. Birlikte değişken türünde bir parametreyi, bir arabirime ait olan bir yöntemin dönüş değeri olarak veya bir temsilcinin dönüş türü olarak kullanabilirsiniz. Birlikte değişken türünde bir parametreyi, arabirim yöntemleri için genel türde bir kısıtlayıcı olarak kullanamazsınız.  
   
 > [!NOTE]
->  Bir arabirimin bir yöntemi genel temsilci türünde bir parametreye sahipse, arabirim türünün birlikte değişken türünde bir parametresi, temsilci türünün değişken karşıtı türünde bir parametresini belirtmek için kullanılabilir.  
+> Bir arabirimin bir yöntemi genel temsilci türünde bir parametreye sahipse, arabirim türünün birlikte değişken türünde bir parametresi, temsilci türünün değişken karşıtı türünde bir parametresini belirtmek için kullanılabilir.  
   
  Değişken karşıtı bir `in` tür parametresi, [MSIL](../../../docs/framework/tools/ilasm-exe-il-assembler.md)derleyicisi `-` için Visual Basic anahtar`In` sözcüğüyle (anahtar sözcüğüyle) işaretlenir. Değişken karşıtı türde bir parametreyi, bir arabirime ait olan bir yöntemin bir parametresinin türü olarak veya bir temsilcinin bir parametresinin türü olarak kullanabilirsiniz. Değişken karşıtı türde bir parametreyi, bir arabirim yöntemi için genel türde bir kısıtlama olarak kullanabilirsiniz.  
   

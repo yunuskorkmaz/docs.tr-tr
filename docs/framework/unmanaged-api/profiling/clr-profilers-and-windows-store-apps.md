@@ -14,119 +14,119 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7142ef36d4ed1bbcb715748202eefdd5504f697e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775108"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956648"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR Profil Oluşturucular ve Microsoft Store Uygulamaları
 
-Bu konuda, ne zaman analiz yazma tanılama araçları bir Windows Store uygulaması içinde çalışan yönetilen kod hakkında düşünmek gerekenler açıklanmaktadır. Ayrıca, Windows Store apps karşı çalıştırdığınızda çalışmaya devam etmek için mevcut geliştirme araçlarınızı değiştirmek için yönergeler sağlar. Bu bilgileri anlamak için ortak dil çalışma zamanı profil oluşturma API ile ilgili bilgi sahibi değilseniz, zaten bu API Windows Masaüstü uygulamaları ve karşı düzgün çalışır şimdi aracı değiştirme ilginizi çeken, bir Tanılama Aracı'nda kullandığınız en iyisidir Windows Store apps karşı düzgün çalışması için.
+Bu konuda, bir Windows Mağazası uygulamasında çalışan yönetilen kodu çözümleyen tanılama araçlarını yazarken göz önünde bulundurmak için gerekenler açıklanmaktadır. Ayrıca, Windows Mağazası uygulamalarına karşı çalıştırdığınızda çalışmaya devam edebilmek için mevcut geliştirme araçlarınızı değiştirme yönergeleri de sağlar. Bu bilgileri anlamak için, ortak dil çalışma zamanı profili oluşturma API 'sine alışkın olmanız en iyisidir, bu API 'yi Windows masaüstü uygulamalarında doğru şekilde çalışan bir Tanılama aracında zaten kullanmışsanız ve artık aracı değiştirme ile ilgileniyor olabilirsiniz Windows Mağazası uygulamalarına karşı doğru şekilde çalıştırmak için.
 
 ## <a name="introduction"></a>Giriş
 
-Bir giriş paragrafı yaptıysanız, daha sonra CLR Profil oluşturma API'si ile biliyorsunuzdur. Yönetilen Masaüstü uygulamaları karşı iyi çalışan bir tanılama aracı yazmış olduğunuz. Şimdi, aracı ile yönetilen bir Windows Store uygulaması çalışır böylece yapmanız gerekenler merak işiniz. Belki de bunun çalışmasını sağlamak ve bir basit görev olmadığını bulunan zaten çalıştınız. Aslında, birkaç tüm araçlar geliştiricilerin belirgin olmayabilecek ilgili önemli noktalar vardır. Örneğin:
+Bunu, giriş paragrafından daha fazla yaptıysanız, CLR profil oluşturma API 'sini öğreniyorsunuz demektir. Yönetilen masaüstü uygulamalarında iyi bir şekilde çalışacak bir tanılama aracı zaten yazmış oldunuz. Artık, aracınızdaki yönetilen bir Windows Mağazası uygulamasıyla çalışması için ne yapılacağını merak ediyorsunuz. Belki de bu işi yapmayı denediniz ve bu uygulamayı basit bir görev olmadığını keşfetti. Aslında, tüm araç geliştiricileri için belirgin olmayan bazı önemli noktalar vardır. Örneğin:
 
-- Windows Store apps bir bağlamda önemli ölçüde azaltılmış izinlerle çalıştırın.
+- Windows Mağazası uygulamaları, önemli ölçüde azaltılan izinlerle çalışır.
 
-- Windows meta veri dosyaları için geleneksel yönetilen modülleri karşılaştırıldığında benzersiz özelliklerine sahiptir.
+- Windows meta veri dosyalarının geleneksel yönetilen modüllerle karşılaştırıldığında benzersiz özellikleri vardır.
 
-- Windows Store apps etkileşim arızalandığında kendilerini askıya alma, bir alýþkanlýk vardır.
+- Windows Mağazası uygulamaları, etkileşim azaldığında kendini askıya alma alışkanlığıyla sahiptir.
 
-- İşlemler arası iletişim mekanizmaları, çeşitli nedenlerden dolayı artık çalışmayabilir.
+- İşlemler arası iletişim mekanizmalarda artık çeşitli nedenlerle çalışmamaya çalışmayabilir.
 
-Bu konu, farkında olmanız gereken şeyleri ve düzgün bir şekilde başa çıkma listeler.
+Bu konu, bilmeniz gereken şeyleri ve bunlarla nasıl doğru şekilde ilgilenmekte olduğunu listeler.
 
-CLR Profil oluşturma API için yeni, daha iyi giriş bilgilerini bulmak için bu konunun sonunda kaynakları aşağı atlayın.
+CLR profil oluşturma API 'SI için yeni başladıysanız daha iyi tanıtım bilgileri bulmak için bu konunun sonundaki kaynaklara atlayın.
 
-Özel Windows API'ların nasıl kullanılacağı hakkında daha fazla ayrıntı sağlamak, bu konunun kapsamı dışında olan. Bu konuda bir başlangıç noktası göz önünde bulundurun ve burada başvurulan tüm Windows API'leri hakkında daha fazla bilgi için MSDN başvurun.
+Belirli Windows API 'Leri ve bunların nasıl kullanılması gerektiği hakkında ayrıntı sağlamak, bu konunun kapsamı dışındadır. Bu konuyu bir başlangıç noktası olarak değerlendirin ve burada başvurulan herhangi bir Windows API 'si hakkında daha fazla bilgi edinmek için MSDN 'ye başvurun.
 
 ## <a name="architecture-and-terminology"></a>Mimari ve terminoloji
 
-Genellikle, bir tanılama aracı aşağıda gösterilene benzer bir mimariye sahiptir. "Profil Oluşturucu" terimini kullanır, ancak nesne çerçeveleri de tipik performans veya kod kapsamı gibi alanlarına bellek profil, sahte, seyahat süresi hata ayıklama, uygulama izleme vb. gibi birçok araç gidin. Kolaylık olması için bu araçları profil oluşturucular olarak başvurmak bu konuda devam eder.
+Genellikle, bir tanılama aracı aşağıdaki çizimde gösterildiği gibi bir mimariye sahiptir. "Profil Oluşturucu" terimini kullanır, ancak bu birçok araç, tipik performans veya bellek profili oluşturma işleminin kod kapsamı, sahte nesne çerçeveleri, zaman gezme hata ayıklama, uygulama izleme vb. gibi alanlara göre daha iyi bir şekilde geçer. Kolaylık olması için bu konu, profil oluşturucular olarak tüm bu araçlara başvuralmaya devam edecektir.
 
-Bu konu başlığı altında yaptığımız aşağıdaki terimler kullanılır:
+Bu konu başlığı altında aşağıdaki terminoloji kullanılır:
 
 **Uygulama**
 
-Bu, profil oluşturucu çözümleme uygulamasıdır. Genellikle, bu uygulama geliştiricisine uygulamayla sorunlarının tanılanmasına yardımcı olmak için artık profil oluşturucuyu kullanıyor. Geleneksel olarak, bu uygulama, bir Windows masaüstü uygulaması olacaktır, ancak bu konuda, Windows Store uygulamaları bekliyoruz.
+Bu, profil oluşturucunun analiz olduğu uygulamadır. Genellikle, bu uygulamanın geliştiricisi uygulamayla ilgili sorunları tanılamaya yardımcı olması için profil oluşturucuyu kullanıyor. Geleneksel olarak, bu uygulama bir Windows masaüstü uygulaması olacaktır, ancak bu konu başlığında Windows Mağazası uygulamaları ' na bakıyoruz.
 
-**Profiler DLL**
+**Profil oluşturucu DLL 'SI**
 
-Bu analiz uygulamanın işlem alanına yüklenen bileşendir. Bu bileşen olarak da bilinen "Aracısı" profiler uygulayan [Icorprofilercallback](icorprofilercallback-interface.md)[Icorprofilercallback arabirimi](icorprofilercallback-interface.md)(2,3, vb.) arabirimler ve tüketir [ Icorprofilerınfo](icorprofilerinfo-interface.md)(2,3, vb.) arabirimler ve potansiyel olarak çözümlenen uygulama hakkında veri toplamak için uygulamanın davranış yönlerini değiştirin.
+Bu, çözümlenmekte olan uygulamanın işlem alanına yüklenen bileşendir. Profiler "Agent" olarak da bilinen bu bileşen [ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback arabirimi](icorprofilercallback-interface.md)(2, 3, vb.) arabirimlerini uygular ve ile Ilgili verileri toplamak Için [ICorProfilerInfo](icorprofilerinfo-interface.md)(2, 3, vb.) arabirimlerini kullanır. analiz edilen uygulama ve potansiyel olarak uygulamanın davranışının özellikleri.
 
-**Profiler kullanıcı Arabirimi**
+**Profiler kullanıcı arabirimi**
 
-Bu profil oluşturucu kullanıcı ile etkileşime giren bir masaüstü uygulamasıdır. Bu kullanıcı için uygulama durumunu görüntülemek ve kullanıcı analiz edilen uygulama davranışını denetlemek için araçlar vererek sorumludur. Bu bileşen her zaman kendi işlem alanı, profili oluşturulan uygulama işlemi alanından ayrı çalıştırır. "Ekleme tetikleyici," çağıran işlemi olan Profiler kullanıcı arabirimini de davranabilir [Iclrprofiling::attachprofiler](iclrprofiling-attachprofiler-method.md) Profiler DLL'yi burada profil oluşturucu DLL belirtmiyor bu durumlarda analiz edilen uygulamanın yöntemi Başlangıçta yükleyin.
+Bu, profil oluşturucu kullanıcısının etkileşimde bulunduğu bir masaüstü uygulamasıdır. Uygulama durumunun kullanıcıya gösterilmesi ve kullanıcıya analiz edilen uygulamanın davranışını denetleme olanağı verilmesi sorumludur. Bu bileşen, profili oluşturulan uygulamanın işlem alanından ayrı olarak kendi işlem alanında çalışır. Profil Oluşturucu kullanıcı arabirimi, analiz edilen uygulamanın profil oluşturucu DLL 'nin başlangıçta yüklenmediği durumlarda profil oluşturucu DLL 'sini yüklemesine yol açmak için [ıclrprofile:: AttachProfiler](iclrprofiling-attachprofiler-method.md) yöntemini çağıran işlem olan "Ekle tetikleyicisi" olarak da davranabilir.
 
 > [!IMPORTANT]
-> Profiler kullanıcı Arabirimi, bile denetimi ve Windows Store app raporda kullanıldığında, bir Windows masaüstü uygulaması kalması gerekir. Paketini ve Windows Store, Tanılama aracında sevk beklemiyoruz. Araç, Windows Store apps yapamayacağı ve çoğu bunları Profiler kullanıcı Arabirimi içinde bulunan bir şey yapmanız gerekir.
+> Profil Oluşturucu kullanıcı arabiriminize bir Windows Mağazası uygulamasını denetlemek ve rapor etmek için kullanıldığında bile bir Windows masaüstü uygulaması kalmalıdır. Tanılama aracınızı Windows Mağazası 'nda paketleyebilve sunamayacak kadar beklememeniz beklenmemektedir. Araclarınızın Windows Mağazası uygulamalarının yapamadığını ve bu nesnelerin birçoğu Profiler Kullanıcı arabiriminizdeki gibi şeyler yapması gerekir.
 
-Bu belge boyunca, örnek kod olduğunu varsayar:
+Bu belge boyunca örnek kod şunları varsayar:
 
-- CLR Profil oluşturma API'ın gereksinimlerine uygun bir yerel DLL gerektiğinden, Profiler DLL'yi C++ dilinde yazılır.
+- Profil oluşturucu DLL 'niz, CLR C++PROFIL oluşturma API 'sinin gereksinimlerine göre yerel bir dll olması gerektiğinden ' de yazılır.
 
-- Profiler UI C# dilinde yazılır. Bu gerekli değildir, ancak dil Profiler UI'nin işlem için bir gereksinimi yoktur çünkü neden kısa ve basit bir dil seçin?
+- Profil Oluşturucu kullanıcı arabiriminize yazılır C#. Bu gerekli değildir, ancak bu gerekli değildir, ancak profil Oluşturucu kullanıcı arabirimine yönelik dilde bir gereksinim olmadığından, neden kısa ve basit bir dil seçmemelidir?
 
 ### <a name="windows-rt-devices"></a>Windows RT cihazları
 
-Windows RT cihazları oldukça kilitlendiğini. Üçüncü taraf profil Oluşturucular, yalnızca bu cihazlarda yüklenemiyor. Bu belge, Windows 8 bilgisayarlarında odaklanır.
+Windows RT cihazları oldukça kilitlidir. Üçüncü taraf profil oluşturucular yalnızca bu cihazlara yüklenemez. Bu belge Windows 8 bilgisayarlara odaklanır.
 
-## <a name="consuming-windows-runtime-apis"></a>Windows çalışma zamanı API'ları kullanma
+## <a name="consuming-windows-runtime-apis"></a>Windows Çalışma Zamanı API 'Leri kullanma
 
-Aşağıdaki bölümlerde ele alınan senaryolar sayısında Profiler UI Masaüstü uygulamanızı bazı yeni Windows Runtime API'ları kullanmasını gerektiren durumlar. Hangi Windows Runtime API'ları Masaüstü uygulamalarından kullanılabileceğini anlamak için belgelere isteyebilirsiniz ve davranışlarını ne zaman farklı olup olmadığını, Masaüstü uygulamaları ve Windows Store apps çağrılır.
+Aşağıdaki bölümlerde ele alınan çeşitli senaryolarda, Profil Oluşturucu kullanıcı arabirimi masaüstü uygulamanızın bazı yeni Windows Çalışma Zamanı API 'Leri kullanması gerekir. Masaüstü uygulamalarından hangi Windows Çalışma Zamanı API 'Lerinin kullanılabileceğini ve bunların Masaüstü uygulamalarından ve Windows Mağazası uygulamalarından çağrıldığında farklı olup olmadığını anlamak için belgelere danışmak isteyeceksiniz.
 
-Profiler kullanıcı Arabirimi, yönetilen kodda yazılmış birkaç adımda bu kolay Windows çalışma zamanı API'leri kullanan hale getirmek için ihtiyacınız olacaktır. Bkz: [yönetilen Masaüstü uygulamaları ve Windows çalışma zamanı](https://go.microsoft.com/fwlink/?LinkID=271858) makale daha fazla bilgi için.
+Profil Oluşturucu kullanıcı arabiriminizi yönetilen kodda yazılmışsa, bu Windows Çalışma Zamanı API 'Leri kullanmayı kolaylaştırmak için yapmanız gereken birkaç adım olacaktır. Daha fazla bilgi için bkz. [yönetilen masaüstü uygulamaları ve Windows çalışma zamanı](https://go.microsoft.com/fwlink/?LinkID=271858) makalesi.
 
-## <a name="loading-the-profiler-dll"></a>Profiler DLL yükleniyor
+## <a name="loading-the-profiler-dll"></a>Profil oluşturucu DLL yükleniyor
 
-Bu bölümde, nasıl Profiler kullanıcı Arabirimi, Profiler DLL'yi Windows Store app neden açıklanmaktadır. Bu bölümde açıklanan kod Profiler UI Masaüstü uygulamanıza ait ve bu nedenle Masaüstü uygulamaları için güvenli ancak mutlaka Windows Store uygulamaları için güvenli bir Windows API'leri kullanarak içerir.
+Bu bölümde, Profil Oluşturucu kullanıcı arabiriminin Windows Mağazası uygulamasının profil oluşturucu DLL 'nizi yüklemesine neden olduğu açıklanır. Bu bölümde açıklanan kod Profiler kullanıcı arabirimi masaüstü uygulamanıza aittir ve bu nedenle, masaüstü uygulamaları için güvenli olan ancak Windows Mağazası uygulamaları için güvenli olan Windows API 'Lerini kullanmayı içerir.
 
-Profiler kullanıcı Arabirimi, Profiler DLL'yi iki yolla uygulamanın işlem alanına yüklenmesine neden olabilir:
+Profil Oluşturucu kullanıcı arabiriminizi, profil oluşturucu DLL 'nizin uygulamanın işlem alanına iki şekilde yüklenmesine neden olabilir:
 
-- Uygulama başlangıcında gibi ortam değişkenlerini şu yollarla denetlenir.
+- Uygulama başlangıcında, ortam değişkenleri tarafından denetlenen şekilde.
 
-- Çağırarak başlangıç tamamlandıktan sonra uygulamaya ekleyerek [Iclrprofiling::attachprofiler](iclrprofiling-attachprofiler-method.md) yöntemi.
+- Başlangıç tamamlandıktan sonra, [ıclrprofile:: AttachProfiler](iclrprofiling-attachprofiler-method.md) yöntemini çağırarak uygulamaya ekleme.
 
-İlk, önündeki engellerin birini alma başlatma-yükleme ve Windows Store uygulamaları ile düzgün çalışması için Profiler DLL'yi ekleme-yükleme. Her iki biçimi yükleyen bazı özel durumlar paylaşır, şimdi bunları ile başlatın.
+İlk yol bloklarınızdan biri, Windows Mağazası uygulamalarıyla düzgün şekilde çalışması için profil oluşturucu DLL 'nizin başlangıç yükleme ve iliştirme yüküne sahip olur. Her iki yükleme biçimi de ortak olarak bazı özel konuları paylaşır, bu nedenle bunlarla başlayalım.
 
-### <a name="common-considerations-for-startup-and-attach-loads"></a>Başlangıç için ortak ilgili önemli noktalar ve yükleri ekleme
+### <a name="common-considerations-for-startup-and-attach-loads"></a>Başlangıç ve iliştirme yükleri için genel hususlar
 
-**Profiler DLL'yi imzalama**
+**Profil oluşturucu DLL 'nizi imzalama**
 
-Windows, Profiler DLL'yi yüklemeye çalıştığında, Profiler DLL'yi doğru şekilde imzalandığını doğrular. Aksi durumda, varsayılan olarak yükleme başarısız olur. Bunu yapmak için iki yol vardır:
+Windows profil oluşturucu DLL 'nizi yüklemeyi denediğinde, profil oluşturucu DLL 'nizin düzgün şekilde imzalandığını doğrular. Aksi takdirde, yükleme varsayılan olarak başarısız olur. Bunu yapmak için iki yol vardır:
 
-- Profiler DLL'niz açtığınızdan emin olun.
+- Profil oluşturucu DLL 'nizin imzalandığından emin olun.
 
-- Kullanıcı, bir geliştirici lisansı, Windows 8 makinesinde aracınızın kullanmadan önce yüklemeniz gerektiğini söyleyin. Bu, Visual Studio'dan veya bir komut isteminden el ile otomatik olarak yapılabilir. Daha fazla bilgi için [Geliştirici lisansı alma](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
+- Aracınızı kullanmadan önce, Windows 8 makinesine bir geliştirici lisansı yüklemeleri gerektiğini kullanıcıya söyleyin. Bu, otomatik olarak Visual Studio 'dan veya bir komut isteminden el ile yapılabilir. Daha fazla bilgi için bkz. [Geliştirici lisansı edinme](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Dosya sistemi izinleri**
 
-Windows Store uygulaması yükleme ve hangi BT dosya sistemindeki bir konumdan, Profiler DLL'yi yürütme izni olmalıdır residesBy varsayılan, Windows Store app çoğu dizin ve başarısız girişimleri, Profiler DLL'yi böyle izni yok şuna benzer bir Windows uygulama olay günlüğündeki bir girişi oluşturacak:
+Windows Mağazası uygulamasının profil oluşturucu DLL 'nizi, varsayılan olarak yer aldığı dosya sistemindeki konumdan yükleme ve yürütme izni olması gerekir. Windows Mağazası uygulaması, çoğu dizinde bu izne sahip değildir ve profil oluşturucu DLL 'nizi yükleme girişimi başarısız olur Windows uygulaması olay günlüğünde şuna benzer bir giriş oluşturacak:
 
 ```Output
 NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateInstance.  Profiler CLSID: '{xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}'.  HRESULT: 0x80070005.  Process ID (decimal): 4688.  Message ID: [0x2504].
 ```
 
-Genellikle, Windows Store apps yalnızca sınırlı sayıda disk üzerindeki konumlara erişmek için izin verilir. Her Windows Store uygulaması erişim izni verilen tüm Windows Store uygulamaları için dosya sistemindeki bazı alanların yanı sıra kendi uygulamaların veri klasörlerini erişebilirsiniz. Tüm Windows Store apps okudum ve varsayılan olarak bırakılma yürütmek için Profiler DLL dosyanızı ve bağımlılıklarını yere Program dosyaları veya Program dosyaları (x86), altında yüklemek en iyisidir.
+Genellikle, Windows Mağazası uygulamalarının diskte yalnızca sınırlı bir konum kümesine erişmesine izin verilir. Her Windows Mağazası uygulaması, kendi uygulama veri klasörlerine ve dosya sisteminde tüm Windows Mağazası uygulamalarına erişim izni verilen diğer diğer alanlara erişebilir. Tüm Windows Mağazası uygulamalarının varsayılan olarak burada okuma ve yürütme izinlerine sahip olduğu için profil oluşturucu DLL 'nizi ve bağımlılıklarını Program Files veya Program Files (x86) altında bir yere yüklemek en iyisidir.
 
 ### <a name="startup-load"></a>Başlangıç yükü
 
-Genellikle, bir masaüstü uygulamasında Profiler kullanıcı Arabirimi, Profiler DLL'yi başlangıç yükü gerekli CLR API profil oluşturma ortam değişkenlerini içeren bir ortam bloğu başlatarak ister (yani, `COR_PROFILER`, `COR_ENABLE_PROFILING`, ve `COR_PROFILER_PATH`), ve ardından bu ortam bloğu ile yeni bir işlem oluşturuluyor. Aynı Windows Store uygulamaları için geçerlidir, ancak farklı bir mekanizmasıdır.
+Genellikle, bir masaüstü uygulamasında, profil oluşturucu UI, gerekli clr profil oluşturma API 'si ortam değişkenlerini (yani,,, ve `COR_PROFILER` `COR_PROFILER_PATH`) içeren bir ortam bloğunu başlatarak profil oluşturucu DLL 'nizin başlangıç yüküne sorulur `COR_ENABLE_PROFILING`. sonra bu ortam bloğuna sahip yeni bir işlem oluşturuluyor. Aynı durum Windows Mağazası uygulamaları için de geçerlidir, ancak mekanizmalar farklıdır.
 
-**Yükseltilmiş çalıştırma**
+**Yükseltilmiş ayrıcalıklarla çalıştırma**
 
-İşlem, Windows Store app işlem B, A işlem üretme girişiminde Orta bütünlük düzeyinde (yani değil yükseltilmiş olduğu gibi) yüksek bütünlük düzeyinde değil düzeyini çalıştırılmalıdır. Bu da Profiler UI Orta bütünlük düzeyinde çalışıyor olması veya Windows Store app başlatılmasını halletmeniz için Orta bütünlük düzeyinde başka bir masaüstü işlem üretme gerekir anlamına gelir.
+Windows Mağazası uygulama Işlemi B 'yi oluşturma girişimlerini işsek, A Işleminin yüksek bütünlük düzeyinde (yükseltilmiş olmayan) değil, Orta bütünlük düzeyinde çalıştırılması gerekir. Yani, profil oluşturucu Kullanıcı arabiriminiz Orta bütünlük düzeyinde çalışıyor olmalıdır veya Windows Mağazası uygulamasını başlatmak için orta düzeyde bütünlük düzeyinde başka bir masaüstü işlemi oluşturulmalıdır.
 
-**Bir Windows Store uygulaması için profil seçme**
+**Profil için bir Windows Mağazası uygulaması seçme**
 
-İlk olarak, hangi Windows Store uygulamasını başlatmak için profil oluşturucu kullanıcıdan isteyebilirsiniz. Masaüstü uygulamaları için dosya göz atma iletişim belki de gösterebilir ve kullanıcı bulma ve bir .exe dosyası seçin. Ancak Windows Store apps farklı ve göz atma iletişim kutusunu kullanarak anlam ifade etmez. Bunun yerine, kullanıcı seçmek söz konusu kullanıcı için yüklenen Windows Store uygulamaların bir listesini göstermek iyidir.
+İlk olarak, Profil Oluşturucu kullanıcı tarafından hangi Windows Mağazası uygulamasının başlatılmasını istemeniz gerekir. Masaüstü uygulamaları için, belki de bir dosya tarama iletişim kutusu gösterebilirsiniz ve Kullanıcı bir. exe dosyası bulup seçer. Ancak Windows Mağazası uygulamaları farklıdır ve bir tarama iletişim kutusu kullanmak anlamlı değildir. Bunun yerine, kullanıcıya, bu kullanıcı tarafından seçilecek Windows Mağazası uygulamalarının bir listesini göstermek daha iyidir.
 
-Kullanabileceğiniz <xref:Windows.Management.Deployment.PackageManager> bu liste oluşturmak için sınıf. `PackageManager` Masaüstü uygulamaları için kullanılabilir bir Windows çalışma zamanı sınıf ve hatta ise *yalnızca* Masaüstü uygulamaları için kullanılabilir.
+Bu listeyi oluşturmak için <xref:Windows.Management.Deployment.PackageManager> sınıfını kullanabilirsiniz. `PackageManager`, masaüstü uygulamaları için kullanılabilen bir Windows Çalışma Zamanı sınıfıdır ve aslında *yalnızca* masaüstü uygulamalarında kullanılabilir.
 
-Aşağıdaki kod örneğinde kullanıcı arabiriminden bir kuramsal Profiler içinde bir masaüstü uygulaması olarak yazılan C# kullanan `PackageManager` Windows uygulamaların bir listesini oluşturmak için:
+İçinde C# bir masaüstü uygulaması olarak yazılmış bir kuramsal profil Oluşturucu kullanıcı arabiriminden aşağıdaki kod örneği, `PackageManager` Windows uygulamalarının bir listesini oluşturmak için öğesini kullanır:
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -137,9 +137,9 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Özel ortam bloğunu belirtme**
 
-Yeni bir COM arabirimi [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), bazı tanılama formları kolaylaştırmak için Windows Store app yürütme davranışını özelleştirmenizi sağlar. Bunun yöntemlerinden biri olan [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), başlatıldığında, Windows Store uygulaması için bir ortam bloğuna geçirmenize olanak sağlar. otomatik işlemi askıya alma devre dışı bırakma gibi başka yararlı etkileri yanı sıra. Ortam değişkenlerini belirtme gerek duyduğunuz senaryolara olduğu için ortam bloğunu önemlidir (`COR_PROFILER`, `COR_ENABLE_PROFILING`, ve `COR_PROFILER_PATH)`), Profiler DLL'yi CLR tarafından kullanılır.
+Yeni bir COM arabirimi olan [ıpackagedebugsettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), bazı tanılama biçimlerinin daha kolay olması Için bir Windows Mağazası uygulamasının yürütme davranışını özelleştirmenize olanak sağlar. Yöntemlerinden biri olan [Enabledebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), bir ortam bloğunu başlatıldığında Windows Mağazası uygulamasına, otomatik işlem askıya alma devre dışı bırakma gibi diğer yararlı etkilerle geçişlerinizi yapmanızı sağlar. Ortam bloğu, profil oluşturucu DLL 'nizi yüklemek için CLR tarafından kullanılan ortam değişkenlerini (`COR_PROFILER`, `COR_ENABLE_PROFILING`, ve `COR_PROFILER_PATH)`) belirtmeniz gerektiği için önemlidir.
 
-Aşağıdaki kod parçacığı göz önünde bulundurun:
+Aşağıdaki kod parçacığını göz önünde bulundurun:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -147,19 +147,19 @@ pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
-Birkaç öğeleri doğru hale getirmek için ihtiyacınız vardır:
+Sağ almanız gereken birkaç öğe vardır:
 
-- `packageFullName` paketleri yineleme yapma ve kapmasını belirlenebilir `package.Id.FullName`.
+- `packageFullName`, paketler ve yakalayıp `package.Id.FullName`üzerinde yineleme sırasında belirlenebilir.
 
-- `debuggerCommandLine` biraz daha ilginçtir. Windows Store uygulaması için özel bir ortam bloğuna geçirmek için kendi alıyormuş işlevsiz bir hata ayıklayıcı yazma gerekir. Windows spawns Windows Store app askıya ve ardından, hata ayıklayıcı bu örnekteki gibi bir komut satırı ile başlatarak, hata ayıklayıcı ekler:
+- `debuggerCommandLine`Biraz daha ilginç. Özel ortam bloğunu Windows Mağazası uygulamasına geçirmek için, kendi uyarlaması kukla hata ayıklayıcıyı yazmanız gerekir. Windows Mağazası uygulaması askıya alındı ve bu örnekte olduğu gibi bir komut satırı ile hata ayıklayıcıyı başlatarak hata ayıklayıcıyı iliştirir:
 
     ```Output
     MyDummyDebugger.exe -p 1336 -tid 1424
     ```
 
-     Burada `-p 1336` Windows Store app işlem kimliği 1336, sahip olduğu anlamına gelir ve `-tid 1424` askıya alınmış iş parçacığının iş parçacığı kimliği 1424 olduğu anlamına gelir. İşlevsiz, hata ayıklayıcı komut satırından ThreadID ayrıştırma, bu iş parçacığını devam ve çıkın.
+     Burada `-p 1336` , Windows Mağazası uygulamasının 1336 işlem kimliği olduğu ve `-tid 1424` iş parçacığı kimliği 1424 ' nin askıya alınan iş parçacığı olduğu anlamına gelir. Kukla hata ayıklayıcı, komut satırından ThreadID öğesini ayrıştırır, bu iş parçacığını sürdürür ve sonra çıkın.
 
-     Bunu yapmak için C++ kodu bazı örnek aşağıda verilmiştir (hata denetimi eklediğinizden emin olun!):
+     Bunu yapmak için örnek C++ kod aşağıda verilmiştir (hata denetimi eklediğinizden emin olun!):
 
     ```cpp
     int wmain(int argc, wchar_t* argv[])
@@ -176,13 +176,13 @@ Birkaç öğeleri doğru hale getirmek için ihtiyacınız vardır:
     }
     ```
 
-     Tanılama Aracı yüklemenizin bir parçası bir işlevsiz bu hata ayıklayıcı dağıtıp daha sonra bu hata ayıklayıcıda yolunu belirtin ihtiyacınız `debuggerCommandLine` parametresi.
+     Bu kukla hata ayıklayıcıyı Tanılama Aracı yüklemenizin bir parçası olarak dağıtmanız ve ardından bu hata ayıklayıcının `debuggerCommandLine` yolunu parametrede belirtmeniz gerekir.
 
-**Windows Store uygulaması başlatılıyor**
+**Windows Mağazası uygulamasını başlatma**
 
-Son olarak, Windows Store uygulamasını başlatmak için şu geldi. Kendi başınıza yapmak'yı zaten denediyseniz, fark etmiş [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) nasıl, Windows Store app işlem oluşturacağı değil. Bunun yerine, kullanmanız gerekecektir [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) yöntemi. Bunu yapmak için başlatma Windows Store uygulamasının uygulama kullanıcı Model Kimliğini almak gerekir. Ve küçük bir sorunda bildirimi aracılığıyla yapmanız gerekir anlamına gelir.
+Windows Mağazası uygulamasını başlatma sırasında son olarak geldi. Bunu kendiniz yapmadıysanız, [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) 'In bir Windows Mağazası uygulama işlemi oluşturma işleminin nasıl yapıldığını fark etmiş olabilirsiniz. Bunun yerine, [ıapplicationactivationmanager:: ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) metodunu kullanmanız gerekir. Bunu yapmak için, başladığınızı Windows Mağazası uygulamasının uygulama kullanıcı modeli KIMLIĞINI almanız gerekir. Diğer bir deyişle, bildirim aracılığıyla biraz fikir yapmanız gerekir.
 
-Paketlerinizi yineleme sırasında ("Seçme a Windows Store uygulaması için profili" bölümüne bakın [başlangıç yükü](#startup-load) bölümüne), geçerli paketin bildiriminde bulunan uygulamalar almak isteyebilirsiniz:
+Paketleriniz üzerinden yineleme yaparken (önceki [başlangıç yükleme](#startup-load) bölümünde yer alan "profile Için bir Windows Mağazası uygulaması seçme" bölümüne bakın), geçerli paketin bildiriminde bulunan uygulamalar kümesini almak isteyeceksiniz:
 
 ```csharp
 string manifestPath = package.InstalledLocation.Path + "\\AppxManifest.xml";
@@ -201,7 +201,7 @@ IAppxManifestReader manifestReader = appxFactory.CreateManifestReader(manifestSt
 IAppxManifestApplicationsEnumerator appsEnum = manifestReader.GetApplications();
 ```
 
-Evet, bir paket birden fazla uygulamaya sahip olabilir ve her uygulama, kendi uygulama kullanıcı modeli kimliği vardır. Bu nedenle, kullanıcıdan hangi uygulama profiline ve belirli uygulamadan uygulama kullanıcı modeli Kimliği almak istersiniz:
+Evet, bir pakette birden fazla uygulama olabilir ve her uygulamanın kendi uygulama kullanıcı modeli KIMLIĞI vardır. Bu nedenle, kullanıcıdan hangi uygulamanın profilini oluşturmasını ve bu uygulamadan uygulama kullanıcı modeli KIMLIĞINI elde etmesini istemeniz gerekir:
 
 ```csharp
 while (appsEnum.GetHasCurrent() != 0)
@@ -212,26 +212,26 @@ while (appsEnum.GetHasCurrent() != 0)
 }
 ```
 
-Son olarak, artık Windows Store uygulamasını başlatmak ihtiyacınız vardır:
+Son olarak, artık Windows Mağazası uygulamasını başlatmanız gerekenler vardır:
 
 ```csharp
 IApplicationActivationManager appActivationMgr = new ApplicationActivationManager();
 appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO_NONE, out pid);
 ```
 
-**DisableDebugging çağrılacak unutmayın**
+**DisableDebugging öğesini çağırmayı unutmayın**
 
-Aradığınız ne zaman [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), sonra kendiniz çağırarak temizlemek bir promise yapılan [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) yöntemi, böylece gerçekleştirdiğinizden emin olun Profil oluşturma oturumu olduğunda üzerinden.
+[Ipackagedebugsettings:: EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging)öğesini çağırdığınızda, [ıpackagedebugsettings::D isabledebug](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) metodunu çağırarak, sizin tarafınızdan daha sonra temizleyebilmenizi sağlayacak bir Promise yaptınız. bu nedenle, profil oluşturma oturumu üzerindeyken bunu yaptığınızdan emin olun.
 
-### <a name="attach-load"></a>Yük ekleme
+### <a name="attach-load"></a>Yük Ekle
 
-Profiler kullanıcı Arabirimi, Profiler DLL'yi çalıştıran zaten başlamış bir uygulamaya eklemek istediğinde kullandığı [Iclrprofiling::attachprofiler](iclrprofiling-attachprofiler-method.md). Aynı ile Windows Store uygulamaları geçerlidir. Ancak daha önce listelenen ortak düşünceler yanı sıra emin değil hedef Windows Store app askıya alındı.
+Profil Oluşturucu kullanıcı arabirimi, profil oluşturucu DLL 'sini zaten çalışmaya başlamış olan bir uygulamaya iliştirmek istediğinde, [ıclrprofile:: AttachProfiler](iclrprofiling-attachprofiler-method.md)kullanır. Aynı durum Windows Mağazası uygulamalarıyla doğru bir şekilde geçerlidir. Ancak daha önce listelenen yaygın noktalara ek olarak, hedef Windows Mağazası uygulamasının askıya alınmadığından emin olun.
 
 **EnableDebugging**
 
-Başlangıç yük gibi çağrı [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) yöntemi. Bir ortam bloğuna geçirmek için gerekli değildir, ancak diğer yanlarından gerekir: otomatik işlemi askıya alma devre dışı bırakılıyor. Aksi takdirde, Profiler UI çağırdığında [AttachProfiler](iclrprofiling-attachprofiler-method.md), hedef Windows Store app askıya alınabilir. Aslında, kullanıcı artık Profiler kullanıcı Arabirimi ile etkileşim kurma ve Windows Store app herhangi bir kullanıcının ekran üzerinde etkin değilse, büyük olasılıkla budur. Uygulamanın askıya alındığından Windows Store, herhangi bir yanıt vermesi mümkün olmayacaktır, CLR için Profiler DLL iliştirilecek gönderdiğini sinyal.
+Başlangıç yüklerinde olduğu gibi, [ıpackagedebugsettings:: EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) metodunu çağırın. Ortam bloğunu geçirmek için ihtiyacınız yoktur, ancak diğer özelliklerinden birine ihtiyacınız vardır: otomatik işlem askıya alma devre dışı bırakılıyor. Aksi takdirde, Profil Oluşturucu kullanıcı arabiriminizi [AttachProfiler](iclrprofiling-attachprofiler-method.md)' ı çağırdığında, hedef Windows Mağazası uygulaması askıya alınabilir. Aslında, bu durum büyük olasılıkla Kullanıcı Profil Oluşturucu kullanıcı ARABIRIMINIZE etkileşim kurmasından ve Windows Mağazası uygulamasının Kullanıcı ekranlarından hiçbirinde etkin olmaması olasıdır. Windows Mağazası uygulaması askıya alınırsa, bu, CLR 'nin profil oluşturucu DLL 'nizi eklemek için gönderdiği hiçbir sinyaline yanıt veremeyecektir.
 
-Bu nedenle böyle bir şey isteyeceksiniz:
+Bu nedenle, şöyle bir şey yapmak isteyeceksiniz:
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
@@ -239,55 +239,55 @@ pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */
                                                                  IntPtr.Zero /* environment */);
 ```
 
-Bu, bir hata ayıklayıcı komut satırı veya bir ortam bloğuna belirtmeyin dışında başlangıç yükü çalışması için yapacağınız aynı çağrısıdır.
+Bu, bir hata ayıklayıcı komut satırı veya ortam bloğu belirtmemenizi hariç, başlangıç yükü durumu için yaptığınız çağrıdır.
 
 **DisableDebugging**
 
-Her zaman olduğu gibi çağrılacak unutmayın [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) , profil oluşturma oturumu tamamlanmış olduğunda.
+Her zaman olduğu gibi, profil oluşturma oturumunuz tamamlandığında [ıpackagedebugsettings::D isableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) ' i çağırmayı unutmayın.
 
-## <a name="running-inside-the-windows-store-app"></a>İçinde Windows Store uygulamasını çalıştırma
+## <a name="running-inside-the-windows-store-app"></a>Windows Mağazası uygulaması içinde çalışıyor
 
-Bu nedenle Windows Store uygulaması son olarak, Profiler DLL'yi yükledi. Profiler DLL dosyanızı nasıl Windows Store uygulamaları tarafından gerekli farklı kuralları tarafından verilen gerekir artık API izin verilen olan ve çalıştırmak nasıl dahil olmak üzere izinleri azaltıldı.
+Bu nedenle, Windows Mağazası uygulaması son olarak profil oluşturucu DLL 'nizi yükledi. Artık profil oluşturucu DLL 'niz, hangi API 'Lerin izin verilebileceği ve daha düşük izinlerle çalıştırılması dahil olmak üzere Windows Mağazası uygulamaları için gereken farklı kurallara göre nasıl oynatılacağını taöğretmelidir.
 
-### <a name="stick-to-the-windows-store-app-apis"></a>Windows Store app API'lerine takılıyor
+### <a name="stick-to-the-windows-store-app-apis"></a>Windows Mağazası uygulaması API 'Lerine çubuk
 
-Windows API gezindikçe, Masaüstü uygulamaları, Windows Store apps veya her ikisi de geçerli olduğu her API belgelenen fark edeceksiniz. Örneğin, **gereksinimleri** belgelerine bölümünü [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) işlevi işlevi yalnızca Masaüstü uygulamaları için geçerli olduğunu gösterir. Buna karşılık, [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) işlev, Masaüstü uygulamaları ve Windows Store uygulamaları için kullanılabilir.
+Windows API 'sine göz atarken, her API 'nin masaüstü uygulamaları, Windows Mağazası uygulamaları veya her ikisi için de geçerli olduğunu fark edeceksiniz. Örneğin, [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) Işlevi belgelerinin **gereksinimler** bölümü, işlevin yalnızca masaüstü uygulamaları için geçerli olduğunu gösterir. Buna karşılık, [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex) işlevi hem masaüstü uygulamaları hem de Windows Mağazası uygulamaları için kullanılabilir.
 
-Profiler DLL'niz geliştirirken, bir Windows Store uygulaması ise olarak kabul et ve yalnızca Windows Store uygulamaları için kullanılabilir olarak belgelenen API'lerini kullanın. Bağımlılıklarınızı analiz (örneğin, çalıştırabileceğiniz `link /dump /imports` karşı denetlenip denetlenmeyeceğini, Profiler DLL'yi) ve bağımlılıklarınızı hangisinin Tamam ve hangi olmayan görmek için belgelere bakın. Çoğu durumda, yalnızca bunları güvenli olarak belgelenen API'sının daha yeni bir form değiştirerek, ihlaller düzeltilebilir (örneğin, değiştirme [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) ile [ InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)).
+Profil oluşturucu DLL 'nizi geliştirirken, bunu bir Windows Mağazası uygulaması gibi değerlendirin ve yalnızca Windows Mağazası uygulamaları için kullanılabilir olarak belgelenen API 'Leri kullanın. Bağımlılıklarınızı çözümleyin (örneğin, profil oluşturucu DLL 'niz `link /dump /imports` üzerinde çalışabilir) ve sonra bağımlılıklarınızın hangilerinin tamam olduğunu ve ne olmadığını görmek için docs ' ı arayın. Çoğu durumda, ihlal, güvenli olarak belgelenen API 'nin daha yeni bir biçimiyle değiştirilerek (örneğin, [InitializeCriticalSectionAndSpinCount](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionandspincount) , [InitializeCriticalSectionEx](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsectionex)ile değiştiriliyor) düzeltilebilir.
 
-Profiler DLL'niz yalnızca Masaüstü uygulamaları için geçerli olan bazı API'lerini çağırır ve henüz bunlar bile Profiler DLL dosyanız içinde bir Windows Store uygulaması ne zaman yüklendi ortağımdan fark edebilirsiniz. Profiler Windows Store app işlem içine yüklenmiş DLL içinde Windows Store uygulamaları ile kullanmak için belgelenmemiş herhangi bir API'yi kullanmak için riskli olduğunu unutmayın:
+Profil oluşturucu DLL 'nizin yalnızca masaüstü uygulamaları için uygulanan bazı API 'Leri çağırırsa ve profil oluşturucu DLL 'niz bir Windows Mağazası uygulaması içine yüklendiğinde bile çalışmaya çalışabileceğini fark edebilirsiniz. Bir Windows Mağazası uygulama işlemine yüklendiğinde profil oluşturucu DLL 'inizdeki Windows Mağazası uygulamalarıyla birlikte kullanılmak üzere belgelenmemiş API kullanmanın riskli olduğunu unutmayın:
 
-- Bu API Windows Store uygulamaları çalıştırma içinde benzersiz bir bağlamda çağrıldığında çalışacak şekilde garanti edilmez.
+- Bu tür API 'Ler, Windows Mağazası uygulamalarının çalıştığı benzersiz bağlamda çağrıldığında çalışır.
 
-- Bu API, farklı Windows Store app süreçlerinde çağrıldığında tutarlı bir şekilde çalışmayabilir.
+- Bu tür API 'Ler, farklı Windows Mağazası uygulama işlemlerinin içinden çağrıldığında tutarlı bir şekilde çalışmayabilir.
 
-- Bu API'leri geçerli sürümü, Windows, Windows Store uygulamalarında düzgün çalışabilmesi için görünebilir, ancak kesilebilir veya gelecekteki Windows sürümlerinde devre dışı.
+- Bu tür API 'Ler Windows Mağazası uygulamalarından geçerli Windows sürümündeki bir şekilde çalışıyor olabilir, ancak sonraki Windows sürümlerinde kesilebilir veya devre dışı bırakılabilir.
 
-Tüm ihlalleri düzeltin ve riskini önlemek için en iyi öneridir bakın.
+En iyi öneri, tüm ihlallerinizi düzeltemedi ve riskten kaçınmaktır.
 
-Kesinlikle belirli bir API'yi yapamayacağınız ve yerini Windows Store uygulamaları için uygun bulunamıyor bulabilirsiniz. Böyle bir durumda, en az:
+Belirli bir API olmadan kesinlikle yapamayacağına ve Windows Mağazası uygulamaları için uygun bir değiştirme bulamamaya yönelik olduğunu fark edebilirsiniz. Böyle bir durumda, en az:
 
-- Test, test, test yaşam daylights bu API kullanım dışı.
+- Test, test edin, bu API kullanımınızın kullanımını test edin ve test edin.
 
-- API aniden sonu veya adlı kaybolmasına olduğunu anlamak gelen içinde Windows Store uygulamaları gelecekteki sürümleri Windows. Bu bir uyumluluk sorunu Microsoft tarafından kabul olmaz ve uygulamanızın kullanımını destekleyen bir öncelikli olmaz.
+- Windows 'un gelecek sürümlerinde Windows Mağazası uygulamaları içinden çağrılırsa, API 'nin aniden kesilebilir veya kaybolabileceğini anlayın. Bu, Microsoft tarafından uyumluluk sorunu olarak kabul edilmez ve kullanımınızı desteklemek bir öncelik vermez.
 
-### <a name="reduced-permissions"></a>Sınırlı izinler
+### <a name="reduced-permissions"></a>Azaltılan izinler
 
-Windows Store app izinleri Masaüstü uygulamalarından farklı tüm yolları listelemek için bu konunun kapsamı dışında. Ancak Profiler (bir Windows Store uygulaması bir masaüstü uygulaması karşılaştırıldığında içine yüklendiğinde) DLL, herhangi bir kaynağa erişmeye kesinlikle davranışı farklı olacaktır. Dosya sistemi en yaygın bir örnektir. Vardır, ancak birkaç yerleştirir erişmek için izin verilen bir Windows Store uygulaması disk üzerinde (bkz [dosya erişim ve izinleri (Windows çalışma zamanı uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), ve altında aynı kısıtlamalara Profiler DLL dosyanız olur. Kodunuzu baştan sona test edin.
+Windows Mağazası uygulama izinlerinin Masaüstü uygulamalarından farklı olduğu tüm yolları listelemek için bu konunun kapsamı dışındadır. Ancak, profil oluşturucu DLL 'niz (bir masaüstü uygulamasına kıyasla bir Windows Mağazası uygulamasına yüklendiğinde) her türlü kaynağa erişmeye çalıştığında, kesinlikle davranış farklı olur. Dosya sistemi en yaygın örnektir. Diskte belirli bir Windows Mağazası uygulamasının erişmesine izin verilen birkaç yer vardır (bkz. [dosya erişimi ve izinleri (Windows çalışma zamanı uygulamalar](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))) ve PROFIL Oluşturucu dll 'niz aynı kısıtlamalar altında olacaktır. Kodunuzu iyice test edin.
 
-### <a name="inter-process-communication"></a>İşlemler arası iletişim
+### <a name="inter-process-communication"></a>İşlem arası iletişim
 
-Bu yazıda başındaki diyagramda gösterildiği gibi (Windows Store app işlem alanına yüklenir), Profiler DLL'yi Profiler (ayrı bir masaüstü uygulaması işlem alanında çalışan) kullanıcı Arabirimi aracılığıyla kendi özel arası işlemi ile iletişim kurmak büyük olasılıkla gerekir kanal iletişimi (IPC). Profiler UI davranışını değiştirmek için Profiler DLL'yi sinyali gönderir ve sonradan işlemek ve profil oluşturucu kullanıcıya görüntülemek için Profiler UI dön Profiler DLL'yi verilerini analiz edilen Windows Store app gönderir.
+Bu kağıdın başındaki diyagramda gösterildiği gibi, profil oluşturucu DLL 'nizin (Windows Mağazası uygulaması işlem alanına yüklenir), kendi özel işlem sürecinize göre profil oluşturucu Kullanıcı arabiriminize (ayrı bir masaüstü uygulaması işlem alanında çalışan) iletişim kurması gerekir iletişim (IPC) kanalı. Profiler kullanıcı ARABIRIMI davranışını değiştirmek için, profil oluşturucu DLL 'sine sinyal gönderir ve profil oluşturucu DLL, çözümlenmiş Windows Mağazası uygulamasından verileri, işleme sonrası ve profil oluşturucu kullanıcısına görüntüleme için Profil Oluşturucu kullanıcı ARABIRIMINE geri gönderir.
 
-Çoğu profil oluşturucular bu şekilde çalışmanız gerekiyor, ancak bir Windows Store app Profiler DLL dosyanız yüklendiğinde seçimlerinizi IPC mekanizmaları için daha sınırlıdır. Bunları kullanamazsınız için örneğin, adlandırılmış Windows Store app SDK'sı, bir parçası değildir.
+Çoğu profil oluşturucular bu şekilde çalışması gerekir, ancak profil oluşturucu DLL 'niz bir Windows Mağazası uygulamasına yüklendiğinde IPC mekanizmalarına yönelik seçimleriniz daha sınırlı olur. Örneğin, adlandırılmış kanallar Windows Mağazası uygulama SDK 'sının bir parçası değildir, bu nedenle bunları kullanamazsınız.
 
-Ancak Elbette, yine de barındırabilir daha sınırlı bir biçimde dosyalarıdır. Olayları de mevcuttur.
+Ancak, dosyalar hala yerinde, daha sınırlı bir biçimde albederdir. Olaylar da kullanılabilir.
 
-**Dosyaları iletişim kurma**
+**Dosyalar üzerinden iletişim kurma**
 
-Verilerinizin en büyük olasılıkla Profiler DLL'yi ve Profiler UI arasında dosyaları geçer. Dosya konumu, Profiler DLL'yi (Windows Store uygulaması bağlamında) ve Profiler UI okuma ve yazma erişimi için kullanılan anahtardır. Örneğin, Profiler DLL'yi ve Profiler UI erişebileceği bir konuma geçici klasör yoludur, ancak başka bir Windows Store uygulama paketi (Bu nedenle diğer Windows Store app paketlerden oturumunuzu herhangi bir bilgi koruma) erişebilirsiniz.
+Verilerinizin büyük olasılıkla profil oluşturucu DLL ve Profil Oluşturucu kullanıcı arabirimi arasında dosyalar aracılığıyla geçiş yapılır. Anahtar profil oluşturucu DLL 'nizin (bir Windows Mağazası uygulaması bağlamında) ve Profil Oluşturucu kullanıcı arabiriminin okuma ve yazma erişimine sahip olduğu bir dosya konumu seçmeniz gerekir. Örneğin, geçici klasör yolu, hem profil oluşturucu DLL 'SI hem de profil oluşturucu Kullanıcı arabirimlerinizin erişebileceği, ancak başka bir Windows Mağazası uygulama paketinin erişebileceği bir konumdur (Bu nedenle, diğer Windows Mağazası uygulama paketlerinden oturum açmak için tüm bilgileri koruma).
 
-Profiler UI ve Profiler DLL'yi bu yol bağımsız olarak belirleyebilirsiniz. Geçerli kullanıcı için yüklenen tüm paketleri gezinir olduğunda Profiler UI, (bkz: önceki örnek kodu) erişimi alır `PackageId` içinden geçici klasör yolu kodla bu kod parçacığına benzer sınıfından türetilen. (Her zaman hata denetimi uzatmamak için atlandı.)
+Profil Oluşturucu UI ve Profiler DLL 'niz bu yolu bağımsız olarak belirleyebilir. Profil Oluşturucu kullanıcı arabiriminize, geçerli kullanıcı için yüklenen tüm paketler arasında yineleme yapıldığında (daha önce örnek koda bakın), geçici klasör yolunun bu `PackageId` kod parçacığına benzer kodla türetilebilecek sınıfa erişim elde edin. (Her zaman olduğu gibi, kısaltma için hata denetimi atlanır.)
 
 ```csharp
 // C# code for the Profiler UI.
@@ -298,13 +298,13 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-Bu arada, Profiler DLL'yi temelde aynı şeyi yapmak için alabilir ancak daha kolayca almak <xref:Windows.Storage.ApplicationData> sınıfı kullanarak [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A) özelliği.
+Bu arada, profil oluşturucu DLL 'niz temel olarak aynı şeyi yapabilir, ancak <xref:Windows.Storage.ApplicationData> [ApplicationData. Current](xref:Windows.Storage.ApplicationData.Current%2A) özelliğini kullanarak sınıfa daha kolay bir şekilde erişebilirsiniz.
 
-**Olayları üzerinden iletişim kurma**
+**Olaylar üzerinden iletişim kurma**
 
-Profiler UI ve Profiler DLL'yi arasında basit bir sinyal semantiği istiyorsanız, Windows Store uygulamaları ve bunun yanı sıra Masaüstü uygulamaları dahilindeki olayları kullanabilirsiniz.
+Profil Oluşturucu UI ve profil oluşturucu DLL arasında basit sinyal semantiğini istiyorsanız, Windows Mağazası uygulamalarının içindeki olayları ve masaüstü uygulamalarını kullanabilirsiniz.
 
-Profiler DLL dosyanızı yalnızca çağırabilirsiniz [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) istediğiniz herhangi bir adla adlandırılmış bir olay oluşturmak için işlevi. Örneğin:
+Profil oluşturucu DLL 'nizden, istediğiniz adla adlandırılmış bir olay oluşturmak için [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa) işlevini çağırmanız yeterlidir. Örneğin:
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -315,11 +315,11 @@ CreateEventEx(
     EVENT_ALL_ACCESS);
 ```
 
-Profiler UI sonra Windows Store uygulamanın ad alanı altında adlandırılmış olay bulması gerekir. Örneğin, Profiler kullanıcı Arabirimi çağırabilir [CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa), olay adı olarak belirtme
+Profil Oluşturucu kullanıcı arabiriminizdeki bu adlandırılmış olayı Windows Mağazası uygulamasının ad alanı altında bulması gerekir. Örneğin, Profil Oluşturucu kullanıcı arabiriminizi [Createeventex](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)ile çağırabilir ve olay adını şöyle belirterek
 
 `AppContainerNamedObjects\<acSid>\MyNamedEvent`
 
-`<acSid>` Windows Store uygulamanın AppContainer SID ' dir. Bu konunun önceki bir bölümde, geçerli kullanıcı için yüklü paketleri gezinilen nasıl oluşturulacağını gösterir. Bu örnek koddan PackageId elde edebilirsiniz. Ve PackageId alabilirsiniz `<acSid>` kodu aşağıdakine benzer:
+`<acSid>`, Windows Mağazası uygulamasının AppContainer SID 'sidir. Bu konunun önceki bir bölümünde, geçerli kullanıcı için yüklenmiş paketlerin nasıl yineleneceği gösterilmektedir. Bu örnek koddan PackageID ' yi elde edebilirsiniz. PackageID 'den, aşağıdakine benzer şekilde kodu elde `<acSid>` edebilirsiniz:
 
 ```csharp
 IntPtr acPSID;
@@ -332,71 +332,71 @@ string acDir;
 GetAppContainerFolderPath(acSid, out acDir);
 ```
 
-### <a name="no-shutdown-notifications"></a>Kapatma bildirim yok
+### <a name="no-shutdown-notifications"></a>Kapanmaya yönelik bildirim yok
 
-Windows Store uygulaması içinde çalışırken, Profiler DLL'yi üzerinde doğrulamamalısınız [Icorprofilercallback::shutdown](icorprofilercallback-shutdown-method.md) ve hatta [DllMain](/windows/desktop/Dlls/dllmain) (ile `DLL_PROCESS_DETACH`), Profiler DLL'yi bildirmek için çağırılır Windows Store uygulaması, çıkılıyor. Aslında, hiçbir zaman çağrılacağı beklemelisiniz. Tarihsel olarak, disk, dosyaları kapatma, Profiler kullanıcı Arabirimi, vb. geri bildirim göndermek için veri önbelleklerini temizleme birçok Profiler DLL'leri bildirimlerin kullanışlı basamakla kullandınız. Ancak artık, Profiler DLL'yi biraz daha farklı düzenlenmesini gerekiyor.
+Bir Windows Mağazası uygulamasında çalışırken, profil oluşturucu DLL 'niz, Windows Mağazası uygulamasının çıkış yaptığını profil oluşturucu DLL 'nize bildirmek için [ICorProfilerCallback:: kapanıyor](icorprofilercallback-shutdown-method.md) veya hatta [DllMain](/windows/desktop/Dlls/dllmain) (ile `DLL_PROCESS_DETACH`) ' i kullanmamalıdır. Aslında, bunların hiçbir şekilde çağrılmayacağını beklemelisiniz. Tarihsel olarak, birçok profil oluşturucu DLL bu bildirimleri diske boşaltma, dosyaları kapatma, Profil Oluşturucu kullanıcı arabirimine geri bildirim gönderme gibi uygun şekilde kullandı. Ancak artık profil oluşturucu DLL 'nizin biraz farklı şekilde organize olması gerekir.
 
-Bu hizmet de gider, Profiler DLL'yi günlük bilgileri olmalıdır. Performans nedeniyle, bilgiler bellek, batch ve batch bazı eşik geçmiş boyutu büyüdükçe disk için temizleme isteyebilirsiniz. Ancak, henüz diske Temizlenen tüm bilgiler kaybolabilir varsayılır. Bu, eşiğine akıllıca çekme isteyebilirsiniz ve Profiler UI Profiler DLL tarafından yazılan eksik bilgi uğraşmanız sağlamlaştırılmış olması gerektiğini anlamına gelir.
+Profil oluşturucu DLL 'niz, devam eden bilgileri günlüğe kaydetmeye devam etmelidir. Performans nedenleriyle, toplu iş bilgilerini bellekte toplu olarak, bir eşiğin geçmiş olduğu sürece diskte da diske boşaltmayı tercih edebilirsiniz. Ancak diske henüz boşaltılmayan bilgilerin kaybolameyeceğini varsayın. Bu, eşiği daha seyrek olarak seçmek ve Profiler 'ın Profiler 'ın, profil oluşturucu DLL tarafından yazılmış tamamlanmamış bilgilerle başa çıkmak için sağlamlaştırması gerektiğini gösterir.
 
-## <a name="windows-runtime-metadata-files"></a>Windows çalışma zamanı meta veri dosyaları
+## <a name="windows-runtime-metadata-files"></a>Windows Çalışma Zamanı meta veri dosyaları
 
-Buna ayrıntıya gitmek için bu belgenin kapsamı dışında hangi Windows Runtime metadata (WinMD) dosyalar var. Bu bölümde, Profiler DLL'yi çözümleme Windows Store uygulaması tarafından WinMD dosyalar yüklendiğinde nasıl CLR Profil oluşturma API tepki verir sınırlıdır.
+Windows Çalışma Zamanı meta veri (WinMD) dosyalarının ne olduğu hakkında ayrıntılı bilgi almak için bu belgenin kapsamı dışındadır. Bu bölüm CLR profil oluşturma API 'sinin, WinMD dosyaları Windows Mağazası uygulaması tarafından, profil oluşturucu DLL 'nizin analiz edilirken yeniden nasıl davranması ile sınırlıdır.
 
-### <a name="managed-and-non-managed-winmds"></a>Yönetilen ve yönetilmeyen Winmd'lerin
+### <a name="managed-and-non-managed-winmds"></a>Yönetilen ve yönetilmeyen Wınmds
 
-Bir geliştirici, yeni bir Windows çalışma zamanı bileşeni projesi oluşturmak için Visual Studio kullanıyorsa, bu projenin bir derleme geliştirici tarafından yazılan meta veriler (tür tanımlarının sınıfları, arabirimleri, vb.) tanımlayan bir WinMD dosyası üretir. Bu projeyi C# veya VB ile yazılmış bir yönetilen dil projesiyse, aynı WinMD dosyası da bu türlerin (geliştiricinin kaynak kodundan derlenmiş IL içerdiği anlamına gelir) uygulamasını içerir. Bu tür dosyalar yönetilen WinMD dosyası bilinir. Windows çalışma zamanı meta verileri hem de temel uygulamayı içeren ilginç.
+Bir geliştirici yeni bir Windows Çalışma Zamanı bileşen projesi oluşturmak için Visual Studio kullanıyorsa, bu projenin bir derlemesi, geliştirici tarafından yazılan meta verileri (sınıfların tür açıklamaları, arabirimler vb.) açıklayan bir WinMD dosyası üretir. Bu proje, C# veya vb dilinde yazılmış bir yönetilen dil projem Ise aynı winmd dosyası bu türlerin uygulamasını da içerir (yani, geliştiricinin kaynak kodundan derlenen tüm Il 'yi içerir). Bu tür dosyalar yönetilen WinMD dosyaları olarak bilinir. Windows Çalışma Zamanı meta verileri ve temel alınan uygulamayı içerdikleri her ikisi de ilginç hale getiriyoruz.
 
-Buna karşılık, bir geliştirici için C++ Windows çalışma zamanı bileşeni projesi oluşturur, yalnızca meta veriler içeren bir WinMD dosyası projenin bir derleme oluşturur ve uygulama ayrı bir yerel DLL derlenir. Benzer şekilde, Windows SDK'yı teslim WinMD dosyası yalnızca meta veriler, Windows bir parçası olarak gönderilen ayrı yerel DLL'leri içine derlenmiş uygulama ile içerir.
+Buna karşılık, bir geliştirici için C++Windows çalışma zamanı bileşen projesi oluşturursa, söz konusu projenin derlemesi yalnızca meta verileri Içeren bir WinMD dosyası üretir ve uygulama ayrı bır yerel dll 'de derlenir. Benzer şekilde, Windows SDK teslim eden WinMD dosyaları, Windows 'un bir parçası olarak gelen ayrı yerel dll 'Lere derlenen uygulamayla yalnızca meta veriler içerir.
 
-Aşağıdaki bilgileri içeren meta veri ve uygulama hem yönetilen Winmd'lerin ve yalnızca meta veriler içeren yönetilmeyen Winmd'lerin için geçerlidir.
+Aşağıdaki bilgiler, meta veri ve uygulama içeren hem yönetilen WinMDs için hem de yalnızca meta verileri içeren yönetilmeyen Wınmds için geçerlidir.
 
-### <a name="winmd-files-look-like-clr-modules"></a>WinMD dosyası gibi CLR modülleri arayın
+### <a name="winmd-files-look-like-clr-modules"></a>WinMD dosyaları CLR modülleri gibi görünüyor
 
-CLR ilgili olduğu kadar tüm WinMD dosyası modüllerdir. CLR Profil oluşturma API'si, bu nedenle Profiler WinMD dosyası yüklediğinizde DLL ve bunların Moduleıd'lerini, diğer yönetilen modülleri olduğu gibi aynı şekilde nelerdir söyler.
+CLR 'nin düşünüldüğünde, tüm WinMD dosyaları modüllerdir. Bu nedenle, CLR profil oluşturma API 'si, WinMD dosyaları yüklenirken profil oluşturucu DLL 'nize ve moduleIds oldukları diğer yönetilen modüllerle aynı şekilde bildirir.
 
-Profiler DLL'niz çağırarak WinMD dosyası diğer modüllerden ayırt [Icorprofilerınfo3::getmoduleınfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yöntemi ve İnceleme `pdwModuleFlags` çıkış parametresi için [COR_PRF_MODULE_WINDOWS_ Çalışma zamanı](cor-prf-module-flags-enumeration.md) bayrağı. (Bir WinMD Moduleıd temsil eder ve yalnızca, ayarlanır.)
+Profil oluşturucu DLL 'niz, [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md) yöntemini çağırarak ve `pdwModuleFlags` [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) bayrağı için çıkış parametresini inceleyerek winmd dosyalarını diğer modüllerden ayırt edebilir. (Ve yalnızca ModuleID bir WinMD temsil ediyorsa ayarlanır.)
 
-### <a name="reading-metadata-from-winmds"></a>Winmd'lerin meta verilerini okuma
+### <a name="reading-metadata-from-winmds"></a>Wınmds 'den meta veriler okunuyor
 
-Normal modüller gibi WinMD dosyası aracılığıyla okunabilir meta verileri içeren [meta veri API'leri](../../../../docs/framework/unmanaged-api/metadata/index.md). Ancak, yönetilen kodda program ve WinMD dosyası kullanan geliştiriciler daha doğal bir programlama deneyimi yaşayabilsin WinMD dosyaları okuduğunda CLR Windows çalışma zamanı türleri .NET Framework türleri ile eşleştirir. Bu eşlemeler bazı örnekler için bkz. [Windows Store uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
+Normal modüller gibi WinMD dosyaları, [meta veri API 'leri](../../../../docs/framework/unmanaged-api/metadata/index.md)aracılığıyla okunabilecek meta veriler içerir. Ancak, CLR dosyalarını okurken, yönetilen kodda programlayan ve WinMD dosyasını kullanan geliştiricilerin daha doğal bir programlama deneyimine sahip olması için CLR dosyalarını okurken Windows Çalışma Zamanı türleri .NET Framework türlerine eşler. Bu eşlemelerin bazı örnekleri için bkz. [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).
 
-Bu nedenle API meta veri kullandığında, profil oluşturucu hangi görünümün alırsınız: ham Windows çalışma zamanı görünümü veya eşlenmiş bir .NET Framework Görünüm?  Yanıt: size kalmıştır.
+Bu nedenle, Profil oluşturucunuz, meta veri API 'Lerini kullandığında hangi görünümde alınır: ham Windows Çalışma Zamanı görünümü veya eşlenmiş .NET Framework görünümü?  Yanıt: size ait.
 
-Çağırdığınızda [Icorprofilerınfo::getmodulemetadata](icorprofilerinfo-getmodulemetadata-method.md) yöntemi gibi bir meta veri arabirimi almak için bir WinMD [Imetadataımport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md), ayarlamayı da seçebilirsiniz [ofNoTransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)içinde `dwOpenFlags` bu eşlemesini devre dışı bırakmak için parametre. Aksi takdirde, varsayılan olarak, eşleme etkinleştirilecektir. Genellikle, Profiler DLL'yi WinMD meta verileri (örneğin, tür adları) edinir dizeleri tanıdık ve profil oluşturucu kullanıcıya doğal görüntü bir profil oluşturucu etkin, eşleme tutar.
+Bir WinMD `dwOpenFlags` üzerinde [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) yöntemini çağırdığınızda, [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)gibi bir meta veri arabirimi elde edersiniz, bu eşlemeyi kapatmak için parametresindeki [ofnotransform](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) ayarlamayı seçebilirsiniz. Aksi takdirde, varsayılan olarak eşleme etkin olur. Genellikle, profil oluşturucu DLL 'nin WinMD meta verilerinden elde ettiği dizelerin (örneğin, türlerin adları), profil oluşturucu kullanıcısına tanıdık ve doğal olarak görünmesi için bir profil oluşturucu eşlemeyi etkin tutacaktır.
 
-### <a name="modifying-metadata-from-winmds"></a>Winmd'lerin meta verileri değiştirme
+### <a name="modifying-metadata-from-winmds"></a>Wınmds 'den meta verileri değiştirme
 
-Meta verilerde Winmd'lerin değiştirme desteklenmez. Çağırırsanız [Icorprofilerınfo::getmodulemetadata](icorprofilerinfo-getmodulemetadata-method.md) yöntemi için bir WinMD dosyası ve belirtin [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) içinde `dwOpenFlags` parametresi veya bir yazılabilir meta verileri arabirimi gibi sorun [ Imetadataemit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) başarısız olur. İçin kendi izleme (örneğin, AssemblyRefs veya yeni yöntemler eklemek için) desteklemek için meta verileri değiştirmek için gereken IL yeniden yazma profil Oluşturucular, belirli önem budur. İçin denetlemeniz gerekir böylece [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) ilk (önceki bölümde açıklandığı gibi) ve kaçının gibi modülleri yazılabilir meta veri arabirimleri için soran öğesinden.
+WinMDs 'de meta verileri değiştirme desteklenmiyor. Bir WinMD dosyası için [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) yöntemini çağırırsanız `dwOpenFlags` ve parametrede [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) belirtirseniz veya [ımetadatayay](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)gibi yazılabilir bir meta veri arabirimine sorun yaparsanız, [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) olur Neden. Bu, kendi araçlarını destekleyecek meta verileri (örneğin, AssemblyRefs veya yeni yöntemler eklemek için) değiştirmesi gereken, Il yeniden yazma profil oluşturucular önemli bir öneme sahiptir. Bu nedenle, [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) for First (önceki bölümde anlatıldığı gibi) öğesini denetlemeniz ve bu tür modüller üzerinde yazılabilir meta veri arabirimleri isteyip istemediğinizi sormaktan kaçının.
 
-### <a name="resolving-assembly-references-with-winmds"></a>Winmd'lerin ile derleme başvurularını çözümleme
+### <a name="resolving-assembly-references-with-winmds"></a>WinMDs ile derleme başvurularını çözme
 
-El ile izleme veya türü İnceleme ile yardımcı olmak için meta veri başvurularını çözümlemek birçok profil oluşturucular gerekir. Bu profil Oluşturucular, bu başvuruları tamamen farklı bir şekilde standart derleme başvurularını daha çözümlenir çünkü nasıl CLR Winmd'lerin için işaret eden derleme başvurularını çözümler dikkat etmeniz gerekir.
+İzleme veya tür denetimine yardımcı olmak için meta veri başvurularını el ile çözmek için birçok profil oluşturucular gerekir. Bu tür profil oluşturucular, CLR 'nin Wınmds 'ye işaret eden derleme başvurularını nasıl çözümlediği farkında olmalıdır, çünkü bu başvurular standart derleme başvurularından tamamen farklı bir şekilde çözümlenir.
 
-## <a name="memory-profilers"></a>Bellek profil oluşturucuları
+## <a name="memory-profilers"></a>Bellek Profil oluşturucular
 
-Yönetilen yığın ve çöp toplayıcı, bir Windows Store uygulaması ve bir masaüstü uygulaması tamamen farklı değildir. Ancak, profil oluşturucu yazarları farkında olmanız gereken bazı farklar vardır.
+Çöp toplayıcı ve yönetilen yığın, bir Windows Mağazası uygulamasında ve masaüstü uygulamasında temel olarak farklı değildir. Ancak, profil oluşturucu yazarlarının farkında olması gereken bazı hafif farklılıklar vardır.
 
-### <a name="forcegc-creates-a-managed-thread"></a>ForceGC yönetilen iş parçacığı oluşturur.
+### <a name="forcegc-creates-a-managed-thread"></a>ForceGC yönetilen bir iş parçacığı oluşturur
 
-Bellek profili oluşturma yaparken, Profiler DLL'yi genellikle içinden çağırmak ayrı bir iş parçacığı oluşturur [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) yöntemi. Bu yeni bir şey değildir. Ancak ne şaşırtıcı olabilir yapılması Windows Store uygulaması içinde bir çöp toplama işlemi, yönetilen bir iş parçacığı, iş parçacığı dönüştürme, (örneğin, bir profil oluşturma API ThreadID bu iş parçacığı için oluşturulur).
+Bellek profili oluşturma sırasında, profil oluşturucu DLL 'niz genellikle [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) yönteminin çağrılabileceği ayrı bir iş parçacığı oluşturur. Bu yeni bir şey değildir. Ancak, bir Windows Mağazası uygulamasının içinde çöp toplama işlemi yapma işleminin iş parçacığını yönetilen bir iş parçacığına dönüştürebileceği (örneğin, bu iş parçacığı için bir profil oluşturma API 'SI tehdit oluşturulacak).
 
-Bu sonuçları anlamak için CLR Profil oluşturma API'si tarafından tanımlandığı şekilde zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farkları anlamak önemlidir. Bu kavramı Windows Store uygulamalarında zaman uyumsuz çağrılar, çok farklı olduğunu unutmayın. Blog gönderisine bakın [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE sahibiz neden](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) daha fazla bilgi için.
+Bunun sonuçlarını anlamak için, CLR profil oluşturma API 'SI tarafından tanımlanan, zaman uyumlu ve zaman uyumsuz çağrılar arasındaki farklılıkları anlamak önemlidir. Bu, Windows Mağazası uygulamalarındaki zaman uyumsuz çağrılar kavramından çok farklı olduğunu unutmayın. Daha fazla bilgi için [corprof_e_unsupported_call_sequence sahip olduğumuz](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) blog gönderisine bakın.
 
-İlgili noktadır çağrılara Profiler DLL'nin birinin uygulaması dışında yapılır olsa bile, Profil Oluşturucu tarafından oluşturulan iş parçacığı üzerinde yapılan çağrılar her zaman zaman uyumlu olarak kabul edilir [Icorprofilercallback](icorprofilercallback-interface.md) yöntemleri. En az kullanılan durum olması. CLR, çağrınız nedeniyle, yönetilen bir iş parçacığı profil oluşturucunun iş parçacığı etkinleştirdiyse göre [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md), iş parçacığı, profil oluşturucunun iş parçacığı artık kabul edilir. Bu nedenle, CLR iş parçacığı için zaman uyumlu olarak niteliği taşır daha katı bir tanım uygular — yani çağrı kaynaklanan gerekir Profiler DLL'nin biri içinde [Icorprofilercallback](icorprofilercallback-interface.md) zaman uyumlu olarak nitelemek için yöntemleri.
+İlgili nokta, Profil oluşturucunuz tarafından oluşturulan iş parçacıklarında yapılan çağrıların, profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) metotlarından birinin bir uygulamasının dışından yapılsa bile her zaman zaman uyumlu olarak kabul edilir. En azından, bu durum olarak kullanılır. [ForceGC yöntemine](icorprofilerinfo-forcegc-method.md)yapılan ÇAĞRıLARıNıZ nedeniyle CLR 'nin Profiler iş parçacığını yönetilen bir iş parçacığına kapatmış olduğuna göre, bu iş parçacığı artık profil oluşturucunun iş parçacığını kabul edilmiyor. Bu nedenle, CLR, bu iş parçacığı için zaman uyumlu olarak niteleyen nelerin daha sıkı bir tanımını uygular — yani bir çağrı, zaman uyumlu olarak nitelendirmek için profil oluşturucu DLL 'inin [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemlerinden birinin içinden kaynaklanmalıdır.
 
-Bu uygulamada ne demektir? Çoğu [Icorprofilerınfo](icorprofilerinfo-interface.md) yöntemleri yalnızca zaman uyumlu olarak çağrılması güvenlidir ve hemen Aksi takdirde başarısız olur. Profiler DLL dosyanızı yeniden kullanır, bu nedenle, [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) tipik profiler oluşturulan iş parçacığı üzerinde yapılan diğer çağrılar için iş parçacığı (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [Requestrejıt](icorprofilerinfo4-requestrejit-method.md), veya [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), sorun yaşıyorsanız oluşturacağız. Hatta bir güvenli zaman uyumsuz işlev gibi [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) yönetilen iş parçacığı tarafından çağrıldığında özel kurallara sahiptir. (Blog gönderisine bakın [Profiler yığın: Temel bilgileri ve sonraki süreci desteleyen](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) daha fazla bilgi için.)
+Bu uygulamada ne anlama geliyor? Çoğu [ICorProfilerInfo](icorprofilerinfo-interface.md) yöntemlerinin yalnızca zaman uyumlu olarak çağrılması güvenlidir ve aksi halde, daha sonra başarısız olur. Profil oluşturucu DLL 'niz, genellikle profil oluşturucu tarafından oluşturulan iş parçacıklarında (örneğin, [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)veya [requestdönmesi](icorprofilerinfo4-requestrevert-method.md)Için) gerçekleştirilen diğer çağrılar için [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) iş parçacığını yeniden kullanıyorsa, sorun yaşayacağız . [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) gibi zaman uyumsuz güvenli bir işlev, yönetilen iş parçacıklarında çağrıldığında özel kurallara sahiptir. (Bkz. Profiler Stack [for the blog post Daha fazla bilgi](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) için temel bilgiler ve ötesi.)
 
-Bu nedenle, herhangi bir iş parçacığı oluşturur, Profiler DLL'yi çağrılacak öneririz [ForceGC yöntemi](icorprofilerinfo-forcegc-method.md) kullanılmalıdır *yalnızca* GC'ler tetikler ve ardından GC geri çağırmalarına yanıt amacıyla. Örnekleme veya ayırma yığını gibi diğer görevleri gerçekleştirmek için profil oluşturma API uygulamasına çağırmalıdır değil.
+Bu nedenle, profil oluşturucu DLL 'nizin [ForceGC yöntemini](icorprofilerinfo-forcegc-method.md) çağırmak için oluşturduğu tüm iş parçacıklarının *yalnızca* GCS 'yi TETIKLEMENIN ve sonra GC geri çağırmaları için kullanılması önerilir. Yığın örnekleme veya ayırma gibi diğer görevleri gerçekleştirmek için profil oluşturma API 'sine çağrı gerçekleştirmemelidir.
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-.NET Framework 4.5 ile başlayarak, yeni bir GC geri çağırma vardır [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md), profil oluşturucu daha tamamlamak bilgi hakkında hangi verir *bağımlı tanıtıcıları*. Bu tanıtıcıları kaynak nesneden bir başvuru GC ömür yönetimi amacıyla hedef nesne etkili bir şekilde ekleyin. Bağımlı tanıtıcıları olan yeni bir şey ve yönetilen kodda program geliştiriciler kendi bağımlı tutamaçları kullanarak oluşturmak mümkün olduğu <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> Windows 8 ve .NET Framework 4.5 önce sınıfı.
+.NET Framework 4,5 ' den başlayarak, profil oluşturucunun *bağımlı tanıtıcılarla*ilgili daha fazla bilgi veren yenı bir GC geri çağırması olan [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md)vardır. Bu tutamaçlar, GC yaşam süresi yönetimi amacıyla bir kaynak nesnesinden bir hedef nesneye bir başvuru ekler. Bağımlı tutamaçlar hiçbir şey değildir ve yönetilen kodda çalışan geliştiriciler, Windows 8 ve .NET Framework 4,5 ' den önceki bir <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> sınıfı kullanarak kendi bağımlı tutamaçlarını oluşturamayacak.
 
-Ancak, yönetilen XAML Windows Store uygulamaları artık bağımlı işler, yoğun kullanım olun. Özellikle, CLR yönetilen nesneleri ile yönetilmeyen Windows çalışma zamanı nesneleri arasındaki başvuru döngülerini yönetmeye yardımcı olmak için bunları kullanır. Bu, önemli artık bağımlı Bu işler böylece yığın grafik kenarları geri kalanıyla birlikte görselleştirilebilir bilgilenmek hiç olmadığı kadar bellek profil oluşturucular için olduğunu gösterir. Profiler DLL'niz kullanması gereken [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md), ve [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) birlikte tam bir yığın grafik görünümünü oluşturmak için .
+Ancak, yönetilen XAML Windows Mağazası uygulamaları artık bağımlı tanıtıcıların yoğun bir şekilde kullanılmasını kolaylaştırır. Özellikle, CLR, yönetilen nesneler ve yönetilmeyen Windows Çalışma Zamanı nesneleri arasındaki başvuru döngülerini yönetmeye yardımcı olmak için bunları kullanır. Bu, artık bellek profil oluşturucular ' nin, yığın grafiğindeki diğer kenarlarla birlikte görselleştirilmesi için bu bağımlı tutamaçların bilgilendirilmesi için her zamankinden daha önemli olduğu anlamına gelir. Profiler DLL 'niz, yığın grafiğinin tamamen görünümünü oluşturmak için [RootReferences2](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences](icorprofilercallback-objectreferences-method.md)ve [ConditionalWeakTableElementReferences](icorprofilercallback5-conditionalweaktableelementreferences-method.md) öğelerini birlikte kullanmalıdır.
 
 ## <a name="conclusion"></a>Sonuç
 
-Windows Store apps içinde çalışan yönetilen kodu analiz etmek için CLR Profil oluşturma API'ı kullanmak da mümkündür. Aslında, geliştirmekte olduğunuz mevcut bir profil oluşturucu alabilir ve böylece Windows Store uygulamaları hedefleyebilirsiniz belirli bazı değişiklikler yapın. Profiler kullanıcı Arabirimi, Windows Store app hata ayıklama modunda etkinleştirmek için yeni API'leri kullanmanız gerekir. Profiler DLL'niz yalnızca bu API'leri Windows Store uygulamaları için geçerli tükettiğini emin olun. Profiler DLL'yi ve Profiler UI arasındaki iletişim mekanizmasını tanıma Windows Store uygulamaları için yerinde kısıtlanmış izinler ile Windows Store app API kısıtlamaları göz önünde ile yazılması gerekir. Profiler DLL dosyanızı nasıl Winmd'lerin, CLR değerlendirir farkında olmalıdır ve ne göre yönetilen iş parçacıkları çöp toplayıcının davranışı farklıdır.
+Windows Mağazası uygulamaları içinde çalışan yönetilen kodu çözümlemek için CLR profil oluşturma API 'sini kullanmak mümkündür. Aslında, geliştirmekte olduğunuz bir profil oluşturucuyu alabilir ve Windows Mağazası uygulamalarını hedefleyecek şekilde belirli değişiklikler yapabilirsiniz. Profiler Kullanıcı arabiriminize, Windows Mağazası uygulamasını hata ayıklama modunda etkinleştirmek için yeni API 'Ler kullanılmalıdır. Profil oluşturucu DLL 'nizin yalnızca Windows Mağazası uygulamaları için geçerli olan API 'Leri tükettiğini doğrulayın. Profil oluşturucu DLL ve Profil Oluşturucu kullanıcı arabiriminizin arasındaki iletişim mekanizması, Windows Mağazası uygulaması API 'SI kısıtlamalarına göz önünde bulundurularak ve Windows Mağazası uygulamaları için yerinde kısıtlı izinlerin farkında olmadan yazılmalıdır. Profil oluşturucu DLL 'niz, CLR 'nin Wınmds 'nin nasıl davrandığını ve çöp toplayıcının yönetilen iş parçacıklarıyla karşılaştırıldığında nasıl farklı olduğunu bilmelidir.
 
 ## <a name="resources"></a>Kaynaklar
 
@@ -404,16 +404,16 @@ Windows Store apps içinde çalışan yönetilen kodu analiz etmek için CLR Pro
 
 - [Profil oluşturma (yönetilmeyen API Başvurusu)](index.md)
 
-- [Meta veri (yönetilmeyen API Başvurusu)](../metadata/index.md)
+- [Meta veriler (yönetilmeyen API Başvurusu)](../metadata/index.md)
 
-**Windows çalışma zamanı CLR'nin etkileşim**
+**CLR 'nin Windows Çalışma Zamanı etkileşimi**
 
-- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
-**Windows Store uygulamaları**
+**Windows Mağazası uygulamaları**
 
-- [Dosya erişimi ve izinleri (Windows çalışma zamanı uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
+- [Dosya erişimi ve izinleri (Windows Çalışma Zamanı uygulamalar](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [Geliştirici lisansı alma](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
+- [Geliştirici Lisansı alın](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [IPackageDebugSettings arabirimi](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)
+- [Ipackagedebugsettings arabirimi](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

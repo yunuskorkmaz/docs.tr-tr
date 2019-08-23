@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952886"
 ---
 # <a name="functionleave-function"></a>FunctionLeave İşlevi
-Profil Oluşturucu bir işlev hakkında çağırana döndürmesi olduğunu bildirir.  
+Profiler öğesine bir işlevin çağırana dönmek üzere olduğunu bildirir.  
   
 > [!NOTE]
->  `FunctionLeave` İşlevi, .NET Framework 2.0 sürümünde kullanım dışı. Çalışmaya devam eder ancak performans cezasına sebep olabilir. Kullanım [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) işlevini.  
+> `FunctionLeave` İşlev .NET Framework 2,0 ' de kullanım dışıdır. Çalışmaya devam eder, ancak bir performans cezası olur. Bunun yerine [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) işlevini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametreler  
  `funcID`  
- [in] Döndüren işlev tanımlayıcısı.  
+ 'ndaki Döndürülen işlevin tanımlayıcısı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `FunctionLeave` Bir geri çağırma işlevidir; uygulamanız gerekir. Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı özniteliği.  
+ `FunctionLeave` İşlev bir geri çağırmasıdır; uygulamanız gerekir. Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.  
   
- Yürütme altyapısı, bu işlevi çağırmadan önce tüm kayıtları kaydetmez.  
+ Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.  
   
-- Kayan nokta birimi (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları girişte kaydetmeniz gerekir.  
+- Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.  
   
-- Çıkışta, yığın, arayan tarafından gönderildi tüm parametreleri kapalı pencerelerinin tarafından geri yüklemelisiniz.  
+- Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.  
   
- Uygulamasını `FunctionLeave` çöp toplamanın gecikeceğini çünkü engellemelisiniz değil. Uygulama, yığını bir çöp toplama kullanımı kolay durumda olmayabilir çünkü bir çöp toplama çalışmamalıdır. Bir çöp toplama girişiminde bulunulursa, çalışma zamanı kadar engeller `FunctionLeave` döndürür.  
+ , Atık toplamayı `FunctionLeave` ertelendirip, uygulamanın engellenmemelidir. Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir. Çöp toplama denendiğinde, çalışma zamanı dönüşene kadar `FunctionLeave` engeller.  
   
- Ayrıca, `FunctionLeave` işlevi değil çağırmalıdır yönetilen koda veya herhangi bir şekilde neden yönetilen bellek ayırma.  
+ Ayrıca, `FunctionLeave` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl  
+ **Üst bilgi** CorProf. IDL  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** 1.1, 1.0  
+ **.NET Framework sürümleri:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

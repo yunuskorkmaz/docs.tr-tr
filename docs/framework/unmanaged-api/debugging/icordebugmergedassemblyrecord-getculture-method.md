@@ -1,18 +1,18 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetCulture yöntemi
+title: 'Icordebugmergedassemblyrecord:: GetCulture yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0472a52d0893bfd487cd6daa6548ec1ce0c44a9b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762214"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936850"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture yöntemi
-Derlemenin kültür adı dizesi alır.  
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Icordebugmergedassemblyrecord:: GetCulture yöntemi
+Derlemenin kültür adı dizesini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,28 +26,28 @@ HRESULT GetCulture(
   
 ## <a name="parameters"></a>Parametreler  
  `cchCulture`  
- [in] Karakter sayısı `szCulture` arabellek.  
+ 'ndaki `szCulture` Arabellekteki karakterlerin sayısı.  
   
  `pcchCulture`  
- [out] Gerçekte yazılan karakter sayısını `szCulture` arabellek.  
+ dışı Gerçekte `szCulture` arabelleğe yazılan karakterlerin sayısı.  
   
  `szCulture`  
- [out] Kültür adı içeren bir karakter dizisi.  
+ dışı Kültür adını içeren bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kültür adı "en-US" (için İngilizce (ABD) kültürünün) veya "belirsiz" (için bağımsız bir kültür) gibi bir kültür tanımlayan benzersiz bir dizedir.  
+ Kültür adı, "en-US" (Ingilizce (Birleşik Devletler) kültürü için) veya "nötr" (nötr kültür için) gibi bir kültürü tanımlayan benzersiz bir dizedir.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

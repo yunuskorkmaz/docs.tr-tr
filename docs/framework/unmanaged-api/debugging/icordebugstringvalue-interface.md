@@ -16,36 +16,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6709b14ce8e7bc131f9feb7a277fb41851ee4352
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfaf886d09d843f4dbf61af55a9388454b050ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957421"
 ---
 # <a name="icordebugstringvalue-interface"></a>ICorDebugStringValue Arabirimi
-Dize değerlerine uygulanan Icordebugheapvalue öğesinin.  
+Dize değerlerine uygulanan ICorDebugHeapValue öğesinin alt sınıfı.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[GetLength Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Bu tarafından başvurulan dizedeki karakter sayısını alır `ICorDebugStringValue`.|  
-|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Bu tarafından başvurulan dize alır `ICorDebugStringValue`.|  
+|[GetLength Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getlength-method.md)|Bu `ICorDebugStringValue`tarafından başvurulan dizedeki karakter sayısını alır.|  
+|[GetString Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstringvalue-getstring-method.md)|Bu `ICorDebugStringValue`tarafından başvurulan dizeyi alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

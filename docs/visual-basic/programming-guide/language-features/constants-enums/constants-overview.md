@@ -4,47 +4,47 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c866f3d03d26bd882d5a6596d40d1dc639da011
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907094"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934777"
 ---
 # <a name="constants-overview-visual-basic"></a>Sabitlere Genel Bakış (Visual Basic)
-Bir sayı veya dize değişmez yerini alır, anlamlı bir ad bir sabittir. Sabitler adından da anlaşılacağı gibi bir uygulamanın yürütülmesini boyunca değişmez değerlerini depolar. Büyük ölçüde kodunuzun okunabilirliği geliştirmek ve sabitleri kullanarak korumak üzere kolaylaştırır. Bunları yeniden değerleri içeren kodda kullanın veya, belirgin bir anlamı yoktur veya unutmayın zor olan belirli numaralarını bağlıdır.  
+Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Adın gösterdiği gibi sabitler depolama değerleri, uygulamanın yürütülmesi boyunca aynı kalır. Kodunuzun okunabilirliğini büyük ölçüde geliştirebilirsiniz ve sabitleri kullanarak daha kolay koruma sağlayabilirsiniz. Bunları yeniden görüntülenen veya belirgin bir anlamı olmayan belirli numaralara bağlı olan değerleri içeren kodda kullanın.  
   
-## <a name="how-to-create-and-use-constants"></a>Oluşturma ve sabitleri kullanın  
- Visual Basic, yazdırma ve görüntüleme için temel olarak kullanarak bir dizi önceden tanımlanmış sabitleri içerir. Ayrıca kendi sabitleriyle oluşturabilirsiniz `Const` deyimi, bir değişken adı oluşturmak için yaptığınız aynı yönergeleri kullanarak. Varsa `Option Strict` olduğu `On`, sabit türün açıkça belirtmesi gerekir.  
+## <a name="how-to-create-and-use-constants"></a>Sabitleri oluşturma ve kullanma  
+ Visual Basic, genellikle yazdırma ve görüntüleme için kullanılan bir dizi önceden tanımlanmış sabitler içerir. Ayrıca, bir değişken adı oluşturmak için kullandığınız yönergeleri `Const` kullanarak deyimle kendi sabitlerinizi de oluşturabilirsiniz. `Option Strict` İse`On`, sabit türü açıkça bildirmeniz gerekir.  
   
- Adıyla nitelemeden başvurduğu tüm kod kümesi olduğundan, bir sabitin kapsamı, aynı konumda bildirilen bir değişken, aynıdır. Belirli bir yordam kapsamında var olan bir sabit oluşturmak için bu yordam içinde bildirin. Bir uygulamanın tamamında kullanılabilir bir sabit değer oluşturmak için kullanarak bildirin `Public` sınıf bildirimleri bölümünde anahtar sözcüğü.  
+ Bir sabitin, adını nitelemeden kendisine başvurabilen tüm kod kümesi, aynı konumda bildirildiği değişkenle aynı. Belirli bir yordamın kapsamında var olan bir sabit oluşturmak için, bu yordamın içinde bildirin. Bir uygulamanın tamamında kullanılabilir bir sabit oluşturmak için, sınıfının bildirimler bölümündeki `Public` anahtar sözcüğünü kullanarak bunu bildirin.  
   
 > [!NOTE]
->  Sabitleri, değişkenleri biraz benzer olsa da, bunları değiştiremez veya değişkenleri için mümkün olduğunca yeni değerler atayabilirsiniz.  
+> Sabitler değişkenlere benzer olsa da, değişkenleri değiştiremeyeceğiniz sürece bunları değiştiremez veya yeni değerler atayamazsınız.  
   
- Kodunuzda kullandığınız sabitleri denetimleri veya bileşenleri ile çalışmak için nesne modeli tarafından tanımlanabilir veya kullanıcı tanımlı (diğer bir deyişle, bunlar sizin oluşturduğunuz).  
+ Kodunuzda kullandığınız sabitler, birlikte çalıştığınız denetimler veya bileşenler için nesne modeli tarafından tanımlanabilir veya Kullanıcı tanımlı (diğer bir deyişle, sizin oluşturduğunuz) olabilir.  
   
 ## <a name="compile-time-and-run-time-constants"></a>Derleme zamanı ve çalışma zamanı sabitleri  
- Uygulama çalışırken, yalnızca bir çalışma zamanı sabit hesaplanabilir sırasında kodu derlenmiş zamanında bir derleme zamanı sabiti hesaplanır. Bir derleme zamanı sabiti bir uygulamayı çalıştıran her zaman bir çalışma zamanı sabit değişebilir ancak her zaman aynı değere sahip. Derleme zamanı sabitleri dizi sınırları, case ifadesi veya numaralandırıcı başlatıcılar gibi durumlarda gereklidir.  
+ Derleme zamanı sabiti, kodun derlenmesi sırasında hesaplanır, ancak bir çalışma zamanı sabiti yalnızca uygulama çalışırken hesaplanabilir. Bir derleme zamanı sabiti her seferinde aynı değere sahip olacaktır, ancak bir çalışma zamanı sabiti her seferinde değişebilir. Dizi sınırları, Case ifadeleri veya Numaralandırıcı başlatıcıları gibi durumlar için derleme zamanı sabitleri gereklidir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Tanım|Terim|  
 |---|---|  
-|[Nasıl yapılır: Bir sabit bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Nasıl kullanılacağını açıklar `Const` ifadesi bir sabit bildirme ve; değeri ayarlamak için bir sabit bildirerek, anlamlı bir ad değer atayın.|  
-|[Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Kapsamlar hakkında bilgiler dahil olmak üzere, kendi sabitleri oluşturma ve döngüsel başvuru kaçınmak nasıl açıklar.|  
-|[Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Visual Basic derleyici sabitleri nasıl başlatır bilgiler sağlar, `Option Explicit` devre dışıdır.|  
-|[Nasıl yapılır: İlgili sabit değerleri birlikte gruplandırma](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|İlgili sabit değerleri nasıl gruplandırması gösterir.|  
+|[Nasıl yapılır: Sabit bildirme](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Bir sabiti bildirmek ve değerini `Const` ayarlamak için ifadesinin nasıl kullanılacağını açıklar; bir sabiti bildirerek değere anlamlı bir ad atarsınız.|  
+|[Kullanıcı Tanımlı Sabitler](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Kapsam ve dairesel başvuruların nasıl engelleneceği hakkında bilgiler de dahil olmak üzere kendi sabitlerinizi oluşturmayı açıklar.|  
+|[Sabit ve Değişmez Değerli Veri Türleri](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Kapatıldığında Visual Basic derleyicisinin sabitleri `Option Explicit` nasıl Başlatan hakkında bilgi sağlar.|  
+|[Nasıl yapılır: Ilgili sabit değerleri birlikte grupla](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|İlgili sabit değerlerin nasıl gruplandırılacağını gösterir.|  
   
 ## <a name="reference"></a>Başvuru  
   
 |Tanım|Terim|  
 |---|---|  
-|[Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanmış sabitleri listeler.|  
-|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|Açıklar `Const` deyimi ve kullanımı.|  
-|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|Açıklar `Option Strict` deyimi ve kullanımı.|  
+|[Sabitler ve Sabit Listeleri](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic tarafından önceden tanımlanan sabitleri listeler.|  
+|[Const Deyimi](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` İfadesini ve kullanımını açıklar.|  
+|[Option Strict Deyimi](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` İfadesini ve kullanımını açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sabit Listelerine Genel Bakış](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [Nasıl yapılır: Visual Basic'te dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Nasıl yapılır: Visual Basic bir dizi değişkeni başlatma](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

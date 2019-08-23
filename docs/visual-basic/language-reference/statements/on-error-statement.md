@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671816"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963540"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , hata işleme yordamını devre dışı bırakmak için de kullanılabilir. `On Error` İfade yapılandırılmamış hata işlemede kullanılır ve yapılandırılmış özel durum işleme yerine kullanılabilir. [Yapılandırılmış özel durum işleme](../../../standard/exceptions/index.md) .NET içinde yerleşiktir, genellikle daha etkilidir, bu nedenle uygulamanızda çalışma zamanı hatalarını işlerken önerilir.
@@ -35,7 +35,7 @@ Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , h
  Hata işleme veya özel durum işleme olmadan, oluşan tüm çalışma zamanı hataları önemli: bir hata iletisi görüntülenir ve yürütme durdu.
 
 > [!NOTE]
->  Anahtar sözcüğü, geri uyumluluk için desteklenen [hata bildiriminde](../../../visual-basic/language-reference/statements/error-statement.md)de kullanılır. `Error`
+> Anahtar sözcüğü, geri uyumluluk için desteklenen [hata bildiriminde](../../../visual-basic/language-reference/statements/error-statement.md)de kullanılır. `Error`
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Açıklamalar
 
 > [!NOTE]
->  Yapılandırılmamış özel durum işleme ve `On Error` bildirisini kullanmak yerine kodunuzda yapılandırılmış özel durum işlemeyi kullanmanızı öneririz. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
+> Yapılandırılmamış özel durum işleme ve `On Error` bildirisini kullanmak yerine kodunuzda yapılandırılmış özel durum işlemeyi kullanmanızı öneririz. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).
 
  Bir "etkin" hata işleyicisi bir `On Error` deyime göre açılmış bir hatadır. Bir "etkin" hata işleyicisi, bir hatayı işleme sürecinde olan etkin bir işleyicidir.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Hata işleyicisi denetimi bir çağrı yordamına geri geçirdiğinde, bu yordam geçerli yordam olur. Herhangi bir yordamda hata işleyicisi tarafından bir hata işlendikten sonra, yürütme geçerli yordamda `Resume` deyimin tarafından belirlenen noktada devam eder.
   
 > [!NOTE]
->  Hata işleme yordamı bir `Sub` yordam `Function` veya yordam değildir. Bir satır etiketi veya satır numarası tarafından işaretlenen kodun bir bölümüdür.
+> Hata işleme yordamı bir `Sub` yordam `Function` veya yordam değildir. Bir satır etiketi veya satır numarası tarafından işaretlenen kodun bir bölümüdür.
   
 ## <a name="number-property"></a>Number özelliği
  Hata işleme yordamları, hatanın nedenini öğrenmek için `Number` `Err` nesnesinin özelliğindeki değeri kullanır. Yordam, diğer herhangi bir hata gerçekleşebilmesi veya bir hataya `Err` neden olabilecek bir yordam çağrılmadan önce, nesne içindeki ilgili özellik değerlerini test etmelidir veya kaydeder. `Err` Nesnedeki özellik değerleri yalnızca en son hatayı yansıtır. İle `Err.Number` ilişkili hata iletisi içinde `Err.Description`bulunur.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`yürütmeye, çalışma zamanı hatasına neden olan deyimin hemen ardından gelen deyimle devam etmesine neden olur ya da `On Error Resume Next` deyimin bulunduğu yordamın en son çağrısından hemen sonra gelen deyimle devam eder. Bu ifade, yürütmenin çalışma zamanı hatasına rağmen devam etmesine izin verir. Hatanın gerçekleştiği hata işleme yordamını, yordamı yordamın içindeki başka bir konuma aktarmak yerine yerleştirebilirsiniz. Başka `On Error Resume Next` bir yordam çağrıldığında bir ifade devre dışı bırakılır, bu nedenle bu yordamda satır `On Error Resume Next` içi hata işleme istiyorsanız, çağrılan her yordamda bir ifade yürütmelisiniz.
   
 > [!NOTE]
->  Diğer nesnelere erişim sırasında oluşturulan hatalar `On Error GoTo` işlenirken Yapıtercihedilebilir.`On Error Resume Next` Bir `Err` nesneyle her bir etkileşime geçtikten sonra Denetim, kod tarafından hangi nesneye erişildiğine ilişkin belirsizliği ortadan kaldırır. Hangi nesnenin içinde `Err.Number`hata kodu yerleştirdiğini ve hangi nesnenin ilk olarak hatayı (içinde `Err.Source`belirtilen nesne) üretdiğini de unutmayın.
+> Diğer nesnelere erişim sırasında oluşturulan hatalar `On Error GoTo` işlenirken Yapıtercihedilebilir.`On Error Resume Next` Bir `Err` nesneyle her bir etkileşime geçtikten sonra Denetim, kod tarafından hangi nesneye erişildiğine ilişkin belirsizliği ortadan kaldırır. Hangi nesnenin içinde `Err.Number`hata kodu yerleştirdiğini ve hangi nesnenin ilk olarak hatayı (içinde `Err.Source`belirtilen nesne) üretdiğini de unutmayın.
 
 ## <a name="on-error-goto-0"></a>Hatada git 0
  `On Error GoTo 0`geçerli yordamda hata işlemeyi devre dışı bırakır. Yordam 0 sayılı bir satır içerse bile, hata işleme kodunun başlangıcı olarak line 0 belirtmez. `On Error GoTo 0` Bir ifade olmadan, bir yordam çıkıldığında bir hata işleyicisi otomatik olarak devre dışı bırakılır.
