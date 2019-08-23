@@ -8,21 +8,21 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms], about MainMenu control
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe46683faee13bad951d5a7185aad8a687c290ef
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012795"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952128"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu Bileşenine Genel Bakış (Windows Forms)
 > [!IMPORTANT]
->  Ancak <xref:System.Windows.Forms.MenuStrip> ve <xref:System.Windows.Forms.ContextMenuStrip> değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> denetimleri önceki sürümlerinin <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> , Ve '<xref:System.Windows.Forms.ContextMenuStrip> i önceki sürümlerin ve denetimlerine değiştirebilir ve bunları değiştirip, ve ' ı seçerseniz hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.MenuStrip>  
   
- Windows Forms <xref:System.Windows.Forms.MainMenu> bileşen çalışma zamanında bir menü görüntüler. Tek tek öğeleri ana menü ve tüm alt menülerin olan <xref:System.Windows.Forms.MenuItem> nesneleri.  
+ Windows Forms <xref:System.Windows.Forms.MainMenu> bileşeni çalışma zamanında bir menü görüntüler. Ana menünün ve ayrı öğelerin tüm alt menüleri nesnelerdir <xref:System.Windows.Forms.MenuItem> .  
   
 ## <a name="key-properties"></a>Anahtar Özellikler  
- Bir menü öğesini ayarlayarak varsayılan öğesi olarak belirlenebilir <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> özelliğini `true`. Menü tıklandığında varsayılan öğe kalın metin olarak görünür. Menü öğesinin <xref:System.Windows.Forms.MenuItem.Checked%2A> özelliği olduğu ya da `true` veya `false`ve menü öğesinin seçili olup olmadığını gösterir. Menü öğesinin <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> özelliği özelleştirir seçili öğenin görünüşünü: varsa <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> ayarlanır `true`, varsa öğenin yanında; bir radyo düğmesi görünür <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> ayarlanır `false`, öğesinin yanında bir onay işareti görünür.  
+ Bir menü öğesi, <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> `true`özelliği olarak ayarlanarak varsayılan öğe olarak belirlenebilir. Menü tıklandığında varsayılan öğe kalın metinde görünür. Menü öğesinin <xref:System.Windows.Forms.MenuItem.Checked%2A> özelliği ya `true` `false`da olur ve menü öğesinin seçili olup olmadığını gösterir. Menü <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> öğesinin özelliği seçili öğenin görünümünü özelleştirir <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> : olarak `true`ayarlanırsa, öğenin yanında bir radyo <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> düğmesi görünür; olarak `false`ayarlanırsa, öğenin yanında bir onay işareti görünür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

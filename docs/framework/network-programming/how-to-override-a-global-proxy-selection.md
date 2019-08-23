@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0da481a9-b414-4230-beb0-e3ceba882fe5
-ms.openlocfilehash: 2389ea01a980f80c7723f9b481ede2e1fe915b28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e5f4dc22ad75dc4d4f7dc30f44e6ae304403ef16
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624535"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914525"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>Nasıl yapılır: Genel Ara Sunucu Seçimini Geçersiz Kılma
-Bu örnekte gönderen bir **WebRequest** için `www.contoso.com` adında bir proxy sunucusu ile genel Ara sunucu seçimini geçersiz `alternateproxy` bağlantı noktası 80 üzerinde.  
+Bu örnek, genel proxy seçimini, `www.contoso.com` bağlantı noktası 80 ' de adlı `alternateproxy` bir ara sunucu ile geçersiz kılacak bir **Web isteği** gönderir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -28,9 +28,9 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- A [ `using` yönergesi](~/docs/csharp/language-reference/keywords/using-directive.md) için **System.Net** ad alanı.  
+- **System.net** ad alanı için bir [ `using` yönerge](../../csharp/language-reference/keywords/using-directive.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

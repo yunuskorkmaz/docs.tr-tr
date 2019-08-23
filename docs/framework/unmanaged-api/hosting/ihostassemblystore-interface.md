@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4067c1fbcf99c903c892eaec58262d95569114b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f881440b2e93745723bd090cfbab0286dcd0a4e5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930045"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937872"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore Arabirimi
-Derlemeler ve modüller ortak dil çalışma zamanı (CLR) bağımsız olarak yüklemek konak izin vermek için yöntemler sağlar.  
+Bir konağın ortak dil çalışma zamanından (CLR) bağımsız olarak derlemeleri ve modülleri yüklemesine izin veren yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ProvideAssembly Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|Tarafından başvurulmuyor bir derlemeye bir başvuru alır [Iclrassemblyreferencelist](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) çağrısından döndürülen [Ihostassemblymanager::getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md).|  
-|[ProvideModule Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Bir derleme veya bağlı (embedded değil) kaynak dosyası içinde bir modüle çözümleniyor.|  
+|[ProvideAssembly Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|[IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)çağrısından döndürülen [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) tarafından başvurulmayan bir derlemeye başvuru alır.|  
+|[ProvideModule Yöntemi](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Derleme içindeki bir modülü veya bağlı (gömülü değil) kaynak dosyasını çözer.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IHostAssemblyStore` verimli bir şekilde derleme kimliğine dayalı derlemeler yüklemek için bir konak için bir yol sağlar. Döndürerek ana bilgisayar bütünleştirilmiş kodları yükler `IStream` doğrudan baytları gösteren örnekler.  
+ `IHostAssemblyStore`bir konağın derleme kimliği temelinde derlemeleri etkin bir şekilde yüklemesi için bir yol sağlar. Ana bilgisayar, doğrudan baytlara `IStream` işaret eden örnekleri döndürerek derlemeleri yükler.  
   
- CLR bir konağa uygulanan olup olmadığını belirler. `IHostAssemblyStore` çağırarak `IHostAssemblyManager::GetNonHostAssemblyStores` başlatma temel alır. Bu konak, örneğin, kullanıcı bütünleştirilmiş kodları bağlamayı denetlemek için ancak .NET Framework derlemeleri bağlamak için çalışma zamanı üzerinde yararlanmayı sağlar.  
-  
-> [!NOTE]
->  Sağlama uygulaması içinde `IHostAssemblyStore`, konak tarafından başvurulmuyor tüm derlemelerin çözümlenecek konuşmanın niyetini belirtir `ICLRAssemblyReferenceList` döndürüldüğü `IHostAssemblyManager::GetNonHostStoreAssemblies`.  
+ CLR, başlatma sonrasında çağırarak `IHostAssemblyStore` `IHostAssemblyManager::GetNonHostAssemblyStores` bir konağın uygulanıp uygulanmadığı belirler. Bu, örneğin, ana bilgisayarın kullanıcı Derlemeleriyle bağlamayı denetlemesini, ancak .NET Framework derlemelerine bağlamak için çalışma zamanına güvenmelerini sağlar.  
   
 > [!NOTE]
->  .NET Framework sürüm 2.0 tarafından sağlanan bir derlemenin yerel görüntü yüklemek ana bilgisayar için bir yol sunmaz [Native Image Generator (Ngen.exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yardımcı programı.  
+> Uygulamasının bir uygulamasını `IHostAssemblyStore`sağlamak için konak, öğesinden `ICLRAssemblyReferenceList` `IHostAssemblyManager::GetNonHostStoreAssemblies`döndürülen tarafından başvurulmayan tüm derlemeleri çözümleme amacını belirtir.  
+  
+> [!NOTE]
+> .NET Framework sürüm 2,0, ana bilgisayarın [Yerel Görüntü Oluşturucu (Ngen. exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) yardımcı programı tarafından sağlandığı şekilde bir derlemenin yerel görüntüsünü yüklemesi için bir yol sağlamaz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

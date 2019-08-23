@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 29132fa8d788f59178237be2c03adc1de4ac5c4f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c39b9a313d265187605d51a2c78c7d3d3dcdb056
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589114"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923913"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Nasıl yapılır: COM birlikte çalışma programlamada dizinli özellikleri kullanma (C# Programlama Kılavuzu)
 *Dizinli Özellikler* , programlama içinde C# parametreleri olan com özelliklerinin hangi şekilde tüketildiğini geliştirir. Dizinli Özellikler C#, Microsoft Office programlamayı geliştirmek için [adlandırılmış ve isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md), yeni bir tür ([dinamik](../../language-reference/keywords/dynamic.md)) ve [katıştırılmış tür bilgileri](../concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)gibi görseldeki diğer özelliklerle birlikte çalışır.  
@@ -26,7 +26,7 @@ ms.locfileid: "69589114"
  [!code-csharp[csProgGuideIndexedProperties#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#2)]  
   
 > [!NOTE]
->  Önceki örnek ayrıca, öğesini atlamanızı `Type.Missing`sağlayan [isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md) özelliğini de kullanır.  
+> Önceki örnek ayrıca, öğesini atlamanızı `Type.Missing`sağlayan [isteğe bağlı bağımsız değişkenler](../classes-and-structs/named-and-optional-arguments.md) özelliğini de kullanır.  
   
  Benzer şekilde, `Value` C# 3,0 ve önceki bir <xref:Microsoft.Office.Interop.Excel.Range> nesnenin özelliğinin değerini ayarlamak için iki bağımsız değişken gereklidir. Bir, Aralık değerinin türünü belirten isteğe bağlı bir parametre için bağımsız değişken sağlar. Diğer, `Value` özelliğinin değerini sağlar. Aşağıdaki örneklerde bu teknikler gösterilmektedir. Her ikisi de a1 hücresinin değerini olarak `Name`ayarlayın.
   

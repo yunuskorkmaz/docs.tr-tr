@@ -1,5 +1,5 @@
 ---
-title: Uygulama Ayarları Şeması
+title: Uygulama ayarları şeması
 ms.date: 03/30/2017
 helpviewer_keywords:
 - schema application settings
@@ -7,52 +7,52 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: a74716bcdf3c85c08d0ff3bf66407dce30ee91cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89a08434332b0242fe57e9dcaa3b3ebcc5692d06
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927757"
 ---
-# <a name="application-settings-schema"></a>Uygulama Ayarları Şeması
+# <a name="application-settings-schema"></a>Uygulama ayarları şeması
 
-Uygulama ayarlarını depolamak ve uygulama kapsamlı ve kullanıcı kapsamlı ayarları almak bir Windows Forms veya ASP.NET uygulaması sağlar. Bu bağlamda bir *ayarı* herhangi belirli uygulamaya veya geçerli kullanıcının belirli bir bilgi parçasıdır — bir veritabanı bağlantı dizesi kullanıcıya kadar her şeyi varsayılan pencere boyutu tercih edilen.
+Uygulama ayarları bir Windows Forms veya ASP.NET uygulamasının uygulama kapsamlı ve kullanıcı kapsamlı ayarları depolamasına ve almasına izin verir. Bu bağlamda, bir *ayar* , uygulamaya özgü veya geçerli kullanıcıya özgü olabilecek herhangi bir bilgi olan bir veritabanı bağlantı dizesinden kullanıcının tercih edilen varsayılan pencere boyutuna kadar her şey olabilir.
 
-Varsayılan olarak, bir Windows Forms uygulamasında uygulama ayarlarını kullanan <xref:System.Configuration.LocalFileSettingsProvider> sınıfını, ki bu ayarları bir XML yapılandırma dosyasında saklamak için .NET yapılandırma sistemini kullanır. Uygulama ayarları tarafından kullanılan dosyalar hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md).
+Varsayılan olarak, bir Windows Forms uygulamasındaki uygulama ayarları, ayarları bir <xref:System.Configuration.LocalFileSettingsProvider> XML yapılandırma dosyasında depolamak için .NET yapılandırma sistemini kullanan sınıfını kullanır. Uygulama ayarları tarafından kullanılan dosyalar hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](../../winforms/advanced/application-settings-architecture.md).
 
-Uygulama ayarları, kullandığı yapılandırma dosyalarını bir parçası olarak aşağıdaki öğeleri tanımlar.
+Uygulama ayarları, kullandığı yapılandırma dosyalarının bir parçası olarak aşağıdaki öğeleri tanımlar.
 
 | Öğe                    | Açıklama                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | Tüm içeren  **\<ayarı >** etiketler uygulamaya özgü.                         |
-| **\<kullanıcı ayarlarını >**        | Tüm içeren  **\<ayarı >** geçerli kullanıcıya özel etiketler.                        |
-| **\<ayarı >**             | Bir ayarı tanımlar. Ya da alt  **\<applicationSettings >** veya  **\<ayarlarını >**. |
-| **\<value>**               | Bir ayarın değerini tanımlar. Alt  **\<ayarı >**.                                   |
+| **\<applicationSettings >** | Uygulamaya özgü tüm  **\<ayar >** etiketlerini içerir.                         |
+| **\<userSettings >**        | Geçerli kullanıcıya özgü tüm  **\<ayar >** etiketlerini içerir.                        |
+| **\<> ayarlama**             | Bir ayarı tanımlar. **\<ApplicationSettings >** ya  **\<da UserSettings >** alt öğesi. |
+| **\<value>**               | Bir ayarın değerini tanımlar. > Ayarının alt öğesi.  **\<**                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > öğesi
 
-Bu öğe tüm içeren  **\<ayarı >** istemci bilgisayarda uygulamanın bir örneği için özel etiketler. Bu öznitelikleri tanımlar.
+Bu öğe, bir istemci bilgisayarında uygulamanın bir örneğine özgü  **\<> Tüm ayarı** içerir. Hiçbir öznitelik tanımlamıyor.
 
-## <a name="usersettings-element"></a>\<kullanıcı ayarlarını > öğesi
+## <a name="usersettings-element"></a>\<userSettings > öğesi
 
-Bu öğe tüm içeren  **\<ayarı >** uygulama kullanmakta olduğu kullanıcıya özel etiketler. Bu öznitelikleri tanımlar.
+Bu öğe, şu anda uygulamayı kullanan kullanıcıya özgü tüm  **\<ayar > ayarlarını** içerir. Hiçbir öznitelik tanımlamıyor.
 
-## <a name="setting-element"></a>\<ayarı > öğesi
+## <a name="setting-element"></a>\<> öğesi ayarlanıyor
 
-Bu öğe bir ayarı tanımlar. Bunu, aşağıdaki özniteliklere sahiptir.
+Bu öğe bir ayar tanımlar. Aşağıdaki özniteliklere sahiptir.
 
 | Öznitelik        | Açıklama |
 | ---------------- | ----------- |
-| **Adı**         | Gerekli. Ayar benzersiz kimliği. Visual Studio aracılığıyla oluşturulan ayarları adı ile kaydedilmiş `ProjectName.Properties.Settings`. |
-| **serializedAs** | Gerekli. Metin değeri serileştirmek için kullanılacak biçimi. Geçerli değerler şunlardır:<br><br>- `string`. Değer bir dize kullanarak olarak serileştirilmiş bir <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. Değer, XML serileştirme kullanarak seri hale getirilir.<br>- `binary`. Değer, ikili serileştirme kullanarak metin ile kodlanmış ikili olarak seri hale getirilir.<br />- `custom`. Ayar sağlayıcısı bu ayar devralmaz sahiptir ve serileştirir ve bunu serileştirir. |
+| **name**         | Gerekli. Ayarın benzersiz KIMLIĞI. Visual Studio ile oluşturulan ayarlar, adıyla `ProjectName.Properties.Settings`birlikte kaydedilir. |
+| **serializedAs** | Gerekli. Değerin metin olarak serileştirilmesi için kullanılacak biçim. Geçerli değerler şunlardır:<br><br>- `string`. Değer, kullanarak <xref:System.ComponentModel.TypeConverter>bir dize olarak serileştirilir.<br>- `xml`. Değer XML serileştirme kullanılarak serileştirilir.<br>- `binary`. Değer, ikili serileştirme kullanılarak metin kodlu ikili olarak serileştirilir.<br />- `custom`. Ayarlar sağlayıcısı bu ayar hakkında bilgi sahibi ve serileştirildikleri ve serileştirildikleri. |
 
-## <a name="value-element"></a>\<Değer > öğesi
+## <a name="value-element"></a>\<değer > öğesi
 
 Bu öğe bir ayarın değerini içerir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek iki uygulama kapsamlı ayarlar ve iki kullanıcı kapsamlı ayarları tanımlayan uygulama ayarları dosyası gösterilmektedir:
+Aşağıdaki örnek, uygulama kapsamlı iki ayarı ve kullanıcı kapsamlı iki ayarı tanımlayan bir uygulama ayarları dosyası gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -90,5 +90,5 @@ Aşağıdaki örnek iki uygulama kapsamlı ayarlar ve iki kullanıcı kapsamlı 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)
-- [Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarlarına Genel Bakış](../../winforms/advanced/application-settings-overview.md)
+- [Uygulama Ayarları Mimarisi](../../winforms/advanced/application-settings-architecture.md)

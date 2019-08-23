@@ -9,29 +9,29 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: 81b4d574d9fc99f0f002da3e47d81ed17cf8e739
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588641"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952690"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Nasıl yapılır: Windows Forms BindingNavigator Denetimi ile DataSet içinde Hareket Etme
-Veri odaklı uygulamalar oluşturmalarını gibi genellikle veri koleksiyonlarının kullanıcılara görüntülenecek gerekir. <xref:System.Windows.Forms.BindingNavigator> Birlikte denetim <xref:System.Windows.Forms.BindingSource> bileşeni, bir koleksiyon içinde taşıma ve öğeleri sıralı olarak görüntülemek için kolay ve Genişletilebilir bir çözüm sağlar.  
+Veri odaklı uygulamalar oluştururken, genellikle kullanıcılara veri koleksiyonlarını görüntülemesi gerekir. <xref:System.Windows.Forms.BindingSource> Bileşeniyle birlikte denetim, bir koleksiyon içinde gezinmek ve öğeleri sıralı olarak görüntülemek için uygun ve Genişletilebilir <xref:System.Windows.Forms.BindingNavigator> bir çözüm sağlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde nasıl kullanılacağını gösterir. bir <xref:System.Windows.Forms.BindingNavigator> veri taşımak için denetimi. Küme içindeki bir <xref:System.Data.DataView>, bağlı bir <xref:System.Windows.Forms.TextBox> denetimini bir <xref:System.Windows.Forms.BindingSource> bileşeni.  
+ Aşağıdaki kod örneği, verilerin nasıl taşınacağı hakkında bir <xref:System.Windows.Forms.BindingNavigator> denetimin nasıl kullanılacağını göstermektedir. Küme, <xref:System.Data.DataView> bileşeni<xref:System.Windows.Forms.BindingSource> olan bir <xref:System.Windows.Forms.TextBox> denetime bağlantılı olan ' de bulunur.  
   
 > [!NOTE]
->  Depolama bağlantı dizesi içinde bir parola gibi hassas bilgileri, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  
+> Parola gibi hassas bilgileri, bağlantı dizesi içinde depolamak, uygulamanızın güvenliğini etkileyebilir. Windows Kimlik Doğrulaması (tümleşik güvenlik olarak da bilinir) kullanılarak bir veritabanına erişimi denetlemek için daha güvenli bir yoldur. Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  
   
  [!code-csharp[System.Windows.Forms.DataNavigator#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataNavigator#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataNavigator/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Data System.Drawing, System.Windows.Forms ve System.Xml derlemesine ilişkin başvurular.  
+- System, System. Data, System. Drawing, System. Windows. Forms ve System. xml derlemelerine başvuru.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -40,4 +40,4 @@ Veri odaklı uygulamalar oluşturmalarını gibi genellikle veri koleksiyonları
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator Denetimi](bindingnavigator-control-windows-forms.md)
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)

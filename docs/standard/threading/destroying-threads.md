@@ -11,27 +11,27 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960085"
 ---
 # <a name="destroying-threads"></a>İş parçacıklarını yok etme
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Yöntemi, bir yönetilen iş parçacığı kalıcı olarak durdurmak için kullanılır. Çağırdığınızda <xref:System.Threading.Thread.Abort%2A>, ortak dil çalışma zamanı bir <xref:System.Threading.ThreadAbortException> hedef iş parçacığı, hedef iş parçacığı yakalayabilir. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+Yöntemi <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , yönetilen bir iş parçacığını kalıcı olarak durdurmak için kullanılır. ' İ çağırdığınızda <xref:System.Threading.Thread.Abort%2A>, ortak dil çalışma zamanı hedef iş <xref:System.Threading.ThreadAbortException> parçacığında hedef iş parçacığının yakalayabileceği bir oluşturur. Daha fazla bilgi için bkz. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Bir iş parçacığı yürütülüyorsa yönetilmeyen kod zaman kendi <xref:System.Threading.Thread.Abort%2A> yöntemi çağrıldığında, çalışma zamanı Bu işaretler <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. İş parçacığı yönetilen koda geri döndüğünde, özel durum oluşturulur.  
+> Bir iş parçacığı <xref:System.Threading.Thread.Abort%2A> yöntemi çağrıldığında yönetilmeyen kodu yürütüp, çalışma zamanı onu <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>işaretler. Özel durum, iş parçacığı yönetilen koda döndüğünde oluşturulur.  
   
- Bir iş parçacığı durduruldu sonra yeniden başlatılamıyor.  
+ Bir iş parçacığı iptal edildikten sonra yeniden başlatılamaz.  
   
- <xref:System.Threading.Thread.Abort%2A> Yöntemi neden olmaz hemen iptal etmek iş parçacığı çünkü hedef iş parçacığı yakalayabilir <xref:System.Threading.ThreadAbortException> ve rastgele miktarda kod yürütme bir `finally` blok. Çağırabilirsiniz <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> iş parçacığının sona erinceye kadar beklenecek gerekiyorsa. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yürütme iş parçacığını gerçekten bitirene kadar döndürmeyen engelleyici bir çağrıdır veya isteğe bağlı zaman aşımı aralığı geçti. Durdurulan iş parçacığı çağırabilir <xref:System.Threading.Thread.ResetAbort%2A> yöntemi veya sınırsız yönlendirilmeden bir `finally` engellemek için bir zaman aşımı belirtmezseniz, beklemeyi sona erdirmek için garanti edilmez.  
+ Yöntemi, iş parçacığı bir `finally` blokta rastgele miktarda kod <xref:System.Threading.ThreadAbortException> yakalayıp yürütebildiğinden, iş parçacığının hemen durmasına neden olmaz. <xref:System.Threading.Thread.Abort%2A> İş parçacığı sonlanana kadar beklemeniz gerekiyorsa, öğesini çağırabilirsiniz <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> . <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, iş parçacığı gerçekten yürütmeyi durdurana veya isteğe bağlı bir zaman aşımı aralığı geçtiğinde döndürmeyen bir engelleme çağrıdır. Durdurulan iş parçacığı <xref:System.Threading.Thread.ResetAbort%2A> yöntemi çağırabilir veya bir `finally` blokta sınırsız işlem gerçekleştirebilir, bu nedenle bir zaman aşımı belirtmezseniz, bekleme işleminin bitmesi garanti edilmez.  
   
- Çağırması için bekleyen iş parçacıklarının <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> yöntemi çağıran başka iş parçacıklarının engellemelerinden kesintiye <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
+ Yöntemine yapılan bir çağrıda bekleyen iş parçacıkları, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> çağıran <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>diğer iş parçacıkları tarafından kesintiye uğratılmasını sağlayabilir.  
   
-## <a name="handling-threadabortexception"></a>ThreadAbortException işleme  
- İş parçacığınıza, arama sonucu olarak ya da iptal bekliyorsanız <xref:System.Threading.Thread.Abort%2A> kendi kodunuzu veya iş parçacığı çalıştığı uygulama etki alanı kaldırılması sonucunda (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> kullanır <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> iş parçacıkları sonlandırmak için), kendi iş parçacığı işlemesi gerekir <xref:System.Threading.ThreadAbortException> ve herhangi bir son işlem olarak bir `finally` yan tümcesi, aşağıdaki kodda gösterildiği gibi.  
+## <a name="handling-threadabortexception"></a>Threadadbortexception işleme  
+ İş parçacığınızdan, kendi kodunuzun çağrılması <xref:System.Threading.Thread.Abort%2A> veya iş parçacığının çalıştığı bir uygulama etki alanının kaldırılması sonucu olarak (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> iş parçacıklarını sonlandırmak için kullanılır <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ), iş parçacığınızdan işlem yapmanız gerekir ve <xref:System.Threading.ThreadAbortException> , aşağıdaki kodda gösterildiği gibi bir `finally` yan tümcede son işlemleri gerçekleştirir.  
   
 ```vb  
 Try  
@@ -62,9 +62,9 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- Temizleme kodunuzun olmalıdır `catch` yan tümcesi veya `finally` yan tümcesi, çünkü bir <xref:System.Threading.ThreadAbortException> sonunda, sistem tarafından tekrar fırlatılan `finally` yan tümcesi ya da sonunda `catch` varsa yan tümcesi yok `finally` yan tümcesi.  
+ Temizleme kodunuz `catch` yan tümce `finally` <xref:System.Threading.ThreadAbortException> `finally` veya yan tümcesinde olmalıdır, çünkü yan tümcesinin sonunda sistem tarafından yeniden oluşturulur `finally` veya yan tümce yoksa `catch` yan tümcesinin sonunda.  
   
- Özel durum gelen yeniden atma çağırarak sistem engelleyebilir <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> yöntemi. Ancak, bu yalnızca, neden kendi kodunuzu yapmalısınız <xref:System.Threading.ThreadAbortException>.  
+ <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> Yöntemini çağırarak sistemin özel durumu yeniden oluşturmasını engelleyebilirsiniz. Bununla birlikte, bunu yalnızca kendi kodunuz ' a neden <xref:System.Threading.ThreadAbortException>olursa yapmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

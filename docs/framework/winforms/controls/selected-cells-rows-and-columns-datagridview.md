@@ -9,51 +9,51 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-ms.openlocfilehash: c250fa52251cbd54d457c8228d4a1d8f23ce5923
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25b3ed50081add77b9f522ca8e597f2b3306cb2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960523"
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Seçili Hücre, Satır ve Sütunları Alma
-Seçili hücre, satır veya sütun alabileceğiniz bir <xref:System.Windows.Forms.DataGridView> karşılık gelen özelliklerini kullanarak denetim: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. Aşağıdaki yordamlarda, seçili hücreleri alma ve satır ve sütun dizinlerini görüntüleme bir <xref:System.Windows.Forms.MessageBox>.  
+Bir <xref:System.Windows.Forms.DataGridView> denetimden seçili hücreleri, satırları veya sütunları, ilgili özellikleri kullanarak alabilirsiniz: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>ve <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. Aşağıdaki yordamlarda, seçili hücreleri alacak ve satır ve sütun dizinlerini bir <xref:System.Windows.Forms.MessageBox>içinde görüntüleyecek.  
   
-### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>DataGridView denetiminde seçili hücre almak için  
+### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>Bir DataGridView denetiminde seçili hücreleri almak için  
   
-- Kullanım <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> özelliği.  
+- <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Özelliğini kullanın.  
   
     > [!NOTE]
-    >  Kullanım <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> potansiyel olarak büyük bir hücre sayısını gösteren önlemek için yöntemi.  
+    > Olası çok sayıda hücreyi göstermeyi önlemek için yönteminikullanın.<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#10)]  
   
-### <a name="to-get-the-selected-rows-in-a-datagridview-control"></a>DataGridView denetiminde seçili satır almak için  
+### <a name="to-get-the-selected-rows-in-a-datagridview-control"></a>Bir DataGridView denetiminde seçili satırları almak için  
   
-- Kullanım <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> özelliği. Satırları seçmek kullanıcıları etkinleştirmek için ayarlamalısınız <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliğini <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> veya <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>.  
+- <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> Özelliğini kullanın. Kullanıcıların satır seçmesini sağlamak için, <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliğini veya <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>olarak <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> ayarlamanız gerekir.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#20)]  
   
-### <a name="to-get-the-selected-columns-in-a-datagridview-control"></a>DataGridView denetiminde Seçili sütunları almak için  
+### <a name="to-get-the-selected-columns-in-a-datagridview-control"></a>Bir DataGridView denetiminde seçili sütunları almak için  
   
-- Kullanım <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> özelliği. Sütunları seçmek kullanıcıları etkinleştirmek için ayarlamalısınız <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliğini <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect> veya <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>.  
+- <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Özelliğini kullanın. Kullanıcıların sütun seçmesini sağlamak için, <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> özelliğini veya <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>olarak <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect> ayarlamanız gerekir.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#30)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- <xref:System.Windows.Forms.Button> adlarında `selectedCellsButton`, `selectedRowsButton`, ve `selectedColumnsButton`, her biri için işleyiciler <xref:System.Windows.Forms.Control.Click> ekli olay.  
+- <xref:System.Windows.Forms.Button>her biri `selectedCellsButton`, `selectedRowsButton` `selectedColumnsButton`eklenen olaya<xref:System.Windows.Forms.Control.Click> yönelik işleyiciler içeren,, ve adlı denetimler.  
   
-- A <xref:System.Windows.Forms.DataGridView> adlı Denetim `dataGridView1`.  
+- <xref:System.Windows.Forms.DataGridView> Adlı`dataGridView1`bir denetim.  
   
-- Başvurular <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, ve <xref:System.Text?displayProperty=nameWithType> derlemeler.  
+- <xref:System?displayProperty=nameWithType> ,<xref:System.Windows.Forms?displayProperty=nameWithType>Ve derlemelerinin<xref:System.Text?displayProperty=nameWithType> başvuruları.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bu konuda açıklanan koleksiyonları, çok sayıda hücreler, satırlar veya sütunlar seçili olduğunda verimli bir şekilde gerçekleştirmeyin. Büyük miktarlarda veri bu koleksiyonlara kullanma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Bu konu başlığı altında açıklanan koleksiyonlar, çok sayıda hücre, satır veya sütun seçildiğinde verimli bir şekilde gerçekleştirmez. Bu koleksiyonları büyük miktarda verilerle kullanma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirmek Için En Iyi uygulamalar](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

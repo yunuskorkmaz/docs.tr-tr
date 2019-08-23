@@ -3,21 +3,21 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0a1f8dd0c29aaee56c2ca1162cc70cc1e5ed106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942674"
 ---
-# <a name="issuernameregistry"></a>\<issuerNameRegistry>
-Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan verenin ad Kayıt Defteri'ni yapılandırır.  
+# <a name="issuernameregistry"></a>\<ıssuernameregbakanlığı >
+Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren adı kayıt defterini yapılandırır.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
 \<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry>  
+\<ıssuernameregbakanlığı >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,32 +42,32 @@ Belirteci işleyicisi koleksiyondaki işleyiciler tarafından kullanılan vereni
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Türetilen bir tür <xref:System.IdentityModel.Tokens.IssuerNameRegistry> sınıfı. Özel bir belirtme hakkında daha fazla bilgi için `type`, [özel tür başvurularını] bakın.|  
+|türü|<xref:System.IdentityModel.Tokens.IssuerNameRegistry> Sınıfından türeten bir tür. Özel `type`belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları].|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Zaman `type` özniteliği belirtir, yapılandırma tabanlı verenin ad Kayıt Defteri'ni ( <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfı), [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) öğesi belirtilmelidir. [ \<TrustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) öğesi gerçekleştirebileceğiniz `<add>`, `<clear>`, veya `<remove>` öğeleri alt öğeleri olarak.|  
+|[\<trustedIssuers >](trustedissuers.md)|Öznitelik, yapılandırma tabanlı veren adı kayıt defterini <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (sınıfı) belirttiğinde, [ \<trustedissuers >](trustedissuers.md) öğesinin belirtilmesi gerekir. `type` `<add>` `<clear>` `<remove>` [ Trustedissuers>öğesi\<](trustedissuers.md) alt öğe olarak, veya öğelerini alabilir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Güvenlik topluluğu için yapılandırma, belirteç işleyicileri sağlar.|  
+|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|Bir güvenlik belirteci işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tüm veren belirteçleri bir verenin ad Kayıt Defteri'ni kullanarak doğrulanır. Bu, türetilen bir nesnedir <xref:System.IdentityModel.Tokens.IssuerNameRegistry> sınıfı. Yayınlayıcı adı belirteçleri karşılık gelen bir veren tarafından üretilen imzaları doğrulamak için gereken şifreleme malzemelerini bir anımsatıcı adına ilişkilendirmek için kullanılır. Yayınlayıcı adı bağlı olan taraf (RP) uygulaması tarafından güvenilen verenlerin bir listesini tutar. Yayınlayıcı adı türünü kullanarak belirtilen `type` özniteliği. `<issuerNameRegistry>` Öğesi, belirtilen tür için yapılandırma sağlayan bir veya daha fazla alt öğeleri olabilir. Geçersiz kılarak bu alt öğeleri işler mantığın <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> yöntemi.  
+ Tüm verenin belirteçleri, bir veren adı kayıt defteri kullanılarak onaylanır. Bu, <xref:System.IdentityModel.Tokens.IssuerNameRegistry> sınıfından türetilen bir nesnedir. Veren adı kayıt defteri, bir anımsatıcı adını, ilgili veren tarafından üretilen belirteçlerin imzalarını doğrulamak için gereken şifreleme malzemesiyle ilişkilendirmek için kullanılır. Veren adı kayıt defteri, bağlı olan taraf (RP) uygulaması tarafından güvenilen verenler listesini tutar. Veren adı kayıt defterinin türü, `type` özniteliği kullanılarak belirtilir. `<issuerNameRegistry>` Öğe, belirtilen tür için yapılandırma sağlayan bir veya daha fazla alt öğe içerebilir. <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> Yöntemi geçersiz kılarak bu alt öğeleri işleyen mantığı sağlarsınız.  
   
- WIF sağlayan tek bir veren adı kayıt türü olarak <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfı. Bu sınıf, bir dizi yapılandırmasında belirtilen güvenilen yayıncı sertifikaları kullanır. Bir alt yapılandırma öğesi gerektirir `<trustedIssuers>`, güvenilen yayıncı sertifikaları koleksiyonu yapılandırıldığı altında. Güvenilen sertifikalar ASN.1 kullanarak kodlanmış sertifika parmak izi form ve eklendiğinde veya koleksiyondan kullanarak kaldırıldığında belirtilen `<add>`, `<clear>`, veya `<remove>` öğeleri.  
+ WIF, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfından tek bir veren adı kayıt defteri türü sağlar. Bu sınıf, yapılandırmada belirtilen bir güvenilen veren sertifikaları kümesi kullanır. Bu, altında güvenilir veren sertifikaları koleksiyonunun `<trustedIssuers>`yapılandırıldığı bir alt yapılandırma öğesi gerektirir. Güvenilen Sertifikalar, sertifika parmak izinin ASN. 1 kodlu formu kullanılarak belirtilir ve, `<add>` `<clear>`veya `<remove>` öğeleri kullanılarak koleksiyona eklenir veya kaldırılır.  
   
- `<issuerNameRegistry>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> sınıfı.  
+ `<issuerNameRegistry>` Öğesi sınıfı<xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> tarafından temsil edilir.  
   
 > [!NOTE]
->  Belirtme `<issuerNameRegistry>` öğesi alt öğesi olarak [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi kullanım dışı bırakıldı, ancak yine de geriye dönük uyumluluk için desteklenir. Ayarları `<securityTokenHandlerConfiguration>` öğesini geçersiz kılar üzerinde `<identityConfiguration>` öğesi.  
+> Öğesini IdentityConfiguration > öğesinin bir alt öğesi [olarak belirtmek kullanım dışı bırakılmıştır, ancak yine de geriye dönük uyumluluk için desteklenir. \<](identityconfiguration.md) `<issuerNameRegistry>` Öğesindeki ayarlar, `<identityConfiguration>` öğesinde olanları geçersiz kılar. `<securityTokenHandlerConfiguration>`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML tabanlı yapılandırma veren belirtmek ad Kayıt Defteri'ni gösterilmektedir.  
+ Aşağıdaki XML, yapılandırma tabanlı veren adı kayıt defterinin nasıl ekleneceğini gösterir.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

@@ -2,18 +2,18 @@
 title: <localServiceSettings> öğesi
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 91e9944de30a78b904d1679512f622bcc2955af4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36fcc9454a5762a4a375cc7f6eaee1c4cf0580e2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931725"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > öğesi
 Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<Güvenlik >  
@@ -46,20 +46,20 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`detectReplays`|Kanal yeniden yürütme saldırıları algılandı ve otomatik olarak ele belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|`inactivityTimeout`|Bir pozitif <xref:System.TimeSpan> kanal bekleyeceği zaman aşımına uğramadan önce etkin olmama süresini belirtir. Varsayılan değer "01: 00:00".|  
-|`issuedCookieLifeTime`|A <xref:System.TimeSpan> tüm yeni güvenlik tanımlama bilgilerine verilen ömür süresini belirtir. Kendi ömürlerine aşan tanımlama bilgileri geri dönüştürülünceye ve yeniden sağlanması gerekir. Varsayılan değer "10: 00:00".|  
-|`maxCachedCookies`|Önbelleğe alınabilecek tanımlama bilgileri maksimum sayısını belirten bir pozitif tamsayı. Varsayılan değer 1000'dir.|  
-|`maxClockSkew`|A <xref:System.TimeSpan> iletişim kuran taraflar iki tarafın sistem saatleri arasındaki en büyük zaman farkı belirtir. Varsayılan değer "00: 05:00".<br /><br /> Bu değeri varsayılan değere ayarlandığında, alıcı kabul daha sonra 5 dakika ile ileti gönderme zaman zaman damgaları ile yukarı veya zamandan daha önce iletisi alındı. Gönderme zamanı test geçmeyin iletileri reddedilir. Bu ayar ile birlikte kullanılan `replayWindow` özniteliği.|  
-|`maxPendingSessions`|Hizmetin desteklediği güvenlik oturumu bekleyen maksimum sayısını belirten pozitif bir tamsayı. Bu sınıra ulaşıldığında, tüm yeni istemciler SOAP hataları alırsınız. Varsayılan değer 1000'dir.|  
-|`maxStatefulNegotiations`|Aynı anda etkin olabilen güvenlik anlaşmaları sayısını belirten pozitif bir tamsayı. Sınırı aşan anlaşma oturumları kuyruğa alınır ve sınırın altına bir alan kullanılabilir duruma geldiğinde tamamlanabilir. Varsayılan değer 1024'tür.|  
-|`negotiationTimeout`|A <xref:System.TimeSpan> kanal tarafından kullanılan güvenlik ilkesinin ömrünü belirtir. Süre dolduğunda istemci için yeni bir güvenlik ilkesi ile kanal belirler. Varsayılan değer "00: 02:00".|  
-|`reconnectTransportOnFailure`|WS-Reliable Mesajlaşma kullanan bağlantı aktarım hatasından sonra yeniden bağlanmayı deneyip denemeyeceğini belirten bir Boole değeri. Varsayılan `true`, sonsuz bir yeniden dener çalıştığının anlamına gelir. Döngü, bağlanılamaz zaman kanala neden olan etkin olmama zaman aşımı tarafından ayrılır.|  
-|`replayCacheSize`|Yeniden yürütme algılaması için önbelleğe alınan nonce sayısını belirten pozitif bir tamsayı. Bu sınır aşılırsa, eski nonce kaldırılır ve yeni bir geçici öğe için yeni bir ileti oluşturulur. 500000 varsayılan değerdir.|  
-|`replayWindow`|A <xref:System.TimeSpan> içinde tek tek ileti nonce öğelerinin geçerli süresini belirtir.<br /><br /> Bu süre önce gönderilenle olarak aynı nonce ile gönderilen bir iletinin kabul edilmez. Bu öznitelik ile birlikte kullanılan `maxClockSkew` yeniden yürütme saldırıları önlemek için özniteliği. Yeniden yürütme penceresi süresi dolduktan sonra bir saldırganın bir ileti yeniden yürütme. Ancak, bu iletiyi başarısız olacağı `maxClockSkew` test kadar belirli bir süreden daha yeni veya daha önceki gönderme zaman damgalı bir ileti alındı iletileri reddeder.|  
-|`sessionKeyRenewalInterval`|A <xref:System.TimeSpan> sonra başlatıcı yenileyecek anahtarı güvenlik oturumu için süreyi belirtir. Varsayılan değer "10: 00:00".|  
-|`sessionKeyRolloverInterval`|A <xref:System.TimeSpan> zaman aralığını önceki oturum anahtarının geçerli gelen iletinin anahtar yenilemesi sırasında belirtir. Varsayılan değer "00: 05:00".<br /><br /> Anahtar yenilemesi sırasında istemci ve sunucu her zaman en güncel kullanılabilir anahtarı kullanarak ileti göndermeniz gerekir. Her iki taraf geçiş süresi dolana kadar önceki oturum anahtarı ile güvenli hale gelen iletileri kabul eder.|  
-|`timestampValidityDuration`|Bir pozitif <xref:System.TimeSpan> zaman damgası olan geçerli süresini belirtir. Varsayılan değer "00: 15:00".|  
+|`detectReplays`|Kanala karşı yeniden yürütme saldırılarının algılanıp algılanmayacağını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
+|`inactivityTimeout`|Kanalın zaman <xref:System.TimeSpan> aşımına uğramadan önce bekleyeceği eylemsizlik süresini belirten bir pozitif sayı. Varsayılan değer "01:00:00" dır.|  
+|`issuedCookieLifeTime`|Tüm <xref:System.TimeSpan> yeni güvenlik tanımlama bilgilerine verilen yaşam süresini belirten bir. Yaşam sürelerini aşan tanımlama bilgileri geri dönüştürülür ve yeniden anlaşma olması gerekir. Varsayılan değer "10:00:00" dır.|  
+|`maxCachedCookies`|Önbelleğe alınabilecek tanımlama bilgisi sayısı üst sınırını belirten pozitif bir tamsayı. Varsayılan değer 1000 ' dir.|  
+|`maxClockSkew`|İki <xref:System.TimeSpan> iletişim kuran tarafın sistem saatleri arasındaki en uzun süre farkını belirten bir. Varsayılan değer "00:05:00" dır.<br /><br /> Bu değer varsayılan değere ayarlandığında, alıcı gönderme zamanı zaman damgalarına sahip iletileri, daha sonra veya iletinin alındığı zamandan 5 dakikaya kadar kabul eder. Gönderme zamanı testini geçemediği iletiler reddedilir. Bu ayar, `replayWindow` özniteliğiyle birlikte kullanılır.|  
+|`maxPendingSessions`|Hizmetin desteklediği en fazla beklemedeki güvenlik oturumu sayısını belirten pozitif bir tamsayı. Bu sınıra ulaşıldığında, tüm yeni istemciler SOAP hataları alır. Varsayılan değer 1000'dir.|  
+|`maxStatefulNegotiations`|Aynı anda etkin olabilen güvenlik anlaşmaları sayısını belirten pozitif bir tamsayı. Sınırın üzerinde olan anlaşma oturumları sıraya alınır ve yalnızca sınırın altındaki bir boşluk kullanılabilir hale geldiğinde tamamlanabilir. Varsayılan değer 1024 ' dir.|  
+|`negotiationTimeout`|Kanal <xref:System.TimeSpan> tarafından kullanılan güvenlik ilkesinin ömrünü belirten bir. Süre sona erdiğinde, kanal yeni bir güvenlik ilkesi için istemcisiyle yeniden anlaşmaya varılır. Varsayılan değer "00:02:00" dır.|  
+|`reconnectTransportOnFailure`|WS-güvenilir mesajlaşma kullanan bağlantıların, aktarım hatalarından sonra yeniden bağlanmaya çalışıp çalışmadığını belirten bir Boole değeri. Varsayılan `true`olarak, sınırsız yeniden bağlanma girişimlerinin denendiği anlamına gelir. Bu zaman aşımı, kanalın yeniden bağlanamayan bir özel durum oluşturmasına neden olan etkinlik dışı zaman aşımı nedeniyle bozulur.|  
+|`replayCacheSize`|Yeniden yürütme algılaması için kullanılan önbelleğe alınmış nonce sayısını belirten pozitif bir tamsayı. Bu sınır aşılırsa, en eski nonce kaldırılır ve yeni ileti için yeni bir nonce oluşturulur. Varsayılan değer 500000 ' dir.|  
+|`replayWindow`|Tek <xref:System.TimeSpan> tek ileti nonce öğelerinin geçerli olduğu süreyi belirten bir.<br /><br /> Bu süreden sonra, daha önce gönderilen ile aynı nonce ile gönderilen bir ileti kabul edilmez. Bu öznitelik, `maxClockSkew` yeniden yürütme saldırılarını engellemek için özniteliğiyle birlikte kullanılır. Bir saldırgan, yeniden yürütme penceresinin süresi dolduktan sonra bir iletiyi yeniden oynamıştır. Bununla birlikte, bu ileti, gönderme zamanı `maxClockSkew` zaman damgalarına sahip iletileri, daha sonra veya daha önceki bir süre içinde ileti alındığı zamandan reddeden test başarısız olur.|  
+|`sessionKeyRenewalInterval`|Bu <xref:System.TimeSpan> , başlatanın güvenlik oturumu anahtarını yenileyecek süreyi belirten bir. Varsayılan değer "10:00:00" dır.|  
+|`sessionKeyRolloverInterval`|Bir <xref:System.TimeSpan> anahtar yenilemesi sırasında önceki oturum anahtarının gelen iletilerde geçerli olduğu zaman aralığını belirten bir. Varsayılan değer "00:05:00" dır.<br /><br /> Anahtar yenileme sırasında, istemci ve sunucu her zaman en geçerli kullanılabilir anahtarı kullanarak ileti göndermelidir. Her iki taraf da, geçiş süresi sona erene kadar önceki oturum anahtarıyla güvenliği sağlanmış gelen iletileri kabul eder.|  
+|`timestampValidityDuration`|Zaman damgasının <xref:System.TimeSpan> geçerli olduğu süreyi belirten pozitif bir değer. Varsayılan değer "00:15:00" dır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -68,23 +68,23 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
-|[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
+|[\<Güvenlik >](security-of-custombinding.md)|Özel bağlama için güvenlik seçeneklerini belirtir.|  
+|[\<Securebir Bootstrap >](secureconversationbootstrap.md)|Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güvenlik İlkesi hizmetin bir parçası olarak yayımlanmaz ve istemci bağlaması etkilemez çünkü yerel ayarlardır.  
+ Ayarlar, hizmetin güvenlik ilkesinin bir parçası olarak yayımlanmadığı ve istemcinin bağlamasını etkilemediği için yereldir.  
   
- Aşağıdaki öznitelikleri `localServiceSecuritySettings` öğesi bir hizmet reddi (DOS) güvenlik saldırısı azaltılmasına yardımcı olabilir:  
+ `localServiceSecuritySettings` Öğesinin aşağıdaki öznitelikleri, hizmet reddi (DOS) güvenlik saldırısını azaltmaya yardımcı olabilir:  
   
-- `maxCachedCookies`: zaman sınırlı SecurityContextTokens, sunucu tarafından SPNEGO veya SSL anlaşması yaptıktan sonra önbelleğe alınan en fazla sayısını denetler.  
+- `maxCachedCookies`: SPNEGO veya SSL anlaşması yapıldıktan sonra sunucu tarafından önbelleğe alınan en fazla zaman sınırlı SecurityContextTokens sayısını denetler.  
   
-- `issuedCookieLifetime`: SPNEGO veya SSL anlaşması aşağıdaki sunucu tarafından verilen SecurityContextTokens ömrünü denetler. Sunucu SecurityContextTokens bu süre boyunca önbelleğe alır.  
+- `issuedCookieLifetime`: SPNEGO veya SSL anlaşmasını izleyen sunucu tarafından verilen SecurityContextTokens ömrünü denetler. Sunucu bu süre için SecurityContextTokens önbelleğe alır.  
   
-- `maxPendingSessions`: sunucuda ancak herhangi bir uygulama iletisi işlendi için oluşturulan güvenli konuşma en fazla sayısını denetler. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- `maxPendingSessions`: sunucuda oluşturulan ancak hiçbir uygulama iletisi işlenen en fazla güvenli konuşma sayısını denetler. Bu kota, istemcilerin hizmette güvenli konuşmalar kurmasını engeller ve bu sayede hizmetin her bir istemci için durumu korumasına ve hiçbir zaman bunları kullanmamasına neden olur.  
   
-- `inactivityTimeout`: en uzun süreyi denetimleri hizmet güvenli konuşma etkin bir uygulama iletisi üzerindeki almadan tutar. Bu kota, hizmetine güvenli konuşma oluşturma, böylelikle her istemci için durumunu korumak üzere bir hizmetin neden, ancak hiçbir zaman kullanarak istemcilerin önler.  
+- `inactivityTimeout`: hizmetin, üzerinde bir uygulama iletisi almadan güvenli bir konuşmayı canlı tutacağı en uzun süreyi denetler. Bu kota, istemcilerin hizmette güvenli konuşmalar kurmasını engeller ve bu sayede hizmetin her bir istemci için durumu korumasına ve hiçbir zaman bunları kullanmamasına neden olur.  
   
- Bir güvenli konuşma oturumu unutmayın hem `inactivityTimeout` ve `receiveTimeout` öznitelikleri bağlama üzerinde oturum zaman aşımı süresini etkiler. İki daha kısa zaman aşımları olduğunda belirler.  
+ Güvenli bir konuşma oturumunda, hem hem de `inactivityTimeout` `receiveTimeout` bağlamadaki özniteliklerin oturum zaman aşımını etkilediğini unutmayın. İki, zaman aşımlarının ne zaman gerçekleşeceğini belirler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -93,9 +93,9 @@ Bu bağlama için yerel bir hizmetin güvenlik ayarlarını belirtir.
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Özel Bağlama Güvenliği](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)
+- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Özel Bağlama Güvenliği](../../../wcf/samples/custom-binding-security.md)

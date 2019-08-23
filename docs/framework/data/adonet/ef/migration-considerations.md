@@ -1,106 +1,106 @@
 ---
-title: Geçiş konuları (varlık çerçevesi)
+title: Geçiş konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 8370156d2bd0f3858d7fa0936fa967a658e6e910
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929303"
 ---
-# <a name="migration-considerations-entity-framework"></a>Geçiş konuları (varlık çerçevesi)
-ADO.NET varlık çerçevesi, var olan bir uygulama için çeşitli avantajlar sağlar. Çoğu biri veri kaynağındaki şemasından uygulama tarafından kullanılan veri yapılarını ayırmak için kavramsal bir modeli kullanma olanağı Bu avantajlar önemlidir. Bu depolama modelinin veya uygulamaya telafi değişiklik yapmadan veri kaynağına kendisini gelecekteki değişikliklere kolayca yapmanıza olanak sağlar. Kullanmanın avantajları hakkında daha fazla bilgi için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], bkz: [Entity Framework'e Genel Bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
+# <a name="migration-considerations-entity-framework"></a>Geçiş konuları (Entity Framework)
+ADO.NET Entity Framework, var olan bir uygulamaya çeşitli avantajlar sağlar. Bu avantajlardan en önemli olanlarından biri, uygulama tarafından kullanılan veri yapılarını veri kaynağındaki şemadan ayırmak için kavramsal bir model kullanma yeteneğidir. Bu, uygulamaya telafi değişikliği yapmadan depolama modelinde veya veri kaynağında ileride yapılacak değişiklikler yapmanızı sağlar. Kullanmanın [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]avantajları hakkında daha fazla bilgi için bkz. [Entity Framework genel bakış](../../../../../docs/framework/data/adonet/ef/overview.md) ve [varlık veri modeli](../../../../../docs/framework/data/adonet/entity-data-model.md).  
   
- Avantajlarından yararlanmak için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], mevcut bir uygulamaya geçirebileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bazı görevleri, geçirilen tüm uygulamalar için ortaktır. .NET Framework 3.5 Service Pack 1 (SP1) sürümünden itibaren kullanmak için uygulamayı yükseltme şu genel görevleri içeren tanımlama model ve eşleme ve Entity Framework yapılandırma. Bir uygulamaya geçirdiğinizde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], geçerli olan ek hususlar vardır. Bu noktalar, Geçirilmekte olan uygulama türünü ve belirli bir uygulamanın işlevselliğini bağlıdır. Bu konu, mevcut bir uygulamayı yükseltme sırasında kullanılacak en iyi yaklaşım seçmenize yardımcı olacak bilgiler sağlar.  
+ Avantajlarından yararlanmak için, var olan bir uygulamayı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]sürümüne geçirebilirsiniz. Bazı görevler, geçirilen tüm uygulamalarda ortaktır. Bu ortak görevler, sürüm 3,5 hizmet paketi 1 ' den (SP1) başlayarak .NET Framework kullanmak, model ve eşlemeyi tanımlamak ve Entity Framework yapılandırmak için uygulamayı yükseltmeyi içerir. Bir uygulamayı öğesine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]geçirdiğinizde, uygulanan ek hususlar vardır. Bu noktalar, geçirilmekte olan uygulamanın türüne ve uygulamanın belirli işlevlerine bağlıdır. Bu konuda, var olan bir uygulamayı yükselttiğinizde kullanılacak en iyi yaklaşımı seçmenize yardımcı olacak bilgiler sağlanmaktadır.  
   
 ## <a name="general-migration-considerations"></a>Genel geçiş konuları  
- Herhangi bir uygulama için geçiş yaptığınızda, aşağıdaki maddeler geçerlidir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
+ Herhangi bir uygulamayı uygulamasına [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]geçirdiğinizde aşağıdaki noktalar geçerlidir:  
   
-- Entity Framework veri sağlayıcısı uygulama tarafından kullanılan veri kaynağı için desteklediği sürece için Entity Framework, .NET Framework 3.5 SP1 sürümünden itibaren kullanan tüm uygulamaları geçirilebilir.  
+- Uygulama tarafından kullanılan veri kaynağı için veri sağlayıcısı Entity Framework desteklediği sürece, sürüm 3,5 SP1 ile başlayan .NET Framework kullanan uygulamalar Entity Framework geçirilebilir.  
   
-- Entity Framework sağlayıcının destekler olsa bile Entity Framework Veri kaynağı sağlayıcı tüm işlevleri desteklemiyor olabilir.  
+- Entity Framework, bu sağlayıcı Entity Framework desteklese bile, bir veri kaynağı sağlayıcısının tüm işlevlerini desteklemeyebilir.  
   
-- Büyük veya karmaşık uygulama için tek seferde tüm uygulama Entity Framework geçirme gerekmez. Ancak, veri kaynağı, varlık çerçevesi kullanmayan uygulamayı herhangi bir bölümünü hala değiştirilmelidir.  
+- Büyük veya karmaşık bir uygulama için tüm uygulamayı tek seferde Entity Framework geçirmeniz gerekmez. Ancak, Entity Framework kullanmayan uygulamanın herhangi bir bölümü, veri kaynağı değiştiğinde yine de değiştirilmelidir.  
   
-- Entity Framework tarafından kullanılan veri sağlayıcısına bağlantı uygulamanızın diğer bölümleriyle çünkü paylaşılabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] veri kaynağına erişmek için ADO.NET veri sağlayıcıları kullanır. Örneğin, SqlClient sağlayıcısı, SQL Server veritabanına erişmek için Entity Framework tarafından kullanılır. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+- Entity Framework tarafından kullanılan veri sağlayıcısı bağlantısı, veri kaynağına erişmek için ADO.NET veri sağlayıcıları [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kullandığından uygulamanızın diğer bölümleriyle paylaşılabilir. Örneğin, SqlClient sağlayıcısı, bir SQL Server veritabanına erişmek için Entity Framework tarafından kullanılır. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
-## <a name="common-migration-tasks"></a>Sık karşılaşılan geçiş görevleri  
- Mevcut bir uygulamasına geçirmek için yol [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama türü ve mevcut veri erişim stratejisi bağlıdır. Mevcut bir uygulamasına geçirirken ancak, her zaman aşağıdaki görevleri gerçekleştirmeniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+## <a name="common-migration-tasks"></a>Ortak geçiş görevleri  
+ Var olan bir uygulamanın [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] üzerine geçirilecek yol, hem uygulama türüne hem de varolan veri erişim stratejisine bağlıdır. Ancak, var olan bir uygulamayı öğesine [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]geçirdiğinizde, her zaman aşağıdaki görevleri gerçekleştirmeniz gerekir.  
   
 > [!NOTE]
->  Visual Studio 2008 ile başlayan varlık veri modeli araçları kullandığınızda bu görevlerin tümü otomatik olarak gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+> Bu görevlerin tümü, Visual Studio 2008 ' den başlayarak Varlık Veri Modeli araçları kullandığınızda otomatik olarak gerçekleştirilir. Daha fazla bilgi için [nasıl yapılır: Varlık Veri Modeli Sihirbazı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))'nı kullanın.  
   
 1. Uygulamayı yükseltin.  
   
-     Visual Studio ve .NET Framework'ü önceki bir sürümü kullanılarak oluşturulmuş bir projeyi Visual Studio 2008 SP1'i ve .NET Framework 3.5 SP1 sürümünden itibaren kullanılacak yükseltilmelidir.  
+     Visual Studio 'nun önceki bir sürümü kullanılarak oluşturulan bir proje ve .NET Framework Visual Studio 2008 SP1 ve sürüm 3,5 SP1 'den başlayarak .NET Framework kullanacak şekilde yükseltilmelidir.  
   
-2. Eşleme ve modelleri tanımlar.  
+2. Modelleri ve eşlemeyi tanımlayın.  
   
-     Model ve eşleme dosyalarını kavramsal modeldeki varlıklar tanımlayın. yapıları tablolar gibi veri kaynağı, saklı yordamlar ve görünümleri; ve varlıkları ve veri kaynağı Yapılar arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: El ile bir modeli tanımlamak ve dosyaları eşleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
+     Model ve eşleme dosyaları kavramsal modeldeki varlıkları tanımlar; tablolar, saklı yordamlar ve görünümler gibi veri kaynağındaki yapılar; ve varlıklar ile veri kaynağı yapıları arasındaki eşleme. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))el ile tanımlayın.  
   
-     Depolama modelde tanımlı türleri nesne veri kaynağı adı eşleşmelidir. Var olan uygulama veri nesneleri olarak sunarsa, kavramsal modelde tanımlı özellikleri ve varlıkları adlarını bu var olan veri sınıfları ve özellikleri ile eşleştiğinden emin olun. Daha fazla bilgi için [nasıl yapılır: Modelleme ve özel nesneler ile çalışma dosyaları eşleme özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100)).  
+     Depolama modelinde tanımlanan türler, veri kaynağındaki nesne adı ile aynı olmalıdır. Mevcut uygulama verileri nesneler olarak kullanıma sunarsa, kavramsal modelde tanımlanan varlıkların ve özelliklerin bu var olan veri sınıflarının ve özelliklerinin adlarıyla eşleştiğinden emin olmanız gerekir. Daha fazla bilgi için [nasıl yapılır: Modelleme ve eşleme dosyalarını özel nesnelerle](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))çalışacak şekilde özelleştirin.  
   
     > [!NOTE]
-    >  Varlık veri modeli Tasarımcısı, varolan nesneleri eşleştirmek için kavramsal modeldeki varlıklar yeniden adlandırmak için kullanılabilir. Daha fazla bilgi için [varlık veri modeli Tasarımcısı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
+    > Varlık Veri Modeli Tasarımcısı, kavramsal modeldeki varlıkları varolan nesnelerle eşleşecek şekilde yeniden adlandırmak için kullanılabilir. Daha fazla bilgi için bkz. [varlık veri modeli Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
-3. Bağlantı dizesini tanımlar.  
+3. Bağlantı dizesini tanımlayın.  
   
-     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Kavramsal modeline karşı sorgular yürütülürken bir özel olarak biçimlendirilmiş bağlantı dizesini kullanır. Bu bağlantı dizesi, model ve eşleme dosyalarını ve veri kaynağı bağlantısı ile ilgili bilgileri yalıtır. Daha fazla bilgi için [nasıl yapılır: Bağlantı dizesi tanımlama](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
+     , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Sorguları kavramsal bir modelde yürütürken özel olarak biçimlendirilmiş bir bağlantı dizesi kullanır. Bu bağlantı dizesi, model ve eşleme dosyalarıyla ilgili bilgileri ve veri kaynağıyla bağlantı bilgilerini kapsüller. Daha fazla bilgi için [nasıl yapılır: Bağlantı dizesini](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)tanımlayın.  
   
 4. Visual Studio projesini yapılandırın.  
   
-     Başvurular [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] derlemeleri ve model ve eşleme dosyalarını Visual Studio projeye eklenmesi gerekiyor. Bu eşleme dosyaları, bunlar bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: El ile bir Entity Framework projesinin yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
+     [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Derlemelere ve model ve eşleme dosyalarına yapılan başvuruların Visual Studio projesine eklenmesi gerekir. Bu eşleme dosyalarını, bağlantı dizesinde belirtilen konumda uygulamayla dağıtıldığından emin olmak için projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Entity Framework projesini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))el ile yapılandırın.  
   
-## <a name="considerations-for-applications-with-existing-objects"></a>Varolan nesneleri olan uygulamalar için dikkat edilmesi gerekenler  
- .NET Framework 4 ile başlayarak [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "düz eski" destekleyen CLR nesnelerine (POCO), Kalıcılık ignorant nesneleri olarak da bilinir. Çoğu durumda, var olan nesne ile çalışabilir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] küçük değişiklikler yaparak. Daha fazla bilgi için [Working with Entities POCO](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Ayrıca bir uygulamaya geçirebileceğiniz [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanın. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
+## <a name="considerations-for-applications-with-existing-objects"></a>Mevcut nesneleri olan uygulamalara yönelik konular  
+ .NET Framework 4 ' [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] te başlayarak, kalıcılık-Ignorant nesneleri olarak da adlandırılan "düz eski" clr nesnelerini (POCO) destekler. Çoğu durumda, var olan nesneleriniz küçük değişiklikler yaparak ile [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] çalışabilir. Daha fazla bilgi için bkz. [POCO varlıklarıyla çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100)). Ayrıca, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bir uygulamayı öğesine geçirebilir ve Entity Framework araçları tarafından oluşturulan veri sınıflarını kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Varlık Veri Modeli Sihirbazı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))'nı kullanın.  
   
-## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET sağlayıcıları kullanan uygulamalar için dikkat edilmesi gerekenler  
- ADO.NET SqlClient gibi sağlayıcıları tablosal verileri döndürmek için bir veri kaynağını olanak sağlar. Veri de bir ADO.NET veri kümesine yüklenebilir. Aşağıdaki listede, mevcut bir ADO.NET sağlayıcısı kullanan bir uygulamayı yükseltmeyle ilgili konular açıklanmaktadır:  
+## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET sağlayıcılarını kullanan uygulamalar için dikkat edilmesi gerekenler  
+ SqlClient gibi ADO.NET sağlayıcıları, tablo verilerini döndürmek için bir veri kaynağını sorgulamanızı sağlar. Ayrıca, veriler bir ADO.NET veri kümesine yüklenebilir. Aşağıdaki listede, var olan bir ADO.NET sağlayıcısı kullanan bir uygulamayı yükseltme konuları açıklanmaktadır:  
   
-- Bir veri okuyucu kullanarak tablo verileri görüntüleme.  
+- Veri okuyucu kullanarak tablo verilerini görüntüleme.  
 
-  Yürütme düşünebilirsiniz bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] EntityClient Sağlayıcısı'nı kullanarak ve döndürülen numaralandırma sorgu <xref:System.Data.EntityClient.EntityDataReader> nesne. Uygulamanızı kullanarak bir veri okuyucu sekmeli veri görüntüler ve tarafından sağlanan özellikleri gerektirmez bunu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] değişiklikler veri nesnelerine düzeniyle için izleme ve güncelleştirmeler yapma. Güncelleştirmeleri veri kaynağına hale getirir. mevcut veri erişim kodu kullanmaya devam edebilirsiniz, ancak erişilen varolan bir bağlantıyı kullanabilirsiniz <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> özelliği <xref:System.Data.EntityClient.EntityConnection>. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+  EntityClient sağlayıcısını kullanarak bir [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgu yürütmeyi ve döndürülen <xref:System.Data.EntityClient.EntityDataReader> nesne üzerinden sıralama yapmayı düşünebilirsiniz. Bunu yalnızca uygulamanız bir veri okuyucusu kullanarak tablo verileri görüntülüyorsa ve bu, verileri nesnelere getirmek, değişiklikleri izlemek ve güncelleştirme yapmak [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] için tarafından sunulan tesislerin gerekli olmaması durumunda bunu yapın. Veri kaynağında güncelleştirmeler yapan mevcut veri erişim kodunu kullanmaya devam edebilirsiniz, ancak <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> <xref:System.Data.EntityClient.EntityConnection>özelliğinden erişilen mevcut bağlantıyı kullanabilirsiniz. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
-- Veri kümeleri ile çalışma.  
+- Veri kümeleriyle çalışma.  
 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Birçok aynı işlevler bellek içi kalıcılığı dahil olmak üzere veri kümesi tarafından sağlanan değiştirmek izleme, veri bağlama ve XML verileri olarak nesneler serileştiriliyor sağlar. Daha fazla bilgi için [nesneleriyle çalışma](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+  , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Bellek içi Kalıcılık, değişiklik izleme, veri bağlama ve nesnelerin XML verisi olarak serileştirilmesi dahil olmak üzere veri kümesi tarafından sağlanan aynı işlevselliklerin çoğunu sağlar. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
-  Varsa [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] işlevlerini sağlamadığını uygulamanızın ihtiyaç duyduğu veri kümesi, yine de LINQ sorguları avantajlarını LINQ to DataSet kullanarak yararlanabilirsiniz. Daha fazla bilgi için [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+  Uygulamanız için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] gereken veri kümesi işlevlerini sağlamıyorsa, LINQ to DataSet kullanarak LINQ sorgularının avantajlarından faydalanabilirsiniz. Daha fazla bilgi için [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
-## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Verileri denetimlere bağlayabilirsiniz uygulamalar için dikkat edilmesi gerekenler  
- .NET Framework, bir veri kümesi veya bir ASP.NET veri kaynağı denetimi gibi bir veri kaynağındaki kapsülleyebilir ve ardından kullanıcı arabirimi öğeleri bu verileri denetimlere bağlama olanak tanır. Aşağıdaki listede, Entity Framework verilere denetimler bağlama konuları açıklanmaktadır.  
+## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Denetimlere veri bağlayan uygulamalar için dikkat edilmesi gerekenler  
+ .NET Framework veri kümesi veya ASP.NET veri kaynağı denetimi gibi verileri bir veri kaynağında kapsüllemenizi ve ardından Kullanıcı arabirimi öğelerini bu veri denetimlerine bağlamayı sağlar. Aşağıdaki listede, Entity Framework verilerine yönelik bağlama denetimlerine ilişkin konular açıklanmaktadır.  
   
-- Veriyi denetimlere bağlama.  
+- Denetimlere veri bağlama.  
 
-  Kavramsal model sorguladığınızda [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] verileri varlık türleri örnekleri olan nesneler olarak döndürür. Bu nesneleri denetimlere doğrudan bağlanabilir ve bu bağlama, güncelleştirmeler destekler. Bir satır gibi bir denetimin veri değişikliklerini Bunun anlamı bir <xref:System.Windows.Forms.DataGridView>otomatik olarak veritabanına kaydedilir, <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> yöntemi çağrılır.  
+  Kavramsal modeli [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sorguladığınızda, verileri varlık türlerinin örnekleri olan nesneler olarak döndürür. Bu nesneler doğrudan denetimlere bağlanabilir ve bu bağlama güncelleştirmeleri destekler. Bu, içindeki <xref:System.Windows.Forms.DataGridView>bir satır gibi denetimdeki verilerde yapılan değişikliklerin, <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> yöntemi çağrıldığında otomatik olarak veritabanına kaydedileceği anlamına gelir.  
   
-  Uygulama verileri görüntülemek için bir sorgunun sonuçlarını sıralar, bir <xref:System.Windows.Forms.DataGridView> veya denetimin sonucuna bağlanması için uygulamanızı değiştirebileceğiniz diğer veri bağlamayı destekleyen bir denetim türü, bir <xref:System.Data.Objects.ObjectQuery%601>.  
+  Uygulamanız veri bağlamayı destekleyen bir veya başka bir <xref:System.Windows.Forms.DataGridView> denetim türünde verileri göstermek için bir sorgunun sonuçlarını numaralandırdıysanız, uygulamanızı bir <xref:System.Data.Objects.ObjectQuery%601>denetimin sonucuna bağlamak için değiştirebilirsiniz.  
   
-  Daha fazla bilgi için [denetimlerine nesne bağlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
+  Daha fazla bilgi için bkz. [nesneleri denetimlere bağlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100)).  
   
 - ASP.NET veri kaynağı denetimleri.  
 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ASP.NET Web uygulamalarında veri bağlamayı kolaylaştırmak amacıyla tasarlanmış bir veri kaynağı denetimi içerir. Daha fazla bilgi için [EntityDataSource Web sunucusu denetimine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
+  , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ASP.NET Web uygulamalarında veri bağlamayı basitleştirmek için tasarlanan bir veri kaynağı denetimini içerir. Daha fazla bilgi için bkz. [EntityDataSource Web sunucusu denetimine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100)).  
   
 ## <a name="other-considerations"></a>Diğer Konular  
- Entity Framework uygulamalarını belirli türlerdeki geçirdiğinizde, uygulanabilir dikkat edilecek noktalar aşağıda verilmiştir.  
+ Aşağıda, belirli uygulama türlerini Entity Framework geçirdiğinizde uygulanabilecek noktalar verilmiştir.  
   
-- Veri Hizmetleri kullanıma sunan uygulamalar.  
+- Veri hizmetlerini kullanıma sunan uygulamalar.  
 
-  Web Hizmetleri ve Windows Communication Foundation (WCF) tabanlı uygulamaları istek/yanıt XML ileti biçimi kullanarak bir temel alınan veri kaynağı kullanıma sunar. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İkili, XML, kullanarak varlık nesneleri serileştirmek destekler veya WCF veri sözleşme seri hale getirme. İkili ve WCF serileştirme tam nesne grafiklerini serileştirme destekler. Daha fazla bilgi için [N katmanlı uygulamalar oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
+  Windows Communication Foundation (WCF) tabanlı Web Hizmetleri ve uygulamalar, bir XML istek/yanıt mesajlaşma biçimi kullanarak verileri temel alınan bir veri kaynağından kullanıma sunar. , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] İkili, XML veya WCF veri sözleşmesi serileştirmesi kullanılarak varlık nesnelerinin serileştirmesini destekler. İkili ve WCF serileştirme her ikisi de nesne grafiklerinin tam serileştirmesini destekler. Daha fazla bilgi için bkz. [N katmanlı uygulamalar oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896304(v=vs.100)).  
   
-- XML verilerini kullanan uygulamalar.  
+- XML verileri kullanan uygulamalar.  
 
-  Nesne serileştirme oluşturmanıza olanak sağlar [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri Hizmetleri. Bu hizmetler Internet AJAX tabanlı uygulamalar gibi XML verileri kullanan uygulamalar için veri sağlar. Bu gibi durumlarda kullanmayı [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Şu veri hizmetlerini varlık veri modelini temel ve standart temsili durum aktarımı (REST) HTTP eylemleri kullanarak varlık verilerini dinamik erişim sağlamak gibi Al koy ve gönderin. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../../docs/framework/data/wcf/index.md).  
+  Nesne serileştirme, veri Hizmetleri oluşturmanıza [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] olanak sağlar. Bu hizmetler, AJAX tabanlı Internet uygulamaları gibi XML verilerini kullanan uygulamalara veri sağlar. Bu durumlarda, kullanmayı göz önünde [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]bulundurun. Bu veri Hizmetleri Varlık Veri Modeli tabanlıdır ve al, koy ve postala gibi standart temsili durum aktarımı (REST) HTTP eylemleri kullanılarak varlık verilerine dinamik erişim sağlar. Daha fazla bilgi için [WCF Veri Hizmetleri 4.5](../../../../../docs/framework/data/wcf/index.md).  
   
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yerel XML veri türünü desteklemiyor. Bu, bir XML sütunu içeren bir tabloya bir varlık eşlendiğinde XML sütunu için eşdeğer varlık özelliği bir dize olduğu anlamına gelir. Nesneler, bağlantısı kesilmiş ve XML olarak serileştirilmiş. Daha fazla bilgi için [nesneleri serileştirmek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yerel XML veri türünü desteklemez. Yani bir varlık bir XML sütunu olan bir tabloyla eşlendiğinde, XML sütunu için eşdeğer varlık özelliği bir dizedir. Nesneler, XML olarak kesilebilir ve seri hale getirilebilir. Daha fazla bilgi için bkz. [nesneleri serileştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
-  Uygulamanızın gerektirdiği sorgu XML verileri, LINQ to XML kullanarak LINQ sorgularının avantajlarından alabilir. Daha fazla bilgi için [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) veya [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
+  Uygulamanız XML verilerini sorgulamak için gerekliyse, LINQ to XML kullanarak LINQ sorgularının avantajlarından faydalanabilirsiniz. Daha fazla bilgi için bkz. [LINQ to XMLC#()](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) veya [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
   
-- Durumunu korumak uygulamalar.  
+- Durumu devam eden uygulamalar.  
 
-  ASP.NET Web uygulamaları bir Web sayfasının veya bir kullanıcı oturumunun durumunu sık sürdürmeniz gerekir. Nesneler bir <xref:System.Data.Objects.ObjectContext> örneği istemci görünüm durumu veya sunucu üzerinde oturum durumunu depolanan ve daha sonra alınabilir ve yeni bir nesne bağlamına eklenemeyeceği. Daha fazla bilgi için [iliştirme ve nesneleri ayırmaya](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
+  ASP.NET Web uygulamaları, genellikle bir Web sayfasının veya bir kullanıcı oturumunun durumunu korumalıdır. Bir <xref:System.Data.Objects.ObjectContext> örnekteki nesneler, istemci görünümü durumunda ya da sunucudaki oturum durumunda depolanabilir ve daha sonra yeni bir nesne bağlamına alınmış ve yeniden iliştirilebilir. Daha fazla bilgi için bkz. [nesneleri ekleme ve ayırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

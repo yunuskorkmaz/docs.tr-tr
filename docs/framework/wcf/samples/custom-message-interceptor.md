@@ -2,47 +2,47 @@
 title: Özel İleti Kesici
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 530c626a1f134190bb90fcee3a4e3bbba91d9516
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dfff099a6bf45911f9327622a84a8803ad7dd0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878301"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953665"
 ---
 # <a name="custom-message-interceptor"></a>Özel İleti Kesici
-Bu örnek, kanal genişletilebilirlik modeli kullanımını gösterir. Özellikle, kanal fabrikaları ve tüm gelen ve giden iletileri çalışma zamanı yığını olarak belirli bir noktada ele alınması için kanal dinleyicileri oluşturan özel bağlama öğesinin uygulanması gösterilmektedir. Örnek, bir istemci ve sunucu bu özel fabrikaları kullanımını gösteren de içerir.  
+Bu örnek, kanal genişletilebilirlik modelinin kullanımını gösterir. Özellikle, çalışma zamanı yığınında belirli bir noktada tüm gelen ve giden iletileri kesmeye yönelik kanal fabrikaları ve kanal dinleyicileri oluşturan özel bir bağlama öğesinin nasıl uygulanacağını gösterir. Örnek ayrıca, bu özel fabrikaların kullanımını gösteren bir istemci ve sunucu içerir.  
   
- Bu örnekte, hem istemci hem de hizmet Konsolu programlar (.exe) var. Hem de hizmet ve istemci özel bir bağlama öğesi ve onun ilişkili çalışma zamanı nesneleri içeren bir ortak kitaplığı (.dll) kullanın.  
+ Bu örnekte, hem istemci hem de hizmet konsol programlarıdır (. exe). İstemci ve hizmet, özel bağlama öğesini ve ilişkili çalışma zamanı nesnelerini içeren ortak bir kitaplığı (. dll) kullanır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Örnek kanal çerçevesi kullanarak ve WCF en iyi uygulamaları izleyerek Windows Communication Foundation (WCF) özel katmanlı bir kanal oluşturmak için önerilen yordamı açıklar. Özel bir katmanlı kanal oluşturmak için adımlar aşağıdaki gibidir:  
+ Örnek, kanal çerçevesini ve aşağıdaki WCF en iyi yöntemlerini kullanarak Windows Communication Foundation (WCF) içinde özel bir katmanlı kanal oluşturmak için önerilen yordamı açıklar. Özel katmanlı Kanal oluşturma adımları aşağıdaki gibidir:  
   
-1. Kanal şekillerinin kanal fabrikası ve kanal dinleyicisi destekleyecek karar verebilirsiniz.  
+1. Kanal fabrikasının ve kanal dinleyicinizin hangi kanal şekillerinde destekleyeceği belirleyin.  
   
 2. Kanal fabrikası ve kanal şekillerinizi destekleyen bir kanal dinleyicisi oluşturun.  
   
-3. Bir kanal yığınına özel katmanlı kanal ekleyen bir bağlama öğesi ekleyin.  
+3. Özel katmanlı kanalı bir kanal yığınına ekleyen bir bağlama öğesi ekleyin.  
   
-4. Yeni bağlama öğesi yapılandırma sistemi için kullanıma sunmak için bir bağlama öğesi uzantısı bölümü ekleyin.  
+4. Yeni bağlama öğesini yapılandırma sistemine göstermek için bağlama öğesi uzantısı bölümü ekleyin.  
   
-## <a name="channel-shapes"></a>Kanal şekiller  
- Özel bir katmanlı kanal yazarken ilk adım, hangi şekiller kanal için gerekli olduğuna karar sağlamaktır. Aşağıda bize katmanı destekleyen herhangi bir şekil destekliyoruz bizim ileti denetçisi için (örneğin, aşağıda bize katman oluşturabilirsiniz, <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, sonra da kullanıma sunuyoruz <xref:System.ServiceModel.Channels.IOutputChannel> ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
+## <a name="channel-shapes"></a>Kanal şekilleri  
+ Özel katmanlı kanal yazmanın ilk adımı, kanal için hangi şekillerin gerekli olduğuna karar vermeye yöneliktir. İleti denetçimiz için, altındaki katmanın desteklediği herhangi <xref:System.ServiceModel.Channels.IOutputChannel> bir şekli destekliyoruz (örneğin, ABD altındaki katmanın ve <xref:System.ServiceModel.Channels.IDuplexSessionChannel>oluşturup, <xref:System.ServiceModel.Channels.IDuplexSessionChannel>daha sonra da kullanıma sunduğumuz <xref:System.ServiceModel.Channels.IOutputChannel> ).  
   
 ## <a name="channel-factory-and-listener-factory"></a>Kanal fabrikası ve dinleyici fabrikası  
- Sonraki adım özel bir katmanlı kanal yazma uygulaması oluşturmaktır <xref:System.ServiceModel.Channels.IChannelFactory> ve istemci kanallar için <xref:System.ServiceModel.Channels.IChannelListener> hizmet kanalları için.  
+ Özel katmanlı kanal yazmanın bir sonraki adımı, istemci kanalları <xref:System.ServiceModel.Channels.IChannelFactory> <xref:System.ServiceModel.Channels.IChannelListener> ve hizmet kanalları için bir uygulama oluşturmaktır.  
   
- Bu sınıfların bir iç Fabrika ve dinleyici ve temsilci dışındaki tüm `OnCreateChannel` ve `OnAcceptChannel` iç Fabrika ve dinleyici çağrıları.  
+ Bu sınıflar bir iç fabrika ve dinleyici alır ve tüm, `OnCreateChannel` `OnAcceptChannel` iç fabrika ve dinleyiciye çağrıları hariç tüm bunları devredebilir.  
   
 ```  
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
@@ -51,25 +51,25 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 { ... }  
 ```  
   
-## <a name="adding-a-binding-element"></a>Bir bağlama öğesi ekleniyor  
- Örnek bir özel bağlama öğesi tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement` alan bir `ChannelMessageInterceptor` girdi olarak ve bu kullanır `ChannelMessageInterceptor` aracılığıyla iletileri işlemek için. Bu ortak olmalıdır, yalnızca bir sınıftır. Fabrika, dinleyici ve kanalları tüm ortak arabirimlerin çalışma zamanı iç uygulamaları olabilir.  
+## <a name="adding-a-binding-element"></a>Bağlama öğesi ekleme  
+ Örnek, özel bir bağlama öğesi tanımlar: `InterceptingBindingElement`. `InterceptingBindingElement`bir `ChannelMessageInterceptor` giriş olarak alır ve bunu, üzerinden geçen `ChannelMessageInterceptor` iletileri işlemek için kullanır. Bu, genel olması gereken tek sınıftır. Fabrika, dinleyici ve kanalların hepsi, genel çalışma zamanı arabirimlerinin iç uygulamaları olabilir.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
 ```  
   
 ## <a name="adding-configuration-support"></a>Yapılandırma desteği ekleme  
- Bağlama yapılandırması ile tümleştirmek için bir yapılandırma bölümü işleyicisi kitaplığı bir bağlama öğesi uzantısı bölümü tanımlar. İstemci ve sunucu yapılandırma dosyalarını bağlama öğesi uzantısı yapılandırma sistemi ile kaydetmeniz gerekir. Yapılandırma sistemi için kendi bağlama öğesi kullanıma sunmak istiyorsanız uygulayıcılar, bu sınıftan türetebilirsiniz.  
+ Bağlama yapılandırması ile tümleştirme için, kitaplık bir yapılandırma bölümü işleyicisini bağlama öğesi uzantısı bölümü olarak tanımlar. İstemci ve sunucu yapılandırma dosyaları, bağlama öğesi uzantısını yapılandırma sistemine kaydetmelidir. Bağlama öğelerini yapılandırma sistemine sunmak isteyen uygulayıcılar bu sınıftan türetilebilir.  
   
 ```  
 public abstract class InterceptingElement : BindingElementExtensionElement { ... }  
 ```  
   
-## <a name="adding-policy"></a>İlke ekleme  
- İlke sistemimiz ile tümleştirmek için `InterceptingBindingElement` biz ilkesi oluşturmak alması gereken sinyal IPolicyExportExtension uygular. İçeri aktarma İlkesi oluşturulan bir istemcide desteklemek için kullanıcı, türetilmiş bir sınıf kaydedebilirsiniz `InterceptingBindingElementImporter` ve geçersiz kılma `CreateMessageInterceptor`kendi ilke etkin oluşturmak için () `ChannelMessageInterceptor` sınıfı.  
+## <a name="adding-policy"></a>Ilke ekleniyor  
+ İlke sistemimizi tümleştirmek için, `InterceptingBindingElement` ilke oluşturmaya katılabilmemiz için IPolicyExportExtension 'ı uygular. Oluşturulan bir istemcide ilke içeri aktarmayı desteklemek için Kullanıcı, ilke etkin `InterceptingBindingElementImporter` `ChannelMessageInterceptor` sınıfını oluşturmak üzere türetilmiş bir sınıfı kaydedebilir `CreateMessageInterceptor`ve geçersiz kılabilir ().  
   
-## <a name="example-droppable-message-inspector"></a>Örnek: Droppable ileti denetçisi  
- Örnekte bulunan örnek uygulamasıdır `ChannelMessageInspector` iletilerini bırakır.  
+## <a name="example-droppable-message-inspector"></a>Örnek: Açılan Ileti denetçisi  
+ Örneğe dahil edilen örnek, iletileri bırakılanlar örnek `ChannelMessageInspector` uygulamasıdır.  
   
 ```  
 class DroppingServerElement : InterceptingElement  
@@ -81,7 +81,7 @@ class DroppingServerElement : InterceptingElement
 }  
 ```  
   
- Bunu yapılandırmasından aşağıdaki gibi erişebilirsiniz:  
+ Bu yapılandırmaya aşağıdaki gibi erişebilirsiniz:  
   
 ```xml  
 <configuration>  
@@ -99,7 +99,7 @@ class DroppingServerElement : InterceptingElement
 </configuration>  
 ```  
   
- İstemci ve sunucu en düşük düzey (yukarıda aktarım düzeyi), çalışma zamanı kanal yığınlarının özel fabrikaları eklemek için bu yeni oluşturulan yapılandırma bölümü kullanın.  
+ İstemci ve sunucu, bu yeni oluşturulan yapılandırma bölümünü, özel fabrikaları çalışma zamanı kanal yığınlarının en düşük düzeyine (aktarım düzeyinin üzerinde) eklemek için kullanır.  
   
 ```xml  
 <customBinding>  
@@ -110,9 +110,9 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- İstemcinin kullandığı `MessageInterceptor` bile özel bir başlık eklemek için kitaplık numaralı iletileri. Öte yandan hizmetin kullandığı `MessageInterceptor` kitaplığını kullanarak bu özel üstbilgi olmayan herhangi bir iletiyi bırak.  
+ İstemci, `MessageInterceptor` hatta numaralandırılmış iletilere özel bir üst bilgi eklemek için kitaplığı kullanır. Diğer taraftaki hizmet, bu özel üst `MessageInterceptor` bilgisine sahip olmayan iletileri bırakmak için kitaplığı kullanır.  
   
- Hizmet ve istemci çalıştırdıktan sonra istemci aşağıdaki çıktıyı görmeniz gerekir.  
+ Hizmetini ve ardından istemcisini çalıştırdıktan sonra aşağıdaki istemci çıktısını görmeniz gerekir.  
   
 ```  
 Reporting the next 10 wind speed  
@@ -134,7 +134,7 @@ Server dropped a message.
 Press ENTER to shut down client  
 ```  
   
- İstemci hizmete 10 farklı Rüzgar hızı raporları, ancak yalnızca yarısını özel üstbilginin onlarla etiketler.  
+ İstemci, hizmete farklı bir rüzgar hızı bildirir, ancak yalnızca özel üst bilgiyle bu etiketlerin yarısını Etiketler.  
   
  Hizmette aşağıdaki çıktıyı görmeniz gerekir:  
   
@@ -145,18 +145,18 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 5 wind speed reports have been received.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-5. Client.exe çalıştırın ve her iki konsol penceresi çıktısı için izleme Service.exe çalıştırın.  
+5. Önce Service. exe ' yi çalıştırın, sonra Client. exe ' yi çalıştırın ve her iki konsol pencerelerini de çıktı  

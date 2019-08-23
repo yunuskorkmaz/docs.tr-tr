@@ -5,100 +5,100 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 9a38ec444c51560cab48db1b39ae331f728fba30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0923fa70907a4846924395483c86e541cd88f284
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635664"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964975"
 ---
 # <a name="accessing-services-using-a-client"></a>İstemci Kullanarak Hizmetlere Erişme
-İstemci uygulamaları oluşturmak, yapılandırmak ve WCF istemci veya kanal nesneleri Hizmetleri ile iletişim kurmak için kullanmanız gerekir. [WCF istemcisi genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konu nesneleri ve adımlarını temel istemci ve kanal nesneleri oluşturma ve bunları kullanarak genel bir bakış sağlar.  
+İstemci uygulamaları, hizmetlerle iletişim kurmak için WCF istemcisi veya kanal nesneleri oluşturmalı, yapılandırmalıdır ve kullanmalıdır. [WCF Istemci genel bakış](../../../../docs/framework/wcf/wcf-client-overview.md) konusu, temel istemci ve kanal nesneleri oluşturma ve bunları kullanma konularında yer alan nesneler ve adımlara genel bir bakış sağlar.  
   
- Bu konu, uygulamaları ve kendi senaryonuza bağlı olarak yararlı olabilecek istemci ve kanal nesneleri istemci ile bazı sorunlar hakkında ayrıntılı bilgi sağlar.  
+ Bu konu, senaryonuza bağlı olarak yararlı olabilecek istemci uygulamaları ve istemci ve kanal nesneleri ile ilgili bazı sorunlar hakkında ayrıntılı bilgi sağlar.  
   
 ## <a name="overview"></a>Genel Bakış  
- Bu konu, davranışı ve ilgili sorunları açıklar:  
+ Bu konuda ile ilgili davranış ve sorunlar açıklanmaktadır:  
   
-- Kanal ve oturum yaşam süresi yok.  
+- Kanal ve oturum yaşam süreleri.  
   
-- Özel durum işleme.  
+- Özel durumları işleme.  
   
-- Engelleme sorunları anlama.  
+- Engelleme sorunlarını anlama.  
   
-- Kanalları etkileşimli olarak başlatılıyor.  
+- Kanalları etkileşimli olarak başlatma.  
   
-### <a name="channel-and-session-lifetimes"></a>Kanal ve oturum süreleri  
- Windows Communication Foundation (WCF) uygulamaları Kanallar, veri birimi ve sessionful iki kategorisi içerir.  
+### <a name="channel-and-session-lifetimes"></a>Kanal ve oturum yaşam süreleri  
+ Windows Communication Foundation (WCF) uygulamaları iki kanal, datagram ve oturumsuz kategori içerir.  
   
- A *veri birimi* tüm iletileri olduğu uncorrelated bir kanal kanalıdır. Bir veri birimi kanalına sahip bir giriş veya çıkış işlem başarısız olursa, sonraki işlemi genellikle etkilenmez ve aynı kanalı yeniden kullanılabilir. Bu nedenle, veri birimi kanalları genellikle hata değil.  
+ *Veri birimi* kanalı, tüm iletilerin bağıntısız olduğu bir kanaldır. Bir veri birimi kanalı ile bir giriş veya çıkış işlemi başarısız olursa, sonraki işlem genellikle etkilenmemiştir ve aynı kanal yeniden kullanılabilir. Bu nedenle, datagram kanalları genellikle hata vermez.  
   
- *Sessionful* Kanallar, ancak başka bir uç noktası bağlantısı kanallarla değildir. Bir tarafta bir oturumda ileti her zaman diğer tarafta aynı oturumu ile ilişkilendirilir. Ayrıca, her iki katılımcıları bir oturumda, konuşma gereksinimlerini o oturum başarılı olarak değerlendirilmesi karşılanmadı kabul etmelisiniz. Kullanıcının kabul etmesi olamaz, oturum kanalı hata.  
+ Ancak *oturumsuz* kanallar, diğer uç noktayla bağlantısı olan kanallardır. Bir taraftaki oturumdaki iletiler, her zaman diğer taraftaki aynı oturumla bağıntılı. Ayrıca, bir oturumdaki her iki katılımcı da bu oturumun başarılı olarak kabul edilmesi için, konuşmaları gereksinimlerinin karşılandığını kabul etmelidir. Kabul etmiyorsanız, oturumsuz kanal hata verebilir.  
   
- İstemciler, ilk işlem çağırarak açıkça veya dolaylı olarak açın.  
+ İlk işlemi çağırarak istemcileri açıkça veya örtük olarak açın.  
   
 > [!NOTE]
->  Açıkça hatalı oturumdaki kanallar algılanmaya çalışılırken, ne zaman size bildirilir oturuma uygulama bağlı olduğundan genellikle kullanışlı değildir. Örneğin, çünkü <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> dinlemek için TCP bağlantısı oturumu (devre dışı güvenilir oturum ile) yüzeyler <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> hizmet veya bir ağ hatası durumunda hızlı bir şekilde bildirilmesi büyük olasılıkla istemci olayı. Ancak güvenilir oturumlar (burada bağlamalar tarafından kurulan <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> etkin) küçük ağ hataları hizmetlerinden sorunlardan uzak tutmak için tasarlanmıştır. Oturum zamanı, aynı bağlama makul bir süre içinde kurulmaları durumunda — güvenilir oturumlar için yapılandırılmış — uzun bir süre kesintiye devam kadar hata değil.  
+> Hatalı oturumsuz kanalların açıkça algılanmasıyla çalışılması, size bildirimde bulunulduğundan oturum uygulamaya bağlı olarak, genellikle yararlı değildir. Örneğin, (güvenilir oturum <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> devre dışı bırakılmış), TCP bağlantısının oturumunu yüzey halinde sunırsanız, hizmette veya istemcide <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> olay dinlerken bir ağ arızası durumunda hızlı bir şekilde bildirilmesini sağlayabilirsiniz. Ancak, güvenilir oturumlar (etkin olduğu <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> bağlamalar tarafından oluşturulan), küçük ağ arızalarındaki hizmetleri tahmin etmek için tasarlanmıştır. Oturum makul bir süre içinde yeniden kurulmuyorsa, güvenilir oturumlar için yapılandırılmış aynı bağlama — daha uzun bir süre boyunca kesilene kadar hata olmayabilir.  
   
- (Bu uygulama katmanına kanallara kullanıma sunma) sistem tarafından sağlanan bağlamalar çoğunu varsayılan olarak, oturumları kullanın ancak <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> desteklemez. Daha fazla bilgi için [oturumları kullanarak](../../../../docs/framework/wcf/using-sessions.md).  
+ Sistem tarafından sunulan bağlamaların (kanalları uygulama katmanında kullanıma sunma) çoğu oturumları varsayılan olarak kullanır, ancak <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> yapmaz. Daha fazla bilgi için bkz. [oturumları kullanma](../../../../docs/framework/wcf/using-sessions.md).  
   
-### <a name="the-proper-use-of-sessions"></a>Oturumlarının doğru kullanımı  
- Oturumlarının tüm ileti alışverişi tamamlandıktan ve her iki tarafında da başarılı kabul öğrenmek için bir yol sağlar. Çağıran uygulama kanal açın, kullanmak ve bir try bloğu içinde kanalı önerilir. Bir oturum kanalı açıksa ve <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> yöntemi bir kez çağrılır ve o çağrının başarıyla döndürür, ardından oturumu başarılı oldu. Başarılı bu durumda, belirtilen bağlama tüm teslimi garanti anlamına gelir karşılanmadı ve diğer tarafı çağrılmayan <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> çağırmadan önce kanalda <xref:System.ServiceModel.ICommunicationObject.Close%2A>.  
+### <a name="the-proper-use-of-sessions"></a>Oturumların uygun kullanımı  
+ Oturumlar, tüm ileti alışverişi tamamlandı ve her iki taraf da başarılı olarak kabul edildiğinde bilmemiz için bir yol sağlar. Çağıran bir uygulamanın kanalı açması, onu kullanması ve kanalı bir try bloğu içinde kapatması önerilir. Bir oturum kanalı açıksa ve <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> yöntemi bir kez çağrılırsa ve bu çağrı başarıyla döndürülürse, oturum başarılı olmuştur. Bu durumda başarılı oldu, tüm teslimin belirtilen bağlamanın karşılandığından ve diğer tarafın çağrılmadan <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> <xref:System.ServiceModel.ICommunicationObject.Close%2A>önce kanalda çağırmadığından emin olduğu anlamına gelir.  
   
- Aşağıdaki bölümde bu istemci yaklaşımın bir örneği olarak sağlanır.  
+ Aşağıdaki bölümde bu istemci yaklaşımına bir örnek verilmiştir.  
   
 ### <a name="handling-exceptions"></a>Özel Durumları İşleme  
- İstemci uygulamalarında özel durumları işleme oldukça basittir. Bir kanalı açıldı, kullanıldığı ve bir try bloğu içinde kapalı değilse bir özel durum sürece ardından konuşma, başarılı oldu. Genellikle, bir özel durum oluşturulursa konuşma iptal edildi.  
+ İstemci uygulamalarında özel durumların işlenmesi basittir. Bir kanal açılırsa, kullanıldığında ve bir try bloğu içinde kapatılırsa, bir özel durum oluşturulmadığı takdirde konuşma başarılı olur. Genellikle, bir özel durum oluşturulursa, konuşma iptal edilir.  
   
 > [!NOTE]
->  Kullanım `using` deyimi (`Using` Visual Basic'te) önerilmez. Bunun nedeni, sonuna `using` deyimi hakkında bilmeniz gereken diğer özel durumları maskeleyebilir özel durumlara neden olabilir. Daha fazla bilgi için [kullanım Kapat ve iptal WCF istemci kaynaklar serbest bırakılacaksa](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
+> Deyimin kullanımı (`Using` Visual Basic) önerilmez. `using` Bunun nedeni, `using` deyimin sonunun hakkında bilmeniz gerekebilecek diğer özel durumları maskeleyebilir. Daha fazla bilgi için bkz. [Close ve Abort kullanarak WCF istemci kaynaklarını serbest bırakma](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md).  
   
- Aşağıdaki kod örneği bir try/catch bloğu kullanarak önerilen istemci desenini gösterir ve `using` deyimi.  
+ Aşağıdaki kod örneği, `using` ifadesiyle değil, bir try/catch bloğu kullanarak önerilen istemci modelini gösterir.  
   
  [!code-csharp[FaultContractAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 > [!NOTE]
->  Değerini kontrol <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> özelliği bir yarış durumu ve yeniden kullanabilir veya bir kanalı belirlemek için önerilmez.  
+> <xref:System.ServiceModel.ICommunicationObject.State%2A?displayProperty=nameWithType> Özelliğin değerinin denetlenmesi bir yarış durumudur ve bir kanalın yeniden kullanılıp kullanılmayacağını veya kapatılmasını belirlemekte önerilmez.  
   
- Veri birimi kanalları, hiçbir zaman kapatıldığında, bunlar özel durum oluşsa bile hata. Ayrıca, genellikle bir güvenli konuşma kullanarak kimlik doğrulaması için başarısız olmayan yönlü istemciler durum bir <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>. Ancak bir güvenli konuşma kullanarak çift yönlü istemci kimlik doğrulaması başarısız olursa istemci alır bir <xref:System.TimeoutException?displayProperty=nameWithType> yerine.  
+ Veri birimi kanalları kapandığında özel durumlar gerçekleşse bile hiçbir zaman hata vermez. Ayrıca, güvenli bir konuşma kullanarak kimlik doğrulaması başarısız olan ve çift yönlü olmayan istemciler genellikle bir <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>oluşturur. Ancak güvenli bir konuşma kullanan çift yönlü istemci kimlik doğrulaması yapamazsa, istemci bunun yerine bir <xref:System.TimeoutException?displayProperty=nameWithType> alır.  
   
- Uygulama düzeyinde hata bilgileri ile çalışma hakkında daha ayrıntılı bilgi için bkz. [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) beklenen özel durumlar açıklar ve bunların nasıl ele alınacağını gösterir. Geliştirme kanalları, hataları işleme hakkında daha fazla bilgi için bkz [özel durum işleme ve hataları](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
+ Uygulama düzeyinde hata bilgileriyle çalışma hakkında daha ayrıntılı bilgi için bkz. [sözleşmeleri ve Hizmetleri kullanarak hataları belirtme ve işleme](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md). [Beklenen özel durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md) beklenen özel durumları açıklar ve bunların nasıl işleneceğini gösterir. Kanalları geliştirirken hataların nasıl işleneceği hakkında daha fazla bilgi için bkz. [özel durumları ve hataları işleme](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md).  
   
 ### <a name="client-blocking-and-performance"></a>İstemci engelleme ve performans  
- Bir uygulama zaman uyumlu olarak çağırdığında bir istek-yanıt işleminde, dönüş değeri alınana kadar istemci blokları veya bir özel durum (gibi bir <xref:System.TimeoutException?displayProperty=nameWithType>) oluşturulur. Bu davranış, yerel davranışına benzer. Bir uygulamayı WCF istemci nesnesi veya kanal üzerinde bir işlem zaman uyumlu olarak çağırdığında, ağ veya bir özel durum kadar kanal katmanını veri yazabilirsiniz kadar istemci döndürmez. Tek yönlü ileti değişim deseni ederken (bir işlem ile işaretleyerek belirtilen <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> kümesine `true`) bağlama ve hangi ileti zaten silinmiş bağlı olarak daha hızlı yanıt, tek yönlü işlem da engeller, bazı istemciler yapabilirsiniz gönderilir. Yalnızca ileti exchange hakkında daha fazla ve en az tek yönlü işlemlerdir. Daha fazla bilgi için [One-Way Hizmetleri](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
+ Bir uygulama bir istek-yanıt işlemini zaman uyumlu olarak çağırdığında, istemci, dönüş değeri alınana veya bir özel durum (örneğin bir <xref:System.TimeoutException?displayProperty=nameWithType>) atılana kadar engeller. Bu davranış, yerel davranışa benzer. Bir uygulama bir WCF istemci nesnesi veya kanalında eşzamanlı olarak bir işlem çağırdığında, istemci kanal katmanı verileri ağa yazana veya bir özel durum oluşturuluncaya kadar döndürmez. Tek yönlü ileti değişimi deseninin (bir işlem olarak <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> `true`ayarlanmış bir işlem olarak işaretleyerek belirtilen) bazı istemcilerin daha hızlı yanıt vermesine yol açabilir ve bağlamaya bağlı olarak tek yönlü işlemler de engelleyebilirler gönderilip. Tek yönlü işlemler yalnızca ileti alışverişi hakkında, daha az ve daha az değildir. Daha fazla bilgi için bkz. [tek yönlü hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md).  
   
- Büyük veri öbekleri hangi ileti değişim deseni ne olursa olsun işleme istemci yavaşlatabilir. Bu sorunların nasıl ele alınacağını anlamak için bkz: [büyük veriler ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
+ Büyük veri öbekleri ileti değişimi düzeniyle ne fark etmeksizin istemci işlemesini yavaşlatabilir. Bu sorunları nasıl işleyeceğinizi anlamak için bkz. [büyük veri ve akış](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md).  
   
- Bir işlem tamamlanırken uygulamanızı daha fazla iş yapmanız gereken, zaman uyumsuz yöntem çifti WCF istemci uygulayan hizmet sözleşme arabirimi oluşturmanız gerekir. Bunu yapmanın en kolay yolu kullanmaktır `/async` açın [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Bir örnek için bkz [nasıl yapılır: Hizmet işlemlerini zaman uyumsuz çağırma](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
+ Bir işlem tamamlandığında uygulamanız daha fazla iş yapabilmelidir, WCF istemcinizin uyguladığı hizmet sözleşmesi arabiriminde zaman uyumsuz bir yöntem çifti oluşturmanız gerekir. Bunu yapmanın en kolay yolu, `/async` [ServiceModel meta veri yardımcı programı aracında (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)anahtarı kullanmaktır. Bir örnek için bkz [. nasıl yapılır: Hizmet Işlemlerini zaman uyumsuz](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)olarak çağırın.  
   
- İstemci performansı artırma hakkında daha fazla bilgi için bkz. [orta katman istemci uygulamaları](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
+ İstemci performansını artırma hakkında daha fazla bilgi için bkz. [Orta katman Istemci uygulamaları](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md).  
   
-### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Kullanıcı kimlik bilgileri dinamik olarak seçmek etkinleştirme  
- <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> Arabirimi kullanıcının kimlik bilgileri ile bir kanalı oluşturulduğu zaman aşımı zamanlayıcılar önce seçmesini sağlayan bir kullanıcı arabirimini görüntülemek uygulamalar sağlar.  
+### <a name="enabling-the-user-to-select-credentials-dynamically"></a>Kullanıcının kimlik bilgilerini dinamik olarak seçmesini sağlama  
+ <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> Arabirim, uygulamanın, zaman aşımı zamanlayıcılar başlamadan önce bir kanalın oluşturulduğu kimlik bilgilerini seçmesini sağlayan bir kullanıcı arabirimi görüntülemesine olanak sağlar.  
   
- Uygulama geliştiricileri yapabilir eklenen bir kullanın <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> iki yolla. İstemci uygulaması da çağırabilir <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (veya zaman uyumsuz bir sürümü) kanal açmadan önce ( *açık* yaklaşım) veya ilk işlem çağırma ( *örtük*yaklaşım).  
+ Uygulama geliştiricileri, ekleneni <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> iki şekilde kullanabilir. İstemci uygulaması, kanalı açmadan ( <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> *Açık* yaklaşım) veya ilk işlemi ( *örtük* yaklaşım) çağırmadan önce ya da <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (ya da bir zaman uyumsuz sürüm) çağırabilir.  
   
- Örtük yaklaşımı kullanarak, uygulamanın ilk işlem üzerinde çağırmalıdır bir <xref:System.ServiceModel.ClientBase%601> veya <xref:System.ServiceModel.IClientChannel> uzantısı. İlk işlemin dışında her şey çağırırsa, bir özel durum oluşturulur.  
+ Örtük yaklaşım kullanılıyorsa, uygulamanın bir <xref:System.ServiceModel.ClientBase%601> veya <xref:System.ServiceModel.IClientChannel> uzantısında ilk işlemi çağırması gerekir. İlk işlem dışında bir şey çağırırsa, bir özel durum oluşturulur.  
   
- Uygulama açık yaklaşımı kullanarak, aşağıdaki adımları sırayla gerçekleştirmeniz gerekir:  
+ Açık yaklaşımı kullanıyorsanız, uygulamanın sırasıyla aşağıdaki adımları gerçekleştirmesi gerekir:  
   
-1. Çağırın ya da <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (veya zaman uyumsuz bir sürümü).  
+1. <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> Ya<xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> da (ya da zaman uyumsuz bir sürüm) çağırın.  
   
-2. Başlatıcılar döndürüldüğünde çağırın ya da <xref:System.ServiceModel.ICommunicationObject.Open%2A> metodunda <xref:System.ServiceModel.IClientChannel> nesne veya <xref:System.ServiceModel.IClientChannel> döndürülen nesne <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> özelliği.  
+2. Başlatıcılar <xref:System.ServiceModel.ICommunicationObject.Open%2A> döndürüldüğünde, <xref:System.ServiceModel.IClientChannel> nesne üzerinde veya <xref:System.ServiceModel.IClientChannel> <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> özelliğinden döndürülen nesnede yöntemi çağırın.  
   
-3. İşlemleri çağırın.  
+3. Çağrı işlemleri.  
   
- Üretim kalitesindeki uygulamaları açık bir yaklaşım benimseyerek kullanıcı arabirimi işlemini denetleyen önerilir.  
+ Üretim kalitesi uygulamalarının, açık yaklaşımı benimseerek Kullanıcı arabirimi sürecini denetlemekte olması önerilir.  
   
- Örtük bir yaklaşım kullanan uygulamaları kullanıcı arabirimi başlatıcılar çağırmak, ancak uygulamanın kullanıcı bağlama gönderme zaman aşımı süresi içinde yanıt vermezse, kullanıcı arabirimi döndürdüğünde bir özel durum oluşturulur.  
+ Örtük yaklaşımı kullanan uygulamalar Kullanıcı arabirimi başlatıcıları çağırır, ancak uygulamanın kullanıcısı bağlamanın zaman aşımı süresi içinde yanıt vermezse, Kullanıcı arabirimi geri döndüğünde bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [Nasıl yapılır: Erişim Hizmetleri tek yönlü ve istek-yanıt sözleşmeleriyle](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Nasıl yapılır: WSE 3.0 Erişim hizmeti](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Nasıl yapılır: Tek yönlü ve Istek-yanıt sözleşmeleriyle hizmetlere erişin](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişme](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Nasıl yapılır: WVA3,0 hizmetine erişme](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [Nasıl yapılır: Hizmet işlemlerini zaman uyumsuz olarak çağırma](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Nasıl yapılır: Hizmet Işlemlerini zaman uyumsuz olarak çağır](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [Orta Katman İstemci Uygulamaları](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

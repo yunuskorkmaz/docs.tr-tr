@@ -9,34 +9,34 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5727bab8e06decde6ccff8b84515f82c3d491a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910701"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
-Uzaktan iletişimini uygulama etki alanları, işlemleri veya bilgisayarlar arasında çağırma saydam ayarlamanıza olanak sağlar. Ancak, kod erişim güvenlik yığın İlerlemesi (aynı işlemde uygulama etki alanları arasında geçerli) işlem veya makine sınırları geçemez.  
+Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arasında şeffaf çağrı ayarlamanıza olanak sağlar. Ancak, kod erişimi güvenlik yığını, işleme veya makine sınırları üzerinde olamaz (aynı işlemin uygulama etki alanları arasında geçerlidir).  
   
- Uzaktan erişilebilir herhangi bir sınıf (türetilmiş bir <xref:System.MarshalByRefObject> sınıfı) güvenlik sorumluluğunu yapması gerekmez. Ya da kod kapalı ortamları yalnızca burada çağıran kod örtük olarak güvenilir olabilir veya uzaktan iletişim çağrıları, böylece bunlar korumalı kod kötü amaçla kullanılabilecek dış girişe edilmez tasarlanmalıdır kullanılmalıdır.  
+ Uzaktan erişilebilen herhangi bir sınıfın (bir <xref:System.MarshalByRefObject> sınıftan türetilmiş) güvenlik için sorumluluğu olması gerekir. Kod, yalnızca çağıran kodun örtük olarak güvendiği kapalı ortamlarda kullanılmalıdır veya korumalı kodu, kötü amaçlı olarak kullanılabilecek bir girdinin dışına çıkarmaması için uzaktan iletişim aramaları tasarlanmalıdır.  
   
- Genellikle, hiçbir zaman yöntemleri, özellikleri ve bildirim temelli tarafından korunan olayları açığa [LinkDemand](../../../docs/framework/misc/link-demands.md) ve <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> güvenlik denetimleri. Uzaktan iletişimi ile bu denetimleri zorunlu değildir. Diğer güvenlik denetimlerini, gibi <xref:System.Security.Permissions.SecurityAction.Demand>, [Assert](../../../docs/framework/misc/using-the-assert-method.md)ve benzeri bir işlem içinde uygulama etki alanları arasında çalışır ancak çapraz işlem veya çapraz makine senaryolarda çalışmaz.  
+ Genellikle, bildirim temelli [bağlantı isteği](../../../docs/framework/misc/link-demands.md) ve <xref:System.Security.Permissions.SecurityAction.InheritanceDemand> güvenlik denetimleri ile korunan yöntemleri, özellikleri veya olayları asla kullanıma sunmamanız gerekir. Remoting ile bu denetimler zorlanmaz. <xref:System.Security.Permissions.SecurityAction.Demand>, [Onaylama](../../../docs/framework/misc/using-the-assert-method.md), vb. gibi diğer güvenlik denetimleri, bir işlem içinde uygulama etki alanları arasında çalışır, ancak çapraz işlem veya çapraz makine senaryolarında çalışmaz.  
   
 ## <a name="protected-objects"></a>Korumalı nesneler  
- Bazı nesneler kendilerini güvenlik durumda tutun. Bu nesneler, ardından kendi izinlerini dışında bir güvenlik yetkilendirmesi sahip olabilir güvenilmeyen koda geçirilmemelidir.  
+ Bazı nesneler güvenlik durumunu kendi başlarına tutar. Bu nesneler güvenilmeyen koda geçirilmemelidir, bu da kendi izinlerinin ötesinde güvenlik yetkilendirmesi elde etmez.  
   
- Bir örnek oluşturduğundan bir <xref:System.IO.FileStream> nesne. <xref:System.Security.Permissions.FileIOPermission> Oluşturma sırasında talep ve başarılı olursa dosya nesne döndürülür. Ancak, bu nesne başvurusu, kod dosya izinleri olmadan aktarılırsa nesne okumak ve bu belirli bir dosyaya yazmak mümkün olacaktır.  
+ Bir örnek, bir <xref:System.IO.FileStream> nesne oluşturuyor. , <xref:System.Security.Permissions.FileIOPermission> Oluşturma sırasında talep edilir ve başarılı olursa dosya nesnesi döndürülür. Ancak, bu nesne başvurusu dosya izinleri olmadan koda geçirilirse, nesne bu belirli dosyayı okuyup yazabilir.  
   
- Böyle bir nesne için basit defense aynı talep olmaktır **FileIOPermission** ortak bir API öğesi aracılığıyla nesne başvurusu almak için arayan herhangi bir kod.  
+ Böyle bir nesne için en basit savunma, bir ortak API öğesi aracılığıyla nesne başvurusunu almak üzere arayan herhangi bir kod için aynı **Dosya** adını talep etmek içindir.  
   
-## <a name="application-domain-crossing-issues"></a>Uygulama etki alanı kesişim sorunları  
- Yönetilen barındırma ortamları kodda yalıtmak için çeşitli derlemeler için izin düzeylerini azaltma açık İlkesi ile birden çok alt uygulama etki alanları oluşturmak için yaygındır. Bununla birlikte, varsayılan uygulama etki alanında bu derlemeler için ilke değişmeden kalır. Bir alt uygulama etki alanlarının bir derlemeyi yüklemek için varsayılan uygulama etki alanı zorunlu kılabilirsiniz, kod yalıtım etkisini kaybolur ve zorla yüklü bütünleştirilmiş kodundaki türler daha yüksek bir güven düzeyinde kodu çalıştırmak mümkün olacaktır.  
+## <a name="application-domain-crossing-issues"></a>Uygulama etki alanı kesişen sorunlar  
+ Yönetilen barındırma ortamlarında kodu yalıtmak için, çeşitli derlemeler için izin düzeylerini azaltan açık ilkeyle birden çok alt uygulama etki alanı oluşturmak yaygındır. Ancak, bu derlemelerin ilkesi varsayılan uygulama etki alanında değişmeden kalır. Alt uygulama etki alanlarından biri varsayılan uygulama etki alanını bir derlemeyi yüklemeye zorlabiliyor ise, kod yalıtımının etkisi kaybolur ve zorla yüklenen derlemedeki türler daha yüksek bir güven düzeyinde kod çalıştırabilecektir.  
   
- Uygulama etki alanı, bir derlemeyi yüklemek ve diğer uygulama etki alanında barındırılan bir nesne için bir proxy çağırarak içlerindeki kodu çalıştırmak için başka bir uygulama etki alanı zorlayabilirsiniz. Bir uygulama etki alanları arası proxy almak için nesneyi barındırma uygulama etki alanı yöntemi çağrısı parametre veya dönüş değerindeki aracılığıyla dağıtmanız gerekir. Veya, uygulama etki alanı yalnızca oluşturulmuş olsa bile, bir proxy Oluşturucusu olan <xref:System.AppDomain> varsayılan nesne. Bu nedenle, yalıtım kodu bozmayı önlemek için daha yüksek bir güven düzeyi içeren bir uygulama etki alanı sıralanmış-tarafından-başvuru nesnelere başvurular dağıtmak değil (sınıfından türetilen sınıfların örneklerini <xref:System.MarshalByRefObject>) düşük ile uygulama etki alanlarına etki alanında güven düzeyleri.  
+ Bir uygulama etki alanı, başka bir uygulama etki alanının bir derlemeyi yüklemesine ve bir proxy 'yi diğer uygulama etki alanında barındırılan bir nesneye çağırarak içinde yer alan kodu çalıştırmasına zorlayabilir. Çapraz uygulama etki alanı proxy 'si almak için, nesneyi barındıran uygulama etki alanının bir yöntem çağrısı parametresi veya dönüş değeri aracılığıyla bir tane dağıtması gerekir. Ya da uygulama etki alanı yeni oluşturulduysa, oluşturucunun varsayılan olarak <xref:System.AppDomain> nesnesine bir proxy 'si vardır. Bu nedenle, kod yalıtımının kesilmesini önlemek için, daha yüksek bir güven düzeyine sahip bir uygulama etki alanı, etki alanında bulunan başvuru nesnelerine (sınıfından <xref:System.MarshalByRefObject>türetilmiş sınıfların örnekleri), daha düşük olan uygulama etki alanlarına başvuruları dağıtmamalıdır güven düzeyleri.  
   
- Genellikle, varsayılan uygulama etki alanı ile denetim nesnesi içindeki her bir uygulama etki alanları alt oluşturur. Denetim nesnesi yeni uygulama etki alanı yönetir ve bazen varsayılan uygulama etki alanından siparişleri alır, ancak bu gerçekten etki alanını doğrudan iletişim kuramaz. Bazen, varsayılan uygulama etki alanı kendi proxy denetimi nesneye çağırır. Bununla birlikte, varsayılan uygulama etki alanına geri çağırmaya denetim nesnesi için gerekli olduğu durumlar olabilir. Bu durumlarda, varsayılan uygulama etki alanı denetim nesnesi oluşturucusuna bir başvuruya göre geri çağırma nesnesi geçirir. Bu proxy korumak için denetimi nesnesinin sorumluluğundadır. Denetim nesnesi üzerinde bir genel sınıfın genel statik alan proxy yerleştirmeniz ya da proxy aksi genel olarak kullanıma sunmak için varsa, bu tehlikeli bir varsayılan uygulama etki alanına geri aramayı başka bir kod mekanizma açılacaktır. Bu nedenle, Denetim nesneler her zaman proxy özel olarak saklamak için örtük olarak güvenilir.  
+ Genellikle, varsayılan uygulama etki alanı her birinde bir denetim nesnesi olan alt uygulama etki alanlarını oluşturur. Denetim nesnesi yeni uygulama etki alanını yönetir ve ara sıra varsayılan uygulama etki alanından siparişleri alır, ancak doğrudan etki alanıyla doğrudan bağlantı kuramıyor. Bazen, varsayılan uygulama etki alanı proxy 'sini denetim nesnesine çağırır. Ancak, Denetim nesnesinin varsayılan uygulama etki alanına geri çağırması için gereken durumlar olabilir. Bu durumlarda, varsayılan uygulama etki alanı, Denetim nesnesinin oluşturucusuna başvuruya göre sıralama geri çağırma nesnesi geçirir. Bu proxy 'yi korumak için Denetim nesnesinin sorumluluğundadır. Denetim nesnesi, proxy 'yi ortak bir sınıfın ortak statik alanına yerleştirse veya proxy 'yi genel kullanıma sunacaksa, bu, diğer kodun varsayılan uygulama etki alanına geri çağırması için tehlikeli bir mekanizma açar. Bu nedenle, proxy özel tutmak için denetim nesneleri her zaman örtük olarak güvenilirdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenli Kodlama Yönergeleri](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)

@@ -31,44 +31,44 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 255a4ab3d6d6e3fc133e809ce360b25d6f82c8d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940074"
 ---
 # <a name="handling-errors"></a>Hataları İşleme
-<xref:System.Net.WebRequest> Ve <xref:System.Net.WebResponse> sınıflar her iki sistem özel durumlarını throw (gibi <xref:System.ArgumentException>) ve Web özel durumlar (hangi <xref:System.Net.WebException> tarafından oluşturulan <xref:System.Net.WebRequest.GetResponse%2A> yöntemi).  
+<xref:System.Net.WebRequest.GetResponse%2A> <xref:System.Net.WebException> Ve sınıfları hem sistem özel durumlarını (gibi )hemdeWeb'eözelözeldurumları(yöntemitarafındanoluşturulan)oluşturur.<xref:System.ArgumentException> <xref:System.Net.WebResponse> <xref:System.Net.WebRequest>  
   
- Her **WebException** içeren bir <xref:System.Net.WebException.Status%2A> arasında bir değer içeren özellik <xref:System.Net.WebExceptionStatus> sabit listesi. İnceleyebilirsiniz **durumu** özelliği oluşan hata belirlemek ve hatayı gidermek için uygun adımları atın.  
+ Her **WebException** <xref:System.Net.WebException.Status%2A> ,<xref:System.Net.WebExceptionStatus> Numaralandırmadaki bir değer içeren bir özelliği içerir. **Durum** özelliğini inceleyerek oluşan hatayı belirleyebilir ve hatayı çözümlemek için doğru adımları uygulayabilirsiniz.  
   
- Aşağıdaki tabloda olası değerleri açıklanmaktadır **durumu** özelliği.  
+ Aşağıdaki tabloda **durum** özelliği için olası değerler açıklanmaktadır.  
   
 |Durum|Açıklama|  
 |------------|-----------------|  
-|ConnectFailure|Uzak Hizmet taşıma düzeyinde kurulamadı.|  
-|ConnectionClosed|Bağlantıyı erken sonlandırdı.|  
-|KeepAliveFailure|Sunucu Keep-alive üst bilgisi kümesiyle yapılan bağlantı kapatıldı.|  
-|NameResolutionFailure|Ad hizmeti konak adı çözümlenemedi.|  
-|ProtocolError|Sunucudan alınan yanıtı tamamlandı ancak protokol düzeyinde bir hata gösterilir.|  
-|ReceiveFailure|Uzak sunucudan tam yanıtı alınmadı.|  
+|ConnectFailure|Uzak hizmete Aktarım düzeyinde iletişim kurulamadı.|  
+|ConnectionClosed|Bağlantı zamanından önce kapatıldı.|  
+|KeepAliveFailure|Sunucu, etkin tut üst bilgi kümesiyle yapılan bir bağlantıyı kapattı.|  
+|NameResolutionFailure|Ad hizmeti, ana bilgisayar adını çözümleyemedi.|  
+|ProtocolError|Sunucudan alınan yanıt tamamlanmıştır, ancak protokol düzeyinde bir hata belirtti.|  
+|ReceiveFailure|Uzak sunucudan bir bütün yanıt alınmadı.|  
 |RequestCanceled|İstek iptal edildi.|  
-|SecureChannelFailure|Güvenli kanal bağlantısında hata oluştu.|  
-|SendFailure|Uzak sunucuya tam bir istek gönderilemedi.|  
-|ServerProtocolViolation|Sunucu yanıtı geçerli bir HTTP yanıt değildi.|  
-|Başarılı|Herhangi bir hata ile karşılaşıldı.|  
-|zaman aşımı|İçin isteği zaman aşımı içinde yanıt alınmadı.|  
-|TrustFailure|Bir sunucu sertifikası doğrulanamadı.|  
-|MessageLengthLimitExceeded|Bir isteği gönderirken belirtilen sınırı aşan bir ileti alındı veya bir yanıt sunucudan alma.|  
-|Bekleniyor|İç zaman uyumsuz isteği bekliyor.|  
-|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılması amaçlanmamıştır.|  
-|ProxyNameResolutionFailure|Ad çözümleyici hizmetini proxy konak adı çözümlenemedi.|  
+|SecureChannelFailure|Güvenli kanal bağlantısında bir hata oluştu.|  
+|SendFailure|Uzak sunucuya komple bir istek gönderilemedi.|  
+|Serverprotocolihlaline|Sunucu yanıtı geçerli bir HTTP yanıtı değildi.|  
+|Başarılı|Hatayla karşılaşılmadı.|  
+|zaman aşımı|İstek için zaman aşımı kümesi içinde yanıt alınmadı.|  
+|TrustFailure hatası|Sunucu sertifikası doğrulanamadı.|  
+|Messagelengthlimitexceıbaşında|İstek gönderilirken veya sunucudan yanıt alındığında belirtilen sınırı aşan bir ileti alındı.|  
+|Bekleniyor|İç zaman uyumsuz istek bekleniyor.|  
+|PipelineFailure|Bu değer .NET Framework altyapısını destekler ve doğrudan kodunuzda kullanılmaya yönelik değildir.|  
+|ProxyNameResolutionFailure|Ad çözümleyici Hizmeti, proxy ana bilgisayar adını çözümleyemedi.|  
 |Başvuruları|Bilinmeyen türde bir özel durum oluştu.|  
   
- Zaman **durumu** özelliği **WebExceptionStatus.ProtocolError**, **WebResponse** sunucu yanıtı içeren kullanılabilir. Protokol hatası gerçek kaynağını belirlemek için bu yanıtı inceleyebilirsiniz.  
+ **Status** özelliği **WebExceptionStatus. ProtocolError**olduğunda, sunucudan gelen yanıtı içeren bir **WebResponse** kullanılabilir. Protokol hatasının gerçek kaynağını öğrenmek için bu yanıtı inceleyebilirsiniz.  
   
- Aşağıdaki örnek catch gösterilmiştir bir **WebException**.  
+ Aşağıdaki örnek, bir **WebException**nasıl yakalandığı gösterilmektedir.  
   
 ```csharp  
 try   
@@ -163,11 +163,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Kullanan uygulamalar <xref:System.Net.Sockets.Socket> sınıfı throw <xref:System.Net.Sockets.SocketException> hataları Windows yuva olduğunda. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, Ve <xref:System.Net.Sockets.UdpClient> sınıfları üst kısmındaki yerleşiktir **yuva** sınıfı ve throw **SocketExceptions** de.  
+ <xref:System.Net.Sockets.Socket> Sınıfını kullanan uygulamalar, Windows yuvasında <xref:System.Net.Sockets.SocketException> hata oluştuğunda oluşturur. <xref:System.Net.Sockets.TcpClient>, Vesınıfları<xref:System.Net.Sockets.UdpClient> yuva sınıfının üzerine kurulmuştur ve **SocketExceptions** de oluşturur. <xref:System.Net.Sockets.TcpListener>  
   
- Olduğunda bir **SocketException** oluşturulur, **SocketException** sınıf kümelerini <xref:System.Net.Sockets.SocketException.ErrorCode%2A> özelliğini gerçekleşen son işletim sistemi Yuva hatası. Yuva hata kodları hakkında daha fazla bilgi için MSDN'de Winsock 2.0 API'sine hata kodu belgelerine bakın.  
+ Bir **SocketException** oluşturulduğunda, **SocketException** <xref:System.Net.Sockets.SocketException.ErrorCode%2A> sınıfı özelliği, gerçekleşen son işletim sistemi yuva hatası olarak ayarlar. Yuva hata kodları hakkında daha fazla bilgi için MSDN 'de Winsock 2,0 API hata kodu belgelerine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel durum işleme temelleri](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+- [Özel durum Işleme temelleri](../../standard/exceptions/exception-handling-fundamentals.md)
 - [Veri İsteme](../../../docs/framework/network-programming/requesting-data.md)

@@ -2,15 +2,15 @@
 title: <messageLogging>
 ms.date: 03/30/2017
 ms.assetid: 1d06a7e6-9633-4a12-8c5d-123adbbc19c5
-ms.openlocfilehash: 70fb2df1d37af23d9ec19932806989ce3329bf3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f54028489ec5aa34ae38115d7a582b01b9da92f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768920"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931408"
 ---
 # <a name="messagelogging"></a>\<messageLogging >
-Bu öğe Windows Communication Foundation (WCF) ileti günlüğüne yazma yetenekleri için ayarları tanımlar.  
+Bu öğe Windows Communication Foundation (WCF) ileti günlüğü özelliklerine yönelik ayarları tanımlar.  
   
  \<system.ServiceModel>  
 \<Tanılama >  
@@ -42,31 +42,31 @@ Bu öğe Windows Communication Foundation (WCF) ileti günlüğüne yazma yetene
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`logEntireMessage`|Tüm iletinin (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirten bir Boole değeri. Varsayılan `false`, yani yalnızca ileti üst bilgisi kaydedilir. Bu ayar tüm ileti günlüğe kaydetme düzeylerini etkiler (hizmeti, taşıma ve hatalı).|  
-|`logMalformedMessages`|Hatalı biçimlendirilmiş iletilerin kaydedilip kaydedilmeyeceğini belirleyen bir Boole değeri. Hatalı biçimlendirilmiş iletilerin değil doğru sayısı `maxMessagesToLog`. Varsayılan, `false` değeridir.|  
-|`logMessagesAtServiceLevel`|İletilerin hizmet düzeyinde (önce şifreleme ve taşıma ilişkili dönüşümler) izlenilmeyeceğini belirleyen bir Boole değeri. Varsayılan, `false` değeridir.|  
-|`logMessagesAtTransportLevel`|İletileri taşıma düzeyinde izlenilmeyeceğini belirleyen bir Boole değeri. Yapılandırma dosyasında belirtilen herhangi bir filtre uygulanır ve yalnızca filtrelerle eşleşen iletileri izlendiğini. Varsayılan, `false` değeridir.|  
-|`maxMessagesToLog`|Günlüğe kaydedilecek ileti sayısı belirten bir pozitif tamsayı. Varsayılan değer 1000'dir.|  
-|`maxSizeOfMessageToLog`|Günlüğe kaydedilecek iletinin bayt cinsinden en büyük boyutunu belirten pozitif bir tamsayı. Sınırından daha büyük iletiler günlüğe kaydedilmez. Bu ayar, tüm izleme düzeylerini etkiler. 262144(0x4000) varsayılandır.|  
+|`logEntireMessage`|İletinin tamamının (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirten bir Boole değeri. Varsayılan `false`olarak, yalnızca ileti üstbilgisinin günlüğe kaydedildiği anlamına gelir. Bu ayar tüm ileti günlüğü düzeylerini (hizmet, aktarım ve hatalı biçimlendirilmiş) etkiler.|  
+|`logMalformedMessages`|Hatalı biçimlendirilmiş iletilerin günlüğe kaydedilip kaydedilmeyeceğini belirten bir Boole değeri. Hatalı biçimlendirilmiş iletiler, `maxMessagesToLog`öğesine doğru sayılmaz. Varsayılan, `false` değeridir.|  
+|`logMessagesAtServiceLevel`|İletilerin hizmet düzeyinde (şifreleme ve aktarımlarla ilgili dönüşümlerden önce) izlenip izlenmediğini belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
+|`logMessagesAtTransportLevel`|İletilerin Aktarım düzeyinde izlenip izlenmediğini belirten bir Boolean değer. Yapılandırma dosyasında belirtilen filtreler uygulanır ve yalnızca filtrelerle eşleşen iletiler izlenebilir. Varsayılan, `false` değeridir.|  
+|`maxMessagesToLog`|Günlüğe kaydedilecek en fazla ileti sayısını belirten pozitif bir tamsayı. Varsayılan değer 1000 ' dir.|  
+|`maxSizeOfMessageToLog`|Günlüğe kaydedilecek bir iletinin bayt cinsinden en büyük boyutunu belirten pozitif bir tamsayı. Sınırdan daha büyük mesajlar günlüğe kaydedilmez. Bu ayar tüm izleme düzeylerini etkiler. Varsayılan değer 262144 ' dir (0x4000).|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|filtreler|`filters` Öğesi için XPath filtrelerinde koleksiyonunu tutar. Aktarım ileti günlüğe kaydetme etkinleştirildiğinde (`logMessagesAtTransportLevel` olan `true`), yalnızca filtrelerle eşleşen iletileri kaydedilir.<br /><br /> Filtreler yalnızca Aktarım katmanında uygulanır. Hizmet düzeyi ve hatalı biçimlendirilmiş bir ileti günlüğü filtreler tarafından etkilenmez.<br /><br /> Bu öğe için yalnızca öznitelik `filter`, bir XPathFilterElement olduğu.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
+|filtreler|`filters` Öğesi XPath filtreleri koleksiyonunu tutar. Aktarım iletisi günlüğü etkin olduğunda (`logMessagesAtTransportLevel` yani `true`), yalnızca filtrelerle eşleşen iletiler günlüğe kaydedilir.<br /><br /> Filtreler yalnızca aktarım katmanında uygulanır. Hizmet düzeyi ve hatalı biçimlendirilmiş ileti günlüğe kaydetme, filtrelerle etkilenmez.<br /><br /> Bu öğenin `filter`tek özniteliği, bir XPathFilter.<br /><br /> `<filters>     <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">/soap:Envelope</add> </filters>`|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|tanılama|WCF ayarları için çalışma zamanı incelemesi ve denetimi yöneticisi için tanımlar.|  
+|tanılama|Yönetici için çalışma zamanı incelemesi ve denetimi için WCF ayarlarını tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İletileri günlüğe yığınında üç farklı düzeylerde: hizmeti, taşıma ve hatalı biçimlendirilmiş. Her düzey ayrı olarak etkinleştirilebilir.  
+ İletiler Yığındaki üç farklı düzeye kaydedilir: hizmet, taşıma ve hatalı biçimlendirilmiş. Her düzey ayrı olarak etkinleştirilebilir.  
   
- Taşıma ve hizmet düzeyinde özel iletilerini günlüğe kaydetmek için XPath filtrelerinde eklenebilir. Filtre tanımlanmışsa, tüm iletileri günlüğe kaydedilir. Filtreler iletisinin üstbilgilerini uygulanır. Gövde göz ardı edilir. WCF performansını artırmak için ileti gövdesi yok sayar. Filtrelemek istiyorsanız gövdesi içeriğine bağlı olarak, bunu yapan bir filtre ile özel bir dinleyici oluşturabilirsiniz.  
+ Aktarım ve hizmet düzeylerindeki belirli iletileri günlüğe kaydetmek için XPath filtreleri eklenebilir. Hiçbir filtre tanımlanmamışsa, tüm iletiler günlüğe kaydedilir. Filtreler yalnızca iletinin üst bilgilerine uygulanır. Gövde yoksayıldı. WCF, performansı artırmak için ileti gövdesini yoksayar. Gövdenin içeriğine göre filtrelemek istiyorsanız, filtre içeren özel bir dinleyici oluşturabilirsiniz.  
   
- İleti izlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmak için ihtiyacınız. Dinleyici çalışan herhangi bir dinleyici olabilir <xref:System.Diagnostics> izleme mimarisi. Aşağıdaki örnek, bu tür bir dinleyici oluşturma işlemini gösterir.  
+ İleti izlemeyi etkinleştirmek için bir izleme dinleyicisi oluşturmanız gerekir. Dinleyici, <xref:System.Diagnostics> izleme mimarisiyle birlikte çalışarak herhangi bir dinleyici olabilir. Aşağıdaki örnek, böyle bir dinleyicinin nasıl oluşturulacağını göstermektedir.  
   
 ```xml  
 <system.diagnostics>
@@ -127,4 +127,4 @@ Bu öğe Windows Communication Foundation (WCF) ileti günlüğüne yazma yetene
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement>
-- [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
+- [Günlüğe İleti Kaydetmeyi Yapılandırma](../../../wcf/diagnostics/configuring-message-logging.md)

@@ -2,18 +2,18 @@
 title: Etkinlik Doğrulamayı Çağırma
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b45840081f5fc142cf3ec88853dea984b204c9d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791085"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934969"
 ---
 # <a name="invoking-activity-validation"></a>Etkinlik Doğrulamayı Çağırma
-Etkinlik doğrulamayı yürütme öncesi herhangi bir etkinliğe ilişkin yapılandırma hataları bildirmek üzere bir yöntem sağlar. Bir iş akışı iş akışı Tasarımcısı'nda değiştirilir ve herhangi bir doğrulama hataları veya uyarıları iş akışı Tasarımcısı'nda görüntülenen doğrulama gerçekleşir. Doğrulama iş akışı çağrıldığında ve herhangi bir doğrulama hatası meydana gelirse, çalışma zamanında da oluşur bir <xref:System.Activities.InvalidWorkflowException> varsayılan Doğrulama mantığı tarafından oluşturulur. Windows Workflow Foundation (WF) sağlayan <xref:System.Activities.Validation.ActivityValidationServices> sınıfı açıkça bir etkinlik doğrulamak için iş akışı uygulaması ve araç geliştiricileri tarafından kullanılabilir. Bu konu nasıl kullanılacağını açıklar <xref:System.Activities.Validation.ActivityValidationServices> etkinlik doğrulamayı gerçekleştirmek için.  
+Etkinlik doğrulama, çalıştırmadan önce herhangi bir etkinliğin yapılandırmasındaki hataları tanımlamak ve raporlamak için bir yöntem sağlar. Doğrulama, iş akışı tasarımcısında bir iş akışı değiştirildiğinde ve herhangi bir doğrulama hatası veya uyarı iş akışı tasarımcısında görüntülendiğinde oluşur. Doğrulama işlemi, bir iş akışı çağrıldığında çalışma zamanında da oluşur ve herhangi bir <xref:System.Activities.InvalidWorkflowException> doğrulama hatası oluşursa, varsayılan doğrulama mantığı tarafından oluşturulur. Windows Workflow Foundation (WF), <xref:System.Activities.Validation.ActivityValidationServices> iş akışı uygulaması tarafından kullanılabilen sınıfı sağlar ve geliştiricilerin açıkça bir etkinliği doğrulaması için araç ekleyebilir. Bu konuda, etkinlik doğrulaması gerçekleştirmek <xref:System.Activities.Validation.ActivityValidationServices> için kullanımı açıklanmaktadır.  
   
 ## <a name="using-activityvalidationservices"></a>ActivityValidationServices kullanma  
- <xref:System.Activities.Validation.ActivityValidationServices> iki <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> etkinliğin Doğrulama mantığı çağırmak için kullanılan aşırı yüklemeleri. İlk aşırı yükleme doğrulanması için Kök etkinlik alır ve doğrulama hataları ve Uyarıları koleksiyonunu döndürür. Aşağıdaki örnekte, özel bir `Add` etkinliği, iki bağımsız değişkenler zorunludur kullanılır.  
+ <xref:System.Activities.Validation.ActivityValidationServices>, bir <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> etkinliğin doğrulama mantığını çağırmak için kullanılan iki aşırı yüküne sahiptir. İlk aşırı yükleme kök etkinliğin doğrulanmasını sağlar ve doğrulama hatalarının ve uyarıların bir koleksiyonunu döndürür. Aşağıdaki örnekte, iki gerekli bağımsız değişkene `Add` sahip özel bir etkinlik kullanılır.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -31,7 +31,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- `Add` Etkinliği içinde kullanılan bir <xref:System.Activities.Statements.Sequence>, ancak, iki bağımsız değişken bağlamasından, aşağıdaki örnekte gösterildiği gibi gerekli.  
+ `Add` Etkinlik bir<xref:System.Activities.Statements.Sequence>içinde kullanılır, ancak aşağıdaki örnekte gösterildiği gibi, iki gerekli bağımsız değişken bağlantılı değildir.  
   
 ```csharp  
 Variable<int> Operand1 = new Variable<int>{ Default = 10 };  
@@ -52,7 +52,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Bu iş akışı çağırarak doğrulanabilir <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Aşağıdaki örnekte gösterildiği gibi herhangi bir doğrulama hataları veya uyarıları etkinliği ve bir alt öğesi tarafından bulunan bir koleksiyonunu döndürür.  
+ Bu iş akışı, çağırarak <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>doğrulanabilir. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>Aşağıdaki örnekte gösterildiği gibi, etkinliğin ve herhangi bir alt öğe tarafından içerilen herhangi bir doğrulama hatası veya uyarı koleksiyonu döndürür.  
   
 ```csharp  
 ValidationResults results = ActivityValidationServices.Validate(wf);  
@@ -74,10 +74,10 @@ else
 }  
 ```  
   
- Zaman <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Bu örnek iş akışında, iki doğrulama hataları döndürülür çağrılır.  
+ <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Bu örnek iş akışında çağrıldığında, iki doğrulama hatası döndürülür.  
   
- **Hata: Povinný argument 'İşlenen2' için değer sağlanmadı.**  
-**Hata: Povinný argument 'İşlenen1' için değer sağlanmadı.**  Bu iş akışı çağrıldı, bir <xref:System.Activities.InvalidWorkflowException> , aşağıdaki örnekte gösterildiği gibi durum.  
+ **Hata: Gerekli ' Işlenen2 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**  
+**Hata: Gerekli ' Operand1 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**  Bu iş akışı çağrılırsa, aşağıdaki örnekte <xref:System.Activities.InvalidWorkflowException> gösterildiği gibi bir oluşturulur.  
   
 ```csharp  
 try  
@@ -90,10 +90,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.Activities.InvalidWorkflowException:**  
-**İş akışı ağaç işlenirken şu hatalarla karşılaşıldı:**   
-**'Add': Povinný argument 'İşlenen2' için değer sağlanmadı.**   
-**'Add': Povinný argument 'İşlenen1' için değer sağlanmadı.**  Geçerli olması Bu örnek iş akışı için iki gerekli bağımsız değişkenleri `Add` etkinlik bağlı olmalıdır. Aşağıdaki örnekte, iki bağımsız değişken sonuç değeri yanı sıra iş akışı değişkenlerini bağlı gereklidir. Bu örnekte <xref:System.Activities.Activity%601.Result%2A> iki gerekli bağımsız değişkenler yanı sıra bağlı bağımsız değişken. <xref:System.Activities.Activity%601.Result%2A> Bağımsız değişkeni bağlanması için gerekli değildir ve bu durumda bir doğrulama hatası neden olmaz. Bağlamak için iş akışı Yazar sorumluluğundadır <xref:System.Activities.Activity%601.Result%2A> değerinin iş akışında başka bir yerde kullanılıyorsa.  
+ **System. Activities. InvalidWorkflowException:**  
+**İş akışı ağacı işlenirken aşağıdaki hatalarla karşılaşıldı:**    
+**' Ekle ': Gerekli ' Işlenen2 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**    
+**' Ekle ': Gerekli ' Operand1 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**  Bu örnek iş akışının geçerli olması için, `Add` etkinliğin gereken iki bağımsız değişkeni bağlanmalıdır. Aşağıdaki örnekte, iki gerekli bağımsız değişken, sonuç değeriyle birlikte iş akışı değişkenlerine bağlanır. Bu örnekte <xref:System.Activities.Activity%601.Result%2A> bağımsız değişken, gerekli iki bağımsız değişkenle birlikte bağlanır. <xref:System.Activities.Activity%601.Result%2A> Bağımsız değişkenin bağlanması gerekli değildir ve yoksa doğrulama hatasına neden olmaz. Bu, değeri iş akışında başka bir yerde kullanılırsa bağlanacak <xref:System.Activities.Activity%601.Result%2A> iş akışı yazarının sorumluluğundadır.  
   
 ```csharp  
 new Add  
@@ -104,8 +104,8 @@ new Add
 }  
 ```  
   
-### <a name="validating-required-arguments-on-the-root-activity"></a>Kök etkinlik bağımsız değişkenlerini doğrulanıyor  
- Bir iş akışının Kök etkinlik bağımsız değişkenleri yoksa bu parametreleri iş akışına geçirilir ve iş akışı çağrılan kadar bağlı değildir. Aşağıdaki iş akışı doğrulama başarılı, ancak iş akışını gerekli bağımsız değişkenler olarak geçirme olmadan çağrılırsa aşağıdaki örnekte gösterildiği gibi bir özel durum oluşturulur.  
+### <a name="validating-required-arguments-on-the-root-activity"></a>Kök etkinliğinde gerekli bağımsız değişkenler doğrulanıyor  
+ Bir iş akışının kök etkinliğinin bağımsız değişkenleri varsa, bu, iş akışı çağrılana ve parametreleri iş akışına geçirilene kadar bu şekilde bağlantılı değildir. Aşağıdaki iş akışı doğrulamayı geçirir, ancak aşağıdaki örnekte gösterildiği gibi iş akışı gerekli bağımsız değişkenlere geçirilmeden çağrıldığında bir özel durum oluşturulur.  
   
 ```csharp  
 Activity wf = new Add();  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException: Kök etkinlik bağımsız değişkeni ayarları hatalı olabilir.**  
-**İş akışı tanımını düzeltin ya da bu hataları düzeltmek için giriş değerleri sağlayın:**   
-**'Add': Povinný argument 'İşlenen2' için değer sağlanmadı.**   
-**'Add': Povinný argument 'İşlenen1' için değer sağlanmadı.**  İş akışı başarıyla aşağıdaki örnekte gösterildiği gibi doğru bağımsız değişkenleri geçirilir sonra tamamlar.  
+ **System.ArgumentException: Kök etkinliğin bağımsız değişken ayarları yanlış.**  
+**Bu hataları onarmak için iş akışı tanımını veya sağlama girişi değerlerini düzelden yapın:**    
+**' Ekle ': Gerekli ' Işlenen2 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**    
+**' Ekle ': Gerekli ' Operand1 ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**  Doğru bağımsız değişkenler geçtikten sonra, aşağıdaki örnekte gösterildiği gibi iş akışı başarıyla tamamlanır.  
   
 ```csharp  
 Add wf = new Add();  
@@ -152,13 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
-> Bu örnekte, kök etkinlik olarak bildirildi `Add` yerine `Activity` önceki örnekte olduğu gibi. Böylece `WorkflowInvoker.Invoke` sonuçlarını temsil eden tek bir tamsayı döndürülmesini yöntemi `Add` sözlüğü yerine etkinlik `out` bağımsız değişkenler. Değişken `wf` ayrıca olarak bildirilmiş `Activity<int>`.  
+> Bu örnekte, kök etkinliği önceki örnekte `Add` `Activity` olduğu gibi olarak bildirildi. Bu yöntem, `WorkflowInvoker.Invoke` yöntemin `out` bağımsız değişkenlerin sözlüğü yerine `Add` etkinliğin sonuçlarını temsil eden tek bir tamsayı döndürmesini sağlar. Değişken `wf` , olarak `Activity<int>`da bildirilmiştir.  
   
- Kök bağımsız değişkenleri doğrulanırken, gerekli tüm iş akışı çağrıldığında bağımsız değişkenler geçirilir emin olmak için konak uygulamanın sorumluluğundadır.  
+ Kök bağımsız değişkenler doğrulanırken, iş akışı çağrıldığında tüm gerekli bağımsız değişkenlerin geçirildiğinden emin olmak için ana bilgisayar uygulamasının sorumluluğundadır.  
   
-### <a name="invoking-imperative-code-based-validation"></a>Kesin kod temelli doğrulama çağırma
+### <a name="invoking-imperative-code-based-validation"></a>Zorunlu kod tabanlı doğrulama çağırma
 
-Kesin kod temelli doğrulama doğrulama kendisi hakkında sağlamaya bir etkinlik için basit bir yol sağlar ve türetilen etkinlikler için kullanılabilir <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ve <xref:System.Activities.NativeActivity>. Herhangi bir doğrulama hataları veya uyarıları belirleyen bir doğrulama kodu etkinliğe eklenir. Doğrulama etkinliği çağrıldığında, bu uyarı veya hata çağrısı tarafından döndürülen bir koleksiyonda bulunan <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Aşağıdaki örnekte, bir `CreateProduct` etkinlik tanımlanır. Varsa `Cost` büyüktür `Price`, meta verilerde bir doğrulama hatası eklenir <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılar.  
+Zorunlu kod tabanlı doğrulama, bir etkinliğin kendisi hakkında doğrulama sağlaması için basit bir yol sağlar ve, <xref:System.Activities.CodeActivity> <xref:System.Activities.AsyncCodeActivity>ve <xref:System.Activities.NativeActivity>' den türetilen etkinlikler için kullanılabilir. Etkinliğe herhangi bir doğrulama hatası veya uyarı eklendiğini belirleyen doğrulama kodu. Etkinlik üzerinde doğrulama çağrıldığında, bu uyarılar veya hatalar, çağrısı <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>tarafından döndürülen koleksiyonda bulunur. Aşağıdaki örnekte bir `CreateProduct` etkinlik tanımlanmıştır. , Öğesinden büyükse, <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılma içindeki meta verilere bir doğrulama hatası eklenir. `Price` `Cost`  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -189,7 +189,7 @@ public sealed class CreateProduct : CodeActivity
 }  
 ```  
   
- Bu örnekte, bir iş akışı kullanılarak yapılandırılan `CreateProduct` etkinlik. Bu iş akışında `Cost` büyüktür `Price`ve gerekli `Description` bağımsız değişken ayarlanmaz. Doğrulama çağrıldığında, aşağıdaki hatalar döndürülür.  
+ Bu örnekte, `CreateProduct` etkinlik kullanılarak bir iş akışı yapılandırılır. Bu iş akışında `Cost` ,, `Price`öğesinden büyüktür ve gerekli `Description` bağımsız değişken ayarlı değildir. Doğrulama çağrıldığında aşağıdaki hatalar döndürülür.  
   
 ```csharp  
 Activity wf = new Sequence  
@@ -228,15 +228,15 @@ else
 }  
 ```  
   
- **Hata: Maliyet fiyat eşit veya daha az olmalıdır.**  
-**Hata: Povinný argument 'Description' için değer sağlanmadı.**    
+ **Hata: Maliyet, fiyattan küçük veya bu değere eşit olmalıdır.**  
+**Hata: Gerekli ' Description ' etkinlik bağımsız değişkeninin değeri sağlanmadı.**    
 > [!NOTE]
->  Özel Etkinlik yazarlar, etkinliğin Doğrulama mantığı sağlayabilir <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılar. Şuradan oluşturulduğu özel durumları <xref:System.Activities.CodeActivity.CacheMetadata%2A> doğrulama hataları değerlendirilir. Bu özel durumlar çağrısından kaçış <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından ele alınması gerekir.  
+> Özel etkinlik yazarları, bir etkinliğin <xref:System.Activities.CodeActivity.CacheMetadata%2A> geçersiz kılınmasından doğrulama mantığı sağlayabilir. Kaynağından <xref:System.Activities.CodeActivity.CacheMetadata%2A> oluşturulan tüm özel durumlar doğrulama hatası olarak değerlendirilmez. Bu özel durumlar, çağrısından <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> ve çağıran tarafından işlenmelidir.  
   
 ## <a name="using-validationsettings"></a>ValidationSettings kullanma  
- Varsayılan olarak, tüm etkinlikler etkinliğin ağacında değerlendirilir, bu doğrulama tarafından çağrıldığında <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> doğrulamanın birkaç farklı yolla üç özelliklerini yapılandırarak özelleştirilmesine olanak tanır. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> Doğrulayıcı veya tüm etkinlik ağaçta yürüyebilir yalnızca sağlanan etkinliği Doğrulama mantığı uygulama belirtir. Bu değer için varsayılan değer `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> bir tür ek kısıtlaması eşleme kısıtlamalar listesini belirtir. Doğrulanmakta olan etkinlik ağacında her bir etkinlik temel tür yok bir arama <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Eşleşen bir sınırlama listesi bulunursa, listedeki tüm kısıtlamalar etkinliği için değerlendirilir. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> Doğrulayıcı tüm kısıtlamalar değerlendirmelidir ya da yalnızca belirtilen belirtir <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Varsayılan değer `false` şeklindedir. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> ve <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> ilke kısıtlamaları FxCop gibi araçları gibi iş akışları için ek doğrulama eklemek iş akışı konak yazarları için kullanışlıdır. Kısıtlamaları hakkında daha fazla bilgi için bkz: [bildirim temelli kısıtlamalar](declarative-constraints.md).  
+ Varsayılan olarak, etkinlik ağacındaki tüm etkinlikler, doğrulama tarafından <xref:System.Activities.Validation.ActivityValidationServices>çağrıldığında değerlendirilir. <xref:System.Activities.Validation.ValidationSettings>doğrulamanın üç özelliği yapılandırılarak birkaç farklı şekilde özelleştirilme olanağı sağlar. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A>Doğrulayıcının tüm etkinlik ağacını mi ilerlemelidir yoksa yalnızca belirtilen etkinliğe doğrulama mantığını uygulayıp uygulamamı uygulanacağını belirtir. Bu değer `false`için varsayılan değer. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>bir türden bir kısıtlama listesine ek kısıtlama eşlemesi belirtir. Doğrulanan etkinlik ağacındaki her bir etkinliğin temel türü için bir arama <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>vardır. Eşleşen bir kısıtlama listesi bulunursa, listedeki tüm kısıtlamalar etkinlik için değerlendirilir. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>Doğrulayıcının tüm kısıtlamaları mı yoksa yalnızca ' de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>belirtilen olanları değerlendirmesi gerekip gerekmediğini belirtir. Varsayılan değer `false` şeklindedir. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>ve <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> , iş akışı ana bilgisayar yazarlarının, FxCop gibi araçlara yönelik ilke kısıtlamaları gibi iş akışları için ek doğrulama eklemesi yararlı olur. Kısıtlamalar hakkında daha fazla bilgi için bkz. [bildirim temelli kısıtlamalar](declarative-constraints.md).  
   
- Kullanılacak <xref:System.Activities.Validation.ValidationSettings>istenen özelliklerini yapılandırmak ve çağrıda geçirmek <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Bu örnekte, bir iş akışı, oluşur bir <xref:System.Activities.Statements.Sequence> özel ile `Add` etkinlik doğrulandı. `Add` Etkinliğinde iki gerekli bağımsız değişken.  
+ Kullanmak <xref:System.Activities.Validation.ValidationSettings>için, istenen özellikleri yapılandırın ve sonra <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>çağrısına geçirin. Bu örnekte, özel <xref:System.Activities.Statements.Sequence> `Add` etkinlikten oluşan bir iş akışı onaylanır. `Add` Etkinliğin iki gerekli bağımsız değişkeni vardır.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -254,7 +254,7 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Aşağıdaki `Add` etkinlik kullanılan bir <xref:System.Activities.Statements.Sequence>, ancak, iki bağımsız değişken bağlı değil zorunlu.  
+ Aşağıdaki `Add` etkinlik bir <xref:System.Activities.Statements.Sequence>içinde kullanılır, ancak iki gerekli bağımsız değişken bağlantılı değildir.  
   
 ```csharp  
 Variable<int> Operand1 = new Variable<int> { Default = 10 };  
@@ -275,7 +275,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Aşağıdaki örnek için doğrulama ile gerçekleştirilir <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> kümesine `true`, bu nedenle yalnızca kök <xref:System.Activities.Statements.Sequence> etkinlik doğrulandı.  
+ Aşağıdaki örnek için doğrulama, olarak <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> `true`ayarlanmış olarak gerçekleştirilir, bu nedenle yalnızca kök <xref:System.Activities.Statements.Sequence> etkinlik doğrulanacaktır.  
   
 ```csharp  
 ValidationSettings settings = new ValidationSettings  
@@ -302,6 +302,6 @@ else
 }  
 ```  
   
- Bu kod aşağıdaki çıkışı görüntüler:  
+ Bu kod aşağıdaki çıktıyı görüntüler:  
   
- **Uyarı veya hata** olsa bile `Add` etkinliği, bağlı bağımsız değişkenlerin gerekli olan, yalnızca kök etkinlik değerlendirilir olduğundan doğrulama başarılı olur. Bu doğrulama türü, yalnızca belirli bir özellik değişiminin etkinlikten tasarımcıda doğrulama gibi bir etkinlik ağacı öğelerinde doğrulamak için kullanışlıdır. Bu iş akışı çağrılması durumunda iş akışı içinde yapılandırılmış tam doğrulama değerlendirilir dikkat edin ve bir <xref:System.Activities.InvalidWorkflowException> oluşturulması. <xref:System.Activities.Validation.ActivityValidationServices> ve <xref:System.Activities.Validation.ValidationSettings> yalnızca ana bilgisayar tarafından açıkça çağrılan doğrulama ve olmayan bir iş akışı çağrıldığında oluşan doğrulama yapılandırın.
+ **Uyarı veya hata yok** `Add` Etkinliğin bağlantılı olmayan bağımsız değişkenleri olsa da, yalnızca kök etkinlik değerlendirildiği için doğrulama başarılı olur. Bu tür bir doğrulama, bir tasarımcıda tek bir etkinliğin Özellik değişikliğinin doğrulanması gibi, yalnızca bir etkinlik ağacındaki belirli öğeleri doğrulamak için yararlıdır. Bu iş akışı çağrılırsa, iş akışında yapılandırılan tam doğrulamanın değerlendirildiğini ve bir <xref:System.Activities.InvalidWorkflowException> durum oluşturulması gerektiğini unutmayın. <xref:System.Activities.Validation.ActivityValidationServices>ve <xref:System.Activities.Validation.ValidationSettings> , bir iş akışı çağrıldığında oluşan doğrulama değil, yalnızca konak tarafından açıkça çağrılan doğrulamayı yapılandırın.

@@ -2,12 +2,12 @@
 title: POCO Desteği
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: 8f65f6d2131941d02c773f61f70084059293187c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 90b55362c1958ea5677e3bc0cdca906bb3af6b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965547"
 ---
 # <a name="poco-support"></a>POCO Desteği
 Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer bir deyişle, bazı durumlarda düz eski CLR nesne (POCO) türleri olarak da adlandırılan serileştirme özniteliklerinin uygulanmadığı türler. , <xref:System.Runtime.Serialization.DataContractSerializer> Parametresiz oluşturucusu olan tüm genel işaretsiz türler için bir veri sözleşmesi olduğunu anlar. Veri sözleşmeleri, yapılandırılmış verileri hizmetlere ve hizmetlerden geçirmenize olanak sağlar. İşaretsiz türler hakkında daha fazla bilgi için bkz. [serileştirilebilir türler](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -17,7 +17,7 @@ Bu örnek, işaretsiz türler için serileştirme desteğini gösterir; diğer b
  Hizmet Internet Information Services (IIS) tarafından barındırılır ve istemci bir konsol uygulaması (. exe).  
   
 > [!NOTE]
->  Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
  Sınıfı ' de kullanılır. `ServiceContract` `ComplexNumber` Türü, aşağıdaki örnek kodda gösterildiği <xref:System.Runtime.Serialization.DataContractAttribute> gibi <xref:System.Runtime.Serialization.DataMemberAttribute> , ve özniteliklerine sahip değildir. `ComplexNumber` Varsayılan olarak, tüm ortak özellikler ve alanlar serileştirilir.  
   

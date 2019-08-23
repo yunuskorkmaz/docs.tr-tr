@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 3cfa4691376689bb8e7b1f8e8f41ed5d93ba0e61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a3779b8351ae30f7c316d37952f208a287d5e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990359"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961823"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer Örneği
-DataContractSerializer örneği gösterir <xref:System.Runtime.Serialization.DataContractSerializer>gerçekleştirir genel serileştirme ve seri durumundan çıkarma için veri anlaşması sınıfları Hizmetleri. Örnek, oluşturur bir `Record` nesnesi, bir bellek akışa serileştirir ve bellek akışa geri başka bir'seri durumdan çıkarır `Record` kullanımını göstermek için nesne <xref:System.Runtime.Serialization.DataContractSerializer>. Ardından örnek serileştiren `Record` yazıcı serileştirme nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak nesne.  
+DataContractSerializer örneği, veri sözleşmesi <xref:System.Runtime.Serialization.DataContractSerializer>sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetlerini gerçekleştiren öğesini gösterir. Örnek, bir `Record` nesnesi oluşturur, bunu bir bellek akışına serileştirir ve ' nin kullanımını <xref:System.Runtime.Serialization.DataContractSerializer>göstermek için bellek akışını başka bir `Record` nesneye geri çıkarır. Örnek daha sonra, yazıcının Serileştirmeyi nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak `Record` nesneyi serileştirir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Veri anlaşması için `Record` aşağıdaki örnek kodda gösterilmiştir.  
+ İçin `Record` veri sözleşmesi aşağıdaki örnek kodda gösterilmiştir.  
   
 ```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,14 +71,14 @@ internal class Record
 }  
 ```  
   
- Örnek kod oluşturur bir `Record` adlı nesne `record1` sonra nesneyi görüntüler.  
+ Örnek kod, daha sonra `Record` nesnesini görüntüleyen `record1` adlı bir nesne oluşturur.  
   
 ```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
- Ardından örnek kullanır <xref:System.Runtime.Serialization.DataContractSerializer> serileştirmek için `record1` içine bir bellek akış.  
+ Örnek daha sonra bir bellek <xref:System.Runtime.Serialization.DataContractSerializer> akışına seri `record1` hale getirmek için öğesini kullanır.  
   
 ```csharp  
 MemoryStream stream1 = new MemoryStream();  
@@ -88,7 +88,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- Ardından, örnek kullanır <xref:System.Runtime.Serialization.DataContractSerializer> bellek akışı geri yeni dosyaya seri durumdan çıkarılacak `Record` nesne ve görüntüler.  
+ Ardından örnek, bellek akışını yeni <xref:System.Runtime.Serialization.DataContractSerializer> `Record` bir nesneye geri çıkarmak için öğesini kullanır ve görüntüler.  
   
 ```csharp  
 stream1.Position = 0;  
@@ -99,7 +99,7 @@ Record record2 = (Record)serializer.ReadObject(stream1);
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
 ```  
   
- Varsayılan olarak, `DataContractSerializer` XML metinsel bir gösterimini kullanarak bir akış nesneleri kodlar. Ancak, farklı bir yazıcı geçirerek XML kodlaması etkileyebilir. Örnek bir ikili yazıcı çağırarak oluşturur <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Çağırdığında ardından yazıcı ve kayıt nesnesi için seri hale getirici arabimini <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Son olarak, örnek yazıcı temizler ve akışları uzunluğuna bildirir.  
+ Varsayılan olarak, nesneleri `DataContractSerializer` XML 'nin metinsel gösterimini kullanarak bir akışa kodluyor. Ancak, XML 'nin kodlamasını farklı bir yazıcıya geçirerek de etkileyebilirsiniz. Örnek, çağırarak <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>bir ikili yazıcı oluşturur. Daha sonra, aradığında <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>, yazıcı ve kayıt nesnesini serileştiriciye geçirir. Son olarak, örnek, yazıcıyı ve akış uzunlularındaki raporları temizler.  
   
 ```csharp  
 MemoryStream stream2 = new MemoryStream();  
@@ -113,7 +113,7 @@ Console.WriteLine("Text Stream is {0} bytes long", stream1.Length);
 Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);  
 ```  
   
- Örneği çalıştırdığınızda, orijinal kayıt ve seri durumdan çıkarılmış kayıt uzunluğu metin kodlama ile ikili kodlama arasında karşılaştırma tarafından izlenen görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, özgün kayıt ve seri durumdan çıkarılan kayıt görüntülenir ve ardından metin kodlamasının uzunluğu ile ikili kodlama arasındaki karşılaştırma gelir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Original record: Record: 1 + 2 = 3  
@@ -124,19 +124,19 @@ Binary Stream is 156 bytes long
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği çalıştırmak için Komut İstemi'nden istemci client\bin\client.exe yazarak başlatın.  
+3. Örneği çalıştırmak için client\bin\client.exeyazarak istemciyi komut isteminden başlatın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

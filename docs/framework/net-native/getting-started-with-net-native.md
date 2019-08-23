@@ -4,120 +4,120 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39d0066185703ebac7609d506c834b7718693d33
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce43ef1a24a0b9bcf0248647245cc35838700295
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910497"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Yerel'i Kullanmaya Başlama
 
-Windows 10 için yeni bir Windows uygulaması yazmak ister mevcut bir Windows Store app geçiriyorsanız, aynı kümesini yordamları izleyebilirsiniz. .NET yerel bir uygulama oluşturmak için aşağıdaki adımları izleyin:
+Windows 10 için yeni bir Windows uygulaması yazıyor veya var olan bir Windows Mağazası uygulamasını geçiriyorsanız aynı yordam kümesini izleyebilirsiniz. .NET Native uygulaması oluşturmak için aşağıdaki adımları izleyin:
 
-1. [Windows 10 hedefleyen Evrensel Windows Platformu (UWP) uygulaması geliştirme](#Step1)ve hata ayıklama derlemeleri düzgün çalıştığından emin olmak için uygulamanızı test.
+1. [Windows 10 ' u hedefleyen bir Evrensel Windows platformu (UWP) uygulaması geliştirin](#Step1)ve düzgün çalıştığından emin olmak için uygulamanızın hata ayıklama yapılarını test edin.
 
-2. [Yansıma ve Serileştirme ek kullanım işlemek](#Step2).
+2. [Ek yansıma ve serileştirme kullanımını işleyin](#Step2).
 
-3. [Dağıtma ve sürüm yapıları uygulamanızı test](#Step3).
+3. [Uygulamanızın yayın yapılarını dağıtın ve test edin](#Step3).
 
-4. [Meta veriler eksik el ile çözümlemeniz](#Step4)ve yineleme [3. adım](#Step3) tüm sorunlar çözülene kadar.
+4. [Eksik meta verileri el ile çözümleyin](#Step4)ve tüm sorunlar çözümlenene kadar [3. adımı](#Step3) tekrarlayın.
 
 > [!NOTE]
-> Mevcut bir Windows Store app .NET Native geçiriyorsanız gözden geçirdiğinizden emin olun [geçirme bilgisayarınızı Windows Store uygulaması için .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+> Mevcut bir Windows Mağazası uygulamasını .NET Native geçiriyorsanız, [Windows Mağazası uygulamanızın .NET Native geçişini](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)gözden geçirdiğinizden emin olun.
 
 <a name="Step1"></a>
 
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>1. Adım: Geliştirme ve test UWP uygulamanızın hata ayıklama yapıları
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>1\. Adım: UWP uygulamanızın hata ayıklama derlemelerini geliştirin ve test edin
 
-Yeni bir uygulama geliştirirken veya var olan bir geçiş olsun, herhangi bir Windows uygulaması için aynı süreci izleyin.
+Yeni bir uygulama geliştirirken veya var olan bir uygulamayı geçirdiğinize göre, tüm Windows uygulamaları için aynı süreci takip edersiniz.
 
-1. Yeni bir UWP projesi, Visual C# veya Visual Basic için evrensel Windows uygulaması şablonunu kullanarak Visual Studio'da oluşturun. Varsayılan olarak, CoreCLR tüm UWP uygulamaları hedefleyen ve yayın yapılarını .NET Native araç zinciri kullanılarak derlenir.
+1. Visual Studio 'da, Visual C# veya Visual Basic Için Evrensel Windows uygulama şablonunu kullanarak yenı bir UWP projesi oluşturun. Varsayılan olarak, tüm UWP uygulamaları CoreCLR 'yi hedefleyin ve bunların yayın yapıları .NET Native araç zinciri kullanılarak derlenir.
 
-2. Bulunduğuna bazı bilinen uyumluluk sorunlarına olmadan .NET Native araç zinciri ile UWP uygulaması projelerini derleme arasında dikkat edin. Başvurmak [Geçiş Kılavuzu](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) daha fazla bilgi için.
+2. .NET Native araç zinciri ve bu olmadan UWP uygulama projelerini derleme arasında bazı bilinen uyumluluk sorunları olduğunu unutmayın. Daha fazla bilgi için [geçiş kılavuzuna](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) bakın.
 
-Artık yazabilirsiniz C# veya Visual Basic kodunu çalıştıran yerel sistemin (veya simülatör) .NET Native yüzey alanını karşı.
+Artık yerel sistemde ( C# veya benzeticide) çalışan .NET Native yüzey alanına karşı kod yazabilir veya Visual Basic.
 
 > [!IMPORTANT]
-> Uygulamanızı geliştirirken, serileştirme veya yansıtma kodunuzdaki herhangi bir kullanımına dikkat edin.
+> Uygulamanızı geliştirirken kodunuzda serileştirme veya yansıma kullanımını göz önünde bulabilirsiniz.
 
-Varsayılan olarak, JIT olarak derlenmiş sürüm yapıları .NET Native önceden derleme teknolojisi kullanılarak derlenen sırada hızlı F5 dağıtımı etkinleştirmek için hata ayıklama yapıları. Bunlar genellikle .NET Native araç zinciri ile derleme öncesinde çalışmasını sağlamak için uygulamanızı derleme ve hata ayıklama test anlamına gelir oluşturur.
+Varsayılan olarak, hata ayıklama derlemeleri hızlı F5 dağıtımını etkinleştirmek için JıT olarak derlenir, ancak yayın derlemeleri .NET Native ön derleme teknolojisi kullanılarak derlenir. Bu, .NET Native araç zinciri ile derlemeden önce normal şekilde çalışmadıklarından emin olmak için uygulamanızın hata ayıklama derlemelerini oluşturmanız ve test etmeniz gerekir.
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>2. Adım: Yansıma ve Serileştirme ek kullanım işleme
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>2\. Adım: Ek yansıma ve serileştirme kullanımını işleme
 
-Oluşturduğunuz bir çalışma zamanı yönergeleri dosyası Default.rd.xml, otomatik olarak projenize eklenir. C# dilinde geliştirme yapıyorsanız, projenizin bulunursa **özellikleri** klasör. Visual Basic'te geliştiriyorsanız, projenizin bulunursa **Projem** klasör.
+Çalışma zamanı yönergeleri dosyası default. RD. xml, oluşturduğunuzda projenize otomatik olarak eklenir. İçinde C#geliştirirseniz, projenizin **Özellikler** klasöründe bulunur. Visual Basic geliştirirseniz, projenin **Proje** klasöründe bulunur.
 
 > [!NOTE]
-> Arka plan üzerinde neden sağlayan .NET yerel derleme işlemine genel bakış için bir çalışma zamanı yönergeleri dosyası, bkz. gerekli [.NET Native ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).
+> Çalışma zamanı yönergeleri dosyasının neden gerekli olduğuna ilişkin arka plan sağlayan .NET Native derleme işlemine genel bakış için, bkz. [.NET Native ve derleme](../../../docs/framework/net-native/net-native-and-compilation.md).
 
-Çalışma zamanı yönergeleri dosyası, uygulamanızın çalışma zamanında gereken meta verileri tanımlamak için kullanılır. Bazı durumlarda, dosyanın varsayılan sürümü yeterli olabilir. Ancak, serileştirme veya yansıtma kullanan kod dosyanın çalışma zamanı yönergeleri'daki ek girdiler gerektirebilir.
+Çalışma zamanı yönergeleri dosyası, uygulamanızın çalışma zamanında ihtiyaç duyacağı meta verileri tanımlamak için kullanılır. Bazı durumlarda, dosyanın varsayılan sürümü yeterli olabilir. Ancak, serileştirme veya yansımaya dayanan bazı kodlar çalışma zamanı yönergeleri dosyasında ek girişler gerektirebilir.
 
 **Serileştirme**
 
-Seri hale getiricileri genişletme iki kategorisi vardır ve her ikisi de çalışma zamanı yönergeleri dosyasındaki ek girdileri gerektirebilir:
+Serileştiricilerin iki kategorisi vardır ve her ikisi de çalışma zamanı yönergeleri dosyasında ek girişler gerektirebilir:
 
-- Seri hale getiricileri genişletme olmayan yansıma tabanlı. Seri hale getiricileri genişletme bulunan .NET Framework sınıf kitaplığında gibi <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ve <xref:System.Xml.Serialization.XmlSerializer> sınıfları, yansıma kullanan değil. Ancak, gerekli serileştirilecek veya seri durumdan için nesne tabanlı kod oluşturulur.  "Microsoft Serializers" bölümünde daha fazla bilgi için bkz. [serileştirme ve meta veriler](../../../docs/framework/net-native/serialization-and-metadata.md).
+- Yansıma tabanlı olmayan serileştiriciler. <xref:System.Runtime.Serialization.DataContractSerializer> ,<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, Ve<xref:System.Xml.Serialization.XmlSerializer> sınıfları gibi .NET Framework sınıfı kitaplığı 'nda bulunan serileştiriciler, yansıma üzerine güvenmeyin. Ancak, seri hale getirilecek veya seri durumdan çıkarılacak nesne temel alınarak kodun oluşturulmasını gerektirir.  Daha fazla bilgi için [serileştirme ve meta verilerde](../../../docs/framework/net-native/serialization-and-metadata.md)"Microsoft serileştiriciler" bölümüne bakın.
 
-- Üçüncü taraf seri hale getiricileri genişletme Üçüncü taraf serileştirme kitaplıkları, en yaygın biri olan Newtonsoft JSON serileştirici genellikle yansıma tabanlı ve girişleri *. nesne seri hale getirme ve seri durumundan çıkarma desteklemek için rd.xml dosya. Daha fazla bilgi için "Üçüncü taraf seri hale getiricileri genişletme" bölümüne bakın [serileştirme ve meta veriler](../../../docs/framework/net-native/serialization-and-metadata.md).
+- Üçüncü taraf serileştiriciler. En yaygın olarak, Newtonsoft JSON serileştiricisi olan üçüncü taraf serileştirme kitaplıkları genellikle yansıma tabanlıdır ve nesne serileştirme ve serisini kaldırma desteği için \*. RD. xml dosyasında giriş gerektirir. Daha fazla bilgi için [serileştirme ve meta verilerde](../../../docs/framework/net-native/serialization-and-metadata.md)"üçüncü taraf serileştiriciler" bölümüne bakın.
 
-**Yansıma kullanan yöntemleri**
+**Yansıma kullanan Yöntemler**
 
-Bazı durumlarda, kodda yansıma kullanımına açık değil. Bazı ortak API'ler veya programlama modellerini yansıma API'si bir parçası olarak değerlendirilmeyen ancak başarılı bir şekilde yürütmek için yansıma kullanan. Bu, aşağıdaki tür örneği oluşturmada ve yöntemi oluşturma yöntemleri içerir:
+Bazı durumlarda, kodda yansıma kullanımı belirgin değildir. Bazı ortak API 'Ler veya programlama desenleri, yansıma API 'sinin bir parçası olarak kabul edilmez, ancak başarıyla yürütmek için yansıma üzerinde yararlanır. Bu, aşağıdaki tür örneklemesi ve yöntem oluşturma yöntemlerini içerir:
 
 - <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> Yöntemi
 
-- <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> Ve <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> yöntemleri
+- <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> Ve yöntemleri<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>
 
 - <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> Yöntemi.
 
-Daha fazla bilgi için [API'leri, Bel yansıma](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+Daha fazla bilgi için bkz. [yansımaya dayanan API 'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
 > [!NOTE]
-> Çalışma zamanı yönergeleri dosyalarında kullanılan tür adları, tam olarak nitelenmiş olmalıdır. Örneğin, "Dize" yerine "System.String" dosyası belirtmeniz gerekir.
+> Çalışma zamanı yönergeleri dosyalarında kullanılan tür adlarının tam nitelikli olması gerekir. Örneğin, dosya "String" yerine "System. String" belirtmelidir.
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>3. Adım: Dağıtma ve sürüm derlemelerinin profilinin uygulamanızı test etme
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>3\. Adım: Uygulamanızın yayın yapılarını dağıtın ve test edin
 
-Çalışma zamanı yönergeleri dosyası güncelleştirdikten sonra yeniden oluşturun ve uygulamanızın sürüm yapıları dağıtabilir. .NET yerel ikili dosyaları ILC.out alt belirtilen dizine yerleştirilir **yapı çıkış yolu** projenin metin kutusunun **özellikleri** iletişim kutusu, **derleme**sekmesi. Bu klasörde olmayan ikili dosyaları .NET Native ile derlenmiş henüz. Uygulamanızı baştan sona test edin ve her biri kendi Hedef platformlar üzerinde hata senaryoları da dahil olmak üzere tüm senaryoları test edin.
+Çalışma zamanı yönergeleri dosyasını güncelleştirdikten sonra, uygulamanızın yayın yapılarını yeniden oluşturabilir ve dağıtabilirsiniz. .NET Native ikililer, projenin **Özellikler** Iletişim kutusunun **derleme çıkış yolu** metin kutusunda belirtilen dizinin ILC. out alt dizinine yerleştirilir, **Derle** sekmesi. Bu klasörde olmayan ikili dosyalar .NET Native ile derlenmedi. Uygulamanızı kapsamlı bir şekilde test edin ve her bir hedef platformda hata senaryoları da dahil olmak üzere tüm senaryoları test edin.
 
-Uygulamanızın düzgün çalışmıyorsa (özellikle burada oluşturur durumlarda [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) çalışma zamanında özel durumlar), sonraki'ndaki yönergeleri izleyin bölümünde, [4. adım: Meta veriler eksik el ile çözümlemeniz](#Step4). İlk fırsat özel durum etkinleştirme bu hataları bulmanıza yardımcı olabilir.
+Uygulamanız düzgün çalışmıyorsa (özellikle, çalışma zamanında [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) veya [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) özel durumları oluşturan durumlarda), sonraki bölümdeki yönergeleri izleyin, [4. Adım: Eksik meta verileri](#Step4)el ile çözümleyin. Birinci şans özel durumlarının etkinleştirilmesi, bu hataları bulmanıza yardımcı olabilir.
 
-Ne zaman, test ettiniz ve hata ayıklama hataları ayıklanabilir uygulamanızı oluşturur ve size anlaşılmış olur başarılara [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) test özel durumlar Uygulamanızı en iyi duruma getirilmiş bir .NET yerel uygulama olarak. Bunu yapmak için etkin proje yapılandırmanızı değiştirme **hata ayıklama** için **yayın**.
+Uygulamanızın hata ayıklama yapılarını test etmeniz ve hatalarını ayıkladığınızda ve [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ve [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) özel durumlarını ortadan seçtiğinizden emin olduğunuzda, uygulamanızı iyileştirilmiş bir .NET Native uygulaması olarak sınamalısınız. Bunu yapmak için, etkin proje yapılandırmanızı **hata ayıklama** ' dan **Yayınla**' ya değiştirin.
 
 <a name="Step4"></a>
 
-## <a name="step-4-manually-resolve-missing-metadata"></a>4. Adım: Meta veriler eksik el ile çözümleme
+## <a name="step-4-manually-resolve-missing-metadata"></a>4\. Adım: Eksik meta verileri el ile çözümleyin
 
-.NET Masaüstü karşılaştığınız yoksa yerel ile karşılaşacağınız en yaygın bir çalışma zamanı hatasıdır [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), veya [ MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durum. Bazı durumlarda, meta veri olmaması kendisini öngörülemeyen davranışlara veya hatta uygulama hataları bildirilebilir. Bu bölümde, nasıl hata ayıklama ve çalışma zamanı yönergeleri dosyasına yönergeleri ekleyerek bu özel durumları çözmek açıklanmaktadır. Çalışma zamanı yönergeleri biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Çalışma zamanı yönergeleri ekledikten sonra yapmanız gerekenler [dağıtın ve uygulamanızı test](#Step3) yeniden ve tüm yeni çözmek [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [Missingınteropdataexception](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) daha fazla özel durum yok karşılaştığınız kadar özel durumlar.
+Masaüstünde karşılaştığınız .NET Native en yaygın hata, bir Runtime [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)veya [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumu olduğunu öğrenirsiniz. Bazı durumlarda meta verilerin yokluğu, öngörülemeyen davranışta veya uygulama hatalarında bile kendi kendine bildirimde bulunabilir. Bu bölümde, çalışma zamanı yönergeleri dosyasına yönergeler ekleyerek bu özel durumları nasıl ayıklayacağınız ve giderebileceğinizi ele alınmaktadır. Çalışma zamanı yönergelerinin biçimi hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Çalışma zamanı yönergeleri eklendikten sonra, [uygulamanızı yeniden dağıtmanız ve test](#Step3) etmeniz ve yeni [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)ve [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) özel durumlarını siz yapana kadar çözmeniz gerekir. daha fazla özel durum olmadan karşılaşırsınız.
 
 > [!TIP]
-> Uygulamanız için kod değişiklikleri dayanıklı olacak şekilde etkinleştirmek için çalışma zamanı yönergeleri yüksek bir düzeyde belirtin.  Ad alanı ve türü düzeyleri üye düzeyi yerine çalışma zamanı yönergeleri eklemenizi öneririz. Dayanıklılık ve büyük ikili dosyalarla uzun derleme sürelerini arasında bir denge olabileceğini unutmayın.
+> Uygulamanızın kod değişikliklerine dayanıklı olmasını sağlamak için çalışma zamanı yönergelerini yüksek düzeyde belirtin.  Çalışma zamanı yönergelerini üye düzeyi yerine ad alanı ve tür düzeylerine eklemeniz önerilir. Daha uzun derleme süreleriyle dayanıklılık ve daha büyük ikili dosyalar arasında bir zorunluluğunu getirir olabileceğini unutmayın.
 
-Eksik bir meta veri özel durum adresleme bu sorunları dikkate alın:
+Eksik bir meta veri özel durumunun adreslenmesi sırasında şu sorunları göz önünde bulundurun:
 
-- Özel durumdan önce yapmak uygulama edebiliyordum ne?
+- Uygulamanın özel durumdan önce ne yapmaya çalıştığı.
 
-  - Örneğin, bağlama, seri hale getirme veya verileri seri durumdan çıkarılırken veya yansıma API'si kullanarak doğrudan veri neydi?
+  - Örneğin, veri bağlama, verileri serileştirme veya serisini kaldırma ya da doğrudan yansıma API 'sini kullanma.
 
-- Bu yalıtılmış bir durumdur veya diğer türleri için aynı sorunu karşılaşacağınız düşünüyorsanız?
+- Bu yalıtılmış bir durumdur veya diğer türler için aynı sorunla karşılaşacaksınız.
 
-  - Örneğin, bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) uygulamanın nesne modelinde bir tür serileştirilirken özel durumu harekete geçirilir.  Serileştirilecek diğer türleri biliyorsanız, aynı zamanda çalışma zamanı yönergeleri türlerine (veya kodun ne kadar iyi düzenlenmiş bağlı olarak ad alanlarını,) ekleyebilirsiniz.
+  - Örneğin, uygulamanın nesne modelinde bir tür serileştirilirken bir [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) özel durumu oluşturulur.  Seri hale getirilecek diğer türleri biliyorsanız, bu türler için çalışma zamanı yönergeleri (ya da kodun ne kadar iyi düzenlendiğine bağlı olarak, kapsayan ad alanları için) ekleyebilirsiniz.
 
-- Böylece yansıma kullanmaz kodu yeniden?
+- Kodu, yansıma kullanmaması için yeniden yazabilir misiniz?
 
-  - Örneğin, kod kullanımı mu `dynamic` bilebilmesi için ne tür bildiğinizde anahtar sözcüğü?
+  - Örneğin, ne tür beklendiğini bildiğiniz kod `dynamic` anahtar sözcüğünü kullanır mi?
 
-  - Kod, bazı daha iyi bir alternatif kullanılabilir olduğunda, yansıma bağımlı bir yöntem çağrısı mu?
+  - Kod, daha iyi bir alternatif kullanılabilir olduğunda yansımaya bağlı olan bir yöntemi çağırsın mı?
 
 > [!NOTE]
-> Yansıma ve Masaüstü uygulamaları ve .NET Native meta verilerinde kullanılabilirliğini farklılıklar gelen kökü sorunlarını hakkında ek bilgi için bkz: [API'leri kullanan yansıma üzerinde](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
+> Yansımanın farklarından ve masaüstü uygulamalarında meta verilerin kullanılabilirliğine ve .NET Native yönelik sorunları işleme hakkında daha fazla bilgi için, bkz. Reflection 'ı [kullanan API 'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md).
 
-Özel durum ve uygulamanızı test ederken ortaya çıkan diğer sorunları işleme bazı belirli örnekler için bkz:
+Uygulamanızı test ederken oluşan özel durumları ve diğer sorunları işlemeye yönelik bazı özel örnekler için, bkz.:
 
-- [Örnek: Veri bağlama sırasında özel durum işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Örnek: Verileri bağlarken özel durumları işleme](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
 
 - [Örnek: Dinamik programlama sorunlarını giderme](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
 
@@ -126,7 +126,7 @@ Eksik bir meta veri özel durum adresleme bu sorunları dikkate alın:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET yerel kurulumu ve yapılandırması](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native kurulum ve yapılandırma](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [.NET Native ve Derleme](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Yansıma ve .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [Yansıma Kullanan API'ler](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

@@ -2,21 +2,21 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 548c4884ecd2f4b9a71fcc9d6647a9e258b183c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783155"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934244"
 ---
-# <a name="reliablesession"></a>\<reliableSession >
-WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağlama eklendiğinde, sonuçta elde edilen kanal tam olarak destekler-bir kez teslim Güvenceleri.  
+# <a name="reliablesession"></a>\<Reliableoturum >
+WS-güvenilir mesajlaşma için ayarı tanımlar. Bu öğe özel bir bağlamaya eklendiğinde, elde edilen kanal, tam olarak bir kez teslimat hakkı destekleyebilir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
-\<reliableSession >  
+\<Reliableoturum >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,14 +38,14 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|AcknowledgementInterval|A <xref:System.TimeSpan> kanal o noktaya kadar alınan iletileri bir bildirim göndermesini bekleyin geçmeye maksimum zaman aralığını içerir. 00:00:0.2 varsayılandır.|  
-|FlowControlEnabled|Gelişmiş Akış denetiminin, WS-Reliable Mesajlaşma için akış denetimi Microsoft'a özel uygulanışı etkin olup olmadığını gösteren bir Boole değeri. Varsayılan, `true` değeridir.|  
-|InactivityTimeout|A <xref:System.TimeSpan> herhangi bir ileti kanalı hatalı önce göndermemeyi diğer tarafın kanalı göndermemesini en uzun süreyi belirtir. Varsayılan değer 00:10:00 ' dir.<br /><br /> Bir kanalda etkinlik, bir uygulama ya da altyapı iletileri alma olarak tanımlanır. Bu özellik, etkin olmayan bir oturum etkin kalması için en uzun süreyi denetler. Daha uzun süre sahip etkinlik geçerse, oturum altyapısı ve kanal hataları tarafından iptal edildi. **Not:**  Uygulamayı düzenli aralıklarla bağlantının etkin kalması için ileti göndermek için gerekli değildir.|  
-|MaxPendingChannels|En fazla bekleyebilen kabul edilecek bekleyebileceği kanal sayısını belirten bir tamsayı. Bu değer 1 için 16384 arasında kapsamlı olmalıdır. Varsayılan 4'tür.<br /><br /> Kanallar, ne zaman bunlar kabul zamanlanmayı bekleyen aşamasındadır. Bu sınıra ulaşıldığında, kanal yok oluşturulur. Bunun yerine, bunlar modu bu numara gelecek kadar aşağı (kanal kabul ederek) yerleştirilir. Bu bir Fabrika içi bir güvenlik sınırıdır.<br /><br /> Ne zaman eşiğine ulaşıldı ve yeni bir güvenilir oturum oluşturmak bir uzaktan uygulama çalıştığında, istek reddedilir ve bu hataların istenir açma işlemi. Bu sınır, giden kanallar bekleyen sayısı için geçerli değildir.|  
-|MaxRetryCount|En fazla kaç kez belirten bir tamsayı güvenilir bir kanal için bir bildirim kendi altındaki bir kanalda Send çağırarak almadı bir ileti yeniden dener.<br /><br /> Bu değer, sıfırdan büyük olmalıdır. Varsayılan değer 8'dir.<br /><br /> Bu değer, sıfırdan büyük bir tamsayı olmalıdır. Bir bildirim son aktarım sonra kanal hataları alınmazsa.<br /><br /> Bir ileti, alıcıya teslim alıcı tarafından onaylanmış, aktarılacak olarak kabul edilir.<br /><br /> Bildirim zaman iletilmiş bir ileti için belirli bir süre içinde alınmadı, altyapı, ileti otomatik olarak geçer. Altyapı, en fazla kaç kez bu özelliği tarafından belirtilen ileti yeniden dener. Bir bildirim son aktarım sonra kanal hataları alınmazsa.<br /><br /> Altyapı üzerinde hesaplanan ortalama gidiş dönüş süresi almadığı ne zaman belirlemek için bir üstel geri alma algoritması kullanır. Süresi 1 saniye aktarım ve yaklaşık 8,5 ilk iletim girişimi ve son aktarım denemesini arasında geçen dakika cinsinden sonuçları her girişimi gecikmeyle Katlama önce başlangıçta başlar. İlk aktarım deneme süresi göre hesaplanan gidiş dönüş süresini ayarlanır ve bu girişimler geçirmesine süre elde edilen esnetme buna göre değişir. Bu aktarım süresini çeşitli ağ koşulları için dinamik olarak uyum sağlar.|  
-|maxTransferWindowSize|En büyük arabellek boyutunu belirten bir tamsayı. Geçerli değerler 1 ile 4096 kapsamlı olmalı.<br /><br /> Bu öznitelik, istemcide henüz bir alıcı tarafından onaylanır iletileri tutmak için güvenilir bir kanal tarafından kullanılan arabelleğin en büyük boyutunu tanımlar. Bir ileti kotası birimidir. Arabelleği dolu ise, daha fazla gönderme işlemleri engellenir.<br /><br /> Bu öznitelik, bir alıcı ile kanal tarafından henüz uygulamaya gönderilen gelen iletileri depolamak için kullanılan arabelleğin en büyük boyutunu tanımlar. Arabelleği dolu ise, daha ayrıntılı iletiler sessizce alıcı tarafından bırakılır ve istemci tarafından aktarım gerektirir.|  
-|ordered|İletilerin gönderildiği sırada ulşamasını garanti edilip edilmediğini belirten Boolean bir değer. Bu ayar `false`, iletileri sıralama dışında gelir. Varsayılan, `true` değeridir.|  
-|ReliableMessagingVersion|Geçerli bir değer <xref:System.ServiceModel.ReliableMessagingVersion> kullanılacak WS-ReliableMessaging sürümünü belirtir.|  
+|bildiren Gementınterval|Kanalın <xref:System.TimeSpan> bu noktaya kadar alınan iletiler için bildirim göndermek üzere bekleyeceği maksimum zaman aralığını içeren bir. Varsayılan değer 00:00:0.2 ' dir.|  
+|flowControlEnabled|Gelişmiş akış denetiminin, WS-güvenilir mesajlaşma için Microsoft 'a özgü akış denetimi uygulamasının etkinleştirilip etkinleştirilmediğini belirten bir Boolean değer. Varsayılan, `true` değeridir.|  
+|InactivityTimeout|<xref:System.TimeSpan> Bu, kanalın diğer iletişim tarafına, kanalın süresi geçmeden önce herhangi bir ileti göndermemeyi sağlayan en uzun süreyi belirtir. Varsayılan değer 00:10:00 ' dir.<br /><br /> Bir kanaldaki etkinlik, uygulama veya altyapı iletileri alma olarak tanımlanır. Bu özellik, etkin olmayan bir oturumun etkin tutulması için en uzun süreyi denetler. Daha uzun süre hiçbir etkinlik olmadan geçerse, oturum altyapı ve kanal hataları tarafından iptal edilir. **Not:**  Uygulamanın bağlantıyı canlı tutmak için düzenli olarak ileti gönderebilmesi gerekli değildir.|  
+|maxPendingChannels|Dinleyicide bekleyebilen en fazla kanal sayısını belirten bir tamsayı. Bu değer 1 ila 16384 arasında olmalıdır. Varsayılan değer 4 ' dir.<br /><br /> Kanallar kabul edilmeden önce bekliyor. Bu sınıra ulaşıldığında, hiçbir kanal oluşturulmaz. Bunun yerine, bu sayı kapatılıncaya kadar (bekleyen kanalları kabul ederek) bekleyen moda konur. Bu, fabrika başına bir limit.<br /><br /> Eşiğe ulaşıldığında ve bir uzak uygulama yeni bir güvenilir oturum kurmaya çalıştığında, istek reddedilir ve bu hataları isteyen açma işlemi yapılır. Bu sınır, bekleyen giden kanalların sayısı için geçerlidir.|  
+|maxRetryCount|Güvenilir bir kanalın, temel aldığı kanalda Gönder ' i çağırarak bildirim almamış bir iletiyi yeniden göndermek için yaptığı deneme sayısının üst sınırını belirten bir tamsayı.<br /><br /> Bu değer sıfırdan büyük olmalıdır. Varsayılan değer 8 ' dir.<br /><br /> Bu değer sıfırdan büyük bir tamsayı olmalıdır. Son yeniden iletim sonrasında bir bildirim alınmıyorsa, kanal hataları.<br /><br /> Alıcı tarafından alıcının teslimatı onaylanmışsa bir ileti aktarıldıkları kabul edilir.<br /><br /> Bir bildirim, iletilen bir ileti için belirli bir süre içinde alınmadığında, altyapı iletiyi otomatik olarak yeniden iletir. Altyapı, bu özellik tarafından belirtilen en fazla kaç kez iletiyi yeniden göndermeye çalışır. Son yeniden iletim sonrasında bir bildirim alınmıyorsa, kanal hataları.<br /><br /> Altyapı, hesaplanan ortalama gidiş dönüş zamanına bağlı olarak ne zaman yeniden aktarım için bir üstel geri dönüş algoritması kullanır. İlk iletim denemesi ve son yeniden iletme girişimi arasında yaklaşık 8,5 dakika boyunca yeniden iletimden önce 1 saniye içinde başlar ve her denemede gecikme süresi ikiye geçer. İlk yeniden iletim denemesinin saati, hesaplanan gidiş dönüş zamanına ve bu girişimlere göre farklılık gösteren elde edilen süre uzatılmasına göre düzeltilir. Bu, yeniden aktarım süresinin farklı ağ koşullarına dinamik olarak uyum sağlamasına izin verir.|  
+|maxTransferWindowSize|Arabelleğin en büyük boyutunu belirten bir tamsayı. Geçerli değerler 1 ile 4096 arasında olmalıdır.<br /><br /> İstemcide, bu öznitelik, alıcı tarafından henüz onaylanmayan iletileri tutmak için güvenilir bir kanal tarafından kullanılan arabelleğin en büyük boyutunu tanımlar. Kota birimi bir iletidir. Arabellek doluysa, daha fazla gönderme işlemi engellenir.<br /><br /> Alıcıda, bu öznitelik kanal tarafından henüz uygulamaya dağıtılan gelen iletileri depolamak için kullanılan arabelleğin en büyük boyutunu tanımlar. Arabellek doluysa, daha fazla ileti alıcı tarafından sessizce bırakılır ve istemci tarafından yeniden aktarım gerektirir.|  
+|ordered|İletilerin gönderildikleri sırada gelmesi garanti edilip edilmeyeceğini belirten bir Boole değeri. Bu ayar ise `false`, iletiler sırayla gelebilir. Varsayılan, `true` değeridir.|  
+|Belirten ReliableMessagingVersion|Kullanılacak WS-ReliableMessaging <xref:System.ServiceModel.ReliableMessagingVersion> sürümünü belirten geçerli bir değer.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,17 +54,17 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Güvenilir oturumlar güvenilir Mesajlaşma ve oturumları için özellikler sağlar. Güvenilir Mesajlaşma iletişimi hatasında yeniden deneme sayısı ve teslim Güvenceleri gibi sırayla varış belirtilmesi iletilerinin sağlar. Oturumlarının çağrıları arasında istemcilerin zachovat stav relace Bu öğe Ayrıca isteğe bağlı olarak sıralı mesaj teslimatı sağlar. Uygulanan bu oturum, SOAP ve aktarım aracılar çapraz.  
+ Güvenilir Oturumlar, güvenilir mesajlaşma ve oturumlara yönelik özellikler sağlar. Güvenilir Mesajlaşma, hata durumunda iletişim kurmayı yeniden dener ve iletilerin belirli bir sırada gönderilmesini sağlar. Oturumlar, çağrılar arasındaki istemciler için durumu korur. Bu öğe Ayrıca isteğe bağlı olarak sıralı ileti teslimi sağlar. Bu uygulanan oturum, SOAP ve aktarım aracıları arası olabilir.  
   
- Her bağlama öğesi gönderirken veya iletileri almak için bir işleme adımını temsil eder. Çalışma zamanında bağlama öğeleri kanal fabrikaları ve ileti göndermek ve almak için gereken gelen ve giden kanal yığınları oluşturmak gerekli olan bir dinleyici oluşturun. `reliableSession` Uç noktalar arasında güvenilir oturum oluşturmak ve bu oturum davranışını yapılandırma yığınında isteğe bağlı bir katmanı sağlar.  
+ Her bağlama öğesi ileti gönderirken veya alırken bir işleme adımını temsil eder. Çalışma zamanında, bağlama öğeleri, ileti göndermek ve almak için gereken giden ve gelen kanal yığınları oluşturmak için gereken kanal fabrikalarını ve dinleyicileri oluşturur. , `reliableSession` Yığında, uç noktalar arasında güvenilir bir oturum kurabilen ve bu oturumun davranışını yapılandırasağlayan isteğe bağlı bir katman sağlar.  
   
- Daha fazla bilgi için [güvenilir oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
+ Daha fazla bilgi için bkz. [Güvenilir Oturumlar](../../../wcf/feature-details/reliable-sessions.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, çeşitli taşıma ve istemci durumu korur ve sıralı teslim Güvenceleri belirten öğeleri kodlama, özellikle de güvenilir oturumlar etkinleştirme ileti özel bağlama yapılandırma gösterilmektedir. Bu özellik, uygulama yapılandırma dosyalarında istemci ve hizmet için yapılandırılır. Örnek, hizmet yapılandırmasını gösterir.  
+ Aşağıdaki örnek, özel bir bağlamanın çeşitli taşıma ve ileti kodlama öğeleriyle nasıl yapılandırılacağını gösterir, özellikle de istemci durumunu tutan ve sipariş içi teslim bildirimlerini belirten güvenilir oturumları etkinleştirir. Bu özellik, istemci ve hizmet için uygulama yapılandırma dosyalarında yapılandırılır. Örnek, hizmet yapılandırmasını gösterir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>
@@ -124,8 +124,8 @@ WS-Reliable Mesajlaşma için ayarını tanımlar. Bu öğe için özel bir bağ
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
-- [Güvenilir Oturumlar](../../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Güvenilir Oturumlar](../../../wcf/feature-details/reliable-sessions.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

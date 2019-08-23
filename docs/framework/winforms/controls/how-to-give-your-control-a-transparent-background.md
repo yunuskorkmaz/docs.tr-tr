@@ -6,25 +6,25 @@ helpviewer_keywords:
 - custom controls [Windows Forms], transparent background
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
-ms.openlocfilehash: 8a03d9afec5340cd77af465c4470b7484b8926be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a82807ea3873b2217d1f05f6c720c599ea79abdd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966646"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>Nasıl yapılır: Denetiminize Saydam Arka Plan Verme
-Önceki .NET Framework sürümlerinde ilk ayarlamadan saydam backcolors ayarı denetimleri desteklemekteydi <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemi Formlar'ın Oluşturucusu. Geçerli framework sürümü backcolor çoğu denetimleri için ayarlanabilir <xref:System.Drawing.Color.Transparent%2A> içinde **özellikleri** tasarım zamanında ya da formun Oluşturucusu kodunda penceresi.  
+.NET Framework önceki sürümlerinde denetimler, önce formların oluşturucusunda <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemi ayarlamadan saydam geri renklerin ayarlanmasını desteklemezler. Geçerli Framework sürümünde, çoğu denetim için BackColor, tasarım zamanında **Özellikler** penceresinde veya formun <xref:System.Drawing.Color.Transparent%2A> oluşturucusunda kodda olarak ayarlanabilir.  
   
 > [!NOTE]
->  Windows Forms denetimleri gerçek saydamlık desteklemez. Üst öğesi tarafından saydam bir Windows Forms denetiminin arka planı boyanmadan.  
+> Windows Forms denetimleri gerçek saydamlığı desteklemez. Saydam Windows Forms denetiminin arka planı üst öğesi tarafından boyanmıştır.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.Button> Denetim saydam bir arka plan rengi desteklemiyorsa bile <xref:System.Windows.Forms.ButtonBase.BackColor%2A> özelliği <xref:System.Drawing.Color.Transparent%2A>.  
+> Denetim, <xref:System.Windows.Forms.ButtonBase.BackColor%2A> özelliği olarak<xref:System.Drawing.Color.Transparent%2A>ayarlanmış olsa bile saydam BackColor 'ı desteklemez. <xref:System.Windows.Controls.Button>  
   
-### <a name="to-give-your-control-a-transparent-backcolor"></a>Saydam bir arka plan rengi, denetim sağlamak için  
+### <a name="to-give-your-control-a-transparent-backcolor"></a>Denetimine saydam bir BackColor sağlamak için  
   
-- Özellikler penceresinde <xref:System.Windows.Forms.ButtonBase.BackColor%2A> özelliği ve ayarlayın <xref:System.Drawing.Color.Transparent%2A>  
+- Özellikler penceresi, <xref:System.Windows.Forms.ButtonBase.BackColor%2A> özelliğini seçin ve<xref:System.Drawing.Color.Transparent%2A>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

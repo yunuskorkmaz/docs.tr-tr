@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5b3889829ced876b23ea6632f35f4da6beffdca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63341bcd6079688ed1a8e18ec8c422bca1427c72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910073"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName Yöntemi
-Yüklenen bir modülün adını alır.  
+Yüklenen modülün adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,27 +27,27 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Karakter sayısı `szName` arabellek.  
+ 'ndaki `szName` Arabellekteki karakterlerin sayısı.  
   
  `pcchName`  
- [out] Gerçekte yazılan karakter sayısı için bir işaretçi `szName` arabellek.  
+ dışı Gerçekte `szName` arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
- [out] Yüklenen bir modülün adını içeren bir karakter dizisi.  
+ dışı Yüklenen modülün adını içeren bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

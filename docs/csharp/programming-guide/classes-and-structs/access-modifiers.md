@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: 8eda59a911e0a69936a69f2b04ba5fbf2023e8ff
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 266ece1e63bf6d32bf59406dbc72a9e6bd92eb45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597207"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924548"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Erişim Değiştiricileri (C# Programlama Kılavuzu)
 Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğer koddan kullanılıp kullanılamayacağını denetleyen bir erişilebilirlik düzeyine sahiptir. Aşağıdaki erişim değiştiricilerini, bir tür veya üyenin bildirimini yaparken belirtmek için kullanabilirsiniz:  
@@ -62,7 +62,7 @@ Tüm türler ve tür üyeleri, derlemenizin veya diğer derlemelerinizdeki diğe
  [!code-csharp[csProgGuideObjects#73](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#73)]  
   
 > [!NOTE]
->  Korunan iç erişilebilirlik düzeyi korumalı veya dahili, korumalı ve dahili anlamına gelir. Diğer bir deyişle, korunan bir iç üyeye, türetilmiş sınıflar dahil olmak üzere aynı derlemedeki herhangi bir sınıftan erişilebilir. Erişilebilirliği yalnızca aynı derlemede bulunan türetilmiş sınıflarla sınırlamak için, sınıfın kendisini iç bildirin ve üyelerini korumalı olarak bildirin. Ayrıca, 7,2 ile C# başlayarak, özel korumalı erişim değiştiricisini kullanarak, kapsayan sınıfı iç oluşturmanız gerekmeden aynı sonucu elde edebilirsiniz.  
+> Korunan iç erişilebilirlik düzeyi korumalı veya dahili, korumalı ve dahili anlamına gelir. Diğer bir deyişle, korunan bir iç üyeye, türetilmiş sınıflar dahil olmak üzere aynı derlemedeki herhangi bir sınıftan erişilebilir. Erişilebilirliği yalnızca aynı derlemede bulunan türetilmiş sınıflarla sınırlamak için, sınıfın kendisini iç bildirin ve üyelerini korumalı olarak bildirin. Ayrıca, 7,2 ile C# başlayarak, özel korumalı erişim değiştiricisini kullanarak, kapsayan sınıfı iç oluşturmanız gerekmeden aynı sonucu elde edebilirsiniz.  
   
 ## <a name="other-types"></a>Diğer türler  
  Bir ad alanı içinde doğrudan tanımlanmış arabirimler, genel veya iç olarak veya sınıflar ve yapılar gibi, varsayılan olarak dahili erişim için arabirimler olarak belirtilebilir. Arabirim üyeleri her zaman geneldir çünkü bir arabirimin amacı başka türlerin bir sınıfa veya yapıya erişmesine olanak sağlamaktır. Arabirim üyelerine erişim değiştiricileri uygulanamaz.  

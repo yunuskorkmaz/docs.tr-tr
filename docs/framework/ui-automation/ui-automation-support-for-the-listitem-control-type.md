@@ -6,85 +6,85 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: c2cc96e575dc85459cf55e30d3cbe54bfb158b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 337fa87f2bd70443b635d05769c108caba9c807c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783088"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964002"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>ListItem Denetim Türü için UI Otomasyon Desteği
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu hakkında bilgi sağlar. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] desteği <xref:System.Windows.Automation.ControlType.ListItem> denetim türü. İçinde [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], Denetim türü bir denetim kullanmak için karşılaması gereken koşulları kümesidir <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliği. Özel yönergeleri koşulları dahil [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısını [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerlerini ve denetim düzenleri.  
+ Bu konuda <xref:System.Windows.Automation.ControlType.ListItem> denetim türü için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] destek hakkında bilgi verilmektedir. ' [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]De, bir denetim türü, <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> özelliği kullanmak için bir denetimin uyması gereken koşullar kümesidir. Koşullar, ağaç yapısı, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellik değerleri ve Denetim desenleri için özel kurallar içerir.  
   
- Liste öğesi denetimleri ListItem denetim türü denetimlerini bir örnektir.  
+ Liste öğesi denetimleri, ListItem denetim türünü uygulayan denetimlerin bir örneğidir.  
   
- Aşağıdaki bölümlerde gerekli tanımlamak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç yapısı, özellikler, Denetim düzenleri ve olayları ListItem denetim türü için. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Gereksinimler tüm liste denetimleri için geçerli olup olmadığını [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], veya [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Aşağıdaki bölümler, ListItem denetim türü [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] için gerekli ağaç yapısını, özellikleri, denetim desenlerini ve olayları tanımlar. Gereksinimler,, [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]veya [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] şeklinde[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]tüm liste denetimleri için geçerlidir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyon ağaç yapısı  
- Aşağıdaki tablo denetimi ve içerik görünümünde gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] liste öğesine aittir ağaç denetler ve her bir görünümde bulunabilir açıklar. Daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç bkz [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
+## <a name="required-ui-automation-tree-structure"></a>Gerekli UI Otomasyonu ağaç yapısı  
+ Aşağıdaki tabloda, liste öğesi denetimleriyle ilgili olan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümü ve içerik görünümü gösterilmektedir ve her görünümde nelerin yer aldığı açıklanmaktadır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağaç hakkında daha fazla bilgi için bkz. [UI Otomasyon ağacına genel bakış](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
-|Denetim Görünüm|İçerik görünümü|  
+|Denetim görünümü|İçerik görünümü|  
 |------------------|------------------|  
-|ListItem<br /><br /> -Görüntü (0 veya daha fazla)<br />-Metin (0 veya daha fazla)<br />-Düzenle (0 veya daha fazla)|ListItem|  
+|Liste<br /><br /> -Görüntü (0 veya daha fazla)<br />-Metin (0 veya daha fazla)<br />-Düzenle (0 veya daha fazla)|Liste|  
   
- Liste öğesi denetimi içerik görünümü içinde alt [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç her zaman "0" olmalıdır. Gereksinimleri izlemelidir sonra diğer öğeler liste öğesinin altında yer alır, denetimin yapısını ise [Treeıtem denetim türü için UI Otomasyon desteği](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md) denetim türü.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Ağacın içerik görünümü içindeki bir liste öğesi denetiminin alt öğeleri her zaman "0" olmalıdır. Denetimin yapısı, diğer öğeler liste öğesinin altında yer alıyorsa, [ağaç öğesi denetim türü denetim türü Için UI Otomasyonu desteğinin](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md) gereksinimlerini izlemelidir.  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon özellikleri  
- Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , değer veya tanımı liste öğesi denetimleri için özellikle ilgili özellikler. Daha fazla bilgi için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] özellikleri görmek [istemciler için UI Otomasyon özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+## <a name="required-ui-automation-properties"></a>Gerekli UI Otomasyon Özellikleri  
+ Aşağıdaki tabloda, değeri veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımı özellikle liste öğesi denetimleriyle ilgili olan özellikler listelenmiştir. Özellikler hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] daha fazla bilgi için bkz. [istemciler için UI Otomasyon özellikleri](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özelliği|Değer|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Özelliði|Değer|Notlar|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerini bir uygulamadaki tüm denetimler arasında benzersiz olması gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Bu özelliğin bu değeri liste öğesi resim ve metin içeriğini alan içermelidir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Bağlıdır|Listesi denetimini tıklanabilir bir nokta (odağı alması için listeyi neden tıklanabilir bir nokta) varsa, bu noktadan bu özelliği aracılığıyla sunulmalıdır. Listesi denetimini tamamen alt liste öğeleri tarafından kapsanan varsa oluşturacak bir <xref:System.Windows.Automation.NoClickablePointException> istemci liste denetiminde bir öğe için tıklanabilir bir nokta kaldırmasını belirtmek için.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Bir liste öğesi denetimin adı özelliğinin değeri, öğenin metin içeriğini gelir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Bir statik metin etiketi ise bu özellik bu denetime başvuru göstermesi gerekir.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ListItem|Bu değer tüm UI çerçeveleri için aynıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"liste öğesi"|ListItem denetim türü için karşılık gelen yerelleştirilmiş bir dize.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Listesi denetimini her zaman içerik görünümünde bulunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Listesi denetimini her zaman denetim görünümünde bulunan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Doğru|Kapsayıcı klavye girdisi kabul edebilir, bu özellik değeri true olmalıdır.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Liste denetimleri için Yardım metni, kullanıcı, genellikle bir araç ipucu sunulan bilgi aynı türde olan bir seçeneklerini listeden bir seçim yapmasını neden sorulmaktadır açıklayan. Örneğin, ", izleme için ekran çözünürlüğünü ayarlamak için bir öğe seçin."|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Bağlıdır|Bu özellik, temel alınan nesneyi gösteren liste öğesi denetimleri için açılmamalıdır. Bu liste öğesi denetimleri genellikle kullanıcıların temel alınan nesnenin ilişkilendirileceği denetimi ile ilişkili bir simge var.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Bağlıdır|Bu özellik, yoksa liste öğesi şu anda görünümde kaydırma denetim düzeni uygulayan üst kapsayıcı içindeki kaydırılan için bir değer döndürmesi gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Notlara bakın.|Bu özelliğin değerinin bir uygulamadaki tüm denetimlerde benzersiz olması gerekir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Notlara bakın.|Bu özelliğin bu değeri, görüntü alanını ve liste öğesinin metin içeriğini içermelidir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Şekline|Liste denetiminin tıklatılabilir bir noktası varsa (listenin odaklanmasına neden olacak şekilde tıklanabilecek bir nokta), bu nokta bu özellik aracılığıyla gösterilmelidir. Liste denetimi, alt liste öğelerine tamamen kapalıyorsa, istemcinin tıklatılabilir bir nokta için <xref:System.Windows.Automation.NoClickablePointException> liste denetimi içinde bir öğe sormasını belirtmek üzere bir sağlar.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Notlara bakın.|Bir liste öğesi denetiminin Name özelliğinin değeri, öğenin metin içeriğinden gelir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Notlara bakın.|Statik bir metin etiketi varsa, bu özellik bu denetimin bir başvurusunu kullanıma sunmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Liste|Bu değer tüm UI çerçeveleri için aynıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"liste öğesi"|ListItem denetim türüne karşılık gelen yerelleştirilmiş dize.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Doğru|Liste denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın içerik görünümüne dahil edilmiştir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|Doğru|Liste denetimi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacın denetim görünümüne dahil edilmiştir.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Doğru|Kapsayıcı klavye girişini kabul edebiliyorsa, bu özellik değeri doğru olmalıdır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|Liste denetimleri için yardım metni, kullanıcıya, genellikle bir araç ipucuyla sunulan ve genellikle aynı türde bilgiler olan bir seçenek listesinden seçim yapma sorulduğunu açıklamalıdır. Örneğin, "monitörünüz için görüntü çözünürlüğünü ayarlamak için bir öğe seçin."|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Şekline|Bu özellik, temel alınan bir nesneyi temsil eden liste öğesi denetimleri için sunulmalıdır. Bu liste öğesi denetimlerinde genellikle kullanıcıların temel alınan nesneyle ilişkili olan denetimle ilişkili bir simge vardır.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Şekline|Bu özellik, liste öğesinin kaydırma denetim modelini uygulayan üst kapsayıcıda görünüm olarak kaydırılıp kaydırılmayacağını belirten bir değer döndürmelidir.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyon denetim düzenleri  
- Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] denetim desenleri liste öğesi denetimleri tarafından desteklenmesi gerekir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyon denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+## <a name="required-ui-automation-control-patterns"></a>Gerekli UI Otomasyonu Denetim desenleri  
+ Aşağıdaki tabloda liste öğesi denetimleri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tarafından desteklenmesi gereken denetim desenleri listelenmektedir. Denetim desenleri hakkında daha fazla bilgi için bkz. [UI Otomasyonu Denetim desenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|Denetim düzeni|Destek|Notlar|  
+|Denetim deseninin|Destek|Notlar|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Evet|Liste öğesi denetimi, bu denetim düzeni uygulamalıdır. Bu liste seçildiklerinde iletmek öğe denetimleri sağlar.|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Bağlıdır|Liste öğesi kaydırılabilir bir kapsayıcıda yer alıyorsa bu denetim düzeni uygulanmalıdır.|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Bağlıdır|Liste öğesi checkable ise ve eylem seçimi durum değişikliği gerçekleştirmez bu denetim düzeni uygulanmalıdır.|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Bağlıdır|Öğe bilgilerini göstermek veya gizlemek için yönetilebilir, bu denetim düzeni uygulanmalıdır.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Bağlıdır|Öğesi düzenlenebilir, bu denetim düzeni uygulanmalıdır. Liste öğesi denetimi değişiklikleri değerlerini değişiklikleri neden <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>, ve <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Bağlıdır|Öğe için uzamsal Gezinti listesi kapsayıcı içinde desteklenir ve kapsayıcı satırlar ve sütunlar düzenlenmiş kılavuz öğesi denetim düzeni uygulanmalıdır.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Bağlıdır|Öğenin üzerinde gerçekleştirilebilen bir komut yoksa ayrı seçimden, ardından bu düzen uygulanmalıdır. Liste öğesi denetimi çift ile ilişkili bir eylem genellikle budur. Örnek Belge başlatma [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)], veya bir müzik dosyası oynayan [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)].|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Evet|Liste öğesi denetimi bu denetim deseninin uygulanması gerekir. Bu, liste öğeleri denetimlerinin seçildiklerinde yönetilmesine olanak sağlar.|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Şekline|Liste öğesi kaydırılabilir bir kapsayıcı içinde yer alıyorsa, bu denetim deseninin uygulanması gerekir.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Şekline|Liste öğesi kullanıma alınabilir durumdaysa ve eylem bir seçim durumu değişikliği gerçekleştirmezse, bu denetim deseninin uygulanması gerekir.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Şekline|Öğe bilgileri göstermek veya gizlemek için işlenebiliyorsanız, bu denetim deseninin uygulanması gerekir.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Şekline|Öğe düzenlenebilirse, bu denetim deseninin uygulanması gerekir. Liste öğesi denetimindeki değişiklikler <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>, ve <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>değerlerinde değişikliklere neden olur.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Şekline|Öğe uzamsal gezinmede öğe liste kapsayıcısı içinde destekleniyorsa ve kapsayıcı satırlar ve sütunlar halinde düzenlenmişse, kılavuz öğesi denetim deseninin uygulanması gerekir.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Şekline|Öğe üzerinde gerçekleştirilebilecek bir komuta sahipse, seçimden ayırın, bu düzenin uygulanması gerekir. Bu genellikle liste öğesi denetimine çift tıklanmakla ilişkili bir eylemdir. Örnekler [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]' de bir belge veya içinde [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)]müzik dosyası oynamalıdır.|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyonu olayları  
- Aşağıdaki tabloda [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olayları tüm liste öğesi denetimleri tarafından desteklenmesi gerekir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+## <a name="required-ui-automation-events"></a>Gerekli UI Otomasyon olayları  
+ Aşağıdaki tabloda, tüm liste [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğesi denetimleri tarafından desteklenmesi gereken olaylar listelenmektedir. Olaylar hakkında daha fazla bilgi için bkz. [UI Otomasyonu olaylarına genel bakış](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Olay|Destek|Notlar|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Olay|Destek|Notlar|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Bağlıdır|Yok.|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Şekline|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> özellik değişti olayı.|Gerekli|None|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> özellik değişti olayı.|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>özellik değişti olayı.|Gerekli|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty>özellik değişti olayı.|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Gerekli|Yok.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty> özellik değişti olayı.|Bağlıdır|None|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> özellik değişti olayı.|Bağlıdır|Yok.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty>özellik değişti olayı.|Şekline|Yok.|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty>özellik değişti olayı.|Şekline|Yok.|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty>özellik değişti olayı.|Şekline|Yok.|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>özellik değişti olayı.|Şekline|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Gerekli|Yok.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Gerekli|Yok.|  
   

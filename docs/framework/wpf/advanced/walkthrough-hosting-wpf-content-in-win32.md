@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 9ab046c6f7c070ade9d3e474309b33afbf78370e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 03a35d26fd1917d926f9a26d25ae8a8e32c476f4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629642"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917635"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>İzlenecek yol: WPF İçeriğini Win32 içinde Barındırma
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] önemli bir yatırımınız olduğunda, özgün kodunuzu yeniden yazmak yerine uygulamanıza işlevsellik eklemek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] daha etkili olabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] pencerede içerik barındırmak için basit bir mekanizma sağlar.  
@@ -20,12 +20,12 @@ ms.locfileid: "68629642"
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu öğreticide, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hem hem de programlama ile ilgili temel bir benzerlik varsayılmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programlamaya temel bir giriş için [bkz. Başlarken](../getting-started/index.md). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde, konudaki çok sayıda kitaplardan birine başvurmanız gerekir.  
+ Bu öğreticide, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] hem hem de programlama ile ilgili temel bir benzerlik varsayılmaktadır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Programlamaya temel bir giriş için bkz. Başlarken [](../getting-started/index.md). [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde, konudaki çok sayıda kitaplardan birine başvurmanız gerekir.  
   
  Bu öğreticiye eşlik eden örnek, C++/CLI ' da uygulandığından, bu öğreticide, Windows API 'sinin programlanması ve yönetilen kod programlamasını anlamak için kullanımı hakkında C++ bilgiler verilir. /CLI ile C++benzerlik yararlı ancak gerekli değildir.  
   
 > [!NOTE]
->  Bu öğretici, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. Tüm örnek kod için bkz. [bir Win32 pencere ÖRNEĞINDE WPF Içeriğini barındırma](https://go.microsoft.com/fwlink/?LinkID=160004).  
+> Bu öğretici, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. Tüm örnek kod için bkz. [bir Win32 pencere ÖRNEĞINDE WPF Içeriğini barındırma](https://go.microsoft.com/fwlink/?LinkID=160004).  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>Temel yordam  
@@ -58,7 +58,7 @@ ms.locfileid: "68629642"
 8. Özellikleri ayarlamak için statik alanda depoladığınız başvuruyu kullanarak içerikleiletişimkurunvebuşekildedevamedin.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  İçeriğinizi uygulamak için de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bununla birlikte, bir dinamik bağlantı kitaplığı (dll) olarak ayrı olarak derlemek ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamanızdan dll 'ye başvurmanız gerekir. Yordamın geri kalanı yukarıda ana hatlarıyla benzerdir.
+> İçeriğinizi uygulamak için de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]kullanabilirsiniz. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Bununla birlikte, bir dinamik bağlantı kitaplığı (dll) olarak ayrı olarak derlemek ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamanızdan dll 'ye başvurmanız gerekir. Yordamın geri kalanı yukarıda ana hatlarıyla benzerdir.
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Konak uygulamasını uygulama
@@ -106,7 +106,7 @@ ms.locfileid: "68629642"
 4. Açılan liste kutusundan **ortak dil çalışma zamanı desteği (/CLR)** öğesini seçin.
 
 > [!NOTE]
->  Bu derleyici bayrağı uygulamanızda yönetilen kod kullanmanıza izin verir, ancak yönetilmeyen kodunuz daha önce olduğu gibi derlenmeye devam eder.
+> Bu derleyici bayrağı uygulamanızda yönetilen kod kullanmanıza izin verir, ancak yönetilmeyen kodunuz daha önce olduğu gibi derlenmeye devam eder.
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]tek iş parçacıklı Apartment (STA) iş parçacığı modelini kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] İçerik kodu ile düzgün bir şekilde çalışabilmek için, giriş noktasına bir öznitelik uygulayarak uygulamanın iş parçacığı modelini STA olarak ayarlamanız gerekir.
 
@@ -123,7 +123,7 @@ ms.locfileid: "68629642"
  Yöntemi `GetHwnd` , boyut ve konum bilgilerini ve üst pencere tanıtıcısını alır ve barındırılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] içeriğin pencere tanıtıcısını döndürür.
 
 > [!NOTE]
->  Ad`System::Windows::Interop` alanı için bir `#using` yönerge kullanamazsınız. Bunun yapılması, <xref:System.Windows.Interop.MSG> bu ad alanındaki yapı ve Winuser. h içinde belirtilen MSG yapısı arasında bir ad çakışması oluşturur. Bunun yerine, bu ad alanının içeriğine erişmek için tam nitelikli adlar kullanmanız gerekir.
+> Ad`System::Windows::Interop` alanı için bir `#using` yönerge kullanamazsınız. Bunun yapılması, <xref:System.Windows.Interop.MSG> bu ad alanındaki yapı ve Winuser. h içinde belirtilen MSG yapısı arasında bir ad çakışması oluşturur. Bunun yerine, bu ad alanının içeriğine erişmek için tam nitelikli adlar kullanmanız gerekir.
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 

@@ -14,75 +14,75 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99acef0a7b29228ddf0406352ff5a88b77294b00
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966664"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Biçimlendirme
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Çeşitli bölümlerine farklı renkler uygulayarak bir <xref:System.Windows.Forms.DataGrid> denetim bilgileri içine okumak ve yorumlamak kolay hale getirmek için yardımcı olabilir. Satırları ve sütunları için renk uygulanabilir. Satırları ve sütunları da gizli veya gösterilen günlüklerinizin bekletilme.  
+ Bir <xref:System.Windows.Forms.DataGrid> denetimin çeşitli bölümlerine farklı renkler uygulamak, bilgilerin okunmasını ve yorumlanması daha kolay hale getirmenize yardımcı olabilir. Renk, satırlara ve sütunlara uygulanabilir. Satırlar ve sütunlar da gizlenebilir veya sizin için de görünür.  
   
- Biçimlendirme üç temel unsur vardır <xref:System.Windows.Forms.DataGrid> denetimi. Verilerin görüntülendiği bir varsayılan stilde kurmak için özellikleri ayarlayabilirsiniz. Bu temelden belirli tablolar, çalışma zamanında görüntülenme biçimini özelleştirebilirsiniz. Son olarak, hangi sütunların renkleri yanı sıra veri kılavuzunda görüntülenen değiştirebilirsiniz ve diğer biçimlendirme gösterilir.  
+ <xref:System.Windows.Forms.DataGrid> Denetimi biçimlendirmenin üç temel yönü vardır. Özellikleri, verilerin görüntülendiği varsayılan bir stil oluşturmak için ayarlayabilirsiniz. Bu temelden, belirli tabloların çalışma zamanında görüntülenme şeklini özelleştirebilirsiniz. Son olarak, veri kılavuzunda görüntülenecek sütunları ve gösterilen renkleri ve diğer biçimlendirmeleri değiştirebilirsiniz.  
   
- Bir ilk adım olarak, veri kılavuzu biçimlendirme özellikleri ayarlayabilirsiniz <xref:System.Windows.Forms.DataGrid> kendisi. Bu renk ve biçim seçimleri kendisinden sonra veri tabloları ve sütunları görüntülenen bağlı olarak değişiklik yapabilirsiniz bir temel oluşturur.  
+ Bir veri kılavuzunu biçimlendirirken ilk adım olarak, <xref:System.Windows.Forms.DataGrid> kendi özelliklerini ayarlayabilirsiniz. Bu renk ve biçim seçimleri, daha sonra görünen veri tablolarına ve sütunlara göre değişiklik yapabileceğiniz bir temel oluşturur.  
   
-### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid denetimi için bir varsayılan stilde oluşturmak için  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>DataGrid denetimi için varsayılan bir stil oluşturmak için  
   
 1. Aşağıdaki özellikleri uygun şekilde ayarlayın:  
   
     |Özellik|Açıklama|  
     |--------------|-----------------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> Özelliği sayılı satır kılavuzunun rengini tanımlar. Ayarladığınızda <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> özelliği farklı bir renge, her bir satır için bu yeni renk ayarlanır (satırlar 1, 3, 5 vb.).|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Izgaranın sayılı satırların arka plan rengi (0, 2, 4, 6 ve benzeri satır).|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Oysa <xref:System.Windows.Forms.DataGrid.BackColor%2A> ve <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> özellikleri ızgara satır rengini belirler <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> özellik Kılavuzu altına kaydırılan veya yalnızca birkaç satır içerdiği görülebilir nonrow alanının rengini belirler Kılavuz.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Izgaranın kenarlık stili, aşağıdakilerden birini <xref:System.Windows.Forms.BorderStyle> sabit listesi değerleri.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Kılavuzun üzerindeki hemen görünen kılavuz pencere başlığı arka plan rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Kılavuz üst kısmındaki başlık yazı tipi.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Izgaranın pencere başlığı arka plan rengi.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|Kılavuzda metni görüntülemek için kullanılan yazıtipi.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Veri Kılavuzu satırı verilerinde tarafından görüntülenen yazı tipi rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Veri Kılavuzu, kılavuz çizgilerinin rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|Kılavuzun birini hücreleri ayıran çizgilerin stili <xref:System.Windows.Forms.DataGridLineStyle> sabit listesi değerleri.|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> Özelliği, kılavuzun çift sayılı satırlarının rengini tanımlar. <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> Özelliği farklı bir renge ayarladığınızda, diğer her satır bu yeni renge ayarlanır (satır 1, 3, 5, vb.).|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Kılavuzun çift sayılı satırlarının arka plan rengi (satırlar 0, 2, 4, 6, vb.).|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Ve özellikleri kılavuzdaki satırların rengini belirler, <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> özelliği, yalnızca kılavuz en alta kaydırıldığında görünen satır olmayan alanın rengini belirler veya yalnızca birkaç satır dahil edilir. <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> <xref:System.Windows.Forms.DataGrid.BackColor%2A> kılavuz.|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|Stilin kenarlık stili, <xref:System.Windows.Forms.BorderStyle> numaralandırma değerlerinden biri.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|Kılavuzun hemen üstünde görünen kılavuzun pencere açıklamalı arka plan rengi.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|Kılavuzun üst kısmındaki başlık yazı tipi.|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|Kılavuzun pencere açıklamalı arka plan rengi.|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|Kılavuzdaki metni göstermek için kullanılan yazı tipi.|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|Veri kılavuzu satırlarındaki veriler tarafından gösterilecek yazı tipi rengi.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|Veri kılavuzunun kılavuz çizgilerinin rengi.|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<xref:System.Windows.Forms.DataGridLineStyle> Numaralandırma değerlerinden biri olan kılavuzun hücrelerini ayıran çizgilerin stili.|  
     |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|Satır ve sütun üst bilgilerinin arka plan rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Sütun üst bilgilerini kullanılan yazıtipi.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Kılavuz sütun üst bilgilerini sütunu üstbilgi metni ve (satır birden çok ilişkili tabloyla görüntülendiğinde genişletmek için) artı/eksi karakterleri dahil olmak üzere, ön plan rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Veri kılavuzunda alt tablolar, ilişki adı ve benzeri bağlantılar dahil olmak üzere tüm bağlantıların metnin rengi.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Bir alt tabloda üst satırların arka plan rengi budur.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Bir alt tabloda üst satırları ön plan rengini budur.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Tablo ve sütun adları üst satırın yoluyla görüntülenip görüntülenmediğini belirler <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> sabit listesi.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Izgara sütunları varsayılan genişliğini (piksel cinsinden). Sıfırlamadan önce bu özelliği ayarlayın <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özellikleri (ya da ayrı olarak aracılığıyla veya <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi), veya özellik hiçbir etkisi olmaz.<br /><br /> Özelliği, 0'dan düşük bir değere ayarlanamaz.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Izgara satır satır yüksekliği (piksel cinsinden). Sıfırlamadan önce bu özelliği ayarlayın <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özellikleri (ya da ayrı olarak aracılığıyla veya <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi), veya özellik hiçbir etkisi olmaz.<br /><br /> Özelliği, 0'dan düşük bir değere ayarlanamaz.|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Izgaranın satır başlıklarında genişliği.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Bu, bir satır veya hücre seçildiğinde, arka plan rengidir.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Bu, bir satır veya hücre seçildiğinde, ön plan rengidir.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|Sütun başlıkları için kullanılan yazı tipi.|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|Kılavuzun sütun üstbilgilerinin, sütun üst bilgisi metni ve artı/eksi glifleri (birden çok ilişkili tablo görüntülenirken satırları genişletmek için) dahil ön plan rengi.|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|Veri kılavuzundaki tüm bağlantıların, alt tablolara bağlantılar, ilişki adı vb. gibi tüm bağlantıların metin rengi.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|Alt tabloda, bu, üst satırların arka plan rengidir.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|Alt tabloda, bu, üst satırların ön plan rengidir.|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|Tablo ve sütun adlarının, <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> numaralandırma yoluyla üst satırda görüntülenip görüntülenmeyeceğini belirler.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|Kılavuzdaki sütunların varsayılan genişliği (piksel cinsinden). <xref:System.Windows.Forms.DataGrid.DataSource%2A> Ve <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> özelliklerini sıfırlamadan önce bu özelliği ayarlayın (Ayrıca, ya da yöntemi aracılığıyla) ya da özelliğin hiçbir etkisi olmayacaktır. <xref:System.Windows.Forms.DataGrid.DataMember%2A><br /><br /> Özellik 0 ' dan küçük bir değere ayarlanamaz.|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|Kılavuzdaki satırların satır yüksekliği (piksel cinsinden). <xref:System.Windows.Forms.DataGrid.DataSource%2A> Ve <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> özelliklerini sıfırlamadan önce bu özelliği ayarlayın (Ayrıca, ya da yöntemi aracılığıyla) ya da özelliğin hiçbir etkisi olmayacaktır. <xref:System.Windows.Forms.DataGrid.DataMember%2A><br /><br /> Özellik 0 ' dan küçük bir değere ayarlanamaz.|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|Kılavuzun satır üst bilgilerinin genişliği.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|Bir satır veya hücre seçildiğinde, bu arka plan rengidir.|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|Bir satır veya hücre seçildiğinde bu, ön plan rengidir.|  
   
     > [!NOTE]
-    >  Denetimler, denetimi kötü renk seçimi (örneğin, kırmızı ve yeşil) nedeniyle erişilemez hale getirmek mümkündür renklerini özelleştirirken göz önünde tutun. Kullanılabilir renklerini kullan **sistem renkleri** bu sorunu önlemek için palet.  
+    > Denetimlerin renklerini özelleştirirken, kötü renk seçimi (örneğin, kırmızı ve yeşil) nedeniyle denetimi erişilemez hale getirmek mümkün olduğunca göz önünde bulundurun. Bu sorundan kaçınmak için **sistem renkleri** paletindeki kullanılabilir renkleri kullanın.  
   
-     Aşağıdaki yordamlar, formda olduğunu varsayalım. bir <xref:System.Windows.Forms.DataGrid> denetim bir veri tablosuna bağlı. Daha fazla bilgi için [Windows Forms DataGrid denetimini veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+     Aşağıdaki yordamlarda formunuzun bir veri tablosuna yönelik bir <xref:System.Windows.Forms.DataGrid> denetim olduğu varsayılır. Daha fazla bilgi için, bkz. [Windows Forms DataGrid denetimini bir veri kaynağına bağlama](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
-### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Tablo ve sütun bir veri tablosu stilini program üzerinden ayarlamak için  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Bir veri tablosunun tablo ve sütun stilini programlı bir şekilde ayarlamak için  
   
 1. Yeni bir tablo stili oluşturun ve özelliklerini ayarlayın.  
   
-2. Sütun stil oluşturma ve özelliklerini ayarlayın.  
+2. Sütun stili oluşturun ve özelliklerini ayarlayın.  
   
-3. Sütun stili tablo stili 's sütun stillerini koleksiyonuna ekleyin.  
+3. Sütun stilini tablo stilinin sütun stilleri koleksiyonuna ekleyin.  
   
-4. Tablo Stili veri kılavuzunun tablo stilleri koleksiyona ekleyin.  
+4. Tablo stilini veri kılavuzunun tablo stilleri koleksiyonuna ekleyin.  
   
-5. Aşağıdaki örnekte, yeni bir örneğini oluşturmak <xref:System.Windows.Forms.DataGridTableStyle> ve kendi <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliği.  
+5. Aşağıdaki örnekte, yeni <xref:System.Windows.Forms.DataGridTableStyle> bir örneğini oluşturun ve <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini ayarlayın.  
   
-6. Yeni bir örneğini oluşturmak bir **GridColumnStyle** ve kendi **MappingName** (ve diğer bazı düzen ve görüntü özelliklerini).  
+6. Bir **GridColumnStyle** 'ın yeni bir örneğini oluşturun ve onun **MappingName** değerini (ve diğer düzen ve görüntü özelliklerini) ayarlayın.  
   
-7. Oluşturmak istediğiniz her bir sütun stili 2 ile 6 arasındaki adımları yineleyin.  
+7. Oluşturmak istediğiniz her sütun stili için 2 ile 6 arasındaki adımları yineleyin.  
   
-     Aşağıdaki örnekte nasıl bir <xref:System.Windows.Forms.DataGridTextBoxColumn> sütununda görüntülenecek bir ad olduğu için oluşturulur. Sütun stil ek olarak, eklediğiniz <xref:System.Windows.Forms.GridColumnStylesCollection> tablo stili ve tablo stili için eklediğiniz <xref:System.Windows.Forms.GridTableStylesCollection> veri kılavuzunun.  
+     Aşağıdaki örnekte, bir <xref:System.Windows.Forms.DataGridTextBoxColumn> ad sütununda görüntülenecek şekilde nasıl oluşturulduğu gösterilmektedir. Ayrıca, sütun stilini tablo stilinin öğesine <xref:System.Windows.Forms.GridColumnStylesCollection> ekler ve tablo stilini <xref:System.Windows.Forms.GridTableStylesCollection> veri kılavuzunun içine eklersiniz.  
   
     ```vb  
     Private Sub CreateAuthorFirstNameColumn()  
@@ -158,5 +158,5 @@ ms.locfileid: "61941368"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Nasıl yapılır: Silme veya Windows Forms DataGrid denetiminde sütunları gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimindeki sütunları silme veya gizleme](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid Denetimi](datagrid-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Standart sorgu Işleçleri yürütme (C#) yöntemine göre sınıflandırması
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: 82058e0baf2a253f8594b1af27c99eb6909bae96
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594756"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924287"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Standart sorgu Işleçleri yürütme (C#) yöntemine göre sınıflandırması
 Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yöntemden biriyle yürütülür: ımımor ertelenmiş. Ertelenmiş yürütmeyi kullanan sorgu işleçleri Ayrıca iki kategoriye ayrılabilir: akış ve akış olmayan. Farklı sorgu işleçlerinin nasıl yürütüleceğini biliyorsanız, belirli bir sorgudan aldığınız sonuçları anlamanıza yardımcı olabilir. Bu, veri kaynağı değiştirilirken veya başka bir sorgunun üstünde bir sorgu oluşturuyorsanız özellikle doğrudur. Bu konu, standart sorgu işleçlerini yürütme tarzlarına göre sınıflandırır.  
@@ -32,7 +32,7 @@ Standart sorgu işleci yöntemlerinin LINQ to Objects uygulamaları iki ana yön
  Aşağıdaki tabloda, her standart sorgu operatörü yöntemi yürütme yöntemine göre sınıflandırılırdı.  
   
 > [!NOTE]
->  Bir işleç iki sütunda işaretlenmişse, işleme iki giriş dizisi dahil edilir ve her sıra farklı şekilde değerlendirilir. Bu durumlarda, parametre listesindeki her zaman, ertelenmiş, akış halinde değerlendirilen ilk dizidir.  
+> Bir işleç iki sütunda işaretlenmişse, işleme iki giriş dizisi dahil edilir ve her sıra farklı şekilde değerlendirilir. Bu durumlarda, parametre listesindeki her zaman, ertelenmiş, akış halinde değerlendirilen ilk dizidir.  
   
 |Standart sorgu Işleci|Dönüş Türü|Hemen Yürütme|Ertelenmiş akış yürütme|Ertelenmiş akış olmayan yürütme|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  

@@ -2,44 +2,44 @@
 title: 'Nasıl yapılır: Filtreleri Kullanma'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 42145e58eb35233aefb8f7805570d329abb7d71a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6c357f2f410362d56fc931529a9fe731df0a477e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968763"
 ---
 # <a name="how-to-use-filters"></a>Nasıl yapılır: Filtreleri Kullanma
-Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, iki hesap makinesi hizmeti, regularCalc ve roundingCalc uygulamaları için iletileri yönlendirilir. Hem uygulamalar aynı işlemleri desteği: Ancak bir hizmet, döndürmeden önce tüm hesaplamalar en yakın tamsayı değerine yuvarlanır. Bir istemci uygulaması yuvarlama sürüm hizmetinin kullanılıp kullanılmayacağını belirtmek için bir değer olmalıdır; hiçbir hizmet tercihi ifade, ileti iki hizmet arasında yük dengeli yoktur. Her iki hizmet tarafından sunulan işlemleri şunlardır:  
+Bu konuda, birden çok filtre kullanan bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler, regularCalc ve roundingCalc hesap makinesi hizmetinin iki uygulamasına yönlendirilir. Her iki uygulama da aynı işlemleri destekler; Ancak, bir hizmet, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. İstemci uygulaması, hizmetin yuvarlama sürümünün kullanılıp kullanılmayacağını belirtebilmelidir; hiçbir hizmet tercihi ifade Ediyse, ileti iki hizmet arasında yük dengelemesi yapılır. Her iki hizmet tarafından kullanıma sunulan işlemler şunlardır:  
   
 - Ekle  
   
 - Çıkarma  
   
-- Çarp  
+- Bilirsiniz  
   
-- Bölme  
+- Sayısına  
   
- Her iki hizmet de aynı işlemleri uygulamak için eylem filtresi kullanamazsınız, çünkü message içinde belirtilen eylem benzersiz olmayacaktır. Bunun yerine iletileri uygun Uç noktalara yönlendirilir emin olmak için ek bir iş yapmanız gerekir.  
+ Her iki hizmet de aynı işlemleri uygulayacağından, iletide belirtilen eylem benzersiz olmayacak olduğundan, eylem filtresini kullanamazsınız. Bunun yerine, iletilerin uygun uç noktalara yönlendirildiğinden emin olmak için ek iş yapmanız gerekir.  
   
-### <a name="determine-unique-data"></a>Benzersiz veri belirleme  
+### <a name="determine-unique-data"></a>Benzersiz verileri belirleme  
   
-1. Her iki hizmet uygulamalarını aynı işlemleri işlemek ve dışında döndürmeleri veri temel olarak aynı olduğundan, istemci uygulamalarından gönderilen iletileri bulunan temel verileri nasıl yönlendirileceğini belirlemek olanak tanımak için benzersiz değil İstek. Ancak daha sonra istemci uygulama bir benzersiz üstbilgi değerini ekler, ileti nasıl yönlendirileceğini belirlemek için bu değeri kullanabilirsiniz.  
+1. Her iki hizmet uygulaması da aynı işlemleri yaptığından ve temelde getirdikleri verilerden farklı olduklarından, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, bu işlemin nasıl yönlendirildiğini belirlemenizi sağlayacak kadar benzersiz değildir. isteyen. Ancak, istemci uygulaması iletiye benzersiz bir üstbilgi değeri eklerse, iletinin nasıl yönlendirildiğini öğrenmek için bu değeri kullanabilirsiniz.  
   
-     İstemci uygulaması yuvarlama hesaplayıcı tarafından işlenecek ileti gerekiyorsa bu örnek için bir özel üst bilgi aşağıdaki kodu kullanarak ekler:  
+     Bu örnekte, istemci uygulamanın, yuvarlama Hesaplayıcı tarafından işlenmek üzere bir ileti gerekiyorsa, aşağıdaki kodu kullanarak özel bir üst bilgi ekler:  
   
     ```csharp  
     messageHeadersElement.Add(MessageHeader.CreateHeader("RoundingCalculator",   
                                    "http://my.custom.namespace/", "rounding"));  
     ```  
   
-     Artık bu üst bilgi iletilerini incelemek için XPath filtreyi kullanın ve roundCalc hizmetine üstbilgisini içeren iletiler yönlendirebilirsiniz.  
+     Artık bu üstbilgiye yönelik iletileri incelemek ve üstbilgiyi içeren iletileri roundCalc hizmetine yönlendirmek için XPath filtresini kullanabilirsiniz.  
   
-2. Ayrıca yönlendirme hizmeti EndpointAddress, Uçnoktaadı ile kullanılabilecek iki sanal hizmet uç noktalarını kullanıma sunar veya PrefixEndpointAddress benzersiz uç noktasına göre belirli hesaplayıcı uygulamasına gelen iletileri yönlendirmek için filtreler için istemci uygulaması isteği gönderir.  
+2. Ayrıca, yönlendirme hizmeti, gelen iletileri uç noktaya göre belirli bir Hesaplayıcı uygulamasına benzersiz şekilde yönlendirmek için EndpointName, EndpointAddress veya PrefixEndpointAddress filtreleriyle birlikte kullanılabilecek iki sanal hizmet uç noktasını kullanıma sunar. istemci uygulaması isteği gönderir.  
   
-### <a name="define-endpoints"></a>Uç noktalarını tanımlayın  
+### <a name="define-endpoints"></a>Uç noktaları tanımlama  
   
-1. Yönlendirme hizmeti tarafından kullanılan uç noktalarını tanımlarken, istemcileri ve Hizmetleri tarafından kullanılan kanal şeklini ilk belirlemeniz gerekir. Bu senaryoda, her iki hedef hizmetler bir istek-yanıt deseni kullanır. böylece <xref:System.ServiceModel.Routing.IRequestReplyRouter> kullanılır. Aşağıdaki örnek, yönlendirme hizmeti tarafından kullanıma sunulan hizmet uç noktalarını tanımlar.  
+1. Yönlendirme hizmeti tarafından kullanılan uç noktaları tanımlarken, önce istemcileriniz ve hizmetleriniz tarafından kullanılan kanalın şeklini belirlemelisiniz. Bu senaryoda, her iki hedef hizmet de bir istek-yanıt deseninin kullanıldığı için <xref:System.ServiceModel.Routing.IRequestReplyRouter> kullanılır. Aşağıdaki örnek, yönlendirme hizmeti tarafından sunulan hizmet uç noktalarını tanımlar.  
   
     ```xml  
     <services>  
@@ -71,9 +71,9 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     </services>  
     ```  
   
-     Bu yapılandırma ile yönlendirme hizmeti, üç ayrı uç noktalarını kullanıma sunar. Çalışma zamanı seçimlere bağlı olarak, istemci uygulama iletileri bu adreslerden birini gönderir. ("Yuvarlama/hesaplayıcı" veya "normal/hesaplayıcı") "sanal" hizmet uç noktalardan biri gelen iletiler için karşılık gelen hesaplayıcısı uygulaması iletilir. İstemci uygulama, belirli bir uç noktaya istek göndermediği durumlarda ileti genel uç noktaya değinilmiştir. Seçilen uç nokta bağımsız olarak, istemci uygulaması, yuvarlama hesaplayıcı uygulamasına iletinin iletileceği belirtmek için özel üst bilgi eklemeyi de seçebilirler.  
+     Bu yapılandırmayla, yönlendirme hizmeti üç ayrı uç noktayı kullanıma sunar. Çalışma zamanı seçeneklerine bağlı olarak, istemci uygulaması bu adreslerden birine iletiler gönderir. "Sanal" hizmet uç noktalarından birine ulaşan iletiler ("yuvarlama/Hesaplayıcı" veya "normal/Hesaplayıcı"), ilgili Hesaplayıcı uygulamasına iletilir. İstemci uygulaması isteği belirli bir uç noktaya göndermezse, ileti genel uç noktaya gönderilir. Seçtiğiniz uç nokta ne olursa olsun, istemci uygulaması iletinin yuvarlama Hesaplayıcı uygulamasına iletilmesi gerektiğini belirtmek için özel üst bilgiyi dahil etmek de tercih edebilir.  
   
-2. Aşağıdaki örnek, yönlendirme hizmeti, iletileri yönlendirir. (hedef) istemci uç noktalarını tanımlar.  
+2. Aşağıdaki örnek, yönlendirme hizmetinin iletileri yönlendirdiğini istemci (hedef) uç noktalarını tanımlar.  
   
     ```xml  
     <client>  
@@ -89,11 +89,11 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     </client>  
     ```  
   
-     Bu uç noktaları, filtre tablosunda, mesajın gönderilip gönderilmediği özgü süzgeçler eşleştiğinde hedef uç nokta belirtmek için kullanılır.  
+     Bu uç noktalar, belirli bir filtreyle eşleştiğinde iletinin gönderildiği hedef uç noktayı göstermek için filtre tablosunda kullanılır.  
   
-### <a name="define-filters"></a>Filtreleri tanımlar  
+### <a name="define-filters"></a>Filtre tanımlama  
   
-1. İstemci uygulaması ekler "RoundingCalculator" özel üst bilgi temel iletileri yönlendirmek için bu üst bilgisi varlığını denetlemek için bir XPath sorgusu kullanan bir filtre tanımlar. Ayrıca özel bir ad alanı kullanarak bu başlığı tanımlı olduğundan, XPath sorgusundaki "kullanılan özel" bir özel ad alanı öneki tanımlayan bir ad alanı girişi ekleyin. Aşağıdaki örnek, gerekli yönlendirme bölümünde, ad alanı tablosu ve XPath filtresi tanımlar.  
+1. İstemci uygulamanın iletiye eklediği "Roundinghesaplayıcı" özel üstbilgisine göre iletileri yönlendirmek için, bu üst bilginin varlığını denetlemek üzere bir XPath sorgusu kullanan bir filtre tanımlayın. Bu üstbilgi özel bir ad alanı kullanılarak tanımlandığından, XPath sorgusunda kullanılan "Custom" özel ad alanı önekini tanımlayan bir ad alanı girişi de ekleyin. Aşağıdaki örnek, gerekli Yönlendirme bölümünü, ad alanı tablosunu ve XPath filtresini tanımlar.  
   
     ```xml  
     <routing>  
@@ -110,21 +110,21 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     </routing>  
     ```  
   
-     Bu **MessageFilter** RoundingCalculator başlığı "yuvarlama" bir değer içeren iletiyi arar. Bu üst bilgi iletisi roundingCalc hizmete yönlendirileceğini göstermek için istemci tarafından ayarlanır.  
+     Bu **MessageFilter** , "yuvarlama" değeri içeren Iletide bir Roundinghesaplayıcı başlığına bakar. Bu üstbilgi, istemci tarafından, iletinin roundingCalc hizmetine yönlendirildiğini belirtmek üzere ayarlanır.  
   
     > [!NOTE]
-    > S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve ad alanını temsil eden `http://www.w3.org/2003/05/soap-envelope`.
+    > S12 ad alanı ön eki, ad alanı tablosunda varsayılan olarak tanımlanır ve ad alanını `http://www.w3.org/2003/05/soap-envelope`temsil eder.
   
-2. Ayrıca iki sanal uç noktalarda alınan iletilerin arayın filtreleri tanımlamanız gerekir. İlk sanal uç "normal/hesaplayıcı" uç noktasıdır. İstemci istekleri ileti regularCalc hizmete yönlendirileceğini belirtmek için bu endpoint gönderebilirsiniz. Aşağıdaki yapılandırmayı kullanan bir filtre tanımlar <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> ileti filterData içinde belirtilen adla bir uç nokta gelen varsa belirlemek için.  
+2. Ayrıca, iki sanal uç noktasında alınan iletileri aramak için filtreler tanımlamanız gerekir. İlk sanal uç nokta, "normal/Hesaplayıcı" uç noktasıdır. İstemci, iletinin regularCalc hizmetine yönlendirildiğini göstermek için istekleri bu uç noktaya gönderebilir. Aşağıdaki yapılandırma, <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> iletinin FilterData içinde belirtilen ada sahip bir uç nokta üzerinden geldiğini öğrenmek için öğesini kullanan bir filtre tanımlar.  
   
     ```xml  
     <!--define an endpoint name filter looking for messages that show up on the virtual regular calculator endpoint-->  
     <filter name="EndpointNameFilter" filterType="EndpointName" filterData="calculatorEndpoint"/>  
     ```  
   
-     "CalculatorEndpoint" adlı hizmet uç noktası tarafından bir ileti alınmazsa, bu filtresinin `true`.  
+     "Hesaplatorendpoint" adlı hizmet uç noktası tarafından bir ileti alındığında, bu filtre olarak `true`değerlendirilir.  
   
-3. Ardından, roundingEndpoint adresine gönderilen iletileri bakan bir filtre tanımlar. İstemci istekleri ileti roundingCalc hizmete yönlendirileceğini belirtmek için bu endpoint gönderebilirsiniz. Aşağıdaki yapılandırmayı kullanan bir filtre tanımlar <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> iletinin "yuvarlama/hesaplayıcı" uç noktada geldiği varsa belirlemek için.  
+3. Ardından, roundingEndpoint adresine gönderilen iletileri gösteren bir filtre tanımlayın. İstemci bu uç noktaya istek göndererek, iletinin roundingCalc hizmetine yönlendirildiğini gösterir. Aşağıdaki yapılandırma, <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> iletinin "yuvarlama/Hesaplayıcı" uç noktasında geldiğini öğrenmek için öğesini kullanan bir filtre tanımlar.  
   
     ```xml  
     <!--define a filter looking for messages that show up with the address prefix.  The corresponds to the rounding calc virtual endpoint-->  
@@ -132,17 +132,17 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     İle başlayan bir adresteki bir ileti alındığında, `http://localhost/routingservice/router/rounding/` bu filtresinin sonra **true**. Bu yapılandırma tarafından kullanılan temel adresi olduğundan `http://localhost/routingservice/router` ve roundingEndpoint "yuvarlama/hesap makinesi" için belirtilen adres, bu uç nokta ile iletişim kurmak için kullanılan tam adresidir `http://localhost/routingservice/router/rounding/calculator`, bu filtre ile eşleşir.  
+     İle `http://localhost/routingservice/router/rounding/` başlayan bir adreste bir ileti alındığında, bu filtre **true**olarak değerlendirilir. Bu yapılandırma `http://localhost/routingservice/router` tarafından kullanılan temel adres ve roundingendpoint için belirtilen adres "yuvarlama/Hesaplayıcı" olduğundan, bu `http://localhost/routingservice/router/rounding/calculator`uç nokta ile iletişim kurmak için kullanılan tam adres bu filtreyle eşleşir.  
   
     > [!NOTE]
-    >  PrefixEndpointAddress filtresi ana bilgisayar adı, istemci uygulamasından konağa başvuran geçerli yolu olmalıdır çünkü tek bir ana bilgisayar için tüm olabilir ve ana bilgisayar adları çeşitli kullanılarak başvurulabilen bir eşleşme gerçekleştirme değerlendirmez. Örneğin, aşağıdakilerin tümü aynı konağa başvurabilir:  
+    > Tek bir konağa, bir eşleşme gerçekleştirirken konak adı değerlendirilmez, çünkü tek bir ana bilgisayar, ana bilgisayara istemci uygulamasından başvurmanın geçerli yolları olabilecek çeşitli konak adları kullanılarak başvuruda bulunulabilir. Örneğin, aşağıdakilerin tümü aynı konağa başvurabilir:  
     >   
-    > - localhost  
+    > - e  
     > - 127.0.0.1  
     > - `www.contoso.com`  
     > - ContosoWeb01  
   
-4. Son filtre özel üst bilgi içermeyen genel uç noktasında gelen iletileri yönlendirme desteklemesi gerekir. Bu senaryo için regularCalc ve roundingCalc hizmetleri arasında iletileri alternatif. "Hepsini bir kez deneme" Bu iletilerin yönlendirme desteklemek için bir filtre örneğini işlenen her ileti için eşleşen izin veren özel bir filtre kullanın.  Bunlar diğer arasında alternatif olduğunu belirtmek için birlikte gruplanmış bir RoundRobinMessageFilter, iki örneğini tanımlar.  
+4. Son filtre, genel uç noktaya gelen iletilerin özel üstbilgi olmadan yönlendirilmesini desteklemelidir. Bu senaryo için, iletilerin regularCalc ve roundingCalc hizmetleri arasında alternatif olması gerekir. Bu iletilerin "hepsini bir kez deneme" öğesini desteklemek için, işlenen her ileti için bir filtre örneğinin eşleşmesini sağlayan bir özel filtre kullanın.  Aşağıda, bir RoundRobinMessageFilter öğesinin aralarında farklı olmaları gerektiğini göstermek için birlikte gruplanmış iki örneği tanımlanmaktadır.  
   
     ```xml  
     <!-- Set up the custom message filters.  In this example,   
@@ -156,16 +156,16 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
                     filterData="group1"/>  
     ```  
   
-     Çalışma zamanı sırasında bu filtre türü, bu tür tek bir koleksiyonda aynı grup olarak yapılandırılmış tüm tanımlı filtre örnekleri arasında geçiş yapıyor. Bu alternatif döndüren arasında bu özel filtre tarafından işlenen iletilerin neden `true` için `RoundRobinFilter1` ve `RoundRobinFilter2`.  
+     Çalışma zamanı sırasında, bu filtre türü, aynı grup olarak yapılandırılmış bu türün tanımlanmış tüm filtre örnekleri arasında tek bir koleksiyonda alternatifleri vardır. Bu, ve `true` `RoundRobinFilter1` için`RoundRobinFilter2`döndürme arasında alternatif olarak bu özel filtre tarafından işlenen mesajların oluşmasına neden olur.  
   
 ### <a name="define-filter-tables"></a>Filtre tabloları tanımlama  
   
-1. Filtreler belirli istemci uç noktaları ile ilişkilendirmek için bir filtre tablosunun yerleştirmeniz gerekir. Bu örnek senaryo, filtreleri işlenme sırasını belirtmenize olanak sağlayan, isteğe bağlı bir ayardır filtre öncelik ayarlarını da kullanır. Hiçbir filtre öncelik belirtilmezse, tüm filtreleri eşzamanlı olarak değerlendirilir.  
+1. Filtreleri belirli istemci uç noktalarıyla ilişkilendirmek için, bunları bir filtre tablosu içine yerleştirmeniz gerekir. Bu örnek senaryo, filtrelerin işlenme sırasını belirtmenize izin veren isteğe bağlı bir ayar olan filtre öncelik ayarlarını da kullanır. Filtre önceliği belirtilmemişse, tüm filtreler eşzamanlı olarak değerlendirilir.  
   
     > [!NOTE]
-    >  Belirtirken bir filtre önceliğine izin verir, hangi filtrelerin sırasını denetlemek için işlenen, Yönlendirme Hizmeti performansını olumsuz etkileyebilir. Filtre önceliklerin kullanımı gerekli değildir. böylece mümkün olduğunda, filtre mantığını oluşturun.  
+    > Filtre önceliği belirtildiğinde, filtrelerin işlenme sırasını denetlemenizi sağlar, bu da yönlendirme hizmetinin performansını olumsuz etkileyebilir. Mümkün olduğunda, filtre önceliklerinin kullanılması gerekli olmadığından filtre mantığını oluşturun.  
   
-     Aşağıdaki filtre tabloyu tanımlayan ve "tablosuna bir öncelik 2 ile daha önce tanımlanan XPathFilterElement" ekler. Bu giriş, ayrıca olmadığını belirtir `XPathFilter` eşleşen iletisi için ileti yönlendirilir `roundingCalcEndpoint`.  
+     Aşağıda, filtre tablosu tanımlanmaktadır ve daha önce tanımlanan "XPathFilter" öğesini bir önceliği 2 olan tabloya ekler. Bu giriş Ayrıca, `XPathFilter` iletisi ile eşleşirse iletinin `roundingCalcEndpoint`öğesine yönlendirildiğini belirtir.  
   
     ```xml  
     <routing>  
@@ -184,9 +184,9 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     </routing>  
     ```  
   
-     Bir filtre öncelik belirtirken, en yüksek öncelikli filtreleri önce değerlendirilir. Belirli bir öncelik düzeyinde bir veya daha fazla filtrelerle eşleşen, en düşük öncelik düzeyleri filtre değerlendirilir. Bu senaryo için belirtilen en yüksek öncelik 2. ve bu düzeyde yalnızca filtre giriş budur.  
+     Filtre önceliği belirtirken, en yüksek öncelikli filtreler önce değerlendirilir. Belirli bir öncelik düzeyinde bir veya daha fazla filtre eşleşiyorsa, daha düşük öncelikli düzeylerde hiçbir filtre değerlendirilmeyecektir. Bu senaryoda, 2 belirtilen en yüksek önceliktir ve bu düzeyde tek filtre girişi budur.  
   
-2. Filtre girişleri, uç nokta adı veya adres ön eki inceleyerek bir ileti belirli bir noktadaki alındığında, kontrol etmek için tanımlanmadı. Aşağıdaki girdileri hem de bu filtre girişleri filtre tabloya ekleyin ve bunları için ileti yönlendirilecek hedef uç noktaları ile ilişkilendirin. Bu filtreler, önceki XPath filtresi ileti eşleşmedi varsa bunlar yalnızca çalışması gerektiğini belirtmek için bir öncelik 1 için ayarlanır.  
+2. Filtre girdileri, uç nokta adını veya adres önekini inceleyerek belirli bir uç noktada bir iletinin alınıp alınmadığını denetlemek üzere tanımlanmıştır. Aşağıdaki girişler, bu filtre girdilerinin her ikisini de filtre tablosuna ekler ve bunları iletinin yönlendirileceği hedef uç noktalarla ilişkilendirir. Bu filtreler, yalnızca önceki XPath filtresi iletiyle eşleşmezse çalışması gerektiğini belirtmek için 1 önceliğine ayarlanır.  
   
     ```xml  
     <!--if the header wasn't there, send the message based on which virtual endpoint it arrived at-->  
@@ -195,9 +195,9 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint" priority="1"/>  
     ```  
   
-     Bu filtreler, filtre önceliği 1 olduğundan, bunlar öncelik düzeyi 2 sırasında filtre ileti eşleşmiyorsa yalnızca değerlendirilir. Her iki filtreleri aynı öncelik düzeyine sahip olduğundan da, bunlar aynı anda değerlendirilir. Her iki filtreleri birbirini dışlayan olduğundan, tek veya başka bir ileti eşleştirilecek mümkündür.  
+     Bu filtrelerin filtre önceliği 1 olduğundan, yalnızca öncelik düzeyi 2 ' deki filtre iletiyle eşleşmezse değerlendirilir. Ayrıca, her iki filtrenin de aynı öncelik düzeyine sahip olduğu için aynı anda değerlendirilirler. Her iki filtre de birbirini dışlamadığından, bir iletiyle eşleşmesi yalnızca bir veya diğeri olabilir.  
   
-3. Bir ileti herhangi bir önceki süzgeçlere eşleşmiyorsa ileti genel hizmet uç noktası aracılığıyla alındı ve yönlendirmek yeri belirten hiçbir üst bilgiler. Bu iletiler, bunları iki hesaplayıcı hizmetleri arasında yük dengeleyen özel filtre tarafından işlenmesi üzeresiniz. Aşağıdaki örnek, filtre girişleri filtre tabloya eklenecek gösterilmektedir; Her bir filtrenin iki hedef uç noktalardan biri ile ilişkilidir.  
+3. Bir ileti önceki filtrelerden hiçbiriyle eşleşmezse, ileti genel hizmet uç noktası aracılığıyla alındı ve bu, nereye yönlendirildiğini belirten hiçbir üstbilgi bilgisi içermiyordu. Bu iletiler özel filtre tarafından işlenerek, yük, iki Hesaplayıcı hizmeti arasında dengelenebilir. Aşağıdaki örnek, filtre girişlerinin filtre tablosuna nasıl ekleneceğini gösterir; Her filtre iki hedef uç noktasından biriyle ilişkilendirilir.  
   
     ```xml  
     <!--if none of the other filters have matched,   
@@ -208,11 +208,11 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     <add filterName="RoundRobinFilter2" endpointName="roundingCalcEndpoint" priority="0"/>  
     ```  
   
-     Bu girişler bir öncelik 0 belirttiğinden, bunlar daha yüksek bir öncelik filtre ileti eşleşiyorsa yalnızca değerlendirilir. Ayrıca, bunlar her ikisi de aynı önceliği olduğundan, eşzamanlı olarak değerlendirilir.  
+     Bu girdiler 0 değerini belirttiğinden, yalnızca daha yüksek öncelikli bir filtrenin iletiyle eşleşmesi durumunda değerlendirilir. Ayrıca, her ikisi de aynı önceliğe sahip olduğundan, aynı anda değerlendirilir.  
   
-     Daha önce belirtildiği gibi bu filtre tanımları tarafından kullanılan özel filtre yalnızca bir ya da diğer olarak değerlendirir `true` alınan her ileti için. Bu filtre ile aynı belirtilen grup ayarını kullanarak yalnızca iki filtre tanımlı olduğundan, yönlendirme hizmeti regularCalcEndpoint ve RoundingCalcEndpoint gönderme arasında diğerleri etkisidir.  
+     Daha önce bahsedildiği gibi, bu filtre tanımları tarafından kullanılan özel filtre yalnızca bir veya diğer her ileti `true` için bir veya diğerini değerlendirir. Bu filtre kullanılarak yalnızca iki filtre tanımlandığından, aynı belirtilen grup ayarıyla, bu, yönlendirme hizmetinin regularCalcEndpoint ve RoundingCalcEndpoint öğesine gönderme arasında değişiklik göstermesi durumunda olur.  
   
-4. Filtrelerle iletileri değerlendirmek için filtre tablonun ilk ileti almak için kullanılacak olan hizmet uç noktaları ile ilişkilendirilmiş olması gerekir.  Aşağıdaki örnek, yönlendirme davranışını kullanarak hizmet uç noktaları ile yönlendirme tablosunu ilişkilendirme gösterir:  
+4. İletileri filtrelere karşı değerlendirmek için, önce filtre tablosunun ileti almak için kullanılacak hizmet uç noktaları ile ilişkilendirilmesi gerekir.  Aşağıdaki örnek yönlendirme davranışını kullanarak yönlendirme tablosunun hizmet uç noktalarıyla nasıl ilişkilendirileceğini göstermektedir:  
   
     ```xml  
     <behaviors>  
@@ -226,7 +226,7 @@ Bu konuda, birden çok filtre kullanan yönlendirme yapılandırması oluşturma
     ```  
   
 ## <a name="example"></a>Örnek  
- Yapılandırma dosyasının tam bir listesi verilmiştir.  
+ Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

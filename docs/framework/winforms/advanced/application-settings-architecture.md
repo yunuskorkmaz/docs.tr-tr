@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039411"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916701"
 ---
 # <a name="application-settings-architecture"></a>Uygulama Ayarları Mimarisi
 Bu konu, uygulama ayarları mimarisinin nasıl çalıştığını açıklar ve mimarinin gruplanmış ayarlar ve ayarlar gibi gelişmiş özelliklerini araştırır.
@@ -142,7 +142,7 @@ Bu konu, uygulama ayarları mimarisinin nasıl çalıştığını açıklar ve m
  Bir sağlayıcı aynı anda birden fazla iş parçacığından çağrılabilir, ancak her zaman aynı depolama konumuna yazılacak; Bu nedenle, uygulama ayarları mimarisi yalnızca sağlayıcı sınıfınızın tek bir örneğini örnekleymeyecektir.
 
 > [!IMPORTANT]
->  Sağlayıcınızın iş parçacığı açısından güvenli olduğundan emin olun ve aynı anda yalnızca bir iş parçacığının yapılandırma dosyalarına yazmasını sağlar.
+> Sağlayıcınızın iş parçacığı açısından güvenli olduğundan emin olun ve aynı anda yalnızca bir iş parçacığının yapılandırma dosyalarına yazmasını sağlar.
 
  Sağlayıcınızın, <xref:System.Configuration?displayProperty=nameWithType> ad alanında tanımlanan tüm ayar özniteliklerini desteklemesi gerekmez, ancak en düşük düzeyde destek <xref:System.Configuration.ApplicationScopedSettingAttribute> ve <xref:System.Configuration.UserScopedSettingAttribute>Ayrıca desteklemesi <xref:System.Configuration.DefaultSettingValueAttribute>gerekir. Desteklemediği öznitelikler için, sağlayıcınız yalnızca bildirim olmadan başarısız olur; özel durum oluşturmaz. Ayarlar sınıfı, ancak aynı ayarı uygulamak <xref:System.Configuration.ApplicationScopedSettingAttribute> <xref:System.Configuration.UserScopedSettingAttribute> gibi, özniteliklerin geçersiz bir birleşimini kullanıyorsa, sağlayıcınız bir özel durum ve bir işlem oluşturması gerekir.
 
