@@ -1,24 +1,24 @@
 ---
-title: 'Nasıl yapılır: Bir dize (Visual Basic) ayrıştırılamıyor'
+title: 'Nasıl yapılır: Bir dizeyi ayrıştırma (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942603"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956372"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Nasıl yapılır: Bir dize (Visual Basic) ayrıştırılamıyor
-Bu konuda, bir XML ağacı oluşturma işlemi gösterilmektedir C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>Nasıl yapılır: Bir dizeyi ayrıştırma (Visual Basic)
+Bu konuda ' de C#bir xml ağacının nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Kullanarak, Visual Basic'te bir dizeyi ayrıştırmak `XElement.Parse` yöntemi. Ancak, XML değişmez değerleri, XML değişmez değerleri, bir dizedeki XML Ayrıştırma olarak aynı performans cezaları gelen karşılaşmaz çünkü aşağıdaki kodda gösterildiği gibi kullanmak daha verimlidir.  
+ `XElement.Parse` Yöntemini kullanarak Visual Basic bir dizeyi ayrıştırabilirsiniz. Ancak, XML değişmez değerleri bir dizeden XML ayrıştırılırken aynı performans yaptırımlarından etkilemediğinden, aşağıdaki kodda gösterildiği gibi XML değişmez değerleri kullanmak daha verimlidir.  
   
- XML değişmez değerlerini kullanarak, yalnızca kopyalayın ve Visual Basic programınızı XML dosyanızı yapıştırın.  
+ XML sabit değerlerini kullanarak yalnızca XML dosyanızı Visual Basic programınıza kopyalayabilir ve yapıştırabilirsiniz.  
   
 > [!NOTE]
->  Metni ayrıştırma veya bir metin dosyasından bir XML belgesi yüklenirken işlevsel oluşturma verimli değildir. Bir XML ağacı koddan başlatırken, metin ayrıştırmak üzere daha işlevsel oluşturma kullanmak için daha az işlemci zamanı alır.  
+> Bir metin dosyasından metin ayrıştırma veya bir XML belgesi yükleme, işlevsel oluşturma işleminden daha az verimlidir. Koddan bir XML ağacı başlatdıysanız, işlevsel oluşturma işlevinin metin ayrıştırılmaya kıyasla daha az işlemci süresi sürer.  
   
 ```vb  
 Dim contacts as XElement = _  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıştırma XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 'yi ayrıştırma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

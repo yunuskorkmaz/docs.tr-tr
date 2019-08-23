@@ -10,72 +10,72 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621008"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946341"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Veri ve Görev Paralelliğinde Olası Tuzaklar
-Çoğu durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> önemli performans geliştirmeleri normal sıralı döngü sağlayabilir. Ancak, döngü paralel işi, sıralı kodda olarak genel olmayan ya da hiç karşılaşılan değil sorunlara yol açabilecek daha karmaşık hâle getirir. Bu konuda, paralel döngüler yazdığınızda önlemek için bazı yöntemler listelenmiştir.  
+Birçok durumda, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> normal sıralı döngüler üzerinde önemli performans iyileştirmeleri sağlayabilir. Ancak, döngüyü paralelleştirme işi, ardışık kodda yaygın olmayan veya hiç karşılaşılmayan sorunlara yol açabilecek karmaşıklığa neden olabilir. Bu konuda, paralel döngüler yazarken kaçınılacak bazı yöntemler listelenmiştir.  
   
-## <a name="do-not-assume-that-parallel-is-always-faster"></a>Paralel her zaman daha hızlı olan varsaymayın  
- Bazı durumlarda, paralel bir döngüden sıralı karşılığını göre daha yavaş çalışabilir. Temel birkaç yineleme ve Hızlı Kullanıcı temsilcileri paralel döngüler çok hızlandırmayı için olası udur. Ancak, performansı faktörlerden söz konusu olduğundan her zaman gerçek sonuçlarını ölçün öneririz.  
+## <a name="do-not-assume-that-parallel-is-always-faster"></a>Parallel öğesinin her zaman daha hızlı olduğunu varsaymayın  
+ Bazı durumlarda, paralel bir döngü sıralı eşinden daha yavaş çalışabilir. Thumb 'in temel kuralı, birkaç yineleme ve Hızlı Kullanıcı temsilcileri olan paralel döngülerin çok daha hızlı bir şekilde hızlandırlanmasının düşüktür. Ancak, birçok etken performansa dahil edildiğinden, gerçek sonuçları her zaman ölçmenizi öneririz.  
   
-## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazılmasını kaçının  
- Sıralı kodda, okuma veya yazma statik değişkenler veya sınıf alanlar için yaygın görülen değil. Ancak, birden çok iş parçacığı gibi değişkenleri eriştiği her seferde, büyük bir olası yarış durumlarını yoktur. Değişkene erişimi eşitlemek için kilit kullanabilirsiniz, ancak eşitleme maliyetini performansı olumsuz etkileyebilir. Bu nedenle, öneririz, kaçının, veya en az sınırlamak, paylaşılan erişimi mümkün olduğunca paralel bir döngüden durumda olmadığını. Bunu yapmanın en iyi yolu aşırı kullanmaktır <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> kullanan bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> döngü yürütme sırasında iş parçacığı-yerel durumunu depolamak için değişken. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle bir Parallel.For döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) ve [nasıl yapılır: Bölüm yerel değişkenleriyle bir Parallel.ForEach döngüsü yazma](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+## <a name="avoid-writing-to-shared-memory-locations"></a>Paylaşılan bellek konumlarına yazmayı önleyin  
+ Ardışık kodda, statik değişkenlerle veya sınıf alanlarından okumak veya yazmak yaygın olmayan bir durumdur. Ancak, birden çok iş parçacığı bu tür değişkenlere eşzamanlı olarak eriştiği zaman, yarış koşullarında büyük bir olasılık vardır. Erişimi değişkene eşitlemek için kilitleri da kullanabilirsiniz, ancak eşitleme maliyeti performansı zarar verebilir. Bu nedenle, en az bir paralel döngüde mümkün olduğunca, paylaşılan duruma erişimi önlemenize veya en azından sınırlamanızı öneririz. Bunu yapmanın en iyi yolu, döngü yürütme sırasında iş parçacığı yerel <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> durumunu <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> depolamak için bir <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> değişken kullanan ve öğesinin aşırı yüklerini kullanmaktır. Daha fazla bilgi için [nasıl yapılır: İş parçacığı yerel değişkenleriyle](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) bir Parallel. for döngüsü yazın ve [şunları yapın: Bölüm yerel değişkenleriyle](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)bir Parallel. foreach döngüsü yazın.  
   
-## <a name="avoid-over-parallelization"></a>Aşırı Paralelleştirme kaçının  
- Paralel döngüler kullanarak kaynak koleksiyonu bölümleme ve çalışan iş parçacığı eşitleme yüksek maliyetleri doğurur. Paralelleştirme avantajlarını daha fazla bilgisayara işlemci sayısı sınırlıdır. Tek bir işlemci üzerinde birden fazla hesaplama bağlantılı iş parçacığı çalıştırarak kazanılacak hiçbir hızlandırmayı yoktur. Bu nedenle, bir döngüyü aşırı paralel hale değil dikkatli olmanız gerekir.  
+## <a name="avoid-over-parallelization"></a>Fazla paralelleştirme kullanmaktan kaçının  
+ Paralel döngüleri kullanarak, kaynak koleksiyonun bölümlenmesi ve çalışan iş parçacıklarını eşitlemek için ek ücret maliyetlerine tabi olursunuz. Paralelleştirme avantajları, bilgisayardaki işlemci sayısıyla daha fazla sınırlandırılır. Yalnızca bir işlemcide birden çok işlem ile sınırlı iş parçacığı çalıştırılarak kazanılabilir. Bu nedenle, paralel hale getirmek bir döngüye atmamaya dikkat etmeniz gerekir.  
   
- En yaygın senaryoda iç içe geçmiş Döngülerde olduğundan hangi aşırı paralelleştirme ortaya çıkabilir. Çoğu durumda, bir veya daha fazla aşağıdaki koşullardan biri uygulamadığınız sürece yalnızca dış döngü paralel hale getirmek idealdir:  
+ Fazla paralelleştirme gerçekleşebileceği en yaygın senaryo iç içe döngüdedir. Çoğu durumda, aşağıdaki koşullardan biri veya daha fazlası geçerli değilse yalnızca dış döngüyü paralel hale getirmek en iyi seçenektir:  
   
-- İç döngü çok uzun olarak bilinir.  
+- İç döngünün çok uzun olduğu bilinmektedir.  
   
-- Her bir order pahalı bir hesaplama yapıyorsunuz. (Örnekte gösterilen işlemi pahalı değildir.)  
+- Her sırada pahalı bir hesaplama gerçekleştirçalışıyorsunuz. (Örnekte gösterilen işlem pahalı değildir.)  
   
-- Hedef sistem üzerinde sorguyu paralelleştirmek tarafından üretilen iş parçacığı sayısını işlemek için yeterli işlemci sahip olduğu bilinmektedir `cust.Orders`.  
+- Hedef sistemde, üzerinde `cust.Orders`sorgu paralelleştirerek üretilecek iş parçacığı sayısını işlemek için yeterli işlemci olduğu bilinmektedir.  
   
- Her durumda en iyi sorgu şeklini belirlemek için en iyi test ve ölçmek için yoludur.  
+ Her durumda, en uygun sorgu şeklinin belirlenmesi için en iyi yol test ve ölçüdür.  
   
-## <a name="avoid-calls-to-non-thread-safe-methods"></a>İş parçacığı güvenli olmayan yöntemlere yapılan çağrılar kaçının  
- İş parçacığı güvenli olmayan örnek yöntemleri için paralel bir döngüden yazılırken programınızda saptanamayabilir değil veya veri bozulmasına neden olabilir. Özel durumlar da neden olabilir. Aşağıdaki örnekte, birden çok iş parçacığı çağrı çalışıyor <xref:System.IO.FileStream.WriteByte%2A?displayProperty=nameWithType> yöntemi, aynı anda sınıfı tarafından desteklenmiyor.  
+## <a name="avoid-calls-to-non-thread-safe-methods"></a>Iş parçacığı olmayan güvenli yöntemlere yapılan çağrılardan kaçının  
+ İş parçacığı açısından güvenli olmayan örnek yöntemlerine paralel bir döngüden yazmak, programınızda algılanamayan veya algılanamayan veri bozulmasına yol açabilir. Ayrıca özel durumlara da yol açabilir. Aşağıdaki örnekte, birden çok iş parçacığı <xref:System.IO.FileStream.WriteByte%2A?displayProperty=nameWithType> yöntemi aynı anda çağırmaya çalışıyor ve bu sınıf tarafından desteklenmiyor.  
   
  [!code-csharp[TPL_Pitfalls#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#04)]
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
   
-## <a name="limit-calls-to-thread-safe-methods"></a>İş parçacığı açısından güvenli yöntemlere yapılan çağrılar sınırı  
- .NET Framework'teki en statik yöntemler iş parçacığı bakımından güvenlidir ve aynı anda birden fazla iş parçacığından çağrılabilir. Ancak bu durumlarda bile ilgili eşitleme sorgu önemli yol açabilir.  
+## <a name="limit-calls-to-thread-safe-methods"></a>Iş parçacığı güvenli yöntemleriyle yapılan çağrıları sınırlayın  
+ .NET Framework çoğu statik yöntem iş parçacığı açısından güvenlidir ve aynı anda birden çok iş parçacığından çağrılabilir. Ancak, bu durumlarda bile ilgili eşitleme, sorgudaki önemli yavaşlama oluşmasına neden olabilir.  
   
 > [!NOTE]
->  Bunun için kendiniz bazı çağrıları ekleyerek test edebilirsiniz <xref:System.Console.WriteLine%2A> sorgularınızı içinde. Bu yöntem belgeleri örneklerde tanıtım amacıyla kullanılsa da, paralel Döngülerde sürece kullanmayın gerekli.  
+> Sorgularınıza bazı çağrılar <xref:System.Console.WriteLine%2A> ekleyerek bunu kendiniz test edebilirsiniz. Bu yöntem, Gösterim amacıyla belge örneklerinde kullanılmasına karşın, gerekli olmadığı takdirde bunu paralel Döngülerde kullanmayın.  
   
-## <a name="be-aware-of-thread-affinity-issues"></a>İş parçacığı benzeşimini sorunlarından haberdar olmalı  
- Örneğin, COM birlikte çalışabilirliği Single-Threaded grubu (STA) bileşenler, Windows Forms ve Windows Presentation Foundation (WPF) için bazı teknolojiler belirli bir iş parçacığı üzerinde çalıştırılacak kodu gerektiren iş parçacığı benzeşimini kısıtlamaları dayatır. Örneğin, Windows Forms ve WPF bir denetim yalnızca üzerinde oluşturulmuş iş parçacığı üzerinde erişilebilir. Bu, örneğin, yalnızca kullanıcı Arabirimi iş parçacığında iş zamanlamak için iş parçacığı Zamanlayıcısı yapılandırmadığınız sürece, paralel bir döngüden liste denetiminden güncelleştiremezsiniz anlamına gelir. Daha fazla bilgi için [eşitleme bağlamı belirtme](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
+## <a name="be-aware-of-thread-affinity-issues"></a>Iş parçacığı benzeşim sorunlarından haberdar olun  
+ Tek iş parçacıklı Apartment (STA) bileşenleri, Windows Forms ve Windows Presentation Foundation (WPF) için COM birlikte çalışabilirlik gibi bazı teknolojiler, kodun belirli bir iş parçacığında çalıştırılmasını gerektiren iş parçacığı benzeşim kısıtlamalarını sağlar. Örneğin, hem Windows Forms hem de WPF 'de, bir denetime yalnızca oluşturulduğu iş parçacığında erişilebilir. Bu, örneğin, iş parçacığı Zamanlayıcı 'yı yalnızca kullanıcı arabirimi iş parçacığında çalışacak şekilde yapılandırmadığınız takdirde bir liste denetimini paralel bir döngüden güncelleştiremeyeceğiniz anlamına gelir. Daha fazla bilgi için bkz. [bir eşitleme bağlamı belirtme](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
   
-## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Varyans Parallel.Invoke tarafından çağrılan bekleyen kullanırken dikkatli olun  
- Bazı durumlarda, görev paralel kitaplığı, o anda yürütülen iş parçacığında görevin üzerinde çalıştığı anlamına gelir. bir görev satır içi olur. (Daha fazla bilgi için [görev planlayıcılar](xref:System.Threading.Tasks.TaskScheduler).) Bu performans iyileştirmesi, bazı durumlarda kilitlenme neden olabilir. Örneğin, iki görevi aynı temsilci bir olay meydana geldiğinde, sinyalleri, kod ve sinyal başka bir görev bekler çalıştırabilirsiniz. Satır içine alınmış üzerinde ikinci görev ise ilk ve ilk olarak aynı iş parçacığı bir bekleme durumuna geçtiğinde, ikinci görev hiçbir zaman kendi olay sinyal mümkün olacaktır. Böyle etkinin önlemek için bir zaman aşımı bekleme işlemi belirtebilirsiniz veya kullanımı açık bir iş parçacığı oluşturucular bir görevin sağlamaya yardımcı olmak için diğer engelleyemez.  
+## <a name="use-caution-when-waiting-in-delegates-that-are-called-by-parallelinvoke"></a>Parallel. Invoke tarafından çağrılan Temsilcilerde beklerken dikkatli olun  
+ Bazı durumlarda, görev paralel kitaplığı bir görevi satır içine alacak ve bu, yürütülmekte olan iş parçacığında görev üzerinde çalıştığı anlamına gelir. (Daha fazla bilgi için bkz. [Task zamanlayıcılar](xref:System.Threading.Tasks.TaskScheduler).) Bu performans iyileştirmesi belirli durumlarda kilitlenmeye neden olabilir. Örneğin, iki görev aynı temsilci kodunu çalıştırabilir, bu da bir olay meydana geldiğinde bildirir ve ardından diğer görevin sinyal gelmesini bekler. İkinci görev ilk olarak aynı iş parçacığında satır içine alınır ve ilki bekleme durumuna geçtiğinde ikinci görev hiçbir şekilde olayını işaret edemeyecektir. Böyle bir oluşumu önlemek için, bekleme işleminde bir zaman aşımı belirtebilir veya bir görevin diğerini engelleyemez emin olmak için açık iş parçacığı oluşturucuları kullanabilirsiniz.  
   
-## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Değil varsayılır, ForEach, yinelemeleri için ve ForAll her zaman Paralel yürütme  
- Bu tek tek yinelemelerde göz önünde bulundurmanız önemlidir bir <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> veya <xref:System.Linq.ParallelEnumerable.ForAll%2A> döngü Mayıs ancak paralel olarak yürütmek izniniz yok. Bu nedenle, yinelemelerin Paralel yürütme ya da yineleme herhangi bir sırayla yürütülmesi doğruluğu bağlıdır herhangi bir kod yazmadan kaçınmanız gerekir. Örneğin, bu kodu kilitlenme olasılığı bulunur:  
+## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>ForEach, for ve ForAll yinelemelerinin her zaman paralel olarak yürütüleceğini varsayın  
+ Bir <xref:System.Threading.Tasks.Parallel.For%2A> <xref:System.Threading.Tasks.Parallel.ForEach%2A> veya döngüsündetektekyinelemelerinparalelolarakyürütülmesigerektiğinigözönündebulundurmanızönemlidir.<xref:System.Linq.ParallelEnumerable.ForAll%2A> Bu nedenle, tekrarların paralel olarak yürütülmesi veya yinelemeler üzerinde herhangi bir sıraya göre yürütülmesi açısından doğruluğu için herhangi bir kod yazmadan kaçınmalısınız. Örneğin, bu kodun kilitlenmesi olasıdır:  
   
  [!code-csharp[TPL_Pitfalls#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#01)]
  [!code-vb[TPL_Pitfalls#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#01)]  
   
- Bu örnekte, bir olay bir yineleme ayarlar ve diğer tüm yinelemeleri olay üzerinde bekleyin. Olay ayarı yineleme tamamlanmasını bekleme yinelemeleri hiçbiri tamamlayabilirsiniz. Ancak, bekleme yinelemeleri önce olay ayarı yineleme yürütmek için bir fırsat paralel bir döngüden yürütmek için kullanılan tüm iş parçacıklarının block mümkündür. Bu bir kilitlenmeyle sonuçlanır: olay ayarı yineleme hiçbir zaman yürütülür ve bekleme yinelemeler hiç uyandıracağına.  
+ Bu örnekte, bir yineleme bir olay ayarlıyor ve diğer tüm yinelemeler olayda bekler. Olay ayarı yinelemesi tamamlanana kadar bekleyen yinelemeden hiçbiri tamamlanamaz. Ancak, bekleyen yinelemeler, olay ayarı yinelemesi yürütme şansı vermeden önce paralel döngüyü yürütmek için kullanılan tüm iş parçacıklarını engelliyor olabilir. Bu, bir kilitlenme ile sonuçlanır: olay ayarı yinelemesi hiçbir şekilde yürütülmez ve bekleyen yinelemeler hiçbir şekilde çağrılmaz.  
   
- Özellikle, bir yineleme, paralel bir döngüden hiçbir zaman başka bir döngü ilerleme beklemeniz gerekir. Yinelemeleri ardışık olarak ancak ters sırada zamanlamak paralel bir döngüden karar verirse, karşılıklı bir kilitlenme ortaya çıkar.  
+ Özellikle, bir paralel döngünün bir yinelemesi, ilerleme yapmak için döngünün başka bir yinelemesinin asla beklemelidir. Paralel döngü, yinelemeleri sırayla zamanlamaya karar verirse, ters sırada bir kilitlenme meydana gelir.  
   
-## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>UI iş parçacığı üzerinde paralel döngüler yürütme kaçının  
- Uygulamanızın kullanıcı arabirimini (UI) hızlı yanıt veren tutmak önemlidir. Bir işlem paralelleştirme garanti altına almak için yeterli işim içeriyorsa, ardından bu büyük olasılıkla UI iş parçacığı üzerinde bu işlem çalıştırılmamalıdır.  Bunun yerine, bu işlem, bir arka plan iş parçacığında çalıştırılacak boşaltması. Örneğin, bir UI denetimine işleneceğini bazı verileri hesaplamak için paralel bir döngüden kullanmak istiyorsanız, döngü içinde bir görev örneği yerine doğrudan bir kullanıcı Arabirimi olay işleyicisi yürütülürken düşünmelisiniz.  Yalnızca çekirdek hesaplama tamamlandığında ardından kullanıcı arabirimini güncelleştirme kullanıcı Arabirimi iş parçacığı sıralamanız.  
+## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>UI Iş parçacığında paralel döngüler yürütmeden kaçının  
+ Uygulamanızın Kullanıcı arabirimi (UI) yanıt vermesini sağlamak önemlidir. Bir işlem paralelleştirme sağlamak için yeterli iş içeriyorsa, büyük olasılıkla bu işlemi UI iş parçacığında çalıştırmamalıdır.  Bunun yerine, bir arka plan iş parçacığında çalıştırılacak işlemin boşaltması gerekir. Örneğin, bir UI denetiminde işlenmesi gereken bazı verileri hesaplamak için bir paralel döngü kullanmak istiyorsanız, döngüyü doğrudan bir UI olay işleyicide değil, bir görev örneği içinde yürütmeyi düşünmelisiniz.  Yalnızca çekirdek Hesaplama tamamlandığında, UI güncelleştirmesini UI iş parçacığına geri sıralayamaz.  
   
- UI iş parçacığı üzerinde paralel döngüler çalıştırırsanız, UI denetimleri döngü içinde güncelleştirme kaçınmak dikkatli olun. UI iş parçacığı üzerinde Yürütülüyor paralel bir döngüden içinde denetimlerden UI'yi güncellemeye çalışırken durumu bozulması, özel durumlar, ertelenen güncelleştirmeler ve kullanıcı arabirimini güncelleştirme nasıl çağrılan bağlı olarak bile kilitlenmeler, açabilir. Aşağıdaki örnekte, paralel bir döngüden tüm yinelemeleri tamamlanana kadar üzerinde yürütme UI iş parçacığını engeller. Ancak, bir yinelemesini döngü arka plan iş parçacığında çalıştıran (olarak <xref:System.Threading.Tasks.Parallel.For%2A> yapabilirsiniz), çağırma çağrısı bir ileti UI iş parçacığı ve bu iletiyi işlenmeyi bekleyen blokları ayrılmak üzere gönderilmesine neden olur. UI iş parçacığı çalıştıran engellenir beri <xref:System.Threading.Tasks.Parallel.For%2A>, ileti hiçbir zaman işlenebilir ve kullanıcı Arabirimi iş parçacığı kilitlenmeleri.  
+ UI iş parçacığında paralel döngüler çalıştırırsanız, Kullanıcı arabirimi denetimlerini döngünün içinden güncelleştirmemeye özen gösterin. UI denetimlerinin Kullanıcı arabirimi iş parçacığında yürütülen paralel bir döngüden güncelleştirilmesi girişimi, Kullanıcı arabirimi güncelleştirmesinin nasıl çağrıldığına bağlı olarak durum bozulması, özel durumlar, Gecikmeli güncelleştirmeler ve hatta kilitlenmeler oluşmasına neden olabilir. Aşağıdaki örnekte, paralel döngü tüm yinelemeler tamamlanana kadar yürütüldüğü Kullanıcı arabirimi iş parçacığını engeller. Ancak, döngü yinelemesi bir arka plan iş parçacığında çalışıyorsa (gibi <xref:System.Threading.Tasks.Parallel.For%2A> ), Invoke çağrısı, Kullanıcı arabirimi iş parçacığına ve bu iletinin işlenmesini bekleyen bloklara bir ileti gönderilmesine neden olur. Kullanıcı arabirimi iş parçacığı çalıştıran bir şekilde çalıştığından <xref:System.Threading.Tasks.Parallel.For%2A>, ileti hiçbir şekilde işlenmez ve UI iş parçacığı kilitlenmeleri.  
   
  [!code-csharp[TPL_Pitfalls#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#02)]
  [!code-vb[TPL_Pitfalls#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#02)]  
   
- Aşağıdaki örnek, bir görev örneği döngüsünde çalıştırarak kilitlenme önlemek gösterilmektedir. UI iş parçacığı döngü tarafından engellenmediğinden ve ileti işlenebilir.  
+ Aşağıdaki örnek, bir görev örneği içinde döngüyü çalıştırarak kilitlenmenin nasıl önleneceğini gösterir. UI iş parçacığı döngü tarafından engellenmemiştir ve ileti işlenebilir.  
   
  [!code-csharp[TPL_Pitfalls#03](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#03)]
  [!code-vb[TPL_Pitfalls#03](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#03)]  
@@ -84,4 +84,4 @@ ms.locfileid: "64621008"
 
 - [Paralel Programlama](../../../docs/standard/parallel-programming/index.md)
 - [PLINQ'te Olası Tuzaklar](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
-- [Desenleri paralel programlama için: Anlama ve .NET Framework 4 ile paralel düzenleri uygulama](https://www.microsoft.com/download/details.aspx?id=19222)
+- [Paralel programlama için desenler: .NET Framework 4 ile paralel desenleri anlama ve uygulama](https://www.microsoft.com/download/details.aspx?id=19222)

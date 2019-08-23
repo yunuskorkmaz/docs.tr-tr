@@ -2,18 +2,18 @@
 title: Yordam İş Akışları
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: 15ff155fb057c4c10663d383a8942108c6e4375c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: d1edd73b2276d0a3918b61c8da2d04769d09e7c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956111"
 ---
 # <a name="procedural-workflows"></a>Yordam İş Akışları
-Yordam iş akışları, akış denetimi yöntemleri yordam dillerinde bulunan benzer kullanın. Bu yapılar dahil `While` ve `If`. Bu iş akışları gibi diğer akış denetimi etkinlikleri kullanarak serbestçe oluşturulabildikleri <xref:System.Activities.Statements.Flowchart> ve <xref:System.Activities.Statements.Sequence>.  
+Yordamsal iş akışları, yordamsal dillerde bulunanlara benzer akış denetimi yöntemlerini kullanır. Bu yapılar ve `While` `If`içerir. Bu iş akışları <xref:System.Activities.Statements.Flowchart> , ve <xref:System.Activities.Statements.Sequence>gibi diğer akış denetimi etkinlikleri kullanılarak serbestçe oluşturulabilir.  
   
-## <a name="controlling-execution-flow"></a>Yürütme akışı denetimi  
- İş akışı etkinlik kitaplığı yordam dilde kullanılan çoğu akış denetimi yöntemleri modelleme için etkinlikleri içerir. Bu güncelleştirmeler şunlardır:  
+## <a name="controlling-execution-flow"></a>Yürütme akışını denetleme  
+ İş akışı etkinlik kitaplığı, yordamsal dillerde kullanılan akış denetimi yöntemlerinin çoğunu modellemeye yönelik etkinlikleri içerir. Bu güncelleştirmeler şunlardır:  
   
 - <xref:System.Activities.Statements.While>  
   
@@ -31,10 +31,10 @@ Yordam iş akışları, akış denetimi yöntemleri yordam dillerinde bulunan be
   
 - <xref:System.Activities.Statements.Pick>  
   
- Akış denetimi etkinlikleri kullanmak için sürükleyip bunları **etkinlik** Tasarımcı penceresinin içinde bileşik bir etkinlik araç.  
+ Flow denetim etkinliklerini kullanmak için, onları **etkinlik** araç kutusundan Tasarımcı penceresinin içindeki bir bileşik etkinliğe sürükleyip bırakın.  
   
 > [!NOTE]
->  Windows Server AppFabric barındırma özellikleri ana iş akışları için bir Web grubunda kullanıyorsanız, AppFabric örnekleri farklı AppFabric sunucular arasında taşıyın. Bu, kaynakları tüm düğümler arasında paylaşılacak mümkün olmasını gerektirir.  Varsayılan ağ 4 iş akışı etkinlikleri hiçbiri yerel kaynaklara erişen herhangi bir işlem içerir. İş akışı immovable olarak işaretlemek için herhangi bir mekanizma AppFabric sunmaz olduğundan, bir geliştirici iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
+> Web çiftliğinde iş akışlarını barındırmak için Windows Server AppFabric barındırma özelliklerini kullanıyorsanız, AppFabric örnekleri farklı bir AppFabric sunucuları arasında taşıyacaktır. Bu, kaynakların tüm düğümler arasında paylaşılabilmesi için gereklidir.  Varsayılan NET 4 iş akışı etkinliklerinin hiçbiri, yerel kaynaklara erişen işlemler içermez. AppFabric bir iş akışını taşınabilir olarak işaretlemek için herhangi bir mekanizma sunmadığından, bir geliştirici bir iş akışı taşındığında başarısız olan özel etkinlikler oluşturmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

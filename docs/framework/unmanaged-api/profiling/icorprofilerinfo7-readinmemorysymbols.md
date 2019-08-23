@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::ReadInMemorySymbols
+title: 'ICorProfilerInfo7:: ReadInMemorySymbols'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a878ccf94fb4f6d67daa3a4dd42fcf98faf34a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95b463b23c230d620d746e48da49d75238ef2cb7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955370"
 ---
-# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
-[.NET Framework 4.6.1 ve sonraki sürümlerinde desteklenen]  
+# <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7:: ReadInMemorySymbols
+[.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
   
- Bayt bir bellek içi sembol akıştan okur.  
+ Bellek içi sembol akışından gelen baytları okur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,39 +38,39 @@ HRESULT ReadInMemorySymbols(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] Bellek içi akış içeren modül tanıtıcısı.  
+ 'ndaki Bellek içi akışı içeren modülün tanıtıcısı.  
   
  `symbolsReadOffset`  
- [in] Bellek içi akış baytlar okunduktan başlayacağı içinde uzaklığı.  
+ 'ndaki Bayt okumaya başlamak için bellek içi akış içindeki fark.  
   
  `pSymbolBytes`  
- [out] Verilerin kopyalanacağı arabellek için işaretçi. Arabellek olmalıdır `countSymbolBytes` alanı kullanılabilir.  
+ dışı Verilerin kopyalanacağı arabelleğe yönelik bir işaretçi. Arabellekte kullanılabilir alan olması `countSymbolBytes` gerekir.  
   
  `countSymbolBytes`  
- [in] Kopyalanacak bayt sayısı.  
+ 'ndaki Kopyalanacak bayt sayısı.  
   
  `pCountSymbolBytesRead`  
- [out] Yöntem döndürüldüğünde, okunan bayt sayısını içerir.  
+ dışı Yöntemi döndüğünde, okunan bayt sayısını içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK`, sıfır olmayan birkaç bayt okursanız.  
+ `S_OK`sıfır olmayan bir bayt miktarı okundum.  
   
- `CORPROF_E_MODULE_IS_DYNAMIC`, modülü kullanılarak oluşturulmuşsa <xref:System.Reflection.Emit>.  
+ `CORPROF_E_MODULE_IS_DYNAMIC`, modül kullanılarak <xref:System.Reflection.Emit>oluşturulduysa.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ReadInMemorySymbols` Yöntemi okuma girişiminde `countSymbolBytes` uzaklıkta başlayan belirli veri `symbolsReadOffset` bellek içi akış içinde. Verilerin kopyalanacağı `pSymbolBytes`, olması beklenen `countSymbolBytes` alanı kullanılabilir.     `pCountSymbolsBytesRead` Gerçek, daha az olabilir, okunan bayt sayısını içeren daha `countSymbolBytes` akışın sonuna ulaşılırsa.  
+ Yöntemi `ReadInMemorySymbols` , bellek içi akış `countSymbolBytes` içinde uzaklığında `symbolsReadOffset` başlayarak verileri okumaya çalışır. Veriler, kullanılabilir alan olması `pSymbolBytes` `countSymbolBytes` beklenen öğesine kopyalanır.     `pCountSymbolsBytesRead`okunan toplam bayt sayısını içerir, bu da akışın sonuna ulaşılırsa daha `countSymbolBytes` az olabilir.  
   
 > [!NOTE]
->  Geçerli uygulama Reflection.Emit desteklemez. Modül Reflection.Emit kullanılarak oluşturulduysa, yöntem döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

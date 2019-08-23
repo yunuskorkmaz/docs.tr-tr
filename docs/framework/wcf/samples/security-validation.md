@@ -2,21 +2,21 @@
 title: Güvenlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d37c6a46f807d5f1634348044e04bbc60f7eb98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965454"
 ---
 # <a name="security-validation"></a>Güvenlik Doğrulaması
-Bu örnek, özel bir davranış Hizmetleri bunlar belirli ölçütlere uyan emin olmak için bir bilgisayar üzerinde doğrulamak için nasıl kullanılacağını gösterir. Bu örnekte, hizmetleri, hizmette her bir uç noktası aracılığıyla tarama ve güvenli bir bağlama öğeleri içeren denetleniyor özel davranış tarafından doğrulanır. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Bu örnek, belirli ölçütlere uyması için bir bilgisayardaki hizmetleri doğrulamak üzere özel bir davranışın nasıl kullanılacağını gösterir. Bu örnekte, hizmetler, hizmet üzerindeki her bir uç nokta arasında tarama yaparak ve güvenli bağlama öğeleri içerip içermediğini kontrol ederek özel davranış tarafından onaylanır. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="endpoint-validation-custom-behavior"></a>Uç nokta doğrulama özel davranışı  
- Kullanıcı kodu ekleyerek `Validate` bulunan yöntemi <xref:System.ServiceModel.Description.IServiceBehavior> arabirimi, özel davranış verilebilir bir hizmet ya da uç noktası için kullanıcı tanımlı eylemleri gerçekleştirmek için. Aşağıdaki kod, bunların güvenli bağlamaları için bağlama koleksiyonları arar bir hizmette yer alan her bir uç nokta döngü için kullanılır.  
+ Arabirimde<xref:System.ServiceModel.Description.IServiceBehavior> bulunan `Validate` yönteme Kullanıcı kodu ekleyerek, Kullanıcı tanımlı eylemler gerçekleştirmek için bir hizmete veya uç noktaya özel davranış verilebilir. Aşağıdaki kod, bir hizmette yer alan her bir uç noktada, güvenli bağlamalar için bağlama koleksiyonlarında arama yapmak üzere kullanılır.  
   
 ```csharp
 public void Validate(ServiceDescription serviceDescription,   
@@ -47,7 +47,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- Web.config dosyasına aşağıdaki kodu ekleyerek ekler `serviceValidate` hizmeti tanımak davranış uzantısı.  
+ Aşağıdaki kodu Web. config dosyasına eklemek, hizmetinin tanınması için `serviceValidate` davranış uzantısını ekler.  
   
 ```xml  
 <system.serviceModel>  
@@ -59,7 +59,7 @@ public void Validate(ServiceDescription serviceDescription,
 ...  
 ```  
   
- Davranış uzantısı hizmete eklendikten sonra artık eklemek mümkündür `endpointValidate` Web.config dosyasında davranışları listesi ve bu nedenle, hizmet davranışı.  
+ Davranış uzantısı hizmete eklendikten sonra, bu `endpointValidate` davranış, Web. config dosyasındaki davranış listesine ve dolayısıyla hizmete eklenebilir.  
   
 ```xml  
 <behaviors>  
@@ -72,40 +72,40 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- Davranışları ve Web.config dosyasına eklenen uzantılarını ayrı ayrı hizmetlere davranışı uygulamak Machine.config dosyasına eklediğinizde while bilgisayarda etkin olan her bir hizmet davranışı uygulanır.  
+ Web. config dosyasına eklenen davranışlar ve uzantıları, her bir hizmete davranış uygular, ancak Machine. config dosyasına eklendiğinde, bilgisayarda etkin olan her hizmete davranış uygular.  
   
 > [!NOTE]
->  Davranış tüm hizmetlere eklerken, herhangi bir değişiklik yapmadan önce Machine.config dosyasına yedeklemek için önerilir.  
+> Tüm hizmetlere davranış eklerken, herhangi bir değişiklik yapmadan önce Machine. config dosyasını yedeklemeniz önerilir.  
   
- Şimdi bu örnek client\bin dizininde sağlanan istemci çalıştırın. Bir özel durum olan şu ileti ile oluşur: "İstenen hizmeti 'http://localhost/servicemodelsamples/service.svc' etkinleştirilemedi." Bu, bir uç nokta davranışı doğrulama uç noktası tarafından güvenli olduğu kabul edildiği için beklenen ve hizmetin başlatılmasını önler. Davranışı, ayrıca hangi uç nokta çalınabildiği için güvenli değildir ve "System.ServiceModel 4.0.0.0" kaynağı ve "WebHost" kategorisi altındaki Olay Görüntüleyicisi'ni sistem için bir ileti yazar açıklayan bir iç özel durum oluşturur. Bu örnekte service izlemeyi etkinleştirmek mümkündür. Bu hizmet izleme Görüntüleyicisi aracı kullanılarak elde edilen hizmet izlemeleri açarak doğrulama uç nokta davranışı tarafından oluşturulan özel durumları görüntülemesini sağlar.  
+ Şimdi bu örneğin client\bin dizininde belirtilen istemciyi çalıştırın. Aşağıdaki iletiyle bir özel durum oluşur: "İstenen hizmet, 'http://localhost/servicemodelsamples/service.svc ' etkinleştirilemedi." Uç nokta doğrulama davranışının güvenli olmadığı kabul edildiği ve hizmetin başlatılmasını önleyen için bu durum beklenmektedir. Davranış ayrıca, hangi uç noktanın güvenli olmayan olduğunu ve "System. ServiceModel 4.0.0.0" kaynağı ve "WebHost" kategorisinin altına bir Olay Görüntüleyicisi ileti yazdığını belirten bir iç özel durum oluşturur. Bu örnekteki hizmette izlemeyi açmak de mümkündür. Bu, kullanıcının Endpoint doğrulama davranışı tarafından oluşturulan özel durumları, hizmet Izleme Görüntüleyicisi aracını kullanarak elde edilen hizmet izlemelerini açarak görüntülemesine olanak tanır.  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Uç nokta doğrulama özel durum iletilerinin Olay Görüntüleyicisi'nde görüntülemek için başarısız oldu  
+#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>Olay Görüntüleyicisi başarısız uç nokta doğrulama özel durum iletilerini görüntülemek için  
   
-1. Tıklayın **Başlat** menü ve select **Çalıştır...** .  
+1. **Başlat** menüsüne tıklayın ve **Çalıştır...** seçeneğini belirleyin.  
   
-2. Tür `eventvwr` tıklatıp **Tamam**.  
+2. Yazın `eventvwr` ve **Tamam**' a tıklayın.  
   
-3. Olay Görüntüleyicisi'ni pencerede **uygulama**.  
+3. Olay Görüntüleyicisi penceresinde **uygulama**' ya tıklayın.  
   
-4. Son eklenen "System.ServiceModel 4.0.0.0" olay "WebHost" kategorisi altında çift **uygulama** güvenli bir uç nokta iletilerini görüntülemek için penceresi.  
+4. Güvenli olmayan uç nokta iletilerini görüntülemek için **uygulama** penceresindeki "Webhost" kategorisinin altındaki son eklenen "System. ServiceModel 4.0.0.0" olayına çift tıklayın.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

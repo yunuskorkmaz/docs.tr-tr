@@ -3,21 +3,21 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32aad3529ded6d0234b1bcb388ecbbc3b0a11c87
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790487"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944267"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers >
-Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen yayıncı sertifikaları listesinde yapılandırır (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
+Yapılandırma tabanlı veren adı kayıt defteri (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>) tarafından kullanılan güvenilir veren sertifikalarının listesini yapılandırır.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
 \<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry>  
+\<ıssuernameregbakanlığı >  
 \<trustedIssuers >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -50,23 +50,23 @@ Yapılandırma temelli yayınlayıcı adı tarafından kullanılan Güvenilen ya
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Sertifika, güvenilen verenler koleksiyona ekler. Sertifika ile belirtilen `thumbprint` özniteliği. Bu özellik gereklidir ve sertifika parmak izini ASN.1 kodlanmış biçiminde içermelidir. `name` Özniteliği isteğe bağlıdır ve sertifika için kolay bir ad belirtmek için kullanılabilir.|  
-|`<clear>`|Tüm sertifikaları Güvenilen verenler koleksiyonundan kaldırır.|  
-|`<remove thumbprint=xs:string>`|Sertifika, güvenilen verenler koleksiyonundan kaldırır. Sertifika ile belirtilen `thumbprint` özniteliği. Bu öznitelik gereklidir.|  
+|`<add thumbprint=xs:string name=xs:string>`|Güvenilen verenler koleksiyonuna bir sertifika ekler. Sertifika, `thumbprint` özniteliğiyle belirtilir. Bu öznitelik gereklidir ve sertifika parmak izinin ASN. 1 kodlu biçimini içermelidir. `name` Özniteliği isteğe bağlıdır ve sertifika için kolay bir ad belirtmek üzere kullanılabilir.|  
+|`<clear>`|Güvenilen verenler koleksiyonundan tüm sertifikaları temizler.|  
+|`<remove thumbprint=xs:string>`|Güvenilen verenler koleksiyonundan bir sertifikayı kaldırır. Sertifika, `thumbprint` özniteliğiyle belirtilir. Bu öznitelik gereklidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Yayınlayıcı adı yapılandırır. **Önemli:**  `type` Özniteliği `<issuerNameRegistry>` öğesi başvurmalıdır <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfının `<trustedIssuers>` geçerli olması için öğesi.|  
+|[\<ıssuernameregbakanlığı >](issuernameregistry.md)|Verenin adı kayıt defterini yapılandırır. **Önemli:**  Öğesinin özniteliği, öğesinin geçerli olması için <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfına başvurmalıdır. `<trustedIssuers>` `type` `<issuerNameRegistry>`|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows Identity Foundation (WIF) tek bir uygulamasını sağlar <xref:System.IdentityModel.Tokens.IssuerNameRegistry> sınıfı ilk günden <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfı. Yapılandırma verenin ad Kayıt Defteri'ni yapılandırmasından yüklenen güvenilen verenler listesini tutar. Listenin her verenin adı veren tarafından üretilen belirteçleri imzasını için gereken X.509 sertifikası ile ilişkilendirir. Güvenilen yayıncı sertifikaları listesi altında belirtilen `<trustedIssuers>` öğesi. Listedeki her öğe bir anımsatıcı verenin adı, veren tarafından üretilen belirteçleri imzasını doğrulamak için gereken X.509 sertifikası ile ilişkilendirir. Güvenilen sertifikalar ASN.1 kullanarak kodlanmış sertifika parmak izi biçiminde belirtilir ve koleksiyonu kullanılarak eklenen `<add>` öğesi. Temizleyin veya verenler (sertifika) kullanarak listeden kaldırma `<clear>` ve `<remove>` öğeleri.  
+ Windows Identity Foundation (WIF) <xref:System.IdentityModel.Tokens.IssuerNameRegistry> <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> , sınıfının kutudan, sınıfının tek bir uygulamasını sağlar. Yapılandırma verenin adı kayıt defteri, yapılandırmadan yüklenen güvenilen verenler listesini tutar. Liste, verenin adını veren tarafından üretilen belirteçlerin imzasını doğrulamak için gereken X. 509.440 sertifikasıyla ilişkilendirir. Güvenilen veren sertifikalarının listesi `<trustedIssuers>` öğesi altında belirtilir. Listedeki her öğe, bu veren tarafından üretilen belirteçlerin imzasını doğrulamak için gereken X. 509.440 sertifikasıyla bir anımsatıcı veren adını ilişkilendirir. Güvenilen Sertifikalar, sertifika parmak izinin ASN. 1 kodlu formu kullanılarak belirtilir ve koleksiyon öğesi kullanılarak `<add>` eklenir. `<clear>` Ve`<remove>` öğelerini kullanarak listeden verenler (Sertifikalar) temizleyebilir veya kaldırabilirsiniz.  
   
- `type` Özniteliği `<issuerNameRegistry>` öğesi başvurmalıdır <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfının `<trustedIssuers>` geçerli olması için öğesi.  
+ Öğesinin özniteliği, öğesinin geçerli olması için <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> sınıfına başvurmalıdır. `<trustedIssuers>` `type` `<issuerNameRegistry>`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML tabanlı yapılandırma veren belirtmek ad Kayıt Defteri'ni gösterilmektedir.  
+ Aşağıdaki XML, yapılandırma tabanlı veren adı kayıt defterinin nasıl ekleneceğini gösterir.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

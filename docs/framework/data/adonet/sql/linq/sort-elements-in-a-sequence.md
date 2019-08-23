@@ -5,56 +5,56 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380019"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945086"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Dizideki Öğeleri Sıralama
-Kullanım <xref:System.Linq.Enumerable.OrderBy%2A> bir dizisini bir veya daha fazla anahtarı göre sıralamak için işleci.  
+Bir veya daha fazla anahtara göre bir diziyi sıralamak için işlecinikullanın.<xref:System.Linq.Enumerable.OrderBy%2A>  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibi basit ilkel türlere göre sıralama desteklemek için tasarlanan `string`, `int`ve benzeri. Anonim türler gibi karmaşık birden çok değerli sınıflar için sıralama desteklemez. Ayrıca desteklemediği `byte` veri türleri.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ve gibi basit temel türler `string` `int`tarafından sıralamayı destekleyecek şekilde tasarlanmıştır. Anonim türler gibi karmaşık çok değerli sınıfların sıralamasını desteklemez. Ayrıca, veri türlerini desteklemez `byte` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sıralar `Employees` tarafından işe alma tarihi.  
+ Aşağıdaki örnek, işe `Employees` alma tarihine göre sıralanır.  
   
  [!code-csharp[DLinqQueryExamples#20](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#20)]
  [!code-vb[DLinqQueryExamples#20](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#20)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `where` sıralanacak `Orders` sevk `London` freight tarafından.  
+ Aşağıdaki örnek, nakliye `where` `London` tarafından sevk `Orders` edilen sıralama için kullanır.  
   
  [!code-csharp[DLinqQueryExamples#21](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#21)]
  [!code-vb[DLinqQueryExamples#21](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#21)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek sıralar `Products` birimine göre fiyat en yüksekten en çok düşük.  
+ Aşağıdaki örnek birim fiyatına `Products` göre en yüksekten en düşüğe göre sıralanır.  
   
  [!code-csharp[DLinqQueryExamples#22](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#22)]
  [!code-vb[DLinqQueryExamples#22](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#22)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir bileşik `OrderBy` sıralanacak `Customers` Şehir ve ardından ilgili kişi adı.  
+ Aşağıdaki örnek, şehir ve sonra `OrderBy` kişi adına `Customers` göre sıralamak için bir bileşik kullanır.  
   
  [!code-csharp[DLinqQueryExamples#24](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#24)]
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte sipariş sıralar `EmployeeID 1` tarafından `ShipCountry`ve sonra büyüğe freight.  
+ Aşağıdaki örnek `ShipCountry`, öğesinden ve daha `EmployeeID 1` sonra en düşük navlun için olan siparişleri sıralar.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek birleştirir <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Max%2A>, ve <xref:System.Linq.Enumerable.GroupBy%2A> bulmak için işleçleri `Products` her kategoride en yüksek birim fiyatı sahip ve ardından grubun kategorisini kimliğine göre sıralar.  
+ Aşağıdaki örnek, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.OrderBy%2A> <xref:System.Linq.Enumerable.GroupBy%2A>veişleçlerini birleştirerek, her kategoride en yüksek birim fiyatına sahip olanöğesinibulurvesonragrubukategorikimliğinegöresıralar.`Products`  
   
  [!code-csharp[DLinqQueryExamples#26](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#26)]
  [!code-vb[DLinqQueryExamples#26](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#26)]  
   
- Northwind örnek veritabanıyla önceki sorguyu çalıştırırsanız, sonuçları şuna benzer:  
+ Önceki sorguyu Northwind örnek veritabanında çalıştırırsanız, sonuçlar aşağıdakine benzeyecektir:  
   
  `1`  
   

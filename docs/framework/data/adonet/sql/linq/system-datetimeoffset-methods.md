@@ -2,23 +2,23 @@
 title: System.DateTimeOffset Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876908"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959095"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset Yöntemleri
-Nesne modeli ya da dış eşleme dosyası eşlenen sonra LINQ to SQL çoğunu çağırmanızı sağlar <xref:System.DateTimeOffset?displayProperty=nameWithType> yöntemleri, işleçler ve LINQ içinde özellikleri SQL sorguları.  
+Nesne modelinde veya dış eşleme dosyasında eşlendikten sonra LINQ to SQL, LINQ to SQL Sorgularınızdaki <xref:System.DateTimeOffset?displayProperty=nameWithType> yöntemlerin, işleçlerin ve özelliklerin çoğunu çağırabilmeniz için izin verir.  
   
- Desteklenmeyen yalnızca bu devralınan gelen yöntemlerdir <xref:System.Object?displayProperty=nameWithType> , mantıklı değildir LINQ bağlamında SQL sorguları gibi: `Finalize`, `GetHashCode`, `GetType`, ve `MemberwiseClone`. LINQ to SQL için SQL Server üzerinde yürütme çevirmek olamaz çünkü bu yöntemler desteklenmez.  
+ Desteklenmeyen tek Yöntemler <xref:System.Object?displayProperty=nameWithType> ,: `Finalize`, `GetHashCode` `GetType`, ve`MemberwiseClone`gibi LINQ to SQL sorgularının bağlamında anlamayan Devralınanlar. LINQ to SQL SQL Server yürütülmek üzere çevrilemediğinden bu yöntemler desteklenmez.  
   
 > [!NOTE]
->  Ortak dil çalışma zamanı (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> yapısı ve bir SQL eşleme özelliğini `DATETIMEOFFSET` sütun LINQ to SQL ile .NET Framework 3.5 SP1 gerektirir veya sonrasını. SQL `DATETIMEOFFSET` sütundur yalnızca Microsoft SQL Server 2008'de ve sonrasında kullanılabilir.  
+> Ortak dil çalışma zamanı (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> yapısı ve LINQ to SQL ile bir SQL `DATETIMEOFFSET` sütunuyla eşleme özelliği .NET Framework 3,5 SP1 veya daha fazlasını gerektirir. SQL `DATETIMEOFFSET` sütunu yalnızca Microsoft SQL Server 2008 ve sonraki bir sürümünde kullanılabilir.  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods tarih ve saat yöntemleri  
- Tarafından sunulan yöntemlerine ek olarak <xref:System.DateTimeOffset> yapısı, LINQ to SQL sunar ve aşağıdaki tablodan listelenen yöntemleri <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> tarih ve saat ile çalışmak için sınıf.  
+ <xref:System.DateTimeOffset> Yapı tarafından sunulan yöntemlerin yanı sıra, LINQ to SQL tarih ve saat ile çalışmaya yönelik <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> sınıftan aşağıdaki tabloda listelenen yöntemleri sunar.  
   
 ||||  
 |-|-|-|  

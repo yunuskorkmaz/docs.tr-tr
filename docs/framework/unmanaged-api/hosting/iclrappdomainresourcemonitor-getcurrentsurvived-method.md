@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf285b6e1f703c8776937fa33c7ab5801f04f80f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766552"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950152"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived Metodu
-Atık toplamayı engelleme son tam kurtulan ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.  
+Son tam ve çöp toplamayı engelleyen ve geçerli uygulama etki alanı tarafından başvurulan bayt sayısını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,16 +38,16 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
   
 ## <a name="parameters"></a>Parametreler  
  `dwAppDomainId`  
- [in] İstenen uygulama etki alanı kimliği.  
+ 'ndaki İstenen uygulama etki alanının KIMLIĞI.  
   
  `pAppDomainBytesSurvived`  
- [out] Bu uygulama etki alanı tarafından tutulan sonra son çöp toplamadan kurtulan bayt sayısı için bir işaretçi. Tam bir koleksiyon sonra bu sayı, doğru ve eksiksiz olması. Kısa ömürlü bir toplamanın ardından bu sayı olası eksik. Bu parametre olabilir `null`.  
+ dışı Bu uygulama etki alanı tarafından tutulan son çöp toplamadan sonra kalan bayt sayısına yönelik bir işaretçi. Tam bir koleksiyon sonrasında bu sayı doğru ve tamamlanmıştır. Kısa ömürlü bir koleksiyon sonrasında bu sayı muhtemelen tamamlanmamış olur. Bu parametre `null`olabilir.  
   
  `pRuntimeBytesSurvived`  
- [out] Toplam son çöp toplamadan kurtulan bayt sayısı için bir işaretçi. Tam bir koleksiyon sonra bu sayı, yönetilen yığın içinde tutulan bayt sayısını temsil eder. Kısa ömürlü bir toplamanın ardından bu sayı, kısa ömürlü nesillerde Canlı tutulan bayt sayısını temsil eder. Bu parametre olabilir `null`.  
+ dışı Son çöp toplamadan kalan toplam bayt sayısı için bir işaretçi. Tam bir koleksiyon sonrasında bu sayı, yönetilen yığınlardaki tutulan baytların sayısını temsil eder. Kısa ömürlü bir koleksiyon sonrasında bu sayı, kısa ömürlü neslerde canlı tutulan bayt sayısını temsil eder. Bu parametre `null`olabilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
@@ -55,22 +55,22 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |COR_E_APPDOMAINUNLOADED|Uygulama etki alanı kaldırıldı veya yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Atık toplamayı engelleme yalnızca tam sonra İstatistikler güncelleştirilir. diğer bir deyişle, uygulama çalışırken koleksiyonu durdurur ve tüm nesiller içeren bir koleksiyon gerçekleşir. Örneğin, <xref:System.GC.Collect?displayProperty=nameWithType> yöntemi aşırı yüklemesi, tam toplamayı engelleme, gerçekleştirir. Eş zamanlı çöp toplama, arka planda gerçekleşir ve uygulamayı engellemez.  
+ İstatistikler, yalnızca tam ve çöp toplama işlemleri engellendikten sonra güncelleştirilir; diğer bir deyişle, koleksiyon gerçekleştiğinde uygulamayı durduran tüm nesilleri içeren bir koleksiyon. Örneğin, <xref:System.GC.Collect?displayProperty=nameWithType> yöntem aşırı yüklemesi tam, engelleyici bir koleksiyon gerçekleştirir. Eşzamanlı çöp toplama, arka planda gerçekleşir ve uygulamayı engellemez.  
   
- `GetCurrentSurvived` Yöntemdir yönetilen yönetilmeyen eşdeğerini <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> özelliği.  
+ Yöntemi, yönetilen <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> özelliğin yönetilmeyen eşdeğeridir. `GetCurrentSurvived`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ICLRAppDomainResourceMonitor Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [Uygulama Etki Alanı Kaynak İzleme](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [Uygulama Etki Alanı Kaynak İzleme](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [Barındırma Arabirimleri](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Barındırma](../../../../docs/framework/unmanaged-api/hosting/index.md)

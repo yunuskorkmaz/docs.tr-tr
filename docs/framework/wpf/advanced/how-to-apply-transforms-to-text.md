@@ -15,54 +15,54 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b749d21c1b5940d216e244393eeb3c133dc153b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956478"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Nasıl yapılır: Metne Dönüşüm Uygulama
-Dönüşümler uygulamanızda metin görünümünü değiştirebilirsiniz. Aşağıdaki örnekler işleme dönüşümleri farklı türde metin görünümünü kullanın. bir <xref:System.Windows.Controls.TextBlock> denetimi.  
+Dönüşümler uygulamanızdaki metnin görüntülenmesini değiştirebilir. Aşağıdaki örnekler, bir <xref:System.Windows.Controls.TextBlock> denetimdeki metnin görüntülenmesini etkilemek için farklı türde işleme dönüştürmelerini kullanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki boyutlu x-y düzlemleriyle içinde belirtilen bir noktadan döndürülen metni gösterir.  
+ Aşağıdaki örnekte, iki boyutlu x-y düzleinde belirtilen bir nokta hakkında döndürülmüş metin gösterilmektedir.  
   
  ![RotateTransform kullanılarak döndürülen metin](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
- Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.RotateTransform> metni döndürmek için. Bir <xref:System.Windows.Media.RotateTransform.Angle%2A> 90 değerini 90 derece saat yönünde öğeyi döndürür.  
+ Aşağıdaki kod örneği, metni döndürmek <xref:System.Windows.Media.RotateTransform> için bir kullanır. 90 <xref:System.Windows.Media.RotateTransform.Angle%2A> değeri, öğe 90 derece saat yönünde döner.  
   
  [!code-xaml[TextTransformSample#TextTransformSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample1)]  
   
- Aşağıdaki örnek, % 150 x ekseni boyunca ölçeği metnin ikinci satırı ve y ekseni boyunca % 150 ölçeklendirilmiş metin üçüncü satır gösterir.  
+ Aşağıdaki örnek, x ekseni ve y ekseni üzerinde% 150 ile ölçeklenmiş üçüncü metin satırındaki 150 metnin ikinci satırını gösterir.  
   
- ![ScaleTransform kullanılarak ölçeklendirilmiş metin](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
+ ![ScaleTransform kullanılarak Ölçeklendirilmiş metin](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
- Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.ScaleTransform> özgün boyutuna ölçek metni için.  
+ Aşağıdaki kod örneği, bir metni <xref:System.Windows.Media.ScaleTransform> özgün boyutundan ölçeklendirmek için bir kullanır.  
   
  [!code-xaml[TextTransformSample#TextTransformSample2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample2)]  
   
 > [!NOTE]
->  Metin ölçeklendirme metnin yazı tipi boyutunu artırma ile aynı değil. Yazı tipi boyutlarını birbirinden farklı boyutlarda en iyi çözüm sağlamak için hesaplanır. Ölçeklendirilmiş metin, diğer taraftan, özgün boyutunda metin oranlarını korur.  
+> Metin ölçekleme metin yazı tipi boyutunun artmasından farklı değildir. Yazı tipi boyutları, farklı boyutlarda en iyi çözünürlüğü sağlamak için birbirinden bağımsız olarak hesaplanır. Ölçeklenmiş metin, diğer yandan, orijinal boyutlu metnin oranlarını korur.  
   
- Aşağıdaki örnek x ekseni boyunca Eğilmiş metin gösterir.  
+ Aşağıdaki örnek, x ekseni üzerinde eğilmiş metni gösterir.  
   
- ![SkewTransform kullanılarak Eğilmiş metin](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
+ ![SkewTransform kullanarak eğilmiş metin](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
    
- Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.SkewTransform> metin eğriltmek için. Bir eğme yamultma olarak da bilinen bir koordinat bir Tekdüzen olmayan şekilde uzatır bir dönüşümdür. Bu örnekte, iki metin dengesiz-30 ° ve x koordinatını boyunca 30 ° dizelerdir.  
+ Aşağıdaki kod örneği, metni eğmek için bir <xref:System.Windows.Media.SkewTransform> kullanır. Yamultma olarak da bilinen eğme, koordinat alanını Tekdüzen olmayan bir şekilde uzatır bir dönüşümdür. Bu örnekte, iki metin dizesi x koordinatı üzerinde 30 ° ve 30 ° eğriltilir.  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
- Aşağıdaki örnek, çevrilmiş veya taşınmış, x ve y ekseni metni gösterir.  
+ Aşağıdaki örnek, x ve y ekseni üzerinde çevrilmiş veya taşınan metni gösterir.  
   
- ![Metin TranslateTransform kullanan uzaklığı](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
+ ![TranslateTransform kullanan metin boşluğu](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
- Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.TranslateTransform> metin uzaklık. Bu örnekte, bir gölge etkisi birincil metin aşağıdaki metni biraz uzaklık bir kopyasını oluşturur.  
+ Aşağıdaki kod örneği, metin kaydırmak <xref:System.Windows.Media.TranslateTransform> için bir kullanır. Bu örnekte, birincil metnin altındaki metnin biraz bir konum kopyası bir gölge efekti oluşturur.  
   
  [!code-xaml[TextTransformSample#TextTransformSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample4)]  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Gölge efektleri sağlayan zengin bir özellikler kümesi sağlar. Daha fazla bilgi için [gölgeli metin oluşturma](how-to-create-text-with-a-shadow.md).  
+> , <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> Gölge etkileri sağlamaya yönelik zengin bir özellikler kümesi sağlar. Daha fazla bilgi için bkz. [Gölge Ile metin oluşturma](how-to-create-text-with-a-shadow.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

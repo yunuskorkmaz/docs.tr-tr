@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946448"
 ---
 # <a name="plinq-data-sample"></a>PLINQ Veri Örneği
-Bu örnek, müşteriler, ürünler, sipariş ve Sipariş Ayrıntıları bellek içi koleksiyonlara dönüştürme yöntemleri ile birlikte .csv biçiminde örnek veriler içerir. PLINQ ile daha fazla deney için bu konuda kodda belirli diğer konulardan kod örnekleri yapıştırın ve ondan çağırma `Main` yöntemi. Bu verileri kendi PLINQ sorguları ile de kullanabilirsiniz.  
+Bu örnek,. csv biçimindeki örnek verileri, bu dosyayı bellek içi müşteriler, ürünler, siparişler ve sipariş ayrıntılarına dönüştüren yöntemlerle birlikte içerir. PLINQ ile daha fazla denemek için, belirli diğer konulardan kod örneklerini bu konudaki koda yapıştırabilir ve `Main` yönteminden çağırabilirsiniz. Bu verileri kendi PLıNQ sorgularınız ile de kullanabilirsiniz.  
   
- Verileri, Northwind veritabanına kümesini temsil eder. Elli (50) müşteri kayıtları dahil, ancak tüm alanlardır. Bir alt kümesini siparişler ve her müşteri için karşılık gelen Order_Detail veri satırları dahil edilir. Tüm ürünler dahildir.  
+ Veriler, Northwind veritabanının bir alt kümesini temsil eder. 50 (50) müşteri kayıtları dahildir, ancak tüm alanları içermez. Siparişlerdeki satırların bir alt kümesi ve her müşteri için karşılık gelen Order_Detail verileri dahildir. Tüm ürünler dahil edilmiştir.  
   
 > [!NOTE]
->  Veri kümesi, PLINQ LINQ to Objects'in daha hızlı içeren sorgular için yalnızca temel olduğunu göstermek için yeteri kadar büyük değil. `where` ve `select` yan tümceleri. Bunun gibi küçük veri kümeleri için hızını artırır gözlemlemek için veri kümesindeki her bir öğe üzerinde hesaplama açısından pahalı işlemler içeren sorgular kullanın.  
+> Veri kümesi, PLINQ 'in yalnızca temel `where` ve `select` yan tümceleri içeren sorgular için LINQ to Objects daha hızlı olduğunu göstermek için yeterince büyük değil. Bu gibi küçük veri kümeleri için hız artışı gözlemlemek için, veri kümesindeki her öğe üzerinde hesaplama maliyetli işlemler içeren sorguları kullanın.  
   
-### <a name="to-set-up-this-sample"></a>Bu örneğini kurmak için  
+### <a name="to-set-up-this-sample"></a>Bu örneği ayarlamak için  
   
-1. Bir Visual Basic veya Visual C# konsol uygulaması projesi oluşturun.  
+1. Visual Basic veya görsel C# konsol uygulaması projesi oluşturun.  
   
-2. Program.cs veya Module1.vb içeriğini, bu adımları takip eden kodla değiştirin.  
+2. Bu adımları takip eden kodu kullanarak Module1. vb veya Program.cs içeriğini değiştirin.  
   
-3. Üzerinde **proje** menüsünü tıklatın **Yeni Öğe Ekle**. Seçin **metin dosyası** ve ardından **Tamam**. Bu konu başlığında verileri kopyalayıp metin dosyasına yapıştırın. Üzerinde **dosya** menüsünde tıklatın **Kaydet**Plinqdata.csv dosya adı ve kaynak kod dosyalarınızı içeren klasöre kaydedin.  
+3. **Proje** menüsünde **Yeni öğe Ekle**' ye tıklayın. **Metin dosyası** ' nı seçin ve ardından **Tamam**' a tıklayın. Bu konudaki verileri kopyalayın ve ardından yeni metin dosyasına yapıştırın. **Dosya** menüsünde, **Kaydet**' e tıklayın, dosyayı plinqdata. csv olarak adlandırın ve ardından kaynak kodu dosyalarınızı içeren klasöre kaydedin.  
   
-4. Proje oluşturulur ve düzgün çalıştığını doğrulamak için F5 tuşuna basın. Konsol penceresinde aşağıdaki çıktıyı görüntülenmesi gerekir.  
+4. Projenin doğru bir şekilde oluşturulup çalıştığını doğrulamak için F5 tuşuna basın. Aşağıdaki çıkışın konsol penceresinde gösterilmesi gerekir.  
   
     ```  
     Customer count: 50  

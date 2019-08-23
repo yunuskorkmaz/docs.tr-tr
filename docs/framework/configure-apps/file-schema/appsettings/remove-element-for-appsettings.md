@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 62913face910ae9500aa5e6f2f443db67ffd4240
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301274"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921288"
 ---
-# <a name="remove-element-for-appsettings"></a>\<kaldırma > öğesi için \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<appSettings için \<> öğesi > Kaldır
 
-Özel uygulama ayarları kaldırır.
+Özel uygulama ayarlarını kaldırır.
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<kaldırma >**
+[ **\<Yapılandırma >** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Kaldır**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -36,21 +36,21 @@ ms.locfileid: "66301274"
 
 |         | Açıklama |
 | ------- | ----------- |
-| **anahtar** | Gerekli öznitelik.<br><br>Kaldırılacak anahtar adını belirtir. |
+| **anahtar** | Gerekli öznitelik.<br><br>Kaldırılacak anahtarın adını belirtir. |
 
 ### <a name="parent-element"></a>Üst öğe
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<appSettings >** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL'leri ya da bir uygulama için diğer özel yapılandırma bilgileri gibi özel uygulama ayarları içerir. |
+| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
-None
+Yok.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir özel yapılandırma ayarını kaldırın gösterilmiştir `ApplicationName`:
+Aşağıdaki örnek için `ApplicationName`özel bir yapılandırma ayarının nasıl kaldırılacağını göstermektedir:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ Aşağıdaki örnek bir özel yapılandırma ayarını kaldırın gösterilmişt
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework için yapılandırma dosyası şeması](../index.md)

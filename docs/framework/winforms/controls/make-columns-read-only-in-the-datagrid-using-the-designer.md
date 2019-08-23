@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 6bdd561c863a461f43a5a7aac025fead1f971bb0
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 82be9d31ff6bb3f2f5dd8a55b4426103d466bdd6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039818"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952099"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak Windows Forms DataGridView Denetimindeki Sütunları Salt Okunur Yapma
 Varsayılan olarak, kullanıcılar Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde görünen metin ve sayısal verileri değiştirebilir. Değişiklik için amaçlanmış verileri göstermek istiyorsanız, verileri içeren sütunları salt okunurdur yapmalısınız. Denetimi tamamen salt okuma yapma hakkında bilgi için bkz [. nasıl yapılır: Tasarımcı](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)kullanarak Windows Forms DataGridView denetiminde satır eklemeyi ve silmeyi önleyin.
@@ -28,7 +28,7 @@ Varsayılan olarak, kullanıcılar Windows Forms <xref:System.Windows.Forms.Data
 3. **Sütun özellikleri** kılavuzunda, <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> özelliğini olarak `true`ayarlayın.
 
     > [!NOTE]
-    >  Sütun **Ekle** iletişim kutusundaki salt **Oku** onay kutusunu seçerek de bir sütunu salt okunabilir hale getirebilirsiniz.
+    > Sütun **Ekle** iletişim kutusundaki salt **Oku** onay kutusunu seçerek de bir sütunu salt okunabilir hale getirebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,64 +2,64 @@
 title: SQL Server’da Sunucu ve Veritabanı Rolleri
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961094"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server’da Sunucu ve Veritabanı Rolleri
-Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya kullanıcı grubu için izinler atamak izin veren rol tabanlı güvenliği kullanın. Sabit sunucu ve sabit veritabanı rollerine atanmış izinler sabit kümesine sahiptir.  
+Tüm SQL Server sürümleri rol tabanlı güvenliği kullanır ve bu sayede, bireysel kullanıcılar yerine bir role veya kullanıcı grubuna izinler atayabilirsiniz. Sabit sunucu ve sabit veritabanı rollerinin, bunlara atanmış sabit bir izin kümesi vardır.  
   
 ## <a name="fixed-server-roles"></a>Sabit sunucu rolleri  
- Sabit sunucu rolleri, izinler ve sunucu çapında kapsam sabit kümesine sahiptir. SQL Server yönetiminde kullanılmak için tasarlanmıştır ve atanmış izinleri değiştirilemez. Oturum açma bilgileri, bir veritabanında bir kullanıcı hesabı zorunda kalmadan sabit sunucu rollerine atanabilir.  
+ Sabit sunucu rollerinin, sabit bir izin ve sunucu genelindeki kapsam kümesi vardır. SQL Server yönetiminde kullanılmak üzere tasarlanmıştır ve bunlara atanan izinler değiştirilemez. Oturum açma işlemleri, bir veritabanında kullanıcı hesabı olmadan sabit sunucu rollerine atanabilir.  
   
 > [!IMPORTANT]
->  `sysadmin` Sabit sunucu rolünün diğer tüm rolleri kapsar ve sahip sınırsız kapsam. Yüksek derecede güvenilen olmadıkları sürece bu role sorumluları eklemeyin. `sysadmin` Rol üyeleri, tüm server veritabanları ve kaynaklar değiştirilemeyen yönetici ayrıcalıklarına sahip.  
+> `sysadmin` Sabit sunucu rolü diğer tüm rolleri kapsar ve sınırsız kapsama sahiptir. Bu role, son derece güvenilmediği durumlar dışında sorumluları eklemeyin. `sysadmin`rol üyeleri tüm sunucu veritabanları ve kaynakları üzerinde yönetici ayrıcalıklarına geri alınamaz.  
   
- Sabit sunucu rollerine kullanıcı ekleme, seçici olun. Örneğin, `bulkadmin` rolü, veri bütünlüğünü tehlikeye atabilir bir tabloya herhangi bir yerel dosya içeriğini eklemesini sağlar. Sabit sunucu rolleri ve izinleri tam listesi için SQL Server Books Online'a bakın.  
+ Kullanıcıları sabit sunucu rollerine eklediğinizde seçmeli olun. Örneğin, `bulkadmin` bu rol, kullanıcıların herhangi bir yerel dosyanın içeriğini bir tabloya eklemesini sağlar ve bu da veri bütünlüğünü tehlikeye atabiliriz. Sabit sunucu rollerinin ve izinlerinin tamamı listesi için bkz. SQL Server Books Online.  
   
-## <a name="fixed-database-roles"></a>Sabit veritabanı rolleri  
- İzinleri grupları kolayca yönetmesine olanak tanımak için tasarlanmıştır izinleri önceden tanımlı bir dizi sabit veritabanı rollerine sahip. Üyeleri `db_owner` rolü veritabanı üzerinde tüm yapılandırma ve bakım etkinlikleri gerçekleştirebilir.  
+## <a name="fixed-database-roles"></a>Düzeltilen veritabanı rolleri  
+ Sabit veritabanı rollerinin, izin gruplarını kolayca yönetmenizi sağlamak için tasarlanan önceden tanımlanmış bir izin kümesi vardır. `db_owner` Rolün üyeleri veritabanında tüm yapılandırma ve bakım etkinliklerini gerçekleştirebilir.  
   
- Önceden tanımlanmış roller, SQL Server hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
+ Önceden tanımlı SQL Server roller hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Sunucu düzeyinde roller](/sql/relational-databases/security/authentication-access/server-level-roles)|Sabit sunucu rolleri ve SQL Server'da bunlarla ilişkili izinleri açıklar.|  
-|[Veritabanı düzeyinde roller](/sql/relational-databases/security/authentication-access/database-level-roles)|Sabit veritabanı rolleri ve bunlarla ilişkili izinleri açıklar.|  
+|[Sunucu düzeyi roller](/sql/relational-databases/security/authentication-access/server-level-roles)|SQL Server ' de sabit sunucu rollerini ve bunlarla ilişkili izinleri açıklar.|  
+|[Veritabanı düzeyindeki roller](/sql/relational-databases/security/authentication-access/database-level-roles)|Sabit veritabanı rollerini ve bunlarla ilişkili izinleri açıklar|  
   
-## <a name="database-roles-and-users"></a>Veritabanı rolleri ve kullanıcıları  
- Veritabanı nesneleri ile çalışmak için oturum açma bilgileri veritabanı kullanıcı hesaplarına eşlenmesi gerekir. Veritabanı kullanıcıları, bu rolleri ile ilişkilendirilmiş tüm izin kümeleri devralan veritabanı rollerine sonra eklenebilir. Tüm izinler verilebilir.  
+## <a name="database-roles-and-users"></a>Veritabanı rolleri ve kullanıcılar  
+ Veritabanı nesneleriyle çalışabilmek için, oturum açma bilgilerinin veritabanı kullanıcı hesaplarıyla eşlenmesi gerekir. Daha sonra veritabanı kullanıcıları, bu rollerle ilişkili izin kümelerini devralarak veritabanı rollerine eklenebilir. Tüm izinler verilebilir.  
   
- De dikkate almanız gereken `public` rolü `dbo` kullanıcı hesabı ve `guest` hesap güvenliği için uygulamanızı tasarlarken.  
+ Uygulamanız için güvenlik tasarlarken `public` rolü `dbo` , `guest` Kullanıcı hesabını ve hesabı da göz önünde bulundurmanız gerekir.  
   
 ### <a name="the-public-role"></a>Ortak rol  
- `public` Rolü sistem veritabanları içeren her veritabanında yer alan. Bırakılamaz ve ekleyemez veya kullanıcıları kaldırın. Verilen izinler `public` rol devralınır diğer tüm kullanıcılar ve roller tarafından ait olduklarından `public` varsayılan rol. GRANT `public` tüm kullanıcıların sahip olmasını istediğiniz izinleri yalnızca.  
+ `public` Rol, sistem veritabanlarını içeren her veritabanında bulunur. Bırakılamaz ve bundan Kullanıcı ekleyemez veya kaldıramazsınız. `public` Role verilen izinler, `public` varsayılan olarak role ait olduklarından diğer tüm kullanıcılar ve roller tarafından devralınır. Yalnızca `public` tüm kullanıcıların sahip olmasını istediğiniz izinleri verin.  
   
-### <a name="the-dbo-user-account"></a>Kullanıcı hesabına dbo  
- `dbo`, Veya veritabanı sahibi, veritabanında tüm etkinlikleri gerçekleştirmek için gerekli izinlere örtük bir kullanıcı hesabıdır. Üyeleri `sysadmin` sabit sunucu rolü için otomatik olarak eşleştirilir `dbo`.  
+### <a name="the-dbo-user-account"></a>Dbo kullanıcı hesabı  
+ `dbo`Veya veritabanı sahibi, veritabanındaki tüm etkinlikleri gerçekleştirmek için izinleri kapsanan bir kullanıcı hesabıdır. Sabit sunucu rolünün üyeleri otomatik olarak öğesine `dbo`eşlenir. `sysadmin`  
   
 > [!NOTE]
->  `dbo` Ayrıca bir şema içinde açıklandığı gibi adıdır [sahiplik ve kullanıcı şeması ayrımı SQL Server'da](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`Ayrıca, SQL Server ' de [sahiplik ve Kullanıcı şeması ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)bölümünde açıklandığı gibi bir şemanın adıdır.  
   
- `dbo` Kullanıcı hesabı ile yanıltıcı sık `db_owner` sabit veritabanı rolü. Kapsamı `db_owner` ; veritabanı kapsamı `sysadmin` tüm sunucusudur. Üyelik `db_owner` rol confer değil `dbo` kullanıcı ayrıcalıkları.  
+ Kullanıcı hesabı, `db_owner` sabit veritabanı rolüyle genellikle karıştırılır. `dbo` Kapsamı `db_owner` bir veritabanıdır; `sysadmin` kapsamı tüm sunucu olur. Roldeki üyelik `dbo` kullanıcı ayrıcalıklarını karşılamıyor. `db_owner`  
   
-### <a name="the-guest-user-account"></a>Konuk kullanıcı hesabı  
- Bir kullanıcı kimlik doğrulaması ve SQL Server örneğine oturum açmasına izin sonra ayrı bir kullanıcı hesabı kullanıcının sahip olduğu için her bir veritabanındaki bulunmalıdır erişim. Her veritabanında bir kullanıcı hesabı gerektiren SQL Server örneğine bağlanma ve bir sunucudaki tüm veritabanlarına erişmesini engeller. Varlığı bir `guest` veritabanındaki kullanıcı hesabı, bir veritabanına erişmek için bir veritabanı kullanıcı hesabı olmayan bir oturum açma sağlayarak bu gereksinim kaçınmanızı sağlar.  
+### <a name="the-guest-user-account"></a>Konuk Kullanıcı hesabı  
+ Bir kullanıcının kimliği doğrulandıktan ve bir SQL Server örneğinde oturum açmasına izin verildiğinde, kullanıcının erişmesi gereken her veritabanında ayrı bir kullanıcı hesabının olması gerekir. Her veritabanında bir kullanıcı hesabının gerekli olması, kullanıcıların bir SQL Server örneğine bağlanmasını ve bir sunucudaki tüm veritabanlarına erişmelerini engeller. Veritabanındaki bir `guest` Kullanıcı hesabının varlığı, veritabanı kullanıcı hesabı olmadan bir veritabanına erişmek için bir oturum açmaya izin vererek bu gereksinimi ortadan kaldırarak.  
   
- `guest` Yerleşik bir hesap SQL Server'ın tüm sürümlerinde hesabıdır. Varsayılan olarak, yeni veritabanlarında devre dışı. Etkinleştirilirse, size, Transact-SQL iptal BAĞLANMAK gelen KONUK deyimi yürüterek kendi CONNECT izni iptal etme devre dışı bırakabilirsiniz.  
+ `guest` Hesap, tüm SQL Server sürümlerindeki yerleşik bir hesaptır. Varsayılan olarak, yeni veritabanlarında devre dışıdır. Etkinleştirilirse, Transact-SQL REVOKE CONNECT FROM KONUĞUNU yürüterek bağlantı iznini iptal ederek devre dışı bırakabilirsiniz.  
   
 > [!IMPORTANT]
->  Kullanmaktan kaçının `guest` hesabı; kendi veritabanı izinleri olmayan tüm oturumları bu hesap için veritabanı izinler alın. Kullanmanız gerekirse `guest` hesap, minimum izinleri verin.  
+> `guest` Hesabı kullanmaktan kaçının; kendi veritabanı izinleri olmayan tüm oturumlar, bu hesaba verilen veritabanı izinlerini elde eder. `guest` Hesabı kullanmanız gerekiyorsa, en düşük izinleri verin.  
   
  SQL Server oturum açma bilgileri, kullanıcılar ve roller hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Veritabanı altyapısı izinleri ile çalışmaya başlama](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Sorumluları, rol, kimlik bilgileri, güvenliği sağlanabilir öğeler ve izinleri açıklayan konulara bağlantılar içerir.|  
-|[İlkeleri](/sql/relational-databases/security/authentication-access/principals-database-engine)|İlkeleri açıklanır ve sunucu ve veritabanı rolleri açıklayan konulara bağlantılar içerir.|  
+|[Veritabanı altyapısı Izinleri ile çalışmaya başlama](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Sorumluları, rolleri, kimlik bilgilerini, securables ve izinleri tanımlayan konuların bağlantılarını içerir.|  
+|[Sorumlusu](/sql/relational-databases/security/authentication-access/principals-database-engine)|Sorumluları açıklar ve sunucu ve veritabanı rollerini açıklayan konuların bağlantılarını içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -68,4 +68,4 @@ Tüm SQL Server sürümleri için bireysel kullanıcılar yerine bir rol veya ku
 - [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

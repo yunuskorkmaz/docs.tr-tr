@@ -9,52 +9,52 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 543717873f3ef6d0d44c5bcbbef013817c06357c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13ad6c85bbde57cd6ad19848de71dabc23ed8f49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953915"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID Özelliğini Kullanma
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konu, senaryoları ve nasıl ve ne zaman gösteren örnek kodu içerir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> içindeki bir öğeyi bulmak için kullanılan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç.  
+ Bu konu, <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağaç içindeki bir öğeyi bulmak için nasıl ve ne zaman kullanılabileceğini gösteren senaryolar ve örnek kod içerir.  
   
- <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> bir eşdüzey UI Otomasyonu öğesinden benzersiz olarak tanımlar. Kimlik denetimi ile ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz. [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>bir UI Otomasyon öğesini eşlerinden bağımsız olarak tanımlar. Denetim kimliğiyle ilgili özellik tanımlayıcıları hakkında daha fazla bilgi için bkz. [UI Automation özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Ağaç genelinde benzersiz bir kimlik garanti etmez. Genellikle, kapsayıcı ve kullanışlı olması için kapsam bilgileri de gerekir. Örneğin, bir uygulama, buna karşılık, birden çok alt menü öğeleri sahip birden çok üst düzey menü öğeleri ile bir menü denetimi içerebilir. Bu ikincil menü öğeleri "Item1", "2 öğe" gibi genel bir şema belirtilebileceği vb. üst düzey menü öğeleri arasında yinelenen tanımlayıcıları alt öğeleri için izin verme.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>ağacın tamamında benzersiz bir kimlik garantisi vermez; genellikle kapsayıcı ve kapsam bilgilerinin yararlı olması gerekir. Örneğin, bir uygulama birden çok üst düzey menü öğesi olan bir menü denetimi içerebilir, buna karşılık birden çok alt menü öğesi vardır. Bu ikincil menü öğeleri, "Item1", "Item 2" gibi genel bir düzen tarafından tanımlanabilir ve üst düzey menü öğelerinde alt öğeler için yinelenen tanımlayıcılara izin verebilir.  
   
 ## <a name="scenarios"></a>Senaryolar  
- Üç birincil UI Otomasyonu istemci uygulama senaryoları kullanımını gerektiren belirlenmiştir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> öğeleri için arama yaparken doğru ve tutarlı sonuçlar elde etmek için.  
+ Öğeleri ararken doğru ve tutarlı sonuçlar elde <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> etmek için kullanımını gerektiren üç birincil UI Otomasyonu istemci uygulama senaryosu tanımlandı.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> Denetim görünümünde en üst düzey uygulama windows, UI Otomasyonu öğeleri türetilen dışındaki tüm UI Otomasyonu öğeleri tarafından desteklenen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] bir kimlik veya x: Uid ve türetilen UI Otomasyonu öğeleri olmayan denetimleri [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] denetleyen Denetim kimliği yok  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>, üst düzey uygulama pencereleri haricinde denetim görünümündeki tüm UI Otomasyon öğeleri, ID veya x:Uid olmayan [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimlerden türetilmiş UI Otomasyonu öğeleri ve bu denetimden [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] türetilmiş Kullanıcı Arabirimi Otomasyonu öğeleri tarafından desteklenir Denetim KIMLIĞI yok.  
   
-#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>UI Otomasyonu ağaçta belirli bir öğeyi bulmak için benzersiz ve bulunabilirlik Automationıd kullanın  
+#### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>UI Otomasyon ağacındaki belirli bir öğeyi bulmak için benzersiz ve bulunabilir bir AutomationId kullanın  
   
-- Gibi bir araç kullanın [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] rapora <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> , bir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ilgi öğesi. Bu değer kopyalanır ve sonraki otomatik testi için test betiği gibi bir istemci uygulamasına yapıştırıldı. Bu yaklaşım azaltır ve tanımlamak ve çalışma zamanında bir öğeyi bulmak için gereken kodu basitleştirir.  
+- İlgilendiğiniz bir [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] öğeyi[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] raporlamak için gibi bir <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> araç kullanın. Bu değer daha sonra, sonraki otomatikleştirilmiş test için test betiği gibi bir istemci uygulamasına kopyalanabilir ve yapıştırılabilir. Bu yaklaşım, çalışma zamanında bir öğeyi tanımlamak ve bulmak için gereken kodu azaltır ve basitleştirir.  
   
 > [!CAUTION]
->  Genel olarak, yalnızca doğrudan alt öğeleri almak denemelisiniz <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Alt öğeleri için arama, yüzlerce veya binlerce büyük olasılıkla bir yığın taşması ile elde edilen öğelerin bile aracılığıyla yineleme. Daha düşük bir düzeyde belirli bir öğeyi edinme çalışıyorsanız, uygulama penceresinin veya daha düşük bir düzeyde bir kapsayıcı aramanızı başlamanız gerekir.  
+>  Genel olarak, yalnızca kendi doğrudan alt öğelerini <xref:System.Windows.Automation.AutomationElement.RootElement%2A>edinmeye çalışırsınız. Alt öğeler için arama yüzlerce veya hatta binlerce öğe aracılığıyla yineleyebilir ve muhtemelen yığın taşmasına neden olabilir. Daha düşük bir düzeyde belirli bir öğe edinmeye çalışıyorsanız, aramanızı uygulama penceresinden veya bir kapsayıcıdan daha düşük bir düzeyde başlatmanız gerekir.  
   
  [!code-csharp[UIAAutomationID_snip#100](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#100)]
  [!code-vb[UIAAutomationID_snip#100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#100)]  
   
-#### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Önceden tanımlanmış bir AutomationElement için döndürülecek kalıcı bir yol kullanın  
+#### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Daha önce tanımlanan bir AutomationElement öğesine dönmek için kalıcı bir yol kullanın  
   
-- İstemci uygulamalarından sağlam kaydı ve kayıttan yürütme yardımcı programlar, basit bir test betikleri gibi bir dosya iletişim kutusu veya menü öğesini açın ve UI Otomasyonu ağaçta yok, şu anda, örneği oluşturulur değil öğelere erişim gerektirebilir. Yeniden oluşturma, veya "kayıttan", belirli bir dizi Automationıd denetim düzenleri ve olay dinleyicileri gibi UI Otomasyon özelliklerini kullanarak UI eylem bu öğeleri yalnızca oluşturulabilir.
+- Basit test betiklerinden güçlü kayıt ve kayıttan yürütme yardımcı programlarına istemci uygulamaları, dosya açma iletişim kutusu veya menü öğesi gibi şu anda örneği bulunmayan öğelere erişim gerektirebilir ve bu nedenle UI Otomasyon ağacında yok. Bu öğeler yalnızca bir çoğaltma veya "kayıttan yürütme" ile örnek olarak, AutomationId, Denetim desenleri ve olay dinleyicileri gibi UI Otomasyon özelliklerinin kullanımı aracılığıyla belirli bir Kullanıcı Arabirimi eylemleri dizisi aracılığıyla oluşturulabilir.
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
 [!code-csharp[UIAAutomationID_snip#Playback](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#playback)]
 [!code-vb[UIAAutomationID_snip#Playback](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#playback)]  
   
-#### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Önceden tanımlanmış bir AutomationElement için döndürülecek göreli bir yol kullanın  
+#### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>Daha önce tanımlanan bir AutomationElement öğesine dönmek için göreli yol kullanın  
   
-- Automationıd yalnızca eş değerleri arasında benzersiz olması garanti olduğundan bazı durumlarda, UI Otomasyonu ağacında birden çok öğe aynı Automationıd özelliği değerlerine sahip olabilir. Bu durumlarda öğeleri benzersiz bir üst öğede göre tanımlanabilir ve gerekirse bir doya. Örneğin, bir geliştirici menü öğeleri ile sıralı Automationıd 's "Item1", "Item2" vb. gibi alt burada tanımlanan birden çok menü öğeleri ile her ile birden çok alt menü çubuğu sağlayabilir. Her bir menü öğesi sonra benzersiz üst Automationıd yanı sıra kendi Automationıd tarafından tanımlanabilir ve gerekirse kendi dizinleriyle.  
+- Bazı durumlarda, AutomationId yalnızca eşdüzey öğeler arasında benzersiz olduğundan garantilenmiş olduğundan, UI Otomasyon ağacındaki birden çok öğe aynı AutomationId özellik değerlerine sahip olabilir. Bu durumlarda, öğeler bir üst öğeye göre benzersiz şekilde tanımlanabilir ve gerekirse, bir üst öğe. Örneğin, bir geliştirici birden çok alt menü öğesi olan, her biri "Item1", "Item2" gibi sıralı AutomationId ile tanımlanmış olan birden çok menü öğesiyle bir menü çubuğu sağlayabilir. Daha sonra her menü öğesi, kendi AutomationId 'si ile birlikte kendi üst öğesinin AutomationId 'si ile ve gerekirse kendi üst öğesi ile benzersiz şekilde tanımlanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

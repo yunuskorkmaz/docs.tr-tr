@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetCodeRange yöntemi
+title: 'ICorDebugSymbolProvider:: GetCodeRange yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6d1f2bd903124773eaa20581f013bb41cf9cf99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 18fd8fdf9bcfa20b686ad1f04cd8dcc3b1c26de2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771494"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964636"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange yöntemi
-Yöntemi başlangıç adresi ve bir yöntemde göreli sanal adres (RVA) verilen boyutunu alır.  
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider:: GetCodeRange yöntemi
+Bir yöntemde göreli bir sanal adres (RVA) verilen yöntem başlangıç adresini ve boyutunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,27 +26,27 @@ HRESULT GetCodeRange(
   
 ## <a name="parameters"></a>Parametreler  
  `codeRva`  
- [in] Bir yöntem in göreli sanal adres (RVA).  
+ 'ndaki Bir yöntemde göreli sanal adres (RVA).  
   
  `pCodeStartAddress`  
- [out] Yöntemi başlangıç adresi için bir işaretçi.  
+ dışı Metodun başlangıç adresine yönelik bir işaretçi.  
   
  `pCodeSize`  
- Yöntemi kod boyutu (yöntemin koduna bayt sayısı) için bir işaretçi.  
+ Yöntem kodu boyutuna yönelik bir işaretçi (yöntemin kodunun bayt sayısı).  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

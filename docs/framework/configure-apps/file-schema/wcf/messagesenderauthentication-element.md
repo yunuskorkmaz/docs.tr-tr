@@ -2,25 +2,25 @@
 title: <messageSenderAuthentication> öğesi
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 1e63b6fa93e1abfa87c83da4b5d46f492c59b9bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423117"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931372"
 ---
-# <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > öğesi
+# <a name="messagesenderauthentication-element"></a>\<Iletienderauthentication > öğesi
 Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir.  
   
- Eşler arası programlama hakkında daha fazla bilgi için bkz. [eşler arası ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Eşler arası programlama hakkında daha fazla bilgi için bkz. eşler [arası ağ iletişimi](../../../wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<clientCredentials >  
-\<Eş >  
-\<messageSenderAuthentication >  
+\<eş >  
+\<Iletienderauthentication >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,40 +32,40 @@ Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`customCertificateValidatorType`|Tür ve özel bir tür doğrulamak için kullanılan bir derleme. Bu öznitelik olduğunda ayarlanmalıdır `certificateValidationMode` ayarlanır `Custom`.|  
-|`certificateValidationMode`|Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Varsa kümesine `Custom`, ardından bir `customCertificateValidator` de sağlanmalıdır.|  
-|`revocationMode`|İptal edilen sertifikalar listelerini (CRL) denetlemek için kullanılan modlardan biri.|  
-|`trustedStoreLocation`|İki sistem depolama konumlarından biri: `LocalMachine` veya `CurrentUser`. Bir hizmet sertifikası istemciye anlaşıldığında, bu değer kullanılır. Doğrulama işlemi gerçekleştirildiğinde karşı **güvenilir kişiler** depolamak belirtilen depolama konumu.|  
+|`customCertificateValidatorType`|Özel bir türü doğrulamak için kullanılan tür ve derleme. Bu öznitelik `certificateValidationMode` , olarak `Custom`ayarlandığında ayarlanmalıdır.|  
+|`certificateValidationMode`|Kimlik bilgilerini doğrulamak için kullanılan üç moddan birini belirtir. Olarak `Custom`ayarlanırsa, bir `customCertificateValidator` de sağlanmalıdır.|  
+|`revocationMode`|İptal edilen bir sertifika listesini (CRL) denetlemek için kullanılan modlardan biri.|  
+|`trustedStoreLocation`|İki sistem depolama konumlarından biri: `LocalMachine` veya. `CurrentUser` Bu değer, bir hizmet sertifikası istemciye anlaşılırken kullanılır. Doğrulama, belirtilen depo konumundaki **güvenilir kişiler** deposuna göre gerçekleştirilir.|  
   
-## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType özniteliği  
-  
-|Değer|Açıklama|  
-|-----------|-----------------|  
-|Dize|İsteğe bağlı. Tür adı ve derleme ve diğer veri türünü bulmak için kullanılan belirtir. En az bir ad ve tür adı gereklidir. İsteğe bağlı bilgileri içerir: derleme adı, sürüm numarasını, kültürü ve ortak anahtar belirteci.|  
-  
-## <a name="certificatevalidationmode-attribute"></a>Certificatevalidationmode'u özniteliği  
+## <a name="customcertificatevalidatortype-attribute"></a>Customcercertificate Atevalidatortype özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|İsteğe bağlı. Aşağıdaki değerlerden biri: `None`, `PeerTrust`, `ChainTrust`, `PeerOrChainTrust`, `Custom`. Varsayılan, `ChainTrust` değeridir. Varsayılan, `ChainTrust` değeridir.<br /><br /> Daha fazla bilgi için [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Dize|İsteğe bağlı. Türü bulmak için kullanılan tür adını ve derlemeyi ve diğer verileri belirtir. En azından, bir ad alanı ve tür adı gereklidir. İsteğe bağlı bilgiler şunları içerir: derleme adı, sürüm numarası, kültür ve ortak anahtar belirteci.|  
+  
+## <a name="certificatevalidationmode-attribute"></a>certificateValidationMode özniteliği  
+  
+|Değer|Açıklama|  
+|-----------|-----------------|  
+|Sabit Listesi|İsteğe bağlı. Aşağıdaki değerlerden biri: `None`, `PeerTrust`, `ChainTrust` `PeerOrChainTrust`, ,`Custom`. Varsayılan, `ChainTrust` değeridir. Varsayılan, `ChainTrust` değeridir.<br /><br /> Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="revocationmode-attribute"></a>revocationMode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Aşağıdaki değerlerden biri: `NoCheck`, `Online`, `Offline`. Varsayılan, `Online` değeridir.<br /><br /> Daha fazla bilgi için [Working with Certificates](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).|  
+|Sabit Listesi|Aşağıdaki değerlerden biri: `NoCheck`, `Online`, `Offline`. Varsayılan, `Online` değeridir.<br /><br /> Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../wcf/feature-details/working-with-certificates.md).|  
   
 ## <a name="trustedstorelocation-attribute"></a>trustedStoreLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Aşağıdaki değerlerden biri: `LocalMachine` veya `CurrentUser`. Varsayılan, `CurrentUser` değeridir. İstemci uygulama bir sistem hesabı altında çalıştığından sonra sertifika genellikle altında olduğu `LocalMachine`. İstemci uygulama bir kullanıcı hesabı altında çalıştığından sonra sertifika genellikle kullanımda `CurrentUser`. Varsayılan, `CurrentUser` değeridir.|  
+|Sabit Listesi|Şu değerlerden biri: `LocalMachine` veya. `CurrentUser` Varsayılan, `CurrentUser` değeridir. İstemci uygulaması bir sistem hesabı altında çalışıyorsa, sertifika genellikle altında `LocalMachine`olur. İstemci uygulaması bir kullanıcı hesabı altında çalışıyorsa, sertifika genellikle içinde `CurrentUser`olur. Varsayılan, `CurrentUser` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -74,13 +74,13 @@ Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Eş >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Bir eş hizmeti istemcisi kimlik doğrulaması için kullanılan bir kimlik bilgisini belirtir.|  
+|[\<eş >](peer-of-clientcredentials-element.md)|İstemcinin kimliğini bir eş hizmette doğrulamak için kullanılan kimlik bilgisini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İleti kimlik doğrulaması seçilirse, bu öğe yapılandırılmalıdır. Çıkış kanallar için her ileti tarafından sağlanan sertifikayı kullanarak imzalanmış [ \<sertifika >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Tüm iletileri tarafından belirtilen Doğrulayıcı kullanarak ileti kimlik bilgileri karşı uygulamaya teslim önce iade `customCertificateValidatorType` bu öğenin özniteliği. Doğrulayıcı kabul edin veya kimlik bilgilerini reddedebilirsiniz.  
+ İleti kimlik doğrulaması seçilirse, bu öğenin yapılandırılması gerekir. Çıkış kanalları için her ileti, [ \<sertifika >](certificate-element.md)tarafından belirtilen sertifika kullanılarak imzalanır. Uygulamaya teslim edilmeden önce tüm iletiler, bu öğenin `customCertificateValidatorType` özniteliği tarafından belirtilen Doğrulayıcı kullanılarak ileti kimlik bilgisine karşı denetlenir. Doğrulayıcı kimlik bilgisini kabul edebilir veya reddedebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu ileti gönderen doğrulama modunu ayarlar `PeerOrChainTrust`.  
+ Aşağıdaki kod ileti gönderici doğrulama modunu olarak `PeerOrChainTrust`ayarlar.  
   
 ```xml  
 <behaviors>
@@ -106,8 +106,8 @@ Eşler arası ileti gönderenler için kimlik doğrulama seçeneklerini belirtir
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.MessageSenderAuthentication%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Eşler Arası Ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Eş kanal ileti kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Eş kanal özel kimlik doğrulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [Eşler Arası Ağ](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Eş kanal Iletisi kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Eş kanal özel kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../wcf/feature-details/securing-peer-channel-applications.md)

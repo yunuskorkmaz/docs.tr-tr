@@ -8,76 +8,76 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 222fda180923cdc7b0d7b7ab413c151c69add259
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928966"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950973"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Nasıl yapılır: ProtectionLevel Özelliğini Ayarlama
-Uygun bir öznitelik uygulamak ve özelliğini ayarlayarak, koruma düzeyini ayarlayabilirsiniz. Her bir iletinin tüm bölümlerinde etkilemek için hizmet düzeyinde koruma ayarlayabilirsiniz veya yöntemlerinden message bölümleri için giderek daha ayrıntılı bir düzeyde koruma ayarlayabilirsiniz. Hakkında daha fazla bilgi için `ProtectionLevel` özelliğine bakın [anlama koruma düzeyi](../../../docs/framework/wcf/understanding-protection-level.md).  
+Uygun bir öznitelik uygulayıp özelliği ayarlayarak koruma düzeyini ayarlayabilirsiniz. Her iletinin tüm bölümlerini etkilemek için hizmet düzeyinde koruma ayarlayabilir veya yöntemlerle ileti bölümlerine kadar artan parçalı düzeylerde koruma ayarlayabilirsiniz. `ProtectionLevel` Özelliği hakkında daha fazla bilgi için bkz. [koruma düzeyini anlama](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
->  Koruma düzeyleri yalnızca kod, yapılandırmada yok ayarlayabilirsiniz.  
+> Yapılandırma bölümünde değil, yalnızca kodda koruma düzeylerini ayarlayabilirsiniz.  
   
-### <a name="to-sign-all-messages-for-a-service"></a>Bir hizmet için tüm iletileri imzalamak için  
+### <a name="to-sign-all-messages-for-a-service"></a>Bir hizmetin tüm iletilerini imzalamak için  
   
-1. Hizmet için bir arabirimi oluşturun.  
+1. Hizmet için bir arabirim oluşturun.  
   
-2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> özniteliği hizmete ve ayarlama <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliğini <xref:System.Net.Security.ProtectionLevel.Sign>aşağıdaki kodda gösterildiği gibi (varsayılan düzeyi <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>).  
+2. Özniteliğini hizmetine uygulayın ve aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliğini <xref:System.Net.Security.ProtectionLevel.Sign>olarak ayarlayın (varsayılan düzeyi <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>). <xref:System.ServiceModel.ServiceContractAttribute>  
   
      [!code-csharp[C_ProtectionLevel#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#1)]
      [!code-vb[C_ProtectionLevel#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#1)]  
   
-### <a name="to-sign-all-message-parts-for-an-operation"></a>Bir işlem için tüm ileti bölümleri imzalamak için  
+### <a name="to-sign-all-message-parts-for-an-operation"></a>Bir işlemin tüm ileti parçalarını imzalamak için  
   
-1. Hizmet için bir arabirim oluşturma ve uygulama <xref:System.ServiceModel.ServiceContractAttribute> özniteliği için arabirim.  
+1. Hizmet için bir arabirim oluşturun ve <xref:System.ServiceModel.ServiceContractAttribute> özniteliği arabirimine uygulayın.  
   
-2. Yöntem bildiriminde arabirimi ekleyin.  
+2. Arabirime bir yöntem bildirimi ekleyin.  
   
-3. Uygulama <xref:System.ServiceModel.OperationContractAttribute> özniteliğini yöntemine ve ayarlama <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliğini <xref:System.Net.Security.ProtectionLevel.Sign>aşağıdaki kodda gösterildiği gibi.  
+3. Özniteliğini yöntemine uygulayın ve aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> özelliğini olarak <xref:System.Net.Security.ProtectionLevel.Sign>ayarlayın. <xref:System.ServiceModel.OperationContractAttribute>  
   
      [!code-csharp[C_ProtectionLevel#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#2)]
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
-## <a name="protecting-fault-messages"></a>Koruma hata iletileri  
- Bir hizmette oluşturulan özel durumlar SOAP hatalarının istemciye gönderilebilir. Hataları kesin oluşturma hakkında daha fazla bilgi yazılan için bkz: [belirtme ve işleme hataları sözleşme ve hizmetlerde](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) ve [nasıl yapılır: Hizmet sözleşmelerinde hata bildirme](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md).  
+## <a name="protecting-fault-messages"></a>Hata Iletilerini koruma  
+ Bir hizmette oluşturulan özel durumlar, bir istemciye SOAP hatası olarak gönderilebilir. Türü kesin belirlenmiş hatalar oluşturma hakkında daha fazla bilgi için bkz. [sözleşmelerdeki ve hizmetlerde hataları belirtme ve işleme](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md) ve [nasıl yapılır: Hizmet sözleşmeleri](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)hatalarını bildirin.  
   
-#### <a name="to-protect-a-fault-message"></a>Bir hata iletisi koruma  
+#### <a name="to-protect-a-fault-message"></a>Bir hata iletisini korumak için  
   
-1. Hata iletisini temsil eden bir tür oluşturun. Aşağıdaki örnekte adlı bir sınıf oluşturur `MathFault` ile iki alan.  
+1. Hata iletisini temsil eden bir tür oluşturun. Aşağıdaki örnek, iki alanı olan adlı `MathFault` bir sınıf oluşturur.  
   
-2. Uygulama <xref:System.Runtime.Serialization.DataContractAttribute> öznitelik türü için ve bir <xref:System.Runtime.Serialization.DataMemberAttribute> aşağıdaki kodda gösterildiği gibi seri hale getirilmesi, her alan için özniteliği.  
+2. Aşağıdaki kodda gösterildiği gibi, <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğinitürüneveserileştirilmesigerekenheralanabirözniteliğeuygulayın.<xref:System.Runtime.Serialization.DataContractAttribute>  
   
      [!code-csharp[C_ProtectionLevel#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#3)]
      [!code-vb[C_ProtectionLevel#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#3)]  
   
-3. Hata döndüren arabiriminde uygulamak <xref:System.ServiceModel.FaultContractAttribute> özniteliğini hatasına dönün ve ayarlamanız yöntemine `detailType` hata sınıf türü parametresi.  
+3. Hatayı döndürecek arabirimde, <xref:System.ServiceModel.FaultContractAttribute> özniteliği hatayı döndürecek yönteme uygulayın ve `detailType` parametreyi hata sınıfının türü olarak ayarlayın.  
   
-4. Oluşturucu ayrıca ayarlamanız <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> özelliğini <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>aşağıdaki kodda gösterildiği gibi.  
+4. Ayrıca oluşturucuda, aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> özelliğini olarak <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ayarlayın.  
   
      [!code-csharp[C_ProtectionLevel#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#4)]
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
-## <a name="protecting-message-parts"></a>İleti bölümlerini koruma  
- Bir ileti bölümlerini koruma için bir ileti anlaşması kullanın. İleti sözleşmeleri hakkında daha fazla bilgi için bkz: [kullanarak ileti sözleşmeleri](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
+## <a name="protecting-message-parts"></a>Ileti parçalarını koruma  
+ İleti parçalarını korumak için bir ileti sözleşmesi kullanın. İleti sözleşmeleri hakkında daha fazla bilgi için bkz. [Ileti sözleşmelerini kullanma](../../../docs/framework/wcf/feature-details/using-message-contracts.md).  
   
-#### <a name="to-protect-a-message-body"></a>İleti gövdesi korumak için  
+#### <a name="to-protect-a-message-body"></a>İleti gövdesini korumak için  
   
-1. İletiyi temsil eden bir tür oluşturun. Aşağıdaki örnek, oluşturur bir `Company` iki alan sınıfıyla `CompanyName` ve `CompanyID`.  
+1. İletiyi temsil eden bir tür oluşturun. Aşağıdaki örnek, `CompanyName` iki alan `Company` ve `CompanyID`içeren bir sınıf oluşturur.  
   
-2. Uygulama <xref:System.ServiceModel.MessageContractAttribute> ayarlayın ve öznitelik sınıfına <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> özelliğini <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+2. Özniteliğini sınıfına uygulayın ve <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> özelliğini olarak <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ayarlayın. <xref:System.ServiceModel.MessageContractAttribute>  
   
-3. Uygulama <xref:System.ServiceModel.MessageHeaderAttribute> öznitelik, bir ileti üst bilgisi ifade edilen ve ayarlanmış bir alana `ProtectionLevel` özelliğini <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+3. Özniteliğini, <xref:System.ServiceModel.MessageHeaderAttribute> ileti üst bilgisi olarak ifade edilecek bir alana uygulayın ve `ProtectionLevel` özelliğini olarak <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ayarlayın.  
   
-4. Uygulama <xref:System.ServiceModel.MessageBodyMemberAttribute> ileti gövdesi bir parçası olarak ifade edilen, ve ayarlanmış herhangi bir alan için `ProtectionLevel` özelliğini <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>aşağıdaki örnekte gösterildiği gibi.  
+4. İleti gövdesinin bir parçası olarak ifade edilecek herhangi bir alana uygulayın ve aşağıdaki örnekte gösterildiği gibi `ProtectionLevel` özelliğini olarak <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>ayarlayın. <xref:System.ServiceModel.MessageBodyMemberAttribute>  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kümeleri `ProtectionLevel` birkaç öznitelik sınıfları bir hizmet çeşitli yerlerde özelliği.  
+ Aşağıdaki örnek, bir hizmetin `ProtectionLevel` çeşitli yerlerinde birkaç öznitelik sınıfının özelliğini ayarlar.  
   
  [!code-csharp[C_ProtectionLevel#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#6)]
  [!code-vb[C_ProtectionLevel#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#6)]  

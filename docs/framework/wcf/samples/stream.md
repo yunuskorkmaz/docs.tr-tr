@@ -2,23 +2,23 @@
 title: Akış
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bafdf41f8e608182cc8cff55ac84a4acbd644d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958775"
 ---
 # <a name="stream"></a>Akış
-Stream örnek aktarım modu iletişim akış kullanımını gösterir. Hizmet, akışları gönderip birkaç işlemini kullanıma sunar. Bu örnek kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu programlardır.  
+Akış örneği, akış aktarım modu iletişiminin kullanımını gösterir. Hizmet, akışları gönderen ve alan birkaç işlem sunar. Bu örnek kendi kendine barındırılır. Hem istemci hem de hizmet konsol programlarıdır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Windows Communication Foundation (WCF) iki aktarımı modda iletişim kurabilir; arabelleğe alınan veya akış. Bir alıcı okumadan önce varsayılan arabelleğe alınan aktarım modunda bir ileti tamamen teslim edilmelidir. Akış aktarım modu tamamen teslim edilmeden önce iletiyi işlemek alıcı başlayabilirsiniz. Akış modunda iletilen bilgiler uzun ve seri olarak işlenebilecek yararlı olur. Akış modunda de, ileti tamamen arabelleğe çok büyük olduğunda yararlıdır.  
+ Windows Communication Foundation (WCF), iki Aktarım modunda (ara belleğe alınmış veya akış) iletişim kurabilir. Varsayılan arabellekli Aktarım modunda, bir alıcının okuyabilmesi için bir iletinin tamamen teslim edilmesi gerekir. Akış Aktarım modunda, alıcı tamamen teslim edilmeden önce iletiyi işlemeye başlayabilir. Aktarım modu, iletilen bilgiler uzun olduğunda ve hizmet dışı olarak işlenebilmesi durumunda faydalıdır. İleti tamamen arabelleğe alınamayacak kadar büyük olduğunda akış modu da yararlıdır.  
   
 ## <a name="streaming-and-service-contracts"></a>Akış ve hizmet sözleşmeleri  
- Akış, bir hizmet sözleşmesini tasarlarken değerlendirilmesi için kullanılır. Bir işlem alır ya da büyük miktarlarda verinin döndürür, akış giriş veya çıkış iletileri arabelleğe alma nedeniyle yüksek bellek kullanımı önlemek için bu verileri düşünmelisiniz. Akış verileri için veri iletisinde tek parametre olmalıdır tutan parametresi. Örneğin, giriş iletisine akışla birine ise, işlemi tam olarak bir girdi parametreniz olmalıdır. Benzer şekilde, çıktı iletisi akışını ise işlemi tam olarak bir çıkış parametresi ya da dönüş değeri olması gerekir. Tür çalışması, parametre veya dönüş değerindeki olmalıdır `Stream`, `Message`, veya `IXmlSerializable`. Akış Bu örnekte kullanılan hizmet sözleşmesini verilmiştir.  
+ Akış, bir hizmet sözleşmesi tasarlarken göz önünde bulundurulmalıdır. Bir işlem büyük miktarlarda veri alırsa veya döndürürse, giriş veya çıkış iletilerinin arabelleğe alınması nedeniyle yüksek bellek kullanımının oluşmaması için bu verileri akışını göz önünde bulundurmanız gerekir. Veri akışı için, bu verileri tutan parametre iletideki tek parametre olmalıdır. Örneğin, giriş iletisi akışla bir giriş ise, işlemin tam olarak bir giriş parametresi olmalıdır. Benzer şekilde, çıkış iletisi akışı ise, işlemin tam olarak bir çıkış parametresi veya dönüş değeri olması gerekir. Her iki durumda da parametre veya dönüş değeri türü `Stream`, `Message` `IXmlSerializable`ya da olmalıdır. Bu akış örneğinde kullanılan hizmet sözleşmesi aşağıda verilmiştir.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,14 +36,14 @@ public interface IStreamingSample
 }  
 ```  
   
- `GetStream` İşlemi yürütülmeden ve döndüren bir dize olarak bazı giriş verileri alan bir `Stream`, hangi akış. Buna karşılık, `UploadStream` alır bir `Stream` (akış) ve döndüren bir `bool` (arabelleğe). `EchoStream` alan ve döndüren `Stream` işlem girişi örneğidir ve çıkış iletileri hem de akış. Son olarak, `GetReversedStream` giriş alan ve döndüren bir `Stream` (akış).  
+ İşlem, arabelleğe alınmış bir dize olarak bazı giriş verileri alır ve akış olan bir `Stream`döndürür. `GetStream` Buna karşılık `UploadStream` , `Stream` (`bool` akış) alır ve (ara belleğe alınmış) döndürür. `EchoStream`, giriş ve `Stream` çıkış iletilerinin her ikisi de akışındaki bir işlemin örneğini alır ve döndürür. Son olarak `GetReversedStream` , giriş yapılmaz ve `Stream` (akış) döndürür.  
   
-## <a name="enabling-streamed-transfers"></a>Akış aktarımları etkinleştirme  
- Daha önce açıklandığı gibi işlem sözleşmeleri tanımlama programlama modeli düzeyinde akış sağlar. Orada durdurursanız, taşıma hala tüm ileti içeriği arabelleğe alır. Aktarım akışını etkinleştirmek için bir aktarım bağlama öğesinin aktarım modunu seçin. Bağlama öğesi olan bir `TransferMode` ayarlanabilir özelliği `Buffered`, `Streamed`, `StreamedRequest`, veya `StreamedResponse`. Aktarım Modu ayarını `Streamed` akış çift yönlü iletişimi sağlar. Aktarım Modu ayarını `StreamedRequest` veya `StreamedResponse` sırasıyla Akış yalnızca istek veya yanıtı iletişimi etkinleştirir.  
+## <a name="enabling-streamed-transfers"></a>Akışlı aktarımları etkinleştirme  
+ Daha önce açıklandığı gibi, işlem sözleşmelerini tanımlama, programlama modeli düzeyinde akış sağlar. Bunu durdurursanız, aktarım, tüm ileti içeriğini arabelleğe almaya devam eder. Aktarım akışını etkinleştirmek için, taşımanın bağlama öğesinde bir aktarım modu seçin. Binding `TransferMode` öğesi, ,,`Streamed`veya `Buffered` olarak`StreamedResponse`ayarlanabilir bir özelliğine sahiptir. `StreamedRequest` Aktarım modunun, her iki `Streamed` yönde de akış iletişimini sağlamak üzere ayarlanması. Aktarım modunun `StreamedRequest` , sırasıyla yalnızca istekte `StreamedResponse` veya yanıtta akış iletişimini ayarlama veya sağlama.  
   
- `basicHttpBinding` Sunan `TransferMode` gibi bağlama özelliği `NetTcpBinding` ve `NetNamedPipeBinding`. Diğer aktarımı için aktarım modu ayarlamak için özel bir bağlama oluşturmanız gerekir.  
+ , `basicHttpBinding` Bağlama `TransferMode` üzerindeözelliğini`NetNamedPipeBinding`, ve gibi kullanıma sunar. `NetTcpBinding` Diğer aktarımlar için, aktarım modunu ayarlamak üzere özel bir bağlama oluşturmanız gerekir.  
   
- Ayar örneği aşağıdaki yapılandırma koddan gösterir `TransferMode` üzerinde akış özelliği `basicHttpBinding` ve özel bir HTTP bağlaması:  
+ Örnekteki aşağıdaki yapılandırma kodu, `TransferMode` özelliği, `basicHttpBinding` ve özel bir http bağlamasındaki akış olarak ayarlamayı gösterir:  
   
 ```xml  
 <!-- An example basicHttpBinding using streaming. -->  
@@ -61,12 +61,12 @@ public interface IStreamingSample
 </customBinding>  
 ```  
   
- Ek olarak `transferMode` için `Streamed`, önceki yapılandırma kod kümesi `maxReceivedMessageSize` 64 MB. Bir koruma mekanizması olarak `maxReceivedMessageSize` yerler iletileri izin verilen en büyük boyutu için üst sınır alırsınız. Varsayılan `maxReceivedMessageSize` genellikle akış senaryoları için düşükse, 64 KB ' tır.  
+ ' I ' a ayarlamaya `transferMode` `maxReceivedMessageSize` ek olarak, önceki yapılandırma kodu, 64 MB olarak ayarlanır. `Streamed` Bir savunma mekanizması olarak, `maxReceivedMessageSize` alma sırasında izin verilen en fazla ileti boyutuna bir üst sınır koyar. Varsayılan `maxReceivedMessageSize` değer, genellikle akış senaryolarında çok düşük olan 64 KB 'tır.  
   
-## <a name="processing-data-as-it-is-streamed"></a>Bu akış olarak veri işleme  
- İşlemleri `GetStream`, `UploadStream` ve `EchoStream` tüm baş doğrudan bir dosyadan veri gönderen veya alınan verileri bir dosyaya kaydetme. Bazı durumlarda, yoktur ancak göndermek veya büyük miktarlarda veri almak ve olarak bazı veri öbekleri üzerinde işlem yapmak için bir gereksinim gönderilen veya alınan. Bu tür senaryolara yollarından biri olan özel bir akış yazmak için (türetildiği bir sınıf <xref:System.IO.Stream>) olarak okunabilir veya yazılabilir veri işlemler. `GetReversedStream` İşlemi ve `ReverseStream` sınıfı bunun bir örneği bulunur.  
+## <a name="processing-data-as-it-is-streamed"></a>Akış sırasında verileri işleme  
+ İşlemler `GetStream` `UploadStream` ve tümüdoğrudanbirdosyadanverigöndermeyeveyaalınanverileridoğrudanbirdosyayakaydetmeyeyöneliktir.`EchoStream` Ancak bazı durumlarda, büyük miktarlarda veri gönderilmesi veya alınması ve verilerin gönderildiği veya alındığı şekilde öbeklerinde bazı işlemler gerçekleştirme gereksinimi vardır. Bu tür senaryoları ele almanın bir yolu, verileri okunan veya yazıldığı gibi işleyen özel bir akış ( <xref:System.IO.Stream>öğesinden türetilen bir sınıf) yazmak. `GetReversedStream` İşlem ve`ReverseStream` sınıf buna bir örnektir.  
   
- `GetReversedStream` oluşturur ve yeni bir örneğini döndürür `ReverseStream`. Sistem, okuduğu gerçek işleme olur `ReverseStream` nesne. `ReverseStream.Read` Uygulama bayt öbeğini temel alınan dosyadan okur, bunları tersine çevirir ve sonra ters bayt sayısını döndürür. Bu, tüm dosya içeriğini ters; bir kerede bir bayt bir öbek tersine çevirir. Bir örnek içerik olarak akış işlemede nasıl gerçekleştirebileceğinizi gösterir gelen ve akış yazılamaz veya okunamaz.  
+ `GetReversedStream`Yeni bir örneğini `ReverseStream`oluşturur ve döndürür. Bu `ReverseStream` nesneden sistem okuduğu için gerçek işlem gerçekleşir. `ReverseStream.Read` Uygulama, temel alınan dosyadaki bir bayt öbeğini okur, bunları tersine çevirir ve ters bayt döndürür. Bu, tüm dosya içeriğini tersine döndürmez; tek seferde bir bayt öbeğini tersine çevirir. Bu, içerik okunmakta veya akışa yazılırken akış işlemeyi nasıl gerçekleştirebileceğini gösteren bir örnektir.  
   
 ```csharp
 class ReverseStream : Stream  
@@ -112,10 +112,10 @@ class ReverseStream : Stream
 }  
 ```  
   
-## <a name="running-the-sample"></a>Örneği çalıştırma  
- Örneği çalıştırmak için önce hem hizmet hem de istemci bu belgenin sonundaki yönergeleri izleyerek oluşturun. Daha sonra hizmet ve istemci, iki farklı konsol pencerelerinde başlatın. İstemci başlatıldığında, hizmet hazır olduğunda ENTER tuşuna basın için bekler. İstemci ardından yöntemlerini çağıran `GetStream()`, `UploadStream()` ve `GetReversedStream()` HTTP üzerinden ilk ve daha sonra TCP üzerinden. Örnek çıktı tarafından takip istemciden hizmetinden bir örnek çıktı aşağıdaki gibidir:  
+## <a name="running-the-sample"></a>Örnek çalıştırma  
+ Örneği çalıştırmak için, önce bu belgenin sonundaki yönergeleri izleyerek hem hizmeti hem de istemciyi derleyin. Ardından hizmeti ve istemciyi iki farklı konsol penceresinde başlatın. İstemci başladığında, hizmet hazırlanıyor, ENTER tuşuna basmanız bekler. İstemci daha sonra yöntemleri `GetStream()`ve `GetReversedStream()` ilk olarak `UploadStream()` http üzerinden ve daha sonra TCP üzerinden çağırır. Aşağıda, istemciden gelen örnek çıktıyı izleyen bir örnek çıktı verilmiştir:  
   
- Hizmet çıktısı:  
+ Hizmet çıkışı:  
   
 ```console  
 The streaming service is ready.  
@@ -129,7 +129,7 @@ Saving to file D:\...\uploadedfile
 File D:\...\uploadedfile saved  
 ```  
   
- İstemci çıktısı:  
+ İstemci çıkışı:  
   
 ```console  
 Press <ENTER> when service is ready  
@@ -165,22 +165,22 @@ File D:\...\clientfile saved
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!NOTE]
->  Bu örnek için yapılandırmayı yeniden üretmek için Svcutil.exe kullanma, istemci kodu eşleştirilecek istemci yapılandırmasında uç noktası adını değiştirmek emin olun.  
+> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  

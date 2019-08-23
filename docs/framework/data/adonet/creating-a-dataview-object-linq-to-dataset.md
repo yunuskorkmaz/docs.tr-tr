@@ -1,35 +1,35 @@
 ---
-title: DataView nesnesi (LINQ to DataSet) oluşturma
+title: DataView nesnesi oluşturma (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504156"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949412"
 ---
-# <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi (LINQ to DataSet) oluşturma
-Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> LINQ to DataSet bağlamı. Oluşturabileceğiniz bir <xref:System.Data.DataView> bir LINQ to DataSet sorgu ' den bir <xref:System.Data.DataTable>, ya da bir türü belirtilmiş veya türsüz oluşturabilirsiniz <xref:System.Data.DataTable>. Her iki durumda da, oluşturduğunuz <xref:System.Data.DataView> birini kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> genişletme yöntemleri; <xref:System.Data.DataView> LINQ to DataSet içeriği doğrudan atmamalıdır değil.  
+# <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi oluşturma (LINQ to DataSet)
+LINQ to DataSet bağlamında oluşturmak <xref:System.Data.DataView> için iki yol vardır. Bir LINQ to DataSet sorgusundan <xref:System.Data.DataTable>bir <xref:System.Data.DataView> oluşturabilirsiniz veya <xref:System.Data.DataTable>türü bir veya türü belirlenmiş ya da işaretsiz bir şekilde oluşturabilirsiniz. Her iki durumda da <xref:System.Data.DataView> <xref:System.Data.DataTableExtensions.AsDataView%2A> uzantısını uzantı yöntemlerinden birini kullanarak oluşturursunuz; <xref:System.Data.DataView> LINQ to DataSet bağlamında doğrudan oluşturulabilir değildir.  
   
- Sonra <xref:System.Data.DataView> olmuştur oluşturulan bir Windows forms uygulaması veya ASP.NET uygulaması bir UI denetimine bağlamak veya kullanabilirsiniz filtreleme ve sıralama ayarlarını değiştirin.  
+ <xref:System.Data.DataView> Oluşturulduktan sonra, bir Windows Forms uygulaması veya ASP.NET uygulamasındaki bir UI denetimine bağlanabilir ya da filtreleme ve sıralama ayarlarını değiştirebilirsiniz.  
   
- <xref:System.Data.DataView> Dizin filtreleme ve sıralama gibi kullanabileceğiniz işlemlerinin performansını önemli ölçüde artıran bir dizin oluşturur. Dizin için bir <xref:System.Data.DataView> hem zaman yerleşik <xref:System.Data.DataView> oluşturulur ve herhangi bir sıralama veya filtreleme bilgileri değiştirilir. Oluşturma bir <xref:System.Data.DataView> ve en az iki kere derlenmesi için dizini sıralama ayarlama veya daha sonra bilgiler filtreleme neden olur: bir kez zaman <xref:System.Data.DataView> oluşturulur, ve yeniden sıralama veya filtreleme özelliklerinden herhangi birini değiştirildiği.  
+ <xref:System.Data.DataView>filtre ve sıralama gibi, dizini kullanan işlemlerin performansını önemli ölçüde artıran bir dizin oluşturur. ' A <xref:System.Data.DataView> ait dizin, her ikisi de <xref:System.Data.DataView> oluşturulduğunda ve sıralama ya da filtreleme bilgisi değiştirildiğinde oluşturulur. Oluşturma ve daha sonra sıralama veya filtreleme bilgilerini ayarlama, dizinin en az iki kez oluşturulmasına neden olur: oluşturulduğunda bir kez <xref:System.Data.DataView> ve sıralama veya filtre özelliklerinden herhangi biri değiştirildiğinde. <xref:System.Data.DataView>  
   
- İle sıralama ve filtreleme hakkında daha fazla bilgi için <xref:System.Data.DataView>, bkz: [DataView ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+ Filtreleme ve sıralama <xref:System.Data.DataView>hakkında daha fazla bilgi için bkz. DataView [ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
-## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>DataView bir LINQ Sorgu veri kümesi oluşturma  
- A <xref:System.Data.DataView> nesne oluşturulabilir bir LINQ sonuçlarından sonuçları, bir projeksiyon olduğu veri kümesi sorguya <xref:System.Data.DataRow> nesneleri. Yeni oluşturulan <xref:System.Data.DataView> filtreleme ve sıralama oluşturulan gelen sorgu bilgilerinden devralır.  
+## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet sorgusundan DataView oluşturma  
+ Bir <xref:System.Data.DataView> nesne, sonuçların bir <xref:System.Data.DataRow> nesne projeksiyonu olduğu LINQ to DataSet sorgusunun sonuçlarından oluşturulabilir. Yeni oluşturulan <xref:System.Data.DataView> , filtreleme ve sıralama bilgilerini, oluşturulduğu sorgudan devralır.  
   
 > [!NOTE]
->  Çoğu durumda, filtreleme ve sıralama için kullanılan ifadeler yan etkileri olmamalıdır ve belirleyici olmalıdır. Ayrıca, ifadeleri herhangi içermemelidir sıralama ve filtreleme işlemleri olabileceğinden, yürütmeleri kümesi sayısına bağlı mantıksal kaç kez yürütüldü.  
+> Çoğu durumda, filtreleme ve sıralama için kullanılan ifadelerin yan etkileri olmaması ve belirleyici olması gerekir. Ayrıca, sıralama ve filtreleme işlemleri herhangi bir sayıda yürütülene kadar, ifadeler bir dizi yürütme sayısına bağlı herhangi bir mantığı içermemelidir.  
   
- Oluşturma bir <xref:System.Data.DataView> anonim türler döndüren bir sorgu ya da birleştirme işlemleri gerçekleştirme sorguları desteklenmiyor.  
+ <xref:System.Data.DataView> Anonim türleri veya JOIN işlemleri gerçekleştiren sorguları döndüren bir sorgudan oluşturma desteklenmez.  
   
- Aşağıdaki sorgu işleçleri oluşturmak için kullanılan bir sorgu desteklenen <xref:System.Data.DataView>:  
+ Oluşturmak <xref:System.Data.DataView>için kullanılan bir sorguda yalnızca aşağıdaki sorgu işleçleri desteklenir:  
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
@@ -45,30 +45,30 @@ Oluşturmanın iki yolu vardır. bir <xref:System.Data.DataView> LINQ to DataSet
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- Dikkat edin bir <xref:System.Data.DataView> bir LINQ Sorgu veri kümesi oluşturulur <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> yöntemi sorguda adında gereken son yöntemi olması gerekir. Bu oluşturan aşağıdaki örnekte gösterildiği bir <xref:System.Data.DataView> çevrimiçi siparişler toplam süre göre sıralanır:  
+ Bir LINQ to DataSet sorgusundan oluşturulduğunda yöntemin sorguda çağrılan son yöntem olması gerektiğini unutmayın. <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> <xref:System.Data.DataView> Bu, aşağıdaki örnekte gösterilmiştir ve bu nedenle toplam olarak sıralanmış <xref:System.Data.DataView> bir çevrimiçi sipariş oluşturulur:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- Dize tabanlı kullanabilirsiniz <xref:System.Data.DataView.RowFilter%2A> ve <xref:System.Data.DataView.Sort%2A> filtreleme ve sıralama özellikleri bir <xref:System.Data.DataView> bir sorgudan oluşturulduktan sonra. Bu sıralama temizler ve bilgi filtreleme sorgudan devralınan unutmayın. Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> ile başlayan soyadlarına göre filtreleyen sorgu veri kümesi için bir LINQ gelen kullanıcının '. Dize tabanlı <xref:System.Data.DataView.Sort%2A> sırasını ve adlarını azalan düzende artan adların sıralanacak özelliğini ayarlayın:  
+ Bir <xref:System.Data.DataView.Sort%2A> <xref:System.Data.DataView.RowFilter%2A> sorgudanoluşturulduktansonrafiltrelemekvesıralamakiçindizetabanlıveözellikleridekullanabilirsiniz.<xref:System.Data.DataView> Bunun, sorgudan devralınan sıralama ve filtreleme bilgilerini temizleyip temizyacağını unutmayın. Aşağıdaki örnek, ' den <xref:System.Data.DataView> başlayan son adlara göre filtreleyen bir LINQ to DataSet sorgusundan bir oluşturur. Dize tabanlı <xref:System.Data.DataView.Sort%2A> özellik, son adlarla artan düzende sıralanacak şekilde ayarlanır ve ardından ilk adı azalan sırada alır:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
-## <a name="creating-a-dataview-from-a-datatable"></a>Bir DataTable nesnesinden DataView oluşturma  
- Bir LINQ Sorgu veri kümesi, oluşturulan yanı sıra bir <xref:System.Data.DataView> nesne öğesinden oluşturulabilir bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTableExtensions.AsDataView%2A> yöntemi.  
+## <a name="creating-a-dataview-from-a-datatable"></a>DataTable 'dan bir DataView oluşturma  
+ Bir LINQ to DataSet sorgusundan oluşturulmalarının yanı sıra, <xref:System.Data.DataView> <xref:System.Data.DataTableExtensions.AsDataView%2A> yöntemi kullanılarak bir <xref:System.Data.DataTable> nesnesi de oluşturulabilir.  
   
- Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> veri kaynağı olarak ayarlar ve satış siparişi ayrıntısını tablo bir <xref:System.Windows.Forms.BindingSource> nesne. Bu nesne için bir proxy görevi gören bir <xref:System.Windows.Forms.DataGridView> denetimi.  
+ Aşağıdaki örnek, SalesOrderDetail <xref:System.Data.DataView> tablosundan bir oluşturur ve bunu bir <xref:System.Windows.Forms.BindingSource> nesnenin veri kaynağı olarak ayarlar. Bu nesne, bir <xref:System.Windows.Forms.DataGridView> denetim için proxy görevi görür.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromtable)]
  [!code-vb[DP DataView Samples#CreateLDVFromTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromtable)]  
   
- Temel filtreleme ve sıralama ayarlanabilir <xref:System.Data.DataView> gelen oluşturulduktan sonra bir <xref:System.Data.DataTable>. Aşağıdaki örnek, oluşturur bir <xref:System.Data.DataView> başvurun ve kümeleri <xref:System.Data.DataView.Sort%2A> adların sırasını ve adlarını azalan düzende artan sıralama özelliği:  
+ Filtreleme ve sıralama, <xref:System.Data.DataView> bir <xref:System.Data.DataTable>öğesinden oluşturulduktan sonra üzerinde ayarlanabilir. Aşağıdaki örnek, kişi tablosundan <xref:System.Data.DataView> bir oluşturur ve bu özelliği, <xref:System.Data.DataView.Sort%2A> son adlarla artan düzende sıralanacak şekilde ayarlar ve ardından azalan sırada ilk isimleri yapar:  
   
  [!code-csharp[DP DataView Samples#LDVStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvstringsort)]
  [!code-vb[DP DataView Samples#LDVStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvstringsort)]  
   
- Ancak, ayarı ile birlikte gelen bir performans kaybı yoktur <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> sonra özellik <xref:System.Data.DataView> bir sorgudan oluşturuldu <xref:System.Data.DataView> filtreleme ve sıralama işlemleri desteklemek için bir dizin oluşturur. Ayarı <xref:System.Data.DataView.RowFilter%2A> veya <xref:System.Data.DataView.Sort%2A> özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. Mümkün olduğunda, ilk oluşturduğunuzda bilgi sıralama ve filtreleme belirtmek daha iyi <xref:System.Data.DataView> ve daha sonra değiştirmekten kaçının.  
+ Ancak, bir sorgudan <xref:System.Data.DataView.RowFilter%2A> oluşturulduktan sonra <xref:System.Data.DataView> veya <xref:System.Data.DataView.Sort%2A> özelliğini ayarlamaya yönelik bir performans kaybı vardır çünkü <xref:System.Data.DataView> filtre ve sıralama işlemlerini desteklemek için bir dizin oluşturur. <xref:System.Data.DataView.RowFilter%2A> Veya<xref:System.Data.DataView.Sort%2A> özelliğinin ayarlanması, verilerin dizinini yeniden oluşturur, uygulamanıza ek yük ekler ve performansı azaltır. Mümkün olduğunda, ilk olarak oluştururken <xref:System.Data.DataView> filtreleme ve sıralama bilgilerini belirtmek ve daha sonra değiştirmeyi önlemek daha iyidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,20 +2,20 @@
 title: <serviceDiscovery>
 ms.date: 03/30/2017
 ms.assetid: a3c68a4a-fc95-43c5-aacb-785936c0cf39
-ms.openlocfilehash: 54a9833f56927568af711a103bd3831b767711e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a99edd3a62a40c2efbc63a166b8c0b0d124e8a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936270"
 ---
 # <a name="servicediscovery"></a>\<serviceDiscovery >
-Hizmet bitiş noktası bulunabilirliğini belirtir.  
+Hizmet uç noktalarının bulunabilirliğini belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceDiscovery >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -49,20 +49,20 @@ Hizmet bitiş noktası bulunabilirliğini belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md)|Duyuru uç noktaları koleksiyonudur. Duyuru iletileri göndermek için kullanılacak uç noktaları belirtmek için bu bölümü kullanın.|  
-|[\<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md)|Bulma uç noktaları koleksiyonudur. Bulma iletileri dinlemek olan uç noktaları belirtmek için bu bölümü kullanın.|  
+|[\<announcementEndpoint >](announcementendpoint.md)|Duyuru uç noktaları koleksiyonu. Duyuru iletileri göndermek için kullanılacak uç noktaları belirtmek için bu bölümü kullanın.|  
+|[\<discoveryEndpoint >](discoveryendpoint.md)|Bulma uç noktaları koleksiyonu. Bulma iletilerinin dinleyeceği uç noktaları belirtmek için bu bölümü kullanın.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Hizmetin davranışı yapılandırmasına eklendiğinde, bu yapılandırma öğesi tüm hizmet uç noktalarına bulunabilir hale getirir. Bu uç noktaları bulma özelliklerini kullanarak daha fazla yapılandırabilirsiniz [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) veya [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) alt öğeleri. Kullanma [ \<announcementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/announcementendpoint.md) duyuruları hizmet duyuruları (/ Hello çevrimiçi ve çevrimdışı/Bye) göndermek için kullanılması için uç nokta yapılandırması belirterek yapılandırma bölümü. Kullanım [ \<discoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/discoveryendpoint.md) bulma iletileri dinlemek için uç noktada el ile belirtmek için bölüm.  
+ Hizmetin davranış yapılandırmasına eklendiğinde, bu yapılandırma öğesi bu hizmetin tüm uç noktalarını bulunabilir hale getirir. Bu uç noktaların bulma özelliklerini, [ \<DiscoveryEndpoint >](discoveryendpoint.md) veya [ \<AnnouncementEndpoint >](announcementendpoint.md) alt öğelerini kullanarak daha ayrıntılı bir şekilde yapılandırabilirsiniz. Hizmet duyuruları göndermek için kullanılacak uç nokta yapılandırmasını belirterek duyuruları yapılandırmak için [ AnnouncementEndpoint>bölümünükullanın(çevrimiçi/Merhabaveçevrimdışı/bye).\<](announcementendpoint.md) Bulma iletilerinin dinleyeceği uç noktayı el ile belirtmek için [ DiscoveryEndpoint>bölümünükullanın.\<](discoveryendpoint.md)  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örnek belirten CalculatorService bulunabilir, için ve isteğe bağlı olarak kullanılacak duyuru uç nokta belirtir.  
+ Aşağıdaki yapılandırma örneği, Hesaplatorservice 'in keşfedilecek olduğunu belirtir ve isteğe bağlı olarak kullanılacak duyuru uç noktasını belirtir.  
   
 ```xml  
 <services>

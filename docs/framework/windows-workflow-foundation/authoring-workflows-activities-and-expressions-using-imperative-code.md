@@ -2,45 +2,45 @@
 title: Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: 1a11da9ce3dd73f0bc2851b68e7c354e55c9d2d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22f5928dda55d77fde2ee518510eb2890e55b446
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774154"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940886"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma
-Bir iş akışı tanımı, yapılandırılan etkinlik nesneleri ağacıdır. Bu ağaç etkinliklerin elle düzenlemeye XAML veya XAML üretmek için iş akışı Tasarımcısı kullanarak da dahil olmak üzere birçok şekilde tanımlanabilir. XAML, kullanımı, ancak bir gereksinim değildir. İş akışı tanımları da bir program aracılığıyla oluşturulabilir. Bu konuda, kod kullanarak iş akışı tanımları, etkinlikler ve ifadeler oluşturmaya genel bir bakış sağlar. Kod kullanarak XAML iş akışları ile çalışma örnekleri için bkz. [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](serializing-workflows-and-activities-to-and-from-xaml.md).  
+İş akışı tanımı, yapılandırılmış etkinlik nesnelerinin bir ağacıdır. Bu etkinlik ağacı, el ile düzenlenen XAML veya XAML oluşturmak için İş Akışı Tasarımcısı kullanılarak dahil olmak üzere birçok şekilde tanımlanabilir. Ancak XAML kullanımı bir gereklilik değildir. Ayrıca, iş akışı tanımları programlama yoluyla da oluşturulabilir. Bu konu, kod kullanarak iş akışı tanımları, etkinlikler ve deyimler oluşturmaya genel bir bakış sağlar. Kodu kullanarak XAML iş akışlarıyla çalışma örnekleri için bkz. [xaml 'de ve xaml 'de Iş akışlarını ve etkinlikleri seri hale getirme](serializing-workflows-and-activities-to-and-from-xaml.md).  
   
-## <a name="creating-workflow-definitions"></a>İş akışı tanımları oluşturma  
- Bir iş akışı tanımı, bir etkinlik türünün bir örneği örnekleme ve etkinlik nesnesinin özelliklerini yapılandırma oluşturulabilir. Çocuk etkinliklerinin içermeyen etkinlikler için bu birkaç satır kod kullanarak gerçekleştirilebilir.  
+## <a name="creating-workflow-definitions"></a>Iş akışı tanımları oluşturma  
+ Etkinlik türünün bir örneğini oluşturarak ve etkinlik nesnesinin özellikleri yapılandırılarak bir iş akışı tanımı oluşturulabilir. Alt etkinlik içermeyen etkinlikler için, bu, birkaç satır kod kullanılarak gerçekleştirilebilir.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#47](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  Bu konuda kullanım örnekleri <xref:System.Activities.WorkflowInvoker> örnek iş akışlarını çalıştırmak için. İş akışları, bağımsız değişkenleri geçirme ve mevcut olan farklı barındırma seçenekleri çağırma hakkında daha fazla bilgi için bkz. [kullanarak Workflowınvoker ve WorkflowApplication](using-workflowinvoker-and-workflowapplication.md).  
+> Bu konudaki örnekler örnek iş akışlarını <xref:System.Activities.WorkflowInvoker> çalıştırmak için kullanır. İş akışlarını çağırma, bağımsız değişkenleri geçirme ve kullanılabilir farklı barındırma seçeneklerini kullanma hakkında daha fazla bilgi için bkz. [Workflowwınvoker ve WorkflowApplication kullanma](using-workflowinvoker-and-workflowapplication.md).  
   
- Bu örnekte, bir tek oluşan bir iş akışı <xref:System.Activities.Statements.WriteLine> etkinlik oluşturulur. <xref:System.Activities.Statements.WriteLine> Etkinliğin <xref:System.Activities.Statements.WriteLine.Text%2A> bağımsız değişkeni ayarlanır ve bu iş akışı çağrılır. Oluşturma yöntemi, çocuk etkinliklerinin bir etkinlik içeriyorsa, benzer. Aşağıdaki örnekte bir <xref:System.Activities.Statements.Sequence> iki etkinlik <xref:System.Activities.Statements.WriteLine> etkinlikler.  
+ Bu örnekte, tek <xref:System.Activities.Statements.WriteLine> bir etkinlikten oluşan bir iş akışı oluşturulur. <xref:System.Activities.Statements.WriteLine> Etkinliğinbağımsızdeğişkeniayarlanır<xref:System.Activities.Statements.WriteLine.Text%2A> ve iş akışı çağrılır. Bir etkinlik alt etkinlikler içeriyorsa, oluşturma yöntemi benzerdir. Aşağıdaki örnek iki <xref:System.Activities.Statements.WriteLine> etkinlik içeren <xref:System.Activities.Statements.Sequence> bir etkinlik kullanır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#48](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#48)]  
   
-### <a name="using-object-initializers"></a>Nesne Başlatıcı kullanma  
- Bu konudaki örnekleri nesne başlatma söz dizimi kullanın. Nesne başlatma söz dizimi etkinlikleri arasındaki ilişkiyi gösterir ve iş akışındaki etkinliklerin hiyerarşik bir görünümü sağlar çünkü kod içinde iş akışı tanımları oluşturma için kullanışlı bir yol olabilir. Nesne başlatma söz dizimi programlı olarak iş akışları oluşturduğunuzda kullanılacak gereksinimi yoktur. Aşağıdaki örnek önceki örneğe işlevsel olarak eşdeğerdir.  
+### <a name="using-object-initializers"></a>Nesne başlatıcılarının kullanımı  
+ Bu konudaki örnekler, nesne başlatma sözdizimini kullanır. Nesne başlatma sözdizimi, iş akışındaki etkinliklerin hiyerarşik bir görünümünü sağladığından koddaki iş akışı tanımlarını oluşturmak için kullanışlı bir yol olabilir ve etkinlikler arasındaki ilişkiyi gösterir. Program aracılığıyla iş akışları oluştururken nesne başlatma söz dizimini kullanma gereksinimi yoktur. Aşağıdaki örnek, önceki örneğe işlevsel olarak eşdeğerdir.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- Nesne başlatıcıları hakkında daha fazla bilgi için bkz: [nasıl yapılır: Bir oluşturucu çağırmaya gerek kalmadan nesneleri başlatma (C# Programlama Kılavuzu)](https://go.microsoft.com/fwlink/?LinkId=161015) ve [nasıl yapılır: Bir nesne Başlatıcı kullanarak nesne bildirme](https://go.microsoft.com/fwlink/?LinkId=161016).  
+ Nesne başlatıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir oluşturucuyu (C# Programlama Kılavuzu)](https://go.microsoft.com/fwlink/?LinkId=161015) çağırmadan nesneleri başlatın ve [şunları yapın: Nesne Başlatıcısı](https://go.microsoft.com/fwlink/?LinkId=161016)kullanarak bir nesne bildirin.  
   
-### <a name="working-with-variables-literal-values-and-expressions"></a>Değişkenler, değişmez değerler ve ifadeleri ile çalışma  
- Kod kullanarak bir iş akışı tanımı oluştururken, hangi kod oluşturma iş akışı tanımının bir parçası olarak çalışır ve bu iş akışı örneği yürütme işleminin bir parçası olarak hangi kodu yürütür unutmayın. Örneğin, aşağıdaki iş akışı, rastgele bir sayı oluşturur ve konsola yazma için tasarlanmıştır.  
+### <a name="working-with-variables-literal-values-and-expressions"></a>Değişkenler, değişmez değerler ve Ifadelerle çalışma  
+ Kodu kullanarak bir iş akışı tanımı oluştururken, iş akışı tanımı oluşturmanın bir parçası olarak hangi kodun yürütüldüğünü ve bu iş akışının bir örneğini yürütmenin bir parçası olarak hangi kodun yürütüldüğünü unutmayın. Örneğin, aşağıdaki iş akışı rastgele bir sayı oluşturmak ve konsola yazmak için tasarlanmıştır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#50)]  
   
- Bu iş akışı tanımı kod olduğunda yürütülür, çağrı `Random.Next` yapılır ve sonuç iş akışı tanımında değişmez değer olarak depolanır. Bu iş akışı birçok örneği çağrılabilir ve tümü aynı numarasını görüntüler. İş akışı yürütme sırasında oluşan bir ifade başka bir deyişle kullanılmalıdır rastgele sayı üretimi için iş akışı her çalıştığında değerlendirilir. Aşağıdaki örnekte, bir Visual Basic ifade ile kullanılan bir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>.  
+ Bu iş akışı Tanım kodu yürütüldüğünde, çağrısı `Random.Next` yapılır ve sonuç iş akışı tanımında değişmez değer olarak depolanır. Bu iş akışının birçok örneği çağrılabilir ve hepsi aynı numarayı görüntüler. İş akışı yürütmesi sırasında rastgele sayının oluşturulması durumunda, iş akışı her çalıştığında değerlendirilen bir ifade kullanılmalıdır. Aşağıdaki örnekte, bir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>Visual Basic ifadesi ile kullanılır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
   
- Önceki örnekte ifade kullanarak da uygulanabilir bir <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve bir C# ifadesi.  
+ Önceki örnekteki ifade, <xref:Microsoft.CSharp.Activities.CSharpValue%601> ve bir C# ifadesi kullanılarak da uygulanabilir.  
   
 ```csharp  
 new Assign<int>  
@@ -50,31 +50,31 @@ new Assign<int>
 }  
 ```  
   
- C# ifadelerini bunları içeren iş akışı çağrılmadan önce derlenmesi gerekir. Varsa C# ifadeleri derlenmemiş, bir <xref:System.NotSupportedException> aşağıdakine benzer bir ileti ile iş akışı çalıştırıldığında oluşturulur: `Expression Activity type 'CSharpValue`1' çalıştırmak için derleme gerektirir.  İş akışı derlendiğinden emin olun.' Visual Studio'da C# oluşturulan iş akışları içeren çoğu senaryoda ifadeleri otomatik olarak derlenir, ancak kodu iş akışları gibi bazı senaryolarda C# ifadelerini el ile derlenmiş olmalıdır. C# ifadelerini derlemeye ilişkin bir örnek için bkz. [kullanarak C# ifadeleri iş akışlarında kod](csharp-expressions.md#CodeWorkflows) bölümünü [C# ifadelerini](csharp-expressions.md) konu.  
+ C#ifadeleri içeren iş akışı çağrılmadan önce ifadeler derlenmelidir. C# İfadeler derlenmeyecekse, iş akışı aşağıdakine benzer <xref:System.NotSupportedException> bir iletiyle çağrıldığında bir atılır: `Expression Activity type 'CSharpValue`1 ' çalıştırmak için derleme gerekiyor.  Lütfen iş akışının derlendiğinden emin olun. ' Visual Studio 'da oluşturulan iş akışlarını içeren çoğu senaryoda C# ifadeler otomatik olarak derlenir, ancak kod iş akışları gibi bazı senaryolarda C# ifadeler el ile olmalıdır Medi. İfadelerin nasıl derlenmeye C# ilişkin bir örnek için, [ C# ifadeler](csharp-expressions.md) konusunun [kod C# iş akışlarında ifadeleri kullanma](csharp-expressions.md#CodeWorkflows) bölümüne bakın.  
   
- A <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> bir ifadede bir r olarak kullanılan Visual Basic sözdiziminde ifadeyi temsil eden ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> bir ifadede bir ifadede bir r olarak kullanılabilen C# sözdizimi temsil eder. Bu ifadeler içeren etkinlik yürütülen her zaman değerlendirilir. İfadenin sonucu iş akışı değişkenine atanan `n`, ve bu sonuçları, iş akışındaki sonraki etkinliği tarafından kullanılır. İş akışı değişkeninin değerini erişmeye `n` zamanında <xref:System.Activities.ActivityContext> gereklidir. Bu, aşağıdaki lambda ifadesi kullanılarak erişilebilir.  
+ Bir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ifadede r değeri olarak kullanılabilen Visual Basic sözdiziminde bir ifadeyi temsil eder ve bir ifadede r-value olarak kullanılabilecek bir <xref:Microsoft.CSharp.Activities.CSharpValue%601> ifade C# temsil eder. Bu ifadeler, kapsayan etkinliğin her yürütüldüğü her seferinde değerlendirilir. İfadenin sonucu iş akışı değişkenine `n`atanır ve bu sonuçlar iş akışındaki sonraki etkinlik tarafından kullanılır. Çalışma zamanında `n` <xref:System.Activities.ActivityContext> iş akışı değişkeninin değerine erişmek için gereklidir. Bu, aşağıdaki lambda ifadesi kullanılarak erişilebilir.  
   
 > [!NOTE]
->  Hem bu kod örnekleri olduğunu not kullandığınız C# programlama dili olarak, ancak kullanan tek bir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve kullanan tek bir <xref:Microsoft.CSharp.Activities.CSharpValue%601>. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> Visual Basic ve C# projelerinde kullanılabilir. Varsayılan olarak, iş akışı Tasarımcısı'nda oluşturulan ifadeler barındırma projenin diliyle eşleşiyor. İş akışlarının kodda oluştururken istediğiniz dil için iş akışı yazarın takdirinizdedir.  
+> Bu kodların her ikisi de programlama dili olarak kullanıldığı C# , ancak biri bir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> kullanır <xref:Microsoft.CSharp.Activities.CSharpValue%601>ve bir kullanır. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>ve <xref:Microsoft.CSharp.Activities.CSharpValue%601> hem Visual Basic hem de C# projelerinde kullanılabilir. Varsayılan olarak, iş akışı tasarımcısında oluşturulan ifadeler barındırma projesinin diliyle eşleşir. Kodda iş akışları oluştururken, istenen dil iş akışı yazarının kararına göre belirlenir.  
   
- Bu örneklerde, ifadenin sonucu iş akışı değişkenine atanır `n`, ve bu sonuçları, iş akışındaki sonraki etkinliği tarafından kullanılır. İş akışı değişkeninin değerini erişmeye `n` zamanında <xref:System.Activities.ActivityContext> gereklidir. Bu, aşağıdaki lambda ifadesi kullanılarak erişilebilir.  
+ Bu örneklerde, ifadenin sonucu iş akışı değişkenine `n`atanır ve bu sonuçlar iş akışındaki sonraki etkinlik tarafından kullanılır. Çalışma zamanında `n` <xref:System.Activities.ActivityContext> iş akışı değişkeninin değerine erişmek için gereklidir. Bu, aşağıdaki lambda ifadesi kullanılarak erişilebilir.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- Lambda ifadeleri hakkında daha fazla bilgi için bkz. [Lambda ifadeleri (C# programlama Kılavuzu)](https://go.microsoft.com/fwlink/?LinkID=152436) veya [Lambda ifadeleri (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437).  
+ Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleriC# (Programlama Kılavuzu)](https://go.microsoft.com/fwlink/?LinkID=152436) veya [lambda ifadeleri (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437).  
   
- Lambda ifadeleri, XAML biçimine seri hale getirilebilir değildir. Lambda ifadeleri bir iş akışıyla seri hale getirme denemesi yapılırsa bir <xref:System.Activities.Expressions.LambdaSerializationException> şu ileti ile oluşturulur: "Bu iş akışı kodda belirtilen lambda ifadeleri içerir. Bu ifadeler, XAML serileştirilebilir değil. Akışınızı XAML serileştirilebilir yapmak için VisualBasicValue/VisualBasicReference veya ExpressionServices.Convert(lambda) kullanın. Bu, lambda ifadeleri ifade etkinliklerine dönüştürür." Bu ifade XAML ile uyumlu hale getirmek için kullanın <xref:System.Activities.Expressions.ExpressionServices> ve <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>, aşağıdaki örnekte gösterildiği gibi.  
+ Lambda ifadeleri XAML biçimine serileştirilebilir değildir. Lambda ifadeleriyle bir iş akışını seri hale getirme girişimi yapılırsa, aşağıdaki iletiyle <xref:System.Activities.Expressions.LambdaSerializationException> bir oluşturulur: "Bu iş akışı kodda belirtilen Lambda ifadelerini içerir. Bu ifadeler XAML serileştirilebilir değildir. İş akışınızı XAML-serileştirilebilir yapmak için VisualBasicValue/VisualBasicReference veya ExpressionServices. Convert (lambda) kullanın. Bu işlem lambda ifadelerinizi ifade etkinliklerine dönüştürür. " Bu ifadeyi XAML ile uyumlu hale getirmek için, <xref:System.Activities.Expressions.ExpressionServices> aşağıdaki <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>örnekte gösterildiği gibi ve kullanın.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#53](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
   
- A <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> de kullanılabilir. Hiçbir lambda ifadesi bir Visual Basic ifadesinin kullanırken gerekli olduğunu unutmayın.  
+ <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> Ayrıca kullanılabilir. Visual Basic ifadesi kullanılırken hiçbir lambda ifadesinin gerekli olmadığını unutmayın.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- Çalışma zamanında, Visual Basic deyimleri LINQ ifadelere derlenir. Önceki örneklerin her ikisi de seri hale getirilmiş XAML görüntülenmesine ve iş akışı Tasarımcısı'nda düzenlenebilir yöneliktir, ancak XAML, seri hale getirilebilir <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> , ifadeler için. Serileştirilmiş kullanan iş akışları `ExpressionServices.Convert` tasarımcıda açık, ancak ifadenin değerini boş olarak görüntülenir. XAML iş akışlarına serileştirmek hakkında daha fazla bilgi için bkz. [seri hale getirme iş akışları ve etkinlikler XAML gelen ve giden](serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Çalışma zamanında, Visual Basic ifadeleri LINQ ifadelerine derlenir. Önceki örneklerin her ikisi de xaml 'ye serileştirilebilir, ancak serileştirilmiş XAML iş akışı tasarımcısında görüntülenmek ve düzenlenilmesi amaçlanıyorsa deyimleriniz için kullanın <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> . Kullanan serileştirilmiş iş akışları `ExpressionServices.Convert` tasarımcıda açılabilir, ancak ifadenin değeri boş olur. XAML 'de iş akışlarını serileştirme hakkında daha fazla bilgi için bkz. [xaml 'de ve xaml 'de Iş akışlarını ve etkinlikleri serileştirme](serializing-workflows-and-activities-to-and-from-xaml.md).  
   
-#### <a name="literal-expressions-and-reference-types"></a>Değişmez ifadeleri ve başvuru türleri  
- Değişmez ifadeleri iş akışlarında tarafından temsil edilir <xref:System.Activities.Expressions.Literal%601> etkinlik. Aşağıdaki <xref:System.Activities.Statements.WriteLine> etkinlikleri işlevsel olarak eşdeğerdir.  
+#### <a name="literal-expressions-and-reference-types"></a>Değişmez değer Ifadeleri ve başvuru türleri  
+ Değişmez değerler, <xref:System.Activities.Expressions.Literal%601> etkinliğin iş akışlarında temsil edilir. Aşağıdaki <xref:System.Activities.Statements.WriteLine> etkinlikler işlevsel olarak eşdeğerdir.  
   
 ```csharp  
 new WriteLine  
@@ -87,7 +87,7 @@ new WriteLine
 }  
 ```  
   
- Hazır ifadeyi herhangi bir başvuru türü ile başlatmak için geçersiz <xref:System.String>. Aşağıdaki örnekte, bir <xref:System.Activities.Statements.Assign> etkinliğin <xref:System.Activities.Statements.Assign.Value%2A> özelliğinin kullanarak bir değişmez değer ifadesinin başlatıldığı bir `List<string>`.  
+ Dışında <xref:System.String>herhangi bir başvuru türüyle değişmez bir ifade başlatmak geçersizdir. Aşağıdaki örnekte, bir <xref:System.Activities.Statements.Assign> <xref:System.Activities.Statements.Assign.Value%2A> `List<string>`etkinliğin özelliği, kullanılarak değişmez değer ifadesiyle başlatılır.  
   
 ```csharp  
 new Assign  
@@ -97,7 +97,7 @@ new Assign
 },  
 ```  
   
- Bu etkinliğini içeren iş akışı doğrulandığında, aşağıdaki doğrulama hatası döndürülür: "Literal yalnızca değer türleri ve sabit türü System.String destekler. Türü System.Collections.Generic.List'1[System.String] bir değişmez değer olarak kullanılamaz." İş akışı çağrılırsa bir <xref:System.Activities.InvalidWorkflowException> atılır doğrulama hatası metnini içeren. Değişmez değer ifadesinin bir başvuru türü ile oluşturma başvuru türü her iş akışı örneği için yeni bir örneğini oluşturmaz bir doğrulama hatası olmasıdır. Bu sorunu çözmek için oluşturur ve yeni bir başvuru türünün örneğini döndüren bir değişmez değer ifadesinin değiştirin.  
+ Bu etkinliği içeren iş akışı doğrulandıktan sonra, aşağıdaki doğrulama hatası döndürülür: "Literal yalnızca değer türlerini ve sabit tür System. String ' i destekler. System. Collections. Generic. List ' 1 [System. String] türü bir sabit değer olarak kullanılamaz. " İş akışı çağrılırsa, doğrulama hatasının metnini <xref:System.Activities.InvalidWorkflowException> içeren bir atılır. Bu bir doğrulama hatasıdır çünkü başvuru türü ile değişmez değer ifadesi oluşturma, iş akışının her bir örneği için başvuru türünün yeni bir örneğini oluşturmaz. Bu sorunu çözmek için, değişmez değer ifadesini oluşturan ve başvuru türünün yeni bir örneğini döndüren bir ifade ile değiştirin.  
   
 ```csharp  
 new Assign  
@@ -107,14 +107,14 @@ new Assign
 },  
 ```  
   
- İfadeler hakkında daha fazla bilgi için bkz. [ifadeleri](expressions.md).  
+ İfadeler hakkında daha fazla bilgi için bkz. [ifadeler](expressions.md).  
   
-#### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>Nesne ifadeleri ve InvokeMethod etkinliği kullanma yöntemleri çağırma  
- <xref:System.Activities.Expressions.InvokeMethod%601> Etkinlik, statik çağırmak ve .NET Framework sınıfların yöntemlerinde örneği için kullanılabilir. Bu konuda bir önceki örnekte, rastgele bir sayı kullanılarak oluşturulan <xref:System.Random> sınıfı.  
+#### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>Ifadeleri ve InvokeMethod etkinliğini kullanarak nesnelerde Yöntemler çağırma  
+ <xref:System.Activities.Expressions.InvokeMethod%601> Etkinlik, .NET Framework sınıfların statik ve örnek yöntemlerini çağırmak için kullanılabilir. Bu konunun önceki bir örneğinde, <xref:System.Random> sınıfı kullanılarak rastgele bir sayı oluşturulmuştur.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
   
- <xref:System.Activities.Expressions.InvokeMethod%601> Etkinliği de kullanılabilirdi çağrılacak <xref:System.Random.Next%2A> yöntemi <xref:System.Random> sınıfı.  
+ Etkinlik, <xref:System.Random> sınıfının <xref:System.Random.Next%2A> yöntemini çağırmak için de kullanılmış olabilir. <xref:System.Activities.Expressions.InvokeMethod%601>  
   
 ```csharp  
 new InvokeMethod<int>  
@@ -130,21 +130,21 @@ new InvokeMethod<int>
 }  
 ```  
   
- Bu yana <xref:System.Random.Next%2A> statik bir yöntemi, bir örneği değil <xref:System.Random> sınıfı için sağlanmaktadır <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A> özelliği. Bu örnekte, bir Visual Basic ifadesinin kullanarak yeni bir örneği oluşturulur, ancak bunu ayrıca daha önce oluşturulmuş ve bir iş akışı değişkeninde depolanan. Bu örnekte, kullanmayı daha kolay olacaktır <xref:System.Activities.Statements.Assign%601> yerine etkinlik <xref:System.Activities.Expressions.InvokeMethod%601> etkinlik. Yöntem çağrısının ya da sonunda çağrılır, <xref:System.Activities.Statements.Assign%601> veya <xref:System.Activities.Expressions.InvokeMethod%601> etkinlikler, uzun çalışan, <xref:System.Activities.Expressions.InvokeMethod%601> , sahip olduğu bir avantajı vardır bir <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> özelliği. Bu özelliği ayarlandığında `true`, çağrılan yöntemi bir iş akışı ile ilgili zaman uyumsuz olarak çalışır. Diğer etkinlikler paralel olarak ise, yöntem zaman uyumsuz olarak yürütülürken bunlar engellenmez. Ayrıca, çağrılacak yöntemin dönüş değeri, ardından yoksa <xref:System.Activities.Expressions.InvokeMethod%601> yöntemini çağırmak için en uygun yolu.  
+ Bir statik yöntem olmadığından, <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A> özelliği için <xref:System.Random> sınıfının bir örneği sağlanır. <xref:System.Random.Next%2A> Bu örnekte, bir Visual Basic ifadesi kullanılarak yeni bir örnek oluşturulur, ancak daha önce oluşturulmuş ve bir iş akışı değişkeninde depolanmış olabilir. Bu örnekte etkinlik yerine <xref:System.Activities.Statements.Assign%601> <xref:System.Activities.Expressions.InvokeMethod%601> etkinliğin kullanılması daha basit olacaktır. <xref:System.Activities.Statements.Assign%601> Son olarak ya da <xref:System.Activities.Expressions.InvokeMethod%601> etkinlikleri tarafından çağrılan yöntem çağrısı uzun süre çalışıyorsa, <xref:System.Activities.Expressions.InvokeMethod%601> bir <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> özelliği olduğundan avantajı vardır. Bu özellik olarak `true`ayarlandığında, çağrılan yöntem iş akışı ile ilgili olarak zaman uyumsuz olarak çalışır. Diğer etkinlikler paralel ise, yöntem zaman uyumsuz olarak yürütülerek bunlar engellenmeyecektir. Ayrıca, çağrılacak yöntemin dönüş değeri yoksa, <xref:System.Activities.Expressions.InvokeMethod%601> yöntemi çağırmak için uygun bir yoldur.  
   
-## <a name="arguments-and-dynamic-activities"></a>Bağımsız değişkenler ve dinamik etkinlikleri  
- Bir iş akışı tanımı kod içinde bir etkinlik ağacına etkinlikleri derleyerek ve tüm özellikleri ve bağımsız değişkenler yapılandırma oluşturulur. Mevcut bağımsız değişkenleri bağlanabilir ancak yeni bağımsız değişkenler için etkinlikleri eklenemez. Bu kök etkinlik için geçirilen iş akışı bağımsız değişkenler içerir. Kesinlik temelli kod içinde yeni bir CLR türündeki özellikleri olarak iş akışı bağımsız değişkenleri belirtilir ve XAML içinde kullanılarak bildirilirler `x:Class` ve `x:Member`. Bağımsız değişkenleri bir iş akışı tanımı bellekteki nesnelerin ağaç olarak oluşturulduğunda CLR türünün belirtilmemesi yeni olduğundan eklenemez. Bununla birlikte, bağımsız değişkenleri eklenebilen bir <xref:System.Activities.DynamicActivity>. Bu örnekte, bir <xref:System.Activities.DynamicActivity%601> alır, iki tamsayı bağımsız oluşturulur, bunları bir araya getirir ve sonucu döndürür. A <xref:System.Activities.DynamicActivityProperty> her bağımsız değişkeni için oluşturulan ve işlemin sonucu atandığı <xref:System.Activities.Activity%601.Result%2A> bağımsız değişkeni <xref:System.Activities.DynamicActivity%601>.  
+## <a name="arguments-and-dynamic-activities"></a>Bağımsız değişkenler ve dinamik etkinlikler  
+ Bir etkinlik ağacına etkinlikler bağlayarak ve tüm özellikleri ve bağımsız değişkenleri yapılandırarak kodda bir iş akışı tanımı oluşturulur. Var olan bağımsız değişkenler bağlanabilir, ancak yeni bağımsız değişkenler etkinliklere eklenemez. Bu, kök etkinliğe geçirilen iş akışı bağımsız değişkenlerini içerir. Kesinlik temelli kodda, iş akışı bağımsız değişkenleri yeni bir clr türü üzerinde özellikler olarak belirtilir ve xaml 'de ve `x:Class` `x:Member`kullanılarak bildirilenler. Bir iş akışı tanımı, bellek içi nesneler ağacı olarak oluşturulduğunda oluşturulan yeni bir CLR türü olmadığından, bağımsız değişkenler eklenemez. Ancak, bağımsız değişkenler bir <xref:System.Activities.DynamicActivity>öğesine eklenebilir. Bu örnekte, <xref:System.Activities.DynamicActivity%601> iki tamsayı bağımsız değişkeni alan oluşturulur, bunları bir araya ekler ve sonucu döndürür. Her <xref:System.Activities.DynamicActivityProperty> bağımsız değişken için bir oluşturulur ve işlemin sonucu öğesinin <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.DynamicActivity%601>bağımsız değişkenine atanır.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- Dinamik etkinlikleri hakkında daha fazla bilgi için bkz: [çalışma zamanında bir etkinlik oluşturma](creating-an-activity-at-runtime-with-dynamicactivity.md).  
+ Dinamik etkinlikler hakkında daha fazla bilgi için bkz. [çalışma zamanında etkinlik oluşturma](creating-an-activity-at-runtime-with-dynamicactivity.md).  
   
-## <a name="compiled-activities"></a>Derlenmiş etkinlikleri  
- Dinamik etkinlikleri kod kullanarak bağımsız değişkenleri içeren bir etkinlik tanımlamak için bir yoludur, ancak etkinlikleri de kodda oluşturulabilir ve tür olarak derlenir. Öğesinden türetilen basit etkinlikleri oluşturulabilir <xref:System.Activities.CodeActivity>ve türetilen zaman uyumsuz etkinlikler <xref:System.Activities.AsyncCodeActivity>. Bu etkinlik bağımsız değişkenleri, dönüş değerleri ve kesin kod kullanarak kendi mantığını tanımlamak olabilir. Bu tür etkinlikler oluşturmayı örnekler için bkz. [CodeActivity temel sınıfı](workflow-activity-authoring-using-the-codeactivity-class.md) ve [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).  
+## <a name="compiled-activities"></a>Derlenen etkinlikler  
+ Dinamik etkinlikler, kod kullanan bağımsız değişkenler içeren bir etkinlik tanımlamanın bir yoludur, ancak etkinlikler kodda oluşturulabilir ve türlere derlenmiş olabilir. Ve <xref:System.Activities.CodeActivity>' den <xref:System.Activities.AsyncCodeActivity>türetilen zaman uyumsuz etkinliklerden türetilen basit etkinlikler oluşturulabilir. Bu etkinlikler bağımsız değişkenlere, dönüş değerlerine sahip olabilir ve zorunlu kod kullanarak mantığını tanımlayabilir. Bu tür etkinlikleri oluşturma örnekleri için bkz. [CodeActivity temel sınıfı](workflow-activity-authoring-using-the-codeactivity-class.md) ve [zaman uyumsuz etkinlikler oluşturma](creating-asynchronous-activities-in-wf.md).  
   
- Öğesinden türetilen etkinlikleri <xref:System.Activities.NativeActivity> mantığını kesin kod kullanarak tanımlayabilirsiniz ve mantığı tanımlayan alt etkinlikleri de içerebilir. Ayrıca yer işaretlerini oluşturma gibi çalışma zamanı özelliklerine tam erişim sahiptirler. Oluşturmaya yönelik örnek için bir <xref:System.Activities.NativeActivity>-etkinlik, temel bkz [NativeActivity temel sınıfı](nativeactivity-base-class.md), [nasıl yapılır: Bir etkinlik oluşturursunuz](how-to-create-an-activity.md)ve [Native etkinliği kullanan özel bileşik](./samples/custom-composite-using-native-activity.md) örnek.  
+ Öğesinden <xref:System.Activities.NativeActivity> türetilen etkinlikler, zorunlu kod kullanarak mantığını tanımlayabilir ve ayrıca mantığı tanımlayan alt etkinlikleri içerebilir. Ayrıca, çalışma zamanının yer işaretlerini oluşturma gibi özelliklerine tam erişimi de vardır. Tabanlı etkinlik oluşturma <xref:System.Activities.NativeActivity>örnekleri için bkz. [NativeActivity temel sınıfı](nativeactivity-base-class.md), [nasıl yapılır: Yerel etkinlik örneğini](how-to-create-an-activity.md)kullanarak bir etkinlik ve [özel bileşik](./samples/custom-composite-using-native-activity.md) oluşturma.  
   
- Öğesinden türetilen etkinlikleri <xref:System.Activities.Activity> yalnızca alt etkinlikleri kullanarak bunların mantığına tanımlayın. Bu etkinlikler, genellikle iş akışı Tasarımcısı kullanarak oluşturulur, ancak kod kullanılarak da tanımlanabilir. Aşağıdaki örnekte, bir `Square` etkinlik öğesinden türetilen tanımlanır `Activity<int>`. `Square` Etkinliğinde, tek bir <xref:System.Activities.InArgument%601> adlı `Value`ve belirterek mantığını tanımlayan bir <xref:System.Activities.Statements.Sequence> etkinliğini kullanarak <xref:System.Activities.Activity.Implementation%2A> özelliği. <xref:System.Activities.Statements.Sequence> Etkinliği içeren bir <xref:System.Activities.Statements.WriteLine> etkinliği ve bir <xref:System.Activities.Statements.Assign%601> etkinlik. Birlikte, bu üç etkinlikleri mantığını uygulayan `Square` etkinlik.  
+ Öğesinden <xref:System.Activities.Activity> türetilen etkinlikler, yalnızca alt etkinliklerin kullanımıyla mantığını tanımlar. Bu etkinlikler genellikle iş akışı Tasarımcısı kullanılarak oluşturulur, ancak kod kullanılarak da tanımlanabilir. Aşağıdaki örnekte, öğesinden `Square` `Activity<int>`türetilen bir etkinlik tanımlanmıştır. `Square` Etkinliğin <xref:System.Activities.Statements.Sequence> tek <xref:System.Activities.InArgument%601> bir adı`Value`vardır ve özelliğini<xref:System.Activities.Activity.Implementation%2A> kullanarak bir etkinlik belirterek mantığını tanımlar. Etkinlik bir <xref:System.Activities.Statements.WriteLine> etkinlik ve<xref:System.Activities.Statements.Assign%601> etkinlik içerir. <xref:System.Activities.Statements.Sequence> Birlikte, bu üç etkinlik `Square` etkinliğin mantığını uygular.  
   
 ```csharp  
 class Square : Activity<int>  
@@ -173,7 +173,7 @@ class Square : Activity<int>
 }  
 ```  
   
- Aşağıdaki örnekte, bir tek oluşan bir iş akışı tanımı `Square` etkinliği kullanarak çağrıldığında <xref:System.Activities.WorkflowInvoker>.  
+ Aşağıdaki örnekte, tek `Square` bir etkinlikten oluşan bir iş akışı tanımı kullanılarak <xref:System.Activities.WorkflowInvoker>çağrılır.  
   
 ```csharp  
 Dictionary<string, object> inputs = new Dictionary<string, object> {{ "Value", 5}};  
@@ -181,7 +181,7 @@ int result = WorkflowInvoker.Invoke(new Square(), inputs);
 Console.WriteLine("Result: {0}", result);  
 ```  
   
- İş akışı çağrıldığında, aşağıdaki çıktıyı konsola görüntülenir:  
+ İş akışı çağrıldığında, konsola aşağıdaki çıktı görüntülenir:  
   
- **Değer karesini: 5**  
-**Sonuç: 25**
+ **Karelerini alıp değeri: e**  
+**Kaynaklanan 250**

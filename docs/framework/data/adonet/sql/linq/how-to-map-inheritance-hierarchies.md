@@ -5,47 +5,47 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: e0ff3fe98fcd9ced0063d2bec85928504ea19bab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 618abc8e681a6f43a1054d0ca2cec2fbdec853f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943570"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: Devralma Hiyerarşilerini Eşleme
-Devralma eşlemede uygulamak için [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)], öznitelikler ve öznitelik özellikleri devralma hiyerarşisinin kök sınıfında aşağıdaki adımlarda açıklandığı şekilde belirtmeniz gerekir. Visual Studio kullanan geliştiricilerin, Nesne İlişkisel Tasarımcısı devralma hiyerarşilerini eşleme için kullanabilirsiniz. Bkz: [nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
+' De [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]devralma eşlemesini uygulamak için aşağıdaki adımlarda açıklandığı gibi devralma hiyerarşisinin kök sınıfında öznitelikleri ve öznitelik özelliklerini belirtmeniz gerekir. Visual Studio kullanan geliştiriciler, devralma hiyerarşilerini eşlemek için Nesne İlişkisel Tasarımcısı kullanabilir. Bkz [. nasıl yapılır: O/R tasarımcısını](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)kullanarak devralmayı yapılandırın.  
   
 > [!NOTE]
->  Hiçbir özel öznitelikler veya özellikleri üzerinde alt sınıflarından gerekir. Alt sınıfları olmayan özellikle Not <xref:System.Data.Linq.Mapping.TableAttribute> özniteliği.  
+> Alt sınıflarda özel öznitelik veya özellik gerekmez. Özellikle bu alt sınıfların <xref:System.Data.Linq.Mapping.TableAttribute> özniteliğe sahip olmadığına not edin.  
   
-### <a name="to-map-an-inheritance-hierarchy"></a>Devralma Hiyerarşisi eşlemek için  
+### <a name="to-map-an-inheritance-hierarchy"></a>Devralma hiyerarşisini eşlemek için  
   
-1. Ekleme <xref:System.Data.Linq.Mapping.TableAttribute> özniteliği için kök sınıfı.  
+1. <xref:System.Data.Linq.Mapping.TableAttribute> Özniteliği kök sınıfa ekleyin.  
   
-2. Ayrıca kök Sınıf Ekle bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> hiyerarşi yapısı her sınıf için özniteliği.  
+2. Ayrıca, kök sınıfa, hiyerarşi yapısındaki her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> bir sınıf için bir öznitelik ekleyin.  
   
-3. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> tanımlayın, öznitelik bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> özelliği.  
+3. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> öznitelik için bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> Özellik tanımlayın.  
   
-     Bu özellik veritabanı tablosunda görüntülenen bir değeri tutar <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> hangi sınıfı veya ImageSource alt sınıfı için bu veri satırının ait belirtmek için sütunu.  
+     Bu özellik, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> bu veri satırının hangi sınıfa veya alt sınıfa ait olduğunu göstermek için sütunundaki veritabanı tablosunda görünen bir değeri barındırır.  
   
-4. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> özniteliği, ayrıca bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> özelliği.  
+4. Her <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> öznitelik için de bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A> özellik ekleyin.  
   
-     Bu özellik, hangi sınıfı veya alt anahtar değeri belirtir belirten bir değeri tutar.  
+     Bu özellik, anahtar değerinin hangi sınıf veya alt sınıfa göre olduğunu belirten bir değer içerir.  
   
-5. Yalnızca birinde <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> öznitelikleri, ekleme bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> özelliği.  
+5. <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute> Özniteliklerden yalnızca birinde bir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A> özellik ekleyin.  
   
-     Belirlemek için bu özellik hizmet veren bir *geri dönüş* eşleme sırasında veritabanı tablosundan ayrıştırıcı değeri eşleşmiyor <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> devralma eşlemeleri değeri.  
+     Bu özellik, veritabanı tablosundan ayrıştırıcı değeri devralma eşlemelerinde hiçbir <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> değerle eşleşmediği zaman bir *geri dönüş* eşlemesi belirlemek için kullanılır.  
   
-6. Ekleme bir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> özelliği için bir <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği.  
+6. Öznitelik için bir <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A> özellik ekleyin. <xref:System.Data.Linq.Mapping.ColumnAttribute>  
   
-     Bu özellik bu tutan sütunu olduğunu belirten <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> değeri.  
+     Bu özellik, bu <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A> değeri tutan sütun olduğunu belirtir.  
   
 ## <a name="example"></a>Örnek  
   
 > [!NOTE]
->  Visual Studio kullanıyorsanız, Nesne İlişkisel Tasarımcısı devralmayı yapılandırmak için kullanabilirsiniz. Bkz: [nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
+> Visual Studio kullanıyorsanız, devralmayı yapılandırmak için Nesne İlişkisel Tasarımcısı kullanabilirsiniz. Bkz [. nasıl yapılır: O/R Tasarımcısı kullanarak devralmayı yapılandırma](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)  
   
- Aşağıdaki kod örneğinde, `Vehicle` kök sınıfı tanımlanır ve hiyerarşi için açıklamak için önceki adımları uygulanmıştır [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Aşağıdaki kod örneğinde, `Vehicle` kök sınıf olarak tanımlanmıştır ve önceki adımlar için [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]hiyerarşiyi betimleyen şekilde uygulanmıştır.  
   
  [!code-csharp[DLinqCustomize#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#4)]
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
@@ -53,4 +53,4 @@ Devralma eşlemede uygulamak için [!INCLUDE[vbteclinq](../../../../../../includ
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Devralma Desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Nasıl yapılır: Kod düzenleyicisini kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Windows Forms, MDI applications
 - MDI
 ms.assetid: 599faf75-13cf-49cc-ad3c-255545e5cb97
-ms.openlocfilehash: 0ce7c66946d03d566b21473711cb6b3315885236
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23e0275d5e6b081ec02d669a78e8695453360637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61952054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956553"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>Çoklu Belge Arabirimi (MDI) Uygulamaları
-Çok Belgeli Arabirim (MDI) uygulamaları aynı anda birden çok belge kendi penceresinde görüntülenen her bir belgeyi görüntülemek etkinleştirin. MDI uygulamaları, genellikle windows veya belgeler arasında geçiş yapmak için alt pencere Menü öğesiyle sahiptir.  
+Birden çok belge arabirimi (MDI) uygulamaları, her belge kendi penceresinde görüntülenirken, birden çok belgeyi aynı anda görüntülemenizi sağlar. MDI uygulamalarında, pencereler veya belgeler arasında geçiş yapmak için genellikle alt menüler içeren bir pencere menü öğesi vardır.  
   
 > [!NOTE]
->  Bazı Windows Formları MDI formları ve windows tek Belgeli Arabirim (SDI) arasındaki davranış farklılıkları vardır. `Opacity` Özelliği MDI alt formlarını görünümünü etkilemez. Ayrıca, <xref:System.Windows.Forms.Form.CenterToParent%2A> yöntemi MDI alt formlarını davranışını etkilemez.  
+> Windows Forms 'daki MDI formları ve tek belge arabirimi (SDI) pencereleri arasında bazı davranış farklılıkları vardır. `Opacity` Özelliği MDI alt formlarının görünüşünü etkilemez. Ayrıca, <xref:System.Windows.Forms.Form.CenterToParent%2A> yöntemi MDI alt formlarının davranışını etkilemez.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)  
- Bir MDI uygulaması içinde birden çok belge için bir kapsayıcı oluşturma için yönergeler sağlar.  
+ Bir MDI uygulaması içindeki birden çok belge için kapsayıcı oluşturmaya yönelik yönergeler verir.  
   
- [Nasıl yapılır: MDI alt formları oluştur](how-to-create-mdi-child-forms.md)  
- MDI üst formu içinde çalışan bir veya daha fazla windows oluşturma için yönergeler sağlar.  
+ [Nasıl yapılır: MDI alt formları oluşturma](how-to-create-mdi-child-forms.md)  
+ MDI üst formu içinde çalışan bir veya daha fazla pencere oluşturmak için yönergeler sağlar.  
   
  [Nasıl yapılır: Etkin MDI alt öğesini belirleme](how-to-determine-the-active-mdi-child.md)  
- Odağa sahip alt pencerenin doğrulamak için yönergeler sağlar (ve içeriği panoya gönderme).  
+ Odağa sahip olan alt pencereyi doğrulamaya yönelik yönergeler verir (ve içeriğini panoya gönderir).  
   
  [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)  
- Etkin alt penceresine bilgi taşıma için yönergeler sağlar.  
+ Etkin alt pencereye bilgi aktarmak için yönergeler sağlar.  
   
  [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)  
- Döşeme, geçişli veya uygulamanın MDI alt pencereleri düzenleme için yönergeler sağlar.
+ Bir MDI uygulamasının alt pencerelerini döşeme, basamaklı veya düzenleme için yönergeler sağlar.

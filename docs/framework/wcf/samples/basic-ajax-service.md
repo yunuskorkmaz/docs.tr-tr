@@ -2,22 +2,22 @@
 title: Temel AJAX Hizmeti
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 8bcfb9a751670d3d1c32de6d8e6f7dc1b84ea30d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d3770630df693093b05868f00c409f8245f858b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925244"
 ---
 # <a name="basic-ajax-service"></a>Temel AJAX Hizmeti
-Bu örnek, Windows Communication Foundation (WCF) temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemciden JavaScript kodu kullanarak erişebileceğiniz bir hizmeti) oluşturmak için nasıl kullanılacağını gösterir. Hizmeti kullandığı <xref:System.ServiceModel.Web.WebGetAttribute> hizmet HTTP GET isteklerine yanıt verir ve yanıtları için JavaScript nesne gösterimi (JSON) veri biçimini kullanacak şekilde yapılandırılmış emin olmak için özniteliği.  
+Bu örnek, temel bir ASP.NET zaman uyumsuz JavaScript ve XML (AJAX) hizmeti (bir Web tarayıcısı istemcisinden JavaScript kodu kullanarak erişebileceğiniz bir hizmet) oluşturmak için Windows Communication Foundation (WCF) nasıl kullanılacağını gösterir. Hizmet, hizmetin http <xref:System.ServiceModel.Web.WebGetAttribute> Get isteklerini yanıtlaması ve yanıtlar için JavaScript nesne gösterimi (JSON) veri biçimini kullanacak şekilde yapılandırıldığından emin olmak için özniteliğini kullanır.  
   
- WCF AJAX desteği ASP.NET AJAX ile kullanım için optimize `ScriptManager` denetimi. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).  
+ WCF 'de Ajax desteği, `ScriptManager` ASP.NET AJAX ile denetim aracılığıyla kullanılmak üzere iyileştirilmiştir. WCF 'yi ASP.NET AJAX ile kullanmayla ilgili bir örnek için bkz. [Ajax örnekleri](ajax.md).  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Aşağıdaki kodda, <xref:System.ServiceModel.Web.WebGetAttribute> özniteliği uygulandığı `Add` hizmet HTTP GET isteklerine yanıt vermesini sağlamak için işlemi. Kod Al (herhangi bir Web tarayıcısından HTTP GET isteği oluşturabilirsiniz) kolaylık sağlamak için kullanır. GET, önbelleğe almayı etkinleştirmek için de kullanabilirsiniz. HTTP POST, varsayılan olmadığında `WebGetAttribute` özniteliği.  
+ Aşağıdaki kodda, <xref:System.ServiceModel.Web.WebGetAttribute> hizmetin HTTP GET isteklerine yanıt vermesini sağlamak için `Add` özniteliği işlemine uygulanır. Kod basitlik için GET kullanır (herhangi bir Web tarayıcısından bir HTTP GET isteği oluşturabilirsiniz). Ayrıca, önbelleğe almayı etkinleştirmek için Al ' i de kullanabilirsiniz. HTTP post, `WebGetAttribute` öznitelik yokluğunda varsayılandır.  
 
 ```csharp
 [ServiceContract(Namespace = "SimpleAjaxService")]
@@ -29,13 +29,13 @@ public interface ICalculator
 }
 ```
 
- Örnek .svc dosyasını kullanan <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, hangi ekler bir <xref:System.ServiceModel.Description.WebScriptEndpoint> hizmetine standart uç noktası. Uç nokta, boş bir adresten .svc dosyanın göreli yapılandırılır. Bu hizmet adresini olduğu anlamına gelir `http://localhost/ServiceModelSamples/service.svc`, işlem adı dışında hiçbir ek sonekleri ile.  
+ Örnek. svc dosyası, hizmete <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>standart bir <xref:System.ServiceModel.Description.WebScriptEndpoint> uç nokta ekleyen kullanır. Uç nokta,. svc dosyasına göre boş bir adreste yapılandırılır. Bu, hizmetin adresinin, işlem adından farklı ek `http://localhost/ServiceModelSamples/service.svc`sonekler olmadan olduğu anlamına gelir.  
 
 ```svc
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
 ```
 
- <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmeti bir ASP.NET AJAX istemci sayfasından erişilebilir hale getirmek için önceden yapılandırılmıştır. Web.config dosyasında aşağıdaki bölümde, uç nokta için ek yapılandırma değişiklikleri yapmak için kullanılabilir. Ek bir değişikliğe ihtiyaç olup olmadığını kaldırılabilir.  
+ , <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmeti bir ASP.NET Ajax istemci sayfasından erişilebilir hale getirmek için önceden yapılandırılmıştır. Web. config dosyasındaki aşağıdaki bölüm, uç noktada ek yapılandırma değişiklikleri yapmak için kullanılabilir. Ek değişiklik gerekmiyorsa bu, kaldırılabilir.  
   
 ```xml  
 <system.serviceModel>  
@@ -48,9 +48,9 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmeti için varsayılan veri biçimi XML yerine JSON ayarlar. Hizmetini çağırmak için gidin `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` sonra kümesi kurma tamamlanıyor ve bu konunun ilerleyen bölümlerinde gösterilen adımları oluşturun. Bu test işlevi bir HTTP GET isteği kullanımını tarafından etkinleştirilir.  
+ , <xref:System.ServiceModel.Description.WebScriptEndpoint> Hizmetin varsayılan veri biçimini, XML yerine JSON olarak ayarlar. Hizmeti çağırmak için, bu konunun ilerleyen `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` kısımlarında bulunan kurulum ve oluşturma adımlarını tamamladıktan sonra ' a gidin. Bu test işlevselliği bir HTTP GET isteği kullanılarak etkinleştirildi.  
   
- İstemci Web sayfası SimpleAjaxClientPage.aspx sayfasında işlemi düğmelerden birine kullanıcı tıkladığında hizmeti çağırmak için ASP.NET kodu içerir. `ScriptManager` Denetimi proxy hizmet için JavaScript üzerinden erişilebilir hale getirmek için kullanılır.  
+ Simpleleajaxclientpage. aspx istemci Web sayfası, Kullanıcı sayfadaki işlem düğmelerinden birine her tıkladığında hizmeti çağırmak için ASP.NET kodunu içerir. `ScriptManager` Denetim, hizmet üzerinde JavaScript üzerinden erişilebilen bir proxy oluşturmak için kullanılır.  
 
 ```aspx-csharp
 <asp:ScriptManager ID="ScriptManager" runat="server">  
@@ -60,7 +60,7 @@ public interface ICalculator
 </asp:ScriptManager>  
 ```
 
- Yerel proxy örneği ve aşağıdaki JavaScript kodunu kullanarak işlem çağrılır.  
+ Yerel ara sunucu örneği oluşturulur ve işlemler aşağıdaki JavaScript kodu kullanılarak çağrılır.  
 
 ```javascript
 // Code for extracting arguments n1 and n2 omitted…  
@@ -70,7 +70,7 @@ var proxy = new SimpleAjaxService.ICalculator();
 proxy.Add(parseFloat(n1), parseFloat(n2), onSuccess, onFail, null);  
 ```
 
- Hizmet çağrısı başarılı olursa, kodu çağıran `onSuccess` işleyicisi ve işlemin sonucunu bir metin kutusunda görüntülenir.  
+ Hizmet çağrısı başarılı olursa, kod `onSuccess` işleyiciyi çağırır ve işlemin sonucu bir metin kutusunda görüntülenir.  
 
 ```javascript
 function onSuccess(mathResult){  
@@ -79,10 +79,10 @@ function onSuccess(mathResult){
 ```
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`  

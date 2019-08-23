@@ -2,15 +2,15 @@
 title: WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 211af75c04dfe971228bc1710fbe1fc4d7aaee60
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 0a9cd5039c085f82f5507c93ebe0855cc620825d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916833"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow Hizmet Kayıt Aracı (WFServicesReg.exe)
-Workflow hizmet Kayıt Aracı (WFServicesReg.exe) eklemek, kaldırmak veya Windows Workflow Foundation (WF) Hizmetleri için yapılandırma öğeleri onarmak için kullanılan bağımsız bir araçtır.  
+Workflow Services kayıt aracı (WFServicesReg. exe), Windows Workflow Foundation (WF) Hizmetleri için yapılandırma öğelerini eklemek, kaldırmak veya onarmak üzere kullanılabilecek tek başına bir araçtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -19,28 +19,28 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Araç şu yolda bulunabilir: [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] yükleme konumu, özellikle de % windir%\Microsoft.NET\Framework\v3.5 veya 64 bit makinelerde %windir%\Microsoft.NET\Framework64\v3.5.  
+ Araç [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] yükleme konumunda, özellikle,%windir%\Microsoft.NET\Framework\v3.5 veya 64 bitlik makinelerde bulunan%windir%\Microsoft.NET\Framework64\v3.5 adresinde bulunabilir.  
   
- Aşağıdaki tablolarda, iş akışı hizmetleri kayıt aracı (WFServicesReg.exe) kullanılabilir seçenekler açıklanmaktadır.  
+ Aşağıdaki tablolar, Iş akışı hizmetleri kayıt aracı (WFServicesReg. exe) ile kullanılabilen seçenekleri anlatmaktadır.  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`/c`|Windows iş akışı hizmetleri yapılandırır. Yüklemede kullanılan ve onarım senaryoları.|  
-|`/r`|Windows iş akışı Hizmetleri yapılandırmasını kaldırır.|  
-|`/v`|Ayrıntılı bilgi (yapılandırma veya temizleme) yazdırın.|  
-|`/m`|MSI günlük biçimini sağlar.|  
-|`/i`|Uygulama çalışırken pencerenin en aza indirir.|  
+|`/c`|Windows Workflow hizmetlerini yapılandırır. Install ve Repair senaryolarında kullanılır.|  
+|`/r`|Windows Workflow Services yapılandırmasını kaldırır.|  
+|`/v`|Ayrıntılı bilgileri yazdır (yapılandırma veya kaldırma için).|  
+|`/m`|MSI günlük biçimini etkinleştir.|  
+|`/i`|Uygulama çalıştığında pencereyi en aza indirir.|  
   
 ## <a name="registration"></a>Kayıt  
- Araç, Web.config dosyasını inceler ve aşağıdaki kaydeder:  
+ Araç, Web. config dosyasını inceler ve aşağıdakileri kaydeder:  
   
-- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] başvuru bütünleştirilmiş kodları.  
+- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]başvuru derlemeleri.  
   
-- Bir oluşturma sağlayıcısını .xoml dosyaları.  
+- . Xoml dosyaları için derleme sağlayıcısı.  
   
-- HTTP işleyicileri .xoml ve .rules dosyaları.  
+- . Xoml ve. Rules dosyaları için HTTP işleyicileri.  
   
- Aracı Machine.config dosyasının inceler ve aşağıdaki uzantılar kaydeder:  
+ Araç, Machine. config dosyasını inceler ve aşağıdaki uzantıları kaydeder:  
   
 - behaviorExtensions  
   
@@ -48,41 +48,41 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
 - bindingExtensions  
   
- Araç ayrıca aşağıdaki istemci meta verileri ımporters kaydeder:  
+ Araç ayrıca aşağıdaki istemci meta veri içe aktarımlarını kaydeder:  
   
 - policyImporters  
   
 - wsdlImporters  
   
- Aracı, IIS metabase içinde .xoml ve .rules kod haritalarını ve işleyicileri de kaydeder.  
+ Araç ayrıca. xoml ve. Rules komut dosyası eşleştirmelerini ve işleyicileri IIS metatabanında kaydeder.  
   
- Üzerinde [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../includes/wxp-md.md)] makineler .xoml ve .rules kod haritalarını (IIS 5.1 ve IIS 6.0), bir dizi kayıtlı.  
+ [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] Ve[!INCLUDE[wxp](../../../includes/wxp-md.md)] makinelerinde (IIS 5,1 ve IIS 6,0), bir. xoml ve. Rules komut dosyası, bir kümesi kaydedilir.  
   
- 64 bit makinelerde ise araç WOW modunda kod haritalarını kaydeder `Enable32BitAppOnWin64` anahtar etkin veya yerel 64 bit kod haritalarını olup olmadığını `Enable32BitAppOnWin64` anahtarını devre dışı bırakıldı.  
+ 64 bitlik makinelerde, `Enable32BitAppOnWin64` anahtar etkinse, araç, wow modu komut dosyası eşleştirmelerini veya `Enable32BitAppOnWin64` anahtar devre dışıysa yerel 64-bit komut dosyası eşleştirmelerini kaydeder.  
   
- Üzerinde [!INCLUDE[wv](../../../includes/wv-md.md)] ve Windows Server 2008 (IIS 7.0 ve üstü) makineleri iki .xoml ve .rules işleyicileri kayıtlı: biri tümleşik modu, diğeri Klasik mod için.  
+ [!INCLUDE[wv](../../../includes/wv-md.md)] Ve Windows Server 2008 (IIS 7,0 ve üzeri) makineler, iki. xoml ve. Rules işleyicisi kümesi kaydedilir: biri tümleşik mod ve bir klasik mod için.  
   
- 64 bit makinelerde işleyicileri üç adet kaydedilir (durumundan bağımsız olarak `Enable32BitAppOnWin64` geçiş): bir tümleşik modu, WOW Klasik mod için ve yerel 64 bit Klasik mod için bir tane.  
+ 64 bit makinelerde, üç işleyici kümesi ( `Enable32BitAppOnWin64` anahtarın durumuna bakılmaksızın) kaydedilir: bir adet, bir tane, wow klasik mod ve diğeri yerel 64 bit klasik mod için bir adet tümleşik mod için.  
   
 > [!NOTE]
->  ServiceModelreg.exe WFServicesReg.exe ekleme, kaldırma veya kod haritalarını veya belirli bir Web sitesi için işleyiciler onarma izin vermez. Bu soruna bir geçici çözüm için "Kod haritalarını onarma" bölümüne bakın.  
+> ServiceModelreg. exe ' den farklı olarak, WFServicesReg. exe ' nin belirli bir Web sitesi için komut dosyası veya işleyicileri ekleme, kaldırma veya onarma izni yoktur. Bu soruna geçici bir çözüm için, "komut dosyası eşleştirmelerini onarma" bölümüne bakın.  
   
 ## <a name="usage-scenarios"></a>Kullanım senaryoları  
   
-### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3.5 yüklendikten sonra IIS yükleme  
- Üzerinde bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makine [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] IIS yüklemeden önce yüklenir. IIS metatabanı yüklenmesini olmadığından [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] .xoml ve .rules kod haritalarını yüklemeden başarılı olur.  
+### <a name="installing-iis-after-net-framework-35-is-installed"></a>.NET Framework 3,5 yüklendikten sonra IIS yükleme  
+ Bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makinede, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] IIS yüklemesinden önce yüklenir. IIS metatabanının KULLANILAMAMASINDAN dolayı, yüklemesi [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] . xoml ve. Rules komut dosyası yüklenmeden başarılı olur.  
   
- IIS yüklendikten sonra WFServicesReg.exe aracı ile kullanabileceğiniz `/c` bu belirli kod haritalarını yüklemek için anahtar.  
+ IIS yüklendikten sonra, bu özel komut dosyası eşleştirmelerini yüklemek için WFServicesReg. exe aracını `/c` anahtarla birlikte kullanabilirsiniz.  
   
-### <a name="repairing-the-scriptmaps"></a>Kod haritalarını onarılıyor  
+### <a name="repairing-the-scriptmaps"></a>Kod haritalarını onarma  
   
-#### <a name="scriptmap-deleted-under-web-sites-node"></a>Komut dosyası eşlemesini Web siteleri düğümü altında silindi  
- Üzerinde bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makine, .xoml veya .rules Web siteleri düğümünden silinmiş yanlışlıkla. Bu WFServicesReg.exe aracıyla çalıştırarak onarılabilir `/c` geçin.  
+#### <a name="scriptmap-deleted-under-web-sites-node"></a>ScriptMap Web siteleri düğümü altında silindi  
+ Bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makinede,. xoml veya. Rules, yanlışlıkla Web siteleri düğümünden silinir. Bu, WFServicesReg. exe aracı `/c` anahtarıyla çalıştırılarak onarılabilir.  
   
-#### <a name="scriptmap-deleted-under-a-particular-web-site"></a>Komut dosyası eşlemesini altında belirli bir Web sitesi silindi  
- Üzerinde bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makine, .xoml veya .rules yanlışlıkla silindiğinde belirli bir Web sitesi (örneğin, varsayılan Web sitesi) yerine Web siteleri düğümü.  
+#### <a name="scriptmap-deleted-under-a-particular-web-site"></a>ScriptMap belirli bir Web sitesi altında silindi  
+ Bir [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] makinede,. xoml veya. Rules, Web siteleri düğümünden değil, belirli bir Web sitesinden (örneğin, varsayılan Web sitesi) yanlışlıkla silinir.  
   
- Belirli bir Web sitesi için silinen işleyicileri onarmak için "WFServicesReg.exe r" çalıştırmalısınız tüm Web sitelerinden işleyicilerini kaldırmak için ardından "WFServicesReg.exe c" çalıştırın uygun işleyicileri için tüm Web siteleri oluşturmak için.  
+ Belirli bir Web sitesi için silinen işleyicileri onarmak üzere, tüm Web sitelerinden işleyicileri kaldırmak için "WFServicesReg. exe/r" komutunu çalıştırmanız ve sonra tüm Web siteleri için uygun işleyicileri oluşturmak üzere "WFServicesReg. exe/c" komutunu çalıştırmanız gerekir.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>IIS moduna geçtikten sonra işleyicileri yapılandırma  
- IIS paylaşılan Yapılandırması modunda olduğunda ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] olan yüklü IIS metabase bir paylaşılan konuma altında yapılandırılır. IIS yapılandırma paylaşılmayan moduna geçiş yapıyorsanız, yerel gerekli işleyicileri içermez. Yerel düzgün şekilde yapılandırmak için "yerel yapılandıran yerel ya da çalışma WFServicesReg.exe /c", paylaşılan metatabanına ya da içeri aktarabilirsiniz.
+ IIS paylaşılan yapılandırma modundayken ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] yüklendiğinde, IIS metatabanı paylaşılan bir konum altında yapılandırılır. IIS 'yi paylaşılmayan yapılandırma moduna geçerseniz, yerel metatabanı gerekli işleyicileri içermez. Yerel metatabanını doğru şekilde yapılandırmak için, paylaşılan metatabanını yerel olarak içeri aktarabilir ya da yerel metatabanını yapılandıran "WFServicesReg. exe/c" komutunu çalıştırabilirsiniz.

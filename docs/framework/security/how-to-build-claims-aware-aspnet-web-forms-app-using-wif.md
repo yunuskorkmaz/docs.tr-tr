@@ -3,22 +3,22 @@ title: 'Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygula
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910579"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941291"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Nasıl yapılır: WIF Kullanarak Talep Kullanan ASP.NET Web Forms Uygulaması Derleme
 ## <a name="applies-to"></a>Uygulanan Öğe  
   
 - Microsoft® Windows® Identity Foundation (WIF)  
   
-- ASP.NET® Web formları  
+- ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Özet  
- Bu nasıl yapılır basit talep kullanan ASP.NET Web Forms uygulaması oluşturmak için adım adım ayrıntılı yordamları sağlar. Ayrıca, basit talep kullanan ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması başarılı uygulaması için test etme için yönergeler sağlar. Bu nasıl yapılır bir güvenlik belirteci hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler yer almaz ve bir STS'ye zaten yapılandırmış olduğunuz varsayılır.  
+ Bu nasıl yapılır, basit talep kullanan ASP.NET Web Forms uygulaması oluşturmaya yönelik ayrıntılı adım adım yordamlar sağlar. Ayrıca, Federasyon kimlik doğrulamasının başarılı bir şekilde uygulanması için basit talep kullanan ASP.NET Web Forms uygulamasının nasıl test edildiği hakkında yönergeler de sağlar. Bu nasıl yapılır, güvenlik belirteci hizmeti (STS) oluşturmaya yönelik ayrıntılı yönergeler içermez ve zaten bir STS yapılandırdığınızı varsayar.  
   
 ## <a name="contents"></a>İçindekiler  
   
@@ -26,43 +26,43 @@ ms.locfileid: "64910579"
   
 - Adımların Özeti  
   
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
   
-- 2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- 2\. adım – ASP.NET Web Forms uygulamasını talep tabanlı kimlik doğrulaması için yapılandırma  
   
-- 3. Adım – Çözümünüzü Test Etme  
+- 3\. Adım – Çözümünüzü Test Etme  
   
 ## <a name="objectives"></a>Amaçlar  
   
-- ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
+- Talep tabanlı kimlik doğrulaması için ASP.NET Web Forms uygulamasını yapılandırma  
   
 - Test başarılı talep kullanan ASP.NET Web Forms uygulaması  
   
 ## <a name="summary-of-steps"></a>Adımların Özeti  
   
-- 1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+- 1\. adım – basit ASP.NET Web Forms uygulaması oluşturma  
   
-- 2. adım: ASP.NET Web Forms uygulaması şirket dışı kimlik doğrulaması yapılandırma  
+- 2\. adım – Federasyon kimlik doğrulaması için ASP.NET Web Forms uygulamasını yapılandırma  
   
-- 3. Adım – Çözümünüzü Test Etme  
+- 3\. Adım – Çözümünüzü Test Etme  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1\. adım – basit bir ASP.NET Web Forms uygulaması oluşturma  
  Bu adımda, yeni bir ASP.NET Web Forms uygulaması oluşturacaksınız.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Basit bir ASP.NET uygulaması oluşturmak için  
   
-1. Visual Studio'yu başlatın ve tıklayın **dosya**, **yeni**, ardından **proje**.  
+1. Visual Studio 'Yu başlatın ve **Dosya**, **Yeni**ve ardından **Proje**' ye tıklayın.  
   
-2. İçinde **yeni proje** penceresinde tıklayın **ASP.NET Web Forms uygulaması**.  
+2. **Yeni proje** penceresinde, **ASP.NET Web Forms uygulama**' ya tıklayın.  
   
-3. İçinde **adı**, girin `TestApp` basın **Tamam**.  
+3. **Ad**alanına girin `TestApp` ve **Tamam**' a basın.  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>2. adım: ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırma  
- Bu adımda, yapılandırma girdileri ekler *Web.config* talep kullanan ASP.NET Web Forms uygulamanızın yapılandırma dosyası.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>2\. adım – ASP.NET Web Forms uygulamasını talep tabanlı kimlik doğrulaması için yapılandırma  
+ Bu adımda, ASP.NET Web Forms uygulamanızın *Web. config* yapılandırma dosyasına, talebe göre haberdar olmak için yapılandırma girdileri ekleyeceksiniz.  
   
-#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>ASP.NET uygulamanızı beyana dayalı kimlik doğrulaması için yapılandırmak için  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Talep tabanlı kimlik doğrulaması için ASP.NET uygulamasını yapılandırmak için  
   
-1. Aşağıdaki yapılandırma bölümü girdileri ekleme *Web.config* yapılandırma dosyası hemen sonra  **\<yapılandırma >** açılış öğesi:  
+1. Yapılandırma > açma öğesinden hemen sonra **aşağıdaki yapılandırma bölümü girdilerini Web. config yapılandırma dosyasına ekleyin: \<**  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "64910579"
     </configSections>  
     ```  
   
-2. Ekleme bir  **\<konum >** uygulamanın Federasyon meta verilerine erişim sağlayan bir öğe:  
+2. Uygulamanın Federasyon meta verilerine erişim sağlayan bir  **\<konum >** öğesi ekleyin:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "64910579"
     </location>  
     ```  
   
-3. İçinde aşağıdaki yapılandırma girdileri eklemek  **\<system.web >** kullanıcıları engellemek için öğeleri yerel kimlik doğrulamasını devre dışı ve kimlik doğrulamasını yönetmek WIF etkinleştirme.  
+3. Kullanıcıları reddetmek, yerel kimlik doğrulamasını devre dışı bırakmak ve kimlik doğrulamasını yönetmek için WIF 'yi etkinleştirmek için  **\<System. Web >** öğelerine aşağıdaki yapılandırma girdilerini ekleyin.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "64910579"
     <authentication mode="None" />  
     ```  
   
-4. Ekleme bir  **\<system.webServer >** şirket dışı kimlik doğrulaması modülleri tanımlayan öğe. Unutmayın *PublicKeyToken* özniteliği aynı olmalıdır *PublicKeyToken* özniteliğini  **\<configSections >** daha önce eklediğiniz girişleri:  
+4. Federe kimlik doğrulaması için modülleri tanımlayan bir  **\<System. webserver >** öğesi ekleyin. *PublicKeyToken* özniteliğinin, daha önce eklenen  **\<configSections >** girdilerinin *PublicKeyToken* özniteliğiyle aynı olması gerektiğini unutmayın:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910579"
     </system.webServer>  
     ```  
   
-5. Aşağıdaki Windows Identity Foundation, ASP.NET uygulamanızın URL'sini ve bağlantı noktası numarası değerlerin eşleştiğinden emin olun ve ilgili yapılandırma girdileri eklemek  **\<AudienceUri >** girişi **bölge**  özniteliği  **\<wsFederation >** öğesi ve **yanıt** özniteliği  **\<wsFederation >** öğesi. Ayrıca emin **veren** uygun güvenlik belirteci hizmeti (STS) URL'nizi değeri.  
+5. Aşağıdaki Windows Identity Foundation ile ilgili yapılandırma girdilerini ekleyin ve ASP.net uygulamanızın URL 'si ile bağlantı noktası  **\<>** numarasının,  **\<** WSFederation > öğesi ve  **\<WSFederation >** öğesinin **Reply** özniteliği. Ayrıca, **verenin** değerinin güvenlik belirteci HIZMETI (STS) URL 'nize uygun olduğundan emin olun.  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "64910579"
     </system.identityModel.services>  
     ```  
   
-6. Başvuru ekleme <xref:System.IdentityModel> derleme.  
+6. <xref:System.IdentityModel> Derlemeye başvuru ekleyin.  
   
-7. Hiçbir hata olmadığından emin olmak için çözümü derleyin.  
+7. Bir hata olmadığından emin olmak için çözümü derleyin.  
   
-## <a name="step-3--test-your-solution"></a>3. Adım – Çözümünüzü Test Etme  
- Bu adımda, ASP.NET Web Forms uygulaması talep tabanlı kimlik doğrulaması için yapılandırılmış test eder. Temel bir test gerçekleştirmek için güvenlik belirteci hizmeti (STS) tarafından verilen belirteçteki talepleri görüntüler kod ekleyeceksiniz.  
+## <a name="step-3--test-your-solution"></a>3\. Adım – Çözümünüzü Test Etme  
+ Bu adımda, talep tabanlı kimlik doğrulaması için yapılandırılmış olan ASP.NET Web Forms uygulamanızı test edersiniz. Temel bir test gerçekleştirmek için, güvenlik belirteci hizmeti (STS) tarafından verilen belirteçte talepleri görüntüleyen bir kod ekleyeceksiniz.  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Talep tabanlı kimlik doğrulaması için ASP.NET Web formu uygulamanızı test etmek için  
   
-1. Açık **Default.aspx** altında dosya **TestApp** proje ve onun varolan biçimlendirmesini aşağıdaki biçimlendirme değiştirin:  
+1. **TestApp** projesi altındaki **default. aspx** dosyasını açın ve var olan işaretlemesini aşağıdaki biçimlendirme ile değiştirin:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "64910579"
     </html>  
     ```  
   
-2. Kaydet **Default.aspx**ve ardından adlı dosyanın arkasındaki kodunu açın **Default.aspx.cs**.  
+2. **Default. aspx**' i kaydedin ve sonra kodu **default.aspx.cs**adlı dosyanın arkasında açın.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** altındaki gizlenebilir **Default.aspx** Çözüm Gezgini'nde. Varsa **Default.aspx.cs** görünür durumda değilse genişletin **Default.aspx** yanında üçgeni tıklayarak.  
+    > **Default.aspx.cs** , Çözüm Gezgini içinde **default. aspx** altında gizlenebilir. **Default.aspx.cs** görünür değilse, bunun yanındaki üçgene tıklayarak **default. aspx** ' i genişletin.  
   
-3. Varolan kodda değiştirin **Page_Load** yöntemi **Default.aspx.cs** aşağıdaki kod ile:  
+3. **Default.aspx.cs** öğesinin **Page_Load** yöntemindeki mevcut kodu şu kodla değiştirin:  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "64910579"
     }  
     ```  
   
-4. Kaydet **Default.aspx.cs**ve Çözümü derleyin.  
+4. **Default.aspx.cs**kaydedin ve Çözümü derleyin.  
   
-5. Tuşlarına basarak çözümü çalıştırın **F5** anahtarı.  
+5. **F5** tuşuna basarak çözümü çalıştırın.  
   
-6. İçin güvenlik belirteci hizmeti tarafından verilmiş belirteçteki talepleri gösteren sayfa ile sunulan.
+6. Güvenlik belirteci hizmeti tarafından size verilen belirteçteki talepleri görüntüleyen sayfayla birlikte sunulmalısınız.

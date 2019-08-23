@@ -9,54 +9,54 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f62efb31e95b0797272997fadbc28459579a0de0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004575"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955185"
 ---
 # <a name="global-and-local-transformations"></a>Genel ve Yerel Dönüştürmeler
-Her bir öğe tarafından çizilen uygulandığı bir dönüştürme genel bir dönüşümdür bir verilen <xref:System.Drawing.Graphics> nesne. Buna karşılık, yerel bir dönüştürme çizilecek belirli bir ögeye uygulanan bir dönüşümdür.  
+Genel dönüşüm, belirli <xref:System.Drawing.Graphics> bir nesne tarafından çizilen her öğe için geçerli olan dönüşümdir. Buna karşılık, yerel bir dönüşüm, çizilecek belirli bir öğe için geçerli olan dönüşümdir.  
   
-## <a name="global-transformations"></a>Genel dönüşümleri  
- Genel dönüşümü oluşturmak için oluşturmak bir <xref:System.Drawing.Graphics> nesne ve işlemek, <xref:System.Drawing.Graphics.Transform%2A> özelliği. <xref:System.Drawing.Graphics.Transform%2A> Özelliği bir <xref:System.Drawing.Drawing2D.Matrix> afin dönüşümler herhangi bir dizi içerebileceği için nesne. Dönüştürme depolanan <xref:System.Drawing.Graphics.Transform%2A> özelliği gerçek koordinat dönüştürmesini çağrılır. <xref:System.Drawing.Graphics> Sınıfı bir bileşik gerçek koordinat dönüştürmesini oluşturmak için çeşitli yöntemler sağlar: <xref:System.Drawing.Graphics.MultiplyTransform%2A>, <xref:System.Drawing.Graphics.RotateTransform%2A>, <xref:System.Drawing.Graphics.ScaleTransform%2A>, ve <xref:System.Drawing.Graphics.TranslateTransform%2A>. Aşağıdaki örnek iki kez bir elips çizer: Gerçek koordinat dönüştürmesini ve sonra bir kez'ı oluşturmadan önce bir kez. Dönüştürme ilk 0,5 y yönünde faktörüyle ölçeklenen sonra 50 birim x yönünde çevirir ve ardından 30 derece döndürür.  
+## <a name="global-transformations"></a>Genel dönüşümler  
+ Genel bir dönüşüm oluşturmak için, bir <xref:System.Drawing.Graphics> nesnesi oluşturun ve sonra <xref:System.Drawing.Graphics.Transform%2A> özelliğini değiştirin. <xref:System.Drawing.Graphics.Transform%2A> Özelliği bir<xref:System.Drawing.Drawing2D.Matrix> nesnesidir, bu nedenle herhangi bir afin dönüştürme dizisini tutabilir. <xref:System.Drawing.Graphics.Transform%2A> Özelliğinde depolanan dönüştürmeye dünya dönüşümü denir. <xref:System.Drawing.Graphics.RotateTransform%2A> <xref:System.Drawing.Graphics.MultiplyTransform%2A> <xref:System.Drawing.Graphics.TranslateTransform%2A> <xref:System.Drawing.Graphics.ScaleTransform%2A>Sınıfı, bileşik dünya dönüşümü oluşturmak için çeşitli yöntemler sağlar:,, ve. <xref:System.Drawing.Graphics> Aşağıdaki örnek üç kez elips çizer: bir dünya dönüşümü oluşturmadan önce ve sonrasında bir kez. Dönüştürme ilk olarak y yönünde 0,5 faktörüyle ölçeklenirken, x yönünde 50 birimi çevirir ve sonra 30 derece döndürür.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.CoordinateSystems#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#21)]  
   
- Aşağıdaki çizim matrislerde dönüşümü katılan gösterir.  
+ Aşağıdaki çizimde, dönüşümde yer alan matrisler gösterilmektedir.  
   
  ![Dönüşümler](./media/aboutgdip05-art14.gif "AboutGdip05_art14")  
   
 > [!NOTE]
->  Önceki örnekte, üç nokta istemci alanını sol üst köşesine gelecek koordinat sistemini kaynağı hakkında döndürülür. Bu, kendi Merkezi hakkında elips döndürme değerinden farklı bir sonuç oluşturur.  
+> Yukarıdaki örnekte, elips, istemci alanının sol üst köşesinde bulunan koordinat sisteminin kaynağı hakkında döndürülür. Bu, elips kendi Merkezi hakkında döndürmeden farklı bir sonuç üretir.  
   
-## <a name="local-transformations"></a>Yerel dönüştürmeler  
- Yerel bir dönüştürme çizilecek belirli bir öğeyi uygular. Örneğin, bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesinin bir <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> yol veri noktalarını dönüştürmenizi sağlayan yöntemi. Aşağıdaki örnek, döndürme dönüşümü yoluyla ve hiçbir dönüşüm bir dikdörtgen çizer. (Hiçbir gerçek koordinat dönüştürmesini olduğu varsayılmaktadır.)  
+## <a name="local-transformations"></a>Yerel dönüşümler  
+ Yerel bir dönüşüm, çizilecek belirli bir öğe için geçerlidir. Örneğin, bir <xref:System.Drawing.Drawing2D.GraphicsPath> nesnesi, bu yolun <xref:System.Drawing.Drawing2D.GraphicsPath.Transform%2A> veri noktalarını dönüştürmenizi sağlayan bir yönteme sahiptir. Aşağıdaki örnek, dönüşüm olmadan bir dikdörtgen ve bir döndürme dönüştürmesi içeren bir yol çizer. (Dünya dönüştürmesinin olmadığını varsayın.)  
   
  [!code-csharp[System.Drawing.CoordinateSystems#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.CoordinateSystems#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#22)]  
   
- Gerçek koordinat dönüştürmesini çeşitli sonuçlar elde etmek için yerel dönüşümler ile birleştirebilirsiniz. Örneğin, gerçek koordinat dönüştürmesini koordinat sistemini gözden geçirin ve yeni koordinat sisteminde çizilen nesneleri döndürme ve yerel dönüştürmeler kullanmak için kullanabilirsiniz.  
+ Çeşitli sonuçlara ulaşmak için dünya dönüşümünü yerel dönüşümlerle birleştirebilirsiniz. Örneğin, koordinat sistemini değiştirmek ve yeni koordinat sisteminde çizilen nesneleri döndürmek ve ölçeklendirmek için yerel dönüştürmeleri kullanmak üzere dünya dönüşümünü kullanabilirsiniz.  
   
- İstemci alanın sol kenarından kendi kaynak 200 piksel ve istemci alanının üst 150 piksel olan bir koordinat sistemini istediğinizi varsayalım. Ayrıca, sağa ve y ekseni yukarıyı gösteren x ekseni ile piksel olması için ölçü birimini istediğinizi varsayalım. Yatay eksende bir yansıma gerçekleştirmeniz gereken şekilde varsayılan koordinat sistemi aşağıyı, y ekseni sahiptir. Aşağıdaki çizimde, böyle bir yansıma matrisini gösterir.  
+ İstemci alanının sol kenarından, istemci alanının en üstünden 150 piksel olan bir koordinat sisteminin kaynak 200 piksel olduğunu varsayalım. Ayrıca, ölçü biriminin sağ ve y eksenini işaret eden x ekseni ile piksel olmasını istediğinizi varsayın. Varsayılan koordinat sisteminde, aşağı işaret eden y ekseni bulunur, bu nedenle yatay eksen genelinde bir yansıma gerçekleştirmeniz gerekir. Aşağıdaki çizimde bu tür bir yansımanın matrisi gösterilmektedir.  
   
  ![Dönüşümler](./media/aboutgdip05-art15.gif "AboutGdip05_art15")  
   
- Ardından, bir çeviri 200 birimleri sağa ve aşağı 150 birimleri gerçekleştirmeniz gereken varsayılır.  
+ Ardından, doğru ve 150 birim için çeviri 200 birimleri gerçekleştirmeniz gerektiğini varsayın.  
   
- Aşağıdaki örnek, gerçek koordinat dönüştürmesini ayarlayarak açıklanmış koordinat sistemini kurar bir <xref:System.Drawing.Graphics> nesne.  
+ Aşağıdaki örnek, bir <xref:System.Drawing.Graphics> nesnenin Dünya dönüşümünü ayarlayarak yalnızca açıklanan koordinat sistemini belirler.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.CoordinateSystems#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#23)]  
   
- (Önceki örnekte sonunda yer) aşağıdaki kod, yeni koordinat sistemi kaynağını sol alt köşede ile tek bir dikdörtgen oluşan bir yol oluşturur. Dikdörtgen bir kez yerel hiçbir dönüştürme ve bir kez yerel bir dönüşüm ile doldurulur. Yerel dönüşümü bir yatay bir 30 derece döndürme tarafından izlenen 2'ın ölçeklendirme oluşur.  
+ Aşağıdaki kod (önceki örnekte yer alan), yeni koordinat sisteminin başlangıcına sol alt köşesine sahip tek bir dikdörtgenden oluşan bir yol oluşturur. Dikdörtgen yerel dönüşümle ve bir kez yerel dönüşümle bir kez doldurulur. Yerel dönüşüm, 2 faktörüyle bir yatay ölçeklendirmeden ve sonrasında 30 derecelik bir dönüşden oluşur.  
   
  [!code-csharp[System.Drawing.CoordinateSystems#24](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#24)]
  [!code-vb[System.Drawing.CoordinateSystems#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#24)]  
   
- Aşağıdaki çizim, yeni koordinat sistemini ve iki dikdörtgenler gösterir.  
+ Aşağıdaki çizimde, yeni koordinat sistemi ve iki dikdörtgen gösterilmektedir.  
   
  ![Dönüşümler](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   

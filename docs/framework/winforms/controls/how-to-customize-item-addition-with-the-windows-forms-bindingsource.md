@@ -11,30 +11,30 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - BindingSource component [Windows Forms], examples
 ms.assetid: 1aae11fc-6fb2-4cb9-b3d0-e0638fe77ef0
-ms.openlocfilehash: 94c7b304dd8b909d60ef6b25f828524594caf886
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 59522791408eb9c8cabf97a62be2049aeb17f864
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592821"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935357"
 ---
 # <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Nasıl yapılır: Windows Forms BindingSource ile Öğe Eklemeyi Özelleştirme
-Kullandığınızda, bir <xref:System.Windows.Forms.BindingSource> bir Windows Forms denetimini bir veri kaynağına bağlamak için bileşen oluşturma işlemini yeni öğeleri özelleştirmek gerekli bulabilirsiniz. <xref:System.Windows.Forms.BindingSource> Bileşeni hale getirir bu basit sağlayarak <xref:System.Windows.Forms.BindingSource.AddingNew> ilişkili denetim yeni bir öğe oluşturmak gerektiğinde genellikle oluşan olayı,. Hangi özel davranış (örneğin, bir Web hizmeti üzerinde bir yöntemi çağırmak veya yeni bir nesne bir sınıf üreteci almak) gerekli değildir, olay işleyicisi sağlayabilir.  
+Bir Windows Forms denetimini bir <xref:System.Windows.Forms.BindingSource> veri kaynağına bağlamak için bir bileşeni kullandığınızda, yeni öğelerin oluşturulmasını özelleştirmek için gerekli olduğunu fark edebilirsiniz. Bileşen bunu, genellikle, bağlantılı denetimin yeni <xref:System.Windows.Forms.BindingSource.AddingNew> bir öğe oluşturması gerektiğinde ortaya çıkarılan olayını sağlayarak basittir. <xref:System.Windows.Forms.BindingSource> Olay işleyiciniz hangi özel davranışın gerekli olduğunu (örneğin, bir Web hizmetinde bir yöntemi çağırmak veya bir sınıf fabrikasından yeni bir nesne almak) sağlayabilir.  
   
 > [!NOTE]
->  İşleme göre bir öğe eklendiğinde <xref:System.Windows.Forms.BindingSource.AddingNew> olay eklenmesini iptal edilemez.  
+> <xref:System.Windows.Forms.BindingSource.AddingNew> Olay işlenerek bir öğe eklendiğinde ekleme işlemi iptal edilemez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl bağlanacağını gösterir. bir <xref:System.Windows.Forms.DataGridView> kullanarak bir sınıf üreteci denetimine bir <xref:System.Windows.Forms.BindingSource> bileşeni. Kullanıcı tıkladığında <xref:System.Windows.Forms.DataGridView> denetimin yeni satır <xref:System.Windows.Forms.BindingSource.AddingNew> olayı oluşturulur. Yeni bir olay işleyicisi oluşturur `DemoCustomer` öğesine atanan nesne <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A?displayProperty=nameWithType> özelliği. Bu yeni neden `DemoCustomer` eklenecek nesne <xref:System.Windows.Forms.BindingSource> bileşenin listesi ve yeni satırında görüntülenecek <xref:System.Windows.Forms.DataGridView> denetimi.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.BindingSource> bileşeni kullanarak bir denetimin bir sınıf fabrikasına nasıl bağlanacağını göstermektedir. Kullanıcı <xref:System.Windows.Forms.DataGridView> denetimin yeni satırına <xref:System.Windows.Forms.BindingSource.AddingNew> tıkladığında olay tetiklenir. Olay işleyicisi, <xref:System.ComponentModel.AddingNewEventArgs.NewObject%2A?displayProperty=nameWithType> özelliğine atanan yeni `DemoCustomer` bir nesne oluşturur. Bu, yeni `DemoCustomer` nesnenin <xref:System.Windows.Forms.BindingSource> bileşenin listesine eklenmesine ve <xref:System.Windows.Forms.DataGridView> denetimin yeni satırında görüntülenmesine neden olur.  
   
  [!code-cpp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.AddingNew#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.AddingNew/VB/form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Data System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Data, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -42,4 +42,4 @@ Kullandığınızda, bir <xref:System.Windows.Forms.BindingSource> bir Windows F
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)

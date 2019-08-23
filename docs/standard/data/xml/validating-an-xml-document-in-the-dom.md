@@ -9,78 +9,78 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589856"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939404"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM’da XML Belgesi Doğrulama
-<xref:System.Xml.XmlDocument> Sınıfı varsayılan olarak XML belge nesne modeli (DOM) içinde bir XML Şeması Tanım Dili (XSD) şeması veya belge türü tanımı (DTD'nin) karşı doğrulamaz; XML yalnızca doğru biçimlendirilmemiş doğrulanır.  
+<xref:System.Xml.XmlDocument> Sınıfı, varsayılan olarak bir XML şeması tanım dili (xsd) şemasına veya belge türü tanımına (DTD) göre belge nesne modeli (DOM) XML 'sini doğrulamaz; XML yalnızca iyi biçimlendirilmiş olarak doğrulanır.  
   
- Bu şema doğrulama geçirerek DOM'a gibi XML DOM doğrulamak için XML doğrulayabilirsiniz <xref:System.Xml.XmlReader> için <xref:System.Xml.XmlDocument.Load%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı veya kullanarakDOMdahaöncedoğrulanmamışbirXMLbelgesidoğrulama<xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı.  
+ Dom 'daki XML 'i doğrulamak için, <xref:System.Xml.XmlReader> <xref:System.Xml.XmlDocument> sınıfın <xref:System.Xml.XmlDocument.Load%2A> yöntemine bir şema doğrulaması geçirerek XML 'yi doğrulayabilir veya şunu kullanarak Dom'daöncedendoğrulanmamışbirXMLbelgesinidoğrulayabilirsiniz.sınıfının<xref:System.Xml.XmlDocument.Validate%2A>yöntemi. <xref:System.Xml.XmlDocument>  
   
-## <a name="validating-an-xml-document-as-it-is-loaded-into-the-dom"></a>DOM'da yüklü şekilde bir XML belgesi doğrulama  
- <xref:System.Xml.XmlDocument> Sınıfı doğrular XML verileri doğrularken bir DOM'da yüklü <xref:System.Xml.XmlReader> geçirilir <xref:System.Xml.XmlDocument.Load%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı.  
+## <a name="validating-an-xml-document-as-it-is-loaded-into-the-dom"></a>DOM 'a yüklenen bir XML belgesini doğrulama  
+ Sınıfı, sınıfının<xref:System.Xml.XmlDocument> yöntemine bir doğrulama <xref:System.Xml.XmlReader> <xref:System.Xml.XmlDocument.Load%2A> geçirildiğinde Dom 'a yüklendiğinde XML verilerini doğrular. <xref:System.Xml.XmlDocument>  
   
- Doğrulama başarıyla tamamlandıktan sonra şema varsayılanları uygulanır, metin değerleri atomik değerleri gereken şekilde dönüştürülür ve tür bilgileri doğrulanmış bilgi öğeleri ile ilişkilidir. Sonuç olarak, daha önce türü belirsiz XML veri türü belirtilmiş XML veri değiştirir.  
+ Başarılı doğrulamadan sonra, şema Varsayılanları uygulandıktan sonra, metin değerleri, gereken şekilde atomik değerlere dönüştürülür ve tür bilgileri, doğrulanan bilgi öğeleriyle ilişkilendirilir. Sonuç olarak, yazılan XML verileri önceden türsüz XML verilerinin yerini alır.  
   
-### <a name="creating-an-xml-schema-validating-xmlreader"></a>Bir XML oluşturma XmlReader şema doğrulanıyor  
- Bir XML Şeması-doğrulama oluşturmak için <xref:System.Xml.XmlReader>, şu adımları izleyin.  
+### <a name="creating-an-xml-schema-validating-xmlreader"></a>XML şeması-doğrulama XmlReader oluşturma  
+ XML şeması doğrulama <xref:System.Xml.XmlReader>oluşturmak için aşağıdaki adımları izleyin.  
   
-1. Yeni bir oluşturmak <xref:System.Xml.XmlReaderSettings> örneği.  
+1. Yeni <xref:System.Xml.XmlReaderSettings> bir örnek oluşturun.  
   
-2. Bir XML şeması eklemek <xref:System.Xml.XmlReaderSettings.Schemas%2A> özelliği <xref:System.Xml.XmlReaderSettings> örneği.  
+2. <xref:System.Xml.XmlReaderSettings.Schemas%2A> Örneğin özelliğine<xref:System.Xml.XmlReaderSettings> bir XML şeması ekleyin.  
   
-3. Belirtin `Schema` olarak <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. Olarak belirtin `Schema`. <xref:System.Xml.XmlReaderSettings.ValidationType%2A>  
   
-4. İsteğe bağlı olarak belirtin <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> ve <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> şema doğrulama hataları ve Uyarıları doğrulama sırasında karşılaşılan işlemek için.  
+4. İsteğe bağlı <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> olarak şema <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> doğrulama hatalarını ve doğrulama sırasında karşılaşılan uyarıları işlemek için belirtin.  
   
-5. Son olarak, geçirmek <xref:System.Xml.XmlReaderSettings> nesnesini <xref:System.Xml.XmlReader.Create%2A> yöntemi <xref:System.Xml.XmlReader> şema doğrulama oluşturma, bir XML belgesi sınıfıyla <xref:System.Xml.XmlReader>.  
+5. Son olarak, <xref:System.Xml.XmlReaderSettings> nesneyi <xref:System.Xml.XmlReader.Create%2A> XML belgesiyle birlikte <xref:System.Xml.XmlReader> sınıf yöntemine geçirin ve şema doğrulaması <xref:System.Xml.XmlReader>oluşturun.  
   
 ### <a name="example"></a>Örnek  
- Şema doğrulama, aşağıdaki kod örneğinde <xref:System.Xml.XmlReader> DOM'a XML verileri doğrulama Geçersiz değişiklik XML belgeye yapılan ve belgeyi daha sonra şema doğrulama hataları neden yeniden doğrulanır. Son olarak, bir hata düzeltildi ve sonra XML belgesi bir parçası kısmen doğrulanır.  
+ Aşağıdaki kod örneğinde, bir şema doğrulama <xref:System.Xml.XmlReader> , Dom 'a yüklenen XML verilerini doğrular. XML belgesinde geçersiz değişiklikler yapılmıştır ve belge yeniden doğrulandığından şema doğrulama hatalarına neden olur. Son olarak, hatalardan biri düzeltilir ve ardından XML belgesinin bir kısmı kısmen onaylanır.  
   
  [!code-cpp[XmlDocumentValidation.Load#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlDocumentValidation.Load/CPP/XmlDocumentValidationExample.cpp#1)]
  [!code-csharp[XmlDocumentValidation.Load#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlDocumentValidation.Load/CS/XmlDocumentValidationExample.cs#1)]
  [!code-vb[XmlDocumentValidation.Load#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlDocumentValidation.Load/VB/XmlDocumentValidationExample.vb#1)]  
   
- Örnek alan `contosoBooks.xml` dosya giriş olarak.  
+ Örnek, `contosoBooks.xml` dosyayı giriş olarak alır.  
   
  [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]  
   
- Bu örnek ayrıca alır `contosoBooks.xsd` dosya giriş olarak.  
+ Örnek ayrıca `contosoBooks.xsd` dosyayı giriş olarak alır.  
   
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
- DOM'a yüklü XML verileri doğrularken aşağıdaki noktaları dikkate alın  
+ DOM 'a yüklendiğinde XML verilerini doğrularken aşağıdakileri göz önünde bulundurun.  
   
-- Yukarıdaki örnekte, <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> geçersiz bir türe karşılaşıldığında çağrılır. Varsa bir <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> doğrulanmasını temel ayarlanmadı <xref:System.Xml.XmlReader>e <xref:System.Xml.Schema.XmlSchemaValidationException> oluşan <xref:System.Xml.XmlDocument.Load%2A> herhangi bir öznitelik veya öğenin türü doğrulama şemasında belirtilen karşılık gelen türü eşleşmiyorsa çağrılır.  
+- Yukarıdaki örnekte,, <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> her geçersiz bir tür ile karşılaşıldığında çağrılır. Doğrulama üzerinde ayarlanmamışsa, bir öznitelik veya öğe türü, <xref:System.Xml.Schema.XmlSchemaValidationException> doğrulama şemasında belirtilen karşılık gelen türle eşleşmezse çağrıldığında bir atılır. <xref:System.Xml.XmlDocument.Load%2A> <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> <xref:System.Xml.XmlReader>  
   
-- Ne zaman bir XML belgesi yüklendiği içine bir <xref:System.Xml.XmlDocument> varsayılan değerlerini tanımlayan ilişkili bir şeması ile nesne <xref:System.Xml.XmlDocument> bu varsayılan XML belgesinde göründüyse gibi davranır. Diğer bir deyişle <xref:System.Xml.XmlReader.IsEmptyElement%2A> özelliği her zaman döndürür `false` şemadan varsayılan bir öğe için. XML belgesinde boş bir öğe olarak yazılmış olsa bile.  
+- Bir XML belgesi, varsayılan değerleri tanımlayan ilişkili <xref:System.Xml.XmlDocument> bir şemaya sahip bir nesneye yüklendiğinde, bu varsayılan değerleri <xref:System.Xml.XmlDocument> XML belgesinde görünmiş gibi davranır. Bu, <xref:System.Xml.XmlReader.IsEmptyElement%2A> özelliğin varsayılan olarak şemadan alınan `false` bir öğe için her zaman döndürdüğü anlamına gelir. XML belgesinde bile, boş bir öğe olarak yazılmıştır.  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>DOM’da XML Belgesi Doğrulama  
- <xref:System.Xml.XmlDocument.Validate%2A> Yöntemi <xref:System.Xml.XmlDocument> sınıfı DOM şemalarda karşı yüklenen XML verileri doğrular <xref:System.Xml.XmlDocument> nesnenin <xref:System.Xml.XmlDocument.Schemas%2A> özelliği. Doğrulama başarıyla tamamlandıktan sonra şema varsayılanları uygulanır, metin değerleri atomik değerleri gereken şekilde dönüştürülür ve tür bilgileri doğrulanmış bilgi öğeleri ile ilişkilidir. Sonuç olarak, daha önce türü belirsiz XML veri türü belirtilmiş XML veri değiştirir.  
+ Sınıfının yöntemi, Dom 'da yüklenen XML verilerini <xref:System.Xml.XmlDocument> nesnenin <xref:System.Xml.XmlDocument.Schemas%2A> özelliğindeki şemalara karşı doğrular. <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.XmlDocument> Başarılı doğrulamadan sonra, şema Varsayılanları uygulandıktan sonra, metin değerleri, gereken şekilde atomik değerlere dönüştürülür ve tür bilgileri, doğrulanan bilgi öğeleriyle ilişkilendirilir. Sonuç olarak, yazılan XML verileri önceden türsüz XML verilerinin yerini alır.  
   
- Aşağıdaki örnekte, "Doğrulama bir XML belge olarak bu olan yüklenen içine DOM" örneğe benzerdir. Bu örnekte, XML belgesi doğrulanmadı DOM'da yüklenir ancak DOM'da yüklendikten sonra bunun yerine doğrulanır kullanarak <xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı. <xref:System.Xml.XmlDocument.Validate%2A> Yöntemi, XML belgesi içindeki XML şemalarına göre doğrular <xref:System.Xml.XmlDocument.Schemas%2A> özelliği <xref:System.Xml.XmlDocument>. Geçersiz değişiklik sonra XML belgeye yapılan ve belgeyi daha sonra şema doğrulama hataları neden yeniden doğrulanır. Son olarak, bir hata düzeltildi ve sonra XML belgesi bir parçası kısmen doğrulanır.  
+ Aşağıdaki örnek, yukarıdaki "DOM 'a yüklenen bir XML belgesini doğrulama" içindeki örneğe benzerdir. Bu örnekte, XML belgesi Dom 'a yüklendiği için doğrulanmaz, ancak bunun yerine, <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.XmlDocument> sınıfının yöntemi kullanılarak Dom 'a yüklendikten sonra onaylanır. Yöntemi, XML belgesini öğesinin <xref:System.Xml.XmlDocument.Schemas%2A> <xref:System.Xml.XmlDocument>özelliğinde yer alan XML şemalarına karşı doğrular. <xref:System.Xml.XmlDocument.Validate%2A> Daha sonra XML belgesinde geçersiz değişiklikler yapılmıştır ve belge yeniden doğrulandığından şema doğrulama hatalarına neden olur. Son olarak, hatalardan biri düzeltilir ve ardından XML belgesinin bir kısmı kısmen onaylanır.  
   
  [!code-csharp[XmlDocumentValidation.Validate#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlDocumentValidation.Validate/CS/XmlDocumentValidationExample.cs#1)]
  [!code-vb[XmlDocumentValidation.Validate#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlDocumentValidation.Validate/VB/XmlDocumentValidationExample.vb#1)]  
   
- Giriş olarak örnek alır `contosoBooks.xml` ve `contosoBooks.xsd` dosyaları adlandırılan "Doğrulama bir XML belge olarak bu olduğundan yüklenen içine DOM" Yukarıdaki.  
+ Örnek, `contosoBooks.xml` ve `contosoBooks.xsd` dosyalarını yukarıdaki "Dom 'a yüklendiği şekilde bir XML belgesini doğrulamak" olarak adlandırılan giriş olarak alır.  
   
-## <a name="handling-validation-errors-and-warnings"></a>Doğrulama hataları ve Uyarıları işleme  
- DOM'da XML verileri doğrulamak için yüklü XML şema doğrulama hataları bildirilen XML verilerini yüklenmekte veya daha önce doğrulanmamış bir XML belgesi doğrulama sırasında doğrulanırken bulunan tüm şema doğrulama hataları hakkında bilgilendirilirsiniz.  
+## <a name="handling-validation-errors-and-warnings"></a>Doğrulama hatalarını ve uyarılarını işleme  
+ DOM 'da yüklenen XML verileri doğrulanırken XML şema doğrulama hataları raporlanır. XML verileri yüklenirken bulunan tüm şema doğrulama hataları veya daha önce doğrulanmamış bir XML belgesi doğrulanırken bildirim alırsınız.  
   
- Doğrulama hataları tarafından işlenmesini <xref:System.Xml.Schema.ValidationEventHandler>. Varsa bir <xref:System.Xml.Schema.ValidationEventHandler> atandığı <xref:System.Xml.XmlReaderSettings> örneği veya geçirilen <xref:System.Xml.XmlDocument.Validate%2A> yöntemi <xref:System.Xml.XmlDocument> sınıfı <xref:System.Xml.Schema.ValidationEventHandler> şema doğrulama hataları işleyecek; Aksi takdirde bir <xref:System.Xml.Schema.XmlSchemaValidationException> şema doğrulaması olduğunda tetiklenir hatayla karşılaştı.  
+ Doğrulama hataları tarafından <xref:System.Xml.Schema.ValidationEventHandler>işlenir. Bir <xref:System.Xml.Schema.ValidationEventHandler> <xref:System.Xml.XmlReaderSettings> örneği, örneğe atandıysa veya <xref:System.Xml.XmlDocument> sınıfının <xref:System.Xml.XmlDocument.Validate%2A> <xref:System.Xml.Schema.XmlSchemaValidationException> yöntemine geçirilirse, şema doğrulama hatalarını işler; Aksi takdirde bir şema doğrulaması olduğunda tetiklenir <xref:System.Xml.Schema.ValidationEventHandler> hatayla karşılaşıldı.  
   
 > [!NOTE]
->  XML verilerinin şema doğrulama hataları rağmen DOM sürece yüklendiği, <xref:System.Xml.Schema.ValidationEventHandler> işlemini durdurmak için bir özel durum oluşturur.  
+> XML verileri, işlemi durdurmak için bir özel durum <xref:System.Xml.Schema.ValidationEventHandler> harekete geçirmediği sürece şema doğrulama hatalarına rağmen Dom 'a yüklenir.  
 >   
->  Şema doğrulama uyarıları sürece bildirilmez <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> bayrağı belirtilen <xref:System.Xml.XmlReaderSettings> nesne.  
+>  <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> Bayrak <xref:System.Xml.XmlReaderSettings> nesneye belirtilmediği takdirde şema doğrulama uyarıları bildirilmemiştir.  
   
- Gösteren örnekler için <xref:System.Xml.Schema.ValidationEventHandler>, "Doğrulama bir XML belge olarak bu olduğundan yüklenen içine DOM" ve "Doğrulama bir XML belgesi, DOM" Yukarıdaki bakın.  
+ <xref:System.Xml.Schema.ValidationEventHandler>' İ gösteren örnekler için, yukarıdaki "Dom 'a yüklenen bir XML belgesini doğrulama" ve "Dom 'da bir XML belgesi doğrulama" bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

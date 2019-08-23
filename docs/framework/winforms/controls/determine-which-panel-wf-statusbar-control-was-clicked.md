@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053716"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965715"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Nasıl yapılır: Windows Forms StatusBar Denetiminde Hangi Panele Tıklandığını Belirleme
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> Ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetler; ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri korunur geriye dönük uyumluluk ve gelecekte kullanım için varsa, ' ı seçin.  
+> <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Ve denetimleri, vedenetimlerine<xref:System.Windows.Forms.StatusBarPanel> işlevsellik ekler ve bunları ekler; ancak, ve denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.ToolStripStatusLabel> 'yu.  
   
- Programa [StatusBar denetimine](statusbar-control-windows-forms.md) denetim bir case deyimi içinde kullanıcının tıklamalarına yanıt verme kullanılacağı <xref:System.Windows.Forms.StatusBar.PanelClick> olay. Tıklandı başvuru içeren bir bağımsız değişken (paneli bağımsız) olayı içeren <xref:System.Windows.Forms.StatusBarPanel>. Bu başvuruyu kullanarak dizini tıklanan paneli belirleme ve buna göre program.  
+ [Durum denetimi](statusbar-control-windows-forms.md) denetimini Kullanıcı tıklamalarına yanıt verecek şekilde programlamak için <xref:System.Windows.Forms.StatusBar.PanelClick> olay içinde bir Case ifadesini kullanın. Olay, tıklanan <xref:System.Windows.Forms.StatusBarPanel>bir başvuruyu içeren bir bağımsız değişken (panel bağımsız değişkeni) içerir. Bu başvuruyu kullanarak, tıklanan panelin dizinini ve programla buna uygun olarak bir program belirleyebilirsiniz.  
   
 > [!NOTE]
->  Emin <xref:System.Windows.Forms.StatusBar> denetimin <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliği `true`.  
+> Denetimin özelliğinin olarak`true`ayarlandığından emin olun. <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> <xref:System.Windows.Forms.StatusBar>  
   
-### <a name="to-determine-which-panel-was-clicked"></a>Hangi panele tıklandığını belirleme  
+### <a name="to-determine-which-panel-was-clicked"></a>Hangi panelin tıklandığını belirleme  
   
-1. İçinde <xref:System.Windows.Forms.StatusBar.PanelClick> olay işleyicisi, kullanım bir `Select Case` (Visual Basic'te) veya `switch case` (Visual C# veya görsel C++) deyimini olay bağımsız değişkenleri tıklandı panelinde dizinini inceleyerek hangi panele tıklandığını belirleme.  
+1. `switch case` `Select Case` C# C++Olay işleyicisinde, olay bağımsız değişkenlerinde tıklatılan panelin dizinini inceleyerek hangi panelin tıklandığını belirleyen bir (Visual Basic) veya (görsel veya görsel) ifadesini kullanın. <xref:System.Windows.Forms.StatusBar.PanelClick>  
   
-     Aşağıdaki kod örneği form üzerindeki varlığı gerektiren bir <xref:System.Windows.Forms.StatusBar> denetimi `StatusBar1`ve iki <xref:System.Windows.Forms.StatusBarPanel> nesneleri `StatusBarPanel1` ve `StatusBarPanel2`.  
+     Aşağıdaki kod örneği <xref:System.Windows.Forms.StatusBar> , bir `StatusBar1`denetim,, ve iki <xref:System.Windows.Forms.StatusBarPanel> nesne `StatusBarPanel1` ve `StatusBarPanel2`için varlık gerektirir.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "66053716"
        }  
     ```  
   
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
+     (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

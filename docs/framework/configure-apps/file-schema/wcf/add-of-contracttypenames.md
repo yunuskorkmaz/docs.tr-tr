@@ -2,15 +2,15 @@
 title: <add> / <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24f1478b99aef909ae93f87a70be257e9ba10d7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701196"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926743"
 ---
-# <a name="add-of-contracttypenames"></a>\<Ekle >, \<contractTypeNames >
-Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullanılan ölçütü belirtir bir yapılandırma öğesi. Birden fazla sözleşme adı belirtilmezse, yalnızca hizmet uç noktaları tüm sözleşmelerin eşleşen gönderecektir. Windows Communication Foundation (WCF), bir uç nokta yalnızca bir sözleşme destekleyebileceğini unutmayın.  
+# <a name="add-of-contracttypenames"></a>\<\<ContractTypeNames > > ekleyin
+Aranmakta olan hizmetlerin sözleşme adını ve genellikle bir hizmet ararken kullanılan kriterleri belirten bir yapılandırma öğesi. Birden fazla sözleşme adı belirtilmişse, yalnızca tüm sözleşmelerle eşleşen hizmet uç noktaları yanıtlanacak. Windows Communication Foundation (WCF) ' de bir uç noktanın yalnızca bir sözleşmeyi destekleyebileceğini unutmayın.  
   
  \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -48,8 +48,8 @@ Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullan�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Sözleşme türü adını belirten dize.|  
-|ad alanı|Sözleşme türünün ad alanını belirten bir dize.|  
+|name|Anlaşma türünün adını belirten bir dize.|  
+|ad alanı|Anlaşma türünün ad alanını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -58,7 +58,7 @@ Sözleşme adı Aranan Hizmetleri ve genellikle bir hizmet için ararken kullan�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<contractTypeNames >](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Sözleşme türü adları koleksiyonu.|  
+|[\<contractTypeNames >](contracttypenames.md)|Bir anlaşma türü adı koleksiyonu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

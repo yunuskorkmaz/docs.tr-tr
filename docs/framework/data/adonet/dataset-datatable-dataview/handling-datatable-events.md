@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953263"
 ---
 # <a name="handling-datatable-events"></a>DataTable Olaylarını İşleme
-<xref:System.Data.DataTable> Nesnesi, bir uygulama tarafından işlenebilen bir olay serisi olarak sağlar. Aşağıdaki tabloda açıklanmıştır `DataTable` olayları.  
+Nesnesi <xref:System.Data.DataTable> , bir uygulama tarafından işlenebilmesi için bir dizi olay sağlar. Aşağıdaki tabloda olayları açıklanmaktadır `DataTable` .  
   
 |Olay|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Data.DataTable.Initialized>|Sonra oluşan <xref:System.Data.DataTable.EndInit%2A> yöntemi bir `DataTable` çağrılır. Bu olay, öncelikle tasarım zamanı senaryoları desteklemek üzere tasarlanmıştır.|  
-|<xref:System.Data.DataTable.ColumnChanged>|Bir değer olarak başarıyla değiştirildikten sonra gerçekleşir bir <xref:System.Data.DataColumn>.|  
-|<xref:System.Data.DataTable.ColumnChanging>|İçin bir değer gönderildi oluşur bir `DataColumn`.|  
-|<xref:System.Data.DataTable.RowChanged>|Sonra oluşan bir `DataColumn` değeri veya <xref:System.Data.DataRow.RowState%2A> , bir <xref:System.Data.DataRow> içinde `DataTable` başarıyla değiştirildi.|  
-|<xref:System.Data.DataTable.RowChanging>|İçin bir değişiklik gönderildiğinde gerçekleşir bir `DataColumn` değeri veya `RowState` , bir `DataRow` içinde `DataTable`.|  
-|<xref:System.Data.DataTable.RowDeleted>|Sonra oluşan bir `DataRow` içinde `DataTable` işaretlendi `Deleted`.|  
-|<xref:System.Data.DataTable.RowDeleting>|Öncesinde gerçekleşir bir `DataRow` içinde `DataTable` olarak işaretlenmiş `Deleted`.|  
-|<xref:System.Data.DataTable.TableCleared>|Çağrısı yapıldıktan sonra gerçekleşir <xref:System.Data.DataTable.Clear%2A> yöntemi `DataTable` başarıyla çözüldü her `DataRow`.|  
-|<xref:System.Data.DataTable.TableClearing>|Sonra oluşan `Clear` yöntemi önce çağrılır `Clear` işlemi başlar.|  
-|<xref:System.Data.DataTable.TableNewRow>|Yeni bir sonra gerçekleşir `DataRow` bir çağrı tarafından oluşturulan `NewRow` yöntemi `DataTable`.|  
-|<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Gerçekleşir, `DataTable` olduğu `Disposed`. Devralınan <xref:System.ComponentModel.MarshalByValueComponent>.|  
+|<xref:System.Data.DataTable.Initialized>|Bir a <xref:System.Data.DataTable.EndInit%2A> `DataTable` yöntemi çağrıldıktan sonra gerçekleşir. Bu olay öncelikle tasarım zamanı senaryolarını desteklemeye yöneliktir.|  
+|<xref:System.Data.DataTable.ColumnChanged>|Bir değer bir <xref:System.Data.DataColumn>içinde başarıyla değiştirildikten sonra gerçekleşir.|  
+|<xref:System.Data.DataTable.ColumnChanging>|İçin bir değer gönderildiğinde gerçekleşir `DataColumn`.|  
+|<xref:System.Data.DataTable.RowChanged>|İçindeki `DataColumn` <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRow> bir değer veya öğesinin bir değeri başarıyla değiştirildikten sonra gerçekleşir. `DataTable`|  
+|<xref:System.Data.DataTable.RowChanging>|İçindeki `DataColumn` `RowState` birdeğer`DataRow` veya bir değeri için bir değişiklik gönderildiğinde gerçekleşir. `DataTable`|  
+|<xref:System.Data.DataTable.RowDeleted>|`DataRow` İçindeki bir öğesinden sonra olarak `Deleted`işaretlendiğinde gerçekleşir. `DataTable`|  
+|<xref:System.Data.DataTable.RowDeleting>|İçindeki bir `DataRow` , `DataTable` olarak `Deleted`işaretlenmeden önce gerçekleşir.|  
+|<xref:System.Data.DataTable.TableCleared>|Bir <xref:System.Data.DataTable.Clear%2A> `DataRow`yöntemine `DataTable` yapılan bir çağrı başarıyla temizlendikten sonra gerçekleşir.|  
+|<xref:System.Data.DataTable.TableClearing>|`Clear` Yöntem çağrıldıktan sonra, ancak `Clear` işlem başlamadan önce oluşur.|  
+|<xref:System.Data.DataTable.TableNewRow>|Metodu içinbir`DataRow` çağrısıyla yeni bir oluşturulduktan sonra gerçekleşir. `DataTable` `NewRow`|  
+|<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|`DataTable` Olduğunda`Disposed`gerçekleşir. Devralındığı <xref:System.ComponentModel.MarshalByValueComponent>yer.|  
   
 > [!NOTE]
->  Ekleme veya satırları silmek işlemlerinin çoğu değil yükseltmek `ColumnChanged` ve `ColumnChanging` olayları. Ancak, `ReadXml` başlatma yöntemi `ColumnChanged` ve `ColumnChanging` olayları sürece `XmlReadMode` ayarlanır `DiffGram` veya `Auto` okunan XML belgesi olduğunda bir `DiffGram`.  
+> Satırları ekleyen veya silen çoğu işlem `ColumnChanged` ve `ColumnChanging` olaylarını oluşturmaz. `DiffGram` `ColumnChanged` `ColumnChanging` `XmlReadMode` `ReadXml` Ancak, veya, okunan xml belgesi bir`Auto` olduğunda veya olarak ayarlanmadığı takdirde yöntemi, ve olayları yükseltir. `DiffGram`  
   
 > [!WARNING]
->  Veri bozulması meydana gelebilir veri değiştirilirse bir `DataSet` içinden `RowChanged` olayı oluşturulur. Bu tür veri bozulması meydana gelirse hiçbir özel durum oluşturulur.  
+>  Veriler, `DataSet` `RowChanged` olayın oluşturulduğu bir içinde değiştirilirse veri bozulması meydana gelebilir. Böyle bir veri bozulması oluşursa, hiçbir özel durum oluşturulmaz.  
   
-## <a name="additional-related-events"></a>Ek ilgili olaylar  
- <xref:System.Data.DataTable.Constraints%2A> Özelliği içeren bir <xref:System.Data.ConstraintCollection> örneği. <xref:System.Data.ConstraintCollection> Sınıfı kullanıma sunan bir <xref:System.Data.ConstraintCollection.CollectionChanged> olay. Kısıtlama eklendiğinde, değiştirildiğinde veya kaldırıldığında, bu olay harekete `ConstraintCollection`.  
+## <a name="additional-related-events"></a>Diğer Ilgili olaylar  
+ <xref:System.Data.DataTable.Constraints%2A> Özelliği bir<xref:System.Data.ConstraintCollection> örneği barındırır. <xref:System.Data.ConstraintCollection> Sınıfı bir<xref:System.Data.ConstraintCollection.CollectionChanged> olay gösterir. Bu olay, `ConstraintCollection`bir kısıtlama eklendiğinde, değiştirildiğinde veya öğesinden kaldırıldığında ateşlenir.  
   
- <xref:System.Data.DataTable.Columns%2A> Özelliği içeren bir <xref:System.Data.DataColumnCollection> örneği. `DataColumnCollection` Sınıfı kullanıma sunan bir <xref:System.Data.DataColumnCollection.CollectionChanged> olay. Bu olay tetiklenen bir `DataColumn` eklendiğinde, değiştirildiğinde veya kaldırıldığında `DataColumnCollection`. Olayın ateşlenmesine neden olan değişiklikleri, ad, tür, ifade veya sıralı bir sütun konumunu değişiklikleri içerir.  
+ <xref:System.Data.DataTable.Columns%2A> Özelliği bir<xref:System.Data.DataColumnCollection> örneği barındırır. `DataColumnCollection` Sınıfı bir<xref:System.Data.DataColumnCollection.CollectionChanged> olay gösterir. Bu olay, `DataColumnCollection`' den `DataColumn` eklendiğinde, değiştirildiğinde veya kaldırıldığında ateşlenir. Etkinliğin tetiklenmesine neden olan değişiklikler, bir sütunun ad, tür, ifade veya sıra konumunda değişiklikler içerir.  
   
- <xref:System.Data.DataSet.Tables%2A> Özelliği bir <xref:System.Data.DataSet> tutan bir <xref:System.Data.DataTableCollection> örneği. `DataTableCollection` Sınıfı gösterir hem de bir `CollectionChanged` ve `CollectionChanging` olay. Bu olaylar olduğunda harekete bir `DataTable` eklendiğinde veya kaldırıldığında `DataSet`.  
+ <xref:System.Data.DataSet.Tables%2A> Öğesinin özelliği bir<xref:System.Data.DataTableCollection> örneği barındırır. <xref:System.Data.DataSet> Sınıfı hem a `CollectionChanged` hem de bir `CollectionChanging` olay gösterir. `DataTableCollection` Bu olaylar, `DataSet`öğesine eklendiğinde `DataTable` veya öğesine kaldırıldığında harekete geçolur.  
   
- Değişikliklerini `DataRows` Ayrıca ilişkili olayları tetikleyebilir <xref:System.Data.DataView>. `DataView` Sınıfı kullanıma sunan bir <xref:System.Data.DataView.ListChanged> tetiklenen olayı bir `DataColumn` değer değişiklikleri ya da görünümün oluşturma veya sıralama düzeni değiştiğinde. <xref:System.Data.DataRowView> Sınıfı kullanıma sunan bir <xref:System.Data.DataRowView.PropertyChanged> ilişkili bir kıldığında tetikler olay `DataColumn` değişiklikleri değeri.  
+ ' De yapılan değişiklikler <xref:System.Data.DataView> ,ilişkiliolanolaylarıdatetikleyebilir.`DataRows` Sınıfı, <xref:System.Data.DataView.ListChanged> bir`DataColumn` değer değiştiğinde veya görünümün kompozisyonu veya sıralama düzeni değiştiğinde tetiklenen bir olay gösterir. `DataView` Sınıfı <xref:System.Data.DataRowView> , <xref:System.Data.DataRowView.PropertyChanged> ilişkili`DataColumn` bir değer değiştiğinde harekete gelen bir olay gösterir.  
   
-## <a name="sequence-of-operations"></a>İşlem dizisi  
- Ortaya çıkan işlemlerin sırasını İşte olduğunda bir `DataRow` eklenen, değiştirilecek veya silinecek:  
+## <a name="sequence-of-operations"></a>Işlem sırası  
+ Eklendiğinde, değiştirildiğinde veya silindiğinde oluşan `DataRow` işlemlerin sırası aşağıda verilmiştir:  
   
-1. Önerilen kayıt oluşturmak ve değişiklikleri uygulayın.  
+1. Önerilen kaydı oluşturun ve tüm değişiklikleri uygulayın.  
   
-2. Denetim kısıtlamaları ifade olmayan sütunları için.  
+2. İfade olmayan sütunlar için kısıtlamaları denetleyin.  
   
-3. Raise `RowChanging` veya `RowDeleting` olaylar olarak uygulanabilir.  
+3. `RowChanging` Veya`RowDeleting` olaylarını uygun şekilde yükseltin.  
   
-4. Önerilen kayıt geçerli kayıt olacak şekilde ayarlayın.  
+4. Önerilen kaydı geçerli kayıt olarak ayarlayın.  
   
-5. İlişkili tüm dizinlerin güncelleştirin.  
+5. İlişkili dizinleri güncelleştirin.  
   
-6. Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` nesneleri.  
+6. İlişkili `ListChanged` nesneler için `DataView` ilişkili`DataRowView` nesneler ve `PropertyChanged` olaylar için olaylar oluştur.  
   
-7. Ancak bu sütunlarda kısıtlama denetimi gecikme tüm ifade sütunları değerlendirin.  
+7. Tüm ifade sütunlarını değerlendirin, ancak bu sütunlardaki kısıtlamaların denetimini erteler.  
   
-8. Raise `ListChanged` olayları ilişkili `DataView` nesneleri ve `PropertyChanged` olayları ilişkili `DataRowView` ifade sütunu değerlendirmeleri tarafından etkilenen nesneler.  
+8. İfade `ListChanged` sütunu değerlendirmelerinin `DataView` etkilediği ilişkili `PropertyChanged` `DataRowView` nesneler için ilişkili nesneler ve olaylar için olaylar oluştur.  
   
-9. Raise `RowChanged` veya `RowDeleted` olaylar olarak uygulanabilir.  
+9. `RowChanged` Veya`RowDeleted` olaylarını uygun şekilde yükseltir.  
   
-10. İfade sütunları kısıtlamalar kontrol edin.  
+10. İfade sütunlarındaki kısıtlamaları denetleyin.  
   
 > [!NOTE]
->  İfade sütunları değişiklikler hiçbir zaman yükseltmek `DataTable` olayları. İfade sütunları değişiklikler yalnızca yükseltmek `DataView` ve `DataRowView` olayları. İfade sütunları bağımlılıkları diğer birden çok sütuna sahip olabilir ve tek bir sırasında birden çok kez değerlendirilebilir `DataRow` işlemi. Olayları ve tek bir her ifade değerlendirmesi başlatır `DataRow` işlemi birden çok yükseltmek `ListChanged` ve `PropertyChanged` ifade sütunları etkilendiğinde büyük olasılıkla aynı ifade sütunu için birden çok olayı dahil olmak üzere olayları.  
+> İfade sütunlarındaki değişiklikler hiçbir şekilde olay `DataTable` oluşturmaz. İfade sütunlarındaki değişiklikler yalnızca ve `DataView` `DataRowView` olayları yükseltir. İfade sütunlarının birden fazla sütuna bağımlılığı olabilir ve tek `DataRow` bir işlem sırasında birden çok kez değerlendirilebilirler. Her ifade değerlendirmesi olayları başlatır ve tek `DataRow` bir işlem, ifade sütunları etkileniyorsa, büyük olasılıkla aynı ifade sütunu için birden çok olay da dahil olmak üzere birden çok `ListChanged` ve `PropertyChanged` olay oluşturabilir.  
   
 > [!WARNING]
->  Throw değil bir <xref:System.NullReferenceException> içinde `RowChanged` olay işleyicisi. Varsa bir <xref:System.NullReferenceException> içinde oluşturulan `RowChanged` olayı bir `DataTable`, ardından `DataTable` bozulacaktır.  
+>  Olay`RowChanged` işleyicisi içinde oluşturma <xref:System.NullReferenceException> . Bir a `RowChanged` olayı `DataTable` <xref:System.NullReferenceException> içindeoluşturulursa,budurumda`DataTable`, bozuk olur.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, için olay işleyicilerini oluşturma gösterilmektedir `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared`, ve `TableClearing` olayları. Bu başlatıldığında her olay işleyicisi çıkış konsol penceresinde görüntüler.  
+ `RowChanged`Aşağıdaki örnek ,`ColumnChanged` `RowChanging` ,,`TableCleared`,,,,, ve`TableClearing` olayları için olay işleyicilerinin nasıl oluşturulacağını göstermektedir. `RowDeleted` `RowDeleting` `ColumnChanging` `TableNewRow` Her olay işleyicisi, tetiklendiğinde konsol penceresinde çıktıyı görüntüler.  
   
  [!code-csharp[DataWorks DataTable.Events#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.Events/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
@@ -84,4 +84,4 @@ ms.locfileid: "62034313"
 - [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [DataAdapter Olaylarını İşleme](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [DataSet Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

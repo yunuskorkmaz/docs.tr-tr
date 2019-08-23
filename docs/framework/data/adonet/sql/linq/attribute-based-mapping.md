@@ -2,143 +2,143 @@
 title: Öznitelik Tabanlı Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964090"
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik Tabanlı Eşleme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL Server veritabanına eşleyen bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ya da uygulanan öznitelikleri veya bir dış eşleme dosyası kullanarak nesne modeli. Bu konuda, öznitelik tabanlı yaklaşım açıklanmaktadır.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]öznitelikleri uygulayarak veya bir dış eşleme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dosyası kullanarak bir SQL Server veritabanını nesne modeliyle eşler. Bu konu, öznitelik tabanlı yaklaşımı özetler.  
   
- En basit formunda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanına eşleyen bir <xref:System.Data.Linq.DataContext>, bir sınıf, sütunları ve söz konusu sınıfın özelliklerini ilişkileri bir tablo. Öznitelikler, devralma hiyerarşisi, nesne modelinde eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ En basit formunda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , bir veritabanını bir <xref:System.Data.Linq.DataContext>, bir sınıfa, bir tabloya ve sütunları ve bu sınıfların özellikleriyle ilişkilerini eşler. Öznitelikleri, nesne modelinizdeki devralma hiyerarşisini eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
   
- Genellikle Visual Studio kullanan geliştiricilerin öznitelik tabanlı eşleme, Nesne İlişkisel Tasarımcısı kullanarak gerçekleştirin. SQLMetal komut satırı aracını da kullanabilirsiniz veya elle kod öznitelikleri kendiniz yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic'de nesne modeli oluşturmak veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Visual Studio kullanan geliştiriciler genellikle Nesne İlişkisel Tasarımcısı kullanarak öznitelik tabanlı eşleme gerçekleştirir. Ayrıca, SQLMetal komut satırı aracını kullanabilir veya öznitelikleri kendiniz kodlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
   
 > [!NOTE]
->  Ayrıca, dış bir XML dosyası kullanarak da eşleştirebilirsiniz. Daha fazla bilgi için [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Ayrıca, bir dış XML dosyası kullanarak da eşleyebilirsiniz. Daha fazla bilgi için bkz. [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
- Aşağıdaki bölümlerde öznitelik tabanlı eşleme daha ayrıntılı açıklanmaktadır. Daha fazla bilgi için <xref:System.Data.Linq.Mapping> ad alanı.  
+ Aşağıdaki bölümlerde, öznitelik tabanlı eşleme daha ayrıntılı olarak açıklanır. Daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping> . ad alanı.  
   
 ## <a name="databaseattribute-attribute"></a>DatabaseAttribute özniteliği  
- Bu öznitelik, bir ad tarafından bağlantı sağlanamadığında veritabanının varsayılan adını belirtmek için kullanın. Bu öznitelik isteğe bağlıdır, ancak bunu kullanırsanız, uygulamalısınız <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> aşağıdaki tabloda açıklandığı gibi özellik.  
+ Bağlantı tarafından bir ad sağlanmadığında veritabanının varsayılan adını belirtmek için bu özniteliği kullanın. Bu öznitelik isteğe bağlıdır, ancak kullanıyorsanız, aşağıdaki tabloda açıklandığı gibi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliğini uygulamanız gerekir.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bkz: <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|İle kullanılan kendi <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği, veritabanı adını belirtir.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Dize|Bakýn<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> Özelliği ile birlikte kullanıldığında, veritabanının adını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute özniteliği  
- Bu öznitelik, bir sınıf, bir veritabanı tablosu veya görünümü ile ilişkili bir varlık sınıfı olarak belirlemek için kullanın. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu öznitelik kalıcı sınıfları olan sınıflar değerlendirir. Aşağıdaki tabloda açıklanmıştır <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> özelliği.  
+ Bir sınıfı bir veritabanı tablosu veya görünümüyle ilişkili bir varlık sınıfı olarak belirlemek için bu özniteliği kullanın. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Bu özniteliğe sahip sınıfları kalıcı sınıflar olarak değerlendirir. Aşağıdaki tabloda <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> özelliği açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|Dize|Sınıf adı olarak aynı dize|Bir sınıf, bir veritabanı tablosu ile ilişkili bir varlık sınıfı olarak belirler.|  
+|<xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>|Dize|Sınıf adıyla aynı dize|Bir sınıfı bir veritabanı tablosuyla ilişkili bir varlık sınıfı olarak belirler.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.TableAttribute>.  
   
 ## <a name="columnattribute-attribute"></a>ColumnAttribute özniteliği  
- Bu öznitelik, bir veritabanı tablosundaki bir sütunu temsil etmek için bir varlık sınıfı üyesi belirtmek için kullanın. Bu öznitelik herhangi bir alan veya özellik uygulayabilirsiniz.  
+ Bir veritabanı tablosundaki bir sütunu temsil etmek üzere bir varlık sınıfının bir üyesini belirlemek için bu özniteliği kullanın. Bu özniteliği herhangi bir alan veya özelliğe uygulayabilirsiniz.  
   
- Yalnızca sütunları alınır ve kalıcı olarak tanımlamak üyeleri olduğunda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değişiklikleri veritabanına kaydeder. Bu öznitelik olmadan üyeleri kalıcı olarak kabul edilir ve ekleme veya güncelleştirme için gönderilen değil.  
+ Yalnızca sütun olarak tanımlayabilen Üyeler veritabanına yapılan değişiklikleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kaydettiğinde alınır ve kalıcı hale getirilir. Bu özniteliği olmayan Üyeler kalıcı olmayan ve ekleme veya güncelleştirme için gönderilmemiş kabul edilir.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|hiçbir zaman|Ortak dil çalışma zamanı (CLR) değerini almak için INSERT nebo update işleminden sonra bildirir.<br /><br /> Seçenekler: Her zaman, hiçbir zaman, in, eklerken.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boole değeri|`true`|Bir sütunu null değerler içerebilir gösterir.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Dize|Çıkarsanan veritabanı sütun türü|Veritabanı türü ve değiştiriciler veritabanı sütununun türünü belirtmek için kullanır.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Dize|boş|Hesaplanan sütun, bir veritabanında tanımlar.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boole değeri|`false`|Bir sütun veritabanı otomatik oluşturur değerleri içerdiğini gösterir.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boole değeri|`false`|Sütun için bir ayrıştırıcı değeri içerdiğini gösterir bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Devralma Hiyerarşisi.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boole değeri|`false`|Bu sınıf üyesi veya tablonun birincil anahtarlar bir parçası olan bir sütunu temsil ettiğini belirtir.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boole değeri|`false`|Üyenin sütun türü, bir veritabanı zaman damgası veya sürüm numarası tanımlar.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, sürece <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> olduğu `true` bir üye|Belirtir nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iyimser eşzamanlılık çakışmaları algılama yaklaşıyor.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>|AutoSync|hiçbir zaman|Bir ekleme veya güncelleştirme işleminden sonra değeri almak için ortak dil çalışma zamanı (CLR) verir.<br /><br /> Seçenekler: Always, hiçbir zaman, OnUpdate, OnInsert.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boole değeri|`true`|Bir sütunun null değer içerebileceğini gösterir.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Dize|Çıkarılan veritabanı sütun türü|Veritabanı sütunu türünü belirtmek için veritabanı türlerini ve değiştiricilerini kullanır.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Dize|Olmamalıdır|Veritabanında hesaplanan sütunu tanımlar.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boole değeri|`false`|Bir sütunun, veritabanının otomatik olarak oluşturduğu değerleri içerdiğini belirtir.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boole değeri|`false`|Sütunun [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] devralma hiyerarşisi için bir Ayrıştırıcı değeri içerdiğini belirtir.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boole değeri|`false`|Bu sınıf üyesinin, tablonun birincil anahtarlarının bir parçası olan veya içeren bir sütunu temsil ettiğini belirtir.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boole değeri|`false`|Üyenin sütun türünü bir veritabanı zaman damgası veya sürüm numarası olarak tanımlar.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, üyesi <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> olmadığı `true` için|İyimser eşzamanlılık [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çakışmalarının algılanma yaklaşımının nasıl yapılacağını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, öznitelik AssociationAttribute.Storage özelliği için kullanılan değerleri başka bir yerde kod içinde kullanılan karşılık gelen özellik adları durum eşleştiğinden emin olun. Bu, tüm .NET programlama dillerinde, olanlar genellikle büyük Visual Basic dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> AssociationAttribute ve ColumnAttribute Storage Özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, AssociationAttribute. Storage özelliğinin özniteliğinde kullanılan değerlerin, kodun başka bir yerinde kullanılan ilgili özellik adları için büyük/küçük harf ile eşleştiğinden emin olun. Bu, genellikle büyük/küçük harf duyarlı olmayan, hatta Visual Basic dahil olmak üzere tüm .NET programlama dilleri için geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute özniteliği  
- Bu öznitelik, birincil anahtar ilişkisi için yabancı anahtar gibi veritabanındaki ilişkiyi temsil etmek için bir özellik atamak için kullanın. İlişkiler hakkında daha fazla bilgi için bkz. [nasıl yapılır: Veritabanı ilişkileri eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Bu özniteliği, veritabanındaki bir ilişkilendirmeyi temsil edecek bir özelliği (örneğin, birincil anahtar ilişkisine yabancı anahtar) belirlemek için kullanın. İlişkiler hakkında daha fazla bilgi için bkz [. nasıl yapılır: Veritabanı Ilişkilerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)eşleyin.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boole değeri|`false`|İlişkilendirme olarak ayarlandığında, yabancı anahtar üyeleri olan tüm NULL olmayan bir ilişkinin üzerinde yerleştirildiğinde, nesneyi siler null.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|None|Silme davranışını ilişkisi ekler.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boole değeri|`false`|TRUE ise, üye yabancı anahtar veritabanı ilişkisini gösteren bir ilişkilendirme olarak belirler.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boole değeri|`false`|TRUE ise bir yabancı anahtar benzersizlik kısıtlamasını gösterir.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Dize|İlgili sınıf kimliği|Bir veya daha fazla hedef varlık sınıfı üyeleri ilişkisinin diğer tarafındaki anahtar değerler olarak belirler.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|Dize|İçerilen sınıf kimliği|Bu varlık sınıfı üyeleri Birliği'nin bu tarafında anahtar değerlerini temsil edecek şekilde belirler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boole değeri|`false`|Yabancı anahtar üyeleri atanamayan bir ilişkiye yerleştirildiğinde, ilişkilendirme null olarak ayarlandığında nesneyi siler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Dize|Yok.|Bir ilişkiye silme davranışı ekler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boole değeri|`false`|True ise, üyeyi bir veritabanı ilişkisini temsil eden bir ilişkilendirmede yabancı anahtar olarak belirler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boole değeri|`false`|True ise yabancı anahtarda bir benzersizlik kısıtlamasını gösterir.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Dize|İlgili sınıfın KIMLIĞI|Hedef varlık sınıfının bir veya daha fazla üyesini, ilişkilendirmenin diğer tarafında anahtar değerler olarak belirler.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|Dize|Kapsayan sınıfın KIMLIĞI|İlişkilendirmenin bu tarafındaki anahtar değerlerini temsil etmek için bu varlık sınıfının üyelerini belirler.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  AssociationAttribute ve ColumnAttribute depolama özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, öznitelik AssociationAttribute.Storage özelliği için kullanılan değerleri başka bir yerde kod içinde kullanılan karşılık gelen özellik adları durum eşleştiğinden emin olun. Bu, tüm .NET programlama dillerinde, olanlar genellikle büyük Visual Basic dahil olmak üzere küçük harf duyarlı, olmayan geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+> AssociationAttribute ve ColumnAttribute Storage Özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, AssociationAttribute. Storage özelliğinin özniteliğinde kullanılan değerlerin, kodun başka bir yerinde kullanılan ilgili özellik adları için büyük/küçük harf ile eşleştiğinden emin olun. Bu, genellikle büyük/küçük harf duyarlı olmayan, hatta Visual Basic dahil olmak üzere tüm .NET programlama dilleri için geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>InheritanceMappingAttribute özniteliği  
- Bu öznitelik, bir devralma hiyerarşisi eşlemek için kullanın.  
+ Devralma hiyerarşisini eşlemek için bu özniteliği kullanın.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Dize|Yok. Değer sağlanmalıdır.|Ayrıştırıcı kodu değerini belirtir.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boole değeri|`false`|Hiçbir ayrıştırıcı değeri deposunda belirtilen değerlerden biri eşleştiğinde true ise bu türdeki bir nesne örneği oluşturur.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Tür|Yok. Değer sağlanmalıdır.|Hiyerarşi içinde sınıf türünü belirtir.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Dize|Yok. Değer sağlanmalıdır.|Ayrıştırıcıyı ait kod değerini belirtir.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boole değeri|`false`|True ise, depodaki hiçbir ayrıştırıcı değeri belirtilen değerlerden herhangi birini eşleştirirken, bu türden bir nesne oluşturur.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Tür|Yok. Değer sağlanmalıdır.|Hiyerarşideki sınıfın türünü belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.  
   
 ## <a name="functionattribute-attribute"></a>FunctionAttribute özniteliği  
- Bu öznitelik, bir yöntemi temsil eden, bir saklı yordam veya kullanıcı tanımlı işlev veritabanında olarak belirtmek için kullanın.  
+ Bu özniteliği, bir saklı yordamı veya veritabanında kullanıcı tanımlı işlevi temsil eden bir yöntemi belirlemek için kullanın.  
   
- Aşağıdaki tabloda, bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boole değeri|`false`|False ise bir saklı yordam eşlemesi gösterir. TRUE ise, kullanıcı tanımlı bir işlev eşlemesi gösterir.|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|Dize|Veritabanı adı olarak aynı dize|Saklı yordam veya kullanıcı tanımlı işlevin adını belirtir.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boole değeri|`false`|Yanlışsa, saklı yordama eşlemeyi gösterir. True ise, Kullanıcı tanımlı bir işleve eşlemeyi gösterir.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|Dize|Veritabanında ad ile aynı dize|Saklı yordamın veya Kullanıcı tanımlı işlevin adını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.FunctionAttribute>.  
   
 ## <a name="parameterattribute-attribute"></a>ParameterAttribute özniteliği  
- Bu öznitelik, saklı yordam yöntemlerde giriş parametrelerini eşlemek için kullanın.  
+ Saklı yordam yöntemlerinde giriş parametrelerini eşlemek için bu özniteliği kullanın.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|None|Veritabanı türü belirtir.|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Dize|Aynı dize olarak parametre adı veritabanında|Parametre için bir ad belirtir.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Dize|Yok.|Veritabanı türünü belirtir.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Dize|Veritabanında parametre adıyla aynı dize|Parametre için bir ad belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
   
 ## <a name="resulttypeattribute-attribute"></a>ResultTypeAttribute özniteliği  
- Bu öznitelik, bir sonuç türü belirtmek için kullanın.  
+ Bu özniteliği bir sonuç türü belirtmek için kullanın.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|Tür|(Hiçbiri)|Döndüren saklı yordamlarla eşlenen yöntemlerinde kullanılan <xref:System.Data.Linq.IMultipleResults>. Saklı yordam için geçerli veya beklenen türde eşlemeler bildirir.|  
+|<xref:System.Data.Linq.Mapping.ResultTypeAttribute.Type%2A>|Tür|Seçim|Döndürülen <xref:System.Data.Linq.IMultipleResults>saklı yordamlara eşlenmiş yöntemlerde kullanılır. Saklı yordam için geçerli veya beklenen tür eşlemelerini bildirir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ResultTypeAttribute>.  
   
 ## <a name="dataattribute-attribute"></a>DataAttribute özniteliği  
- Bu öznitelik adları ve özel depolama alanları belirtmek için kullanın.  
+ Adları ve özel depolama alanlarını belirtmek için bu özniteliği kullanın.  
   
- Aşağıdaki tablo bu öznitelik özelliklerini açıklar.  
+ Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
 |Özellik|Tür|Varsayılan|Açıklama|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|Dize|Veritabanı adı ile aynı|Tablo, sütun ve benzeri adını belirtir.|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Dize|Ortak erişimciler|Temel alınan depolama alanı adını belirtir.|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|Dize|Veritabanındaki adla aynı|Tablo, sütun vb. adı belirtir.|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Dize|Ortak erişimciler|Temel alınan depolama alanının adını belirtir.|  
   
  Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.DataAttribute>.  
   

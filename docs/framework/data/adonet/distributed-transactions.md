@@ -2,53 +2,53 @@
 title: Dağıtılmış İşlemler
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606812"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956766"
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış İşlemler
-Bir işlem (kaydetme) başarılı ya da başka şeylerin yanında bir birim olarak başarısız oluyor (iptal için) ilgili görevleri kümesidir. A *dağıtılmış işlem* çeşitli kaynaklar etkileyen bir işlemdir. İşlemek dağıtılmış işlem için tüm katılımcıları veri herhangi bir değişiklik kalıcı olmasını garanti gerekir. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Bu garanti yapmak tek bir katılımcı başarısız olursa, tüm işlemi başarısız olur ve işlem kapsamında değişiklikler geri alınır.  
+İşlem, diğer şeyler arasında bir birim olarak başarılı (işleme) veya başarısız (iptal) bir ilgili görevler kümesidir. *Dağıtılmış işlem* , çeşitli kaynakları etkileyen bir işlemdir. Dağıtılmış bir işlemin kaydedilmesi için tüm katılımcılar, verilerde yapılan değişikliklerin kalıcı olacağını garanti etmelidir. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Tek bir katılımcı bu garantiyi yapamazsa, tüm işlem başarısız olur ve işlemin kapsamındaki verilerde yapılan değişiklikler geri alınır.  
   
 > [!NOTE]
->  Tamamlama veya işlem durumunda geri denerseniz, bir özel durum bir `DataReader` işlem etkinken başlatılır.  
+> İşlem etkinken bir işlem başlatıldığında bir `DataReader` işlemi gerçekleştirmeyi veya geri almayı denerseniz bir özel durum oluşturulur.  
   
-## <a name="working-with-systemtransactions"></a>System.Transactions ile çalışma  
- .NET Framework, dağıtılmış işlemler API üzerinden yönetilen <xref:System.Transactions> ad alanı. <xref:System.Transactions> API temsilci seçme dağıtılmış işlem birden çok kalıcı kaynak yöneticileri dahil olduğunda Microsoft Dağıtılmış İşlem Düzenleyicisi (MS DTC) gibi bir işlem İzleyicisi işleme. Daha fazla bilgi için [işlem Temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
+## <a name="working-with-systemtransactions"></a>System. Transactions ile çalışma  
+ .NET Framework, dağıtılmış işlemler <xref:System.Transactions> ad alanındaki API aracılığıyla yönetilir. Birden <xref:System.Transactions> çok kalıcı Kaynak Yöneticisi dahil edildiğinde API, dağıtılmış işlem işlemesini Microsoft Dağıtılmış işlem Düzenleyicisi (MS DTC) gibi bir işlem izleyicisine devredebilir. Daha fazla bilgi için bkz. [Işlem temelleri](../../../../docs/framework/data/transactions/transaction-fundamentals.md).  
   
- ADO.NET 2.0 kullanarak bir dağıtılmış işlem kaydetme desteği sunmuştur `EnlistTransaction` bağlantı kaydeder yöntemi, bir <xref:System.Transactions.Transaction> örneği. ADO.NET önceki sürümlerini kullanarak dağıtılmış işlemler de açık kaydı gerçekleştirilmedi `EnlistDistributedTransaction` bağlantısının bağlantı listeleme yöntemi bir <xref:System.EnterpriseServices.ITransaction> örnek, hangi için geriye dönük uyumluluk desteklenir. Kurumsal Hizmetler işlemi hakkında daha fazla bilgi için bkz. [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
+ ADO.NET 2,0, bir `EnlistTransaction` <xref:System.Transactions.Transaction> örnekteki bağlantıyı listeleyen yöntemi kullanarak dağıtılmış bir işlemde bir dağıtım için destek sunmuştur. Önceki ADO.net sürümlerinde, Dağıtılmış işlemlerde açık kayıt, bir `EnlistDistributedTransaction` <xref:System.EnterpriseServices.ITransaction> örneğin bir bağlantıyı listeleme yöntemi kullanılarak, geriye dönük uyumluluk için desteklenen bir bağlantı yöntemi kullanılarak gerçekleştirildi. Enterprise Services işlemleri hakkında daha fazla bilgi için bkz. [Enterprise Services ve com+ işlemleri Ile birlikte çalışabilirlik](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
- Kullanırken bir <xref:System.Transactions> işlem .NET Framework sağlayıcısı ile SQL Server için basit bir SQL Server veritabanında <xref:System.Transactions.Transaction> otomatik olarak kullanılır. İşlem, bir tam dağıtılmış işlem gerektiğinde olarak sonra yükseltilebilir. Daha fazla bilgi için [SQL Server ile System.Transactions tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
-  
-> [!NOTE]
->  Bir Oracle veritabanına aynı anda katılabilir dağıtılmış işlemlerin sayısı, varsayılan olarak 10'a ayarlanır. 10 işlem bir Oracle veritabanına bağlı bir özel durum oluşturulur. Oracle desteklemiyor `DDL` dağıtılmış bir işlem içinde.  
-  
-## <a name="automatically-enlisting-in-a-distributed-transaction"></a>Dağıtılmış bir işlem içinde otomatik olarak kaydetme  
- Otomatik kaydı, varsayılan (ve tercih edilen) ADO.NET bağlantıları ile tümleştirme yolu `System.Transactions`. Bir işlem etkin olduğunu belirlerse, bir bağlantı nesnesi otomatik olarak varolan bir dağıtılmış işlemde listeleme, içinde `System.Transaction` koşulları, yani `Transaction.Current` null değil. Bağlantı açıldığında otomatik bir işlem kaydı gerçekleşir. İşlem kapsamı içinde çalıştırılan bir komut olsa bile, daha sonra yapılmaz. Belirterek mevcut işlemlerde otomatik kayıt devre dışı bırakabilirsiniz `Enlist=false` için bir bağlantı dizesi parametresi olarak bir <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>, veya `OLE DB Services=-7` için bir bağlantı dizesi parametresi olarak bir <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A?displayProperty=nameWithType>. Oracle ve ODBC bağlantı dizesi parametreleri hakkında daha fazla bilgi için bkz. <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A?displayProperty=nameWithType> ve <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A?displayProperty=nameWithType>.  
-  
-## <a name="manually-enlisting-in-a-distributed-transaction"></a>El ile bir dağıtılmış işlemde kaydetme  
- Otomatik kayıt devre dışı bırakıldı veya bağlantı açıldıktan sonra başlatıldığı bir işleme kaydolunamadı ihtiyacınız varsa mevcut bir kullanarak dağıtılmış işlem listeleme `EnlistTransaction` yöntemi <xref:System.Data.Common.DbConnection> çalıştığınız sağlayıcısı nesnesi ile. Varolan bir dağıtılmış işlemde kaydetme hareket kaydedilmiş veya geri alınmış, veri kaynağındaki kod tarafından yapılan değişiklikleri kaydedilmiş veya geri yanı, sağlar.  
-  
- Dağıtılmış işlemlerinde kaydetme iş nesneleri havuzu olduğunda özellikle geçerlidir. Bir iş nesnesi açık bir bağlantı ile bir havuzda toplanır, bu bağlantı açıldığında otomatik bir işlem kaydı yalnızca gerçekleşir. Birden çok işlem kullanarak havuza alınmış bir iş nesnesi gerçekleştirdiyseniz, bu nesne için açık bağlantı otomatik olarak yeni başlatılan işlemleri listeleme değil. Bu durumda, bağlantı için otomatik işlem kaydı devre dışı bırak ve bağlantı kullanarak işlem listeleme `EnlistTransaction`.  
-  
- `EnlistTransaction` türünde tek bir bağımsız değişken <xref:System.Transactions.Transaction> mevcut işlem diğer bir deyişle bir başvuru. Bağlantının çağrıldıktan sonra `EnlistTransaction` yöntemi, veri kaynağı bağlantı işlemde dahil kullanarak yapılan tüm değişiklikleri. Bir null değeri geçirdiğini, geçerli bir dağıtılmış işlem kaydı bağlantısından unenlists. Çağırmadan önce bağlantıyı açılması gerektiğini unutmayın `EnlistTransaction`.  
+ SQL Server veritabanına karşı <xref:System.Transactions> SQL Server için .NET Framework sağlayıcısıyla bir işlem kullanırken, hafif <xref:System.Transactions.Transaction> bir şekilde otomatik olarak kullanılacaktır. Daha sonra işlem, tam bir dağıtılmış işleme gereken şekilde yükseltilebilir. Daha fazla bilgi için bkz. [System. Transactions tümleştirmesi SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
 > [!NOTE]
->  Bir bağlantı açıkça bir işlemde kayıtlı sonra ilk işlem bitene kadar kayıtlı olmayan ya da başka bir işlemde kayıtlı olamaz.  
+> Bir Oracle veritabanının tek seferde katılabileceğiniz en fazla dağıtılmış işlem sayısı, varsayılan olarak 10 ' a ayarlanmıştır. Bir Oracle veritabanına bağlıyken 10 işlemden sonra bir özel durum oluşturulur. Oracle, dağıtılmış bir `DDL` işlemin içini desteklemez.  
+  
+## <a name="automatically-enlisting-in-a-distributed-transaction"></a>Dağıtılmış bir Işlemde otomatik olarak aşağı kaydetme  
+ Otomatik kayıt, ADO.NET bağlantılarını `System.Transactions`tümleştirmenin varsayılan (ve tercih edilen) yoludur. Bir bağlantı nesnesi, bir işlemin etkin olduğunu belirlerse, bu bir işlemin etkin `System.Transaction` olduğunu belirlerse, bu `Transaction.Current` da null olmayan anlamına gelir. Bağlantı açıldığında otomatik işlem kaydı gerçekleşir. İşlem kapsamı içinde bir komut yürütülürse bile bu durum gerçekleşmeyecektir. Bir `Enlist=false` `OLE DB Services=-7` <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A?displayProperty=nameWithType>için bağlantı dizesi parametresi olarak veya bir bağlantı dizesi parametresi olarak belirterek, mevcut hareketlerdeki otomatik kaydı devre dışı bırakabilirsiniz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> Oracle ve ODBC bağlantı dizesi parametreleri hakkında daha fazla bilgi için bkz <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A?displayProperty=nameWithType> . <xref:System.Data.Odbc.OdbcConnection.ConnectionString%2A?displayProperty=nameWithType>ve.  
+  
+## <a name="manually-enlisting-in-a-distributed-transaction"></a>Dağıtılmış bir Işlemde el ile kaydetme  
+ Otomatik kayıt devre dışıysa veya bağlantı açıldıktan sonra başlatılan bir işlemi listelemesi gerekiyorsa, çalışmakta olduğunuz sağlayıcının `EnlistTransaction` <xref:System.Data.Common.DbConnection> nesne yöntemini kullanarak var olan bir dağıtılmış işlemde listeleme yapabilirsiniz kullanılarak. Varolan bir dağıtılmış işlemde en iyi şekilde, işlem yapıldığından veya geri alınırsa, veri kaynağındaki kod tarafından yapılan değişikliklerin de yürütülmesi veya geri alınması gerekir.  
+  
+ Dağıtılmış işlemlere son kaydetme, özellikle iş nesneleri havuzında uygulanabilir. Bir iş nesnesi açık bağlantıyla havuza alınmış ise, otomatik işlem kaydı yalnızca bağlantı açıldığında gerçekleşir. Havuza alınan iş nesnesi kullanılarak birden çok işlem gerçekleştirilirse, bu nesnenin açık bağlantısı yeni başlatılan işlemlerde otomatik olarak listelenmeyecektir. Bu durumda, bağlantı için otomatik işlem kaydı devre dışı bırakabilir ve kullanarak `EnlistTransaction`işlem sırasında bağlantı listeleme yapabilirsiniz.  
+  
+ `EnlistTransaction`mevcut işleme başvuru olan türde <xref:System.Transactions.Transaction> tek bir bağımsız değişken alır. Bağlantı `EnlistTransaction` yöntemini çağırdıktan sonra, bağlantı kullanılarak veri kaynağında yapılan tüm değişiklikler işleme dahil edilir. Null değer geçirilmesi, bağlantının geçerli dağıtılmış işlem listesinden listesini kaldırır. Çağrılmadan `EnlistTransaction`önce bağlantının açılması gerektiğini unutmayın.  
+  
+> [!NOTE]
+> Bir bağlantı bir işleme açık olarak kaydedildikten sonra, ilk işlem tamamlanana kadar kaydı kaldırılamaz veya başka bir işlemde kayıtlı olamaz.  
   
 > [!CAUTION]
->  `EnlistTransaction` bağlantı bağlantı kullanarak bir işlem zaten başlamış bir özel durum oluşturur <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemi. Ancak işlem veri kaynağında başlatılan yerel bir işlem olup olmadığını (örneğin, açıkça kullanarak BEGIN TRANSACTION deyimi yürütülürken bir <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` yerel işlem geri alma ve dağıtılmış mevcut listeleme İstenen işlem. Yerel işlem geri alındı ihbar almazsınız ve kullanmaya değil yerel işlemler yönetmelidir <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. SQL Server için .NET Framework veri sağlayıcısı kullanıyorsanız (`SqlClient`) SQL Server ile listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlarda algılanmayan geçer.  
+>  `EnlistTransaction`bağlantı, bağlantının <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemiyle zaten bir işlem başlamışsa bir özel durum oluşturur. Ancak, işlem veri kaynağında başlatılan yerel bir işlem ise (örneğin, açıkça bir <xref:System.Data.SqlClient.SqlCommand>kullanarak BEGIN TRANSACTION deyimin yürütülmesi), `EnlistTransaction` yerel işlemi ve varolan dağıtılmış istenen işlem. Yerel işlemin geri alındığı ve kullanılarak <xref:System.Data.Common.DbConnection.BeginTransaction%2A>başlatılmamış tüm yerel işlemleri yönetmesi gerektiğini fark edersiniz. SQL Server ile SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanıyorsanız, listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlar algılanacaktır.  
   
-## <a name="promotable-transactions-in-sql-server"></a>SQL Server'da promotable işlemleri  
- SQL Server, yalnızca gerekli olduğunda, yerel bir basit işlem otomatik olarak dağıtılmış bir işlem için yükseltilebilir promotable işlemleri destekler. Bir promotable işlem eklenen çağırmadığı işlemlerinin ek yükü dağıtılmış işlem ek yükü gerekli olmadığı sürece. Daha fazla bilgi ve bir kod örneği için bkz: [SQL Server ile System.Transactions tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
+## <a name="promotable-transactions-in-sql-server"></a>SQL Server promotable Işlemleri  
+ SQL Server, yerel bir hafif işlemin yalnızca gerekli olması durumunda otomatik olarak dağıtılmış bir işleme yükseltibileceği promotable işlemlerini destekler. Bir promotable işlemi, eklenen ek yük gerekmediği takdirde dağıtılmış bir işlemin ek yükünü çağırmaz. Daha fazla bilgi ve bir kod örneği için bkz. [SQL Server Ile System. Transactions tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
   
-## <a name="configuring-distributed-transactions"></a>Dağıtılmış işlemler yapılandırma  
- Dağıtılmış işlemler kullanmak için ağ üzerinden MS DTC etkinleştirmeniz gerekebilir. Windows varsa Güvenlik Duvarı etkin, ağ veya MS DTC bağlantı noktasını açmak MS DTC hizmetinin izin vermeniz gerekir.  
+## <a name="configuring-distributed-transactions"></a>Dağıtılmış Işlemleri yapılandırma  
+ Dağıtılmış işlemleri kullanabilmeniz için ağ üzerinden MS DTC 'yi etkinleştirmeniz gerekebilir. Windows Güvenlik Duvarı etkinse, MS DTC hizmetinin ağı kullanması veya MS DTC bağlantı noktasını açması gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,30 +17,30 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: ffe4bf6fb29e82b04938e2ba9a2d9d21e5eabcde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd7f238f8c20ba990158f23344e36376d3b1cb7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747114"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950533"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Nasıl yapılır: Windows Forms Etiket Denetimleri ile Erişim Tuşları Oluşturma
-Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarları tanımlamak için kullanılabilir. Kullanıcı, bir etiket denetiminde bir erişim anahtarı tanımladığınızda, ALT tuşuyla sekme sırasının takip eden denetim odağı taşımak için belirlediğiniz karakter basabilirsiniz. Etiketleri odağı alamıyor olduğundan, odak sonraki sekme sırasını denetimde otomatik olarak taşır. Metin kutuları, birleşik giriş kutuları, liste kutuları ve veri kılavuzları için erişim anahtarlarını atamak için bu tekniği kullanın.  
+Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler için erişim anahtarlarını tanımlamak üzere kullanılabilir. Bir etiket denetiminde bir erişim anahtarı tanımladığınızda, Kullanıcı ALT tuşuna ve odağı sekme düzeninde takip eden denetime taşımak için belirlediğiniz karaktere basabilir. Etiketler odağı alamadığı için odak otomatik olarak sekme sırasında bir sonraki denetime taşınır. Metin kutularına, Birleşik giriş kutularına, liste kutularına ve veri kılavuzlarına erişim tuşları atamak için bu tekniği kullanın.  
   
-### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Bir denetimi bir etikete sahip bir erişim anahtarı atamak için  
+### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Etikete sahip bir denetime erişim anahtarı atamak için  
   
-1. Etiket çizebilir ve diğer denetimi çizin.  
+1. Önce etiketi çizin, sonra diğer denetimi çizin.  
   
      -veya-  
   
-     Herhangi bir sırada denetimlerini çizmek ve ayarlama <xref:System.Windows.Forms.Control.TabIndex%2A> diğer denetim küçük etiketin özelliği.  
+     Denetimleri herhangi bir sırada çizin ve etiketin <xref:System.Windows.Forms.Control.TabIndex%2A> özelliğini diğer denetimden daha az bir olacak şekilde ayarlayın.  
   
-2. Etiketin <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `true`.  
+2. Etiketin <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini olarak `true`ayarlayın.  
   
-3. Ve işareti kullanın (&) etiketin <xref:System.Windows.Forms.Label.Text%2A> etiket için erişim tuşu atama özelliği. Daha fazla bilgi için [oluşturma erişim anahtarları için Windows Forms denetimleri](how-to-create-access-keys-for-windows-forms-controls.md).  
+3. Etiket için erişim anahtarını atamak üzere etiketin <xref:System.Windows.Forms.Label.Text%2A> özelliğinde bir ve işareti (&) kullanın. Daha fazla bilgi için bkz. [Windows Forms denetimleri Için erişim tuşları oluşturma](how-to-create-access-keys-for-windows-forms-controls.md).  
   
     > [!NOTE]
-    >  Yerine bir etiket denetiminde kodlarına görüntülemek erişim anahtarları oluşturmak için bunları kullanmayı isteyebilirsiniz. Burada kodlarına verileri içeren bir kayıt alana bir etiket denetimi bağlarsanız bu durum oluşabilir. Kodlarına bir etiket denetiminde görüntülenecek kümesi <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `false`. İşaretlerini görüntüleme ve ayrıca bir erişim anahtarı isterseniz <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini `true` ve bir ampersan ile erişim anahtarını belirtin (&) ve ve işareti ile iki kodlarına görüntülenecek.  
+    > Etiketleri, erişim tuşları oluşturmak için kullanmak yerine bir etiket denetiminde göstermek isteyebilirsiniz. Bu durum, bir etiket denetimini, verilerin dahil edildiği bir kayıt kümesindeki bir alana bağlarsanız meydana gelebilir. Etiketleri etiket denetiminde göstermek için <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini olarak `false`ayarlayın. Birlikte bulunan DS 'yi ve ayrıca bir erişim anahtarınız göstermek istiyorsanız, <xref:System.Windows.Forms.Label.UseMnemonic%2A> özelliğini olarak `true` ayarlayın ve erişim anahtarını tek bir ve işareti (&) ile, iki ile birlikte görüntülenecek şekilde belirtin.  
   
     ```vb  
     Label1.UseMnemonic = True  
@@ -65,6 +65,6 @@ Windows Forms <xref:System.Windows.Forms.Label> denetimleri, diğer denetimler i
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir Windows Forms etiket denetimini içeriğini sığdıracak şekilde boyutlandırma](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Nasıl yapılır: Bir Windows Forms etiketi denetimini Içeriğine sığacak şekilde boyutlandır](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Etiket Denetimine Genel Bakış](label-control-overview-windows-forms.md)
 - [Etiket Denetimi](label-control-windows-forms.md)

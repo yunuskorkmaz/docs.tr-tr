@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16f428b614fe331faffabab477c6584fb682801d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918599"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955240"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Nasıl yapılır: Windows Communication Foundation Hizmeti Bilinen Adını Kaydolmadan Kullanma
-Bağlanmak ve bir Windows Communication Foundation (WCF) hizmetiyle iletişim kurmak için ayrıntıları hizmeti adresi, bağlama yapılandırma ve hizmet sözleşmesi WCF istemci uygulaması olmalıdır.  
+Bir Windows Communication Foundation (WCF) hizmetine bağlanmak ve iletişim kurmak için, bir WCF istemci uygulaması hizmet adresi, bağlama yapılandırması ve hizmet sözleşmesinin ayrıntılarına sahip olmalıdır.  
   
- WCF hizmet bilinen adı genellikle gerekli sözleşme aracılığıyla önceki kayıt gerekli öznitelik türlerini alır, ancak bu mantıklı olduğu durumlar olabilir. Kayıt yerine, kullanımının, Web Hizmetleri tanım dili (WSDL) belgenin biçiminde sözleşme tanımı ad edinebilirsiniz `wsdl` parametresi veya kullanımı aracılığıyla meta veri değişimi üzerinden `mexAddress` parametre.  
+ WCF hizmeti bilinen adı genellikle gerekli öznitelik türlerinin önceki kayıtları aracılığıyla gerekli sözleşmeyi edinir, ancak bunun olanaklı olmadığı durumlar olabilir. Kayıt yerinde, ad, sözleşmenin tanımını bir Web Hizmetleri tanım dili (wsdl) belgesi biçiminde, `wsdl` parametre kullanımı veya meta veri değişimi `mexAddress` aracılığıyla, parametresinin.  
   
- Bu, burada hücre değerlerinin bazıları Web hizmeti etkileşimler hesaplanır bir Excel elektronik tablosuna dağıtımını gibi senaryolara olanak sağlar. Bu senaryoda, belgeyi açabilir tüm istemcilere hizmet sözleşme derlemesi kaydetmek için uygun olmayabilir. `wsdl` Parametresi veya `mexAddress` parametresi kendi başına bir çözüm sağlar.  
+ Bu, bazı hücre değerlerinden bazıları Web hizmeti etkileşimleri aracılığıyla hesaplanıyorsa Excel elektronik tablosunun dağıtılması gibi senaryolara izin vermez. Bu senaryoda, belge açmış olabilecek tüm istemcilere hizmet sözleşmesi derlemesini kaydetmek uygun olmayabilir. `wsdl` Parametresi`mexAddress` veya parametresi, bağımsız bir çözüm sunar.  
   
 > [!NOTE]
->  Karşılıklı kimlik doğrulaması, istek ve izinsiz veya yanıltma yanıt karşı korumak için kullanılmalıdır. Özellikle, istemcilerin yanıt meta veri değişimi uç noktası hedeflenen güvenilen taraf olduğunu garanti için önemlidir.  
+> Karşılıklı kimlik doğrulaması, istek ve yanıt üzerinde değişiklik yapılmasını veya yanıltmayı korumak için kullanılmalıdır. Özellikle, istemcilerin yanıt veren meta veri değişimi uç noktasının amaçlanan güvenilen taraf olduğundan emin olmak önemlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, hizmet bilinen adı MEX sözleşme ile kullanımını gösterir. Şu sözleşme hizmetiyle bir wsHttpBinding kullanıma sunulur.  
+ Bu örnek, hizmet adının bir MEX sözleşmesiyle kullanımını gösterir. Bir wsHttpBinding ile aşağıdaki sözleşmeye sahip bir hizmet sunulur.  
   
 ```  
 using System.ServiceModel;  
@@ -43,7 +43,7 @@ public interface IAffiliate
 }  
 ```  
   
- Aşağıdaki örnek bilinen ad dizesini uzak hizmet için bir WCF istemcisi oluşturmak için kullanılabilir.  
+ Uzak hizmet için bir WCF istemcisi oluşturmak üzere aşağıdaki örnek bilinen ad dizesi kullanılabilir.  
   
 ```  
 service4:mexAddress="http://servername/Affiliates/service.svc/mex",  
@@ -52,11 +52,11 @@ contract=IAffiliate, contractNamespace=http://Microsoft.ServiceModel.Demo,
 binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/  
 ```  
   
- İstemci uygulama yürütme sırasında istemci gerçekleştiren bir `WS-MetadataExchange` ile sağlanan `mexAddress`. Bu adres, bağlama ve bir dizi hizmet için podrobnosti o kontraktu döndürebilir. `address`, `contract`, `contractNamespace`, `binding` Ve `bindingNamespace` parametreleri hedeflenen hizmet tanımlamak için kullanılır. Bu parametreleri eşleşen sonra ad uygun sözleşme tanımına sahip bir WCF istemcisi oluşturur ve çağrıları ardından WCF istemcisi kullanarak sözleşmenin yazılı olarak ile yapılabilir.  
+ İstemci uygulamasının yürütülmesi sırasında istemci, belirtilen `WS-MetadataExchange` `mexAddress`ile bir kullanır. Bu işlem, birkaç hizmet için adres, bağlama ve Sözleşme ayrıntılarını döndürebilir. `address` ,`contract` ,Ve`bindingNamespace`parametreleri amaçlanan hizmeti belirlemek için kullanılır. `binding` `contractNamespace` Bu parametreler eşleştirildiği sürece bilinen ad, uygun sözleşme tanımına sahip bir WCF istemcisi oluşturur ve çağrılar, yazılı sözleşmede olduğu gibi WCF istemcisi kullanılarak yapılabilir.  
   
 > [!NOTE]
->  Bilinen ad hatalı veya hizmet kullanılamıyor durumunda çağrısı `GetObject` "Geçersiz sözdizimi" belirten bir hata döndürür. Bu hata iletisini alırsanız kullandığınız ad doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
+> Bilinen ad hatalı biçimlendirilmiş veya hizmet kullanılamaz durumdaysa, çağrı `GetObject` "geçersiz sözdizimi" belirten bir hata döndürür. Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Kaydetme ve hizmet bilinen adı yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+- [Nasıl yapılır: Hizmet bilinen adını kaydetme ve yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

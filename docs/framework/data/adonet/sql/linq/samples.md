@@ -2,32 +2,32 @@
 title: Örnekler
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: a4f51c59791b0d65e99987e0e14a6fbedf1ee0a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac5298fd781d617b8a9c8cd637232b344a04f530
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616205"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945171"
 ---
 # <a name="samples"></a>Örnekler
-Bu konu bağlantılar içeren Visual Basic ve C# çözümler sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek kodu.  
+Bu konu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek kod içeren Visual Basic ve C# çözümlerin bağlantılarını sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Visual Basic sürümünü SampleQueries çözümü  
- [Örnek sorgular (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ SampleQueries çözümünün Visual Basic sürümü  
+ [Örnek sorgular (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
- C# SampleQueries çözümünün sürümü  
+ C#SampleQueries çözümünün sürümü  
  [Örnek sorgular](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
- Ek örneklerini bulmak için bu adımları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kodlarınızı ve uygulamalarınızı:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Kod ve uygulamaların ek örneklerini bulmak için aşağıdaki adımları izleyin:  
   
-- Microsoft docs'ta belirli sorunları arayın.  
+- Microsoft Docs ilgili belirli sorunları arayın.  
   
-- Katılmak [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz.  
+- Uzmanlarla ilgili daha karmaşık konuları tartışabilirsiniz [LINQ forumuna](https://go.microsoft.com/fwlink/?LinkId=76488)katılın.  
   
-- Ayrıntılı Teknik İnceleme incelemek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı. Daha fazla bilgi için [LINQ to SQL: ilişkisel verileri için sorgu .NET Language-Integrated](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Ayrıntılar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisinin teknik incelemesini, Visual Basic ve C# kod örnekleri ile tamamlandığını inceleyin. Daha fazla bilgi için bkz. [LINQ to SQL: .NET dil Ile tümleşik sorgulama verileri](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL izlenecek yollar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
+- [LINQ to SQL Izlenecek yollar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

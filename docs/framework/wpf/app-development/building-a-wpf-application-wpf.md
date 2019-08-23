@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 02a86ea8d8d6b481044d6ca25d29df7edd2c73ee
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: a5254de07029e53dd6b72bd2c096c38525a661b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401685"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958714"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF Uygulaması Oluşturma (WPF)
 
@@ -24,7 +24,7 @@ Windows Presentation Foundation (WPF) uygulamaları, .NET Framework yürütüleb
 
 WPF uygulaması aşağıdaki yollarla derlenebilir:
 
-- Komut satırı. Uygulamanın yalnızca kod (XAML yok) ve bir uygulama tanımı dosyası içermesi gerekir. Daha fazla bilgi için bkz. [CSC. exe Ile komut satırı oluşturma](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [komut satırından oluşturma (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
+- Komut satırı. Uygulamanın yalnızca kod (XAML yok) ve bir uygulama tanımı dosyası içermesi gerekir. Daha fazla bilgi için bkz. [CSC. exe Ile komut satırı oluşturma](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [komut satırından oluşturma (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).
 
 - Microsoft Build Engine (MSBuild). Kod ve XAML dosyalarına ek olarak, uygulamanın bir MSBuild proje dosyası içermesi gerekir. Daha fazla bilgi için bkz. "MSBuild".
 
@@ -42,7 +42,7 @@ Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] proje 
 
 ### <a name="pre-build-initializations"></a>Derleme öncesi başlatmalar
 
-Oluşturmadan önce, aşağıdakiler de dahil olmak üzere önemli araçların ve kitaplıkların konumunu belirler:[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]
+Derlemeden önce, MSBuild aşağıdakiler de dahil olmak üzere önemli araçların ve kitaplıkların konumunu belirler:
 
 - .NET Framework.
 
@@ -52,7 +52,7 @@ Oluşturmadan önce, aşağıdakiler de dahil olmak üzere önemli araçların v
 
 - Derleme arama yollarının özelliği.
 
-Derlemeler için [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] arama yapılan ilk konum, başvuru derleme dizinidir (%ProgramFiles%\Reference birleştiriciler lies\microsoft\framework\v3.0\\). Bu adım sırasında yapı işlemi ayrıca çeşitli özellikleri ve öğe gruplarını başlatır ve gerekli temizleme çalışmalarını gerçekleştirir.
+MSBuild 'in derlemeleri arayacağı ilk konum başvuru derleme dizinidir (%ProgramFiles%\Reference ayrıştırılmış Lies\microsoft\framework\v3.0\\). Bu adım sırasında yapı işlemi ayrıca çeşitli özellikleri ve öğe gruplarını başlatır ve gerekli temizleme çalışmalarını gerçekleştirir.
 
 <a name="Resolving_references"></a>
 
@@ -108,7 +108,7 @@ Public Sub InitializeComponent() _
 End Sub
 ```
 
-Varsayılan olarak, biçimlendirme derlemesi altyapıda <xref:System.AppDomain> [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] aynı şekilde çalışır. Bu, önemli ölçüde performans artışı sağlar. Bu davranış, `AlwaysCompileMarkupFilesInSeparateDomain` özelliği ile değiştirilebilir. Bu, ayrı <xref:System.AppDomain>olarak kaldırarak tüm başvuru derlemelerini kaldırma avantajına sahiptir.
+Varsayılan olarak, biçimlendirme derlemesi MSBuild altyapısıyla aynı <xref:System.AppDomain> şekilde çalışır. Bu, önemli ölçüde performans artışı sağlar. Bu davranış, `AlwaysCompileMarkupFilesInSeparateDomain` özelliği ile değiştirilebilir. Bu, ayrı <xref:System.AppDomain>olarak kaldırarak tüm başvuru derlemelerini kaldırma avantajına sahiptir.
 
 <a name="Pass_2_of_Markup_Compilation"></a>
 

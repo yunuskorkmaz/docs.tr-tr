@@ -3,20 +3,20 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943673"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement >
-İçin yapılandırma sağlar <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> sınıfı veya türetilmiş sınıflar.  
+<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<securityTokenHandlers >  
-\<Ekle >  
+\<> Ekle  
 \<sessionTokenRequirement >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -41,16 +41,16 @@ ms.locfileid: "61793776"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|ömür|Oturum belirteç ömrünü belirtir.|  
+|ömür|Oturum belirteçlerinin ömrünü belirtir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Belirtilen güvenlik belirteci işleyicisi belirteci işleyicisi koleksiyona ekler.|  
+|[\<> Ekle](add.md)|Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.|  
   
 ## <a name="example"></a>Örnek  
   

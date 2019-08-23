@@ -11,31 +11,31 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959561"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Sürüm Toleranslı Seri Hale Getirme Geri Çağrıları
-Veri sözleşmesi programlama modeli tam sürüme dayanıklı serileştirme geri çağırma yöntemleri destekler, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> destek sınıfları.  
+Veri sözleşmesi programlama modeli, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> sınıflarının desteklediği sürüm dayanıklı serileştirme geri çağırma yöntemlerini tam olarak destekler.  
   
-## <a name="version-tolerant-attributes"></a>Sürüm toleranslı öznitelikleri  
- Dört geri çağırma özniteliği vardır. Her öznitelik, serileştirme/seri durumundan çıkarma altyapısı çeşitli zamanlarda çağıran yönteme uygulanabilir. Aşağıdaki tabloda her bir öznitelik kullanıldığı durumlar açıklanmaktadır.  
+## <a name="version-tolerant-attributes"></a>Sürüm dayanıklı öznitelikler  
+ Dört geri çağrı özniteliği vardır. Her öznitelik, serileştirme/seri kaldırma altyapısının çeşitli zamanlarda çağırdığı bir yönteme uygulanabilir. Aşağıdaki tabloda her bir özniteliğin ne zaman kullanılacağı açıklanmaktadır.  
   
-|Öznitelik|İlgili yöntem olduğunda çağrılır|  
+|Öznitelik|Karşılık gelen yöntem çağrıldığında|  
 |---------------|---------------------------------------------|  
-|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Türü serileştirme önce çağrılır.|  
-|<xref:System.Runtime.Serialization.OnSerializedAttribute>|Türü seri hale getirme sonra çağrılır.|  
-|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Türü seri durumdan çıkarılırken önce çağrılır.|  
-|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Türü seri durumdan çıkarılırken sonra çağrılır.|  
+|<xref:System.Runtime.Serialization.OnSerializingAttribute>|Tür serileştirilden önce çağırılır.|  
+|<xref:System.Runtime.Serialization.OnSerializedAttribute>|Tür serileştirildikten sonra çağırılır.|  
+|<xref:System.Runtime.Serialization.OnDeserializingAttribute>|Türü seri durumdan çıkarılırken çağırılır.|  
+|<xref:System.Runtime.Serialization.OnDeserializedAttribute>|Türün serisi kaldırıldıktan sonra çağırılır.|  
   
- Yöntemleri kabul etmesi gereken bir <xref:System.Runtime.Serialization.StreamingContext> parametresi.  
+ Yöntemler bir <xref:System.Runtime.Serialization.StreamingContext> parametreyi kabul etmelidir.  
   
- Bu yöntemler, sürüm oluşturma veya başlatma kullanmak için öncelikle yöneliktir. Hiçbir oluşturucuya seri durumundan çıkarma sırasında çağrılır. Bu üyeleri için verileri gelen akışta, örneğin, eksikse, bazı veri üyeleri eksik bir türü bir önceki sürümünden verileri geliyorsa, bu nedenle, veri üyeleri doğru (hedeflenen varsayılan değerlere) başlatılmamış olabilir. Bu durumu düzeltmek için geri çağırma yöntemi ile işaretlenen kullanın <xref:System.Runtime.Serialization.OnDeserializingAttribute>, aşağıdaki örnekte gösterildiği gibi.  
+ Bu yöntemler öncelikle sürüm oluşturma veya başlatma ile kullanılmak üzere tasarlanmıştır. Seri durumdan çıkarma sırasında hiçbir Oluşturucu çağrılmaz. Bu nedenle, veri üyeleri gelen akışta eksik (örneğin, veriler, bazı veri üyelerini içermeyen bir türün önceki bir sürümünden geliyorsa), bu üyelerin verileri doğru başlatılmamış olabilir (amaçlanan varsayılan değerlere göre). Bunu düzeltmek için, aşağıdaki örnekte gösterildiği gibi, ile <xref:System.Runtime.Serialization.OnDeserializingAttribute>işaretlenmiş geri çağırma yöntemini kullanın.  
   
- Tür başına yalnızca bir yöntem ile önceki geri çağırma özniteliklerin her birini işaretleme yapabilirler.  
+ Yukarıdaki geri çağırma özniteliklerinin her biri ile, her tür için yalnızca bir yöntem işaretleyebilirsiniz.  
   
 ### <a name="example"></a>Örnek  
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
@@ -48,4 +48,4 @@ Veri sözleşmesi programlama modeli tam sürüme dayanıklı serileştirme geri
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [Sürüme Dayanıklı Serileştirme](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+- [Sürüme Dayanıklı Serileştirme](../../../standard/serialization/version-tolerant-serialization.md)

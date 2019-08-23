@@ -11,54 +11,54 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754498"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967296"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
-`invalidOverlappedToPinvoke` Yönetilen hata ayıklama Yardımcısı (MDA) çöp koleksiyonu yığınında oluşturulmamış bir çakışan işaretçi belirli Win32 işlevlerine geçirildiğinde etkinleştirilir.  
+`invalidOverlappedToPinvoke` Yönetilen hata ayıklama Yardımcısı (MDA), çöp toplama yığınında oluşturulmamış bir çakışan işaretçi belirli Win32 işlevlerine geçirildiğinde etkinleştirilir.  
   
 > [!NOTE]
->  Varsayılan olarak, bu MDA, yalnızca platform çağırma çağrısı kodunuzda tanımlanır ve hata ayıklayıcı her yöntemin JustMyCode durumunu raporlar etkinleştirilir. JustMyCode (örneğin, MDbg.exe uzantısız) anlamıyor bir hata ayıklayıcı bu mda'nın etkinleştirmez. Bu MDA etkinleştirilebilir bu hata ayıklayıcıları için bir yapılandırma dosyası ve açıkça mda.config kullanarak `justMyCode="false"` içinde. mda.config dosyasından `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
+> Varsayılan olarak, bu MDA yalnızca platform çağırma çağrısı kodunuzda tanımlanmışsa ve hata ayıklayıcı her yöntemin Adamcode durumunu bildirirse etkinleştirilir. Bir hata ayıklayıcı (örneğin, hiçbir uzantısı olmayan MDbg. exe) Bu MDA ' i etkinleştirmeyecektir. Bu mda, bu hata ayıklayıcılar için bir yapılandırma dosyası kullanılarak ve. mda. config dosyasında `justMyCode="false"` `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`açıkça bir şekilde çalıştırılarak etkinleştirilebilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Sistem çökmeleri ya da açıklanamaz yığın bozulmaları.  
+ Kilitlenmeler veya unexplainable yığın bozulmaları.  
   
 ## <a name="cause"></a>Sebep  
- Çöp koleksiyonu yığınında oluşturulmamış bir çakışan işaretçi belirli işletim sistemi işlevlerine geçirilir.  
+ Çöp toplama yığınında oluşturulmamış bir çakışan işaretçi belirli işletim sistemi işlevlerine geçirilir.  
   
- Aşağıdaki tablo bu mda'nın izlediği işlevleri gösterir.  
+ Aşağıdaki tabloda bu MDA 'ın izlediği işlevler gösterilmektedir.  
   
 |Modül|İşlev|  
 |------------|--------------|  
-|HttpApi.dll|`HttpReceiveHttpRequest`|  
+|HTTPAPI. dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
-|kernel32.dll|`ReadFile`|  
-|kernel32.dll|`ReadFileEx`|  
-|kernel32.dll|`WriteFile`|  
-|kernel32.dll|`WriteFileEx`|  
-|kernel32.dll|`ReadDirectoryChangesW`|  
-|kernel32.dll|`PostQueuedCompletionStatus`|  
-|MSWSock.dll|`ConnectEx`|  
+|paketindeki|`ReadFile`|  
+|paketindeki|`ReadFileEx`|  
+|paketindeki|`WriteFile`|  
+|paketindeki|`WriteFileEx`|  
+|paketindeki|`ReadDirectoryChangesW`|  
+|paketindeki|`PostQueuedCompletionStatus`|  
+|MSWSock. dll|`ConnectEx`|  
 |WS2_32.dll|`WSASend`|  
 |WS2_32.dll|`WSASendTo`|  
 |WS2_32.dll|`WSARecv`|  
 |WS2_32.dll|`WSARecvFrom`|  
-|MQRT.dll|`MQReceiveMessage`|  
+|MQRT. dll|`MQReceiveMessage`|  
   
- Çünkü bu koşul için yığın bozulma olasılığı yüksektir <xref:System.AppDomain> yapılıyor çağrısını kaldırın. Varsa <xref:System.AppDomain> kaldırılırsa, uygulama kodu serbest bırakacak ya da işlem bittiğinde ya da kod bellekte sızıntı oluşturacaktır Bozulması neden, daha sonra sorunlarla neden Çakışan işaretçi için bellek.  
+ Bu durum için yığın bozulması olasılığı yüksektir çünkü <xref:System.AppDomain> çağrının kaldırılması mümkün olur. <xref:System.AppDomain> Kaldırılırsa, uygulama kodu çakışan işaretçi için belleği serbest kalacak, işlem bittiğinde bozulmaya neden olur veya kod belleği sızıntısına neden olur ve daha sonra zorluklara yol açar.  
   
 ## <a name="resolution"></a>Çözüm  
- Kullanım bir <xref:System.Threading.Overlapped> çağrılırken, nesne <xref:System.Threading.Overlapped.Pack%2A> almak için yöntemi bir <xref:System.Threading.NativeOverlapped> işleve geçirilen yapısı. Varsa <xref:System.AppDomain> kaldırılırsa CLR işaretçi serbest bırakılmadan önce zaman uyumsuz işlem tamamlanana kadar bekler.  
+ İşleve geçirilebilecek <xref:System.Threading.Overlapped> bir <xref:System.Threading.Overlapped.Pack%2A> Yapıalmakiçinyönteminiçağırarak<xref:System.Threading.NativeOverlapped> bir nesnesi kullanın. <xref:System.AppDomain> Kaldırıldığında, clr, işaretçiyi boşaltmadan önce zaman uyumsuz işlem tamamlanana kadar bekler.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde hiçbir etkisi vardı.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktu.  
   
 ## <a name="output"></a>Çıkış  
- Bu mda'nın bir örnek çıktı verilmiştir.  
+ Aşağıda, bu MDA 'ın çıkış örneği verilmiştir.  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   

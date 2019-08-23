@@ -1,22 +1,22 @@
 ---
-title: 'Nasıl yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)'
+title: 'Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: e306722fca4e0215cf7b67d85763858d459a171a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70eab3fb8014e26435b73e217889ba3e6c58ca92
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958045"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Nasıl yapılır: Zaman uyumsuz kullanarak birden çok Web isteğini paralel hale getirme ve Await (Visual Basic)
-Yük oluşturulduğunda bir zaman uyumsuz yönteminde görevler oluşturulduklarında başlatılır. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) işleci işlemenin devam edemediği görev tamamlanana kadar yöntem noktasındaki göreve uygulanır. Genellikle, aşağıdaki örnekte gösterildiği gibi oluşturulduktan hemen sonra bir görev beklenir.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Nasıl yapılır: Async ve await kullanarak birden çok Web Isteğini paralel hale getirme (Visual Basic)
+Zaman uyumsuz bir yöntemde görevler oluşturulduğunda başlatılır. [Await](../../../../visual-basic/language-reference/operators/await-operator.md) işleci, görev bitene kadar işlemin devam edemediği yöntemdeki noktada göreve uygulanır. Aşağıdaki örnekte gösterildiği gibi, genellikle bir görev, oluşturulduktan hemen sonra beklediğinde.  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
 ```  
   
- Ancak, görev öğesinin tamamlanmasına bağımlı değildir, programınızın gerçekleştirilecek başka işleri varsa, görevi bekleme işleminden görev oluşturma ayırabilirsiniz.  
+ Ancak, programın gerçekleştirmeye yönelik başka bir işi olması durumunda görevin tamamlanmasına bağlı olmaması durumunda görevi bekleyen görev oluşturmayı ayırabilirsiniz.  
   
 ```vb  
 ' The following line creates and starts the task.  
@@ -31,32 +31,32 @@ Dim myTask = someWebAccessMethodAsync(url)
 Dim result = Await myTask  
 ```  
   
- Bir görev başlatma ve bekleme arasında başka görevler başlatabilirsiniz. Ek görevler, örtülü olarak paralel olarak çalışır, ancak hiçbir ek iş parçacığı oluşturulmaz.  
+ Bir görevi başlatma ve bekleme arasında başka görevler de başlatabilirsiniz. Ek görevler dolaylı olarak paralel olarak çalışır, ancak ek iş parçacığı oluşturulmaz.  
   
- Aşağıdaki program üç zaman uyumsuz web yüklemesini başlatır ve ardından bunları adlı sırayla bekler. Bu görev sırası, bunlar oluşturulan bekleniyor ve her zaman tamamlanmıyor programı çalıştırdığınızda dikkat edin. Oluşturuldukları ve yöntem bekleme ifadelerine ulaşmadan önce bir veya birkaç görev bitebilir çalışmaya başlayın.  
+ Aşağıdaki program, üç zaman uyumsuz Web yüklemesi başlatır ve ardından bunların çağrıldıkları sırayla bekler. Programı çalıştırdığınızda, görevlerin Oluşturulma sırasında ve bekledikleri sırada her zaman bitmediğine dikkat edin. Bunlar oluşturulduğunda çalışmaya başlar ve Yöntem await ifadelerine ulaşmadan önce bir veya daha fazla görev bitebilirler.  
   
 > [!NOTE]
->  Bu projeyi tamamlamak için Visual Studio 2012 veya üzeri ve .NET Framework 4.5 olmalıdır veya üzeri yüklü.  
+> Bu projeyi tamamlayabilmeniz için, bilgisayarınızda Visual Studio 2012 veya üzeri ve .NET Framework 4,5 veya üzeri yüklü olmalıdır.  
   
- Aynı anda birden çok görevi başlatan başka bir örnek için bkz [nasıl yapılır: (Visual Basic) Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Aynı anda birden çok görevi Başlatan başka bir örnek için bkz [. nasıl yapılır: Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)kullanarak zaman uyumsuz izlenecek yolu genişletin.  
   
- Bu örnekte kodunu indirebilirsiniz [geliştirici kodu örnekleri](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
+ Bu örnek için kodu [Geliştirici kodu örneklerinden](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)indirebilirsiniz.  
   
-### <a name="to-set-up-the-project"></a>Projeyi kurmak için  
+### <a name="to-set-up-the-project"></a>Projeyi ayarlamak için  
   
-1. Bir WPF uygulaması ayarlamak için aşağıdaki adımları tamamlayın. İçinde bu adımlara ilişkin ayrıntılı yönergeleri bulabilirsiniz [izlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. WPF uygulaması ayarlamak için aşağıdaki adımları izleyin. Bu adımlar [için ayrıntılı yönergeleri gözden geçirmede bulabilirsiniz: Async ve await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)kullanarak Web 'e erişme.  
   
-    - Bir metin kutusu ve bir düğmeyi içeren bir WPF uygulaması oluşturun. Düğmeyi adlandırın `startButton`ve metin kutusunu adlandırın `resultsTextBox`.  
+    - Metin kutusu ve düğme içeren bir WPF uygulaması oluşturun. Düğmeyi `startButton`adlandırın ve metin kutusunu `resultsTextBox`adlandırın.  
   
-    - İçin bir başvuru eklemeniz <xref:System.Net.Http>.  
+    - İçin <xref:System.Net.Http>bir başvuru ekleyin.  
   
-    - MainWindow.xaml.vb dosyasına ekleyin bir `Imports` bildirimi `System.Net.Http`.  
+    - MainWindow. xaml. vb dosyasında için `Imports` `System.Net.Http`bir ifade ekleyin.  
   
-### <a name="to-add-the-code"></a>Kod eklemek için  
+### <a name="to-add-the-code"></a>Kodu eklemek için  
   
-1. Tasarım penceresinde, MainWindow.xaml oluşturmak için düğmeyi çift tıklatın `startButton_Click` MainWindow.xaml.vb olay işleyicisi.  
+1. MainWindow. xaml tasarım penceresinde, MainWindow. xaml. vb ' de `startButton_Click` olay işleyicisini oluşturmak için düğmeye çift tıklayın.  
   
-2. Aşağıdaki kodu kopyalayın ve gövdesine yapıştırın `startButton_Click` MainWindow.xaml.vb içinde.  
+2. Aşağıdaki kodu kopyalayın ve MainWindow. xaml. vb `startButton_Click` içindeki gövdesine yapıştırın.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -64,15 +64,15 @@ Dim result = Await myTask
     resultsTextBox.Text &= vbCrLf & "Control returned to button1_Click."  
     ```  
   
-     Kod, zaman uyumsuz bir yöntem çağırır `CreateMultipleTasksAsync`, uygulama sürücüleri.  
+     Kod, uygulamayı yönlendiren bir zaman uyumsuz `CreateMultipleTasksAsync`yöntemini çağırır.  
   
-3. Projeye şu destek yöntemlerini ekleyin:  
+3. Aşağıdaki destek yöntemlerini projeye ekleyin:  
   
-    - `ProcessURLAsync` kullanan bir <xref:System.Net.Http.HttpClient> bir bayt dizisi olarak bir Web sitesinin içeriklerini karşıdan yüklemek için yöntemi. Destek yöntemi daha `ProcessURLAsync` ardından görüntüler ve dizinin uzunluğunu döndürür.  
+    - `ProcessURLAsync`bir Web <xref:System.Net.Http.HttpClient> sitesinin içeriğini bayt dizisi olarak indirmek için bir yöntem kullanır. Destek yöntemi, `ProcessURLAsync` ardından dizinin uzunluğunu görüntüler ve döndürür.  
   
-    - `DisplayResults` bayt sayısı, her bir URL için bayt dizisindeki görüntüler. Bu görüntüler gösterir her bir görevin indirmeyi bitirmesini.  
+    - `DisplayResults`her URL için bayt dizisindeki bayt sayısını görüntüler. Bu ekranda, her görevin indirilmesi tamamlandığında gösterilir.  
   
-     Aşağıdaki yöntemleri kopyalayın ve sonra bunları yapıştırın `startButton_Click` MainWindow.xaml.vb olay işleyicisi.  
+     Aşağıdaki yöntemleri kopyalayın ve MainWindow. xaml. vb içindeki `startButton_Click` olay işleyicisinden sonra yapıştırın.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -94,15 +94,15 @@ Dim result = Await myTask
     End Sub  
     ```  
   
-4. Son olarak, yöntemi tanımlayan `CreateMultipleTasksAsync`, aşağıdaki adımları gerçekleştirir.  
+4. Son olarak, aşağıdaki `CreateMultipleTasksAsync`adımları gerçekleştiren yöntemi tanımlayın.  
   
-    - Yöntem bir `HttpClient` yöntemi erişimi için gereken nesne <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> içinde `ProcessURLAsync`.  
+    - Yöntemi, içindeki `HttpClient` <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> yöntemine`ProcessURLAsync`erişmeniz gereken bir nesne bildirir.  
   
-    - Yöntemi oluşturur ve başlatır türünde üç görev <xref:System.Threading.Tasks.Task%601>burada `TResult` bir tamsayıdır. Her görev bittikçe `DisplayResults` görevin URL'sini ve karşıdan yüklenen içeriklerin uzunluğunu görüntüler. Görevler zaman uyumsuz olarak çalıştığından, sonuçların görüntülenme sırasını bildirilmiş sırasından farklı olabilir.  
+    - Yöntemi, türünde <xref:System.Threading.Tasks.Task%601>üç görev oluşturur ve başlatır, burada `TResult` bir tamsayıdır. Her görev bittiğinde, `DisplayResults` görevin URL 'sini ve indirilen içeriklerin uzunluğunu görüntüler. Görevler zaman uyumsuz olarak çalıştığından, sonuçların göründüğü sıra, bildirildiği sırayla farklılık gösterebilir.  
   
-    - Yöntem her görevin tamamlanmasını bekler. Her `Await` işleci yürütmesini askıya alır `CreateMultipleTasksAsync` beklenen görev bitinceye kadar. İşleci ayrıca çağrısından dönen değer alır `ProcessURLAsync` her tamamlanan görevden.  
+    - Yöntemi her görevin tamamlanmasını bekler. Her `Await` operatör, beklelen `CreateMultipleTasksAsync` görev tamamlanana kadar yürütmeyi askıya alır. İşleci, her tamamlanan görevden öğesine `ProcessURLAsync` yapılan çağrıdan döndürülen değeri de alır.  
   
-    - Görevler tamamlandığında ve tamsayı değerleri alındığında, yöntem Web sitelerinin uzunluklarını toplar ve sonucu görüntüler.  
+    - Görevler tamamlandığında ve tamsayı değerleri alınırsa, yöntemi web sitelerinin uzunluklarını toplar ve sonucu görüntüler.  
   
      Aşağıdaki yöntemi kopyalayın ve çözümünüze yapıştırın.  
   
@@ -136,12 +136,12 @@ Dim result = Await myTask
     End Function  
     ```  
   
-5. Programı çalıştırın ve ardından F5 tuşuna basın **Başlat** düğmesi.  
+5. Programı çalıştırmak için F5 tuşunu seçin ve sonra **Başlat** düğmesini seçin.  
   
-     Program üç görevin her zaman aynı sırada tamamlanmıyor ve hangi sıranın mutlaka, bunlar oluşturulan bekleniyor ve sırasını olmadığını doğrulamak için birkaç kez çalıştırın.  
+     Üç görevin her zaman aynı sırada bitmeyeceğini ve bunların tamamların oluşturulma sırası ve bekledikleri sıra olması gerektiğini doğrulamak için programı birkaç kez çalıştırın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod tam örneği içermektedir.  
+ Aşağıdaki kod tam örneği içerir.  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -205,6 +205,6 @@ End Class
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Zaman uyumsuz kullanarak Web'e erişme ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Zaman uyumsuz programlama ile Async ve Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Nasıl yapılır: (Visual Basic) Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Nasıl yapılır: Task. WhenAll (Visual Basic) kullanarak zaman uyumsuz Izlenecek yolu genişletme](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

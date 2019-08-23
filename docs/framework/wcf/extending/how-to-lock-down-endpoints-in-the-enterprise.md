@@ -2,68 +2,68 @@
 title: 'Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: ae4884cb0dcc1b1bdf81d98a9c7a7a87e836af1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a74df56d4c283569988d310b2a501e6440f58ca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951650"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Nasıl yapılır: Enterprise Uç Noktalarını Kilitleme
-Büyük kuruluşlar genellikle uygulamaları kuruluş güvenlik ilkelerine uygun olarak geliştirilen gerektirir. Aşağıdaki konuda geliştirme ve bilgisayarlarda yüklü tüm Windows Communication Foundation (WCF) istemci uygulamaları doğrulamak için kullanılan bir istemci uç noktası Doğrulayıcı yüklemek nasıl ele alınmaktadır.  
+Büyük kuruluşlar genellikle uygulamaların kurumsal güvenlik ilkeleriyle uyumlu olarak geliştirilmesini gerektirir. Aşağıdaki konuda, bilgisayarlarda yüklü olan tüm Windows Communication Foundation (WCF) istemci uygulamalarını doğrulamak için kullanılabilecek bir istemci uç noktası doğrulayıcısı geliştirme ve yükleme açıklanmaktadır.  
   
- Bu uç nokta davranışı istemciye eklendiğinden bu durumda, bir istemci Doğrulayıcı doğrulayıcıdır [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config dosyasının bir bölümünde. WCF istemci uygulamaları için yalnızca ortak uç nokta davranışları yükler ve yalnızca hizmet uygulamaları için ortak bir hizmet davranışı yükler. Hizmet uygulamaları için aynı bu Doğrulayıcı yüklemek için bir hizmet davranışını Doğrulayıcı olmalıdır. Daha fazla bilgi için [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümü.  
+ Bu durumda, bu uç nokta davranışı Machine. config dosyasındaki istemci [ \<commonbehavior >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümüne eklendiğinden, Doğrulayıcı bir istemci doğrulayıcısı olur. WCF, ortak uç nokta davranışlarını yalnızca istemci uygulamaları için yükler ve yalnızca hizmet uygulamaları için ortak hizmet davranışlarını yükler. Bu hizmet uygulamalarına yönelik aynı Doğrulayıcı 'yı yüklemek için doğrulayıcının bir hizmet davranışı olması gerekir. Daha fazla bilgi için, [ \<commondavranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümüne bakın.  
   
 > [!IMPORTANT]
->  Hizmet veya uç nokta davranışları işaretlenmemiş ile <xref:System.Security.AllowPartiallyTrustedCallersAttribute> eklenen özniteliği (APTCA) [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) kısmi güvende uygulama çalışırken, bir yapılandırma dosyası bölümünü çalıştırmak değil Bu durumda ortam ve hiçbir özel durum oluşturulur. Doğrulayıcıların gibi ortak davranışları çalışmasını zorunlu kılmak için aşağıdakilerden birini yapmanız gerekir:  
+> Bir yapılandırma dosyasının [ \<commondavranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümüne eklenen <xref:System.Security.AllowPartiallyTrustedCallersAttribute> öznitelik (aptca) ile işaretlenmemiş hizmet veya uç nokta davranışları, uygulama kısmi güven ortamında çalıştırıldığında ve Hayır olmadığında çalışmaz. Bu gerçekleştiğinde özel durum oluşturulur. Doğrulayıcılar gibi yaygın davranışları çalıştırmaya zorlamak için şunlardan birini yapmanız gerekir:  
 >   
->  --Ortak davranışınızı işaretlemek <xref:System.Security.AllowPartiallyTrustedCallersAttribute> kısmi güven bir uygulama dağıtıldığında çalıştırabileceği şekilde onlara özniteliği. Bir kayıt defteri girişi bilgisayarda APTCA işaretli derlemeler çalışmasını önlemek için ayarlanabilir dikkat edin...  
+>  --Bir kısmi güven uygulaması olarak dağıtıldığında <xref:System.Security.AllowPartiallyTrustedCallersAttribute> çalışabilmesi için ortak davranışınızı özniteliğiyle işaretleyin. APTCA tarafından işaretlenmiş derlemelerin çalıştırılmasını engellemek için bilgisayarda bir kayıt defteri girişi ayarlanmayacağınızı unutmayın.  
 >   
->  --Uygulama tam olarak güvenilen bir uygulama kullanıcılar, uygulamayı bir kısmi güven ortamında çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremez dağıtılırsa emin olun. Bunu yapmak, özel Doğrulayıcı çalışmaz ve hiçbir özel durum. Bunu sağlamak bir yol için bkz. `levelfinal` seçeneği kullanılarak [kod erişimi güvenliği ilke Aracı (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
+>  --Uygulamanın, kullanıcıların bir kısmi güven ortamında uygulamayı çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremediği tam güvenilir bir uygulama olarak dağıtıldığından emin olun. Bunu yapabilmeleri durumunda özel Doğrulayıcı çalışmaz ve hiçbir özel durum oluşturulmaz. Bunu sağlamanın bir yolu için, `levelfinal` [kod erişimi güvenlik ilkesi aracı 'nı (Caspol. exe)](https://go.microsoft.com/fwlink/?LinkId=248222)kullanma seçeneğine bakın.  
 >   
->  Daha fazla bilgi için [kısmi güven en iyi uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) ve [desteklenen dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
+>  Daha fazla bilgi için bkz. [kısmi güvenin En Iyi uygulamaları](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) ve [Desteklenen Dağıtım senaryoları](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
   
-### <a name="to-create-the-endpoint-validator"></a>Uç nokta Doğrulayıcısı oluşturmak için  
+### <a name="to-create-the-endpoint-validator"></a>Uç nokta doğrulayıcısı oluşturmak için  
   
-1. Oluşturma bir <xref:System.ServiceModel.Description.IEndpointBehavior> istenen doğrulama adımları ile <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> yöntemi. Aşağıdaki kod örneği sağlar. ( `InternetClientValidatorBehavior` Alınır [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
+1. <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> <xref:System.ServiceModel.Description.IEndpointBehavior> Yönteminde istenen doğrulama adımları ile oluşturun. Aşağıdaki kod bir örnek sağlar. (Güvenlik doğrulama örneğinden alınır.) [](../../../../docs/framework/wcf/samples/security-validation.md) `InternetClientValidatorBehavior`  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2. Yeni Oluştur <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 1. adımda oluşturulan uç nokta Doğrulayıcı kaydeder. Aşağıdaki kod örneği bunu gösterir. (Bu örnek için özgün kod [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.)  
+2. Adım 1 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> ' de oluşturulan uç nokta doğrulayıcısı kaydeden yeni oluştur. Aşağıdaki kod örneği bunu gösterir. (Bu örnek için özgün kod, [güvenlik doğrulama](../../../../docs/framework/wcf/samples/security-validation.md) örneğidir.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3. Derlenmiş bütünleştirilmiş kodu, tanımlayıcı ad ile imzalandığından emin olun. Ayrıntılar için bkz [tanımlayıcı ad Aracı (SN. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) ve dil derleyici komutları.  
+3. Derlenmiş derlemenin bir tanımlayıcı ad ile imzalandığından emin olun. Ayrıntılar için bkz [. tanımlayıcı ad Aracı (sn. EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) ve dilinize yönelik derleyici komutlarını.  
   
-### <a name="to-install-the-validator-into-the-target-computer"></a>Doğrulayıcı hedef bilgisayara yüklemek için  
+### <a name="to-install-the-validator-into-the-target-computer"></a>Doğrulayıcısı hedef bilgisayara yüklemek için  
   
-1. Uygun mekanizmayı kullanarak uç nokta Doğrulayıcı yükleyin. Kuruluş, bu Grup İlkesi ve Systems Management Server (SMS) kullanıyor.  
+1. Uygun mekanizmayı kullanarak uç nokta doğrulayıcısı 'nı yükler. Bir kuruluşta bu, grup ilkesi ve Systems Management Server (SMS) ile kullanılabilir.  
   
-2. Genel derleme önbellek kullanarak kesin adlandırılmış derlemeyi yüklemek [Gacutil.exe (Genel Derleme Önbelleği Aracı)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. [Gacutil. exe](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)' yi kullanarak, kesin adlı derlemeyi genel bütünleştirilmiş kod önbelleğine yükler (genel bütünleştirilmiş kod önbelleği aracı).  
   
-3. Kullanım <xref:System.Configuration?displayProperty=nameWithType> ad alanı türleri için:  
+3. <xref:System.Configuration?displayProperty=nameWithType> Ad alanı türlerini şu şekilde kullanın:  
   
-    1. Uzantısına ekleme [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) tam olarak nitelenmiş tür adını kullanarak bölüm ve öğe kilitleyin.  
+    1. Uzantıyı tam nitelikli bir tür adı kullanarak [ BehaviorExtensions>bölümüneekleyinveöğeyikilitleyin.\<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)  
   
          [!code-csharp[LockdownValidation#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#5)]  
   
-    2. Davranış öğesine ekleyin `EndpointBehaviors` özelliği [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölüm ve öğe kilitleyin. (Doğrulayıcı hizmetini yüklemek için Doğrulayıcı olmalıdır bir <xref:System.ServiceModel.Description.IServiceBehavior> ve eklenen `ServiceBehaviors` özellik.) Aşağıdaki kod örneği uygun yapılandırmaya sonrasında adımları gösterir bir. ve b, tanımlayıcı adı olan tek özel durum.  
+    2. Davranış öğesini `EndpointBehaviors` [ \<commonbehavior >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) bölümünün özelliğine ekleyin ve öğesini kilitleyin. (Doğrulayıcısı hizmetine yüklemek için, Doğrulayıcı bir <xref:System.ServiceModel.Description.IServiceBehavior> olmalıdır ve `ServiceBehaviors` özelliğine eklenmelidir.) Aşağıdaki kod örneği, adımlarında sonra uygun yapılandırmayı gösterir. ve b., tek istisna dışında, kesin bir ad yok.  
   
          [!code-csharp[LockdownValidation#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#6)]  
   
-    3. Machine.config dosyasına kaydedin. Aşağıdaki kod örneği, adım 3'te tüm görevleri gerçekleştirir ancak değiştirilen machine.config dosyasının yerel bir kopyasını kaydeder.  
+    3. Machine.config dosyasına kaydedin. Aşağıdaki kod örneği, adım 3 ' teki tüm görevleri gerçekleştirir, ancak değiştirilen Machine. config dosyasının bir kopyasını yerel olarak kaydeder.  
   
          [!code-csharp[LockdownValidation#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#7)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, ortak davranışını machine.config dosyasına ekleyin ve diske bir kopyasını kaydetmek gösterilmektedir. `InternetClientValidatorBehavior` Alınır [güvenlik doğrulaması](../../../../docs/framework/wcf/samples/security-validation.md) örnek.  
+ Aşağıdaki kod örneği, Machine. config dosyasına ortak bir davranışın nasıl ekleneceğini ve bir kopyasını diske kaydetmenizi gösterir. , `InternetClientValidatorBehavior` [Güvenlik doğrulama](../../../../docs/framework/wcf/samples/security-validation.md) örneğinden alınır.  
   
  [!code-csharp[LockdownValidation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/hostapplication.cs#1)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Yapılandırma dosyası öğelerini şifreleme isteyebilirsiniz. Daha fazla bilgi için Ayrıca bakınız bölümüne bakın.  
+ Yapılandırma dosyası öğelerini şifrelemek da isteyebilirsiniz. Daha fazla bilgi için Ayrıca bkz. bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yapılandırma dosyası öğeleri DPAPI kullanılarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [Yapılandırma dosyası öğeleri RSA kullanarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=94955)
+- [DPAPI kullanarak yapılandırma dosyası öğelerini şifreleme](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [RSA kullanarak yapılandırma dosyası öğelerini şifreleme](https://go.microsoft.com/fwlink/?LinkId=94955)

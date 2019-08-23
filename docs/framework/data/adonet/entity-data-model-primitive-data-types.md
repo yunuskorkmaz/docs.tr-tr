@@ -2,41 +2,41 @@
 title: 'Varlık Veri Modeli: Basit Veri Türleri'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c58a3db1eb7ffdb65c7e603d9a76ac7f19f2230f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667138"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959279"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Varlık Veri Modeli: Basit Veri Türleri
-Varlık veri modeli (EDM) (örneğin, dize, Boolean, Int32 vb.) tanımlamak için kullanılan soyut temel veri türleri kümesi destekler [özellikleri](../../../../docs/framework/data/adonet/property.md) kavramsal modelde. Bu basit veri türleri depolama veya SQL Server veritabanı veya ortak dil çalışma zamanı (CLR) gibi barındırma ortamı desteklenir gerçek ilkel veri türleri için proxy'ler. EDM ilkel veri türleri üzerinde işlemler ve dönüştürmeler semantiği tanımlamıyor; Bu semantiği depolama veya barındırma ortamı tarafından tanımlanır. Genellikle, EDM ilkel veri türleri karşılık gelen Basit veri türleri depolama veya barındırma ortamında eşlenir. Entity Framework EDM ilkel türlerinde SQL Server veri türlerine eşlemelerini nasıl hakkında daha fazla bilgi için bkz: [Entity FrameworkTypes için SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+Varlık Veri Modeli (EDM), kavramsal bir modeldeki [özellikleri](../../../../docs/framework/data/adonet/property.md) tanımlamak için kullanılan bir dizi soyut temel veri türünü (dize, Boolean, Int32, vb.) destekler. Bu ilkel veri türleri, SQL Server veritabanı veya ortak dil çalışma zamanı (CLR) gibi depolama veya barındırma ortamında desteklenen gerçek temel veri türleri için proxy 'lardır. EDM, temel veri türleri üzerinden işlemler veya dönüştürmelerin semantiğini tanımlamaz; Bu semantikler depolama veya barındırma ortamı tarafından tanımlanır. Genellikle, EDM içindeki temel veri türleri depolama veya barındırma ortamındaki ilgili temel veri türlerine eşlenir. Entity Framework, EDM 'nin ilkel türlerini SQL Server veri türlerine nasıl eşlediğini hakkında bilgi için bkz. [Entity FrameworkTypes Için SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
   
 > [!NOTE]
->  EDM ilkel veri türleri koleksiyonunu desteklemiyor.  
+> EDM, temel veri türleri koleksiyonlarını desteklemez.  
   
- EDM yapısal veri türleri hakkında daha fazla bilgi için bkz. [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık tür](../../../../docs/framework/data/adonet/complex-type.md).  
+ EDM içindeki yapılandırılmış veri türleri hakkında daha fazla bilgi için bkz. [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık tür](../../../../docs/framework/data/adonet/complex-type.md).  
   
-## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Varlık veri modeli desteklenen temel veri türleri  
- Aşağıdaki tabloda EDM tarafından desteklenen temel veri türlerini listeler. Tabloda ayrıca [modelleri](../../../../docs/framework/data/adonet/facet.md) her ilkel veri türü için uygulanabilir.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a>Varlık Veri Modeli desteklenen temel veri türleri  
+ Aşağıdaki tabloda, EDM tarafından desteklenen temel veri türleri listelenmiştir. Tablo, her ilkel veri türüne uygulanabilecek [modelleri](../../../../docs/framework/data/adonet/facet.md) de listeler.  
   
-|Basit veri türü|Açıklama|Geçerli modelleri|  
+|İlkel veri türü|Açıklama|Uygulanabilir modeller|  
 |-------------------------|-----------------|-----------------------|  
-|İkili|İkili veriler içerir.|MaxLength, FixedLength, null, varsayılan|  
-|Boole değeri|Değeri içeren `true` veya `false`.|Boş değer atanabilir, varsayılan|  
-|Bayt|İmzalanmamış 8 bit tam sayı değeri içerir.|Duyarlık, null, varsayılan|  
-|DateTime|Tarih ve saati temsil eder.|Duyarlık, null, varsayılan|  
-|DateTimeOffset|Bir tarih ve saat olarak GMT'den dakikalar içinde bir uzaklık içerir.|Duyarlık, null, varsayılan|  
-|Ondalık|Sabit kesinlik ve ölçek ile sayısal bir değer içeriyor.|Duyarlık, null, varsayılan|  
-|Çift|Kayan nokta numarası ile 15 basamaklı duyarlık içerir.|Duyarlık, null, varsayılan|  
-|Float|Kayan noktalı sayı yedi basamaklı duyarlık içerir.|Duyarlık, null, varsayılan|  
-|Guid|16 baytlık benzersiz bir tanımlayıcı içerir.|Duyarlık, null, varsayılan|  
-|Int16|İşaretli 16 bit tam sayı değeri içerir.|Duyarlık, null, varsayılan|  
-|Int32|İşaretli 32-bit tamsayı değeri içerir.|Duyarlık, null, varsayılan|  
-|Int64|Bir 64-bit işaretli tamsayı değeri içerir.|Duyarlık, null, varsayılan|  
-|SByte|İşaretli 8 bit tam sayı değeri içerir.|Duyarlık, null, varsayılan|  
-|Dize|Karakter verileri içerir.|Varsayılan Unicode, FixedLength, MaxLength, harmanlaması, boş değer atanabilir, duyarlık|  
-|Zaman|Günün bir saati içerir.|Duyarlık, null, varsayılan|  
+|İkili|İkili verileri içerir.|MaxLength, FixedLength, Nullable, varsayılan|  
+|Boole değeri|`true` Veya`false`değerini içerir.|Null yapılabilir, varsayılan|  
+|Bayt|İşaretsiz 8 bit tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|DateTime|Bir tarih ve saati temsil eder.|Duyarlılık, null yapılabilir, varsayılan|  
+|DateTimeOffset|GMT cinsinden dakika cinsinden bir tarih ve saat içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Ondalık|Sabit duyarlığa ve ölçeğe sahip sayısal bir değer içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Çift|15 basamaklı duyarlık içeren bir kayan nokta numarası içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Float|Yedi basamaklı duyarlık içeren bir kayan nokta numarası içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Guid|16 baytlık benzersiz bir tanımlayıcı içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Int16|İşaretli 16 bit tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Int32|İmzalı 32 bitlik bir tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Int64|İmzalı 64 bitlik bir tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|SByte|İşaretli 8 bit tamsayı değeri içerir.|Duyarlılık, null yapılabilir, varsayılan|  
+|Dize|Karakter verisi içerir.|Unicode, FixedLength, MaxLength, harmanlama, duyarlık, Nullable, varsayılan|  
+|Zaman|Günün saatini içerir.|Duyarlılık, null yapılabilir, varsayılan|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

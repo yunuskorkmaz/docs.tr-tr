@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 572a5856c9f92f105e727df1ecd8eb2e0a92fc09
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 462db50a42e55c0c5a9570317ceeeb0ae69215a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69664276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927660"
 ---
 # <a name="cryptographysettings-element"></a>\<Cryptographyısettings > öğesi
 Şifreleme ayarlarını içerir.  
@@ -80,4 +80,4 @@ ms.locfileid: "69664276"
 
 - [Yapılandırma Dosyası Şeması](../index.md)
 - [Şifreleme Ayarları Şeması](index.md)
-- [Şifreleme Hizmetleri](../../../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Hizmetleri](../../../../standard/security/cryptographic-services.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 800bf80e5ba3e697c122bcf4b1bc0f302357d087
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 154a2543c62de545e8b2df711d6ad51989d0689d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964843"
 ---
 # <a name="dependency-property-metadata"></a>Bağımlılık Özelliği Meta Verisi
 Özellik [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sistemi, yansıma veya genel ortak dil çalışma zamanı (CLR) özellikleri aracılığıyla bir özellik hakkında rapor edilenden daha fazla geçen bir meta veri raporlama sistemi içerir. Bağımlılık özelliği için meta veriler ayrıca bir bağımlılık özelliğini tanımlayan sınıf tarafından benzersiz bir şekilde atanabilir, Dependency özelliği farklı bir sınıfa eklendiğinde değiştirilebilir ve özel olarak tanımlayan Taban sınıftan bağımlılık özelliği.  
@@ -38,7 +38,7 @@ ms.locfileid: "68401619"
  Daha <xref:System.Windows.PropertyMetadata> sonra sınıf, WPF framework düzeyi sınıfları gibi mimari bölümlere daha özel meta veriler sağlamak için öğesinden türetilir. <xref:System.Windows.UIPropertyMetadata>animasyon raporlama ekler ve <xref:System.Windows.FrameworkPropertyMetadata> önceki bölümde belirtilen WPF framework düzeyi özelliklerini sağlar. Bağımlılık özellikleri kaydedildiğinde, bu <xref:System.Windows.PropertyMetadata> türetilmiş sınıflarla kaydedilebilir. Meta veriler incelenirse, daha belirli özellikleri <xref:System.Windows.PropertyMetadata> incelemenize olanak sağlamak için temel tür türetilmiş sınıflara dönüşebilir olabilir.  
   
 > [!NOTE]
->  İçinde <xref:System.Windows.FrameworkPropertyMetadata> belirtime Özellik özellikleri bazen bu belgelerde "Flags" olarak adlandırılır. Bağımlılık özelliği kayıtlarında veya meta veri geçersiz Kılmalarda kullanılmak üzere yeni meta veri örnekleri oluşturduğunuzda, bu değerleri, flagwise sabit <xref:System.Windows.FrameworkPropertyMetadataOptions> listesini kullanarak belirtirsiniz ve sonra, numaralandırmanınbüyükolasılıklabirleştirilmişdeğerlerini<xref:System.Windows.FrameworkPropertyMetadata> Oluşturucu. Ancak, oluşturulduktan sonra, bu seçenek özellikleri bir dizi içinde, <xref:System.Windows.FrameworkPropertyMetadata> numaralandırma değeri oluşturmak yerine bir dizi Boole özelliği olarak sunulur. Boolean özellikleri, ilgilendiğiniz bilgileri almak için bir flagwise numaralandırma değerine bir maske uygulamanızı gerektirmek yerine her bir koşula göz atamamanızı sağlar. Oluşturucu, Oluşturucu imzasının uzunluğunu <xref:System.Windows.FrameworkPropertyMetadataOptions> makul bir şekilde tutmak için birleştirilmiş ' i kullanır, ancak gerçek oluşturulmuş meta veriler, meta verilerin sorgulanmasını daha sezgisel hale getirmek için ayrık özellikler sunar.  
+> İçinde <xref:System.Windows.FrameworkPropertyMetadata> belirtime Özellik özellikleri bazen bu belgelerde "Flags" olarak adlandırılır. Bağımlılık özelliği kayıtlarında veya meta veri geçersiz Kılmalarda kullanılmak üzere yeni meta veri örnekleri oluşturduğunuzda, bu değerleri, flagwise sabit <xref:System.Windows.FrameworkPropertyMetadataOptions> listesini kullanarak belirtirsiniz ve sonra, numaralandırmanınbüyükolasılıklabirleştirilmişdeğerlerini<xref:System.Windows.FrameworkPropertyMetadata> Oluşturucu. Ancak, oluşturulduktan sonra, bu seçenek özellikleri bir dizi içinde, <xref:System.Windows.FrameworkPropertyMetadata> numaralandırma değeri oluşturmak yerine bir dizi Boole özelliği olarak sunulur. Boolean özellikleri, ilgilendiğiniz bilgileri almak için bir flagwise numaralandırma değerine bir maske uygulamanızı gerektirmek yerine her bir koşula göz atamamanızı sağlar. Oluşturucu, Oluşturucu imzasının uzunluğunu <xref:System.Windows.FrameworkPropertyMetadataOptions> makul bir şekilde tutmak için birleştirilmiş ' i kullanır, ancak gerçek oluşturulmuş meta veriler, meta verilerin sorgulanmasını daha sezgisel hale getirmek için ayrık özellikler sunar.  
   
 <a name="override_or_subclass"></a>   
 ## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Meta verilerin geçersiz kılınması, ne zaman bir sınıf türetileceğini  
@@ -78,7 +78,7 @@ ms.locfileid: "68401619"
  İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], ekli özellikler bağımlılık özellikleri olarak uygulanır. Bu, bağımsız sınıfların geçersiz kılabileceği özellik meta verilerine de sahip oldukları anlamına gelir. İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] iliştirilmiş bir özelliğin kapsam değerlendirmeleri, genellikle herhangi birinin <xref:System.Windows.DependencyObject> üzerinde ayarlanmış bir iliştirilmiş özelliği olabilir. Bu nedenle, <xref:System.Windows.DependencyObject> herhangi bir türetilmiş sınıf herhangi bir iliştirilmiş özelliği için meta verileri geçersiz kılabilir, çünkü sınıfının bir örneğinde ayarlanmayabilir. Varsayılan değerleri, geri çağırmaları veya WPF framework düzeyi özelliği raporlama özelliklerini geçersiz kılabilirsiniz. Eğer iliştirilmiş özelliği sınıfınızın bir örneği üzerinde ayarlandıysa, bu geçersiz kılma özelliği meta veri özellikleri geçerlidir. Örneğin, varsayılan değeri geçersiz kılabilirsiniz; Örneğin, geçersiz kılma değeri, sınıfınızın örneklerine iliştirilmiş özelliğin değeri olarak raporlanır, ancak özellik başka bir şekilde ayarlanmamışsa.  
   
 > [!NOTE]
->  <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> Özelliği iliştirilmiş özelliklerle ilgili değildir.  
+> <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> Özelliği iliştirilmiş özelliklerle ilgili değildir.  
   
 <a name="dp_add_owner"></a>   
 ### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Mevcut bir bağımlılık özelliğinin sahibi olarak bir sınıf ekleme  

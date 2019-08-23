@@ -6,31 +6,31 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], bindings
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
-ms.openlocfilehash: 5a29bb9136be2e3bb07776741282a321ef4ee8f2
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: e7071d56c8dc4b953c4b6349660ca4a8a1b7d23e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952624"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation Bağlamaları
-Windows Communication Foundation (WCF) nasıl, diğer yazılımlarla iletişim kurduğu gelen uygulama yazılımı nasıl yazılır ayırır. Bağlamaları, taşıma, kodlama ve istemciler ve hizmetler birbirleri ile iletişim kurmak için gerekli Protokolü ayrıntıları belirtmek için kullanılır. WCF bağlamaları bağlama ayrıntıları çoğunu iletişim kuran taraflarca varılmış gerekir böylece temel alınan hat gösterimine uç noktası oluşturmak için kullanır. Bunu yapmanın en kolay yolu, bir hizmet bağlaması aynı hizmet kullanımıyla ilgili uç noktayı kullanmak istemcileri içindir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [hizmetlerini yapılandırın ve istemciler için bağlamaları kullanma](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+Windows Communication Foundation (WCF), bir uygulamanın yazılımının diğer yazılımlarla nasıl iletişim kurduğuna nasıl yazıldığını ayırır. Bağlamalar, istemcilerin ve hizmetlerin birbirleriyle iletişim kurması için gereken aktarım, kodlama ve protokol ayrıntılarını belirtmek için kullanılır. WCF, uç noktanın temel alınan tel temsilini oluşturmak için bağlamaları kullanır, bu nedenle bağlama ayrıntılarının çoğu, iletişim kuran taraflar tarafından üzerinde anlaşılmalıdır. Bunu başarmanın en kolay yolu, bir hizmetin istemcilerinin hizmet için uç noktanın kullandığı bağlamayı kullanması içindir. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri yapılandırmak Için bağlamaları kullanma](../using-bindings-to-configure-services-and-clients.md).  
   
- Bir bağlama bağlama öğelerinin bir koleksiyonunu oluşur. Her öğe endpoint istemcilerin ile nasıl iletişim kurar, bazı yönleri açıklanmaktadır. Bir bağlamanın en az bir aktarım bağlama öğesi, (varsayılan olarak Aktarım bağlama öğesinin sağlayabilirsiniz) en az bir ileti kodlama bağlama öğesi içermelidir ve diğer herhangi bir sayıda protokol bağlama öğeleri. İşlemin, bu açıklama dışında bir çalışma zamanı derlemeleri her bağlama öğesi, kod, çalışma zamanı katkıda bulunmasına izin verir.  
+ Bağlama, bağlama öğeleri koleksiyonundan oluşur. Her öğe, uç noktanın istemcilerle nasıl iletişim kuracağını açıklar. Bağlama en az bir tane aktarım bağlama öğesi, en az bir ileti kodlama bağlama öğesi (taşıma bağlama öğesinin varsayılan olarak sağlayabileceği) ve diğer birçok protokol bağlama öğesini içermelidir. Bu açıklamanın dışında bir çalışma zamanı oluşturan işlem, her bağlama öğesinin bu çalışma zamanına kod katkıda bulunmasını sağlar.  
   
- WCF bağlama öğelerinin ortak seçimleri içeren bağlamalarını sunar. Bunlar, varsayılan ayarlarla kullanılabilir veya kullanıcı gereksinimlerine göre bu varsayılan değerleri değiştirebilirsiniz. Bu sistem tarafından sağlanan bağlamaları bağlama öğeleri ve ayarları üzerinde doğrudan denetim sağlayan özelliklere sahiptir. Her sürüm bağlama vererek yan yana bir bağlamanın birden çok sürümünün olduğu da bir kolayca çalışabilirsiniz kendi adı. Ayrıntılar için bkz [Configuring System-Provided bağlamaları](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
+ WCF, bağlama öğelerinin ortak seçimlerini içeren bağlamalar sağlar. Bunlar, varsayılan ayarlarıyla kullanılabilir veya bu varsayılan değerleri kullanıcı gereksinimlerine göre değiştirebilirsiniz. Bu sistem tarafından sunulan bağlamalarda bağlama öğeleri ve bunların ayarları üzerinde doğrudan denetime izin veren özellikler vardır. Ayrıca bağlama 'nın her bir sürümünü kendi adı vererek, bir bağlamanın birden çok sürümüyle kolayca çalışabilirsiniz. Ayrıntılar için bkz. [sistem tarafından sunulan bağlamaları yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md).  
   
- Koleksiyonu gerekiyorsa bağlama öğeleri sağlanmadığından bu sistem tarafından sağlanan bağlamaları biri tarafından bağlama gerekli öğelerinin koleksiyonunu içeren özel bir bağlama oluşturabilirsiniz. Bu özel bağlamalar oluşturma yapmak kolaydır ve yeni bir sınıf olması, ancak bunlar özellikleri bağlama öğeleri veya ayarlarını denetlemek için sağlamaz. Bağlama öğeleri erişebilir ve bunları içeren koleksiyonu aracılığıyla ayarlarını değiştirin. Ayrıntılar için bkz [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bu sistem tarafından belirtilen bağlamalardan biri tarafından sağlanmayan bağlama öğeleri koleksiyonuna ihtiyacınız varsa, gereken bağlama öğeleri koleksiyonundan oluşan özel bir bağlama oluşturabilirsiniz. Bu özel bağlamaların oluşturulması ve yeni bir sınıf gerektirilmesi kolaydır, ancak bağlama öğelerini veya ayarlarını denetlemek için özellikler sağlamaz. Bağlama öğelerine erişebilir ve bunları içeren koleksiyon aracılığıyla ayarlarını değiştirebilirsiniz. Ayrıntılar için bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- Yaygın senaryoları desteklemek için WCF sağlayan bağlamaları değiştirmek ve nasıl kullanılacağını açıklar.  
+ Yaygın senaryoları desteklemek için WCF 'nin sağladığı bağlamaları nasıl kullanacağınızı ve değiştirileceğini açıklar.  
   
  [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- Windows Communication Foundation (WCF) hizmet ve istemcileri bağlamalarda kesin kod ve yapılandırma bildirimli olarak kullanarak nasıl tanımlanacağını açıklar.  
+ Kod içinde imperatively ve bildirimli olarak yapılandırma kullanarak hizmet ve istemciler için Windows Communication Foundation (WCF) bağlamalarının nasıl tanımlanacağını açıklar.  
   
  [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)  
- Ne açıklayan bir <xref:System.ServiceModel.Channels.CustomBinding> olduğunu ve bunu ne zaman kullanılır.  
+ Ne <xref:System.ServiceModel.Channels.CustomBinding> olduğunu ve ne zaman kullanıldığını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Channels.Binding>  

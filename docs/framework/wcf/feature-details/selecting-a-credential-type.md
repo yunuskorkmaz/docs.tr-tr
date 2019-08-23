@@ -2,100 +2,100 @@
 title: Kimlik Bilgisi Türü Seçme
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b5dd757328fc04ccbbce7eaed2bd1a28b3e1282e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949217"
 ---
 # <a name="selecting-a-credential-type"></a>Kimlik Bilgisi Türü Seçme
-*Kimlik bilgileri* Windows Communication Foundation (WCF) kullanan bir talep kimliği veya özellikleri kurmak için verilerdir. Örneğin, bir passport bir devlet kurumu sorunlarını ülke veya bölgenizde Vatandaşlık kanıtlamak için bir kimlik bilgisi ' dir. WCF'de, kullanıcı adı belirteçleri ve X.509 sertifikaları gibi birçok forms kimlik bilgilerini alabilir. Bu konuda, kimlik bilgileri, WCF'de nasıl kullanılacağını ve nasıl seçileceğini, uygulamanız için doğru kimlik bilgisi anlatılmaktadır.  
+*Kimlik bilgileri* , istenen bir kimlik veya özellik oluşturmak için WINDOWS COMMUNICATION FOUNDATION (WCF) tarafından kullanılan veri bilgileridir. Örneğin, bir Passport bir ülkede veya bölgede vatandaşlık kanıtlayan kamu sorunları için bir kimlik bilgileridir. WCF 'de kimlik bilgileri, Kullanıcı adı belirteçleri ve X. 509.440 sertifikaları gibi birçok biçimde olabilir. Bu konuda kimlik bilgileri, WCF 'de nasıl kullanıldıkları ve uygulamanız için doğru kimlik bilgisinin nasıl oluşturulacağı açıklanmaktadır.  
   
- Bir sürücünün lisans bir fazla ülke ve bölge içinde bir kimlik bilgisi örneğidir. Bir lisansı, bir kişinin kimlik ve özellikleri temsil eden veri içerir. Bu kaynağı'nın resmi biçiminde kanıtını içerir. Lisans, genellikle lisanslama kamu departmanı gibi güvenilir bir yetkili tarafından verilmiş. Lisans, korumalı ve onu olmayan kurcalanmadığından veya sahtesi olduğunu gösteren, bir hologramı içerebilir.  
+ Birçok ülkede ve bölgede, bir sürücünün lisansı bir kimlik bilgisi örneğidir. Bir lisans, bir kişinin kimliğini ve yeteneklerini temsil eden verileri içerir. Bu, desessor 'ın resmi biçiminde sahip olma kanıtını içerir. Lisans, genellikle bir lisanslama Bakanlığı olan güvenilen bir yetkili tarafından verilir. Lisans mühürlü ve üzerinde oynanmadığını veya onay yapılmadığını gösteren bir hologram içerebilir.  
   
- Bir kimlik bilgisi sunma hem verileri hem de veri kanıtını sunma içerir. WCF çeşitli hem aktarım hem de ileti güvenlik düzeylerinde kimlik bilgisi türlerini destekler. Örneğin, iki tür WCF'de desteklenen kimlik bilgileri göz önünde bulundurun: sertifika kimlik bilgileri kullanıcı adı ve (X.509).  
+ Bir kimlik bilgisi sunmak, verilerin hem verilerin hem de sahip olma kanıtını içerir. WCF, hem aktarım hem de ileti güvenlik düzeylerinde çeşitli kimlik bilgileri türlerini destekler. Örneğin, WCF: Kullanıcı adı ve (X. 509.440) sertifika kimlik bilgileri ' nde desteklenen iki kimlik bilgileri türünü göz önünde bulundurun.  
   
- Kullanıcı adı kimlik bilgisi için kullanıcı adını temsil eden talep kimliğini ve parolayı kanıtını sağlar. Güvenilir yetkili bu durumda kullanıcı adını ve parolayı doğrular sistemidir.  
+ Kullanıcı adı kimlik bilgisi için Kullanıcı adı, istenen kimliği temsil eder ve parola, elinde bulunan bir kanıt sağlar. Bu durumda güvenilen yetkili, Kullanıcı adını ve parolasını doğrulayan sistemidir.  
   
- X.509 sertifika kimlik bilgileriyle konu adı, konu alternatif adı veya sertifika belirli alanları olarak talep kimliğinin diğer alanlarında çalışırken gibi kullanılabilir `Valid From` ve `Valid To` geçerliliğini alanları belirtin Sertifika.  
+ X. 509.440 sertifika kimlik bilgileri ile, sertifika içindeki konu adı, konu diğer adı veya belirli alanlar kimlik talepleri olarak, `Valid From` ve `Valid To` alanları gibi diğer alanlar ise, bu öğenin geçerliliğini belirtir Sertifika.  
   
-## <a name="transport-credential-types"></a>Kimlik bilgisi türlerinin taşıma  
- Aşağıdaki tabloda, olası bir transport güvenlik modunu bağlama tarafından kullanılan istemci kimlik bilgileri türleri gösterilmektedir. Bir hizmet oluştururken şu ayarları yapın `ClientCredentialType` özelliğini hizmetinizle iletişim kurmak için istemci sağlamalısınız kimlik bilgisi türünü belirtmek için şu değerlerden biri. Kod veya yapılandırma dosyalarında türleri ayarlayabilirsiniz.  
-  
-|Ayar|Açıklama|  
-|-------------|-----------------|  
-|Yok.|İstemci mevcut herhangi bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
-|Temel|Temel kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Özet|Özet kimlik doğrulaması için istemci belirtir. Ek bilgi için bkz: RFC2617 —[HTTP kimlik doğrulaması: Temel ve Özet kimlik doğrulama](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|NTLM|NT LAN Manager (NTLM) kimlik doğrulaması belirtir. Bu, herhangi bir nedenle Kerberos kimlik doğrulaması kullanamadığınızda kullanılır. Ayarlayarak da bir geri dönüş olarak kullanılmasını devre dışı bırakabilirsiniz <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false`, bir NTLM kullanılırsa, bir özel durum için mümkün olan en iyi hale getirmek WCF neden olur. Unutmayın, bu özelliği ayarlamak `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyemeyebilir.|  
-|Windows|Windows kimlik doğrulaması belirtir. Bir Windows etki alanında yalnızca Kerberos protokolü belirtmek için ayarlayın <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini `false` (varsayılan değer `true`).|  
-|Sertifika|X.509 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
-|Parola|Kullanıcı, bir kullanıcı adı ve parola sağlamanız gerekir. Windows kimlik doğrulaması veya başka bir özel bir çözüm kullanarak kullanıcı adı/parola çifti doğrulayın.|  
-  
-### <a name="message-client-credential-types"></a>İleti istemci kimlik bilgisi türleri  
- İleti güvenliği kullanan bir uygulama oluşturma sırasında kullanabileceğiniz olası kimlik bilgisi türleri aşağıdaki tabloda gösterilmektedir. Kod veya yapılandırma dosyalarında bu değerleri kullanabilirsiniz.  
+## <a name="transport-credential-types"></a>Aktarım kimlik bilgisi türleri  
+ Aşağıdaki tabloda, aktarım güvenliği modundaki bir bağlama tarafından kullanılabilecek olası istemci kimlik bilgileri türleri gösterilmektedir. Bir hizmet oluştururken, istemcinin hizmetinize iletişim `ClientCredentialType` kurmak için sağlaması gereken kimlik bilgilerinin türünü belirtmek için özelliği bu değerlerden birine ayarlayın. Türleri koddaki veya yapılandırma dosyalarındaki şekilde ayarlayabilirsiniz.  
   
 |Ayar|Açıklama|  
 |-------------|-----------------|  
-|Yok.|İstemci mevcut bir kimlik bilgisi gerekmez belirtir. Bu, anonim bir istemciye dönüşür.|  
-|Windows|SOAP ileti alışverişlerinde bir Windows kimlik bilgileri ile oluşturulan güvenlik bağlamı altında gerçekleşmesini sağlar.|  
-|Kullanıcı adı|Bir kullanıcı adı kimlik bilgisi ile istemcinin kimliğinin doğrulanmasını gerektiren hizmet sağlar. WCF ile kullanıcı adlarını, imza oluşturma veya verileri şifreleme gibi şifreleme işlemleri izin vermediğini unutmayın. WCF aktarma kullanıcı adı kimlik bilgilerini kullanarak güvenli sağlar.|  
-|Sertifika|Gerekli izin verir, istemci kimlik doğrulaması kullanarak bir X.509 sertifikası.|  
-|Belirteci veren|Bir güvenlik ilkesine göre yapılandırılmış özel bir simge türü. Varsayılan simge güvenlik onaylama işaretleme dili (SAML) türüdür. Belirteç güvenli belirteç hizmeti tarafından verilir. Daha fazla bilgi için [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Yok.|İstemcinin herhangi bir kimlik bilgisi sunması gerekmediğini belirtir. Bu, anonim bir istemciyi dönüştürür.|  
+|Temel|İstemci için temel kimlik doğrulamasını belirtir. Daha fazla bilgi için bkz. RFC2617[— http Authentication: Temel ve Özet kimlik](https://go.microsoft.com/fwlink/?LinkID=88313)doğrulaması.|  
+|Bilgisi|İstemci için Özet kimlik doğrulamasını belirtir. Daha fazla bilgi için bkz. RFC2617[— http Authentication: Temel ve Özet kimlik](https://go.microsoft.com/fwlink/?LinkID=88313)doğrulaması.|  
+|NT|NT LAN Manager (NTLM) kimlik doğrulamasını belirtir. Bu, bir nedenden dolayı Kerberos kimlik doğrulamasını kullanmanızın ardından kullanılır. Ayrıca, <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> `false`özelliğini olarak ayarlayarak geri dönüş olarak kullanımını devre dışı bırakabilirsiniz. Bu, WCF 'nin NTLM kullanılıyorsa bir özel durum oluşturmak için en iyi çaba oluşturmasına neden olur. Bu özelliği olarak `false` ayarlamanın, NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.|  
+|Windows|Windows kimlik doğrulamasını belirtir. Yalnızca bir Windows etki alanında Kerberos protokolünü belirtmek için <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> özelliğini olarak `false` ayarlayın (varsayılan değer `true`).|  
+|Sertifika|Bir X. 509.440 sertifikası kullanarak istemci kimlik doğrulaması gerçekleştirir.|  
+|Parola|Kullanıcının bir Kullanıcı adı ve parola sağlaması gerekir. Kullanıcı adı/parola çiftini Windows kimlik doğrulaması veya başka bir özel çözüm kullanarak doğrulayın.|  
   
-### <a name="negotiation-model-of-service-credentials"></a>Hizmet kimlik bilgilerini belirleme modelinin  
- *Anlaşma* kimlik değişimi ile bir istemci ve hizmet arasında güven oluşturma işlemidir. İşlem, istemciyi ve hizmeti yalnızca anlaşma işlemi bir sonraki adım için gerekli bilgileri ifşa bileşenlerinizi arasında yinelemeli olarak gerçekleştirilir. Uygulamada, bir hizmetin kimlik bilgisi istemcinin sonraki işlemlerde kullanılan teslimini son sonucudur.  
+### <a name="message-client-credential-types"></a>İleti Istemci kimlik bilgisi türleri  
+ Aşağıdaki tabloda, ileti güvenliği kullanan bir uygulama oluştururken kullanabileceğiniz olası kimlik bilgisi türleri gösterilmektedir. Bu değerleri, kod veya yapılandırma dosyalarında kullanabilirsiniz.  
   
- Bir özel durum ile varsayılan olarak sistem tarafından sağlanan bağlamalar WCF hizmeti kimlik bilgileri otomatik olarak ileti düzeyi güvenlik kullanılırken anlaşır. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>, hangi sağlamaz güvenlik varsayılan.) Bu davranışı devre dışı bırakmak için bkz: <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> ve <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> özellikleri.  
+|Ayar|Açıklama|  
+|-------------|-----------------|  
+|Yok.|İstemcinin bir kimlik bilgisi sunması gerekmediğini belirtir. Bu, anonim bir istemciyi dönüştürür.|  
+|Windows|SOAP ileti değişimlerinin Windows kimlik bilgileriyle kurulu güvenlik bağlamı altında oluşmasına izin verir.|  
+|Kullanıcı adı|Hizmetin, istemcinin kimliğinin Kullanıcı adı kimlik bilgileriyle doğrulanmasını gerektirmesini sağlar. WCF, bir imza oluşturma veya veri şifreleme gibi kullanıcı adlarıyla herhangi bir şifreleme işlemine izin vermediğini unutmayın. WCF, Kullanıcı adı kimlik bilgileri kullanılırken taşımanın güvenli olmasını sağlar.|  
+|Sertifika|Hizmetin bir X. 509.952 sertifikası kullanarak kimlik doğrulaması yapmasını gerektirmesini sağlar.|  
+|Verilen belirteç|Bir güvenlik ilkesine göre yapılandırılmış özel bir belirteç türü. Varsayılan belirteç türü güvenlik onaylama işlemi biçimlendirme dili (SAML) ' dir. Belirteç, güvenli bir belirteç hizmeti tarafından verilir. Daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+  
+### <a name="negotiation-model-of-service-credentials"></a>Hizmet kimlik bilgilerinin anlaşma modeli  
+ *Anlaşma* , kimlik bilgilerini değiştirerek bir istemci ve hizmet arasında güven oluşturma işlemidir. İşlem, istemci ve hizmet arasında yinelemeli olarak gerçekleştirilir, bu nedenle yalnızca anlaşma sürecinde bir sonraki adım için gereken bilgileri açıklayana. Uygulamada, nihai sonuç bir hizmetin kimlik bilgisinin sonraki işlemlerde kullanılacak istemciye teslim edilmesiyle sonuçlanır.  
+  
+ Tek bir özel durum ile, varsayılan olarak WCF 'deki sistem tarafından sağlanmış bağlamalar, ileti düzeyinde güvenlik kullanırken hizmet kimlik bilgilerini otomatik olarak görüşyordu. (Özel durum <xref:System.ServiceModel.BasicHttpBinding>, varsayılan olarak güvenliği etkinleştirmez.) Bu davranışı devre dışı bırakmak için <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> ve <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> özelliklerine bakın.  
   
 > [!NOTE]
->  SSL güvenlik .NET Framework 3.5 ve üzeri kullanıldığında, bir WCF istemcisi hem kendi sertifika deposu Ara sertifikaları ve SSL anlaşması sırasında alınan Ara sertifikaları hizmetin üzerinde sertifika zinciri doğrulamayı gerçekleştirmek için kullanır Sertifika. .NET framework 3.0, yalnızca yerel sertifika deposunda yüklü Ara sertifikaları kullanır.  
+> SSL güvenliği .NET Framework 3,5 ve üzeri bir sürümde kullanıldığında, bir WCF istemcisi hem sertifika deposundaki ara sertifikaları hem de hizmetin sertifika zinciri doğrulamasını gerçekleştirmek üzere SSL anlaşması sırasında alınan ara sertifikaları kullanır. Sertifika. .NET Framework 3,0 yalnızca yerel sertifika deposunda yüklü olan ara sertifikaları kullanır.  
   
-#### <a name="out-of-band-negotiation"></a>Bant dışı anlaşması  
- Otomatik anlaşması devre dışıysa, hizmete herhangi bir ileti göndermeden önce istemci hizmeti kimlik bilgileri sağlanmalıdır. Bu olarak da bilinen, bir *bant dışı* sağlama. Örneğin, bir sertifika belirtilen kimlik bilgisi türüdür ve otomatik anlaşma devre dışı ise istemci almak ve istemci uygulamasını çalıştıran bilgisayarda sertifikayı yüklemek için hizmet sahibi başvurmanız gerekir. Hangi istemcilerin işletmeler arası senaryosunda bir hizmete erişebilir sıkı bir şekilde denetlemek istediğinizde bu, örneğin, yapılabilir. Bu çıkış,-bant-anlaşma e-posta ile yapılabilir ve X.509 sertifikası, Microsoft Yönetim Konsolu (MMC) Sertifikalar ek bileşenini gibi bir araç kullanarak Windows sertifika deposunda depolanır.  
+#### <a name="out-of-band-negotiation"></a>Bant dışı anlaşma  
+ Otomatik anlaşma devre dışıysa, hizmete herhangi bir ileti gönderilmeden önce hizmet kimlik bilgisinin istemcide sağlanması gerekir. Bu, *bant dışı* sağlama olarak da bilinir. Örneğin, belirtilen kimlik bilgisi türü bir sertifika ise ve otomatik anlaşma devre dışıysa, istemcinin istemci uygulamasını çalıştıran bilgisayara sertifikayı alıp yüklemesi için hizmet sahibiyle iletişim kurabilmesi gerekir. Bu, örneğin, bir işletmeden işletmeye senaryosundaki bir hizmete hangi istemcilerin erişebileceğini kesinlikle denetlemek istediğinizde yapılabilir. Bu bant dışı anlaşma, e-posta ile yapılabilir ve X. 509.440 sertifikası, Microsoft Yönetim Konsolu (MMC) sertifikaları ek bileşeni gibi bir araç kullanılarak Windows sertifika deposunda depolanır.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Özelliği, bant dışı anlaşması ile ulaşılan bir sertifika ile hizmet sağlamak amacıyla kullanılır. Kullanılırken bu gereklidir <xref:System.ServiceModel.BasicHttpBinding> sınıfı bağlamaya izin vermez çünkü otomatik anlaşması. Özelliği de uncorrelated çift yönlü bir senaryoda kullanılır. Bu, burada bir sunucu ileti bir istek sunucuya ilk göndermek istemci gerek kalmadan istemciye bir senaryodur. Sunucu, istemciden gelen istekte olmadığı için bu istemciye iletiyi şifrelemek için istemci sertifikasını kullanmanız gerekir.  
+> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Özelliği, bant dışı anlaşmasına göre kullanıma hazır bir sertifikayla hizmeti sağlamak için kullanılır. Bağlama otomatik anlaşmaya izin vermediğinden, <xref:System.ServiceModel.BasicHttpBinding> sınıfı kullanılırken bu gereklidir. Özelliği, bağıntılı olmayan bir çift yönlü senaryoda da kullanılır. Bu, bir sunucunun istemciye istek göndermesi gerekmeden istemciye bir ileti gönderdiği bir senaryodur. Sunucu istemciden bir istek içermediğinden, iletiyi istemciye şifrelemek için istemcinin sertifikasını kullanması gerekir.  
   
-## <a name="setting-credential-values"></a>Kimlik bilgisi değerleri ayarlama  
- Güvenlik modu seçtikten sonra gerçek kimlik bilgileri belirtmeniz gerekir. Kimlik bilgisi türü "sertifika için" olarak ayarlanırsa, ardından, belirli kimlik bilgileri (örneğin, belirli bir X.509 sertifikası) hizmet veya istemci ile ilişkilendirmeniz gerekir.  
+## <a name="setting-credential-values"></a>Kimlik bilgisi değerlerini ayarlama  
+ Bir güvenlik modu seçtikten sonra, gerçek kimlik bilgilerini belirtmeniz gerekir. Örneğin, kimlik bilgisi türü "sertifika" olarak ayarlanırsa, belirli bir kimlik bilgisini (örneğin, belirli bir X. 509.440 sertifikası) hizmet veya istemciyle ilişkilendirmeniz gerekir.  
   
- İster bir hizmet veya istemci programlama bağlı olarak, kimlik bilgisi değeri ayarlamak için yöntemi biraz farklıdır.  
+ Bir hizmet veya istemci programlama yönteminize bağlı olarak, kimlik bilgisi değerini ayarlama yöntemi biraz farklılık gösterir.  
   
 ### <a name="setting-service-credentials"></a>Hizmet kimlik bilgilerini ayarlama  
- Aktarım Modu kullanıyorsanız ve HTTP aktarım olarak kullanıyorsanız, ya da Internet Information Services (IIS) kullanın veya bir sertifika ile bağlantı noktasını yapılandırın. Daha fazla bilgi için [aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) ve [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ Aktarım modunu kullanıyorsanız ve aktarım olarak HTTP kullanıyorsanız, Internet Information Services (IIS) kullanmanız veya bağlantı noktasını bir sertifikayla yapılandırmanız gerekir. Daha fazla bilgi için bkz. [Aktarım güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) ve [http aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
- Kod içinde kimlik bilgilerine sahip bir hizmet sağlamak için bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> sınıfı ve uygun kimlik bilgilerini kullanarak belirttiğiniz <xref:System.ServiceModel.Description.ServiceCredentials> aracılığıyla erişilebilen sınıfı <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği.  
+ Kodda kimlik bilgileriyle bir hizmet sağlamak için, <xref:System.ServiceModel.ServiceHost> sınıfının bir örneğini oluşturun ve <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> özelliği aracılığıyla erişilen <xref:System.ServiceModel.Description.ServiceCredentials> sınıfını kullanarak uygun kimlik bilgisini belirtin.  
   
 #### <a name="setting-a-certificate"></a>Sertifika ayarlama  
- İstemciler hizmete kimlik doğrulaması için kullanılan X.509 sertifikası ile bir hizmet sağlamak için kullanmak <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> sınıfı.  
+ İstemcilere hizmetin kimliğini doğrulamak için kullanılacak X. 509.440 sertifikasıyla bir hizmet sağlamak için, <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> sınıfının yöntemini kullanın.  
   
- Bir istemci sertifikası ile bir hizmeti sağlamak için kullanın <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential> sınıfı.  
+ İstemci sertifikası ile bir hizmet sağlamak için, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential> sınıfının yöntemini kullanın.  
   
 #### <a name="setting-windows-credentials"></a>Windows kimlik bilgilerini ayarlama  
- İstemci geçerli bir kullanıcı adı ve parola belirtiyorsa, bu kimlik bilgisi istemcinin kimliğini doğrulamak için kullanılır. Aksi takdirde, geçerli oturum açan kullanıcının kimlik bilgileri kullanılır.  
+ İstemci geçerli bir Kullanıcı adı ve parola belirtiyorsa, istemcinin kimliğini doğrulamak için bu kimlik bilgileri kullanılır. Aksi takdirde, oturum açmış geçerli kullanıcının kimlik bilgileri kullanılır.  
   
-### <a name="setting-client-credentials"></a>İstemci kimlik bilgilerini ayarlama  
- WCF'de, istemci uygulamaları hizmetlerine bağlanmak için bir WCF istemcisi kullanır. Her istemci türetildiği <xref:System.ServiceModel.ClientBase%601> sınıfı ve <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği istemcideki çeşitli istemci kimlik bilgileri değerlerini belirtimi sağlar.  
+### <a name="setting-client-credentials"></a>Istemci kimlik bilgilerini ayarlama  
+ WCF 'de, istemci uygulamaları hizmetlere bağlanmak için bir WCF istemcisi kullanır. Her istemci <xref:System.ServiceModel.ClientBase%601> sınıfından türetilir <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> ve istemcideki özelliği, istemci kimlik bilgilerinin çeşitli değerlerinin belirtimine izin verir.  
   
 #### <a name="setting-a-certificate"></a>Sertifika ayarlama  
- Bir hizmete istemcinin kimliğini doğrulamak için kullanılan X.509 sertifikası ile bir hizmet sağlamak için kullanmak <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> sınıfı.  
+ Bir hizmette istemcinin kimliğini doğrulamak için kullanılan X. 509.440 sertifikasıyla bir hizmet sağlamak için, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> sınıfının yöntemini kullanın.  
   
-## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Bir hizmete istemcinin kimliğini doğrulamak için istemci kimlik bilgileri nasıl kullanılır  
- Bir hizmetle iletişim kurmak için gereken istemci kimlik bilgilerini kullanarak sağlanan <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği veya <xref:System.ServiceModel.ChannelFactory.Credentials%2A> özelliği. Güvenlik kanalı hizmete istemcinin kimliğini doğrulamak için bu bilgileri kullanır. Kimlik doğrulama, iki moddan birini gerçekleştirilir:  
+## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>İstemci kimlik bilgileri, hizmette bir Istemcinin kimliğini doğrulamak için nasıl kullanılır  
+ Bir hizmetle iletişim kurmak için gereken istemci kimlik bilgileri, <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliği <xref:System.ServiceModel.ChannelFactory.Credentials%2A> veya özelliği kullanılarak sağlanır. Güvenlik kanalı, bu bilgileri istemcinin kimliğini doğrulamak için kullanır. Kimlik doğrulaması iki moddan biri aracılığıyla gerçekleştirilir:  
   
-- Bir güvenlik bağlamı'kurmak için WCF istemci örneği kullanarak ilk ileti gönderilmeden önce istemci kimlik bilgileri bir kez kullanılır. Tüm uygulama iletileri ardından güvenlik bağlamı olarak güvenlidir.  
+- İstemci kimlik bilgileri, ilk ileti gönderilmeden önce, bir güvenlik bağlamı oluşturmak için WCF istemci örneği kullanılarak kullanılır. Tüm uygulama iletileri daha sonra güvenlik bağlamı aracılığıyla güvenli hale getirilir.  
   
-- İstemci kimlik bilgileri, hizmete gönderilen her bir uygulama iletisi kimliğini doğrulamak için kullanılır. Bu durumda, istemci ile hizmet arasında hiçbir bağlam kurulur.  
+- İstemci kimlik bilgileri, hizmete gönderilen her uygulama iletisinin kimliğini doğrulamak için kullanılır. Bu durumda, istemci ve hizmet arasında hiçbir bağlam kurulmaz.  
   
-### <a name="established-identities-cannot-be-changed"></a>Kurulan kimlikleri değiştirilemez  
- İlk yöntem kullanıldığında, belirlenen bağlamı için istemci kimliği ile kalıcı olarak ilişkilendirilir. Güvenlik bağlamı kurulduktan sonra diğer bir deyişle, istemciyle ilişkili kimliği değiştirilemez.  
+### <a name="established-identities-cannot-be-changed"></a>Belirlenen kimlikler değiştirilemez  
+ İlk yöntem kullanıldığında, belirlenen bağlam, istemci kimliğiyle kalıcı olarak ilişkilendirilir. Diğer bir deyişle, güvenlik bağlamı kurulduktan sonra istemciyle ilişkili kimlik değiştirilemez.  
   
 > [!IMPORTANT]
->  Ne zaman kimlik alınamaz dikkat etmeniz bir durum yoktur (diğer bir deyişle, güvenlik zaman kurmak bağlam, varsayılan davranıştır). İkinci bir hizmet ile iletişim kuran bir hizmeti oluşturursanız, ikinci hizmeti WCF İstemcisi'ni açmak için kullanılan kimliği değiştirilemez. Bu birden çok istemci ilk hizmeti kullanmasına izin verilen ve ikinci hizmet erişirken istemcilere hizmet kimliğine bürünür bir sorun haline gelir. Tüm arayanlar için aynı istemci hizmeti kullanır, tüm ikinci hizmete çağrı çağıranın kimliğini, ikinci Hizmeti İstemcisi'ni açmak için kullanılan ilk altında gerçekleştirilir. Diğer bir deyişle, hizmet, tüm istemciler için ilk istemci kimliğini ikinci hizmetiyle iletişim kurmak için kullanır. Bu, ayrıcalıkların yükseltilmesine neden olabilir. İstenen davranışı hizmetinizin bu değilse, her çağıranın izlemek ve oluşturmak için her ayrı çağıran ikinci hizmetini yeni bir istemci ve hizmet ikinci hizmetiyle iletişim kurmak için yalnızca doğru arayan için doğru istemci kullandığından emin olun.  
+> Kimliğin ne zaman geçmediği (yani güvenlik bağlamı oluşturma sırasında, varsayılan davranış) bilinmesi gereken bir durum vardır. İkinci bir hizmetle iletişim kuran bir hizmet oluşturursanız, ikinci hizmette WCF istemcisini açmak için kullanılan kimlik değiştirilemez. Bu, birden çok istemcinin ilk hizmeti kullanmasına izin veriliyorsa ve hizmetin ikinci hizmete erişirken istemcileri taklit ettiğinde bir sorun haline gelir. Hizmet tüm çağıranlar için aynı istemciyi yeniden kullanıyorsa, ikinci hizmete yapılan tüm çağrılar istemciyi ikinci hizmete açmak için kullanılan ilk çağıranın kimliği altında yapılır. Diğer bir deyişle, hizmet, ikinci hizmetle iletişim kurmak üzere tüm istemcileri için ilk istemcinin kimliğini kullanır. Bu, ayrıcalık yükselmesine neden olabilir. Bu, hizmetinizin istenen davranışı değilse, her bir çağrıyı izlemeniz ve her ayrı arayan için ikinci hizmete yeni bir istemci oluşturmanız ve hizmetin ikinci hizmetle iletişim kurması için yalnızca doğru çağıran istemciyi kullandığından emin olmanız gerekir.  
   
- Kimlik bilgileri ve güvenli oturumlar hakkında daha fazla bilgi için bkz: [güvenli oturumlar için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ Kimlik bilgileri ve güvenli oturumlar hakkında daha fazla bilgi için bkz. [Güvenli Oturumlar Için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

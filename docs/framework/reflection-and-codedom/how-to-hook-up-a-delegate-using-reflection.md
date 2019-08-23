@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935720"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Nasıl yapılır: Yansıma Kullanarak Temsilci Bağlama
-Derlemeleri yüklemek ve çalıştırmak için yansıma kullandığınızda, olayları bağlamak için C# `+=` işleç veya Visual Basic [AddHandler ifadesiyle](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) gibi dil özelliklerini kullanamazsınız. Aşağıdaki yordamlarda, tüm gerekli türleri yansıma aracılığıyla alarak bir olaya mevcut bir yöntemi nasıl yedekleyerek, yansıma yayma kullanarak dinamik bir yöntem oluşturma ve bir olaya bağlama işlemleri gösterilmektedir.  
+Derlemeleri yüklemek ve çalıştırmak için yansıma kullandığınızda, olayları bağlamak için C# `+=` işleç veya Visual Basic [AddHandler ifadesiyle](../../visual-basic/language-reference/statements/addhandler-statement.md) gibi dil özelliklerini kullanamazsınız. Aşağıdaki yordamlarda, tüm gerekli türleri yansıma aracılığıyla alarak bir olaya mevcut bir yöntemi nasıl yedekleyerek, yansıma yayma kullanarak dinamik bir yöntem oluşturma ve bir olaya bağlama işlemleri gösterilmektedir.  
   
 > [!NOTE]
->  Bir olay işleme temsilcisini bağlamak için başka bir yöntem için, <xref:System.Reflection.EventInfo.AddEventHandler%2A> <xref:System.Reflection.EventInfo> sınıfının yöntemi için kod örneğine bakın.  
+> Bir olay işleme temsilcisini bağlamak için başka bir yöntem için, <xref:System.Reflection.EventInfo.AddEventHandler%2A> <xref:System.Reflection.EventInfo> sınıfının yöntemi için kod örneğine bakın.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>Yansımayı kullanarak bir temsilciyi bağlama  
   
@@ -57,7 +57,7 @@ Derlemeleri yüklemek ve çalıştırmak için yansıma kullandığınızda, ola
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. `add` Erişimci yöntemini alın ve olayı bağlamak için çağırın. Tüm olayların, üst `add` düzey dillerin sözdizimi `remove` tarafından gizlenen bir erişimcisi ve erişimcisi vardır. Örneğin, C# olayları bağlamak için `+=` işlecini kullanır ve Visual Basic [AddHandler ifadesini](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)kullanır. Aşağıdaki kod, `add` <xref:System.Windows.Forms.Control.Click> olayın erişimcisini alır ve temsilci örneğini geçirerek geç sınırı çağırır. Bağımsız değişkenlerin bir dizi olarak geçirilmesi gerekir.  
+6. `add` Erişimci yöntemini alın ve olayı bağlamak için çağırın. Tüm olayların, üst `add` düzey dillerin sözdizimi `remove` tarafından gizlenen bir erişimcisi ve erişimcisi vardır. Örneğin, C# olayları bağlamak için `+=` işlecini kullanır ve Visual Basic [AddHandler ifadesini](../../visual-basic/language-reference/statements/addhandler-statement.md)kullanır. Aşağıdaki kod, `add` <xref:System.Windows.Forms.Control.Click> olayın erişimcisini alır ve temsilci örneğini geçirerek geç sınırı çağırır. Bağımsız değişkenlerin bir dizi olarak geçirilmesi gerekir.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

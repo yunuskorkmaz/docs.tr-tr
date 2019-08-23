@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerInfo7::GetInMemorySymbolsLength yöntemi
+title: 'ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi'
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerInfo7.GetInMemorySymbolsLength
@@ -11,17 +11,17 @@ api_type:
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03c70b97e7af9fdc76c579c5940e2436232f6bc2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748657"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955421"
 ---
-# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7::GetInMemorySymbolsLength yöntemi
-[.NET Framework 4.6.1 ve sonraki sürümlerinde desteklenen]  
+# <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength yöntemi
+[.NET Framework 4.6.1 ve sonraki sürümlerde desteklenir]  
   
- Bir bellek içi sembol akış uzunluğunu döndürür.  
+ Bellek içi sembol akışının uzunluğunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,30 +34,30 @@ HRESULT GetInMemorySymbolsLength(
   
 ## <a name="parameters"></a>Parametreler  
  `moduleId`  
- [in] Bellek içi akış içeren modül tanıtıcısı.  
+ 'ndaki Bellek içi akışı içeren modülün tanıtıcısı.  
   
  pCountSymbolBytes  
- [out] Bir işaretçi bir `DWORD` yöntem döndürüldüğünde, akış bayt cinsinden uzunluğunu içeren bir değer.  
+ dışı Bir `DWORD` değere yönelik, yöntemin döndürdüğü bir işaretçi, akışın uzunluğunu bayt olarak içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Yöntem döndürür `S_OK` sıfır (0) olsa bile bellek akışının uzunluğu, belirlenebilir durumunda.  
+ Bu yöntem, `S_OK` sıfır (0) olsa bile, bellek akışının uzunluğu belirlenebileceği takdirde döndürülür.  
   
- Yöntem döndürür `CORPROF_E_MODULE_IS_DYNAMIC` yöntemi kullanılarak oluşturulmuşsa <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Yöntemi, yöntemi `CORPROF_E_MODULE_IS_DYNAMIC` kullanılarak <xref:System.Reflection.Emit?displayProperty=nameWithType>oluşturulduysa döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Modül bellek içi simgeleri varsa, akışın uzunluğu yerleştirildi `pCountSymbolBytes`. Bellek içi sembolleri modülü yoksa `*pCountSymbolBytes = 0`.  
+ Modülün bellek içi sembolleri varsa, akışın uzunluğu içine `pCountSymbolBytes`yerleştirilir. Modülün bellek içi sembolleri `*pCountSymbolBytes = 0`yoksa.  
   
 > [!NOTE]
->  Geçerli uygulama Reflection.Emit desteklemez. Modül Reflection.Emit kullanılarak oluşturulduysa, yöntem döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
+> Geçerli uygulama Reflection. yayma 'yi desteklemiyor. Modül Reflection. yayma kullanılarak oluşturulduysa, yöntemi döndürür `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

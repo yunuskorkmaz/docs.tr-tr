@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2bc0bca55dcdc350537f0826ab3a675747ee5497
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230583"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951323"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>DataSet’e DataTable Ekleme
-ADO.NET oluşturmanıza olanak sağlar <xref:System.Data.DataTable> nesneleri ve mevcut bir ekleme <xref:System.Data.DataSet>. Kısıtlama bilgi için ayarlayabileceğiniz bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.PrimaryKey%2A> ve <xref:System.Data.DataColumn.Unique%2A> özellikleri.  
+ADO.net, nesneleri oluşturmanızı <xref:System.Data.DataTable> ve bunları var olan <xref:System.Data.DataSet>bir nesneye eklemenizi sağlar. Ve<xref:System.Data.DataTable.PrimaryKey%2A> <xref:System.Data.DataTable> özelliklerinikullanarakbiriçin<xref:System.Data.DataColumn.Unique%2A> kısıtlama bilgileri ayarlayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek oluşturur bir <xref:System.Data.DataSet>, yeni bir ekler <xref:System.Data.DataTable> nesnesini <xref:System.Data.DataSet>ve ardından üç ekler <xref:System.Data.DataColumn> tablosuna nesneleri. Son olarak, kodu bir sütun birincil anahtar sütunu ayarlar.  
+ Aşağıdaki örnek bir <xref:System.Data.DataSet>oluşturur, <xref:System.Data.DataSet>öğesine yeni <xref:System.Data.DataTable> bir nesnesi ekler ve ardından tabloya üç <xref:System.Data.DataColumn> nesne ekler. Son olarak, kod bir sütunu birincil anahtar sütunu olarak ayarlar.  
   
  [!code-csharp[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/CS/source.cs#1)]
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
-## <a name="case-sensitivity"></a>Büyük/küçük harfe duyarlılık  
- İçinde iki veya daha fazla tablo veya aynı adı taşıyan ancak farklı büyük/küçük harf, ilişkileri varolabilir bir <xref:System.Data.DataSet>. Bu gibi durumlarda, tabloları ve ilişkileri adıyla başvuruları büyük küçük harfe duyarlı. Örneğin, varsa <xref:System.Data.DataSet> **veri kümesi** tabloları içeren **Table1** ve **table1**, başvuru **Table1** ada göre **dataSet.Tables["Table1"]**, ve **table1** olarak **dataSet.Tables["table1"]**. Tablo ya da başvuru girişimi **dataSet.Tables["TABLE1"]** bir özel durum oluşturur.  
+## <a name="case-sensitivity"></a>Büyük/küçük harf duyarlılığı  
+ İki veya daha fazla tablo veya aynı ada sahip, ancak büyük küçük harfe sahip ilişkiler bir <xref:System.Data.DataSet>içinde bulunabilir. Bu gibi durumlarda, tabloya ve ilişkilerde ada göre başvurular büyük/küçük harfe duyarlıdır. Örneğin, <xref:System.Data.DataSet> **veri kümesi** **Table1** ve **Table1**tabloları içeriyorsa, **Table1** adına ad **DataSet. Tables ["Table1"]** ve **Table1** as **DataSet. Tables ["Table1"]** olarak başvurabilirsiniz. Veri kümesi olarak tablolardan birine başvurulmaya çalışılıyor **. tablolar ["Table1"]** bir özel durum oluşturur.  
   
- Bir tablo veya ilişki belirli bir ada sahip yalnızca büyük küçük harf duyarlılığı davranış geçerli değildir. Örneğin, varsa <xref:System.Data.DataSet> yalnızca **Table1**, kullanarak başvurabilirsiniz **dataSet.Tables["TABLE1"]**.  
+ Yalnızca bir tablo veya ilişki belirli bir ada sahipse, büyük/küçük harf duyarlılığı davranışı uygulanmaz. Örneğin, yalnızca **Table1**ise <xref:System.Data.DataSet> , **DataSet. Tables ["Table1"]** kullanarak buna başvurabilirsiniz.  
   
 > [!NOTE]
->  <xref:System.Data.DataSet.CaseSensitive%2A> Özelliği <xref:System.Data.DataSet> bu davranışı etkilemez. <xref:System.Data.DataSet.CaseSensitive%2A> Özellik geçerlidir verilerde <xref:System.Data.DataSet> ve sıralama, arama, filtreleme, zorunlu kısıtlamaları ve benzeri etkiler.  
+> <xref:System.Data.DataSet.CaseSensitive%2A> Öğesinin<xref:System.Data.DataSet> özelliği bu davranışı etkilemez. <xref:System.Data.DataSet.CaseSensitive%2A> Özelliği ,<xref:System.Data.DataSet> içindeki veriler için geçerlidir ve sıralamayı, aramayı, filtrelemeyi, kısıtlamaları zorunlu tutmayı ve benzerlerini etkiler.  
   
-## <a name="namespace-support"></a>Namespace desteği  
- Farklı ad alanlarına olsa bile 2.0 sürümünden öncekileri ADO.NET sürümlerinde aynı adı, iki tablo sahip olamaz. Bu sınırlama, ADO.NET 2. 0'kaldırıldı. A <xref:System.Data.DataSet> aynı olan iki tablo içerebilir <xref:System.Data.DataTable.TableName%2A> özellik değeri farklı ancak <xref:System.Data.DataTable.Namespace%2A> özellik değerleri.  
+## <a name="namespace-support"></a>Ad alanı desteği  
+ 2,0 'den önceki ADO.NET sürümlerinde, farklı ad boşluklarında olsalar bile, iki tablo aynı ada sahip olamaz. Bu sınırlama, ADO.NET 2,0 ' de kaldırılmıştır. , Aynı <xref:System.Data.DataTable.TableName%2A> özellik değerine sahip ancak farklı <xref:System.Data.DataTable.Namespace%2A> özellik değerlerine sahip iki tablo içerebilir. <xref:System.Data.DataSet>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

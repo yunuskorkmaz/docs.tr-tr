@@ -2,21 +2,21 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 67ec30b2bf3c322b949700789ce942e4281b77a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ed87adfb3963513602844fc69afce8f7994fa8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757995"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932429"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
-SSL akışı kullanarak kanal güvenliğini destekleyen özel bağlama öğesini temsil eder.  
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity >
+SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğesini temsil eder.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
-\<sslStreamSecurity>  
+\<sslStreamSecurity >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,8 +32,8 @@ SSL akışı kullanarak kanal güvenliğini destekleyen özel bağlama öğesini
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|requireClientCertificate|Bir istemci sertifikasının Bu bağlama için gerekli olup olmadığını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|sslProtocols|Hangi SslProtocols belirten bir SslProtocols enum bayrak değeri desteklenir. Ssl3 varsayılandır&#124;Tls&#124;Tls11&#124;Tls12.|  
+|requireClientCertificate|Bu bağlama için bir istemci sertifikasının gerekli olup olmadığını belirten bir Boolean değer. Varsayılan, `false` değeridir.|  
+|sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan değer Ssl3&#124;TLS&#124;Tls11&#124;Tls12 ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,14 +42,14 @@ SSL akışı kullanarak kanal güvenliğini destekleyen özel bağlama öğesini
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<bağlama >](../../../../../docs/framework/misc/binding.md)|Özel bağlama tüm bağlama yeteneklerini tanımlar.|  
+|[\<bağlama >](../../../misc/binding.md)|Özel bağlamanın tüm bağlama yeteneklerini tanımlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

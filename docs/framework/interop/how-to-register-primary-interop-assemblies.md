@@ -7,16 +7,16 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e599696b75ed1a0186276dfa47baef2cdf9d7097
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e61ae55673cbf745ea4c637c5206efe41d8ab276
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629380"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946668"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
-Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve her zaman arabirim olarak sıralanır. Bazı durumlarda, sınıfı sıralamak için kullanılan arabirim sınıf arabirimi olarak bilinir. Sınıf arabirimini tercih ettiğiniz bir arabirimle geçersiz kılma hakkında daha fazla bilgi için bkz. [com çağrılabilir sarmalayıcı](../../../docs/standard/native-interop/com-callable-wrapper.md).
+Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve her zaman arabirim olarak sıralanır. Bazı durumlarda, sınıfı sıralamak için kullanılan arabirim sınıf arabirimi olarak bilinir. Sınıf arabirimini tercih ettiğiniz bir arabirimle geçersiz kılma hakkında daha fazla bilgi için bkz. [com çağrılabilir sarmalayıcı](../../standard/native-interop/com-callable-wrapper.md).
 
  .NET Framework bir uygulamadan COM türlerini kullanmak isteyen herhangi bir geliştirici birlikte çalışma derlemesi oluşturabileceğinden, bu durum bir sorun oluşturur. Bir geliştirici bir COM tür kitaplığını içeri aktardığında ve imzaladığında, bu geliştirici, içeri aktarılan ve başka bir geliştirici tarafından imzalanan bir benzersiz türler kümesi oluşturur. Bu tür uyumsuzluk sorununa yönelik çözüm, her geliştiricinin satıcı tarafından sağlanan ve imzalı birincil birlikte çalışma derlemesini edinmesine yöneliktir.
 

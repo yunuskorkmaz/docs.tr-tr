@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624030"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925115"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Nasıl yapılır: Windows Forms ImageList Bileşeni ile Resim Ekleme veya Kaldırma
-Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önce bileşeni ile görüntü genellikle doldurulur. Ancak, ekleyin ve görüntü listesi denetimi ile ilişkilendirdikten sonra görüntüleri kaldırın.  
+Windows Forms <xref:System.Windows.Forms.ImageList> bileşen, genellikle bir denetimle ilişkilendirilmeden önce görüntülerle doldurulur. Ancak, görüntü listesini bir denetimle ilişkilendirdikten sonra görüntüler ekleyebilir ve kaldırabilirsiniz.  
   
 > [!NOTE]
->  Görüntüleri kaldırdığınızda doğrulayın <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> ilişkili herhangi bir denetim özelliği hala geçerli.  
+> Görüntüleri kaldırdığınızda, ilişkili denetimlerin <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> özelliğinin hala geçerli olduğunu doğrulayın.  
   
-### <a name="to-add-images-programmatically"></a>Görüntüleri programsal olarak eklemek için  
+### <a name="to-add-images-programmatically"></a>Görüntüleri programlı olarak eklemek için  
   
-- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemi <xref:System.Windows.Forms.ImageList.Images%2A> özelliği.  
+- <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> Görüntü listesinin<xref:System.Windows.Forms.ImageList.Images%2A> özelliğinin yöntemini kullanın.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
+     Aşağıdaki kod örneğinde, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun belirlenmesi, en az sistem erişim düzeylerine sahip olan kullanıcıların uygulamayı daha güvenli bir şekilde çalıştırmasını sağlar. Aşağıdaki kod örneği, zaten bir <xref:System.Windows.Forms.ImageList> denetim eklenmiş bir formunuz olmasını gerektirir.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Windows Forms <xref:System.Windows.Forms.ImageList> bir denetimle ilişkili önc
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Bir anahtar değeri ile görüntü eklemek için.  
+### <a name="to-add-images-with-a-key-value"></a>Anahtar değeri olan görüntüler eklemek için.  
   
-- Birini <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> görüntü listenin yöntemlerinin <xref:System.Windows.Forms.ImageList.Images%2A> bir anahtar değeri alan özelliği.  
+- Anahtar değerini alan görüntü <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> <xref:System.Windows.Forms.ImageList.Images%2A> listesi özelliğinin yöntemlerinden birini kullanın.  
   
-     Aşağıdaki kod örneğinde yolunu ayarlamak için görüntü konumunu **Belgelerim** klasör. Bu konum, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu klasör içerdiğini varsayar çünkü kullanılır. Bu konumu seçme, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeyleri daha fazla kullanıcı sağlar. Aşağıdaki kod örneği, bir form olmasını gerektirir bir <xref:System.Windows.Forms.ImageList> denetim zaten eklendi.  
+     Aşağıdaki kod örneğinde, görüntü konumu için ayarlanan yol Belgelerim klasörüdür. Bu konum, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu klasörü içerdiğini varsaydığı için kullanılır. Bu konumun belirlenmesi, en az sistem erişim düzeylerine sahip olan kullanıcıların uygulamayı daha güvenli bir şekilde çalıştırmasını sağlar. Aşağıdaki kod örneği, zaten bir <xref:System.Windows.Forms.ImageList> denetim eklenmiş bir formunuz olmasını gerektirir.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -105,13 +105,13 @@ public void addImage()
 }  
 ```  
   
-### <a name="to-remove-all-images-programmatically"></a>Tüm görüntüleri programlı bir şekilde kaldırmak için  
+### <a name="to-remove-all-images-programmatically"></a>Tüm görüntüleri programlı olarak kaldırmak için  
   
-- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> tek bir görüntü kaldırmak için yöntemi  
+- Tek bir görüntüyü kaldırmak için yönteminikullanın<xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A>  
   
-     , - veya -  
+     ,-veya-  
   
-     Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> görüntü listesi'ndaki tüm görüntüler temizlemek için yöntemi.  
+     Görüntü listesindeki tüm görüntüleri temizlemek için yönteminikullanın.<xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A>  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -127,9 +127,9 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a>Anahtara göre görüntülerini kaldırmak için  
+### <a name="to-remove-images-by-key"></a>Görüntüleri anahtara göre kaldırmak için  
   
-- Kullanım <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> anahtara göre tek bir görüntü kaldırmak için yöntemi.  
+- Tek bir görüntüyü anahtarıyla kaldırmak için yönteminikullanın.<xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A>  
   
     ```vb  
     ' Removes the image named "myPhoto" from the list.  

@@ -6,58 +6,58 @@ helpviewer_keywords:
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-ms.openlocfilehash: a2225e297dbc0b5f9d49799cb34eb5539746e62e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fe64e4e9e7aadbd30a38743647251f9fa49ba95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960437"
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>Nasıl yapılır: Gölgeli Metin Oluşturma
-Bu bölümdeki örneklerde, bir gölge etkisi görüntülenen metin oluşturma işlemi gösterilmektedir.  
+Bu bölümdeki örneklerde, görüntülenecek metin için bir gölge efektinin nasıl oluşturulacağı gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Media.Effects.DropShadowEffect> Nesne gölge efektleri bırakma çeşitli oluşturmanıza imkan tanır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nesneleri. Aşağıdaki örnek, metne uygulanacak gölge etkisi gösterir. Bu durumda, gölge gölge rengi Bulanıklaştırma anlamına gelir. bir yazılım gölge olmasıdır.  
+ Nesnesi <xref:System.Windows.Media.Effects.DropShadowEffect> , nesneler için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] çeşitli gölge efektler oluşturmanızı sağlar. Aşağıdaki örnek, metne uygulanan bir gölge efekti gösterir. Bu durumda, gölge bir gölgedir, bu da gölge rengin bulanıklaştırmasıdır.  
   
- ![Metin gölgesinin Yumuşaklık ile &#61; 0,25](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
+ ![Soflük &#61; 0,25 ile metin gölgesi](./media/how-to-create-text-with-a-shadow/drop-shadow-text-effect.jpg) 
   
- Ayarlayarak Gölge genişliğini denetleyebilir <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> özelliği. Değerini `4.0` 4 piksel Gölge genişliğini belirtir. Yumuşaklık denetleyebilir veya değiştirerek bir gölge Bulanıklığı <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> özelliği. Değerini `0.0` hiçbir Bulanıklaştırma gösterir. Aşağıdaki kod örneği, geçici bir gölge oluşturma gösterilmektedir.  
+ <xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A> Özelliği ayarlayarak bir gölgenin genişliğini kontrol edebilirsiniz. Değeri 4 piksellik `4.0` bir gölge genişliği gösterir. <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> Özelliği değiştirerek, bir gölgenin yumuşaklığını veya bulanıklaştırarak denetim yapabilirsiniz. Değeri, `0.0` bulanıklık olmadığını gösterir. Aşağıdaki kod örneği, nasıl yumuşak bir gölge oluşturulacağını göstermektedir.  
   
  [!code-xaml[TextShadowSnippets#TextShadowSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet1)]  
   
 > [!NOTE]
->  Bu gölge efektleri üzerinden geçmemektedir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin işleme zinciri. Sonuç olarak, ClearType bu etkileri kullanırken devre dışı bırakıldı.  
+> Bu gölge etkileri [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] metin işleme ardışık düzeninde ilerleyemez. Sonuç olarak, bu efektler kullanılırken ClearType devre dışıdır.  
   
- Aşağıdaki örnek, metin için uygulanan sabit gölge etkisi gösterir. Bu durumda, gölge bulanık değildir.  
+ Aşağıdaki örnekte, metne uygulanan bir sabit gölge efekti gösterilmektedir. Bu durumda, gölge bulanık değildir.  
   
- ![Metin gölgesinin Yumuşaklık ile &#61; 0](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
+ ![Soflük &#61; 0 ile metin gölgesi](./media/how-to-create-text-with-a-shadow/text-shadow-softness.jpg) 
   
- Sabit bir gölge ayarlayarak oluşturabileceğiniz <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> özelliğini `0.0`, hiçbir Bulanıklaştırma kullanıldığını gösterir. Gölge yönünü değiştirerek denetleyebilirsiniz <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> özelliği. Bu özelliğin yön değeri arasında bir dereceye ayarlayın `0` ve `360`. Tek yönlü değerlerini aşağıdaki çizimde <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> özellik ayarı.  
+ <xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A> Özelliğini olarak`0.0`ayarlayarak sabit bir gölge oluşturabilirsiniz. Bu, bir bulanıklık kullanılmadığını gösterir. <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> Özelliği değiştirerek Gölgenin yönünü kontrol edebilirsiniz. Bu özelliğin yönlü değerini ve `0` `360`arasında bir dereceye ayarlayın. Aşağıdaki çizim, <xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A> özellik ayarının yönlü değerlerini gösterir.  
   
- ![Gölgenin DropShadow derece ayarı](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
+ ![Gölgenin DropShadow derecesi ayarı](./media/how-to-create-text-with-a-shadow/drop-shadow-degree-setting.png)
   
- Aşağıdaki kod örneği, sabit bir gölge oluşturma işlemini gösterir.  
+ Aşağıdaki kod örneği, sabit gölge oluşturmayı gösterir.  
   
  [!code-xaml[TextShadowSnippets#TextShadowSnippet2](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/SingleShadows.xaml#textshadowsnippet2)]  
   
-## <a name="using-a-blur-effect"></a>Bulanıklaştırma efekt kullanma  
- A <xref:System.Windows.Media.Effects.BlurBitmapEffect> metin nesnesi yerleştirilebilir bir gölge benzeri etkisi oluşturmak için kullanılabilir. Metnin her yöne eşit olarak metne uygulanan bir bulanıklaştırma bit eşlem etkisi bulanıklaştırır.  
+## <a name="using-a-blur-effect"></a>Bulanıklaştırma efekti kullanma  
+ Bir <xref:System.Windows.Media.Effects.BlurBitmapEffect> metin nesnesinin arkasına yerleştirilebilecek bir gölge benzeri efekt oluşturmak için kullanılabilir. Metne uygulanan bir bulanıklaştırma bit eşlem efekti, metni her yönden eşit şekilde bulanıklaştırır.  
   
- Aşağıdaki örnek metni uygulanan bir bulanıklaştırma etkisini gösterir.  
+ Aşağıdaki örnek, metne uygulanan bir bulanıklaştırma efektini gösterir.  
   
- ![Metin gölgesinin BlurBitmapEffect kullanma](./media/how-to-create-text-with-a-shadow/text-shadow-blur-effect.jpg)  
+ ![Bir BlurBitmapEffect kullanarak metin gölgesi](./media/how-to-create-text-with-a-shadow/text-shadow-blur-effect.jpg)  
   
- Aşağıdaki kod örneği, Bulanıklaştırma efekti oluşturma gösterilmektedir.  
+ Aşağıdaki kod örneği, bir bulanıklaştırma efektinin nasıl oluşturulacağını göstermektedir.  
   
  [!code-xaml[TextShadowSnippets#TextShadowSnippet6](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/BlurShadows.xaml#textshadowsnippet6)]  
   
-## <a name="using-a-translate-transform"></a>Çeviri dönüşümü kullanma  
- A <xref:System.Windows.Media.TranslateTransform> metin nesnesi yerleştirilebilir bir gölge benzeri etkisi oluşturmak için kullanılabilir.  
+## <a name="using-a-translate-transform"></a>Çeviri dönüştürmesi kullanma  
+ Bir <xref:System.Windows.Media.TranslateTransform> metin nesnesinin arkasına yerleştirilebilecek bir gölge benzeri efekt oluşturmak için kullanılabilir.  
   
- Aşağıdaki kod örneğinde bir <xref:System.Windows.Media.TranslateTransform> metin uzaklık. Bu örnekte, bir gölge etkisi birincil metin aşağıdaki metni biraz uzaklık bir kopyasını oluşturur.  
+ Aşağıdaki kod örneği, metin kaydırmak <xref:System.Windows.Media.TranslateTransform> için bir kullanır. Bu örnekte, birincil metnin altındaki metnin biraz bir konum kopyası bir gölge efekti oluşturur.  
   
- ![Metin gölgesinin TranslateTransform kullanma](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
+ ![TranslateTransform kullanarak metin gölgesi](./media/how-to-create-text-with-a-shadow/text-transform-shadow-effect.jpg)    
   
- Aşağıdaki kod örneği, bir gölge etkisi dönüşümü oluşturma işlemini gösterir.  
+ Aşağıdaki kod örneği, bir gölge efekti için dönüşümün nasıl oluşturulacağını göstermektedir.  
   
  [!code-xaml[TextShadowSnippets#TextShadowSnippet7](~/samples/snippets/csharp/VS_Snippets_Wpf/TextShadowSnippets/CS/TransformShadows.xaml#textshadowsnippet7)]

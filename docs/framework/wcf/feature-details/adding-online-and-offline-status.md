@@ -2,20 +2,20 @@
 title: Çevrimiçi ve Çevrimdışı Durum Ekleme
 ms.date: 03/30/2017
 ms.assetid: 05e5f51d-81b6-4c17-b364-9dda447a5fce
-ms.openlocfilehash: 15a963d4de0dcf1d7f0162b0a3266e17d4073ecd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74b113d64003756982a6b5701d9601c3116a9046
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960655"
 ---
 # <a name="adding-online-and-offline-status"></a>Çevrimiçi ve Çevrimdışı Durum Ekleme
-Çoğu durumda, belirli ayrıntılarını eş kanal bağlantısının durumunu izlemek bir uygulama için önemlidir. Bu bilgiler çağırarak elde edebileceğiniz `GetProperty` uygulaması metodunda <xref:System.ServiceModel.IOnlineStatus> arabirimi. Bir nesne bu arabirimi uygulaması ile bağlantı durumunu izlemek veya olay işleyicileri gibi kaydetme `OnOnline` ve `OnOffline`ve çevrimiçi durumu için değişiklikler oldukça hemen tepki verin.  
+Çoğu durumda, bir uygulamanın bir eş kanal bağlantısının durumuyla ilgili belirli ayrıntıları izlemesi önemlidir. Bu bilgileri, `GetProperty` <xref:System.ServiceModel.IOnlineStatus> arabirimi uygulamasında metodunu çağırarak elde edebilirsiniz. Bu arabirimin uygulamasına sahip bir nesne, `OnOnline` ve `OnOffline`gibi olay işleyicileri için bağlantı durumunu izleyebilir veya kaydedebilir ve çevrimiçi durumdaki değişiklikler gerçekleştiğinde hemen tepki verebilir.  
   
- Eş kanal altyapısında, aksi takdirde diğer en az bir eş ve çevrimdışı bağlıysa çevrimiçi bir istemci olarak kabul edilir. Bu, hem geliştirme uygulamalarında hata ayıklama veya ayrıntılı bilgi görüntülemek için son kullanıcı özellikle yararlı olabilir.  
+ Eş kanal altyapısında, bir istemcinin en az bir diğer eşe ve aksi halde çevrimdışı olarak bağlanması durumunda çevrimiçi olduğu kabul edilir. Bu, özellikle geliştirme uygulamalarında hata ayıklaması yapmak veya son kullanıcıya ayrıntılı bilgiler görüntülemek için yararlı olabilir.  
   
 > [!NOTE]
->  Çevrimiçi olay işleyicisi, önce herhangi bir ileti göndermeden önce düğümü açık olduğundan emin olmanız gerekir.  
+> Çevrimiçi olay işleyicisi önce herhangi bir ileti göndermeden önce düğümün açık olduğundan emin olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

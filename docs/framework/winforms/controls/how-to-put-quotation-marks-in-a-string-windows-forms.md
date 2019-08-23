@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: (Windows Forms) dizeye tırnak işaretleri koyma'
+title: 'Nasıl yapılır: Bir dizeye tırnak Işareti koyma (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910429"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Nasıl yapılır: (Windows Forms) dizeye tırnak işaretleri koyma
-Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin dizesi. Örneğin:  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Nasıl yapılır: Bir dizeye tırnak Işareti koyma (Windows Forms)
+Bazen bir metin dizesinde tırnak işaretleri ("") yerleştirmek isteyebilirsiniz. Örneğin:  
   
- O söyledi, "Müthiş hak ediyor!"  
+ "Bir işleme hak duymuş olursunuz!" diyor  
   
- Alternatif olarak, ayrıca kullanabileceğiniz <xref:Microsoft.VisualBasic.ControlChars.Quote> alan bir sabit olarak.  
+ Alternatif olarak, <xref:Microsoft.VisualBasic.ControlChars.Quote> alanı bir sabit olarak da kullanabilirsiniz.  
   
-### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Kodunuzda bir dizedeki tırnak işareti yerleştirmek için  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Kodunuzda bir dizeye tırnak işareti koymak için  
   
-1. Visual Basic'te, iki tırnak bir satır içine katıştırılmış bir tırnak işareti ekleyin. Görselde C# ve görsel C++, kaçış dizisi Ekle \\"olarak gömülü bir tırnak işareti. Örneğin, önceki dize oluşturmak için aşağıdaki kodu kullanın.  
+1. Visual Basic, bir satıra gömülü tırnak işareti olarak iki tırnak işareti ekleyin. Visual C# ve Visual C++' te, kaçış sırasını \\"gömülü tırnak işareti olarak ekleyin. Örneğin, önceki dizeyi oluşturmak için aşağıdaki kodu kullanın.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin diz
   
      -veya-  
   
-2. Tırnak işareti için ASCII veya Unicode karakteri Ekle. Visual Basic'te, ASCII karakter (34) kullanın. Görselde C#, Unicode karakter (\u0022) kullanın.  
+2. Tırnak işareti için ASCII veya Unicode karakteri ekleyin. Visual Basic, ASCII karakterini (34) kullanın. Görselde C#Unicode karakterini kullanın (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,11 +65,11 @@ Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin diz
     ```  
   
     > [!NOTE]
-    >  Bu örnekte, bir evrensel karakter adı temel karakter kümesindeki bir karakteri belirler kullanamadığından \u0022 kullanamazsınız. Aksi takdirde, C3851 üretir. Daha fazla bilgi için [derleyici hatası C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
+    > Bu örnekte, temel karakter kümesinde bir karakter atayan bir evrensel karakter adı kullanamadığından, \u0022 kullanamazsınız. Aksi takdirde, C3851 üretebilirsiniz. Daha fazla bilgi için bkz. [derleyici hatası C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
      -veya-  
   
-3. Ayrıca, bir sabit karakter tanımlamak ve kullanmak gerektiğinde.  
+3. Ayrıca karakter için bir sabit tanımlayabilir ve gerektiğinde kullanabilirsiniz.  
   
     ```vb  
     Const quote As String = """"  
@@ -93,9 +93,9 @@ Bazen tırnak işareti yerleştirmek isteyebilirsiniz ("") içinde bir metin diz
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [TextBox Denetimine Genel Bakış](textbox-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde ekleme noktasını belirleme](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Windows Forms TextBox denetimi ile parola metin kutusu oluşturma](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Salt okunur metin kutusu oluşturma](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde metni Seç](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satır görüntüleme](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetimindeki ekleme noktasını denetleme](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetimiyle bir parola metin kutusu oluşturma](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Salt okunurdur metin kutusu oluşturma](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Nasıl yapılır: Windows Forms metin kutusu denetimindeki metni seçme](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Nasıl yapılır: Windows Forms TextBox denetiminde birden çok satırı görüntüleme](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox Denetimi](textbox-control-windows-forms.md)

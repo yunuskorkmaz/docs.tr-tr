@@ -8,37 +8,37 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589974"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939585"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script Kullanan Betik Blokları
-<xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı kullanarak katıştırılmış betikleri destekler `msxsl:script` öğesi. Stil sayfası yüklendiğinde, herhangi bir tanımlı işlevlere kod belge nesne modeli (CodeDOM) tarafından derlenmiş Microsoft Ara dili (MSIL) ve çalışma zamanı sırasında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemesinden ayrıdır.  
+<xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı ,`msxsl:script` öğesini kullanarak katıştırılmış betikleri destekler. Stil sayfası yüklendiğinde, tanımlanmış tüm işlevler Kod Belge Nesne Modeli (CodeDOM) tarafından Microsoft ara dili (MSIL) ile derlenir ve çalışma zamanında yürütülür. Katıştırılmış betik bloğundan oluşturulan derleme, stil sayfası için oluşturulan derlemeden ayrıdır.  
   
-## <a name="enable-xslt-script"></a>XSLT betik etkinleştir  
- Gömülü betikler için destek etkin isteğe bağlı bir XSLT ayar <xref:System.Xml.Xsl.XslCompiledTransform> sınıfı. Betik desteği, varsayılan olarak devre dışıdır. Betik desteği etkinleştirmek için oluşturun bir <xref:System.Xml.Xsl.XsltSettings> nesnesi ile <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> özelliğini `true` ve nesneyi geçirin <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemi.  
+## <a name="enable-xslt-script"></a>XSLT betiğini etkinleştir  
+ Katıştırılmış betikler için destek, <xref:System.Xml.Xsl.XslCompiledTransform> sınıf üzerinde isteğe bağlı bir XSLT ayarıdır. Komut dosyası desteği varsayılan olarak devre dışıdır. Betik <xref:System.Xml.Xsl.XsltSettings> desteğini etkinleştirmek için, <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> özelliği olarak `true` ayarlanmış bir nesne oluşturun ve nesneyi <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> yöntemine geçirin.  
   
 > [!NOTE]
->  XSLT betik yalnızca betik desteği gerektiriyorsa ve tam olarak güvenilen bir ortamda çalışıyorsanız etkinleştirilmelidir.  
+> XSLT betiği oluşturma yalnızca betik desteğine ihtiyacınız varsa ve tamamen güvenilir bir ortamda çalışıyorsanız etkinleştirilmelidir.  
   
-## <a name="msxslscript-element-definition"></a>msxsl: Script öğesi tanımı  
- `msxsl:script` Öğesi XSLT 1.0 öneri bir Microsoft uzantısıdır ve aşağıdaki tanımları içerir:  
+## <a name="msxslscript-element-definition"></a>msxsl: betik öğesi tanımı  
+ `msxsl:script` Öğesi, XSLT 1,0 önerisi için bir Microsoft uzantısıdır ve aşağıdaki tanıma sahiptir:  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
 ```  
   
- `msxsl` İçin bağlı öneki `urn:schemas-microsoft-com:xslt` ad alanı URI. Stil sayfası içermelidir `xmlns:msxsl=urn:schemas-microsoft-com:xslt` ad alanı bildirimi.  
+ Ön ek, `urn:schemas-microsoft-com:xslt` ad alanı URI 'sine bağlanır. `msxsl` Stil sayfası, `xmlns:msxsl=urn:schemas-microsoft-com:xslt` ad alanı bildirimini içermelidir.  
   
- `language` İsteğe bağlı öznitelik. Değerini, gömülü kod bloğunun kod dilidir. Dil uygun CodeDOM derleyici kullanmayı eşlenir <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> yöntemi. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı uygun sağlayıcıyı makineye yüklenir ve machine.config dosyasının system.codedom bölümünde kayıtlı olduğundan, herhangi bir Microsoft .NET dil destekleyebilir. Varsa bir `language` özniteliği belirtilmezse, dil Varsayılanları JScript için. Dil adı büyük küçük harfe duyarlı değil 'JavaScript' ve 'javascript' eşdeğerdir.  
+ `language` Özniteliği isteğe bağlıdır. Değeri, gömülü kod bloğunun kod dilidir. Dil, <xref:System.CodeDom.Compiler.CodeDomProvider.CreateProvider%2A?displayProperty=nameWithType> yöntemi kullanılarak uygun CodeDOM derleyicisi ile eşleştirilir. <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı, uygun sağlayıcının makinede yüklü olduğunu varsayarak ve Machine. config dosyasının System. CodeDom bölümünde kayıtlı olan tüm Microsoft .net dillerini destekleyebilir. Bir `language` öznitelik belirtilmemişse, dil varsayılan olarak JScript olur. Dil adı büyük/küçük harfe duyarlı değildir, bu nedenle ' JavaScript ' ve ' JavaScript ' eşdeğerdir.  
   
- `implements-prefix` Özniteliği zorunludur. Bu öznitelik, bir ad alanı bildirin ve komut dosyası bloğu ile ilişkilendirmek için kullanılır. Bu özniteliğin değeri ad alanını temsil eden önekidir. Bu ön ek bir yerde bir stil sayfası içinde tanımlanabilir.  
+ `implements-prefix` Özniteliği zorunludur. Bu öznitelik, bir ad alanını bildirmek ve betik bloğu ile ilişkilendirmek için kullanılır. Bu özniteliğin değeri, ad alanını temsil eden önekidir. Bu ön ek, bir stil sayfasında bir yerde tanımlanabilir.  
   
 > [!NOTE]
->  Kullanırken `msxsl:script` öğesi öneririz, diline bakılmaksızın komut içindeki CDATA bölümüne yerleştirilmesi. Bir CDATA bölümde yer bulunmuyorsa betik operatörler, tanımlayıcılar ya da belirli bir dil için sınırlayıcılar içerebileceği için XML olarak yanlış olasılığı vardır. Aşağıdaki XML kodu nereye yerleştirilmesi CDATA bölümünün bir şablon gösterir.  
+> `msxsl:script` Öğesi kullanılırken, dilden bağımsız olarak betiğin bir CDATA bölümünün içine yerleştirilmesi önemle önerilir. Komut dosyası belirli bir dil için işleç, tanımlayıcı veya sınırlayıcılar içerebildiğinden, CDATA bölümünde yoksa, XML olarak yanlış yorumlanmakta olma olasılığı vardır. Aşağıdaki XML, kodun yerleştirilebileceği CDATA bölümünün bir şablonunu gösterir.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -48,10 +48,10 @@ ms.locfileid: "64589974"
 </msxsl:script>  
 ```  
   
-## <a name="script-functions"></a>Betik işlevleri  
- İşlevler içinde bildirilebilir `msxsl:script` öğesi. Bildirilen bir işlev, bir komut dosyası bloğu içinde yer alır. Stil sayfaları, birden çok komut dosyası blokları, diğerinden bağımsız çalışan her içerebilir. Bir betik bloğu içinde yürütülen, aynı ad ve aynı komut dosyası dili bildirildiği sürece başka bir betik bloğu içinde tanımlanan bir işlev çağrısı yapamazsınız anlamına gelir. Her komut dosyası bloğu kendi dilinde olabilir ve blok o dil ayrıştırıcı dilbilgisi kurallara göre ayrıştırılır çünkü dili kullanmak için doğru sözdizimi kullanmanızı öneririz. Örneğin, bir Microsoft C# betik bloğu içinde varsa, C# yorum sözdizimini kullanın.  
+## <a name="script-functions"></a>Betik Işlevleri  
+ İşlevler, `msxsl:script` öğesi içinde bildirilebilecek. Bir işlev bildirildiğinde, bir betik bloğunda bulunur. Stil sayfaları, her biri diğerinin bağımsız olarak çalışan birden çok betik bloğu içerebilir. Diğer bir deyişle, bir betik bloğunun içinde yürütüyorsunuz, aynı ad alanına ve aynı komut dosyası diline sahip olmak üzere bildirilmeden, başka bir betik bloğunda tanımladığınız bir işlevi çağıramadığınız anlamına gelir. Her bir betik bloğu kendi dilinde olabileceğinden ve blok söz konusu dil ayrıştırıcısının dilbilgisi kurallarına göre ayrıştırılacağından, kullanımda olan dil için doğru sözdizimini kullanmanızı öneririz. Örneğin, bir Microsoft C# komut dosyası bloğunda, C# açıklama sözdizimini kullanın.  
   
- Sağlanan bağımsız değişkenler ve dönüş değerleri işlevi herhangi bir türde olabilir. W3C XPath türlerde ortak dil çalışma zamanı (CLR) türlerinin bir alt kümesi olduğundan, tür dönüştürme bir XPath türü olmasını dikkate alınmaz türleri üzerinde gerçekleşir. Aşağıdaki tablo W3C türleri ve karşılık gelen ve eşdeğer CLR türü gösterir.  
+ Sağlanan bağımsız değişkenler ve işlevin dönüş değerleri herhangi bir türde olabilir. W3C XPath türleri ortak dil çalışma zamanı (CLR) türlerinin bir alt kümesi olduğundan, bir XPath türü olarak kabul etmeyen türler için tür dönüştürme gerçekleşir. Aşağıdaki tabloda karşılık gelen W3C türleri ve eşdeğer CLR türü gösterilmektedir.  
   
 |W3C türü|CLR türü|  
 |--------------|--------------|  
@@ -61,23 +61,23 @@ ms.locfileid: "64589974"
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator>|  
 |`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator>|  
   
- CLR sayısal türleri dönüştürülür <xref:System.Double>. <xref:System.DateTime> Türüne dönüştürülür <xref:System.String>. <xref:System.Xml.XPath.IXPathNavigable> türleri dönüştürülür <xref:System.Xml.XPath.XPathNavigator>. **XPathNavigator []** dönüştürülür <xref:System.Xml.XPath.XPathNodeIterator>.  
+ CLR sayısal türleri öğesine <xref:System.Double>dönüştürülür. <xref:System.DateTime> Tür öğesine<xref:System.String>dönüştürülür. <xref:System.Xml.XPath.IXPathNavigable>türler öğesine <xref:System.Xml.XPath.XPathNavigator>dönüştürülür. **XPathNavigator []** , öğesine <xref:System.Xml.XPath.XPathNodeIterator>dönüştürüldü.  
   
- Diğer tüm türlerin bir hata atar.  
+ Diğer tüm türler bir hata oluşturur.  
   
-### <a name="importing-namespaces-and-assemblies"></a>Ad alanları ve derlemeler alınıyor  
- <xref:System.Xml.Xsl.XslCompiledTransform> Sınıfı önceden belirler, derlemeleri ve varsayılan olarak tarafından desteklenen ad alanları kümesi `msxsl:script` öğesi. Ancak, sınıflar ve üyeler derlemenin ve ad alanındaki içeri aktararak önceden tanımlanmış listede olmayan bir ad alanına ait kullanabilirsiniz `msxsl:script` blok.  
+### <a name="importing-namespaces-and-assemblies"></a>Ad alanları ve derlemeler içeri aktarılıyor  
+ Sınıfı, varsayılan olarak `msxsl:script` öğesi tarafından desteklenen derleme ve ad alanları kümesini önceden tanımlar. <xref:System.Xml.Xsl.XslCompiledTransform> Ancak, derleme ve ad alanını `msxsl:script` bloğunda içeri aktararak önceden tanımlanmış listede olmayan bir ad alanına ait sınıfları ve üyeleri kullanabilirsiniz.  
   
 #### <a name="assemblies"></a>Bütünleştirilmiş kodlar  
- Varsayılan olarak aşağıdaki iki derlemelerini başvurulan:  
+ Aşağıdaki iki derlemeye varsayılan olarak başvurulur:  
   
 - System.dll  
   
 - System.Xml.dll  
   
-- (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic.dll içinde  
+- Microsoft. VisualBasic. dll (komut dosyası dili VB olduğunda)  
   
- Ek bütünleştirilmiş kodları kullanarak içeri aktarabilirsiniz `msxsl:assembly` öğesi. Bu, stil sayfası derlendiğinde derleme içerir. `msxsl:assembly` Öğesinin aşağıdaki tanımı:  
+ `msxsl:assembly` Öğesini kullanarak ek derlemeleri içeri aktarabilirsiniz. Bu, stil sayfası derlendiğinde derlemeyi içerir. `msxsl:assembly` Öğesi aşağıdaki tanıma sahiptir:  
   
 ```xml  
 <msxsl:script>  
@@ -89,10 +89,10 @@ ms.locfileid: "64589974"
 </msxsl:script>  
 ```  
   
- `name` Özniteliği, derlemenin adını içerir ve `href` özniteliği derleme yolunu içerir. Derleme adı gibi tam bir ad olabilir "System.Data, sürüm 2.0.3600.0, Culture = neutral, PublicKeyToken = b77a5c561934e089", veya "System.Web" gibi kısa bir ad.  
+ Öznitelik, derlemenin adını içerir `href` ve özniteliği derlemenin yolunu içerir. `name` Derleme adı "System. Data, Version = 2.0.3600.0, Culture = neutral, PublicKeyToken = b77a5c561934e089" gibi bir tam ad veya "System. Web" gibi kısa bir ad olabilir.  
   
 #### <a name="namespaces"></a>Ad Alanları  
- Aşağıdaki ad alanları, varsayılan olarak dahil edilmiştir:  
+ Aşağıdaki ad alanları varsayılan olarak dahil edilmiştir:  
   
 - Sistem  
   
@@ -108,9 +108,9 @@ ms.locfileid: "64589974"
   
 - System.Xml.XPath  
   
-- (Komut dosyası dili VB olduğunda) Microsoft.VisualBasic  
+- Microsoft. VisualBasic (komut dosyası dili VB olduğunda)  
   
- Ek ad alanlarını kullanma için destek ekleyebilirsiniz `namespace` özniteliği. Öznitelik değeri, ad alanının adıdır.  
+ `namespace` Özniteliğini kullanarak ek ad alanları için destek ekleyebilirsiniz. Öznitelik değeri, ad alanının adıdır.  
   
 ```xml  
 <msxsl:script>  
@@ -122,15 +122,15 @@ ms.locfileid: "64589974"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir katıştırılmış betik, RADIUS verilmiş bir daire çevresi hesaplamak için kullanır.  
+ Aşağıdaki örnek, yarıçapı verilen bir dairenin çevresini hesaplamak için gömülü bir betiği kullanır.  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]
  [!code-vb[XSLT_Script#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Script/VB/xslt_script.vb#1)]  
   
-#### <a name="numberxml"></a>Number.XML  
+#### <a name="numberxml"></a>Number. xml  
  [!code-xml[XSLT_Script#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/number.xml#2)]  
   
-#### <a name="calcxsl"></a>CALC.xsl  
+#### <a name="calcxsl"></a>Calc. Xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
 ### <a name="output"></a>Çıkış  

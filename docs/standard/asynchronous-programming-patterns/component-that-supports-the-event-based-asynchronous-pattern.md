@@ -18,241 +18,241 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950781"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama
-Bir sınıf belirgin gecikmeler kaynaklanabilecek bazı işlemleri yazıyorsanız uygulayarak zaman uyumsuz işlevleri vererek göz önünde bulundurun [olay tabanlı zaman uyumsuz desene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
+Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız, [olay tabanlı zaman uyumsuz düzene genel bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)' ı uygulayarak zaman uyumsuz işlevsellik vermeyi düşünün.  
   
- Bu izlenecek yol, olay tabanlı zaman uyumsuz desen uygulayan bir bileşen oluşturma işlemini gösterir. Yardımcı sınıflarından kullanılarak uygulanır <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı bileşeni ASP.NET ve konsol uygulamaları ve Windows Forms uygulamaları dahil olmak üzere tüm uygulama modeli altında düzgün şekilde çalışmasını sağlar. Bu bileşen ayrıca designable ile bir <xref:System.Windows.Forms.PropertyGrid> denetimi ve kendi özel tasarımcılar.  
+ Bu izlenecek yol, olay tabanlı zaman uyumsuz model uygulayan bir bileşenin nasıl oluşturulacağını göstermektedir. Bu, bileşenin ASP.net, konsol uygulamaları ve <xref:System.ComponentModel?displayProperty=nameWithType> Windows Forms uygulamaları dahil olmak üzere herhangi bir uygulama modelinde doğru şekilde çalıştığından emin olmak üzere ad alanından yardımcı sınıflar kullanılarak uygulanır. Bu bileşen ayrıca bir <xref:System.Windows.Forms.PropertyGrid> denetimle ve kendi özel tasarımcılarına göre de genişletilebilir.  
   
- Aracılığıyla işiniz asal sayıları zaman uyumsuz olarak hesaplayan bir uygulamaya sahip olursunuz. Uygulamanızın ana kullanıcı arabirimi (UI) iş parçacığı ve her asal sayı hesaplaması için bir iş parçacığı olacaktır. Büyük bir sayı olup olmadığını test olsa da asal belirgin bir süre alabilir, ana UI iş parçacığı tarafından bu gecikme durdurulmaz ve form hesaplama sırasında hızlı yanıt veren olacaktır. Eş zamanlı olarak ve seçmeli olarak istediğiniz gibi çok sayıda hesaplama hesaplamalar iptal olarak çalıştırmak mümkün olacaktır.  
+ İşlem sırasında, ana sayıları zaman uyumsuz olarak hesaplayan bir uygulamaya sahip olursunuz. Uygulamanız ana kullanıcı arabirimi (UI) iş parçacığına ve her asal sayı hesaplaması için bir iş parçacığına sahip olacaktır. Büyük bir sayının asal olup olmadığını test etmek, fark edilebilir bir süre alabilir, ancak ana kullanıcı arabirimi iş parçacığı bu gecikmeyle kesintiye uğramaz ve hesaplamalar sırasında form yanıt verir. Aynı anda istediğiniz sayıda hesaplama çalıştırabilir ve bekleyen hesaplamaları seçmeli olarak iptal edebilirsiniz.  
   
- Bu kılavuzda gösterilen görevler aşağıdakileri içerir:  
+ Bu izlenecek yolda gösterilen görevler şunlardır:  
   
 - Bileşeni oluşturma  
   
-- Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
+- Ortak zaman uyumsuz olayları ve temsilcileri tanımlama  
   
-- Özel temsilcileri tanımlama  
+- Özel temsilciler tanımlama  
   
-- Genel olaylar uygulama  
+- Ortak olayları uygulama  
   
-- Tamamlama yöntemi uygulama  
+- Tamamlama yöntemini uygulama  
   
-- Çalışan yöntemlerini uygulayan  
+- Çalışan yöntemlerini uygulama  
   
-- Uygulama başlatma ve iptal yöntemi  
+- Start ve Cancel yöntemlerini uygulama  
   
- Bu konudaki tek bir liste olarak kodu kopyalamak için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ Bu konudaki kodu tek bir liste olarak kopyalamak için bkz [. nasıl yapılır: Olay tabanlı zaman uyumsuz deseninin](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)istemcisini uygulayın.  
   
 ## <a name="creating-the-component"></a>Bileşeni oluşturma  
- İlk adım, olay tabanlı zaman uyumsuz desen uygulayan bileşeni oluşturmaktır.  
+ İlk adım, olay tabanlı zaman uyumsuz düzene uygulanacak bileşeni oluşturmaktır.  
   
 ### <a name="to-create-the-component"></a>Bileşeni oluşturmak için  
   
-- Adlı bir sınıf oluşturmak `PrimeNumberCalculator` öğesinden devralan <xref:System.ComponentModel.Component>.  
+- `PrimeNumberCalculator` Öğesinden<xref:System.ComponentModel.Component>devralan adlı bir sınıf oluşturun.  
   
-## <a name="defining-public-asynchronous-events-and-delegates"></a>Genel zaman uyumsuz olayları ve temsilcileri tanımlama  
- Bileşeniniz olayları kullanan istemciler için iletişim kurar. _MethodName_**tamamlandı** olay uyarıları zaman uyumsuz bir görev tamamlandığında istemcilere ve _MethodName_**ProgressChanged**olay bildiren istemciler ilerleme durumunu zaman uyumsuz bir görev.  
+## <a name="defining-public-asynchronous-events-and-delegates"></a>Ortak zaman uyumsuz olayları ve temsilcileri tanımlama  
+ Bileşeniniz, olayları kullanarak istemcilerle iletişim kurar. _MethodName_ olay uyarıları istemcileri, zaman uyumsuz bir görevin tamamlanmasını sağlar ve _MethodName_**ProgressChanged & lt** olayı, zaman uyumsuz bir görevin ilerleme durumunu istemcilere bildirir.  
   
-### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemciler için zaman uyumsuz olayları tanımlamak için:  
+### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Bileşeninizin istemcilerine yönelik zaman uyumsuz olayları tanımlamak için:  
   
-1. İçeri aktarma <xref:System.Threading?displayProperty=nameWithType> ve <xref:System.Collections.Specialized?displayProperty=nameWithType> dosyanızın üst kısmındaki ad alanları.  
+1. <xref:System.Threading?displayProperty=nameWithType> Ve<xref:System.Collections.Specialized?displayProperty=nameWithType> ad alanlarını dosyanızın en üstüne aktarın.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
   
-2. Önce `PrimeNumberCalculator` sınıf tanımını, ilerleme ve tamamlanmayı olay için temsilcileri bildirin.  
+2. `PrimeNumberCalculator` Sınıf tanımından önce, ilerleme ve tamamlanma olayları için temsilciler bildirin.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#7)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#7)]  
   
-3. İçinde `PrimeNumberCalculator` sınıf tanımını, ilerleme ve tamamlanmayı istemcilere raporlama olayları bildirme.  
+3. `PrimeNumberCalculator` Sınıf tanımında, ilerlemeyi raporlamaya ve istemcilere tamamlamaya yönelik olayları bildirin.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#8)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#8)]  
   
-4. Sonra `PrimeNumberCalculator` sınıf tanımını, türetilen `CalculatePrimeCompletedEventArgs` her hesaplama için istemcinin olay işleyicisine sonucunu raporlama sınıfı `CalculatePrimeCompleted`.event. Ek olarak `AsyncCompletedEventArgs` özellikleri, bu sınıfı, hangi numarasını test edilmiştir, Hazırla olmasına ve birinci değilse, ilk bölen nedir belirlemek üzere istemci sağlar.  
+4. Sınıf tanımından sonra, her hesaplamanın sonucunu `CalculatePrimeCompletedEventArgs` , `CalculatePrimeCompleted`. Event için istemcinin olay işleyicisine bildirmek üzere sınıfını türetebilirsiniz. `PrimeNumberCalculator` Bu sınıf, `AsyncCompletedEventArgs` özelliklere ek olarak, istemcinin hangi sayının test edildiğini, asal olup olmadığını ve ilk bölen ana değilse ne olduğunu belirlemesini sağlar.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
- Bu noktada, bileşen oluşturabilirsiniz.  
+ Bu noktada, bileşeni oluşturabilirsiniz.  
   
-### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
   
-- Bileşen derleyin.  
+- Bileşeni derleyin.  
   
-     İki Derleyici uyarılarını alırsınız:  
+     İki derleyici uyarısı alacaksınız:  
   
     ```  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.ProgressChanged' is never used  
     warning CS0067: The event 'AsynchronousPatternExample.PrimeNumberCalculator.CalculatePrimeCompleted' is never used  
     ```  
   
-     Bu uyarılar, sonraki bölümde temizlenir.  
+     Bu uyarılar sonraki bölümde temizlenir.  
   
-## <a name="defining-private-delegates"></a>Özel temsilcileri tanımlama  
- Zaman uyumsuz yönlerini `PrimeNumberCalculator` bileşeni uygulanır dahili olarak bilinen özel bir temsilci ile bir <xref:System.Threading.SendOrPostCallback>. A <xref:System.Threading.SendOrPostCallback> üzerinde yürüten bir geri çağırma yöntemi temsil eden bir <xref:System.Threading.ThreadPool> iş parçacığı. Geri çağırma yöntemi türünde tek bir parametre alan bir imza içermelidir <xref:System.Object>, bunun anlamı bir sarmalayıcı sınıfı varyans arasında durumu iletmeniz gerekir. Daha fazla bilgi için bkz. <xref:System.Threading.SendOrPostCallback>.  
+## <a name="defining-private-delegates"></a>Özel temsilciler tanımlama  
+ `PrimeNumberCalculator` Bileşenin zaman uyumsuz yönleri, olarak bilinen özel bir <xref:System.Threading.SendOrPostCallback>temsilci ile dahili olarak uygulanır. Bir <xref:System.Threading.SendOrPostCallback> <xref:System.Threading.ThreadPool> iş parçacığında yürütülen bir geri çağırma yöntemini temsil eder. Geri çağırma yöntemi türünde <xref:System.Object>tek bir parametre alan bir imzaya sahip olmalıdır, bu, bir sarmalayıcı sınıfında temsilciler arasında durum geçirmeniz gereken anlamına gelir. Daha fazla bilgi için bkz. <xref:System.Threading.SendOrPostCallback>.  
   
-### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Bileşeninizin iç zaman uyumsuz davranışı uygulamak için:  
+### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>Bileşeninizin iç zaman uyumsuz davranışını uygulamak için:  
   
-1. Bildirme ve oluşturma <xref:System.Threading.SendOrPostCallback> , temsilciler `PrimeNumberCalculator` sınıfı. Oluşturma <xref:System.Threading.SendOrPostCallback> bir yardımcı yöntem nesneleri adlı `InitializeDelegates`.  
+1. <xref:System.Threading.SendOrPostCallback> Sınıfında Temsilciler`PrimeNumberCalculator` bildirin ve oluşturun. <xref:System.Threading.SendOrPostCallback> Adlı`InitializeDelegates`bir yardımcı program yönteminde nesneleri oluşturun.  
   
-     İki temsilci olduğunda gerekir: bir istemciye ilerleme durumunu raporlama ve bir raporlama istemci tamamlanması için.  
+     İki temsilcinin olması gerekir: biri istemciye ilerleme durumunu raporlamak için bir diğeri ise istemciye tamamlanmayı rapor eder.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#9)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#9](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#9)]  
     [!code-csharp[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#20)]
     [!code-vb[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#20)]  
   
-2. Çağrı `InitializeDelegates` bileşeninizin oluşturucuda yöntemi.  
+2. Bileşenin oluşturucusunda `InitializeDelegates` yöntemini çağırın.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#21)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#21)]  
   
-3. Bir temsilci bildirmeniz `PrimeNumberCalculator` asıl işi zaman uyumsuz olarak yapılacak işler sınıfı. Bu temsilci, bir sayı üssü olup olmadığını test çalışan yönteminde sarmalar. Temsilciyi alır bir <xref:System.ComponentModel.AsyncOperation> zaman uyumsuz işlem ömrünü izlemek için kullanılan parametre.  
+3. Zaman uyumsuz olarak yapılacak gerçek `PrimeNumberCalculator` işleri işleyen sınıfta bir temsilci bildirin. Bu temsilci, bir sayının asal olup olmadığını test eden çalışan yöntemini sarmalanmış. Temsilci, zaman uyumsuz <xref:System.ComponentModel.AsyncOperation> işlemin ömrünü izlemek için kullanılacak bir parametre alır.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#22)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#22)]  
   
-4. Eklentilerin ömrü bekleyen zaman uyumsuz işlemleri yönetmek için bir koleksiyon oluşturun. İstemci, yürütülen ve tamamlandı ve bu izleme istemcinin benzersiz belirteç veya görev kimliği, istemci zaman uyumsuz yöntem çağrısı yaptığında geçirilecek kılarak yapılan işlemleri izlemek için bir yönteme ihtiyaç duyar. `PrimeNumberCalculator` Bileşeni gerekir izlemek her çağrının görev kimliği ile ilgili kendi çağrılmasına ilişkilendirerek. İstemcinin benzersiz olmayan bir görev kimliği geçerse `PrimeNumberCalculator` bileşeni özel durum Yükselt gerekir.  
+4. Bekleyen zaman uyumsuz işlemlerin yaşam sürelerini yönetmek için bir koleksiyon oluşturun. İstemci, yürütüldüğü ve tamamlandıkları sırada işlemleri izlemek için bir yönteme ihtiyaç duyuyor ve bu izleme, istemci zaman uyumsuz metoda çağrı yaptığında, istemcinin benzersiz bir belirteç veya görev KIMLIĞI geçmesini gerektirerek yapılır. `PrimeNumberCalculator` Bileşen, görev kimliğini karşılık gelen çağrıdan ilişkilendirerek her bir çağrıyı takip etmelidir. İstemci benzersiz olmayan bir görev kimliği geçirirse, `PrimeNumberCalculator` bileşen bir özel durum yükseltmelidir.  
   
-     `PrimeNumberCalculator` Bileşeni izler görev kimliği adlı bir özel koleksiyon sınıfını kullanarak bir <xref:System.Collections.Specialized.HybridDictionary>. Sınıf tanımında oluşturma bir <xref:System.Collections.Specialized.HybridDictionary> adlı `userTokenToLifetime`.  
+     Bileşen `PrimeNumberCalculator` , adlı özel bir <xref:System.Collections.Specialized.HybridDictionary>koleksiyon sınıfını kullanarak görev kimliğini izler. Sınıf tanımında, adlı bir <xref:System.Collections.Specialized.HybridDictionary> adı `userTokenToLifetime`oluşturun.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#23)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#23](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#23)]  
   
-## <a name="implementing-public-events"></a>Genel olaylar uygulama  
- Olay tabanlı zaman uyumsuz deseni uygulama bileşenleri olayları kullanan istemciler için iletişim kurar. Bu olaylar, Yardım uygun iş parçacığı üzerinde çağrılır <xref:System.ComponentModel.AsyncOperation> sınıfı.  
+## <a name="implementing-public-events"></a>Ortak olayları uygulama  
+ Olay tabanlı zaman uyumsuz model uygulayan bileşenler olayları kullanarak istemcilerle iletişim kurar. Bu olaylar, <xref:System.ComponentModel.AsyncOperation> sınıfının yardımıyla uygun iş parçacığında çağrılır.  
   
-### <a name="to-raise-events-to-your-components-clients"></a>Olayları bileşeninizin istemcilere yükseltmek için:  
+### <a name="to-raise-events-to-your-components-clients"></a>Bileşenin istemcilerine olay yükseltmek için:  
   
-1. İstemcilere raporlama genel olaylar uygulayın. Bir olay için raporlama ilerleme ve raporlama tamamlanması için bir tane gerekir.  
+1. İstemcilere raporlama için ortak olayları uygulayın. İlerlemeyi raporlamak için bir olaya ve bir etkinliğin tamamlanmasını raporlamaya ihtiyacınız olacak.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#24)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#24)]  
   
-## <a name="implementing-the-completion-method"></a>Tamamlama yöntemi uygulama  
- Tamamlama temsilci zaman uyumsuz işlemi başarıyla tamamlandığında, hata veya iptal etme sona erdiğinde, temel alınan, ücretsiz iş parçacıklı zaman uyumsuz davranışı çağıracaktır yöntemidir. Bu çağrıyı rastgele bir iş parçacığı üzerinde gerçekleştirilir.  
+## <a name="implementing-the-completion-method"></a>Tamamlama yöntemini uygulama  
+ Tamamlanma temsilcisi, zaman uyumsuz işlem başarılı tamamlama, hata veya iptal ile sona erdiğinde, temel alınan, serbest iş parçacıklı zaman uyumsuz davranışın çağıracağı yöntemdir. Bu çağrı, rastgele bir iş parçacığında gerçekleşir.  
   
- Burada istemcinin görev kimliği benzersiz istemci belirteçlerin iç koleksiyondan kaldırılır, bu yöntem kullanılır. Ayrıca bu yöntemi çağırarak belirli bir zaman uyumsuz işlem ömrü sona <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> yöntemi buna karşılık gelen <xref:System.ComponentModel.AsyncOperation>. Bu çağrı, uygulama modeli için uygun olan iş parçacığında tamamlama olayını başlatır. Sonra <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> yöntemi çağrıldığında, bu örneği <xref:System.ComponentModel.AsyncOperation> artık kullanılmamaktadır ve kullanmak için sonraki girişiminde herhangi bir özel durum oluşturur.  
+ Bu yöntem, istemcinin görev KIMLIĞININ, benzersiz istemci belirteçleri iç koleksiyonundan kaldırıldığı yerdir. Bu yöntem, karşılık gelen <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> <xref:System.ComponentModel.AsyncOperation>yöntemini çağırarak belirli bir zaman uyumsuz işlemin ömrünü de sonlandırır. Bu çağrı, uygulama modeli için uygun olan iş parçacığında tamamlanma olayını başlatır. Yöntemi çağrıldıktan sonra, bu <xref:System.ComponentModel.AsyncOperation> örneği artık kullanılamaz ve bunu kullanmaya yönelik sonraki girişimler bir özel durum oluşturur. <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>  
   
- `CompletionMethod` İmza gerekir tutun tüm durumu zaman uyumsuz işlemin sonucunu açıklamak gerekli. Asal sayı değilse asal ve değeri, ilk bölen sayı olup olmadığını, bu belirli zaman uyumsuz işlem tarafından test edilen numaralı durum tutar. Ayrıca bir durum oluştu, herhangi bir özel durumu açıklayan tutar ve <xref:System.ComponentModel.AsyncOperation> bu belirli görev için karşılık gelen.  
+ `CompletionMethod` İmza, zaman uyumsuz işlemin sonucunu anlatmak için gereken tüm durumu tutmalıdır. Bu, belirli zaman uyumsuz işlem tarafından test edilen numaranın, sayının asal olup olmadığı ve asal sayı değilse ilk bölenin değerinin durumunu barındırır. Ayrıca, oluşan tüm özel durumları ve <xref:System.ComponentModel.AsyncOperation> bu göreve karşılık gelen durumu açıklayan durumu da barındırır.  
   
-### <a name="to-complete-an-asynchronous-operation"></a>Zaman uyumsuz bir işlemi tamamlamak için:  
+### <a name="to-complete-an-asynchronous-operation"></a>Zaman uyumsuz bir işlemi gerçekleştirmek için:  
   
-- Tamamlama yöntemini uygulayın. Doldurmak için kullandığı altı parametreleri alan bir `CalculatePrimeCompletedEventArgs` aracılığıyla istemcinin istemciye döndürülen `CalculatePrimeCompletedEventHandler`. İstemcinin görev kimlik belirteci iç koleksiyondan kaldırır ve bir çağrı ile zaman uyumsuz işlem yaşam süresi sona ermeden <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> İş parçacığı veya uygulama modeli için uygun olan bir bağlam çağrısı sürekliliğe devreder.  
+- Tamamlama yöntemini uygulayın. İstemciye, istemci tarafından döndürülen bir `CalculatePrimeCompletedEventArgs` istemciyi `CalculatePrimeCompletedEventHandler`doldurmak için kullandığı altı parametre alır. İstemci görev KIMLIĞI belirtecini iç koleksiyondan kaldırır ve çağrısı <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>ile zaman uyumsuz işlemin ömrünü sonlandırır. , <xref:System.ComponentModel.AsyncOperation> Uygulama modeli için uygun olan iş parçacığına veya içeriğe yapılan çağrıyı sıralar.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
- Bu noktada, bileşen oluşturabilirsiniz.  
+ Bu noktada, bileşeni oluşturabilirsiniz.  
   
-### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
   
-- Bileşen derleyin.  
+- Bileşeni derleyin.  
   
-     Bir derleyici uyarısı alırsınız:  
+     Bir derleyici uyarısı alacaksınız:  
   
     ```  
     warning CS0169: The private field 'AsynchronousPatternExample.PrimeNumberCalculator.workerDelegate' is never used  
     ```  
   
-     Sonraki bölümde bu uyarı çözümlenir.  
+     Bu uyarı sonraki bölümde çözümlenir.  
   
-## <a name="implementing-the-worker-methods"></a>Çalışan yöntemlerini uygulayan  
- Destek zaman uyumsuz kod için şu ana kadar uyguladıysanız `PrimeNumberCalculator` bileşeni. Şimdi asıl işi yapan kod uygulayabilirsiniz. Üç yöntemi uygular: `CalculateWorker`, `BuildPrimeNumberList`, ve `IsPrime`. Birlikte `BuildPrimeNumberList` ve `IsPrime` Sieve, test Sayının karekökünü kadar tüm asal sayıları bularak bir sayı üssü olup olmadığını belirleyen Eratosthenes, adlı iyi bilinen bir algoritma oluşturan. Bu nokta hiçbir divisors bulunamazsa, test asal sayısıdır.  
+## <a name="implementing-the-worker-methods"></a>Çalışan yöntemlerini uygulama  
+ Şimdiye kadar, `PrimeNumberCalculator` bileşen için zaman uyumsuz kod destekleme kodu uyguladık. Artık gerçek işi yapan kodu uygulayabilirsiniz. Üç yöntem uygulayacaksınız: `CalculateWorker`, `BuildPrimeNumberList`, ve `IsPrime`. Birlikte, `BuildPrimeNumberList` `IsPrime` bir sayının, test numarasının kare köküne kadar tüm asal sayıları bularak bir sayının asal olup olmadığını belirleyen, en iyi bilinen bir algoritma oluşturur. Bu nokta tarafından hiçbir izleme bulunmazsa, test numarası asal olur.  
   
- Bu bileşen için en yüksek verimliliğin yazılmışsa, çeşitli çağrıları farklı test sayılar için tarafından bulunan tüm asal sayıları unutmayın. 2, 3 ve 5 gibi Önemsiz divisors için ayrıca kontrol. Bu örneğin amacı, ne zaman operations göstermektir bu iyileştirmeler, bir alıştırma olarak kalması için zaman uyumsuz olarak, ancak yürütülebilir.  
+ Bu bileşen en yüksek verimlilik için yazılmışsa, farklı test numaraları için çeşitli etkinleştirmeleri tarafından bulunan tüm asal sayıları hatırlayacaktı. Ayrıca, 2, 3 ve 5 gibi önemsiz bir göz atın. Bu örneğin amacı, zaman alan işlemlerin zaman uyumsuz olarak nasıl yürütülebileceğini göstermek, ancak bu iyileştirmelerin sizin için bir alıştırma olarak ayrılmamaktır.  
   
- `CalculateWorker` Yöntemi bir Temsilcide paketlenir ve zaman uyumsuz olarak çağrısı ile çağrılan `BeginInvoke`.  
+ Yöntemi bir temsilciye sarmalanmış ve `BeginInvoke`çağrısı ile zaman uyumsuz olarak çağırılır. `CalculateWorker`  
   
 > [!NOTE]
->  İlerleme durumunu bildirme içinde gerçekleştirilir `BuildPrimeNumberList` yöntemi. Hızlı bilgisayarlarda `ProgressChanged` olayları hızlı art arda gerçekleştirilen. İstemci iş parçacığı üzerinde bu olaylar oluşturulur, bu durum işleyebilir olması gerekir. Kullanıcı arabirimi kodu iletilerle yayılmamış ve yanıt vermeyi durdurma sorununa bunun sonucunda, devam edilemiyor olabilir. Bu durum işleyen bir örnek kullanıcı arabirimi için bkz: [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+> İlerleme raporlaması `BuildPrimeNumberList` yönteminde uygulanır. Hızlı bilgisayarlarda, `ProgressChanged` olaylar hızlı bir şekilde birbirini izleyen bir şekilde oluşturulabilir. Bu olayların oluşturulduğu istemci iş parçacığı, bu durumu işleyebilmelidir. Kullanıcı arabirimi kodu iletilerle taştı ve devam edemiyor olabilir ve yanıt vermeyebilir. Bu durumu işleyen örnek bir kullanıcı arabirimi için bkz [. nasıl yapılır: Olay tabanlı zaman uyumsuz deseninin](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)istemcisini uygulayın.  
   
-### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Asal numarası hesaplamayı zaman uyumsuz olarak çalıştırmak için:  
+### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Ana sayı hesaplamasını zaman uyumsuz olarak yürütmek için:  
   
-1. Uygulama `TaskCanceled` yardımcı yöntemi. Bu görev ömrü koleksiyonunun belirtilen görev kimliği denetler ve döndürür `true` , görev kimliği bulunamadı.  
+1. `TaskCanceled` Yardımcı program yöntemini uygulayın. Bu, verilen görev kimliği için görev ömrü toplamayı denetler ve görev kimliği bulunmazsa `true` döndürür.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#32)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#32)]  
   
-2. Uygulama `CalculateWorker` yöntemi. İki parametre alır: bir test etmek için sayı ve bir <xref:System.ComponentModel.AsyncOperation>.  
+2. `CalculateWorker` Yöntemini uygulayın. İki parametre alır: sınanacak sayı ve bir <xref:System.ComponentModel.AsyncOperation>.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3. Uygulama `BuildPrimeNumberList`. İki parametre alır: test etmek için sayı ve bir <xref:System.ComponentModel.AsyncOperation>. Kullandığı <xref:System.ComponentModel.AsyncOperation> ilerleme durumunu ve artımlı sonuçları. Bu, istemcinin olay işleyicileri, uygun iş parçacığı veya uygulama modeli için bağlam çağırılır sağlar. Zaman `BuildPrimeNumberList` asal sayı bir bulursa, rapor bu artımlı bir sonucu olarak istemcinin olay işleyicisi için `ProgressChanged` olay. Bu, türetilen bir sınıf gerektirir <xref:System.ComponentModel.ProgressChangedEventArgs>adlı `CalculatePrimeProgressChangedEventArgs`, hangi bir adlı bir özellik eklemiştir `LatestPrimeNumber`.  
+3. Uygulayın `BuildPrimeNumberList`. İki parametre alır: sınanacak sayı ve bir <xref:System.ComponentModel.AsyncOperation>. İlerleme durumunu ve <xref:System.ComponentModel.AsyncOperation> artımlı sonuçları raporlamak için öğesini kullanır. Bu, istemcinin olay işleyicilerinin uygulama modeli için uygun iş parçacığında veya içerikte çağrılması sağlar. Bir asal sayı `ProgressChanged` `BuildPrimeNumberList` bulduğunda, bu, olayı için istemcinin olay işleyicisine artımlı bir sonuç olarak bildirir. Bu, eklenen bir özelliği <xref:System.ComponentModel.ProgressChangedEventArgs> `LatestPrimeNumber`olan adlı `CalculatePrimeProgressChangedEventArgs`öğesinden türetilmiş bir sınıf gerektirir.  
   
-     `BuildPrimeNumberList` Yöntemi de düzenli olarak çağıran `TaskCanceled` yöntemi ve yöntem döndürüyorsa çıkar `true`.  
+     Yöntemi ayrıca yöntemi düzenli olarak `TaskCanceled` çağırır ve Yöntem döndürüyorsa `true`çıkar. `BuildPrimeNumberList`  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4. Uygulama `IsPrime`. Üç parametreleri alır: bilinen asal sayıları, test etmek için sayı ve bir output parametresi bulunan ilk bölen için listesi. Asal sayıları içeren listenin göz önünde bulundurulduğunda, bu test sayı üssü olup olmadığını belirler.  
+4. Uygulayın `IsPrime`. Üç parametre vardır: bilinen asal sayıların listesi, sınanacak sayı ve bulunan ilk bölen için bir çıktı parametresi. Asal sayıların listesi verildiğinde, test numarasının asal olup olmadığını belirler.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
   
-5. Türetilen `CalculatePrimeProgressChangedEventArgs` gelen <xref:System.ComponentModel.ProgressChangedEventArgs>. Bu sınıf için istemcinin olay işleyicisine artımlı sonuçlarını raporlama için gerekli `ProgressChanged` olay. Adlı bir özelliği eklendi sahip `LatestPrimeNumber`.  
+5. `CalculatePrimeProgressChangedEventArgs` Türet .<xref:System.ComponentModel.ProgressChangedEventArgs> Bu sınıf, `ProgressChanged` olay için istemcinin olay işleyicisine artımlı sonuçlar bildirmek için gereklidir. Adında `LatestPrimeNumber`eklenen bir özelliğe sahiptir.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
- Bu noktada, bileşen oluşturabilirsiniz.  
+ Bu noktada, bileşeni oluşturabilirsiniz.  
   
-### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
   
-- Bileşen derleyin.  
+- Bileşeni derleyin.  
   
-     Tüm bu yazılacak kalır başlatmak ve zaman uyumsuz işlemleri iptal etmek için yöntemler şunlardır `CalculatePrimeAsync` ve `CancelAsync`.  
+     Yazılması gereken işlemler, `CalculatePrimeAsync` `CancelAsync`zaman uyumsuz işlemleri başlatma ve iptal etme yöntemleridir.  
   
-## <a name="implementing-the-start-and-cancel-methods"></a>Uygulama başlatma ve iptal yöntemi  
- Çalışan yöntemi çağırarak kendi iş parçacığında Başlat `BeginInvoke` sarmaladığı temsilci üzerinde. Belirli bir zaman uyumsuz işlem ömrünü yönetmek için çağrı <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> metodunda <xref:System.ComponentModel.AsyncOperationManager> yardımcı sınıfı. Bu döndürür bir <xref:System.ComponentModel.AsyncOperation>, uygun iş parçacığı veya bağlam istemcinin olay işleyicileri çağrı sürekliliğe devreder.  
+## <a name="implementing-the-start-and-cancel-methods"></a>Start ve Cancel yöntemlerini uygulama  
+ Çalışan metodunu, sarmalayan temsilciyi çağırarak `BeginInvoke` kendi iş parçacığında başlatabilirsiniz. Belirli bir zaman uyumsuz işlemin ömrünü yönetmek için <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> <xref:System.ComponentModel.AsyncOperationManager> yardımcı sınıfında yöntemi çağırın. Bu, istemci <xref:System.ComponentModel.AsyncOperation>olay işleyicilerinde doğru iş parçacığına veya içeriğe çağrı getiren bir döndürür.  
   
- Belirli bir bekleyen bir işlem iptal <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> , buna karşılık gelen <xref:System.ComponentModel.AsyncOperation>. Bu, işlemi ve yapılan sonraki çağrılar sona kendi <xref:System.ComponentModel.AsyncOperation> bir özel durum oluşturur.  
+ Kendisine karşılık gelen <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> <xref:System.ComponentModel.AsyncOperation>bir bekleyen işlemi çağırarak iptal edersiniz. Bu işlem sonlanır ve bundan sonraki çağrılar <xref:System.ComponentModel.AsyncOperation> bir özel durum oluşturur.  
   
-### <a name="to-implement-start-and-cancel-functionality"></a>Başlangıç uygulamak ve iptal et işlevi:  
+### <a name="to-implement-start-and-cancel-functionality"></a>Start ve Cancel işlevlerini uygulamak için:  
   
-1. Uygulama `CalculatePrimeAsync` yöntemi. İstemci tarafından sağlanan belirtecin (görev kimliği) göre şu anda bekleyen görevler temsil eden tüm belirteçlerin benzersiz olduğundan emin olun. İstemci benzersiz olmayan bir belirtece geçiyorsa `CalculatePrimeAsync` bir özel durum oluşturur. Aksi takdirde, belirteç, görev kimliği koleksiyona eklenir.  
+1. `CalculatePrimeAsync` Yöntemini uygulayın. İstemci tarafından sağlanan belirtecin (görev KIMLIĞI), şu anda bekleyen görevleri temsil eden tüm belirteçlere göre benzersiz olduğundan emin olun. İstemci benzersiz olmayan bir belirteçte `CalculatePrimeAsync` geçerse bir özel durum oluşturur. Aksi takdirde, belirteç görev KIMLIĞI koleksiyonuna eklenir.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
   
-2. Uygulama `CancelAsync` yöntemi. Varsa `taskId` parametresi var. belirteci koleksiyonda, kaldırılmadan. Bu, çalışmasını başlatılmayan iptal edilen görevler engeller. Görev çalışıyorsa `BuildPrimeNumberList` yöntemi, görev kimliği ömrü koleksiyondan kaldırıldı algıladığında çıkar.  
+2. `CancelAsync` Yöntemini uygulayın. `taskId` Parametre belirteç koleksiyonunda varsa, kaldırılır. Bu, çalışmayı başlatmayan iptal edilen görevleri engeller. Görev çalışıyorsa `BuildPrimeNumberList` yöntemi, görev kimliğinin ömür koleksiyonundan kaldırıldığını algıladığında çıkar.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
   
 ## <a name="checkpoint"></a>Checkpoint  
- Bu noktada, bileşen oluşturabilirsiniz.  
+ Bu noktada, bileşeni oluşturabilirsiniz.  
   
-### <a name="to-test-your-component"></a>Bileşeninizin test etmek için  
+### <a name="to-test-your-component"></a>Bileşeninizi test etmek için  
   
-- Bileşen derleyin.  
+- Bileşeni derleyin.  
   
- `PrimeNumberCalculator` Bileşendir artık tamamlandı ve kullanıma hazır.  
+ `PrimeNumberCalculator` Bileşen artık tamamlanmıştır ve kullanıma hazırdır.  
   
- Kullanan bir örnek istemci için `PrimeNumberCalculator` bileşeni Bkz [nasıl yapılır: Olay tabanlı zaman uyumsuz desenin istemcisini uygulama](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+ `PrimeNumberCalculator` Bileşenini kullanan örnek bir istemci için bkz [. nasıl yapılır: Olay tabanlı zaman uyumsuz deseninin](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)istemcisini uygulayın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Bu örnek yazarak doldurabilirsiniz `CalculatePrime`, zaman uyumlu karşılığı `CalculatePrimeAsync` yöntemi. Bunu yapmak `PrimeNumberCalculator` bileşeni olay tabanlı zaman uyumsuz desen ile tamamen uyumlu.  
+ `CalculatePrimeAsync` Yöntemin zaman uyumlu eşdeğerini yazarak `CalculatePrime`bu örneği doldurabilirsiniz. Bu, `PrimeNumberCalculator` bileşeni olay tabanlı zaman uyumsuz düzeniyle tamamen uyumlu hale getirir.  
   
- Bu örnekte, farklı test sayılar için çeşitli çağrılarına tarafından bulunan tüm asal sayıları listesini koruyarak artırabilir. Bu yaklaşımı kullanarak, önceki görevler tarafından çalışmanın her görev yararlı olacaktır. Bu liste korumak özen `lock` erişim listesine farklı iş parçacıkları tarafından seri hale getirilmiş şekilde bölgeleri.  
+ Farklı test numaraları için çeşitli etkinleştirmeleri tarafından bulunan tüm asal sayıların listesini koruyarak bu örneği geliştirebilirsiniz. Bu yaklaşımı kullanarak, her görev önceki görevler tarafından gerçekleştirilen işin avantajına sahip olur. Bu listeyi `lock` bölgelerle korumamaya dikkat edin, bu nedenle listeye farklı iş parçacıkları tarafından erişim serileştirilir.  
   
- Bu örnekte, 2, 3 ve 5 gibi Önemsiz divisors için test ederek de artırabilir.  
+ Bu örneği Ayrıca, 2, 3 ve 5 gibi önemsiz ve daha fazla bilgi için test ederek geliştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka planda Işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -9,34 +9,34 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 164eee7c10d9e388c6e6ee695af479ca2d6974b3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696278"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958321"
 ---
 # <a name="how-to-use-the-image-element"></a>Nasıl yapılır: Görüntü Öğesi Kullanma
-Bu örnekte, görüntüleri kullanarak bir uygulamaya eklemek gösterilmektedir <xref:System.Windows.Controls.Image> öğesi.  
+Bu örnek, <xref:System.Windows.Controls.Image> öğesini kullanarak bir uygulamaya görüntülerin nasıl ekleneceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, 200 piksel genişliğinde bir görüntüsünü işlemek nasıl gösterir. Bu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnek, öznitelik söz dizimi hem özellik etiketi sözdizimi görüntünün tanımlamak için kullanılır. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md). A <xref:System.Windows.Media.Imaging.BitmapImage> özellik etiketi sözdizimi örneği için açıkça tanımlanmış ve görüntünün kaynak verileri tanımlamak için kullanılır. Ayrıca, <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> , <xref:System.Windows.Media.Imaging.BitmapImage> aynı genişlikte ayarlanır <xref:System.Windows.FrameworkElement.Width%2A> , <xref:System.Windows.Controls.Image>. Bu, görüntü işleme, en düşük bellek miktarını kullanılmasını sağlamak için gerçekleştirilir.  
+ Aşağıdaki örnek bir görüntünün 200 piksel genişliğinde nasıl işleneceğini gösterir. Bu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] örnekte, görüntüyü tanımlamak için hem öznitelik sözdizimi hem de özellik etiketi sözdizimi kullanılır. Öznitelik sözdizimi ve özellik sözdizimi hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md). <xref:System.Windows.Media.Imaging.BitmapImage> , Görüntünün kaynak verilerini tanımlamak için kullanılır ve özellik etiketi sözdizimi örneği için açıkça tanımlanmıştır. Ayrıca, <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> <xref:System.Windows.FrameworkElement.Width%2A> öğesinin ' ı ile aynı <xref:System.Windows.Controls.Image>genişliğe ayarlanır. <xref:System.Windows.Media.Imaging.BitmapImage> Bu, görüntüyü işlemek için en az bellek miktarının kullanıldığından emin olmak için yapılır.  
   
 > [!NOTE]
->  İşlenmiş resmin boyutu belirtmek istiyorsanız, genel olarak, yalnızca belirtin <xref:System.Windows.FrameworkElement.Width%2A> veya <xref:System.Windows.FrameworkElement.Height%2A> ikisini birden belirtmeyin. Yalnızca birini belirtirseniz, görüntünün en boy oranı korunur. Aksi takdirde, resim, beklenmedik bir şekilde esnetilen ya da karışmış görünebilir. Görüntüyü denetlemek için davranış uzatma, kullanın <xref:System.Windows.Controls.Image.Stretch%2A> ve <xref:System.Windows.Controls.Image.StretchDirection%2A> özellikleri.  
+> Genel olarak, işlenmiş bir görüntünün boyutunu belirtmek istiyorsanız, her ikisini de yalnızca <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.Height%2A> veya ' ı belirtin. Yalnızca bir tane belirtirseniz, görüntünün en boy oranı korunur. Aksi takdirde, görüntü beklenmedik şekilde uzatılmış veya çarpıtılmış görünebilir. Görüntünün uzatma davranışını denetlemek için <xref:System.Windows.Controls.Image.Stretch%2A> ve <xref:System.Windows.Controls.Image.StretchDirection%2A> özelliklerini kullanın.  
   
 > [!NOTE]
->  Belirttiğinizde görüntü boyutu ile <xref:System.Windows.FrameworkElement.Width%2A> veya <xref:System.Windows.FrameworkElement.Height%2A>, ya da ayarlamalısınız <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> veya <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> da aynı boyuta için.  
+> Ya <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelWidth%2A> <xref:System.Windows.Media.Imaging.BitmapImage.DecodePixelHeight%2A> da ile bir görüntünün boyutunu belirttiğinizde, ya da aynı boyuta göre de ayarlamanız gerekir. <xref:System.Windows.FrameworkElement.Height%2A>  
   
- <xref:System.Windows.Controls.Image.Stretch%2A> Özelliği, görüntü öğesi doldurmak için resim kaynağını nasıl uzatılacağını belirler. Daha fazla bilgi için <xref:System.Windows.Media.Stretch> sabit listesi.  
+ <xref:System.Windows.Controls.Image.Stretch%2A> Özelliği, görüntü kaynağının görüntü öğesini doldurmak için nasıl uzatılacağını belirler. Daha fazla bilgi için bkz <xref:System.Windows.Media.Stretch> . sabit listesi.  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kodu kullanarak 200 piksel bir görüntüsünü işlemek nasıl gösterir.  
+ Aşağıdaki örnek, kod kullanarak bir görüntünün 200 piksel genelinde nasıl işleneceğini gösterir.  
   
 > [!NOTE]
->  Ayarı <xref:System.Windows.Media.Imaging.BitmapImage> özellikleri Bitti, içinde bir <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> blok.  
+> Ayar <xref:System.Windows.Media.Imaging.BitmapImage> özellikleri bir <xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A> ve <xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A> bloğu içinde yapılmalıdır.  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  

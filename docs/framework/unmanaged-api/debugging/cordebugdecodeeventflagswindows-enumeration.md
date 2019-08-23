@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bab7da5855eaf562e55738b489ebf6f62dc45d04
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec23e0f272852088987fcc74767d3645778eab45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740230"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955677"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>CorDebugDecodeEventFlagsWindows Numaralandırması
-Hata ayıklama olaylar hakkında ek bilgi için Windows platformunda sağlar.  
+Windows platformunda hata ayıklama olayları hakkında ek bilgi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,22 +34,22 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`IS_FIRST_CHANCE`|Hata ayıklama olayı ilk fırsat özel durum olduğunu gösterir.|  
+|`IS_FIRST_CHANCE`|Hata ayıklama olayının ilk şans özel durumu olduğunu gösterir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Icordebugprocess6::decodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi içeren bir `dwFlags` hata ayıklama olay hakkında ek bilgi sağlayan ve değeri hedef mimarisine bağımlı olan parametre. `CorDebugDecodeEventFlagsWindows` Numaralandırma, Windows platformunda hata ayıklama olayları ile kullanılabilir.  
+ [ICorDebugProcess6::D ecodeevent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi bir hata ayıklama `dwFlags` olayı ve değeri hedef mimarisine bağlı olan ek bilgiler sağlayan bir parametre içerir. `CorDebugDecodeEventFlagsWindows` Sabit listesi Windows platformunda hata ayıklama olayları ile kullanılabilir.  
   
 > [!NOTE]
->  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
+> Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

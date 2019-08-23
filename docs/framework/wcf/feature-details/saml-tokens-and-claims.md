@@ -10,37 +10,37 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7037daf299d7c750ab398c21c1d7ccb541620701
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991082"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943068"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML Belirteçleri ve Talepleri
-Güvenlik onaylama işaretleme dili (SAML) *belirteçleri* talep XML temsillerini olan. Varsayılan olarak, SAML belirteçlerini Windows Communication Foundation (WCF) kullanan güvenlik federe senaryolarda olan *verilen belirteçler*.  
+Güvenlik onayları biçimlendirme dili (SAML) *belirteçleri* , taleplerin XML temsilleridir. Varsayılan olarak, Federasyon güvenlik senaryolarında Windows Communication Foundation (WCF) SAML belirteçlerinin kullanımları *verilen belirteçlerdir*.  
   
- SAML belirteçlerini başka bir varlık ile ilgili bir varlık tarafından yapılan talep kümesi olan deyimleri taşır. Örneğin, güvenlik federe senaryolarda, sistemde bulunan bir kullanıcı ile ilgili bir güvenlik belirteci hizmeti tarafından deyimleri yapılır. Güvenlik belirteci hizmeti belirtecinde yer alan ifadeleri belki belirtmek için SAML belirteci imzalar. Buna ek olarak, SAML belirteci SAML belirtecinin kullanıcı bilgisi kanıtlar şifreleme anahtar malzemesi ile ilişkilidir. Bu kavram, bağlı olan taraf SAML belirteci olan aslında, o kullanıcıya verilen karşılar. Örneğin, tipik bir senaryoda:  
+ SAML belirteçleri, başka bir varlık hakkında bir varlık tarafından yapılan talep kümeleri olan deyimleri taşır. Örneğin, Federasyon güvenlik senaryolarında, deyimler sistemdeki bir kullanıcı hakkında bir güvenlik belirteci hizmeti tarafından yapılır. Güvenlik belirteci hizmeti, belirteç içinde yer alan deyimlerin bütünlüğünü belirtmek için SAML belirtecini imzalar. Ayrıca, SAML belirteci, SAML belirtecinin kullanıcısına bilgi sahibi olan şifreleme anahtarı malzemesiyle ilişkilendirilir. Bu kanıt, SAML belirtecinin aslında söz konusu kullanıcıya verildiği bağlı olan tarafı karşılar. Örneğin, tipik bir senaryoda:  
   
-1. Bir istemci, bu güvenlik belirteci hizmeti için Windows kimlik bilgilerini kullanarak kimlik doğrulaması, bir güvenlik belirteci Hizmeti'nden bir SAML belirteci ister.  
+1. İstemci bir güvenlik belirteci hizmetinden bir SAML belirteci ister ve bu güvenlik belirteci hizmetinde Windows kimlik bilgilerini kullanarak kimlik doğrulaması ister.  
   
-2. Güvenlik belirteci hizmeti istemciye bir SAML belirteci verir. SAML belirtecindeki güvenlik belirteci hizmeti ile ilişkili bir sertifika ile imzalanmış ve şifrelenmiş hedef hizmet için bir düzeltme anahtar içeriyor.  
+2. Güvenlik belirteci hizmeti istemciye bir SAML belirteci yayınlar. SAML belirteci, güvenlik belirteci hizmetiyle ilişkili bir sertifikayla imzalanır ve hedef hizmet için şifrelenmiş bir düzeltme anahtarı içerir.  
   
-3. İstemci ayrıca bir kopyasını alır *kanıt anahtarı*. İstemci uygulama hizmeti SAML belirtecine ardından sunar ( *bağlı olan taraf*) ve ileti kavram anahtarla imzalar.  
+3. İstemci Ayrıca *prova anahtarının*bir kopyasını alır. İstemci daha sonra SAML belirtecini uygulama hizmetine ( *bağlı olan taraf*) gösterir ve iletiyi bu kanıt anahtarıyla imzalar.  
   
-4. SAML belirtecindeki üzerinden imzası, bağlı olan taraf güvenlik belirteci hizmeti belirteci veren söyler. Sağlama anahtarı ile oluşturulan ileti imzası, belirteci istemciye verildiğini bağlı olan taraf söyler.  
+4. SAML belirtecinin üzerindeki imza, bağlı olan tarafa güvenlik belirteci hizmetinin belirteci vermesini söyler. Kanıt anahtarıyla oluşturulan ileti imzası, bağlı olan tarafa belirtecin istemciye verildiğini söyler.  
   
-## <a name="from-claims-to-samlattributes"></a>Gelen talepler için SamlAttributes  
- WCF'de, SAML belirteçlerini deyimlerinde olarak modellenir <xref:System.IdentityModel.Tokens.SamlAttribute> doğrudan doldurulabilir nesneleri <xref:System.IdentityModel.Claims.Claim> sağlanan nesnelerini <xref:System.IdentityModel.Claims.Claim> nesnesinin bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliği <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> özelliği olduğu tür <xref:System.String>. Örneğin:  
+## <a name="from-claims-to-samlattributes"></a>Taleplerden SamlAttributes 'e  
+ WCF 'de, SAML belirteçlerdeki deyimler nesneler <xref:System.IdentityModel.Tokens.SamlAttribute> <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.Right%2A> <xref:System.IdentityModel.Claims.Claim> olarak modellenir, ancak nesne bir özelliğine <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> sahip ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> özelliği yazın <xref:System.String>. Örneğin:  
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  
   
 > [!NOTE]
->  SAML belirteçlerini, iletileri bir güvenlik belirteci hizmeti tarafından çıkarıldığında veya hizmetleri için istemciler tarafından kimlik doğrulaması bir parçası olarak sunulduklarında serileştirildiği zaman, en büyük ileti boyutu kotası SAML belirteci uyum sağlamak için yeterince büyük olması gerekir ve diğer ileti bölümleri. Normal durumlarda, varsayılan ileti boyutu kotası yeterlidir. Ancak, talep yüzlerce içerdiğinden SAML belirteci büyük olduğu durumlarda, serileştirilmiş belirteci uyum sağlamak için kotaları artırma gerekebilir. Daha fazla bilgi için [veriler için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
+> Bir güvenlik belirteci hizmeti tarafından verildiğinde veya istemciler tarafından kimlik doğrulamanın bir parçası olarak sunulduklarında, SAML belirteçleri iletilerde serileştirildiklerinde, en büyük ileti boyutu kotasının SAML belirtecini barındırmak için yeterince büyük olması gerekir ve diğer ileti bölümleri. Normal durumlarda, varsayılan ileti boyutu kotaları yeterlidir. Ancak, yüzlerce talep içerdiğinden SAML belirtecinin büyük olduğu durumlarda, serileştirilmiş belirtece uyum sağlamak için kotaları artırmanız gerekebilir. Daha fazla bilgi için bkz. [veriler Için güvenlik konuları](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md).  
   
-## <a name="from-samlattributes-to-claims"></a>SamlAttributes talepler için  
- SAML belirteçlerini iletilerinde alındığında, SAML belirtecindeki çeşitli deyimleri içinde açık olduğundan <xref:System.IdentityModel.Policy.IAuthorizationPolicy> içine yerleştirilen nesneleri <xref:System.IdentityModel.Policy.AuthorizationContext>. Talepleri her SAML deyiminden tarafından döndürülen <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> özelliği <xref:System.IdentityModel.Policy.AuthorizationContext> ve kimliğini doğrulamak ve kullanıcıya yetki verilip verilmeyeceğine karar vermek için incelenebilir.  
+## <a name="from-samlattributes-to-claims"></a>SamlAttributes 'dan talepler 'e  
+ İletilerde SAML belirteçleri alındığında, SAML belirtecindeki çeşitli deyimler öğesine yerleştirilmiş <xref:System.IdentityModel.Policy.IAuthorizationPolicy> <xref:System.IdentityModel.Policy.AuthorizationContext>nesnelere açılır. Her SAML deyimindeki talepler <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> <xref:System.IdentityModel.Policy.AuthorizationContext> öğesinin özelliği tarafından döndürülür ve kullanıcının kimlik doğrulaması ve yetkilendirilip yetkilendirilmeyeceğini tespit etmek üzere incelenebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -48,8 +48,8 @@ Güvenlik onaylama işaretleme dili (SAML) *belirteçleri* talep XML temsillerin
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Nasıl yapılır: Federe istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Nasıl yapılır: Federe bir hizmette kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe Istemci oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Talepler ve Belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Talep Oluşturma ve Kaynak Değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)

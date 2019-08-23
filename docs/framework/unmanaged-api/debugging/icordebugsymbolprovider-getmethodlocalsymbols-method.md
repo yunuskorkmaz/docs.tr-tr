@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodLocalSymbols yöntemi
+title: 'ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac40123eff4028c1ebda898db27a5bd746571ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24671c371ae8a0a9f3c7ca650a71298c69e2fae1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955668"
 ---
-# <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols yöntemi
-Bu yöntemin göreli sanal adres (RVA) verilen bir yöntemin yerel simgelerini alır.  
+# <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider:: GetMethodLocalSymbols yöntemi
+Yöntemin yerel sembollerini, bu yöntemin göreli sanal adresi (RVA) verildiğinde alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,30 +27,30 @@ HRESULT GetMethodLocalSymbols(
   
 ## <a name="parameters"></a>Parametreler  
  `nativeRVA`  
- [in] Yerel göreli sanal adres yöntemi.  
+ 'ndaki Metodun yerel göreli sanal adresi.  
   
  `cRequestedSymbols`  
- [in] İstenen yerel semboller sayısı.  
+ 'ndaki İstenen yerel semboller sayısı.  
   
  `pcFetchedSymbols`  
- [out] Yöntemi tarafından alınan simgelerin sayısını bir işaretçi.  
+ dışı Yöntemi tarafından alınan sembol sayısına yönelik bir işaretçi.  
   
  `pcFetchedSymbols`  
- [out] Bir işaretçi bir [Icordebugvariablesymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) yöntemin yerel semboller içeren bir dizi.  
+ dışı Metodun yerel sembollerini içeren [ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md) dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

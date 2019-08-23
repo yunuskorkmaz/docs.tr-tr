@@ -2,44 +2,44 @@
 title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951572"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
-Windows İşlem Etkinleştirme Hizmeti (WAS) etkinleştirme ve uygulamaları Windows Communication Foundation (WCF) hizmetlerini barındırmak içeren çalışan işlemleri yaşam süresini yönetir. WAS işlem modeli, HTTP bağımlılığını kaldırarak HTTP sunucusu için IIS 6.0 işlem modelini genelleştirir. Bu, hem HTTP hem de net.msmq ve ileti tabanlı etkinleştirme destekleyen ve belirli bir bilgisayardaki uygulamaları, çok sayıda konak imkanı barındırma ortamında msmq.formatname gibi HTTP olmayan protokolleri kullanmak WCF hizmetleri sağlar.  
+Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen ve belirli bir bilgisayarda çok sayıda uygulamayı barındırma olanağı sunan bir barındırma ortamında net. MSMQ ve MSMQ. formatname gibi HTTP ve HTTP olmayan protokolleri kullanmasına izin verir.  
   
- OLAN bir veya daha fazla ileti bir uygulama tarafından kullanılan kuyrukların yerleştirildiğinde, kuyruğa alınmış bir uygulamayı etkinleştirir bir Message Queuing (MSMQ) etkinleştirmesi hizmeti içerir. MSMQ Etkinleştirme hizmeti varsayılan olarak otomatik olarak başlatılan bir NT hizmetidir.  
+ , Uygulama tarafından kullanılan kuyruklardan birine bir veya daha fazla ileti yerleştirildiğinde sıraya alınmış uygulamayı etkinleştiren bir Message Queuing (MSMQ) etkinleştirme hizmeti içermektedir. MSMQ etkinleştirme hizmeti, varsayılan olarak otomatik olarak başlatılan bir NT hizmetidir.  
   
- WAS ve aboneliğin avantajları hakkında daha fazla bilgi için bkz. [Windows İşlem Etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). MSMQ hakkında daha fazla bilgi için bkz: [kuyruklar genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ WAS ve avantajları hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). MSMQ hakkında daha fazla bilgi için bkz. [kuyruklara genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md).
   
-## <a name="queue-addressing-in-was"></a>Kuyruk WAS içinde adresleme  
- Uygulamaları Tekdüzen Kaynak Tanımlayıcısı (URI) adreslerine sahip oldu. Uygulama adresine sahip iki bölümden: bir taban URI öneki ve uygulamaya özgü, göreli (yol) adresi. Bu iki bölümden birlikte katıldığında bir uygulama için dış adresini sağlayın. Taban URI öneki site bağlamayı oluşturulur ve örneğin, "net.msmq://localhost", "msmq.formatname://localhost" veya "NET.TCP://localhost" site altındaki tüm uygulamalar için kullanılır. Uygulama adresleri ardından uzamayan uygulamaya özgü yolu parçaları yararlanarak (örneğin "/ applicationOne") ve bunları temel URI'nin sonuna ekleme önek tam uygulamayı URI, örneğin, gelmesi "net.msmq://localhost/applicationOne".  
+## <a name="queue-addressing-in-was"></a>WAS içinde sıra adresleme  
+ WAS uygulamalarında Tekdüzen Kaynak tanımlayıcısı (URI) adresleri var. Uygulama adresleri iki bölümden oluşur: temel URI öneki ve uygulamaya özgü, göreli adres (yol). Bu iki bölüm, birlikte katıldığında bir uygulamanın dış adresini sağlar. Temel URI öneki site bağlamalarından oluşturulur ve site altındaki tüm uygulamalar (örneğin, "net. MSMQ:/localhost", "MSMQ. FormatName:/localhost" veya "net. TCP:/localhost") için kullanılır. Uygulama adresleri bundan sonra uygulamaya özel yol parçaları ("/applicationOne" gibi) alınarak oluşturulur ve bunları tam uygulama URI 'sine (örneğin, "net. MSMQ://localhost/applicationOne") ulaşmak için temel URI önekine ekler.  
   
- MSMQ Etkinleştirme hizmeti, MSMQ Etkinleştirme hizmeti iletileri de izlemeniz gerekir sıranın eşleştirmek için uygulama URI'sini kullanır. MSMQ Etkinleştirme hizmeti başladığında alacak şekilde yapılandırılır ve bunları iletileri izler, bilgisayardaki tüm ortak ve özel sıralarda numaralandırır. 10 dakikada MSMQ Etkinleştirme hizmeti izlemek için kuyruk listesini yeniler. Kuyrukta bir ileti bulunduğunda, Etkinleştirme hizmeti net.msmq bağlama için eşleşen en uzun uygulama URI'sini için kuyruk adı ile eşleşen ve uygulamayı etkinleştirir.  
-  
-> [!NOTE]
->  Etkinleştirilmekte olan uygulama (en uzun eşleşme) kuyruk adı ön eki eşleşmesi gerekir.  
-  
- Örneğin, bir kuyruk adıdır: msmqWebHost/orderProcessing/service.svc. Bir sanal dizin /msmqWebHost/orderProcessing altındaki bir service.svc ile uygulama 1 olan ve uygulama 2 altındaki bir orderProcessing.svc ile bir sanal dizin /msmqWebHost varsa, uygulama 1 etkinleştirilir. Uygulama 1 silinirse, uygulama 2 etkin hale gelir.  
+ MSMQ etkinleştirme hizmeti, MSMQ etkinleştirme hizmeti 'nin ileti izlemesi gereken kuyrukla eşleşmesi için uygulama URI 'sini kullanır. MSMQ etkinleştirme hizmeti başlatıldığında, ' den almak üzere yapılandırıldığı bilgisayardaki tüm genel ve özel kuyrukları numaralandırır ve bunları iletiler için izler. MSMQ etkinleştirme hizmeti her 10 dakikada bir izlemek için kuyrukların listesini yeniler. Kuyrukta bir ileti bulunduğunda, etkinleştirme hizmeti, kuyruk adıyla net. MSMQ bağlamasının en uzun eşleşen uygulama URI 'siyle eşleşir ve uygulamayı etkinleştirir.  
   
 > [!NOTE]
->  Bir kuyruk oluşturduğunuzda, kendisine gönderilen tüm iletileri MSMQ Etkinleştirme hizmeti, en fazla 10 dakika Sıranın oluşturulduğu zamandan ise kuyruğu listenin yenilenene kadar uygulama etkinleştirmeyin. Etkinleştirme hizmeti yeniden başlatmayı yanı sıra listesini yeniler.  
+> Etkinleştirilen uygulamanın, sıra adının ön ekiyle eşleşmesi (en uzun eşleşme) gerekir.  
   
-### <a name="the-effect-of-private-and-public-queues-on-addressing"></a>Özel ve genel sıralar adresleme üzerinde etkisi  
- MSMQ Etkinleştirme hizmeti özel ve genel kuyruk izleme arasında ayrım yapmaz. Bu nedenle, genel ve özel sıralar ile aynı ada sahip olamaz. Bunu yaparsanız, Web barındırılan bir uygulamanın kuyrukları birinden okuma etkin.  
+ Örneğin, bir kuyruk adı: msmqWebHost/orderProcessing/service. svc. Uygulama 1 ' de bir Service. svc ile bir sanal dizin/msmqWebHost/orderProcessing varsa ve uygulama 2 ' de bir orderProcessing. svc içeren bir sanal dizin/msmqWebHost varsa, uygulama 1 etkinleştirilir. Uygulama 1 silinirse, uygulama 2 etkinleştirilir.  
   
-### <a name="queue-configuration-for-activation"></a>Etkinleştirme için sıraya yapılandırma  
- MSMQ Etkinleştirme hizmeti, ağ hizmeti olarak çalışır. Bu uygulamaları etkinleştirmek için kuyrukları izleyen hizmettir. Ağ hizmeti, erişim denetim listesi (ACL) iletiler için Özet erişimi için bu kuyruğu'ndan uygulamaları etkinleştirmek kuyruk sağlamanız gerekir.  
+> [!NOTE]
+> Bir kuyruk oluşturulduğunda, kendisine gönderilen iletiler, MSMQ etkinleştirme hizmeti sıra listesini yenileene kadar bir uygulamayı etkinleştirmez. Bu, en çok, sıranın oluşturulduğu zamandan itibaren 10 dakikadır. Etkinleştirme hizmetinin yeniden başlatılması kuyruk listesini de yeniler.  
   
-### <a name="poison-messaging"></a>Zehirli ileti  
- Zehirli ileti işleme WCF'de ileti zarar ancak kullanıcı yapılandırmasını temel alan bir değerlendirme seçer yalnızca algıladığı kanal tarafından işlenir. Sonuç olarak, kuyrukta tek bir ileti yok. Art arda gelen kez Web barındırılan uygulamayı durdurur ve yeniden kuyruğa ileti taşınır. Yeniden deneme döngüsü gecikme tarafından dikte bir noktada, ileti yeniden deneme kuyruktan ana kuyruğa yeniden denemek için taşınır. Ancak, bu kuyruğa alınmış kanal etkin olmasını gerektirir. Uygulama tarafından WAS geri dönüştürüldü, başka bir ileti sıraya alınan uygulamayı etkinleştirmek için ana kuyruğa gelene kadar ileti yeniden deneme kuyruğunda kalır. Geçici çözüm bu durumda yapılacak el ile yeniden deneme kuyruktan geri uygulamayı yeniden etkinleştirmek için ana kuyruğa taşımaktır.  
+### <a name="the-effect-of-private-and-public-queues-on-addressing"></a>Özel ve genel sıraların adresleme üzerindeki etkisi  
+ MSMQ etkinleştirme hizmeti özel ve genel sıra izleme arasında ayrım yapmaz. Bu nedenle, aynı ada sahip ortak ve özel kuyruklara sahip olamaz. Bunu yaparsanız, Web 'de barındırılan bir uygulama kuyruklardan birinden okuma için etkinleştirilebilir.  
   
-### <a name="subqueue-and-system-queue-caveat"></a>Subqueue ve sistem sırası uyarı  
- WAS barındırılan bir uygulama, sistem genelinde atılacak veya zehirli alt kuyruklar gibi alt kuyruk gibi bir sistem kuyruğundaki iletileri göre etkinleştirilemiyor. Ürünün bu sürümü için bir sınırlama budur.  
+### <a name="queue-configuration-for-activation"></a>Etkinleştirme için kuyruk yapılandırması  
+ MSMQ etkinleştirme hizmeti ağ HIZMETI olarak çalışır. Uygulamaları etkinleştirmek için kuyrukları izleyen hizmettir. Kuyruktaki uygulamaları etkinleştirmek için, sıranın erişim denetim listesinde (ACL) iletilere gözatmak üzere ağ HIZMETI erişimi sağlaması gerekir.  
+  
+### <a name="poison-messaging"></a>Zarar Iletileri  
+ WCF 'de zarar iletisi işleme kanal tarafından işlenir ve bu, yalnızca bir iletinin kirlediğinin ve Kullanıcı yapılandırmasına göre bir değerlendirme seçtiği anlamına gelir. Sonuç olarak, kuyrukta tek bir ileti vardır. Web 'de barındırılan uygulama ardışık olarak iptal edilir ve ileti yeniden deneme kuyruğuna taşınır. Yeniden deneme döngüsünün dikte edildiği bir noktada, yeniden denemek için ileti yeniden deneme sırasından ana sıraya taşınır. Ancak bu, sıraya alınan kanalın etkin olmasını gerektirir. Uygulama WAS tarafından geri dönüştürüldüğünde, sıraya alınmış uygulamayı etkinleştirmek için ana sıraya başka bir ileti gelene kadar ileti yeniden deneme sırasında kalır. Bu durumda geçici çözüm olarak, uygulamayı yeniden etkinleştirmek için yeniden deneme kuyruğundan iletiyi tekrar ana sıraya taşıyın.  
+  
+### <a name="subqueue-and-system-queue-caveat"></a>Alt sıra ve sistem kuyruğu desteklenmediği uyarısıyla  
+ WAS ile barındırılan bir uygulama, sistem sırasındaki, sistem genelinde atılacak ileti sırası veya zarar alt sıraları gibi alt kuyruklar gibi iletiler temel alınarak etkinleştirilemez. Bu, ürünün bu sürümü için bir kısıtlamadır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

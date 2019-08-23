@@ -2,26 +2,26 @@
 title: System.TimeSpan Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: dd693a64550293d6894e1d2abc3f651a53fc17fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947085"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan Yöntemleri
-Üye desteği <xref:System.TimeSpan?displayProperty=nameWithType> kullanmakta olduğunuz bir Microsoft SQL Server ve .NET Framework sürümlerinde büyük ölçüde bağlıdır.  
+İçin <xref:System.TimeSpan?displayProperty=nameWithType> üye desteği büyük ölçüde kullandığınız .NET Framework ve Microsoft SQL Server sürümlerine bağlıdır.  
   
- Bir yöntemi, işleci veya özelliği desteklenmiyor.; LINQ to SQL üyesi için SQL Server üzerinde yürütme çeviremez anlamına gelir. Hala kodunuzda bu üyeleri kullanmanız mümkün olabilir. Ancak, sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilir önce bunlar değerlendirilmelidir.  
+ Bir yöntem, işleç veya özellik desteklenmiyorsa; LINQ to SQL, SQL Server yürütme için üyeyi çeviremediği anlamına gelir. Kodunuzda bu üyeleri yine de kullanabilirsiniz. Ancak, sorgu Transact-SQL ' e çevrilmeden veya sonuçlar veritabanından alındıktan sonra değerlendirilmelidir.  
   
-## <a name="previous-limitations"></a>Önceki sınırlamaları  
- .NET Framework 3.5 SP1'den önce .NET Framework sürümleri ile LINQ to SQL kullanırken SQL Server veritabanı alanlarına eşlenemez <xref:System.TimeSpan?displayProperty=nameWithType>. Ancak, işlemleri <xref:System.TimeSpan> desteklenmez <xref:System.TimeSpan> değerleri sağlayıcıdan döndürülen <xref:System.DateTime> çıkarma veya değişmez değer veya ilişkili bir değişkeni olarak bir ifade içinde tanıtılan.  
+## <a name="previous-limitations"></a>Önceki sınırlamalar  
+ .NET Framework 3,5 SP1 'den önceki .NET Framework sürümleriyle LINQ to SQL kullanırken, SQL Server veritabanı alanlarını <xref:System.TimeSpan?displayProperty=nameWithType>ile eşleyemezsiniz. Ancak, değerler çıkarma <xref:System.TimeSpan> işleminden <xref:System.DateTime> döndürülebilecek <xref:System.TimeSpan> veya bir ifadenin bir sabit değer ya da bağlı değişken olarak tanıtıldığı için üzerinde işlemler desteklenir.  
   
-## <a name="supported-systemtimespan-member-support"></a>Desteklenen System.TimeSpan üye desteği
+## <a name="supported-systemtimespan-member-support"></a>Desteklenen System. TimeSpan üye desteği
 
- Aşağıdaki LINQ to SQL desteklenen yöntem, işleçler ve özelliklerini, LINQ to SQL sorgularında kullanabilmeniz için kullanılabilir. Nesne modeli ya da dış eşleme dosyası eşlenen sonra LINQ to SQL birçok çağırmanızı sağlar <xref:System.TimeSpan?displayProperty=nameWithType> üyeleri, LINQ to SQL sorguları içinde.  
+ Aşağıdaki LINQ to SQL desteklenen yöntemler, işleçler ve Özellikler LINQ to SQL sorgularda kullanabileceğiniz şekilde kullanılabilir. Nesne modelinde veya dış eşleme dosyasında eşlendikten sonra, LINQ to SQL LINQ to SQL Sorgularınızdaki birçok <xref:System.TimeSpan?displayProperty=nameWithType> üyeyi çağırabilmeniz için izin verir.  
   
-|Desteklenen <xref:System.TimeSpan> yöntemleri|Desteklenen <xref:System.TimeSpan> işleçleri|Desteklenen <xref:System.TimeSpan> özellikleri|  
+|Desteklenen <xref:System.TimeSpan> Yöntemler|Desteklenen <xref:System.TimeSpan> işleçler|Desteklenen <xref:System.TimeSpan> Özellikler|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.TimeSpan.Compare%2A>|<xref:System.TimeSpan.op_Equality%2A>|<xref:System.TimeSpan.Days%2A>|  
 |<xref:System.TimeSpan.CompareTo%28System.TimeSpan%29>|<xref:System.TimeSpan.op_GreaterThan%2A>|<xref:System.TimeSpan.Hours%2A>|  
@@ -31,10 +31,10 @@ ms.locfileid: "61917442"
 ||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
->  Eşleme özelliğini <xref:System.TimeSpan?displayProperty=nameWithType> bir SQL `TIME` sütun LINQ to SQL ile .NET Framework 3.5 SP1 gerektirir ve sonraki süreci desteleyen. SQL `TIME` veri türüdür yalnızca Microsoft SQL Server 2008'de ve sonrasında kullanılabilir.  
+> LINQ to SQL ile bir SQL <xref:System.TimeSpan?displayProperty=nameWithType> `TIME` sütunuyla eşleme özelliği, .NET Framework 3,5 SP1 ve daha fazlasını gerektirir. SQL `TIME` veri türü yalnızca Microsoft SQL Server 2008 ve daha ötesi bir sürümünde kullanılabilir.  
   
 ### <a name="addition-and-subtraction"></a>Toplama ve çıkarma  
- Ancak CLR <xref:System.TimeSpan?displayProperty=nameWithType> türü, toplama ve çıkarma, SQL desteklemez `TIME` türü yenilenmez. SQL eşleştirildiğinde toplama ve çıkarma bunlar çalışırsanız, bu nedenle, LINQ to SQL sorgularında hata oluşturur `TIME` türü. Diğer değerlendirmeler SQL tarih ve saat türleri ile çalışmak için bulabilirsiniz [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ CLR <xref:System.TimeSpan?displayProperty=nameWithType> türü ekleme ve çıkarma desteği sağlasa da, SQL `TIME` türü değildir. Bu nedenle, LINQ to SQL sorgularınız, SQL `TIME` türüne eşlendiklerinde ekleme ve çıkarma işlemi gerçekleştirmeye çalıştıklarında hatalar oluşturur. SQL [-CLR tür EŞLEMESINDE](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)SQL tarih ve saat türleriyle çalışmaya yönelik başka hususlar bulabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

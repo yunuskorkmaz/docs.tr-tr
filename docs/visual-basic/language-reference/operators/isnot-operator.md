@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a83b48e5e415bd6ca0c777cef6d34f7127691b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768360"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966931"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot İşleci (Visual Basic)
-İki nesne başvurusu değişkenini karşılaştırır.  
+İki nesne başvuru değişkenini karşılaştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,26 +24,26 @@ result = object1 IsNot object2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. A `Boolean` değeri.  
+ Gerekli. Bir `Boolean` değer.  
   
  `object1`  
- Gerekli. Tüm `Object` değişkenin veya ifadenin.  
+ Gerekli. Herhangi `Object` bir değişken veya ifade.  
   
  `object2`  
- Gerekli. Tüm `Object` değişkenin veya ifadenin.  
+ Gerekli. Herhangi `Object` bir değişken veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `IsNot` İşleci belirleyen iki nesne başvuru farklı nesnelere başvuru değilse. Ancak, değer karşılaştırmaları gerçekleştirmez. Varsa `object1` ve `object2` hem de tam aynı nesne örneği için bkz `result` olduğu `False`; Eğer öyleyse, `result` olduğu `True`.  
+ `IsNot` İşleci iki nesne başvurusunun farklı nesnelere başvuracağını belirler. Ancak, değer karşılaştırmaları gerçekleştirmez. `object1` Ve her`object2` ikisi de`result` tam aynınesne`result` örneğine `False` başvurur,`True`ise, olur.  
   
- `IsNot` tersidir `Is` işleci. Avantajı `IsNot` garip söz dizimiyle kaçınabilirsiniz olan `Not` ve `Is`, hangi okumak zor olabilir.  
+ `IsNot`, `Is` işlecinin tersidir. ' Nin `IsNot` avantajı, ve ile `Not` garip söz dizimini önlemenize ve `Is`bu da okunması zor olabilir.  
   
- Kullanabileceğiniz `Is` ve `IsNot` hem erken bağlanmış ve geç bağlama nesnelerini test etmek için işleçler.  
+ `Is` Ve`IsNot` işleçlerini, hem erken hem de geç bağlantılı nesneleri test etmek için kullanabilirsiniz.  
   
 > [!NOTE]
->  `IsNot` Döndürüldüğü ifadeleri karşılaştırma işleci kullanılamaz `TypeOf` işleci. Bunun yerine, kullanmalısınız `Not` ve `Is` işleçleri.  
+> `IsNot` İşleç ,`TypeOf` işleçten döndürülen ifadeleri karşılaştırmak için kullanılamaz. Bunun yerine, `Not` ve `Is` işleçlerini kullanmanız gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, hem de kullandığı `Is` işleci ve `IsNot` aynı karşılaştırma gerçekleştirmek için işleci.  
+ Aşağıdaki kod örneği aynı karşılaştırmayı başarmak için `Is` hem işlecini `IsNot` hem de işlecini kullanır.  
   
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]  
   
@@ -51,5 +51,5 @@ result = object1 IsNot object2
 
 - [Is İşleci](../../../visual-basic/language-reference/operators/is-operator.md)
 - [TypeOf İşleci](../../../visual-basic/language-reference/operators/typeof-operator.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Nasıl yapılır: İki nesnenin aynı olup olmadığını test etme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Nasıl yapılır: Iki nesnenin aynı olup olmadığını test etme](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

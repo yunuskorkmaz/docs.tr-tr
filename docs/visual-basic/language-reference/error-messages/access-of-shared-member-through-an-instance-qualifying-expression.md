@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947706"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Paylaşılan üyeye bir örnek üzerinden erişim; niteleyen ifade değerlendirilmeyecek
-Bir sınıfın veya yapının bir örnek değişkeni kullanılan erişmek için bir `Shared` değişken, özellik, yordam veya o sınıfta veya yapıda da tanımlı olay. Bu uyarı bir sınıf veya yapı, sabit veya sabit listesi, bir iç içe geçmiş sınıf veya yapı gibi örtük olarak paylaşılan bir üyesine erişmek için kullanılan bir örnek değişkeni de oluşabilir.  
+Bir sınıf veya yapının örnek değişkeni, bu sınıf veya yapıda tanımlanan bir `Shared` değişkene, özelliğe, yordama veya olaya erişmek için kullanılır. Bu uyarı, bir sınıf veya yapının bir sabit veya numaralandırma ya da iç içe geçmiş sınıf veya yapı gibi örtülü olarak paylaşılan üyesine erişmek için kullanılıyorsa da oluşabilir.  
   
- Üye paylaşımı amacı, bu üyede tek bir kopyasını oluşturun ve bu tek kopyası, sınıf veya yapı içinde bildirildiği'nin her örneğinin kullanımına sağlamaktır. Bu amaca uygun erişmek için tutarlı bir `Shared` üyesi, bir sınıfın veya yapının adını, yerine bu sınıfı ya da yapı tek bir örneğini tutan değişken üzerinden.  
+ Bir üyeyi paylaşma amacı söz konusu üyenin yalnızca tek bir kopyasını oluşturmak ve bu tek kopyayı, bildirildiği sınıf veya yapının her örneği için kullanılabilir hale getirir. Bu amaçla, bu sınıf veya yapının tek bir `Shared` örneğini tutan bir değişken yerine, sınıfının veya yapısının adı aracılığıyla bir üyeye erişmek için tutarlıdır.  
   
- Erişim bir `Shared` üyeye bir örnek değişkeni üzerinden yapabilir, kodunuzun daha zor bir üyesi olan bir olgu, anlaşılması güç tarafından anlamak `Shared`. Bu tür erişim ifadesinin bir parçası ise Ayrıca, diğer eylemler gibi gerçekleştiren bir `Function` paylaşılan üyenin bir örneğinin döndüren yordam, Visual Basic atlar ifade ve aksi takdirde gerçekleştirmek diğer tüm eylemler.  
+ Bir örnek `Shared` değişken aracılığıyla bir üyeye erişmek, kodun, üyenin olduğunu `Shared`obscuring açısından anlaşılması daha zor hale getirir. Ayrıca, bu tür erişim, paylaşılan üyenin bir örneğini döndüren bir `Function` yordam gibi diğer eylemleri gerçekleştiren bir ifadenin parçasıysa, Visual Basic ifadeyi ve aksi takdirde gerçekleştireceği diğer eylemleri atlar.  
   
- Daha fazla bilgi ve örnek için bkz. [paylaşılan](../../../visual-basic/language-reference/modifiers/shared.md).  
+ Daha fazla bilgi ve bir örnek için bkz. [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   
- Varsayılan olarak, bu iletiyi bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirmesini hakkında daha fazla bilgi için bkz. [Visual Basic'teki uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
+ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Hata Kimliği:** BC42025  
+ **Hata KIMLIĞI:** BC42025  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Sınıf veya tanımlayan yapısını adını kullanın `Shared` , aşağıdaki örnekte gösterildiği gibi erişmek için üye.  
+- Aşağıdaki örnekte gösterildiği gibi, ona erişmek için `Shared` üyeyi tanımlayan sınıf veya yapının adını kullanın.  
   
 ```vb  
 Public Class testClass  
@@ -53,9 +53,9 @@ End Module
 ```  
   
 > [!NOTE]
->  Kapsam etkileri için uyarı iki programlama öğeleri aynı ada sahip olun. Önceki örnekte kullanarak örneği bildirirseniz `Dim testClass as testClass = Nothing`, derleyici bir çağrı işler `testClass.sayHello()` yöntemin sınıf adı ve hiçbir uyarı aracılığıyla erişim gerçekleştiği sırada.  
+> İki programlama öğesi aynı ada sahip olduğunda kapsamın etkileri için uyarı olun. Önceki örnekte, kullanarak `Dim testClass as testClass = Nothing`bir örneği bildirirseniz derleyici, sınıf adı aracılığıyla yöntemine bir erişim `testClass.sayHello()` olarak bir çağrı uygular ve uyarı oluşmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Visual Basic'de kapsam](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic kapsam](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

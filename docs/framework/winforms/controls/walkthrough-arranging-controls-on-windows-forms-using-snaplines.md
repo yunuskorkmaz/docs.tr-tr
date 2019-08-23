@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040251"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950066"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme
 Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yüksek önceliktir. Windows Form Tasarımcısı bunu gerçekleştirmek için size çok sayıda düzen aracı sağlar. En önemlileri <xref:System.Windows.Forms.Design.Behavior.SnapLine> bu özellikten biridir.
@@ -87,7 +87,7 @@ Denetimlerin formunuza kesin olarak yerleştirilmesi birçok uygulama için yük
 1. <xref:System.Windows.Forms.Button> Denetimlerden birini seçin ve bir anlık görüntü satırı görünene kadar formun sağ kenarlığına yakın taşıyın. Anlık görüntü çizgisinin sağ kenarından uzaklığı denetimin <xref:System.Windows.Forms.Control.Margin%2A> özelliğinin ve <xref:System.Windows.Forms.Control.Padding%2A> formun özellik değerlerinin toplamıdır.
 
 > [!NOTE]
->  Formun <xref:System.Windows.Forms.Control.Padding%2A> özelliği 0, 0, 0, 0 olarak ayarlandıysa Windows Form Tasarımcısı, forma 9, 9, 9, 9 ' un <xref:System.Windows.Forms.Control.Padding%2A> gölgeli bir değer verir. Bu davranışı geçersiz kılmak için 0, 0, 0, 0 dışında bir değer atayın.
+> Formun <xref:System.Windows.Forms.Control.Padding%2A> özelliği 0, 0, 0, 0 olarak ayarlandıysa Windows Form Tasarımcısı, forma 9, 9, 9, 9 ' un <xref:System.Windows.Forms.Control.Padding%2A> gölgeli bir değer verir. Bu davranışı geçersiz kılmak için 0, 0, 0, 0 dışında bir değer atayın.
 
 1. <xref:System.Windows.Forms.Button> **Özellikler** penceresinde girişigenişleterek<xref:System.Windows.Forms.Control.Margin%2A> ve <xref:System.Windows.Forms.Control.Margin%2A> özelliğini0olarakayarlayarakdenetiminözelliğinindeğerinideğiştirin.<xref:System.Windows.Forms.Padding.All%2A> Ayrıntılar için bkz [. İzlenecek yol: Doldurma, kenar boşlukları ve AutoSize özelliği](windows-forms-controls-padding-autosize.md)ile Windows Forms denetimleri yerleştirme.
 

@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937559"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946213"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Nasıl yapılır: Etkin MDI Alt Öğesini Belirleme
-Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde denetim sağlamak isteyeceksiniz. Örneğin, alt formun metin kutusunda seçili metni panoya kopyalamak istediğiniz varsayalım. Seçili metni panoya kullanmaya kopyalayan bir yordam oluşturacak <xref:System.Windows.Forms.Control.Click> Standart Düzen menüsünde kopyalama menü öğesinin olay.  
+Bazen, geçerli etkin alt form üzerinde odağa sahip olan denetimde çalışan bir komut sağlamak isteyeceksiniz. Örneğin, alt formun metin kutusundan seçili metni pano 'ya kopyalamak istediğinizi varsayalım. Standart düzenleme menüsündeki Kopyala menü öğesinin <xref:System.Windows.Forms.Control.Click> olayını kullanarak seçili metni panoya kopyalayan bir yordam oluşturacaksınız.  
   
- Bir MDI uygulaması aynı alt formunun birçok örneği olduğundan yordamı kullanmak için hangi form bilmesi gerekir. Doğru biçimde belirtmek için kullanın <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> odaklı veya, en çok kullanılan etkin alt formun döndüren özellik.  
+ Bir MDI uygulamasının aynı alt formun birçok örneği olabileceğinden, yordamın hangi formun kullanılacağını bilmeleri gerekir. Doğru formu belirtmek için, odağa sahip olan <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> veya en son etkin olan alt formu döndüren özelliğini kullanın.  
   
- Bir form üzerinde bazı denetimler vardır, ayrıca hangi denetimi etkinse belirtmeniz gerekir. Gibi <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> özelliği <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> özelliği etkin alt form üzerinde denetim odağa sahip döndürür. Aşağıdaki yordam bir alt form menüsünden bir MDI formu veya araç çubuğu düğmesi menüsünde çağrılabilen bir kopyalama yordam gösterir.  
+ Form üzerinde çeşitli denetimleriniz olduğunda, hangi denetimin etkin olduğunu da belirtmeniz gerekir. <xref:System.Windows.Forms.Form.ActiveMdiChild%2A> Özelliği gibi<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> , özelliği de etkin alt form üzerinde odak olan denetimi döndürür. Aşağıdaki yordam alt form menüsünden çağrılabilen bir kopyalama yordamını, MDI formundaki menüyü veya bir araç çubuğu düğmesini gösterir.  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>(Metni panoya kopyalamak için) etkin MDI alt belirlemek için  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Etkin MDI alt öğesini belirleme (metnini panoya kopyalamak için)  
   
-1. Bir yöntem içinde etkin denetim etkin alt formun metnini panoya kopyalayın.  
+1. Bir yöntem içinde, etkin alt formun etkin denetiminin metnini panoya kopyalayın.  
   
     > [!NOTE]
-    >  Bu örnek MDI üst formu olduğunu varsayar (`Form1`) içeren bir veya daha fazla MDI alt pencereleri olan bir <xref:System.Windows.Forms.RichTextBox> denetimi. Daha fazla bilgi için [MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md).  
+    > Bu örnek, bir`Form1` <xref:System.Windows.Forms.RichTextBox> denetim içeren bir veya daha fazla MDI alt penceresi olan bir MDI parent formu () olduğunu varsayar. Daha fazla bilgi için bkz. [MDI parent Forms oluşturma](how-to-create-mdi-parent-forms.md).  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -87,6 +87,6 @@ Bazı durumlarda, çalışan bir komut odaklanmış etkin alt form üzerinde den
 
 - [Çok Belgeli Arabirim (MDI) Uygulamaları](multiple-document-interface-mdi-applications.md)
 - [Nasıl yapılır: MDI üst formları oluşturma](how-to-create-mdi-parent-forms.md)
-- [Nasıl yapılır: MDI alt formları oluştur](how-to-create-mdi-child-forms.md)
+- [Nasıl yapılır: MDI alt formları oluşturma](how-to-create-mdi-child-forms.md)
 - [Nasıl yapılır: Etkin MDI alt öğesine veri gönderme](how-to-send-data-to-the-active-mdi-child.md)
 - [Nasıl yapılır: MDI alt formlarını düzenleme](how-to-arrange-mdi-child-forms.md)

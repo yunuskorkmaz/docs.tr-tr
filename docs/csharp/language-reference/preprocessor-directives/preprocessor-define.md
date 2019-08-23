@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 5de8dc62e352d669c8008fa5ab8477799843375c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924597"
 ---
 # <a name="define-c-reference"></a>#define (C# Başvurusu)
 Bir sembol `#define` tanımlamak için kullanırsınız. [#İf](./preprocessor-if.md) yönergesine geçirilen ifade olarak sembolünü kullandığınızda, aşağıdaki örnekte gösterildiği gibi ifade olarak değerlendirilir `true`.  
@@ -24,7 +24,7 @@ Bir sembol `#define` tanımlamak için kullanırsınız. [#İf](./preprocessor-i
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Yönerge `#define` , genellikle C ve C++' de yapıldığı gibi sabit değerleri bildirmek için kullanılamaz. İçindeki C# sabitler, bir sınıfın veya yapının statik üyeleri olarak en iyi şekilde tanımlanır. Bu tür sabitlere sahipseniz, bunları tutmak için ayrı bir "sabitler" sınıfı oluşturmayı düşünün.  
+> Yönerge `#define` , genellikle C ve C++' de yapıldığı gibi sabit değerleri bildirmek için kullanılamaz. İçindeki C# sabitler, bir sınıfın veya yapının statik üyeleri olarak en iyi şekilde tanımlanır. Bu tür sabitlere sahipseniz, bunları tutmak için ayrı bir "sabitler" sınıfı oluşturmayı düşünün.  
   
  Simgeler, derleme koşullarını belirtmek için kullanılabilir. Sembol için [#if](./preprocessor-if.md) ya da [#elif](./preprocessor-elif.md)ile test edebilirsiniz. Koşullu derleme gerçekleştirmek <xref:System.Diagnostics.ConditionalAttribute> için öğesini de kullanabilirsiniz.  
   

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012938"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956056"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Nasıl yapılır: Pencereyi Yatay Bölme
-Aşağıdaki kod örneği böler Bölümlendirici yapar <xref:System.Windows.Forms.SplitContainer> denetimi yatay.  
+Aşağıdaki kod örneği, <xref:System.Windows.Forms.SplitContainer> denetimi yatay olarak bölen ayırıcıyı yapar.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A> Özelliği <xref:System.Windows.Forms.SplitContainer> denetimi Bölümlendiricinin, Denetim'ın yönü belirler.  
+> <xref:System.Windows.Forms.SplitContainer> Denetimin özelliği, denetimin kendisinin değil, ayırıcının yönünü belirler. <xref:System.Windows.Forms.SplitContainer.Orientation%2A>  
   
-### <a name="to-split-a-window-horizontally"></a>Pencereyi yatay bölme için  
+### <a name="to-split-a-window-horizontally"></a>Pencereyi yatay olarak bölme  
   
-1. Bir yordam içinde ayarlamak <xref:System.Windows.Forms.SplitContainer.Orientation%2A> özelliği <xref:System.Windows.Forms.SplitContainer> denetimini <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. Bir yordam içinde, <xref:System.Windows.Forms.SplitContainer.Orientation%2A> <xref:System.Windows.Forms.SplitContainer> denetimin özelliğini olarak <xref:System.Windows.Forms.Orientation.Horizontal>ayarlayın.  
   
     ```vb  
     Sub ShowSplitContainer()  

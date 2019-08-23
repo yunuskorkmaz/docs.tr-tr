@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940835"
 ---
 # <a name="dependency-property-security"></a>Bağımlılık Özelliği Güvenliği
 Bağımlılık özellikleri genellikle genel özellikler olarak düşünülmelidir. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Özellik sisteminin doğası, bağımlılık özelliği değeri hakkında güvenlik garantisi yapma imkanını önler.  
@@ -29,7 +29,7 @@ Bağımlılık özellikleri genellikle genel özellikler olarak düşünülmelid
  Özel bir bağımlılık özelliği için, özelliği salt okunurdur ve bu özellik <xref:System.Windows.DependencyPropertyKey> için bir başvuru içermeyen herkes tarafından ayarlanmış bir özelliği engellemek için etkili bir yöntem sağlar. Daha fazla bilgi için bkz. [salt okuma bağımlılığı özellikleri](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Bir <xref:System.Windows.DependencyProperty> tanımlayıcı alanın özel olarak bildirilmesi yasak değildir ve bir özel sınıfın hemen sunulma ad alanını azaltmaya yardımcı olmak için çalıp kullanılabilir, ancak bu tür bir özelliğin ortak dille aynı anlamda "özel" olarak değerlendirilmemesi gerekir çalışma zamanı (CLR) dil tanımları, sonraki bölümde açıklanan nedenlerle bu erişim düzeyini tanımlar.  
+> Bir <xref:System.Windows.DependencyProperty> tanımlayıcı alanın özel olarak bildirilmesi yasak değildir ve bir özel sınıfın hemen sunulma ad alanını azaltmaya yardımcı olmak için çalıp kullanılabilir, ancak bu tür bir özelliğin ortak dille aynı anlamda "özel" olarak değerlendirilmemesi gerekir çalışma zamanı (CLR) dil tanımları, sonraki bölümde açıklanan nedenlerle bu erişim düzeyini tanımlar.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Bağımlılık özelliklerinin özellik sistemi pozlaması  

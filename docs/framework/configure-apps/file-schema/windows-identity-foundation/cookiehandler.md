@@ -3,19 +3,19 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 5238ea7b96c09fb976a25bc00b952539ddd44b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942796"
 ---
-# <a name="cookiehandler"></a>\<cookieHandler >
-Yapılandırır <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> okuma ve yazma tanımlama bilgileri (SAM) kullanır.  
+# <a name="cookiehandler"></a>\<Tanımlama, ıehandler >
+<xref:System.IdentityModel.Services.CookieHandler> (Sam)tanımlamabilgileriniokumakveyazmak<xref:System.IdentityModel.Services.SessionAuthenticationModule> için kullandığı öğesini yapılandırır.  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
-\<cookieHandler >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
+\<Tanımlama, ıehandler >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,41 +43,41 @@ Yapılandırır <xref:System.IdentityModel.Services.CookieHandler> , <xref:Syste
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|name|Yazılan tüm tanımlama bilgilerini temel adını belirtir. "FedAuth" varsayılandır.|  
-|yol|Yazılan tüm tanımlama bilgilerini yol değeri belirtir. "HttpRuntime.AppDomainAppVirtualPath" varsayılandır.|  
-|mod|Aşağıdakilerden birini <xref:System.IdentityModel.Services.CookieHandlerMode> SAM tarafından kullanılan tanımlama bilgisi işleyicisi türünü belirten değer. Aşağıdaki değerler kullanılabilir:<br /><br /> -"Varsayılan"-"Öbekli" ile aynı.<br />-"Öbekli" — bir örneği kullanan <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfı. Bu tanımlama bilgisi işleyicisi tanımlama bilgilerini bağımsız kümesi en fazla boyutu aşmamasını sağlar. Bu büyük olasılıkla "mantıksal bir tanımlama bilgisi tanımlama bilgisi-hat üzerinde bir dizi Öbekleme tarafından" gerçekleştirir.<br />-"Özel" — öğesinden türetilen özel bir sınıf örneği kullanan <xref:System.IdentityModel.Services.CookieHandler>. Türetilmiş sınıf tarafından başvurulan `<customCookieHandler>` alt öğesi.<br /><br /> "Varsayılan" varsayılandır.|  
-|persistentSessionLifetime|Kalıcı oturum ömrünü belirtir. Sıfır ise, geçici oturumları her zaman kullanılır. Geçici bir oturum belirtir "0:0:0" varsayılan değerdir. En fazla 365 günlük bir oturumu belirtir "365:0:0" değeridir. Değere göre aşağıdaki kısıtlama belirtilmelidir: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, burada en soldaki değerin gün, saat Orta (varsa) değerini belirtir ve sağdaki değerin (varsa) dakika belirtir.|  
-|İçindeki requireSSL öğesini|Yazılan tüm tanımlama bilgilerini "Güvenli" bayrak yayılan olup olmadığını belirtir. Bu değeri ayarlarsanız, oturum açma oturum tanımlama bilgileri yalnızca HTTPS üzerinden kullanılabilir. Varsayılan değer "true" ise.|  
-|hideFromScript|Yazılan tüm tanımlama bilgilerini "HttpOnly" bayrak yayılan olup olmadığını denetler. Bazı web tarayıcıları, istemci tarafı komut dosyası tanımlama bilgisi değeri erişmesini tutarak bu bayrağı oluşuyor. Varsayılan değer "true" ise.|  
-|etki alanı|Yazılan tüm tanımlama bilgilerini etki alanı değeri. Varsayılan değer "".|  
+|name|Yazılan tanımlama bilgilerinin temel adını belirtir. Varsayılan değer "Fedaduth" ' dir.|  
+|yol|Yazılan tanımlama bilgilerinin yol değerini belirtir. Varsayılan değer "HttpRuntime. AppDomainAppVirtualPath" dir.|  
+|mod|Sam tarafından kullanılan tanımlama bilgisi işleyicisi türünü belirten değerlerdenbiri.<xref:System.IdentityModel.Services.CookieHandlerMode> Aşağıdaki değerler kullanılabilir:<br /><br /> -"Varsayılan" — "öbekli" ile aynıdır.<br />-"Öbekli" — <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfının bir örneğini kullanır. Bu tanımlama bilgisi işleyicisi, tek tek tanımlama bilgilerinin bir küme en büyük boyutunu aşmamasını sağlar. Bunu, büyük olasılıkla "parçalama" bir mantıksal tanımlama bilgisini çok sayıda tanımlama bilgisine ekleyerek gerçekleştirir.<br />-"Custom" — öğesinden <xref:System.IdentityModel.Services.CookieHandler>türetilmiş özel bir sınıfın örneğini kullanır. Türetilmiş sınıfa `<customCookieHandler>` alt öğe tarafından başvuruluyor.<br /><br /> Varsayılan değer "varsayılan" dır.|  
+|persistentSessionLifetime|Kalıcı oturumların yaşam süresini belirtir. Sıfır ise, geçici oturumlar her zaman kullanılır. Varsayılan değer, geçici bir oturum belirten "0:0:0" değeridir. En büyük değer, 365 günlük bir oturum belirten "365:0:0" değeridir. Değer aşağıdaki kısıtlamaya göre belirtilmelidir: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, en sol değer günler ' i belirttiğinde, ortadaki değer (varsa) saatleri belirtir ve en sağdaki değer (varsa) dakikaları belirtir.|  
+|requireSsl|Yazılan tanımlama bilgileri için "güvenli" bayrağının oluşturulup oluşturulmayacağını belirtir. Bu değer ayarlandıysa, oturum açma oturum tanımlama bilgileri yalnızca HTTPS üzerinden kullanılabilir. Varsayılan değer "true" dır.|  
+|hideFromScript|Yazılan tanımlama bilgileri için "HttpOnly" bayrağının kullanılıp kullanılmadığını denetler. Belirli Web tarayıcıları, istemci tarafı komut dosyasının tanımlama bilgisi değerine erişmesini sağlayarak bu bayrağı dikkate getirir. Varsayılan değer "true" dır.|  
+|etki alanı|Yazılan tanımlama bilgilerinin etki alanı değeri. Varsayılan değer "" dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<chunkedCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/chunkedcookiehandler.md)|Yapılandırır <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Bu öğe yalnızca mevcut olması durumunda `mode` özniteliği `<cookieHandler>` öğesidir "Varsayılan" veya "Öbekli".|  
-|[\<customCookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/customcookiehandler.md)|Özel bir tanımlama bilgisi işleyici türünü ayarlar. Bu öğe bulunmalıdır, `mode` özniteliği `<cookieHandler>` "Özel" bir öğedir. Herhangi diğer değerleri için bulunamaz `mode` özniteliği. Özel tür nesnesinden türetilmesi <xref:System.IdentityModel.Services.CookieHandler> sınıfı.|  
+|[\<Öbek için yığın tanımlama >](chunkedcookiehandler.md)|Öğesini yapılandırır <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Bu öğe yalnızca `mode` `<cookieHandler>` öğenin özniteliği "default" veya "öbekli" ise bulunabilir.|  
+|[\<Custombir ıehandler >](customcookiehandler.md)|Özel tanımlama bilgisi işleyici türünü ayarlar. `mode` Öğenin özniteliği`<cookieHandler>` "Custom" ise bu öğe bulunmalıdır. `mode` Özniteliğin diğer değerleri için mevcut olamaz. Özel tür <xref:System.IdentityModel.Services.CookieHandler> sınıfından türetilmelidir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Federationconfiguration'a >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Yapılandırma ayarları içeren <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) ve <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration >](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfab) <xref:System.IdentityModel.Services.SessionAuthenticationModule> ve (Sam) yapılandırma ayarlarını içerir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.IdentityModel.Services.CookieHandler> Düzeyi okuma ve yazma ham tanımlama bilgisi, HTTP protokolü için sorumludur. Ya da yapılandırabileceğiniz bir <xref:System.IdentityModel.Services.ChunkedCookieHandler> veya özel bir tanımlama bilgisi işleyicisi türetilmiş <xref:System.IdentityModel.Services.CookieHandler> sınıfı.  
+ , <xref:System.IdentityModel.Services.CookieHandler> Http protokol düzeyinde ham tanımlama bilgilerini okumaktan ve yazmaktan sorumludur. Sınıfından<xref:System.IdentityModel.Services.CookieHandler> türetilmiş bir <xref:System.IdentityModel.Services.ChunkedCookieHandler> ya da özel tanımlama bilgisi işleyicisi yapılandırabilirsiniz.  
   
- Öbekli tanımlama bilgisi işleyici yapılandırmak için "Öbekli" veya "Varsayılan" modunda özniteliği ayarlayın. Varsayılan öbek boyutu 2000 bayt, ancak dahil ederek isteğe bağlı olarak farklı öbek boyutu belirtebilirsiniz bir `<chunkedCookieHandler>` alt öğesi.  
+ Öbekli bir tanımlama bilgisi işleyicisini yapılandırmak için, mode özniteliğini "öbekli" veya "default" olarak ayarlayın. Varsayılan öbek boyutu 2000 bayttır, ancak isteğe bağlı olarak bir `<chunkedCookieHandler>` alt öğe ekleyerek farklı bir öbek boyutu belirtebilirsiniz.  
   
- Özel bir tanımlama bilgisi işleyiciyi yapılandırmanız için modu özniteliğini "Özel" olarak ayarlayın. De belirtmeniz gerekir bir `<customCookieHandler>` özel işleyicinizi türe başvuran alt öğesi.  
+ Özel bir tanımlama bilgisi işleyicisini yapılandırmak için, mode özniteliğini "Custom" olarak ayarlayın. Ayrıca, özel işleyicinizin `<customCookieHandler>` türüne başvuran bir alt öğe belirtmeniz gerekir.  
   
- `<cookieHandler>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Services.CookieHandlerElement> sınıfı. Yapılandırmada belirtilen tanımlama bilgisi işleyici kullanılabilir <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> özelliği <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> nesnesi üzerinde ayarlayın <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliği.  
+ `<cookieHandler>` Öğesi sınıfı<xref:System.IdentityModel.Services.CookieHandlerElement> tarafından temsil edilir. Yapılandırmada belirtilen tanımlama bilgisi işleyicisi, <xref:System.IdentityModel.Services.Configuration.FederationConfiguration.CookieHandler%2A> <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> özelliği üzerinde ayarlanan <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> nesnenin özelliğinden kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML gösterildiği bir `<cookieHandler>` öğesi. Bu örnekte, çünkü `mode` özniteliği belirtilmezse, varsayılan tanımlama bilgisi işleyici tarafından SAM kullanılır. Bunun bir örneğidir <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfı. Çünkü `<chunkedCookieHandler>` alt öğe belirtilmemişse, varsayılan öbek boyutu kullanılır. Çünkü HTTPS gerekli olmayacak `requireSsl` özniteliği `false`.  
+ Aşağıdaki XML bir `<cookieHandler>` öğesini gösterir. Bu örnekte, `mode` özniteliği belirtilmediği için, varsayılan tanımlama bilgisi işleyicisi Sam tarafından kullanılacaktır. Bu, <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfının bir örneğidir. `<chunkedCookieHandler>` Alt öğe belirtilmediği için, varsayılan öbek boyutu kullanılacaktır. `requireSsl` Özniteliği ayarlandığından`false`, https gerekli olmayacaktır.  
   
 > [!WARNING]
->  Bu örnekte, HTTPS oturum tanımlama bilgileri yazmak için gerekli değildir. Bunun nedeni, `requireSsl` özniteliği `<cookieHandler>` ayarlanır `false`. Bu ayar, bir güvenlik riski sunabilir gibi çoğu üretim ortamları için önerilmez.  
+>  Bu örnekte, oturum tanımlama bilgilerini yazmak için HTTPS gerekli değildir. Bunun nedeni `requireSsl` , `<cookieHandler>` öğesindeki özniteliği olarak `false`ayarlanmıştır. Bu ayar, çoğu üretim ortamında bir güvenlik riski sunabilecek şekilde önerilmez.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

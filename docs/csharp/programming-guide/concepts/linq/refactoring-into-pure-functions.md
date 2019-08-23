@@ -2,19 +2,19 @@
 title: Saf IŞLEVLERE yeniden düzenleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: d6e8657da0f7db06d2fdbe1231bdc48e1aa0f954
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 453b128ecaea62fd58c54bfb383091f65a082370
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924201"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Saf IŞLEVLERE yeniden düzenleme (C#)
 
 Saf işlevsel dönüştürmelerin önemli bir yönü, saf işlevleri kullanarak kodu yeniden düzenleme hakkında bilgi ediniyor.  
   
 > [!NOTE]
->  İşlevsel programlamada ortak terminoloji, programları saf işlevleri kullanarak yeniden düzenleme biçimleridir. Visual Basic ve C++' de, bu, ilgili dillerdeki işlevlerin kullanımıyla hizalanır. Ancak, içindeki C#işlevleri yöntemler olarak adlandırılır. Bu tartışmanın amaçları doğrultusunda, saf bir işlev ' de C#bir yöntem olarak uygulanır.  
+> İşlevsel programlamada ortak terminoloji, programları saf işlevleri kullanarak yeniden düzenleme biçimleridir. Visual Basic ve C++' de, bu, ilgili dillerdeki işlevlerin kullanımıyla hizalanır. Ancak, içindeki C#işlevleri yöntemler olarak adlandırılır. Bu tartışmanın amaçları doğrultusunda, saf bir işlev ' de C#bir yöntem olarak uygulanır.  
   
  Daha önce bu bölümde belirtildiği gibi, saf bir işlev iki yararlı özelliğe sahiptir:  
   
@@ -81,7 +81,7 @@ public class Program
  Programın bu sürümü ilk sürümle aynı çıktıyı üretir, çünkü `HyphenatedConcat` işlev <xref:System.Text.StringBuilder.Append%2A> üye işlevini çağırarak ilk parametresinin değerini (durum) değiştirdi. Bu değişiklik, bu olguyu, çağrı- `HyphenatedConcat` değer parametresini kullanan bir olgusuna rağmen oluştuğunu unutmayın.  
   
 > [!IMPORTANT]
->  Başvuru türleri için bir parametreyi değere göre geçirirseniz, başvurunun geçirildiği bir nesnenin kopyasına neden olur. Bu kopya, özgün başvurusuyla aynı örnek verileriyle ilişkili olmaya devam eder (başvuru değişkeni yeni bir nesneye atanana kadar). Bir parametreyi değiştirmek için bir işlev için başvuruya göre arama gerekli değildir.  
+> Başvuru türleri için bir parametreyi değere göre geçirirseniz, başvurunun geçirildiği bir nesnenin kopyasına neden olur. Bu kopya, özgün başvurusuyla aynı örnek verileriyle ilişkili olmaya devam eder (başvuru değişkeni yeni bir nesneye atanana kadar). Bir parametreyi değiştirmek için bir işlev için başvuruya göre arama gerekli değildir.  
   
 ### <a name="pure-function"></a>Saf Işlev  
 Programın bu sonraki sürümü, `HyphenatedConcat` işlevinin saf işlev olarak nasıl uygulanacağını gösterir.  

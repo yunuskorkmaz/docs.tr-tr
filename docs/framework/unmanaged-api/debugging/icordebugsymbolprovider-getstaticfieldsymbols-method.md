@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetStaticFieldSymbols yöntemi
+title: 'ICorDebugSymbolProvider:: GetStaticFieldSymbols yöntemi'
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9379a335130242918f6fe200eeda5e4c262fd020
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bd3442adf58250a423438666ec1092bab61958b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955548"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols yöntemi
-TypeSpec'te imza karşılık gelen statik alan simgelerini alır.  
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider:: GetStaticFieldSymbols yöntemi
+TypeSpec imzasına karşılık gelen statik alan sembollerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,33 +28,33 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="parameters"></a>Parametreler  
  `cbSignature`  
- [in] Bayt sayısı `typeSig` dizisi.  
+ 'ndaki `typeSig` Dizideki bayt sayısı.  
   
  `typeSig`  
- [in] İçeren bir bayt dizisi `typespec` imzası.  
+ 'ndaki `typespec` İmzayı içeren bir bayt dizisi.  
   
  `cRequestedSymbols`  
- [in] İstenen sembolleri sayısı.  
+ 'ndaki İstenen simgelerin sayısı.  
   
  `pcFetchedSymbols`  
- [out] Yöntemi tarafından alınan simgelerin sayısını bir işaretçi.  
+ dışı Yöntemi tarafından alınan sembol sayısına yönelik bir işaretçi.  
   
  `pSymbols`  
- [out] Bir işaretçi bir [Icordebugstaticfieldsymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) istenen statik alan simgeleri içeren bir dizi.  
+ dışı İstenen statik alan sembollerini içeren [ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md) dizisine yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

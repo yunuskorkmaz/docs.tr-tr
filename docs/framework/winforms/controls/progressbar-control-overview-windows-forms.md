@@ -7,33 +7,33 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dd434492cd688527ddbce5aaffa442a0b40a9e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968312"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar Denetimine Genel Bakış (Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ProgressBar> denetler; ancak, <xref:System.Windows.Forms.ProgressBar> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+> Denetim yerini alır ve <xref:System.Windows.Forms.ProgressBar> <xref:System.Windows.Forms.ProgressBar> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.ToolStripProgressBar>  
   
- Windows Forms <xref:System.Windows.Forms.ProgressBar> denetimi yatay bir çubuk düzenlenmiş dikdörtgenler uygun sayıda görüntüleyerek bir işlemin ilerleme durumunu gösterir. İşlem tamamlandığında çubuğu doldurulur. İlerleme çubukları kullanıcıya nasıl hakkında bir fikir vermek için kullanılan yaygın olarak tamamlamak; bir işlem için uzun Örneğin, büyük bir dosya yükleniyor.  
+ Windows Forms <xref:System.Windows.Forms.ProgressBar> denetim, yatay bir çubukta düzenlenmiş uygun sayıda dikdörtgeni görüntüleyerek bir işlemin ilerlemesini gösterir. İşlem tamamlandığında çubuk doldurulur. İlerleme çubukları genellikle kullanıcıya bir işlemin ne kadar bekleneceği hakkında fikir vermek için kullanılır; Örneğin, büyük bir dosya yüklenirken.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ProgressBar> Denetimi yalnızca yönelik yatay olarak form üzerinde.  
+> <xref:System.Windows.Forms.ProgressBar> Denetim, form üzerinde yalnızca yatay olarak yönetilebilir.  
   
 ## <a name="key-properties-and-methods"></a>Anahtar özellikleri ve yöntemleri  
- Anahtar özelliklerini <xref:System.Windows.Forms.ProgressBar> denetimi <xref:System.Windows.Forms.ProgressBar.Value%2A>, <xref:System.Windows.Forms.ProgressBar.Minimum%2A>, ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A>. <xref:System.Windows.Forms.ProgressBar.Minimum%2A> Ve <xref:System.Windows.Forms.ProgressBar.Maximum%2A> özellikleri ilerleme çubuğu görüntüler maksimum ve minimum değerleri ayarlayın. <xref:System.Windows.Forms.ProgressBar.Value%2A> Özelliğini işlemi tamamlamaya yönelik yapılan ilerleme durumunu temsil eder. Denetimde görüntülenen çubuğu bloklarını oluştuğu için değer tarafından görüntülenen <xref:System.Windows.Forms.ProgressBar> denetimi yalnızca yakın <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğinin geçerli değeri. Boyutuna göre <xref:System.Windows.Forms.ProgressBar> denetimi <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği zaman sonraki bloğu görüntülenecek belirler.  
+ <xref:System.Windows.Forms.ProgressBar> Denetimin anahtar özellikleri, <xref:System.Windows.Forms.ProgressBar.Value%2A> <xref:System.Windows.Forms.ProgressBar.Minimum%2A>ve 'dir.<xref:System.Windows.Forms.ProgressBar.Maximum%2A> <xref:System.Windows.Forms.ProgressBar.Minimum%2A> Ve<xref:System.Windows.Forms.ProgressBar.Maximum%2A> özellikleri, ilerleme çubuğunun görüntüleyeceği maksimum ve minimum değerleri ayarlar. <xref:System.Windows.Forms.ProgressBar.Value%2A> Özelliği, işlemi tamamlamaya yönelik ilerleme durumunu temsil eder. Denetimde görünen çubuk bloklardan oluştuğu için, <xref:System.Windows.Forms.ProgressBar> denetim tarafından görünen değer yalnızca <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğin geçerli değerine yaklaştırır. <xref:System.Windows.Forms.ProgressBar> Denetimin boyutuna bağlı <xref:System.Windows.Forms.ProgressBar.Value%2A> olarak, özelliği sonraki bloğun ne zaman görüntüleneceğini belirler.  
   
- En yaygın yolu geçerli ilerleme değerini ayarlamak üzere kod yazmak için olan <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği. Büyük bir dosya yükleme, örnekte kilobayt cinsinden dosyasının boyutu için üst sınırı ayarlayabilirsiniz. Örneğin, varsa <xref:System.Windows.Forms.ProgressBar.Maximum%2A> özelliği, 100'e ayarlandığında <xref:System.Windows.Forms.ProgressBar.Minimum%2A> özelliği, 10'a ayarlanır ve <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği 5 dikdörtgenler 50 olarak görüntülenir. Yarı görüntülenebilen sayının budur.  
+ Geçerli ilerleme değerini güncelleştirmenin en yaygın yolu, <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği ayarlamak için kod yazmaktır. Büyük bir dosya yükleme örneğinde, en yüksek değeri kilobayt cinsinden dosyanın boyutuna ayarlayabilirsiniz. Örneğin, <xref:System.Windows.Forms.ProgressBar.Maximum%2A> özelliği 100 olarak ayarlanırsa <xref:System.Windows.Forms.ProgressBar.Minimum%2A> , özelliği 10 olarak ayarlanır ve <xref:System.Windows.Forms.ProgressBar.Value%2A> Özellik 50 olarak ayarlanır, 5 dikdörtgenleri görüntülenecektir. Bu, görüntülenebilecek sayının yarısıdır.  
   
- Ancak, tarafından görüntülenen değeri değiştirmek için farklı yöntemleri vardır <xref:System.Windows.Forms.ProgressBar> ayarı yanı sıra denetim <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği doğrudan. <xref:System.Windows.Forms.ProgressBar.Step%2A> Özelliği artırmak için bir değer belirtmek için kullanılabilir <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği tarafından. Ardından, arama <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> yöntemi değer artış. Değeri Artır değiştirmek için kullanabileceğiniz <xref:System.Windows.Forms.ProgressBar.Increment%2A> yöntemi ve hangi artırmak bir değer belirtin <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği.  
+ Ancak, <xref:System.Windows.Forms.ProgressBar> <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği doğrudan ayarlamanın yanı sıra, denetim tarafından görüntülenen değeri değiştirmek için başka yollar vardır. Özelliği, <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği tarafından arttırılacağı bir değer belirtmek için kullanılabilir. <xref:System.Windows.Forms.ProgressBar.Step%2A> Daha sonra, <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> yöntemini çağırmak değeri artacaktır. Artış değerini değiştirmek için <xref:System.Windows.Forms.ProgressBar.Increment%2A> yöntemini kullanabilir ve <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliğinin artırılacağı bir değer belirtebilirsiniz.  
   
- Grafik kullanıcı geçerli bir eylem hakkında bilgilendiren başka bir denetimi <xref:System.Windows.Forms.StatusBar> denetimi.  
+ Kullanıcıyı geçerli bir eylem hakkında grafiksel olarak bildiren başka bir denetim <xref:System.Windows.Forms.StatusBar> denetim olur.  
   
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> Ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetler; ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri korunur geriye dönük uyumluluk ve gelecekte kullanım için varsa, ' ı seçin.  
+> <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Ve denetimleri, vedenetimlerine<xref:System.Windows.Forms.StatusBarPanel> işlevsellik ekler ve bunları ekler; ancak, ve denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.ToolStripStatusLabel> 'yu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

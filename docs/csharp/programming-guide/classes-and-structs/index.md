@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 4565781dd6e30bd88c899a9c098c28e3fd5b3870
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922266"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Sınıflar ve Yapılar (C# Programlama Kılavuzu)
 Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdır. Her biri, mantıksal birim olarak birbirine ait bir veri kümesini ve davranışları kapsülleyen bir veri yapısıdır. Veri ve davranışlar, sınıfın veya yapının *üyeleridir* ve bu konuda daha sonra listelendiği gibi yöntemleri, özellikleri ve olayları gibi, vb. içerir.  
@@ -60,7 +60,7 @@ Sınıflar ve yapılar, .NET Framework ortak tür sisteminin temel yapılarıdı
   
 - [Dizin Oluşturucular](../indexers/index.md)  
   
-- [İşleçler](../statements-expressions-operators/operators.md)  
+- [İşleçler](../../language-reference/operators/index.md)  
   
 - [İç içe Geçmiş Türler](./nested-types.md)  
   

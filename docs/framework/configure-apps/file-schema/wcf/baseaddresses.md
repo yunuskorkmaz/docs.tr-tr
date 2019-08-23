@@ -2,20 +2,20 @@
 title: <baseAddresses>
 ms.date: 03/30/2017
 ms.assetid: 78918102-2898-46e0-9ea8-6b8afe65603e
-ms.openlocfilehash: 7d0afd638e9a311b69ff47b6789d5fde093945ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 059ea4e637ab906d1fde9807a73ac8341f81c574
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926417"
 ---
 # <a name="baseaddresses"></a>\<baseAddresses >
-Bir koleksiyonunu temsil eder `baseAddress` kendiliğinden konak ortamdaki hizmet konak için temel adres olan öğeler. Temel adres varsa, uç noktaları, adresler taban adresi göre ile yapılandırılabilir.  
+Şirket içinde barındırılan bir `baseAddress` ortamdaki hizmet ana bilgisayarı için temel adres olan bir öğe koleksiyonunu temsil eder. Bir temel adres varsa, uç noktalar temel adrese göre adreslerle yapılandırılabilir.  
   
  \<system.ServiceModel>  
 \<İstemci >  
-\<uç noktası >  
-\<konak >  
+\<uç nokta >  
+\<Ana bilgisayar >  
 \<baseAddresses >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,17 +39,17 @@ Bir koleksiyonunu temsil eder `baseAddress` kendiliğinden konak ortamdaki hizme
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Ekle >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)|Hizmet ana bilgisayarı tarafından kullanılan tabanı belirten yapılandırma öğesi.|  
+|[\<> Ekle](add-of-baseaddresses.md)|Hizmet ana bilgisayarı tarafından kullanılan taban adresleri belirten bir yapılandırma öğesi.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<konak >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Hizmet konak makinesi ayarlarını belirten bir yapılandırma öğesi.|  
+|[\<Ana bilgisayar >](host.md)|Bir hizmet ana bilgisayarı için ayarları belirten bir yapılandırma öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
 - <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A>
-- [Barındırma](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Barındırma](../../../wcf/feature-details/hosting.md)

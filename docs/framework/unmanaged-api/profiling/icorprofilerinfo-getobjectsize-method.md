@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd337ca6d7b03ad22f178c9c7084cfa2585da73c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad2092c902b137df0dfe108743ef4081ca5f04d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948121"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize Yöntemi
 Belirtilen nesnenin boyutunu alır.  
@@ -37,32 +37,32 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parametreler  
  `objectId`  
- [in] Nesnenin kimliği.  
+ 'ndaki Nesnenin KIMLIĞI.  
   
  `pcSize`  
- [out] Nesnenin boyutu, bayt için bir işaretçi.  
+ dışı Nesnenin boyutunun bayt cinsinden işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
->  Bu yöntem artık kullanılmıyor. COR_E_OVERFLOW nesneler için 4 GB değerinden 64-bit platformlarda döndürür. Kullanım [Icorprofilerınfo4::getobjectsize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) yöntemi yerine.  
+> Bu yöntem artık kullanılmıyor. 64-bit platformlarda 4.000'den büyük nesneler için COR_E_OVERFLOW döndürür. Bunun yerine [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) yöntemini kullanın.  
   
- Aynı türden farklı nesneler genellikle aynı boyuta sahip. Ancak, diziler veya dizeler gibi bazı türleri her nesne için başka bir boyutu olabilir.  
+ Aynı türdeki farklı nesneler genellikle aynı boyutta olur. Ancak, diziler veya dizeler gibi bazı türlerin her nesne için farklı boyutta bir boyutu olabilir.  
   
- Tarafından döndürülen boyutla `GetObjectSize` yöntemi nesnenin çöp koleksiyonu yığınında sonra oluşabilecek herhangi bir hizalama doldurmaya içermez. Kullanırsanız `GetObjectSize` nesne başka bir nesnenin çöp koleksiyonu yığınında ilerlemek için yöntemi el ile gerektiği şekilde doldurma hizalama ekleyin.  
+ `GetObjectSize` Yöntem tarafından döndürülen boyut, nesne çöp toplama yığınında olduktan sonra görünebilen herhangi bir hizalama dolgusu içermez. Çöp toplama yığınında nesnesinden `GetObjectSize` nesneye ilerlemek için yöntemini kullanırsanız, gerektiğinde hizalama doldurmayı el ile ekleyin.  
   
-- 32 bit Windows üzerinde COR_PRF_GC_GEN_0 COR_PRF_GC_GEN_1 ve COR_PRF_GC_GEN_2 4 baytlık hizalaması kullanın ve 8 baytlık hizalama COR_PRF_GC_LARGE_OBJECT_HEAP kullanır.  
+- 32 bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 ve COR_PRF_GC_GEN_2 4 baytlık hizalama kullanın ve COR_PRF_GC_LARGE_OBJECT_HEAP 8 baytlık hizalama kullanır.  
   
-- 64 bit Windows üzerinde hizalama her zaman 8 bayt'tır.  
+- 64 bit Windows üzerinde hizalama her zaman 8 bayttır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

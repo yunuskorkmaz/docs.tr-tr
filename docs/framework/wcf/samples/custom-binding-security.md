@@ -2,28 +2,28 @@
 title: Özel Bağlama Güvenliği
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 71bc3d463330b893e8b415892a9bdcc2dae88a2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953770"
 ---
 # <a name="custom-binding-security"></a>Özel Bağlama Güvenliği
-Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi gösterilmektedir. Bu, özel bağlama güvenli aktarım birlikte ileti düzeyi güvenliği etkinleştirmek için nasıl kullanılacağını gösterir. Bu hizmet ve istemci arasında ileti aktarmaya güvenli aktarım gereklidir ve iletileri ileti düzeyi üzerinde aynı anda güvenli olmalıdır yararlı olur. Bu yapılandırma, sistem tarafından sağlanan bağlamalar tarafından desteklenmiyor.
+Bu örnek, bir özel bağlama kullanılarak güvenliğin nasıl yapılandırılacağını gösterir. Güvenli bir aktarımla ileti düzeyi güvenliği etkinleştirmek için özel bağlamayı nasıl kullanacağınızı gösterir. Bu, iletileri istemci ve hizmet arasında iletmek için güvenli bir aktarım gerektiğinde ve iletilerin ileti düzeyinde güvenli olması gerektiği durumlarda yararlıdır. Bu yapılandırma sistem tarafından belirtilen bağlamalar tarafından desteklenmiyor.
 
- Bu örnek, bir istemci konsol programı'nı (EXE) ve hizmeti bir konsol programı (EXE) oluşur. Hizmet, çift yönlü sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculatorDuplex` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). `ICalculatorDuplex` Oturumu üzerinden çalışan bir sonuç hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Hizmet üzerinde bağımsız olarak, sonuçlar döndürebilir `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir. Özel bağlama güvenli ve çift yönlü iletişimi destekleyen tanımlanır.
+ Bu örnek, bir istemci konsol programından (EXE) ve bir hizmet konsolu programından (EXE) oluşur. Hizmet bir çift yönlü sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme `ICalculatorDuplex` , çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. `ICalculatorDuplex` Arabirim, istemcinin bir oturum üzerinde çalışan bir sonucu hesaplamak için matematik işlemleri gerçekleştirmesini sağlar. Bağımsız olarak, hizmet sonuçları `ICalculatorDuplexCallback` arabirime döndürebilir. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir. Çift yönlü iletişimi destekleyen ve güvenli hale gelen özel bir bağlama tanımlanmıştır.
 
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
- Hizmet yapılandırması aşağıdaki destekleyen özel bir bağlama tanımlar:
+ Hizmet yapılandırması aşağıdakileri destekleyen özel bir bağlama tanımlar:
 
 - TLS/SSL protokolü kullanılarak korunan TCP iletişimi.
 
-- İleti güvenliği Windows.
+- Windows ileti güvenliği.
 
- Özel bağlama yapılandırması güvenli aktarım ileti düzeyi güvenliği aynı anda etkinleştirerek sağlar. Bağlama öğelerinin sıralama her bir katman kanal yığınında temsil ettiği için bir özel bağlamayı tanımlamak önemlidir (bkz [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)). Özel bağlama hizmeti ve istemci yapılandırma dosyalarını, aşağıdaki örnek yapılandırmada gösterildiği gibi tanımlanır.
+ Özel bağlama yapılandırması, ileti düzeyi güvenliği aynı anda etkinleştirerek güvenli aktarımı etkinleştirir. Bağlama öğelerinin sıralaması, her biri kanal yığınındaki bir katmanı temsil ettiğinden (bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)) özel bir bağlama tanımlamak açısından önemlidir. Özel bağlama, aşağıdaki örnek yapılandırmada gösterildiği gibi hizmette ve istemci yapılandırma dosyalarında tanımlanmıştır.
 
 ```xml
 <bindings>
@@ -41,7 +41,7 @@ Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi göste
 </bindings>
 ```
 
- Özel bağlama taşıma düzeyinde hizmet kimliğini doğrulamak ve istemci ile hizmet arasında iletim sırasında mesajlarını korumak için bir hizmet sertifikası kullanır. Bu tarafından gerçekleştirilir `sslStreamSecurity` bağlama öğesi. Hizmet sertifikası, aşağıdaki örnek yapılandırmada gösterildiği gibi bir hizmet davranışını kullanarak yapılandırılır.
+ Özel bağlama, Aktarım düzeyinde hizmetin kimliğini doğrulamak ve istemci ile hizmet arasında iletim sırasında iletileri korumak için bir hizmet sertifikası kullanır. Bu, `sslStreamSecurity` Binding öğesi tarafından gerçekleştirilir. Hizmetin sertifikası, aşağıdaki örnek yapılandırmada gösterildiği gibi bir hizmet davranışı kullanılarak yapılandırılır.
 
 ```xml
 <behaviors>
@@ -57,9 +57,9 @@ Bu örnek, özel bir bağlama kullanarak güvenlik yapılandırma işlemi göste
 </behaviors>
 ```
 
- Ayrıca, özel bağlamanın Windows kimlik bilgisi türü ile ileti güvenliği kullanır - bu varsayılan kimlik bilgisi türüdür. Bu tarafından gerçekleştirilir `security` bağlama öğesi. Hizmet ve istemci, Kerberos kimlik doğrulama mekanizması varsa, ileti düzeyi güvenliği kullanılarak doğrulanır. Bu örnek Active Directory ortamında çalışırsa gerçekleşir. Kerberos kimlik doğrulama mekanizması kullanılabilir durumda değilse, NTLM kimlik doğrulaması kullanılır. NTLM bir hizmete istemcinin kimliğini doğrular, ancak istemci hizmete kimlik doğrulaması yapmaz. `security` Bağlama öğesi kullanacak şekilde yapılandırıldığını `SecureConversation` `authenticationType`, hem istemci hem de hizmet üzerinde bir güvenlik oturumu oluşturulmasıyla sonuçlanır. Bu, hizmetin çalışması çift yönlü sözleşme etkinleştirmek için gereklidir.
+ Ayrıca, özel bağlama Windows kimlik bilgisi türü ile ileti güvenliği kullanır-bu, varsayılan kimlik bilgisi türüdür. Bu, `security` Binding öğesi tarafından gerçekleştirilir. Kerberos kimlik doğrulama mekanizması kullanılabiliyorsa, istemci ve hizmetin her ikisi de ileti düzeyi güvenlik kullanılarak doğrulanır. Bu, örnek Active Directory ortamda çalıştırıldığında oluşur. Kerberos kimlik doğrulama mekanizması kullanılamıyorsa, NTLM kimlik doğrulaması kullanılır. NTLM, istemcinin hizmet kimliğini doğrular, ancak hizmette hizmetin kimliğini doğrulamaz. Bağlama öğesi `SecureConversation` kullanmak`authenticationType`üzere yapılandırılmıştır, bu da hem istemcide hem de hizmette bir güvenlik oturumu oluşturulmasına neden olur. `security` Bu, hizmetin çift yönlü sözleşmesinin çalışmasını sağlamak için gereklidir.
 
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemcinin konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemcinin konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
 ```
 Press <ENTER> to terminate client.
@@ -70,17 +70,17 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
- Örneği çalıştırdığında üzerinde istemciye döndürülen iletileri bkz hizmetinden gönderilen geri çağırma arabirimi. Tüm işlemler tamamlandıktan sonra tüm denklemi ardından her ara sonuçlar görüntülenir. İstemciyi aşağı kapatmak için ENTER tuşuna basın.
+ Örneği çalıştırdığınızda, hizmetten gönderilen geri çağırma arabirimindeki istemciye döndürülen iletileri görürsünüz. Her ara sonuç görüntülenir ve tüm işlemler tamamlandıktan sonra denklemin tamamı gelir. İstemcisini kapatmak için ENTER tuşuna basın.
 
- Dahil edilen Setup.bat dosyasının, istemci ve sunucu sertifikası tabanlı güvenlik gerektiren barındırılan bir uygulamayı çalıştırmak için ilgili hizmet sertifikası ile yapılandırmak sağlar. Bu toplu iş dosyası bilgisayarlarda çalışmaya veya barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.
+ Dahil edilen Setup. bat dosyası, sertifika tabanlı güvenlik gerektiren bir barındırılan uygulamayı çalıştırmak için istemciyi ve sunucuyu ilgili hizmet sertifikasıyla yapılandırmanıza olanak sağlar. Bu toplu iş dosyasının bilgisayarlarda çalışmak veya barındırılmayan bir durumda çalışması için değiştirilmesi gerekir.
 
- Bu örnek için geçerlidir ve böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar:
+ Aşağıda, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, bu örneğe uygulanan toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış verilmiştir:
 
 - Sunucu sertifikası oluşturuluyor.
 
-     Setup.bat dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Bu toplu dosya sunucusu adı için localhost varsayar.
+     Setup. bat dosyasındaki aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. `%SERVER_NAME%` Değişken, sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyası, sunucu adını localhost olarak varsayılan olarak belirler.
 
-     Depolanmış bir sertifikayla Web barındırılan hizmetleri CurrentUser deposunda.
+     Sertifika, Web 'de barındırılan hizmetler için CurrentUser deposunda depolanır.
 
     ```bat
     echo ************
@@ -92,80 +92,80 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor.
+- Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme.
 
-     İstemci güvenilir kişiler uygulamasına Setup.bat dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
+     Setup. bat dosyasındaki aşağıdaki satırlar sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, bir Visual Studio 2010 komut isteminden çalıştırılması için tasarlanmıştır. MSSDK ortam değişkeni'nın SDK'ın yüklendiği dizini gösterecek gerektiriyor. Bu ortam değişkeni, bir Visual Studio 2010 Komut İstemi içinde otomatik olarak ayarlanır.
+    >  Setup. bat toplu iş dosyası bir Visual Studio 2010 komut Isteminden çalıştırılmak üzere tasarlanmıştır. MSSDK ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni, Visual Studio 2010 komut Istemi içinde otomatik olarak ayarlanır.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1. Yönetici ayrıcalıklarına sahip bir Visual Studio penceresi için geliştirici komut istemi açın ve örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1. Yönetici ayrıcalıklarıyla Visual Studio için bir Geliştirici Komut İstemi açın ve örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
+    >  Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.  
   
-2. Service.exe \service\bin başlatın.  
+2. \Service\bin. adresinden Service. exe ' yi Başlat  
   
-3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
+### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için  
   
-1. Hizmet bilgisayarda:  
+1. Hizmet bilgisayarında:  
   
-    1. Hizmeti bilgisayarında servicemodelsamples adlı sanal bir dizin oluşturun.  
+    1. Hizmet bilgisayarında servicemodelsamples adlı bir sanal dizin oluşturun.  
   
-    2. Hizmet program dosyaları \inetpub\wwwroot\servicemodelsamples hizmeti bilgisayarında sanal dizinine kopyalayın. Dosyaları \bin alt dizinde kopyalama emin olun.  
+    2. Hizmet programı dosyalarını \inetpub\wwwroot\servicemodelsamples adresinden hizmet bilgisayarındaki sanal dizine kopyalayın. Dosyaları \bin alt dizininde kopyalamadiğinizden emin olun.  
   
-    3. Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
+    3. Setup. bat ve Cleanup. bat dosyalarını hizmet bilgisayarına kopyalayın.  
   
-    4. Visual Studio'yu yönetici ayrıcalıklarıyla açılmış için geliştirici komut isteminde aşağıdaki komutu çalıştırın: `Setup.bat service`. Bu, toplu iş dosyasını çalıştırmak bilgisayarın adı ile eşleşen bir konu adına sahip hizmet sertifikası oluşturur.  
+    4. Yönetici ayrıcalıklarıyla açılmış bir Visual Studio Geliştirici Komut İstemi için aşağıdaki komutu çalıştırın: `Setup.bat service`. Bu işlem, toplu iş dosyasının çalıştırıldığı bilgisayarın adıyla eşleşen konu adına sahip hizmet sertifikasını oluşturur.  
   
         > [!NOTE]
-        >  Setup.bat toplu iş dosyası, bir Visual Studio 2010 komut isteminden çalıştırılması için tasarlanmıştır. Bu, path ortam değişkenine'nın SDK'ın yüklendiği dizini gösterecek gerektirir. Bu ortam değişkeni, bir Visual Studio 2010 Komut İstemi içinde otomatik olarak ayarlanır.
+        >  Setup. bat toplu iş dosyası bir Visual Studio 2010 komut Isteminden çalıştırılmak üzere tasarlanmıştır. PATH ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni, Visual Studio 2010 komut Istemi içinde otomatik olarak ayarlanır.
 
-    5. Değişiklik [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) önceki adımda oluşturulan sertifikanın konu adı yansıtacak şekilde Service.exe.config dosyasının içinde.
+    5. Service. exe. config dosyasının içindeki [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) , önceki adımda oluşturulan sertifikanın konu adını yansıtacak şekilde değiştirin.
 
-    6. Service.exe, bir komut isteminden çalıştırın.
+    6. Service. exe ' yi bir komut isteminden çalıştırın.
 
 2. İstemci bilgisayarda:
 
-    1. İstemci program dosyaları \client\bin\ klasöründen istemci bilgisayara kopyalayın. Ayrıca Cleanup.bat dosyasını kopyalayın.
+    1. İstemci program dosyalarını \client\bin\ klasöründen istemci bilgisayara kopyalayın. Ayrıca, Cleanup. bat dosyasını kopyalayın.
 
-    2. Önceki örneklerinden herhangi bir eski sertifika kaldırmak için Cleanup.bat çalıştırın.
+    2. Önceki örneklerden gelen eski sertifikaları kaldırmak için Cleanup. bat dosyasını çalıştırın.
 
-    3. Bir geliştirici komut istemi için Visual Studio'yu yönetici ayrıcalıklarıyla açıp hizmet bilgisayarda aşağıdaki komutu çalıştırarak hizmetin sertifikayı dışarı aktarma (yerine `%SERVER_NAME%` bilgisayarın tam olarak nitelenmiş adda burada Hizmet çalışıyor):
+    3. Yönetim ayrıcalıklarına sahip bir Visual Studio Geliştirici komut istemi açarak hizmetin sertifikasını dışarı aktarın ve hizmet bilgisayarında aşağıdaki komutu çalıştırın (yerine `%SERVER_NAME%` , bilgisayarın tam adı hizmet çalışıyor):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
         ```
 
-    4. %SERVER_NAME%.cer (yerine % sunucu_adı % tam olarak nitelenmiş adda hizmetinin çalıştığı bilgisayarın) istemci bilgisayara kopyalayın.
+    4. % SERVER_NAME%. cer öğesini istemci bilgisayara kopyalayın (% SERVER_NAME% öğesini hizmetin çalıştığı bilgisayarın tam adı ile değiştirin).
 
-    5. Bir geliştirici komut istemi için Visual Studio yönetici ayrıcalıklarıyla açıp aşağıdaki komutu istemci bilgisayarda çalışan hizmetin sertifika içeri aktarma (bilgisayarın tam olarak nitelenmiş ada sahip % sunucu_adı % yerine burada Hizmet çalışıyor):
+    5. Yönetim ayrıcalıklarına sahip bir Visual Studio Geliştirici Komut İstemi açarak hizmetin sertifikasını içeri aktarın ve istemci bilgisayarda aşağıdaki komutu çalıştırın (% SERVER_NAME% yerine, bilgisayarın tam adı hizmet çalışıyor):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 
-         Adımları c, d ve e güvenilen veren tarafından sertifika verilirse gerekli değildir.
+         Sertifika güvenilen bir veren tarafından verildiyse, c, d ve e adımları gerekli değildir.
 
-    6. İstemcinin App.config dosyasını aşağıdaki gibi değiştirin:
+    6. İstemcinin App. config dosyasını aşağıdaki gibi değiştirin:
 
         ```xml
         <client>
@@ -178,10 +178,10 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. Hizmet bir dışında NetworkService hesabı veya etki alanı ortamında LocalSystem hesabı altında çalışıyorsa, istemcinin App.config dosyasında uygun UPN veya SPN tabanlı ayarlamak için hizmet uç noktası için uç nokta kimliğini değiştirmeniz gerekebilir hesapta, hizmeti çalıştırmak için kullanılır. Uç nokta kimlik hakkında daha fazla bilgi için bkz: [kimlik doğrulama ile hizmet kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) konu.
+    7. Hizmet, bir etki alanı ortamında NetworkService veya LocalSystem hesabı dışında bir hesap altında çalışıyorsa, uygun UPN veya SPN 'YI ayarlamak için istemcinin App. config dosyasındaki hizmet uç noktası kimliğini değiştirmeniz gerekebilir hizmetini çalıştırmak için kullanılan hesapta. Uç nokta kimliği hakkında daha fazla bilgi için bkz. [hizmet kimliği ve kimlik doğrulama](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) konusu.
 
-    8. Client.exe bir komut isteminden çalıştırın.
+    8. Bir komut isteminden Client. exe ' yi çalıştırın.
 
-### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için
+### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için
 
-- Örnek çalıştıran tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.
+- Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.

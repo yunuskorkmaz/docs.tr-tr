@@ -2,111 +2,111 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959958"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955316"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen Senaryolar
-Çeşitli nedenlerden dolayı Windows Communication Foundation (WCF) bazı belirli güvenlik senaryoları desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition SSPI veya Kerberos kimlik doğrulama protokolleri uygulamaz ve bu nedenle WCF hizmet Windows kimlik doğrulaması ile bu platform üzerinde çalıştırılmasını desteklemez. Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları, WCF, Windows XP Home Edition altında çalışırken desteklenir.  
+Çeşitli nedenlerle Windows Communication Foundation (WCF) bazı belirli güvenlik senaryolarını desteklemez. Örneğin, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] giriş sürümü SSPI veya Kerberos kimlik doğrulama protokollerini uygulamaz ve bu nedenle WCF, bu platformda Windows kimlik doğrulaması ile bir hizmetin çalıştırılmasını desteklemez. Windows XP Home Edition altında WCF çalıştırılırken Kullanıcı adı/parola ve HTTP/HTTPS tümleşik kimlik doğrulaması gibi diğer kimlik doğrulama mekanizmaları desteklenir.  
   
 ## <a name="impersonation-scenarios"></a>Kimliğe bürünme senaryoları  
   
-### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>İstemciler, zaman uyumsuz çağrı yaptığınızda başkasının kimliğine bürünülerek gerçekleştirilen kimlik akış değil  
- Bir WCF istemcisi bürünmeyle Windows kimlik doğrulaması kullanarak bir WCF hizmetini zaman uyumsuz çağrılar, kimlik doğrulaması başkasının kimliğine bürünülerek gerçekleştirilen kimlik yerine istemci işlem kimliği ile gerçekleşebilir.  
+### <a name="impersonated-identity-might-not-flow-when-clients-make-asynchronous-calls"></a>Istemciler zaman uyumsuz çağrılar yaparken kimliğe bürünme kimliği Akamayabilir  
+ Bir WCF istemcisi, kimliğe bürünme altında Windows kimlik doğrulaması kullanarak bir WCF hizmetine zaman uyumsuz çağrılar yaptığında kimlik doğrulaması, kimliğe bürünülmüş kimlik yerine istemci işleminin kimliğiyle meydana gelebilir.  
   
-### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve etkin güvenli bağlam belirteci tanımlama bilgisi  
- WCF kimliğe bürünme desteklemez ve bir <xref:System.InvalidOperationException> aşağıdaki koşulların oluşturulur:  
+### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve güvenli bağlam belirteci tanımlama bilgisi etkin  
+ WCF, kimliğe bürünme özelliğini desteklemez ve <xref:System.InvalidOperationException> aşağıdaki koşullar mevcut olduğunda oluşturulur:  
   
 - İşletim sistemi [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-- Bir Windows kimliği kimlik doğrulama modu sonuçları.  
+- Kimlik doğrulama modu bir Windows kimliği ile sonuçlanır.  
   
-- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Özelliği <xref:System.ServiceModel.OperationBehaviorAttribute> ayarlanır <xref:System.ServiceModel.ImpersonationOption.Required>.  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> Öğesinin özelliği olarak ayarlanır<xref:System.ServiceModel.ImpersonationOption.Required>. <xref:System.ServiceModel.OperationBehaviorAttribute>  
   
-- Bir durum tabanlı güvenlik bağlamı belirteci (SCT) oluşturulur (oluşturma, varsayılan olarak devre dışıdır).  
+- Durum tabanlı bir güvenlik bağlamı belirteci (SCT) oluşturulur (varsayılan olarak, oluşturma devre dışıdır).  
   
- Durum tabanlı SCT yalnızca özel bir bağlama kullanarak oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: Bir güvenlik bağlamı oluşturmak için güvenli bir oturum belirteci](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Bir güvenlik bağlama öğesi oluşturarak, kod içinde belirtecinin etkinleştirilip etkinleştirilmediğini (ya da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) kullanarak <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemi ve ayarı `requireCancellation` parametresi `false`. Parametresi SCT önbelleğe almayı gösterir. Değerini `false` durum tabanlı SCT özelliği sağlar.  
+ Durum tabanlı SCT yalnızca özel bir bağlama kullanılarak oluşturulabilir. Daha fazla bilgi için [nasıl yapılır: Güvenli bir oturum](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)Için güvenlik bağlamı belirteci oluşturun.) Kodda, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> belirteç, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya yöntemini kullanarak bir güvenlik bağlama öğesi (ya da) oluşturarak ve `requireCancellation` parametresi olarak `false`ayarlanarak etkinleştirilir. Parametresi, SCT 'nin önbelleğe alınmasını ifade eder. Değeri, durum tabanlı `false` SCT özelliğini sağlar.  
   
- Alternatif olarak, yapılandırmada belirteci oluşturarak etkin bir <`customBinding`>, ardından ekleyerek bir <`security`> öğesi ve ayarı `authenticationMode` özniteliği için SecureConversation ve `requireSecurityContextCancellation` özniteliğini `true`.  
-  
-> [!NOTE]
->  Yukarıdaki gereksinimlerine özgüdür. Örneğin, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> yer alan bir Windows kimliği, ancak bir SCT belirlemez bir bağlama öğesi oluşturur. Bu nedenle, kendisiyle kullanabilirsiniz `Required` seçeneğini [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
-  
-### <a name="possible-aspnet-conflict"></a>Olası bir ASP.NET çakışma  
- WCF ve ASP.NET hem etkinleştirebilir veya kimliğe bürünme devre dışı bırakın. ASP.NET WCF uygulaması barındırdığında, WCF ve ASP.NET yapılandırma ayarları arasında bir çakışma bulunabilir. Çakışma olması durumunda, WCF ayarı, sürece önceliklidir <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, bu durumda ASP.NET kimliğe bürünme ayarı öncelik alır.  
-  
-### <a name="assembly-loads-may-fail-under-impersonation"></a>Derleme yüklerini altında kimliğe bürünme başarısız olabilir  
- Başkasının kimliğine bürünülerek gerçekleştirilen bağlamı bir derlemeyi yüklemek için erişim haklarına sahip değil ve ilk kez ise ortak dil çalışma zamanı (CLR), AppDomain için derlemeyi yüklenmeye çalışılıyor <xref:System.AppDomain> hatası önbelleğe alır. Bu derleme (veya derlemeleri) yüklemek için sonraki denemeler başarısız, bile kimliğe bürünme ve bile geri döndürdükten sonra dönüştürülen içerik derlemesini yüklemek için erişim haklarına sahiptir. Kullanıcı bağlamı değiştirildikten sonra CLR yük yeniden denemez olmasıdır. Hatadan kurtarmak için uygulama etki alanını yeniden başlatmanız gerekir.  
+ Alternatif olarak, yapılandırmada, belirteç`customBinding`bir < > oluşturarak ve sonra bir <`security`> `authenticationMode` öğesi eklenerek ve `true`özniteliği SecureConversation ve `requireSecurityContextCancellation` özniteliği olarak ayarlanarak etkinleştirilir.  
   
 > [!NOTE]
->  İçin varsayılan değer <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> sınıfı <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Çoğu durumda, bir kimlik düzeyinde kimliğe bürünülmüş bağlamdaki herhangi bir ek derlemeler yüklemek için herhangi bir hak vardır. Bu farkında olması çok yaygın bir durumdur için varsayılan değer budur. Kimlik düzeyinde kimliğe bürünme özellikleri alınırken işlem olmadığı zaman da oluşur `SeImpersonate` ayrıcalık. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+> Önceki gereksinimler özeldir. Örneğin, bir Windows <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> kimliği ile sonuçlanan, ancak bir SCT oluşturmayan bir bağlama öğesi oluşturur. Bu nedenle, `Required` seçeneğini üzerinde [!INCLUDE[wxp](../../../../includes/wxp-md.md)]seçeneğiyle kullanabilirsiniz.  
   
-### <a name="delegation-requires-credential-negotiation"></a>Kimlik bilgileri görüşmesi temsilci gerektirir  
- Temsilci ile Kerberos kimlik doğrulama protokolünü kullanmak için Kerberos protokolü ile kimlik bilgileri görüşmesi (bazen çok oluşturan veya çok adımlı Kerberos denir) uygulamalıdır. Kerberos kimlik doğrulaması (Kerberos kesin veya tek oluşturan denir) kimlik bilgileri görüşmesi uygularsanız, bir özel durum oluşturulur. Kimlik bilgileri görüşmesi gerçekleştirme hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulama hatalarını hata ayıklama](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+### <a name="possible-aspnet-conflict"></a>Olası ASP.NET çakışması  
+ WCF ve ASP.NET, kimliğe bürünme özelliğini etkinleştirebilir veya devre dışı bırakabilir. ASP.NET bir WCF uygulaması barındırıyorsa, WCF ve ASP.NET yapılandırma ayarları arasında bir çakışma var olabilir. Çakışma durumunda, bu, ASP.NET Kimliğe bürünme ayarı öncelikli olarak <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> <xref:System.ServiceModel.ImpersonationOption.NotAllowed>ayarlanmadığı takdirde WCF ayarı önceliklidir.  
   
-## <a name="cryptography"></a>Şifreleme  
+### <a name="assembly-loads-may-fail-under-impersonation"></a>Derleme yüklemeleri, kimliğe bürünme altında başarısız olabilir  
+ Kimliğe bürünülmüş bağlamın bir derlemeyi yüklemek için erişim hakları yoksa ve ilk kez ortak dil çalışma zamanı (CLR) bu AppDomain için derlemeyi yüklemeye çalışıyorsa, <xref:System.AppDomain> hatayı önbelleğe alır. Daha sonra bu derlemeyi (veya derlemeleri) yükleme girişimleri, kimliğe bürünme geri alındıktan sonra bile başarısız olur ve geri döndürülmüş bağlam derlemeyi yüklemek için erişim haklarına sahip olsa bile. Bunun nedeni, CLR 'nin Kullanıcı bağlamı değiştirildikten sonra yükü yeniden denemeyecektir. Hatadan kurtarmak için uygulama etki alanını yeniden başlatmanız gerekir.  
+  
+> [!NOTE]
+> <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> Sınıfının özelliği için varsayılan değer. <xref:System.Security.Principal.TokenImpersonationLevel.Identification> <xref:System.ServiceModel.Security.WindowsClientCredential> Çoğu durumda, kimlik düzeyi kimliğe bürünme bağlamının herhangi bir ek derlemeyi yükleme izni yoktur. Bu varsayılan değerdir, bu nedenle farkında olmak üzere çok yaygın bir durumdur. Kimliğe bürünme işlemi `SeImpersonate` ayrıcalığına sahip olmadığında, kimlik düzeyi kimliğe bürünme da oluşur. Daha fazla bilgi için bkz. [temsil ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+  
+### <a name="delegation-requires-credential-negotiation"></a>Temsili kimlik bilgisi anlaşması gerektirir  
+ Kerberos kimlik doğrulama protokolünü temsilcisiyle birlikte kullanmak için, Kerberos protokolünü kimlik bilgisi anlaşmasına (bazen çok aşamalı veya çok adımlı Kerberos olarak adlandırılır) uygulamanız gerekir. Kimlik bilgisi anlaşması olmadan Kerberos kimlik doğrulaması uygularsanız (bazen tek veya tek seferlik Kerberos olarak adlandırılır), bir özel durum oluşturulur. Kimlik bilgisi anlaşmasını uygulama hakkında daha fazla bilgi için bkz. [Windows kimlik doğrulama hatalarını ayıklama](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+  
+## <a name="cryptography"></a>To  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 yalnızca simetrik anahtar kullanımları için desteklenir  
- WCF çeşitli şifreleme ve sistem tarafından sağlanan bağlamalar algoritma paketini kullanarak belirtebilirsiniz imza Özet oluşturma algoritmaları destekler. Gelişmiş güvenlik için imza Özet karmaları oluşturmak için güvenli karma algoritması (SHA) 2 algoritmalarını, özellikle SHA-256, WCF destekler. Bu sürüm yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımları için SHA-256 destekler ve burada bir X.509 sertifikası iletiyi imzalamak üzere kullanılmaz. WCF RSA imzalar (X.509 sertifikaları kullanılır) desteklemediği için RSA-SHA256 WinFX, SHA-256 karma destek geçerli olmaması nedeniyle kullanarak.  
+ WCF, sistem tarafından belirtilen bağlamalarda algoritma paketini kullanarak belirtebileceğiniz çeşitli şifreleme ve imza özeti oluşturma algoritmalarını destekler. WCF, daha iyi güvenlik için imza Özet karmaları oluşturmak amacıyla güvenli karma algoritması (SHA) 2 algoritmalarını, özellikle SHA-256 ' i destekler. Bu sürüm, yalnızca Kerberos anahtarları gibi simetrik anahtar kullanımları için SHA-256 ' ı destekler ve iletiyi imzalamak için bir X. 509.440 sertifikası kullanılmaz. WCF, WinFX 'de RSA-SHA256 için desteklenmeyen destek olmaması nedeniyle, SHA-256 karması kullanılarak RSA imzalarını (X. 509.440 sertifikalarında kullanılır) desteklemez.  
   
-### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS uyumlu SHA-256 karma desteklenmiyor  
- SHA-256 kullanan algoritması paketleri WCF tarafından FIPS uyumlu algoritmaları kullanımını gerekli olduğu sistemlerde desteklenmez bu nedenle, WCF SHA-256'yı FIPS uyumlu karmaları desteklemez.  
+### <a name="fips-compliant-sha-256-hashes-not-supported"></a>FIPS uyumlu SHA-256 karmaları desteklenmez  
+ WCF, SHA-256 FIPS uyumlu karmaları desteklemez, bu nedenle SHA-256 kullanan algoritma paketleri, FIPS uyumlu algoritmaların kullanılması gereken sistemlerde WCF tarafından desteklenmez.  
   
-### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Kayıt defteri düzenlediyseniz FIPS uyumlu algoritmaları başarısız olabilir  
- Etkinleştirebilir ve Federal Bilgi işleme standartları (FIPS) - yerel güvenlik ayarları Microsoft Yönetim Konsolu (MMC) ek bileşeni kullanılarak uyumlu algoritmalar - devre dışı bırak. Kayıt defteri ayarı da erişebilirsiniz. Ancak, WCF ayarını sıfırlamak için kayıt defterini kullanarak desteklemiyor unutmayın. Değeri için herhangi bir şey dışında 1 veya 0 olarak ayarlanırsa CLR ve işletim sistemi arasında tutarsız sonuçlar ortaya çıkabilir.  
+### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Kayıt defteri düzenlendiğinde FIPS uyumlu algoritmalar başarısız olabilir  
+ Yerel güvenlik ayarları Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak Federal bilgi Işleme standartları (FIPS) ile uyumlu algoritmaları etkinleştirebilir ve devre dışı bırakabilirsiniz. Ayrıca, kayıt defterindeki ayarına erişebilirsiniz. Ancak, WCF 'nin ayarı sıfırlamak için kayıt defterini kullanmayı desteklemediğini unutmayın. Değer 1 veya 0 ' dan farklı bir değere ayarlandıysa, CLR ve işletim sistemi arasında tutarsız sonuçlar meydana gelebilir.  
   
-### <a name="fips-compliant-aes-encryption-limitation"></a>FIPS uyumlu AES şifreleme sınırlama  
- FIPS uyumlu AES şifreleme çift yönlü geri çağırmalar düzeyi kimliğe bürünme kimlik altında çalışmaz.  
+### <a name="fips-compliant-aes-encryption-limitation"></a>FIPS uyumlu AES şifreleme sınırlaması  
+ FIPS uyumlu AES şifrelemesi, kimlik düzeyi kimliğe bürünme altında çift yönlü geri çağırmalar içinde çalışmaz.  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP sertifikaları  
- *Şifreleme API'si: Yeni nesil (CNG)* CryptoAPI uzun vadeli yerini alır. Bu API üzerinde yönetilmeyen kodda kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ve sonraki Windows sürümlerinde.  
+ *Şifreleme API 'SI: Yeni nesil (CNG)* , CryptoAPI için uzun süreli değiştirmedir. Bu API [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] ve sonraki Windows sürümlerinde yönetilmeyen kodda kullanılabilir.  
   
- Eski CryptoAPI CNG/KSP sertifikaları işlemek için kullandıkları için .NET framework 4.6.1 ve önceki sürümleri bu sertifikaları desteklemez. .NET Framework 4.6.1 ve önceki sürümleri bu sertifikaların kullanılması, bir özel durum neden olur.  
+ .NET Framework 4.6.1 ve önceki sürümler, CNG/KSP sertifikalarını işlemek için eski CryptoAPI 'yi kullandıkları için bu sertifikaları desteklemez. Bu sertifikaların .NET Framework 4.6.1 ve önceki sürümleriyle kullanımı bir özel duruma neden olur.  
   
- Bir sertifika KSP kullanıp kullanmadığını bildirmek için olası iki yolu vardır:  
+ Bir sertifikanın KSP kullanıp kullanmadığını söylemek için iki olası yol vardır:  
   
-- Yapmak bir `p/invoke` , `CertGetCertificateContextProperty`ve incelemek `dwProvType` döndürülen üzerinde `CertGetCertificateContextProperty`.  
+- ' İ `dwProvType` yapın ve döndürülen 'ıinceleyin.`CertGetCertificateContextProperty` `p/invoke` `CertGetCertificateContextProperty`  
   
-- Kullanım `certutil` sertifikaları'nı sorgulamak için komut satırından komutu. Daha fazla bilgi için [sertifikalarının sorunlarını gidermek için Certutil görevleri](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Sertifikaları sorgulamak için komut satırından komutunukullanın.`certutil` Daha fazla bilgi için bkz. [sertifika sorunlarını giderme Için Certutil görevleri](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
-## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET kimliğe bürünme ve ASP.NET uyumluluk kullanarak gerekliyse ileti güvenlik başarısız  
- İstemci kimlik doğrulaması, oluşmasını engellediğinden WCF ayarları aşağıdaki birleşimi desteklemez:  
+## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET Kimliğe bürünme ve ASP.NET uyumluluğu kullanılması gerekiyorsa ileti güvenliği başarısız olur  
+ WCF, istemci kimlik doğrulamasının oluşmasını engelleyebileceğinden aşağıdaki ayar birleşimini desteklemez:  
   
-- ASP.NET kimliğe bürünme etkinleştirilir. Bu Web.config dosyasında ayarlayarak yapılır `impersonate` özniteliği <`identity`> öğesine `true`.  
+- ASP.NET Kimliğe bürünme etkindir. Bu, < `impersonate` `identity`> öğesinin özniteliği olarak `true`ayarlanarak Web. config dosyasında yapılır.  
   
-- ASP.NET uyumluluk modunun etkin ayarlayarak `aspNetCompatibilityEnabled` özniteliği [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) için `true`.  
+- ASP.NET uyumluluk modu, `aspNetCompatibilityEnabled` [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) özniteliği olarak `true`ayarlanarak etkinleştirilir.  
   
 - İleti modu güvenliği kullanılır.  
   
- Geçici çözüm ASP.NET Uyumluluk modunu devre dışı bırakmak sağlamaktır. Veya ASP.NET uyumluluk modunun gerekiyorsa, ASP.NET kimliğe bürünme özelliğini devre dışı bırakma ve WCF tarafından sağlanan kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için [temsilcilik ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ Geçici çözüm, ASP.NET uyumluluk modunu Kapatbir şekilde çalışır. Ya da ASP.NET uyumluluk modu gerekliyse, ASP.NET Kimliğe bürünme özelliğini devre dışı bırakın ve bunun yerine WCF tarafından belirtilen kimliğe bürünme özelliğini kullanın. Daha fazla bilgi için bkz. [temsil ve kimliğe bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
-## <a name="ipv6-literal-address-failure"></a>IPv6 adresi değişmez değer hatası  
- Hizmet ve istemci aynı makinede olan ve değişmez değer IPv6 adresleri hizmeti için kullanılan güvenlik istekleri başarısız.  
+## <a name="ipv6-literal-address-failure"></a>IPv6 değişmez değer adresi hatası  
+ İstemci ve hizmet aynı makineden olduğunda güvenlik istekleri başarısız olur ve hizmet için IPv6 değişmez adresler kullanılır.  
   
- Hizmet ve istemci, farklı makinelerde olması durumunda iş değişmez değer IPv6 yöneliktir.  
+ Hizmet ve istemci farklı makinelerinizde, sabit IPv6 adresleri çalışır.  
   
-## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Federe güven ile WSDL alma hataları  
- WCF federe güven zincirinde her düğüm için tam olarak bir WSDL belgesi gerektirir. Bir döngü uç noktaları belirtirken ayarlanmadı dikkat edin. Bir yolu, döngüleri oluşabilir aynı WSDL belgesinde iki veya daha fazla bağlantı ile bir federasyon güven zincirleri WSDL indirilmesini kullanıyor. Bu sorunu oluşturabilecek yaygın bir senaryo güvenlik belirteci sunucusu ve hizmeti aynı ServiceHost içinde bulunduğu federe bir hizmettir.  
+## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Federasyon güveniyle WSDL alma sorunları  
+ WCF, Federasyon güven zincirindeki her düğüm için tam olarak bir WSDL belgesi gerektirir. Uç noktaları belirtirken bir döngü ayarlanmamaya dikkat edin. Döngülerin ortaya çıkarılabileceği bir yol, aynı WSDL belgesinde iki veya daha fazla bağlantıyla federasyon güven zincirlerinin WSDL indirmesi kullanmaktır. Bu sorunu oluşturabilecek yaygın bir senaryo, güvenlik belirteci sunucusunun ve hizmetin aynı ServiceHost içinde bulunduğu bir Federasyon hizmetidir.  
   
- Bu durum aşağıdaki üç uç nokta adresleri bir hizmet örneğidir:  
+ Bu durumun bir örneği, aşağıdaki üç uç nokta adresini içeren bir hizmettir:  
   
-- `http://localhost/CalculatorService/service` (hizmet)  
+- `http://localhost/CalculatorService/service`(hizmet)  
   
-- `http://localhost/CalculatorService/issue_ticket` (STS)  
+- `http://localhost/CalculatorService/issue_ticket`(STS)  
   
-- `http://localhost/CalculatorService/mex` (meta veri uç noktası)  
+- `http://localhost/CalculatorService/mex`(meta veri uç noktası)  
   
- Bu, özel durum oluşturur.  
+ Bu bir özel durum oluşturur.  
   
- Yerleştirerek bu senaryo yapabileceğiniz `issue_ticket` başka bir uç nokta.  
+ `issue_ticket` Uç noktayı başka bir yere yerleştirerek bu senaryonun çalışmasını sağlayabilirsiniz.  
   
-## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL içeri aktarma öznitelik olabilir kaybedildi  
- WCF izleme özniteliklerini üzerinde kaybeder bir `<wst:Claims>` öğesinde bir `RST` bir WSDL içeri aktarma yaparken şablonu. Bir WSDL içeri aktarma sırasında böyle belirtirseniz `<Claims>` doğrudan `WSFederationHttpBinding.Security.Message.TokenRequestParameters` veya `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` talep türü koleksiyonları doğrudan kullanmak yerine.  Öznitelikleri alma kaybeder bağlama değil WSDL gidiş dönüş düzgün bir şekilde yapar ve bu nedenle istemci tarafında yanlış.  
+## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL Içeri aktarma öznitelikleri kaybolabilir  
+ Bir wsdl içeri aktarma işlemi yaparken WCF, `<wst:Claims>` bir `RST` şablondaki öğe üzerindeki öznitelikleri izlemeyi kaybeder. Bu durum doğrudan talep türü koleksiyonları kullanmak yerine veya `<Claims>` `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` ' de `WSFederationHttpBinding.Security.Message.TokenRequestParameters` belirttiğinizde bir wsdl içeri aktarma işlemi sırasında gerçekleşir.  İçeri aktarma öznitelikleri kaybederse, bağlama WSDL aracılığıyla doğru şekilde geri dönmez ve bu nedenle istemci tarafında yanlış.  
   
- Düzeltme içeri aktarma yaptıktan sonra istemci üzerinde doğrudan bağlama değiştirmektir.  
+ Bu, içeri aktarma işlemi yapıldıktan sonra bağlamayı doğrudan istemci üzerinde değiştirmektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

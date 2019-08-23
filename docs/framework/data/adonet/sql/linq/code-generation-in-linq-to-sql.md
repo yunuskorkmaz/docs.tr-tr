@@ -2,12 +2,12 @@
 title: LINQ to SQL’de Kod Oluşturma
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 63ac0f50b34a5e5d8739adbeb70f2412960227c3
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 12470a8c14e0a41eb6e06fc5d4ba63c12924330b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666124"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939171"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL’de Kod Oluşturma
 Nesne İlişkisel Tasarımcısı ya da SQLMetal komut satırı aracını kullanarak bir veritabanını temsil etmek için kod oluşturabilirsiniz. Her iki durumda da, uçtan uca kod oluşturma üç aşamada gerçekleşir:  
@@ -32,7 +32,7 @@ Nesne İlişkisel Tasarımcısı ya da SQLMetal komut satırı aracını kullana
  Bu şema tanımı dosyasını, bir dış eşleme dosyasını doğrulamak için kullanılan şema tanımı dosyasından ayırt edin. Daha fazla bilgi için bkz. [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)).  
   
 > [!NOTE]
->  Visual Studio kullanıcıları Ayrıca bu XSD dosyasını "DbmlSchema. xsd" olarak XML şemaları iletişim kutusunda bulur. Bir Dbml dosyasını doğrulamak için xsd dosyasını doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
+> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını "DbmlSchema. xsd" olarak XML şemaları iletişim kutusunda bulur. Bir Dbml dosyasını doğrulamak için xsd dosyasını doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 5c95272c672d9b35d61e2fca8cccdbc532ef6776
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 609fe4896a2b01b8a69ff8a3d0854c85ddbd6a26
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211295"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969093"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize ile Varsayılan Değerleri Tanımlama ve Yöntemleri Sıfırlama
-`ShouldSerialize` ve `Reset` özelliği yoksa, bir özelliği için sağlayabilirsiniz isteğe bağlı yöntemlerdir bir basit varsayılan değere sahip. Özelliği bir basit varsayılan değere sahipse, uygulamalıdır <xref:System.ComponentModel.DefaultValueAttribute> ve bunun yerine varsayılan değer özniteliği sınıf oluşturucusuna sağlayın. Bu mekanizmaların birini Tasarımcısı'nda aşağıdaki özellikleri sağlar:
+`ShouldSerialize`ve `Reset` özelliğin basit bir varsayılan değeri yoksa, özellik için sağlayabilmeniz için isteğe bağlı yöntemlerdir. Özelliğin basit bir varsayılan değeri varsa, öğesini uygulamanız <xref:System.ComponentModel.DefaultValueAttribute> ve bunun yerine öznitelik sınıfı oluşturucusuna varsayılan değeri sağlamanız gerekir. Bu mekanizmalardan herhangi biri, tasarımcıda aşağıdaki özellikleri sunar:
 
-- Varsayılan değerini değiştirdiyseniz özellik tarayıcısında visual belirtme özelliği sağlar.
+- Özelliği, varsayılan değerinden değiştirildiyse özellik tarayıcısında görsel gösterge sağlar.
 
-- Kullanıcı özelliği sağ tıklatın ve seçin **sıfırlama** özelliği varsayılan değerine geri yüklemek için.
+- Kullanıcı özelliğe sağ tıklayıp **Sıfırla** ' yı seçerek özelliği varsayılan değerine geri yükleyebilirsiniz.
 
-- Tasarımcı daha verimli kod oluşturur.
+- Tasarımcı daha verimli kod üretir.
 
     > [!NOTE]
-    >  Ya da uygulama <xref:System.ComponentModel.DefaultValueAttribute> veya sağlayan `Reset` *PropertyName* ve `ShouldSerialize` *PropertyName* yöntemleri. Her ikisini birden kullanmayın.
+    > YadaPropertyName<xref:System.ComponentModel.DefaultValueAttribute> ve PropertyName`ShouldSerialize`yöntemlerini uygulayın. `Reset` Her ikisini de kullanmayın.
 
- `Reset` *PropertyName* yöntemini aşağıdaki kod parçasını gösterildiği gibi bu bir özelliği varsayılan değerine ayarlar.
+ PropertyName yöntemi, aşağıdaki kod parçasında gösterildiği gibi bir özelliği varsayılan değerine ayarlar. `Reset`
 
 ```vb
 Public Sub ResetMyFont()
@@ -42,9 +42,9 @@ public void ResetMyFont() {
 ```
 
 > [!NOTE]
->  Bir özellik yoksa bir `Reset` yöntemi ile işaretlenmemiş bir <xref:System.ComponentModel.DefaultValueAttribute>ve bildiriminden, sağlanan varsayılan değeri yok `Reset` kısayol menüsünde, bu özelliği devre dışı seçeneği **özellikleri** Windows Form Tasarımcısı'nda Visual Studio penceresi.
+> Bir özelliğin `Reset` yöntemi yoksa, <xref:System.ComponentModel.DefaultValueAttribute>ve bildiriminde `Reset` bir varsayılan değer sağlanmadığında, bu özellik için seçeneği **Özellikler** penceresinin kısayol menüsünde devre dışı bırakılır. Visual Studio 'daki Windows Form Tasarımcısı.
 
- Visual Studio gibi tasarımcıları `ShouldSerialize` *PropertyName* yöntemi bir özelliği varsayılan değerine değişip değişmediğini denetleyin ve kod yazma form eksikse bir özelliği değiştirildiğinde, bu nedenle daha verimli kod için izin verme oluşturma. Örneğin:
+ Visual Studio gibi tasarımcılar, bir özelliğin `ShouldSerialize`varsayılan değerinden değişip değişmediğini denetlemek ve yalnızca bir özellik değiştirilirse, bu sayede daha verimli kod oluşturulmasına izin vermek için bir özelliğin form içine silinip yazmadığını denetlemek için *PropertyName* metodunu kullanır. Örneğin:
 
 ```vb
 'Returns true if the font has changed; otherwise, returns false.
@@ -62,7 +62,7 @@ public bool ShouldSerializeMyFont() {
 }
 ```
 
- Tam kod örnek aşağıda verilmiştir.
+ Tüm kod örnekleri aşağıda verilmiştir.
 
 ```vb
 Option Explicit
@@ -141,7 +141,7 @@ public class MyControl : Control {
 }
 ```
 
- Bu durumda, hatta özel bir değişken değeri tarafından erişildiğinde `MyFont` özelliği `null`, özellik tarayıcısı aşağıdaki dotnetclıtools'u görüntülemiyor `null`; bunun yerine, görüntülediği <xref:System.Windows.Forms.Control.Font%2A> değilse üst öğesinin özellik `null`, Varsayılan <xref:System.Windows.Forms.Control.Font%2A> tanımlanan değer <xref:System.Windows.Forms.Control>. Bu nedenle için varsayılan değer `MyFont` yalnızca ayarlanamaz ve <xref:System.ComponentModel.DefaultValueAttribute> bu özelliğe uygulanamaz. Bunun yerine, `ShouldSerialize` ve `Reset` yöntemleri için uygulanmalı `MyFont` özelliği.
+ Bu `MyFont` durumda, `null` `null`özelliği tarafından erişilen özel değişkenin değeri olsa bile, özellik tarayıcısı görüntülenmez `null`; bunun yerine,, yoksa üst öğenin <xref:System.Windows.Forms.Control.Font%2A> özelliğini görüntüler, veya içinde <xref:System.Windows.Forms.Control.Font%2A> <xref:System.Windows.Forms.Control>tanımlanan varsayılan değer. Bu nedenle, varsayılan değeri `MyFont` basitçe ayarlanamaz <xref:System.ComponentModel.DefaultValueAttribute> ve bu özelliğe uygulanamaz. Bunun yerine, `Reset` `MyFont` ve yöntemlerinin özelliği için uygulanması gerekir. `ShouldSerialize`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

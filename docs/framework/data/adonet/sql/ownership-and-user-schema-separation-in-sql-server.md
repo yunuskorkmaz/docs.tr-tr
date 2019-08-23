@@ -2,32 +2,32 @@
 title: SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645727"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961098"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
-Bir SQL Server güvenlik kavramının sahipleri nesnelerin Dönülmez bunları yönetme izni olmasıdır. Bir nesne sahibinden ayrıcalıkları kaldıramazsınız ve sahip oldukları nesneleri da, kullanıcıların bir veritabanından bırakılamıyor.  
+SQL Server güvenliği temel bir kavramı, nesne sahiplerinin bunları yönetmek için geri alınamaz izinlere sahip olmalarından oluşur. Bir nesne sahibinden ayrıcalıkları kaldıramazsınız ve içindeki nesneler varsa kullanıcıları bir veritabanından bırakamazsınız.  
   
 ## <a name="user-schema-separation"></a>Kullanıcı şeması ayrımı  
- Kullanıcı şeması ayrımı veritabanı nesne izinleri yönetiminde daha fazla esneklik sağlar. A *şema* ayrı ad alanında Grup nesnelerine e sağlayan bir adlandırılmış veritabanı nesneleri için kapsayıcıdır. Örneğin, AdventureWorks örnek veritabanı şemaları, üretim, satış ve İnsanKaynakları içerir.  
+ Kullanıcı şeması ayrımı, veritabanı nesne izinlerinin yönetiminde daha fazla esneklik sağlar. *Şema* , nesneleri ayrı ad alanlarına gruplandırmanıza olanak tanıyan veritabanı nesneleri için adlandırılmış bir kapsayıcıdır. Örneğin, AdventureWorks örnek veritabanı üretim, satış ve ınsana kaynakları için şemalar içerir.  
   
- Nesnelere başvuran için dört kısımlı sözdizimini şema adını belirtir.  
+ Nesnelere başvurmak için dört bölümden oluşan adlandırma sözdizimi, şema adını belirtir.  
   
 ```  
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   
-### <a name="schema-owners-and-permissions"></a>Şema sahipleri ve izinleri  
- Şemaları herhangi bir veritabanı sorumlusu tarafından sahiplenilebilir ve tek bir asıl birden çok şema sahip olabilir. Güvenlik kuralları, şemadaki tüm nesneleri tarafından devralınmış bir bir şemaya uygulayabilirsiniz. Bir şema için erişim izinleri ayarladıktan sonra yeni nesneler için şema eklendikçe Bu izinler otomatik olarak uygulanır. Varsayılan şema kullanıcılara atanabilir ve aynı şemaya birden çok veritabanı kullanıcıları paylaşabilirsiniz.  
+### <a name="schema-owners-and-permissions"></a>Şema sahipleri ve Izinleri  
+ Şemaların herhangi bir veritabanı sorumlusu olabilir ve tek bir sorumlu birden çok şemaya sahip olabilir. Şemadaki tüm nesneler tarafından devralınan bir şemaya güvenlik kuralları uygulayabilirsiniz. Bir şema için erişim izinleri ayarladıktan sonra, şemaya yeni nesneler eklendikçe bu izinler otomatik olarak uygulanır. Kullanıcılara varsayılan bir şema atanabilir ve birden çok veritabanı kullanıcısı aynı şemayı paylaşabilir.  
   
- Geliştiriciler bir şemada bulunan nesneler oluşturduğunuzda varsayılan olarak, geliştirici şemanın sahibi güvenlik sorumlusu tarafından nesneleri sahibi olur. Nesne sahipliği YETKİLENDİRME Transact-SQL ALTER deyimiyle aktarılabilir. İzinlerinin yönetilmesi için karmaşıklık ekler nedeniyle bu önerilmez olsa da bir şema ayrıca farklı kullanıcılara ait ve daha ayrıntılı izinler, şema atanmış olan nesneleri içerebilir. Nesneleri şemaları arasında taşınabilir ve şema sahiplik arasında sorumluları aktarılabilir. Veritabanı kullanıcısı, şemaları etkilemeden bırakılabilir.  
+ Varsayılan olarak, geliştiriciler bir şemada nesne oluştururken nesneler, geliştiriciye değil, şemanın sahibi olan güvenlik sorumlusuna aittir. Nesne sahipliği, ALTER AUTHORIZATION Transact-SQL ifadesiyle aktarılabilir. Şema, farklı kullanıcılara ait olan ve şemaya atananlardan daha ayrıntılı izinlere sahip olan nesneleri de içerebilir, ancak bu, izinleri yönetmek için karmaşıklık eklediğinden bu önerilmez. Nesneler şemalar arasında taşınabilir ve şema sahipliği sorumlular arasında aktarılabilir. Veritabanı kullanıcıları şemalar etkilenmeden bırakılamaz.  
   
-### <a name="built-in-schemas"></a>Yerleşik şemaları  
- SQL Server rolleri ve yerleşik veritabanı kullanıcısı olarak aynı ada sahip on önceden tanımlanmış şemalar ile birlikte gelir. Bu, çoğunlukla geriye dönük uyumluluk için mevcut. Bunları gerekmiyorsa, sabit veritabanı rollerine olarak aynı adlara sahip şemaları bırakabilirsiniz. Şu şemalardan bırakılamıyor:  
+### <a name="built-in-schemas"></a>Yerleşik şemalar  
+ SQL Server, yerleşik veritabanı kullanıcıları ve rolleriyle aynı adlara sahip olan on önceden tanımlanmış şemalar ile birlikte gelir. Bunlar genellikle geriye dönük uyumluluk için vardır. Aynı ada sahip olan şemaları, gerek duymadıysanız, sabit veritabanı rolleriyle bırakabilirsiniz. Aşağıdaki şemaları bırakamazsınız:  
   
 - `dbo`  
   
@@ -37,25 +37,25 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 - `INFORMATION_SCHEMA`  
   
- Veritabanından bırakın, yeni veritabanları görünmez.  
+ Bunları model veritabanından bırakırsanız, bu yeni veritabanlarında görünmez.  
   
 > [!NOTE]
->  `sys` Ve `INFORMATION_SCHEMA` şemaları sistem nesneleri için ayrılmıştır. Bu şemaları nesneler oluşturamaz ve bunları bırakılamıyor.  
+> `sys` Ve`INFORMATION_SCHEMA` şemaları sistem nesneleri için ayrılmıştır. Bu şemalarda nesne oluşturamazsınız ve bunları bırakamazsınız.  
   
-#### <a name="the-dbo-schema"></a>Dbo Schema  
- `dbo` Şemadır yeni oluşturulan bir veritabanı için varsayılan şema. `dbo` Şema tarafından sahipli `dbo` kullanıcı hesabı. Varsayılan olarak, bu CREATE kullanıcı Transact-SQL komutuyla oluşturulan kullanıcınız `dbo` kendi varsayılan şema olarak.  
+#### <a name="the-dbo-schema"></a>Dbo şeması  
+ `dbo` Şema, yeni oluşturulan bir veritabanı için varsayılan şemadır. `dbo` Şemanın `dbo` Kullanıcı hesabına ait olması. Varsayılan olarak, Create User Transact-SQL komutuyla oluşturulan kullanıcılar varsayılan şemasına sahiptir `dbo` .  
   
- Atanmış kullanıcılar `dbo` şema izinleri devralmaz `dbo` kullanıcı hesabı. İzin yok bir şema kullanıcılar tarafından devralınır; Şema izinlerini şemasında bulunan nesneleri tarafından devralınır.  
+ `dbo` Şemaya atanan kullanıcılar, `dbo` Kullanıcı hesabının izinlerini almıyor. Bir şemadan kullanıcılar tarafından devralınan izin yok; şema izinleri, şemada bulunan veritabanı nesneleri tarafından devralınır.  
   
 > [!NOTE]
->  Veritabanı nesneleri bir bölüm adı kullanılarak başvurulur, SQL Server önce kullanıcının varsayılan şema içinde arar. Nesne var. bulunmazsa, SQL Server İleri'arar `dbo` şema. Nesne içinde değilse `dbo` şema, bir hata döndürülür.  
+> Veritabanı nesnelerine tek parçalı ad kullanılarak başvurulduğunda, SQL Server önce kullanıcının varsayılan şemasına bakar. Nesne bulunamazsa, `dbo` şemada bir sonraki SQL Server görünür. Nesne `dbo` şemada değilse bir hata döndürülür.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Nesne sahipliği ve şemaları hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kullanıcı şeması ayrımı](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Kullanıcı şeması ayrımı tarafından yapılan değişiklikleri açıklar. Yeni davranış, etkileri sahipliği, Katalog görünümleri ve izinleri içerir.|  
+|[Kullanıcı şeması ayrımı](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Kullanıcı şeması ayrımı tarafından tanıtılan değişiklikleri açıklar. Yeni davranış, sahiplik üzerindeki etkisi, katalog görünümleri ve izinleri içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -64,4 +64,4 @@ Server.Database.DatabaseSchema.DatabaseObject
 - [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server’da Sunucu ve Veritabanı Rolleri](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

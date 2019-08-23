@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 86590c2794339ac22cbc8ec5e11224736133e870
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 53b32e145390d7052262042c7a793699c163b373
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817969"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969348"
 ---
 # <a name="how-to-navigate-back-through-navigation-history"></a>Nasıl yapılır: Gezinme Geçmişinde Geriye Doğru Gitme
 Bu örnek, geri gezinme geçmişindeki girişlere nasıl gidileceğini gösterir.  
@@ -29,4 +29,4 @@ Bu örnek, geri gezinme geçmişindeki girişlere nasıl gidileceğini gösterir
  **CanGoBack** ve **GoBack** , <xref:System.Windows.Controls.Frame>, ve <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Navigation.NavigationService>tarafından uygulanır.  
   
 > [!NOTE]
->  **GoBack**'i çağırırsanız ve geri gezinme geçmişinde hiç giriş yoksa, bir <xref:System.InvalidOperationException> oluşturulur.
+> **GoBack**'i çağırırsanız ve geri gezinme geçmişinde hiç giriş yoksa, bir <xref:System.InvalidOperationException> oluşturulur.

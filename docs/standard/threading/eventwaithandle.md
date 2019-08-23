@@ -10,57 +10,57 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926365"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960047"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
-<xref:System.Threading.EventWaitHandle> Sinyal ve sinyalleri için bekleyen birbirleri ile iletişim kurmak için iş parçacığı sınıfı sağlar. Olay bekleme tanıtıcıları (yalnızca olaylar olarak da bilinir) bir veya daha fazla bekleyen iş parçacıklarının serbest bırakmak için işareti bekleme tanıtıcıları ' dir. Bu sinyal sonra bir olay bekleme tanıtıcısı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı ya da bir yerel olay bekleme tanıtıcısı (yerel olay) temsil edebilir veya adlandırılmış sistem olay işleyici (veya sistem olayın, tüm işlemler için görünür olarak adlandırılır) bekleyin.  
+Sınıfı <xref:System.Threading.EventWaitHandle> , iş parçacıklarının sinyalle ve sinyalleri beklemeden birbirleriyle iletişim kurmasına olanak tanır. Olay bekleme tutamaçları (yalnızca olaylar olarak da bilinir), bir veya daha fazla bekleyen iş parçacığını serbest bırakmak için sinyallenebilir bekleme tanıtıcılardır. Sinyalden sonra bir olay bekleme tutamacı el ile veya otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle> Sınıfı, yerel bir olay bekleme tanıtıcısını (yerel olay) veya adlandırılmış bir sistem olay bekleme işleyicisini (tüm işlemlere görünür) temsil edebilir.  
   
 > [!NOTE]
->  Olay bekleme tanıtıcıları .NET olmayan [olayları](../events/index.md). Temsilciler ya da olay işleyicileri kullanılan vardır. "Olay" sözcük olduğundan, bunlar geleneksel için işletim sistemi olaylar olarak adlandırılmıştır ve bekleyen iş parçacığı bekleme tanıtıcısı sinyal eylemi belirttiğinden tanımlamak için bir olayın oluştuğunu kullanılır.  
+> Olay bekleme tanıtıcıları .NET [olayları](../events/index.md)değildir. Dahil edilen temsilci veya olay işleyicisi yok. "Event" sözcüğü, geleneksel olarak işletim sistemi olayları olarak adlandırıldıklarından ve bekleme tanıtıcısını sinyal eden bir olayın gerçekleştiği iş parçacıklarını beklediğini gösterdiği için bunları anlatmak üzere kullanılır.  
   
- Sistem tarafından korunan eşitleme nesneleri hem yerel hem de adlandırılmış olay bekleme tanıtıcıları kullanan <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> sarmalayıcıları kaynakların serbest bırakıldığından emin olmak için. Kullanabileceğiniz <xref:System.Threading.WaitHandle.Dispose%2A> ne zaman, nesneyi kullanmayı bitirdikten hemen ücretsiz kaynaklar için yöntem.  
+ Hem yerel hem de adlandırılmış olay bekleme tanıtıcıları, kaynakların serbest bırakılacağını sağlamak için sarmalayıcılar <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> tarafından korunan sistem eşitleme nesnelerini kullanır. Nesnesini kullanmayı bitirdiğinizde kaynakları <xref:System.Threading.WaitHandle.Dispose%2A> hemen serbest bırakmak için yöntemini kullanabilirsiniz.  
   
-## <a name="event-wait-handles-that-reset-automatically"></a>Otomatik sıfırlama olay bekleme tanıtıcıları  
- Otomatik sıfırlama olay belirterek oluşturma <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> oluşturduğunuzda <xref:System.Threading.EventWaitHandle> nesne. Adından da anlaşılacağı gibi bu eşitleme olay tek bir bekleyen iş parçacığı bırakılıyor sonra sinyal olduğunda otomatik olarak sıfırlar. Çağırarak olayın sinyal kendi <xref:System.Threading.EventWaitHandle.Set%2A> yöntemi.  
+## <a name="event-wait-handles-that-reset-automatically"></a>Olay bekleme tarafından otomatik olarak sıfırlanan Işleyiciler  
+ <xref:System.Threading.EventWaitHandle> Nesneyi ne zaman oluşturduğunuzda belirterek <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType> otomatik sıfırlama olayı oluşturursunuz. Adından da anlaşılacağı gibi, tek bir bekleyen iş parçacığı serbest bırakıldıktan sonra bu eşitleme olayı, sinyal edildiğinde otomatik olarak sıfırlanır. <xref:System.Threading.EventWaitHandle.Set%2A> Yöntemini çağırarak olayı sinyal edin.  
   
- Otomatik sıfırlama olaylar genellikle bir kerede tek bir iş parçacığı için özel bir kaynağa erişim sağlamak için kullanılır. Bir iş parçacığı çağrı yaparak kaynak isteklerini <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemi. Başka bir iş parçacığı bekleme tanıtıcısı bulunduran ise, yöntem döndürür `true` ve çağıran iş parçacığını kaynak denetime sahiptir.  
+ Otomatik sıfırlama olayları genellikle tek bir iş parçacığı için bir kaynağa tek seferde özel erişim sağlamak için kullanılır. Bir iş parçacığı, <xref:System.Threading.WaitHandle.WaitOne%2A> yöntemini çağırarak kaynağı ister. Bekleme tutamacını tutan başka bir iş parçacığı yoksa, yöntemi döndürür `true` ve çağıran iş parçacığı kaynağın denetimini içerir.  
   
 > [!IMPORTANT]
->  Tüm eşitleme mekanizmaları gibi ile korunan bir kaynağa erişmeden önce tüm kod yolları üzerinde uygun bekleme tanıtıcısı bekleyin emin olmanız gerekir. İş parçacığı eşitleme ortaktır.  
+> Tüm eşitleme mekanizmalarından itibaren, korunan bir kaynağa erişmeden önce tüm kod yollarının uygun bekleme tanıtıcısından beklediğinden emin olmanız gerekir. İş parçacığı eşitlemesi birlikte çalışır.  
   
- İş parçacığı beklenirken otomatik sıfırlama olaya sinyal vermediyse, bir iş parçacığı üzerinde bekleyin girişiminde bulunmadan sinyal kalır. Olay iş parçacığını serbest bırakır ve hemen sıfırlar, sonraki iş parçacığı engelleme.  
+ Hiçbir iş parçacığı beklenirken otomatik sıfırlama olayı sinyallidir, bir iş parçacığı beklemek istediğinde sinyal kalır. Olay iş parçacığını yayınlar ve sonraki iş parçacıklarını engellemeyi hemen sıfırlar.  
   
-## <a name="event-wait-handles-that-reset-manually"></a>El ile Sıfırlanan olay bekleme tanıtıcıları  
- Belirterek elle sıfırlama olayı oluşturma <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> oluşturduğunuzda <xref:System.Threading.EventWaitHandle> nesne. Adından da anlaşılacağı gibi sinyal sonra bu eşitleme olay el ile sıfırlamanız gerekir. Bu, çağırarak sıfırlanana kadar kendi <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi, olay tutamacı bekleyin iş parçacığı devam hemen engellemeden.  
+## <a name="event-wait-handles-that-reset-manually"></a>Olay bekleme tarafından el Ile sıfırlanan Işleyiciler  
+ <xref:System.Threading.EventWaitHandle> Nesneyi ne zaman oluşturduğunuzda belirterek <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType> el ile sıfırlama olayı oluşturursunuz. Adından da anlaşılacağı gibi, bu eşitleme olayının sinyalden sonra el ile sıfırlanması gerekir. Sıfırlanana kadar, <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi çağırarak olay tanıtıcısını bekleyen iş parçacıkları doğrudan engellenmeden devam edilir.  
   
- El ile bir corral, ağ geçidi gibi olay davranır sıfırlayın. Olaya sinyal gönderilmedi, içinde bir corral atları gibi iş parçacığı üzerinde bekleyin engelleyin. Ne zaman olayın sinyal, çağırarak kendi <xref:System.Threading.EventWaitHandle.Set%2A> yöntemi, tüm bekleyen iş parçacığı devam etmek ücretsiz. Olay kadar sinyal kalır, <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi çağrılır. Bu elle sıfırlama olayı bir iş parçacığı bir görev bitene kadar beklemeniz gereken iş parçacıklarını tutmak için ideal bir yol sağlar.  
+ El ile sıfırlama olayı bir Corral kapısı gibi davranır. Olay sinyalsiz olmadığında, Corral gibi, BT bloğunda bekleyen iş parçacıkları. Olaya işaret edildiğinde, <xref:System.Threading.EventWaitHandle.Set%2A> yöntemini çağırarak, bekleyen tüm iş parçacıkları devam etmek ücretsizdir. Olayı, <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi çağrılana kadar sinyal olarak kalır. Bu, el ile sıfırlama olayını, bir iş parçacığının bir görevi bitirene kadar beklemesi gereken iş parçacıklarını tutmak için ideal bir yol haline getirir.  
   
- Bir corral bırakarak atları gibi yayımlanmış iş parçacığı işletim sistemi tarafından zamanlanması ve yürütme devam etmek için zaman alır. Varsa <xref:System.Threading.EventWaitHandle.Reset%2A> yöntemi, tüm iş parçacıklarının yürütülmesine devam ettirildi önce çağrılır, diğer iş parçacıkları yine engelleyin. Hangi iş parçacıklarını sürdürme ve hangi iş parçacıkları blok rastgele etkenlere bağlıdır, bu iş parçacığı sayısını sistemdeki yük gibi bekleyen Zamanlayıcı ve benzeri için. Olay sinyalini verir iş parçacığı en yaygın kullanım desenini olduğu sinyali sonra sona ererse, bir sorun değildir. Tüm bekleyen iş parçacığı devam ettirildi kadar tüm yeni göreve başlamak için bir olay iş parçacığı devam ettirildi bekleme sinyal iş parçacığı istiyorsanız engellemelidir. Aksi takdirde bir yarış durumu olması ve kodunuzu davranışını tahmin edilemez.  
+ Corral atmaya benzer şekilde, yayınlanan iş parçacıklarının işletim sistemi tarafından zamanlanması ve yürütmeyi sürdürmek için zaman alır. <xref:System.Threading.EventWaitHandle.Reset%2A> Yöntemi, tüm iş parçacıklarının yürütmeyi sürdürmesinden önce çağrılırsa, kalan iş parçacıkları yeniden engellenir. Hangi iş parçacıkları sürdürecek ve hangi iş parçacıklarının engellenmesi, sistemdeki yük, Scheduler için bekleyen iş parçacıklarının sayısı vb. gibi rastgele faktörlere bağlıdır. Bu, olayı işaret eden iş parçacığı, en yaygın kullanım deseninin olduğu sinyalden sonra sona erdiğinde bu bir sorun değildir. Tüm bekleyen iş parçacıkları devam ettirdikten sonra olayı işaret eden bir iş parçacığının yeni bir göreve başlamasını istiyorsanız, tüm bekleyen iş parçacıkları sürdürülene kadar bunu engellemeniz gerekir. Aksi takdirde, bir yarış koşulunuz vardır ve kodunuzun davranışı tahmin edilemez.  
   
-## <a name="features-common-to-automatic-and-manual-events"></a>Otomatik ve el ile olaylar ortak özellikleri  
- Genellikle, bir veya daha fazla iş parçacığı engelleme üzerinde bir <xref:System.Threading.EventWaitHandle> engeli bir iş parçacığı çağrı kadar <xref:System.Threading.EventWaitHandle.Set%2A> bekleyen iş parçacıklarının (durumunda otomatik sıfırlama olayları) birini veya tümünü serbest yöntemi (olaylar olması durumunda el ile sıfırlama). Bir iş parçacığı sinyal verebilirsiniz bir <xref:System.Threading.EventWaitHandle> ve ardından bunun üzerinde bir atomik işlem olarak statik çağırarak engelle <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> yöntemi.  
+## <a name="features-common-to-automatic-and-manual-events"></a>Otomatik ve El Ile olaylar için ortak özellikler  
+ Genellikle, engellenmemiş bir iş parçacığından birini <xref:System.Threading.EventWaitHandle> <xref:System.Threading.EventWaitHandle.Set%2A> çağıran bir veya daha fazla iş parçacığı, bekleyen iş parçacıklarından birini (otomatik sıfırlama olayları durumunda) veya tümünü (el ile sıfırlama olayları durumunda) yayınlar. Bir iş parçacığı bir <xref:System.Threading.EventWaitHandle> üzerinde sinyal verebilir ve sonra statik <xref:System.Threading.WaitHandle.SignalAndWait%2A?displayProperty=nameWithType> yöntemi çağırarak atomik bir işlem olarak bunu engelleyebilir.  
   
- <xref:System.Threading.EventWaitHandle> nesneleri ile statik kullanılabilir <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> yöntemleri. Çünkü <xref:System.Threading.EventWaitHandle> ve <xref:System.Threading.Mutex> sınıflarının her ikisi de türetilen <xref:System.Threading.WaitHandle>, bu yöntemlerle hem sınıflarını kullanabilirsiniz.  
+ <xref:System.Threading.EventWaitHandle>nesneler statik <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> ve <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> yöntemlerle kullanılabilir. Ve <xref:System.Threading.WaitHandle> <xref:System.Threading.EventWaitHandle> sınıflarının<xref:System.Threading.Mutex> her ikisi de öğesinden türetilmediği için, her iki sınıfı da bu yöntemlerle kullanabilirsiniz.  
   
-### <a name="named-events"></a>Adlandırılmış olayları  
- Windows işletim sistemi olay bekleme tanıtıcıları adları olmasını sağlar. Sistem genelinde bir adlandırılmış olayıdır. Diğer bir deyişle, adlandırılmış olayı oluşturulduktan sonra tüm iş parçacıklarının tüm işlemler için görünür. Bu nedenle, adlandırılmış olaylar, işlemler ve bunun yanı sıra iş parçacıkları etkinlikleri eşitlemek için kullanılabilir.  
+### <a name="named-events"></a>Adlandırılmış olaylar  
+ Windows işletim sistemi, olay bekleme tanıtıcılarının adlara sahip olmasını sağlar. Adlandırılmış bir olay sistem genelinde olur. Diğer bir deyişle, adlandırılmış olay oluşturulduktan sonra tüm süreçlerdeki tüm iş parçacıkları tarafından görülebilir. Bu nedenle, adlandırılmış olaylar işlem etkinliklerini ve iş parçacıklarını eşitlemesi için kullanılabilir.  
   
- Oluşturabileceğiniz bir <xref:System.Threading.EventWaitHandle> belirten bir olay adı oluşturucular birini kullanarak bir adlandırılmış sistem olayı temsil eden nesne.  
-  
-> [!NOTE]
->  Adlandırılmış olaylar Sistem genelinde olduğundan, birden çok mümkün <xref:System.Threading.EventWaitHandle> adlı olay aynı temsil eden nesneleri. Bir oluşturucu çağırmak her zaman veya <xref:System.Threading.EventWaitHandle.OpenExisting%2A> yöntemi, yeni bir <xref:System.Threading.EventWaitHandle> nesnesi oluşturulur. Tekrar tekrar aynı adı belirterek aynı adlandırılmış olayı temsil eden birden çok nesneleri oluşturur.  
-  
- Olayları adlı kullanırken dikkatli olmanız önerilir. Aynı adı kullanan başka bir işlem, iş parçacıkları sistem genelinde olduklarından beklenmedik bir şekilde engelleyebilirsiniz. Kötü amaçlı kod aynı bilgisayarda çalıştırıldığında bu bir hizmet reddi saldırısı temel olarak kullanabilirsiniz.  
-  
- Erişim denetimi güvenliği korumak için kullanmak bir <xref:System.Threading.EventWaitHandle> belirten bir kurucu kullanarak adlandırılmış bir olay tercihen temsil eden nesne bir <xref:System.Security.AccessControl.EventWaitHandleSecurity> nesne. Erişim denetimi güvenlik kullanarak uygulayabilirsiniz <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> yöntemi, ancak bu bir güvenlik açığı korumalı zaman arasında olay bekleme tanıtıcısı oluşturulduğu zaman penceresi bırakır. Olayları koruma erişim denetimi ile güvenlik kötü amaçlı saldırıların önlenmesine yardımcı olur, ancak yanlışlıkla ad çakışması sorunu çözmez.  
+ Bir olay adı belirten <xref:System.Threading.EventWaitHandle> oluşturuculardan birini kullanarak, adlandırılmış bir sistem olayını temsil eden bir nesne oluşturabilirsiniz.  
   
 > [!NOTE]
->  Farklı <xref:System.Threading.EventWaitHandle> türetilen sınıflar, sınıf <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent> temsil yalnızca yerel tutamaçlarını bekleyebileceği. Bunlar, adlandırılmış sistem olaylarını temsil edemez.  
+> Adlandırılmış olaylar sistem genelinde olduğundan, aynı adlandırılmış olayı temsil eden birden çok <xref:System.Threading.EventWaitHandle> nesne olması mümkündür. Her bir oluşturucuyu veya <xref:System.Threading.EventWaitHandle.OpenExisting%2A> yöntemini her çağırdığınızda yeni <xref:System.Threading.EventWaitHandle> bir nesne oluşturulur. Aynı adın belirtilmesi, aynı adlandırılmış olayı temsil eden birden çok nesne oluşturur.  
+  
+ Uyarı, adlandırılmış olayları kullanmanın kullanılması önerilir. Sistem genelinde olduklarından aynı adı kullanan başka bir işlem, iş parçacıklarını beklenmedik şekilde engelleyebilir. Aynı bilgisayarda çalışan kötü amaçlı kod bunu bir hizmet reddi saldırısı temeli olarak kullanabilir.  
+  
+ Adlandırılmış bir olayı temsil eden bir <xref:System.Threading.EventWaitHandle> nesneyi, tercihen bir <xref:System.Security.AccessControl.EventWaitHandleSecurity> nesneyi belirten bir oluşturucuyu kullanarak korumak için erişim denetimi güvenliği ' ni kullanın. <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> Yöntemi kullanarak erişim denetimi güvenliği de uygulayabilirsiniz, ancak bu, olay bekleme tutamacının oluşturulduğu zaman ve koruduğu zaman arasında bir güvenlik açığı penceresi bırakır. Erişim denetimi güvenliği ile olayları koruma kötü amaçlı saldırıları önlemeye yardımcı olur, ancak istemeden ad çakışmalarının sorununu çözmez.  
+  
+> [!NOTE]
+> Sınıfından farklı olarak türetilmiş sınıflar <xref:System.Threading.AutoResetEvent> ve <xref:System.Threading.ManualResetEvent> yalnızca yerel bekleme tutamaçlarını temsil edebilir. <xref:System.Threading.EventWaitHandle> Adlandırılmış sistem olaylarını temsil edemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

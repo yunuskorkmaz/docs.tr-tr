@@ -10,33 +10,33 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 760a800e7e7fe0ef13a333525aa45088bea736d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962169"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu Bileşeni (Windows Forms)
 > [!NOTE]
->  Ancak `MenuStrip` ve `ContextMenuStrip` değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> denetimleri önceki sürümlerinin <xref:System.Windows.Forms.MainMenu> ve <xref:System.Windows.Forms.ContextMenu> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> , Ve '`ContextMenuStrip` i önceki sürümlerin ve denetimlerine değiştirebilir ve bunları değiştirip, ve ' ı seçerseniz hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. `MenuStrip`  
   
- Windows Forms `ContextMenu` bileşen bir kolayca erişilebilir kısayol menüsünde seçilen bir nesneyle ilişkili sık kullanılan komutlar, kullanıcılara sağlamak için kullanılır. Bir kısayol menü öğelerinde, sık sık başka bir uygulamada görüntülenen ana menü öğelerinden bir alt kümesidir. Kısayol menüleri fareye sağ tıklayarak genellikle kullanılabilir. Windows Forms'ta bunlar diğer denetimleri ile ilişkilendirilir.  
+ Windows Forms `ContextMenu` bileşeni, kullanıcılara, seçilen nesneyle ilişkili sık kullanılan komutların kolay erişilebilir bir kısayol menüsünü sağlamak için kullanılır. Kısayol menüsündeki öğeler genellikle, ana menülerden uygulamanın başka bir yerinde görünen öğelerin bir alt kümesidir. Kısayol menüleri, genellikle fareyle sağ tıklanarak kullanılabilir. Windows Forms, diğer denetimlerle ilişkilendirilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [ContextMenu Bileşenine Genel Bakış](contextmenu-component-overview-windows-forms.md)  
- Genel konseptlerini tanıtan `ContextMenu` seçilen bir nesneyle ilişkili sık kullanılan komutlar, menüler oluşturma olanağı tanıyan bir bileşen.  
+ , Kullanıcıların seçilen bir nesneyle ilişkili `ContextMenu` sık kullanılan komutların menülerini oluşturmalarına olanak tanıyan, bileşenin genel kavramlarını tanıtır.  
   
- [Nasıl yapılır: Windows Forms ContextMenu bileşeni ile menü öğelerini ekleyip](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- Kısayol menüsü öğelerini Windows Forms'ta ekleyip açıklanmaktadır.  
+ [Nasıl yapılır: Windows Forms ContextMenu bileşeniyle menü öğeleri ekleme ve kaldırma](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ Windows Forms kısayol menü öğelerinin nasıl ekleneceğini ve kaldırılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.ContextMenu>  
- Başvuru bilgileri sağlar <xref:System.Windows.Forms.ContextMenu> sınıfını ve üyelerini.  
+ <xref:System.Windows.Forms.ContextMenu> Sınıf ve üyeleri hakkında başvuru bilgileri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms denetimlerini, tam bir listesi, kullanımları hakkında bilgi için bağlantılar sağlar.  
+ Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

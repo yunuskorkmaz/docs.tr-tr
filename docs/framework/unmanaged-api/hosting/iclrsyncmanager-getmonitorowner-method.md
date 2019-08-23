@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c986de068cd79ae3662c82ed24906d42bf2780
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e08af840d1c4a654fa9b9ff8b2064f5265afaf9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759042"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943237"
 ---
 # <a name="iclrsyncmanagergetmonitorowner-method"></a>ICLRSyncManager::GetMonitorOwner Metodu
-Alır [Ihosttask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) sahibi tarafından belirtilen tanımlama bilgisinin tanımlanan izleme örneği.  
+Belirtilen tanımlama bilgisi tarafından tanımlanan izleyicinin sahibi olan [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) örneğini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,38 +38,38 @@ HRESULT GetMonitorOwner (
   
 ## <a name="parameters"></a>Parametreler  
  `cookie`  
- [in] İzleyiciyle ilişkili tanımlama.  
+ 'ndaki İzleyiciyle ilişkili tanımlama bilgisi.  
   
  `ppOwnerHostTask`  
- [out] Bir işaretçi `IHostTask` şu anda sahip olan İzleyici ya da null görev sahipliği varsa.  
+ dışı Şu anda izleyicisine `IHostTask` sahip olan bir işaretçi veya hiçbir görevin sahipliği yoksa null.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`GetMonitorOwner` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`GetMonitorOwner`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ana bilgisayar genellikle çağrıları `GetMonitorOwner` kilitlenme algılaması mekanizması bir parçası olarak. Tanımlama bilgisi için bir çağrı kullanılarak oluşturulduğunda bir izleyiciyle ilişkili [Ihostsyncmanager::createmonitorevent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md).  
+ Ana bilgisayar genellikle kilitlenme `GetMonitorOwner` algılama mekanizmanın bir parçası olarak çağırır. Tanımlama bilgisi [IHostSyncManager:: CreateMonitorEvent](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)çağrısı kullanılarak oluşturulduğunda bir izleyici ile ilişkilendirilir.  
   
 > [!NOTE]
->  İzleyici temel olay serbest bırakmak için bir çağrı engelleyebilecek — ancak değil kilitlenme — bu yönteme bir çağrı şu anda yürürlükte izleyen ile ilişkili tanımlama açıksa. Bu İzleyici almayı denerseniz diğer görevleri de engelleyebilir.  
+> İzlemeyi izleyen olayı serbest bırakma çağrısı, bu yönteme yönelik bir çağrı Şu anda bu izleyiciyle ilişkili tanımlama bilgisinde etkinse engelleyebilir, ancak kilitlenmeyecektir —. Diğer görevler de bu izleyiciyi almayı deneseler de engelleyebilirler.  
   
- `GetMonitorOwner` her zaman hemen döndürür ve çağrısı yapıldıktan sonra istediğiniz zaman çağrılabilir `CreateMonitorEvent`. Ana görevi, olayda bekleyen beklemeniz gerekmez.  
+ `GetMonitorOwner`her zaman hemen döndürür ve çağrısından `CreateMonitorEvent`sonra herhangi bir zaman çağrılabilir. Konağın, bir görevin olayda beklenene kadar beklemesi gerekmez.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

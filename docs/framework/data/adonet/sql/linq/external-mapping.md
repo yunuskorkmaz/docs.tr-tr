@@ -2,40 +2,40 @@
 title: Dış Eşleme
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 0b6ced31f5534bd040917ecc5d241d54d9bee95f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950323"
 ---
 # <a name="external-mapping"></a>Dış Eşleme
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekleyen *dış eşleme*, bir işlem olarak, ayrı bir XML dosyasına, nesne modeli ile veritabanı veri modeli arasında eşleme belirtmek için kullanın. Bir dış eşleme dosyası kullanmanın avantajları şunlardır:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], veritabanının veri modeliyle nesne modelinize eşleme belirtmek için ayrı bir XML dosyası kullandığınız bir işlem olan *dış eşlemeyi*destekler. Dış eşleme dosyası kullanmanın avantajları şunlardır:  
   
-- Eşleme kodunuzu uygulama kodunuz dışında tutabilirsiniz. Bu yaklaşım, uygulama kodunuzda dağınıklığı azaltır.  
+- Eşleme kodunuzu uygulama kodunuzun dışında tutabilirsiniz. Bu yaklaşım, uygulama kodunuzda dağınıklığı azaltır.  
   
-- Bir yapılandırma dosyası gibi bir dış eşleme dosyası davranabilirsiniz. Örneğin, ikili dosyaları aktarma sonra dış eşleme dosyasını değiştirerek, uygulamanızın nasıl davranacağını güncelleştirebilirsiniz.  
+- Bir dış eşleme dosyasını bir yapılandırma dosyası gibi bir şekilde kabul edebilirsiniz. Örneğin, ikili dosyaları gönderdikten sonra, dış eşleme dosyasını değiştirerek uygulamanızın davranışını güncelleştirebilirsiniz.  
   
 ## <a name="requirements"></a>Gereksinimler  
- Eşleme dosyasını bir XML dosyası olmalıdır ve dosya karşı doğrulamalıdır bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şema tanımı (.xsd) dosyası.  
+ Eşleme dosyası bir XML dosyası olmalıdır ve dosyanın bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şema tanımı (. xsd) dosyası ile doğrulanması gerekir.  
   
  Aşağıdaki kurallar geçerlidir:  
   
-- Eşleme dosyasını bir XML dosyası olmalıdır.  
+- Eşleme dosyası bir XML dosyası olmalıdır.  
   
-- XML eşleme dosyası karşı XML şema tanımı dosyası geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+- XML eşleme dosyası XML şema tanımı dosyasında geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
-- Dış eşleme öznitelik tabanlı eşleme geçersiz kılar. Diğer bir deyişle, bir dış eşleme kaynak oluşturmak için kullandığınızda bir <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> sınıflarında oluşturduğunuz tüm eşleme öznitelikleri yok sayar. Bu davranış, sınıfın dış eşleme dosyasında olup olmadığı dahil geçerlidir.  
+- Dış eşleme, öznitelik tabanlı eşlemeyi geçersiz kılar. Diğer bir deyişle, oluşturmak için bir <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext> dış eşleme kaynağı kullandığınızda sınıflarda oluşturduğunuz tüm eşleme özniteliklerini yoksayar. Bu davranış, sınıfın dış eşleme dosyasına dahil edilip edilmemesinin doğru olması durumunda geçerlidir.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iki eşleme yaklaşım (öznitelik tabanlı ve dış) karma kullanımını desteklemiyor.  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]iki eşleme yaklaşımının karma kullanımını desteklemez (öznitelik tabanlı ve harici).  
   
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
- Dış eşlemede [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] karşı aşağıdaki XML şema tanımı geçerli olmalıdır.  
+ ' Deki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dış eşleme, aşağıdaki XML şema tanımına karşı geçerli olmalıdır.  
   
- Bir DBML dosyasının doğrulamak için kullanılan şema tanımı dosyası bu şema tanımı dosyasındaki ayırmak. Daha fazla bilgi için [LINQ to SQL'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Bu şema tanımı dosyasını bir DBML dosyasını doğrulamak için kullanılan şema tanım dosyasından ayırt edin. Daha fazla bilgi için bkz. [LINQ to SQL 'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
->  Visual Studio kullanıcıları Ayrıca bu XSD dosyası XML şemaları iletişim kutusunda "LinqToSqlMapping.xsd" bulabilirsiniz. Bir dış eşleme dosyası doğrulamak için bu dosyayı doğru bir şekilde kullanmak için bkz: [nasıl yapılır: DBML ve dış eşleme dosyalarını doğrulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md).  
+> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını XML şemaları iletişim kutusunda "LinqToSqlMapping. xsd" olarak bulur. Bir dış eşleme dosyasını doğrulamak için bu dosyayı doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Nasıl yapılır: Nesne modelini dış dosya oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Nasıl yapılır: Nesne modelini dış dosya olarak oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

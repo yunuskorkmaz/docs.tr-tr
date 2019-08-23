@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 34a5cd735c350688d9e83003806668e213932c85
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960618"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Windows Gezgini Stilinde bir Arabirim Oluşturma
 Windows Gezgini, uygulama için önceden kullanılan bir kullanıcı arabirimi seçiminden kaynaklanır.
@@ -35,7 +35,7 @@ Windows Gezgini, uygulama için önceden kullanılan bir kullanıcı arabirimi s
 3. CTRL tuşuna basarak ve sırasıyla tıklayarak tüm üç denetimi seçin. <xref:System.Windows.Forms.SplitContainer> Denetimi seçtiğinizde, panolar yerine Bölümlendirici çubuğuna tıklayın.
 
     > [!NOTE]
-    >  **Düzenleme** menüsünde **Tümünü Seç** komutunu kullanmayın. Bunu yaparsanız, sonraki adımda gerekli olan özellik **Özellikler** penceresinde görünmez.
+    > **Düzenleme** menüsünde **Tümünü Seç** komutunu kullanmayın. Bunu yaparsanız, sonraki adımda gerekli olan özellik **Özellikler** penceresinde görünmez.
 
 4. **Özellikler** penceresinde, <xref:System.Windows.Forms.SplitContainer.Dock%2A> özelliğini olarak <xref:System.Windows.Forms.DockStyle.Fill>ayarlayın.
 
@@ -44,7 +44,7 @@ Windows Gezgini, uygulama için önceden kullanılan bir kullanıcı arabirimi s
      Form, Windows Gezgini ' ne benzer şekilde iki bölümden oluşan bir kullanıcı arabirimi görüntüler.
 
     > [!NOTE]
-    >  Bölümlendirici sürüklediğiniz zaman, panolar kendilerini yeniden boyutlandırır.
+    > Bölümlendirici sürüklediğiniz zaman, panolar kendilerini yeniden boyutlandırır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

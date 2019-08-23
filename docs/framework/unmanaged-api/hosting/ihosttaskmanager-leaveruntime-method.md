@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 959cb541013ca0a26557e849874dbb329489d855
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b2e8e636915b3921fcd727fc78a3fb18fc69104
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749537"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959035"
 ---
 # <a name="ihosttaskmanagerleaveruntime-method"></a>IHostTaskManager::LeaveRuntime Yöntemi
-Konak şu anda yürütülen görev hakkında ortak dil çalışma zamanı (CLR) bırakın ve yönetilmeyen kodu girmeniz olduğunu bildirir.  
+Ana bilgisayara şu anda yürütülmekte olan görevin ortak dil çalışma zamanını (CLR) bırakmak üzere olduğunu bildirir ve yönetilmeyen kod girin.  
   
 > [!IMPORTANT]
->  Karşılık gelen bir çağrı [Ihosttaskmanager::enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) konak şu anda yürütülmekte olan görevi yönetilen kod yeniden girildi bildirir.  
+> [IHostTaskManager:: EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md) öğesine karşılık gelen bir çağrı, ana bilgisayara şu anda yürütülmekte olan görevin yönetilen kodu yeniden girdiğini bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,40 +40,40 @@ HRESULT LeaveRuntime (
   
 ## <a name="parameters"></a>Parametreler  
  `target`  
- [in] Çağrılacak yönetilmeyen işlev eşlenen taşınabilir çalıştırılabilir dosyasının içinde adresi.  
+ 'ndaki Çağrılan yönetilmeyen işlevin eşlenmiş taşınabilir yürütülebilir dosyasındaki adres.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`LeaveRuntime` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|CLR'yi bir işleme yüklü değil veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_OUTOFMEMORY|İstenen ayırma tamamlamak yeterli bellek yok.|  
+|S_OK|`LeaveRuntime`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_OUTOFMEMORY|İstenen ayırmayı tamamlamaya yetecek miktarda bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Arama dizileri için ve yönetilmeyen koddan yuvalanabilir. Örneğin, aşağıdaki listede, kuramsal bir durumda açıklar için çağrı `LeaveRuntime`, [Ihosttaskmanager::reverseenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [Ihosttaskmanager::reverseleaveruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md), ve `IHostTaskManager::EnterRuntime` ana bilgisayarın iç içe katmanlar belirlemenize izin verir.  
+ Yönetilmeyen koddan ve öğesinden gelen çağrı dizileri iç içe olabilir. Örneğin, aşağıdaki liste,, `LeaveRuntime` [IHostTaskManager:: smarenterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md), [IHostTaskManager:: ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)öğesine çağrı dizisinin bir kuramsal durumu açıklar ve `IHostTaskManager::EnterRuntime` konağın iç içe katmanları belirler.  
   
-|Eylem|İlgili yöntem çağrısı|  
+|Eylem|Karşılık gelen yöntem çağrısı|  
 |------------|-------------------------------|  
-|Yönetilen bir Visual Basic yürütülebilir çağrıları platformu kullanarak C için yazılmış yönetilmeyen bir işlev çağırır.|`IHostTaskManager::LeaveRuntime`|  
-|Yönetilmeyen C işlevi yazılan yönetilen bir DLL içindeki bir yöntemi çağıran C#.|`IHostTaskManager::ReverseEnterRuntime`|  
-|Yönetilen C# işlevi C için yazılmış olan ve başka bir yönetilmeyen işlev çağrıları, ayrıca platformunu kullanarak çağırın.|`IHostTaskManager::LeaveRuntime`|  
-|İkinci yönetilmeyen işlev yürütmesi döndürür C# işlevi.|`IHostTaskManager::EnterRuntime`|  
-|C# İşlevi yürütme için ilk yönetilmeyen işlev döndürür.|`IHostTaskManager::ReverseLeaveRuntime`|  
-|İlk yönetilmeyen işlev yürütme için Visual Basic programını döndürür.|`IHostTaskManager::EnterRuntime`|  
+|Yönetilen bir Visual Basic çalıştırılabilir, platform Invoke kullanılarak C dilinde yazılmış yönetilmeyen bir işlevi çağırır.|`IHostTaskManager::LeaveRuntime`|  
+|Yönetilmeyen C işlevi, içinde C#YAZıLMıŞ yönetilen DLL içindeki bir yöntemi çağırır.|`IHostTaskManager::ReverseEnterRuntime`|  
+|Yönetilen C# işlev, platform Invoke kullanılarak C dilinde yazılmış başka bir yönetilmeyen işlevi çağırır.|`IHostTaskManager::LeaveRuntime`|  
+|İkinci yönetilmeyen işlev, C# işlevine yürütme döndürür.|`IHostTaskManager::EnterRuntime`|  
+|İşlev C# , yürütmeyi ilk yönetilmeyen işleve döndürür.|`IHostTaskManager::ReverseLeaveRuntime`|  
+|İlk yönetilmeyen işlev Visual Basic programına yürütme döndürür.|`IHostTaskManager::EnterRuntime`|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 0b77fc4c2a7c7df6efc9f4d8ce4001c39250ab94
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950386"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities Sorgu İfadeleri
-Tek değer, nesne, yöntemi veya ad alanı için değerlendirilen kodun bir parçasını ifadesidir. Değişmez değer, bir yöntem çağrısı, bir işleci ve işlenenleri veya basit bir ad ifadeleri içerebilir. Basit adları bir değişken, tür üyesi, yöntem parametresi, ad alanı veya tür adı olabilir. İfadeler sırayla parametreleri veya diğer sırayla yöntem çağrılarını parametreleri olan yöntem çağrıları diğer ifadeler kullanan işleçlerini kullanabilirsiniz. Bu nedenle, ifadeleri basitten çok karmaşık değişebilir.  
+Bir ifade, tek bir değer, nesne, yöntem veya ad alanı olarak değerlendirilebilen kodun bir parçadır. İfadeler bir değişmez değer, bir yöntem çağrısı, bir işleç ve işlenenleri veya basit bir ad içerebilir. Basit adlar bir değişkenin adı, tür üyesi, yöntem parametresi, ad alanı veya tür olabilir. İfadeler, diğer ifadeleri parametre olarak kullanan işleçler veya parametreleri diğer Yöntem çağrılarını aç içinde olan Yöntem çağrıları ' nı kullanabilir. Bu nedenle, ifadeler basit ve çok karmaşık olarak değişebilir.  
   
- LINQ to Entities sorgularında, ifade içindeki türleri tarafından izin verilen herhangi bir şey içerebilir <xref:System.Linq.Expressions> ad alanı, lambda ifadeleri de dahil olmak üzere. LINQ to Entities sorgularında kullanılabilen kullanılabilir ifadeler kümesi ifadelerdir Sorgulanacak [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  Sorguları parçası olan ifadeleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] tarafından desteklenen operations sınırlıdır `ObjectQuery<T>` ve temel alınan veri kaynağı.  
+ LINQ to Entities sorgularda, ifadeler, lambda ifadeleri dahil olmak üzere <xref:System.Linq.Expressions> ad alanı içindeki türlerin izin verdiği her şeyi içerebilir. LINQ to Entities sorgularında kullanılabilecek ifadeler, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]sorgulamak için kullanılabilen ifadelerin bir üst kümesidir.  Üzerinde sorguların parçası olan ifadeler, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] tarafından `ObjectQuery<T>` desteklenen işlemlerle ve temel alınan veri kaynağıyla sınırlıdır.  
   
- Aşağıdaki örnekte, Karşılaştırmada `Where` yan tümcesi ise bir ifade:  
+ Aşağıdaki örnekte, `Where` yan tümcesindeki karşılaştırma bir ifadedir:  
   
  [!code-csharp[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#whereexpression)]
  [!code-vb[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#whereexpression)]  
   
 > [!NOTE]
->  Gibi belirli dil yapılarını C# `unchecked`, LINQ to Entities'de herhangi bir anlamı yoktur.  
+> Gibi belirli dil yapıları C# `unchecked`LINQ to Entities bir anlamı yoktur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sabit İfadeler](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  

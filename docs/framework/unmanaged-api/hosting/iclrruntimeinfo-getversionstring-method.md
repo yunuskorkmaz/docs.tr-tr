@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20c7d6a1fd9c1f75f43e42ece59b7fbabd150564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765503"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929852"
 ---
 # <a name="iclrruntimeinfogetversionstring-method"></a>ICLRRuntimeInfo::GetVersionString Yöntemi
-Ortak dil çalışma zamanı (CLR) sürüm bilgileri ile ilişkili alır bir verilen [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimi.  
+Belirli bir [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimiyle ilişkili ortak dil çalışma zamanı (CLR) sürüm bilgilerini alır.  
   
- Bu yöntem, aşağıdaki işlevleri yerine geçer:  
+ Bu yöntem aşağıdaki işlevlerin yerini alır:  
   
 - [GetRequestedRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
@@ -43,32 +43,32 @@ HRESULT GetVersionString(
   
 ## <a name="parameters"></a>Parametreler  
  `pwzBuffer`  
- [out] .NET Framework derleme sürümü biçimi "v*A*. *B*[. *X*] ". *A*, *B*, ve *X* ana sürüm, ikincil sürüm ve derleme numarasını karşılık gelen ondalık sayılardır. *X* isteğe bağlıdır. Varsa *X* olan mevcut yoktur sonuna bir nokta.  
+ dışı "V*A*" biçimindeki derleme sürümü .NET Framework. *B* [. *X*] ". *A*, *B*ve *X* , ana sürüme, ikincil sürüme ve yapı numarasına karşılık gelen ondalık sayılardır. *X* isteğe bağlıdır. *X* yoksa, izleyen bir dönem yoktur.  
   
 > [!NOTE]
->  C:\Windows\Microsoft.NET\Framework altında göründüğü gibi bu parametre .NET Framework sürümü için dizin adı eşleşmelidir.  
+> Bu parametrenin .NET Framework sürümünün dizin adıyla eşleşmesi gerekir, çünkü C:\Windows\Microsoft.NET\Framework. altında görünür.  
   
- Örnek değerler şunlardır: "v1.0.3705", "v1.1.4322", "v2.0.50727" ve "v4.0. *x*"burada *x* yüklü derleme sayısına bağlıdır. "V" ön eki zorunlu olduğuna dikkat edin.  
+ Örnek değerler şunlardır "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" ve "v 4.0. *x*", burada *x* , yüklü yapı numarasına bağlıdır. "V" ön ekinin zorunlu olduğunu unutmayın.  
   
  `pchBuffer`  
- [out içinde] Boyutunu belirtir `pwzBuffer` arabellek taşması önlemek için. Varsa `pwzBuffer` olduğu `null`, `pchBuffer` gerekli boyutunu döndürür `pwzBuffer` serilerindeki izin vermek için.  
+ [in, out] Arabellek taşmalarını önlemek `pwzBuffer` için boyutunu belirtir. İse, `pwzBuffer` ön ayırmaya izin vermek için gereken boyutunu döndürür. `pchBuffer` `null` `pwzBuffer`  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pwzBuffer` veya `pchBuffer` null.|  
+|E_POINTER|`pwzBuffer`ya `pchBuffer` da null.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,31 +10,31 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3ed2b5c94e4a38a5873a34e61287c4038cab5cbb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956536"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Nasıl yapılır: GDI ile Metin Çizme
-İle <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yönteminde <xref:System.Windows.Forms.TextRenderer> sınıfı, bir form veya denetim metin çizme GDI işlevselliği erişebilirsiniz. GDI metin işleme, genellikle daha iyi performans ve GDI + ' ölçmek daha doğru metin sunar.  
+<xref:System.Windows.Forms.TextRenderer> Sınıfındaki yöntemiyle, bir form veya denetimde metin çizmek için GDI işlevlerine erişebilirsiniz. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> GDI metin işleme, genellikle daha iyi performans ve GDI+ ' dan daha doğru metin ölçme sağlar.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Yöntemlerinin <xref:System.Windows.Forms.TextRenderer> sınıf için yazdırma desteklenmez. Yazdırma sırasında her zaman kullan <xref:System.Drawing.Graphics.DrawString%2A> yöntemlerinin <xref:System.Drawing.Graphics> sınıfı.  
+> <xref:System.Windows.Forms.TextRenderer> Sınıfının yöntemleri yazdırma için desteklenmez. <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Yazdırırken, her zaman <xref:System.Drawing.Graphics.DrawString%2A> <xref:System.Drawing.Graphics> sınıfının yöntemlerini kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanarak bir dikdörtgen içindeki birden fazla satır üzerinde metin Çiz gösterilmektedir <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yöntemi.  
+ Aşağıdaki kod örneği, <xref:System.Windows.Forms.TextRenderer.DrawText%2A> yöntemi kullanılarak bir dikdörtgen içinde birden çok satıra nasıl metin çizileceğini gösterir.  
   
  [!code-csharp[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/CS/Form1.cs#7)]
  [!code-vb[System.Windows.Forms.TextRendererExamples#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TextRendererExamples/VB/Form1.vb#7)]  
   
- Metin işlemek için <xref:System.Windows.Forms.TextRenderer> ihtiyacınız sınıfı, bir <xref:System.Drawing.IDeviceContext>, gibi bir <xref:System.Drawing.Graphics> ve <xref:System.Drawing.Font>, metin ve rengini, bunu çizilip çizmek için bir konum. Metin biçimlendirme kullanarak isteğe bağlı olarak belirtebilirsiniz <xref:System.Windows.Forms.TextFormatFlags> sabit listesi.  
+ <xref:System.Windows.Forms.TextRenderer> Sınıfı ile metin işlemek için bir <xref:System.Drawing.Graphics> ve <xref:System.Drawing.Font>gibi bir, <xref:System.Drawing.IDeviceContext>metin çizmek için bir konum ve çizilmesi gereken renk gerekir. İsteğe bağlı olarak, <xref:System.Windows.Forms.TextFormatFlags> numaralandırmayı kullanarak metin biçimlendirmesini belirtebilirsiniz.  
   
- Daha fazla bilgi edinmek için bir <xref:System.Drawing.Graphics>, bkz: [nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md). Oluşturma hakkında daha fazla bilgi için bir <xref:System.Drawing.Font>, bkz: [nasıl yapılır: Yazı tipi aileleri ve yazı tipleri oluşturmak](how-to-construct-font-families-and-fonts.md).  
+ Alma <xref:System.Drawing.Graphics>hakkında daha fazla bilgi için bkz [. nasıl yapılır: Çizim](how-to-create-graphics-objects-for-drawing.md)için grafik nesneleri oluşturun. Oluşturma <xref:System.Drawing.Font>hakkında daha fazla bilgi için bkz [. nasıl yapılır: Yazı tipi aileleri ve yazı](how-to-construct-font-families-and-fonts.md)tipleri oluşturun.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki kod örneğinde, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+ Yukarıdaki kod örneği, Windows Forms ile kullanım için tasarlanmıştır ve parametresi <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.PaintEventHandler>olan `e`' ı gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

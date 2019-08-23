@@ -5,38 +5,38 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878416"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963171"
 ---
 # <a name="schema-restrictions"></a>Şema Kısıtlamaları
-İsteğe bağlı ikinci parametresi **GetSchema** yöntemdir şema bilgileri miktarını sınırlamak için kullanılan kısıtlamaları döndürdü ve geçer **GetSchema** dize dizisi olarak yöntemi . Bu kısıtlama sayıya eşdeğerdir ve geçirebileceğiniz değerleri dizisinde konumunu belirler.  
+**GetSchema** yönteminin ikinci isteğe bağlı parametresi döndürülen şema bilgisi miktarını sınırlamak için kullanılan kısıtlamalardır ve **GetSchema** yöntemine dizeler dizisi olarak geçirilir. Dizideki konum, geçirebileceğinizi belirten değerleri belirler ve bu, kısıtlama numarasına eşdeğerdir.  
   
- Örneğin, aşağıdaki tabloda, SQL Server için .NET Framework veri sağlayıcısı kullanarak "Tablo" şema koleksiyonu tarafından desteklenen kısıtlamaları açıklamaktadır. SQL Server şema koleksiyonları için ek kısıtlamalar, bu konunun sonunda listelenmiştir.  
+ Örneğin, aşağıdaki tabloda SQL Server için .NET Framework Veri Sağlayıcısı kullanılarak "tablolar" şema koleksiyonu tarafından desteklenen kısıtlamalar açıklanmaktadır. SQL Server şema koleksiyonları için ek kısıtlamalar bu konunun sonunda listelenmiştir.  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
-## <a name="specifying-restriction-values"></a>Kısıtlama değerleri belirtme  
- "Tablo" şema koleksiyonundaki kısıtlamaları birini kullanmak için yalnızca dört öğe içeren bir dizeler dizisi oluşturun, sonra bir değer kısıtlaması numarasıyla eşleşen öğe yerleştirin. Tarafından tabloları kısıtlamak için döndürülen **GetSchema** yöntemi yalnızca bu tablolara "Sales" şema öğesine iletmeden önce "Sales" için bir dizinin ikinci öğe ayarlama **GetSchema** yöntemi.  
+## <a name="specifying-restriction-values"></a>Kısıtlama değerlerini belirtme  
+ "Tables" şema koleksiyonu kısıtlamalarından birini kullanmak için, dört öğeli bir dize dizisi oluşturmanız yeterlidir, sonra bir değeri kısıtlama numarasıyla eşleşen bir değere yerleştirebilirsiniz. Örneğin, **GetSchema** yöntemi tarafından döndürülen tabloları yalnızca "Sales" şemasında bulunan tablolara kısıtlamak için, dizinin Ikinci öğesini **GetSchema** yöntemine geçirmeden önce "Sales" olarak ayarlayın.  
   
 > [!NOTE]
->  Kısıtlamaları koleksiyonlar için `SqlClient` ve `OracleClient` ek bir sahip `ParameterName` sütun. Kısıtlama varsayılan sütun var. yine de geriye dönük uyumluluğa yöneliktir, ancak şu anda göz ardı edilir. Kısıtlama değerleri belirtmek için bir SQL ekleme saldırısına riskini en aza indirmek için dize değiştirme yerine parametreli sorgular kullanılması gerekir.  
+> İçin `SqlClient` kısıtlamalar koleksiyonları ve `OracleClient` ek `ParameterName` bir sütun vardır. Kısıtlama varsayılan sütunu, geriye doğru uyumluluk için hala mevcuttur, ancak şu anda yok sayılır. Kısıtlama değerlerini belirtirken bir SQL ekleme saldırısının riskini en aza indirmek için, dize değiştirme yerine parametreli sorgular kullanılmalıdır.  
   
 > [!NOTE]
->  Dizideki öğelerin sayısını başka belirtilen şema koleksiyonu için desteklenen kısıtlama sayısı küçük veya buna eşit olmalıdır. bir <xref:System.ArgumentException> oluşturulur. Olabilir en yüksek kısıtlama sayısı daha az. Eksik kısıtlamaları (sınırsız) null olarak kabul edilir.  
+> Dizideki öğe sayısı, belirtilen şema koleksiyonu için desteklenen kısıtlama sayısına eşit veya ondan küçük olmalıdır, aksi takdirde bir <xref:System.ArgumentException> oluşturulur. En yüksek kısıtlama sayısından daha az olabilir. Eksik kısıtlamaların null (Kısıtlanmamış) olduğu varsayılır.  
   
- Desteklenen kısıtlama listesine çağırarak belirlemek için bir .NET Framework yönetilen sağlayıcı sorgulayabilirsiniz **GetSchema** yöntemi "kısıtlamaları" kısıtlamaları şema koleksiyonu adı. Bu döndürür bir <xref:System.Data.DataTable> koleksiyon adları, kısıtlama adları, varsayılan kısıtlama değerleri ve kısıtlama numaraları listesi ile.  
+ "Kısıtlamalar" olan kısıtlama şeması koleksiyonu adı ile **GetSchema** yöntemini çağırarak desteklenen kısıtlamaların listesini öğrenmek için, .NET Framework yönetilen bir sağlayıcıyı sorgulayabilirsiniz. Bu, koleksiyon adlarının <xref:System.Data.DataTable> , kısıtlama adlarının, varsayılan kısıtlama değerlerinin ve kısıtlama numaralarının listesini içeren bir döndürür.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösteren <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server için .NET Framework veri sağlayıcısı yöntemi <xref:System.Data.SqlClient.SqlConnection> tüm bulunan tabloların şema bilgilerini almak için sınıf **AdventureWorks**örnek veritabanı ve bilgileri kısıtlamak için döndürülen yalnızca şema "Satış" tablolar için:  
+ Aşağıdaki örneklerde, **AdventureWorks** örnek veritabanında bulunan tüm <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> tablolar hakkında şema bilgilerini almak için SQL Server <xref:System.Data.SqlClient.SqlConnection> sınıfının .NET Framework veri sağlayıcısı yönteminin nasıl kullanılacağı gösterilmektedir. ve döndürülen bilgileri yalnızca "Sales" şemasında bulunan tablolara kısıtlamak için:  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -130,137 +130,137 @@ class Program
 }  
 ```  
   
-## <a name="sql-server-schema-restrictions"></a>SQL Server şema kısıtlamaları  
- SQL Server şema koleksiyonları için kısıtlamaları aşağıdaki tablolarda listelenmiştir.  
+## <a name="sql-server-schema-restrictions"></a>SQL Server şeması kısıtlamaları  
+ Aşağıdaki tablolarda SQL Server şema koleksiyonları için kısıtlamalar listelenmektedir.  
   
 ### <a name="users"></a>Kullanıcılar  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|User_name|@Name|name|1.|  
+|Kullanıcı_adı|@Name|name|1\.|  
   
 ### <a name="databases"></a>Veritabanları  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Ad|@Name|Ad|1.|  
+|Ad|@Name|Ad|1\.|  
   
-### <a name="tables"></a>Tabloları  
+### <a name="tables"></a>Takvimleri  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
 ### <a name="columns"></a>Sütunlar  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
   
 ### <a name="structuredtypemembers"></a>StructuredTypeMembers  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
   
 ### <a name="views"></a>Görünümler  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
   
 ### <a name="viewcolumns"></a>ViewColumns  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|VIEW_CATALOG|1.|  
+|Katalog|@Catalog|VIEW_CATALOG|1\.|  
 |Sahip|@Owner|VIEW_SCHEMA|2|  
 |Tablo|@Table|VIEW_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
   
 ### <a name="procedureparameters"></a>ProcedureParameters  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|SPECIFIC_CATALOG|1.|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1\.|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
 |Ad|@Name|SPECIFIC_NAME|3|  
 |Parametre|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Yordamlar  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|SPECIFIC_CATALOG|1.|  
+|Katalog|@Catalog|SPECIFIC_CATALOG|1\.|  
 |Sahip|@Owner|SPECIFIC_SCHEMA|2|  
 |Ad|@Name|SPECIFIC_NAME|3|  
 |Tür|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|db_name()|1.|  
-|Sahip|@Owner|user_name()|2|  
-|Tablo|@Table|o.Name|3|  
+|Katalog|@Catalog|db_name()|1\.|  
+|Sahip|@Owner|user_name ()|2|  
+|Tablo|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
-|Sütun|@Column|c.Name|5|  
+|Sütun|@Column|c.name|5|  
   
-### <a name="indexes"></a>Dizinleri  
+### <a name="indexes"></a>Dizinlerde  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|db_name()|1.|  
-|Sahip|@Owner|user_name()|2|  
-|Tablo|@Table|o.Name|3|  
+|Katalog|@Catalog|db_name()|1\.|  
+|Sahip|@Owner|user_name ()|2|  
+|Tablo|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|assembly_name|@AssemblyName|Assemblies.Name|1.|  
-|udt_name|@UDTName|types.assembly_class|2|  
+|assembly_name|@AssemblyName|assemblies.name|1\.|  
+|udt_name|@UDTName|Types. assembly_class|2|  
   
-### <a name="foreignkeys"></a>ForeignKeys  
+### <a name="foreignkeys"></a>Yabancıanahtarlar  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|CONSTRAINT_CATALOG|1.|  
+|Katalog|@Catalog|CONSTRAINT_CATALOG|1\.|  
 |Sahip|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Ad|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008 şema kısıtlamaları  
- SQL Server 2008 şema koleksiyonları için kısıtlamaları aşağıdaki tablolarda listelenmiştir. Bu kısıtlamalar, SQL Server 2008 ve .NET Framework 3.5 SP1 sürümle geçerli başlıyoruz. .NET Framework ve SQL Server'ın önceki sürümlerinde desteklenmez.  
+ Aşağıdaki tablolarda SQL Server 2008 şema koleksiyonları için kısıtlamalar listelenmektedir. Bu kısıtlamalar .NET Framework sürüm 3,5 SP1 ve 2008 SQL Server itibaren geçerlidir. .NET Framework ve SQL Server daha önceki sürümlerinde desteklenmez.  
   
 ### <a name="columnsetcolumns"></a>ColumnSetColumns  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
   
 ### <a name="allcolumns"></a>AllColumns  
   
-|Kısıtlama adı|Parametre Adı|Varsayılan kısıtlama|Kısıtlama sayısı|  
+|Kısıtlama adı|Parametre Adı|Kısıtlama varsayılanı|Kısıtlama numarası|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Katalog|@Catalog|TABLE_CATALOG|1.|  
+|Katalog|@Catalog|TABLE_CATALOG|1\.|  
 |Sahip|@Owner|TABLE_SCHEMA|2|  
 |Tablo|@Table|TABLE_NAME|3|  
 |Sütun|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,20 +2,20 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: dc8dea0ddd1ea074c08952e3e2ebfef2d12f7183
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fc9e1332effc51e183a84cf2d3653357277d2ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934147"
 ---
 # <a name="persistenceprovider"></a>\<persistenceProvider >
-Kullanılacak Kalıcılık sağlayıcı uygulanması yanı sıra Kalıcılık işlemleri için kullanılacak zaman aşımını türünü belirtir.  
+Kullanılacak kalıcılık sağlayıcısı uygulamasının türünü ve Kalıcılık işlemleri için kullanılacak zaman aşımını belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<persistenceProvider >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -32,8 +32,8 @@ Kullanılacak Kalıcılık sağlayıcı uygulanması yanı sıra Kalıcılık i�
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|persistenceOperationTimeout|A <xref:System.TimeSpan> Kalıcılık işlemleri için kullanılan zaman aşımını belirten bir değer. Varsayılan değer "00: 00:30".|  
-|türü|Kullanılacak Kalıcılık sağlayıcı üreteci türünü belirten bir dize.|  
+|persistenceOperationTimeout|Kalıcılık <xref:System.TimeSpan> işlemleri için kullanılan zaman aşımını belirten bir değer. Varsayılan değer "00:00:30" dır.|  
+|türü|Kullanılacak kalıcılık sağlayıcısı fabrikası türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -42,10 +42,10 @@ Kullanılacak Kalıcılık sağlayıcı uygulanması yanı sıra Kalıcılık i�
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranışı >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
+|[\<davranış >](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe bir WCF Hizmeti durumunu serileştirmek için kullanılacak Kalıcılık sağlayıcı belirtir. İle birlikte kullanılmalıdır `wsHttpContextBinding` HTTP üst bilgilerinde durum bilgilerini geçirir.  
+ Bu öğe, bir WCF hizmetinin durumunu seri hale getirmek için kullanılacak Kalıcılık sağlayıcısını belirtir. HTTP üst bilgilerinde durum bilgilerini geçiren ile `wsHttpContextBinding` birlikte kullanılmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetObjectSize yöntemi
+title: 'ICorDebugSymbolProvider:: GetObjectSize yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b90e2a097e6dfd35b6237808a7b8b47937774b0d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 59054d7b939ab29cb08c30961601a323529ce06b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955635"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize yöntemi
-Kendi TypeSpec'te imzasına bağlı bir nesne için nesne boyutu döndürür.  
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider:: GetObjectSize yöntemi
+Nesnelerin TypeSpec imzasına göre nesne boyutunu döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,27 +26,27 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parametreler  
  `cbSignature`  
- [in] TypeSpec'te imza bayt sayısı.  
+ 'ndaki TypeSpec imzasında bayt sayısı.  
   
- typeSig  
- [in] TypeSpec'te imzası.  
+ Tür Imza  
+ 'ndaki TypeSpec imzası.  
   
  `pObjectSize`  
- [out] Nesnenin boyutu için bir işaretçi.  
+ dışı Nesnenin boyutuna yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

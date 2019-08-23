@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592904"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958007"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da Anlık Görüntü Yalıtımı
-Anlık görüntü yalıtımı OLTP uygulamalar için eşzamanlılık geliştirir.  
+Anlık görüntü yalıtımı OLTP uygulamaları için eşzamanlılık geliştirir.  
   
-## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Anlık görüntü yalıtımı ve satır sürüm anlama  
- Anlık görüntü yalıtımı etkinleştirildikten sonra her işlem için güncelleştirilmiş satır sürümleri de korunur **tempdb**. Her işlemin benzersiz işlem sıra numarası tanımlar ve bu benzersiz sayı her satır sürümü için kaydedilir. İşlem, bir sıra numarası işlem sırası sayısını önce sahip en son satır sürümleri ile birlikte çalışır. İşlem başladıktan sonra oluşturulan yeni satır sürümleri işlem tarafından göz ardı edilir.  
+## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Anlık görüntü yalıtımını ve satır sürüm oluşturmayı anlama  
+ Anlık görüntü yalıtımı etkinleştirildikten sonra, her bir işlemin güncelleştirilmiş satır sürümleri **tempdb**içinde tutulur. Benzersiz bir işlem sıra numarası her bir işlemi tanımlar ve bu benzersiz numaralar her bir satır sürümü için kaydedilir. İşlem, işlemin sıra numarasından önce sıra numarası olan en son satır sürümleriyle birlikte kullanılabilir. İşlem başladıktan sonra oluşturulan daha yeni satır sürümleri işlem tarafından yok sayılır.  
   
- "Snapshot" terimi, işlem sorguların tümünün aynı sürümü veya zamanlı işlemin başladığı anda veritabanının durumuna göre veritabanının anlık görüntü gördüğünüzü olgu yansıtır. Önceki tamamlanmamış bir işlem tarafından engellenme olmadan yürütmek için diğer işlemleri izin veren bir anlık görüntü işlemi, veri sayfaları ve temel alınan veri satırları üzerinde kilit elde edilen. Verileri okuyan işlemleri verileri değiştirme işlemleri engellemez ve SQL Server'daki varsayılan READ COMMITTED yalıtım düzeyi altında normalde yaptığınız gibi verileri okuyan işlemleri verileri yazma işlemleri engellemez. Engelleyici olmayan bu davranışı, ayrıca önemli ölçüde karmaşık işlemleri için kilitlenmeleri olasılığını azaltır.  
+ "Snapshot" terimi, işlemdeki tüm sorguların, işlem başladığında veritabanının durumuna bağlı olarak veritabanının aynı sürümünü veya anlık görüntüsünü görmesinin gerçeğini yansıtır. Bir anlık görüntü işleminde temel alınan veri satırlarında veya veri sayfalarında hiçbir kilit alınmadı. Bu, diğer işlemlerin önceki bir tamamlanmamış işlem tarafından engellenmeden yürütülmesine izin verir. Verileri değiştiren işlemler, verileri okuyan işlemleri engellemez ve verileri okuyan işlemler, normalde SQL Server ' de varsayılan okuma olarak KAYDEDILMIŞ yalıtım düzeyi altında olacak şekilde veri yazan işlemleri engellemez. Bu engelleyici olmayan davranış, karmaşık işlemler için kilitlenmeleri olasılığını önemli ölçüde azaltır.  
   
- Anlık görüntü yalıtımı iyimser eşzamanlılık modeli kullanır. Anlık görüntü işlemi işlemin başlamasından bu yana değişmiş olan verileri değişiklikleri kaydetmeye çalışırsa, işlem geri alma ve bir hata oluşacaktır. Bu, değiştirilecek verilere erişen SELECT deyimleri için UPDLOCK ipuçlarını kullanarak önleyebilirsiniz. SQL Server Books Online'da "kilitleme ipuçları" daha fazla bilgi için bkz.  
+ Anlık görüntü yalıtımı bir iyimser eşzamanlılık modeli kullanır. Anlık görüntü işlemi, işlem başlangıcından bu yana değiştirilen verilerde yapılan değişiklikleri kaydetmeye çalışırsa, işlem geri alınacaktır ve bir hata oluşur. Bu, değiştirilecek verilere erişen SELECT deyimleri için UPDLOCK ipuçlarını kullanarak bunu önleyebilirsiniz. Daha fazla bilgi için SQL Server Books Online 'da "kilitleme Ipuçları" bölümüne bakın.  
   
- Anlık görüntü yalıtımı işlemlerde kullanılmadan önce allow_snapshot_ısolatıon açık veritabanı seçeneğini ayarlayarak etkinleştirilmesi gerekir. Bu geçici bir veritabanında satır sürümlerini depolamak için bir mekanizma etkinleştirir (**tempdb**). İle Transact-SQL ALTER DATABASE deyimini kullanan her veritabanında anlık görüntü yalıtımını etkinleştirmeniz gerekir. Bu bakımdan, anlık görüntü yalıtımı READ COMMITTED, TEKRARLANABİLİR okuma, seri hale GETİRİLEBİLİR ve READ UNCOMMITTED hiçbir yapılandırma gerektiren geleneksel yalıtım düzeylerinden farklıdır. Aşağıdaki deyimleri, anlık görüntü yalıtımını etkinleştirmeniz ve varsayılan davranışını READ COMMITTED SNAPSHOT ile değiştirin:  
+ İşlem sırasında kullanılmadan önce ALLOW_SNAPSHOT_ISOLATION ON Database seçeneği ayarlanarak anlık görüntü yalıtımının etkinleştirilmesi gerekir. Bu, satır sürümlerini geçici veritabanında (**tempdb**) depolamaya yönelik mekanizmayı etkinleştirir. Transact-SQL ALTER DATABASE ifadesiyle kullanan her veritabanında anlık görüntü yalıtımını etkinleştirmeniz gerekir. Bu şekilde, anlık görüntü yalıtımı, hiçbir yapılandırma gerektirmeyen READ COMMITTED, YINELENEBILIR READ, SERIALIZABLE ve READ UNCOMMıTTED olan geleneksel yalıtım düzeylerinden farklıdır. Aşağıdaki deyimler anlık görüntü yalıtımını etkinleştirir ve varsayılan okuma KAYDEDILMIŞ davranışını anlık GÖRÜNTÜYLE değiştirir:  
   
 ```sql  
 ALTER DATABASE MyDatabase  
@@ -32,51 +32,51 @@ ALTER DATABASE MyDatabase
 SET READ_COMMITTED_SNAPSHOT ON  
 ```  
   
- Sürümü tutulan satırlara erişimi, read_commıtted_snapshot ON seçeneği ayarlama varsayılan READ COMMITTED yalıtım düzeyi altında sağlar. Read_commıtted_snapshot seçeneği OFF olarak ayarlanmışsa, sürümü tutulan satırlara erişimi için açıkça her oturum için anlık görüntü yalıtım düzeyini ayarlamanız gerekir.  
+ READ_COMMITTED_SNAPSHOT ON seçeneğinin ayarlanması, varsayılan olarak KAYDEDILEN yalıtım düzeyi altında sürümlü satırlara erişim sağlar. READ_COMMITTED_SNAPSHOT seçeneği kapalı olarak ayarlanırsa, sürümlü satırlara erişebilmek için her oturum için anlık görüntü yalıtımı düzeyini açıkça ayarlamanız gerekir.  
   
-## <a name="managing-concurrency-with-isolation-levels"></a>Yalıtım düzeyleri ile eşzamanlılığı yönetme  
- Transact-SQL deyimini yürütür yalıtım düzeyi kilitleme ve satır sürüm davranışını belirler. Bağlantı geniş kapsamı bir yalıtım düzeyi vardır ve işlem YALITIM düzeyi AYARLANAN deyimi ile bağlantı için bir kez ayarlanırsa, bu bağlantı kapalı veya başka bir yalıtım düzeyi kadar devam eder. Bağlantı kapalı olduğunda ve havuza geri döner son işlem YALITIM düzeyi AYARLANAN deyimden yalıtım düzeyi korunur. Sonraki bağlantıları yeniden anda yürürlükte olan bağlantısı yalıtım düzeyi havuza bir havuza alınmış bir bağlantı kullanın.  
+## <a name="managing-concurrency-with-isolation-levels"></a>Yalıtım düzeyleriyle eşzamanlılık yönetimi  
+ Bir Transact-SQL ifadesinin çalıştırıldığı yalıtım düzeyi, kilitleme ve satır sürümü oluşturma davranışını belirler. Yalıtım düzeyi, bağlantı genelinde kapsama sahiptir ve Işlem yalıtım DÜZEYI ayarla ifadesiyle bir bağlantı için ayarlandıktan sonra bağlantı kapatılana veya başka bir yalıtım düzeyi ayarlanana kadar etkin kalır. Bir bağlantı kapatılıp havuza döndürüldüğünde, son ayarlanan Işlem yalıtım DÜZEYI deyimindeki yalıtım düzeyi korunur. Havuza alınmış bir bağlantıyı yeniden kullanan sonraki bağlantılar, bağlantı havuza alındığı sırada geçerli olan yalıtım düzeyini kullanır.  
   
- Bir bağlantıda verilen her sorgu, tek bir deyim veya işlem yalıtım değiştirir, ancak bağlantı yalıtım düzeyini etkilemez kilit ipuçlarına içerebilir. Yalıtım düzeyleri veya kilit ipuçlarına, saklı yordamların ayarlayın veya İşlevler, onları çağıran bağlantının yalıtım düzeyi değiştirmeyin ve yalnızca saklı yordam veya işlev çağrı süresi boyunca geçerli olur.  
+ Bir bağlantı içinde verilen tekil sorgular, tek bir deyimin veya işlemin yalıtımını değiştiren ancak bağlantının yalıtım düzeyini etkilemeyen kilit ipuçları içerebilir. Saklı yordamlarda veya işlevlerde ayarlanan yalıtım düzeyleri veya kilit ipuçları, bunları çağıran bağlantının yalıtım düzeyini değiştirmez ve yalnızca saklı yordamın veya işlev çağrısının süresi boyunca geçerli olur.  
   
- SQL Server'ın önceki sürümlerinde desteklenen SQL 92 standartlarındaki dört yalıtım düzeyi:  
+ SQL Server önceki sürümlerinde SQL-92 standardında tanımlanan dört yalıtım düzeyi desteklenmekteydi:  
   
-- Diğer işlemler tarafından yerleştirilen kilit yoksayar READ UNCOMMITTED yalıtım düzeyi en az kısıtlayıcı olmasıdır. READ UNCOMMITTED altında çalıştırma işlemleri henüz diğer işlemler tarafından taahhüt değil değiştirilen veri değerlerini okuyabilirsiniz. Bunlar, "kirli" okuma olarak adlandırılır.  
+- Diğer işlemler tarafından verilen kilitleri yoksaydığından, READ UNCOMMıTTED, en az kısıtlayıcı yalıtım düzeyidir. READ UNCOMMıTTED altında yürütülen işlemler, başka işlemler tarafından henüz kaydedilmemiş olan değiştirilmiş veri değerlerini okuyabilir; Bunlar "kirli" okumalar olarak adlandırılır.  
   
-- READ COMMITTED SQL Server için varsayılan yalıtım düzeyi var. Kirli okuma, deyimleri değiştirilmiş, ancak diğer işlemler tarafından henüz uygulanmamış veri değerleri okunamıyor belirterek engeller. Yine de diğer işlemleri değiştirmek, Ekle veya geçerli işlem tekrarlanabilir olmayan okuma veya "hayalet" veri içinde ayrı deyimler yürütmeleri arasında verileri silin.  
+- OKUMA IŞLENDI, SQL Server için varsayılan yalıtım düzeyidir. Bu ifadeler, değiştirilmiş ancak başka işlemler tarafından henüz kaydedilmemiş olan veri değerlerini okuyamayacağını belirterek kirli okumaları önler. Diğer işlemler, geçerli işlem içindeki tek tek deyimlerin yürütmeleri arasında verileri değiştirebilir, ekleyebilir veya silebilir, bu da yinelenmemiş okuma veya "hayalet" verileri elde eder.  
   
-- REPEATABLE READ READ COMMITTED daha kısıtlayıcı bir yalıtım düzeyi var. Okuma KAYDEDİLEN kapsar ve başka bir işlem değiştirmek veya geçerli işlem yürütmeleri kadar geçerli işlem tarafından Okunmuş verilerini silmek ayrıca belirtir. Salt okunur veri çubuğunda paylaşılan kilit her deyim sonunda yayımlanan yerine işlem süresince tutulur çünkü eşzamanlılık okuma KAYDEDİLEN için daha düşük maliyetlidir.  
+- YINELENEBILIR okuma, okuma IŞLENDI öğesinden daha kısıtlayıcı bir yalıtım düzeyidir. Bu, okumayı taahhüt eder ve ayrıca, geçerli işlem tamamlanana kadar geçerli işlem tarafından okunan verileri başka hiçbir işlem tarafından değişiklik veya silme işlemini belirtir. Okuma verilerinde paylaşılan kilitler, her deyimin sonunda yayınlanmak yerine işlem süresince tutulduğundan eşzamanlılık, okuma için daha düşüktür.  
   
-- Tüm aralıkları anahtarların kilitler ve işlem tamamlanana kadar Kilit tutan çünkü en kısıtlayıcı bir yalıtım düzeyi seri hale GETİRİLEBİLİR. Bu, TEKRARLANABİLİR okuma kapsayan ve diğer işlemlerin işlem tamamlanana kadar bu işlem tarafından okunana aralıkları yeni satır eklenemiyor kısıtlama ekler.  
+- SERI hale GETIRILEBILIR, tüm anahtar aralıklarını kilitlediği ve işlem tamamlanana kadar kilitleri tutan için en kısıtlayıcı yalıtım düzeyidir. YINELENEBILIR okumayı kapsar ve diğer işlemlerin işlem tamamlanana kadar işlem tarafından okunan aralıklara yeni satırlar Ekleyememe kısıtlaması ekler.  
   
- Daha fazla bilgi için [işlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
+ Daha fazla bilgi için, [Işlem kilitleme ve satır sürümü oluşturma kılavuzuna](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)bakın.  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Anlık görüntü yalıtım düzeyi uzantıları  
- SQL Server uzantılarını anlık görüntü yalıtım düzeyi giriş ve ek READ COMMITTED uygulaması ile SQL 92 yalıtım düzeyleri kullanıma sunmuştu. Read_commıtted_snapshot yalıtım düzeyi şeffaf bir şekilde READ COMMITTED tüm işlemler için değiştirebilirsiniz.  
+ SQL Server, SQL-92 yalıtım düzeylerine, anlık görüntü yalıtım düzeyi ve daha fazla READ COMMıTTED bir uygulama ile sunulan uzantıları sunmuştur. READ_COMMITTED_SNAPSHOT yalıtım düzeyi, tüm işlemler için OKUNABILIR olarak IŞLENMIŞ şekilde değiştirebilir.  
   
-- Anlık görüntü yalıtımı, bir işlem içinde okunan veriler hiçbir zaman eş zamanlı diğer işlemler tarafından yapılan değişiklikleri yansıtacak belirtir. İşlem, işlem başladığında mevcut veri satır sürümleri kullanır. Okunduğunda, anlık görüntü işlemleri diğer işlemleri veri yazmasını engellemez için veriler üzerinde kilit yerleştirilir. Veri yazma işlemleri, verileri okuma anlık görüntü hareketlerin engellemez. Anlık görüntü yalıtımı kullanmak için allow_snapshot_ısolatıon veritabanı seçeneği etkinleştirmeniz gerekir.  
+- ANLıK görüntü yalıtımı, bir işlem içinde okunan verilerin diğer eşzamanlı işlemler tarafından yapılan değişiklikleri hiçbir şekilde yansıtmayacağını belirtir. İşlem başladığında mevcut olan veri satırı sürümlerini kullanır. Okuma sırasında verileri hiçbir kilit yerleştirmez, bu nedenle anlık görüntü işlemleri diğer işlemlerin veri yazmasını engellemez. Veri yazan işlemler, anlık görüntü işlemlerini veri okumaktan engellemez. ALLOW_SNAPSHOT_ISOLATION veritabanı seçeneğini kullanmak için ayarlayarak anlık görüntü yalıtımını etkinleştirmeniz gerekir.  
   
-- Bir veritabanında anlık görüntü yalıtımı etkinleştirildiğinde veritabanı seçeneği read_commıtted_snapshot varsayılan READ COMMITTED yalıtım düzeyi davranışını belirler. READ COMMITTED read_commıtted_snapshot ON açıkça belirtmezseniz, tüm örtük işlemleri için uygulanır. Bu ayarı read_commıtted_snapshot devre dışı (varsayılan) olarak aynı davranışı üretir. Veritabanı altyapısı, paylaşılan kilit read_commıtted_snapshot kapalı etkin olduğunda, varsayılan yalıtım düzeyi zorlamak için kullanır. Veritabanı altyapısı veritabanı seçeneği read_commıtted_snapshot ON olarak ayarlarsanız, satır sürüm oluşturma ve anlık görüntü yalıtımı kilitleri verileri korumak için kullanmak yerine varsayılan olarak kullanır.  
+- READ_COMMITTED_SNAPSHOT veritabanı seçeneği, anlık görüntü yalıtımı bir veritabanında etkinleştirildiğinde varsayılan okuma KAYDEDILMIŞ yalıtım düzeyinin davranışını belirler. Açık olarak READ_COMMITTED_SNAPSHOT açık bir şekilde belirtmezseniz, tüm örtük işlemlere okuma işlemi uygulanır. Bu, READ_COMMITTED_SNAPSHOT OFF (varsayılan) ayarıyla aynı davranışı üretir. READ_COMMITTED_SNAPSHOT OFF etkin olduğunda, veritabanı altyapısı varsayılan yalıtım düzeyini zorlamak için paylaşılan kilitler kullanır. READ_COMMITTED_SNAPSHOT veritabanı seçeneğini açık olarak ayarlarsanız, veritabanı altyapısı, verileri korumak için kilitler kullanmak yerine varsayılan olarak satır sürümü oluşturma ve anlık görüntü yalıtımı kullanır.  
   
-## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Nasıl anlık görüntü yalıtımı ve satır sürüm oluşturma iş  
- Anlık görüntü yalıtım düzeyi, bir satır güncelleştirildiğinde, her zaman etkin olduğunda, SQL Server veritabanı altyapısı özgün satırda kopyasını depoladığından **tempdb**ve işlem sırası birkaç satır ekler. Gerçekleşen olayların sırasını verilmiştir:  
+## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Anlık görüntü yalıtımı ve satır sürümü oluşturma nasıl çalışır?  
+ ANLıK görüntü yalıtım düzeyi etkinleştirildiğinde, bir satır her güncelleştirildiği zaman, SQL Server veritabanı altyapısı **tempdb**'de orijinal satırın bir kopyasını depolar ve satıra bir işlem sıra numarası ekler. Oluşan olayların sırası aşağıda verilmiştir:  
   
-- Yeni bir işlem tarafından başlatılan ve bir işlem sıra numarası atanır.  
+- Yeni bir işlem başlatılır ve bir işlem sıra numarası atanır.  
   
-- Veritabanı altyapısı işlem içinde bir satır okur ve bir satır sürümündeki alır **tempdb** en yakın ve işlem sırası sayı daha düşük olan sıra numarası.  
+- Veritabanı altyapısı, işlem içindeki bir satırı okur ve sıra numarası en yakın, işlem sırası numarasından daha düşük olan **tempdb** 'den satır sürümünü alır.  
   
-- Veritabanı altyapısı, anlık görüntü işlem başlatıldığında işlem sıra numarası kaydedilmemiş işlemleri etkin işlem sırası sayıda listesinde değilse görmek için denetler.  
+- Veritabanı altyapısı, işlem sırası numarasının, anlık görüntü işlemi başlatıldığında etkin olan kaydedilmemiş işlemlerin işlem sırası numaraları listesinde olup olmadığını denetler.  
   
-- İşlem satırdan sürümünü okur **tempdb** , hareketin başlangıcını itibarıyla geçerli. Bu sıra sayı değerlerini işlem sıra numarası değerinden daha yüksek olacağı için işlem başlatıldıktan sonra eklenen yeni satırlar görmezsiniz.  
+- İşlem, işlemin başlangıcı itibariyle geçerli olan **tempdb** 'den satır sürümünü okur. İşlem başlatıldıktan sonra yeni satırları, bu sıra numarası değerleri işlem sırası numarası değerinden yüksek olacak şekilde görmez.  
   
-- Geçerli işlem, işlem başladıktan sonra bir satır sürümde olacağından silinen satırlar göreceksiniz **tempdb** daha düşük bir sıra numarası değere sahip.  
+- Geçerli işlem, **tempdb** 'de daha düşük bir sıra numarası değeri olan bir satır sürümü olacağı için, işlem başladıktan sonra silinen satırları görür.  
   
- Anlık görüntü yalıtım net etkisiyle, DSR'nin veya bağlantılı tablolarda kilitleri yerleştirme olmadan işlem başlangıcında bulunduğu gibi işlem tüm verileri dilediği zaman isteyebilmesi ' dir. Bu gibi durumlarda performans geliştirmeleri sonuçlanabilir Çekişme olduğunda.  
+ Anlık görüntü yalıtımının net etkisi, işlemin başlangıcında olduğu gibi, temel alınan tablolara herhangi bir kilit oluşturmadan veya yerleştirmeksizin tüm verileri görür. Bu durum, çekişme durumunda performans iyileştirmelerine yol açabilir.  
   
- Her zaman bir anlık görüntü işlemi, iyimser eşzamanlılık denetimi, satırları güncelleştirme diğer hareketlerin önleyen kilitleri stopaj kullanır. Anlık görüntü işlemi işlem başladıktan sonra değişen bir satır için bir güncelleştirme kaydetmeye çalışırsa, işlem geri alındı ve bir hata ortaya çıkar.  
+ Anlık görüntü işlemi her zaman iyimser eşzamanlılık denetimini kullanır ve diğer işlemlerin satırları güncelleştirmesini engelleyecek herhangi bir kilidi stopajın. Anlık görüntü işlemi, işlem başladıktan sonra değiştirilen bir satıra bir güncelleştirmeyi kaydetmeye çalışırsa, işlem geri alınır ve bir hata oluşur.  
   
-## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET'te anlık görüntü yalıtımı ile çalışma  
- ADO.NET'te tarafından desteklenen anlık görüntü yalıtımı <xref:System.Data.SqlClient.SqlTransaction> sınıfı. Bir veritabanı için anlık görüntü yalıtımı etkinleştirilmiş, ancak için read_commıtted_snapshot ON yapılandırılmamış başlatmalıdır bir <xref:System.Data.SqlClient.SqlTransaction> kullanarak **IsolationLevel.Snapshot** çağırırken numaralandırma değeri <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> yöntem. Bu kod parçasını bağlantının açık olduğunu varsayar <xref:System.Data.SqlClient.SqlConnection> nesne.  
+## <a name="working-with-snapshot-isolation-in-adonet"></a>ADO.NET içinde anlık görüntü yalıtımıyla çalışma  
+ Anlık görüntü yalıtımı, ADO.NET tarafından <xref:System.Data.SqlClient.SqlTransaction> sınıfı tarafından desteklenir. Bir veritabanı, anlık görüntü yalıtımı için etkinleştirildiyse, ancak üzerinde READ_COMMITTED_SNAPSHOT için yapılandırılmamışsa, <xref:System.Data.SqlClient.SqlTransaction> <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> yöntemi çağırırken **IsolationLevel. Snapshot** numaralandırma değerini kullanarak bir öğesini başlatmanız gerekir. Bu kod parçası, bağlantının açık <xref:System.Data.SqlClient.SqlConnection> bir nesne olduğunu varsayar.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -89,60 +89,60 @@ SqlTransaction sqlTran =
 ```  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, kilitli verilerinize erişmeye çalışan tarafından farklı yalıtım düzeyleri nasıl davranacağını gösterir ve üretim kodunda kullanılmak üzere tasarlanmamıştır.  
+ Aşağıdaki örnek, kilitli verilere erişmeye çalışan farklı yalıtım düzeylerinin nasıl davrandığını gösterir ve üretim kodunda kullanılmak üzere tasarlanmamıştır.  
   
- Kod bağlandığı **AdventureWorks** adlı bir tablo oluşturur ve örnek SQL Server veritabanında **TestSnapshot** ve verilerin bir satır ekler. Kod, veritabanı için anlık görüntü yalıtımı etkinleştirmek için ALTER DATABASE Transact-SQL deyimini kullanır, ancak varsayılan READ COMMITTED yalıtım düzeyi davranışı etkin bırakılması read_commıtted_snapshot seçeneğini ayarlamaz. Kod aşağıdaki eylemleri gerçekleştirir:  
+ Kod, SQL Server **AdventureWorks** örnek veritabanına bağlanır ve **TestSnapshot** adlı bir tablo oluşturur ve bir veri satırı ekler. Kod ALTER DATABASE Transact-SQL deyimini kullanarak veritabanı için anlık görüntü yalıtımını açabilir, ancak varsayılan okuma tarafından KAYDEDILMIŞ yalıtım düzeyi davranışını etkin halde bırakarak READ_COMMITTED_SNAPSHOT seçeneğini ayarlanmamış. Kod daha sonra aşağıdaki eylemleri gerçekleştirir:  
   
-- Başlar, ancak tamamlamaz, bir güncelleştirme işlemini başlatmaya SERIALIZABLE yalıtım düzeyi kullanan sqlTransaction1. Bu tabloda kilitleme etkisi vardır.  
+- Bir güncelleştirme işlemini başlatmak için, SERI hale GETIRILEBILIR yalıtım düzeyini kullanan, ancak tamamlanmayan, sqlTransaction1. Bu, tabloyu kilitleme etkisine sahiptir.  
   
-- İkinci bir bağlantı açar ve verileri okumak için anlık görüntü yalıtım düzeyi kullanılarak ikinci bir hareket başlatır **TestSnapshot** tablo. Anlık görüntü yalıtımı etkinleştirilmiş olduğundan, bu işlem sqlTransaction1 başlatmadan önce var olan verileri okuyabilir.  
+- İkinci bir bağlantı açar ve **TestSnapshot** tablosu içindeki verileri okumak IÇIN anlık görüntü yalıtımı düzeyini kullanarak ikinci bir işlem başlatır. Anlık görüntü yalıtımı etkinleştirildiğinden, bu işlem sqlTransaction1 başlamadan önce var olan verileri okuyabilir.  
   
-- Bu, üçüncü bir bağlantı açar ve tablodaki verileri okuma girişimi için READ yalıtım düzeyi kullanılarak bir işlem başlatır. Bu durumda, zaman aşımına ve ilk işlem bir tabloda yerleştirilen kilit geçmiş okunamıyor çünkü kod veri okunamıyor. Bu yalıtım düzeyleri de ilk işlemde yerleştirilen kilit geçmiş okunamıyor çünkü TEKRARLANABİLİR okuma ve SERIALIZABLE yalıtım düzeyleri kullanıldıysa aynı sonucu oluşacak.  
+- Üçüncü bir bağlantı açar ve tablodaki verileri okumayı denemek için READ COMMıTTED yalıtım düzeyini kullanarak bir işlem başlatır. Bu durumda, kod ilk işlem içindeki tabloya yerleştirilmiş kilitleri okuyamadığından ve zaman aşımına uğradığından verileri okuyamıyor. Aynı sonuç, YINELENEBILIR okuma ve SERI hale GETIRILEBILIR yalıtım düzeyleri kullanılmışsa meydana gelir çünkü bu yalıtım düzeyleri ilk işleme yerleştirilmiş kilitleri daha fazla okuyamaz.  
   
-- Dördüncü bir bağlantı açar ve kaydedilmemiş değerin kirli okuma içinde sqlTransaction1 gerçekleştirir READ UNCOMMITTED yalıtım düzeyi kullanılarak bir işlem başlatır. İlk işlem kaydedilmiş değilse, bu değeri hiçbir zaman gerçekten veritabanında var olabilir.  
+- Dördüncü bir bağlantı açar ve sqlTransaction1 içinde işlenmemiş değerin kirli okunduğunu gerçekleştiren READ UNCOMMıTTED yalıtım düzeyini kullanarak bir işlem başlatır. İlk işlem yürütülmüyorsa, bu değer veritabanında hiçbir şekilde yok olabilir.  
   
-- İlk işlem geri alınır ve silerek temizler **TestSnapshot** tablo ve kapatma anlık görüntü yalıtımı için **AdventureWorks** veritabanı.  
+- İlk işlemi geri alır ve **TestSnapshot** tablosunu silerek ve **AdventureWorks** veritabanı için anlık görüntü yalıtımını kapatarak temizler.  
   
 > [!NOTE]
->  Aşağıdaki örnekler aynı bağlantı dizesine bağlantı havuzu ile kapalı kullanın. Bağlantı bir havuzda toplanır, yalıtım düzeyiyle sıfırlama yalıtım düzeyi sunucuda sıfırlanmaz. Sonuç olarak, kendi yalıtım düzeyleri, havuza alınmış bağlantı kümesi ile aynı havuza alınmış iç bağlantısı kullanmak daha sonraki bağlantılar başlatın. Bağlantı havuzu kapalı kapatma açıkça her bağlantı için yalıtım düzeyini ayarlamak için alternatiftir.  
+> Aşağıdaki örnekler, bağlantı havuzu kapalıyken aynı bağlantı dizesini kullanır. Bir bağlantı havuza alınmış ise, yalıtım düzeyini sıfırlamak sunucudaki yalıtım düzeyini sıfırlamaz. Sonuç olarak, aynı havuza alınmış iç bağlantıyı kullanan sonraki bağlantılar, havuza alınmış bağlantının kendilerine ayarlanan yalıtım düzeyleriyle başlar. Bağlantı havuzunu kapatmak için bir alternatif, yalıtım düzeyini her bağlantı için açıkça ayarlamaya yöneliktir.  
   
  [!code-csharp[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, veri değiştirildiğinde anlık görüntü yalıtımı davranışını gösterir. Kod, aşağıdaki eylemleri gerçekleştirir:  
+ Aşağıdaki örnek, veri değiştirilirken anlık görüntü yalıtımının davranışını gösterir. Kod aşağıdaki eylemleri gerçekleştirir:  
   
-- Bağlandığı **AdventureWorks** örnek anlık görüntü yalıtımı veritabanı ve etkinleştirir.  
+- **AdventureWorks** örnek veritabanına BAĞLANıR ve anlık görüntü yalıtımına olanak sağlar.  
   
-- Adlı bir tablo oluşturur **TestSnapshotUpdate** ve örnek verileri üç satırı ekler.  
+- **TestSnapshotUpdate** adlı bir tablo oluşturur ve üç satır örnek veri ekler.  
   
-- Başlar, ancak tamamlamaz, sqlTransaction1 anlık görüntü yalıtımı kullanma. Üç veri satırı, işlem sırasında seçilir.  
+- ANLıK görüntü yalıtımı kullanarak sqlTransaction1 başlar ancak tamamlanmaz. İşlemde üç satır veri seçilir.  
   
-- İkinci oluşturur **SqlConnection** için **AdventureWorks** ve güncelleştiren bir değer sqlTransaction1 Seçili satırlardan birinin READ COMMITTED yalıtım düzeyi kullanılarak ikinci bir işlem oluşturur.  
+- **AdventureWorks** 'e Ikinci bir **SqlConnection** oluşturur ve sqlTransaction1 içinde seçilen satırlardan BIRINDEKI BIR değeri güncelleştiren Read commıtted yalıtım düzeyini kullanarak ikinci bir işlem oluşturur.  
   
-- SqlTransaction2 kaydeder.  
+- Yürütmeler sqlTransaction2.  
   
-- Zaten bu sqlTransaction1 sqlTransaction1 ve aynı satırda güncelleştirme denemeleri döndürür. Hata 3960 tetiklenir ve sqlTransaction1 otomatik olarak geri alınır. **SqlException.Number** ve **SqlException.Message** konsol penceresinde görüntülenir.  
+- SqlTransaction1 ' e döner ve sqlTransaction1 'in zaten yürütüldüğü satırı güncelleştirme girişiminde bulunur. Hata 3960 tetiklenir ve sqlTransaction1 otomatik olarak geri alınır. **SqlException. Number** ve **SqlException. Message** konsol penceresinde görüntülenir.  
   
-- Anlık görüntü yalıtımı devre dışı bırakmak için temizleme kodu yürütür **AdventureWorks** ve silme **TestSnapshotUpdate** tablo.  
+- **AdventureWorks** 'te anlık görüntü yalıtımını devre dışı bırakmak ve **TestSnapshotUpdate** tablosunu silmek için Temizleme kodunu yürütür.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
   
-### <a name="using-lock-hints-with-snapshot-isolation"></a>Anlık görüntü yalıtımıyla kilit ipuçlarına kullanma  
- Önceki örnekte, ilk işlem, verileri seçer ve ilk işlemin tamamlanması açmadan önce ikinci bir hareket verileri ilk işlem aynı satırda güncelleştirmeye çalıştığında bir güncelleme çakışması neden güncelleştirir. İşlem başına kilit ipuçlarına sağlayarak uzun süre çalışan anlık işlemleri güncelleştirme çakışması olasılığını azaltabilirsiniz. Aşağıdaki SELECT deyimi, seçili satırları kilitlemek için UPDLOCK ipucu kullanır:  
+### <a name="using-lock-hints-with-snapshot-isolation"></a>Anlık görüntü yalıtımıyla kilit Ipuçlarını kullanma  
+ Önceki örnekte, ilk işlem verileri seçer ve ikinci bir işlem ilk işlem tamamlanmadan önce verileri güncelleştirir, ilk işlem aynı satırı güncelleştirmeye çalıştığında güncelleştirme çakışmasına neden olur. İşlemin başlangıcında kilit ipuçları sağlayarak uzun süre çalışan anlık görüntü işlemlerinde güncelleştirme çakışmalarının olasılığını azaltabilirsiniz. Aşağıdaki SELECT deyimleri, seçili satırları kilitlemek için UPDLOCK ipucunu kullanır:  
   
 ```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
   
- İlk işlem tamamlanmadan önce satır güncelleştirilmeye çalışılıyor herhangi bir satır UPDLOCK kilit ipucuna bloğu kullanma. Bu işlem sırasında güncelleştirildiğinde seçilen satırları yok çakışması olmadığını güvence altına alır. "Kilit ipuçlarına" SQL Server Books Online'a bakın.  
+ UPDLOCK kilit ipucu kullanımı, ilk işlem tamamlanmadan önce satırları güncelleştirmeye çalışan tüm satırları engeller. Bu, seçili satırların işlemde daha sonra güncellendiklerinde hiçbir çakışma olmadığından emin olmasını sağlar. SQL Server Books Online 'da "kilitleme Ipuçları" bölümüne bakın.  
   
- Uygulamanız çok sayıda çakışma varsa, anlık görüntü yalıtımı en iyi seçim olmayabilir. İpuçları, yalnızca gerçekten gerekli olduğunda kullanılmalıdır. Böylece kendi işlem için kilit ipuçlarına sürekli kullanır, uygulamanızın tasarlanmalıdır değil.  
+ Uygulamanızda çok fazla çakışma varsa, anlık görüntü yalıtımı en iyi seçim olmayabilir. İpuçları yalnızca gerçekten gerektiğinde kullanılmalıdır. Uygulamanız, işlem için kilit ipuçlarına sürekli olarak dayanmasını sağlayacak şekilde tasarlanmamalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
-- [İşlem kilitleme ve satır sürümü oluşturma Kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [İşlem kilitleme ve satır sürümü oluşturma kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

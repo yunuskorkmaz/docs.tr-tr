@@ -2,20 +2,20 @@
 title: İleti Akışı İzlemeyi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01a06a50fbb5962fe87c3426957b3294b1bf3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999524"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917927"
 ---
 # <a name="configuring-message-flow-tracing"></a>İleti Akışı İzlemeyi Yapılandırma
-Windows Communication Foundation (WCF) Etkinlik izleme etkin olduğunda, uçtan uca etkinlik kimlikleri WCF yığın boyunca mantıksal etkinlikleri atanır. İçinde [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], olay izleme için Windows (ileti akışı izlemeyi adlı ETW ile) çalışır. Bu özellik daha yüksek bir performans sürümü artık yoktur. Etkin olduğunda, uçtan uca etkinlik kimlikleri alınan (veya boşsa atanan) gelen iletileri ve bu yayılan ileti kanalı tarafından kodu çözülen sonra yayılan tüm izleme olayları. Müşteriler, ileti akışları ile farklı Hizmetleri izleme günlüklerinden kod çözüldükten sonra yeniden oluşturmak için bu özelliği kullanabilirsiniz.  
+Windows Communication Foundation (WCF) etkinlik izleme etkinleştirildiğinde, WCF yığını genelinde mantıksal etkinliklere uçtan uca etkinlik kimlikleri atanır. ' [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]De artık bu özelliğin, ileti akışı izleme adlı Windows için olay izleme (ETW) ile birlikte çalışarak daha yüksek bir performans sürümü bulunmaktadır. Etkinleştirildiğinde, uçtan uca etkinlik kimlikleri, gelen iletiler üzerinden alınır (veya boş bırakılırsa atanır) ve ileti kanal tarafından kodu oluşturulduktan sonra yayınlanan tüm izleme olaylarına dağıtılır. Müşteriler, kod çözdükten sonra farklı hizmetlerden izleme günlükleriyle ileti akışlarını yeniden oluşturmak için bu özelliği kullanabilir.  
   
- İzleme, uygulama ile ilgili bir sorun algılandığında sonra etkin ve ardından sorun çözüldükten sonra devre dışı.  
+ İzleme, uygulama ile ilgili bir sorun algılandıktan sonra etkinleştirilebilir ve sorun çözümlendikten sonra devre dışı bırakılır.  
   
-## <a name="enabling-tracing"></a>İzlemeyi etkinleştirme  
- .NET Framework 4 ayarlayarak ileti akışı izlemeyi etkinleştirebilirsiniz `messageFlowTracing` yapılandırma öğesine `true`, aşağıdaki örnekte gösterildiği gibi.  
+## <a name="enabling-tracing"></a>Izlemeyi etkinleştirme  
+ Aşağıdaki örnekte gösterildiği gibi, .NET Framework 4 `messageFlowTracing` yapılandırma öğesini olarak `true`ayarlayarak ileti akışı izlemeyi etkinleştirebilirsiniz.  
   
 ```xml  
 <system.servicemodel>  
@@ -26,12 +26,12 @@ Windows Communication Foundation (WCF) Etkinlik izleme etkin olduğunda, uçtan 
 ```  
   
 > [!NOTE]
->  Çünkü `endToEndTracing` yapılandırma öğesi, Web.config dosyasında bulunan, ETW aynı şekilde dinamik olarak yapılandırılamaz. İçin `endToEndTracing` etkili uygulama yapılandırma öğesi geri dönüştürülmüş olmalıdır.  
+> `endToEndTracing` Yapılandırma öğesi bir Web. config dosyasında bulunduğundan, bu, ETW ile aynı şekilde dinamik olarak yapılandırılamaz. `endToEndTracing` Yapılandırma öğesinin etkili olabilmesi için, uygulamanın geri dönüştürülmesi gerekir.  
   
- Etkinlikleri tarafından etkinlik kimliğini adlı bir tanımlayıcının değişim bağıntılı olan Bu tanımlayıcı, bir GUID'dir ve System.Diagnostics.CorrelationManager sınıfı tarafından oluşturulur. System.Diagnostics.Trace.CorrelationManager.ActivityID işlemek, WCF kod yürütme denetimi aktarırken özgün değeri ayarlandığından emin olun.  Ayrıca, zaman uyumsuz bir WCF programlama modeli kullandığınız System.Diagnostics.Trace.CorrelationManager.ActivityID iş parçacıkları arasında aktarılan emin olun.  
+ Etkinlikler, etkinlik KIMLIĞI adlı bir tanımlayıcının değişimi ile bağıntılı. Bu tanımlayıcı bir GUID 'dir ve System. Diagnostics. CorrelationManager sınıfı tarafından oluşturulur. System. Diagnostics. Trace. CorrelationManager. ActivityId 'yi işlersiniz, yürütme denetimi WCF koduna geri aktarırken değerin özgün olarak ayarlandığından emin olun.  Ayrıca, zaman uyumsuz bir WCF programlama modeli kullanıyorsanız, System. Diagnostics. Trace. CorrelationManager. ActivityId 'nin iş parçacıkları arasında aktarılmasını sağlayabilirsiniz.  
   
-## <a name="message-flow-tracing-and-rest-services"></a>İleti akışı izlemeyi ve REST Hizmetleri  
- İleti akışı izlemeyi bir istek uçtan uca izleme sağlar.  SOAP tabanlı hizmetler ile bir SOAP ileti üstbilgisinde bir etkinlik kimliği gönderilir. Bunun yerine özel bir HTTP olay başlığı kullanılmak üzere REST istekleri bu üst bilgi içermez. Aşağıdaki kod parçacığı, etkinlik kimliği değeri program aracılığıyla nasıl alabileceğinizi gösterir:  
+## <a name="message-flow-tracing-and-rest-services"></a>İleti akışı Izleme ve REST Hizmetleri  
+ İleti akışı izleme isteği uçtan uca izlemenize olanak sağlar.  SOAP tabanlı hizmetlerle bir etkinlik KIMLIĞI bir SOAP ileti üstbilgisinde gönderilir. Bunun yerine özel bir HTTP olay üst bilgisi kullanıldığı için REST istekleri bu üstbilgiyi içermez. Aşağıdaki kod parçacığı, etkinlik KIMLIĞI değerini programlı bir şekilde nasıl alabileceğiniz gösterilmektedir:  
   
 ```csharp
 Object output = null;
@@ -43,7 +43,7 @@ if (OperationContext.Current.IncomingMessageProperties.TryGetValue(HttpRequestMe
 }
 ```
 
- Aşağıdaki kodu kullanarak üstbilgi program aracılığıyla ekleyebilirsiniz:  
+ Aşağıdaki kodu kullanarak üstbilgiyi programlı olarak ekleyebilirsiniz:  
   
 ```csharp  
 HttpContent content = new StreamContent(contentStream);  

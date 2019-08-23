@@ -1,16 +1,16 @@
 ---
-title: Grup (varlık tarafından SQL)
+title: Gruplandırma ölçütü (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936087"
 ---
-# <a name="group-by-entity-sql"></a>Grup (varlık tarafından SQL)
-Bir sorgu tarafından döndürülen hangi nesnelere grupları belirtir ([seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) ifade olan yerleştirilecek.  
+# <a name="group-by-entity-sql"></a>Gruplandırma ölçütü (Entity SQL)
+Sorgu ([Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) ifadesi tarafından döndürülen nesnelerin yerleştirileceği grupları belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,25 +20,25 @@ Bir sorgu tarafından döndürülen hangi nesnelere grupları belirtir ([seçin]
   
 ## <a name="arguments"></a>Arguments  
  `aliasedExpression`  
- Herhangi bir geçerli sorgu ifade üzerinde gruplandırma gerçekleştirilir. `expression` bir özellik veya FROM yan tümcesi tarafından döndürülen bir özelliğe başvuruda toplama olmayan bir ifade olabilir. GROUP BY yan tümcesindeki her ifade eşitlik için karşılaştırılması gereken bir tür değerlendirilmelidir. Bu genelde skalar temelleri sayılar, dizeler ve tarihler gibi türleridir. Bir koleksiyonda grubuna katılamaz.  
+ Gruplandırmada uygulanan geçerli bir sorgu ifadesi. `expression`FROM yan tümcesi tarafından döndürülen bir özelliğe başvuran bir özellik veya toplama olmayan bir ifade olabilir. GROUP BY yan tümcesindeki her bir ifade, eşitlik için karşılaştırılabileceğiniz bir tür olarak değerlendirilmelidir. Bu türler genellikle sayılar, dizeler ve tarihler gibi skaler temel öğelerdir. Bir koleksiyona göre gruplandırma yapılamaz.  
   
 ## <a name="remarks"></a>Açıklamalar  
- SELECT yan tümcesinde toplama işlevleri eklediyseniz \<seçim listesi >, GROUP BY her grup için bir toplam değerini hesaplar. GROUP BY belirtildiğinde, her bir özellik adı seçim listesinde zorunluluğu herhangi bir ifade, GROUP BY listesinde eklenmesi veya GROUP BY ifadesi seçim listesine ifade tam olarak eşleşmelidir.  
+ Toplama işlevleri select yan tümcesinde, select yan tümcesine \<dahil edilir >, group by her grup için bir Özet değeri hesaplar. GROUP BY belirtildiğinde, select listesindeki toplama olmayan bir ifadedeki her bir özellik adı, gruplama ölçütü listesine dahil edilmelidir, ya da GROUP BY ifadesi Select List ifadesiyle tam olarak eşleşmelidir.  
   
 > [!NOTE]
->  ORDER BY yan tümcesi belirtilmezse, GROUP BY yan tümcesi tarafından döndürülen grupları herhangi belirli bir sırada değildir. Belirli bir sıralama verilerini belirtmek için her zaman ORDER BY yan tümcesi kullanmanızı öneririz.  
+> ORDER BY yan tümcesi belirtilmemişse GROUP BY yan tümcesinin döndürdüğü gruplar belirli bir sırada değildir. Verilerin belirli bir sıralamasını belirtmek için ORDER BY yan tümcesini her zaman kullanmanızı öneririz.  
   
- Örtük olarak (örneğin, sorgudaki HAVING yan tümcesi tarafından) veya GROUP BY yan tümcesi, ya da açıkça belirtildiğinde geçerli kapsamdaki gizlidir ve yeni bir kapsam sunulmuştur.  
+ GROUP BY yan tümcesi belirtildiğinde, açıkça veya örtük olarak (örneğin, sorgudaki HAVING yan tümcesi tarafından), geçerli kapsam gizlidir ve yeni bir kapsam ortaya çıkartılır.  
   
- SELECT yan tümcesi ve HAVING yan tümcesi ORDER BY yan tümcesi artık FROM yan tümcesinde belirtilen öğe adları başvurmak mümkün olacaktır. Yalnızca gruplandırma ifadeleri kendilerini başvurabilir. Bunu yapmak için her bir gruplandırma ifadesi için yeni adlardır (takma adlardır) atayabilirsiniz. Bir gruplandırma ifadesi için diğer ad yok belirtilirse [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aşağıdaki örnekte gösterildiği gibi diğer ad oluşturma kurallarını kullanarak bir tane oluşturmak çalışır.  
+ SELECT yan tümcesi, HAVING yan tümcesi ve ORDER BY yan tümcesi artık FROM yan tümcesinde belirtilen öğe adlarına başvuramayacak. Yalnızca gruplandırma ifadelerine başvurabilirsiniz. Bunu yapmak için, her gruplama ifadesine yeni adlar (diğer adlar) atayabilirsiniz. Gruplandırma ifadesi için bir diğer ad belirtilmemişse, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aşağıdaki örnekte gösterildiği gibi diğer ad oluşturma kurallarını kullanarak bir tane oluşturmayı dener.  
   
  `SELECT g1, g2, ...gn FROM c as c1`  
   
  `GROUP BY e1 as g1, e2 as g2, ...en as gn`  
   
- GROUP BY yan tümcesindeki ifadelerin, daha önce aynı GROUP BY yan tümcesinde tanımlı adlarına başvuruda bulunamaz.  
+ GROUP BY yan tümcesindeki ifadeler, aynı GROUP BY yan tümcesinde daha önce tanımlanan adlara başvuramaz.  
   
- Gruplandırma adlarının yanı sıra, SELECT yan tümcesi, HAVING yan tümcesi ve ORDER BY yan tümcesi toplamalar de belirtebilirsiniz. Bir toplama grubunun her öğe için değerlendirilen bir ifade içeriyor. Toplama işleci tüm ifadelerin değerleri azaltır (genellikle, ancak her zaman, tek bir değer halinde). Toplama ifadesi, özgün öğe adları görünür ana kapsamında veya herhangi bir GROUP BY yan tümcesi tarafından kendisine sunulan yeni adları başvuruları yapabilirsiniz. Toplamlar SELECT yan tümcesi, HAVING yan tümcesi ve ORDER BY yan tümcesi görünse de, bunlar gerçekten gruplandırma ifadeler aynı kapsamı altında aşağıdaki örnekte gösterildiği gibi değerlendirilir.  
+ Adları gruplandırma konusuna ek olarak, SELECT yan tümcesinde, HAVING yan tümcesinde ve ORDER BY yan tümcesinde toplamaları de belirtebilirsiniz. Bir toplama, grubun her öğesi için değerlendirilen bir ifade içerir. Toplam işleci, tüm bu ifadelerin değerlerini azaltır (genellikle, ancak her zaman tek bir değere değildir). Toplama ifadesi, üst kapsamda görünen özgün öğe adlarına veya GROUP BY yan tümcesinin kendisi tarafından tanıtılan yeni adlara başvuru yapabilir. Toplamaların SELECT yan tümcesinde, HAVING yan tümcesinde ve ORDER BY yan tümcesinde görünmesine karşın, bu değerler, aşağıdaki örnekte gösterildiği gibi gruplama ifadeleri ile aynı kapsam altında değerlendirilir.  
   
  `SELECT name, sum(o.Price * o.Quantity) as total`  
   
@@ -46,9 +46,9 @@ Bir sorgu tarafından döndürülen hangi nesnelere grupları belirtir ([seçin]
   
  `GROUP BY o.Product as name`  
   
- Bu sorguyu GROUP BY yan tümcesi bir sipariş edilen tüm ürünlerin Maliyet raporu oluşturmak için kullanır. ürün göre ayrılmış. Ad verir `name` ürüne gruplandırma ifadesi ve ardından adı seçim listesinde başvurular bir parçası olarak. Ayrıca toplamı belirtir `sum` seçim listesindeki fiyat ve miktar siparişi satırı dahili olarak başvurur.  
+ Bu sorgu, ürüne göre bölünmüş, sipariş edilen tüm ürünlerin maliyetinin bir raporunu oluşturmak için GROUP BY yan tümcesini kullanır. Gruplandırma ifadesinin parçası olarak `name` ürüne adı verir ve ardından seçim listesinde bu ada başvurur. Ayrıca, select listesindeki toplamı `sum` , dahili olarak sipariş satırının fiyatına ve miktarına da belirtir.  
   
- Her GROUP By anahtar ifadesi giriş kapsamına en az bir başvuru olmalıdır:  
+ Her bir GROUP BY anahtar ifadesine giriş kapsamına en az bir başvuru olmalıdır:  
   
 ```  
 SELECT FROM Persons as P  
@@ -57,14 +57,14 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- GROUP BY kullanma örneği için bkz: [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
+ GROUP BY kullanımına ilişkin bir örnek için bkz. [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu GROUP BY işleci nesneleri bir sorgu tarafından döndürülen grupları belirlemek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, nesneleri bir sorgu tarafından döndürülen grupları belirtmek için GROUP BY işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   

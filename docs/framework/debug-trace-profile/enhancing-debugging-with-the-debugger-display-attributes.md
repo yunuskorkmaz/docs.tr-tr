@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631929"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966870"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme
 
-Hata ayıklayıcı görüntü öznitelikleri izin Geliştirici belirtir ve çalışma zamanı davranışını en iyi şekilde anlayan, tür, ne de belirtmek için bu tür bir hata ayıklayıcıda zaman görüntülendiği gibi görünecektir. Ayrıca, hata ayıklayıcı görüntüleme sağlayan öznitelikler bir `Target` özelliği kaynak kod bilgisi olmadan kullanıcılar tarafından derleme düzeyinde uygulanabilir. <xref:System.Diagnostics.DebuggerDisplayAttribute> Özniteliği bir tür veya üye hata ayıklayıcı değişken pencerelerinde nasıl görüntüleneceğini denetler. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Özelliği hata ayıklayıcı değişken pencerelerinde görüntülenen ya da öznitelik varsa ve bir alanın nasıl belirler. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik türü hata ayıklayıcı pencerelerinde görüntülenen şekilde değiştirir ve bir yedek tür ya da bir tür için bir proxy belirtir. Bir proxy veya yedek tür sahip bir değişken görüntülediğinizde, proxy özgün türü hata ayıklayıcı görüntü penceresinde gösterir. Proxy türü yalnızca genel üyeleri hata ayıklayıcı değişken penceresinde görüntüler. Özel üyeler görüntülenmez.  
+Hata ayıklayıcı görüntüleme öznitelikleri tür geliştiricisinin, bu türün çalışma zamanı davranışını belirten ve en iyi anladığı, bu türün bir hata ayıklayıcıda görüntülenmesiyle nasıl görüneceğine de olanak tanır. Ayrıca, bir `Target` özelliği sağlayan hata ayıklayıcı görüntüleme öznitelikleri, kaynak kodu bilgisine sahip olmayan kullanıcılar tarafından derleme düzeyinde uygulanabilir. <xref:System.Diagnostics.DebuggerDisplayAttribute> Özniteliği bir türün veya üyenin hata ayıklayıcı değişken penceresinde nasıl görüntülendiğini denetler. Özniteliği <xref:System.Diagnostics.DebuggerBrowsableAttribute> , bir alanın veya özelliğin hata ayıklayıcı değişkeni penceresinde görüntülenip görüntülenmeyeceğini ve nasıl görüntüleneceğini belirler. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik, bir tür için alternatif bir tür veya ara sunucu belirtir ve tür hata ayıklayıcı penceresinde görüntülenme şeklini değiştirir. Proxy veya yedek türü olan bir değişkeni görüntülediğinizde, proxy, hata ayıklayıcı görüntü penceresinde özgün tür için temsil eder. Hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün ortak üyelerini görüntüler. Özel Üyeler gösterilmez.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute kullanma  
 
-<xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> Oluşturucusu olan tek bir bağımsız değişken: değer sütununda görüntülenecek bir dize türü örnekleri. Bu dize, küme ayraçları içerebilir ({ve}). Bir çift küme ayraçlarının içindeki metni ifade olarak değerlendirilir. Örneğin, aşağıdaki C# kodu neden "sayısı = 4" örneği için hata ayıklayıcı görüntü genişletmek için artı işaretini (+) seçili olduğunda görüntülenecek `MyHashtable`.  
+<xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> Oluşturucunun tek bir bağımsız değişkeni vardır: tür örnekleri için değer sütununda görüntülenecek dize. Bu dize, küme ayracı ({ve}) içerebilir. Küme ayracı çiftindeki metin bir ifade olarak değerlendirilir. Örneğin, aşağıdaki C# kod, bir örneği için hata ayıklayıcı görüntüsünü genişletmek için artı işareti (+) seçildiğinde, "Count = 4" değerinin `MyHashtable`görüntülenmesine neden olur.  
 
 ```csharp
 [DebuggerDisplay("Count = {count}")]
@@ -38,23 +38,23 @@ class MyHashtable
 }
 ```
 
-Deyimde başvurulan özelliklerine uygulanan öznitelikleri işlenmez. C# derleyicisi, genel bir ifade yalnızca örtük erişim bu başvuru hedef türünün geçerli örneğe sahip izin verilir. İfade sınırlıdır; diğer adlar, Yereller ve işaretçileri için erişimi yoktur. C# kodunda, örtük erişimi olan ayraçlar arasındaki genel bir ifade kullanabilirsiniz `this` yalnızca hedef türü geçerli örneği için işaretçi.
+İfadede başvurulan özelliklere uygulanan öznitelikler işlenmedi. C# Derleyici için, hedef türün geçerli örneğine yönelik bu başvuruya yalnızca örtülü erişimi olan genel bir ifadeye izin verilir. İfade sınırlı; diğer adlar, Yereller veya işaretçiler için erişim yoktur. Kod C# içinde, yalnızca hedef türün geçerli örneğinin `this` işaretçisine örtük erişimi olan küme ayraçları arasında genel bir ifade kullanabilirsiniz.
 
-Örneğin, bir C# nesnesi geçersiz kılınan bir varsa `ToString()`, hata ayıklayıcı geçersiz kılma işlemini çağırın ve standart yerine sonucu göster `{<typeName>}.` siz kıldıysanız Thus `ToString()`, kullanın gerekmez <xref:System.Diagnostics.DebuggerDisplayAttribute>. Her ikisi de kullanırsanız <xref:System.Diagnostics.DebuggerDisplayAttribute> özniteliği önceliklidir `ToString()` geçersiz kılar.
+C# Örneğin, bir nesne geçersiz kılınmışsa `ToString()`, hata ayıklayıcı geçersiz kılmayı çağırır ve standart `{<typeName>}.` yerine sonucunu gösterir. bu nedenle, geçersiz kılındıysanız `ToString()`, kullanmanız <xref:System.Diagnostics.DebuggerDisplayAttribute>gerekmez. Her ikisini de kullanırsanız, <xref:System.Diagnostics.DebuggerDisplayAttribute> öznitelik `ToString()` geçersiz kılmanın üzerine gelir.
 
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute kullanma
- Uygulama <xref:System.Diagnostics.DebuggerBrowsableAttribute> bir alan veya özellik hata ayıklayıcı penceresinde görüntülenecek alan veya özellik nasıl olduğunu belirtmek için. Bu öznitelik için oluşturucu birini alır <xref:System.Diagnostics.DebuggerBrowsableState> aşağıdaki durumlardan biriyle belirten numaralandırma değerlerinden:
+ <xref:System.Diagnostics.DebuggerBrowsableAttribute> Alan veya özelliğin hata ayıklayıcı penceresinde nasıl görüntüleneceğini belirtmek için bir alan veya özelliğe uygulayın. Bu özniteliğin Oluşturucusu, aşağıdaki durumlardan birini belirten <xref:System.Diagnostics.DebuggerBrowsableState> sabit listesi değerlerinden birini alır:
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Never> Üye verileri penceresinde görüntülenmez gösterir.  Örneğin, bu değeri kullanarak <xref:System.Diagnostics.DebuggerBrowsableAttribute> üzerinde bir alan, alanın bu hiyerarşisinden kaldırır; türü örneği için (+) artı işaretine tıklayarak kapsayan türdeki genişlettiğinizde alan gösterilmez.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never>üyenin veri penceresinde görüntülenmediğini belirtir.  Örneğin, bir alan için <xref:System.Diagnostics.DebuggerBrowsableAttribute> bu değerin kullanılması alanı hiyerarşiden kaldırır; tür örneği için artı işaretine (+) tıklayarak kapsayan türü genişlettiğinizde alan görüntülenmez.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> üye görüntülenmez ancak varsayılan olarak genişletilmiş değil gösterir.  Bu varsayılan davranıştır.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>üyenin varsayılan olarak görüntülendiğini ancak genişletilmediğini belirtir.  Bu varsayılan davranıştır.
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> üye gösterilmez, ancak bir dizi veya koleksiyon olması durumunda, bağlı nesneler görüntülenir gösterir.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>üyenin kendisinin gösterildiğini, ancak bir dizi veya koleksiyon ise, bileşen nesnelerinin görüntülendiğini belirtir.
 
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggerBrowsableAttribute> Visual Basic'te .NET Framework sürüm 2.0 tarafından desteklenmez.
+> Visual Basic <xref:System.Diagnostics.DebuggerBrowsableAttribute> , .NET Framework sürüm 2,0 ' de desteklenmez.
 
-Aşağıdaki kod örneği, kullanımını gösterir <xref:System.Diagnostics.DebuggerBrowsableAttribute> sınıfı için hata ayıklama penceresinde görüntülenmesini aşağıdaki özellik önlemek için.
+Aşağıdaki kod örneği, <xref:System.Diagnostics.DebuggerBrowsableAttribute> sınıfının hata ayıklama penceresinde sınıfın görüntülenmesini engellemek için öğesinin kullanımını gösterir.
 
 ```csharp
 [DebuggerBrowsable(DebuggerBrowsableState.Never)]
@@ -62,13 +62,13 @@ public static string y = "Test String";
 ```
 
 ## <a name="using-the-debuggertypeproxy"></a>DebuggerTypeProxy kullanma
- Kullanım <xref:System.Diagnostics.DebuggerTypeProxyAttribute> özniteliği önemli ölçüde ve temel bir tür hata ayıklama görünümünü değiştirebilirsiniz, ancak türü değiştirilmemesi gerektiğinde. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Öznitelik, bir türü için Görünüm türü için uygun hale getirmek bir geliştirici izin görünen proxy belirtmek için kullanılır.  Gibi bu öznitelik <xref:System.Diagnostics.DebuggerDisplayAttribute>, bu durumda derleme düzeyinde kullanılabilir <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> özelliği proxy kullanılacak türünü belirtir. Bu öznitelik türü özniteliği uygulandığı içinde oluşan özel bir iç içe türü belirttiğinden önerilen kullanımdır.  Bir tür görüntülendiğinde, bu öznitelik için bir ifade değerlendiricisi destekler görüntüleyiciler yazın denetler. Öznitelik bulunursa, ifade değerlendiricisi görünen proxy türü özniteliği uygulandığı türünün yerini alır.
+ Bir türün hata ayıklama görünümünü önemli ölçüde ve temel olarak değiştirmeniz gerektiğinde özniteliğikullanın,ancaktürünkendisinideğiştirmeyin.<xref:System.Diagnostics.DebuggerTypeProxyAttribute> <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Özniteliği, bir tür için bir görüntüleme proxy 'si belirtmek için kullanılır ve bu, geliştiricinin tür için görünümü uyarlayabilmesine izin verir.  Bu öznitelik, gibi <xref:System.Diagnostics.DebuggerDisplayAttribute>, derleme düzeyinde kullanılabilir, bu <xref:System.Diagnostics.DebuggerTypeProxyAttribute.Target%2A> durumda özellik proxy kullanılacak türü belirtir. Önerilen kullanım, bu özniteliğin özniteliğin uygulandığı tür içinde oluşan özel bir iç içe türü belirttiğinden emin olur.  Tür izleyicilerini destekleyen bir ifade değerlendirici, bir tür görüntülenirken bu özniteliği denetler. Öznitelik bulunursa, ifade değerlendirici özniteliğin uygulandığı tür için görüntüleme proxy türünü kullanır.
 
- Zaman <xref:System.Diagnostics.DebuggerTypeProxyAttribute> varsa, proxy türü yalnızca genel üyeleri hata ayıklayıcı değişken penceresinde görüntüler. Özel üyeler görüntülenmez. Veri penceresi davranışını özniteliği Gelişmiş görünümler tarafından değiştirilmez.
+ <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Varsa, hata ayıklayıcı değişkeni penceresi yalnızca proxy türünün genel üyelerini görüntüler. Özel Üyeler gösterilmez. Veri penceresinin davranışı öznitelik ile geliştirilmiş görünümler tarafından değiştirilmez.
 
- Ya da türü bir veri penceresinde yanındaki artı işaretini (+) tıklayarak kullanıcı veya uygulamanın nesne genişletilir kadar gereksiz performans cezalarını önlemek için görüntü proxy özniteliklerini işlenmez <xref:System.Diagnostics.DebuggerBrowsableAttribute> özniteliği. Bu nedenle, hiçbir öznitelik görüntü türünü uygulanması önerilir. Öznitelikleri olabilir ve görüntü türünü gövdesinden uygulanmalıdır.
+ Gereksiz performans cezalarını önlemek için, nesne genişletilene kadar görüntüleme proxy 'si öznitelikleri, Kullanıcı aracılığıyla bir veri penceresinde <xref:System.Diagnostics.DebuggerBrowsableAttribute> türün yanındaki artı işaretine (+) tıklanana kadar işlenmeyecektir. özniteliğe. Bu nedenle, görüntüleme türüne hiçbir özniteliğin uygulanması önerilir. Öznitelikleri, görüntüleme türünün gövdesinde uygulanmalıdır.
 
- Aşağıdaki kod örneği, kullanımını gösterir <xref:System.Diagnostics.DebuggerTypeProxyAttribute> hata ayıklayıcı görüntü proxy olarak kullanılacak bir tür belirtmek için.
+ Aşağıdaki kod örneği, <xref:System.Diagnostics.DebuggerTypeProxyAttribute> hata ayıklayıcı görüntüleme proxy 'si olarak kullanılacak bir tür belirtmek için öğesinin kullanımını gösterir.
 
 ```csharp
 [DebuggerTypeProxy(typeof(HashtableDebugView))]
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>Açıklama
 
-Aşağıdaki kod örneği uygulanması sonucu görmek için Visual Studio'da görüntülenebilir <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, ve <xref:System.Diagnostics.DebuggerTypeProxyAttribute> öznitelikleri.
+Aşağıdaki kod örneği <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, ve <xref:System.Diagnostics.DebuggerTypeProxyAttribute> özniteliklerini uygulamanın sonuçlarını görmek için Visual Studio 'da görüntülenebilir.
 
 ### <a name="code"></a>Kod
 

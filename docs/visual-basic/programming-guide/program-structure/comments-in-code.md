@@ -14,15 +14,15 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 2737d9494fb4cd2f0cfaec4da1bca69003c6bad7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3635d52532789133a345d9a9228efae869c8c223
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945612"
 ---
 # <a name="comments-in-code-visual-basic"></a>Kod Açıklamaları (Visual Basic)
-Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`). Bu simge, metni yok saymak için Visual Basic derleyiciye veya *yorum*. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
+Kod örneklerini okurken genellikle açıklama simgesiyle (`'`) karşılaşırsınız. Bu simge, Visual Basic derleyicisine onu izleyen metni veya *yorumu*yoksaymasını söyler. Açıklamalar, okuyan kişinin yararına olması için koda eklenmiş kısa ve açıklayıcı notlardır.  
   
  Tüm yordamlara, ilgili yordamın işlevsel özelliklerini (neler yaptığını) açıklayan kısa bir açıklama ile başlanması iyi bir programlama uygulamasıdır. Bu hem sizin yararınıza, hem de kodu inceleyen herhangi bir kişinin yararına olur. Gerçekleştirme ayrıntılarını (yordamın bunu nasıl yaptığı), işlevsel özellikleri anlatan açıklamalardan ayırmalısınız. Açıklamaya gerçekleştirme ayrıntılarını eklediğinizde, işlevi güncelleştirirken bunları da güncelleştirmeyi unutmayın.  
   
@@ -35,7 +35,7 @@ Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`
  [!code-vb[VbVbcnConventions#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#17)]  
   
 ## <a name="commenting-guidelines"></a>Açıklamalara İlişkin Kurallar  
- Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. Bunlar önerilerdir; Visual Basic açıklama eklemek için kuralları zorunlu kılmaz. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
+ Aşağıdaki tabloda, kodun bir bölümünden önce hangi tür açıklamaların gelebileceğine dair genel kurallar verilmektedir. Bunlar önerilerdir; Visual Basic, yorum eklemek için kuralları zorlamaz. Hem sizin, hem de kodu okuyan herhangi bir kişinin işine en çok yarayacak şeyleri yazın.  
   
 |||  
 |---|---|  
@@ -54,15 +54,15 @@ Kod örneklerini okurken açıklama sembolüyle sık karşılaştığınız (`'`
   
 - Açıklamalar, aynı satırdaki bir satır devamlılığı dizisinden sonra gelemez.  
   
- Ekleyebilir veya bir veya daha fazla kod satırlarını ve seçerek bir kod bloğu için açıklama sembolleri kaldırmak **yorum** (![Visual Studio. Visual Basic Açıklama düğmesi](./media/comments-in-code/visual-basic-comment-button.gif)) ve **açıklamayı Kaldır**  (![Düğmesini Visual Studio. Visual Basic açıklamadan çıkarın](./media/comments-in-code/visual-basic-uncomment-button.gif)) düğmelerini **Düzenle** araç çubuğu.  
+ Bir veya daha fazla kod satırı seçip **açıklamayı** seçerek (![Visual Studio 'da Visual Basic Açıklama düğmesi) ve açıklama ' ![yı seçerek bir kod bloğu için açıklama sembolleri ekleyebilir veya kaldırabilirsiniz.](./media/comments-in-code/visual-basic-comment-button.gif) Visual Studio 'da temel açıklama Kaldır düğmesi. ) düğmelerini düzenleyin. ](./media/comments-in-code/visual-basic-uncomment-button.gif)  
   
 > [!NOTE]
->  Metinle koyarak kodunuza açıklama ekleyebilirsiniz `REM` anahtar sözcüğü. Ancak, `'` sembol ve **yorum**/**açıklamayı Kaldır** düğmeleri daha kolay ve daha az alan ve bellek gerektirir.  
+> Ayrıca, metin `REM` anahtar sözcüğüyle metinden önce kodunuza yorum ekleyebilirsiniz. Ancak simge ve **Açıklama açıklama**/ekleme düğmelerinin kullanımı daha kolaydır ve daha az alan ve bellek gerektirir. `'`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Küçümsemeyin - XML açıklamalarıyla kodunuzu belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [Nasıl yapılır: XML belgesi oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Temel ınstınts-kodunuzu XML açıklamalarıyla belgeleme](https://msdn.microsoft.com/magazine/dd722812.aspx)
+- [Nasıl yapılır: XML belgeleri oluşturma](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML Açıklama Etiketleri](../../../visual-basic/language-reference/xmldoc/index.md)
 - [Program Yapısı ve Kod Kuralları](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM Deyimi](../../../visual-basic/language-reference/statements/rem-statement.md)

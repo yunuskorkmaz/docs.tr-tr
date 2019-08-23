@@ -2,33 +2,33 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f771886192e85cc7e34f0ace4fd95ca04bdb89c9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: aad89924b371d9d5032f32f29aac83fae445f253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959774"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
-Örnek HTTP aktarımı kullanıldığında akış senaryoları desteklemek için tasarlanan bir bağlama oluşturma işlemini gösterir.  
+Örnek, HTTP taşıması kullanıldığında akış senaryolarını destekleyecek şekilde tasarlanan bir bağlamanın nasıl oluşturulacağını gösterir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
- Oluşturma ve yeni bir standart bağlama yapılandırma adımları aşağıdaki gibidir.  
+ Yeni bir standart bağlama oluşturma ve yapılandırma adımları aşağıdaki gibidir.  
   
-1. Yeni standart bir bağlama oluşturma  
+1. Yeni bir standart bağlama oluştur  
   
-     Windows Communication Foundation (WCF) basicHttpBinding ve netTcpBinding gibi standart bağlamaları temel alınan aktarımları ve kanal yığınında belirli gereksinimleri için yapılandırın. Bu örnekte `WSStreamedHttpBinding` akış desteklemek için kanal yığın yapılandırır. Varsayılan olarak, her iki özellik, akış tarafından desteklenmediği için WS-güvenlik ve güvenilir Mesajlaşma kanalı yığına eklenmez. Yeni bağlamanın sınıfta uygulandığını `WSStreamedHttpBinding` türetilen <xref:System.ServiceModel.Channels.Binding>. `WSStreamedHttpBinding` Aşağıdaki bağlama öğeleri içerir: <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, ve <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Sağlar sınıfını bir `CreateBindingElements()` aşağıdaki örnek kodda gösterildiği gibi ortaya çıkan bağlama yığını yapılandırmak için yöntem.  
+     BasicHttpBinding ve netTcpBinding gibi Windows Communication Foundation (WCF) içindeki standart bağlamalar, belirli gereksinimler için temel taşımaları ve kanal yığınını yapılandırır. Bu örnekte, `WSStreamedHttpBinding` kanal yığınını akışı destekleyecek şekilde yapılandırır. Varsayılan olarak, WS-Security ve güvenilir mesajlaşma, her iki özellik de akış tarafından desteklenmediğinden kanal yığınına eklenmez. Yeni bağlama, öğesinden `WSStreamedHttpBinding` <xref:System.ServiceModel.Channels.Binding>türetilen sınıfta uygulanır. <xref:System.ServiceModel.Channels.HttpTransportBindingElement> <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>, Aşağıdaki bağlama öğelerini <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>içerir:,, ve. `WSStreamedHttpBinding` Sınıfı, aşağıdaki örnek `CreateBindingElements()` kodda gösterildiği gibi, elde edilen bağlama yığınını yapılandırmak için bir yöntem sağlar.  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -50,11 +50,11 @@ ms.locfileid: "65881480"
     }  
     ```  
   
-2. Yapılandırma desteği eklendi  
+2. Yapılandırma desteği ekle  
   
-     Taşıma yapılandırma aracılığıyla kullanıma sunmak için iki daha fazla sınıf örneği uygular —`WSStreamedHttpBindingConfigurationElement` ve `WSStreamedHttpBindingSection`. Sınıf `WSStreamedHttpBindingSection` olduğu bir <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> kullanıma sunan `WSStreamedHttpBinding` WCF yapılandırma sistemi için. Toplu uygulama için temsilci `WSStreamedHttpBindingConfigurationElement`, öğesinden türetildiğini <xref:System.ServiceModel.Configuration.StandardBindingElement>. Sınıf `WSStreamedHttpBindingConfigurationElement` özelliklerine karşılık gelen özelliklerle sahip `WSStreamedHttpBinding`ve her yapılandırma öğesi için bir bağlama eşlemek için işlev.  
+     Aktarımı yapılandırma yoluyla göstermek için örnek iki sınıf daha uygular —`WSStreamedHttpBindingConfigurationElement` ve. `WSStreamedHttpBindingSection` Sınıfı `WSStreamedHttpBindingSection` , WCF yapılandırma <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> sistemine `WSStreamedHttpBinding` yönelik bir ' dir. Uygulamanın toplu işlemi, ' den `WSStreamedHttpBindingConfigurationElement` <xref:System.ServiceModel.Configuration.StandardBindingElement>türetilen için Temsilcili. Sınıfı `WSStreamedHttpBindingConfigurationElement` ,`WSStreamedHttpBinding`özelliklerine karşılık gelen özelliklere ve her yapılandırma öğesini bir bağlamaya eşlemek için işlevlere sahiptir.  
   
-     İşleyici, aşağıdaki bölümde bu hizmetin yapılandırma dosyasına ekleyerek yapılandırma sistemi ile kaydedin.  
+     Hizmetin yapılandırma dosyasına aşağıdaki bölümü ekleyerek işleyiciyi yapılandırma sistemine kaydedin.  
   
     ```xml  
     <configuration>  
@@ -68,7 +68,7 @@ ms.locfileid: "65881480"
     </configuration>  
     ```  
   
-     İşleyici serviceModel Yapılandırma bölümünden sonra başvurulabilir.  
+     İşleyiciye daha sonra serviceModel yapılandırma bölümünden başvurulabilir.  
   
     ```xml  
     <configuration>  
@@ -84,26 +84,26 @@ ms.locfileid: "65881480"
     </configuration>  
     ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Listelenen adımları gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik kurulum yordamında](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)listelenen adımları gerçekleştirdiğinizden emin olun.  
   
-3. Gerçekleştirdiğinizden emin olmak [Internet Information Services (IIS) sunucu sertifikası yükleme yönergeleri](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).  
+3. [Internet Information Services (IIS) sunucu sertifikası yükleme yönergelerini](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizden emin olun.  
   
-4. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-5. Çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5. Örneği bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-6. İstemci penceresi görüntülendiğinde, "Örnek.txt" yazın. Dizininizde "Örnek.txt Kopyala" bulmanız gerekir.  
+6. İstemci penceresi görüntülendiğinde "Sample. txt" yazın. Dizininizde bir "örnek. txt kopyası" bulmanız gerekir.  
   
 ## <a name="the-wsstreamedhttpbinding-sample-service"></a>WSStreamedHttpBinding örnek hizmeti  
- Kullanan örnek hizmet `WSStreamedHttpBinding` hizmet alt dizinindeki yer alır. Uygulamasını `OperationContract` kullanan bir `MemoryStream` döndürmeden önce gelen akıştan önce tüm verileri almak için `MemoryStream`. Örnek hizmeti Internet Information Services (IIS) tarafından barındırılır.  
+ Tarafından kullanılan `WSStreamedHttpBinding` örnek hizmet, hizmet alt dizininde bulunur. Uygulamasının uygulamasını `OperationContract` döndürmeden önce `MemoryStream` gelen akıştan tüm verileri almak için bir kullanır. `MemoryStream` Örnek hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 ```  
 [ServiceContract]  
@@ -133,8 +133,8 @@ public class StreamedEchoService : IStreamedEchoService
 }  
 ```  
   
-## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding örnek istemci  
- Hizmeti kullanmaya kullanılan etkileşim kurmak için istemci `WSStreamedHttpBinding` istemci alt dizinde bulunur. Bu örnekte kullanılan sertifika Makecert.exe ile oluşturulan bir test sertifikası olduğundan, tarayıcınızda bir HTTPS adresi gibi erişmeye çalıştığınızda bir güvenlik uyarısı görüntüler https://localhost/servicemodelsamples/service.svc. Yerinde bir test sertifikası ile çalışmak için WCF istemcisini izin vermek için güvenlik uyarıyı gizlemek için istemci için bazı ek kod eklendi. Kod ve eşlik eden sınıfı üretim sertifikaları kullanırken gerekli değildir.  
+## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding örnek Istemcisi  
+ Kullanılarak `WSStreamedHttpBinding` hizmetle etkileşim kurmak için kullanılan istemci, istemci alt dizininde bulunur. Bu örnekte kullanılan sertifika, MakeCert. exe ile oluşturulmuş bir test sertifikası olduğundan, tarayıcınızda https://localhost/servicemodelsamples/service.svc bir https adresine erişmeye çalıştığınızda bir güvenlik uyarısı görüntülenir. WCF istemcisinin yerinde bir test sertifikasıyla çalışmasına izin vermek için, güvenlik uyarısını bastırmak üzere istemciye bazı ek kodlar eklenmiştir. Üretim sertifikaları kullanılırken kod ve eşlik eden sınıf gerekli değildir.  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

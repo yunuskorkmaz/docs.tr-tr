@@ -1,40 +1,40 @@
 ---
-title: "Nasıl yapılır: Visual Basic'de XML belgesi oluşturma"
+title: 'Nasıl yapılır: Visual Basic XML belgeleri oluşturun'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9380c23ab6cfdbecd519926229b45ed863f07f9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947710"
 ---
-# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de XML belgesi oluşturma
-Bu örnek XML belge açıklamaları ekleme kodunuzu gösterir.  
+# <a name="how-to-create-xml-documentation-in-visual-basic"></a>Nasıl yapılır: Visual Basic XML belgeleri oluşturun
+Bu örnek, kodunuza XML belge açıklamaları eklemeyi gösterir.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Bir tür veya üye için XML belgeleri oluşturmak için  
   
-1. İçinde **Kod Düzenleyicisi**, yukarıdaki belgeleri oluşturmak istediğiniz türe veya üyeye satırında imlecinizi.  
+1. **Kod Düzenleyicisi**'nde imlecinizi, belge oluşturmak istediğiniz türün veya üyenin üzerindeki satıra yerleştirin.  
   
-2. Tür `'''` (üç tek tırnak işareti).  
+2. Yazın `'''` (üç tek tırnak işareti).  
   
-     Türe veya üyeye bir XML çatısı eklenir **Kod Düzenleyicisi**.  
+     Tür veya üye için bir XML iskelet **kodu, kod düzenleyicisine**eklenir.  
   
-3. Uygun etiketleri arasına tanımlayıcı bilgiler ekleyin.  
+3. Uygun Etiketler arasına açıklayıcı bilgi ekleyin.  
   
     > [!NOTE]
-    >  XML belgeleri bloğu içinde ek satırlar eklerseniz, her bir çizgi ile başlamalıdır `'''`.  
+    > XML belge bloğunun içine ek satırlar eklerseniz, her satır ile `'''`başlamalıdır.  
   
-4. Türe veya üyeye yeni XML belge açıklamaları kullanan ek kod ekleyin.  
+4. Yeni XML belge açıklamalarıyla türü veya üyeyi kullanan ek kod ekleyin.  
   
-     IntelliSense görüntüler metinden \<Özet > türe veya üyeye etiketi.  
+     IntelliSense, tür veya üyenin \<Özet > etiketindeki metni görüntüler.  
   
-5. Belge açıklamaları içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5. Belge açıklamalarını içeren bir XML dosyası oluşturmak için kodu derleyin. Daha fazla bilgi için bkz. [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

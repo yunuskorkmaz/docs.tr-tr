@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetMethodProps yöntemi
+title: 'ICorDebugSymbolProvider:: GetMethodProps Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f6971c7991f5e54973d96d9b3f662b54be564d9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957304"
 ---
-# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps yöntemi
-Bu yönteme göreli sanal adres (RVA) verilen yöntemin meta veri belirteci ve kendi genel parametreler hakkında bilgi gibi yöntemi özellikleri hakkında bilgi döndürür.  
+# <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider:: GetMethodProps Yöntemi
+Yöntemin meta veri belirteci ve bu yöntemde göreli bir sanal adres (RVA) verilen genel parametreleriyle ilgili bilgiler gibi Yöntem özellikleriyle ilgili bilgileri döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,37 +29,37 @@ HRESULT GetMethodProps(
   
 ## <a name="parameters"></a>Parametreler  
  `codeRVA`  
- [in] Göreli sanal adres hakkında bilgi alınacak yöntemi içinde.  
+ 'ndaki Hangi bilgilerin alınacağı konusunda yöntemde göreli bir sanal adres.  
   
  `pMethodToken`  
- [out] Yöntemin meta veri belirteci için bir işaretçi.  
+ dışı Metodun meta veri belirtecine yönelik bir işaretçi.  
   
  `pcGenericParams`  
- [out] Bu yöntemle ilişkili genel parametre sayısı için bir işaretçi.  
+ dışı Bu metotla ilişkili genel parametre sayısına yönelik bir işaretçi.  
   
  `cbSignature`  
- [in] Boyutu `signature` dizisi. Açıklamalar bölümüne bakın.  
+ 'ndaki `signature` Dizinin boyutu. Açıklamalar bölümüne bakın.  
   
  `pcbSignature`  
- [out] Boyut döndürülen işaretçi `signature` dizisi.  
+ dışı Döndürülen `signature` dizinin boyutuna yönelik bir işaretçi.  
   
  `signature`  
- [out] Tüm genel parametreler TypeSpec'te imzalarını tutan arabellek.  
+ dışı Tüm genel parametrelerin TypeSpec imzalarını tutan bir arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemin gerekli boyutunu almak için `signature` ayarlayın, dizi `cbSignature` bağımsız değişkeni 0 ve `signature` için **null**. Yöntem döndürüldüğünde `pcbSignature` için gereken bayt sayısını içerir `signature` dizisi.  
+ Yöntemin `signature` dizisinin gerekli boyutunu almak için, `cbSignature` bağımsız değişkenini 0 ve `signature` **null**olarak ayarlayın. Yöntemi döndüğünde, `pcbSignature` `signature` dizi için gereken bayt sayısını içerir.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

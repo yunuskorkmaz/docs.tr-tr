@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 50cf5011376576d371dba558a602187201395bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4a61306cd9b61f84eff16ffaac302317b6dfe44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959186"
 ---
 # <a name="establishing-the-connection"></a>Bağlantı Kurma
-Microsoft SQL Server'a bağlanmak için <xref:System.Data.SqlClient.SqlConnection> SQL Server için .NET Framework veri sağlayıcısı nesnesi. Bir OLE DB veri kaynağına bağlanmak için <xref:System.Data.OleDb.OleDbConnection> nesnesini OLE DB için .NET Framework veri sağlayıcısı. Bir ODBC veri kaynağına bağlanmak için <xref:System.Data.Odbc.OdbcConnection> ODBC için .NET Framework veri sağlayıcısı nesnesi. Bir Oracle veri kaynağına bağlanmak için <xref:System.Data.OracleClient.OracleConnection> Oracle için .NET Framework veri sağlayıcısı nesnesi. Güvenli bir şekilde depolamak ve bağlantı dizelerini almak için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Microsoft SQL Server bağlanmak için, SQL Server için .NET Framework <xref:System.Data.SqlClient.SqlConnection> veri sağlayıcısı nesnesini kullanın. Bir OLE DB veri kaynağına bağlanmak için, OLE DB için .NET Framework <xref:System.Data.OleDb.OleDbConnection> veri sağlayıcısı nesnesini kullanın. ODBC veri kaynağına bağlanmak için, ODBC için .NET Framework veri sağlayıcısı <xref:System.Data.Odbc.OdbcConnection> nesnesini kullanın. Oracle veri kaynağına bağlanmak için, Oracle için .NET Framework veri sağlayıcısı <xref:System.Data.OracleClient.OracleConnection> nesnesini kullanın. Bağlantı dizelerini güvenli bir şekilde depolamak ve almak için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
-## <a name="closing-connections"></a>Bağlantı Kapatma  
- Böylece bağlantı havuzuna döndürülebilir kullanmayı bitirdiğiniz zaman, her zaman bağlantı kapatmanızı öneririz. `Using` Visual Basic'te engellemek ya da C# otomatik olarak atar bağlantısı kod bloğu, işlenmeyen bir özel durum durumunda bile çıktığında. Bkz: [using deyimi](~/docs/csharp/language-reference/keywords/using-statement.md) ve [Using deyimi](~/docs/visual-basic/language-reference/statements/using-statement.md) daha fazla bilgi için.  
+## <a name="closing-connections"></a>Bağlantıları kapatma  
+ Bağlantıyı kullanarak her zaman bağlantıyı kapatmanızı öneririz, böylece bağlantı havuza geri döndürülebilecek. İşlenmemiş bir özel durum söz C# konusu olduğunda bile, kod bloktan çıktığında Visual Basic veya bağlantı otomatik olarak ortadan kaldırır. `Using` Daha fazla bilgi için bkz. [using deyimleri](../../../csharp/language-reference/keywords/using-statement.md) ve [using deyimleri](../../../visual-basic/language-reference/statements/using-statement.md) .  
   
- Ayrıca `Close` veya `Dispose` kullandığınız sağlayıcı için bağlantı nesnesi yöntemleri. Açıkça kapanmamış bağlantıları eklenemez veya havuza geri döner. Örneğin, bir bağlantı, kapsam dışına geçti, ancak bu değil açıkça kapatıldı yalnızca bağlantı havuzuna maksimum havuz boyutuna ulaştı ve bağlantı hala geçerli ise döndürülür. Daha fazla bilgi için [OLE DB, ODBC ve Oracle bağlantı havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
-  
-> [!NOTE]
->  Çağırmayın `Close` veya `Dispose` üzerinde bir **bağlantı**, **DataReader**, ya da diğer yönetilen nesnelere `Finalize` sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir `Finalize` sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
+ Ayrıca, `Close` kullanmakta olduğunuz sağlayıcı için `Dispose` bağlantı nesnesinin veya yöntemlerini de kullanabilirsiniz. Açıkça kapatılmayan bağlantılar, havuza eklenmeyebilir veya havuza döndürülemez. Örneğin, kapsam dışına çıkan ancak açıkça kapatılmayan bir bağlantı yalnızca en büyük havuz boyutuna ulaşılmışsa ve bağlantı hala geçerliyse bağlantı havuzuna döndürülür. Daha fazla bilgi için bkz. [OLE DB, ODBC ve Oracle bağlantı havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
->  Bağlantı için bağlantı havuzunu döndürüldüğünde gerçekten kapatılmamış çünkü bağlantı öğesinden alınan ya da bağlantı havuzu için döndürülen de sunucuda oturum açma ve kapatma olayları harekete Geçirilmemesi. Daha fazla bilgi için [SQL Server Connection Pooling (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+> Sınıfınızın `Finalize` yönteminde veya `Close` `Dispose` bir **bağlantı**, bir **DataReader**veya başka bir yönetilen nesne çağırmayın. Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir `Finalize` Yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
-## <a name="connecting-to-sql-server"></a>SQL Server'a bağlanma  
- SQL Server için .NET Framework veri sağlayıcısı için OLE DB (ADO) bağlantı dizesi biçimi benzer bir bağlantı dizesi biçimi destekler. Geçerli dize biçimi adları ve değerleri için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> özelliği <xref:System.Data.SqlClient.SqlConnection> nesne. Ayrıca <xref:System.Data.SqlClient.SqlConnectionStringBuilder> sözdizimsel açıdan geçerli bağlantı dizeleri çalışma zamanında oluşturmak için sınıf. Daha fazla bilgi için [bağlantı dizesi oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> [!NOTE]
+> Bağlantı, bağlantı havuzuna döndürüldüğünden bağlantı, gerçekten kapanmadığı için, bağlantı havuzundan bir bağlantı getirilirken ya da geri döndürülene kadar sunucuda oturum açma ve oturum kapatma olayları oluşturulmaz. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
- Aşağıdaki kod örneği, oluşturmak ve bir SQL Server veritabanına bir bağlantı açmak gösterilmektedir.  
+## <a name="connecting-to-sql-server"></a>SQL Server bağlanılıyor  
+ SQL Server için .NET Framework Veri Sağlayıcısı, OLE DB (ADO) bağlantı dizesi biçimine benzer bir bağlantı dizesi biçimini destekler. Geçerli dize biçimi adları ve değerleri için, bkz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> . <xref:System.Data.SqlClient.SqlConnection> nesnesinin özelliği. Ayrıca, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> çalışma zamanında sözdizimi geçerli bağlantı dizeleri oluşturmak için sınıfını da kullanabilirsiniz. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+  
+ Aşağıdaki kod örneği, bir SQL Server veritabanına bağlantı oluşturmayı ve açmayı gösterir.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -48,26 +48,26 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 }  
 ```  
   
-### <a name="integrated-security-and-aspnet"></a>Tümleşik Güvenlik'i ve ASP.NET  
- SQL Server'ın tümleşik güvenlik (güvenilen bağlantılar olarak da bilinir) olarak SQL Server'a bağlanırken koruma sağlamaya yardımcı olur, bir kullanıcı kimliği ve bağlantı dizesinde parola kullanıma sunmuyor ve bağlantı kimliğini doğrulamak için önerilen yöntemdir. Tümleşik güvenlik geçerli güvenlik kimliği ya da belirtecinde, yürütme işlemi kullanır. Masaüstü uygulamaları için bu genellikle şu anda oturum açmış kullanıcı kimliğidir.  
+### <a name="integrated-security-and-aspnet"></a>Tümleşik güvenlik ve ASP.NET  
+ SQL Server tümleşik güvenlik (güvenilen bağlantı olarak da bilinir), bağlantı dizesinde kullanıcı KIMLIĞI ve parola sunmaz ve bir bağlantının kimlik doğrulaması için önerilen yöntem olduğundan, SQL Server bağlanırken koruma sağlamaya yardımcı olur. Tümleşik güvenlik, yürütme işleminin geçerli güvenlik kimliğini veya belirtecini kullanır. Masaüstü uygulamaları için bu genellikle şu anda oturum açmış olan kullanıcının kimliğidir.  
   
- ASP.NET uygulamaları için güvenlik kimlik birkaç farklı seçenekten birini için ayarlanabilir. Bir ASP.NET uygulamasını SQL Server'a bağlanırken kullandığı güvenlik kimlik daha iyi anlamak için bkz: [ASP.NET kimliğe bürünme](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [ASP.NET kimlik doğrulaması](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100)), ve [nasıl yapılır: Erişim SQL Server'ı kullanarak Windows tümleşik güvenliği](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100)).  
+ ASP.NET uygulamaları için güvenlik kimliği, birkaç farklı seçenekten birine ayarlanabilir. Bir ASP.NET uygulamasının SQL Server bağlanırken kullandığı güvenlik kimliğini daha iyi anlamak için bkz. [ASP.NET Kimliğe bürünme](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)), [ASP.NET Authentication](https://docs.microsoft.com/previous-versions/aspnet/eeyk640h(v=vs.100))ve [nasıl yapılır: Windows tümleşik güvenliği](https://docs.microsoft.com/previous-versions/aspnet/bsz5788z(v=vs.100))kullanarak SQL Server erişin.  
   
-## <a name="connecting-to-an-ole-db-data-source"></a>Bir OLE DB veri kaynağına bağlanma  
- OLE DB için .NET Framework veri sağlayıcısı (aracılığıyla SQLOLEDB, OLE DB sağlayıcısı için SQL Server), OLE DB kullanılarak kullanıma sunulan veri kaynaklarına bağlantı sağlayan kullanarak **OleDbConnection** nesne.  
+## <a name="connecting-to-an-ole-db-data-source"></a>OLE DB veri kaynağına bağlanma  
+ OLE DB için .NET Framework Veri Sağlayıcısı, **OleDbConnection** nesnesi kullanılarak OLE DB (örneğin, OLE DB Için SQL Server sağlayıcısı) kullanılarak sunulan veri kaynaklarına bağlantı sağlar.  
   
- OLE DB için .NET Framework veri sağlayıcısı için bağlantı dizesi biçimi aşağıdaki istisnalar, ADO kullanılan bağlantı dizesi biçimi aynıdır:  
+ OLE DB için .NET Framework Veri Sağlayıcısı bağlantı dizesi biçimi, aşağıdaki özel durumlarla birlikte ADO 'da kullanılan bağlantı dizesi biçimiyle aynıdır:  
   
-- **Sağlayıcısı** anahtar sözcüğü gereklidir.  
+- **Sağlayıcı** anahtar sözcüğü gereklidir.  
   
-- **URL**, **uzak sağlayıcıya**, ve **uzak sunucu** anahtar sözcükleri desteklenmez.  
+- **URL**, **uzak sağlayıcı**ve **uzak sunucu** anahtar sözcükleri desteklenmez.  
   
- OLE DB bağlantı dizeleri hakkında daha fazla bilgi için bkz. <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> konu. Ayrıca <xref:System.Data.OleDb.OleDbConnectionStringBuilder> bağlantı dizeleri çalışma zamanında oluşturmak için.  
+ OLE DB bağlantı dizeleri hakkında daha fazla bilgi için konusuna bakın <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> . Ayrıca, <xref:System.Data.OleDb.OleDbConnectionStringBuilder> çalışma zamanında bağlantı dizeleri oluşturmak için öğesini de kullanabilirsiniz.  
   
 > [!NOTE]
->  **OleDbConnection** nesne ayarlama veya belirli bir OLE DB sağlayıcısı için dinamik özellikleri alınırken desteklemez. OLE DB Sağlayıcısı bağlantı dizesinde geçirilebilen özellikleri desteklenir.  
+> **OleDbConnection** nesnesi bir OLE DB sağlayıcısına özgü dinamik özellikleri ayarlamayı veya almayı desteklemiyor. Yalnızca OLE DB sağlayıcısı için bağlantı dizesinde geçirilebilecek özellikler desteklenir.  
   
- Aşağıdaki kod örneği, oluşturmak ve bir OLE DB veri kaynağı bağlantısı açmak gösterilmektedir.  
+ Aşağıdaki kod örneği, bir OLE DB veri kaynağına bağlantı oluşturmayı ve açmayı gösterir.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -87,15 +87,15 @@ using (OleDbConnection connection =
 }  
 ```  
   
-## <a name="do-not-use-universal-data-link-files"></a>Evrensel Veri Bağlantısı dosyalarını kullanmayın  
- İlgili bağlantı bilgilerini sağlamak olası bir **OleDbConnection** evrensel veri bağlantısı (UDL) dosyasında; Bununla birlikte, kaçının bunu. UDL dosyaları şifreli olmayan ve düz metin bağlantı dizesi bilgilerini kullanıma sunar. UDL dosyası uygulamanız için bir dış dosya tabanlı kaynak olduğundan, .NET Framework kullanarak korunamıyor.  
+## <a name="do-not-use-universal-data-link-files"></a>Evrensel veri bağlantısı dosyalarını kullanma  
+ Bir evrensel veri bağlantısı (UDL) dosyasında bir **OleDbConnection** için bağlantı bilgilerini sağlamak mümkündür; Ancak bunu yapmaktan kaçınmalısınız. UDL dosyaları şifrelenmez ve bağlantı dizesi bilgilerini şifresiz metin olarak kullanıma sunar. Bir UDL dosyası uygulamanıza yönelik dış dosya tabanlı bir kaynak olduğundan .NET Framework kullanılarak güvenliği alınamaz.  
   
-## <a name="connecting-to-an-odbc-data-source"></a>Bir ODBC veri kaynağına bağlanma  
- ODBC için .NET Framework veri sağlayıcısı ODBC kullanarak kullanıma sunulan veri kaynaklarına bağlantı sağlayan **OdbcConnection** nesne.  
+## <a name="connecting-to-an-odbc-data-source"></a>ODBC veri kaynağına bağlanma  
+ ODBC için .NET Framework Veri Sağlayıcısı, **OdbcConnection** NESNESI kullanılarak ODBC kullanılarak sunulan veri kaynaklarına bağlantı sağlar.  
   
- ODBC için .NET Framework veri sağlayıcısı için bağlantı dizesi biçimi ODBC bağlantı dizesi biçimi mümkün olduğunca yakın eşleşecek şekilde tasarlanmıştır. Bir ODBC veri kaynağı adı (DSN) da sağlayabilir. Hakkında daha fazla ayrıntı için **OdbcConnection** , bkz: <xref:System.Data.Odbc.OdbcConnection>.  
+ ODBC için .NET Framework Veri Sağlayıcısı için bağlantı dizesi biçimi, ODBC bağlantı dizesi biçimiyle mümkün olduğunca yakından eşleşecek şekilde tasarlanmıştır. Ayrıca bir ODBC veri kaynağı adı (DSN) sağlayabilirsiniz. **OdbcConnection** hakkında daha fazla ayrıntı için bkz <xref:System.Data.Odbc.OdbcConnection>.  
   
- Aşağıdaki kod örneği, oluşturmak ve bir ODBC veri kaynağı için bir bağlantı açmak gösterilmektedir.  
+ Aşağıdaki kod örneği, bir ODBC veri kaynağı ile bağlantı oluşturmayı ve açmayı gösterir.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -115,12 +115,12 @@ using (OdbcConnection connection =
 }  
 ```  
   
-## <a name="connecting-to-an-oracle-data-source"></a>Bir Oracle veri kaynağına bağlanma  
- Oracle için .NET Framework veri sağlayıcısı kullanarak Oracle veri kaynaklarına bağlantı sağlayan **OracleConnection** nesne.  
+## <a name="connecting-to-an-oracle-data-source"></a>Oracle veri kaynağına bağlanma  
+ Oracle için .NET Framework Veri Sağlayıcısı, **OracleConnection** nesnesini kullanarak Oracle veri kaynaklarına bağlantı sağlar.  
   
- Oracle için .NET Framework veri sağlayıcısı için bağlantı dizesi biçimi, OLE DB sağlayıcısı (MSDAORA) Oracle bağlantı dize biçimi için mümkün olduğunca yakın eşleşecek şekilde tasarlanmıştır. Hakkında daha fazla ayrıntı için **OracleConnection**, bkz: <xref:System.Data.OracleClient.OracleConnection>.  
+ Oracle için .NET Framework Veri Sağlayıcısı bağlantı dizesi biçimi, Oracle (MSDAORA) bağlantı dizesi biçimi için OLE DB sağlayıcısı tarafından mümkün olduğunca yakından eşleşecek şekilde tasarlanmıştır. **OracleConnection**hakkında daha fazla ayrıntı için bkz <xref:System.Data.OracleClient.OracleConnection>.  
   
- Aşağıdaki kod örneği, oluşturmak ve bir Oracle veri kaynağı bağlantısı açmak gösterilmektedir.  
+ Aşağıdaki kod örneği, bir Oracle veri kaynağına bir bağlantının nasıl oluşturulduğunu ve açılacağını gösterir.  
   
 ```vb  
 ' Assumes connectionString is a valid connection string.  
@@ -147,4 +147,4 @@ nwindConn.Open();
 - [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB, ODBC ve Oracle Bağlantı Havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
