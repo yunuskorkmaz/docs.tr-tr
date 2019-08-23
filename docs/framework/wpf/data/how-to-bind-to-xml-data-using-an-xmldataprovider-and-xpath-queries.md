@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: dc4fb2d5f0c48c077d2ff7ca5e5269ce5cba71e5
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 4833e024fcd352094a2163f11df8572aa4c241f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400494"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944643"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Nasıl yapılır: XMLDataProvider ve XPath Sorgularını Kullanarak XML Verilerine Bağlama
 Bu örnekte, [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] <xref:System.Windows.Data.XmlDataProvider>kullanılarak verilerin nasıl bağlanacağı gösterilmektedir.  
@@ -22,7 +22,7 @@ Bu örnekte, [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]
  Aşağıdaki örnekte, veriler, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] <xref:System.Windows.FrameworkElement.Resources%2A> bölüm içinde doğrudan bir *veri Adası* olarak katıştırılır. Bir [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] veri Adası, `<x:XData>` etiketlerde sarmalanmış olmalı ve her zaman tek bir kök düğüme sahip olmalıdır ve bu örnekte *Stok* vardır.  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Verilerin kök düğümü, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ad alanını boş bir dizeye ayarlayan bir **xmlns** özniteliğine sahiptir. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfada satır içi bir veri adasına XPath sorguları uygulama gereksinimidir. Bu satır içi durumda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ve bu nedenle veri Adası <xref:System.Windows> ad alanını devralır. Bu nedenle, XPath sorgularının <xref:System.Windows> ad alanı tarafından nitelendirilmeden ve sorguları hatalı yönlendirerek ad alanını boş olarak ayarlamanız gerekir.  
+> [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Verilerin kök düğümü, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ad alanını boş bir dizeye ayarlayan bir **xmlns** özniteliğine sahiptir. Bu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfada satır içi bir veri adasına XPath sorguları uygulama gereksinimidir. Bu satır içi durumda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], ve bu nedenle veri Adası <xref:System.Windows> ad alanını devralır. Bu nedenle, XPath sorgularının <xref:System.Windows> ad alanı tarafından nitelendirilmeden ve sorguları hatalı yönlendirerek ad alanını boş olarak ayarlamanız gerekir.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   

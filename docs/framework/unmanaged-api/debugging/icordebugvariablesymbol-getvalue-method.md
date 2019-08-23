@@ -1,18 +1,18 @@
 ---
-title: ICorDebugVariableSymbol::GetValue yöntemi
+title: 'ICorDebugVariableSymbol:: GetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed88c8ff78006c14bdee51ba6f95aaaedd66cf41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967988"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue yöntemi
-Bir bayt dizisi olarak bir değişkenin değerini alır.  
+# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue yöntemi
+Bir değişkenin değerini bir bayt dizisi olarak alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,36 +29,36 @@ HRESULT GetValue(
   
 ## <a name="parameters"></a>Parametreler  
  `offset`  
- [in] Değer okunacağı değişkeninde başlangıç uzaklığı. Bu parametre, bir nesne üyesi alanlarına okuma sırasında kullanılır.  
+ 'ndaki Değerin okunacağı değişkenin başlangıç boşluğu. Bu parametre, bir nesnedeki üye alanlarını okurken kullanılır.  
   
  `cbContext`  
- [in] Bayt cinsinden boyutu `context` bağımsız değişken.  
+ 'ndaki `context` Bağımsız değişkenin bayt cinsinden boyutu.  
   
  `context`  
- [in] Değeri okumak için kullanılan iş parçacığı bağlamı.  
+ 'ndaki Değeri okumak için kullanılan iş parçacığı bağlamı.  
   
  `cbValue`  
- [in] Bayt cinsinden boyutu `pValue` arabellek.  
+ 'ndaki `pValue` Arabelleğin bayt cinsinden boyutu.  
   
  `pcbValue`  
- [out] Gerçekte yazılan bayt sayısı `pValue` arabellek.  
+ dışı Gerçekte `pValue` arabelleğe yazılan bayt sayısı.  
   
  `pValue`  
- [out] Değişkenin değerini içeren bir bayt dizisi.  
+ dışı Değişkenin değerini içeren bir bayt dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

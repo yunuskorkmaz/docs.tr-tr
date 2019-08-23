@@ -1,33 +1,33 @@
 ---
-title: 'Nasıl yapılır: Daraltma ve gizleme (Visual Basic) kod bölümlerini'
+title: 'Nasıl yapılır: Kodun bölümlerini daraltma ve gizleme (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, code collapsing
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: 367527fd638f6855077caf8ff5911edb333dfcbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db396adf24c12542f720d3b235068aea2329288d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949727"
 ---
-# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Nasıl yapılır: Daraltma ve gizleme (Visual Basic) kod bölümlerini
-`#Region` Yönergesi daraltma ve gizleme Visual Basic dosyalarında kod bölümlerini olanak sağlar. `#Region` Yönergesi Visual Studio Kod Düzenleyicisi'ni kullanırken genişletebileceğiniz kodu veya daralt bloğunu belirtmenize olanak sağlar. Kod seçmeli olarak gizleyebilme yeteneği dosyalarınızı daha yönetilebilir ve okunması kolay hale getirir. Daha fazla bilgi için [anahat](/visualstudio/ide/outlining).  
+# <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Nasıl yapılır: Kodun bölümlerini daraltma ve gizleme (Visual Basic)
+`#Region` Yönergesi Visual Basic dosyalarındaki kodun bölümlerini daraltmanıza ve gizlemenizi sağlar. `#Region` Yönergesi, Visual Studio Code düzenleyicisini kullanırken genişletebileceğiniz veya daraltabileceğiniz bir kod bloğu belirtmenize olanak tanır. Kodu seçici olarak gizleyebilme, dosyalarınızı daha yönetilebilir ve okumayı daha kolay hale getirir. Daha fazla bilgi için bkz. [anahat oluşturma](/visualstudio/ide/outlining).  
   
- `#Region` kod bloğu semantiği gibi destek yönergeleri `#If...#End If`. Bu, bir blok içinde başlar ve diğerinde anlamına gelir; Başlangıç ve bitiş aynı blok içinde olması gerekir. `#Region` yönergeleri içindeki işlevleri desteklenmez.  
+ `#Region`yönergeleri gibi `#If...#End If`kod bloğu semantiğini destekler. Bu, bir blokta başlayamayacağı ve başka bir blokta bitemeyeceği anlamına gelir; başlangıç ve bitiş aynı blokta olmalıdır. `#Region`işlevler içinde yönergeler desteklenmez.  
   
-### <a name="to-collapse-and-hide-a-section-of-code"></a>Daralt ve kodun bir bölümünü gizlemek için  
+### <a name="to-collapse-and-hide-a-section-of-code"></a>Kodun bir bölümünü daraltmak ve gizlemek için  
   
-- Arasında kod bölümünün yerleştirin `#Region` ve `#End Region` ifadeleri, aşağıdaki örnekte olduğu gibi:  
+- Aşağıdaki örnekte olduğu gibi, kod bölümünü `#Region` ve `#End Region` deyimleri arasına yerleştirin:  
   
      [!code-vb[VbVbalrConditionalComp#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#6)]  
   
-     `#Region` Blok kullanılan bir kod dosyasında birden çok kez; bu nedenle, kullanıcılar kendi blokları yordamlar ve sırasıyla daratılmadan sınıfları tanımlayabilir. `#Region` Bloklar da iç içe geçirilemez birbirine `#Region` engeller.  
+     `#Region` Blok, bir kod dosyasında birden çok kez kullanılabilir; Bu nedenle, kullanıcılar, daraltılması için daraltılabilen kendi yordam ve sınıf bloklarını tanımlayabilir. `#Region`bloklar Ayrıca diğer `#Region` blokların içinde de yer alabilir.  
   
     > [!NOTE]
-    >  Kod gizleme Eylemi'ni engellemez ve etkilemez `#If...#End If` deyimleri.  
+    > Kodu gizleme, derleme yapılmasını engellemez ve deyimlerini etkilemez `#If...#End If` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

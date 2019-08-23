@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e558d86fd4e012a6b88e0bcd05d58ecddc6cc20
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: dc8381f8059e37c6c520c2402289124a506188e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968421"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Çoklu iş parçacıklı verileri eşitleme
 
@@ -51,14 +51,14 @@ Birden çok iş parçacığı tek bir nesnenin özelliklerine ve yöntemlerine �
  Her ikisi de C# Visual Basic ve belirli bir dil anahtar sözcüğü, `lock` içindeki C# `SyncLock` ifadesini veya Visual Basic ifadesini içeren kod blokları işaretlemesini destekler. Kod bir iş parçacığı tarafından yürütüldüğünde, kilidi almak için bir girişimde bulunuldu. Kilit zaten başka bir iş parçacığı tarafından edindiyseniz, kilit kullanılabilir hale gelene kadar iş parçacığı engeller. İş parçacığı eşitlenmiş kod bloğundan çıktığında, iş parçacığının bloğundan nasıl çıkmadığına bakılmaksızın kilit serbest bırakılır.  
   
 > [!NOTE]
->  <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Ve deyimleri, ve<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>kullanılarak uygulanır. bu nedenle, diğer yöntemleri eşitlenmiş bölge içinde kendileriyle birlikte kullanılabilir. `SyncLock` `lock`  
+> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor> Ve deyimleri, ve<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>kullanılarak uygulanır. bu nedenle, diğer yöntemleri eşitlenmiş bölge içinde kendileriyle birlikte kullanılabilir. `SyncLock` `lock`  
   
  Ayrıca <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType>, yöntemi ile aynı etkiye <xref:System.Threading.Monitor> sahip olan <xref:System.Runtime.CompilerServices.MethodImplAttribute> ile bir yöntemi süsleyip, yöntemin tamamının tamamını kilitlemek için derleyici anahtar sözcükleriyle birini kullanabilirsiniz.  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>, eşitlenen bir kod bölgesine erişimi bekleyen bir iş parçacığını bölmek için kullanılabilir. **Thread. Interrupt** Ayrıca, gibi <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>işlemlerden oluşan iş parçacıklarını bölmek için de kullanılır.  
   
 > [!IMPORTANT]
->  Yöntemi `typeof(MyType)` ( `GetType(MyType)` `MyType::typeid`VisualBasiciçindeki yöntemleri) C# C++ korumak için`static` , bu türü (' de, içinde, Visual Basic veya içinde — kilitleme.`Shared` Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, örnek yöntemleri `this` kilitlemek C# için`Me` içinde (Visual Basic olarak) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  
+> Yöntemi `typeof(MyType)` ( `GetType(MyType)` `MyType::typeid`VisualBasiciçindeki yöntemleri) C# C++ korumak için`static` , bu türü (' de, içinde, Visual Basic veya içinde — kilitleme.`Shared` Bunun yerine özel bir statik nesne kullanın. Benzer şekilde, örnek yöntemleri `this` kilitlemek C# için`Me` içinde (Visual Basic olarak) kullanmayın. Bunun yerine özel bir nesne kullanın. Bir sınıf veya örnek, kendi dışında bir kodla kilitlenebilir, bu da kilitlenmelere veya performans sorunlarına yol açabilir.  
   
 ### <a name="compiler-support"></a>Derleyici desteği  
  Hem Visual Basic hem C# de nesneyi kilitlemek için ve <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> kullanan <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> bir dil anahtar sözcüğünü destekler. Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ifadesini destekler; C# [Lock](../../csharp/language-reference/keywords/lock-statement.md) ifadesini destekler.  

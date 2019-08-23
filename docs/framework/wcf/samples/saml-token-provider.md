@@ -2,35 +2,35 @@
 title: SAML Belirteç Sağlayıcı
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 19781b6b162034fb45587103d2a4af6684ab0fe1
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0ab33c5f0a24e97332fd84e43e9050fc8f406a27
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965482"
 ---
 # <a name="saml-token-provider"></a>SAML Belirteç Sağlayıcı
-Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını gösterir. Windows Communication Foundation (WCF) bir belirteç sağlayıcısı güvenlik altyapısı için kimlik bilgilerini sağlamak için kullanılır. Belirteç sağlayıcı genel hedef inceler ve böylece ileti güvenlik altyapısı güvenli hale getirebilirsiniz, kimlik bilgileri sorunları uygun. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısı ile birlikte gelir. WCF ayrıca CardSpace belirteç sağlayıcısı ile birlikte gelir. Özel belirteç sağlayıcıları, aşağıdaki durumlarda kullanışlıdır:
+Bu örnek, özel bir istemci SAML belirteci sağlayıcısının nasıl uygulanacağını gösterir. Güvenlik altyapısına kimlik bilgileri sağlamak için Windows Communication Foundation (WCF) içindeki bir belirteç sağlayıcısı kullanılır. Genel içindeki belirteç sağlayıcısı hedefi inceler ve güvenlik altyapısının iletiyi güvenli hale getirmek için uygun kimlik bilgilerini verir. WCF varsayılan kimlik bilgileri Yöneticisi belirteç sağlayıcısıyla birlikte gelir. WCF Ayrıca bir CardSpace belirteç sağlayıcısıyla birlikte gelir. Özel belirteç sağlayıcıları aşağıdaki durumlarda faydalıdır:
 
-- Bu belirteci sağlayıcıları ile çalışamaz bir kimlik bilgisi deposu varsa.
+- Bu belirteç sağlayıcılarının ile çalışamadığınız bir kimlik bilgisi depoluğiniz varsa.
 
-- Kullanıcı için WCF istemci framework kimlik bilgileri kullandığında ayrıntıları sağladığında noktadan kimlik dönüştürme için kendi özel mekanizması sağlamak istiyorsanız.
+- Kullanıcı, WCF istemci çerçevesi kimlik bilgilerini kullandığında, kimlik bilgilerini bir noktadan dönüştürmek için kendi özel mekanizmanızı sağlamak istiyorsanız.
 
-- Özel belirteç oluşturuluyorsa.
+- Özel bir belirteç oluşturuyorsanız.
 
- Bu örnek nasıl kullanılacak WCF istemci framework dışında alınan bir SAML belirtecine izin veren özel bir belirteç sağlayıcısını oluşturulacağını gösterir.
+ Bu örnek, WCF istemci çerçevesinin dışından alınan bir SAML belirtecinin kullanılmasına izin veren bir özel belirteç sağlayıcısı oluşturmayı gösterir.
 
- Özetlemek gerekirse, bu örnek aşağıdaki gösterir:
+ Özetlemek gerekirse, bu örnek şunları gösterir:
 
-- Nasıl bir istemci özel bir belirteç sağlayıcısı ile yapılandırılabilir.
+- Bir istemcinin özel bir belirteç sağlayıcısıyla nasıl yapılandırılabileceğini.
 
-- SAML belirteci için özel istemci kimlik bilgilerini nasıl geçirilebilir.
+- Bir SAML belirtecinin özel istemci kimlik bilgilerine nasıl geçirilebileceğini.
 
-- SAML belirteci WCF istemci framework nasıl sağlanmaktadır.
+- SAML belirtecinin WCF istemci çerçevesine nasıl sağlandığı.
 
-- Sunucu, sunucunun X.509 sertifikası kullanarak istemci tarafından nasıl doğrulanır.
+- Sunucunun, sunucunun X. 509.440 sertifikasını kullanarak istemci tarafından nasıl doğrulandığını.
 
- Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanmış hizmet ile iletişim kurmak için iki uç noktalarını kullanıma sunar. Her uç nokta, adres, bağlama ve bir sözleşme oluşur. Bir standart yapılandırılmış bağlama `wsFederationHttpBinding`, ileti güvenliği kullanır. Bir uç nokta düzeltme simetrik anahtar diğer bir asimetrik sağlama anahtarı kullanan bir SAML belirteci kimlik doğrulaması için istemci beklediği sırada kullanan bir SAML belirteci ile kimlik doğrulaması için istemci bekliyor. Hizmet Ayrıca hizmet kullanarak sertifikayı yapılandırır `serviceCredentials` davranışı. `serviceCredentials` Davranışı bir hizmet sertifikası yapılandırmanıza olanak tanır. Bir hizmet sertifikası, hizmet kimlik doğrulaması ve ileti koruma sağlamak için bir istemci tarafından kullanılır. Aşağıdaki yapılandırma, bu konunun sonunda Kurulum yönergelerinde açıklandığı gibi örnek Kurulum sırasında yüklenen "localhost" sertifikanın başvuruyor. `serviceCredentials` Davranışı da SAML belirteçlerini imzalamak için güvenilen sertifikalar yapılandırmanıza olanak tanır. Aşağıdaki yapılandırma sırasında bir örnek yüklü 'Alice' sertifika başvuruyor.
+ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için iki uç nokta sunar. Her uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, ileti güvenliği kullanan bir standart `wsFederationHttpBinding`ile yapılandırılır. Bir uç nokta, istemcinin simetrik bir kanıt anahtar kullanan bir SAML belirteci ile kimlik doğrulamasını, diğeri ise asimetrik bir kanıt anahtar kullanan bir SAML belirteci ile kimlik doğrulaması yapmasını bekler. Hizmet, davranışı kullanarak `serviceCredentials` hizmet sertifikasını da yapılandırır. Davranış `serviceCredentials` , bir hizmet sertifikası yapılandırmanıza olanak tanır. Hizmet sertifikası, istemci tarafından hizmetin kimliğini doğrulamak ve ileti koruması sağlamak için kullanılır. Aşağıdaki yapılandırma, bu konunun sonundaki Kurulum yönergelerinde açıklandığı şekilde, örnek kurulum sırasında yüklenen "localhost" sertifikasına başvurur. Davranış `serviceCredentials` , SAML belirteçlerini imzalamak için güvenilen sertifikaları yapılandırmanıza de olanak tanır. Aşağıdaki yapılandırma, örnek sırasında yüklenen ' Gamze ' sertifikasına başvurur.
 
 ```xml
 <system.serviceModel>
@@ -111,13 +111,13 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
 </system.serviceModel>
 ```
 
- Aşağıdaki adımlarda, bir özel SAML belirteç sağlayıcı geliştirin ve WCF ile tümleştirmek gösterilmektedir: güvenlik çerçevesi:
+ Aşağıdaki adımlarda, özel bir SAML belirteci sağlayıcısının nasıl geliştirilmesi ve WCF: güvenlik çerçevesi ile tümleştirme gösterilmektedir:
 
-1. Bir özel SAML belirteç sağlayıcı yazma.
+1. Özel bir SAML belirteci sağlayıcısı yazın.
 
-     Örnek oluşturma zamanında sağlanan bir SAML onaylama işlemi temel bir güvenlik belirteci döndüren bir özel SAML belirteç sağlayıcı uygular.
+     Örnek, oluşturma zamanında sağlanmış bir SAML onaylama işlemi temel alınarak bir güvenlik belirteci döndüren özel bir SAML belirteci sağlayıcısı uygular.
 
-     Bu görevi gerçekleştirmek için özel belirteç sağlayıcısı türetilir <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıf ve geçersiz kılmaları <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> yöntemi. Bu yöntem, oluşturur ve yeni bir `SecurityToken`.
+     Bu görevi gerçekleştirmek için, özel belirteç sağlayıcısı <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfından türetilir ve <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> yöntemi geçersiz kılar. Bu yöntem, oluşturur ve yeni `SecurityToken`bir döndürür.
 
     ```
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
@@ -156,9 +156,9 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     }
     ```
 
-2. Özel güvenlik belirteci Yöneticisi'ni yazın.
+2. Özel güvenlik belirteci Yöneticisi yazın.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager> Sınıfı oluşturmak için kullanılan <xref:System.IdentityModel.Selectors.SecurityTokenProvider> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> kendisine geçirilen `CreateSecurityTokenProvider` yöntemi. Bir güvenlik belirteci Yöneticisi ayrıca belirteç Doğrulayıcı ve belirteç serializer özelliği oluşturmak için kullanılır, ancak bunlar Bu örnek tarafından kapsanmaz. Bu örnek özel güvenlik belirteci yöneticisi devraldığı <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıf ve geçersiz kılmaları `CreateSecurityTokenProvider` geçirilen belirteci gereksinimleri belirttiğinizde, SAML belirteci özel SAML belirteç sağlayıcı döndürülecek yöntemi istendi. İstemci kimlik bilgileri sınıfı (3. adıma bakın) onaylama belirtilmemişse, güvenlik belirteci yöneticisi uygun bir örneğini oluşturur.
+     Sınıfı <xref:System.IdentityModel.Selectors.SecurityTokenManager> <xref:System.IdentityModel.Selectors.SecurityTokenProvider> <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> , metoduna`CreateSecurityTokenProvider` öğesine geçirilen belirli bir oluşturmak için kullanılır. Belirteç kimlik doğrulaması ve belirteç seri hale getirici oluşturmak için bir güvenlik belirteci Yöneticisi de kullanılır, ancak bunlar bu örnek kapsamında değildir. Bu örnekte, özel güvenlik belirteci Yöneticisi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfından devralır ve geçilen belirteç gereksinimleri SAML belirtecinin istendiğini gösteriyorsa özel SAML belirteci sağlayıcısını döndürmek için `CreateSecurityTokenProvider` yöntemi geçersiz kılar. İstemci kimlik bilgileri sınıfı (bkz. Adım 3) bir onaylama belirtmediğinden, güvenlik belirteci Yöneticisi uygun bir örnek oluşturur.
 
     ```
     public class SamlSecurityTokenManager :
@@ -228,9 +228,9 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     }
     ```
 
-3. Özel istemci kimlik bilgilerini yazın.
+3. Özel bir istemci kimlik bilgisi yazın.
 
-     İstemci kimlik bilgileri sınıfı istemci proxy'si için yapılandırıldığında kimlik bilgilerini temsil etmek için kullanılır ve bir güvenlik belirteci kimlik doğrulayıcılar, belirteç sağlayıcıları ve belirteç serializer özelliği almak için kullanılan belirteci yöneticisi oluşturur.
+     İstemci kimlik bilgileri sınıfı, istemci ara sunucusu için yapılandırılan kimlik bilgilerini temsil etmek için kullanılır ve belirteç kimlik doğrulaması, belirteç sağlayıcıları ve belirteç serileştiricisini almak için kullanılan bir güvenlik belirteci Yöneticisi oluşturur.
 
     ```
     public class SamlClientCredentials : ClientCredentials
@@ -271,9 +271,9 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     }
     ```
 
-4. Özel istemci kimlik bilgilerini kullanacak biçimde yapılandırın.
+4. İstemciyi özel istemci kimlik bilgilerini kullanacak şekilde yapılandırın.
 
-     Örnek, varsayılan istemci kimlik bilgisi sınıfını siler ve istemci özel bir istemci kimlik bilgileri kullanabilmeniz için yeni istemci kimlik bilgisi sınıfını sağlar.
+     Örnek, varsayılan istemci kimlik bilgisi sınıfını siler ve istemcinin özel istemci kimlik bilgisini kullanabilmesi için yeni istemci kimlik bilgisi sınıfını sağlar.
 
     ```
     // Create new credentials class
@@ -296,18 +296,18 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     client.ChannelFactory.Endpoint.Behaviors.Add(samlCC);
     ```
 
- Hizmet arayanla ilişkili talep görüntülenir. Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.
+ Hizmette, arayanla ilişkili talepler görüntülenir. Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.
 
-## <a name="setup-batch-file"></a>Kurulum toplu iş dosyası
- Bu örnekle dahil Setup.bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için ilgili sertifika ile sunucu yapılandırmanıza olanak sağlar. Bu toplu iş dosyası bilgisayarlarda çalışmaya veya barındırılan olmayan bir durumda çalışması için değiştirilmesi gerekir.
+## <a name="setup-batch-file"></a>Toplu Iş dosyası kurulumu
+ Bu örneğe eklenen Setup. bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikayla yapılandırmanızı sağlar. Bu toplu iş dosyasının bilgisayarlarda çalışmak veya barındırılmayan bir durumda çalışması için değiştirilmesi gerekir.
 
- Aşağıda, böylece uygun yapılandırmasında çalıştırılacak değiştirilebilir toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.
+ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar.
 
 - Sunucu sertifikası oluşturuluyor:
 
-     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun. `%SERVER_NAME%` Değişkeni, sunucu adını belirtir. Kendi sunucu adını belirtmek için bu değişkeni değiştirin. Localhost bu toplu iş dosyasında varsayılan değerdir.
+     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. `%SERVER_NAME%` Değişken, sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki varsayılan değer localhost 'tur.
 
-     Sertifikayı LocalMachine depolama konumu altında (Kişisel) My deposunda depolanır.
+     Sertifika, LocalMachine depolama konumu altında (kişisel) deposunda depolanır.
 
     ```
     echo ************
@@ -319,19 +319,19 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-- Sunucu sertifikasını istemcinin güvenilen sertifika depolama alanına yükleniyor:
+- Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme:
 
-     İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.
+     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
-- Verenin sertifika oluşturuluyor.
+- Veren sertifikası oluşturuluyor.
 
-     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sertifikayı oluşturun. `%USER_NAME%` Değişkeni sertifikayı verenin adını belirtir. Kendi verenin adı belirtmek için bu değişkeni değiştirin. Alice bu toplu iş dosyasında varsayılan değerdir.
+     Setup. bat toplu iş dosyasındaki aşağıdaki satırlar kullanılacak veren sertifikasını oluşturur. `%USER_NAME%` Değişken, verenin adını belirtir. Kendi verenin adını belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki varsayılan değer gamze 'dir.
 
-     Sertifika CurrentUser depolama konumu altında My deposunda depolanır.
+     Sertifika, CurrentUser Store konumu altında My deposunda depolanır.
 
     ```
     echo ************
@@ -343,58 +343,58 @@ Bu örnek nasıl özel bir istemci SAML belirteç sağlayıcı uygulanacağını
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
-- Sertifikayı sunucusunun güvenilen sertifika depolama alanına yükleniyor.
+- Verenin sertifikasını sunucunun Güvenilen sertifika deposuna yükleme.
 
-     İstemci güvenilir kişiler uygulamasına Setup.bat toplu dosya kopyalama sunucu sertifikasının aşağıdaki satırları depolayın. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sertifikayı ile sunucu sertifika deposuna yerleştirmek, bu adım gerekli değildir.
+     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci güvenilen kök sertifikasında kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), sunucu sertifika deposunu veren sertifikaya doldurmanın bu adımı gerekli değildir.
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
-#### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için
+#### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
 
 > [!NOTE]
->  Bu örnek için yapılandırmayı yeniden üretmek için Svcutil.exe kullanma, istemci kodu eşleştirilecek istemci yapılandırmasında uç noktası adını değiştirmek emin olun.
+> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1. Visual Studio 2012 komut istemini yönetici ayrıcalıklarıyla çalıştırın içinde örnek yükleme klasöründen Setup.bat çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.
+1. Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen Setup. bat dosyasını çalıştırarak yönetici ayrıcalıklarıyla çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!NOTE]
-    >  Setup.bat toplu iş dosyası, bir Visual Studio 2012 komut isteminden çalıştırılması için tasarlanmıştır. PATH ortam değişkenine içinde Visual Studio 2012 komut istemi noktaları Setup.bat betiği tarafından gereken yürütülebilir dosyaları içeren dizine ayarlayın.  
+    >  Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.  
   
-2. Service.exe service\bin ' başlatın.  
+2. Service\bin. adresinden Service. exe ' yi Başlat  
   
-3. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+3. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-4. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-run-the-sample-across-computers"></a>Bilgisayarlar arasında örneği çalıştırmak için  
+#### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için  
   
-1. Hizmet ikili dosyaları için hizmet bilgisayarda bir dizin oluşturun.  
+1. Hizmet ikili dosyaları için hizmet bilgisayarında bir dizin oluşturun.  
   
-2. Hizmet program dosyaları hizmeti bilgisayarında hizmet dizinine kopyalayın. Ayrıca Setup.bat ve Cleanup.bat dosyaları hizmet bilgisayara kopyalayın.  
+2. Hizmet programı dosyalarını hizmet bilgisayarındaki hizmet dizinine kopyalayın. Ayrıca Setup. bat ve Cleanup. bat dosyalarını da hizmet bilgisayarına kopyalayın.  
   
-3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikası olmalıdır. Service.exe.config dosyayı bu yeni sertifika adı yansıtacak şekilde güncelleştirilmesi gerekir. Setup.bat toplu iş dosyasını değiştirerek, sunucu sertifikası oluşturabilirsiniz. Geliştirici komut istemini yönetici ayrıcalıklarıyla açılan bir Visual Studio penceresinin setup.bat dosyasının çalıştırılması gerektiğini unutmayın. Ayarlamalısınız `%SERVER_NAME%` değişken hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adı.  
+3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikasına sahip olmanız gerekir. Service. exe. config dosyasının bu yeni sertifika adını yansıtması için güncelleştirilmeleri gerekir. Setup. bat toplu iş dosyasını değiştirerek sunucu sertifikası oluşturabilirsiniz. Setup. bat dosyasının, yönetici ayrıcalıklarıyla açılmış bir Visual Studio için Geliştirici Komut İstemi çalıştırılması gerektiğini unutmayın. `%SERVER_NAME%` Değişkeni, hizmeti barındırmak için kullanılan bilgisayarın tam ana bilgisayar adına ayarlamanız gerekir.  
   
-4. Sunucu sertifikasını istemcinin CurrentUser TrustedPeople depoya kopyalayın. Sunucu sertifikası güvenilir istemci veren tarafından verildiğinde, bu adım gerekli değildir.  
+4. Sunucu sertifikasını istemcinin CurrentUser-Trustedkişilerim deposuna kopyalayın. Sunucu sertifikası, istemci güvenilir veren tarafından verildiğinde bu adım gerekli değildir.  
   
-5. Hizmet bilgisayarı Service.exe.config dosyada localhost yerine tam bilgisayar adını belirtmek için temel adresini değiştirin.  
+5. Hizmet bilgisayarındaki Service. exe. config dosyasında, temel adresin değerini localhost yerine tam nitelikli bir bilgisayar adı belirtecek şekilde değiştirin.  
   
-6. Hizmet bilgisayarda Service.exe bir komut isteminden çalıştırın.  
+6. Hizmet bilgisayarında, komut isteminden Service. exe ' yi çalıştırın.  
   
-7. İstemci program dosyaları \client\bin\ klasöründen dile özgü klasörünün altındaki istemci bilgisayara kopyalayın.  
+7. İstemci program dosyalarını dile özgü klasörün altındaki \client\bin\ klasöründen istemci bilgisayara kopyalayın.  
   
-8. İstemci bilgisayarda Client.exe.config dosyasında hizmetinizin yeni adresiyle eşleşecek şekilde uç nokta adresi değiştirin.  
+8. İstemci bilgisayardaki Client. exe. config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin.  
   
-9. İstemci bilgisayarda Başlat `Client.exe` bir komut istemi penceresinden.  
+9. İstemci bilgisayarda, bir komut istemi `Client.exe` penceresinden başlatın.  
   
-10. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+10. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.  

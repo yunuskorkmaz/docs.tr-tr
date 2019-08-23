@@ -2,95 +2,95 @@
 title: Bir İleti Değişim Deseni seçin
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951856"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
-Özel bir taşıma yazma ilk adımı, karar vermektir *ileti exchange desenleri* (veya MEPs) geliştirdiğiniz kanal için gereklidir. Bu konu, kullanılabilir seçenekleri açıklar ve çeşitli anlatılmaktadır. Bu kanal geliştirme görev listesinde açıklanan ilk görevdir [geliştirme kanalları](../../../../docs/framework/wcf/extending/developing-channels.md).  
+Özel bir aktarım yazarken ilk adım, geliştirmekte olduğunuz kanal için hangi *ileti Exchange desenlerinin* (veya MEPs) gerekli olduğuna karar vermeye yöneliktir. Bu konu başlığı altında sunulan seçenekler açıklanmakta ve çeşitli gereksinimler ele alınmaktadır. Bu, [kanalların geliştirilmesi](../../../../docs/framework/wcf/extending/developing-channels.md)bölümünde açıklanan Kanal geliştirme görev listesindeki ilk görevdir.  
   
-## <a name="six-message-exchange-patterns"></a>Altı ileti Exchange desenleri  
- Aralarından seçim yapabileceğiniz üç MEPs vardır:  
+## <a name="six-message-exchange-patterns"></a>Altı Ileti değişimi desenleri  
+ Aralarından seçim yapabileceğiniz üç/PS vardır:  
   
-- Veri birimi (<xref:System.ServiceModel.Channels.IInputChannel> ve <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- Veri birimi<xref:System.ServiceModel.Channels.IInputChannel> ( <xref:System.ServiceModel.Channels.IOutputChannel>ve)  
   
-     Bir veri birimi MEP kullanırken, bir istemci kullanarak bir ileti gönderen bir *Başlat ve unut* exchange. Bir Başlat ve unut değişimi, başarılı bir teslimat bant dışı onay gerektiren bir. İleti, geçiş sırasında kaybolur ve hiçbir zaman hizmet ulaşın. İstemci sonunda gönderme işlemi başarıyla tamamlarsa, uzak uç noktada bir ileti aldı garanti etmez. Bunun üstünde kurallarınızı oluştururken veri birimi Mesajlaşma için temel yapı taşı olan — güvenilir protokolleri ve güvenli protokolleri dahil. İstemci veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IOutputChannel> arabirimi ve hizmet veri birimi kanalları uygulamak <xref:System.ServiceModel.Channels.IInputChannel> arabirimi.  
+     Bir veri birimi MEP kullanırken, istemci bir ateş kullanarak bir ileti gönderir *ve Exchange 'i unutur* . Bir ateş ve unutur, başarılı teslimin bant dışı onayını gerektiren bir adım. İleti iletimde kaybolmuş olabilir ve hizmete hiçbir şekilde ulaşamamalıdır. Gönderme işlemi istemci sonunda başarıyla tamamlanırsa, uzak uç noktanın iletiyi aldığını garanti etmez. Bu veri birimi, güvenilir protokoller ve güvenli protokoller de dahil olmak üzere kendi protokollerinizi oluşturabileceğiniz gibi, mesajlaşma için temel bir yapı taşıdır. İstemci veri birimi kanalları arabirimini <xref:System.ServiceModel.Channels.IOutputChannel> <xref:System.ServiceModel.Channels.IInputChannel> uygulayan arabirimi ve hizmet veri birimi kanallarını uygular.  
   
 - İstek-yanıt (<xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
-     Bu MEP bir ileti gönderilir ve bir yanıt aldı. Desen, istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrıları örnekleri: uzaktan yordam çağrısı (RPC) ve tarayıcı GET istekleri. Bu düzen, yarı çift yönlü da bilinir. Bu MEP içinde istemci kanalları uygulamak <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygulamak <xref:System.ServiceModel.Channels.IReplyChannel>.  
+     Bu MEP 'de bir ileti gönderilir ve bir yanıt alındı. Bu model, istek-yanıt çiftlerinden oluşur. İstek-yanıt çağrılarına örnek olarak uzak yordam çağrıları (RPC) ve tarayıcı GET istekleri verilebilir. Bu model, yarı çift yönlü olarak da bilinir. Bu MEP 'de, istemci kanalları <xref:System.ServiceModel.Channels.IRequestChannel> ve hizmet kanalları uygular. <xref:System.ServiceModel.Channels.IReplyChannel>  
   
-- Çift yönlü (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- Çift yönlü<xref:System.ServiceModel.Channels.IDuplexChannel>()  
   
-     Çift yönlü MEP tercihe bağlı sayıda istemci tarafından gönderilen ve alınan herhangi bir sırada iletileri sağlar. Çift yönlü MEP bir telefon konuşması gibi burada konuşulan her bir sözcüğün bir ileti numarasıdır. Her iki tarafında da gönderebilir ve alabilir bu MEP, istemci ve hizmet kanalları tarafından uygulanan arabirimi çünkü <xref:System.ServiceModel.Channels.IDuplexChannel>.  
+     Çift yönlü MEP, istemci tarafından rastgele sayıda iletinin gönderilmesini ve herhangi bir sırada alınmasını sağlar. Çift yönlü MEP, konuşulan her sözcüğün bir ileti olduğu bir telefon konuşması gibidir. Her iki taraf da bu MEP 'de gönderebildiğinden ve alabileceği için, istemci ve hizmet kanalları <xref:System.ServiceModel.Channels.IDuplexChannel>tarafından uygulanan arabirim.  
   
- ![Bir ileti değişim deseni seçme](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
-Üç temel ileti exchange desenleri. Yukarıdan aşağıya doğru: veri birimi, çift yönlü ve istek-yanıt.  
+ ![İleti değişim modelini seçme](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+Üç temel ileti değişim deseni. Üstten alta: veri birimi, istek-yanıt ve çift yönlü.  
   
- Her biri bu MEPs de destekleyebilir *oturumları*. Bir oturum (ve uygulaması <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> türü <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) bir kanalı üzerinden alınan ve gönderilen tüm iletilerin ilişkilendirir. İstek-yanıt desen istek ve yanıt bağıntılı olan bir tek başına iki ileti oturumu aynıdır. Buna karşılık, bu kanal üzerindeki tüm istek/yanıt çifti birbiriyle ilişkilendirilir oturumları destekleyen istek-yanıt deseni gösterir. Bu, aralarından seçim yapabileceğiniz altı MEPs toplam sağlar:  
+ Bu MEPs 'lerin her biri, *oturumları*da destekleyebilir. Bir oturum (ve türünün <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>uygulanması), bir kanalda gönderilen ve alınan tüm iletileri ilişkilendirir. İstek ve yanıt bağıntılı olduğundan, istek-yanıt deseninin tek başına iki ileti oturumu vardır. Buna karşılık, oturumları destekleyen istek-yanıt deseninin, o kanaldaki tüm istek/yanıt çiftlerinin birbirleriyle bağıntılı olduğu anlamına gelir. Bu, aralarından seçim yapabileceğiniz toplam altı MEPs sağlar:  
   
-- Veri birimi  
+- Inın  
   
 - İstek-yanıt  
   
 - Çift Yönlü  
   
-- Veri birimi ile oturumları  
+- Oturumlarla veri birimi  
   
-- İstek-yanıt oturumları içeren  
+- İstek-oturumlarla yanıt  
   
-- Oturumlarının ile çift yönlü  
+- Oturumlarla çift yönlü  
   
 > [!NOTE]
->  UDP kendiliğinden yangın olduğu ve unut protokolü UDP taşıma için desteklenen tek MEP veri birimi, olmasıdır.  
+> UDP, doğal olarak bir yangın ve unutma Protokolü olduğundan, UDP taşıması için desteklenen tek MEP yalnızca veri birimi olur.  
   
-## <a name="sessions-and-sessionful-channels"></a>Oturumlarının ve Sessionful kanallar  
- Ağ dünyasında, bağlantıya dayalı protokolleri (örneğin, TCP) ve bağlantı olmayan protokolleri (örneğin, UDP) vardır. WCF bağlantı benzeri mantıksal soyutlama auto'yu terimi oturumu kullanır. Kapatamaması WCF protokolleri bağlantıya dayalı ağ protokolleri için benzer ve oturumsuz WCF protokoller, bağlantı daha az ağ protokolleri için benzerdir.  
+## <a name="sessions-and-sessionful-channels"></a>Oturumlar ve oturumsuz kanallar  
+ Ağ dünyasında bağlantı yönelimli protokoller (örneğin, TCP) ve bağlantı açısından daha az protokol (örneğin, UDP) vardır. WCF, bağlantı benzeri bir mantıksal soyutlama için oturum terimini kullanır. Oturumsuz WCF protokolleri, bağlantı odaklı ağ protokollerine benzerdir ve oturumsuz WCF protokolleri, bağlantı açısından daha az ağ protokollerine benzer.  
   
- Kanal nesne modelinde bir oturum kanalı bir örneği olarak her bir mantıksal oturum bildirimleri. Bu nedenle istemci tarafından oluşturulmuş ve hizmette kabul her yeni oturumu yeni bir oturum kanalı her iki taraftaki karşılık gelir. Aşağıdaki diyagramda gösterildiği, oturumsuz kanalları yapısını üst ve alt oturumdaki kanallar yapısı.  
+ Kanal nesne modelinde her mantıksal oturum, bir oturum kanalının bir örneği olarak bildirimlidir. Bu nedenle, istemci tarafından oluşturulan ve hizmette kabul edilen her yeni oturum, her bir tarafta yeni bir oturumsuz kanala karşılık gelir. Aşağıdaki diyagramda, en üstteki, sessionless kanalların yapısı ve en altta, oturum kanalların yapısı gösterilmektedir.  
   
- ![Bir ileti değişim deseni seçme](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![İleti değişim modelini seçme](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
- Bir istemci, yeni bir oturum kanalı oluşturur ve bir ileti gönderir. Hizmet tarafında, kanal dinleyicisi şu iletiyi alıyor ve yeni bir oturum kanalı oluşturur ve uygulamaya (yanıtta AcceptChannel kanal dinleyicisi üzerinde arama uygulaması) uygulamalı şekilde yeni bir oturuma ait olduğunu algılar. Uygulama daha sonra bu iletiyi ve aynı oturumda aynı oturum kanalı üzerinden gönderilen tüm sonraki iletiler alır.  
+ İstemci yeni bir oturumsuz kanal oluşturur ve bir ileti gönderir. Hizmet tarafında, kanal dinleyicisi bu iletiyi alır ve yeni bir oturuma ait olduğunu algılar ve yeni bir oturum kanalı oluşturur ve uygulamayı uygulamaya (kanal dinleyicisinde AcceptChannel çağıran uygulamaya yanıt olarak) sahip olur. Daha sonra uygulama bu iletiyi ve sonraki tüm iletileri aynı oturumda, aynı oturumdaki kanal üzerinden gönderilir.  
   
- Başka bir istemci (veya aynı istemci) yeni sessionful oluşturur ve bir ileti gönderir. Kanal dinleyicisi bu iletiyi yeni bir oturumda ve yeni bir oturum kanalı oluşturur ve işlem yinelenir algılar.  
+ Başka bir istemci (veya aynı istemci) yeni bir oturumsuz oluşturur ve bir ileti gönderir. Kanal dinleyicisi, bu iletinin yeni bir oturumda olduğunu algılar ve yeni bir sessionchannel oluşturur ve işlem yinelenir.  
   
- Oturumlarının Kanallar ve oturumları arasında ile hiçbir bağıntısı yoktur. Bu nedenle kanal dinleyicisi alınan iletilerin tümünü uygulamaya teslim edilir yalnızca bir kanal oluşturur. İleti, ileti sırası korumak hiçbir oturumunda olduğundan sıralama yoktur. Önceki grafiğin üst kısmını oturumsuz ileti değişimi gösterir.  
+ Oturumlar olmadan, kanallar ve oturumlar arasında bir bağıntı yoktur. Bu nedenle, kanal dinleyicisi tüm alınan iletilerin uygulamaya teslim edildiği yalnızca bir kanal oluşturur. İleti sıralaması, içinde ileti sırası korunacak bir oturum olmadığından da yoktur. Yukarıdaki grafiğin en üst kısmında oturumsuz ileti alışverişi gösterilmektedir.  
   
-## <a name="starting-and-terminating-sessions"></a>Başlangıç ve oturumları sonlandırma  
- Oturumları, istemci üzerinde yeni bir oturum kanalı oluşturarak başlatılır. Hizmet, yeni bir oturumda gönderildiği bir ileti aldığında, hizmette başlatılır. Benzer şekilde, oturum kapatma veya bir oturum kanalı durduruluyor sonlandırılır.  
+## <a name="starting-and-terminating-sessions"></a>Oturumları başlatma ve sonlandırma  
+ Oturumlar yalnızca yeni bir sessionchannel oluşturularak istemci üzerinde başlatılır. Hizmet yeni bir oturumda gönderilen bir ileti aldığında hizmette başlatılır. Benzer şekilde, oturumlar, oturumsuz bir kanalı kapatarak veya iptal ederek sonlandırılır.  
   
- Özel durum <xref:System.ServiceModel.Channels.IDuplexSessionChannel> hem ileti alma ve gönderme bir çift yönlü, kapatamaması iletişim deseni için kullanılır. Gönderme durdurur ancak kullanırken, bu nedenle iletileri alacak şekilde devam etmek bir tarafı isteyeceksiniz mümkündür <xref:System.ServiceModel.Channels.IDuplexSessionChannel> daha fazla ileti göndermez ancak giriş oturumu tutmak belirten çıkış Oturumu Kapat olanak sağlayan bir mekanizma yoktur. açılan ileti almak devam etmenize imkan sağlar.  
+ Bunun <xref:System.ServiceModel.Channels.IDuplexSessionChannel> özel durumu, çift yönlü ve oturumsuz iletişim düzeninde ileti göndermek ve almak için kullanılır. Bir tarafın ileti göndermeyi durdurmak, ancak ileti <xref:System.ServiceModel.Channels.IDuplexSessionChannel> almaya devam etmek, daha fazla ileti gönderemeyeceğinizi ancak giriş oturumunu kapatmayacağını belirten bir mekanizma olduğunda açıldığında, ileti almaya devam etmeniz sağlanır.  
   
- Genel olarak, giden tarafında ve gelen tarafında değil oturumları kapatılır. Diğer bir deyişle, böylece düzgün bir şekilde oturumunu sona erdirme kapatamaması çıkış kanalları kapatılabilir. Neden olan uygulama arama için null döndürmek karşılık gelen oturum Giriş kanalı kapatamaması çıkış kanal kapatma <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.Channels.IDuplexSessionChannel>.  
+ Genel olarak, oturumlar giden tarafta kapatılır ve gelen tarafta değildir. Diğer bir deyişle, oturumsuz çıkış kanalları kapatılabilir ve bu sayede oturumu temiz bir şekilde sonlandıralabilirsiniz. Oturumsuz çıkış kanalının kapatılması, karşılık gelen oturum giriş kanalının, <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.IDuplexSessionChannel>üzerinde çağıran uygulamaya null döndürmesine neden olur.  
   
- Bununla birlikte giriş oturumdaki kanallar sürece kapatılmalıdır değil <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oturumu zaten kapatıldı gösteren null döndürür. Varsa <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> üzerinde <xref:System.ServiceModel.Channels.IDuplexSessionChannel> sahip kapatılırken beklenmeyen iletileri alabilirsiniz çünkü null döndürdü değil, bir oturum Giriş kanalı kapatma bir özel durum oluşturabilir. Gönderen önce oturumu sonlandırmak bir alıcı isterse çağırmalıdır <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Giriş kanalı aniden sonlandıran oturumu.  
+ Ancak, oturumun zaten kapatıldığını belirten null değeri döndürülmediği <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> takdirde <xref:System.ServiceModel.Channels.IDuplexSessionChannel> oturumsuz giriş kanalları kapanmamalıdır. Üzerinde null döndürülmediğinde, oturum açma işlemi sırasında beklenmeyen iletiler alabileceği için <xref:System.ServiceModel.Channels.IDuplexSessionChannel> bir oturum giriş kanalının kapatılması bir özel durum oluşturabilir. <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A?displayProperty=nameWithType> Bir alıcı, gönderen olmadan önce bir oturumu sonlandırmaya istiyorsa, oturum beklenmedik bir şekilde <xref:System.ServiceModel.ICommunicationObject.Abort%2A> sona ermeden giriş kanalını çağırmalıdır.  
   
-## <a name="writing-sessionful-channels"></a>Yazma Sessionful kanallar  
- Bir oturum kanalı yazarı kanalınızı oturumları sağlamak için yapmanız gereken birkaç nokta vardır. Gönderme tarafında kanalınızı gerekir:  
+## <a name="writing-sessionful-channels"></a>Oturumsuz kanallar yazma  
+ Oturumsuz kanal yazarı olarak, kanalınızın oturum sunmak için yapması gereken birkaç nokta vardır. Gönderme tarafında, kanalınızın şunları yapması gerekir:  
   
-- Her yeni bir kanal için yeni bir oturum oluşturun ve benzersiz bir dize olan yeni bir oturum kimliğiyle ilişkilendirin. Veya yeni bir oturum aşağıdaki oturum kanalı yığınında almak.  
+- Her yeni kanal için yeni bir oturum oluşturun ve benzersiz bir dize olan yeni bir oturum kimliğiyle ilişkilendirin. Ya da, yığında aşağıda bulunan oturumsuz kanaldan yeni bir oturum elde edin.  
   
-- Bu kanalı kullanılarak gönderilen her ileti için kanalınızı (aksine, aşağıdaki katman almakla), oturum oluşturduysanız ileti oturumla ilişkilendirmeniz gerekir. Protokol kanallar için bu genellikle bir SOAP üst bilgisi ekleyerek gerçekleştirilir. Aktarım kanallar için bu genellikle yeni bir aktarım bağlantısı oluşturma veya oturum bilgilerini çerçeveleme protokole ekleyerek gerçekleştirilir.  
+- Bu kanalı kullanarak gönderilen her ileti için, kanalınız oturumu (sizin için aşağıdaki katmandan elde etmenin aksine) oluşturduysanız, iletiyi oturumla ilişkilendirmeniz gerekir. Protokol kanalları için bu genellikle bir SOAP üst bilgisi eklenerek yapılır. Taşıma kanalları için, bu genellikle yeni bir aktarım bağlantısı oluşturularak veya çerçeveleme protokolüne oturum bilgileri eklenerek yapılır.  
   
-- Bu kanalı kullanılarak gönderilen her ileti için yukarıda belirtilen teslimat garantileriyle sağlamanız gerekir. Kanal altına oturumu vermenizi bağlı, bu kanal ayrıca teslimat garantileriyle sağlar. Oturumu kendiniz sağlıyorsanız protokolünüzü kapsamında bu garanti uygulamak gerekir. Genel olarak, her iki kenarı da WCF varsayar bir protokolü kanalı yazıyorsanız TCP taşıma ya da güvenilir bir Mesajlaşma kanalı gerektirir ve bir oturumu sağlamak için bunlardan birini kullanan olabilirsiniz.  
+- Bu kanalı kullanarak gönderilen her ileti için yukarıda bahsedilen teslim garantisi sağlamanız gerekir. Oturumu sağlamanız için aşağıdaki kanala sahipseniz, bu kanal teslim garantisi verir. Oturumu kendiniz sağladıysanız, bu garantiyi protokolizin kapsamında uygulamanız gerekir. Genel olarak, her iki tarafta WCF 'yi kabul eden bir protokol kanalı yazıyorsanız, TCP aktarımı veya güvenilir mesajlaşma kanalı gerektirebilir ve bir oturum sağlamak için bunlardan birini kullanabilirsiniz.  
   
-- Zaman <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> olduğundan, kanalınızda adlı, belirtilen zaman aşımı veya varsayılan kullanarak oturumu kapatmak için gerekli iş gerçekleştirin. Bu arama olarak basit olabilir <xref:System.ServiceModel.ICommunicationObject.Close%2A> aşağıda (yalnızca oturum buradan elde ettiğiniz isteyip) veya özel bir SOAP ileti gönderme veya bir aktarım bağlantısı kapatma kanal.  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> Kanalınıza çağrıldığında, belirtilen zaman aşımını veya varsayılan olanı kullanarak oturumu kapatmak için gerekli işleri gerçekleştirin. Bu, aşağıdaki kanala çağrı <xref:System.ServiceModel.ICommunicationObject.Close%2A> yapmak kadar kolay olabilir (oturumu bundan önce edindiyseniz) veya özel bir soap iletisi gönderiyor veya bir aktarım bağlantısını kapatıyor.  
   
-- Zaman <xref:System.ServiceModel.ICommunicationObject.Abort%2A> olduğundan, kanalda çağrıldı, oturumu aniden g/ç işlemi yapmadan sonlandır. Bu, hiçbir şey yapmadan anlamına gelebilir veya bir ağ bağlantısı veya başka bir kaynak durduruluyor gerektirebilir.  
+- <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Kanalınıza çağrıldığında, g/ç yapmadan oturumu aniden sonlandırın. Bu, herhangi bir şey yapmanın veya bir ağ bağlantısının ya da başka bir kaynağın iptal edilme olabileceği anlamına gelebilir.  
   
- Alma tarafında kanalınızı gerekir:  
+ Alma tarafında, kanalınızın şunları yapması gerekir:  
   
-- Gelen her ileti için kanal dinleyicisi ait oturum algılaması gerekir. Bu oturumdaki ilk iletiyi ise, kanal dinleyicisi gereken yeni bir kanal oluşturmak ve çağrıdan dönüş <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>. Aksi takdirde kanal dinleyicisi oturuma karşılık gelir ve kanal üzerinden ileti teslim varolan kanalın bulmanız gerekir.  
+- Her gelen ileti için kanal dinleyicisi ait olduğu oturumu algılamamalıdır. Bu, oturumdaki ilk iletidir, kanal dinleyicisi yeni bir kanal oluşturmalı ve çağrısından <xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType>döndürmelidir. Aksi halde kanal dinleyicisi, oturuma karşılık gelen mevcut kanalı bulmalıdır ve iletiyi bu kanal üzerinden teslim eder.  
   
-- Kanalınızı (birlikte gerekli teslimat garantileriyle) oturumu sağlıyorsa sıralamasını iletileri gibi bazı eylemleri veya bildirimleri göndermek için alma tarafında gerekebilir.  
+- Kanalınızın oturumu sağlaması varsa (gerekli teslimat garantisi ile birlikte), iletileri yeniden sıralama veya bildirimleri gönderme gibi bazı eylemler gerçekleştirmek için alma tarafı gerekebilir.  
   
-- Zaman <xref:System.ServiceModel.ICommunicationObject.Close%2A> olduğundan, kanalda çağrıldı, oturumu kapatmak için gerekli iş belirtilen zaman aşımı veya varsayılan gerçekleştirin. Süresi dolacak şekilde Kapat zaman aşımı için beklenirken bir ileti kanalı alırsa, bu özel durumların neden olabilir. Throw için ileti aldığında kanal kapatma durumda olacaktır olmasıdır.  
+- Kanalınıza çağrıldığında, belirtilen zaman aşımı ya da varsayılan değer olanoturumukapatmakiçingerekliişlerigerçekleştirin.<xref:System.ServiceModel.ICommunicationObject.Close%2A> Bu, kanal bir ileti alırsa, kapatma zaman aşımının süresinin dolacağını beklerken özel durumlara neden olabilir. Bunun nedeni, kanalın, oluşturması için bir ileti aldığında kapanış durumunda olacağı durumdur.  
   
-- Zaman <xref:System.ServiceModel.ICommunicationObject.Abort%2A> olduğundan, kanalda çağrıldı, oturumu aniden g/ç işlemi yapmadan sonlandır. Yeniden birşey anlamına gelebilir veya bir ağ bağlantısı veya başka bir kaynak durduruluyor gerektirebilir.  
+- <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Kanalınıza çağrıldığında, g/ç yapmadan oturumu aniden sonlandırın. Bu durum, bir ağ bağlantısını veya başka bir kaynağı iptal edebilir veya herhangi bir şey yapmanız anlamına gelebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

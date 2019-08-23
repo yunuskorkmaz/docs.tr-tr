@@ -2,37 +2,37 @@
 title: model-defined function
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 4f98bbc9fdc19159354ec3e414c1a1c26029cb47
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05a44e86a118b649490cde849c8ca2c2bb0d2f15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645840"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934517"
 ---
 # <a name="model-defined-function"></a>model-defined function
-A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Model tanımlı bir işlev gövdesini gösterdiğini [varlık SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), işlevin bağımsız ifade sağlayan kuralları veya veri kaynağındaki desteklenen diller.  
+*Model tanımlı bir işlev* , kavramsal modelde tanımlanan bir işlevdir. Model tanımlı bir işlevin gövdesi [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)ifade edilir ve bu, işlevin veri kaynağında desteklenen kurallardan veya dillerden bağımsız olarak ifade etmesine olanak tanır.  
   
- Bir model tanımlı işlev tanımı, şu bilgileri içerir:  
+ Model tanımlı bir işlev için bir tanım aşağıdaki bilgileri içerir:  
   
-- Bir işlev adı. (Gerekli)  
+- Bir işlev adı. Istenir  
   
 - Dönüş değerinin türü. (İsteğe bağlı)  
   
     > [!NOTE]
-    >  Dönüş değeri, dönüş türü belirtilirse, geçersizdir.  
+    > Dönüş türü belirtilmemişse, dönüş değeri void olur.  
   
 - Parametre bilgileri. (İsteğe bağlı)  
   
-- Bir [varlık SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) işlevinin gövdesi tanımlayan ifade.  
+- İşlevin gövdesini tanımlayan bir [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) ifadesi.  
   
- Not model tanımlı işlevleri çıkış parametreleri desteklemez. Böylece model tanımlı işlevleri oluşan bu kısıtlama yerdir.  
+ Model tanımlı işlevlerin çıkış parametrelerini desteklemediğini unutmayın. Bu kısıtlama, model tanımlı işlevlerin birleştirilebilmesi için kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`.  
+ Aşağıdaki diyagramda üç varlık türü olan kavramsal model gösterilmektedir: `Book`, `Publisher`, ve `Author`.  
   
- ![Yayımlanma tarihi modeliyle gösteren ekran görüntüsü.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
+ ![Yayımlanma tarihi olan bir modeli gösteren ekran görüntüsü.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL örneği itibaren bir yıl sayılarını döndüren kavramsal modeldeki bir işlevi tanımlayan bir `Book` (Yukarıdaki diyagramda) olarak yayımlandı.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki csdl, bir (Yukarıdaki diyagramda) bir `Book` örneği yayımlandığı için yıl sayılarını döndüren kavramsal modelde bir işlevi tanımlar.  
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
@@ -40,4 +40,4 @@ A *model tanımlı işlev* kavramsal modelde tanımlı bir işlev değil. Model 
 
 - [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+- [Varlık Veri Modeli: İlkel veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

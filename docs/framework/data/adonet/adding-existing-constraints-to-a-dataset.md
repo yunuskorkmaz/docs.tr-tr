@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f95a9c4f250100ca97e3ab52e4073d027df1b8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607290"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932192"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>DataSet’e Var Olan Kısıtlamaları Ekleme
-**Dolgu** yöntemi **DataAdapter** dolduran bir <xref:System.Data.DataSet> yalnızca tablo sütunları ve satırları bir veri kaynağından; ile ancak kısıtlamaları yaygın olarak ayarlanmış veri kaynağı tarafından **doldurun** yöntemi için bu şema bilgileri eklemez **veri kümesi** varsayılan olarak. Doldurmak için bir **veri kümesi** bir veri kaynağından varolan birincil anahtar kısıtlaması bilgilerle çağrısı yapabilirsiniz **FillSchema** yöntemi **DataAdapter**, veya ayarlama **MissingSchemaAction** özelliği **DataAdapter** için **AddWithKey** çağırmadan önce **dolgu**. Bu birincil anahtara sağlayacak kısıtlamalarını **veri kümesi** bu veri kaynağında yansıtır. Yabancı anahtar kısıtlaması bilgileri dahil değildir ve açıkça gösterildiği oluşturulmalıdır [DataTable kısıtlamaları](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+**DataAdapter** 'ın <xref:System.Data.DataSet> **Fill** yöntemi bir veri kaynağından yalnızca tablo sütunları ve satırlar ile doldurulur; ancak kısıtlamalar veri kaynağı tarafından yaygın olarak ayarlanır, **Fill** yöntemi bu şema bilgilerini **bu şemaya eklemez Varsayılan olarak veri kümesi** . Bir veri **kümesini** bir veri kaynağından mevcut birincil anahtar kısıtlaması bilgileriyle doldurmak Için, **DataAdapter**'ın **FillSchema** metodunu çağırabilir ya da **DataAdapter** 'ın **MissingSchemaAction** özelliğini ayarlayabilirsiniz **Fill**çağrılmadan önce **AddWithKey** 'e. Bu, veri **kümesindeki** birincil anahtar kısıtlamalarının veri kaynağında olanları yansıttığından emin olur. Yabancı anahtar kısıtlama bilgileri dahil değildir ve [DataTable kısıtlamalarında](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)gösterildiği gibi açık bir şekilde oluşturulmalıdır.  
   
- Şema bilgileri ekleme bir **veri kümesi** verilerle doldurma birincil anahtar kısıtlamalarını birlikte olmasını sağlar önce <xref:System.Data.DataTable> nesneler **veri kümesi**. Sonuç olarak, ek zaman doldurmak için çağrıları **veri kümesi** yapılır, birincil anahtar sütun bilgileri, veri kaynağından yeni satırlar her geçerli satır ile eşleştirmek için kullanılır **DataTable**ve geçerli verileri tablolar, veri kaynağı ile yazılır. Veri kaynağından yeni satırlar eklenir şema bilgileri **veri kümesi**, yinelenen satırları imzalanmayarak.  
+ Verilerle doldurulmadan önce şema bilgilerini bir veri **kümesine** eklemek, birincil anahtar kısıtlamalarının veri <xref:System.Data.DataTable> **kümesindeki**nesnelere dahil edilmesini sağlar. Sonuç olarak, veri **kümesini** dolduracak ek çağrılar yapıldığında, birincil anahtar sütun bilgileri her **DataTable**'daki geçerli satırlarla veri kaynağındaki yeni satırları eşleştirmek için kullanılır ve tablolardaki güncel verilerin üzerine yazılır. veri kaynağı. Şema bilgileri olmadan veri kaynağındaki yeni satırlar veri **kümesine**eklenir ve yinelenen satırlara yol açar.  
   
 > [!NOTE]
->  Bir sütun bir veri kaynağındaki otomatik artan olarak belirlenirse **FillSchema** yöntemi veya **dolgu** yöntemi ile bir **MissingSchemaAction** ,  **AddWithKey**, oluşturur bir **DataColumn** ile bir **AutoIncrement** özelliğini `true`. Ancak, ayarlanacak ihtiyacınız olacak **AutoIncrementStep değeri** ve **AutoIncrementSeed** kendiniz değerleri. Sütunları otomatik olarak artırma hakkında daha fazla bilgi için bkz. [AutoIncrement sütunları oluşturma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+> Bir veri kaynağındaki sütun otomatik artırma, **FillSchema** yöntemi veya WITH **AddWithKey**Için bir **MissingSchemaAction** Ile **Fill** yöntemi olarak tanımlanmışsa, **AutoIncrement** özelliği ile bir **DataColumn** oluşturur olarak `true`ayarlayın. Ancak, **oto ıncrementstep** ve **oto ıncrementseed** değerlerini kendiniz ayarlamanız gerekecektir. Sütunları otomatik artırma hakkında daha fazla bilgi için bkz. [AutoIncrement sütunları oluşturma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
- Kullanarak **FillSchema** veya ayarı **MissingSchemaAction** için **AddWithKey** birincil anahtar sütunu bilgileri belirlemek için veri kaynağında ek işleme gerektirir. Bu ek işleme performansı düşürür. Tasarım zamanında birincil anahtar bilgilerine biliyorsanız, açıkça birincil anahtar sütun veya sütunlar en iyi performans elde etmek için belirtmenizi öneririz. Bir tablonun birincil anahtar bilgileri açıkça ayarlama hakkında daha fazla bilgi için bkz. [birincil anahtarlar tanımlama](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ **FillSchema** kullanmak veya **MissingSchemaAction** 'ı **AddWithKey** olarak ayarlamak, birincil anahtar sütun bilgilerini belirlemede veri kaynağında fazladan işlem yapılmasını gerektirir. Bu ek işlem performansı azaltabilir. Tasarım zamanında birincil anahtar bilgilerini biliyorsanız, en iyi performansı elde etmek için birincil anahtar sütununu veya sütunları açıkça belirtmenizi öneririz. Bir tabloya yönelik birincil anahtar bilgilerini açıkça ayarlama hakkında daha fazla bilgi için bkz. [birincil anahtarları tanımlama](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
- Aşağıdaki kod örneği için şema bilgileri ekleme gösteren bir **veri kümesi** kullanarak **FillSchema**.  
+ Aşağıdaki kod örneği, **FillSchema**kullanarak bir **veri kümesine** şema bilgilerinin nasıl ekleneceğini gösterir.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -38,7 +38,7 @@ custAdapter.FillSchema(custDataSet, SchemaType.Source, "Customers");
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
- Aşağıdaki kod örneği için şema bilgileri ekleme gösteren bir **veri kümesi** kullanarak **MissingSchemaAction.AddWithKey** özelliği **dolgu** yöntemi.  
+ Aşağıdaki kod örneği, **Fill** yönteminin **MissingSchemaAction. AddWithKey** özelliğini kullanarak bir **veri kümesine** şema bilgilerinin nasıl ekleneceğini gösterir.  
   
 ```vb  
 Dim custDataSet As DataSet = New DataSet()  
@@ -54,15 +54,15 @@ custAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
 custAdapter.Fill(custDataSet, "Customers");  
 ```  
   
-## <a name="handling-multiple-result-sets"></a>Birden çok sonuç kümesi işleme  
- Varsa **DataAdapter** döndürülen birden çok sonuç kümesi karşılaştığında **SelectCommand**, birden çok tablodan oluşturacağı **veri kümesi**. Tablolar, sıfır tabanlı artımlı varsayılan bir ad verilir **tablo** *N*ile başlayan **tablo** "Table0" yerine. Bağımsız değişkeni olarak bir tablo adı geçip geçmediğini **FillSchema** yöntemi, tabloları sıfır tabanlı bir artımlı adı verilir **TableName** *N* ilebaşlayan**TableName** "TableName0" yerine.  
+## <a name="handling-multiple-result-sets"></a>Birden çok sonuç kümesini işleme  
+ **DataAdapter** , **SelectCommand**'ten döndürülen birden çok sonuç kümesiyle karşılaşırsa, **veri kümesinde**birden çok tablo oluşturur. Tablolar, "Table0" yerine **tablo** ile başlayarak tablo *N*' nin sıfır tabanlı artımlı varsayılan adı olarak verilecek. Bir tablo adı **FillSchema** yöntemine bir bağımsız değişken olarak geçirilirse, tablolara "TableName0" yerine **TableName** ile başlayarak **TableName** *N*'nin sıfır tabanlı artımlı adı verilir.  
   
 > [!NOTE]
->  Varsa **FillSchema** yöntemi **OleDbDataAdapter** nesne birden çok sonuç kümesi döndüren bir komut çağrıldığında, yalnızca şema bilgileri ilk sonuç kümesinden döndürülür. Birden çok sonuç için şema bilgileri döndüren zaman ayarlar kullanarak **OleDbDataAdapter**, belirttiğiniz önerilir bir **MissingSchemaAction** , **AddWithKey** ve şema bilgilerini çağrılırken elde **dolgu** yöntemi.  
+> Birden çok sonuç kümesi döndüren bir komut için **OleDbDataAdapter** nesnesinin **FillSchema** yöntemi çağrılırsa, yalnızca ilk sonuç kümesinden şema bilgisi döndürülür. **OleDbDataAdapter**kullanarak birden çok sonuç kümesi için şema bilgilerini döndürürken, **AddWithKey** Için bir **MissingSchemaAction** belirtmeniz ve **dolguyu** çağırırken şema bilgilerini edinmeniz önerilir yöntemidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,59 +2,59 @@
 title: PII Güvenlik Kilidi
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 16e7c564373eaf241b500c0e3de40ee8fb38f05a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425418"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964603"
 ---
 # <a name="pii-security-lockdown"></a>PII Güvenlik Kilidi
-Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güvenlikle ilgili çeşitli özelliklerini denetlemek nasıl gösterir:  
+Bu örnek, bir Windows Communication Foundation (WCF) hizmetinin güvenlikle ilgili birkaç özelliğinin nasıl kontrol altına alınacağını gösterir:  
   
-- Bir hizmetin yapılandırma dosyasındaki hassas bilgileri şifrelemek üzere.  
+- Bir hizmetin yapılandırma dosyasındaki hassas bilgileri şifreleme.  
   
-- Böylece hizmet alt dizinleri iç içe öğeleri yapılandırma dosyasındaki kilitleme ayarları geçersiz kılamazsınız.  
+- İç içe geçmiş hizmet alt dizinleri ayarları geçersiz kılamaması için yapılandırma dosyasındaki öğeleri kilitleme.  
   
-- İzleme ve ileti günlükleri, kişisel bilgilerin (PII) günlüğüne denetleme.  
+- Kişisel bilgilerin (PII) izleme ve ileti günlüklerinde günlüğe kaydedilmesini denetleme.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Tartışma  
- Bu özelliklerin her biri ayrı ayrı veya birlikte bir hizmetin güvenlik denetimi yönleri için olabilir. Bu, bir WCF Hizmeti güvenli hale getirme için kesin bir kılavuz değildir.  
+ Bu özelliklerin her biri, bir hizmetin güvenliğinin yönlerini denetlemek için ayrı olarak veya birlikte kullanılabilir. Bu bir WCF hizmetini güvenli hale getirmek için kesin bir kılavuz değildir.  
   
- .NET Framework yapılandırma dosyalarının veritabanlarına bağlanmak için bağlantı dizeleri gibi hassas bilgiler içerebilir. Paylaşılan ve Web barındırılan senaryolarda yapılandırma dosyasının içinde yer alan verileri sıradan görüntülemeye dayanıklı olması için bir hizmet yapılandırma dosyasında bu bilgileri şifrelemek için istenebilir. .NET framework 2.0 ve sonraki Windows veri koruma uygulama programlama arabirimi (DPAPI) veya RSA şifreleme sağlayıcısını kullanarak yapılandırma dosyasının bölümlerini şifreler özelliğine sahiptir. Bir yapılandırma dosyası seçme bölümlerini aspnet_regiis.exe DPAPI veya RSA kullanarak şifreleyebilirsiniz.  
+ .NET Framework yapılandırma dosyaları, veritabanlarına bağlanmak için bağlantı dizeleri gibi gizli bilgiler içerebilir. Paylaşılan, Web 'de barındırılan senaryolarda, yapılandırma dosyası içinde yer alan verilerin rastgele görüntülemeye dayanıklı olması için bu bilgileri bir hizmetin yapılandırma dosyasında şifrelemek istenebilir. .NET Framework 2,0 ve üzeri, Windows Data Protection uygulama programlama arabirimi (DPAPI) veya RSA şifreleme sağlayıcısını kullanarak yapılandırma dosyasının bölümlerini şifreleyebilme özelliğine sahiptir. DPAPI veya RSA kullanan Aspnet_regiis. exe bir yapılandırma dosyasının seçim kısımlarını şifreleyebilir.  
   
- Web barındırılan senaryolarda Hizmetleri diğer hizmetlerin dizinlerde olması mümkündür. Varsayılan yapılandırma değerlerini belirlemek için anlamsal üst dizinindeki yapılandırma değerleri geçersiz kılmak için iç içe geçmiş dizinleri yapılandırma dosyalarında sağlar. Belirli durumlarda bu istenmeyen çeşitli nedenlerden dolayı olabilir. WCF hizmeti yapılandırma destekleyen iç içe geçmiş bir hizmet kullanarak çalıştırıldığında yapılandırma değerlerini, böylece yapılandırma iç içe geçmiş kilitleme özel durum oluşturur, yapılandırma değerleri geçersiz.  
+ Web 'de barındırılan senaryolarda, diğer hizmetlerin alt dizinlerinde Hizmetleri olması mümkündür. Yapılandırma değerlerini belirlemek için varsayılan anlam, iç dizindeki yapılandırma değerlerini geçersiz kılmak üzere iç içe dizinler içindeki yapılandırma dosyalarının izin verir. Bazı durumlarda bu, çeşitli nedenlerle istenmeyen bir durum olabilir. WCF hizmeti yapılandırması, iç içe geçmiş bir hizmet geçersiz kılınan yapılandırma değerleri kullanılarak çalıştırıldığında, iç içe yapılandırmanın özel durumlar oluşturması için yapılandırma değerlerinin kilitlenmesini destekler.  
   
- Bu örnek, bilinen kişisel bilgilerin (PII) kullanıcı adı ve parola gibi izleme ve ileti günlüklerde günlüğe kaydetmeyi denetlemek nasıl gösterir. Belirli durumlarda PII günlüğe bir uygulamada hata ayıklama içinde önemli olabilir ancak varsayılan olarak, bilinen PII günlüğünü devre dışı. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Ayrıca, bu örnek, izleme ve iletileri günlüğe kaydetme kullanır. Daha fazla bilgi için [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örnek.  
+ Bu örnek, Kullanıcı adı ve parola gibi, izleme ve ileti günlüklerinde bilinen kişisel bilgilerin (PII) günlüğe kaydedilmesini nasıl denetleyeceğinizi gösterir. Varsayılan olarak, bilinen PII günlüğe kaydetme devre dışıdır, ancak bazı durumlarda PII günlüğü, bir uygulamada hata ayıklaması yapmak için önemli olabilir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Ayrıca, bu örnek izleme ve ileti günlüğe kaydetme kullanır. Daha fazla bilgi için [izleme ve mesaj günlüğü](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) örneğine bakın.  
   
-## <a name="encrypting-configuration-file-elements"></a>Yapılandırma dosyası öğeleri şifreleme  
- Paylaşılan Web barındırma ortamında güvenlik nedenleriyle, hassas bilgiler içerebilir, veritabanı bağlantı dizeleri gibi belirli yapılandırma öğelerini şifreleme istenebilir. Örneğin, % WINDIR%\Microsoft.NET\Framework\v4.0.20728 .NET Framework klasörde bulunan aspnet_regiis.exe aracını kullanarak bir yapılandırma öğesi şifrelenmelidir.  
+## <a name="encrypting-configuration-file-elements"></a>Yapılandırma dosyası öğelerini şifreleme  
+ Paylaşılan bir Web barındırma ortamındaki güvenlik amaçları için, gizli bilgiler içerebilen veritabanı bağlantı dizeleri gibi belirli yapılandırma öğelerini şifrelemek istenebilir. Bir yapılandırma öğesi, .NET Framework klasöründe bulunan Aspnet_regiis. exe aracı kullanılarak şifrelenmiş olabilir, örneğin,%WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
-#### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Değerleri için örnek Web.config dosyasındaki appSettings bölümündeki şifrelemek için  
+#### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Örnek için Web. config içindeki appSettings bölümündeki değerleri şifrelemek için  
   
-1. Açık bir komut istemi kullanarak Başlat -> Çalıştır... Yazın `cmd` tıklatıp **Tamam**.  
+1. Başlat-> Çalıştır komutunu kullanarak bir komut istemi açın... Yazın ve Tamam ' a tıklayın. `cmd`  
   
-2. Aşağıdaki komutu gönderdikten tarafından geçerli .NET Framework dizinine gidin: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Şu komutu yayımlayarak geçerli .NET Framework dizinine gidin: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3. Aşağıdaki komutu gönderdikten tarafından Web.config klasöründe appSettings yapılandırma ayarlarını şifrele: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Aşağıdaki komutu yayımlayarak Web. config klasöründeki appSettings yapılandırma ayarlarını şifreleyin: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- ASP.NET yapılandırması dpapı'ye bir nasıl yapılır okuyarak yapılandırma dosyalarını bölümlerini şifreleme hakkında daha fazla bilgi bulunabilir ([Güvenli ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişimi](https://go.microsoft.com/fwlink/?LinkId=95137)) ve ASP.NET yapılandırma RSA üzerinde bir nasıl yapılır ([nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Yapılandırma dosyalarının şifreleniyor hakkında daha fazla bilgi, ASP.NET yapılandırması 'nda ([güvenli ASP.NET uygulamaları oluşturma) bir dizi DPAPI ile okunarak bulunabilir: Kimlik doğrulaması, yetkilendirme ve güvenli iletişim](https://go.microsoft.com/fwlink/?LinkId=95137)) ve ASP.NET yapılandırmasında nasıl yapılır RSA ([nasıl yapılır: ASP.NET 2,0 içindeki yapılandırma bölümlerini RSA](https://go.microsoft.com/fwlink/?LinkId=95138)kullanarak şifreleyin.  
   
-## <a name="locking-configuration-file-elements"></a>Kilitleme yapılandırma dosyası öğeleri  
- Web barındırılan senaryolarda Hizmetleri Hizmetleri dizinlerde olması mümkündür. Bu gibi durumlarda, hizmet alt dizinindeki yapılandırma değerlerini Machine.Config'deki değerlerini inceleme ve sırayla tüm üst dizinlerin dizin ağacında taşıma ve son birleştirme Web.config dosyalarında ile birleştiriliyor hesaplanır Web.config dosyasında hizmet içeren dizin. Çoğu yapılandırma öğeleri için varsayılan davranış, alt üst dizinlerin ayarlanan değerleri geçersiz kılmak için yapılandırma dosyalarında izin vermektir. Belirli durumlarda alt dizinleri yapılandırma dosyalarında üst dizini yapılandırma değerleri geçersiz kılmasını önlemek için istenebilir.  
+## <a name="locking-configuration-file-elements"></a>Yapılandırma dosyası öğelerini kilitleme  
+ Web 'de barındırılan senaryolarda, hizmetlerin alt dizinlerinde Hizmetleri olması mümkündür. Bu durumlarda, alt dizindeki hizmetin yapılandırma değerleri, Machine. config dosyasındaki değerleri inceleyerek ve üst dizinlerdeki herhangi bir Web. config dosyası ile çok büyük bir şekilde birleştirme işlemi, dizin ağacını aşağı doğru ve son olarak birleştirme sırasında hesaplanır. Hizmeti içeren dizinde Web. config dosyası. Çoğu yapılandırma öğesinin varsayılan davranışı, alt dizinlerindeki yapılandırma dosyalarının üst dizinlerde ayarlanan değerleri geçersiz kılmasına izin verdir. Belirli durumlarda, alt dizinlerdeki yapılandırma dosyalarının üst dizin yapılandırmasında ayarlanan değerleri geçersiz kılmasını engellemek istenebilir.  
   
- .NET Framework yapılandırma dosyası öğeleri kilitli yapılandırma öğeleri geçersiz kılan yapılandırmaları çalışma zamanı özel durumlar, kilitlemek için bir yol sağlar.  
+ .NET Framework, kilitli yapılandırma öğelerini geçersiz kılan yapılandırmaların çalışma zamanı özel durumları oluşturması için yapılandırma dosyası öğelerini kilitlemek için bir yol sağlar.  
   
- Bir yapılandırma öğesi belirterek kilitlenip `lockItem` öznitelik yapılandırma dosyasında bir düğüm için örneğin, böylece hesaplayıcı Hizmetleri'nde yapılandırma dosyalarını içe CalculatorServiceBehavior düğüm yapılandırma dosyasındaki kilitlemek için değişiklik davranışı, aşağıdaki yapılandırma kullanılabilir olamaz.  
+ Yapılandırma öğesi, yapılandırma dosyasındaki bir düğümün özniteliği belirtilerek `lockItem` , örneğin, iç içe yapılandırma dosyalarında Hesaplayıcı Hizmetleri olacak şekilde yapılandırma dosyasındaki bir düğüm için özniteliği belirtilerek kilitlenebilir. davranış değiştirilemiyor, aşağıdaki yapılandırma kullanılabilir.  
   
 ```xml  
 <configuration>  
@@ -71,12 +71,12 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
 </configuration>  
 ```  
   
- Yapılandırma öğelerini kilitleme daha belirli olabilir. Öğelerinin bir listesini görmek için bir değer olarak belirtilebilir `lockElements` bir dizi öğeleri alt öğelerinin koleksiyonu içinde kilitlenemedi. Özniteliklerin bir listesi için değer olarak belirtilen `lockAttributes` öznitelikleri bir öğe içinde bir dizi kilitlenemiyor. Bir koleksiyonun tamamını öğeler veya öznitelikleri belirterek dışında belirtilen bir liste kilitlenebilir `lockAllElementsExcept` veya `lockAllAttributesExcept` düğümünde öznitelikleri.  
+ Yapılandırma öğelerinin kilitlenmesi daha belirgin olabilir. Öğe listesi, `lockElements` alt öğeleri koleksiyonundaki öğelerin bir kümesini kilitlemek için öğesine değer olarak belirtilebilir. Bir öğe içindeki bir öznitelik kümesini kilitlemek için, bir öznitelik listesi `lockAttributes` , öğesine değer olarak belirtilebilir. Bir düğüm üzerindeki veya `lockAllElementsExcept` `lockAllAttributesExcept` özniteliklerini belirterek, belirtilen bir liste hariç tüm öğe veya öznitelik koleksiyonu kilitlenebilir.  
   
 ## <a name="pii-logging-configuration"></a>PII günlük kaydı yapılandırması  
- PII günlüğe iki anahtar tarafından denetlenir: bilgisayar genelinde bir ayar izin veren veya reddeden PII PII günlüğe her geçiş yapmak bir uygulama Yöneticisi izin veren bir uygulama ayarı ve günlüğe kaydetme için bilgisayar yöneticisi veren Machine.config bulundu Kaynak Web.config veya App.config dosyasında.  
+ PII günlüğü iki anahtarla denetlenir: Machine. config dosyasında bir bilgisayar yöneticisinin PII günlüğe kaydedilmesine izin verilmesini veya reddetmesini sağlayan bir uygulama ayarı ve uygulama yöneticisinin her biri için PII günlüğe kaydedilmesini değiştirmesine izin veren bir uygulama ayarı bulunur. bir Web. config veya App. config dosyasında kaynak.  
   
- Bilgisayar genelinde ayarı ayarlanmasıyla denetlenir `enableLoggingKnownPii` için `true` veya `false`, `machineSettings` Machine.config öğesinde. Örneğin, aşağıdaki uygulamaların PII, günlüğü etkinleştirmek sağlar.  
+ Bilgisayar genelindeki ayar, Machine. `enableLoggingKnownPii` config 'deki `machineSettings` öğesinde `true` veya `false`olarak ayarlanarak denetlenir. Örneğin, aşağıdakiler uygulamaların PII günlük kaydını açmasına olanak sağlar.  
   
 ```xml  
 <configuration>  
@@ -87,11 +87,11 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
 ```  
   
 > [!NOTE]
->  Machine.config dosyasının varsayılan konum vardır: % WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.  
+> Machine. config dosyası varsayılan bir konuma sahiptir:%WINDIR%\Microsoft.NET\Framework\v2.0.50727\CONFIG.  
   
- Varsa `enableLoggingKnownPii` Machine.config dosyasına öznitelik yoksa, PII günlüğe izin verilmiyor.  
+ `enableLoggingKnownPii` Özniteliği Machine. config dosyasında yoksa, PII günlüğüne izin verilmez.  
   
- Bir uygulama ayarlayarak yapılır için PII günlüğü etkinleştirme `logKnownPii` için kaynak öğesinin özniteliği `true` veya `false` Web.config veya App.config dosyasında. Örneğin, aşağıdaki PII, hem ileti günlüğe kaydetme ve izleme günlüğü için günlük kaydını etkinleştirir.  
+ Bir uygulama için PII günlük kaydının etkinleştirilmesi, kaynak `logKnownPii` `true` öğenin özniteliği veya `false` Web. config veya App. config dosyasına ayarlanarak yapılır. Örneğin, aşağıdaki ileti günlüğe kaydetme ve izleme günlüğü için PII günlüğe kaydedilmesini mümkün bir şekilde sunar.  
   
 ```xml  
 <configuration>  
@@ -112,36 +112,36 @@ Bu örnek, bir Windows Communication Foundation (WCF) hizmeti tarafından güven
 </configuration>  
 ```  
   
- Varsa `logKnownPii` özniteliği belirtilmezse, ardından PII günlüğe kaydedilmez.  
+ `logKnownPii` Öznitelik belirtilmemişse PII günlüğe kaydedilmez.  
   
- PII hem de yalnızca oturum `enableLoggingKnownPii` ayarlanır `true`, ve `logKnownPii` ayarlanır `true`.  
+ PII `enableLoggingKnownPii` `true`, her ikisi de olarak ayarlanmışsa günlüğe kaydedilir ve `logKnownPii` olarak `true`ayarlanır.  
   
 > [!NOTE]
->  System.Diagnostics yapılandırma dosyasında listelenen ilk öğe dışında tüm kaynaklarında tüm öznitelikler yok sayar. Ekleme `logKnownPii` yapılandırma dosyasındaki ikinci kaynağına özniteliği etkisizdir.  
+> System. Diagnostics, yapılandırma dosyasında listelenenden ilki hariç tüm kaynaklardaki tüm öznitelikleri yoksayar. Yapılandırma dosyasındaki ikinci kaynağa özniteliğinieklemeketkisizdir.`logKnownPii`  
   
 > [!IMPORTANT]
->  Bu örneği çalıştırmak için Machine.config el ile değiştirilmesini içerir. Yanlış değer veya sözdizimi Machine.config değiştirmek tüm .NET Framework uygulamaların çalıştırılmasını engelleyebilir dikkatli olunması.  
+>  Bu örneği çalıştırmak için Machine. config dosyasının el ile değiştirilmesi gerekir. Machine. config dosyasının değiştirilmesi hatalı değerler veya sözdizimi olarak değiştirilirken gerçekleştirilmelidir. tüm .NET Framework uygulamalarının çalışmasını engelleyebilir.  
   
- Yapılandırma dosyası öğelerini DPAPI ve RSA kullanarak şifreleme de mümkündür. Daha fazla bilgi için aşağıdaki bağlantılara bakın:  
+ Ayrıca, DPAPI ve RSA kullanılarak yapılandırma dosyası öğelerini şifrelemek mümkündür. Daha fazla bilgi için aşağıdaki bağlantılara bakın:  
   
-- [Güvenli bir ASP.NET uygulamaları: Kimlik doğrulaması, yetkilendirme ve güvenli iletişim](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [Güvenli ASP.NET uygulamaları oluşturma: Kimlik doğrulama, yetkilendirme ve güvenli Iletişim](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
-- [Nasıl yapılır: ASP.NET 2.0 yapılandırma bölümleri şifrelemek RSA kullanarak](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [Nasıl yapılır: ASP.NET 2,0 içindeki yapılandırma bölümlerini RSA kullanarak şifreleme](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Bunu ayarlamak için örneği oluşturun ve çalıştırın  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `true`, gerekirse, üst düğümleri ekleme.  
+2. `enableLoggingKnownPii`Özniteliğiniayarlamak için Machine. config dosyasını düzenleyin ,gerekirse`true`üst düğümleri ekleyin.  
   
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 #### <a name="to-clean-up-the-sample"></a>Örneği temizlemek için  
   
-1. Ayarlanacak Machine.config Düzenle `enableLoggingKnownPii` özniteliğini `false`.  
+1. `enableLoggingKnownPii` Özniteliğini olarak`false`ayarlamak için Machine. config dosyasını düzenleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -2,18 +2,18 @@
 title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: baca65da29fd0b18bd61f9b79ce82429faaed432
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 3e7382b25e68c1b01bd11e015b9864ae32f25f9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364141"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965948"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 Etkinlik, [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] bir iş[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] akışı içinde (WF 3,5) etkinliğini sarmalayan bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5) etkinliğidir. <xref:System.Activities.Statements.Interop> WF 3 etkinliği tek bir yaprak etkinlik veya bir etkinlik ağacının tamamına ait olabilir. Yürütme (iptal ve özel durum işleme dahil) ve [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] etkinliğin kalıcılığı, yürütülmekte olan [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı örneği bağlamı içinde gerçekleşir.  
   
 > [!NOTE]
->  İş akışı projesinin **hedef Framework** ayarı **.NET Framework 4,5**olarak ayarlanmadığı takdirde etkinlikişakışıTasarımcısıaraçkutusundagörünmez.<xref:System.Activities.Statements.Interop>  
+> İş akışı projesinin **hedef Framework** ayarı **.NET Framework 4,5**olarak ayarlanmadığı takdirde etkinlikişakışıTasarımcısıaraçkutusundagörünmez.<xref:System.Activities.Statements.Interop>  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Birlikte çalışabilirlik etkinliğiyle WF 3 etkinliğinin kullanımı için ölçütler  
  Bir <xref:System.Activities.Statements.Interop> etkinlik içinde başarılı bir şekilde yürütülecek bir WF 3 etkinliğinin sağlanması için aşağıdaki ölçütlerin karşılanması gerekir:  

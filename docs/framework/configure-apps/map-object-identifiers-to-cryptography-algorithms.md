@@ -8,15 +8,15 @@ helpviewer_keywords:
 - mapping object identifiers
 - cryptography, mapping object identifiers
 ms.assetid: c9673f81-bf9e-47fd-bc6f-6bc1c1c4c15e
-ms.openlocfilehash: e035ff04a70a441f7f64bbc230ba6d8036fb2ace
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5aebac2d392d4540581dfe7c7afff0819968ac0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912538"
 ---
 # <a name="mapping-object-identifiers-to-cryptography-algorithms"></a>Nesne Tanımlayıcılarını Şifreleme Algoritmalarıyla Eşleştirme
-Dijital imzalar, başka bir programdan gönderildiğinde, veri ile müdahaleye uğramadığından emin olun. Genellikle verilerin imzalanmasını karma bir matematiksel işlev uygulayarak dijital imza hesaplanır. İmzalanacak bir karma değer biçimlendirilirken, biçimlendirme işleminin bir parçası olarak ASN.1 nesne tanımlayıcısı (OID) bazı dijital imza algoritmaları ekleyin. OID, karma değeri hesaplamak için kullanılan algoritmayı belirtir. Özel algoritmalar kullanmak için şifreleme mekanizması genişletmek için nesne tanımlayıcılarını algoritmaları eşleyebilirsiniz. Aşağıdaki örnek, bir nesne tanımlayıcı eşlemek için yeni bir karma algoritması gösterilmektedir.  
+Dijital imzalar, bir programdan diğerine gönderildiğinde verilerin üzerinde oynanmamasını sağlar. Genellikle dijital imza, imzalanacak verilerin karmasını matematiksel bir işlev uygulanarak hesaplanır. Bir karma değeri imzalanacak olarak biçimlendirirken, bazı dijital imza algoritmaları biçimlendirme işleminin bir parçası olarak bir ASN. 1 nesne tanımlayıcısı (OID) ekler. OID, karmayı hesaplamak için kullanılan algoritmayı tanımlar. Şifreleme mekanizmasını özel algoritmaları kullanmak üzere genişletmek için algoritmaları nesne tanımlayıcılarıyla eşleyebilirsiniz. Aşağıdaki örnek, bir nesne tanımlayıcısının yeni bir karma algoritmasına nasıl eşleneceğini gösterir.  
   
 ```xml  
 <configuration>  
@@ -38,9 +38,9 @@ Dijital imzalar, başka bir programdan gönderildiğinde, veri ile müdahaleye u
 </configuration>  
 ```  
   
- [ \<OidEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md) iki öznitelik içeriyor. **OID** nesne tanımlayıcı numarası bir özniteliktir. **Adı** değeri özniteliktir **adı** özniteliğini [ \<nameEntry > öğesi](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md). Bir nesne tanımlayıcı basit adına eşlenebilir önce bir algoritma adının bir eşleme bir sınıf olmalıdır.  
+ Oıdentry > öğesi iki öznitelik içerir. [ \<](./file-schema/cryptography/oidentry-element.md) **OID** özniteliği, nesne tanımlayıcı numarasıdır. **Name** özniteliği, [ \<nameEntry > öğesinden](./file-schema/cryptography/nameentry-element.md) **ad** özniteliğinin değeridir. Bir nesne tanımlayıcısının basit bir ada eşleştirilemeden önce bir algoritma adından bir sınıfa eşleme olmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Şifreleme Sınıflarını Yapılandırma](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Şifreleme Hizmetleri](../../../docs/standard/security/cryptographic-services.md)
+- [Şifreleme Sınıflarını Yapılandırma](configure-cryptography-classes.md)
+- [Şifreleme Hizmetleri](../../standard/security/cryptographic-services.md)

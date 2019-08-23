@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5781878270272f5ef894c68dc23b9433029e1d41
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968501"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile İzlemeyi Yapılandırma
-Yapılandırma izleme için bu konu açıklar bir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] barındırılan iş akışı <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Bir hizmet davranışını belirterek, bir Web.config dosyası aracılığıyla yapılandırılır.  
+Bu konu başlığında [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] <xref:System.ServiceModel.Activities.WorkflowServiceHost>barındırılan bir iş akışı için izlemenin nasıl yapılandırılacağı açıklanmaktadır. Bir hizmet davranışı belirtilerek bir Web. config dosyası aracılığıyla yapılandırılır.  
   
-### <a name="configure-tracking-in-configuration"></a>Yapılandırmada izlemeyi yapılandırma  
+### <a name="configure-tracking-in-configuration"></a>Yapılandırmada Izlemeyi Yapılandır  
   
-1. Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <`behavior`> öğesinde aşağıdaki örnekte gösterildiği gibi bir yapılandırma dosyası.  
+1. Aşağıdaki örnekte gösterildiği gibi,`behavior`bir yapılandırma dosyasında < > öğesini kullanarakekleyin.<xref:System.Activities.Tracking.EtwTrackingParticipant>  
   
     ```xml  
     <behaviors>  
@@ -27,9 +27,9 @@ Yapılandırma izleme için bu konu açıklar bir [!INCLUDE[netfx_current_long](
     ```  
   
     > [!NOTE]
-    >  Önceki yapılandırma örneği Basitleştirilmiş yapılandırma kullanıyor. Daha fazla bilgi için [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md).  
+    > Önceki yapılandırma örneği Basitleştirilmiş yapılandırma kullanıyor. Daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md).  
   
-     Önceki yapılandırma örneği ekler bir <xref:System.Activities.Tracking.EtwTrackingParticipant> ve belirten bir izleme profili adı. İzleme profilleri oluşturulan bir <`trackingProfile`> öğesinde bir <`tracking`> öğesi. İzleme profili çalışma zamanında bir iş akışı örneği durumu değiştiğinde yayılan iş akışı olayları abone olmak için izleme katılımcı izin izleme sorguları içerir. Aşağıdaki örnek, bir izleme profili oluşturma işlemi gösterilmektedir.  
+     Önceki yapılandırma örneği bir <xref:System.Activities.Tracking.EtwTrackingParticipant> ekler ve bir izleme profili adı belirtir. İzleme profilleri, bir <`trackingProfile``tracking`> öğesi içindeki bir < > öğesinde oluşturulur. İzleme profili, çalışma zamanında bir iş akışı örneği durumu değiştiğinde yayınlanan iş akışı olaylarına abone olmak için izleme katılımcısına izin veren izleme sorguları içerir. Aşağıdaki örnek, bir izleme profilinin nasıl oluşturulacağını gösterir.  
   
     ```xml  
     <system.serviceModel>  
@@ -50,23 +50,23 @@ Yapılandırma izleme için bu konu açıklar bir [!INCLUDE[netfx_current_long](
     </system.serviceModel>  
     ```  
   
-     İzleme profilleri hakkında daha fazla bilgi için bkz. [izleme profilleri](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     İzleme profilleri hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Genel olarak izleme hakkında daha fazla bilgi için bkz. [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+     Genel olarak izleme hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
-### <a name="configure-tracking-in-code"></a>Kodda izlemeyi yapılandırma  
+### <a name="configure-tracking-in-code"></a>Kodda Izlemeyi Yapılandır  
   
-1. Ekleme <xref:System.Activities.Tracking.EtwTrackingParticipant> kullanarak <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> kodda, aşağıdaki örnekte gösterildiği gibi davranış.  
+1. Aşağıdaki örnekte gösterildiği gibi <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> , koddaki davranışı kullanarakekleyin.<xref:System.Activities.Tracking.EtwTrackingParticipant>  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  
     ```  
   
-     Yukarıdaki kod örneğinde ekler bir <xref:System.Activities.Tracking.EtwTrackingParticipant> ve belirten bir izleme profili adı. İzleme profilleri oluşturulan bir <`trackingProfile`> öğesinde bir <`tracking`> önceki bölümde gösterildiği gibi bir öğe.  
+     Önceki kod örneği bir <xref:System.Activities.Tracking.EtwTrackingParticipant> ekler ve bir izleme profili adı belirtir. İzleme profilleri, önceki bölümde gösterildiği gibi`trackingProfile`bir <`tracking`> öğesi içindeki bir < > öğesinde oluşturulur.  
   
-     İzleme profilleri hakkında daha fazla bilgi için bkz. [izleme profilleri](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+     İzleme profilleri hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
   
-     Genel olarak izleme hakkında daha fazla bilgi için bkz. [takip ve izleme iş akışı](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Program aracılığıyla izleme yapılandırma örneği için bkz. [yapılandırma izleme için bir iş akışı](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+     Genel olarak izleme hakkında daha fazla bilgi için bkz. [Iş akışı izleme ve izleme](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Program aracılığıyla izlemeyi yapılandırmaya yönelik bir örnek için bkz. [bir Iş akışı Için Izlemeyi yapılandırma](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

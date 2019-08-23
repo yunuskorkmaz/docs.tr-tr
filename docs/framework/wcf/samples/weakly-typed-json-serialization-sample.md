@@ -2,28 +2,28 @@
 title: Zayıf yazılmış JSON Seri Hale Getirme Örneği
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2a01ba9be5b7939729548863769f4b85f8123dd4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966694"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Zayıf yazılmış JSON Seri Hale Getirme Örneği
-Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı türe seri durumdan çıkarılırken bir kullanıcı tanımlı türe serileştirilirken verilen kullanıcı tanımlı tür hem hizmet hem de istemcinin kullanılabilir olması gerekir. Genellikle bunu gerçekleştirmek için <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği, bu kullanıcı tarafından tanımlanan türlerine uygulandığında ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik üyeleri için uygulanır. Bu mekanizma da JavaScript nesne gösterimi (JSON) nesneler ile çalışma konusunda açıklandığı gibi uygulanır [nasıl yapılır: JSON verileri seri hale getrime ve](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
+Kullanıcı tanımlı bir türü belirli bir hat biçiminde serileştirilirken veya bir tel biçiminin Kullanıcı tanımlı bir türe geri serisi kaldırılırken, belirtilen kullanıcı tanımlı tür hem hizmette hem de istemcide kullanılabilir olmalıdır. Genellikle bunu <xref:System.Runtime.Serialization.DataContractAttribute> gerçekleştirmek için özniteliği bu kullanıcı tanımlı türlere uygulanır <xref:System.Runtime.Serialization.DataMemberAttribute> ve özniteliği üyelerine uygulanır. Bu mekanizma Ayrıca, konusunda açıklandığı [gibi JavaScript nesne gösterimi (JSON) nesneleriyle birlikte çalışırken da geçerlidir: JSON verilerini](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)seri hale getirme ve serisini kaldırma.  
   
- Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmet veya istemcinin hizmet veya geliştiricisinin denetimi dışında olan istemci tarafından oluşturulan JSON nesneleri erişmeniz gerekir. Daha fazla Web Hizmetleri JSON API'leri genel kullanıma gibi hangi rastgele JSON nesneleri seri durumdan çıkarılacak yerel kullanıcı tanımlı türler oluşturmak WCF Geliştirici kullanışsız hale gelebilir. Bu örnek, WCF geliştiricileri, kullanıcı tanımlı türler oluşturmadan seri durumdan çıkarılmış, rastgele JSON nesneleriyle birlikte çalışmasını sağlayan bir mekanizma sağlar. Bu olarak bilinir *zayıf yazılmış serileştirme* JSON nesneleri, içine bir JSON nesnesi seri durumdan çıkarır türü olmadığı için derleme zamanında bilinen.  
+ Bazı senaryolarda, bir Windows Communication Foundation (WCF) hizmeti veya istemcisinin, geliştirici denetimi dışında bir hizmet veya istemci tarafından oluşturulan JSON nesnelerine erişmesi gerekir. Daha fazla Web hizmeti JSON API 'Leri kullanıma sunduğundan, WCF geliştiricisinin rastgele JSON nesnelerinin serisini kaldırmak için yerel kullanıcı tanımlı türler oluşturmasına pratik hale gelebilir. Bu örnek, WCF geliştiricilerinin Kullanıcı tanımlı türler oluşturmadan, serisi olmayan, rastgele JSON nesneleriyle çalışmasını sağlayan bir mekanizma sağlar. JSON nesnelerinin, derleme zamanında bilinmediği tür olmadığı için, bu, JSON nesnelerinin *zayıf olarak yazılmış seri hale getirme* olarak bilinir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örneğin, genel bir Web hizmeti API'si açıklayan bir kullanıcı hakkında bazı bilgiler hizmetinin aşağıdaki JSON nesnesi döndürür.  
+ Örneğin, bir genel Web hizmeti API 'SI, bir hizmetin kullanıcısı hakkında bazı bilgileri açıklayan aşağıdaki JSON nesnesini döndürür.  
   
 ```json  
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- Bu nesnenin serisini kaldırmak için bir WCF istemcisi aşağıdaki kullanıcı tanımlı türler uygulamalıdır.  
+ Bu nesnenin serisini kaldırmak için, bir WCF istemcisinin aşağıdaki Kullanıcı tanımlı türleri uygulaması gerekir.  
   
 ```  
 [DataContract]  
@@ -56,9 +56,9 @@ Verilen kablo biçimini veya kablo biçimini geri bir kullanıcı tanımlı tür
  }  
 ```  
   
- Bu, özellikle istemcinin JSON nesnesinin birden fazla türünü işleyecek şekilde olduğunda hantal olabilir.  
+ Özellikle istemcinin birden fazla JSON nesne türünü işlemesi gerekiyorsa, bu çok sayıda olabilir.  
   
- `JsonObject` Bu örnek tarafından sağlanan türü seri durumdan çıkarılmış JSON nesnesi zayıf yazılmış bir gösterimini sunar. `JsonObject` JSON nesneleri ve .NET Framework sözlüklerinde doğal eşlemesini ve JSON dizileri ve .NET Framework diziler arasındaki eşlemeyi kullanır. Aşağıdaki kodda gösterildiği `JsonObject` türü.  
+ Bu `JsonObject` örnek tarafından belirtilen tür, serisi kaldırılan JSON nesnesinin zayıf yazılmış bir gösterimini tanıtır. `JsonObject`JSON nesneleri ile .NET Framework sözlükleri arasındaki doğal eşlemeyi ve JSON dizileri ile .NET Framework dizileri arasındaki eşlemeyi kullanır. Aşağıdaki kod, `JsonObject` türünü gösterir.  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -78,12 +78,12 @@ string[] favoriteBands = {
                                     };  
 ```  
   
- "JSON nesneler ve Diziler, türü derleme zamanında bildirin gerek kalmadan göz atabileceğiniz," unutmayın. Üst düzey gereksinimini açıklaması için `["root"]` nesne, konusuna [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ Derleme zamanında türlerini bildirmek zorunda kalmadan, JSON nesnelerine ve dizilerine "göz atabileceğinizi" unutmayın. En üst düzey `["root"]` nesnenin gereksiniminin açıklaması için, bkz. [JSON ve XML arasındaki konuya eşleme](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 > [!NOTE]
->  `JsonObject` Sınıfı, yalnızca bir örnek olarak sağlanır. Kapsamlı test ve üretim ortamlarında kullanılmamalıdır. Zayıf yazılmış JSON seri hale getirme belirgin bir olduğu çıkarımında tür güvenliği eksikliği ile çalışırken `JsonObject`.  
+> `JsonObject` Sınıfı yalnızca bir örnek olarak sağlanır. Kapsamlı olarak test edilmemiştir ve üretim ortamlarında kullanılmamalıdır. Zayıf yazılmış JSON serileştirmenin belirgin bir şekilde çalışması, ile `JsonObject`çalışırken tür güvenliği olmamasıdır.  
   
- Kullanılacak `JsonObject` türü, istemci işlem anlaşması kullanmalıdır <xref:System.ServiceModel.Channels.Message> dönüş türü olarak.  
+ `JsonObject` Türünü kullanmak için, istemci işlem sözleşmesinin dönüş türü olarak kullanması <xref:System.ServiceModel.Channels.Message> gerekir.  
   
 ```  
 [ServiceContract]  
@@ -98,7 +98,7 @@ string[] favoriteBands = {
     }  
 ```  
   
- `JsonObject` Ardından aşağıdaki kodda gösterildiği gibi oluşturulur.  
+ `JsonObject` Daha sonra aşağıdaki kodda gösterildiği gibi oluşturulur.  
   
 ```  
 // Code to instantiate IClientSideProfileService channel omitted…  
@@ -110,9 +110,9 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` Oluşturucusu alır bir <xref:System.Xml.XmlDictionaryReader>, aracılığıyla edinilen <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> yöntemi. Okuyucu, istemci tarafından alınan JSON ileti bir XML temsilini içerir. Daha fazla bilgi için Ek Yardım konusuna [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
+ Oluşturucu, yöntemi aracılığıyla elde edilen bir <xref:System.Xml.XmlDictionaryReader>alır. `JsonObject` <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> Okuyucu, istemci tarafından alınan JSON iletisinin bir XML gösterimini içerir. Daha fazla bilgi için bkz. [JSON ve XML arasındaki konuya eşleme](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
- Program şu çıktıyı üretir:  
+ Program aşağıdaki çıktıyı üretir:  
   
 ```  
 Service listening at http://localhost:8000/.  
@@ -123,19 +123,19 @@ My lucky numbers are 5, 17, and 21.
 My favorite bands are Band ABC and Band XYZ.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. ' % S'çözüm WeaklyTypedJson.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümünde açıklandığı gibi WeaklyTypedJson. sln çözümünü oluşturun.  
   
 3. Çözümü çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

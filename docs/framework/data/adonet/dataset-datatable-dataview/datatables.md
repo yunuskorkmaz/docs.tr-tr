@@ -2,59 +2,59 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 369855d1aff854b60c251010ec42557b70c093c0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880013"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952659"
 ---
 # <a name="datatables"></a>DataTables
-A <xref:System.Data.DataSet> tablolarını, ilişkileri ve kısıtlamalar koleksiyonu oluşur. ADO.NET, <xref:System.Data.DataTable> nesneler tablolarında temsil etmek için kullanılan bir **veri kümesi**. Bir **DataTable** bellek içi ilişkisel verileri; bir tablosunu temsil eden yerel bir veridir. Burada yer alıyor, ancak Microsoft SQL Server'ı kullanarak gibi bir veri kaynağından doldurulabilir NET tabanlı uygulama bir **DataAdapter** daha fazla bilgi için [dataadapter'dan bir DataSet doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
+Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan oluşur. ADO.net ' de <xref:System.Data.DataTable> nesneler, bir **veri kümesindeki**tabloları temsil etmek için kullanılır. **DataTable** , bellek içi ilişkisel verilerin bir tablosunu temsil eder; verileri yereldir. İçinde bulunduğu, ancak **DataAdapter** kullanarak Microsoft SQL Server bir veri kaynağından doldurulabilen, daha fazla bilgi için bkz. veri [kümesini DataAdapter 'tan doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
   
- **DataTable** sınıf üyesi olduğu **System.Data** ad alanı .NET Framework sınıf kitaplığı içinde. Oluşturma ve kullanma bir **DataTable** bağımsız olarak veya bir üyesi olarak bir **veri kümesi**, ve **DataTable** nesneleri de kullanılabilir diğer .NET Framework nesneleri ile birlikte dahil olmak üzere <xref:System.Data.DataView>. Tablo koleksiyonu erişim bir **veri kümesi** aracılığıyla **tabloları** özelliği **veri kümesi** nesne.  
+ **DataTable** sınıfı, .NET Framework sınıf kitaplığı içindeki **System. Data** ad alanının bir üyesidir. Bir **DataTable** 'ı bağımsız olarak veya bir **veri kümesinin**üyesi olarak oluşturabilir ve kullanabilirsiniz ve **datatable** nesneleri de dahil diğer <xref:System.Data.DataView>.NET Framework nesneleriyle birlikte kullanılabilir. DataSet nesnesinin **Tables** özelliği aracılığıyla bir **veri kümesindeki** tablo koleksiyonuna erişirsiniz.  
   
- Şema veya bir tablonun yapısını, sütunları ve kısıtlamaları tarafından temsil edilir. Şemasını tanımlayan bir **DataTable** kullanarak <xref:System.Data.DataColumn> nesneleri olarak <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütunları bir veri kaynağındaki sütun eşleme, ifadeleri hesaplanan değerleri içeren, otomatik olarak değerlerini artırın veya birincil anahtar değerlerini içerir.  
+ Bir tablonun şeması veya yapısı, sütunlar ve kısıtlamalar ile temsil edilir. <xref:System.Data.DataColumn> Nesneleri<xref:System.Data.UniqueConstraint> ve nesneleri kullanarak bir DataTable şemasını tanımlarsınız. <xref:System.Data.ForeignKeyConstraint> Bir tablodaki sütunlar bir veri kaynağındaki sütunlarla eşlenir, deyimlerden hesaplanan değerler içerebilir, değerlerini otomatik olarak artırır veya birincil anahtar değerleri içerebilir.  
   
- Bir şema, ek bir **DataTable** de içeren ve verileri sıralamak için satır olması gerekir. <xref:System.Data.DataRow> Sınıfı, bir tabloda yer alan gerçek verileri temsil eder. Kullandığınız **DataRow** almak için yöntemler ve özellikleri değerlendirmek ve bir tablodaki verileri işlemek ve. Erişim ve bir satırdaki verileri değiştirmek **DataRow** nesne hem geçerli ve orijinal durumuna tutar.  
+ Bir şemanın yanı sıra, bir **DataTable** 'ın de verileri içermesi ve sıralamak için satırları olması gerekir. <xref:System.Data.DataRow> Sınıfı, bir tabloda bulunan gerçek verileri temsil eder. Bir tablodaki verileri almak, değerlendirmek ve işlemek için **DataRow** ve özelliklerini ve yöntemlerini kullanırsınız. Bir satır içindeki verileri erişirken ve değiştirirken, **DataRow** nesnesi hem geçerli hem de orijinal durumunu korur.  
   
- Üst-alt kullanarak tablolar arasında ilişkiler oluşturabilirsiniz veya tablolardaki sütunlara ilgili daha fazla. Arasında bir ilişki oluşturmamız **DataTable** kullanarak nesneleri bir <xref:System.Data.DataRelation>. **DataRelation** nesneleri belirli bir satır ilişkili alt veya üst satırları döndürmek için kullanılabilecek. Daha fazla bilgi için [DataRelations ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ Tablolarda bir veya daha fazla ilişkili sütun kullanarak tablolar arasında üst-alt ilişkileri oluşturabilirsiniz. Kullanarak<xref:System.Data.DataRelation> **DataTable** nesneleri arasında bir ilişki oluşturursunuz. Daha sonra, belirli bir satırın ilişkili alt veya üst satırlarını döndürmek için **DataRelation** nesneleri kullanılabilir. Daha fazla bilgi için bkz. [DataRelation 'ı ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataTable Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
- Nasıl oluşturulacağını açıklayan bir **DataTable** ve eklemeniz bir **veri kümesi**.  
+ **DataTable** oluşturmayı ve bir **veri kümesine**eklemeyi açıklar.  
   
  [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
- Oluşturma ve kullanma hakkında bilgi sağlar **DataColumn** nesneleri ve kısıtlamalar.  
+ **DataColumn** nesneleri ve kısıtlamalarını oluşturma ve kullanma hakkında bilgi sağlar.  
   
  [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- Eklemek, değiştirmek ve tablo verilerini silme açıklanmaktadır. Nasıl kullanılacağını açıklar **DataTable** değişiklikleri tablosundaki verileri incelemek için olayları.  
+ Bir tablodaki verilerin nasıl ekleneceğini, değiştirileceğini ve silineceğini açıklar. Tablodaki verilerde yapılan değişiklikleri incelemek için **DataTable** olaylarının nasıl kullanılacağını açıklar.  
   
  [DataTable Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- İle kullanmak için kullanılabilir olaylar hakkında bilgi sağlayan bir **DataTable**, sütun değerler değiştirildiğinde satır eklendiğinde veya silindi ve ne zaman olayları dahil.  
+ Sütun değerleri değiştirildiğinde ve satırlar eklendiğinde veya silindiğinde olaylar da dahil olmak üzere, bir **DataTable**ile kullanılabilecek olaylar hakkında bilgi sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- ADO.NET açıklar mimarisi ve bileşenleri ve mevcut veri kaynaklarına erişim ve uygulama verilerini yönetmek için bunları kullanmayı öğrenin.  
+ ADO.NET mimarisini ve bileşenlerini ve bunların mevcut veri kaynaklarına erişmek ve uygulama verilerini yönetmek için nasıl kullanılacağını açıklar.  
   
  [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- ADO.NET hakkında bilgi sağlar **veri kümesi** tablolar arasında ilişki oluşturma da dahil olmak üzere.  
+ Tablolar arasında ilişki oluşturma dahil olmak üzere ADO.NET **veri kümesi** hakkında bilgiler sağlar.  
   
  <xref:System.Data.Constraint>  
- Hakkında başvuru bilgileri sağlar **kısıtlaması** nesne.  
+ **Kısıtlama** nesnesi hakkında başvuru bilgileri sağlar.  
   
  <xref:System.Data.DataColumn>  
- Hakkında başvuru bilgileri sağlar **DataColumn** nesne.  
+ **DataColumn** nesnesi hakkında başvuru bilgileri sağlar.  
   
  <xref:System.Data.DataSet>  
- Hakkında başvuru bilgileri sağlar **veri kümesi** nesne.  
+ **DataSet** nesnesi hakkında başvuru bilgileri sağlar.  
   
  <xref:System.Data.DataTable>  
- Hakkında başvuru bilgileri sağlar **DataTable** nesne.  
+ **DataTable** nesnesi hakkında başvuru bilgileri sağlar.  
   
- [Sınıf Kitaplığına Genel Bakış](../../../../../docs/standard/class-library-overview.md)  
- .NET Framework sınıf kitaplığına genel bakış sağlar dahil olmak üzere **sistem** ad alanı, ikinci düzey ad alanı yanı sıra **System.Data**.  
+ [Sınıf Kitaplığına Genel Bakış](../../../../standard/class-library-overview.md)  
+ **Sistem** ad alanı ve **System. Data**dahil olmak üzere, .NET Framework sınıf kitaplığına genel bir bakış sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

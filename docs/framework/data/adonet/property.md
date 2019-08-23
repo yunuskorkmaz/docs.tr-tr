@@ -2,42 +2,42 @@
 title: özellik
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
-ms.openlocfilehash: 97bb41305bd9b736fd67b51d77ee15ad9efa3f29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 59b4ccf18b0e1f9054fd2a253fcd39072ed10e98
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946289"
 ---
 # <a name="property"></a>özellik
-*Özellikleri* temel yapı taşlarıdır [varlık türleri](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık türler](../../../../docs/framework/data/adonet/complex-type.md). Bir varlık türü örneği veya karmaşık tür örneği içeren veri özelliklerini ve şekli özelliklerini tanımlayın. Kavramsal modelde özellikleri, bir sınıf üzerinde tanımlanan özelliklere benzer. Bir sınıfındaki özellikleri sınıfı şeklini tanımlamak ve nesneler hakkında bilgi taşımak aynı şekilde, kavramsal model özelliklerinde bir varlık türü şeklini tanımlamak ve varlık türü örnekleri hakkında bilgi taşımak.  
+*Özellikler* [varlık türlerinin](../../../../docs/framework/data/adonet/entity-type.md) ve [karmaşık türlerin](../../../../docs/framework/data/adonet/complex-type.md)temel yapı taşlarıdır. Özellikler bir varlık türü örneği veya karmaşık tür örneği içereceği verilerin şeklini ve özelliklerini tanımlar. Kavramsal modeldeki özellikler, bir sınıfta tanımlanan özelliklerle benzerdir. Bir sınıftaki özellikler, sınıfın şeklini tanımlar ve nesneler hakkında bilgi taşıyan bir kavramsal modeldeki Özellikler bir varlık türünün şeklini tanımlar ve varlık türü örnekleri hakkında bilgi taşır.  
   
 > [!NOTE]
->  Bu konuda açıklandığı gibi özellikleri, gezinti özellikleri farklıdır. Daha fazla bilgi için [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md).  
+> Bu konu başlığı altında açıklandığı gibi özellikler, gezinti özelliklerinden farklıdır. Daha fazla bilgi için bkz. [gezinme özellikleri](../../../../docs/framework/data/adonet/navigation-property.md).  
   
- Bir özellik tanımı, şu bilgileri içerir:  
+ Bir özellik tanımı aşağıdaki bilgileri içerir:  
   
-- Bir özellik adı. (Gerekli)  
+- Özellik adı. Istenir  
   
-- Özellik türü. (Gerekli)  
+- Bir özellik türü. Istenir  
   
-- Bir dizi [modelleri](../../../../docs/framework/data/adonet/facet.md). (İsteğe bağlı)  
+- Bir dizi [model](../../../../docs/framework/data/adonet/facet.md). (İsteğe bağlı)  
   
- Bir özellik, temel veri (örneğin, bir dize, tamsayı veya Boolean değeri) veya yapılandırılmış veriler (örneğin, bir karmaşık tür) içerebilir. Temel eleman türü özellikleri, skaler özellikler olarak da adlandırılır. Daha fazla bilgi için [varlık veri modeli: Temel veri türlerinin](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
+ Bir özellik, ilkel veriler (örneğin, bir dize, bir tamsayı veya Boole değeri) veya yapılandırılmış veriler (karmaşık bir tür gibi) içerebilir. İlkel türdeki özellikler de skaler özellikler olarak adlandırılır. Daha fazla bilgi için bkz [. varlık veri modeli: İlkel veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md).  
   
 > [!NOTE]
->  Karmaşık bir tür kendisini, karmaşık türler özelliklere sahip olabilir.  
+> Karmaşık bir tür, karmaşık türler olan özelliklere sahip olabilir.  
   
 ## <a name="example"></a>Örnek  
- Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`. Diyagramda her bir özellik için tür bilgilerini ilettiği değil ancak her varlık türü birden çok özellikleri vardır. Özellikler [varlık anahtarları](../../../../docs/framework/data/adonet/entity-key.md) (anahtar) ile belirtilir.  
+ Aşağıdaki diyagramda üç varlık türü olan kavramsal model gösterilmektedir: `Book`, `Publisher`, ve `Author`. Her varlık türünün bazı özellikleri vardır, ancak her bir özelliğin tür bilgisi diyagramda verilmez. [Varlık anahtarları](../../../../docs/framework/data/adonet/entity-key.md) olan Özellikler (anahtar) ile gösterilir.  
   
- ![Üç varlık türleri ile örnek modeli](./media/property/example-model-three-entity-types.gif)  
+ ![Üç varlık türüne sahip örnek model](./media/property/example-model-three-entity-types.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL tanımlar `Book` varlık (Yukarıdaki diyagramda gösterildiği gibi) yazın ve XML öznitelikleri kullanarak her bir özelliğin adını ve türünü belirtir. İsteğe bağlı bir modeli `Nullable`, ayrıca bir XML özniteliği kullanılarak tanımlanır.  
+ [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki csdl `Book` varlık türünü tanımlar (Yukarıdaki diyagramda gösterildiği gibi) ve XML özniteliklerini kullanarak her bir özelliğin türünü ve adını gösterir. İsteğe bağlı bir model `Nullable`, XML özniteliği kullanılarak da tanımlanır.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
- Aşağıdaki diyagramda gösterilen özelliklerden biri bir karmaşık tür özelliği olduğunu mümkündür. Örneğin, `Address` özelliği `Publisher` varlık türü olabilir birkaç skaler özelliklerini oluşan bir karmaşık tür özelliği gibi `StreetAddress`, `City`, `StateOrProvince`, `Country`, ve `PostalCode`. Karmaşık bir tür CSDL gösterimini şu şekilde olacaktır:  
+ Diyagramda gösterilen özelliklerden biri karmaşık tür özelliği olabilir. `Address` Örneğin, `StreetAddress` varlıktüründeki`StateOrProvince`özelliği ,`Country`,,, ve`PostalCode`gibi çeşitli skaler özelliklerden oluşan karmaşık bir tür özelliği olabilir. `City` `Publisher` Böyle bir karmaşık türün CSDL temsili aşağıdaki gibi olacaktır:  
   
  [!code-xml[EDM_Example_Model#ComplexTypeExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books2.edmx#complextypeexample)]  
   

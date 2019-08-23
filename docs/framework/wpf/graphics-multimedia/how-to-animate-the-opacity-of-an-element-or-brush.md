@@ -5,22 +5,22 @@ helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: f07138a0b68fff050133d477074571c60cd8651e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f18861eb18f81b631245d1d933b7acb1b3e0e42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950508"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Nasıl yapılır: Bir Öğe veya Fırça Opaklığına Animasyon Ekleme
-Görünümü içine ve dışına Soldurma çerçeve öğesi yapmak için animasyon uygulayabilirsiniz, <xref:System.Windows.UIElement.Opacity%2A> , özelliği veya animasyon <xref:System.Windows.Media.Brush.Opacity%2A> özelliği <xref:System.Windows.Media.Brush> (veya Fırçalar) onu boyamak için kullanılan. Kolaylaştırır öğenin opaklık animasyon ekleme ve alt görünüm içine ve dışına Soldurma ancak öğe boyamak için kullanılan fırçayı animasyon ekleme öğesi hangi kısmının belirmesi konusunda daha Seçici olmasını sağlar. Örneğin, bir düğmenin arka plan boyamak için kullanılan fırça opaklığına animasyon uygulayabilirsiniz. Bu, giriş ve çıkış metnini ila tamamen opak bırakarak sırasında görünümün soluklaştırılacak düğmenin arka plan neden olur.  
+Bir çerçeve öğesini soluklaştırmak ve görünümün dışında bırakmak için, <xref:System.Windows.UIElement.Opacity%2A> özelliğine animasyon ekleyebilir ya da boyamak için kullanılan <xref:System.Windows.Media.Brush> (ya da <xref:System.Windows.Media.Brush.Opacity%2A> fırçaların) özelliğine animasyon uygulayabilirsiniz. Öğenin Opaklığına Animasyon eklemek, ve alt öğelerini ekranda soluklaştırır ve görünümden çıkar, ancak öğeyi boyamak için kullanılan fırçayı hareketlendirmek, öğenin hangi bölümünün soldurmasına ilişkin daha seçmeli olmanızı sağlar. Örneğin, bir düğmenin arka planını boyamak için kullanılan bir fırçanın opaklığını canlandırabilirsiniz. Bu, düğmenin arka planının görünüm altına alınmasına ve dışına çıkmamasına neden olur, böylece metin tamamen opak olur.  
   
 > [!NOTE]
->  Animasyon ekleme <xref:System.Windows.Media.Brush.Opacity%2A> , bir <xref:System.Windows.Media.Brush> hareketlendirme üzerinde performans avantajı sağlar <xref:System.Windows.UIElement.Opacity%2A> bir öğenin özelliği.  
+> Bir öğesinin <xref:System.Windows.Media.Brush.Opacity%2A> canlandırmasına <xref:System.Windows.Media.Brush> , bir öğe <xref:System.Windows.UIElement.Opacity%2A> özelliğinin canlandırmasına ilişkin performans avantajları sağlar.  
   
- Böylece bunlar görünümü içine ve dışına Soldurma aşağıdaki örnekte, iki düğme oynatılır. İlk opaklığını <xref:System.Windows.Controls.Button> gelen animasyonlu `1.0` için `0.0` üzerinden bir <xref:System.Windows.Media.Animation.Timeline.Duration%2A> beş saniye. İkinci düğme ayrıca animasyon, ancak SolidColorBrush donukluğu boyamak için kullanılan kendi <xref:System.Windows.Controls.Control.Background%2A> opaklığını tümü yerine bir animasyon görünür. Örneği çalıştırdığınızda yalnızca ikinci düğmenin arka plan görünüm içine ve dışına soldurur sırada ilk düğmeyi tamamen görünümü içine ve dışına soldurur. Kendi metin ve kenarlık ila tamamen opak kalır.  
+ Aşağıdaki örnekte, iki düğme canlandırılır ve görünümün dışına çıkar. İlki <xref:System.Windows.Controls.Button> geçirgenliği, beş saniyelik bir `0.0` <xref:System.Windows.Media.Animation.Timeline.Duration%2A> ile arasında `1.0` canlandırılır. İkinci düğme de hareketlendirilir, ancak tüm düğmenin geçirgenliği yerine animasyon eklemek için <xref:System.Windows.Controls.Control.Background%2A> kullanılan SolidColorBrush geçirgenliği. Örnek çalıştırıldığında, ilk düğme tamamen görünümden kaybolur ve ekrandan çıkar, ancak yalnızca ikinci düğmenin arka planı görünümden kaybolur ve ekrandan çıkar. Metni ve kenarlığı tamamen donuk kalır.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[timingbehaviors_snip#10](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- Bu örnekte, kod çıkarıldı. Tam örnek opaklığına işlemini de gösterir. bir <xref:System.Windows.Media.Color> içinde bir <xref:System.Windows.Media.LinearGradientBrush>.  Tam bir örnek için bkz: [öğesi örneği Donukluğa animasyon ekleme](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).
+ Kod bu örnekte atlandı. Tam örnek ayrıca <xref:System.Windows.Media.Color> <xref:System.Windows.Media.LinearGradientBrush>içindeki içindeki opaklığın nasıl hareketlendirileceğini gösterir.  Tam örnek için, [bir öğe örneğinin Opaklığına Animasyon Ekleme](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation)bölümüne bakın.

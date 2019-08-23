@@ -2,21 +2,21 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 273bd0d5e68a661c639b82264b440b83d8127427
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783194"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933787"
 ---
-# <a name="policyimporter"></a>\<policyImporter >
-Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen bir ilke içeri Aktarıcı belirtir.  
+# <a name="policyimporter"></a>\<Policyımporter >
+Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetleyen bir ilke İçeri Aktarıcı belirtir.  
   
  \<system.ServiceModel>  
 \<İstemci >  
 \<meta veri >  
-\<policyImporters >  
-\<policyImporter >  
+\<PolicyImporters >  
+\<Policyımporter >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,10 +44,10 @@ Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen bir ilke içer
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen tüm ilke ımporters belirtir.|  
+|[\<PolicyImporters >](policyimporters.md)|Bağlamalarla ilgili özel ilke onaylarının içeri aktarılacağını denetleyen tüm ilke içe aktarımlarını belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İlke içeri Aktarıcı yanı sıra arama özellikleri bağlama hakkında özel ilke onaylamalarını onay gerektiren özellikleri uygulayan bir özel bağlama öğesi eklemek için kullanılır.  
+ İlke İçeri Aktarıcı, bağlama özellikleriyle ilgili özel ilke onaylamalarını aramak ve onaylama için gereken özellikleri uygulayan özel bir bağlama öğesi eklemek için kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -55,5 +55,5 @@ Bağlamalar hakkında özel ilke onaylamalarını içe denetleyen bir ilke içer
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - <xref:System.ServiceModel.Description.MetadataImporter>
-- [WCF İstemci Yapılandırması](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [İstemciler](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [WCF İstemci Yapılandırması](../../../wcf/feature-details/client-configuration.md)
+- [İstemciler](../../../wcf/feature-details/clients.md)

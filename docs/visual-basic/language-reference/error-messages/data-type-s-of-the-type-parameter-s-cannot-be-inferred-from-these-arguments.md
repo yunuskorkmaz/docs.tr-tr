@@ -10,22 +10,22 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 4167905ca6ddab66b2cbc6c8c40dc7c984e94b8b
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81535e3272eaed587288c26c4a4b9649467abed8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913188"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963558"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Bu bağımsız değişkenlerden tür parametrelerinin veri türleri çıkarılamıyor
-Yöntemindeki tür parametrelerinin veri türleri bu bağımsız değişkenlerden çıkarsanamıyor. Verileri belirleyerek türleri açıkça bu hatayı düzeltebilir.  
+Tür parametrelerinin veri türleri bu bağımsız değişkenlerden çıkarılamıyor. Veri türlerinin açıkça belirtilmesi bu hatayı düzeltebilir.  
   
- Aşırı yükleme çözümlemesi başarısız olduğunda bu hata oluşur. Belirli bir aşırı yükleme aday neden ortadan kaldırılmıştır bildiren bir alt ileti gerçekleşir. Hata iletisi, tür parametreleri için veri türlerini bulmak için derleyicinin tür çıkarımı kullanamazsınız açıklar.  
+ Aşırı yükleme çözümlemesi başarısız olduğunda bu hata oluşur. Belirli bir aşırı yükleme adayını neden ortadan kaldırmadığını belirten bir alt ileti olarak gerçekleşir. Hata mesajı, derleyicinin tür çıkarımı için veri türlerini bulmak için tür çıkarımı kullanamadığını açıklar.  
   
 > [!NOTE]
->  Bağımsız değişkenleri belirtme (örneğin, sorgu işleçleri için sorgu ifadelerinde) bir seçenek olmadığı durumlarda, ikinci cümlesi hata iletisi görüntülenir.  
+> Bağımsız değişkenlerin belirtilmesi bir seçenek değil (örneğin, sorgu ifadelerinde sorgu işleçleri için), ikinci tümce olmadan hata iletisi görüntülenir.  
   
- Aşağıdaki kod, hatayı gösterir.  
+ Aşağıdaki kod hatayı gösterir.  
   
 ```vb  
 Module Module1  
@@ -51,14 +51,14 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- **Hata Kimliği:** BC36647 ve BC36644  
+ **Hata KIMLIĞI:** BC36647 ve BC36644  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Tür parametresi veya tür çıkarımı üzerinde kalmak yerine parametreleri için bir veri türü belirtmek mümkün olabilir.  
+- Tür çıkarımı güvenmek yerine tür parametresi veya parametreleri için bir veri türü belirtebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gevşek Temsilci Dönüştürme](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
-- [Visual Basic'de genel yordamlar](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
-- [Visual Basic'de tür dönüştürmeleri](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic genel yordamlar](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Visual Basic dönüşümler yazın](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

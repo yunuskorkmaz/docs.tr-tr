@@ -2,38 +2,38 @@
 title: Windows Forms İstemcisinde Veri Bağlama
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: 6ad71555148ed4f907483b677097e1f673373d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a21721536542d2c338dfdad444e128087a18f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990645"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953568"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Windows Forms İstemcisinde Veri Bağlama
-Bu örnek, bir Windows Forms uygulamasında bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen veri bağlamak nasıl gösterir.  
+Bu örnek, bir Windows Forms uygulamasında bir Windows Communication Foundation (WCF) hizmeti tarafından döndürülen verilerin nasıl bağlanacağını gösterir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri bu makalenin sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri Bu makalenin sonunda bulunur.  
   
- Bu örnek, bir istek-yanıt iletişim deseni tanımlayan bir sözleşme uygulayan bir hizmette gösterir. Örnek, bir istemcinin Windows Forms uygulaması (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir WCF Hizmeti oluşur.  
+ Bu örnek, istek-yanıt iletişim modelini tanımlayan bir sözleşmeyi uygulayan bir hizmeti gösterir. Örnek, bir istemci Windows Forms uygulamasından (. exe) ve Internet Information Services (IIS) tarafından barındırılan bir WCF hizmetinden oluşur.  
   
- Anlaşma tarafından tanımlanan `IWeatherService` adlı bir işlem sunan arabirimi `GetWeatherData`. Bu işlem, bir dizi şehirlerin kabul eder ve bir dizi döndürür `WeatherData` bir şehir için tahmin edilen yüksek ve düşük sıcaklık temsil eden nesneleri.  
+ Sözleşme, adlı `GetWeatherData`bir işlemi kullanıma `IWeatherService` sunan arabirim tarafından tanımlanır. Bu işlem bir şehir dizisini kabul eder ve bir şehirde yüksek ve `WeatherData` düşük tahmini sıcaklığın temsil ettiği nesne dizisini döndürür.  
   
- Windows Forms uygulamasında istemcisinde veri bağlama gerçekleşir. A `DataGridView` veri grafik gösterimi olan Windows Form Tasarımcısı'nda tanımlanır. Adlı bir aracı `BindingSource` da oluşturulur. Veri kaynağını `BindingSource` hizmet tarafından döndürülen veri dizisi ayarlanır. Amacı `BindingSource` katmanındaki veriler ve veri görünümü arasında bir yöneltme sağlamaktır. Gezinme, sıralama, filtreleme ve güncelleştirme gibi veri tüm etkileşim çağrılarıyla gerçekleştirilir `BindingSource` bileşeni. Veri bağlama gerçekleştirmek için `DataGridView`, `datasource` , `DataGridView` sonra ayarlanır `BindingSource` nesne. Tüm WCF hizmetten döndürülen veriler görüntülenir grafik kullanıcıya.  Kullanıcının düğmesini her tıklayışında, döndürülen veriler verilere bağlı otomatik olarak güncelleştirilir `DataGridView`.  
+ Veri bağlama Windows Forms uygulamasında istemcisinde oluşur. `DataGridView` , Verilerin grafik bir gösterimi olan Windows Forms tasarımcısında tanımlanır. Adlı `BindingSource` bir aracı da oluşturulur. Veri kaynağı `BindingSource` , hizmet tarafından döndürülen veri dizisine ayarlanır. Amacı `BindingSource` , veri ve veri görünümü arasında bir yöneltme katmanı sağlamaktır. Verilerle gezinme, sıralama, filtreleme ve güncelleştirme gibi tüm etkileşim, `BindingSource` bileşen çağrıları ile gerçekleştirilir. ' A veri `BindingSource` bağlamayı gerçekleştirmekiçin`DataGridView` , öğesinin'ınesnesineayarlanır.`datasource` `DataGridView` WCF hizmetinden döndürülen tüm veriler, Kullanıcı tarafından grafik olarak görüntülenir.  Kullanıcı düğmeye her tıkladığında döndürülen veriler otomatik olarak veri bağlantılı `DataGridView`olarak güncelleştirilir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  

@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: cb41cfc8dbab5dc8285ee756de27a4ba83f6309a
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: MT
+ms.openlocfilehash: 345b5028ccc5c24bd60cf7ecbd2610b27f44b8b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487723"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968674"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
-Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlaması ve kullanılan aktarım bağlıdır. Örneğin, kullanırken <xref:System.ServiceModel.WSHttpBinding> sınıfı taşıma HTTP ve taşıma güvenliğini sağlamak için birincil mekanizma Güvenli Yuva Katmanı (SSL) yaygın olarak HTTPS adlı HTTP üzerinden. Bu konu, WCF sistem tarafından sağlanan bağlamalar kullanılan ana Aktarım güvenlik mekanizmalarını açıklar.  
+Windows Communication Foundation (WCF) içindeki taşıma güvenliği mekanizmaları, kullanılan bağlama ve aktarıma bağlıdır. Örneğin, <xref:System.ServiceModel.WSHttpBinding> sınıfı kullanılırken aktarım http olur ve aktarımı güvenli hale getirmek için birincil mekanizma http üzerinden genellikle https olarak adlandırılır Güvenli Yuva Katmanı (SSL). Bu konuda, WCF sistem tarafından belirtilen bağlamalarda kullanılan önemli aktarım güvenliği mekanizmaları ele alınmaktadır.  
   
 > [!NOTE]
->  SSL güvenlik .NET Framework 3.5 ve üzeri kullanıldığında bir WCF istemcisi hem Ara sertifikaları, sertifika deposunda kullanır ve hizmetin üzerinde sertifika zinciri doğrulamayı gerçekleştirmek için SSL anlaşması sırasında Ara sertifikaları alındı Sertifika. .NET framework 3.0, yalnızca yerel sertifika deposunda yüklü Ara sertifikaları kullanır.  
+> SSL güvenliği .NET Framework 3,5 ile kullanıldığında ve daha sonra bir WCF istemcisi, sertifika deposundaki ara sertifikaları ve hizmetin sertifika zinciri doğrulamasını gerçekleştirmek üzere SSL anlaşması sırasında alınan ara sertifikaları kullanır. Sertifika. .NET Framework 3,0 yalnızca yerel sertifika deposunda yüklü olan ara sertifikaları kullanır.  
   
 > [!WARNING]
->  Aktarım güvenliği kullanıldığında <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliği yazılabilir. Bunun gerçekleşmesini kümesinden önlemek için <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> için <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Hizmet açıklaması üzerinde ayarlanabilir bir hizmet davranıştır.  
+>  Taşıma güvenliği kullanıldığında, <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> özelliğin üzerine yazılabilir. Bunun oluşmasını engellemek için, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> öğesini olarak <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>ayarlayın. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>, hizmet açıklamasında ayarlanabilir bir hizmet davranışıdır.  
   
-## <a name="basichttpbinding"></a>BasicHttpBinding  
- Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> sınıfı, güvenlik sağlamaz. Bu bağlama, güvenlik uygulamayan Web hizmeti sağlayıcıları ile birlikte çalışabilirlik için tasarlanmıştır. Ancak, ayarlayarak güvenliği geçiş yapabilirsiniz <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> dışında bir değer özelliği <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Aktarım güvenliği etkinleştirmek için özelliği ayarlamak <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
+## <a name="basichttpbinding"></a>Kullanmayı  
+ Varsayılan olarak, <xref:System.ServiceModel.BasicHttpBinding> sınıfı güvenlik sağlamaz. Bu bağlama, güvenlik uygulamayan Web hizmeti sağlayıcılarıyla birlikte çalışabilirlik için tasarlanmıştır. Ancak, <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> özelliği dışında <xref:System.ServiceModel.BasicHttpSecurityMode.None>herhangi bir değere ayarlayarak güvenlik üzerinde geçiş yapabilirsiniz. Aktarım güvenliğini etkinleştirmek için özelliğini olarak <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>ayarlayın.  
   
 ### <a name="interoperation-with-iis"></a>IIS ile birlikte çalışma  
- <xref:System.ServiceModel.BasicHttpBinding> Sınıfı öncelikle var olan Web Hizmetleri ile çalışmak için kullanılır ve bu hizmetlerin çoğu Internet Information Services (IIS) tarafından barındırılır. Sonuç olarak, bu bağlama için Aktarım güvenliği, IIS siteleri ile sorunsuz bir birlikte çalışma için tasarlanmıştır. Bu güvenlik modunu ayarlayarak yapılır <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> ve ardından istemci ayar kimlik bilgisi türü. Kimlik bilgisi türü değerleri IIS dizin güvenlik mekanizmalarına karşılık gelir. Aşağıdaki kod ayarlanan modunu gösterir ve Windows için kimlik bilgisi türü ayarlayın. İstemci ve sunucu aynı Windows etki alanında olduğunda, bu yapılandırmayı kullanabilirsiniz.  
+ <xref:System.ServiceModel.BasicHttpBinding> Sınıf öncelikle mevcut Web hizmetleriyle birlikte çalışmak için kullanılır ve bu hizmetlerin birçoğu Internet Information Services (IIS) tarafından barındırılır. Sonuç olarak, bu bağlamanın aktarım güvenliği IIS siteleri ile sorunsuz birlikte çalışma için tasarlanmıştır. Bu, güvenlik modu olarak <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> ayarlanarak ve ardından istemci kimlik bilgisi türü ayarlanarak yapılır. Kimlik bilgisi türü değerleri IIS dizin güvenlik mekanizmalarına karşılık gelir. Aşağıdaki kod, ayarlanan modu ve kimlik bilgisi türü olarak Windows 'a ayarlı olduğunu gösterir. Hem istemci hem de sunucu aynı Windows etki alanında olduğunda bu yapılandırmayı kullanabilirsiniz.  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)] 
  [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
   
- Veya, yapılandırma:  
+ Veya, yapılandırmada:  
   
 ```xml  
 <bindings>  
@@ -44,56 +44,56 @@ Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlam
 </bindings>  
 ```  
   
- Aşağıdaki bölümlerde, diğer istemci kimlik bilgisi türleri açıklanmaktadır.  
+ Aşağıdaki bölümlerde diğer istemci kimlik bilgileri türleri ele alınmaktadır.  
   
 #### <a name="basic"></a>Temel  
- IIS temel kimlik doğrulaması yöntemine karşılık gelir. Bu modu kullanırken, IIS sunucusunun Windows kullanıcı hesapları ve uygun NTFS dosya sistemi izinleri ile yapılandırılması gerekir. IIS 6.0 hakkında daha fazla bilgi için bkz: [temel kimlik doğrulamasını etkinleştirme ve bölge adını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88592). IIS 7.0 hakkında daha fazla bilgi için bkz: [temel kimlik doğrulamasını yapılandırma (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
+ Bu, IIS 'deki temel kimlik doğrulama yöntemine karşılık gelir. Bu modu kullanırken, IIS sunucusunun Windows Kullanıcı hesaplarıyla ve uygun NTFS dosya sistemi izinleriyle yapılandırılması gerekir. IIS 6,0 hakkında daha fazla bilgi için bkz. [temel kimlik doğrulamasını etkinleştirme ve bölge adını yapılandırma](https://go.microsoft.com/fwlink/?LinkId=88592). IIS 7,0 hakkında daha fazla bilgi için bkz. [temel kimlik doğrulamasını yapılandırma (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10)).  
   
 #### <a name="certificate"></a>Sertifika  
- IIS gerektiren bir sertifika ile oturum açmak istemcileri seçeneği vardır. Özelliği, bir Windows hesabı için bir istemci sertifikası eşlemek IIS de sağlar. IIS 6.0 hakkında daha fazla bilgi için bkz: [istemci sertifikalarını etkinleştirme IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). IIS 7.0 hakkında daha fazla bilgi için bkz: [IIS 7'de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+ IIS 'de, istemcilerin bir sertifikayla oturum açmasını gerektirme seçeneği vardır. Özelliği, IIS 'nin bir istemci sertifikasını bir Windows hesabına eşlemesine de olanak sağlar. IIS 6,0 hakkında daha fazla bilgi için bkz. [ııs 6,0 ' de Istemci sertifikalarını etkinleştirme](https://go.microsoft.com/fwlink/?LinkId=88594). IIS 7,0 hakkında daha fazla bilgi için bkz. [IIS 7 ' de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
-#### <a name="digest"></a>Özet  
- Özet kimlik doğrulaması temel kimlik doğrulaması için benzer, ancak kimlik bilgileri gönderme düz metin olarak bir karma yerine avantajı sunar. IIS 6.0 hakkında daha fazla bilgi için bkz: [Özet kimlik doğrulaması IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). IIS 7.0 hakkında daha fazla bilgi için bkz: [yapılandırma Özet kimlik doğrulamasını (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
+#### <a name="digest"></a>Bilgisi  
+ Özet kimlik doğrulaması temel kimlik doğrulamasına benzerdir, ancak kimlik bilgilerini şifresiz metin yerine karma olarak göndermenin avantajlarından yararlanır. IIS 6,0 hakkında daha fazla bilgi için bkz. [ııs 6,0 ' de Özet kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkID=88443). IIS 7,0 hakkında daha fazla bilgi için bkz. [Özet kimlik doğrulamasını yapılandırma (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10)).  
   
 #### <a name="windows"></a>Windows  
- Bu IIS tümleşik Windows kimlik doğrulaması karşılık gelir. Bu değer ayarlandığında, sunucunun da kendi etki alanı denetleyicisi olarak Kerberos protokolünü kullanan bir Windows etki alanında mevcut bekleniyor. Sunucu, Kerberos tarafından desteklenen bir etki alanı üzerinde değil veya Kerberos sistem başarısız olursa, sonraki bölümde açıklanan NT LAN Manager (NTLM) değeri kullanabilirsiniz. IIS 6.0 hakkında daha fazla bilgi için bkz: [IIS 6. 0'tümleşik Windows kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=88597). IIS 7.0 hakkında daha fazla bilgi için bkz: [IIS 7'de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+ Bu, IIS 'de tümleşik Windows kimlik doğrulamasına karşılık gelir. Bu değere ayarlandığında, sunucunun etki alanı denetleyicisi olarak Kerberos protokolünü kullanan bir Windows etki alanı üzerinde de bulunması beklenir. Sunucu Kerberos ile desteklenen bir etki alanında değilse veya Kerberos sistemi başarısız olursa, sonraki bölümde açıklanan NT LAN Manager (NTLM) değerini kullanabilirsiniz. IIS 6,0 hakkında daha fazla bilgi için bkz. [ııs 6,0 ' de tümleşik Windows kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=88597). IIS 7,0 hakkında daha fazla bilgi için bkz. [IIS 7 ' de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
-#### <a name="ntlm"></a>NTLM  
- Bu, Kerberos protokolü başarısız olursa NTLM kimlik doğrulaması için kullanılacak sunucunun sağlar. IIS 6.0 ile IIS yapılandırma hakkında daha fazla bilgi için bkz. [zorlama NTLM kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=88598). IIS 7.0, Windows kimlik doğrulaması, NTLM kimlik doğrulaması içerir. Daha fazla bilgi için [IIS 7'de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
+#### <a name="ntlm"></a>NT  
+ Bu, Kerberos Protokolü başarısız olursa sunucunun kimlik doğrulaması için NTLM kullanmasını sağlar. IIS 6,0 ' de IIS 'yi yapılandırma hakkında daha fazla bilgi için bkz. [NTLM kimlik doğrulamasını zorlama](https://go.microsoft.com/fwlink/?LinkId=88598). IIS 7,0 için Windows kimlik doğrulaması, NTLM kimlik doğrulaması içerir. Daha fazla bilgi için bkz. [IIS 7 ' de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> Sınıfı WS - uygulama hizmetleri ile birlikte çalışabilirlik için tasarlanmıştır * belirtimleri. Bu bağlama için Aktarım güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL) olan. SSL kullanan bir WCF uygulama oluşturmak için uygulamayı barındırmak için IIS kullanın. Şirket içinde barındırılan bir uygulama oluşturuyorsanız, alternatif olarak, bir bilgisayardaki belirli bir bağlantı noktası için bir X.509 sertifikası bağlamak için HttpCfg.exe Aracı'nı kullanın. Uç nokta adresi olarak WCF uygulaması bir parçası olarak belirtilen bir bağlantı noktası numarası. Çalışma zamanında bir özel durum oluşturulur veya aktarım modunu kullanırken, uç nokta adresini HTTPS protokolünü içermelidir. Daha fazla bilgi için [HTTP aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding> Sınıfı, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL). SSL kullanan bir WCF uygulaması oluşturmak için, uygulamayı barındırmak üzere IIS kullanın. Alternatif olarak, kendi kendine barındırılan bir uygulama oluşturuyorsanız, bir X. 509.440 sertifikasını bir bilgisayardaki belirli bir bağlantı noktasına bağlamak için HttpCfg. exe aracını kullanın. Bağlantı noktası numarası, WCF uygulamasının bir parçası olarak bir uç nokta adresi olarak belirtilir. Aktarım modunu kullanırken, uç nokta adresi HTTPS protokolünü içermeli veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz. [http aktarım güvenliği](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
- İstemci kimlik doğrulaması için ayarlanmış <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.HttpTransportSecurity> sınıfı birine <xref:System.ServiceModel.HttpClientCredentialType> sabit listesi değerleri. Sabit listesi değerleri için istemci kimlik bilgisi türlerinin aynı <xref:System.ServiceModel.BasicHttpBinding> ve IIS hizmetleri ile barındırılması için tasarlanmıştır.  
+ İstemci kimlik doğrulaması için, <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> <xref:System.ServiceModel.HttpTransportSecurity> <xref:System.ServiceModel.HttpClientCredentialType> sınıfının özelliğini sabit listesi değerlerinden birine ayarlayın. Numaralandırma değerleri, için <xref:System.ServiceModel.BasicHttpBinding> istemci kimlik bilgisi türleriyle aynıdır ve IIS hizmetleriyle barındırılmak üzere tasarlanmıştır.  
   
- Aşağıdaki örnek, bir Windows istemci kimlik bilgisi türüyle kullanılan bağlama gösterir.  
+ Aşağıdaki örnekte, Windows 'un istemci kimlik bilgisi türüyle kullanılan bağlama gösterilmektedir.  
   
  [!code-csharp[c_ProgrammingSecurity#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#11)]
  [!code-vb[c_ProgrammingSecurity#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#11)]  
   
 ## <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
- Bu bağlama, yalnızca ileti düzeyi güvenlik, aktarım düzeyinde güvenlik sağlar.  
+ Bu bağlama, aktarım düzeyi güvenliği değil yalnızca ileti düzeyinde güvenlik sağlar.  
   
 ## <a name="nettcpbinding"></a>NetTcpBinding  
- <xref:System.ServiceModel.NetTcpBinding> Sınıfı, ileti aktarım için TCP kullanır. Aktarım modu için güvenlik, TCP üzerinden Aktarım Katmanı Güvenliği (TLS) uygulayarak sağlanır. TLS uygulaması, işletim sistemi tarafından sağlanır.  
+ <xref:System.ServiceModel.NetTcpBinding> Sınıfı ileti taşıması için TCP kullanır. Aktarım modunun güvenliği, TCP üzerinden Aktarım Katmanı Güvenliği (TLS) uygulayarak sağlanır. TLS uygulama, işletim sistemi tarafından sağlanır.  
   
- Ayarlayarak istemcinin kimlik bilgisi türü belirtebilirsiniz <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> özelliği <xref:System.ServiceModel.TcpTransportSecurity> sınıfı birine <xref:System.ServiceModel.TcpClientCredentialType> , aşağıdaki kodda gösterildiği gibi değerleri.  
+ Ayrıca, aşağıdaki kodda gösterildiği gibi, <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A> <xref:System.ServiceModel.TcpTransportSecurity> <xref:System.ServiceModel.TcpClientCredentialType> sınıfının özelliğini değerlerden birine ayarlayarak istemcinin kimlik bilgisi türünü belirtebilirsiniz.  
   
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
 #### <a name="client"></a>İstemci  
- İstemcide, bir sertifika kullanarak belirtmelisiniz <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> sınıfı.  
+ İstemcisinde, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> sınıfının yöntemini kullanarak bir sertifika belirtmeniz gerekir.  
   
 > [!NOTE]
->  Windows Güvenlik kullanıyorsanız, bir sertifika gerekli değildir.  
+> Windows güvenliği kullanıyorsanız, bir sertifika gerekli değildir.  
   
- Aşağıdaki kodu, benzersiz olarak tanımlayan sertifikanın parmak izini kullanır. Sertifikalar hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Aşağıdaki kod, sertifikanın kendisini benzersiz bir şekilde tanımlayan parmak izini kullanır. Sertifikalar hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- Alternatif olarak, istemci yapılandırması'nda sertifika belirtin kullanarak bir [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) davranışları bölümünde öğesi.  
+ Alternatif olarak, davranışlar bölümünde bir [ \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi kullanarak istemcinin yapılandırmasında sertifikayı belirtin.  
   
 ```xml  
 <behaviors>  
@@ -109,16 +109,16 @@ Aktarım güvenlik mekanizmaları Windows Communication Foundation (WCF) bağlam
 ```  
   
 ## <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- <xref:System.ServiceModel.NetNamedPipeBinding> Sınıf içi makine verimli iletişimi için tasarlanmıştır; diğer bir deyişle, işlemler için adlandırılmış kanal kanalları olsa da aynı bilgisayarda çalışan aynı ağda iki bilgisayar arasında oluşturulabilir. Bu bağlama yalnızca aktarım düzeyi güvenlik sağlar. Bu bağlamayı kullanan uygulamalar oluştururken, uç nokta adresleri uç nokta adresi protokol olarak "net.pipe" içermelidir.  
+ <xref:System.ServiceModel.NetNamedPipeBinding> Sınıfı, etkin makine içi iletişim için tasarlanmıştır; diğer bir deyişle, aynı bilgisayarda çalışan süreçler için, adlandırılmış kanal kanalları aynı ağ üzerinde iki bilgisayar arasında oluşturulabilse de. Bu bağlama yalnızca aktarım düzeyi güvenlik sağlar. Bu bağlamayı kullanarak uygulamalar oluştururken, uç nokta adresleri, uç nokta adresinin protokolü olarak "net. pipe" içermelidir.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Bu bağlama SSL Aktarım güvenliği kullanarak, HTTP, HTTPS verilen bir belirteç ile bilinen kullanır. (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Federasyon uygulamaları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Aktarım güvenliği kullanılırken bu bağlama, HTTPS olarak bilinen ve verilen belirteç (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>) Ile http üzerinden SSL kullanır. Federasyon uygulamaları hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- <xref:System.ServiceModel.NetPeerTcpBinding> Eşler arası ağ özelliğini kullanarak verimli iletişimi için tasarlanan bir güvenli aktarım sınıftır. Bağlama ve sınıf adına göre gösterildiği gibi TCP protokolüdür. Güvenlik modu için aktarım olarak ayarlandığında, bağlama TLS TCP uygular. Eşler arası özelliği hakkında daha fazla bilgi için bkz. [eşler arası ağ](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ <xref:System.ServiceModel.NetPeerTcpBinding> Sınıfı, eşler arası ağ özelliği kullanılarak verimli iletişim için tasarlanan güvenli bir aktarımdır. Sınıfın ve bağlamanın adı ile gösterildiği gibi, TCP de protokoldür. Güvenlik modu aktarım olarak ayarlandığında, bağlama TCP üzerinden TLS uygular. Eşler arası özelliği hakkında daha fazla bilgi için bkz. eşler [arası ağ oluşturma](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding ve NetMsmqBinding  
- Taşıma tam bir açıklaması için bkz: ileti sıraya alma (daha önce MSMQ olarak da bilinir) ile güvenlik [aktarım güvenliği kullanarak iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ Message Queuing (daha önce MSMQ olarak adlandırılır) ile taşıma güvenliği hakkında ayrıntılı bir tartışma için bkz. [Transport Security kullanarak Iletileri güvenli hale getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

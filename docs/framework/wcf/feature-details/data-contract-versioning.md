@@ -9,54 +9,54 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: b2bfe253011e24e6792fc60221d05fd60555e87c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 309cd891fd2d764314060e49a401bd1d8f7b8d32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627041"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963262"
 ---
 # <a name="data-contract-versioning"></a>Veri Sözleşmesi Sürümü Oluşturma
-Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri sözleşmeleri Hizmetleri kullanın. Bu konu açıklar nasıl sürüm veri anlaşmaları. Bu konuda, veri sözleşmesi sürümü oluşturma mekanizmaları açıklanmaktadır. Eksiksiz bir genel bakış ve öngörücü sürüm oluşturma yönergeleri için bkz: [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
+Uygulamalar geliştikçe, hizmetler tarafından kullanılan veri sözleşmelerini da değiştirmeniz gerekebilir. Bu konuda, veri sözleşmelerinin nasıl kullanılacağı açıklanmaktadır. Bu konuda, veri sözleşmesi sürüm oluşturma mekanizmaları açıklanmaktadır. Kapsamlı bir genel bakış ve güvenlik sürümü oluşturma kılavuzu için bkz [. en iyi uygulamalar: Veri sözleşmesi sürümü](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)oluşturma.  
   
-## <a name="breaking-vs-nonbreaking-changes"></a>VS kesiliyor. Bölünemez değişiklikleri  
- Bir veri sözleşmesi önemli değişiklikler veya bölünemez. Bir veri anlaşması bölünemez şekilde değiştirildiğinde, Sözleşme'nin eski sürümünü kullanan bir uygulamanın daha yeni sürümünü kullanarak bir uygulama ile iletişim kurabilir ve sözleşmenin daha yeni sürümünü kullanarak bir uygulama bir uygulamayla iletişim kurabilir eski sürümü kullanıyor. Öte yandan, bir değişiklik, bir veya iki yönlü iletişimi engeller.  
+## <a name="breaking-vs-nonbreaking-changes"></a>Kırılmaya karşı Bölünemez değişiklikler  
+ Bir veri sözleşmesindeki değişiklikler kırır veya bölünemez olabilir. Bir veri anlaşması bölünemez bir şekilde değiştirildiğinde, sözleşmenin eski sürümünü kullanan bir uygulama, yeni sürümü kullanarak bir uygulamayla iletişim kurabilir ve sözleşmenin daha yeni bir sürümünü kullanan bir uygulama bir uygulamayla iletişim kurabilir eski sürümü kullanma. Öte yandan, bir değişiklik bir veya her iki yönde iletişime engel olur.  
   
- Nasıl, gönderilen ve alınan etkilemeyen herhangi bir tür değişiklikler bölünemez. Bu tür değişiklikler yalnızca temel alınan türü veri anlaşması değiştirmeyin. Ardından ayarlarsanız, örneğin, bir alanın adı bölünemez şekilde değiştirebileceğiniz <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> eski sürüm adı. Aşağıdaki kod, bir veri anlaşması 1 sürümünü gösterir.  
+ Bir türe yapılan tüm değişiklikler, nasıl iletildiğini ve alındığını etkilemeyen bir tür için bölünmez. Bu gibi değişiklikler veri sözleşmesini değiştirmez, yalnızca temeldeki tür. Örneğin, <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A> <xref:System.Runtime.Serialization.DataMemberAttribute> öğesinin özelliğini daha eski sürüm adına ayarlarsanız, bir alanın adını bölünemez bir şekilde değiştirebilirsiniz. Aşağıdaki kod, bir veri sözleşmesinin 1. sürümünü gösterir.  
   
  [!code-csharp[C_DataContractVersioning#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#1)]
  [!code-vb[C_DataContractVersioning#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#1)]  
   
- Aşağıdaki kod, bölünemez değişiklik gösterir.  
+ Aşağıdaki kod, Bölünemez bir değişikliği gösterir.  
   
  [!code-csharp[C_DataContractVersioning#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#2)]
  [!code-vb[C_DataContractVersioning#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#2)]  
   
- Bazı değişiklikler iletilen verileri değiştirebilir ancak olabilir veya bozucu değildir. Aşağıdaki değişiklikleri her zaman ayırırsınız:  
+ Bazı değişiklikler iletilen verileri değiştirir, ancak bunları bozmayabilir veya olmayabilir. Aşağıdaki değişiklikler her zaman en kesiliyor:  
   
-- Değiştirme <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> veya <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> veri anlaşması değeri.  
+- Veri sözleşmesinin <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>veyadeğerinideğiştirme. <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
   
-- Kullanarak veri üyelerinin sırasını değiştirme <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute>.  
+- Öğesinin özelliğini<xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> kullanarak veri üyelerinin sırasını değiştirme. <xref:System.Runtime.Serialization.DataMemberAttribute>  
   
-- Bir veri üyesi yeniden adlandırma.  
+- Veri üyesini yeniden adlandırma.  
   
-- Veri anlaşması bir veri üyesinin değiştiriliyor. Örneğin, "Müşteri" bir türe sahip "Kişi" adlı bir veri sözleşmesi adlı bir veri sözleşmesi ile bir dizeyi bir tamsayıya veya bir tür veri üyesi türünün değiştirilmesi.  
+- Bir veri üyesinin veri sözleşmesini değiştirme. Örneğin, veri üyesinin türünü bir dizeden bir dizeye veya "Customer" adlı bir veri sözleşmesine sahip bir türden "Person" adlı bir veri sözleşmesine sahip bir türe değiştirme.  
   
- Aşağıdaki değişiklikleri de mümkündür.  
+ Aşağıdaki değişiklikler de mümkündür.  
   
-## <a name="adding-and-removing-data-members"></a>Ekleme ve kaldırma veri üyesi  
- (Yeni örnekler eski şemasına göre doğrulanıyor) katı şema geçerlilik gerektirmedikçe çoğu durumda, ekleme veya kaldırma veri üyesi bozucu bir değişiklik değil.  
+## <a name="adding-and-removing-data-members"></a>Veri üyeleri ekleme ve kaldırma  
+ Çoğu durumda, kesin şema geçerliliği gerekmedikçe bir veri üyesini eklemek veya kaldırmak, Son değişiklik değildir (eski şemaya göre yeni örnekler doğrulanıyor).  
   
- Fazladan bir alan türüyle eksik alan bir türle içine seri durumdan, ek bilgilerin göz ardı edilir. (Ayrıca olabilir depolanan gidiş dönüşü amacıyla; daha fazla bilgi için bkz: [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
+ Ek alan içeren bir tür, eksik alan içeren bir türe seri durumdan çıkarılacağından, ek bilgiler yok sayılır. (Ayrıca, gidiş dönüşü için de depolanabilir; daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)).  
   
- Eksik alan türüyle fazladan bir alan bir türle içine seri durumdan ek alan varsayılan değerinde bırakılır, genellikle sıfır veya `null`. (Varsayılan değer değişebilir; daha fazla bilgi için [sürüme dayanıklı serileştirme geri çağırmaları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
+ Eksik alan içeren bir tür, ek alan içeren bir türe seri durumdan çıkarılacağından, ek alan varsayılan değerinde (genellikle sıfır veya `null`) bırakılır. (Varsayılan değer değişebilir; daha fazla bilgi için bkz. [Sürüm dayanıklı serileştirme geri çağırmaları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).)  
   
- Gibi kullanabilirsiniz `CarV1` sınıfı bir istemcide ve `CarV2` sınıfı bir hizmet veya kullanabilir `CarV1` hizmet sınıfı ve `CarV2` istemci sınıfı.  
+ Örneğin, `CarV1` sınıfını bir istemcideki bir hizmette `CarV2` ve sınıfı üzerinde kullanabilir `CarV1` veya bir hizmette ve `CarV2` bir istemcide sınıfını kullanabilirsiniz.  
   
  [!code-csharp[C_DataContractVersioning#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractversioning/cs/source.cs#3)]
  [!code-vb[C_DataContractVersioning#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractversioning/vb/source.vb#3)]  
   
- Sürüm 2 uç nokta, başarılı bir şekilde sürüm 1 uç noktasına veri gönderebilir. Serileştirmek sürüm 2 `Car` aşağıdakine benzer XML veri anlaşması verir.  
+ Sürüm 2 uç noktası, sürüm 1 uç noktasına başarıyla veri gönderebilir. `Car` Veri sözleşmesinin sürüm 2 ' nin serileştirilmesi, XML 'e benzer şekilde XML verir.  
   
 ```xml  
 <Car>  
@@ -65,9 +65,9 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
 </Car>  
 ```  
   
- V1 seri durumundan çıkarma altyapısında eşleşen veri üyesi bulamazsa `HorsePower` alan ve bu veriyi atar.  
+ V1 'deki seri kaldırma altyapısı, `HorsePower` alan için eşleşen bir veri üyesi bulamaz ve bu verileri atar.  
   
- Ayrıca, sürüm 1 uç noktası, sürüm 2 uç noktasına veri gönderebilir. Serileştirmek sürümü 1 `Car` aşağıdakine benzer XML veri anlaşması verir.  
+ Ayrıca, sürüm 1 uç noktası sürüm 2 uç noktasına veri gönderebilir. `Car` Veri sözleşmesinin seri hale getirilmesi, XML 'e benzer bir XML verir.  
   
 ```xml  
 <Car>  
@@ -75,45 +75,45 @@ Uygulamaları değiştikçe, ayrıca değiştirmek zorunda kalabilirsiniz veri s
 </Car>  
 ```  
   
- Sürüm 2 seri durumdan çıkarıcı ne ayarlanacak bilmez `HorsePower` gelen XML dosyasında eşleşen veri yok olduğundan alan için. Bunun yerine, alanın varsayılan değeri 0 olarak ayarlanır.  
+ Sürüm 2 seri hale getirici, gelen XML 'de eşleşen veri bulunmadığından `HorsePower` alanın ne ayarlanacağını bilmez. Bunun yerine, alan varsayılan değeri olan 0 ' dır.  
   
 ## <a name="required-data-members"></a>Gerekli veri üyeleri  
- Bir veri üyesi ayarlayarak gerektiği olarak işaretlenmiş olabilir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> için `true`. Seri durumdan çıkarılırken veriler eksik gerekli olursa, veri üyesi varsayılan değerine ayarlamak yerine bir özel durum oluşturulur.  
+ Bir veri üyesi <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> <xref:System.Runtime.Serialization.DataMemberAttribute>,öğesinin özelliği olarak ayarlanarak gerekli olarak işaretlenebilir. `true` Seri durumdan çıkarma sırasında gerekli veriler eksikse, veri üyesini varsayılan değerine ayarlamak yerine bir özel durum oluşturulur.  
   
- Gerekli veri üyesi ekleme bölünmesi farklıdır. Diğer bir deyişle, yeni türü yine de uç noktalar için eski tür ancak dönüştürülemeyeceği geçici olarak gönderilebilir. Olarak işaretlenmiş bir veri üyesini kaldırma herhangi bir önceki sürümünde de bir değişiklik gereklidir.  
+ Gerekli bir veri üyesini eklemek, bir son değişiklik olur. Diğer bir deyişle, daha yeni tür, daha eski tür olan uç noktalara yine de başka bir şekilde gönderilebilir. Önceki bir sürümde gerekli olarak işaretlenmiş bir veri üyesini kaldırmak da aynı zamanda bir değişiklik olur.  
   
- Değiştirme <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özellik değerinden `true` için `false` bozucu değildir, ancak ondan değiştirme `false` için `true` türü önceki tüm sürümlerini veri üyesi yoksa söz konusu parçalamak.  
+ `false` `false` `true` Özellik değerinin ' den ' `true` den ' ye değiştirilmesi, ancak türün önceki sürümlerinden biri söz konusu veri üyesine sahip değilse, ' dan ' ı ' den ' a değiştirme işlemi bozulabilir. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>  
   
 > [!NOTE]
->  Ancak <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği `true`, gelen verileri null veya sıfır ve türü gerekir hazırlanan bu olasılığı işlemek için. Kullanmayın <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> hatalı gelen veri karşı korumak için bir güvenlik mekanizması olarak.  
+> <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Özelliği olarak`true`ayarlanmış olsa da, gelen veriler null veya sıfır olabilir ve bu olasılığa yönelik olarak bir tür hazırlanmalıdır. Hatalı gelen verilere <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> karşı korumak için bir güvenlik mekanizması olarak kullanmayın.  
   
-## <a name="omitted-default-values"></a>Belirtilmemişse varsayılan değerler  
- (Önerilmez olsa da) mümkündür ayarlanacak `EmitDefaultValue` DataMemberAttribute özniteliğine özellik `false`anlatılan şekilde [veri üyesi varsayılan değerler](../../../../docs/framework/wcf/feature-details/data-member-default-values.md). Bu ayar `false`, varsayılan değerine ayarlanırsa veri üyesi yayılan değil (genellikle null ya da sıfır). Bu iki yolla farklı sürümleri gerekli veri üyeleri ile uyumlu değil:  
+## <a name="omitted-default-values"></a>Atlanan varsayılan değerler  
+ `EmitDefaultValue` DataMemberAttribute`false`özniteliğinde özelliği, [veri üyesi varsayılan değerleri](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)bölümünde açıklandığı gibi olarak ayarlamak için mümkündür (önerilmese de önerilmez). Bu ayar ise `false`, veri üyesi varsayılan değerine ayarlandıysa (genellikle null veya sıfır) yayınlanmaz. Bu, farklı sürümlerdeki gerekli veri üyeleriyle iki şekilde uyumlu değildir:  
   
-- Bir veri sözleşmesi ile bir sürüm gerekli bir veri üyesi varsayılan alamaz (boş veya sıfır) veri üyesi olan farklı bir sürümünden verileri `EmitDefaultValue` kümesine `false`.  
+- Bir sürümde gerekli olan veri üyesine sahip bir veri sözleşmesi, veri üyesinin `EmitDefaultValue` `false`ayarlandığı farklı bir sürümden varsayılan (null veya sıfır) veri alamaz.  
   
-- Gerekli veri üyesine sahip `EmitDefaultValue` kümesine `false` varsayılan seri hale getirmek için kullanılamaz (boş veya sıfır) değeri, ancak seri durumundan çıkarma böyle bir değeri alabilir. Bu bir gidiş dönüşü sorun oluşturur (veri okunabilir ancak aynı verileri sonra yazılamaz). Bu nedenle, `IsRequired` olduğu `true` ve `EmitDefaultValue` olduğu `false` herhangi bir veri sözleşmesi sürümü gidiş dönüş içinde sonuçlanmaz bir değer üretmek için, bir sürüm, diğer tüm sürümler için aynı bileşimini uygulamalıdır.  
+- `EmitDefaultValue` Olarak`false` ayarlanmış gerekli bir veri üyesi, varsayılan (null veya sıfır) değerini seri hale getirmek için kullanılamaz, ancak serisini kaldırma sırasında böyle bir değer alabilir. Bu, gidiş-dönüşü bir sorun oluşturur (veriler okunabilir, ancak aynı veriler daha sonra yazılamaz). Bu nedenle ,`EmitDefaultValue` ve tek bir sürümlerdeise,aynıbirleşim,hiçbirverisözleşmesininhiçbirsürümü,gidişdönüşsonucuolmayanbirdeğerüretmeyecekşekildediğertümsürümlereuygulanmalıdır.`false` `true` `IsRequired`  
   
 ## <a name="schema-considerations"></a>Şema konuları  
- Hangi şema veri anlaşması türleri için üretilen açıklaması için bkz [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+ Veri anlaşması türleri için hangi şemanın üretildiğinin açıklaması için bkz. [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Veri sözleşmesi türleri yapar için sürüm oluşturma için hiçbir hükümlerine WCF şema oluşturur. Diğer bir deyişle, bir türü sürümünden dışa aktarılan şema yalnızca bu sürümde mevcut veri üyeleri içerir. Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi bir türü için şema değiştirmez.  
+ Veri anlaşması türleri için şema WCF, sürüm oluşturma için hiçbir anlaşma yapmaz. Diğer bir deyişle, bir türün belirli bir sürümünden aktarılmış olan şema yalnızca o sürümde bulunan veri üyelerini içerir. <xref:System.Runtime.Serialization.IExtensibleDataObject> Arabirimi uygulamak bir tür için şemayı değiştirmez.  
   
- Veri üyeleri, varsayılan isteğe bağlı öğeler şemaya dışarı aktarılır. Diğer bir deyişle, `minOccurs` (XML özniteliği) değerini 0 olarak ayarlayın. Gerekli veri üyeleri dışa aktarılır `minOccurs` 1 olarak ayarlayın.  
+ Veri üyeleri varsayılan olarak isteğe bağlı öğeler olarak şemaya verilir. Diğer bir deyişle, `minOccurs` (XML özniteliği) değeri 0 olarak ayarlanır. Gerekli veri üyeleri, 1 olarak `minOccurs` ayarlanan ile birlikte verilir.  
   
- Değişikliklerin birçoğu kabul edilecek katı şema uyulması gerekiyorsa, bölünemez bozucu gerçekten. Yukarıdaki örnekte, bir `CarV1` ile örnek yalnızca `Model` öğesi karşı doğrulamak `CarV2` şeması (her ikisi de sahip `Model` ve `Horsepower`, ancak her ikisi de isteğe bağlı). Ancak tersi doğru değildir: bir `CarV2` örneğine karşı doğrulama başarısız olurdu `CarV1` şema.  
+ Şemaya sıkı bir şekilde gerek duyulduğundan, Bölünemez olarak değerlendirilen değişikliklerin çoğu aslında kırmadır. `CarV1` Önceki örnekte, `Model` yalnızca `Model` `Horsepower`öğesi olan bir örnek şemayagöre(ve'asahiptir,ancakherikisideisteğebağlıdır)doğrulanır.`CarV2` Ancak, tersi doğru değildir: bir `CarV2` örnek, `CarV1` şemaya karşı doğrulama başarısız olur.  
   
- Gidiş dönüşü ayrıca bazı ek hususlar kapsar. Daha fazla bilgi için bkz: "Şema dikkat edilmesi gerekenler" bölümünde [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+ Ayrıca, gidiş dönüşü bazı ek hususlar de kapsar. Daha fazla bilgi için, [Ileriye dönük olarak uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)Içindeki "şema değerlendirmeleri" bölümüne bakın.  
   
-### <a name="other-permitted-changes"></a>Diğer değişikliklere izin  
- Uygulama <xref:System.Runtime.Serialization.IExtensibleDataObject> bölünemez değişiklik arabirimidir. Ancak, gidiş dönüşü destek türü olan sürümden önceki sürümler için yok <xref:System.Runtime.Serialization.IExtensibleDataObject> uygulanmıştır. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+### <a name="other-permitted-changes"></a>Izin verilen diğer değişiklikler  
+ Arabirimi uygulamak <xref:System.Runtime.Serialization.IExtensibleDataObject> , Bölünemez bir değişiklik. Ancak, uygulanan sürümden <xref:System.Runtime.Serialization.IExtensibleDataObject> önceki türdeki sürümler için gidiş-dönüşü desteği yoktur. Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
   
 ## <a name="enumerations"></a>Numaralandırmalar  
- Ekleyerek veya kaldırarak bir numaralandırma üyesine bölünmesi farklıdır. Bir numaralandırma üyesine adının değiştirilmesi bölme, sözleşme adı eski sürümü ile aynı kullanarak tutulur sürece `EnumMemberAttribute` özniteliği. Daha fazla bilgi için [veri sözleşmelerinde Numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
+ Sabit Listesi üyesini ekleme veya kaldırma, bir son değişiklik. Bir numaralandırma üyesinin adının değiştirilmesi, sözleşme adı `EnumMemberAttribute` özniteliğini kullanarak eski sürümdeki ile aynı tutulmadığı sürece bir parçadır. Daha fazla bilgi için bkz. [veri sözleşmeleri Içindeki numaralandırma türleri](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md).  
   
 ## <a name="collections"></a>Koleksiyonlar  
- Çoğu koleksiyonu değişiklikler bölünemez çünkü çoğu koleksiyon türü veri anlaşması modelinde birbirleri ile değiştirilebilir. Ancak, özelleştirilmiş bir noncustomized koleksiyon yapma veya tam tersi bölünmesi farklıdır. Ayrıca, koleksiyonun özelleştirme ayarlarını değiştirme bölünmesi farklıdır; diğer bir deyişle, ad alanı, öğe adı, anahtar öğe adı ve değeri öğe adı yinelenen ve veri anlaşması adına değiştiriliyor. Koleksiyon özelleştirme hakkında daha fazla bilgi için bkz. [veri anlaşmalarında koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
-Doğal olarak, içeriğinin (örneğin, bir dize listesi tamsayılar listesinden değiştirme) bir koleksiyon veri anlaşması değiştirme bölünmesi farklıdır.  
+ Çoğu koleksiyon değişikliği, veri anlaşması modelinde birbirleriyle aynı şekilde değiştirilebilecek için bölünemez. Bununla birlikte, özelleştirilmeyen bir koleksiyonun özelleştirilme veya tam tersi de bir son değişiklik haline gelmemiştir. Ayrıca, koleksiyonun özelleştirme ayarlarının değiştirilmesi de bir son değişiklik olur; diğer bir deyişle, veri anlaşması adı ve ad alanı, yinelenen öğe adı, anahtar öğesi adı ve değer öğesi adı değiştiriliyor. Koleksiyon özelleştirmesi hakkında daha fazla bilgi için bkz. [veri sözleşmeleri Içindeki koleksiyon türleri](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md).  
+Doğal olarak, bir koleksiyonun içeriği (örneğin, bir tamsayı listesinden bir dizeler listesine değiştirme), bir son değişiklik olarak değişir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

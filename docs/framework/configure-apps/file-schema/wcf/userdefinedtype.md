@@ -2,15 +2,15 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940576"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType >
-Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek olan UDT) temsil eder.  
+Hizmet sözleşmesine dahil edilecek Kullanıcı tanımlı bir tür (UDT) temsil eder.  
   
  \<system.ServiceModel>  
 \<comContracts >  
@@ -40,10 +40,10 @@ Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`name`|Okunabilir tür adlarını sağlayan bir dize içeren isteğe bağlı öznitelik. Bu çalışma zamanı tarafından kullanılmaz, ancak türlerini ayırt etmek için bir okuyucu yardımcı olur.|  
-|`TypeDefID`|Kütüphanesi içerisinde belirli UDT türünü tanımlayan bir GUID dizesi.|  
-|`TypeLibID`|Türü tanımlayan kayıt türü kütüphanesini tanımlayan bir GUID dizesi.|  
-|`TypeLibVersion`|Türü tanımlayan tür Kütüphane sürümünü tanımlayan bir dize.|  
+|`name`|Okunabilir tür adını sağlayan bir dize içeren isteğe bağlı öznitelik. Bu, çalışma zamanı tarafından kullanılmaz, ancak bir okuyucunun türleri ayırt etmesine yardımcı olur.|  
+|`TypeDefID`|Kayıtlı tür kitaplığı içinde belirli UDT türünü tanımlayan bir GUID dizesi.|  
+|`TypeLibID`|Türü tanımlayan kayıtlı tür kitaplığını tanımlayan bir GUID dizesi.|  
+|`TypeLibVersion`|Türü tanımlayan tür kitaplığı sürümünü tanımlayan bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -52,14 +52,14 @@ Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|`userDefinedTypes`|Bir koleksiyonu `userDefinedType` öğeleri.|  
+|`userDefinedTypes`|`userDefinedType` Öğelerin koleksiyonu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- COM + tümleştirme çalışma zamanı tür kitaplığı inceleyerek Hizmetleri oluşturur. Bir COM + bileşeni bir VARIANT'ı sorgulamasından yöntemleri içeriyorsa, sistem çalışma zamanı önce geçirilecek gerçek türler belirleyemiyor. Bir kullanıcı tanımlı tür (UDT) bir değişken içinde geçirilecek denediğinizde, seri hale getirme için bilinen bir tür olmadığından bu nedenle, başarısız olur.  
+ COM+ tümleştirme çalışma zamanı, tür kitaplığını inceleyerek hizmet oluşturur. Bir COM+ bileşeni bir DEĞIŞKEN geçiren Yöntemler içerdiğinde, sistem çalışma zamanına göre geçirilecek gerçek türleri belirleyemez. Bu nedenle, bir DEĞIŞKEN içinde Kullanıcı tanımlı tür (UDT) geçirmeye çalıştığınızda, serileştirme için bilinen bir tür olmadığından başarısız olur.  
   
- Bu sorunu aşmak için bunlar üzerinde uygun hizmet sözleşmesi bilinen türler olarak eklenebilir böylece yapılandırma dosyasına Udt'ler ekleyebilirsiniz. Bunu yapmak için UDT ve onu kullanan diğer bir deyişle, özgün COM arabirimleri sözleşmelerinin benzersiz şekilde tanımlamak vardır.  
+ Bu sorunu aşmak için, her türlü uygun hizmet sözleşmesinde bilinen türler olarak dahil edilmesini sağlamak üzere UDTs 'yi yapılandırma dosyasına ekleyebilirsiniz. Bunu yapmak için, UDT 'yi ve sözleşmeyi (Sözleşmelerinin) benzersiz şekilde belirlemeniz gerekir. Bu, diğer bir deyişle, onu kullanan özgün COM arabirimidir.  
   
- Aşağıdaki örnek, iki belirli Udt'ler için eklemeyi gösterir. <`userDefinedTypes`> yapılandırma dosyasının bu amaç için.  
+ Aşağıdaki örnek, bu amaçla yapılandırma dosyasının <`userDefinedTypes`> bölümüne iki özel udun eklenmesini gösterir.  
   
 ```xml  
 <comContracts>
@@ -88,13 +88,13 @@ Bir kullanıcı tanımlı türü (hizmet sözleşmesi içerisinde dahil edilecek
 </comContracts>
 ```  
   
- Hizmet başlatıldığında, tümleştirme çalışma zamanının belirtilen türlerini arar ve bunları belirtilen sözleşmeleri Bilinen türlerin koleksiyonuna ekler.  
+ Hizmet başlatıldığında, tümleştirme çalışma zamanı belirtilen türleri arar ve belirtilen sözleşmeler için bunları bilinen türler koleksiyonuna ekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [COM+ Uygulamaları ile Tümleştirme](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [COM+ Uygulamaları ile Tümleştirme](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Nasıl yapılır: COM+ hizmet ayarlarını yapılandırma](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

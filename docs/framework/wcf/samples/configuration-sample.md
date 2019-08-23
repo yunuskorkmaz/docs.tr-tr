@@ -2,42 +2,42 @@
 title: Yapılandırma Örneği
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 8c96b41877fa56f486bec03a10dcbf47bac9e37a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b91ae890a5664b69661c76ffe86154f90ac5e5f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651063"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969050"
 ---
 # <a name="configuration-sample"></a>Yapılandırma Örneği
-Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyası kullanımını gösterir.  
+Bu örnek, bir hizmetin bulunabilir olması için bir yapılandırma dosyası kullanımını gösterir.  
   
 > [!NOTE]
->  Bu örnek yapılandırmada bulma uygular. Bulma uygulayan kodda bir örnek için bkz. [temel](../../../../docs/framework/wcf/samples/basic-sample.md).  
+> Bu örnek, yapılandırmada bulma işlemini uygular. Kodda bulmayı uygulayan bir örnek için bkz. [temel](../../../../docs/framework/wcf/samples/basic-sample.md).  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>Hizmet yapılandırması  
- Bu örnek yapılandırma dosyasında iki özelliklerini gösterir:  
+ Bu örnekteki yapılandırma dosyası iki özelliği göstermektedir:  
   
-- Hizmetin bir standart bulunabilir olmasını sağlama <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>.  
+- Hizmetin bir standart <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>üzerinde bulunabilir hale getirilmesi.  
   
-- Bulma ile ilgili bilgi hizmetin uygulama uç noktası ve bazı standart uç noktasında bulma ile ilgili ayarlar ayarlama için ayarlanıyor.  
+- Hizmetin uygulama uç noktası için bulma ile ilgili bilgileri ayarlama ve standart uç noktada bazı bulma ile ilgili ayarları ayarlama.  
   
- Bulmayı etkinleştirmek için birkaç değişiklik hizmeti için uygulama yapılandırma dosyasında yapılması gerekir:  
+ Bulmayı etkinleştirmek için, hizmet için uygulama yapılandırma dosyasında birkaç değişiklik yapılmalıdır:  
   
-- Bulma uç noktası eklenmelidir `<service>` öğesi. Bu bir standarttır <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> uç noktası. Bu çalışma zamanı bulma hizmeti ile ilişkilendiren bir sistem uç noktadır. Bu uç nokta ileti bulma hizmeti dinler.  
+- Bir bulma uç noktasının `<service>` öğeye eklenmesi gerekir. Bu, standart <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> bir uç noktasıdır. Bu, çalışma zamanının bulma hizmetiyle ilişkilendiğini belirten bir sistem uç noktasıdır. Bulma hizmeti bu uç noktada iletileri dinler.  
   
-- A `<serviceDiscovery>` davranışı eklenir `<serviceBehaviors>` bölümü. Bu çalışma zamanında bulunacak hizmetini etkinleştirir ve bulma için dinlemek için daha önce bahsedilen bulma uç noktası kullanan `Probe` ve `Resolve` iletileri. Bu iki eklemeleriyle, hizmet belirtilen bulma uç noktada bulunabilir.  
+- `<serviceBehaviors>` Bölüme `<serviceDiscovery>` bir davranış eklenir. Bu, hizmetin çalışma zamanında keşfedilmesini sağlar ve daha önce bulma `Probe` ve `Resolve` iletileri dinlemek için bahsedilen bulma uç noktasını kullanır. Bu iki eklemele, hizmet belirtilen bulma uç noktasında bulunabilir.  
   
- Yapılandırma aşağıdaki kod parçacığında, bir uygulama uç noktası ve tanımlanmış bir bulma uç noktası ile bir hizmeti gösterir:  
+ Aşağıdaki yapılandırma kod parçacığında, bir uygulama uç noktasına ve tanımlı bulma uç noktasına sahip bir hizmet gösterilmektedir:  
   
 ```xml
 <services>  
@@ -53,7 +53,7 @@ Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyas�
       </services>  
 ```  
   
- Duyuruları yararlanmak için bir duyuru uç noktası eklemeniz gerekir. Bunu yapmak için aşağıdaki kodda gösterildiği gibi yapılandırma dosyasını değiştirme.  
+ Duyuruların avantajlarından yararlanmak için bir duyuru uç noktası eklemeniz gerekir. Bunu yapmak için, yapılandırma dosyasını aşağıdaki kodda gösterildiği gibi değiştirin.  
   
 ```xml  
 <serviceDiscovery>  
@@ -63,15 +63,15 @@ Bu örnek, bir hizmet bulunabilir hale getirmek için bir yapılandırma dosyas�
           </serviceDiscovery>  
 ```  
   
- Bir duyuru uç nokta ekleme için bulma hizmet davranışı, hizmet için varsayılan bir duyuru istemcisi oluşturur. Bu hizmeti açık ve kapalı sırasıyla hizmet çevrimiçi ve çevrimdışı duyuru gönderir güvence altına alır.  
+ Bulma hizmeti davranışına bir duyuru uç noktası eklemek, hizmet için varsayılan bir duyuru istemcisi oluşturur. Bu, hizmetin sırasıyla açık ve kapalı olduğu durumlarda hizmetin çevrimiçi ve çevrimdışı duyuru göndermesini güvence altına alır.  
   
- Bu yapılandırma dosyası, yalnızca basit adımları ek davranışları değiştirerek gider. Özel uç noktaları kullanarak bulma ile ilgili bilgileri denetlemek mümkündür. Diğer bir deyişle, bir kullanıcı bir uç nokta bulunan ve kullanıcı uç noktasına da işaretleyebilirsiniz denetleyebilirsiniz <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> ve özel XML meta verileri. Bunu yapmak için kullanıcıyı eklemeniz gerekir bir `behaviorConfiguration` özelliğini uygulama uç noktası. Bu durumda, aşağıdaki özellik için uygulama uç noktası eklenir.  
+ Bu yapılandırma dosyası, ek davranışları değiştirerek yalnızca bu basit adımların ötesine geçer. Belirli uç noktaları kullanarak bulma ile ilgili bilgileri denetlemek mümkündür. Diğer bir deyişle, bir Kullanıcı bir uç noktanın keşfedilip edilmeyeceğini denetleyebilir ve Kullanıcı bu uç noktayı <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> ve özel XML meta verilerini de işaretleyebilir. Bunu yapmak için, kullanıcının uygulama uç noktasına bir `behaviorConfiguration` özellik eklemesi gerekir. Bu durumda, aşağıdaki özellik uygulama uç noktasına eklenir.  
   
 ```  
 behaviorConfiguration="endpointBehaviorConfiguration"  
 ```  
   
- Şimdi, davranış yapılandırma öğesi bulma ile ilgili özniteliklere denetleyebilirsiniz. Bu durumda, iki kapsam için bir uygulama uç noktası eklenir.  
+ Şimdi, davranış yapılandırma öğesi sayesinde, bulma ile ilgili öznitelikleri denetleyebilirsiniz. Bu durumda, uygulama uç noktasına iki kapsam eklenir.  
   
 ```xml  
 <endpointBehaviors>  
@@ -87,9 +87,9 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- Kapsamlar hakkında daha fazla bilgi için bkz: [bulma bulma ve FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
+ Kapsamlar hakkında daha fazla bilgi için bkz. [bulma bulma ve FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md).  
   
- Belirli bir bulma uç noktası ayrıntılarını ayrıca denetleyebilirsiniz. Bu yoluyla yapılır <xref:System.ServiceModel.Configuration.StandardEndpointsSection>. Bu örnekte, ekleme yanı sıra kullanılan protokol sürümünü değiştiren bir `maxResponseDelay` öznitelik aşağıdaki kod örneğinde gösterildiği gibi.  
+ Bulma uç noktasının belirli ayrıntılarını da denetleyebilirsiniz. Bu, <xref:System.ServiceModel.Configuration.StandardEndpointsSection>aracılığıyla yapılır. Bu örnekte, kullanılan protokolün sürümü değiştirilmiştir ve aşağıdaki kod örneğinde gösterildiği gibi bir `maxResponseDelay` özniteliği ekler.  
   
 ```xml  
 <standardEndpoints>  
@@ -99,7 +99,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </standardEndpoints>  
 ```  
   
- Bu örnekte kullanılan tam yapılandırma dosyası verilmiştir:  
+ Aşağıda, bu örnekte kullanılan tüm yapılandırma dosyası verilmiştir:  
   
 ```xml  
 <configuration>  
@@ -157,7 +157,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 ```  
   
 ## <a name="client-configuration"></a>İstemci Yapılandırması  
- İstemci, uygulama yapılandırma dosyasında bir `standardEndpoint` türü `dynamicEndpoint` bulma aşağıdaki yapılandırma kod parçacığında gösterildiği gibi yararlanmak için kullanılır.  
+ İstemcinin uygulama yapılandırma dosyasında, bir `standardEndpoint` türü `dynamicEndpoint` aşağıdaki yapılandırma parçacığında gösterildiği gibi bulmayı kullanmak için kullanılır.  
   
 ```xml  
 <client>  
@@ -171,13 +171,13 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </client>  
 ```  
   
- Bir istemci kullanarak ne zaman bir `dynamicEndpoint`, çalışma zamanı otomatik olarak bulma işlemini gerçekleştirir. İçinde tanımlanan gibi bulma sırasında kullanılan çeşitli ayarları `discoveryClientSettings` bölümünde, kullanmak için bulma uç noktası türünü belirtir:  
+ Bir istemci bir `dynamicEndpoint`kullanırken, çalışma zamanı bulmayı otomatik olarak gerçekleştirir. Bulma sırasında, kullanılacak bulma uç noktasının türünü belirten, `discoveryClientSettings` bölümünde tanımlananlar gibi çeşitli ayarlar kullanılır:  
   
 ```xml  
 <endpoint kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration" />  
 ```  
   
- Hizmetleri aramak için kullanılan Bulma ölçütü:  
+ Hizmetleri aramak için kullanılan bulma ölçütü:  
   
 ```xml  
 <!-- Add Scopes, ScopeMatchBy, Extensions and termination criteria in FindCriteria -->  
@@ -192,7 +192,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </findCriteria>  
 ```  
   
- Bu örnek, bu özellik genişleten ve değiştiren <xref:System.ServiceModel.Discovery.FindCriteria> istemci yanı sıra tarafından standart bazı özellikler kullanılan `updDiscoveryEndpoint` bulma için kullanılır. <xref:System.ServiceModel.Discovery.FindCriteria> Kapsam ve belirli bir değişiklik `scopeMatchBy` özel sonlandırma ölçütünü yanı sıra algoritması. Ayrıca, örnek aynı zamanda bir istemci kullanarak XML öğeleri nasıl gönderebilir gösterir `Probe` iletileri. Son olarak, bazı değişiklikler yapılır <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>kullanılan protokol sürümünü ve UDP özgü ayarları aşağıdaki yapılandırma dosyasında gösterildiği gibi.  
+ Bu örnek, bu özelliği genişletir ve istemcinin <xref:System.ServiceModel.Discovery.FindCriteria> , bulma için `updDiscoveryEndpoint` kullanılan bazı özellikler özelliklerinin yanı sıra istemci tarafından kullanılan özellikleri değiştirir. , <xref:System.ServiceModel.Discovery.FindCriteria> Bir kapsamı ve belirli `scopeMatchBy` bir algoritmayı ve özel sonlandırma ölçütlerini kullanacak şekilde değiştirilir. Ayrıca, örnek ayrıca, bir istemcinin iletileri kullanarak `Probe` nasıl XML öğeleri gönderebilirim gösterilmektedir. Son olarak, aşağıdaki yapılandırma dosyasında gösterildiği gibi <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, kullanılan protokol sürümü ve UDP 'ye özgü ayarlar gibi bazı değişiklikler yapılmıştır.  
   
 ```xml  
 <udpDiscoveryEndpoint>    
@@ -206,7 +206,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
       </udpDiscoveryEndpoint>  
 ```  
   
- Örnekte kullanılan tam istemci yapılandırması aşağıda verilmiştir.  
+ Örnekte kullanılan tüm istemci yapılandırması aşağıda verilmiştir.  
   
 ```xml  
 <configuration>  
@@ -261,10 +261,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1. Bu örnek HTTP uç noktaları kullanır ve bu örnek, uygun URL ACL çalıştırmak için bkz: eklenmelidir [yapılandırma HTTP ve HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Ayrıntılar için. Aşağıdaki komut bir yükseltilmiş ayrıcalık yürütme uygun ACL'lerin eklemeniz gerekir. Olduğu gibi bir komut çalışmazsa, aşağıdaki bağımsız değişkenler yerine etki alanı ve kullanıcı adı isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. Bu örnek HTTP uç noktalarını kullanır ve bu örneği çalıştırmak için uygun URL ACL 'Leri eklenmelidir. Ayrıntılar için bkz. [http ve https 'Yi yapılandırma](https://go.microsoft.com/fwlink/?LinkId=70353) . Yükseltilmiş bir ayrıcalıkta aşağıdaki komutu yürütmek uygun ACL 'Leri eklememelidir. Komutu olduğu gibi çalışmazsa, etki alanınızı ve Kullanıcı adınızı aşağıdaki bağımsız değişkenler için yerine koymak isteyebilirsiniz. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Çözümü oluşturun.  
   
-3. Yürütülebilir hizmet oluşturma dizinden çalıştırın.  
+3. Hizmet yürütülebilir dosyasını yapı dizininden çalıştırın.  
   
-4. İstemci yürütülebilir çalıştırın. İstemci hizmetini bulun mümkün olduğunu unutmayın.  
+4. İstemci yürütülebilir dosyasını çalıştırın. İstemcinin hizmeti bulabileceğini unutmayın.  

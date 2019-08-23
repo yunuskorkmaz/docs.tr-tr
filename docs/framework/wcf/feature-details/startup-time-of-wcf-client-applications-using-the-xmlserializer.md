@@ -2,62 +2,62 @@
 title: 'Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme'
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
-ms.openlocfilehash: b163f4478794797ea910e39ba2368c602218f13b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8766a5dfa2bcfc715a0f0e21274f7c6ac04ad15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586104"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944889"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Nasıl yapılır: XmlSerializer Kullanarak WCF İstemci Uygulamalarının Başlangıç Zamanlarını İyileştirme
-Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci uygulamalar <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve yavaş başlatma performansı düşürebilir çalışma zamanında bu veri türleri için serileştirme kodu derleyin.  
+Çalışma zamanında bu veri türleri için <xref:System.Xml.Serialization.XmlSerializer> oluştur ve derle serileştirme kodu kullanılarak seri hale getirilebilir veri türlerini kullanan hizmet ve istemci uygulamaları, yavaş başlangıç performansına yol açabilir.  
   
 > [!NOTE]
->  Önceden oluşturulan serileştirme kod, yalnızca istemci uygulamaları ve Hizmetleri kullanılabilir.  
+> Önceden oluşturulmuş serileştirme kodu, hizmetlerde değil yalnızca istemci uygulamalarında kullanılabilir.  
   
- [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derlenmiş bütünleştirilmiş uygulama için gerekli serileştirme kod oluşturarak bu uygulamaları için başlatma performansını geliştirebilir. Svcutil.exe kullanarak seri hale getirilebilir derlenmiş uygulama derlemesindeki hizmet sözleşmelerinde kullanılan tüm veri türleri için serileştirme kod oluşturur <xref:System.Xml.Serialization.XmlSerializer>. Kullandığınız hizmet ve işlem sözleşmeler <xref:System.Xml.Serialization.XmlSerializer> ile işaretlenmiş <xref:System.ServiceModel.XmlSerializerFormatAttribute>.  
+ [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , uygulama için derlenmiş derlemelerden gerekli serileştirme kodunu oluşturarak bu uygulamalar için başlangıç performansını iyileştirebilir. Svcutil. exe, <xref:System.Xml.Serialization.XmlSerializer>kullanılarak seri hale getirilenebilecek derlenmiş uygulama derlemesindeki hizmet sözleşmelerinde kullanılan tüm veri türleri için serileştirme kodu oluşturur. Kullanan <xref:System.Xml.Serialization.XmlSerializer> hizmet ve işlem sözleşmeleri <xref:System.ServiceModel.XmlSerializerFormatAttribute>ile işaretlenir.  
   
-### <a name="to-generate-xmlserializer-serialization-code"></a>XmlSerializer serileştirme kod oluşturmak için  
+### <a name="to-generate-xmlserializer-serialization-code"></a>XmlSerializer Serileştirme kodu oluşturmak için  
   
-1. Hizmet veya istemci kodunuz, bir veya daha fazla derlemeye derlemesi.  
+1. Hizmetinizi veya istemci kodunuzu bir veya daha fazla derlemede derleyin.  
   
-2. Bir SDK komut istemi açın.  
+2. SDK komut istemi açın.  
   
-3. Komut isteminde, aşağıdaki biçimi kullanarak Svcutil.exe aracını başlatın.  
-  
-    ```  
-    svcutil.exe /t:xmlSerializer  <assemblyPath>*  
-    ```  
-  
-     `assemblyPath` Bağımsız değişkeni, hizmet sözleşmesi türleri içeren bir bütünleştirilmiş kod yolu belirtir. Svcutil.exe kullanarak seri hale getirilebilir derlenmiş uygulama derlemesindeki hizmet sözleşmelerinde kullanılan tüm veri türleri için serileştirme kod oluşturur <xref:System.Xml.Serialization.XmlSerializer>.  
-  
-     Svcutil.exe yalnızca oluşturabileceği C# serileştirme kodu. Giriş her derleme için bir kaynak kodu dosyası oluşturulur. Kullanamazsınız **/language** oluşturulan kod dilini değiştirmek için anahtar.  
-  
-     Bağımlı derlemelerin yolu belirtmek için kullanın **/reference** seçeneği.  
-  
-4. Aşağıdaki seçeneklerden birini kullanarak oluşturulan serileştirme kodu, uygulamanızın kullanılabilir hale getirmek:  
-  
-    1. Ada sahip ayrı bir derleme halinde oluşturulan serileştirme kodu derleme [*orijinal derleme*]. XmlSerializers.dll (örneğin, MyApp.XmlSerializers.dll). Uygulamanızı orijinal derleme olarak aynı anahtarla imzalanmalıdır derlemeyi yüklemek mümkün olması gerekir. Orijinal derlemeyi yeniden derlerseniz, serileştirme bütünleştirilmiş kodu oluşturmanız gerekir.  
-  
-    2. Oluşturulan serileştirme kodu ayrı bir derlemeye derlemek ve kullanmak <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanır hizmet sözleşmesindeki <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlama <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> derlenmiş serileştirme derlemeye işaret edecek şekilde özellikleri.  
-  
-    3. Oluşturulan serileştirme kodu, uygulama derlemeye derlemek ve ekleme <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> kullanan hizmet sözleşmesi <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ayarlı değil <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> veya <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> özellikleri. Varsayılan serileştirme bütünleştirilmiş kodu geçerli derleme varsayılır.  
-  
-### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Visual Studio'da XmlSerializer serileştirme kod oluşturmak için  
-  
-1. WCF hizmeti ve istemcisine Visual Studio'da projeler oluşturun. Ardından, istemci projesinin bir hizmet başvurusu ekleyin.  
-  
-2. Ekleme bir <xref:System.ServiceModel.XmlSerializerFormatAttribute> için hizmet sözleşmesi içerisinde *reference.cs* altında istemci uygulaması projenizi dosyasında **serviceReference** -> **reference.svcmap** . Tüm dosyaları göster gerektiğini unutmayın **Çözüm Gezgini** bu dosyaları görmek için.  
-  
-3. İstemci uygulaması oluşturun.  
-  
-4. Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) önceden oluşturulmuş bir seri hale getirici oluşturulacak *.cs* komutu kullanarak dosya:  
+3. Komut isteminde, aşağıdaki biçimi kullanarak Svcutil. exe aracını başlatın.  
   
     ```  
     svcutil.exe /t:xmlSerializer  <assemblyPath>*  
     ```  
   
-     WCF istemci derleme yolu assemblyPath bağımsız değişken belirtir.  
+     `assemblyPath` Bağımsız değişkeni, hizmet sözleşmesi türlerini içeren bir derlemenin yolunu belirtir. Svcutil. exe, <xref:System.Xml.Serialization.XmlSerializer>kullanılarak seri hale getirilenebilecek derlenmiş uygulama derlemesindeki hizmet sözleşmelerinde kullanılan tüm veri türleri için serileştirme kodu oluşturur.  
+  
+     Svcutil. exe yalnızca serileştirme kodu C# oluşturabilir. Her giriş derlemesi için bir kaynak kodu dosyası oluşturulur. Oluşturulan kodun dilini değiştirmek için **/Language** anahtarını kullanamazsınız.  
+  
+     Bağımlı derlemelerin yolunu belirtmek için **/Reference** seçeneğini kullanın.  
+  
+4. Aşağıdaki seçeneklerden birini kullanarak, üretilen serileştirme kodunu uygulamanız için kullanılabilir hale getirin:  
+  
+    1. Oluşturulan serileştirme kodunu, adı [*özgün derleme*] olan ayrı bir derlemede derleyin. Xmlserileştiriciler. dll (örneğin, MyApp. Xmlserileştiriciler. dll). Uygulamanız, özgün derlemeyle aynı anahtarla imzalanması gereken derlemeyi yükleyebilmelidir. Özgün derlemeyi yeniden derlemenizin serileştirme derlemesini yeniden oluşturmanız gerekir.  
+  
+    2. Oluşturulan serileştirme kodunu ayrı bir derlemede derleyin ve öğesini <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> <xref:System.ServiceModel.XmlSerializerFormatAttribute>kullanan hizmet sözleşmesinde kullanın. <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> Veya<xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> özelliklerini derlenen serileştirme derlemesini işaret etmek için ayarlayın.  
+  
+    3. Oluşturulan serileştirme kodunu uygulama derlemenizde derleyin ve öğesini <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> <xref:System.ServiceModel.XmlSerializerFormatAttribute>kullanan hizmet sözleşmesine ekleyin. <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> Veya<xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> özelliklerini ayarlamayın. Varsayılan serileştirme derlemesinin geçerli derleme olduğu varsayılır.  
+  
+### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Visual Studio 'da XmlSerializer Serileştirme kodu oluşturmak için  
+  
+1. Visual Studio 'da WCF hizmetini ve istemci projelerini oluşturun. Ardından, istemci projesine bir hizmet başvurusu ekleyin.  
+  
+2. ServiceReference Reference. svcmap altındaki istemci uygulaması projesindeki Reference.cs dosyasına hizmet sözleşmesine ekleyin. ->  <xref:System.ServiceModel.XmlSerializerFormatAttribute> Bu dosyaları görmek için **Çözüm Gezgini** tüm dosyaları göstermesinin gerekli olduğunu unutmayın.  
+  
+3. İstemci uygulamasını oluşturun.  
+  
+4. Şu komutu kullanarak önceden oluşturulmuş bir seri hale getirici *. cs* dosyası oluşturmak Için [ServiceModel meta veri yardımcı programı aracı 'Nı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın:  
+  
+    ```  
+    svcutil.exe /t:xmlSerializer  <assemblyPath>*  
+    ```  
+  
+     AssemblyPath bağımsız değişkeni, WCF istemci derlemesinin yolunu belirtir.  
   
      Örneğin:  
   
@@ -65,22 +65,22 @@ Hizmetler ve seri hale getirilebilir kullanarak veri türlerini kullanan istemci
     svcutil.exe /t:xmlSerializer wcfclient.exe  
     ```  
   
-     *WCFClient.XmlSerializers.dll.cs* dosyası oluşturulur.  
+     *WCFClient.XmlSerializers.dll.cs* dosyası oluşturulacaktır.  
   
-5. Önceden oluşturulan serileştirme bütünleştirilmiş kodu derleyin.  
+5. Önceden oluşturulmuş serileştirme derlemesini derleyin.  
   
-     Örnek önceki adımda bağlı olarak, derleme komut şöyle olur:  
+     Önceki adımdaki örneğe bağlı olarak, derleme komutu aşağıdaki gibi olacaktır:  
   
     ```  
     csc /r:wcfclient.exe /out:WCFClient.XmlSerializers.dll /t:library WCFClient.XmlSerializers.dll.cs  
     ```  
   
-     Oluşturulan emin *WCFClient.XmlSerializers.dll* olan istemci uygulaması ile aynı dizinde olduğu *WCFClient.exe* böyle bir durumda.  
+     Oluşturulan *Wcfclient. Xmlserileştiriciler. dll dosyasının* bu durumda *wcfclient. exe* olan istemci uygulamasıyla aynı dizinde olduğundan emin olun.  
   
-6. İstemci uygulaması her zaman olduğu gibi çalıştırın. Önceden oluşturulan serileştirme bütünleştirilmiş kodu kullanılacak.  
+6. İstemci uygulamasını her zamanki gibi çalıştırın. Önceden oluşturulmuş serileştirme derlemesi kullanılacaktır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komutu için seri hale getirme türlerinde oluşturur `XmlSerializer` derleme kullanımda herhangi bir hizmet sözleşmeleri türleri.  
+ Aşağıdaki komut, derlemedeki herhangi bir hizmet `XmlSerializer` sözleşmesi tarafından kullanılan türler için serileştirme türleri oluşturur.  
   
 ```  
 svcutil /t:xmlserializer myContractLibrary.exe  

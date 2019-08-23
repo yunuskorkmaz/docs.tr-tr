@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 60c238430d44371bbd3859c3864fd2ef73f70098
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: a6d000bc853046cffbc2bddc54d1f5faec689032
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968610"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Nasıl yapılır: Windows Formlarını Devralma
 
@@ -40,12 +40,12 @@ Temel formlardan devralarak yeni Windows Forms oluşturmak, her ihtiyacınız ol
     public class Form2 : Namespace1.Form1
     ```
 
- Formları devralırken, her olay hem temel sınıf hem de devralınan sınıf tarafından işlendiği için, iki kez çağrılan olay işleyicileriyle ilgili sorunların olabileceğini aklınızda bulundurun. Bu sorundan kaçınmak hakkında daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
+ Formları devralırken, her olay hem temel sınıf hem de devralınan sınıf tarafından işlendiği için, iki kez çağrılan olay işleyicileriyle ilgili sorunların olabileceğini aklınızda bulundurun. Bu sorundan kaçınmak hakkında daha fazla bilgi için bkz. [Visual Basic devralınan olay Işleyicilerinin sorunlarını giderme](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Inherits Deyimi](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [Imports Deyimi (.NET Ad Alanı ve Türü)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+- [Inherits Deyimi](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Imports Deyimi (.NET Ad Alanı ve Türü)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [using](../../../csharp/language-reference/keywords/using.md)
 - [Taban Formun Görünüşünü Değiştirmenin Etkileri](effects-of-modifying-base-form-appearance.md)
 - [Windows Forms Görsel Devralma](windows-forms-visual-inheritance.md)

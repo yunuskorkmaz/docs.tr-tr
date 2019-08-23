@@ -11,46 +11,46 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 670746a1b964a85bc5136d976d831c6848466797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930979"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>İzlenecek yol: Çalışma Zamanında Durum Çubuğu Bilgilerini Güncelleştirme
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> Ve <xref:System.Windows.Forms.ToolStripStatusLabel> denetimleri değiştirin ve işlevsellik eklemek <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetler; ancak, <xref:System.Windows.Forms.StatusBar> ve <xref:System.Windows.Forms.StatusBarPanel> denetimleri korunur geriye dönük uyumluluk ve gelecekte kullanım için varsa, ' ı seçin.  
+> <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> Ve denetimleri, vedenetimlerine<xref:System.Windows.Forms.StatusBarPanel> işlevsellik ekler ve bunları ekler; ancak, ve denetimleri hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.ToolStripStatusLabel> 'yu.  
   
- Genellikle, bir program, çalışma zamanında dinamik olarak güncelleştirmek için uygulama durumunu veya başka bir kullanıcı etkileşimi değişikliklere göre durum çubuğu panellerinin içeriğini çağırır. Bu anahtarları CAPS LOCK, NUM LOCK veya SCROLL LOCK gibi etkinleştirildiğini kullanıcılar sinyal ya da tarih veya saat kullanışlı bir başvuru olarak sağlamak için ortak bir yoludur.  
+ Genellikle, bir program, uygulama durumu veya diğer kullanıcı etkileşimlerine bağlı olarak durum çubuğu panellerinin içeriğini çalışma zamanında dinamik olarak güncelleştirmeniz için çağrı yapılır. Bu, Caps Lock, NUM LOCK veya SCROLL LOCK gibi anahtarların etkinleştirildiğini veya tarih ya da saatin uygun bir başvuru olarak sağlanması için kullanıcılara işaret etmenin yaygın bir yoludur.  
   
- Aşağıdaki örnekte, bir örneğini kullanacağınız <xref:System.Windows.Forms.StatusBarPanel> saat barındırmak için sınıf.  
+ Aşağıdaki örnekte, bir saati barındırmak için <xref:System.Windows.Forms.StatusBarPanel> sınıfının bir örneğini kullanacaksınız.  
   
-### <a name="to-get-the-status-bar-ready-for-updating"></a>Durum çubuğu güncelleştirmek için hazır hale getirmek için  
+### <a name="to-get-the-status-bar-ready-for-updating"></a>Durum çubuğunu güncelleştirmeye hazırlanıyor  
   
 1. Yeni bir Windows formu oluşturun.  
   
-2. Ekleme bir <xref:System.Windows.Forms.StatusBar> form denetimi. Ayrıntılar için bkz [nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md).  
+2. Formunuza bir <xref:System.Windows.Forms.StatusBar> denetim ekleyin. Ayrıntılar için bkz [. nasıl yapılır: Windows Forms](how-to-add-controls-to-windows-forms.md)denetimleri ekleyin.  
   
-3. Bir durum çubuğu paneline eklemek, <xref:System.Windows.Forms.StatusBar> denetimi. Ayrıntılar için bkz [nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md).  
+3. <xref:System.Windows.Forms.StatusBar> Denetimi bir durum çubuğu paneli ekleyin. Ayrıntılar için bkz [. nasıl yapılır: Bir StatusBar denetimine](how-to-add-panels-to-a-statusbar-control.md)panel ekleme.  
   
-4. İçin <xref:System.Windows.Forms.StatusBar> formunuza, eklediğiniz denetimi ayarlama <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> özelliğini `true`.  
+4. Formunuza eklediğiniz <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> `true`denetim için özelliğini olarak ayarlayın. <xref:System.Windows.Forms.StatusBar>  
   
-5. Bir Windows Forms ekleme <xref:System.Windows.Forms.Timer> forma bileşen.  
+5. Forma bir Windows Forms <xref:System.Windows.Forms.Timer> bileşeni ekleyin.  
   
     > [!NOTE]
-    >  Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> bileşeni, bir Windows Forms ortamı için tasarlanmıştır. Bir sunucu ortamı için uygun olan bir zamanlayıcı gerekirse bkz [sunucu tabanlı zamanlayıcılar giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
+    > Windows Forms <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> bileşeni, bir Windows Forms ortamı için tasarlanmıştır. Sunucu ortamı için uygun bir zamanlayıcıya ihtiyacınız varsa bkz. [sunucu tabanlı zamanlayıcılara giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90)).  
   
 6. Ayarlama <xref:System.Windows.Forms.Timer.Enabled%2A> özelliğini `true`.  
   
-7. Ayarlama <xref:System.Windows.Forms.Timer.Interval%2A> özelliği <xref:System.Windows.Forms.Timer> 30000 için.  
+7. Öğesinin özelliğini 30000 olarak ayarlayın. <xref:System.Windows.Forms.Timer> <xref:System.Windows.Forms.Timer.Interval%2A>  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.Timer.Interval%2A> Özelliği <xref:System.Windows.Forms.Timer> bileşeni doğru bir zaman görüntülenen saat yansıtılmasını sağlamak üzere 30 saniye (30.000 milisaniye cinsinden) ayarlanır.  
+    > <xref:System.Windows.Forms.Timer> Bileşenin özelliği, görüntülenen sürede doğru bir saatin yansıtıldığından emin olmak için 30 saniye (30.000 milisaniye) olarak ayarlanır. <xref:System.Windows.Forms.Timer.Interval%2A>  
   
-### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Durum çubuğunu güncellemek için Zamanlayıcıyı uygulamak için  
+### <a name="to-implement-the-timer-to-update-the-status-bar"></a>Durum çubuğunu güncelleştirmek üzere zamanlayıcıyı uygulamak için  
   
-1. Olay işleyicisi aşağıdaki kodu ekleyin <xref:System.Windows.Forms.Timer> panelini güncelleştirmek için bileşen <xref:System.Windows.Forms.StatusBar> denetimi.  
+1. Denetim<xref:System.Windows.Forms.StatusBar> masasını güncelleştirmek için <xref:System.Windows.Forms.Timer> bileşenin olay işleyicisine aşağıdaki kodu ekleyin.  
   
     ```vb  
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick  
@@ -75,19 +75,19 @@ ms.locfileid: "61792164"
       }  
     ```  
   
-     Bu noktada, uygulamayı çalıştırmak ve durum çubuğu panelinde çalıştıran saat gözlemek hazır olursunuz.  
+     Bu noktada, uygulamayı çalıştırmaya ve durum çubuğu panelinde çalışan saati gözlemlemeye hazırız.  
   
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1. Uygulamada hata ayıklamak ve çalıştırmak için F5 tuşuna basın. Hata ayıklama hakkında daha fazla ayrıntı için bkz. [Visual Studio'da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
+1. Uygulamada hata ayıklayın ve F5 tuşuna basarak çalıştırın. Hata ayıklama hakkında daha fazla bilgi için bkz. [Visual Studio 'Da hata ayıklama](/visualstudio/debugger/debugging-in-visual-studio).  
   
     > [!NOTE]
-    >  Yaklaşık olarak 30 durum çubuğunda görüntülenecek saniye saat sürer. Olası en doğru zamanı elde etmek için budur. Buna karşılık, daha kısa süre içinde görünen saati hale getirmek için değerini azaltabilirsiniz <xref:System.Windows.Forms.Timer.Interval%2A> ayarlanan önceki yordamdaki adım 7'deki özelliği.  
+    > Durum çubuğunda saatin görünmesi yaklaşık olarak 30 saniye sürer. Bu, mümkün olan en doğru zamanı almak için kullanılır. Tersine, saatin daha erken görünmesini sağlamak için, önceki yordamda 7. adımda ayarladığınız <xref:System.Windows.Forms.Timer.Interval%2A> özelliğin değerini azaltabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Nasıl yapılır: Bir StatusBar denetimine panel ekleme](how-to-add-panels-to-a-statusbar-control.md)
-- [Nasıl yapılır: Windows Forms StatusBar denetiminde hangi panele tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Nasıl yapılır: Bir StatusBar Denetimine Panel ekleme](how-to-add-panels-to-a-statusbar-control.md)
+- [Nasıl yapılır: Windows Forms StatusBar denetimindeki panelin tıklandığını belirleme](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar Denetimine Genel Bakış](statusbar-control-overview-windows-forms.md)

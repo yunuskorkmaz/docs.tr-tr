@@ -2,45 +2,45 @@
 title: UriTemplate ve UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f51d6fa5c78d97cf11a3c0005be7656013b30e90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918638"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955277"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable
-Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açıklayan olanağına sahip olmalıdır. Windows Communication Foundation (WCF), geliştiricilerin kendi bir URI'leri denetiminin kendilerinde olmasına iki yeni sınıflar eklendi. <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI tabanlı dağıtım altyapısı WCF'de temelini oluşturur. Bu sınıflar, bir WCF Hizmeti uygulamadan kendi şablonlarını ve URI yararlanmak geliştiricilerin eşleme mekanizmasını de kullanılabilir.  
+Web geliştiricileri, hizmetlerinin yanıt verdiği URI 'lerin şeklini ve yerleşimini betimleyebilme olanağı gerektirir. Windows Communication Foundation (WCF), geliştiricilerin URI 'lerinde denetim sağlamak için iki yeni sınıf ekledi. <xref:System.UriTemplate>ve <xref:System.UriTemplateTable> WCF 'de URI tabanlı dağıtım altyapısının temelini oluşturur. Bu sınıflar kendi kendilerine de kullanılabilir, geliştiricilerin bir WCF hizmeti uygulamadan şablonlardan ve URI eşleme mekanizmasından yararlanmasını sağlar.  
   
 ## <a name="templates"></a>Şablonlar  
- Şablon, göreli bir URI'leri bir kümesini tanımlamak için kullanılan bir yoldur. Dizi URI şablonu aşağıdaki tabloda yer alan çeşitli türlerde hava durumu bilgileri sistem nasıl tanımlanabilir gösterir.  
+ Şablon, göreli URI 'lerin bir kümesini tanımlamaya yönelik bir yoldur. Aşağıdaki tabloda yer alan URI şablonları kümesi, çeşitli hava durumu bilgilerini alan bir sistemin nasıl tanımlanabilir olduğunu gösterir.  
   
 |Veri|Şablon|  
 |----------|--------------|  
-|Ulusal tahmin|hava durumu/Ulusal|  
-|Durum tahmin|hava durumu / {state}|  
-|Şehir tahmin|hava durumu / {state} / {Şehir}|  
-|Etkinlik tahmin|hava durumu / {state} / {Şehir} / {etkinliği}|  
+|Ulusal tahmin|Hava durumu/Ulusal|  
+|Durum tahmini|Hava durumu/{State}|  
+|Şehir tahmini|Hava durumu/{State}/{City}|  
+|Etkinlik tahmini|Hava durumu/{State}/{City}/{Activity}|  
   
- Bu tablo, yapısal olarak benzer bir URI'leri kümesini açıklar. Her girişin bir URI Şablonu ' dir. Küme ayracı segmentler değişkenleri tanımlayın. Segment kaşlı ayraçlar içinde değil, değişmez değer dizeleri açıklar. WCF şablon sınıfları, örneğin, "/ hava durumu/wa/seattle/dönüşüm", gelen bir URI olması ve onu tanımlayan bir şablon eşleştirmek bir geliştirici izin ver "/weather/ {state} / {Şehir} / {etkinlik}".  
+ Bu tablo yapısal olarak benzer URI 'Ler kümesini açıklar. Her giriş bir URI şablonudur. Küme ayraçları içindeki segmentler değişkenleri anlatmaktadır. Küme ayraçları içinde olmayan kesimler, değişmez dizeleri tanımlıyor. WCF şablon sınıfları, bir geliştiricinin gelen URI 'yi (örneğin, "/Weather/WA/Seattle/Cycling") alıp onu açıklayan bir şablonla eşleştirmek için "/dalgalı ther/{State}/{City}/{Activity}" sağlar.  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> bir URI şablonu kapsülleyen bir sınıftır. Oluşturucusu şablon tanımlayan bir dize parametresi alır. Bu dize sonraki bölümde açıklanan biçimde şablonu içerir. <xref:System.UriTemplate> SAX olanak sağlayan yöntemleri eşleşen bir şablon için gelen bir URI, bir şablondan bir URI oluşturmayı, değişken adı şablonda kullanılan koleksiyonu alma, iki şablonu eşdeğerdir ve şablonun dönüş olup olmadığını belirlemek dize.  
+ <xref:System.UriTemplate>, bir URI şablonunu kapsülleyen bir sınıftır. Oluşturucu, şablonu tanımlayan bir dize parametresi alır. Bu dize, sonraki bölümde açıklanan biçimdeki şablonu içerir. <xref:System.UriTemplate> Sınıfı, bir şablon için gelen URI 'yi eşleştirmek, şablondan URI oluşturmak, şablonda kullanılan değişken adlarından oluşan bir koleksiyonu almak, iki şablonun eşdeğer olup olmadığını tespit etmek ve şablonu geri döndürmeksizin dizisinde.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> Temel adres ve bir aday URI ve şablon URI'si eşleşmeyi dener alır. Eşleşmenin başarılı olması durumunda bir <xref:System.UriTemplateMatch> örneği döndürülür. <xref:System.UriTemplateMatch> Nesnesini içeren temel bir URI, URI sorgu parametreleri, bir dizi göreli yol parçalarının, eşleştirilmiş olan değişkenler ad/değer koleksiyonu ad/değer koleksiyonunu aday <xref:System.UriTemplate> eşleştirme uygulamak için kullanılan örneği , URI (şablon bir joker karakter varsa kullanılır) aday eşleşmeyen herhangi bir bölümünü içeren bir dize ve şablonu ile ilişkili bir nesne.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>temel bir adresi ve aday URI 'yi alır ve URI 'yi şablonla eşleştirmeye çalışır. Eşleşme başarılı olursa bir <xref:System.UriTemplateMatch> örnek döndürülür. Nesne, temel bir URI, aday URI, sorgu parametrelerinin bir ad/değer koleksiyonu, göreli yol segmentlerinin bir dizisi, eşleşen <xref:System.UriTemplate> değişkenlerin bir ad/değer koleksiyonu, eşleşme gerçekleştirmek için kullanılan örnek <xref:System.UriTemplateMatch> , aday URI 'nin eşleşmeyen bir kısmını (şablon bir joker karakter olduğunda kullanılır) ve şablonuyla ilişkili bir nesneyi içeren bir dizedir.  
   
 > [!NOTE]
->  <xref:System.UriTemplate> Sınıfı bir şablon için bir aday URI eşleştirirken düzenini ve bağlantı noktası numarası yok sayar.  
+> <xref:System.UriTemplate> Sınıf, bir aday URI 'yi bir şablonla eşleştirirken düzen ve bağlantı noktası numarasını yoksayar.  
   
- Bir şablondan bir URI oluşturmayı sağlayan iki farklı yöntemle <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> ve <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> Temel adres ve parametrelerin ad/değer koleksiyonunu alır. Şablon bağlandığında bu parametreler için değişkenleri yerine kullanılır. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> ad/değer çiftlerini alır ve bunları soldan sağa yerini alır.  
+ Bir şablondan <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> URI oluşturmanıza izin veren iki yöntem vardır ve <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>bir taban adresi ve parametrelerin ad/değer koleksiyonunu alır. Bu parametreler, şablon bağlandığında değişkenler için değiştirilir. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>ad/değer çiftlerini alır ve bunları soldan sağa koyar.  
   
- <xref:System.UriTemplate.ToString> Şablon dizeyi döndürür.  
+ <xref:System.UriTemplate.ToString>Şablon dizesini döndürür.  
   
- <xref:System.UriTemplate.PathSegmentVariableNames%2A> Özelliği, şablonu dizedeki yol kesimleri içinde kullanılan değişkenlerin adlarını koleksiyonunu içerir.  
+ <xref:System.UriTemplate.PathSegmentVariableNames%2A> Özelliği, şablon dizesindeki yol kesimleri içinde kullanılan değişkenlerin adlarının bir koleksiyonunu içerir.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> alan bir <xref:System.UriTemplate> bir parametre olarak ve iki şablon eşdeğer olup olmadığını belirten bir Boole değeri döndürür. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde şablon denkliği bölümüne bakın.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>bir <xref:System.UriTemplate> parametresini parametre olarak alır ve iki şablonun eşdeğer olup olmadığını belirten bir Boole değeri döndürür. Daha fazla bilgi için bu konunun ilerleyen kısımlarında yer alarak şablon denklik bölümüne bakın.  
   
- <xref:System.UriTemplate> HTTP URI dilbilgisi uyan herhangi bir URI şeması ile çalışacak şekilde tasarlanmıştır. Desteklenen URI düzenleri örnekleri aşağıda verilmiştir.  
+ <xref:System.UriTemplate>, HTTP URI dilbilgisine uygun herhangi bir URI şeması ile çalışacak şekilde tasarlanmıştır. Aşağıda desteklenen URI düzenlerinin örnekleri verilmiştir.  
   
 - http://  
   
@@ -52,119 +52,119 @@ Web geliştiricileri şekil ve hizmetlerini yanıt bir URI'leri düzenini açık
   
 - sb://  
   
- Düzenleri gibi file:// ve urn: / / değil HTTP URI dilbilgisi uygun ve URI şablonları ile kullanıldığında öngörülemeyen sonuçlara neden.  
+ File://ve urn://gibi düzenler HTTP URI dilbilgisine uymuyor ve URI şablonlarıyla birlikte kullanıldığında öngörülemeyen sonuçlara neden olur.  
   
-### <a name="template-string-syntax"></a>Şablon dizesi söz dizimi  
- Bir şablon üç bölümden oluşur: bir yol, isteğe bağlı bir sorgu ve isteğe bağlı bir parçası. Örneğin, aşağıdaki şablonu bakın:  
+### <a name="template-string-syntax"></a>Şablon dizesi sözdizimi  
+ Şablon üç bölümden oluşur: yol, isteğe bağlı sorgu ve isteğe bağlı bir parça. Bir örnek için, aşağıdaki şablona bakın:  
   
 ```  
 "/weather/{state}/{city}?forecast={length)#frag1  
 ```  
   
- Yolun oluşan "/weather/ {state} / {Şehir}", sorgu oluşan"? tahmini {length} ="#frag1"parça oluşur.  
+ Yol "/dalgalı ther/{State}/{City}" bilgisinden oluşur, sorgu "? tahmine = {length} ve parça" #frag1 "bilgisinden oluşur.  
   
- Baştaki ve sondaki eğik çizgi yolu ifade isteğe bağlıdır. Sorgu ve parça ifadeler tamamen atlanabilir. Segment tarafından ayrılmış bir dizi yol oluşan '/', her bir kesim değişmez değer, bir değişken adı ({küme ayraçları içine} yazılmış) veya bir joker karakter olabilir (yazılmış olarak\*'). Önceki şablonda "\weather\ segmenttir bir değişmez değer"{state}"ve"{city}"olan değişkenler. Değişkenleri alabilir, küme ayracı içeriğini kendi adından ve oluşturmak için somut bir değer daha sonra değiştirilebilir bir *URI kapalı*. Joker karakter isteğe bağlıdır, ancak yalnızca burada "yolun rest" mantıksal olarak eşleşen bir URI sonunda görünebilir.  
+ Yol ifadesinde öndeki ve sondaki eğik çizgiler isteğe bağlıdır. Hem sorgu hem de parça ifadeleri tamamen atlanabilir. Bir yol, '/' ile ayrılmış bir dizi kesimden oluşur, her segment bir sabit değer, değişken adı ({küme ayraçları} içinde yazılmış) veya joker karakter ('\*' olarak yazılmış) olabilir. Önceki şablonda, "{State}" ve "{City}" değişkenleri olan "\dalgalı ther\ segmenti değişmez değer değeridir. Değişkenler, bunların adlarını kendi küme ayraçları içeriğinden alır ve daha sonra *kapalı bır URI*oluşturmak için somut bir değer ile değiştirilebilir. Joker karakter isteğe bağlıdır, ancak yalnızca URI sonunda görünebilir, burada "yolun geri kalanı" ile mantıksal olarak eşleşir.  
   
- Sırasız ad/değer çiftleri tarafından ayrılmış bir dizi varsa, sorgu ifadesi belirtir '&'. Sorgu ifadesinin öğeleri değişmez değer çifti olabilir (x = 2) veya bir değişken çifti (x = {var}). Sorgu yalnızca sağ tarafında bir değişken bir ifadeye sahip olabilir. ({birad} = {in değeri Birdeğer} izin verilmiyor. Değerleri bitiştirilen (? x) izin verilmez. Boş sorgu ifadesi yalnızca bir tek oluşan bir sorgu ifadesi arasındaki fark yoktur '?' (her ikisi de "herhangi bir sorgu" anlamına gelir).  
+ Sorgu ifadesi varsa, ' & ' ile ayrılmış bir sıralı ad/değer çiftleri serisi belirtir. Sorgu ifadesinin öğeleri, sabit değer çiftleri (x = 2) veya bir değişken çifti (x = {var}) olabilir. Sorgunun yalnızca sağ tarafında bir değişken ifadesi olabilir. ({someName} = {someValue} öğesine izin verilmiyor. Eşlenmemiş değerlere (? x) izin verilmez. Boş bir sorgu ifadesi ve yalnızca tek bir '? ' içeren bir sorgu ifadesi arasında fark yoktur (her ikisi de "herhangi bir sorgu").  
   
- Parça ifadesi değişmez değer oluşabilir, değişken izin verilir.  
+ Parça ifadesi bir değişmez değerden oluşabilir, hiçbir değişkene izin verilmez.  
   
- Bir şablon dize içindeki tüm şablon değişken adları benzersiz olmalıdır. Şablon değişkeni adları büyük/küçük harfe duyarsızdır.  
+ Bir şablon dizesi içindeki tüm şablon değişken adları benzersiz olmalıdır. Şablon değişken adları büyük/küçük harfe duyarlıdır.  
   
  Geçerli şablon dizeleri örnekleri:  
   
 - ""  
   
-- "/shoe"  
+- "/Shoe"  
   
-- "/shoe/\*"  
+- "/Shoe/\*"  
   
-- "{ayakkabı} / bot"  
+- "{Shoe}/bot"  
   
-- "{ayakkabı} / {{quilt} /bed/ bot}"  
+- "{Shoe}/{Boat}/Bed/{Quilt}"  
   
-- "ayakkabı / {bot}"  
+- "Shoe/{bot}"  
   
-- "ayakkabı / {bot} /\*"  
+- "Shoe/{bot}/\*"  
   
-- "shoe/boat?x=2"  
+- "Shoe/bot? x = 2"  
   
-- "shoe/{boat}?x={bed}"  
+- "Shoe/{bot}? x = {yatak}"  
   
-- "ayakkabı / {bot}? = {yatak} & y x bant ="  
+- "Shoe/{bot}? x = {yatak} & y = bant"  
   
-- "?x={shoe}"  
+- "? x = {Shoe}"  
   
-- "shoe?x=3&y={var}  
+- "Shoe? x = 3 & y = {var}  
   
  Geçersiz şablon dizeleri örnekleri:  
   
-- "{ayakkabı} / {AYAKKABI} / x 2 =" – Yinelenen değişken adları.  
+- "{Shoe}/{SHOE}/x = 2" – yinelenen değişken adları.  
   
-- "{ayakkabı} /boat/? yatak {ayakkabı} =" – Yinelenen değişken adları.  
+- "{Shoe}/Boat/? yatak = {Shoe}"-yinelenen değişken adları.  
   
-- "? x = 2 & x 3 =" – değişmez değerleri olsalar bile bir sorgu dizesi içinde ad/değer çiftleri benzersiz olmalıdır.  
+- "? x = 2 & x = 3" – bir sorgu dizesi içindeki ad/değer çiftleri, değişmez değerler olsa bile benzersiz olmalıdır.  
   
-- "? x 2 = &" – sorgu dizesi yanlış biçimlendirilmiş.  
+- "? x = 2 &" – sorgu dizesi hatalı biçimlendirilmiş.  
   
-- "? 2 & x = {ayakkabı}" – ad/değer çiftleri sorgu dizesi olması gerekir.  
+- "? 2 & x = {Shoe}" – sorgu dizesi ad/değer çiftleri olmalıdır.  
   
-- "? y = 2 & & X = 3" – adları ile başlayamaz, sorgu dizesi olmalıdır ad değer çiftleri '&'.  
+- "? y = 2 & & X = 3" – sorgu dizesi ad değer çiftleri olmalıdır, adlar ' & ' ile başlayamaz.  
   
 ### <a name="compound-path-segments"></a>Bileşik yol kesimleri  
- Bileşik yol kesimleri değişmez değerler ile birleştirilmiş değişkenleri yanı sıra birden çok değişkenleri içerecek şekilde tek bir URI yol kesimi izin verir. Geçerli bir bileşik yol kesimleri örnekleri aşağıda verilmiştir.  
+ Bileşik yol kesimleri, tek bir URI yol segmentinin birden çok değişken ve değişmez değerler ile birleştirilmiş değişkenler içermesini sağlar. Aşağıda geçerli bileşik yol segmentlerinin örnekleri verilmiştir.  
   
-- /filename. {ext} /  
+- kısaltın. {ext}/  
   
-- /{filename}.jpg/  
+- /{filename}.exe jpg/  
   
-- / {filename}. {ext} /  
+- kısaltın. {ext}/  
   
-- / {bir}. {b}someLiteral{c}({d}) /  
+- a. {b} someLiteral {c} ({d})/  
   
- Geçersiz yol kesimleri örnekleri aşağıda verilmiştir.  
+ Aşağıda geçersiz yol kesimlerinin örnekleri verilmiştir.  
   
-- /{} -Değişkenler adlandırılmış.  
+- /{} -Değişkenlerin adlandırılması gerekir.  
   
-- / {ayakkabı} {bot} - değişkenleri, bir sabit değer ayrılmalıdır.  
+- /{Shoe}{Boat}-değişkenlerin bir sabit değer ile ayrılması gerekir.  
   
 ### <a name="matching-and-compound-path-segments"></a>Eşleşen ve bileşik yol kesimleri  
- Bileşik yol kesimleri tek bir yol kesimi içinde birden fazla değişken olan UriTemplate tanımlamanızı sağlar. Örneğin, aşağıdaki şablonu dizesi: "Adresleri / {state}. {Şehir} "(durumu ve şehir) iki değişken aynı kesim içinde tanımlanır. Bu şablon bir URL gibi BC `http://example.com/Washington.Redmond` ancak gibi bir URL eşleşecektir `http://example.com/Washington.Redmond.Microsoft`. İkinci durumda, "Washington" durumu değişkenini içerir ve "Redmond.Microsoft" Şehir değişkeni içerir. Bu durumda herhangi bir metin (dışında '/') {Şehir} değişkeni eşleşir. "Ek" metin eşleşmeyeceği bir şablon istiyorsanız, değişken içinde ayrı bir şablon segment, örneğin yerleştirin: "Adresleri / {state} / {şehir}.  
+ Bileşik yol kesimleri, tek bir yol segmentinde birden çok değişken içeren bir UriTemplate tanımlamanızı sağlar. Örneğin, aşağıdaki şablon dizesinde: "Adresler/{State}. {City} "iki değişken (eyalet ve şehir) aynı segment içinde tanımlanır. Bu şablon gibi bir URL `http://example.com/Washington.Redmond` ile eşleşir, ancak aynı zamanda gibi bir `http://example.com/Washington.Redmond.Microsoft`URL ile eşleşir. İkinci durumda, durum değişkeni "Washington" ve City değişkeni "Redmond. Microsoft" içerecektir. Bu durumda, herhangi bir metin ('/' hariç) {City} değişkeniyle eşleşir. "Ekstra" metinle eşleşmeyen bir şablon istiyorsanız, değişkeni ayrı bir şablon segmentine yerleştirin, örneğin: "Adresler/{State}/{City}.  
   
-### <a name="named-wildcard-segments"></a>Adlandırılmış bir joker karakter segmentleri  
- Değişken adı joker karakteri ile başlayan yol değişkeni kesimini bir adlandırılmış joker segmenttir '\*'. Aşağıdaki şablonu dizesi "ayakkabı" adlı bir adlandırılmış bir joker karakter segmenti içerir.  
+### <a name="named-wildcard-segments"></a>Adlandırılmış joker kesimleri  
+ Adlandırılmış joker karakter segmenti, değişken adı '\*' joker karakteriyle başlayan herhangi bir yol değişkeni segmentdir. Aşağıdaki şablon dizesi "Shoe" adlı adlandırılmış bir joker karakter segmentini içerir.  
   
 ```  
 "literal/{*shoe}"  
 ```  
   
- Joker karakter kesimleri, aşağıdaki kurallara uymalıdır:  
+ Joker karakter kesimleri aşağıdaki kurallara uymalıdır:  
   
-- En fazla olabilir her şablon dizesi için bir adlandırılmış bir joker karakter segmenti.  
+- Her bir şablon dizesi için en fazla bir adlandırılmış joker karakter segmenti olabilir.  
   
-- Bir adlandırılmış bir joker karakter segmenti yolun en sağdaki kesimi sırasında yer almalıdır.  
+- Adlandırılmış bir joker karakter segmenti, yoldaki en sağ kesimde görünmelidir.  
   
-- Bir adlandırılmış bir joker karakter segmenti aynı şablon dize içindeki bir anonim bir joker karakter segmenti ile bir arada bulunamaz.  
+- Adlandırılmış bir joker karakter segmenti aynı şablon dizesinde anonim bir joker karakterle birlikte bulunamaz.  
   
-- Bir adlandırılmış bir joker karakter segmenti adı benzersiz olmalıdır.  
+- Adlandırılmış bir joker karakter kesiminin adı benzersiz olmalıdır.  
   
-- Joker adlı segmentleri varsayılan değerlere sahip olamaz.  
+- Adlandırılmış joker karakter kesimleri varsayılan değerlere sahip olamaz.  
   
-- Adlandırılmış bir joker karakter kesimleri ile bitemez "/".  
+- Adlandırılmış joker kesimleri "/" ile bitemez.  
   
 ### <a name="default-variable-values"></a>Varsayılan değişken değerleri  
- Değişken değerleri varsayılan şablonu içindeki değişkenleri için varsayılan değerlere belirtmenizi sağlar. Varsayılan değişkenleri değişkenini tanımlamak ve küme ayraçlarının veya bir koleksiyon olarak belirtilebilir UriTemplate oluşturucuya geçirilen. Aşağıdaki şablonu belirlemek için iki yolunu gösterir bir <xref:System.UriTemplate> varsayılan değerlerle değişkenleriyle.  
+ Varsayılan değişken değerleri bir şablon içindeki değişkenler için varsayılan değerleri belirtmenize izin verir. Varsayılan değişkenler, değişkeni bildiren küme ayraçları ile veya UriTemplate oluşturucusuna geçirilen bir koleksiyon olarak belirtilebilir. Aşağıdaki şablonda, varsayılan değerleri olan değişkenleri içeren bir <xref:System.UriTemplate> belirtmek için iki yol gösterilmektedir.  
   
 ```csharp
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
 ```  
   
- Bu şablon adında bir değişken bildirir `a` varsayılan değerini `1` ve adlı bir değişken `b` varsayılan değerini `5`.  
+ `a` Bu şablon, varsayılan `1` değeri olan adlı bir değişken ve varsayılan değeri `5`olan adlı `b` bir değişken bildirir.  
   
 > [!NOTE]
->  Yalnızca yol kesimi değişkenleri varsayılan değerlere sahip izin verilir. Sorgu dizesi değişkenlerinin, bileşik bir segment değişkenleri ve adlandırılmış joker değişkenleri varsayılan değerlere sahip izin verilmez.  
+> Yalnızca yol kesimi değişkenlerinin varsayılan değerlere sahip olmasına izin verilir. Sorgu dizesi değişkenleri, bileşik kesim değişkenleri ve adlandırılmış joker dizeler varsayılan değerlere sahip olamaz.  
   
- Aşağıdaki kod, bir aday URI eşleştirirken varsayılan değişken değerleri nasıl işleneceğini gösterir.  
+ Aşağıdaki kod, bir aday URI ile eşleştirilirken varsayılan değişken değerlerinin nasıl işlendiğini gösterir.  
   
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/");
@@ -192,9 +192,9 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
-> Bir URI gibi `http://localhost:8000///` önceki kodda, ancak listelenen şablonu eşleşmiyor gibi bir URI `http://localhost:8000/` yapar.  
+> Gibi bir URI `http://localhost:8000///` , önceki kodda listelenen şablonla eşleşmez, ancak gibi bir URI `http://localhost:8000/` .  
   
- Aşağıdaki kod, bir URI ile bir şablon oluştururken varsayılan değişken değerleri nasıl işleneceğini gösterir.  
+ Aşağıdaki kod, bir şablon ile URI oluştururken varsayılan değişken değerlerinin nasıl işlendiğini gösterir.  
   
 ```csharp
 Uri baseAddress = new Uri("http://localhost:8000/");  
@@ -222,7 +222,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Bound URI: http://localhost:8000/test/10/5  
 ```  
   
-Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtlamalar vardır. Bir değişken varsayılan değerine sahip olabilir `null` değişken şablon dizesi doğru çoğu Segmentte içeriyorsa veya segment sağındaki tüm parçaları varsayılan değerleri varsa `null`. Varsayılan değerleri ile geçerli şablon dizeleri şunlardır `null`:  
+Bir değişkene varsayılan değer `null` verildiğinde, bazı ek kısıtlamalar vardır. Değişken, şablon dizesinin en sağ alt segmentinde yer alıyorsa veya segmentin sağ tarafındaki tüm segmentlerin varsayılan `null` `null`değerleri içeriyorsa, bir değişken varsayılan değeri olabilir. Aşağıda varsayılan değerleri `null`olan geçerli şablon dizeleri verilmiştir:  
   
 - `UriTemplate t = new UriTemplate("shoe/{boat=null}");`
 
@@ -230,48 +230,48 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
 
- Varsayılan değerler ile geçersiz şablon dizeleri şunlardır `null`:  
+ Varsayılan değerleri `null`geçersiz olan şablon dizeleri aşağıda verilmiştir:  
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value`
 
-### <a name="default-values-and-matching"></a>Varsayılan değerleri ve eşleştirme  
- Bir aday URI varsayılan değerlere sahip bir şablon ile eşleştirme yapılırken varsayılan değerleri yerleştirilir <xref:System.UriTemplateMatch.BoundVariables%2A> değerleri adayı URI'nda belirtilmezse koleksiyonu.  
+### <a name="default-values-and-matching"></a>Varsayılan değerler ve eşleştirme  
+ Bir aday URI 'yi varsayılan değerlere sahip bir şablonla eşleştirirken, aday URI 'sinde değerler belirtilmemişse varsayılan değerler <xref:System.UriTemplateMatch.BoundVariables%2A> koleksiyona yerleştirilir.  
   
-### <a name="template-equivalence"></a>Şablon eşdeğerlik  
- İki şablon söylediğiniz olmasını *yapısal olarak eşdeğer* aynı segmentler değişkenleriniz ve ne zaman tüm şablonları değişmez değerleri eşleşmiyor. Örneğin aşağıdaki şablonlardan yapısal olarak eşdeğerdir:  
+### <a name="template-equivalence"></a>Şablon denklik  
+ Tüm şablonların sabit değerleri eşleşiyorsa ve aynı kesimlerde değişkenler olduğunda, iki şablon *yapısal olarak eşdeğer* olarak kabul edilir. Örneğin, aşağıdaki şablonlar yapısal olarak eşdeğerdir:  
   
-- /b b /a/ {var1} / {var2}? x = 1 & y = 2  
+- /a/{var1}/b b/{var2}? x = 1 & y = 2  
   
 - a/{x}/b%20b/{var1}?y=2&x=1  
   
-- a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B% 20B/{z}/? y = 2 & x = 1  
   
- Fark gereken bazı noktalar:  
+ Dikkat etmeniz gereken birkaç nokta vardır:  
   
-- Bir şablon önde gelen eğik çizgiler içeriyorsa, yalnızca ilki göz ardı edilir.  
+- Bir şablon önünde eğik çizgi içeriyorsa, yalnızca ilki yok sayılır.  
   
-- Yapısal denklik için şablon dizeleri karşılaştırırken çalışması için değişken adları yok sayılır ve yol kesimleri, sorgu dizeleri büyük/küçük harfe duyarlıdır.  
+- Yapısal denklik için şablon dizelerini karşılaştırırken, değişken adları ve yol kesimleri için durum yoksayıldı, sorgu dizeleri büyük/küçük harfe duyarlıdır.  
   
-- Sorgu dizeleri, sırasız.  
+- Sorgu dizeleri sırasız.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- <xref:System.UriTemplateTable> Sınıfı temsil eder, ilişkili bir tablosu <xref:System.UriTemplate> bağlı olan nesneleri geliştirici bir nesne seçme. A <xref:System.UriTemplateTable> en az bir içeren <xref:System.UriTemplate> çağrılmadan önce <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>. İçeriği bir <xref:System.UriTemplateTable> kadar değiştirilebilir <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> çağrılır. Doğrulama işlemi gerçekleştirildiğinde, <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> çağrılır. Değerin doğrulaması türüne bağlıdır `allowMultiple` parametresi <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>.  
+ Sınıfı, geliştiricinin seçme nesnesine bağlantılı <xref:System.UriTemplate> nesnelerin ilişkilendirilebilir tablosunu temsil eder. <xref:System.UriTemplateTable> ' Nin çağrılmadan <xref:System.UriTemplate> <xref:System.UriTemplateTable> önceenazbir<xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>tane içermesi gerekir. Bir <xref:System.UriTemplateTable> öğesinin içeriği çağrılana kadar <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> değiştirilebilir. Çağrıldığında doğrulama gerçekleştirilir <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> . Gerçekleştirilen doğrulamanın türü, `allowMultiple` <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>parametresinin değerine bağlıdır.  
   
- Zaman <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> tümleştirilmesidir adlı `false`, <xref:System.UriTemplateTable> denetler tablosunda hiçbir şablon olmadığından emin olun. Bu yapısal olarak eşdeğer herhangi bir şablon bulunursa, bir özel durum oluşturur. Bu ile birlikte kullanılan <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> yalnızca tek bir şablonda sağlamak istediğinizde bir gelen URI ile eşleşir.  
+ <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> İçinde`false`geçirmeçağrıldığında, tabloda hiçbir şablon olmadığından emin olmak için kontroleder.<xref:System.UriTemplateTable> Yapısal olarak eşdeğer şablonlar bulursa, bir özel durum oluşturur. Bu, bir gelen URI ile <xref:System.UriTemplateTable.MatchSingle%28System.Uri%29> eşleşen yalnızca bir şablonun olduğundan emin olmak istediğiniz zaman ile birlikte kullanılır.  
   
- Zaman <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> tümleştirilmesidir adlı `true`, <xref:System.UriTemplateTable> birden çok, yapısal olarak eşdeğer şablonlarını kapsamında yer alan bir <xref:System.UriTemplateTable>.  
+ İçinde geçirme çağrıldığında ,<xref:System.UriTemplateTable> birden çok, yapısal olarak denk şablonların bir <xref:System.UriTemplateTable>içinde yer almasına izin verir. `true` <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>  
   
- Bir dizi <xref:System.UriTemplate> eklenen nesneleri bir <xref:System.UriTemplateTable> bunlar olmamalıdır belirsiz sorgu dizelerini içerir. Aynı sorgu dizelerine izin verilir.  
+ <xref:System.UriTemplate> Bir<xref:System.UriTemplateTable> nesne kümesine eklenen bir sorgu dizesi varsa, bunların belirsiz olmaması gerekir. Özdeş sorgu dizelerine izin verilir.  
   
 > [!NOTE]
->  Sırada <xref:System.UriTemplateTable> temel adreslerinin dışındaki HTTP düzenini, kullanım düzenleri ve bağlantı noktası numarası yok sayılır şablonları için aday URI'ler eşleştirirken sağlar.  
+> HTTP dışındaki şemaları kullanan temel adreslere izinverdiğinden,adayURI'lerişablonlarlaeşleştirilirkendüzenvebağlantınoktasınumarasıyoksayılır.<xref:System.UriTemplateTable>  
   
 ### <a name="query-string-ambiguity"></a>Sorgu dizesi belirsizlik  
- Birden fazla şablon eşleşen bir URI ise paylaşımına eşdeğer bir yol şablonları belirsiz sorgu dizelerini içerir.  
+ Bir eşdeğer yolu paylaşan şablonlar, birden fazla şablonla eşleşen bir URI varsa belirsiz sorgu dizeleri içerir.  
   
- Sorgu dizeleri aşağıdaki kümesi içinde kendilerini durumdaysalar:  
+ Aşağıdaki sorgu dizeleri kümeleri kendi içinde belirsiz:  
   
 - ?x=1  
   
@@ -279,7 +279,7 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - ?x=3  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
 - ?x=2&z={var}  
   
@@ -293,40 +293,40 @@ Ne zaman bir değişkeni verilir varsayılan değerini `null` bazı ek kısıtla
   
 - ?  
   
-- ? m = get & c rss =  
+- ? m = get & c = RSS  
   
-- ? m = put & c rss =  
+- ? m = put & c = RSS  
   
-- ? m = get & c atom =  
+- ? m = get & c = atom  
   
-- ? m = put & c atom =  
+- ? m = put & c = atom  
   
- Aşağıdaki sorgu dizesi şablonları kümesi içinde kendilerini belirsizdir:  
+ Aşağıdaki sorgu dizesi şablonları kümeleri kendileri içinde belirsizdir:  
   
 - ?x=1  
   
 - ?x={var}  
   
- "x = 1"-iki şablon eşleşir.  
+ "x = 1"-her iki şablon da eşleşir.  
   
 - ?x=1  
   
 - ? y = 2  
   
- "x = 1 & y = 2" iki şablon eşleşir. Şablon ile eşleşen sonra daha fazla sorgu dizesi değişkenlerinin bir sorgu dizesi içerebilir olmasıdır.  
+ "x = 1 & y = 2", her iki şablonlarla de eşleşir. Bunun nedeni, bir sorgu dizesinin daha fazla sorgu dizesi değişkeni içermesi olabilir ve bundan sonra eşleşen şablondur.  
   
 - ?x=1  
   
-- ?x=1&y={var}  
+- ? x = 1 & y = {var}  
   
- "x = 1 & y 3 =" iki şablon eşleşir.  
+ "x = 1 & y = 3" her iki şablonlarla de eşleşir.  
   
-- ?x=3&y=4  
+- ? x = 3 & y = 4  
   
 - ?x=3&z=5  
   
 > [!NOTE]
-> Karakter á ve Á bir URI yolu bir parçası olarak görünürler, farklı karakterler olarak değerlendirilir veya <xref:System.UriTemplate> yol kesimi değişmez değer (ancak karakterler a ve A ile aynı olarak kabul edilir). Karakter á ve Á bir parçası olarak görünürler, aynı karakterler olarak değerlendirilir <xref:System.UriTemplate> {variableName} ya da bir sorgu dizesi (ve a ve bir de kabul edilir aynı karakterler olabilir).  
+> Á ve á karakterleri, bir URI yolu veya <xref:System.UriTemplate> yol segmenti değişmez değerinin bir parçası olarak görüntülendiklerinde farklı karakterler olarak değerlendirilir (ancak a ve a karakterleri aynı olduğu kabul edilir). Á ve á karakterleri, bir <xref:System.UriTemplate> {VariableName} veya bir sorgu dizesinin (ve ' de aynı karakterler olarak kabul edilir) bir parçası olarak göründükleri karakterlerle aynı karakterler olarak değerlendirilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -6,73 +6,73 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 369c434f5443334ccb8b136ce50ff2d5db8ece01
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966978"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963441"
 ---
 # <a name="how-keyboard-input-works"></a>Klavye Girdisi Nasıl Çalışır
-Windows Forms klavye girdisi Windows iletilere yanıt olarak klavye olayları yükselterek işler. Çoğu Windows Forms uygulamaları klavye girişi, klavye olaylarını işleme tarafından özel olarak işler. Ancak, bir denetim ulaşmadan önce anahtarları kesintiye gibi daha gelişmiş klavye girişi senaryoları uygulayabilmesi klavye iletileri nasıl çalıştığını anlamak gerekir. Bu konu, Windows Forms tanır ve klavye iletileri nasıl yönlendirileceğini genel bir bakış sağlar anahtar veri türlerini açıklar. Klavye olaylarını hakkında daha fazla bilgi için bkz. [kullanan klavye olayları](using-keyboard-events.md).  
+Windows Forms, Windows iletilerine yanıt olarak klavye olaylarını yükselterek klavye girişini işler. Çoğu Windows Forms uygulama klavye olaylarını işleyerek klavye girişini yalnızca işler. Ancak klavye iletilerinin nasıl çalıştığını anlamanız gerekir. böylece, bir denetime erişmeden önce anahtarları kesintiye uğratan önce, daha gelişmiş klavye girişi senaryolarına de uygulayabilirsiniz. Bu konu, Windows Forms tanıdığı anahtar verisi türlerini açıklar ve klavye iletilerinin nasıl yönlendirildiğini gösteren bir genel bakış sağlar. Klavye olayları hakkında daha fazla bilgi için bkz. [klavye olaylarını kullanma](using-keyboard-events.md).  
   
-## <a name="types-of-keys"></a>Anahtar türü  
- Windows Forms bit düzeyi tarafından temsil edilen sanal anahtar kodlarını olarak klavye girişi tanımlayan <xref:System.Windows.Forms.Keys> sabit listesi. İle <xref:System.Windows.Forms.Keys> numaralandırma basılı tuşlarını kullanarak tek bir değer bir dizi birleştirebilirsiniz. Bu değerler WM_KEYDOWN ve WM_SYSKEYDOWN Windows iletilerle değerlere karşılık gelir. Çoğu fiziksel tuş basışlarını işleyerek algılayabilir <xref:System.Windows.Forms.Control.KeyDown> veya <xref:System.Windows.Forms.Control.KeyUp> olayları. Karakter anahtarları olan bir alt kümesini <xref:System.Windows.Forms.Keys> numaralandırma ve WM_CHAR ve WM_SYSCHAR Windows iletilerle değerlere karşılık gelir. Basılan anahtarları birleşimi bir karakter sonuçlanırsa, karakter işleyerek algılayabilir <xref:System.Windows.Forms.Control.KeyPress> olay. Alternatif olarak, <xref:Microsoft.VisualBasic.Devices.Keyboard>, hangi anahtarları basılan bulmak ve anahtarları göndermek için Visual Basic programlama arabirimi tarafından sunulan. Daha fazla bilgi için [klavyeye erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
+## <a name="types-of-keys"></a>Anahtar türleri  
+ Windows Forms, klavye girişini bit düzeyinde <xref:System.Windows.Forms.Keys> numaralandırma tarafından temsil edilen sanal anahtar kodları olarak tanımlar. <xref:System.Windows.Forms.Keys> Numaralandırmada, bir dizi basılan tuşu birleştirerek tek bir değer elde edebilirsiniz. Bu değerler, WM_KEYDOWN ve WM_SYSKEYDOWN Windows iletilerine eşlik eden değerlere karşılık gelir. <xref:System.Windows.Forms.Control.KeyDown> Veya<xref:System.Windows.Forms.Control.KeyUp> olaylarını işleyerek fiziksel anahtar basışlarını tespit edebilirsiniz. Karakter anahtarları, <xref:System.Windows.Forms.Keys> numaralandırmanın bir alt kümesidir ve WM_CHAR ve wm_syschar Windows iletilerine eşlik eden değerlere karşılık gelir. Basılan anahtarların birleşimi bir karakter ile sonuçlanırsa, <xref:System.Windows.Forms.Control.KeyPress> olayı işleyerek karakteri tespit edebilirsiniz. Alternatif olarak, hangi anahtarların <xref:Microsoft.VisualBasic.Devices.Keyboard>basılan ve hangi anahtarlara gönderileceğini öğrenmek için Visual Basic programlama arabirimi tarafından açığa çıkarılan ' i kullanabilirsiniz. Daha fazla bilgi için bkz. [klavyeye erişme](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## <a name="order-of-keyboard-events"></a>Klavye olayların sırası  
- Daha önce belirtildiği gibi var olan 3 klavye ile denetim oluşabilecek ilgili olaylar. Genel olayların sırası aşağıdaki sırayı gösterir:  
+## <a name="order-of-keyboard-events"></a>Klavye olaylarının sırası  
+ Daha önce listelendiğinde, bir denetimde gerçekleşebileceğini 3 klavye ile ilgili olaylar vardır. Aşağıdaki sırada olayların genel sırası gösterilmektedir:  
   
-1. Kullanıcı, "a" anahtarı gönderir, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyDown> olayı oluşur.  
+1. Kullanıcı "a" anahtarını iter, anahtar önceden işlenir, gönderilir ve bir <xref:System.Windows.Forms.Control.KeyDown> olay oluşur.  
   
-2. Kullanıcı, "a" anahtar tutar, bu anahtar, gönderilen, önceden işlenmiş ve bir <xref:System.Windows.Forms.Control.KeyPress> olayı oluşur.  
+2. Kullanıcı, "a" anahtarını barındırır, anahtar önceden işlenir, gönderilir ve bir <xref:System.Windows.Forms.Control.KeyPress> olay oluşur.  
   
-     Bu olay, kullanıcı tutan bir anahtar olarak birden çok kez gerçekleşir.  
+     Bu olay, Kullanıcı bir anahtar taşıdığı için birden çok kez meydana gelir.  
   
-3. "A" anahtar, anahtar önceden işlenmiş, kullanıcı yayınlar gönderilir ve <xref:System.Windows.Forms.Control.KeyUp> olayı oluşur.  
+3. Kullanıcı, "a" anahtarını yayınlar, anahtar önceden işlenir, gönderilir ve bir <xref:System.Windows.Forms.Control.KeyUp> olay oluşur.  
   
 ## <a name="preprocessing-keys"></a>Ön işleme anahtarları  
- Klavye iletileri işlenir diğer iletiler gibi <xref:System.Windows.Forms.Control.WndProc%2A> bir form veya denetim yöntemi. Bununla birlikte, önce klavye iletileri işlenir, <xref:System.Windows.Forms.Control.PreProcessMessage%2A> yöntemi özel karakter anahtarlar ve fiziksel anahtarlar işlemek için geçersiz kılınabilir bir veya daha fazla yöntemi çağırır. Algılama ve iletileri denetim tarafından işlenmeden önce belirli anahtarlar filtrelemek için bu yöntemleri geçersiz kılabilirsiniz. Aşağıdaki tabloda, yöntemi oluştuğunu sırada gerçekleştirilmekte olan eylemin ve ortaya çıkan, ilgili bir yöntemi gösterir.  
+ Diğer iletiler gibi, klavye iletileri bir form veya denetim <xref:System.Windows.Forms.Control.WndProc%2A> yönteminde işlenir. Ancak, klavye iletileri işlenmeden önce, <xref:System.Windows.Forms.Control.PreProcessMessage%2A> yöntemi özel karakter anahtarlarını ve fiziksel anahtarları işlemek için geçersiz kılınabilen bir veya daha fazla yöntemi çağırır. İletiler denetim tarafından işlenmeden önce belirli anahtarları algılamak ve filtrelemek için bu yöntemleri geçersiz kılabilirsiniz. Aşağıdaki tabloda, gerçekleştirilen eylem ve yöntemin gerçekleştiği sırada gerçekleşen ilgili yöntem gösterilmektedir.  
   
 ### <a name="preprocessing-for-a-keydown-event"></a>KeyDown olayı için ön işleme  
   
-|Eylem|İlgili yöntemi|Notlar|  
+|Eylem|İlgili Yöntem|Notlar|  
 |------------|--------------------|-----------|  
-|Hızlandırıcı veya kısayol menüsü gibi bir komut anahtarı kontrol edin.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Bu yöntem, normal anahtarların üzerine öncelikli bir komut anahtarı işler. Bu yöntem döndürürse `true`, anahtar ileti değil gönderilir ve önemli bir olay meydana gelmez. Döndürürse `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> çağrılır`.`|  
-|Denetleme ön işleme gerektiren özel bir anahtar veya tetiklemelidir bir normal karakter anahtarı için bir <xref:System.Windows.Forms.Control.KeyDown> olay ve denetim için dağıtılması.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Yöntem döndürüyorsa `true`, Denetim olan normal bir karakter anlamına gelir ve <xref:System.Windows.Forms.Control.KeyDown> olayı oluşturulur. Varsa `false`, <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> çağrılır. **Not:**  Bir denetimi alır bir anahtar veya anahtarlarının emin olmak için işleyebileceği <xref:System.Windows.Forms.Control.PreviewKeyDown> olay ve kümesi <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> , <xref:System.Windows.Forms.PreviewKeyDownEventArgs> için `true` anahtar veya anahtarlarının istediğiniz.|  
-|Gezinti için bir anahtar (ESC, sekme, dönüş veya ok tuşları) denetleyin.|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|Bu yöntem denetiminde odak denetim ile üst arasında geçiş yapma gibi özel işlevler kullanan bir fiziksel anahtar işler. Kontrol anahtar işlemez <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> üst denetime vb. hiyerarşideki en üst denetim üzerinde çağrılır. Bu yöntem döndürürse `true`, ön işleme tamamlandıktan ve anahtar olay oluşturulmuyor. Döndürürse `false`, <xref:System.Windows.Forms.Control.KeyDown> olayı oluşur.|  
+|Hızlandırıcı veya Menü kısayolu gibi bir komut anahtarını kontrol edin.|<xref:System.Windows.Forms.Control.ProcessCmdKey%2A>|Bu yöntem, normal anahtarlardan daha fazla önceliğe sahip bir komut anahtarını işler. Bu yöntem `true`döndürülürse, anahtar ileti gönderilir ve bir anahtar olay oluşmaz. Döndürürse `false`, <xref:System.Windows.Forms.Control.IsInputKey%2A> çağırılır`.`|  
+|Bir <xref:System.Windows.Forms.Control.KeyDown> olayı oluşturması ve bir denetime dağıtılması gereken, ön işleme veya normal bir karakter anahtarı gerektiren özel bir anahtar olup olmadığını denetleyin.|<xref:System.Windows.Forms.Control.IsInputKey%2A>|Yöntemi döndürürse `true`, denetimin normal bir karakter ve bir <xref:System.Windows.Forms.Control.KeyDown> olay tetiklenir demektir. İse `false`çağırılır. <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> **Not:**  Bir denetimin anahtar veya anahtarların birleşimini aldığından <xref:System.Windows.Forms.Control.PreviewKeyDown> emin olmak için, olay ve kümesini <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> <xref:System.Windows.Forms.PreviewKeyDownEventArgs> istediğiniz anahtar veya anahtarlar için olarak `true` işleyebilirsiniz.|  
+|Bir gezinti anahtarı (ESC, sekme, dönüş veya ok tuşları) olup olmadığını denetleyin.|<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|Bu yöntem, denetimin içindeki özel işlevleri kullanan bir fiziksel anahtarı işler, örneğin denetim ve üstü arasındaki odağı değiştirme. Acil denetim anahtarı <xref:System.Windows.Forms.Control.ProcessDialogKey%2A> işlemezse, üst denetimde ve bu şekilde hiyerarşide en üstteki denetime çağrılır. Bu yöntem `true`döndürülürse, ön işleme tamamlanmıştır ve bir anahtar olay oluşturulmaz. Döndürürse `false` bir<xref:System.Windows.Forms.Control.KeyDown> olay oluşur.|  
   
 ### <a name="preprocessing-for-a-keypress-event"></a>KeyPress olayı için ön işleme  
   
-|Eylem|İlgili yöntemi|Notlar|  
+|Eylem|İlgili Yöntem|Notlar|  
 |------------|--------------------|-----------|  
-|Anahtar denetim tarafından işlenmesi gerektiğini normal bir karakter olup olmadığını denetleyin|<xref:System.Windows.Forms.Control.IsInputChar%2A>|Bu yöntem karakter normal bir karakter olup olmadığını döndürür `true`, <xref:System.Windows.Forms.Control.KeyPress> olayı tetiklenir ve başka ön işleme gerçekleşir. Aksi takdirde <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> olarak adlandırılır.|  
-|Karakteri bir anımsatıcı (gibi & Tamam düğmesi üzerinde) olup olmadığını denetleyin|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|Bu yöntem, benzer <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>, denetim hiyerarşisi olarak adlandırılır. Denetim bir kapsayıcı denetimi ise çağırarak anımsatıcıları için denetler <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> kendisi ve onun alt denetimler. Varsa <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> döndürür `true`, <xref:System.Windows.Forms.Control.KeyPress> olay oluşmaz.|  
+|Anahtarın denetim tarafından işlenmesi gereken normal bir karakter olup olmadığını denetleyin|<xref:System.Windows.Forms.Control.IsInputChar%2A>|Karakter normal bir karakter ise, bu yöntem döndürülür `true` <xref:System.Windows.Forms.Control.KeyPress> , olay tetiklenir ve başka bir ön işleme gerçekleşmez. Aksi <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> takdirde çağrılacaktır.|  
+|Karakterin bir anımsatıcı olup olmadığını denetleyin (örneğin, bir düğme üzerinde & Tamam)|<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|Buna benzer <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>olan bu yöntem, denetim hiyerarşisinin çağrılacaktır. Denetim bir kapsayıcı denetimidir, kendisini ve onun alt denetimlerini çağırarak <xref:System.Windows.Forms.Control.ProcessMnemonic%2A> anımsatıcıları denetler. <xref:System.Windows.Forms.Control.ProcessDialogChar%2A> Dönerse`true`bir olay<xref:System.Windows.Forms.Control.KeyPress> oluşmaz.|  
   
-## <a name="processing-keyboard-messages"></a>Klavye iletilerini işleme  
- Klavye iletileri ulaşma sonra <xref:System.Windows.Forms.Control.WndProc%2A> yöntemi bir form veya denetim bir dizi geçersiz kılınabilir yöntemleri tarafından işlenir. Bu yöntemlerin her biri döndürür bir <xref:System.Boolean> klavye ileti işlendikten ve denetim tarafından kullanılan olup olmadığını belirten değeri. Yöntemlerden birini döndürürse `true`ileti işlenen değerlendirilir ve bu denetimin taban veya üst daha ayrıntılı işleme için geçirilir. Aksi takdirde, iletinin ileti kuyruğunda kalır ve denetimin temel ya da üst başka bir yöntem olarak işlenebilir. Klavye iletileri işleyen yöntemler aşağıdaki tabloda sunulmaktadır.  
+## <a name="processing-keyboard-messages"></a>Klavye Iletilerini işleme  
+ Klavye iletileri bir form veya <xref:System.Windows.Forms.Control.WndProc%2A> denetim yöntemine ulaştığında, bunlar geçersiz kılınabilen bir dizi yöntem tarafından işlenir. Bu yöntemlerin her biri, klavye <xref:System.Boolean> mesajının denetim tarafından işlenip tüketilmediğini belirten bir değer döndürür. Yöntemlerin `true`biri döndürülürse, ileti işlenmiş olarak kabul edilir ve daha fazla işleme için denetimin tabanına veya üst öğesine geçirilmez. Aksi takdirde ileti ileti kuyruğunda kalır ve denetimin tabanında veya üst kısmında başka bir yöntemde işlenebilir. Aşağıdaki tabloda, klavye iletilerini işleyen yöntemler sunulmaktadır.  
   
 |Yöntem|Notlar|  
 |------------|-----------|  
-|<xref:System.Windows.Forms.Control.ProcessKeyMessage%2A>|Bu yöntem tarafından alınan tüm klavye iletileri işleyen <xref:System.Windows.Forms.Control.WndProc%2A> denetimin yöntemi.|  
-|<xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|Bu yöntem, üst denetimin klavye iletisi gönderir. Varsa <xref:System.Windows.Forms.Control.ProcessKeyPreview%2A> döndürür `true`, anahtar olay, aksi takdirde oluşturulan <xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A> çağrılır.|  
-|<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|Bu yöntem başlatır <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, ve <xref:System.Windows.Forms.Control.KeyUp> olayları, uygun şekilde.|  
+|<xref:System.Windows.Forms.Control.ProcessKeyMessage%2A>|Bu yöntem, denetimin <xref:System.Windows.Forms.Control.WndProc%2A> yöntemi tarafından alınan tüm klavye iletilerini işler.|  
+|<xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|Bu yöntem, klavye iletisini denetimin üst öğesine gönderir. Döndürülürse, hiçbir anahtar olay oluşturulmaz, aksi takdirde <xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A> çağrılır. `true` <xref:System.Windows.Forms.Control.ProcessKeyPreview%2A>|  
+|<xref:System.Windows.Forms.Control.ProcessKeyEventArgs%2A>|Bu yöntem,, <xref:System.Windows.Forms.Control.KeyDown>ve <xref:System.Windows.Forms.Control.KeyPress> <xref:System.Windows.Forms.Control.KeyUp> olaylarını uygun şekilde oluşturur.|  
   
-## <a name="overriding-keyboard-methods"></a>Klavye yöntemleri geçersiz kılma  
- Bir klavye iletisi önceden işlenmiş ve işlendiği zaman geçersiz kılmak için kullanılabilir birçok yöntem vardır; Ancak, bazı yöntemler diğerlerinden çok daha iyi seçenek değildir. Aşağıdaki tablo, görevleri gerçekleştirmek isteyebileceğiniz ve klavye yöntemleri geçersiz kılmak için en iyi yolu gösterir. Geçersiz kılma yöntemleri ile ilgili daha fazla bilgi için bkz: [özellikleri ve yöntemleri geçersiz kılan türetilmiş sınıfları](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes).  
+## <a name="overriding-keyboard-methods"></a>Klavye yöntemlerini geçersiz kılma  
+ Bir klavye iletisi önceden işlendiğinde ve işlendiğinde geçersiz kılmak için kullanabileceğiniz birçok yöntem vardır; Ancak bazı yöntemler diğerlerinden çok daha iyi seçimlerdir. Aşağıdaki tabloda, gerçekleştirmek isteyebileceğiniz görevler ve klavye yöntemlerini geçersiz kılmanın en iyi yolu gösterilmektedir. Yöntemleri geçersiz kılma hakkında daha fazla bilgi için bkz. [türetilmiş sınıflarda özellikleri ve yöntemleri geçersiz kılma](../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md#overriding-properties-and-methods-in-derived-classes).  
   
 |Görev|Yöntem|  
 |----------|------------|  
-|Bir gezinti anahtar kesebilir ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyDown> olay. Örneğin sekme ve dönüş metin kutusunda işlenecek isteyebilirsiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Not:**  Alternatif olarak, işleyebileceği <xref:System.Windows.Forms.Control.PreviewKeyDown> olay ve kümesi <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> , <xref:System.Windows.Forms.PreviewKeyDownEventArgs> için `true` anahtar veya anahtarlarının istediğiniz.|  
-|Özel giriş veya gezinti işleme bir denetim üzerinde gerçekleştirin. Örneğin, seçili öğeyi değiştirmek için liste denetimi ok tuşlarını kullanımını isteyebilirsiniz.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
-|Bir gezinti anahtar kesebilir ve yükseltmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin bir döndürme kutusu denetiminde öğeleri aracılığıyla ilerlemeyi hızlandırmak için birden çok ok tuşuna bastığında isteyebilirsiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Özel giriş veya gezinti işleme sırasında gerçekleştirmek bir <xref:System.Windows.Forms.Control.KeyPress> olay. Örneğin, bir listede r harfi ile başlayan öğeleri arasında "r" tuşunu basılı tutarak denetimi atlar.|geçersiz kılma <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
-|Özel anımsatıcı işlemeyi gerçekleştirir; Örneğin, araç çubuğunda yer alan özelleştirilmiş olarak çizilen düğme üzerinde anımsatıcıları işlemek istersiniz.|Geçersiz kılma <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
+|Bir gezinti anahtarını durdurur ve bir <xref:System.Windows.Forms.Control.KeyDown> olay yükseltin. Örneğin, sekme ve sonra bir metin kutusunda işlenecek şekilde geri dönmek istiyorsunuz.|Geçersiz <xref:System.Windows.Forms.Control.IsInputKey%2A>kıl. **Not:**  Alternatif olarak, istediğiniz anahtar veya <xref:System.Windows.Forms.Control.PreviewKeyDown> anahtarlar `true` için ' <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> i ve <xref:System.Windows.Forms.PreviewKeyDownEventArgs> ' ı ' a yönelik olay ve kümesini işleyebilirsiniz.|  
+|Bir denetimde özel giriş veya gezinme işlemi gerçekleştirin. Örneğin, seçili öğeyi değiştirmek için liste denetiinizdeki ok tuşlarının kullanımını istiyorsunuz.|Manızı<xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Bir gezinti anahtarını durdurur ve bir <xref:System.Windows.Forms.Control.KeyPress> olay yükseltin. Örneğin, bir döndürme kutusu denetiminde, öğelerin ilerlemesini hızlandırmak için birden fazla ok tuşuna basmayı tercih edebilirsiniz.|Geçersiz <xref:System.Windows.Forms.Control.IsInputChar%2A>kıl.|  
+|Bir <xref:System.Windows.Forms.Control.KeyPress> olay sırasında özel giriş veya gezinme işlemi gerçekleştirin. Örneğin, "r" tuşunu basılı tutan liste denetiminde r harfiyle başlayan öğeler arasında atlar.|Manızı<xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Özel anımsatıcı işleme gerçekleştirin; Örneğin, bir araç çubuğunda bulunan, sahip tarafından çizilen düğmelerde anımsatıcıları işlemek istiyorsunuz.|Geçersiz <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>kıl.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
-- [My.Computer.Keyboard Nesnesi](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
-- [Klavyeye Erişme](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
+- [My.Computer.Keyboard Nesnesi](../../visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+- [Klavyeye Erişme](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Klavye Olaylarını Kullanma](using-keyboard-events.md)

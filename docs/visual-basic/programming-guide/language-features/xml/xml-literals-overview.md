@@ -7,57 +7,57 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-ms.openlocfilehash: a7b70669131ae35135088418e4b33b3ae289d322
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4024f4ad2b2aa8cb1897e83d87a7a00b1ba25e67
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761760"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964704"
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML Değişmez Değerlerine Genel Bakış (Visual Basic)
-Bir *XML değişmez değeri* , Visual Basic kodunuzda doğrudan XML eklemenizi sağlar. XML değişmez sözdiziminin temsil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri ve bu, XML 1.0 sözdizimine benzer. Bu, kodunuzu son XML aynı yapıda olduğundan XML öğelerini ve belgeleri program aracılığıyla oluşturmak kolaylaştırır.  
+*XML sabit değeri* , doğrudan VISUAL BASIC kodunuzda XML eklemenize olanak tanır. XML sabit sözdizimi nesneleri temsil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] eder ve XML 1,0 söz dizimine benzerdir. Bu, kodunuzun son XML ile aynı yapıya sahip olması nedeniyle, programlama yoluyla XML öğelerinin ve belgelerinin oluşturulmasını kolaylaştırır.  
   
- Visual Basic, XML değişmez değerleri içine derler [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesneleri. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir Basit Nesne modeli oluşturma ve XML düzenleme ve bu modeli de ile tümleştirilir sağlar [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
+ Visual Basic xml sabit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] değerlerini nesnelere derler. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XML oluşturmak ve işlemek için basit bir nesne modeli sağlar ve bu model ile [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]iyi tümleşir. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XElement>.  
   
- Bir Visual Basic ifadesinin bir XML değişmez değer ekleyebilirsiniz. Çalışma zamanında uygulamanızın oluşturduğu bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] katıştırılmış ifadeler değerlerini ekleme her değişmez değer nesnesi. Bu sabit değeri bir XML içinde dinamik içerik belirtmenize olanak sağlar. Daha fazla bilgi için [XML'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Bir Visual Basic ifadesini bir XML değişmez değerine ekleyebilirsiniz. Çalışma zamanında, uygulamanız her sabit değer için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir nesne oluşturur ve katıştırılmış ifadelerin değerlerini dahil. Bu, bir XML sabit değeri içinde dinamik içerik belirtmenize olanak sağlar. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- XML değişmez değer söz dizimi ve XML 1.0 sözdizimi arasındaki farklar hakkında daha fazla bilgi için bkz. [XML sabit değerleri ve XML 1.0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+ XML sabit sözdizimi ve XML 1,0 sözdizimi arasındaki farklar hakkında daha fazla bilgi için bkz. [XML değişmez değerleri ve xml 1,0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
-## <a name="simple-literals"></a>Basit değişmez değerleri  
- Oluşturabileceğiniz bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne Visual Basic kod yazarak veya yapıştırarak geçerli XML biçiminde. Bir XML öğesi değişmez değeri döndüren bir <xref:System.Xml.Linq.XElement> nesne. Daha fazla bilgi için [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [XML sabit değerleri ve XML 1.0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). Aşağıdaki örnek, çeşitli alt öğeleri olan bir XML öğesi oluşturur.  
+## <a name="simple-literals"></a>Basit sabit değerler  
+ Geçerli XML 'e yazarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] veya yapıştırarak Visual Basic kodunuzda bir nesne oluşturabilirsiniz. XML öğesi değişmez değeri bir <xref:System.Xml.Linq.XElement> nesne döndürür. Daha fazla bilgi için bkz. [XML öğesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) ve [XML sabıt değerleri ve XML 1,0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md). Aşağıdaki örnek, birkaç alt öğesi olan bir XML öğesi oluşturur.  
   
  [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
- Bir XML belgesi bir XML değişmez değer ile başlatarak oluşturabileceğiniz `<?xml version="1.0"?>`, aşağıdaki örnekte gösterildiği gibi. Bir XML belgesi değişmez değeri döndüren bir <xref:System.Xml.Linq.XDocument> nesne. Daha fazla bilgi için [XML belgesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
+ Aşağıdaki örnekte gösterildiği gibi, bir XML sabit değeri ile `<?xml version="1.0"?>`başlatarak bir XML belgesi oluşturabilirsiniz. XML belgesi değişmez değeri bir <xref:System.Xml.Linq.XDocument> nesne döndürür. Daha fazla bilgi için bkz. [XML belgesi değişmez değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
->  XML değişmez sözdiziminin Visual Basic'te XML 1.0 belirtimi için sözdizimi aynı değil. Daha fazla bilgi için [XML sabit değerleri ve XML 1.0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
+> Visual Basic xml sabit sözdizimi, XML 1,0 belirtiminde söz dizimi ile aynı değil. Daha fazla bilgi için bkz. [XML değişmez değerleri ve xml 1,0 belirtimi](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).  
   
 ## <a name="line-continuation"></a>Satır devamlılığı  
- Bir XML değişmez değeri birden fazla satır, satır devamlılığı karakterleri (boşluk alt çizgi girin dizisi) kullanmadan yayılabilir. Bu, XML değişmez değerlerine XML belgeleri koduyla Karşılaştırılacak kolaylaştırır.  
+ Bir XML sabit değeri, satır devamlılık karakterleri (boşluk-alt çizgi-ENTER dizisi) kullanılmadan birden çok satıra yayılabilir. Bu, koddaki XML değişmez değerlerini XML belgeleriyle karşılaştırmayı kolaylaştırır.  
   
- Derleyicinin satır devamlılığı karakteri sabit değeri bir XML parçası olarak değerlendirir. Bu nedenle, yalnızca içinde ait olduğunda alanı alt çizgi girin dizisi kullanması gereken [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne.  
+ Derleyici, satır devamlılık karakterlerini bir XML sabit değerinin parçası olarak değerlendirir. Bu nedenle, boşluk-alt çizgi-ENTER sırasını yalnızca [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesnesine ait olduğunda kullanmanız gerekir.  
   
- Ancak, çok satırlı bir ifade bir katıştırılmış deyim içinde varsa satır devamlılığı karakteri gerekir. Daha fazla bilgi için [XML'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Ancak, katıştırılmış ifadede çok satırlı bir ifadeniz varsa, satır devamlılık karakterleri gerekir. Daha fazla bilgi için bkz. [XML 'de katıştırılmış ifadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
-## <a name="embedding-queries-in-xml-literals"></a>XML değişmez değerlerine sorgular ekleme  
- Katıştırılmış bir ifadede bir sorgu kullanabilirsiniz. Bunu yaptığınızda sorgu tarafından döndürülen öğeleri XML öğesine eklenir. Bu kullanıcının sorgusunun sonucunu gibi dinamik içerik bir XML değişmez değer eklemenizi sağlar.  
+## <a name="embedding-queries-in-xml-literals"></a>XML değişmez değerlerinde sorgu ekleme  
+ Katıştırılmış ifadede bir sorgu kullanabilirsiniz. Bunu yaptığınızda, sorgu tarafından döndürülen öğeler XML öğesine eklenir. Bu, bir kullanıcının sorgusunun sonucu gibi dinamik içeriği bir XML değişmez değerine eklemenizi sağlar.  
   
- Örneğin, aşağıdaki kodu üyelerinden XML öğeleri oluşturmak için ekli bir sorgu kullanan `phoneNumbers2` dizisi ve ardından bu öğeleri alt öğeleri Ekle `contact2`.  
+ Örneğin, aşağıdaki kod, `phoneNumbers2` dizi üyelerinden XML öğeleri oluşturmak için gömülü bir sorgu kullanır ve sonra bu öğeleri `contact2`alt öğesi olarak ekler.  
   
  [!code-vb[VbXMLSamples#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#7)]  
   
-## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>Nasıl derleyicinin XML değişmez değerlerden nesnelerini oluşturur.  
- XML değişmez değerleri Visual Basic Derleyicisi eşdeğer çağrıları dönüştürecektir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] oluşturmak için oluşturucu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne. Visual Basic Derleyicisi için bir çağrı Örneğin, aşağıdaki kod örneği İngilizceye <xref:System.Xml.Linq.XProcessingInstruction> XML sürüm yönergesi için oluşturucu çağrılar <xref:System.Xml.Linq.XElement> için oluşturucu `<contact>`, `<name>`, ve `<phone>` öğeleri ve çağrıları <xref:System.Xml.Linq.XAttribute> için oluşturucu `type` özniteliği. Öznitelikleri göz önünde bulundurulduğunda aşağıdaki örnekte, Visual Basic Derleyicisi özellikle çağıracak <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> iki kez Oluşturucusu. İlk değer geçer `type` için `name` parametresi ve değeri `home` için `value` parametresi. İkinci değer de geçecek `type` için `name` parametresi, ancak değeri `work` için `value` parametresi.  
+## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>Derleyicinin XML değişmez değerlerinde nesneleri nasıl oluşturduğu  
+ Visual Basic Derleyicisi, XML sabit değerlerini, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne oluşturmak için eşdeğer oluşturuculara çağrılar olarak çevirir. Örneğin, Visual Basic derleyici, aşağıdaki <xref:System.Xml.Linq.XProcessingInstruction> kod örneğini XML sürüm yönergesinin oluşturucusuna çağırır,, ve için <xref:System.Xml.Linq.XElement> `<contact>` `<name>`oluşturucusuna çağrı yapar ve `<phone>` öğesi ve <xref:System.Xml.Linq.XAttribute> `type` özniteliği için Oluşturucu çağrıları. Özellikle, aşağıdaki örnekteki öznitelikler verildiğinde Visual Basic derleyici, <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> oluşturucuyu iki kez çağırır. İlki `type` parametresi`name` için `home` değeri`value` ve parametresi için değeri geçecek. `type` İkincisi de `name` parametre için değeri geçecek, `value` parametrenin değeri `work` de olur.  
   
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Linq.XElement>
-- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML'de Katıştırılmış İfadeler](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [XML Belgesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML Öğesi Değişmez Değeri](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

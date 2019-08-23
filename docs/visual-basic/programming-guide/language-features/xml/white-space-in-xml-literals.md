@@ -5,38 +5,38 @@ helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-ms.openlocfilehash: 903928087d5ad9c51040ba6bf65639f44d8c7dd6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f72dcc25b158d793850069e5cc32c3a3c02fad17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627434"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939208"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML Değişmez Değerlerinde Boşluk (Visual Basic)
-Oluştururken bir XML değişmez değeri yalnızca önemli boşluk karakterlerinden Visual Basic Derleyicisi içerir. bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne. Önemsiz beyaz boşluk karakterleri dahil değildir.  
+Visual Basic derleyici bir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nesne oluşturduğunda yalnızca bir XML sabit değerinden önemli boşluk karakterleri ekler. Önemli boşluk karakterleri dahil değildir.  
   
-## <a name="significant-and-insignificant-white-space"></a>Önemli ve önemsiz boşluk  
- XML değişmez değerlerinde boşluk karakterleri yalnızca üç alanda büyük/küçük harf önemlidir:  
+## <a name="significant-and-insignificant-white-space"></a>Önemli ve çok önemli boşluk  
+ XML değişmez değerlerinde boşluk karakterleri yalnızca üç alanda önemlidir:  
   
-- Bir öznitelik değerinde olduklarında.  
+- Bir öznitelik değeri olduğunda.  
   
-- Bir öğenin metin içeriğini parçasıdır ve metin, ayrıca diğer karakterler içeriyor.  
+- Bir öğenin metin içeriğinin bir parçası olduklarında ve metin diğer karakterleri de içeriyorsa.  
   
-- Bir öğenin metin içeriğini için katıştırılmış bir ifadede olduklarında.  
+- Bir öğenin metin içeriği için gömülü bir ifadede olduklarında.  
   
- Aksi halde, derleyici beyaz boşluk karakterleri önemsiz olarak değerlendirir ve ardından içinde içermez [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] değişmez değer nesnesi.  
+ Aksi halde, derleyici boşluk karakterlerini önemli olarak değerlendirir ve daha sonra [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] değişmez değer için nesnesine içermez.  
   
- XML değişmez değer Önemsiz boşluk eklemek için boşluk bir dize içeren bir katıştırılmış deyim kullanın.  
+ Bir XML sabit değerinde boş bir boşluk eklemek için, boşluk içeren bir dize sabit değeri içeren gömülü bir ifade kullanın.  
   
 > [!NOTE]
->  Varsa `xml:space` özniteliği görünür bir XML öğesi değişmez değeri, öznitelik, Visual Basic Derleyicisi içerir <xref:System.Xml.Linq.XElement> nesne, ancak bu öznitelik derleyici boşluk nasıl işler değişmez ekleme.  
+> Öznitelik bir XML öğesi değişmez değerinde görünürse, Visual Basic derleyici <xref:System.Xml.Linq.XElement> nesnedeki özniteliği içerir, ancak bu özniteliği eklemek derleyicinin boşluk olarak nasıl davrandığını değiştirmez. `xml:space`  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki örnek, dış ve iç iki XML öğelerini içerir. Her iki öğe, metin içeriğini boşluk içerir. Dış öğe boşluk, boşluk ve bir XML öğesinin içerdiği için önemsizdir. İç öğe boşluk, boşluk ve metnin içerdiği için önemlidir.  
+ Aşağıdaki örnek, Outer ve Inner olmak üzere iki XML öğesi içerir. Her iki öğe de metin içeriklerinde boşluk içeriyor. Dış öğedeki boşluk, yalnızca boşluk ve bir XML öğesi içerdiği için çok önemlidir. İç öğedeki boşluk, boşluk ve metin içerdiğinden önemlidir.  
   
  [!code-vb[VbXMLSamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#29)]  
   
- Bu kod, çalıştırdığınızda, aşağıdaki metni görüntüler.  
+ Çalıştırıldığında, bu kod aşağıdaki metni görüntüler.  
   
 ```xml  
 <outer>  
@@ -48,4 +48,4 @@ Oluştururken bir XML değişmez değeri yalnızca önemli boşluk karakterlerin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic'de XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)

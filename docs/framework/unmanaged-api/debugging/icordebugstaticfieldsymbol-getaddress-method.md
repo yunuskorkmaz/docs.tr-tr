@@ -1,18 +1,18 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetAddress yöntemi
+title: 'ICorDebugStaticFieldSymbol:: GetAddress Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a45f233fdec23a504a71a68370e9da8e38ac0bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d41b99d7410333cb6a22443271c1fcbc41c3594
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962708"
 ---
-# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress yöntemi
-Statik alan adresini alır.  
+# <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol:: GetAddress Yöntemi
+Statik bir alanın adresini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,21 +24,21 @@ HRESULT GetAddress(
   
 ## <a name="parameters"></a>Parametreler  
  pRVA  
- [out] Statik alan göreli sanal adres (RVA) için bir işaretçi.  
+ dışı Statik alanın göreli sanal adresine (RVA) yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

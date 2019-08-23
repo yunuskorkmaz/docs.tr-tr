@@ -15,23 +15,23 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ed27826b92d34f05055ab7fdda2a16eb4a79b17
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012873"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952172"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Nasıl yapılır: Windows Forms LinkLabel Denetimi ile Bir Nesneye veya Web Sayfasına Bağlama
-Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi formunuzda Web stili bağlantılar oluşturmanızı sağlar. Bağlantıya tıklandığında bağlantı ziyaret belirtmek için rengini değiştirebilirsiniz. Rengi değiştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows Forms LinkLabel denetiminin görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
+Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi, formunuzda Web stili bağlantılar oluşturmanıza olanak sağlar. Bağlantıya tıklandığında, bağlantının ziyaret edildiğini göstermek için rengini değiştirebilirsiniz. Rengi değiştirme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Windows Forms LinkLabel denetiminin](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)görünümünü değiştirin.  
   
 ## <a name="linking-to-another-form"></a>Başka bir forma bağlama  
   
-#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel denetimi ile başka bir form bağlamak için  
+#### <a name="to-link-to-another-form-with-a-linklabel-control"></a>LinkLabel denetimiyle başka bir forma bağlamak için  
   
-1. Ayarlama <xref:System.Windows.Forms.LinkLabel.Text%2A> özelliğini uygun bir açıklamalı alt yazı.  
+1. <xref:System.Windows.Forms.LinkLabel.Text%2A> Özelliği uygun bir başlık olarak ayarlayın.  
   
-2. Ayarlama <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> hangi kısmını açıklamalı alt yazı bir bağlantı gösterilir belirlemek için özellik. Nasıl gösterilen bağlantı etiketi, görünüm ilgili özelliklerine bağlıdır. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Değeri tarafından temsil edilen bir <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> iki sayı, başlangıç karakteri konumunu ve karakter sayısını içeren bir nesne. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Özelliği, Özellikler penceresinde veya kodu aşağıdakine benzer bir şekilde ayarlanabilir:  
+2. Başlığın hangi kısmının bağlantı olarak belirtileyeceğini belirleyen özelliğiayarlayın.<xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Nasıl belirtildiği, bağlantı etiketinin görünümle ilgili özelliklerine bağlıdır. Değer iki sayı içeren bir <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> nesne tarafından temsil edilir, başlangıç karakterinin konumunu ve karakter sayısını. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Özelliği Özellikler penceresi veya kod içinde aşağıdakine benzer bir şekilde ayarlanabilir:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,10 +54,10 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi formunuzda Web stil
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3. İçinde <xref:System.Windows.Forms.LinkLabel.LinkClicked> olay işleyicisi çağırma <xref:System.Windows.Forms.Form.Show%2A> projede başka bir formu açın ve ayarlamak için yöntem <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özelliğini `true`.  
+3. Olay işleyicisinde, <xref:System.Windows.Forms.Form.Show%2A> `true` projedebaşkabirformaçmakiçinyönteminiçağırınveözelliğiniolarakayarlayın.<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> <xref:System.Windows.Forms.LinkLabel.LinkClicked>  
   
     > [!NOTE]
-    >  Örneği <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> sınıfı taşıyan bir başvuru <xref:System.Windows.Forms.LinkLabel> cast gerekmez. Bu nedenle, tıklandığını denetimi `sender` nesne.  
+    > <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> Sınıfının bir örneği tıklanan <xref:System.Windows.Forms.LinkLabel> denetime bir başvuru taşır, bu nedenle `sender` nesneyi atama gerekmez.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked(ByVal Sender As System.Object, _  
@@ -92,19 +92,19 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi formunuzda Web stil
        }  
     ```  
   
-## <a name="linking-to-a-web-page"></a>Bir Web sayfasına bağlama  
- <xref:System.Windows.Forms.LinkLabel> Denetim da varsayılan tarayıcı ile bir Web sayfasını görüntülemek için kullanılabilir.  
+## <a name="linking-to-a-web-page"></a>Bir Web sayfasına bağlanma  
+ <xref:System.Windows.Forms.LinkLabel> Denetim, varsayılan tarayıcıyla bir Web sayfası göstermek için de kullanılabilir.  
   
-#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>LinkLabel denetimi ile Internet Explorer ve bir Web sayfasına bağlantı başlatmak için  
+#### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Internet Explorer 'ı başlatmak ve LinkLabel denetimiyle bir Web sayfasına bağlantı sağlamak için  
   
-1. Ayarlama <xref:System.Windows.Forms.LinkLabel.Text%2A> özelliğini uygun bir açıklamalı alt yazı.  
+1. <xref:System.Windows.Forms.LinkLabel.Text%2A> Özelliği uygun bir başlık olarak ayarlayın.  
   
-2. Ayarlama <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> hangi kısmını açıklamalı alt yazı bir bağlantı gösterilir belirlemek için özellik.  
+2. Başlığın hangi kısmının bağlantı olarak belirtileyeceğini belirleyen özelliğiayarlayın.<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
   
-3. İçinde <xref:System.Windows.Forms.LinkLabel.LinkClicked> olay işleyicisi, bir özel durum işleme bloğu ortasında ayarlar ikinci bir yordam çağırma <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> özelliğini `true` ve kullandığı <xref:System.Diagnostics.Process.Start%2A> bir URL ile varsayılan tarayıcı başlatmak için yöntemi. Kullanılacak <xref:System.Diagnostics.Process.Start%2A> bir başvuru eklemeniz gereken yöntemini <xref:System.Diagnostics?displayProperty=nameWithType> ad alanı.  
+3. Olay işleyicisinde, bir özel durum işleme bloğunun ortasında <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> , <xref:System.Diagnostics.Process.Start%2A> özelliğini olarak `true` ayarlayan ikinci bir yordam çağırın ve varsayılan tarayıcıyı bir URL ile başlatmak için yöntemini kullanır. <xref:System.Windows.Forms.LinkLabel.LinkClicked> <xref:System.Diagnostics.Process.Start%2A> Yöntemi kullanmak için, <xref:System.Diagnostics?displayProperty=nameWithType> ad alanına bir başvuru eklemeniz gerekir.  
   
     > [!IMPORTANT]
-    >  Aşağıdaki kodu kısmi güven ortamında çalıştırırsanız (gibi paylaşılan bir sürücüde), JIT derleyicisi başarısız olur `VisitLink` yöntemi çağrılır. `System.Diagnostics.Process.Start` Deyimi, başarısız bir bağlantı talebi neden olur. İstisnayı tarafından zaman `VisitLink` yöntemi çağrıldığında, aşağıdaki kod, JIT derleyicisi başarısız olursa hata düzgün bir şekilde işlenmesini sağlar.  
+    >  Aşağıdaki kod, kısmi güven ortamında (örneğin, paylaşılan bir sürücüde) çalışıyorsa, `VisitLink` yöntemi çağrıldığında JIT derleyicisi başarısız olur. İfade `System.Diagnostics.Process.Start` , başarısız olan bir bağlantı talebine neden olur. `VisitLink` Yöntemi çağrıldığında özel durum yakalanarak, aşağıdaki kod JIT derleyicisi başarısız olursa hatanın düzgün şekilde işleneceğini sağlar.  
   
     ```vb  
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, _  
@@ -182,5 +182,5 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> denetimi formunuzda Web stil
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel Denetimine Genel Bakış](linklabel-control-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms LinkLabel denetiminin görünüşünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Nasıl yapılır: Windows Forms LinkLabel denetiminin görünümünü değiştirme](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel Denetimi](linklabel-control-windows-forms.md)

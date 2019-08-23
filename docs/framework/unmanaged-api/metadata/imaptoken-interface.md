@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111676"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965765"
 ---
 # <a name="imaptoken-interface"></a>IMapToken Arabirimi
 Derlemeler arasında eşleme özellikleri sağlar.  
   
 > [!NOTE]
->  `IMapToken` İstemci tarafından arabirimi uygulanır.  
+> `IMapToken` Arabirimin istemci tarafından uygulanması gerekir.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Map Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|İki derleme meta verileri imza kullanma arasında bir ilişki eşler.|  
+|[Map Yöntemi](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Meta veri imzalarını kullanarak iki derleme arasındaki ilişkiyi eşler.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll kullanılan  
+ **Kitaplığı** MsCorEE. dll içinde kaynak olarak kullanılır  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 9a7b25c74763c020c0e19c3f6099db9001acf773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e09ec49024b769c516fd97085904781f64b4486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705421"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921243"
 ---
 # <a name="configuration-element"></a>\<Yapılandırma > öğesi
 
@@ -41,22 +41,22 @@ Yok.
 
 |     | Açıklama |
 | --- | ----------- |
-| [ **\<assemblyBinding >** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Derleme bağlama ilkesini yapılandırma düzeyinde belirtir.|
-| [ **\<Başlangıç >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/startup/index.md) | Başlangıç Ayarları Şeması tüm öğeler. |
-| [ **\<çalışma zamanı >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Çalışma zamanı ayarları şemasındaki tüm öğeler. |
-| [ **\<System.Runtime.Remoting >** Ayarları Şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Uzaktan iletişim ayarları şemasındaki tüm öğeler. |
-| [ **\<system.Net >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/network/index.md) | Ağ ayarları şemasındaki tüm öğeler. |
-| [ **\<cryptographySettings >** Ayarları Şeması](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Şifreleme ayarları şemasındaki tüm öğeler. |
-| [ **\<Yapılandırma >** bölümleri şeması](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Yapılandırma bölümü ayarları şemasındaki tüm öğeler. |
-| [İzleme ve Hata Ayıklama Ayarları Şeması](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | İzleme ve hata ayıklama ayarları şemasındaki tüm öğeler. |
-| [ASP.NET yapılandırma ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | ASP.NET Web siteleri ve uygulamaları yapılandırma öğeleri içeren ASP.NET yapılandırma şemadaki tüm öğelerin. Kullanılan *Web.config* dosyaları. |
-| [ **\<Veritabanınızdaki >** Ayarları Şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Web Hizmetleri ayarları şemasındaki tüm öğeler. |
-| [Web Ayarları Şeması](~/docs/framework/configure-apps/file-schema/web/index.md) | Nasıl ASP.NET, IIS gibi ana bilgisayar uygulamasıyla çalışmasını yapılandırmak için öğeler içeren Web ayarları şemasındaki tüm öğeler. Kullanılan *aspnet.config* dosyaları. |
+| [ **\<assemblyBinding >** ](assemblybinding-element-for-configuration.md) | Yapılandırma düzeyinde derleme bağlama ilkesini belirtir.|
+| [Başlangıç > ayarları şeması  **\<** ](./startup/index.md) | Başlangıç ayarları şemasındaki tüm öğeler. |
+| [çalışma zamanı > ayarları şeması  **\<** ](./runtime/index.md) | Çalışma zamanı ayarları şemasındaki tüm öğeler. |
+| [**System. Runtime. Remoting > ayarları şeması \<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Uzaktan iletişim ayarları şemasındaki tüm öğeler. |
+| [sistem .net > ayarları şeması  **\<** ](./network/index.md) | Ağ ayarları şemasındaki tüm öğeler. |
+| [cryptographyısettings > ayarları şeması  **\<** ](./cryptography/index.md) | Şifre ayarları şemasındaki tüm öğeler. |
+| [Yapılandırma > bölümleri şeması  **\<** ](configuration-sections-schema.md) | Yapılandırma bölümü ayarları şemasında tüm öğeler. |
+| [İzleme ve Hata Ayıklama Ayarları Şeması](./trace-debug/index.md) | İzleme ve hata ayıklama ayarları şemasındaki tüm öğeler. |
+| [ASP.NET yapılandırma ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | ASP.NET yapılandırma şemasında, ASP.NET Web siteleri ve uygulamaları yapılandırma öğelerini içeren tüm öğeler. *Web. config* dosyalarında kullanılır. |
+| [WebServices > ayarları şeması  **\<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Web Hizmetleri ayarları şemasındaki tüm öğeler. |
+| [Web Ayarları Şeması](./web/index.md) | Web ayarları şemasında, ASP.NET 'in IIS gibi bir konak uygulamasıyla nasıl çalıştığını yapılandırmaya yönelik öğeler içeren tüm öğeler. *Aspnet. config* dosyalarında kullanılır. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Her bir yapılandırma dosyası tam olarak bir içermelidir  **\<yapılandırma >** öğesi.
+Her yapılandırma dosyası tam olarak bir  **\<Yapılandırma >** öğesi içermelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework için yapılandırma dosyası şeması](index.md)

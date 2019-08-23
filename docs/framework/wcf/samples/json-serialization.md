@@ -2,20 +2,20 @@
 title: JSON Seri Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: c44dd71c3903e5c4d3d37b89881896c65c664262
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9b1e20c6262f286a4b81f8c368a153fb5a26193b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591871"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913954"
 ---
 # <a name="json-serialization"></a>JSON Seri Hale Getirme
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JavaScript nesne gösterimi (JSON) biçimindeki verileri seri hale getrime ve için. Bu seri hale getirme altyapısı, .NET Framework türleri örneklerini ve geri JSON verilerini JSON verileri dönüştürür. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> aynı türlerini destekleyen <xref:System.Runtime.Serialization.DataContractSerializer>. JSON veri biçimi zaman uyumsuz JavaScript ve XML (AJAX) yazma sırasında özellikle yararlı olur-Web uygulamaları stili. AJAX desteği Windows Communication Foundation (WCF) ScriptManager denetimi aracılığıyla ASP.NET AJAX ile kullanım için optimize edilmiştir. ASP.NET AJAX ile Windows Communication Foundation (WCF) kullanma örnekleri için bkz: [AJAX örnekleri](ajax.md).  
+Bu örnek, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> JavaScript nesne gösterimi (JSON) biçimindeki verileri seri hale getirmek ve seri durumdan çıkarmak için ' nin nasıl kullanılacağını gösterir. Bu serileştirme altyapısı JSON verilerini .NET Framework türü örneklerine ve JSON verilerine geri dönüştürür. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, ile <xref:System.Runtime.Serialization.DataContractSerializer>aynı türleri destekler. JSON veri biçimi, zaman uyumsuz JavaScript ve XML (AJAX) stili Web uygulamaları yazarken özellikle yararlıdır. Windows Communication Foundation (WCF) ' de AJAX desteği, ScriptManager denetimi aracılığıyla ASP.NET AJAX ile kullanım için iyileştirilmiştir. ASP.NET AJAX ile Windows Communication Foundation (WCF) kullanmanın örnekleri için bkz. [Ajax örnekleri](ajax.md).  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek kullanan bir `Person` veri sözleşme serileştirme ve seri durumundan çıkarma göstermek.  
+ Örnek, serileştirme ve `Person` seri durumdan çıkarma göstermek için bir veri sözleşmesi kullanır.  
 
 ```csharp
 [DataContract]
@@ -29,7 +29,7 @@ class Person
 }
 ```
 
- Bir örneğini serileştirmek için `Person` JSON olarak yazın, oluşturun <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ilk ve `WriteObject` JSON verilerini bir akışa yazmak için yöntemi.  
+ `Person` Türünün bir örneğini JSON olarak seri hale getirmek için, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> önce oluşturun ve bir akışa JSON `WriteObject` verisi yazmak için yöntemini kullanın.  
 
 ```csharp
 Person p = new Person();
@@ -39,31 +39,31 @@ DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));
 ser.WriteObject(stream1, p);
 ```
 
- Bellek akışı geçerli JSON verilerini içerir.
+ Bellek akışı geçerli JSON verileri içeriyor.
   
 ```json  
 {"age":42,"name":"John"}  
 ```  
   
- Örnek, bir nesnede JSON verileri seri durumdan çıkarılırken gösterir. Ardından akış ve çağrı rewind `ReadObject`.  
+ Örnek, JSON verilerinden bir nesne olarak seri durumdan çıkarmayı gösterir. Ardından akışı geri sarın ve çağırın `ReadObject`.  
 
 ```csharp
 Person p2 = (Person)ser.ReadObject(stream1);
 ```
 
- İnceleme `p2` nesnesi, JSON verilerini doğru şekilde seri durumdan, ortaya çıkarır.  
+ `p2` Nesnesi incelen, JSON verilerinin seri durumdan çıkarılmadığını gösterir.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\JsonSerialization`  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Bunu ayarlamak için örneği oluşturun ve çalıştırın  
   
-1. ' % S'çözüm JsonSerialization.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümünde açıklandığı gibi jsonSerialization. sln çözümünü oluşturun.  
   
-2. Sonuçta elde edilen konsol uygulamasını çalıştırın.  
+2. Ortaya çıkan konsol uygulamasını çalıştırın.  

@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46b0add67fc6bc139ef02e09190670870749d4c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d635100c4e8214a7a8659c2d3e4da61825cf243
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874784"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966300"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-`dangerousThreadingAPI` Yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilmiş olduğunda <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> geçerli iş parçacığı dışında bir iş parçacığında yöntemi çağrılır.  
+Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> yöntem geçerli iş parçacığı dışında bir iş parçacığında çağrıldığında etkinleştirilir. `dangerousThreadingAPI`  
   
 ## <a name="symptoms"></a>Belirtiler  
- Uygulama yanıt vermiyor veya süresiz olarak askıda kalır. Sistem veya uygulama verileri, geçici veya bir uygulama bile kapatıldı sonra öngörülemeyen durumda kalmayabilir. Beklendiği gibi bazı işlemler Tamamlanıyor değil.  
+ Bir uygulama süresiz olarak yanıt vermemeye başlıyor veya askıda kalıyor. Sistem veya uygulama verileri, geçici olarak veya bir uygulama kapatıldıktan sonra bile öngörülemeyen bir durumda kalabilir. Bazı işlemler beklendiği gibi tamamlanmıyor.  
   
- Belirtiler yaygın olarak sorun için devralınmış rastgeleliğinin nedeniyle değişebilir.  
+ Belirtiler, soruna bağlı rasgelelik nedeniyle büyük ölçüde farklılık gösterebilir.  
   
 ## <a name="cause"></a>Sebep  
- Bir iş parçacığı başka bir iş parçacığı kullanarak zaman uyumsuz olarak askıya <xref:System.Threading.Thread.Suspend%2A> yöntemi. Ortasında bir işlem olabilir. başka bir iş parçacığını askıya alma güvenli olduğunda belirlemek için hiçbir yolu yoktur. İş parçacığını askıya alma, veri bozulması veya okuduğunuzda sonlandırılmasını neden olabilir. Bir iş parçacığı bir askıya alınma durumuna ve hiçbir zaman sürdürüldü kullanarak yerleştirilmesi gereken <xref:System.Threading.Thread.Resume%2A> yöntemi, uygulama süresiz olarak askıda ve büyük olasılıkla uygulama verileri zarar verebilir. Bu yöntemler eski olarak işaretlendi.  
+ İş parçacığı, <xref:System.Threading.Thread.Suspend%2A> yöntemi kullanılarak başka bir iş parçacığı tarafından zaman uyumsuz olarak askıya alındı. Bir işlemin ortasında olabilecek başka bir iş parçacığını askıya almanın ne zaman güvenli olduğunu belirlemenin bir yolu yoktur. İş parçacığını askıya almak, verilerin bozulmasına veya ınvarıant 'ların bozulmasına yol açabilir. Bir iş parçacığının askıya alınma durumuna yerleştirilmesi ve <xref:System.Threading.Thread.Resume%2A> yöntemi kullanılarak hiçbir şekilde sürdürülmemesi, uygulamanın süresiz olarak askıda kalması ve muhtemelen uygulama verilerine zarar verebiliyor olması gerekir. Bu yöntemler artık kullanılmıyor olarak işaretlendi.  
   
- Eşitleme temellerine hedef iş parçacığı tarafından tutulan, askıya alma sırasında tutulan kalırlar. Bu başka bir iş parçacığı, örneğin iş parçacığı gerçekleştirmek için kilitlenmeleri açabilir <xref:System.Threading.Thread.Suspend%2A>, temel bir kilidi edinmeye çalışın. Bu durumda, sorunu Kilitlenme ortaya çıkmaktadır.  
+ Eşitleme temelleri hedef iş parçacığı tarafından tutuluyorsa, askıya alma sırasında tutuluyor olarak kalırlar. Bu, kilitlenmeyle <xref:System.Threading.Thread.Suspend%2A>ilgili başka bir iş parçacığı olmalıdır, örneğin iş parçacığı, temel üzerinde bir kilit elde etmeye çalışır. Bu durumda, sorun kendi kendine bir kilitlenme olarak bildirim gösterir.  
   
 ## <a name="resolution"></a>Çözüm  
- Kullanımını zorunlu tasarımları önlemek <xref:System.Threading.Thread.Suspend%2A> ve <xref:System.Threading.Thread.Resume%2A>. İş parçacıkları arasında işbirliği için eşitleme temellerine gibi kullanın <xref:System.Threading.Monitor>, <xref:System.Threading.ReaderWriterLock>, <xref:System.Threading.Mutex>, veya C# `lock` deyimi. Bu yöntemler kullanmanız gerekirse, zaman penceresi azaltın ve iş parçacığının askıya alınmış durumda olduğu sürece yürütür kod miktarını en aza indirir.  
+ <xref:System.Threading.Thread.Suspend%2A> Ve<xref:System.Threading.Thread.Resume%2A>kullanımını gerektiren tasarımlardan kaçının. İş parçacıkları arasındaki ortak işlem için,,, <xref:System.Threading.Monitor>veya C# `lock` deyimleri gibi <xref:System.Threading.ReaderWriterLock>eşitleme <xref:System.Threading.Mutex>temel öğelerini kullanın. Bu yöntemleri kullanmanız gerekiyorsa, zaman penceresini küçültün ve iş parçacığı askıya alınma durumundayken yürütülen kod miktarını en aza indirin.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur. Yalnızca veri tehlikeli iş parçacığı oluşturma işlemleri hakkında raporlar.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca tehlikeli iş parçacığı oluşturma işlemleriyle ilgili verileri raporlar.  
   
 ## <a name="output"></a>Çıkış  
- MDA etkinleştirilmesi neden tehlikeli iş parçacığı yöntemi tanımlar.  
+ MDA, etkinleştirilmesinin nedeni olan tehlikeli iş parçacığı yöntemini tanımlar.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -52,7 +52,7 @@ ms.locfileid: "61874784"
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği için bir çağrı gösterir <xref:System.Threading.Thread.Suspend%2A> etkinleştirilmesinden neden yöntemi `dangerousThreadingAPI`.  
+ Aşağıdaki kod örneği, <xref:System.Threading.Thread.Suspend%2A> `dangerousThreadingAPI`etkinleştirmesine neden olan yöntemine yapılan çağrıyı gösterir.  
   
 ```csharp
 using System.Threading;  
@@ -71,4 +71,4 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 
 - <xref:System.Threading.Thread>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [lock Deyimi](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [lock Deyimi](../../csharp/language-reference/keywords/lock-statement.md)

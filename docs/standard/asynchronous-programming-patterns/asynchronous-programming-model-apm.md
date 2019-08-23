@@ -13,57 +13,57 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628953"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950878"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
-Kullanan zaman uyumsuz bir işlem <xref:System.IAsyncResult> tasarım deseni adlı iki yöntem uygulanan `BeginOperationName` ve `EndOperationName` başlar ve zaman uyumsuz işlemi sonlandıran *OperationName* sırasıyla. Örneğin, <xref:System.IO.FileStream> sağlar sınıfını <xref:System.IO.FileStream.BeginRead%2A> ve <xref:System.IO.FileStream.EndRead%2A> bayt bir dosyadan zaman uyumsuz olarak okumak için yöntemleri. Bu yöntemlerin zaman uyumsuz bir sürümüne uygulamak <xref:System.IO.FileStream.Read%2A> yöntemi.  
+<xref:System.IAsyncResult> Tasarım modelini kullanan zaman uyumsuz bir işlem, adlı `BeginOperationName` ve sırasıyla zaman uyumsuz işlem *OperationName* ' i başlayan ve `EndOperationName` biten iki yöntem olarak uygulanır. Örneğin, <xref:System.IO.FileStream> sınıfı bir dosyadan zaman uyumsuz olarak <xref:System.IO.FileStream.EndRead%2A> okunan baytları <xref:System.IO.FileStream.BeginRead%2A> ve yöntemleri sağlar. Bu yöntemler, <xref:System.IO.FileStream.Read%2A> yönteminin zaman uyumsuz sürümünü uygular.  
   
 > [!NOTE]
->  .NET Framework 4 ile başlayarak, görev paralel kitaplığı zaman uyumsuz ve paralel programlama için yeni bir modeli sağlar. Daha fazla bilgi için [görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) ve [görev tabanlı zaman uyumsuz desen (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)).  
+> .NET Framework 4 ' den başlayarak, görev paralel kitaplığı, zaman uyumsuz ve paralel programlama için yeni bir model sağlar. Daha fazla bilgi için bkz. [görev paralel kitaplığı (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) ve [görev tabanlı zaman uyumsuz model (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)).  
   
- Arama sonra `BeginOperationName`, bir uygulama, zaman uyumsuz işlemi gerçekleşirken farklı bir iş parçacığında yönergeleri çağıran iş parçacığı üzerinde yürütülüyor. devam edebilirsiniz. Her çağrı için `BeginOperationName`, uygulama de çağırmalı `EndOperationName` işlemin sonuçları elde etmek için.  
+ Çağrıldıktan sonra bir uygulama ,farklıbirişparçacığındazamanuyumsuzişlemgerçekleşirkençağıranişparçacığıüzerindeyönergeleriyürütmeyedevamedebilir.`BeginOperationName` Her çağrısı `BeginOperationName`için, uygulamanın, işlemin sonuçlarını almak için `EndOperationName` de çağırması gerekir.  
   
-## <a name="beginning-an-asynchronous-operation"></a>Zaman uyumsuz bir işlem başlangıcı  
- `BeginOperationName` Yöntemi zaman uyumsuz işlem başlamadan *OperationName* ve uygulayan bir nesne döndürür <xref:System.IAsyncResult> arabirimi. <xref:System.IAsyncResult> nesneler zaman uyumsuz bir işlem hakkında bilgi depolar. Aşağıdaki tabloda, zaman uyumsuz bir işlem hakkında bilgi gösterir.  
+## <a name="beginning-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem başlatılıyor  
+ Yöntemi zaman uyumsuz işlem *OperationName* ' i başlatır ve <xref:System.IAsyncResult> arabirimi uygulayan bir nesne döndürür. `BeginOperationName` <xref:System.IAsyncResult>nesneler, zaman uyumsuz bir işlemle ilgili bilgileri depolar. Aşağıdaki tabloda bir zaman uyumsuz işlemle ilgili bilgiler gösterilmektedir.  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.IAsyncResult.AsyncState%2A>|Zaman uyumsuz işlemi hakkında bilgi içeren bir isteğe bağlı bir uygulamaya özgü nesne.|  
-|<xref:System.IAsyncResult.AsyncWaitHandle%2A>|A <xref:System.Threading.WaitHandle> zaman uyumsuz işlem tamamlanana kadar uygulamanın yürütülmesini engellemek için kullanılabilir.|  
-|<xref:System.IAsyncResult.CompletedSynchronously%2A>|Tamamlanan iş parçacığında zaman uyumsuz işlemi çağırmak için kullanılan olup olmadığını gösteren bir değer `BeginOperationName` yerine ayrı bir tamamlama <xref:System.Threading.ThreadPool> iş parçacığı.|  
-|<xref:System.IAsyncResult.IsCompleted%2A>|Zaman uyumsuz işlem tamamlanıp tamamlanmadığını belirten bir değer.|  
+|<xref:System.IAsyncResult.AsyncState%2A>|Zaman uyumsuz işlem hakkında bilgi içeren, uygulamaya özel isteğe bağlı bir nesne.|  
+|<xref:System.IAsyncResult.AsyncWaitHandle%2A>|<xref:System.Threading.WaitHandle> Zaman uyumsuz işlem tamamlanana kadar uygulama yürütmeyi engellemek için kullanılabilir.|  
+|<xref:System.IAsyncResult.CompletedSynchronously%2A>|`BeginOperationName` Ayrı<xref:System.Threading.ThreadPool> bir iş parçacığında tamamlamak yerine, çağırmak için kullanılan iş parçacığında zaman uyumsuz işlemin tamamlanıp tamamlanmadığını belirten bir değer.|  
+|<xref:System.IAsyncResult.IsCompleted%2A>|Zaman uyumsuz işlemin tamamlanıp tamamlanmadığını belirten bir değer.|  
   
- A `BeginOperationName` yöntemi değer veya başvuruya göre geçirildiği yöntemin zaman uyumlu sürümü imzasında bildirilen herhangi bir parametre alır. Herhangi bir out parametreleri olmayan parçası `BeginOperationName` metodu imzası. `BeginOperationName` Yöntem imzası, iki ek parametreler de içerir. Bunlardan ilki tanımlayan bir <xref:System.AsyncCallback> zaman uyumsuz işlem tamamlandığında çağrılan bir yönteme başvuran temsilci. Çağıranın belirtebilirsiniz `null` (`Nothing` Visual Basic'te) işlemi tamamlandıktan sonra çağrılan bir yöntem istemiyorsa. İkinci ek parametre kullanıcı tanımlı bir nesnedir. Bu nesne, uygulamaya özel durum bilgilerini zaman uyumsuz işlem tamamlandığında çağrılan yönteme geçirmek için kullanılabilir. Varsa bir `BeginOperationName` yöntemi, bir dosyadan okunan bayt depolamak için bir bayt dizisi gibi ek özel işlem parametreleri alır <xref:System.AsyncCallback> ve uygulama durumu nesnesi son parametrelerinde `BeginOperationName` metodu imzası.  
+ Bir `BeginOperationName` Yöntem, değer veya başvuruya göre geçirilen yöntemin zaman uyumlu sürümünün imzasında belirtilen parametreleri alır. Tüm out parametreleri `BeginOperationName` yöntem imzasının bir parçası değildir. `BeginOperationName` Yöntem imzası Ayrıca iki ek parametre içerir. Bunlardan ilki, zaman uyumsuz işlem <xref:System.AsyncCallback> tamamlandığında çağrılan bir yönteme başvuran bir temsilciyi tanımlar. Çağıran `null` , işlem tamamlandığında bir`Nothing` yöntemin çağrılmasını istemediğinden (Visual Basic). İkinci ek parametre Kullanıcı tanımlı bir nesnedir. Bu nesne, zaman uyumsuz işlem tamamlandığında çağrılan yönteme uygulamaya özgü durum bilgilerini geçirmek için kullanılabilir. Bir `BeginOperationName` Yöntem bir dosyadan <xref:System.AsyncCallback> okunan baytları depolamak için bir bayt dizisi gibi işleme özgü ek parametreler alırsa, ve uygulama durumu nesnesi `BeginOperationName` Yöntem imzasında son parametrelerdir.  
   
- `BeginOperationName` çağıran iş parçacığını hemen denetimine döndürür. Varsa `BeginOperationName` yöntemin oluşturduğu özel durumlar, zaman uyumsuz işlem başlamadan önce özel durumlar. Varsa `BeginOperationName` yöntemin oluşturduğu özel durumlar, geri çağırma yöntemi çağrılamaz.  
+ `BeginOperationName`denetimi çağıran iş parçacığına hemen döndürür. `BeginOperationName` Yöntem özel durumlar oluşturursa, zaman uyumsuz işlem başlatılmadan önce özel durumlar oluşturulur. `BeginOperationName` Yöntem özel durumlar oluşturursa, geri çağırma yöntemi çağrılmaz.  
   
-## <a name="ending-an-asynchronous-operation"></a>Zaman uyumsuz bir işlem bitiş  
- `EndOperationName` Yöntemi zaman uyumsuz işlemi sonlandırır *OperationName*. Dönüş değeri `EndOperationName` yöntemi zaman uyumlu karşılığı tarafından döndürülen aynı türde ve zaman uyumsuz işlem için özeldir. Örneğin, <xref:System.IO.FileStream.EndRead%2A> yöntemi okunan bayt sayısını döndüren bir <xref:System.IO.FileStream> ve <xref:System.Net.Dns.EndGetHostByName%2A> yöntemi döndürür bir <xref:System.Net.IPHostEntry> bir konak bilgisayar hakkında bilgi içeren nesne. `EndOperationName` Yöntemi herhangi alan veya yöntem zaman uyumlu sürümü imzasında ref parametreleri bildirilmiş. Zaman uyumlu yöntem, parametrelerinden yanı sıra `EndOperationName` yöntemi de içeren bir <xref:System.IAsyncResult> parametresi. Çağıranlar, karşılık gelen çağrısı tarafından döndürülen örneği geçmesi gerekir `BeginOperationName`.  
+## <a name="ending-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem sonlandırılıyor  
+ Yöntemi `EndOperationName` , zaman uyumsuz işlem *OperationName*öğesini sonlandırır. `EndOperationName` Yöntemin dönüş değeri, zaman uyumlu karşılığına göre döndürülen türdür ve zaman uyumsuz işleme özeldir. Örneğin, <xref:System.IO.FileStream.EndRead%2A> yöntemi bir <xref:System.IO.FileStream> öğesinden okunan bayt sayısını döndürür ve <xref:System.Net.Dns.EndGetHostByName%2A> yöntemi bir ana bilgisayar hakkında bilgi içeren bir <xref:System.Net.IPHostEntry> nesne döndürür. `EndOperationName` Yöntemi, yönteminin zaman uyumlu sürümünün imzasında belirtilen tüm out veya ref parametrelerini alır. Zaman uyumlu yöntemin parametrelerinin yanı sıra, `EndOperationName` yöntemi de bir <xref:System.IAsyncResult> parametre içerir. Çağıranlar öğesine `BeginOperationName`karşılık gelen çağrının döndürdüğü örneği iletmelidir.  
   
- Zaman uyumsuz işlemi temsil, <xref:System.IAsyncResult> nesne ne zaman tamamlanmadı `EndOperationName` çağrıldığında `EndOperationName` zaman uyumsuz işlem tamamlanana kadar çağıran iş parçacığını engeller. Zaman uyumsuz işlemi tarafından oluşturulan özel durumları durum `EndOperationName` yöntemi. Arama etkisini `EndOperationName` yöntemiyle birden çok kez aynı <xref:System.IAsyncResult> tanımlı değil. Benzer şekilde, çağırma `EndOperationName` yöntemi ile bir <xref:System.IAsyncResult> yöntemi de tanımlı değil ilgili Begin tarafından getirilen değil.  
-  
-> [!NOTE]
->  Özel durum atma uygulayıcılar ya da tanımlanmamış senaryoları için düşünmelisiniz <xref:System.InvalidOperationException>.  
+ Çağrıldığında <xref:System.IAsyncResult> nesnenin temsil ettiği zaman uyumsuz işlem `EndOperationName` tamamlandıysa, `EndOperationName` zaman uyumsuz işlem tamamlanana kadar çağıran iş parçacığını engeller. Zaman uyumsuz işlem tarafından oluşturulan özel durumlar `EndOperationName` yönteminden oluşturulur. `EndOperationName` Yöntemi aynı<xref:System.IAsyncResult> ile birden çok kez çağırma efekti tanımlı değil. Benzer şekilde, ilgili `EndOperationName` BEGIN yöntemi tarafından <xref:System.IAsyncResult> döndürülmediğinde yöntemi çağırmak da tanımlanmamıştır.  
   
 > [!NOTE]
->  Uygulayıcılar, bu tasarım deseni ayarlayarak zaman uyumsuz işlemi tamamlandı. çağıranın bildir <xref:System.IAsyncResult.IsCompleted%2A> (belirtilmişse) zaman uyumsuz geri çağırma yöntemini çağırarak ve sinyal true olarak <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
+> Tanımsız senaryolardan herhangi biri için, ımplemenonun oluşturulması gerektiğini düşünmelidir <xref:System.InvalidOperationException>.  
   
- Uygulama geliştiricileri, zaman uyumsuz işlemin sonuçları erişmek için çeşitli tasarım seçenekleri sahiptir. Uygulama işlemi tamamlanırken yürütebilir yönergeleri olup doğru seçim bağlıdır. Zaman uyumsuz işlemin sonuçları alana kadar bir uygulama herhangi bir ek çalışma gerçekleştiremiyorsanız sonuçları kullanılabilir olana kadar uygulamayı engellemeniz gerekir. Zaman uyumsuz işlem tamamlanana kadar engellemek için aşağıdaki yaklaşımlardan birini kullanabilirsiniz:  
+> [!NOTE]
+> Bu tasarım deseninin uygulayıcıları, zaman uyumsuz işlemin tamamlandığını çağıran tarafından, zaman uyumsuz geri <xref:System.IAsyncResult.IsCompleted%2A> çağırma yöntemini çağırarak (belirtilmişse) ve <xref:System.IAsyncResult.AsyncWaitHandle%2A>sinyal sinyaline doğru ayarlanarak bildirim almalıdır.  
   
-- Çağrı `EndOperationName` uygulamanın ana iş parçacığından işlemi kadar uygulamanın yürütülmesini engelleme tamamlanmıştır. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırarak uygulama yürütmesini engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
+ Uygulama geliştiricilerinin zaman uyumsuz işlemin sonuçlarına erişmek için çeşitli tasarım seçimleri vardır. Doğru seçim, uygulamanın işlem tamamlandığında yürütebileceğiniz yönergeler içerip içermediğini bağlıdır. Bir uygulama, zaman uyumsuz işlemin sonuçlarını alıncaya kadar ek bir iş gerçekleştire, sonuçlar kullanılabilir olana kadar uygulamanın engellenmesi gerekir. Zaman uyumsuz bir işlem tamamlanana kadar engellemek için aşağıdaki yaklaşımlardan birini kullanabilirsiniz:  
   
-- Kullanım <xref:System.IAsyncResult.AsyncWaitHandle%2A> için bir veya daha fazla işlem tamamlanana kadar uygulamanın yürütülmesini engelleme. Bu teknik gösteren bir örnek için bkz: [engelleme uygulama yürütme kullanarak bir AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Uygulamanın `EndOperationName` ana iş parçacığından, işlem tamamlanana kadar uygulama yürütmeyi engelleyen çağrı. Bu tekniği gösteren bir örnek için bkz. [zaman uyumsuz bir Işlemi sonlandırarak uygulama yürütmeyi engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
- Zaman uyumsuz işlemi tamamlanırken engellemek için gerekmeyen uygulamalar aşağıdaki yaklaşımlardan birini kullanabilirsiniz:  
+- Bir veya daha fazla işlem tamamlanana kadar uygulama yürütmeyi engellemek içinkullanın.<xref:System.IAsyncResult.AsyncWaitHandle%2A> Bu tekniği gösteren bir örnek için bkz. [AsyncWaitHandle kullanarak uygulama yürütmeyi engelleme](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
-- Denetleyerek işlemi tamamlama durumu için yoklama <xref:System.IAsyncResult.IsCompleted%2A> düzenli aralıklarla özelliği ve arama `EndOperationName` işlemi tamamlandığında. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemin durumu için yoklama](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+ Zaman uyumsuz işlem tamamlandığında engellemek Gerekmeyen uygulamalar aşağıdaki yaklaşımlardan birini kullanabilir:  
   
-- Kullanım bir <xref:System.AsyncCallback> işlemi tamamlandığında çağrılacak bir yöntem belirtmek için temsilci. Bu teknik gösteren bir örnek için bkz: [zaman uyumsuz bir işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+- Özelliği düzenli aralıklarla denetleyerek ve işlem tamamlandığında çağırarak <xref:System.IAsyncResult.IsCompleted%2A> `EndOperationName` , işlem tamamlanma durumu için yoklama yapın. Bu tekniği gösteren bir örnek için bkz. [zaman uyumsuz bir Işlemin durumu Için yoklama](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+  
+- İşlem tamamlandığında <xref:System.AsyncCallback> çağrılacak yöntemi belirtmek için bir temsilci kullanın. Bu tekniği gösteren bir örnek için bkz. [zaman uyumsuz bir Işlemi sonlandırmak için bir AsyncCallback temsilcisi kullanma](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

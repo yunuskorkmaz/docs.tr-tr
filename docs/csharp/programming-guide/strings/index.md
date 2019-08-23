@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: MT
+ms.openlocfilehash: 39b48e7a0a296c2f4a4a2be76e0663ea3018e453
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588484"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928173"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan türünde <xref:System.String> bir nesnedir. Dahili olarak, metin sıralı bir salt okunabilir <xref:System.Char> nesne koleksiyonu olarak depolanır. C# Dizenin sonunda null sonlandırma karakteri yoktur; Bu nedenle C# , bir dize herhangi bir sayıda katıştırılmış null karakteri (' \ 0 ') içerebilir. Bir dizenin `Char` özelliği, Unicode karakter sayısını değil, içerdiği nesne sayısını temsil eder. <xref:System.String.Length%2A> Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
@@ -71,7 +71,7 @@ Dize, değeri Text olan türünde <xref:System.String> bir nesnedir. Dahili olar
 >  `\x` Kaçış sırasını kullanırken ve 4 onaltılık basamak belirtirken, kaçış sırasını hemen izleyen karakterler geçerli onaltılı basamaklar (yani 0-9, a-f ve a-f), kaçış sırasının bir parçası olarak yorumlanır. Örneğin, `\xA1` kod noktası U&#161;+ 00A1 olan "" üretir. Bununla birlikte, sonraki karakter "a" veya "a" ise, kaçış sırası bunun yerine olduğu şekilde `\xA1A` yorumlanır ve "" kod noktası U + 0a1a olan "&#x0A1A;" üretir. Bu gibi durumlarda, tüm 4 onaltılık basamakları (ör. `\x00A1` ) belirtmek olası hatalı yorumlamayı engeller.  
   
 > [!NOTE]
->  Derleme zamanında, tam dizeler aynı kaçış dizileri ile normal dizelere dönüştürülür. Bu nedenle, hata ayıklayıcı izleme penceresinde tam bir dizeyi görürseniz, kaynak kodunuzdaki tam sürümü değil, derleyici tarafından eklenen kaçış karakterlerini görürsünüz. Örneğin, tam dize `@"C:\files.txt"` Gözcü penceresinde "C:\\\files.txt" olarak görüntülenir.  
+> Derleme zamanında, tam dizeler aynı kaçış dizileri ile normal dizelere dönüştürülür. Bu nedenle, hata ayıklayıcı izleme penceresinde tam bir dizeyi görürseniz, kaynak kodunuzdaki tam sürümü değil, derleyici tarafından eklenen kaçış karakterlerini görürsünüz. Örneğin, tam dize `@"C:\files.txt"` Gözcü penceresinde "C:\\\files.txt" olarak görüntülenir.  
   
 ## <a name="format-strings"></a>Biçim dizeleri  
  Biçim dizesi, içeriği çalışma zamanında dinamik olarak belirlenen bir dizedir. Biçim dizeleri, bir dize içindeki küme ayraçları içine *enterpolasyonlu ifadeler* veya yer tutucuları katıştırarak oluşturulur. Küme ayracı (`{...}`) içindeki her şey, çalışma zamanında biçimli bir dize olarak bir değere ve çıkışa çözümlenir. Biçim dizeleri oluşturmak için iki yöntem vardır: dize ilişkilendirme ve bileşik biçimlendirme.

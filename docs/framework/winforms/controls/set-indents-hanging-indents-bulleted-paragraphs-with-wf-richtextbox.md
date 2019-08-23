@@ -13,17 +13,17 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d095e3561cd346e6dbd99d1be7468f6ad5725a6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960450"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Girintileri, Asılı Girintileri ve Madde İşaretli Paragrafları Ayarlama
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediği metni biçimlendirmek için çok sayıda seçeneği vardır. Madde işaretli listeler olarak ayarlayarak seçili paragrafların biçimlendirebilirsiniz <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliği. Ayrıca <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, ve <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> girinti paragraf sol ve sağ kenarları denetimi ve diğer satırlık bir metin ile sol kenarı göre ayarlamak için özellikler.  
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, görüntülediği metni biçimlendirmek için çeşitli seçeneklere sahiptir. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> Özelliği ayarlayarak, Seçili paragrafları madde işaretli listeler olarak biçimlendirebilirsiniz. Ayrıca <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, ve<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> özelliklerini, denetimin sol ve sağ kenarlarına ve diğer metin satırlarının sol kenarına göre ayarlamak için de kullanabilirsiniz.  
   
-### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Paragraf madde işaretli liste olarak biçimlendirmek için  
+### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>Paragrafı madde işaretli liste olarak biçimlendirmek için  
   
 1. Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> özelliğini `true`.  
   
@@ -39,13 +39,13 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediğ
     richTextBox1->SelectionBullet = true;  
     ```  
   
-### <a name="to-indent-a-paragraph"></a>Paragrafın girinti  
+### <a name="to-indent-a-paragraph"></a>Paragrafı girintilemek için  
   
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> metnin sol kenarı ile denetimin sol kenarı arasındaki piksel cinsinden uzaklık temsil eden bir tamsayı özelliği.  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A> Özelliği, denetimin sol kenarı ve metnin sol kenarı arasındaki mesafeyi temsil eden bir tamsayı olarak ayarlayın.  
   
-2. Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> paragraf metni ilk satırının sol kenarı ve sonraki satırları aynı öğenin sol kenarı arasındaki piksel cinsinden uzaklık temsil eden bir tamsayı özelliği. Değerini <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> özelliği ilk satırı sarmalanmış bir paragraf satırlarında için yalnızca uygulanır.  
+2. <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Özelliği, paragraftaki ilk metin satırının sol kenarı ile aynı paragraftaki sonraki çizgilerin sol kenarı arasındaki mesafeyi temsil eden bir tamsayı olarak ayarlayın. <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Özelliğin değeri yalnızca, ilk satırın altına kaydırılmış olan bir paragraftaki satırlar için geçerlidir.  
   
-3. Ayarlama <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> metnin sağ kenarı ile denetimin sağ kenarı arasındaki piksel cinsinden uzaklığı temsil eden bir tamsayı özelliği.  
+3. <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A> Özelliği, denetimin sağ kenarıyla metnin sağ kenarı arasındaki mesafeyi temsil eden bir tamsayı olarak ayarlayın.  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  
@@ -66,7 +66,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimin görüntülediğ
     ```  
   
     > [!NOTE]
-    >  Tüm bu özellikler, seçilen metin ve sonra geçerli ekleme noktasına yazdığınız metni içeren tüm paragrafları etkiler. Örneğin, bir kullanıcı bir paragraf içinde bir sözcük seçer ve ardından girintisini ayarlar yeni ayarları bu sözcüğü içeren tüm paragrafa ve daha sonra seçili paragrafın girilen paragraflara uygulanır. Program aracılığıyla metni seçme hakkında daha fazla bilgi için bkz: <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Tüm bu özellikler, seçili metni içeren paragrafları ve ayrıca geçerli ekleme noktasının ardından yazılan metni etkiler. Örneğin, bir Kullanıcı bir paragraf içinde bir kelime seçip Girintiyi ayarladığında, yeni ayarlar, bu sözcüğü içeren tüm paragrafa ve ayrıca seçili paragraftan sonra daha sonra girilmiş olan paragraflara uygulanır. Program aracılığıyla metin seçme hakkında daha fazla bilgi <xref:System.Windows.Forms.TextBoxBase.Select%2A>için bkz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

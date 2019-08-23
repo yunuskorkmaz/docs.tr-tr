@@ -2,19 +2,19 @@
 title: <add> / <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df69b5f8a79489b722c1074f118b9c6f6e8e363d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704498"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926666"
 ---
-# <a name="add-of-protocolmapping"></a>\<Ekle >, \<protocolMapping >
-Taşıma protokol şeması (örneğin, http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlaması arasında varsayılan protokol eşleşmelerinin temsil eder. Varsayılan uç noktalar çalışma zamanında oluştururken, WCF yapılandırılmış eşlemelerin arar ve hangi belirli bir için kullanılacak bağlama adresine göre karar verir.  
+# <a name="add-of-protocolmapping"></a>\<\<ProtocolMapping > > ekleyin
+Bir Aktarım Protokolü şeması (örn. http, net. TCP, net. pipe, vb.) ve bir Windows Communication Foundation (WCF) bağlaması arasındaki varsayılan protokol eşlemesini temsil eder. Çalışma zamanında varsayılan uç noktalar oluştururken, WCF yapılandırılan eşlemelere bakar ve belirli bir tabanlı adres için hangi bağlamanın kullanılacağına karar verir.  
   
  \<system.serviceModel>  
 \<protocolMapping >  
-\<Ekle >  
+\<> Ekle  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,8 +34,8 @@ Taşıma protokol şeması (örneğin, http, net.tcp, net.pipe, vb.) ve Windows 
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |bağlama|Varsayılan uç nokta oluşturma sırasında bir uç nokta için kullanılacak bağlama türünü belirten bir dize.|  
-|bindingConfiguration|Başvurulacak bağlama yapılandırma bölümünün adını belirten dize.|  
-|düzen|Varsayılan uç nokta için kullanılacak taşıma protokol şeması.|  
+|bindingConfiguration|Başvurulacak bağlama yapılandırma bölümünün adını belirten bir dize.|  
+|düzen|Varsayılan uç nokta için kullanılacak Aktarım Protokolü şeması.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -44,10 +44,10 @@ Taşıma protokol şeması (örneğin, http, net.tcp, net.pipe, vb.) ve Windows 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<protocolMapping >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|Taşıma protokol şemaları (örn., http, net.tcp, net.pipe, vb.) ve Windows Communication Foundation (WCF) bağlamaları arasında varsayılan protokol eşlemeleri tanımlayan bir yapılandırma bölümünü temsil eder.|  
+|[\<protocolMapping >](protocolmapping.md)|Aktarım Protokolü şemaları (örn. http, net. TCP, net. pipe, vs.) ve Windows Communication Foundation (WCF) bağlamaları arasında varsayılan protokol eşlemelerini tanımlamaya yönelik bir yapılandırma bölümünü temsil eder.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki yapılandırma örnek machine.config dosyasında varsayılan protokol eşleşmelerinin gösterir. Machine.config dosyasının değiştirerek bu varsayılan eşleme makine düzeyinde geçersiz kılabilirsiniz. Veya yalnızca bir uygulama kapsamında geçersiz kılmak istiyorsanız, bu bölümde, uygulama yapılandırma dosyasında geçersiz kılmak ve eşlemeyi tek protokol şemaları için değiştirin.  
+ Aşağıdaki yapılandırma örneği, Machine. config dosyasında varsayılan protokol eşlemesini gösterir. Machine. config dosyasını değiştirerek makine düzeyinde bu varsayılan eşlemeyi geçersiz kılabilirsiniz. Ya da uygulamayı yalnızca bir uygulamanın kapsamında geçersiz kılmak istiyorsanız, uygulama yapılandırma dosyanızda bu bölümü geçersiz kılabilir ve ayrı protokol şemaları için eşlemeyi değiştirebilirsiniz.  
   
 ```xml  
 <protocolMapping>

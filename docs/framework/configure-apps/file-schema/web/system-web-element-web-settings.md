@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941378"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System.Web > öğesi (Web Ayarları)
-ASP.NET barındırma katman işlem geneline yönelik davranışını nasıl yönettiği hakkında bilgi içerir.  
+# <a name="systemweb-element-web-settings"></a>\<System. Web > öğesi (Web ayarları)
+ASP.NET barındırma katmanının işlem genelinde davranışı nasıl yönettiği hakkında bilgi içerir.  
   
  \<Yapılandırma >  
-\<System.Web > öğesi (Web Ayarları)  
+\<System. Web > öğesi (Web ayarları)  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ ASP.NET barındırma katman işlem geneline yönelik davranışını nasıl yön
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<ApplicationPool >](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|IIS uygulama havuzları için yapılandırma ayarlarını bir aspnet.config dosyasını belirtir.|  
+|[\<applicationPool >](applicationpool-element-web-settings.md)|ASPNET. config dosyasındaki IIS uygulama havuzlarının yapılandırma ayarlarını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Yapılandırma >](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Her yapılandırma dosyasında ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğesini belirtir.|  
+|[\<Yapılandırma >](../configuration-element.md)|Ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan her yapılandırma dosyasında kök öğesini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `system.web` Öğesi ve kendi alt `applicationPool` öğesi .NET Framework 3.5 SP1 itibariyle .NET Framework eklendi. IIS 7.0 veya üzeri sürümler tümleşik modda çalıştırdığınızda, bu öğe birleşim ASP.NET iş parçacıkları nasıl yönettiğini ve nasıl Bu istekler kuyruğa bir IIS uygulama havuzunda ASP.NET barındırıldığında yapılandırmanıza olanak sağlar. IIS 7.0 veya üzeri sürümler Klasik veya ISAPI modunu çalıştırırsanız, bu ayarları göz ardı edilir.  
+ Öğesi ve onun alt `applicationPool` öğesi .NET Framework 3,5 SP1 itibariyle .NET Framework eklenmiştir. `system.web` IIS 7,0 veya sonraki sürümlerini tümleşik modda çalıştırdığınızda, bu öğe birleşimi ASP.NET 'in iş parçacıklarını nasıl yönettiğini ve ASP.NET 'in bir IIS uygulama havuzunda barındırıldığında istekleri nasıl sıraya yazacağını yapılandırmanıza olanak tanır. IIS 7,0 veya sonraki sürümlerini klasik veya ISAPI modunda çalıştırırsanız, bu ayarlar yok sayılır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir IIS uygulama havuzunda ASP.NET barındırıldığında aspnet.config dosyasında ASP.NET işlem geneline yönelik davranışını yapılandırma gösterilmektedir. Örnek IIS içinde tümleşik çalıştığını varsayar modu ve uygulama .NET Framework 3.5 SP1 veya sonraki bir sürümünü kullanıyor. Bu davranış, .NET Framework 3.5 SP1'den önceki .NET Framework sürümlerinde gerçekleşmez. Varsayılan değerleri örnekte değerlerdir.  
+ Aşağıdaki örnek, ASP.NET bir IIS uygulama havuzunda barındırıldığında Aspnet. config dosyasında ASP.NET işlem genelindeki davranışın nasıl yapılandırılacağını gösterir. Örnekte IIS 'nin tümleşik modda çalıştığı ve uygulamanın .NET Framework 3,5 SP1 veya sonraki bir sürümü kullanıldığı varsayılır. Bu davranış, .NET Framework .NET Framework 3,5 SP1 'den önceki sürümlerinde oluşmaz. Örnekteki değerler varsayılan değerlerdir.  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ ASP.NET barındırma katman işlem geneline yönelik davranışını nasıl yön
 |Ad Alanı||  
 |Şema adı||  
 |Doğrulama dosyası||  
-|Boş olabilir.||  
+|Boş olabilir||  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<applicationPool > öğesi (Web Ayarları)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [\<applicationPool > öğesi (Web ayarları)](applicationpool-element-web-settings.md)

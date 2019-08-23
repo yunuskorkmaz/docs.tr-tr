@@ -8,57 +8,57 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38c7742f3e4691f29490e73b05616754415eac58
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953897"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI Otomasyonda Önbelleğe Almayı Kullanma
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu bölümde, önbelleğe almayı uygulayın gösterilmektedir <xref:System.Windows.Automation.AutomationElement> özellikleri ve denetim desenleri.  
+ Bu bölümde, <xref:System.Windows.Automation.AutomationElement> özelliklerin ve denetim desenlerinin önbelleğe alınmasının nasıl uygulanacağı gösterilmektedir.  
   
-### <a name="activate-a-cache-request"></a>Bir önbellek isteği'ni etkinleştirin  
+### <a name="activate-a-cache-request"></a>Önbellek Isteğini etkinleştirme  
   
 1. Oluşturma bir <xref:System.Windows.Automation.CacheRequest>.  
   
-2. Özellikler ve önbellek desenlerini kullanarak belirtin <xref:System.Windows.Automation.CacheRequest.Add%2A>.  
+2. Kullanarak <xref:System.Windows.Automation.CacheRequest.Add%2A>önbelleğe almak için özellikleri ve desenleri belirtin.  
   
-3. Ayarlayarak önbelleğe alma kapsamı belirle <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> özelliği.  
+3. <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> Özelliği ayarlayarak önbelleğe alma kapsamını belirtin.  
   
-4. Alt ağaç görünümünü belirtmek <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> özelliği.  
+4. <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A> Özelliği ayarlayarak alt ağacın görünümünü belirtin.  
   
-5. Ayarlama <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> özelliğini <xref:System.Windows.Automation.AutomationElementMode.None> nesneleri için tam bir başvuru almayarak verimliliği artırmak istiyorsanız. (Bu, bu nesnelerden geçerli değerleri almak imkansız hale getirir.)  
+5. Nesnelere tam <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> başvuru almadıkça verimliliği artırmak istiyorsanız, özelliğini olarak <xref:System.Windows.Automation.AutomationElementMode.None> ayarlayın. (Bu, bu nesnelerden geçerli değerleri almayı olanaksız hale getirir.)  
   
-6. Etkinleştirme isteği kullanarak <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` Microsoft Visual Basic. NET'te).  
+6. `Using` Bir <xref:System.Windows.Automation.CacheRequest.Activate%2A> blokiçinde`using` kullanarak isteği etkinleştirin (Microsoft Visual Basic .net 'te).  
   
- Aldıktan sonra <xref:System.Windows.Automation.AutomationElement> nesneleri veya olaylara abone olma devre dışı bırakma isteği kullanarak <xref:System.Windows.Automation.CacheRequest.Pop%2A> (varsa <xref:System.Windows.Automation.CacheRequest.Push%2A> kullanıldı) ya da tarafından oluşturulan nesne disposing <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Kullanım <xref:System.Windows.Automation.CacheRequest.Activate%2A> içinde bir `using` blok (`Using` Microsoft Visual Basic. NET'te).  
+ Nesneleri aldıktan <xref:System.Windows.Automation.AutomationElement> veya olaylara abone olduktan sonra <xref:System.Windows.Automation.CacheRequest.Pop%2A> ( <xref:System.Windows.Automation.CacheRequest.Push%2A> kullanıldıysa) veya tarafından <xref:System.Windows.Automation.CacheRequest.Activate%2A>oluşturulan nesneyi elden kaldırarak isteği devre dışı bırakın. (Bir <xref:System.Windows.Automation.CacheRequest.Activate%2A> `using` bloğunda kullanın (`Using` Microsoft Visual Basic .net 'te).  
   
 ### <a name="cache-automationelement-properties"></a>Önbellek AutomationElement özellikleri  
   
-1. Sırasında bir <xref:System.Windows.Automation.CacheRequest> etkin olup elde <xref:System.Windows.Automation.AutomationElement> kullanarak nesneleri <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> veya <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; veya bir <xref:System.Windows.Automation.AutomationElement> için kayıtlı bir olay kaynağı olarak <xref:System.Windows.Automation.CacheRequest> etkindi. (Geçirerek bir önbellek oluşturabilirsiniz bir <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache ya da birini <xref:System.Windows.Automation.TreeWalker> yöntemler.)  
+1. <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.CacheRequest> <xref:System.Windows.Automation.AutomationElement> Etkin olsa da, veya <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> kullanarak<xref:System.Windows.Automation.AutomationElement.FindAll%2A>nesneleri elde edin ya da, etkin olduğunda için kaydettiğiniz bir olayın kaynağı olarak elde edin. <xref:System.Windows.Automation.CacheRequest> (Bir <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache 'e veya <xref:System.Windows.Automation.TreeWalker> yöntemlerinden birine geçirerek de bir önbellek oluşturabilirsiniz.)  
   
-2. Kullanım <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> veya bir özelliği almak <xref:System.Windows.Automation.AutomationElement.Cached%2A> özelliği <xref:System.Windows.Automation.AutomationElement>.  
+2. Öğesinin <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A> özelliğindenbir<xref:System.Windows.Automation.AutomationElement.Cached%2A> özelliği kullanın veya alın. <xref:System.Windows.Automation.AutomationElement>  
   
-### <a name="obtain-cached-patterns-and-their-properties"></a>Önbelleğe alınan desenleri ve bunların özelliklerini alın  
+### <a name="obtain-cached-patterns-and-their-properties"></a>Önbelleğe alınmış desenleri ve bunların özelliklerini alma  
   
-1. Sırasında bir <xref:System.Windows.Automation.CacheRequest> etkin olup elde <xref:System.Windows.Automation.AutomationElement> kullanarak nesneleri <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> veya <xref:System.Windows.Automation.AutomationElement.FindAll%2A>; veya bir <xref:System.Windows.Automation.AutomationElement> için kayıtlı bir olay kaynağı olarak <xref:System.Windows.Automation.CacheRequest> etkindi. (Geçirerek bir önbellek oluşturabilirsiniz bir <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache ya da birini <xref:System.Windows.Automation.TreeWalker> yöntemler.)  
+1. <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.CacheRequest> <xref:System.Windows.Automation.AutomationElement> Etkin olsa da, veya <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> kullanarak<xref:System.Windows.Automation.AutomationElement.FindAll%2A>nesneleri elde edin ya da, etkin olduğunda için kaydettiğiniz bir olayın kaynağı olarak elde edin. <xref:System.Windows.Automation.CacheRequest> (Bir <xref:System.Windows.Automation.CacheRequest> GetUpdatedCache 'e veya <xref:System.Windows.Automation.TreeWalker> yöntemlerinden birine geçirerek de bir önbellek oluşturabilirsiniz.)  
   
-2. Kullanım <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> veya <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> önbelleğe alınmış bir deseni alınamıyor.  
+2. Önbelleğe <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> alınmış <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> bir model almak için veya kullanın.  
   
-3. Özellik değerleri almak `Cached` denetim düzeni özelliğidir.  
+3. Denetim deseninin `Cached` özelliğinden özellik değerlerini alın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanarak önbelleğe alma, çeşitli yönlerini gösteren <xref:System.Windows.Automation.CacheRequest.Activate%2A> etkinleştirmek için <xref:System.Windows.Automation.CacheRequest>.  
+ Aşağıdaki kod örneği, öğesini <xref:System.Windows.Automation.CacheRequest.Activate%2A> <xref:System.Windows.Automation.CacheRequest>etkinleştirmek için kullanarak, önbelleğe alma işleminin çeşitli yönlerini gösterir.  
   
  [!code-csharp[UIAClient_snip#107](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#107)]
  [!code-vb[UIAClient_snip#107](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#107)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği kullanarak önbelleğe alma, çeşitli yönlerini gösteren <xref:System.Windows.Automation.CacheRequest.Push%2A> etkinleştirmek için <xref:System.Windows.Automation.CacheRequest>. Önbellek isteği'iç içe istediklerinde kullanmak tercih edilir dışında <xref:System.Windows.Automation.CacheRequest.Activate%2A>.  
+ Aşağıdaki kod örneği, öğesini <xref:System.Windows.Automation.CacheRequest.Push%2A> <xref:System.Windows.Automation.CacheRequest>etkinleştirmek için kullanarak, önbelleğe alma işleminin çeşitli yönlerini gösterir. Önbellek isteklerini iç içe aktarmak istediğiniz durumlar dışında, kullanılması <xref:System.Windows.Automation.CacheRequest.Activate%2A>tercih edilir.  
   
  [!code-csharp[UIAClient_snip#108](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#108)]
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  

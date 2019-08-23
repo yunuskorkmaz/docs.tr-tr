@@ -11,105 +11,105 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
-ms.openlocfilehash: 71b71dc992497fda25a5e9453affc7bea98141d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 106da550fc6e6c50bc40e103e1f855059a9ffa9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950090"
 ---
 # <a name="varieties-of-custom-controls"></a>Özel Denetim Çeşitleri
-.NET Framework ile geliştirin ve yeni denetimleri uygulayın. Devralma yoluyla da olarak mevcut denetimleri hakkında bilgi sahibi kullanıcı denetiminin işlevselliğini genişletebilirsiniz. Ayrıca, kendi boyama gerçekleştiren özel denetimler yazabilirsiniz.  
+.NET Framework ile yeni denetimler geliştirebilir ve uygulayabilirsiniz. Tanıdık kullanıcı denetiminin işlevselliğinin yanı sıra devralma yoluyla varolan denetimleri genişletebilirsiniz. Ayrıca, kendi boyamayı gerçekleştiren özel denetimler de yazabilirsiniz.  
   
- Denetimi oluşturmak için hangi tür zorlanabilirsiniz. Bu konuda çeşitli denetimleri içinden arasında devralabilir ve belirli bir projeniz için denetim türünü seçme hakkında bilgi sağlar farklar vurgular.  
+ Oluşturulacak denetim türü kafa karıştırıcı olabilir. Bu konuda, içinden kalıtımla oluşturabileceğiniz çeşitli denetimler arasındaki farklılıklar vurgulanmıştır ve projeniz için belirli bir denetim türünü seçme hakkında bilgi verilmektedir.  
   
 > [!NOTE]
->  Bir denetim Web formlarında kullanmak için yazma hakkında daha fazla bilgi için bkz: [özel ASP.NET sunucu denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
+> Web Forms üzerinde kullanmak üzere bir denetim yazma hakkında bilgi için bkz. [özel ASP.NET Server denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
-## <a name="base-control-class"></a>Temel denetim sınıfı  
- <xref:System.Windows.Forms.Control> Sınıfı, Windows Forms denetimleri için temel sınıftır. Bu, Windows Forms uygulamalarında visual görüntülemek için gerekli altyapıyı sağlar.  
+## <a name="base-control-class"></a>Taban denetim sınıfı  
+ <xref:System.Windows.Forms.Control> Sınıfı Windows Forms denetimleri için temel sınıftır. Windows Forms uygulamalarında görsel görüntüleme için gereken altyapıyı sağlar.  
   
- <xref:System.Windows.Forms.Control> Sınıfı Windows Forms uygulamalarında visual display sağlamak için aşağıdaki görevleri gerçekleştirir:  
+ Sınıfı <xref:System.Windows.Forms.Control> , Windows Forms uygulamalarında görsel görüntü sağlamak için aşağıdaki görevleri gerçekleştirir:  
   
-- Bir pencere tutucu kullanıma sunar.  
+- Pencere tanıtıcısını gösterir.  
   
-- İleti yönlendirme yönetir.  
+- İleti yönlendirmeyi yönetir.  
   
-- Fare ve klavye olaylarını ve diğer birçok kullanıcı arabirimi olayları sağlar.  
+- Fare ve klavye olayları ve diğer birçok kullanıcı arabirimi olayı sağlar.  
   
-- Gelişmiş Düzen özelliklerini sağlar.  
+- Gelişmiş düzen özellikleri sağlar.  
   
-- Görsel görüntüsüne özgü birçok özellikleri gibi içeren <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, ve <xref:System.Windows.Forms.Control.Width%2A>.  
+- ,, Ve <xref:System.Windows.Forms.Control.ForeColor%2A> <xref:System.Windows.Forms.Control.Height%2A> <xref:System.Windows.Forms.Control.BackColor%2A> gibigörselgörüntülemeyeözgübirçoközellikiçerir<xref:System.Windows.Forms.Control.Width%2A>.  
   
-- Güvenlik ve Microsoft® ActiveX denetimi olarak görev yapacak bir Windows Forms denetimi için gerekli iş parçacığı oluşturma desteği sağlar.  
+- Bir Windows Forms denetiminin Microsoft® ActiveX® denetimi olarak davranması için gereken güvenlik ve iş parçacığı oluşturma desteğini sağlar.  
   
- Çok altyapısının temel sınıfı tarafından sağlandığından, kendi Windows Forms denetimleri geliştirme oldukça kolaydır.  
+ Çoğu altyapının temel sınıf tarafından sağlanması nedeniyle, kendi Windows Forms denetimlerinizi geliştirmek oldukça kolaydır.  
   
-## <a name="kinds-of-controls"></a>Denetim türlerinin  
- Windows Forms denetimleri kullanıcı tarafından tanımlanan üç tür destekler: *bileşik*, *Genişletilmiş*, ve *özel*. Aşağıdaki bölümlerde, her bir denetim türü tanımlamak ve projelerinizde kullanılacak türü seçme önerileri verin.  
+## <a name="kinds-of-controls"></a>Denetim türleri  
+ Windows Forms, üç tür Kullanıcı tanımlı denetimi destekler: *bileşik*, *genişletilmiş*ve *özel*. Aşağıdaki bölümlerde her bir denetim türü tanımlanacaktır ve projelerinizde kullanılacak türü seçme önerileri verilmektedir.  
   
 ### <a name="composite-controls"></a>Bileşik denetimler  
- Bileşik denetimini Windows Forms denetimleri ortak bir kapsayıcıda kapsüllenmiş koleksiyonudur. Bu tür bir denetim adlandırılan bir *kullanıcı denetimi*. İçerdiği denetimlerle adlı *bağlı denetimler*.  
+ Bileşik denetim, ortak bir kapsayıcıda kapsüllenmiş Windows Forms denetimleri koleksiyonudur. Bu tür bir denetim bazen *Kullanıcı denetimi*olarak adlandırılır. İçerilen denetimler, *bileşen denetimleri*olarak adlandırılır.  
   
- Bileşik Denetim tüm kapsanan bir Windows Forms denetimleri her biriyle ilişkili devralınan işlevselliğini içerir ve seçmeli olarak kullanıma sunmak ve bunların özelliklerini bağlama olanak tanır. Bileşik Denetim önemli miktarda geliştirme ek çaba sarf işlevsellikle işleme varsayılan klavye de sağlar.  
+ Bileşik denetim, içerilen Windows Forms denetimlerinin her biriyle ilişkili tüm özellikleri tutar ve özelliklerini seçmeli olarak kullanıma sunabilirsiniz ve bağlamanıza olanak sağlar. Bileşik denetim, sizin bölümlebileceğiniz ek bir geliştirme çabası olmadan varsayılan klavye işleme işlevlerinin büyük bir bölümünü de sağlar.  
   
- Örneğin, bir veritabanından müşteriyi adresini görüntülemek için bileşik denetim oluşturulabilir. Bu denetim içerebilir bir <xref:System.Windows.Forms.DataGridView> denetimi veritabanı alanları görüntülemek için bir <xref:System.Windows.Forms.BindingSource> bir veri kaynağına bağlama işlemek için ve bir <xref:System.Windows.Forms.BindingNavigator> Kayıtlarda gezinmek için denetimi. Veri bağlama özellikleri seçerek erişimlere açabilir ve paketini ve tüm denetim uygulamaya yeniden. Bu tür bir bileşik denetim örneği için bkz: [nasıl yapılır: Windows Forms denetiminde öznitelikleri uygulama](how-to-apply-attributes-in-windows-forms-controls.md).  
+ Örneğin, bir veritabanındaki müşteri adresi verilerini göstermek için bir bileşik denetim oluşturulabilir. Bu denetim, veritabanı alanlarını <xref:System.Windows.Forms.DataGridView> görüntüleme, bir <xref:System.Windows.Forms.BindingSource> <xref:System.Windows.Forms.BindingNavigator> veri kaynağına bağlamayı işleme ve kayıtlar arasında geçiş yapmak için bir denetim içerebilir. Veri bağlama özelliklerini seçmeli olarak kullanıma sunabilirsiniz ve tüm denetimi uygulamadan uygulamaya paketleyebilir ve yeniden kullanabilirsiniz. Bu tür bileşik denetimin bir örneği için bkz [. nasıl yapılır: Windows Forms denetimlerinde](how-to-apply-attributes-in-windows-forms-controls.md)öznitelikleri uygulayın.  
   
- Bileşik denetim yazma için türetilen <xref:System.Windows.Forms.UserControl> sınıfı. <xref:System.Windows.Forms.UserControl> Taban sınıfı sağlar klavye yönlendirme alt denetler ve bir grup olarak çalışması alt denetimler sağlar. Daha fazla bilgi için [bir bileşik Windows Forms denetimi geliştirme](developing-a-composite-windows-forms-control.md).  
+ Bileşik bir denetim yazmak için <xref:System.Windows.Forms.UserControl> sınıfından türetebilirsiniz. <xref:System.Windows.Forms.UserControl> Temel sınıf alt denetimler için klavye yönlendirmesi sağlar ve alt denetimlerin grup olarak çalışmasını sağlar. Daha fazla bilgi için bkz. [bileşik Windows Forms denetimi geliştirme](developing-a-composite-windows-forms-control.md).  
   
  **Öneri**  
   
- Devralınan <xref:System.Windows.Forms.UserControl> , sınıf:  
+ Şu durumlarda sınıfından al: <xref:System.Windows.Forms.UserControl>  
   
-- Çeşitli Windows Forms denetimleri işlevlerini tek bir yeniden kullanılabilir biriminde birleştirmek istediğiniz.  
+- Birkaç Windows Forms denetiminin işlevselliğini tek bir yeniden kullanılabilir birimde birleştirmek istiyorsunuz.  
   
 ### <a name="extended-controls"></a>Genişletilmiş denetimler  
- Devralınan bir denetimi varolan herhangi bir Windows Forms denetimden türetebilirsiniz. Bu yaklaşımda, bir Windows Forms denetiminin devralınan işlevlerin korumak ve ardından özel özellikler, yöntemler veya diğer özellikleri ekleyerek işlevselliği genişletir. Bu seçenekle temel denetimin Boya mantığını geçersiz kılmasını ve ardından görünümünü değiştirerek kullanıcı arabirimi genişletme.  
+ Devralınan bir denetimi, varolan bir Windows Forms denetiminden türetebilirsiniz. Bu yaklaşımda, bir Windows Forms denetiminin tüm özelliklerini koruyabilir ve sonra özel özellikler, Yöntemler veya diğer özellikler ekleyerek bu işlevselliği genişletebilirsiniz. Bu seçenekle, temel denetimin boyama mantığını geçersiz kılabilir ve sonra görünümünü değiştirerek Kullanıcı arabirimini genişletebilirsiniz.  
   
- Örneğin, türetilmiş bir denetim oluşturabilirsiniz <xref:System.Windows.Forms.Button> kullanıcının kaç kez izleyen denetim, tıklanan.  
+ Örneğin, bir kullanıcının onu kaç kez tıkladığını izleyen <xref:System.Windows.Forms.Button> denetimden türetilmiş bir denetim oluşturabilirsiniz.  
   
- Bazı denetimler de özel görünüşünü denetiminizin grafik kullanıcı arabirimi için geçersiz kılarak ekleyebilirsiniz <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi temel sınıf. Tıklama izleyen bir genişletilmiş düğmesi için geçersiz kılabilirsiniz <xref:System.Windows.Forms.Control.OnPaint%2A> taban uygulamasını çağırmak için yöntem <xref:System.Windows.Forms.Control.OnPaint%2A>ve sonra bir köşesinde tıklatın sayısı çizin <xref:System.Windows.Forms.Button> denetimin istemci alanı.  
+ Bazı denetimlerde, taban sınıfının <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılarak denetiminizin grafik kullanıcı arabirimine özel bir görünüm de ekleyebilirsiniz. Tıklamaları izleyen genişletilmiş bir düğme için, temel <xref:System.Windows.Forms.Control.OnPaint%2A> <xref:System.Windows.Forms.Control.OnPaint%2A>uygulamasını çağırmak için yöntemini geçersiz kılabilir ve sonra <xref:System.Windows.Forms.Button> denetimin istemci alanının bir köşesinde tıklama sayısını çizebilirsiniz.  
   
  **Öneri**  
   
- Bir Windows Forms denetimi devralır:  
+ Şu durumlarda Windows Forms denetiminden devralma:  
   
-- İhtiyacınız olan işlevleri çoğunu zaten varolan bir Windows Forms denetimi aynı.  
+- İhtiyacınız olan işlevlerin çoğu, mevcut bir Windows Forms denetimiyle zaten benzerdir.  
   
-- Varolan bir denetimi için yeni bir grafik kullanıcı arabirimi tasarım istediğiniz veya özel bir grafik kullanıcı arabirimi gerekmez.  
+- Özel bir grafik kullanıcı arabirimine ihtiyacınız yoktur veya var olan bir denetim için yeni bir grafik kullanıcı arabirimi tasarlamak istiyorsunuz.  
   
 ### <a name="custom-controls"></a>Özel denetimler  
- Önemli ölçüde baştan devralarak oluşturmak için bir denetim oluşturmak için başka bir yolu olan <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control> Sınıfı, tüm denetimler tarafından fare ve klavye olaylarını işleme dahil olmak üzere gerekli temel işlevleri ancak hiçbir özel denetim işlevselliğini veya grafik arabirim sağlar.  
+ Bir denetim oluşturmanın başka bir yolu, öğesinden <xref:System.Windows.Forms.Control>devralarak baştan başlayarak bir tane oluşturmaktır. <xref:System.Windows.Forms.Control> Sınıfı, denetimler için gereken, fare ve klavye işleme olayları, ancak denetime özgü bir işlev veya grafik arabirimi dahil olmak üzere tüm temel işlevleri sağlar.  
   
- Bir denetimi devralarak oluşturma <xref:System.Windows.Forms.Control> sınıfı, çok daha fazla düşünce ve dan devralan fazla çaba gerektirir <xref:System.Windows.Forms.UserControl> veya mevcut bir Windows Forms denetimi. Sizin için harika bir fırsat uygulamasının sol çünkü denetiminiz bir bileşik veya genişletilmiş denetimi çok esneklik sahip olabilir ve tam ihtiyaçlarınıza uyacak şekilde denetiminiz uyarlayabilirsiniz.  
+ <xref:System.Windows.Forms.Control> Sınıfından devralarak bir denetim oluşturmak için veya var olan bir Windows Forms denetiminden devralma işleminden <xref:System.Windows.Forms.UserControl> çok daha fazla düşünce ve çaba gerekir. Sizin için harika bir uygulama olduğundan, denetiminiz bir bileşik veya genişletilmiş denetimden daha fazla esneklik sağlayabilir ve denetiminizi tam gereksinimlerinize uyacak şekilde uyarlayabilirsiniz.  
   
- Özel denetim uygulamak için kod yazma <xref:System.Windows.Forms.Control.OnPaint%2A> gereksinim duyduğunuz herhangi bir özelliğe özgü kod yanı sıra denetim olayı. Ayrıca geçersiz kılabilirsiniz <xref:System.Windows.Forms.Control.WndProc%2A> doğrudan yöntemi ve tutamacı windows iletileri. Bu en güçlü bir şekilde bir denetim oluşturmak için ancak bu tekniği etkili bir şekilde kullanmak için Microsoft Win32® API ile ilgili bilgi sahibi olmanız gerekir.  
+ Özel bir denetim uygulamak için, Denetim <xref:System.Windows.Forms.Control.OnPaint%2A> olayının yanı sıra ihtiyacınız olan özelliğe özgü kod yazmanız gerekir. Ayrıca <xref:System.Windows.Forms.Control.WndProc%2A> yöntemi geçersiz kılabilir ve Windows iletilerini doğrudan işleyebilirsiniz. Bu, bir denetim oluşturmanın en güçlü yoludur, ancak bu tekniği etkin bir şekilde kullanmak için Microsoft Win32® API 'sine alışmanız gerekir.  
   
- Örnek bir özel denetimin görünümünü ve davranışını bir analog saatinin çoğaltan bir saat denetimidir. Özel boyama yanıt olarak taşımak için saat kullanımına neden çağrıldığında <xref:System.Windows.Forms.Timer.Tick> bir iç olayları <xref:System.Windows.Forms.Timer> bileşeni. Daha fazla bilgi için [nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md).  
+ Özel denetime bir örnek, bir analog saatin görünümünü ve davranışını çoğaltan saat denetimidir. Özel boyama, saatin bir iç <xref:System.Windows.Forms.Timer.Tick> <xref:System.Windows.Forms.Timer> bileşenden gelen olaylara yanıt olarak taşınmasını sağlamak için çağrılır. Daha fazla bilgi için [nasıl yapılır: Basit bir Windows Forms denetimi](how-to-develop-a-simple-windows-forms-control.md)geliştirin.  
   
  **Öneri**  
   
- Devralınan <xref:System.Windows.Forms.Control> , sınıf:  
+ Şu durumlarda sınıfından al: <xref:System.Windows.Forms.Control>  
   
-- Özel bir grafik gösterimi denetiminizin sunmak istiyorsunuz.  
+- Denetiminizin özel bir grafik temsilini sağlamak istiyorsunuz.  
   
-- Standart denetimler kullanılabilir olmayan özel işlevselliği uygulamak gerekir.  
+- Standart denetimler aracılığıyla kullanılamayan özel işlevleri uygulamanız gerekir.  
   
 ### <a name="activex-controls"></a>ActiveX Denetimleri  
- Windows formlar altyapısına ana bilgisayar Windows Forms denetimleri için optimize edilmiştir ancak ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio'da bu görevi için desteği yoktur. Daha fazla bilgi için [nasıl yapılır: Windows Forms'a ActiveX denetimleri ekleme](how-to-add-activex-controls-to-windows-forms.md).  
+ Windows Forms altyapısı, Windows Forms denetimleri barındırmak için iyileştirildi olsa da, ActiveX denetimlerini kullanmaya devam edebilirsiniz. Visual Studio 'da bu görev için destek vardır. Daha fazla bilgi için [nasıl yapılır: Windows Forms](how-to-add-activex-controls-to-windows-forms.md)için ActiveX denetimleri ekleyin.  
   
-### <a name="windowless-controls"></a>Penceresiz denetimleri  
- The Microsoft Visual Basic® 6.0and ActiveX teknolojilerini desteklemek *penceresiz* kontrol eder. Windows Forms'ta penceresiz denetimleri desteklenmez.  
+### <a name="windowless-controls"></a>Penceresiz denetimler  
+ Microsoft Visual Basic® 6.0 ve ActiveX teknolojileri *penceresiz* denetimleri destekler. Penceresiz denetimler Windows Forms desteklenmez.  
   
 ## <a name="custom-design-experience"></a>Özel tasarım deneyimi  
- Özel bir tasarım zamanı deneyimi uygulamanız gerekiyorsa, kendi Tasarımcısı yazabilirsiniz. Bileşik denetimler için özel Tasarımcı sınıfından türetilen <xref:System.Windows.Forms.Design.ParentControlDesigner> veya <xref:System.Windows.Forms.Design.DocumentDesigner> sınıfları. Genişletilmiş ve özel denetimler için özel Tasarımcı sınıfından türetilen <xref:System.Windows.Forms.Design.ControlDesigner> sınıfı.  
+ Özel bir tasarım zamanı deneyimi uygulamanız gerekiyorsa kendi tasarımcılarınızı yazabilirsiniz. Bileşik denetimler için, <xref:System.Windows.Forms.Design.ParentControlDesigner> <xref:System.Windows.Forms.Design.DocumentDesigner> veya sınıflarından özel tasarımcı sınıfınızı türetirsiniz. Genişletilmiş ve özel denetimler için, <xref:System.Windows.Forms.Design.ControlDesigner> sınıfından özel tasarımcı sınıfınızı türetirsiniz.  
   
- Kullanım <xref:System.ComponentModel.DesignerAttribute> denetiminiz tasarımcınıza ile ilişkilendirilecek. Daha fazla bilgi için [tasarım zamanı desteğini genişletmek](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) ve [nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
+ Denetiminizi tasarımcıınızla ilişkilendirmek için öğesini kullanın. <xref:System.ComponentModel.DesignerAttribute> Daha fazla bilgi için bkz. [Tasarım zamanı desteğini genişletme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) ve [nasıl yapılır: Tasarım zamanı özelliklerinden](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))faydalanan bir Windows Forms denetimi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)
 - [Nasıl yapılır: Basit bir Windows Forms denetimi geliştirme](how-to-develop-a-simple-windows-forms-control.md)
 - [Bileşik Windows Forms Denetimi Geliştirme](developing-a-composite-windows-forms-control.md)
-- [Tasarım zamanı desteği sunma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Tasarım zamanı desteğini genişletme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))

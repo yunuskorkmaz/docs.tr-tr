@@ -5,33 +5,33 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6339666d80de6c40b390683c1dabe6925053d30d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942293"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
-Bu örnek, yönetilen bir Windows hizmetinde barındırılan Windows Communication Foundation (WCF) hizmet gösterir. Windows Hizmetleri içindeki Hizmetler uygulamasını kullanarak denetlenir **Denetim Masası** ve sonra sistemi yeniden başlatma otomatik olarak başlatılmasını yapılandırılabilir. Örnek, bir istemci programı ve bir Windows hizmet programı oluşur. Hizmet bir .exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows İşlem Etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında yazmak için gerekli değildir kod barındırma.
+Bu örnek, yönetilen bir Windows hizmetinde barındırılan bir Windows Communication Foundation (WCF) hizmetini gösterir. Windows Hizmetleri **Denetim Masası** 'ndaki Hizmetler uygulaması kullanılarak denetlenir ve sistem yeniden başlatıldıktan sonra otomatik olarak başlayacak şekilde yapılandırılabilir. Örnek, bir istemci programından ve bir Windows hizmeti programından oluşur. Hizmet bir. exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows Işlem etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında, barındırma kodu yazmanız gerekmez.
 
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
- Bu hizmeti derledikten sonra Installutil.exe yardımcı programıyla gibi herhangi bir Windows hizmeti yüklü olmalıdır. Hizmete değişiklik yapmak için kullanacaksanız, kendisiyle kaldırmalısınız `installutil /u`. Bu örnekte bulunan Setup.bat ve Cleanup.bat dosyaları yüklemek ve Windows hizmeti'kurmak, başlatmak için ve kapatmak ve Windows hizmetini kaldırmak için komutlardır. Windows Hizmeti çalışıyorsa WCF hizmeti yalnızca istemcilere yanıt verebilir. Gelen hizmetler uygulamasını kullanarak Windows hizmetini durdurun, **Denetim Masası** ve istemcisini çalıştıran bir <xref:System.ServiceModel.EndpointNotFoundException> istemci hizmeti erişmeye çalışırken özel durum oluşur. Windows hizmetini yeniden başlatın ve istemciyi yeniden çalıştırın, iletişim başarılı olur.  
+ Bu hizmeti oluşturduktan sonra, diğer tüm Windows Hizmetleri gibi InstallUtil. exe yardımcı programıyla birlikte yüklenmelidir. Hizmette değişiklik yapacaksanız, önce bunu ile `installutil /u`kaldırmanız gerekir. Bu örneğe eklenen Setup. bat ve Cleanup. bat dosyaları, Windows hizmetini yükleme ve başlatma ve Windows hizmetini kapatma ve kaldırma komutlardır. WCF hizmeti yalnızca Windows hizmeti çalışıyorsa istemcilere yanıt verebilir. Windows hizmetini **Denetim Masası** 'ndan hizmetler uygulamasını kullanarak durdurur ve istemcisini çalıştırırsanız, istemci hizmete erişmeye çalıştığında bir <xref:System.ServiceModel.EndpointNotFoundException> özel durum oluşur. Windows hizmetini yeniden başlatıp istemciyi yeniden çalıştırırsanız, iletişim başarılı olur.  
   
- Hizmet kodunu bir yükleyici sınıfı ICalculator sözleşme uygulayan bir WCF hizmeti uygulaması sınıf ve çalışma zamanı ana bilgisayarı olarak davranan bir Windows hizmet sınıfı içerir. Devralınan Yükleyici sınıfı <xref:System.Configuration.Install.Installer>, Installutil.exe aracı tarafından bir NT hizmeti olarak yüklenecek program sağlar. Hizmet uygulaması sınıfı `WcfCalculatorService`, temel hizmet sözleşmesini uygulayan bir WCF hizmeti. Bu WCF hizmeti olarak adlandırılan bir Windows hizmeti sınıf içinde barındırıldığı `WindowsCalculatorService`. Bir Windows hizmeti olarak nitelemek için sınıf devraldığı <xref:System.ServiceProcess.ServiceBase> ve uygulayan <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> ve <xref:System.ServiceProcess.ServiceBase.OnStop> yöntemleri. İçinde <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>, <xref:System.ServiceModel.ServiceHost> nesne için oluşturulan `WcfCalculatorService` yazın ve açılır. İçinde <xref:System.ServiceProcess.ServiceBase.OnStop>, çağırarak ServiceHost kapalı <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> yöntemi <xref:System.ServiceModel.ServiceHost> nesne. Ana bilgisayarın temel adres kullanılarak yapılandırılır [ \<Ekle >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) bir alt öğesi, [ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), bir alt öğesi olan [ \<konak >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) bir alt öğesi olan [ \<hizmet >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğesi.  
+ Hizmet kodu, bir yükleyici sınıfı, Icalrealtor sözleşmesini uygulayan bir WCF hizmeti uygulama sınıfı ve çalışma zamanı ana bilgisayarı görevi gören bir Windows hizmeti sınıfı içerir. Öğesinden <xref:System.Configuration.Install.Installer>devralan Yükleyici sınıfı, programın InstallUtil. exe aracı tarafından bir NT hizmeti olarak yüklenmesine izin verir. Hizmet uygulama sınıfı `WcfCalculatorService`, temel bir hizmet sözleşmesini uygulayan bir WCF hizmetidir. Bu WCF hizmeti adlı `WindowsCalculatorService`bir Windows hizmeti sınıfı içinde barındırılır. Bir Windows hizmeti olarak nitelendirmek için, sınıfı öğesinden <xref:System.ServiceProcess.ServiceBase> devralır ve <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> ve <xref:System.ServiceProcess.ServiceBase.OnStop> yöntemlerini uygular. ' <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>De, <xref:System.ServiceModel.ServiceHost> `WcfCalculatorService` türü için bir nesne oluşturulur ve açılır. İçinde <xref:System.ServiceProcess.ServiceBase.OnStop>ServiceHost, <xref:System.ServiceModel.ServiceHost> nesnesinin <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> yöntemi çağırarak kapalıdır. Konağın temel adresi [, \<ana bilgisayar >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) öğesinin [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md) [bir altöğesiolan>BaseAddressöğesininbiraltöğesiolanAdd>öğesikullanılarakyapılandırılır.\<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğesi.  
   
- Tanımlanan bir uç nokta temel adresi kullanır ve [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Aşağıdaki örnek, taban adresini ve bunun yanı sıra CalculatorService kullanıma sunduğu uç nokta yapılandırmasını gösterir.  
+ Tanımlanan uç nokta, temel adresi ve bir [ \<WSHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)kullanır. Aşağıdaki örnek, temel adresin yapılandırmasını ve Hesaplatorservice 'i kullanıma sunan uç noktayı gösterir.  
   
 ```xml  
 <services>  
@@ -51,18 +51,18 @@ Bu örnek, yönetilen bir Windows hizmetinde barındırılan Windows Communicati
 </services>  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını hem hizmet hem de istemci konsol pencerelerinde görüntülenir. Her konsol penceresi hizmet ve istemci kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Setup.bat bir yükseltilmiş Visual Studio 2012 komut Installutil.exe Aracı'nı kullanarak Windows hizmetini yüklemek için istemiyle çalıştırılabilen sonra çözümü oluşturuldu. Hizmet hizmetlerinde görüntülenmelidir.  
+3. Çözüm derlendikten sonra, InstallUtil. exe aracını kullanarak Windows hizmetini yüklemek için, yükseltilmiş bir Visual Studio 2012 komut isteminden setup. bat dosyasını çalıştırın. Hizmet, hizmetler 'de görünmelidir.  
   
-4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve Kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric barındırma ve kalıcılık örnekleri](https://go.microsoft.com/fwlink/?LinkId=193961)

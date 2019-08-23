@@ -2,25 +2,25 @@
 title: İzleme Katılımcıları
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963682"
 ---
 # <a name="tracking-participants"></a>İzleme Katılımcıları
-İzleme katılımcıları erişmek bir iş akışı Geliştirici tanıyan genişletilebilirlik noktaları olan <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> nesneleri ve bunları işlem. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] izleme kayıtları için olay izleme Windows (ETW) olayları olarak yazan standart izleme katılımcı içerir. Gereksinimlerinizi karşılamıyorsa, özel izleme katılımcı de yazabilirsiniz.  
+Katılımcıları izlemek, iş akışı geliştiricisinin nesnelere erişmesini <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> ve bunları işlemesini sağlayan genişletilebilirlik noktalarıdır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]izleme kayıtlarını Windows için olay Izleme (ETW) olayları olarak yazan standart bir izleme katılımcısı içerir. Gereksinimlerinizi karşılamıyorsa, özel bir izleme katılımcısı da yazabilirsiniz.  
   
 ## <a name="tracking-participants"></a>İzleme Katılımcıları  
- Katılımcı bir kayıt alt kümesi için abone olabilirsiniz, izleme altyapısı üzerinde giden izleme kayıtları bir filtre uygulamayı sağlar. Bir filtre uygulamak için bir izleme profili mekanizmadır.  
+ İzleme altyapısı, bir katılımcının kayıtların bir alt kümesine abone olabileceği gibi, giden izleme kayıtlarında bir filtrenin uygulamasına izin verir. Filtre uygulama mekanizması bir izleme profili aracılığıyla yapılır.  
   
- Windows Workflow Foundation (WF) [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] izleme kayıtları bir ETW oturumu Yazar izleme katılımcı sağlar. Katılımcı bir iş akışı hizmeti yapılandırma dosyasında bir izleme özgü davranışı ekleyerek yapılandırılır. Etkinleştirme bir ETW İzleme katılımcı olacak şekilde kayıtları izleme Olay Görüntüleyicisi'görüntülemesini sağlar. ETW tabanlı izleme için SDK'sı örneği ile tabanlı ETW İzleme katılımcı kullanarak WF izleme hakkında bilgi edinmek için iyi bir yoludur.  
+ İçindeki [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Windows Workflow Foundation (WF), izleme kayıtlarını bir ETW oturumuna yazan bir izleme katılımcısı sağlar. Katılımcı bir yapılandırma dosyasına izlemeye özgü bir davranış ekleyerek bir iş akışı hizmeti üzerinde yapılandırılır. ETW izleme katılımcısının etkinleştirilmesi, Olay Görüntüleyicisi 'nde izleme kayıtlarının görüntülenmesine izin verir. ETW tabanlı izleme için SDK örneği, ETW tabanlı izleme katılımcısını kullanarak WF izlemeye alışmanız için iyi bir yoldur.  
   
-## <a name="etw-tracking-participant"></a>ETW İzleme katılımcı  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bir ETW İzleme, izleme kayıtları bir ETW oturumu Yazar katılımcı içerir. Bu, uygulamanızın performansını veya sunucunun aktarım hızı için minimum etkiyle çok verimli bir şekilde gerçekleştirilir. Standart ETW İzleme katılımcı kullanmanın bir avantajı, aldığı izleme kayıtları başka bir uygulama ile görüntülenebilir ve Windows Olay Görüntüleyicisi'nde sistem günlükleri ' dir.  
+## <a name="etw-tracking-participant"></a>ETW Izleme Katılımcısı  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], izleme kayıtlarını bir ETW oturumuna yazan bir ETW Izleme katılımcısı içerir. Bu, uygulamanın performansına veya sunucunun aktarım hızına en az etkiyle çok verimli bir şekilde yapılır. Standart ETW izleme katılımcısı kullanmanın bir avantajı, aldığı izleme kayıtlarının Windows Olay Görüntüleyicisi diğer uygulama ve sistem günlükleri ile görüntülenebilmesini kullanmaktır.  
   
- Standart ETW İzleme katılımcı Web.config dosyasında aşağıdaki örnekte gösterilen şekilde yapılandırılır.  
+ Standart ETW izleme katılımcısı, aşağıdaki örnekte gösterildiği gibi Web. config dosyasında yapılandırılır.  
   
 ```xml  
 <configuration>  
@@ -47,52 +47,52 @@ ms.locfileid: "61699815"
 ```  
   
 > [!NOTE]
->  Varsa bir `trackingProfile` adı belirtilmezse gibi hemen `<etwTracking/>` veya `<etwTracking profileName=""/>`, ardından varsayılan profil ile yüklü izleme [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Machine.config dosyasına dosyası kullanılır.  
+> Yalnızca `trackingProfile` [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] veya gibi`<etwTracking profileName=""/>`bir ad belirtilmemişse, Machine. config dosyasında ile yüklenen varsayılan izleme profili kullanılır. `<etwTracking/>`  
   
- Machine.config dosyasında varsayılan profili izleme, iş akışı örneği kayıtları ve hatalar için abone olur.  
+ Machine. config dosyasında, varsayılan izleme profili iş akışı örnek kayıtlarına ve hatalarına abone olur.  
   
- ETW olayları ETW oturumu üzerinden bir sağlayıcı kimliği yazılır ETW İzleme katılımcı kullandığı izleme yazmak için ETW kayıt kimliği Web.config dosyasının tanılama bölümünde tanımlanan sağlayıcısı (altında `<system.serviceModel><diagnostics>`). Varsayılan olarak, bir belirtilmedi, ETW İzleme katılımcı aşağıdaki örnekte gösterildiği gibi varsayılan sağlayıcı kimliği kullanır.  
+ ETW 'de, olaylar bir sağlayıcı KIMLIĞI aracılığıyla ETW oturumuna yazılır. ETW izleme katılımcısının, izleme kayıtlarını ETW 'ye yazmak için kullandığı sağlayıcı KIMLIĞI, Web. config dosyasının Tanılama bölümünde tanımlanmıştır (altında `<system.serviceModel><diagnostics>`). Varsayılan olarak, ETW izleme katılımcısı, aşağıdaki örnekte gösterildiği gibi, biri belirtilmediğinde varsayılan bir sağlayıcı KIMLIĞI kullanır.  
   
 ```xml  
 <system.serviceModel>  
         <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />  
 ```  
   
- İzleme verilerini ETW İzleme katılımcı aracılığıyla akışı aşağıda gösterilmiştir. İzleme verilerini ETW oturumu ulaştığında, çeşitli yollarla erişilebilir. Olay Görüntüleyicisi, günlükler ve izlemeler, uygulamaları ve hizmetleri görüntülemek için kullanılan genel bir Windows aracı üzerinden bu olayları erişmek için en faydalı yollarından biridir.  
+ Aşağıdaki çizimde, ETW izleme katılımcısı aracılığıyla veri izleme akışı gösterilmektedir. İzleme verileri ETW oturumuna ulaştığında, bir dizi şekilde erişilebilir. Bu olaylara erişmenin en yararlı yöntemlerinden biri, uygulama ve hizmetlerden günlükleri ve izlemeleri görüntülemek için kullanılan ortak bir Windows aracı olan Olay Görüntüleyicisi.  
   
- ![İzleme verilerini ETW İzleme Sağlayıcısı aracılığıyla akışı.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
+ ![ETW izleme sağlayıcısı aracılığıyla izleme verileri akışı.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
-## <a name="tracking-participant-event-data"></a>İzleme katılımcı olay verileri  
- İzleme katılımcı, izleme kaydı başına bir olay biçiminde bir ETW oturumu izlenen olay verilerini serileştirir.  Bir olay 199-100 aralığında bir kimliği kullanılarak tanımlanır. İzleme olayı tanımları için bir izleme katılımcı tarafından yayılan kayıtları görüntüle [izleme olayları başvurusu](tracking-events-reference.md) konu.  
+## <a name="tracking-participant-event-data"></a>Katılımcı olay verilerini izleme  
+ Bir izleme katılımcısı, izlenen olay verilerini izleme kaydı başına bir olay biçiminde bir ETW oturumunda seri hale getirir.  Bir olay, 100 ile 199 arasında bir KIMLIK kullanılarak tanımlanır. İzleme katılımcısı tarafından yayılan izleme olayı kayıtlarının tanımları için, [olayları Izleme başvurusu](tracking-events-reference.md) konusuna bakın.  
   
- ETW olay boyutu ETW arabellek boyutuyla sınırlıdır veya ETW olayı için en fazla yükü tarafından hangi değerin daha küçük. Olay boyutu ya da ETW limitler aşarsa, olay kesilmiş ve içeriği rastgele bir şekilde kaldırıldı. Değişkenleri, bağımsız değişkenler, ek açıklamalar ve özel verileri seçmeli olarak kaldırılmaz. Kesme söz konusu olduğunda, bunların tümünün olay boyutu ETW sınırını aşmasına neden değeri bağımsız olarak kesilir.  Kaldırılan veriler ile değiştirilir `<item>..<item>`.  
+ Bir ETW olayının boyutu ETW arabellek boyutuyla sınırlıdır veya bir ETW olayı için en yüksek yük tarafından, hangisi daha küçükse bu değer daha küçüktür. Olayın boyutu bu ETW limitlerinden birini aşarsa, olay kesilir ve içeriği rastgele bir şekilde kaldırılır. Değişkenler, bağımsız değişkenler, ek açıklamalar ve özel veriler seçmeli olarak kaldırılmaz. Kesme durumunda, bu durum, olay boyutunun ETW sınırını aşmasına neden olan değere bakılmaksızın kesilir.  Kaldırılan veriler ile `<item>..<item>`değiştirilmiştir.  
   
- Karmaşık türleri değişkenleri, bağımsız ve özel veri öğeleri, ETW olay kullanarak kayıt serileştirilme [NetDataContractSerializer sınıfı](https://go.microsoft.com/fwlink/?LinkId=177537). Bu sınıf serileştirilmiş XML akışı CLR türü bilgilerini içerir.  
+ Değişkenlerde, bağımsız değişkenlerde ve özel veri öğelerinde karmaşık türler [NetDataContractSerializer sınıfı](https://go.microsoft.com/fwlink/?LinkId=177537)kullanılarak ETW olay kaydına serileştirilir. Bu sınıf, seri hale getirilen XML tarafında CLR türü bilgilerini içerir.  
   
- Yük verisi ETW sınırı nedeniyle kesildi yinelenen izleme kayıtları bir ETW oturumu gönderilen neden olabilir. Birden fazla oturum olayları dinleyen ve oturumları olaylar için farklı yükü sınırları varsa bu durum oluşabilir.  
+ ETW sınırları nedeniyle yük verilerinin kesilmesi, yinelenen izleme kayıtlarının bir ETW oturumuna gönderilmesine neden olabilir. Bu durum, olayları dinlerken birden fazla oturum varsa ve oturumlar için farklı yük sınırlarına sahip olduğunda meydana gelebilir.  
   
- Alt sınır oturum olay kesilebilir. ETW İzleme katılımcı olayları dinleme oturum sayısı, tüm bilgilere sahip değildir; bir olay oturumu sonra bir kez olayı gönderirken ETW katılımcı yeniden denemeler için grafik kesilmişse. Bu durumda daha büyük bir yükü boyutu kabul edecek şekilde yapılandırılmış oturum olayı iki kez (kesilmiş olmayan ve kesilmiş) alırsınız. Çoğaltma ile aynı arabellek boyutu sınırları tüm ETW oturumlarına yapılandırarak önlenebilir.  
+ Alt sınır ile oturum için olay kesilebilir. ETW izleme katılımcısı, olayları dinleyen oturum sayısı hakkında bilgi sahibi değildir; bir oturum için bir olay kesilmişse, ETW katılımcısı olayı bir kez göndermeyi yeniden dener. Bu durumda, daha büyük bir yük boyutunu kabul edecek şekilde yapılandırılan oturum, olayı iki kez alır (kesilmeyen ve kesilen olay). Aynı arabellek boyutu limitleriyle tüm ETW oturumları yapılandırılarak çoğaltma engellenebilir.  
   
-## <a name="accessing-tracking-data-from-an-etw-participant-in-the-event-viewer"></a>Olay Görüntüleyicisi'ni bir ETW Katılımcısı veri izlemeyi erişme  
- Bir ETW oturumu ETW İzleme katılımcı tarafından yazılan olayları Olay Görüntüleyicisi'ni (varsayılan sağlayıcı kimliği kullanırken) erişilebilir. Bu, iş akışı tarafından yayılan kayıtları izleme hızlı bir şekilde görüntülemek için sağlar.  
+## <a name="accessing-tracking-data-from-an-etw-participant-in-the-event-viewer"></a>Olay Görüntüleyicisi ETW katılımcılarından Izleme verilerine erişme  
+ ETW izleme katılımcısı tarafından ETW oturumuna yazılan olaylara Olay Görüntüleyicisi aracılığıyla erişilebilir (varsayılan sağlayıcı KIMLIĞI kullanılırken). Bu, iş akışı tarafından yayınlanan kayıtları izlemeyi hızlı bir şekilde görüntülemenizi sağlar.  
   
 > [!NOTE]
->  Olayların bir ETW oturumu kullanın olay kimlikleri 199-100 aralığında yayılan izleme.  
+> Bir ETW oturumuna yayılan kayıt olaylarını izleme, 100 ile 199 arasındaki aralıktaki olay kimliklerini kullanır.  
   
-#### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Olay Görüntüleyicisi'nde izleme kayıtları görüntüleme olanağı  
+#### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Olay Görüntüleyicisi Izleme kayıtlarını görüntülemeyi etkinleştirmek için  
   
-1. Olay Görüntüleyicisi'ni (EVENTVWR. başlatma EXE)  
+1. Olay Görüntüleyicisi başlatın (EVENTVWR. EXE  
   
-2. Seçin **Olay Görüntüleyicisi, uygulama ve hizmet günlükleri, Microsoft, Windows, uygulama uygulamalarının**.  
+2. **Olay Görüntüleyicisi, uygulama ve hizmet günlükleri, Microsoft, Windows, uygulama sunucusu-uygulamalar**' ı seçin.  
   
-3. Sağ tıklayın ve emin **görünümü, Analitik ve hata ayıklama günlüklerini göster** seçilir. Aksi durumda, onay işaretine yanında görünecek şekilde seçin. Bu görüntüler **analitik**, **Perf**, ve **hata ayıklama** günlükleri.  
+3. Sağ tıklayın ve **Görünüm, analitik ve hata ayıklama günlüklerini göster** ' in seçili olduğundan emin olun. Aksi takdirde, seçeneğinin yanında onay işaretinin görünmesi için bunu seçin. Bu, **analitik**, **perf**ve **hata ayıklama** günlüklerini görüntüler.  
   
-4. Sağ **analitik** oturum açın ve ardından **günlüğü etkinleştir**. Günlük %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl dosyasında bulunur.  
+4. **Analitik** günlüğe sağ tıklayın ve **günlüğü etkinleştir**' i seçin. Günlük%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications% 4 A nalytic. etl dosyasında mevcut olacaktır.  
   
-## <a name="custom-tracking-participant"></a>Özel İzleme katılımcı  
- API izleme katılımcı, izleme çalışma zamanı uzantısı, iş akışı çalışma zamanı tarafından yayılan izleme kayıtları işlemek için Özel mantık dahil edebilirsiniz bir kullanıcı tarafından sağlanan izleme katılımcı ile sağlar. Özel İzleme katılımcı yazmak için geliştirici uygulamalıdır `Track` metodunda <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Bu yöntem, bir izleme kaydını yayılan iş akışı çalışma zamanı tarafından çağrılır.  
+## <a name="custom-tracking-participant"></a>Özel Izleme Katılımcısı  
+ Katılımcı izleme API 'SI, iş akışı çalışma zamanı tarafından yayılan izleme kayıtlarını işlemek için özel mantık içerebilen kullanıcı tarafından sağlanmış bir izleme katılımcısına sahip izleme çalışma zamanının uzantısına izin verir. Özel bir izleme katılımcısı yazmak için, geliştiricinin `Track` metodu <xref:System.Activities.Tracking.TrackingParticipant> sınıfında uygulaması gerekir. Bu yöntem, bir izleme kaydı iş akışı çalışma zamanı tarafından yayıldığınızda çağrılır.  
   
- İzleme katılımcıları türetilen <xref:System.Activities.Tracking.TrackingParticipant> sınıfı. Sistem tarafından sağlanan <xref:System.Activities.Tracking.EtwTrackingParticipant> bir olay izleme için Windows (ETW) olayı, alınan her bir izleme kaydını gösterir. Özel İzleme katılımcı oluşturmak için bir sınıf oluşturulur türetildiği <xref:System.Activities.Tracking.TrackingParticipant>. Temel izleme işlevselliği sağlamak için geçersiz kılma <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> bir izleme kaydını çalışma zamanı tarafından gönderilir ve istenen şekilde işlenebilir çağrılır. Aşağıdaki örnekte, tüm izleme kayıtları konsol penceresine yayan bir özel izleme katılımcı sınıf tanımlanır. Aynı zamanda uygulayabileceğiniz bir <xref:System.Activities.Tracking.TrackingParticipant> izleme işlemleri nesnesini kullanarak zaman uyumsuz olarak kaydeder, `BeginTrack` ve `EndTrack` yöntemleri  
+ İzleme katılımcıları, <xref:System.Activities.Tracking.TrackingParticipant> sınıftan türetilir. Sistem tarafından sunulan <xref:System.Activities.Tracking.EtwTrackingParticipant> her izleme kaydı için bir Windows için olay izleme (ETW) olayı yayar. Özel bir izleme katılımcısı oluşturmak için, öğesinden <xref:System.Activities.Tracking.TrackingParticipant>türetilen bir sınıf oluşturulur. Temel izleme işlevlerini sağlamak için, öğesini <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>geçersiz kılın. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>çalışma zamanı tarafından bir izleme kaydı gönderildiğinde ve istenen şekilde işlenebiliyor olduğunda çağrılır. Aşağıdaki örnekte, tüm izleme kayıtlarını konsol penceresine yayar ve özel bir izleme katılımcı sınıfı tanımlanmıştır. Ayrıca, <xref:System.Activities.Tracking.TrackingParticipant> `BeginTrack` ve yöntemlerinikullanarakizlemekayıtlarınızamanuyumsuzolarakişleyenbirnesnedauygulayabilirsiniz`EndTrack`  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -108,13 +108,13 @@ class ConsoleTrackingParticipant : TrackingParticipant
 }  
 ```  
   
- Belirli izleme katılımcı kullanmak için istediğiniz izlemek için aşağıdaki örnekte gösterildiği gibi iş akışı örneği ile kaydedin.  
+ Belirli bir izleme katılımcısını kullanmak için, aşağıdaki örnekte gösterildiği gibi, izlemek istediğiniz iş akışı örneğiyle kaydedin.  
   
 ```csharp  
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- Aşağıdaki örnekte, bir iş akışı, oluşur bir <xref:System.Activities.Statements.Sequence> içeren etkinlik bir <xref:System.Activities.Statements.WriteLine> etkinlik oluşturulur. `ConsoleTrackingParticipant` Uzantılarını eklenir ve iş akışı çağrılır.  
+ Aşağıdaki örnekte, <xref:System.Activities.Statements.Sequence> <xref:System.Activities.Statements.WriteLine> etkinlik içeren bir etkinlikten oluşan bir iş akışı oluşturulur. , `ConsoleTrackingParticipant` Uzantılara eklenir ve iş akışı çağrılır.  
   
 ```csharp  
 Activity activity= new Sequence()  
@@ -142,5 +142,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server App Fabric izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
+- [Windows Server App Fabric Izleme](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [App Fabric ile uygulamaları izleme](https://go.microsoft.com/fwlink/?LinkId=201275)

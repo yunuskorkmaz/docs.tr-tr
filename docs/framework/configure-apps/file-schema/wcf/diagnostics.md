@@ -2,15 +2,15 @@
 title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 170cae5b328c86073c1d8e7710bb19e98ab5688c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704069"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925874"
 ---
 # <a name="diagnostics"></a>\<Tanılama >
-`diagnostics` Öğesi, bir yönetici tarafından çalışma zamanı incelemesi ve denetimi için kullanılan ayarları tanımlar.  
+Öğesi `diagnostics` , çalışma zamanı incelemesi ve denetimi için bir yönetici tarafından kullanılabilecek ayarları tanımlar.  
   
  \<system.ServiceModel>  
 \<Tanılama >  
@@ -46,25 +46,25 @@ ms.locfileid: "61704069"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|etwProviderId|ETW oturumlarına olayları yazan Olay İzleyici sağlayıcısı için tanımlayıcıyı belirleyen bir dize.|  
-|PerformanceCounters|Derleme için performans sayaçlarının etkin olup olmadığını belirtir. Geçerli değerler:<br /><br /> -Kapalı: Performans sayaçları devre dışı bırakıldı.<br />-ServiceOnly: Yalnızca bu hizmetle ilgili performans sayaçları etkindir.<br />-Tüm: Performans sayaçları, çalışma zamanında görüntülenebilir.<br />-Varsayılan: Tek performans sayacı örneği _WCF_Admin oluşturulur. Bu örnek, altyapısı tarafından kullanılan SQM Veri toplamayı etkinleştirmek için kullanılır. Bu örneğin sayacı değerlerini hiçbiri güncelleştirilir ve bu nedenle sıfırdan kalacaktır. WCF için yapılandırma varsa varsayılan değer budur.|  
-|wmiProviderEnabled|Derleme için WMI sağlayıcısı etkin olup olmadığını belirten bir Boole değeri. WMI sağlayıcısı, çalışma zamanı incelemesi ve denetimi özellikleri Windows Communication Foundation (WCF) erişmek kullanıcı için gereklidir. Varsayılan, `false` değeridir.|  
+|EtwProviderId|ETW oturumlarına olayları yazan olay Izleme sağlayıcısı için tanımlayıcıyı belirten bir dize.|  
+|performanceCounters|Derleme için performans sayaçlarının etkinleştirilip etkinleştirilmeyeceğini belirtir. Geçerli değerler şunlardır<br /><br /> Dışına Performans sayaçları devre dışı bırakıldı.<br />-Yalnızca ServiceOnly: Yalnızca bu hizmetle ilgili performans sayaçları etkinleştirilmiştir.<br />Bütün Performans sayaçları çalışma zamanında görüntülenebilir.<br />Varsayılanını Tek bir performans sayacı örneği _WCF_Admin oluşturulur. Bu örnek, altyapı tarafından kullanılan SQM verilerinin toplanmasını etkinleştirmek için kullanılır. Bu örnek için sayaç değerlerinden hiçbiri güncelleştirilmemiş ve bu nedenle sıfır olarak kalacak. WCF için bir yapılandırma yoksa, bu varsayılan değerdir.|  
+|wmiProviderEnabled|Derleme için WMI sağlayıcısının etkin olup olmadığını belirten bir Boolean değer. Kullanıcının Windows Communication Foundation (WCF) İnceleme ve denetim özelliklerine çalışma zamanı erişimi kazanması için WMI sağlayıcısı gerekir. Varsayılan, `false` değeridir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<endToEndTracing >](../../../../../docs/framework/configure-apps/file-schema/wcf/endtoendtracing.md)|Enable ve disable uçtan uca izleme hizmet uygulamasının çalışması sırasında farklı yönlerini olanak tanıyan bir yapılandırma öğesi.|  
-|[\<messageLogging >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)|WCF iletileri günlüğe kaydetme ayarlarını açıklar.|  
+|[\<endToEndTracing >](endtoendtracing.md)|Bir hizmet uygulamasının çalışması sırasında uçtan uca izlemenin farklı yönlerini etkinleştirmenizi ve devre dışı bırakmanızı sağlayan bir yapılandırma öğesi.|  
+|[\<messageLogging >](messagelogging.md)|WCF ileti günlüğe kaydetme ayarlarını açıklar.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|serviceModel|Tüm WCF yapılandırma öğelerinin kök öğe.|  
+|serviceModel|Tüm WCF yapılandırma öğelerinin kök öğesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `diagnostics` Bölümü, bir derlemede bulunan tüm hizmetler için tanılama ayarları tanımlar. Derlemede yalnızca bir hizmet olmadığı sürece hizmet düzeyinde ayrı tanılama ayarları tanımlamak mümkün değildir. Öznitelikleri bölüm gereksinimlerine göre ayarlanır.  
+ `diagnostics` Bölümü bir derlemede bulunan tüm hizmetler için tanılama ayarlarını tanımlar. Derlemede yalnızca bir hizmet olmadığı takdirde, hizmet düzeyinde ayrı Tanılama ayarları tanımlamak mümkün değildir. Öznitelikler, bölümün gereksinimlerine göre ayarlanır.  
   
 ## <a name="example"></a>Örnek  
   

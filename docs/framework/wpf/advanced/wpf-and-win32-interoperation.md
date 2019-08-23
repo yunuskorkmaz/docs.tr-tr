@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 47f27b71b282fad9d285143bf8306d7bdbb60da2
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: d13f4ce37dba45dc99f0481043d80640e73d833d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671919"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917481"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF ve Win32 Birlikte Çalışması
 Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çalışma ve [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodun nasıl kullanılacağına ilişkin bir genel bakış sağlar. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, kod içinde [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] önemli bir yatırımınız olduğunda, bu kodların bazılarını yeniden kullanmak daha etkili olabilir.  
@@ -44,7 +44,7 @@ Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
  Sizin için en uygun yaklaşımı kullanın.  
   
 > [!NOTE]
->  Daha önce/CLI kullandıysanız C++, birlikte çalışabilirlik kod örneklerinde `gcnew` ve `nullptr` gibi bazı "yeni" anahtar kelimeleriyle karşılaşabilirsiniz. Bu anahtar sözcükler, eski çift alt çizgi söz dizimini`__gc`() yerine ekler ve içindeki C++yönetilen kod için daha doğal bir sözdizimi sağlar.  /CLI yönetilen özellikleri hakkında daha fazla bilgi edinmek için bkz. [çalışma zamanı platformları Için bileşen uzantıları](/cpp/windows/component-extensions-for-runtime-platforms) ve [Merhaba, C++/CLI.](https://go.microsoft.com/fwlink/?LinkId=98739) C++  
+> Daha önce/CLI kullandıysanız C++, birlikte çalışabilirlik kod örneklerinde `gcnew` ve `nullptr` gibi bazı "yeni" anahtar kelimeleriyle karşılaşabilirsiniz. Bu anahtar sözcükler, eski çift alt çizgi söz dizimini`__gc`() yerine ekler ve içindeki C++yönetilen kod için daha doğal bir sözdizimi sağlar.  /CLI yönetilen özellikleri hakkında daha fazla bilgi edinmek için bkz. [çalışma zamanı platformları Için bileşen uzantıları](/cpp/windows/component-extensions-for-runtime-platforms) ve [Merhaba, C++/CLI.](https://go.microsoft.com/fwlink/?LinkId=98739) C++  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>WPF, HWNDs 'yi nasıl kullanır?  
@@ -83,7 +83,7 @@ Bu konu, birlikte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
 8. Özellikleri ayarlamak için statik alanda depoladığınız başvuruyu kullanarak içeriknesnesiyleiletişimkurun,yöntemleriçağırın,vb.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]  
   
 > [!NOTE]
->  İçerik sınıfının bir kısmını veya tümünü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , içerik sınıfının varsayılan kısmi sınıfını kullanarak, ayrı bir derleme üretemiyor ve sonra başvurdıysanız yapabilirsiniz. Bir <xref:System.Windows.Application> nesneyi bir derlemeye derlemenin bir parçası [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak genellikle dahil olsanız da, birlikte çalışma <xref:System.Windows.Application> 'nin bir parçası olarak, bir veya daha fazla başvurulan dosya için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir veya daha fazla kök sınıfı kullanmanız gerekir uygulamasına göre ve kısmi sınıflarına başvuru yapın. Yordamın geri kalanı temelde yukarıda ana hatlarıyla benzerdir.  
+> İçerik sınıfının bir kısmını veya tümünü [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , içerik sınıfının varsayılan kısmi sınıfını kullanarak, ayrı bir derleme üretemiyor ve sonra başvurdıysanız yapabilirsiniz. Bir <xref:System.Windows.Application> nesneyi bir derlemeye derlemenin bir parçası [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] olarak genellikle dahil olsanız da, birlikte çalışma <xref:System.Windows.Application> 'nin bir parçası olarak, bir veya daha fazla başvurulan dosya için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bir veya daha fazla kök sınıfı kullanmanız gerekir uygulamasına göre ve kısmi sınıflarına başvuru yapın. Yordamın geri kalanı temelde yukarıda ana hatlarıyla benzerdir.  
 >   
 >  Bu adımların her biri, konu başlığı [altında kod aracılığıyla gösterilmiştir: Win32](walkthrough-hosting-wpf-content-in-win32.md)'de WPF içeriğini barındırma.  
   

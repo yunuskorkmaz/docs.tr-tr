@@ -5,33 +5,33 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020159"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933903"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Nesneye Animasyon Ekleme
-Bu örnekte olduğu bir nesneye animasyon uygulamak gösterilmektedir <xref:System.Windows.Controls.Page.Background%2A> özelliği bir <xref:System.Windows.Controls.Page> anahtar çerçeveler kullanarak denetimi.  
+Bu örnek, anahtar çerçeveler kullanarak bu örnekteki <xref:System.Windows.Controls.Page.Background%2A> bir <xref:System.Windows.Controls.Page> denetimin özelliği olan bir nesnenin nasıl hareketlendirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> renge animasyon ekleme için sınıf değişiklikleri için <xref:System.Windows.Controls.Page.Background%2A> özelliği bir <xref:System.Windows.Controls.Page> denetimi. Örnek animasyon için farklı bir arkaplan Fırçası düzenli aralıklarla değiştirir. Bu animasyon kullanır <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> üç farklı anahtar kare oluşturmak için sınıf. Anahtar çerçeveler aşağıdaki şekilde kullanır:  
+ Aşağıdaki örnek, bir <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> <xref:System.Windows.Controls.Page.Background%2A> <xref:System.Windows.Controls.Page> denetimin özelliği için renk değişikliklerine animasyon uygulamak için sınıfını kullanır. Örnek animasyon, düzenli aralıklarla farklı bir arka plan fırçasına değişir. Bu animasyon üç farklı <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> anahtar çerçeve oluşturmak için sınıfını kullanır. Animasyon aşağıdaki şekilde anahtar çerçeveler kullanır:  
   
-1. Örneği ilk ikinci sonunda canlandırır <xref:System.Windows.Media.LinearGradientBrush> sınıfı. Turuncu kırmızı, sarı renk geçişleri için bu bölüm örneğin arka plan rengi doğrusal gradyan geçerlidir.  
+1. İlk saniyenin sonunda, <xref:System.Windows.Media.LinearGradientBrush> sınıfının bir örneğini hareketlendirir. Örneğin bu bölümü, arka plan rengine doğrusal bir gradyan uygular ve bu sayede renk geçişleri sarıdan turuncu ' a kadar kırmızıya olur.  
   
-2. Sonraki saniye sonunda bir örneğini canlandırır <xref:System.Windows.Media.RadialGradientBrush> sınıfı. Bu bölümde Örneğin, bir radyal gradyan arka plan rengi uygular rengi siyaha mavi beyaz gelen geçiş.  
+2. Sonraki saniyenin sonunda, <xref:System.Windows.Media.RadialGradientBrush> sınıfının bir örneğini hareketlendirir. Örneğin bu bölümü, arka plan rengine bir radyal gradyan uygular, böylece renk geçişi beyaz, mavi ile siyah arasında olur.  
   
-3. Üçüncü ikinci sonunda bir örneğini canlandırır <xref:System.Windows.Media.DrawingBrush> sınıfı. Bu bölümde örneğin arka planına dama tahtası desenini uygular.  
+3. Üçüncü saniyenin sonunda, <xref:System.Windows.Media.DrawingBrush> sınıfının bir örneğini hareketlendirir. Örneğin bu bölümü arka plana dama tahtası için bir model uygular.  
   
-4. Animasyonun yeniden başlar ve sonsuza kadar yinelenir.  
+4. Animasyon yeniden başlar ve süresiz olarak yinelenir.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> sadece türü ile kullanabileceğiniz anahtar çerçeve <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> sınıfı. Anahtar çerçeveleri gibi <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> ani değişiklikleri değerleri, diğer bir deyişle oluşturun, bu örnekte renk değişiklikleri aniden ortaya çıkar.  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>, <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> sınıfıyla kullanabileceğiniz tek anahtar çerçevesi türüdür. Değerlerde ani değişiklikler <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> oluşturma gibi önemli çerçeveler, diğer bir deyişle, bu örnekteki renk değişiklikleri aniden meydana gelir.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   
- Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Tüm örnek için bkz. [ana kare animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

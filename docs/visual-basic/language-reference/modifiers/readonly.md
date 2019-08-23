@@ -10,33 +10,33 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c441576cb4247933c053f2043296733f99fdeb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647697"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965416"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
-Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirtir.  
+Bir değişkenin veya özelliğin okunup yazılamayacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="rules"></a>Kurallar  
   
-- **Bildirim bağlamı.** Kullanabileceğiniz `ReadOnly` yalnızca Modül düzeyinde. Bildirim bağlamı başka bir deyişle bir `ReadOnly` öğesi bir sınıf, yapı veya modül olmalıdır ve bir kaynak dosyası, ad alanı ya da yordamın olamaz.  
+- **Bildirim bağlamı.** Yalnızca modül düzeyinde `ReadOnly` kullanabilirsiniz. Diğer bir deyişle, bir `ReadOnly` öğe için bildirim bağlamı bir sınıf, yapı veya modül olmalıdır ve kaynak dosya, ad alanı veya yordam olamaz.  
   
-- **Birleşik değiştiriciler.** Belirtemezsiniz `ReadOnly` ile birlikte `Static` aynı bildirimde.  
+- **Birleşik değiştiriciler.** Aynı bildirimde ile `ReadOnly` `Static` birlikte belirtemezsiniz.  
   
-- **Bir değer atama.** Kod kullanan bir `ReadOnly` özellik değeri ayarlayamaz. Ancak, temel alınan depolama erişimi olan kod atama veya herhangi bir zamanda değeri değiştirin.  
+- **Değer atama.** Bir `ReadOnly` özelliği kullanan kod, değerini ayarlayamadı. Ancak, temel alınan depolamaya erişimi olan kod herhangi bir zamanda değeri atayabilir veya değiştirebilir.  
   
-     Bir değer atamak için bir `ReadOnly` yalnızca bildiriminden veya bir sınıf veya yapı içinde tanımlanmış olduğu oluşturucusunun değişken.  
+     Bir `ReadOnly` değişkene yalnızca bildiriminde veya tanımlandığı bir sınıf veya yapının oluşturucusunda bir değer atayabilirsiniz.  
   
-## <a name="when-to-use-a-readonly-variable"></a>Salt okunur değişken kullanma zamanı  
- Bazı durumlarda, kullanamazsınız bir [Const deyimi](../../../visual-basic/language-reference/statements/const-statement.md) bildirmek ve sabit bir değer atamak için. Örneğin, `Const` deyimi atamak istediğiniz veri türü kabul ya da sabit bir ifade ile derleme zamanında değeri hesaplamak mümkün olmayabilir. Hatta derleme zamanında değeri etmeyebilirsiniz. Bu durumlarda, kullandığınız bir `ReadOnly` sabit değerini tutacak bir değişken.  
+## <a name="when-to-use-a-readonly-variable"></a>Salt okunur değişken ne zaman kullanılır?  
+ Sabit bir değer bildirmek ve atamak için [const bildirimini](../../../visual-basic/language-reference/statements/const-statement.md) kullanamadığınız durumlar vardır. Örneğin, `Const` deyimi atamak istediğiniz veri türünü kabul etmeyebilir veya bir sabit ifadeyle derleme zamanında değeri hesaplamayabilir. Derleme zamanında değeri bile bilmiyor olabilirsiniz. Bu durumlarda, sabit bir değeri tutmak için `ReadOnly` bir değişken kullanabilirsiniz.  
   
 > [!IMPORTANT]
->  Değişkenin veri türü bir dizi veya bir sınıf örneği gibi bir başvuru türü ise değişken olsa bile üyelerini değiştirilebilir `ReadOnly`. Aşağıdaki örnek bunu göstermektedir.  
+> Değişkenin veri türü bir dizi veya sınıf örneği gibi bir başvuru türü ise, bu değişkenin kendisi `ReadOnly`olsa bile üyeleri değiştirilebilir. Aşağıdaki örnek bunu göstermektedir.  
   
  `ReadOnly characterArray() As Char = {"x"c, "y"c, "z"c}`  
   
@@ -46,16 +46,16 @@ Bir değişken veya özellik okunabildiğini ancak yazılmazsa olduğunu belirti
   
  `End Sub`  
   
- Hazırlarken, dizi tarafından işaret edilen `characterArray()` ayrı tutma "x", "y" ve "z". Çünkü değişken `characterArray` olduğu `ReadOnly`; olan başlatıldıktan sonra değerini değiştiremezsiniz, yeni bir dizi atanamaz. Ancak, bir veya daha fazla dizi üyeleri değerlerini değiştirebilirsiniz. Bir yordam çağrısından `changeArrayElement`, dizi tarafından işaret edilen `characterArray()` ayrı tutma "x", "M" ve "z".  
+ Başlatıldığında, tarafından `characterArray()` işaret edilen dizi "x", "y" ve "z" barındırır. `characterArray` Değişken`ReadOnly`olduğundan, değeri başlatıldıktan sonra değiştiremezsiniz; diğer bir deyişle, buna yeni bir dizi atayamazsınız. Ancak, bir veya daha fazla dizi üyesinin değerlerini değiştirebilirsiniz. Yordama `changeArrayElement`yapılan bir çağrıdan sonra, işaret eden `characterArray()` dizi "x", "e" ve "z" barındırır.  
   
- Bir yordam parametre bildirmek için benzer olduğuna dikkat edin [ByVal](../../../visual-basic/language-reference/modifiers/byval.md), hangi yordamı çağırma bağımsız değiştirmesini engeller ancak üyelerini değiştirmek sağlar.  
+ Bunun, yordamın, çağıran bağımsız değişkenin kendisini değiştirmesini engelleyen bir yordam [](../../../visual-basic/language-reference/modifiers/byval.md)parametresi olarak bildirilmesinin benzer olduğuna, ancak onun üyelerini değiştirmesine izin verdiğinden emin olun.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte tanımlayan bir `ReadOnly` özelliği üzerinde bir çalışan işe tarih. Bu özellik değerini dahili olarak sınıf deposu bir `Private` sınıf içinde değişken ve yalnızca kod, bu değeri değiştirebilirsiniz. Ancak, özelliğidir `Public`, ve sınıfı erişebilen herhangi bir kod özelliği okuyabilirsiniz.  
+ Aşağıdaki örnek, bir çalışanın `ReadOnly` işe alındığı tarih için bir özelliği tanımlar. Sınıfı, özellik değerini dahili olarak bir `Private` değişken olarak depolar ve yalnızca sınıfın içindeki kod bu değeri değiştirebilir. Ancak, özelliği olur `Public`ve sınıfa erişebilen tüm kodlar özelliği okuyabilir.  
   
  [!code-vb[VbVbalrKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#4)]  
   
- `ReadOnly` Bu bağlamda değiştirici kullanılabilir:  
+ `ReadOnly` Değiştirici şu bağlamlarda kullanılabilir:  
   
  [Dim Deyimi](../../../visual-basic/language-reference/statements/dim-statement.md)  
   

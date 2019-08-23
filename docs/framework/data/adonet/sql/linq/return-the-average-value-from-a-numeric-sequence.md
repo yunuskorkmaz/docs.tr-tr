@@ -5,44 +5,44 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037563"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963817"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Sayısal Diziden Ortalama Değer Döndürme
-<xref:System.Linq.Enumerable.Average%2A> İşleci bir dizi sayısal değerlerin ortalamasını hesaplar.  
+<xref:System.Linq.Enumerable.Average%2A> İşleci bir sayısal değer dizisinin ortalamasını hesaplar.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Çevirisi `Average` tamsayı değerleri, bir çift olarak değil, bir tamsayı olarak hesaplanır.  
+> Tamsayı [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değerlerinin`Average` çevirisi, Double olarak değil, tamsayı olarak hesaplanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ortalamasını döndürür. `Freight` değerler `Orders` tablo.  
+ Aşağıdaki örnek `Freight` `Orders` tablodaki değerlerin ortalamasını döndürür.  
   
- Northwind örnek veritabanından sonuçları olacak `78.2442`.  
+ Örnek Northwind veritabanının sonuçları olacaktır `78.2442`.  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tüm birim fiyatı ortalamasını döndürür. `Products` içinde `Products` tablo.  
+ Aşağıdaki örnek, `Products` `Products` tablosundaki tüm birim fiyatının ortalamasını döndürür.  
   
- Northwind örnek veritabanından sonuçları olacak `28.8663`.  
+ Örnek Northwind veritabanının sonuçları olacaktır `28.8663`.  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Average` bulmak için işleci `Products` ortalama birim fiyatı ait kategorisi daha yüksek olan birim fiyatı. Örnek sonuçları gruplarında görüntüler.  
+ Aşağıdaki örnek, birim fiyatının `Average` ait olduğu kategorinin ortalama `Products` birim fiyatından daha yüksek olan olanları bulmak için işlecini kullanır. Örnek, sonuçları gruplar halinde görüntüler.  
   
- Bu örnek kullanımını gerektirdiğini unutmayın `var` anahtar sözcüğünü C#, dönüş türü anonim olduğundan.  
+ Bu örnek, dönüş türü anonim olduğundan, içindeki `var` C#anahtar sözcüğünün kullanılmasını gerektirdiğini unutmayın.  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- Bu sorgu, Northwind örnek veritabanıyla çalıştırırsanız, sonuçları aşağıdakilere benzemelidir:  
+ Bu sorguyu Northwind örnek veritabanında çalıştırırsanız, sonuçlar aşağıdakine benzemelidir:  
   
  `1`  
   

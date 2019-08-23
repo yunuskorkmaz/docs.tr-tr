@@ -2,15 +2,15 @@
 title: Açılmamış İletiler
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 161f38e474534d5a0e522817c4bd64925bb4cac6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fc535a9d7126fa1a6e41fad474b204cf0036c62
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007636"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951494"
 ---
 # <a name="unwrapped-messages"></a>Açılmamış İletiler
-Açılmamış iletiler bu örnek gösterir. Varsayılan olarak, ileti gövdesi, bir hizmet işlemi parametreleri sarmalanmış şekilde biçimlendirilir. Aşağıdaki örnekte gösterildiği bir `Add` istek iletisi `ICalculator` Sarmalanan modunda hizmet.  
+Bu örnek sarmalanmamış iletileri gösterir. Varsayılan olarak, ileti gövdesi bir hizmet işlemine ait parametrelerin sarmalanması için biçimlendirilir. Aşağıdaki örnek, Sarmalanan `Add` modda `ICalculator` hizmete bir istek iletisi gösterir.  
   
 ```xml  
 <s:Envelope   
@@ -28,7 +28,7 @@ Açılmamış iletiler bu örnek gösterir. Varsayılan olarak, ileti gövdesi, 
 </s:Envelope>  
 ```  
   
- `<Add>` İleti gövdesinde öğesini sarmalar `n1` ve `n2` parametreleri. Buna karşılık, aşağıdaki örnek sarmalanmış halden modunda eşdeğer iletiyi gösterir.  
+ İleti gövdesindeki `<Add>` öğesi `n1` ve`n2` parametrelerini sarmalar. Buna karşılık aşağıdaki örnek, sarmalanmamış moddaki denk iletiyi gösterir.  
   
 ```xml  
 <s:Envelope   
@@ -45,12 +45,12 @@ Açılmamış iletiler bu örnek gösterir. Varsayılan olarak, ileti gövdesi, 
 </MessageLogTraceRecord>  
 ```  
   
- Açılmış neden olan iletiyi değil sarmalamak `n1` ve `n2` parametreleri içeren bir öğesinde oldukları soap gövdesi öğesinin doğrudan alt öğeleri.  
+ Sarmalanmamış ileti, `n1` ve `n2` parametrelerini kapsayan bir öğede sarmalamaz, bunlar soap body öğesinin doğrudan alt öğesidir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnekte, sarmalanmış halden iletisine uygulanarak oluşturulan <xref:System.ServiceModel.MessageContractAttribute> hizmet işlemi parametre türü ve aşağıdaki örnek kodda gösterildiği gibi dönüş değeri türü.  
+ Bu örnekte, aşağıdaki örnek kodda gösterildiği gibi hizmet işlemi parametre türüne ve <xref:System.ServiceModel.MessageContractAttribute> dönüş değeri türüne uygulanarak sarmalanmamış bir ileti oluşturulur.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,25 +89,25 @@ public class ResponseMessage
 }  
 ```  
   
- Gönderilen ve alınan iletileri görmek, izin vermek için bu örnek izlemeyi kullanır. Ayrıca, <xref:System.ServiceModel.WSHttpBinding> kaydeder iletilerin sayısını azaltmak için daha fazla güvenlik yapılandırıldı.  
+ Gönderilen ve alınan iletileri görmenizi sağlamak için bu örnek izleme kullanır. Buna ek <xref:System.ServiceModel.WSHttpBinding> olarak, günlüğe kaydettiği ileti sayısını azaltmak için güvenlik olmadan yapılandırılmıştır.  
   
- Sonuçta elde edilen izleme günlüğü (c:\logs\Message.log) kullanılarak görüntülenebilir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). İleti içeriği görüntülemek için seçin **iletileri** sol ve sağ bölmeleri hizmet izleme Görüntüleyicisi aracı. Bu örnekte izleme günlükleri C:\LOGS klasöre oluşturulacak yapılandırılır. Bu klasör örneği çalıştırmadan önce oluşturun ve ağ hizmeti yazma izinleri bu dizin için kullanıcı verin.  
+ Elde edilen izleme günlüğü (c:\logs\Message.log), [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenebilir. İleti içeriğini görüntülemek için, hizmet Izleme Görüntüleyicisi aracının sol ve sağ bölmelerinde **iletiler** ' i seçin. Bu örnekteki izleme günlükleri C:\LOGS klasöründe oluşturulacak şekilde yapılandırılmıştır. Örneği çalıştırmadan önce bu klasörü oluşturun ve bu dizin için Kullanıcı ağ hizmetine yazma izinleri verin.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Günlük iletileri için bir C:\LOGS dizin oluşturun. Ağ hizmeti yazma izinleri bu dizin için kullanıcıya sağlayın.  
+2. İletileri günlüğe kaydetmek için bir C:\LOGS dizini oluşturun. Bu dizin için Kullanıcı ağ hizmetine yazma izinleri verin.  
   
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917314"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF için XAML ve Özel Sınıflar
 Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhangi bir ortak dil çalışma zamanı (CLR) dilinde özel bir sınıf veya yapı tanımlama özelliğini destekler ve sonra XAML işaretlemesini kullanarak bu sınıfa erişebilir. Genellikle özel türleri bir xaml ad [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]alanı ön ekine eşleyerek, tanımlı türler ve özel türlerinizin aynısını aynı biçimlendirme dosyası içinde kullanabilirsiniz. Bu konu, bir özel sınıfın XAML öğesi olarak kullanılabilmesi için karşılaması gereken gereksinimleri tartışır.  
@@ -69,7 +69,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
  CLR olayı olarak kullanılabilmesi için, olayın parametresiz bir oluşturucuyu destekleyen bir sınıfta veya türetilmiş sınıflarda olaya erişilebilen bir soyut sınıfta, olay ortak olay olarak kullanıma sunulmalıdır. Yönlendirilmiş olay olarak kolayca kullanılabilmesi için, clr olaylarınızın, CLR olay imzası için işleyiciler ekleyip `add` kaldırarak `remove` ve bu işleyicileri ve ' <xref:System.Windows.UIElement.RemoveHandler%2A> a iletecek açık ve Yöntemler uygulaması gerekir. <xref:System.Windows.UIElement.AddHandler%2A> Yöntem. Bu yöntemler, etkinliğin eklendiği örnekteki yönlendirilmiş olay işleyicisi deposuna işleyicileri ekler veya kaldırır.  
   
 > [!NOTE]
->  Kullanarak <xref:System.Windows.UIElement.AddHandler%2A>doğrudan yönlendirilmiş olaylar için işleyicileri kaydedebilir ve yönlendirilmiş olayı kullanıma sunan bir clr olayını kasıtlı olarak tanımlamaz. Bu, genel olarak önerilmez çünkü olay, işleyicileri eklemek için XAML öznitelik sözdizimini etkinleştirmeyecektir ve elde edilen sınıfınız bu türün özelliklerine daha az saydam bir XAML görünümü sunacaktır.  
+> Kullanarak <xref:System.Windows.UIElement.AddHandler%2A>doğrudan yönlendirilmiş olaylar için işleyicileri kaydedebilir ve yönlendirilmiş olayı kullanıma sunan bir clr olayını kasıtlı olarak tanımlamaz. Bu, genel olarak önerilmez çünkü olay, işleyicileri eklemek için XAML öznitelik sözdizimini etkinleştirmeyecektir ve elde edilen sınıfınız bu türün özelliklerine daha az saydam bir XAML görünümü sunacaktır.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>Koleksiyon özellikleri yazılıyor  
@@ -92,7 +92,7 @@ Ortak dil çalışma zamanı (CLR) çerçeveleri içinde uygulanan XAML, herhang
  CLR 'deki bu türlerin her biri, nesne `Add` grafiğini oluştururken temel koleksiyona öğe eklemek için XAML işlemcisi tarafından kullanılan bir yöntemine sahiptir.  
   
 > [!NOTE]
->  Genel `List` ve `Dictionary` arabirimler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> ve ),XAMLişlemcisitarafındankoleksiyonalgılamaiçindesteklenmez.<xref:System.Collections.Generic.IDictionary%602> <xref:System.Collections.Generic.List%601> Ancak doğrudan uyguladığından veya <xref:System.Collections.IList> <xref:System.Collections.Generic.Dictionary%602> bir temel sınıf <xref:System.Collections.IDictionary> olarak, doğrudan uyguladığı için sınıfını temel sınıf olarak kullanabilirsiniz.  
+> Genel `List` ve `Dictionary` arabirimler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (<xref:System.Collections.Generic.IList%601> ve ),XAMLişlemcisitarafındankoleksiyonalgılamaiçindesteklenmez.<xref:System.Collections.Generic.IDictionary%602> <xref:System.Collections.Generic.List%601> Ancak doğrudan uyguladığından veya <xref:System.Collections.IList> <xref:System.Collections.Generic.Dictionary%602> bir temel sınıf <xref:System.Collections.IDictionary> olarak, doğrudan uyguladığı için sınıfını temel sınıf olarak kullanabilirsiniz.  
   
  Bir koleksiyonu alan bir özellik bildirdiğinizde, bu özellik değerinin türün yeni örneklerinde nasıl başlatıldığıyla ilgili dikkatli olun. Özelliği bir bağımlılık özelliği olarak uygulamadıysanız, özelliğin koleksiyon türü oluşturucusunu çağıran bir yedekleme alanı kullanması yeterlidir. Eğer Eğer özelliği bir bağımlılık özelliği ise, koleksiyon özelliğini varsayılan tür oluşturucusunun bir parçası olarak başlatmak gerekebilir. Bunun nedeni, bağımlılık özelliğinin meta verilerden varsayılan değerini almaması ve genellikle bir koleksiyon özelliğinin başlangıçtaki değerinin statik, paylaşılan bir koleksiyon olmasını istemezsiniz. Her bir kapsayan tür örneği için bir koleksiyon örneği olmalıdır. Daha fazla bilgi için bkz. [Özel bağımlılık özellikleri](custom-dependency-properties.md).  
   

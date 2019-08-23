@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: bc2ca7a94ffb19f62f354bdfc3040490b57e2689
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66491102"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968543"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan Biçim Dizeleri
 <a name="Top"></a>Standart <xref:System.TimeSpan> biçim dizesi, biçimlendirme işleminden kaynaklanan bir <xref:System.TimeSpan> değerin metin temsilini tanımlamak için tek bir biçim belirticisi kullanır. Boşluk da dahil olmak üzere birden fazla karakter içeren herhangi bir biçim dizesi, özel <xref:System.TimeSpan> biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz. [Özel TimeSpan Biçim dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md) .  
@@ -67,7 +67,7 @@ ms.locfileid: "66491102"
  "G" ve "G" biçim Belirticilerinin aksine, "c" Biçim belirleyicisi kültüre duyarlı değildir. Bu, sabit bir <xref:System.TimeSpan> değerin dize gösterimini üretir ve .NET Framework 4 ' den önce .NET Framework önceki tüm sürümleri için ortaktır. "c" varsayılan <xref:System.TimeSpan> biçim dizesidir <xref:System.TimeSpan.ToString?displayProperty=nameWithType> ; yöntemi "c" biçim dizesini kullanarak bir zaman aralığı değeri biçimlendirir.  
   
 > [!NOTE]
->  <xref:System.TimeSpan>Ayrıca "c" standart biçim dizesiyle aynı davranış ile özdeş olan "t" ve "T" standart biçim dizelerini de destekler.  
+> <xref:System.TimeSpan>Ayrıca "c" standart biçim dizesiyle aynı davranış ile özdeş olan "t" ve "T" standart biçim dizelerini de destekler.  
   
  Aşağıdaki örnek iki <xref:System.TimeSpan> nesneyi örneklemektedir, aritmetik işlemler gerçekleştirmek için bunları kullanır ve sonucu görüntüler. Her durumda, "c" biçim belirticisini kullanarak <xref:System.TimeSpan> değeri göstermek için bileşik biçimlendirme kullanır.  
   

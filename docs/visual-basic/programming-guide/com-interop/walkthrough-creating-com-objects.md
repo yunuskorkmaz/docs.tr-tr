@@ -8,87 +8,87 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 465f1d8141f51de179dbb4e963a8fcac8c09fa33
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 39012ebdd8946f707fe459cb09bb2bbfc8e50088
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592700"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958275"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM nesneleri oluşturma
-Yeni uygulama veya bileşenler oluştururken, .NET Framework derlemeleri oluşturmak idealdir. Ancak, Visual Basic ayrıca, bir .NET Framework bileşenini vystavit kullanıma sunmak kolaylaştırır Bu yeni bileşenler için COM bileşenlerini gerektiren önceki uygulama paketlerini vermenizi sağlar. Bu izlenecek yol, Visual Basic .NET Framework nesneleri COM nesneleri, hem ile hem de olmadan COM sınıf şablonu olarak kullanıma sunmak için nasıl kullanılacağını gösterir.  
+Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluşturmak en iyisidir. Ancak Visual Basic Ayrıca, bir .NET Framework bileşenini COM 'da kullanıma sunmayı da kolaylaştırır. Bu, COM bileşenleri gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza olanak sağlar. Bu izlenecek yol, .NET Framework nesnelerini com nesneleri olarak göstermek için Visual Basic, hem hem de COM sınıf şablonuyla birlikte kullanmak için nasıl kullanılacağını gösterir.  
   
- COM nesnelerini kullanıma sunmak için en kolay yolu, COM sınıf şablonu kullanmaktır. COM sınıf şablonu, yeni bir sınıf oluşturur ve projenize bir COM nesnesi olarak sınıfı ve birlikte çalışabilirlik katman oluşturmak ve işletim sistemi ile kaydetmek için yapılandırır.  
+ COM nesnelerini kullanıma almanın en kolay yolu COM sınıf şablonunu kullanmaktır. COM sınıfı şablonu yeni bir sınıf oluşturur ve ardından projeyi bir COM nesnesi olarak sınıf ve birlikte çalışabilirlik katmanını oluşturacak şekilde yapılandırır ve işletim sistemine kaydeder.  
   
 > [!NOTE]
->  Visual Basic'te kullanmak için yönetilmeyen kod için bir COM nesnesi olarak oluşturulmuş bir sınıf görülebileceği da olsa da, doğru bir COM nesnesi değil ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+> Yönetilmeyen kodun kullanması için Visual Basic bir COM nesnesi olarak oluşturulan bir sınıfı kullanıma sunabilseniz de, bu gerçek bir COM nesnesi değildir ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>COM sınıf şablonu kullanarak bir COM nesnesi oluşturmak için  
+### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>COM sınıf şablonunu kullanarak bir COM nesnesi oluşturmak için  
   
-1. Yeni bir Windows uygulaması projesi açın **dosya** tıklayarak menü **yeni proje**.  
+1. Yeni **Proje**' ye tıklayarak **Dosya** menüsünden Yeni bir Windows uygulaması projesi açın.  
   
-2. İçinde **yeni proje** iletişim kutusunun altında **proje türleri** alan, Windows seçili olup olmadığını denetleyin. Seçin **sınıf kitaplığı** gelen **şablonları** listeleyin ve ardından **Tamam**. Yeni Proje görüntülenir.  
+2. **Proje türleri** alanının altındaki **Yeni proje** iletişim kutusunda, Windows 'un seçili olduğunu kontrol edin. **Şablonlar** listesinden **sınıf kitaplığı** ' nı seçin ve ardından **Tamam**' a tıklayın. Yeni proje görüntülenir.  
   
-3. Seçin **Yeni Öğe Ekle** gelen **proje** menüsü. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
+3. **Proje** menüsünden **Yeni öğe Ekle** ' yi seçin. **Yeni Öğe Ekle** iletişim kutusu görüntülenir.  
   
-4. Seçin **COM sınıfı** gelen **şablonları** listeleyin ve ardından **Ekle**. Visual Basic, yeni bir sınıf ekler ve yeni proje COM birlikte çalışması için yapılandırır.  
+4. **Şablonlar** listesinden **com sınıfı** ' nı seçin ve ardından **Ekle**' ye tıklayın. Visual Basic yeni bir sınıf ekler ve COM birlikte çalışması için yeni projeyi yapılandırır.  
   
-5. Kod gibi özellikleri, yöntemleri ve olayları COM sınıfına ekleyin.  
+5. COM sınıfına özellikler, Yöntemler ve olaylar gibi bir kod ekleyin.  
   
-6. Seçin **derleme ClassLibrary1** gelen **derleme** menüsü. Visual Basic derleme yapıları ve COM nesnesi işletim sistemi ile kaydeder.  
+6. **Build** menüsünden **Build ClassLibrary1** öğesini seçin. Visual Basic derlemeyi oluşturur ve COM nesnesini işletim sistemiyle kaydeder.  
   
-## <a name="creating-com-objects-without-the-com-class-template"></a>COM sınıf şablonu olmadan COM nesneleri oluşturma  
- Ayrıca, bir COM sınıfı COM sınıf şablonu kullanmak yerine el ile oluşturabilirsiniz. Bu yordam, komut satırından çalışırken veya COM nesnelerinin nasıl tanımlandığı hakkında daha fazla denetime istediğinizde yararlıdır.  
+## <a name="creating-com-objects-without-the-com-class-template"></a>Com sınıf şablonu olmadan COM nesneleri oluşturma  
+ COM sınıfı şablonunu kullanmak yerine el ile bir COM sınıfı da oluşturabilirsiniz. Bu yordam, komut satırından çalışırken veya COM nesnelerinin nasıl tanımlandığı hakkında daha fazla denetim istediğinizde yararlıdır.  
   
-#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Bir COM nesnesi oluşturmak için projenizi ayarlamak için  
+#### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Projenizi bir COM nesnesi oluşturacak şekilde ayarlamak için  
   
-1. Yeni bir Windows uygulaması projesi açın **dosya** tıklayarak menü **NewProject**.  
+1. **NewProject**' i tıklatarak **Dosya** menüsünden Yeni bir Windows uygulaması projesi açın.  
   
-2. İçinde **yeni proje** iletişim kutusunun altında **proje türleri** alan, Windows seçili olup olmadığını denetleyin. Seçin **sınıf kitaplığı** gelen **şablonları** listeleyin ve ardından **Tamam**. Yeni Proje görüntülenir.  
+2. **Proje türleri** alanının altındaki **Yeni proje** iletişim kutusunda, Windows 'un seçili olduğunu kontrol edin. **Şablonlar** listesinden **sınıf kitaplığı** ' nı seçin ve ardından **Tamam**' a tıklayın. Yeni proje görüntülenir.  
   
-3. İçinde **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **özellikleri**. **Proje Tasarımcısı** görüntülenir.  
+3. **Çözüm Gezgini**, projenize sağ tıklayın ve ardından **Özellikler**' e tıklayın. **Proje Tasarımcısı** görüntülenir.  
   
-4. Tıklayın **derleme** sekmesi.  
+4. **Derle** sekmesine tıklayın.  
   
-5. Seçin **kaydetme COM birlikte çalışması için** onay kutusu.  
+5. **Com birlikte çalışması Için kaydol** onay kutusunu seçin.  
   
-#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Bir COM nesnesi oluşturmak için kod Sınıfınız içinde ayarlamak için  
+#### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Bir COM nesnesi oluşturmak için sınıfınıza kodu ayarlamak için  
   
-1. İçinde **Çözüm Gezgini**, çift **Class1.vb** kodunu görüntülemek için.  
+1. **Çözüm Gezgini**, kodunu göstermek için **Class1. vb** öğesine çift tıklayın.  
   
-2. Sınıfı Yeniden Adlandır `ComClass1`.  
+2. Sınıfını olarak `ComClass1`yeniden adlandırın.  
   
-3. Aşağıdaki sabitleri ekleyin `ComClass1`. Bunlar, COM nesneleri için gerekli olan genel benzersiz tanıtıcısı (GUID) sabitleri depolar.  
+3. Aşağıdaki sabitleri öğesine `ComClass1`ekleyin. Bunlar, COM nesnelerinin sahip olması için gerekli olan genel benzersiz tanımlayıcı (GUID) sabitlerini depolayacaktır.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
-4. Üzerinde **Araçları** menüsünü tıklatın **GUID Oluştur**. İçinde **GUID Oluştur** iletişim kutusu, tıklayın **biçimi kayıt defteri** ve ardından **kopyalama**. **Çıkış**'a tıklayın.  
+4. **Araçlar** menüsünde **GUID oluştur**' a tıklayın. **GUID oluştur** iletişim kutusunda, **kayıt defteri biçimi** ' ne ve ardından **Kopyala**' ya tıklayın. **Çıkış**'a tıklayın.  
   
-5. Boş bir dize yerine `ClassId` başında kaldırma ve sondaki GUID ile küme ayraçları. Örneğin, GUID GUIDgen tarafından sağlanmışsa `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` sonra kodunuzu aşağıdaki gibi görünmelidir.  
+5. İçin boş dizeyi GUID `ClassId` ile değiştirin, baştaki ve sondaki ayraçları kaldırır. Örneğin, Guidgen tarafından belirtilen GUID ise `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` kodunuzun aşağıdaki gibi görünmesi gerekir.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6. Önceki adımları yineleyin `InterfaceId` ve `EventsId` sabitleri, aşağıdaki örnekte olduğu gibi.  
+6. Aşağıdaki örnekte olduğu gibi, `InterfaceId` ve `EventsId` sabitleri için önceki adımları tekrarlayın.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
-    >  GUID'ler yeni ve benzersiz olduğundan emin olun; Aksi takdirde, COM bileşeni ile diğer COM bileşenleri çakışabilir.  
+    > GUID 'lerin yeni ve benzersiz olduğundan emin olun; Aksi halde, COM bileşeniniz diğer COM bileşenleriyle çakışabilir.  
   
-7. Ekleme `ComClass` özniteliğini `ComClass1`, aşağıdaki örnekte olduğu gibi sınıf kimliği, arabirim kimliği ve olay kimliği GUID'leri belirtme:  
+7. Aşağıdaki örnekte olduğu gibi `ComClass1`sınıf kimliği, arabirim kimliği ve olay kimliği için GUID 'leri belirterek özniteliğiniöğesineekleyin:`ComClass`  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8. COM sınıfları bir parametresiz olmalıdır `Public Sub New()` Oluşturucusu veya sınıf kaydetme doğru. Parametresiz bir oluşturucu, sınıfı ekleyin:  
+8. COM sınıflarının parametresiz `Public Sub New()` bir oluşturucusu olmalıdır veya sınıf doğru şekilde kayıt olmayacaktır. Sınıfına parametresiz bir Oluşturucu ekleyin:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
-9. İle biten sınıfı özellikleri, yöntemleri ve olayları eklemek bir `End Class` deyimi. Seçin **Çözümü Derle** gelen **derleme** menüsü. Visual Basic derleme yapıları ve COM nesnesi işletim sistemi ile kaydeder.  
+9. Sınıfa özellikler, Yöntemler ve olaylar ekleyin ve bir `End Class` ifadesiyle biter. **Build** menüsünden **Build Solution** öğesini seçin. Visual Basic derlemeyi oluşturur ve COM nesnesini işletim sistemiyle kaydeder.  
   
     > [!NOTE]
-    >  COM nesneleri doğru olmadığı için Visual Basic ile oluşturduğunuz COM nesneleri başka bir Visual Basic uygulama tarafından kullanılamaz. Bu tür COM nesnelerine başvurular ekleme girişimleri hata oluşturur. Ayrıntılar için bkz [.NET Framework uygulamalarında COM birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    > Visual Basic ile oluşturduğunuz COM nesneleri, doğru COM nesneleri olmadığından diğer Visual Basic uygulamalar tarafından kullanılamaz. Bu tür COM nesnelerine başvuru ekleme girişimleri bir hata oluşturacak. Ayrıntılar için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

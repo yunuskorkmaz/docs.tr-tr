@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490114"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918135"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
-Veritabanı sunucusuna bağlanması, zaman birkaç adımdan oluşur. Bir yuva ya da bir adlandırılmış kanal gibi fiziksel bir kanal, sunucu ile ilk el sıkışma gerçekleşmelidir, oluşturulmalıdır bağlantı dizesi bilgilerini ayrıştırıldığında, bağlantı sunucu tarafından doğrulanması, denetimleri kaydetme için çalıştırılması gerekir Geçerli işlem ve benzeri.  
+Bir veritabanı sunucusuna bağlanmak genellikle birkaç zaman alan adımdan oluşur. Yuva veya adlandırılmış kanal gibi bir fiziksel kanal oluşturulması gerekir, sunucu ile ilk anlaşma gerçekleşmelidir, bağlantı dizesi bilgileri ayrıştırılmalıdır, bağlantının sunucu tarafından doğrulanması gerekir, çünkü geçerli işlem vb.  
   
- Uygulamada, çoğu uygulama, bağlantıları için yalnızca bir veya birkaç farklı yapılandırmaları kullanın. Bu uygulama yürütme sırasında aynı bağlantı fazla sürekli açık kapalı ve anlamına gelir. ADO.NET bağlantı açmayı maliyetini en aza indirmek için adı verilen bir iyileştirme teknik kullanır *bağlantı havuzu*.  
+ Uygulamada çoğu uygulama, bağlantılar için yalnızca bir veya birkaç farklı yapılandırma kullanır. Yani, uygulama yürütme sırasında birçok özdeş bağlantı tekrar tekrar açılıp kapatılacaktır. ADO.NET bağlantıları açma maliyetini en aza indirmek için, *bağlantı havuzu*adlı bir iyileştirme tekniği kullanır.  
   
- Bağlantı havuzu yeni bir bağlantı açılmalıdır sayısını azaltır. *Havuzlayıcı* fiziksel bağlantı sahipliğini tutar. Bağlantılar, bir dizi her verilen bağlantı yapılandırması etkin bağlantı etkin tutulan bağlantıyı destekliyorsa tutarak yönetir. Her bir kullanıcı çağırır `Open` bir bağlantıda kullanılabilir bir bağlantı havuzundaki havuzlayıcı arar. Havuza alınmış bir bağlantı varsa, bunu yeni bir bağlantı açmak yerine çağırana döndürür. Uygulama çağırdığında `Close` bağlantıda havuzlayıcı kapatma yerine etkin bağlantılar havuza alınmış kümesini döndürür. Bağlantı havuza döndüğünde, sonraki yüklenmek hazır olduğunda `Open` çağırın.  
+ Bağlantı havuzu yeni bağlantıların kaç kez açılması gerektiğini azaltır. *Havuzlayıcı* fiziksel bağlantının sahipliğini tutar. Belirli bir bağlantı yapılandırması için etkin bir etkin bağlantı kümesi tutarak bağlantıları yönetir. Kullanıcı bir bağlantı üzerinde `Open` her çağırdığında havuzlayıcı havuzda kullanılabilir bir bağlantı arar. Havuza alınmış bir bağlantı varsa, yeni bir bağlantı açmak yerine bunu çağırana döndürür. Uygulama, bağlantıda çağrı `Close` yaparken, havuzlayıcı onu kapatmak yerine havuza alınmış etkin bağlantılar kümesine geri döndürür. Bağlantı havuza döndürüldüğünde, sonraki `Open` çağrıda yeniden kullanılmak üzere kullanılabilir.  
   
- Yalnızca bağlantıları aynı yapılandırmaya sahip bir havuzda toplanabilir mi. ADO.NET, aynı zamanda, her yapılandırma için birkaç havuzu tutar. Tümleşik güvenlik kullanıldığında bağlantıları bağlantı dizesi ve Windows Identity havuzlarına ayrılır. Bağlantılar, ayrıca tabanlı olup, bir kayıtlı üzerinde havuza eklenir. Kullanırken <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> örneği bağlantı havuzunu etkiler. Farklı örnekleri <xref:System.Data.SqlClient.SqlCredential> kullanıcı kimliği ve parola aynı olsa bile, farklı bağlantı havuzları kullanır.  
+ Yalnızca aynı yapılandırmaya sahip bağlantılar havuza alınabilir. ADO.NET, her yapılandırma için bir tane olmak üzere birkaç havuzu aynı anda tutar. Bağlantılar, tümleşik güvenlik kullanıldığında bağlantı dizesine ve Windows kimliğine göre havuzlara ayrılır. Bağlantılar Ayrıca, bir işlemde kayıtlı olup olmadıkları temel alınarak da havuza alınır. <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> Kullanırken<xref:System.Data.SqlClient.SqlCredential> , örnek bağlantı havuzunu etkiler. Farklı örnekleri <xref:System.Data.SqlClient.SqlCredential> , Kullanıcı kimliği ve parola aynı olsa bile farklı bağlantı havuzları kullanacaktır.  
   
- Bağlantı havuzu performans ve ölçeklenebilirlik, uygulamanızın önemli ölçüde artırabilirsiniz. Varsayılan olarak, ADO.NET bağlantı havuzu etkinleştirilir. Açıkça devre dışı sürece açılır ve uygulamanızda kapalı havuzlayıcı bağlantıları iyileştirir. Ayrıca, bağlantı havuzu davranışını denetlemek için çeşitli bağlantı dizesi değiştiriciler sağlayabilirsiniz. Daha fazla bilgi için bu konunun ilerleyen bölümlerinde "Denetleme bağlantı havuzu ile bağlantı dizesi anahtar sözcükler" konusuna bakın.  
+ Havuzlama bağlantıları, uygulamanızın performansını ve ölçeklenebilirliğini önemli ölçüde geliştirebilir. Varsayılan olarak, ADO.NET ' de bağlantı havuzu etkindir. Açıkça devre dışı bırakılmadığınız sürece havuzlayıcı, uygulamanızda açılıp kapandıkça bağlantıları en iyi duruma getirir. Ayrıca, bağlantı havuzu davranışlarını denetlemek için çeşitli bağlantı dizesi değiştiricileri sağlayabilirsiniz. Daha fazla bilgi için bu konunun devamındaki "bağlantı dizesi anahtar sözcükleriyle bağlantı havuzunu denetleme" bölümüne bakın.  
   
 > [!NOTE]
->  Bağlantı havuzu etkin olduğunda ve bir zaman aşımı hatası veya başka bir oturum açma hata oluşursa bir özel durum ve sonraki bağlantı denemelerinde sonraki beş saniye boyunca "engelleme süresi" başarısız olur. Uygulama engelleme süresi içinde bağlanmaya çalışırsa, ilk özel durum yeniden oluşturulur. Bir engelleme süresi sona erdikten sonra sonraki hatalar iki kez önceki engelleme süresi en fazla bir dakika kadar sürece yeni bir engelleme nokta olarak mı neden olur.  
+> Bağlantı havuzu etkinleştirildiğinde ve bir zaman aşımı hatası ya da başka bir oturum açma hatası oluşursa, bir özel durum oluşturulur ve sonraki bağlantı denemeleri sonraki beş saniye boyunca başarısız olur ve "engelleme dönemi". Uygulama engelleme süresi içinde bağlanmaya çalışırsa, ilk özel durum yeniden oluşturulur. Bir engelleme süresi sona erdikten sonraki hatalar, önceki engelleme süresi kadar iki kez bir dakika kadar olan yeni bir engelleme dönemi oluşmasına neden olur.  
   
 ## <a name="pool-creation-and-assignment"></a>Havuz oluşturma ve atama  
- Bir bağlantı ilk kez açıldığında bir bağlantı havuzu bağlantı dizesiyle bağlantı havuzu ilişkilendiren tam bir eşleştirme algoritmasını temel alınarak oluşturulur. Her bağlantı havuzu bir ayrı bir bağlantı dizesi ile ilişkilidir. Yeni bir bağlantı açıldığında, bağlantı dizesi, mevcut bir havuza tam bir eşleşme değilse, yeni bir havuz oluşturulur. Her uygulama etki alanı, bağlantı dizesi başına ve tümleşik güvenlik kullanıldığında Windows kimlik, işlem başına bağlantılar havuza. Bağlantı dizelerini, ayrıca bir tam eşleşme olmalıdır; aynı bağlantı için farklı bir düzende sağlanan anahtar sözcükleri ayrı olarak havuza.  
+ Bir bağlantı ilk kez açıldığında, havuzu bağlantıdaki bağlantı dizesiyle ilişkilendiren tam bir eşleşen algoritmaya göre bir bağlantı havuzu oluşturulur. Her bağlantı havuzu ayrı bir bağlantı dizesiyle ilişkilendirilir. Yeni bir bağlantı açıldığında, bağlantı dizesi var olan bir havuza tam eşleşme değilse yeni bir havuz oluşturulur. Bağlantılar işlem başına, her uygulama etki alanı, bağlantı dizesi başına ve tümleşik güvenlik kullanıldığında Windows kimliği başına havuza alınır. Bağlantı dizeleri de tam eşleşme olmalıdır; aynı bağlantı için farklı bir sırada sağlanan anahtar sözcükler ayrı olarak havuza alınır.  
   
- Aşağıdaki örnekte C#, üç yeni <xref:System.Data.SqlClient.SqlConnection> nesneleri oluşturulur, ancak yalnızca iki bağlantı havuzları yönetmek için gereklidir. Birinci ve ikinci bağlantı dizeleri için atanan değer tarafından farklı olduğunu unutmayın `Initial Catalog`.  
+ Aşağıdaki C# örnekte, üç yeni <xref:System.Data.SqlClient.SqlConnection> nesne oluşturulur, ancak bunları yönetmek için yalnızca iki bağlantı havuzu gerekir. Birinci ve ikinci bağlantı dizelerinin, için `Initial Catalog`atanan değerle farklı olduğunu unutmayın.  
   
 ```csharp
 using (SqlConnection connection = new SqlConnection(  
@@ -54,52 +54,52 @@ using (SqlConnection connection = new SqlConnection(
     }  
 ```  
   
- Varsa `MinPoolSize` ya da bağlantı dizesinde belirtilmedi veya belirtilen olarak sıfır, bir süre işlem yapılmadığında havuzundaki bağlantı kapatılacak. Ancak, belirtilen `MinPoolSize` , sıfırdan büyük bağlantı havuzu kadar yok edilmez `AppDomain` kaldırılır ve işlem sona erer. Etkin olmayan veya boş havuzları bakım minimum sistem ek okumalar içerir.  
+ `MinPoolSize` Bağlantı dizesinde belirtilmemişse veya sıfır olarak belirtilmişse, havuzdaki bağlantılar bir süre etkinlik dışı kaldıktan sonra kapatılacaktır. Ancak, belirtilen `MinPoolSize` değer sıfırdan büyükse bağlantı havuzu, `AppDomain` kaldırılana ve işlem sona erene kadar yok edilmez. Etkin olmayan veya boş havuzların bakımı en düşük sistem yükünü içerir.  
   
 > [!NOTE]
->  Önemli bir hata oluştuğunda bir yük devretme gibi havuzu otomatik olarak temizlenir.  
+> Havuz, yük devretme gibi önemli bir hata oluştuğunda otomatik olarak temizlenir.  
   
-## <a name="adding-connections"></a>Bağlantılar ekleme  
- Her benzersiz bir bağlantı dizesi için bir bağlantı havuzu oluşturulur. Bir havuz oluşturulduğunda, birden çok bağlantı nesneleri oluşturulur ve böylece en az bir havuz boyutu gereksinimini memnun havuzuna eklenmiş. Bağlantılar, havuza eklenir, gerektiğinde, belirtilen en büyük havuz boyutu aşmayacak şekilde (varsayılan değer 100'dür). Kapalı veya elden bağlantıları geri havuzuna serbest bırakılır.  
+## <a name="adding-connections"></a>Bağlantı ekleme  
+ Her benzersiz bağlantı dizesi için bir bağlantı havuzu oluşturulur. Bir havuz oluşturulduğunda, en düşük havuz boyutu gereksiniminin karşılanması için birden fazla bağlantı nesnesi oluşturulur ve havuza eklenir. Bağlantılar, belirtilen en büyük havuz boyutuna kadar (varsayılan olarak 100), havuza gerektiği şekilde eklenir. Bağlantılar, kapalı veya atılmış olmaları durumunda havuza geri yayımlanır.  
   
- Olduğunda bir <xref:System.Data.SqlClient.SqlConnection> istenen nesneyi, kullanılabilir bir bağlantı varsa havuzundan elde edilir. Kullanılabilir olması için bir bağlantı gerekir kullanılmayan, eşleşen bir işlem bağlamına sahip veya herhangi bir işlem bağlamı ile ilişkilendirilmemiş ve sunucu için geçerli bir bağlantı vardır.  
+ Bir <xref:System.Data.SqlClient.SqlConnection> nesne istendiğinde, kullanılabilir bir bağlantı varsa havuzdan alınır. Kullanılabilir olması için bir bağlantının kullanılmamış olması, eşleşen bir işlem bağlamına sahip olması veya herhangi bir işlem bağlamı ile ilişkilendirilmemiş olması ve sunucuya geçerli bir bağlantısı olması gerekir.  
   
- Bağlantı havuzlayıcı havuza yayınlandıkça bağlantıları tahsis bağlantı isteklerini karşılar. Maksimum havuz boyutuna ulaştı ve kullanılabilir bağlantı yok, isteği sıraya alınır. Havuzlayıcı sonra herhangi bir bağlantı zaman aşımı ulaşılana kadar geri kazanmak çalışır (varsayılan değer 15 saniyedir). Bağlantı zaman aşımına uğramadan önce havuzlayıcı isteği gerçekleştiremiyor ise bir özel durum oluşturulur.  
+ Bağlantı havuzlayıcı, havuza geri yayımlandıklarında bağlantıları yeniden bulmaya göre bağlantı isteklerini karşılar. En büyük havuz boyutuna ulaşılmışsa ve kullanılabilir bir bağlantı yoksa, istek sıraya alınır. Havuzlayıcı daha sonra zaman aşımına ulaşılana kadar tüm bağlantıları geri almaya çalışır (varsayılan değer 15 saniyedir). Bağlantı zaman aşımına uğramadan havuzlayıcı isteği karşılayamaz, bir özel durum oluşturulur.  
   
 > [!CAUTION]
->  Böylece bağlantı havuzuna döndürülür, işiniz bittiğinde, her zaman bağlantı kapatmanızı öneririz. Kullanarak bunu yapabilirsiniz `Close` veya `Dispose` yöntemlerinin `Connection` nesne veya tüm bağlantıları içinde açarak bir `using` C# ' ta, ifade veya `Using` Visual Basic'te deyimi. Açıkça kapanmamış bağlantıları eklenemez veya havuza geri döner. Daha fazla bilgi için [using deyimi](~/docs/csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: Bir sistem kaynağını atma](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) Visual Basic için.  
+>  Bağlantının havuza döndürülabilmesi için, kullanmayı bitirdiğinizde bağlantıyı her zaman kapatmanızı öneririz. Bunu `Close` , `Connection` nesnesinin veya `Dispose` yöntemlerinden birini ya da içindeki C#bir deyimin içindeki tüm bağlantıları `Using` `using` ya da Visual Basic bir ifadesini kullanarak yapabilirsiniz. Açıkça kapatılmayan bağlantılar, havuza eklenmeyebilir veya havuza döndürülemez. Daha fazla bilgi için bkz. [using deyimleri](../../../csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: Visual Basic için bir sistem kaynağını](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) atma.  
   
 > [!NOTE]
->  Çağırmayın `Close` veya `Dispose` üzerinde bir `Connection`, `DataReader`, ya da diğer yönetilen nesnelere `Finalize` sınıfınızın yöntemi. İçindeki bir sonlandırıcı yalnızca sınıfınıza doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınızın herhangi bir yönetilmeyen kaynağa sahip değilse içermeyen bir `Finalize` sınıf tanımına yöntemi. Daha fazla bilgi için [çöp toplama](../../../../docs/standard/garbage-collection/index.md).  
+> Sınıfınızın `Close` `Finalize` yönteminde bir, veya ya `Connection`da başka `DataReader`bir yönetilen nesneyi çağırmayın `Dispose` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir `Finalize` Yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  
   
-Bağlantı kapatma ve açma ile ilgili olaylar hakkında daha fazla bilgi için bkz. [denetim oturum açma olay sınıfı](/sql/relational-databases/event-classes/audit-login-event-class) ve [denetim oturum kapatma olay sınıfı](/sql/relational-databases/event-classes/audit-logout-event-class) SQL Server belgelerindeki.  
+Açma ve kapatma bağlantılarıyla ilişkili olaylar hakkında daha fazla bilgi için, SQL Server belgelerinde [oturum açma olay sınıfını denetleme ve oturum](/sql/relational-databases/event-classes/audit-login-event-class) [kapatma olayı sınıfını](/sql/relational-databases/event-classes/audit-logout-event-class) denetleme bölümüne bakın.  
   
-## <a name="removing-connections"></a>Bağlantılarını kaldırma  
- Bağlantı havuzlayıcı yaklaşık 4-8 dakika boşta kaldıktan sonra veya havuzlayıcı sunucusuyla bağlantı yazıyordunuz algılarsa havuzdan bir bağlantıyı kaldırır. Kesilen bağlantı sunucusuyla iletişim kurmak yalnızca denemeden sonra algılanabilmesi unutmayın. Artık sunucuya bağlı bir bağlantı bulunması durumunda geçersiz olarak işaretlendi. Yalnızca bunlar iadesi ya da kapatıldığında, geçersiz bağlantılar bağlantı havuzundan kaldırılır.  
+## <a name="removing-connections"></a>Bağlantılar kaldırılıyor  
+ Bağlantı havuzlayıcı yaklaşık 4-8 dakika boyunca boşta kaldıktan sonra havuzdan bir bağlantıyı kaldırır veya havuzlayıcı sunucuyla bağlantının bozulmuş olduğunu algılarsa. Bir bağlantı kurulan bağlantının yalnızca sunucuyla iletişim kurmaya çalıştıktan sonra algılanabileceğini unutmayın. Artık sunucuya bağlı olmayan bir bağlantı bulunursa, geçersiz olarak işaretlenir. Geçersiz bağlantılar, bağlantı havuzundan yalnızca kapalı veya geri kazanılanlar sırasında kaldırılır.  
   
- Bağlantı kayboldu bir sunucuya varsa, bu bağlantı, bağlantı havuzlayıcı değil kesilen bağlantı algıladı ve geçersiz olarak işaretlenmiş olsa bile havuzdan kurulabilir. Bağlantı hala geçerli olup olmadığını denetleyerek ek yükü ortadan kaldırır gerçekleşmesi için sunucuya başka bir gidiş dönüş neden olarak bir havuzlayıcı sahip avantajları olduğundan durum budur. Bu durumda, bağlantıyı kullanmak için yapılan ilk girişim bağlantı yazıyordunuz ve bir özel durum algılar.  
+ Kaybolan bir sunucuya bağlantı varsa, bağlantı havuzlayıcı bağlantıyı algılamamış ve geçersiz olarak işaretlediği halde bu bağlantı havuzdan çizilebilirler. Bu durum, bağlantının hala geçerli olduğunu denetleme yükünün, sunucu üzerinde başka bir gidiş dönüş olmasına neden olarak bir Havuzluğa sahip olmanın avantajlarından ortadan kaldırılmasına neden olur. Bu gerçekleştiğinde, bağlantıyı ilk kez kullanma denemesi bağlantının bozulmuş olduğunu algılar ve bir özel durum oluşturulur.  
   
-## <a name="clearing-the-pool"></a>Havuz temizleme  
- ADO.NET 2.0 kullanılmaya havuzu temizlemek için iki yeni yöntem: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> ve <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` bağlantı havuzları için belirli bir sağlayıcı, temizler ve `ClearPool` belirli bir bağlantı ile ilişkili bağlantı havuzu temizler. Çağrı zamanında kullanılan bağlantılar varsa, uygun şekilde işaretlenir. Kapatıldığında, havuza geri döner yerine atılır.  
+## <a name="clearing-the-pool"></a>Havuz temizleniyor  
+ ADO.NET 2,0, havuzu temizlemek için iki yeni yöntem sunmuştur: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> ve <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools`belirli bir sağlayıcı için bağlantı havuzlarını temizler ve `ClearPool` belirli bir bağlantıyla ilişkili bağlantı havuzunu temizler. Çağrı sırasında kullanılan bağlantılar varsa, bunlar uygun şekilde işaretlenir. Kapatıldığında, havuza döndürülmek yerine atılır.  
   
 ## <a name="transaction-support"></a>İşlem Desteği  
- Bağlantı havuzu ve da atanan göre işlem bağlamı çizilir. Sürece `Enlist=false` belirtilen bağlantı dizesinde bağlantı havuzu sağlar bağlantı kayıtlı olduğundan emin olarak <xref:System.Transactions.Transaction.Current%2A> bağlamı. Ne zaman bir bağlantı kapatıldı ve kayıtlı bir havuzla döndürülen `System.Transactions` işlem, bu kenara sonraki Bu bağlantı havuzunun aynı istek şekilde `System.Transactions` işlem varsa aynı bağlantıyı döndürür. Böyle bir talep verilir ve havuza alınmış bağlantı kullanılabilir bir bağlantı havuzunun işlem temelli olmayan bölümünden çizilmiş ve kayıtlı. Bağlantı yok ya da havuzun alanında bulunan kullanılabilir değilse yeni bir bağlantı oluşturulur ve kayıtlı.  
+ Bağlantılar havuzdan çizilir ve işlem bağlamına göre atanır. Bağlantı dizesinde belirtilmedikçe, bağlantı havuzu bağlantının <xref:System.Transactions.Transaction.Current%2A> bağlamda kayıtlı olduğundan emin olur. `Enlist=false` Bir bağlantı kapatılıp, kayıtlı `System.Transactions` bir işlemle havuza döndürüldüğünde, bu bağlantı havuzu için bir sonraki isteğin, varsa aynı `System.Transactions` işlemle aynı bağlantıyı döndürmesi için bu şekilde ayarlanır. Bu tür bir istek verildiyse ve havuza alınmış bağlantı yoksa, havuzun işlem temelli olmayan kısmından bir bağlantı çizilir ve listeye kaydedilir. Havuzun herhangi bir alanında hiçbir bağlantı yoksa, yeni bir bağlantı oluşturulur ve listeye kaydedilir.  
   
- Bağlantı kapalı olduğunda geri havuzu ve onun işlem bağlamına dayalı uygun alt yayımlanır. Dağıtılmış işlem yine de olsa bile bu nedenle, bağlantı oluşturulurken bir hata olmadan kapatabilirsiniz bekleniyor. Bu, tamamlama veya dağıtılmış işlem daha sonra iptal etmenizi sağlar.  
+ Bir bağlantı kapatıldığında, havuza ve işlem bağlamına göre uygun alt bölüme geri gönderilir. Bu nedenle, dağıtılmış bir işlem hala beklense de bir hata oluşturmadan bağlantıyı kapatabilirsiniz. Bu, dağıtılmış işlemi daha sonra yürütmeniz veya iptal etmenizi sağlar.  
   
-## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Bağlantı dizesi anahtar sözcüklerle bağlantı havuzu denetleme  
- `ConnectionString` Özelliği <xref:System.Data.SqlClient.SqlConnection> nesnesi için bağlantı havuzu mantıksal davranışını ayarlamak için kullanılan bağlantı dizesi anahtar/değer çiftleri destekler. Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+## <a name="controlling-connection-pooling-with-connection-string-keywords"></a>Bağlantı havuzu bağlantı dizesi anahtar sözcükleriyle denetleniyor  
+ <xref:System.Data.SqlClient.SqlConnection> Nesnesinin özelliği, bağlantı havuzu mantığının davranışını ayarlamak için kullanılabilen bağlantı dizesi anahtar/değer çiftlerini destekler. `ConnectionString` Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
-## <a name="pool-fragmentation"></a>Havuzu parçalanması  
- Uygulama çok sayıda işlem çıkana kadar serbest bırakılmaz havuzları burada oluşturabilirsiniz birçok Web uygulamalarında ortak bir sorunu havuzu parçalanması var. Bu, performansın düşmesine neden olur, açık ve alıcı bellek çok sayıda bağlantılarını bırakır.  
+## <a name="pool-fragmentation"></a>Havuz parçalanması  
+ Havuz parçalanması, uygulamanın, işlem bitene kadar serbest bırakılmamış çok sayıda havuz oluşturbildiği birçok Web uygulamasında yaygın bir sorundur. Bu, bellek açma ve tüketme gibi çok sayıda bağlantı bırakır ve bu da performansı düşük bir performansla sonuçlanır.  
   
-### <a name="pool-fragmentation-due-to-integrated-security"></a>Tümleşik güvenlik nedeniyle havuzu parçalanması  
- Bağlantı, bağlantı dizesini ve kullanıcı kimliğini göre havuza eklenir. Bu nedenle, Web sitesi ve bir tümleşik güvenlik oturumu temel kimlik doğrulaması veya Windows kimlik doğrulamasını kullanıyorsanız kullanıcı başına bir havuz olursunuz. Bu tek bir kullanıcı isteklerini izleyen veritabanı performansını artırmamasına karşın, bu kullanıcının diğer kullanıcılar tarafından yapılan bağlantılar yararlanamaz. Ayrıca veritabanı sunucusu için kullanıcı başına en az bir bağlantı ile sonuçlanır. Geliştiriciler, güvenlik ve denetim gereksinimlerini karşı yaratmasını önlemelidir belirli bir Web uygulaması mimarisi bir yan etkisi budur.  
+### <a name="pool-fragmentation-due-to-integrated-security"></a>Tümleşik güvenlik nedeniyle havuz parçalanması  
+ Bağlantılar bağlantı dizesine ve kullanıcı kimliğine göre havuza alınır. Bu nedenle, Web sitesinde ve tümleşik güvenlik oturumunda temel kimlik doğrulaması veya Windows kimlik doğrulaması kullanıyorsanız, Kullanıcı başına bir havuz alırsınız. Bu, tek bir kullanıcı için sonraki veritabanı isteklerinin performansını artırsa da, bu kullanıcı diğer kullanıcılar tarafından yapılan bağlantılardan yararlanamaz. Ayrıca veritabanı sunucusuna Kullanıcı başına en az bir bağlantıya neden olur. Bu, geliştiricilerin güvenlik ve denetim gereksinimlerine göre karşılaştırmasını gerektiren belirli bir Web uygulaması mimarisinin yan etkisidir.  
   
-### <a name="pool-fragmentation-due-to-many-databases"></a>Havuzu parçalanması nedeniyle çok sayıda veritabanı  
- Çoğu Internet hizmet sağlayıcıları, çeşitli Web sitelerini tek bir sunucu üzerinde barındırın. Bunlar, Forms kimlik doğrulaması oturum açma onaylayın ve ardından bu kullanıcı veya kullanıcı grubu için belirli bir veritabanına bir bağlantı açmak için tek bir veritabanı kullanabilir. Kimlik doğrulama veritabanı bağlantısı havuza ve herkes tarafından kullanılır. Ancak, ayrı bir havuz sunucuya bağlantı sayısını artırmak her veritabanı için bağlantı yoktur.  
+### <a name="pool-fragmentation-due-to-many-databases"></a>Birçok veritabanı nedeniyle havuz parçalanması  
+ Birçok Internet hizmet sağlayıcısı tek bir sunucuda birçok Web sitesini barındırır. Bir form kimlik doğrulaması oturum açma bilgilerini doğrulamak ve bu kullanıcı veya Kullanıcı grubu için belirli bir veritabanına bağlantı açmak için tek bir veritabanı kullanabilirler. Kimlik doğrulama veritabanına olan bağlantı havuza alınmış ve herkes tarafından kullanılır. Ancak, her bir veritabanına yönelik bağlantı sayısını artıran ayrı bir bağlantı havuzu vardır.  
   
- Uygulama tasarımı, yan etkisi de budur. SQL sunucusuna bağlandığınızda, güvenliği tehlikeye atmadan bu yan etkiyi önlemek için görece basit bir yolu yoktur. Her bir kullanıcı veya grup için ayrı bir veritabanına bağlanma, yerine sunucuda aynı veritabanına bağlanmak ve istenen veritabanına değiştirmek için Transact-SQL kullanım deyimi yürütebilirsiniz. Aşağıdaki kod parçası, bir ilk bağlantı oluşturma gösterilmektedir `master` veritabanını ve ardından belirtilen istenen veritabanı derlemesine geçme `databaseName` string değişkeni.  
+ Bu, Uygulama tasarımının de yan etkıdır. SQL Server bağlandığınızda güvenliği tehlikeye atmadan bu yan etkilerden kaçınmak için görece basit bir yol vardır. Her Kullanıcı veya grup için ayrı bir veritabanına bağlanmak yerine, sunucuda aynı veritabanına bağlanın ve ardından Transact-SQL USE ifadesini çalıştırıp istenen veritabanına geçin. Aşağıdaki kod parçası, `master` veritabanına bir ilk bağlantı oluşturulmasını ve sonra `databaseName` dize değişkeninde belirtilen istenen veritabanına geçmeyi gösterir.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -124,14 +124,14 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Uygulama rolleri ve bağlantı havuzu  
- Sonra bir SQL Server uygulama rolü çağırarak etkinleştirildi `sp_setapprole` sistem saklı yordam, bu bağlantının güvenlik bağlamı olarak ayarlanamaz. Ancak, havuzu etkinse, bağlantı havuzuna döndürülür ve havuza alınmış bağlantı yeniden denediğinizde hata oluşur. Daha fazla bilgi için bkz. Bilgi Bankası makalesi, "[SQL OLE DB kaynak havuzu ile uygulama rolü hataları](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Bir SQL Server uygulama rolü `sp_setapprole` sistem saklı yordamı çağırarak etkinleştirildikten sonra, bu bağlantının güvenlik bağlamı sıfırlanamaz. Ancak, Havuzlama etkinse bağlantı havuza döndürülür ve havuza alınmış bağlantı yeniden kullanıldığında bir hata oluşur. Daha fazla bilgi için bkz. Bilgi Bankası makalesi, "[OLE DB kaynak havuzlama Ile SQL uygulama rolü hataları](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Uygulama rolü alternatifleri  
- Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmaları avantajlarından almanızı öneririz. Daha fazla bilgi için [SQL Server'da uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmalarının avantajlarından yararlanmanızı öneririz. Daha fazla bilgi için bkz. [SQL Server uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

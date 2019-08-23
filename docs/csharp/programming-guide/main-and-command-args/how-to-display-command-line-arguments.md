@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 030fd2bd3286bd4f25513e26b3de9e87eaee9029
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ba732930d08c74433d6ea7b38e7dc3a9fddf594c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588890"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923858"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Nasıl yapılır: Komut satırı bağımsız değişkenlerini görüntüleC# (Programlama Kılavuzu)
 Komut satırındaki bir çalıştırılabilir dosyaya girilen bağımsız değişkenlere, için `Main`isteğe bağlı bir parametre üzerinden erişilebilir. Bağımsız değişkenler, dizeler dizisi biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilirin şu komut satırı çağırmaları göz önünde bulundurun:  
@@ -22,7 +22,7 @@ Komut satırındaki bir çalıştırılabilir dosyaya girilen bağımsız deği�
 |**yürütülebilir. exe "1 2" üç**|"one two"<br /><br /> ünden|  
   
 > [!NOTE]
->  Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
+> Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek, komut satırı uygulamasına geçirilen komut satırı bağımsız değişkenlerini görüntüler. Gösterilen çıktı, yukarıdaki tablodaki ilk giriş içindir.  

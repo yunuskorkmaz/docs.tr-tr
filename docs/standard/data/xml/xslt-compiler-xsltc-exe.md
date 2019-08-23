@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923292"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT Derleyicisi (xsltc.exe)
-XSLT derleyicisi (xsltc.exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş bir stil sayfası sonra doğrudan geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. İmzalı derlemeler xsltc.exe ile oluşturulamıyor.  
+XSLT derleyicisi (xsltc. exe) XSLT stil sayfalarını derler ve bir derleme oluşturur. Derlenmiş stil sayfası daha sonra doğrudan <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir. Xsltc. exe ile imzalı derlemeler oluşturamazsınız.  
   
- Xsltc.exe aracı Visual Studio ile birlikte gelir. Daha fazla bilgi için [Visual Studio indirmeleri](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
+ Xsltc. exe aracı, Visual Studio 'Ya dahildir. Daha fazla bilgi için bkz. [Visual Studio İndirmeleri](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,56 +27,56 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
-|`sourceFile`|Stil sayfası adını belirtir. Stil sayfası, yerel bir dosya olmalıdır veya intranette yer.|  
+|`sourceFile`|Stil sayfasının adını belirtir. Stil sayfası yerel bir dosya olmalıdır veya intranette bulunmalıdır.|  
   
 ## <a name="options"></a>Seçenekler  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|`/c[lass]:``name`|Aşağıdaki stil sayfası için sınıfın adını belirtir. Sınıf adı, tam olabilir.<br /><br /> Sınıf adı, stil sayfası adını varsayılan olarak. Örneğin, stil sayfası customers.xsl derlenirse, varsayılan sınıf adını Müşteriler ' dir.|  
-|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerini oluşturulup oluşturulmayacağını belirtir.<br /><br /> Belirtme `+` veya `/debug`, derleyicinin hata ayıklama bilgileri üret ve program veritabanı (PDB) dosyası içinde yerleştirin. Oluşturulan PDB dosyası adıdır `assemblyName`.pdb.<br /><br /> Belirtme `-`, hangi belirtmezseniz, geçerli olduğu `/debug`, oluşturulacak hata ayıklama bilgisi yok neden olur. Bir perakende derleme oluşturulur. **Not:**  Hata ayıklama modunda derleme XSLT performansını önemli ölçüde etkileyebilir.|  
+|`/c[lass]:``name`|Aşağıdaki stil sayfası için sınıfın adını belirtir. Sınıf adı tam olarak nitelenmiş olabilir.<br /><br /> Sınıf adı varsayılan olarak stil sayfasının adıdır. Örneğin, Customers. xsl stil sayfası derlenmişse, varsayılan sınıf adı müşteriler olur.|  
+|`/debug[`+&#124;-`]`|Hata ayıklama bilgilerinin oluşturulup oluşturulmayacağını belirtir.<br /><br /> `+` Veya`/debug`belirtildiğinde, derleyicinin hata ayıklama bilgileri oluşturmasına ve bir program veritabanı (pdb) dosyasına yerleştirmesine neden olur. Oluşturulan pdb dosyasının adı. pdb 'dir `assemblyName`.<br /><br /> Belirtmiyorsanız geçerli olan öğesini belirtme `-` ,hiçbirhataayıklamabilgisininoluşturulmasınanedenolmaz.`/debug` Bir perakende derlemesi oluşturulur. **Not:**  Hata ayıklama modunda derleme, XSLT performansını önemli ölçüde etkileyebilir.|  
 |`/help`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|`/nologo`|Derleyici telif hakkı iletisini görüntülenmesini bastırır.|  
-|`/platform:``string`|Derleme çalıştırılabileceği platformları belirtir. Geçerli platform değerleri açıklar:<br /><br /> `x86` derlemenizi 32-bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılmak üzere<br /><br /> `x64` derlemenizi 64 bit ortak dil çalışma zamanı tarafından AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda çalıştırılması için derler.<br /><br /> Itanium derlemenizi 64 bit ortak dil çalışma zamanı tarafından bir Itanium işlemci olan bir bilgisayarda çalıştırılması için derler.<br /><br /> `anycpu` Herhangi bir platform üzerinde çalıştırmasını derlemenizin derler. Bu varsayılandır.|  
-|`/out:``assemblyName`|Çıkış derlemesi adını belirtir. Birden çok stil sayfaları varsa ana stil sayfası veya ilk stil sayfası adı için varsayılan derleme adı içerir.<br /><br /> Betikleri stil sayfası içeriyorsa, komut dosyaları için ayrı bir derleme kaydedilir. Komut dosyası derleme adları ana derleme adından oluşturulur. Örneğin, derleme adınız için CustOrders.dll belirttiyseniz, ilk betik derleme CustOrders_Script1.dll olarak adlandırılır.|  
-|`/settings:``document+-, script+-, DTD+-,`|İzin verilip verilmeyeceğini belirten `document()` işlevleri, XSLT betik veya belge stil sayfası içinde tür tanımı (DTD'nin).<br /><br /> DTD desteği varsayılan davranışı devre dışı bırakır `document()` işlev ve betik oluşturma.|  
-|`@``file`|Derleyici seçenekleri içeren bir dosya belirtmenizi sağlar.|  
+|`/nologo`|Derleyicinin telif hakkı iletisinin görüntülenmesini önler.|  
+|`/platform:``string`|Derlemenin çalıştırılabilen platformları belirtir. Geçerli platform değerlerini aşağıda açıklanmıştır:<br /><br /> `x86`derlemenizi 32 bit, x86 uyumlu ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler<br /><br /> `x64`, derlemenizi AMD64 veya EM64T yönerge kümesini destekleyen bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> Itanium, derlemenizi Itanium işlemcisine sahip bir bilgisayarda 64 bitlik ortak dil çalışma zamanı tarafından çalıştırılacak şekilde derler.<br /><br /> `anycpu`derlemenizi herhangi bir platformda çalışacak şekilde derler. Bu varsayılandır.|  
+|`/out:``assemblyName`|Çıktı olan derlemenin adını belirtir. Birden çok stil sayfası varsa, derleme adı varsayılan olarak ana stil sayfasının adı veya ilk stil sayfası olur.<br /><br /> Stil sayfası betikler içeriyorsa, betikler ayrı bir derlemeye kaydedilir. Betik derleme adları ana derleme adından oluşturulur. Örneğin, derleme adınız için CustOrders. dll ' yi belirttiyseniz, ilk betik derlemesi CustOrders_Script1. dll olarak adlandırılır.|  
+|`/settings:``document+-, script+-, DTD+-,`|Stil sayfasında işlevlere, `document()` XSLT betiğine veya belge türü tanımına (DTD) izin verilip verilmeyeceğini belirtir.<br /><br /> Varsayılan davranış DTD, `document()` işlev ve komut dosyası desteğini devre dışı bırakır.|  
+|`@``file`|Derleyici seçeneklerini içeren bir dosya belirtmenizi sağlar.|  
 |`?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- XSLT çözümleri birden çok stil sayfası modüllerini oluşabilir. Xsltc.exe araç derlemeleri stil sayfası içinden oluşturur. Derlemeleri ardından uygulamasına geçirilebilir <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemi. Bu, bazı XSLT dağıtım senaryolarında performans maliyetleri azaltma yardımcı olabilir.  
+ XSLT çözümleri, birden çok stil sayfası modülünden oluşabilir. Xsltc. exe aracı, stil sayfalarından derleme oluşturur. Daha sonra derlemeler <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> yöntemine geçirilebilir. Bu, bazı XSLT dağıtım senaryolarında performans maliyetlerinin azaltılmasına yardımcı olabilir.  
   
 > [!NOTE]
->  Uygulamanızda bir başvuru olarak derlenmiş derlemenin de dahil etmelisiniz.  
+> Derlenen derlemeyi uygulamanıza başvuru olarak da dahil etmeniz gerekir.  
   
- Xsltc.exe araç, sınıf doğrulamaz (`/class:`*adı*) veya derleme (`/out:`*assemblyName*) adları. Adları geçerli değilse, hatalar ortak dil çalışma zamanı tarafından atılır.  
+ Xsltc. exe aracı,`/class:`Sınıf (*ad*) veya derleme (`/out:`*AssemblyName*) adlarını doğrulamaz. Adlar geçerli değilse, ortak dil çalışma zamanı tarafından hatalar oluşturulur.  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut, stil sayfası derler ve booksort.dll adlı bir derleme oluşturur.  
+ Aşağıdaki komut, stil sayfasını derler ve booksort. dll adlı bir derleme oluşturur.  
   
 ```  
 xsltc booksort.xsl  
 ```  
   
- Aşağıdaki komut, stil sayfası derler ve bir derleme ve booksort.dll ve booksort.pdb sırasıyla adlı PDB dosyası oluşturur.  
+ Aşağıdaki komut, stil sayfasını derler ve sırasıyla booksort. dll ve booksort. pdb adlı bir derleme ve PDB dosyası oluşturur.  
   
 ```  
 xsltc booksort.xsl /debug  
 ```  
   
- Aşağıdaki komutu bir msxsl: Script öğesi içeriyor ve calc.dll ve calc_Script1.dll adlı iki derlemeler oluşturan bir stil sayfası derler.  
+ Aşağıdaki komut bir msxsl: script öğesi içeren bir stil sayfasını derler ve calc. dll ve calc_Script1. dll adlı iki derleme oluşturur.  
   
 ```  
 xsltc /settings:script+ calc.xsl  
 ```  
   
- Aşağıdaki komut, DTD işleme ve komut dosyası desteği sağlar ve myTest.dll ve myTest_Script1.dll adlı iki derleme oluşturur.  
+ Aşağıdaki komut DTD işleme ve betik desteğini sunar ve myTest. dll ve myTest_Script1. dll adlı iki derleme oluşturur.  
   
 ```  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  
 ```  
   
- Aşağıdaki komut, iki stil sayfası modülleri derler ve booksort.dll adlı tek bir derleme oluşturur.  
+ Aşağıdaki komut iki stil sayfası modülünü derler ve booksort. dll adlı tek bir derleme oluşturur.  
   
 ```  
 xsltc booksort.xsl output.xsl  
@@ -85,5 +85,5 @@ xsltc booksort.xsl output.xsl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [Nasıl yapılır: Derleme kullanarak XSLT dönüşümü gerçekleştirme](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
+- [Nasıl yapılır: Bütünleştirilmiş kod kullanarak XSLT dönüşümü gerçekleştirme](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
 - [XSLT Dönüşümleri](../../../../docs/standard/data/xml/xslt-transformations.md)

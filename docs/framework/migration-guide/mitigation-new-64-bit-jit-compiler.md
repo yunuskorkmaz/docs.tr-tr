@@ -1,5 +1,5 @@
 ---
-title: 'Azaltma: Yeni 64 bit JIT Derleyici'
+title: Mayı Yeni 64-bit JıT derleyicisi
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compiler, 64-bit
@@ -8,51 +8,51 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968518"
 ---
-# <a name="mitigation-new-64-bit-jit-compiler"></a>Azaltma: Yeni 64 bit JIT Derleyici
-.NET Framework 4. 6 ile başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64 bit JIT derleyicisi içerir. Bu değişiklik, 32-bit JIT Derleyici ile derleme etkilemez.  
+# <a name="mitigation-new-64-bit-jit-compiler"></a>Mayı Yeni 64-bit JıT derleyicisi
+.NET Framework 4,6 ' den başlayarak, çalışma zamanı tam zamanında derleme için yeni bir 64 bit JıT derleyicisi içerir. Bu değişiklik, 32 bit JıT derleyicisi ile derlemeyi etkilemez.  
   
-## <a name="unexpected-behavior-or-exceptions"></a>Beklenmeyen davranış veya özel durumları  
- Bazı durumlarda, yeni 64 bit JIT Derleyici ile derleme çalışma zamanı özel veya eski 64 bit JIT derleyicisi tarafından derlenen kod yürütülürken uyulmuyor davranışı sonuçlanır. Bilinen farklar şunlardır:  
+## <a name="unexpected-behavior-or-exceptions"></a>Beklenmeyen davranış veya özel durumlar  
+ Bazı durumlarda, yeni 64-bit JıT derleyicisi ile derleme, çalışma zamanı özel durumu veya eski 64 bit JıT derleyicisi tarafından derlenen kodu yürütürken gözlemlenmemiş davranışlar ile sonuçlanır. Bilinen farklılıklar şunları içerir:  
   
 > [!IMPORTANT]
->  Bu bilinen sorunlara ilişkin tüm .NET Framework 4.6.2 ile sunulan yeni 64 bit derleyicide çözüldü. Çoğu, ayrıca Windows Update ile birlikte hizmet sürümlerinde .NET Framework 4.6 ve 4.6.1 çözüldü. Windows sürümünüz güncel veya .NET Framework 4.6.2 yükselterek sağlayarak bu sorunları ortadan kaldırabilir.  
+> Bu bilinen sorunların tümü, .NET Framework 4.6.2 ile yayınlanan yeni 64 bit derleyicide ele alındı. Çoğu Ayrıca, Windows Update dahil edilen .NET Framework 4,6 ve 4.6.1 hizmet sürümlerinde de giderilmiştir. Windows sürümünüzün güncel olmasını sağlayarak veya 4.6.2 .NET Framework yükselterek bu sorunları ortadan kaldırabilirsiniz.  
   
-- Belirli koşullar altında bir kutudan çıkarma işlemi oluşturabilecek bir <xref:System.NullReferenceException> sürüm yapılarında açık iyileştirme.  
+- Belirli koşullar altında, bir kutudan çıkarma işlemi en iyi <xref:System.NullReferenceException> duruma getirme özelliği açık olan yayın yapıları oluşturabilir.  
   
-- Bazı durumlarda, üretim kodunda büyük yöntem gövdesinin yürütülmesini oluşturabilecek bir <xref:System.StackOverflowException>.  
+- Bazı durumlarda, büyük bir yöntem gövdesinde üretim kodunun yürütülmesi bir <xref:System.StackOverflowException>oluşturabilir.  
   
-- Belirli koşullar altında yayın içindeki değer türleri derlemeler yerine bir yönteme yapıları başvuru türleri olarak kabul edilir. Bu sorunun belirtileri bir koleksiyondaki tek tek öğelerin beklenmedik bir sırada göründüğünü biridir.  
+- Belirli koşullar altında, bir yönteme geçirilen yapılar, yayın Derlemeleriyle değer türleri yerine başvuru türleri olarak değerlendirilir. Bu sorunun bildirimli bir şekilde, bir koleksiyondaki tek öğelerin beklenmeyen bir sırada görünmesine neden olur.  
   
-- Karşılaştırma işleminin belirli koşullar altında <xref:System.UInt16> bunların yüksek bit kümesi değerlerle iyileştirme etkinleştirildiğinde yanlış.  
+- Belirli koşullar altında, en iyi duruma <xref:System.UInt16> getirme etkinse değerlerin yüksek bit kümesiyle karşılaştırılması yanlış olur.  
   
-- Bazı koşullar altında özellikle zaman dizi başlatma değerleri, bellek başlatma tarafından <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL yönergesinin başlatmak bellek yanlış bir değere sahip. Bu, bir işlenmeyen özel durum veya yanlış çıkış sonuçlanabilir.  
+- Belirli koşullar altında, özellikle dizi değerlerini başlatırken, <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> Il yönergesi tarafından bellek başlatma yanlış bir değerle belleği başlatabilir. Bu, işlenmemiş bir özel durum ya da yanlış çıkışa neden olabilir.  
   
-- Nadir bazı koşullarda koşullu bit test yanlış döndürebilir <xref:System.Boolean> değer veya derleyici iyileştirmeleri etkinleştirilip etkinleştirilmediğini bir özel durum.  
+- Bazı nadir koşullarda, koşullu bir bit testi yanlış <xref:System.Boolean> değeri döndürebilir veya derleyici iyileştirmeleri etkinse bir özel durum oluşturabilir.  
   
-- Belirli koşullar altında bir `if` deyimi girmeden önce koşulu test etmek için kullanılır bir `try` blok ve çıkın `try` blok ve aynı koşul içinde değerlendirilir `catch` veya `finally` blok, yeni 64 bit JIT Derleyici kaldırır `if` gelen koşul `catch` veya `finally` kodu en iyi duruma getirir, engelleyin. Sonuç olarak, içindeki kod `if` deyiminde `catch` veya `finally` blok koşulsuz olarak yürütülür.  
+- Belirli koşullar `if` altında, bir ifade bir `try` blok girmeden önce bir koşulu test etmek için kullanılırsa ve `try` bloğundan çıkıldığında, `catch` veya `finally` bloğunda aynı koşul değerlendirilirse, yeni 64-bit JIT derleyicisi, `if` `catch` kodu en iyi duruma getirirken `finally` koşulu veya bloğundan kaldırır. Sonuç olarak, `if` `catch` veya `finally` bloğundaki deyimin içindeki kod koşulsuz olarak yürütülür.  
   
 <a name="General"></a>   
-## <a name="mitigation-of-known-issues"></a>Bilinen sorunlara ilişkin azaltma  
- Yukarıda listelenen bir sorunla karşılaşırsanız aşağıdakilerden birini yaparak karşılayabilirsiniz:  
+## <a name="mitigation-of-known-issues"></a>Bilinen sorunların risk azaltma  
+ Yukarıda listelenen sorunlarla karşılaşırsanız, aşağıdakilerden birini yaparak bunları ele alabilirsiniz:  
   
-- .NET Framework 4.6.2 yükseltin. .NET Framework 4.6.2 dahil yeni bir 64 bit Derleyici her biri bu bilinen sorunları ele alır.  
+- .NET Framework 4.6.2 ' ye yükseltin. .NET Framework 4.6.2 ile birlikte sunulan yeni 64 bitlik derleyici, bu bilinen sorunların her birini ele alır.  
   
-- Windows Update çalıştırarak Windows sürümünüz güncel olduğundan emin olun. .NET Framework 4.6 ve 4.6.1 için hizmet güncelleştirmeleri her dışında bu sorunları gidermek <xref:System.NullReferenceException> kutudan Çıkarma işleminde.  
+- Windows Update çalıştırarak Windows sürümünüzün güncel olduğundan emin olun. .NET Framework 4,6 ve 4.6.1 için hizmet güncelleştirmeleri, <xref:System.NullReferenceException> kutudan çıkarma işlemi dışında bu sorunların her birini ele verir.  
   
-- Eski 64 bit JIT Derleyici ile derleyin. Bkz: [diğer sorunların azaltma](#Other) bölüm bunun nasıl yapılacağı hakkında daha fazla bilgi için.  
+- Daha eski 64 bit JıT derleyicisi ile derleyin. Bunun nasıl yapılacağı hakkında daha fazla bilgi için [diğer sorunların hafifletme](#Other) bölümüne bakın.  
   
 <a name="Other"></a>   
-## <a name="mitigation-of-other-issues"></a>Diğer sorunları riskini azaltma  
- Herhangi diğer davranıştaki farkı eski 64 bit derleyici ve yeni 64 bit JIT Derleyici ile derlenmiş kod arasında ya da uygulamanızın yeni bir 64 bit JIT Derleyici ile derlenmiş hata ayıklama ve yayın sürümleri arasında karşılaşırsanız, aşağıdakileri yapabilirsiniz eski 64 bit JIT Derleyici ile uygulamanızı derlemek için:  
+## <a name="mitigation-of-other-issues"></a>Diğer sorunları azaltma  
+ Eski 64 bit derleyicisi ile derlenen kod ve yeni 64-bit JıT derleyicisi ile derlenmiş kod arasındaki davranışta veya yeni 64-bit JıT derleyicisi ile derlenen uygulamanızın hata ayıklama ve yayın sürümleri arasında başka bir farklılık yaşarsanız, aşağıdakileri yapabilirsiniz Uygulamanızı eski 64 bit JıT derleyicisi ile derlemek için:  
   
-- Uygulama başına temelinde, eklediğiniz [ \<useLegacyJit >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) uygulamanızın yapılandırma dosyasına öğesi. Aşağıdaki yeni 64 bit JIT Derleyici ile derleme devre dışı bırakır ve bunun yerine, eski 64 bit JIT Derleyici kullanır.  
+- Uygulama başına temelinde, [ \<useLegacyJit >](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) öğesini uygulamanızın yapılandırma dosyasına ekleyebilirsiniz. Aşağıdakiler, yeni 64-bit JıT derleyicisi ile derlemeyi devre dışı bırakır ve bunun yerine eski 64 bit JıT derleyicisini kullanır.  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -63,11 +63,11 @@ ms.locfileid: "64648471"
     </configuration>  
     ```  
   
-- Bir kullanıcı başına esasına göre ekleyebileceğiniz bir `REG_DWORD` değeri `useLegacyJit` için `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` kayıt defteri anahtarı. 1 değeri, eski 64 bit JIT Derleyici etkinleştirir; 0 değeri, devre dışı bırakır ve yeni 64 bit JIT Derleyici sağlar.  
+- Kullanıcı başına temelinde, kayıt defteri `REG_DWORD` `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` anahtarına adlı `useLegacyJit` bir değer ekleyebilirsiniz. 1 değeri, eski 64-bit JıT derleyicisini sunar; 0 değeri devre dışı bırakır ve yeni 64 bit JıT derleyicisini etkinleştirilir.  
   
-- Bir makine başına temelinde ekleyebileceğiniz bir `REG_DWORD` değeri `useLegacyJit` için `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` kayıt defteri anahtarı. 1 değeri, eski 64 bit JIT Derleyici etkinleştirir; 0 değeri, devre dışı bırakır ve yeni 64 bit JIT Derleyici sağlar.  
+- Makine başına temelinde, kayıt defteri `REG_DWORD` `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` anahtarına adlı `useLegacyJit` bir değer ekleyebilirsiniz. 1 değeri, eski 64-bit JıT derleyicisini sunar; 0 değeri devre dışı bırakır ve yeni 64 bit JıT derleyicisini etkinleştirilir.  
   
- Ayrıca sorun hakkında bir hata bildirimi tarafından bize [Microsoft Connect](https://connect.microsoft.com/VisualStudio).  
+ Ayrıca, [Microsoft Connect](https://connect.microsoft.com/VisualStudio)'te bir hata bildirerek sorun hakkında bilgi sahibi olalım.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

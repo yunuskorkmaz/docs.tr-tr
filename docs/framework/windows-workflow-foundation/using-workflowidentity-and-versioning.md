@@ -2,35 +2,35 @@
 title: WorkflowIdentity Kullanma ve Sürüm Oluşturma
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: f7e66d1827c5224ab97faeceaedc6ec0532a1923
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661208"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958386"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity Kullanma ve Sürüm Oluşturma
 
-<xref:System.Activities.WorkflowIdentity> uygulama geliştiricilerinin'bir ad ilişkilendirmek için iş akışı için bir yol sağlar ve bir <xref:System.Version> bir iş akışı tanımıyla ve kalıcı iş akışı örneğiyle ilişkili olması bu bilgileri. Bu kimlik bilgileri birden çok iş akışı tanımı sürümünün yan yana yürütme gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevleri için temel sağlar. Bu konuda kullanarak genel sağlanır <xref:System.Activities.WorkflowIdentity> ile <xref:System.Activities.WorkflowApplication> barındırma. Yan yana yürütme bir iş akışı hizmeti içinde iş akışı tanımları hakkında daha fazla bilgi için bkz: [WorkflowServiceHost yan yana sürüm oluşturma](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Dinamik güncelleştirme hakkında daha fazla bilgi için bkz: [dinamik güncelleştirme](dynamic-update.md).
+<xref:System.Activities.WorkflowIdentity>, iş akışı uygulama geliştiricilerinin bir adı ve ile bir <xref:System.Version> iş akışı tanımıyla ilişkilendirilmesi ve bu bilgilerin kalıcı bir iş akışı örneğiyle ilişkilendirilmesi için bir yol sağlar. Bu kimlik bilgileri, bir iş akışı tanımının birden çok sürümünün yan yana yürütülmesi gibi senaryoları etkinleştirmek için iş akışı uygulama geliştiricileri tarafından kullanılabilir ve dinamik güncelleştirme gibi diğer işlevler için de temel pulu sağlar. Bu konu, barındırma ile <xref:System.Activities.WorkflowIdentity> <xref:System.Activities.WorkflowApplication> kullanmayla ilgili genel bakış sağlar. Bir iş akışı hizmetindeki iş akışı tanımlarının yan yana yürütülmesi hakkında daha fazla bilgi için bkz. [WorkflowServiceHost 'Da yan yana sürüm oluşturma](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Dinamik güncelleştirme hakkında bilgi için bkz. [dinamik güncelleştirme](dynamic-update.md).
 
 ## <a name="in-this-topic"></a>Bu konuda
 
-- [Workflowıdentity kullanma](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
+- [WorkflowIdentity kullanma](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)
 
-  - [Workflowıdentity kullanma yan yana yürütme](using-workflowidentity-and-versioning.md#SxS)
+  - [WorkflowIdentity kullanarak yan yana yürütme](using-workflowidentity-and-versioning.md#SxS)
 
-- [İş akışı sürümü oluşturma desteği için .NET Framework 4 Kalıcılık veritabanlarını yükseltme](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
+- [.NET Framework 4 kalıcılık veritabanlarını Iş akışı sürümü oluşturmayı destekleyecek şekilde yükseltme](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)
 
-  - [Veritabanı şemasına yükseltmek için](using-workflowidentity-and-versioning.md#ToUpgrade)
+  - [Veritabanı şemasını yükseltmek için](using-workflowidentity-and-versioning.md#ToUpgrade)
 
-## <a name="UsingWorkflowIdentity"></a> Workflowıdentity kullanma
+## <a name="UsingWorkflowIdentity"></a>WorkflowIdentity kullanma
 
-Kullanılacak <xref:System.Activities.WorkflowIdentity>, örnek oluşturma, yapılandırma ve ilişkilendirin bir <xref:System.Activities.WorkflowApplication> örneği. A <xref:System.Activities.WorkflowIdentity> örneği tanımlayıcı üç parça bilgi içerir. <xref:System.Activities.WorkflowIdentity.Name%2A> ve <xref:System.Activities.WorkflowIdentity.Version%2A> içeren bir ad ve bir <xref:System.Version> ve gereklidir ve <xref:System.Activities.WorkflowIdentity.Package%2A> isteğe bağlıdır ve derleme adı veya diğer gibi bilgileri içeren ek bir dize istenen bilgileri belirtmek için kullanılabilir. A <xref:System.Activities.WorkflowIdentity> üç özelliklerini birbirinden farklı olduğunda benzersiz <xref:System.Activities.WorkflowIdentity>.
+Kullanmak <xref:System.Activities.WorkflowIdentity>için bir örnek oluşturun, yapılandırın ve bir <xref:System.Activities.WorkflowApplication> örnekle ilişkilendirin. <xref:System.Activities.WorkflowIdentity> Örnek, üç tanımlayıcı bilgi parçasını içerir. <xref:System.Activities.WorkflowIdentity.Name%2A>ve bir ad ve bir <xref:System.Version> <xref:System.Activities.WorkflowIdentity.Version%2A> içerir ve gereklidir <xref:System.Activities.WorkflowIdentity.Package%2A> ve isteğe bağlıdır ve derleme adı veya diğer istenen bilgiler gibi bilgileri içeren ek bir dize belirtmek için kullanılabilir. , Üç özelliklerinden biri diğerinden <xref:System.Activities.WorkflowIdentity>farklıysa benzersizdir. <xref:System.Activities.WorkflowIdentity>
 
 > [!IMPORTANT]
-> A <xref:System.Activities.WorkflowIdentity> tüm kişisel bilgileri (PII) içermemelidir. Hakkında bilgi <xref:System.Activities.WorkflowIdentity> oluşturmak için kullanılan bir örneği yaşam döngüsü Hizmetleri etkinliğin birkaç farklı noktalarda yapılandırılmış tüm izleme için çalışma zamanı tarafından yayılır. İzleme WF PII (hassas kullanıcı verileri) gizlemek için herhangi bir mekanizma yoktur. Bu nedenle, bir <xref:System.Activities.WorkflowIdentity> örneği kayıtları izleme, çalışma zamanı tarafından yayılan ve izleme kayıtları görüntüleme erişimi olan herkes tarafından görülebilir tüm PII verileri içermemelidir.
+> Bir <xref:System.Activities.WorkflowIdentity> kişisel olarak tanımlanabilir bilgiler (PII) içermemelidir. Örnek oluşturmak için <xref:System.Activities.WorkflowIdentity> kullanılan hakkında bilgiler, çalışma zamanına göre etkinlik yaşam döngüsünün birkaç farklı noktasında yapılandırılmış izleme hizmetlerine yayılır. WF Izlemenin PII (hassas Kullanıcı verileri) ' i gizlemek için herhangi bir mekanizması yoktur. Bu nedenle, <xref:System.Activities.WorkflowIdentity> kayıtlar izlenirken çalışma zamanı tarafından yayınlandığından ve izleme kayıtlarını görüntülemek için erişimi olan herkese görünebilir olabileceğinden bir örnek herhangi bir PII verisi içermemelidir.
 
-Aşağıdaki örnekte, bir <xref:System.Activities.WorkflowIdentity> oluşturulur ve kullanılarak oluşturulan bir iş akışı örneği ile ilişkili bir `MortgageWorkflow` iş akışı tanımı.
+Aşağıdaki örnekte, bir <xref:System.Activities.WorkflowIdentity> `MortgageWorkflow` iş akışı tanımı kullanılarak oluşturulan bir iş akışı örneğiyle oluşturulur ve ilişkilendirilir.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -48,7 +48,7 @@ ConfigureWorkflowApplication(wfApp);
 wfApp.Run();
 ```
 
-Yeniden yükleme ve bir iş akışını sürdürme bir <xref:System.Activities.WorkflowIdentity> eşleşecek şekilde yapılandırılmış <xref:System.Activities.WorkflowIdentity> kalıcı iş akışı örneğinin kullanılması gerekir.
+Bir iş akışını yeniden yüklerken ve sürdürülürken <xref:System.Activities.WorkflowIdentity> , kalıcı iş akışı örneğinin <xref:System.Activities.WorkflowIdentity> ile eşleşecek şekilde yapılandırılan bir, kullanılmalıdır.
 
 ```csharp
 WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow(), identityV1);
@@ -62,7 +62,7 @@ wfApp.Load(instanceId);
 // Resume the workflow...
 ```
 
-Varsa <xref:System.Activities.WorkflowIdentity> iş akışı örneği yeniden yükleme işlemi kalıcı eşleşmediğinde kullanılan <xref:System.Activities.WorkflowIdentity>, <xref:System.Activities.VersionMismatchException> oluşturulur. Yükleme girişiminden yapılmaz aşağıdaki örnekte `MortgageWorkflow` önceki örnekte trvalý örneği. Bu yükleme girişiminden kullanılarak yapılan bir <xref:System.Activities.WorkflowIdentity> kalıcı örneği eşleşmeyen ipotek iş akışı, daha yeni bir sürümü için yapılandırılmış.
+İş akışı örneğini yeniden yüklerken <xref:System.Activities.WorkflowIdentity> <xref:System.Activities.VersionMismatchException> kullanılan, kalıcı ile eşleşmezse, bir atılır. <xref:System.Activities.WorkflowIdentity> Aşağıdaki örnekte, önceki örnekte kalıcı olan örnekte bir yükleme denemesi `MortgageWorkflow` yapılır. Bu yükleme denemesi, kalıcı örnekle eşleşmeyen <xref:System.Activities.WorkflowIdentity> ipotek iş akışının daha yeni bir sürümü için yapılandırılmış kullanılarak yapılır.
 
 ```csharp
 WorkflowApplication wfApp = new WorkflowApplication(new MortgageWorkflow_v2(), identityV2);
@@ -76,22 +76,22 @@ wfApp.Load(instanceId);
 // Resume the workflow...
 ```
 
-Önceki kodun ne zaman çalıştırılır, aşağıdaki <xref:System.Activities.VersionMismatchException> oluşturulur.
+Önceki kod yürütüldüğünde, aşağıdakiler <xref:System.Activities.VersionMismatchException> oluşturulur.
 
 ```
 The WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') of the loaded instance does not match the WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') of the provided workflow definition. The instance can be loaded using a different definition, or updated using Dynamic Update.
 ```
 
-### <a name="SxS"></a> Workflowıdentity kullanma yan yana yürütme
+### <a name="SxS"></a>WorkflowIdentity kullanarak yan yana yürütme
 
-<xref:System.Activities.WorkflowIdentity> birden çok sürümünün bir iş akışı yan yana yürütme kolaylaştırmak için kullanılabilir. Sık karşılaşılan senaryolardan biri, uzun süre çalışan iş akışı iş gereksinimlerine değişiyor. Güncelleştirilmiş bir sürümü dağıtıldığında pek çok iş akışı örneğini çalışıyor olabilir. Ana bilgisayar uygulaması, güncelleştirilmiş iş akışı tanımını yeni örnekler başlatılırken kullanmak için yapılandırılabilir ve örnekleri çıkıldığında doğru iş akışı tanımı sağlamak için konak uygulamanın sorumluluğundadır. <xref:System.Activities.WorkflowIdentity> eşleşen iş akışı tanımı sürdürme iş akışı örnekleri zaman sağlamak üzere kullanılabilir.
+<xref:System.Activities.WorkflowIdentity>, bir iş akışının birden çok sürümünün bir yandan çalışmasını kolaylaştırmak için kullanılabilir. Tek bir yaygın senaryo, uzun süreli bir iş akışında iş gereksinimlerini değiştiriyor. Bir iş akışının birçok örneği, güncelleştirilmiş bir sürüm dağıtıldığında çalışıyor olabilir. Konak uygulaması, yeni örnekleri başlatırken güncelleştirilmiş iş akışı tanımını kullanacak şekilde yapılandırılabilir ve örnek olarak, örneklere devam edilirken doğru iş akışı tanımını sağlamak için ana bilgisayar uygulamasının sorumluluğundadır. <xref:System.Activities.WorkflowIdentity>, iş akışı örneklerine devam edilirken eşleşen iş akışı tanımını tanımlamak ve sağlamak için kullanılabilir.
 
-Alınacak <xref:System.Activities.WorkflowIdentity> kalıcı iş akışı örneğinin <xref:System.Activities.WorkflowApplication.GetInstance%2A> yöntemi kullanılır. <xref:System.Activities.WorkflowApplication.GetInstance%2A> Yöntemi <xref:System.Activities.WorkflowApplication.Id%2A> kalıcı iş akışı örneğinin ve <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> döndürür ve kalıcı örneği içeren bir <xref:System.Activities.WorkflowApplicationInstance>. A <xref:System.Activities.WorkflowApplicationInstance> ilişkili dahil olmak üzere bir kalıcı iş akışı örneğiyle ilgili bilgiler içeren <xref:System.Activities.WorkflowIdentity>. Bu ilişkili <xref:System.Activities.WorkflowIdentity> yükleniyor ve iş akışı örneği sürdürme doğru iş akışı tanımı sağlamak için ana bilgisayar tarafından kullanılabilir.
+Kalıcı bir iş <xref:System.Activities.WorkflowIdentity> akışı örneğini <xref:System.Activities.WorkflowApplication.GetInstance%2A> almak için yöntemi kullanılır. Yöntemi kalıcı iş akışı <xref:System.Activities.WorkflowApplication.Id%2A> örneğini ve <xref:System.Activities.WorkflowApplicationInstance>kalıcı örneği içeren öğesini alır ve döndürür. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> <xref:System.Activities.WorkflowApplication.GetInstance%2A> , İlişkili<xref:System.Activities.WorkflowIdentity>olduğu gibi kalıcı bir iş akışı örneğiyle ilgili bilgiler içerir.<xref:System.Activities.WorkflowApplicationInstance> Bu ilişkili <xref:System.Activities.WorkflowIdentity> , iş akışı örneğini yüklerken ve sürdürülürken doğru iş akışı tanımını sağlamak için ana bilgisayar tarafından kullanılabilir.
 
 > [!NOTE]
-> Bir null <xref:System.Activities.WorkflowIdentity> geçerli olduğundan ve ilişkili olmadan kalıcı örnekleri eşlemek için ana bilgisayar tarafından kullanılan <xref:System.Activities.WorkflowIdentity> uygun iş akışı tanımı için. Bu senaryo, iş akışı sürüm oluşturma iş akışı uygulaması başlangıçta yazılmadı olduğunda veya bir uygulama uygulamasından yükseltilen oluşabilir [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Daha fazla bilgi için [destek iş akışı sürüm oluşturma için .NET Framework 4 Kalıcılık veritabanı yükseltme](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+> Null <xref:System.Activities.WorkflowIdentity> bir değer geçerlidir ve ana bilgisayar tarafından uygun iş akışı tanımıyla ilişkili <xref:System.Activities.WorkflowIdentity> olmadan kalıcı olan örnekleri eşlemek için kullanılabilir. Bu senaryo, bir iş akışı uygulamasının ilk olarak iş akışı sürümü oluşturma ile yazılmayan veya bir uygulama sürümünden [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]yükseltildiğinde meydana gelebilir. Daha fazla bilgi için bkz. [Iş akışı sürümü oluşturmayı desteklemek için .NET Framework 4 kalıcılık veritabanlarını yükseltme](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
-Aşağıdaki örnekte bir `Dictionary<WorkflowIdentity, Activity>` ilişkilendirmek için kullanılan <xref:System.Activities.WorkflowIdentity> kullanarak eşleşen iş akışı tanımlarını ve bir iş akışı örneği başlatıldığında `MortgageWorkflow` ile ilişkili iş akışı tanımı, `identityV1` <xref:System.Activities.WorkflowIdentity>.
+Aşağıdaki örnekte `Dictionary<WorkflowIdentity, Activity>` , örnekleri eşleşen iş akışı tanımlarıyla <xref:System.Activities.WorkflowIdentity> ilişkilendirmek için kullanılır ve bir `MortgageWorkflow` iş akışı, iş akışı tanımı kullanılarak başlatılır ve bu `identityV1` <xref:System.Activities.WorkflowIdentity>.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -119,10 +119,10 @@ ConfigureWorkflowApplication(wfApp);
 wfApp.Run();
 ```
 
-Aşağıdaki örnekte, önceki örnekte kalıcı iş akışı örneğiyle ilgili bilgiler çağırarak alınır <xref:System.Activities.WorkflowApplication.GetInstance%2A>ve kalıcı <xref:System.Activities.WorkflowIdentity> bilgi eşleşen iş akışı tanımı almak için kullanılır. Bu bilgileri yapılandırmak için kullanılan <xref:System.Activities.WorkflowApplication>, ve ardından iş akışını yüklenir. Dikkat edin çünkü <xref:System.Activities.WorkflowApplication.Load%2A> alan aşırı yüklemesini <xref:System.Activities.WorkflowApplicationInstance> kullanılan <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> üzerinde yapılandırılmışsa <xref:System.Activities.WorkflowApplicationInstance> tarafından kullanılan <xref:System.Activities.WorkflowApplication> ve bu nedenle kendi <xref:System.Activities.WorkflowApplication.InstanceStore%2A> özelliği yapılandırılması gerekmez.
+Aşağıdaki örnekte, önceki örnekteki kalıcı iş akışı örneğiyle ilgili bilgiler çağırarak <xref:System.Activities.WorkflowApplication.GetInstance%2A>alınır ve kalıcı <xref:System.Activities.WorkflowIdentity> bilgiler, eşleşen iş akışı tanımını almak için kullanılır. Bu bilgiler, <xref:System.Activities.WorkflowApplication>öğesini yapılandırmak için kullanılır ve sonra iş akışı yüklenir. <xref:System.Activities.WorkflowApplicationInstance> <xref:System.Activities.WorkflowApplication> Öğesinin kullanıldığı <xref:System.Activities.WorkflowApplication.Load%2A> <xref:System.Activities.WorkflowApplication.InstanceStore%2A> aşırı yükleme, üzerinde<xref:System.Activities.WorkflowApplicationInstance> yapılandırılan öğesinin tarafından kullanıldığı ve bu nedenle özelliğinin yapılandırılması gerekmediği unutulmamalıdır. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>
 
 > [!NOTE]
->  Varsa <xref:System.Activities.WorkflowApplication.InstanceStore%2A> özelliği ayarlanmışsa, bunu aynı ayarlanmalıdır <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> örneği tarafından kullanılan <xref:System.Activities.WorkflowApplicationInstance> veya başka bir <xref:System.ArgumentException> şu ileti ile oluşturulur: `The instance is configured with a different InstanceStore than this WorkflowApplication.`.
+> <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> `The instance is configured with a different InstanceStore than this WorkflowApplication.`Özellik ayarlandıysa ,<xref:System.ArgumentException> tarafından <xref:System.Activities.WorkflowApplicationInstance> kullanılan aynı örnekle ayarlanmalıdır, aksi takdirde şu iletiyle birlikte oluşturulur:. <xref:System.Activities.WorkflowApplication.InstanceStore%2A>
 
 ```csharp
 // Get the WorkflowApplicationInstance of the desired workflow from the specified
@@ -144,26 +144,26 @@ wfApp.Load(instance);
 // Resume the workflow...
 ```
 
-## <a name="UpdatingWF4PersistenceDatabases"></a> İş akışı sürümü oluşturma desteği için .NET Framework 4 Kalıcılık veritabanlarını yükseltme
+## <a name="UpdatingWF4PersistenceDatabases"></a>.NET Framework 4 kalıcılık veritabanlarını Iş akışı sürümü oluşturmayı destekleyecek şekilde yükseltme
 
-SqlWorkflowInstanceStoreSchemaUpgrade.sql veritabanı betiği kullanılarak oluşturulan Kalıcılık veritabanları yükseltmek için sağlanan [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] veritabanı komut dosyaları. Bu betik, veritabanları, .NET Framework 4. 5 ' kullanıma sunulan yeni sürüm oluşturma özellikleri destekleyecek şekilde güncelleştirir. Tüm kalıcı iş akışı örnekleri veritabanlarındaki varsayılan sürüm değerleri verilir ve yan yana yürütme ve dinamik güncelleştirme içinde yer alabilirler.
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] Veritabanı betikleri kullanılarak oluşturulan kalıcı veritabanlarını yükseltmek için bir SqlWorkflowInstanceStoreSchemaUpgrade. SQL veritabanı betiği sağlanır. Bu betik, .NET Framework 4,5 ' de tanıtılan yeni sürüm oluşturma yeteneklerini destekleyecek şekilde veritabanlarını güncelleştirir. Veritabanlarındaki kalıcı iş akışı örneklerine varsayılan sürüm oluşturma değerleri verilir ve daha sonra yan yana yürütmeye ve Dinamik güncelleştirmeye katılabilirler.
 
-.NET Framework 4.5 iş akışı uygulaması sağlanan komut dosyasını kullanarak yükseltilmedi Kalıcılık veritabanı üzerinde yeni sürüm oluşturma özelliklerine herhangi bir Kalıcılık işlemleri çalışırsa bir <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> benzer bir ileti ile oluşturulur Aşağıdaki ileti.
+Bir .NET Framework 4,5 iş akışı uygulaması, sunulan betiği <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> kullanılarak yükseltilmemiş bir kalıcılık veritabanında yeni sürüm oluşturma özelliklerini kullanan herhangi bir kalıcılık işlemini denerse, şuna benzer bir iletiyle birlikte oluşur Aşağıdaki ileti.
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
 ```
 
-### <a name="ToUpgrade"></a> Veritabanı şemasına yükseltmek için
+### <a name="ToUpgrade"></a>Veritabanı şemasını yükseltmek için
 
-1. Örneğin Kalıcılık veritabanı sunucusuna bağlanmak ve SQL Server Management Studio'yu açın **. \SQLEXPRESS**.
+1. SQL Server Management Studio açın ve Kalıcılık veritabanı sunucusuna bağlanın, örneğin **.\Sqlexpress**.
 
-2. Seçin **açık**, **dosya** gelen **dosya** menüsü. Şu klasöre göz atın: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
+2. **Dosya** menüsünden **Aç**, **Dosya** ' yı seçin. Aşağıdaki klasöre gidin:`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
 
-3. Seçin **SqlWorkflowInstanceStoreSchemaUpgrade.sql** tıklatıp **açık**.
+3. **SqlWorkflowInstanceStoreSchemaUpgrade. SQL** ' i seçin ve **Aç**' a tıklayın.
 
-4. Kalıcılık veritabanı adını seçin **kullanılabilir veritabanlarını** açılır.
+4. **Kullanılabilir veritabanları** açılan listesinden Kalıcılık veritabanının adını seçin.
 
-5. Seçin **yürütme** gelen **sorgu** menüsü.
+5. **Sorgu** menüsünden **Yürüt** ' ü seçin.
 
-Sorgu tamamladığında, veritabanı şemasını yükseltilir ve isterseniz, kalıcı iş akışı örnekleri için atanan varsayılan iş akışı kimliğini görüntüleyebilirsiniz. Kalıcılık veritabanınızı genişletin **veritabanları** düğümünün **Nesne Gezgini**ve ardından **görünümleri** düğümü. Sağ **System.Activities.DurableInstancing.Instances** ve **ilk 1000 satırı Seç**. Sütunları sonuna kaydırın ve görünüme eklenen altı ek sütunlar olduğuna dikkat edin: **IdentityName**, **IdentityPackage**, **derleme**, **ana**, **küçük**, ve **düzeltme**. Kalıcı bir iş akışı değerine sahip olacak **NULL** bu alanlar için null iş akışı kimliğini temsil eden.
+Sorgu tamamlandığında, veritabanı şeması yükseltilir ve isterseniz, kalıcı iş akışı örneklerine atanmış olan varsayılan iş akışı kimliğini görüntüleyebilirsiniz. **Nesne Gezgini** **veritabanları** düğümünde Kalıcılık veritabanınızı genişletin ve ardından **Görünümler** düğümünü genişletin. **System. Activities. Durableörnek oluşturma. örnekleri** öğesine sağ tıklayın ve **en üstteki 1000 satırları Seç**' i seçin. Sütunların sonuna kaydırın ve görünüme eklenen altı sütun olduğunu unutmayın: **IdentityName**, **IdentityPackage**, **derleme**, **büyük**, **küçük**ve **Düzeltme**. Kalıcı iş akışlarının, null bir iş akışı kimliğini temsil eden bu alanlar için **null** değeri olacaktır.

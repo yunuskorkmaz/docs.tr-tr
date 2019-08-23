@@ -12,42 +12,42 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644926"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963573"
 ---
 # <a name="pausing-and-interrupting-threads"></a>İş parçacıklarını duraklatma ve kesintiye uğratma
 
-İş parçacığı etkinlikleri eşitlemek için en yaygın yollarından bloğu ve yayın iş parçacıkları veya nesneleri Kilitle veya bölgeleri olabilir. Bu kilitleme ve mekanizmaları engelleme hakkında daha fazla bilgi için bkz. [eşitleme temellerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
+İş parçacıklarının etkinliklerini eşitlemeen yaygın yolları, iş parçacıklarını engellemek ve yayınlamak ya da nesnelerin veya kod bölgelerini kilitlemek için kullanılır. Bu kilitleme ve engelleme mekanizmaları hakkında daha fazla bilgi için bkz. [eşitleme temel bilgilerine genel bakış](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
   
- İş parçacıkları kendilerini uyku moduna yerleştirmek de olabilir. İş parçacığı engellendi veya kullanabileceğiniz uyku, ne zaman bir <xref:System.Threading.ThreadInterruptedException> bekleme durumlarını dışında bölüneceği.  
+ Ayrıca, iş parçacıklarından uyumayı koyabilirsiniz. İş parçacıkları engellendiğinde veya uyurken, bunları bekleme durumlarından ayırmak <xref:System.Threading.ThreadInterruptedException> için kullanabilirsiniz.  
   
-## <a name="the-threadsleep-method"></a>Net_thread_sleep yöntemi
+## <a name="the-threadsleep-method"></a>Thread. Sleep yöntemi
 
- Çağırma <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> yöntemi milisaniye veya yönteme için zaman aralığı için hemen engellemek geçerli iş parçacığının neden olur ve kendi zaman dilimi başka bir iş parçacığına geri kalanı verir. Uykudaki iş parçacığı bu aralığı sona erdiğinde sonra yürütmeye devam eder.  
+ <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> Yöntemi çağırmak, geçerli iş parçacığının, yönteme geçirdiğiniz süre veya zaman aralığı için hemen blok almasına neden olur ve zaman diliminin geri kalanını başka bir iş parçacığına verir. Bu Aralık sona erdiğinde, Uyuyan iş parçacığı yürütmeyi sürdürür.  
   
- Bir iş parçacığı çağıramaz <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> başka bir iş parçacığı üzerinde.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> her zaman geçerli iş parçacığı uyku durumuna neden olan statik bir yöntemdir.  
+ Bir iş parçacığı başka <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> bir iş parçacığında çağrılamaz.  <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>, her zaman geçerli iş parçacığının uykuya geçmesine neden olan statik bir yöntemdir.  
   
- Çağırma <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> değeriyle <xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType> çağıran başka bir iş parçacığı tarafından kesintiye kadar beklenecek bir iş parçacığı neden <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> yöntemi uykudaki iş parçacığı veya bir çağrı tarafından sonlandırılır kadar kendi <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi.  Aşağıdaki örnek, Uyuyan bir iş parçacığını engellemeden hem yöntemleri gösterir.  
+ Bir <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> değeriyleçağırmak<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , Uyuyan iş parçacığında yöntemi çağıran başka bir iş parçacığı tarafından kesintiye gelinceye kadar veya yöntemine bir çağrı tarafından sonlandırılana kadar bir iş parçacığının uykuya geçmesini sağlar.<xref:System.Threading.Timeout.Infinite?displayProperty=nameWithType>  Aşağıdaki örnekte, Uyuyan bir iş parçacığını kesintiye uğratma yöntemleri gösterilmektedir.  
   
  [!code-csharp[Conceptual.Threading.Resuming#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Threading.Resuming/cs/Sleep1.cs#1)]
  [!code-vb[Conceptual.Threading.Resuming#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Threading.Resuming/vb/Sleep1.vb#1)]  
   
-## <a name="interrupting-threads"></a>İş parçacıkları kesme
+## <a name="interrupting-threads"></a>İş parçacıklarını kesme
 
- Bekleyen iş parçacığı çağırarak engelleyebilecek <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> atmak için engellenen iş parçacığı üzerinde yöntemini bir <xref:System.Threading.ThreadInterruptedException>, iş parçacığı engelleme çağrısının dışına keser. İş parçacığı yakalamalısınız <xref:System.Threading.ThreadInterruptedException> ve her çalışmaya devam etmek uygundur. İş parçacığı özel durumu yoksayar, çalışma zamanı özel durumu yakalar ve iş parçacığını durdurur.  
+ <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> Engellenen<xref:System.Threading.ThreadInterruptedException>iş parçacığı üzerinde yöntemini çağırarak bekleyen bir iş parçacığını kesintiye getirebilirsiniz. Bu, iş parçacığını engelleme çağrısının dışına ayırır. İş parçacığı öğesini yakalamalı <xref:System.Threading.ThreadInterruptedException> ve çalışmaya devam etmek için uygun olan her şeyi yapması gerekir. İş parçacığı özel durumu yoksayarsa, çalışma zamanı özel durumu yakalar ve iş parçacığını sonlandırır.  
   
 > [!NOTE]
->  Hedef iş parçacığı değilse ne zaman engellenen <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> olan çağrılır, iş parçacığı kadar blokları kesintiye uğramaz. Hiçbir zaman iş parçacığını engeller, hiç kesintiye olmadan tamamlayabilirsiniz.  
+> Çağrıldığında hedef iş parçacığı engellenmemişse <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> , iş parçacığı Engellene kadar kesintiye uğramaz. İş parçacığı hiçbir zaman engellerse, kesintiye uğramadan tamamlanmayacaktır.  
   
- Bekleme yönetilen bir bekleme ise <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> hem de iş parçacığı hemen Uyandırma. Yönetilmeyen bir bekleme bekleme ise (örneğin, bir platform çağırma çağrısı Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) işlevi), hiçbiri <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ya da <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> kadar döndürür veya yönetilen koda çağıran iş parçacığının denetimini ele geçirebilir. Yönetilen kodda davranış aşağıdaki gibidir:  
+ Bir bekleme yönetilen bekleme ise, <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ve <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> her ikisi de iş parçacığını hemen uyandırır. Bir bekleme, yönetilmeyen bir bekleme ise (örneğin, Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) işlevi için bir platform çağırma çağrısı), <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ya da <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yönetilen koda çağrı yapana kadar iş parçacığı denetimini ele geçirebilir. Yönetilen kodda, davranış aşağıdaki gibidir:  
   
-- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadInterruptedException> hedef iş parçacığında için.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>bir iş parçacığını, içinde olabilecek herhangi bir bekleme durumundan uyandırır ve hedef <xref:System.Threading.ThreadInterruptedException> iş parçacığında bir oluşturulmasına neden olur.  
   
-- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> bir iş parçacığı dışında olabilir ve neden olan herhangi bir bekleme modundan bir <xref:System.Threading.ThreadAbortException> iş parçacığında harekete geçirilmesine. Ayrıntılar için bkz [iş parçacıklarını yok etme](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>bir iş parçacığını herhangi bir bekleme durumundan uyandığında, iş parçacığında bir <xref:System.Threading.ThreadAbortException> işlem oluşmasına neden olur. Ayrıntılar için bkz. [Iş parçacıklarını yok](../../../docs/standard/threading/destroying-threads.md)etme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

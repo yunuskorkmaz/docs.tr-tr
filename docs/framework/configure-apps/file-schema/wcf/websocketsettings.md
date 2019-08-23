@@ -2,18 +2,18 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769752"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940316"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings >
-Web yuvası ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
+Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.  
   
 \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,22 +40,22 @@ Web yuvası ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|createNotificationOnConnection|Bağlantı kurulduğunda bildirim gönderilip gönderilmeyeceğini belirtir.|  
-|disablePayloadMasking|Web yuvası maskeleme devre dışı bırakılıp bırakılmadığını belirtir.|  
-|KeepAliveInterval|Canlı tutma aralığı belirtir.|  
-|maxPendingConnections|Gönderme hizmeti bekleyen bağlantılar maksimum sayısını belirtir.|  
-|receiveBufferSize|Alış arabelleğinin boyutunu belirtir.|  
-|sendBufferSize|Gönderme arabellek boyutunu belirtir.|  
-|geçersizdir|Web yuvası subprotocol'üne belirtir.|  
-|transportUsage|Web yuvaları kullanma zamanı belirtir.|  
+|Createnocertificate Ationonconnection|Bağlantı kurulduğunda bir bildirimin gönderilip gönderilmeyeceğini belirtir.|  
+|Disablepayloadmaskeleme|Web yuva maskeleme 'nin devre dışı bırakılıp bırakılmadığını belirtir.|  
+|Keepaliveınterval|Canlı tut aralığını belirtir.|  
+|maxPendingConnections|Hizmette gönderimi bekleyen en fazla bağlantı sayısını belirtir.|  
+|receiveBufferSize|Alma arabelleğinin boyutunu belirtir.|  
+|sendBufferSize|Gönderme arabelleğinin boyutunu belirtir.|  
+|Alt protokolü|Web yuvası alt protokolünü belirtir.|  
+|transportUsage|Web Yuvaları ne zaman kullanılacağını belirtir.|  
   
 ## <a name="transportusage-attribute"></a>transportUsage özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|WhenDuplex|Web yuvası Protokolü anlaşması çift yönlü olduğunda kullanın.|  
-|Her zaman|Web yuvası Protokolü anlaşması bağımsız olarak her zaman kullanın.|  
-|hiçbir zaman|Hiçbir zaman Web yuvası protokolünü kullanır.|  
+|WhenDuplex|Sözleşme çift yönlü olduğunda Web soketi protokolünü kullanın.|  
+|Her zaman|Sözleşmeye bakılmaksızın her zaman Web soketi protokolünü kullanın.|  
+|hiçbir zaman|Web yuvası protokolünü hiçbir şekilde kullanmayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -67,7 +67,7 @@ Web yuvası ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 |\<netHttpBinding>|NetHttpBinding belirtir|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir \<webSocketSettings > öğesi.  
+ Aşağıdaki örnek, \<WebSocketSettings > öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Web yuvası ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

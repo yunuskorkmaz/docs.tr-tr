@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753978"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967291"
 ---
 # <a name="marshaling-mda"></a>MDA Sıralama
-`marshaling` Yönetilen hata ayıklama Yardımcısı (MDA), bir yöntem parametresi veya bir yapının bir alan için bilgi sıralama yukarı CLR kümeleri kullanırken etkinleştirilir. Bu MDA, JIT olarak derlenmiş derlemelerde çalışmaz.  
+`marshaling` Yönetilen hata ayıklama Yardımcısı (MDA), clr bir yöntem parametresi veya bir yapının alanı için sıralama bilgilerini ayarlarsa etkinleştirilir. Bu MDA, JıT derlenmiş derlemeler için çalışmaz.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma zamanı üzerindeki etkisi  
- Bu mda'nın CLR üzerinde etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıkış  
- MDA, yönetilen ve yönetilmeyen bağlamları ve yapısı veya türünü içeren bir yöntem parametresi veya alan türünü görüntüler.  Bir alan için çıktının bir örneği verilmiştir:  
+ MDA, yönetilen ve yönetilmeyen bağlamlardaki parametre ya da alanın türünü ve türünü içeren yapıyı ya da yöntemi görüntüler.  Bir alan için çıktının bir örneği aşağıda verilmiştir:  
   
 ```  
 Marshaling from 'Char' to 'ANSI char'  
@@ -31,7 +31,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Yapılandırma  
- MDA yapılandırma, bildirilen sıralama bilgileri dahil olan alan veya yöntem adları göre filtrelemenize izin verir.  Aşağıdaki örnek kullanımını gösterir `methodFilter`, `fieldFilter`, ve `match` filtre belirtmek için öğeleri.  Ayar `name` özniteliği için bir yıldız işareti (*), her şeyi eşleşir.  
+ MDA yapılandırması, bildirilen sıralama bilgilerini ilgili alana veya yöntem adlarına göre filtrelemenize izin verir.  Aşağıdaki örnek `methodFilter`, filtre belirtmek için, `fieldFilter`ve `match` öğelerinin kullanımını gösterir.  Özniteliği bir yıldız işareti (\*) olarak ayarlamak her şeyi eşleştirecektir. `name`  
   
 ```xml  
 <mdaConfig>  

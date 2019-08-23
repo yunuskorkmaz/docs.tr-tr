@@ -2,51 +2,51 @@
 title: Internet Information Service Barındırma Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 226b47bfd90dc4cffb0a364a804016043cc25d02
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591884"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929107"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service Barındırma Yönergeleri
-Internet Information Services (IIS) tarafından barındırılan örnekleri çalıştırmak için IIS doğru bir şekilde yüklendiğinden ve çalıştığından emin olmanız gerekir.  
+Internet Information Services (IIS) tarafından barındırılan örnekleri çalıştırmak için, IIS 'nin düzgün bir şekilde yüklendiğinden ve çalıştığından emin olmanız gerekir.  
   
-### <a name="to-install-iis-version-75-on-windows-server-2008-r2"></a>Windows Server 2008 R2'de IIS sürüm 7.5 yüklemek için  
+### <a name="to-install-iis-version-75-on-windows-server-2008-r2"></a>Windows Server 2008 R2 'de IIS sürüm 7,5 ' ü yüklemek için  
   
-1. Gelen **Sunucu Yöneticisi'ni**seçin **rolleri.** Altında **rollerin özeti**, tıklayın **rolleri Ekle**.  
+1. **Sunucu Yöneticisi**, roller ' i seçin **.** **Roller Özeti**altında **Rol Ekle**' ye tıklayın.  
   
-2. Tıklayın **sonraki** görüntülenecek **Sunucu Rollerini Seç** iletişim.  
+2. **İleri** ' ye tıklayarak **sunucu rollerini Seç** iletişim kutusunu görüntüleyin.  
   
-3. Seçin **uygulama sunucusu** gelen **rolleri** listeleyin ve ardından **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** için iletişim kutusu Uygulama sunucusu rolü.  
+3. **Roller** listesinden **uygulama sunucusu** ' nu seçin ve ardından iki kez **Ileri** ' ye tıklayarak uygulama sunucusu rolü için **rol hizmetlerini Seç** iletişim kutusunu görüntüleyin.  
   
-4. Seçin **Web sunucusu (IIS)** onay kutusu. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklayın **gereken özellikleri Ekle**. Tıklayın **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** Web sunucusu (IIS) rolü için iletişim.  
+4. **Web sunucusu (IIS)** onay kutusunu seçin. Ek rol hizmetleri ve özellikler yüklemek isteyip istemediğiniz sorulursa **gerekli özellikleri ekle**' ye tıklayın. Web sunucusu (IIS) rolü için **rol hizmetlerini Seç** iletişim kutusunu göstermek için Iki kez **İleri** ' ye tıklayın.  
   
-5. Genişletin **Yönetim Araçları**ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklayın **gerekli rol hizmetleri Ekle**. **İleri**'ye tıklayın.  
+5. **Yönetim Araçları**' nı genişletin ve ardından **IIS 6 Yönetim uyumluluğu**' nı genişletin. **IIS 6 komut dosyası araçları**' nı seçin. Ek rol hizmetleri ve özellikler yüklemek isteyip istemediğiniz sorulursa **gerekli rol hizmetleri Ekle**' ye tıklayın. **İleri**'ye tıklayın.  
   
-6. Seçim Özeti doğruysa **yükleme**.  
+6. Seçimlerin Özeti doğru ise, **yükler**' e tıklayın.  
   
-7. Yükleme tamamlandığında, tıklayın **Kapat**.  
+7. Yükleme tamamlandığında **Kapat**' a tıklayın.  
   
-### <a name="to-install-iis-version-75-on-windows-7"></a>Windows 7'de IIS sürüm 7.5 yüklemek için  
+### <a name="to-install-iis-version-75-on-windows-7"></a>Windows 7 ' ye IIS sürüm 7,5 yüklemek için  
   
-1. Tıklayın **Başlat**ve ardından **Denetim Masası**.  
+1. **Başlat**' a ve ardından **Denetim Masası**' na tıklayın.  
   
-2. Açık **programlar** grubu.  
+2. **Programlar** grubunu açın.  
   
-3. Altında **programlar ve Özellikler**, tıklayın **Windows özelliklerini aç veya Kapat**.  
+3. **Programlar ve Özellikler**altında, **Windows özelliklerini aç veya kapat**' a tıklayın.  
   
 4. **Kullanıcı hesabı denetimi** iletişim kutusu görüntülenir. **Devam**'a tıklayın.  
   
-5. **Windows özellikleri** iletişim kutusu görüntülenir. Öğeyi etiketli genişletin **Internet Information Services**.  
+5. **Windows özellikleri** iletişim kutusu görüntülenir. **Internet Information Services**etiketli öğeyi genişletin.  
   
-6. Öğeyi etiketli genişletin **World Wide Web Hizmetleri**.  
+6. **World Wide Web Services**etiketli öğeyi genişletin.  
   
-7. Öğeyi etiketli genişletin **uygulama geliştirme özellikleri**.  
+7. **Uygulama geliştirme özellikleri**etiketli öğeyi genişletin.  
   
-8. Aşağıdaki öğeler seçili olduğundan emin olun:  
+8. Aşağıdaki öğelerin seçildiğinden emin olun:  
   
-    1. **.NET genişletilebilirliği**  
+    1. **.NET Genişletilebilirliği**  
   
     2. **ASP.NET**  
   
@@ -54,57 +54,57 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
     4. **ISAPI Filtreleri**  
   
-9. Öğe altında etiketli **World Wide Web Hizmetleri**, genişletme **genel Http özellikleri**.  
+9. **World Wide Web Services**etiketli öğe altında **ortak http özellikleri**' ni genişletin.  
   
-10. Emin **statik içerik** seçilir.  
+10. **Statik içeriğin** seçildiğinden emin olun.  
   
-11. Öğe altında etiketli **World Wide Web Hizmetleri**, genişletme **güvenlik**.  
+11. **World Wide Web Services**etiketli öğe altında **güvenlik**' i genişletin.  
   
-12. Emin olun **Windows kimlik doğrulaması** seçilir.  
+12. **Windows kimlik doğrulamasının** seçili olduğundan emin olun.  
   
-13. Altında **Internet Information Services** dizine öğeyi etiketli genişletin **Web yönetimi araçları**ve ardından **IIS Yönetim Konsolu**.  
+13. **Internet Information Services** dizininde, **Web yönetim araçları**etiketli öğeyi genişletin ve ardından **IIS Yönetim Konsolu**' nu seçin.  
   
-14. Öğeyi etiketli genişletin **IIS 6 Yönetim uyumluluğu**ve ardından **IIS 6 komut dosyası araçları**.  
+14. **IIS 6 Yönetim uyumluluğu**etiketli öğeyi genişletin ve ardından **IIS 6 komut dosyası araçları**' nı seçin.  
   
-15. Altında **Internet Information Services** dizine öğeyi etiketli genişletin **Microsoft .NET Framework 3.5.1**ve ardından **Windows Communication Foundation Http etkinleştirme**.  
+15. **Internet Information Services** dizininde, **Microsoft .NET Framework 3.5.1**etiketli öğeyi genişletin ve ardından **http etkinleştirme Windows Communication Foundation**' yı seçin.  
   
 16. **Tamam**'ı tıklatın.  
   
-### <a name="to-install-iis-version-70-on-windows-server-2008"></a>Windows Server 2008'de IIS'in 7.0 sürümünü yüklemek için  
+### <a name="to-install-iis-version-70-on-windows-server-2008"></a>Windows Server 2008 ' ye IIS 7,0 sürümünü yüklemek için  
   
-1. Gelen **Sunucu Yöneticisi'ni**seçin **rolleri**. Altında **rollerin özeti**, tıklayın **rolleri Ekle**.  
+1. **Sunucu Yöneticisi**, **Roller**' i seçin. **Roller Özeti**altında **Rol Ekle**' ye tıklayın.  
   
-2. Tıklayın **sonraki** görüntülenecek **Sunucu Rollerini Seç** iletişim.  
+2. **İleri** ' ye tıklayarak **sunucu rollerini Seç** iletişim kutusunu görüntüleyin.  
   
-3. Seçin **uygulama sunucusu** gelen **rolleri** listeleyin ve ardından **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** için iletişim kutusu Uygulama sunucusu rolü.  
+3. **Roller** listesinden **uygulama sunucusu** ' nu seçin ve ardından iki kez **Ileri** ' ye tıklayarak uygulama sunucusu rolü için **rol hizmetlerini Seç** iletişim kutusunu görüntüleyin.  
   
-4. Seçin **Web sunucusu (IIS)** onay kutusu. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklayın **gereken özellikleri Ekle**. Tıklayın **sonraki** iki kez görüntülenecek **rol hizmetlerini Seç** Web sunucusu (IIS) rolü için iletişim.  
+4. **Web sunucusu (IIS)** onay kutusunu seçin. Ek rol hizmetleri ve özellikler yüklemek isteyip istemediğiniz sorulursa **gerekli özellikleri ekle**' ye tıklayın. Web sunucusu (IIS) rolü için **rol hizmetlerini Seç** iletişim kutusunu göstermek için Iki kez **İleri** ' ye tıklayın.  
   
-5. Genişletin **Yönetim Araçları**ve ardından **IIS 6 Yönetim uyumluluğu**. Seçin **IIS 6 komut dosyası araçları**. Ek rol hizmetlerini ve özellikleri yükleme istenirse tıklayın **gerekli rol hizmetleri Ekle**. **İleri**'ye tıklayın.  
+5. **Yönetim Araçları**' nı genişletin ve ardından **IIS 6 Yönetim uyumluluğu**' nı genişletin. **IIS 6 komut dosyası araçları**' nı seçin. Ek rol hizmetleri ve özellikler yüklemek isteyip istemediğiniz sorulursa **gerekli rol hizmetleri Ekle**' ye tıklayın. **İleri**'ye tıklayın.  
   
-6. Seçim Özeti doğruysa **yükleme**.  
+6. Seçimlerin Özeti doğru ise, **yükler**' e tıklayın.  
   
-7. Yükleme tamamlandığında, tıklayın **Kapat**.  
+7. Yükleme tamamlandığında **Kapat**' a tıklayın.  
   
-### <a name="to-install-iis-version-70-on-windows-vista"></a>Windows Vista'da IIS'in 7.0 sürümünü yüklemek için  
+### <a name="to-install-iis-version-70-on-windows-vista"></a>Windows Vista 'da IIS sürüm 7,0 ' ü yüklemek için  
   
-1. Başlat'a tıklayın ve ardından Denetim Masası'nı tıklatın.  
+1. Başlat ' a ve ardından Denetim Masası ' na tıklayın.  
   
-2. Seçin **programlar** grubu.  
+2. **Programlar** grubunu seçin.  
   
-3. Altında **programlar ve Özellikler**, tıklayın **Windows özelliklerini aç veya Kapat**.  
+3. **Programlar ve Özellikler**altında, **Windows özelliklerini aç veya kapat**' a tıklayın.  
   
 4. **Kullanıcı hesabı denetimi** iletişim kutusu görüntülenir. **Devam**'a tıklayın.  
   
-5. **Windows özellikleri** iletişim kutusu görüntülenir. Öğeyi etiketli genişletin **Internet Information Services**.  
+5. **Windows özellikleri** iletişim kutusu görüntülenir. **Internet Information Services**etiketli öğeyi genişletin.  
   
-6. Öğeyi etiketli genişletin **World Wide Web Hizmetleri**.  
+6. **World Wide Web Services**etiketli öğeyi genişletin.  
   
-7. Öğeyi etiketli genişletin **uygulama geliştirme özellikleri**.  
+7. **Uygulama geliştirme özellikleri**etiketli öğeyi genişletin.  
   
-8. Aşağıdaki öğeler seçili olduğundan emin olun:  
+8. Aşağıdaki öğelerin seçildiğinden emin olun:  
   
-    1. **.NET genişletilebilirliği**  
+    1. **.NET Genişletilebilirliği**  
   
     2. **ASP.NET**  
   
@@ -112,58 +112,58 @@ Internet Information Services (IIS) tarafından barındırılan örnekleri çal�
   
     4. **ISAPI Filtreleri**  
   
-9. Öğeyi etiketli genişletin **Web yönetimi araçları**ve ardından **IIS Yönetim Konsolu**.  
+9. **Web yönetimi araçları**etiketli öğeyi genişletin ve ardından **IIS Yönetim Konsolu**' nu seçin.  
   
-10. Öğe altında etiketli **World Wide Web Hizmetleri**, genişletme **genel Http özellikleri**.  
+10. **World Wide Web Services**etiketli öğe altında **ortak http özellikleri**' ni genişletin.  
   
-11. Emin **statik içerik** seçilir.  
+11. **Statik içeriğin** seçildiğinden emin olun.  
   
-12. Öğe altında etiketli **World Wide Web Hizmetleri**, genişletme **güvenlik**.  
+12. **World Wide Web Services**etiketli öğe altında **güvenlik**' i genişletin.  
   
-13. Emin **Windows kimlik doğrulaması** seçilir.  
+13. **Windows kimlik doğrulamasının** seçili olduğundan emin olun.  
   
-14. Öğeyi etiketli genişletin **IIS 6 Yönetim uyumluluğu**ve ardından **IIS 6 komut dosyası araçları**.  
+14. **IIS 6 Yönetim uyumluluğu**etiketli öğeyi genişletin ve ardından **IIS 6 komut dosyası araçları**' nı seçin.  
   
-15. Öğeyi etiketli genişletin **Microsoft .NET Framework 3.0**ve ardından **Windows Communication Foundation Http etkinleştirme**.  
+15. **Microsoft .NET Framework 3,0**etiketli öğeyi genişletin ve sonra **Windows Communication Foundation HTTP etkinleştirmesi**' ni seçin.  
   
 16. **Tamam**'ı tıklatın.  
   
-### <a name="to-install-iis-version-60-on-windows-server-2003"></a>Windows Server 2003'te IIS 6.0 sürümü yüklemek için  
+### <a name="to-install-iis-version-60-on-windows-server-2003"></a>Windows Server 2003 ' ye IIS 6,0 sürümünü yüklemek için  
   
-1. Gelen **sunucunuzu yönetin**, tıklayın **ekleme veya bir rolü kaldırma**ve ardından **sonraki**.  
+1. **Sunucunuzu Yönetin**' ten **bir rol Ekle veya Kaldır ' a**tıklayın ve ardından **İleri**' ye tıklayın.  
   
-2. Seçin **uygulama sunucusu (IIS, ASP.NET)** gelen **sunucu rolü** listeleyin ve ardından **sonraki**.  
+2. **Sunucu rolü** listesinden **uygulama sunucusu (IIS, ASP.net)** öğesini seçin ve ardından **İleri**' ye tıklayın.  
   
-3. Seçin **ASP** onay kutusunu işaretleyin ve ardından **sonraki**.  
+3. **ASP.net etkinleştir** onay kutusunu seçin ve ardından **İleri**' ye tıklayın.  
   
-4. Seçim Özeti doğru ise, İleri'ye tıklayın.  
+4. Seçimlerin Özeti doğru ise Ileri ' ye tıklayın.  
   
-### <a name="to-install-iis-version-51-on-windows-xp-with-service-pack-2-and-service-pack-3-installed"></a>IIS 5.1 sürüm, Windows XP Service Pack 2 ve Service Pack 3'ü yüklemek için  
+### <a name="to-install-iis-version-51-on-windows-xp-with-service-pack-2-and-service-pack-3-installed"></a>Service Pack 2 ve Service Pack 3 yüklü Windows XP 'de IIS sürüm 5,1 ' ü yüklemek için  
   
-1. Denetim Masası'nda tıklatın **Program Ekle veya Kaldır**.  
+1. Denetim Masası 'nda **Program Ekle veya Kaldır**' a tıklayın.  
   
-2. İçinde **Program Ekle veya Kaldır** iletişim kutusu, tıklayın **Windows Bileşenlerini Ekle/Kaldır**.  
+2. **Program Ekle veya Kaldır** Iletişim kutusunda **Windows Bileşenlerini Ekle/Kaldır**' a tıklayın.  
   
-3. İçinde **Windows Bileşenleri Sihirbazı'nı**seçin **Internet Information Services (IIS)** onay kutusunu işaretleyin ve ardından **sonraki**.  
+3. **Windows bileşenleri sihirbazında** **Internet Information Services (IIS)** onay kutusunu seçin ve ardından **İleri**' ye tıklayın.  
   
-4. Varsa **gerekli dosyaları** iletişim kutusu görüntülenir, işletim sistemi yükleme diski takın, i386 klasöre göz atın ve ardından **Tamam**.  
+4. **Gerekli dosyalar** iletişim kutusu görüntülenirse, işletim sistemi yükleme diskinizi takın, i386 klasörüne gidin ve ardından **Tamam**' a tıklayın.  
   
-5. Yükleme tamamlandığında, tıklayın **son**.  
+5. Yükleme tamamlandığında **son**' a tıklayın.  
   
-6. Kapatma **Program Ekle veya Kaldır** iletişim kutusunu ve sonra close **Denetim Masası**.  
+6. **Program Ekle veya Kaldır** iletişim kutusunu kapatın ve ardından **Denetim Masası**' nı kapatın.  
   
-### <a name="to-verify-the-installation-of-iis-and-aspnet"></a>IIS ve ASP.NET yüklemesini doğrulamak için  
+### <a name="to-verify-the-installation-of-iis-and-aspnet"></a>IIS ve ASP.NET 'in yüklenmesini doğrulamak için  
   
-1. HTML dosyasını Kaydet kök \InetPub\wwwroot dizininde bu konunun sonunda bulunan ve Default.aspx olarak adlandırın.  
+1. Bu konunun sonunda bulunan HTML dosyasını kök \Inetpub\Wwwroot dizinine kaydedin ve default. aspx olarak adlandırın.  
   
 2. Bir tarayıcı penceresi açın.  
   
-3. Tür `http://localhost/Default.aspx` adres kutusuna ve ardından ENTER tuşuna basın.  
+3. Adres `http://localhost/Default.aspx` kutusuna yazın ve ENTER tuşuna basın.  
   
-4. "Hello World" metni ile bir Web sayfasında görünmesi gerekir.  
+4. "Merhaba Dünya" metnine sahip bir Web sayfası görünmelidir.  
   
 > [!NOTE]
->  .NET Framework, yeni bir sürümünü yüklemek her zaman, aspnet_isapi bir Web hizmeti uzantısı IIS yeniden kaydetmeniz gerekir. Bunu yapmak için sorunu `aspnet_regiis –I –enable` komutu.  
+> .NET Framework yeni bir sürümünü her yüklediğinizde, aspnet_isapi IIS için bir Web hizmeti uzantısı olarak yeniden kaydolmanız gerekir. Bunu yapmak için `aspnet_regiis –I –enable` komutunu verin.  
   
 ## <a name="sample-code"></a>Örnek Kod  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 8017895450c989683b7fb246c9c1fb7c23fa9e5e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a83b3e68365cccc96cfe7eaa4baaabf8c991c98f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611479"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956043"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>
@@ -40,7 +40,7 @@ ms.locfileid: "69611479"
  XBAP projesi çalıştırdığınızda, tek başına bir pencere yerine bir tarayıcı penceresinde açılır. Visual Studio 'dan XBAP 'yi hata ayıkladığınızda, uygulama Internet bölgesi izniyle çalışır ve bu nedenle, bu izinler aşılırsa güvenlik özel durumları oluşturur. Daha fazla bilgi için bkz. [güvenlik](../security-wpf.md) ve [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   
 > [!NOTE]
->  Visual Studio ile geliştirmiyorsanız veya proje dosyaları hakkında daha fazla bilgi edinmek istiyorsanız bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
+> Visual Studio ile geliştirmiyorsanız veya proje dosyaları hakkında daha fazla bilgi edinmek istiyorsanız bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
 <a name="deploying_a_xbap"></a>   
 ## <a name="deploying-an-xbap"></a>XBAP dağıtma  
@@ -174,7 +174,7 @@ ms.locfileid: "69611479"
 |Internet|"Güven verilmedi" ile başarısız olur|XBAP 'yi bir sertifikayla imzalayın.|  
   
 > [!NOTE]
->  Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güvenli XBAP 'ler içindir.  
+> Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güvenli XBAP 'ler içindir.  
   
  Tam güvenle bir XBAP dağıtmak için ClickOnce güvenilir dağıtım modelini kullanmanız önerilir. Bu model, Kullanıcı sorulmadan, XBAP 'nize güvenlik bölgesinden bağımsız olarak tam güven verilmesini sağlar. Bu modelin bir parçası olarak, uygulamanızı güvenilir bir yayımcının sertifikası ile imzalamanız gerekir. Daha fazla bilgi için bkz. [Güvenilen uygulama dağıtımına genel bakış](/visualstudio/deployment/trusted-application-deployment-overview) ve [kod imzalamaya giriş](https://go.microsoft.com/fwlink/?LinkId=166327).  
   

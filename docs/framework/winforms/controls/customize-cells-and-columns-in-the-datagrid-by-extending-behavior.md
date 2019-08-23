@@ -9,64 +9,64 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589590"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929697"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Davranış ve Görünümünü Genişleterek Hücre ve Sütunları Özelleştirme
-<xref:System.Windows.Forms.DataGridView> Denetimi, çeşitli yollarla görünümünü ve davranışını özellikleri, olayları kullanarak özelleştirip Yahoo! companion sınıfları sağlar. Bazen, bu özellikleri sağlamak ötesine gidin, hücre için gereksinimlerine sahip olabilir. Kendi özel oluşturabilirsiniz <xref:System.Windows.Forms.DataGridViewCell> genişletilmiş işlevselliği sağlamak için sınıf.  
+<xref:System.Windows.Forms.DataGridView> Denetim, özellikleri, olayları ve yardımcı sınıfları kullanarak görünümünü ve davranışını özelleştirmek için çeşitli yollar sağlar. Kimi zaman, bu özelliklerin sağlayabildiklerinden daha fazla geçen hücreler için gereksinimlerinize sahip olabilirsiniz. Genişletilmiş işlevsellik sağlamak için kendi özel <xref:System.Windows.Forms.DataGridViewCell> sınıfınızı oluşturabilirsiniz.  
   
- Bir özel Oluştur <xref:System.Windows.Forms.DataGridViewCell> türetilen sınıf <xref:System.Windows.Forms.DataGridViewCell> temel sınıfı veya türetilmiş sınıflarının biri. Hücre herhangi bir türde herhangi bir türde sütun görüntüleyebilse de, genellikle de bir özel oluşturacağınız <xref:System.Windows.Forms.DataGridViewColumn> sınıfı özel hücre türünüz görüntülemek için. Sütun sınıflar türetilen <xref:System.Windows.Forms.DataGridViewColumn> veya türetilmiş türlerini biri.  
+ <xref:System.Windows.Forms.DataGridViewCell> Temel sınıftan türeterek <xref:System.Windows.Forms.DataGridViewCell> veya türetilmiş sınıflarından biriyle özel bir sınıf oluşturursunuz. Herhangi bir sütun türünde herhangi bir hücre türünü görüntülemenizi mümkün olsa da, genellikle hücre türünü görüntülemek için özelleştirilmiş özel <xref:System.Windows.Forms.DataGridViewColumn> bir sınıf oluşturursunuz. Sütun sınıfları <xref:System.Windows.Forms.DataGridViewColumn> türetilmiş türlerinden biri veya ondan türetilir.  
   
- Aşağıdaki kod örneğinde adlı bir özel hücre sınıf oluşturacağınız `DataGridViewRolloverCell` fare girer ve hücre sınırları dışına algılar. Fare hücrenin sınırları içinde olsa da, bir iç dikdörtgen çizilir. Bu yeni türü türetilen <xref:System.Windows.Forms.DataGridViewTextBoxCell> ve diğer tüm açılardan taban sınıfı davranır. Yardımcısı sütun sınıfa `DataGridViewRolloverColumn`.  
+ Aşağıdaki kod örneğinde, fare hücre sınırlarını girdiğinde ve ne zaman bırakılırsa algılayan `DataGridViewRolloverCell` adlı bir özel hücre sınıfı oluşturacaksınız. Fare hücrenin sınırları içinde olduğunda, bir iç içe dikdörtgen çizilir. Bu yeni tür öğesinden <xref:System.Windows.Forms.DataGridViewTextBoxCell> türetilir ve kendi temel sınıfı olarak diğer tüm gibi davranır. Yardımcı sütun sınıfı çağrılır `DataGridViewRolloverColumn`.  
   
- Bu sınıfların kullanmak için içeren bir form oluşturun bir <xref:System.Windows.Forms.DataGridView> denetiminde, bir veya daha fazla Ekle `DataGridViewRolloverColumn` nesneleri için <xref:System.Windows.Forms.DataGridView.Columns%2A> koleksiyonu ve denetimi doldurma değerler içeren satırları ile.  
-  
-> [!NOTE]
->  Boş satırları eklerseniz, bu örnekte düzgün çalışmaz. Boş bir satır oluşturulur, örneğin, ayarlayarak satır denetimi eklediğinizde <xref:System.Windows.Forms.DataGridView.RowCount%2A> özelliği. Eklenen satırları bu durumda otomatik olarak paylaşılır, yani olmasıdır `DataGridViewRolloverCell` tek tek hücreleri, böylece ilişkili satırları paylaşılmayan duruma neden tıklayana kadar nesne örneği değil.  
-  
- Bu tür bir hücre özelleştirme paylaşılmayan satırları gerektirdiğinden, büyük veri kümeleri ile kullanım için uygun değil. Satır paylaşma hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirme için en iyi yöntemler](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Bu sınıfları kullanmak için, bir <xref:System.Windows.Forms.DataGridView> denetim içeren bir form oluşturun, <xref:System.Windows.Forms.DataGridView.Columns%2A> koleksiyona bir veya daha `DataGridViewRolloverColumn` fazla nesne ekleyin ve denetimi değer içeren satırlarla doldurun.  
   
 > [!NOTE]
->  Olduğunda, türetilen <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> ve türetilmiş sınıf için yeni özellikler eklemek için geçersiz kılmak mutlaka `Clone` kopyalama işlemleri sırasında yeni özellikleri kopyalamak için yöntemi. Ayrıca temel sınıfın çağırmalıdır `Clone` yöntemi, böylece yeni hücresinde veya sütununda için temel sınıf özelliklerini kopyalanır.  
+> Boş satırlar eklerseniz bu örnek düzgün çalışmayacaktır. Boş satırlar, örneğin, <xref:System.Windows.Forms.DataGridView.RowCount%2A> özelliği ayarlayarak denetime satır eklediğinizde oluşturulur. Bunun nedeni, bu durumda eklenen satırların otomatik olarak paylaşılmasıdır, yani tek tek hücrelere `DataGridViewRolloverCell` tıklayana kadar nesneler örneklenemez ve bu sayede ilişkili satırların paylaşılmayan hale gelmesine neden olur.  
   
-### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>Hücre ve sütunları DataGridView denetiminde özelleştirme  
+ Bu tür hücre özelleştirmesi paylaşılmayan satırlar gerektirdiğinden, büyük veri kümeleriyle kullanım için uygun değildir. Satır paylaşımı hakkında daha fazla bilgi için bkz. [Windows Forms DataGridView denetimini ölçeklendirmek Için En Iyi uygulamalar](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
-1. Adlı yeni bir hücre sınıf türetmek `DataGridViewRolloverCell`, gelen <xref:System.Windows.Forms.DataGridViewTextBoxCell> türü.  
+> [!NOTE]
+> Türetilmiş sınıfa türeten <xref:System.Windows.Forms.DataGridViewCell> veya <xref:System.Windows.Forms.DataGridViewColumn> yeni özellikler eklediğinizde, kopyalama işlemleri sırasında yeni özellikleri kopyalamak için `Clone` yöntemi geçersiz kıldığınızdan emin olun. Ayrıca temel sınıfın özelliklerini yeni hücreye veya sütuna `Clone` kopyalamak için temel sınıfın yöntemini çağırmanız gerekir.  
+  
+### <a name="to-customize-cells-and-columns-in-the-datagridview-control"></a>DataGridView Denetimindeki hücreleri ve sütunları özelleştirmek için  
+  
+1. Türünden<xref:System.Windows.Forms.DataGridViewTextBoxCell> adlı `DataGridViewRolloverCell`yeni bir hücre sınıfı türetirsiniz.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#201)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#201)]  
     [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#202)]
     [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#202](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#202)]  
   
-2. Geçersiz kılma <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> yönteminde `DataGridViewRolloverCell` sınıfı. Geçersiz kılma seçeneğinde barındırılan metin kutusu işlevlerini işleyen temel sınıf uygulamasına çağırın. Ardından denetimin kullanın <xref:System.Windows.Forms.Control.PointToClient%2A> imleç konumu (ekran koordinatlarında) dönüştürmek için yöntemi <xref:System.Windows.Forms.DataGridView> istemci alanının koordinatları. Fare koordinatları hücrenin sınırları içinde düşersek iç dikdörtgen çizin.  
+2. <xref:System.Windows.Forms.DataGridViewTextBoxCell.Paint%2A> Sınıfında yöntemi`DataGridViewRolloverCell` geçersiz kılın. Geçersiz kılmada, önce barındırılan metin kutusu işlevini işleyen temel sınıf uygulamasını çağırın. Ardından, imleç konumunu ( <xref:System.Windows.Forms.Control.PointToClient%2A> Ekran koordinatlarında) <xref:System.Windows.Forms.DataGridView> istemci alanının koordinatlarına dönüştürmek için denetimin yöntemini kullanın. Fare koordinatları hücrenin sınırları içine düşerseniz, iç içe dikdörtgen çizin.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#210)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#210](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#210)]  
   
-3. Geçersiz kılma <xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A> ve <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> yöntemleri `DataGridViewRolloverCell` fare işaretçisi girdiğinde veya bunları bırakır kendilerini repaint hücrelere zorlamak için sınıf.  
+3. Fare işaretçisi onları <xref:System.Windows.Forms.DataGridViewCell.OnMouseLeave%2A> girdiğinde veya ayrıldığında `DataGridViewRolloverCell` hücreleri yenidençizmeyizorlamakiçinsınıfındakiveyöntemlerinigeçersizkılın.<xref:System.Windows.Forms.DataGridViewCell.OnMouseEnter%2A>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#220)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#220](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#220)]  
   
-4. Adlı yeni bir sınıf türetin `DataGridViewRolloverCellColumn`, gelen <xref:System.Windows.Forms.DataGridViewColumn> türü. Yeni bir oluşturucuda atama `DataGridViewRolloverCell` nesnesini kendi <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> özelliği.  
+4. Türünden<xref:System.Windows.Forms.DataGridViewColumn> adlı `DataGridViewRolloverCellColumn`yeni bir sınıf türetirsiniz. Oluşturucuda, `DataGridViewRolloverCell` <xref:System.Windows.Forms.DataGridViewColumn.CellTemplate%2A> özelliğine yeni bir nesne atayın.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#300)]
      [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#300)]  
   
 ## <a name="example"></a>Örnek  
- Özel hücresi türü davranışını gösteren bir küçük test form tam kod örneği içerir.  
+ Bütün kod örneği, özel hücre türünün davranışını gösteren küçük bir test formu içerir.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewRolloverCell#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/CS/rollovercell.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewRolloverCell#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewRolloverCell/VB/rollovercell.vb#000)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Windows.Forms ve System.Drawing derlemelerine başvurular.  
+- Sisteme, System. Windows. Forms ve System. Drawing derlemelerine başvurular.  
  
 ## <a name="see-also"></a>Ayrıca bkz.
 

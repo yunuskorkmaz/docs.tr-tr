@@ -2,12 +2,12 @@
 title: Durum Değişikliklerini Anlama
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963078"
 ---
 # <a name="understanding-state-changes"></a>Durum Değişikliklerini Anlama
 Bu konu, kanalların sahip olduğu durumları ve geçişleri, kanal durumlarını yapılandırmak için kullanılan türleri ve bunların nasıl uygulanacağını ele alır.  
@@ -58,7 +58,7 @@ Bu konu, kanalların sahip olduğu durumları ve geçişleri, kanal durumların�
  <xref:System.ServiceModel.Channels.CommunicationObject>Durdurma, kapatma ve açma uygulamalarını sağlar. Ayrıca, hatalı duruma bir durum geçişine neden olan bir hata yöntemi sağlar. Şekil 2 <xref:System.ServiceModel.ICommunicationObject> ' de, yönteme neden olan yöntemin etiketlendiği her bir geçişe (etiketlenmemiş geçişlerin, son etiketlenmiş geçişe neden olan yöntemin uygulanması içinde yer alan  
   
 > [!NOTE]
->  İletişim <xref:System.ServiceModel.Channels.CommunicationObject> durumu Al/ayarlar 'ın tüm uygulamaları iş parçacığı ile eşitlendi.  
+> İletişim <xref:System.ServiceModel.Channels.CommunicationObject> durumu Al/ayarlar 'ın tüm uygulamaları iş parçacığı ile eşitlendi.  
   
  Oluşturucu  
   

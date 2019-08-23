@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e51c810a2e1e4bf4157aa1311255c5547021b60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771000"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962072"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Nasıl yapılır: ListView'daki Her Öğe için MouseDoubleClick Olayını İşleme
-Bir öğe için bir olayı işlemek için bir <xref:System.Windows.Controls.ListView>, her bir olay işleyicisi eklemek gereken <xref:System.Windows.Controls.ListViewItem>. Olduğunda bir <xref:System.Windows.Controls.ListView> bağlı açıkça oluşturmayın bir veri kaynağına bir <xref:System.Windows.Controls.ListViewItem>, ancak ekleyerek her öğe için olayını işleyebilirsiniz bir <xref:System.Windows.EventSetter> stili için bir <xref:System.Windows.Controls.ListViewItem>.  
+İçindeki <xref:System.Windows.Controls.ListView>bir öğeye yönelik bir olayı işlemek için, her birine <xref:System.Windows.Controls.ListViewItem>bir olay işleyicisi eklemeniz gerekir. Bir <xref:System.Windows.Controls.ListView> veri kaynağına bağlandığında, açıkça bir <xref:System.Windows.Controls.ListViewItem>oluşturmazsınız, ancak bir stil <xref:System.Windows.EventSetter> <xref:System.Windows.Controls.ListViewItem>öğesine ekleyerek her öğe için olayını işleyebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir veri bağlama oluşturur <xref:System.Windows.Controls.ListView> ve oluşturan bir <xref:System.Windows.Style> her bir olay işleyicisi eklemek için <xref:System.Windows.Controls.ListViewItem>.  
+ Aşağıdaki örnek, bir veri sınırı <xref:System.Windows.Controls.ListView> oluşturur ve her birine <xref:System.Windows.Controls.ListViewItem>bir <xref:System.Windows.Style> olay işleyicisi eklemek için bir oluşturur.  
   
  [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
 [!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
 [!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- Aşağıdaki örnek tutamaçları <xref:System.Windows.Controls.Control.MouseDoubleClick> olay.  
+ Aşağıdaki örnek <xref:System.Windows.Controls.Control.MouseDoubleClick> olayı işler.  
   
  [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
  [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  Bağlamak için en yaygın olmasına rağmen bir <xref:System.Windows.Controls.ListView> bir veri kaynağı için her bir olay işleyicisi eklemek için bir stil kullanabilirsiniz <xref:System.Windows.Controls.ListViewItem> bir olmayan-verilere bağlı olarak <xref:System.Windows.Controls.ListView> olup olmadığını açıkça oluşturma bağımsız olarak bir <xref:System.Windows.Controls.ListViewItem>.  Hakkında daha fazla bilgi için açık ve örtük olarak oluşturulan <xref:System.Windows.Controls.ListViewItem> denetimlerini, <xref:System.Windows.Controls.ItemsControl>.  
+> Bir veri <xref:System.Windows.Controls.ListView> kaynağına bağlamak en yaygın olsa da, açıkça bir <xref:System.Windows.Controls.ListViewItem>oluşturup oluşturmasanız <xref:System.Windows.Controls.ListView> ne olursa olsun, her birine <xref:System.Windows.Controls.ListViewItem> bir olay işleyicisi eklemek için bir stil kullanabilirsiniz.  Açık ve örtük olarak oluşturulan <xref:System.Windows.Controls.ListViewItem> denetimler hakkında daha fazla bilgi için bkz <xref:System.Windows.Controls.ItemsControl>.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

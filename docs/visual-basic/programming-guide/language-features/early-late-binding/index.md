@@ -13,32 +13,32 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
-ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05322ba831aac6173ac9d7fa7f369a208b676d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965386"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>Erken ve Geç Bağlama (Visual Basic)
-Visual Basic Derleyicisi adlı bir işlem gerçekleştirir `binding` bir nesne bir nesne değişkenine atanan zaman. Bir nesnenin *erken bağlama* onu bir değişkene atandığında bildirilen belirli nesne türünde olması. Erken bağlama nesnelerine derleyicinin bellek ayırma ve uygulama yürütülmeden önce diğer iyileştirmeler gerçekleştirmek izin verin. Örneğin, aşağıdaki kod parçası, türünde bir değişkeni bildirir <xref:System.IO.FileStream>:  
+Visual Basic derleyici bir nesne değişkenine bir nesne `binding` atandığında çağrılan bir işlem gerçekleştirir. Bir nesne, belirli bir nesne türü olarak belirtilen bir değişkene atandığında *erken bağlanır* . Erken bağlantılı nesneler, derleyicinin bellek ayırmasını ve uygulama yürütmeden önce diğer iyileştirmeler gerçekleştirmesini sağlar. Örneğin, aşağıdaki kod parçası türünde <xref:System.IO.FileStream>bir değişken bildirir:  
   
  [!code-vb[VbVbalrOOP#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#90)]  
   
- Çünkü <xref:System.IO.FileStream> bir belirli nesne türü, atanan örnek `FS` erken bağlama.  
+ , <xref:System.IO.FileStream> Belirli bir nesne türü olduğundan, öğesine atanan örnek erken `FS` bir şekilde bağlanır.  
   
- Bunun aksine, bir nesnedir *geç bağlama* onu bir değişkene atandığında bildirilen türü olmasını `Object`. Bu tür nesnelerin herhangi bir nesne başvuruları tutmak ancak çok erken bağlanan nesneleri avantajları eksik. Örneğin, aşağıdaki kod parçası tarafından döndürülen bir nesnesini tutacak bir nesne değişkeni bildirir `CreateObject` işlevi:  
+ Buna karşılık, bir nesne, türü `Object`olarak belirtilen bir değişkene atandığında *geç bağlanır* . Bu türdeki nesneler herhangi bir nesneye başvuruları tutabilir, ancak erken bağlantılı nesnelerin avantajlarından birçoğuna sahip olabilir. Örneğin, aşağıdaki kod parçası, `CreateObject` işlev tarafından döndürülen bir nesneyi tutacak bir nesne değişkeni bildirir:  
   
  [!code-vb[VbVbalrOOP#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/LateBinding.vb#91)]  
   
-## <a name="advantages-of-early-binding"></a>Erken bağlama avantajları  
- Bunlar daha verimli uygulamalar yield önemli iyileştirmeler yapmak için derleyici izin verdiğinden, mümkün olduğunca erken bağlanan nesneleri kullanmanız gerekir. Erken bağlı nesneler geç bağlama nesnelerini önemli ölçüde daha hızlı ve kodunuzu okunması ve düzenlenmesi hangi türdeki nesneleri tam olarak kullanıldığı belirterek daha kolay hale getirmek. Visual Studio tümleşik geliştirme ortamı (IDE) düzenleme gibi tam olarak hangi tür nesnenin çalıştığınız belirlemek için otomatik kod tamamlama ve dinamik Yardım gibi yararlı özellikleri sağlayan erken bağlama başka bir avantajı, kodu. Bir program derlendiğinde derleyici hatalarını raporlamak için izin verdiği için erken bağlama sayısını ve çalışma zamanı hataları azaltır.  
+## <a name="advantages-of-early-binding"></a>Erken bağlamanın avantajları  
+ Derleyicinin daha verimli uygulamalar sunan önemli iyileştirmeler yapmasına izin verdiklerinden, mümkün olduğunda erken bağlanan nesneleri kullanmanız gerekir. Erken bağlantılı nesneler, geç bağlantılı nesnelerden önemli ölçüde daha hızlıdır ve tam olarak hangi tür nesnelerin kullanıldığını belirterek kodunuzun okunmasını ve bakımını daha kolay hale getirir. Erken bağlamanın bir diğer avantajı da, Visual Studio tümleşik geliştirme ortamı (IDE), sizin düzenlediğiniz sırada çalıştığınız nesne türünü tam olarak belirleyebildiğinden, otomatik kod tamamlama ve dinamik yardım gibi faydalı özellikleri mümkün hale getirmenizi sağlar. kodudur. Erken bağlama, bir program derlendiğinde derleyicinin hata raporlenmesini sağladığından, çalışma zamanı hatalarının sayısını ve önem derecesini azaltır.  
   
 > [!NOTE]
->  Geç bağlama yalnızca olarak bildirilen tür üyelerine erişmek için kullanılabilir `Public`. Olarak bildirilen üyelere erişme `Friend` veya `Protected Friend` bir çalışma zamanı hatası oluşur.  
+> Geç bağlama yalnızca, olarak `Public`belirtilen tür üyelerine erişmek için kullanılabilir. Bir çalışma zamanı hatası `Friend` olarak `Protected Friend` belirtilen üyelere erişme.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
-- [Nesne ömrü: Nesnelerin nasıl oluşturulduğunu ve yok](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+- [Nesne ömrü: Nesneleri oluşturma ve yok etme](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object Veri Türü](../../../../visual-basic/language-reference/data-types/object-data-type.md)

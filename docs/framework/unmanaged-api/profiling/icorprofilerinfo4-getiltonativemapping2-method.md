@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad83c376816c2203cd78a83b8664fa90b0e109fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8ffdb04bdf3fd2f605e2dffc5065a0d786bbaf7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780821"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967913"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 Metodu
-Harita, Microsoft Ara dil (MSIL) için belirtilen işlev JIT yeniden derlenen sürümünde yer alan kodun yerel uzaklıklar uzaklıkları alır.  
+Belirtilen işlevin JıT yeniden derlenmiş sürümünde yer alan kodun yerel uzaklıklarından Microsoft ara dil (MSIL) uzaklıklarını bir harita alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,40 +41,40 @@ HRESULT GetILToNativeMapping(
   
 ## <a name="parameters"></a>Parametreler  
  `functionId`  
- [in] Kodu içeren işlev kimliği.  
+ 'ndaki Kodu içeren işlevin KIMLIĞI.  
   
  `pReJitId`  
- [in] JIT yeniden derlenen işlevi kimliği. Kimlik, .NET Framework 4.5 sıfır olmalıdır.  
+ 'ndaki JıT-yeniden derleme işlevinin kimliği. Kimlik .NET Framework 4,5 ' de sıfır olmalıdır.  
   
  `cMap`  
- [in] En büyük boyutunu `map` dizisi.  
+ 'ndaki `map` Dizinin en büyük boyutu.  
   
  `pcMap`  
- [out] Kullanılabilir cor_debug_ıl_to_natıve_map yapıları toplam sayısı.  
+ dışı Kullanılabilir COR_DEBUG_IL_TO_NATIVE_MAP yapılarının toplam sayısı.  
   
  `map`  
- [out] Bir dizi `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları, her biri uzaklıkları belirtir. Sonra `GetILToNativeMapping2` yöntemi döndüğünde, `map` bazılarını veya tümünü içerecektir `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları.  
+ dışı Her biri uzaklıkları belirten `COR_DEBUG_IL_TO_NATIVE_MAP` yapıların dizisi. Yöntem döndüğünde, `map` yapıların`COR_DEBUG_IL_TO_NATIVE_MAP` bazılarını veya tümünü içerir. `GetILToNativeMapping2`  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetILToNativeMapping2` benzer [Icorprofilerınfo::getıltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) yöntemi znovu işlevi Kimliğini gelecekte belirtmek profil oluşturucu sağlayacak dışında serbest bırakır.  
+ `GetILToNativeMapping2`, [ICorProfilerInfo:: GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md) yöntemine benzerdir, ancak profil oluşturucunun gelecek sürümlerde yeniden derlenen işlevin kimliğini belirtmesini sağlar.  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol::setılınstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) yöntemi uygulanmamıştır .NET Framework 4.5, JIT yeniden derlenen işlevleri farklı bir IL yerel eşleme olamaz. Bu nedenle başlangıçta derlenmiş işlevi. Bu nedenle, `GetILToNativeMapping2` .NET Framework 4.5 içinde bir sıfır olmayan JIT yeniden derlenen kimliği ile çağrılamaz.  
+> [ICorProfilerFunctionControl:: SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) yöntemi, .NET Framework 4,5 ' de uygulanmıyor, bu nedenle JIT yeniden derlenecek olan işlevlerin ilk derlenmiş işlevden farklı bir IL-yerel eşlemesi olamaz. Bu nedenle, `GetILToNativeMapping2` .NET Framework 4,5 ' de sıfır olmayan bir JIT kimliği ile çağrılamaz.  
   
- `GetILToNativeMapping2` Yöntemi, bir dizi döndürür `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları. Belirli aralıkları yerel yönergeleri için kod (örneğin, giriş) özel bölgeleri karşılık gelen iletmek için bir giriş dizisinde olabilir, `ilOffset` alan için bir değer kümesi [Cordebugıltonativemappingtypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) sabit listesi.  
+ Yöntemi bir `COR_DEBUG_IL_TO_NATIVE_MAP` yapı dizisini döndürür. `GetILToNativeMapping2` Belirli yerel yönergeler aralıklarının özel kod bölgelerine (örneğin, giriş) karşılık gelmesini sağlamak için dizideki bir girdinin, `ilOffset` alanı [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md) numaralandırması değerine ayarlanmış olabilir.  
   
- Sonra `GetILToNativeMapping2` döndürür, doğrulamalısınız `map` arabellek tüm içerecek şekilde büyük `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları. Bunu yapmak için değeri ile karşılaştırmak `cMap` değeriyle `pcMap` parametresi. Varsa `pcMap` boyutu tarafından çarpıldığında değeri bir `COR_DEBUG_IL_TO_NATIVE_MAP` yapısı, büyüktür `cMap`, daha büyük bir ayırma `map` arabellek, güncelleştirme `cMap` yeni, daha büyük bir boyut ve çağrı `GetILToNativeMapping2` yeniden.  
+ Geri döndüğünde, `map` arabelleğin tüm `COR_DEBUG_IL_TO_NATIVE_MAP` yapıları içerecek kadar büyük olduğunu doğrulamanız gerekir. `GetILToNativeMapping2` Bunu yapmak için değerini `cMap` `pcMap` parametresinin değeriyle karşılaştırın. `COR_DEBUG_IL_TO_NATIVE_MAP` `GetILToNativeMapping2` `cMap` `map` Değer, bir`cMap`yapının boyutuyla çarpıldığı zaman, daha büyüktür, daha büyük bir arabellek ayırır, yeni, daha büyük boyutla güncelleştirin ve `pcMap` yeniden çağırın.  
   
- Alternatif olarak, ilk çağırabilirsiniz `GetILToNativeMapping2` sıfır uzunluklu ile `map` arabellek doğru arabellek boyutu elde edilir. Arabellek boyutu döndürülen değere ayarlayabilirsiniz `pcMap` ve çağrı `GetILToNativeMapping2` yeniden.  
+ Alternatif olarak, doğru arabellek boyutunu `GetILToNativeMapping2` elde etmek için ilk olarak `map` sıfır uzunluklu bir arabellek ile çağrı yapabilirsiniz. Daha sonra arabellek boyutunu içinde `pcMap` döndürülen değere ayarlayabilir ve yeniden çağırabilirsiniz. `GetILToNativeMapping2`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -12,34 +12,34 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026178"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948779"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler
-Bu konu, bir dizi veya koleksiyon öğeleri üzerinde gerçekleştirilecek dönüştürmeler, terimlere arama yüklemleri ve Eylemler için genel temsilciler genel bir bakış sağlar.  
+Bu konu, bir dizi veya koleksiyonun öğelerinde yapılacak dönüşümler, arama koşulları ve eylemler için genel temsilcilerin genel bir özetini sağlar.  
   
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Dizi ve Listeleri Düzenlemek için Genel Temsilciler  
- <xref:System.Action%601> Genel temsilci belirtilen türe ait bir öğede bir eylem gerçekleştiren bir yöntemi temsil eder. Öğe üzerinde istenen eylem gerçekleştiren bir yöntem oluşturma, bir örneğini oluşturmak <xref:System.Action%601> bu yöntemi temsil eder ve ardından dizi ve temsilciye geçirmek için temsilci <xref:System.Array.ForEach%2A?displayProperty=nameWithType> genel statik yöntem. Yöntemi, dizinin her öğesi için çağrılır.  
+ Genel <xref:System.Action%601> temsilci, belirtilen türdeki bir öğe üzerinde bazı eylemleri gerçekleştiren bir yöntemi temsil eder. Öğesinde istenen eylemi gerçekleştiren bir yöntem oluşturabilir, bu yöntemi temsil etmek için <xref:System.Action%601> temsilcinin bir örneğini oluşturabilir ve sonra diziyi ve temsilciyi <xref:System.Array.ForEach%2A?displayProperty=nameWithType> static genel yöntemine geçitirsiniz. Yöntemi, dizideki her öğe için çağrılır.  
   
- <xref:System.Collections.Generic.List%601> Genel sınıfı sağlar bir <xref:System.Collections.Generic.List%601.ForEach%2A> kullanan yöntemi <xref:System.Action%601> temsilci. Bu yöntem, genel değil.  
+ Genel sınıf Ayrıca <xref:System.Action%601> temsilciyi kullanan bir <xref:System.Collections.Generic.List%601.ForEach%2A> yöntem sağlar. <xref:System.Collections.Generic.List%601> Bu yöntem genel değildir.  
   
 > [!NOTE]
->  Bu, ilginç bir noktanın hakkında genel türleri ve yöntemleri sağlar. <xref:System.Array.ForEach%2A?displayProperty=nameWithType> Yöntemi statik olmalıdır (`Shared` Visual Basic'te) ve genel çünkü <xref:System.Array> genel değil türü; bir tür için belirtebileceğiniz tek nedeni <xref:System.Array.ForEach%2A?displayProperty=nameWithType> üzerinde çalışılacak yöntemi kendi türü parametre listesine sahip olur. Bunun tersine, nongeneric tarafından <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> yöntemi genel sınıfa ait <xref:System.Collections.Generic.List%601>, böylece yalnızca bir tür parametresi kendi sınıfının kullanır. Yöntemi bir örnek yöntemi olabilir. Bu nedenle sınıf kesin yazıldığından.  
+> Bu, genel türler ve yöntemler hakkında ilginç bir nokta oluşturur. Genel <xref:System.Array.ForEach%2A?displayProperty=nameWithType> bir tür olmadığından, yöntemin`Shared` statik olması ( <xref:System.Array> Visual Basic) ve genel olması gerekir; üzerinde çalışmak <xref:System.Array.ForEach%2A?displayProperty=nameWithType> için bir tür belirtebileceğiniz tek neden yöntemin kendi tür parametre listesine sahip olması olabilir. Bunun aksine, genel <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> olmayan yöntem genel sınıfa <xref:System.Collections.Generic.List%601>aittir, bu yüzden sınıfının type parametresini kullanır. Sınıf kesin bir şekilde türdedir, bu nedenle Yöntem bir örnek yöntemi olabilir.  
   
- <xref:System.Predicate%601> Genel temsilci belirli bir öğenin tanımladığınız ölçütleri karşılayan olup olmadığını belirleyen bir yöntemi temsil eder. Aşağıdaki statik genel yöntemleri ile kullanabileceğiniz <xref:System.Array> bir öğe veya öğe kümesini aramak için: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A>, ve <xref:System.Array.TrueForAll%2A>.  
+ Genel <xref:System.Predicate%601> temsilci, belirli bir öğenin tanımladığınız kriterleri karşılayıp karşılamadığını belirleyen bir yöntemi temsil eder. Bunu, <xref:System.Array> ,,,,, ve öğelerini aramak için aşağıdaki statik genel yöntemleriyle kullanabilirsiniz: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A>ve <xref:System.Array.TrueForAll%2A>.  
   
- <xref:System.Predicate%601> ile ilgili jenerik olmayan örnek yöntemleri ayrıca çalışır <xref:System.Collections.Generic.List%601> genel bir sınıf.  
+ <xref:System.Predicate%601>Ayrıca <xref:System.Collections.Generic.List%601> genel sınıfın karşılık gelen genel olmayan örnek yöntemleri ile de birlikte kullanılır.  
   
- <xref:System.Comparison%601> , Yerel bir sıralama yoktur dizi ya da liste öğeleri için bir sıralama düzeni sağlamak ya da yerel sıralamayı geçersiz kılmak için genel temsilci olanak sağlar. Karşılaştırma gerçekleştiren bir yöntem oluşturma, bir örneğini <xref:System.Comparison%601> yönteminizi temsil eder ve ardından dizi ve temsilciye geçirmek için temsilci <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29?displayProperty=nameWithType> genel statik yöntem. <xref:System.Collections.Generic.List%601> Genel SAX karşılık gelen bir örnek yöntemi aşırı <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29?displayProperty=nameWithType>.  
+ <xref:System.Comparison%601> Genel temsilci, yerel sıralama düzeni olmayan dizi veya liste öğeleri için ya da yerel sıralama düzenini geçersiz kılmak için sıralama düzeni sağlamanıza olanak tanır. Karşılaştırmayı gerçekleştiren bir yöntem oluşturun, yönteminizi temsil etmek için <xref:System.Comparison%601> temsilcinin bir örneğini oluşturun ve sonra diziyi ve temsilciyi <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29?displayProperty=nameWithType> statik genel metoduna geçirin. Genel sınıf, <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29?displayProperty=nameWithType>karşılık gelen bir örnek yöntemi aşırı yüklemesi sağlar. <xref:System.Collections.Generic.List%601>  
   
- <xref:System.Converter%602> Genel temsilci, iki tür arasında dönüştürme tanımlamak ve diğer bir diziye bir tür dönüştürme veya diğer bir listeye listesini, bir tür dönüştürme sağlar. Var olan liste öğelerinin yeni bir türe dönüştürdüğünü bir yöntem oluşturma, yöntemi temsil eder ve kullanmak için bir temsilci örneği <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> orijinal diziyi yeni türde bir dizisini üretmek için genel statik yöntem veya <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> genel özgün listedeki yeni bir tür listesini oluşturmak için örnek yöntemi.  
+ <xref:System.Converter%602> Genel temsilci iki tür arasında bir dönüştürme tanımlamanızı ve bir türdeki bir diziyi diğerinin dizisine dönüştürmenizi veya bir tür listesini diğerinin bir listesine dönüştürmenizi sağlar. Mevcut listenin öğelerini yeni bir türe dönüştüren bir yöntem oluşturun, yöntemi temsil eden bir temsilci örneği oluşturun ve özgün diziden <xref:System.Array.ConvertAll%2A?displayProperty=nameWithType> <xref:System.Collections.Generic.List%601.ConvertAll%60%601%28System.Converter%7B%600%2C%60%600%7D%29?displayProperty=nameWithType> veya genel olarak yeni türün bir dizisini oluşturmak için genel statik yöntemi kullanın. özgün listedeki yeni türün bir listesini oluşturmak için örnek yöntemi.  
   
-### <a name="chaining-delegates"></a>Temsilcileri zincirleme  
- Bu temsilciler kullanan yöntemlerden çoğunu bir dizi ya da başka yönteme geçirilen listesi döndürür. Örneğin, bir dizinin belirli öğeleri seçin, bu öğeler yeni bir türe dönüştürmek ve yeni bir dizi kaydetmek istiyorsanız, döndürdüğü dizide geçirebilirsiniz <xref:System.Array.FindAll%2A> genel yöntem için <xref:System.Array.ConvertAll%2A> genel yöntem. Yeni öğe türü bir doğal sıralama düzeni yoksa tarafından döndürülen dizi geçirebilirsiniz <xref:System.Array.ConvertAll%2A> genel yöntem için <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> genel yöntem.  
+### <a name="chaining-delegates"></a>Zincirin temsilcileri  
+ Bu temsilcileri kullanan yöntemlerin çoğu, başka bir yönteme geçirilebilen bir dizi veya liste döndürür. Örneğin, bir dizinin belirli öğelerini seçmek, bu öğeleri yeni bir türe dönüştürmek ve yeni bir diziye kaydetmek istiyorsanız, <xref:System.Array.FindAll%2A> genel yöntemin <xref:System.Array.ConvertAll%2A> döndürdüğü diziyi genel yönteme geçirebilirsiniz. Yeni öğe türü doğal bir sıralama düzeni yoksa, <xref:System.Array.ConvertAll%2A> genel yöntemin <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29> döndürdüğü diziyi genel metoda geçirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

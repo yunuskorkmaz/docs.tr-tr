@@ -3,18 +3,18 @@ title: <claimType>
 ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
-ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4253aec961b812b6893ee201861d2ab38048032a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667229"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942875"
 ---
 # <a name="claimtype"></a>\<claimType >
-Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep belirtir.  
+Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talebi belirtir.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
+\<IdentityConfiguration >  
 \<claimTypeRequired >  
 \<claimType >  
   
@@ -39,13 +39,13 @@ Gelen güvenlik belirteçleri için tek bir isteğe bağlı veya gerekli talep b
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
 |türü|Talep türü. Genellikle bir URI. Gerekli.|  
-|isteğe bağlı|Talep türü isteğe bağlı olup olmadığını belirten bir Boole değeri. İsteğe bağlı.|  
+|isteğe bağlı|Talep türünün isteğe bağlı olup olmadığını belirten bir Boolean değer. İsteğe bağlı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|Gelen güvenlik belirteçleri için gerekli talep kümesini belirtir.|
+|[\<claimTypeRequired >](claimtyperequired.md)|Gelen güvenlik belirteçleri için gerekli talepler kümesini belirtir.|

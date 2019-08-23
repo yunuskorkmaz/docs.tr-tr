@@ -1,5 +1,5 @@
 ---
-title: <filter> Öğe için <add> için <sharedListeners>
+title: <filter>İçin için <add> öğesi<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 571a3add232f3e4f9747040dc104b85e8cc3085e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920504"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filtre > öğesi için \<Ekle > için \<sharedListeners >
-Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.  
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners için \<> \<eklemek için > öğesini filtreleyin >
+`sharedListeners` Koleksiyondaki bir dinleyiciye bir filtre ekler.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
+\<System. Diagnostics >  
 \<sharedListeners > öğesi  
-\<Ekle >  
+\<> Ekle  
 \<Filtre >  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,8 +40,8 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**type**|Gerekli öznitelik.<br /><br /> Filtre türünü belirtir. Türünün tam adını kullanabilirsiniz (biçimi <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliği), veya derleme bilgiler dahil olmak üzere tam olarak nitelenmiş tür adını kullanabilirsiniz (biçimi <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliği). Tam nitelikli tür adı oluşturma hakkında daha fazla bilgi için bkz. [belirtme tam olarak nitelenmiş tür adlarını](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
-|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dizesi.|  
+|**type**|Gerekli öznitelik.<br /><br /> Filtrenin türünü belirtir. Türün tam adını ( <xref:System.Type.FullName%2A?displayProperty=nameWithType> özelliğinin biçiminde) veya derleme bilgileri de dahil olmak üzere tam nitelikli tür adını ( <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> özelliğin biçiminde) kullanabilirsiniz. Tam nitelikli tür adı oluşturma hakkında bilgi için, bkz. [tam nitelikli tür adları belirtme](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**initializeData**|İsteğe bağlı öznitelik.<br /><br /> Belirtilen sınıf için oluşturucuya geçirilen dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -51,17 +51,17 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
-|`sharedListeners`|Herhangi bir kaynak veya trace ögesi başvurabilirsiniz dinleyicileri koleksiyonudur.|  
-|`add`|Bir ekler **sharedListeners** koleksiyonu.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
+|`sharedListeners`|Herhangi bir kaynak veya izleme öğesinin başvurmasına yönelik bir dinleyici koleksiyonu.|  
+|`add`|**SharedListeners** koleksiyonuna bir dinleyici ekler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Dinleyici olarak tanımlanırsa, bir `<add>` öğesinin `<sharedListeners>` öğesi, bu dinleyici için filtre tanımlanmalıdır bir `<filter>` alt öğe `<add>` öğesi.  
+ `<add>` Bir dinleyici `<sharedListeners>` öğenin öğesi içinde tanımlanmışsa, bu dinleyicinin filtresi `<add>` öğenin alt öğesi olan bir `<filter>` öğe içinde tanımlanmalıdır.  
   
- Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<filter>` İzleme dinleyicisi için bir filtre eklemek için öğe `console` içinde `sharedListeners` koleksiyonu.  
+ Aşağıdaki örnek, `<filter>` `sharedListeners` koleksiyonundaki izleme dinleyicisine `console` bir filtre eklemek için öğesinin nasıl kullanılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -90,4 +90,4 @@ Bir dinleyicisi için bir filtre ekler `sharedListeners` koleksiyonu.
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)

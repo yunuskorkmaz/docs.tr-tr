@@ -8,48 +8,48 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 88c2f2d872ae32b2cb3f0df13ce4816400695385
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963779"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Nasıl yapılır: Panodan Veri Alma
-<xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, bir uygulamadan diğerine bilgi aktarmak için kullanışlıdır.  
+Sınıfı <xref:System.Windows.Forms.Clipboard> , Windows işletim sistemi Pano özelliğiyle etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama, pano 'Yu veri için geçici bir depo olarak kullanır. Örneğin, Word işlemcileri kes ve yapıştır işlemleri sırasında panoyu kullanır. Pano, bilgileri bir uygulamadan diğerine aktarmak için de kullanışlıdır.  
   
- Bazı uygulamalar, potansiyel olarak veri kullanan diğer uygulamalar sayısını artırmak için birden çok biçimde Pano üzerinde verileri depolar. Pano biçimi biçimini tanımlayan bir dizedir. Tanımlanan biçimi kullanan bir uygulama, Panodaki ilişkili verileri alabilirsiniz. <xref:System.Windows.Forms.DataFormats> Sınıfı kullanmanız için önceden tanımlanmış biçim adları sağlar. Ayrıca, kendi biçim adları kullanın veya kendi biçiminde bir nesnenin türünü kullanın. Panoya veri ekleme hakkında daha fazla bilgi için bkz: [nasıl yapılır: Panoya veri ekleme](how-to-add-data-to-the-clipboard.md).  
+ Bazı uygulamalar, verileri potansiyel olarak kullandığımız diğer uygulamaların sayısını artırmak için panodaki verileri birden çok biçimde depolar. Pano biçimi biçimi tanımlayan bir dizedir. Tanımlı biçimi kullanan bir uygulama, panodaki ilişkili verileri alabilir. Sınıfı <xref:System.Windows.Forms.DataFormats> , kullanım için önceden tanımlanmış biçim adları sağlar. Kendi biçim adlarınızı de kullanabilir veya bir nesnenin türünü biçimi olarak kullanabilirsiniz. Panoya veri ekleme hakkında daha fazla bilgi için bkz [. nasıl yapılır: Panoya](how-to-add-data-to-the-clipboard.md)veri ekleyin.  
   
- Pano belirli bir biçimde veri içerip içermediğini belirlemek için aşağıdakilerden birini kullanın: `Contains` *biçimi* yöntemleri veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi. Panodan veri almak için aşağıdakilerden birini kullanın: `Get` *biçimi* yöntemleri veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi. Bu yöntemler .NET Framework 2.0 sürümünde yenidir.  
+ Panonun belirli bir biçimde veri içerip içermediğini anlamak için `Contains` *Format* yöntemlerinden birini veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemini kullanın. Panodan verileri almak için `Get` *Format* yöntemlerinden birini veya <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemini kullanın. Bu yöntemler .NET Framework 2,0 ' de yenidir.  
   
- .NET Framework 2. 0'dan önceki sürümleri kullanılarak panodan veri erişmek için <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> yöntemi ve döndürülen in yöntemlerini çağırabilirsiniz <xref:System.Windows.Forms.IDataObject>. Örneğin, belirli bir biçimde döndürülen nesneyi kullanılabilir olup olmadığını belirlemek için çağrı <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> yöntemi.  
+ .NET Framework 2,0 ' den önceki sürümleri kullanarak panodaki verilere erişmek için, <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> yöntemini kullanın ve döndürülen <xref:System.Windows.Forms.IDataObject>Yöntemleri çağırın. Belirli bir biçimin döndürülen nesnede kullanılabilir olup olmadığını belirleme, örneğin, <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> yöntemini çağırın.  
   
 > [!NOTE]
->  Tüm Windows tabanlı uygulamalar, Pano sistem paylaşın. Bu nedenle, başka bir uygulamaya geçtiğinde içeriği değişikliğe tabi olduğu.  
+> Tüm Windows tabanlı uygulamalar sistem panosunu paylaşır. Bu nedenle, başka bir uygulamaya geçtiğinizde içerik değişebilir.  
 >   
->  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca kullanılabilir iş parçacıklarında tek iş parçacığı Grup (STA) moduna ayarlayın. Bu sınıf kullanmak için emin olun, `Main` yöntemi ile işaretlenmiş <xref:System.STAThreadAttribute> özniteliği.  
+>  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca tek iş parçacığı apartmanı (STA) moduna ayarlanmış iş parçacıklarında kullanılabilir. Bu sınıfı kullanmak için `Main` yönteminizin <xref:System.STAThreadAttribute> özniteliğiyle işaretlendiğinden emin olun.  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Tek, ortak bir biçimde panodan veri almak için  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Panodaki verileri tek, ortak bir biçimde almak için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.GetText%2A> yöntemi. İsteğe bağlı olarak karşılık gelen kullanın `Contains` *biçimi* ilk veri belirli bir biçimde kullanılabilir olup olmadığını belirlemek için yöntemleri. Bu yöntemler, yalnızca .NET Framework 2.0 sürümünde kullanılabilir.  
+1. ,, Veya metodunu<xref:System.Windows.Forms.Clipboard.GetText%2A> kullanın. <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A> <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A> <xref:System.Windows.Forms.Clipboard.GetImage%2A> İsteğe bağlı olarak, verilerin `Contains`belirli bir biçimde kullanılabilir olup olmadığını anlamak için önce karşılık gelen *Biçim* yöntemlerini kullanın. Bu yöntemler yalnızca .NET Framework 2,0 ' de kullanılabilir.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Özel bir biçimde panodan veri almak için  
+### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Panodan verileri özel bir biçimde almak için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.GetData%2A> yöntemi ile bir özel biçim adı. Bu yöntem, yalnızca .NET Framework 2.0 sürümünde kullanılabilir.  
+1. <xref:System.Windows.Forms.Clipboard.GetData%2A> Yöntemi özel biçim adıyla kullanın. Bu yöntem yalnızca .NET Framework 2,0 ' de kullanılabilir.  
   
-     Önceden tanımlanmış biçim adıyla kullanabilirsiniz <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
+     Önceden tanımlanmış biçim adlarını <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemiyle de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Birden çok biçimde panodan veri almak için  
+### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Panodan birden çok biçimdeki verileri almak için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> yöntemi. Bu yöntem .NET Framework 2. 0'dan önceki sürümlerde panodan veri almak için kullanmanız gerekir.  
+1. <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> Yöntemini kullanın. .NET Framework 2,0 ' den önceki sürümlerde verileri panodan almak için bu yöntemi kullanmanız gerekir.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

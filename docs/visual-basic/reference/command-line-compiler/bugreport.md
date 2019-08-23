@@ -6,15 +6,15 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75c3e5842447a8f0812d5a90d7157f7a6a496936
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590637"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962439"
 ---
 # <a name="-bugreport"></a>-bugreport
-Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.  
+Bir hata raporunu dosyaaktardığınızda kullanabileceğiniz bir dosya oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,35 +26,35 @@ Bir hata raporu dosyası oluştururken kullanabileceğiniz bir dosya oluşturur.
   
 |Terim|Tanım|  
 |---|---|  
-|`file`|Gerekli. Hata raporunuzu içerecek dosyanın adı. Dosya adı tırnak içine alın ("") adı boşluk içeriyorsa.|  
+|`file`|Gerekli. Hata raporunuzu içerecek dosyanın adı. Ad bir boşluk içeriyorsa, dosya adını tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Aşağıdaki bilgileri eklenir `file`:  
+ Aşağıdaki bilgiler öğesine `file`eklenir:  
   
-- Derlemedeki tüm kaynak kodu dosyalarının bir kopyasını.  
+- Derlemedeki tüm kaynak kodu dosyalarının bir kopyası.  
   
 - Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
   
-- Derleyici, ortak dil çalışma zamanı ve işletim sistemi sürüm bilgisi.  
+- Derleyicinizle ilgili sürüm bilgileri, ortak dil çalışma zamanı ve işletim sistemi.  
   
-- Derleyici çıkışı, varsa.  
+- Varsa derleyici çıkışı.  
   
-- Kendileri için sizden istenir, sorun açıklaması.  
+- Sorunun açıklaması, size sorulur.  
   
-- Sorunun ne düşündüğünüzü açıklaması düzeltilmelidir, kendileri için sizden istenir.  
+- Sorunun düzeltilmesi için bir açıklama, sizden sorulur.  
   
- Tüm kaynak kodu dosyalarının bir kopyasını dahil olduğundan `file`, kısa olası programına (şüphelenilen) kod hatasını yeniden oluşturmak isteyebilirsiniz.  
+ Tüm kaynak kodu dosyalarının bir kopyası içine `file`eklendiğinden, en kısa olası programda (şüpheli) kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   
 > [!IMPORTANT]
->  `-bugreport` Seçenek olası duyarlı bilgileri içeren bir dosya oluşturur. Bu geçerli zaman, derleyici sürümü, .NET Framework sürümü, işletim sistemi sürümü, kullanıcı adı, komut satırı bağımsız değişkenleri ile derleyici çalıştırıldığı, tüm kaynak kodu ve herhangi başvurulan bütünleştirilmiş kodun ikili biçimini içerir. Bu seçenek, bir sunucu tarafı derleme bir ASP.NET uygulaması için Web.config dosyasında komut satırı seçeneklerini belirleyerek erişilebilir. Bunu önlemek için sunucuda önleyen kullanıcıların Machine.config dosyasının değiştirin.  
+> Bu `-bugreport` seçenek potansiyel olarak hassas bilgiler içeren bir dosya oluşturur. Bu geçerli saati, derleyici sürümünü, .NET Framework sürümünü, işletim sistemi sürümünü, Kullanıcı adını, derleyicinin çalıştırıldığı komut satırı bağımsız değişkenlerini, tüm kaynak kodunu ve başvurulan herhangi bir derlemenin ikili biçimini içerir. Bu seçeneğe, bir ASP.NET uygulamasının sunucu tarafı derlemesi için Web. config dosyasında komut satırı seçenekleri belirtilerek erişilebilir. Bunu önlemek için Machine. config dosyasını, kullanıcıların sunucuda derlenmesine izin vermeyecek şekilde değiştirin.  
   
- Bu seçeneği ile kullandıysanız `-errorreport:prompt`, `-errorreport:queue`, veya `-errorreport:send`, ve bir iç derleyici hata bilgileri uygulamanızın karşılaştığı `file` Microsoft Corporation gönderilir. Bu bilgiler, Microsoft mühendisleri hatanın nedenini belirlemenize yardımcı olur ve Visual Basic'in sonraki sürümüne artırmanıza yardımcı olabilir. Varsayılan olarak, hiçbir bilgi Microsoft'a gönderilmez. Ancak, derleme yaparken bir uygulama kullanarak `-errorreport:queue`, varsayılan olarak etkindir, bu uygulama, hata raporlarını toplar. Ardından, bilgisayarın yönetici oturum açtığında, hata raporlama sistem yönetici oturum açma işleminden sonra gerçekleşen tüm hata raporlarını Microsoft'a iletecek şekilde sağlayan bir açılır pencere görüntüler.  
+ Bu `-errorreport:prompt`seçenek, `-errorreport:queue`veya `-errorreport:send`ile kullanılırsa ve uygulamanız iç derleyici hatasıyla karşılaşırsa, içindeki `file` bilgiler Microsoft Corporation 'a gönderilir. Bu bilgiler, Microsoft mühendislerinin hatanın nedenini belirlemesine yardımcı olur ve Visual Basic sonraki sürümünün artırılmasına yardımcı olabilir. Varsayılan olarak, Microsoft 'a hiçbir bilgi gönderilmez. Ancak, varsayılan olarak etkinleştirilen bir uygulamayı kullanarak `-errorreport:queue`derlerken, uygulama hata raporlarını toplar. Daha sonra, bilgisayarın Yöneticisi oturum açtığında, hata raporlama sistemi, yöneticinin oturum açmadan bu yana oluşan tüm hata raporlarını iletmesini sağlayan bir açılır pencere görüntüler.  
   
 > [!NOTE]
->  `/bugreport` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
+> Bu `/bugreport` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derleme yaptığınızda kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek derler `T2.vb` ve hata raporlama tüm bilgileri dosyada koyar `Problem.txt`.  
+ Aşağıdaki örnek, dosyadaki `T2.vb` `Problem.txt`tüm hata raporlama bilgilerini derler ve yerleştirir.  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  
@@ -63,7 +63,7 @@ vbc -bugreport:problem.txt t2.vb
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
+- [-Debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
 - [Örnek Derleme Komut Satırları](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [trustLevel öğesi securityPolicy (ASP.NET Settings Schema) için](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))
+- [securityPolicy için trustLevel öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933243"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
-Yapılar, diziler, nesneleri ve yordamları yanı sıra birbirleri ile birlikte kullanabilirsiniz. Bu öğeleri ayrı ayrı olarak etkileşimleri aynı sözdizimini kullanır.  
+Yapıları diziler, nesneler ve yordamlarla birlikte, birbirleriyle de kullanabilirsiniz. Etkileşimler, bu öğeler tek tek kullanıldığı için aynı sözdizimini kullanır.  
   
 > [!NOTE]
->  Yapı öğeleri yapısı bildiriminde başlatılamıyor. Yalnızca yapısı türü olarak bildirilmiş bir değişken öğelerine değerler atayabilirsiniz.  
+> Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Yalnızca bir yapı türü olarak tanımlanmış bir değişkenin öğelerine değerler atayabilirsiniz.  
   
-## <a name="structures-and-arrays"></a>Yapıları ve diziler  
- Bir yapının bir veya daha fazla alt öğeleri olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-arrays"></a>Yapılar ve diziler  
+ Bir yapı, öğelerinden biri veya daha fazlası olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure systemInfo  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Bir yapı içinde bir dizi değerlerini, bir nesne üzerinde bir özelliği aynı şekilde erişin. Aşağıdaki örnek bunu göstermektedir.  
+ Bir yapı içindeki bir dizinin değerlerine, bir nesne üzerindeki bir özelliğe erişirken aynı şekilde erişirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- Ayrıca, bir dizi yapıları bildirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+ Ayrıca, bir yapı dizisi bildirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- Bu veri mimarisine bileşenlerine erişmek için bu kuralların izleyin. Aşağıdaki örnek bunu göstermektedir.  
+ Bu veri mimarisinin bileşenlerine erişmek için aynı kurallara uyun. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -55,8 +55,8 @@ allSystems(5).CPU = "386SX"
 allSystems(5).diskDrives(2) = "100M SCSI"  
 ```  
   
-## <a name="structures-and-objects"></a>Yapıları ve nesneler  
- Bir yapının bir nesne bir veya daha fazla alt öğeleri olarak içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-objects"></a>Yapılar ve nesneler  
+ Bir yapı, bir veya daha fazla öğelerinden oluşan bir nesne içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Böyle bir bildirim belirli nesne sınıfı kullanmanız gereken yerine `Object`.  
+ Bu tür bir bildirimde, `Object`yerine belirli bir nesne sınıfını kullanmanız gerekir.  
   
-## <a name="structures-and-procedures"></a>Yapılar ve yordamları  
- Bir yordam bağımsız değişkeni bir yapı geçirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-and-procedures"></a>Yapılar ve yordamlar  
+ Bir yapıyı yordam bağımsız değişkeni olarak geçirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- Yukarıdaki örnekte yapısı geçirir *başvuruya göre*, yordamı çağıran kod değişiklikler etkili şekilde öğeleri değiştirin sağlar. Bir yapı bu tür değişiklik karşı korumak istiyorsanız, değere göre geçirin.  
+ Önceki örnek, yapıyı *başvuruya göre*geçirir, bu da değişikliklerin çağıran kodda etkili olması için öğelerini değiştirmesine olanak tanır. Bir yapıyı bu değişikliğe karşı korumak istiyorsanız, değere göre geçirin.  
   
- Ayrıca bir yapısından döndürebilir bir `Function` yordamı. Aşağıdaki örnek bunu göstermektedir.  
+ Ayrıca, bir `Function` yordamdan bir yapı da döndürebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,8 +96,8 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>Yapıları içindeki yapıları  
- Yapılar, diğer yapılar içerebilir. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="structures-within-structures"></a>Yapılar Içindeki yapılar  
+ Yapılar, diğer yapıları içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
 Public Structure driveInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- Ayrıca, farklı bir modülde tanımlanmış bir yapı içinde bir modülde tanımlanmış bir yapı kapsüllemek için bu tekniği kullanabilirsiniz.  
+ Bu tekniği, farklı bir modülde tanımlanan bir yapıda bir modülde tanımlanan bir yapıyı kapsüllemek için de kullanabilirsiniz.  
   
- Yapılar için rastgele bir derinlik diğer yapılar içerebilir.  
+ Yapılar, rastgele bir derinlikte diğer yapıları içerebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -8,91 +8,91 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 2cfd8699afe48cb936ecf600c47508ef45781b43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc27189afd2185d5f0a1eeacccf4c537dd3d9c2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64605512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917539"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>İzlenecek yol: WPF içinde Win32 Denetimini Barındırma
-Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir ortam sağlar. Win32 kodu önemli ölçüde yatırımınız varsa, ancak bu en az bazılarını yeniden daha etkili olabilir, söz konusu kodu WPF uygulamanızda yerine tamamen yeniden yazın. WPF WPF sayfasında bir Win32 penceresinde barındırma için basit bir mekanizma sağlar.  
+Windows Presentation Foundation (WPF), uygulamalar oluşturmak için zengin bir ortam sağlar. Ancak, Win32 kodunda önemli bir yatırımınız olduğunda, bu kodu tamamen yeniden yazmak yerine WPF uygulamanızda en az bir kısmını yeniden kullanmak daha etkili olabilir. WPF, bir WPF sayfasında Win32 penceresini barındırmak için kolay bir mekanizma sağlar.  
   
- Bu konu size uygulama [örnek WPF içinde Win32 ListBox denetimi barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), konakları Win32 liste kutusu denetimi. Bu genel yordam herhangi bir Win32 penceresinde barındırma için genişletilebilir.  
+ Bu konu, bir Win32 liste kutusu denetimi barındıran [WPF örneğinde Win32 ListBox denetimini barındıran](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)bir uygulamada size kılavuzluk eder. Bu genel yordam, herhangi bir Win32 penceresini barındırmak için genişletilebilir.  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Gereksinimler  
- Bu konu, hem WPF hem de Windows API programlama temel olarak bilindiğini varsayar. WPF programlama temel bir giriş için bkz: [Başlarken](../getting-started/index.md). Windows API programlamaya giriş için çok sayıda kitaplardan herhangi birine konuyla ilgili özellikle bkz *Windows programlama* Charles Petzold ile.  
+ Bu konu, WPF ve Windows API programlamasında temel bir benzerlik olduğunu varsayar. WPF programlamasına temel bir giriş için bkz. Başlarken [](../getting-started/index.md). Windows API programlamaya giriş için, özellikle Charles Petzold tarafından yapılan belirli bir *programlama* penceresinde konu üzerinde bulunan çok sayıda kitaplardan birine bakın.  
   
- Bu konuda eşlik eden örnek uygulandığından C#, kolaylaştırır Windows API'sine erişmeniz için Platform çağırma Hizmetleri (PInvoke) kullanın. PInvoke bazı konusunda yararlı ancak temel değildir.  
+ Bu konuya eşlik eden örnek ' de C#uygulandığından, Windows API 'sine erişmek Için platform çağırma hizmetleri 'Ni (PInvoke) kullanır. PInvoke ile ilgili bazı benzerlik yararlı ancak gerekli değildir.  
   
 > [!NOTE]
->  Bu konuda, ilişkili örnekteki kod örnekleri içerir. Ancak, okunabilirlik için tam örnek kod içermez. Edinebilir veya gelen tam kod [bir WPF Örneği Win32 ListBox denetiminde barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control).  
+> Bu konu, ilişkili örnekten bir dizi kod örneği içerir. Ancak okunabilirlik için, örnek kodu tamamen içermez. [WPF örneğinde Win32 ListBox denetimini barındırırken](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)tüm kodu alabilir veya görüntüleyebilirsiniz.  
   
 <a name="basic_procedure"></a>   
-## <a name="the-basic-procedure"></a>Temel yordamı  
- Bu bölümde, bir WPF sayfasındaki bir Win32 penceresinde barındırma için temel yordamı açıklar. Kalan bölümler her adımın ayrıntılara gidin.  
+## <a name="the-basic-procedure"></a>Temel yordam  
+ Bu bölümde, bir WPF sayfasında Win32 penceresi barındırmak için temel yordam özetlenmektedir. Kalan bölümler her adımın ayrıntılarına gider.  
   
- Temel barındırma yordam aynıdır:  
+ Temel barındırma prosedürü şunlardır:  
   
-1. Pencereyi barındırmak için bir WPF sayfa uygulayın. Bir tekniktir oluşturmak için bir <xref:System.Windows.Controls.Border> barındırılan pencere için sayfanın bir bölümünü ayırmak için öğesi.  
+1. Pencereyi barındırmak için bir WPF sayfası uygulayın. Bir yöntem, barındırılan pencere için <xref:System.Windows.Controls.Border> sayfanın bir bölümünü ayırmak üzere bir öğesi oluşturmaktır.  
   
-2. Devralınan denetimini barındırmak için bir sınıf uygulamak <xref:System.Windows.Interop.HwndHost>.  
+2. Öğesinden <xref:System.Windows.Interop.HwndHost>devralan denetimi barındırmak için bir sınıf uygulayın.  
   
-3. Bu sınıfta geçersiz kılma <xref:System.Windows.Interop.HwndHost> sınıf üyesi <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. Bu sınıfta, <xref:System.Windows.Interop.HwndHost> sınıf üyesini <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>geçersiz kılın.  
   
-4. Barındırılan pencerenin alt WPF sayfasını içeren bir pencere öğesi olarak oluşturun. Geleneksel WPF programlama açıkça gerekmez ancak bunu kullanacağından, barındırma sayfası işleyici (HWND) ile bir penceredir. HWND sayfasını aldığınız aracılığıyla `hwndParent` parametresinin <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> yöntemi. Bu HWND alt sitesi olarak barındırılan pencere oluşturulmalıdır.  
+4. Barındırılan pencereyi WPF sayfasını içeren pencerenin bir alt öğesi olarak oluşturun. Geleneksel WPF programlamanın açık bir şekilde kullanılmasını gerektirmese de, barındırma sayfası tutamacı (HWND) olan bir pencere olur. `hwndParent` Yöntemin parametresi<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> aracılığıyla HWND sayfasını alırsınız. Barındırılan pencere bu HWND 'nin bir alt öğesi olarak oluşturulmalıdır.  
   
-5. Ana pencere oluşturduktan sonra barındırılan penceresinin HWND döndürür. Bir veya daha fazla Win32 denetimini barındırmak istiyorsanız, genellikle bir konak penceresini HWND alt sitesi olarak oluşturur ve konak penceresinin denetimleri alt öğesi yapın. Bir ana penceresinde denetimleri sarmalama HWND sınırında bildirimleri ile belirli bazı Win32 sorunlarla ilgilenen denetimlerden bildirim almak, WPF sayfası için basit bir yol sağlar.  
+5. Konak penceresini oluşturduktan sonra barındırılan pencerenin HWND 'sini döndürün. Bir veya daha fazla Win32 denetimini barındırmak istiyorsanız, genellikle HWND 'nin bir alt öğesi olarak bir ana bilgisayar penceresi oluşturur ve bu konak penceresinin alt öğelerini yapar. Denetimleri bir ana bilgisayar penceresinde sarmalama, WPF sayfanızın, HWND sınırları içindeki bildirimlerle ilgili bazı Win32 sorunlarıyla ilgilenen, denetimlerden bildirimler alması için basit bir yol sağlar.  
   
-6. Bildirim alt denetimler gibi ana pencerenin gönderilen Seçili iletileri işler. Bunu yapmanın iki yolu vardır.  
+6. Alt denetimlerin bildirimleri gibi ana bilgisayar penceresine gönderilen Seçili iletileri işleyin. Bunu iki şekilde yapabilirsiniz.  
   
-    - Barındırma sınıfınızdaki iletileri işlemek isterseniz, geçersiz kılma <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemi <xref:System.Windows.Interop.HwndHost> sınıfı.  
+    - Barındırma sınıfınıza iletileri işlemek isterseniz, <xref:System.Windows.Interop.HwndHost.WndProc%2A> <xref:System.Windows.Interop.HwndHost> sınıfının yöntemini geçersiz kılın.  
   
-    - WPF iletileri işleyen, işlemek isterseniz <xref:System.Windows.Interop.HwndHost> sınıfı <xref:System.Windows.Interop.HwndHost.MessageHook> arka plan kod olayı. Bu olay, barındırılan pencere tarafından alınan her ileti için gerçekleşir. Bu seçeneği belirlerseniz, hala tanımlamalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
+    - WPF 'nin iletileri işlemesini tercih ediyorsanız, arka plan kodunuzda <xref:System.Windows.Interop.HwndHost> sınıf <xref:System.Windows.Interop.HwndHost.MessageHook> olayını işleyin. Bu olay barındırılan pencere tarafından alınan her ileti için oluşur. Bu seçeneği belirlerseniz, yine de geçersiz kılmalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ancak yalnızca en az bir uygulama gerekir.  
   
-7. Geçersiz kılma <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> ve <xref:System.Windows.Interop.HwndHost.WndProc%2A> yöntemlerinin <xref:System.Windows.Interop.HwndHost>. Karşılamak için bu yöntemleri geçersiz kılmanız gerekir <xref:System.Windows.Interop.HwndHost> sözleşme, ancak yalnızca gerekebilir en az bir uygulama sağlamak.  
+7. <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> Ve yöntemlerinigeçersiz<xref:System.Windows.Interop.HwndHost>kılın. <xref:System.Windows.Interop.HwndHost.WndProc%2A> <xref:System.Windows.Interop.HwndHost> Sözleşmeyi karşılamak için bu yöntemleri geçersiz kılmanız gerekir, ancak yalnızca en az bir uygulama sağlamanız gerekebilir.  
   
-8. Arka plan kod dosyanızı denetim sınıf barındırma örneği oluşturun ve bir alt öğesi yapın <xref:System.Windows.Controls.Border> pencereyi barındırması amaçlanan öğesi.  
+8. Arka plan kod dosyanızda, denetim barındırma sınıfının bir örneğini oluşturun ve pencereyi barındırmak amaçlanan <xref:System.Windows.Controls.Border> öğesinin bir alt öğesi yapın.  
   
-9. Göndererek barındırılan pencere ile iletişim kurmak [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] iletilerini ve denetimlerinin gönderdiği bildirimler gibi kendi alt Windows iletilerini işleme.  
+9. Barındırılan pencereyle, denetimler tarafından gönderilen bildirimler gibi [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] , kendi alt penceresağından iletiler göndererek ve iletileri işleyerek iletişim kurun.  
   
 <a name="page_layout"></a>   
 ## <a name="implement-the-page-layout"></a>Sayfa düzeni uygulama  
- ListBox denetimi barındıran WPF sayfanın düzeni, iki bölgeleri oluşur. Sayfanın sol tarafındaki sağlayan birkaç WPF denetimleri barındıran bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Win32 denetimi işlemek sağlar. Sayfanın sağ üst köşesinde kare bölgesi için barındırılan ListBox denetimi vardır.  
+ ListBox denetimini barındıran WPF sayfasının düzeni iki bölgeden oluşur. Sayfanın sol tarafında, Win32 denetimini değiştirmenize olanak sağlayan çeşitli WPF denetimleri [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] barındırır. Sayfanın sağ üst köşesinde barındırılan ListBox denetimi için bir kare bölgesi bulunur.  
   
- Bu düzen uygulayan bir kod oldukça basittir. Kök öğe bir <xref:System.Windows.Controls.DockPanel> iki alt öğeye sahip. İlki bir <xref:System.Windows.Controls.Border> ListBox denetiminde bir öğe. Bu, 200 x 200 kare açılırken bir sayfanın sağ üst köşesinde kaplar. İkinci bir <xref:System.Windows.Controls.StackPanel> bilgileri görüntüleyen ve ListBox denetimini ayarlayarak değiştirmenize izin veren WPF denetimleri kümesini içeren bir öğe kullanıma sunulan birlikte çalışabilirlik özellikleri. Alt öğelerin her biri için <xref:System.Windows.Controls.StackPanel>, bu öğeler nelerdir veya ne yaptıklarıyla ilgili ayrıntılar için kullanılan çeşitli öğeleri için başvuru materyalleri bakın, bu örnek kodda listelenmiştir, ancak değişmeyecek (temel burada açıklanan birlikte çalışabilirlik modeli herhangi biri gerekmez, bunlar için örnek bazı etkileşim eklemek için sağlanır).  
+ Bu düzeni uygulamak için kod oldukça basittir. Kök öğesi, iki alt <xref:System.Windows.Controls.DockPanel> öğesi olan bir öğesidir. Birincisi, ListBox denetimini <xref:System.Windows.Controls.Border> barındıran bir öğedir. Sayfanın sağ üst köşesinde bir 200x200 kare kaplar. İkincisi, bilgileri görüntüleyen <xref:System.Windows.Controls.StackPanel> ve gösterilen birlikte çalışabilirlik özelliklerini ayarlayarak ListBox denetimini değiştirmenize izin veren bir WPF denetimleri kümesini içeren bir öğedir. Öğesinin alt öğesi olan öğelerin her biri için <xref:System.Windows.Controls.StackPanel>, bu öğelerin ne olduğu veya ne yaptığını gösteren Ayrıntılar için kullanılan çeşitli öğelerin başvuru malzemesine bakın, bunlar aşağıdaki örnek kodda listelenir, ancak burada açıklanmaz (temel birlikte çalışabilirlik modeli bunlardan herhangi birini gerektirmez, örneğe bazı etkileşimler eklemek için bu değerler sağlanır.  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
 <a name="host_class"></a>   
 ## <a name="implement-a-class-to-host-the-microsoft-win32-control"></a>Microsoft Win32 denetimini barındırmak için bir sınıf uygulama  
- Bu örnek setinin aslında ControlHost.cs denetimi barındıran sınıftır. Devraldığı <xref:System.Windows.Interop.HwndHost>. Genişliği ve yüksekliği için karşılık gelen iki parametre, yükseklik ve genişlik, Oluşturucusu alır <xref:System.Windows.Controls.Border> ListBox denetiminde bir öğe. Bu değerler daha sonra Denetim eşleşmeleri boyutunu emin olmak için kullanılan <xref:System.Windows.Controls.Border> öğesi.  
+ Bu örneğin çekirdeği aslında ControlHost.cs denetimini barındıran sınıftır. Öğesinden <xref:System.Windows.Interop.HwndHost>devralır. Oluşturucu, ListBox denetimini barındıran <xref:System.Windows.Controls.Border> öğenin yüksekliğine ve genişliğine karşılık gelen iki parametre, yükseklik ve genişlik alır. Bu değerler daha sonra denetimin boyutunun <xref:System.Windows.Controls.Border> öğesiyle eşleştiğinden emin olmak için kullanılır.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostclass)]
  [!code-vb[WPFHostingWin32Control#ControlHostClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostclass)]  
   
- Yok sabitleri de bir dizi. Bu sabitler Winuser.H'den büyük ölçüde alınır ve geleneksel adlarını Win32 işlevlerini çağırırken kullanmanıza izin verir.  
+ Ayrıca bir sabitler kümesi de vardır. Bu sabitler büyük ölçüde Winuser. h 'den alınmıştır ve Win32 işlevlerini çağırırken geleneksel adları kullanmanıza izin verir.  
   
  [!code-csharp[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#controlhostconstants)]
  [!code-vb[WPFHostingWin32Control#ControlHostConstants](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#controlhostconstants)]  
   
 <a name="buildwindowcore"></a>   
-### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Microsoft Win32 pencere oluşturmak için BuildWindowCore'u Geçersiz kılma  
- Sayfa tarafından barındırılan ve sayfa penceresi arasında bağlantı yapmak Win32 pencere oluşturmak için bu yöntemi geçersiz. Bu örnek bir ListBox denetimini barındırma gerektirdiğinden, iki windows oluşturulur. İlk WPF sayfası tarafından gerçekten barındırılan bir penceredir. ListBox denetimi, bir pencerenin alt öğesi oluşturulur.  
+### <a name="override-buildwindowcore-to-create-the-microsoft-win32-window"></a>Microsoft Win32 penceresini oluşturmak için BuildWindowCore ' u geçersiz kılın  
+ Bu yöntemi, sayfa tarafından barındırılacak Win32 penceresini oluşturmak ve pencere ile sayfa arasında bağlantı kurmak için geçersiz kılar. Bu örnek bir ListBox denetimini barındırmayı içerdiğinden, iki pencere oluşturulur. Birincisi, WPF sayfası tarafından gerçekten barındırılan penceredir. ListBox denetimi pencerenin alt öğesi olarak oluşturulur.  
   
- Bu yaklaşım denetiminden bildirim alma işlemini basitleştirmek için nedeni. <xref:System.Windows.Interop.HwndHost> Sınıfı barındırması penceresine gönderilen iletileri işlemek olanak tanır. Bir Win32 Konak doğrudan denetim, denetimin iç ileti döngüsü için gönderilen iletiler alırsınız. Denetim ve bu iletileri gönderme görüntüleyebilirsiniz, ancak denetimin üst pencereye gönderen bildirimleri almazsınız. Bu, diğerlerinin yanı sıra kullanıcı denetimle etkileşim kurduğunda hiçbir şekilde algılama sahip olduğunuz anlamına gelir. Bunun yerine, bir konak penceresini oluşturun ve bu pencerenin alt denetimi yapın. Bu, denetim tarafından gönderilen bildirimleri dahil olmak üzere ana pencere için iletileri işlemek üzere sağlar. Ana pencerenin daha basit bir sarmalayıcı denetimi için biraz daha fazla olduğundan kolaylık olması için paket için bir ListBox denetimi olarak adlandırılır.  
+ Bu yaklaşımın nedeni denetimden bildirim alma sürecini basitleştirmektir. <xref:System.Windows.Interop.HwndHost> Sınıfı, barındırmakta olduğu pencereye gönderilen iletileri işleyebilmeniz için izin verir. Bir Win32 denetimini doğrudan barındırdıysanız, denetimin iç ileti döngüsüne gönderilen iletileri alırsınız. Denetimi görüntüleyebilir ve bu iletileri gönderebilirsiniz, ancak denetimin ana penceresine gönderdiği bildirimleri almazsınız. Bu, diğer öğelerin yanı sıra kullanıcının denetimle ne zaman etkileşime gireceğini tespit etmenin hiçbir şekilde algılanmadığını gösterir. Bunun yerine, bir konak penceresi oluşturun ve denetimi bu pencerenin alt öğesi yapın. Bu, denetim tarafından kendisine gönderilen bildirimler dahil olmak üzere ana bilgisayar penceresi iletilerini işlemanıza olanak sağlar. Kolaylık sağlaması için, ana bilgisayar penceresi denetim için basit bir sarmalayıcıdan daha fazla olduğundan, pakete ListBox denetimi olarak başvurulur.  
   
 <a name="create_the_window_and_listbox"></a>   
-#### <a name="create-the-host-window-and-listbox-control"></a>ListBox denetimi ve konak penceresinin oluşturma  
- PInvoke denetimi için ana pencere oluşturma ve kaydetme pencere sınıfı oluşturmak için kullanın ve benzeri. Ancak, bir çok basit bir yaklaşım bir pencere ile önceden tanımlanmış "statik" Pencere sınıfını oluşturmaktır. Bu pencere yordamını denetiminden bildirim almak isteyen ve minimum kodlama gerektiren sağlar.  
+#### <a name="create-the-host-window-and-listbox-control"></a>Konak penceresini ve ListBox denetimini oluşturma  
+ Bir pencere sınıfı oluşturup kaydederek denetim için bir konak penceresi oluşturmak üzere PInvoke kullanabilirsiniz. Ancak, çok daha basit bir yaklaşım önceden tanımlanmış "static" pencere sınıfıyla bir pencere oluşturmaktır. Bu, denetimden bildirimleri almak için ihtiyaç duyduğunuz pencere yordamını sağlar ve en az kodlama gerektirir.  
   
- Ana sayfa için Denetim iletileri göndermek için kullanabilir HWND denetimi salt okunur özelliği aracılığıyla kullanıma sunulur.  
+ Denetimin HWND 'si, bir salt okunurdur özelliği aracılığıyla sunulur, örneğin konak sayfası denetime ileti göndermek için bunu kullanabilir.  
   
  [!code-csharp[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#intptrproperty)]
  [!code-vb[WPFHostingWin32Control#IntPtrProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#intptrproperty)]  
   
- ListBox denetimi ana penceresinin alt olarak oluşturulur. Hem windows genişliği ve yüksekliği yukarıda açıklanan oluşturucuya geçirilen değerlere ayarlanır. Bu, Denetim ve konak penceresinin boyutunu ayrılmış alanı sayfasında aynı olmasını sağlar.  Windows oluşturulduktan sonra örnek döndüren bir <xref:System.Runtime.InteropServices.HandleRef> ana penceresinin HWND içeren nesne.  
+ ListBox denetimi, ana bilgisayar penceresinin alt öğesi olarak oluşturulur. Her iki pencerelerin da yüksekliği ve genişliği, yukarıda açıklanan oluşturucuya geçirilen değerlere ayarlanır. Bu, konak penceresinin ve denetiminin boyutunun sayfadaki ayrılmış alanla aynı olmasını sağlar.  Windows oluşturulduktan sonra örnek, konak penceresinin HWND 'sini içeren <xref:System.Runtime.InteropServices.HandleRef> bir nesne döndürür.  
   
  [!code-csharp[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#buildwindowcore)]
  [!code-vb[WPFHostingWin32Control#BuildWindowCore](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcore)]  
@@ -101,8 +101,8 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
  [!code-vb[WPFHostingWin32Control#BuildWindowCoreHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#buildwindowcorehelper)]  
   
 <a name="destroywindow_wndproc"></a>   
-### <a name="implement-destroywindow-and-wndproc"></a>DestroyWindow ve WndProc  
- Ek olarak <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>, geçersiz kılmalısınız <xref:System.Windows.Interop.HwndHost.WndProc%2A> ve <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> yöntemlerinin <xref:System.Windows.Interop.HwndHost>. Bu örnekte, Denetim iletileri tarafından işlenen <xref:System.Windows.Interop.HwndHost.MessageHook> işleyicisi, bu nedenle uygulamasını <xref:System.Windows.Interop.HwndHost.WndProc%2A> ve <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> düzeydedir. Durumunda, <xref:System.Windows.Interop.HwndHost.WndProc%2A>ayarlayın `handled` için `false` ileti işlenmedi belirtmek ve 0 döndürür. İçin <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, pencere sadece yok.  
+### <a name="implement-destroywindow-and-wndproc"></a>Destroyıwindow ve WndProc uygulama  
+ Ayrıca, <xref:System.Windows.Interop.HwndHost.WndProc%2A> ve<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> yöntemlerini<xref:System.Windows.Interop.HwndHost>geçersizkılmanızgerekir. <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> Bu örnekte, denetimin iletileri <xref:System.Windows.Interop.HwndHost.MessageHook> işleyici tarafından işlenir ve bu nedenle, ve <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> uygulamanız en az bir <xref:System.Windows.Interop.HwndHost.WndProc%2A> örnektir. Durumunda <xref:System.Windows.Interop.HwndHost.WndProc%2A>, iletinin işlendiğinin ve 0 `false` döndürülmeyeceğini belirtmek için olarak ayarlayın `handled` . İçin <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>, pencereyi yok etmeniz yeterlidir.  
   
  [!code-csharp[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/ControlHost.cs#wndprocdestroy)]
  [!code-vb[WPFHostingWin32Control#WndProcDestroy](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroy)]  
@@ -111,13 +111,13 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
  [!code-vb[WPFHostingWin32Control#WndProcDestroyHelper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/ControlHost.vb#wndprocdestroyhelper)]  
   
 <a name="host_the_control"></a>   
-## <a name="host-the-control-on-the-page"></a>Ana sayfada denetimi  
- Sayfasında denetimini barındırmak için önce yeni bir örneğini oluşturun `ControlHost` sınıfı. Denetimi içeren kenarlık öğe genişliği ve yüksekliği geçirin (`ControlHostElement`) için `ControlHost` Oluşturucusu. Bu liste doğru boyutlandırılır sağlar. Ardından atayarak sayfasındaki denetimi ana `ControlHost` nesnesini <xref:System.Windows.Controls.Decorator.Child%2A> özelliği konağının <xref:System.Windows.Controls.Border>.  
+## <a name="host-the-control-on-the-page"></a>Denetimi sayfada barındırın  
+ Denetimi sayfada barındırmak için önce `ControlHost` sınıfın yeni bir örneğini oluşturun. Denetimi (`ControlHostElement`) `ControlHost` içeren Border öğesinin yüksekliğini ve genişliğini oluşturucuya geçirin. Bu, ListBox 'ın doğru boyutlandırılmasını sağlar. Daha sonra `ControlHost` nesneyi <xref:System.Windows.Controls.Decorator.Child%2A> ana bilgisayarın <xref:System.Windows.Controls.Border>özelliğine atayarak sayfayı sayfada barındırabilirsiniz.  
   
- Örnek bir işleyici ekler <xref:System.Windows.Interop.HwndHost.MessageHook> olayı `ControlHost` denetim iletileri almak için. Bu olay, barındırılan penceresine gönderilen her ileti için tetiklenir. Bu durumda, denetimin bildirimleri dahil olmak üzere gerçek ListBox denetimini sarar penceresine gönderilen iletileri şunlardır. Örnek SendMessage denetiminden bilgi edinmek ve içeriğini değiştirmek için çağırır. Sayfa denetimiyle nasıl iletişim kurduğu ayrıntılarını, sonraki bölümde ele alınmıştır.  
+ Örnek, <xref:System.Windows.Interop.HwndHost.MessageHook> `ControlHost` denetiminden ileti almak için öğesinin olayına bir işleyici ekler. Bu olay barındırılan pencereye gönderilen her ileti için oluşturulur. Bu durumda, denetim bildirimleri de dahil olmak üzere gerçek ListBox denetimini sarmalayan pencereye gönderilen iletilerdir. Örnek, denetimden bilgi almak ve içeriğini değiştirmek için SendMessage 'ı çağırır. Sayfanın denetimle nasıl iletişim kurduğu hakkındaki ayrıntılar, sonraki bölümde ele alınmıştır.  
   
 > [!NOTE]
->  İki PInvoke bildirimi için SendMessage olduğuna dikkat edin. Bunun gerekli olmasının nedeni kullanan tek `wParam` parametresi bir dize ve diğer iletmek için bir tamsayı geçirmek için bunu kullanır. Verileri doğru şekilde sıralanmış olduğundan emin olmak her bir imza için ayrı bir bildirim ihtiyacınız vardır.  
+> SendMessage için iki PInvoke bildirimi olduğuna dikkat edin. Bu gereklidir çünkü biri bir dizeyi geçirmek `wParam` için parametresini kullandığından diğeri bir tamsayıyı iletmek için onu kullanır. Verilerin doğru şekilde sıralanmasını sağlamak için her imza için ayrı bir bildirime ihtiyacınız vardır.  
   
  [!code-csharp[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#hostwindowclass)]
  [!code-vb[WPFHostingWin32Control#HostWindowClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#hostwindowclass)]  
@@ -126,31 +126,31 @@ Windows Presentation Foundation (WPF) uygulamaları oluşturmak için zengin bir
  [!code-vb[WPFHostingWin32Control#ControlMsgFilterSendMessage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#controlmsgfiltersendmessage)]  
   
 <a name="communication"></a>   
-## <a name="implement-communication-between-the-control-and-the-page"></a>Uygulama sayfası ile Denetim arasındaki iletişimi  
- Windows iletiler göndererek denetimi değiştirebilirsiniz. Kullanıcı için konak penceresinin bildirim göndererek ile etkileşim kurduğunda denetimi size bildirir. [WPF'de Win32 ListBox denetimini barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) örnek bunun nasıl çalıştığını, çeşitli örnekler sağlayan bir kullanıcı Arabirimi içerir:  
+## <a name="implement-communication-between-the-control-and-the-page"></a>Denetim ve sayfa arasındaki Iletişimi Uygula  
+ Denetimi, Windows iletilerini göndererek yönetebilirsiniz. Denetim, ana bilgisayar penceresine bildirim göndererek Kullanıcı onunla etkileşime geçtiğinde size bildirir. [WPF örneğinde Win32 ListBox denetimini barındırma](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control) , bunun nasıl çalıştığına dair birkaç örnek sağlayan bir kullanıcı arabirimi içerir:  
   
-- Bir öğeyi listeye ekleyin.  
+- Listeye bir öğe ekleyin.  
   
-- Seçili öğeyi listeden silin  
+- Seçili öğeyi listeden Sil  
   
-- Seçili öğenin metni görüntüler.  
+- Şu anda seçili olan öğenin metnini görüntüleyin.  
   
-- Öğe, listede görüntüler.  
+- Listedeki öğelerin sayısını görüntüleyin.  
   
- Geleneksel bir Win32 uygulaması için olduğu gibi kullanıcının da öğeyi liste kutusunda üzerine tıklayarak seçebilirsiniz. Görüntülenen verileri seçme, ekleme veya bir öğe ekleme kullanıcının liste kutusunun durumu her değiştiğinde güncelleştirilir.  
+ Kullanıcı aynı zamanda, Ayrıca, geleneksel bir Win32 uygulaması gibi, bu öğeye tıklayarak liste kutusunda bir öğe seçebilir. Görünen veriler, Kullanıcı bir öğe seçerek, ekleyerek veya ekleyerek liste kutusunun durumunu her değiştirdiğinde güncellenir.  
   
- Liste kutusu öğeleri eklemek için göndermek bir [ `LB_ADDSTRING` ileti](/windows/desktop/Controls/lb-addstring). Öğeleri silmek için gönderme [ `LB_GETCURSEL` ](/windows/desktop/Controls/lb-getcursel) geçerli seçimin indisini almak ve ardından [ `LB_DELETESTRING` ](/windows/desktop/Controls/lb-deletestring) öğeyi silmek için. Örnek ayrıca gönderir [ `LB_GETCOUNT` ](/windows/desktop/Controls/lb-getcount)ve öğe sayısını gösteren görüntü güncelleştirmek için döndürülen değer kullanır. ' In iki örneği [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) önceki bölümde açıklanan PInvoke bildirimleri birini kullanın.  
+ Öğeleri eklemek için liste kutusuna bir [ `LB_ADDSTRING` ileti](/windows/desktop/Controls/lb-addstring)gönderin. Öğeleri silmek için Gönder [`LB_GETCURSEL`](/windows/desktop/Controls/lb-getcursel) ' e, geçerli seçimin dizinini alın ve sonra [`LB_DELETESTRING`](/windows/desktop/Controls/lb-deletestring) öğeyi silin. Örnek ayrıca, öğelerin [`LB_GETCOUNT`](/windows/desktop/Controls/lb-getcount)sayısını gösteren görünümü güncelleştirmek için döndürülen değeri de gönderir ve kullanır. Bu örneklerin [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) her ikisi de önceki bölümde açıklanan PInvoke bildirimlerinden birini kullanır.  
   
  [!code-csharp[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml.cs#appenddeletetext)]
  [!code-vb[WPFHostingWin32Control#AppendDeleteText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFHostingWin32Control/VisualBasic/Page1.xaml.vb#appenddeletetext)]  
   
- Kullanıcı bir öğeyi seçer veya seçimi değiştirir denetimin ana penceresine göndererek bildirir bir [ `WM_COMMAND` ileti](/windows/desktop/menurc/wm-command), oluşturursa <xref:System.Windows.Interop.HwndHost.MessageHook> sayfa için olay. Ana pencere yordamına aynı bilgileri ana penceresinin işleyici alır. Ayrıca bir Boolean değerine bir başvuru geçirir `handled`. Ayarladığınız `handled` için `true` ileti işlenmiş olduğunu ve başka bir işleme gerek olmadığını göstermek için.  
+ Kullanıcı bir öğe seçtiğinde veya seçimlerini değiştirdiğinde, denetim konak penceresine bir [ `WM_COMMAND` ileti](/windows/desktop/menurc/wm-command)göndererek bildirir ve bu da sayfanın <xref:System.Windows.Interop.HwndHost.MessageHook> olayını oluşturur. İşleyici, ana bilgisayar penceresinin ana pencere yordamıyla aynı bilgileri alır. Ayrıca, `handled`bir Boolean değerine bir başvuru geçirir. ' İ `handled` , `true` iletiyi işlediğinin ve başka bir işleme gerek olmadığını belirtecek şekilde ayarlayın.  
   
- [`WM_COMMAND`](/windows/desktop/menurc/wm-command) işlemek istediğiniz bir olay olup olmadığını belirlemek için bildirim kimliği incelemeniz gerekir böylece çeşitli nedenlerle gönderilir. Kimliği üst sınırı içinde yer alan `wParam` parametresi. Örnek kimliği ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcının yapılan veya değiştirilen seçimi, kimliği olacaktır [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange).  
+ [`WM_COMMAND`](/windows/desktop/menurc/wm-command)çeşitli nedenlerle gönderilir, bu nedenle, işlemek istediğiniz bir olay olup olmadığını öğrenmek için bildirim KIMLIĞINI incelemeniz gerekir. Kimliği, `wParam` parametresinin üst sözcüğünde bulunur. Örnek, KIMLIĞI ayıklamak için bit düzeyinde işleçler kullanır. Kullanıcı, seçimini yapmış veya değiştirmiştir, KIMLIK olur [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange).  
   
- Zaman [ `LBN_SELCHANGE` ](/windows/desktop/Controls/lbn-selchange) olan alınan örnek seçili öğenin dizinini denetimi göndererek alır bir [ `LB_GETCURSEL` ileti](/windows/desktop/Controls/lb-getcursel). Metin iletisini almanız için önce oluşturmanız bir <xref:System.Text.StringBuilder>. Ardından Denetim gönderdiğiniz bir [ `LB_GETTEXT` ileti](/windows/desktop/Controls/lb-gettext). Boş geçmesi <xref:System.Text.StringBuilder> nesnesinin `wParam` parametresi. Zaman [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) döndürür, <xref:System.Text.StringBuilder> seçilen öğenin metnini içerir. Bu kullanımı [ `SendMessage` ](/windows/desktop/api/winuser/nf-winuser-sendmessage) henüz başka bir PInvoke bildirimi gerektirir.  
+ Alındığında, örnek, denetim bir [ `LB_GETCURSEL` ileti](/windows/desktop/Controls/lb-getcursel)göndererek seçili öğenin dizinini alır. [`LBN_SELCHANGE`](/windows/desktop/Controls/lbn-selchange) Metni almak için önce bir <xref:System.Text.StringBuilder>oluşturun. Ardından, denetimi bir [ `LB_GETTEXT` ileti](/windows/desktop/Controls/lb-gettext)gönderirsiniz. Boş <xref:System.Text.StringBuilder> nesneyi `wParam` parametre olarak geçirin. [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) Döndüğünde<xref:System.Text.StringBuilder> , seçili öğenin metnini içerir. Bu kullanımı, [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage) henüz başka bir PInvoke bildirimi gerektirir.  
   
- Son olarak, ayarlama `handled` için `true` iletinin işlendiğini göstermek için.  
+ Son olarak, `handled` iletinin `true` işlendiğini göstermek için olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

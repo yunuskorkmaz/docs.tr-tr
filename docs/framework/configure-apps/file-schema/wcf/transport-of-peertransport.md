@@ -2,23 +2,23 @@
 title: <transport> / <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5dbc55db25c0c49d72ec2cd8dd1041a3f8705d8e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788290"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940639"
 ---
-# <a name="transport-of-peertransport"></a>\<Aktarım >, \<peerTransport >
-Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli iletiler için aktarım türünü belirtir.  
+# <a name="transport-of-peertransport"></a>\<\<peertransport > taşıma >
+Bu bağlama ile yapılandırılan eşler tarafından gönderilen güvenli iletiler için taşıma türünü belirtir.  
   
  \<system.serviceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<customBinding >  
 \<bağlama >  
 \<peerTransport >  
 \<Güvenlik >  
-\<taşıma >  
+\<Taşıma >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,32 +29,32 @@ Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli ileti
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|credentialType|İsteğe bağlı. Eş ile gönderilen iletileri doğrulamak için kullanılan kimlik bilgileri türünü belirtir. Bu öznitelik türünde <xref:System.ServiceModel.PeerTransportCredentialType>.|  
+|credentialType|İsteğe bağlı. Eş aktarımlarla gönderilen iletileri doğrulamak için kullanılan kimlik bilgilerinin türünü belirtir. Bu öznitelik türü <xref:System.ServiceModel.PeerTransportCredentialType>.|  
   
 ## <a name="credentialtype-attribute"></a>credentialType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sertifika|Eş kanal kimlik doğrulaması gerektiren x X509 sertifika.|  
-|Parola|Eş kanal kimlik doğrulaması için doğru parola gereklidir.|  
+|Sertifika|Eş kanal taşımanın kimlik doğrulaması bir x509 sertifikası gerektirir.|  
+|Parola|Eş kanal taşımanın kimlik doğrulaması, doğru bir parola gerektirir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Bir eş için güvenlik ayarlarını tanımlar.|  
+|[\<Güvenlik >](security-of-peertransport.md)|Bir eş taşımanın güvenlik ayarlarını tanımlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe yalnızca ayarlama modu öznitelik [ \<Güvenlik >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ayarlanır `Transport` veya `TransportWithMessageCredential`.  
+ Bu öğe yalnızca [ \<güvenlik >](security-of-peertransport.md) mod özniteliği veya `TransportWithMessageCredential`olarak `Transport` ayarlandıysa ayarlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -62,10 +62,10 @@ Bu bağlama ile yapılandırılan eşleri tarafından gönderilen güvenli ileti
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Aktarım Güvenliği](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Taşımalar](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Taşıma Seçme](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Bağlamaları Genişletme](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Özel Bağlamalar](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Aktarım Güvenliği](../../../wcf/feature-details/transport-security.md)
+- [Taşımalar](../../../wcf/feature-details/transports.md)
+- [Taşıma Seçme](../../../wcf/feature-details/choosing-a-transport.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Bağlamaları Genişletme](../../../wcf/extending/extending-bindings.md)
+- [Özel Bağlamalar](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)

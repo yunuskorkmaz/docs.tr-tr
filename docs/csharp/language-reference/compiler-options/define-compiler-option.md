@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: d56907493ed24e2ea9fa6568af7441fc81ba1a78
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cb9de387b319ff4b81dcd1ccc37f04d8b6b3123a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606952"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924794"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# derleyici seçenekleri)
 **-Define** seçeneği, programınızın `name` tüm kaynak kodu dosyalarında sembol olarak tanımlar.  
@@ -47,7 +47,7 @@ ms.locfileid: "69606952"
  Derleyici C# , kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makroyu tanımlar; Tüm sembol tanımlarının Kullanıcı tanımlı olması gerekir.  
   
 > [!NOTE]
->  C# ,`#define` Bir simgeye, gibi dillerde bir değer verilmesini izin vermez C++. Örneğin, `#define` bir makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, bir `enum` değişken kullanın. Bir C++ stil makrosu oluşturmak isterseniz, genel türler gibi alternatifleri göz önünde bulundurun. Makrolar önemli bir hataya açık olmadığından, kullanmalarına izin vermez C# , ancak daha güvenli alternatifler sağlar.  
+> C# ,`#define` Bir simgeye, gibi dillerde bir değer verilmesini izin vermez C++. Örneğin, `#define` bir makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, bir `enum` değişken kullanın. Bir C++ stil makrosu oluşturmak isterseniz, genel türler gibi alternatifleri göz önünde bulundurun. Makrolar önemli bir hataya açık olmadığından, kullanmalarına izin vermez C# , ancak daha güvenli alternatifler sağlar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   

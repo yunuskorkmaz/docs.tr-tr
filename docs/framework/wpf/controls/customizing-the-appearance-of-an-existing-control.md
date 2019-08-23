@@ -12,251 +12,251 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 563f4a9fefe86b58f0dc6f0a4aec5cb285630616
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a0b724b71c4a4901c2dedcf502045a75ec405c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933726"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate Oluşturarak Varolan Denetimin Görünümünü Özelleştirme
-<a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> görsel yapı ve denetim görsel davranışını belirtir. Yeni bir BT vererek denetiminin görünümünü özelleştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, işlevselliği değiştirmeden mevcut bir denetimin görünümünü değiştirin. Örneğin, düğmeler, uygulamanızda yerine varsayılan kare şekil yuvarlak yapabileceğiniz ancak düğme hala oluşturacağı <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay.  
+<a name="introduction"></a>Bir <xref:System.Windows.Controls.ControlTemplate> denetimin görsel yapısını ve görsel davranışını belirtir. Bir denetimin görünüşünü yeni <xref:System.Windows.Controls.ControlTemplate>bir vererek özelleştirebilirsiniz. Bir <xref:System.Windows.Controls.ControlTemplate>oluşturduğunuzda, mevcut bir denetimin görünüşünü, işlevselliğini değiştirmeden değiştirirsiniz. Örneğin, uygulamadaki düğmeleri varsayılan kare şekli yerine yuvarlayabilmeniz, ancak düğme <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı yine de oluşturacak.  
   
- Bu konu çeşitli bölümlerini açıklamaktadır bir <xref:System.Windows.Controls.ControlTemplate>, basit bir oluşturma işlemi <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.Button>ve görünümünü özelleştirebileceğiniz bir denetimin denetim sözleşmesi öğrenmek açıklanmaktadır. Oluşturduğunuz çünkü bir <xref:System.Windows.Controls.ControlTemplate> içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], herhangi bir kod yazmadan bir denetimin görünümünü değiştirebilirsiniz. Microsoft Expression Blend gibi bir tasarımcıdan özel denetim şablonları oluşturmak için de kullanabilirsiniz. Bu konuda örnekler gösterilmektedir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] görünüşünü özelleştirme bir <xref:System.Windows.Controls.Button> ve konunun sonunda tam bir örnek listeler. Expression Blend kullanma hakkında daha fazla bilgi için bkz. [Şablonları destekleyen bir denetime stil uygulama](https://go.microsoft.com/fwlink/?LinkId=161153).  
+ Bu konu, bir öğesinin <xref:System.Windows.Controls.ControlTemplate>çeşitli parçalarını açıklar, bir <xref:System.Windows.Controls.Button>için basit <xref:System.Windows.Controls.ControlTemplate> oluşturmayı gösterir ve görünümünü özelleştirebilmeniz için bir denetimin denetim sözleşmesinin nasıl anlaşılmasını açıklar. <xref:System.Windows.Controls.ControlTemplate> İçinde[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir oluşturduğunuz için, herhangi bir kod yazmadan bir denetimin görünümünü değiştirebilirsiniz. Ayrıca, özel denetim şablonları oluşturmak için Microsoft Expression Blend gibi bir tasarımcı da kullanabilirsiniz. Bu konu, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] içindeki görünümünü <xref:System.Windows.Controls.Button> özelleştiren ve konusunun sonundaki bütün örneği listeleyen örnekleri gösterir. Ifade Blend kullanma hakkında daha fazla bilgi için, bkz. [şablonları destekleyen bir denetimin stillendirme](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
- Aşağıdaki resimlerde gösterildiği bir <xref:System.Windows.Controls.Button> kullanan <xref:System.Windows.Controls.ControlTemplate> bu konudaki oluşturulur.  
+ Aşağıdaki çizimlerde, <xref:System.Windows.Controls.ControlTemplate> bu <xref:System.Windows.Controls.Button> konuda oluşturulan öğesini kullanan bir gösterilmektedir.  
   
- ![Bir özel denetim şablonu bir düğme. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
-Bir özel denetim şablonunu kullanan bir düğme  
+ ![Özel denetim şablonuyla bir düğme.](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+Özel denetim şablonu kullanan bir düğme  
   
- ![Kırmızı bir kenarlık bir düğme. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
-Bir özel denetim şablonu kullanır ve üzerine fare işaretçisini bir düğme  
+ ![Kırmızı kenarlıklı bir düğme.](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+Özel denetim şablonu kullanan ve üzerinde fare işaretçisi bulunan bir düğme  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda, oluşturma ve açıklandığı gibi denetimleri ve stilleri kullanmak anladığınızı varsayar [denetimleri](index.md). Bu konuda açıklanan kavramları devralacak öğelere uygula <xref:System.Windows.Controls.Control> sınıfı dışında <xref:System.Windows.Controls.UserControl>. Uygulayamazsınız bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.UserControl>.  
+ Bu konu başlığında açıklanan denetimleri ve stilleri oluşturma ve kullanma hakkında bilgi sahibi olduğunuz varsayılır. [](index.md) Bu konu başlığı altında açıklanan kavramlar, <xref:System.Windows.Controls.Control> sınıfının dışında <xref:System.Windows.Controls.UserControl>sınıfından kalıtımla alan öğeler için geçerlidir. Öğesine bir <xref:System.Windows.Controls.ControlTemplate>uygulayamazsınız. <xref:System.Windows.Controls.UserControl>  
   
 <a name="when_you_should_create_a_controltemplate"></a>   
-## <a name="when-you-should-create-a-controltemplate"></a>ControlTemplate oluştururken  
- Denetimler içeren özellikleri gibi <xref:System.Windows.Controls.Border.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, ve <xref:System.Windows.Controls.Control.FontFamily%2A>, denetimin görünümünü farklı yönlerini belirtmek üzere ayarlayabilirsiniz, ancak bu özellikleri ayarlayarak yaptığınız değişiklikler sınırlıdır. Örneğin, ayarlayabilirsiniz <xref:System.Windows.Controls.Control.Foreground%2A> mavi özelliği ve <xref:System.Windows.Controls.Control.FontStyle%2A> üzerinde çok italik bir <xref:System.Windows.Controls.CheckBox>.  
+## <a name="when-you-should-create-a-controltemplate"></a>Bir ControlTemplate oluşturmanız gerektiğinde  
+ Denetimlerin, ve <xref:System.Windows.Controls.Border.Background%2A> <xref:System.Windows.Controls.Control.Foreground%2A>gibi birçok özelliği vardır, ancak bu, denetimin görünümünün farklı yönlerini belirtmek için ayarlayabilirsiniz, ancak bu özellikleri ayarlayarak yapabileceğiniz değişiklikler sınırlıdır. <xref:System.Windows.Controls.Control.FontFamily%2A> Örneğin, <xref:System.Windows.Controls.Control.Foreground%2A> özelliğini mavi ve <xref:System.Windows.Controls.Control.FontStyle%2A> italik olarak bir <xref:System.Windows.Controls.CheckBox>olarak ayarlayabilirsiniz.  
   
- Yeni bir oluşturma olanağı olmadan <xref:System.Windows.Controls.ControlTemplate> denetimler için tüm denetimleri içinde her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-tabanlı bir uygulama bir özel görünüm ile uygulama oluşturma becerisini sınırlandırır aynı genel görünüme sahip. Varsayılan olarak, her <xref:System.Windows.Controls.CheckBox> benzer özelliklere sahiptir. Örneğin, içeriği <xref:System.Windows.Controls.CheckBox> seçimi göstergesi sağında her zaman olduğu ve onay işaretine her zaman göstermek için kullanılan <xref:System.Windows.Controls.CheckBox> seçilir.  
+ Denetimler için yeni <xref:System.Windows.Controls.ControlTemplate> bir oluşturma özelliği olmadan, her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir tabanlı uygulamadaki tüm denetimler aynı genel görünüme sahip olur ve bu da özel bir görünüm ile uygulama oluşturma özelliğini sınırlandırır. Varsayılan olarak, her <xref:System.Windows.Controls.CheckBox> bir benzer özelliğe sahiptir. Örneğin, öğesinin <xref:System.Windows.Controls.CheckBox> içeriği her zaman seçim göstergesinin sağında bulunur ve onay işareti her zaman seçili <xref:System.Windows.Controls.CheckBox> olduğunu göstermek için kullanılır.  
   
- Oluşturduğunuz bir <xref:System.Windows.Controls.ControlTemplate> hangi diğer özellikleri üzerinde denetimi ayarlama yapmak ötesinde denetimin görünümünü özelleştirme istediğinizde. Örneğinde <xref:System.Windows.Controls.CheckBox>göstermek için bir X istediğiniz ve içeriğin seçimi göstergesi olması için bu onay kutusu istediğinizi varsayın <xref:System.Windows.Controls.CheckBox> seçilir. Bu değişiklikleri belirttiğiniz <xref:System.Windows.Controls.ControlTemplate> , <xref:System.Windows.Controls.CheckBox>.  
+ Denetim görünümünü özelleştirmek <xref:System.Windows.Controls.ControlTemplate> istediğinizde, denetimin diğer özelliklerinin ne yapacakınızın ötesinde bir oluşturmanız gerekir. Örneğinde <xref:System.Windows.Controls.CheckBox>, onay kutusunun içeriğinin seçim göstergesinin üzerinde olmasını istediğinizi ve bir X öğesinin seçili olduğunu belirtmek <xref:System.Windows.Controls.CheckBox> istediğinizi varsayalım. Bu değişiklikleri içinde <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.CheckBox>belirtirsiniz.  
   
- Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.CheckBox> varsayılan <xref:System.Windows.Controls.ControlTemplate>.  
+ Aşağıdaki çizimde, varsayılan <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.ControlTemplate>olarak kullanılan bir gösterilmektedir.  
   
- ![Varsayılan denetim şablonunu içeren bir onay kutusu. ](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
+ ![Varsayılan denetim şablonuyla bir onay kutusu.](./media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 Varsayılan denetim şablonunu kullanan bir onay kutusu  
   
- Aşağıdaki çizimde gösterildiği bir <xref:System.Windows.Controls.CheckBox> özel kullanan <xref:System.Windows.Controls.ControlTemplate> içeriğini yerleştirmek için <xref:System.Windows.Controls.CheckBox> seçimi göstergesi ve görüntüler X yukarıda olduğunda <xref:System.Windows.Controls.CheckBox> seçilir.  
+ Aşağıdaki çizimde, bir, <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.CheckBox> Yukarıdaki <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.CheckBox> seçim göstergesinin içeriğini yerleştirmek için özel bir kullanılan ve seçildiğinde bir X görüntüleyen bir, gösterilmektedir.  
   
- ![Bir özel denetim şablonu ile bir onay kutusu. ](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
-Bir özel denetim şablonunu kullanan bir onay kutusu  
+ ![Özel denetim şablonuyla bir onay kutusu.](./media/ndp-checkboxcustom.png "NDP_CheckBoxCustom")  
+Özel denetim şablonu kullanan bir onay kutusu  
   
- <xref:System.Windows.Controls.ControlTemplate> İçin <xref:System.Windows.Controls.CheckBox> bu konuda oluşturmanın basit bir örneği kullanması için bu örnekte nispeten karmaşık olan bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.Button>.  
+ Bu <xref:System.Windows.Controls.ControlTemplate> örnekteki <xref:System.Windows.Controls.ControlTemplate> için için <xref:System.Windows.Controls.Button>, görece karmaşıktır, bu konuda bir için oluşturmak için daha basit bir örnek kullanılmıştır. <xref:System.Windows.Controls.CheckBox>  
   
 <a name="changing_the_visual_structure_of_a_control"></a>   
-## <a name="changing-the-visual-structure-of-a-control"></a>Bir denetimin görsel yapı değiştirme  
- İçinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], genellikle bir bileşik denetimdir <xref:System.Windows.FrameworkElement> nesneleri. Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, birleştirerek <xref:System.Windows.FrameworkElement> tek bir denetim oluşturmak için nesne. A <xref:System.Windows.Controls.ControlTemplate> yalnızca bir <xref:System.Windows.FrameworkElement> , kök öğesi olarak. Kök öğe genellikle diğer içeren <xref:System.Windows.FrameworkElement> nesneleri. Denetimin görsel yapısına nesnelerinin birleşimini sağlar.  
+## <a name="changing-the-visual-structure-of-a-control"></a>Bir denetimin görsel yapısını değiştirme  
+ ' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]De, bir denetim genellikle bileşik <xref:System.Windows.FrameworkElement> bir nesne olur. Oluşturduğunuzda <xref:System.Windows.Controls.ControlTemplate>, tek bir denetim oluşturmak için <xref:System.Windows.FrameworkElement> nesneleri birleştirmelisiniz. , Kök öğesi olarak yalnızca <xref:System.Windows.FrameworkElement> bir tane olmalıdır.<xref:System.Windows.Controls.ControlTemplate> Kök öğe genellikle diğer <xref:System.Windows.FrameworkElement> nesneleri içerir. Nesnelerin birleşimi denetimin görsel yapısını oluşturur.  
   
- Aşağıdaki örnek bir özel oluşturur <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.Button>. <xref:System.Windows.Controls.ControlTemplate> Görsel yapısını oluşturur <xref:System.Windows.Controls.Button>. Bu örnek, fareyi üzerine taşıdığınızda veya tıklatın düğmenin görünümünü değiştirmez. Farklı bir durumda olduğunda düğmenin görünümünü değiştirme, bu konunun ilerleyen bölümlerinde ele alınmıştır.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Button>için bir özel <xref:System.Windows.Controls.ControlTemplate> oluşturur. , Öğesinin görsel yapısını <xref:System.Windows.Controls.ControlTemplate>oluşturur. <xref:System.Windows.Controls.Button> Bu örnek, fare işaretçisini üzerine getirdiğinizde düğmenin görünümünü değiştirmez. Düğmenin görünümü farklı bir durumda olduğunda, bu konunun ilerleyen kısımlarında ele alınmıştır.  
   
- Bu örnekte, görsel yapı aşağıdaki bölümden oluşur:  
+ Bu örnekte, görsel yapı aşağıdaki bölümlerden oluşur:  
   
-- A <xref:System.Windows.Controls.Border> adlı `RootElement` şablonun kök olarak hizmet veren <xref:System.Windows.FrameworkElement>.  
+- Şablon kökü `RootElement` <xref:System.Windows.Controls.Border> görevi<xref:System.Windows.FrameworkElement>gören adlandırılmış bir ad.  
   
-- A <xref:System.Windows.Controls.Grid> diğer bir deyişle bir alt öğesi `RootElement`.  
+- <xref:System.Windows.Controls.Grid> Öğesinin`RootElement`bir alt öğesidir.  
   
-- A <xref:System.Windows.Controls.ContentPresenter> , düğmenin içeriğini görüntüler. <xref:System.Windows.Controls.ContentPresenter> Herhangi görüntülenecek nesne türünü sağlar.  
+- Düğme <xref:System.Windows.Controls.ContentPresenter> içeriğini görüntüleyen bir. , <xref:System.Windows.Controls.ContentPresenter> Görüntülenecek herhangi bir nesne türünü sağlar.  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
-### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>Bir denetimin özelliklerini işlevselliğini TemplateBinding kullanarak koruma  
- Yeni bir oluşturduğunuzda <xref:System.Windows.Controls.ControlTemplate>, denetimin görünümünü değiştirmek için ortak özellikleri kullanmak yine de isteyebilirsiniz. [TemplateBinding](../advanced/templatebinding-markup-extension.md) işaretleme uzantısı bağlayan bir özelliği olan bir öğenin <xref:System.Windows.Controls.ControlTemplate> denetim tarafından tanımlanan ortak bir özellik için. Kullanırken [TemplateBinding](../advanced/templatebinding-markup-extension.md), şablon parametreleri olarak davranmak üzere denetimi özellikleri sağlar. Denetim üzerinde bir özelliği ayarlandığında bu değere sahip öğe için diğer bir deyişle, geçirildiğinde [TemplateBinding](../advanced/templatebinding-markup-extension.md) üzerindeki.  
+### <a name="preserving-the-functionality-of-a-controls-properties-by-using-templatebinding"></a>TemplateBinding kullanarak bir denetimin özelliklerinin Işlevselliğini koruma  
+ Yeni <xref:System.Windows.Controls.ControlTemplate>bir oluşturduğunuzda, denetimin görünümünü değiştirmek için yine de ortak özellikleri kullanmak isteyebilirsiniz. [TemplateBinding](../advanced/templatebinding-markup-extension.md) biçimlendirme uzantısı, <xref:System.Windows.Controls.ControlTemplate> içindeki bir öğesinin özelliğini Denetim tarafından tanımlanan ortak bir özelliğe bağlar. [TemplateBinding](../advanced/templatebinding-markup-extension.md)kullandığınızda, denetimdeki özellikleri şablona parametre olarak davranacak şekilde etkinleştirin. Diğer bir deyişle, bir denetimdeki özellik ayarlandığında, bu değer üzerinde [TemplateBinding](../advanced/templatebinding-markup-extension.md) 'e sahip olan öğeye geçirilir.  
   
- Aşağıdaki örnek kullanan yukarıdaki örnekte parçası yineler [TemplateBinding](../advanced/templatebinding-markup-extension.md) bulunan öğelerin özelliklerini bağlamak için işaretleme uzantısı <xref:System.Windows.Controls.ControlTemplate> düğme tarafından tanımlanan ortak özellikleri.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.ControlTemplate> düğme tarafından tanımlanan ortak özelliklerde bulunan öğelerin özelliklerini bağlamak için [TemplateBinding](../advanced/templatebinding-markup-extension.md) biçimlendirme uzantısını kullanan önceki örneğin bölümünü yineler.  
   
  [!code-xaml[VSMButtonTemplate#TemplateBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#templatebinding)]  
   
- Bu örnekte, <xref:System.Windows.Controls.Grid> sahip kendi <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> özelliği şablon bağlı <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>. Çünkü <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> olan bağlı şablon aynı kullanan birden çok düğmeleri oluşturabilirsiniz <xref:System.Windows.Controls.ControlTemplate> ve <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> düğmelerin üzerindeki farklı değerler. Varsa <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> değil şablonu içindeki bir öğenin bir özelliğe bağlı değildi <xref:System.Windows.Controls.ControlTemplate>ayarını <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> bir düğmeye düğmenin görünümünü üzerinde hiçbir etkisi yoktur.  
+ Bu örnekte <xref:System.Windows.Controls.Grid> <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> , öğesinin özellik şablonu öğesine <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>bağımlıdır. Şablon <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> bağlı olduğundan, aynısını <xref:System.Windows.Controls.ControlTemplate> kullanan birden çok düğme oluşturabilir ve her düğme üzerinde farklı değerlere ayarlayabilirsiniz <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> . Şablon, <xref:System.Windows.Controls.ControlTemplate>içindeki bir öğesinin özelliğine bağlı değilse, bir düğmenin ayarlanması <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType> düğmenin görünümü üzerinde hiçbir etkisi olmaz. <xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>  
   
- Not, iki özellik adları aynı olması gerekmez. Önceki örnekte <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.Button> şablon bağlı <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.ContentPresenter>. Bu düğmenin yatay olarak konumlandırılan içeriğini sağlar. <xref:System.Windows.Controls.ContentPresenter> adlı bir özellik yok `HorizontalContentAlignment`, ancak <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> bağlanabilir <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>. Bir özellik, şablon bağladığınızda, hedef ve kaynak özelliklerini aynı türde olduğundan emin olun.  
+ İki özellik adının aynı olması gerekmediğini unutmayın. <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> Önceki örnekte <xref:System.Windows.Controls.Button> , öğesinin özelliği olan <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType> özelliğine <xref:System.Windows.Controls.ContentPresenter>bağımlıdır. Bu düğme içeriğinin yatay olarak konumlandırılmasını sağlar. <xref:System.Windows.Controls.ContentPresenter>adında `HorizontalContentAlignment`bir özelliği yoktur, ancak <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType> ile <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>bağlanabilir. Şablon bir özelliği bağladığınızda, hedef ve kaynak özelliklerinin aynı türde olduğundan emin olun.  
   
- <xref:System.Windows.Controls.Control> Sınıfı ayarlanırken bir etkisi denetimi için denetim şablonu tarafından kullanılması gereken çeşitli özellikleri tanımlar. Nasıl <xref:System.Windows.Controls.ControlTemplate> özelliği bağlıdır özelliği kullanır. <xref:System.Windows.Controls.ControlTemplate> Özelliği aşağıdaki yollardan birini kullanmanız gerekir:  
+ <xref:System.Windows.Controls.Control> Sınıfı, denetim şablonu tarafından ayarlandıklarında bir etkiye sahip olmak için kullanılması gereken birkaç özelliği tanımlar. Özelliği, <xref:System.Windows.Controls.ControlTemplate> özelliğini kullanarak özelliğine bağlıdır. , <xref:System.Windows.Controls.ControlTemplate> Özelliğini aşağıdaki yollarla kullanmalıdır:  
   
-- Bir öğedeki <xref:System.Windows.Controls.ControlTemplate> şablon özelliğe bağlar.  
+- <xref:System.Windows.Controls.ControlTemplate> Şablondaki bir öğe özelliğe bağlanır.  
   
-- Bir öğedeki <xref:System.Windows.Controls.ControlTemplate> özelliği bir üst öğeden devralır <xref:System.Windows.FrameworkElement>.  
+- İçindeki bir öğesi, <xref:System.Windows.Controls.ControlTemplate> bir üst <xref:System.Windows.FrameworkElement>öğeden özelliği devralır.  
   
- Aşağıdaki tabloda bir denetimden devralan görsel özellikleri listeler <xref:System.Windows.Controls.Control> sınıfı. Ayrıca, bir denetimin varsayılan denetim şablonunu devralınan özellik değerini kullanıp kullanmadığını veya şablon bağlı olması gerekir, gösterir.  
+ Aşağıdaki tabloda, <xref:System.Windows.Controls.Control> sınıfından bir denetim tarafından devralınan görsel özellikler listelenmiştir. Ayrıca, bir denetimin varsayılan denetim şablonunun devralınan özellik değerini kullanıp kullanmadığını veya şablon bağlanması gerekip gerekmediğini gösterir.  
   
 |Özellik|Kullanım yöntemi|  
 |--------------|------------------|  
-|<xref:System.Windows.Controls.Control.Background%2A>|Şablon Bağlama|  
-|<xref:System.Windows.Controls.Control.BorderThickness%2A>|Şablon Bağlama|  
-|<xref:System.Windows.Controls.Control.BorderBrush%2A>|Şablon Bağlama|  
+|<xref:System.Windows.Controls.Control.Background%2A>|Şablon bağlama|  
+|<xref:System.Windows.Controls.Control.BorderThickness%2A>|Şablon bağlama|  
+|<xref:System.Windows.Controls.Control.BorderBrush%2A>|Şablon bağlama|  
 |<xref:System.Windows.Controls.Control.FontFamily%2A>|Özellik devralma veya şablon bağlama|  
 |<xref:System.Windows.Controls.Control.FontSize%2A>|Özellik devralma veya şablon bağlama|  
 |<xref:System.Windows.Controls.Control.FontStretch%2A>|Özellik devralma veya şablon bağlama|  
 |<xref:System.Windows.Controls.Control.FontWeight%2A>|Özellik devralma veya şablon bağlama|  
 |<xref:System.Windows.Controls.Control.Foreground%2A>|Özellik devralma veya şablon bağlama|  
-|<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>|Şablon Bağlama|  
-|<xref:System.Windows.Controls.Control.Padding%2A>|Şablon Bağlama|  
-|<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>|Şablon Bağlama|  
+|<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>|Şablon bağlama|  
+|<xref:System.Windows.Controls.Control.Padding%2A>|Şablon bağlama|  
+|<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>|Şablon bağlama|  
   
- Bir tabloda yalnızca devralınan görsel özellikleri <xref:System.Windows.Controls.Control> sınıfı. Tabloda listelenen özellikleri dışında bir denetim de devralabilir <xref:System.Windows.FrameworkElement.DataContext%2A>, <xref:System.Windows.FrameworkElement.Language%2A>, ve <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> üst çerçeve öğesinin özellikleri.  
+ Tabloda yalnızca <xref:System.Windows.Controls.Control> sınıftan devralınan görsel özellikler listelenir. Tabloda listelenen özelliklerden ayrı olarak, bir denetim üst Framework öğesinden <xref:System.Windows.FrameworkElement.DataContext%2A>, <xref:System.Windows.FrameworkElement.Language%2A>ve <xref:System.Windows.Controls.TextBlock.TextDecorations%2A> özelliklerini de alabilir.  
   
- Ayrıca, varsa <xref:System.Windows.Controls.ContentPresenter> bulunduğu <xref:System.Windows.Controls.ControlTemplate> , bir <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ContentPresenter> otomatik olarak bağlayacaksınız <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> ve <xref:System.Windows.Controls.ContentControl.Content%2A> özellikleri. Benzer şekilde, bir <xref:System.Windows.Controls.ItemsPresenter> alanında <xref:System.Windows.Controls.ControlTemplate> , bir <xref:System.Windows.Controls.ItemsControl> otomatik olarak bağlayacaksınız <xref:System.Windows.Controls.ItemsControl.Items%2A> ve <xref:System.Windows.Controls.ItemsPresenter> özellikleri.  
+ <xref:System.Windows.Controls.ControlTemplate> Ayrıca,<xref:System.Windows.Controls.ContentControl> <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> bir içinde<xref:System.Windows.Controls.ContentPresenter> ise, otomatik olarak ve<xref:System.Windows.Controls.ContentControl.Content%2A> özelliklerine bağlanır. <xref:System.Windows.Controls.ContentPresenter> Benzer şekilde, <xref:System.Windows.Controls.ItemsPresenter> <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.ItemsControl.Items%2A> içinde <xref:System.Windows.Controls.ItemsControl> olan bir, ve<xref:System.Windows.Controls.ItemsPresenter> özelliklerine otomatik olarak bağlanır.  
   
- Aşağıdaki örnek, kullanan iki düğme oluşturur <xref:System.Windows.Controls.ControlTemplate> önceki örnekte tanımlanan. Örnek <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, ve <xref:System.Windows.Controls.Control.FontSize%2A> her düğmesine özellikleri. Ayarı <xref:System.Windows.Controls.Control.Background%2A> özelliği, şablonu içinde bağlı olduğundan bir etkiye sahiptir <xref:System.Windows.Controls.ControlTemplate>. Olsa da <xref:System.Windows.Controls.Control.Foreground%2A> ve <xref:System.Windows.Controls.Control.FontSize%2A> ayarı bir etkisi değerlerine devraldığından, Özellikler şablon bağlı değildir.  
+ Aşağıdaki örnek, önceki örnekte <xref:System.Windows.Controls.ControlTemplate> tanımlanan öğesini kullanan iki düğme oluşturur. Örnek, her bir <xref:System.Windows.Controls.Control.Background%2A>düğmedeki <xref:System.Windows.Controls.Control.Foreground%2A>,, <xref:System.Windows.Controls.Control.FontSize%2A> ve özelliklerini ayarlar. Özelliğinin ayarlanması bir etkiye sahiptir çünkü <xref:System.Windows.Controls.ControlTemplate>içinde şablon bağlanmıştır. <xref:System.Windows.Controls.Control.Background%2A> <xref:System.Windows.Controls.Control.Foreground%2A> Ve<xref:System.Windows.Controls.Control.FontSize%2A> özellikleri şablon bağlanmamış olsa da, değerleri devralındığından bu ayarların bir etkisi vardır.  
   
  [!code-xaml[VSMButtonTemplate#ButtonDeclaration](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#buttondeclaration)]  
   
- Önceki örnekte aşağıdaki çizime benzer bir çıktı oluşturulur.  
+ Yukarıdaki örnek aşağıdaki çizime benzer bir çıktı üretir.  
   
- ![İki düğme, bir mavi ve mor bir. ](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
-İki düğme farklı bir arka plan renkleri  
+ ![İki düğme, bir mavi ve bir mor.](./media/ndp-buttontwo.png "NDP_ButtonTwo")  
+Farklı arka plan renkleriyle iki düğme  
   
 <a name="changing_the_appearance_of_a_control_depending_on_its_state"></a>   
-## <a name="changing-the-appearance-of-a-control-depending-on-its-state"></a>Durumuna bağlı olarak bir denetimin görünümünü değiştirme  
- Varsayılan görünümünü bir düğme ve düğmeyi arasındaki fark önceki örnekte, farklı durumlarda olduğunda varsayılan düğme farenizin değiştiğini ' dir. Örneğin, bir düğmeye basıldığında veya fare işaretçisi düğmenin üzerine geldiğinde varsayılan düğmenin görünümünü değiştirir. Ancak <xref:System.Windows.Controls.ControlTemplate> işlevsellik değişmez bir denetimin, denetimin görsel davranışı değişmez. Belirli bir durumda olduğunda görsel bir davranış, denetimin görünümünü açıklar. İşlevi bir denetimin görsel davranış arasındaki farkı anlamak için düğme örneği göz önünde bulundurun. Düğmenin işlevselliği başlatılmasıdır <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olay tıklatıldığında, ancak düğmenin görsel işaret veya basılı görünümünü değiştirmek için bir davranıştır.  
+## <a name="changing-the-appearance-of-a-control-depending-on-its-state"></a>Bir denetimin görünüşünü durumuna göre değiştirme  
+ Varsayılan görünümü ile bir düğme arasındaki fark, önceki örnekteki düğme, farklı durumlardadır. Örneğin, düğme basıldığında varsayılan düğme görünümü değişir veya fare işaretçisi düğmenin üzerindeyken değişir. <xref:System.Windows.Controls.ControlTemplate> Bir denetimin işlevselliğini değiştirmese de, denetimin görsel davranışını değiştirir. Görsel bir davranış, belirli bir durumda olduğu zaman denetim görünümünü açıklar. Bir denetimin işlevselliği ve görsel davranışı arasındaki farkı anlamak için, düğme örneğini göz önünde bulundurun. Düğmenin işlevselliği tıklandığında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı tetiklemedir, ancak düğmenin görsel davranışı, işaret edildiğinde veya basıldığında görünümünü değiştirmesidir.  
   
- Kullandığınız <xref:System.Windows.VisualState> nesneleri belirli bir durumda olduğunda, bir denetimin görünümünü belirtmek için. A <xref:System.Windows.VisualState> içeren bir <xref:System.Windows.Media.Animation.Storyboard> bulunan öğelerin görünümünü değiştirir <xref:System.Windows.Controls.ControlTemplate>. Bu denetimin mantığı kullanarak durumu değiştiğinden ortaya yapmak için kod yazmanız gerekmez <xref:System.Windows.VisualStateManager>. Denetim tarafından belirtilen durumuna girdiğinde <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Media.Animation.Storyboard> başlar. Denetim durumu çıktığında <xref:System.Windows.Media.Animation.Storyboard> durdurur.  
+ Belirli bir <xref:System.Windows.VisualState> durumda olduğunda bir denetimin görünümünü belirtmek için nesneleri kullanırsınız. , <xref:System.Windows.VisualState> <xref:System.Windows.Media.Animation.Storyboard> İçinde olan öğelerin görünümünü değiştiren bir içerir. <xref:System.Windows.Controls.ControlTemplate> Bunu yapmak için herhangi bir kod yazmanız gerekmez, <xref:System.Windows.VisualStateManager>çünkü denetimin mantığı ' i kullanarak durumu değişir. Denetim, <xref:System.Windows.VisualState.Name%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Media.Animation.Storyboard> tarafından belirtilen duruma girdiğinde başlar. Denetim durumdan <xref:System.Windows.Media.Animation.Storyboard> çıktığında, duraklar.  
   
- Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualState> görünümünü değiştiren bir <xref:System.Windows.Controls.Button> fare işaretçisi olduğunda üzerine. <xref:System.Windows.Media.Animation.Storyboard> Rengini değiştirerek düğmenin kenarlık rengini değiştirir `BorderBrush`. Başvurursanız <xref:System.Windows.Controls.ControlTemplate> örnek bu konunun başında, Hatırlayacağınız `BorderBrush` adıdır <xref:System.Windows.Media.SolidColorBrush> için atanan <xref:System.Windows.Controls.Border.Background%2A> , <xref:System.Windows.Controls.Border>.  
+ Aşağıdaki örnek, <xref:System.Windows.VisualState> fare işaretçisi üzerine <xref:System.Windows.Controls.Button> geldiğinde görünümünü değiştiren öğesini gösterir. , Düğmesinin rengini `BorderBrush`değiştirerek düğmenin kenarlık rengini değiştirir.<xref:System.Windows.Media.Animation.Storyboard> Bu konunun <xref:System.Windows.Controls.ControlTemplate> başındaki örneğe başvurursanız, ' <xref:System.Windows.Controls.Border.Background%2A> nin `BorderBrush` <xref:System.Windows.Media.SolidColorBrush> ' a atanan öğesinin adı olduğunu anımsayın. <xref:System.Windows.Controls.Border>  
   
  [!code-xaml[VSMButtonTemplate#4](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#4)]  
   
- Denetim durumlarını ayrıntılı olarak ele denetim sözleşmesinin bir parçası olarak tanımlamaktan sorumludur [denetim sözleşmesi anlama tarafından diğer denetimleri özelleştirme](#customizing_other_controls_by_understanding_the_control_contract) bu konuda. Aşağıdaki tablo için belirtilen durumları listeler <xref:System.Windows.Controls.Button>.  
+ Denetim, bu konunun ilerleyen kısımlarında yer aldığı denetim [sözleşmesini Inceleyerek diğer denetimleri özelleştirme](#customizing_other_controls_by_understanding_the_control_contract) bölümünde ayrıntılı olarak bahsedilen denetim sözleşmesinin bir parçası olarak durumları tanımlamaktan sorumludur. Aşağıdaki tabloda, <xref:System.Windows.Controls.Button>için belirtilen durumlar listelenmektedir.  
   
-|VisualState adı|Visualstategroup'u adı|Açıklama|  
+|VisualState adı|VisualStateGroup adı|Açıklama|  
 |----------------------|---------------------------|-----------------|  
-|Normal|CommonStates|Varsayılan durumu.|  
-|Fareyi üzerine getirme|CommonStates|Fare işaretçisi denetimin üzerine yerleştirilir.|  
-|Basılan|CommonStates|Denetime basıldığında.|  
-|Devre dışı|CommonStates|Denetim devre dışıdır.|  
-|Odaklanmış|FocusStates|Denetim odağa sahip.|  
-|Plana odaklanmadan|FocusStates|Denetim odağa sahip değil.|  
+|Normal|Ortak durumlar|Varsayılan durum.|  
+|Gelme olayından|Ortak durumlar|Fare işaretçisi denetimin üzerine yerleştirilir.|  
+|Basılan|Ortak durumlar|Denetime basıldığında.|  
+|Devre dışı|Ortak durumlar|Denetim devre dışı bırakıldı.|  
+|Diğinize|Odaklardaki durumlar|Denetim odağa sahiptir.|  
+|Odaklanmadan gözetle|Odaklardaki durumlar|Denetimin odağı yok.|  
   
- <xref:System.Windows.Controls.Button> İki durum grubu tanımlar: `CommonStates` grubunu içeren `Normal`, `MouseOver`, `Pressed`, ve `Disabled` durumları. `FocusStates` Grubunu içeren `Focused` ve `Unfocused` durumları. Durumlar aynı durum grubu içinde birlikte kullanılamaz. Denetim grubu başına tam olarak bir durumda her zaman alır. Örneğin, bir <xref:System.Windows.Controls.Button> bile fare işaretçisi üzerinde bu nedenle olmadığında odak olabilir bir <xref:System.Windows.Controls.Button> içinde `Focused` durumu olabilir `MouseOver`, `Pressed`, veya `Normal` durumu.  
+ `CommonStates` `Normal` İkidurum`Pressed`grubunu `MouseOver`tanımlar: Grup,,, ve`Disabled` durumlarını içerir. <xref:System.Windows.Controls.Button> `FocusStates` Grup `Focused` ve durumlarını`Unfocused` içerir. Aynı durum grubundaki durumlar birbirini dışlıyor. Denetim her zaman grup başına tam olarak bir durumdur. Örneğin, fare işaretçisi <xref:System.Windows.Controls.Button> üzerine olmasa bile, bir, `MouseOver` `Focused` durumunda olan bir <xref:System.Windows.Controls.Button> , `Pressed`, veya `Normal` durumunda olabilir.  
   
- Eklediğiniz <xref:System.Windows.VisualState> nesneleri için <xref:System.Windows.VisualStateGroup> nesneleri. Eklediğiniz <xref:System.Windows.VisualStateGroup> nesneleri için <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özellik. Aşağıdaki örnek tanımlar <xref:System.Windows.VisualState> için nesneleri `Normal`, `MouseOver`, ve `Pressed` hepsini olan durumları `CommonStates` grubu. <xref:System.Windows.VisualState.Name%2A> Her <xref:System.Windows.VisualState> önceki tabloda adıyla aynıdır. `Disabled` Durumu ve durumlarda `FocusStates` grubu örneği kısa tutmak için atlanmış, ancak bu konunun sonunda Örneğin tamamını dahil edilir.  
+ Nesneleri <xref:System.Windows.VisualStateGroup> nesnelere <xref:System.Windows.VisualState> eklersiniz. <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> Eklenmiş özelliğe <xref:System.Windows.VisualStateGroup> nesneler eklersiniz. Aşağıdaki örnek,, <xref:System.Windows.VisualState> `MouseOver` `Normal` ve`Pressed`durumları için, Grupiçindeki`CommonStates` tüm nesneleri tanımlar. Öğesinin <xref:System.Windows.VisualState.Name%2A> her<xref:System.Windows.VisualState> biri, önceki tablodaki adla eşleşir. Örnekteki durum ve durumlar `FocusStates` , örnek kısa tutulması için atlanır, ancak bu konunun sonundaki tüm örneğe dahil edilir. `Disabled`  
   
 > [!NOTE]
->  Ayarladığınızdan emin olun <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> ekli özellik kök <xref:System.Windows.FrameworkElement> , <xref:System.Windows.Controls.ControlTemplate>.  
+> Öğesinin <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> kökünde<xref:System.Windows.FrameworkElement>iliştirilmiş özelliğini ayarladığınızdan emin olun. <xref:System.Windows.Controls.ControlTemplate>  
   
  [!code-xaml[VSMButtonTemplate#VisualStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualstates)]  
   
- Yukarıdaki örnekte, aşağıdaki çizimler için benzer bir çıktı üretir.  
+ Yukarıdaki örnek, aşağıdaki çizimlerle benzer bir çıktı üretir.  
   
- ![Bir özel denetim şablonu bir düğme. ](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
-Normal durumunda bir özel denetim şablonunu kullanan bir düğme  
+ ![Özel denetim şablonuyla bir düğme.](./media/ndp-buttonnormal.png "NDP_ButtonNormal")  
+Normal durumda özel denetim şablonu kullanan bir düğme  
   
- ![Kırmızı bir kenarlık bir düğme. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
-Bir özel denetim şablonu durum önizlemesini kullanan bir düğme  
+ ![Kırmızı kenarlıklı bir düğme.](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
+Üzerinde fare durumunda özel denetim şablonu kullanan bir düğme  
   
- ![Basılan düğmenin kenarlığı saydamdır. ](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
-Basılan durumda bir özel denetim şablonunu kullanan bir düğme  
+ ![Kenarlık, basılan düğmede saydamdır.](./media/ndp-buttonpressed.png "NDP_ButtonPressed")  
+Basılan durumda özel denetim şablonu kullanan bir düğme  
   
- Görsel durumları ile birlikte denetimler bulmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [denetim stilleri ve şablonları](control-styles-and-templates.md).  
+ İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimlerin görsel durumlarını bulmak için bkz. [denetim stilleri ve şablonları](control-styles-and-templates.md).  
   
 <a name="specifying_the_behavior_of_a_control_when_it_transitions_between_states"></a>   
-## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Durum arasında geçiş yaptığında, denetimin davranışını belirtme  
- Önceki örnekte, bir düğmenin görünümünü kullanıcı buna tıkladığında, ancak kullanıcı düğmeyi için tam bir saniye basılmadığı sürece etkisi görmez değiştirir. Varsayılan olarak, bir saniye içinde gerçekleşmesi animasyon alır. Kullanıcılar'a tıklayın ve çok daha kısa sürede bir düğme yayın olası olduğundan, görsel geri bildirim bırakırsanız etkili olmayacak <xref:System.Windows.Controls.ControlTemplate> varsayılan durumunda.  
+## <a name="specifying-the-behavior-of-a-control-when-it-transitions-between-states"></a>Durumlar arasında geçiş yaparken bir denetimin davranışını belirtme  
+ Yukarıdaki örnekte, düğme görünümü Kullanıcı tıkladığı zaman de değişir, ancak düğmeye tam bir saniye boyunca basıldığında kullanıcı etkisini görmez. Varsayılan olarak, animasyonun gerçekleşmesi bir saniye sürer. Kullanıcıların bir düğmeyi çok daha az zaman içinde tıkladığından ve serbest bırakacağından, varsayılan durumunda bıraktığınızda <xref:System.Windows.Controls.ControlTemplate> görsel geri bildirim etkili olmayacaktır.  
   
- Animasyon ekleyerek bir denetimi bir durumdan diğerine sorunsuz geçiş yapmak için gerçekleşmesi için geçen süreyi belirleyebilirsiniz <xref:System.Windows.VisualTransition> nesneleri için <xref:System.Windows.Controls.ControlTemplate>. Oluştururken bir <xref:System.Windows.VisualTransition>, aşağıdakilerden birini veya birkaçını belirtin:  
+ <xref:System.Windows.VisualTransition> '<xref:System.Windows.Controls.ControlTemplate>Ye nesneler ekleyerek bir denetimin bir durumdan diğerine düzgün bir şekilde geçişini sağlamak için animasyonun oluşma süresini belirtebilirsiniz. Bir <xref:System.Windows.VisualTransition>oluşturduğunuzda, aşağıdakilerden birini veya birkaçını belirtirsiniz:  
   
-- Oluştuğu durumlar arasında geçiş için geçen süre.  
+- Durumlar arasında geçiş için gereken süre.  
   
-- Geçiş yapıldığı sırada gerçekleşen ek değişiklikleri denetimin görünümü.  
+- Geçişin sırasında oluşan denetimin görünümünde ek değişiklikler.  
   
-- Hangi durumları <xref:System.Windows.VisualTransition> uygulanır.  
+- Hangi durumları uygulanacağını <xref:System.Windows.VisualTransition> belirtir.  
   
-### <a name="specifying-the-duration-of-a-transition"></a>Geçiş süresini belirleme  
- Ne kadar bir geçişin ayarlayarak alacağını belirtebilirsiniz <xref:System.Windows.VisualTransition.GeneratedDuration%2A> özelliği. Yukarıdaki örnekte sahip bir <xref:System.Windows.VisualState> düğmenin kenarlık düğmeye basıldığında, ancak animasyon düğme hızla basılı serbest ve belirgin olması için fazla uzun sürdüğü saydam olacağını belirtir. Kullanabileceğiniz bir <xref:System.Windows.VisualTransition> süreyi belirtmek için bu denetim basılı durumu geçiş alır. Aşağıdaki örnek, denetim bir yüzde birine basılı duruma geçmesine aldığını belirtir.  
+### <a name="specifying-the-duration-of-a-transition"></a>Bir geçişin süresini belirtme  
+ <xref:System.Windows.VisualTransition.GeneratedDuration%2A> Özelliği ayarlayarak bir geçişin ne kadar sürdüğünü belirtebilirsiniz. Yukarıdaki örnekte düğmeye basıldığında düğme <xref:System.Windows.VisualState> kenarlığının saydam hale geldiğini belirten bir, ancak düğmeye hızlı basıldığında ve serbest bırakıldığında animasyonun fark edilebilir olması çok uzun sürer. ' I kullanarak <xref:System.Windows.VisualTransition> , denetimin basılan duruma geçmesi için geçen süreyi belirleyebilirsiniz. Aşağıdaki örnek, denetimin saniyenin bir yüz, basılan duruma gitmesini belirtir.  
   
  [!code-xaml[VSMButtonTemplate#PressedTransition](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#pressedtransition)]  
   
-### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Geçiş sırasında denetimin görünümünü değişiklikleri belirtme  
- <xref:System.Windows.VisualTransition> İçeren bir <xref:System.Windows.Media.Animation.Storyboard> denetim durum arasında geçiş yaptığında başlar. Örneğin, belirli bir animasyonu gelen denetim geçiş yaptığında oluşur belirtebilirsiniz `MouseOver` durumunu `Normal` durumu. Aşağıdaki örnek, oluşturur bir <xref:System.Windows.VisualTransition> kullanıcı düğmenin fare işaretçisini hareket ettirdiğinde düğmenin kenarlık mavi, ardından sarı ardından siyah 1.5 saniye cinsinden değiştiğini belirtir.  
+### <a name="specifying-changes-to-the-controls-appearance-during-a-transition"></a>Geçiş sırasında denetimin görünümünde yapılan değişiklikleri belirtme  
+ Denetim durumlar arasında <xref:System.Windows.Media.Animation.Storyboard> geçiş yaptığında başlayan bir içerir.<xref:System.Windows.VisualTransition> Örneğin, Denetim `MouseOver` durumdan `Normal` duruma geçiş yaptığında belirli bir animasyonun meydana geldiğinden emin olabilirsiniz. Aşağıdaki örnek, Kullanıcı fare <xref:System.Windows.VisualTransition> işaretçisini düğmeden uzağa taşısa, düğme kenarlığının mavi, sonra sarı ve sonra 1,5 saniye içinde siyah olarak değiştiği belirten bir oluşturur.  
   
  [!code-xaml[VSMButtonTemplate#8](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#8)]  
   
 ### <a name="specifying-when-a-visualtransition-is-applied"></a>Bir VisualTransition uygulandığında belirtme  
- A <xref:System.Windows.VisualTransition> yalnızca belirli durumlar uygulamak için kısıtlı olabilir ya da uygulanabilir denetim geçişlerinden durumlar arasında istediğiniz zaman. Önceki örnekte, <xref:System.Windows.VisualTransition> denetim geçerse uygulanan `MouseOver` durumunu `Normal` durum; örnekte, önce <xref:System.Windows.VisualTransition> denetim uygulamasına gittiğinde uygulanan `Pressed` durumu. Ne zaman kısıtlama bir <xref:System.Windows.VisualTransition> ayarlayarak uygulanan <xref:System.Windows.VisualTransition.To%2A> ve <xref:System.Windows.VisualTransition.From%2A> özellikleri. Aşağıdaki tabloda, en kısıtlayıcı kısıtlaması için en az kısıtlayıcı düzeyleri açıklanmaktadır.  
+ <xref:System.Windows.VisualTransition> Yalnızca belirli durumlara uygulanabilir veya denetim durumları arasında geçiş yapıldığında uygulanabilir. <xref:System.Windows.VisualTransition> Yukarıdaki örnekte `Pressed` , Denetim `MouseOver` durumdan `Normal` duruma geçtiğinde uygulanır <xref:System.Windows.VisualTransition> ; önceki örnekte, denetim duruma geçtiğinde uygulanır.... Ve <xref:System.Windows.VisualTransition.To%2A> <xref:System.Windows.VisualTransition> özellikleriniayarlayarak,nezamanuygulanacağınıkısıtlayabilirsiniz<xref:System.Windows.VisualTransition.From%2A> . Aşağıdaki tabloda, en kısıtlayıcı kısıtlama düzeyi en az kısıtlayıcı olan kısıtlama düzeyleri açıklanmaktadır.  
   
-|Kısıtlama türü|Gelen değeri|İçin değeri|  
+|Kısıtlama türü|Değerin değeri|Öğesinin değeri|  
 |-------------------------|-------------------|-----------------|  
-|Belirtilen bir durumdan başka bir belirtilen duruma|Adı bir <xref:System.Windows.VisualState>|Adı bir <xref:System.Windows.VisualState>|  
-|Belirli bir duruma herhangi durumundan|Ayarlı değil|Adı bir <xref:System.Windows.VisualState>|  
-|Herhangi bir durumu için belirtilen bir durum|Adı bir <xref:System.Windows.VisualState>|Ayarlı değil|  
-|Bir durumdan diğer bir duruma|Ayarlı değil|Ayarlı değil|  
+|Belirtilen bir durumdan belirtilen başka bir duruma|Öğesinin adı<xref:System.Windows.VisualState>|Öğesinin adı<xref:System.Windows.VisualState>|  
+|Herhangi bir durumdan belirtilen duruma|Ayarlı değil|Öğesinin adı<xref:System.Windows.VisualState>|  
+|Belirtilen bir durumdan herhangi bir duruma|Öğesinin adı<xref:System.Windows.VisualState>|Ayarlı değil|  
+|Herhangi bir durumdan diğer bir duruma|Ayarlı değil|Ayarlı değil|  
   
- Birden çok olabilir <xref:System.Windows.VisualTransition> nesneler bir <xref:System.Windows.VisualStateGroup> aynı durumuna bakın, ancak önceki tabloda belirten sırayla kullanılır. Aşağıdaki örnekte, var olan iki <xref:System.Windows.VisualTransition> nesneleri. Denetimin ne zaman değişir `Pressed` durumunu `MouseOver` durumu <xref:System.Windows.VisualTransition> hem de olan <xref:System.Windows.VisualTransition.From%2A> ve <xref:System.Windows.VisualTransition.To%2A> kümesi kullanılır. Denetim olmayan bir durumu ne zaman geçiş `Pressed` için `MouseOver` durumuna başka bir duruma kullanılır.  
+ Aynı duruma başvuran bir <xref:System.Windows.VisualTransition> <xref:System.Windows.VisualStateGroup> içinde birden fazla nesneniz olabilir, ancak bunlar önceki tablonun belirttiği sırada kullanılacaktır. Aşağıdaki örnekte iki <xref:System.Windows.VisualTransition> nesne vardır. Denetim `Pressed` durumdan `MouseOver` duruma geçerse, <xref:System.Windows.VisualTransition> hem hem <xref:System.Windows.VisualTransition.From%2A> de<xref:System.Windows.VisualTransition.To%2A> kümesi kullanılır. Denetim, `Pressed` `MouseOver` durum olmayan bir durumdan geçerse, diğer durum kullanılır.  
   
  [!code-xaml[VSMButtonTemplate#7](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#7)]  
   
- <xref:System.Windows.VisualStateGroup> Sahip bir <xref:System.Windows.VisualStateGroup.Transitions%2A> içeren özellik <xref:System.Windows.VisualTransition> uygulamak nesneleri <xref:System.Windows.VisualState> nesneler <xref:System.Windows.VisualStateGroup>. Olarak <xref:System.Windows.Controls.ControlTemplate> yazar, herhangi bir dosyayı eklemek ücretsiz <xref:System.Windows.VisualTransition> istediğiniz. Ancak, varsa <xref:System.Windows.VisualTransition.To%2A> ve <xref:System.Windows.VisualTransition.From%2A> özellikleri olmayan durum adlarını ayarlanır <xref:System.Windows.VisualStateGroup>, <xref:System.Windows.VisualTransition> göz ardı edilir.  
+ <xref:System.Windows.VisualStateGroup.Transitions%2A> <xref:System.Windows.VisualTransition> , İçindeki nesneler<xref:System.Windows.VisualState> için uygulanan <xref:System.Windows.VisualStateGroup> nesneleriiçeren<xref:System.Windows.VisualStateGroup>bir özelliğine sahiptir. Yazar olarak, istediğiniz her türlü <xref:System.Windows.VisualTransition> dahil edebilirsiniz. <xref:System.Windows.Controls.ControlTemplate> Ancak, <xref:System.Windows.VisualTransition.From%2A> <xref:System.Windows.VisualStateGroup>veözellikleri içinde<xref:System.Windows.VisualTransition> olmayan durum adlarına ayarlanmışsa, yok sayılır. <xref:System.Windows.VisualTransition.To%2A>  
   
- Aşağıdaki örnekte gösterildiği <xref:System.Windows.VisualStateGroup> için `CommonStates`. Örnek tanımlayan bir <xref:System.Windows.VisualTransition> düğmenin aşağıdakilerin her geçiş için.  
+ Aşağıdaki örnek, <xref:System.Windows.VisualStateGroup> `CommonStates`için ' i gösterir. Örnek, her düğmenin <xref:System.Windows.VisualTransition> aşağıdaki geçişleri için bir tanımlar.  
   
-- İçin `Pressed` durumu.  
+- `Pressed` Durumuna göre.  
   
-- İçin `MouseOver` durumu.  
+- `MouseOver` Durumuna göre.  
   
-- Gelen `Pressed` durumunu `MouseOver` durumu.  
+- `Pressed` Durumdan`MouseOver` durumuna.  
   
-- Gelen `MouseOver` durumunu `Normal` durumu.  
+- `MouseOver` Durumdan`Normal` durumuna.  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
 <a name="customizing_other_controls_by_understanding_the_control_contract"></a>   
-## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Denetim sözleşmesi anlayarak diğer denetimleri özelleştirme  
- Kullanan bir denetim bir <xref:System.Windows.Controls.ControlTemplate> visual yapısını belirtmek için (kullanarak <xref:System.Windows.FrameworkElement> nesneleri) ve görsel davranışını (kullanarak <xref:System.Windows.VisualState> nesneleri) bölümleri denetimi modeli kullanır. Dahil olan denetimlerin birçok [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 4 Bu modeli kullanın. Bölümleri, bir <xref:System.Windows.Controls.ControlTemplate> Yazar farkında olması gerekiyor denetim sözleşmesi iletilir. Denetim sözleşmesi bölümlerini anladığınızda, bölümleri denetimi modeli kullanır. herhangi bir denetimin görünümünü özelleştirebilirsiniz.  
+## <a name="customizing-other-controls-by-understanding-the-control-contract"></a>Denetim sözleşmesini anlamak için diğer denetimleri özelleştirme  
+ Görsel yapısını (nesneleri kullanarak <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.FrameworkElement> ) ve görsel davranışı (nesneleri kullanarak <xref:System.Windows.VisualState> ) belirtmek için kullanan bir denetim, parçalar Denetim modelini kullanır. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 4 ' te yer alan denetimlerin birçoğu bu modeli kullanır. Bir <xref:System.Windows.Controls.ControlTemplate> yazarın farkında olması gereken bölümler denetim sözleşmesiyle iletilir. Bir denetim sözleşmesinin parçalarını anladığınızda, bölümler denetim modelini kullanan herhangi bir denetimin görünümünü özelleştirebilirsiniz.  
   
- Denetim sözleşmesi üç öğe vardır:  
+ Bir denetim sözleşmesinin üç öğesi vardır:  
   
-- Görsel öğeler denetimin mantığı kullanır.  
+- Denetimin mantığının kullandığı görsel öğeler.  
   
-- Denetim ve her durumun ait olduğu Grup durumları.  
+- Denetimin durumları ve her durumun ait olduğu grup.  
   
-- Denetimin görsel olarak etkileyen genel özellikler.  
+- Denetimi görsel olarak etkileyen ortak özellikler.  
   
-### <a name="visual-elements-in-the-control-contract"></a>Denetim sözleşmesi görsel öğe  
- Bazen bir denetimin mantığı ile etkileşime giren bir <xref:System.Windows.FrameworkElement> alanında <xref:System.Windows.Controls.ControlTemplate>. Örneğin, Denetim öğelerinden biri olay işleyebilir. Ne zaman bir denetim bekliyor belirli bir bulmak <xref:System.Windows.FrameworkElement> içinde <xref:System.Windows.Controls.ControlTemplate>, bu bilgileri iletmek gerekir <xref:System.Windows.Controls.ControlTemplate> yazar. Denetimi kullanan <xref:System.Windows.TemplatePartAttribute> türü beklenen öğe ve neler öğe adı olması gerektiğini belirtmek için. <xref:System.Windows.Controls.Button> Olmayan <xref:System.Windows.FrameworkElement> denetim sözleşmesi, ancak diğer denetimler gibi bölümleri <xref:System.Windows.Controls.ComboBox>, yapın.  
+### <a name="visual-elements-in-the-control-contract"></a>Denetim sözleşmesindeki görsel öğeler  
+ Bazen bir denetimin mantığı, <xref:System.Windows.FrameworkElement> <xref:System.Windows.Controls.ControlTemplate>içinde olan ile etkileşime girer. Örneğin, denetim öğelerinden birinin bir olayını işleyebilir. Bir denetim <xref:System.Windows.FrameworkElement> <xref:System.Windows.Controls.ControlTemplate> içinde belirli bir ' ibulmayıbekliyorsa,bubilgileriyazarailetmelidir.<xref:System.Windows.Controls.ControlTemplate> Denetim, <xref:System.Windows.TemplatePartAttribute> beklenen öğe türünü ve öğenin adının ne olması gerektiğini belirtmek için öğesini kullanır. , Denetim sözleşmesinde <xref:System.Windows.Controls.ComboBox>parçalar içermez, ancak gibi diğer denetimler. <xref:System.Windows.FrameworkElement> <xref:System.Windows.Controls.Button>  
   
- Aşağıdaki örnekte gösterildiği <xref:System.Windows.TemplatePartAttribute> üzerinde belirtilen nesneleri <xref:System.Windows.Controls.ComboBox> sınıfı. Mantığını <xref:System.Windows.Controls.ComboBox> bulmayı beklediği bir <xref:System.Windows.Controls.TextBox> adlı `PART_EditableTextBox` ve <xref:System.Windows.Controls.Primitives.Popup> adlı `PART_Popup` içinde kendi <xref:System.Windows.Controls.ControlTemplate>.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.ComboBox> sınıfında belirtilen <xref:System.Windows.TemplatePartAttribute> nesneleri gösterir. Mantığı <xref:System.Windows.Controls.ComboBox> adında bir <xref:System.Windows.Controls.TextBox> adlandırılmış `PART_EditableTextBox` ve <xref:System.Windows.Controls.Primitives.Popup> adı bulmayı`PART_Popup`bekler .<xref:System.Windows.Controls.ControlTemplate>  
   
  [!code-csharp[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#comboboxcontract)]
  [!code-vb[VSMButtonTemplate#ComboBoxContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#comboboxcontract)]  
   
- Aşağıdaki örnek bir Basitleştirilmiş gösterir <xref:System.Windows.Controls.ControlTemplate> için <xref:System.Windows.Controls.ComboBox> tarafından belirtilen öğeleri içeren <xref:System.Windows.TemplatePartAttribute> üzerindeki nesneleri <xref:System.Windows.Controls.ComboBox> sınıfı.  
+ Aşağıdaki <xref:System.Windows.Controls.ControlTemplate> örnek, <xref:System.Windows.Controls.ComboBox> <xref:System.Windows.TemplatePartAttribute> sınıfındaki nesneler<xref:System.Windows.Controls.ComboBox> tarafından belirtilen öğeleri içeren için basitleşme gösterir.  
   
  [!code-xaml[VSMButtonTemplate#ComboBoxTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/window1.xaml#comboboxtemplate)]  
   
-### <a name="states-in-the-control-contract"></a>Denetim sözleşmesi durumları  
- Bir denetim durumlarını da Denetim sözleşmesi parçasıdır. Örnek oluşturma bir <xref:System.Windows.Controls.ControlTemplate> için bir <xref:System.Windows.Controls.Button> gösterilmektedir görünümünü belirtmek bir <xref:System.Windows.Controls.Button> kendi durumlarını bağlı olarak. Oluşturduğunuz bir <xref:System.Windows.VisualState> her durum belirttiniz ve tüm <xref:System.Windows.VisualState> nesneleri paylaşan bir <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> içinde bir <xref:System.Windows.VisualStateGroup>anlatılan şekilde [denetim bağlı olarak kendi durumu görünümünü değiştirme](#changing_the_appearance_of_a_control_depending_on_its_state) bu önceki konu. Üçüncü taraf denetimleri kullanarak durumları belirtmelidir <xref:System.Windows.TemplateVisualStateAttribute>, denetim şablonları yazma denetimin durumları göstermek için Expression Blend gibi tasarımcı araçları sağlar.  
+### <a name="states-in-the-control-contract"></a>Denetim sözleşmesindeki durumlar  
+ Bir denetimin durumları da denetim sözleşmesinin bir parçasıdır. Bir <xref:System.Windows.Controls.ControlTemplate> içinoluşturma<xref:System.Windows.Controls.Button> örneği, durumlarına bağlı olarak görünümünü nasıl belirttiğinize gösterir.<xref:System.Windows.Controls.Button> Bir denetimin görünümünü <xref:System.Windows.VisualState> bu konunun önceki [durumuna göre değiştirme](#changing_the_appearance_of_a_control_depending_on_its_state) bölümünde açıklandığı gibi, belirtilen <xref:System.Windows.TemplateVisualStateAttribute.GroupName%2A> her bir <xref:System.Windows.VisualStateGroup>durum için bir oluşturur ve ' a paylaşan tüm <xref:System.Windows.VisualState> nesneleri ' a yerleştirebilirsiniz. Üçüncü taraf denetimleri,, ifade Blend gibi tasarımcı araçlarının <xref:System.Windows.TemplateVisualStateAttribute>denetim şablonlarının yazma durumlarını açığa çıkarmak için kullanarak durumları belirtmelidir.  
   
- Denetim sözleşmesi bulunan denetimleri bulmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [denetim stilleri ve şablonları](control-styles-and-templates.md).  
+ İçindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]denetimlerin denetim sözleşmesini bulmak için bkz. [denetim stilleri ve şablonları](control-styles-and-templates.md).  
   
-### <a name="properties-in-the-control-contract"></a>Denetim sözleşmesi özellikleri  
- Denetimin görsel olarak etkileyen genel özelliklerini de denetimi sözleşmede dahil edilir. Yeni bir oluşturmadan denetiminin görünümünü değiştirmek için bu özellikleri ayarlayabilirsiniz <xref:System.Windows.Controls.ControlTemplate>. Ayrıca [TemplateBinding](../advanced/templatebinding-markup-extension.md) bulunan öğelerin özelliklerini bağlamak için işaretleme uzantısı <xref:System.Windows.Controls.ControlTemplate> tarafından tanımlanan ortak özelliklere <xref:System.Windows.Controls.Button>.  
+### <a name="properties-in-the-control-contract"></a>Denetim sözleşmesindeki Özellikler  
+ Denetimi görsel olarak etkileyen ortak özellikler Denetim sözleşmesine de dahildir. Bu özellikleri, denetimin görünümünü yeni <xref:System.Windows.Controls.ControlTemplate>bir oluşturmadan değiştirecek şekilde ayarlayabilirsiniz. Tarafından [](../advanced/templatebinding-markup-extension.md) <xref:System.Windows.Controls.ControlTemplate> tanımlananortaközelliklerdeolanöğelerinözelliklerinibağlamakiçinTemplateBindingbiçimlendirmeuzantısınıda<xref:System.Windows.Controls.Button>kullanabilirsiniz.  
   
- Aşağıdaki örnek, düğme için Denetim sözleşmesi gösterir.  
+ Aşağıdaki örnek, düğme için denetim sözleşmesini gösterir.  
   
  [!code-csharp[VSMButtonTemplate#ButtonContract](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/controlcontracts.cs#buttoncontract)]
  [!code-vb[VSMButtonTemplate#ButtonContract](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmbuttontemplate/visualbasic/window1.xaml.vb#buttoncontract)]  
   
- Oluştururken bir <xref:System.Windows.Controls.ControlTemplate>, genellikle varolan ile başlamak kolay <xref:System.Windows.Controls.ControlTemplate> ve ona değişiklikler. Varolan değiştirmek için aşağıdakilerden birini yapabilirsiniz <xref:System.Windows.Controls.ControlTemplate>:  
+ Bir <xref:System.Windows.Controls.ControlTemplate>oluştururken, varolan <xref:System.Windows.Controls.ControlTemplate> bir ile başlamak ve üzerinde değişiklik yapmak genellikle en kolay yoldur. Varolan <xref:System.Windows.Controls.ControlTemplate>bir değişikliği değiştirmek için aşağıdakilerden birini yapabilirsiniz:  
   
-- Denetim şablonları oluşturmak için bir grafik kullanıcı arabirimi sağlayan Expression Blend gibi bir tasarımcı kullanır. Daha fazla bilgi için [Şablonları destekleyen bir denetime stil uygulama](https://go.microsoft.com/fwlink/?LinkId=161153).  
+- Denetim şablonları oluşturmak için grafik kullanıcı arabirimi sağlayan Ifade Blend gibi bir tasarımcı kullanın. Daha fazla bilgi için bkz. [şablonları destekleyen bir denetimin stillendirme](https://go.microsoft.com/fwlink/?LinkId=161153).  
   
-- Varsayılan <xref:System.Windows.Controls.ControlTemplate> ve düzenleyin. Varsayılan, dahil olan denetim şablonları bulmak için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], bkz: [varsayılan WPF temaları](https://go.microsoft.com/fwlink/?LinkID=158252).  
+- Varsayılanı <xref:System.Windows.Controls.ControlTemplate> alın ve düzenleyin. İle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]birlikte gelen varsayılan denetim şablonlarını bulmak için bkz. [varsayılan WPF temaları](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Tam Örnek  
- Aşağıdaki örnek, tam gösterir <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> bu konuda ele alınmıştır.  
+ Aşağıdaki örnek, bu konuda ele <xref:System.Windows.Controls.Button> alınan tamamlanmış <xref:System.Windows.Controls.ControlTemplate> işlemi gösterir.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   

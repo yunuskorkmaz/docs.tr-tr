@@ -7,12 +7,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: ff43fa1d3019af5cd08f86704a05531120201d17
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fdaa4b511b18495d2a35f72ee017a01aab0b4ee8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596024"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922048"
 ---
 # <a name="using-properties-c-programming-guide"></a>Özellikleri Kullanma (C# Programlama Kılavuzu)
 Özellikler her iki alanın ve yöntemin yönlerini birleştirir. Bir nesnenin kullanıcısına, bir özellik bir alan gibi görünür, özelliğe erişim de aynı sözdizimini gerektirir. Bir sınıfın uygulayıcısı için bir özellik bir veya iki kod blobunun yanı sıra bir [Get](../../language-reference/keywords/get.md) erişimcisini ve/veya [set](../../language-reference/keywords/set.md) erişimcisini temsil eder. `get` Erişimci için kod bloğu, özellik okuma sırasında yürütülür. `set` erişimci için kod bloğu, özelliğe yeni bir değer atandığında yürütülür. `set` Erişimcisi olmayan bir özellik salt okunurdur. `get` Erişimcisi olmayan bir özellik salt yazılır olarak değerlendirilir. Her iki erişimciyi sahip bir özellik okuma-yazma ' dır.  
@@ -71,7 +71,7 @@ ms.locfileid: "69596024"
  Sanal bir özelliği geçersiz kılan bir özellik de [mühürlenebilir](../../language-reference/keywords/sealed.md), bu da türetilmiş sınıflar için artık sanal değildir. Son olarak, bir özellik [soyut](../../language-reference/keywords/abstract.md)olarak bildirilemez. Bu, sınıfta bir uygulama olmadığı ve türetilen sınıfların kendi uygulamasını yazması gerektiği anlamına gelir. Bu seçenekler hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](./abstract-and-sealed-classes-and-class-members.md).  
   
 > [!NOTE]
->  [Statik](../../language-reference/keywords/static.md) bir özelliğin erişimcisi üzerinde [sanal](../../language-reference/keywords/virtual.md), [Özet](../../language-reference/keywords/abstract.md)veya [geçersiz kılma](../../language-reference/keywords/override.md) değiştiricisi kullanmak hatadır.  
+> [Statik](../../language-reference/keywords/static.md) bir özelliğin erişimcisi üzerinde [sanal](../../language-reference/keywords/virtual.md), [Özet](../../language-reference/keywords/abstract.md)veya [geçersiz kılma](../../language-reference/keywords/override.md) değiştiricisi kullanmak hatadır.  
   
 ## <a name="example"></a>Örnek  
  Bu örnek örnek, statik ve salt okunurdur özelliklerini gösterir. Klavye üzerinden çalışanın adını kabul eder, 1 artırır `NumberOfEmployees` ve çalışan adını ve numarasını görüntüler.  

@@ -1,16 +1,16 @@
 ---
-title: (Varlıktan, SQL)
+title: (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 77e22a64310959f66af14137f312b225d42fe56f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662162"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950362"
 ---
-# <a name="from-entity-sql"></a>(Varlıktan, SQL)
-Kullanılan koleksiyon belirtir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimleri.  
+# <a name="from-entity-sql"></a>(Entity SQL)
+[Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimlerinde kullanılan koleksiyonu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,133 +20,133 @@ FROM expression [ ,...n ] as C
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Bir kaynağı olarak kullanılacak bir koleksiyon verir herhangi bir geçerli sorgu ifade bir `SELECT` deyimi.  
+ Bir `SELECT` deyimde kaynak olarak kullanılacak bir koleksiyon veren geçerli bir sorgu ifadesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- A `FROM` yan tümcesi, bir veya daha fazla virgülle ayrılmış listesi `FROM` yan tümcesi öğeleri. `FROM` Yan tümcesi için bir veya daha fazla kaynakları belirtmek için kullanılabilir bir `SELECT` deyimi. En basit biçimi bir `FROM` yan tümcesi olan bir koleksiyon ve kaynak olarak kullanılan bir diğer ad tanımlayan tek bir sorgu ifadesinin bir `SELECT` aşağıdaki örnekte gösterildiği gibi deyimi:  
+ Yan tümce bir veya daha fazla `FROM` yan tümce öğesinin virgülle ayrılmış listesidir. `FROM` Yan `FROM` tümce, bir `SELECT` deyimin bir veya daha fazla kaynağını belirtmek için kullanılabilir. `FROM` Yan tümcesinin en basit biçimi, aşağıdaki örnekte gösterildiği gibi bir koleksiyonu ve bir `SELECT` deyimde kaynak olarak kullanılan diğer adı tanımlayan tek bir sorgu deyimidir:  
   
  `FROM C as c`  
   
-## <a name="from-clause-items"></a>Yan tümcesi öğeleri  
- Her `FROM` yan tümce öğesi bir kaynak koleksiyonu başvurduğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aşağıdaki sınıfları destekler `FROM` yan öğeler: basit `FROM` yan tümcesi öğeleri `JOIN FROM` yan tümcesi öğeleri ve `APPLY FROM` yan tümcesi öğeleri. Bunların her biri `FROM` yan öğeler aşağıdaki bölümlerde daha ayrıntılı açıklanmıştır.  
+## <a name="from-clause-items"></a>FROM yan tümce öğeleri  
+ Her `FROM` yan tümce öğesi [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgudaki bir kaynak koleksiyonu ifade eder. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Aşağıdaki `FROM` yan tümce öğelerini destekler: basit `FROM` yan tümce öğeleri, `JOIN FROM` yan tümce öğeleri ve `APPLY FROM` yan tümce öğeleri. Bu `FROM` yan tümce öğelerinin her biri, aşağıdaki bölümlerde daha ayrıntılı olarak açıklanmıştır.  
   
-### <a name="simple-from-clause-item"></a>Basit yan tümce öğesi  
- En basit `FROM` yan tümce öğesi olan bir koleksiyon ve bir diğer ad tanımlayan tek bir ifade. İfade, yalnızca bir varlık kümesini veya alt sorgu veya koleksiyon türü herhangi bir ifade olabilir. Bir örnek verilmiştir:  
+### <a name="simple-from-clause-item"></a>Basit FROM yan tümce öğesi  
+ En basit `FROM` yan tümce öğesi, bir koleksiyonu ve diğer adı tanımlayan tek bir ifadedir. İfade yalnızca bir varlık kümesi veya bir alt sorgu ya da bir koleksiyon türü olan başka bir ifade olabilir. Aşağıda bir örnek verilmiştir:  
   
 ```  
 LOB.Customers as c  
 ```  
   
- Diğer ad belirtimi isteğe bağlıdır. Yan tümce öğesi Yukarıdakilerden alternatif bir belirtimi şu olabilir:  
+ Diğer ad belirtimi isteğe bağlıdır. Yukarıdaki from yan tümcesi öğesinin alternatif bir belirtimi şunlar olabilir:  
   
 ```  
 LOB.Customers  
 ```  
   
- Diğer ad yok belirtilirse, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] koleksiyon ifadeye göre bir diğer ad oluşturmaya çalışır.  
+ Diğer ad belirtilmemişse, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] koleksiyon ifadesini temel alan bir diğer ad oluşturmaya çalışır.  
   
-### <a name="join-from-clause-item"></a>FROM yan tümce öğesi katılın  
- A `JOIN FROM` yan tümce öğesi temsil eder, ikisi arasında bir birleştirme `FROM` yan tümcesi öğeleri. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] destekler, birleşimler, İç birleşimler sol ve sağ dış birleşimler ve tam dış birleştirmeler arası. Bu birleştirme benzer şekilde, Transact-SQL desteklenir desteklenir. Transact-SQL, iki olduğu gibi `FROM` söz konusu yan tümcesi öğeleri `JOIN` bağımsız olmalıdır. Diğer bir deyişle, bunlar büyük olamaz. A `CROSS APPLY` veya `OUTER APPLY` bu durumlarda kullanılabilir.  
+### <a name="join-from-clause-item"></a>Yan tümce öğesinden BIrLEŞTIr  
+ Yan tümce öğesi iki `FROM` yan tümce öğesi arasında bir birleştirmeyi temsil eder. `JOIN FROM` [!INCLUDE[esql](../../../../../../includes/esql-md.md)]çapraz birleştirmeleri, iç birleştirmeleri, sol ve sağ dış birleştirmeleri ve tam dış birleştirmeleri destekler. Tüm bu birleştirmeler Transact-SQL ' de desteklendikleri yönteme benzer şekilde desteklenmektedir. Transact-SQL ' de olduğu gibi, `FROM` `JOIN` içinde yer alan iki yan tümce öğesi bağımsız olmalıdır. Diğer bir deyişle, bağıntılı olamaz. Bu durumlar `OUTER APPLY` için veyakullanılabilir.`CROSS APPLY`  
   
-#### <a name="cross-joins"></a>Çapraz birleştirme  
- A `CROSS JOIN` sorgu ifadesi, aşağıdaki örnekte gösterildiği gibi iki koleksiyon Kartezyen ürün oluşturur:  
+#### <a name="cross-joins"></a>Çapraz birleşimler  
+ Bir `CROSS JOIN` sorgu ifadesi, aşağıdaki örnekte gösterildiği gibi iki koleksiyonun Kartezyen çarpımını üretir:  
   
  `FROM C AS c CROSS JOIN D as d`  
   
-#### <a name="inner-joins"></a>İç birleşimler  
- Bir `INNER JOIN` aşağıdaki örnekte gösterildiği gibi iki koleksiyon kısıtlanmış bir Kartezyen ürün oluşturur:  
+#### <a name="inner-joins"></a>İç birleştirmeler  
+ , Aşağıdaki örnekte gösterildiği gibi iki koleksiyonun kısıtlı bir Kartezyen ürününü üretir:`INNER JOIN`  
   
  `FROM C AS c [INNER] JOIN D AS d ON e`  
   
- Önceki sorgu ifadesinin sağ nerede hakkında koleksiyonun her öğesine karşı eşleştirilmiş sol taraftaki koleksiyonun her öğesine bir birleşimini işler `ON` koşul true ise. Hayır ise `ON` koşul belirtilirse, bir `INNER JOIN` için degenerates bir `CROSS JOIN`.  
+ Önceki sorgu ifadesi, `ON` koşulun doğru olduğu yerde, sağ taraftaki koleksiyonun her öğesine karşı, sol taraftaki koleksiyonun her öğesinin bir birleşimini işler. Herhangi `ON` `CROSS JOIN`bir `INNER JOIN` koşul belirtilmemişse, bir, bir ' a üretir.  
   
-#### <a name="left-outer-joins-and-right-outer-joins"></a>Sol dış birleştirmeler ve sağ dış birleşimler  
- Bir `OUTER JOIN` sorgu ifadesi, aşağıdaki örnekte gösterildiği gibi iki koleksiyon kısıtlanmış bir Kartezyen ürün oluşturur:  
+#### <a name="left-outer-joins-and-right-outer-joins"></a>Sol dış birleşimler ve sağ dış birleşimler  
+ Bir `OUTER JOIN` sorgu ifadesi, aşağıdaki örnekte gösterildiği gibi iki koleksiyonun kısıtlı bir Kartezyen ürününü üretir:  
   
  `FROM C AS c LEFT OUTER JOIN D AS d ON e`  
   
- Önceki sorgu ifadesinin sağ nerede hakkında koleksiyonun her öğesine karşı eşleştirilmiş sol taraftaki koleksiyonun her öğesine bir birleşimini işler `ON` koşul true ise. Varsa `ON` koşul false ise, ifade hala öğesi null değerine sahip sağdaki karşı eşleştirilmiş soldaki öğeyi tek bir örneğini işler.  
+ Önceki sorgu ifadesi, `ON` koşulun doğru olduğu yerde, sağ taraftaki koleksiyonun her öğesine karşı, sol taraftaki koleksiyonun her öğesinin bir birleşimini işler. `ON` Koşul false ise, ifade, sol taraftaki öğenin tek bir örneğini, null değeri ile sağ taraftaki öğeye karşı işler.  
   
- A `RIGHT OUTER JOIN` benzer bir şekilde ifade edilebilir.  
+ `RIGHT OUTER JOIN` Benzer bir şekilde ifade edilebilir.  
   
 #### <a name="full-outer-joins"></a>Tam dış birleşimler  
- Açık bir `FULL OUTER JOIN` aşağıdaki örnekte gösterildiği gibi iki koleksiyon kısıtlanmış bir Kartezyen ürün oluşturur:  
+ Açık `FULL OUTER JOIN` , aşağıdaki örnekte gösterildiği gibi iki koleksiyonun kısıtlı bir Kartezyen çarpımını üretir:  
   
  `FROM C AS c FULL OUTER JOIN D AS d ON e`  
   
- Önceki sorgu ifadesinin sağ nerede hakkında koleksiyonun her öğesine karşı eşleştirilmiş sol taraftaki koleksiyonun her öğesine bir birleşimini işler `ON` koşul true ise. Varsa `ON` koşul false ise, ifade hala öğesi null değerine sahip sağdaki karşı eşleştirilmiş soldaki öğesinin bir örneğini işler. Ayrıca, öğe null değeri ile sol taraftaki karşı eşleştirilmiş sağdaki öğesinin bir örneğini işler.  
+ Önceki sorgu ifadesi, `ON` koşulun doğru olduğu yerde, sağ taraftaki koleksiyonun her öğesine karşı, sol taraftaki koleksiyonun her öğesinin bir birleşimini işler. `ON` Koşul false ise, ifade, sol taraftaki öğenin bir örneğini, null değeri ile sağ taraftaki öğeye karşı işler. Ayrıca, sol taraftaki öğenin bir örneğini solda, null değeriyle birlikte işler.  
   
 > [!NOTE]
->  SQL-92, Transact-SQL ile uyumluluğu korumak için dış anahtar sözcüğü isteğe bağlıdır. Bu nedenle, `LEFT JOIN`, `RIGHT JOIN`, ve `FULL JOIN` için eş anlamlı sözcükler olan `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, ve `FULL OUTER JOIN`.  
+> SQL-92 ile uyumluluğu korumak için Transact-SQL içinde DıŞTAKI anahtar sözcüğü isteğe bağlıdır. `LEFT OUTER JOIN` Bunedenle`RIGHT OUTER JOIN`,, ve `FULL JOIN` ,, ve için`FULL OUTER JOIN`eşanlamlılardır. `LEFT JOIN` `RIGHT JOIN`  
   
-### <a name="apply-clause-item"></a>Geçerli yan tümce öğesi  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür destekler, `APPLY`: `CROSS APPLY` ve `OUTER APPLY`.  
+### <a name="apply-clause-item"></a>APPLY yan tümce öğesi  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]iki tür `APPLY`destekler: `CROSS APPLY` ve `OUTER APPLY`.  
   
- A `CROSS APPLY` sol taraftaki koleksiyonun her öğesine sağ ifade tarafından değerlendirilen koleksiyonun bir öğesi ile benzersiz eşleştirmesi üretir. İle bir `CROSS APPLY`, sağdaki ifade ilişkili koleksiyon aşağıdaki örnekte gösterildiği gibi işlevsel olarak öğe sol taraftaki bağlıdır:  
+ , `CROSS APPLY` Sağ taraftaki ifade hesaplanarak oluşturulan koleksiyonun öğesi ile sol taraftaki koleksiyonun her bir öğesi için benzersiz bir eşleştirme üretir. `CROSS APPLY`İle, sağ taraftaki ifade, aşağıdaki ilişkili koleksiyon örneğinde gösterildiği gibi, sol taraftaki öğeye göre değişir:  
   
  `SELECT c, f FROM C AS c CROSS APPLY c.Assoc AS f`  
   
- Davranışını `CROSS APPLY` birleştirme listeye benzer. Sağ ifade boş bir koleksiyon olarak değerlendirilirse `CROSS APPLY` öğenin sol taraftaki Bu örnek için hiçbir değer çiftlerini oluşturur.  
+ Davranışı `CROSS APPLY` , JOIN listesine benzerdir. Sağdaki ifade boş bir koleksiyon `CROSS APPLY` olarak değerlendirilirse, sol taraftaki öğenin bu örneği için hiçbir eşleşme üretmez.  
   
- Bir `OUTER APPLY` benzer bir `CROSS APPLY`bile boş bir koleksiyon için sağ taraftaki ifade sonucunu verdiğinde bir eşleştirme hala üretilen dışında. Aşağıdaki örneğidir bir `OUTER APPLY`:  
+ Bir eşleşme, `CROSS APPLY`sağdaki ifade boş bir koleksiyon olarak değerlendirilse bile hala üretildiğinde, bir a benzerdir.`OUTER APPLY` Aşağıda bir `OUTER APPLY`örneği verilmiştir:  
   
  `SELECT c, f FROM C AS c OUTER APPLY c.Assoc AS f`  
   
 > [!NOTE]
->  Farklı olarak Transact-SQL, gerek yoktur için bir açık unnest adımda [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+> Transact-SQL ' den farklı olarak, içinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)]açık iç içe olmayan bir adım yoktur.  
   
 > [!NOTE]
->  `CROSS` ve `OUTER APPLY` işleçleri, SQL Server 2005'te sunulmuştur. Bazı durumlarda, sorgu işlem hattındaki içeren Transact-SQL üretebilir `CROSS APPLY` ve/veya `OUTER APPLY` işleçleri. SQL Server'ın SQL Server 2005'ten önceki sürümlerinde de dahil olmak üzere bazı arka uç sağlayıcıları bu işleçler desteklemediğinden, bu arka uç sağlayıcılarında sorgularını yürütülemez.  
+> `CROSS`ve `OUTER APPLY` işleçleri SQL Server 2005 ' de tanıtılmıştı. Bazı durumlarda, sorgu işlem hattı ve/veya `CROSS APPLY` `OUTER APPLY` işleçlerini içeren Transact-SQL üretebilir. SQL Server 2005 ' den önceki SQL Server sürümleri de dahil olmak üzere bazı arka uç sağlayıcılar bu işleçleri desteklemediğinden, bu arka uç sağlayıcılarında bu sorgular yürütülemez.  
 >   
->  Varlığı için yol açabilecek bazı genel senaryolara `CROSS APPLY` ve/veya `OUTER APPLY` çıkış sorgu işleçler şunlardır: disk belleği ile; ilişkili alt sorgu AnyElement bağıntılı alt sorgu veya gezinti tarafından üretilen bir koleksiyon üzerinden; LINQ öğe Seçici kabul yöntemleri gruplandırma kullanan sorgular; bir sorguda bir `CROSS APPLY` veya `OUTER APPLY` açıkça belirtilir; olan bir sorgu bir `DEREF` üzerinden oluşturmak bir `REF` oluşturun.  
+>  Çıktı sorgusunda `CROSS APPLY` ve/veya `OUTER APPLY` işleçleri varlığına neden olabilecek bazı tipik senaryolar şunlardır: sayfalama içeren bağıntılı alt sorgu; Bağıntılı bir alt sorgu üzerinden veya gezinti tarafından oluşturulan bir koleksiyon üzerinden AnyElement; Öğe seçiciyi kabul eden gruplandırma yöntemlerini kullanan LINQ sorguları; `CROSS APPLY` `DEREF` `REF` ya da 'ınaçıkçabelirttiğibirsorgu;biryapıüzerindeyapısına`OUTER APPLY` sahip olan bir sorgu.  
   
-## <a name="multiple-collections-in-the-from-clause"></a>Birden çok koleksiyon FROM yan tümcesi  
- `FROM` Yan tümcesi, virgülle ayırarak birden fazla koleksiyon bulunabilir. Bu durumlarda, koleksiyonları birlikte katılması kabul edilir. Bu çok yönlü çapraz birleştirme olarak düşünün.  
+## <a name="multiple-collections-in-the-from-clause"></a>FROM yan tümcesinde birden çok koleksiyon  
+ Yan `FROM` tümce, virgülle ayrılmış birden fazla koleksiyon içerebilir. Bu durumlarda, koleksiyonların birlikte birleştirilme varsayılır. Bunları n yönlü bir çapraz JOIN olarak düşünün.  
   
- Aşağıdaki örnekte, `C` ve `D` bağımsız koleksiyonlar, ancak `c.Names` bağlıdır `C`.  
+ Aşağıdaki örnekte `C` ve `D` bağımsız `c.Names` koleksiyonlardır`C`, ancak bağımlıdır.  
   
 ```  
 FROM C AS c, D AS d, c.Names AS e  
 ```  
   
- Önceki örnekte, mantıksal olarak aşağıdaki örneğe eşdeğerdir:  
+ Önceki örnek, aşağıdaki örneğe mantıksal olarak eşdeğerdir:  
   
  `FROM (C AS c JOIN D AS d) CROSS APPLY c.Names AS e`  
   
 ## <a name="left-correlation"></a>Sol bağıntı  
- Öğeler `FROM` yan tümcesi, önceki yan tümcelerinde belirtilen öğelere başvurabilir. Aşağıdaki örnekte, `C` ve `D` bağımsız koleksiyonlar, ancak `c.Names` bağlıdır `C`:  
+ Yan tümcesindeki öğeler `FROM` , önceki yan tümcelerde belirtilen öğelere başvurabilir. Aşağıdaki örnekte `C` ve `D` bağımsız `c.Names` koleksiyonlardır`C`, ancak bağımlıdır:  
   
 ```  
 from C as c, D as d, c.Names as e  
 ```  
   
- Bu mantıksal olarak eşdeğerdir.  
+ Bu, mantıksal olarak eşdeğerdir:  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
-## <a name="semantics"></a>Semantiği  
- Mantıksal olarak koleksiyonlarında `FROM` yan tümcesi olduğu varsayılır parçası olarak bir `n`-(1-şekilde söz konusu olduğunda çapraz birleştirme dışında) şekilde çapraz birleştirme. Diğer adlar `FROM` yan tümcesi, soldan sağa doğru işlem ve daha sonra başvurmak için geçerli bir kapsama eklenir. `FROM` Yan tümcesi, bir çoklu küme satır üretmek için varsayılır. Her öğe için bir alan olacaktır `FROM` yan tümcesi bu koleksiyon öğesi tek bir öğeyi temsil eder.  
+## <a name="semantics"></a>İçeriyor  
+ Mantıksal olarak, `FROM` yan tümcesindeki koleksiyonlar tek yönlü çapraz birleştirmenin bir `n`parçası olduğu varsayılır (1 yönlü çapraz birleşimin olması dışında). `FROM` Yan tümcesindeki diğer adlar soldan sağa işlenir ve daha sonra başvurmak üzere geçerli kapsama eklenir. Yan `FROM` tümce, bir dizi çoklu küme üreten kabul edilir. `FROM` Yan tümcesindeki her öğe için, o koleksiyon öğesinden tek bir öğeyi temsil eden bir alan olacaktır.  
   
- `FROM` Üretir mantıksal olarak bir çoklu küme türü (c, d, e) satır satır yan tümcesi burada alanları c, d ve e öğe türünde oldukları varsayılır `C`, `D`, ve `c.Names`.  
+ Yan tümcesi, c, d ve e alanlarının `C`, `D`, ve `c.Names`öğelerinin öğe türünde olduğu kabul edildiği satır türünde satırları (c, d, e) mantıksal olarak oluşturur. `FROM`  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Her basit için bir diğer ad tanıtır `FROM` kapsamda yan tümce öğesi. Örneğin, aşağıdakilerden yan tümcesi kod parçacığı, kapsam içinde tanıtılan c, d ve e adlarıdır.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]kapsamdaki her basit `FROM` yan tümce öğesi için bir diğer ad tanıtır. Örneğin, aşağıdaki FROM yan tümcesi kod parçacığında, kapsamında tanıtılan adlar c, d ve e 'dir.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  
 ```  
   
- İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (Transact-SQL) aksine `FROM` yan tümce kapsamına yalnızca diğer adları ortaya çıkarır. Bu koleksiyonun sütunları (özellikleri) tüm başvuruları diğer adıyla nitelenmelidir.  
+ ' [!INCLUDE[esql](../../../../../../includes/esql-md.md)] De (Transact-SQL `FROM` ' den farklı olarak), yan tümce yalnızca kapsamdaki diğer adları tanıtır. Bu koleksiyonların sütunlarına (Özellikler) yapılan tüm başvurular diğer adla nitelenmelidir.  
   
-## <a name="pulling-up-keys-from-nested-queries"></a>İç içe geçmiş sorgularından anahtarlarını çekiliyor  
- Belirli türlerdeki anahtarlarını iç içe geçmiş bir sorgunun çekmek gerektiren sorguları desteklenmez. Örneğin, aşağıdaki sorgusu geçerli değil:  
+## <a name="pulling-up-keys-from-nested-queries"></a>Iç Içe sorgulardan anahtarları çekme  
+ İç içe bir sorgudan anahtar çekmesini gerektiren bazı sorgu türleri desteklenmez. Örneğin, aşağıdaki sorgu geçerlidir:  
   
 ```  
 select c.Orders from Customers as c   
 ```  
   
- Ancak, iç içe sorgu herhangi bir anahtar olmadığından aşağıdaki sorgu geçerli değil:  
+ Ancak, iç içe sorgu herhangi bir anahtara sahip olmadığından aşağıdaki sorgu geçerli değildir:  
   
 ```  
 select {1} from {2, 3}  

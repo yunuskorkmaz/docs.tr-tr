@@ -8,34 +8,34 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 8e8f1bf193a41530a19e1046e3907b4c926b779f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8821f6170b8ba588e3197ef54eab14c2719a6cc3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947826"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Nasıl yapılır: Çizilmiş Metinde Sekme Durakları Ayarlama
-Metin için sekme durakları çağırarak ayarlayabilirsiniz <xref:System.Drawing.StringFormat.SetTabStops%2A> yöntemi bir <xref:System.Drawing.StringFormat> nesnesi ve ardından geçirmeden <xref:System.Drawing.StringFormat> nesnesini <xref:System.Drawing.Graphics.DrawString%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı.  
+Bir <xref:System.Drawing.StringFormat.SetTabStops%2A> <xref:System.Drawing.StringFormat> <xref:System.Drawing.Graphics.DrawString%2A> nesnenin yöntemini çağırarak ve sonra bu nesneyi <xref:System.Drawing.Graphics> sınıfının yöntemine geçirerek metin için sekme duraklarının ayarlanabilir olmasını sağlayabilirsiniz. <xref:System.Drawing.StringFormat>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> Sekme duraklarını çizilen metni, mevcut sekmesini genişletebilirsiniz rağmen ekleme desteği kullanarak durdurur mu <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> bayrağı.  
+> , <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> Bayraklı metin için sekme duraklarının eklenmesini desteklemez, ancak <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> bayrağı kullanarak var olan sekme duraklarının genişleyebilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, 150, 250 ve 350 sekme durakları ayarlar. Ardından, kod adları ve test puanlarını sekmeli listesini görüntüler.  
+ Aşağıdaki örnek, sekme duraklarının 150, 250 ve 350 olduğunu belirler. Daha sonra kod, ad ve test puanları sekmeli bir listesini görüntüler.  
   
- Sekmeli metin aşağıda gösterilmiştir:  
+ Aşağıdaki çizimde sekmeli metin gösterilmektedir:  
   
- ![Ad ve puanlar sekmeli listesini gösteren ekran görüntüsü.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
+ ![Ad ve puanları sekmeli bir listesini gösteren ekran görüntüsü.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
- Aşağıdaki kod iki bağımsız değişken geçirir <xref:System.Drawing.StringFormat.SetTabStops%2A> yöntemi. İkinci bağımsız değişkeni sekmesini uzaklıkları içeren bir dizidir. Geçirilen ilk bağımsız değişken <xref:System.Drawing.StringFormat.SetTabStops%2A> dizideki ilk uzaklığını konumu 0, sınırlayıcı dikdörtgenini sol kenarı ölçülür belirten, 0'dır.  
+ Aşağıdaki kod <xref:System.Drawing.StringFormat.SetTabStops%2A> yöntemine iki bağımsız değişken geçirir. İkinci bağımsız değişken sekme uzaklıklarını içeren bir dizidir. Geçirilen ilk bağımsız değişken 0 <xref:System.Drawing.StringFormat.SetTabStops%2A> ' dır ve dizideki ilk kaydırmanın, sınırlayıcı dikdörtgenin sol kenarı olan 0 konumundan ölçüldüğünü gösterir.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+- Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve bir parametresi <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.PaintEventHandler>olan ' ı gerektirir `e`.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

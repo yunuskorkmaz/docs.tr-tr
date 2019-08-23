@@ -8,40 +8,40 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969026"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>Şema Derleme için XmlSchemaSet
-Açıklar <xref:System.Xml.Schema.XmlSchemaSet>, burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış bir önbellek.  
+<xref:System.Xml.Schema.XmlSchemaSet>XML şeması tanım dili (xsd) şemaları depolanabilecek ve doğrulanabilen bir önbellek tanımlar.  
   
 ## <a name="the-xmlschemaset-class"></a>XmlSchemaSet sınıfı  
- <xref:System.Xml.Schema.XmlSchemaSet> Burada XML Şeması Tanım Dili (XSD) şemaları depolanabilir ve doğrulanmış bir önbellektir.  
+ <xref:System.Xml.Schema.XmlSchemaSet> XML şeması tanım dili (xsd) şemaları depolanabilecek ve doğrulanabilen bir önbelleğidir.  
   
- İçinde <xref:System.Xml?displayProperty=nameWithType> sürüm 1.0, XML şemaları yüklü içine bir <xref:System.Xml.Schema.XmlSchemaCollection> şemaların sınıf kitaplığı olarak. İçinde <xref:System.Xml?displayProperty=nameWithType> sürüm 2.0 <xref:System.Xml.XmlValidatingReader> ve <xref:System.Xml.Schema.XmlSchemaCollection> sınıfları eskidir ve almıştır <xref:System.Xml.XmlReader.Create%2A> yöntemleri ve <xref:System.Xml.Schema.XmlSchemaSet> sırasıyla sınıfı.  
+ Sürüm <xref:System.Xml?displayProperty=nameWithType> 1,0 ' de, XML şemaları bir <xref:System.Xml.Schema.XmlSchemaCollection> sınıfa bir şema kitaplığı olarak yüklenmiştir. Sürüm <xref:System.Xml?displayProperty=nameWithType> 2,0 <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.XmlReader.Create%2A> ' de, <xref:System.Xml.Schema.XmlSchemaSet> ve sınıfları kullanılmıyor ve sırasıyla Yöntemler ve sınıf ile değiştirilmiştir. <xref:System.Xml.XmlValidatingReader>  
   
- <xref:System.Xml.Schema.XmlSchemaSet> Birkaç standartlara uyumluluk, performans ve eski Microsoft XML verileri azaltılmış (XDR) şema biçimi gibi sorunları düzeltmek için sunulmuştur.  
+ , <xref:System.Xml.Schema.XmlSchemaSet> Standart uyumluluk, performans ve kullanılmayan Microsoft XML verileri azaltılmış (xdr) şema biçimi gibi birçok sorunu gidermeye yönelik olarak sunulmuştur.  
   
- Bir karşılaştırması aşağıdadır <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı ve <xref:System.Xml.Schema.XmlSchemaSet> sınıfı.  
+ Aşağıda, <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı <xref:System.Xml.Schema.XmlSchemaSet> ve sınıfı arasında bir karşılaştırma bulunur.  
   
 |XmlSchemaCollection|XmlSchemaSet|  
 |-------------------------|------------------|  
-|Microsoft XDR ve W3C XML şemalarını destekler.|Yalnızca W3C XML şemaları destekler.|  
-|Şema derlenen olduğunda <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi çağrılır.|Şemaları olmayan zaman derlenmiş <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi çağrılır. Bu, bir performans geliştirmesi sırasında Şema Kitaplığı oluşturulmasını sağlar.|  
-|"Şema Adaları." neden olabilir bir bireysel derlenmiş sürüm her şeması oluşturur Sonuç olarak, tüm içerir ve içeri aktarmalar yalnızca o şema içindeki belirlenir.|Bir "şemaları Ayarla" tek bir mantıksal şema derlenen şemalar oluşturur. Kümeye eklenen bir şema içinde alınan şemalar doğrudan kümesine kendilerini eklenir. Başka bir deyişle, tüm şemalara tüm türleri kullanılabilir.|  
-|Belirli bir hedef ad alanı için yalnızca bir şema koleksiyonunda mevcut olabilir.|Birden çok şema aynı hedef ad alanı için hiçbir tür çakışmalar var olduğu sürece eklenebilir.|  
+|Microsoft XDR ve W3C XML şemalarını destekler.|Yalnızca W3C XML şemalarını destekler.|  
+|Şemaları, <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi çağrıldığında derlenir.|<xref:System.Xml.Schema.XmlSchemaSet.Add%2A> Yöntem çağrıldığında şemalar derlenmez. Bu, şema kitaplığının oluşturulması sırasında bir performans geliştirmesi sağlar.|  
+|Her şema, "Schema Adaları" ile sonuçlanabileceğinden bağımsız bir derlenmiş sürüm oluşturur. Sonuç olarak, tüm dahil ve içeri aktarmalar yalnızca o şemanın içinde kapsamlandırılır.|Derlenmiş şemalar, şemaların "kümesi" olan tek bir mantıksal şema oluşturur. Kümesine eklenen bir şema içindeki tüm içeri aktarılan şemalar doğrudan kümesine eklenir. Bu, tüm türlerin tüm şemalarda kullanılabildiği anlamına gelir.|  
+|Koleksiyonda belirli bir hedef ad alanı için yalnızca bir şema bulunabilir.|Aynı hedef ad alanı için birden çok şema, tür çakışması olmadığı sürece eklenebilir.|  
   
-## <a name="migrating-to-the-xmlschemaset"></a>Geçiş için XmlSchemaSet  
- Aşağıdaki kod örneği yeni geçiş için bir kılavuz sağlar <xref:System.Xml.Schema.XmlSchemaSet> eski sınıftan <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı. Kod örneği, iki sınıf arasındaki aşağıdaki temel farklar gösterilmektedir.  
+## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet 'e geçiş  
+ Aşağıdaki kod örneği, eski <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaCollection> sınıftan yeni sınıfa geçiş yapmak için bir kılavuz sağlar. Kod örneği, iki sınıf arasındaki aşağıdaki önemli farklılıkları gösterir.  
   
-- Farklı <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı çağrılırken, şemalar derlenmiş değil <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Yöntemi <xref:System.Xml.Schema.XmlSchemaSet> örnek kodda açıkça çağrılır.  
+- Sınıfının yönteminden farklı olarak <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> ,, <xref:System.Xml.Schema.XmlSchemaSet>yöntemi çağrılırken şemalar derlenmez. <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> <xref:System.Xml.Schema.XmlSchemaCollection> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Yöntemi<xref:System.Xml.Schema.XmlSchemaSet> , örnek kodda açıkça çağırılır.  
   
-- Üzerinden yinelemek için bir <xref:System.Xml.Schema.XmlSchemaSet>, kullanmanız gereken <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Bir <xref:System.Xml.Schema.XmlSchemaSet>üzerinde yinelemek için, öğesinin <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> <xref:System.Xml.Schema.XmlSchemaSet>özelliğini kullanmanız gerekir.  
   
- Aşağıdaki kullanılmıyor <xref:System.Xml.Schema.XmlSchemaCollection> kod örneği.  
+ Eski <xref:System.Xml.Schema.XmlSchemaCollection> kod örneği aşağıda verilmiştir.  
   
 ```vb  
 Dim schemaCollection As XmlSchemaCollection = New XmlSchemaCollection()  
@@ -68,7 +68,7 @@ foreach(XmlSchema schema in schemaCollection)
 }  
 ```  
   
- Aşağıdaki eşdeğerdir <xref:System.Xml.Schema.XmlSchemaSet> kod örneği.  
+ Aşağıda eşdeğer <xref:System.Xml.Schema.XmlSchemaSet> kod örneği verilmiştir.  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
@@ -97,12 +97,12 @@ foreach(XmlSchema schema in schemaSet.Schemas())
 }  
 ```  
   
-## <a name="adding-and-retrieving-schemas"></a>Ekleme ve şemaları alma  
- Şemaları eklenir bir <xref:System.Xml.Schema.XmlSchemaSet> kullanarak <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>. İçin bir şema eklendiğinde bir <xref:System.Xml.Schema.XmlSchemaSet>, bir hedef ad alanı URI ile ilişkilidir. Hedef ad alanı URI ya da belirtilebilir bir parametre olarak <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi veya hiçbir hedef ad alanı belirtilmiş olup olmadığını <xref:System.Xml.Schema.XmlSchemaSet> şemasında tanımlanan hedef ad alanını kullanır.  
+## <a name="adding-and-retrieving-schemas"></a>Şemaları ekleme ve alma  
+ Şemaları, <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> öğesininyöntemi<xref:System.Xml.Schema.XmlSchemaSet>kullanılarak öğesine eklenir. Bir şema bir <xref:System.Xml.Schema.XmlSchemaSet>öğesine eklendiğinde, hedef ad alanı URI 'si ile ilişkilendirilir. Hedef ad alanı URI 'si <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> metodun bir parametresi olarak belirtilebilir ya da hiçbir hedef ad alanı belirtilmemişse <xref:System.Xml.Schema.XmlSchemaSet> , şemada tanımlanan hedef ad alanını kullanır.  
   
- Şemaları öğesinden alınan bir <xref:System.Xml.Schema.XmlSchemaSet> kullanarak <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Özelliği <xref:System.Xml.Schema.XmlSchemaSet> gezinilen sağlar <xref:System.Xml.Schema.XmlSchema> bulunan nesneleri <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Özellik ya da döndürür tüm <xref:System.Xml.Schema.XmlSchema> bulunan nesneleri <xref:System.Xml.Schema.XmlSchemaSet>, ya da bir hedef ad alanı parametresi, tüm döndürür <xref:System.Xml.Schema.XmlSchema> hedef ad alanına ait nesneleri. Varsa `null` hedef ad alanı parametre olarak belirtilen <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği ad alanı olmayan tüm şemalar döndürür.  
+ Şemaları, <xref:System.Xml.Schema.XmlSchemaSet> öğesinin<xref:System.Xml.Schema.XmlSchemaSet>özelliğini kullanarak bir <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> öğesinden alınır. Öğesinin özelliği içinde yeralan<xref:System.Xml.Schema.XmlSchema> nesneler üzerinde yineleme yapmanızı sağlar.<xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Özelliği, veya içinde <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Schema.XmlSchemaSet>içerilen tüm nesneleri döndürür veya hedef ad alanı parametresi verildiğinde, hedef ad alanına ait tüm <xref:System.Xml.Schema.XmlSchema> nesneleri döndürür. <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> Hedef ad alanı parametresi olarak belirtilmişse <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> , özelliği ad alanı olmayan tüm şemaları döndürür. `null`  
   
- Aşağıdaki örnek ekler `books.xsd` şemasında `http://www.contoso.com/books` ad alanına bir <xref:System.Xml.Schema.XmlSchemaSet>, ait tüm şemaları alır `http://www.contoso.com/books` ad alanından <xref:System.Xml.Schema.XmlSchemaSet>ve ardından bu şemaya Yazar <xref:System.Console>.  
+ Aşağıdaki örnek, `http://www.contoso.com/books` ad alanındaki `books.xsd` şemayı öğesine <xref:System.Xml.Schema.XmlSchemaSet>ekler `http://www.contoso.com/books` , <xref:System.Xml.Schema.XmlSchemaSet> öğesinden<xref:System.Console>ad alanına ait olan tüm şemaları alır ve ardından bu şemaları öğesine yazar.  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet  
@@ -127,20 +127,20 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
 }  
 ```  
   
- Ekleme ve şemalardan alma hakkında daha fazla bilgi için bir <xref:System.Xml.Schema.XmlSchemaSet> nesne, bkz: <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi ve <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özellik başvuru belgeleri.  
+ Bir <xref:System.Xml.Schema.XmlSchemaSet> nesneden şemaları ekleme ve alma hakkında daha fazla bilgi için, <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> bkz. yöntemi ve <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özellik başvurusu belgeleri.  
   
-## <a name="compiling-schemas"></a>Şemaları derlenirken  
- Şemalarda bir <xref:System.Xml.Schema.XmlSchemaSet> mantıksal bir şema tarafından derlenmiş <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet>.  
-  
-> [!NOTE]
->  Eski aksine <xref:System.Xml.Schema.XmlSchemaCollection> sınıfı şemaları olmayan zaman derlenmiş <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi çağrılır.  
-  
- Varsa <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemini yürütür başarıyla <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet> ayarlanır `true`.  
+## <a name="compiling-schemas"></a>Şemaları derleme  
+ İçindeki <xref:System.Xml.Schema.XmlSchemaSet> şemalar <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> ,<xref:System.Xml.Schema.XmlSchemaSet>yöntemi tarafından bir mantıksal şemaya derlenir.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> Şemaları düzenlediyseniz özelliği etkilenmez while <xref:System.Xml.Schema.XmlSchemaSet>. Güncelleştirmeleri tek tek şemalarda <xref:System.Xml.Schema.XmlSchemaSet> değil izlenir. Sonuç olarak, <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> özelliği `true` şemalardan birine bulunan olsa bile <xref:System.Xml.Schema.XmlSchemaSet> şema eklendi veya kaldırıldı sürece, değiştirilmiş <xref:System.Xml.Schema.XmlSchemaSet>.  
+> Eski <xref:System.Xml.Schema.XmlSchemaCollection> sınıftan farklı olarak, <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntem çağrıldığında şemalar derlenmez.  
   
- Aşağıdaki örnek ekler `books.xsd` dosyasını <xref:System.Xml.Schema.XmlSchemaSet> ve <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi.  
+ Yöntem başarıyla <xref:System.Xml.Schema.XmlSchemaSet> yürütülüyorsa öğesinin `true`özelliği olarak ayarlanır. <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
+  
+> [!NOTE]
+> İçinde şemalar düzenlenirse <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> Özellik etkilenmez <xref:System.Xml.Schema.XmlSchemaSet>. İçindeki <xref:System.Xml.Schema.XmlSchemaSet> tek tek şemaların güncelleştirmeleri izlenmez. Sonuç <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> <xref:System.Xml.Schema.XmlSchemaSet>olarak, içinde<xref:System.Xml.Schema.XmlSchemaSet> bulunan şemalardan biri, ' den eklenen veya kaldırılan hiçbir şema olmadığı sürece değiştirilmiş olabilir. `true`  
+  
+ Aşağıdaki örnek `books.xsd` dosyasını <xref:System.Xml.Schema.XmlSchemaSet> öğesine ekler ve sonra <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemini çağırır.  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
@@ -154,14 +154,14 @@ schemaSet.Add("http://www.contoso.com/books", "books.xsd");
 schemaSet.Compile();  
 ```  
   
- Şemalarda derleme hakkında daha fazla bilgi için bir <xref:System.Xml.Schema.XmlSchemaSet>, bkz: <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi başvuru belgeleri.  
+ İçindeki <xref:System.Xml.Schema.XmlSchemaSet>şemaları derleme hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> bkz. Yöntem başvurusu belgeleri.  
   
-## <a name="reprocessing-schemas"></a>Şemaları yeniden işleniyor  
- Şemada yeniden işlemeyerek bir <xref:System.Xml.Schema.XmlSchemaSet> bir şema üzerinde gerçekleştirilen tüm ön işleme adımları gerçekleştirir, <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> çağrılır. Çağrı <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> yöntemdir başarılı <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> özelliği <xref:System.Xml.Schema.XmlSchemaSet> ayarlanır `false`.  
+## <a name="reprocessing-schemas"></a>Şemaları yeniden işleme  
+ Bir <xref:System.Xml.Schema.XmlSchemaSet> şemanın ' de yeniden işlenmesi, <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> çağrıldığında bir şemada gerçekleştirilen tüm ön işleme adımlarını gerçekleştirir. <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> Yöntemine yapılan çağrı başarılı <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> olursa öğesinin <xref:System.Xml.Schema.XmlSchemaSet> özelliği olarak `false`ayarlanır.  
   
- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> Yöntemi kullanılmalıdır şemada <xref:System.Xml.Schema.XmlSchemaSet> sonra değiştirilmiş <xref:System.Xml.Schema.XmlSchemaSet> derleme gerçekleştirdi.  
+ Yöntemi, derleme gerçekleştirildikten sonra <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet> içindeki bir şema değiştirildiğinde kullanılmalıdır. <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
   
- Aşağıdaki örnekte, eklenen bir şema yeniden işlemeyerek gösterilmektedir <xref:System.Xml.Schema.XmlSchemaSet> kullanarak <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> yöntemi. Sonra <xref:System.Xml.Schema.XmlSchemaSet> kullanılarak derlenmiş <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> yöntemi ve eklenen şemayı <xref:System.Xml.Schema.XmlSchemaSet> değiştirildiğinde <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> özelliği `true` şemada olsa bile <xref:System.Xml.Schema.XmlSchemaSet> değiştirildi. Çağırma <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> yöntemi gerçekleştirdiği tüm gerçekleştirdiği ön işleme <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> yöntemi ve kümelerini <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> özelliğini `false`.  
+ Aşağıdaki örnek, <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> yöntemi kullanılarak öğesine eklenen bir şemanın yeniden işlenmesini gösterir. <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> <xref:System.Xml.Schema.XmlSchemaSet> `true` Yöntemi kullanılarak derlendikten ve öğesine eklenen şema değiştirilirse, içindeki bir şema değiştirilse bile özelliği olarak ayarlanır. <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> Yöntemi çağırmak <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>yöntemitarafından gerçekleştirilen tüm ön işleme gerçekleştirir ve `false` özelliğiniolarakayarlar.<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
@@ -189,17 +189,17 @@ element.SchemaTypeName = new XmlQualifiedName("string", "http://www.w3.org/2001/
 schemaSet.Reprocess(schema);  
 ```  
   
- Şemada yeniden işlemeyerek hakkında daha fazla bilgi için bir <xref:System.Xml.Schema.XmlSchemaSet>, bkz: <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> yöntemi başvuru belgeleri.  
+ Bir şemayı bir <xref:System.Xml.Schema.XmlSchemaSet>içinde yeniden işleme hakkında daha fazla bilgi için <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> bkz. Yöntem başvurusu belgeleri.  
   
-## <a name="checking-for-a-schema"></a>İçin bir şema denetleniyor  
- Kullanabileceğiniz <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> yöntemi <xref:System.Xml.Schema.XmlSchemaSet> bir şema içinde dahil olup olmadığını denetlemek için bir <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> Yöntemi alır ya da bir hedef ad alanı veya bir <xref:System.Xml.Schema.XmlSchema> denetlenecek nesne. Her iki durumda da <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> yöntemi döndürür `true` şema içinde yer alıyorsa <xref:System.Xml.Schema.XmlSchemaSet>; Aksi halde döndürür `false`.  
+## <a name="checking-for-a-schema"></a>Şema denetleniyor  
+ Bir <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> şemanıniçinde<xref:System.Xml.Schema.XmlSchemaSet> içerildiğini denetlemek için ' ın metodunu kullanabilirsiniz. <xref:System.Xml.Schema.XmlSchemaSet> Yöntemi <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> , denetlenecek bir hedef ad alanı <xref:System.Xml.Schema.XmlSchema> ya da nesne alır. Her iki durumda <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> da <xref:System.Xml.Schema.XmlSchemaSet>, şema içinde `true` içerilse, yöntemi döndürür; Aksi takdirde, döndürür `false`.  
   
- İçin bir şema denetleme hakkında daha fazla bilgi için bkz. <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> yöntemi başvuru belgeleri.  
+ Bir şemayı denetleme hakkında daha fazla bilgi için bkz <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A> . Yöntem başvurusu belgeleri.  
   
-## <a name="removing-schemas"></a>Şemaları kaldırılıyor  
- Şemaları kaldırılma bir <xref:System.Xml.Schema.XmlSchemaSet> kullanarak <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> ve <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntemlerinin <xref:System.Xml.Schema.XmlSchemaSet>. <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> Yöntemi, belirtilen şemasından kaldırır <xref:System.Xml.Schema.XmlSchemaSet>, ancak <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntemi, belirtilen şemaya ve bunu içe aktaran tüm şemalar kaldırır <xref:System.Xml.Schema.XmlSchemaSet>.  
+## <a name="removing-schemas"></a>Şemaları kaldırma  
+ <xref:System.Xml.Schema.XmlSchemaSet> Şemaları, <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> veyöntemleri<xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> kullanılarak bir öğesindenkaldırılır.<xref:System.Xml.Schema.XmlSchemaSet> Yöntemi belirtilen şemayı <xref:System.Xml.Schema.XmlSchemaSet>öğesinden kaldırır, ancak <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntem belirtilen şemayı <xref:System.Xml.Schema.XmlSchemaSet>ve içeri aktardığı tüm şemaları kaldırır. <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
   
- Ekleme için birden çok şema, aşağıdaki örnekte gösterilmiştir bir <xref:System.Xml.Schema.XmlSchemaSet>, ardından kullanarak <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> şemalardan birine ve bunu içe aktaran tüm şemalar kaldırmak için yöntemi.  
+ Aşağıdaki örnek, bir <xref:System.Xml.Schema.XmlSchemaSet>öğesine birden çok şema eklemeyi ve sonra şemadan birini ve içeri aktardığı tüm şemaları kaldırmak için <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntemini kullanmayı gösterir.  
   
 ```vb  
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()  
@@ -233,23 +233,23 @@ foreach (XmlSchema schema in schemaSet.Schemas())
 }  
 ```  
   
- Şemalardan kaldırma hakkında daha fazla bilgi için bir <xref:System.Xml.Schema.XmlSchemaSet>, bkz: <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> ve <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntemleri başvuru belgeleri.  
+ İçindeki <xref:System.Xml.Schema.XmlSchemaSet>şemaları kaldırma hakkında daha fazla bilgi için, <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A> ve <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A> yöntemleri başvuru belgelerine bakın.  
   
-## <a name="schema-resolution-and-xsimport"></a>Şema çözümleme ve xs:import  
- Aşağıdaki örnekler açıklar <xref:System.Xml.Schema.XmlSchemaSet> şemaları içeri aktarma için belirtilen bir ad alanı için birden çok şema mevcut olduğunda davranışı bir <xref:System.Xml.Schema.XmlSchemaSet>.  
+## <a name="schema-resolution-and-xsimport"></a>Şema çözünürlüğü ve xs: import  
+ Aşağıdaki örneklerde, <xref:System.Xml.Schema.XmlSchemaSet>içinde verilen <xref:System.Xml.Schema.XmlSchemaSet> bir ad alanı için birden çok şema olduğunda şemaları içeri aktarma davranışı açıklanır.  
   
- Örneğin, bir <xref:System.Xml.Schema.XmlSchemaSet> için birden çok şema içeren `http://www.contoso.com` ad alanı. Aşağıdaki şema `xs:import` yönergesi eklenir <xref:System.Xml.Schema.XmlSchemaSet>.  
+ Örneğin, `http://www.contoso.com` ad alanı için <xref:System.Xml.Schema.XmlSchemaSet> birden çok şema içeren bir düşünün. Aşağıdaki `xs:import` yönergeyle bir şema <xref:System.Xml.Schema.XmlSchemaSet>öğesine eklenmiştir.  
   
 ```xml  
 <xs:import namespace="http://www.contoso.com" schemaLocation="http://www.contoso.com/schema.xsd" />  
 ```  
   
- <xref:System.Xml.Schema.XmlSchemaSet> İçeri aktarmak için bir şema dener `http://www.contoso.com` ondan yükleme tarafından ad alanı `http://www.contoso.com/schema.xsd` URL'si. Diğer şeması belgeleri için olsa bile şema belgesi içinde bildirilen türleri ve şema bildirim alma şemada yalnızca kullanılabilir `http://www.contoso.com` ad alanında <xref:System.Xml.Schema.XmlSchemaSet>. Varsa `schema.xsd` dosya konumu olamaz `http://www.contoso.com/schema.xsd` URL için şema `http://www.contoso.com` ad alanı alma şemasına aktarılır.  
+ URL'den`http://www.contoso.com/schema.xsd` yükleyerek `http://www.contoso.com` ad alanı için bir şemayı içeri aktarmaya çalışır.<xref:System.Xml.Schema.XmlSchemaSet> İçindeki ad`http://www.contoso.com` alanı için başka bir şema belgesi olsa da, yalnızca şema belgesinde belirtilen şema bildirimi ve türleri içeri aktarma şemasında kullanılabilir. <xref:System.Xml.Schema.XmlSchemaSet> Dosya URL 'de bulunamıyorsa`http://www.contoso.com` , ad alanı için bir şema içeri aktarma şemasına içeri aktarılmaz. `http://www.contoso.com/schema.xsd` `schema.xsd`  
   
-## <a name="validating-xml-documents"></a>XML belgeleri doğrulanıyor  
- XML belgeleri doğrulanmış şemalarda karşı bir <xref:System.Xml.Schema.XmlSchemaSet>. Bir şema ekleyerek bir XML belgesi doğrulama <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.XmlReaderSettings.Schemas%2A> özelliği bir <xref:System.Xml.XmlReaderSettings> nesne veya ekleyerek bir <xref:System.Xml.Schema.XmlSchemaSet> için <xref:System.Xml.XmlReaderSettings.Schemas%2A> özelliği bir <xref:System.Xml.XmlReaderSettings> nesne. <xref:System.Xml.XmlReaderSettings> Nesne tarafından kullanılan ardından <xref:System.Xml.XmlReader.Create%2A> yöntemi <xref:System.Xml.XmlReader> sınıfı oluşturmak için bir <xref:System.Xml.XmlReader> nesnesi ve bir XML belgesi doğrulama.  
+## <a name="validating-xml-documents"></a>XML belgelerini doğrulama  
+ XML belgeleri, içindeki <xref:System.Xml.Schema.XmlSchemaSet>şemalara karşı doğrulanabilir. Bir <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.XmlReaderSettings.Schemas%2A> nesneninözelliğinebirşema<xref:System.Xml.Schema.XmlSchemaSet> ekleyerek veya bir nesnenin<xref:System.Xml.XmlReaderSettings> özelliğine bir nesne ekleyerek bir XML belgesini doğrularsınız. <xref:System.Xml.XmlReaderSettings.Schemas%2A> <xref:System.Xml.XmlReaderSettings> Daha sonra <xref:System.Xml.XmlReader.Create%2A> <xref:System.Xml.XmlReader> nesnesi, sınıfının yöntemi tarafından bir <xref:System.Xml.XmlReader> nesne oluşturmak ve XML belgesini doğrulamak için kullanılır. <xref:System.Xml.XmlReaderSettings>  
   
- XML doğrulama hakkında daha fazla bilgi için belgeler kullanan bir <xref:System.Xml.Schema.XmlSchemaSet>, bkz: [XmlSchemaSet ile XML Şeması (XSD) doğrulaması](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
+ XML belgelerinin bir <xref:System.Xml.Schema.XmlSchemaSet>kullanarak doğrulanması hakkında daha fazla bilgi için bkz. [XmlSchemaSet ile XML şeması (xsd) doğrulaması](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

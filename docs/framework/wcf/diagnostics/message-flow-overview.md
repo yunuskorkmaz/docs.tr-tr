@@ -2,35 +2,35 @@
 title: İleti Akışı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 009dd05ab299b92ee5f5cafd1c2131a2e6eb0132
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963053"
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
-Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler arasında nedensel ilişkilerini belirlemek gereklidir. Kök neden analizi ve izleme, sorun giderme durumu gibi önemli senaryoları desteklemek için bir istek akışının bir parçası olan çeşitli bileşenleri anlamak önemlidir. İzlemeler, .NET Framework 4'te çeşitli hizmetler arasındaki bağıntıyı etkinleştirmek için aşağıdaki özellikler sayesinde desteği ekledik:
+Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler arasında causal ilişkilerinin belirlenmesi gerekir. Durum izleme, sorun giderme ve kök neden analizi gibi kritik senaryoları desteklemek için bir istek akışının parçası olan çeşitli bileşenleri anlamak önemlidir. .NET Framework 4 ' te çeşitli hizmetler arasındaki izlemelerin bağıntısını etkinleştirmek için aşağıdaki özellikler aracılığıyla destek ekledik:
 
-- Çözümleme izleme: Yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW) kullanarak.
+- Analitik izleme: Windows için olay Izleme (ETW) kullanan yüksek performanslı ve düşük ayrıntı düzeyi izleme özelliği.
 
-- WCF/WF Hizmetleri için model uçtan uca etkinlik: Bu özellik, izlemeleri tarafından oluşturulan bağıntısı destekler <xref:System.ServiceModel> ve <xref:System.Workflow.ComponentModel> ad alanları.
+- WCF/WF hizmetleri için uçtan uca etkinlik modeli: Bu özellik, <xref:System.ServiceModel> ve <xref:System.Workflow.ComponentModel> ad alanları tarafından oluşturulan izlemelerin bağıntısını destekler.
 
-- ETW İzleme WF için: Bu özellik, iş akışının geçerli durumunu ve ilerlemesini görünürlük sağlamak için WF Hizmetleri tarafından oluşturulan izleme kayıtları kullanır.
+- WF için ETW izleme: Bu özellik, iş akışının geçerli durumuna ve ilerlemesini görünürlük sağlamak için WF hizmetleri tarafından oluşturulan izleme kayıtlarını kullanır.
 
- Bir izleme veya kayıt izleme hatanın günlüğe kaydedilip kaydedilmediğine kod kusurlarını veya yanlış biçimlendirilmiş iletiler bulmak için kullanılabilir. Olay iletisi üst bilgisindeki bağıntı düğümün ActivityID özelliği hataya neden olan etkinliğini belirlemek için kullanılabilir. Etkinlik Kimliğine göre ileti akışı izlemeyi etkinleştirmek için bkz: [ileti akışı izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Bu konu, ileti akışı izlemeyi kullanmaya başlama öğreticisinde oluşturulan projedeki etkinleştirme gösterir.
+ İzleme veya izleme kaydında günlüğe kaydedilen hatalar, kod kusurlarını veya hatalı biçimlendirilmiş iletileri bulmak için kullanılabilir. Olayın ileti üstbilgisindeki bağıntı düğümünün ActivityId özelliği, hatalı etkinliği belirlemede kullanılabilir. İleti akışı izlemeyi etkinlik KIMLIĞINE göre etkinleştirmek için bkz. [Ileti akışı Izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Bu konuda, başlangıç öğreticisinde oluşturulan projede ileti akışı izlemenin nasıl etkinleştirileceği gösterilmektedir.
 
-### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Başlarken öğreticide ileti akışı izlemeyi etkinleştirmek için
+### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Başlangıç öğreticisinde ileti akışı izlemeyi etkinleştirmek için
 
-1. Olay Görüntüleyicisi'ni tıklatarak açın **Başlat**, **çalıştırma**, girerek `eventvwr.exe`.
+1. **Başlat**, **çalıştır**ve girerek `eventvwr.exe`Olay Görüntüleyicisi açın.
 
-2. Çözümleme izleme etkinleştirmediyseniz genişletin **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucu uygulamaları** . Seçin **görünümü**, **Göster Analitik ve hata ayıklama günlüklerini**. Sağ **analitik** seçip **günlüğü etkinleştir**. Olay Görüntüleyicisi, böylece izlemeleri görüntülenebilir açık bırakın.
+2. Analitik izlemeyi etkinleştirmediyseniz, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' ı genişletin. **Görünüm**, **analitik ve hata ayıklama günlüklerini göster**' i seçin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin. İzlemelerin görüntülenebilmesi için Olay Görüntüleyicisi açık bırakın.
 
-3. Oluşturulan örnek açın [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md) Visual Studio 2012. Böylece hizmet oluşturulabilmesi için yönetici olarak Visual Studio 2012 çalıştırmanız gerektiğini unutmayın. Yüklü WCF örnekleri varsa açabileceğiniz [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md), öğreticide oluşturulan projeyi içerir.
+3. Visual Studio 2012 ' de başlangıç [öğreticisinde](../../../../docs/framework/wcf/getting-started-tutorial.md) oluşturulan örneği açın. Hizmetin oluşturulabilmesi için Visual Studio 2012 ' i yönetici olarak çalıştırmanız gerektiğini unutmayın. WCF örnekleri yüklüyse, öğreticide oluşturulan tamamlanmış projeyi içeren [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i açabilirsiniz.
 
-4. Sağ **hizmet** seçin ve proje **Ekle**, **yeni öğe**. Seçin **uygulama yapılandırma dosyası** tıklatıp **Tamam**.
+4. **Hizmet** projesine sağ tıklayın ve **Ekle**, **Yeni öğe**' yi seçin. **Uygulama yapılandırma dosyası** ' nı seçin ve **Tamam**' ı tıklatın.
 
-5. Önceki adımda oluşturulan App.Config dosyasına aşağıdaki kodu ekleyin.
+5. Önceki adımda oluşturulan app. config dosyasına aşağıdaki kodu ekleyin.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler aras
     </system.serviceModel>
     ```
 
-6. CTRL + F5 tuşlarına basarak hata ayıklama olmadan sunucu uygulamasını çalıştırın. İstemci projesi sağ tıklayarak yürütme **istemci** proje ve seçerek **hata ayıklama**, **yeni örnek Başlat**.
+6. CTRL + F5 tuşlarına basarak sunucu uygulamasını hata ayıklamadan yürütün. İstemci projesine sağ tıklayıp **Hata Ayıkla**, **Yeni örnek Başlat**' ı seçerek istemci projesini yürütün.
 
-7. İstemciden sunucuya olayları izlemek için istemci projesindeki uygulama yapılandırma dosyasına aşağıdakileri ekleyin.
+7. İstemciden sunucuya olayları izlemek için, aşağıdakileri Istemci projesindeki uygulama yapılandırma dosyasına ekleyin.
 
     ```xml
     <diagnostics>
@@ -50,29 +50,29 @@ Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler aras
     </diagnostics>
     ```
 
-8. İstemci program.cs'ye aşağıdaki Using deyimini ekleyin.
+8. İstemcide Program.cs ' de, aşağıdaki using ifadesini ekleyin.
 
     ```csharp
     using System.Diagnostics;
     ```
 
-9. İstemci projesindeki program.cs dosyasının ana yöntemde olay günlüğünde dağıtılmasını izleme GUID'i ayarlayın.
+9. İstemci projesindeki program.cs dosyasındaki Main yönteminde, Izleme GUID 'sini olay günlüğüne yayılacağı şekilde ayarlayın.
 
     ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```
 
-10. Yenileyin ve incelemek **analitik** günlük.  Olay Kimliği 220 sahip bir olay olup olmadığına bakın.  Olay seçin ve tıklayın **ayrıntıları** önizleme bölmesinde sekmesi. Bu olay arama etkinliği için bağıntı Kimliğini içerir.
+10. **Analitik** günlüğü yenileyin ve inceleyin.  Olay KIMLIĞI 220 olan bir olay arayın.  Olayı seçin ve Önizleme bölmesindeki **Ayrıntılar** sekmesine tıklayın. Bu olay çağıran etkinliğin bağıntı KIMLIĞINI içerir.
 
     ```xml
     <Correlation ActivityID="{A066CCF1-8AB3-459B-B62F-F79F957A5036}" />
     ```
 
     > [!NOTE]
-    >  Tüm olaylar aynı GUID etkinlik kimliği ile bir istekle ilişkili. Bu, belirli bir istemci bir kuyruktan belirli bir hizmete ilişkilendirmek için kullanılabilir. İstemci başka bir hizmet çağrılır, aynı istemci tarafından ActivityID tanımlanamadı.
+    > ActivityID içindeki aynı GUID 'ye sahip tüm olaylar bir istekle ilgilidir. Bu, belirli bir istemciden gelen iletileri belirli bir hizmete ilişkilendirmek için kullanılabilir. İstemci başka bir hizmet olarak adlandırılrsa, aynı istemci ActivityId ile tanımlanabilir.
 
-11. Bazı durumlarda, etkinlik kimliği için yeni bir etkinlik kimliği özgün GUID'ini değiştirebilirsiniz. Bu durumda, bir aktarım olayını yayınlanır. Bu olay kimliği 499 ve olay başlığı aşağıdaki verileri içerir.
+11. Bazı durumlarda, ActivityId özgün GUID 'den yeni bir ActivityId 'ye değişebilir. Bu durumda, bir aktarım olayı yayınlanır. Bu olay KIMLIĞI 499 ' dir ve olay üst bilgide aşağıdaki verileri içerir.
 
     ```xml
     <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
@@ -87,4 +87,4 @@ Birbirine bağlı hizmetleri içeren dağıtılmış bir sistemde hizmetler aras
     ```
 
     > [!NOTE]
-    >  Aktarım olayını, etkin RelatedActivityID ActivityID GUID olarak belirtilen olarak belirtilen GUID etkinlik değişikliği kaydeder. Aktarım olayını yayılan sonra tüm olayları yeni bir GUID etkinlik kimliği içerir.
+    > Aktarım olayı, etkin ActivityId 'nin değişikliğini ActivityId olarak belirtilen GUID 'den relatedActivityId olarak belirtilen GUID 'ye kaydeder. Aktarım olayı oluşturulduktan sonra, tüm olaylar ActivityId olarak yeni GUID 'YI içerir.

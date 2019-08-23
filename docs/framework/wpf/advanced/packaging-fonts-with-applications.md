@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960342"
 ---
 # <a name="packaging-fonts-with-applications"></a>Uygulamalarla Yazı Tiplerini Paketleme
 Bu konu, yazı tiplerinin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamanıza nasıl paketlenecek hakkında genel bakış sağlar.  
   
 > [!NOTE]
->  Çoğu yazılım türünde olduğu gibi, satılan değil, yazı tipi dosyaları lisanslanır. Yazı tiplerinin kullanımını yöneten lisanslar satıcıdan satıcıya farklılık gösterir, ancak çoğu lisans, yazı tiplerinin [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]uygulamalar ile birlikte bulunmasına izin dahil olmak üzere genel olarak lisanslarda, yazı tiplerinin uygulamalar içine katıştırılması veya aksi takdirde başvuru. Bu nedenle, bir geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
+> Çoğu yazılım türünde olduğu gibi, satılan değil, yazı tipi dosyaları lisanslanır. Yazı tiplerinin kullanımını yöneten lisanslar satıcıdan satıcıya farklılık gösterir, ancak çoğu lisans, uygulama ve Windows ile ilgili yazı tiplerini [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] kapsayan olanlar da dahil olmak üzere, yazı tiplerinin uygulamalar içinde gömülmesini veya aksi halde başvuru. Bu nedenle, bir geliştirici olarak, bir uygulama içine eklediğiniz veya başka bir şekilde yeniden dağıtırabilmeniz gereken herhangi bir yazı tipi için gerekli lisans haklarına sahip olduğunuzdan emin olmak sizin sorumluluğunuzdadır.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Paketleme yazı tiplerine giriş  
@@ -81,7 +81,7 @@ Bu konu, yazı tiplerinin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ```  
   
 > [!NOTE]
->  Uygulamanıza kaynak olarak yazı tipi eklediğinizde, uygulamanızın proje dosyasındaki öğesini `<Resource>` `<EmbeddedResource>` değil, öğesini ayarladığınızdan emin olun. Derleme `<EmbeddedResource>` eyleminin öğesi desteklenmiyor.  
+> Uygulamanıza kaynak olarak yazı tipi eklediğinizde, uygulamanızın proje dosyasındaki öğesini `<Resource>` `<EmbeddedResource>` değil, öğesini ayarladığınızdan emin olun. Derleme `<EmbeddedResource>` eyleminin öğesi desteklenmiyor.  
   
  Aşağıdaki biçimlendirme örneği, uygulamanın yazı tipi kaynaklarına nasıl başvurulacağını gösterir.  
   
@@ -152,7 +152,7 @@ Bu konu, yazı tiplerinin [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Bu SDK, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarla kullanabileceğiniz örnek bir OpenType yazı tipi kümesi içerir. Yazı tipleri yalnızca kaynak kitaplığında tanımlanmıştır. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
+> Bu SDK, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamalarla kullanabileceğiniz örnek bir OpenType yazı tipi kümesi içerir. Yazı tipleri yalnızca kaynak kitaplığında tanımlanmıştır. Daha fazla bilgi için bkz. [örnek OpenType yazı tipi paketi](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Yazı tipi kullanımı sınırlamaları  

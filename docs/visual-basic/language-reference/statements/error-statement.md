@@ -1,5 +1,5 @@
 ---
-title: Error deyimi (Visual Basic)
+title: Error bildirisi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b926214d3be7f5f57783a8599acf1bb1042f956
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982403"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944451"
 ---
 # <a name="error-statement"></a>Error Deyimi
-Bir hatanın oluşum benzetimini yapar.  
+Bir hata oluşumunun benzetimini yapar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -28,29 +28,29 @@ Error errornumber
   
 ## <a name="parts"></a>Bölümler  
  `errornumber`  
- Gerekli. Herhangi bir geçerli hata sayı olabilir.  
+ Gerekli. Herhangi bir geçerli hata numarası olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `Error` Deyimi, geriye dönük uyumluluk için desteklenir. Özellikle, nesneleri oluştururken yeni kodda, kullanın `Err` nesnenin `Raise` çalışma zamanı hataları oluşturmasına yöntemi.  
+ Bildirim `Error` , geriye dönük uyumluluk için desteklenir. Yeni kodda, özellikle nesne oluştururken, çalışma zamanı hataları oluşturmak `Err` için `Raise` nesnenin metodunu kullanın.  
   
- Varsa `errornumber` tanımlanan `Error` ifade, sonra özelliklerini hata işleyicisini çağırır `Err` nesne, aşağıdaki varsayılan değerler atanır:  
+ Tanımlanmışsa, nesne özellikleri aşağıdaki varsayılan değerlere atandıktan sonraifadehataişleyicisiniçağırır:`Error` `Err` `errornumber`  
   
 |Özellik|Değer|  
 |--------------|-----------|  
-|`Number`|Bağımsız değişkeni olarak belirtilen değeri `Error` deyimi. Herhangi bir geçerli hata sayı olabilir.|  
-|`Source`|Geçerli Visual Basic projesi adı.|  
-|`Description`|Dize ifadesi dönüş değerine karşılık gelen `Error` işlevi için belirtilen `Number`, bu dizenin varsa. Dize mevcut değilse `Description` sıfır uzunlukta bir dize içerir ("").|  
-|`HelpFile`|Tam sürücü yolu ve uygun Visual Basic Yardım dosyasının dosya adı.|  
-|`HelpContext`|Visual Basic uygun Yardım dosyası hata karşılık gelen için bir bağlam kimliği `Number` özelliği.|  
-|`LastDLLError`|Sıfır.|  
+|`Number`|`Error` Deyimin bağımsız değişkeni olarak belirtilen değer. Herhangi bir geçerli hata numarası olabilir.|  
+|`Source`|Geçerli Visual Basic projesinin adı.|  
+|`Description`|Bu dize varsa, belirtilen `Error` `Number`için işlevin dönüş değerine karşılık gelen dize ifadesi. Dize yoksa, `Description` sıfır uzunluklu bir dize ("") içerir.|  
+|`HelpFile`|Uygun Visual Basic Yardım dosyasının tam sürücü, yol ve dosya adı.|  
+|`HelpContext`|`Number` Özelliğe karşılık gelen hata için uygun Visual Basic Yardım dosyası bağlam kimliği.|  
+|`LastDLLError`|Sıfırlama.|  
   
- Hiçbir hata işleyicisi yok veya etkinse, bir hata iletisi oluşturulur ve gelen görüntülenen `Err` nesne özellikleri.  
+ Herhangi bir hata işleyicisi yoksa veya hiçbiri etkinleştirilmemişse, `Err` nesne özelliklerinden bir hata iletisi oluşturulur ve görüntülenir.  
   
 > [!NOTE]
->  Bazı Visual Basic ana bilgisayar uygulamalarını nesneler oluşturamaz. Sınıflar ve nesneler oluşturabilir olup olmadığını belirlemek için konak uygulamanızın belgelerine bakın.  
+> Bazı Visual Basic ana bilgisayar uygulamaları nesne oluşturamaz. Sınıf ve nesne oluşturup oluşturamayacağını öğrenmek için ana bilgisayar uygulamanızın belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Error` hata numarası 11 oluşturulacak deyimi.  
+ Bu örnek, `Error` 11 hata numarasını oluşturmak için ifadesini kullanır.  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
@@ -58,9 +58,9 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Uzayına** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Derleme:** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
+ **Derleme** Visual Basic Çalışma Zamanı Kitaplığı (Microsoft.VisualBasic.dll içinde)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -7,24 +7,24 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 220fb3236786eb894bb78d12104025d24c9876ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960900"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>Nasıl yapılır: .NET Framework 3.5'in Yüklü Olup Olmadığını Algılama
-Yöneticiler, .NET Framework 3. 5'i hedefleyen bir sistemde Windows Presentation Foundation (WPF) uygulamaları dağıtmadan önce ilk olarak, .NET Framework 3.5 çalışma zamanı mevcut olduğunu onaylamanız gerekir. Bu konu, HTML/JavaScript dilinde yazılmış bir komut dosyası sağlar. Yöneticiler, .NET Framework 3.5 bir sistemde mevcut olup olmadığını belirlemek için kullanabilirsiniz.  
+Yöneticiler, .NET Framework 3,5 ' i hedefleyen bir sisteme Windows Presentation Foundation (WPF) uygulamaları dağıtabilmek için önce .NET Framework 3,5 çalışma zamanının mevcut olduğunu doğrulamamalıdır. Bu konuda, yöneticilerin bir sistemde .NET Framework 3,5 olup olmadığını belirlemede kullanabileceğiniz HTML/JavaScript 'te yazılmış bir komut dosyası sağlanmaktadır.  
   
 > [!NOTE]
->  Yükleme hakkında daha ayrıntılı bilgi için bkz: dağıtma ve .NET Framework'ü algılama [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).  
+> .NET Framework yükleme, dağıtma ve algılama hakkında daha ayrıntılı bilgi için bkz. [geliştiriciler için .NET Framework yükleme](../../install/guide-for-developers.md).  
   
 ## <a name="example"></a>Örnek  
- .NET Framework 3.5 yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesi olarak ekler. Aşağıdaki örnek, basit bir HTML sayfasında yerleşik bir komut dosyası gösterir. Komut dosyası, .NET Framework 3.5 yüklenir ve arama sonuçlarını temel durum iletisini görüntüler olup olmadığını belirlemek için UserAgent dizesi arar.  
+ .NET Framework 3,5 yüklendiğinde, MSI ".NET CLR" ve sürüm numarasını UserAgent dizesine ekler. Aşağıdaki örnek, basit bir HTML sayfasına eklenmiş bir betiği gösterir. Betik, .NET Framework 3,5 'nin yüklü olup olmadığını ve aramanın sonuçlarında bir durum iletisi görüntülediğini anlamak için UserAgent dizesini arar.  
   
 > [!NOTE]
->  Bu betik, Internet Explorer için tasarlanmıştır. Diğer tarayıcılarda UserAgent dizesi içinde .NET CLR bilgileri içermeyebilir.  
+> Bu betik Internet Explorer için tasarlanmıştır. Diğer tarayıcılar, UserAgent dizesinde .NET CLR bilgileri içermeyebilir.  
   
 ```  
 <HTML>  
@@ -116,13 +116,13 @@ Yöneticiler, .NET Framework 3. 5'i hedefleyen bir sistemde Windows Presentation
 </HTML>  
 ```  
   
- ".NET CLR" sürümü için arama başarılı olursa, aşağıdaki türde durum iletisi görüntülenir:  
+ ".NET CLR" sürümü için arama başarılı olursa aşağıdaki tür durum iletisi görüntülenir:  
   
  `This machine has the correct version of the .NET Framework 3.5.`  
   
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; .NET CLR 3.5.20726; MS-RTC LM 8).`  
   
- Aksi takdirde, aşağıdaki türde durum iletisi görüntülenir:  
+ Aksi takdirde, aşağıdaki tür durum iletisi görüntülenir:  
   
  `This machine does not have the correct version of the .NET Framework 3.5. The required version is v3.5.0.0.`  
   

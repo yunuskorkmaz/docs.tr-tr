@@ -2,47 +2,47 @@
 title: Kaynaklara Erişimde Güvenlik Güven Düzeyleri
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 847467b964e86f6d13be6ba103162512270fa684
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948715"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Kaynaklara Erişimde Güvenlik Güven Düzeyleri
-Bu konuda, erişim kaynak türleri üzerinde nasıl kısıtlanır açıklar, <xref:System.Transactions> kullanıma sunar.  
+Bu konuda, erişimin <xref:System.Transactions> açığa çıkardığı kaynak türleri üzerinde nasıl sınırlandırıldığı anlatılmaktadır.  
   
- Güven için üç ana düzeyi <xref:System.Transactions>. Güven düzeyleri kaynak türleri göre tanımlanan, <xref:System.Transactions> kullanıma sunan ve bu kaynakları erişmek için gereken güven düzeyi. Kaynakları, <xref:System.Transactions> erişim sağlar sistem bellek, paylaşılan işlem geniş kaynakları ve uluslararası sistem kaynakları. Düzeyleri şunlardır:  
+ İçin <xref:System.Transactions>üç ana güven düzeyi vardır. Güven düzeyleri, <xref:System.Transactions> kullanıma sunan kaynak türlerine ve bu kaynaklara erişmek için gerekli olan güven düzeyine göre tanımlanır. Kaynakları, <xref:System.Transactions> erişim sağlar sistem bellek, paylaşılan işlem geniş kaynakları ve uluslararası sistem kaynakları. Düzeyleri şunlardır:  
   
-- **AllowPartiallyTrustedCallers** (APTCA) hareketleri içinde tek bir uygulama bir etki alanı kullanan uygulamalar için.  
+- **Allowpartiallytrustedçağıranları** (APTCA), tek bir uygulama etki alanı içindeki işlemleri kullanan uygulamalar için.  
   
 - **DistributedTransactionPermission** (DTP) dağıtılmış işlemler kullanan uygulamalar için.  
   
-- Kalıcı kaynakları, yapılandırma yönetimi uygulamaları ve eski birlikte çalışma uygulamaları için tam güven.  
+- Dayanıklı kaynaklar, yapılandırma yönetimi uygulamaları ve eski birlikte çalışma uygulamaları için tam güven.  
   
 > [!NOTE]
->  Herhangi bir Kimliğine bürünülen bağlamları olan liste arabirimler çağırmalıdır değil.  
+> Herhangi bir Kimliğine bürünülen bağlamları olan liste arabirimler çağırmalıdır değil.  
   
 ## <a name="trust-levels"></a>Güven düzeyleri  
   
 ### <a name="aptca-partial-trust"></a>APTCA (kısmi güven)  
- <xref:System.Transactions> Derleme ile işaretlendiğinden kısmen güvenilen kod tarafından çağrılabilir **AllowPartiallyTrustedCallers** özniteliği (APTCA). Bu öznitelik temelde örtük kaldırır <xref:System.Security.Permissions.SecurityAction.LinkDemand> için **FullTrust** izni olan ayarlandı aksi otomatik olarak yerleştirilen her tür genel olarak erişilebilir her yönteminde üzerinde. Ancak, bazı türleri ve üyeleri hala daha güçlü izinleri gerektirir.  
+ , <xref:System.Transactions> **Allowpartiallytrustedçağıranlar** özniteliğiyle (aptca) işaretlendiğinden, derleme kısmen güvenilen kod tarafından çağrılabilir. Bu öznitelik, normalde her türden <xref:System.Security.Permissions.SecurityAction.LinkDemand> herkese açık olarak erişilebilen her metoda otomatik olarak eklenen **FullTrust** izin kümesi için örtük olarak kaldırılır. Ancak bazı türler ve Üyeler hala daha güçlü izinler gerektirir.  
   
- APTCA özniteliği uygulamaların tek bir uygulama etki alanı içinde kısmi güven işlemleri kullanmasını sağlar. Bu işlemler ilerletilmiş olmayan ve hata işleme için kullanılan geçici listeler sağlar. İşlenen karma tablo ve onu kullanan bir uygulama bu bir örnektir. Veri eklenen ve tek bir işlem altında karma tablo kaldırılır. İşlem daha sonra geri alınır, bu işlem altında karma tabloya yapılan değişiklikleri alınabilir.  
+ APTCA özniteliği, uygulamaların tek bir uygulama etki alanı içinde kısmi güvende işlemleri kullanmasına olanak sağlar. Bu, hatasız işlemler ve hata işleme için kullanılabilecek geçici listeler sunar. Bunun bir örneği, işlem temelli bir karma tablo ve onu kullanan bir uygulamadır. Veriler, tek bir işlem altında karma tabloya eklenebilir veya kaldırılabilir. İşlem daha sonra geri alınırsa, bu işlem altındaki karma tabloya yapılan tüm değişiklikler geri alınabilir.  
   
 ### <a name="distributedtransactionpermission-dtp"></a>DistributedTransactionPermission (DTP)  
- Olduğunda bir <xref:System.Transactions> işlem ilerletilmiş MSDTC tarafından yönetilmek üzere <xref:System.Transactions> taleplerini <xref:System.Transactions.DistributedTransactionPermission> dağıtılmış işlem oluşturmak için (DTP). İlerletilmiş işlem neden olan kod buna (gibi serileştirme veya ek kalıcı listeye aracılığıyla) DTP verilmesi gerekir. Özgün olarak oluşturulan kod <xref:System.Transactions> işlem gerekmeyen gerekmez bu izne sahip.  
+ Bir <xref:System.Transactions> işlem MSDTC tarafından yönetilmek üzere ilerlediğinde, <xref:System.Transactions> dağıtılmış işlemi oluşturmak için <xref:System.Transactions.DistributedTransactionPermission> (DTP) taleplerini ister. Bu, işlemin ilerlemesine neden olan kodun (serileştirme veya ek dayanıklı kayıtlar gibi) DTP verilmelidir. <xref:System.Transactions> İşlemin başlangıçta oluşturduğu kodun bu izne sahip olması gerekmez.  
   
 ### <a name="fulltrust-link-demands"></a>FullTrust bağlantı talepleri  
- Bu izin düzeyi kalıcı kaynaklara yazma uygulamaları sınırlamak üzere tasarlanmıştır. Başarısızlık durumunda, böylece kalıcı veri güncelleştirebilirsiniz işlem son sonucunu belirlemek için işlem yöneticisi ile kurtarabilmek için uygulama gerekir. Bu tür bir uygulama, sağlam kaynak yöneticisi olarak bilinir. Bir Klasik bu tür bir uygulama SQL örnektir.  
+ Bu izin düzeyi, dayanıklı kaynaklara yazılan uygulamaları kısıtlamak için tasarlanmıştır. Hata sonrasında uygulamanın, kalıcı verileri güncelleştirebilmesi için işlemin son sonucunu belirleyebilmesi için işlem yöneticisi ile kurtarma yapabilmesi gerekir. Bu tür bir uygulama, sağlam kaynak yöneticisi olarak bilinir. Bir Klasik bu tür bir uygulama SQL örnektir.  
   
- Kurtarmayı etkinleştirmek için bu tür bir uygulama kalıcı olarak sistem kaynaklarının kullanılmasına olanağı vardır. İşlem sırasında katılan tüm kalıcı kaynak yöneticileri sonucu aldığınız onaylayabilirsiniz kadar taahhüt işlemler kurtarılabilir hareket yöneticisi unutmayın olmasıdır. Bu nedenle, bu tür bir uygulama tam güven gerektirir ve sürece çalıştırılmamalıdır güven düzeyi verilmiş.  
+ Kurtarmayı etkinleştirmek için bu tür bir uygulama kalıcı olarak sistem kaynaklarının kullanılmasına olanağı vardır. Bunun nedeni, kurtarılabilir işlem yöneticisinin, işleme katılan tüm dayanıklı kaynak yöneticilerinin sonucu aldığını doğrulayacağından, taahhüt edilen işlemleri hatırlamaları gerekir. Bu nedenle, bu tür bir uygulama için tam güven gerekir ve bu güven düzeyi verilmediği takdirde çalıştırılmamalıdır.  
   
- Kalıcı listeye ve kurtarma hakkında daha fazla bilgi için bkz. [katılımcı bir işlemde kaynakları kaydetme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) ve [kurtarma gerçekleştirme](../../../../docs/framework/data/transactions/performing-recovery.md) konuları.  
+ Kalıcı listeler ve kurtarma hakkında daha fazla bilgi için bkz. [kaynakları bir işlem halinde katılımcılar halinde listeleme](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) ve [kurtarma konuları gerçekleştirme](../../../../docs/framework/data/transactions/performing-recovery.md) .  
   
- COM + ile birlikte çalışma eski çalışma gerçekleştirme uygulamaları de tam güven için gereklidir.  
+ Eski birlikte çalışabilirliğine sahip uygulamaların tam güvene sahip olması için de gereklidir.  
   
- Türlerinin bir listesi aşağıda verilmiştir ve kısmen tarafından çağrılabilir olmayan üyeleri ile tasarlanmış çünkü kod güvenilir **FullTrust** bildirim temelli güvenlik özniteliği:  
+ Aşağıda, **FullTrust** bildirime dayalı güvenlik özniteliğiyle donatılmış olduklarından kısmen güvenilen kod tarafından çağrılabilir olmayan türlerin ve üyelerin listesi verilmiştir:  
   
  `PermissionSetAttribute(SecurityAction.LinkDemand, Name := "FullTrust")`  
   
@@ -62,4 +62,4 @@ Bu konuda, erişim kaynak türleri üzerinde nasıl kısıtlanır açıklar, <xr
   
 - <xref:System.Transactions.TransactionScope.%23ctor%28System.Transactions.TransactionScopeOption%2CSystem.Transactions.TransactionOptions%2CSystem.Transactions.EnterpriseServicesInteropOption%29>  
   
- Yalnızca şu anki çağırıcı sahip gerekli **FullTrust** izin kümesinin yukarıdaki türleri veya yöntemlerini kullanın.
+ Yukarıdaki türleri veya yöntemleri kullanmak için **FullTrust** iznine sahip olması için yalnızca anında çağıranın kullanılması gerekir.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364233"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956407"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Özel Türler ve Kitaplıkar İçin XAML İlişkili CLR Öznitelikleri
 Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çalışma zamanı (CLR) öznitelikleri açıklanmaktadır. Ayrıca, uygulamalar için derlemeler veya türler için XAML ile ilgili bir senaryoya sahip .NET Framework tanımlanan diğer CLR özniteliklerini açıklar. Bu CLR özniteliklerine sahip Attributing derlemeleri, türleri veya üyeleri, türleriniz ile ilgili XAML türü sistem bilgilerini sağlar. Bilgiler XAML düğümü akışını doğrudan veya adanmış XAML okuyucular ve XAML yazarları aracılığıyla işlemek için .NET Framework XAML Hizmetleri kullanan tüm XAML tüketicisine sağlanır.  
@@ -266,7 +266,7 @@ Bu konuda, .NET Framework XAML Hizmetleri tarafından tanımlanan ortak dil çal
 - Derlemede xaml dil desteği tanımlarsınız ve için <xref:System.Windows.Markup.XmlnsDefinitionAttribute> `http://schemas.microsoft.com/winfx/2006/xaml`bir öğesine sahip olursunuz. Bu durumda, genellikle öneki `x`yükseltmeniz gerekir.  
   
 > [!NOTE]
->  .NET Framework XAML Hizmetleri XAML ile ilgili özniteliği <xref:System.Windows.Markup.RootNamespaceAttribute>de tanımlar. Bu öznitelik, proje sistemi desteği için derleme düzeyi bir özniteliktir ve XAML özel türleri için uygun değildir.  
+> .NET Framework XAML Hizmetleri XAML ile ilgili özniteliği <xref:System.Windows.Markup.RootNamespaceAttribute>de tanımlar. Bu öznitelik, proje sistemi desteği için derleme düzeyi bir özniteliktir ve XAML özel türleri için uygun değildir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

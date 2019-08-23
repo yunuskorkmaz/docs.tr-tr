@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 134759d729d6f291db61e6f64ebd51dfe5a4443b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648716"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947017"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
-Büyük nesne (LOB) veri türleri 8 kilobayt (KB) maksimum satır boyutu aşan olanlardır. SQL Server sağlayan bir `max` tanımlayıcısı için `varchar`, `nvarchar`, ve `varbinary` veri türleri değerlerinin depolama 2 büyüklüğünde izin vermek için ^ 32 bayt. Tablo sütunları ve Transact-SQL değişkenleri belirtin `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` veri türleri. ADO.NET, `max` veri türleri getirilen tarafından bir `DataReader`ve iki giriş ve çıkış parametresi değerleri olmadan herhangi bir özel işleme olarak belirtilebilir. İçin büyük `varchar` veri türleri, veriler alınır ve artımlı olarak güncelleştirildi.  
+Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutunu aşacak olanlardır. SQL Server,, `max` ve `nvarchar` `varchar` veri`varbinary` türleri için, 2 ^ 32 bayt kadar büyük değerler depolamaya izin vermek için bir tanımlayıcı sağlar. Tablo sütunları ve Transact-SQL değişkenleri, `varchar(max)` `nvarchar(max)`veya `varbinary(max)` veri türlerini belirtebilir. ADO.net `max` ' de, veri türleri bir tarafından getirilebilir ve özel `DataReader`bir işleme olmadan hem giriş hem de çıkış parametre değerleri olarak belirtilebilir. Büyük `varchar` veri türleri için veriler artımlı olarak alınabilir ve güncelleştirilir.  
   
- `max` Veri türleri, birleştirme ve karşılaştırma, Transact-SQL değişkenleri için kullanılabilir. Bunlar ayrıca DISTINCT, ORDER BY, GROUP BY yan tümcesi SELECT deyiminin toplamalar, birleştirmeler ve alt sorgularda yanı sıra kullanılabilir.  
+ `max` Veri türleri, karşılaştırmalar için Transact-SQL değişkenleri olarak ve birleştirme için kullanılabilir. Ayrıca, bir SELECT ifadesinin yanı sıra toplamaların, birleşimlerin ve alt sorgularda DISTINCT, ORDER BY, GROUP BY yan tümcelerinde de kullanılabilirler.  
   
- Aşağıdaki tabloda, SQL Server Books Online belgelerine bağlantılar sağlar.  
+ Aşağıdaki tabloda SQL Server Books Online 'daki belgelerin bağlantıları verilmiştir.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **Books Online SQL Server**  
   
-1. [Büyük değerli veri türlerini kullanma](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [Büyük değer veri türlerini kullanma](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
-## <a name="large-value-type-restrictions"></a>Büyük bir değer türü kısıtlamaları  
- Aşağıdaki kısıtlamalar uygulamak `max` veri türleri, daha küçük veri türleri için mevcut değildir:  
+## <a name="large-value-type-restrictions"></a>Büyük değer türü kısıtlamaları  
+ Aşağıdaki kısıtlamalar, daha küçük veri `max` türleri için mevcut olmayan veri türleri için geçerlidir:  
   
-- A `sql_variant` büyük içeremez `varchar` veri türü.  
+- `sql_variant` , Büyük`varchar` bir veri türü içeremez.  
   
-- Büyük `varchar` sütunları dizin anahtar sütunu olarak belirtilemez. Kümelenmemiş bir dizin içinde bulunan bir sütunda verilir.  
+- Büyük `varchar` sütunlar, bir dizinde anahtar sütun olarak belirtilemez. Bunlar, kümelenmemiş bir dizinde içerilen bir sütunda izin verilir.  
   
-- Büyük `varchar` sütunları bölümleme anahtar sütunu olarak kullanılamaz.  
+- Büyük `varchar` sütunlar bölümlendirme anahtar sütunları olarak kullanılamaz.  
   
-## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL büyük değerli türlerle çalışma  
- Transact-SQL `OPENROWSET` işlev, bağlanma ve uzak veri erişim tek seferlik bir yöntem. Tüm bir OLE DB veri kaynağından uzak verilere erişmek gerekli bağlantı bilgilerini içerir. `OPENROWSET` işlevmiş gibi bir tablo adı sorgusunun FROM yan tümcesinde başvuruda bulunulabilir. Ayrıca bir INSERT, UPDATE, hedef tablo olarak başvurulabilir veya silme deyiminin, OLE DB sağlayıcısı yeteneklerini tabidir.  
+## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL ' de büyük değer türleriyle çalışma  
+ Transact-SQL `OPENROWSET` işlevi, uzak verilere bağlanmak ve bu verilere erişmek için tek seferlik bir yöntemdir. Bir OLE DB veri kaynağından uzak verilere erişmek için gereken tüm bağlantı bilgilerini içerir. `OPENROWSET`bir sorgunun FROM yan tümcesinde tablo adı gibi bir sorgu oluşturulabilir. Ayrıca, bir INSERT, UPDATE veya DELETE deyimlerinin hedef tablosu olarak, OLE DB sağlayıcının özelliklerine tabi olabilir.  
   
- `OPENROWSET` İşlevi içeren `BULK` satır kümesi sağlayıcısı, bir hedef tabloya veri yüklenirken olmadan doğrudan bir dosyadan veri okumanıza izin verir. Bu sayede kullanılacak `OPENROWSET` basit INSERT SELECT deyimi içinde.  
+ İşlevi, verileri bir `BULK` hedef tabloya yüklemeden doğrudan bir dosyadan okumanıza olanak sağlayan satır kümesi sağlayıcısını içerir. `OPENROWSET` Bu, basit bir INSERT `OPENROWSET` Select ifadesinde kullanmanıza olanak sağlar.  
   
- `OPENROWSET BULK` Seçeneği bağımsız değişkenleri nereden başlamalı ve bitmelidir verileri okuma, hatalarla başa çıkma ve verileri nasıl yorumlanacağını üzerinde önemli denetim sağlayın. Örneğin, veri dosyasındaki bir türü tek satır, tek bir sütun kümesi okunacak belirtebilirsiniz `varbinary`, `varchar`, veya `nvarchar`. Tam sözdizimi ve seçenekleri için SQL Server Books Online'a bakın.  
+ `OPENROWSET BULK` Seçenek bağımsız değişkenleri, verilerin okunması ve bitmesi, hatalarla ilgilenme ve verilerin nasıl yorumlanacağı konusunda önemli bir denetim sağlar. Örneğin, veri dosyasının, veya `varbinary` `nvarchar`türünde `varchar`tek satırlık, tek sütunlu satır kümesi olarak okunacağını belirtebilirsiniz. Tüm sözdizimi ve seçenekler için bkz. Books Online SQL Server.  
   
- Aşağıdaki örnekte, AdventureWorks örnek veritabanındaki ProductPhoto tabloya bir fotoğraf ekler. Kullanırken `BULK OPENROWSET` sağlayıcısı, sağlaması gerekir sütun bile adlandırılmış listesi değerleri her sütununa ekleme değil ise. Birincil anahtarı bu durumda kimlik sütunu olarak tanımlanır ve sütun listesinden dahil edilmeyebilir. Ayrıca, sonunda bir bağıntı adı sağlamanız gerektiğini unutmayın `OPENROWSET` ThumbnailPhoto bu durumda olan ifade. Bu sütunda ile ilişkilendiren `ProductPhoto` tablo, dosya yüklenirken içine.  
+ Aşağıdaki örnek, AdventureWorks örnek veritabanındaki ProductPhoto tablosuna bir fotoğraf ekler. `BULK OPENROWSET` Sağlayıcıyı kullanırken, her sütuna değer yerleştirmeseniz bile adlandırılmış sütun listesini sağlamanız gerekir. Bu örnekte birincil anahtar bir kimlik sütunu olarak tanımlanır ve sütun listesinden atlanabilir. Ayrıca, bu örnekte thumbnailPhoto olan `OPENROWSET` deyimin sonunda bir bağıntı adı belirtmeniz gerektiğini unutmayın. Bu, dosyanın yüklendiği `ProductPhoto` tablodaki sütunuyla ilişkili olur.  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -52,31 +52,31 @@ FROM OPENROWSET
     (BULK 'c:\images\tricycle.jpg', SINGLE_BLOB) ThumbnailPhoto  
 ```  
   
-## <a name="updating-data-using-update-write"></a>Güncelleştirme kullanarak verileri güncelleştiriliyor. YAZMA  
- Transact-SQL UPDATE deyiminin içeriğini değiştirmek için yeni yazma söz dizimine sahip `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` sütunları. Bu, verileri kısmi güncelleştirmelerin yapılmasını sağlar. GÜNCELLEŞTİRME. Söz dizimi burada kısaltılmış formunda gösterilen yazma:  
+## <a name="updating-data-using-update-write"></a>GÜNCELLEŞTIRME kullanılarak veriler güncelleştiriliyor. YAZARKEN  
+ Transact-SQL Update bildiriminde `varchar(max)`, `nvarchar(max)`, veya `varbinary(max)` sütunlarının içeriğini değiştirmek için yeni yazma sözdizimi vardır. Bu, verilerin kısmi güncelleştirmelerini gerçekleştirmenize olanak tanır. GÜNCELLEŞTIRME. WRITE söz dizimi kısaltılmış biçimde gösteriliyor:  
   
  GÜNCELLEŞTİR  
   
- {  *\<Nesne >* }  
+ *{\<nesne >* }  
   
  SET  
   
  { *column_name* = {. YAZMA ( *ifade* , @Offset , @Length )}  
   
- YAZMA yönteminin belirten değerinin bir bölümü *column_name* değiştirilecek. İfade kopyalanacağı değerdir *column_name*, `@Offset` başlangıçtan ifade yazılır, başlangıç noktasıdır ve `@Length` bağımsız değişkeni olan sütun bölümde uzunluğu.  
+ WRITE yöntemi, *column_name* değerinin bir bölümünün değiştirildiğini belirtir. İfade, *column_name*' a kopyalanacak değerdir, `@Offset` ifadenin `@Length` yazılacağı başlangıç noktasıdır ve bağımsız değişkeni, sütunundaki bölümün uzunluğudur ve bağımsız değişkendir.  
   
 |Eğer|Ardından|  
 |--------|----------|  
-|İfade NULL olarak ayarlandı|`@Length` göz ardı edilir ve değer *column_name* kesilmiş belirtilen `@Offset`.|  
-|`@Offset` null|Güncelleştirme işlemi sonunda varolan ifade ekler *column_name* değeri ve `@Length` göz ardı edilir.|  
-|`@Offset` column_name değeri uzunluğundan büyüktür|SQL Server bir hata döndürür.|  
-|`@Length` null|Güncelleştirme işlemi tüm verileri kaldırır `@Offset` sonuna `column_name` değeri.|  
+|İfade NULL olarak ayarlandı|`@Length`yok sayılır ve *column_name* içindeki değer belirtilen `@Offset`şekilde kesilir.|  
+|`@Offset`NULL|Güncelleştirme işlemi, ifadeyi varolan *column_name* değerinin sonuna ekler ve `@Length` yok sayılır.|  
+|`@Offset`column_name değerinin uzunluğundan büyük|SQL Server bir hata döndürür.|  
+|`@Length`NULL|Güncelleştirme işlemi, tüm verileri içinden `@Offset` `column_name` değeri sonuna kaldırır.|  
   
 > [!NOTE]
->  Ne `@Offset` ya da `@Length` negatif bir sayı olabilir.  
+> Ne `@Offset` de`@Length` negatif bir sayı olabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu Transact-SQL örnek DocumentSummary, kısmi bir değer güncelleştirmeleri bir `nvarchar(max)` AdventureWorks veritabanını Belge tablosuna sütun. ' % S'sözcük 'Bileşenler' sözcük 'Özellikler' değiştirme metni, mevcut verileri ve değiştirilen (uzunluk) olacak şekilde karakter sayısına göre değiştirilecek Word'ün başlangıç konumunu (kaydırma) belirterek değiştirilir. Örnek, önce ve sonra sonuçları karşılaştırmak için UPDATE deyiminin SELECT deyimleri içerir.  
+ Bu Transact-SQL örneği, AdventureWorks veritabanındaki belge tablosundaki bir `nvarchar(max)` sütun olan DocumentSummary içindeki kısmi bir değeri günceller. "Bileşenler" sözcüğünün yerini, var olan verilerde değiştirilecek sözcüğün başlangıç konumunu (kaydır) ve değiştirilecek karakter sayısını (uzunluk) belirterek ' Özellikler ' sözcüğü ile değiştirilmiştir. Örnek, sonuçları karşılaştırmak için UPDATE deyiminden önce ve sonra SELECT deyimlerini içerir.  
   
 ```  
 USE AdventureWorks;  
@@ -103,11 +103,11 @@ GO
 -- Reflectors are vital safety features of your bicycle.  
 ```  
   
-## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET içinde büyük değerli türlerle çalışma  
- Büyük bir değer türleri olarak belirterek ADO.NET içinde büyük değer türleri ile çalışabilir <xref:System.Data.SqlClient.SqlParameter> nesneler bir <xref:System.Data.SqlClient.SqlDataReader> kullanarak veya kümesinden bir sonuç döndürmek için bir <xref:System.Data.SqlClient.SqlDataAdapter> doldurmak için bir `DataSet` / `DataTable`. Büyük bir değer türüyle çalışma biçiminizi ve ilgili, daha küçük değer veri türü arasında bir fark yoktur.  
+## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET 'de büyük değerli türlerle çalışma  
+ Büyük değer türlerini bir sonuç kümesi döndürmek <xref:System.Data.SqlClient.SqlParameter> için bir <xref:System.Data.SqlClient.SqlDataReader> içinde nesne olarak belirterek veya bir <xref:System.Data.SqlClient.SqlDataAdapter> öğesini dolduracak `DataSet` /şekilde `DataTable`kullanarak ADO.NET içinde büyük değer türleriyle çalışabilirsiniz. Büyük bir değer türü ve ilgili, daha küçük değer veri türü ile çalışma şekli arasında fark yoktur.  
   
-### <a name="using-getsqlbytes-to-retrieve-data"></a>Veri almak için GetSqlBytes kullanma  
- `GetSqlBytes` Yöntemi <xref:System.Data.SqlClient.SqlDataReader> içeriğini almak için kullanılan bir `varbinary(max)` sütun. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlCommand> adlı nesne `cmd` , seçer `varbinary(max)` bir tablodaki verileri ve <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` olarak verilerini alır <xref:System.Data.SqlTypes.SqlBytes>.  
+### <a name="using-getsqlbytes-to-retrieve-data"></a>Verileri almak için GetSqlBytes kullanma  
+ Öğesinin yöntemi bir sütunun`varbinary(max)` içeriğini almak için kullanılabilir. `GetSqlBytes` <xref:System.Data.SqlClient.SqlDataReader> Aşağıdaki kod parçası, bir tablodan <xref:System.Data.SqlClient.SqlCommand> veri seçen `cmd` `varbinary(max)` adlı bir nesne ve <xref:System.Data.SqlClient.SqlDataReader> verileri olarak <xref:System.Data.SqlTypes.SqlBytes>alan adlı `reader` bir nesne olduğunu varsayar.  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -124,8 +124,8 @@ while (reader.Read())
     }  
 ```  
   
-### <a name="using-getsqlchars-to-retrieve-data"></a>Veri almak için GetSqlChars kullanma  
- `GetSqlChars` Yöntemi <xref:System.Data.SqlClient.SqlDataReader> içeriğini almak için kullanılan bir `varchar(max)` veya `nvarchar(max)` sütun. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlCommand> adlı nesne `cmd` , seçer `nvarchar(max)` bir tablodaki verileri ve <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` , verileri alır.  
+### <a name="using-getsqlchars-to-retrieve-data"></a>Verileri almak için GetSqlChars kullanma  
+ `GetSqlChars` Yöntemi`varchar(max)` bir veya sütununun`nvarchar(max)` içeriğini almak için kullanılabilir. <xref:System.Data.SqlClient.SqlDataReader> Aşağıdaki kod parçası, bir tablodan <xref:System.Data.SqlClient.SqlCommand> verileri seçen `cmd` `nvarchar(max)` adlı bir nesne ve <xref:System.Data.SqlClient.SqlDataReader> verileri alan adlı `reader` bir nesne olduğunu varsayar.  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -142,8 +142,8 @@ while (reader.Read())
 }  
 ```  
   
-### <a name="using-getsqlbinary-to-retrieve-data"></a>Veri almak için GetSqlBinary kullanma  
- `GetSqlBinary` Yöntemi bir <xref:System.Data.SqlClient.SqlDataReader> içeriğini almak için kullanılan bir `varbinary(max)` sütun. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlCommand> adlı nesne `cmd` , seçer `varbinary(max)` bir tablodaki verileri ve <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` olarak verilerini alır bir <xref:System.Data.SqlTypes.SqlBinary> akış.  
+### <a name="using-getsqlbinary-to-retrieve-data"></a>Verileri almak için GetSqlBinary kullanma  
+ Bir sütunun içeriğini <xref:System.Data.SqlClient.SqlDataReader> almak için, bir yöntemikullanılabilir.`GetSqlBinary` `varbinary(max)` Aşağıdaki kod parçası, bir tablodan <xref:System.Data.SqlClient.SqlCommand> veri seçen `cmd` `varbinary(max)` adlı bir nesne ve <xref:System.Data.SqlClient.SqlDataReader> verileri <xref:System.Data.SqlTypes.SqlBinary> akış olarak alan adlı `reader` bir nesne olarak varsayar.  
   
 ```vb  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection)  
@@ -160,8 +160,8 @@ while (reader.Read())
     }  
 ```  
   
-### <a name="using-getbytes-to-retrieve-data"></a>Veri almak için GetBytes kullanma  
- `GetBytes` Yöntemi bir <xref:System.Data.SqlClient.SqlDataReader> belirtilen uzaklıkta başlayan belirli bir bayt dizisi olarak belirtilen sütun uzaklığı bayt akışı okur. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` , bayt bayt dizisine alır. Aksine, Not `GetSqlBytes`, `GetBytes` dizi arabelleği için bir boyut gerektirir.  
+### <a name="using-getbytes-to-retrieve-data"></a>Verileri almak için GetBytes kullanma  
+ Bir `GetBytes` a<xref:System.Data.SqlClient.SqlDataReader> yöntemi belirtilen sütundan bir bayt akışını belirtilen dizi uzaklığında başlayarak bir bayt dizisine okur. Aşağıdaki kod parçası, bayt dizisine <xref:System.Data.SqlClient.SqlDataReader> bayt alan `reader` adlı bir nesne olduğunu varsayar. Öğesinin aksine `GetSqlBytes` `GetBytes` , dizi arabelleği için bir boyut gerektirdiğini unutmayın.  
   
 ```vb  
 While reader.Read()  
@@ -179,8 +179,8 @@ while (reader.Read())
 }  
 ```  
   
-### <a name="using-getvalue-to-retrieve-data"></a>GetValue veri almak için kullanma  
- `GetValue` Yöntemi bir <xref:System.Data.SqlClient.SqlDataReader> değeri belirtilen sütun uzaklığı bir diziye okur. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` ilk sütun ikili verilerden alır uzaklığı ve ardından verileri ikinci sütun uzaklığı dize.  
+### <a name="using-getvalue-to-retrieve-data"></a>Verileri almak için GetValue 'yi kullanma  
+ `GetValue` Bir<xref:System.Data.SqlClient.SqlDataReader> öğesinin yöntemi, belirtilen sütun içindeki değeri bir diziye okur. Aşağıdaki kod parçası, ilk sütun <xref:System.Data.SqlClient.SqlDataReader> kaydırından `reader` ikili verileri alan adlı bir nesneyi ve sonra ikinci sütun kaydırından dize verilerini alır.  
   
 ```vb  
 While reader.Read()  
@@ -203,8 +203,8 @@ while (reader.Read())
 }  
 ```  
   
-## <a name="converting-from-large-value-types-to-clr-types"></a>CLR türlerine büyük değer türlerinden dönüştürme  
- İçeriğini dönüştürebilirsiniz bir `varchar(max)` veya `nvarchar(max)` gibi dize dönüştürme yöntemlerinden herhangi birini kullanarak sütun `ToString`. Aşağıdaki kod parçası varsayar bir <xref:System.Data.SqlClient.SqlDataReader> adlı nesne `reader` , verileri alır.  
+## <a name="converting-from-large-value-types-to-clr-types"></a>Büyük değer türlerinden CLR türlerine dönüştürme  
+ Bir `varchar(max)` `ToString`veya `nvarchar(max)` sütununun içeriğini, gibi dize dönüştürme yöntemlerinden herhangi birini kullanarak dönüştürebilirsiniz. Aşağıdaki kod parçası, verileri alan <xref:System.Data.SqlClient.SqlDataReader> adlı `reader` bir nesnenin olduğunu varsayar.  
   
 ```vb  
 While reader.Read()  
@@ -222,13 +222,13 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki kod adını alır ve `LargePhoto` nesnesinden `ProductPhoto` tablosundaki `AdventureWorks` veritabanı ve bir dosyaya kaydeder. Derlemeyi bir başvuru ile derlenmesi gerekiyor <xref:System.Drawing> ad alanı.  <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> Yöntemi <xref:System.Data.SqlClient.SqlDataReader> döndürür bir <xref:System.Data.SqlTypes.SqlBytes> kullanıma sunan bir nesne bir `Stream` özelliği. Bu yeni bir kullanan kod `Bitmap` nesne ve sonra GIF kaydeder `ImageFormat`.  
+ Aşağıdaki kod, `LargePhoto` `AdventureWorks` veritabanındaki `ProductPhoto` tablodaki adı ve nesneyi alır ve bir dosyaya kaydeder. Derlemenin <xref:System.Drawing> ad alanı başvurusuyla derlenmesi gerekir.  Öğesinin yöntemi, <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlTypes.SqlBytes> bir özelliği`Stream` kullanıma sunan bir nesne döndürür. <xref:System.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> Kod bunu, yeni `Bitmap` bir nesne oluşturmak için kullanır ve ardından gif `ImageFormat`öğesine kaydeder.  
   
  [!code-csharp[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
-## <a name="using-large-value-type-parameters"></a>Büyük bir değer türü parametrelerini kullanma  
- Büyük değer türleri kullanılabilir <xref:System.Data.SqlClient.SqlParameter> daha küçük değer kullandığınız aynı şekilde türleri, nesneleri <xref:System.Data.SqlClient.SqlParameter> nesneleri. Büyük bir değer türleri olarak alabilir <xref:System.Data.SqlClient.SqlParameter> , aşağıdaki örnekte gösterildiği gibi değerleri. Kod aşağıdaki GetDocumentSummary depolanan yordamı AdventureWorks örnek veritabanındaki var olduğunu varsayar. Saklı yordam adlı giriş parametresi alan @DocumentID ve DocumentSummary sütununda içeriğini döndürür @DocumentSummary çıkış parametresi.  
+## <a name="using-large-value-type-parameters"></a>Büyük değer türü parametrelerini kullanma  
+ Büyük değer türleri nesnelerde, <xref:System.Data.SqlClient.SqlParameter> <xref:System.Data.SqlClient.SqlParameter> nesnelerde daha küçük değer türlerini kullandığınız şekilde de kullanılabilir. Aşağıdaki örnekte gösterildiği gibi büyük değer türlerini <xref:System.Data.SqlClient.SqlParameter> değer olarak alabilirsiniz. Kod, AdventureWorks örnek veritabanında aşağıdaki GetDocumentSummary saklı yordamının bulunduğunu varsayar. Saklı yordam adlı @DocumentID bir giriş parametresi alır ve @DocumentSummary çıkış parametresindeki DocumentSummary sütununun içeriğini döndürür.  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,7 +244,7 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Örnek  
- ADO.NET kod oluşturur <xref:System.Data.SqlClient.SqlConnection> ve <xref:System.Data.SqlClient.SqlCommand> büyük değer türü olarak depolanan GetDocumentSummary saklı yordamı yürütme ve Özet, belge almak için nesneleri. Kod bir değer geçirir @DocumentID giriş parametresi ve sonuçları geçirilen geri görüntüler @DocumentSummary çıkış parametresi konsol penceresinde.  
+ ADO.NET kodu, GetDocumentSummary saklı yordamını yürütmek ve büyük bir değer türü olarak depolanan belge özetini almak için <xref:System.Data.SqlClient.SqlConnection> <xref:System.Data.SqlClient.SqlCommand> nesneler oluşturur. Kod, @DocumentID giriş parametresi için bir değer geçirir ve konsol penceresinde @DocumentSummary çıkış parametresine geri geçirilen sonuçları görüntüler.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
@@ -254,4 +254,4 @@ WHERE   DocumentID=@DocumentID
 - [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3651a4be94fa624d0dd6ab64b8c3f8169945de0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81653c69353b60d7287240505f53b26552c21774
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987629"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960984"
 ---
 # <a name="icordebugprocessenum-interface"></a>ICorDebugProcessEnum Arabirimi
-Icordebugenum yöntemlerini uygular ve Icordebugprocess dizilerini numaralandırır.  
+Icordebugger Genum yöntemlerini uygular ve ICorDebugProcess dizilerini numaralandırır.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Belirtilen sayıda alır `ICorDebugProcess` örneklerden geçerli konumunda başlayan bir numaralandırma.|  
+|[Next Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Geçerli konumdan başlayarak Numaralandırmadaki `ICorDebugProcess` belirtilen örnek sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -3,20 +3,20 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3b4cf0d7c2748079af7a94534622b1dbadd3ab5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941887"
 ---
-# <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler >
-Yapılandırır <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Bu öğe yalnızca mevcut olması durumunda `mode` özniteliği `<cookieHandler>` öğesidir "Varsayılan" veya "Öbekli".  
+# <a name="chunkedcookiehandler"></a>\<Öbek için yığın tanımlama >
+Öğesini yapılandırır <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Bu öğe yalnızca `mode` `<cookieHandler>` öğenin özniteliği "default" veya "öbekli" ise bulunabilir.  
   
- \<System.IdentityModel.Services >  
-\<Federationconfiguration'a >  
-\<cookieHandler >  
-\<chunkedCookieHandler >  
+ \<System. IdentityModel. Services >  
+\<federationConfiguration >  
+\<Tanımlama, ıehandler >  
+\<Öbek için yığın tanımlama >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,24 +38,24 @@ Yapılandırır <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Bu ö
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|Öbek boyutu|Herhangi bir HTTP tanımlama bilgisi için HTTP tanımlama bilgisi verisi karakterlerinden en büyük boyutu. Öbek boyutu ayarlarken dikkatli olmanız gerekir. Web tarayıcısı tanımlama bilgilerini ve etki alanı başına izin verilen sayıyı boyutuna farklı sınırlara sahiptir. Örneğin, özgün Netscape belirtimi limitler hükümeti: 300 tanımlama bilgilerini (meta veriler, yalnızca tanımlama bilgisi değeri dahil) tanımlama bilgisi üstbilgisi başına 4096 bayt ve etki alanı başına 20 tanımlama bilgisi toplam. Varsayılan değer 2000'dir. Gerekli.|  
+|Öbek boyutu|Herhangi bir HTTP tanımlama bilgisinin HTTP tanımlama bilgisi verilerinin karakter cinsinden en büyük boyutu. Öbek boyutunu ayarlarken dikkatli olmanız gerekir. Web tarayıcıları, her etki alanı için izin verilen tanımlama bilgileri ve sayı boyutları için farklı sınırlara sahiptir. Örneğin, özgün Netscape belirtimi bu sınırları ifade etmek için: 300 tanımlama bilgileri toplamı, tanımlama bilgisi üst bilgisi başına 4096 bayt (meta veriler, yalnızca tanımlama bilgisi değeri değil) ve etki alanı başına 20 tanımlama bilgisi. Varsayılan değer 2000 ' dir. Gerekli.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- None  
+ Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Yapılandırır <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> okuma ve yazma tanımlama bilgileri (SAM) kullanır.|  
+|[\<Tanımlama, ıehandler >](cookiehandler.md)|<xref:System.IdentityModel.Services.CookieHandler> (Sam)tanımlamabilgileriniokumakveyazmak<xref:System.IdentityModel.Services.SessionAuthenticationModule> için kullandığı öğesini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirttiğinizde bir <xref:System.IdentityModel.Services.ChunkedCookieHandler> ayarlayarak `mode` özniteliği `<cookieHandler>` "Varsayılan" veya "Öbekli" öğesine, tanımlama bilgisi işleyici okumak ve tanımlama bilgileri dahil ederek yazmak için kullandığı öbek boyutu belirtebilirsiniz bir `<chunkedCookieHandler>` alt öğesi ve ayarı, `chunkSize` özniteliği. Varsa `<chunkedCookieHandler>` öğesi yoksa, 2000 bayt varsayılan öbek boyutu kullanılır. Bu öğe olamaz belirtilen `mode` özniteliği "Özel" olarak ayarlanır.  
+ Öğesinin özniteliğini "varsayılan" veya "öbekli" olarak <xref:System.IdentityModel.Services.ChunkedCookieHandler> `mode` ayarlayarak belirttiğinizde, tanımlama bilgisi işleyicisinin bir `<chunkedCookieHandler>` alt öğe ekleyerek tanımlama bilgilerini okumak ve yazmak için kullandığı öbek boyutunu belirtebilirsiniz. `<cookieHandler>` `chunkSize` özniteliği ayarlanıyor. `<chunkedCookieHandler>` Öğe yoksa, 2000 baytlık varsayılan öbek boyutu kullanılır. `mode` Öznitelik "Custom" olarak ayarlandığında bu öğe belirtilemez.  
   
- `<chunkedCookieHandler>` Öğesi tarafından temsil edilen <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> sınıfı.  
+ `<chunkedCookieHandler>` Öğesi sınıfı<xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> tarafından temsil edilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tanımlama bilgilerini yazar 3000 bayt öbekler halinde bir öbekli tanımlama bilgisi işleyicisi yapılandırır.  
+ Aşağıdaki örnek, 3000 baytlık öbeklere tanımlama bilgilerini yazan bir öbekli tanımlama bilgisi işleyicisini yapılandırır.  
   
 ```xml  
 <cookieHandler mode="Chunked">  

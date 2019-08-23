@@ -1,31 +1,31 @@
 ---
-title: Öznitelikler genel bakış (Visual Basic)
+title: Özniteliklere genel bakış (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 2ecc3fb0a3bf7365b6eec39e1c5086d99f2c5a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c799b9be9b936beadde28374bd9882ebc6e2d9a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642449"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966315"
 ---
-# <a name="attributes-overview-visual-basic"></a>Öznitelikler genel bakış (Visual Basic)
-Öznitelikler (derlemeler, türler, yöntemler, özellikler ve benzeri) koduyla ilişkili bir meta veriler ya da tanımlayıcı bilgileri, güçlü bir yöntem sağlar. Öznitelik, bir program varlıkla ilişkilendirilen sonra öznitelik çalışma zamanında olarak adlandırılan tekniği kullanarak sorgulanabilir *yansıma*. Daha fazla bilgi için [yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
+# <a name="attributes-overview-visual-basic"></a>Özniteliklere genel bakış (Visual Basic)
+Öznitelikler, meta verileri veya bildirime dayalı bilgilerin kod (derlemeler, türler, Yöntemler, özellikler, vb.) ile ilişkilendirilmesi için güçlü bir yöntem sağlar. Bir öznitelik bir program varlığıyla ilişkilendirildikten sonra, çalışma zamanında, *yansıma*adlı bir teknik kullanarak öznitelik sorgulanabilir. Daha fazla bilgi için bkz. [yansıma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
   
- Öznitelik, aşağıdaki özelliklere sahiptir:  
+ Öznitelikler aşağıdaki özelliklere sahiptir:  
   
-- Öznitelik meta verileri programınıza ekleyin. *Meta veri* bir programda tanımlanan türleri hakkındaki bilgilerdir. Tüm .NET derlemeleri derlemede tanımlanan tür üyeleri ve türleri açıklayan meta veriler belirtilen bir kümesini içerir. Gerekli ek bilgileri belirtmek için özel öznitelikler ekleyebilirsiniz. Daha fazla bilgi için bkz: [özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
+- Öznitelikler, programınıza meta veri ekler. *Meta veriler* , bir programda tanımlanan türlerle ilgili bilgiler. Tüm .NET derlemeleri, derlemede tanımlanan türleri ve tür üyelerini açıklayan, belirtilen meta veri kümesini içerir. Gerekli ek bilgileri belirtmek için özel öznitelikler ekleyebilirsiniz. Daha fazla bilgi için bkz. [özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md).  
   
-- Tüm derlemeler, modüller veya daha küçük program öğelerini sınıfları ve özellikleri gibi bir veya daha fazla öznitelikleri uygulayabilirsiniz.  
+- Tüm derlemeler, modüller veya sınıflar ve özellikler gibi daha küçük program öğelerine bir veya daha fazla öznitelik uygulayabilirsiniz.  
   
-- Öznitelikleri yöntemleri ve özellikleri aynı şekilde bağımsız değişkenleri kabul edebilir.  
+- Öznitelikler bağımsız değişkenleri Yöntemler ve özelliklerle aynı şekilde kabul edebilir.  
   
-- Programınızı kendi meta veriler ya da diğer programları meta verilerde yansıma kullanarak inceleyebilirsiniz. Daha fazla bilgi için [erişme öznitelikleri kullanarak yansıma (Visual Basic) tarafından](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
+- Programınız, yansıma kullanarak kendi meta verilerini veya diğer programlardaki meta verileri inceleyebilir. Daha fazla bilgi için bkz. [yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).  
   
-## <a name="using-attributes"></a>Öznitelikleri kullanma  
- Belirli bir öznitelik bildirimleri, geçerli olduğu türlerini kısıtlamak ancak öznitelikleri pek çok bildiriminde yerleştirilebilir. Visual Basic'te, bir öznitelik açılı ayraç içine alınır (\< >). Bu, aynı satırda uygulandığı öğenin hemen önce yer almalıdır.  
+## <a name="using-attributes"></a>Öznitelikleri Kullanma  
+ Öznitelikler, her bir bildirime yerleştirilebilecek, ancak belirli bir öznitelik, geçerli olduğu bildirimlerin türlerini kısıtlayabilir. Visual Basic, bir öznitelik açılı ayraçlar (\< >) içine alınmıştır. Aynı satırda, uygulandığı öğeden hemen önce gelmelidir.  
   
- Bu örnekte, <xref:System.SerializableAttribute> özniteliği, belirli bir özellik için bir sınıf uygulamak için kullanılır:  
+ Bu örnekte, <xref:System.SerializableAttribute> özniteliği bir sınıfa belirli bir özelliği uygulamak için kullanılır:  
   
 ```vb  
 <System.Serializable()> Public Class SampleClass  
@@ -33,7 +33,7 @@ ms.locfileid: "64642449"
 End Class  
 ```  
   
- Özniteliğine sahip metot <xref:System.Runtime.InteropServices.DllImportAttribute> şu şekilde bildirilir:  
+ Özniteliğine <xref:System.Runtime.InteropServices.DllImportAttribute> sahip bir yöntem şöyle bildirilmiştir:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -45,7 +45,7 @@ Sub SampleMethod()
 End Sub  
 ```  
   
- Birden fazla özniteliği bir bildiriminde yerleştirilebilir:  
+ Bir bildirime birden fazla öznitelik yerleştirilebilecek:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -58,7 +58,7 @@ Sub MethodB(<Out(), [In]()> ByVal x As Double)
 End Sub  
 ```  
   
- Bazı öznitelikleri kereden fazla belirli bir varlık için belirtilebilir. Multiuse bir öznitelik örneğidir <xref:System.Diagnostics.ConditionalAttribute>:  
+ Bazı öznitelikler, belirli bir varlık için birden çok kez belirtilebilir. Bu tür bir çok kullanım özniteliğine <xref:System.Diagnostics.ConditionalAttribute>örnek:  
   
 ```vb  
 <Conditional("DEBUG"), Conditional("TEST1")>   
@@ -67,10 +67,10 @@ End Sub
 ```  
   
 > [!NOTE]
->  Kural gereği, tüm öznitelik adları word .NET Framework'teki diğer öğelerden bunları ayırt etmek için "özniteliği" ile biter. Ancak, öznitelikler kodda kullanıldığında özniteliği soneki belirtmek gerekmez. Örneğin, `[DllImport]` eşdeğerdir `[DllImportAttribute]`, ancak `DllImportAttribute` .NET Framework'teki özniteliğin gerçek adıdır.  
+> Kurala göre, tüm öznitelik adları, .NET Framework diğer öğelerden ayırt edilebilmesi için "Attribute" kelimesiyle biter. Ancak, koddaki öznitelikleri kullanırken öznitelik sonekini belirtmeniz gerekmez. Örneğin, `[DllImport]` öğesine `[DllImportAttribute]`eşdeğerdir, ancak `DllImportAttribute` .NET Framework özniteliğin gerçek adıdır.  
   
 ### <a name="attribute-parameters"></a>Öznitelik parametreleri  
- Konumsal, adlandırılmamış veya adlandırılmış parametreleri fazla öznitelik var. Konumsal parametreleri belirli bir sırayla belirtilmelidir ve atlanamaz. adlandırılmış parametreler isteğe bağlıdır ve herhangi bir sırada belirtilebilir. Konumsal parametreler ilk belirtilir. Örneğin, bu üç özniteliğin eşdeğerdir:  
+ Birçok özniteliğin, konumsal, adlandırılmamış veya adlandırılmış olabilecek parametreleri vardır. Herhangi bir Konumsal parametre belirli bir sırada belirtilmelidir ve atlanamaz; Adlandırılmış parametreler isteğe bağlıdır ve herhangi bir sırada belirtilebilir. Konumsal parametreler önce belirtilmiştir. Örneğin, bu üç öznitelik eşdeğerdir:  
   
 ```vb  
 <DllImport("user32.dll")>  
@@ -78,25 +78,25 @@ End Sub
 <DllImport("user32.dll", ExactSpelling:=False, SetLastError:=False)>  
 ```  
   
- İlk parametre, DLL adı konumsal ve her zaman ilk gelir; diğerleri olarak adlandırılır. Bu durumda, döngülerinden çıkarılabilir şekilde her ikisi de false olarak parametreleri varsayılan adı. Varsayılan parametre değerleri hakkında bilgi için tek bir özniteliğin belgelerine bakın.  
+ İlk parametre olan DLL adı, konumsal ve her zaman ilk olarak gelir; diğerleri olarak adlandırılır. Bu durumda, her ikisi de varsayılan olarak false değerine sahiptir, bu nedenle bu parametreler atlanabilir. Varsayılan parametre değerleri hakkında bilgi için bağımsız özniteliğin belgelerine bakın.  
   
 ### <a name="attribute-targets"></a>Öznitelik Hedefleri  
- *Hedef* özniteliği öznitelik uygulandığı varlıktır. Örneğin, bir öznitelik, bir sınıf, belirli bir yöntemi veya tüm derleme geçerli olabilir. Varsayılan olarak, kendisinden öğe için bir özniteliğini uygular. Ancak, bir yöntem veya, parametre veya dönüş değeri bir öznitelik uygulanmış olup olmadığını açıkça, örneğin, belirleyebilirsiniz.  
+ Bir özniteliğin *hedefi* , özniteliğin uygulandığı varlıktır. Örneğin, bir öznitelik bir sınıfa, belirli bir yönteme veya bir derlemenin tamamına uygulanabilir. Varsayılan olarak, bir öznitelik, kendisinden önce gelen öğe için geçerlidir. Ancak, bir özniteliğin bir yönteme mi, yoksa parametresine mi, yoksa dönüş değerine mi uygulanacağını de açıkça belirleyebilirsiniz.  
   
- Bir öznitelik hedefi açıkça tanımlamak için aşağıdaki sözdizimini kullanın:  
+ Bir öznitelik hedefini açıkça tanımlamak için aşağıdaki sözdizimini kullanın:  
   
 ```vb  
 <target : attribute-list>  
 ```  
   
- Olası listesini `target` değerleri aşağıdaki tabloda gösterilmiştir.  
+ Olası `target` değerler listesi aşağıdaki tabloda gösterilmiştir.  
   
 |Hedef değer|Uygulandığı öğe:|  
 |------------------|----------------|  
 |`assembly`|Tüm derleme|  
-|`module`|(Visual Basic modülünden farklıdır) geçerli derleme Modülü|  
+|`module`|Geçerli derleme modülü (bir Visual Basic modülünden farklı)|  
   
- Aşağıdaki örnek, derlemeler ve modüller için öznitelik uygulayın gösterilmektedir. Daha fazla bilgi için [ortak öznitelikler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).  
+ Aşağıdaki örnek, derlemeler ve modüllere özniteliklerin nasıl uygulanacağını gösterir. Daha fazla bilgi için bkz. [ortak öznitelikler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md).  
   
 ```vb  
 Imports System.Reflection  
@@ -104,39 +104,39 @@ Imports System.Reflection
 Module: CLSCompliant(True)>   
 ```  
   
-## <a name="common-uses-for-attributes"></a>Öznitelikler için yaygın kullanımları  
- Aşağıdaki liste, kod öznitelikleri'nın yaygın kullanımları birkaçını içerir:  
+## <a name="common-uses-for-attributes"></a>Öznitelikler için ortak kullanımlar  
+ Aşağıdaki listede, kod içindeki özniteliklerin yaygın kullanımları yer almaktadır:  
   
-- Yöntemlerini kullanarak işaretleme `WebMethod` Web Hizmetleri yöntemi SOAP protokolü üzerinden çağrılabilmelidir belirtmek için özniteliği. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.  
+- Yöntemin SOAP protokolü üzerinden `WebMethod` çağrılabilir olması gerektiğini göstermek için Web hizmetlerindeki özniteliği kullanılarak yöntemleri işaretleme. Daha fazla bilgi için bkz. <xref:System.Web.Services.WebMethodAttribute>.  
   
-- Yerel kod ile birlikte çalışırken yöntem parametreleri'ı sıralama nasıl açıklayan. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
+- Yerel kodla birlikte çalışırken yöntem parametrelerinin nasıl hazırlanacağını açıklama. Daha fazla bilgi için bkz. <xref:System.Runtime.InteropServices.MarshalAsAttribute>.  
   
-- Sınıfları, yöntemleri ve arabirimleri için COM özelliklerini açıklayan.  
+- Sınıflar, Yöntemler ve arabirimler için COM özelliklerini açıklama.  
   
-- Yönetilmeyen çağırma kod kullanarak <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı.  
+- <xref:System.Runtime.InteropServices.DllImportAttribute> Sınıfını kullanarak yönetilmeyen kodu çağırma.  
   
-- Başlık, sürüm, açıklama veya ticari marka açısından derlemenizi açıklayan.  
+- Derlemenizi başlık, sürüm, açıklama veya ticari marka açısından açıklama.  
   
-- Kalıcılık için seri hale getirmek için bir sınıfın hangi üyelerinin açıklayan.  
+- Bir sınıfın kalıcılığı için hangi üyelerin serileştirmek gerektiğini açıklama.  
   
-- Sınıf üyeleri için XML serileştirme XML düğümler arasındaki eşlemeyle ilgili bilgi açıklayan.  
+- XML ile serileştirme için sınıf üyeleri ve XML düğümleri arasında nasıl eşleme yapılacağı açıklanır.  
   
-- Güvenlik gereksinimleri yöntemleri için açıklama.  
+- Yöntemler için güvenlik gereksinimlerini açıklama.  
   
-- Güvenliği zorlamak için kullanılan özellikleri belirleme.  
+- Güvenliği zorlamak için kullanılan özellikleri belirtme.  
   
-- Kod hatalarını ayıklamak kolay kalır. böylece en iyi duruma getirme just-in-time (JIT) derleyici tarafından denetleniyor.  
+- Tam zamanında (JıT) derleyicisine yönelik iyileştirmeler denetleniyor, böylece kod hata ayıklama için kolay kalır.  
   
-- Bir yöntemin arayanı hakkında bilgi edinme.  
+- Bir yönteme arayan hakkında bilgi alma.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.:  
   
-- [Özel öznitelikler (Visual Basic) oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+- [Özel öznitelikler oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  
   
-- [(Visual Basic) yansıma kullanarak özniteliklere erişme](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
+- [Yansıma kullanarak özniteliklere erişme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
   
-- [Nasıl yapılır: Öznitelikler (Visual Basic) kullanarak bir C/C++ birleşimi oluşturma](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Nasıl yapılır: Öznitelikleri kullanarak C/C++ Union oluşturma (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md)  
   
 - [Ortak öznitelikler (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
   

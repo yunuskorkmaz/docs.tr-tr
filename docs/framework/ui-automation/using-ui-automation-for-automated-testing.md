@@ -6,16 +6,16 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 3fb5d1107a2dacdc4dfd2210322c312becdfd90b
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: d973dd59c1f0612962b89775e1fb2cf6bdd756ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953927"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Otomatik Test İçin UI Otomasyonunu Kullanma
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Bu genel bakışta, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] otomatikleştirilmiş test senaryolarında programlı erişim için bir çerçeve olarak nasıl yararlı olduğu açıklanır.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "69566951"
  Bir sağlayıcı ve istemci, otomatik test aracı olarak [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] yararlı olması için uygulanması gerekir. UI Otomasyon sağlayıcıları, Microsoft Word, Excel ve diğer üçüncü taraf uygulamaları veya [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] işletim sistemine bağlı diğer uygulamalar gibi uygulamalardır. UI Otomasyonu istemcileri otomatikleştirilmiş test betikleri ve yardımcı teknoloji uygulamaları içerir.  
   
 > [!NOTE]
->  Bu genel bakışın amacı, ' nin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]yeni ve geliştirilmiş otomatikleştirilmiş test yeteneklerini göstermaktır. Bu genel bakış, erişilebilirlik özellikleriyle ilgili bilgi sağlamaya yönelik değildir ve gerektiğinde erişilebilirliği farklı şekilde ele alır.  
+> Bu genel bakışın amacı, ' nin [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]yeni ve geliştirilmiş otomatikleştirilmiş test yeteneklerini göstermaktır. Bu genel bakış, erişilebilirlik özellikleriyle ilgili bilgi sağlamaya yönelik değildir ve gerektiğinde erişilebilirliği farklı şekilde ele alır.  
   
 <a name="Using_UI_Automation_During_Development"></a>   
 ## <a name="ui-automation-in-a-provider"></a>Bir sağlayıcıda UI Otomasyonu  
@@ -35,7 +35,7 @@ ms.locfileid: "69566951"
  Bu anahtar eylemler tanımlandıktan sonra, ilgili [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim desenleri (yani, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğesinin işlevselliğini ve davranışını yansıtan Denetim desenleri) denetime uygulanmalıdır. Örneğin, bir açılan kutu denetimiyle (çalıştırma iletişim kutusu gibi) Kullanıcı etkileşimi genellikle bir öğe listesini gizlemek veya göstermek, bu listeden bir öğe seçmek veya klavye girişi aracılığıyla yeni bir değer eklemek için Birleşik giriş kutusunu genişletmeyi ve daraltmayı içerir.  
   
 > [!NOTE]
->  Diğer erişilebilirlik modelleriyle, geliştiricilerin doğrudan ayrı düğmeler, menüler veya diğer denetimlerden bilgi toplaması gerekir. Ne yazık ki her denetim türü düzinelerce küçük çeşitliliğe gelir. Diğer bir deyişle, bir basma düğmeli on çeşitlerinin hepsi aynı şekilde çalışabilir ve aynı işlevi gerçekleştirse de, bunların hepsi benzersiz denetimler olarak değerlendirilmelidir. Bu denetimlerin işlevsel olarak eşdeğer olduğu bilinmenin bir yolu yoktur. Denetim desenleri, bu ortak denetim davranışlarını temsil edecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [UI Otomasyonu Denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
+> Diğer erişilebilirlik modelleriyle, geliştiricilerin doğrudan ayrı düğmeler, menüler veya diğer denetimlerden bilgi toplaması gerekir. Ne yazık ki her denetim türü düzinelerce küçük çeşitliliğe gelir. Diğer bir deyişle, bir basma düğmeli on çeşitlerinin hepsi aynı şekilde çalışabilir ve aynı işlevi gerçekleştirse de, bunların hepsi benzersiz denetimler olarak değerlendirilmelidir. Bu denetimlerin işlevsel olarak eşdeğer olduğu bilinmenin bir yolu yoktur. Denetim desenleri, bu ortak denetim davranışlarını temsil edecek şekilde geliştirilmiştir. Daha fazla bilgi için bkz. [UI Otomasyonu Denetim düzenlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>UI Otomasyonu uygulama  
@@ -79,7 +79,7 @@ ms.locfileid: "69566951"
  Bir Otomasyon öğesini, eşlerinden bağımsız olarak tanımlar. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>yerelleştirilmiş değildir; Örneğin, bir ürün birden çok <xref:System.Windows.Automation.AutomationElement.NameProperty> dilde sevk edildiğinde, bu özellik genellikle yereldir. Bkz. [AutomationID özelliğini kullanma](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Otomasyon ağacının tamamında benzersiz bir kimlik garantisi vermez. Örneğin, bir uygulama birden çok üst düzey menü öğesi olan bir menü denetimi içerebilir, buna karşılık birden çok alt menü öğesi vardır. Bu ikincil menü öğeleri, "Item1, Item 2, Item3, vb." gibi genel bir düzen tarafından tanımlanabilir ve üst düzey menü öğeleri arasında alt öğeler için yinelenen tanımlayıcılara izin verebilir.  
+> <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>Otomasyon ağacının tamamında benzersiz bir kimlik garantisi vermez. Örneğin, bir uygulama birden çok üst düzey menü öğesi olan bir menü denetimi içerebilir, buna karşılık birden çok alt menü öğesi vardır. Bu ikincil menü öğeleri, "Item1, Item 2, Item3, vb." gibi genel bir düzen tarafından tanımlanabilir ve üst düzey menü öğeleri arasında alt öğeler için yinelenen tanımlayıcılara izin verebilir.  
   
 #### <a name="controltype"></a>ControlType  
  Otomasyon öğesi tarafından temsil edilen denetimin türünü tanımlar. Denetim türü bilgisine önemli bilgiler çıkarsanamıyor. Bkz. [UI Otomasyonu Denetim türlerine genel bakış](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  

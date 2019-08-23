@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ffc522b2ab13ae2098c01e6716e00aef5bef8e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638304"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962492"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme
-<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı oluşturulabilecek özel durumları işlemek için özel bir mekanizma yoktur. Bu bakımdan, bunlar normal benzer `for` ve `foreach` döngüler (`For` ve `For Each` Visual Basic'te); işlenmeyen bir özel durum hemen sonlandırmak döngüye neden oluyor.  
+<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> Ve<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı yüklemelerin, oluşturulan özel durumları işlemek için özel bir mekanizması yoktur. Bu şekilde, `for` düzenli ve `foreach` döngülere (`For` ve `For Each` Visual Basic) benzer; işlenmeyen bir özel durum döngünün hemen sonlanmasına neden olur.  
   
- Paralel döngüler, hangi benzer özel durumları birden çok iş parçacığında aynı anda atılabilir harf ve bir iş parçacığı üzerinde oluşturulan bir özel durum başka bir özel durum neden olan durumu işlemek için kendi özel durum işleme mantığı eklerken iş parçacığı. Tüm özel durumları döngüden sarmalama tarafından her iki durumda işleyebilen bir <xref:System.AggregateException?displayProperty=nameWithType>. Aşağıdaki örnekte, olası bir yaklaşım gösterilmektedir.  
+ Paralel döngülere kendi özel durum işleme mantığınızı eklediğinizde, benzer özel durumların aynı anda birden çok iş parçacığında oluşturulması ve bir iş parçacığında oluşan bir özel durumun başka bir özel durumun başka bir özel durum oluşturulmasına neden olduğu büyük/küçük harf işleme zincirinin. İçindeki döngüden tüm özel durumları sarmalayarak her iki durumu da işleyebilirsiniz <xref:System.AggregateException?displayProperty=nameWithType>. Aşağıdaki örnekte olası bir yaklaşım gösterilmektedir.  
   
 > [!NOTE]
->  "Yalnızca kendi kodum" etkin olduğunda, bazı durumlarda Visual Studio özel durum oluşturan satırda bölme ve "özel durum kullanıcı kodu tarafından işlenmemiş." diyen bir hata iletisini görüntüler Bu hata zararsızdır. Buradan devam etmek için F5 tuşuna basın ve aşağıdaki örnekte gösterilen özel durum işleme davranışını bakın. Visual Studio'nun çalışmasının ilk hatada kesilmesini önlemek için yalnızca "Yalnızca kendi kodum" onay kutusunun işaretini kaldırın **Araçlar, Seçenekler, hata ayıklama, genel**.  
+> "Yalnızca kendi kodum" etkinleştirildiğinde, bazı durumlarda Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örnekte gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, tüm özel durum yakalandı ve ardından içinde sarmalanmış bir <xref:System.AggregateException?displayProperty=nameWithType> hangi oluşturulur. Çağıran, hangi özel durumları işlemek için karar verebilirsiniz.  
+ Bu örnekte, tüm özel durumlar yakalandıktan sonra bir <xref:System.AggregateException?displayProperty=nameWithType> oluşturulur. Çağıran, hangi özel durumların işleneceğini karar verebilir.  
   
  [!code-csharp[TPL_Exceptions#08](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptions.cs#08)]
  [!code-vb[TPL_Exceptions#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionsinloops.vb#08)]  

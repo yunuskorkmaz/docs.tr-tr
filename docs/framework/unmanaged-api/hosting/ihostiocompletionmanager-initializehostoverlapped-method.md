@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d27799e427efd3659dc2864e7d1e8e2061c5c19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ac7014962b99ac167e8192c13b2bae5ca92470f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948520"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped Yöntemi
-Konak için bir Win32 eklemek için herhangi bir özel veri başlatmak üzere bir fırsat sağlar `OVERLAPPED` zaman uyumsuz g/ç istekleri için kullanılan yapısı.  
+Ana bilgisayara, zaman uyumsuz g/ç istekleri için kullanılan bir Win32 `OVERLAPPED` yapısına eklenecek özel verileri başlatma fırsatı sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,36 +37,36 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>Parametreler  
  `pvOverlapped`  
- [in] Win32 işaretçisi `OVERLAPPED` yapısı ile g/ç isteği dahil edilecek.  
+ 'ndaki G/ç isteğine dahil `OVERLAPPED` edilecek Win32 yapısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
-|E_OUTOFMEMORY|İstenen kaynağı ayırmak yeterli bellek yoktu.|  
+|S_OK|`InitializeHostOverlapped`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|E_OUTOFMEMORY|İstenen kaynağı ayırmak için yeterli bellek yok.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Windows Platform işlevleri kullanmak `OVERLAPPED` zaman uyumsuz g/ç isteği için durumu depolamak üzere yapısı. CLR çağrıları `InitializeHostOverlapped` konak özel verilere eklemek içinse fırsatı sunmak için yöntemi bir `OVERLAPPED` örneği.  
+ Windows platformu işlevleri, zaman uyumsuz `OVERLAPPED` g/ç isteklerinin durumunu depolamak için yapıyı kullanır. CLR, konağa özel `InitializeHostOverlapped` verileri ekleme fırsatına bir `OVERLAPPED` örneğe çağrı yapmak için yöntemini çağırır.  
   
 > [!IMPORTANT]
->  Kendi özel veri bloğunun başlangıcına almak için konaklar boyutuna uzaklık ayarlamanız gerekir `OVERLAPPED` yapısı (`sizeof(OVERLAPPED)`).  
+> Özel veri bloğunun başlangıcına ulaşmak için, Konaklar `OVERLAPPED` yapının (`sizeof(OVERLAPPED)`) boyutuna kadar olan sapmayı ayarlamış olmalıdır.  
   
- E_OUTOFMEMORY dönüş değeri, konak özel verilerini başlatmak başarısız olduğunu gösterir. Bu durumda, CLR hata raporları ve çağrı başarısız olur.  
+ E_OUTOFMEMORY dönüş değeri, konağın özel verilerini başlatamadığını gösterir. Bu durumda, CLR bir hata bildirir ve çağrı başarısız olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

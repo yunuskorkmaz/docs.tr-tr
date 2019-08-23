@@ -8,57 +8,57 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e41dd46e4ddbdcde6448c68b4f9fb2e073baca43
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757059"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958681"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Nasıl yapılır: Web Hizmeti Çağırmak Amacıyla XAML Tarayıcı Uygulamasında Hata Ayıklamak için Visual Studio'yu Yapılandırma
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] Internet bölgesi izinleri kümesi için kısıtlı bir kısmi güven güvenliği korumalı alan içinde çalıştırın. Bu izin kümesi, Web hizmeti çağrıları yalnızca şu adreste bulunabilir Hizmetleri Web sınırlar [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kaynak uygulamanın siteyi. Olduğunda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hataları ayıklanmakta Visual Studio 2005'ten yine de bu Web hizmeti olarak başvuruları aynı kaynak siteyi sahip olmadığı kabul edilir. Bu neden güvenlik özel durumlarını ne zaman yükseltilecek [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmetini çağırmak çalışır. Ancak, bir Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje, aynı kaynak siteyi çağırdığı hata ayıklama sırasında Web hizmeti olarak olması benzetimini yapmak için yapılandırılabilir. Böylece [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] güvenli bir şekilde güvenlik özel durumları neden olmadan Web hizmetini çağırmak için.
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]Internet bölgesi izin kümesiyle kısıtlanmış bir kısmi güven güvenlik alanı içinde çalıştırın. Bu izin kümesi, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmeti çağrılarını yalnızca uygulamanın kaynak sitesinde bulunan Web Hizmetleri ile sınırlandırır. [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Visual Studio 2005 ' den hata ayıklandığında, başvurduğu Web hizmetiyle aynı kaynak sitesine sahip olduğu kabul edilmez. Bu, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web hizmetini çağırmaya çalıştığında güvenlik özel durumlarının oluşturulmasına neden olur. Ancak, bir Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] projesi, hata ayıklama sırasında çağırdığı Web hizmeti ile aynı kaynak sitesine sahip olmayı taklit etmek için yapılandırılabilir. Bu, [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] güvenlik özel durumlarına neden olmadan Web hizmetini güvenle çağırabilme olanağı sağlar.
 
 ## <a name="configuring-visual-studio"></a>Visual Studio’yu yapılandırma
- Hata ayıklamak için Visual Studio 2005 yapılandırmak için bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bir Web hizmeti çağırır:
+ Visual Studio 2005 ' i bir Web hizmetini [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] çağıran bir hata ayıklamada yapılandırmak için:
 
 1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
 
-2. İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
+2. **Proje tasarımcısında** **Hata Ayıkla** sekmesine tıklayın.
 
-3. İçinde **başlatma eylemi** bölümünden **harici program Başlat** ve şunu girin:
+3. **Başlat eylemi** bölümünde **dış program Başlat** ' ı seçin ve aşağıdakileri girin:
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4. İçinde **Başlat seçenekleri** bölümünde, aşağıdaki girin **komut satırı bağımsız değişkenleri** metin kutusunda:
+4. **Başlangıç seçenekleri** bölümünde **komut satırı bağımsız değişkenleri** metin kutusuna aşağıdakini girin:
 
-     `-debug`  *Dosya adı*
+     `-debug`  *kısaltın*
 
-     *Filename* değerini **-hata ayıklama** parametredir .xbap dosya adı; örneğin:
+     **-Debug** parametresinin *filename* değeri. XBAP dosya adıdır; Örneğin:
 
      `-debug c:\example.xbap`
 
 > [!NOTE]
->  Bu Visual Studio 2005 ile oluşturulmuş çözümler için varsayılan yapılandırmadır [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje şablonu.
+> Bu, Visual Studio 2005 [!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)] proje şablonuyla oluşturulan çözümlerin varsayılan yapılandırmadır.
 
 1. Seçili bir projeyle **Çözüm Gezgini**, **proje** menüsünde tıklatın **özellikleri**.
 
-2. İçinde **Proje Tasarımcısı**, tıklayın **hata ayıklama** sekmesi.
+2. **Proje tasarımcısında** **Hata Ayıkla** sekmesine tıklayın.
 
-3. İçinde **Başlat seçenekleri** bölümünde, eklemek için aşağıdaki komut satırı parametresini **komut satırı bağımsız değişkenleri** metin kutusunda:
+3. **Başlangıç seçenekleri** bölümünde **komut satırı bağımsız değişkenleri** metin kutusuna aşağıdaki komut satırı parametresini ekleyin:
 
-     `-debugSecurityZoneURL`  *URL*
+     `-debugSecurityZoneURL`  *'DEKI*
 
-     *URL* değerini **- debugSecurityZoneURL** parametresi [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] için uygulamanızın kaynak site olarak benzetimini yapmak istediğiniz konum.
+     **-DebugSecurityZoneURL** parametresi için [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] *URL* değeri, uygulamanızın kaynak sitesi olarak benzetimini yapmak istediğiniz konum içindir.
 
- Örneğin, göz önünde bulundurun bir [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] şunlarla birlikte bir Web hizmeti kullanan [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]:
+ Örnek olarak, aşağıdakileri [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)]içeren bir Web hizmeti kullanan bir düşünün:
 
  `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
- Kaynak siteyi [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] için bu Web hizmetidir:
+ Bu Web hizmetinin kaynak [!INCLUDE[TLA2#tla_url](../../../../includes/tla2sharptla-url-md.md)] sitesi:
 
  `http://services.msdn.microsoft.com`
 
- Sonuç olarak, tam **- debugSecurityZoneURL** komut satırı parametresi ve değeri:
+ Sonuç olarak, tam **-DebugSecurityZoneURL** komut satırı parametresi ve değeri:
 
  `-debugSecurityZoneURL http://services.msdn.microsoft.com`
 

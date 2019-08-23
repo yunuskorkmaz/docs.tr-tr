@@ -1,5 +1,5 @@
 ---
-title: <add> NameValueSectionHandler ve DictionarySectionHandler
+title: <add>NameValueSectionHandler ve DictionarySectionHandler için öğesi
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 3bbe4ad6559e324db5853b95e797f50a7b908dcb
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921324"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Ekle > NameValueSectionHandler ve DictionarySectionHandler
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler ve DictionarySectionHandler için > öğesi ekleyin
 
-Özel uygulama ayarları ekler. Her **\<Ekle >** /etiketinde bir anahtar/değer çifti.
+Özel uygulama ayarları ekler. **Her\<Add >** etiketi bir anahtar/değer çifti içerir.
 
-[ **\<Yapılandırma >** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName >** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+[ **\<Yapılandırma >** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Ekle**
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -34,14 +34,14 @@ ms.locfileid: "66301426"
 
 | Öznitelik | Açıklama |
 | --------- | ----------- |
-| **anahtar**   | Gerekli öznitelik.<br><br>Ayar adını belirtir. |
-| **value** | Gerekli öznitelik.<br><br>Bir ayarın değerini belirtir. |
+| **anahtar**   | Gerekli öznitelik.<br><br>Ayarın adını belirtir. |
+| **value** | Gerekli öznitelik.<br><br>Ayarın değerini belirtir. |
 
 ## <a name="parent-element"></a>Üst öğe
 
 | Öğe | Açıklama |
 | ------- | ------------|
-| [ **\<sectionName >** öğesi](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Ayarları kullanan özel yapılandırma bölümleri tanımlar <xref:System.Configuration.NameValueSectionHandler> ve <xref:System.Configuration.DictionarySectionHandler> sınıfları. |
+| [sectionName > öğesi  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> Ve<xref:System.Configuration.DictionarySectionHandler> sınıflarını kullanan özel yapılandırma bölümlerinin ayarlarını tanımlar. |
 
 ## <a name="child-elements"></a>Alt öğeleri
 
@@ -49,7 +49,7 @@ Yok.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir özel bir yapılandırma bölümünü tanımlama ve kullanma işlemi gösterilmektedir  **\<Ekle >** ayarları bölümüne yerleştirmek için öğe:
+Aşağıdaki örnek, bir özel yapılandırma bölümünün nasıl tanımlanacağını gösterir ve  **\<> Ekle** öğesini kullanarak ayarları bölümüne yerleştirir:
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ Aşağıdaki örnek bir özel bir yapılandırma bölümünü tanımlama ve kull
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyası kullanılabilir (*Machine.config*), ve *Web.config* uygulama dizin düzeyinde olmayan dosyalar.
+Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yapılandırma dosyası şeması](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework için yapılandırma dosyası şeması](index.md)

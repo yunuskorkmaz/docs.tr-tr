@@ -1,18 +1,18 @@
 ---
-title: ICorDebugStaticFieldSymbol::GetName yöntemi
+title: 'ICorDebugStaticFieldSymbol:: GetName Yöntemi'
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01281e09533ba7196d3fa3e57c463636cfb0dd77
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760826"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913409"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName yöntemi
-Statik alan adını alır.  
+# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol:: GetName Yöntemi
+Statik alanın adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,27 +26,27 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametreler  
  `cchName`  
- [in] Karakter sayısı `szName` arabellek.  
+ 'ndaki `szName` Arabellekteki karakterlerin sayısı.  
   
  `pcchName`  
- [out] Gerçekte yazılan karakter sayısı için bir işaretçi `szName` arabellek.  
+ dışı Gerçekte `szName` arabelleğe yazılan karakter sayısına yönelik bir işaretçi.  
   
  `szName`  
- [out] Döndürülen adını depolar bir karakter dizisi.  
+ dışı Döndürülen adı depolayan bir karakter dizisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

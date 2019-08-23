@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 440debe875a0d00d240849ba4b60b548f46e2c0e
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 937577f86ec854f5a458fe6067836a85a540695a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913796"
 ---
 # <a name="serialization-and-metadata"></a>Serileştirme ve Meta Veriler
 
@@ -39,7 +39,7 @@ Uygulamanız nesneleri serileştirir ve onları yeniden ayırır, gerekli meta v
   
 ### <a name="typeof-used-in-the-constructor"></a>oluşturucuda kullanılan typeof
 
- Bu serileştirme sınıflarının bir oluşturucusunu çağırır ve yöntem çağrısına C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) işlecini eklerseniz, **ek bir iş yapmanız**gerekmez. Örneğin, bir serileştirme sınıfı oluşturucusuna yapılan aşağıdaki çağrıların her birinde, `typeof` oluşturucuya geçirilen ifadenin bir parçası olarak anahtar sözcüğü kullanılır.  
+ Bu serileştirme sınıflarının bir oluşturucusunu çağırır ve yöntem çağrısına C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) işlecini eklerseniz, **ek bir iş yapmanız**gerekmez. Örneğin, bir serileştirme sınıfı oluşturucusuna yapılan aşağıdaki çağrıların her birinde, `typeof` oluşturucuya geçirilen ifadenin bir parçası olarak anahtar sözcüğü kullanılır.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
@@ -47,7 +47,7 @@ Uygulamanız nesneleri serileştirir ve onları yeniden ayırır, gerekli meta v
   
 ### <a name="typeof-used-outside-the-constructor"></a>Oluşturucu dışında kullanılan typeof
 
- Bu serileştirme sınıflarının bir oluşturucusunu çağırır ve aşağıdaki kodda olduğu gibi oluşturucunun C# [](~/docs/csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) <xref:System.Type> parametresine sağlanan ifadenin dışında typeof işlecini kullanırsanız, .NET Native derleyicisi türü çözemez:  
+ Bu serileştirme sınıflarının bir oluşturucusunu çağırır ve aşağıdaki kodda olduğu gibi oluşturucunun C# [](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator) <xref:System.Type> parametresine sağlanan ifadenin dışında typeof işlecini kullanırsanız, .NET Native derleyicisi türü çözemez:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

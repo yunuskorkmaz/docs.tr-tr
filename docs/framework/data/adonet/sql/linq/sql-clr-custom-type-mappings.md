@@ -2,34 +2,34 @@
 title: SQL-CLR Özel Tür Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037056"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945054"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR Özel Tür Eşlemeleri
-SQLMetal komut satırı aracı, Object Relational Designer (O/R Tasarımcısı) kullandığınızda, ortak dil çalışma zamanı (CLR) ile SQL Server arasında eşleme türü otomatik olarak belirtilir.  
+SQL Server ile ortak dil çalışma zamanı (CLR) arasında tür eşlemesi Nesne İlişkisel Tasarımcısı, SQLMetal komut satırı aracını (O/R Designer) kullandığınızda otomatik olarak belirtilir.  
   
- Özelleştirilmiş hiçbir eşleme gerçekleştirildiğinde, bu araçlar varsayılan türü eşlemeleri açıklandığı atama [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md). Bu varsayılan alanından farklı eşlemeleri yazmak istiyorsanız, bazı türü eşlemelerini özelleştirme yapmanız gerekir.  
+ Özelleştirilmiş eşleme gerçekleştirilmeyen bu araçlar, [SQL-CLR türü eşlemesinde](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)açıklandığı gibi varsayılan tür eşlemelerini atar. Eşlemeleri bu varsayılandan farklı şekilde yazmak istiyorsanız, tür eşlemelerini özelleştirme yapmanız gerekir.  
   
- Türü eşlemelerini özelleştirme, önerilen yaklaşım, bir aracı DBML dosyasına değişiklikler olmasını sağlamaktır. Ardından, kod ve eşleme dosyalarını SQLMetal veya O/R Tasarımcısı ile oluşturduğunuz özelleştirilmiş DBML dosyanızı kullanılmalıdır.  
+ Tür eşlemelerini özelleştirirken, bir ara DBML dosyasında değişiklik yapmak önerilen yaklaşım olur. Daha sonra, kod oluşturduğunuzda ve dosyaları SQLMetal veya O/R Tasarımcısı ile eşleştirdikten sonra özelleştirilmiş DBML dosyanız kullanılmalıdır.  
   
- Örneği sonra <xref:System.Data.Linq.DataContext> kod ve eşleme dosyalarını nesneden <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemi belirtilen türü eşlemeleri tabanlı bir veritabanı oluşturur. Hiçbir CLR varsa `type` öznitelikleri belirtildiğinde eşlemeleri varsayılan türü eşlemeleri kullanılır.  
+ Koddan ve eşleme dosyalarından <xref:System.Data.Linq.DataContext> nesneyi örnekledikten sonra <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> , yöntemi belirtilen tür eşlemelerini temel alan bir veritabanı oluşturur. Eşlemelerde hiçbir CLR `type` özniteliği belirtilmemişse, varsayılan tür eşlemeleri kullanılacaktır.  
   
 ## <a name="customization-with-sqlmetal-or-or-designer"></a>SQLMetal veya O/R Tasarımcısı ile özelleştirme  
- SQLMetal ve O/R Tasarımcısı ile içinde veya kod dosyası dışında türü eşleme bilgilerini içeren bir nesne modeli otomatik olarak oluşturabilirsiniz. Bu dosyalar SQLMetal veya O/R tasarımcısı tarafından üzerine yazılır olduğundan, eşlemeleri yeniden her zaman özel tür eşlemeleri belirtme önerilen DBML dosyasını özelleştirmek için yaklaşımdır.  
+ SQLMetal ve O/R Tasarımcısı ile, kod dosyasının içindeki veya dışındaki tür eşleme bilgilerini içeren bir nesne modeli otomatik olarak oluşturabilirsiniz. Bu dosyalar SQLMetal veya O/R Tasarımcısı tarafından üzerine yazıldığı için, eşlemelerinizi her yeniden oluşturduğunuzda özel tür eşlemelerini belirtmeye yönelik önerilen yaklaşım bir DBML dosyasını özelleştirmektir.  
   
- SQLMetal veya O/R Tasarımcısı türü eşlemeleri özelleştirmek için öncelikle DBML dosyasını oluşturur. Ardından, kod dosyası veya eşleme dosyası oluşturmadan önce istenen türde eşlemeler tanımlamak için DBML dosyasını değiştirin. SQLMetal ile el ile değiştirmeniz gerekir. `Type` ve `DbType` türünüz eşleme özelleştirmeler için DBML dosyasına öznitelikleri. O/R Tasarımcısı ile Tasarımcı içinde yaptığınız değişiklikleri yapabilirsiniz. O/R Tasarımcısı kullanma hakkında daha fazla bilgi için bkz. [LINQ to SQL araçlarını Visual Studio'da](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Tür eşlemelerini SQLMetal veya O/R Tasarımcısı ile özelleştirmek için önce bir DBML dosyası oluşturun. Ardından, kod dosyası veya eşleme dosyası oluşturmadan önce, istenen tür eşlemelerini belirlemek için DBML dosyasını değiştirin. SqlMetal ile, tür eşleme özelleştirmelerinizi yapmak için DBML `DbType` dosyasındaki `Type` ve özniteliklerini el ile değiştirmeniz gerekir. O/R Tasarımcısı ile değişikliklerinizi tasarımcı içinde yapabilirsiniz. O/R tasarımcısını kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
->  Bazı tür eşlemeleri için veya veritabanından çevrilirken taşması veya veri kaybı durumlar neden olabilir. Eşleme türü çalışma zamanı davranışı matriste dikkatle inceleyin [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) özelleştirmeler yapmadan önce.  
+> Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir. Herhangi bir özelleştirme yapmadan önce [SQL-CLR tür eşlemesindeki](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) tür eşleme çalışma zamanı davranış matrisini dikkatle gözden geçirin.  
   
- SQLMetal veya O/R tasarımcısı tarafından tanınması tür eşlemesi özelleştirmelerinizi kod dosyası veya dış eşleme dosyası oluşturduğunuzda bu araçlar, özel bir DBML dosyasının yolu ile sağlanan emin olmanız gerekir. Tür eşlemesi özelleştirme için gerekli değildir, ancak her zaman, kod dosyasından türü eşleme bilgilerinizi ayırın ve ek dış tür eşleme dosyası üretmek önerilir. Bunun yapılması, kod dosyasının yeniden derlenmesi gerektirmeyen bazı esneklik bırakır.  
+ Tür eşleme özelleştirmelerinizin SQLMetal veya O/R Tasarımcısı tarafından tanınması için, kod dosyanızı veya dış eşleme dosyanızı oluştururken özel DBML dosyanızın yoluyla bu araçların sağlandığından emin olmanız gerekir. Tür eşleme özelleştirmesi için gerekli olmasa da, kod dosyanızdaki tür eşleme bilgilerinizi her zaman ayırmanız ve ek dış tür eşleme dosyasını oluşturmanız önerilir. Bunun yapılması, kod dosyasının yeniden derlenmesi gerekmeden bazı esneklikten ayrılacaktır.  
   
 ## <a name="incorporating-database-changes"></a>Veritabanı değişikliklerini ekleme  
- Ne zaman veritabanı değişikliklerinizi DBML dosyanızı o değişiklikleri yansıtacak şekilde güncelleştirmeniz gerekir. Yapmanın bir yolu otomatik olarak yeni bir DBML dosyasının oluşturulacağı budur ve tür eşlemesi özelleştirmelerinizi yeniden yapın. Alternatif olarak, yeni DBML dosyasını ve özelleştirilmiş DBML dosyanızı arasındaki farkları karşılaştırmak ve özel DBML dosyanızı el ile veritabanı değişikliği yansıtacak şekilde güncelleştirin.  
+ Veritabanınız değiştiğinde DBML dosyanızı bu değişiklikleri yansıtacak şekilde güncelleştirmeniz gerekir. Bunu yapmanın bir yolu, otomatik olarak yeni bir DBML dosyası oluşturmak ve ardından tür eşleme özelleştirmelerinizi yeniden oluşturmaktır. Alternatif olarak, yeni DBML dosyanız ile özelleştirilmiş DBML dosyanız arasındaki farklılıkları karşılaştırabilir ve özel DBML dosyanızı, veritabanı değişikliğini yansıtacak şekilde el ile güncelleştirebilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,28 +2,28 @@
 title: 'Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 461c5af2c7fbb98486a8decbe4aa998d8d21070d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773197"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911173"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma
-Varsayılan olarak, bir iletinin imzalanmış ve imza dijital olarak şifrelenir. Bu örneği ile özel bir bağlama oluşturarak denetlenir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve ayarı `MessageProtectionOrder` özelliği için ya da sınıfın bir <xref:System.ServiceModel.Security.MessageProtectionOrder> numaralandırma değeri. Varsayılan, <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> değeridir. Bu işlem yalnızca imzalama değerinden daha fazla zaman yüzde 30 kullanır ve genel iletinin (ileti daha küçük, büyük performans etkisi) boyutuna göre şifreleme. Şifreleme imzası devre dışı bırakıldığında, ancak iletisinin içeriği tahmin etmek bir saldırgan sağlayabilir. İmza öğesi düz metin iletisi imzalı her bölümü karma kodunu içerdiğinden, bu mümkündür. Örneğin, ileti gövdesi, varsayılan olarak şifrelenmiş olsa da, şifrelenmemiş imza karma kodunu şifreleme önce ileti gövdesi içeriyor. İmzalanmış ve şifrelenmiş bölümü için olası değerler kümesini küçük olursa, bir saldırganın karma değer bakarak, içeriği türetme mümkün olabilir. Şifreleme imzası bu saldırı vektörü azaltır.  
+Varsayılan olarak, bir ileti imzalanır ve imza dijital olarak şifrelenir. Bu, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> `MessageProtectionOrder` veya öğesinin bir örneği ile özel bir bağlama oluşturularak <xref:System.ServiceModel.Security.MessageProtectionOrder> veherikisınıfınözelliğinibirnumaralandırmadeğerineayarlayarakdenetlenir.<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Varsayılan, <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> değeridir. Bu işlem, genel ileti boyutuna bağlı olarak yalnızca% 30 ' a kadar daha fazla zaman harcar (ileti daha küçük, performans etkisi artar). Bununla birlikte imza şifrelemesini devre dışı bırakmak, bir saldırganın iletinin içeriğini tahmin edemesine izin verebilir. Bu mümkündür çünkü imza öğesi iletideki her imzalı parçanın düz metnin karma kodunu içerir. Örneğin, ileti gövdesi varsayılan olarak şifrelense de şifrelenmemiş imza, şifrelemeden önceki ileti gövdesinin karma kodunu içerir. İmzalı ve şifreli bölüm için olası değerler kümesi küçükse, bir saldırgan karma değere bakarak içeriği verebilir. İmzayı şifrelemek, bu saldırı vektörünü azaltır.  
   
- Bu nedenle, şifreleme imzası yalnızca içeriğin değerinin düşük olduğu veya büyük ve belirleyici olmayan içerik olası değerler kümesidir ve performans kazancı daha yukarıda açıklanan saldırı azaltma daha önemli devre dışı bırakın.  
+ Bu nedenle, imza şifrelemesini yalnızca içeriğin değeri düşük olduğunda veya olası içerik değerlerinin kümesi büyük ve belirleyici olmayan bir şekilde devre dışı bırakır ve performans kazancı yukarıda açıklanan saldırıları azaltmaya kıyasla daha önemlidir.  
   
 > [!NOTE]
->  İmza öğesi yoksa hiçbir şey şifrelenir iletide, şifreli değil, bile <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliği <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu davranış, sistem tarafından sağlanan bağlamaları ile bile oluşur; tüm sistem tarafından sağlanan bağlamalar kümesine iletisi koruma olması `SignBeforeEncryptAndEncryptSignature`. Ancak, Web Hizmetleri Açıklama Dili (WSDL) WCF oluşturur içermeye devam `<sp:EncryptSignature>` onaylama.  
+> Şifrelenmiş iletide hiçbir şey yoksa, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliği olarak <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>ayarlanmış olsa bile imza öğesi şifrelenmez. Bu davranış, sistem tarafından sağlanmış bağlamalarla da oluşur; sistem tarafından sağlanmış tüm bağlamalarda ileti koruma sırası olarak `SignBeforeEncryptAndEncryptSignature`ayarlanır. Ancak, Web Hizmetleri Açıklama Dili (wsdl) WCF oluşturur, hala `<sp:EncryptSignature>` onaylama işlemi içerir.  
   
-### <a name="to-disable-digital-signing"></a>Dijital imzasını devre dışı bırakmak için  
+### <a name="to-disable-digital-signing"></a>Dijital imzalamayı devre dışı bırakmak için  
   
-1. Oluşturma bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1. Oluşturma bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)kullanarak özel bir bağlama oluşturun.  
   
-2. Ekleyin ya da bir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> bağlama koleksiyonuna.  
+2. Bağlama koleksiyonuna bir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya a <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ekleyin.  
   
-3. Ayarlama <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
+3. Özelliğini olarak <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>ayarlayın veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini olarak<xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>ayarlayın. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,6 +1,6 @@
 ---
-title: . NET'te dizeleri kullanmak için en iyi uygulamalar
-description: Dizeleri .NET uygulamalarında etkili bir şekilde kullanmayı öğrenin.
+title: .NET 'teki dizeleri kullanmak için en iyi uygulamalar
+description: .NET uygulamalarında dizelerin etkin bir şekilde nasıl kullanılacağını öğrenin.
 ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,37 +21,37 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250815"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934934"
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>. NET'te dizeleri kullanmak için en iyi uygulamalar
-<a name="top"></a> .NET, yerelleştirilmiş ve genelleştirilmiş uygulamalar geliştirmek için kapsamlı destek sağlar ve sıralama ve dizeleri görüntüleme gibi yaygın işlemleri gerçekleştirirken geçerli kültürün veya belirli bir kültürün kurallarını uygulamak kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
+# <a name="best-practices-for-using-strings-in-net"></a>.NET 'teki dizeleri kullanmak için en iyi uygulamalar
+<a name="top"></a>.NET, yerelleştirilmiş ve genelleştirilmiş uygulamaları geliştirmeye yönelik kapsamlı destek sağlar ve dizeleri sıralama ve görüntüleme gibi genel işlemleri gerçekleştirirken geçerli kültür ya da belirli bir kültürün kurallarını uygulamayı kolaylaştırır. Ancak dizeleri sıralamak veya karşılaştırmak her zaman kültüre duyarlı bir işlem değildir. Örneğin, bir uygulama tarafından dahili olarak kullanılan dizelerin genellikle tüm kültürlerde aynı şekilde işlenmeleri gerekir. XML etiketleri, HTML etiketleri, kullanıcı adları, dosya yolları ve sistem nesnelerinin adları gibi kültürden bağımsız dize verileri kültüre duyarlıymış gibi yorumlanırsa, uygulama kodu küçük hatalar, zayıf performans ve bazı durumlarda güvenlik sorunlarıyla karşılaşabilir.  
   
- Bu konu, dize sıralama, karşılaştırma ve. NET'te büyük/küçük harf yöntemlerini inceler, uygun dize işleme yöntemini seçmek için öneriler sunar ve dize işleyen yöntemler hakkında ek bilgi sağlar. Ayrıca sayısal veri veya tarih ve saat verisi gibi biçimlendirilen verilerin görüntüleme ve depolama için nasıl işlendiğini inceler.  
+ Bu konu, .NET 'teki dize sıralama, karşılaştırma ve büyük/küçük harf yöntemlerini inceler, uygun bir dize işleme yöntemi seçmeye yönelik öneriler sunar ve dize işleme yöntemleriyle ilgili ek bilgiler sağlar. Ayrıca sayısal veri veya tarih ve saat verisi gibi biçimlendirilen verilerin görüntüleme ve depolama için nasıl işlendiğini inceler.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
 - [Dize kullanımı için öneriler](#recommendations_for_string_usage)  
   
-- [Dize karşılaştırmalarını açıkça belirtme](#specifying_string_comparisons_explicitly)  
+- [Açık dize karşılaştırmaları belirtme](#specifying_string_comparisons_explicitly)  
   
-- [Dize karşılaştırma ayrıntıları](#the_details_of_string_comparison)  
+- [Dize karşılaştırmasının ayrıntıları](#the_details_of_string_comparison)  
   
-- [Yöntem çağrınız için StringComparison üyesi seçme](#choosing_a_stringcomparison_member_for_your_method_call)  
+- [Yöntem Çağrlarınız için StringComparison üyesi seçme](#choosing_a_stringcomparison_member_for_your_method_call)  
   
-- [. NET'te ortak dize karşılaştırma yöntemleri](#common_string_comparison_methods_in_the_net_framework)  
+- [.NET 'teki ortak dize karşılaştırma yöntemleri](#common_string_comparison_methods_in_the_net_framework)  
   
-- [Dize karşılaştırmasını dolaylı olarak gerçekleştiren yöntemler](#methods_that_perform_string_comparison_indirectly)  
+- [Dolaylı olarak dize karşılaştırması gerçekleştiren Yöntemler](#methods_that_perform_string_comparison_indirectly)  
   
-- [Biçimlendirilmiş verileri görüntüleme ve kalıcı yapma](#Formatted)  
+- [Biçimlendirilen verileri görüntüleme ve kalıcı yapma](#Formatted)  
   
 <a name="recommendations_for_string_usage"></a>   
 ## <a name="recommendations-for-string-usage"></a>Dize Kullanımı için Öneriler  
- .NET ile geliştirme yaptığınızda, dizeleri kullanırken aşağıdaki basit önerileri takip edin:  
+ .NET ile geliştirme yaptığınızda, dizeleri kullanırken bu basit önerileri takip edin:  
   
 - Dize işlemleri için dize karşılaştırma kurallarını açıkça belirten aşırı yüklemeleri kullanın. Genellikle bu, <xref:System.StringComparison> türünde bir parametreye sahip olan bir yöntem aşırı yüklemesini çağırmayı içerir.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66250815"
   
 - Eşit olup olmadıklarını kontrol etmek için değil, dizeleri sıralamak için <xref:System.String.Compare%2A?displayProperty=nameWithType> ve <xref:System.String.CompareTo%2A?displayProperty=nameWithType> yöntemlerini kullanın.  
   
-- Sayılar ve tarihler gibi dize olmayan verileri bir kullanıcı arabiriminde görüntülemek için kültüre duyarlı biçimlendirme kullanın. Kullanım ile biçimlendirme [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) dize olmayan veriyi dize biçiminde kalıcı hale getirmek için.  
+- Sayılar ve tarihler gibi dize olmayan verileri bir kullanıcı arabiriminde görüntülemek için kültüre duyarlı biçimlendirme kullanın. Dize olmayan verileri dize biçiminde kalıcı hale getirmek için [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) ile biçimlendirme kullanın.  
   
  Dizeleri kullanırken aşağıdaki uygulamalardan kaçının:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66250815"
   
 <a name="specifying_string_comparisons_explicitly"></a>   
 ## <a name="specifying-string-comparisons-explicitly"></a>Dize Karşılaştırmalarını Açıkça Belirtme  
- . NET'te dize düzenleme yöntemlerinin çoğu aşırı yüklenmesi sebebiyledir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.  
+ .NET 'teki dize düzenleme yöntemlerinin çoğu aşırı yüklenmiştir. Genellikle bir veya daha fazla aşırı yükleme varsayılan ayarları kabul ederken diğerleri varsayılanları kabul etmez ve bunun yerine dizelerin tam olarak nasıl karşılaştırılacağını veya değiştirileceğini tanımlar. Varsayılan değerleri kullanmayan yöntemlerin çoğu, dize karşılaştırma kurallarını kültür ve büyük/küçük harfe göre açıkça belirten bir numaralandırma olan <xref:System.StringComparison> türü bir parametre içerir. Aşağıdaki tablo, <xref:System.StringComparison> numaralandırma üyelerini açıklar.  
   
 |StringComparison üyesi|Açıklama|  
 |-----------------------------|-----------------|  
@@ -122,20 +122,20 @@ ms.locfileid: "66250815"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Dize Karşılaştırma Ayrıntıları  
- Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeleri sıralama belirlenmiş bir sırada: "My" dizeleri sıralanmış bir listede "dize" önce görünüyorsa, "my" "dize" küçüktür veya eşittir karşılaştırmanız gerekir. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.  
+ Dize karşılaştırma, özellikle sıralama ve eşitlik testi gibi, dizeyle ilgili pek çok işlemin temelidir. Dizeler belirlenen sırada sıralanır: "My" ifadesi sıralanmış bir dize listesinde "String" önünde görünürse, "My" ifadesi "String" değerinden küçük veya buna eşit olmalıdır. Ek olarak, karşılaştırma dolaylı olarak eşitliği tanımlar. Karşılaştırma işlemi, eşit olarak gördüğü dizeler için sıfır döndürür. İki dizenin de diğerinden daha az olmaması iyi bir yorumdur. Dizeleri içeren en anlamlı işlemler, şu yordamların birini veya her ikisini içerir: başka bir dize ile karşılaştırma ve iyi tanımlanmış bir sıralama işlemini yürütme.  
 
 > [!NOTE]
-> İndirebileceğiniz [sıralama ağırlık tabloları](https://www.microsoft.com/download/details.aspx?id=10921), sıralama ve karşılaştırma işlemlerinde Windows işletim sistemleri için kullanılan karakter ağırlıkları hakkında bilgi içeren metin dosyalarını bir dizi ve [varsayılan Unicode Harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlık tablonun en son sürümü. Linux ve Macos'ta sıralama ağırlık tablosu belirli bir sürümünü sürümüne bağlıdır [Unicode için Uluslararası bileşenleri](http://site.icu-project.org/) sistemde yüklü kitaplıkları. ICU ve uyguladıkları Unicode sürümleri hakkında daha fazla bilgi için bkz: [indirme ICU](http://site.icu-project.org/download).
+> [Sıralama ağırlığı tablolarını](https://www.microsoft.com/download/details.aspx?id=10921), Windows işletim sistemleri için sıralama ve karşılaştırma işlemlerinde kullanılan karakter ağırlıkları hakkında bilgi içeren bir metin dosyası kümesi ve [varsayılan Unicode harmanlama öğesi tablosu](https://www.unicode.org/Public/UCA/latest/allkeys.txt), Linux ve macOS için sıralama ağırlığı tablosunun en son sürümü. Linux ve macOS üzerindeki sıralama ağırlığı tablosunun belirli sürümü sistemde yüklü olan [Unicode kitaplıklarının Uluslararası bileşenlerinin](http://site.icu-project.org/) sürümüne bağlıdır. ICU sürümleri ve uygulamadıkları Unicode sürümleri hakkında bilgi için, bkz. [ICU indirme](http://site.icu-project.org/download).
 
- Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya büyük/küçük harf ve sıralama kurallarını geçerli kültürün dayalı dize veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) (İngilizce dilini temel alan yerel ayardan bağımsız kültür) üretebilir farklı sonuçlar.  
+ Ancak, iki dizeyi eşitlik veya sıralama düzeni için değerlendirmek tek bir doğru sonuç vermez; sonuç, dizeleri karşılaştırmakta kullanılan ölçütlere bağlıdır. Özellikle, sıralı olan veya geçerli kültürün büyük/küçük harf ve sıralama kurallarına dayalı dize karşılaştırmaları veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture) (İngilizce dili temel alan yerel ayar belirsiz kültür) farklı sonuçlar üretebilir.  
 
-Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET kullanarak ya da .NET farklı sürümlerini kullanan dize karşılaştırmaları farklı sonuçlar döndürebilir. Daha fazla bilgi için [dizeleri ve Unicode standardı](xref:System.String#Unicode). 
+Ayrıca, .NET 'in farklı sürümlerini kullanan veya farklı işletim sistemlerinde ya da işletim sistemi sürümlerindeki .NET kullanan dize karşılaştırmaları farklı sonuçlar döndürebilir. Daha fazla bilgi için bkz. [dizeler ve Unicode standart](xref:System.String#Unicode). 
 
 <a name="current_culture"></a>   
 ### <a name="string-comparisons-that-use-the-current-culture"></a>Geçerli Kültürü Kullanan Dize Karşılaştırmaları  
- Ölçütlerden biri, dizeleri karşılaştırırken geçerli kültüre ait kuralların kullanılmasını içerir. Geçerli kültürü temel alan karşılaştırmalar iş parçacığının geçerli kültürünü veya yerel ayarlarını kullanır. Kültür kullanıcı tarafından ayarlanmamışsa ayarı varsayılan **Bölgesel Seçenekler** Denetim Masası penceresinde. Veriler dilsel olduğunda ve kültüre duyarlı kullanıcı etkileşimini yansıttığında her zaman geçerli kültürü temel alan karşılaştırmalar kullanmalısınız.  
+ Ölçütlerden biri, dizeleri karşılaştırırken geçerli kültüre ait kuralların kullanılmasını içerir. Geçerli kültürü temel alan karşılaştırmalar iş parçacığının geçerli kültürünü veya yerel ayarlarını kullanır. Kültür Kullanıcı tarafından ayarlanmamışsa, Denetim Masası 'ndaki **Bölgesel Seçenekler** penceresinde varsayılan ayar olarak ayarlanır. Veriler dilsel olduğunda ve kültüre duyarlı kullanıcı etkileşimini yansıttığında her zaman geçerli kültürü temel alan karşılaştırmalar kullanmalısınız.  
   
- Ancak kültür değiştiğinde .NET karşılaştırma ve büyük/küçük harf davranışı değişir. Bu, bir uygulama geliştirildiği bilgisayardakinden farklı bir kültüre sahip olan başka bir bilgisayarda yürütüldüğünde veya uygulamayı yürüten iş parçacığı kültürünü değiştirdiğinde gerçekleşir. Bu davranış kasıtlıdır, ancak çoğu geliştirici için belirgin değildir. Aşağıdaki örnek ABD arasındaki sıralama düzeni farklılıkları gösterir. İngilizce ("en-US") ve İsveççe ("sv-SE") kültürleri için. Sözcükler "ångström", "Windows" ve "Visual Studio" sıralanmış dize dizi içinde farklı konumlarda göründüğüne dikkat edin.  
+ Ancak, kültür değiştiğinde .NET 'teki karşılaştırma ve büyük/küçük harf davranışı değişir. Bu, bir uygulama geliştirildiği bilgisayardakinden farklı bir kültüre sahip olan başka bir bilgisayarda yürütüldüğünde veya uygulamayı yürüten iş parçacığı kültürünü değiştirdiğinde gerçekleşir. Bu davranış kasıtlıdır, ancak çoğu geliştirici için belirgin değildir. Aşağıdaki örnekte, ABD arasındaki sıralama düzeninde farklılıklar gösterilmektedir İngilizce ("en-US") ve Isveççe ("ZF-tr") kültürleri. "Ångström", "Windows" ve "Visual Studio" sözcüklerinin sıralanmış dize dizilerindeki farklı konumlarda göründüğünü unutmayın.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison1.cs#3)]
  [!code-vb[Conceptual.Strings.BestPractices#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison1.vb#3)]  
@@ -160,14 +160,14 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
   
  Dilsel olmayan veriler dilsel olarak yorumlandığında veya belirli bir kültürdeki dize verileri başka bir kültürün kuralları kullanılarak yorumlandığında küçük ve küçük olmayan hatalar oluşabilir. Kurallı örnek, Türkçe-I sorunudur.  
   
- ABD de dahil olmak üzere neredeyse tüm Latin alfabelerinde, İngilizce, ' % s'karakteri (\u0069) "i" karakteri küçük harfli sürümünü olan "I" (\u0049). Bu büyük/küçük harf kuralı bunun gibi bir kültürde programlama yapan birisi için hızla varsayılan hale gelir. Ancak, Türkçe ("tr-TR") alfabesi, "i" karakterinin büyük harfli hali olan "Noktalı I" karakteri, yani "İ" (\u0130) içerir. Türkçe ayrıca büyük harfi "I" olan "noktasız i", yani "ı" (\u0131) karakterini içerir. Bu davranış Azerbaycan dili ("az") kültüründe de bulunur.  
+ ABD dahil olmak üzere neredeyse tüm Latin alfabeller için İngilizce, "i" (\u0069) karakteri "I" karakterinin küçük harfli sürümüdür (\u0049). Bu büyük/küçük harf kuralı bunun gibi bir kültürde programlama yapan birisi için hızla varsayılan hale gelir. Ancak, Türkçe ("tr-TR") alfabesi, "i" karakterinin büyük harfli hali olan "Noktalı I" karakteri, yani "İ" (\u0130) içerir. Türkçe ayrıca büyük harfi "I" olan "noktasız i", yani "ı" (\u0131) karakterini içerir. Bu davranış Azerbaycan dili ("az") kültüründe de bulunur.  
   
  Bu nedenle, "i" harfini büyük harfe dönüştürmek veya "I" harfini küçük harfe dönüştürmek hakkındaki varsayımlar her kültürde geçerli değildir. Eğer dize karşılaştırma yordamları için varsayılan aşırı yüklemeleri kullanırsanız, bunlar kültürler arasındaki farktan etkilenir. Eğer karşılaştırılacak veriler dilsel değilse, aşağıdaki "file" ve "FILE" dizelerinin büyük/küçük harfe duyarlı olmayan karşılaştırması örneğinin gösterdiği üzere varsayılan aşırı yüklemeleri kullanmak, istenmeyen sonuçlara neden olabilir.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#11)]
  [!code-vb[Conceptual.Strings.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#11)]  
   
- Bu karşılaştırma, eğer kültür güvenliğe duyarlı yerlerde farkında olunmadan kullanılıyorsa aşağıdaki örnekteki gibi önemli sorunlara neden olabilir. Gibi bir yöntem çağrısının `IsFileURI("file:")` döndürür `true` geçerli kültürü ABD ise İngilizce, ancak `false` geçerli kültür Türkçe ise. Bu nedenle, Türkçe sistemlerde "FILE:" ile başlayan büyük/küçük harfe duyarsız URI değerlerine olan erişimi engelleyen güvenlik önlemleri aşılabilir.  
+ Bu karşılaştırma, eğer kültür güvenliğe duyarlı yerlerde farkında olunmadan kullanılıyorsa aşağıdaki örnekteki gibi önemli sorunlara neden olabilir. Gibi bir yöntem çağrısı `IsFileURI("file:")` , geçerli kültürün ABD ise döndürür `true` İngilizce, ancak `false` geçerli kültür Türkçe ise. Bu nedenle, Türkçe sistemlerde "FILE:" ile başlayan büyük/küçük harfe duyarsız URI değerlerine olan erişimi engelleyen güvenlik önlemleri aşılabilir.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
  [!code-vb[Conceptual.Strings.BestPractices#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]  
@@ -182,10 +182,10 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
   
  Sıralı karşılaştırmalar, her dizeye ait her baytın dilsel yorumlama olmadan karşılaştırıldığı dize karşılaştırmalarıdır; örneğin, "windows" ile "Windows" eşleşmez. Bu aslında C çalışma zamanı `strcmp` işlevine yapılan bir çağrıdır. Bağlam, dizelerin tam olarak karşılaşmasını gerektirdiğinde veya koruyucu bir eşleştirme ilkesine sahip olduğunda bu karşılaştırmayı kullanın. Ek olarak, sıralı karşılaştırma, sonuç oluştururken dilsel kurallar uygulamadığından en hızlı karşılaştırma işlemidir.  
   
- . NET'te dizeler gömülü null karakterleri içerebilir. Sıralı ve kültüre duyarlı karşılaştırmalar (sabit kültür kullanan karşılaştırmalar dahil) arasındaki en belirgin farklardan biri bir dizedeki gömülü null karakterlerin işlenmesiyle ilgilidir. Bu karakterler, kültüre duyarlı karşılaştırmalar (sabit kültür kullanan karşılaştırmalar dahil) yapmak için <xref:System.String.Compare%2A?displayProperty=nameWithType> ve <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemlerini kullandığınızda yok sayılır. Sonuç olarak, kültüre duyarlı karşılaştırmalarda, gömülü null karakterleri içeren dizeler, bunları içermeyen dizelerle eşit kabul edilebilir.  
+ .NET 'teki dizeler, gömülü null karakterleri içerebilir. Sıralı ve kültüre duyarlı karşılaştırmalar (sabit kültür kullanan karşılaştırmalar dahil) arasındaki en belirgin farklardan biri bir dizedeki gömülü null karakterlerin işlenmesiyle ilgilidir. Bu karakterler, kültüre duyarlı karşılaştırmalar (sabit kültür kullanan karşılaştırmalar dahil) yapmak için <xref:System.String.Compare%2A?displayProperty=nameWithType> ve <xref:System.String.Equals%2A?displayProperty=nameWithType> yöntemlerini kullandığınızda yok sayılır. Sonuç olarak, kültüre duyarlı karşılaştırmalarda, gömülü null karakterleri içeren dizeler, bunları içermeyen dizelerle eşit kabul edilebilir.  
   
 > [!IMPORTANT]
->  Dize karşılaştırma yöntemleri gömülü null karakterleri yok saysa da, <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> ve <xref:System.String.StartsWith%2A?displayProperty=nameWithType> gibi dize arama yöntemleri bu karakterleri yok saymaz.  
+> Dize karşılaştırma yöntemleri gömülü null karakterleri yok saysa da, <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> ve <xref:System.String.StartsWith%2A?displayProperty=nameWithType> gibi dize arama yöntemleri bu karakterleri yok saymaz.  
   
  Aşağıdaki örnek, "Aa" dizesi ile "A" ve "a" karakterleri arasında birkaç gömülü null karakter içeren benzer bir dize ile kültüre duyarlı karşılaştırma yapar ve iki dizenin nasıl eşit sayıldığını gösterir.  
   
@@ -210,7 +210,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
  Bu karşılaştırmalar yine de çok hızlıdır.  
   
 > [!NOTE]
->  Dosya sisteminin, kayıt defteri anahtarlarının ve değerlerinin ve ortam değişkenlerinin dize davranışı, en iyi <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> tarafından temsil edilir.  
+> Dosya sisteminin, kayıt defteri anahtarlarının ve değerlerinin ve ortam değişkenlerinin dize davranışı, en iyi <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> tarafından temsil edilir.  
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ve <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>'in her ikisi de doğrudan ikili değerleri kullanır ve eşleştirme için idealdir. Karşılaştırma ayarlarınızdan emin olmadığınızda, bu iki değerden birini kullanın. Ancak, bayt bayt karşılaştırma yaptıkları için bunlar, bir dilsel sıralama düzeninde (bir İngilizce sözlüğü gibi) değil, ikili sıralama düzeninde sıralarlar. Sonuçlar kullanıcılara görüntülenirse çoğu bağlamda tuhaf görünebilir.  
   
@@ -223,14 +223,14 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
   
  <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> ve <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> kullanan karşılaştırmalar ASCII dizelerinde de aynı şekilde çalışır. Ancak <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType>, bir bayt kümesi olarak yorumlanması gereken dizeler için uygun olmayabilecek dilsel kararlar alır. `CultureInfo.InvariantCulture.CompareInfo` nesnesi <xref:System.String.Compare%2A> yönteminin belirli karakter kümelerini eşdeğer olarak yorumlamasını sağlar. Örneğin, aşağıdaki eşitlik sabit kültürde geçerlidir:  
   
- InvariantCulture: bir + ̊ = å  
+ InvariantCulture: a + ̊ = å  
   
  LATIN KÜÇÜK HARF A karakteri "a" (\u0061), ÜSTTEKİ BİRLEŞEN DAİRE karakterinin "+ " ̊" (\u030a) yanında olduğunda, ÜSTÜNDE DAİRE OLAN LATIN KÜÇÜK A HARFİ karakteri "å" (\u00e5) olarak yorumlanır. Aşağıdaki örnekte gösterildiği gibi bu davranış, sıralı karşılaştırmadan farklıdır.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
   
- Dosya adları, tanımlama bilgisi veya herhangi başka bir birleşim "å" gibi görünebilir Burada, sıralı yorumlarken karşılaştırmalar yine de en saydam ve sığdırma davranışı sunar.  
+ Dosya adlarını, tanımlama bilgilerini veya "å" gibi bir birleşimin görünebileceği başka herhangi bir şeyi yorumlarken, sıralı karşılaştırmalar yine de en saydam ve sığdırma davranışını sunmaktadır.  
   
  Buna karşılık, sabit kültürün karşılaştırma için kullanışlı olan çok az özelliği vardır. Karşılaştırmayı dilsel olarak yaptığı için tam simgesel eşitliğin sağlanacağından emin olamaz, ancak herhangi bir kültürdeki görüntüleme için tercih edilmez. Karşılaştırma için <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> kullanmanın birkaç nedeninden biri, kültürler arası aynı görüntülenmesi için sıralanan verilerin kalıcı hale getirilmesidir. Örneğin bir uygulamanın yanında, görüntülenecek bir sıralı tanımlayıcılar listesi içeren büyük bir veri dosyası varsa bu listeye ekleme yapmak sabit stil sıralama ile eklemeyi gerektirir.  
   
@@ -250,7 +250,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
  [Başa dön](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
-## <a name="common-string-comparison-methods-in-net"></a>. NET'te ortak dize karşılaştırma yöntemleri  
+## <a name="common-string-comparison-methods-in-net"></a>.NET 'teki ortak dize karşılaştırma yöntemleri  
  Aşağıdaki bölümlerde, en yaygın olarak dize karşılaştırmaları için kullanılan yöntemler açıklanır.  
   
 ### <a name="stringcompare"></a>String.Compare  
@@ -337,7 +337,7 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>Koleksiyon örnekleri: Karma tablosu Oluşturucu  
+### <a name="collections-example-hashtable-constructor"></a>Koleksiyonlar örneği: Hashtable Oluşturucusu  
  Karma dizeleri, dizelerin karşılaştırılma şeklinden etkilenen bir işlemin ikinci bir örneğini sağlar.  
   
  Aşağıdaki örnek, <xref:System.Collections.Hashtable> özelliği tarafından döndürülen <xref:System.StringComparer> nesnesini geçirerek bir <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> nesnesi oluşturur. <xref:System.StringComparer>'dan türetilen bir <xref:System.StringComparer> sınıfı <xref:System.Collections.IEqualityComparer> arabirimini uyguladığından <xref:System.Collections.IEqualityComparer.GetHashCode%2A> yöntemi, karma tablosundaki dizelerin karma kodunu hesaplamak için kullanılır.  
@@ -350,29 +350,29 @@ Ayrıca, farklı işletim sistemleri veya işletim sistemi sürümlerinde .NET k
 <a name="Formatted"></a>   
 ## <a name="displaying-and-persisting-formatted-data"></a>Biçimlendirilmiş Veri Görüntüleme ve Kalıcı Yapma
 
-Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, aşağıdaki tüm biçimlendirme işlemleri, geçerli iş parçacığı kültürünü kullanır:
+Kullanıcılara sayılar ve tarih ve saatler gibi dize olmayan verileri görüntülerken bunları, kullanıcının kültürel ayarlarını kullanarak biçimlendirin. Varsayılan olarak, aşağıdaki hepsi biçimlendirme işlemlerinde geçerli iş parçacığı kültürünü kullanır:
 
-- İlişkilendirilmiş dizeler tarafından desteklenen [ C# ](../../csharp/language-reference/tokens/interpolated.md) ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) derleyicileri.
+- [C#](../../csharp/language-reference/tokens/interpolated.md) Ve [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) derleyicileri tarafından desteklenen enterpolasyonlu dizeler.
 
-- Dize kullanan birleştirme işlemleri [ C# ](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçleri veya bu çağrı <xref:System.String.Concat%2A?displayProperty=nameWithType> doğrudan yöntemi.
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) Veya [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) birleştirme işleçlerini kullanan veya <xref:System.String.Concat%2A?displayProperty=nameWithType> yöntemi doğrudan çağıran dize birleştirme işlemleri.
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType> Yöntemi.
 
-- `ToString` Sayısal türlerin ve tarih ve saat türlerinin yöntemleri.
+- Sayısal türlerin ve Tarih ve saat türlerinin yöntemleri.`ToString`
 
-Bir dizeyi belirli bir kültürün kuralları kullanılarak biçimlendirilmelidir açıkça belirtmeniz veya [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture), aşağıdakileri yapabilirsiniz:
+Bir dizenin belirlenen bir kültür veya [sabit kültürün](xref:System.Globalization.CultureInfo.InvariantCulture)kuralları kullanılarak biçimlendirilmesi gerektiğini açıkça belirtmek için aşağıdakileri yapabilirsiniz:
 
-- Kullanırken <xref:System.String.Format%2A?displayProperty=nameWithType> ve `ToString` yöntemleri çağırmak olan bir aşırı yüklenmiş bir `provider` parametresi gibi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> veya <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>ve geçirin <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği, bir <xref:System.Globalization.CultureInfo> istenen temsil eden örneği kültür veya <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> özelliği.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType> Ve `provider` yöntemlerinikullanırken<xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, veya<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> gibi bir parametreye sahip bir aşırı yükleme çağırın ve bunu <xref:System.Globalization.CultureInfo>istenen <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> `ToString` kültür veya <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> özellik.  
 
-- Dize birleştirme için derleyici örtük dönüştürmeleri gerçekleştirmek izin vermez. Bunun yerine, çağırarak açık bir dönüştürme gerçekleştirmek bir `ToString` olan aşırı yüklenmiş bir `provider` parametresi. Örneğin, derleyici örtük olarak geçerli kültürü dönüştürülürken kullanan bir <xref:System.Double> aşağıdaki bir dize değerine C# kod:
+- Dize birleştirme için derleyicinin örtük dönüştürmeler gerçekleştirmesine izin vermeyin. Bunun yerine, `ToString` `provider` parametresi olan bir aşırı yüklemeyi çağırarak açık bir dönüştürme gerçekleştirin. Örneğin, derleyici bir <xref:System.Double> değeri aşağıdaki C# kodda bir dizeye dönüştürürken örtülü olarak geçerli kültürü kullanır:
 
   [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
 
-  Bunun yerine, açıkça kültürün biçimlendirme kuralları kullanılır ve dönüştürmeye çağırarak belirtebilirsiniz <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> aşağıdaki gibi yöntemi C# kodu yapar:
+  Bunun yerine, aşağıdaki <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> C# kod yaptığı gibi, yöntemini çağırarak, biçimlendirme kuralları dönüştürmede kullanılan kültürü açıkça belirtebilirsiniz:
 
   [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
 
-- Bir araya alınmış dizeye atamak yerine dize ilişkilendirme için bir <xref:System.String> atadığınızda, örnek bir <xref:System.FormattableString>. Ardından çağırabilirsiniz kendi <xref:System.FormattableString.ToString?displayProperty=nameWithType> yöntemi, geçerli kültürün kuralları yansıtan bir sonuç dizesi oluşturmak ya da çağırabilirsiniz <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> belirtilen bir kültürün kurallarını yansıtan bir sonuç dizesi üretmek için yöntemi. Statik olarak de biçimlendirilebilir dize geçirebilirsiniz <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> sabit kültür kurallarını yansıtan bir sonuç dizesi üretmek için yöntemi. Aşağıdaki örnek bu yaklaşımı gösterir. (Örneğin çıktısında geçerli kültürü en-US yansıtır.)
+- Dize ilişkilendirme için, bir <xref:System.String> örneğe bir enterpolasyonlu dize atamak yerine, ' a <xref:System.FormattableString>atayın. Daha sonra <xref:System.FormattableString.ToString?displayProperty=nameWithType> yöntemini çağırabilirsiniz, geçerli kültürün kurallarını yansıtan bir sonuç dizesi oluşturabilir veya belirtilen bir kültürün kurallarını yansıtan bir sonuç dizesi <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> oluşturmak için yöntemini çağırabilirsiniz. Ayrıca, sabit kültürün kurallarını yansıtan bir sonuç dizesi üretmek <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> için biçimlendirilebilir dizesini statik yönteme geçirebilirsiniz. Aşağıdaki örnek bu yaklaşımı gösterir. (Örneğin çıktısı, geçerli en-US kültürünü yansıtır.)
 
   [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
   [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]

@@ -2,15 +2,15 @@
 title: <webScriptEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 85cb5ecf-351b-45f3-aa29-aa2e4b64bcdd
-ms.openlocfilehash: 9619c27c8c6d41250eeaeccabebe611e94b7d874
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc69029d9830fd12df5a4070f11847fadf4c60bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940413"
 ---
 # <a name="webscriptendpoint"></a>\<webScriptEndpoint >
-Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) otomatik olarak bağlama ekler [ \<enableWebScript >](../../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) davranışı. Bir ASP.NET AJAX uygulamasından çağrılan hizmet yazarken Bu uç noktayı kullanın.  
+Bu yapılandırma öğesi [ ,\<enablewebscript >](enablewebscript.md) davranışını otomatik olarak ekleyen bir fixed [ \<WebHttpBinding >](webhttpbinding.md) bağlaması olan bir standart uç nokta tanımlar. Bir ASP.NET AJAX uygulamasından çağrılan bir hizmet yazarken bu uç noktayı kullanın.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -34,7 +34,7 @@ Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<web
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|webEndpointType|Uç nokta türünü belirten bir dize.|  
+|webEndpointType|Uç noktanın türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<web
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.|  
+|[\<standardEndpoints >](standardendpoints.md)|Özelliklerinden biri veya daha fazlası (adres, bağlama, sözleşme) düzeltilen, önceden tanımlanmış uç noktalar koleksiyonu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

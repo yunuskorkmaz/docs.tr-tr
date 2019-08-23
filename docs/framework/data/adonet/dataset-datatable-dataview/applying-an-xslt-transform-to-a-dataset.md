@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034469"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937037"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet’e XSLT Dönüşümü Uygulama
-**WriteXml** yöntemi <xref:System.Data.DataSet> içeriğini yazmanızı sağlayan bir **veri kümesi** XML verileri olarak. Ardından bu XML XSL Dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmek için genel bir görevdir. Bununla birlikte, eşitleme bir **veri kümesi** ile bir <xref:System.Xml.XmlDataDocument> bir XSLT stil sayfası içeriğini sağlayan bir **veri kümesi** ilk içeriğini yazmak zorunda kalmadan  **Veri kümesi** kullanarak XML verilerini olarak **WriteXml**.  
+Öğesinin<xref:System.Data.DataSet> **WriteXml** yöntemi, bir **veri kümesinin** içeriğini XML verisi olarak yazmanızı sağlar. Ortak bir görev daha sonra söz konusu XML 'i XSL dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmeye yönelik olur. Ancak, bir **veri kümesini** ile <xref:System.Xml.XmlDataDocument> eşitleme, ilk olarak **veri** kümesinin içeriğini **WriteXml**kullanarak XML verileri olarak yazmak zorunda kalmadan bir **veri kümesinin** içeriğine bir XSLT stil sayfası uygulamanıza olanak sağlar.  
   
- Aşağıdaki örnek dolduran bir **veri kümesi** tablolar ve ilişkiler ile eşitler **veri kümesi** ile bir **XmlDataDocument**ve bir kısmı Yazar **Veri kümesi** bir HTML dosyası kullanarak bir XSLT stil sayfası. XSLT stil sayfası içeriğini aşağıda verilmiştir.  
+ Aşağıdaki örnek bir **veri kümesini** tablolar ve ilişkiler ile doldurur, **veri kümesini** bir **XmlDataDocument**ile eşitler ve XSLT stil sayfasını kullanarak bir HTML dosyası olarak **veri kümesinin** bir kısmını yazar. XSLT stil sayfasının içerikleri aşağıda verilmiştir.  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -56,10 +56,10 @@ ms.locfileid: "62034469"
 </xsl:stylesheet>  
 ```  
   
- Aşağıdaki kod dolgular **veri kümesi** ve XSLT stil sayfasını uygular.  
+ Aşağıdaki kod, **veri kümesini** doldurur ve XSLT stil sayfasını uygular.  
   
 > [!NOTE]
->  İçin bir XSLT stil sayfası uyguluyorsanız bir **veri kümesi** ilişkileri içeren, ayarlarsanız en iyi performansı elde etmek **iç içe** özelliği <xref:System.Data.DataRelation> için **true**her biri için ilişki iç içe geçmiş. Bu XSLT stil sayfalarını kullanmanızı hiyerarşi gidin ve yoğun performans XPath konumu eksenler (örneğin, önceki eşdüzey ve aşağıdaki eşdüzey stil kullanarak verileri dönüştürmek bu uygulama doğal yukarıdan aşağıya işlemesine olanak gezinebilirsiniz sayfası düğüm test ifadeleri). İç içe ilişkiler hakkında daha fazla bilgi için bkz. [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+> İlişki içeren bir **veri kümesine** XSLT stil sayfası uyguluyorsanız, iç içe geçmiş her ilişki için ' ın **iç içe** <xref:System.Data.DataRelation> özelliğini **true** olarak ayarlarsanız en iyi performansı elde edersiniz. Bu, hiyerarşide gezinmek ve verileri dönüştürmek için doğal yukarıdan aşağı işleme uygulayan XSLT stil sayfalarını kullanmanıza olanak tanır (örneğin, önceki eşdüzey ve aşağıdaki-eşdüzey stili). sayfa düğümü test ifadeleri) bölümüne gidin. İç içe geçmiş ilişkiler hakkında daha fazla bilgi için bkz. [Iç Içe geçme istekleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -126,4 +126,4 @@ writer.Close();
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

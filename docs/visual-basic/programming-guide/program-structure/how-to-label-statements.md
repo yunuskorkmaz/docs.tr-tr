@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Etiket ifadeleri (Visual Basic)'
+title: 'Nasıl yapılır: Label deyimleri (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b442b5a0ad731cfc490a7387c78ac9279dddaf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961331"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Nasıl yapılır: Etiket ifadeleri (Visual Basic)
-Deyim blokları virgüllerle ayrılmış kod satırlarının oluşur. Öncesinde tanımlayan bir dize veya tamsayı kod satırlarını söylenebilir olmasını *etiketli*. Deyim etiketleri kullanmak için ifadelerle gibi tanımlamak için kod satırını işaretlemek için kullanılan `On Error Goto`.  
+# <a name="how-to-label-statements-visual-basic"></a>Nasıl yapılır: Label deyimleri (Visual Basic)
+Ekstre blokları, iki nokta üst üste ile ayrılmış kod satırlarından oluşur. Bir tanımlayıcı dize veya tamsayının önünde bulunan kod satırları etiketlenecek şekilde söylenir. Deyim etiketleri, bir kod satırını, gibi deyimlerle `On Error Goto`kullanılmak üzere belirlemek üzere işaretlemek için kullanılır.  
   
- Etiketler, geçerli ya da Visual Basic tanımlayıcıları olabilir — programlama öğeleri tanımlayan olanlar gibi — veya tamsayı sabit değerlerinde. Bir etiket, kaynak kod satırının başında yer almalıdır ve, aynı satırdaki bir deyimi tarafından olup izlenir bakılmaksızın, bir virgül gelmelidir.  
+ Etiketler, programlama öğelerini tanımlayan ya da tamsayı değişmez değerleri gibi geçerli Visual Basic tanımlayıcı olabilir. Bir etiket, kaynak kodu satırının başında görünmelidir ve bunun ardından iki nokta üst üste gelmelidir ve bunun ardından aynı satırdaki bir deyimin takip edilip edilmeyeceğini dikkate alınmalıdır.  
   
- Derleyici, satırın başına zaten tanımlı herhangi bir tanımlayıcı ile eşleşip eşleşmediğini kontrol ederek etiketleri tanımlar. Kullanmıyorsa, derleyici bir etiket olduğu varsayılır.  
+ Derleyici, satırın başlangıcının önceden tanımlanmış tanımlayıcıyla eşleşip eşleşmediğini denetleyerek etiketleri tanımlar. Değilse, derleyici bir etiket olduğunu varsayar.  
   
- Etiketler, kendi bildirim alanına sahip ve diğer tanımlayıcıları ile müdahale etmez. Bir etiketin, yöntemin gövdesi kapsamıdır. Etiket bildirimi herhangi bir belirsiz durumda daha önceliklidir.  
+ Etiketler kendi bildirim alanına sahiptir ve diğer tanımlayıcılarla karışmaz. Etiketin kapsamı yöntemin gövdesidir. Etiket bildirimi herhangi bir belirsiz durumda önceliklidir.  
   
 > [!NOTE]
->  Etiketleri yalnızca yürütülebilir deyimleri yöntem içinde kullanılabilir.  
+> Etiketler yalnızca yöntemlerin içindeki yürütülebilir deyimlerde kullanılabilir.  
   
-### <a name="to-label-a-line-of-code"></a>Etiket için bir kod satırı  
+### <a name="to-label-a-line-of-code"></a>Bir kod satırını etiketlemek için  
   
-- Kaynak kod satırının başında, iki nokta arkasından bir tanımlayıcı yerleştirin.  
+- Kaynak kodu satırının başında bir tanımlayıcı ve sonra iki nokta üst üste koyun.  
   
-     Örneğin, aşağıdaki kod satırlarını ile etiketlenmiş `Jump` ve `120`sırasıyla:  
+     Örneğin, aşağıdaki kod satırları sırasıyla ve `Jump` `120`ile etiketlidir:  
   
      [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]  
   

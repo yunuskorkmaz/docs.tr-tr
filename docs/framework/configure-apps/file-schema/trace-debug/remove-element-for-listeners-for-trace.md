@@ -1,5 +1,5 @@
 ---
-title: <remove> Öğe için <listeners> için <trace>
+title: <remove>İçin için <listeners> öğesi<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-ms.openlocfilehash: adf00394bc0bfe808836e74214003cd2078204e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0c5c9efb8a22d26ea5d4467f9628af5935d6dbad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673686"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920483"
 ---
-# <a name="remove-element-for-listeners-for-trace"></a>\<kaldırma > öğesi için \<dinleyicileri > için \<İzleme >
-Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.  
+# <a name="remove-element-for-listeners-for-trace"></a>\<Trace için \< \<> > öğeyi kaldırın >
+**Dinleyicileri** koleksiyondan bir dinleyiciyi kaldırır.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
+\<System. Diagnostics >  
 \<İzleme >  
-\<dinleyicileri >  
-\<kaldırma >  
+\<dinleyiciler >  
+\<> Kaldır  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,7 +36,7 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|**Adı**|Gerekli öznitelik.<br /><br /> Dinleyiciyi kaldırmak için adını **dinleyicileri** koleksiyonu.|  
+|**name**|Gerekli öznitelik.<br /><br /> Dinleyici koleksiyonundan kaldırılacak dinleyicinin adı.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -46,17 +46,17 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`listeners`|Toplar, depolar, bir dinleyici belirtir ve iletileri yönlendirir. Dinleyicileri bir uygun hedef izleme çıkışa doğrudan.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`listeners`|İletileri toplayan, depolayan ve yönlendiren bir dinleyici belirtir. Dinleyiciler izleme çıkışını uygun bir hedefe yönlendirir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
 |`trace`|ASP.NET izleme hizmetini yapılandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Kaldırma <xref:System.Diagnostics.DefaultTraceListener> gelen `Listeners` koleksiyon davranışını değiştiren <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, ve <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemleri. Çağırma bir `Assert` veya `Fail` yöntemi ileti kutusu görüntülenmez ancak görüntülenen bir ileti kutusu normalde sonuçlanır <xref:System.Diagnostics.DefaultTraceListener> kullanımda olmayan `Listeners` koleksiyonu.  
+> <xref:System.Diagnostics.DefaultTraceListener> Koleksiyonundankaldırma<xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>,,, ve<xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> yöntemlerinin davranışını değiştirir. <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> `Listeners` Ya da `Fail` yöntemini çağırmak normalde bir ileti kutusunun görüntülenmesine neden olur, ancak `Listeners` koleksiyonda değilse ileti kutusu görüntülenmez <xref:System.Diagnostics.DefaultTraceListener>. `Assert`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, varsayılan izleme Dinleyicide izlemesinden kaldırmak gösterilmektedir **dinleyicileri** koleksiyonu.  
+ Aşağıdaki örnek, izleme **dinleyicileri** koleksiyonundan varsayılan izleme dinleyicisinin nasıl kaldırılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Bir dinleyicisinden kaldırır **dinleyicileri** koleksiyonu.
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)

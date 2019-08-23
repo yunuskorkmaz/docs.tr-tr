@@ -7,16 +7,16 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: ef00c80cd51551fe12283835b3c3d51317c2aa6d
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: 8aadcc213e92fd53490f639f37dc8d8f62762c2c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68434029"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946476"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Microsoft Etkin Erişilebilirlik, uygulamaları erişilebilir hale getirmek için daha önceki bir çözümdür. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)], için [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] yeni erişilebilirlik modelidir ve yardımcı teknoloji ürünlerinin ve otomatikleştirilmiş test araçlarının ihtiyaçlarını karşılamak üzere tasarlanmıştır. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Etkin Erişilebilirlik üzerinde birçok geliştirme sunar.  
   
@@ -83,7 +83,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
 |ROLE_SYSTEM_LIST|Üstbilgi|  
 |ROLE_SYSTEM_COLUMNHEADER|Üstbilgi öğesi|  
 |ROLE_SYSTEM_LINK|Köprü|  
-|ROLE_SYSTEM_GRAPHIC|Image|  
+|ROLE_SYSTEM_GRAPHIC|Görüntü|  
 |ROLE_SYSTEM_LIST|List|  
 |ROLE_SYSTEM_LISTITEM|Liste öğesi|  
 |ROLE_SYSTEM_MENUPOPUP|Menü|  
@@ -101,7 +101,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
 |ROLE_SYSTEM_PAGETABLIST|Tab|  
 |ROLE_SYSTEM_PAGETAB|Sekme öğesi|  
 |ROLE_SYSTEM_TABLE|Tablo|  
-|ROLE_SYSTEM_STATICTEXT|Text|  
+|ROLE_SYSTEM_STATICTEXT|Metin|  
 |ROLE_SYSTEM_INDICATOR|Parmak|  
 |ROLE_SYSTEM_TITLEBAR|Başlık çubuğu|  
 |ROLE_SYSTEM_TOOLBAR|Araç çubuğu|  
@@ -139,9 +139,9 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
   
 |Etkin Erişilebilirlik durumu|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]özelliði|Tetikleyiciler durum değişikliği mi?|  
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------|----------------------------|  
-|STATE_SYSTEM_CHECKED|Onay kutusu için,<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Radyo düğmesi için,<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|E|  
-|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|E|  
-|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded>veya<xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|E|  
+|STATE_SYSTEM_CHECKED|Onay kutusu için,<xref:System.Windows.Automation.TogglePattern.ToggleStateProperty><br /><br /> Radyo düğmesi için,<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|Y|  
+|STATE_SYSTEM_COLLAPSED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Collapsed>|Y|  
+|STATE_SYSTEM_EXPANDED|<xref:System.Windows.Automation.ExpandCollapsePattern.ExpandCollapsePatternInformation.ExpandCollapseState%2A> = <xref:System.Windows.Automation.ExpandCollapseState.Expanded>veya<xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>|Y|  
 |STATE_SYSTEM_FOCUSABLE|<xref:System.Windows.Automation.AutomationElement.IsKeyboardFocusableProperty>|N|  
 |STATE_SYSTEM_FOCUSED|<xref:System.Windows.Automation.AutomationElement.HasKeyboardFocusProperty>|N|  
 |STATE_SYSTEM_HASPOPUP|<xref:System.Windows.Automation.ExpandCollapsePattern>menü öğeleri için|N|  
@@ -156,7 +156,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
 |STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern>desteklenir|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
-|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|E|  
+|STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|Y|  
   
  Aşağıdaki durumlar, çoğu Etkin Erişilebilirlik denetimi sunucusu tarafından uygulanmadı ya da hiçbir eşdeğeri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]yoktur.  
   
@@ -179,7 +179,7 @@ Etkin Erişilebilirlik <, çift arabirimler için destek içeren bileşen nesne 
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Özellik tanımlayıcılarının tüm listesi için bkz. [UI Otomasyon özelliklerine genel bakış](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
-## <a name="events"></a>Events  
+## <a name="events"></a>Olaylar  
  İçindeki [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]olay mekanizması, Etkin Erişilebilirlik 'in aksine, Windows olay yönlendirme 'yi (pencere tutamaçlarıyla yakından ilişkilidir) kullanmaz ve istemci uygulamasının kancaları ayarlaması gerekmez. Olaylara yönelik abonelikler, yalnızca belirli olaylara değil ağacın belirli bölümlerine göre hassas bir şekilde ayarlanabilir. Sağlayıcılar, hangi olayların dinleneceği ile ilgili olayları izleyerek olayların kendi etkinliklerini de ayrıntılı olarak ayarlayabilir.  
   
  Ayrıca, bunlar doğrudan olay geri çağırmaya geçirildiğinden, istemcilerin olayları oluşturan öğeleri alması de kolaylaşır. İstemci olaya abone olduğunda bir önbellek isteği etkinse, öğesinin özellikleri otomatik olarak önceden getirilir.  

@@ -7,36 +7,36 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170514"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911110"
 ---
 # <a name="in-process-side-by-side-execution"></a>Devam Eden Yan Yana Yürütme
-.NET Framework 4 ile başlayarak işlem içi yan tek bir işlemde birden çok ortak dil çalışma zamanı (CLR) sürümünü çalıştırmak için barındırma yana kullanabilirsiniz. Varsayılan olarak, COM bileşenlerini .NET Framework sürümüyle birlikte, işlem için yüklenen .NET Framework sürümünden bağımsız olarak oluşturuldukları çalıştırın yönetiliyor.  
+.NET Framework 4 ' te başlayarak, tek bir işlemde ortak dil çalışma zamanının (CLR) birden çok sürümünü çalıştırmak için işlem içi yan yana barındırma kullanabilirsiniz. Varsayılan olarak, yönetilen COM bileşenleri, işlem için yüklenen .NET Framework sürümden bağımsız olarak, ile derlendikleri .NET Framework sürümüyle çalışır.  
   
 ## <a name="background"></a>Arka Plan  
- .NET Framework için yan yana barındırma yönetilen kod uygulamalarının, ancak önce .NET Framework 4, bu işlevselliği için Yönetilen COM bileşenlerini sağlamadı sağlanan her zaman vardır. Geçmişte, zaten yüklü çalışma zamanı sürümü veya .NET Framework'ün en son yüklenen sürüm işlem içine yüklenmiş yönetilen COM bileşenlerini çalıştı. Bu sürüm COM bileşeni ile uyumlu değilse, bileşenin başarısız olur.  
+ .NET Framework, yönetilen kod uygulamaları için her zaman yan yana barındırma sağlamıştır, ancak .NET Framework 4 ' den önce, yönetilen COM bileşenleri için bu işlevselliği sağlamadı. Geçmişte, bir işleme yüklenmiş olan yönetilen COM bileşenleri, zaten yüklü olan çalışma zamanının sürümüyle veya .NET Framework en son yüklü sürümüyle çalışır. Bu sürüm COM bileşeniyle uyumlu değilse, bileşen başarısız olur.  
   
- .NET Framework 4, aşağıdaki sağlayan yan yana barındırma için yeni bir yaklaşım sağlar:  
+ .NET Framework 4, aşağıdakileri sağlayan yan yana barındırma için yeni bir yaklaşım sağlar:  
   
-- .NET Framework'ün yeni bir sürümünü yükleme mevcut uygulamalar üzerinde etkisi yoktur.  
+- .NET Framework yeni bir sürümünün yüklenmesi, mevcut uygulamalar üzerinde hiçbir etkiye sahip değildir.  
   
-- Uygulamaları birlikte oluşturuldukları .NET Framework sürümüne karşı çalışır. Bunlar .NET Framework'ün yeni sürüm açıkça yönlendirilmezseniz Bunu yapmak için kullanmayın. Ancak, geçiş için .NET Framework'ün yeni bir sürümünü kullanan uygulamalar için daha kolay olur.  
+- Uygulamalar, ile derlendikleri .NET Framework sürümüne karşı çalışır. Açıkça yönlendirilmediği takdirde .NET Framework yeni sürümünü kullanmaz. Ancak, uygulamaların .NET Framework yeni bir sürümünü kullanarak geçiş yapması kolaylaşır.  
   
-## <a name="effects-on-users-and-developers"></a>Kullanıcılara ve geliştiricilere etkileri  
+## <a name="effects-on-users-and-developers"></a>Kullanıcılar ve geliştiriciler üzerindeki etkiler  
   
-- **Son kullanıcılar ve yöneticilerin**. Bu kullanıcılar artık bunlar bağımsız olarak veya bir uygulama ile yeni bir çalışma zamanı sürümünü yüklediğinizde, kendi bilgisayarlarına herhangi bir etkisi olacağı daha güvenli olabilir. Mevcut uygulamaları önce olduğu gibi çalışmaya devam eder.  
+- **Son kullanıcılar ve sistem yöneticileri**. Bu kullanıcılar artık bağımsız çalışma zamanının yeni bir sürümünü (bağımsız olarak ya da bir uygulamayla) yüklediklerinde, bilgisayarlarının üzerinde hiçbir etkisi olmayacaktır. Mevcut uygulamalar, daha önce olduğu gibi çalışmaya devam edecektir.  
   
-- **Uygulama geliştiricileri**. Yan yana barındırma, uygulama geliştiricilerin neredeyse hiçbir etkisi vardır. Varsayılan olarak, uygulamalar her zaman üzerinde oluşturulmuş .NET Framework sürümünü çalıştırın; Bu değişiklik olmadı. Ancak, geliştiricilerin bu davranışı geçersiz kılabilir ve uygulamanın daha yeni bir sürümü .NET Framework'ün altında çalışması için doğrudan (bkz [Senaryo 2](#scenarios)).  
+- **Uygulama geliştiricileri**. Yan yana barındırma, uygulama geliştiricileri üzerinde neredeyse hiçbir etkiye sahip değildir. Uygulamalar, varsayılan olarak her zaman üzerinde derlendikleri .NET Framework sürümüne karşı çalışır; Bu değiştirilmedi. Ancak, geliştiriciler bu davranışı geçersiz kılabilir ve uygulamayı .NET Framework daha yeni bir sürümü altında çalışacak şekilde yönlendirebilir (bkz. [Senaryo 2](#scenarios)).  
   
-- **Kitaplığı geliştiriciler ve tüketiciler**. Yan yana barındırma uyumluluk sorunları bu kitaplığı geliştiriciler yüz çözmez. Doğrudan bir uygulama--veya aracılığıyla bir doğrudan başvuru tarafından yüklenen bir kitaplığı bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrı--çalışma zamanını kullanmaya devam eder <xref:System.AppDomain> içine yüklenir. Desteklemek istediğiniz .NET Framework'ün tüm sürümler karşı Kitaplıklarınızı test etmeniz gerekir. Bir uygulama .NET Framework 4 çalışma zamanı kullanılarak derlenmiş olduğuna, ancak bir önceki çalışma zamanı kullanılarak oluşturulmuş bir kitaplık içerir, bu kitaplık de .NET Framework 4 çalışma zamanını kullanın. Ancak, bir önceki çalışma zamanı ve .NET Framework 4 kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa, ayrıca .NET Framework 4 kullanmak için uygulamanızı zorlamanız gerekir (bkz [Senaryo 3](#scenarios)).  
+- **Kitaplık geliştiricileri ve tüketicileri**. Yan yana barındırma, kitaplık geliştiricilerinin karşılaştığı uyumluluk sorunlarını çözmez. Doğrudan başvuru aracılığıyla veya bir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağrı aracılığıyla bir uygulama tarafından doğrudan yüklenen bir kitaplık, ' <xref:System.AppDomain> ın ' a yüklendiği çalışma zamanını kullanmaya devam eder. Kitaplıklarınızı, desteklemek istediğiniz tüm .NET Framework sürümlerine karşı test etmelisiniz. Bir uygulama .NET Framework 4 çalışma zamanı kullanılarak derlenirse ancak önceki bir çalışma zamanı kullanılarak oluşturulmuş bir kitaplığı içeriyorsa, bu kitaplık .NET Framework 4 çalışma zamanını da kullanacaktır. Ancak, önceki bir çalışma zamanı ve .NET Framework 4 kullanılarak oluşturulmuş bir kitaplık kullanılarak oluşturulmuş bir uygulamanız varsa, uygulamanızı .NET Framework 4 ' ü (bkz. [Senaryo 3](#scenarios)) de kullanacak şekilde zorlamanız gerekir.  
   
-- **COM Bileşen geliştiriciler yönetilen**. Geçmişte, bilgisayarda yüklü olan çalışma zamanı en son sürümünü kullanarak yönetilen COM bileşenlerini otomatik olarak çalıştı. Şimdi, COM bileşenleriyle birlikte oluşturuldukları çalışma zamanı sürümüne karşı çalıştırabilirsiniz.  
+- **YÖNETILEN com bileşeni geliştiricileri**. Geçmişte, yönetilen COM bileşenleri, bilgisayarda yüklü olan çalışma zamanının en son sürümü kullanılarak otomatik olarak çalışır. Artık, yerleşik oldukları çalışma zamanının sürümüne göre COM bileşenlerini yürütebilirsiniz.  
   
-     Aşağıdaki tabloda gösterildiği gibi .NET Framework sürüm 1.1 ile oluşturulan bileşenler ile yan yana sürüm 4 bileşenlerini çalıştırabilirsiniz, ancak yan yana barındırma için kullanılabilir değil çünkü bunlar ile sürüm 2.0, 3.0 veya 3.5 bileşenleri çalışamaz sürümleri.  
+     Aşağıdaki tabloda gösterildiği gibi, 1,1 sürümü .NET Framework ile oluşturulmuş bileşenler sürüm 4 bileşenleriyle yan yana çalışabilir, ancak yan yana barındırma bu kişiler için kullanılabilir olmadığından, sürüm 2,0, 3,0 veya 3,5 bileşenleriyle birlikte çalıştırılamaz. ün.  
   
     |.NET Framework sürümü|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
@@ -45,22 +45,22 @@ ms.locfileid: "67170514"
     |4|Evet|Evet|Geçerli değil|  
   
 > [!NOTE]
->  .NET framework sürüm 3.0 ve 3.5, sürüm 2.0 üzerinde artımlı olarak oluşturulur ve yan yana çalıştırma gerekmez. Bunlar aynı sürümü temelde aynıdır.  
+> 3,0 ve 3,5 .NET Framework sürümleri artımlı olarak sürüm 2,0 ' de oluşturulmuştur ve yan yana çalıştırılmasına gerek kalmaz. Bunlar, doğal olarak aynı sürümdür.  
   
 <a name="scenarios"></a>   
-## <a name="common-side-by-side-hosting-scenarios"></a>Yan yana barındırma senaryoları  
+## <a name="common-side-by-side-hosting-scenarios"></a>Ortak yan yana barındırma senaryoları  
   
-- **Senaryo 1:** .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama.  
+- **Senaryo 1:** .NET Framework önceki sürümleriyle oluşturulmuş COM bileşenlerini kullanan yerel uygulama.  
   
-     Yüklü .NET framework sürümleri: .NET Framework 4 ve diğer tüm COM bileşenleri tarafından kullanılan .NET Framework sürümleri.  
+     .NET Framework yüklenen sürümler: .NET Framework 4 ve COM bileşenleri tarafından kullanılan .NET Framework diğer tüm sürümleri.  
   
-     Yapmanız gerekenler: Bu senaryoda, hiçbir şey yapmayın. COM bileşenleri kayıtlı olan .NET Framework sürümü ile çalışır.  
+     Yapmanız gerekenler: Bu senaryoda hiçbir şey yapmayın. COM bileşenleri, kayıtlı oldukları .NET Framework sürümüyle çalışacaktır.  
   
-- **Senaryo 2**: Yönetilen uygulama .NET Framework 2.0, ancak bunlar 2.0 sürümünde mevcut değilse .NET Framework 4'te çalıştırmak istediğiniz ile çalıştırmayı tercih .NET Framework 2.0 SP1 ile oluşturulmuş.  
+- **Senaryo 2**: .NET Framework 2,0 ile çalıştırmayı tercih ettiğiniz, ancak sürüm 2,0 mevcut değilse .NET Framework 4 ' te çalışmak üzere .NET Framework 2,0 SP1 ile oluşturulmuş yönetilen uygulama.  
   
-     Yüklü .NET framework sürümleri: Önceki bir sürümünü .NET Framework ve .NET Framework 4.  
+     .NET Framework yüklenen sürümler: .NET Framework önceki bir sürümü ve .NET Framework 4.  
   
-     Yapmanız gerekenler: İçinde [uygulama yapılandırma dosyası](../../../docs/framework/configure-apps/index.md) uygulama dizininizde [ \<başlangıç > öğesi](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) ve [ \<supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) aşağıdaki gibi ayarlayın:  
+     Yapmanız gerekenler: Uygulama dizinindeki [uygulama yapılandırma dosyasında](../../../docs/framework/configure-apps/index.md) , [ \<](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) [ \<Başlangıç > öğesini ve supportedRuntime > öğesi](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) kümesini aşağıdaki şekilde kullanın:  
   
     ```xml  
     <configuration>  
@@ -71,11 +71,11 @@ ms.locfileid: "67170514"
     </configuration>  
     ```  
   
-- **Senaryo 3:** .NET Framework 4 ile çalıştırmak istediğiniz .NET Framework'ün önceki sürümleriyle oluşturulan COM bileşenlerini kullanan yerel uygulama.  
+- **Senaryo 3:** .NET Framework 4 ile çalıştırmak istediğiniz .NET Framework önceki sürümleriyle oluşturulmuş COM bileşenlerini kullanan yerel uygulama.  
   
-     Yüklü .NET framework sürümleri: .NET Framework 4.  
+     .NET Framework yüklenen sürümler: .NET Framework 4.  
   
-     Yapmanız gerekenler: Uygulama yapılandırma dosyasında uygulama dizinindeki kullanın `<startup>` öğeyle `useLegacyV2RuntimeActivationPolicy` özniteliğini `true` ve `<supportedRuntime>` öğesi aşağıdaki gibi ayarlayın:  
+     Yapmanız gerekenler: Uygulama dizinindeki `<startup>` uygulama yapılandırma dosyasında, `useLegacyV2RuntimeActivationPolicy` `true` özniteliği olarak ayarlanmış ve öğekümesiaşağıdakişekildeolanöğesinikullanın:`<supportedRuntime>`  
   
     ```xml  
     <configuration>  
@@ -86,9 +86,9 @@ ms.locfileid: "67170514"
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, yönetilen bir COM bileşeni bileşen için derlenmiş .NET Framework sürümünü kullanarak çalışan bir yönetilmeyen COM konak gösterir kullanın.  
+ Aşağıdaki örnek, yönetilen bir COM bileşeni çalıştıran yönetilmeyen bir COM konağını bileşenin kullanmak üzere derlenen .NET Framework sürümünü kullanarak gösterir.  
   
- Aşağıdaki örnek çalıştırmak için derleme ve .NET Framework 3.5 kullanarak aşağıdaki yönetilen COM bileşeni kaydedin. Bileşeni üzerinde kaydetmek için **proje** menüsünde tıklayın **özellikleri**, tıklayın **derleme** sekmesine tıklayın ve ardından **COMbirlikteçalışmasıiçinkaydol**onay kutusu.  
+ Aşağıdaki örneği çalıştırmak için .NET Framework 3,5 kullanarak aşağıdaki yönetilen COM bileşenini derleyin ve kaydedin. Bileşeni kaydetmek için, **Proje** menüsünde **Özellikler**' e tıklayın, **derleme** sekmesine tıklayın ve ardından **com birlikte çalışması için kaydol** onay kutusunu seçin.  
   
 ```csharp
 using System;  
@@ -113,7 +113,7 @@ namespace BasicComObject
 }  
 ```  
   
- Önceki örneği tarafından oluşturulan COM nesnesi etkinleştirir aşağıdaki yönetilmeyen C++ uygulama derleyin.  
+ Önceki örnek tarafından oluşturulan C++ com nesnesini etkinleştiren aşağıdaki yönetilmeyen uygulamayı derleyin.  
   
 ```cpp
 #include "stdafx.h"  

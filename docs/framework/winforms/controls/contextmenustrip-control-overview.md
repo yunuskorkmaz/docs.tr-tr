@@ -8,28 +8,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955993"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962151"
 ---
 # <a name="contextmenustrip-control-overview"></a>ContextMenuStrip Denetimine Genel Bakış
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.ContextMenu> denetler; ancak, <xref:System.Windows.Forms.ContextMenu> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz.  
+> Denetim yerini alır ve <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu> denetime işlevsellik ekler; ancak, denetim geriye dönük uyumluluk için ve isterseniz daha sonra kullanılmak üzere tutulur. <xref:System.Windows.Forms.ContextMenuStrip>  
   
- Kullanıcının sağ fare düğmesine tıkladığında fare konumundan bağlam menüleri olarak da bilinen kısayol menülerini görünür. Kısayol *menüleri* istemci alanını veya fare işaretçisi konumunu denetim için seçenekler sağlar.  
+ Bağlam menüleri olarak da adlandırılan kısayol menüleri, Kullanıcı farenin sağ düğmesine tıkladığında fare konumunda görünür. Kısayol *menüleri* , istemci alanı veya fare işaretçisi konumundaki denetim için seçenekler sağlar.  
   
- <xref:System.Windows.Forms.ContextMenuStrip> Denetimi, sorunsuz bir şekilde yeni ile çalışacak şekilde tasarlanmıştır <xref:System.Windows.Forms.ToolStrip> ve ilgili denetimleri, ancak ilişkilendirebilir bir <xref:System.Windows.Forms.ContextMenuStrip> gibi kolayca diğer denetimlerle.  
+ Denetim, yeni <xref:System.Windows.Forms.ToolStrip> ve ilgili denetimlerle sorunsuz bir <xref:System.Windows.Forms.ContextMenuStrip> şekilde çalışacak şekilde tasarlanmıştır, ancak diğer denetimlerle tıpkı kolayca de ilişkilendirebilirsiniz. <xref:System.Windows.Forms.ContextMenuStrip>  
   
- Aşağıdaki tablo önemli gösterir <xref:System.Windows.Forms.ContextMenuStrip> Yahoo! companion sınıfları.  
+ Aşağıdaki tabloda, önemli <xref:System.Windows.Forms.ContextMenuStrip> yardımcı sınıflar gösterilmektedir.  
   
 |örneği|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|Görüntülenen bir seçilebilir seçeneğini temsil eder bir <xref:System.Windows.Forms.MenuStrip> veya <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Kullanıcının kullanıcı tıkladığında görüntülenen listeden tek bir öğe seçmesini sağlayan bir denetimi temsil eder bir <xref:System.Windows.Forms.ToolStripDropDownButton> ya da daha üst düzey menü öğesi.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Türetilen denetimler için temel işlevleri sağlar <xref:System.Windows.Forms.ToolStripItem> tıklandığında açılan öğeleri görüntüler.|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> Veya<xref:System.Windows.Forms.ContextMenuStrip>üzerinde görünen seçilebilir bir seçeneği temsil eder.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Kullanıcının bir <xref:System.Windows.Forms.ToolStripDropDownButton> veya daha yüksek düzey menü öğesine tıkladığı zaman görüntülenen listeden tek bir öğe seçmesini sağlayan bir denetimi temsil eder.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Tıklandığında <xref:System.Windows.Forms.ToolStripItem> , açılan öğeden türetilmiş denetimler için temel işlevleri sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

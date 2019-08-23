@@ -3,21 +3,21 @@ title: <sqlWorkflowInstanceStore>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 8a4e4214-fc51-4f4d-b968-0427c37a9520
-ms.openlocfilehash: 5073d27ed2bea0b4d48d0568c30113cbe3d478e0
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7a6f9fb5b2b98d2951343b5a529507b3fcd88dc8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422878"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947516"
 ---
-# <a name="sqlworkflowinstancestore"></a>\<sqlWorkflowInstanceStore >
-Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> özellik, bir SQL Server 2005 veya SQL Server 2008 veritabanına iş akışı hizmet örneklerine yönelik sürüyor durumu bilgileri destekler. Bu özellik hakkında daha fazla bilgi için bkz. [SQL iş akışı örneği Store](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md).  
+# <a name="sqlworkflowinstancestore"></a>\<SqlWorkflowInstanceStore >
+İş akışı hizmeti örnekleri için SQL Server 2005 veya SQL Server <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 2008 veritabanına yönelik kalıcı durum bilgilerini destekleyen özelliği yapılandırmanıza olanak tanıyan bir hizmet davranışı. Bu özellik hakkında daha fazla bilgi için bkz. [SQL Workflow örnek deposu](../../../windows-workflow-foundation/sql-workflow-instance-store.md).  
   
 \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
-\<sqlWorkflowInstanceStore >  
+\<davranış >  
+\<SqlWorkflowInstanceStore >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,12 +43,12 @@ Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Acti
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|connectionString|Temel alınan bir Kalıcılık veritabanına bağlanmak için kullanılan bir bağlantı dizesi içeren bir dize.|  
-|connectionStringName|Veritabanı sunucusu için bir adlandırılmış bağlantı dizesi içeren bir dize. Bir adlandırılmış bağlantı dizesi "DefaultConnectionString" örneğidir.|  
-|hostLockRenewalPeriod|Ana bilgisayar örneği kilidi yenilemeniz gerekir süre belirten bir Timespan değeri. Ana bilgisayar belirli bir süre içinde kilidi yenileme değil, örnek kilidi açılmış ve başka bir ana bilgisayar tarafından çekilmesi.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik iş akışı örneği kalıcı ve hemen sonra kaldırıldığında sıfır olarak ayarlanırsa, iş akışı boş olur. Bu öznitelik için TimeSpan.MaxValue etkili bir şekilde ayarlanması kaldırma işlemi devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
+|connectionString|Temel bir kalıcılık veritabanına bağlanmak için kullanılan bağlantı dizesi içeren bir dize.|  
+|connectionStringName|Veritabanı sunucusuna adlandırılmış bir bağlantı dizesi içeren bir dize. Adlandırılmış bir bağlantı dizesi örneği "DefaultConnectionString" dir.|  
+|hostLockRenewalPeriod|Ana bilgisayar örneği kilidi yenilemeniz gerekir süre belirten bir Timespan değeri. Ana bilgisayar belirli bir süre içinde kilidi yenileme değil, örnek kilidi açılmış ve başka bir ana bilgisayar tarafından çekilmesi.<br /><br /> Bir iş akışı kaldırılırken ayrıca kalıcı anlamına gelir. Bu öznitelik sıfır olarak ayarlandıysa iş akışı örneği kalıcıdır ve iş akışı boşta olduktan hemen sonra kaldırılır. Bu özniteliğin TimeSpan. MaxValue olarak ayarlanması, kaldırma işlemini etkin bir şekilde devre dışı bırakır. Boş iş akışı örnekleri hiçbir zaman kaldırılır.|  
 |instanceCompletionAction|İş akışı örneği tamamlandıktan sonra iş akışı örneği verileri sürdürme deposunda olup tutulur veya bu noktada silinmiş varsa belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceCompletionAction>.<br /><br /> Numaralandırılan eylemleri sürdürme deposundan örneği verileri silme veya örnek kendi işlemi tamamlandığında örneği veri sürdürme deposundan silme değil oluşur.<br /><br /> Örnekleri engel olmak sonra tamamlama Kalıcılık oluşturuyorsa veritabanına neden olur ve bu veritabanı performansı etkiler. Performans gereksinimlerinize uygun düzenli aralıklarla veritabanının performans düzeyinde olduğundan emin olmak için bu kayıtları silmek için bir veritabanı temizleme İlkesi yapılandırmanız gerekir.|  
-|instanceEncodingOption|Örnek durum bilgilerini bilgileri sürdürme deposunda kaydedilmeden önce GZip algoritmasıyla sıkıştırılıp sıkıştırılmadığını belirtir isteğe bağlı bir değer... Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceEncodingOption>. Bu özellik için olası değerler <xref:System.Activities.DurableInstancing.InstanceEncodingOption.None>, hiçbir sıkıştırma belirtir ve <xref:System.Activities.DurableInstancing.InstanceEncodingOption.GZip>, örnek veri sıkıştırılmış ve gzip algoritma belirtir.|  
-|instanceLockedExceptionAction|Yanıt olarak ana bilgisayar örneği şu anda başka bir ana bilgisayar tarafından kilitlendiğinden örneği kilitlemek çalıştığında oluşturulan bir özel durum ortaya çıkan eylem belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Bu alan için izin verilen Seçenekler şunlardır: None, temel yeniden deneyin ve etkin yeniden deneyin. Varsayılan değer, Yok'tur. Aşağıdaki liste bu üç seçenek için açıklamalar sağlar:<br /><br /> -Yok. Hizmet ana bilgisayar örneği ve geçişleri kilitlemek denemez <xref:System.Runtime.DurableInstancing.InstanceLockedException> çağırana.<br />-Temel yeniden deneyin. Hizmet Konağı bir doğrusal yeniden deneme aralığı örnekle kilitlemek tekrar dener ve dizisi sonunda çağırana özel durum geçirir.<br />-Etkin yeniden deneyin. Hizmet ana bilgisayarının reattempts bir üssel olarak artan gecikme ve geçişleri örnekle kilitlemek <xref:System.Runtime.DurableInstancing.InstanceLockedException> dizisi sonunda çağırana.|  
+|instanceEncodingOption|Örnek durum bilgilerini bilgileri sürdürme deposunda kaydedilmeden önce GZip algoritmasıyla sıkıştırılıp sıkıştırılmadığını belirtir isteğe bağlı bir değer... Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceEncodingOption>. Bu özellik için olası değerler, <xref:System.Activities.DurableInstancing.InstanceEncodingOption.None>sıkıştırma olmadığını belirten ve <xref:System.Activities.DurableInstancing.InstanceEncodingOption.GZip>örnek verilerinin sıkıştırıldığını belirten ve gzip algoritmasını kullandığı anlamına gelir.|  
+|instanceLockedExceptionAction|Örnek şu anda başka bir konak tarafından kilitlendiğinden, ana bilgisayar bir örneği kilitlemeye çalıştığında oluşturulan bir özel duruma yanıt olarak oluşan eylemi belirten bir değer. Bu değer türünde <xref:System.Activities.DurableInstancing.InstanceLockedExceptionAction>.<br /><br /> Bu alan için izin verilen seçenekler şunlardır: None, Basic retry ve agresif yeniden deneme. Varsayılan değer, Yok'tur. Aşağıdaki liste bu üç seçenek için açıklamalar sağlar:<br /><br /> Seçim. Hizmet ana bilgisayar örneği ve geçişleri kilitlemek denemez <xref:System.Runtime.DurableInstancing.InstanceLockedException> çağırana.<br />-Temel yeniden deneme. Hizmet ana bilgisayarı, örneği doğrusal bir yeniden deneme aralığı ile kilitlemeye ve özel durumu sıranın sonunda çağrı yapana geçirir.<br />-Agresif yeniden deneme. Hizmet ana bilgisayarının reattempts bir üssel olarak artan gecikme ve geçişleri örnekle kilitlemek <xref:System.Runtime.DurableInstancing.InstanceLockedException> dizisi sonunda çağırana.|  
 |runnableInstancesDetectionPeriod||  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -58,11 +58,11 @@ Yapılandırmanıza olanak tanıyan bir hizmet davranışını <xref:System.Acti
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<davranış >, \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
+|[\<\<ServiceBehavior > davranış >](behavior-of-servicebehaviors-of-workflow.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.SqlWorkflowInstanceStoreElement>
 - <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>
-- [SQL İş Akışı Örnek Deposu](../../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)
+- [SQL İş Akışı Örnek Deposu](../../../windows-workflow-foundation/sql-workflow-instance-store.md)

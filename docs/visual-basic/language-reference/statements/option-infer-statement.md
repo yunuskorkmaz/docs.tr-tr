@@ -1,5 +1,5 @@
 ---
-title: Option Infer deyimi (Visual Basic)
+title: Option Infer ekstresi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OptionInfer
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: a85d8012eea14abe4ddcdb35fa154245894a7f97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7f5fcc6d76f654f53eea6677962cb097e98b881
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582936"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912309"
 ---
 # <a name="option-infer-statement"></a>Option Infer Deyimi
-Bildirme değişkenleri olarak yerel tür çıkarımı kullanımını etkinleştirir.  
+Değişkenleri bildirirken yerel tür çıkarımı kullanımını mümkün.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,67 +31,67 @@ Option Infer { On | Off }
   
 |Terim|Tanım|  
 |---|---|  
-|`On`|İsteğe bağlı. Yerel tür çıkarımı sağlar.|  
-|`Off`|İsteğe bağlı. Yerel tür çıkarımı devre dışı bırakır.|  
+|`On`|İsteğe bağlı. Yerel tür çıkarımı etkinleştirilir.|  
+|`Off`|İsteğe bağlı. Yerel tür çıkarımını devre dışı bırakır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Ayarlanacak `Option Infer` bir dosyaya yazın `Option Infer On` veya `Option Infer Off` önce başka bir kaynak kodu dosyasının üst. Değeri ayarlarsanız `Option Infer` IDE veya komut satırında ayarlanan değer ile dosya çakışmalarını içinde dosyasındaki değeri önceliğe sahiptir.  
+ Bir dosyada `Option Infer` ayarlamak için, dosyanın en `Option Infer On` üstüne `Option Infer Off` , diğer herhangi bir kaynak kodundan önce yazın. Bir dosyada için `Option Infer` ayarlanan değer IDE 'de veya komut satırında ayarlanan değerle çakışıyorsa, dosyadaki değerin önceliği vardır.  
   
- Ayarladığınızda `Option Infer` için `On`, açıkça bir veri türü bildirmeden yerel değişkenleri bildirebilirsiniz. Derleyici, veri türü bir değişkenin kendi başlatma ifadesinin türünden çıkarır.  
+ ' I ' `Option Infer` a ayarladığınızda, açıkça bir veri türü belirtmeden yerel değişkenler bildirebilirsiniz. `On` Derleyici, başlangıç ifadesinin türünden bir değişkenin veri türünü ifade eden.  
   
- Aşağıdaki çizimde, `Option Infer` açıktır. Değişken bildiriminde `Dim someVar = 2` tür çıkarımı tarafından bir tamsayı olarak bildirilir.
+ Aşağıdaki çizimde `Option Infer` açıktır. Bildirimdeki `Dim someVar = 2` değişken tür çıkarımı tarafından tamsayı olarak bildirilmiştir.
 
- Option Infer açık olduğunda IntelliSense aşağıdaki ekran gösterilir: 
+ Aşağıdaki ekran görüntüsünde, seçenek çıkarımı açık olduğunda IntelliSense gösterilmektedir: 
   
- ![Option Infer açık olduğunda, IntelliSense görünümü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-integer-on.png)  
+ ![Seçenek çıkarımı açık olduğunda IntelliSense görünümünü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-integer-on.png)  
   
- Aşağıdaki çizimde, `Option Infer` devre dışıdır. Değişken bildiriminde `Dim someVar = 2` olarak bildirilen bir `Object` tür çıkarımı tarafından. Bu örnekte, **Option Strict** ayarı **kapalı** üzerinde [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+ Aşağıdaki çizimde `Option Infer` kapalı. Bildirimdeki `Dim someVar = 2` değişken tür çıkarımı `Object` olarak bildirilmiştir. Bu örnekte, **seçenek katı** ayarı [derleme sayfasında, Proje tasarımcısı 'nda (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) **kapalı** olarak ayarlanır.  
   
- Option Infer devre dışıyken IntelliSense aşağıdaki ekran görüntüsünde gösterilmektedir:
+ Aşağıdaki ekran görüntüsünde, seçenek çıkarımı kapalı olduğunda IntelliSense gösterilmektedir:
  
- ![Option Infer devre dışıyken IntelliSense görünümü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-object-off.png)  
+ ![Seçenek çıkarımı kapalıyken IntelliSense görünümünü gösteren ekran görüntüsü.](./media/option-infer-statement/option-infer-as-object-off.png)  
   
 > [!NOTE]
->  Ne zaman bir değişken bildirimi olarak bir `Object`, program çalışırken çalışma zamanı türünü değiştirebilirsiniz. Visual Basic adlı işlemler gerçekleştirdiğinde *kutulama* ve *kutudan çıkarma* arasında dönüştürmek için bir `Object` ve daha yavaş yürütme getiren bir değer türü. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için bkz. [Visual Basic dil belirtimi](~/_vblang/spec/conversions.md#value-type-conversions).
+> Bir değişken olarak `Object`bildirildiği zaman, program çalışırken çalışma zamanı türü değişebilir. Visual Basic, bir `Object` ve bir değer türü arasında dönüştürmek için *kutulama* ve *kutudan* çıkarma adlı işlemleri gerçekleştirir, bu da yürütmeyi daha yavaş yapar. Kutulama ve kutudan çıkarma hakkında daha fazla bilgi için [Visual Basic dil belirtimine](~/_vblang/spec/conversions.md#value-type-conversions)bakın.
   
- Tür çıkarımı yordam düzeyinde uygulanır ve bir yordamda bir sınıf, yapı, modül veya arabirimi dışından geçerli değildir.  
+ Tür çıkarımı yordam düzeyinde uygulanır ve bir sınıf, yapı, modül veya arabirimdeki bir yordamın dışında uygulanmaz.  
   
- Ek bilgi için bkz: [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+ Daha fazla bilgi için bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-## <a name="when-an-option-infer-statement-is-not-present"></a>Bir Option Infer deyimi mevcut değil  
- Kaynak kodu içermiyorsa bir `Option Infer` deyimi **Option Infer** ayarını [derleme sayfası, Proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisini kullanılıyorsa [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneği kullanılır.  
+## <a name="when-an-option-infer-statement-is-not-present"></a>Bir Option Infer deyimleri mevcut olmadığında  
+ Kaynak kodu bir `Option Infer` ifade içermiyorsa, derleme sayfasındaki **seçenek çıkarımı** ayarı [, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) kullanılır. Komut satırı derleyicisi kullanılırsa, [/OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneği kullanılır.  
   
-#### <a name="to-set-option-infer-in-the-ide"></a>Option Infer IDE içinde ayarlamak için  
+#### <a name="to-set-option-infer-in-the-ide"></a>IDE 'de seçenek çıkarımı ayarlamak için  
   
-1. İçinde **Çözüm Gezgini**, bir proje seçin. Üzerinde **proje** menüsünü tıklatın **özellikleri**.  
+1. **Çözüm Gezgini**bir proje seçin. **Proje** menüsünde **Özellikler**' e tıklayın.  
   
-2. Tıklayın **derleme** sekmesi.  
+2. **Derle** sekmesine tıklayın.  
   
-3. Değer kümesindeki **Option Infer** kutusu.  
+3. **Seçenek çıkarımı** kutusunda değeri ayarlayın.  
   
- Yeni bir proje oluşturduğunuzda **Option Infer** ayarını **derleme** sekmesinde ayarlanmış **Option Infer** ayarı **VB varsayılanları** iletişim kutusu. Erişim için **VB varsayılanları** iletişim kutusundaki **Araçları** menüsünde tıklatın **seçenekleri**. İçinde **seçenekleri** iletişim kutusunda **projeler ve çözümler**ve ardından **VB varsayılanları**. İlk varsayılan ayarda **VB varsayılanları** olduğu `On`.  
+ Yeni bir proje oluşturduğunuzda, **Derle** sekmesindeki **seçenek** çıkar ayarı, **vb Varsayılanları** iletişim kutusundaki **seçenek çıkarımı** ayarı olarak ayarlanır. **Vb Varsayılanları** iletişim kutusuna erişmek Için, **Araçlar** menüsünde **Seçenekler**' e tıklayın. **Seçenekler** iletişim kutusunda, **Projeler ve çözümler**' i genişletin ve ardından **vb Varsayılanları**' na tıklayın. Vb`On`varsayılan olarak ilk varsayılan ayar.  
   
-#### <a name="to-set-option-infer-on-the-command-line"></a>Option Infer komut satırında ayarlamak için  
+#### <a name="to-set-option-infer-on-the-command-line"></a>Komut satırında bir seçenek çıkarımı ayarlamak için  
   
-- Dahil [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneğini **vbc** komutu.  
+- **Vbc** komutuna [/OptionInfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) derleyici seçeneğini ekleyin.  
   
 ## <a name="default-data-types-and-values"></a>Varsayılan veri türleri ve değerleri  
- Aşağıdaki tabloda çeşitli birleşimlerini başlatıcısında ve veri türünü belirtmenin sonuçlarını açıklar bir `Dim` deyimi.  
+ Aşağıdaki tabloda, bir `Dim` deyimindeki veri türünü ve başlatıcıyı belirtmenin çeşitli birleşimlerinin sonuçları açıklanmaktadır.  
   
-|Belirtilen veri türü?|Belirtilen başlatıcı?|Örnek|Sonuç|  
+|Veri türü belirtildi mi?|Başlatıcı belirtildi mi?|Örnek|Sonuç|  
 |---|---|---|---|  
-|Hayır|Hayır|`Dim qty`|Varsa `Option Strict` olan kapalı (varsayılan), değişkeni ayarlanır `Nothing`.<br /><br /> Varsa `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|  
-|Hayır|Evet|`Dim qty = 5`|Varsa `Option Infer` değişken alır veri öğesinin başlatıcısını yazın (varsayılan), olan. Bkz: [yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` kapalıysa, değişken veri türünü alan `Object`.<br /><br /> Varsa `Option Infer` kapalıdır ve `Option Strict` açıktır, bir derleme zamanı hatası oluşur.|  
-|Evet|Hayır|`Dim qty As Integer`|Değişken veri türü için varsayılan değer için başlatılır. Daha fazla bilgi için [Dim deyimi](../../../visual-basic/language-reference/statements/dim-statement.md).|  
-|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcı veri türü belirtilen veri türüne dönüştürülebilir değil, bir derleme zamanı hatası oluşur.|  
+|Hayır|Hayır|`Dim qty`|Kapalıysa (varsayılan), değişkeni olarak `Nothing`ayarlanır. `Option Strict`<br /><br /> `Option Strict` Açık ise, bir derleme zamanı hatası oluşur.|  
+|Hayır|Evet|`Dim qty = 5`|`Option Infer` Açık ise (varsayılan), değişkeni başlatıcının veri türünü alır. Bkz. [Yerel tür çıkarımı](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Kapalıysa ve `Option Strict` kapalıysa, değişken veri türünü `Object`alır. `Option Infer`<br /><br /> `Option Infer` Kapalıysa ve`Option Strict` açık ise, bir derleme zamanı hatası oluşur.|  
+|Evet|Hayır|`Dim qty As Integer`|Değişken, veri türü için varsayılan değer olarak başlatılır. Daha fazla bilgi için bkz. [Dim deyimleri](../../../visual-basic/language-reference/statements/dim-statement.md).|  
+|Evet|Evet|`Dim qty  As Integer = 5`|Başlatıcının veri türü belirtilen veri türüne dönüştürülebilir değilse, bir derleme zamanı hatası oluşur.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekler göstermektedir nasıl `Option Infer` ifade yerel tür çıkarımı etkinleştirir.  
+ Aşağıdaki örneklerde, `Option Infer` ifadesinin yerel tür çıkarımı nasıl etkinleştirdiğini gösterilmektedir.  
   
  [!code-vb[VbVbalrTypeInference#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#6)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir değişken olarak tanımlandığında çalışma zamanı tür farklı olduğunu gösterir. bir `Object`.  
+ Aşağıdaki örnek, bir değişken olarak `Object`tanımlandığında çalışma zamanı türünün farklı kullanılabileceğini gösterir.  
   
  [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]  
   

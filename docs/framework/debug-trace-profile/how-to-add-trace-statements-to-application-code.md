@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948017"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
-İzleme için en sık kullanılan yöntemleri çıkış dinleyicileri için yazma yöntemleri şunlardır: **Yazma**, **Writeıf**, **WriteLine**, **Writelineıf**, **Assert**, ve **başarısız**. Bu yöntemleri iki kategoriye ayrılabilir: **Yazma**, **WriteLine**, ve **başarısız** tüm çıkış koşulsuz, oysa yayma **Writeıf**, **Writelineıf**ve  **Assert** bir Boolean koşulu test yazma ve koşul değerine göre yazma. **Writeıf** ve **Writelineıf** koşul ise çıktı yayma `true`, ve **Assert** koşul ise, çıktıyı yayar `false`.  
+İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All,, **WriteIf**, **WriteLineIf**ve **onaylama** test bir Boolean koşulunu ve onay testi, koşulun değerine göre yazma veya yazma. Koşul ise `false` `true`, WriteIf ve **WriteLineIf** bir çıkış yayıyorsa, Eğer koşul ise çıkış yayar.  
   
- İzleme ve hata ayıklama stratejisi tasarlarken, aramak için çıkış biçimini hakkında almalısınız. Birden çok **yazma** ilgisiz bilgilerle doldurulmuş deyimleri okunması zor bir günlük oluşturur. Öte yandan, kullanarak **WriteLine** ilgili deyimleri koymak için ayrı satırlara, hangi bilgilerin birlikte ait ayırt etmek zor duruma getirebilir. Genel olarak, birden çok kullanın **yazma** tek bir bilgilendirici ileti oluşturmak ve kullanmak için birden fazla kaynaktan bilgileri birleştirmek istediğinizde deyimleri **WriteLine** oluşturmak istediğinizde deyimi bir tek ve eksiksiz iletisi.  
+ İzleme ve hata ayıklama stratejinizi tasarlarken çıktının nasıl görünmesini istediğinizi düşünmeniz gerekir. İlişkisiz bilgilerle doldurulmuş birden fazla **yazma** deyimi, okunması zor olan bir günlük oluşturur. Diğer taraftan, ilişkili deyimleri ayrı satırlara koymak için **WriteLine** kullanmak, hangi bilgilerin birlikte olduğunu ayırt etmenizi zorlaştırır. Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden fazla kaynaktaki bilgileri birleştirmek istediğinizde birden çok **yazma** ifadesi kullanın ve tek bir ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.  
   
-### <a name="to-write-a-complete-line"></a>Tam bir satır yazmak için  
+### <a name="to-write-a-complete-line"></a>Tüm satırları yazmak için  
   
 1. Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.  
   
-     Böylece sonraki iletiyi tarafından döndürülen bir satır başı, bu yöntem tarafından döndürülen ileti sonuna eklenir **yazma**, **Writeıf**, **WriteLine**, veya  **Writelineıf** satırında başlar:  
+     Bu yöntemin döndürdüğü iletinin sonuna bir satır başı eklenir, böylece **Write**, **WriteIf**, **WriteLine**veya **writelinetarafından** döndürülen sonraki ileti aşağıdaki satırda başlayacaktır:  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -46,11 +46,11 @@ ms.locfileid: "61754550"
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a>Kısmi bir satır yazmak için  
+### <a name="to-write-a-partial-line"></a>Kısmi satır yazmak için  
   
 1. Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.  
   
-     Sonraki iletiyi bırakırsınız bir **yazma**, **Writeıf**, **WriteLine**, veya **Writelineıf** tarafından put ileti ile aynı satırda başlayacak **yazma** veya **Writeıf** deyimi:  
+     Sonraki ileti bir **Write**, **WriteIf**, **WriteLine**veya **WriteLineIf** tarafından dışarı yazılır ve bu, **Write** veya **WriteIf** ifadesiyle ileti yerleştirerek aynı satırda başlayacaktır:  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -67,7 +67,7 @@ ms.locfileid: "61754550"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Doğrulamak için belirli koşullar önce veya sonra bir yöntem yürütülmeye var  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Belirli koşulların, bir yöntemi yürütmeden önce veya sonra var olduğunu doğrulamak için  
   
 1. Çağrı <xref:System.Diagnostics.Trace.Assert%2A> yöntemi.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "61754550"
     ```  
   
     > [!NOTE]
-    >  Kullanabileceğiniz **Assert** izleme ve hata ayıklama. Bu örnek herhangi bir dinleyici için çağrı yığınını çıkarır **dinleyicileri** koleksiyonu. Daha fazla bilgi için [yönetilen koddaki onaylar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
+    > Hem izleme hem de hata ayıklama ile **onaylama** kullanabilirsiniz. Bu örnek, çağrı yığınını dinleyici koleksiyonundaki herhangi bir dinleyiciye verir. Daha fazla bilgi için bkz. [Yönetilen koddaki](/visualstudio/debugger/assertions-in-managed-code) Onaylamalar <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>ve.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -91,6 +91,6 @@ ms.locfileid: "61754550"
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [İzleme ve İşaretleme Uygulamaları](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Nasıl yapılır: Oluşturma, başlatma ve izleme anahtarları yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Nasıl yapılır: Izleme anahtarları oluşturma, başlatma ve yapılandırma](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [İzleme Anahtarları](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [İzleme Dinleyicileri](../../../docs/framework/debug-trace-profile/trace-listeners.md)

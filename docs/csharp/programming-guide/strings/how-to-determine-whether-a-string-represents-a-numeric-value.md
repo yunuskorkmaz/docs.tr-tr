@@ -7,12 +7,12 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: d3253dced5f2f1fe04c76b46a6b360b24aabb43e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 831f0fc83c8a7066b40d64e4765a312b8b4847bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588511"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921778"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Nasıl yapılır: Bir dizenin sayısal bir değeri temsil edip etmediğini belirlemeC# (Programlama Kılavuzu)
 Bir dizenin belirtilen bir sayısal türün geçerli bir gösterimi olup olmadığını anlamak için, tüm ilkel sayısal türler `TryParse` tarafından uygulanan statik yöntemi ve ayrıca <xref:System.DateTime> ve <xref:System.Net.IPAddress>gibi türleri kullanın. Aşağıdaki örnek, "108" nin geçerli bir [int](../../language-reference/builtin-types/integral-numeric-types.md)olup olmadığını nasıl belirleyeceğini gösterir.  
@@ -26,7 +26,7 @@ bool result = int.TryParse(s, out i); //i now = 108
  Dize sayısal olmayan karakterler içeriyorsa veya belirttiğiniz belirli tür için çok büyük veya çok küçükse, `TryParse` false değerini döndürür ve out parametresini sıfıra ayarlar. Aksi takdirde, true döndürür ve out parametresini dizenin sayısal değerine ayarlar.  
   
 > [!NOTE]
->  Dize yalnızca sayısal karakterler içerebilir ve bu `TryParse` yöntemi kullandığınız tür için geçerli olmayabilir. Örneğin, "256", için `byte` geçerli bir değer değildir ancak için `int`geçerlidir. "98,6", için `int` geçerli bir değer değil, ancak geçerli `decimal`bir.  
+> Dize yalnızca sayısal karakterler içerebilir ve bu `TryParse` yöntemi kullandığınız tür için geçerli olmayabilir. Örneğin, "256", için `byte` geçerli bir değer değildir ancak için `int`geçerlidir. "98,6", için `int` geçerli bir değer değil, ancak geçerli `decimal`bir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki `TryParse` örneklerde,, ve `long` `byte` değerlerinin`decimal` dize gösterimiyle nasıl kullanılacağı gösterilmektedir.  

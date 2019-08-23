@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73d4eb2741bdbe5a07704ca0f3b2f779706e66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701274"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926948"
 ---
-# <a name="sources-element"></a>\<Kaynakları > öğesi
-İzleme iletileri başlatmak iz kaynakları belirtir.  
+# <a name="sources-element"></a>\<> öğesi kaynakları
+İzleme iletilerini Başlatan izleme kaynaklarını belirtir.  
   
  \<Yapılandırma >  
-\<System.Diagnostics >  
-\<Kaynakları >  
+\<System. Diagnostics >  
+\<Kaynaklar >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,20 +41,20 @@ ms.locfileid: "61701274"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gerekli öğe.<br /><br /> İzleme iletileri başlatan bir izleme kaynağı belirtir.|  
+|[\<Kaynak >](source-element.md)|Gerekli öğe.<br /><br /> İzleme iletilerini Başlatan bir izleme kaynağını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |`configuration`|Her yapılandırma dosyasında yer alan ve ortak dil çalışma zamanı ve .NET Framework uygulamaları tarafından kullanılan kök öğe.|  
-|`system.diagnostics`|Toplamak, depolamak ve iletileri ve bir izleme anahtarı ayarlandığı düzeyi izleme dinleyicilerini belirtir.|  
+|`system.diagnostics`|İletileri ve bir izleme anahtarının ayarlandığı düzeyi depolayan, depolayan ve yönlendiren izleme dinleyicilerini belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu öğe, makine yapılandırma dosyası (Machine.config) ve uygulama yapılandırma dosyasında kullanılabilir.  
+ Bu öğe makine yapılandırma dosyasında (Machine. config) ve uygulama yapılandırma dosyasında kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir `<sources>` iz eklenecek öğe `mySource` ve kaynak anahtarı düzeyini ayarlamak için adlı `sourceSwitch`. Bir konsol iz dinleyicisi, izleme bilgileri konsola yazar eklenir.  
+ Aşağıdaki örnek, izleme kaynağını `<sources>` `mySource` eklemek ve adlı `sourceSwitch`kaynak anahtarın düzeyini ayarlamak için öğesinin nasıl kullanılacağını gösterir. İzleme bilgilerini konsola yazan bir konsol izleme dinleyicisi eklenir.  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,5 @@ ms.locfileid: "61701274"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [İzleme ve Hata Ayıklama Ayarları Şeması](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<Kaynak >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [İzleme ve Hata Ayıklama Ayarları Şeması](index.md)
+- [\<Kaynak >](source-element.md)

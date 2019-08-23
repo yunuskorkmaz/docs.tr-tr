@@ -16,46 +16,46 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423858"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950688"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
-Aynı anda birçok görevi gerçekleştiren henüz kullanıcı etkileşimine yanıt verebilir durumda kalması uygulamalar genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, çok iş parçacıklı yüksek performanslı uygulamalar oluşturmak için gerekli olan tüm araçları sağlar, ancak etkili bir şekilde bu araçları kullanarak, birden çok iş parçacıklı yazılım Mühendisliği önemli deneyimiyle gerektirir. Görece basit birden çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> bileşeni, basit bir çözüm sağlar. Zaman uyumsuz daha gelişmiş uygulamalar için olay tabanlı zaman uyumsuz desene uyar bir class uygulamayı düşünün.  
+Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> , bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
   
- Olay tabanlı zaman uyumsuz desen çok iş parçacıklı uygulamalar avantajları pek çok iş parçacıklı tasarımında devralınan karmaşık sorunların gizleyerek kullanılabilir hale getirir. Bu deseni destekleyen bir sınıf kullanarak size izin verebilirsiniz:  
+ Olay tabanlı zaman uyumsuz model, çok iş parçacıklı uygulamaların avantajlarından yararlanır ve çok iş parçacıklı tasarımda bulunan karmaşık sorunların çoğunu gizler. Bu kalıbı destekleyen bir sınıf kullanmak şunları yapmanıza izin verebilir:  
   
-- Uygulamanızı kesintiye uğratmadan indirmeleri ve "arka planda," veritabanı işlemleri gibi uzun süren görevleri gerçekleştirin.  
+- Yüklemeler ve veritabanı işlemleri gibi zaman alan görevleri, "arka planda", uygulamanızı kesintiye uğramadan gerçekleştirin.  
   
-- Birden çok işlem her tamamlandığında bildirim alma eşzamanlı olarak yürütün.  
+- Birden çok işlemi aynı anda yürütün, her tamamlandığında bildirim alma.  
   
-- Kaynakları ("engelleme") durdurmadan kullanılabilir olana kadar bekleyin, uygulamanızın.  
+- Uygulamanızı durdurmadan ("engellenmeden") kaynakların kullanılabilir olmasını bekleyin.  
   
-- Bilinen olayları ve temsilci modelini kullanarak zaman uyumsuz işlemleri iletişim. Olay işleyicileri ve temsilcileri kullanma ile ilgili daha fazla bilgi için bkz: [olayları](../../../docs/standard/events/index.md).  
+- Tanıdık olayları ve temsilciler modelini kullanarak bekleyen zaman uyumsuz işlemlerle iletişim kurun. Olay işleyicilerini ve temsilcileri kullanma hakkında daha fazla bilgi için bkz. [Olaylar](../../../docs/standard/events/index.md).  
   
- Olay tabanlı zaman uyumsuz deseni destekleyen bir sınıf adlı bir veya daha fazla yöntemi olacaktır _MethodName_**zaman uyumsuz**. Bu yöntemler, zaman uyumlu sürümler, geçerli iş parçacığında aynı işlemi yansıtma. Sınıfı ayrıca olabilir bir _MethodName_**tamamlandı** olay ve olabilir bir _MethodName_**AsyncCancel** (ya da yalnızca  **CancelAsync**) yöntemi.  
+ Olay tabanlı zaman uyumsuz deseninin desteklendiği bir sınıf, _MethodName_**zaman uyumsuz**adlı bir veya daha fazla yöntemlere sahip olur. Bu yöntemler, geçerli iş parçacığında aynı işlemi gerçekleştiren zaman uyumlu sürümleri yansıtabilir. Sınıfta bir _MethodName_**tamamlandı** olayı olabilir ve bir _MethodName_**Asynccancel** (veya yalnızca bir algıladığında **lasync**) yöntemi olabilir.  
   
- <xref:System.Windows.Forms.PictureBox> Olay tabanlı zaman uyumsuz deseni destekleyen tipik bir bileşendir. Çağırarak, zaman uyumlu bir görüntü indirebilirsiniz, <xref:System.Windows.Forms.PictureBox.Load%2A> büyük görüntüdür veya ağ bağlantısı yavaşsa, uygulamanızı durdurur ancak yöntemi, yükleme işlemi tamamlanana kadar yanıt ve çağrısı <xref:System.Windows.Forms.PictureBox.Load%2A> döndürür.  
+ <xref:System.Windows.Forms.PictureBox>, olay tabanlı zaman uyumsuz stili destekleyen tipik bir bileşendir. <xref:System.Windows.Forms.PictureBox.Load%2A> Yöntemini çağırarak bir görüntüyü zaman uyumlu olarak indirebilirsiniz, ancak görüntü büyükse veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana ve <xref:System.Windows.Forms.PictureBox.Load%2A> çağrısı geri alınana kadar uygulamanız yanıt vermeyi durdurur.  
   
- Uygulamanızın istiyorsanız görüntünün sırasında çalışmaya devam etmesini yükleniyor, çağırabilirsiniz <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi ve tutamacı <xref:System.Windows.Forms.PictureBox.LoadCompleted> olay gibi başka bir olay işleme. Çağırdığınızda <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi, uygulamanızın ayrı bir iş parçacığında ("arka planda") indirme devam ederken çalışmaya devam edecek. Resim yükleme işlemi tamamlandıktan ve olayı işleyicinizi inceleyebilirsiniz, olay işleyicisi çağrılacak <xref:System.ComponentModel.AsyncCompletedEventArgs> indirme başarıyla tamamlandı, belirlemek için parametre.  
+ Görüntü yüklenirken uygulamanızın çalışmaya devam etmesini istiyorsanız, diğer herhangi bir olayı işlerken olduğu gibi, <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> yöntemi çağırabilir ve <xref:System.Windows.Forms.PictureBox.LoadCompleted> olayı işleyebilirsiniz. <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> Yöntemini çağırdığınızda, yükleme işlemi ayrı bir iş parçacığına ("arka planda") devam ederken uygulamanız çalışmaya devam edecektir. Olay işleyiciniz, görüntü yükleme işlemi tamamlandığında çağrılır ve olay işleyiciniz, indirmenin başarıyla tamamlanıp tamamlanmadığını belirleme <xref:System.ComponentModel.AsyncCompletedEventArgs> parametresini inceleyebilir.  
   
- Zaman uyumsuz bir işlem iptal edilebileceğine, olay tabanlı zaman uyumsuz desen gerektirir ve <xref:System.Windows.Forms.PictureBox> denetimini destekliyorsa bu gereksinimle birlikte kendi <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> yöntemi. Çağırma <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> bekleyen indirme durdurma isteği gönderir ve görev iptal edildiğinde <xref:System.Windows.Forms.PictureBox.LoadCompleted> olayı oluşturulur.  
+ Olay tabanlı zaman uyumsuz model, zaman uyumsuz bir işlemin iptal edilmesine ve <xref:System.Windows.Forms.PictureBox> denetimin <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> yöntemiyle bu gereksinimi desteklediğinden emin olmanızı gerektirir. Çağırma <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> , bekleyen indirmeyi durdurmak için bir istek gönderir ve görev iptal <xref:System.Windows.Forms.PictureBox.LoadCompleted> edildiğinde olay tetiklenir.  
   
 > [!CAUTION]
->  İndirme gibi tamamlaması mümkün <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> isteği yapıldığında, bunu <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteği yansıtmayabilir. Bu adlı bir *yarış durumu* ve çok iş parçacıklı programlama sık karşılaşılan bir sorundur. Çok iş parçacıklı programlama konuları hakkında daha fazla bilgi için bkz. [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../docs/standard/threading/managed-threading-best-practices.md).  
+>  İndirme işlemi, <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> isteğin yapıldığı gibi bitecektir, bu nedenle <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteğini yansıtmayabilir. Bu, *yarış durumu* olarak adlandırılır ve çok iş parçacıklı programlamada yaygın bir sorundur. Çoklu iş parçacıklı programlamada sorunlar hakkında daha fazla bilgi için bkz. [yönetilen Iş parçacığı En Iyi yöntemleri](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
-## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz desenin özellikleri  
- Olay tabanlı zaman uyumsuz desen, belirli bir sınıf tarafından desteklenen operations karmaşıklığına bağlı olarak birkaç biçimleri alabilir. Tek bir basit sınıfları olabilir _MethodName_**zaman uyumsuz** yöntemi ve karşılık gelen _MethodName_**tamamlandı** olay. Daha karmaşık sınıfları birkaç olabilir _MethodName_**zaman uyumsuz** yöntemleri, karşılık gelen her _MethodName_**tamamlandı** olayı olarak Bu yöntemler de olarak zaman uyumlu sürümleri. Sınıfları isteğe bağlı olarak her zaman uyumsuz bir yöntem için artımlı sonuçları iptal ve ilerleme raporlaması destekleyebilir.  
+## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz düzenin özellikleri  
+ Olay tabanlı zaman uyumsuz model, belirli bir sınıf tarafından desteklenen işlemlerin karmaşıklığına bağlı olarak birkaç form alabilir. En basit sınıflarda tek bir _MethodName_**zaman uyumsuz** yöntemi ve karşılık gelen bir _MethodName_**tamamlandı** olayı olabilir. Daha karmaşık sınıfların, her biri karşılık gelen _MethodName_**tamamlandı** olayına ve bu yöntemlerin eşzamanlı sürümlerine sahip birkaç _MethodName_**zaman uyumsuz** yöntemi olabilir. Sınıflar, her zaman uyumsuz yöntem için, isteğe bağlı olarak iptali, ilerleme raporlaması ve artımlı sonuçları destekleyebilir.  
   
- Zaman uyumsuz bir yöntem herhangi bir sayıda diğer bekleyen işlemler tamamlanmadan önce bir kez çağırmak kodunuzu sağlayan birden fazla bekleyen çağrıları (birden çok eş zamanlı başlatma), aynı zamanda destekleyebilir. Bu durumu doğru şekilde işleme her işlemin tamamlanmasını izlemek için uygulamanızı gerektirebilir.  
+ Zaman uyumsuz bir yöntem aynı zamanda birden fazla bekleyen çağrıyı destekleyebilir (birden çok eşzamanlı çağırma), kodunuzun diğer bekleyen işlemleri tamamlamadan önce herhangi bir sayıda çağrı yapmasına izin verir. Bu durumu doğru şekilde işlemek, uygulamanızın her bir işlemin tamamlanmasını izlemesini gerektirebilir.  
   
-### <a name="examples-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz desenin örnekleri  
- <xref:System.Media.SoundPlayer> Ve <xref:System.Windows.Forms.PictureBox> bileşenleri, olay tabanlı zaman uyumsuz desenin basit uygulamalar'ı temsil eder. <xref:System.Net.WebClient> Ve <xref:System.ComponentModel.BackgroundWorker> bileşenleri, olay tabanlı zaman uyumsuz desenin daha karmaşık uygulamalar'ı temsil eder.  
+### <a name="examples-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz model örnekleri  
+ <xref:System.Media.SoundPlayer> Ve<xref:System.Windows.Forms.PictureBox> bileşenleri, olay tabanlı zaman uyumsuz düzenin basit uygulamalarını temsil eder. <xref:System.Net.WebClient> Ve<xref:System.ComponentModel.BackgroundWorker> bileşenleri, olay tabanlı zaman uyumsuz düzenin daha karmaşık uygulamalarını temsil eder.  
   
- Aşağıda, desenine uyduğunu örnek sınıf bildirimi şu şekildedir:  
+ Aşağıda, düzene uyan örnek bir sınıf bildirimi verilmiştir:  
   
 ```vb  
 Public Class AsyncExample  
@@ -104,41 +104,41 @@ public class AsyncExample
 }  
 ```  
   
- Kurgusal `AsyncExample` sınıfı ikisi için de destek zaman uyumlu ve zaman uyumsuz çağrıları, iki yöntem vardır. Zaman uyumlu aşırı herhangi bir yöntem çağrısının gibi davranır ve çağıran iş parçacığında işlemi yürütün; uzun süren bir işlemdir, çağrı döndürmeden önce fark edilebilir bir gecikme olabilir. Zaman uyumsuz aşırı başka bir iş parçacığı üzerinde işlemi başlatın ve işlemi "arka planda." çalışırken devam etmek çağıran iş parçacığına izin vererek hemen döndürür  
+ Kurgusal `AsyncExample` sınıfta, her ikisi de zaman uyumlu ve zaman uyumsuz çağırmaları destekleyen iki yöntem vardır. Zaman uyumlu aşırı yüklemeler herhangi bir yöntem çağrısı gibi davranır ve işlemi çağıran iş parçacığında yürütür; işlem zaman alıyorsa, çağrı dönüşmeden önce dikkat çekici bir gecikme olabilir. Zaman uyumsuz aşırı yüklemeler işlemi başka bir iş parçacığında başlatır ve ardından hemen geri döner ve bu işlem, çağıran iş parçacığının işlem "arka planda" yürütüldüğü sırada devam etmesine izin verir.  
   
 ### <a name="asynchronous-method-overloads"></a>Zaman uyumsuz yöntem aşırı yüklemeleri  
- Zaman uyumsuz işlemler için olası iki aşırı yüklemesi vardır: tek çağırma ve birden çok çağırma. Yöntem imzaları iki yöntemden birini ayırabilirsiniz: adında ek bir parametre birden çok çağrı formundadır `userState`. Bu formu çağırmak, kodunuz için mümkün kılar `Method1Async(string param, object userState)` birden çok kez olmadan bekleyen zaman uyumsuz işlemler, tamamlanması bekleniyor. Öte yandan, çağırmayı deneyin, `Method1Async(string param)` önceki bir çağrı tamamlanmadan önce yöntemi oluşturur bir <xref:System.InvalidOperationException>.  
+ Zaman uyumsuz işlemler için olası iki aşırı yükleme vardır: tek çağrı ve Çoklu çağrı. Bu iki formu Yöntem imzalarına göre ayırabilirsiniz: birden çok çağırma formunda, adlı `userState`ek bir parametre bulunur. Bu form, kodunuzun bekleyen zaman uyumsuz işlemlerin bitmesini beklemeden `Method1Async(string param, object userState)` birden çok kez çağrı yapmayı olanaklı kılar. Diğer taraftan, önceki bir çağırma tamamlanmadan önce çağırmayı `Method1Async(string param)` denerseniz Yöntem bir <xref:System.InvalidOperationException>oluşturur.  
   
- `userState` Parametresi birden çok çağrı aşırı yüklemeler için zaman uyumsuz işlemler arasında ayrım yapmak olanak sağlar. Her çağrı için benzersiz bir değer (örneğin, bir GUID veya karma kodu) sağladığınız `Method1Async(string param, object userState)`, ve her bir işlem tamamlandığında, olay işleyicisi işlemi hangi örneğinin tamamlanma olayı belirleyebilirsiniz.  
+ Çoklu `userState` çağrı aşırı yüklemelerinin parametresi, zaman uyumsuz işlemler arasında ayrım yapmanıza olanak tanır. Her bir çağrı `Method1Async(string param, object userState)`için benzersiz bir değer (örneğin, bir GUID veya karma kod) sağlarsınız ve her işlem tamamlandığında, olay işleyiciniz işlemin hangi örneğinin tamamlanma olayını gerçekleştirdiğini belirleyebilir.  
   
-### <a name="tracking-pending-operations"></a>Bekleyen işlemleri izleme  
- Birden çok çağrı aşırı yüklemeleri kullanırsanız, kodunuzu izlemek gerekir `userState` nesneler (görev ID'lerini) için bekleyen görevler. Her çağrı için `Method1Async(string param, object userState)`, genellikle yeni bir oluşturur, benzersiz `userState` nesnesi ve bir koleksiyona ekleyin. Zaman için karşılık gelen görev `userState` nesne tamamlama olayını başlatır, tamamlama yöntemi uygulamanız inceleyeceksiniz <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> ve, koleksiyondan kaldırır. Bu şekilde kullanılan `userState` parametre alan bir görev kimliği rolü  
+### <a name="tracking-pending-operations"></a>Bekleyen Işlemleri izleme  
+ Çoklu çağrı yüklerini kullanırsanız, kodunuzun bekleyen görevler için `userState` nesneleri (görev kimlikleri) izlemesi gerekir. Her yapılan `Method1Async(string param, object userState)`çağrı için genellikle yeni, benzersiz `userState` bir nesne oluşturup bir koleksiyona eklersiniz. Bu `userState` nesneye karşılık gelen görev tamamlanma olayını harekete geçirirse, tamamlama yöntemi uygulamanız onu inceleyerek <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> ve koleksiyonunuzdan kaldırır. Bu şekilde `userState` kullanılırsa parametresi bir görev kimliği rolünü alır.  
   
 > [!NOTE]
->  İçin benzersiz bir değer sağlamak dikkatli olmanız gerekir `userState` çağrılarınızı çağırma birden fazla aşırı yüküne de. Benzersiz olmayan görev kimliği zaman uyumsuz sınıfı throw neden olacak bir <xref:System.ArgumentException>.  
+> Birden çok çağırma aşırı yüküne yönelik çağrılarınız için `userState` benzersiz bir değer sağlamanız dikkat etmeniz gerekir. Benzersiz olmayan görev kimlikleri, zaman uyumsuz sınıfın <xref:System.ArgumentException>oluşturmasına neden olur.  
   
-### <a name="canceling-pending-operations"></a>İşlemleri iptal ediliyor  
- Zaman uyumsuz işlemleri, tamamlanmadan önce herhangi bir zamanda iptal etmek önemlidir. Olay tabanlı zaman uyumsuz desen uygulayan sınıflar olacaktır bir `CancelAsync` yöntemi (yalnızca bir zaman uyumsuz yöntem yoksa) veya bir _MethodName_**AsyncCancel** (varsa birden çok yöntemi zaman uyumsuz yöntemleri).  
+### <a name="canceling-pending-operations"></a>Bekleyen Işlemleri iptal etme  
+ Her zaman zaman uyumsuz işlemleri tamamlanmadan önce iptal edebilmek önemlidir. Olay tabanlı zaman uyumsuz model uygulayan sınıflar bir `CancelAsync` yöntemine (yalnızca bir zaman uyumsuz yöntem varsa) veya _MethodName_**asynccancel** yöntemine (birden çok zaman uyumsuz yöntem varsa) sahip olur.  
   
- Birden çok çağrılarına izin yöntemleri alır bir `userState` her görev ömrünü izlemek için kullanılan parametre. `CancelAsync` alan bir `userState` parametresini iptal Bekleyen Görevler belirli sağlar.  
+ Birden çok çağırma yöntemine izin veren Yöntemler `userState` bir parametre alır ve her görevin ömrünü izlemek için kullanılabilir. `CancelAsync`belirli bekleyen `userState` görevleri iptal etmenizi sağlayan bir parametre alır.  
   
- Tek bir işlem aynı anda bekleyen gibi destekleyen yöntemler `Method1Async(string param)`, iptal edilemez.  
+ Aynı anda yalnızca tek bir bekleyen işlemi destekleyen metotlar, örneğin `Method1Async(string param)`, iptal edilemez.  
   
-### <a name="receiving-progress-updates-and-incremental-results"></a>Devam eden güncelleştirmelerin ve artımlı sonuçlarını alma  
- Olay tabanlı zaman uyumsuz desene uyar bir sınıf, ilerleme ve artımlı sonuçlarını izlemek için bir olay isteğe bağlı olarak sağlayabilir. Bu genellikle adlandırılacağını `ProgressChanged` veya _MethodName_**ProgressChanged**, ve karşılık gelen kendi olay işleyicisine sürecek bir <xref:System.ComponentModel.ProgressChangedEventArgs> parametresi.  
+### <a name="receiving-progress-updates-and-incremental-results"></a>Ilerleme güncellemeleri ve artımlı sonuçlar alınıyor  
+ Olay tabanlı zaman uyumsuz düzene uygun bir sınıf, isteğe bağlı olarak ilerleme durumunu ve artımlı sonuçları izlemek için bir olay sağlayabilir. Bu `ProgressChanged` , genellikle adlandırılmış veya _MethodName_**ProgressChanged & lt**ve buna karşılık gelen olay işleyicisi bir <xref:System.ComponentModel.ProgressChangedEventArgs> parametre alır.  
   
- Olay işleyicisi `ProgressChanged` olay inceleyebilirsiniz <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> özelliği zaman uyumsuz bir görev yüzde tamamlandı belirlemek için. Bu özellik, 0-100 aralığında ve güncelleştirmek için kullanılabilir <xref:System.Windows.Forms.ProgressBar.Value%2A> özelliği bir <xref:System.Windows.Forms.ProgressBar>. Birden çok zaman uyumsuz işlemleri bekleme, kullanabileceğiniz <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> özelliği işlemi ayırt etmek için ilerleme bildirimi.  
+ `ProgressChanged` Olayın olay işleyicisi, zaman uyumsuz bir görevin tamamlanan <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A?displayProperty=nameWithType> yüzdesini belirlemek için özelliğini inceleyebilir. Bu özellik 0 ile 100 arasında değişir ve bir <xref:System.Windows.Forms.ProgressBar.Value%2A> <xref:System.Windows.Forms.ProgressBar>öğesinin özelliğini güncelleştirmek için kullanılabilir. Birden çok zaman uyumsuz işlem beklendiğinde, hangi işlemin ilerleme <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A?displayProperty=nameWithType> durumunu ayırt etmek için özelliğini kullanabilirsiniz.  
   
- Zaman uyumsuz işlemler devam ederken bazı sınıflar artımlı sonuçlarını bildirebilir. Bu sonuçları, türetilen bir sınıf içinde depolanan <xref:System.ComponentModel.ProgressChangedEventArgs> ve türetilmiş sınıftaki bir özellik olarak görünür. Bu sonuçları için olay işleyicisinde erişebileceğiniz `ProgressChanged` olay, erişmek gibi <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> özelliği. Birden çok zaman uyumsuz işlemleri bekleme, kullanabileceğiniz <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> işlemi ayırt etmek için özellik artımlı sonuçları raporlama.  
+ Bazı sınıflar, zaman uyumsuz işlemler devam edecek şekilde artımlı sonuçlar bildirebilir. Bu sonuçlar, öğesinden <xref:System.ComponentModel.ProgressChangedEventArgs> türetilen bir sınıfta saklanır ve türetilmiş sınıfta özellikler olarak görünürler. Bu sonuçlara, olaya `ProgressChanged` <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> erişmek istediğiniz gibi olay işleyicisindeki erişebilirsiniz. Birden çok zaman uyumsuz işlem beklendiğinde, hangi işlemin artımlı <xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> sonuçlar raporlanmasını ayırt etmek için özelliğini kullanabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [Nasıl yapılır: Olay tabanlı zaman uyumsuz deseni destekleyen bileşenleri kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Nasıl yapılır: Arka planda işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Olay tabanlı zaman uyumsuz stili destekleyen bileşenleri kullanma](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
+- [Nasıl yapılır: Arka planda Işlem çalıştırma](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Nasıl yapılır: Arka plan Işlemi kullanan bir form uygulama](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

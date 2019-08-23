@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545308"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958555"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan uygulamalar ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevin çekirdeği, yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ve yazdırma yoludur.  
@@ -35,11 +35,11 @@ Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uyg
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>XPS yazdırma yolu  
- XML Kağıt Belirtimi (XPS) yazdırma yolu, yazdırmanın Windows uygulamalarında [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] nasıl işlendiğini tekrar tanımlayan yeni bir özelliktir. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Bir belge sunumu dilini (RTF gibi), bir yazdırma biriktiricisi biçimini (örneğin, WMF) ve bir sayfa açıklaması dilini (PCL veya PostScript gibi) değiştirebilir; yeni yazdırma yolu, XPS biçimini uygulama yayınından yazdırma sürücüsü veya cihazında son işleme.  
+ XML Kağıt Belirtimi (XPS) yazdırma yolu, yazdırmanın Windows uygulamalarında nasıl işlendiğini tekrar tanımlayan yeni bir Windows özelliğidir. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Bir belge sunumu dilini (RTF gibi), bir yazdırma biriktiricisi biçimini (örneğin, WMF) ve bir sayfa açıklaması dilini (PCL veya PostScript gibi) değiştirebilir; yeni yazdırma yolu, XPS biçimini uygulama yayınından yazdırma sürücüsü veya cihazında son işleme.  
   
  XPS yazdırma yolu, geliştirici, geliştirilmiş renk desteği ve önemli ölçüde iyileştirilmiş baskı performansı gibi [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] geliştiriciler için çeşitli avantajlar sunan XPS yazıcı sürücüsü modeli (XPSDrv) üzerine kurulmuştur. (XPSDrv hakkında daha fazla bilgi için bkz. [Windows Sürücü Seti belgeleri](/windows-hardware/drivers/).)  
   
- XPS belgelerinin yazdırma biriktiricisinin işlemi, Windows 'un önceki sürümlerindeki ile aynıdır. Ancak, mevcut GDI yazdırma yolunun yanı sıra XPS yazdırma yolunu destekleyecek şekilde geliştirilmiştir. Yeni yazdırma yolu yerel olarak bir XPS biriktirme dosyası kullanır. Önceki sürümleri [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] için yazılan Kullanıcı modu yazıcı sürücüleri çalışmaya devam ederken, XPS yazdırma yolunu kullanabilmeniz için bir XPS yazıcı sürücüsü (XPSDrv) gereklidir.  
+ XPS belgelerinin yazdırma biriktiricisinin işlemi, Windows 'un önceki sürümlerindeki ile aynıdır. Ancak, mevcut GDI yazdırma yolunun yanı sıra XPS yazdırma yolunu destekleyecek şekilde geliştirilmiştir. Yeni yazdırma yolu yerel olarak bir XPS biriktirme dosyası kullanır. Önceki Windows sürümleri için yazılan Kullanıcı modu yazıcı sürücüleri çalışmaya devam ederken, XPS yazdırma yolunu kullanabilmeniz için bir XPS yazıcı sürücüsü (XPSDrv) gereklidir.  
   
  XPS yazdırma yolunun avantajları önemlidir ve şunları içerir:  
   

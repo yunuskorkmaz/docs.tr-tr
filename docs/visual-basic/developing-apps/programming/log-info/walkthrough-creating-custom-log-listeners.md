@@ -1,113 +1,113 @@
 ---
-title: Özel günlük dinleyicileri (Visual Basic) oluşturma
+title: Özel günlük dinleyicileri oluşturma (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 90135074a4d34ea73743faffb2531305fcb326fb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965269"
 ---
-# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek yol: Özel günlük dinleyicileri (Visual Basic) oluşturma
-Bu kılavuzda, özel günlük dinleyiciyi oluşturun ve çıkışına dinleyecek şekilde yapılandırma gösterilmiştir `My.Application.Log` nesne.  
+# <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>İzlenecek yol: Özel günlük dinleyicileri oluşturma (Visual Basic)
+Bu izlenecek yol, özel bir günlük dinleyicisinin nasıl oluşturulacağını ve `My.Application.Log` nesnenin çıkışını dinlemek için nasıl yapılandırılacağını gösterir.  
   
 ## <a name="getting-started"></a>Başlarken  
- Günlük dinleyicileri devralmalıdır <xref:System.Diagnostics.TraceListener> sınıfı.  
+ Günlük dinleyicileri <xref:System.Diagnostics.TraceListener> sınıfından devralması gerekir.  
   
-#### <a name="to-create-the-listener"></a>Dinleyici oluşturmak için  
+#### <a name="to-create-the-listener"></a>Dinleyiciyi oluşturmak için  
   
-- Uygulamanızda adlı bir sınıf oluşturun `SimpleListener` öğesinden devralan <xref:System.Diagnostics.TraceListener>.  
+- Uygulamanızda öğesinden `SimpleListener` <xref:System.Diagnostics.TraceListener>devralan adlı bir sınıf oluşturun.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
-     <xref:System.Diagnostics.TraceListener.Write%2A> Ve <xref:System.Diagnostics.TraceListener.WriteLine%2A> taban sınıfı tarafından gerekli yöntemleri çağırmak `MsgBox` kendi girişlerini görüntülemek için.  
+     Temel sınıf <xref:System.Diagnostics.TraceListener.WriteLine%2A> için gereken `MsgBox` ve yöntemleri, girişini göstermek için çağırır. <xref:System.Diagnostics.TraceListener.Write%2A>  
   
-     <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliği uygulandığı <xref:System.Diagnostics.TraceListener.Write%2A> ve <xref:System.Diagnostics.TraceListener.WriteLine%2A> yöntemleri taban sınıf yöntemlerini özniteliklerinin eşleşen böylece. <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliği kod konak koruma eşitleme sunan belirlemek için kod çalıştıran konak sağlar.  
+     <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliği <xref:System.Diagnostics.TraceListener.Write%2A> ve yöntemlerine<xref:System.Diagnostics.TraceListener.WriteLine%2A> , özniteliklerinin temel sınıf yöntemleriyle eşleşecek şekilde uygulanır. <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliği kodu çalıştıran konağın, kodun konak koruma eşitlemesini gösterir olduğunu belirlemesini sağlar.  
   
     > [!NOTE]
-    >  <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliktir yönetilmeyen uygulamalar yalnızca ortak dil çalışma zamanı konak ve konak koruması, SQL Server gibi uygulama üzerinde etkili.  
+    > <xref:System.Security.Permissions.HostProtectionAttribute> Özniteliği yalnızca ortak dil çalışma zamanını barındıran yönetilmeyen uygulamalarda etkilidir ve SQL Server gibi konak korumasını uygular.  
   
- Emin olmak için `My.Application.Log` günlük dinleyicinize kullanan kesin günlük dinleyicinize içeren derlemenin adı.  
+ Günlük dinleyicinizi `My.Application.Log` kullandığından emin olmak için, günlük dinleyicinizi içeren derlemeyi kesin bir şekilde adlandırın.  
   
- Sonraki yordamda, günlük dinleyici kesin adlandırılmış bütünleştirilmiş kod oluşturmak için gerekli olan basit adımlarda sağlar. Daha fazla bilgi için [bkz](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Sonraki yordam, kesin adlandırılmış bir log-Listener derlemesi oluşturmak için bazı basit adımlar sağlar. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
-#### <a name="to-strongly-name-the-log-listener-assembly"></a>Dinleyici günlük derleme kesin adlandırmak için  
+#### <a name="to-strongly-name-the-log-listener-assembly"></a>Log dinleyicisi derlemesini kesin olarak adlandırmak için  
   
-1. Seçili bir projeyi **Çözüm Gezgini**. Üzerinde **proje** menüsünde seçin **özellikleri**.   
+1. **Çözüm Gezgini**' de bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' i seçin.   
   
-2. Tıklayın **imzalama** sekmesi.  
+2. **İmzalama** sekmesine tıklayın.  
   
-3. Seçin **derlemeyi imzalamayı** kutusu.  
+3. **Derlemeyi imzala** kutusunu seçin.  
   
-4. Seçin  **\<yeni >** gelen **bir tanımlayıcı ad anahtar dosyası seç** aşağı açılan listesi.  
+4. **Tanımlayıcı ad anahtar dosyası seçin** açılır listesinden  **\<yeni >** ' yi seçin.  
   
-     **Katı ad anahtarı oluştur** iletişim kutusu açılır.  
+     **Tanımlayıcı ad anahtarı oluştur** iletişim kutusu açılır.  
   
-5. Anahtar dosyasında için bir ad sağlayın **anahtar dosya adı** kutusu.  
+5. Anahtar dosya **adı** kutusuna anahtar dosyası için bir ad girin.  
   
-6. Bir parolayı girin **parola gir** ve **parolayı onayla** kutuları.  
+6. Parolayı **gir** ve **Parolayı Onayla** kutularına bir parola girin.  
   
 7. **Tamam**'ı tıklatın.  
   
-8. Uygulamayı yeniden oluşturun.  
+8. Uygulamayı yeniden derleyin.  
   
-## <a name="adding-the-listener"></a>Dinleyici ekleme  
- Derlemeyi tanımlayıcı bir ada sahip, güçlü dinleyicisinin adını belirlemek gereken şekilde `My.Application.Log` günlük dinleyicinize kullanır.  
+## <a name="adding-the-listener"></a>Dinleyiciyi ekleme  
+ Artık derlemenin tanımlayıcı bir adı olduğuna göre, günlük dinleyicinizi `My.Application.Log` kullanması için dinleyicinin tanımlayıcı adını belirlemeniz gerekir.  
   
- Kesin adlandırılmış tür biçimi aşağıdaki gibidir.  
+ Kesin adlandırılmış türün biçimi aşağıdaki gibidir.  
   
- \<tür adı >, \<derleme adı >, \<sürüm numarası >, \<kültür >, \<tanımlayıcı ad >  
+ \<tür adı >, \<derleme adı >, \<sürüm numarası >, \<Kültür >, \<tanımlayıcı ad >  
   
-#### <a name="to-determine-the-strong-name-of-the-listener"></a>Dinleyici güçlü adını belirlemek için  
+#### <a name="to-determine-the-strong-name-of-the-listener"></a>Dinleyicinin tanımlayıcı adını belirleme  
   
-- Aşağıdaki kod, kesin adlandırılmış tür adını belirlemek gösterilmektedir `SimpleListener`.  
+- Aşağıdaki kod, için `SimpleListener`kesin adlandırılmış tür adının nasıl belirleneceğini göstermektedir.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
-     Tür tanımlayıcı adı projenize bağlıdır.  
+     Türün tanımlayıcı adı projenize bağlıdır.  
   
- Tanımlayıcı ad ile dinleyiciye ekleyebilirsiniz `My.Application.Log` dinleyici günlük koleksiyonu.  
+ Tanımlayıcı adıyla, dinleyiciyi `My.Application.Log` log-Listener koleksiyonuna ekleyebilirsiniz.  
   
-#### <a name="to-add-the-listener-to-myapplicationlog"></a>My.Application.Log için dinleyici eklemek için  
+#### <a name="to-add-the-listener-to-myapplicationlog"></a>Dinleyiciyi My. Application. log dosyasına eklemek için  
   
-1. App.config dosyasında sağ **Çözüm Gezgini** ve **açık**.  
+1. **Çözüm Gezgini** App. config dosyasına sağ tıklayın ve **Aç**' ı seçin.  
   
      -veya-  
   
-     Bir app.config dosyası varsa:  
+     Bir App. config dosyası varsa:  
   
-    1. Üzerinde **proje** menüsünde seçin **Yeni Öğe Ekle**.  
+    1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.  
   
-    2. Gelen **Yeni Öğe Ekle** iletişim kutusunda **uygulama yapılandırma dosyası**.  
+    2. **Yeni öğe Ekle** Iletişim kutusundan **uygulama yapılandırma dosyası**' nı seçin.  
   
     3. **Ekle**'yi tıklatın.  
   
-2. Bulun `<listeners>` bölümünde `<source>` ile bölümünde `name` "DefaultSource bulunan", öznitelik `<sources>` bölümü. `<sources>` Bölümünde bulunan `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+2. Bölümünde yer `name` alan "DefaultSource"özniteliğinesahipbölümündebölümünübulun`<sources>`. `<listeners>` `<source>` Bölümü, bölümünde, üst düzey `<system.diagnostics>` `<configuration>` bölümünde bulunur. `<sources>`  
   
-3. Bu öğeye eklemek `<listeners>` bölümü:  
+3. Bu öğeyi `<listeners>` bölümüne ekleyin:  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4. Bulun `<sharedListeners>` bölümünde `<system.diagnostics>` bölümünde, üst düzey `<configuration>` bölümü.  
+4. Bölümünde, üst düzey `<system.diagnostics>` `<configuration>` bölümünde bölümünde bulunan bölümünübulun.`<sharedListeners>`  
   
-5. Bu öğe ekleyen `<sharedListeners>` bölümü:  
+5. Bu öğeyi `<sharedListeners>` bu bölüme ekleyin:  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
     ```  
   
-     Değiştirin `SimpleLogStrongName` dinleyici tanımlayıcı adı olarak.  
+     Değerini dinleyicinin tanımlayıcı adı `SimpleLogStrongName` olacak şekilde değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Uygulama Günlükleriyle Çalışma](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [Nasıl yapılır: Günlük özel durumları](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [Nasıl yapılır: Günlük iletileri yazma](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [İzlenecek yol: My.Application.Log günlüğünün bilgileri yazdığı yeri değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Nasıl yapılır: Yazma günlüğü Iletileri](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [İzlenecek yol: My. Application. log dosyası yazma bilgilerini değiştirme](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

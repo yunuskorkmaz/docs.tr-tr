@@ -1,41 +1,41 @@
 ---
-title: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
+title: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 3e1ae81b2871899e6efc4be4dfc7c62ed45a133a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6f25c2a6f06b56dcbb5ba7e63165d06ff77d9ca8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624346"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937370"
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: (Visual Basic) Visual Studio'da bir nesneyi kalıcı kılma
-Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasarım zamanında olsa da, çalışma zamanında girilen değerleri kaybedilir. Seri hale getirme, bir nesnenin veri değerleri depolamak ve bunları nesnesi örneği başlatıldığında almanıza imkan tanıyan örnekler arasında kalıcı hale getirmek için kullanabilirsiniz.  
+# <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)
+Tasarım zamanında bir nesnenin özelliklerini varsayılan değerlere ayarlayabilseniz de, nesne yok edildiğinde çalışma zamanında girilen tüm değerler kaybedilir. Nesneleri, değerleri depolamanızı ve nesnenin bir sonraki açılışında bunları almanızı sağlayan örnekler arasında bir nesnenin verilerini kalıcı hale getirmek için serileştirme kullanabilirsiniz.  
   
 > [!NOTE]
->  Visual Basic'te, bir ad veya sayı gibi basit verilerini depolamak için kullanabileceğiniz `My.Settings` nesne. Daha fazla bilgi için [My.Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+> Visual Basic, bir ad veya sayı gibi basit verileri depolamak için `My.Settings` nesnesini kullanabilirsiniz. Daha fazla bilgi için bkz [. My. Settings nesnesi](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
- Bu kılavuzda, basit bir oluşturacağınız `Loan` nesne ve verileri bir dosyaya kalıcı. Nesne yeniden oluşturduğunuzda dosyadan verileri ardından alır.  
-  
-> [!IMPORTANT]
->  Bu örnek, bir dosya zaten mevcut değilse yeni bir dosya oluşturur. Bir uygulama bir dosya oluşturmanız gerekiyorsa, bu uygulama gerekir `Create` klasörüne izni. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın yalnızca ihtiyacı `Write` izin, daha düşük bir izni. Mümkün olan yerlerde, dosyayı dağıtım sırasında oluşturmak ve yalnızca vermek için daha güvenli olan `Read` izinleri tek bir dosya (yerine bir klasörün izinlerini oluşturma). Ayrıca, kök klasöre veya Program dosyaları klasörüne kullanıcı klasörleri verileri yazmak amacıyla daha güvenlidir.  
+ Bu izlenecek yolda basit `Loan` bir nesne oluşturacak ve verilerini bir dosyaya sürdürmeye devam edersiniz. Daha sonra nesneyi yeniden oluşturduğunuzda dosyadaki verileri buradan alırsınız.  
   
 > [!IMPORTANT]
->  Bu örnek, bir ikili verileri depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.  
+> Bu örnek, dosya zaten yoksa yeni bir dosya oluşturur. Bir uygulamanın bir dosya oluşturması gerekiyorsa, bu uygulamanın klasör için `Create` izni olması gerekir. İzinler, erişim denetim listeleri kullanılarak ayarlanır. Dosya zaten varsa, uygulamanın daha az izne sahip yalnızca `Write` izne ihtiyacı vardır. Mümkün olduğunda, dağıtım sırasında dosyanın oluşturulması ve yalnızca tek bir dosyaya (bir klasör için izin `Read` oluşturmak yerine) izin verilmesi daha güvenlidir. Ayrıca, Kullanıcı klasörlerine veri yazmak, kök klasör veya Program Files klasöründen daha güvenlidir.  
+  
+> [!IMPORTANT]
+> Bu örnek, verileri bir ikili dosya halinde depolar. Bu biçimler, parolalar veya kredi kartı bilgileri gibi hassas veriler için kullanılmamalıdır.  
   
 > [!NOTE]
->  Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için tıklayın **içeri ve dışarı aktarma ayarları** üzerinde **Araçları** menüsü. Daha fazla bilgi için [Visual Studio IDE'yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza ve ürün sürümüne bağlı olarak Yardım menüsünde açıklanana göre farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' na tıklayın. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Kredi nesnesi oluşturma  
- İlk adım oluşturmaktır bir `Loan` sınıfı ve sınıfını kullanan bir test uygulaması.  
+ İlk adım, sınıfını kullanan bir `Loan` sınıf ve test uygulaması oluşturmaktır.  
   
 ### <a name="to-create-the-loan-class"></a>Kredi sınıfı oluşturmak için  
   
-1. Yeni bir sınıf kitaplığı projesi oluşturun ve "LoanClass" olarak adlandırın. Daha fazla bilgi için [projeler ve çözümler oluşturma](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Yeni bir sınıf kitaplığı projesi oluşturun ve "Kreclass" olarak adlandırın. Daha fazla bilgi için bkz. [çözüm ve proje oluşturma](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
   
-2. İçinde **Çözüm Gezgini**Class1 dosyası için kısayol menüsünü açın ve seçin **Yeniden Adlandır**. Dosyayı Yeniden Adlandır `Loan` ve ENTER tuşuna basın. Dosya yeniden adlandırılırken da yeniden adlandırmak sınıfa `Loan`.  
+2. **Çözüm Gezgini**, Class1 dosyası için kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin. Dosyayı olarak `Loan` yeniden adlandırın ve ENTER 'a basın. Dosyanın yeniden adlandırılması de sınıfı olarak `Loan`yeniden adlandırılacaktır.  
   
-3. Sınıfına aşağıdaki genel üyeleri Ekle:  
+3. Sınıfına aşağıdaki ortak üyeleri ekleyin:  
   
     ```vb  
     Public Class Loan  
@@ -73,25 +73,25 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
     End Class  
     ```  
   
- Ayrıca kullanan basit bir uygulama oluşturmanız gerekir `Loan` sınıfı.  
+ Ayrıca, `Loan` sınıfını kullanan basit bir uygulama da oluşturmanız gerekecektir.  
   
-### <a name="to-create-a-test-application"></a>Bir test uygulaması oluşturmak için  
+### <a name="to-create-a-test-application"></a>Test uygulaması oluşturmak için  
   
-1. Çözümünüz için bir Windows Forms uygulaması projesi eklemek için **dosya** menüsünde seçin **Ekle**,**yeni proje**.  
+1. Çözümünüze Windows Forms bir uygulama projesi eklemek için **Dosya** menüsünde **Ekle**,**Yeni proje**' yi seçin.  
   
-2. İçinde **Yeni Proje Ekle** iletişim kutusunda **Windows Forms uygulaması**girin `LoanApp` 'a tıklayın ve proje adı olarak **Tamam** iletişim kutusunu kapatmak için .  
+2. **Yeni Proje Ekle** iletişim kutusunda **uygulama Windows Forms**seçin ve projenin adı olarak girin `LoanApp` ve ardından iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-3. İçinde **Çözüm Gezgini**, LoanApp projesini seçin.  
+3. **Çözüm Gezgini**, kremi uygulama projesini seçin.  
   
-4. Üzerinde **proje** menüsünde seçin **başlangıç projesi olarak ayarla**.  
+4. **Proje** menüsünde **Başlangıç projesi olarak ayarla**' yı seçin.  
   
 5. Üzerinde **proje** menüsünde seçin **Başvuru Ekle**.  
   
-6. İçinde **Başvuru Ekle** iletişim kutusunda **projeleri** sekmesini ve ardından LoanClass projesini seçin.  
+6. **Başvuru Ekle** iletişim kutusunda, **Projeler** sekmesini seçin ve sonra ödünç sınıfı projesini seçin.  
   
 7. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.  
   
-8. Tasarımcıda dört ekleme <xref:System.Windows.Forms.TextBox> formu için denetimler.  
+8. Tasarımcıda, forma dört <xref:System.Windows.Forms.TextBox> denetim ekleyin.  
   
 9. Kod Düzenleyicisi'ne şu kodu ekleyin:  
   
@@ -106,7 +106,7 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
     End Sub  
     ```  
   
-10. İçin bir olay işleyicisi ekleme `PropertyChanged` olay formuna aşağıdaki kodu kullanarak:  
+10. Aşağıdaki kodu kullanarak forma olay işleyicisi `PropertyChanged` ekleyin:  
   
     ```vb  
     Public Sub CustomerPropertyChanged(  
@@ -118,27 +118,27 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
     End Sub  
     ```  
   
- Bu noktada, oluşturun ve uygulamayı çalıştırın. Varsayılan değerlerini Not `Loan` sınıfı metin kutularında görüntülenir. Faiz oranını değeri, 7.1 için 7.5 değiştirin ve ardından uygulamayı kapatın ve yeniden çalıştırın deneyin — değeri 7.5 varsayılana.  
+ Bu noktada, uygulamayı derleyip çalıştırabilirsiniz. `Loan` Sınıfın varsayılan değerlerinin metin kutularında göründüğünü unutmayın. 7,5 olan faiz oranı değerini 7,1 olarak değiştirmeyi deneyin ve sonra uygulamayı kapatıp yeniden çalıştırın. değer varsayılan olarak 7,5 ' ye döner.  
   
- Gerçek dünyada, uygulama her çalıştırıldığında düzenli aralıklarla ancak bu şart değildir faiz oranları değiştirin. Kullanıcının uygulamanın çalıştığı her saat faiz oranını güncelleştirme yapmak yerine, uygulama örnekleri arasında en son faiz oranını korumak iyidir. Sonraki adımda, yalnızca kredi sınıfı seri hale getirme ekleyerek bunu.  
+ Gerçek dünyada, faiz oranları düzenli aralıklarla değişir, ancak uygulama her çalıştırıldığında her zaman gerekli değildir. Uygulamanın her çalıştığında, kullanıcının faiz oranını güncelleştirmesini sağlamak yerine, uygulamanın örnekleri arasındaki en son faiz oranını korumak daha iyidir. Bir sonraki adımda, yalnızca kredi sınıfına serileştirme ekleyerek bunu yapacaksınız.  
   
-## <a name="using-serialization-to-persist-the-object"></a>Nesne kalıcı hale getirmek için serileştirme kullanma  
- Kredi sınıfı değerlerini kalıcı hale getirmek için önce sınıfıyla işaretlemelisiniz `Serializable` özniteliği.  
+## <a name="using-serialization-to-persist-the-object"></a>Nesneyi kalıcı hale getirmek için serileştirme kullanma  
+ Kredi sınıfının değerlerini kalıcı hale getirmek için, önce sınıfı `Serializable` özniteliğiyle işaretlemeniz gerekir.  
   
-### <a name="to-mark-a-class-as-serializable"></a>Bir sınıf seri hale getirilebilir olarak işaretlemek için  
+### <a name="to-mark-a-class-as-serializable"></a>Bir sınıfı seri hale getirilebilir olarak işaretlemek için  
   
-- Kredi sınıfı için sınıf bildirimi aşağıdaki gibi değiştirin:  
+- Kredi sınıfının sınıf bildirimini aşağıdaki gibi değiştirin:  
   
     ```vb  
     <Serializable()>  
     Public Class Loan  
     ```  
   
- `Serializable` Öznitelik derleyiciye sınıftaki her şeyi bir dosyaya kalıcı olmasını. Çünkü `PropertyChanged` olayı, bir Windows Form nesnesi tarafından işlenir, seri hale getirilemiyor. `NonSerialized` Özniteliği, kalıcı sınıf üyeleri işaretlemek için kullanılabilir.  
+ `Serializable` Özniteliği derleyiciye sınıftaki her şeyin bir dosyaya kalıcı olarak devam edebilir olduğunu söyler. Olay bir `PropertyChanged` Windows form nesnesi tarafından işlendiği için serileştirilemiyor. `NonSerialized` Özniteliği kalıcı olmaması gereken sınıf üyelerini işaretlemek için kullanılabilir.  
   
-### <a name="to-prevent-a-member-from-being-serialized"></a>Serileştirilmekte olan bir üye önlemek için  
+### <a name="to-prevent-a-member-from-being-serialized"></a>Bir üyenin serileştirilmesine engel olmak için  
   
-- Değişiklik bildirimi `PropertyChanged` aşağıdaki gibi olay:  
+- `PropertyChanged` Olay bildirimini aşağıdaki gibi değiştirin:  
   
     ```vb  
     <NonSerialized()>  
@@ -146,30 +146,30 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
       Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged  
     ```  
   
- Sonraki adım, LoanApp uygulamaya serileştirme kodu eklemektir. Sınıf seri hale getirmek ve bir dosyaya yazmak için kullanacağınız <xref:System.IO> ve <xref:System.Xml.Serialization> ad alanları. Tam nitelikli adlarını yazarak önlemek için gerekli sınıf kitaplıklarına başvurular ekleyebilirsiniz.  
+ Sonraki adım, ödünç uygulama uygulamasına serileştirme kodu eklemektir. Sınıfını seri hale getirmek ve bir dosyaya yazmak için, <xref:System.IO> ve <xref:System.Xml.Serialization> ad alanlarını kullanırsınız. Tam nitelikli adları yazmadan kaçınmak için, gerekli sınıf kitaplıklarına başvurular ekleyebilirsiniz.  
   
 ### <a name="to-add-references-to-namespaces"></a>Ad alanlarına başvurular eklemek için  
   
-- Üstüne aşağıdaki deyimleri ekleyin `Form1` sınıfı:  
+- Aşağıdaki deyimlerini `Form1` sınıfının üst kısmına ekleyin:  
   
     ```vb  
     Imports System.IO  
     Imports System.Runtime.Serialization.Formatters.Binary  
     ```  
   
-     Bu durumda, ikili biçimde nesneyi kaydetmek için bir ikili biçimlendirici kullanıyor.  
+     Bu durumda, nesneyi ikili bir biçimde kaydetmek için ikili bir biçimlendirici kullanıyorsunuz.  
   
- Sonraki adım, bir nesne oluşturulduğunda dosyasından nesnesi seri durumdan çıkarılacak kod eklemektir.  
+ Sonraki adım, nesne oluşturulduğunda nesnenin serisini kaldırmak için kod eklemektir.  
   
 ### <a name="to-deserialize-an-object"></a>Bir nesnenin serisini kaldırmak için  
   
-1. Bir sabit seri hale getirilmiş veri dosya adı için bir sınıf ekleyin.  
+1. Seri hale getirilen verilerin dosya adı için sınıfa bir sabit ekleyin.  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2. Kodda değişiklik `Form1_Load` aşağıdaki gibi olay yordam:  
+2. `Form1_Load` Olay yordamındaki kodu aşağıdaki gibi değiştirin:  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  
@@ -191,13 +191,13 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
     End Sub  
     ```  
   
-     Dosyanın var olduğundan ilk denetlemelidir unutmayın. Yoksa, oluşturun bir <xref:System.IO.Stream> ikili dosyayı okumak için sınıf ve <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> dosya çevirmek için sınıf. Ayrıca akış türünden kredi nesne türüne dönüştürmek gerekir.  
+     Önce dosyanın var olduğunu denetlemeniz gerektiğini unutmayın. Varsa, ikili dosyayı okumak için <xref:System.IO.Stream> bir sınıf ve dosyayı çevirecek bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> sınıf oluşturun. Akış türünden kredi nesne türüne de dönüştürmeniz gerekir.  
   
- Ardından metin kutusuna girilen verileri kaydetmek için kod ekleyin `Loan` sınıfı ve ardından sınıfı bir dosyaya serileştirmek gerekir.  
+ Sonra, metin kutularına `Loan` girilen verileri sınıfa kaydetmek için kod eklemeniz gerekir ve ardından sınıfı bir dosyaya serileştirilmelidir.  
   
-### <a name="to-save-the-data-and-serialize-the-class"></a>Verileri Kaydet ve sınıfı serileştirmek için  
+### <a name="to-save-the-data-and-serialize-the-class"></a>Verileri kaydetmek ve sınıfı seri hale getirmek için  
   
-- Aşağıdaki kodu ekleyin `Form1_FormClosing` olay yordam:  
+- `Form1_FormClosing` Olay yordamına aşağıdaki kodu ekleyin:  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  
@@ -213,9 +213,9 @@ Nesnesi yok edildiğinde, bir nesnenin özellikler varsayılan değerlere tasar�
     End Sub  
     ```  
   
- Bu noktada, yeniden derleyebilir ve uygulamayı çalıştırın. Başlangıçta, varsayılan değerleri metin kutularında görüntülenir. Deneyin değerleri değiştirmek ve dördüncü metin kutusuna bir ad girin. Uygulamayı kapatın ve yeniden çalıştırın. Yeni değerler artık metin kutularına göründüğüne dikkat edin.  
+ Bu noktada, uygulamayı derleyip çalıştırabilirsiniz. Başlangıçta, varsayılan değerler metin kutularında görünür. Değerleri değiştirmeyi deneyin ve dördüncü metin kutusuna bir ad girin. Uygulamayı kapatın ve sonra yeniden çalıştırın. Yeni değerlerin artık metin kutularında göründüğünü unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Seri hale getirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [Serileştirme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
 - [Visual Basic programlama kılavuzu](../../../../visual-basic/programming-guide/index.md)

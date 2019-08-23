@@ -9,24 +9,24 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 995aeca60d462c96f951411aff9fcb2c772169d1
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 47d6fe1d4c99adaf3313c87e0b3411049e3b2452
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489656"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933631"
 ---
 # <a name="net-framework-tools"></a>.NET Framework Araçları
 .NET Framework araçları, .NET Framework'ü hedefleyen uygulamaları ve bileşenleri oluşturmayı, dağıtmayı ve yönetmeyi kolaylaştırmayı sağlar.  
   
-Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile otomatik olarak yüklenir. Visual Studio'yu indirmek için şurayı ziyaret edin [Visual Studio indirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfası.
+Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile otomatik olarak yüklenir. Visual Studio 'yu indirmek için [Visual Studio İndirmeleri](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) sayfasını ziyaret edin.
   
  Derleme Önbelleği Görüntüleyicisi (Shfusion.dll) dışında komut satırından tüm araçları çalıştırabilirsiniz. Dosya Gezgini'nde Shfusion.dll'ye erişmeniz gerekir.  
   
- Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio için Geliştirici Komut İstemini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmeden araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Komut satırı araçlarını çalıştırmanın en iyi yolu, Visual Studio için Geliştirici Komut İstemini kullanmaktır. Bu yardımcı programlar, yükleme klasörüne gitmeden araçları kolayca çalıştırmanıza olanak sağlar. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
 > [!NOTE]
->  Bazı araçlar, 32-bit bilgisayarlar veya 64-bit bilgisayarlar için özeldir. Bilgisayarınız için aracın uygun sürümünü çalıştırdığınızdan emin olun.  
+> Bazı araçlar, 32-bit bilgisayarlar veya 64-bit bilgisayarlar için özeldir. Bilgisayarınız için aracın uygun sürümünü çalıştırdığınızdan emin olun.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
@@ -36,7 +36,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Bir ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Forms denetimine dönüştürür.  
   
  [Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. .NET Framework 4 ve sonraki sürümlerinde, bu araç kod erişim güvenliği (CAS) ilkesini etkilemez [ \<legacyCasPolicy > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) ayarlanır `true`. Daha fazla bilgi için [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+ Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. .NET Framework 4 ve sonrasında, bu araç, [ \<legacycaspolicy > öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) olarak `true`ayarlanmadığı takdirde kod erişim güvenliği (CAS) ilkesini etkilemez. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
   
  [Cert2spc.exe (Yazılım Yayımcısı Sertifika Test Aracı)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  Bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcıları Sertifikası (SPC) oluşturur. Bu araç yalnızca test içindir.  
@@ -45,7 +45,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Sertifikaları, sertifika güven listelerini (CTL) ve sertifika çağırma listelerini (CRL) yönetir.  
   
  [Clrver.exe (CLR Sürüm Aracı)](../../../docs/framework/tools/clrver-exe-clr-version-tool.md)  
- bilgisayarda ortak dil çalışma zamanı (CLR) yüklü tüm sürümlerini bildirir.  
+ bilgisayardaki ortak dil çalışma zamanının (CLR) yüklü tüm sürümlerini raporlar.  
   
  [CorFlags.exe (CorFlags Dönüştürme Aracı)](../../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)  
  Taşınabilir çalıştırılabilir (PE) görüntüsünün üstbilgisine ait CorFlags bölümünü yapılandırmanıza olanak sağlar.  
@@ -63,7 +63,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Ara dil (IL) kodunu içeren taşınabilir, çalıştırılabilir (PE) dosyayı alır ve IL Derleyicisi'ne (Ilasm.exe) girdi olmaya uygun bir metin dosyası oluşturur.  
   
  [Installutil.exe (Yükleme Aracı)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- Belirtilen bir derlemedeki yükleyici bileşenlerini yürüterek sunucu kaynaklarını yüklemenize ve kaldırmanıza olanak verir. (Alanındaki sınıflarla çalışır <xref:System.Configuration.Install> ad.) 
+ Belirtilen bir derlemedeki yükleyici bileşenlerini yürüterek sunucu kaynaklarını yüklemenize ve kaldırmanıza olanak verir. ( <xref:System.Configuration.Install> Ad alanındaki sınıflarla birlikte kullanılır.) 
   
  [Lc.exe (Lisans Derleyici)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
  Lisans bilgilerini içeren metin dosyalarını okur ve kaynak olarak bir ortak dil çalışma zamanı çalıştırılabilir dosyasının içinde katıştırılabilir bir .licenses dosyası oluşturur. 
@@ -99,7 +99,7 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Metin (.txt veya .restext) dosyalarını ve XML tabanlı kaynak biçimi (.resx) dosyalarını, bir çalışma zamanı ikili çalıştırılabilir dosyasına katıştırılabilen veya uydu derlemeleri haline getirilebilen ortak dil çalışma zamanı ikili (.resources) dosyalarına dönüştürür.  
   
  [SecAnnotate.exe (.NET Güvenlik Not Ekleyici Aracı)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
- Bir derlemeyi SecurityCritical ve SecuritySafeCritical bölümlerini tanımlar. Tanımlar `SecurityCritical` ve `SecuritySafeCritical` bölümlerini derleme.  
+ Bir derlemenin SecurityCritical ve Securitysafecritik bölümlerini tanımlar. Bir derlemenin `SecuritySafeCritical`vebölümlerinitanımlar. `SecurityCritical`  
   
  [SignTool.exe (İmza Aracı)](../../../docs/framework/tools/signtool-exe.md)  
  Dosyaları dijital olarak imzalar, dosyalardaki imzaları doğrular ve dosyalara zaman damgası ekler.  
@@ -123,14 +123,14 @@ Bu bölümde açıklanan .NET Framework Araçlarının çoğu Visual Studio ile 
  Bir COM tür kitaplığında bulunan tür tanımlarını bir ortak dil çalışma zamanı derlemesindeki eşdeğer tanımlara dönüştürür.  
   
  [Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- Derlenmiş bir .NET Framework derlemesinin hem Windows çalışma zamanı meta veri ve uygulama bilgilerini içeren .winmd dosyası olarak paketlenmiş bir Windows çalışma zamanı bileşeni içine bir .winmdobj dosyası olarak dışarı aktarır.  
+ . Winmdobj dosyası olarak derlenen bir .NET Framework derlemesini, hem Windows Çalışma Zamanı meta verileri hem de uygulama bilgilerini içeren bir. winmd dosyası olarak paketlenmiş Windows Çalışma Zamanı bir bileşene dışarı aktarır.  
   
  [Winres.exe (Windows Forms Kaynak Düzenleyici)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Windows Forms tarafından kullanılan kullanıcı arabirimi (UI) kaynaklarını (.resx veya .resources dosyaları) yerelleştirmenize yardımcı olur. Dizeleri çevirebilir ve ardından yerelleştirilmiş dizeleri içerecek şekilde denetimleri boyutlandırabilir, taşıyabilir ve gizleyebilirsiniz.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [WPF araçları](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
- İsXPS Conformance Aracı (isXPS.exe) ve profil oluşturma araçları performans gibi araçlar içerir.  
+ İsXPS uyumluluk aracı (ısxps. exe) ve performans profil oluşturma araçları gibi araçları içerir.  
   
  [Windows Communication Foundation Araçları](../../../docs/framework/wcf/tools.md)  
  Windows Communication Foundation (WCF) uygulamalarını oluşturmanızı, dağıtmanızı ve yönetmenizi kolaylaştıran araçlar içerir.

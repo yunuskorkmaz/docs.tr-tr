@@ -10,22 +10,22 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 32bcbab585c39be4a72150bf49820d4a16f1691f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968244"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Denetimleri Görsel Stilde İşleme
-.NET Framework, bunları destekleyen işletim sistemlerinde görsel stilleri kullanarak arabirimi (UI) öğeleri işleme denetimleri ve diğer Windows kullanıcı için destek sağlar. Bu konuda, işleme denetimler ve diğer kullanıcı Arabirimi öğeleri için .NET Framework desteği çeşitli düzeylerde işletim sisteminin geçerli görsel stil ile anlatılmaktadır.  
+.NET Framework, denetimleri ve diğer Windows Kullanıcı arabirimi (UI) öğelerini destekleyen işletim sistemlerinde görsel stilleri kullanarak işlemek için destek sağlar. Bu konuda, işletim sisteminin geçerli görsel stiliyle denetimleri ve diğer kullanıcı arabirimi öğelerini işlemek için .NET Framework çeşitli destek düzeyleri ele alınmaktadır.  
   
-## <a name="rendering-classes-for-common-controls"></a>Ortak denetimleri için işleme sınıfları  
- Bir denetim oluşturma kullanıcı arabirimi denetimi çizim ifade eder. <xref:System.Windows.Forms?displayProperty=nameWithType> Ad alanı sağlar <xref:System.Windows.Forms.ControlPaint> bazı yaygın işlemeye sınıfı Windows Forms denetimleri. Ancak, bu sınıf, tutarlı bir kullanıcı Arabirimi deneyimi çizim özel denetimleri görsel stilde uygulamalarında etkinleştirildiğinde sürdürülmesi zor zorlaştırabilir Klasik Windows stilde denetimler çizer.  
+## <a name="rendering-classes-for-common-controls"></a>Ortak denetimler için işleme sınıfları  
+ Denetim işleme, bir denetimin kullanıcı arabirimini çizmeyi ifade eder. Ad <xref:System.Windows.Forms?displayProperty=nameWithType> alanı, bazı <xref:System.Windows.Forms.ControlPaint> ortak Windows Forms denetimlerini işlemek için sınıfını sağlar. Ancak, bu sınıf klasik Windows stilinde denetimler çizer, bu da görsel stilleri etkinleştirilmiş uygulamalarda özel denetimleri çizerken tutarlı bir UI deneyiminin korunmasını zorlaştırır.  
   
- .NET Framework 2.0 sınıfları içeren <xref:System.Windows.Forms?displayProperty=nameWithType> parça ve durumlarını ortak denetimleri görsel stilde işleme ad alanı. Bu sınıfların her birini içeren `static` denetimi veya denetim bölümlerini işletim sisteminin geçerli görsel stil ile belirli bir durumunda çizmek için yöntemleri.  
+ 2,0 .NET Framework, görsel stillerle ortak denetimlerin <xref:System.Windows.Forms?displayProperty=nameWithType> parçalarını ve durumlarını işleyen ad alanındaki sınıfları içerir. Bu sınıfların her biri, `static` işletim sisteminin geçerli görsel stilinde denetim veya denetimin parçalarını belirli bir durumda çizme yöntemlerini içerir.  
   
- Bu sınıfların bazıları, görsel stilleri olmanıza bakılmaksızın ilgili denetim çizmek için tasarlanmıştır. Görsel stiller etkinleştirilirse, sınıf üyeleri görsel stilde ilgili denetim çizme; görsel stiller devre dışıysa, sınıf üyeleri Klasik Windows stili denetim çizer. Bu sınıfları şunlardır:  
+ Bu sınıflardan bazıları, görsel stillerin kullanılabilir olup olmamasına bakılmaksızın ilgili denetimi çizmek için tasarlanmıştır. Görsel stiller etkinse, sınıf üyeleri ilgili denetimi görsel stillerle çizecek. görsel stiller devre dışıysa, sınıf üyeleri denetimi klasik Windows stilinde çizecek. Bu sınıflar şunları içerir:  
   
 - <xref:System.Windows.Forms.ButtonRenderer>  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67348480"
   
 - <xref:System.Windows.Forms.RadioButtonRenderer>  
   
- Diğer sınıflar, yalnızca görsel stilleri kullanılabilir ve görsel stillerini devre dışı bırakılırsa, üyeleri bir özel durum oluşturur, ilgili denetim çizebilirsiniz. Bu sınıfları şunlardır:  
+ Diğer sınıflar yalnızca görsel stiller kullanılabilir olduğunda ilgili denetimi çizebilir ve görsel stiller devre dışıysa bu kişilerin üyeleri bir özel durum oluşturur. Bu sınıflar şunları içerir:  
   
 - <xref:System.Windows.Forms.ComboBoxRenderer>  
   
@@ -49,34 +49,34 @@ ms.locfileid: "67348480"
   
 - <xref:System.Windows.Forms.TrackBarRenderer>  
   
- Bir denetim çizmek için bu sınıflar kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Denetim işleme sınıfı kullanma](how-to-use-a-control-rendering-class.md).  
+ Bir denetim çizmek için bu sınıfları kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir denetim Işleme sınıfı](how-to-use-a-control-rendering-class.md)kullanın.  
   
-## <a name="visual-style-element-and-rendering-classes"></a>Görsel stilde öğe ve sınıfları oluşturma  
- <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Ad alanını çizmek ve herhangi bir denetim veya görsel stilleri tarafından desteklenen kullanıcı Arabirimi öğesi hakkında bilgi almak için kullanılan sınıfları içerir. Desteklenen denetimleri içeren bir işleme sınıf olmayan ortak denetimleri <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanı (önceki bölüme bakın), sekme denetimleri ve çubuk barınağı denetimleri gibi diğer denetimler yanı sıra. Desteklenen diğer kullanıcı Arabirimi öğeleri içeren bölümlerini **Başlat** menü, görev ve windows istemci olmayan alanın.  
+## <a name="visual-style-element-and-rendering-classes"></a>Görsel stil öğesi ve Işleme sınıfları  
+ Ad <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> alanı, görsel stiller tarafından desteklenen herhangi bir denetim veya UI öğesi hakkında bilgi eklemek ve bu bilgileri almak için kullanılabilecek sınıfları içerir. Desteklenen denetimler, <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanında (önceki bölüme bakın) bir işleme sınıfına sahip ortak denetimleri ve ayrıca sekme denetimleri ve yeniden çubuk denetimleri gibi diğer denetimleri içerir. Desteklenen diğer kullanıcı arabirimi öğeleri **Başlangıç** menüsünün parçalarını, görev çubuğunu ve Windows 'un istemci olmayan alanını içerir.  
   
- Ana sınıflarını <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>. <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> görsel stiller tarafından desteklenen tüm denetim veya kullanıcı arabirimi öğesi tanımlamak için bir foundation sınıftır. Ek olarak <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> kendisini <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> ad alanı, çok sayıda iç içe geçmiş sınıflar içerir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ile `static` döndüren özellikler bir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> her denetim, Denetim bölümü veya görsel tarafından desteklenen diğer kullanıcı Arabirimi öğesi durumu stilleri.  
+ <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Ad alanının ana sınıfları ve ' <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>dir <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> . <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>görsel stiller tarafından desteklenen herhangi bir denetimi veya Kullanıcı arabirimi öğesini tanımlamak için bir temel sınıftır. Bunun yanı sıra <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> , ad alanı, bir denetimin, denetim bölümünün veya görsel tarafından desteklenen diğer <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> Kullanıcı arabirimi öğesinin her durumu için bir döndüren özelliklerine <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> sahip `static` birçok iç içe sınıf içerir. <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> stillerde.  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> Çizim ve her biri hakkında bilgi almak için yöntemler sağlar <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> işletim sisteminin geçerli görsel stil tarafından tanımlanır. Varsayılan boyutunda, arka plan türü ve renk tanımları alınabilmesi için bir öğe hakkında bilgi içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> görsel stiller (UxTheme) API Windows Kabuğu bölümünden Windows Platform SDK'sının işlevselliğini sarmalar. Daha fazla bilgi için [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>, görüntülenen ve işletim sisteminin geçerli görsel stili tarafından tanımlanan <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> her biri hakkında bilgi alan bir yöntem sağlar. Bir öğe hakkında alınabilecek bilgiler, varsayılan boyutunu, arka plan türünü ve renk tanımlarını içerir. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>görsel stiller (UxTheme) API 'sinin işlevselliğini Windows platformu SDK 'sının Windows kabuğu bölümünden kaydırır. Daha fazla bilgi için bkz. [görsel stilleri etkinleştirme](/windows/desktop/controls/cookbook-overview).  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> ve <xref:System.Windows.Forms.VisualStyles.VisualStyleElement>, bkz: [nasıl yapılır: Bir görsel stilde öğe işleme](how-to-render-a-visual-style-element.md).  
+ [Ve <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> kullanmahakkındadahafazlabilgiiçinbkz<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>. nasıl yapılır: Bir görsel stil öğesi](how-to-render-a-visual-style-element.md)işle.  
   
 ## <a name="enabling-visual-styles"></a>Görsel stilleri etkinleştirme  
- .NET Framework sürüm 1.0 için yazılmış bir uygulama için görsel stilleri etkinleştirmek için programcılar ComCtl32.dll sürüm 6 veya sonraki denetimlerini çizmek için kullanılacak belirten bir uygulama bildirimi eklemeniz gerekir. .NET Framework sürüm 1.1 veya üzeri ile oluşturulan uygulamalar kullanabilir <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi <xref:System.Windows.Forms.Application> sınıfı.  
+ .NET Framework sürüm 1,0 için yazılmış bir uygulama için görsel stilleri etkinleştirmek üzere, programcılar, denetimleri çizmek için, ComCtl32. dll sürüm 6 veya üstünü belirten bir uygulama bildirimi içermelidir. .NET Framework sürüm 1,1 veya üzeri ile oluşturulan uygulamalar, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application> sınıfının yöntemini kullanabilir.  
   
-## <a name="checking-for-visual-styles-support"></a>Görsel stil desteğini denetleme  
- <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> Özelliği <xref:System.Windows.Forms.Application> sınıfı, geçerli uygulama denetimleri görsel stilde çizim olup olmadığını belirtir. Özel denetim boyama, değerini kontrol edebilirsiniz <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> denetiminiz ile veya olmadan görsel stilleri işlemeyeceğini belirlemek için. Aşağıdaki tablo için bulunması gereken dört koşulları listeler <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> döndürülecek `true`.  
+## <a name="checking-for-visual-styles-support"></a>Görsel stiller desteği denetleniyor  
+ <xref:System.Windows.Forms.Application> Sınıfının özelliği, geçerli uygulamanın görsel stillerle denetimleri <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> çizdiğini gösterir. Özel bir denetimi boyadığınızda, denetimini görsel stillerle mi yoksa, <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> yoksa görsel olarak mı işleneceğini öğrenmek için değerini kontrol edebilirsiniz. Aşağıdaki tabloda, dönmesi <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> `true`için olması gereken dört koşul listelenmektedir.  
   
 |Koşul|Notlar|  
 |---------------|-----------|  
-|İşletim sistemi görsel stillerini destekler.|Bu durum ayrıca doğrulamak için <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> özelliği <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> sınıfı.|  
-|Kullanıcı, işletim sisteminde görsel stilleri etkinleştirdi.|Bu durum ayrıca doğrulamak için <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> özelliği <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> sınıfı.|  
-|Görsel stiller uygulama içinde etkinleştirilir.|Görsel stiller etkinleştirilebilir bir uygulamada çağırarak <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi veya bir uygulamayı kullanarak o ComCtl32.dll sürüm 6 veya sonraki belirten bildirimi denetimlerini çizmek için kullanılacak.|  
-|Görsel stiller uygulama windows istemci alanını çizmek için kullanılıyor.|Bu durum ayrıca doğrulamak için <xref:System.Windows.Forms.Application.VisualStyleState%2A> özelliği <xref:System.Windows.Forms.Application> sınıfı ve değere sahip olduğundan emin olun <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled?displayProperty=nameWithType> veya <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled?displayProperty=nameWithType>.|  
+|İşletim sistemi görsel stilleri destekler.|Bu koşulu ayrı doğrulamak için <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsSupportedByOS%2A> <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> sınıfının özelliğini kullanın.|  
+|Kullanıcı, işletim sisteminde görsel stilleri etkinleştirdi.|Bu koşulu ayrı doğrulamak için <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation.IsEnabledByUser%2A> <xref:System.Windows.Forms.VisualStyles.VisualStyleInformation> sınıfının özelliğini kullanın.|  
+|Görsel stiller uygulamada etkinleştirilir.|Görsel stiller, <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> yöntemi çağırarak veya Comctl32. dll sürüm 6 veya sonraki bir sürümün denetimleri çizecek şekilde kullanılacağını belirten bir uygulama bildirimi kullanılarak etkinleştirilebilir.|  
+|Visual stilleri, uygulama pencerelerinin istemci alanını çizmek için kullanılır.|Bu koşulu <xref:System.Windows.Forms.Application.VisualStyleState%2A> ayrı doğrulamak için, <xref:System.Windows.Forms.Application> sınıfının özelliğini kullanın ve değerine <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAreaEnabled?displayProperty=nameWithType> <xref:System.Windows.Forms.VisualStyles.VisualStyleState.ClientAndNonClientAreasEnabled?displayProperty=nameWithType>sahip olduğunu doğrulayın.|  
   
- Ne zaman bir kullanıcı etkinleştirir görsel stillerini devre dışı bırakır veya anahtarları bir görsel stil diğerine belirlemek için denetlemek <xref:Microsoft.Win32.UserPreferenceCategory.VisualStyle?displayProperty=nameWithType> işleyicileri değerinde <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=nameWithType> veya <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> olayları.  
+ Bir kullanıcının görsel stilleri ne zaman etkinleştirceğini veya devre dışı bıraktığını veya bir görsel stilden diğerine geçiş yapmasını sağlamak için <xref:Microsoft.Win32.UserPreferenceCategory.VisualStyle?displayProperty=nameWithType> , <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging?displayProperty=nameWithType> veya <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged?displayProperty=nameWithType> olaylarına yönelik işleyicilerdeki değeri denetleyin.  
   
 > [!IMPORTANT]
->  Kullanmak istiyorsanız <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> kullanıcı etkinleştirir ya da görsel stilleri anahtarları bir denetim veya kullanıcı Arabirimi öğesi işlemek için bu işlerken yaptığınızdan emin olun <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> yerine olay <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> olay. Kullanırsanız, bir özel durum <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> sınıfı işlenirken <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
+> Kullanıcı görsel stilleri <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> etkinleştirerek <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> veya anahtar yaptığında bir denetim veya Kullanıcı arabirimi öğesini işlemek için kullanmak istiyorsanız <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> olay yerine olayı işlerken bunu yaptığınızdan emin olun. <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> İşlerken<xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>sınıfı kullanırsanız bir özel durum oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

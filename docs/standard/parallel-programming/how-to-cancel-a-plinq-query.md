@@ -11,44 +11,44 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bce6616d576263db7dce6cf7e52582ee3400d80d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638755"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962528"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Nasıl yapılır: PLINQ Sorgusunu İptal Etme
-Aşağıdaki örnekler, PLINQ sorgusunu iptal etme için iki yol gösterir. İlk örnek, çoğunlukla veri geçişini oluşan bir sorguyu iptal gösterilmektedir. İkinci örnek, hesaplama açısından pahalıdır bir kullanıcı işlevi içeren bir sorguyu iptal gösterilmektedir.  
+Aşağıdaki örneklerde PLıNQ sorgusunu iptal etmenin iki yolu gösterilmektedir. İlk örnek, çoğunlukla veri geçişi içeren bir sorgunun nasıl iptal edildiğini gösterir. İkinci örnek, hesaplama açısından pahalı olan bir Kullanıcı işlevi içeren bir sorgunun nasıl iptal edildiğini gösterir.  
   
 > [!NOTE]
->  "Yalnızca kendi kodum" etkin olduğunda, Visual Studio özel durum oluşturan satırda bölme ve "özel durum kullanıcı kodu tarafından işlenmemiş." diyen bir hata iletisini görüntüler Bu hata zararsızdır. Buradan devam etmek için F5 tuşuna basın ve aşağıdaki örneklerde gösterilen özel durum işleme davranışını bakın. Visual Studio'nun çalışmasının ilk hatada kesilmesini önlemek için yalnızca "Yalnızca kendi kodum" onay kutusunun işaretini kaldırın **Araçlar, Seçenekler, hata ayıklama, genel**.  
+> "Yalnızca kendi kodum" etkinleştirildiğinde, Visual Studio özel durumu oluşturan satıra kesilir ve "özel durum Kullanıcı kodu tarafından işlenmiyor" yazan bir hata mesajı görüntüler. Bu hata zararsız. F5 tuşuna basarak bu uygulamadan devam edebilir ve aşağıdaki örneklerde gösterilen özel durum işleme davranışına bakabilirsiniz. Visual Studio 'Nun ilk hatada kesilmesini engellemek için **Araçlar, Seçenekler, hata ayıklama, genel**altında "yalnızca kendi kodum" onay kutusunun işaretini kaldırmanız yeterlidir.  
 >   
->  Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+>  Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
  [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]  
   
- Tek bir PLINQ framework dönmez <xref:System.OperationCanceledException> içine bir <xref:System.AggregateException?displayProperty=nameWithType>; <xref:System.OperationCanceledException> ayrı bir catch bloğu içinde işlenmesi gerekir. Bir veya daha fazla kullanıcı temsilcileri bir OperationCanceledException(externalCT) oluşturursa (Dış kullanarak <xref:System.Threading.CancellationToken?displayProperty=nameWithType>) başka bir özel durum ve sorgu olarak tanımlandı, ancak `AsParallel().WithCancellation(externalCT)`, tek bir PLINQ verecek sonra <xref:System.OperationCanceledException> (externalCT) yerine <xref:System.AggregateException?displayProperty=nameWithType>. Bir kullanıcı temsilcisi ancak oluşturur bir <xref:System.OperationCanceledException>ve başka bir özel durum türü başka bir temsilci oluşturur ve ardından her iki özel durum halinde alınacak bir <xref:System.AggregateException>.  
+ PLINQ çerçevesi tek <xref:System.OperationCanceledException> bir <xref:System.AggregateException?displayProperty=nameWithType>içine değil; <xref:System.OperationCanceledException> ayrı bir catch bloğunda işlenmelidir. Bir veya daha fazla kullanıcı temsilcisi bir operationolaydexception (externalCT) oluşturursa (harici <xref:System.Threading.CancellationToken?displayProperty=nameWithType>), ancak başka bir özel durum yoksa ve sorgu olarak `AsParallel().WithCancellation(externalCT)`tanımlanmışsa, <xref:System.OperationCanceledException> PLINQ, <xref:System.AggregateException?displayProperty=nameWithType>. Ancak, bir kullanıcı temsilcisi bir <xref:System.OperationCanceledException>oluşturursa ve başka bir temsilci başka bir özel durum türü oluşturursa, her iki özel durum da bir <xref:System.AggregateException>öğesine alınacaktır.  
   
- İptal seçeneğiyle ilgili genel kılavuz aşağıdaki gibidir:  
+ İptal etme ile ilgili genel yönergeler aşağıdaki gibidir:  
   
-1. Kullanıcı Temsilcisi iptal gerçekleştirirseniz PLINQ dış hakkında bilgilendirmek <xref:System.Threading.CancellationToken> ve throw bir <xref:System.OperationCanceledException>(externalCT).  
+1. Kullanıcı temsilcisi iptali gerçekleştirmeniz durumunda, PLINQ ile dış <xref:System.Threading.CancellationToken> hakkında bilgilendirmeniz ve bir <xref:System.OperationCanceledException>(externalCT) oluşturması gerekir.  
   
-2. İptal gerçekleşirse ve başka bir özel durum oluşturulur, ardından, işleyeceğini bir <xref:System.OperationCanceledException> yerine <xref:System.AggregateException>.  
+2. İptal gerçekleşirse ve başka özel durumlar yoksa, bir <xref:System.OperationCanceledException> <xref:System.AggregateException>yerine öğesini işlemeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanıcı kodunda hesaplama açısından pahalı bir işlev olduğunda iptal nasıl ele alınacağını gösterir.  
+ Aşağıdaki örnek, Kullanıcı kodunda hesaplama maliyetli bir işleviniz olduğunda iptalin nasıl işleneceğini gösterir.  
   
  [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
  [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]  
   
- Kullanıcı kodunda iptal işlediğinizde kullanın gerekmez <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> sorgu tanımı içinde. Ancak, çünkü bunu yapmanızı öneririz <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> sorgu performansı üzerinde hiçbir etkisi yoktur ve sorgu işleçleri ve kullanıcı kod tarafından işlenecek iptal sağlar.  
+ Kullanıcı kodunda iptali işlerken, sorgu tanımında kullanmak <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> zorunda değilsiniz. Ancak bunu yapmanızı öneririz çünkü <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> sorgu performansını etkilemez ve İptalin sorgu işleçleri ve Kullanıcı kodunuz tarafından işlenmesini sağlar.  
   
- Sistem yanıt hızını emin olmak için İptal milisaniyelik başına bir kez etrafında kontrol etmenizi öneririz; Ancak, herhangi bir süre 10 milisaniyeden kadar kabul edilebilir kabul edilir. Bu sıklığı kodunuzun performansı üzerinde olumsuz bir etkiye sahip olmamalıdır.  
+ Sistem yanıt verme işlemini sağlamak için, her milisaniyenin etrafında iptali denetlemeniz önerilir; Ancak, 10 milisaniyeye kadar olan tüm süreleri kabul edilebilir kabul edilir. Bu sıklık kodunuzun performansı üzerinde olumsuz bir etkiye sahip olmamalıdır.  
   
- Bir numaralandırıcı, örneğin, kod, sorgu sonuçları üzerinde yineleme (For Each Visual Basic'te) foreach döngüsünün dışında keser sonra sorgu iptal edildi, ancak hiçbir özel durum.  
+ Bir Numaralandırıcı atıldığı zaman, örneğin, sorgu sonuçları üzerinde yineleme yapan bir foreach (Visual Basic for each) döngüsünde kod kesildiğinde sorgu iptal edilir, ancak hiçbir özel durum oluşturulmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

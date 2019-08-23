@@ -21,41 +21,41 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 23f3758527b787551ad83cbd4e19076b788c9dd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 40076b2ad6606b4c565bcd39dbeea9e55da47211
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649688"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963311"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic'de Mantıksal ve Bit Düzeyinde İşleçler
-Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boolean` sonucu. `And`, `Or`, `AndAlso`, `OrElse`, Ve `Xor` işleçleri *ikili* bunlar iki işlenenden tuttuğundan, while `Not` işleci *birli* tek bir işlenen aldığından. Bu işleçlerden bazıları, tam sayı değerleri üzerinde bit düzeyinde mantıksal işlemleri de yapabilirsiniz.  
+Mantıksal işleçler ifadeleri `Boolean` karşılaştırır ve bir `Boolean` sonuç döndürür. `And` ,`OrElse` ,,`Not` Ve işleçleri iki işlenen kullandığından, tek bir işlenen aldığı için işleç tekil olduğu için ikili bir dosyaysa. `Xor` `Or` `AndAlso` Bu işleçlerden bazıları, tam sayı değerlerinde bit düzeyinde mantıksal işlemler de gerçekleştirebilir.  
   
-## <a name="unary-logical-operator"></a>Birli mantıksal işleç  
- [Not işleci](../../../../visual-basic/language-reference/operators/not-operator.md) mantıksal gerçekleştirir *olumsuzlama* üzerinde bir `Boolean` ifade. Bu mantıksal tersidir işlenenin verir. İfade değerlendirme sonucu `True`, ardından `Not` döndürür `False`; ifadenin değerlendirdiği `False`, ardından `Not` döndürür `True`. Aşağıdaki örnek bunu göstermektedir.  
+## <a name="unary-logical-operator"></a>Birli mantıksal Işleç  
+ [Not işleci](../../../../visual-basic/language-reference/operators/not-operator.md) bir `Boolean` ifadede mantıksal *değilleme* gerçekleştirir. İşleneni, işleneninin mantıksal tersini verir. İfade `True`olarak değerlendirilirse `Not` `Not` , `False`, ifadesi olarak `False`değerlendirilirse, öğesinidöndürür.`True` Aşağıdaki örnek bunu göstermektedir.  
   
  [!code-vb[VbVbalrOperators#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#77)]  
   
-## <a name="binary-logical-operators"></a>İkili mantıksal işleçler  
- [And işlecini](../../../../visual-basic/language-reference/operators/and-operator.md) mantıksal gerçekleştirir *birlikte* iki `Boolean` ifadeler. Her iki ifade sonucunu verirse `True`, ardından `And` döndürür `True`. En az bir ifade değerlendirme sonucu `False`, ardından `And` döndürür `False`.  
+## <a name="binary-logical-operators"></a>İkili mantıksal Işleçler  
+ [And işleci](../../../../visual-basic/language-reference/operators/and-operator.md) iki `Boolean` ifade üzerinde mantıksal bir *birlikte* gerçekleştirir. Her iki ifade olarak `True`değerlendirilir `And` , öğesini döndürür `True`. Deyimlerden en az biri olarak `False`değerlendirilirse `And` , öğesini döndürür `False`.  
   
- [Veya işleci](../../../../visual-basic/language-reference/operators/or-operator.md) mantıksal gerçekleştirir *ayrım* veya *ekleme* iki `Boolean` ifadeler. Her iki ifade değerlendirilirse `True`, veya her ikisi de olarak değerlendirilmesi `True`, ardından `Or` döndürür `True`. Her iki ifade değerlendirilirse `True`, `Or` döndürür `False`.  
+ [OR işleci](../../../../visual-basic/language-reference/operators/or-operator.md) , mantıksal *ayırıcı* veya iki `Boolean` ifadeye *dahil* etme işlemini gerçekleştirir. İki ifade olarak `True`değerlendirilirse veya her ikisi de `Or` olarak `True`değerlendirilirse, öğesini döndürür `True`. Hiçbir ifadenin olarak `True`değerlendiriliyorsa, `Or` döndürür `False`.  
   
- [Xor işleci](../../../../visual-basic/language-reference/operators/xor-operator.md) mantıksal gerçekleştirir *dışlama* iki `Boolean` ifadeler. Tam olarak bir ifade değerlendirme sonucu `True`, iki değil, `Xor` döndürür `True`. Her iki ifade sonucunu verirse `True` veya her ikisi de olarak değerlendirilmesi `False`, `Xor` döndürür `False`.  
+ [Xor işleci](../../../../visual-basic/language-reference/operators/xor-operator.md) iki `Boolean` ifadeye mantıksal *dışlama* gerçekleştirir. Tam olarak bir ifade olarak değerlendirilir `True`, ancak `Xor` her ikisini de değil `True`, döndürür. Her iki ifade de olarak `True` değerlendirilir veya her ikisini `False`de `Xor` olarak `False`değerlendirir, döndürür.  
   
- Aşağıdaki örnekte gösterilmiştir `And`, `Or`, ve `Xor` işleçleri.  
+ Aşağıdaki örnekte `And`, `Or`, ve `Xor` işleçleri gösterilmektedir.  
   
  [!code-vb[VbVbalrOperators#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#78)]  
   
-## <a name="short-circuiting-logical-operations"></a>Kısa devre mantıksal işlemleri  
- [AndAlso işleci](../../../../visual-basic/language-reference/operators/andalso-operator.md) çok benzer `And` işleci, ayrıca mantıksal ve işlecini iki gerçekleştirdiği, `Boolean` ifadeler. İkisi arasındaki temel fark `AndAlso` sergiler *kısa devre* davranışı. İlk ifadesinde bir `AndAlso` ifadeyi hesaplar için `False`, sonra da nihai sonucu değiştirilemiyor çünkü ikinci ifade değerlendirilmez ve `AndAlso` döndürür `False`.  
+## <a name="short-circuiting-logical-operations"></a>Kısa devre mantıksal Işlemler yürütülüyor  
+ [AndAlso işleci](../../../../visual-basic/language-reference/operators/andalso-operator.md) , `And` işleçle çok benzerdir, bu da iki `Boolean` ifadeye de mantıksal bir işlem yapar. İkisi arasındaki temel fark, *kısa* devre uygulayan `AndAlso` davranışı gösteriyor. Bir `AndAlso` ifadedeki ilk ifade olarak değerlendirilirse, ikinci ifade `False`nihai sonucu değiştirmediği ve `AndAlso` döndürdüğü `False`için değerlendirilmez.  
   
- Benzer şekilde, [OrElse işleci](../../../../visual-basic/language-reference/operators/orelse-operator.md) kısa devre mantıksal veya işlecini iki gerçekleştirir `Boolean` ifadeler. İlk ifadesinde bir `OrElse` ifadeyi hesaplar için `True`, sonra da nihai sonucu değiştirilemiyor çünkü ikinci ifade değerlendirilmez ve `OrElse` döndürür `True`.  
+ Benzer şekilde, [OrElse işleci](../../../../visual-basic/language-reference/operators/orelse-operator.md) iki `Boolean` ifadeye kısa devre uygulayan mantıksal bir birleşim uygular. Bir `OrElse` ifadedeki ilk ifade olarak değerlendirilirse, ikinci ifade `True`nihai sonucu değiştirmediği ve `OrElse` döndürdüğü `True`için değerlendirilmez.  
   
-### <a name="short-circuiting-trade-offs"></a>Denge kısa devre  
- Kısa devre mantıksal işleminin sonucu değiştirilemez bir ifade değerlendirerek değil performansını iyileştirebilir. Ancak, bu ifade ek eylemler gerçekleştiriyorsa bu eylemlerin bir kısa devre atlar. Örneğin, ifade için bir çağrı içeriyorsa bir `Function` yordamı, yordam varsa ifade kısa devre yapılma ve herhangi ek bir kod içindeki çağrılmaz `Function` çalışmaz. Bu nedenle, işlev nadiren çalışabilir ve doğru bir şekilde test edilecek değil. Veya bir programın mantığı kodda bağımlı olabileceği `Function`.  
+### <a name="short-circuiting-trade-offs"></a>Kısa süreli bir denge  
+ Kısa devre uygulayan, mantıksal işlemin sonucunu değiştirebilecek bir ifadeyi değerlendirmeden performansı iyileştirebilir. Ancak, bu ifade ek eylemler gerçekleştirdiğinde, kısa devre uygulayan bu eylemleri atlar. Örneğin, ifade bir `Function` yordama çağrı içeriyorsa, ifade kısa devre dışı ise ve `Function` içinde yer alan ek kodlar çalıştırılsa, bu yordam çağrılmaz. Bu nedenle, işlev yalnızca belirli bir zaman çalışabilir ve doğru şekilde sınanmayabilir. Ya da program mantığı içindeki `Function`koda bağlı olabilirler.  
   
- Arasındaki fark aşağıdaki örnekte `And`, `Or`ve short-circuiting karşılıkları.  
+ Aşağıdaki örnek, `Or`, ve bunların kısa `And`devre dışı karşılıkları arasındaki farkı gösterir.  
   
  [!code-vb[VbVbalrOperators#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#81)]  
   
@@ -63,43 +63,43 @@ Mantıksal işleçler karşılaştırma `Boolean` ifadeleri ve dönüş bir `Boo
   
  [!code-vb[VbVbalrOperators#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#79)]  
   
- Unutmayın önceki örnekte, bazı önemli kod içinde `checkIfValid()` çağrı kısa devre yapılma olduğunda çalışmaz. İlk `If` deyim aramaları `checkIfValid()` olsa bile `12 > 45` döndürür `False`, çünkü `And` değil kısa devre oluşturur. İkinci `If` deyimi çağırmaz `checkIfValid()`, çünkü zaman `12 > 45` döndürür `False`, `AndAlso` short-circuits ikinci ifade. Üçüncü `If` deyim aramaları `checkIfValid()` olsa bile `12 < 45` döndürür `True`, çünkü `Or` değil kısa devre oluşturur. Dördüncü `If` deyimi çağırmaz `checkIfValid()`, çünkü zaman `12 < 45` döndürür `True`, `OrElse` short-circuits ikinci ifade.  
+ Yukarıdaki örnekte, çağrı kısa devre dışı olduğunda, içindeki `checkIfValid()` bazı önemli kodların çalıştırılmadığını unutmayın. `If` İlk ifade çağrı `checkIfValid()` yapmaz `12 > 45` ,`And`ancak kısa devre dışı değildir. `False` İkinci `If` deyim çağırmaz `checkIfValid()` ,çünkü`12 > 45` döndürür `False`, kısadevrelerikinciifadedir.`AndAlso` Kısa devre `If` olmadığından, `checkIfValid()` `12 < 45` Üçüncüifade`True`çağrıları döndürür. `Or` Dördüncü `If` deyim çağrı `checkIfValid()`yapmaz `12 < 45` ,çünkü`True`döndürür, kısadevrelerikinciifadedir.`OrElse`  
   
-## <a name="bitwise-operations"></a>Bit düzeyinde işlemler  
- Bit düzeyinde işlemler (taban 2) ikili biçimde iki tamsayı değerlerini değerlendirin. Bunlar, karşılık gelen konumlarda BITS karşılaştırın ve karşılaştırma üzerine dayalı değerler atayın. Aşağıdaki örnekte gösterilmiştir `And` işleci.  
+## <a name="bitwise-operations"></a>Bit düzeyinde Işlemler  
+ Bit düzeyinde işlemler ikili (taban 2) formda iki integral değeri değerlendirir. Bunlara karşılık gelen konumlarda bitleri karşılaştırırlar ve sonra karşılaştırmaya göre değerler atar. Aşağıdaki örnekte `And` işleç gösterilmektedir.  
   
  [!code-vb[VbVbalrConcepts#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConcepts/VB/Class1.vb#2)]  
   
- Yukarıdaki örnekte ayarlar `x` 1. Bu, aşağıdaki nedenlerden dolayı gerçekleşir:  
+ Önceki örnek değerini `x` 1 olarak ayarlar. Bu durum aşağıdaki nedenlerden dolayı gerçekleşir:  
   
-- Değerleri, ikili olarak kabul edilir:  
+- Değerler ikili olarak değerlendirilir:  
   
-     3. ikili biçimini 011 =  
+     3 ikili biçiminde 3 = 011  
   
-     5'te ikili biçimini 101 =  
+     5 ikili biçimi = 101  
   
-- `And` İşleci, ikili temsili bir ikili konum (bit) aynı anda karşılaştırır. Verilen konumda bitlerin her ikisi de 1, 1 sonuç o konuma yerleştirilir. Her iki bit 0 ise, 0 sonuç o konuma yerleştirilir. Önceki örnekte bu gibi işe:  
+- `And` İşleci, tek seferde bir ikili konum (bit) ikili gösterimlerini karşılaştırır. Belirli bir konumdaki bitlerin her ikisi de 1 ise, sonuçta bu konuma bir 1 konur. Her iki bit de 0 ise, sonuçta bu konuma 0 yerleştirilir. Yukarıdaki örnekte bu, aşağıdaki gibi çalışmaktadır:  
   
      011 (ikili biçimde 3)  
   
      101 (ikili biçimde 5)  
   
-     001 (ikili biçimde sonuç)  
+     001 (sonuç, ikili biçimde)  
   
-- Sonucun ondalık olarak kabul edilir. 001 değeri ikili 1, bu nedenle gösterimidir `x` = 1.  
+- Sonuç ondalık olarak değerlendirilir. 001 değeri 1, bu nedenle `x` = 1 ' in ikili gösterimidir.  
   
- Bit düzeyinde `Or` veya her ikisini karşılaştırılan bitleri 1 ise 1 sonuç bite atanır dışında işlemi benzer. `Xor` Karşılaştırılan BITS (hem değil) tam olarak birine 1 ise 1 sonuç bite atar. `Not` tek bir işlenen alan, imza biti dahil olmak üzere tüm bitleri tersine çevirir ve sonucu bu değeri atar. Yani için pozitif bir sayı, imzalı `Not` her zaman negatif bir değer döndürür ve negatif sayılar için `Not` her zaman bir pozitif veya sıfır değeri döndürür.  
+ Bit düzeyinde `Or` işlem benzerdir, ancak karşılaştırılan bitlerin biri veya her ikisi 1 ise sonuç bitine 1 atanır. `Xor`karşılaştırılan bitlerin (her ikisi de değil) tam olarak biri 1 ise, sonuç bitini 1 atar. `Not`tek bir işlenen alır ve işaret biti dahil olmak üzere tüm bitleri ters çevirir ve bu değeri sonuca atar. Bu, `Not` işaretli pozitif sayıların her zaman negatif bir değer döndüğü ve negatif `Not` sayıların her zaman pozitif veya sıfır değer döndürdüğü anlamına gelir.  
   
- `AndAlso` Ve `OrElse` işleçler bit düzeyinde işlemler desteklemez.  
+ `AndAlso` Ve`OrElse` işleçleri bit düzeyinde işlemleri desteklemez.  
   
 > [!NOTE]
->  Yalnızca integral türleri üzerinde bit düzeyinde işlemler gerçekleştirilebilir. Bit düzeyinde işlem devam etmeden önce kayan nokta değerleri integral türlerine dönüştürülmesi gerekir.  
+> Bit düzeyinde işlemler yalnızca integral türlerinde gerçekleştirilebilir. Bit düzeyinde işlemin devam edebilmesi için kayan nokta değerlerinin tamsayı türlerine dönüştürülmesi gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Boole İfadeleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
-- [Visual Basic'de aritmetik işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [Visual Basic'de Karşılaştırma işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Visual Basic'de birleştirme işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
+- [Visual Basic aritmetik Işleçler](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Visual Basic karşılaştırma Işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic birleştirme Işleçleri](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)
 - [İşleçlerin Etkili Bileşimi](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)

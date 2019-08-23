@@ -2,24 +2,24 @@
 title: 'Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00aa1bbde95c0636391f213f830fc67b2dedf459
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968797"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Nasıl yapılır: Meta Veri Değişimi Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
-Yeni bazı WCF hizmetlerinde geliştirme sonra bir komut dosyası veya Visual Basic 6.0 bir uygulamadan bu hizmetleri çağıran mümkün olmasını istediğiniz karar verebilirsiniz. Bir WCF istemcisi derleme oluşturma, derleme COM ile kaydetme, derlemeyi GAC'ye yüklemek ve ardından, Visual Basic kodundan başvuru COM türleri için bir yöntem olacaktır. Uygulamayı dağıtırken de WCF istemci bütünleştirilmiş kodu dağıtmak gerekecektir. Ardından, kullanıcı WCF istemci derleme COM ile kaydetme ve GAC'de yerleştirme sahip olur. WCF COM birlikte çalışma bir WCF istemcisi derleme üzerinde bağlı olmadan aynı hizmet çağrıları yapmanıza olanak sağlar. WCF bilinen adını bir meta veri değişimi (Mex) uç noktası türü ayıklamak için hizmet bilinen adı kullanan bir URI belirterek herhangi bir WCF Hizmeti (Visual Basic, VBScript, Visual Basic for Applications (VBA) ve benzeri) herhangi bir COM uyumlu dil çağırmanızı sağlar. hizmeti hakkında bilgi. Bu konu, bir Mex uç noktasını belirtir bir WCF bilinen adını kullanarak çalışmaya WCF başlama örneği çağırmak açıklar.  
+Bazı yeni WCF Hizmetleri geliştirdikten sonra, bu hizmetleri bir betikten veya Visual Basic 6,0 uygulamasından çağırabilmek istediğinize karar verebilirsiniz. Bir yöntem, bir WCF istemci derlemesi oluşturmak, derlemeyi COM 'a kaydetmek, derlemeyi GAC 'ye yüklemek ve ardından Visual Basic kodunuzda COM türlerine başvurmak olacaktır. Uygulamayı dağıttığınızda, WCF Istemci derlemesini de dağıtmanız gerekir. Daha sonra kullanıcının WCF istemci derlemesini COM 'a kaydetmesi ve GAC 'ye yerleştirmesini gerekecektir. WCF COM birlikte çalışması Ayrıca bir WCF istemci derlemesine bağlı olmadan aynı hizmet çağrılarını yapmanıza olanak sağlar. WCF bilinen adı, hizmet adının türü ayıklamak için kullandığı bir meta veri değişimi (MEX) uç noktası URI 'SI belirterek herhangi bir COM uyumlu dilden (Visual Basic, VBScript, Visual Basic for Applications (VBA) vb.) herhangi bir WCF hizmetini çağırmanızı sağlar hizmet hakkında bilgi. Bu konu, bir MEX uç noktası belirten bir WCF bilinen adı kullanılarak Başlarken WCF örneğinin nasıl çağrılacağını açıklar.  
   
 > [!NOTE]
->  WCF istemci derlemesi tarafından tanımlanan türler gerçekten hiçbir zaman örneği oluşturulur. Derleme yalnızca meta veriler için kullanılır.  
+> WCF istemci derlemesi tarafından tanımlanan türler aslında örneklenemez. Derleme yalnızca meta veriler için kullanılır.  
   
-### <a name="using-the-service-moniker-with-a-mex-address"></a>Bir Mex adresa ile hizmet bilinen adı kullanma  
+### <a name="using-the-service-moniker-with-a-mex-address"></a>Hizmet bilinen adını bir Mex adresiyle kullanma  
   
-1. Başlarken örneği oluşturmak ve kendi URL'sine göz atmak için Internet Explorer'ı kullanın (http://localhost/ServiceModelSamples/Service.svc) hizmetinin çalıştığından emin olmak için.  
+1. Başlangıç örneğini oluşturun ve Internet Explorer 'ı kullanarak URL 'ye gidin (http://localhost/ServiceModelSamples/Service.svc) hizmetin çalıştığından emin olmak için).  
   
-2. Visual Basic komut dosyası veya aşağıdaki kodu içeren bir Visual Basic uygulama oluşturun:  
+2. Aşağıdaki kodu içeren bir Visual Basic betiği veya Visual Basic uygulaması oluşturun:  
   
     ```  
     monString = "service:mexaddress=http://localhost/ServiceModelSamples/Service.svc/MEX"  
@@ -31,15 +31,15 @@ Yeni bazı WCF hizmetlerinde geliştirme sonra bir komut dosyası veya Visual Ba
     MsgBox calc.Add(3, 4)  
     ```  
   
-3. Visual Basic uygulama veya betik çalıştırın.  
+3. Visual Basic uygulamayı veya betiği çalıştırın.  
   
     > [!NOTE]
-    >  Aradığınız hizmet, hizmetten bulunan meta verileri okuyabilmesi bilinen ad için bir Mex uç noktasını açığa çıkarmalıdır. Daha fazla bilgi için [nasıl yapılır: Bir yapılandırma dosyası kullanarak bir hizmet için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+    > Çağırmak için kullandığınız hizmet, bilinen adın meta verileri hizmetten okuyabilmesi için bir MEX uç noktası kullanıma sunmalıdır. Daha fazla bilgi için [nasıl yapılır: Yapılandırma dosyası](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)kullanarak bir hizmet için meta verileri yayımlayın.  
   
     > [!NOTE]
-    >  Bilinen ad hatalı veya hizmet kullanılamıyor durumunda çağrısı `GetObject` "Geçersiz sözdizimi." belirten bir hata döndürür  Bu hata iletisini alırsanız kullandığınız ad doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
+    > Bilinen ad yanlış biçimlendirilmişse veya hizmet kullanılamıyorsa, çağrısı `GetObject` "geçersiz sözdizimi" belirten bir hata döndürür.  Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Communication Foundation Hizmeti bilinen adını kaydolmadan kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Nasıl yapılır: Windows Communication Foundation hizmet bilinen adını kayıt olmadan kullanma](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
 - [Nasıl yapılır: WSDL sözleşmeleriyle hizmet bilinen adı kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
