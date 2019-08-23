@@ -11,42 +11,42 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c49b3fcd5b50cc5b48497dcf97862e80b066ab46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491019"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957878"
 ---
 # <a name="sorted-collection-types"></a>Sıralanmış Koleksiyon Türleri
-<xref:System.Collections.SortedList?displayProperty=nameWithType> Sınıfı <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> genel bir sınıf ve <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> genel sınıf benzer <xref:System.Collections.Hashtable> sınıfı ve <xref:System.Collections.Generic.Dictionary%602> genel sınıf içeren uyguladıkları <xref:System.Collections.IDictionary> arabirimi ancak korumak, anahtara göre sıralama öğeleri sıralama ve O(1) ekleme ve alma karma tablosu özellik yoktur. Üç sınıfları yaygın olarak kullanılan çeşitli özellikler vardır:  
+<xref:System.Collections.Generic.Dictionary%602> <xref:System.Collections.IDictionary> Sınıfı, <xref:System.Collections.Hashtable>Genelsınıfı ve genel sınıfı, sınıfı ve genel sınıfı ile benzerdir, ancak bu, arabirimini uygularlar, ancak bunları korur <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> <xref:System.Collections.SortedList?displayProperty=nameWithType> <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> öğelere göre sıralama düzeninde olan öğeler, karma tablolarının O (1) ekleme ve alma özelliklerine sahip değildir. Üç sınıfta ortak olarak çeşitli özellikler vardır:  
   
-- Üç uygulama <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimi. İki genel sınıflar da uygulamak <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> genel arabirim.  
+- Üç sınıfın hepsi <xref:System.Collections.IDictionary?displayProperty=nameWithType> arabirimini uygular. İki genel sınıf Ayrıca <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> genel arabirimi de uygular.  
   
-- Her bir anahtar/değer çifti numaralandırma amacıyla öğesidir.  
+- Her öğe, sabit listesi amaçları için bir anahtar/değer çiftidir.  
   
     > [!NOTE]
-    >  Nongeneric <xref:System.Collections.SortedList> sınıfı döndürür <xref:System.Collections.DictionaryEntry> nesneleri numaralandırılan, dönüş iki genel türleri olsa da <xref:System.Collections.Generic.KeyValuePair%602> nesneleri.  
+    > Genel <xref:System.Collections.SortedList> olmayan sınıf, numaralandırıldığınızda nesneleri döndürür <xref:System.Collections.DictionaryEntry> , ancak iki genel tür nesneleri <xref:System.Collections.Generic.KeyValuePair%602> döndürebilir.  
   
-- Öğeleri göre sıralanır bir <xref:System.Collections.IComparer?displayProperty=nameWithType> uygulaması (nongeneric için <xref:System.Collections.SortedList>) veya bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> uygulama (için iki genel sınıflar).  
+- Öğeler bir <xref:System.Collections.IComparer?displayProperty=nameWithType> uygulamaya (genel <xref:System.Collections.SortedList>olmayan) veya bir <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> uygulamaya göre sıralanır (iki genel sınıf için).  
   
-- Her sınıf yalnızca anahtarlar veya değerler içeren koleksiyonları döndüren özellikler sağlar.  
+- Her sınıf yalnızca anahtarları veya yalnızca değerleri içeren koleksiyonlar döndüren özellikler sağlar.  
   
- Aşağıdaki tabloda iki sıralanmış sınıfları arasındaki farklar bazılarını listeler ve <xref:System.Collections.Generic.SortedDictionary%602> sınıfı.  
+ Aşağıdaki tabloda, iki sıralanmış liste sınıfı ve <xref:System.Collections.Generic.SortedDictionary%602> sınıfı arasındaki farklılıklar listelenmiştir.  
   
-|<xref:System.Collections.SortedList> Jenerik olmayan sınıf ve <xref:System.Collections.Generic.SortedList%602> genel sınıfı|<xref:System.Collections.Generic.SortedDictionary%602> Genel sınıf|  
+|<xref:System.Collections.SortedList>Genel olmayan sınıf ve <xref:System.Collections.Generic.SortedList%602> genel sınıf|<xref:System.Collections.Generic.SortedDictionary%602>Genel sınıf|  
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|Anahtarları ve değerleri döndüren özellikler dizine, verimli izin vererek dizine alma.|Dizinli alma yok.|  
-|Alma olan O (log `n`).|Alma olan O (log `n`).|  
-|Ekleme ve kaldırma olan genellikle O (`n`); ancak eklemedir O (log `n`) her öğe listesinin sonuna eklenir, böylece zaten kullanımda olmayan verileri, sıralama için. (Bu, bir yeniden boyutlandırma gerekli olmadığını varsayar.)|Ekleme ve kaldırma olan O (log `n`).|  
-|Daha az bellek kullanan bir <xref:System.Collections.Generic.SortedDictionary%602>.|Daha fazla bellek kullanan <xref:System.Collections.SortedList> jenerik olmayan sınıf ve <xref:System.Collections.Generic.SortedList%602> genel bir sınıf.|  
+|Anahtar ve değer döndüren özellikler dizine alınır ve bu özellik, etkin dizinli almaya izin verir.|Dizinli alma yok.|  
+|Alım O (günlük `n`).|Alım O (günlük `n`).|  
+|Ekleme ve kaldırma genellikle o (`n`) olur; ancak, ekleme işlemi zaten sıralama düzeninde olan veriler için O (günlük `n`), her öğe listenin sonuna eklenir. (Bu, bir yeniden boyutlandırmanın gerekli olmadığı varsayılır.)|Ekleme ve kaldırma O (günlük `n`).|  
+|, Bir <xref:System.Collections.Generic.SortedDictionary%602>değerinden daha az bellek kullanır.|Genel <xref:System.Collections.SortedList> olmayan sınıftan <xref:System.Collections.Generic.SortedList%602> ve genel sınıftan daha fazla bellek kullanır.|  
   
- Sıralı listeler veya aynı anda birden çok iş parçacığı tarafından erişilebilir olması gereken sözlükleri için türetilen bir sınıf için sıralama mantığı ekleyebilirsiniz <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.  
+ Birden çok iş parçacığından aynı anda erişilebilir olması gereken sıralanmış listeler veya sözlüklerde, ' den <xref:System.Collections.Concurrent.ConcurrentDictionary%602>türetilen bir sınıfa sıralama mantığı ekleyebilirsiniz.  
   
 > [!NOTE]
->  (Çalışan kimlik numarası içeren örnek çalışan kayıtları), kendi anahtarlarına içeren değerler için bazı özellikleri bir listesi ve bir sözlük özelliklerinden bazıları türeterek sahip anahtarlanmış koleksiyon oluşturabilirsiniz <xref:System.Collections.ObjectModel.KeyedCollection%602> genel sınıf.  
+> Kendi anahtarlarını (örneğin, bir çalışan kimlik numarası içeren çalışan kayıtları) içeren değerler için, bir listenin bazı özelliklerine ve genel 'ten türeterek bir sözlüğün bazı özelliklerine sahip bir anahtarlı koleksiyon oluşturabilirsiniz. <xref:System.Collections.ObjectModel.KeyedCollection%602> sınıfı.  
   
- .NET Framework 4 ile başlayarak <xref:System.Collections.Generic.SortedSet%601> sınıf verileri ekleme, silme ve aramalar sonra sıralanmış olarak tutar Self karşı bir ağaç sağlar. Bu sınıf ve <xref:System.Collections.Generic.HashSet%601> sınıfı uygulama <xref:System.Collections.Generic.ISet%601> arabirimi.  
+ .NET Framework 4 ' te başlayarak, <xref:System.Collections.Generic.SortedSet%601> sınıfı ekleme, silme ve aramalardan sonra verileri sıralanmış sırada tutan bir kendi kendine Dengeleme ağacı sağlar. Bu sınıf ve <xref:System.Collections.Generic.HashSet%601> sınıfı <xref:System.Collections.Generic.ISet%601> arabirimini uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

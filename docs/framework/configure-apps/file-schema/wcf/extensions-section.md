@@ -1,16 +1,16 @@
 ---
-title: <extensions> Bölüm
+title: <extensions>kısmı
 ms.date: 03/30/2017
 ms.assetid: 53a59fb6-dede-47ec-9384-b3c2e8f0c1fa
-ms.openlocfilehash: 0f77f621bbf9bbef00b206ef43a174f6f69364d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c8b5fe6eef1863ee3f02cb761a3aac61406e446
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673010"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918964"
 ---
-# <a name="extensions-section"></a>\<Uzantılar > bölümü
-Bu yapılandırma bölümü, kullanıcı tanımlı bağlamalar, davranışları ve diğer yönleri uzantıları oluşturmak kullanıcı olanak tanıyan uzantılar bir koleksiyonunu içerir.  
+# <a name="extensions-section"></a>\<uzantılar > bölümü
+Bu yapılandırma bölümü, kullanıcının Kullanıcı tanımlı bağlamalar, davranışlar ve diğer uzantıların diğer yönlerini oluşturmalarına olanak tanıyan bir uzantı koleksiyonu içerir.  
   
 \<system.ServiceModel>  
   
@@ -41,13 +41,13 @@ Bu yapılandırma bölümü, kullanıcı tanımlı bağlamalar, davranışları 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<behaviorExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|Bu bölüm, hizmet veya uç nokta davranışları özelleştirmek için kullanıcı etkinleştirme davranış uzantıları, belirttiğiniz alt öğeleri içerir.|  
-|[\<bindingElementExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|Bu bölümde bir makineden özel bağlama öğesinin kullanımını etkinleştirir veya uygulama yapılandırma dosyası.|  
-|[\<bindingExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|Bu bölümde, kullanıcının bağlamaları özelleştirme bağlama uzantıları, belirttiğiniz alt öğeleri içerir.|  
-|[\<endpointExtensions >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|Bu bölümde, standart uç noktaları kaydeder alt öğeleri içerir.|  
+|[\<behaviorExtensions >](behaviorextensions.md)|Bu bölüm, kullanıcının hizmet veya uç nokta davranışlarını özelleştirmesini sağlayan davranış uzantılarını belirten alt öğeleri içerir.|  
+|[\<bindingElementExtensions >](bindingelementextensions.md)|Bu bölüm, bir makineden ya da uygulama yapılandırma dosyasından özel bağlama öğesinin kullanımını sunar.|  
+|[\<bindingExtensions >](bindingextensions.md)|Bu bölüm, bağlama uzantıları belirten, kullanıcının bağlamaları özelleştirmesini sağlayan alt öğeleri içerir.|  
+|[\<endpointExtensions >](endpointextensions.md)|Bu bölüm, standart uç noktaları kaydeden alt öğeleri içerir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|Sistem.ServiceModel|Tüm WCF yapılandırma öğelerinin kök öğe.|
+|Sistem.ServiceModel|Tüm WCF yapılandırma öğelerinin kök öğesi.|

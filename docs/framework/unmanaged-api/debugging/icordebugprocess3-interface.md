@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ccc45482f691d9950c641ef126a657052a280e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05900f55885f8f3a4c470d6842c42d0fc3e0171e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987707"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957451"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 Arabirimi
 Özel hata ayıklayıcı bildirimlerini denetler.  
@@ -30,22 +30,22 @@ ms.locfileid: "61987707"
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[SetEnableCustomNotification Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Sağlar ve belirtilen türün özel hata ayıklayıcı bildirimlerini devre dışı bırakır.|  
+|[SetEnableCustomNotification Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Belirtilen türdeki özel hata ayıklayıcı bildirimlerini etkinleştir ve devre dışı bırakır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu arabirim, Icordebugprocess ve Icordebugprocess2 arabirimi mantıksal olarak genişletir.  
+ Bu arabirim, ICorDebugProcess ve ICorDebugProcess2 arabirimlerini mantıksal olarak genişletir.  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

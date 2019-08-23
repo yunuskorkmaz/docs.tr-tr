@@ -5,39 +5,39 @@ helpviewer_keywords:
 - BackgroundWorker component
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf6790172b7445ad154eead5d17f8efddd78ffee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952680"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Windows Forms Denetimlerinde Çoklu Kullanım
-Birçok uygulamada, uygulamanızın kullanıcı arabirimini (UI) daha hızlı yanıt veren başka bir iş parçacığı üzerinde harcanan zamanı ortadan kaldırır işlemleri gerçekleştirerek yapabilirsiniz. Araçlar kullanılabilir çoklu iş parçacığı kullanımı dahil olmak üzere, Windows Forms denetimleri <xref:System.Threading> ad alanı, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> yöntemi ve `BackgroundWorker` bileşeni.  
+Birçok uygulamada, başka bir iş parçacığı üzerinde zaman alan işlemler gerçekleştirerek Kullanıcı arabiriminizi (UI) daha hızlı hale getirebilirsiniz. <xref:System.Threading> Ad alanı `BackgroundWorker` , yöntem ve bileşen dahil Windows Forms denetimlerinizi çoklu iş parçacığı için kullanılabilir bir dizi araç vardır. <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>  
   
 > [!NOTE]
->  `BackgroundWorker` Bileşeni değiştirir ve işlevsellik ekler <xref:System.Threading> ad alanı ve <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> yöntemi; seçerseniz ancak bu geriye dönük uyumluluk ve gelecekte kullanım için korunur. Daha fazla bilgi için [BackgroundWorker bileşenine genel bakış](backgroundworker-component-overview.md).  
+> Bileşeni, <xref:System.Threading> ad alanına ve <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> yöntemine işlevsellik ekler ve bu ve yöntemi sağlar; ancak, bunlar, hem geri uyumluluk hem de gelecekte kullanılmak üzere korunur. `BackgroundWorker` Daha fazla bilgi için bkz. [BackgroundWorker Component Overview](backgroundworker-component-overview.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Windows Forms denetimlerine iş parçacığı güvenli aramalar yapın](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- Windows Forms denetimlerine iş parçacığı güvenli aramalar yapma gösterilmektedir.  
+ [Nasıl yapılır: Windows Forms denetimlerine Iş parçacığına güvenli çağrılar yapma](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ Windows Forms denetimlerine iş parçacığı güvenli çağrıların nasıl yapılacağını gösterir.  
   
- [Nasıl yapılır: Dosya aramak için bir arka plan iş parçacığı kullanma](how-to-use-a-background-thread-to-search-for-files.md)  
- Nasıl kullanılacağını gösterir <xref:System.Threading> ad alanı ve <xref:System.Windows.Forms.Control.BeginInvoke%2A> dosyaları zaman uyumsuz olarak aramak için yöntemi.  
+ [Nasıl yapılır: Dosya aramak için arka plan Iş parçacığı kullanma](how-to-use-a-background-thread-to-search-for-files.md)  
+ Zaman uyumsuz olarak dosya aramak <xref:System.Threading> için ad alanının <xref:System.Windows.Forms.Control.BeginInvoke%2A> ve yönteminin nasıl kullanılacağını gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ComponentModel.BackgroundWorker>  
- Zaman uyumsuz işlemleri için iş parçacığı kapsülleyen bir bileşen belgeler.  
+ Zaman uyumsuz işlemler için çalışan iş parçacığını kapsülleyen bir bileşeni belgeler.  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- Zaman uyumsuz ses yükleme konusunda belgelenmiştir.  
+ Bir sesin zaman uyumsuz olarak nasıl yükleneceğini belgeler.  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- Bir görüntüyü zaman uyumsuz olarak yükleme konusunda belgelenmiştir.  
+ Bir görüntünün zaman uyumsuz olarak nasıl yükleneceğini belgeler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md)  
- Uzun süren bir işlem ile yapma işlemi açıklanır <xref:System.ComponentModel.BackgroundWorker> bileşeni.  
+ [Nasıl yapılır: Arka planda Işlem çalıştırma](how-to-run-an-operation-in-the-background.md)  
+ <xref:System.ComponentModel.BackgroundWorker> Bileşeniyle zaman alan bir işlemin nasıl gerçekleştirileceğini gösterir.  
   
  [BackgroundWorker Bileşenine Genel Bakış](backgroundworker-component-overview.md)  
- Nasıl kullanılacağını açıklayan konuları sağlar <xref:System.ComponentModel.BackgroundWorker> zaman uyumsuz işlemler için bileşen.
+ <xref:System.ComponentModel.BackgroundWorker> Bileşeninin zaman uyumsuz işlemler için nasıl kullanılacağını betimleyen konuları sağlar.

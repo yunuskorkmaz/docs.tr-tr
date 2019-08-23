@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929899"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Yalıtılmış Depolama Aracı)
 Yalıtılmış Depolama aracı, geçerli kullanıcı için varolan tüm depoları listeler veya kaldırır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için Visual Studio (veya Windows 7'de Visual Studio komut istemi) için geliştirici Komut İstemi'ni kullanın. Daha fazla bilgi için [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
@@ -34,34 +34,34 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/ List**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
-|**/ MACHINE**|Makine deposunu seçer. Bu seçeneği kullanın **/list** veya **/remove** işlemin makine deposuna da uygulanacağını belirtmek için seçeneği.<br /><br /> .NET Framework 2.0'da yeni bir özelliktir|  
+|**/h** [**ELP**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/List**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
+|**/MACHINE**|Makine deposunu seçer. Eylemin Makine deposuna uygulanması gerektiğini belirtmek için bu seçeneği **/list** veya **/Remove** seçeneğiyle birlikte kullanın.<br /><br /> .NET Framework 2.0'da yeni bir özelliktir|  
 |**/quiet**|Sessiz mod kullanılacağını belirtir; yalnızca hata iletileri görünecek şekilde bilgilendirici çıktıyı engeller.|  
-|**/ Remove**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
-|**/ roaming**|Dolaşım deposunu seçer. Bu seçeneği kullanın **/list** veya **/remove** işlemin Dolaşım deposuna uygulanacağını belirtmek için Seçenekler.|  
+|**/Remove**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
+|**/dolaşım**|Dolaşım deposunu seçer. Eylemin dolaşım deposuna uygulanması gerektiğini belirtmek için bu seçeneği **/list** veya **/Remove** seçenekleriyle birlikte kullanın.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Herhangi bir seçenek belirtmeden Storeadm.exe'yi komut satırından çalıştırmak sözdizimini ve araç için seçenekleri görüntüler.  
   
- **/List** ve **/remove** seçenekleri genellikle kullanılan birer birer; iki veya daha fazla seçeneği belirtilmişse ancak bunlar komut satırında göründükleri sırayla gerçekleştirilir.  
+ **/List** ve **/Remove** seçenekleri genellikle tek seferde kullanılır; Ancak, iki veya daha fazla seçenek belirtilirse, komut satırında göründükleri sırada gerçekleştirilir.  
   
  Uygulamaların, bir kullanıcı için iki depodan birine veya makine deposuna kaydetme seçeneği vardır:  
   
-- Kullanıcı verileri dolaşımı kullanıcı için etkinleştirilmiş olsa dahi (Windows 2000 ve sonraki sürümlerde) Dolaşımda olmayacağı garantili bir konumda yerel depo yok.  
+- Kullanıcı için Kullanıcı veri dolaşımı etkin olsa bile yerel depo, dolaşımda olmayan (Windows 2000 ve üzeri) bir konumda bulunur.  
   
-- Dolaşım deposu, Dolaşımda olabilen bir konumda var, ancak Dolaşım kullanıcı Windows NT Yönetimi yoluyla etkinleştirilmişse yalnızca bunu yapabilirsiniz.  
+- Dolaşım deposu, dolaşımda bulunan bir konumda bulunur, ancak yalnızca Windows NT yönetimi aracılığıyla Kullanıcı için dolaşım etkinse bu işlemi yapabilirsiniz.  
   
 - Makine deposu bir makinedeki tüm kullanıcılar için ortaktır ve o makinede ortak bir dizin altında depolanır.  
   
     > [!NOTE]
-    >  Makine deposu .NET Framework sürüm 2.0'da yeni bir özelliktir.  
+    > Makine deposu .NET Framework sürüm 2.0'da yeni bir özelliktir.  
   
- Dolaşımın kullanıcı için etkinleştirilip etkinleştirilmediği Storeadm.exe'nin yönetimini etkilemez. Aracı hiçbir seçenek olmadan çalıştırmak yerel depoya tüm işlemleri uygular. Aracı ile çalışan **/ roaming** seçeneği, Dolaşımda olabilen depoya tüm işlemleri uygular. Aracı ile çalışan **/makine** seçeneği makine deposuna tüm işlemleri uygular.  
+ Dolaşımın kullanıcı için etkinleştirilip etkinleştirilmediği Storeadm.exe'nin yönetimini etkilemez. Aracı hiçbir seçenek olmadan çalıştırmak yerel depoya tüm işlemleri uygular. Aracı **/dolaşım** seçeneğiyle çalıştırmak, tüm işlemleri dolaşımda olan depoya uygular. Aracı **/MACHINE** seçeneğiyle çalıştırmak, tüm eylemleri Makine deposuna uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](../../../docs/framework/tools/index.md)
-- [Yalıtılmış Depolama](../../../docs/standard/io/isolated-storage.md)
+- [Yalıtılmış Depolama](../../standard/io/isolated-storage.md)
 - [Komut İstemleri](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

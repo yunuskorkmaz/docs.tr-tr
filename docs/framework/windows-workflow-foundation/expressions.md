@@ -2,12 +2,12 @@
 title: İfadeler-WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 092272db2f7979cf12917dfe35e116295db79bf3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 93d437ae6d20f5d31d80ef3a40f409c589ae084e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868891"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962413"
 ---
 # <a name="expressions"></a>İfadeler
 Windows Workflow Foundation (WF) ifadesi bir sonuç döndüren etkinliktür. Tüm ifade etkinlikleri, etkinliğin dönüş <xref:System.Activities.Activity%601>değeri olarak adlandırılan <xref:System.Activities.Activity%601.Result%2A> bir <xref:System.Activities.OutArgument> özelliği içeren öğesinden dolaylı olarak türetilir. [!INCLUDE[wf1](../../../includes/wf1-md.md)], ve gibi basit <xref:System.Activities.Expressions.VariableValue%601> <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> etkinliklerden tek iş akışı değişkenine erişim sağlayan ve gibi karmaşık etkinliklere ve bu teklif <xref:System.Activities.Expressions.VariableReference%601> sonucu oluşturmak için Visual Basic dilinin tam enine erişin. <xref:System.Activities.CodeActivity%601> Veya<xref:System.Activities.NativeActivity%601>' den türeterek ek ifade etkinlikleri oluşturulabilir.  
@@ -16,7 +16,7 @@ Windows Workflow Foundation (WF) ifadesi bir sonuç döndüren etkinliktür. Tü
  Workflow Designer, <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> <xref:Microsoft.CSharp.Activities.CSharpValue%601> C# Visual Basic projelerindeki tüm ifadeler ve iş akışı projelerindeki ifadeler için kullanır. <xref:Microsoft.CSharp.Activities.CSharpReference%601>  
   
 > [!NOTE]
->  .NET Framework 4,5 C# ' de iş akışı projelerindeki ifadeler için destek eklenmiştir. Daha fazla bilgi için bkz [ C# . ifadeler](csharp-expressions.md).  
+> .NET Framework 4,5 C# ' de iş akışı projelerindeki ifadeler için destek eklenmiştir. Daha fazla bilgi için bkz [ C# . ifadeler](csharp-expressions.md).  
   
  Tasarımcı tarafından üretilen iş akışları, aşağıdaki örnekte olduğu gibi, ifadelerin köşeli ayraç içinde göründüğü XAML 'ye kaydedilir.  
   

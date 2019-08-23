@@ -8,37 +8,37 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8864204ccdd1e860cc910dfe8baa2f25edfb2fcc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008934"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956978"
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Nasıl yapılır: CompositionTarget Kullanarak Çerçeve Aralığı Başına İşleme
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Animasyon altyapısı tabanlı çerçeve animasyon oluşturmak için birçok özellik sağlar. Ancak, uygulama senaryoları daha ayrıntılı işleme çerçeve başına temelinde denetime ihtiyacınız vardır. <xref:System.Windows.Media.CompositionTarget> Nesne üzerinde bir çerçeve başına geri alarak özel animasyon oluşturma olanağı sağlar.  
+Animasyon [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] altyapısı, çerçeve tabanlı animasyon oluşturmak için birçok özellik sağlar. Ancak, çerçeve başına işleme üzerinde daha ayrıntılı denetime ihtiyacınız olan uygulama senaryoları vardır. <xref:System.Windows.Media.CompositionTarget> Nesnesi, çerçeve başına geri çağırma temelinde özel animasyonlar oluşturma olanağı sağlar.  
   
- <xref:System.Windows.Media.CompositionTarget> Uygulamanız üzerinde çizilen uzaklaştırabilir temsil eden statik bir sınıftır. <xref:System.Windows.Media.CompositionTarget.Rendering> Olayı her zaman uygulamanın Sahne çizilir. İşleme kare hızı, saniye başına Sahne çizilme sayısıdır.  
+ <xref:System.Windows.Media.CompositionTarget>, uygulamanızın çizildiği görüntü yüzeyini temsil eden bir statik sınıftır. <xref:System.Windows.Media.CompositionTarget.Rendering> Olay, uygulamanın sahneyi her çizililişinde tetiklenir. İşleme çerçeve oranı, sahnenin saniye başına çizilme sayısıdır.  
   
 > [!NOTE]
->  İçin tam kod örneğini kullanarak <xref:System.Windows.Media.CompositionTarget>, bkz: [CompositionTarget örneğini kullanarak](https://go.microsoft.com/fwlink/?LinkID=160045).  
+> Kullanarak <xref:System.Windows.Media.CompositionTarget>tüm kod örnekleri için bkz. [kompozisyon, Oluşturucu örneğini kullanma](https://go.microsoft.com/fwlink/?LinkID=160045).  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Media.CompositionTarget.Rendering> Olayı tetikler sırasında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme. Aşağıdaki örnek, kayıt nasıl gösterir. bir <xref:System.EventHandler> temsilci statik olarak <xref:System.Windows.Media.CompositionTarget.Rendering> metodunda <xref:System.Windows.Media.CompositionTarget>.  
+ Olay, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işleme işlemi sırasında ateşlenir. <xref:System.Windows.Media.CompositionTarget.Rendering> Aşağıdaki örnek, üzerinde <xref:System.EventHandler> <xref:System.Windows.Media.CompositionTarget.Rendering> <xref:System.Windows.Media.CompositionTarget>statik metoda bir temsilciyi nasıl kaydedeceğinizi gösterir.  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget1](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget1)]
  [!code-vb[CompositionTargetSample#CompositionTarget1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget1)]  
   
- İşleme olay işleyicisi yönteminiz özel çizim içerik oluşturmak için kullanabilirsiniz. Bu olay işleyicisi yöntemi, çerçeve başına bir kez çağrılır. Her [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sıraladığında kalıcı işleme verileri arasında görsel ağaç oluşturma Sahne grafiği, olay işleyicisi yönteminiz için çağrılır. Değişiklikleri görsel ağacı oluşturma Sahne grafiğe güncelleştirmeleri zorlarsanız, ayrıca, olay işleyicisi yönteminiz olarak da anılır. Düzen hesaplandıktan sonra olay işleyicisi yönteminin çağrıldığını unutmayın. Ancak, bu düzen bir kez daha önce işleme hesaplanacağı anlamına gelir, olay işleyicisi yönteminiz düzenini değiştirebilirsiniz.  
+ İşleme olay işleyicisi yönteminizi özel çizim içeriği oluşturmak için kullanabilirsiniz. Bu olay işleyicisi yöntemi çerçeve başına bir kez çağırılır. Görsel ağaç içindeki kalıcı işleme verilerini kompozisyon sahne grafiğine göre her sıraladığındaolayişleyicisiyönteminizçağırılır.[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Ayrıca, görsel ağaçtaki değişiklikler kompozisyon sahneyi grafiğinde güncelleştirmelere zorlmaya zorlandıysanız olay işleyicisi yönteminiz de çağırılır. Olay işleyicisi yönteminizin düzen hesaplandıktan sonra çağrıldığını unutmayın. Bununla birlikte, olay işleyicisi yönteminizin düzeninde değişiklik yapabilirsiniz. Bu, düzenin işlemeden önce daha fazla hesaplanacaktır.  
   
- Aşağıdaki örnek nasıl sağlayabilirsiniz özel çizim gösterir bir <xref:System.Windows.Media.CompositionTarget> olay işleyicisi yöntemi. Bu durumda, arka plan rengini <xref:System.Windows.Controls.Canvas> fare koordinat konumuna göre bir renk değeri ile çizilir. İçinde fareyi hareket <xref:System.Windows.Controls.Canvas>, kendi arka plan rengi değişir. Ayrıca, geçerli geçen süresini ve işlenmiş çerçeve sayısı göre ortalama kare hızı hesaplanır.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Media.CompositionTarget> olay işleyicisi yönteminde nasıl özel çizim sağlayakullanabileceğinizi gösterir. Bu durumda, öğesinin <xref:System.Windows.Controls.Canvas> arka plan rengi, farenin koordinat konumuna göre bir renk değeri ile çizilir. Fareyi içinde <xref:System.Windows.Controls.Canvas>taşırsanız, arka plan rengi değişir. Ayrıca, ortalama kare hızı geçerli geçen süreye ve işlenen çerçevelerin toplam sayısına göre hesaplanır.  
   
  [!code-csharp[CompositionTargetSample#CompositionTarget2](~/samples/snippets/csharp/VS_Snippets_Wpf/CompositionTargetSample/CSharp/Window1.xaml.cs#compositiontarget2)]
  [!code-vb[CompositionTargetSample#CompositionTarget2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CompositionTargetSample/visualbasic/window1.xaml.vb#compositiontarget2)]  
   
- Özel çiziminize farklı hızlarda farklı bilgisayarlarda çalışan keşfedebilir. Kare hızı, özel çizim değil olmasıdır bağımsız. Çalıştırdığınız sistemin ve sistem, iş yüküne bağlı olarak <xref:System.Windows.Media.CompositionTarget.Rendering> olay saniye başına farklı sayıda çağrılır. Çalıştıran bir cihaz için performans ve grafik donanım özelliği belirleme hakkında bilgi için bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulaması, bakın [grafik işleme katmanları](../advanced/graphics-rendering-tiers.md).  
+ Özel çiziminizin farklı bilgisayarlarda farklı hızlarda çalıştığını fark edebilirsiniz. Bunun nedeni, özel çiziminizde kare hızına bağımsız değildir. Çalıştırdığınız sisteme ve bu sistemin iş yüküne bağlı olarak, <xref:System.Windows.Media.CompositionTarget.Rendering> olay saniyede farklı sayıda kez çağrılabilir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Uygulama çalıştıran bir cihazın grafik donanım özelliğini ve performansını belirleme hakkında bilgi için bkz. [grafik işleme katmanları](../advanced/graphics-rendering-tiers.md).  
   
- Ekleyerek veya kaldırarak bir işleme <xref:System.EventHandler> olayı tetiklenmekte olan sırada temsilci ertelenmesini kadar olay bittikten sonra geciktirilir. Bu nasıl ile tutarlıdır <xref:System.MulticastDelegate>-dayalı olayları, ortak dil çalışma zamanı (CLR) işlenir. Ayrıca, işleme olaylarının herhangi belirli bir sırada çağrılacak garanti edilmez unutmayın. Birden fazla varsa <xref:System.EventHandler> belirli bir sıraya üzerinde temsilciler tek bir kayıt işlemi <xref:System.Windows.Media.CompositionTarget.Rendering> olay ve çoğullamalısınız doğru temsilciler kendiniz düzenleyin.  
+ Olay başlatıldıktan sonra bir işleme <xref:System.EventHandler> temsilcisini ekleme veya kaldırma, olayın başlatılması bitinceye kadar gecikecek. Bu, ortak dil çalışma <xref:System.MulticastDelegate>zamanında (CLR), tabanlı olayların işlenme ile tutarlıdır. Ayrıca, işleme olaylarının belirli bir sırada çağrılması garanti edilmez. Belirli bir siparişi kullanan <xref:System.EventHandler> birden fazla temsilcileriniz varsa, tek <xref:System.Windows.Media.CompositionTarget.Rendering> bir olayı kaydetmeniz ve temsilcileri doğru sırada kendiniz de çoğullamalısınız.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

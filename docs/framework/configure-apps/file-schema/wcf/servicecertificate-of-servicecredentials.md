@@ -2,20 +2,20 @@
 title: <serviceCertificate> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36a228da262095bfe05d66c6d44ac73ba0ca401b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936310"
 ---
-# <a name="servicecertificate-of-servicecredentials"></a>\<serviceCertificate >, \<issuedTokenAuthentication >
-İstemcilere ileti güvenlik modunu kullanarak hizmet kimlik doğrulaması için kullanılan bir X.509 sertifikası belirtin.  
+# <a name="servicecertificate-of-servicecredentials"></a>\<\<ServiceCredentials > > ServiceCertificate
+Ileti güvenlik modunu kullanan istemcilere hizmetin kimliğini doğrulamak için kullanılacak bir X. 509.952 sertifikası belirtin.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
 \<serviceCertificate >  
   
@@ -35,10 +35,10 @@ ms.locfileid: "61670319"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`findValue`|X.509 sertifika deposunda aranacak değeri içeren bir dize. Özniteliğinde bulunan türü belirtilen X509FindType gereksinimlerini karşılaması gerekir. Varsayılan değer boş bir dizedir.|  
-|`storeLocation`|İstemcinin sunucu sertifikasını doğrulamak için kullandığı X.509 Sertifika deposunun konumunu belirtir. Geçerli değerler şunlardır:<br /><br /> -LocalMachine: yerel makineye atanmış sertifika deposu.<br />-CurrentUser: geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> LocalMachine varsayılandır.|  
-|`storeName`|Açılacak X.509 Sertifika deposunun adını belirtir. Geçerli değerler şunlardır:<br /><br /> -Adres Defteri: Diğer kullanıcılar için sertifika deposu.<br />-AuthRoot: Üçüncü taraf sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-CertificatAuthority: Ara Sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-İzin verilmedi: İptal edilen sertifikalar için sertifika deposu.<br />-My: Kişisel Sertifikalar için sertifika deposu.<br />-Kök: Güvenilen kök sertifika yetkilileri (CA'lar) için sertifika deposu.<br />-TrustedPeople: Doğrudan güvenilen kişiler ve kaynaklar için sertifika deposu.<br />-TrustedPublisher: Doğrudan Güvenilen Yayımcılar sertifika deposu.<br /><br /> Varsayılan değer benim.|  
-|`x509FindType`|Yürütülecek X.509 arama türünü tanımlar. Geçerli değerler şunlardır:<br /><br /> -FindByThumbprint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-   FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Bulunan tür `findValue` öznitelik belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> FindBySubjectDistinguishedName varsayılan değerdir.|  
+|`findValue`|X. 509.440 sertifika deposunda aranacak değeri içeren bir dize. Özniteliğinde yer alan türün belirtilen X509FindType gereksinimlerini karşılaması gerekir. Varsayılan değer boş bir dizedir.|  
+|`storeLocation`|İstemcinin sunucusunun sertifikasını doğrulamak için kullandığı X. 509.952 sertifika deposunun konumunu belirtir. Geçerli değerler şunlardır:<br /><br /> -LocalMachine: yerel makineye atanan sertifika depolama alanı.<br />-CurrentUser: geçerli kullanıcıya atanmış sertifika deposu.<br /><br /> Varsayılan değer LocalMachine 'dir.|  
+|`storeName`|Açılacak X. 509.440 sertifika deposunun adını belirtir. Geçerli değerler şunlardır:<br /><br /> -AddressBook: Diğer kullanıcılar için sertifika deposu.<br />-AuthRoot: Üçüncü taraf sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />-CertificatAuthority: Ara sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />Veril İptal edilen sertifikalar için sertifika deposu.<br />My Kişisel Sertifikalar için sertifika deposu.<br />Asıl Güvenilen kök sertifika yetkilileri (CA 'Lar) için sertifika deposu.<br />TrustedPeople Doğrudan güvenilen kişiler ve kaynaklar için sertifika deposu.<br />-TrustedPublisher: Doğrudan güvenilen yayımcılar için sertifika deposu.<br /><br /> Varsayılan My.|  
+|`x509FindType`|Yürütülecek X. 509.440 aramasının türünü tanımlar. Geçerli değerler şunlardır:<br /><br /> -Findbyparmak Izi<br />-FindBySubjectName<br />- FindBySubjectDistinguishedName<br />-FindByIssuerName<br />- FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />- FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> `findValue` Özniteliğinde yer alan türün belirtilen X509FindType gereksinimlerini karşılaması gerekir.<br /><br /> Varsayılan değer FindBySubjectDistinguishedName ' dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,12 +47,12 @@ ms.locfileid: "61670319"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet kimlik doğrulaması olarak kullanılacak kimlik bilgisini belirtir ve istemci kimlik bilgileri doğrulaması ilgili ayarları.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- İstemcilere ileti güvenlik modunu kullanarak hizmet kimlik doğrulaması için kullanılan bir X.509 sertifikasını belirtmek için bu öğeyi kullanırsınız. Ardından, düzenli aralıklarla yenilenmesi bir sertifika kullanıyorsanız, parmak izi değişecektir. Bu durumda, konu adı olarak kullanmak `x509FindType` sertifika ile aynı konu adı verilmesi için.  
+ Ileti güvenliği modunu kullanan istemcilere hizmetin kimliğini doğrulamak için kullanılacak bir X. 509.952 sertifikası belirtmek için bu öğeyi kullanın. Düzenli olarak yenilenen bir sertifika kullanıyorsanız, parmak izi değişir. Bu durumda, sertifika aynı konu adıyla yeniden verilmediğinden konu `x509FindType` adını olarak kullanın.  
   
- Öğe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
+ Öğesini kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Istemci kimlik bilgileri değerlerini](../../../wcf/how-to-specify-client-credential-values.md)belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -60,5 +60,5 @@ ms.locfileid: "61670319"
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ServiceCertificate%2A>
-- [Nasıl yapılır: İstemci kimlik bilgileri değerlerini belirtme](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Güvenlik Davranışları](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
+- [Nasıl yapılır: Istemci kimlik bilgileri değerlerini belirtme](../../../wcf/how-to-specify-client-credential-values.md)
+- [Güvenlik Davranışları](../../../wcf/feature-details/security-behaviors-in-wcf.md)

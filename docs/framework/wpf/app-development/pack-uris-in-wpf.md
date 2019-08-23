@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: f9ea4acfc7ba86d3424bb11af0de685651f99c61
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad928fb223ce22c65bb86a78c7d4cd006651a2d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950750"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF İçinde URI'leri Paketleme
 
@@ -85,7 +85,7 @@ Aşağıdaki bölümlerde, bu iki yetkilinin kaynak [!INCLUDE[TLA2#tla_uri#plura
 
 ## <a name="resource-file-pack-uris"></a>Kaynak dosya paketi URI 'Leri
 
-Kaynak dosyaları öğeler olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Resource` yapılandırılır ve derlemelere derlenir. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]yerel derlemeye derlenen ya da [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] yerel derlemeden başvurulan bir derlemeye derlenen kaynak dosyalarını tanımlamak için kullanılabilen paketin oluşturulmasını destekler.
+Kaynak dosyaları MSBuild `Resource` öğeleri olarak yapılandırılır ve derlemelere derlenir. WPF, yerel derlemeye derlenen ya da yerel derlemeden başvurulan bir derlemeye derlenen kaynak dosyalarını tanımlamak için kullanılabilen paket URI 'lerinin oluşturulmasını destekler.
 
 <a name="Local_Assembly_Resource_File"></a>
 
@@ -186,9 +186,9 @@ Aşağıdaki örnek, uygulamanın yürütülebilir dosyasının [!INCLUDE[TLA2#t
 
 ## <a name="page-files"></a>Sayfa dosyaları
 
-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]öğeler olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` yapılandırılan dosyalar, kaynak dosyalarla aynı şekilde derlemeler halinde derlenir. Sonuç olarak [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] , `Page` öğeler kaynak dosyaları paketi [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] kullanılarak tanımlanabilir.
+MSBuild `Page` öğeleri olarak yapılandırılmış XAML dosyaları, kaynak dosyalarla aynı şekilde derlemeler halinde derlenir. Sonuç olarak, `Page` MSBuild öğeleri, kaynak dosyaları için Pack URI 'leri kullanılarak tanımlanabilir.
 
-Genellikle öğe olarak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]yapılandırılandosyatürleri kököğesiolarakaşağıdakilerdenbirinesahiptir`Page` :
+Genellikle MSBuild [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `Page` öğeleri olarak yapılandırılan dosya türleri, kök öğesi olarak aşağıdakilerden birine sahiptir:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 

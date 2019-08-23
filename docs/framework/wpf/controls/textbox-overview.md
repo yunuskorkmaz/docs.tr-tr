@@ -5,65 +5,65 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46600fd1a3023a80d49fae6f020279be6131916a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951482"
 ---
 # <a name="textbox-overview"></a>TextBox Genel Bakışı
-<xref:System.Windows.Controls.TextBox> Sınıfı görüntülemek veya biçimlendirilmemiş metin düzenlemenize olanak sağlar. Yaygın bir <xref:System.Windows.Controls.TextBox> form biçimlendirilmemiş metin düzenleme. Örneğin, kullanıcının adı, telefon numarası için soran bir form vb. kullanırsınız <xref:System.Windows.Controls.TextBox> metin girişi denetimleri. Bu konu tanıtır <xref:System.Windows.Controls.TextBox> sınıfı ve her ikisinde de kullanma örnekleri sağlar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ve C#.  
+<xref:System.Windows.Controls.TextBox> Sınıfı biçimlendirilmemiş metni görüntülemenizi veya düzenlemenizi sağlar. Yaygın bir <xref:System.Windows.Controls.TextBox> kullanımı, biçimlendirilmemiş metnin bir formda düzenlenmesinden oluşur. Örneğin, kullanıcının adı, telefon numarası, vb. gibi bir form da metin girişi denetimlerini kullanır <xref:System.Windows.Controls.TextBox> . Bu konu <xref:System.Windows.Controls.TextBox> sınıfı tanıtır ve hem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] hem de içinde nasıl kullanılacağına ilişkin örnekler sağlar. C#  
 
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox veya RichTextBox?  
- Her ikisi de <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> metin girişi kullanıcıların ancak iki denetimleri farklı senaryolar için kullanılırlar. A <xref:System.Windows.Controls.TextBox> daha az sistem kaynağı gerektiren bir <xref:System.Windows.Controls.RichTextBox> yalnızca düz metin düzenlenecek gerektiğinde ideal, bu nedenle (yani, bir form kullanımı). A <xref:System.Windows.Controls.RichTextBox> kullanıcı biçimlendirilmiş metin, resimler, tablolar düzenlemek gerekli olan veya desteklenen diğer daha iyi bir seçenek içeriktir. Örneğin, bir belge, makale veya biçimlendirme, gerektiren blog düzenleme görüntüleri, vb., kullanarak en iyi şekilde gerçekleştirilir bir <xref:System.Windows.Controls.RichTextBox>. Aşağıdaki tabloda birincil özelliklerini özetler <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.TextBox>.  
+ Hem hem de <xref:System.Windows.Controls.TextBox> kullanıcıların metin girmesini sağlar,ancakikidenetimfarklısenaryolariçinkullanılır.<xref:System.Windows.Controls.RichTextBox> , Daha az sistem kaynağı <xref:System.Windows.Controls.RichTextBox> gerektirir,bunedenleyalnızcadüzmetindüzenlenmesigerektiğinde(örneğin,birformdakullanım)idealdir.<xref:System.Windows.Controls.TextBox> Kullanıcının <xref:System.Windows.Controls.RichTextBox> biçimlendirilen metin, resim, tablo veya desteklenen diğer içerikleri düzenlemesi gerektiğinde daha iyi bir seçenektir. Örneğin, bir <xref:System.Windows.Controls.RichTextBox>belge, makale veya blogın biçimlendirilmesi, resimler, vb. kullanarak en iyi şekilde yapılması önerilir. Aşağıdaki tablo, ve ' <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox>nin birincil özelliklerini özetler.  
   
-|Denetim|Gerçek zamanlı yazım denetimi|Bağlam Menüsü|Biçimlendirme komutları gibi <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B)|<xref:System.Windows.Documents.FlowDocument> görüntüleri, paragraf, tablolar vb. gibi içeriği.|  
+|Denetim|Gerçek zamanlı yazım denetimi|Bağlam Menüsü|Gibi <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> biçimlendirme komutları (Ctrl + B)|<xref:System.Windows.Documents.FlowDocument>görüntüler, paragraflar, tablolar vb. içerikler|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Evet|Evet|Hayır|Hayır.|  
-|<xref:System.Windows.Controls.RichTextBox>|Evet|Evet|Evet (bkz [RichTextBox Genel Bakış](richtextbox-overview.md))|Evet (bkz [RichTextBox Genel Bakış](richtextbox-overview.md))|  
+|<xref:System.Windows.Controls.RichTextBox>|Evet|Evet|Evet (bkz. [RichTextBox 'A genel bakış](richtextbox-overview.md))|Evet (bkz. [RichTextBox 'A genel bakış](richtextbox-overview.md))|  
   
 > [!NOTE]
->  Ancak <xref:System.Windows.Controls.TextBox> ilgili düzenleme biçimlendirme desteği komutları gibi mu <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (CTRL + B) birçok temel komutları gibi her iki denetim tarafından desteklenen <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Daha fazla bilgi edinmek için bkz. <xref:System.Windows.Documents.EditingCommands>.  
+> , <xref:System.Windows.Controls.TextBox> (CTR + B) gibi <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> ilişkili Düzenle komutlarının biçimlendirilmesini desteklemez, ancak gibi birçok temel komut, her iki denetim tarafından da <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>desteklenir. Daha fazla bilgi edinmek için bkz. <xref:System.Windows.Documents.EditingCommands>.  
   
- Tarafından desteklenen özellikler <xref:System.Windows.Controls.TextBox> aşağıdaki bölümlerde ele alınmıştır. Hakkında daha fazla bilgi için <xref:System.Windows.Controls.RichTextBox>, bkz: [RichTextBox Genel Bakış](richtextbox-overview.md).  
+ Tarafından <xref:System.Windows.Controls.TextBox> desteklenen özellikler aşağıdaki bölümlerde ele alınmıştır. Hakkında <xref:System.Windows.Controls.RichTextBox>daha fazla bilgi için bkz. [RichTextBox genel bakış](richtextbox-overview.md).  
   
 ### <a name="real-time-spellchecking"></a>Gerçek zamanlı yazım denetimi  
- Gerçek zamanlı yazım denetimini etkinleştirmek bir <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox>. Yazım denetimi etkinleştirildiğinde, (aşağıdaki resme bakın) yanlış yazılan sözcükleri altında kırmızı bir çizgi görünür.  
+ <xref:System.Windows.Controls.TextBox> Veya<xref:System.Windows.Controls.RichTextBox>' de gerçek zamanlı yazım denetimini etkinleştirebilirsiniz. Yazım denetimi açık olduğunda, yanlış yazılmış sözcüklerin altında kırmızı bir çizgi görünür (aşağıdaki resme bakın).  
   
- ![TextBox ile yazım&#45;denetimi](./media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
+ ![Yazım&#45;denetimi içeren metin kutusu](./media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
- Bkz: [metin düzenleme denetiminde yazım denetimini etkinleştirme](how-to-enable-spell-checking-in-a-text-editing-control.md) nasıl etkinleştirileceğini öğrenin.  
+ Yazım denetimini nasıl etkinleştireceğinizi öğrenmek için bkz. [metin düzenlemede yazım denetimini etkinleştirme](how-to-enable-spell-checking-in-a-text-editing-control.md) .  
   
 ### <a name="context-menu"></a>Bağlam Menüsü  
- Varsayılan olarak, her ikisi de <xref:System.Windows.Controls.TextBox> ve <xref:System.Windows.Controls.RichTextBox> sahip bir kullanıcı denetimi içinde tıklattığında görüntülenen bir bağlam menüsü. Bağlam menüsü kesme, kopyalama ve yapıştırma izin verir (aşağıdaki resme bakın).  
+ Varsayılan olarak, her <xref:System.Windows.Controls.TextBox> ikisi <xref:System.Windows.Controls.RichTextBox> de bir kullanıcı denetimin içine sağ tıkladığında görüntülenen bir bağlam menüsüne sahiptir. Bağlam menüsü, kullanıcının kesmesine, kopyalamasına veya yapıştırmaya izin verir (aşağıdaki resme bakın).  
   
- ![Metin kutusu bağlam menüsü ile](./media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")  
+ ![Bağlam menüsü olan TextBox](./media/editing-textbox-with-context-menu.png "Editing_TextBox_with_Context_Menu")  
   
- Varsayılan davranışı geçersiz kılmak için kendi özel bağlam menüsü oluşturabilirsiniz. Bkz: [TextBox ile özel bağlam menüsü kullanma](how-to-use-a-custom-context-menu-with-a-textbox.md) daha fazla bilgi için.  
+ Varsayılan davranışı geçersiz kılmak için kendi özel bağlam menüsünü oluşturabilirsiniz. Daha fazla bilgi için bkz. [TextBox Ile özel bağlam menüsü kullanma](how-to-use-a-custom-context-menu-with-a-textbox.md) .  
   
 <a name="creating_textboxes"></a>   
 ## <a name="creating-textboxes"></a>Metin kutuları oluşturma  
- A <xref:System.Windows.Controls.TextBox> tek satır yüksekliği olabilir veya birden çok satırı kapsayabilir. Tek bir satır <xref:System.Windows.Controls.TextBox> küçük miktardaki düz metin (girişleri için idealdir "Name", "Phone Number", bir formda vb.). Aşağıdaki örnek, tek bir satır oluşturma işlemi gösterilmektedir <xref:System.Windows.Controls.TextBox>.  
+ Bir <xref:System.Windows.Controls.TextBox> yükseklik veya birden çok satırı kapsayan tek bir satır olabilir. Tek bir satır <xref:System.Windows.Controls.TextBox> , küçük miktarlarda düz metin koymak için idealdir (ör. "Ad", "telefon numarası", vb. bir biçimde). Aşağıdaki örnek tek bir satırın <xref:System.Windows.Controls.TextBox>nasıl oluşturulacağını göstermektedir.  
   
  [!code-xaml[TextBoxMiscSnippets_snip#BasicTextBoxExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBoxMiscSnippets_snip/csharp/basictextboxexample.xaml#basictextboxexamplewholepage)]  
   
- Ayrıca oluşturabileceğiniz bir <xref:System.Windows.Controls.TextBox> çok satırlı metin girmesini sağlar. Örneğin, formunuza, kullanıcının biyografik taslak için istenirse, kullanmak isteyebilirsiniz bir <xref:System.Windows.Controls.TextBox> , birden çok metin satırı destekler. Aşağıdaki örnek nasıl kullanılacağını gösterir [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] tanımlamak için bir <xref:System.Windows.Controls.TextBox> birden çok metin satırı uyum sağlayacak şekilde otomatik olarak genişleyen bir denetim.  
+ Ayrıca, kullanıcının birden çok <xref:System.Windows.Controls.TextBox> satır metin girmelerini sağlayan bir de oluşturabilirsiniz. Örneğin, formunuz Kullanıcı için bir biyografik taslağı isteniyorsa, birden çok satırı destekleyen bir <xref:System.Windows.Controls.TextBox> kullanmak isteyebilirsiniz. Aşağıdaki örnek, metnin birden çok satırını [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kapsayacak şekilde otomatik <xref:System.Windows.Controls.TextBox> olarak genişleyen bir denetim tanımlamak için öğesinin nasıl kullanılacağını gösterir.  
   
  [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
- Ayarlama <xref:System.Windows.Controls.TextBox.TextWrapping%2A> özniteliğini `Wrap` yeni bir kaydırılmasına neden olur olduğunda satır kenarı <xref:System.Windows.Controls.TextBox> denetim ulaşıldığında, otomatik olarak <xref:System.Windows.Controls.TextBox> gerekirse yeni bir satır için yer içerecek şekilde denetim.  
+ Özniteliği, denetiminkenarına<xref:System.Windows.Controls.TextBox> ulaşıldığında metnin yeni bir satıra kaydırılmasına neden olacak şekilde `Wrap` ayarlandığında, gerekirse yeni bir satıra yer açmak için <xref:System.Windows.Controls.TextBox> denetimin otomatik olarak genişletilmesi gerekir. <xref:System.Windows.Controls.TextBox.TextWrapping%2A>  
   
- Ayarı <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A> özniteliğini `true` RETURN tuşuna basıldığında, bir kez daha otomatik olarak eklenmesi için yeni bir satır neden <xref:System.Windows.Controls.TextBox> gerekirse yeni bir satır için yer eklenecek.  
+ Özniteliği olarak `true` ayarlamak, dönüş tuşuna basıldığında yeni bir satırın eklenmesine bir <xref:System.Windows.Controls.TextBox> kez, gerekirse yeni bir satıra yer açmak için otomatik olarak genişleyen yeni bir satır eklenmesine neden olur. <xref:System.Windows.Controls.Primitives.TextBoxBase.AcceptsReturn%2A>  
   
- <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A> Özniteliği için bir kaydırma çubuğu ekler <xref:System.Windows.Controls.TextBox>, böylece içeriğini <xref:System.Windows.Controls.TextBox> değilse kaydırılabileceğini <xref:System.Windows.Controls.TextBox> veya kendisini kapsayan pencerenin boyutu genişletir.  
+ Özniteliği öğesine bir kaydırma çubuğu ekler. böylece, öğesinin <xref:System.Windows.Controls.TextBox> içeriğinin, kendisini kapsayan çerçeve veya pencere boyutundan daha fazla <xref:System.Windows.Controls.TextBox> genişliyorsa kaydırılabilmesini sağlar. <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Primitives.TextBoxBase.VerticalScrollBarVisibility%2A>  
   
- Kullanmayla ilişkili farklı görevler hakkında daha fazla bilgi için bir <xref:System.Windows.Controls.TextBox>, bkz: [nasıl-yapılır konularına](textbox-how-to-topics.md).  
+ Kullanımıyla <xref:System.Windows.Controls.TextBox>ilişkili farklı görevler hakkında daha fazla bilgi için bkz. [nasıl yapılır konuları](textbox-how-to-topics.md).  
   
 <a name="editing_commands"></a>   
-## <a name="detect-when-content-changes"></a>İçerik değişikliklerini Algıla  
- Genellikle <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> olay değiştiğinde algılamak için kullanılması gerekir metinde bir <xref:System.Windows.Controls.TextBox> veya <xref:System.Windows.Controls.RichTextBox> yerine, değişiklikleri <xref:System.Windows.UIElement.KeyDown> bekleyebileceğiniz gibi. Bkz: [algılamak, metni bir metin kutusu değişti](how-to-detect-when-text-in-a-textbox-has-changed.md) örneği.  
+## <a name="detect-when-content-changes"></a>Içeriğin ne zaman değiştiğini Algıla  
+ Genellikle olay, ne zaman bir <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.RichTextBox> veya bir değiştiğinde, bekleneceğiniz gibi,herseferindetespitetmekiçinkullanılmalıdır.<xref:System.Windows.UIElement.KeyDown> <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Örnek [olarak bir metin kutusundaki metnin değiştiğini Algıla](how-to-detect-when-text-in-a-textbox-has-changed.md) bölümüne bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

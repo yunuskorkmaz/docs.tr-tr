@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 448c212e4afe547dc6342b000fe06d5340db112c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818012"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958736"
 ---
 # <a name="application-management-overview"></a>Uygulama Yönetimine Genel Bakış
 Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bir işlev kümesini paylaşma eğilimindedir. Bu konu, <xref:System.Windows.Application> uygulama oluşturma ve yönetme sınıfındaki işlevlere genel bir bakış sağlar.  
@@ -74,7 +74,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
 - Arka plan kod içinde, sınıf, `partial` <xref:System.Windows.Application>biçimlendirme içindeki `x:Class` özniteliği tarafından belirtilen aynı ada sahip bir sınıf olmalıdır ve türevi olmalıdır. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda biçimlendirme dosyası için `partial` oluşturulan sınıfla ilişkilendirilmesini sağlar (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
->  Visual Studio kullanarak yeni bir WPF uygulama projesi veya WPF tarayıcı uygulaması projesi oluşturduğunuzda, varsayılan olarak bir uygulama tanımı dahil edilir ve hem biçimlendirme hem de arka plan kodu kullanılarak tanımlanır.  
+> Visual Studio kullanarak yeni bir WPF uygulama projesi veya WPF tarayıcı uygulaması projesi oluşturduğunuzda, varsayılan olarak bir uygulama tanımı dahil edilir ve hem biçimlendirme hem de arka plan kodu kullanılarak tanımlanır.  
   
  Bu kod, uygulama tanımı uygulamak için gereken en düşük gereksinimdir. Ancak, uygulamayı oluşturmadan ve çalıştırmadan önce uygulama tanımına ek bir MSBuild yapılandırması yapılması gerekir.  
   
@@ -148,7 +148,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  [!code-vb[AppShowWindowHardSnippets#StartupEventCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AppShowWindowHardSnippets/VisualBasic/Application.xaml.vb#startupeventcodebehind)]  
   
 > [!NOTE]
->  Tek başına <xref:System.Windows.Window> bir uygulamada örneği oluşturulan ilk, varsayılan olarak ana uygulama penceresi olur. Bu <xref:System.Windows.Window> nesneye <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> özelliği tarafından başvuruluyor. İlk örneği oluşturulmuş <xref:System.Windows.Window> olandan <xref:System.Windows.Application.MainWindow%2A> farklı bir pencere ana pencere olmalıdır özelliğinin değeri program aracılığıyla değiştirilebilir.  
+> Tek başına <xref:System.Windows.Window> bir uygulamada örneği oluşturulan ilk, varsayılan olarak ana uygulama penceresi olur. Bu <xref:System.Windows.Window> nesneye <xref:System.Windows.Application.MainWindow%2A?displayProperty=nameWithType> özelliği tarafından başvuruluyor. İlk örneği oluşturulmuş <xref:System.Windows.Window> olandan <xref:System.Windows.Application.MainWindow%2A> farklı bir pencere ana pencere olmalıdır özelliğinin değeri program aracılığıyla değiştirilebilir.  
   
  Bir XBAP ilk kez başladığında, büyük olasılıkla bir ' a <xref:System.Windows.Controls.Page>gidecektir. Bu, aşağıdaki kodda gösterilmiştir.  
   
@@ -170,7 +170,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Bu biçimlendirme, bir pencere açmak için önceki kodla aynı etkiye sahiptir.  
   
 > [!NOTE]
->  Gezinti hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
+> Gezinti hakkında daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
   
  Parametresiz bir <xref:System.Windows.Application.Startup> <xref:System.Windows.Window> Oluşturucu kullanarak örneğini oluşturmanız gerekiyorsa veya onu göstermeden önce özelliklerini ayarlamanız veya olaylarına abone olmanız ya da herhangi bir komut satırı bağımsız değişkenini işlemeniz gerekiyorsa, bunu açmak için olayı işlemeniz gerekir Bu, uygulama başlatıldığında sağlanmış.  
   
@@ -219,7 +219,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Ayrıca <xref:System.Windows.Window> , etkinleştirilebilir ve devre dışı bırakılabilir. Daha <xref:System.Windows.Window.Activated?displayProperty=nameWithType> fazla <xref:System.Windows.Window.Deactivated?displayProperty=nameWithType> bilgi için bkz. ve.  
   
 > [!NOTE]
->  XBAP <xref:System.Windows.Application.Activated?displayProperty=nameWithType> 'ler <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> için ne de oluşturulmaz.  
+> XBAP <xref:System.Windows.Application.Activated?displayProperty=nameWithType> 'ler <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> için ne de oluşturulmaz.  
   
 <a name="Application_Shutdown"></a>   
 ### <a name="application-shutdown"></a>Uygulama kapanıyor  
@@ -236,7 +236,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Uygulama kapatılmasını <xref:System.Windows.Application> yönetmenize yardımcı olmak için <xref:System.Windows.Application.Shutdown%2A> yöntemi, <xref:System.Windows.Application.ShutdownMode%2A> özelliği ve <xref:System.Windows.Application.SessionEnding> ve <xref:System.Windows.Application.Exit> olaylarını sağlar.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.Shutdown%2A>yalnızca, olan <xref:System.Security.Permissions.UIPermission>uygulamalardan çağrılabilir. Tek başına WPF uygulamaları her zaman bu izne sahiptir. Ancak, Internet bölgesi kısmi güven güvenlik korumalı alanı içinde çalışan XBAP 'ler değildir.  
+> <xref:System.Windows.Application.Shutdown%2A>yalnızca, olan <xref:System.Security.Permissions.UIPermission>uygulamalardan çağrılabilir. Tek başına WPF uygulamaları her zaman bu izne sahiptir. Ancak, Internet bölgesi kısmi güven güvenlik korumalı alanı içinde çalışan XBAP 'ler değildir.  
   
 #### <a name="shutdown-mode"></a>Kapalı modu  
  Çoğu uygulama, tüm pencereler kapandıktan ya da ana pencere kapatıldığında kapanır. Ancak, bazı durumlarda, uygulamaya özgü diğer koşullar bir uygulamanın ne zaman kapandığını tespit edebilir. <xref:System.Windows.Application.ShutdownMode%2A> Aşağıdaki<xref:System.Windows.ShutdownMode> sabit listesi değerlerinden biriyle, uygulamanız tarafından kapatılacak koşulları belirtebilirsiniz:  
@@ -254,7 +254,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Uygulamaya özgü kapatılma koşullarınız olduğunda, olarak <xref:System.Windows.Application.ShutdownMode%2A> <xref:System.Windows.ShutdownMode.OnExplicitShutdown>ayarlanır. Bu durumda, <xref:System.Windows.Application.Shutdown%2A> yöntemi açıkça çağırarak bir uygulamayı kapatmak sizin sorumluluğunuzdadır; Aksi takdirde, tüm pencereler kapansa bile uygulamanız çalışmaya devam edecektir. Ya da olduğunda örtük <xref:System.Windows.Application.ShutdownMode%2A>olarakçağırılır. <xref:System.Windows.ShutdownMode.OnLastWindowClose> <xref:System.Windows.Application.Shutdown%2A> <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
 > [!NOTE]
->  <xref:System.Windows.Application.ShutdownMode%2A>bir XBAP 'den ayarlanabilir ancak yok sayılır; bir XBAP, bir tarayıcıdan veya XBAP 'yi barındıran tarayıcı kapatıldığında her zaman kapanır. Daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
+> <xref:System.Windows.Application.ShutdownMode%2A>bir XBAP 'den ayarlanabilir ancak yok sayılır; bir XBAP, bir tarayıcıdan veya XBAP 'yi barındıran tarayıcı kapatıldığında her zaman kapanır. Daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
   
 #### <a name="session-ending"></a>Oturum sonlandırılıyor  
  <xref:System.Windows.Application.ShutdownMode%2A> Özelliği tarafından tanımlanan kapatılma koşulları bir uygulamaya özeldir. Ancak, bazı durumlarda, bir dış koşulun sonucu olarak bir uygulama kapatılabilir. En yaygın dış koşul, bir Kullanıcı Windows oturumunu aşağıdaki eylemler ile bitiyorsa oluşur:  
@@ -277,7 +277,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Bu örnekte, kod, Windows oturumunun nasıl <xref:System.Windows.SessionEndingCancelEventArgs.ReasonSessionEnding%2A> sona erdirmekte olduğunu belirlemek için özelliğini inceler. Kullanıcıya bir onay iletisi göstermek için bu değeri kullanır. Kullanıcı oturumun bitmesini istemiyor, Windows oturumunun bitmesini engellemek için kod kümesi olarak <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> `true` ayarlanır.  
   
 > [!NOTE]
->  <xref:System.Windows.Application.SessionEnding>XBAP 'ler için çıkarılmadı.
+> <xref:System.Windows.Application.SessionEnding>XBAP 'ler için çıkarılmadı.
 
 #### <a name="exit"></a>Çık  
  Bir uygulama kapandığında, kalıcı uygulama durumu gibi bazı son işlemler gerçekleştirmek gerekebilir. Bu durumlar için olay işleyicisi aşağıdaki örnekte <xref:System.Windows.Application.Exit> `App_Exit` olduğu gibi olayını işleyebilirsiniz. *App. xaml* dosyasında bir olay işleyicisi olarak tanımlanır. Uygulaması *app.xaml.cs* ve *Application. xaml. vb* dosyalarında vurgulanır.
@@ -301,7 +301,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Uygulamalar, genellikle bir kullanıcı isteğine yanıt olarak işletim sistemi tarafından başlatılır. Ancak, bir uygulama belirli bir görevi gerçekleştirmek için başka bir uygulama tarafından başlatılabilir. Başlatılan uygulama kapandığında, başlatılan uygulama, başlatılmış uygulamanın hangi koşullarda kapandığını bilmesini isteyebilir. Bu durumlarda, Windows, uygulamaların kapatılırken bir uygulama çıkış kodu döndürmesini sağlar. WPF uygulamaları varsayılan olarak 0 çıkış kodu değeri döndürür.  
   
 > [!NOTE]
->  Visual Studio 'da hata ayıklarken uygulama çıkış kodu, uygulama kapandığında **Çıkış** penceresinde görüntülenir ve aşağıdakine benzer bir ileti gönderilir:  
+> Visual Studio 'da hata ayıklarken uygulama çıkış kodu, uygulama kapandığında **Çıkış** penceresinde görüntülenir ve aşağıdakine benzer bir ileti gönderilir:  
 >   
 >  `The program '[5340] AWPFApp.vshost.exe: Managed' has exited with code 0 (0x0).`  
 >   
@@ -315,7 +315,7 @@ Tüm uygulamalar, uygulama uygulaması ve yönetimi için geçerli olan ortak bi
  Çıkış kodunun değerini tespit edebilir ve <xref:System.Windows.Application.Exit> olayı işleyerek değiştirebilirsiniz. Olay işleyicisi, <xref:System.Windows.ExitEventArgs.ApplicationExitCode%2A> özelliği ile çıkış <xref:System.Windows.ExitEventArgs> koduna erişim sağlayan bir öğesine geçirilir. <xref:System.Windows.Application.Exit> Daha fazla bilgi için bkz. <xref:System.Windows.Application.Exit>.  
   
 > [!NOTE]
->  Çıkış kodunu hem tek başına uygulamalarda hem de XBAP 'lerde ayarlayabilirsiniz. Ancak, XBAP 'ler için çıkış kodu değeri yok sayılır.  
+> Çıkış kodunu hem tek başına uygulamalarda hem de XBAP 'lerde ayarlayabilirsiniz. Ancak, XBAP 'ler için çıkış kodu değeri yok sayılır.  
   
 <a name="Unhandled_Exceptions"></a>   
 ### <a name="unhandled-exceptions"></a>İşlenmemiş özel durumlar  

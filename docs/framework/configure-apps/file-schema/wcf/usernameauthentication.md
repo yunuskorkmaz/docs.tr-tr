@@ -2,20 +2,20 @@
 title: <userNameAuthentication>
 ms.date: 03/30/2017
 ms.assetid: 24d8b398-770f-418f-ba23-c4325419cfa6
-ms.openlocfilehash: 5a4cf8d429198b889f2bb362294ba3841c814b26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 399158632d5c17a35ded02691ba35a231e6cdc6e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788706"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940540"
 ---
 # <a name="usernameauthentication"></a>\<userNameAuthentication >
-Kullanıcı adı ve parolasına dayalı bir hizmetin kimlik bilgilerini belirtir.  
+Hizmetin kimlik bilgilerini Kullanıcı adı ve parolaya göre belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
 \<userNameAuthentication >  
   
@@ -38,13 +38,13 @@ Kullanıcı adı ve parolasına dayalı bir hizmetin kimlik bilgilerini belirtir
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`cacheLogonTokenLifetime`|A <xref:System.TimeSpan> bir belirteç önbelleğe alınma süresi en büyük uzunluğunu belirtir. Varsayılan değer 00:15:00 ' dir.|  
-|`cacheLogonTokens`|Oturum açma belirteçlerinin önbelleğe yazılıp yazılmayacağını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
-|`customUserNamePasswordValidatorType`|Kullanılacak özel kullanıcı adı parola Doğrulayıcı türünü belirten bir dize. Varsayılan değer boş bir dizedir.|  
-|`includeWindowsGroups`|Windows gruplarını güvenlik bağlamına dahil olup olmadığını belirten bir Boole değeri. Varsayılan, `true` değeridir.<br /><br /> Bu öznitelik ayarını `true` tam Grup genişletme içinde sonuçları gibi bir performans etkisi vardır. Bu özellik kümesine `false` gruplarının listesini oluşturmak ihtiyacınız yoksa bir kullanıcıya ait.|  
-|`maxCacheLogonTokens`|Oturum açma belirteçlerinin önbelleğe maksimum sayısını belirten bir tamsayı. Bu değer, sıfırdan büyük olmalıdır. Varsayılan değer 128'dir.|  
-|`membershipProviderName`|Zaman `clientCredentialType` bağlama özniteliği `username`, kullanıcı adı Windows hesaplarına eşlenir. Bu öznitelik adını içeren bir dize kullanarak bu davranışı geçersiz kılabilirsiniz <xref:System.Web.Security.MembershipProvider> değer ilgili parola doğrulama mekanizması sağlar.|  
-|`userNamePasswordValidationMode`|Kullanıcı adı şifrenin doğrulanacağı şekli belirtir. Geçerli değerler şunlardır:<br /><br /> -   Windows<br />-MembershipProvider<br />-Özel<br /><br /> Windows varsayılandır. Bu öznitelik türünde <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
+|`cacheLogonTokenLifetime`|Bir <xref:System.TimeSpan> belirtecin önbelleğe alındığı sürenin en uzun uzunluğunu belirten bir. Varsayılan değer 00:15:00 ' dir.|  
+|`cacheLogonTokens`|Oturum açma belirteçlerinin önbelleğe alınıp alınmayacağını belirten bir Boole değeri. Varsayılan, `false` değeridir.|  
+|`customUserNamePasswordValidatorType`|Kullanılacak özel Kullanıcı adı parola Doğrulayıcı türünü belirten bir dize. Varsayılan değer boş bir dizedir.|  
+|`includeWindowsGroups`|Windows gruplarının güvenlik bağlamına dahil edilip edilmeyeceğini belirten bir Boole değeri. Varsayılan, `true` değeridir.<br /><br /> Bu özniteliğin olarak `true` ayarlanması, tam grup genişlemesiyle sonuçlandığından performans etkisine sahiptir. Bir kullanıcının ait olduğu `false` grupların listesini oluşturmanız gerekmiyorsa bu özelliği olarak ayarlayın.|  
+|`maxCacheLogonTokens`|Önbelleğe eklenecek en fazla oturum açma belirteçleri sayısını belirten bir tamsayı. Bu değer sıfırdan büyük olmalıdır. Varsayılan değer 128 ' dir.|  
+|`membershipProviderName`|Bir bağlamanın `username`özniteliği olarak ayarlandığında, Kullanıcı adı Windows hesaplarına eşlenir. `clientCredentialType` İlgili parola doğrulama mekanizmasını sağlayan <xref:System.Web.Security.MembershipProvider> değerin adını içeren bir dize olan bu özniteliği kullanarak bu davranışı geçersiz kılabilirsiniz.|  
+|`userNamePasswordValidationMode`|Kullanıcı adı parolasının doğrulanma şeklini belirtir. Geçerli değerler şunlardır:<br /><br /> -Windows<br />-MembershipProvider<br />-Özel<br /><br /> Varsayılan olarak Windows. Bu öznitelik türü <xref:System.ServiceModel.Security.UserNamePasswordValidationMode>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -53,12 +53,12 @@ Kullanıcı adı ve parolasına dayalı bir hizmetin kimlik bilgilerini belirtir
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet kimlik doğrulaması olarak kullanılacak kimlik bilgisini belirtir ve istemci kimlik bilgileri doğrulaması ilgili ayarları.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir hizmet tarafından kullanılan bağlamaları hiçbiri kullanıcı adı/parola tabanlı kimlik doğrulaması için yapılandırılmışsa, bu öğenin öznitelikleri göz ardı edilir. Bunlar `customUserNamePasswordValidatorType`, `includeWindowsGroups`, `membershipProviderName`, ve `userNamePasswordValidationMode`.  
+ Bir hizmet tarafından kullanılan bağlamalardan hiçbiri Kullanıcı adı/parola tabanlı kimlik doğrulaması için yapılandırılmamışsa, bu öğenin öznitelikleri yok sayılır. Bunlar, `customUserNamePasswordValidatorType`, ve `membershipProviderName` `includeWindowsGroups` içerir`userNamePasswordValidationMode`.  
   
- Bir hizmet tarafından kullanılan bağlamaları hiçbiri kullanıcı adı/parola için Windows kimlik doğrulaması kullanmak için yapılandırılmışsa, oturum açma belirteçlerinin önbelleğe alınmasıyla ilgili ayarları göz ardı edilir. Bunlar `cacheLogonTokenLifetime`, `cacheLogonTokens`, ve `maxCacheLogonTokens`.  
+ Bir hizmet tarafından kullanılan bağlamalardan hiçbiri Kullanıcı adı/parola için Windows kimlik doğrulaması kullanmak üzere yapılandırılmamışsa, oturum açma belirteçlerini önbelleğe alma ile ilgili ayarlar yoksayılır. Bunlar, ve `cacheLogonTokenLifetime` `cacheLogonTokens`içerir. `maxCacheLogonTokens`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

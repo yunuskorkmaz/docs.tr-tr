@@ -6,183 +6,183 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768621"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951636"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
-Bazı güvenlik ele alınırken kullanılan terminolojiyi bilinmiyor olabilir. Bu konu başlığı altında güvenlik terimlerden bazılarının açıklamaları kısa sağlar, ancak her öğe için kapsamlı bilgi sağlamak için tasarlanmamıştır.  
+Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir. Bu konu, bazı güvenlik koşullarının kısa açıklamalarını sağlar, ancak her öğe için kapsamlı belgeler sağlamaya yönelik değildir.  
   
- Windows Communication Foundation (WCF) belgelerde kullanılan terimler hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramları](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Windows Communication Foundation (WCF) belgelerinde kullanılan terimler hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramlar](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
- erişim denetimi listesi (ACL)  
- Bir nesne için geçerli bir güvenlik koruması listesi. (Nesnenin bir dosya, işlem, olay veya başka bir güvenlik tanımlayıcısının sahip herhangi bir şey olabilir.) Bir ACL erişim denetimi girişi (ACE) girdidir. İki ACL türü vardır: isteğe bağlı ve sistem.  
+ erişim denetim listesi (ACL)  
+ Bir nesne için geçerli olan güvenlik korumalarının listesi. (Bir nesne bir dosya, işlem, olay veya bir güvenlik tanımlayıcısına sahip başka bir şey olabilir.) ACL 'deki bir giriş bir erişim denetimi girişi (ACE). İki tür ACL vardır: isteğe bağlı ve sistem.  
   
  kimlik doğrulama  
- Bir kullanıcı, bilgisayar, hizmet veya işlemin ne olduğunu beyan doğrulama işlemi.  
+ Bir kullanıcının, bilgisayarın, hizmetin veya işlemin ne olduğunu doğrulama süreci.  
   
  yetkilendirme  
- Erişim ve bir kaynak haklarını denetleme işlemi. Örneğin, bir dosyayı okumak bir grubun üyesi izin vererek, ancak yalnızca grubun üyeleri, dosyayı değiştirmek için başka bir izin verme.  
+ Bir kaynağa erişimi ve hakları denetleme eylemi. Örneğin, bir grubun üyelerinin bir dosyayı okumasına izin verme, ancak yalnızca başka bir grubun üyelerinin dosyayı değiştirmesine izin verme.  
   
- Sertifika yetkilisi (CA) sertifikası  
- Sunucuları ve bu sertifikaları isteyen istemcilerin sunucu ve istemci kimlik doğrulama sertifikaları veren CA'yı tanımlar. Dijital imzalar kullanılan ortak anahtar içerdiği için bu da verilir bir *imza sertifikası*. CA kök yetkilisi ise, CA sertifikası için olarak başvurulabilir bir *kök sertifika*. Ayrıca bazen olarak bilinen bir *site sertifikası*.  
+ sertifika yetkilisi (CA) sertifikası  
+ Bu sertifikaları isteyen sunuculara ve istemcilere sunucu ve istemci kimlik doğrulama sertifikaları veren CA 'yı tanımlar. Dijital imzalarda kullanılan bir ortak anahtar içerdiğinden *imza sertifikası*olarak da adlandırılır. CA bir kök yetkilisise, CA sertifikasına *kök sertifika*denir. Bazen *Site sertifikası*olarak da bilinir.  
   
  CA hiyerarşisi  
- CA hiyerarşisi birden fazla CA içerir. Böylece her CA hiyerarşisi daha yüksek bir düzeyde başka bir CA tarafından hiyerarşinin en üstüne kadar olarak da bilinen sertifikalıdır düzenlenmiş *kök yetkilisi*, ulaşıldı.  
+ CA hiyerarşisi birden çok CA içerir. Her CA 'nın, hiyerarşinin en üstüne, *kök yetkili*olarak da bilinene kadar daha yüksek düzeyde başka bir CA tarafından sertifikalanabilmesi için düzenlenir.  
   
  sertifika  
- Bir varlığı ve varlığın ortak anahtar, bu nedenle bu iki bilgi parçasını birbirine bağlama hakkında bilgi içeren dijital olarak imzalanmış bir ifade. Yetkilisi varlığı kullanan, söylüyor olduğu doğrulandıktan sonra bir sertifika tarafından güvenilen bir kuruluş (veya varlık) adı verilen bir sertifika yetkilisi, verilir.  
+ Bir varlık ve varlığın ortak anahtarı hakkında bilgi içeren, bu iki bilgi parçasını birbirine bağlayan dijital imzalı bir ifade. Sertifika, yetkili varlığın kim olduğunu doğruladıktan sonra, sertifika yetkilisi olarak adlandırılan güvenilir bir kuruluş (veya varlık) tarafından verilir.  
   
- Sertifikalar, farklı veri türleri içerebilir. Örneğin, bir X.509 sertifikasının sertifika, sertifikayı, sertifika, ortak anahtar sertifikası isteme varlık ve adını sertifikayı veren CA'ın adını imzalamak için kullanılan algoritma seri numarası biçimini içerir ve CA'ın imzası.  
+ Sertifikalar, farklı veri türleri içerebilir. Örneğin, bir X. 509.440 sertifikası, sertifika biçimini, sertifikanın seri numarasını, sertifikayı imzalamak için kullanılan algoritmayı, sertifikayı veren CA 'nın adını, sertifikayı isteyen varlığın adını ve ortak anahtarını içerir ve CA imzası.  
   
- Sertifika deposu  
- Genellikle, kalıcı depolama ortamı burada sertifikalar, sertifika iptal listelerini (CRL'ler) ve sertifika güven listelerini (CTL) depolanır. Ancak, oluşturmak ve bir sertifika deposu yalnızca bellekte kalıcı depolama alanına konmuş gerekmez sertifikalarıyla çalışırken açmak için mümkündür.  
+ sertifika deposu  
+ Genellikle, sertifikaların, sertifika iptal listelerinin (CRL 'Ler) ve sertifika güven listelerinin (CTL) depolandığı kalıcı bir depolama alanı. Ancak, kalıcı depolamaya koymak zorunda olmayan sertifikalarla çalışırken yalnızca bellekte bir sertifika deposu oluşturmak ve açmak mümkündür.  
   
- Talep  
- Bilgiler bir varlıktan diğerine gönderenin kimliğini oluşturmak için kullanılan geçirildi. Örneğin, bir kullanıcı adı ve parola belirteci veya bir X.509 sertifikası.  
+ claims  
+ Bir varlıktan gönderenin kimliğini oluşturmak için kullanılan başka bir varlığa geçirilen bilgiler. Örneğin, bir Kullanıcı adı ve parola belirteci ya da bir X. 509.440 sertifikası.  
   
- İstemci sertifikası  
- Bir Web sunucusunda bir Web tarayıcısı kimlik doğrulaması gibi istemci kimlik doğrulaması için kullanılan bir sertifikaya başvurur. Bir Web tarayıcısı istemcisini güvenli bir Web sunucusuna erişmeye çalıştığında, istemci istemcinin kimliğini doğrulamak izin vermek için sunucu sertifikasını gönderir.  
+ istemci sertifikası  
+ Web sunucusunda bir Web tarayıcısının kimlik doğrulaması gibi, istemci kimlik doğrulaması için kullanılan bir sertifikaya başvurur. Bir Web tarayıcısı istemcisi güvenli bir Web sunucusuna erişmeyi denediğinde, istemci, istemcinin kimliğini doğrulamasına izin vermek için sertifikasını sunucuya gönderir.  
   
- Kimlik bilgileri  
- Daha önce bir parola veya bir Kerberos protokolü anahtarı gibi kendi kimliğini oluşturmak için kullandığı bir güvenlik sorumlusu oturum açma verilerini kimlik doğrulaması. Kimlik bilgileri, kaynaklara erişimi denetlemek için kullanılır.  
+ Credentials  
+ Bir güvenlik sorumlusunun parola veya Kerberos protokol bileti gibi kendi kimliğini oluşturmak için kullandığı önceden kimliği doğrulanmış oturum açma verileri. Kimlik bilgileri, kaynaklara erişimi denetlemek için kullanılır.  
   
- Veri Sindirilmiş  
- Bir veri içerik türü ortak anahtar şifreleme standardı tarafından (PKCS) # 7'de her türlü veri artı içeriğin bir ileti karmasını (Özet) oluşur tanımlı.  
+ oluşan veriler  
+ Herhangi bir türden verilerin yanı sıra içeriğin ileti karması (Özet) içeren ortak anahtar şifreleme standardı (PKCS) #7 tarafından tanımlanan veri içeriği türü.  
   
- dijital imza  
- Gönderenin kimliğini gönderilen bilgilerin bağlar verileri. Bir dijital imza herhangi bir ileti, dosya ya da dijital olarak kodlanmış diğer bilgileri ile birlikte veya ayrı olarak iletilebilir. Dijital imzalar, ortak anahtar ortamlarında kullanılan ve kimlik doğrulaması ve bütünlük hizmetleri sağlar.  
+ Dijital imza  
+ Gönderenin kimliğini gönderilmekte olan bilgilere bağlayan veriler. Dijital imza herhangi bir ileti, dosya veya dijital olarak kodlanan diğer bilgilerle birlikte paketlenmiştir veya ayrı olarak iletilebilir. Dijital imzalar ortak anahtar ortamlarında kullanılır ve kimlik doğrulama ve bütünlük hizmetleri sağlar.  
   
  encoding  
- BITS bir akışa veri kapatma işlemi. Kodlama verileri olanları sıfırlar ve bir akışa dönüştürür seri hale getirme işleminin parçasıdır.  
+ Verileri bir bit akışına çevirme işlemi. Kodlama, verileri bir ve sıfırlardan oluşan bir akışa dönüştüren serileştirme işleminin bir parçasıdır.  
   
  Exchange anahtar çifti  
- Böylece bunlar güvenli bir şekilde depolanabilir ve diğer kullanıcılarla değiştirilen oturum anahtarlarını şifrelemek için kullanılan bir ortak/özel anahtar çifti.  
+ Oturum anahtarlarını şifrelemek için kullanılan ortak/özel anahtar çifti, güvenli bir şekilde saklanabilmesi ve diğer kullanıcılarla değiş tokuş olmaları sağlanır.  
   
  hash  
- Sabit boyutlu sayısal bir rastgele bir veri miktarı için bir matematiksel işlev (bkz. karma algoritması) uygulayarak alınan değer. Verileri genellikle olarak bilinen rastgele verileri içeren bir *nonce*. Hem hizmet hem de istemci sonucu karmaşıklığını artırmak için exchange nonce öğelerinin katkıda bulunur. Sonuç olarak da bilinen, bir *ileti özeti*. Parola şifreli olsa bile bir karma değer gönderme parola gibi hassas verilerin göndermekten daha güvenlidir. Alındığında, bir karma değer doğrulanabilir böylece karma gönderen ve alıcı karma algoritması ve nonce öğelerinin kabul etmelisiniz.  
+ Rastgele bir veri miktarına matematiksel bir işlev (bkz. karma algoritma) uygulanarak elde edilen sabit boyutlu bir sayısal değer. Veriler genellikle, *nonce*olarak bilinen rastgele verileri içerir. Hem hizmet hem de istemci, sonuçta elde edilen karmaşıklığın artması için Exchange 'e katkıda bulunur. Sonuç *ileti özeti*olarak da bilinir. Bir karma değer gönderilmesi, parola şifrelense bile parola gibi hassas verileri gönderdikten daha güvenlidir. Karma gönderici ve alıcı karma algoritmasını ve nonce 'yi kabul etmelidir, bu nedenle, alındıktan sonra bir karma doğrulanabilir.  
   
- Karma algoritması  
- İleti veya oturum anahtarı gibi veriler parçasının bir karma değer oluşturmak için kullanılan algoritma. Tipik bir karma algoritmaları, MD2, MD4, MD5 ve SHA-1 içerir.  
+ karma algoritması  
+ İleti veya oturum anahtarı gibi bazı veri parçalarından oluşan bir karma değer oluşturmak için kullanılan algoritma. Tipik karma algoritmalar arasında MD2, MD4, MD5 ve SHA-1 bulunur.  
   
  Kerberos protokolü  
- İstemcilerin ağ kimlik doğrulama hizmetiyle nasıl etkileşim kuracağını tanımlayan bir protokol. İstemcileri biletleri Kerberos Anahtar Dağıtım Merkezi (KDC) öğesinden edinmek ve bu anahtarları sunucularına bağlantı kurulduğunda sundukları. Kerberos biletleri, istemcinin ağ kimlik bilgileri temsil eder.  
+ İstemcilerin bir ağ kimlik doğrulama hizmeti ile nasıl etkileşime gireceğini tanımlayan bir protokol. İstemciler, Kerberos Anahtar Dağıtım Merkezi (KDC) tarafından bilet elde eder ve bağlantılar oluşturulduğunda bu biletleri sunuculara sunar. Kerberos biletleri, istemcinin ağ kimlik bilgilerini temsil eder.  
   
  Yerel güvenlik yetkilisi (LSA)  
- Kimlik doğrulaması ve oturum açın, yerel sistem kullanıcı korumalı bir alt. LSA, ayrıca tüm yönleri hakkında bir sistemde, sistemin yerel güvenlik ilkesi topluca bilinen bilgileri yerel güvenlik korur.  
+ Kullanıcıları kimlik doğrulaması yapan ve yerel sistemde oturum açan korumalı bir alt sistem. LSA ayrıca, sistemin yerel güvenlik ilkesi olarak bilinen bir sistemdeki tüm yerel güvenlik özellikleri hakkında bilgi de sağlar.  
   
- Anlaşma  
- Bir uygulama katmanı arasında güvenlik desteği Sağlayıcısı Arabirimi (SSPI) ve diğer SSP'ler görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI içinde çağırdığında, bu isteği işlemek için bir SSP belirtebilirsiniz. Uygulama belirtiyorsa `Negotiate`, `Negotiate` isteği analiz eder ve müşteri yapılandırılmış güvenlik ilkesini temel alarak bir isteği işlemek için en iyi SSP seçer.  
+ 'Nin  
+ Güvenlik desteği sağlayıcısı arabirimi (SSPI) ve diğer SSPs 'ler arasında bir uygulama katmanı görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI 'e çağırdığında, isteği işlemek için bir SSP belirtebilir. Uygulama belirtiyorsa `Negotiate`, `Negotiate` isteği analiz eder ve müşterinin yapılandırdığı güvenlik ilkesine göre isteği işlemek için en iyi SSP 'yi seçer.  
   
  nonce  
- "" Yeniden yürütme saldırıları aşmak için kullanılan rastgele oluşturulmuş bir değeri.  
+ "Yeniden yürütme" saldırılarını erteetmek için kullanılan rastgele oluşturulmuş bir değer.  
   
- inkar edilemez  
- Bu nedenle sorumluluk engellemek için bir kullanıcı tarafından girişimlerini irrefutably countering belirli eylemler gerçekleştiren kullanıcıları tanımlamak için yeteneği. Örneğin, bir dosya silindiğinde bir sistem bir kullanıcının kimliği oturum açabilir.  
+ kabullenme  
+ Belirli eylemleri gerçekleştiren kullanıcıları belirleyebilme, bu nedenle bir kullanıcı tarafından sorumluluğu reddetme girişimlerini düzensiz şekilde geri alma. Örneğin, bir sistem, bir dosya silindiğinde kullanıcının KIMLIĞINI günlüğe alabilir.  
   
  Ortak anahtar şifreleme standardı (PKCS)  
- Ortak anahtar şifrelemesi dağıtımı hızlandırmak için dünya çapındaki güvenlik sistemleri geliştiriciler ile işbirliği içinde RSA veri güvenliği, Inc. tarafından üretilen belirtimleri.  
+ Ortak anahtar şifrelemenin dağıtımını hızlandırmak için dünya çapındaki güvenli sistem geliştiricileri ile birlikte RSA Data Security, Inc. tarafından oluşturulan belirtimler.  
   
  PKCS #7  
- Şifreli ileti söz dizimi standart. Veri hangi şifreleme uygulanabilir, dijital imzalar ve şifreleme gibi genel söz dizimi. Ayrıca, sertifika veya sertifika iptal listeleri ve iletiye zaman damgaları gibi diğer ileti öznitelikleri yayınlamak için söz dizimi da sağlar.  
+ Şifreleme Iletisi sözdizimi standardı. Dijital imzalar ve şifreleme gibi şifrelemenin uygulanabileceğini belirten genel bir sözdizimi. Ayrıca, sertifikaların veya sertifika iptal listelerinin ve zaman damgaları gibi diğer ileti özniteliklerinin iletiye dağıtımını yapmak için sözdizimi de sağlar.  
   
  düz metin  
- Şifreli ileti. Düz metin iletileri bazen denir *düz metin olarak* iletileri.  
+ Şifrelenmeyen bir ileti. Düz metin iletiler bazen düz *metin* iletileri olarak adlandırılır.  
   
- ayrıcalık  
- Sistemi kapatmadan, cihaz sürücüleri yükleniyor veya sistem saatinin değiştirilmesi gibi çeşitli sistem güvenlikle ilgili işlemler gerçekleştirme hakkı kullanıcı. Bir kullanıcının erişim belirtecini ayrıcalıkları tutun kullanıcı veya kullanıcı grupları listesini içerir.  
+ ayrıcalıklar  
+ Bir kullanıcının, sistemi kapatma, aygıt sürücülerini yükleme veya sistem saatini değiştirme gibi sistemle ilgili çeşitli işlemleri gerçekleştirme hakkı. Kullanıcının erişim belirteci, kullanıcının veya Kullanıcı gruplarının tutamayacağı ayrıcalıkların bir listesini içerir.  
   
  özel anahtar  
- Gizli yarısı anahtar çiftinin bir ortak anahtar algoritması kullanılamaz. Özel anahtarları, genellikle bir simetrik oturum anahtarı şifreleme, dijital olarak bir ileti oturum veya karşılık gelen ortak anahtar ile şifrelenmiş bir iletinin şifresinin çözülmesi için kullanılır. Ayrıca bkz. "genel anahtar."  
+ Ortak anahtar algoritmasında kullanılan anahtar çiftinin gizli yarısı. Özel anahtarlar genellikle bir simetrik oturum anahtarını şifrelemek, bir iletiyi dijital olarak imzalamak veya karşılık gelen ortak anahtarla şifrelenen bir iletinin şifresini çözmek için kullanılır. Ayrıca bkz. "ortak anahtar".  
   
  process  
- Bir uygulamanın çalıştığı güvenlik bağlamı. Genellikle belirli bir işlem altında çalışan tüm uygulamaların izinleri ve ayrıcalıklarına sahip olan kullanıcı, bu nedenle güvenlik bağlamı bir kullanıcıyla ilişkili olur.  
+ Uygulamanın çalıştığı güvenlik bağlamı. Genellikle, güvenlik bağlamı bir kullanıcıyla ilişkilendirilir, bu nedenle belirli bir işlem altında çalışan tüm uygulamalar sahip olan kullanıcının izinlerini ve ayrıcalıklarını alır.  
   
- Ortak/özel anahtar çifti  
- Ortak anahtar şifrelemesi için kullanılan şifreleme anahtarlarını bir dizi. Her bir kullanıcı için bir şifreleme hizmeti sağlayıcısı (CSP) genellikle iki ortak/özel anahtar çifti tutar: bir exchange anahtar çifti ve dijital imza anahtar çifti. Her iki anahtar çiftleri oturumdan oturuma korunur.  
+ ortak/özel anahtar çifti  
+ Ortak anahtar şifrelemesi için kullanılan bir şifreleme anahtarları kümesi. Her Kullanıcı için bir şifreleme hizmeti sağlayıcısı (CSP) genellikle iki ortak/özel anahtar çifti tutar: bir Exchange anahtar çifti ve dijital imza anahtar çifti. Her iki anahtar çifti de oturumdan oturuma tutulur.  
   
- Ortak anahtar  
- Bir oturum anahtarı veya bir dijital imza şifresini çözerken genelde kullanılan bir şifreleme anahtarı. Ortak anahtarı, yalnızca ilgili özel anahtarın kişiyle iletinin şifresini çözebilir güvence altına alır, bir iletinin şifrelenmesi için de kullanılabilir.  
+ ortak anahtar  
+ Genellikle bir oturum anahtarının veya dijital imzanın şifresini çözerken kullanılan bir şifreleme anahtarı. Ortak anahtar Ayrıca bir iletiyi şifrelemek için de kullanılabilir ve yalnızca ilgili özel anahtara sahip olan kişinin ileti şifresini çözemeyeceğini garanti edebilir.  
   
- Ortak anahtar şifrelemesi  
- Şifreleme anahtarları, verileri şifrelemek için bir anahtar ve diğer bir anahtar çifti verilerin şifresini çözmek için kullanır. Buna karşılık, aynı simetrik şifreleme algoritmaları, şifreleme ve şifre çözme için anahtar. Uygulamada, ortak anahtar şifrelemesi genellikle bir simetrik şifreleme algoritması kullanır. oturum anahtarını korumak için kullanılır. Bu durumda, ortak anahtarı oturum anahtarı şifrelemek için kullanılan hangi sırayla bazı verileri şifrelemek için kullanılan ve şifre çözme için kullanılan özel anahtarı. Oturum anahtarları korunmasına ek olarak, ortak anahtar şifrelemesi da dijital olarak (özel anahtarı kullanarak) bir iletiyi imzalamak ve (ortak anahtar kullanarak) imzayı doğrulamak için kullanılabilir.  
+ ortak anahtar şifrelemesi  
+ Bir çift anahtar kullanan şifreleme, verileri şifrelemek için bir anahtar ve verilerin şifresini çözmek için kullanılan diğer anahtar. Buna karşılık, hem şifreleme hem de şifre çözme için aynı anahtarı kullanan simetrik şifreleme algoritmaları. Uygulamada, ortak anahtar şifrelemesi genellikle bir simetrik şifreleme algoritmasının kullandığı oturum anahtarını korumak için kullanılır. Bu durumda, ortak anahtar, daha sonra bazı verileri şifrelemek için kullanılan ve özel anahtar şifre çözme için kullanılan oturum anahtarını şifrelemek için kullanılır. Ortak anahtar şifrelemesi, oturum anahtarlarını korumanın yanı sıra bir iletiyi dijital olarak imzalamak için de kullanılabilir (özel anahtar kullanılarak) ve imzayı doğrulayabilir (ortak anahtar kullanılarak).  
   
- Ortak anahtar altyapısı (PKI)  
- Bir altyapı oluşturma, dağıtma ve ortak anahtar uygulamaları yönetmek için tümleşik bir dizi hizmet ve Yönetimsel Araçlar sağlar.  
+ ortak anahtar altyapısı (PKI)  
+ Ortak anahtar uygulamaları oluşturmaya, dağıtmaya ve yönetmeye yönelik tümleşik bir hizmet kümesi ve yönetim araçları sağlayan bir altyapı.  
   
- Red  
- Bir kullanıcı yanlışlıkla gerçekleştirilen bir eylem çalışırken diğer taraflara reddetme olanağı, aksi takdirde kanıtlamak olamaz. Örneğin, kimin bir dosyayı siler ve kimin işlemi başarıyla reddedebilirsiniz kullanıcı.  
+ kar  
+ Bir kullanıcının diğer taraflar aksini kanıtlayamazken, bir eylemi gerçekleştirmeyi çok seyrek reddetme özelliği. Örneğin, bir dosyayı silen ve bu işlemi başarılı bir şekilde reddedebilen bir kullanıcı.  
   
- kök yetkilisi  
- CA üstünde bir CA hiyerarşisi. Kök yetkilisi hiyerarşisinin sonraki düzeyi CA'larda onaylar.  
+ kök yetkili  
+ CA hiyerarşisinin en üstündeki CA. Kök yetkili, CA 'Ların, hiyerarşinin bir sonraki düzeyinde sertifika yetkilileri.  
   
- Güvenli Karma algoritması (SHA)  
- Bir karma algoritma ileti özeti üretir. SHA, diğer yerler yanı sıra dijital imza standart (DSS) dijital imza algoritması (DSA) ile kullanılır. Dört çeşitleri SHA vardır: SHA-1, SHA-256, SHA-384 ve SHA-512. SHA-1, 160 bitlik ileti özeti üretir. 256 bit, 384 bit SHA-256, SHA-384 ve SHA-512 oluşturun ve 512 bit ileti özetleyen, sırasıyla. SHA Ulusal Standartlar ve teknoloji kurumu (NIST) tarafından ve Ulusal Güvenlik Agency (NSA) tarafından geliştirilmiştir.  
+ Güvenli karma algoritması (SHA)  
+ İleti Özeti üreten bir karma algoritması. SHA, dijital Imza standardı (DSS) içindeki dijital Imza algoritması (DSA) ile diğer yerleri arasında kullanılır. SHA 'nın dört değişkenli derecesi vardır: SHA-1, SHA-256, SHA-384 ve SHA-512. SHA-1 160 bitlik bir ileti özeti üretir. SHA-256, SHA-384 ve SHA-512 sırasıyla 256-bit, 384-bit ve 512-bit ileti digests oluşturma. SHA, ulusal standartlar ve Teknoloji Enstitüsü (NıST) ve Ulusal Güvenlik Kurumu (NSA) tarafından geliştirilmiştir.  
   
  Güvenli Yuva Katmanı (SSL)  
- Genel ve gizli anahtar teknoloji bir birleşimi kullanılarak güvenli ağ iletişim için bir protokol.  
+ Ortak ve gizli anahtar teknolojisinin birleşimini kullanarak güvenli ağ iletişimleri için bir protokol.  
   
  güvenlik bağlamı  
- Şu anda etkin olan kuralları ve güvenlik öznitelikleri. Örneğin, bilgisayarda oturum açmış geçerli kullanıcı veya akıllı kart kullanıcı tarafından girilen kişisel kimlik numarası. SSPI için bir güvenlik bağlamı bir oturum anahtarı veya göstergesidir oturumun süresi gibi bir bağlantı ile ilgili güvenlik verilerini içeren bir donuk bir veri yapısıdır.  
+ Şu anda etkin olan güvenlik öznitelikleri veya kuralları. Örneğin, geçerli kullanıcı bilgisayarda oturum açtı veya akıllı kart kullanıcısı tarafından girilen kişisel kimlik numarası. SSPI için, bir güvenlik bağlamı, bir bağlantıyla ilgili güvenlik verilerini (oturum anahtarı veya oturum süresinin bir göstergesi gibi) içeren donuk bir veri yapısıdır.  
   
  güvenlik sorumlusu  
- Güvenlik sistemi tarafından tanınan bir varlığın. İlkeleri otonom işlemlerin yanı sıra, İnsan kullanıcılar ekleyebilirsiniz.  
+ Güvenlik sistemi tarafından tanınan bir varlık. Sorumlular, insan kullanıcıları ve otonom süreçler içerebilir.  
   
- Güvenlik Desteği Sağlayıcısı (SSP)  
- Bir veya daha fazla güvenlik paketleri uygulamaları için kullanılabilir hale getirerek SSPI uygulayan bir dinamik bağlantı kitaplığı (DLL). Her güvenlik paketi, bir uygulamanın SSPI işlev çağrıları ve bir gerçek güvenlik modelinin işlevleri arasında eşleme sağlar. Güvenlik paketleri Kerberos kimlik doğrulaması ve Microsoft LAN Yöneticisi (LanMan) gibi güvenlik protokollerini destekler.  
+ güvenlik desteği sağlayıcısı (SSP)  
+ Bir veya daha fazla güvenlik paketini uygulamalar için kullanılabilir hale getirerek SSPI 'yi uygulayan bir dinamik bağlantı kitaplığı (DLL). Her güvenlik paketi, bir uygulamanın SSPI işlev çağrıları ile gerçek bir güvenlik modelinin işlevleri arasında eşlemeler sağlar. Güvenlik paketleri Kerberos kimlik doğrulaması ve Microsoft LAN Manager (LanMan) gibi güvenlik protokollerini destekler.  
   
- Güvenlik Desteği Sağlayıcısı Arabirimi (SSPI)  
- Microsoft Uzak yordam çağrısı (RPC) ve Windows gibi güvenlik sağlayıcıları gibi aktarım düzeyinde uygulamalar arasında ortak bir arabirim güvenlik dağıtılmış. SSPI, kimliği doğrulanmış bir bağlantı almak için birçok güvenlik sağlayıcılardan birini çağırmak bir aktarım uygulamasını sağlar. Bu çağrılar güvenlik protokolünün ayrıntılarını kapsamlı bilgi gerektirmez.  
+ Güvenlik desteği sağlayıcısı arabirimi (SSPI)  
+ Microsoft Uzak yordam çağrısı (RPC) gibi aktarım düzeyi uygulamalar ve Windows dağıtılmış güvenlik gibi güvenlik sağlayıcıları arasındaki ortak bir arabirim. SSPI, bir aktarım uygulamasının kimliği doğrulanmış bir bağlantı almak için çeşitli güvenlik sağlayıcılarından birini çağırmasını sağlar. Bu çağrılar güvenlik protokolünün ayrıntıları hakkında kapsamlı bilgi gerektirmez.  
   
- Güvenlik belirteci hizmeti  
- Hizmetleri vermek ve multiservice senaryosunda özel güvenlik belirteçleri (verilen belirteçler) yönetmek için tasarlanmıştır. Özel belirteçler genellikle özel bir kimlik bilgisi içeren güvenlik onaylama işaretleme dili (SAML) belirteçleri biçimindedir.  
+ güvenlik belirteci hizmeti  
+ Çoklu hizmet senaryosunda özel güvenlik belirteçleri (verilen belirteçler) vermek ve yönetmek için tasarlanan hizmetler. Özel belirteçler genellikle özel bir kimlik bilgisi içeren güvenlik onaylama işlemi biçimlendirme dili (SAML) belirteçleridir.  
   
  sunucu sertifikası  
- Bir Web tarayıcısı Web sunucusuna kimlik doğrulaması gibi sunucu kimlik doğrulaması için kullanılan bir sertifikaya başvurur. Bir Web tarayıcısı istemcisini güvenli bir Web sunucusuna erişmeye çalıştığında sunucu sertifikasını sunucunun kimliğini doğrulamak izin vermek için tarayıcının gönderir.  
+ Sunucu kimlik doğrulaması için kullanılan bir sertifikaya başvurur, örneğin bir Web sunucusunun Web tarayıcısında doğrulanması. Bir Web tarayıcısı istemcisi güvenli bir Web sunucusuna erişmeyi denediğinde, sunucu, sunucunun kimliğini doğrulamasına izin vermek için sertifikasını tarayıcıya gönderir.  
   
- Oturumu  
- Bir exchange ileti tek bir parçanın malzemesi koruma altında. Örneğin, SSL oturumları ve geriye bu anahtarı altında birden çok ileti göndermek için tek bir anahtarı kullanın.  
+ oturumuna  
+ Tek bir anahtarlama malzemesinin korunmasından daha fazla ileti alışverişi. Örneğin, SSL oturumları, bu anahtar altında birden fazla iletiyi ileri ve geri göndermek için tek bir anahtar kullanır.  
   
  oturum anahtarı  
- Bir kez kullanıldığını ve atılır rastgele oluşturulmuş bir anahtar. Oturum anahtarları simetrik (şifreleme ve şifre çözme için kullanılan). Amaçladığınız alıcının bir ortak anahtar ile şifrelemesi ile korunan bir ileti ile gönderilir. Bir oturum anahtarı bir rasgele sayı yaklaşık 40 ila 2.000 arasında bit oluşur.  
+ Bir kez kullanılan ve sonra atılan rastgele oluşturulmuş bir anahtar. Oturum anahtarları simetrik (hem şifreleme hem de şifre çözme için kullanılır). Bu iletiler, hedeflenen alıcıdan ortak anahtarla şifreleme ile korunan iletiyle birlikte gönderilir. Oturum anahtarı, yaklaşık 40 ile 2.000 bit arasında rastgele bir sayı içerir.  
   
  ek kimlik bilgileri  
- Yabancı güvenlik etki alanları için bir güvenlik sorumlusunun kimlik doğrulaması kimlik bilgilerini kullanın.  
+ Yabancı güvenlik etki alanlarına güvenlik sorumlusu kimlik doğrulaması sırasında kullanılacak kimlik bilgileri.  
   
  simetrik şifreleme  
- Tek bir anahtar şifreleme ve şifre çözme için kullandığı şifreleme. Simetrik şifreleme, büyük miktarlarda verileri şifrelerken tercih edilir. Daha yaygın simetrik şifreleme algoritmaları RC2, RC4 ve veri şifreleme standardı (DES) bazılarıdır.  
+ Şifreleme ve şifre çözme için tek bir anahtar kullanan şifreleme. Büyük miktarlarda veriyi şifrelerken simetrik şifreleme tercih edilir. Daha yaygın simetrik şifreleme algoritmalarından bazıları RC2, RC4 ve veri şifreleme standardı (DES) ' dir.  
   
- Ayrıca bkz: "ortak anahtar şifreleme."  
+ Ayrıca bkz. "ortak anahtar şifrelemesi."  
   
- Simetrik anahtar  
- Şifreleme ve şifre çözme için kullanılan tek bir anahtarı. Oturum anahtarları, genellikle simetrik.  
+ simetrik anahtar  
+ Hem şifreleme hem de şifre çözme için kullanılan tek bir anahtar. Oturum anahtarları genellikle simetrik olur.  
   
- belirteci (erişim belirteci)  
- Bir erişim belirteci bir oturum için güvenlik bilgilerini içerir. Sistem, kullanıcı oturum açtığında ve kullanıcı adına çalıştırılan her işlem belirteci kopyasına sahip bir erişim belirteci oluşturur. Belirteç, kullanıcının, kullanıcı grupları ve kullanıcının ayrıcalıkları tanımlar. Sistem güvenliği sağlanabilir nesnelere erişimi denetleyen ve kullanıcının yerel bilgisayarda çeşitli sistem güvenlikle ilgili işlemler gerçekleştirme olanağı denetlemek için bu belirteci kullanır. İki tür erişim belirteçleri, birincil ve kimliğe bürünme vardır.  
+ Belirteç (erişim belirteci)  
+ Erişim belirteci bir oturum açma oturumunun güvenlik bilgilerini içerir. Sistem, bir Kullanıcı oturum açtığında bir erişim belirteci oluşturur ve Kullanıcı adına çalıştırılan her işlemin belirtecin bir kopyası vardır. Belirteç kullanıcıyı, kullanıcının gruplarını ve kullanıcının ayrıcalıklarını tanımlar. Sistem, güvenli kılınabilir nesnelere erişimi denetlemek ve kullanıcının yerel bilgisayarda sistemle ilgili çeşitli işlemleri gerçekleştirme becerisini denetlemek için belirtecini kullanır. İki tür erişim belirteci vardır, birincil ve kimliğe bürünme.  
   
- Aktarım Katmanı  
- Her iki hizmet kalitesi ve bilgilerin doğru teslim sorumlu ağ katmanı. Bu katmana gerçekleştirilen görevleri hata algılama ve düzeltme arasındadır.  
+ Aktarım katmanı  
+ Hem hizmet kaliteden hem de bilgilerin doğru teslimatmasından sorumlu olan ağ katmanı. Bu katmanda gerçekleştirilen görevler arasında hata algılama ve düzeltme vardır.  
   
  güven listesi (sertifika güven listesi veya CTL)  
- Önceden tanımlanmış bir güvenilir varlık tarafından imzalanmış öğeleri listesi. Bir CTL sertifikaların karmaları veya dosya adlarının bir listesini listesi gibi her şey olabilir. Listedeki tüm öğeleri (imzalayan varlık tarafından onaylanan) doğrulanır.  
+ Güvenilen bir varlık tarafından imzalanmış olan öğelerin önceden tanımlanmış listesi. CTL, sertifika karmalarının bir listesi veya dosya adları listesi gibi herhangi bir şey olabilir. Listedeki tüm öğelerin imza varlığı tarafından kimliği doğrulanır (onaylandı).  
   
  güven sağlayıcısı  
- Belirli bir dosya güvenilir olup olmadığına karar verir yazılım. Bu karar dosyasıyla ilişkili sertifika temel alır.  
+ Belirli bir dosyanın güvenilir olup olmadığına karar veren yazılım. Bu karar, dosyayla ilişkili sertifikayı temel alır.  
   
  Kullanıcı asıl adı (UPN)  
- Bir kullanıcı hesabı adı (bazen denir *kullanıcı oturum açma adı*) ve kullanıcı hesabının bulunduğu etki alanını tanıtan bir etki alanı adı. Bu, bir Windows etki alanında oturum açma için standart kullanımdır. Biçim: someone@example.com (olduğu gibi bir e-posta adresi).  
+ Kullanıcı hesabı adı (bazen *Kullanıcı oturum açma adı*olarak adlandırılır) ve Kullanıcı hesabının bulunduğu etki alanını tanımlayan bir etki alanı adı. Bu, bir Windows etki alanında oturum açmak için standart kullanımdır. Biçim: someone@example.com (bir e-posta adresi için).  
   
 > [!NOTE]
->  Ek olarak standart UPN form, WCF, alt düzey form, örneğin, cohowinery.com\someone UPN kabul eder.  
+> WCF, standart UPN biçimine ek olarak alt düzey biçimde UPN 'leri kabul eder, örneğin, cohowınara. com\someone.  
   
- X.509  
- Kendi gerekli bölümlerini tanımlayan bir uluslararası olarak tanınan standart sertifikaları.  
+ X. 509.440  
+ Gerekli parçalarını tanımlayan sertifikalar için uluslararası olarak tanınan bir standart.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Temel Windows Communication Foundation Kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

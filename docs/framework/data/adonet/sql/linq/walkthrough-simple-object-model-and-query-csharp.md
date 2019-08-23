@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 43092eb7490d5629f1ababac1d8f8b3aff94299b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946917"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)
 
@@ -57,7 +57,7 @@ Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 
 5. **Konum** kutusunda, proje dosyalarınızı nerede depolamak istediğinizi doğrulayın.
 
-6.           **Tamam**'ı tıklatın.
+6. **Tamam**'ı tıklatın.
 
 ## <a name="adding-linq-references-and-directives"></a>LINQ başvuruları ve yönergeleri ekleme
 
@@ -117,7 +117,7 @@ Ayrıca, veritabanınızdaki müşteriler `Table<Customer>` tablosuna karşı so
 
 ## <a name="creating-a-simple-query"></a>Basit sorgu oluşturma
 
-Bu adımda, veritabanı müşterileri tablosundaki hangi müşterilerin Londra 'da bulunacağını bulmak için bir sorgu oluşturursunuz. Bu adımdaki sorgu kodu yalnızca sorguyu açıklar. Bunu yürütmez. Bu yaklaşım *ertelenmiş yürütme*olarak bilinir. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
+Bu adımda, veritabanı müşterileri tablosundaki hangi müşterilerin Londra 'da bulunacağını bulmak için bir sorgu oluşturursunuz. Bu adımdaki sorgu kodu yalnızca sorguyu açıklar. Bunu yürütmez. Bu yaklaşım *ertelenmiş yürütme*olarak bilinir. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
 Ayrıca, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] üreten SQL komutlarını göstermek için bir günlük çıktısı oluşturacaksınız. Bu günlüğe kaydetme özelliğinin (kullandığı <xref:System.Data.Linq.DataContext.Log%2A>) hata ayıklama işlemi sırasında ve veritabanına gönderilen komutların sorgunuzu doğru şekilde temsil ettiğini belirlemek için yararlıdır.
 
@@ -140,7 +140,7 @@ Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturdu�
 2. Uygulamada hata ayıklamak için F5 tuşuna basın.
 
     > [!NOTE]
-    >  Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
+    > Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
 
      Konsol penceresinde sorgu sonuçları aşağıdaki gibi görünmelidir:
 

@@ -2,28 +2,28 @@
 title: 'Nasıl yapılır: JSON Verilerini Seri Hale Getrime ve Seri Halden Çıkarma'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 0c56b298737dc9b9902f13c586edffb3d05257f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bebdbb3d74d58db093c4ec1e0e88138c7080335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783009"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947892"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>Nasıl yapılır: JSON verileri seri hale getrime ve
-JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web Hizmetleri ile istemci tarayıcıları arasında verileri hızlı değişimleri sağlar verimli veri kodlama biçimi değil.  
+# <a name="how-to-serialize-and-deserialize-json-data"></a>Nasıl yapılır: JSON verilerini serileştirme ve serisini kaldırma
+JSON (JavaScript Nesne Gösterimi), istemci tarayıcıları ve AJAX özellikli Web Hizmetleri arasında küçük miktarlarda verilerin hızlı bir şekilde değiş tokuşlanmasını sağlayan etkili bir veri kodlama biçimidir.  
   
- Bu makale, JSON olarak kodlanmış veri .NET türü nesneleri serileştirmek ve ardından geri .NET türleri örneğine verileri JSON biçiminde seri durumdan gösterilmektedir. Bu örnek bir veri sözleşme serileştirme ve seri durumundan çıkarma, kullanıcı tanımlı göstermek için kullanır. `Person` türüne ve kullandığı <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+ Bu makalede, .NET tür nesnelerinin JSON kodlu verilere nasıl serileştirildiğini ve sonra JSON biçimindeki verilerin serisini .NET türlerinin örneklerine nasıl seri hale getirilebileceğini gösterir. Bu örnek, Kullanıcı tanımlı `Person` bir türün serileştirilmesi ve serisini göstermek için bir veri sözleşmesi kullanır ve kullanır. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
- AJAX etkinleştirilmiş uç noktalar sunulan hizmet işlemlerinde veri anlaşması türlerini kullandığınızda normalde, JSON seri hale getirme ve seri durumundan çıkarma otomatik olarak Windows Communication Foundation (WCF) tarafından işlenir. Ancak, bazı durumlarda JSON verileri ile doğrudan çalışmanız gerekebilir.   
+ Genellikle, JSON serileştirme ve seri durumundan çıkarma, AJAX etkin uç noktalar üzerinde kullanıma sunulan hizmet işlemlerinde veri sözleşme türlerini kullandığınızda otomatik olarak Windows Communication Foundation (WCF) tarafından işlenir. Ancak, bazı durumlarda JSON verileriyle doğrudan çalışmanız gerekebilir.   
   
 > [!NOTE]
->  Sunucuda veya başka bir nedenle bir giden yanıt serileştirilmesi sırasında bir hata meydana gelirse, bu istemciye bir hata döndürülmez.  
+> Sunucuda giden bir yanıtın serileştirilmesi sırasında veya başka bir nedenle hata oluşursa istemciye hata olarak döndürülmeyebilir.  
   
- Bu makalede dayanır [JSON serileştirme](../samples/json-serialization.md) örnek.  
+ Bu makale, [JSON serileştirme](../samples/json-serialization.md) örneğine dayalıdır.  
   
-## <a name="to-define-the-data-contract-for-a-person-type"></a>Bir kişi türü için veri anlaşması tanımlamak için 
+## <a name="to-define-the-data-contract-for-a-person-type"></a>Bir kişi türü için veri sözleşmesini tanımlamak için 
   
-1. Veri sözleşme tanımlamasına `Person` ekleyerek <xref:System.Runtime.Serialization.DataContractAttribute> sınıfa ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği seri hale getirmek istediğiniz üyeleri. Veri sözleşmeleri hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../designing-service-contracts.md).  
+1. İçin `Person` veri sözleşmesini, <xref:System.Runtime.Serialization.DataContractAttribute> seri hale getirmek istediğiniz üyelere sınıfına ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğine ekleyerek tanımlayın. Veri sözleşmeleri hakkında daha fazla bilgi için bkz. [hizmet sözleşmeleri tasarlama](../designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  
@@ -37,9 +37,9 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
     }  
     ```  
   
-## <a name="to-serialize-an-instance-of-type-person-to-json"></a>JSON kişiye türün bir örneğini serileştirmek için  
+## <a name="to-serialize-an-instance-of-type-person-to-json"></a>Kişi türündeki bir örneği JSON 'a seri hale getirmek için  
   
-1. Bir örneğini oluşturmak `Person` türü.  
+1. `Person` Türün bir örneğini oluşturun.  
   
     ```csharp  
     var p = new Person();  
@@ -47,20 +47,20 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
     p.age = 42;  
     ```  
   
-2. Seri hale getirme `Person` kullanarak bellek akışı nesnesine <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2. Kullanarak nesnesini bir bellek akışına serileştirme. <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> `Person`  
   
     ```csharp  
     var stream1 = new MemoryStream();  
     var ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3. Kullanım <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> JSON verilerini akışa yazmak için yöntemi.  
+3. JSON verilerini akışa yazmak için yönteminikullanın.<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4. JSON çıktısını gösterir.  
+4. JSON çıkışını göster.  
   
     ```csharp  
     stream1.Position = 0;  
@@ -69,16 +69,16 @@ JSON (JavaScript nesne gösterimi), küçük miktarda bir AJAX içerebilen Web H
     Console.WriteLine(sr.ReadToEnd());  
     ```  
   
-## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON kişiden türünün bir örneği seri durumdan çıkarılacak  
+## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>JSON 'dan kişi türündeki bir örnek serisini kaldırmak için  
   
-1. JSON olarak kodlanmış veriler yeni bir örneğini seri durumdan `Person` kullanarak <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> yöntemi <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+1. JSON kodlu verileri ' ın `Person` <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> metodunu <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>kullanarak yeni bir örneğine serisini kaldırma.  
   
     ```csharp  
     stream1.Position = 0;  
     var p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2. Sonuçları gösterir.  
+2. Sonuçları göster.  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  
@@ -117,7 +117,7 @@ public static User ReadToObject(string json)
 ```  
   
 > [!NOTE]
->  JSON serileştirici, aşağıdaki örnek kodda gösterildiği gibi birden çok üye ile aynı ada sahip veri anlaşmaları için bir seri hale getirme özel durumu oluşturur.  
+> JSON seri hale getirici, aşağıdaki örnek kodda gösterildiği gibi, aynı ada sahip birden çok üyesi olan veri sözleşmeleri için bir serileştirme özel durumu oluşturur.  
   
 ```csharp  
 [DataContract]  
@@ -137,5 +137,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağımsız JSON seri hale getirme](stand-alone-json-serialization.md)
-- [Biçimleri JSON desteği ve diğer veri aktarma](support-for-json-and-other-data-transfer-formats.md)
+- [Tek başına JSON serileştirmesi](stand-alone-json-serialization.md)
+- [JSON ve diğer veri aktarımı biçimleri için destek](support-for-json-and-other-data-transfer-formats.md)

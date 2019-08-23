@@ -1,22 +1,22 @@
 ---
-title: WCF örnekleri - kullanım ve stil özelliklerini ayarlama
+title: Kullanım ve stil özelliklerini ayarlama-WCF örnekleri
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 654bba8535ab253bdd34f64e7b6ab2fab66fd33b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 946f8f6aab253eb881faaba7adfdc68dc54d7f0b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637703"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958799"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Kullanım ve Stil Özelliklerini Ayarlama
 
-Bu örnek üzerinde kullanım ve stil özelliklerini kullanmayı gösteren <xref:System.ServiceModel.XmlSerializerFormatAttribute> ve <xref:System.ServiceModel.DataContractFormatAttribute>. Bu özellikler, iletileri nasıl biçimlendirileceğini etkiler. Varsayılan olarak, ileti gövdesi ile stil kümesi biçimlendirilmiş <xref:System.ServiceModel.OperationFormatStyle.Document>. Bu ayarlar, ya da hizmet sözleşme düzeyi veya işlem anlaşması düzeyinde belirtilebilir.
+Bu örnek, <xref:System.ServiceModel.XmlSerializerFormatAttribute> <xref:System.ServiceModel.DataContractFormatAttribute>ve ' de kullanımı ve stil özelliklerinin nasıl kullanıldığını gösterir. Bu özellikler, iletilerin nasıl biçimlendirildiğini etkiler. Varsayılan olarak, ileti gövdesi olarak <xref:System.ServiceModel.OperationFormatStyle.Document>ayarlanmış stille biçimlendirilir. Bu ayarlar, hizmet sözleşmesi düzeyinde ya da işlem sözleşmesi düzeyinde belirlenebilir.
 
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
-<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> Style özelliği, WSDL hizmet meta verileri nasıl biçimlendirildiğini belirler. Olası değerler <xref:System.ServiceModel.OperationFormatStyle.Document>, ve <xref:System.ServiceModel.OperationFormatStyle.Rpc>. RPC uzak yordam çağrısı değilmiş gibi iletiler için bir işlem Değişimi WSDL gösterimini parametreleri içerdiğini belirtir. Bir örnek verilmiştir.
+<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> Style özelliği, hizmetin WSDL meta verilerinin nasıl biçimlendirildiğini belirler. Olası değerler, <xref:System.ServiceModel.OperationFormatStyle.Document>ve <xref:System.ServiceModel.OperationFormatStyle.Rpc>' dir. RPC, bir işlem için değiştirilen iletilerin WSDL gösteriminin, bir uzak yordam çağrımı gibi parametreler içerdiği anlamına gelir. Bir örnek verilmiştir.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -25,7 +25,7 @@ Bu örnek üzerinde kullanım ve stil özelliklerini kullanmayı gösteren <xref
 </wsdl:message>
 ```
 
-Style ayarını <xref:System.ServiceModel.OperationFormatStyle.Document> WSDL temsili bir işlem için aşağıdaki örnekte gösterildiği gibi değiştirilir belgeyi temsil eden tek bir öğe içerdiğini belirtir.
+Stilin ayarlanması, WSDL <xref:System.ServiceModel.OperationFormatStyle.Document> gösteriminin, aşağıdaki örnekte gösterildiği gibi bir işlem için değiştirilen belgeyi temsil eden tek bir öğe içerdiği anlamına gelir.
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -33,7 +33,7 @@ Style ayarını <xref:System.ServiceModel.OperationFormatStyle.Document> WSDL te
 </wsdl:message>
 ```
 
-<xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> Özelliği, ileti biçimi belirler. Olası değerler <xref:System.ServiceModel.OperationFormatUse.Literal> ve <xref:System.ServiceModel.OperationFormatUse.Encoded>; varsayılan değer <xref:System.ServiceModel.OperationFormatUse.Literal>. Değişmez değer anlamına gelir ileti aşağıdaki belge / sabit değer gösterildiği gibi WSDL şemada sabit bir örneğini olduğunu örnek.
+<xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> Özelliği iletinin biçimini belirler. Olası değerler şunlardır <xref:System.ServiceModel.OperationFormatUse.Literal> ve <xref:System.ServiceModel.OperationFormatUse.Encoded>varsayılan değerdir <xref:System.ServiceModel.OperationFormatUse.Literal>. Değişmez değer, aşağıdaki belge/değişmez örnekte gösterildiği gibi, WSDL 'deki şemanın değişmez bir örneği olduğu anlamına gelir.
 
 ```xml
 <Add xmlns="http://Microsoft.ServiceModel.Samples">
@@ -42,7 +42,7 @@ Style ayarını <xref:System.ServiceModel.OperationFormatStyle.Document> WSDL te
 </Add>
 ```
 
-SOAP 1.1 5 bölümüne bulunan kurallara göre kodlanmış soyut belirtimleri WSDL şemalarda olan kodlanmış. RPC/kodlanmış örneği verilmiştir.
+Kodlanan, WSDL 'deki şemaların SOAP 1,1 Bölüm 5 ' te bulunan kurallara göre kodlanan soyut belirtimlerdir. Aşağıda bir RPC/kodlanmış örnek verilmiştir.
 
 ```xml
 <q1:Add xmlns:q1="http://Microsoft.ServiceModel.Samples">
@@ -51,11 +51,11 @@ SOAP 1.1 5 bölümüne bulunan kurallara göre kodlanmış soyut belirtimleri WS
 </q1:Add>
 ```
 
-WS-ı temel Profil 1.0 kullanımını engeller <xref:System.ServiceModel.OperationFormatUse.Encoded> ve yalnızca bu eski Hizmetleri tarafından gerekli olduğunda kullanmalısınız. `Encoded` İleti biçimi, yalnızca kullanılabilir XmlSerializer kullanırken.
+WS-ı temel profil 1,0, kullanımını yasaklar <xref:System.ServiceModel.OperationFormatUse.Encoded> ve yalnızca eski hizmetler için gerektiğinde kullanmanız gerekir. `Encoded` İleti biçimi yalnızca XmlSerializer kullanılırken kullanılabilir.
 
-Gönderilen ve alınan iletileri görmek, izin vermek için bu örnek dayanır [izleme ve ileti günlüğe kaydetme](tracing-and-message-logging.md). İleti izleme ve kaydetme yazılımınız olması ve etkinleştirmek için hizmet yapılandırması ve kaynak kodu değiştirildi. Ayrıca, <xref:System.ServiceModel.WSHttpBinding> güvenlik olmadan, günlüğe kaydedilen iletilere şifresiz bir biçimde görüntülenebilir şekilde yapılandırıldı. Sonuçta elde edilen izleme günlükleri (System.ServiceModel.e2e ve Message.log) kullanarak görülmelidir [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md). İzlemeleri C:\LOGS klasöründe oluşturulması için yapılandırılır. Bu örneği çalıştırmadan önce klasörü oluşturun. İzleme Görüntüleyicisi aracı ileti içeriği görüntülemek için seçin **iletileri** sol ve sağ bölmeleri aracı.
+Gönderilen ve alınan iletileri görmenizi sağlamak için bu örnek, [izleme ve mesaj günlüğüne](tracing-and-message-logging.md)göre yapılır. Hizmet yapılandırması ve kaynak kodu, izleme ve ileti günlüğe kaydetme özelliğini etkinleştirmek ve kullanmak üzere değiştirilmiştir. Ayrıca <xref:System.ServiceModel.WSHttpBinding> , güvenlik olmadan yapılandırılmış, bu nedenle günlüğe kaydedilen iletiler şifresiz biçimde görüntülenebilir. Elde edilen izleme günlükleri (System. ServiceModel. e2e ve Message. log), [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenmelidir. İzlemeler C:\LOGS klasöründe oluşturulacak şekilde yapılandırılır. Örneği çalıştırmadan önce klasörü oluşturun. Izleme Görüntüleyici aracında ileti içeriğini görüntülemek için, aracın hem sol hem de sağ bölmesindeki **iletileri** seçin.
 
-Aşağıdaki kod ile hizmet sözleşmesini gösterir <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> özelliğini <xref:System.ServiceModel.OperationFormatUse> ve ileti gövdesi biçiminin varsayılandan <xref:System.ServiceModel.OperationFormatStyle> için <xref:System.ServiceModel.OperationFormatStyle.Document>.
+Aşağıdaki kod, <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> özelliği olarak <xref:System.ServiceModel.OperationFormatUse> ayarlanan hizmet sözleşmesini ve varsayılan <xref:System.ServiceModel.OperationFormatStyle> olarak olarak <xref:System.ServiceModel.OperationFormatStyle.Document>değiştirilen ileti gövdesinin biçimini gösterir.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
@@ -74,23 +74,23 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-Farklı arasındaki farkı görmek için <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarları, bunları hizmette değiştirmek, istemci yeniden, örneği çalıştırmak ve hizmet izleme Görüntüleyicisi aracı ile c:\logs\message.logs dosyasını inceleyin. Ayrıca görüntüleyerek meta veriler üzerindeki etkisini gözlemlemek `http://localhost/ServiceModelSamples/service.svc?wsdl`. Meta Veri Hizmetleri için genellikle birden çok sayfalarına ayrılmıştır. WSDL bağlamaları ana wsdl sayfa içeriyor, ancak görüntüleme `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` ileti tanımları gözlemleyin.
+Farklı <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> ve<xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> ayarlar arasındaki farkı görmek için, hizmette değişiklik yapın, istemciyi yeniden oluşturun, örneği çalıştırın ve c:\logs\Message.exe dosyasını hizmet izleme Görüntüleyicisi aracı ile inceleyin. Ayrıca, görüntüleme `http://localhost/ServiceModelSamples/service.svc?wsdl`yoluyla meta veriler üzerindeki etkiyi gözlemleyin. Hizmetler için meta veriler genellikle birden çok sayfaya ayrılmıştır. Ana WSDL sayfası WSDL bağlamalarını içerir, ancak ileti tanımlarını gözlemlemek için görünümünü görüntüleyin `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` .
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Günlük iletileri için bir C:\LOGS dizin oluşturun. Ağ hizmeti yazma izinleri bu dizin için kullanıcıya sağlayın.
+2. İletileri günlüğe kaydetmek için bir C:\LOGS dizini oluşturun. Bu dizin için Kullanıcı ağ hizmetine yazma izinleri verin.
 
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](building-the-samples.md).
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](running-the-samples.md).
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 > [!IMPORTANT]
-> Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

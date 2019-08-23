@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3dbd2ccca607869a6f28bc5b3bd1c9f0769db9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962584"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950076"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile DataSet İçindeki Hataları Görüntüleme
-Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> bir dataset ya da başka bir veri kaynağı içindeki sütun hataları görüntülemek için bileşen. İçin bir <xref:System.Windows.Forms.ErrorProvider> bir form üzerinde veri hataları görüntülemek için bileşen olacak şekilde yok doğrudan bir denetimle ilişkilendirilen. Bir veri kaynağına bağlandıktan sonra aynı veri kaynağına bağlı herhangi bir denetimi yanında bir hata simgesi görüntüleyebilirsiniz.  
+Bir veri kümesi veya başka <xref:System.Windows.Forms.ErrorProvider> bir veri kaynağı içindeki sütun hatalarını görüntülemek için Windows Forms bileşenini kullanabilirsiniz. <xref:System.Windows.Forms.ErrorProvider> Bir bileşenin veri hatalarını bir form üzerinde görüntülemesi için, bir denetimle doğrudan ilişkilendirilmesi gerekmez. Bir veri kaynağına bağlandıktan sonra, aynı veri kaynağına bağlanan herhangi bir denetimin yanında bir hata simgesi görüntülenebilir.  
   
 > [!NOTE]
->  Hata sağlayıcının değiştirirseniz <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> ve <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> özellikleri çalışma zamanında kullanmalıdır <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> çakışmalarını önlemek için yöntemi.  
+> Çalışma zamanında hata sağlayıcısının <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> ve <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> özelliklerini değiştirirseniz <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> , çakışmaları önlemek için yöntemini kullanmanız gerekir.  
   
-### <a name="to-display-data-errors"></a>Veri hataları görüntülemek için  
+### <a name="to-display-data-errors"></a>Veri hatalarını görüntüleme  
   
-1. Bileşen bir veri tablosu içinde belirli bir sütuna bağlama.  
+1. Bileşeni veri tablosu içindeki belirli bir sütuna bağlayın.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> bir 
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2. Ayarlama <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> forma özelliği.  
+2. <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Özelliğini form olarak ayarlayın.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> bir 
     errorProvider1.ContainerControl = this;  
     ```  
   
-3. Bir sütun hatasını içeren bir satır için geçerli kayıt konumunu ayarlayın.  
+3. Geçerli kaydın konumunu sütun hatası içeren bir satıra ayarlayın.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -65,4 +65,4 @@ Windows Forms kullanabileceğiniz <xref:System.Windows.Forms.ErrorProvider> bir 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ErrorProvider Bileşenine Genel Bakış](errorprovider-component-overview-windows-forms.md)
-- [Nasıl yapılır: Windows Forms ErrorProvider bileşeni ile Form doğrulama için hata simgeleri görüntüleme](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Nasıl yapılır: Windows Forms ErrorProvider Bileşeni ile form doğrulama için hata simgeleri görüntüle](display-error-icons-for-form-validation-with-wf-errorprovider.md)

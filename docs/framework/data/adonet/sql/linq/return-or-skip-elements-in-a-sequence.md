@@ -5,58 +5,58 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963854"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Dizideki Öğeleri Döndürme veya Atlama
-Kullanım <xref:System.Linq.Queryable.Take%2A> işleci bir dizideki öğeler, verilen sayıda dönün ve sonra kalanını atlayın.  
+<xref:System.Linq.Queryable.Take%2A> İşleci kullanarak bir dizide verilen sayıda öğeyi döndürün ve sonra kalanı atlayın.  
   
- Kullanım <xref:System.Linq.Queryable.Skip%2A> işleci bir dizideki öğelerin verilen bir sayının atlamayı ve sonra kalanı döndürür.  
+ Bir dizide verilen sayıda öğeyi atlamak için işlecinikullanınveardındankalanıgeridöndürün.<xref:System.Linq.Queryable.Skip%2A>  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 sorguları içinde kullanıldığında belirli sınırlamaları vardır. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+> <xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 ' de sorgularda kullanıldıkları bazı sınırlamalar vardır. Daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)içindeki "SQL Server 2000 'de özel durumları atla ve al" girişi.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirir <xref:System.Linq.Queryable.Skip%2A> SQL ile bir alt sorgu kullanarak `NOT EXISTS` yan tümcesi. Bu çeviri aşağıdaki sınırlamalara sahiptir:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Linq.Queryable.Skip%2A> SQL`NOT EXISTS` yan tümcesiyle bir alt sorgu kullanarak çevirir. Bu çeviri aşağıdaki sınırlamalara sahiptir:  
   
-- Bağımsız değişken bir küme olmalıdır. Multisets, sipariş bile desteklenmez.  
+- Bağımsız değişken bir küme olmalıdır. Sıralı olsa bile çoklu kümeler desteklenmez.  
   
-- Oluşturulan sorgu, üzerinde temel sorgu için oluşturulan sorgu çok daha karmaşık <xref:System.Linq.Queryable.Skip%2A> uygulanır. Bu karmaşıklığı, performans veya hatta bir zaman aşımı neden olabilir.  
+- Oluşturulan sorgu, üzerinde <xref:System.Linq.Queryable.Skip%2A> uygulanan temel sorgu için oluşturulan sorgudan çok daha karmaşık olabilir. Bu karmaşıklık, performans düşüşüyle ve hatta zaman aşımına neden olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Take` ilk beş seçilecek `Employees` işe. Koleksiyonun varsayılan olarak sıralanır Not `HireDate`.  
+ Aşağıdaki örnek, işe `Take` alınan ilk beş `Employees` ' u seçmek için kullanır. Koleksiyonun öncelikle tarafından `HireDate`sıralandığı unutulmamalıdır.  
   
  [!code-csharp[DLinqQueryExamples#16](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#16)]
  [!code-vb[DLinqQueryExamples#16](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#16)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Queryable.Skip%2A> en pahalı 10 tüm seçilecek `Products`.  
+ Aşağıdaki örnek, en <xref:System.Linq.Queryable.Skip%2A> pahalı `Products`10 dışında tümünü seçmek için kullanır.  
   
  [!code-csharp[DLinqQueryExamples#17](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#17)]
  [!code-vb[DLinqQueryExamples#17](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#17)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek birleştirir <xref:System.Linq.Queryable.Skip%2A> ve <xref:System.Linq.Queryable.Take%2A> ilk 50 kaydı atlayabilir ve ardından sonraki 10 döndürmek için yöntemleri.  
+ Aşağıdaki örnek, <xref:System.Linq.Queryable.Skip%2A> ve <xref:System.Linq.Queryable.Take%2A> yöntemlerini ilk 50 kaydı atlamak için birleştirir ve sonra sonraki 10 ' u döndürür.  
   
  [!code-csharp[DLinqQueryExamples#18](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#18)]
  [!code-vb[DLinqQueryExamples#18](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#18)]  
   
- <xref:System.Linq.Queryable.Take%2A> ve <xref:System.Linq.Queryable.Skip%2A> işlemlerdir sıralı kümelerine göre yalnızca iyi tanımlanmış. Sırasız kümeleri veya multisets semantiği tanımsızdır.  
+ <xref:System.Linq.Queryable.Take%2A>ve <xref:System.Linq.Queryable.Skip%2A> işlemler yalnızca sıralı kümelere karşı iyi tanımlanmış. Sıralanmamış kümeler veya birden çok küme semantiği tanımsızdır.  
   
- SQL'de sıralama sınırlamaları nedeniyle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bağımsız değişkeni sıralama taşımaya <xref:System.Linq.Queryable.Take%2A> veya <xref:System.Linq.Queryable.Skip%2A> işlecinin sonucunu işleci.  
+ SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 'de sıralama sınırlamaları nedeniyle, <xref:System.Linq.Queryable.Take%2A> veya <xref:System.Linq.Queryable.Skip%2A> işlecinin bağımsız değişkeninin sıralamasını işlecin sonucuna taşımaya çalışır.  
   
 > [!NOTE]
->  Çeviri, SQL Server 2000 ve SQL Server 2005 için farklıdır. Kullanmayı planlıyorsanız <xref:System.Linq.Queryable.Skip%2A> tüm karmaşıklığı sorgusu ile SQL Server 2005 kullanın.  
+> Çeviri SQL Server 2000 ve SQL Server 2005 için farklıdır. Herhangi bir karmaşıklık sorgusu ile <xref:System.Linq.Queryable.Skip%2A> kullanmayı planlıyorsanız SQL Server 2005 kullanın.  
   
- Aşağıdakileri göz önünde bulundurun [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL Server 2000 için sorgu:  
+ SQL Server 2000 için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki sorguyu göz önünde bulundurun:  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL kodunda sonuna aşağıdaki şekilde sıralama taşır:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sıralamayı SQL kodundaki sonuna aşağıdaki gibi gider:  
   
 ```  
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],  
@@ -74,9 +74,9 @@ WHERE (NOT (EXISTS(
 ORDER BY [t0].[CustomerID]  
 ```  
   
- Zaman <xref:System.Linq.Queryable.Take%2A> ve <xref:System.Linq.Queryable.Skip%2A> olan birbirine zincirlenmiş, tüm belirtilen sıralama tutarlı olması gerekir. Aksi takdirde, sonuçlar tanımsızdır.  
+ <xref:System.Linq.Queryable.Take%2A> Ve<xref:System.Linq.Queryable.Skip%2A> birlikte zincirlendiği zaman, belirtilen tüm sıralama tutarlı olmalıdır. Aksi takdirde, sonuçlar tanımsızdır.  
   
- Negatif olmayan için sabit tamsayı bağımsız değişkenleri temel SQL belirtimine her ikisi de <xref:System.Linq.Queryable.Take%2A> ve <xref:System.Linq.Queryable.Skip%2A> iyi tanımlanmış olması.  
+ SQL belirtimine dayalı negatif olmayan, sabit integral bağımsız değişkenleri için her ikisi <xref:System.Linq.Queryable.Take%2A> <xref:System.Linq.Queryable.Skip%2A> de iyi tanımlanmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

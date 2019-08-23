@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: 1434a859e4c4203aca44b491f139c30b9145c8e9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b0cccefc9ceb186a5278cc4cabbab58944bf44d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877064"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961781"
 ---
 # <a name="default-nettcpbinding"></a>Varsayılan NetTcpBinding
-Bu örnek, kullanımını gösterir. <xref:System.ServiceModel.NetTcpBinding> bağlama. Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet Konsolu uygulamalardır.  
+Bu örnek, <xref:System.ServiceModel.NetTcpBinding> bağlamanın kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Bu örnekte, hizmet kendiliğinden barındırılır. Hem istemci hem de hizmet konsol uygulamalardır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- İstemci ve hizmet yapılandırma dosyalarında bağlama belirtildi. Bağlama türü belirtilen `binding` özniteliği [ \<uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) aşağıdaki örnek yapılandırmada gösterildiği öğesi.  
+ Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği `binding` gibi [ \<Endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesinin özniteliğinde belirtilir.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Bu örnek, kullanımını gösterir. <xref:System.ServiceModel.NetTcpBinding> ba
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Önceki örneği kullanmak için bir uç nokta yapılandırma işlemi gösterilmektedir `netTcpBinding` varsayılan ayarlarla bağlama. Yapılandırmak istiyorsanız `netTcpBinding` bağlama ve bazıları, ayarları, bir bağlama yapılandırmasını tanımlamak gerekli değil. Uç nokta adı ile bağlama yapılandırması başvurmalıdır bir `bindingConfiguration` özniteliği. Bu örnekte, bağlama Yapılandırması adlı `Binding1` ve aşağıdaki örnek yapılandırmada gösterildiği gibi tanımlanmaktadır.  
+ Önceki örnekte, varsayılan ayarlarla `netTcpBinding` bağlamayı kullanmak için bir uç noktanın nasıl yapılandırılacağı gösterilmektedir. `netTcpBinding` Bağlamayı yapılandırmak ve bazı ayarlarını değiştirmek istiyorsanız, bir bağlama yapılandırması tanımlamanız gerekir. Uç nokta, bağlama yapılandırmasına ada göre bir `bindingConfiguration` özniteliği ile başvurmalıdır. Bu örnekte, bağlama yapılandırması adlandırılır `Binding1` ve aşağıdaki örnek yapılandırmada gösterildiği gibi tanımlanmıştır.  
   
 ```xml  
 <services>  
@@ -81,7 +81,7 @@ Bu örnek, kullanımını gösterir. <xref:System.ServiceModel.NetTcpBinding> ba
 </bindings>  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -92,22 +92,22 @@ Divide(22,7) = 3.14285714285714
 Press ENTER to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    >  Şirket içinde barındırılan bir sunucu olduğundan, istemcinin App.config dosyasında bir çapraz makine yapılandırmasında örneği çalıştırmak için bir kimlik belirtmelisiniz.  
+    >  Sunucu şirket içinde barındırıldığından, örneği bir çapraz makine yapılandırmasında çalıştırmak için istemcinin App. config dosyasında bir kimlik belirtmeniz gerekir.  
   
     ```xml  
     <client>  

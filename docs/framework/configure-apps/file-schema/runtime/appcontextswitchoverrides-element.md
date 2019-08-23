@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920918"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > öğesi
 Yeni işlevlere yönelik bir geri alma mekanizması sağlamak <xref:System.AppContext> için sınıfı tarafından kullanılan bir veya daha fazla anahtarı tanımlar.  
@@ -138,7 +138,7 @@ Yeni işlevlere yönelik bir geri alma mekanizması sağlamak <xref:System.AppCo
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Bileşik anahtarlarda boş anahtar sıralarının XSD şema doğrulaması tarafından yoksayılıp yoksayılmadığını denetler. Daha fazla bilgi için bkz [. azaltma: XML şema doğrulaması](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Bir uygulama yapılandırma dosyasına `AppContextSwitchOverrides` bir öğe eklemek yerine, `static` (ın C#) veya `Shared` (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metodunu çağırarak anahtarları program aracılığıyla da ayarlayabilirsiniz.  
+> Bir uygulama yapılandırma dosyasına `AppContextSwitchOverrides` bir öğe eklemek yerine, `static` (ın C#) veya `Shared` (Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> metodunu çağırarak anahtarları program aracılığıyla da ayarlayabilirsiniz.  
   
  Kitaplık geliştiricileri, arayanların, kitaplıklarının sonraki sürümlerinde tanıtılan değiştirilmiş işlevselliği devre dışı yapmasına izin vermek için özel anahtarlar da tanımlayabilir. Daha fazla bilgi için, <xref:System.AppContext> sınıfına bakın.  
   

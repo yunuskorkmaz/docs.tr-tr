@@ -2,18 +2,18 @@
 title: Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952584"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Gönderme İşlemleri için Önbellek Paylaşımı Düzeylerini Değiştirme
 Uzantı, önbellek paylaşım düzeylerini, kanal fabrikası önbelleğinin ayarlarını ve mesajlaşma etkinliklerini kullanarak <xref:System.ServiceModel.Activities.Send> hizmet uç noktalarına ileti gönderen iş akışları için kanal önbelleğinin ayarlarını özelleştirmenize olanak sağlar. <xref:System.ServiceModel.Activities.SendMessageChannelCache> Bu iş akışları genellikle istemci iş akışlarıdır ancak içinde barındırılan iş akışı Hizmetleri ayrıca olabilir bir <xref:System.ServiceModel.WorkflowServiceHost>. Kanal fabrikası önbelleğinde önbelleğe alınmış <xref:System.ServiceModel.ChannelFactory%601> nesneler bulunur. Kanal önbelleği, önbelleğe alınmış kanalları içerir.  
   
 > [!NOTE]
->  İş akışları ileti <xref:System.ServiceModel.Activities.Send> ya da parametre göndermek için mesajlaşma etkinliklerini kullanabilir. İş akışı çalışma zamanı, etkinlik ile <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Activities.Send> bir etkinlik kullandığınızda ve yalnızca bir <xref:System.ServiceModel.Activities.Send> etkinlik (Hayır <xref:System.ServiceModel.Activities.ReceiveReply>) kullandığınızda <xref:System.ServiceModel.Activities.ReceiveReply> , bir <xref:System.ServiceModel.Channels.IOutputChannel> türü kanallar oluşturan önbelleğe kanal fabrikaları ekler.  
+> İş akışları ileti <xref:System.ServiceModel.Activities.Send> ya da parametre göndermek için mesajlaşma etkinliklerini kullanabilir. İş akışı çalışma zamanı, etkinlik ile <xref:System.ServiceModel.Channels.IRequestChannel> <xref:System.ServiceModel.Activities.Send> bir etkinlik kullandığınızda ve yalnızca bir <xref:System.ServiceModel.Activities.Send> etkinlik (Hayır <xref:System.ServiceModel.Activities.ReceiveReply>) kullandığınızda <xref:System.ServiceModel.Activities.ReceiveReply> , bir <xref:System.ServiceModel.Channels.IOutputChannel> türü kanallar oluşturan önbelleğe kanal fabrikaları ekler.  
   
 ## <a name="the-cache-sharing-levels"></a>Önbellek paylaşım düzeyleri  
  Varsayılan olarak, ileti etkinlikleri tarafından <xref:System.ServiceModel.WorkflowServiceHost> <xref:System.ServiceModel.Activities.Send> kullanılan önbellek tarafından barındırılan bir iş akışında, <xref:System.ServiceModel.WorkflowServiceHost> (konak düzeyinde önbelleğe alma) içindeki tüm iş akışı örnekleri arasında paylaşılır. Tarafından barındırılmadığında bir istemci iş akışı için bir <xref:System.ServiceModel.WorkflowServiceHost>, önbelleğe yalnızca (örnek düzeyi önbelleğe alma) iş akışı örneği için kullanılabilir. Önbellek yalnızca, güvenli olmayan önbelleğe <xref:System.ServiceModel.Activities.Send> alma etkin olmadığı takdirde yapılandırmada tanımlanan uç noktaları kullanmayan etkinliklerde kullanılabilir.  

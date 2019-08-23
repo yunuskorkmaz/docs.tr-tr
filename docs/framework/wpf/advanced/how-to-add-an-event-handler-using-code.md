@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937466"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Nasıl yapılır: Kod Kullanarak bir Olay İşleyicisi Ekleme
 Bu örnek, kod kullanarak bir öğeye bir olay işleyicisinin nasıl ekleneceğini gösterir.  
@@ -35,7 +35,7 @@ Bu örnek, kod kullanarak bir öğeye bir olay işleyicisinin nasıl ekleneceği
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  İlk ayrıştırılmış [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfada bir olay işleyicisi eklemek çok basittir. Olay işleyicisini eklemek istediğiniz nesne öğesi içinde, işlemek istediğiniz olayın adıyla eşleşen bir öznitelik ekleyin. Sonra bu özniteliğin değerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfanın arka plan kod dosyasında tanımladığınız olay işleyicisi yönteminin adı olarak belirtin. Daha fazla bilgi için bkz. [xaml 'ye Genel Bakış (WPF)](xaml-overview-wpf.md) veya [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
+> İlk ayrıştırılmış [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfada bir olay işleyicisi eklemek çok basittir. Olay işleyicisini eklemek istediğiniz nesne öğesi içinde, işlemek istediğiniz olayın adıyla eşleşen bir öznitelik ekleyin. Sonra bu özniteliğin değerini, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sayfanın arka plan kod dosyasında tanımladığınız olay işleyicisi yönteminin adı olarak belirtin. Daha fazla bilgi için bkz. [xaml 'ye Genel Bakış (WPF)](xaml-overview-wpf.md) veya [yönlendirilmiş olaylara genel bakış](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

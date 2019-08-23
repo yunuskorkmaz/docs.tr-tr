@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772941"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963090"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType Yöntemi
-Türetilmiş tür belirtir <xref:System.AppDomainManager?displayProperty=nameWithType> sınıfının varsayılan uygulama etki alanı başlatmak için kullanılacak uygulama etki alanı yöneticisi.  
+Varsayılan uygulama etki alanını başlatmak için kullanılacak <xref:System.AppDomainManager?displayProperty=nameWithType> uygulama etki alanı yöneticisinin sınıfından türetilen türü belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,38 +37,38 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>Parametreler  
  `wszAppDomainManagerAssembly`  
- [in] Uygulama etki alanı yöneticisi türünü içeren derlemenin görünen adını; Örneğin: "AdMgrExample, sürüm 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3 =".  
+ 'ndaki Uygulama etki alanı yöneticisi türünü içeren derlemenin görünen adı; Örneğin: "Admgrexörnek, sürüm = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
   
  `wszAppDomainManagerType`  
- [in] Ad alanı dahil olmak üzere uygulama etki alanı yöneticisi türü adı.  
+ 'ndaki Ad alanı dahil olmak üzere uygulama etki alanı yöneticisinin tür adı.  
   
  `dwInitializeDomainFlags`  
- [in] Bir birleşimi [Eınitializenewdomainflags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) numaralandırma değerlerinin, uygulama etki alanı yöneticisi hakkında bilgi sağlar.  
+ 'ndaki Uygulama etki alanı Yöneticisi hakkında bilgi sağlayan [Eınitialenewdomainflags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) numaralandırma değerlerinin birleşimi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Şu anda yalnızca tanımlı bir değer için `dwInitializeDomainFlags` olduğu `eInitializeNewDomainFlags_NoSecurityChanges`, uygulama etki alanı yöneticisi yürütülmesi sırasında güvenlik ayarlarını değiştirmez ortak dil çalışma zamanı (CLR) söyleyen <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yöntemi. Koşul olan derlemeler yüklenmesi iyileştirmek CLR böylece <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği (APTCA). Bu derlemeler kümesini geçişli kapatılmasını büyükse, bu önemli bir iyileştirme başlangıç zamanında neden olabilir.  
+ Şu anda, için `dwInitializeDomainFlags` `eInitializeNewDomainFlags_NoSecurityChanges`tek tanımlı değer, uygulama etki alanı yöneticisi 'nin <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> yöntemin yürütülmesi sırasında güvenlik ayarlarını değiştirmeyeceğini belirten, ortak dil çalışma zamanına (CLR) bildirir. Bu, clr 'nin koşullu <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (aptca) özniteliğine sahip derlemelerin yüklenmesini iyileştirmek için izin verir. Bu derleme kümesinin geçişli kapanışı büyükse, bu, Başlangıç zamanında önemli bir gelişme yol açabilir.  
   
 > [!IMPORTANT]
->  Konak belirtiyorsa `eInitializeNewDomainFlags_NoSecurityChanges` uygulama etki alanı yöneticisi için bir <xref:System.InvalidOperationException> her türlü girişim uygulama etki alanının güvenliğini değiştirmek için yapılması durumunda oluşturulur.  
+> Ana bilgisayar uygulama etki `eInitializeNewDomainFlags_NoSecurityChanges` alanı Yöneticisi için belirtiyorsa, uygulama etki <xref:System.InvalidOperationException> alanının güvenliğini değiştirmek için herhangi bir girişimde bulunulduğunda bir oluşturulur.  
   
- Çağırma [Iclrcontrol::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)yöntemini çağırmaya eşdeğerdir `ICLRDomainManager::SetAppDomainManagerType` ile `eInitializeNewDomainFlags_None`.  
+ [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)metodunu çağırmak ile çağırma `ICLRDomainManager::SetAppDomainManagerType` ile `eInitializeNewDomainFlags_None`eşdeğerdir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

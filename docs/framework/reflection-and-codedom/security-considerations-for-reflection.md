@@ -12,105 +12,105 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660885"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956705"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 
-Yansıma üyelerine erişmek ve bu türler ve üyeler hakkında bilgi alma özelliği sağlar (diğer bir deyişle, yöntemler ve almak ve özellik ayarlamak için oluşturucuları çağırmak için değerleri, ekleyin ve olay işleyicilerini kaldırmak ve benzeri). Türler ve üyeler hakkında bilgi edinmek için yansıma kullanmak sınırlı değildir. Tüm kod, yansıma aşağıdaki görevleri gerçekleştirmek için kullanabilirsiniz:
+Yansıma, türler ve Üyeler hakkında bilgi elde etme ve üyelere erişme (diğer bir deyişle, yöntem ve oluşturucuları çağırmak, olay işleyicilerini eklemek ve kaldırmak, vb.) için bilgi alma özelliği sağlar. Türler ve Üyeler hakkında bilgi edinmek için yansıma kullanımı sınırlı değildir. Tüm kod, aşağıdaki görevleri gerçekleştirmek için yansıma kullanabilir:
 
-- Türleri ve üyeleri listeleme ve meta verilerinin inceleyin.
+- Türleri ve üyeleri numaralandırın ve bunların meta verilerini inceleyin.
 
-- Listeleme ve derlemeler ve modüller inceleyin.
+- Derlemeleri ve modülleri numaralandırın ve inceleyin.
 
-Üyelerine erişmek için yansıma kullanmak, aksine, sınırlamalara tabi olabilir. .NET Framework 4 ile başlayarak, yalnızca güvenilen kod güvenlik kritik üyelere erişim için yansıma kullanabilirsiniz. Ayrıca, yalnızca güvenilen kod, yansıma derlenmiş kodu doğrudan erişilebilir olmaz ortak olmayan üyelere erişmek için kullanabilirsiniz. Son olarak, güvenli kritik bir üyesine erişmek için yansımayı kullanan kod ile derlenmiş kodu olarak yalnızca güvenli kritik üye taleplerini izinlere olmalıdır.
+Üyelere, karşıtlığa göre erişmek için yansıma kullanımı, kısıtlamalara tabidir. .NET Framework 4 ' ten başlayarak, yalnızca güvenilir kod, güvenlik açısından kritik üyelere erişmek için yansıma kullanabilir. Ayrıca, yalnızca güvenilen kod, derlenmiş kod tarafından doğrudan erişilemeyen özel üyelere erişmek için yansıma kullanabilir. Son olarak, güvenli kritik bir üyeye erişmek için yansıma kullanan kodun, derlenmiş kod ile olduğu gibi, güvenli kritik üye taleplerine göre her türlü izni olması gerekir.
 
-Gerekli izinleri tabi kodu yansıma erişimi şu tür gerçekleştirmek için kullanabilirsiniz:
+Kod, gerekli izinlere bağlı olarak, aşağıdaki erişim türlerini gerçekleştirmek için yansıma kullanabilir:
 
-- Güvenlik açısından kritik olmayan erişim Genel üyeler.
+- Güvenlik açısından kritik olmayan ortak üyelere erişin.
 
-- Bu üyelere güvenlik açısından kritik değilse, derlenmiş kod, erişilebilir olabilecek erişim ortak olmayan üyeler. Böyle bir ortak olmayan üyeler örnekleri şunlardır:
+- Bu Üyeler güvenlik açısından kritik değilse, derlenmiş kod için erişilebilen özel üyelere erişin. Bu tür bir ortak üyenin örnekleri şunlardır:
 
-  - Çağıran kodun temel sınıflar korumalı üyeleri. (Yansıma, bu aile düzeyinde erişim adlandırılır.)
+  - Çağıran kodun temel sınıflarının korunan üyeleri. (Yansıma içinde bu, Aile düzeyinde erişim olarak adlandırılır.)
 
-  - `internal` Üyeler (`Friend` üyeleri Visual Basic'te) çağıran kodun derlemesi içindeki. (Yansıma, bu derleme düzeyinde erişim adlandırılır.)
+  - `internal`çağıran kodun`Friend` derlemesindeki Üyeler (Visual Basic Üyeler). (Yansıma içinde bu, derleme düzeyinde erişim olarak adlandırılır.)
 
-  - Özel üyeler, diğer örneklerin çağıran kod içeren sınıf.
+  - Çağıran kodu içeren sınıfın diğer örneklerinin özel üyeleri.
 
-Sürece, uygulama etki alanı ek izinler verir. Örneğin, bir koruma alanlı uygulama etki alanında çalışmasını kod bu listede tanımlanan erişim sınırlıdır.
+Örneğin, bir korumalı uygulama etki alanında çalıştırılan kod, uygulama etki alanı ek izin vermediği takdirde bu listede açıklanan erişimle sınırlıdır.
 
-.NET Framework 2.0 Service Pack 1 ile başlayarak, normalde erişilemeyen üyeler erişmeye artı hedef nesnenin izin kümesi için bir talep oluşturur <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı. Tam güven (örneğin, komut satırından başlatıldığında bir uygulamadaki kodu) ile çalışan kodu her zaman bu izinleri karşılayabilecek. (Güvenlik açısından kritik üyeleri erişimde sınırlamalar bu makalenin sonraki bölümlerinde açıklandığı gibi budur.)
+.NET Framework 2,0 Service Pack 1 ' den başlayarak, normalde erişilemeyen üyelere erişmeye çalışmak, hedef nesnenin <xref:System.Security.Permissions.ReflectionPermission> izin kümesi ve <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağıyla birlikte bir talep oluşturur. Tam güvenle çalışan kod (örneğin, komut satırından başlatılan bir uygulamadaki kod) bu izinleri her zaman karşılar. (Bu makalenin ilerleyen kısımlarında açıklandığı gibi, güvenlik açısından kritik üyelere erişme kısıtlamalarına tabidir.)
 
-İsteğe bağlı olarak, koruma alanlı uygulama etki alanı verebilirsiniz <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bölümünde açıklandığı gibi bayrak [erişme üyeleri emin olan normalde erişilemez](#accessingNormallyInaccessible), bu makalenin ilerleyen bölümlerinde.
+İsteğe bağlı olarak, bu makalenin ilerleyen kısımlarında <xref:System.Security.Permissions.ReflectionPermission> , [normalde erişilemeyen üyelere erişme](#accessingNormallyInaccessible)bölümünde açıklandığı gibi, korumalı bir uygulama etki alanı <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağa izin verebilir.
 
 <a name="accessingSecurityCritical"></a>
 
-## <a name="accessing-security-critical-members"></a>Güvenlik açısından kritik üyelerine erişme
+## <a name="accessing-security-critical-members"></a>Güvenlik açısından kritik üyelere erişme
 
-Üye güvenlik varsa kritik <xref:System.Security.SecurityCriticalAttribute>, olan bir türe ait <xref:System.Security.SecurityCriticalAttribute>, ya da güvenlik açısından kritik bir derlemede ise. .NET Framework 4 ile başlayarak, erişim güvenlik açısından kritik üyeleri için kurallar aşağıda belirtilmiştir:
+Bir üye, ' a sahip olan <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityCriticalAttribute>bir türe aitse veya güvenlik açısından kritik bir derlemede yer alıyorsa, güvenlik açısından kritik öneme sahiptir. .NET Framework 4 ' ten başlayarak, güvenlik açısından kritik üyelere erişim kuralları aşağıdaki gibidir:
 
-- Tam olarak güvenilen olsa bile saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız. A <xref:System.MethodAccessException>, <xref:System.FieldAccessException>, veya <xref:System.TypeAccessException> oluşturulur.
+- Saydam kod, kod tam güvenilir olsa bile, güvenlik açısından kritik üyelere erişmek için yansıma kullanamaz. <xref:System.MethodAccessException> ,<xref:System.FieldAccessException>Veya oluşturulur<xref:System.TypeAccessException> .
 
-- Kısmi güven ile çalışan kodu, saydam olarak kabul edilir.
+- Kısmi güvenle çalışan kod saydam olarak değerlendirilir.
 
-Güvenlik açısından kritik üyesi doğrudan derlenmiş kod tarafından erişilen veya yansıma kullanılarak erişilen bu kurallar aynıdır.
+Bu kurallar, bir güvenlik açısından kritik üyeye doğrudan derlenen kodla erişilip erişilmediği veya yansıma kullanılarak erişilen aynı.
 
-Komut satırından çalışan uygulama kodu, tam güven ile çalışır. Saydam olarak işaretlenmemiş sürece, güvenlik açısından kritik üyelere erişim için yansıma kullanabilirsiniz. (Örneğin, bir koruma alanlı uygulama etki alanında) kısmi güven ile aynı kodu çalıştırdığınızda derlemenin güven düzeyine güvenlik açısından kritik kod erişip erişemeyeceğini belirler: Derleme tanımlayıcı bir ada sahip ve genel derleme önbelleğinde yüklü ise güvenilen bir derleme olduğundan ve güvenlik açısından kritik üyelerini çağırabilirsiniz. Güvenilir değilse, saydam olarak işaretlenmedi ve güvenlik açısından kritik üyeleri erişemiyor karşın saydam olur.
+Komut satırından çalıştırılan uygulama kodu tam güvenle çalışır. Saydam olarak işaretlenmediği sürece, güvenlik açısından kritik üyelere erişmek için yansıma kullanabilir. Aynı kod kısmi güvenle (örneğin, bir korumalı uygulama etki alanında) çalıştırıldığında, derlemenin güven düzeyi, güvenlik açısından kritik koda erişip erişemeyeceğini belirler: Derlemenin tanımlayıcı bir adı varsa ve genel derleme önbelleğinde yüklüyse, bu güvenilir bir derlemedir ve güvenlik açısından kritik üyeleri çağırabilir. Güvenilmiyorsa, saydam olarak işaretlenmese bile saydam hale gelir ve güvenlik açısından kritik üyelere erişemez.
 
-.NET Framework 4 güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
+.NET Framework 4 ' teki güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
 
-## <a name="reflection-and-transparency"></a>Yansıma ve geçirgenlik
+## <a name="reflection-and-transparency"></a>Yansıma ve saydamlık
 
-Ortak dil çalışma zamanı, .NET Framework 4 ile başlayarak, bir türün veya derlemenin güven düzeyine ve uygulama etki alanının güven düzeyi gibi çeşitli unsurlardan üyeden saydamlık düzeyini belirler. Yansıma sağlar <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A>, ve <xref:System.Type.IsSecurityTransparent%2A> sağlamak saydamlık düzeyi bir tür bulmak özellikleri. Bu özelliklerin geçerli birleşimleri aşağıdaki tabloda gösterilmektedir.
+.NET Framework 4 ' ten başlayarak, ortak dil çalışma zamanı, derlemenin güven düzeyi ve uygulama etki alanının güven düzeyi dahil olmak üzere çeşitli faktörlerden bir türün veya üyenin saydamlık düzeyini belirler. Yansıma, bir <xref:System.Type.IsSecurityCritical%2A>türün <xref:System.Type.IsSecuritySafeCritical%2A>saydamlık düzeyini <xref:System.Type.IsSecurityTransparent%2A> bulmanızı sağlamak için, ve özelliklerini sağlar. Aşağıdaki tabloda bu özelliklerin geçerli birleşimleri gösterilmektedir.
 
 |Güvenlik düzeyi|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
 |Kritik|`true`|`false`|`false`|
-|Güvenli-kritik|`true`|`true`|`false`|
+|Güvenli kritik|`true`|`true`|`false`|
 |Geçirgen|`false`|`false`|`true`|
 
-Bu özellikleri kullanarak bir derlemeyi ve türleri güvenlik açıklamalarını incelemek, geçerli güven düzeyine denetimi ve çalışma zamanının kuralları oluşturmaya çalışırken daha çok daha kolaydır. Örneğin, bir koruma alanlı uygulama etki alanında çalıştırıldığında aynı türü güvenlik açısından kritik komut satırından çalıştırdığınızda ya da güvenlik açısından saydam olabilir.
+Bu özelliklerin kullanılması, bir derlemenin ve türlerin güvenlik ek açıklamalarını inceleyerek, geçerli güven düzeyini denetleyerek ve çalışma zamanının kurallarını çoğaltmaya çalışırken çok daha basittir. Örneğin, komut satırından çalıştırıldığında aynı tür güvenlik açısından kritik veya korumalı bir uygulama etki alanında çalıştırıldığında güvenlik açısından kritik olabilir.
 
-Benzer özellikleri vardır <xref:System.Reflection.MethodBase>, <xref:System.Reflection.FieldInfo>, <xref:System.Reflection.Emit.TypeBuilder>, <xref:System.Reflection.Emit.MethodBuilder>, ve <xref:System.Reflection.Emit.DynamicMethod> sınıfları. (Soyutlama diğer yansıma ve yansıma yayma, ilişkili yöntemler; Örneğin, özellikler için özellik erişimcileri uygulandıkları söz konusu olduğunda güvenlik öznitelikleri uygulanır.)
+<xref:System.Reflection.MethodBase>, ,,<xref:System.Reflection.FieldInfo>Ve sınıflarında<xref:System.Reflection.Emit.DynamicMethod> benzer özellikler vardır. <xref:System.Reflection.Emit.TypeBuilder> <xref:System.Reflection.Emit.MethodBuilder> (Diğer yansıma ve yansıma yayma soyutlamaları için, güvenlik öznitelikleri ilişkili yöntemlere uygulanır; Örneğin, özellikler söz konusu olduğunda özellik erişimcilerine uygulanırlar.)
 
 <a name="accessingNormallyInaccessible"></a>
 
-## <a name="accessing-members-that-are-normally-inaccessible"></a>Normalde erişilemez üyelerine erişme
+## <a name="accessing-members-that-are-normally-inaccessible"></a>Normalde erişilemeyen üyelere erişme
 
-Ortak dil çalışma zamanı erişilebilirlik kurallara göre erişilemeyen üyeler çağırmak için yansıma kullanmak için kodunuzu bir veya iki verilmesi gerekir:
+Ortak dil çalışma zamanının erişilebilirlik kurallarına göre erişilemeyen üyeleri çağırmak üzere yansıma kullanmak için, kodunuzun iki izinlerden birine verilmesi gerekir:
 
-- Ortak olmayan herhangi bir üye çağırmak için kodu izin verecek şekilde: kodunuzu verilmelidir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağı.
+- Kodun herhangi bir ortak üyeyi çağırmasına izin vermek için: kodunuz <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> bayrağıyla verilmelidir.
 
   > [!NOTE]
-  > Varsayılan olarak, güvenlik ilkesi, Internet'ten kaynaklanan kod bu izni engeller. Bu izne hiçbir zaman Internet'ten kaynaklanan kod verilmelidir.
+  > Varsayılan olarak, güvenlik ilkesi Internet 'ten kaynaklanan koda yönelik bu izni reddeder. Bu izin, Internet 'ten kaynaklanan koda hiçbir şekilde verilmemelidir.
 
-- Çağrılan üye içeren derleme izin kümesi ile aynı olduğu sürece, herhangi özel bir üye çağırmak için kodu veya bir alt kümesini, derleme izin kümesi izin vermek için çağıran kodu içerir: Kodunuzu verilmelidir <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağı.
+- Çağrılan üyeyi içeren derlemenin izin kümesi, çağıran kodu içeren derlemenin izin kümesi veya bir alt kümesiyle aynı olduğu sürece kodun herhangi bir ortak üyeyi çağırmasına izin vermek için: Kodunuz <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağıyla verilmelidir.
 
-Örneğin, Internet izinleri artı bir uygulama etki alanı verin varsayalım <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrak ve ardından bir Internet uygulaması iki derlemeleriyle A ve b çalıştırın
+Örneğin, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> bayrağını içeren bir uygulama etki alanı Internet izinleri ve sonra iki derleme ile bir Internet uygulaması (A ve B) ayarladığınızı varsayalım.
 
-- Derleme B izin kümesi A verilmedi herhangi bir izni içermediğinden derlemesi, derleme B özel üyelerine erişmek için yansıma kullanabilirsiniz.
+- Derleme A, derleme b 'nin izin kümesi, bir izin verilmeyen hiçbir izinleri içermediğinden, derleme B 'nin özel üyelerine erişmek için yansımayı kullanabilir.
 
-- Bir derleme yansıma mscorlib.dll tam olarak güvenilirdir ve bu nedenle A. derlemeye verilmemiş izinleri olduğundan, .NET Framework derlemeleri mscorlib.dll gibi özel üyelerine erişmek için kullanılamaz A <xref:System.MemberAccessException> kod erişimi güvenliği, çalışma zamanında yığın gösterilmektedir oluşturulur.
+- Derleme A, mscorlib. dll gibi .NET Framework derlemelerin özel üyelerine erişmek için yansıma kullanamaz, çünkü mscorlib. dll tam olarak güvenilirdir ve bu nedenle A derlemesine verilmemiş izinlere sahiptir. Kod <xref:System.MemberAccessException> erişim güvenliği yığına çalışma zamanında yol gösterecektir bir oluşturulur.
 
 ## <a name="serialization"></a>Serileştirme
 
-Seri hale getirme, <xref:System.Security.Permissions.SecurityPermission> ile <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> bayrağını alma ve erişilebilirlik bağımsız olarak seri hale getirilebilir türlerin üyelerini ayarlama olanağı sağlar. Bu izne bulmak ve bir örnek özel durumunu değiştirmek kod sağlar. (Uygun izinleri verilen ek olarak, türü olmalıdır [işaretlenmiş](../../../docs/standard/attributes/applying-attributes.md) meta verilerinde serileştirilebilir.)
+Serileştirme için, <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> bayrağı ile,, Erişilebilirlik ' in ne olursa olsun, seri hale getirilebilir türlerin üyelerini alma ve ayarlama yeteneği sağlar. Bu izin, kodun bir örneğin özel durumunu bulmasını ve değiştirmesini sağlar. (Uygun izinlerin verilmesinin yanı sıra, türün meta verilerde seri hale getirilebilir olarak [işaretlenmesi](../../standard/attributes/applying-attributes.md) gerekir.)
 
-## <a name="parameters-of-type-methodinfo"></a>Tür MethodInfo parametreleri
+## <a name="parameters-of-type-methodinfo"></a>MethodInfo türünde parametreler
 
-Genel üyeler Süren yazılmasını önlemek <xref:System.Reflection.MethodInfo> özellikle Güvenilen kod için parametreleri. Bu tür üyeleri için kötü amaçlı bir kodun daha savunmasız olabilir. Örneğin, bir ortak üye alan yüksek derecede güvenilen kodda düşünün bir <xref:System.Reflection.MethodInfo> parametresi. Genel üye dolaylı çağrı yaptığını varsayalım <xref:System.Reflection.MethodBase.Invoke%2A> sağlanan parametre yöntemi. Genel üye çağrısı gerekli izni denetimleri yapmazsa <xref:System.Reflection.MethodBase.Invoke%2A> yöntemi her zaman başarılı olur, güvenlik sistemi çağıran yüksek oranda güvenilir olduğunu belirlediğinden. Kötü amaçlı kod doğrudan yöntem çağırma izni yok olsa bile, yine de dolaylı olarak bu nedenle ortak üye çağrısı yaparak bunu yapabilirsiniz.
+Özellikle güvenilen kod için parametre alan <xref:System.Reflection.MethodInfo> genel üyelerin yazılmasından kaçının. Bu tür Üyeler kötü amaçlı koda karşı daha savunmasız olabilir. Örneğin, bir <xref:System.Reflection.MethodInfo> parametre alan, yüksek oranda güvenilen kodda ortak bir üyeyi göz önünde bulundurun. Ortak üyenin, <xref:System.Reflection.MethodBase.Invoke%2A> yöntemi sağlanan parametrede dolaylı olarak çağırdığını varsayın. Ortak üye gerekli izin denetimlerini gerçekleştirmiyorsa, güvenlik sistemi çağıranın son derece güvenilir olduğunu belirlediği <xref:System.Reflection.MethodBase.Invoke%2A> için yönteme yapılan çağrı her zaman başarılı olur. Kötü amaçlı kodun yöntemi doğrudan çağırmak için izni olmasa bile, ortak üyeyi çağırarak dolaylı olarak bu şekilde devam edebilir.
 
 ## <a name="version-information"></a>Sürüm Bilgileri
 
-- .NET Framework 4 ile başlayarak, saydam kod güvenlik kritik üyelere erişim için yansıma kullanamazsınız.
+- .NET Framework 4 ' ten başlayarak saydam kod, güvenlik açısından kritik üyelere erişmek için yansıma kullanamaz.
 
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrağı, .NET Framework 2.0 Hizmet Paketi 1'de sunulmuştur. .NET Framework'ün önceki sürümlerini gerektirir <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan üyelere erişmek için yansımayı kullanan kod için bayrak. Kısmen güvenilen koda hiçbir zaman verilen bir izni budur.
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> Bayrak, .NET Framework 2,0 hizmet paketi 1 ' de kullanıma sunulmuştur. .NET Framework önceki sürümleri, Özel üyelere erişmek <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> için yansıma kullanan kod için bayrak gerektirir. Bu, kısmen güvenilen koda asla verilmemesi gereken bir izindir.
 
-- .NET Framework 2.0 ile başlayarak, ortak olmayan türler ve üyeler hakkında bilgi edinmek için yansıma kullanarak herhangi bir izni gerekli değildir. Önceki sürümlerde <xref:System.Security.Permissions.ReflectionPermission> ile <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı gereklidir.
+- .NET Framework 2,0 ' den başlayarak, özel türler hakkında bilgi edinmek için yansıma kullanımı ve Üyeler herhangi bir izin gerektirmez. Önceki sürümlerde, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> bayrağı gereklidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -118,8 +118,8 @@ Genel üyeler Süren yazılmasını önlemek <xref:System.Reflection.MethodInfo>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
 - [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)
-- [Kod erişimi güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [Kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md)
 - [Yansıma Yaymadaki Güvenlik Sorunları](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Tür Bilgilerini Görüntüleme](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-- [Öznitelikleri Uygulama](../../../docs/standard/attributes/applying-attributes.md)
+- [Öznitelikleri Uygulama](../../standard/attributes/applying-attributes.md)
 - [Özel Özniteliklere Erişim](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

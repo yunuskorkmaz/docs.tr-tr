@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963801"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout Yöntemi
-Bir dize nesnesinin düzeni hakkındaki bilgileri alır. Bu yöntem .NET Framework 4'te kullanım dışıdır ve yerine geçen [Icorprofilerınfo3::getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) yöntemi.  
+Bir dize nesnesinin yerleşimi hakkında bilgi alır. Bu yöntem .NET Framework 4 ' te kullanım dışıdır ve yerine [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) yöntemi almıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,36 +38,36 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parametreler  
  `pBufferLengthOffset`  
- [out] İşaretçisi konumuna göre uzaklığı `ObjectID` dizenin uzunluğunu depolayan bir işaretçi. Uzunluğu olarak depolanan bir `DWORD`.  
+ dışı Dizenin uzunluğunu depolayan `ObjectID` işaretçiye göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
   
 > [!NOTE]
->  Bu parametre, dizenin uzunluğu kendisi değil arabellek uzunluğunu döndürür. Arabellek uzunluğu artık kullanılamıyor.  
+> Bu parametre, arabelleğin uzunluğunu değil, dizenin kendisinin uzunluğunu döndürür. Arabelleğin uzunluğu artık kullanılamıyor.  
   
  `PStringLengthOffset`  
- [out] İşaretçisi konumuna göre uzaklığı `ObjectID` dizenin uzunluğunu depolayan bir işaretçi. Uzunluğu olarak depolanan bir `DWORD`.  
+ dışı Dizenin kendisinin uzunluğunu depolayan `ObjectID` işaretçiye göre konum uzaklığına yönelik bir işaretçi. Uzunluk bir `DWORD`olarak depolanır.  
   
  `pBufferOffset`  
- [out] Göreli yolu arabellek uzaklığı için bir işaretçi `ObjectID` geniş karakter dizesini depolayan bir işaretçi.  
+ dışı Geniş karakter dizesini depolayan, `ObjectID` işaretçiye göre arabelleğin uzaklığına yönelik bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetStringLayout` Yöntemi göreli uzaklıkları alır `ObjectID` işaretçisinin konumları aşağıdaki depolanır:  
+ Yöntemi, aşağıdakilerin depolandığı konumların göreli `ObjectID` olarak kaydırmalarını alır: `GetStringLayout`  
   
-- Dizenin arabellek uzunluğu.  
+- Dize arabelleğinin uzunluğu.  
   
-- Dize uzunluğu.  
+- Dizenin kendisi için uzunluğu.  
   
-- Gerçek geniş karakter dizesini içeren arabellek.  
+- Geniş karakterlerden oluşan gerçek dizeyi içeren arabellek.  
   
- Null ile sonlandırılmış dizeler olabilir.  
+ Dizeler null ile sonlandırılmış olabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

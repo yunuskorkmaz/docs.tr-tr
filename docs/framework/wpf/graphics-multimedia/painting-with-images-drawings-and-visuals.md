@@ -12,36 +12,36 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 304499a6d6dd9d9f5fd51fc84044de5e50393762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e80132a5467f932e5569787f43427044ba2be256
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584739"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929603"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Görüntüler, Çizimler ve Görsellerle Boyama
-Bu konu nasıl kullanılacağını açıklar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> bir görüntü ile bir alanı boyama nesnelere bir <xref:System.Windows.Media.Drawing>, veya bir <xref:System.Windows.Media.Visual>.  
+Bu konu, bir görüntü, <xref:System.Windows.Media.ImageBrush>a <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Drawing>veya a <xref:System.Windows.Media.VisualBrush> <xref:System.Windows.Media.Visual>ile bir alanı boyamak için, ve nesnelerinin nasıl kullanılacağını açıklar.  
 
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Önkoşullar  
- Bu konuda anlamak için farklı türde fırçalar ile ilgili bilgi sahibi olmalısınız [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] sağlar ve temel özelliklerine. Bir giriş için bkz [WPF fırçalarına genel bakış](wpf-brushes-overview.md).  
+ Bu konuyu anlamak için, farklı fırça [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] türleri ve temel özellikleri hakkında bilgi sahibi olmanız gerekir. Giriş için [WPF Fırçalarına Genel Bakış](wpf-brushes-overview.md)bölümüne bakın.  
   
 <a name="image"></a>   
 ## <a name="paint-an-area-with-an-image"></a>Görüntü ile bir Alanı Boyama  
- Bir <xref:System.Windows.Media.ImageBrush> ile bir alanı boyar bir <xref:System.Windows.Media.ImageSource>. En yaygın türü <xref:System.Windows.Media.ImageSource> ile kullanılacak bir <xref:System.Windows.Media.ImageBrush> olduğu bir <xref:System.Windows.Media.Imaging.BitmapImage>, bit eşlem grafik açıklar. Kullanabileceğiniz bir <xref:System.Windows.Media.DrawingImage> kullanarak boyamak için bir <xref:System.Windows.Media.Drawing> kullanılacak nesne, ancak daha basittir bir <xref:System.Windows.Media.DrawingBrush> yerine. Hakkında daha fazla bilgi için <xref:System.Windows.Media.ImageSource> nesneleri bkz [Imaging genel bakış](imaging-overview.md).  
+ , İle bir alanı <xref:System.Windows.Media.ImageBrush>boyar. <xref:System.Windows.Media.ImageSource> <xref:System.Windows.Media.ImageSource> İle<xref:System.Windows.Media.ImageBrush> kullanmak için en yaygın türü bir bit eşlem grafiğini tanımlar <xref:System.Windows.Media.Imaging.BitmapImage>. Bir <xref:System.Windows.Media.DrawingImage> nesnesi<xref:System.Windows.Media.Drawing> kullanarak boyamak için kullanabilirsiniz, ancak <xref:System.Windows.Media.DrawingBrush> bunun yerine kullanmak daha basittir. Nesneler hakkında <xref:System.Windows.Media.ImageSource> daha fazla bilgi için bkz. [görüntülemeye genel bakış](imaging-overview.md).  
   
- İle boyama için bir <xref:System.Windows.Media.ImageBrush>, oluşturun bir <xref:System.Windows.Media.Imaging.BitmapImage> ve bit eşlem içeriği yüklemek için kullanın. Ardından, <xref:System.Windows.Media.Imaging.BitmapImage> ayarlanacak <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özelliği <xref:System.Windows.Media.ImageBrush>. Son olarak, uygulama <xref:System.Windows.Media.ImageBrush> istediğiniz boyamak için nesne.  İçinde [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], yalnızca ayarlayabilirsiniz <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özelliği <xref:System.Windows.Media.ImageBrush> yüklemek için görüntünün yola sahip.  
+ İle <xref:System.Windows.Media.ImageBrush>boyamak için, <xref:System.Windows.Media.Imaging.BitmapImage> oluşturun ve bit eşlem içeriğini yüklemek için kullanın. Ardından, <xref:System.Windows.Media.Imaging.BitmapImage> <xref:System.Windows.Media.ImageBrush.ImageSource%2A> özelliğini ayarlamakiçinöğesinikullanın.<xref:System.Windows.Media.ImageBrush> Son olarak, öğesini <xref:System.Windows.Media.ImageBrush> boyamak istediğiniz nesneye uygulayın.  ' [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]De, <xref:System.Windows.Media.ImageBrush.ImageSource%2A> öğesinin<xref:System.Windows.Media.ImageBrush> özelliğini yüklemek için görüntünün yoluyla da ayarlayabilirsiniz.  
   
- Tüm <xref:System.Windows.Media.Brush> nesneleri bir <xref:System.Windows.Media.ImageBrush> şekiller, paneller, denetimlerini ve metin gibi nesneleri boyamak için kullanılabilir. İle gerçekleştirilebilir bazı efektler aşağıdaki çizimde bir <xref:System.Windows.Media.ImageBrush>.  
+ Tüm <xref:System.Windows.Media.Brush> nesneler gibi <xref:System.Windows.Media.ImageBrush> , şekil, panel, denetim ve metin gibi nesneleri boyamak için kullanılabilir. Aşağıdaki çizimde, ile <xref:System.Windows.Media.ImageBrush>elde edilebilir bazı etkiler gösterilmektedir.  
   
- ![ImageBrush çıkış örnekler](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
-ImageBrush tarafından boyanan nesneleri  
+ ![ImageBrush çıkış örnekleri](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ImageBrush tarafından boyanan nesneler  
   
- Varsayılan olarak, bir <xref:System.Windows.Media.ImageBrush> uzatır tamamen alanı dolduracak şekilde görüntüsünü planı boyanmadan, görüntünün boyanan alanı resimden farklı bir en boy oranını varsa büyük olasılıkla bozulur. Değiştirerek bu davranışı değiştirebilirsiniz <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği varsayılan değerine <xref:System.Windows.Media.Stretch.Fill> için <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, veya <xref:System.Windows.Media.Stretch.UniformToFill>. Çünkü <xref:System.Windows.Media.ImageBrush> bir tür <xref:System.Windows.Media.TileBrush>, tam olarak bir resim fırçası çıkış alanı nasıl doldurduğunu belirtin ve hatta desenleri oluşturabilirsiniz. Gelişmiş hakkında daha fazla bilgi için <xref:System.Windows.Media.TileBrush> özellikler bkz [TileBrush'a Genel Bakış](tilebrush-overview.md).  
+ Varsayılan olarak, <xref:System.Windows.Media.ImageBrush> boyanmış alanı tamamen doldurmak için görüntüsünü uzatır, boyanmış alanın görüntüye göre farklı bir en boy oranı varsa görüntüyü deforme edin. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği varsayılan <xref:System.Windows.Media.Stretch.None> <xref:System.Windows.Media.Stretch.Fill> değerinden, veya<xref:System.Windows.Media.Stretch.Uniform>değerine değiştirerek bu davranışıdeğiştirebilirsiniz.<xref:System.Windows.Media.Stretch.UniformToFill> ,Bir<xref:System.Windows.Media.TileBrush>türü olduğundan, tam olarak bir görüntü fırçasının çıkış alanını nasıl doldurduğunu ve hatta desenler oluşturduğunu belirtebilirsiniz. <xref:System.Windows.Media.ImageBrush> Gelişmiş <xref:System.Windows.Media.TileBrush> özellikler hakkında daha fazla bilgi için bkz. [TileBrush 'e genel bakış](tilebrush-overview.md).  
   
 <a name="fillingpanelwithimage"></a>   
-## <a name="example-paint-an-object-with-a-bitmap-image"></a>Örnek: Bit eşlem görüntüsüne sahip bir nesne boyama  
- Aşağıdaki örnekte bir <xref:System.Windows.Media.ImageBrush> boyanacak <xref:System.Windows.Controls.Panel.Background%2A> , bir <xref:System.Windows.Controls.Canvas>.  
+## <a name="example-paint-an-object-with-a-bitmap-image"></a>Örnek: Bit eşlem resmi ile nesne boyama  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.Panel.Background%2A> ' a <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Controls.Canvas>boyamak için bir kullanır.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
@@ -50,30 +50,30 @@ ImageBrush tarafından boyanan nesneleri
   
 <a name="drawingbrushintro"></a>   
 ## <a name="paint-an-area-with-a-drawing"></a>Çizim ile bir Alanı Boyama  
- A <xref:System.Windows.Media.DrawingBrush> şekiller, metin, görüntü ve video ile bir alanı boyama sağlar. Şekilleri iç çizim Fırçası kendilerini boyanan bir düz renk, gradyan, görüntü, veya hatta başka bir <xref:System.Windows.Media.DrawingBrush>. Aşağıda bazı kullanımlarını gösterir bir <xref:System.Windows.Media.DrawingBrush>.  
+ Bir <xref:System.Windows.Media.DrawingBrush> alanı şekil, metin, resim ve video ile boyamanıza olanak sağlar. Çizim fırçasının içindeki şekillerin kendisi düz renk, gradyan, resim ve hatta başka <xref:System.Windows.Media.DrawingBrush>bir renkle boyanmaya başlayabilir. Aşağıdaki çizimde bazı bir <xref:System.Windows.Media.DrawingBrush>kullanımları gösterilmektedir.  
   
- ![DrawingBrush'ın örnek çıktı](./media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
-DrawingBrush tarafından boyanan nesneleri  
+ ![DrawingBrush çıkış örnekleri](./media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
+DrawingBrush tarafından boyanan nesneler  
   
- A <xref:System.Windows.Media.DrawingBrush> ile bir alanı boyar bir <xref:System.Windows.Media.Drawing> nesne. A <xref:System.Windows.Media.Drawing> nesne gibi bir şekil, bit eşlem, görüntü veya metin satırı görünür içeriği açıklar. Farklı türde çizimler içeriği farklı türleri açıklanmaktadır. Çizim nesneleri farklı türlerinin bir listesi verilmiştir.  
+ Bir <xref:System.Windows.Media.DrawingBrush> nesne<xref:System.Windows.Media.Drawing> ile bir alanı boyar. Bir <xref:System.Windows.Media.Drawing> nesne, şekil, bit eşlem, video veya metin satırı gibi görünür içerikleri açıklar. Farklı türdeki çizimler farklı içerik türlerini anlatmaktadır. Aşağıda, çizim nesnelerinin farklı türlerinin bir listesi verilmiştir.  
   
-- <xref:System.Windows.Media.GeometryDrawing> Bir şekil çizer.  
+- <xref:System.Windows.Media.GeometryDrawing>– Bir şekil çizer.  
   
-- <xref:System.Windows.Media.ImageDrawing> Resim çizer.  
+- <xref:System.Windows.Media.ImageDrawing>– Bir resim çizer.  
   
-- <xref:System.Windows.Media.GlyphRunDrawing> Metin çizer.  
+- <xref:System.Windows.Media.GlyphRunDrawing>– Metin çizer.  
   
-- <xref:System.Windows.Media.VideoDrawing> – Bir ses veya video dosyası çalar.  
+- <xref:System.Windows.Media.VideoDrawing>– Bir ses veya video dosyası çalar.  
   
-- <xref:System.Windows.Media.DrawingGroup> Diğer çizimler çizer. Çizim grubu, tek bir bileşik çizim diğer çizimlerini birleştirmek için kullanın.  
+- <xref:System.Windows.Media.DrawingGroup>– Diğer çizimleri çizer. Diğer çizimleri tek bileşik çizimde birleştirmek için bir çizim grubu kullanın.  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Media.Drawing> nesneleri bkz [çizim nesnelerine genel bakış](drawing-objects-overview.md).  
+ Nesneler hakkında <xref:System.Windows.Media.Drawing> daha fazla bilgi için bkz. [çizim nesnelerine genel bakış](drawing-objects-overview.md).  
   
- Gibi bir <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> uzatır kendi <xref:System.Windows.Media.DrawingBrush.Drawing%2A> , çıkış alanı dolduracak şekilde. Değiştirerek bu davranışı geçersiz kılabilirsiniz <xref:System.Windows.Media.TileBrush.Stretch%2A> kendi varsayılan özelliğinden <xref:System.Windows.Media.Stretch.Fill>. Daha fazla bilgi için <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği.  
+ Tıpkı bir <xref:System.Windows.Media.ImageBrush>gibi, <xref:System.Windows.Media.DrawingBrush> çıkış alanını <xref:System.Windows.Media.DrawingBrush.Drawing%2A> doldurmak için bir uzatılır. <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği varsayılan<xref:System.Windows.Media.Stretch.Fill>ayarından değiştirerek bu davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz <xref:System.Windows.Media.TileBrush.Stretch%2A> . özelliği.  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
-## <a name="example-paint-an-object-with-a-drawing"></a>Örnek: Çizim ile bir nesne boyama  
- Aşağıdaki örnek, üç elips çizim ile bir nesne boyama gösterilmektedir. A <xref:System.Windows.Media.GeometryDrawing> üç noktayı tanımlamak için kullanılır.  
+## <a name="example-paint-an-object-with-a-drawing"></a>Örnek: Çizim ile nesne boyama  
+ Aşağıdaki örnek, üç elips çizimi ile bir nesnenin nasıl boyanacağını gösterir. Bir <xref:System.Windows.Media.GeometryDrawing> , üç noktayı anlatmak için kullanılır.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
   
@@ -82,24 +82,24 @@ DrawingBrush tarafından boyanan nesneleri
   
 <a name="visualbrushsection"></a>   
 ## <a name="paint-an-area-with-a-visual"></a>Görsel ile bir Alanı Boyama  
- En verimli ve güçlü Fırçalar <xref:System.Windows.Media.VisualBrush> ile bir alanı boyar bir <xref:System.Windows.Media.Visual>. A <xref:System.Windows.Media.Visual> birçok faydalı grafik bileşen üst öğe hizmet veren düşük düzeyli bir grafik türü. Örneğin, <xref:System.Windows.Window>, <xref:System.Windows.FrameworkElement>, ve <xref:System.Windows.Controls.Control> sınıfları olmak üzere tüm tür <xref:System.Windows.Media.Visual> nesneleri. Kullanarak bir <xref:System.Windows.Media.VisualBrush>, neredeyse tüm alanları boyama yapabileceğiniz [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik nesnesi.  
+ Tüm fırçaların en çok yönlü ve güçlü olması, <xref:System.Windows.Media.VisualBrush> ile bir <xref:System.Windows.Media.Visual>alanı boyar. <xref:System.Windows.Media.Visual> , Çok sayıda faydalı grafik bileşeninin üst öğesi görevi gören alt düzey bir grafik türüdür. Örneğin <xref:System.Windows.Window> <xref:System.Windows.Media.Visual> ,, ve<xref:System.Windows.Controls.Control> sınıfları tüm nesne türlerdir. <xref:System.Windows.FrameworkElement> Bir <xref:System.Windows.Media.VisualBrush>kullanarak, neredeyse tüm [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] grafik nesneleri ile alan boyayabilirsiniz.  
   
 > [!NOTE]
->  Ancak <xref:System.Windows.Media.VisualBrush> bir tür <xref:System.Windows.Freezable> nesne olamaz dondurulmuş (salt okunur oluşturulmasıyla) kendi <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği ayarlanmış bir değere dışında `null`.  
+> Bir <xref:System.Windows.Media.VisualBrush> nesne<xref:System.Windows.Freezable> türü olsa da, <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği dışında `null`bir değere ayarlandığında dondurulamıyor (salt okunurdur).  
   
- Belirtmek için iki yolla <xref:System.Windows.Media.VisualBrush.Visual%2A> içeriğini bir <xref:System.Windows.Media.VisualBrush>.  
+ <xref:System.Windows.Media.VisualBrush.Visual%2A> İçeriğini belirtmekiçin<xref:System.Windows.Media.VisualBrush>iki yol vardır.  
   
-- Yeni bir <xref:System.Windows.Media.Visual> ve ayarlamak için kullanın <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliği <xref:System.Windows.Media.VisualBrush>. Bir örnek için bkz [örneği: Görsel içeren bir nesne boyama](#examplevisualbrush1) aşağıdaki bölümü.  
+- Yeni <xref:System.Windows.Media.Visual> bir oluşturun ve <xref:System.Windows.Media.VisualBrush.Visual%2A> özelliğini <xref:System.Windows.Media.VisualBrush>ayarlamak için kullanın. Örnek için bkz [. örnek: Aşağıdaki görsel](#examplevisualbrush1) bölüm ile bir nesneyi boyayın.  
   
-- Mevcut bir kullanın <xref:System.Windows.Media.Visual>, yinelenen bir hedef görüntüsü oluşturur <xref:System.Windows.Media.Visual>. Ardından <xref:System.Windows.Media.VisualBrush> yansıma ve büyütme gibi ilginç etkiler oluşturmak için. Bir örnek için bkz [örneği: Yansıma oluşturma](#examplevisualbrush2) bölümü.  
+- <xref:System.Windows.Media.Visual> Hedefin<xref:System.Windows.Media.Visual>yinelenen bir görüntüsünü oluşturan var olanı kullanın. Daha sonra, <xref:System.Windows.Media.VisualBrush> yansıma ve büyütme gibi ilginç etkileri oluşturmak için kullanabilirsiniz. Örnek için bkz [. örnek: Yansıma](#examplevisualbrush2) bölümü oluşturun.  
   
- Yeni bir tanımladığınızda <xref:System.Windows.Media.VisualBrush.Visual%2A> için bir <xref:System.Windows.Media.VisualBrush> ve <xref:System.Windows.Media.Visual> olduğu bir <xref:System.Windows.UIElement> (bir panel veya denetim gibi) düzen sistemi üzerinde çalıştığı <xref:System.Windows.UIElement> ve onun alt öğeleri, <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> özelliği `true`. Ancak, kök <xref:System.Windows.UIElement> aslında sistemin geri kalanından ayrı tutulur: stilleri ve dış düzeni bu sınır permeate olamaz. Bu nedenle açıkça kök boyutu belirtmelidir <xref:System.Windows.UIElement>, yalnızca üst olduğundan <xref:System.Windows.Media.VisualBrush> ve bu nedenle kendi boyanan bölgesine otomatik olarak boyutu olamaz. Düzeni hakkında daha fazla bilgi için [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], bkz: [Düzen](../advanced/layout.md).  
+ <xref:System.Windows.Media.VisualBrush.Visual%2A> Bir <xref:System.Windows.UIElement> <xref:System.Windows.UIElement> `true`için yeni bir tanımlar (örneğin <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> , bir panel veya denetim),, özelliği olarak ayarlandığında düzen sistemi ve onun alt öğeleri üzerinde çalışır. <xref:System.Windows.Media.Visual> <xref:System.Windows.Media.VisualBrush> Bununla birlikte, kök <xref:System.Windows.UIElement> aslında sistemin geri kalanından yalıtılmıştır: stiller ve dış düzen bu sınırı geçemez. Bu nedenle, yalnızca üst öğesi olduğu ve bu nedenle kendisini <xref:System.Windows.UIElement>boyanmış alana otomatik olarak boyutlandıramadığı için <xref:System.Windows.Media.VisualBrush> kök boyutunu açıkça belirtmeniz gerekir. İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]düzen hakkında daha fazla bilgi için, bkz. [Düzen](../advanced/layout.md).  
   
- Gibi <xref:System.Windows.Media.ImageBrush> ve <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush> içeriğini, çıkış alanı dolduracak şekilde uzatılır. Değiştirerek bu davranışı geçersiz kılabilirsiniz <xref:System.Windows.Media.TileBrush.Stretch%2A> kendi varsayılan özelliğinden <xref:System.Windows.Media.Stretch.Fill>. Daha fazla bilgi için <xref:System.Windows.Media.TileBrush.Stretch%2A> özelliği.  
+ Ve <xref:System.Windows.Media.ImageBrush> <xref:System.Windows.Media.VisualBrush> gibi, bir, kendi içeriğini, çıkış alanını dolduracak şekilde uzatır. <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.TileBrush.Stretch%2A> Özelliği varsayılan<xref:System.Windows.Media.Stretch.Fill>ayarından değiştirerek bu davranışı geçersiz kılabilirsiniz. Daha fazla bilgi için bkz <xref:System.Windows.Media.TileBrush.Stretch%2A> . özelliği.  
   
 <a name="examplevisualbrush1"></a>   
-## <a name="example-paint-an-object-with-a-visual"></a>Örnek: Nesnenin görsel ile Boyama  
- Aşağıdaki örnekte, çeşitli denetimler ve bir paneli, bir dikdörtgen boyamak için kullanılır.  
+## <a name="example-paint-an-object-with-a-visual"></a>Örnek: Görsel ile nesne boyama  
+ Aşağıdaki örnekte, bir dikdörtgeni boyamak için birkaç denetim ve panel kullanılır.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
   
@@ -108,30 +108,30 @@ DrawingBrush tarafından boyanan nesneleri
   
 <a name="examplevisualbrush2"></a>   
 ## <a name="example-create-a-reflection"></a>Örnek: Yansıma Oluşturma  
- Önceki örnekte gösterilen yeni bir oluşturma <xref:System.Windows.Media.Visual> için arka plan olarak kullanın. Ayrıca bir <xref:System.Windows.Media.VisualBrush> mevcut bir görselin; görüntülemek için bu özelliği, yansıma ve büyütme gibi ilgi çekici görsel efektler üretmek olanak tanır. Aşağıdaki örnekte bir <xref:System.Windows.Media.VisualBrush> yansımasını oluşturmak için bir <xref:System.Windows.Controls.Border> , çeşitli öğeleri içerir. Bu örneğin oluşturduğu çıktı aşağıda gösterilmiştir.  
+ Yukarıdaki örnekte, bir arka plan olarak kullanım için <xref:System.Windows.Media.Visual> yeni bir oluşturma yöntemi gösterildi. Ayrıca, var olan görseli <xref:System.Windows.Media.VisualBrush> göstermek için de kullanabilirsiniz; Bu özellik, yansıma ve büyütme gibi ilginç görsel etkiler üretmenizi sağlar. Aşağıdaki örnek, birkaç öğesi <xref:System.Windows.Media.VisualBrush> içeren bir <xref:System.Windows.Controls.Border> yansıması oluşturmak için bir kullanır. Aşağıdaki çizim, bu örneğin oluşturduğu çıktıyı gösterir.  
   
- ![Bir görsel nesne yansıtılan](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
-Yansıtılan bir görsel nesneyi  
+ ![Yansıtılan bir görsel nesne](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+Yansıtılan bir görsel nesne  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- Ekran bölümlerinin ve Oluştur yansımaları ek örnekler için bkz: [büyütüldüğünü](https://go.microsoft.com/fwlink/?LinkID=160049).  
+ Ekranın bölümlerini büyütme ve yansıma oluşturma işlemlerinin nasıl yapılacağını gösteren ek örnekler için, [VisualBrush örneğine](https://go.microsoft.com/fwlink/?LinkID=160049)bakın.  
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush Özellikleri  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, ve <xref:System.Windows.Media.VisualBrush> türleridir <xref:System.Windows.Media.TileBrush> nesneleri. <xref:System.Windows.Media.TileBrush> nesneleri, bir görüntü, çizim veya görsel ile bir alanı nasıl boyanacağını denetim harika bir fırsat sağlar. Örneğin, yalnızca tek bir esnetilen görüntü ile bir alanı boyama yerine, bir dizi deseni oluşturan resim kutucukları ile bir alanı boyama.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.TileBrush> ve <xref:System.Windows.Media.VisualBrush> , nesne türleridir. <xref:System.Windows.Media.TileBrush>nesneler, bir alanın görüntü, çizim veya görsel ile nasıl boyandığı hakkında harika bir denetim sağlar. Örneğin, yalnızca tek bir uzatılmış görüntüyle bir alanı boyamak yerine, bir model oluşturan bir dizi görüntü kutucuğa sahip bir alanı boyayabilirsiniz.  
   
- A <xref:System.Windows.Media.TileBrush> üç birincil bileşenden oluşur: içeriği, kutucuklar ve çıkış alanı.  
+ A <xref:System.Windows.Media.TileBrush> 'nın üç birincil bileşeni vardır: içerik, kutucuk ve çıktı alanı.  
   
  ![TileBrush bileşenleri](./media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
-TileBrush ile tek bir kutucuk bileşenleri  
+Tek bir kutucuğa sahip bir TileBrush bileşenleri  
   
- ![Döşenmiş TileBrush bileşenlerinin](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
-TileBrush ile birden çok kutucuk bileşenleri  
+ ![Döşeli bir TileBrush bileşenleri](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
+Birden çok kutucuk içeren bir TileBrush bileşenleri  
   
- Döşeme özellikleri hakkında daha fazla bilgi için <xref:System.Windows.Media.TileBrush> nesneleri bkz [TileBrush'a Genel Bakış](tilebrush-overview.md).  
+ <xref:System.Windows.Media.TileBrush> Nesnelerin döşeme özellikleri hakkında daha fazla bilgi için bkz. [TileBrush 'e genel bakış](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -145,5 +145,5 @@ TileBrush ile birden çok kutucuk bileşenleri
 - [Çizim Nesnelerine Genel Bakış](drawing-objects-overview.md)
 - [Opaklık Maskelerine Genel Bakış](opacity-masks-overview.md)
 - [WPF Grafik İşlemeye Genel Bakış](wpf-graphics-rendering-overview.md)
-- [ImageBrush Örneği](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [ImageBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush örneği](https://go.microsoft.com/fwlink/?LinkID=160049)

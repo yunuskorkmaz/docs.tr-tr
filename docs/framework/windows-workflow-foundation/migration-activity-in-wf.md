@@ -1,16 +1,16 @@
 ---
-title: WF etkinliğinde geçiş
+title: WF 'de geçiş etkinliği
 ms.date: 03/30/2017
 ms.assetid: 4ad46db7-5744-410e-8fac-6c3b325b1dd0
-ms.openlocfilehash: 3a32492bb252f6a1d763a0f53046aff567d39993
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26fdb80c081fc49986be6cba4c6df91ade8b0b66
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944726"
 ---
-# <a name="migration-activity-in-wf"></a>WF etkinliğinde geçiş
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] sağlar <xref:System.Activities.Statements.Interop> etkinliği temel alan bir iş akışındaki etkinlikten türetilen etkinlikleri yürütmek <xref:System.Activities.Activity>. Daha fazla bilgi için [geçiş kılavuzuna](migration-guidance.md) bölümü.  
+# <a name="migration-activity-in-wf"></a>WF 'de geçiş etkinliği
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], temelli bir iş akışı içindeki etkinlikten türetilen etkinlikleri yürütmeye yönelik <xref:System.Activities.Statements.Interop> etkinliği sağlar <xref:System.Activities.Activity>. Daha fazla bilgi için [Geçiş Kılavuzu](migration-guidance.md) bölümüne bakın.  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> İş akışının proje sahip olmadığı sürece etkinlik iş akışı Tasarımcısı araç kutusunda görünmüyor, **hedef Framework'ü** ayarının **.Net Framework 4** veya üzeri.
+> İş akışının projesi **hedef Framework** ayarı **.NET Framework 4** veya üzeri olarak ayarlanmadığı takdirde etkinlikişakışıTasarımcısıaraçkutusundagörünmez.<xref:System.Activities.Statements.Interop>

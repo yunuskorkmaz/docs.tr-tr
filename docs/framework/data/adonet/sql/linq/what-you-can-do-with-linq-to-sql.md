@@ -5,47 +5,47 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923935"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946617"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL ile Yapabilecekleriniz
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir SQL geliştirici olarak beklediğiniz tüm anahtar özelliklerini destekler. Bilgiler için Sorgulayabileceğiniz ve ekleme, güncelleştirme ve tablolarından bilgi Sil.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], bir SQL geliştiricisi olarak bekleeceğiniz tüm önemli özellikleri destekler. Bilgileri sorgulayabilir ve tablolardan bilgi ekleyebilir, güncelleştirebilir ve silebilirsiniz.  
   
 ## <a name="selecting"></a>Seçme  
- Seçme (*projeksiyon*) yalnızca yazarak elde edilen bir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] kendi programlama diliyle sorgulayın ve ardından sonuçları almak için bu sorguyu yürütme. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kendisini bilginiz gerekli SQL işlemleri gerekli tüm işlemlere çevirir. Daha fazla bilgi için [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ (*Projeksiyon*) seçeneği, yalnızca kendi programlama dilinizde bir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgu yazarak ve ardından sonuçları almak için bu sorguyu yürüterek elde edilir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], tüm gerekli işlemleri, bildiğiniz gerekli SQL işlemlerine dönüştürür. Daha fazla bilgi için bkz. [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
- Aşağıdaki örnekte, şirket adlarını londralı müşteriler alınır ve konsol penceresinde görüntülenir.  
+ Aşağıdaki örnekte, Londra 'daki müşterilerin şirket adları, konsol penceresinde alınır ve görüntülenir.  
   
  [!code-csharp[DLinqGettingStarted#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#1)]
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
   
-## <a name="inserting"></a>Ekleme  
- Bir SQL yürütme `Insert`, nesneleri oluşturduğunuz nesne modeli ve çağrı eklemeniz yeterlidir <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext>.  
+## <a name="inserting"></a>Takma  
+ Bir SQL `Insert`yürütmek için, yalnızca oluşturduğunuz nesne modeline nesne ekleyin ve üzerinde <xref:System.Data.Linq.DataContext>öğesini çağırın <xref:System.Data.Linq.DataContext.SubmitChanges%2A> .  
   
- Aşağıdaki örnekte, yeni müşteri ve müşteri hakkındaki bilgiler eklenen `Customers` kullanarak tablo <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>.  
+ Aşağıdaki örnekte, kullanarak `Customers` <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>tabloya yeni bir müşteri ve müşteri hakkındaki bilgiler eklenir.  
   
  [!code-csharp[DLinqGettingStarted#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#2)]
  [!code-vb[DLinqGettingStarted#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#2)]  
   
-## <a name="updating"></a>Güncelleştirme  
- İçin `Update` bir veritabanı girişi, ilk öğeyi almak ve doğrudan nesne modelinde düzenleyin. Nesne değiştirdikten sonra çağrı <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext> veritabanını güncellemek için.  
+## <a name="updating"></a>Bilen  
+ `Update` Bir veritabanı girişinde, önce öğeyi alın ve doğrudan nesne modelinde düzenleyin. Nesneyi değiştirdikten sonra, veritabanını güncelleştirmek <xref:System.Data.Linq.DataContext.SubmitChanges%2A> <xref:System.Data.Linq.DataContext> için üzerinde öğesini çağırın.  
   
- Aşağıdaki örnekte, Londra'dan tüm müşterileri alınır. Ardından şehir adı "London" "London – Metro için" değiştirilir. Son olarak, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> veritabanına değişiklikleri göndermek için çağrılır.  
+ Aşağıdaki örnekte, Londra 'dan gelen tüm müşteriler alınır. Ardından, şehir adı "Londra" iken "Londra-Metro" olarak değiştirilir. Son olarak <xref:System.Data.Linq.DataContext.SubmitChanges%2A> , değişiklikleri veritabanına göndermek için çağırılır.  
   
  [!code-csharp[DLinqGettingStarted#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#3)]
  [!code-vb[DLinqGettingStarted#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#3)]  
   
-## <a name="deleting"></a>Silme  
- İçin `Delete` , öğenin ait olduğu koleksiyon ve sonra çağrı öğesini kaldırmak <xref:System.Data.Linq.DataContext.SubmitChanges%2A> üzerinde <xref:System.Data.Linq.DataContext> değişikliği kaydetmek için.  
+## <a name="deleting"></a>Silinmesinden  
+ Bir `Delete` öğe için, öğeyi ait olduğu koleksiyondan kaldırın ve ardından değişikliği uygulamak <xref:System.Data.Linq.DataContext> için üzerinde öğesini çağırın <xref:System.Data.Linq.DataContext.SubmitChanges%2A> .  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Art arda silme işlemleri algılamaz. Bunlara karşı kısıtlamaları olan bir tablosunda bir satıra silmek istiyorsanız, bkz: [nasıl yapılır: Veritabanından satır silme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]basamaklı silme işlemlerini tanımıyor. Kısıtlama içeren bir tablodaki bir satırı silmek istiyorsanız, bkz [. nasıl yapılır: Veritabanından](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)satırları silin.  
   
- Aşağıdaki örnekte, olan müşteri `CustomerID` , `98128` veritabanından alınır. Ardından, müşteri satır alındığını onayladıktan sonra <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> o nesneyi koleksiyondan kaldırmak için çağrılır. Son olarak, <xref:System.Data.Linq.DataContext.SubmitChanges%2A> veritabanına silme iletmek için çağrılır.  
+ Aşağıdaki örnekte, çalıştıran müşteri `CustomerID` `98128` veritabanından alınır. Daha sonra, müşteri satırının alındığını onayladıktan sonra, <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> bu nesneyi koleksiyondan kaldırmak için çağırılır. Son olarak <xref:System.Data.Linq.DataContext.SubmitChanges%2A> , silme işlemini veritabanına iletmek için çağırılır.  
   
  [!code-csharp[DLinqGettingStarted#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#4)]
  [!code-vb[DLinqGettingStarted#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#4)]  

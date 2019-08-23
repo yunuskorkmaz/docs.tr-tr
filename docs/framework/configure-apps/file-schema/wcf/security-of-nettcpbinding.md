@@ -2,18 +2,18 @@
 title: <security> / <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04e7e94f47be37dc9c4cbf404a269b9784281d7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936615"
 ---
-# <a name="security-of-nettcpbinding"></a>\<Güvenlik >, \<netTcpBinding >
-Bir bağlama için güvenlik ayarlarını tanımlar.  
+# <a name="security-of-nettcpbinding"></a>\<\<NetTcpBinding > Güvenlik >
+Bağlama için güvenlik ayarlarını tanımlar.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<netTcpBinding>  
 \<bağlama >  
 \<Güvenlik >  
@@ -30,42 +30,42 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Geçerli değerler, aşağıda gösterilmiştir. Varsayılan değer `Transport` şeklindedir.<br /><br /> Bu öznitelik türünde <xref:System.ServiceModel.SecurityMode>.|  
+|mod|İsteğe bağlı. Uygulanan güvenlik türünü belirtir. Geçerli değerler aşağıda gösterilmiştir. Varsayılan değer `Transport` şeklindedir.<br /><br /> Bu öznitelik türü <xref:System.ServiceModel.SecurityMode>.|  
   
-## <a name="mode-attribute"></a>mod özniteliği  
+## <a name="mode-attribute"></a>mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |Yok.|Güvenlik devre dışı bırakıldı.|  
-|Taşıma|Aktarım güvenliği TLS TCP veya SPNego kullanılarak sağlanır. Hizmet, SSL sertifikalarıyla yapılandırılması gerekebilir. Bu mod koruma düzeyiyle denetlemek mümkündür.|  
-|İleti|SOAP ileti güveliği kullanarak güvenliği sağlanır. Varsayılan olarak, SOAP gövdesi imzalı ve şifrelenir. Çeşitli hizmet kimlik bilgilerini kullanmak için algoritma paketini olan bant dışı istemci kullanılabilir olup gibi özellikler, bu mod sunar ve ileti gövdesi uygulamak için koruma düzeyini. İstemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  
-|TransportWithMessageCredential|Aktarım güvenliği ile ileti güvenliği amacıyla birlikte çalışır. Aktarım güvenliği TCP veya SPNego üzerinden TLS tarafından sağlanır ve sunucu kimlik doğrulaması bütünlüğü ve gizliliği sağlar. SOAP ileti güvenliği, istemci kimlik doğrulaması sağlar. Varsayılan olarak, istemci kimlik doğrulaması, oturum başına bir kez gerçekleştirilir ve kimlik doğrulama sonuçlarını oturum süresi boyunca önbelleğe alınır.|  
+|Aktarım|Aktarım güvenliği TCP veya SPNego üzerinden TLS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekebilir. Koruma düzeyini Bu modla denetlemek mümkündür.|  
+|`Message`|Güvenlik, SOAP iletisi güvenliği kullanılarak sağlanır. Varsayılan olarak, SOAP gövdesi şifrelenir ve imzalanır. Bu mod, hizmet kimlik bilgilerinin, istemci bant dışı, kullanılacak algoritma paketini ve ileti gövdesine uygulanacak koruma düzeyini belirtir gibi çeşitli özellikler sunar. Oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
+|TransportWithMessageCredential|Aktarım güvenliği, ileti güvenliği ile birlikte gönderilir. Aktarım güvenliği TCP veya SPNego üzerinden TLS tarafından sağlanır ve bütünlük, gizlilik ve sunucu kimlik doğrulamasını sağlar. SOAP iletisi güvenliği istemci kimlik doğrulaması sağlar. Varsayılan olarak, oturum başına istemci kimlik doğrulaması gerçekleştirilir ve kimlik doğrulama sonuçları oturum süresince önbelleğe alınır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<taşıma >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nettcpbinding.md)|Taşıma için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<İleti >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe türünde <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|[\<Taşıma >](transport-of-nettcpbinding.md)|Taşımanın güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<ileti >](message-element-of-nettcpbinding.md)|İleti için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|bağlama|Bağlama öğesi [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).|  
+|bağlama|NetTcpBinding > bağlama öğesi. [ \<](nettcpbinding.md)|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Her standart bağlamaları parametreleri aktarımı güvenlik gereksinimleri kontrol etmek için sağlar. Bu parametreler, genelde ileti düzeyi veya aktarım düzeyi güvenlik kullanılıp kullanılmadığını ve istemci kimlik bilgisi türü seçimi belirlenen güvenlik modu içerir. Bu parametreleri mevcut bir kanal yığını uygun güvenlik ile oluşturulmuş seçenekleri seçimi temel.  
+ Standart bağlamaların her biri, aktarım güvenliği gereksinimlerini denetlemek için parametreler sağlar. Bu parametreler genellikle ileti düzeyi veya aktarım düzeyi güvenliğin kullanılıp kullanılmadığını ve istemci kimlik bilgisi türünü seçmesini belirten güvenlik modunu içerir. Bu parametrelerin mevcut seçeneklerinin seçimine bağlı olarak, uygun güvenlik ile bir kanal yığını oluşturulur.  
   
- Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bağlamalar, bazı yaygın senaryo gereksinimleri karşılamak için tasarlanan bir kümesidir. Her biri bu bağlamaları belirli bazı hedeflenen senaryoları için güvenlik gereksinimlerini belirtilmesine izin verir.  
+ Windows Communication Foundation (WCF) tarafından sağlanan sistem tarafından sağlanan bağlamalar, en yaygın senaryo gereksinimlerinin bazılarını karşılayacak şekilde tasarlanan bir kümesidir. Bu bağlamalardan her biri, belirli bir hedeflenmiş senaryolar için güvenlik gereksinimlerinin belirtilede olanak sağlar.  
   
- Bu yapılandırma öğesi için güvenlik özelliklerini sağlayan `netTcpBinding`. Çapraz makine haberleşmesi için güvenli, güvenilir ve iyileştirilmiş bağlama budur. Varsayılan olarak TCP ileti güvenliği ve kimlik doğrulaması, güvenilirlik ve ikili ileti kodlama WS-ReliableMessaging ileti teslimi ve Windows güvenliği destekleyen bir çalışma zamanı iletişim yığını oluşturur.  
+ Bu yapılandırma öğesi için `netTcpBinding`güvenlik belirtimleri sağlar. Bu, makineler arası iletişim için uygun, güvenli, güvenilir ve iyileştirilmiş bir bağlamadır. Varsayılan olarak, ileti teslimi için TCP ve ileti güvenliği ve kimlik doğrulaması için Windows güvenliği, güvenilirlik açısından WS-ReliableMessaging ve ikili ileti kodlaması için TCP destekleyen bir çalışma zamanı iletişim yığını oluşturur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -73,8 +73,8 @@ Bir bağlama için güvenlik ayarlarını tanımlar.
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)

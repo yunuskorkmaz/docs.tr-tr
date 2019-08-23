@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 5b4da744151d8b667c0f944b1a0d51d1251bfae5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a51381db71f528bf3cf25f5c84d18aee805c57e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948369"
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
-Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandırılacağını açıklar.  
+Bu konu, farklı senaryolar için ileti günlüğe kaydetmeyi nasıl yapılandırabileceğinizi açıklamaktadır.  
   
-## <a name="enabling-message-logging"></a>İleti günlüğe kaydetmeyi etkinleştirme  
- Windows Communication Foundation (WCF) iletilerini varsayılan olarak günlüğe kaydetmez. İleti günlüğe kaydetmeyi etkinleştirmek için bir izleme dinleyicisi için ekleme `System.ServiceModel.MessageLogging` kaynak izlemek ve ayarlamak için öznitelikler `<messagelogging>` yapılandırma dosyasındaki öğesi.  
+## <a name="enabling-message-logging"></a>Ileti günlüğe kaydetmeyi etkinleştirme  
+ Windows Communication Foundation (WCF) varsayılan olarak iletileri günlüğe eklemez. İleti günlüğe kaydetmeyi etkinleştirmek için `System.ServiceModel.MessageLogging` izleme kaynağına bir izleme dinleyicisi eklemeniz ve yapılandırma dosyasındaki `<messagelogging>` öğenin özniteliklerini ayarlamanız gerekir.  
   
- Aşağıdaki örnek, günlüğü etkinleştirmek ve ek seçenekleri belirlemek gösterilmektedir.  
+ Aşağıdaki örnek, günlüğü nasıl etkinleştireceğinizi ve ek seçenekler belirtmenizi gösterir.  
   
 ```xml  
 <system.diagnostics>  
@@ -45,83 +45,83 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
 </system.serviceModel>  
 ```  
   
- İleti günlüğe kaydetme ayarları hakkında daha fazla bilgi için bkz: [izleme ve ileti günlüğe kaydetme için önerilen ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ İleti günlüğe kaydetme ayarları hakkında daha fazla bilgi için bkz. [izleme ve Ileti günlüğe kaydetme Için önerilen ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
- Kullanabileceğiniz `add` adını ve kullanmak istediğiniz dinleyicisi türünü belirtmek için. Örnek yapılandırma, dinleyici "ileti" adlı ve standart .NET Framework İzleme dinleyicisi ekler (`System.Diagnostics.XmlWriterTraceListener`) olarak kullanılacak türü. Kullanırsanız `System.Diagnostics.XmlWriterTraceListener`, yapılandırma dosyasında çıktı dosyasının konumunu ve adını belirtmeniz gerekir. Bu ayarı gerçekleştirilir `initializeData` günlük dosyasının adı. Aksi takdirde, sistemin bir özel durum oluşturur. Ayrıca, bir varsayılan dosya günlükleri yayan özel bir dinleyici uygulayabilirsiniz.  
+ Kullanmak istediğiniz dinleyicinin adını ve türünü belirtmek için'ikullanabilirsiniz.`add` Örnek yapılandırmada, dinleyici "Messages" olarak adlandırılır ve standart .NET Framework İzleme dinleyicisini (`System.Diagnostics.XmlWriterTraceListener`) kullanılacak tür olarak ekler. `System.Diagnostics.XmlWriterTraceListener`Kullanıyorsanız, yapılandırma dosyasında çıkış dosyasının konumunu ve adını belirtmeniz gerekir. Bu, günlük dosyasının adı `initializeData` ayarlanarak yapılır. Aksi takdirde, sistem bir özel durum oluşturur. Günlükleri varsayılan bir dosyaya yayan özel bir dinleyici da uygulayabilirsiniz.  
   
 > [!NOTE]
->  Günlüğe ileti kaydetme disk alanı eriştiğinden, belirli bir hizmet için diske yazılan iletilerin sayısını sınırlamanız gerekir. İleti sınırına ulaşıldığında, bilgi düzeyinde bir izleme oluşturulur ve tüm ileti günlüğe kaydetme etkinliklerini durdurun.  
+> İleti günlüğe kaydetme disk alanına eriştiği için belirli bir hizmet için diske yazılan ileti sayısını sınırlamanız gerekir. İleti sınırına ulaşıldığında, bilgi düzeyindeki bir izleme oluşturulur ve tüm ileti günlüğü etkinlikleri durur.  
   
- Ek seçenekler yanı sıra, günlüğe kaydetme düzeyi günlük düzeyi ve Seçenekleri bölümünde ele alınmıştır.  
+ Günlüğe kaydetme düzeyi ve ek seçenekler, günlük düzeyi ve seçenekler bölümünde ele alınmıştır.  
   
- `switchValue` Özniteliği bir `source` yalnızca izleme için geçerlidir. Belirtirseniz bir `switchValue` özniteliğini `System.ServiceModel.MessageLogging` izleme kaynağı olarak izler, hiçbir etkisi olmaz.  
+ `switchValue` Öğesininözniteliği`source` yalnızca izleme için geçerlidir. İzleme`System.ServiceModel.MessageLogging` kaynağı için aşağıdaki `switchValue` gibi bir öznitelik belirtirseniz, hiçbir etkisi olmaz.  
   
 ```xml  
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- İzleme kaynağı devre dışı bırakmak isterseniz, kullanması gereken `logMessagesAtServiceLevel`, `logMalformedMessages`, ve `logMessagesAtTransportLevel` özniteliklerini `messageLogging` öğe yerine. Bu öznitelikler ayarlayın `false`. Bu, önceki kod örneğinde, yapılandırma dosyası kullanarak yapılandırma Düzenleyicisi kullanıcı Arabirimi arabirimi aracılığıyla veya WMI kullanılarak yapılabilir. Yapılandırma Düzenleyicisi araç hakkında daha fazla bilgi için bkz: [Yapılandırma Aracı (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). WMI hakkında daha fazla bilgi için bkz. [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ İzleme kaynağını devre dışı bırakmak istiyorsanız, `logMessagesAtServiceLevel`bunun yerine `messageLogging` öğesinin, `logMalformedMessages`ve `logMessagesAtTransportLevel` özniteliklerini kullanmanız gerekir. Tüm bu öznitelikleri olarak `false`ayarlamanız gerekir. Bu, önceki kod örnekteki yapılandırma dosyası kullanılarak, yapılandırma Düzenleyicisi Kullanıcı arabirimi arabiriminden veya WMI kullanılarak yapılabilir. Yapılandırma Düzenleyicisi aracı hakkında daha fazla bilgi için bkz. [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). WMI hakkında daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
-## <a name="logging-levels-and-options"></a>Günlüğe kaydetme düzeylerini ve seçenekleri  
- Gelen iletiler için günlük hemen ileti hizmet düzeyi kullanıcı kodu alır. önce hemen ileti, biçimlendirilmiş sonra ve yanlış biçimlendirilmiş iletiler algılandığında gerçekleşir.  
+## <a name="logging-levels-and-options"></a>Günlük düzeyleri ve Seçenekler  
+ Gelen iletilerde, ileti oluşturulduktan hemen sonra ileti, hizmet düzeyindeki Kullanıcı koduna girmeden ve hatalı biçimlendirilmiş iletiler algılandığında anında gerçekleşir.  
   
- Giden iletiler için günlük ileti, kullanıcı kodu hemen ayrıldığında ve kablo iletisi göründükten hemen önce gerçekleşir.  
+ Giden iletiler için günlüğe kaydetme, ileti, kullanıcı kodundan ayrıldıktan hemen sonra ve ileti kablodan geçmeden hemen önce gerçekleşir.  
   
- WCF iki farklı düzeyleri, hizmet ve aktarım iletileri günlüğe kaydeder. Yanlış biçimlendirilmiş iletiler de günlüğe kaydedilir. Üç kategoriye birbirinden bağımsızdır ve yapılandırmada ayrı olarak etkinleştirilebilir.  
+ WCF, iletileri iki farklı düzeyde, hizmette ve aktarımda günlüğe kaydeder. Hatalı biçimlendirilmiş iletiler de günlüğe kaydedilir. Üç kategori birbirinden bağımsızdır ve yapılandırmada ayrı olarak etkinleştirilebilir.  
   
- Ayarlayarak günlüğe kaydetme düzeyini denetleyebilirsiniz `logMessagesAtServiceLevel`, `logMalformedMessages`, ve `logMessagesAtTransportLevel` özniteliklerini `messageLogging` öğesi.  
+ `logMessagesAtServiceLevel` Öğesinin,`logMalformedMessages` ve`logMessagesAtTransportLevel` özniteliklerini ayarlayarak günlüğe kaydetme düzeyini kontrol edebilirsiniz. `messageLogging`  
   
 ### <a name="service-level"></a>Hizmet düzeyi  
- Bu katmanda günlüğe ileti olan hakkında (alan)'ı girmenizi ya da (gönderme) bırakın kullanıcı kodu. Filtreler tanımladıysanız, filtrelerle eşleşen iletileri günlüğe kaydedilir. Aksi takdirde, hizmet düzeyinde tüm iletileri günlüğe kaydedilir. Altyapı iletileri (işlem, eş kanalı ve güvenlik), bu düzeyde güvenilir Mesajlaşma iletileri dışında da kaydedilir. Akış iletileri, yalnızca üst bilgileri günlüğe kaydedilir. Ayrıca, bu düzeyde şifresi güvenli iletiler kaydedilir.  
+ Bu katmanda günlüğe kaydedilen iletiler, Kullanıcı kodu girmek için (alma sırasında) veya ayrılmaya (gönderme sırasında). Filtreler tanımlanmışsa, yalnızca filtrelerle eşleşen iletiler günlüğe kaydedilir. Aksi takdirde, hizmet düzeyindeki tüm iletiler günlüğe kaydedilir. Altyapı iletileri (işlemler, eş kanal ve güvenlik), güvenilir mesajlaşma iletileri dışında bu düzeyde de günlüğe kaydedilir. Akışlı iletilerde yalnızca üstbilgiler günlüğe kaydedilir. Ayrıca, güvenli iletilerin şifresi bu düzeyde çözülür.  
   
 ### <a name="transport-level"></a>Aktarım düzeyi  
- Bu katmanda günlüğe ileti kodlanması veya için veya kablo üzerinde nakliye sonra çözülmüş hazırsınız. Filtreler tanımladıysanız, filtrelerle eşleşen iletileri günlüğe kaydedilir. Aksi takdirde aktarım katmanında tüm iletileri günlüğe kaydedilir. Tüm altyapı iletileri güvenilir Mesajlaşma iletileri de dahil olmak üzere bu katmanda günlüğe kaydedilir. Akış iletileri, yalnızca üst bilgileri günlüğe kaydedilir. Ayrıca, güvenli iletiler, eğer dışında bu düzeyde HTTPS kullanılan gibi güvenli aktarım şifreli günlüğe kaydedilir.  
+ Bu katmanda günlüğe kaydedilen iletiler, hattaki taşıma için veya sonrasında kodlanacak veya kodu çözülecek şekilde hazırlanmaya yöneliktir. Filtreler tanımlanmışsa, yalnızca filtrelerle eşleşen iletiler günlüğe kaydedilir. Aksi halde, aktarım katmanındaki tüm iletiler günlüğe kaydedilir. Tüm altyapı iletileri, güvenilir mesajlaşma iletileri de dahil olmak üzere bu katmanda günlüğe kaydedilir. Akışlı iletilerde yalnızca üstbilgiler günlüğe kaydedilir. Ayrıca, HTTPS gibi güvenli bir aktarım kullanılması dışında, güvenli iletiler bu düzeyde şifreli olarak kaydedilir.  
   
-### <a name="malformed-level"></a>Hatalı biçimlendirilmiş düzeyi  
- Hatalı biçimlendirilmiş iletilerin WCF yığını tarafından herhangi bir işleme aşamasında reddedilir iletileri ' dir. Hatalı biçimlendirilmiş iletilerin kaydedilip olarak-olduğu: bunu uygun olmayan XML vb. ile olmaları durumunda şifreli. `maxSizeOfMessageToLog` CDATA günlüğe kaydedilecek ileti boyutu tanımlı. Varsayılan olarak, `maxSizeOfMessageToLog` 256 K eşittir. Bu özniteliği hakkında daha fazla bilgi için diğer seçenekleri bölümüne bakın.  
+### <a name="malformed-level"></a>Hatalı biçimlendirilmiş düzey  
+ Hatalı biçimlendirilmiş iletiler, herhangi bir işleme aşamasında WCF yığını tarafından reddedilen iletilerdir. Hatalı biçimlendirilmiş iletiler, olarak kaydedilir: Bu durumda, uygun olmayan XML ile, vb. için şifrelenir. `maxSizeOfMessageToLog`CDATA olarak günlüğe kaydedilecek iletinin boyutu tanımlanır. Varsayılan olarak, `maxSizeOfMessageToLog` 256k ' e eşittir. Bu öznitelik hakkında daha fazla bilgi için diğer seçenekler bölümüne bakın.  
   
-### <a name="other-options"></a>Diğer Seçenekler  
- Günlük düzeylerini ek olarak, kullanıcı, aşağıdaki seçenekleri belirtebilirsiniz:  
+### <a name="other-options"></a>Diğer seçenekler  
+ Kullanıcı, günlük düzeylerine ek olarak aşağıdaki seçenekleri belirtebilir:  
   
-- Tüm ileti (`logEntireMessage` öznitelik): Bu değer, iletinin tamamı (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirtir. Varsayılan değer `false`, yani yalnızca üstbilgisi günlüğe kaydedilir. Bu ayar, hizmet ve aktarım ileti günlüğe kaydetme düzeylerini etkiler...  
+- Tüm iletiyi Kaydet (`logEntireMessage` öznitelik): Bu değer, iletinin tamamının (ileti üst bilgisi ve gövdesi) günlüğe kaydedilip kaydedilmeyeceğini belirtir. Varsayılan değer `false`, yani yalnızca üstbilginin günlüğe kaydedildiği anlamına gelir. Bu ayar, hizmet ve aktarım iletisi günlük düzeylerini etkiler.  
   
-- Günlüğe kaydedilecek en yüksek ileti (`maxMessagesToLog` öznitelik): Günlüğe kaydedilecek ileti sayısı bu değeri belirtir. Bu kota hesaplamanıza dahil tüm iletileri (hizmet, taşıma ve yanlış biçimlendirilmiş iletiler) sayılır. Kotasına ulaşıldığında izleme yayılır ve hiçbir ek ileti günlüğe kaydedilir. Varsayılan değer 10000'dir.  
+- Günlüğe kaydedilecek en fazla ileti`maxMessagesToLog` (öznitelik): Bu değer, günlüğe kaydedilecek en fazla ileti sayısını belirtir. Tüm iletiler (hizmet, aktarım ve hatalı biçimlendirilmiş iletiler) bu kotanın altında sayılır. Kotaya ulaşıldığında, bir izleme yayınlanır ve başka bir ileti günlüğe kaydedilmez. Varsayılan değer 10000 ' dir.  
   
-- Günlüğe kaydedilecek ileti en büyük boyutunu (`maxSizeOfMessageToLog` öznitelik): Bu değer, bayt cinsinden günlüğe kaydedilecek ileti en büyük boyutunu belirtir. Boyut sınırını aşan iletiler günlüğe ve başka bir etkinliği o ileti için gerçekleştirilir. Bu ayar, tüm izleme düzeylerini etkiler. ServiceModel izleme açıksa, bir uyarı düzeyi izleme ilk günlüğe kaydetme (ServiceModelSend * veya TransportReceive) kullanıcıya bildirmek için noktada yayılır. Yanlış biçimlendirilmiş iletiler için varsayılan değer 4 K olsa da hizmet düzeyi ve aktarım düzeyi iletiler için varsayılan değer 256 K ' dir.  
+- Günlüğe kaydedilecek iletinin en büyük boyutu (`maxSizeOfMessageToLog` öznitelik): Bu değer, bayt cinsinden günlüğe kaydedilecek en büyük ileti boyutunu belirtir. Boyut sınırını aşan iletiler günlüğe kaydedilmez ve bu ileti için başka bir etkinlik gerçekleştirilmez. Bu ayar tüm izleme düzeylerini etkiler. ServiceModel izleme açık ise, kullanıcıya bildirimde bulunan ilk günlük noktasında (ServiceModelSend * veya TransportReceive) bir uyarı düzeyi izleme yayınlanır. Hizmet düzeyi ve aktarım düzeyi iletileri için varsayılan değer 256K, ancak hatalı biçimlendirilmiş iletiler için varsayılan değer 4K olur.  
   
     > [!CAUTION]
-    >  Karşılaştırılacak hesaplanan ileti boyutu `maxSizeOfMessageToLog` serileştirme önce bellekte ileti boyutu. Bu boyut günlüğe kaydedilir ve birçok yerde gerçek boyutundan daha büyük ileti dizesinin gerçek uzunluk farklı olabilir. Sonuç olarak, iletileri günlüğe kaydedilmeyebilir. İçin bu olgu belirterek hesabının `maxSizeOfMessageToLog` için öznitelik %10 beklenen bir ileti boyuttan daha büyük olmalıdır. Ayrıca, hatalı biçimlendirilmiş iletilerin kaydedilip, ileti günlüklerini tarafından kullanılan gerçek disk alanı tarafından belirtilen değere boyutunu en fazla 5 kez olabilir `maxSizeOfMessageToLog`.  
+    >  Karşılaştırma `maxSizeOfMessageToLog` için hesaplanan ileti boyutu, Serileştirmeden önce bellekteki ileti boyutudur. Bu boyut, günlüğe kaydedilen ileti dizesinin gerçek uzunluğundan farklı olabilir ve birçok durumda gerçek boyuttan daha büyük olur. Sonuç olarak, iletiler günlüğe kaydedilmez. Bu olguyu, `maxSizeOfMessageToLog` beklenen ileti boyutundan% 10 daha büyük olacak özniteliği belirterek yapabilirsiniz. Ayrıca, hatalı biçimlendirilmiş iletiler günlüğe kaydedilir, ileti günlükleri tarafından kullanılan gerçek disk alanı, tarafından `maxSizeOfMessageToLog`belirtilen değerin boyutunun 5 katı olabilir.  
   
- Hiçbir İzleme dinleyicisi yapılandırma dosyasında tanımlandıysa, herhangi bir günlük çıktısı bakılmaksızın belirtilen günlük düzeyi oluşturulur.  
+ Yapılandırma dosyasında bir izleme dinleyicisi tanımlanmazsa, belirtilen günlüğe kaydetme düzeyinden bağımsız olarak günlüğe kaydetme çıkışı oluşturulmaz.  
   
- Bu bölümde açıklanan öznitelikleri gibi ileti günlüğe kaydetme seçenekleri Windows Yönetim Araçları (WMI) kullanarak çalışma zamanında değiştirilebilir. Bu erişerek yapılabilir [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) bu Boolean özellikleri sunan bir örneği: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, ve `LogMalformedMessages`. Bu nedenle, İzleme dinleyicisi için ileti günlüğe kaydetmeyi yapılandırın, ancak ayarlayın, bu seçenekleri için `false` yapılandırması, daha sonra bunları değiştirebilirsiniz `true` uygulama çalışırken. Bu ileti günlüğe kaydetmeyi zamanında etkili bir şekilde sağlar. Yapılandırma dosyanızda günlük iletisi etkinleştirirseniz, benzer şekilde, size, WMI'yı kullanarak çalışma zamanında devre dışı bırakabilirsiniz. Daha fazla bilgi için [tanılama için Windows Yönetim araçları kullanarak](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
+ Bu bölümde açıklanan öznitelikler gibi ileti günlüğü seçenekleri, Windows Yönetim Araçları (WMI) kullanılarak çalışma zamanında değiştirilebilir. Bu, bu Boole özelliklerini sunan [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) örneğine erişerek yapılabilir: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`ve `LogMalformedMessages`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu, çalışma zamanında ileti günlüğe kaydetmeyi etkili bir şekilde sunar. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md).  
   
- `source` Alanında bir ileti günlüğü belirtir hangi bağlamda iletisi kaydedilir: istek-yanıt ya da 1 yönlü isteği, hizmet modeli veya Aktarım katmanı veya hatalı bir ileti için bir istek iletisi gönderme/alma sırasında.  
+ İleti `source` günlüğündeki alan, iletinin hangi bağlamda günlüğe kaydedileceğini belirtir: istek iletisi gönderirken/alırken, istek-yanıt veya 1 yönlü istek, hizmet modeli veya aktarım katmanında veya hatalı biçimlendirilmiş bir ileti durumunda.  
   
- Hatalı biçimlendirilmiş iletilerin `source` eşittir `Malformed`. Aksi takdirde, kaynak bağlama göre aşağıdaki değerlere sahip.  
+ Hatalı biçimlendirilmiş iletilerde `source` `Malformed`eşittir. Aksi takdirde, kaynak, bağlamı temel alarak aşağıdaki değerlere sahiptir.  
   
- İstek/yanıt  
+ Istek/yanıt için  
   
-||İsteği Gönder|İstek alma|Yanıt göndermesi|Yanıt alma|  
+||Istek gönder|Istek al|Yanıt gönder|Yanıt al|  
 |-|------------------|---------------------|----------------|-------------------|  
-|Hizmet modeli katmanını|Hizmet<br /><br /> Düzey<br /><br /> Gönder<br /><br /> İstek|Hizmet<br /><br /> Düzey<br /><br /> Alma<br /><br /> İstek|Hizmet<br /><br /> Düzey<br /><br /> Gönder<br /><br /> Yanıtla|Hizmet<br /><br /> Düzey<br /><br /> Alma<br /><br /> Yanıtla|  
-|Aktarım Katmanı|Taşıma<br /><br /> Gönder|Taşıma<br /><br /> Alma|Taşıma<br /><br /> Gönder|Taşıma<br /><br /> Alma|  
+|Hizmet modeli katmanı|Hizmet<br /><br /> Düzey<br /><br /> Send<br /><br /> İstek|Hizmet<br /><br /> Düzey<br /><br /> Receive<br /><br /> İstek|Hizmet<br /><br /> Düzey<br /><br /> Send<br /><br /> Döndürüp|Hizmet<br /><br /> Düzey<br /><br /> Receive<br /><br /> Döndürüp|  
+|Aktarım katmanı|Aktarım<br /><br /> Send|Aktarım<br /><br /> Receive|Aktarım<br /><br /> Send|Aktarım<br /><br /> Receive|  
   
- Tek yönlü iste  
+ Tek yönlü Istek için  
   
-||İsteği Gönder|İstek alma|  
+||Istek gönder|Istek al|  
 |-|------------------|---------------------|  
-|Hizmet modeli katmanını|Hizmet<br /><br /> Düzey<br /><br /> Gönder<br /><br /> Veri birimi|Hizmet<br /><br /> Düzey<br /><br /> Alma<br /><br /> Veri birimi|  
-|Aktarım Katmanı|Taşıma<br /><br /> Gönder|Taşıma<br /><br /> Alma|  
+|Hizmet modeli katmanı|Hizmet<br /><br /> Düzey<br /><br /> Send<br /><br /> Inın|Hizmet<br /><br /> Düzey<br /><br /> Receive<br /><br /> Inın|  
+|Aktarım katmanı|Aktarım<br /><br /> Send|Aktarım<br /><br /> Receive|  
   
 ## <a name="message-filters"></a>İleti Filtreleri  
- İleti filtreleri tanımlanmış `messageLogging` yapılandırma öğesinin `diagnostics` yapılandırma bölümü. Bu hizmet ve aktarım düzeyinde uygulanır. Bir veya daha fazla filtre tanımlandığında, en az bir filtre ile eşleşen iletileri günlüğe kaydedilir. Filtre boş tanımlıysa, tüm iletileri geçirir.  
+ İleti filtreleri `messageLogging` `diagnostics` yapılandırma bölümünün yapılandırma öğesinde tanımlanmıştır. Bunlar hizmet ve Aktarım düzeyinde uygulanır. Bir veya daha fazla filtre tanımlandığında yalnızca filtrelerden en az biriyle eşleşen mesajlar günlüğe kaydedilir. Hiçbir filtre tanımlanmamışsa, tüm iletiler geçer.  
   
- Filtreler XPath tamamını destekler ve yapılandırma dosyasında göründükleri sırayla uygulanır. Sözdizimsel olarak yanlış bir filtre yapılandırma bir özel durum oluşur.  
+ Filtreler tam XPath söz dizimini destekler ve yapılandırma dosyasında göründükleri sırada uygulanır. Sözdizimi yanlış bir filtre, yapılandırma özel durumuyla sonuçlanır.  
   
- Filtreleri de sağlaması kullanarak bir güvenlik özelliği `nodeQuota` filtreyle eşleşen incelenmesi XPath DOM düğüm sayısını sınırlayan bir öznitelik.  
+ Filtreler ayrıca, XPath Dom içindeki filtreyle eşleşecek `nodeQuota` şekilde incelenebilir maksimum düğüm sayısını sınırlayan özniteliği kullanarak bir güvenlik özelliği de sağlar.  
   
- Aşağıdaki örnekte bir filtre yapılandırın, nasıl bir SOAP üst bilgisi bölümü olan bu kayıtları yalnızca iletileri gösterir.  
+ Aşağıdaki örnek, yalnızca bir SOAP üstbilgisi bölümüne sahip iletileri kaydeden bir filtrenin nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <messageLogging logEntireMessage="true"  
@@ -137,14 +137,14 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
 </messageLogging>  
 ```  
   
- Bir ileti gövdesi ile filtre uygulanamıyor. Bir ileti gövdesini düzenleme girişimi filtreleri filtreleri listesinden kaldırılır. Bir olay da bu gösteren yayılır. Örneğin, aşağıdaki filtre filtre tablosundan kaldırılan.  
+ Filtreler bir iletinin gövdesine uygulanamaz. Bir iletinin gövdesini işlemeyi deneyen filtreler, filtreler listesinden kaldırılır. Bunu belirten bir olay da yayılır. Örneğin, aşağıdaki filtre filtre tablosundan kaldırılacak.  
   
 ```xml  
 <add xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">/s:Envelope/s:Body[contains(text(), "Hello")]</add>  
 ```  
   
 ## <a name="configuring-a-custom-listener"></a>Özel bir dinleyici yapılandırma  
- Ayrıca, özel bir dinleyici ile ek seçenekleri yapılandırabilirsiniz. Özel bir dinleyici iletileri açmadan önce uygulamaya özgü PII öğeleri filtreleme yapmak yararlı olabilir. Aşağıdaki örnek bir özel dinleyici yapılandırması gösterir.  
+ Ayrıca, ek seçeneklerle özel bir dinleyici de yapılandırabilirsiniz. Özel bir dinleyici, günlüğe kaydedilmeden önce iletilerden uygulamaya özgü PII öğelerini filtrelemede yararlı olabilir. Aşağıdaki örnek, özel bir dinleyici yapılandırmasını gösterir.  
   
 ```xml  
 <system.diagnostics>  
@@ -161,7 +161,7 @@ Bu konu, ileti günlüğe kaydetmeyi farklı senaryolar için nasıl yapılandı
 </system.diagnostics>  
 ```  
   
- Bilmeniz gereken, `type` öznitelik türü için bir koşullu derleme adı ayarlanmalıdır.  
+ `type` Özniteliğin, türün nitelenmiş derleme adına ayarlanması gerektiğini bilmelisiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

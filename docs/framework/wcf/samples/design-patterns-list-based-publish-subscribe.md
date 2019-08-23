@@ -2,26 +2,26 @@
 title: 'Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf6fe2da3101918e25aa9548fd18973088f348a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961741"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Tasarım Desenleri: Liste Tabanlı Yayımlama-Abone Olma
-Bu örnek, bir Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımlama-abone olma deseni gösterilmektedir.  
+Bu örnek, Windows Communication Foundation (WCF) programı olarak uygulanan liste tabanlı yayımla-abone ol modelini gösterir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Microsoft Patterns ve uygulamalar yayında liste tabanlı yayımlama-abone olma tasarım deseni açıklanan [tümleştirme desenleri](https://go.microsoft.com/fwlink/?LinkId=95894). Yayımlama-abone olma deseni bir koleksiyon bir bilgi konuya abone olduğunuz alıcıların bilgi geçirir. Liste tabanlı yayımlama-abone ol aboneleri listesini tutar. Bilgi paylaşmak için olduğunda, bir kopyasını listedeki her aboneye gönderilir. Bu örnek, dinamik bir liste tabanlı gösterir. burada istemciler abone olmak veya abonelikten gerektiği sıklıkta desen, yayımlama-abonelik.  
+ Liste tabanlı yayımlama-abone ol tasarım deseni, Microsoft düzenleri & uygulamalar yayımı, [tümleştirme desenleri](https://go.microsoft.com/fwlink/?LinkId=95894)' nde açıklanmaktadır. Yayımla-abone ol, bilgileri bir bilgi konusuna abone olan bir alıcı koleksiyonuna geçirir. Liste tabanlı yayımlama-abone ol, abonelerin bir listesini tutar. Paylaşılacak bilgiler olduğunda, listedeki her aboneye bir kopya gönderilir. Bu örnek, istemcilerin abone olabileceği veya aboneliği kaldırmak için gerekli olan dinamik bir liste tabanlı yayımlama-abonelik modelini gösterir.  
   
- Liste tabanlı yayımlama-abone olma örnek, bir istemci, hizmet ve veri kaynağı program oluşur. Birden fazla istemci ve çalışan birden fazla veri kaynağı program olabilir. İstemciler hizmete abone, bildirimleri alabilir ve aboneliği. Veri kaynağı programları tüm geçerli abonelerle paylaşılan hizmet bilgi gönderin.  
+ Liste tabanlı yayımlama-abone olma örneği bir istemciden, hizmetten ve bir veri kaynağı programından oluşur. Birden fazla istemci ve çalıştıran birden fazla veri kaynağı programı olabilir. İstemciler hizmete abone olur, bildirimler alabilir ve aboneliği kaldırın. Veri kaynağı programları, hizmete tüm geçerli aboneler ile paylaşılmak üzere bilgi gönderir.  
   
- Bu örnek, istemci ve veri kaynağını programlar (.exe dosyaları) ve hizmet Internet Information Services (IIS) barındırılan bir kitaplık (.dll). İstemci ve veri kaynağı etkinliği masaüstünde görünür.  
+ Bu örnekte, istemci ve veri kaynağı konsol programlarıdır (. exe dosyaları) ve hizmet Internet Information Services (IIS) içinde barındırılan bir kitaplıktır (. dll). İstemci ve veri kaynağı etkinliği masaüstünde görülebilir.  
   
- Hizmet, çift yönlü iletişimi kullanır. `ISampleContract` Hizmet sözleşmesini eşleştirilmiştir ile bir `ISampleClientCallback` geri çağırma anlaşması. Hizmet, katılma veya aboneleri listesinin bırakın hangi istemcilerin kullanın, abone ve aboneliği kaldırma hizmet işlemleri uygular. Ayrıca hizmeti uygulayan `PublishPriceChange` hizmet yeni bilgiler sağlamak için veri kaynağı program çağıran hizmet işlemi. İstemci programı uygulayan `PriceChange` tüm aboneler bir fiyat değişikliği bildirmek için hizmeti çağıran hizmet işlemi.  
+ Hizmet çift yönlü iletişimi kullanır. Hizmet sözleşmesi bir `ISampleClientCallback` geri çağırma sözleşmesiyle eşleştirilmiş. `ISampleContract` Hizmet, abone ve abonelik kaldırma hizmeti işlemlerini, istemcilerin abone listesini birleştirmek veya abone olmak için kullanır. Hizmet Ayrıca, veri kaynağı `PublishPriceChange` programının hizmeti yeni bilgi sağlamak üzere çağırdığı hizmet işlemini de uygular. İstemci programı, hizmetin bir `PriceChange` fiyat değişikliğinin tüm abonelerini bilgilendirmek için çağırdığı hizmet işlemini uygular.  
   
 ```  
 // Create a service contract and define the service operations.  
@@ -46,7 +46,7 @@ public interface ISampleClientContract
 }  
 ```  
   
- Hizmet .NET Framework olayı ile ilgili yeni bilgiler tüm aboneler bildirmek için mekanizması olarak kullanır. Bir istemci hizmeti çağıran abone tarafından katıldığında, bir olay işleyicisi sağlar. İstemci çıktığında, olay işleyicisi olay aboneliğini kaldırır. Bir veri kaynağı bir fiyat değişikliği bildirmek için hizmet çağırdığında, hizmet olayını başlatır. Bu, hizmetin bir abone ve yürütülecek olay işleyicilerini neden her istemci için her örneği çağırır. Her bir olay işleyicisi, geri çağırma işlevi aracılığıyla kendi istemci bilgileri geçirir.  
+ Hizmet, tüm abonelere yeni bilgiler hakkında bilgilendirmek için mekanizma olarak bir .NET Framework olayı kullanır. Bir istemci, abone 'yı çağırarak hizmete katıldığında bir olay işleyicisi sağlar. İstemci ayrıldığında olay işleyicisinin aboneliğini olaydan kaldırır. Bir veri kaynağı bir fiyat değişikliğini raporlamak için hizmete çağrı yaptığı zaman, hizmet olayı başlatır. Bu, bir hizmetin her bir örneğini, abone olan her istemci için bir tane çağırır ve olay işleyicilerinin yürütülmesine neden olur. Her olay işleyicisi, geri çağırma işlevi aracılığıyla bilgileri istemcisine geçirir.  
   
 ```  
 public class PriceChangeEventArgs : EventArgs  
@@ -108,55 +108,55 @@ public class PriceChangeEventArgs : EventArgs
     }  
 ```  
   
- Örneği çalıştırdığında, çeşitli istemciler başlatın. İstemciler hizmete abone olun. Ardından bilgi hizmetine gönderir. veri kaynağı programı çalıştırın. Hizmet bilgileri tüm abonelerine geçirir. Her istemci konsol bilgi alındı onaylayan üzerinde etkinliği görebilirsiniz. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda birkaç istemciyi başlatın. İstemciler hizmete abone olur. Ardından, hizmete bilgi gönderen veri kaynağı programını çalıştırın. Hizmet, bilgileri tüm abonelere geçirir. Her istemci konsolunda, bilgilerin alındığını doğrulayan etkinlik görebilirsiniz. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
-### <a name="to-set-up-and-build-the-sample"></a>Ayarlama ve örneği oluşturmak için  
+### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1. Test hizmeti aşağıdaki adresi girerek bir tarayıcı kullanarak erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıtta bir onay sayfası gösterilmelidir.  
+1. Aşağıdaki adresi girerek bir tarayıcı kullanarak hizmete erişebilirsiniz: `http://localhost/servicemodelsamples/service.svc`. Yanıt olarak bir onay sayfası görüntülenmelidir.  
   
-2. \Client\bin Client.exe çalıştırma\\, dile özgü klasörü altında. İstemci etkinliği istemci konsol penceresinde görüntülenir. Çeşitli istemciler başlatın.  
+2. \ Client\bin\\' den dile özgü klasörden Client. exe ' yi çalıştırın. İstemci etkinliği istemci konsol penceresinde görüntülenir. Birkaç istemciyi başlatın.  
   
-3. \Datasource\bin DataSource.exe çalıştırma\\, dile özgü klasörü altında. Veri kaynak etkinliği konsol penceresinde görüntülenir. Veri kaynağı bilgilerini hizmetine gönderir. sonra her bir istemciye geçirilmelidir.  
+3. \ Datasource\bin\\' den, dile özgü klasörün altında DataSource. exe ' yi çalıştırın. Veri kaynağı etkinliği konsol penceresinde görüntülenir. Veri kaynağı hizmete bilgi gönderdiğinde, her istemciye geçirilmesi gerekir.  
   
-4. İstemci, veri kaynağı ve hizmet programlarını iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. İstemci, veri kaynağı ve hizmet programları iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-### <a name="to-run-the-sample-across-machines"></a>Makineler arasında örneği çalıştırmak için  
+### <a name="to-run-the-sample-across-machines"></a>Örneği makineler arasında çalıştırmak için  
   
-1. Hizmet Makine'yi ayarlayın:  
+1. Hizmet makinesini ayarlama:  
   
-    1. Hizmeti makinede ServiceModelSamples adlı sanal bir dizin oluşturun. Toplu iş dosyası Setupvroot.bat gelen [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) disk dizini ve sanal dizin oluşturmak için kullanılabilir.  
+    1. Hizmet makinesinde, ServiceModelSamples adlı bir sanal dizin oluşturun. [Windows Communication Foundation Örnekleri Için bir kerelik kurulum yordamından](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) Setupvroot. bat toplu iş dosyası, disk dizini ve sanal dizin oluşturmak için kullanılabilir.  
   
-    2. Hizmet program dosyaları %SystemDrive%\Inetpub\wwwroot\servicemodelsamples hizmeti makinede ServiceModelSamples sanal dizinine kopyalayın. \Bin dizinine dosyaları eklemeyi unutmayın.  
+    2. Hizmet programı dosyalarını%SystemDrive%\Inetpub\wwwroot\servicemodelsamples adresinden hizmet makinesindeki ServiceModelSamples sanal dizinine kopyalayın. Dosyaları \Bin dizinine dahil ettiğinizden emin olun.  
   
-    3. Test bir tarayıcı kullanarak istemci makine hizmete erişebilir.  
+    3. Bir tarayıcı kullanarak hizmete istemci makineden erişebilme sınamasını yapın.  
   
-2. İstemci makineleri ayarlama:  
+2. İstemci makinelerini ayarlama:  
   
-    1. İstemci makineler için dile özgü klasörü altında \client\bin\ klasöründen istemci program dosyaları kopyalayın.  
+    1. İstemci program dosyalarını dile özgü klasör altındaki \client\bin\ klasöründen istemci makinelere kopyalayın.  
   
-    2. Her istemci yapılandırma dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
+    2. Her istemci yapılandırma dosyasında, uç nokta tanımının adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" başvurularını, adreste tam etki alanı adıyla değiştirin.  
   
-3. Veri kaynağı Makine'yi ayarlayın:  
+3. Veri kaynağı makinesini ayarlama:  
   
-    1. Veri kaynak makineye \datasource\bin\ klasöründen dile özgü klasörü altında veri kaynağı program dosyaları kopyalayın.  
+    1. Veri kaynağı program dosyalarını dile özgü klasör altındaki \datasource\bin\ klasöründen veri kaynağı makinesine kopyalayın.  
   
-    2. Veri kaynağı yapılandırma dosyasında adresi uç nokta tanımı hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" yönelik tüm başvuruları adresindeki bir tam etki alanı adı ile değiştirin.  
+    2. Veri kaynağı yapılandırma dosyasında, uç nokta tanımının adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" başvurularını, adreste tam etki alanı adıyla değiştirin.  
   
-4. İstemci makinelerinde Client.exe bir komut istemi'nden başlatın.  
+4. İstemci makinelerde, bir komut isteminden Client. exe ' yi başlatın.  
   
-5. Veri kaynak makinede Datasource.exe bir komut istemi'nden başlatın.  
+5. Veri kaynağı makinesinde, bir komut isteminden DataSource. exe ' yi başlatın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

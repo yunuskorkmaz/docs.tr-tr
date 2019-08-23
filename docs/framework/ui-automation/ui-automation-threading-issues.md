@@ -5,19 +5,19 @@ helpviewer_keywords:
 - UI Automation, threading issues
 - threading issues with UI Automation
 ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
-ms.openlocfilehash: 83b8ec67cff7006e736e0f65a7339b340b20d458
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f4820d2db6275e3c1ae9b55754b8cb6fec6fcc56
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678598"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954057"
 ---
 # <a name="ui-automation-threading-issues"></a>UI Otomasyon İş Parçacığı Oluşturma Sorunları
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Neden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kendi ile etkileşim kurmak bir istemci uygulama çalıştığında kullanan Windows iletileri, çakışmaları meydana gelebilir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] üzerinde [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Bu çakışmaları, müşteri adayı için çok yavaş performans veya bile uygulamanın yanıt vermemesine neden.  
+ Bu şekilde [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Windows iletilerini kullanırken çakışmalar, bir istemci uygulaması [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığında kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] kendine etkileşim kurmaya çalıştığında meydana gelebilir. Bu çakışmalar çok yavaş performansa yol açabilir, hatta uygulamanın yanıt vermemesine neden olabilir.  
   
- İstemci uygulamanızın tüm öğeleri masaüstü ile etkileşim kurmak için amaçlanıyorsa, kendi dahil [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], tüm yapmalısınız [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ayrı bir iş parçacığında çağırır. Bu öğeleri bulma içerir (kullanarak örneğin, <xref:System.Windows.Automation.TreeWalker> veya <xref:System.Windows.Automation.AutomationElement.FindAll%2A> yöntemi) ve denetim desenlerini kullanma.  
+ İstemci uygulamanızın, kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]masaüstündeki tüm öğelerle etkileşim kurması amaçlanıyorsa, her türlü [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrısı ayrı bir iş parçacığında yapmanız gerekir. Bu, öğeleri konumlandırmayı (örneğin, <xref:System.Windows.Automation.TreeWalker> <xref:System.Windows.Automation.AutomationElement.FindAll%2A> veya yöntemini kullanarak) ve denetim düzenlerini kullanmayı içerir.  
   
- Güvenli hale getirmek [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] içinde çağıran bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olay işleyicisi, olay işleyicisi her zaman olmayan bir adı verilir çünkü[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Ancak, istemci uygulamanızın gelebilir olaylara abone olurken [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], çağrısı yapmalısınız <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>, ya da bir ilgili yöntem üzerinde olmayan bir[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığı. Olay işleyicileri aynı iş parçacığında kaldırın.
+ Olay işleyicisi her zaman [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığı olmayan bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] şekilde çağrıldığı için, bir olay işleyicisi içinde çağrı yapmak güvenlidir. Ancak, istemci uygulamanızdan [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]kaynaklanacak olaylara abone olurken, veya[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] iş parçacığı olmayan bir ilgili Yöntem <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>çağrısı yapmanız gerekir. Aynı iş parçacığında olay işleyicilerini kaldırın.

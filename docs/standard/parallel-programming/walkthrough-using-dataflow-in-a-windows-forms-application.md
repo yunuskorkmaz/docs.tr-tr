@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4dc433b83fd086a1e3e165a85b6bfe64b781f45b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666333"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946346"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>İzlenecek yol: Windows Forms Uygulaması'nda Veri Akışı Kullanma
 Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren bir veri akışı bloğu ağı oluşturma işlemi gösterilir.  
@@ -82,7 +82,7 @@ Bu belgede, Windows Forms uygulamasında görüntü işlemeyi gerçekleştiren b
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  `CreateCompositeBitmap` Yöntemin C# sürümü, <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri verimli bir şekilde işlemeyi etkinleştirmek için işaretçiler kullanır. Bu nedenle, [unsafe](../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğünü kullanabilmeniz için projenizdeki **güvenli olmayan koda izin ver** seçeneğini etkinleştirmeniz gerekir. Visual C# projesinde güvenli olmayan kodun nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > `CreateCompositeBitmap` Yöntemin C# sürümü, <xref:System.Drawing.Bitmap?displayProperty=nameWithType> nesneleri verimli bir şekilde işlemeyi etkinleştirmek için işaretçiler kullanır. Bu nedenle, [unsafe](../../csharp/language-reference/keywords/unsafe.md) anahtar sözcüğünü kullanabilmeniz için projenizdeki **güvenli olmayan koda izin ver** seçeneğini etkinleştirmeniz gerekir. Visual C# projesinde güvenli olmayan kodun nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [derleme sayfası, proje Tasarımcısı (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  Aşağıdaki tablo, ağın üyelerini açıklar.  
   

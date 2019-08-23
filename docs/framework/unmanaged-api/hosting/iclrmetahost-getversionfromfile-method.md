@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b17b36f66a9b8b78b16057ec37d3ee5f484f7ae2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd5d2e820bd1d733bb4ab968a89174124bc91357
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962936"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile Metodu
-Verilen dosya yoluna (meta verilerinde depolanır), bir derlemenin özgün .NET Framework derleme sürümü alır. Bu yöntem yerine geçer [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) işlevi.  
+Bir derlemenin özgün .NET Framework derleme sürümünü (meta verilerde depolanır), dosya yolu olarak alır. Bu yöntem, [GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md) işlevinin yerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,36 +39,36 @@ HRESULT GetVersionFromFile (
   
 ## <a name="parameters"></a>Parametreler  
  `pwzFilePath`  
- [in] Tam derleme dosya yolu.  
+ 'ndaki Tüm derleme dosyası yolu.  
   
  `pwzbuffer`  
- [out] .NET Framework derleme sürümü biçiminde meta verilerde depolanan "v*A*. *B*[. *X*] ". *A*, *B*, ve *X* ana sürüm, ikincil sürüm ve derleme numarasını karşılık gelen ondalık sayılardır. Bu dizenin uzunluğu için MAX_PATH sınırlıdır.  
+ dışı Meta verilerde depolanan .NET Framework derleme sürümü, "v*A*" biçimindedir. *B* [. *X*] ". *A*, *B*ve *X* , ana sürüme, ikincil sürüme ve yapı numarasına karşılık gelen ondalık sayılardır. Bu dizenin uzunluğu MAX_PATH ile sınırlıdır.  
   
 > [!NOTE]
->  Bu çıkış C:\Windows\Microsoft.NET\Framework altında göründüğü gibi .NET Framework sürümü için dizin adı ile eşleşir.  
+> Bu çıktı, C:\Windows\Microsoft.NET\Framework. altında göründüğü gibi .NET Framework sürümünün dizin adıyla eşleşir.  
   
- Örnek değerler şunlardır: "v1.0.3705", "v1.1.4322", "v2.0.50727" ve "v4.0. *X*"burada *X* yüklü derleme sayısına bağlıdır. "V" ön eki gerekli olduğunu unutmayın.  
+ Örnek değerler şunlardır "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" ve "v 4.0. *X*", burada *x* , yüklü yapı numarasına bağlıdır. "V" ön ekinin gerekli olduğunu unutmayın.  
   
  `pcchBuffer`  
- [out içinde] Boyutu `pwzbuffer` arabellek taşması önlemek için.  
+ [in, out] Arabellek taşmalarını `pwzbuffer` önlemek için boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pwzbuffer` veya `pcchBuffer` null.|  
+|E_POINTER|`pwzbuffer`ya `pcchBuffer` da null.|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Arabellek çok küçük.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

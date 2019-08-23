@@ -9,38 +9,38 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f020e50cfe53c2b6ba134308ed6587876ca21a42
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c4177faca86fab9934f1cae57f02f8e42a2ae0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943373"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
-Terim *performans* genellikle bir programı yürütme hızını gösterir. Ayrıca, bazı temel kurallara kaynak kodunuza uygulayarak bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve mümkün olduğunca hızlı çalıştığından emin olmak için profil oluşturucuları kullanmak önemlidir. Diğer programlarda, hızlı yazıldığı gibi kod yazıldıkça yeterince çalıştığından böyle bir iyileştirme gerçekleştirmek zorunda değildir. Bu makalede, bazı ortak alanlar burada performans olumsuz etkilenebilir ve bunun yanı sıra ek performans konularının bağlantılarını geliştirme ipuçları listelenmektedir. Planlama ve performans ölçümü hakkında daha fazla bilgi için bkz. [performans](../../../docs/framework/performance/index.md)  
+*Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](../../../docs/framework/performance/index.md)  
   
 ## <a name="boxing-and-unboxing"></a>Kutulama ve Kutudan Çıkarma  
- En iyi değer kullanmaktan kaçınmak için türleri olduğu durumlarda çok sayıda zaman, örneğin genel olmayan koleksiyon sınıflarında gibi Kutulu <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Genel koleksiyonları kullanarak değer türlerini kutulama kaçınabilirsiniz <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Kutulama ve kutudan çıkarma hesaplama açısından pahalı işlemlerdir. Bir değer türü kutulandığında tamamen yeni bir nesnenin oluşturulması gerekir. Bu basit başvuru atamasından en çok 20 kat daha uzun sürebilir. Kutudan çıkarma sırasında dağılımı süreci atamadan dört kat daha uzun sürebilir. Daha fazla bilgi için [kutulama ve kutudan çıkarma](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Değer türlerinin, örneğin gibi <xref:System.Collections.ArrayList?displayProperty=nameWithType>genel olmayan koleksiyonlar sınıflarında çok sayıda kez paketlenmeleri gerektiği durumlarda kullanmaktan kaçınmak en iyisidir. Gibi genel Koleksiyonlar <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>kullanarak değer türlerinin kutulamaktan kaçınabilirsiniz. Kutulama ve kutudan çıkarma, hesaplama açısından pahalı işlemlerdir. Bir değer türü paketlenme olduğunda, tamamen yeni bir nesne oluşturulması gerekir. Bu, basit bir başvuru atamasından 20 kat daha uzun sürebilir. Kutudan çıkarma sırasında, atama işlemi atamanın dört katı zaman alabilir. Daha fazla bilgi için bkz. [kutulama ve kutudan](../../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma.  
   
 ## <a name="strings"></a>Dizeler  
- Çok sayıda dize değişkenleri art arda eklerken, örneğin sıkı bir döngüde kullanın <xref:System.Text.StringBuilder?displayProperty=nameWithType> yerine C# [+ işleci](~/docs/csharp/language-reference/operators/addition-operator.md) veya Visual Basic [birleştirme işleçleri](~/docs/visual-basic/language-reference/operators/concatenation-operators.md). Daha fazla bilgi için [nasıl yapılır: Birden çok dizeyi birleştirme](../../csharp/how-to/concatenate-multiple-strings.md) ve [Visual Basic'de birleştirme işleçleri](~/docs/visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
+ Çok sayıda dize değişkenini birleştirme, örneğin sıkı bir döngüde, [+ işleci](../../csharp/language-reference/operators/addition-operator.md) veya Visual Basic [birleştirme işleçleri](../../visual-basic/language-reference/operators/concatenation-operators.md)yerine <xref:System.Text.StringBuilder?displayProperty=nameWithType> C# kullanın. Daha fazla bilgi için [nasıl yapılır: Visual Basic birden çok](../../csharp/how-to/concatenate-multiple-strings.md) dizeyi ve [birleştirme işleçlerini](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)birleştirme.  
   
 ## <a name="destructors"></a>Yıkıcılar  
- Boş yok ediciler kullanılmamalıdır. Bir sınıf bir yıkıcı olduğunda bitirme kuyruğunda bir girdi oluşturulur. Yıkıcı çağrıldığında çöp toplayıcı kuyruğu işlemek için çağrılır. Yıkıcı boş ise, bu yalnızca bir performans kaybı ile sonuçlanır. Daha fazla bilgi için [yok ediciler](~/docs/csharp/programming-guide/classes-and-structs/destructors.md) ve [nesne ömrü: Nesneler nasıl oluşturulur ve imha](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
+ Boş Yıkıcılar kullanılmamalıdır. Bir sınıf bir yıkıcı içerdiğinde, sonlandırma kuyruğunda bir giriş oluşturulur. Yıkıcı çağrıldığında, atık toplayıcı kuyruğu işlemek için çağrılır. Yok edicisi boşsa, bu yalnızca performans kaybı ile sonuçlanır. Daha fazla bilgi için bkz. [Yıkıcılar](../../csharp/programming-guide/classes-and-structs/destructors.md) ve [nesne ömrü: Nesneler nasıl oluşturulur ve yok edilir](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).  
   
 ## <a name="other-resources"></a>Diğer Kaynaklar  
   
-- [Yönetilen kodu daha hızlı yazma: Maliyetleri anlama](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [Daha hızlı yönetilen kod yazma: Işlerin maliyetini öğrenin](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
-- [Yazma yüksek performanslı yönetilen uygulamalar: Bir temel bilgileri](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [Yüksek performanslı yönetilen uygulamalar yazma: Bir öncü](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
-- [Çöp toplayıcı temelleri ve performans ipuçları](https://go.microsoft.com/fwlink/?LinkId=99296)  
+- [Çöp toplayıcı temelleri ve performans Ipuçları](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
-- [Performans İpuçları ve püf noktaları .NET uygulamalarında](https://go.microsoft.com/fwlink/?LinkId=99297)  
+- [.NET uygulamalarındaki performans Ipuçları ve püf noktaları](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
-- [Rico Mariani'nın performans ipuçları](https://go.microsoft.com/fwlink/?LinkId=115679)  
+- [Riko Mariani performansı tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
-- [Vance Morrison'ın blogu](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison blogu](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

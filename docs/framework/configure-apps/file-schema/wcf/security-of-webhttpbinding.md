@@ -2,18 +2,18 @@
 title: <security> / <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 788d49239b8b9161a35705295705e6d42eff7837
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 806cf8524ed1a1439ca85a4b918e8e486e5dc94b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052160"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936583"
 ---
-# <a name="security-of-webhttpbinding"></a>\<Güvenlik >, \<webHttpBinding >
-Yapılandırılmış uç noktaya ilişkin güvenlik gereksinimlerini belirleyen bir [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md).  
+# <a name="security-of-webhttpbinding"></a>\<\<WebHttpBinding > Güvenlik >
+[ Bir\<WebHttpBinding >](webhttpbinding.md)ile yapılandırılmış bir uç noktanın güvenlik gereksinimlerini belirtir.  
   
  \<system.ServiceModel>  
-\<bağlamaları >  
+\<bağlama >  
 \<webHttpBinding>  
 \<bağlama >  
 \<Güvenlik >  
@@ -43,27 +43,27 @@ Yapılandırılmış uç noktaya ilişkin güvenlik gereksinimlerini belirleyen 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|mod|Aktarım düzeyi güvenlik veya hiçbir güvenlik bir uç noktası tarafından kullanılıp kullanılmayacağını belirtir. Varsayılan, `None` değeridir. Bu öznitelik türünde <xref:System.ServiceModel.WebHttpSecurityMode>.|  
+|mod|Aktarım düzeyi güvenliğinin veya bir uç nokta tarafından bir güvenlik kullanılıp kullanılmayacağını belirtir. Varsayılan, `None` değeridir. Bu öznitelik türü <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
-## <a name="mode-attribute"></a>mod özniteliği  
+## <a name="mode-attribute"></a>Mode özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|None|Güvenlik devre dışı bırakıldı.|  
-|Taşıma|HTTPS kullanarak güvenliği sağlanır. Hizmet SSL sertifikaları ile yapılandırılması gerekir. İleti tamamen HTTPS kullanan güvenli ve hizmet hizmet SSL sertifikasını kullanarak istemci tarafından doğrulanır. İstemci kimlik doğrulaması aracılığıyla denetlenir `ClientCredentialType` özniteliği [ \<aktarım >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
-|TransportCredentialOnly|Bu mod, ileti bütünlüğü ve gizliliği sağlamaz. Bu, HTTP tabanlı istemci kimlik doğrulaması sağlar. Bu mod, dikkatli kullanılmalıdır. Burada aktarım güvenliği (IPSec gibi) diğer yollarla sağlanmaktadır ve yalnızca istemci kimlik doğrulaması WCF altyapısı tarafından sağlanan ortamlarda kullanılmalıdır.|  
+|Yok.|Güvenlik devre dışı bırakıldı.|  
+|Aktarım|Güvenlik, HTTPS kullanılarak sağlanır. Hizmetin SSL sertifikalarıyla yapılandırılması gerekir. İleti HTTPS kullanılarak tamamen güvenli hale getirilir ve hizmetin SSL sertifikası kullanılarak istemcinin kimliği doğrulanır. İstemci kimlik doğrulaması, `ClientCredentialType` [ \<> taşıma](transport-of-webhttpbinding.md)özniteliği aracılığıyla denetlenir.|  
+|Yalnızca transportcredential|Bu mod ileti bütünlüğü ve gizliliği sağlamaz. HTTP tabanlı istemci kimlik doğrulaması sağlar. Bu mod dikkatli kullanılmalıdır. Aktarım güvenliğinin diğer yollarla (IPSec gibi) sağlandığı ve yalnızca WCF altyapısı tarafından istemci kimlik doğrulamasının sağlandığı ortamlarda kullanılması gerekir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<taşıma >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md)|Taşıma güvenlik ayarlarını tanımlar. Bu öğe için karşılık gelen <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> türü.|  
+|[\<Taşıma >](transport-of-webhttpbinding.md)|Taşıma güvenlik ayarlarını tanımlar. Bu öğe <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> türüne karşılık gelir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Bu SOAP iletileri yerine HTTP isteklerine yanıt Windows Communication Foundation (WCF) Web Hizmetleri için uç noktaları yapılandırmak için kullanılan bir bağlama öğesi.|  
+|[\<webHttpBinding >](webhttpbinding.md)|SOAP iletileri yerine HTTP isteklerine yanıt veren Windows Communication Foundation (WCF) Web Hizmetleri için uç noktaları yapılandırmak için kullanılan bir bağlama öğesi.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -72,10 +72,10 @@ Yapılandırılmış uç noktaya ilişkin güvenlik gereksinimlerini belirleyen 
 - <xref:System.ServiceModel.WebHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.WebHttpSecurity>
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Kimlik Bilgisi Türü Seçme](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Bağlamalar](../../../../../docs/framework/wcf/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<bağlama >](../../../../../docs/framework/misc/binding.md)
-- [WCF Web HTTP Programlama Modeli](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Kimlik Bilgisi Türü Seçme](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [Bağlamalar](../../../wcf/bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<bağlama >](../../../misc/binding.md)
+- [WCF Web HTTP Programlama Modeli](../../../wcf/feature-details/wcf-web-http-programming-model.md)

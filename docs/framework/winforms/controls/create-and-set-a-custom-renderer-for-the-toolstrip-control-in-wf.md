@@ -10,26 +10,26 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c354ace3a7d3ce43f549dd1295a85fbee004eb22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929735"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>Nasıl yapılır: Windows Forms'da ToolStrip Denetimi için Özel Oluşturucu Oluşturma ve Ayarlama
-<xref:System.Windows.Forms.ToolStrip> denetimleri, temalar ve stilleri kolay desteği sağlar. Tamamen özel görünümünü ve davranışını (Görünüm) ya da ayarlayarak elde edebileceğiniz <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> özelliği veya <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> özelliğini özel Oluşturucu.  
+<xref:System.Windows.Forms.ToolStrip>denetimler, temalara ve stillere kolay destek verir. <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> Özelliği<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> ya da özelliği özel bir işleyiciye ayarlayarak tamamen özel görünüm ve davranış elde edebilirsiniz (göz atın).  
   
- Oluşturucular için her bir kişinin atayabilirsiniz <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.ContextMenuStrip>, veya <xref:System.Windows.Forms.StatusStrip> denetimi veya kullanabileceğiniz <xref:System.Windows.Forms.ToolStripManager.Renderer%2A> özelliğini ayarlayarak tüm nesneleri etkileyecek şekilde <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> özelliğini <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>.  
+ Her <xref:System.Windows.Forms.ToolStrip>kişiye <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> ,,<xref:System.Windows.Forms.ToolStripManager.Renderer%2A> veya denetime<xref:System.Windows.Forms.StatusStrip> işlem atayabilir veya özelliği ' e<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>ayarlayarak tüm nesneleri etkilemek için özelliğini kullanabilirsiniz. <xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.ContextMenuStrip>  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> döndürür <xref:System.Windows.Forms.ToolStripRenderMode.Custom> yalnızca değerini <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> değil `null`.  
+> <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>yalnızca <xref:System.Windows.Forms.ToolStripRenderMode.Custom> değeri<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> değilse döndürür`null`.  
   
-### <a name="to-create-a-custom-renderer"></a>Özel oluşturucu oluşturma  
+### <a name="to-create-a-custom-renderer"></a>Özel bir işleyici oluşturmak için  
   
-1. Genişletme <xref:System.Windows.Forms.ToolStripRenderer> sınıfı.  
+1. <xref:System.Windows.Forms.ToolStripRenderer> Sınıfı genişletin.  
   
-2. Uygulamak istediğiniz özel işleme geçersiz kılarak uygun *üzerinde...* üyeler  
+2. Uygun üzerine yazarak istenen özel işlemeyi uygulayın *...* üyeler  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -57,9 +57,9 @@ ms.locfileid: "61772911"
     }  
     ```  
   
-### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>İşleyicinin geçerli olması için özel Oluşturucu ayarlamak için  
+### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>Özel oluşturucuyu geçerli işleyici olacak şekilde ayarlamak için  
   
-1. Bir özel Oluşturucu ayarlanacak <xref:System.Windows.Forms.ToolStrip>ayarlayın <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> özelliğini özel Oluşturucu.  
+1. Özel Oluşturucuyu bir <xref:System.Windows.Forms.ToolStrip>için ayarlamak için, <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> özelliği özel işleyiciye ayarlayın.  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "61772911"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2. Veya tüm özel Oluşturucu ayarlanacak <xref:System.Windows.Forms.ToolStrip> , uygulamanızda bulunan sınıfları: Ayarlama <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> özelliğini ayarlama ve özel Oluşturucu <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> özelliğini <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.  
+2. Veya uygulamanızda bulunan tüm <xref:System.Windows.Forms.ToolStrip> sınıflar için özel oluşturucuyu ayarlamak için: Özelliği özel Oluşturucu olarak ayarlayın ve <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> özelliğini olarak <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>ayarlayın. <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

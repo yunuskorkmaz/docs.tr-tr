@@ -5,58 +5,58 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 0e4ac18d4c5835f3bd0539f2a79d68b59860b6e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 699ea45d67658ab9c768bf938d5336be7a5427c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637949"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955357"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
-Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hizmet Kerberos protokolü tarafından güvenliği sağlanan gösterilmektedir.  
+Aşağıdaki senaryoda Kerberos protokolüyle güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir.  
   
- Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında olan.  
+ Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında.  
   
 > [!NOTE]
->  Bu senaryo arasındaki farkı ve [Windows İstemcisi ile ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) olduğu Bu senaryoda hizmeti kimlik bilgileri uygulama iletisi göndermeden önce hizmet ile gerçekleştirmez. Ayrıca, bu Kerberos protokolü gerektiğinden, bu senaryo, bir Windows etki alanı ortamı gerektirir.  
+> Bu senaryo ve [Windows Istemcisiyle Ileti güvenliği](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md) arasındaki fark, bu senaryonun uygulama iletisini göndermeden önce hizmet kimlik bilgilerini anlaşamayacağı bir uygulamadır. Buna ek olarak, Kerberos protokolünü gerektirdiğinden bu senaryo bir Windows etki alanı ortamı gerektirir.  
   
- ![Güvenlik kimlik bilgileri görüşmesi olmadan ileti](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")  
+ ![Kimlik bilgisi anlaşması olmadan ileti güvenliği](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")  
   
-|Özelliği|Açıklama|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |Güvenlik modu|`Message`|  
-|Birlikte Çalışabilirlik|Evet, Kerberos belirteci profili uyumlu istemcilerle WS-güvenlik|  
-|Kimlik doğrulaması (sunucu)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  
-|Kimlik doğrulaması (istemci)|İstemci ve sunucu, karşılıklı kimlik doğrulaması|  
-|Bütünlüğü|Evet|  
-|Gizliliği|Evet|  
-|Taşıma|HTTP|  
+|Birlikte Çalışabilirlik|Evet, WS-Kerberos belirteci ile profil uyumlu istemcilerle güvenlik|  
+|Kimlik doğrulaması (sunucu)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|  
+|Kimlik doğrulaması (Istemci)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|  
+|Doğruluğunu|Evet|  
+|Gizlilik|Evet|  
+|Aktarım|HTTP|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
-- Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
+- Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
-- Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturur. Kod hizmeti kimlik bilgileri görüşmesi yanı sıra, oluşumunu bir güvenlik bağlamı belirteci (SCT) devre dışı bırakır.  
+ Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturur. Kod, hizmet kimlik bilgileri anlaşmasını ve güvenlik bağlamı belirtecinin (SCT) kurulmasını devre dışı bırakır.  
   
 > [!NOTE]
->  Anlaşma olmadan Windows kimlik bilgisi türü kullanmak için hizmetin kullanıcı hesabını Active Directory etki alanı ile kayıtlı hizmet asıl adı (SPN) erişiminiz olmalıdır. Bunu iki şekilde yapabilirsiniz:  
+> Windows kimlik bilgisi türünü anlaşma olmadan kullanmak için, hizmetin Kullanıcı hesabının Active Directory etki alanına kayıtlı hizmet asıl adına (SPN) erişimi olmalıdır. Bunu iki şekilde yapabilirsiniz:  
   
-1. Kullanım `NetworkService` veya `LocalSystem` hizmetinizi çalıştırmak için hesap. Bu hesapların makinenin Active Directory etki alanına katıldığında kurulur SPN makineye erişimi olduğundan, WCF uygun SPN öğe içinde hizmet uç noktası hizmetin meta verilerinde (Web Hizmetleri Açıklama otomatik olarak oluşturur. Dil veya WSDL).  
+1. Hizmetini çalıştırmak için `LocalSystem`veyahesabını kullanın. `NetworkService` Makine Active Directory etki alanına katıldığında, bu hesapların bir makine SPN 'sine erişimi olduğundan, WCF otomatik olarak hizmetin meta verilerinde hizmetin uç noktasında uygun SPN öğesini otomatik olarak oluşturur (Web Hizmetleri açıklaması Dil veya WSDL).  
   
-2. Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn.exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN'nin oluşturulduktan sonra WCF meta verilerini (WSDL) aracılığıyla hizmetin istemciler söz konusu SPN yayımlamak için yapılandırın. Bu ortaya çıkarılan uç nokta için uç nokta kimliğini ayarlayarak yapılır ya da bir uygulama yapılandırma dosyası veya kod. Aşağıdaki örnek kimliğini programlı olarak yayımlar.  
+2. Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn. exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN oluşturulduktan sonra, bu SPN 'YI, meta verileri (WSDL) aracılığıyla hizmetin istemcilerine yayımlamak üzere WCF 'yi yapılandırın. Bu, bir uygulama yapılandırma dosyası veya kodu gibi, gösterilen uç nokta için uç nokta kimliği ayarlanarak yapılır. Aşağıdaki örnek, kimliği programlı olarak yayımlar.  
   
- SPN hakkında daha fazla bilgi, Kerberos protokolü ve Active Directory için bkz. [Kerberos teknik ek Windows için](https://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ SPN 'Ler, Kerberos protokolü ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
  [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
  [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki yapılandırmayı kod yerine kullanılabilir.  
+ Aşağıdaki yapılandırma kod yerine kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -93,28 +93,28 @@ Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hi
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
-- Bir tek başına istemci kodu (ve istemci kodu) kullanarak oluşturun.  
+- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
-- Herhangi bir uç nokta adresi tanımlamıyor bir istemci oluşturun. Bunun yerine, yapılandırma adı bağımsız değişkeni olarak alan İstemci Oluşturucu kullanın. Örneğin:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, istemciyi yapılandırır. İleti güvenlik modunu ayarlanır ve istemci kimlik bilgisi türü için Windows ayarlanır. Unutmayın <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> ve <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliklerinin `false`.  
+ Aşağıdaki kod istemcisini yapılandırır. Güvenlik modu Ileti olarak ayarlanır ve istemci kimlik bilgisi türü Windows olarak ayarlanır. <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> Ve özelliklerinin<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> olarak`false`ayarlandığını unutmayın.  
   
 > [!NOTE]
->  Windows kimlik bilgisi türü görüşmesi olmadan kullanmak için İstemci hizmet hesabı SPN hizmeti ile iletişimi işlemi hızlandırılabilir önce yapılandırılması gerekir. İstemci kimlik doğrulaması ve hizmeti ile iletişimi güvenli hale getirmek için Kerberos belirteci almak için SPN kullanır. Aşağıdaki örnek, sunucunun hizmetin SPN'si ile istemci yapılandırma işlemi gösterilmektedir. Kullanıyorsanız [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmetin meta veri içeriyorsa, istemci üretmek için sunucunun hizmetin SPN'si otomatik olarak istemciye hizmet meta verileri (WSDL) iletilir Bu bilgileri. Hizmet meta verilerde, SPN eklemek için hizmet yapılandırma hakkında daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "Hizmeti" bölümüne bakın.  
+> Windows kimlik bilgisi türünü anlaşma olmadan kullanmak için, hizmet ile iletişim kurmadan önce istemcinin hizmetin hesap SPN 'si ile yapılandırılması gerekir. İstemci, kimlik doğrulaması yapmak ve hizmetle iletişimin güvenliğini sağlamak için Kerberos belirtecini almak üzere SPN 'YI kullanır. Aşağıdaki örnek, istemcisinin hizmetin SPN 'si ile nasıl yapılandırılacağını gösterir. İstemcisini oluşturmak için [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanıyorsanız, hizmetin meta verileri bu bilgileri IÇERIYORSA hizmetin SPN 'si otomatik olarak hizmetin meta VERILERI (wsdl) üzerinden istemciye yayılır. Hizmetin meta verilerine SPN 'yi dahil etmek için hizmeti yapılandırma hakkında daha fazla bilgi için, bu konunun devamındaki "hizmet" bölümüne bakın.  
 >   
->  SPN, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz. [Kerberos teknik ek Windows için](https://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) konu.  
+>  SPN 'Ler, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://go.microsoft.com/fwlink/?LinkId=88330). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md) konusu.  
   
  [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
  [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Aşağıdaki kod, istemciyi yapılandırır. Unutmayın [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) öğesi hizmet hesabının Active Directory etki alanında kayıtlı sunucunun hizmetin SPN'si eşleşecek şekilde ayarlanması gerekir.  
+ Aşağıdaki kod istemcisini yapılandırır. ServicePrincipalName > öğesinin, hizmetin Active Directory etki alanındaki hesabı için kayıtlı olan [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) hizmet SPN 'si ile eşleşecek şekilde ayarlanması gerektiğini unutmayın.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -150,4 +150,4 @@ Aşağıdaki senaryoda, bir Windows Communication Foundation (WCF) istemci ve hi
 
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

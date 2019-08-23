@@ -2,20 +2,20 @@
 title: <defaultCertificate> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919245"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > öğesi
-Kullanılacak olan X.509 sertifikasını belirtir, STS veya hizmetin sağlamadığı anlaşma protokolü aracılığıyla.  
+Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıyorsa kullanılacak bir X. 509.952 sertifikası belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-endpointBehaviors bölümü  
-\<davranışı >  
+Endpointdavranışlar bölümü  
+\<davranış >  
 \<clientCredentials >  
 \<serviceCertificate >  
 \<defaultCertificate >  
@@ -30,40 +30,40 @@ endpointBehaviors bölümü
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|findValue|dize. Aranacak değer.|  
-|X509FindType|Sabit listesi. Aranacak sertifika alanlardan biri.|  
-|storeLocation|Sabit listesi. İki sistem depolama biri Aranacak Konum.|  
-|storeName|Sabit listesi. Aranacak bir sistemin depolar.|  
+|findValue|Dizisinde. Aranacak değer.|  
+|x509FindType|Listelenen. Arama yapılacak sertifika alanlarından biri.|  
+|storeLocation|Listelenen. Aranacak iki sistem depolama konumundan biri.|  
+|storeName|Listelenen. Arama yapmak için sistem mağazalarından biri.|  
   
 ## <a name="findvalue-attribute"></a>findValue özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Dize|Değer (X509FindType özniteliği tarafından belirtilen) alan bağlıdır Aranan. Örneğin, bir parmak izi için arama değeri bir dize onaltılık bir sayı olmalıdır.|  
+|Dize|Değer, aranmakta olan alana bağlıdır (X509FindType özniteliğiyle belirtilir). Örneğin, bir parmak izi arıyorsanız, değerin onaltılık sayı dizesi olması gerekir.|  
   
 ## <a name="x509findtype-attribute"></a>x509FindType özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy FindByCertificatePolicy, FindByExtension FindByKeyUsage, FindBySubjectKeyIdentifier.|  
+|Sabit Listesi|Değerler şunlardır: Findbyparmak izi, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, Findbytımenotyetvalid, FindBySerialNumber, Findbytimedoldu, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>storeLocation özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|LocalMachine ya da CurrentUser.|  
+|Sabit Listesi|CurrentUser veya LocalMachine.|  
   
 ## <a name="storename-attribute"></a>storeName özniteliği  
   
 |Değer|Açıklama|  
 |-----------|-----------------|  
-|Sabit Listesi|Değerler şunlardır: Adres Defteri, AuthRoot, CertificateAuthority, My izni, kök, TrustedPeople ve TrustedPublisher.|  
+|Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -72,13 +72,13 @@ endpointBehaviors bölümü
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|İstemci bir hizmete kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.|  
+|[\<serviceCertificate >](servicecertificate-of-clientcredentials-element.md)|İstemciye bir hizmetin kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Sertifika tabanlı ileti güvenliği kullanan bağlamaları için bu yapılandırma öğesi tarafından belirtilen sertifika hizmeti iletileri şifrelemek için kullanılır ve istemciye yanıt imzalama için hizmet tarafından kullanılmak üzere bekleniyor. Bu sertifika bir hizmet tarafından belirtildiğinde kullanılacak tek bir sertifika depolar.  
+ Sertifika tabanlı ileti güvenliği kullanan bağlamalar için, bu yapılandırma öğesi tarafından belirtilen sertifika, iletileri hizmete şifrelemek için kullanılır ve istemciye yanıtları imzalamak için hizmet tarafından kullanılması beklenir. Bir hizmet tarafından hiçbir sertifika belirtilmediğinde kullanılacak tek bir sertifika depolar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, URI ile başlayan uç noktalar için kullanılacak sertifikayı belirtir `http://www.contoso.com` ve sertifika anlaşmasını gerçekleştiren değil tüm diğer uç noktalar için kullanılacak bir sertifika.  
+ Aşağıdaki örnek, URI 'si ile `http://www.contoso.com` başlayan uç noktalar için kullanılacak bir sertifikayı ve sertifika anlaşması gerçekleştirmeyin diğer tüm uç noktalar için kullanılacak bir sertifikayı belirtir.  
   
 ```xml  
 <serviceCertificate>
@@ -103,7 +103,7 @@ endpointBehaviors bölümü
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<kimlik doğrulama >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [\<kimlik doğrulama >](authentication-of-clientcertificate-element.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

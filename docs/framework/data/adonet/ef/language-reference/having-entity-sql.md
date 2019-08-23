@@ -1,16 +1,16 @@
 ---
-title: SAHİP (varlık SQL)
+title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76a63140668fb1f41cf9e6f901d9a43240a1d098
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774718"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936078"
 ---
-# <a name="having-entity-sql"></a>SAHİP (varlık SQL)
-Bir toplama veya bir grup için bir arama koşulu belirtir.  
+# <a name="having-entity-sql"></a>HAVING (Entity SQL)
+Grup veya toplama için bir arama koşulu belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,29 +20,29 @@ Bir toplama veya bir grup için bir arama koşulu belirtir.
   
 ## <a name="arguments"></a>Arguments  
  `search_condition`  
- Grup veya toplama karşılamak arama koşulu belirtir. HAVING GROUP BY ALL ile kullanıldığında, HAVING yan tümcesi tüm geçersiz kılar.  
+ Grup veya toplanacak toplama için arama koşulunu belirtir. WITH GROUP for ALL kullanıldığında HAVING yan tümcesi tümünü geçersiz kılar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- HAVING yan tümcesi, bir gruplandırma sonucuna ek bir filtreleme koşulunu belirtmek için kullanılır. GROUP BY yan tümce sorgu ifadesi içinde belirtilen bir örtük tek küme grubu kabul edilir.  
+ HAVING yan tümcesi, bir gruplandırmanın sonucu üzerinde ek bir filtreleme koşulu belirtmek için kullanılır. Sorgu ifadesinde GROUP BY yan tümcesi belirtilmemişse, örtük bir tek küme grubu varsayılır.  
   
 > [!NOTE]
->  HAVING yalnızca kullanılabilir [seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimi. Zaman [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) olduğundan kullanılmayan, HAVING bir WHERE yan tümcesi gibi davranır.  
+> HAVING yalnızca [Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) ifadesiyle kullanılabilir. [Group By](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) kullanılmazsa WHERE yan tümcesi gibi davranır.  
   
- HAVING yan WHERE yan tümcesi gibi çalışır GROUP BY işleminden sonra uygulanır. HAVING yan tümcesi yalnızca gruplandırma diğer adlar ve toplamalar, başvurular aşağıdaki örnekte gösterildiği gibi yapabileceğini anlamına gelir.  
+ HAVING yan tümcesi WHERE yan tümcesi gibi çalışarak GROUP BY işlemden sonra uygulanması hariç olur. Bu, HAVING yan tümcesinin yalnızca diğer adları ve toplamaları gruplandırmak için aşağıdaki örnekte gösterildiği gibi başvuru yapabileceği anlamına gelir.  
   
 ```  
 SELECT Name, SUM(o.Price * o.Quantity) AS Total FROM orderLines AS o GROUP BY o.Product AS Name  
 HAVING SUM(o.Quantity) > 1  
 ```  
   
- Önceki grupları yalnızca için birden fazla ürünü içeren kısıtlar.  
+ Önceki gruplar, grupları yalnızca birden fazla ürün içeren olanlarla kısıtlar.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu HAVING ve GROUP BY işleçleri toplama veya bir grup için bir arama koşulu belirtmek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, bir grup veya toplama için bir arama koşulu belirtmek üzere HAVING ve GROUP BY işleçlerini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
   

@@ -15,84 +15,84 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 23d9374f1f46c4480079eb4ad5269a197a13a5bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505253"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963884"
 ---
 # <a name="types-of-coordinate-systems"></a>Koordinat Sistemi Türleri
-GDI +'da üç koordinat kullanır: dünya, sayfa ve cihaz. Dünya koordinatlarını bir belirli grafik grubuna ilişkin model için kullanılan koordinatları ve .NET Framework yöntemleri için geçirdiğiniz koordinatları. Bir form veya denetim gibi çizim yüzeyi tarafından kullanılan koordinat sistemini sayfa koordinatlarına bakın. Cihaz, bir ekran veya kağıt gibi üzerine çizilmiş fiziksel cihaz tarafından kullanılan koordinat koordinatları. Çağrısı yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, geçirdiğiniz noktaları <xref:System.Drawing.Graphics.DrawLine%2A> yöntemi —`(0, 0)` ve `(160, 80)`— dünyanın koordinat alanındadır. GDI +'da satırın ekranda çizebilirsiniz önce bir dizi dönüştürmeyi koordinatları geçirin. Gerçek koordinat dönüştürmesini adlı bir dönüştürme dünya koordinatlarını sayfa koordinatlarına dönüştüren ve sayfa dönüşümü adlı başka bir dönüştürme sayfa koordinatlarına cihaz koordinatlarına dönüştürür.  
+GDI+ üç koordinat alanı kullanır: Dünya, sayfa ve cihaz. Dünya koordinatları, belirli bir grafik dünyasını modellemek için kullanılan koordinatlardır ve .NET Framework yöntemlere geçirdiğiniz koordinatlardır. Sayfa koordinatları, bir form veya denetim gibi bir çizim yüzeyi tarafından kullanılan koordinat sistemine başvurur. Cihaz koordinatları, bir ekran veya kağıt sayfası gibi, üzerine çizilmiş fiziksel cihaz tarafından kullanılan koordinatlardır. Çağrıyı `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`yaptığınızda <xref:System.Drawing.Graphics.DrawLine%2A> yöntemine geçirdiğiniz noktaları —`(0, 0)` ve `(160, 80)`— World koordinat alanında olur. GDI+, ekranda çizgi çizmeden önce koordinatları bir dizi dönüşümden geçer. Dünya dönüşümü olarak adlandırılan bir dönüşüm, dünya koordinatlarını sayfa koordinatlarına dönüştürür ve sayfa dönüşümü olarak adlandırılan başka bir dönüşüm, sayfa koordinatlarını cihaz koordinatlarına dönüştürür.  
   
-## <a name="transforms-and-coordinate-systems"></a>Dönüşümler ve koordinat sistemi  
- Sol üst köşesinin yerine istemci alanını gövdesine, kaynağı olan bir koordinat sistemi çalışmak istediğinizi varsayalım. Örneğin, istemci alanın sol kenarından 100 piksel ve 50 piksel istemci alanının üst kaynağı istediğinizi varsayalım. Aşağıdaki çizimde, böyle bir koordinat sistemi gösterir.  
+## <a name="transforms-and-coordinate-systems"></a>Sistemleri dönüştürür ve koordine et  
+ Sol üst köşede değil, istemci alanının gövdesinde kaynağına sahip bir koordinat sistemiyle çalışmak istediğinizi varsayalım. Örneğin, kaynağın, istemci alanının sol kenarından 100 piksel olmasını istediğinizi ve istemci alanının en üstünde 50 pikseli olduğunu varsayalım. Aşağıdaki çizimde bu tür bir koordinat sistemi gösterilmektedir.  
   
  ![Koordinat sistemi](./media/aboutgdip05-art01.gif "AboutGdip05_art01")  
   
- Çağrısı yaptığınızda `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, aşağıdaki çizimde gösterilen satır alın.  
+ Çağrıyı `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`yaptığınızda aşağıdaki çizimde gösterilen satırı alırsınız.  
   
  ![Koordinat sistemi](./media/aboutgdip05-art02.gif "AboutGdip05_art02")  
   
- Üç koordinat satırınızda bitiş noktası koordinatları aşağıdaki gibidir:  
+ Üç koordinat alanındaki satırlarınızın uç noktaların koordinatları aşağıdaki gibidir:  
   
 |||  
 |-|-|  
-|Dünya|(0, 0) için (160, 80)|  
-|Sayfa|(100, 50) için (260, 130)|  
-|Cihaz|(100, 50) için (260, 130)|  
+|Dünya|(0, 0)-(160, 80)|  
+|Sayfasında|(100, 50)-(260, 130)|  
+|Cihaz|(100, 50)-(260, 130)|  
   
- Sayfa koordinat istemci alanını sol üst köşesinde kaynağına sahip olduğunu unutmayın; her zaman, bu durumda olacaktır. Ayrıca piksel ölçü olduğundan, cihaz koordinatlarını sayfa koordinatlarına aynı olduğunu unutmayın. Piksel (örneğin, inç) dışında bir ölçü ayarlarsanız, cihaz koordinatlarını sayfa koordinatlarına farklı olacaktır.  
+ Sayfa koordinat alanının, istemci alanının sol üst köşesinde bulunan kaynağı olduğunu unutmayın; Bu durum her zaman olur. Ayrıca, ölçü birimi piksel olduğundan, cihaz koordinatları sayfa koordinatlarıyla aynı olduğunu unutmayın. Ölçü birimini piksel dışında bir değere ayarlarsanız (örneğin, inç), cihaz koordinatları sayfa koordinatlarından farklı olacaktır.  
   
- Dünya koordinatlarını sayfa koordinatlarına eşler, gerçek koordinat dönüştürmesini tutulur <xref:System.Drawing.Graphics.Transform%2A> özelliği <xref:System.Drawing.Graphics> sınıfı. Önceki örnekte gerçek koordinat dönüştürmesini çeviri 100 birim x yönünde ve y yönünde 50 Birim var. Aşağıdaki örnek, gerçek koordinat dönüştürmesini ayarlar bir <xref:System.Drawing.Graphics> nesnesi ve ardından kullanan <xref:System.Drawing.Graphics> önceki şekilde gösterildiği çizgi çizmek için nesne:  
+ Dünya koordinatlarını sayfa koordinatlarına eşleyen dünya dönüştürmesi, <xref:System.Drawing.Graphics.Transform%2A> <xref:System.Drawing.Graphics> sınıfının özelliğinde tutulur. Yukarıdaki örnekte, World Transformation, y yönünde x Direction ve 50 birimlerindeki çeviri 100 birimleridir. Aşağıdaki örnek, bir <xref:System.Drawing.Graphics> nesnenin Dünya dönüşümünü belirler ve ardından önceki şekilde gösterilen satırı çizmek için bu <xref:System.Drawing.Graphics> nesneyi kullanır:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.CoordinateSystems#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#31)]  
   
- Sayfa dönüşümü için cihaz koordinatlarını sayfa koordinatlarına eşler. <xref:System.Drawing.Graphics> Sağlar sınıfını <xref:System.Drawing.Graphics.PageUnit%2A> ve <xref:System.Drawing.Graphics.PageScale%2A> sayfa dönüşümü düzenlemek için özellikler. <xref:System.Drawing.Graphics> Sınıfı iki salt okunur özellikler sağlar <xref:System.Drawing.Graphics.DpiX%2A> ve <xref:System.Drawing.Graphics.DpiY%2A>, yatay ve dikey inç başına nokta görünen cihazın İnceleme için.  
+ Sayfa dönüştürme sayfa koordinatlarını cihaz koordinatlarına eşler. Sınıfı, <xref:System.Drawing.Graphics.PageUnit%2A> sayfa dönüşümünü işlemek <xref:System.Drawing.Graphics.PageScale%2A> için ve özelliklerini sağlar. <xref:System.Drawing.Graphics> Sınıfı ayrıca, iki salt okuma <xref:System.Drawing.Graphics.DpiX%2A> özelliği de sağlar ve <xref:System.Drawing.Graphics.DpiY%2A>görüntüleme cihazının yatay ve dikey noktaların incelenmesidir. <xref:System.Drawing.Graphics>  
   
- Kullanabileceğiniz <xref:System.Drawing.Graphics.PageUnit%2A> özelliği <xref:System.Drawing.Graphics> piksel dışındaki bir ölçü belirtmek için sınıf.  
+ <xref:System.Drawing.Graphics.PageUnit%2A> Sınıfının özelliğini<xref:System.Drawing.Graphics> , pikselin dışında bir ölçü birimi belirtmek için kullanabilirsiniz.  
   
 > [!NOTE]
->  Ayarlayamazsınız <xref:System.Drawing.Graphics.PageUnit%2A> özelliğini <xref:System.Drawing.GraphicsUnit.World>, fiziksel bir birim değil ve bir özel durum neden olur.  
+> Bu bir fiziksel birim <xref:System.Drawing.Graphics.PageUnit%2A> olmadığından ve <xref:System.Drawing.GraphicsUnit.World>bir özel duruma neden olacağı için özelliğini olarak ayarlayamazsınız.  
   
- Aşağıdaki örnek bir çizgi çizer (0, 0) için (2, 1), burada noktası (2, 1), 2 inç sağa ve aşağı 1 inç noktasından (0, 0):  
+ Aşağıdaki örnek (0, 0) ile (2, 1) arasında bir çizgi çizer, burada nokta (2, 1), nokta (0, 0) ile sağ ve 1 inç arasında 2 ' dir:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.CoordinateSystems#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#32)]  
   
 > [!NOTE]
->  Kalemi oluştururken bir kalem genişliği belirtmezseniz, önceki örnekte geniş bir inç bir çizgi çizer. Kalem genişliği ikinci bağımsız değişkeni belirtebilirsiniz <xref:System.Drawing.Pen> Oluşturucusu:  
+> Kaleminizi oluştururken bir kalem genişliği belirtmezseniz, yukarıdaki örnek bir inç genişliğinde bir çizgi çizer. <xref:System.Drawing.Pen> Oluşturucunun ikinci bağımsız değişkeninde kalem genişliğini belirtebilirsiniz:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#33](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#33)]
  [!code-vb[System.Drawing.CoordinateSystems#33](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#33)]  
   
- Görüntü cihazı 96 inç başına nokta yatay yönde ve 96 inç başına nokta dikey yönde olduğunu varsayıyoruz önceki örnekte çizginin bitiş noktaları üç koordinat alanlarındaki aşağıdaki koordinatlar vardır:  
+ Görüntü cihazının yatay yönde 96 nokta ve dikey yönde 96 nokta/inç olduğunu varsaydığımızda, önceki örnekteki satırın uç noktaları üç koordinat alanında aşağıdaki koordinatlara sahiptir:  
   
 |||  
 |-|-|  
-|Dünya|(0, 0) için (2, 1)|  
-|Sayfa|(0, 0) için (2, 1)|  
-|Cihaz|(0, 0, için (192, 96)|  
+|Dünya|(0, 0)-(2, 1)|  
+|Sayfasında|(0, 0)-(2, 1)|  
+|Cihaz|(0, 0,-(192, 96)|  
   
- Dünya koordinat kaynağı istemci alanını sol üst köşesinde olduğundan, sayfa koordinatlarına dünya koordinatları ile aynı olduğunu unutmayın.  
+ Dünya koordinat alanının kaynağı istemci alanının sol üst köşesinde olduğundan, sayfa koordinatları dünyanın koordinatlarıyla aynı olur.  
   
- Çeşitli efektler elde etmek için world ve sayfa dönüştürmeleri birleştirebilirsiniz. Örneğin, ölçü birimi olarak inç kullanmak istediğiniz ve istemci alanını 1/2 inç istemci alanının üst ve sol kenarından 2 inç olacak şekilde, koordinat sistemi kaynağını istediğinizi varsayalım. Aşağıdaki örnek, dünya ve sayfa dönüşümleri ayarlar bir <xref:System.Drawing.Graphics> nesnesi ve ardından bir çizgi çizer (0, 0) için (2, 1):  
+ Çeşitli etkilere ulaşmak için dünya ve sayfa dönüştürmelerini birleştirebilirsiniz. Örneğin, ölçü birimi olarak inç kullanmak istediğinizi ve koordinat sisteminizin kaynağının, istemci alanının sol kenarından 2 cm ve istemci alanının en üstünden 1/2 inç olmasını istediğinizi varsayalım. Aşağıdaki örnek, bir <xref:System.Drawing.Graphics> nesnenin Dünya ve sayfa dönüştürmelerini ayarlar ve (0, 0) öğesinden (2, 1) bir çizgi çizer:  
   
  [!code-csharp[System.Drawing.CoordinateSystems#34](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.CoordinateSystems#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.CoordinateSystems/VB/Class1.vb#34)]  
   
- Çizgi ve koordinat sistemini aşağıda gösterilmiştir.  
+ Aşağıdaki çizimde çizgi ve koordinat sistemi gösterilmektedir.  
   
  ![Koordinat sistemi](./media/aboutgdip05-art03.gif "AboutGdip05_art03")  
   
- Görüntü cihazı 96 inç başına nokta yatay yönde ve 96 inç başına nokta dikey yönde olduğunu varsayıyoruz önceki örnekte çizginin bitiş noktaları üç koordinat alanlarındaki aşağıdaki koordinatlar vardır:  
+ Görüntü cihazının yatay yönde 96 nokta ve dikey yönde 96 nokta/inç olduğunu varsaydığımızda, önceki örnekteki satırın uç noktaları üç koordinat alanında aşağıdaki koordinatlara sahiptir:  
   
 |||  
 |-|-|  
-|Dünya|(0, 0) için (2, 1)|  
-|Sayfa|(2, 0,5) için (4, 1.5)|  
-|Cihaz|(192, 48) için (384, 144)|  
+|Dünya|(0, 0)-(2, 1)|  
+|Sayfasında|(2, 0,5)-(4, 1,5)|  
+|Cihaz|(192, 48)-(384, 144)|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

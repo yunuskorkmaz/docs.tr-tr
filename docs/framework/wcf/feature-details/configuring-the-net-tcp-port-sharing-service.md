@@ -2,27 +2,27 @@
 title: Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949612"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
-Net.TCP taşıma kullanan şirket içinde barındırılan Hizmetler Denetim birkaç Gelişmiş ayarları gibi `ListenBacklog` ve `MaxPendingAccepts`, ağ iletişimi için kullanılan temel alınan TCP yuva davranışını yönetir. Ancak, her yuva için bu ayarları yalnızca, varsayılan olarak etkin aktarım bağlama bağlantı noktası paylaşımı, devre dışı bırakmışsa bağlama düzeyinde uygulanır.  
+Net. TCP aktarımını kullanan şirket içinde barındırılan hizmetler, `ListenBacklog` ve gibi çeşitli gelişmiş ayarları denetleyebilir ve `MaxPendingAccepts`bu da ağ iletişimi için kullanılan temeldeki TCP yuvasının davranışını yönetir. Ancak, her bir yuva için bu ayarlar varsayılan olarak etkinleştirilen bağlantı noktası paylaşımını devre dışı bırakılmışsa yalnızca bağlama düzeyinde geçerlidir.  
   
- Net.tcp bağlama zaman sağlar bağlantı noktası Paylaşımı (ayarlayarak `portSharingEnabled =true` aktarım bağlama öğesi üzerindeki), örtük olarak bir dış işlem (Net.TCP bağlantı noktası paylaşma hizmeti barındıran yani SMSvcHost.exe,) sağlayan kendi adına TCP yuva yönetmek için. Örneğin, TCP kullanılırken belirtin:  
+ Bir net. TCP bağlaması bağlantı noktası paylaşımını (taşıma bağlama öğesi `portSharingEnabled =true` üzerinde ayarı yaparak) etkinleştirirse, bir dış işleme (yani net. TCP bağlantı noktası paylaşım hizmetini barındıran SMSvcHost. exe) kendi adına TCP yuvasını yönetmek için örtülü olarak izin verir. Örneğin, TCP kullanırken şunları belirtin:  
   
 ```xml  
 <tcpTransport portSharingEnabled="true"  />  
 ```  
   
- Bu şekilde yapılandırıldığında, hizmetin aktarım bağlama öğesi üzerinde belirtilen herhangi bir yuva ayarı SMSvcHost.exe tarafından belirtilen yuva ayarları yerine göz ardı edilir.  
+ Bu şekilde yapılandırıldığında, hizmetin aktarım bağlama öğesinde belirtilen tüm yuva ayarları SMSvcHost. exe tarafından belirtilen yuva ayarları dikkate alınmaz.  
   
- SMSvcHost.exe yapılandırmak için erişimi adlı bir XML yapılandırma dosyası oluşturun ve SMSvcHost.exe yürütülebilir dosya (örneğin, C:\Windows\Microsoft.NET\Framework\v4.5) aynı fiziksel dizine yerleştirin.  
+ SMSvcHost. exe ' yi yapılandırmak için SmSvcHost. exe. config adlı bir XML yapılandırma dosyası oluşturun ve SMSvcHost. exe yürütülebilir dosyası ile aynı fiziksel dizine yerleştirin (örneğin, C:\Windows\Microsoft.NET\Framework\v4.5).  
   
- Aşağıdaki örnek, bir ' % s'örnek erişimi, açıkça belirtilen tüm yapılandırılabilir değerler için varsayılan ayarlarla gösterir.  
+ Aşağıdaki örnek, açıkça belirtilen tüm yapılandırılabilir değerler için varsayılan ayarlarla bir SMSvcHost. exe. config dosyası gösterir.  
   
 ```xml  
 <configuration>  
@@ -48,19 +48,19 @@ Net.TCP taşıma kullanan şirket içinde barındırılan Hizmetler Denetim birk
 </configuration>  
 ```  
   
-## <a name="when-to-modify-smsvchostexeconfig"></a>Erişimi değiştirme zamanı  
- Genel olarak, bu dosyada belirtilen herhangi bir yapılandırma ayarı tüm hizmetler Net.TCP bağlantı noktası paylaşım hizmetini kullanan bir bilgisayara etkilediğinden bakım erişimi dosyasının içeriğini değiştirirken edilmelidir. Bu uygulamaları içerir [!INCLUDE[wv](../../../../includes/wv-md.md)] TCP Etkinleştirmesi özellikleri Windows İşlem Etkinleştirme Hizmeti (WAS) kullanın.  
+## <a name="when-to-modify-smsvchostexeconfig"></a>SMSvcHost. exe. config ne zaman değiştirilir  
+ Genel olarak, SMSvcHost. exe. config dosyasının içeriğini değiştirirken dikkatli olunmalıdır çünkü bu dosyada belirtilen herhangi bir yapılandırma ayarı net. TCP bağlantı noktası paylaşım hizmetini kullanan bir bilgisayardaki tüm hizmetleri etkiler. Bu, Windows işlem [!INCLUDE[wv](../../../../includes/wv-md.md)] etkinleştirme hizmeti 'nin (was) TCP etkinleştirme özelliklerini kullanan uygulamalar içerir.  
   
- Ancak, bazen Net.TCP bağlantı noktası Paylaşımı hizmeti varsayılan yapılandırmasını değiştirmeniz gerekebilir. Örneğin, varsayılan değeri `maxPendingAccepts` 4 * İşlemci sayısı. Çok sayıda bağlantı noktası Paylaşımı kullanan hizmetleri barındıran sunucular, en yüksek performans sağlamak için bu değeri artırabilirsiniz. İçin varsayılan değer `maxPendingConnections` 100'dür. Bu değer bir hizmete çağrı yapma birden çok eşzamanlı istemciler varsa ve hizmeti istemci bağlantıları bırakıyor artırıldığında düşünmelisiniz.  
+ Ancak, bazen net. TCP bağlantı noktası paylaşma hizmeti için varsayılan yapılandırmayı değiştirmeniz gerekebilir. Örneğin, için `maxPendingAccepts` varsayılan değer 4 * işlemci sayısıdır. Bağlantı noktası Paylaşımı kullanan çok sayıda hizmeti barındıran sunucular, en yüksek aktarım hızını elde etmek için bu değeri artırabilir. İçin `maxPendingConnections` varsayılan değer 100 ' dir. Hizmeti çağıran birden çok eş zamanlı istemci varsa ve hizmet istemci bağlantılarını bırakırken, bu değeri artırmayı göz önünde bulundurmanız gerekir.  
   
- Erişimi de bağlantı noktası paylaşma hizmeti yapabilir kimlikleri kullanmak işlemi hakkında bilgi içerir. Bir işlem paylaşımı paylaşılan bir TCP kullanmak için hizmet bağlantı noktasına bağlandığında bağlantı noktası, bağlantı işlem kimliği işlem yapmak için izin verilen kimlikleri listesini karşı işaretli Paylaşım Hizmeti bağlantı noktasını kullanın. Bu kimlikleri güvenlik tanımlayıcılarını (SID'ler) belirtilen \<allowAccounts > erişimi dosyasının bölümü. Varsayılan olarak, hizmet bağlantı noktası kullanma izni Administrators grubu üyelerinin yanı sıra sistem hesapları (LocalService, LocalSystem ve NetworkService) verilir. Açıkça uygun SID Paylaşım Hizmeti bağlantı noktasına bağlanmak için başka bir kimlik (örneğin, bir kullanıcı kimliği) olarak çalışan bir işlemin tanıyan uygulamaları (SMSvc.exe işlem olana kadar bu değişiklikler uygulanmaz erişimi eklemeniz gerekir yeniden).  
+ SMSvcHost. exe. config, bağlantı noktası paylaşım hizmetini kullanan işlem kimlikleri hakkındaki bilgileri de içerir. Bir işlem, paylaşılan bir TCP bağlantı noktasını kullanmak için bağlantı noktası paylaşım hizmetine bağlandığında, bağlanan işlemin işlem kimliği, bağlantı noktası paylaşım hizmetini kullanmasına izin verilen kimliklerin bir listesine göre denetlenir. Bu kimlikler SMSvcHost. exe. config dosyasının \<AllowAccounts > bölümünde güvenlik tanımlayıcıları (SID) olarak belirtilir. Varsayılan olarak, bağlantı noktası paylaşım hizmetini kullanma izni, sistem hesaplarına (LocalService, LocalSystem ve NetworkService) ve Yöneticiler grubunun üyelerine verilir. Bağlantı noktası paylaşım hizmetine bağlanmak için başka bir kimlik (örneğin, bir kullanıcı kimliği) olarak çalışan bir işlemin, SMSvcHost. exe. config 'e uygun SID 'yi açıkça eklemesi gerekir (Bu değişiklikler SMSvc. exe işlemi tamamlanana kadar uygulanmaz) yeniden başlatıldı).  
   
 > [!NOTE]
->  Üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)] sistemleri ile kullanıcı hesabı denetimi (etkinleştirilmişse, yerel kullanıcıların UAC) yükseltilmiş izinler bile hesabını Administrators grubunun bir üyesidir. Bu kullanıcıların yapmasına izin vermek için bağlantı noktası paylaşma hizmeti olmadan yükseltme, kullanıcının SID (veya kullanıcının üyesi olduğu bir grubun SID) kullanımını açıkça eklenmelidir \<allowAccounts > bölümüne erişimi.  
+> Kullanıcı hesabı denetimi (UAC) etkin olan sistemlerde,hesaplarıYöneticilergrubununbirüyesiolsada,yerelkullanıcılaryükseltilmişizinlergerektirir.[!INCLUDE[wv](../../../../includes/wv-md.md)] Bu kullanıcıların bağlantı noktası paylaşım hizmetini yükseltme olmadan kullanmasına izin vermek için, kullanıcının SID 'si (veya kullanıcının üye olduğu bir grubun SID 'si) SMSvcHost. exe. config dosyasının \<AllowAccounts > bölümüne açıkça eklenmelidir.  
   
 > [!WARNING]
->  Özel bir varsayılan erişimi dosyasını belirtir `etwProviderId` SMSvcHost.exe İzleme hizmeti izlemeleri engellemesini önlemek için.  
+>  Varsayılan SMSvcHost. exe. config dosyası, SMSvcHost. `etwProviderId` exe izlemenin hizmet izlemelerinde kesintiye uğramasını engellemek için bir özel belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<NET.TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)
+- [\<net. TCP >](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

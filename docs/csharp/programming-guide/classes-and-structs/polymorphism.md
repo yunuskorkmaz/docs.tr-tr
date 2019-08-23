@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: e71894e3674ed39dee129085d7ea7fb23a192f2b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922076"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 Çok biçimlilik, kapsülleme ve devralma sonrasında nesne odaklı programlama için genellikle üçüncü olarak adlandırılır. Çok biçimlilik, "çoktan şekillendirilmiş" anlamına gelen ve iki ayrı yönü bulunan bir Yunan kelimedir:  
@@ -85,7 +85,7 @@ ms.locfileid: "69596227"
  Daha fazla bilgi için bkz. [Base](../../language-reference/keywords/base.md).  
   
 > [!NOTE]
->  Sanal üyelerin kendi uygulamalarında bu üyenin temel `base` sınıf uygulamasını çağırmak için kullanılması önerilir. Temel sınıf davranışının oluşmasına izin vermek, türetilmiş sınıfın türetilmiş sınıfa özgü davranış uygulamaya odaklanmalarını sağlar. Temel sınıf uygulama çağrılıp, davranışını temel sınıfın davranışıyla uyumlu hale getirmek için türetilmiş sınıfa kadar olur.  
+> Sanal üyelerin kendi uygulamalarında bu üyenin temel `base` sınıf uygulamasını çağırmak için kullanılması önerilir. Temel sınıf davranışının oluşmasına izin vermek, türetilmiş sınıfın türetilmiş sınıfa özgü davranış uygulamaya odaklanmalarını sağlar. Temel sınıf uygulama çağrılıp, davranışını temel sınıfın davranışıyla uyumlu hale getirmek için türetilmiş sınıfa kadar olur.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   

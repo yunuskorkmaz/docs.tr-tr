@@ -2,34 +2,34 @@
 title: Özel Bağlama Güvenilir Oturum
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: 215a1621fd2e74201cebdec736586322eadb76ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 460f06803b99bdac4e79df290d34831b931ff6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878586"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953847"
 ---
 # <a name="custom-binding-reliable-session"></a>Özel Bağlama Güvenilir Oturum
-Özel bağlama ayrık bağlama öğelerinin sıralı bir listesi tanımlanır. Bu örnek, çeşitli taşıma ve kodlama öğeleri, özellikle de güvenilir oturumlar etkinleştirme ileti özel bağlama yapılandırma işlemi gösterilmektedir.  
+Özel bağlama, farklı bağlama öğelerinin sıralı bir listesi tarafından tanımlanır. Bu örnek, özellikle güvenilir oturumları etkinleştiren çeşitli taşıma ve ileti kodlama öğeleriyle özel bağlamanın nasıl yapılandırılacağını gösterir.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`  
   
-## <a name="sample-details"></a>Örnek Ayrıntıları  
- Güvenilir oturumlar güvenilir Mesajlaşma ve oturumları için özellikler sağlar. Güvenilir Mesajlaşma iletişimi hatasında yeniden deneme sayısı ve teslim Güvenceleri gibi sırayla varış belirtilmesi iletilerinin sağlar. Oturumlarının çağrıları arasında istemcilerin zachovat stav relace Örnek oturumları, istemci durum koruma için uygular ve sıralı teslim Güvenceleri belirtir. Örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hesaplayıcı hizmet uygulayan. Güvenilir oturum özellikleri etkin ve uygulama yapılandırma dosyalarında istemci ve hizmet için yapılandırılır.  
+## <a name="sample-details"></a>Örnek Ayrıntılar  
+ Güvenilir Oturumlar, güvenilir mesajlaşma ve oturumlara yönelik özellikler sağlar. Güvenilir Mesajlaşma, hata durumunda iletişim kurmayı yeniden dener ve iletilerin belirli bir sırada gönderilmesini sağlar. Oturumlar, çağrılar arasındaki istemciler için durumu korur. Örnek, istemci durumunun sürdürülmesi için oturumları uygular ve sıralı teslim bildirimlerini belirtir. Örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum özellikleri, istemci ve hizmet için uygulama yapılandırma dosyalarında etkinleştirilir ve yapılandırılır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bağlama öğelerinin sıralama her bir katman kanal yığınında temsil ettiği için bir özel bağlamayı tanımlamak önemlidir (bkz [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)).  
+ Bağlama öğelerinin sıralaması, her biri kanal yığınındaki bir katmanı temsil ettiğinden (bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)) özel bir bağlama tanımlamak açısından önemlidir.  
   
- Örneği için hizmet yapılandırması, aşağıdaki kod örneğinde gösterildiği gibi tanımlanmaktadır.  
+ Örnek için hizmet yapılandırması, aşağıdaki kod örneğinde gösterildiği gibi tanımlanmıştır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -86,9 +86,9 @@ ms.locfileid: "65878586"
 </configuration>  
 ```  
   
- Çapraz makine senaryoda çalıştırırken, istemcinin uç nokta adresi hizmet ana bilgisayar adını yansıtacak şekilde değiştirmeniz gerekir.  
+ Bir çapraz makine senaryosunda çalışırken, istemcinin uç nokta adresini hizmetin ana bilgisayar adını yansıtacak şekilde değiştirmeniz gerekir.  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -99,22 +99,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin:  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 'yi yükler:  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!IMPORTANT]
-    >  İstemci bir çapraz makine yapılandırmaya çalışırken, hem de "localhost" değiştirdiğinizden emin olması `address` özniteliği [ \<uç noktası >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesi ve `clientBaseAddress` özniteliği [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) aşağıdaki örnekte gösterildiği gibi uygun makine adı.  
+    >  İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, "localhost" öğesini hem `address` [ \<uç nokta >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) öğesinin `clientBaseAddress` hem de [ \<CompositeDuplex özniteliğinin özniteliği içinde değiştirdiğinizden emin olun ](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)aşağıdaki örnekte gösterildiği gibi, uygun makinenin adıyla >.  
   
     ```xml  
     <endpoint name = ""  

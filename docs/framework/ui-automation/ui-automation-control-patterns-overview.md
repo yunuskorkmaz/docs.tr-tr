@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963306"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI Otomasyon Denetim Düzenlerine Genel Bakış
 > [!NOTE]
->  Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Bu genel bakışta [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Denetim desenleri tanıtılmıştır. Denetim desenleri denetim türünden veya denetimin görünümünün bağımsız olarak bir denetimin işlevini kategorilere ayırma ve kullanıma sunma için bir yol sağlar.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]ortak denetim davranışlarını temsil etmek için denetim desenlerini kullanır. Örneğin, çağrılan denetimler (örneğin, düğmeler) ve kaydırma çubuklarına sahip denetimler (liste kutuları, liste görünümleri veya Birleşik giriş kutuları gibi) için kaydırma denetim deseninin çağrılması için Invoke denetim modelini kullanırsınız. Her denetim deseninin ayrı bir işlevi temsil ettiği için, belirli bir denetim tarafından desteklenen işlevlerin tamamını betimleyerek birleştirilebilecek.  
   
 > [!NOTE]
->  Üst öğe tarafından sunulan işlevleri sağlayan alt denetimler ile oluşturulan [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] toplama denetimleri, normalde her bir alt denetimle ilişkili tüm denetim düzenlerini uygulamalıdır. Buna karşılık, aynı denetim desenlerinin alt denetimler tarafından uygulanması gerekmez.  
+> Üst öğe tarafından sunulan işlevleri sağlayan alt denetimler ile oluşturulan [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] toplama denetimleri, normalde her bir alt denetimle ilişkili tüm denetim düzenlerini uygulamalıdır. Buna karşılık, aynı denetim desenlerinin alt denetimler tarafından uygulanması gerekmez.  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>UI Otomasyonu Denetim deseninin bileşenleri  

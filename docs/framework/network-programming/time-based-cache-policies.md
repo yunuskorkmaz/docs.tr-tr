@@ -17,45 +17,45 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b3e39deca8b483413d2a2c42dbacbf821b3e42e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942370"
 ---
 # <a name="time-based-cache-policies"></a>Saat Temelli Önbellek İlkeleri
-Bir saat temelli önbellek İlkesi üstbilgileri kaynakla döndürülen kaynak alınmadı zaman ve geçerli zamanı kullanarak önbelleğe alınan girişlerin güncellik tanımlar. Saat temelli önbellek İlkesi ayarlanarak, kullanabilir <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı bir ilke veya özelleştirilmiş zamana bağlı ilkesi oluşturun. Köprü Metni Aktarım Protokolü (HTTP) kullanılarak elde edilen kaynaklar için varsayılan saat temelli ilkesini kullanarak, tam önbellek davranışını 13 ve RFC 2616 14 bölümlerinde belirtilen davranışları ve önbelleğe alınan yanıta dahil üstbilgileri tarafından belirlenir, kullanılabilir [Internet Engineering Task Force (IETF)](https://www.ietf.org/) Web sitesi. HTTP kaynaklar için varsayılan zaman tabanlı ilke ayarı gösteren bir kod örneği için bkz: [nasıl yapılır: Uygulama için varsayılan saat temelli önbellek İlkesi ayarlama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Önbellek ilkeleri oluşturma ve kullanma gösteren kod örnekleri için bkz: [ağ uygulamalarında önbelleğe yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
+Zaman tabanlı önbellek ilkesi, kaynağın alındığı zamanı, kaynakla döndürülen üstbilgileri ve geçerli saati kullanarak önbelleğe alınmış girişlerin yeniliği tanımlar. Zaman tabanlı bir önbellek ilkesi ayarlarken, <xref:System.Net.Cache.HttpRequestCacheLevel.Default> zaman tabanlı ilkeyi kullanabilir veya özelleştirilmiş zaman tabanlı bir ilke oluşturabilirsiniz. Köprü Metni Aktarım Protokolü (HTTP) kullanılarak elde edilen kaynaklar için varsayılan zaman tabanlı ilkeyi kullanırken, tam önbellek davranışı, önbelleğe alınan yanıtta bulunan üst bilgiler ve 13. ve RFC 2616 bölümlerinde belirtilen davranışlar tarafından belirlenir. [Internet Mühendisliği görev gücü (IETF)](https://www.ietf.org/) Web sitesinde bulunabilir. HTTP kaynakları için varsayılan saat tabanlı ilkeyi ayarlamayı gösteren bir kod örneği için bkz [. nasıl yapılır: Bir uygulama](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)Için varsayılan zaman tabanlı önbellek ilkesini ayarlayın. Önbellek ilkeleri oluşturmayı ve kullanmayı gösteren kod örnekleri için bkz. [Ağ uygulamalarında önbelleğe alma yapılandırma](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
   
-## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Önbelleğe alınan girişlerin Güncellik belirlemek için ölçütleri  
- Bir saat temelli önbellek İlkesi özelleştirmek için önbelleğe alınan girişlerin güncellik belirlemek için bir veya daha fazla aşağıdaki ölçütleri kullanılabilir belirtebilirsiniz:  
+## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Önbelleğe alınmış girişlerin yeniliği belirleme ölçütleri  
+ Zaman tabanlı bir önbellek ilkesini özelleştirmek için, aşağıdaki ölçütlerden birini veya daha fazlasını, önbelleğe alınmış girişlerin yeniliği belirlemek için kullanabilirsiniz:  
   
-- En uzun geçerlilik süresi  
+- Maksimum yaş  
   
-- En fazla eskime  
+- Maksimum Eskime durumu  
   
-- En az eskime  
+- En düşük yenilik  
   
 - Önbellek eşitleme tarihi  
   
 > [!NOTE]
->  Varsayılan saat temelli önbellek ilkesini kullanarak uygulamanız için varsayılan bir önbellek İlkesi ayarlama ile karıştırılmamalıdır. Zamana bağlı varsayılan ilke isteği veya uygulama düzeyinde kullanılabilen belirli bir ilkedir. Varsayılan önbellek ilkesini uygulamanız için bir istek üzerinde ayarlanan ilke olduğunda etkinleşir bir (konum tabanlı veya zamana bağlı) ilkedir. Uygulamanız için varsayılan bir önbellek İlkesi ayarlama hakkında daha fazla bilgi için bkz <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
+> Varsayılan süre tabanlı önbellek ilkesinin kullanılması, uygulamanız için varsayılan önbellek ilkesi ayarlanarak karıştırılmamalıdır. Varsayılan zaman tabanlı ilke, istek veya uygulama düzeyinde kullanılabilen belirli bir ilkedir. Uygulamanız için varsayılan önbellek ilkesi, bir istekte hiçbir ilke ayarlanmamışsa geçerli olan bir ilkedir (konum tabanlı veya zaman tabanlı). Uygulamanız için varsayılan önbellek ilkesi ayarlama hakkında daha fazla bilgi için bkz <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
   
-### <a name="maximum-age"></a>En uzun geçerlilik süresi  
- En yüksek yaşı İlkesi ölçütü bir kaynağı önbelleğe alınmış bir kopyasını kullanılabilir süreyi belirtir. Kaynağın önbelleğe alınmış kopyasını belirtilen süre miktarını eski ise, kaynak sunucunuzdaki içeriğe karşı denetleyerek gerekiyor.%0. En uzun geçerlilik süresi, süresi dolduktan sonra kullanılacak kaynak izin verir, bu ölçütü değil dikkate alınır en fazla eskime değeri de belirtilmedikçe.  
+### <a name="maximum-age"></a>Maksimum yaş  
+ Maksimum yaş ilkesi ölçütü, bir kaynağın önbelleğe alınmış kopyasının kullanılabileceği süreyi belirtir. Kaynağın önbelleğe alınmış kopyası belirtilen süreden daha eskiyse, kaynak sunucu üzerindeki içeriğe karşı denetlenerek yeniden doğrulanması gerekir. En fazla yaş kaynağın süresi dolduktan sonra kullanılmasına izin veracaksa, en yüksek bir stalet değeri de belirtilmediği takdirde bu ölçüt kabul edilmez.  
   
-### <a name="maximum-staleness"></a>En fazla eskime  
- En fazla eskime ilke ölçütü kaynak kopyasının kullanılabilir içerik sona erme sonra sürenin uzunluğunu belirtir. Bu kaynakları süresi dolduktan sonra kullanılacak veren tek önbellek İlkesi ölçüttür.  
+### <a name="maximum-staleness"></a>Maksimum Eskime durumu  
+ En yüksek stalet ilkesi ölçütü, kaynağın önbelleğe alınmış kopyasının kullanılabileceği içerik süresi dolduktan sonraki sürenin uzunluğunu belirtir. Bu, kaynakların süre dolduktan sonra kullanılmasına izin veren tek önbellek ilkesi ölçütünüz.  
   
-### <a name="minimum-freshness"></a>En az eskime  
- En az eskime ilke ölçütü kaynak kopyasının kullanılabilir içerik süresi dolmadan önce sürenin uzunluğunu belirtir. Bu ilke, sona erme tarihinden önce süresi dolacak şekilde bir önbellek girdisi neden etkisi vardır; Bu nedenle, en fazla eskime ayarları ve en az eskime birbirini dışlar.  
+### <a name="minimum-freshness"></a>En düşük yenilik  
+ Minimum yeniliği ilke ölçütü, kaynağın önbelleğe alınmış kopyasının kullanılabileceği içerik süresinin dolması için geçen sürenin uzunluğunu belirtir. Bu ilke, bir önbellek girişinin süre sonu tarihinden önce sona ermesine neden olan etkileri sağlar; Bu nedenle, en düşük yenilik ve en yüksek stalet ayarları birbirini dışlıyor.  
   
 ## <a name="cache-synchronization-date"></a>Önbellek eşitleme tarihi  
- Önbellek eşitleme tarihi ilke ölçütü ne zaman önbelleğe alınmış bir kopyasını bir kaynak sunucunuzdaki içeriğe karşı denetleyerek gerekiyor.%0 belirler. İçeriği, öğenin önbelleğe alınmış bu yana değişti, sunucudan alınan, önbellekte saklanan ve uygulamaya döndürülen. İçerik değişmemişse, zaman damgası güncelleştirilir ve uygulama, önbelleğe alınmış içeriği alır.  
+ Önbellek eşitleme tarihi ilke ölçütü, bir kaynağın önbelleğe alınmış kopyasının, sunucudaki içeriğe karşı denetlenerek yeniden doğrulanması gerektiğini belirler. İçerik, öğe önbelleğe alındıktan sonra değiştirildiyse, sunucudan alınır, önbellekte depolanır ve uygulamaya döndürülür. İçerik değiştirilmediyse, zaman damgası güncellenir ve uygulama önbelleğe alınmış içeriği alır.  
   
- Önbellek eşitleme tarihi ne zaman önbelleğe alınan içerikler gerekiyor.%0 mutlak bir tarih belirtmenizi sağlar. Yeni bir önbellek girdisi önbellek eşitleme tarihten önce en son yeniden doğrulanır, yeniden doğrulanırken sunucu yine de gerçekleşir. Önbellek girişi önbellek eşitleme tarihinden sonra yeniden doğrulanır ve ek güncellik veya önbelleğe alınmış giriş geçersiz sunucu yeniden doğrulama gereksinimleri yoktur, önbellek girişi kullanılır. Önbellek eşitleme tarihi bir tarihe ayarlarsanız, giriş önbellek eşitleme tarihi geçinceye kadar istek her zaman yeniden doğrulanır.  
+ Önbellek eşitleme tarihi, önbelleğe alınmış içeriklerin yeniden doğrulanması gerektiğinde mutlak bir tarih belirtmenize olanak tanır. Önbellek eşitleme tarihinden önce yeni bir önbellek girişinin yeniden doğrulanması durumunda sunucu ile yeniden doğrulama işlemi devam eder. Önbellek girişi önbellek eşitleme tarihinden sonra yeniden doğrulandıysa ve önbellekteki girişi geçersiz kılan ek bir yenilik veya sunucu yeniden doğrulama gereksinimi yoksa, önbellekten gelen giriş kullanılır. Önbellek eşitleme tarihi gelecek bir tarih olarak ayarlandıysa, önbellek eşitleme tarihi geçirilmeden, giriş her istendiğinde yeniden onaylanır.  
   
- Aşağıdaki konular, saat temelli önbellek İlkesi ölçütlerini birleştirme etkileri hakkında bilgi sağlar:  
+ Aşağıdaki konular, zaman tabanlı önbellek ilkesi ölçütlerini birleştirmenin etkileri hakkında bilgi sağlar:  
   
 - [Önbellek İlkesi Etkileşimi — Yaş Üst Sınırı ve En Fazla Eskime](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   

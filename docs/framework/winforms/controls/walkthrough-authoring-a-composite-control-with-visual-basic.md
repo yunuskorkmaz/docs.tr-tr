@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040239"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950036"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma
 Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanılabilmesi için bir yol sağlar. Bileşik denetim temelde görsel temsili olan bir bileşendir. Bu nedenle, Kullanıcı girişini doğrulayarak, görüntü özelliklerini değiştirerek veya yazar için gereken diğer görevleri gerçekleştirerek işlevselliği genişletebilen bir veya daha fazla Windows Forms denetimi, bileşeni veya kod bloklarında bulunabilir. Bileşik denetimler Windows Forms diğer denetimlerle aynı şekilde yerleştirilebilir. Bu izlenecek yolun ilk bölümünde adlı `ctlClock`basit bir bileşik denetim oluşturursunuz. İzlenecek yolun ikinci bölümünde, devralma `ctlClock` ile işlevlerini genişletebilirsiniz.
@@ -37,7 +37,7 @@ Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanıl
 3. Çözüm Gezgini, **UserControl1. vb**öğesine sağ tıklayın ve ardından **Yeniden Adlandır**' a tıklayın. Dosya adını olarak `ctlClock.vb`değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
 
     > [!NOTE]
-    >  Varsayılan olarak, bileşik bir denetim sistem tarafından sunulan <xref:System.Windows.Forms.UserControl> sınıftan devralınır. <xref:System.Windows.Forms.UserControl> Sınıfı, tüm bileşik denetimlerin gerektirdiği işlevselliği sağlar ve standart yöntemler ve özellikler uygular.
+    > Varsayılan olarak, bileşik bir denetim sistem tarafından sunulan <xref:System.Windows.Forms.UserControl> sınıftan devralınır. <xref:System.Windows.Forms.UserControl> Sınıfı, tüm bileşik denetimlerin gerektirdiği işlevselliği sağlar ve standart yöntemler ve özellikler uygular.
 
 4. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
 
@@ -184,7 +184,7 @@ Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanıl
 5. Çözüm Gezgini, geçerli projelere göz atabilirsiniz.
 
     > [!NOTE]
-    >  Geçerli projeye **ctlAlarmClock. vb** adlı bir dosya eklendi.
+    > Geçerli projeye **ctlAlarmClock. vb** adlı bir dosya eklendi.
 
 ### <a name="adding-the-alarm-properties"></a>Alarm özelliklerini ekleme
  Özellikler, devralınan bir denetime, Birleşik bir denetime eklendikçe aynı şekilde eklenir. Şimdi, denetimidir için iki özellik eklemek üzere özellik bildirimi söz dizimini kullanacaksınız: `AlarmTime`bu, uyarının bitiş tarihini ve saatini depolayan ve `AlarmSet`alarmın ayarlanmış olup olmadığını belirtecektir.
@@ -230,10 +230,10 @@ Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanıl
 2. ( `lblDisplay` Denetimin görüntüleme bölümü) öğesine tıklayın ve Özellikler penceresi görüntüleyin.
 
     > [!NOTE]
-    >  Tüm özellikler görüntülenirken, soluk olurlar. Bu özelliklerin yerel `lblDisplay` olduğunu ve Özellikler penceresi değiştirilemeyeceğini veya erişilmeyeceğini gösterir. Varsayılan olarak, bileşik denetimde `Private`bulunan denetimler ve özellikleri herhangi bir şekilde erişilebilir değildir.
+    > Tüm özellikler görüntülenirken, soluk olurlar. Bu özelliklerin yerel `lblDisplay` olduğunu ve Özellikler penceresi değiştirilemeyeceğini veya erişilmeyeceğini gösterir. Varsayılan olarak, bileşik denetimde `Private`bulunan denetimler ve özellikleri herhangi bir şekilde erişilebilir değildir.
 
     > [!NOTE]
-    >  Bileşik denetiminizin sonraki kullanıcılarının iç denetimlerine erişimi olmasını istiyorsanız, veya `Public` `Protected`olarak bildirin. Bu, uygun kodu kullanarak bileşik denetilinizin içindeki denetimlerin özelliklerini ayarlamanıza ve değiştirmenize izin verir.
+    > Bileşik denetiminizin sonraki kullanıcılarının iç denetimlerine erişimi olmasını istiyorsanız, veya `Public` `Protected`olarak bildirin. Bu, uygun kodu kullanarak bileşik denetilinizin içindeki denetimlerin özelliklerini ayarlamanıza ve değiştirmenize izin verir.
 
 3. Bileşik denetimi bir <xref:System.Windows.Forms.Label> denetim ekleyin.
 
@@ -298,7 +298,7 @@ Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanıl
      Bu kodun eklenmesi birkaç görevi gerçekleştirir. `Overrides` İfade, denetimi temel denetimden devralınan yöntemin yerine bu yöntemi kullanacak şekilde yönlendirir. Bu yöntem çağrıldığında, `MyBase.Timer1_Tick` ifadeyi çağırarak geçersiz kıldığından, özgün denetimde dahil edilen tüm işlevlerin Bu denetimde yeniden üretildiğinden emin olarak çağrılır. Daha sonra alarm işlevselliğini birleştirmek için ek kod çalıştırır. Uyarı oluştuğunda yanıp sönen bir etiket denetimi görünür ve duyulabilir bir bip sesi duyacaktır.
 
     > [!NOTE]
-    >  Devralınan bir olay işleyicisini geçersiz kıldığından, olayı `Handles` anahtar sözcüğüyle belirtmeniz gerekmez. Olay zaten kullanıma açıldı. Geçersiz kılmanın tamamı, işleyicinin uygulamasıdır.
+    > Devralınan bir olay işleyicisini geçersiz kıldığından, olayı `Handles` anahtar sözcüğüyle belirtmeniz gerekmez. Olay zaten kullanıma açıldı. Geçersiz kılmanın tamamı, işleyicinin uygulamasıdır.
 
      Alarm saati denetiminiz neredeyse tamamlanmıştır. Kalan tek şey, devre dışı bırakmak için bir yol uygulamaktır. Bunu yapmak için `lblAlarm_Click` yöntemine kod ekleyeceksiniz.
 

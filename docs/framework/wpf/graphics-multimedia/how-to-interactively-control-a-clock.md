@@ -8,20 +8,20 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d18f395974750a6b85458f636a27f6101e7978f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947244"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951341"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>Nasıl yapılır: Etkileşimli Olarak Saat Denetimi
-A <xref:System.Windows.Media.Animation.Clock> nesnenin <xref:System.Windows.Media.Animation.ClockController> özelliği etkileşimli olarak başlatın, duraklatma, sürdürme, arama, dolgu süresinin ilerletme ve saati olanak sağlar. Yalnızca kök saatin zamanlama ağacının etkileşimli olarak denetlenebilir.  
+<xref:System.Windows.Media.Animation.Clock> Bir<xref:System.Windows.Media.Animation.ClockController> nesnenin özelliği, etkileşimli olarak başlamasını, duraklatmanızı, devam ettirmenizi, arama süresini dolduracak ve saati durdurmanıza olanak sağlar. Yalnızca bir zamanlama ağacının kök saati etkileşimli olarak denetlenebilir.  
   
 > [!NOTE]
->  Etkileşimli olarak doğrudan saatlerle çalışmanızı gerektirmeyen denetim animasyonlar farklı yöntemleri vardır: film şeridi de kullanabilirsiniz. Görsel Taslaklar işaretleme ve kod desteklenir. Bir örnek için bkz. [görsel taslak kullanarak özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md) veya [animasyona genel bakış](animation-overview.md).  
+> Doğrudan saatlerle çalışmanıza gerek olmayan animasyonları etkileşimli olarak denetleyebilmeniz için başka yollar vardır: film şeritleri de kullanabilirsiniz. Görsel Taslaklar hem biçimlendirme hem de kodda desteklenir. Bir örnek için bkz. görsel taslak veya [animasyona genel bakış](animation-overview.md) [kullanarak bir özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md) .  
   
- Aşağıdaki örnekte, çeşitli düğmeler, etkileşimli bir animasyon saat denetimi için kullanılır.  
+ Aşağıdaki örnekte, bir animasyon saatini etkileşimli olarak denetlemek için birkaç düğme kullanılır.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ClockControllerExample.cs#graphicsmmclockcontrollerexample)]

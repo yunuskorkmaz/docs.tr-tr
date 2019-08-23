@@ -8,31 +8,31 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 17e73ab2aa777ae53f31596fa364a4feac297842
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962925"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
-.NET Framework türleri bir kavramı *varsayılan değerler*. Örneğin, varsayılan değer: bir başvuru türü için `null`, ve isteğe bağlı olarak bir tamsayı türü için sıfır ise. Seri hale getirilmiş verilerden veri üyesi varsayılan değerine ayarlandığında atlamak için zaman zaman istenen bir durumdur. Varsayılan değer üyesine sahip olduğundan, gerçek bir değer seri hale yok; Bu, bir performans avantajı vardır.  
+.NET Framework, türlerin *varsayılan değer*kavramıdır. Örneğin, herhangi bir başvuru türü için varsayılan değer `null`, ve bir tamsayı türü için sıfırdır. Zaman zaman, varsayılan değerine ayarlandığında serileştirilmiş verilerden bir veri üyesini atlamak tercih edilir. Üyenin varsayılan bir değeri olduğundan, gerçek değerin serileştirilmesi gerekmez; Bunun bir performans avantajı vardır.  
   
- Seri hale getirilmiş veri üyesi atlanacak Ayarla <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğini `false` (varsayılan değer `true`).  
+ Seri hale getirilmiş verilerden bir <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> üyeyi atlamak için, <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğinin özelliğini olarak `false` ayarlayın (varsayılan olarak `true`).  
   
 > [!NOTE]
->  Ayarlamalısınız <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliğini `false` Bunu yapmak için belirli bir gereksiniminiz varsa, örneğin birlikte çalışabilirliğini ya da veri boyutunu azaltma.  
+> Özelliği, birlikte çalışabilirlik veya veri boyutu azaltma gibi belirli bir ihtiyacı varsaolarakayarlamanızgerekir.`false` <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod ile birkaç üyelere sahip <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> kümesine `false`.  
+ Aşağıdaki kod, olarak <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> `false`ayarlanmış birkaç üyeye sahiptir.  
   
  [!code-csharp[DataMemberAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/datamemberattribute/cs/overview.cs#4)]
  [!code-vb[DataMemberAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datamemberattribute/vb/overview.vb#4)]  
   
- Bu sınıfın örneğini serileştirilmiş, sonuç şu şekilde olur: `employeeName` ve `employeeID` serileştirilir. Null değeri `employeeName` ve sıfır değeri `employeeID` serileştirilmiş veriler açıkça parçasıdır. Ancak, `position`, `salary`, ve `bonus` üyeleri sıralanmış değildir. Son olarak, `targetSalary` zamanki olsa bile seri <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliği `false`, 57800 .NET varsayılan değeri sıfıra eşit bir tamsayı ile eşleşmiyor.  
+ Bu sınıfın bir örneği serileştirildiğinden, sonuç aşağıdaki gibidir: `employeeName` ve `employeeID` serileştirilir. İçin null değeri `employeeName` ve sıfır `employeeID` değeri, seri hale getirilmiş verilerin açıkça bir parçasıdır. Ancak,, ve`bonus` üyeleri serileştirilmez. `position` `salary` Son olarak `targetSalary` , <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> özelliği olarak ayarlanmış `false`olsa bile, her zamanki gibi serileştirilir, çünkü 57800, sıfır olan bir tamsayı için .NET varsayılan değeri ile eşleşmez.  
   
-### <a name="xml-representation"></a>XML gösterimi  
- Önceki örnekte, XML'e seri, aşağıdakine benzer bir gösterimidir.  
+### <a name="xml-representation"></a>XML temsili  
+ Önceki örnek XML 'e serileştirilse, temsili aşağıdakine benzer.  
   
 ```xml  
 <Employee>  
@@ -42,19 +42,19 @@ ms.locfileid: "65881262"
 </Employee>  
 ```  
   
- `xsi:nil` Açıkça null değeri temsil etmek için birlikte çalışabilen bir yol sağlar World Wide Web Consortium (W3C) XML Şeması örneği ad alanında bir özel özniteliği bir özniteliktir. Hiçbir bilgi hiç konumunu, maaş ve ek veri üyeleri hakkında XML'de unutmayın. Alan uçta olarak yorumlayabilir `null`, sıfır, ve `null`sırasıyla. Bir üçüncü taraf seri durumdan çıkarıcı bu düzen önerilmez neden olan doğru yorumu yapabilen bir garanti yoktur. <xref:System.Runtime.Serialization.DataContractSerializer> Sınıfı her zaman eksik değerleri için doğru yorumu seçer.  
+ `xsi:nil` Özniteliği, bir null değeri açıkça temsil etmek için birlikte çalışabilen bir yol sağlayan World Wide Web Konsorsiyumu (W3C) XML şema örneği ad alanındaki özel bir özniteliktir. XML 'de konum, maaş ve ek veri üyeleri hakkında hiçbir bilgi bulunmadığını unutmayın. Alma ucu bunları sırasıyla, sıfır ve `null` `null`olarak yorumlayabilir. Üçüncü taraf seri hale getiricinin doğru yorumu yapabileceğinizin garantisi yoktur, bu da bu düzenin neden önerilmez. <xref:System.Runtime.Serialization.DataContractSerializer> Sınıf, eksik değerler için her zaman doğru yorumu seçer.  
   
-### <a name="interaction-with-isrequired"></a>Isrequired etkileşim  
- Bölümünde açıklandığı gibi [veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md), <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğine sahip bir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği (varsayılan değer `false`). Özelliği, seri durumdan verilen veri üyesi seri duruma getirilmiş verilerde mevcut olması gerekip gerekmediğini gösterir. Varsa `IsRequired` ayarlanır `true`, (belirten bir değer bulunmalıdır) ve <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false` (belirtir. değer varsayılan değerine ayarlanırsa mevcut olmamalıdır), varsayılan değerleri bu veri üyesi olamaz sonuçları çelişkili olacağından seri. Böyle bir veri üyesi varsayılan değerine ayarlanmış olup olmadığını (genellikle `null` ya da sıfır) ve bir seri hale getirme denemesi, <xref:System.Runtime.Serialization.SerializationException> oluşturulur.  
+### <a name="interaction-with-isrequired"></a>IsRequired ile etkileşim  
+ [Veri anlaşması sürümü oluşturma](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)bölümünde açıklandığı gibi, <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliğinde bir <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği vardır (varsayılan `false`olarak). Özelliği, seri durumdan çıkarılmakta olan serileştirilmiş verilerde verilen veri üyesinin mevcut olup olmadığını gösterir. Öğesi olarak `true`ayarlanmışsa (bir değerin mevcut olması gerektiğini belirtir) ve <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> olarak `false` ayarlanır (değerin varsayılan değerine ayarlandıysa, değerin mevcut olmaması gerektiğini gösterir), bu veri üyesinin varsayılan değerleri `IsRequired` sonuçlar çelişkili olacağı için serileştirilmiş. Böyle bir veri üyesi varsayılan değerine ayarlandıysa (genellikle `null` veya sıfır) ve bir serileştirme denendiğinde, bir <xref:System.Runtime.Serialization.SerializationException> atılır.  
   
 ### <a name="schema-representation"></a>Şema gösterimi  
- Veri üyeleri XML Şeması Tanım Dili (XSD) şeması gösterimi ayrıntılarını olduğunda `EmitDefaultValue` özelliği `false` ele alınmıştır [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Ancak, kısa bir özeti verilmiştir:  
+ `EmitDefaultValue` Özelliği veri`false` [Sözleşmesi Şema başvurusunda](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)açıklandığı zaman, veri üyelerinin XML şeması tanım dili (xsd) şema gösteriminin ayrıntıları. Bununla birlikte, aşağıdakiler kısaca genel bir bakış verilmiştir:  
   
-- Zaman <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> ayarlanır `false`, Windows Communication Foundation (WCF) için belirli bir ek açıklama yer alan şemada gösterilir. Bu bilgileri temsil eden birlikte çalışabilen bir yolu yoktur. Özellikle, şema "varsayılan" özniteliği, bu amaç için kullanılmaz `minOccurs` özniteliği yalnızca etkilenen <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarı ve `nillable` özniteliği, türü yalnızca veri üyesi tarafından etkilenir.  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> , Olarak`false`ayarlandığında, Windows Communication Foundation (WCF) için özel bir ek açıklama olarak şemada temsil edilir. Bu bilgileri göstermek için birlikte çalışabilen bir yol yoktur. Özellikle, şemadaki "default" özniteliği bu amaçla kullanılmaz, `minOccurs` özniteliği yalnızca <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> ayarından etkilenir ve `nillable` özniteliği yalnızca veri üyesinin türü tarafından etkilenir.  
   
-- Şemada kullanılacak gerçek varsayılan değeri yok. Bu, uygun şekilde eksik bir öğesini yorumlamak için en fazla alıcı uç noktadır.  
+- Kullanılacak gerçek varsayılan değer şemada yok. Eksik bir öğeyi uygun şekilde yorumlamak için alıcı uç noktaya kadar.  
   
- Şema içeri aktarma, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> otomatik olarak ayarlanırsa `false` bahsedilen WCF özgü açıklama daha önce algılanır. Ayrıca ayarlanmış `false` olan başvuru türleri için `nillable` özelliğini `false` ASP.NET Web Hizmetleri tüketirken sık gerçekleşen belirli bir birlikte çalışabilirlik senaryoları desteklemek için.  
+ Şema içeri aktarma işleminde, <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> bu özellik, daha önce `false` belirtilen WCF 'ya özgü ek açıklama her zaman otomatik olarak ayarlanır. Ayrıca, ASP.NET Web Hizmetleri `false` kullanılırken yaygın olarak oluşan belirli birlikte `nillable` çalışabilirlik senaryolarını desteklemek `false` için özelliği olarak ayarlanmış başvuru türleri için olarak ayarlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944814"
 ---
 # <a name="panels-overview"></a>Panellere Genel Bakış
 <xref:System.Windows.Controls.Panel>öğeler öğelerin işlenmesini denetleyen bileşenlerdir: boyut ve boyutlar, bunların konumları ve alt içeriklerinin yerleşimi. , [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Bir dizi önceden tanımlanmış <xref:System.Windows.Controls.Panel> öğe ve özel <xref:System.Windows.Controls.Panel> öğe oluşturma özelliğini sağlar.  
@@ -149,7 +149,7 @@ ms.locfileid: "69545263"
  Bir <xref:System.Windows.Controls.Grid> içinde tanımlanan sütunlar ve satırlar, kalan alanı orantılı <xref:System.Windows.GridUnitType.Star> bir şekilde dağıtmak için boyutlandırmanın avantajlarından yararlanabilir. <xref:System.Windows.GridUnitType.Star> Bir satır veya sütunun yükseklik veya genişliği olarak seçildiğinde, bu sütun veya satır, kalan kullanılabilir alanın ağırlıklı oranını alır. Bunun aksine, bir sütun <xref:System.Windows.GridUnitType.Auto>veya satır içindeki içeriğin boyutuna göre eşit bir şekilde dağıtırsınız. Bu değer, kullanırken `*` `2*` [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]veya olarak ifade edilir. İlk durumda, satır veya sütun kullanılabilir alanı bir kez, ikinci durumda iki kez ve bu şekilde alır. Bu tekniği birleştirerek bir ve <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> değeri `Stretch` ile alanı orantılı bir şekilde dağıtmak için, ekran alanı yüzdesine göre düzen alanını bölümlemek mümkündür. <xref:System.Windows.Controls.Grid>, alanı bu şekilde dağıtabilecek tek düzen bölmesi olur.  
   
 #### <a name="defining-and-using-a-grid"></a>Kılavuz tanımlama ve kullanma  
- Aşağıdaki örnek, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] başlangıç menüsünde bulunan Çalıştır iletişim [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] kutusunda bulunan ile benzer şekilde nasıl oluşturulacağını gösterir.  
+ Aşağıdaki örnek, Windows Başlat menüsünde bulunan Çalıştır [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] iletişim kutusunda bulunan ile benzer bir şekilde nasıl oluşturulacağını gösterir.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

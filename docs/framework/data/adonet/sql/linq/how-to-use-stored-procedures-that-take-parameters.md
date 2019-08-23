@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033619"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938707"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] başvuru parametreleri için çıktı parametreleri eşlenir ve buna değer türleri için parametre olarak boş değer atanabilir bildirir.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çıkış parametrelerini başvuru parametrelerine eşler ve değer türleri için parametreyi null yapılabilir olarak bildirir.  
   
- Giriş parametresi bir satır kümesi döndüren bir sorgu kullanma örneği için bkz: [nasıl yapılır: Satır kümeleri iade](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
+ Bir satır kümesi döndüren sorguda giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz [. nasıl yapılır: Satır kümelerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)döndürün.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, tek bir giriş parametresi (Müşteri Kimliği) alır ve out parametresi (o müşteri için toplam satış) döndürür.  
+ Aşağıdaki örnek tek bir giriş parametresi (müşteri KIMLIĞI) alır ve bir out parametresi (bu müşterinin toplam satışları) döndürür.  
   
 ```  
 CREATE PROCEDURE [dbo].[CustOrderTotal]   
@@ -34,7 +34,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#2)]  
   
 ## <a name="example"></a>Örnek  
- Bu saklı yordamı şu şekilde çağırırsınız:  
+ Bu saklı yordamı aşağıdaki şekilde çağırabilirsiniz:  
   
  [!code-csharp[DLinqSprox#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#3)]
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Boş Değer Atanabilir Tipleri Kullanma](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Boş Değer Atanabilen Değer Türleri](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Boş Değer Atanabilir Tipleri Kullanma](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Boş Değer Atanabilen Değer Türleri](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

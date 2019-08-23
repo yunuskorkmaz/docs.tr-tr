@@ -1,19 +1,19 @@
 ---
-title: -codepage (Visual Basic)
+title: -CodePage (Visual Basic)
 ms.date: 03/09/2018
 helpviewer_keywords:
 - -codepage compiler option [Visual Basic]
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5974a910303f847679f18c23e00cfaa00caa2c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962608"
 ---
-# <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
+# <a name="-codepage-visual-basic"></a>-CodePage (Visual Basic)
 Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -26,15 +26,15 @@ Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını beli
   
 |Terim|Tanım|  
 |---|---|  
-|`id`|Gerekli. Derleyici tarafından belirtilen kod sayfası kullanır `id` kaynak dosyalarını kodlama yorumlamak için.|  
+|`id`|Gerekli. Derleyici, kaynak dosyaların kodlamasını yorumlamak için tarafından `id` belirtilen kod sayfasını kullanır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirli bir kodlama ile kaydedilmiş kaynak kodu derlemek için kullanabileceğiniz `-codepage` hangi kod sayfası kullanılması gerektiğini belirtmek için. `-codepage` Derlemenizdeki tüm kaynak kodu dosyaları seçeneğini uygular. Daha fazla bilgi için [karakter kodlaması .NET Framework'teki](../../../standard/base-types/character-encoding.md).  
+ Belirli bir kodlamayla kaydedilen kaynak kodu derlemek için, hangi kod sayfasının kullanılacağını `-codepage` belirtmek için kullanabilirsiniz. Bu `-codepage` seçenek, derinizdeki tüm kaynak kodu dosyaları için geçerlidir. Daha fazla bilgi için [.NET Framework karakter kodlaması](../../../standard/base-types/character-encoding.md)bölümüne bakın.  
   
- `-codepage` Seçeneği kaynak kodu dosyaları bir imza ile geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanarak kaydedildiyse gerekli değildir. Visual Studio kaydeder tüm kaynak kodu dosyaları geçerli ANSI kod sayfasıyla varsayılan olarak, kullanıcı, başka bir kodlama belirtmediği sürece **kodlama** iletişim kutusu. Visual Studio kullanan **kodlama** farklı bir kod sayfası ile kaydedilen kaynak kodu dosyaları açmak için iletişim kutusu.  
+ Kaynak kodu dosyaları bir imzayla geçerli ANSI kod sayfası, Unicode veya UTF-8 kullanılarak kaydedilmişse seçenekgereklideğildir.`-codepage` Kullanıcı **kodlama** iletişim kutusunda başka bir kodlama belirtmediği takdirde, Visual Studio tüm kaynak kodu dosyalarını varsayılan olarak geçerli ANSI kod sayfasıyla kaydeder. Visual Studio, farklı bir kod sayfasıyla kaydedilen kaynak kodu dosyalarını açmak için **kodlama** iletişim kutusunu kullanır.  
   
 > [!NOTE]
->  `-codepage` Seçeneği, Visual Studio geliştirme ortamında kullanılabilir değil; yalnızca komut satırından derleme yapılırken kullanılabilir.  
+> Bu `-codepage` seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

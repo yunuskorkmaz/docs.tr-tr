@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956994"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Nasıl yapılır: Bir TreeView veya ListView Denetimine Özel Bilgi Ekleme (Windows Forms)
-Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Windows.Forms.TreeView> denetimi veya türetilmiş bir öğede bir <xref:System.Windows.Forms.ListView> denetimi. Türetme yanı sıra özel yöntemleri ve bunları işlemek için oluşturucuları, gerekli tüm alanlar eklemenize olanak sağlar. Bu özellik bir kullanımı, her ağaç düğümü veya liste öğesi için bir müşteri nesnesi eklemektir. Buradaki örnekler için olan bir <xref:System.Windows.Forms.TreeView> için denetimi, ancak aynı yaklaşımı kullanılabilir bir <xref:System.Windows.Forms.ListView> denetimi.  
+Bir Windows Forms <xref:System.Windows.Forms.TreeView> denetiminde veya bir <xref:System.Windows.Forms.ListView> denetimdeki türetilmiş bir öğede türetilmiş bir düğüm oluşturabilirsiniz. Türetme, ihtiyacınız olan tüm alanları, ayrıca bunları işlemeye yönelik özel yöntemleri ve oluşturucuları eklemenize olanak tanır. Bu özelliğin bir kullanımı, her ağaç düğümüne veya liste öğesine bir müşteri nesnesi eklemektir. Buradaki örnekler bir <xref:System.Windows.Forms.TreeView> denetim içindir, ancak aynı yaklaşım bir <xref:System.Windows.Forms.ListView> denetim için de kullanılabilir.  
   
 ### <a name="to-derive-a-tree-node"></a>Bir ağaç düğümü türetmek için  
   
-- Türetilmiş yeni bir düğüm sınıfı oluşturmak <xref:System.Windows.Forms.TreeNode> dosya yolunu kaydetmek için özel bir alan olan sınıf.  
+- Bir dosya yolunu kaydetmek için özel bir alanı olan <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş yeni bir Node sınıfı oluşturun.  
   
     ```vb  
     Class myTreeNode  
@@ -68,11 +68,11 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
     };  
     ```  
   
-### <a name="to-use-a-derived-tree-node"></a>Türetilen bir ağaç düğümünü kullanmak için  
+### <a name="to-use-a-derived-tree-node"></a>Türetilmiş bir ağaç düğümünü kullanmak için  
   
-1. İşlev çağrıları bir parametre olarak, yeni türetilmiş ağaç düğümü kullanabilirsiniz.  
+1. İşlev çağrılarını bir parametre olarak, yeni türetilmiş ağaç düğümünü kullanabilirsiniz.  
   
-     Aşağıdaki örnekte, metin dosyasının konumunu için belirtilen yolda Belgelerim klasördür. Bunun yapılmasının nedeni, Windows işletim sistemi çalıştırılan bilgisayarların çoğu bu dizin içerdiğini varsayar. Bu, güvenli bir şekilde uygulamayı çalıştırmak minimum sistem erişim düzeylerine sahip kullanıcılar da sağlar.  
+     Aşağıdaki örnekte, metin dosyasının konumu için ayarlanan yol Belgelerim klasörüdür. Bu, Windows işletim sistemini çalıştıran bilgisayarların çoğunun bu dizini içerdiğini varsaydığı için yapılır. Bu Ayrıca, en az sistem erişim düzeylerine sahip kullanıcıların uygulamayı güvenle çalıştırmasına olanak tanır.  
   
     ```vb  
     ' You should replace the bold text file   
@@ -100,7 +100,7 @@ Windows Forms'ta türetilmiş bir düğüm oluşturabilirsiniz <xref:System.Wind
        "\\TextFile.txt")));  
     ```  
   
-2. Ağaç düğümünde geçirilir ve olarak belirlenmiş bir <xref:System.Windows.Forms.TreeNode> sınıfından türetilmiş sınıfınızın cast gerekecektir. Atama, nesnenin bir türden diğerine açık bir dönüştürme ' dir. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [atama ve tür dönüştürmeleri](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (görsel C#), veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) () Görsel C++).  
+2. Ağaç düğümünü geçirmiş ve bir <xref:System.Windows.Forms.TreeNode> sınıf olarak yazılmışsa, türetilmiş sınıfınıza dönüştürmeniz gerekir. Atama bir nesne türünden diğerine açık bir dönüşümtür. Atama hakkında daha fazla bilgi için bkz. [örtük ve açık dönüştürmeler](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic) [, atama ve tür dönüştürmeleri](../../../csharp/programming-guide/types/casting-and-type-conversions.md) ( C#görsel) veya [atama işleci: ()](/cpp/cpp/cast-operator-parens) (görsel C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

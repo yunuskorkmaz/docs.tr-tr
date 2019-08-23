@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: İşlemsel Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964014"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Nasıl yapılır: İşlemsel Hizmet Oluşturma
-Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir istemci tarafından başlatılan işlem kullanımı oluşturma çeşitli yönlerini gösterir.  
+Bu örnek, işlemsel bir hizmet oluşturmanın ve hizmet işlemlerini koordine etmek için istemci tarafından başlatılan bir işlemin kullanımını gösterir.  
   
 ### <a name="creating-a-transactional-service"></a>İşlemsel hizmet oluşturma  
   
-1. Bir hizmet sözleşmesi oluşturma ve istenen ayarından işlemleriyle açıklama <xref:System.ServiceModel.TransactionFlowOption> gelen işlem gereksinimlerini belirtmek için sabit listesi. Ayrıca yerleştirebilirsiniz Not <xref:System.ServiceModel.TransactionFlowAttribute> uygulanmakta olan hizmet sınıfı üzerinde. Bu, bu işlem ayarları kullanmak yerine her uygulama için bir arabirim için tek bir uygulama sağlar.  
+1. Gelen işlem gereksinimlerini belirtmek için, bir hizmet sözleşmesi oluşturun ve istenen ayarı <xref:System.ServiceModel.TransactionFlowOption> Numaralandırmadaki işlemlere ekleyin. Ayrıca, <xref:System.ServiceModel.TransactionFlowAttribute> uygulanan hizmet sınıfına da yerleştirebileceğinizi unutmayın. Bu, bir arabirimin tek bir uygulamasının her uygulama yerine bu işlem ayarlarını kullanmasına olanak sağlar.  
   
     ```csharp
     [ServiceContract]  
@@ -31,7 +31,7 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     }  
     ```  
   
-2. Bir uygulama sınıfı oluşturun ve kullanın <xref:System.ServiceModel.ServiceBehaviorAttribute> isteğe bağlı olarak belirtmek için bir <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>. Çoğu durumda, varsayılan unutmamalısınız <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 60 saniye ve varsayılan <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> , `Unspecified` uygundur. Her işlem için kullanabileceğiniz <xref:System.ServiceModel.OperationBehaviorAttribute> iş yöntemi içinde gerçekleştirip gerçekleştirmediğini belirlemek için öznitelik değerini göre işlem kapsamı kapsamında <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özniteliği. Bu durumda, işlem için kullanılan `Add` yöntem istemciden aktarılan zorunlu gelen işlem aynı olduğunu ve işlem için kullanılan `Subtract` yöntemi ise ya da aynı gelen işlem olarak bir aktarılan İstemci, veya yeni bir örtük olarak ve yerel olarak oluşturulan işlem.  
+2. Bir uygulama sınıfı oluşturun ve isteğe bağlı olarak <xref:System.ServiceModel.ServiceBehaviorAttribute> bir <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> ve <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>belirtmek için öğesini kullanın. Çoğu durumda, varsayılan değer <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> olan 60 saniye ve `Unspecified` varsayılan <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A> değer olarak uygun olduğunu unutmayın. Her işlem için, yöntemi içinde gerçekleştirilen çalışmanın <xref:System.ServiceModel.OperationBehaviorAttribute> , <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> özniteliğin değerine göre bir işlem kapsamı kapsamında gerçekleşmeyeceğini belirtmek için özniteliğini kullanabilirsiniz. Bu durumda, `Add` yöntemi için kullanılan işlem, istemciden aktarılan zorunlu gelen işlem ile aynıdır ve `Subtract` bu işlem, bir işlem ise gelen işlem ile aynı olur istemciden veya yeni bir örtük ve yerel olarak oluşturulan işlemden.  
   
     ```csharp
     [ServiceBehavior(  
@@ -65,7 +65,7 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     }  
     ```  
   
-3. İşlem bağlamı akışını olduğunu, belirterek yapılandırma dosyası ve bunu yapmak için kullanılan protokoller bağlamaları yapılandırın. Daha fazla bilgi için [ServiceModel işlem Yapılandırması](servicemodel-transaction-configuration.md). Uç nokta öğenin belirtilen bağlama türü özellikle `binding` özniteliği. [ \<Uç noktası >](../../configure-apps/file-schema/wcf/endpoint-element.md) öğesi içeren bir `bindingConfiguration` adlı bir bağlama yapılandırmasını başvuran öznitelik `transactionalOleTransactionsTcpBinding`aşağıdaki örnek yapılandırmada gösterildiği gibi.  
+3. Yapılandırma dosyasında, işlem bağlamının akışını ve bunu yapmak için kullanılacak protokolleri belirten bağlamaları yapılandırın. Daha fazla bilgi için bkz. [ServiceModel Işlem yapılandırması](servicemodel-transaction-configuration.md). Özellikle, bağlama türü, uç nokta öğesinin `binding` özniteliğinde belirtilir. `bindingConfiguration` `transactionalOleTransactionsTcpBinding` [ Uçnokta>öğesi,aşağıdakiörnekyapılandırmadagösterildiği\<](../../configure-apps/file-schema/wcf/endpoint-element.md) gibi adlı bağlama yapılandırmasına başvuran bir özniteliği içerir.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -77,7 +77,7 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     </service>  
     ```  
   
-     İşlem akışı kullanarak yapılandırma düzeyinde etkinleştirilir `transactionFlow` özniteliği ve işlem protokolünü belirtilen kullanarak `transactionProtocol` aşağıdaki yapılandırmayı gösterildiği gibi öznitelik.  
+     İşlem akışı, `transactionFlow` özniteliği kullanılarak yapılandırma düzeyinde etkinleştirilir ve işlem protokolü Aşağıdaki yapılandırmada gösterildiği gibi `transactionProtocol` özniteliği kullanılarak belirtilir.  
   
     ```xml  
     <bindings>  
@@ -89,9 +89,9 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     </bindings>  
     ```  
   
-### <a name="supporting-multiple-transaction-protocols"></a>Birden çok işlem protokollerin desteklenmesi  
+### <a name="supporting-multiple-transaction-protocols"></a>Birden çok işlem protokolünü destekleme  
   
-1. En iyi performans için bir istemci ve Windows Communication Foundation (WCF) kullanılarak yazılmış hizmeti içeren senaryolar için OleTransactions Protokolü kullanmanız gerekir. Ancak, üçüncü taraf protokol yığınlarının ile birlikte çalışabilirlik gerektiğinde WS-AtomicTransaction (WS-AT) protokolü senaryoları için kullanışlıdır. WCF hizmetleri iki protokolü de uygun protokole özgü bağlamaları ile birden fazla uç nokta sağlayarak aşağıdaki örnek yapılandırmada gösterildiği gibi kabul edecek şekilde yapılandırabilirsiniz.  
+1. En iyi performans için, Windows Communication Foundation (WCF) kullanılarak yazılmış bir istemciyi ve hizmeti içeren senaryolar için OleTransactions protokolünü kullanmanız gerekir. Ancak, WS-AtomicTransaction (WS-AT) protokolü, üçüncü taraf protokol yığınları ile birlikte çalışabilirlik gerektiğinde senaryolar için yararlıdır. Aşağıdaki örnek yapılandırmada gösterildiği gibi, uygun protokole özgü bağlamaları olan birden fazla uç nokta sağlayarak WCF hizmetlerini her iki protokolü de kabul edecek şekilde yapılandırabilirsiniz.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -108,7 +108,7 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     </service>  
     ```  
   
-     İşlem protokolünü kullanarak belirtilen `transactionProtocol` özniteliği. Ancak, bu özniteliği yoksa, sistem tarafından sağlanan gelen `wsHttpBinding`, çünkü bu bağlama yalnızca WS-AT protokolünü kullanabilirsiniz.  
+     İşlem protokolü `transactionProtocol` özniteliği kullanılarak belirtilir. Ancak, bu öznitelik yalnızca ws-at protokolünü kullanabilmesi için `wsHttpBinding`, bu öznitelik sistem tarafından sağlanmamıştır.  
   
     ```xml  
     <bindings>  
@@ -124,9 +124,9 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     </bindings>  
     ```  
   
-### <a name="controlling-the-completion-of-a-transaction"></a>İşlem tamamlandığında denetleme  
+### <a name="controlling-the-completion-of-a-transaction"></a>Bir işlemin tamamlanmasını denetleme  
   
-1. Eğer işlenmeyen özel durumlar harekete varsayılan olarak, WCF işlem işlemleri otomatik olarak tamamlar. Kullanarak bu davranışı değiştirebilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliği ve <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi. Bir işlem başka bir işlem (örneğin, bir banka ve iade işlemi) olarak aynı işlem içinde gerçekleşmesi için gerekli olduğunda, otomatik tamamlama davranışını ayarlayarak devre dışı bırakabilirsiniz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini `false` aşağıda gösterildiği gibi `Debit` işlem örneği. İşlem `Debit` işlemi kullanan bir yöntemle kadar tamamlanmaz <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini `true` çağrılır, işlemde gösterildiği `Credit1`, veya <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> yöntemi açıkça çağrılmaz işlem işleme gösterildiği gibi tam `Credit2`. Gösterim amacıyla iki kredi işlem gösterilir ve tek bir işlem kredi daha tipik olacağını unutmayın.  
+1. Varsayılan olarak, işlenmeyen özel durum oluşturulmaz, WCF işlemleri işlemleri otomatik olarak tamamlar. Bu davranışı <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> ve yöntemini kullanarak değiştirebilirsiniz. Bir işlemin başka bir işlemle aynı işlem içinde gerçekleşmesi gerektiği zaman (örneğin, bir borç ve kredi işlemi), <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> `false` özelliği aşağıdaki şekildegösterildiğigibiolarakayarlayarakotomatiktamamlamadavranışınıdevredışıbırakabilirsiniz`Debit` işlem örneği. `true` İşleminkullandığı<xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> işlem, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> işlem`Credit1`içinde gösterildiği gibi, özelliği olarak ayarlanmış bir yöntem çağrılana kadar veya yöntem açıkça işaretlemek üzere çağrıldığında bu işlem tamamlanmaz. `Debit` işlemde gösterildiği `Credit2`gibi işlem tamamlanmıştır. İki kredi işleminin illüstrasyon amacıyla gösterildiğini ve tek bir kredi işleminin daha tipik olduğunu unutmayın.  
   
     ```csharp
     [ServiceBehavior]  
@@ -162,7 +162,7 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     }  
     ```  
   
-2. Ayarlama, işlem korelasyon amaçları için <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliğini `false` kapatamaması bağlama kullanılmasını gerektirir. Bu gereksinim, ile belirtilen `SessionMode` özellikte <xref:System.ServiceModel.ServiceContractAttribute>.  
+2. İşlem bağıntı amaçları doğrultusunda, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> özelliği olarak `false` ayarlamak, bir oturumsuz bağlamanın kullanılmasını gerektirir. Bu gereksinim, `SessionMode` <xref:System.ServiceModel.ServiceContractAttribute>üzerinde özelliği ile belirtilir.  
   
     ```csharp
     [ServiceContract(SessionMode = SessionMode.Required)]  
@@ -180,9 +180,9 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     }  
     ```  
   
-### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Bir işlem hizmeti örneğinin kullanım ömrü denetleme  
+### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Bir işlem hizmeti örneğinin ömrünü denetleme  
   
-1. WCF kullanan <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> bir işlem tamamlandığında, temel alınan hizmet örneği serbest olup olmadığını belirlemek için özellik. Bu varsayılan olarak bu yana `true`, aksi durumda, WCF sergiler bir verimli ve tahmin edilebilir "just-in-time" etkinleştirme davranışı yapılandırılmış sürece. Bir sonraki işlemde bir hizmete çağrı hiçbir kalanları önceki işlem durumu ile yeni bir hizmet örneği geleceğinden emin olursunuz. Bazen bu genellikle kullanışlı olmakla birlikte, hizmet örneği işlem tamamlandığında ötesinde içinde durumunu korumak isteyebilirsiniz. Buna örnek olarak, gerekli durumu veya kaynakları tanıtıcıları almak veya yeniden oluşturmak pahalı olduğunda olacaktır. Bunu ayarlayarak yapabilirsiniz <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğini `false`. Bu ayar, örneği ve herhangi bir ilişkili durumu üzerinde yapılan sonraki çağrılar kullanıma sunulacaktır. Bu kullanırken dikkatli için zaman verin ve nasıl durumunu ve işlem temizlenmiş tamamlandı ve. Aşağıdaki örnek bu örnekle tutarak bunu nasıl yapacağınızı gösterir `runningTotal` değişkeni.  
+1. WCF, bir <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> işlem tamamlandığında temeldeki hizmet örneğinin serbest bırakılıp başlatılmayacağını belirtmek için özelliğini kullanır. Bu varsayılan olarak `true`, aksi belirtilmedikçe, WCF etkin ve öngörülebilir bir "tam zamanında" etkinleştirme davranışı sergiler. Sonraki bir işlem üzerindeki bir hizmete yapılan çağrılar, önceki işlemin durumuna göre hiçbir şekilde, yeni bir hizmet örneğini garanti altına alır. Bu genellikle yararlı olsa da, bazen işlem tamamlandıktan sonra hizmet örneği içinde durumu korumak isteyebilirsiniz. Bunun örnekleri, gerekli durum veya kaynak tanıtıcılarının alınması veya edilmeyen ne kadar pahalı olduğu durumdur. Bunu, <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> özelliğini olarak `false`ayarlayarak yapabilirsiniz. Bu ayar ile, örnek ve ilişkili herhangi bir durum sonraki çağrılarda kullanılabilir olacaktır. Bunu kullanırken, durum ve işlemlerin ne zaman ve nasıl temizleneceği ve tamamlanalınacağını göz önünde bulundurun. Aşağıdaki örnek, örneği `runningTotal` değişkenle birlikte tutarak bunun nasıl yapılacağını gösterir.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
@@ -217,4 +217,4 @@ Bu örnek, bir işlem hizmeti ve hizmet işlemleri koordine etmek için bir iste
     ```  
   
     > [!NOTE]
-    >  İç hizmet ve aracılığıyla denetlenen bir davranış örneğinin kullanım ömrü olduğundan <xref:System.ServiceModel.ServiceBehaviorAttribute> özelliği, hizmet yapılandırması veya hizmet sözleşmesini hiçbir değişiklik yapmadan örnek davranışını ayarlamanız gerekiyor. Ayrıca, kablo bu herhangi bir gösterimini içerir.
+    > Örnek yaşam süresi, hizmete iç bir davranış olduğundan ve <xref:System.ServiceModel.ServiceBehaviorAttribute> özelliği aracılığıyla denetlendiğinden, örnek davranışını ayarlamak için hizmet yapılandırmasında veya hizmet sözleşmesinde hiçbir değişiklik yapılması gerekmez. Ayrıca, hat bunun gösterimini içermez.

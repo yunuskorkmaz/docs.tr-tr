@@ -7,150 +7,150 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f92519ca1f960961f95722bce5c8e1f3b4419292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 738a4f397b1677b867126c7bb439b027f951baa0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662193"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958812"
 ---
 # <a name="xaml-resources"></a>XAML Kaynakları
-Bir kaynak, uygulamanızın farklı bölümlerinde yeniden kullanılabilir bir nesnedir. Fırçalar ve stilleri kaynakları örnekleridir. Bu genel bakışta, kaynakları kullanmayı açıklar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ayrıca oluşturabilir ve kod kullanarak veya birbirinin yerine kod arasında kaynaklarına erişin ve [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Daha fazla bilgi için [kaynaklar ve kod](resources-and-code.md).  
+Kaynak, uygulamanızdaki farklı yerlerde yeniden kullanılabilen bir nesnedir. Kaynak örnekleri, fırçalar ve stiller içerir. Bu genel bakışta, içindeki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]kaynakların nasıl kullanılacağı açıklanmaktadır. Ayrıca, kod kullanarak veya kod ile [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]arasında birbirlerinin yerine kaynak oluşturup erişebilirsiniz. Daha fazla bilgi için bkz. [kaynaklar ve kod](resources-and-code.md).  
   
 > [!NOTE]
->  Bu konuda açıklanan kaynak dosyaları kaynak dosyaları açıklanan farklı [WPF Uygulama kaynağı, içerik ve veri dosyalarını](../app-development/wpf-application-resource-content-and-data-files.md) ve açıklanan gömülü veya bağlantılı kaynakların farklı [Yönet Uygulama kaynaklarını (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
+> Bu konuda açıklanan kaynak dosyaları [WPF uygulama kaynağı, içerik ve veri dosyaları](../app-development/wpf-application-resource-content-and-data-files.md) bölümünde açıklanan kaynak dosyalarından farklıdır ve [uygulama kaynaklarını yönetme (.net) bölümünde açıklanan katıştırılmış veya bağlı kaynaklardan farklıdır ](/visualstudio/ide/managing-application-resources-dotnet).  
 
 <a name="usingresources"></a>   
-## <a name="using-resources-in-xaml"></a>XAML kaynakları kullanma  
- Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.Media.SolidColorBrush> kök öğesi bir sayfanın bir kaynak olarak. Örnek sonra kaynağa başvuruda ve dahil olmak üzere çeşitli alt öğelerinin özelliklerini ayarlamak için kullandığı bir <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>ve <xref:System.Windows.Controls.Button>.  
+## <a name="using-resources-in-xaml"></a>XAML 'de kaynakları kullanma  
+ Aşağıdaki örnek bir sayfanın kök <xref:System.Windows.Media.SolidColorBrush> öğesinde kaynak olarak bir kaynağı tanımlar. Örnek daha sonra kaynağa başvurur ve bir <xref:System.Windows.Shapes.Ellipse> <xref:System.Windows.Controls.TextBlock>,, ve <xref:System.Windows.Controls.Button>gibi çeşitli alt öğelerin özelliklerini ayarlamak için kullanır.  
   
  [!code-xaml[FEResourceSH_snip#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xaml)]  
   
- Her bir çerçeve düzeyi öğesi (<xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>) sahip bir <xref:System.Windows.FrameworkElement.Resources%2A> kaynakları içeren özellik özelliğini (olarak bir <xref:System.Windows.ResourceDictionary>), bir kaynağı tanımlar. Herhangi bir öğede kaynakları tanımlayabilirsiniz. Ancak, kaynakları olan kök öğe üzerinde en sık tanımlanan <xref:System.Windows.Controls.Page> örnekte.  
+ Her çerçeve düzeyindeki öğe<xref:System.Windows.FrameworkElement> (veya <xref:System.Windows.FrameworkContentElement>), bir kaynağın <xref:System.Windows.FrameworkElement.Resources%2A> tanımladığı kaynakları (bir <xref:System.Windows.ResourceDictionary>olarak) içeren özellik olan bir özelliğine sahiptir. Herhangi bir öğe üzerinde kaynakları tanımlayabilirsiniz. Bununla birlikte, kaynaklar genellikle, örnekteki kök öğe <xref:System.Windows.Controls.Page> üzerinde tanımlanmıştır.  
   
- Her kaynak bir kaynak sözlüğünde benzersiz bir anahtar olması gerekir. Kaynakları işaretlemede tanımlarken aracılığıyla benzersiz bir anahtar atadığınız [x: Key yönergesi](../../xaml-services/x-key-directive.md). Genellikle, anahtarı bir dizedir; Ancak, ayrıca, diğer nesne türlerine uygun biçimlendirme uzantılarını kullanarak ayarlayabilirsiniz. Belirli özellik alanlarında tarafından kullanılan kaynaklar için dize olmayan anahtarlar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], özellikle stilleri, bileşen kaynakları ve veri stil için.  
+ Kaynak sözlüğündeki her kaynak benzersiz bir anahtara sahip olmalıdır. Biçimlendirme içinde kaynakları tanımlarken, [X:Key yönergesi](../../xaml-services/x-key-directive.md)aracılığıyla benzersiz anahtarı atarsınız. Genellikle, anahtar bir dizedir; Bununla birlikte, uygun biçimlendirme uzantılarını kullanarak da diğer nesne türlerine ayarlayabilirsiniz. Kaynakların dize olmayan anahtarları, içindeki [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]belirli özellik alanlarında, özellikle stiller, bileşen kaynakları ve veri stili için kullanılır.  
   
- Bir kaynak tanımladıktan sonra anahtar adını, örneğin belirten bir kaynak biçimlendirme uzantısı sözdizimi kullanarak bir özellik değeri için kullanılacak kaynak başvurabilirsiniz:  
+ Bir kaynağı tanımladıktan sonra, anahtar adını belirten bir kaynak biçimlendirme uzantısı söz dizimini kullanarak bir özellik değeri için kullanılacak kaynağa başvurabilirsiniz, örneğin:  
   
  [!code-xaml[FEResourceSH_snip#KeyNameUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#keynameusage)]  
   
- Yukarıdaki örnekte, zaman [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyici işler değeri `{StaticResource MyBrush}` için <xref:System.Windows.Controls.Control.Background%2A> özelliği <xref:System.Windows.Controls.Button>, kaynak arama mantığı ilk kaynak sözlüğü denetler <xref:System.Windows.Controls.Button> öğesi. Varsa <xref:System.Windows.Controls.Button> kaynak anahtarı tanımı yok `MyBrush` (yok; kendi kaynak koleksiyonu boş olan), arama üst öğenin yanındaki denetler <xref:System.Windows.Controls.Button>, olduğu <xref:System.Windows.Controls.Page>. Bu nedenle, tanımladığınızda bir kaynak üzerinde <xref:System.Windows.Controls.Page> kök öğesinde, tüm öğeleri mantıksal ağacının <xref:System.Windows.Controls.Page> erişebileceğini ve herhangi bir özelliğin değerini kabul için aynı kaynak yeniden <xref:System.Type> , kaynak temsil eder. Önceki örnekte, aynı `MyBrush` kaynak iki farklı özellikleri ayarlar: <xref:System.Windows.Controls.Control.Background%2A> , bir <xref:System.Windows.Controls.Button>ve <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Rectangle>.  
+ Yukarıdaki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] örnekte, yükleyici <xref:System.Windows.Controls.Control.Background%2A> özelliğinin değerini `{StaticResource MyBrush}` üzerinde <xref:System.Windows.Controls.Button>işlediğinde, kaynak arama mantığı ilk olarak <xref:System.Windows.Controls.Button> öğe için kaynak sözlüğünü denetler. Kaynak anahtarının `MyBrush` bir tanımına sahip değilse (kaynak koleksiyonu boş ise), bir sonraki arama üst <xref:System.Windows.Controls.Page>öğesi olan <xref:System.Windows.Controls.Button>' ı denetler. <xref:System.Windows.Controls.Button> Bu nedenle, <xref:System.Windows.Controls.Page> kök öğesinde bir kaynak tanımladığınızda, <xref:System.Windows.Controls.Page> öğesinin mantıksal ağacındaki tüm öğeler buna erişebilir ve kaynağı kabul <xref:System.Type> eden herhangi bir özelliğin değerini ayarlamak için aynı kaynağı yeniden kullanabilirsiniz gösterirse. `MyBrush` Önceki örnekte, aynı kaynak iki farklı özellik ayarlıyor <xref:System.Windows.Controls.Control.Background%2A> : <xref:System.Windows.Shapes.Shape.Fill%2A> öğesinin <xref:System.Windows.Controls.Button>ve bir <xref:System.Windows.Shapes.Rectangle>.  
   
 <a name="staticdynamic"></a>   
-## <a name="static-and-dynamic-resources"></a>Statik ve dinamik kaynakları  
- Bir kaynak, bir statik kaynak veya dinamik bir kaynak olarak başvurulabilir. Kullanarak yapıldığını [StaticResource işaretleme uzantısı](staticresource-markup-extension.md) veya [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md). Bir özelliği olan bir işaretleme uzantısıdır [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] öznitelik dizesini işlemek ve nesneyi döndürmek için işaretleme uzantısı sağlayarak bir nesne başvurusu belirtebilirsiniz gerçekleştirilmesine bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyicisi. Biçimlendirme uzantı davranışı hakkında daha fazla bilgi için bkz. [biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
+## <a name="static-and-dynamic-resources"></a>Statik ve dinamik kaynaklar  
+ Bir kaynağa bir statik kaynak veya dinamik kaynak olarak başvurulabilirler. Bu işlem, [StaticResource Işaretleme uzantısı](staticresource-markup-extension.md) ya da [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md)kullanılarak yapılır. Biçimlendirme uzantısı, biçimlendirme uzantısının öznitelik dizesini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] işlemesini ve nesneyi bir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyiciye döndürmesini sağlayarak bir nesne başvurusunu belirtebileceğiniz bir özelliktir. Biçimlendirme Uzantısı davranışı hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
- İşaretleme uzantısı kullandığınızda, belirli biçimlendirme uzantısı tarafından işlenen bir veya daha fazla parametreleri dize biçiminde yerine ayarlanan özelliğin bağlamında değerlendirilen normalde sağlar. [StaticResource işaretleme uzantısı](staticresource-markup-extension.md) tüm kullanılabilir kaynak sözlükleri bu anahtar için değer bakarak bir anahtar işler. Bu, zaman alan statik kaynak başvurusu özellik değeri atamak için yükleme işlemi gerektiği zaman noktası olan bir yükleme sırasında gerçekleşir. [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md) bunun yerine işlemleri deyim ve ifade oluşturarak bir anahtar değerlendirilmemiş uygulama çalıştırdığı kadar kalır, hangi zaman, ifade değerlendirilir ve bir değer sağlar.  
+ Biçimlendirme uzantısı kullandığınızda, genellikle, ayarlanan özellik bağlamında değerlendirilmek yerine, bu belirli biçimlendirme uzantısı tarafından işlenen dize biçiminde bir veya daha fazla parametre sağlarsınız. [StaticResource Işaretleme uzantısı](staticresource-markup-extension.md) , tüm kullanılabilir kaynak sözlüklerinde bu anahtarın değerine bakarak bir anahtarı işler. Yükleme sırasında bu durum, yükleme işleminin statik kaynak başvurusunu alan özellik değerini ataması gereken zaman noktasıdır. Bunun yerine [DynamicResource Işaretleme uzantısı](dynamicresource-markup-extension.md) bir ifade oluşturarak bir anahtarı işler ve bu ifade, uygulama gerçekten çalıştırılana kadar değerlendirilmeden kalır ve bir değer sağlar.  
   
- Bir kaynağa başvuruda bulunduğunuzda bir statik kaynak başvurusu veya bir dinamik kaynak başvurusu kullanıp aşağıdaki maddeler etkileyebilir:  
+ Bir kaynağa başvurduğunuzda, bir statik kaynak başvurusu veya dinamik kaynak başvurusu kullanıp kullanmayacağınızı aşağıdaki önemli noktalar etkileyebilir:  
   
-- Genel tasarım, uygulamanız için kaynakları oluşturmaya (uygulamada, sayfa başına de kaybedilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bir kaynak yalnızca derleme içinde).  
+- Uygulamanıza yönelik kaynakları oluşturma (sayfada, uygulamada [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], yalnızca kaynak derlemesinde olduğu gibi) için genel tasarım.  
   
-- Uygulama işlevselliği: uygulamanızın gereksinimleri bölümünde gerçek zamanlı kaynaklar güncelleştiriliyor?  
+- Uygulama işlevi: uygulama gereksinimlerinizin gerçek zamanlı olarak kaynakları güncelleştiriyor mu?  
   
-- İlgili arama davranışı kaynak başvuru türü.  
+- Bu kaynak başvuru türünün ilgili arama davranışı.  
   
-- Belirli bir özellik veya kaynak türü ve o türden yerel davranışı.  
+- Belirli bir özellik veya kaynak türü ve bu türlerin yerel davranışı.  
   
 ### <a name="static-resources"></a>Statik kaynaklar  
- Statik kaynak iş aşağıdaki koşullarda en iyi başvuruyor:  
+ Statik kaynak başvuruları aşağıdaki koşullarda en iyi şekilde çalışır:  
   
-- Uygulama tasarımının en tüm kaynaklar sayfasına veya uygulama düzeyinde kaynak sözlükleri yoğunlaşır. Statik kaynak başvuruları değil yeniden değerlendirimiş bir sayfayı yeniden yüklemeyi gibi çalışma zamanı davranışları göre ve bu nedenle olabilir, kaynak başına gerekli olmadığı durumlarda çok sayıda dinamik kaynak başvurularını kaçınmak için bazı performans avantajı ve uygulama tasarımı.  
+- Uygulama tasarımınız, tüm kaynaklarının çoğunu sayfa veya uygulama düzeyi kaynak sözlüklerine indirger. Statik kaynak başvuruları, bir sayfayı yeniden yükleme gibi çalışma zamanı davranışlarına göre yeniden değerlendirilmez ve bu nedenle, kaynağınız için gerekli olmadıkları zaman çok sayıda dinamik kaynak başvurmaktan kaçınmanın bazı performans avantajları olabilir ve uygulama tasarımı.  
   
-- Açık olmadığından bir özelliğin değerini ayarladığınız bir <xref:System.Windows.DependencyObject> veya <xref:System.Windows.Freezable>.  
+- <xref:System.Windows.DependencyObject> Bir<xref:System.Windows.Freezable>veya içinde olmayan bir özelliğin değerini ayarlardır.  
   
-- Bir DLL içine derlenmiş ve uygulamanın bir parçası paketlenmiş veya uygulamalar arasında paylaşılan bir kaynak sözlüğü oluşturuyorsunuz.  
+- DLL 'de derlenecek ve uygulamanın parçası olarak paketlenmiş veya uygulamalar arasında paylaşılan bir kaynak sözlüğü oluşturuyorsunuz.  
   
-- Özel denetim için bir tema oluşturma ve tema içinde kullanılan kaynakları tanımlarsınız. Bu durum için tipik olarak dinamik kaynak başvurusu arama davranışı istemiyorsanız, böylece öngörülebilir ve kendi başına bir tema için arama statik kaynak başvuru davranışı bunun yerine istersiniz. Dinamik kaynak ile başvuru, hatta bir temasının bir başvuru sol çalışma zamanına kadar değerlendirilmez ve temayı olduğunda uygulanan, bazı yerel öğe temanızı başvuru çalışılırken bir anahtarı yeniden tanımlayacak ve yerel öğenin önceki kalacak kaybedilebilir Tema için kendi arama. Bu durumda, temanızı beklenen şekilde davranmaz.  
+- Özel bir denetim için bir tema oluşturuyor ve Temalar içinde kullanılan kaynakları tanımlıyor. Bu durumda, genellikle dinamik kaynak başvuru arama davranışını istemezsiniz, bunun yerine, aramanın öngörülebilir ve kendi temaya dahil olması için statik kaynak başvuru davranışını tercih edersiniz. Dinamik kaynak başvurusuyla, bir tema içindeki bir başvuru çalışma zamanına kadar değerlendirilmez ve tema uygulandığında, bazı yerel öğeler temanızın başvuruya çalıştığı bir anahtarı yeniden tanımlayabilir ve yerel öğe daha önce düşecek Arama sırasında temaya. Bu durumda, temanız beklenen şekilde davranmaz.  
   
-- Çok sayıda bağımlılık özellikleri ayarlamak için kaynakları kullanıyorsanız. Bağımlılık özelliklerine sahip geçerli değerini önbelleğe alma özelliği sistem tarafından etkin olarak, yükleme zamanında değerlendirilebilen bir bağımlılık özelliği için bir değer belirtirseniz, bağımlılık özelliği için yeniden değerlendirimiş ifadelerinin denetlemek sahip değil ve döndürebilir Son etkin değeri. Bu teknik bir performans kazancı olabilir.  
+- Çok sayıda bağımlılık özelliğini ayarlamak için kaynaklar kullanıyorsunuz. Bağımlılık özellikleri, özellik sistemi tarafından etkinleştirilen şekilde etkili bir değer önbelleğe alma özelliğine sahiptir, bu nedenle yük zamanında değerlendirilebilen bir bağımlılık özelliği için bir değer sağlarsanız, bağımlılık özelliğinin yeniden değerlendirilen bir ifadeyi denetlemesi gerekmez ve son etkin değer. Bu teknik bir performans avantajı olabilir.  
   
-- Temel alınan kaynak için tüm tüketicileri değiştirmek istediğinizde ya da ayrı yazılabilir örnekleri için her bir tüketici kullanarak korumak istediğiniz [x: Shared Attribute](../../xaml-services/x-shared-attribute.md).  
+- Tüm tüketiciler için temel alınan kaynağı değiştirmek veya [X:Shared özniteliğini](../../xaml-services/x-shared-attribute.md)kullanarak her bir tüketici için ayrı yazılabilir örnekler saklamak istiyorsunuz.  
   
 #### <a name="static-resource-lookup-behavior"></a>Statik kaynak arama davranışı  
   
-1. İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
+1. Arama işlemi, özelliği ayarlayan öğe tarafından tanımlanan kaynak sözlüğünde istenen anahtarı denetler.  
   
-2. Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
+2. Arama işlemi daha sonra mantıksal ağacı üst öğeye ve kaynak sözlüğüne yukarı doğru taşır. Bu, kök öğeye ulaşılana kadar devam eder.  
   
-3. Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
+3. Ardından, uygulama kaynakları denetlenir. Uygulama kaynakları, <xref:System.Windows.Application> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanız için nesne tarafından tanımlanan kaynak sözlüğünde yer alan kaynaklardır.  
   
- Statik kaynak başvurulara bir kaynak sözlüğü, zaten sözcüksel olarak kaynak başvurusu önce tanımlanmış bir kaynağa başvurması gerekir. İleri başvurulara tarafından bir statik kaynak başvurusu çözümlenemiyor. Statik kaynak başvurularını kullanıyorsanız, kaynak olarak kullanılmak üzere tasarlanmış kaynakları veya her bir ilgili kaynak sözlüğü başına yakın tanımlanan şekilde bu nedenle, kaynak sözlüğü yapısını tasarlamanız gerekir.  
+ Kaynak sözlüğü içinden statik kaynak başvurularının, kaynak başvurusundan önce zaten sözcüksel olarak tanımlanmış bir kaynağa başvurması gerekir. İleri başvurular statik kaynak başvurusuyla çözümlenemez. Bu nedenle, statik kaynak başvurularını kullanırsanız, kaynak sözlüğü yapınızı, kaynak kullanımı için tasarlanan kaynakların ilgili her kaynak sözlüğün başlangıcında veya başında tanımlanmış olacak şekilde tasarlamanız gerekir.  
   
- Statik kaynak araması, temalar veya sistem kaynakları genişletebilir, ancak bu olduğundan, yalnızca desteklenen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyici istek erteler. Çalışma zamanı teması sayfayı yüklemez zaman düzgün bir şekilde uygulama için geçerli olacak şekilde erteleme gereklidir. Ancak, temalar veya sistem kaynakları önerilmez yalnızca mevcut bilinen anahtarlarına statik kaynak başvuruyor. Tema gerçek zamanlı kullanıcı tarafından değiştirilirse bu başvuruları değerlendirilmez olmasıdır. Tema veya sistem kaynakları istediğinizde bir dinamik kaynak başvurusu daha güvenilir oldu. Bir tema öğesi başka bir kaynak istediğinde istisnadır. Bu başvurular, daha önce belirtilen nedenlerden dolayı statik kaynak başvurularını olmalıdır.  
+ Statik kaynak arama, temalara veya sistem kaynaklarına genişletebilir, ancak yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] yükleyici isteği erteler çünkü bu yalnızca desteklenir. Erteleme, sayfa yüklenirken çalışma zamanı temasının uygulamaya düzgün şekilde uygulanması için gereklidir. Ancak, yalnızca temalarda bulunan veya sistem kaynakları olarak bilinen anahtarlara statik kaynak başvuruları önerilmez. Bunun nedeni, temanın Kullanıcı tarafından gerçek zamanlı olarak değişmesi durumunda bu tür başvuruların yeniden değerlendirilmemelidir. Tema veya sistem kaynakları istediğinizde dinamik bir kaynak başvurusu daha güvenilirdir. Bir tema öğesinin kendisi başka bir kaynağı istemesi durumunda özel durum olur. Bu başvurular, daha önce bahsedilen nedenlerle statik kaynak başvuruları olmalıdır.  
   
- Statik kaynak başvuru bulunamazsa özel durum davranışını değiştirir. Kaynak ertelendi özel çalışma zamanında oluşur. Kaynak ertelenmiş değil, yükleme zamanında özel durum oluşur.  
+ Statik bir kaynak başvurusu bulunamazsa özel durum davranışı değişir. Kaynak ertelendikten sonra özel durum çalışma zamanında oluşur. Kaynak ertelenmediğinde, özel durum yükleme zamanında oluşur.  
   
-### <a name="dynamic-resources"></a>Dinamik kaynak  
- Dinamik kaynak aşağıdaki koşullarda en iyi şekilde çalışır:  
+### <a name="dynamic-resources"></a>Dinamik kaynaklar  
+ Dinamik kaynaklar aşağıdaki koşullarda en iyi şekilde çalışır:  
   
-- Kaynak değeri çalışma zamanına kadar bilinmemesi koşullara bağlıdır. Bu, sistem veya başka kullanıcı tarafından ayarlanabilir olan kaynaklar içerir. Örneğin, tarafından kullanıma sunulan gibi sistem özelliklerine başvuran bir ayarlayıcı değerleri oluşturabilirsiniz <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, veya <xref:System.Windows.SystemParameters>. Sonuç olarak kullanıcı ve işletim sisteminin çalışma zamanı ortamından geldiğinden, bu değerler gerçek anlamda dinamiktir. Ayrıca, burada sayfa düzeyinde kaynak erişim değişikliği de yakalamalısınız değiştirebilirsiniz uygulama düzeyi Temalar da olabilir.  
+- Kaynak değeri, çalışma zamanına kadar bilinmeyen koşullara bağlıdır. Bu, sistem kaynaklarını veya başka türlü Kullanıcı tarafından ayarlanabilen kaynakları içerir. Örneğin,, veya <xref:System.Windows.SystemColors> <xref:System.Windows.SystemFonts> <xref:System.Windows.SystemParameters>tarafından gösterilen sistem özelliklerine başvuran ayarlayıcı değerleri oluşturabilirsiniz. Bu değerler, son olarak Kullanıcı ve işletim sisteminin çalışma zamanı ortamından geldiğinden, gerçekten dinamiktir. Ayrıca, sayfa düzeyi kaynak erişiminin değişikliği yakalaması gereken uygulama düzeyi temalara de sahip olabilirsiniz.  
   
-- Oluşturuyorsanız veya özel bir denetim için tema stilleri başvuruyor.  
+- Özel bir denetim için Tema stilleri oluşturuyor veya başvuruyorsunuz.  
   
-- İçeriğini ayarlamak istediğinize bir <xref:System.Windows.ResourceDictionary> uygulama ömrü boyunca.  
+- Bir uygulama ömrü boyunca bir <xref:System.Windows.ResourceDictionary> öğesinin içeriğini ayarlamayı amaçlamıştınız.  
   
-- Burada bir ileri başvuru gerekebilir bağımlılıklarını içeren bir karmaşık kaynak yapısı var. Statik kaynak başvurularını İleri başvurulara desteklemez ancak çalışma zamanına kadar değerlendirilecek kaynak gerekmediği için dinamik kaynak başvuruları bunları destekleyen ve İleri başvurulara bu nedenle ilgili bir kavram değildir.  
+- Bir ileri başvurunun gerekli olabileceği, bağımlılıkları olan karmaşık bir kaynak yapısına sahipsiniz. Statik kaynak başvuruları İleri başvuruları desteklemez, ancak kaynak çalışma zamanına kadar değerlendirilmek zorunda olmadığından ve İleri başvuruları ilgili bir kavram olmadığından, dinamik kaynak başvuruları bunları destekler.  
   
-- Bir derleme veya çalışma kümesi perspektifinden özellikle büyük bir kaynağa başvuruyor ve kaynak sayfa yüklendiğinde hemen kullanılamayabilir. Statik kaynak başvuruları her zaman yük [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Sayfa yüklediğinde; aslında kullanılana kadar bir dinamik kaynak başvurusu ancak yüklemez.  
+- Derleme veya çalışma kümesinin perspektifinden özellikle büyük bir kaynağa başvuruyorsunuz ve kaynak sayfa yüklendiğinde hemen kullanılamayabilir. Statik kaynak başvuruları sayfa yüklenirken her [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zaman yüklenir; ancak, dinamik bir kaynak başvurusu gerçekte kullanılana kadar yüklenmez.  
   
-- Bir stil ayarlayıcı değerleri Temalar veya diğer kullanıcı ayarlarını etkileyen diğer değerlerden burada gelebilir oluşturuyorsunuz.  
+- Ayarlayıcı değerlerinin, Temalar veya diğer kullanıcı ayarlarından etkilenen diğer değerlerden gelebileceği bir stil oluşturuyorsunuz.  
   
-- Mantıksal ağaçta uygulama ömrü boyunca yeniden üst öğeleri kaynakları uygulamaya koyuyor. Kaynak arama kapsamı değişiklikleri ayrıca olası üst değiştirme, yeni kapsamına göre hesaplanması reparented öğesinin kaynak istiyorsanız, bir dinamik kaynak başvurusu her zaman kullanın.  
+- Uygulama ömrü boyunca mantıksal ağaçta yeniden üst öğe olabilecek öğelere kaynak uyguluyorsanız. Üst öğeyi değiştirmek, kaynak arama kapsamını da büyük olasılıkla değiştirir, bu nedenle bir yeniden üst öğe olan kaynağın yeni kapsama göre yeniden değerlendirilmasını istiyorsanız, her zaman dinamik bir kaynak başvurusu kullanın.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Dinamik kaynak arama davranışı  
- Kaynak arama davranışı bir dinamik kaynak başvurusu çağırırsanız, kodunuzda arama davranışı parallels <xref:System.Windows.FrameworkElement.FindResource%2A> veya <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
+ Ya da <xref:System.Windows.FrameworkElement.FindResource%2A> <xref:System.Windows.FrameworkElement.SetResourceReference%2A>çağırırsanız, bir dinamik kaynak başvurusu için kaynak arama davranışı kodunuzda arama davranışına paraleldir.  
   
-1. İstenen anahtar özelliğini ayarlayan bir öğe tarafından tanımlanan kaynak sözlüğünün içinde arama işlemi olup olmadığını denetler.  
+1. Arama işlemi, özelliği ayarlayan öğe tarafından tanımlanan kaynak sözlüğünde istenen anahtarı denetler.  
   
-    - Öğe tanımlıyorsa bir <xref:System.Windows.FrameworkElement.Style%2A> özelliği <xref:System.Windows.Style.Resources%2A> sözlükte <xref:System.Windows.Style> denetlenir.  
+    - Öğesi bir <xref:System.Windows.FrameworkElement.Style%2A> özelliği <xref:System.Windows.Style.Resources%2A> tanımlıyorsa, içindeki <xref:System.Windows.Style> sözlük denetlenir.  
   
-    - Öğe tanımlıyorsa bir <xref:System.Windows.Controls.Control.Template%2A> özelliği <xref:System.Windows.FrameworkTemplate.Resources%2A> sözlükte <xref:System.Windows.FrameworkTemplate> denetlenir.  
+    - Öğesi bir <xref:System.Windows.Controls.Control.Template%2A> özelliği <xref:System.Windows.FrameworkTemplate.Resources%2A> tanımlıyorsa, içindeki <xref:System.Windows.FrameworkTemplate> sözlük denetlenir.  
   
-2. Arama işlemi üst öğe ve kendi kaynak sözlüğü için mantıksal ağaç yukarı, ardından erişir. Kök öğe ulaşılana kadar bu devam eder.  
+2. Arama işlemi daha sonra mantıksal ağacı üst öğeye ve kaynak sözlüğüne yukarı doğru taşır. Bu, kök öğeye ulaşılana kadar devam eder.  
   
-3. Ardından, uygulama kaynaklarının denetlenir. Uygulama kaynakları tarafından tanımlanan kaynak sözlüğü içindeki kaynakları olan <xref:System.Windows.Application> nesnesi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulama.  
+3. Ardından, uygulama kaynakları denetlenir. Uygulama kaynakları, <xref:System.Windows.Application> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamanız için nesne tarafından tanımlanan kaynak sözlüğünde yer alan kaynaklardır.  
   
-4. Tema kaynak sözlüğü, şu anda etkin tema için denetlenir. Tema çalışma zamanında değişirse, değeri değerlendirilir.  
+4. Geçerli etkin tema için tema kaynağı sözlüğü denetlenir. Tema çalışma zamanında değişirse değer yeniden değerlendirilecektir.  
   
 5. Sistem kaynakları denetlenir.  
   
- Özel durum davranışını (varsa) değişir:  
+ Özel durum davranışı (varsa) farklılık gösterir:  
   
-- Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.FindResource%2A> çağırın ve bulunamadı; bir özel durum oluşturulur.  
+- Bir kaynak bir <xref:System.Windows.FrameworkElement.FindResource%2A> çağrı tarafından isteniyorsa ve bulunmazsa, bir özel durum oluşturulur.  
   
-- Bir kaynak tarafından istenmişse bir <xref:System.Windows.FrameworkElement.TryFindResource%2A> çağırın ve bulunamadı, hiçbir özel durum oluşturulur, ancak döndürülen değer `null`. Ayarlanan özelliğin kabul edilmez, `null`, daha derin bir özel durum tetiklenir hala mümkün ise (ayarlanan bireysel özelliğe bağlıdır).  
+- Bir kaynak bir <xref:System.Windows.FrameworkElement.TryFindResource%2A> çağrı tarafından isteniyorsa ve bulunmazsa, hiçbir özel durum oluşturulmaz, ancak döndürülen `null`değer. Ayarlanmakta olan özellik kabul `null`etmez, daha derin bir özel durum ortaya çıkarılacaktır (Bu özellik ayarlanan tek özelliğe bağlıdır).  
   
-- Bir kaynak olarak dinamik kaynak başvuru istenip istenmediğini [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ve, bulunamadı sonra genel özellik sistemde davranışı bağlıdır, ancak genel hiçbir özellik ayarlama işlemini kaynağın bulunduğu düzeyinde oluştu gibi davranıştır. Örneğin, arka planı ayarlamayı denerseniz, bir değerlendirilemeyen bir kaynağı kullanarak bir düğmeye öğenin sonuçları herhangi bir değer ayarlayın, ancak geçerli değerini özelliği sistem ve değer önceliği diğer katılımcılardan yine de gelebilir. Örneğin, arka plan değeri hala yerel olarak tanımlanan düğme stilini veya tema stili gelebilir. Tema stilleri tarafından tanımlanmayan özellikler için özellik meta verileri varsayılan değerden başarısız kaynak değerlendirmesinden sonra etkili değer gelebilir.  
+- Bir kaynak, içinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]dinamik bir kaynak başvurusu tarafından isteniyorsa ve bulunmazsa, davranış genel özellik sistemine bağlıdır, ancak genel davranış, kaynağın bulunduğu düzeyde hiçbir özellik ayarı işlemi gerçekleşmemiş gibi olur. Örneğin, tek bir düğme öğesinde değerlendirilemeyen bir kaynağı kullanarak arka planı ayarlamaya çalışırsanız, hiçbir değer kümesi sonucu yoktur ancak etkin değer hala Özellik sisteminde ve değer önceliğinde diğer katılımcılardan gelebilir. Örneğin, arka plan değeri yine de yerel olarak tanımlanmış bir düğme stilinden veya tema stilinden gelebilir. Tema stilleriyle tanımlanmayan özellikler için, başarısız bir kaynak değerlendirmesinden sonra geçerli değer, özellik meta verilerindeki varsayılan değerden gelebilir.  
   
 #### <a name="restrictions"></a>Kısıtlamalar  
- Dinamik kaynak başvurularını önemli bazı kısıtlamalar vardır. Aşağıdakilerden en az biri true olması gerekir:  
+ Dinamik kaynak başvurularının bazı önemli kısıtlamaları vardır. Aşağıdakilerden en az biri doğru olmalıdır:  
   
-- Bir özellik olmalıdır ayarlanan özelliğin bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>. Özelliği tarafından yedeklenmesi gereken bir <xref:System.Windows.DependencyProperty>.  
+- Ayarlanan özellik bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement>üzerinde bir özellik olmalıdır. Bu özelliğin bir <xref:System.Windows.DependencyProperty>ile kullanılması gerekir.  
   
-- Başvuru arasında bir değer için olan bir <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+- Başvuru, içindeki <xref:System.Windows.Style> <xref:System.Windows.Setter>bir değer içindir.  
   
-- Ayarlanan özelliğin üzerinde bir özelliği olmalıdır bir <xref:System.Windows.Freezable> değerlerinden birine sağlanan bir <xref:System.Windows.FrameworkElement> veya <xref:System.Windows.FrameworkContentElement> özelliği veya <xref:System.Windows.Setter> değeri.  
+- <xref:System.Windows.Freezable> Ayarlanan özellik, bir <xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement>veyaözelliğinin değeri ya da bir değerolaraksağlanmışbirüzerindeözelliğiolmalıdır.<xref:System.Windows.Setter>  
   
- Ayarlanan özelliğin olması gerektiğinden bir <xref:System.Windows.DependencyProperty> veya <xref:System.Windows.Freezable> özelliği, çoğu özellik değişiklikleri yaymak için kullanıcı Arabirimi bir özellik değişiminin (değiştirilen dinamik kaynak değeri) özellik sistemi tarafından onaylanır. Çoğu denetimleri başka bir düzen denetimi, zorlayacak mantığı içerir bir <xref:System.Windows.DependencyProperty> değişiklikleri ve özellik düzeni etkileyebilir. Ancak, tüm özellikleri sahip bir [DynamicResource işaretleme uzantısı](dynamicresource-markup-extension.md) süreliğine kullanıcı arabiriminde güncelleştirme şekilde değeri sağlamak için değer olarak garanti edilir. Bu işlevselliği hala özelliğine bağlı olarak yanı sıra özelliği veya bile uygulamanızın mantıksal yapısı sahibi türüne bağlı olarak değişebilir.  
+ Ayarlanan özelliğin bir <xref:System.Windows.DependencyProperty> veya <xref:System.Windows.Freezable> özelliği olması gerektiğinden, özellik değişikliği (değiştirilen dinamik kaynak değeri) özellik sistemi tarafından onaylandığından çoğu özellik değişikliği Kullanıcı arabirimine yayılır. Çoğu denetim, bir <xref:System.Windows.DependencyProperty> değişiklik olduğunda bir denetimin başka bir yerleşimini zorlayan mantığı içerir ve bu özellik düzeni etkileyebilir. Ancak, bir [DynamicResource biçimlendirme uzantısına](dynamicresource-markup-extension.md) sahip olan tüm özelliklerin değeri, Kullanıcı arabiriminde gerçek zamanlı olarak güncelleştirilecek şekilde değeri sağlama garantisi garanti edilir. Bu işlevsellik, özelliğe ve hatta uygulamanızın mantıksal yapısına bağlı olarak farklılık gösterebilir ve bu özellik de değişir.  
   
 <a name="stylesimplicitkeys"></a>   
-## <a name="styles-datatemplates-and-implicit-keys"></a>Stiller ve DataTemplates örtük anahtarları  
- Tüm öğeleri, daha önce belirtilen bir <xref:System.Windows.ResourceDictionary> bir anahtar olması gerekir. Ancak, gelmez tüm kaynakların bir açık olması gerektiğini `x:Key`. Anahtar değeri için başka bir özelliğin değerini yere bağlıdır, bir kaynak tanımlandığında bir örtülü anahtar birden fazla nesne türlerini destekler. Ancak bu bir örtülü anahtar bilinir bir `x:Key` açık bir anahtarı bir özniteliktir. Açık bir anahtarı belirterek herhangi bir örtük anahtarı geçersiz kılabilirsiniz.  
+## <a name="styles-datatemplates-and-implicit-keys"></a>Stiller, veri şablonları ve örtük anahtarlar  
+ Daha önce, içindeki <xref:System.Windows.ResourceDictionary> tüm öğelerin bir anahtar olması gerekir. Ancak, tüm kaynakların açık `x:Key`olması gerektiği anlamına gelmez. Birçok nesne türü, bir kaynak olarak tanımlandığında, anahtar değerinin başka bir özelliğin değerine bağlı olduğu örtük bir anahtarı destekler. Bu örtük anahtar olarak bilinir, ancak `x:Key` öznitelik açık bir anahtardır. Açık bir anahtar belirterek herhangi bir örtük anahtarın üzerine yazabilirsiniz.  
   
- Kaynaklar için çok önemli bir senaryo olduğundan tanımlarken bir <xref:System.Windows.Style>. Aslında, bir <xref:System.Windows.Style> stilleri için yeniden kullanılması kendiliğinden yönelik olduğundan neredeyse her zaman bir kaynak sözlüğünde bir girdi olarak tanımlanır. Stilleri hakkında daha fazla bilgi için bkz. [stil ve şablon oluşturma](../controls/styling-and-templating.md).  
+ Kaynaklar için çok önemli bir senaryo, bir <xref:System.Windows.Style>tanımladığınızda. Aslında, stiller kendiliğinden <xref:System.Windows.Style> yeniden kullanım için tasarlanan bir kaynak sözlüğünde bir girdi olarak neredeyse her zaman tanımlanır. Stiller hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../controls/styling-and-templating.md)oluşturma.  
   
- Denetimler için stiller hem ile oluşturulabilir ve bir örtük anahtar ile başvurulan. Tema stilleri bir denetimin varsayılan görünümünü tanımlayan örtük bu anahtara bağlıdır. Örtük anahtar istediği, açısından <xref:System.Type> denetimi. Kaynak tanımlama açısından örtük anahtar <xref:System.Windows.Style.TargetType%2A> stili. Özel denetimler için temaları oluşturuyorsanız, bu nedenle, mevcut tema stilleri ile etkileşimde bulunan stiller oluşturmak, belirtmeniz gerekmez bir [x: Key yönergesi](../../xaml-services/x-key-directive.md) söz konusu <xref:System.Windows.Style>. Ve tema stilleri kullanmak istiyorsanız, herhangi bir stili belirtmeniz gerekmez. Örneğin, aşağıdaki stil tanımını olsa bile çalışır <xref:System.Windows.Style> anahtara sahip kaynak görünmez:  
+ Denetimlerin stilleri hem ile oluşturulabilir hem de örtük bir anahtarla başvuruda bulunabilir. Bir denetimin varsayılan görünümünü tanımlayan Tema stilleri, bu örtülü anahtara bağımlıdır. Bunu isteme açısından örtülü anahtar, denetimin kendisidir <xref:System.Type> . Kaynağı tanımlama açısından örtülü anahtar, stilin ' dır <xref:System.Windows.Style.TargetType%2A> . Bu nedenle, özel denetimler için Temalar oluşturuyorsanız, mevcut Tema stilleriyle etkileşime geçen stiller oluşturuyorsanız, bunun için <xref:System.Windows.Style>bir [x:Key yönergesi](../../xaml-services/x-key-directive.md) belirtmeniz gerekmez. Temalı stilleri kullanmak istiyorsanız, herhangi bir stil belirtmeniz gerekmez. Örneğin, aşağıdaki stil tanımı, <xref:System.Windows.Style> kaynak bir anahtara sahip gibi görünmese de işe yarar:  
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Stil gerçekten bir anahtarı yok: örtük anahtarı `typeof(` <xref:System.Windows.Controls.Button> `)`. Biçimlendirme içinde belirttiğiniz bir <xref:System.Windows.Style.TargetType%2A> doğrudan türü olarak adı (veya isteğe bağlı olarak kullanabileceğiniz [{... x: Type}](../../xaml-services/x-type-markup-extension.md) döndürülecek bir <xref:System.Type>.  
+ Bu stilin gerçekten bir anahtarı vardır: örtük anahtar `typeof(`. <xref:System.Windows.Controls.Button> `)` Biçimlendirme bölümünde <xref:System.Windows.Style.TargetType%2A> doğrudan tür adı olarak belirtebilirsiniz (ya da isteğe bağlı olarak [{x:Type...exe](../../xaml-services/x-type-markup-extension.md) ' i kullanabilirsiniz) bir <xref:System.Type>döndürür.  
   
- Tarafından kullanılan varsayılan tema stil mekanizmaları aracılığıyla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], stil ve çalışma zamanı stil olarak uygulanır bir <xref:System.Windows.Controls.Button> sayfasında olsa bile <xref:System.Windows.Controls.Button> kendisini belirtmek çalışmaz, <xref:System.Windows.FrameworkElement.Style%2A> özelliği veya belirli bir kaynak Stil başvuru. Sayfada tanımlı stil kodunuzu daha önce arama sırası tema sözlük stilde aynı anahtarı kullanarak tema sözlük stili daha bulunur. Yalnızca belirtebilirsiniz `<Button>Hello</Button>` sayfası ve stil ile tanımlanan yerinde <xref:System.Windows.Style.TargetType%2A> , `Button` için bu düğmeyi uygular. İsterseniz, aynı türü değere stiliyle hala açıkça anahtarlayabilirsiniz <xref:System.Windows.Style.TargetType%2A>, anlaşılabilir olması adına, biçimlendirme, ancak bu isteğe bağlıdır.  
+ Tarafından [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]kullanılan varsayılan tema stili mekanizmaları aracılığıyla, bu stil, kendi <xref:System.Windows.FrameworkElement.Style%2A> özelliğini veya belirli bir kaynağı belirtmeyi denemese <xref:System.Windows.Controls.Button> de, sayfanın çalışma zamanı stili <xref:System.Windows.Controls.Button> olarak uygulanır. stile başvuru. Sayfada tanımlanan stiliniz, tema sözlüğü stilinin sahip olduğu aynı anahtar kullanılarak, arama dizisinde, tema sözlüğü stilinden daha önce bulunur. Sayfada herhangi bir yeri `<Button>Hello</Button>` belirtebilirsiniz ve `Button` ile <xref:System.Windows.Style.TargetType%2A> tanımladığınız stil bu düğme için geçerlidir. İsterseniz, biçimlendirmedeki açıklık açısından, ancak bu isteğe bağlı olarak, stili aynı tür değeri <xref:System.Windows.Style.TargetType%2A>ile açıkça anahtar olarak girebilirsiniz.  
   
- Örtük stiller tuşları, Denetim uygulanmaz <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> olduğu `true` (Ayrıca <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> yerel davranışı için denetim sınıfı yerine açıkça denetim örneği üzerinde bir parçası olarak ayarlanmış olabilir). Ayrıca, türetilmiş sınıf senaryoları için örtük anahtarları desteklemek için Denetim kılmalı <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (parçası olarak sağlanan tüm mevcut denetimleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bunu). Stilleri, temalar ve denetim tasarımı hakkında daha fazla bilgi için bkz. [Stillenebilir Denetimleri Tasarlama için yönergeler](../controls/guidelines-for-designing-stylable-controls.md).  
+ Varsa <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> ,stiller<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> için örtülü anahtarlar bir denetim üzerinde uygulanmaz (ayrıcadenetimsınıfıiçinyereldavranışınparçasıolarak,denetiminbirörneğineaçıkçaayarlanmayabilir).`true` Ayrıca, türetilmiş sınıf senaryolarında örtük anahtarları desteklemek için, denetimin geçersiz kılması <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> gerekir (bunun bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] parçası olarak sunulan tüm mevcut denetimler). Stiller, Temalar ve denetim tasarımı hakkında daha fazla bilgi için bkz. [Stillenebilir denetimler tasarlamak Için yönergeler](../controls/guidelines-for-designing-stylable-controls.md).  
   
- <xref:System.Windows.DataTemplate> Ayrıca bir örtülü anahtar vardır. Örtük anahtarı için bir <xref:System.Windows.DataTemplate> olduğu <xref:System.Windows.DataTemplate.DataType%2A> özellik değeri. <xref:System.Windows.DataTemplate.DataType%2A> açıkça kullanmak yerine türü adı olarak da belirtilebilir [{... x: Type} ](../../xaml-services/x-type-markup-extension.md). Ayrıntılar için bkz [veri şablonu oluşturmaya genel bakış](../data/data-templating-overview.md).  
+ <xref:System.Windows.DataTemplate>Ayrıca örtülü bir anahtara sahiptir. <xref:System.Windows.DataTemplate> Bir<xref:System.Windows.DataTemplate.DataType%2A> için örtük anahtar, özellik değeridir. <xref:System.Windows.DataTemplate.DataType%2A>Ayrıca, açıkça [{X:Type...exe}](../../xaml-services/x-type-markup-extension.md)kullanmak yerine türün adı olarak belirtilebilir. Ayrıntılar için bkz. [veri şablonu oluşturmaya genel bakış](../data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

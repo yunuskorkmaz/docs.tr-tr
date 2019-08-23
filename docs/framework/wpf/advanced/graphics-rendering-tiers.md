@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972341"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937528"
 ---
 # <a name="graphics-rendering-tiers"></a>Grafik İşleme Katmanları
 Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamayı çalıştıran bir cihaz için grafik donanım yeteneği ve performansının düzeyini tanımlar.  
@@ -48,7 +48,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>İşleme katmanı 1 ve Işleme katmanı 2  
   
 > [!NOTE]
->  .NET Framework 4 ' ten başlayarak, işleme katmanı 1 yalnızca DirectX 9,0 veya üstünü destekleyen grafik donanımını içerecek şekilde yeniden tanımlandı. DirectX 7 veya 8 ' i destekleyen grafik donanımı artık işleme katmanı 0 olarak tanımlandı.  
+> .NET Framework 4 ' ten başlayarak, işleme katmanı 1 yalnızca DirectX 9,0 veya üstünü destekleyen grafik donanımını içerecek şekilde yeniden tanımlandı. DirectX 7 veya 8 ' i destekleyen grafik donanımı artık işleme katmanı 0 olarak tanımlandı.  
   
  1 veya 2. bir işleme katmanı değeri, ' ın grafik özelliklerinin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çoğunun, gerekli sistem kaynakları kullanılabilir olduğunda ve tükenmemiş olması halinde donanım hızlandırmasını kullanacağı anlamına gelir. Bu, 9,0 'den büyük veya buna eşit bir DirectX sürümüne karşılık gelir.  
   
@@ -105,7 +105,7 @@ Bir işleme katmanı, bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 |**Gerekli video sürücüsü tarih ayarı**|Sistemin donanım hızlandırmasını 2004 Kasım 'Dan önce yayınlanan sürücüler için devre dışı bırakıp bırakmadığını belirtir.|  
 |**Başvuru tarayıcısı seçeneğini kullanma**|Başvuru tarayıcısının [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanılması gerekip gerekmediğini belirtir.|  
   
- Bu ayarlara, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarlarına nasıl başvurulacağını bilen herhangi bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar ayrıca, [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek oluşturulabilir veya değiştirilebilir. Daha fazla bilgi için bkz. [grafik Işleme kayıt defteri ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Bu ayarlara, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kayıt defteri ayarlarına nasıl başvurulacağını bilen herhangi bir dış yapılandırma yardımcı programı tarafından erişilebilir. Bu ayarlar, Windows kayıt defteri Düzenleyicisi kullanılarak değerlere doğrudan erişerek da oluşturulabilir veya değiştirilebilir. Daha fazla bilgi için bkz. [grafik Işleme kayıt defteri ayarları](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF Performans Profil Oluşturma Araçları  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], uygulamanızın çalışma zamanı davranışını çözümlemenize ve uygulayabileceğiniz performans iyileştirmeleri türlerini belirlemenize olanak tanıyan bir dizi performans profil araçları sağlar. Aşağıdaki tabloda, WPF performans paketi Windows SDK aracı 'nda bulunan performans profil oluşturma araçları listelenmektedir:  

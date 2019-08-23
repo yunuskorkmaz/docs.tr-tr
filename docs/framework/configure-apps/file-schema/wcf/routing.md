@@ -2,19 +2,19 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786392"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934134"
 ---
 # <a name="routing"></a>\<Yönlendirme >
 
-Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder <xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için hedef bitiş noktalarını tanımlayan tabloları yapılırken kullanılacak ne zaman eşleşen bir filtre, iletileri gönderir.
+Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> türünü ve hedef bitiş noktalarını tanımlayan yönlendirme tablolarını belirleyen bir yönlendirme filtreleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder. Filtre eşleştiğinde iletileri gönder.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<Yönlendirme >**
+[ **\<System. serviceModel >** ](system-servicemodel.md)   
+&nbsp;&nbsp; **\<Yönlendirme >**
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -46,20 +46,20 @@ Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süz
 
 ### <a name="attributes"></a>Öznitelikler
 
-None
+Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<filtreleri >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Windows Communication Foundation (WCF) MessageFilter türünü gelen iletileri değerlendirmek kullanılacağını belirlemek yönlendirme süzgeçleri kümesini içerir. |
-| [**\<filterTables >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Filtreler eşleştiğinde kullanmak için hangi uç noktaya belirtmek için hedef uç noktalar ile yönlendirme filtreleri arasındaki eşlemeleri içerir. |
+| [ **\<Filtreler >** ](filters-of-routing.md) | Gelen iletiler değerlendirilirken Windows Communication Foundation (WCF) MessageFilter türünü belirten bir yönlendirme filtreleri kümesi içerir. |
+| [ **\<filterTables >** ](filtertables.md) | Filtre eşleştiğinde kullanılacak bitiş noktasını belirtmek için yönlendirme filtreleri ve hedef uç noktalar arasında eşlemeler içerir. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |     | Açıklama |
 | --- | ----------- |
-| **\<sistemi. ServiceModel >** | Tüm WCF yapılandırma öğelerinin kök öğe. |
+| **\<sistemin. ServiceModel >** | Tüm WCF yapılandırma öğelerinin kök öğesi. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

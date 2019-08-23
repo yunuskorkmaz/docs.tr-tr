@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8c232e63d1f3066737ff755d5911c185abe6fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f323e91e60c9735a51e955eaab6673ca167f294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755374"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951874"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef Yöntemi
-Çözümlenen bir <xref:System.Type> belirtilen TypeRef belirteci tarafından temsil edilen bir başvuru.  
+Belirtilen TypeRef <xref:System.Type> belirteci ile temsil edilen bir başvuruyu çözümler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,34 +40,34 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parametreler  
  `tr`  
- [in] Başvurulan tür bilgilerini döndürmek için TypeRef meta veri belirteci.  
+ 'ndaki İçin başvurulan tür bilgilerini döndürecek olan TypeRef meta veri belirteci.  
   
  `riid`  
- [in] Döndürmek için bir IID arabirimi `ppIScope`. Genelde bu IID_IMetaDataImport olacaktır.  
+ 'ndaki Döndürülecek arabirimin IID 'si `ppIScope`. Genellikle bu IID_IMetaDataImport olacaktır.  
   
  `ppIScope`  
- [out] Başvurulan tür tanımlandığı modül kapsamı için bir arabirim.  
+ dışı Başvurulan türün tanımlandığı modül kapsamına yönelik arabirim.  
   
  `ptd`  
- [out] Başvurulan tür temsil eden bir tür tanımı belirteci için bir işaretçi.  
+ dışı Başvurulan türü temsil eden bir TypeDef belirtecinin işaretçisi.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
->  Birden çok uygulama etki alanları yüklerse, bu yöntemi kullanmayın. Yöntemi, uygulama etki alanı sınırları uymaz. Bir derlemenin birden çok sürümü yüklü olan ve aynı ad ile aynı türde içerdikleri bulduğu ilk türünde modül kapsamı yöntemi döndürür.  
+> Birden çok uygulama etki alanı yüklenmişse bu yöntemi kullanmayın. Yöntem, uygulama etki alanı sınırlarına uymaz. Bir derlemenin birden çok sürümü yüklüyse ve aynı ad alanıyla aynı türü içeriyorsa, yöntemi bulduğu ilk türün modül kapsamını döndürür.  
   
- `ResolveTypeRef` Diğer modül türü tanımında yöntemi arar. Tür tanımını bulunursa `ResolveTypeRef` TypeDef belirteç türünün yanı sıra, bu modül kapsamı için bir arabirim döndürür.  
+ Yöntemi `ResolveTypeRef` , diğer modüllerde tür tanımını arar. Tür tanımı bulunursa, `ResolveTypeRef` bu modül kapsamına ve tür için typedef belirtecine bir arabirim döndürür.  
   
- Tür başvurusu çözümlenemedi için AssemblyRef, çözüm kapsamını varsa `ResolveTypeRef` yöntemi çağrılarıyla ya da zaten açılmış olan meta veri kapsamlardaki bir eşleşme arar [Imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)yöntemi veya [Imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi. Bunun nedeni, `ResolveTypeRef` yalnızca diskte veya genel derleme önbelleğinde derleme depolandığı AssemblyRef kapsamından belirlenemiyor.  
+ Çözümlenecek tür başvurusunun, AssemblyRef 'nin bir çözüm kapsamı varsa, `ResolveTypeRef` yöntemi yalnızca [ımetadatadağıtıcı:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) metoduna veya [' ye yapılan çağrılarla zaten açılmış olan meta veri kapsamları içinde bir eşleşme arar. Imetadatadağıtıcı:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) yöntemi. Bunun nedeni `ResolveTypeRef` , yalnızca diskte veya derlemenin depolandığı genel derleme önbelleğinde bulunan AssemblyRef kapsamından saptanamıyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** COR.h  
+ **Üst bilgi** Cor. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

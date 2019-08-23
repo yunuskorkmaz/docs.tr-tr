@@ -8,55 +8,55 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 5365c5274d2810f8fd93f81f10bbedf903756e0b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3db3cc1c529ab40bf775c06a5128e4dabf3c8a56
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586671"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963650"
 ---
 # <a name="exporting-schemas-from-classes"></a>Sınıflardan Şemaları Dışa Aktarma
-Veri sözleşmesi modeli kullandığınız sınıflardan XML Şeması Tanım Dili (XSD) şemaları oluşturmak için <xref:System.Runtime.Serialization.XsdDataContractExporter> sınıfı. Bu konuda şemaları oluşturma işlemi açıklanmaktadır.  
+Veri anlaşması modelinde kullanılan sınıflardan XML şeması tanım dili (xsd) şemaları oluşturmak için <xref:System.Runtime.Serialization.XsdDataContractExporter> sınıfını kullanın. Bu konu başlığı, şema oluşturma işlemini açıklar.  
   
-## <a name="the-export-process"></a>Dışa aktarma işlemi  
- Şema dışarı aktarma işlemi bir veya daha fazla türleri ile başlar ve üreten bir <xref:System.Xml.Schema.XmlSchemaSet> , bu tür XML projeksiyon açıklar.  
+## <a name="the-export-process"></a>Dışarı aktarma Işlemi  
+ Şema dışarı aktarma işlemi bir veya daha fazla tür ile başlar ve bu <xref:System.Xml.Schema.XmlSchemaSet> türlerin XML projeksiyonunu açıklayan bir oluşturur.  
   
- `XmlSchemaSet` , .NET Framework'ün şema nesne modeli (bir XSD şema belge kümesini temsil eden SOM) bir parçasıdır. XSD belgeleri oluşturmak için bir `XmlSchemaSet`, şemalardan koleksiyonunu kullanın <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliği `XmlSchemaSet` sınıfı. Her seri <xref:System.Xml.Schema.XmlSchema> kullanarak nesne <xref:System.Xml.Serialization.XmlSerializer>.  
+ , `XmlSchemaSet` Bir xsd şeması belgelerinin kümesini temsil eden .NET Framework şema nesne modelinin (som) bir parçasıdır. Bir `XmlSchemaSet`öğesinden xsd belgeleri oluşturmak için, `XmlSchemaSet` sınıfının <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> özelliğinden şema koleksiyonunu kullanın. Ardından öğesini <xref:System.Xml.Schema.XmlSchema> <xref:System.Xml.Serialization.XmlSerializer>kullanarak her nesneyi serileştirin.  
   
 #### <a name="to-export-schemas"></a>Şemaları dışarı aktarmak için  
   
-1. Bir örneğini oluşturmak <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
+1. Öğesinin bir örneğini oluşturun <xref:System.Runtime.Serialization.XsdDataContractExporter>.  
   
-2. İsteğe bağlı. Başarılı bir <xref:System.Xml.Schema.XmlSchemaSet> oluşturucuda. Bu durumda, şema dışarı aktarma sırasında oluşturulan şema için eklenir <xref:System.Xml.Schema.XmlSchemaSet> örneği yerine boş bir ile başlayan <xref:System.Xml.Schema.XmlSchemaSet>.  
+2. İsteğe bağlı. Oluşturucuda bir <xref:System.Xml.Schema.XmlSchemaSet> geçirin. Bu durumda, şema dışa aktarma sırasında oluşturulan şema boş <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.Schema.XmlSchemaSet>bir başlangıç yerine bu örneğe eklenir.  
   
-3. İsteğe bağlı. Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> yöntemleri. Yöntemi, belirtilen türe dışarı olup olmadığını belirler. Has yöntemi olarak aynı aşırı `Export` sonraki adımda yöntemi.  
+3. İsteğe bağlı. <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> Yöntemlerden birini çağırın. Yöntemi, belirtilen türün verilemeyeceğini belirler. Yöntemi, sonraki adımda `Export` yöntemiyle aynı aşırı yüklemelerin aynısına sahiptir.  
   
-4. Birini çağırın <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> yöntemleri. Üç aşırı yükleme sürüyor bir <xref:System.Type>, <xref:System.Collections.Generic.List%601> , `Type` nesneler veya bir <xref:System.Collections.Generic.List%601> , <xref:System.Reflection.Assembly> nesneleri. En son durumda verilen derlemelerdeki tüm türleri verilir.  
+4. <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> Yöntemlerden birini çağırın. Bir <xref:System.Type> <xref:System.Collections.Generic.List%601> nesneveya<xref:System.Reflection.Assembly> nesne alan üç aşırı yükleme vardır. <xref:System.Collections.Generic.List%601> `Type` Son durumda, tüm verilen derlemelerdeki tüm türler verilir.  
   
-     Birden çok çağrılar `Export` birden çok öğe aynı eklenen yöntemi sonuçlanıyor `XmlSchemaSet`. Bir tür içinde oluşturulmaz `XmlSchemaSet` zaten var olup olmadığını. Bu nedenle, çağırma `Export` üzerinde birden çok kez aynı `XsdDataContractExporter` birden çok örneğini oluşturmak için tercih edilir `XsdDataContractExporter` sınıfı. Bu yinelenen bir şema türü oluşturulmasını önler.  
+     Birden çok öğe çağrısı `Export` , aynı `XmlSchemaSet`öğeye birden çok öğe eklenmesine neden olur. Bir tür, `XmlSchemaSet` zaten varsa öğesine oluşturulmaz. Bu nedenle, `Export` aynı `XsdDataContractExporter` yerde birden çok kez çağırmak, `XsdDataContractExporter` sınıfının birden çok örneğini oluşturmak için tercih edilir. Bu, yinelenen şema türlerinin oluşturulmasını önler.  
   
     > [!NOTE]
-    >  Dışarı aktarma sırasında bir hata varsa `XmlSchemaSet` öngörülemeyen durumda olacaktır.  
+    > Dışarı aktarma `XmlSchemaSet` sırasında bir hata oluşursa, beklenmeyen bir durumda olur.  
   
-5. Erişim <xref:System.Xml.Schema.XmlSchemaSet> aracılığıyla <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> özelliği.  
+5. Özelliği<xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A>aracılığıylaöğesineerişin. <xref:System.Xml.Schema.XmlSchemaSet>  
   
 ## <a name="export-options"></a>Dışarı aktarma seçenekleri  
- Ayarlayabileceğiniz <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliği <xref:System.Runtime.Serialization.XsdDataContractExporter> örneğine <xref:System.Runtime.Serialization.ExportOptions> dışarı aktarma işlemini çeşitli yönlerini denetlemek için sınıf. Özellikle, aşağıdaki seçenekleri ayarlayabilirsiniz:  
+ Öğesinin <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliğini, <xref:System.Runtime.Serialization.XsdDataContractExporter> dışa aktarma işleminin çeşitli yönlerini denetlemek için <xref:System.Runtime.Serialization.ExportOptions> sınıfının bir örneğine ayarlayabilirsiniz. Özellikle, aşağıdaki seçenekleri belirleyebilirsiniz:  
   
-- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Bu koleksiyonu `Type` dışarı aktarılan türler için bilinen türleri temsil eder. (Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Bu bilinen türleri dışarı aktarılır her `Export` geçirilen türlerine ek olarak çağrı `Export` yöntemi.  
+- <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Bu koleksiyon `Type` , aktarılan türlerin bilinen türlerini temsil eder. (Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Bu bilinen türler, `Export` `Export` yöntemine geçirilen türlere ek olarak her çağrıya aktarılır.  
   
-- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Bir <xref:System.Runtime.Serialization.IDataContractSurrogate> dışarı aktarma işlemini özelleştireceğim bu özelliği aracılığıyla sağlanabilir. Daha fazla bilgi için [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir vekil kullanılır.  
+- <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. Dışarı <xref:System.Runtime.Serialization.IDataContractSurrogate> aktarma işlemini özelleştirecek bu özellik aracılığıyla bir sağlanabilir. Daha fazla bilgi için bkz. [veri sözleşmesi yedeklerin kapıları](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Varsayılan olarak, hiçbir yedek kullanılmaz.  
   
 ## <a name="helper-methods"></a>Yardımcı yöntemler  
- Şema, verme birincil rolü yanı sıra `XsdDataContractExporter` türleri hakkında bilgi sağlayan çeşitli yararlı yardımcı yöntemler sağlar. Bu güncelleştirmeler şunlardır:  
+ Şema dışa aktarma işleminin birincil rolüne ek olarak, `XsdDataContractExporter` türleri hakkında bilgi sağlayan çeşitli yararlı yardımcı yöntemler sağlar. Bu güncelleştirmeler şunlardır:  
   
-- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A> yöntem. Bu yöntem bir `Type` ve döndüren bir <xref:System.Xml.XmlQualifiedName> kök öğe adı ve bu tür, kök nesnesi olarak seri duruma, kullanılacak ad alanını temsil eden.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetRootElementName%2A>yöntemidir. Bu yöntem bir `Type` kullanır ve bu tür <xref:System.Xml.XmlQualifiedName> kök nesne olarak seri hale getirilse kullanılacak kök öğe adı ve ad alanını temsil eden bir döndürür.  
   
-- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A> yöntem. Bu yöntem bir `Type` ve döndüren bir <xref:System.Xml.XmlQualifiedName> bu tür şemaya dışarı aktarıldı, kullanılacak XSD şema türü adını temsil eder. İçin <xref:System.Xml.Serialization.IXmlSerializable> türleri, şema anonim türler olarak temsil edilen bu yöntemi döndürür `null`.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaTypeName%2A>yöntemidir. Bu yöntem bir `Type` kullanır ve bu tür <xref:System.Xml.XmlQualifiedName> şemaya aktarılıyorsa kullanılacak xsd şema türünün adını temsil eden bir döndürür. Şemada <xref:System.Xml.Serialization.IXmlSerializable> anonim türler olarak temsil edilen türler için, bu yöntem döndürür. `null`  
   
-- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A> yöntem. Bu yöntem yalnızca çalışır <xref:System.Xml.Serialization.IXmlSerializable> döndürür ve şema anonim türler olarak temsil edilmektedir türleri `null` diğer tüm türleri için. Anonim türler için bu yöntemi döndürür bir <xref:System.Xml.Schema.XmlSchemaType> temsil eden bir verilen `Type`.  
+- <xref:System.Runtime.Serialization.XsdDataContractExporter.GetSchemaType%2A>yöntemidir. Bu yöntem yalnızca <xref:System.Xml.Serialization.IXmlSerializable> şemada anonim türler olarak temsil edilen türlerle, `null` diğer tüm türler için de geçerlidir. Anonim türler için, bu yöntem verilen <xref:System.Xml.Schema.XmlSchemaType> `Type`öğesini temsil eden bir döndürür.  
   
- Bu yöntemlerin tümü, dışarı aktarma seçeneklerini etkiler.  
+ Dışarı aktarma seçenekleri bu yöntemlerin tümünü etkiler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

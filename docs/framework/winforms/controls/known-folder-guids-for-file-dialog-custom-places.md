@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962582"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>Dosya İletişim Kutusu Özel Yerleri İçin Bilinen Klasör GUID'leri
-Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] klasörlere eklediğinizde, klasör, bilinen bir <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> koleksiyonu. Bilinen klasör GUID'leri büyük/küçük harfe duyarlı değildir ve Windows SDK'sı KnownFolders.h dosyasında tanımlanır.  
+Bir <xref:System.Guid> koleksiyona<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> klasör eklerken [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bilinen bir klasörü belirtmek için kullanılır. Bilinen klasör GUID 'Leri büyük/küçük harfe duyarlı değildir ve Windows SDK KnownFolders. h dosyasında tanımlanmıştır.  
   
 > [!NOTE]
->  Bazı durumlarda, bilinen bir klasöre eklenen <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> içinde gösterilmez **sık kullanılan bağlantılar** alan. Örneğin, belirtilen bilinen klasör uygulamayı çalıştıran bilgisayarda mevcut değilse, bilinen klasör gösterilmez.  
+> Bazı durumlarda, öğesine eklenen bilinen bir klasör, <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> **sık kullanılan bağlantılar** alanında gösterilmeyecektir. Örneğin, belirtilen bilinen klasör, uygulamayı çalıştıran bilgisayarda yoksa, bilinen klasör gösterilmez.  
   
-## <a name="list-of-guids"></a>GUID'ler listesi  
- Aşağıdaki tabloda [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] bilinen klasörler ve bunların ilişkili <xref:System.Guid>.  
+## <a name="list-of-guids"></a>GUID 'lerin listesi  
+ Aşağıdaki tabloda, bilinen [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] klasörler ve bunların ilişkili <xref:System.Guid>listesi listelenmektedir.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -34,7 +34,7 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  AppUpdates  
  A305CE99-F527-492B-8B1A-7E76FA98D6E4  
   
- CDBurning  
+ Cdyakma  
  9E52AB10-F80D-49DF-ACB8-4330F5687855  
   
  ChangeRemovePrograms  
@@ -44,18 +44,18 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  D0384E7D-BAC3-4797-8F14-CBA229B392B5  
   
  CommonOEMLinks  
- C1BAE2D0-10DF-4334-BEDD-7AA20B227A9D  
+ C1BAE2D0-10DF-4334-BEGG-7AA20B227A9D  
   
- CommonPrograms  
+ Ortak programlar  
  0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8  
   
  CommonStartMenu  
  A4115719-D62E-491D-AA7C-E74B8BE3B067  
   
- CommonStartup  
+ Ortak Başlangıç  
  82A5EA35-D9CD-47C5-9629-E15D2F714E6E  
   
- CommonTemplates  
+ Ortak Şablonlar  
  B94237E7-57AC-4347-9151-B08C6C32D1F7  
   
  Bilgisayar  
@@ -70,10 +70,10 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  Kişiler  
  56784854-C6CB-462B-8169-88E350ACB882  
   
- Ndaki  
+ ControlPanel  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
- Tanımlama bilgileri  
+ Özgü  
  2B0F765D-C0E9-4171-908E-08A611B84FF6  
   
  Masaüstü  
@@ -86,15 +86,15 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  374DE290-123F-4565-9164-39C4925E467B  
   
  Sık Kullanılanlar  
- 1777F761-68AD-4D8A-87BD-30B759FA33DD  
+ 1777F761-68AD-4D8A-87BD-30B759FA33GG  
   
  Yazı Tipleri  
  FD228CB7-AE11-4AE3-864C-16F3910AB8FE  
   
- Oyunlar  
+ Oynayabilir  
  CAC52C1A-B53D-4EDC-92D7-6B2E8AC19434  
   
- GameTasks  
+ Oyuntasks  
  054FAE61-4DD8-4787-80B6-090220C4B700  
   
  Geçmiş  
@@ -103,8 +103,8 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  Internet  
  4D9F7874-4E0C-4904-967B-40B0D20C3E4B  
   
- InternetCache  
- 352481E8-33BE-4251-BA85-6007CAEDCF9D  
+ Internetcache  
+ 352481E8-33-4251-BA85-6007CAEDCF9D  
   
  Bağlantılar  
  BFB9D5E0-C6A9-404C-B2B2-AE6DB6AF4968  
@@ -124,19 +124,19 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  Ağ  
  D20BEEC4-5CA8-4905-AE3B-BF251EA09B53  
   
- OriginalImages  
+ Originalımages  
  2C36C0AA-5812-4B87-BFD0-4CD0DFB19B39  
   
- PhotoAlbums  
+ Photoalbümler  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- Resimler  
+ Resim  
  33E28130-4E1E-4676-835A-98395C3BC3BB  
   
- Çalma listesi  
+ Çalma listeleri  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
- Yazıcılar  
+ Yazıcılarınızı  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
  PrintHood  
@@ -178,7 +178,7 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  PublicDocuments  
  ED4824AF-DCE4-45A8-81E2-FC7965083634  
   
- PublicDownloads  
+ PublicDownloads 'ler  
  3D644C9B-1FB8-4F30-9B45-F670235F79C0  
   
  PublicGameTasks  
@@ -187,13 +187,13 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  PublicMusic  
  3214FAB5-9757-4298-BB61-92A9DEAA44FF  
   
- PublicPictures  
+ Publicresimler  
  B6EBFB86-6907-413C-9AF7-4FC2ABF07CC5  
   
- PublicVideos  
+ Publicvideolar  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- Hızlı Başlat  
+ 'Nda  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  En Son  
@@ -202,31 +202,31 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  RecordedTV  
  BD85E001-112E-431E-983B-7B15AC09FFF1  
   
- Geridönüşüm kutusu  
+ Recyıclebin  
  B7534046-3ECB-4C18-BE4E-64CD4CB7D6AC  
   
  ResourceDir  
  8AD10C31-2ADB-4296-A8F7-E4701232C972  
   
  RoamingAppData  
- 3EB685DB-65F9-4CF6-A03A-E3EF65729F3D  
+ 3EB685DB-65F9-4CF6-A03A-E3EF65729F3B  
   
  SampleMusic  
  B250C668-F57D-4EE1-A63C-290EE7D1AA1F  
   
- SamplePictures  
+ Sampleresimlerim  
  C4900540-2379-4C75-844B-64E6FAF8716B  
   
- SamplePlaylists  
- 15CA69B3-30EE-49C1-ACE1-6B5EC372AFB5  
+ Örnek çalma listeleri  
+ 15CA69B3-30EE-49C1-ASETAT 1-6B5EC372AFB5  
   
- SampleVideos  
+ Samplevideolar  
  859EAD94-2E85-48AD-A71A-0969CB56A6CD  
   
- KaydedilenOyunlar  
+ Kaydedilen Oyunlar  
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
- savedSearches  
+ Savedaramalarındaki aramalar  
  7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
   
  SEARCH_CSC  
@@ -238,7 +238,7 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
   
- Gönder  
+ SendTo  
  8983036C-27C0-404B-8F08-102D10DCFD74  
   
  SidebarDefaultParts  
@@ -247,7 +247,7 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- Başlatmenüsü  
+ StartMenu  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  Başlangıç  
@@ -289,4 +289,4 @@ Kullandığınız bir <xref:System.Guid> belirtmek için bir [!INCLUDE[wiprlhext
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Nasıl yapılır: Dosya iletişim kutusuna özel yer ekleme](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Nasıl yapılır: Dosya Iletişim kutusuna özel yer ekleme](how-to-add-a-custom-place-to-a-file-dialog-box.md)

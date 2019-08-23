@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bac24c2dd622ea780408e902d08708ac09561044
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922732"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Nasıl yapılır: Windows Forms DataGrid Denetimini Veri Kaynağına Bağlama
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Windows Forms <xref:System.Windows.Forms.DataGrid> denetim bir veri kaynağından bilgileri görüntülemek için özel olarak tasarlanmıştır. Çağırarak denetimini çalışma zamanında bağlama <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi. Çeşitli veri kaynaklarından verileri görüntüleyebilse de, en sık karşılaşılan veri kümeleri ve veri görünümleri kaynaklarıdır.  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> denetimi, bir veri kaynağından bilgileri görüntüleyecek şekilde özel olarak tasarlanmıştır. <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Yöntemi çağırarak denetimi çalışma zamanında bağlarsınız. Çeşitli veri kaynaklarından veri görüntüleyebilirsiniz, ancak en genel kaynaklar veri kümeleri ve veri görünümleridir.  
   
-### <a name="to-data-bind-the-datagrid-control-programmatically"></a>DataGrid denetimi program aracılığıyla veri-bağlamak için  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>DataGrid denetimini programlama yoluyla veri bağlama  
   
-1. DataSet'i doldurmak için kod yazın.  
+1. Veri kümesini dolduracak kodu yazın.  
   
-     Veri kaynağı bir veri kümesi veya bir veri kümesi tabloyu temel alan bir veri görünümü, forma DataSet'i doldurmak için kod ekleyin.  
+     Veri kaynağı bir veri kümesi veya veri kümesi tablosuna dayalı bir veri görünüminiyorsa, veri kümesini dolduracak şekilde forma kod ekleyin.  
   
-     Kullandığınız tam kod burada veri veri kümesi alma bağlıdır. Veri kümesi doğrudan bir veritabanından doldurulmuş, genellikle arama `Fill` adlı bir veri kümesi doldurur aşağıdaki örnekte olduğu gibi bir veri bağdaştırıcısı yöntemi `DsCategories1`:  
+     Kullandığınız tam kod, veri kümesinin veri alılabileceği yere bağlıdır. Veri kümesi doğrudan bir veritabanından doldurulursa, genellikle bir veri bağdaştırıcısının `Fill` yöntemini, aşağıdaki örnekte olduğu gibi, adlı `DsCategories1`bir veri kümesini dolduran şekilde çağırabilirsiniz:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "61666436"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Bir XML Web hizmetinden doldurulmuş veri kümesi, genellikle kodunuzda Hizmeti'nin bir örneğini oluşturur ve ardından bir veri kümesi döndürülecek yöntemlerinden birini çağırın. XML Web hizmetinden dataset sonra yerel kümenize birleştirin. Aşağıdaki örnek, bir XML Web hizmeti olarak adlandırılan bir örneğini nasıl oluşturacağınızı gösterir. `CategoriesService`, arama, `GetCategories` yöntemi ve sonuç veri kümesini yerel bir veri kümesine adlı birleştirme `DsCategories1`:  
+     Veri kümesi bir XML Web hizmetinden doldurulduysa, genellikle kodunuzda hizmetin bir örneğini oluşturun ve ardından bir veri kümesi döndürmek için yöntemlerinden birini çağırın. Daha sonra veri kümesini XML Web hizmetinden yerel veri kümeniz ile birleştirebilirsiniz. Aşağıdaki örnek, adlı `CategoriesService`bir XML Web hizmetinin örneğini nasıl oluşturabileceğiniz, `GetCategories` yöntemini çağırabilmeniz ve elde edilen veri kümesini adlı `DsCategories1`yerel bir veri kümesinde birleştirme işlemini göstermektedir:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,12 +68,12 @@ ms.locfileid: "61666436"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2. Çağrı <xref:System.Windows.Forms.DataGrid> denetimin <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi, veri kaynağı ve veri üyesi geçirme. Veri üyesi açıkça geçirebilirsiniz ihtiyacınız yoksa boş bir dize geçirin.  
+2. <xref:System.Windows.Forms.DataGrid> Denetiminyönteminiçağırın,verikaynağınıve<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> bir veri üyesini geçirerek. Bir veri üyesini açıkça geçirmeniz gerekmiyorsa boş bir dize geçirin.  
   
     > [!NOTE]
-    >  Kılavuzun ilk kez bağlanıyorsanız, denetimin ayarlayabilirsiniz <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özellikleri. Ancak, ayarlandıktan sonra bu özellikleri sıfırlayamazsınız. Bu nedenle, her zaman kullanmanız önerilir <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi.  
+    > Kılavuzu ilk kez bağlıyorsanız, denetimin <xref:System.Windows.Forms.DataGrid.DataSource%2A> ve <xref:System.Windows.Forms.DataGrid.DataMember%2A> özelliklerini ayarlayabilirsiniz. Ancak, ayarlandıklarında bu özellikleri sıfırlayamazsınız. Bu nedenle, <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> yöntemi her zaman kullanmanız önerilir.  
   
-     Aşağıdaki örnek nasıl program aracılığıyla adlı bir veri kümesi Müşteriler tablosunda adlarınıza bağlayabileceğiniz gösterir `DsCustomers1`:  
+     Aşağıdaki örnek, adlı `DsCustomers1`bir veri kümesindeki Customers tablosuna programlı bir şekilde nasıl bağlayacağınız gösterilmektedir:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
@@ -87,7 +87,7 @@ ms.locfileid: "61666436"
     dataGrid1->SetDataBinding(dsCustomers1, "Customers");  
     ```  
   
-     Müşteriler tablosu veri kümesi yalnızca tablodaki ise, kılavuz alternatif olarak bu şekilde bağlayabilirsiniz:  
+     Veri kümesindeki tek tablo müşteriler tablosu ise bu şekilde kılavuza bağlayabilirsiniz:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "")  
@@ -101,7 +101,7 @@ ms.locfileid: "61666436"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3. (İsteğe bağlı) Sütun stillerini ve uygun tablo stilleri kılavuza ekleyin. Hiçbir tablo stilleri varsa, bir tablo görürsünüz ancak en az biçimlendirme ile tüm sütunlar görünür.  
+3. Seçim Kılavuza uygun tablo stillerini ve sütun stillerini ekleyin. Tablo stili yoksa, tabloyu görürsünüz, ancak en az biçimlendirme ile ve tüm sütunları görünür olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

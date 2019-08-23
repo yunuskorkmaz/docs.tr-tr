@@ -3,22 +3,22 @@ title: <activityScheduledQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a8bcd6d4-b389-4daf-86bf-1ade85fec114
-ms.openlocfilehash: d49c6d933a09dce5d657746358f1a5f716ab639b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc04405204be7c5484d47b4a3767f846b11abf9f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790422"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945497"
 ---
 # <a name="activityscheduledquery"></a>\<activityScheduledQuery >
-Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorguları koleksiyonunu temsil eder. Sorgu zamanlanmış etkinlik kayıtlarına abone olmak izleme Katılımcısı için gereklidir.  
+Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan bir sorgu koleksiyonunu temsil eder. Sorgu, etkinlik zamanlanan kayıtlarına abone olmak için izleme katılımcısı için gereklidir.  
   
- Profil sorguları izleme ile ilgili daha fazla bilgi için bkz: [profillerini izleme](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
   
 \<system.serviceModel>  
 \<İzleme >  
 \<trackingProfile>  
-\<İş akışı >  
+\<iş akışı >  
 \<activityScheduledQueries >  
 \<activityScheduledQuery >  
   
@@ -44,8 +44,8 @@ Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|activityName|İptal isteyen etkinliğin adını belirten dize.|  
-|childActivityName|Kendisi için İptal istendi alt etkinliğin adını belirten dize.|  
+|activityName|İptali isteyen etkinliğin adını belirten bir dize.|  
+|childActivityName|İptalin istendiği alt etkinliğin adını belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -54,11 +54,11 @@ Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek 
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<activityScheduledQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activityscheduledquery.md)|Yürütme için zamanlanan bir etkinlik tarafından bir üst etkinliği izlemek için kullanılan sorgu.|  
+|[\<activityScheduledQuery >](activityscheduledquery.md)|Bir üst etkinliğin yürütülmesi için zamanlanmış bir etkinliği izlemek için kullanılan sorgu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityScheduledQuery?displayProperty=nameWithType>
-- [İş Akışı Takip ve İzleme](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [İzleme Profilleri](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [İş Akışı Takip ve İzleme](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [İzleme Profilleri](../../../windows-workflow-foundation/tracking-profiles.md)

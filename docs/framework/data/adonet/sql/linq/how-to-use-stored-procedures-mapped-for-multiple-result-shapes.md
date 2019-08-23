@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22614be8e53d975c4efdf7004f41906c58639c61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902661"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938690"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Nasıl yapılır: Birden Çok Sonuç Şekli İçin Eşlenmiş Saklı Yordamlar Kullanma
-Bir saklı yordam birden çok sonuç şekli döndüğünüzde dönüş türü kesin bir tek projeksiyon şekle yazılamaz. Ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tüm olası yansıtma türleri oluşturabilirsiniz, siparişin bunlar döndürülecek bilemezsiniz.  
+Saklı yordam birden çok sonuç şekli döndürebilen zaman, dönüş türü kesin bir şekilde tek bir projeksiyon şekline eklenemez. Tüm [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] olası projeksiyon türlerini oluşturabilse de, bu işlem, döndürülme sırasını bilmez.  
   
- Bu senaryo ile sıralı olarak birden çok sonuç şekli oluşturan saklı yordamları karşılaştırın. Daha fazla bilgi için [nasıl yapılır: Sıralı sonuç şekilleri için eşlenmiş saklı yordamlar kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
+ Bu senaryoya, ardışık olarak birden çok sonuç şekli üreten Saklı yordamlarla kontrast. Daha fazla bilgi için [nasıl yapılır: Sıralı sonuç şekilleri](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)Için eşlenen saklı yordamları kullanın.  
   
- <xref:System.Data.Linq.Mapping.ResultTypeAttribute> Özniteliği, dönüş türleri yordamı döndürebilir belirtmek için birden çok sonuç türleri, saklı yordamlar için uygulanır.  
+ <xref:System.Data.Linq.Mapping.ResultTypeAttribute> Özniteliği, yordamın döndüreabileceği tür kümesini belirtmek için birden çok sonuç türü döndüren saklı yordamlara uygulanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki SQL kod örneğinde sonuç şekli girişine bağlı (`shape =1` veya `shape = 2`). Hangi projeksiyon ilk döndürülecek bilmezsiniz.  
+ Aşağıdaki SQL kod örneğinde, sonuç şekli girişe bağlıdır (`shape =1` veya `shape = 2`). İlk olarak hangi projeksiyonın döndürüleceğini bilemezsiniz.  
   
 ```  
 CREATE PROCEDURE VariableResultShapes(@shape int)  
@@ -38,7 +38,7 @@ else if(@shape = 2)
  Bu saklı yordamı yürütmek için aşağıdakine benzer bir kod kullanırsınız.  
   
 > [!NOTE]
->  Kullanmalısınız <xref:System.Data.Linq.IMultipleResults.GetResult%2A> doğru türde saklı yordamın, bilgilere dayanan bir numaralandırıcı almak için desen.  
+> Saklı yordamın bilgisine göre <xref:System.Data.Linq.IMultipleResults.GetResult%2A> doğru türde bir Numaralandırıcı elde etmek için bu kalıbı kullanmanız gerekir.  
   
  [!code-csharp[DLinqSprox#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#5)]
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  

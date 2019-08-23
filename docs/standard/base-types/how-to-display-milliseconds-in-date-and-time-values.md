@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590600"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963371"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Nasıl yapılır: Tarih ve Saat Değerlerinde Milisaniyeleri Görüntüleme
 <xref:System.DateTime.ToString?displayProperty=nameWithType> gibi varsayılan tarih ve saat biçimlendirme yöntemleri, bir zaman değerinin saatlerini, dakikalarını ve saniyelerini içerir ancak milisaniye bileşenini içermez. Bu konu, biçimlendirilen tarih ve saat dizelerine bir tarihin ve saatin milisaniye bileşeninin nasıl eklendiğini gösterir.  
@@ -49,7 +49,7 @@ ms.locfileid: "65590600"
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  Bir saniyenin on binde biri veya yüz binde biri gibi çok küçük kesirli birimlerini görüntülemek mümkündür. Ancak, bu değerler anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 ve üzeri sürümlerde ve [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] işletim sistemlerinde saatin çözünürlüğü yaklaşık olarak 10-15 milisaniyedir.  
+> Bir saniyenin on binde biri veya yüz binde biri gibi çok küçük kesirli birimlerini görüntülemek mümkündür. Ancak, bu değerler anlamlı olmayabilir. Tarih ve saat değerlerinin duyarlığı, sistem saatinin çözünürlüğüne bağlıdır. Windows NT 3.5 ve üzeri sürümlerde ve [!INCLUDE[windowsver](../../../includes/windowsver-md.md)] işletim sistemlerinde saatin çözünürlüğü yaklaşık olarak 10-15 milisaniyedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

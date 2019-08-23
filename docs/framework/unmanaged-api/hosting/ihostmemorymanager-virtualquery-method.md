@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 684d5e41e1d7cee2775aa0988d33a974315eac4e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 16d146766786f129d6da38bde1126ce8afe5e70f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772741"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963691"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery Yöntemi
-Karşılık gelen Win32 işlevini için mantıksal bir sarmalayıcı olarak görev yapar. Win32 uygulaması `VirtualQuery` sayfaları çağırma işleminin sanal adres alanı içinde bir dizi hakkındaki bilgileri alır.  
+Karşılık gelen Win32 işlevi için bir mantıksal sarmalayıcı görevi görür. Win32 uygulamasının `VirtualQuery` , çağırma işleminin sanal adres alanındaki bir sayfa aralığı hakkında bilgi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,42 +40,42 @@ HRESULT VirtualQuery (
   
 ## <a name="parameters"></a>Parametreler  
  `lpAddress`  
- [in] Sorgulanacak sanal bellek adresi için bir işaretçi.  
+ 'ndaki Sorgulanacak sanal bellekteki adrese yönelik bir işaretçi.  
   
  `lpBuffer`  
- [out] Belirtilen bellek bölgesini hakkında bilgi içeren bir yapıya bir işaretçi.  
+ dışı Belirtilen bellek bölgesi hakkında bilgi içeren bir yapıya yönelik işaretçi.  
   
  `dwLength`  
- [in] Arabelleğin bayt cinsinden boyutu, `lpBuffer` işaret eder.  
+ 'ndaki ' I işaret eden `lpBuffer` arabelleğin bayt cinsinden boyutu.  
   
  `pResult`  
- [out] Bilgi arabellek tarafından döndürülen bayt sayısı için bir işaretçi.  
+ dışı Bilgi arabelleğinin döndürdüğü bayt sayısına yönelik bir işaretçi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
-|S_OK|`VirtualQuery` başarıyla döndürüldü.|  
-|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) işlem içine yüklenmemiş olan veya CLR içinde yönetilen kod çalıştıramaz veya çağrı başarılı şekilde işleme bir durumda değil.|  
-|HOST_E_TIMEOUT|Arama zaman aşımına uğradı.|  
-|HOST_E_NOT_OWNER|Arayan bir kilide sahip değil.|  
-|HOST_E_ABANDONED|Bir olay engellenen bir iş parçacığı iptal edildi veya fiber üzerinde bekleme süresi.|  
-|E_FAIL|Bilinmeyen geri dönülemez bir hata oluştu. Bir yöntem E_FAIL döndüğünde, CLR artık işlem içinde kullanılamaz. Yöntemleri barındırma yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
+|S_OK|`VirtualQuery`başarıyla döndürüldü.|  
+|HOST_E_CLRNOTAVAILABLE|Ortak dil çalışma zamanı (CLR) bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramayacağı veya çağrıyı başarıyla işleyemediği bir durumda.|  
+|HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
+|HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
+|HOST_E_ABANDONED|Engellenen bir iş parçacığı veya fiber üzerinde beklerken bir olay iptal edildi.|  
+|E_FAIL|Bilinmeyen bir çok zararlı hata oluştu. Bir yöntem E_FAıL döndürdüğünde, CLR artık işlem içinde kullanılamaz. Barındırma yöntemlerine yapılan sonraki çağrılar HOST_E_CLRNOTAVAILABLE döndürür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `VirtualQuery` sayfalar çağırma işleminin sanal adres alanı aralığı hakkında bilgi sağlar. Bu uygulama ayarlar `pResult` bayt sayısı'için parametre bilgileri arabellekte ve HRESULT değerini döndürür. Win32'de `VirtualQuery` işlev, dönüş değeri, arabellek boyutu. Daha fazla bilgi için Windows Platform belgelerine bakın.  
+ `VirtualQuery`çağıran işlemin sanal adres alanındaki bir sayfa aralığı hakkında bilgi sağlar. Bu uygulama, `pResult` parametrenin değerini bilgi arabelleğinde döndürülen bayt sayısına ayarlar ve bir HRESULT değeri döndürür. Win32 `VirtualQuery` işlevinde, dönüş değeri arabellek boyutudur. Daha fazla bilgi için bkz. Windows platformu belgeleri.  
   
 > [!IMPORTANT]
->  İşletim sistemi uygulaması `VirtualQuery` kilitlenme tabi değildir ve rastgele iş parçacıkları askıya kullanıcı kodunda tamamlanana kadar çalıştırabilirsiniz. Bu yöntem barındırılan bir sürümünü uygularken harika dikkatli kullanın.  
+> İşletim sisteminin uygulamasının uygulanması `VirtualQuery` kilitlenme gerektirmez ve Kullanıcı kodunda askıya alınmış rastgele iş parçacıkları ile tamamlanmayı çalıştırabilir. Bu yöntemin barındırılan bir sürümünü uygularken harika bir uyarı kullanın.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

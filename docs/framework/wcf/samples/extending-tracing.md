@@ -2,35 +2,35 @@
 title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: c56f886857e8d391a243e3af4a13353f14116247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cec7ddcdd75bf7601524c107597d0feb4af3103
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961436"
 ---
 # <a name="extending-tracing"></a>İzlemeyi Genişletme
-Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yazarak Windows Communication Foundation (WCF) izleme özelliğini genişletme gösterir. Bu izleme etkinliklerin oluşturup izlemeleri çalışmanın mantıksal birimler halinde gruplandırmak kullanıcı sağlar. Aktarımları (içinde aynı uç noktası) ile etkinlikleri ve yayma (uç noktalar genelinde) ilişkilendirmek mümkündür. Bu örnekte, hem istemci hem de hizmet için izlemeyi etkinleştirilir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve ileti günlüğe kaydetme](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
+Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri yazarak Windows Communication Foundation (WCF) izleme özelliğinin nasıl genişletileceğini gösterir. Bu, kullanıcının mantıksal iş birimlerine izleme etkinlikleri ve grup izlemeleri oluşturmalarına olanak sağlar. Ayrıca, etkinlikleri aktarımlar (aynı uç nokta içinde) ve yayma (uç noktalar arasında) ile ilişkilendirmek mümkündür. Bu örnekte, izleme hem istemci hem de hizmet için etkinleştirilmiştir. İstemci ve hizmet yapılandırma dosyalarında izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [izleme ve mesaj günlüğü](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
- Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergeleri Bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
-## <a name="tracing-and-activity-propagation"></a>İzleme ve Etkinlik yayma  
- Kullanıcı kendi iş mantıksal birimler Grup izlemeleri için izleme etkinliklerine oluşturma, etkinlikleri aktarımları ve yayma ile ilişkilendirin ve WCF izleme (örneğin, maliyet disk alanı performans maliyetini azaltmak kullanıcı tanımlı Etkinlik izleme sağlar bir günlük dosyası).  
+## <a name="tracing-and-activity-propagation"></a>İzleme ve etkinlik yayma  
+ Kullanıcı tanımlı etkinlik izleme, kullanıcının izlemeleri mantıksal iş birimlerine göre gruplamak, aktarımlar ve yayma aracılığıyla etkinlikleri ilişkilendirmek ve WCF izlemenin performans maliyetini azaltmak (örneğin, disk alanı maliyeti) için kendi izleme etkinliklerini oluşturmalarına olanak tanır. bir günlük dosyası).  
   
-### <a name="adding-custom-sources"></a>Özel kaynaklar ekleme  
- Kullanıcı tanımlı izlemeler, hizmet ve istemci kodu eklenebilir. Kaydedilir ve görüntülenen bu özel izlemeleri için izleme kaynakları istemci veya hizmet yapılandırma dosyalarına izin ekleme [hizmet izleme Görüntüleyicisi aracı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Aşağıdaki kod, adlı bir kullanıcı tanımlı izleme kaynağına ekleme işlemi açıklanır `ServerCalculatorTraceSource` yapılandırma dosyası.  
+### <a name="adding-custom-sources"></a>Özel kaynak ekleme  
+ Kullanıcı tanımlı izlemeler, hem istemci hem de hizmet koduna eklenebilir. İstemci veya hizmet yapılandırma dosyalarına izleme kaynakları eklemek, bu özel izlemelerin [hizmet Izleme Görüntüleyicisi aracında (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)kaydedilip görüntülenmesine izin verir. Aşağıdaki kod, yapılandırma dosyasına adlı `ServerCalculatorTraceSource` Kullanıcı tanımlı izleme kaynağının nasıl ekleneceğini gösterir.  
   
 ```xml  
 <system.diagnostics>  
@@ -68,10 +68,10 @@ Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yaza
 ```  
   
 ### <a name="correlating-activities"></a>Etkinlikleri ilişkilendirme  
- Doğrudan uç arasında etkinliklerini ilişkilendirmek için `propagateActivity` özniteliği ayarlanmalıdır `true` içinde `System.ServiceModel` izleme kaynağı. Ayrıca, WCF etkinliklerini olmadan izlemeleri yaymak için etkinlik ServiceModel izleme kapatılmalıdır. Bu aşağıdaki kod örneğinde görülebilir.  
+ Etkinlikleri doğrudan uç noktalar arasında ilişkilendirmek için, `propagateActivity` özniteliği `System.ServiceModel` izleme kaynağında olarak `true` ayarlanmalıdır. Ayrıca, WCF etkinliklerinde ilerlemeden izlemeleri yaymak için, ServiceModel etkinliği Izlemenin kapalı olması gerekir. Bu, aşağıdaki kod örneğinde görülebilir.  
   
 > [!NOTE]
->  ServiceModel etkinliği izleme devre dışı kapatma değil çağrılarınızla izleme düzeyini sahip aynı `switchValue` Kapalı'özelliğini ayarlayın.  
+> ServiceModel etkinlik izlemenin kapatılması, `switchValue` özelliği tarafından belirtilen izleme düzeyiyle aynı değildir ve kapalı olarak ayarlanır.  
   
 ```xml  
 <system.diagnostics>  
@@ -85,17 +85,17 @@ Bu örnek, kullanıcı tanımlı etkinlik izlemeleri istemci ve hizmet kodu yaza
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>Lessening performans maliyeti  
- Ayarı `ActivityTracing` de kapalı olarak `System.ServiceModel` izleme kaynağı dahil ServiceModel Etkinlik izleme olmadan yalnızca kullanıcı tarafından tanımlanan etkinlik izlemeleri içeren bir izleme dosyası oluşturur. Bu, çok daha küçük boyutu bir günlük dosyasında sonuçlanır. Ancak, izlemeleri işleme WCF ilişkilendirmek için bir fırsat kaybolur.  
+### <a name="lessening-performance-cost"></a>Performans maliyetini azallama  
+ `System.ServiceModel` İzleme `ActivityTracing` kaynağında kapalı ayarı, yalnızca Kullanıcı tanımlı etkinlik izlemelerini içeren bir izleme dosyası oluşturur ve bu da hiçbir ServiceModel etkinlik izlemeden dahil değildir. Bu, çok daha küçük boyutta bir günlük dosyasına neden olur. Ancak, WCF işleme izlemelerinin ilişkilendirilmesi için fırsat kaybolur.  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+##### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

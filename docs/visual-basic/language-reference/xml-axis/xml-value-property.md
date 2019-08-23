@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 1c7aa1cc32bc1c5ef637f7a606db7e695f1dfaee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9edf95c7cedced55ab2441baf51b7c2052e4654c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942989"
 ---
 # <a name="xml-value-property-visual-basic"></a>XML Değeri Özelliği (Visual Basic)
-Koleksiyonunu ilk öğenin değerini erişim sağlayan <xref:System.Xml.Linq.XElement> nesneleri.  
+Bir <xref:System.Xml.Linq.XElement> nesne koleksiyonunun ilk öğesinin değerine erişim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,39 +29,39 @@ object.Value
   
 |Terim|Tanım|  
 |---|---|  
-|`object`|Gerekli. Koleksiyonu <xref:System.Xml.Linq.XElement> nesneleri.|  
+|`object`|Gerekli. <xref:System.Xml.Linq.XElement> Nesne koleksiyonu.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- A `String` koleksiyonun ilk öğenin değerini içeren veya `Nothing` koleksiyonu boş ise.  
+ Koleksiyonun `String` ilk öğesinin değerini içeren bir veya `Nothing` koleksiyon boşsa.  
   
 ## <a name="remarks"></a>Açıklamalar  
- <xref:System.Xml.Linq.XElement.Value%2A> Özelliği bir koleksiyondaki ilk öğenin değere erişmek kolaylaştırır <xref:System.Xml.Linq.XElement> nesneleri. Bu özellik, ilk koleksiyon en az bir nesne içerip içermediğini denetler. Bu özellik koleksiyonu boş ise döndürür `Nothing`. Aksi takdirde, bu özellik değerini döndürür <xref:System.Xml.Linq.XElement.Value%2A> koleksiyondaki ilk öğenin özellik.  
+ Özelliği <xref:System.Xml.Linq.XElement.Value%2A> , bir <xref:System.Xml.Linq.XElement> nesne koleksiyonundaki ilk öğenin değerine erişmeyi kolaylaştırır. Bu özellik önce koleksiyonun en az bir nesne içerip içermediğini denetler. Koleksiyon boşsa, bu özellik döndürür `Nothing`. Aksi takdirde, bu özellik koleksiyondaki ilk öğenin <xref:System.Xml.Linq.XElement.Value%2A> özelliğinin değerini döndürür.  
   
 > [!NOTE]
->  Kullanarak bir XML özniteliği değeri eriştiğinizde '\@' tanımlayıcısı, öznitelik değeri olarak döndürülür bir `String` ve açıkça belirtmeniz gerekmez <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği.  
+> Bir xml özniteliğinin değerine '\@' tanımlayıcısını kullanarak eriştiğinizde, öznitelik değeri bir `String` olarak döndürülür ve <xref:System.Xml.Linq.XAttribute.Value%2A> özelliği açıkça belirtmeniz gerekmez.  
   
- Bir koleksiyondaki diğer öğelere erişmek için XML uzantı dizin oluşturucu özelliği kullanabilirsiniz. Daha fazla bilgi için [Extension Indexer özelliği](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Bir koleksiyondaki diğer öğelere erişmek için XML uzantısı Indexer özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [uzantı Dizin Oluşturucu özelliği](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
 ## <a name="inheritance"></a>Devralma  
- Çoğu kullanıcı uygulamak zorunda <xref:System.Collections.Generic.IEnumerable%601>ve bu nedenle bu bölüm yoksayabilirsiniz.  
+ Çoğu kullanıcının uygulaması <xref:System.Collections.Generic.IEnumerable%601>ve bu bölümü yoksayması gerekmez.  
   
- <xref:System.Xml.Linq.XElement.Value%2A> Özelliği uygulayan türler için bir uzantı özelliği `IEnumerable(Of XElement)`. Uzantı yöntemleri bağlama gibi bağlamadır bu uzantı özelliğinin: Bu özellik bir tür arabirimlerinden birini uygular ve "Value" adına sahip bir özelliğini tanımlar, uzantı özelliği önceliğe sahiptir. Diğer bir deyişle, bu <xref:System.Xml.Linq.XElement.Value%2A> özelliği, yeni bir özelliği uygulayan bir sınıf tanımlayarak kılınabilir `IEnumerable(Of XElement)`.  
+ Özelliği, uygulayan `IEnumerable(Of XElement)`türler için bir genişletme özelliğidir. <xref:System.Xml.Linq.XElement.Value%2A> Bu uzantı özelliğinin bağlaması uzantı yöntemlerinin bağlaması gibidir: bir tür arabirimlerden birini uygular ve "Value" adlı bir özellik tanımlıyorsa, bu özellik uzantı özelliğine göre önceliğe sahiptir. Diğer bir deyişle, bu <xref:System.Xml.Linq.XElement.Value%2A> özellik, uygulayan `IEnumerable(Of XElement)`bir sınıfta yeni bir özellik tanımlayarak geçersiz kılınabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Xml.Linq.XElement.Value%2A> koleksiyonunu ilk düğüm erişmek için özelliği <xref:System.Xml.Linq.XElement> nesneleri. Örnek child axis özelliği adlı tüm alt düğümleri koleksiyonu almak için kullanır. `phone` bulunan `contact` nesne.  
+ Aşağıdaki örnek, bir <xref:System.Xml.Linq.XElement.Value%2A> <xref:System.Xml.Linq.XElement> nesne koleksiyonundaki ilk düğüme erişmek için özelliğinin nasıl kullanılacağını gösterir. Örnek, `phone` `contact` nesnesinde olan adlı tüm alt düğümlerin koleksiyonunu almak için alt eksen özelliğini kullanır.  
   
  [!code-vb[VbXMLSamples#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#15)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek koleksiyonundan bir XML özniteliği değeri almak nasıl gösterir <xref:System.Xml.Linq.XAttribute> nesneleri. Örnek attribute axis özelliği değerini görüntülemek için kullanır. `type` özniteliği için tüm `phone` öğeleri.  
+ Aşağıdaki örnek bir <xref:System.Xml.Linq.XAttribute> nesne koleksiyonundan bir XML özniteliği değerinin nasıl alınacağını gösterir. Örnek, tüm `type` `phone` öğelerin öznitelik değerini göstermek için öznitelik ekseni özelliğini kullanır.  
   
  [!code-vb[VbXMLSamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#16)]  
   
- Bu kod, aşağıdaki metni görüntüler:  
+ Bu kod aşağıdaki metni görüntüler:  
   
  `home`  
   
@@ -73,7 +73,7 @@ object.Value
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [XML Eksen Özellikleri](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML Değişmez Değerleri](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic'de XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Visual Basic XML oluşturma](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Genişletme Yöntemleri](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 - [Extension Indexer Özelliği](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md)
 - [XML Alt Axis Özelliği](../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)

@@ -8,36 +8,36 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad72c7a7fb11dfe605db4119dde831b47dd7c5a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910539"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962089"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Nasıl yapılır: TreeView İçinde TreeViewItem Bulma
-<xref:System.Windows.Controls.TreeView> Denetimi hiyerarşik verileri görüntülemek için kolay bir yol sağlar. Varsa, <xref:System.Windows.Controls.TreeView> bir veri kaynağına bağlı <xref:System.Windows.Controls.TreeView.SelectedItem%2A> özelliği, seçilen veri nesnesinin hızlıca almak kolay bir yol sağlar. Temel alınan veri nesnesi ile çalışmak genellikle en iyisidir ancak bazı durumlarda veri içeren programsal gerekebilir <xref:System.Windows.Controls.TreeViewItem>. Örneğin, program aracılığıyla genişletmeniz gerekebilir <xref:System.Windows.Controls.TreeViewItem>, veya farklı bir öğe seçin <xref:System.Windows.Controls.TreeView>.  
+<xref:System.Windows.Controls.TreeView> Denetim hiyerarşik verileri göstermek için uygun bir yol sağlar. Bir veri kaynağına bağlıysa <xref:System.Windows.Controls.TreeView.SelectedItem%2A> , özelliği seçili veri nesnesini hızlı bir şekilde almanızı sağlayan uygun bir yol sağlar. <xref:System.Windows.Controls.TreeView> Genellikle temel alınan veri nesnesiyle çalışmak en iyisidir, ancak bazen verilerin <xref:System.Windows.Controls.TreeViewItem>birlikte çalışmasını programlı bir şekilde değiştirmeniz gerekebilir. Örneğin, ' yi programlı bir şekilde genişletmeniz <xref:System.Windows.Controls.TreeViewItem>veya <xref:System.Windows.Controls.TreeView>içinde farklı bir öğe seçmeniz gerekebilir.  
   
- Bulunacak bir <xref:System.Windows.Controls.TreeViewItem> her düzeyde geçmesi gereken, belirli bir veri nesnesini içeren <xref:System.Windows.Controls.TreeView>. Öğeleri bir <xref:System.Windows.Controls.TreeView> performansını artırmak için ayrıca sanallaştırılabilir. Burada öğeleri sanallaştırılabilir durumda da, sizin de fark ettiğinizden gerekir bir <xref:System.Windows.Controls.TreeViewItem> veri nesnesi içerip içermediğini denetlemek için.  
+ Belirli bir veri <xref:System.Windows.Controls.TreeViewItem> nesnesini içeren bir bulmak için, her bir düzeyini <xref:System.Windows.Controls.TreeView>de çapraz geçiş yapmanız gerekir. Ayrıca, içindeki <xref:System.Windows.Controls.TreeView> öğeler de performansı artırmak için sanallaştırılabilir. Öğelerin sanallaştırılmış olması durumunda, veri nesnesini içerip içermediğini denetlemek için bir <xref:System.Windows.Controls.TreeViewItem> de sağlamalısınız.  
   
 ## <a name="example"></a>Örnek  
   
 ## <a name="description"></a>Açıklama  
- Aşağıdaki örnek aramalar bir <xref:System.Windows.Controls.TreeView> belirli bir nesneyi ve nesnenin projenin kapsayan döndürür <xref:System.Windows.Controls.TreeViewItem>. Örneğin, her sağlar <xref:System.Windows.Controls.TreeViewItem> böylece onun alt öğelerini aranabilir oluşturulur. Bu örnek de çalışır <xref:System.Windows.Controls.TreeView> sanallaştırılmış öğeleri kullanmaz.  
+ Aşağıdaki örnek, belirli bir <xref:System.Windows.Controls.TreeView> nesne için arar ve nesnenin kendisini <xref:System.Windows.Controls.TreeViewItem>döndürür. Örnek, alt öğelerinin aranabilmesi için her birinin <xref:System.Windows.Controls.TreeViewItem> oluşturulmasını sağlar. Bu örnek, <xref:System.Windows.Controls.TreeView> sanallaştırılmış öğeleri kullanmıyorsa de işe yarar.  
   
 > [!NOTE]
->  Aşağıdaki örnek için çalışır <xref:System.Windows.Controls.TreeView>, temel alınan veri modeli ve aramalar bağımsız olarak her <xref:System.Windows.Controls.TreeViewItem> nesne bulunana kadar. Daha iyi performansa sahip başka bir veri modeli belirtilen nesne için arama, verileri hiyerarşi içinde konumunu izlemenize ve ardından ilgili bulun tekniktir <xref:System.Windows.Controls.TreeViewItem> içinde <xref:System.Windows.Controls.TreeView>. Ancak, daha iyi performansa sahip teknik bilgi veri modelinin gerektirir ve herhangi için verilen genelleştirilemediği <xref:System.Windows.Controls.TreeView>.  
+> Aşağıdaki örnek, temel alınan veri <xref:System.Windows.Controls.TreeView>modelinden bağımsız olarak her türlü için geçerlidir ve nesne bulunana kadar <xref:System.Windows.Controls.TreeViewItem> her bir arama yapar. Daha iyi performansa sahip olan başka bir teknik ise, belirtilen nesnenin veri modelini aramak, veri hiyerarşisinde konumunu izlemek ve ' <xref:System.Windows.Controls.TreeViewItem> <xref:System.Windows.Controls.TreeView>de karşılık gelen ' ı bulmasıdır. Ancak, daha iyi performansa sahip olan teknik, veri modeli hakkında bilgi gerektirir ve herhangi bir <xref:System.Windows.Controls.TreeView>şekilde genelleştirilemez.  
   
 ## <a name="code"></a>Kod  
  [!code-csharp[TreeViewFindTVI#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[TreeViewFindTVI#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#1)]  
   
- Önceki kod üzerinde özel bir kullanır <xref:System.Windows.Controls.VirtualizingStackPanel> adlı bir yöntem sunan `BringIntoView`. Aşağıdaki kod özel tanımlar <xref:System.Windows.Controls.VirtualizingStackPanel>.  
+ Önceki kod, adlı <xref:System.Windows.Controls.VirtualizingStackPanel> `BringIntoView`bir yöntemi kullanıma sunan bir özel kullanır. Aşağıdaki kod özel <xref:System.Windows.Controls.VirtualizingStackPanel>tanımlar.  
   
  [!code-csharp[TreeViewFindTVI#2](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml.cs#2)]
  [!code-vb[TreeViewFindTVI#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TreeViewFindTVI/VisualBasic/MainWindow.xaml.vb#2)]  
   
- Aşağıdaki XAML nasıl oluşturulacağını gösterir. bir <xref:System.Windows.Controls.TreeView> özel kullanan <xref:System.Windows.Controls.VirtualizingStackPanel>.  
+ Aşağıdaki XAML, özel <xref:System.Windows.Controls.TreeView> <xref:System.Windows.Controls.VirtualizingStackPanel>' i kullanan bir oluşturmayı gösterir.  
   
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   

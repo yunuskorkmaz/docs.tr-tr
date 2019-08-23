@@ -9,12 +9,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: e2755dc6db655a632685b45a7cfe600808eba2b6
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e0c8f52193639c067252878127ee95a0897b9582
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922438"
 ---
 # <a name="async-c-reference"></a>async (C# Başvurusu)
 
@@ -64,7 +64,7 @@ Kodu bir Windows Mağazası uygulaması olarak çalıştırmak için:
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  Görevler ve bir görevi beklerken yürütülen kod hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md). Benzer öğeleri kullanan tam bir WPF örneği için bkz [. İzlenecek yol: Async ve await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)kullanarak Web 'e erişme.  
+> Görevler ve bir görevi beklerken yürütülen kod hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md). Benzer öğeleri kullanan tam bir WPF örneği için bkz [. İzlenecek yol: Async ve await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)kullanarak Web 'e erişme.  
   
 ## <a name="return-types"></a>Dönüş Türleri  
 Zaman uyumsuz bir yöntem aşağıdaki dönüş türlerine sahip olabilir:

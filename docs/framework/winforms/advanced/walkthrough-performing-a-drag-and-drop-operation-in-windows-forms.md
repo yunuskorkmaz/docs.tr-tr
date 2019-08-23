@@ -8,29 +8,29 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cda3e87a4b0eb680d374eb0419a6b6b3157dc4a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957130"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>İzlenecek yol: Windows Forms'da Sürükle ve Bırak İşlemi Gerçekleştirme
-Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek için bir dizi olayı, özellikle işlemelidir <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, ve <xref:System.Windows.Forms.Control.DragDrop> olayları. Kullanılabilir bilgilerle olay bağımsız değişkenleri bu olayların çalışarak, sürükle ve bırak işlemleri kolayca kolaylaştırabilir.  
+Windows tabanlı uygulamalarda sürükle ve bırak işlemleri gerçekleştirmek için, bir dizi olayı, özellikle <xref:System.Windows.Forms.Control.DragEnter> <xref:System.Windows.Forms.Control.DragLeave>, ve <xref:System.Windows.Forms.Control.DragDrop> olaylarını işlemeniz gerekir. Bu olayların olay bağımsız değişkenlerinde bulunan bilgilerle çalışarak, sürükle ve bırak işlemlerini kolayca kolaylaştırabilirsiniz.  
   
-## <a name="dragging-data"></a>Veriler sürükleme  
- Tüm sürükle ve bırak işlemleri sürüklemeye ile başlayın. Sürükleme işlemi başladığında, toplanacak veri geliştirebilme işlevselliği uygulanan <xref:System.Windows.Forms.Control.DoDragDrop%2A> yöntemi.  
+## <a name="dragging-data"></a>Verileri sürükleme  
+ Tüm sürükle ve bırak işlemleri sürüklemeye başlar. Sürükleme başladığında verilerin toplanmasına olanak sağlayan işlevsellik, <xref:System.Windows.Forms.Control.DoDragDrop%2A> yöntemi içinde uygulanır.  
   
- Aşağıdaki örnekte, <xref:System.Windows.Forms.Control.MouseDown> olayını en sezgisel çünkü bu sürükleme işlemi başlatmak için kullanılır (çoğu sürükle ve bırak Eylemler fare düğmesini basılı ile başlar). Ancak, herhangi bir olay, bir Sürükle ve bırak yordam başlatmak için kullanılabilir unutmayın.  
+ Aşağıdaki örnekte, <xref:System.Windows.Forms.Control.MouseDown> en sezgisel olan (sürükleme ve bırakma eylemleri fare düğmesi basılı olarak başlar), sürükleme işlemini başlatmak için olay kullanılır. Ancak, bir sürükle ve bırak yordamını başlatmak için herhangi bir olayın kullanılabileceğini unutmayın.  
   
 > [!NOTE]
->  Belirli denetimler özel Sürükle özgü olaylar sahiptir. <xref:System.Windows.Forms.ListView> Ve <xref:System.Windows.Forms.TreeView> denetimleri, örneğin, sahip bir <xref:System.Windows.Forms.TreeView.ItemDrag> olay.  
+> Belirli denetimlerin özel sürüklemeye özgü olayları vardır. Ve denetimleri, örneğin, bir <xref:System.Windows.Forms.TreeView.ItemDrag> olayıdır. <xref:System.Windows.Forms.TreeView> <xref:System.Windows.Forms.ListView>  
   
-#### <a name="to-start-a-drag-operation"></a>Bir sürükleme işlemi başlatmak için  
+#### <a name="to-start-a-drag-operation"></a>Bir sürükleme işlemini başlatmak için  
   
-1. İçinde <xref:System.Windows.Forms.Control.MouseDown> yeri sürükleme başlayacak, kullanımını denetlemek için olay `DoDragDrop` sürüklenmesi için veri kümesi için yöntem ve sürükleme izin verilen etkin olacaktır. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DragEventArgs.Data%2A> ve <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
+1. Sürüklediğiniz denetimin başlayacağı `DoDragDrop` olayda,verilerisürüklenecektirveizinverilenefektsürüklemeyesahipolacakşekildeayarlamak<xref:System.Windows.Forms.Control.MouseDown> için yöntemini kullanın. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DragEventArgs.Data%2A> ve <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>.  
   
-     Aşağıdaki örnek, bir sürükleme işlemi başlatmak gösterilmektedir. Sürükleme başladığı denetimi bir <xref:System.Windows.Forms.Button> denetimi, sürüklenen veri olduğu temsil eden dize <xref:System.Windows.Forms.Control.Text%2A> özelliği <xref:System.Windows.Forms.Button> denetimi ve izin verilen efektleri kopyalama veya taşıma.  
+     Aşağıdaki örnek, bir sürükleme işleminin nasıl başlatılacağı gösterilmektedir. Sürükleme işleminin başladığı denetim bir <xref:System.Windows.Forms.Button> denetimdir, sürüklediğiniz veri <xref:System.Windows.Forms.Button> denetimin <xref:System.Windows.Forms.Control.Text%2A> özelliğini temsil eden dizedir ve izin verilen etkiler kopyalama veya taşıma olur.  
   
     ```vb  
     Private Sub Button1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown  
@@ -48,18 +48,18 @@ Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek iç
     ```  
   
     > [!NOTE]
-    >  Tüm veriler, bir parametre olarak kullanılabilir `DoDragDrop` yöntemi; yukarıdaki örnekte, <xref:System.Windows.Forms.Control.Text%2A> özelliği <xref:System.Windows.Forms.Button> denetim kullanıldı (yerine, kodlama sabit bir değer veya bir veri kümesinden veri alma) özelliği ilişkili için gelen sürüklenen konumu ( <xref:System.Windows.Forms.Button> denetim). Sürükle ve bırak işlemleri Windows tabanlı uygulamalarınıza eklemenizi olarak bunu aklınızda bulundurun.  
+    > Tüm veriler `DoDragDrop` yönteminde parametre olarak kullanılabilir; Yukarıdaki örnekte <xref:System.Windows.Forms.Control.Text%2A> , <xref:System.Windows.Forms.Button> denetimin özelliği kullanılmıştır (bir değer kodlanması veya bir veri kümesinden verileri almak yerine), özelliği sürüklenen konum ( <xref:System.Windows.Forms.Button> denetim). Windows tabanlı uygulamalarınıza sürükle ve bırak işlemleri eklediğinizde bunu göz önünde bulundurun.  
   
- Bir sürükleme işlemi etkin durumdayken işleyebilirsiniz <xref:System.Windows.Forms.Control.QueryContinueDrag> "izin isteyen" olayı, sürükle işlemini devam etmek için sistemin. Bu yöntem işlenirken, ayrıca, genişletme gibi sürükleme işlemi üzerinde bir etkisi olmayacak yöntemleri çağırmak uygun bir noktasına olduğu bir <xref:System.Windows.Forms.TreeNode> içinde bir <xref:System.Windows.Forms.TreeView> imleci üzerine geldiğinde denetim.  
+ Bir sürükleme işlemi etkin olsa da, sürükleme işlemine devam etmek için <xref:System.Windows.Forms.Control.QueryContinueDrag> sistemin "izin sorar" olayını işleyebilirsiniz. Bu yöntemi işlerken, imleç üzerine geldiğinde bir <xref:System.Windows.Forms.TreeNode> <xref:System.Windows.Forms.TreeView> denetimde genişletme gibi, sürükleme işleminde bir etkisi olan yöntemleri çağırdığınızda de uygun bir nokta vardır.  
   
-## <a name="dropping-data"></a>Veri bırakılıyor  
- Verileri bir konumdan bir Windows Form veya denetim üzerinde sürükleyerek başlamıştır sonra doğal olarak yere bırak isteyeceksiniz. İmleç, bir form veya denetim verilerini silmek için doğru şekilde yapılandırıldığı bir alanı geçtiğinde değişecektir. Bırakılan veri ayarlayarak kabul etmek için bir Windows Form veya denetim içinde herhangi bir alan yapılabilir <xref:System.Windows.Forms.Control.AllowDrop%2A> özelliği ve işleme <xref:System.Windows.Forms.Control.DragEnter> ve <xref:System.Windows.Forms.Control.DragDrop> olayları.  
+## <a name="dropping-data"></a>Verileri bırakma  
+ Bir Windows formundaki veya denetimindeki bir konumdan veri sürüklemeye başladıktan sonra doğal olarak bir yere bırakmak istersiniz. İmleç, veri bırakma için doğru şekilde yapılandırılmış bir formun veya denetimin bir alanını aştığında değişecektir. Bir Windows form veya denetim içindeki herhangi bir alan, <xref:System.Windows.Forms.Control.AllowDrop%2A> özelliği ayarlayarak ve <xref:System.Windows.Forms.Control.DragDrop> olayları <xref:System.Windows.Forms.Control.DragEnter> işleyerek bırakılan verileri kabul etmek için yapılabilir.  
   
-#### <a name="to-perform-a-drop"></a>Bir bırakma gerçekleştirmek için  
+#### <a name="to-perform-a-drop"></a>Bir bırakma işlemi gerçekleştirmek için  
   
-1. Ayarlama <xref:System.Windows.Forms.Control.AllowDrop%2A> özelliği true.  
+1. <xref:System.Windows.Forms.Control.AllowDrop%2A> Özelliği true olarak ayarlayın.  
   
-2. İçinde `DragEnter` burada açılan gerçekleşir, denetim için olay sürüklenen veri kabul edilebilir bir tür olduğundan emin olun (Bu durumda, <xref:System.Windows.Forms.Control.Text%2A>). Kodun ardından açılan bir değere oluştuğunda gerçekleşir etkisini ayarlar <xref:System.Windows.Forms.DragDropEffects> sabit listesi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
+2. Bırakma işleminin gerçekleşeceği denetim <xref:System.Windows.Forms.Control.Text%2A> olayında,sürüklenenverilerinkabuledilebilirbirtür(Budurumda)olduğundaneminolun.`DragEnter` Kod daha sonra, <xref:System.Windows.Forms.DragDropEffects> Numaralandırmadaki bir değere bırakma gerçekleştiğinde gerçekleşecek etkiyi ayarlar. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DragEventArgs.Effect%2A>.  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,11 +83,11 @@ Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek iç
     ```  
   
     > [!NOTE]
-    >  Kendi tanımlayabilirsiniz <xref:System.Windows.Forms.DataFormats> kendi nesnesi olarak belirterek <xref:System.Object> parametresinin <xref:System.Windows.Forms.DataObject.SetData%2A> yöntemi. Bunu yaparken belirtilen bir nesne seri hale getirilebilir olduğunu denetleyin. Daha fazla bilgi için bkz. <xref:System.Runtime.Serialization.ISerializable>.  
+    > Yöntemin<xref:System.Windows.Forms.DataObject.SetData%2A> <xref:System.Windows.Forms.DataFormats> parametresi<xref:System.Object> olarak kendi nesneniz belirterek kendi uygulamanızı tanımlayabilirsiniz. Bunu yaparken, belirtilen nesnenin seri hale getirilebilir olduğundan emin olun. Daha fazla bilgi için bkz. <xref:System.Runtime.Serialization.ISerializable>.  
   
-3. İçinde <xref:System.Windows.Forms.Control.DragDrop> burada açılan gerçekleşir, kullanımını denetlemek için olay <xref:System.Windows.Forms.DataObject.GetData%2A> sürüklenen verileri almak için yöntemi. Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
+3. Bırakma işleminin gerçekleşeceği denetim <xref:System.Windows.Forms.DataObject.GetData%2A> olayında,sürüklediğinizverilerialmakiçinyönteminikullanın.<xref:System.Windows.Forms.Control.DragDrop> Daha fazla bilgi için bkz. <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>.  
   
-     Aşağıdaki örnekte bir <xref:System.Windows.Forms.TextBox> (açılan gerçekleşeceği için) sürüklenen denetimi bir denetimdir. Kod kümeleri <xref:System.Windows.Forms.Control.Text%2A> özelliği <xref:System.Windows.Forms.TextBox> sürüklenen verilere eşit denetim.  
+     Aşağıdaki örnekte, bir <xref:System.Windows.Forms.TextBox> denetim Sürüklenmekte olan denetimdir (bırakma gerçekleşir). Kod, <xref:System.Windows.Forms.Control.Text%2A> <xref:System.Windows.Forms.TextBox> denetimin özelliğini sürüklenen verilere eşit olarak ayarlar.  
   
     ```vb  
     Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop  
@@ -104,7 +104,7 @@ Windows tabanlı uygulamalar sürükle-bırak işlemlerini gerçekleştirmek iç
     ```  
   
     > [!NOTE]
-    >  Ayrıca, çalışabilirsiniz <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> özelliğine bağlı olarak tuşları basılı sürükle ve bırak işlemi sırasında böylece bazı efektler ortaya (örneğin, CTRL tuşuna basıldığında sürüklenen veri kopyalamak için standart olmadığı).  
+    > Ayrıca, <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> özelliği ile birlikte çalışarak, sürükle ve bırak işlemi sırasında tuşlara bağlı olarak belirli etkileri oluşur (örneğin, CTRL tuşuna basıldığında sürüklenen verileri kopyalamak standart olur).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

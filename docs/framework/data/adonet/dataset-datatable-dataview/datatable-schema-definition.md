@@ -2,40 +2,40 @@
 title: DataTable Şema Tanımı
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20fee4316ad95c0f8716a0f374410009ea129222
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034352"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952354"
 ---
 # <a name="datatable-schema-definition"></a>DataTable Şema Tanımı
-Şema veya bir tablonun yapısını, sütunları ve kısıtlamaları tarafından temsil edilir. Şemasını tanımlayan bir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataColumn> nesneleri olarak <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint> nesneleri. Bir tablodaki sütunları bir veri kaynağındaki sütun eşleme, ifadeleri hesaplanan değerleri içeren, otomatik olarak değerlerini artırın veya birincil anahtar değerlerini içerir.  
+Bir tablonun şeması veya yapısı, sütunlar ve kısıtlamalar ile temsil edilir. Bir <xref:System.Data.DataTable> using <xref:System.Data.DataColumn> nesnelerinin ve<xref:System.Data.ForeignKeyConstraint> ve nesnelerinin<xref:System.Data.UniqueConstraint> şemasını tanımlarsınız. Bir tablodaki sütunlar bir veri kaynağındaki sütunlarla eşlenir, deyimlerden hesaplanan değerler içerebilir, değerlerini otomatik olarak artırır veya birincil anahtar değerleri içerebilir.  
   
- Sütunlar, ilişkiler ve kısıtlamalar bir tablodaki adına göre başvuruları büyük/küçük harfe duyarlıdır. Bu nedenle iki veya daha fazla sütun, ilişkileri veya kısıtlamaları, aynı ada sahip, ancak bu durumda farklı bir tabloda bulunabilir. Örneğin, sahip **Col1** ve **col1**. İçinde çalışması gibi bir başvuru adına göre sütunlarından biri için sütun adı harf tam olarak eşleşmelidir; Aksi takdirde, bir özel durum oluşturulur. Örneğin, varsa tablonun **myTable** sütunları içeren **Col1** ve **col1**, başvuru **Col1** ada göre  **myTable.Columns["Col1"]**, ve **col1** olarak **myTable.Columns["col1"]**. Sütun ya da başvuru girişimi **myTable.Columns["COL1"]** bir özel durum oluşturur.  
+ Bir tablodaki sütunlara, ilişkilerine ve kısıtlamalara adına göre başvurular büyük/küçük harfe duyarlıdır. Bu nedenle, iki veya daha fazla sütun, ilişki veya kısıtlama, aynı ada sahip ancak büyük/küçük harflere sahip bir tabloda bulunabilir. Örneğin, **Sütun1** ve **Sütun1**olabilir. Böyle durumlarda, bir sütundan birine başvuru, sütun adı ile tam olarak aynı olmalıdır; Aksi takdirde, bir özel durum oluşturulur. Örneğin, **tablom** tabloadı **Sütun1** ve **Sütun1**sütunları Içeriyorsa, sütünce adını MyTable olarak adlandırın **. sütunlar ["Sütun1"]** ve **sütas** **MyTable. Columns ["Sütun1"]** . Sütunlardan birine MyTable olarak başvurulmaya çalışılıyor **. ["Sütun1"] sütunları** bir özel durum oluşturur.  
   
- Yalnızca bir sütun, ilişki veya belirli bir ada sahip kısıtlaması varsa, büyük küçük harf duyarlılığı kuralı uygulanmaz. Diğer bir deyişle, diğer hiçbir sütun, ilişki veya tabloda kısıtlama nesnesi, belirli bir sütun, ilişki veya kısıtlama nesnesi adıyla eşleşen nesne adına göre herhangi bir durumu kullanarak başvurabilir ve hiçbir özel durum. Örneğin, tablonun yalnızca varsa **Col1**, kullanarak başvurabilirsiniz **benim. Sütunlar ["COL1"]**.  
+ Yalnızca bir sütun, ilişki veya belirli bir ada sahip kısıtlama varsa, büyük/küçük harf duyarlılığı kuralı uygulanmaz. Diğer bir deyişle, tablodaki başka bir sütun, ilişki veya kısıtlama nesnesi söz konusu sütun, ilişki veya kısıtlama nesnesinin adıyla eşleşiyorsa, herhangi bir durumu kullanarak nesneye ad ile başvurabilirsiniz ve hiçbir özel durum oluşturulmaz. Örneğin, tabloda yalnızca **Sütun1**varsa, My kullanarak buna başvurabilirsiniz **. Sütunlar ["SÜTUN1"]** .  
   
 > [!NOTE]
->  <xref:System.Data.DataTable.CaseSensitive%2A> Özelliği **DataTable** bu davranışı etkilemez. **CaseSensitive** özelliği, verileri bir tablo ve kısıtlamalar ve benzeri zorlamayı sıralama, arama, filtreleme, etkiler, ancak başvurularını sütunlar, ilişkiler ve kısıtlamalar uygulanır.  
+> DataTable özelliği bu davranışı etkilemez. <xref:System.Data.DataTable.CaseSensitive%2A> **CaseSensitive** özelliği, bir tablodaki veriler için geçerlidir ve sıralama, arama, filtreleme, kısıtlamaları zorlama vb., ancak sütunlara, ilişkilerine ve kısıtlamalara başvurmaları etkiler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DataTable’a Sütun Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
- Kullanarak bir tablo sütunları tanımlamayı açıklar **DataColumn** nesneleri.  
+ **DataColumn** nesnelerini kullanarak bir tablonun sütunlarının nasıl tanımlanacağını açıklar.  
   
  [İfade Sütunları Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
- Açıklayan nasıl **ifade** özelliği sütunun değerlerini satırdaki diğer sütunlardan değerlere göre hesaplamak için kullanılabilir.  
+ Bir sütunun **Expression** özelliğinin, satırdaki diğer sütunlardan alınan değerlere göre değerleri hesaplamak için nasıl kullanılabileceğini açıklar.  
   
  [AutoIncrement Sütunları Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md)  
- Satır başına bir benzersiz sütun değeri sağlamak için sayısal değerler otomatik olarak artırmak için bir sütun nasıl ayarlanabilir açıklar.  
+ Satır başına benzersiz bir sütun değeri sağlamak için bir sütunun sayısal değerleri otomatik olarak arttırmasını nasıl ayarlayabileceğinizi açıklar.  
   
  [Birincil Anahtarlar Tanımlama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)  
- En az bir tablonun birincil anahtarı belirtmek açıklar **DataColumn** nesneleri.  
+ Bir veya daha fazla **DataColumn** nesnesinden bir tablonun birincil anahtarının nasıl belirtileceğini açıklar.  
   
  [DataTable Kısıtlamaları](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)  
- Bir tablodaki sütunları benzersiz kısıtlamaları ve yabancı anahtar tanımlamayı açıklar.  
+ Bir tablodaki sütunlar için yabancı anahtar ve benzersiz kısıtlamaların nasıl tanımlanacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

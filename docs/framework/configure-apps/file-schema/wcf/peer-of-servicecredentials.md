@@ -2,22 +2,22 @@
 title: <peer> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
-ms.openlocfilehash: d726ab460141b1e373a1cabf770b8958f50319eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50415cb9b35d2a2053efa3313a415de518b7e36e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783402"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933781"
 ---
-# <a name="peer-of-servicecredentials"></a>\<Eş >, \<issuedTokenAuthentication >
-Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.  
+# <a name="peer-of-servicecredentials"></a>\<\<ServiceCredentials > > eşi
+Eş düğüm için geçerli kimlik bilgilerini belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
 \<serviceBehaviors>  
-\<davranışı >  
+\<davranış >  
 \<serviceCredentials>  
-\<Eş >  
+\<eş >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -30,7 +30,7 @@ Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
- Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
+ Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
  Yok.  
@@ -39,15 +39,15 @@ Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<Sertifika >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|İmzalama ve eşler arası Hizmetleri iletileri şifrelemek için kullanılacak bir X.509 sertifikasını belirtir. biçimindeki telefon numarasıdır.|  
-|[\<messageSenderAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|İleti gönderenler için kimlik doğrulama seçeneklerini belirtir.|  
-|[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Eş hizmetler için kimlik doğrulama seçeneklerini belirtir.|  
+|[\<Sertifika >](certificate-of-peer.md)|Eşler arası hizmetler için iletileri imzalama ve şifreleme için kullanılacak bir X. 509.952 sertifikası belirtir. biçimindeki telefon numarasıdır.|  
+|[\<Iletienderauthentication >](messagesenderauthentication.md)|İleti gönderenlerin kimlik doğrulama seçeneklerini belirtir.|  
+|[\<peerAuthentication >](peerauthentication.md)|Eş Hizmetleri için kimlik doğrulama seçeneklerini belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|Hizmet ve istemci kimlik doğrulama ile ilgili ayarlarda kullanılan kimlik bilgisini belirtir.|  
+|[\<serviceCredentials >](servicecredentials.md)|Hizmetin kimliğini doğrulamak için kullanılacak kimlik bilgisini ve istemci kimlik bilgileri doğrulaması ile ilgili ayarları belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -55,8 +55,8 @@ Bir eşdüzey düğüm için geçerli kimlik bilgilerini belirtir.
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.Peer%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
-- [Eşler Arası Ağ](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Eş kanal ileti kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Eş kanal özel kimlik doğrulama](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Eşler Arası Ağ](../../../wcf/feature-details/peer-to-peer-networking.md)
+- [Eş kanal Iletisi kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Eş kanal özel kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../wcf/feature-details/securing-peer-channel-applications.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

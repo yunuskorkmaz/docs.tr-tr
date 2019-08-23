@@ -3,20 +3,20 @@ title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: 1567c669b5e682a7a771d7bedc95a8effa474e36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5747a4cfa93118dd41292904b168bbef02fec415
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944072"
 ---
-# <a name="tokenreplaycache"></a>\<tokenReplayCache>
-Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç yeniden yürütme önbelleğe kaydeder.  
+# <a name="tokenreplaycache"></a>\<tokenReplayCache >
+Belirteç yeniden yürütme önbelleğini bir hizmet veya güvenlik belirteci işleyici koleksiyonuyla kaydeder.  
   
  \<system.identityModel>  
-\<identityConfiguration >  
-\<önbelleğe alan >  
-\<tokenReplayCache>  
+\<IdentityConfiguration >  
+\<önbellekler >  
+\<tokenReplayCache >  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,7 +38,7 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|türü|Türetilen bir tür <xref:System.IdentityModel.Tokens.TokenReplayCache> sınıfı. Özel bir belirtme hakkında daha fazla bilgi için `type`, [özel tür başvurularını] bakın.
+|türü|<xref:System.IdentityModel.Tokens.TokenReplayCache> Sınıfından türeten bir tür. Özel `type`belirtme hakkında daha fazla bilgi için bkz. [özel tür başvuruları].
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -47,13 +47,13 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<önbelleğe alan >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon tarafından kullanılan önbellekleri kaydeder.|  
+|[\<önbellekler >](caches.md)|Bir hizmet veya güvenlik belirteci işleyici koleksiyonu tarafından kullanılan önbellekleri kaydeder.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Belirteç yeniden yürütme önbelleğini yeniden yürütülmüş belirteçleri algılamak için kullanılır. Belirteç yeniden yürütme algılaması etkindir [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) öğesi, ayrıca belirteçleri maksimum sona erme süresini belirtir.  
+ Belirteç yeniden yürütme önbelleği, yeniden yürütülmüş belirteçleri algılamak için kullanılır. Belirteç yeniden yürütme algılaması, belirteçlerin en uzun süre sonu süresini de belirten [ \<TokenReplayDetection >](tokenreplaydetection.md) öğesi tarafından etkinleştirilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki XML yeniden yürütülmüş belirteçleri algılamak için özel bir önbellek yapılandırmasını gösterir.  
+ Aşağıdaki XML, yeniden yürütülmüş belirteçleri algılamak için özel bir önbelleğin yapılandırmasını gösterir.  
   
 ```xml  
 <caches>  
@@ -65,4 +65,4 @@ Bir hizmet veya bir güvenlik belirteci işleyicisi koleksiyon ile bir belirteç
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IdentityModel.Tokens.TokenReplayCache>
-- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+- [\<tokenReplayDetection >](tokenreplaydetection.md)

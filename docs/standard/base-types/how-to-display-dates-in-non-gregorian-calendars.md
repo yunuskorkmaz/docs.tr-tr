@@ -13,77 +13,77 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963350"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Nasıl yapılır: Miladi Olmayan Takvimlerde Tarihleri Görüntüleme
-<xref:System.DateTime> Ve <xref:System.DateTimeOffset> türleri Gregoryen takvim kendi varsayılan takvim olarak kullanın. Bu, tarih ve saat değerinin çağırma anlamına gelir `ToString` yöntemi, o tarih dize gösterimini görüntüler ve saat, tarih ve saat olsa bile Gregoryen takvimindeki başka bir takvimi kullanılarak oluşturuldu. Bu tarih ve saat değeri ile Fars takvimiyle oluşturmak için iki farklı şekilde kullanır, ancak yine de bu tarih ve saat değerleri Gregoryen takvimindeki görüntüler çağırdığında, aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%2A> yöntemi. Bu örnek, belirli bir takvimde tarihi görüntülemek için iki yaygın olarak kullanılan ama yanlış teknikleri yansıtır.  
+<xref:System.DateTime> Ve<xref:System.DateTimeOffset> türleri varsayılan takvim olarak Gregoryen takvimi kullanır. Bu, bir tarih ve saat değerinin `ToString` yönteminin, bu tarih ve saat başka bir takvim kullanılarak oluşturulmuş olsa bile, Gregoryen takvimdeki tarih ve saatin dize gösterimini gösterdiği anlamına gelir. Bu, Farsça takvimi ile bir tarih ve saat değeri oluşturmak için iki farklı yol kullanan aşağıdaki örnekte gösterilmiştir, ancak yine de bu tarih ve saat değerlerini, <xref:System.DateTime.ToString%2A> yöntemi çağırdığında Gregoryen takviminde görüntüler. Bu örnek, belirli bir takvimdeki tarihi görüntülemek için yaygın olarak kullanılan iki ancak yanlış tekniği yansıtır.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
  [!code-vb[Formatting.HowTo.Calendar#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#1)]  
   
- İki farklı teknikleri, belirli bir takvimde tarihi görüntülemek için kullanılabilir. İlk takvim belirli bir kültürün varsayılan takvimi olmasını gerektirir. İkinci herhangi bir takvim ile kullanılabilir.  
+ Belirli bir takvimdeki tarihi göstermek için iki farklı teknik kullanılabilir. İlki, takvimin belirli bir kültürün varsayılan takvimi olmasını gerektirir. İkincisi herhangi bir takvimle birlikte kullanılabilir.  
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Bir kültürün varsayılan takvim tarihini görüntülemek için  
   
-1. Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
+1. Kullanılacak takvimi temsil eden <xref:System.Globalization.Calendar> sınıftan türetilmiş bir takvim nesnesi örneği oluşturun.  
   
-2. Örneği bir <xref:System.Globalization.CultureInfo> tarihini görüntülemek için biçimlendirmesi kullanılacak kültürü temsil eden nesne.  
+2. Tarih görüntülemek <xref:System.Globalization.CultureInfo> için biçimlendirme kullanılacak kültürü temsil eden bir nesne oluşturun.  
   
-3. Çağrı <xref:System.Array.Exists%2A?displayProperty=nameWithType> Takvim nesnesi tarafından döndürülen dizinin bir üyesi olup olmadığını belirlemek için yöntemi <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> özelliği. Bu takvim için varsayılan takvim olarak verebilen gösterir <xref:System.Globalization.CultureInfo> nesne. Dizinin bir üyesi değilse, "Görüntü tarih içinde Any takvimi" bölümündeki yönergeleri izleyin.  
+3. Takvim nesnesinin, <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> özelliği tarafından döndürülen dizinin bir üyesi olup olmadığını anlamak için yönteminiçağırın.<xref:System.Array.Exists%2A?displayProperty=nameWithType> Bu, takvimin <xref:System.Globalization.CultureInfo> nesne için varsayılan takvim olarak işlev görebilir olduğunu gösterir. Dizinin bir üyesi değilse, "herhangi bir takvime tarihi görüntüleme" bölümündeki yönergeleri izleyin.  
   
-4. Takvim nesneye atamak <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> özelliği <xref:System.Globalization.DateTimeFormatInfo> tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği.  
+4. Takvim nesnesini <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> , <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Globalization.DateTimeFormatInfo> nesnenin özelliğine atayın.  
   
     > [!NOTE]
-    >  <xref:System.Globalization.CultureInfo> Sınıfı de sahip bir <xref:System.Globalization.CultureInfo.Calendar%2A> özelliği. Ancak, salt okunur ve sabit değildir; atanan yeni varsayılan takvimi yansıtan değiştirmez <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> özelliği.  
+    > Sınıfın Ayrıca bir <xref:System.Globalization.CultureInfo.Calendar%2A> özelliği de vardır. <xref:System.Globalization.CultureInfo> Ancak, salt okunurdur ve sabittir; <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> özelliğe atanmış olan yeni varsayılan takvimi yansıtacak şekilde değişmez.  
   
-5. Çağırın ya da <xref:System.DateTime.ToString%2A> veya <xref:System.DateTime.ToString%2A> yöntemi ve geçirin <xref:System.Globalization.CultureInfo> varsayılan takvimini, önceki adımda değiştirildiği nesne.  
+5. Ya da yöntemini çağırın ve önceki adımda varsayılan takvimi değiştirilmiş olan <xref:System.Globalization.CultureInfo> nesneyi geçirin. <xref:System.DateTime.ToString%2A> <xref:System.DateTime.ToString%2A>  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Herhangi bir takvimde tarihi görüntülemek için  
   
-1. Türetilen bir takvim nesnesinin örneğini oluşturma <xref:System.Globalization.Calendar> kullanılacak takvimi temsil eden sınıf.  
+1. Kullanılacak takvimi temsil eden <xref:System.Globalization.Calendar> sınıftan türetilmiş bir takvim nesnesi örneği oluşturun.  
   
-2. Belirlemek, tarih ve saat öğeleri tarih ve saat değerini dize gösterimini görünmelidir.  
+2. Tarih ve saat değerinin dize gösteriminde hangi tarih ve saat öğelerinin görüneceğini belirleme.  
   
-3. Takvim nesnenin görüntülemek istediğiniz her tarih ve saat öğesi için çağrı `Get`... yöntem. Aşağıdaki yöntemleri kullanılabilir:  
+3. Göstermek istediğiniz her bir tarih ve saat öğesi için, takvim nesnesinin `Get`... öğesini çağırın. yöntemidir. Aşağıdaki yöntemler mevcuttur:  
   
-    - <xref:System.Globalization.Calendar.GetYear%2A>, uygun takvimde yıl görüntülenecek.  
+    - <xref:System.Globalization.Calendar.GetYear%2A>, uygun takvimdeki yılı görüntüleme.  
   
-    - <xref:System.Globalization.Calendar.GetMonth%2A>, uygun Takvim ayı görüntülemek için.  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>, ayı uygun takvimde göstermek için.  
   
-    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, uygun takvimindeki ayın gününü sayısını görüntülemek için.  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>, uygun takvimdeki ayın gün sayısını görüntüler.  
   
-    - <xref:System.Globalization.Calendar.GetHour%2A>, uygun takvimde günün saati görüntülenecek.  
+    - <xref:System.Globalization.Calendar.GetHour%2A>, uygun takvimdeki günün saatini görüntüler.  
   
-    - <xref:System.Globalization.Calendar.GetMinute%2A>, uygun takvimde saatteki dakika görüntülenecek.  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>, dakikaları uygun takvimdeki saat cinsinden görüntüler.  
   
-    - <xref:System.Globalization.Calendar.GetSecond%2A>, uygun takvimde dakika içinde saniye görüntülenecek.  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>, saniyeyi uygun takvimdeki dakika cinsinden görüntüler.  
   
-    - <xref:System.Globalization.Calendar.GetMilliseconds%2A> , uygun takvimde ikinci milisaniye görüntülenecek.  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A>, milisaniye cinsinden uygun takvimdeki milisaniyeyi görüntüler.  
   
 ## <a name="example"></a>Örnek  
- Örneğin, iki farklı takvim kullanarak bir tarih görüntüler. Ar JO kültürün varsayılan takvim olarak Hicri takvimin tanımlama sonra tarihi görüntüler ve isteğe bağlı bir takvim olarak SK-IR kültür tarafından desteklenmeyen Fars takvimiyle kullanarak tarihi görüntüler.  
+ Örnek iki farklı takvimi kullanarak bir tarih görüntüler. Bu, AR-JO kültürü için varsayılan takvim olarak Hicri takvimini tanımladıktan sonra tarihi görüntüler ve SK-IR kültürüne göre isteğe bağlı bir takvim olarak desteklenmeyen Farsça takvimini kullanarak tarihi görüntüler.  
   
  [!code-csharp[Formatting.HowTo.Calendar#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#2)]
  [!code-vb[Formatting.HowTo.Calendar#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Calendar/vb/Calendar1.vb#2)]  
   
- Her <xref:System.Globalization.CultureInfo> nesnesi tarafından belirtilen bir veya daha fazla takvimler destekleyebilir <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> özelliği. Bunlardan biri kültürün varsayılan takvim olarak atanır ve salt okunur tarafından döndürülen <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> özelliği. Varsayılan olarak başka bir isteğe bağlı takvimleri belirlenebilir atayarak bir <xref:System.Globalization.Calendar> için bu takvimi temsil eden nesne <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği. Ancak, bazı takvimler, tarafından temsil edilen Fars takvimi gibi <xref:System.Globalization.PersianCalendar> sınıfı, herhangi bir kültür için isteğe bağlı takvimleri olarak etkinleştiremezsiniz.  
+ Her <xref:System.Globalization.CultureInfo> nesne, <xref:System.Globalization.CultureInfo.OptionalCalendars%2A> özelliği tarafından belirtilen bir veya daha fazla takvimi destekleyebilir. Bunlardan biri, kültürün varsayılan takvimi olarak atanır ve salt okunurdur <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> özelliği tarafından döndürülür. İsteğe bağlı takvimlerin bir diğeri, bu takvimi <xref:System.Globalization.Calendar> <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> temsil eden bir nesne, <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliği tarafından döndürülen özelliğe atanarak varsayılan olarak belirlenebilir. Ancak, <xref:System.Globalization.PersianCalendar> sınıf tarafından temsil edilen Farsça takvimi gibi bazı takvimler, herhangi bir kültür için isteğe bağlı takvimler olarak görev almaz.  
   
- Örnek bir yeniden kullanılabilir takvim yardımcı program sınıfı tanımlar `CalendarUtility`, belirli bir takvimden bir tarih dize gösterimini oluşturma ayrıntıların birçoğu işlemek için. `CalendarUtility` Sınıfı aşağıdaki üyelere sahiptir:  
+ Örnek, belirli bir takvimi kullanarak tarihin dize gösterimini `CalendarUtility`oluşturma ayrıntılarının çoğunu işlemek için yeniden kullanılabilir bir takvim yardımcı sınıfı tanımlar. `CalendarUtility` Sınıfı aşağıdaki üyelere sahiptir:  
   
-- Parametreli bir kurucu, tek parametresi bir <xref:System.Globalization.Calendar> tarih olduğu gösterilemeyecek kadar nesne. Bu sınıfın özel bir alan atanır.  
+- Tek parametresi, bir tarihin temsil edildiği bir <xref:System.Globalization.Calendar> nesne olan parametreli bir Oluşturucu. Bu, sınıfının özel bir alanına atanır.  
   
-- `CalendarExists`, bir takvim tarafından temsil edilen olup olmadığını gösteren bir Boole değeri döndürür, özel bir yöntem `CalendarUtility` nesnesi tarafından desteklenen <xref:System.Globalization.CultureInfo> yöntemine bir parametre olarak geçirilen nesne. Yönteme bir çağrı sarılır <xref:System.Array.Exists%2A?displayProperty=nameWithType> yöntemi için Geçiren <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> dizisi.  
+- `CalendarExists`, `CalendarUtility` nesne tarafından temsil edilen takvimin bir parametre olarak yönteme geçirilen <xref:System.Globalization.CultureInfo> nesne tarafından desteklenip desteklenmediğini belirten bir Boole değeri döndüren özel bir yöntem. Yöntemi, <xref:System.Array.Exists%2A?displayProperty=nameWithType> <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> Array öğesini geçtiği yöntemine bir çağrı sarar.  
   
-- `HasSameName`, atanan özel bir yöntem <xref:System.Predicate%601> bir parametre olarak geçirilen temsilci <xref:System.Array.Exists%2A?displayProperty=nameWithType> yöntemi. Yöntem dönene kadar dizinin her üyesini yöntemine geçirilen `true`. Yöntemi, isteğe bağlı bir takvim adı tarafından temsil edilen takvim ile aynı olup olmadığını belirler `CalendarUtility` nesne.  
+- `HasSameName`, <xref:System.Array.Exists%2A?displayProperty=nameWithType> yönteme bir parametre olarak geçirilen özel <xref:System.Predicate%601> bir yöntem. Dizenin her üyesi, yöntem dönene `true`kadar yöntemine geçirilir. Yöntemi, isteğe bağlı bir takvimin adının `CalendarUtility` nesnenin gösterdiği takvimle aynı olup olmadığını belirler.  
   
-- `DisplayDate`, iki parametre geçirilen aşırı yüklenmiş bir genel yöntem: ya bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri tarafından temsil edilen takvimde ifade `CalendarUtility` ; nesne ve biçimlendirme kuralları kullanılacak kültürü. İçinde bir tarih dize gösterimini döndürme davranışını olup biçimlendirme kuralları kullanılacak kültürü tarafından hedef takvimin desteklenen bağlıdır.  
+- `DisplayDate`, iki parametre geçen aşırı yüklenmiş bir genel yöntem: ya da <xref:System.DateTime> `CalendarUtility` nesne tarafından <xref:System.DateTimeOffset> temsil edilen takvimde ifade edilecek bir veya değeri; ve biçimlendirme kuralları kullanılacak kültür. Bir tarihin dize gösterimini döndürme davranışındaki davranışı, hedef takvimin biçimlendirme kuralları kullanılacak kültürün desteklenip desteklenmediğini bağlıdır.  
   
- Oluşturmak için kullanılan takvim bakılmaksızın bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri bu örnekte, değer genellikle bir Gregoryen tarihi olarak ifade edilir. Bunun nedeni, <xref:System.DateTime> ve <xref:System.DateTimeOffset> türleri herhangi bir takvim bilgi korumak değil. Dahili olarak, bu yana gece yarısı, 1 Ocak 0001 geçen tıklarının sayısını temsil edilir. Bu sayının yorumu Takvim üzerinde bağlıdır. Çoğu kültürde için varsayılan takvim Gregoryen takvim ' dir.  
+ Bu örnekte bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değeri oluşturmak için kullanılan takvime bakılmaksızın, bu değer genellikle bir Gregoryen tarih olarak ifade edilir. Bunun nedeni, <xref:System.DateTime> ve <xref:System.DateTimeOffset> türlerinin herhangi bir takvim bilgisini korumidir. Dahili olarak, 1 Ocak 0001 gece yarısından beri geçen onay işareti sayısı olarak temsil edilir. Bu sayının yorumu takvime göre değişir. Çoğu kültürde varsayılan takvim, Gregoryen takvimidir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

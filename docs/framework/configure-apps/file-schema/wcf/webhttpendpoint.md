@@ -2,15 +2,15 @@
 title: <webHttpEndpoint>
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 6fb31fca6ac38f6cb92ef087cc277a4d5066521c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 866be522cb1c64142227a8d6a1a8f88551ca9105
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769778"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940479"
 ---
 # <a name="webhttpendpoint"></a>\<webHttpEndpoint >
-Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) otomatik olarak bağlama ekler [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) davranışı. Bir REST hizmeti yazarken Bu uç noktayı kullanın.  
+Bu yapılandırma öğesi [ ,\<Web http >](webhttp.md) davranışını otomatik olarak ekleyen bir fixed [ \<WebHttpBinding >](webhttpbinding.md) bağlaması ile standart bir uç nokta tanımlar. Bir REST hizmeti yazarken bu uç noktayı kullanın.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -37,10 +37,10 @@ Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<web
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|automaticFormatSelectionEnabled|Otomatik Biçim Seçimi etkin olup olmadığını gösteren bir Boole değeri.<br /><br /> Otomatik Biçim Seçimi etkinleştirildiğinde altyapı ayrıştırır `Accept` istek iletisinin üst bilgi ve en uygun yanıt biçimi belirler. Varsa `Accept` üstbilgisi, uygun yanıt biçimi belirtmiyor, altyapısını kullanan `Content-Type` istek iletisi veya işlemin varsayılan yanıt biçimi.|  
-|defaultOutgoingResponseFormat|Varsayılan giden yanıt biçimini belirten bir özniteliği. Bu özniteliktir <xref:System.ServiceModel.Web.WebMessageFormat> türü|  
-|helpEnabled|Uç nokta için HTTP Yardım sayfasının etkinleştirilip etkinleştirilmeyeceğini gösteren bir Boole değeri.|  
-|webEndpointType|Uç nokta türünü belirten bir dize.|  
+|automaticFormatSelectionEnabled etkin|Otomatik biçim seçiminin etkin olup olmadığını gösteren bir Boole değeri.<br /><br /> Otomatik Biçim Seçimi etkinleştirildiğinde altyapı, istek iletisinin `Accept` üstbilgisini ayrıştırır ve en uygun yanıt biçimini belirler. Üst bilgi uygun bir yanıt biçimi belirtmezse, altyapı istek iletisini veya işlemin varsayılan `Content-Type` yanıt biçimini kullanır. `Accept`|  
+|defaultOutgoingResponseFormat|Varsayılan giden yanıt biçimini belirten bir özniteliği. Bu öznitelik <xref:System.ServiceModel.Web.WebMessageFormat> türü|  
+|Yardım etkin|Uç nokta için HTTP yardım sayfasının etkinleştirilip etkinleştirilmediğini belirten bir Boolean değer.|  
+|webEndpointType|Uç noktanın türünü belirten bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -49,7 +49,7 @@ Bu yapılandırma öğesi ile bir sabit bir standart uç nokta tanımlar [ \<web
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Daha fazla (adresi, bağlama, anlaşma) kendi özellik sabit veya olan standart uç noktaları koleksiyonu uç noktaları biriyle önceden tanımlanmış.|  
+|[\<standardEndpoints >](standardendpoints.md)|Özelliklerinden biri veya daha fazlası (adres, bağlama, sözleşme) düzeltilen, önceden tanımlanmış uç noktalar koleksiyonu.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

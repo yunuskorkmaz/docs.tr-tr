@@ -8,52 +8,52 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 06ce64de5e2a6b4aa299b9ad9c41982b7c1924c7
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: d4afcd6ce942d1cd2286e3f393ce61436821bb3a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348272"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955120"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Nasıl yapılır: Panoya Veri Ekleme
-<xref:System.Windows.Forms.Clipboard> Sınıfı, Windows işletim sistemi Pano özelliğini ile etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama Pano verileri için geçici bir deposu olarak kullanın. Örneğin, Word'ün işlemci panoya kes/yapıştır işlemleri sırasında kullanın. Pano, başka bir uygulamadan veri aktarmak için kullanışlıdır.  
+Sınıfı <xref:System.Windows.Forms.Clipboard> , Windows işletim sistemi Pano özelliğiyle etkileşim kurmak için kullanabileceğiniz yöntemler sağlar. Birçok uygulama, pano 'Yu veri için geçici bir depo olarak kullanır. Örneğin, Word işlemcileri kes ve yapıştır işlemleri sırasında panoyu kullanır. Pano, verileri bir uygulamadan diğerine aktarmak için de kullanışlıdır.  
   
- Panoya veri ekleme, bu biçimi kullanıyorsanız, diğer uygulamalar verileri tanıyabilmesi veri biçimi belirtebilirsiniz. Ayrıca, potansiyel olarak veri kullanan diğer uygulamalar sayısını artırmak için birden çok farklı biçimlerde panosu için veri ekleyebilirsiniz.  
+ Panoya veri eklediğinizde, diğer uygulamaların bu biçimi kullanabilmesi durumunda verileri tanıyabilmesi için veri biçimini belirtebilirsiniz. Ayrıca, verileri potansiyel olarak kullanbilecek diğer uygulamaların sayısını artırmak için birden çok farklı biçimde panoya veri ekleyebilirsiniz.  
   
- Pano biçimi alabilmesi bu biçimi kullanan bir uygulamayı ilişkili veri biçimini tanımlayan bir dizedir. <xref:System.Windows.Forms.DataFormats> Sınıfı kullanmanız için önceden tanımlanmış biçim adları sağlar. Ayrıca, kendi biçim adları kullanın veya bir nesne türünü, biçimi kullanabilirsiniz.  
+ Pano biçimi, bu biçimi kullanan bir uygulamanın ilişkili verileri alabilmesi için biçimi tanımlayan bir dizedir. Sınıfı <xref:System.Windows.Forms.DataFormats> , kullanım için önceden tanımlanmış biçim adları sağlar. Kendi biçim adlarınızı de kullanabilir veya bir nesnenin türünü biçimi olarak kullanabilirsiniz.  
   
- Bir veya birden çok biçimde panoya veri eklemek için <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemi. Bu yöntem için herhangi bir nesne geçirebilirsiniz, ancak birden çok biçimde veri eklemek için önce veriler ile birden çok biçimde çalışmak üzere tasarlanmış ayrı bir nesne eklemeniz gerekir. Genellikle, verilerinize ekleyeceksiniz bir <xref:System.Windows.Forms.DataObject>, ancak uygulayan herhangi bir türü kullanabilirsiniz <xref:System.Windows.Forms.IDataObject> arabirimi.  
+ Panoya bir veya birden çok biçimde veri eklemek için <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> yöntemini kullanın. Bu yönteme herhangi bir nesne geçirebilirsiniz, ancak birden fazla formatta veri eklemek için, önce verileri birden çok biçim ile çalışacak şekilde tasarlanan ayrı bir nesneye eklemeniz gerekir. Genellikle verilerinizi bir <xref:System.Windows.Forms.DataObject>öğesine eklersiniz, ancak <xref:System.Windows.Forms.IDataObject> arabirimi uygulayan herhangi bir türü kullanabilirsiniz.  
   
- .NET Framework 2.0 sürümünde, temel Pano görevleri daha kolay hale getirmek için tasarlanan yeni yöntemlerle doğrudan panoya veri ekleyebilirsiniz. Metin gibi tek, ortak bir biçimde verilerle çalışırken bu yöntemleri kullanın.  
+ .NET Framework 2,0 ' de, temel Pano görevlerini daha kolay hale getirmek için tasarlanan yeni yöntemleri kullanarak doğrudan panoya veri ekleyebilirsiniz. Verilerle birlikte çalışırken, metin gibi tek bir ortak biçimdeki bu yöntemleri kullanın.  
   
 > [!NOTE]
->  Tüm Windows tabanlı uygulamalar, Pano paylaşabilirsiniz. Bu nedenle, başka bir uygulamaya geçtiğinde içeriği değişikliğe tabi olduğu.  
+> Tüm Windows tabanlı uygulamalar panoyu paylaşır. Bu nedenle, başka bir uygulamaya geçtiğinizde içerik değişebilir.  
 >   
->  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca kullanılabilir iş parçacıklarında tek iş parçacığı Grup (STA) moduna ayarlayın. Bu sınıf kullanmak için emin olun, `Main` yöntemi ile işaretlenmiş <xref:System.STAThreadAttribute> özniteliği.  
+>  <xref:System.Windows.Forms.Clipboard> Sınıfı yalnızca tek iş parçacığı apartmanı (STA) moduna ayarlanmış iş parçacıklarında kullanılabilir. Bu sınıfı kullanmak için `Main` yönteminizin <xref:System.STAThreadAttribute> özniteliğiyle işaretlendiğinden emin olun.  
 >   
->  Bir nesne, Panodaki koymak için Serileştirilebilir olmalıdır. Bir tür serileştirilebilir yapmak için kendisiyle işaretlemek <xref:System.SerializableAttribute> özniteliği. Seri hale getirilemeyen bir nesne bir Pano yöntemine geçirirseniz, yöntem bir özel durum olmadan başarısız olur. Seri hale getirme hakkında daha fazla bilgi için bkz: <xref:System.Runtime.Serialization>.  
+>  Bir nesne, pano 'Ya yerleştirilecek şekilde seri hale getirilebilir olmalıdır. Bir türü seri hale getirilebilir yapmak için <xref:System.SerializableAttribute> özniteliğiyle işaretleyin. Bir pano yöntemine serileştirilebilir olmayan bir nesne geçirirseniz, yöntem özel durum oluşturmadan başarısız olur. Serileştirme hakkında daha fazla bilgi için bkz <xref:System.Runtime.Serialization>.  
   
-### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Pano tek, ortak bir biçimde veri eklemek için  
+### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Tek, ortak bir biçimde panoya veri eklemek için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, veya <xref:System.Windows.Forms.Clipboard.SetText%2A> yöntemi. Bu yöntemler, yalnızca .NET Framework 2.0 sürümünde kullanılabilir.  
+1. ,, Veya metodunu<xref:System.Windows.Forms.Clipboard.SetText%2A> kullanın. <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A> <xref:System.Windows.Forms.Clipboard.SetAudio%2A> <xref:System.Windows.Forms.Clipboard.SetImage%2A> Bu yöntemler yalnızca .NET Framework 2,0 ' de kullanılabilir.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
-### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Özel bir biçim panoya veri eklemek için  
+### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Panoya özel bir biçimde veri eklemek için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi ile bir özel biçim adı. Bu yöntem, yalnızca .NET Framework 2.0 sürümünde kullanılabilir.  
+1. <xref:System.Windows.Forms.Clipboard.SetData%2A> Yöntemi özel biçim adıyla kullanın. Bu yöntem yalnızca .NET Framework 2,0 ' de kullanılabilir.  
   
-     Önceden tanımlanmış biçim adıyla kullanabilirsiniz <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemi. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
+     Önceden tanımlanmış biçim adlarını <xref:System.Windows.Forms.Clipboard.SetData%2A> yöntemiyle de kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Windows.Forms.DataFormats>.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.Clipboard#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#3)]  
     [!code-csharp[System.Windows.Forms.Clipboard#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#100)]
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
-### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Birden çok biçimde panoya veri ekleme  
+### <a name="to-add-data-to-the-clipboard-in-multiple-formats"></a>Birden çok biçimdeki panoya veri eklemek için  
   
-1. Kullanım <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> yöntemi ve geçişinde bir <xref:System.Windows.Forms.DataObject> verilerinizi içeren. Bu yöntem .NET Framework 2. 0'dan önceki sürümlerde bir panoya veri eklemek için kullanmanız gerekir.  
+1. Yöntemini kullanın ve verilerinizi içeren bir <xref:System.Windows.Forms.DataObject> içinde geçiş yapın. <xref:System.Windows.Forms.Clipboard.SetDataObject%2A?displayProperty=nameWithType> .NET Framework 2,0 ' den önceki sürümlerde Pano 'ya veri eklemek için bu yöntemi kullanmanız gerekir.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

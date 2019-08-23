@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d22a808ce3ab95e3b351408bf4cc372a335da553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960192"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Nasıl yapılır: DockPanel Öğesini Kullanarak Boşluğu Bölümleme
-Aşağıdaki örnek, basit bir oluşturur [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework kullanarak bir <xref:System.Windows.Controls.DockPanel> öğesi. <xref:System.Windows.Controls.DockPanel> Bölümleri alt öğeleri için kullanılabilir alanı.  
+Aşağıdaki örnek, bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.DockPanel> öğesi kullanılarak basit bir çerçeve oluşturur. Bölümler <xref:System.Windows.Controls.DockPanel> , alt öğeleri için kullanılabilir alanı.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Windows.Controls.DockPanel.Dock%2A> iki özdeş sabitlemek için ekli özelliği, özelliğinin <xref:System.Windows.Controls.Border> öğeler <xref:System.Windows.Controls.Dock.Top> bölümlenmiş. Bir üçüncü <xref:System.Windows.Controls.Border> öğesi yerleştirilmiştir <xref:System.Windows.Controls.Dock.Left>, kendi genişlikle 200 piksel olarak ayarlayın. Dördüncü <xref:System.Windows.Controls.Border> dayandığı <xref:System.Windows.Controls.Dock.Bottom> ekran. Son <xref:System.Windows.Controls.Border> öğesi kalan alanı otomatik olarak doldurur.  
+ Bu örnek, bölümlenmiş <xref:System.Windows.Controls.DockPanel.Dock%2A> alanın iki özdeş <xref:System.Windows.Controls.Border> öğesini <xref:System.Windows.Controls.Dock.Top> yerleştirmek için iliştirilmiş bir özellik olan özelliğini kullanır. Üçüncü <xref:System.Windows.Controls.Border> bir öğe, genişliği 200 piksel <xref:System.Windows.Controls.Dock.Left>olarak ayarlanan öğesine yerleştirildi. Dördüncü <xref:System.Windows.Controls.Border> bir, ekranda yerleşiktir <xref:System.Windows.Controls.Dock.Bottom> . Son <xref:System.Windows.Controls.Border> öğe kalan alanı otomatik olarak doldurur.  
   
  [!code-cpp[DockPanelOvwSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
  [!code-csharp[DockPanelOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
@@ -29,11 +29,11 @@ Aşağıdaki örnek, basit bir oluşturur [!INCLUDE[TLA#tla_ui](../../../../incl
  [!code-xaml[DockPanelOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
 > [!NOTE]
->  Varsayılan olarak, son alt bir <xref:System.Windows.Controls.DockPanel> öğesi doldurur kalan ayrılmamış. Bu davranışı istemiyorsanız ayarlamak `LastChildFill="False"`.  
+> Varsayılan olarak, bir <xref:System.Windows.Controls.DockPanel> öğenin son alt öğesi kalan ayrılmamış alanı doldurur. Bu davranışı istemiyorsanız, ayarlayın `LastChildFill="False"`.  
   
- Derlenmiş uygulama şuna benzer yeni bir kullanıcı Arabirimi sağlar.  
+ Derlenen uygulama, şuna benzeyen yeni bir kullanıcı arabirimi oluşturur.  
   
- ![Tipik bir DockPanel senaryo. ](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![Tipik bir DockPanel senaryosu.](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

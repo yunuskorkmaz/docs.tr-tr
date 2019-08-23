@@ -2,47 +2,47 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 0a98bfd401aaabfb754c422cc753bc5092f9f76c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c6b326b15a2af58da9206adf28070e57fec600c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633335"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963508"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
-Oracle, Oracle için .NET Framework veri sağlayıcısı sunuyor **REF CURSOR** veri türü. Oracle REF CURSOR ile çalışmak için veri sağlayıcısı'nı kullanarak, aşağıdaki davranışları düşünmelisiniz.  
+Oracle için .NET Framework Veri Sağlayıcısı Oracle **ref cursor** veri türünü destekler. Oracle REF IMLEÇLER ile çalışmak için veri sağlayıcısını kullanırken aşağıdaki davranışları göz önünde bulundurmanız gerekir.  
   
 > [!NOTE]
->  Bazı davranışları Microsoft OLE DB Sağlayıcısı'nın Oracle (MSDAORA) farklı.  
+> Bazı davranışlar Oracle için Microsoft OLE DB Sağlayıcısı (MSDAORA) farklıdır.  
   
-- Performansla ilgili nedenlerle, Oracle için veri sağlayıcısı otomatik olarak bağlama **REF CURSOR** veri türleri, MSDAORA gibi bunları açıkça belirtmediğiniz sürece.  
+- Performans nedenleriyle, Oracle için Veri Sağlayıcısı, açıkça belirtmediğiniz sürece MSDAORA olarak, **ref cursor** veri türlerini otomatik olarak bağlamayın.  
   
-- Veri sağlayıcısı REF CURSOR parametreleri belirtmek için kullanılan {sonuç} kaçış dahil olmak üzere tüm ODBC kaçış dizileri desteklemez.  
+- Veri sağlayıcısı, REF CURSOR parametrelerini belirtmek için kullanılan {resultset} kaçış dahil olmak üzere herhangi bir ODBC kaçış dizisini desteklemez.  
   
-- REF CURSOR döndüren bir saklı yordamı yürütmek için parametreleri tanımlayın <xref:System.Data.OracleClient.OracleParameterCollection> ile bir <xref:System.Data.OracleClient.OracleType> , **imleç** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> , **çıkış**. Veri sağlayıcısı, yalnızca çıkış parametreleri REF CURSOR bağlamayı destekler. Sağlayıcı REF CURSOR giriş parametreleri desteklemez.  
+- Ref imleçler döndüren bir saklı yordamı <xref:System.Data.OracleClient.OracleParameterCollection> yürütmek için, içindeki parametreleri **imlece** ve <xref:System.Data.OracleClient.OracleParameter.Direction%2A> <xref:System.Data.OracleClient.OracleType> **output**ile tanımlamanız gerekir. Veri sağlayıcısı yalnızca çıkış parametreleri olarak başvuru Imleçleri bağlamayı destekler. Sağlayıcı, giriş parametresi olarak başvuru Imleçleri desteklemez.  
   
-- Alma bir <xref:System.Data.OracleClient.OracleDataReader> parametresinden değeri desteklenmiyor. Türünde değerleri olan <xref:System.DBNull> komut yürütmenin sonrasına.  
+- <xref:System.Data.OracleClient.OracleDataReader> Parametre değerinden alma desteklenmez. Değerler, komut yürütmeden sonra <xref:System.DBNull> türüdür.  
   
-- Yalnızca **CommandBehavior** REF CURSOR ile çalışan numaralandırma değeri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) olan **CloseConnection**; diğerleri yoksayılır.  
+- REF imleçleri (örneğin, çağrılırken <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) ile birlikte kullanılan tek CommandBehavior numaralandırma değeri **CloseConnection**ise, diğerleri yok sayılır.  
   
-- REF CURSOR içinde sırasını **OracleDataReader** parametrelerinde bazında bağlıdır **OracleParameterCollection**. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özelliği yok sayılır.  
+- **OracleDataReader** 'Daki başvuru imleçlerinin sırası, **OracleParameterCollection**içindeki parametrelerin sırasına bağlıdır. <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> Özellik yoksayıldı.  
   
-- PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF CURSOR daha verimlidir. Kullanmanız gerekiyorsa bir **tablo** veri türü, OLE DB .NET veri sağlayıcısı MSDAORA ile kullanın.  
+- PL/SQL **tablo** veri türü desteklenmiyor. Ancak, REF Imleçleri daha etkilidir. **Tablo** veri türü kullanmanız GEREKIYORSA, msdaora ile OLE DB .NET veri sağlayıcısı kullanın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [REF CURSOR Örnekleri](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  
- REF CURSOR kullanarak gösteren üç örnekler içerir.  
+ REF IMLEÇLER kullanmayı gösteren üç örnek içerir.  
   
  [OracleDataReader’da REF CURSOR Parametreleri](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)  
- Bir REF CURSOR parametresiyle döndürür ve olarak değeri okuyan bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir **OracleDataReader**.  
+ Bir başvuru IMLECI parametresi döndüren bir PL/SQL saklı yordamının nasıl yürütüleceğini ve değeri bir **OracleDataReader**olarak okuduğunu gösterir.  
   
  [OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
- İki REF CURSOR parametreleri döndürür ve kullanarak değerlerini okur PL/SQL saklı yordamı yürütmek anlatan bir **OracleDataReader**.  
+ İki başvuru IMLECI parametresi döndüren bir PL/SQL saklı yordamının nasıl yürütüleceğini ve bir **OracleDataReader**kullanarak değerleri okuduğunu gösterir.  
   
  [Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
- İki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürütme yapmayı gösteren bir <xref:System.Data.DataSet> satırlarla döndürülür.  
+ İki ref cursor parametresi döndüren bir PL/SQL saklı yordamının nasıl yürütüleceğini gösterir ve döndürülen satırlarla bir <xref:System.Data.DataSet> ile doldurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

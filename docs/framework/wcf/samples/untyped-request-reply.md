@@ -1,28 +1,28 @@
 ---
-title: Yazılmamış istek-yanıt
+title: Türsüz Istek-yanıt
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 6ff3a8c7f9f5c3d4731bb8946e290b265be61729
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72625e93d81e01c04b67f680143bcd63d26db549
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951506"
 ---
 # <a name="untyped-requestreply"></a>Yazılmamış İstek/Yanıt
-Bu örnek ileti sınıfını kullanma işlemi sözleşmelerini tanımlamak nasıl gösterir.  
+Bu örnek, Ileti sınıfını kullanan işlem sözleşmelerinin nasıl tanımlanacağını gösterir.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek dayanır [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md). Hizmet sözleşmesi bir ileti türü bağımsız değişken olarak alır ve bir ileti döndüren bir işlemi tanımlar. İşlemi, iletinin gövdesinden toplamı hesaplamak için gerekli tüm verileri toplar ve toplamı dönüş ileti gövdesinde olarak gönderir.  
+ Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır. Hizmet sözleşmesi bir ileti türünde bağımsız değişken olarak alan ve bir ileti döndüren bir işlemi tanımlar. İşlem, ileti gövdesinden toplamı hesaplamak için gerekli tüm verileri toplar ve sonra toplamı dönüş iletisinde gövde olarak gönderir.  
   
 ```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
- Hizmet işlemi giriş iletisinde geçirilen dizisi alır ve toplamı hesaplar. Bir yanıt iletisi göndermek için örnek uygun ileti sürümü ve eylem ile yeni bir ileti oluşturur ve kendi gövdesi olarak hesaplanan toplam ekler. Aşağıdaki örnek kod bu gösterir.  
+ Hizmette, işlem giriş iletisinde geçirilen tamsayıların dizisini alır ve toplamı hesaplar. Yanıt iletisi göndermek için örnek, uygun ileti sürümü ve eylemiyle yeni bir ileti oluşturur ve hesaplanan toplamı gövde olarak ekler. Aşağıdaki örnek kod bunu gösterir.  
   
 ```csharp
 public Message ComputeSum(Message request)  
@@ -43,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- İstemci tarafından oluşturulan kodda [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) uzak hizmet için bir ara sunucu oluşturmak için. Bir istek iletisi göndermek için istemci bağlıdır altındaki bir kanalda ileti sürümü olması gerekir. Bu nedenle, yeni bir oluşturur <xref:System.ServiceModel.OperationContextScope> oluşturur, oluşturulan proxy kanalı kapsamlı bir <xref:System.ServiceModel.OperationContext> içinde doldurulmuş doğru ileti sürümü ile kendi `OutgoingMessageHeaders.MessageVersion` özelliği. İstemci Giriş dizisinin için istek iletisi gövdesi olarak geçirir ve sonra çağırır `ComputeSum` proxy. İstemci ardından geçirilen erişerek girişleri toplamını alır `GetBody<T>` yöntemi yanıt iletisi. Aşağıdaki örnek kod bu gösterir.  
+ İstemci, uzak hizmete bir ara sunucu oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kodu kullanır. İstek iletisi göndermek için, istemci, temeldeki kanala bağlı olan ileti sürümüne sahip olmalıdır. Bu nedenle, <xref:System.ServiceModel.OperationContextScope> `OutgoingMessageHeaders.MessageVersion` özelliği içinde doldurulmuş doğru ileti sürümü <xref:System.ServiceModel.OperationContext> ile oluşturulan, oluşturduğu proxy kanalında yeni bir kapsam oluşturur. İstemci, istek iletisine gövde olarak bir giriş dizisi geçirir ve sonra proxy `ComputeSum` üzerinde çağırır. İstemci daha sonra yanıt iletisindeki `GetBody<T>` yöntemine erişerek, geçirildiği girişlerin toplamını alır. Aşağıdaki örnek kod bunu gösterir.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -61,7 +61,7 @@ using (new OperationContextScope(client.InnerChannel))
 }  
 ```  
   
- Bu örnek bir Web barındırılan bir örnektir ve bu nedenle yalnızca istemci yürütülebilir dosyayı çalıştırmanız gerekir. İstemci örnek çıktı verilmiştir.  
+ Bu örnek, Web 'de barındırılan bir örnektir ve bu nedenle yalnızca istemci yürütülebilirinin çalıştırılması gerekir. Aşağıda, istemcideki örnek çıktı verilmiştir.  
   
 ```console  
 Prompt>Client.exe  
@@ -70,21 +70,21 @@ Sum of numbers passed (1,2,3,4,5) = 15
 Press <ENTER> to terminate client.  
 ```  
   
- Bu, bir örnek Web barındırılan ve derleme ve çalıştırma örneği yapılacağını görmek için 3. adım, bağlantıyı sağlanan kontrol edin örnektir.  
+ Bu örnek, Web 'de barındırılan bir örnektir ve bu nedenle örneği oluşturma ve çalıştırma hakkında bilgi için 3. adımda sunulan bağlantıyı kontrol edin.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

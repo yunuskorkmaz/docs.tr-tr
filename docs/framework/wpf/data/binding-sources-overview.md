@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944689"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvurur. Bu konuda, bağlama kaynağı olarak kullanabileceğiniz nesne türleri ele alınmaktadır.  
@@ -88,7 +88,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
   
  Bağlama için [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] izin gereksinimi benzerdir. Kısmi güven korumalı alanında, <xref:System.Windows.Data.XmlDataProvider> belirtilen verilere erişim izni olmadığında başarısız olur.  
   
- Anonim türe sahip nesneler iç. Anonim türlerin özelliklerine yalnızca tam güvende çalışırken bağlayabilirsiniz. Anonim türler hakkında daha fazla bilgi için bkz. [anonim türlerC# (Programlama Kılavuzu)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) veya [anonim türler (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
+ Anonim türe sahip nesneler iç. Anonim türlerin özelliklerine yalnızca tam güvende çalışırken bağlayabilirsiniz. Anonim türler hakkında daha fazla bilgi için bkz. [anonim türlerC# (Programlama Kılavuzu)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) veya [anonim türler (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
   
  Kısmi güven güvenliği hakkında daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../wpf-partial-trust-security.md).  
   

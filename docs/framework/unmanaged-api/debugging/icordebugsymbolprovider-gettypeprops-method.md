@@ -1,18 +1,18 @@
 ---
-title: ICorDebugSymbolProvider::GetTypeProps yöntemi
+title: 'ICorDebugSymbolProvider:: GetTypeProps yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 435a814d20e039c794f4f9eeb024d5afbfcd6dbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771189"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955545"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps yöntemi
-Göreli sanal adres (RVA) içinde bir vtable verilen imza, genel parametrelerinin sayısı gibi bir türün özellikleri hakkında bilgi döndürür.  
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps yöntemi
+Bir vtable içindeki göreli bir sanal adres (RVA) verilen genel parametrelerinin imza sayısı gibi bir türün özellikleri hakkında bilgi döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -27,31 +27,31 @@ HRESULT GetTypeProps(
   
 ## <a name="parameters"></a>Parametreler  
  `tableRva`  
- [in] Bir vtable'da göreli sanal adres (RVA).  
+ 'ndaki Vtable içindeki göreli bir sanal adres (RVA).  
   
  `cbSignature`  
- [in] Boyutu `signature` dizisi. Açıklamalar bölümüne bakın.  
+ 'ndaki `signature` Dizinin boyutu. Açıklamalar bölümüne bakın.  
   
  `pcbSignature`  
- [out] [out] Boyut döndürülen işaretçi `signature` dizisi.  
+ dışı dışı Döndürülen `signature` dizinin boyutuna yönelik bir işaretçi.  
   
  `signature`  
- [out] Tüm genel parametreler TypeSpec'te imzalarını tutan arabellek.  
+ dışı Tüm genel parametrelerin TypeSpec imzalarını tutan bir arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Türün gerekli boyutunu almak için `signature` ayarlayın, dizi `cbSignature` bağımsız değişkeni 0 ve `signature` için **null**. Yöntem döndürüldüğünde `pcbSignature` için gereken bayt sayısını içerir `signature` dizisi.  
+ Türün `signature` dizisinin gerekli boyutunu almak için, `cbSignature` bağımsız değişkenini 0 ve `signature` **null**olarak ayarlayın. Yöntemi döndüğünde, `pcbSignature` `signature` dizi için gereken bayt sayısını içerir.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

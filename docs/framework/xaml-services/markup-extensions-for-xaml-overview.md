@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364322"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939702"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML Biçimlendirme Uzantılarına Genel Bakış
 Biçimlendirme uzantıları, temel olmayan veya belirli bir XAML türü olmayan bir değer elde etmek için XAML tekniğidir. Biçimlendirme uzantıları, öznitelik kullanımı için, işaretleme uzantısı kapsamını ve çıkış için bir kapanış küme `{` ayracı `}` girmek üzere bir açma küme ayracı bilinen karakter dizisini kullanır. .NET Framework XAML hizmetlerini kullanırken, System. Xaml derlemesinden önceden tanımlanmış XAML dili biçimlendirme genişletmelerini kullanabilirsiniz. Ayrıca, System. xaml içinde <xref:System.Windows.Markup.MarkupExtension> tanımlanan sınıftan alt sınıf oluşturabilir ve kendi biçimlendirme uzantılarınızı tanımlayabilirsiniz. Ya da söz konusu çerçeveye zaten başvuruyordıysanız belirli bir Framework tarafından tanımlanan biçimlendirme uzantılarını kullanabilirsiniz.  
@@ -22,7 +22,7 @@ Biçimlendirme uzantıları, temel olmayan veya belirli bir XAML türü olmayan 
  Çeşitli biçimlendirme uzantıları XAML dil desteği için .NET Framework XAML Hizmetleri tarafından uygulanır. Bu biçimlendirme uzantıları, XAML belirtiminin bir dil olarak belirtilerinin bölümlerine karşılık gelir. Bunlar genellikle yaygın kullanımda görüldüğü gibi `x:` söz dizimi ön ekine göre tanımlanabilir. Bu XAML dil öğeleri için .NET Framework xaml Hizmetleri uygulamaları, tüm <xref:System.Windows.Markup.MarkupExtension> temel sınıftan türetilir.  
   
 > [!NOTE]
->  `x:` Önek, XAML üretiminin kök öğesinde XAML dili ad alanının tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, çeşitli belirli çerçeveler için Visual Studio projesi ve sayfa şablonları, bu `x:` eşlemeyi kullanarak bir xaml dosyası başlatır. Kendi xaml ad alanı eşlecinizin farklı bir ön ek belirteci seçebilirsiniz, ancak bu belge varsayılan `x:` eşlemeyi xaml dili xaml ad alanının tanımlı bir parçası olan varlıkları tanımlama belirli Framework 'ün varsayılan XAML ad alanı veya diğer rasgele CLR veya XML ad alanları.  
+> `x:` Önek, XAML üretiminin kök öğesinde XAML dili ad alanının tipik XAML ad alanı eşlemesi için kullanılır. Örneğin, çeşitli belirli çerçeveler için Visual Studio projesi ve sayfa şablonları, bu `x:` eşlemeyi kullanarak bir xaml dosyası başlatır. Kendi xaml ad alanı eşlecinizin farklı bir ön ek belirteci seçebilirsiniz, ancak bu belge varsayılan `x:` eşlemeyi xaml dili xaml ad alanının tanımlı bir parçası olan varlıkları tanımlama belirli Framework 'ün varsayılan XAML ad alanı veya diğer rasgele CLR veya XML ad alanları.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type`adlandırılmış tür için nesne sağlar. <xref:System.Type> Bu işlevsellik, temel alınan clr türü ve bir gruplama adı veya tanımlayıcı olarak tür Türetmenin kullanıldığı erteleme mekanizmalarındaki en sık kullanılır. WPF stilleri ve şablonları ve bunların `TargetType` özelliklerinin kullanımları belirli bir örnektir. Daha fazla bilgi için bkz. [X:Type Işaretleme uzantısı](x-type-markup-extension.md).  

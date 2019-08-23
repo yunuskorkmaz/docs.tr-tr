@@ -16,108 +16,108 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2f474317493b3aac421ca1270ff461b97cfe027
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3119818934df765a8bbd9c05caaee04f9476069f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598080"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963519"
 ---
 # <a name="icorprofilercallback-interface"></a>ICorProfilerCallback Arabirimi
-Ortak dil çalışma zamanı tarafından (CLR) profil oluşturucu abone olduğu olaylar meydana geldiğinde bir kod profil oluşturucu bildirmek için kullanılan yöntemleri sağlar.  
+Profil oluşturucunun abone olduğu olaylar gerçekleştiğinde, bir kod Profilcisi bildirmek için ortak dil çalışma zamanı (CLR) tarafından kullanılan yöntemleri sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AppDomainCreationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|Profil Oluşturucu, bir uygulama etki alanı oluşturulduğunu bildirir.|  
-|[AppDomainCreationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|Profil Oluşturucu, bir uygulama etki alanı oluşturulduğunu bildirir.|  
-|[AppDomainShutdownFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownfinished-method.md)|Profil Oluşturucu, bir uygulama etki alanı bir işlemden olduğunu bildirir.|  
-|[AppDomainShutdownStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|Profil Oluşturucu, bir uygulama etki alanı bir işlemden boşaltılıyor bildirir.|  
-|[AssemblyLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)|Profil Oluşturucu bir bütünleştirilmiş kod yükleme işleminin tamamlandığını bildirir.|  
-|[AssemblyLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadstarted-method.md)|Profil Oluşturucu, bir derlemenin yüklendiği bildirir.|  
-|[AssemblyUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|Profil Oluşturucu, bir derleme kaldırıldı bildirir.|  
-|[AssemblyUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|Profil Oluşturucu, bir derleme boşaltılıyor bildirir.|  
-|[ClassLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|Profil Oluşturucu, bir sınıf yükleme işleminin tamamlandığını bildirir.|  
-|[ClassLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|Profil Oluşturucu, bir sınıf yüklü olduğunu bildirir.|  
-|[ClassUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|Profil Oluşturucu, bir sınıf kaldırma işleminin tamamlandığını bildirir.|  
-|[ClassUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|Profil Oluşturucu, bir sınıf boşaltılıyor bildirir.|  
-|[COMClassicVTableCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|Profil Oluşturucu, belirtilen IID ve sınıf için bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) oluşturulduğunu bildirir.|  
-|[COMClassicVTableDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)|Profil Oluşturucu bir RCW edildiğini bildirir.|  
-|[ExceptionCatcherEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|Denetimi uygun geçirilen profil oluşturucu bildirir `catch` blok.|  
-|[ExceptionCatcherLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|Denetimi uygun dışında geçirilen profil oluşturucu bildirir `catch` blok.|  
-|[ExceptionCLRCatcherExecute Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|.NET Framework 2.0 sürümünde Kullanımdan kalktı.|  
-|[ExceptionCLRCatcherFound Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|.NET Framework 2.0 Kullanımdan kalktı.|  
-|[ExceptionOSHandlerEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|Henüz uygulanmadı. Yönetilmeyen özel durum bilgisi gerektiren bir profil oluşturucu, diğer araçlarla bu bilgileri edinmeniz gerekir.|  
-|[ExceptionOSHandlerLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|Henüz uygulanmadı. Yönetilmeyen özel durum bilgisi gerektiren bir profil oluşturucu, diğer araçlarla bu bilgileri edinmeniz gerekir.|  
-|[ExceptionSearchCatcherFound Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|Profil Oluşturucu, oluşturulan özel durum işleyicisi özel durum işleme arama aşaması bulunduğunu bildirir.|  
-|[ExceptionSearchFilterEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)|Profil Oluşturucu, kullanıcı filtresi yürütülmekte olan bildirir.|  
-|[ExceptionSearchFilterLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|Profil Oluşturucu, kullanıcı filtresi yalnızca yürütme işleminin tamamlandığını bildirir.|  
-|[ExceptionSearchFunctionEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)|Profil Oluşturucu bir işlev özel durum işleme arama aşaması girdiğini bildirir.|  
-|[ExceptionSearchFunctionLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|Profil Oluşturucu, özel durum işleme arama aşaması bir işlev arama işleminin tamamlandığını bildirir.|  
-|[ExceptionThrown Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)|Profil Oluşturucu, bir özel durum olduğunu bildirir.|  
-|[ExceptionUnwindFinallyEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|İşleme özel durumu geriye doğru izleme aşamasına giriyor profil oluşturucu bildirir bir `finally` belirtilen işlevinde yan tümcesi.|  
-|[ExceptionUnwindFinallyLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|İşleme özel durumu geriye doğru izleme aşaması ayrıldı profil oluşturucu bildirir bir `finally` yan tümcesi.|  
-|[ExceptionUnwindFunctionEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|Profil Oluşturucu bir işlev özel durum işleme geriye doğru izleme aşaması girdiğini bildirir.|  
-|[ExceptionUnwindFunctionLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|Profil Oluşturucu, özel durum işleme geriye doğru izleme aşaması bir işlevi geriye doğru izleme işleminin tamamlandığını bildirir.|  
-|[FunctionUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)|Profil Oluşturucu bir işlev kaldırmak çalışma zamanı başlatıldığını bildirir.|  
-|[Initialize Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|Yeni bir CLR uygulaması başlatıldığında profil oluşturucuyu başlatmak üzere çağrılır.|  
-|[JITCachedFunctionSearchFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Profil Oluşturucu, NGen.exe kullanarak önceden derlenen bir işlev için bir arama işleminin tamamlandığını bildirir.|  
-|[JITCachedFunctionSearchStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Profil Oluşturucu, NGen.exe kullanarak önceden derlenen bir işlev için bir arama başlatıldığını bildirir.|  
-|[JITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|Profil Oluşturucu, JIT Derleyici bir işlevi derleme tamamlandığını bildirir.|  
-|[JITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|Profil Oluşturucu, just-ın-time (JIT) derleyici bir işlevi derlemeye ne başlatıldığını bildirir.|  
-|[JITFunctionPitched Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|Profil oluşturucunun JIT olarak derlenmiş bir işlev bellekten kaldırıldığını size bildirir.|  
-|[JITInlining Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|Profil Oluşturucu, JIT Derleyici hakkında başka bir işlevi satır içi işlev eklemek için olduğunu bildirir.|  
-|[ManagedToUnmanagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|Profil Oluşturucu, yönetilen koddan yönetilmeyen koda geçiş oluştuğunu bildirir.|  
-|[ModuleAttachedToAssembly Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|Profil Oluşturucu, bir modül, ana derlemeye bağlı olduğunu bildirir.|  
-|[ModuleLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)|Profil Oluşturucu, bir modül yükleme işleminin tamamlandığını bildirir.|  
-|[ModuleLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)|Profil Oluşturucu, bir modül yüklenmekte olduğuna dair bildirir.|  
-|[ModuleUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)|Profil Oluşturucu, bir modül kaldırma işleminin tamamlandığını bildirir.|  
-|[ModuleUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|Profil Oluşturucu, bir modül boşaltılıyor bildirir.|  
-|[MovedReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|Profil oluşturucuyu çöp toplama sırasında taşınan nesne başvuruları hakkında bilgilendirir.|  
-|[ObjectAllocated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|Bir nesne için bellek yığında ayrılan profil oluşturucu bildirir.|  
-|[ObjectReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|Profil Oluşturucu belirtilen nesne tarafından başvurulan bellek nesneleri hakkında bilgilendirir.|  
-|[ObjectsAllocatedByClass Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|Profil Oluşturucu belirtilen her sınıf önceki çöp toplama işleminden itibaren oluşturulan örnek sayısını hakkında bilgilendirir.|  
-|[RemotingClientInvocationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|Profil Oluşturucu bir çağrının sürebileceği istemcide tamamlanmak üzere çalıştırılmasını bildirir.|  
-|[RemotingClientInvocationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|Profil Oluşturucu bir çağrının sürebileceği başlatıldığını bildirir.|  
-|[RemotingClientReceivingReply Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|Uzaktan iletişim çağrısı sunucu tarafı kısmı tamamlandı ve istemci artık alma profil oluşturucu bildirir ve yanıt işlenecek.|  
-|[RemotingClientSendingMessage Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|Profil Oluşturucu, istemci sunucuya istek göndermeden bildirir.|  
-|[RemotingServerInvocationReturned Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|Profil Oluşturucu, bir uzak yöntem çağırma isteğine yanıt olarak bir yöntem çağırma işleminin tamamlandığını bildirir.|  
-|[RemotingServerInvocationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|Profil Oluşturucu işlemi uzak yöntem çağırma isteğine yanıt olarak bir yöntemi çağıran olduğunu bildirir.|  
-|[RemotingServerReceivingMessage Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)|Profil Oluşturucu işlemin bir uzak yöntem çağırma veya etkinleştirme isteği aldığını bildirir.|  
-|[RemotingServerSendingReply Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|Profil Oluşturucu işlemi bir uzak yöntem çağırma isteği işlemeyi tamamladıktan ve yanıt bir kanal üzerinden iletilmek üzere olduğunu bildirir.|  
-|[RootReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|Profil oluşturucuyu çöp toplamadan sonra kök başvuruları hakkındaki bilgileri ile bildirir.|  
-|[RuntimeResumeFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|Profil Oluşturucu çalışma zamanı tüm çalışma zamanı iş parçacığı devam ediyor ve normal çalışmasına geri döndürdü bildirir.|  
-|[RuntimeResumeStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|Profil Oluşturucu çalışma zamanı, tüm çalışma zamanı iş parçacığı sürdürülmekte bildirir.|  
-|[RuntimeSuspendAborted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|Profil Oluşturucu çalışma zamanı oluşan çalışma zamanı askıya alınması iptal edildiğini bildirir.|  
-|[RuntimeSuspendFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|Profil Oluşturucu çalışma zamanı, tüm çalışma zamanı iş parçacıkları askıya alınması tamamlandığını bildirir.|  
-|[RuntimeSuspendStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|Profil Oluşturucu çalışma zamanı tüm çalışma zamanı iş parçacıklarını askıya almak olduğunu bildirir.|  
-|[RuntimeThreadResumed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|Profil Oluşturucu, belirtilen iş parçacığını askıya sonra ettirdi bildirir.|  
-|[RuntimeThreadSuspended Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|Belirtilen iş parçacığı olan veya askıya için profil oluşturucu bildirir.|  
-|[Shutdown Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Profil Oluşturucu, uygulamanın kapanacağını bildirir.|  
-|[ThreadAssignedToOSThread Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|Profil Oluşturucu, belirli bir işletim sistemi (OS) iş parçacığı kullanarak bir yönetilen iş parçacığı uygulanan olduğunu bildirir.|  
-|[ThreadCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|Profil Oluşturucu, bir iş parçacığı oluşturulduğunu size bildirir.|  
-|[ThreadDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|Profil Oluşturucu, bir iş parçacığı yok edildi bildirir.|  
-|[UnmanagedToManagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|Profil Oluşturucu, yönetilmeyen koddan yönetilen koda geçiş oluştuğunu bildirir.|  
+|[AppDomainCreationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)|Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.|  
+|[AppDomainCreationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationstarted-method.md)|Profil oluşturucuyu bir uygulama etki alanının oluşturulduğunu bildirir.|  
+|[AppDomainShutdownFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownfinished-method.md)|Profil oluşturucuyu bir uygulama etki alanının bir işlemden kaldırılmış olduğunu bildirir.|  
+|[AppDomainShutdownStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)|Profil Oluşturucu bir uygulama etki alanının bir işlemden kaldırılmakta olduğunu bildirir.|  
+|[AssemblyLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)|Profiler 'ın bir derlemenin yüklemeyi bitirmiş olduğunu bildirir.|  
+|[AssemblyLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadstarted-method.md)|Profiler 'ın bir derlemenin yüklenmekte olduğunu bildirir.|  
+|[AssemblyUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)|Profiler öğesine bir derlemenin kaldırılmış olduğunu bildirir.|  
+|[AssemblyUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)|Profiler öğesine bir derlemenin kaldırılmakta olduğunu bildirir.|  
+|[ClassLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)|Profil oluşturucuyu bir sınıfın yükleme tamamlandığını bildirir.|  
+|[ClassLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)|Profil oluşturucuyu bir sınıfın yüklenmekte olduğunu bildirir.|  
+|[ClassUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)|Profil oluşturucuyu bir sınıfın kaldırmayı tamamladığını bildirir.|  
+|[ClassUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadstarted-method.md)|Profil oluşturucuyu bir sınıfın kaldırılmakta olduğunu bildirir.|  
+|[COMClassicVTableCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)|Profil oluşturucuya, belirtilen IID ve sınıf için bir çalışma zamanı çağrılabilir sarmalayıcı (RCW) oluşturulduğunu bildirir.|  
+|[COMClassicVTableDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)|Profil oluşturucuyu bir RCW 'ın yok edildiğini bildirir.|  
+|[ExceptionCatcherEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherenter-method.md)|Profil oluşturucuyu denetimin uygun `catch` bloğa geçtiğini bildirir.|  
+|[ExceptionCatcherLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)|Profil oluşturucuyu denetimin uygun `catch` bloktan geçirilmekte olduğunu bildirir.|  
+|[ExceptionCLRCatcherExecute Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)|.NET Framework sürüm 2,0 ' de kullanılmıyor.|  
+|[ExceptionCLRCatcherFound Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)|.NET Framework 2,0 ' de kullanılmıyor.|  
+|[ExceptionOSHandlerEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerenter-method.md)|Uygulanmadı. Yönetilmeyen özel durum bilgisine ihtiyacı olan bir profil oluşturucu, bu bilgileri diğer yollarla almalıdır.|  
+|[ExceptionOSHandlerLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionoshandlerleave-method.md)|Uygulanmadı. Yönetilmeyen özel durum bilgisine ihtiyacı olan bir profil oluşturucu, bu bilgileri diğer yollarla almalıdır.|  
+|[ExceptionSearchCatcherFound Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchcatcherfound-method.md)|Profil oluşturucuya özel durum işlemenin arama aşamasının oluşturulan özel durum için bir işleyici bulunduğunu bildirir.|  
+|[ExceptionSearchFilterEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterenter-method.md)|Profil oluşturucuyu Kullanıcı filtresinin yürütüldüğü konusunda bilgilendirir.|  
+|[ExceptionSearchFilterLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)|Profil oluşturucuyu bir Kullanıcı filtresinin yürütmeyi bitirmekte olduğunu bildirir.|  
+|[ExceptionSearchFunctionEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)|Profil oluşturucuyu özel durum işlemenin arama aşamasının bir işlev girdiği hakkında bilgilendirir.|  
+|[ExceptionSearchFunctionLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionleave-method.md)|Profil oluşturucuya özel durum işlemenin arama aşamasının bir işlev aramayı bitirmediğini bildirir.|  
+|[ExceptionThrown Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md)|Profiler öğesine bir özel durum gerçekleştiğini bildirir.|  
+|[ExceptionUnwindFinallyEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyenter-method.md)|Profil oluşturucuya özel durum işlemenin geriye doğru izleme aşamasının belirtilen işlevde içerilen bir `finally` yan tümce girdiğini bildirir.|  
+|[ExceptionUnwindFinallyLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfinallyleave-method.md)|Profil oluşturucuya özel durum işlemenin geriye doğru izleme aşamasının bir `finally` yan tümce kaldığını bildirir.|  
+|[ExceptionUnwindFunctionEnter Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionenter-method.md)|Profil oluşturucuyu, özel durum işlemenin geriye doğru izleme aşamasının bir işlev girdiği hakkında bilgilendirir.|  
+|[ExceptionUnwindFunctionLeave Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionunwindfunctionleave-method.md)|Profil oluşturucuyu, özel durum işlemenin geri sarma aşamasının bir işlevi geriye doğru izlemeyi tamamladığını bildirir.|  
+|[FunctionUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md)|Profil oluşturucuyu, çalışma zamanının bir işlevi kaldırmak için başlatıldığını bildirir.|  
+|[Initialize Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)|Her yeni CLR uygulaması başlatıldığında profil oluşturucuyu başlatmak için çağırılır.|  
+|[JITCachedFunctionSearchFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)|Profiler öğesine, daha önce NGen. exe kullanılarak derlenen bir işlev için bir aramanın tamamlandığını bildirir.|  
+|[JITCachedFunctionSearchStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md)|Profil oluşturucuyu, daha önce NGen. exe kullanılarak derlenen bir işlev için bir aramanın başlatıldığını bildirir.|  
+|[JITCompilationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md)|Profiler öğesine JıT derleyicisinin bir işlevi derlemeyi tamamladığını bildirir.|  
+|[JITCompilationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)|Profil oluşturucuyu, Just-In-Time (JıT) derleyicisinin bir işlevi derlemek için başlatıldığını bildirir.|  
+|[JITFunctionPitched Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)|Profiler öğesine JıT derlenmiş bir işlevin bellekten kaldırıldığını bildirir.|  
+|[JITInlining Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md)|Profiler öğesine JıT derleyicisinin başka bir işlevle satıra bir işlev eklemek üzere olduğunu bildirir.|  
+|[ManagedToUnmanagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)|Profil oluşturucuyu yönetilen koddan yönetilmeyen koda geçişin oluştuğunu bildirir.|  
+|[ModuleAttachedToAssembly Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)|Profil oluşturucuyu bir modülün üst derlemesine iliştirilmekte olduğunu bildirir.|  
+|[ModuleLoadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)|Profiler 'ın bir modülün yüklemeyi bitirdiğinden emin olduğunu bildirir.|  
+|[ModuleLoadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadstarted-method.md)|Profil oluşturucuyu bir modülün yüklenmekte olduğunu bildirir.|  
+|[ModuleUnloadFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)|Profil oluşturucuyu bir modülün kaldırmayı bitirmediğini bildirir.|  
+|[ModuleUnloadStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)|Profil oluşturucuyu bir modülün kaldırılmakta olduğunu bildirir.|  
+|[MovedReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)|Çöp toplama sırasında taşınan nesne başvuruları hakkında profil oluşturucuyu bilgilendirir.|  
+|[ObjectAllocated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)|Profil oluşturucuya, yığın içindeki belleğin bir nesne için ayrıldığını bildirir.|  
+|[ObjectReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)|Belirtilen nesne tarafından başvurulan bellekteki nesneler hakkında profil oluşturucuyu bilgilendirir.|  
+|[ObjectsAllocatedByClass Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)|Önceki çöp toplamadan bu yana oluşturulan her bir sınıfın örnek sayısı hakkında profil oluşturucuyu bilgilendirir.|  
+|[RemotingClientInvocationFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)|Bir uzaktan iletişim çağrısının istemci üzerinde tamamlanmasının çalıştırıldığı profil oluşturucuyu bildirir.|  
+|[RemotingClientInvocationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationstarted-method.md)|Profil oluşturucuyu, uzaktan iletişim çağrısının başlatıldığını bildirir.|  
+|[RemotingClientReceivingReply Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)|Profil oluşturucuya, uzaktan iletişim çağrısının sunucu tarafı bölümünün tamamlandığını ve istemcinin artık yanıtı aldığını ve yanıt işlemesini bildirir.|  
+|[RemotingClientSendingMessage Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)|Profil oluşturucuyu istemcinin sunucuya bir istek gönderdiğini bildirir.|  
+|[RemotingServerInvocationReturned Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md)|Profil oluşturucuyu, işlemin bir uzak yöntem çağırma isteğine yanıt olarak bir yöntemi çağırma işlemini tamamladığını bildirir.|  
+|[RemotingServerInvocationStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationstarted-method.md)|Profil oluşturucuyu, işlemin uzak yöntem çağırma isteğine yanıt olarak bir yöntemi çağırdığını bildirir.|  
+|[RemotingServerReceivingMessage Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)|Profil oluşturucuya işlemin uzak yöntem çağırma veya etkinleştirme isteği aldığını bildirir.|  
+|[RemotingServerSendingReply Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)|Profil oluşturucuya işlemin uzak yöntem çağırma isteğini işlemeyi tamamladığını ve yanıtı bir kanaldan iletmek üzere olduğunu bildirir.|  
+|[RootReferences Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)|Çöp toplama işleminden sonra kök başvuruları hakkındaki bilgilerle profil oluşturucuyu bilgilendirir.|  
+|[RuntimeResumeFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumefinished-method.md)|Profil oluşturucuyu çalışma zamanının tüm çalışma zamanı iş parçacıklarını sürdürdüğünü ve normal işleme döndürüldüğünü bildirir.|  
+|[RuntimeResumeStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)|Profil oluşturucuyu çalışma zamanının tüm çalışma zamanı iş parçacıklarını sürdürmeye devam etgeldiğini bildirir.|  
+|[RuntimeSuspendAborted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendaborted-method.md)|Profil oluşturucuyu, çalışma zamanının gerçekleşen çalışma zamanı askıya alma süresini durdurduğu konusunda bilgilendirir.|  
+|[RuntimeSuspendFinished Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)|Profil oluşturucuyu çalışma zamanının tüm çalışma zamanı iş parçacıklarının askıya alınma tamamlandığını bildirir.|  
+|[RuntimeSuspendStarted Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)|Profil oluşturucuyu çalışma zamanının tüm çalışma zamanı iş parçacıklarını askıya almak üzere olduğunu bildirir.|  
+|[RuntimeThreadResumed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)|Profil oluşturucuyu, belirtilen iş parçacığının askıya alındıktan sonra devam ettirmekte olduğunu bildirir.|  
+|[RuntimeThreadSuspended Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)|Profil oluşturucuya belirtilen iş parçacığının olduğunu veya askıya alınmayı bildirir.|  
+|[Shutdown Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-shutdown-method.md)|Profil oluşturucuyu uygulamanın kapandığını bildirir.|  
+|[ThreadAssignedToOSThread Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)|Profil oluşturucuyu yönetilen bir iş parçacığının belirli bir işletim sistemi (OS) iş parçacığı kullanılarak uygulandığını bildirir.|  
+|[ThreadCreated Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)|Profil oluşturucuyu bir iş parçacığının oluşturulduğunu bildirir.|  
+|[ThreadDestroyed Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)|Profiler öğesine bir iş parçacığının yok edildiğini bildirir.|  
+|[UnmanagedToManagedTransition Yöntemi](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)|Profil oluşturucuyu yönetilmeyen koddan yönetilen koda geçiş olduğunu bildirir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- CLR bir yöntem çağrıları `ICorProfilerCallback` (veya [Icorprofilercallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) olduğu için profil oluşturucu abone, bir olay gerçekleştiğinde, profil oluşturucu bildirmek için arabirimi gerçekleşir. Bu, CLR kod Profil Oluşturucu ile iletişim kurar birincil geri çağırma arabirimidir.  
+ CLR, profil oluşturucunun abone olduğu bir `ICorProfilerCallback` olay olduğunda profil oluşturucuyu bilgilendirmek için (veya [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) arabirimindeki bir yöntemi çağırır. Bu, CLR 'nin kod Profilcisi ile iletişim kurduğu birincil geri çağırma arabirimidir.  
   
- Bir kod profil oluşturucu yöntemleri uygulamalıdır `ICorProfilerCallback` arabirimi. .NET Framework sürüm 2.0 veya üzeri için profil oluşturucu ayrıca uygulamalıdır `ICorProfilerCallback2` yöntemleri. Her yöntem uygulaması değeri başarılıysa S_OK HRESULT ya da E_FAIL hatası döndürmesi gerekir. Şu anda, CLR dışında her bir geri çağırma tarafından döndürülen HRESULT yoksayar [Icorprofilercallback::objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md).  
+ Bir kod profil oluşturucu `ICorProfilerCallback` arabirimin yöntemlerini uygulamalıdır. .NET Framework sürüm 2,0 veya üzeri için, profil oluşturucunun de `ICorProfilerCallback2` yöntemleri uygulaması gerekir. Her yöntem uygulamasının hata durumunda Success veya E_FAıL değeri için S_OK değerine sahip bir HRESULT döndürmesi gerekir. Şu anda CLR [ICorProfilerCallback:: ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)hariç her geri çağırma tarafından döndürülen HRESULT 'yi yoksayar.  
   
- Microsoft Windows kayıt defterinde bir kod profil oluşturucu uygulayan kendi Bileşen Nesne Modeli (COM) nesne kaydetmelisiniz `ICorProfilerCallback` ve `ICorProfilerCallback2` arabirimleri. Bir kod profil oluşturucu, istediği çağırarak bildirim almak olaylara abone olur [Icorprofilerınfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md). Bu genellikle profil oluşturucunun uygulamasında yapılır [Icorprofilercallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md). Profil Oluşturucu ardından bir olayı gerçekleşmek üzere olduğunu veya sadece yürütülmekte olan bir çalışma zamanı işleminde oluştu çalışma zamanını şuradan bildirim almak kullanabilirsiniz.  
+ Microsoft Windows kayıt defterinde, bir kod Profilleyicisi, `ICorProfilerCallback` ve `ICorProfilerCallback2` arabirimlerini uygulayan bileşen nesne modeli (com) nesnesine kaydolmalıdır. Bir kod profil oluşturucu, [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)çağırarak bildirim almak istediği olaylara abone olur. Bu genellikle profil oluşturucunun [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)uygulamasında yapılır. Profil Oluşturucu daha sonra bir olay gerçekleşmekte olduğu veya yürütülmekte olan bir çalışma zamanı işleminde gerçekleştiyse çalışma zamanından bildirim alabilir.  
   
 > [!NOTE]
->  Profil oluşturucuyu tek bir COM nesnesi kaydeder. Profil oluşturucuyu bir .NET Framework sürüm 1.0 veya 1.1, COM nesnesi yalnızca yöntemlerini uygulamak gereken hedeflediği `ICorProfilerCallback`. Bu .NET Framework 2.0 veya sonraki bir sürümü hedefliyorsa, COM nesnesinin yöntemlerini de uygulamalıdır `ICorProfilerCallback2`.  
+> Profil Oluşturucu tek bir COM nesnesi kaydeder. Profiler .NET Framework sürüm 1,0 veya 1,1 ' i hedefliyorsanız, söz konusu COM nesnesinin yalnızca yöntemini `ICorProfilerCallback`uygulaması gerekir. .NET Framework sürüm 2,0 veya sonraki bir `ICorProfilerCallback2`sürümü HEDEFLIYORSANıZ, com nesnesinin yöntemlerini de uygulaması gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

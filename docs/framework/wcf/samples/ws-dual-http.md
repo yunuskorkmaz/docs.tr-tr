@@ -2,29 +2,29 @@
 title: WS İkili Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 78b1da22b309e58e9798713e81afd3210d22f937
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f3e38cb6f72918ca1affb7186958e828f9a7fecb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942186"
 ---
 # <a name="ws-dual-http"></a>WS İkili Http
-İkili Http örnek nasıl yapılandırılacağını gösteren `WSDualHttpBinding` bağlama. Bu örnek, bir istemci konsol program (.exe) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (.dll) oluşur. Hizmet, çift yönlü sözleşme uygular. Anlaşma tarafından tanımlanan `ICalculatorDuplex` matematik işlemlerinden sunan arabirimi (ekleme, çıkarma, çarpma ve bölme). Bu örnekte `ICalculatorDuplex` oturumu üzerinden çalışan bir sonuç hesaplama matematik işlemlerini gerçekleştirmek üzere istemci arabirimi sağlar. Bağımsız olarak, hizmet üzerinde sonuçları döndüren `ICalculatorDuplexCallback` arabirimi. Hizmet ve istemci arasında gönderilen ileti kümesini ilişkilendirmek için bir bağlamı yeniden kurulması için çift yönlü sözleşme bir oturumu gerektirir. `WSDualHttpBinding` Bağlama, çift yönlü iletişimi destekler.  
+Çift http örneği, `WSDualHttpBinding` bağlamanın nasıl yapılandırılacağını gösterir. Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet bir çift yönlü sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme `ICalculatorDuplex` , çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. Bu örnekte `ICalculatorDuplex` arabirim, istemcinin, oturum üzerinde çalışan bir sonucu hesaplamak için matematik işlemleri gerçekleştirmesini sağlar. Bağımsız olarak, hizmet sonuçları `ICalculatorDuplexCallback` arayüzde döndürür. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir. `WSDualHttpBinding` Bağlama çift yönlü iletişimi destekler.  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`  
   
- Bir hizmet uç noktası ile yapılandırmak için `WSDualHttpBinding`, gösterildiği gibi uç nokta yapılandırmasında bağlama belirtin.  
+ İle bir hizmet uç noktası yapılandırmak için `WSDualHttpBinding`, uç nokta yapılandırmasındaki bağlamayı gösterildiği gibi belirtin.  
   
 ```xml  
 <endpoint address=""  
@@ -32,7 +32,7 @@ ms.locfileid: "65881465"
          contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />  
 ```  
   
- İstemcide, sunucu istemciye aşağıdaki örnek yapılandırmada gösterildiği bağlanmak için kullanabileceği bir adresi yapılandırmanız gerekir.  
+ İstemcisinde, aşağıdaki örnek yapılandırmada gösterildiği gibi sunucunun istemciye bağlanmak için kullanabileceği bir adresi yapılandırmanız gerekir.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,7 +58,7 @@ ms.locfileid: "65881465"
 </system.serviceModel>  
 ```  
   
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```  
 Press <ENTER> to terminate client once the output is displayed.  
@@ -70,24 +70,24 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)  
 ```  
   
- Örneği çalıştırdığında üzerinde istemciye döndürülen iletileri bkz hizmetinden gönderilen geri çağırma arabirimi. Tüm işlemler tamamlandıktan sonra tüm denklemi ardından her ara sonuçlar görüntülenir. İstemciyi aşağı kapatmak için ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, hizmetten gönderilen geri çağırma arabirimindeki istemciye döndürülen iletileri görürsünüz. Her ara sonuç görüntülenir ve tüm işlemler tamamlandıktan sonra denklemin tamamı gelir. İstemcisini kapatmak için ENTER tuşuna basın.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!IMPORTANT]
-    >  İstemci bir çapraz makine yapılandırmaya çalışırken, hem de localhost değiştirmeyi unutmayın `address` özniteliği [ \<uç noktası >'ın \<istemci >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) öğesi ve `clientBaseAddress` öznitelik [ \<bağlama >](../../../../docs/framework/misc/binding.md) öğesinin [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) öğesi ile gösterildiği gibi uygun makine adı:  
+    >  İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, localhost `address` 'u [ \< \<istemci > öğesi > uç noktası](../../configure-apps/file-schema/wcf/endpoint-of-client.md) özniteliğinde ve ' nin `clientBaseAddress` [ özniteliğiiledeğiştirdiğinizdeneminolun.WSDualHttpBinding\<>öğesinin >](../../../../docs/framework/misc/binding.md) öğesini [gösterildiği gibi uygun makinenin adı ile bağlama: \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
   
     ```xml  
     <client>  

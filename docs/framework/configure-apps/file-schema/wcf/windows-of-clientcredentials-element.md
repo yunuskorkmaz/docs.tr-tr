@@ -1,21 +1,21 @@
 ---
-title: <windows> ' ın <clientCredentials> öğesi
+title: <windows><clientCredentials> öğesinin
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769726"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940302"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<Windows >, \<clientCredentials > öğesi
-İstemciyi temsil etmek için kullanılacak Windows kimlik bilgisi ayarlarını belirtir.  
+# <a name="windows-of-clientcredentials-element"></a>\<\<ClientCredentials > öğesinin Windows >
+İstemciyi temsil etmek için kullanılacak bir Windows kimlik bilgisi ayarlarını belirtir.  
   
  \<system.ServiceModel>  
 \<davranışlar >  
-\<endpointBehaviors>  
-\<davranışı >  
+\<Endpointdavranışlar >  
+\<davranış >  
 \<clientCredentials >  
 \<Windows >  
   
@@ -33,8 +33,8 @@ ms.locfileid: "61769726"
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Sunucuya istemcinin iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> -Kimliği: Sunucunun kimliğini ve istemci ayrıcalıkları elde edebilirsiniz, ancak istemci kimliğine bürünülemedi.<br />-Kimliğe bürünme: Sunucu, istemci güvenlik bağlamı yerel sistemde bürünebilir.<br />-Temsilci: Sunucu, uzak sistemlere istemcinin güvenlik bağlamında bürünebilir.<br />-Anonim: Sunucu bürünerek veya istemci kimliği.<br />-Yok: Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan kimliğidir. Bu öznitelik türünde <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Bu özelliği ayarlamak `true` Kerberos kullanılamıyorsa için NTLM kimlik doğrulamasının sağlar.<br /><br /> Bu özelliği ayarlamak `false` bir NTLM kullanılırsa, bir özel durum için mümkün olan en iyi hale getirmek için Windows Communication Foundation (WCF) neden olur. Unutmayın, bu özelliği ayarlamak `false` NTLM kimlik bilgileri kablo üzerinden gönderilen engelleyemeyebilir.|  
+|`allowedImpersonationLevel`|İstemcinin sunucuya iletişim kurduğu kimliğe bürünme tercihini ayarlar. İstemcinin seçtiği kimliğe bürünme modu, sunucuda zorlanmaz. Geçerli değerler şunlardır:<br /><br /> İsi Sunucu istemcinin kimliğini ve ayrıcalıklarını alabilir, ancak istemcinin kimliğine bürünebilir.<br />Ation Sunucu, yerel sistemde istemcinin güvenlik bağlamını taklit edebilir.<br />Verilmesini Sunucu, uzak sistemlerde istemcinin güvenlik bağlamını taklit edebilir.<br />Deðeri Sunucu, istemciyi taklit edemez veya tanımlamıyor.<br />Seçim Kimliğe bürünme düzeyi atanmadı.<br /><br /> Varsayılan değer kimliğidir. Bu öznitelik türü <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Kerberos kullanılamıyorsa kimlik doğrulamanın `true` NTLM 'ye indirgenmesini sağlamak için bu özelliği ayarlama.<br /><br /> NTLM kullanılıyorsa, bu `false` özelliğin bir özel durum oluşturması için Windows Communication Foundation (WCF) oluşmasına neden olacak şekilde ayarlanması. Bu özelliği olarak `false` ayarlamanın, NTLM kimlik bilgilerinin tel üzerinden gönderilmesini engelleyemeyeceğini unutmayın.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -43,7 +43,7 @@ ms.locfileid: "61769726"
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Bir hizmete istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
+|[\<clientCredentials >](clientcredentials.md)|Hizmetin istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini belirtir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -54,6 +54,6 @@ ms.locfileid: "61769726"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/securing-clients.md)
-- [Sertifikalarla Çalışma](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [İstemcileri Güvenli Hale Getirme](../../../wcf/securing-clients.md)
+- [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

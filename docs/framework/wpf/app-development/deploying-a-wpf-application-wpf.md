@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972264"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958641"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bir WPF Uygulamasını Dağıtma (WPF)
-Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework birçok dağıtım teknolojilerini içerir. Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda her dağıtım teknolojisine ve bunların her [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
+Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıtılması gerekir. Windows ve .NET Framework çeşitli dağıtım teknolojileri içerir. Bir [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uygulamayı dağıtmak için kullanılan dağıtım teknolojisi, uygulama türüne bağlıdır. Bu konuda her dağıtım teknolojisine ve bunların her [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bir uygulama türünün dağıtım gereksinimleriyle birlikte nasıl kullanıldığı hakkında kısa bir genel bakış sunulmaktadır.  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Dağıtım Teknolojileri  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].NET Framework aşağıdakiler de dahil olmak üzere çeşitli dağıtım teknolojileri içerir:  
+ Windows ve .NET Framework aşağıdakiler dahil olmak üzere çeşitli dağıtım teknolojileri içerir:  
   
 - XCopy dağıtımı.  
   
@@ -39,7 +39,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]uygulamaların, kolayca istemcilere dağıtılabilecek ve çalıştırılabilen, kendi içinde bulunan yürütülebilir dosyalar olarak paketlenebilmesini sağlar. Ayrıca, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] ile birlikte [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] yüklenir ve Masaüstü, Başlat menüsü ve programlar Denetim Masası ile tümleştirme sunar.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]uygulamaların, kolayca istemcilere dağıtılabilecek ve çalıştırılabilen, kendi içinde bulunan yürütülebilir dosyalar olarak paketlenebilmesini sağlar. Ayrıca, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] Windows ile birlikte yüklenir ve Masaüstü, Başlat menüsü ve programlar Denetim Masası ile tümleştirme imkanı sağlanır.  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]uygulamaları yüklemeyi ve kaldırmayı basitleştirir, ancak yüklü uygulamaların sürüm açısından güncel tutulduğundan emin olmak için tesis sağlamaz.  
   
@@ -96,7 +96,7 @@ Windows Presentation Foundation (WPF) uygulamaları derlendikten sonra, dağıt�
 - *ApplicationName*. exe. manifest: Uygulama bildirimi.  
   
 > [!NOTE]
->  Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
+> Dağıtım ve uygulama bildirimleri hakkında daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
  Bu dosyalar yapılandırıldığında üretilir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] . Daha fazla bilgi için [nasıl yapılır: Yeni bir WPF tarayıcı uygulaması projesi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))oluşturun. Yalnızca [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] biçimlendirme sayfaları gibi, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] genellikle bir Web sunucusuna yayımlanır ve Internet Explorer kullanılarak görüntülenir.  
   

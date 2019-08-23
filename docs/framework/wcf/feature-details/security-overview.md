@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: f1c0fba82761d42324eb53655b36ef7a3570d5b3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868905"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949350"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation güvenliğe genel bakış
 Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasındaki iletilerin güvenliğini korumak için gereklidir. WCF, hem mevcut güvenlik altyapısına hem de SOAP iletileri için tanınan güvenlik standartlarına dayalı olarak güvenli iletiler değiş tokuş eden, çok yönlü ve birlikte çalışabilen bir platform sağlar.  
   
 > [!NOTE]
->  WCF güvenliğine yönelik kapsamlı bir kılavuz için bkz. [WCF güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> WCF güvenliğine yönelik kapsamlı bir kılavuz için bkz. [WCF güvenlik kılavuzu](https://go.microsoft.com/fwlink/?LinkID=158912).  
   
  WCF, kullanıcıların kimliğini doğrulamak için HTTPS, Windows tümleşik güvenliği veya Kullanıcı adları ve parolalar gibi mevcut teknolojiler ile güvenli, dağıtılmış uygulamalar oluşturduysanız tanıdık kavramları kullanır. WCF yalnızca mevcut güvenlik altyapılarından tümleştirilemez, ancak güvenli SOAP iletileri kullanarak yalnızca Windows etki alanlarının ötesinde dağıtılmış güvenliği de genişletir. Var olan protokollerin yanı sıra protokol olarak SOAP kullanmanın önemli avantajlarından yararlanarak mevcut güvenlik mekanizmalarının bir uygulamasını WCF olarak değerlendirin. Örneğin, Kullanıcı adı ve parola veya X. 509.440 sertifikaları gibi bir istemciyi veya hizmeti tanımlayan kimlik bilgileri, birlikte çalışabilen XML tabanlı SOAP profillerine sahiptir. Bu profiller kullanılarak iletiler, XML dijital imzaları ve XML şifrelemesi gibi açık belirtimlerden yararlanarak güvenli bir şekilde değiştirilir. Belirtimlerin listesi için, bkz. [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   

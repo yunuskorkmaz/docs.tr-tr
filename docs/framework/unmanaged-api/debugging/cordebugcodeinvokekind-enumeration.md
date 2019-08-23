@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 059e823110686a2b939c9664fa5b67e4041c3486
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6fa8de1a561e59e00d5bd9e78172d78b417aeff0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951963"
 ---
 # <a name="cordebugcodeinvokekind-enumeration"></a>CorDebugCodeInvokeKind Numaralandırması
-Dışarı aktarılan bir işlevin yönetilen kod nasıl çağırır açıklar.  
+Bir içe aktarılmış işlevin yönetilen kodu nasıl çağırılacağını açıklar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,24 +37,24 @@ typedef enum CorDebugCodeInvokeKind
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`CODE_INVOKE_KIND_NONE`|Herhangi bir yönetilen kod tarafından bu yöntemi çağrılırsa, açık olayları veya kesme noktaları tarafından daha sonra yer alması gerekir.<br /><br /> --veya--<br /><br /> Biz yalnızca bazı üzerinde durdurmak için kolay bir yolu yoktur çünkü bu yöntemi çağırır. yönetilen kodun kaçırabilir.<br /><br /> --veya--<br /><br /> Yöntemi, yönetilen kod asla çağırabilir.|  
-|`CODE_INVOKE_KIND_RETURN`|Bu yöntem dönüş yönerge aracılığıyla yönetilen kodu çağırır. Adımlama sonraki yönetilen koda ulaşacak.|  
-|`CODE_INVOKE_KIND_TAILCALL`|Bir kuyruk çağrısı aracılığıyla yönetilen kodu bu yöntemi çağırır. Tek adımlama ve herhangi bir Adımlama yönetilen koda çağrı yönergeleri ulaşacak.|  
+|`CODE_INVOKE_KIND_NONE`|Bu yöntem tarafından herhangi bir yönetilen kod çağrılırsa, daha sonra açık olaylar veya kesme noktaları tarafından bulunması gerekecektir.<br /><br /> --veya--<br /><br /> Üzerinde durmanın kolay bir yolu olmadığından, bu yöntemin çağırdığı bazı yönetilen koddan bazılarını kaçırabilir.<br /><br /> --veya--<br /><br /> Yöntemi hiçbir şekilde yönetilen kodu çağırmayabilir.|  
+|`CODE_INVOKE_KIND_RETURN`|Bu yöntem, bir dönüş yönergesi aracılığıyla yönetilen kodu çağırır. Adımlama, sonraki yönetilen koda ulaşmalıdır.|  
+|`CODE_INVOKE_KIND_TAILCALL`|Bu yöntem, bir tail çağrısı aracılığıyla yönetilen kodu çağırır. Tüm çağrı yönergelerinin tek adımlamayı ve adımlamayı yönetilen koda ulaşmalıdır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu sabit listesi tarafından kullanılan [Icordebugprocess6::getexportstepınfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi üzerinden Adımlama hakkında bilgi sağlamak için yönetilen kod.  
+ Bu numaralandırma, yönetilen kod üzerinden atlama hakkında bilgi sağlamak için [ICorDebugProcess6:: GetExportStepInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-getexportstepinfo-method.md) yöntemi tarafından kullanılır.  
   
 > [!NOTE]
->  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
+> Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

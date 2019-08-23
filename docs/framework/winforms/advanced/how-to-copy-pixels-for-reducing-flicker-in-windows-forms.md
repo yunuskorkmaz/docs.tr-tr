@@ -13,22 +13,22 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a18539153c64a5059d8079f6e245115b026bb91
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937754"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950143"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Nasıl yapılır: Windows Forms’da Titreşimi Azaltmak için Piksel Kopyalama
-Basit bir grafik animasyon eklediğinizde, kullanıcılar bazen titreşimini veya istenmeyen diğer görsel efektler karşılaşırsınız. Bu sorunu sınırlamanın yöntemlerinden biri, grafiğin üzerinde "bitblt" işlem kullanmaktır. BitBlt "bit bloğu aktarımı" renk verileri piksel bir kaynak dikdörtgenden hedef dikdörtgene piksel ' dir.  
+Basit bir grafiğe animasyon uyguladığınızda, kullanıcılar bazen titreşmeye veya diğer istenmeyen görsel efektlere de karşılaşabilir. Bu sorunu sınırlamanın bir yolu, grafikte bir "BitBlt" işlemi kullanmaktır. BitBlt, piksellerin kaynak dikdörtgenindeki renk verisinin "bit bloktan blok aktarımı", piksellerin hedef dikdörtgenine kadar olur.  
   
- Windows Forms ile bitblt kullanılarak gerçekleştirilir <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi <xref:System.Drawing.Graphics> sınıfı. Yöntem parametrelerinde, kaynak ve hedef (nokta) olarak kopyalanacak alanının boyutunu ve yeni şekil çizmek için kullanılan grafik nesnesi belirtin.  
+ Windows Forms ile BitBlt, <xref:System.Drawing.Graphics.CopyFromScreen%2A> <xref:System.Drawing.Graphics> sınıfının yöntemi kullanılarak gerçekleştirilir. Yönteminin parametrelerinde, kaynak ve hedef (as noktaları), kopyalanacak alanın boyutu ve yeni şekli çizmek için kullanılan grafik nesnesi belirtirsiniz.  
   
- Aşağıdaki örnekte, bir şekil biçiminde çizilir kendi <xref:System.Windows.Forms.Control.Paint> olay işleyicisi. Ardından, <xref:System.Drawing.Graphics.CopyFromScreen%2A> yöntemi şekli çoğaltmak için kullanılır.  
+ Aşağıdaki örnekte, bir şekil <xref:System.Windows.Forms.Control.Paint> olay işleyicisindeki formda çizilir. Sonra, <xref:System.Drawing.Graphics.CopyFromScreen%2A> şekli yinelemek için yöntemi kullanılır.  
   
 > [!NOTE]
->  Formun ayarlama <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğini `true` grafik tabanlı kodda hale getirecek <xref:System.Windows.Forms.Control.Paint> olayı iki kez arabelleğe alınan. Bu tüm anlaşılabilir performans artışı aşağıdaki kodu kullanırken olmaz sırada, daha karmaşık grafik işleme kodu ile çalışırken göz önünde bulundurmanız bir şeydir.  
+> Formun <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğinin özelliği olarak `true` ayarlanması, <xref:System.Windows.Forms.Control.Paint> olaydaki grafik tabanlı kodun çift arabellekli olmasını sağlar. Bu, aşağıdaki kodu kullanırken herhangi bir ayrılabilir performans kazancı olmasa da, daha karmaşık grafik işleme kodu ile çalışırken göz önünde bulundurmanız gereken bir şeydir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -60,7 +60,7 @@ private void Form1_Paint(System.Object sender,
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki kod formun çalıştırılan <xref:System.Windows.Forms.Control.Paint> olay işleyicisi, böylece form yeniden çizildiğinde grafik kalıcı. Bu nedenle, grafik ile ilgili yöntemleri çağırmayın <xref:System.Windows.Forms.Form.Load> olay işleyicisi, formu yeniden boyutlandırılabilir veya başka bir form tarafından engellediği çizilen içeriği yeniden değil çünkü.  
+ Yukarıdaki kod formun <xref:System.Windows.Forms.Control.Paint> olay işleyicisinde çalıştırılır, böylece grafik form yeniden çizilene kadar devam eder. Bu nedenle, form başka bir form tarafından yeniden boyutlandırılmışsa veya <xref:System.Windows.Forms.Form.Load> gizlendiyse çizilen içerik yeniden çizilmez olduğundan, olay işleyicisinde grafik ile ilgili yöntemleri çağırmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

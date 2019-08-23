@@ -3,48 +3,48 @@ title: WIF API Başvurusu
 ms.date: 03/30/2017
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
 author: BrucePerlerMS
-ms.openlocfilehash: c94ccd3f25be576c57fda798c6b2b8cc25357022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17a1da0a3b0ea6567fd805e7273f793ace35ae69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958352"
 ---
 # <a name="wif-api-reference"></a>WIF API Başvurusu
-Windows Identity Foundation (WIF) sınıfları aşağıdaki derlemeler arasında bölmek: `mscorlib` (mscorlib.dll) `System.IdentityModel` (System.IdentityModel.dll) `System.IdentityModel.Services` (System.IdentityModel.Services.dll) ve `System.ServiceModel` () System.ServiceModel.dll). Bu konuda WIF ad alanları ve kısa açıklamaları sınıfların her ad uzayını içeren bağlantılar sağlar.  
+Windows Identity Foundation `mscorlib` (WIF) sınıfları şu derlemeler arasında bölünür: (mscorlib. dll), `System.IdentityModel` (System. IdentityModel. dll), `System.IdentityModel.Services` (System. IdentityModel. Services. dll) ve `System.ServiceModel` ( System. ServiceModel. dll). Bu konuda, WıF ad alanları ve her bir ad alanının içerdiği sınıfların kısa açıklamaları için bağlantılar sağlanmaktadır.  
   
 > [!IMPORTANT]
->  Aşağıdaki `System.IdentityModel` WCF beyana dayalı kimlik modeli uygulayan sınıflar ad alanlarında bulunur: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, ve <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>. .NET Framework 4.5 ile başlayarak, WCF beyana dayalı kimlik modelinin yerini WIF almıştır. Sınıfları bu üç ad alanı üzerinde WIF tabanlı çözümler oluştururken kullanmamanız gerekir.  
+> Aşağıdaki `System.IdentityModel` ad alanlarında, WCF talep tabanlı kimlik modelini uygulayan sınıflar bulunur: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, ve <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>. .NET Framework 4,5 ' den başlayarak, WCF talep tabanlı kimlik modelinin yerini WıF almıştır. WıF tabanlı çözümler oluştururken bu üç ad alanında sınıfları kullanmamalısınız.  
   
  <xref:System.IdentityModel?displayProperty=nameWithType>  
- Tanımlama bilgisi dönüşümler ve güvenlik belirteci hizmetlerine özel XML sözlük okuyucularına temsil eden sınıfları içerir.  
+ Tanımlama bilgisi dönüştürmeleri, güvenlik belirteci Hizmetleri ve özelleşmiş XML sözlüğü okuyucuları temsil eden sınıflar içerir.  
   
  <xref:System.IdentityModel.Configuration?displayProperty=nameWithType>  
- Uygulamalar ve Windows Identity Foundation (WIF) kullanılarak oluşturulan hizmetler için yapılandırma sağlayan sınıflar içerir. Bu ad alanındaki sınıflar ayarlara altında [ \<identityConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi.  
+ Windows Identity Foundation (WıF) kullanılarak oluşturulan uygulamalar ve hizmetler için yapılandırma sağlayan sınıfları içerir. Bu ad alanındaki sınıflar, [ \<IdentityConfiguration >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) öğesi altındaki ayarları temsil eder.  
   
  <xref:System.IdentityModel.Metadata?displayProperty=nameWithType>  
- Bir Federasyon meta veri belgesinin öğelerini temsil eden sınıfları içerir.  
+ Federasyon meta veri belgesindeki öğeleri temsil eden sınıfları içerir.  
   
  <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType>  
- WS-Trust yapıları temsil eden sınıfları içerir.  
+ WS-Trust yapılarını temsil eden sınıfları içerir.  
   
  <xref:System.IdentityModel.Services?displayProperty=nameWithType>  
- Pasif (WS-Federation) senaryolarında kullanılan sınıfları içerir. Ayarlar altında temsil eden bazı sınıflar da içerir [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğesi. Bu öğe ayarlarında WS-Federasyon uygulamaları için yapılandırma. `System.IdentityModel.Services.Configuration` Ad alanı, çoğu WS-Federasyon yapılandırmak için kullanılan sınıfları içerir.  
+ Pasif (WS-Federation) senaryolarında kullanılan sınıfları içerir. Ayrıca [ \<System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğesi altındaki ayarları temsil eden bazı sınıflar içerir. Bu öğenin altındaki ayarlar, uygulamalar için WS-Federation ' i yapılandırır. Ad `System.IdentityModel.Services.Configuration` alanı, WS-Federation ' i yapılandırmak için kullanılan sınıfların çoğunu içerir.  
   
  <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>  
- WIF WS-Federasyon protokolünü kullanan uygulamalar için yapılandırma sağlayan sınıflar içerir. Bu ad alanındaki sınıflar ayarlara altında [ \<System.IdentityModel.Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğesi. `System.IdentityModel.Services` Ad alanı, WS-Federasyon yapılandırmak için kullanılan bazı sınıflar da içerir.  
+ WS-Federation protokolünü kullanan WıF uygulamaları için yapılandırma sağlayan sınıfları içerir. Bu ad alanındaki sınıflar, [ \<System. IdentityModel. Services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) öğesi altındaki ayarları temsil eder. Ad `System.IdentityModel.Services` alanı, WS-Federation yapılandırmak için kullanılan bazı sınıfları da içerir.  
   
  <xref:System.IdentityModel.Services.Tokens?displayProperty=nameWithType>  
- Web grubu senaryoları için özel güvenlik belirteci işleyicileri içerir.  
+ Web grubu senaryoları için özelleştirilmiş güvenlik belirteci işleyicileri içerir.  
   
  <xref:System.IdentityModel.Tokens?displayProperty=nameWithType>  
- Güvenlik belirteçleri, güvenlik belirteci işleyicileri ve diğer güvenlik belirteci yapılarını temsil eden sınıfları içerir.  
+ Güvenlik belirteçlerini, güvenlik belirteci işleyicilerini ve diğer güvenlik belirteci yapıtlarını temsil eden sınıflar içerir.  
   
  <xref:System.Security.Claims?displayProperty=nameWithType>  
- Talepler, beyana dayalı kimlikler, talep tabanlı ilkeleri ve diğer beyana dayalı kimlik modeli yapıları temsil eden sınıfları içerir.  
+ Talepleri, talep tabanlı kimlikleri, talep tabanlı sorumluları ve diğer talep tabanlı kimlik modeli yapılarını temsil eden sınıflar içerir.  
   
  <xref:System.ServiceModel.Security?displayProperty=nameWithType>  
- WCF sözleşmeleri, Kanallar, hizmet konakları ve active (WS-Trust) senaryolarında kullanılan diğer yapıları temsil eden sınıfları içerir. Bu ad alanı, Windows Communication Foundation (WCF) için özeldir ve WIF tarafından kullanılmaz sınıflar da içerir.  
+ WCF sözleşmelerini, kanalları, hizmet ana bilgisayarlarını ve etkin (WS-Trust) senaryolarında kullanılan diğer yapıtları temsil eden sınıflar içerir. Bu ad alanı Ayrıca, Windows Communication Foundation (WCF) öğesine özgü ve WıF tarafından kullanılmayan sınıfları da içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

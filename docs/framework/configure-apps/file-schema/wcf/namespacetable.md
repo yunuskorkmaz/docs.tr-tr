@@ -2,20 +2,20 @@
 title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
-ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0316e983446644671ead2f8f843dc91b493b29c9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933166"
 ---
 # <a name="namespacetable"></a>\<namespaceTable >
 
-Ardından yönlendirme için XPath filtrelerinde kullanılan önek eşletirmeleri için ad alanı içeren bir öğe kümesini tanımlayan bir yapılandırma bölümünü temsil eder.
+Daha sonra yönlendirme için XPath filtrelerinde kullanılabilecek önek eşlemelerine yönelik ad alanı içeren bir öğe kümesi tanımlamak için bir yapılandırma bölümünü temsil eder.
 
-**\<system.serviceModel>**   
-&nbsp;&nbsp;**\<Yönlendirme >**   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<namespaceTable >**
+**\<System. serviceModel >**    
+&nbsp;&nbsp; **\<Yönlendirme >**    
+&nbsp;&nbsp;&nbsp;&nbsp; **\<namespaceTable >**
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,19 +36,19 @@ Ardından yönlendirme için XPath filtrelerinde kullanılan önek eşletirmeler
 
 ### <a name="attributes"></a>Öznitelikler
 
-None
+Yok.
 
 ### <a name="child-elements"></a>Alt öğeleri
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Filtre >**](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md) | XPath ifadeleri için kullanılan ad alanı ön eki eşlemeyi tanımlar. |
+| [ **\<Filtre >** ](filter.md) | XPath ifadeleri için kullanılan bir ad alanı ön eki eşlemesini tanımlar. |
 
 ### <a name="parent-elements"></a>Üst öğeler
 
 |     | Açıklama |
 | --- | ----------- |
-| [**\<Yönlendirme >**](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | Windows Communication Foundation (WCF) türünü belirleyen ve yönlendirme süzgeçleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder<xref:System.ServiceModel.Dispatcher.MessageFilter> yönlendirme yanı sıra gelen iletileri değerlendirmek için hedef bitiş noktalarını tanımlayan tabloları yapılırken kullanılacak ne zaman eşleşen bir filtre, iletileri gönderir. |
+| [ **\<Yönlendirme >** ](routing.md) | Gelen iletileri değerlendirirken kullanılacak Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter> türünü ve hedef bitiş noktalarını tanımlayan yönlendirme tablolarını belirleyen bir yönlendirme filtreleri kümesini tanımlamak için bir yapılandırma bölümünü temsil eder. Filtre eşleştiğinde iletileri gönder. |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

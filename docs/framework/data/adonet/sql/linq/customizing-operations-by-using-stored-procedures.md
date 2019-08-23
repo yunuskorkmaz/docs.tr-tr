@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: d9f8d15b46f6e5575bd206bf572ffda0365e58f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08cc8aedac545ffa5648034119fc2267c860d499
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963289"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>Saklı Yordamları Kullanarak İşlemleri Özelleştirme
-Saklı yordamlar, varsayılan davranışı geçersiz kılma için yaygın bir yaklaşım temsil eder. Bu konuda show nasıl kullanabileceğiniz örnekler yöntemi sarmalayıcıları saklı yordamlar ve nasıl saklı yordamlar doğrudan çağırabilir miyim oluşturulur.  
+Saklı yordamlar, varsayılan davranışı geçersiz kılan yaygın bir yaklaşımı temsil eder. Bu konudaki örneklerde, saklı yordamlar için oluşturulan Yöntem sarmalayıcılarını nasıl kullanabileceğiniz ve saklı yordamları doğrudan nasıl çağırabilmeniz gösterilmektedir.  
   
- Visual Studio kullanıyorsanız, ekleme, güncelleştirme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama için Nesne İlişkisel Tasarımcısı'nı kullanabilirsiniz.  
+ Visual Studio kullanıyorsanız, ekleme, güncelleştirme ve silme işlemlerini gerçekleştirmek için saklı yordamlar atamak üzere Nesne İlişkisel Tasarımcısı kullanabilirsiniz.  
   
 > [!NOTE]
->  Geri veritabanı tarafından oluşturulan değerleri okumaya, saklı yordamlarınızı çıkış parametrelerini kullanın. Çıktı parametreleri kullanamıyorsanız, Nesne İlişkisel Tasarımcısı tarafından oluşturulan yazma güvenmek yerine bir kısmi yöntem uygulaması geçersiz kılar. Veritabanı tarafından oluşturulan değerleri için eşlenmiş üyeleri ayarlayın, sonra uygun değerlere `INSERT` veya `UPDATE` işlemleri başarıyla tamamlandı. Daha fazla bilgi için [sorumlulukları geliştirici olarak geçersiz kılma varsayılan davranış](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
+> Veritabanı tarafından oluşturulan değerleri geri okumak için, saklı yordamlarınızda çıkış parametrelerini kullanın. Çıkış parametrelerini kullanıdıysanız, Nesne İlişkisel Tasarımcısı tarafından oluşturulan geçersiz kılmalara güvenmek yerine kısmi bir yöntem uygulamasını yazın. Veritabanı tarafından oluşturulan değerlerle eşlenen üyelerin, veya `INSERT` `UPDATE` işlemler başarıyla tamamlandıktan sonra uygun değerlere ayarlanması gerekir. Daha fazla bilgi için, [varsayılan davranışı geçersiz kılan geliştiricinin sorumluluklarına](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)bakın.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte, varsayımında `Northwind` sınıf, türetilen bir sınıfta geçersiz kılmalar için kullanılan saklı yordamlar çağırmak için iki yöntem içerir.  
+ Aşağıdaki örnekte, `Northwind` sınıfının türetilmiş bir sınıfta geçersiz Kılmalarda kullanılan saklı yordamları çağırmak için iki yöntem içerdiğini varsayın.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#1)]
@@ -32,7 +32,7 @@ Saklı yordamlar, varsayılan davranışı geçersiz kılma için yaygın bir ya
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki sınıf geçersiz kılma için bu yöntemleri kullanır.  
+ Aşağıdaki sınıf, geçersiz kılma için bu yöntemleri kullanır.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#2)]
@@ -41,7 +41,7 @@ Saklı yordamlar, varsayılan davranışı geçersiz kılma için yaygın bir ya
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Kullanabileceğiniz `NorthwindThroughSprocs` tam olarak kullanacağınız gibi `Northwnd`.  
+ Yalnızca kullandığınız `NorthwindThroughSprocs` `Northwnd`gibi kullanabilirsiniz.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#3)]
