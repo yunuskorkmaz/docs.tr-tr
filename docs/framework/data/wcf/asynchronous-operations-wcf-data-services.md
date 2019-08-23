@@ -1,40 +1,40 @@
 ---
-title: Zaman uyumsuz işlemler (WCF Data Services)
+title: Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: ef41b458a3f5b977eaaff523413c1a8d3b1982a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01212b859e10ec1bbbb452486ce1aa6a2cecb583
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793425"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965824"
 ---
-# <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz işlemler (WCF Data Services)
-Web uygulamaları, iç ağ içinde çalışan uygulamalar daha yüksek gecikme istemci ve sunucu arasında uyum gerekir. Uygulamanızın performans ve kullanıcı deneyimini iyileştirmek için zaman uyumsuz yöntemleri kullanılarak öneririz <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfları erişirken [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuları Web üzerinden.  
+# <a name="asynchronous-operations-wcf-data-services"></a>Zaman uyumsuz Işlemler (WCF Veri Hizmetleri)
+Web uygulamaları, istemci ve sunucu arasında iç ağların içinde çalışan uygulamalardan daha yüksek gecikme süresine sahip olmalıdır. Uygulamanızın performans ve Kullanıcı deneyimini iyileştirmek için, Web üzerinden sunuculara erişirken <xref:System.Data.Services.Client.DataServiceContext> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıflarının zaman uyumsuz yöntemlerini kullanmanızı öneririz.  
   
- Ancak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] sunucuları işlem HTTP isteklerini zaman uyumsuz olarak bazı yöntemleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplıkları, zaman uyumlu ve yürütme devam etmeden önce tüm istek-yanıt exchange tamamlanana kadar bekleyin. Zaman uyumsuz yöntemleri [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kütüphaneleri, bu exchange için beklemeyin ve duyarlı kullanıcı arabirimi sırada korumak için uygulamanıza izin verebilirsiniz.  
+ Sunucular http isteklerini zaman uyumsuz olarak işlese de, bazı [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı yöntemleri zaman uyumludur ve yürütmeye devam etmeden önce tüm istek-yanıt alışverişi tamamlanana kadar bekler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplıklarının zaman uyumsuz yöntemleri, bu Exchange 'in tamamlanmasını beklemez ve uygulamanızın aynı sırada bir yanıt veren kullanıcı arabirimini korumasına izin verebilir.  
   
- Bir çift yöntemleri kullanarak zaman uyumsuz işlemleri gerçekleştirebilir <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601> ile başlayan sınıfları *başlamak* ve *son* sırasıyla. *Başlamak* yöntemleri kaydetme işlemi tamamlandığında hizmetine çağrı yapan bir temsilci. *Son* yöntemleri tamamlanmış işlemleri geri çağırmadan işlemek üzere kaydettirilmiş temsilci çağrılabilir. Çağırdığınızda *son* yöntemi zaman uyumsuz bir işlemi tamamlamak için bunu aynı yapmalısınız <xref:System.Data.Services.Client.DataServiceQuery%601> veya <xref:System.Data.Services.Client.DataServiceContext> işlemine başlamak için kullanılan bir örnek. Her *başlamak* yöntemi bir `state` durum nesnesi geri aramaya geçirebilirsiniz parametresi. Bu durum nesnesine alınır <xref:System.IAsyncResult> geri çağırmayı sağlanır ve karşılık gelen çağırmak için kullanılan *son* zaman uyumsuz işlemi tamamlamak için yöntemi. Örneğin, ne zaman sağlamanız <xref:System.Data.Services.Client.DataServiceQuery%601> örneği `state` çağırdığınızda parametresi <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> örneğinde aynı yöntemi <xref:System.Data.Services.Client.DataServiceQuery%601> örneği tarafından döndürülen <xref:System.IAsyncResult>. Bu örneği <xref:System.Data.Services.Client.DataServiceQuery%601> ardından çağırmak için kullanılan <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgu işlemi tamamlamak için yöntemi. Daha fazla bilgi için [nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
+ <xref:System.Data.Services.Client.DataServiceContext> Ve<xref:System.Data.Services.Client.DataServiceQuery%601> sırasıyla *BEGIN* ve *End* ile başlayan sınıflarda bir yöntem çifti kullanarak zaman uyumsuz işlemler gerçekleştirebilirsiniz. *Begin* yöntemleri, işlem tamamlandığında hizmetin çağırdığı bir temsilciyi kaydeder. *Bitiş* yöntemleri, tamamlanan işlemlerden geri çağırma işlemini işlemek için kayıtlı olan temsilde çağrılmalıdır. Zaman uyumsuz bir işlemi gerçekleştirmek için *bitiş* yöntemini çağırdığınızda, bu işlemi başlatmak için kullandığınız aynı <xref:System.Data.Services.Client.DataServiceQuery%601> veya <xref:System.Data.Services.Client.DataServiceContext> örnekten bunu yapmanız gerekir. Her *BEGIN* yöntemi, bir `state` durum nesnesini geri aramaya geçirebileceğiniz bir parametre alır. Bu durum nesnesi, <xref:System.IAsyncResult> geri çağırma ile sağlanan öğesinden alınır ve zaman uyumsuz işlemi gerçekleştirmek için karşılık gelen *bitiş* yöntemini çağırmak için kullanılır. Örneğin <xref:System.Data.Services.Client.DataServiceQuery%601> , örneğinde <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemini çağırdığınızda örneği `state` parametre olarak sağlarsanız, aynı <xref:System.Data.Services.Client.DataServiceQuery%601> örnek tarafından <xref:System.IAsyncResult>döndürülür. Bu örneği <xref:System.Data.Services.Client.DataServiceQuery%601> daha sonra sorgu işlemini tamamlamaya yönelik <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemi çağırmak için kullanılır. Daha fazla bilgi için [nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)yürütün.  
   
 > [!NOTE]
->  Yalnızca zaman uyumsuz işlemler, Silverlight için .NET Framework içinde sağlanan istemci kitaplıkları tarafından desteklenir. Daha fazla bilgi için [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Yalnızca zaman uyumsuz işlemler, Silverlight için .NET Framework belirtilen istemci kitaplıkları tarafından desteklenir. Daha fazla bilgi için bkz. [WCF veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
   
- .NET Framework istemci kitaplıkları, aşağıdaki zaman uyumsuz işlemleri destekler:  
+ .NET Framework istemci kitaplıkları aşağıdaki zaman uyumsuz işlemleri destekler:  
   
 |Çalışma|Yöntemler|  
 |---------------|-------------|  
-|Yürütülen bir <xref:System.Data.Services.Client.DataServiceQuery%601>.|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
-|Bir sorgu yürütme <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  
-|Bir batch sorgu yürütülürken <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecuteBatch%2A>|  
-|Bir ilgili varlığa yüklenirken <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginLoadProperty%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndLoadProperty%2A>|  
-|Nesneler için değişiklikler kaydediliyor <xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
+|Bir <xref:System.Data.Services.Client.DataServiceQuery%601>yürütülüyor.|-   <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A>|  
+|Öğesinden bir sorgu yürütülüyor <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A>|  
+|Öğesinden bir toplu iş sorgusu yürütülüyor <xref:System.Data.Services.Client.DataServiceContext>.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginExecuteBatch%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndExecuteBatch%2A>|  
+|İle ilgili bir varlık <xref:System.Data.Services.Client.DataServiceContext>yükleme.|-   <xref:System.Data.Services.Client.DataServiceContext.BeginLoadProperty%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndLoadProperty%2A>|  
+|İçindeki nesnelerde yapılan değişiklikler kaydediliyor<xref:System.Data.Services.Client.DataServiceContext>|-   <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A><br />-   <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>|  
   
-## <a name="threading-considerations-for-asynchronous-operations"></a>Zaman uyumsuz işlemler için Değerlendirmeler iş parçacığı oluşturma  
- Çok iş parçacıklı bir uygulamada, zaman uyumsuz işlem için bir geri çağırma olarak kayıtlı temsilci değil gerekmeyen çağrıldığında çağırmak için kullanılan aynı iş parçacığında *başlamak* yönteminin, ilk istek oluşturur. Nereye geri çağırma gerekir çağrılacak belirli bir iş parçacığında bir uygulamada, açıkça yürütülmesini sıralamanız gerekir *son* istenen iş parçacığı, yanıtı işleyen yöntem. Örneğin, Windows Presentation Foundation WPF tabanlı uygulamalar ve Silverlight tabanlı uygulamaların yanıt UI iş parçacığına geri kullanarak sıralanması gerekir <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metodunda <xref:System.Windows.Threading.Dispatcher> nesne. Daha fazla bilgi için [(WCF Veri Hizmetleri/Silverlight) veri hizmetini sorgulama](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
+## <a name="threading-considerations-for-asynchronous-operations"></a>Zaman uyumsuz Işlemler için iş parçacığı konuları  
+ Çok iş parçacıklı bir uygulamada, zaman uyumsuz işlem için geri arama olarak kaydedilen temsilcinin, başlangıç yöntemini çağırmak için kullanılan aynı iş parçacığında çağrılması gerekmez, bu da ilk isteği oluşturur. Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, yanıtı işleyen *bitiş* yönteminin yürütülmesini, istenen iş parçacığına açıkça sıramalısınız. Örneğin, Windows Presentation Foundation (WPF) tabanlı uygulamalar ve Silverlight tabanlı uygulamalarda, yanıt, <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> <xref:System.Windows.Threading.Dispatcher> nesne üzerindeki yöntemi kullanılarak UI iş parçacığına geri sıralanmalıdır. Daha fazla bilgi için bkz. [veri hizmetini sorgulama (WCF veri Hizmetleri/Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,43 +2,43 @@
 title: Teslim Edilemeyen İletiler Sırası
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425491"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962623"
 ---
 # <a name="dead-letter-queues"></a>Teslim Edilemeyen İletiler Sırası
-Bu örnek ve teslim başarısız olmuş bir iletiyi işlemek nasıl gösterir. Dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding` bağlama. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.
+Bu örnek, teslimin başarısız olduğu iletileri nasıl işleyeceğinizi ve işleyeceğini gösterir. Bu [işlem, IŞLENEN MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örneğini temel alır. Bu örnek, `netMsmqBinding` bağlamayı kullanır. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
 
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!NOTE]
->  Bu örnek yalnızca üzerinde kullanılabilir olan her uygulama geçerliliğini yitirmiş kuyruk gösterir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Örnek, varsayılan sistem genelinde kuyruklar için MSMQ 3.0 kullanmak üzere değiştirilebilir [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Bu örnek, yalnızca üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir olan her bir uygulama atılacak ileti sırasını gösterir. Örnek, ve [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] [!INCLUDE[wxp](../../../../includes/wxp-md.md)]üzerinde MSMQ 3,0 için varsayılan sistem genelinde kuyrukları kullanacak şekilde değiştirilebilir.
 
- Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.
+ Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
 
- Kuyruğa alınan iletişim belirli bir miktarda dormancy içerebildiğinden, bir yaşam süresi değerini zamanından daha sonradır geçti, ileti uygulamaya teslim değil emin olmak için iletide ilişkilendirmek isteyebilirsiniz. Durumda, burada bir uygulama bir ileti teslim başarısız olup olmadığını bilgilendirilmesi gerekir vardır. Bu durumların tümünde gibi zaman yaşam iletideki süresi doldu veya iletinin teslim başarısız, ileti sahipsiz sıraya konur. Gönderen uygulamayı iletileri teslim edilemeyen okuyabilir ve herhangi bir eylemi başarısız teslim nedenlerle düzeltme ve ileti yeniden gönderme aralığı düzeltme girişimlerinde bulunun.
+ Kuyruğa alınan iletişim belirli bir miktarda devre dışı olabileceğinden, iletinin saati geçmiş olursa uygulamaya teslim edilmediğini sağlamak için ileti üzerinde bir yaşam süresi değeri ilişkilendirmek isteyebilirsiniz. Ayrıca, bir iletinin teslim başarısız olup olmadığını bir uygulamanın bilgilendirilmesi gereken durumlar da vardır. Bu durumların tümünde, iletideki yaşam süresi dolduğunda veya ileti teslimi başarısız olduğunda, ileti atılacak bir sıra kuyruğuna konur. Gönderen uygulama daha sonra teslim edilemeyen ileti sırasındaki iletileri okuyabilir ve başarısız teslimat nedenlerini düzeltmek ve iletiyi yeniden göndermek için hiçbir eylemde yer alan düzeltici eylemler gerçekleştirebilir.
 
- Teslim edilemeyen kuyrukta `NetMsmqBinding` bağlama şu özelliklerde ifade edilir:
+ `NetMsmqBinding` Bağlamadaki atılacak ileti sırası aşağıdaki özelliklerde ifade edilir:
 
-- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Gerekli istemci tarafından eski ileti sırası türünü express özellik. Bu numaralandırma aşağıdaki değerlere sahip:
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>istemcisi için gerekli atılacak ileti sırası türünü ifade eden özellik. Bu numaralandırma aşağıdaki değerlere sahiptir:
 
-- `None`: Hiçbir eski ileti sırası istemci tarafından gereklidir.
+- `None`: İstemci için atılacak mektup kuyruğu gerekmez.
 
-- `System`: Sistem eski ileti sırası ölü iletileri depolamak için kullanılır. Sistem eski ileti sırası bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
+- `System`: Kullanılmayan iletileri depolamak için sistem atılacak mektup kuyruğu kullanılır. Sistem atılacak ileti kuyruğu, bilgisayarda çalışan tüm uygulamalar tarafından paylaşılır.
 
-- `Custom`: Kullanarak belirtilen özel bir eski ileti sırası <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> özelliği ölü iletileri depolamak için kullanılır. Bu özellik yalnızca üzerinde kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)]. Aynı bilgisayarda çalışan diğer uygulamalarla paylaşmak yerine, uygulamanın kendi geçerliliğini yitirmiş kuyruk kullanmanız gerekir, bu kullanılır.
+- `Custom`: <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Özelliği kullanılarak belirtilen özel bir atılacak mektup kuyruğu, ölü iletileri depolamak için kullanılır. Bu özellik yalnızca ' de [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir. Bu, uygulamanın aynı bilgisayar üzerinde çalışan diğer uygulamalarla paylaşılması yerine kendi atılacak bir sıra kullanması gerektiğinde kullanılır.
 
-- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> belirli bir kuyruğa atılacak kullanmak için express özellik. Bu yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>bir atılacak ileti sırası olarak kullanılacak sırayı ifade etmek için özelliği. Bu yalnızca içinde [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir.
 
- Bu örnekte, istemci bir işlem kapsamında hizmetten toplu iletiler gönderir ve "zaman yaşam" Bu iletileri (yaklaşık 2 saniye) için rastgele düşük bir değer belirtir. İstemci Ayrıca, süresi dolan iletileri kuyruğa kullanmak için özel bir sahipsiz sırayı belirtir.
+ Bu örnekte, istemci, bir işlemin kapsamı içinde hizmete toplu bir ileti gönderir ve bu iletiler için "yaşam süresi" (yaklaşık 2 saniye) için rastgele bir düşük değer belirtir. İstemci Ayrıca, kullanım dışı olan iletileri sıraya almak için kullanılacak özel bir atılacak mektup kuyruğu belirtir.
 
- İstemci uygulama, sahipsiz sırayı ve ileti göndermek ya da yeniden deneme iletileri okumak veya özgün iletinin teslim edilemeyen sırasına ve ileti göndermek neden olan hatayı düzeltin. Bu örnekte, istemci bir hata iletisi görüntüler.
+ İstemci uygulaması, teslim edilemeyen ileti sırasındaki iletileri okuyabilir ve iletiyi göndermeyi yeniden deneyebilir ya da özgün iletinin atılacak ileti kuyruğuna yerleştirilmesine neden olan hatayı düzeltebilir ve iletiyi gönderebilirler. Örnekte istemci bir hata iletisi görüntüler.
 
- Hizmet sözleşme `IOrderProcessor`aşağıdaki örnek kodda gösterildiği gibi.
+ Hizmet sözleşmesi aşağıdaki örnek `IOrderProcessor`kodda gösterildiği gibi olur.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -49,9 +49,9 @@ public interface IOrderProcessor
 }
 ```
 
- Hizmet kod budur [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ Örnekteki hizmet kodu, [Işlem TEMELLI MSMQ bağlamadır](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
- Hizmet ile iletişim bir işlem kapsamında gerçekleştirilir. Hizmet iletileri kuyruktan okuyan işlemi gerçekleştirir ve işlemin sonuçları görüntüler. Uygulama eski ileti sırası için teslim edilemeyen iletiler de oluşturur.
+ Hizmet ile iletişim, bir işlemin kapsamı içinde gerçekleşir. Hizmet kuyruktaki iletileri okur, işlemi gerçekleştirir ve sonra işlemin sonuçlarını görüntüler. Uygulama, atılacak iletiler için atılacak mektup kuyruğu da oluşturur.
 
 ```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.
@@ -108,12 +108,12 @@ class Client
 }
 ```
 
- İstemcinin yapılandırma hizmete erişmek ileti için kısa bir süre belirtir. Belirtilen süre içinde ileti iletilemedi, ileti süresi dolmadan ve eski ileti sırası için taşınır.
+ İstemcinin yapılandırması, iletinin hizmete ulaşması için kısa bir süre belirtir. İleti belirtilen süre içinde iletilemez, iletinin süresi dolar ve atılacak ileti kuyruğuna taşınır.
 
 > [!NOTE]
->  Bu, istemcinin belirtilen süre içinde hizmet kuyruğa ileti teslim mümkündür. Teslim edilemeyen Hizmeti'ni çalışırken görmek emin olmak için İstemci Hizmeti başlatmadan önce çalıştırmalısınız. İleti zaman aşımına uğrar ve edilemeyen hizmete teslim edilir.
+> İstemci, iletiyi belirtilen süre içinde hizmet kuyruğuna teslim etmek mümkündür. İşlem sırasında atılacak ileti hizmetini gördiğinizden emin olmak için, hizmeti başlatmadan önce istemcisini çalıştırmalısınız. İleti zaman aşımına uğrar ve atılacak ileti hizmetine gönderilir.
 
- Uygulama, eski ileti sırası kullanmak için hangi sıranın tanımlamanız gerekir. Sıra belirtilmezse, varsayılan sistem genelinde işlem eski ileti sırası eski iletilerin sıraya almak için kullanılır. Bu örnekte, istemci uygulamayı kendi uygulama sahipsiz sırayı belirtir.
+ Uygulamanın, atılacak ileti sırası olarak hangi kuyruğun kullanılacağını tanımlamanız gerekir. Hiçbir kuyruk belirtilmemişse, ölü iletileri sıraya almak için varsayılan sistem genelinde işlem atılacak ileti sırası kullanılır. Bu örnekte, istemci uygulaması kendi uygulama atılacak mektup sırasını belirtir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -146,12 +146,12 @@ class Client
 </configuration>
 ```
 
- Teslim edilemeyen mesaj servisi iletileri teslim edilemeyen kuyruktaki iletileri okur. Edilemeyen mesaj hizmeti uygulayan `IOrderProcessor` sözleşme. Uygulaması ancak değil işlem siparişlere. Teslim edilemeyen mesaj servisi siparişleri işleme olanağı yok ve bir istemci hizmetidir.
+ Atılacak ileti hizmeti, iletileri atılacak ileti sırasından okur. Teslim edilemeyen ileti hizmeti `IOrderProcessor` sözleşmeyi uygular. Ancak, bu uygulama, siparişlerin işlenmesi için değildir. Atılacak ileti hizmeti bir istemci hizmetidir ve siparişleri işleme olanağı yoktur.
 
 > [!NOTE]
->  Eski ileti sırası istemci kuyruk ve istemci Kuyruk yöneticisi için yereldir.
+> Atılacak ileti sırası bir istemci kuyruğu ve istemci kuyruğu yöneticisinin yereldir.
 
- Bir ileti teslimi ve gerçekleştirilen işlemlerin düzeltici önlemleri başarısız oldu. nedeni edilemeyen mesaj hizmeti uygulaması denetler. Bir ileti başarısızlık iki numaralandırmalara yakalanan <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> ve <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Alabileceğiniz <xref:System.ServiceModel.Channels.MsmqMessageProperty> gelen <xref:System.ServiceModel.OperationContext> aşağıdaki örnek kodda gösterildiği gibi:
+ Atılacak ileti hizmeti uygulamasının bir ileti tesliminin başarısız olup olmadığını denetler ve düzeltici ölçüler alır. İleti hatasının nedeni, ve <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>olmak üzere iki Numaralandırmalarla yakalanır. Aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.Channels.MsmqMessageProperty> <xref:System.ServiceModel.OperationContext> gibi öğesinden öğesini alabilirsiniz:
 
 ```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Geçerliliğini yitirmiş kuyruk iletilerindeki iletiyi işlemeyi hizmetine gönderilen iletileri ' dir. Bu nedenle, kuyruktan iletileri teslim edilemeyen mesaj servisi okur, Windows Communication Foundation (WCF) kanal katmanını uyuşmazlığı uç noktaların bulur ve ileti göndermez. Bu durumda, ileti işleme hizmeti siparişin ele ancak edilemeyen mesaj hizmeti tarafından alındı. Farklı bir uç noktasına yönelik bir ileti almak için bir adres filtresi eşleşen herhangi bir adres için belirtilen `ServiceBehavior`. Bu, başarılı bir şekilde teslim edilemeyen kuyruktan okunmak iletilerini işlemek için gereklidir.
+ Atılacak ileti sırasındaki iletiler, iletiyi işleyen hizmete yönelik iletilerdir. Bu nedenle, atılacak ileti hizmeti sıradaki iletileri okuduğunda, Windows Communication Foundation (WCF) Kanal katmanı bitiş noktalarında uyuşmazlığını bulur ve iletiyi göndermez. Bu durumda, ileti sipariş işleme hizmetine değinilmesi, ancak atılacak ileti hizmeti tarafından alınır. Farklı bir uç noktaya yönelik bir ileti almak için, içinde `ServiceBehavior`herhangi bir adresle eşleşecek bir adres filtresi belirtilir. Bu, atılacak ileti sırasından okunan iletileri başarıyla işlemek için gereklidir.
 
- Başarısızlık nedeni bu örnekte, zaman aşımına uğradı ileti iletinin teslim edilemeyen mesaj servisi beşe. Diğer nedenlerle, aşağıdaki örnek kodda gösterildiği gibi teslim hatası gösterir:
+ Bu örnekte, hata nedeni iletinin zaman aşımına uğraması durumunda, atılacak ileti hizmeti iletiyi yeniden sonlandırır. Diğer tüm nedenlerden dolayı, aşağıdaki örnek kodda gösterildiği gibi teslim hatası görüntülenir:
 
 ```csharp
 // Service class that implements the service contract.
@@ -228,7 +228,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
 }
 ```
 
- Aşağıdaki örnek, bir edilemeyen mesaj yapılandırmasını gösterir:
+ Aşağıdaki örnek, atılacak bir ileti için yapılandırmayı gösterir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -265,20 +265,20 @@ public class PurchaseOrderDLQService : IOrderProcessor
 </configuration>
 ```
 
- Çalışan örnek eski ileti sırası her uygulama için nasıl çalıştığını görmek için çalıştırmayı 3 yürütülebilir dosyaları vardır; İstemci, hizmeti ve her uygulama için teslim edilemeyen kuyruktan okuyan ve hizmete ileti beşe edilemeyen hizmet. Konsol uygulamaları windows konsol çıkışında ile tümü.
+ Örneği çalıştırırken, her uygulama için atılacak ileti sırasının nasıl çalıştığını görmek için çalıştırılacak 3 yürütülebilir dosya vardır; her uygulama için atılacak ileti sırasından okuyan ve iletiyi yeniden sonlandıran istemci, hizmet ve atılacak ileti hizmeti. Hepsi konsol Windows 'da çıkışı olan konsol uygulamalardır.
 
 > [!NOTE]
->  Sıraya alma kullanımda olduğundan, istemci ve hizmet aynı zamanda açık ve çalışıyor olması gerekmez. İstemcisini çalıştıran da kapatın ve ardından hizmeti başlatın ve hala iletilerini alır. Hizmeti başlatın ve böylece kuyruğa oluşturulabilir kapatılmalıdır.
+> Kuyruk kullanımda olduğundan, istemci ve hizmetin aynı anda çalışıyor olması gerekmez. İstemcisini çalıştırabilir, kapatabilir ve ardından hizmeti başlatabilir ve yine de iletilerini alabilir. Kuyruğun oluşturulabilmesi için hizmeti başlatmanız ve kapatmanız gerekir.
 
- İstemci, istemci çalıştırırken, ileti görüntülenir:
+ İstemci çalıştırılırken, istemci şu iletiyi görüntüler:
 
 ```
 Press <ENTER> to terminate client.
 ```
 
- İletiyi göndermek istemci çalıştı ancak kısa bir zaman aşımı iletisi süresi doldu ve artık her uygulama için eski ileti sırası olarak sıraya alınır.
+ İstemci iletiyi gönderilmeye çalıştı, ancak kısa bir zaman aşımıyla, iletinin süresi doldu ve artık her uygulama için atılacak ileti kuyruğunda sıraya alındı.
 
- İletiyi okur ve görüntüler hata kodu ve ileti hizmet beşe edilemeyen hizmet çalıştırılacaktır.
+ Daha sonra iletiyi okuyan ve hata kodunu görüntüleyen ve iletiyi hizmete geri sonlandıran atılacak mektup hizmetini çalıştırırsınız.
 
 ```
 The dead letter service is ready.
@@ -293,7 +293,7 @@ Trying to resend the message
 Purchase order resent
 ```
 
- Hizmet başlar ve ardından yakın iletiyi okur ve işler.
+ Hizmet başlar ve sonra yeniden gönderilen iletiyi okur ve işler.
 
 ```
 The service is ready.
@@ -308,29 +308,29 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
         Order status: Pending
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
+2. Önce hizmet çalıştırıldığında, sıranın mevcut olduğundan emin olmak için kontrol edilir. Sıra yoksa, hizmet bir tane oluşturur. Kuyruğu oluşturmak için önce hizmeti çalıştırabilir veya MSMQ kuyruğu Yöneticisi aracılığıyla bir tane oluşturabilirsiniz. Windows 2008 ' de bir sıra oluşturmak için aşağıdaki adımları izleyin.
 
-    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012 ' de Sunucu Yöneticisi açın.
 
-    2. Genişletin **özellikleri** sekmesi.
+    2. **Özellikler** sekmesini genişletin.
 
-    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. **Özel Ileti kuyrukları**' ne sağ tıklayıp **Yeni**, **özel kuyruk**' u seçin.
 
-    4. Denetleme **işlem** kutusu.
+    4. **İşlem** kutusunu işaretleyin.
 
-    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Yeni `ServiceModelSamplesTransacted` kuyruğun adı olarak girin.
 
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Örnek tek veya çoklu bilgisayar yapılandırma değişikliği kuyrukta adları uygun şekilde, localhost bilgisayarın tam adıyla değiştirerek çalıştırıp yönergeleri [WindowsCommunicationFoundationörnekleriniçalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için, localhost 'u bilgisayarın tam adıyla değiştirip [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği için bir çalışma alanına katılmış bir bilgisayarda çalıştırmak için
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği çalışma grubuna katılmış bir bilgisayarda çalıştırmak için
 
-1. Bilgisayarınız bir etki alanının parçası değilse, kimlik doğrulama modu ve koruma düzeyi ayarlayarak aktarım güvenliği devre dışı kapatma `None` aşağıdaki örnek yapılandırmada gösterildiği gibi:
+1. Bilgisayarınız bir etki alanının parçası değilse, kimlik doğrulama modunu ve koruma düzeyini `None` aşağıdaki örnek yapılandırmada gösterildiği gibi olarak ayarlayarak aktarım güvenliğini kapatın:
 
     ```xml
     <bindings>
@@ -342,21 +342,21 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     </bindings>
     ```
 
-     Uç nokta bağlamayla ilişkili uç noktanın ayarlayarak olduğundan emin olun `bindingConfiguration` özniteliği.
+     Uç noktanın `bindingConfiguration` özniteliğini ayarlayarak bitiş noktasının bağlama ile ilişkili olduğundan emin olun.
 
-2. Örneği çalıştırmadan önce DeadLetterService, sunucu ve istemci üzerindeki yapılandırmayı değiştirdiğinizden emin olun.
+2. Örneği çalıştırmadan önce DeadLetterService, sunucu ve istemcideki yapılandırmayı değiştirdiğinizden emin olun.
 
     > [!NOTE]
-    >  Ayarı `security mode` için `None` ayarlamakla eşdeğerdir `MsmqAuthenticationMode`, `MsmqProtectionLevel` ve `Message` güvenlik `None`.
+    >  `security mode` Ayarı,`MsmqProtectionLevel` ayarına ve güvenliğineeşdeğerdir.`Message` `None` `MsmqAuthenticationMode` `None`
 
 ## <a name="comments"></a>Açıklamalar
- Varsayılan olarak `netMsmqBinding` bağlama taşıma, güvenlik etkin. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte aktarım güvenliği türünü belirleyin. Varsayılan kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. Kimlik doğrulama ve imzalama özelliği sağlamak MSMQ için bir etki alanının parçası olması gerekir. Bir etki alanının parçası olmayan bir bilgisayarda bu örneği çalıştırmak, şu hatayı alırsınız: "Kullanıcının iç message queuing sertifikası yok".
+ Varsayılan olarak, `netMsmqBinding` bağlama aktarımında güvenlik etkindir. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte taşıma güvenliği türü belirlenir. Varsayılan olarak, kimlik doğrulama modu olarak `Windows` ayarlanır ve koruma düzeyi olarak `Sign`ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ 'nun bir etki alanının parçası olması gerekir. Bu örneği bir etki alanının parçası olmayan bir bilgisayarda çalıştırırsanız, şu hatayı alırsınız: "Kullanıcının iç Message Queuing sertifikası yok".
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

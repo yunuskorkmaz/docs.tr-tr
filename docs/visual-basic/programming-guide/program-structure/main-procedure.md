@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039978"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962768"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
 Her Visual Basic uygulamasının adlı `Main`bir yordam içermesi gerekir. Bu yordam, uygulamanız için başlangıç noktası ve genel denetim görevi görür. .NET Framework, uygulamanızı yüklemiş `Main` ve denetimi geçirmeye hazırsa, yordamınız çağrılır. Windows Forms uygulaması oluşturmadığınız takdirde, kendi üzerinde çalışan uygulamalar için `Main` yordamı yazmanız gerekir.
@@ -33,7 +33,7 @@ Her Visual Basic uygulamasının adlı `Main`bir yordam içermesi gerekir. Bu yo
  `Main` Yordamı belirtmenin dört yolu vardır. Bağımsız değişkenler alabilir veya içermez ve bir değer döndürebilir.
 
 > [!NOTE]
->  Bir sınıfında bildirirseniz `Main` `Shared` anahtar sözcüğünü kullanmanız gerekir. Bir modülde `Main` olması `Shared`gerekmez.
+> Bir sınıfında bildirirseniz `Main` `Shared` anahtar sözcüğünü kullanmanız gerekir. Bir modülde `Main` olması `Shared`gerekmez.
 
 - En basit yol, bağımsız değişken olmayan `Sub` veya bir değer döndüren bir yordam bildirmenin bir yoludur.
 

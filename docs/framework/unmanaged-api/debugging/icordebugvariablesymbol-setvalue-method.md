@@ -1,18 +1,18 @@
 ---
-title: ICorDebugVariableSymbol::SetValue yöntemi
+title: 'ICorDebugVariableSymbol:: SetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5c1c77b92d94062206cf9eb38981f38ff2a1cad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5436f56d3dcad7de3df2296485b0a36e5b3cfd79
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967961"
 ---
-# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue yöntemi
-Bir bayt dizisi değeri bir değişkene atar.  
+# <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol:: SetValue yöntemi
+Bir bayt dizisinin değerini bir değişkene atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,36 +29,36 @@ HRESULT SetValue(
   
 ## <a name="parameters"></a>Parametreler  
  `offset`  
- [in] Değişkenin değerini ayarlamak, başlangıç uzaklığı. Bu parametre, bir nesne üyesi alanlara yazılırken kullanılır.  
+ 'ndaki Değişkenin değeri ayarlanacak başlangıç boşluğu. Bu parametre, bir nesnedeki üye alanlarına yazılırken kullanılır.  
   
  `threadID`  
- [in] İş parçacığı tanımlayıcısı, iş parçacığı bağlamı yeni değeri gösterecek şekilde güncelleştirilmesi gerekir.  
+ 'ndaki Bağlamını yeni değeri yansıtacak şekilde güncellenmesi gereken iş parçacığının iş parçacığı tanımlayıcısı.  
   
  `cbContext`  
- [in] İş parçacığı içeriğinin bayt cinsinden boyutu.  
+ 'ndaki İş parçacığı bağlamının bayt cinsinden boyutu.  
   
  `context`  
- [in] Değeri yazmak için kullanılan iş parçacığı bağlamı.  
+ 'ndaki Değeri yazmak için kullanılan iş parçacığı bağlamı.  
   
  `cbValue`  
- [in] Bayt cinsinden boyutu `pValue` arabellek.  
+ 'ndaki `pValue` Arabelleğin bayt cinsinden boyutu.  
   
  `pValue`  
- [in] Ayarlanacak değer içeren arabellek.  
+ 'ndaki Ayarlanacak değeri içeren arabellek.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

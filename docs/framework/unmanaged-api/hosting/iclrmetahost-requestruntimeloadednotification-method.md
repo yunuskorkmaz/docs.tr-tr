@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965000"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification Yöntemi
-Bir ortak dil çalışma zamanı (CLR) sürümünü ilk yüklendi, ancak henüz başlatılmadı çağrılacak garantili bir geri çağırma işlevini sağlar. Bu yöntem yerine geçer [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) işlevi.  
+Ortak dil çalışma zamanı (CLR) sürümü ilk kez yüklendiğinde, ancak henüz başlamamışsa çağrılan bir geri çağırma işlevi sağlar. Bu yöntem [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) işlevinin yerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,26 +36,26 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>Parametreler  
  `pCallbackFunction`  
- [in] Yeni bir çalışma zamanı yüklendiğinde çağrılan geri çağırma işlevi.  
+ 'ndaki Yeni bir çalışma zamanı yüklendiğinde çağrılan geri çağırma işlevi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem aşağıdaki özel HRESULT'ları yanı sıra HRESULT döndürür yöntemi hatayı gösteren hatalar.  
+ Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.  
   
 |HRESULT|Açıklama|  
 |-------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_POINTER|`pCallbackFunction` NULL olur.|  
+|E_POINTER|`pCallbackFunction`null.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Geri çağırma şu şekilde çalışır:  
+ Geri çağırma aşağıdaki şekilde işe yarar:  
   
 - Geri çağırma yalnızca bir çalışma zamanı ilk kez yüklendiğinde çağrılır.  
   
-- Geri çağırma desteklemeyeceğini aynı çalışma zamanı yükler için çağrılmaz.  
+- Aynı çalışma zamanının yer aldığı yük yükleri için geri çağırma çağrılmaz.  
   
-- Reentrant olmayan çalışma zamanı yükler için geri çağırma işlevi için çağrı serileştirilir.  
+- Yer suz çalışma zamanı yükleri için geri çağırma işlevine yapılan çağrılar serileştirilir.  
   
- Geri çağırma işlevine aşağıdaki prototip sahiptir:  
+ Geri çağırma işlevi aşağıdaki prototiple sahiptir:  
   
 ```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -64,7 +64,7 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
                      CallbackThreadUnsetFnPtr pfnCallbackThreadUnset);  
 ```  
   
- Geri arama işlev prototipleri aşağıdaki gibidir:  
+ Geri çağırma işlevi prototipleri aşağıdaki gibidir:  
   
 - `pfnCallbackThreadSet`:  
   
@@ -78,25 +78,25 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Konak yüklenemiyor veya yeniden girilen bir biçimde yüklenmesi başka bir çalışma zamanı neden planlıyorsa `pfnCallbackThreadSet` ve `pfnCallbackThreadUnset` geri aramada işlevi aşağıdaki şekilde kullanılmalıdır. sağlanan parametre:  
+ Ana bilgisayar yüklemeyi amaçlıyordu veya başka bir çalışma zamanının `pfnCallbackThreadSet` yeniden eklenen bir şekilde yüklenmesine neden olursa, geri çağırma işlevinde belirtilen ve `pfnCallbackThreadUnset` parametreleri aşağıdaki şekilde kullanılmalıdır:  
   
-- `pfnCallbackThreadSet` Böyle bir yük denenmeden önce bir çalışma zamanı yükleme neden olabilecek bir iş parçacığı tarafından çağrılmalıdır.  
+- `pfnCallbackThreadSet`Bu tür bir yük denenerek çalışma zamanı yüküne neden olabilecek iş parçacığı tarafından çağrılmalıdır.  
   
-- `pfnCallbackThreadUnset` iş parçacığı artık böyle bir çalışma zamanı yükleme neden olur (ve ilk geri çağrısından döndürerek önce) çağrılmalıdır.  
+- `pfnCallbackThreadUnset`iş parçacığı artık böyle bir çalışma zamanı yüküne (ve ilk geri aramadan dönmeden önce) neden olmaz çağrılmalıdır.  
   
-- `pfnCallbackThreadSet` ve `pfnCallbackThreadUnset` reentrant olmayan olduğunda.  
+- `pfnCallbackThreadSet`ve `pfnCallbackThreadUnset` her ikisi de yer yok.  
   
 > [!NOTE]
->  Ana bilgisayar uygulamaları gerekir çağrılmayan `pfnCallbackThreadSet` ve `pfnCallbackThreadUnset` kapsamı dışında `pCallbackFunction` parametresi.  
+> Konak uygulamalar, `pfnCallbackThreadSet` `pfnCallbackThreadUnset` parametre`pCallbackFunction` kapsamını çağırmamalıdır ve dışarıda olmamalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MetaHost.h  
+ **Üst bilgi** MetaHost. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

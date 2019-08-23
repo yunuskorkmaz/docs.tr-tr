@@ -1,5 +1,5 @@
 ---
-title: My.Forms nesnesi (Visual Basic)
+title: My. Forms nesnesi (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.Forms
@@ -7,50 +7,50 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: 4998097b910a504461a34af3cc159ddb1c74cc62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fa5c77dd12c98100e3d17fc473a6802180d1e32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949324"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965978"
 ---
 # <a name="myforms-object"></a>My.Forms Nesnesi
-Geçerli projede bildirilen her Windows formunu örneğini erişmek için özellikleri sağlar.  
+Geçerli projede belirtilen her bir Windows formunun örneğine erişim için özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `My.Forms` Nesne örneği geçerli projedeki her bir form sağlar. Özelliğin adı özelliği erişen adı ile aynıdır.   
+ Nesnesi `My.Forms` , geçerli projede her formun bir örneğini sağlar. Özelliğin adı, özelliğin eriştiği form adıyla aynıdır.   
   
- Tarafından sağlanan forms erişebileceğiniz `My.Forms` nitelik olmadan formun adını kullanarak nesne. Özellik adı, formun tür adıyla aynı olduğundan, bu varsayılan bir örnek varmış gibi bir form erişmenize olanak sağlar. Örneğin, `My.Forms.Form1.Show` eşdeğerdir `Form1.Show`.  
+ `My.Forms` Nesne tarafından sunulan formlara, nitelik olmadan formun adını kullanarak erişebilirsiniz. Özellik adı formun tür adıyla aynı olduğundan, bir forma varsayılan bir örnek olsa da erişmenize izin verir. Örneğin, `My.Forms.Form1.Show` öğesine `Form1.Show`eşdeğerdir.  
   
- `My.Forms` Nesnesi yalnızca geçerli projeyle ilişkili formları kullanıma sunar. DLL içinde bildirilen formlara erişimi sağlamaz. Bir DLL sağlayan bir forma erişmek için tam olarak yazılan formun adını kullanın *dll*. *Formadı*.  
+ `My.Forms` Nesne yalnızca geçerli projeyle ilişkili formları kullanıma sunar. Başvurulan DLL 'lerde belirtilen formlara erişim sağlamaz. Bir DLL 'nin sağladığı bir forma erişmek için, formun adı dll olarak yazılmış şekilde tam adını kullanmanız gerekir. *FormName*.  
   
- Kullanabileceğiniz <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> uygulamanın tüm açık form koleksiyonu alınacağı özellik.  
+ Tüm uygulamanın açık formlarının <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A> bir koleksiyonunu almak için özelliğini kullanabilirsiniz.  
   
- Nesne ve özellikleri, yalnızca Windows uygulamaları için kullanılabilir.  
+ Nesnesi ve özellikleri yalnızca Windows uygulamaları için kullanılabilir.  
   
 ## <a name="properties"></a>Özellikler  
- Her bir özelliği `My.Forms` nesnesi geçerli proje içinde bir formun örneğine erişim sağlar. Özelliğin adı özelliği erişen adı ile aynıdır ve özellik türü form denetiminin türü ile aynıdır.  
+ `My.Forms` Nesnesinin her özelliği, geçerli projedeki bir form örneğine erişim sağlar. Özelliğin adı, özelliğin eriştiği form adı ile aynıdır ve özellik türü formun türü ile aynıdır.  
   
 > [!NOTE]
->  Bir ad çakışması varsa, bir forma erişmek için özellik adı olan *RootNamespace*_*Namespace*\_*formadı*. Örneğin, iki forms adlı göz önünde bulundurun `Form1.`biçimlerinden kök ad alanında olup olmadığını `WindowsApplication1` ve ad alanındaki `Namespace1`, bu formu üzerinden eriştiğiniz `My.Forms.WindowsApplication1_Namespace1_Form1`.  
+> Bir ad çakışması varsa, bir forma erişmek için özellik adı,\_ *RootNamespace*_ ad alanı*FormName*olur. Örneğin, bu formlardan biri kök ad `Form1.` `WindowsApplication1` alanında ve ad `Namespace1`alanında olduğunda, bu formdan `My.Forms.WindowsApplication1_Namespace1_Form1`' a eriştiğinizde adlı iki formu göz önünde bulundurun.  
   
- `My.Forms` Nesnesi başlangıç sırasında oluşturulan uygulamanın ana formu örneğine erişim sağlar. Diğer tüm biçimler için `My.Forms` nesnesi erişilir ve depolar, formun yeni bir örneğini oluşturur. Bu özelliğe erişmek için sonraki denemeler form örneğini döndürür.  
+ `My.Forms` Nesnesi, başlangıçta oluşturulan uygulamanın ana formunun örneğine erişim sağlar. Diğer tüm formlarda, `My.Forms` nesne erişildiğinde formun yeni bir örneğini oluşturur ve depolar. Bu özelliğe daha sonra erişme girişimleri, formun bu örneğini döndürür.  
   
- Atayarak bir formu dispose `Nothing` özelliğine oluşturan. Özellik ayarlayıcı çağrılarında <xref:System.Windows.Forms.Form.Close%2A> form ve ardından atar yöntemi `Nothing` depolanmış değere. Dışında herhangi bir değer atamanız durumunda `Nothing` ayarlayıcı özelliğine atar bir <xref:System.ArgumentException> özel durum.  
+ Form için özelliğine atayarak `Nothing` formu atabilirsiniz. Özellik ayarlayıcısı formun <xref:System.Windows.Forms.Form.Close%2A> yöntemini çağırır ve ardından depolanan değere atar `Nothing` . Özelliği dışında bir değer `Nothing` atarsanız, ayarlayıcı bir <xref:System.ArgumentException> özel durum oluşturur.  
   
- Bir özelliği olup olmadığını sınayabilirsiniz `My.Forms` nesneyi kullanarak bir formun örneğini depolar `Is` veya `IsNot` işleci. Bu işleçler özelliğinin değeri olup olmadığını denetlemek için kullanabileceğiniz `Nothing`.  
+ Bir `My.Forms` nesnenin özelliğinin, `Is` veya `IsNot` işlecini kullanarak formun bir örneğini depolayıp depomadığını test edebilirsiniz. Özelliğin değerinin olup olmadığını denetlemek için bu işleçleri kullanabilirsiniz `Nothing`.  
   
 > [!NOTE]
->  Genellikle, `Is` veya `IsNot` işleci olan bir karşılaştırma yapmak için özelliğinin değeri okunamıyor. Ancak, bu özellik şu anda depoluyorsa `Nothing`, özellik formun yeni bir örneğini oluşturur ve bu örneği döndürür. Ancak, Visual Basic derleyici özelliklerini işler `My.Forms` sağlar ve farklı nesne `Is` veya `IsNot` değerini değiştirmeden özelliğinin durumu denetlemek için işleci.  
+> Genellikle, `Is` veya `IsNot` işlecinin karşılaştırmayı gerçekleştirmek için özelliğinin değerini okuması gerekir. Ancak, özelliği şu anda depoluyorsa `Nothing`, özelliği formun yeni bir örneğini oluşturur ve sonra bu örneği döndürür. Ancak, Visual Basic Derleyicisi `My.Forms` nesnenin özelliklerini farklı şekilde değerlendirir ve `Is` veya `IsNot` işlecinin değeri değiştirmeden özelliğin durumunu denetlemesini sağlar.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte varsayılan başlığın değiştiğine `SidebarMenu` formu.  
+ Bu örnek, varsayılan `SidebarMenu` formun başlığını değiştirir.  
   
  [!code-vb[VbVbalrMyForms#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyForms/VB/Class1.vb#2)]  
   
- Çalışmak bu örnek için projenizde adlı bir form olmalı `SidebarMenu`.  
+ Bu örneğin çalışması için projenizin adında `SidebarMenu`bir form olması gerekir.  
   
- Bu kod yalnızca bir Windows uygulaması projesi içinde çalışır.  
+ Bu kod, yalnızca bir Windows uygulama projesinde çalışır.  
   
 ## <a name="requirements"></a>Gereksinimler  
   
@@ -58,7 +58,7 @@ Geçerli projede bildirilen her Windows formunu örneğini erişmek için özell
   
 |Proje türü|Kullanılabilir|  
 |---|---|  
-|Windows uygulama|**Evet**|  
+|Windows uygulaması|**Evet**|  
 |Sınıf Kitaplığı|Hayır|  
 |Konsol Uygulaması|Hayır|  
 |Windows Denetim Kitaplığı|Hayır|  

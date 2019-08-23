@@ -2,42 +2,42 @@
 title: MSMQ 4.0'da Zehirli İleti İşleme
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 88ce22c9376313db26a5cbe377bdc8aaee83c118
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664765"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965568"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0'da Zehirli İleti İşleme
-Bu örnek, zehirli ileti bir hizmet olarak işleme gerçekleştirmek nasıl gösterir. Bu örnek dayanır [işlem temelli MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örnek. Bu örnekte `netMsmqBinding`. Hizmeti, sıraya alınan iletileri alma hizmeti gözlemleyin sağlamak için bir şirket içinde barındırılan bir konsol uygulamasıdır.
+Bu örnek, bir hizmette çok zararlı ileti işlemenin nasıl gerçekleştirileceğini gösterir. Bu örnek, [IŞLENEN MSMQ bağlama](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) örneğine dayalıdır. Bu örnek öğesini kullanır `netMsmqBinding`. Hizmet, sıraya alınan iletileri alma hizmetini gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır.
 
- Kuyruğa alınan iletişim kullanarak bir kuyruk hizmetine istemci iletişim kurar. Daha kesin bir istemci bir kuyruğa iletiler gönderir. Hizmet iletileri kuyruktan alır. Hizmet ve istemci bu nedenle, bir kuyruk kullanarak iletişim kurmak için aynı anda çalıştırılması gerekmez.
+ Sıraya alınmış iletişimde istemci, hizmet ile bir kuyruk kullanarak iletişim kurar. Daha kesin olarak, istemci iletileri bir kuyruğa gönderir. Hizmet kuyruktaki iletileri alır. Bu nedenle, hizmet ve istemci, bir kuyruk kullanarak iletişim kurmak için aynı anda çalışıyor olması gerekmez.
 
- Zehirli ileti, ileti okuma hizmeti iletiyi işlerken art arda bir kuyruktan okunur ve bu nedenle altında ileti okuma işlemi sonlandıran bir iletidir. Bu gibi durumlarda, ileti yeniden denenir. İletiyle ilgili bir sorun varsa bu teorik olarak süresiz geçebilir. Kuyruktan okunmak ve hizmet işlemini çağırmak için işlemleri kullandığınızda yalnızca oluşabilir olduğunu unutmayın.
+ Zararlı ileti, iletiyi okuyan hizmet iletiyi işleyemeyecek ve bu nedenle iletinin okunduğu işlemi sonlandırdığında bir kuyruktan sürekli okunan bir iletidir. Bu gibi durumlarda ileti yeniden denenir. Bu, iletiyle ilgili bir sorun varsa teorik olarak sonsuza kadar devam edebilir. Bu, yalnızca kuyruktan okumak ve hizmet işlemini çağırmak için işlem kullandığınızda gerçekleşebilir.
 
- MSMQ sürümüne bağlı olarak, tam zehirli iletilerin algılanması için sınırlı algılama NetMsmqBinding destekler. Ardından iletiyi zarar olarak algılandı sonra birkaç şekilde işlenebilir. Yeniden MSMQ sürümüne bağlı olarak, NetMsmqBinding zehirli iletilerin tam işleme için sınırlı işlemeyi destekler.
+ NetMsmqBinding, MSMQ sürümüne bağlı olarak, zarar iletilerinin tam algılanması için sınırlı algılamayı destekler. İleti kired olarak algılandıktan sonra, çeşitli yollarla işlenebilir. MSMQ sürümüne bağlı olarak, NetMsmqBinding, zarar iletilerinin tam işlenmesini sağlamak için sınırlı işlemeyi destekler.
 
- Bu örnek sağlanan sınırlı zehirli özelliklerini göstermektedir [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platform ve sağlanan tam zehirli tesis [!INCLUDE[wv](../../../../includes/wv-md.md)]. Her iki örneklerinde hedefi olan zehirli ileti dışarı Taşı sırasına ardından zehirli ileti hizmeti tarafından hizmet başka bir kuyruk için.
+ Bu örnek, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ve [!INCLUDE[wxp](../../../../includes/wxp-md.md)] platformunda sunulan sınırlı zarar özelliklerini ve üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)]sunulan tam zarar özelliklerini gösterir. Her iki örnekte de amaç, zarar mesajını sıradan başka bir kuyruğa taşır ve bu da bir zarar iletisi hizmeti tarafından hizmet verebilir.
 
-## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 Poison örnek işleme
- İçinde [!INCLUDE[wv](../../../../includes/wv-md.md)], MSMQ zehirli iletileri depolamak için kullanılan bir zehirli alt kuyruk olanak sağlar. Bu örnek, en iyi zehirli iletileri kullanarak uğraşmanızı gösterir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v 4.0 zarar Işleme örneği
+ ' [!INCLUDE[wv](../../../../includes/wv-md.md)]De, MSMQ, zarar iletilerini depolamak için kullanılabilen bir zarar alt sıra özelliği sağlar. Bu örnek, kullanarak [!INCLUDE[wv](../../../../includes/wv-md.md)]zarar iletileriyle ilgili en iyi yöntemi gösterir.
 
- Zehirli ileti algılama [!INCLUDE[wv](../../../../includes/wv-md.md)] oldukça karmaşık olduğundan. Yardımcı algılama 3 özellikleri vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Sayıda belirli bir ileti kuyruktan yeniden okuma ve işleme uygulamaya gönderilen. Bunu yeniden kuyruğa ileti uygulamaya dağıtılamaz veya uygulama hizmeti işleminin geri işlem yapar çünkü alınan olduğunda yeniden bir ileti kuyruktan okunur. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> yeniden deneme kuyruğa ileti taşınır sayısıdır. Zaman <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> olan üst sınıra ulaşıldı, yeniden deneme kuyruğa ileti taşınır. Özellik <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> sonra iletiyi taşındıysa yeniden deneme kuyruktan geri ana kuyruğa zaman gecikmesi. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 0 değerine sıfırlanır. İleti yeniden denenir. İleti okumak için tüm denemeler başarısız olursa, ileti zarar olarak işaretlenir.
+ ' De [!INCLUDE[wv](../../../../includes/wv-md.md)] zarar iletisi algılama oldukça karmaşıktır. Algılamaya yardımcı olan 3 özellik vardır. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Belirli bir iletinin kuyruktan yeniden okunduğu ve işlenmek üzere uygulamaya dağıtıldığı zamanların sayısıdır. İleti uygulamaya dağıtılamadı veya uygulama işlemi hizmet işleminde geri götürüliyorsa, bir ileti sıraya geri alındığında kuyruktan yeniden okunabilir. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>, iletinin yeniden deneme kuyruğuna kaç kez taşındığını sayısıdır. Ne <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> zaman ulaşıldığında, ileti yeniden deneme kuyruğuna taşınır. Özelliği <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> , ileti yeniden deneme sırasından ana sıraya geri taşındıktan sonraki zaman gecikmesi olur. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 0 ' a sıfırlanır. İleti yeniden denenir. İletiyi okuma denemeleri başarısız olduysa, ileti kired olarak işaretlenir.
 
- İleti zarar olarak işaretlendikten sonra ileti ile ayarlarına göre dağıtılır <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> sabit listesi. Olası değerler yinelemek için:
+ İleti kired olarak işaretlendiğinde ileti, <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> Numaralandırmadaki ayarlara göre ele dağıtılır. Olası değerleri yeniden yinelemek için:
 
-- Hata (varsayılan): Hata dinleyicisi ve ayrıca hizmet ana bilgisayarı için.
+- Hata (varsayılan): Dinleyiciye ve ayrıca hizmet ana bilgisayarına hata vermek için.
 
-- Açılır: İleti bırakmak.
+- Açılan İletiyi bırakmak için.
 
-- Taşı: Zehirli ileti alt kuyruğa ileti taşımak için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Geçiş İletiyi zarar iletisi alt kuyruğuna taşımak için. Bu değer yalnızca üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir.
 
-- Reddetme: İletiyi gönderenin eski ileti sırası geri gönderme, ileti reddetmek için. Bu değer yalnızca kullanılabilir [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Mesi İletiyi reddetmek için iletiyi gönderenin teslim edilemeyen ileti kuyruğuna geri gönderebilirsiniz. Bu değer yalnızca üzerinde [!INCLUDE[wv](../../../../includes/wv-md.md)]kullanılabilir.
 
- Örnek kullanmayı gösterir `Move` zehirli ileti için değerlendirme. `Move` zehirli alt kuyruğuna Taşı iletiyi neden olur.
+ Örnek, zehirli `Move` ileti için disposition kullanımını gösterir. `Move`iletinin zarar alt kuyruğuna taşınmasına neden olur.
 
- Hizmet sözleşme `IOrderProcessor`, kuyruklar ile kullanım için uygun olan bir tek yönlü hizmeti tanımlar.
+ Hizmet sözleşmesi `IOrderProcessor`, kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlar.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- Hizmet işlemi, sipariş işleme bildiren bir ileti görüntüler. Zehirli ileti işlevselliğini göstermek için `SubmitPurchaseOrder` hizmet işlemi hizmeti rastgele bir çağrıda işlem geri alınacak bir özel durum oluşturur. Bu iletinin geri sıraya koymak neden olur. Sonuçta ileti zarar işaretlenir. Yapılandırma, zehirli ileti zehirli alt kuyruğuna Taşı şekilde ayarlanır.
+ Hizmet işlemi, sırayı işlediğini belirten bir ileti görüntüler. Zarar iletisi işlevselliğini `SubmitPurchaseOrder` göstermek için hizmet işlemi, hizmetin rastgele bir çağrısında işlemi geri almak için bir özel durum oluşturur. Bu, iletinin sıraya geri alınmasına neden olur. Sonuç olarak ileti, zarar olarak işaretlenir. Yapılandırma, zarar iletisini zarar alt kuyruğuna taşımak üzere ayarlanır.
 
 ```csharp
 // Service class that implements the service contract.
@@ -118,7 +118,7 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Hizmet yapılandırması aşağıdaki zehirli ileti özellikleri içerir: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, ve `receiveErrorHandling` aşağıdaki yapılandırma dosyasında gösterildiği gibi.
+ Hizmet yapılandırması şu zarar iletisi özelliklerini `receiveRetryCount`içerir: `retryCycleDelay`, `maxRetryCycles`,, ve `receiveErrorHandling` aşağıdaki yapılandırma dosyasında gösterildiği gibi.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -154,12 +154,12 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
-## <a name="processing-messages-from-the-poison-message-queue"></a>Zehirli ileti kuyruktan iletileri işleme
- Zehirli ileti hizmet son zehirli ileti kuyruktan iletileri okuyan ve işler.
+## <a name="processing-messages-from-the-poison-message-queue"></a>Zarar iletisi kuyruğundan iletileri işleme
+ Zarar iletisi hizmeti, son zarar iletisi kuyruğundan iletileri okur ve bunları işler.
 
- Zehirli ileti kuyruğu iletilerinde zehirli ileti hizmet uç noktasından farklı iletisi işliyor hizmete gönderilen iletileri ' dir. Bu nedenle, zehirli ileti hizmet iletileri kuyruktan okuyan, WCF kanal katmanını uyuşmazlığı uç noktaların bulur ve bu iletiyi göndermez. Bu durumda, ileti işleme hizmeti siparişin ele ancak zehirli ileti hizmet tarafından alınan. İleti farklı bir uç noktaya yönelik bile iletiyi almaya devam etmek biz eklemelisiniz bir `ServiceBehavior` filtre adreslerine eşleştirme ölçütü olduğu ileti ele alınan herhangi bir hizmet uç noktası eşleştirilecek. Bu, başarılı bir şekilde zehirli ileti kuyruktan okunmak iletilerini işlemek için gereklidir.
+ Zarar iletisi sırasındaki iletiler, iletiyi işleyen hizmete yönelik mesajlar, bu da zarar iletisi hizmet uç noktasından farklı olabilir. Bu nedenle, zarar iletisi hizmeti sıradaki iletileri okuduğunda, WCF kanal katmanı uç noktalarında uyuşmazlığını bulur ve iletiyi göndermez. Bu durumda, ileti sipariş işleme hizmetine değinmekte, ancak zarar iletisi hizmeti tarafından alınmakta olur. İleti farklı bir uç noktaya adreslenmiş olsa bile iletiyi almaya devam etmek için, eşleşme ölçütünün iletinin adreslendiği tüm `ServiceBehavior` hizmet uç noktasıyla eşleştiği bir filtre adresleri eklemesi gerekir. Bu, zarar ileti sırasından okunan iletileri başarıyla işlemek için gereklidir.
 
- Zehirli ileti hizmet uygulaması kendi hizmet uygulaması için çok benzer. Bu sözleşme uygular ve siparişleri işler. Kod örneği aşağıdaki gibidir.
+ Zarar iletisi Hizmeti uygulamasının kendisi, hizmet uygulamasına çok benzer. Sözleşmeyi uygular ve siparişleri işler. Kod örneği aşağıdaki gibidir.
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,10 +206,10 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- Sipariş işleme sırası kuyruktan iletileri okuyan hizmet, zehirli ileti hizmeti zehirli alt kuyruktan iletileri okur. Zehirli sıranın "poison" adlı bir alt kuyruk ana sıranın ve MSMQ tarafından otomatik olarak oluşturulur. Erişmek için ana kuyruk adından sağlayan bir ";" ve alt kuyruk adı, bu durumda-"Aşağıdaki örnek yapılandırmada gösterildiği zehirli".
+ Sipariş sırasından iletileri okuyan sipariş işleme hizmetinin aksine, zarar iletisi hizmeti, zarar alt kuyruğundan iletileri okur. Poison kuyruğu ana sıranın alt kuyruğudur, "Poison" olarak adlandırılır ve MSMQ tarafından otomatik olarak oluşturulur. Bu durumda, aşağıdaki örnek yapılandırmada gösterildiği gibi ana sıra adını, ardından ";" ve alt sıra adını (Bu örnekte "Poison") belirtin.
 
 > [!NOTE]
->  MSMQ v3.0 örnek zehirli kuyruk adı yerine iletiye geçtiğimizi kuyruk bir alt kuyruk değil.
+> MSMQ v 3.0 örneğinde, zarar sırası adı, iletiyi taşıdığımız sıra yerine bir alt kuyruk değildir.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -229,9 +229,9 @@ public class OrderProcessorService : IOrderProcessor
 </configuration>
 ```
 
- Örneği çalıştırdığınızda, konsol pencerelerinde istemci, hizmet ve zehirli ileti hizmet etkinlikleri görüntülenir. İstemciden hizmet alma iletileri görebilirsiniz. Her konsol penceresi Hizmetleri kapatılmaya için ENTER tuşuna basın.
+ Örneği çalıştırdığınızda, istemci, hizmet ve zarar iletisi hizmeti etkinlikleri konsol pencereleri içinde görüntülenir. Hizmetin istemciden ileti alacağını görebilirsiniz. Hizmetleri kapatmak için her bir konsol penceresinde ENTER tuşuna basın.
 
- Hizmet çalışıyor, sipariş işleme başlar ve işlemesini sonlandırmak rastgele başlatır. İleti sırası işlediği gösteriyorsa, istemci hizmeti aslında bir ileti sonlandırıldı görene kadar başka bir iletiyi göndermeyi yeniden çalıştırabilirsiniz. Yapılandırılmış zehirli ayarlarına bağlı olarak, ileti son zehirli kuyruğa geçmeden önce işleme için bir kez denenir.
+ Hizmet çalışmaya başlar, siparişlerin işlenmesi ve rastgele işlem, işlemeyi sonlandırmaya başlar. İleti siparişi işlediğini gösteriyorsa, hizmetin gerçekten bir iletiyi sonlandırdığını görene kadar başka bir ileti göndermek için istemciyi yeniden çalıştırabilirsiniz. Yapılandırılan zarar ayarlarına bağlı olarak, ileti son zararlı bir sıraya taşınmadan önce işleme için bir kez denenir.
 
 ```
 The service is ready.
@@ -256,7 +256,7 @@ Processing Purchase Order: 5ef9a4fa-5a30-4175-b455-2fb1396095fa
 Aborting transaction, cannot process purchase order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 ```
 
- Zehirli kuyruktan zehirlenmiş iletiyi okumak için zehirli ileti hizmet başlatın. Bu örnekte, zehirli ileti hizmeti iletiyi okur ve işler. Sonlandırılacak ve zarar satınalma siparişi zehirli ileti hizmet tarafından okunur görebilir.
+ Zarar sırasından zarar görmüş iletiyi okumak için zarar iletisi hizmetini başlatın. Bu örnekte, zarar iletisi hizmeti iletiyi okur ve işler. Sonlandırılan ve zarar veren satın alma sırasının, zarar iletisi hizmeti tarafından okunduğunu görebilirsiniz.
 
 ```
 The service is ready.
@@ -271,31 +271,31 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
         Order status: Pending
 ```
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Hizmet ilk olarak çalıştırılırsa, sıranın mevcut olduğundan emin olun kontrol eder. Kuyruk yoksa, bir hizmeti oluşturacaksınız. İlk sırayı oluşturmak için hizmet çalıştırabileceğiniz veya bir MSMQ Kuyruk Yöneticisi ile oluşturabilirsiniz. Windows 2008'de bir kuyruk oluşturmak için aşağıdaki adımları izleyin.
+2. Önce hizmet çalıştırıldığında, sıranın mevcut olduğundan emin olmak için kontrol edilir. Sıra yoksa, hizmet bir tane oluşturur. Kuyruğu oluşturmak için önce hizmeti çalıştırabilir veya MSMQ kuyruğu Yöneticisi aracılığıyla bir tane oluşturabilirsiniz. Windows 2008 ' de bir sıra oluşturmak için aşağıdaki adımları izleyin.
 
-    1. Visual Studio 2012'de Sunucu Yöneticisi'ni açın.
+    1. Visual Studio 2012 ' de Sunucu Yöneticisi açın.
 
-    2. Genişletin **özellikleri** sekmesi.
+    2. **Özellikler** sekmesini genişletin.
 
-    3. Sağ **özel ileti kuyrukları**seçip **yeni**, **özel sıra**.
+    3. **Özel Ileti kuyrukları**' ne sağ tıklayıp **Yeni**, **özel kuyruk**' u seçin.
 
-    4. Denetleme **işlem** kutusu.
+    4. **İşlem** kutusunu işaretleyin.
 
-    5. Girin `ServiceModelSamplesTransacted` yeni Kuyruğun adı.
+    5. Yeni `ServiceModelSamplesTransacted` kuyruğun adı olarak girin.
 
-3. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Tek veya çoklu bilgisayar yapılandırmasında örneği çalıştırmak için yönergeleri izleyin ve localhost yerine sunucunun gerçek ana bilgisayar'ı yansıtmak için kuyruk adları değiştirme [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için, kuyruk adlarını localhost yerine gerçek ana bilgisayar adını yansıtacak şekilde değiştirin ve [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
 
- Varsayılan olarak `netMsmqBinding` bağlama taşıma, güvenlik etkin. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte aktarım güvenliği türünü belirleyin. Varsayılan olarak, kimlik doğrulama modu ayarlamak `Windows` ve koruma düzeyini ayarlamak `Sign`. Kimlik doğrulama ve imzalama özelliği sağlamak MSMQ için bir etki alanının parçası olması gerekir. Bir etki alanının parçası olmayan bir bilgisayarda bu örneği çalıştırmak, şu hatayı alırsınız: "Kullanıcının iç message queuing sertifikası yok".
+ Varsayılan olarak, `netMsmqBinding` bağlama aktarımında güvenlik etkindir. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel`, birlikte taşıma güvenliği türü belirlenir. Varsayılan olarak, kimlik doğrulama modu olarak `Windows` ayarlanır ve koruma düzeyi olarak `Sign`ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ 'nun bir etki alanının parçası olması gerekir. Bu örneği bir etki alanının parçası olmayan bir bilgisayarda çalıştırırsanız, şu hatayı alırsınız: "Kullanıcının iç Message Queuing sertifikası yok".
 
-#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği için bir çalışma alanına katılmış bir bilgisayarda çalıştırmak için
+#### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği çalışma grubuna katılmış bir bilgisayarda çalıştırmak için
 
-1. Bilgisayarınız bir etki alanının parçası değilse, kimlik doğrulama modu ve koruma düzeyi ayarlayarak aktarım güvenliği devre dışı kapatma `None` aşağıdaki örnek yapılandırmada gösterildiği gibi:
+1. Bilgisayarınız bir etki alanının parçası değilse, kimlik doğrulama modunu ve koruma düzeyini `None` aşağıdaki örnek yapılandırmada gösterildiği gibi olarak ayarlayarak aktarım güvenliğini kapatın:
 
     ```xml
     <bindings>
@@ -307,20 +307,20 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     </bindings>
     ```
 
-     Uç noktanın bindingConfiguration özniteliğini ayarlayarak uç nokta bağlama ile ilişkili olduğundan emin olun.
+     Uç noktanın bindingConfiguration özniteliğini ayarlayarak, bitiş noktasının bağlama ile ilişkili olduğundan emin olun.
 
-2. Örneği çalıştırmadan önce PoisonMessageServer, sunucu ve istemci üzerindeki yapılandırmayı değiştirdiğinizden emin olun.
+2. Örneği çalıştırmadan önce, Kirmessageserver, sunucu ve istemcideki yapılandırmayı değiştirdiğinizden emin olun.
 
     > [!NOTE]
-    >  Ayarı `security mode` için `None` ayarlamakla eşdeğerdir `MsmqAuthenticationMode`, `MsmqProtectionLevel`, ve `Message` güvenlik `None`.  
+    >  `security mode` Ayarı,`MsmqProtectionLevel`ve güvenlikayarlarına`MsmqAuthenticationMode`eşdeğerdir .`None` `None` `Message`  
   
-3. Sırayla çalışması Meta veri değişimi için size bir URL http bağlaması ile kaydedin. Bu, hizmetin bir yükseltilmiş komut istemi penceresine çalıştırmanızı gerektirir. Aksi takdirde, bir özel durum gibi alın: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Meta veri değişimi 'nin çalışması için, http bağlamasıyla bir URL kaydedebiliyoruz. Bu, hizmetin yükseltilmiş bir komut penceresinde çalıştırılmasını gerektirir. Aksi takdirde, şöyle bir özel durum alırsınız: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`

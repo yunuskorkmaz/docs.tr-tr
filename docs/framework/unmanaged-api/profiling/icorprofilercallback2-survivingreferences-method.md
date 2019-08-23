@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5070dba7e7e1218fedf24d350c0461a1cd3835e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3ec00f11582ede1dc4b3d481a4eb9dcc4dd1d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963909"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences Yöntemi
-Sıkıştırma dışı bir atık toplama sonucunda yığın nesnelerin yerleşimini bildirir.  
+Sıkıştırma olmayan bir atık toplama işleminin sonucu olarak yığındaki nesnelerin yerleşimini raporlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,45 +40,45 @@ HRESULT SurvivingReferences(
   
 ## <a name="parameters"></a>Parametreler  
  `cSurvivingObjectIDRanges`  
- [in] Sıkıştırma olmayan çöp toplama işleminin sonucu olarak kurtulan bitişik nesnelerin blokların sayısı. Diğer bir deyişle, değerini `cSurvivingObjectIDRanges` boyutu `objectIDRangeStart` ve `cObjectIDRangeLength` diziler, hangi depolama bir `ObjectID` ve uzunluğu, nesnelerin her blok için sırasıyla.  
+ 'ndaki Sıkıştırma olmayan çöp toplamanın sonucu olarak kalan bitişik nesnelerin blok sayısı. Diğer bir deyişle, değeri `cSurvivingObjectIDRanges` , her nesne bloğu için sırasıyla bir `cObjectIDRangeLength` `ObjectID` ve uzunluğu depolayan `objectIDRangeStart` ve dizilerinin boyutudur.  
   
- Sonraki iki bağımsız değişkenleri `SurvivingReferences` paralel dizidir. Diğer bir deyişle, `objectIDRangeStart` ve `cObjectIDRangeLength` bitişik nesnelerin aynı blok ilgilendiriyor.  
+ Sonraki iki bağımsız değişkeni `SurvivingReferences` paralel dizilerdir. Diğer bir deyişle, `objectIDRangeStart` `cObjectIDRangeLength` aynı bitişik nesne bloğuna sorun.  
   
  `objectIDRangeStart`  
- [in] Bir dizi `ObjectID` her birinin başlangıç adresi bloğunun bitişik olduğunda, değerleri, Canlı nesneleri bellekte.  
+ 'ndaki Her biri, `ObjectID` bellekte bulunan bitişik ve canlı nesneler bloğunun başlangıç adresi olan bir değer dizisi.  
   
  `cObjectIDRangeLength`  
- [in] Her biri bellekte bitişik nesnelerin sürdüren bir blok boyutu olan bir tamsayı dizisi.  
+ 'ndaki Her biri bellekteki bitişik nesnelerin devam eden bloğunun boyutu olan tamsayılar dizisi.  
   
- Başvurulduğundan her blok için belirtilen bir boyutu `objectIDRangeStart` dizisi.  
+ `objectIDRangeStart` Dizide başvurulan her bir blok için bir boyut belirtilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!IMPORTANT]
->  Bu yöntem boyutları olarak raporlar `MAX_ULONG` 64-bit platformlarda 4 GB'den büyük olan nesneler için. 4 GB'den daha büyük nesneleri için kullanılmak [Icorprofilercallback4::survivingreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) yöntemi yerine.  
+> Bu yöntem, 64- `MAX_ULONG` bit platformlarda 4 GB 'den büyük nesneler için boyutları raporlar. 4 GB 'den büyük nesneler için bunun yerine [ICorProfilerCallback4:: SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) metodunu kullanın.  
   
- Öğeleri `objectIDRangeStart` ve `cObjectIDRangeLength` diziler yorumlanabilir gibi bir nesne çöp toplamadan kurtulan olup olmadığını belirlemek için. Varsayımında bir `ObjectID` değeri (`ObjectID`) aşağıdaki aralığında yer:  
+ `objectIDRangeStart` Ve`cObjectIDRangeLength` dizilerinin öğeleri, bir nesnenin çöp toplamayı daha fazla kullanıp kullanmadığını anlamak için aşağıdaki şekilde yorumlanmalıdır. Bir `ObjectID` değerin (`ObjectID`) aşağıdaki aralıkta olduğunu varsayın:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- İçin herhangi bir değerini `i` aşağıdaki aralığında olan, nesnenin çöp toplamadan kurtulan:  
+ Aşağıdaki aralıkta `i` olan herhangi bir değeri için, nesne çöp toplamayı sona bıraktı:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Sıkıştırma dışı bir atık toplama "etkin olmayan" nesnelerin kapladığı belleği geri kazanır, ancak serbest bırakılan bu alanı compact değil. Sonuç olarak, bellek için yığın döndürülür, ancak "canlı" nesne taşındı.  
+ Sıkıştırma olmayan bir atık toplama, "ölü" nesneler tarafından kullanılan belleği geri kazanır, ancak serbest bırakılmış alanı sıkıştıramaz. Sonuç olarak, bellek yığına döndürülür, ancak hiçbir "canlı" nesne taşınmaz.  
   
- Ortak dil çalışma zamanı (CLR) çağıran `SurvivingReferences` sıkıştırma olmayan çöp toplama için. Sıkıştırma çöp koleksiyonları için [Icorprofilercallback::movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) yerine çağrılır. Tek bir çöp toplama, tek bir nesil için sıkıştırma ve diğer olmayan sıkıştırma olabilir. Herhangi belirli nesil çöp toplama için profil oluşturucu ya da alacak bir `SurvivingReferences` geri çağırma veya bir `MovedReferences` geri çağırma, ancak ikisine birden değil.  
+ Ortak dil çalışma zamanı (CLR), `SurvivingReferences` sıkıştırma olmayan çöp koleksiyonları için çağırır. Atık koleksiyonları sıkıştırmak için, bunun yerine [ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) çağrılır. Tek bir çöp toplama işlemi, bir oluşturma için ve sıkıştırma dışı bir diğeri için sıkıştırılıyor olabilir. Belirli nesil bir atık toplama için, profil oluşturucu bir `SurvivingReferences` geri çağırma `MovedReferences` ya da geri çağırma alır, ancak her ikisini birden etmez.  
   
- Birden çok `SurvivingReferences` geri çağırmaları alınan sınırlı iç arabelleğe, nedeniyle ek olarak, belirli bir çöp toplama sırasında raporlama sunucu çöp toplama ve diğer nedenlerle olması durumunda birden çok iş parçacığı. Bir çöp toplama sırasında birden çok geri çağırmaları söz konusu olduğunda, bilgileri toplu — içinde bildirilen tüm başvuruları `SurvivingReferences` çöp toplama geri çağırma önceliklidir.  
+ Sınırlı `SurvivingReferences` iç arabelleğe alma, sunucu çöp toplama durumunda birden çok iş parçacığı raporlama ve diğer nedenlerden dolayı belirli bir atık toplama sırasında birden fazla geri çağırma alınabilir. Çöp toplama sırasında birden fazla geri çağırma durumunda, bilgiler birikimlidir. herhangi bir `SurvivingReferences` geri aramada bildirilen tüm başvurular çöp toplamayı sürdürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi** CorProf. IDL, CorProf. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

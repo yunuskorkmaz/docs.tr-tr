@@ -10,24 +10,24 @@ helpviewer_keywords:
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544ea0f89dfa518c2ef18bffe2609d72e6fdee70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 472304dff23e92620dd461e8bc43c3093431ddc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962526"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme
-Aşağıdaki örnek, kullanarak basit bir paralel LINQ Sorgu oluşturma işlemi gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsParallel%2A> kaynak sırası ve kullanarak sorgu yürütülürken genişletme yöntemini <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi.  
+Aşağıdaki örnek, kaynak dizideki <xref:System.Linq.ParallelEnumerable.AsParallel%2A> genişletme yöntemi kullanılarak basit bir paralel LINQ sorgusunun nasıl oluşturulacağını ve <xref:System.Linq.ParallelEnumerable.ForAll%2A> yöntemi kullanılarak sorgunun nasıl yürütüğünü gösterir.  
   
 > [!NOTE]
->  Bu belgede lambda ifadeleri PLINQ'te temsilciler tanımlamak için kullanılır. C# veya Visual Basic'te lambda ifadelerine aşina değilseniz bkz [PLINQ ve TPL'deki Lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+> Bu belgede, PLıNQ içinde temsilciler tanımlamak için lambda ifadeleri kullanılmaktadır. Veya Visual Basic içindeki C# lambda ifadeleriyle ilgili bilgi sahibi değilseniz bkz. [PLıNQ ve TPL içindeki lambda ifadeleri](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[PLINQ#11](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/create1.cs#11)]
  [!code-vb[PLINQ#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/create1.vb#11)]  
   
- Bu örnek, oluşturmak ve sonucu bir dizi sırası önemli değildir, herhangi bir paralel LINQ Sorgu yürütme için temel düzeni gösterir; Sıralanmamış sorgular genellikle sıralı sorgular hızlıdır. Sorgu, birden çok iş parçacığında zaman uyumsuz olarak yürütülür görevlere kaynak bölümler. İçinde her görev tamamlandığında sırası, yalnızca iş öğeleri bölümünde işlemek için aynı zamanda işletim sistemi her iş parçacığı nasıl zamanlamaları gibi dış etkenlerle ilişkilerini bağlıdır. Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Bir sorguda öğelerin sıralamasını koruması hakkında daha fazla bilgi için bkz: [nasıl yapılır: PLINQ sorgusunda sıralama denetimi](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).  
+ Bu örnek, sonuç sırasının sıralaması önemli olmadığında herhangi bir paralel LINQ sorgusunun oluşturulması ve yürütülmesi için temel düzeni gösterir; Sıralanmamış sorgular genellikle sıralanmış sorgulardan daha hızlıdır. Sorgu, kaynağı birden çok iş parçacığında zaman uyumsuz olarak yürütülen görevlere bölümler. Her görevin tamamlandığı sıra, yalnızca bölümdeki öğeleri işlemek için gereken iş miktarına değil, aynı zamanda işletim sisteminin her bir iş parçacığını nasıl zamanlıyor gibi dış faktörlerden de farklı olur. Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). Bir sorgudaki öğelerin sıralamasını koruma hakkında daha fazla bilgi için bkz [. nasıl yapılır: PLıNQ sorgusunda](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md)denetim sıralaması.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

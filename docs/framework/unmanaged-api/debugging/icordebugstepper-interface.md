@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f1d94ffde71962c848bece808bf2d982093896a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c57b13b05522614ff066b93cb9f6a437cb340576
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652159"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962696"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper Arabirimi
 Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı temsil eder, bir komutun çıkarılması ve tamamlanması arasında bir tanımlayıcı görevi görür ve bir adımı iptal etmek için bir yol sağlar.  
@@ -30,39 +30,39 @@ Bir hata ayıklayıcının gerçekleştirdiği kod yürütmedeki bir adımı tem
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Deactivate Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bu neden `ICorDebugStepper` aldığı son adım komutunu iptal etmek için.|  
-|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Belirten bir değer alır olup bu `ICorDebugStepper` bir adımı yürütülüyor.|  
-|[SetInterceptMask Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|İçine girdiğiniz kod türlerini belirten bir Cordebugıntercept değeri ayarlar.|  
-|[SetRangeIL Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Belirten bir değeri ayarlar olmadığını çağrılar [ICorDebugStepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) aracılığıyla basamaklı yöntemin Microsoft Ara dili (MSIL) kodu veya yerel koda göre bağımsız değişken değerlerini geçirirsiniz.|  
-|[SetUnmappedStopMask Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Yürütmeyi durdur eşlenmemiş kodun türünü belirten bir CorDebugUnmappedStop değeri ayarlar.|  
-|[Step Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bu neden olur `ICorDebugStepper` tek adımlı içeren kendi iş parçacığı aracılığıyla ve isteğe bağlı olarak için için iş parçacığının içinden çağıran işlevler aracılığıyla tek Adımlama devam edin.|  
-|[StepOut Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bu neden `ICorDebugStepper` içeren kendi iş parçacığı aracılığıyla tek adımlı ve tam olduğunda geçerli çerçeve arama çerçeveye denetimini döndürür.|  
-|[StepRange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bu neden `ICorDebugStepper` isteğe bağlı olarak tek-adım içeren kendi iş parçacığı ve ne zaman döndürmek için son belirtilen aralıkların dışında kod ulaşır.|  
+|[Deactivate Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Bunun `ICorDebugStepper` , aldığı son adım komutunu iptal etmesine neden olur.|  
+|[IsActive Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Bu `ICorDebugStepper` , şu anda bir adım yürütüp yürütümeyeceğini belirten bir değer alır.|  
+|[SetInterceptMask Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|İçine eklenen kod türlerini belirten bir Cordebugkesmenoktası değeri ayarlar.|  
+|[SetRangeIL Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|[ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) öğesine yapılan çağrıların, yerel koda göreli bağımsız değişken değerlerini veya bir şekilde ele alınan metodun Microsoft ara DILI (MSIL) kodunu geçirip geçirmediğini belirten bir değer ayarlar.|  
+|[SetUnmappedStopMask Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Yürütmenin durdurulacağı eşlenmemiş kodun türünü belirten bir CorDebugUnmappedStop değeri ayarlar.|  
+|[Step Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Bunun `ICorDebugStepper` , kendi iş parçacığı içinde tek adımlı ve isteğe bağlı olarak, iş parçacığı içinde çağrılan işlevler aracılığıyla tek adımla devam etmesine neden olur.|  
+|[StepOut Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Bunun `ICorDebugStepper` , kendisini kapsayan iş parçacığı aracılığıyla tek adımlı ve geçerli çerçeve çağıran çerçeveye denetim döndürdüğünde tamamlanmasına neden olur.|  
+|[StepRange Yöntemi](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Bunun `ICorDebugStepper` , kendisini kapsayan iş parçacığı aracılığıyla tek adımlı ve belirtilen aralıkların en son ötesinde koda ulaştığında dönüşmesine neden olur.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ICorDebugStepper` Arabirimi aşağıdaki amaçlara hizmet eder:  
+ `ICorDebugStepper` Arabirim aşağıdaki amaçlara hizmet eder:  
   
-- Verilen bir adım komut ve bu komutun tamamlanması arasında bir tanımlayıcı işlevi görür.  
+- Verilen bir step komutu ve bu komutun tamamlanması arasında bir tanımlayıcı görevi görür.  
   
-- Bunu gerçekleştirilebilecek tüm Adımlama kapsüllemek için merkezi bir arabirim sağlar.  
+- Gerçekleştirilebilecek tüm adımlamayı kapsüllemek için merkezi bir arabirim sağlar.  
   
-- Erken bir atlama işlemi iptal etmek için bir yol sunar.  
+- Bir atlama işlemini erken iptal etmek için bir yol sağlar.  
   
- İş parçacığı başına birden fazla adımlayıcıdaki olabilir. Örneğin, bir işlevin üzerine erişilince bir kesme noktası isabet ve bu işlevin içindeki yeni bir atlama işlemi başlatmak kullanıcı isteyebilir. Bu durumu yönetmek nasıl belirlemek için hata ayıklayıcı kadar var. Hata ayıklayıcı özgün atlama işlemi iptal etmek veya iki işlem iç içe isteyebilirsiniz. `ICorDebugStepper` Arabirimi iki seçeneği destekler.  
+ İş parçacığı başına birden fazla Stepper olabilir. Örneğin, bir işlev üzerinde atlama sırasında bir kesme noktası isabet edebilir ve Kullanıcı bu işlevin içinde yeni bir Adımlama işlemi başlatmak isteyebilir. Bu durumun nasıl işleneceğini belirleme, hata ayıklayıcıya yöneliktir. Hata ayıklayıcı orijinal atlama işlemini iptal etmek veya iki işlemi iç içe aktarmak isteyebilir. `ICorDebugStepper` Arabirim her iki seçeneği de destekler.  
   
- Ortak dil çalışma zamanı (CLR) arası iş parçacıklı, sıralanmış bir çağrı yaparsa Adımlayıcı iş parçacıkları arasında taşıyabilirsiniz.  
+ Ortak dil çalışma zamanı (CLR), çapraz iş parçacıklı, sıralanmış bir çağrı yapıyorsa, iş parçacıkları arasında Stepper bir geçiş olabilir.  
   
 > [!NOTE]
->  Bu arabirim makineler arası veya çapraz işlem uzaktan çağrılan desteklemez.  
+> Bu arabirim, çapraz makine ya da çapraz işlem için uzaktan çağrılmakta değil.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

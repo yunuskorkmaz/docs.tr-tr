@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027231"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966991"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>XPathNavigator Kullanarak XML Verilerini Ayıklama
-Microsoft .NET Framework XML belgesinde temsil etmek için birkaç farklı yolu vardır. Bu kullanarak içerir bir <xref:System.String>, kullanarak veya <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument>, veya <xref:System.Xml.XPath.XPathDocument> sınıfları. Bu bir XML belgesi farklı temsilleri arasında taşıma kolaylaştırmak için <xref:System.Xml.XPath.XPathNavigator> XML olarak ayıklanmasında sınıfı bir dizi yöntem ve özellik sağlar bir <xref:System.String>, <xref:System.Xml.XmlReader> nesne veya <xref:System.Xml.XmlWriter> nesne.  
+Microsoft .NET çerçevesindeki bir XML belgesini temsil etmenin birkaç farklı yolu vardır. Bu,, veya <xref:System.String>kullanarak <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter>,veyasınıflarınıiçerir <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathDocument> XML belgesinin <xref:System.Xml.XPath.XPathNavigator> bu farklı temsilleri arasında geçmeyi kolaylaştırmak için sınıfı, XML 'i bir <xref:System.String>, <xref:System.Xml.XmlReader> nesne veya <xref:System.Xml.XmlWriter> nesne olarak ayıklamaya yönelik çeşitli yöntemler ve özellikler sağlar.  
   
-## <a name="convert-an-xpathnavigator-to-a-string"></a>Bir XPathNavigator bir dizeye Dönüştür  
- <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> Özelliği <xref:System.Xml.XPath.XPathNavigator> sınıfı, tüm XML belgesi işaretleme veya biçimlendirme yalnızca tek bir düğüm ve onun alt düğümleri almak için kullanılır.  
+## <a name="convert-an-xpathnavigator-to-a-string"></a>Bir XPathNavigator 'yi dizeye Dönüştür  
+ <xref:System.Xml.XPath.XPathNavigator> Sınıfının özelliği, tüm XML belgesi veya yalnızca tek bir düğüm ve onun alt düğümleri için biçimlendirme almak için kullanılır. <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A>  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Özelliği yalnızca alt biçimlendirme düğümünün düğüm alır.  
+> <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> Özelliği, bir düğümün yalnızca alt düğümlerinin işaretlemesini alır.  
   
- Aşağıdaki kod örneğinde yer alan tüm bir XML belgesi kaydetmek gösterilmiştir bir <xref:System.Xml.XPath.XPathNavigator> nesnesinin bir <xref:System.String>, yanı sıra tek bir düğüm ve onun alt düğümleri.  
+ Aşağıdaki kod örneği, bir <xref:System.Xml.XPath.XPathNavigator> nesnesinde bulunan bir XML belgesinin tamamını, tek bir <xref:System.String>düğüm ve onun alt düğümleri olarak nasıl kaydedileceğini gösterir.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("input.xml")  
@@ -50,14 +50,14 @@ navigator.MoveToChild(XPathNodeType.Element);
 string root = navigator.OuterXml;  
 ```  
   
-## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>XmlReader'a bir XPathNavigator Dönüştür  
- <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Yöntemi akışını bir XML belgesi veya tek bir düğüm ve onun alt düğümleri için tüm içeriği için kullanılan bir <xref:System.Xml.XmlReader> nesne.  
+## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Bir XPathNavigator 'yi XmlReader 'ye dönüştürme  
+ Yöntemi, bir XML belgesinin tüm içeriğini veya tek bir düğümü ve onun alt düğümlerini bir <xref:System.Xml.XmlReader> nesnesine akışa almak için kullanılır. <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A>  
   
- Zaman <xref:System.Xml.XmlReader> nesne geçerli düğüm ve onun alt düğümleri ile oluşturulan <xref:System.Xml.XmlReader> nesnenin <xref:System.Xml.XmlReader.ReadState%2A> özelliği <xref:System.Xml.ReadState.Initial>. Zaman <xref:System.Xml.XmlReader> nesnenin <xref:System.Xml.XmlReader.Read%2A> yöntemi ilk kez çağrıldığında <xref:System.Xml.XmlReader> geçerli düğüme taşınır <xref:System.Xml.XPath.XPathNavigator>. Yeni <xref:System.Xml.XmlReader> nesne XML ağacı sonuna ulaşıncaya kadar okuyun devam eder. Bu noktada, <xref:System.Xml.XmlReader.Read%2A> yöntemi döndürür `false` ve <xref:System.Xml.XmlReader> nesnenin <xref:System.Xml.XmlReader.ReadState%2A> özelliği <xref:System.Xml.ReadState.EndOfFile>.  
+ Nesne geçerli düğüm ve onun alt düğümleri <xref:System.Xml.XmlReader> ile oluşturulduğunda nesnenin <xref:System.Xml.XmlReader.ReadState%2A> özelliği olarak <xref:System.Xml.ReadState.Initial>ayarlanır. <xref:System.Xml.XmlReader> Nesnenin yöntemi ilk kez<xref:System.Xml.XmlReader> çağrıldığında,, öğesinin <xref:System.Xml.XPath.XPathNavigator>geçerli düğümüne taşınır. <xref:System.Xml.XmlReader.Read%2A> <xref:System.Xml.XmlReader> Yeni <xref:System.Xml.XmlReader> nesne, xml ağacının sonuna ulaşılana kadar okumaya devam eder. Bu noktada <xref:System.Xml.XmlReader.Read%2A> , yöntemi döner <xref:System.Xml.XmlReader> `false` ve nesnenin <xref:System.Xml.XmlReader.ReadState%2A> özelliği olarak <xref:System.Xml.ReadState.EndOfFile>ayarlanır.  
   
- <xref:System.Xml.XPath.XPathNavigator> Nesnenin konumu oluşturma ve hareketini tarafından değiştirilmeden <xref:System.Xml.XmlReader> nesne. <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Yöntemi, yalnızca bir öğe veya kök düğümde getirildiğinde geçerli.  
+ Nesnenin konumu <xref:System.Xml.XmlReader> nesnenin oluşturulması veya taşınması tarafından değiştirilmez. <xref:System.Xml.XPath.XPathNavigator> <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> Yöntemi yalnızca bir öğe veya kök düğüm üzerinde konumlandırıldığında geçerlidir.  
   
- Aşağıdaki örnek nasıl alınacağını gösterir. bir <xref:System.Xml.XmlReader> nesnesi içeren tüm XML belge içinde bir <xref:System.Xml.XPath.XPathDocument> tek bir düğüm ve onun alt düğümleri yanı sıra nesnesi.  
+ Aşağıdaki örnek, bir <xref:System.Xml.XmlReader> <xref:System.Xml.XPath.XPathDocument> nesnenin tüm XML belgesini ve tek bir düğüm ve onun alt düğümlerini içeren bir nesnenin nasıl alınacağını gösterir.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -113,16 +113,16 @@ while (book.Read())
 book.Close();  
 ```  
   
- Örnek alan `books.xml` dosya giriş olarak.  
+ Örnek, `books.xml` dosyayı giriş olarak alır.  
   
  [!code-xml[XPathXMLExamples#1](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/books.xml#1)]  
   
-## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>Bir XPathNavigator XmlWriter için dönüştürme  
- <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A> Yöntemi akışını bir XML belgesi veya tek bir düğüm ve onun alt düğümleri için tüm içeriği için kullanılan bir <xref:System.Xml.XmlWriter> nesne.  
+## <a name="converting-an-xpathnavigator-to-an-xmlwriter"></a>XPathNavigator 'yi XmlWriter 'a dönüştürme  
+ Yöntemi, bir XML belgesinin tüm içeriğini veya tek bir düğümü ve onun alt düğümlerini bir <xref:System.Xml.XmlWriter> nesnesine akışa almak için kullanılır. <xref:System.Xml.XPath.XPathNavigator.WriteSubtree%2A>  
   
- <xref:System.Xml.XPath.XPathNavigator> Nesnenin konumu tarafından oluşturulmasını değişmeden <xref:System.Xml.XmlWriter> nesne.  
+ Nesnenin konumu <xref:System.Xml.XmlWriter> nesnenin oluşturulmasıyla değiştirilmez. <xref:System.Xml.XPath.XPathNavigator>  
   
- Aşağıdaki örnek nasıl alınacağını gösterir. bir <xref:System.Xml.XmlWriter> nesnesi içeren tüm XML belge içinde bir <xref:System.Xml.XPath.XPathDocument> tek bir düğüm ve onun alt düğümleri yanı sıra nesnesi.  
+ Aşağıdaki örnek, bir <xref:System.Xml.XmlWriter> <xref:System.Xml.XPath.XPathDocument> nesnenin tüm XML belgesini ve tek bir düğüm ve onun alt düğümlerini içeren bir nesnenin nasıl alınacağını gösterir.  
   
 ```vb  
 Dim document As XPathDocument = New XPathDocument("books.xml")  
@@ -160,7 +160,7 @@ navigator.WriteSubtree(book);
 book.Close();  
 ```  
   
- Örnek alan `books.xml` girdi olarak bu konudaki daha önce dosya bulundu.  
+ Örnek, bu konunun `books.xml` önceki kısımlarında bulunan dosyayı giriş olarak alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

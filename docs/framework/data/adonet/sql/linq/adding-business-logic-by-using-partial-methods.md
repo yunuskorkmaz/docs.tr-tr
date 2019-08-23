@@ -5,37 +5,37 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: ed440f3315fc25e82b648f21410acb7a2c2a08f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e3f82c260a2cab85270a9f33a87eb9a9f04b72c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743672"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964151"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Kısmi Yöntemler Kullanarak İş Mantığı Ekleme
-Visual Basic özelleştirebilirsiniz ve C# oluşturulan kodda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kullanarak projeleri *kısmi yöntemler*. Kod, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturur imzaları kısmi bir yöntemin bir parçası olarak tanımlar. Yöntemi uygulamak istiyorsanız, kendi kısmi yöntem ekleyebilirsiniz. Kendi uygulamanız eklemezseniz derleyici kısmi yöntem imzası atar ve varsayılan yöntem çağrıları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+C# Uygulamanızda[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Basic ve üretilen kodu, *kısmi Yöntemler*kullanarak özelleştirebilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Üreten kod, imzaları kısmi bir metodun bir parçası olarak tanımlar. Yöntemini uygulamak istiyorsanız, kendi kısmi yönteminizi ekleyebilirsiniz. Kendi uygulamanızı eklemeyin, derleyici kısmi Yöntemler imzasını atar ve içinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]varsayılan yöntemleri çağırır.  
   
 > [!NOTE]
->  Visual Studio kullanıyorsanız, Nesne İlişkisel Tasarımcısı varlık sınıflarına doğrulama ve diğer özelleştirmeleri eklemek için kullanabilirsiniz.  
+> Visual Studio kullanıyorsanız, varlık sınıflarına doğrulama ve diğer özelleştirmeler eklemek için Nesne İlişkisel Tasarımcısı kullanabilirsiniz.  
   
- Örneğin, varsayılan eşlemesini `Customer` Northwind örnek veritabanındaki sınıfı aşağıdaki kısmi yöntem içerir:  
+ Örneğin, Northwind örnek veritabanındaki `Customer` sınıfının varsayılan eşlemesi aşağıdaki kısmi yöntemi içerir:  
   
  [!code-csharp[DLinqOverrideDefault#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#2)]
  [!code-vb[DLinqOverrideDefault#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/northwind.vb#2)]  
   
- İçin kendi kısmi aşağıdaki gibi kod ekleyerek kendi bir yöntem uygulayabilirsiniz `Customer` sınıfı:  
+ Kendi kısmi `Customer` Sınıfınıza aşağıdaki gibi kod ekleyerek kendi yönteminizi uygulayabilirsiniz:  
   
  [!code-csharp[DLinqOverrideDefault#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefault#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/Module1.vb#3)]  
   
- Bu yaklaşım genellikle kullanılan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] için varsayılan yöntemleri geçersiz kılmak için `Insert`, `Update`, `Delete`ve nesne yaşam döngüsü olayları sırasında özellikleri doğrulamak için.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Bu yaklaşım genellikle, `Insert` `Update`nesne yaşam döngüsü olayları sırasında özellikleri doğrulamak için,,, ve için varsayılan yöntemleri geçersiz kılmak üzere ' de kullanılır. `Delete`  
   
- Daha fazla bilgi için [kısmi yöntemler](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) veya [partial (yöntem) (C# başvuru)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).  
+ Daha fazla bilgi için bkz. [kısmi Yöntemler](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) veya [partial (Yöntem)C# (başvuru)](../../../../../csharp/language-reference/keywords/partial-method.md) (C#).  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte gösterildiği `ExampleClass` ilk SQLMetal ve ardından iki yöntemden yalnızca biri nasıl uygulayabilir gibi bir kod oluşturma aracı tarafından tanımlanan.  
+ Aşağıdaki örnek, ilk `ExampleClass` olarak SqlMetal gibi kod oluşturma aracı tarafından tanımlandıkları ve sonra iki yöntemden yalnızca birini nasıl uygulayabileceğinizi gösterir.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqSubmittingChanges#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#4)]
@@ -44,7 +44,7 @@ Visual Basic özelleştirebilirsiniz ve C# oluşturulan kodda, [!INCLUDE[vbtecdl
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnekte arasındaki ilişkiyi `Shipper` ve `Order` varlıklar. Kısmi yöntemler arasında yöntemleri Not `InsertShipper` ve `DeleteShipper`. Geçersiz kılma tarafından sağlanan varsayılan kısmi yöntemler bu yöntemleri [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eşleme.  
+ Aşağıdaki örnek ve `Shipper` `Order` varlıkları arasındaki ilişkiyi kullanır. Kısmi yöntemlerin `InsertShipper` ve `DeleteShipper`yöntemleri arasında aklınızda yer. Bu yöntemler, eşleme tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sağlanan varsayılan kısmi yöntemleri geçersiz kılar.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefault#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#1)]

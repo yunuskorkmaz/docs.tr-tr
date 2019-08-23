@@ -6,33 +6,33 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6aa3e27cdfda7597c9b6acbf2980a2774f2b667b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963032"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Nasıl yapılır: Anahtar Çerçeveler Kullanarak bir Matrise Animasyon Ekleme
-Bu örnek, animasyon ekleme işlemi gösterilmektedir <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliği bir <xref:System.Windows.Media.MatrixTransform> anahtar çerçeveler kullanarak.  
+Bu örnek, <xref:System.Windows.Media.MatrixTransform.Matrix%2A> anahtar çerçeveler kullanarak bir <xref:System.Windows.Media.MatrixTransform> öğesinin özelliğinin nasıl hareketlendirileceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> animasyon uygulamak için sınıfı <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliği bir <xref:System.Windows.Media.MatrixTransform>. Örnekte <xref:System.Windows.Media.MatrixTransform> konumunu ve görünümünü dönüştürmesini nesne bir <xref:System.Windows.Controls.Button>.  
+ Aşağıdaki örnek, öğesinin <xref:System.Windows.Media.Animation.MatrixAnimationUsingKeyFrames> <xref:System.Windows.Media.MatrixTransform.Matrix%2A> özelliğine animasyon uygulamak için sınıfını kullanır. <xref:System.Windows.Media.MatrixTransform> Örnek, görünümünü ve <xref:System.Windows.Media.MatrixTransform> konumunu <xref:System.Windows.Controls.Button>dönüştürmek için nesnesini kullanır.  
   
- Bu animasyon kullanır <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> iki anahtar kare oluşturmak için sınıf ve bunları ile aşağıdakileri yapar:  
+ Bu animasyon iki anahtar <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> çerçeve oluşturmak için sınıfını kullanır ve aşağıdakiler ile birlikte şunları yapar:  
   
-1. İlk canlandırır <xref:System.Windows.Media.Matrix> ilk 0.2 saniye boyunca. Örnek değişiklikleri <xref:System.Windows.Media.Matrix.M11%2A> ve <xref:System.Windows.Media.Matrix.M12%2A> özelliklerini <xref:System.Windows.Media.Matrix>. Bu değişiklik, esnetme için dengesiz hale düğmesini neden olur. Örnek ayrıca değiştirir <xref:System.Windows.Media.Matrix.OffsetX%2A> ve <xref:System.Windows.Media.Matrix.OffsetY%2A> özellikleri böylece düğmeyi konumunu değiştirir.  
+1. İlk 0,2 saniye <xref:System.Windows.Media.Matrix> boyunca ilk olarak hareketlenir. Örnek, <xref:System.Windows.Media.Matrix.M11%2A> ve <xref:System.Windows.Media.Matrix.M12%2A> özelliklerini <xref:System.Windows.Media.Matrix>değiştirir. Bu değişiklik, düğmenin genişlemesine ve çarpıtılmış olmasına neden olur. Örnek ayrıca, <xref:System.Windows.Media.Matrix.OffsetX%2A> düğme konumu değişmek için ve <xref:System.Windows.Media.Matrix.OffsetY%2A> özelliklerini de değiştirir.  
   
-2. İkinci canlandırır <xref:System.Windows.Media.Matrix> 1.0 saniye. Düğme artık dengesiz esnetildiğini veya sırasında düğmeyi başka bir konuma taşır.  
+2. Saniyeyi <xref:System.Windows.Media.Matrix> 1,0 saniye içinde hareketlendirir. Düğme artık Eğilemez veya uzatılmadıysa düğme başka bir konuma gider.  
   
-3. Animasyon süresiz olarak tekrarlar.  
+3. Animasyonu süresiz olarak yineler.  
   
 > [!NOTE]
->  Anahtarı türetin çerçeveler <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> nesnesi değerleri arasında ani atlamalar oluşturur, diğer bir deyişle, animasyon hareketini düzensiz olur.  
+> <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> Nesneden türetilen anahtar çerçeveler değerler arasında ani zıplamalar oluştur, diğer bir deyişle, animasyonun hareketi düzensiz olur.  
   
  [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Tam bir örnek için bkz. [ana kare animasyon örnek](https://go.microsoft.com/fwlink/?LinkID=160012).  
+ Tüm örnek için bkz. [ana kare animasyon örneği](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

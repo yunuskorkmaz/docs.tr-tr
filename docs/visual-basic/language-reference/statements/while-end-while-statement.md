@@ -9,15 +9,15 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ea0814c587f65ddc1f114d2314ac7147143d40d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934232"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965806"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
-Belirli bir koşul olduğu sürece bir deyimler serisini çalıştırır `True`.  
+Belirli bir koşul olduğu `True`sürece bir dizi deyim çalıştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,49 +35,49 @@ End While
   
 |Terim|Tanım|  
 |---|---|  
-|`condition`|Gerekli. `Boolean` ifade. Varsa `condition` olduğu `Nothing`, Visual Basic bunu algılar `False`.|  
-|`statements`|İsteğe bağlı. Bir veya daha fazla deyimlerini aşağıdaki `While`, her zaman çalıştırdığınız `condition` olduğu `True`.|  
-|`Continue While`|İsteğe bağlı. Denetim bir sonraki yinelemesine aktarır `While` blok.|  
-|`Exit While`|İsteğe bağlı. Dışı denetim aktarır `While` blok.|  
-|`End While`|Gerekli. Tanımını sonlandırır `While` blok.|  
+|`condition`|Gerekli. `Boolean`ifadesini. İse, Visual Basic olduğu gibi `False`davranır. `Nothing` `condition`|  
+|`statements`|İsteğe bağlı. Aşağıdaki `While` `condition` her`True`seferinde çalıştırılan bir veya daha fazla deyim.|  
+|`Continue While`|İsteğe bağlı. Denetimi `While` bloğun bir sonraki yinelemesine aktarır.|  
+|`Exit While`|İsteğe bağlı. Denetimi `While` bloğunun dışına aktarır.|  
+|`End While`|Gerekli. `While` Bloğunun tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Kullanım bir `While...End While` yapısı deyimleri belirsiz numarası bir kez, bir dizi yinelemek istediğinizde bir koşul devam ettiği sürece `True`. Daha fazla esneklikle burada koşulunu test etmek veya ne neden test Bunu tercih edebilirsiniz için isterseniz [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md). Bir kez sayıdaki deyimleri yinelemek istiyorsanız [için... Sonraki deyimi](../../../visual-basic/language-reference/statements/for-next-statement.md) genellikle daha iyi bir seçimdir.  
+ Bir koşul `While...End While` , bir koşulun kaldığı `True`sürece belirsiz sayıda deyim yinelemek istediğinizde bir yapı kullanın. Koşulu test ettiğiniz veya ne sonuçla test ettiğiniz hakkında daha fazla esneklik istiyorsanız [Do... seçeneğini tercih edebilirsiniz. Loop deyimleri](../../../visual-basic/language-reference/statements/do-loop-statement.md). Deyimlerini bir dizi defa yinelemek istiyorsanız, [için... Sonraki Ifade](../../../visual-basic/language-reference/statements/for-next-statement.md) genellikle daha iyi bir seçimdir.  
   
 > [!NOTE]
->  `While` Anahtar sözcüğü kullanılan ayrıca [yapın... Döngü deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Atla While yan tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md) ve [Take While tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md).  
+> `While` Anahtar sözcüğü de [Do... içinde kullanılır. Loop deyimi](../../../visual-basic/language-reference/statements/do-loop-statement.md), [Skip While yan tümcesi](../../../visual-basic/language-reference/queries/skip-while-clause.md) ve [Take While yan tümcesi](../../../visual-basic/language-reference/queries/take-while-clause.md).  
   
- Varsa `condition` olduğu `True`tüm, `statements` kadar çalıştırma `End While` deyimi karşılaştı. Denetim için verir `While` deyimi ve `condition` tekrar denetlenir. Varsa `condition` hala `True`, işlem tekrarlanır. Varsa `False`, Denetim izleyen deyime geçer `End While` deyimi.  
+ İse, `End While` deyimle karşılaşana kadar tüm `statements`çalıştırmayasahipolur. `condition` `True` Sonra Denetim `While` ifadeye döner ve `condition` tekrar denetlenir. `condition` Hala`True`varsa, işlem tekrarlanır. Eğer ise denetim, `End While` ifadesiyle takip eden deyime geçer. `False`  
   
- `While` İfade her zaman, koşul döngünün başlamadan önce denetler. Döngü devam koşul kalırken `True`. Varsa `condition` olduğu `False` döngü ilk girdiğinizde, hatta bir kez çalışmaz.  
+ `While` İfade, döngüyü başlamadan önce her zaman koşulu denetler. Durum, koşul kaldığı `True`sürece devam eder. `condition` Döngüyüilkkezgirdiğinizde,`False` bir kez daha çalışır.  
   
- `condition` Genellikle iki değer, ancak bir karşılaştırma sonuçlarını olarak değerlendirilen herhangi bir ifade olabilir bir [Boole veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md) değeri (`True` veya `False`). Bu ifade için dönüştürülen sayısal tür gibi başka bir veri türünde bir değer içerebilir `Boolean`.  
+ Genellikle iki değerin karşılaştırılmasının sonuçları, ancak [Boolean veri türü](../../../visual-basic/language-reference/data-types/boolean-data-type.md) değeri (`True` veya `False`) olarak değerlendirilen herhangi bir ifade olabilir. `condition` Bu ifade, olarak dönüştürülmüş `Boolean`bir sayısal tür gibi başka bir veri türünün değerini içerebilir.  
   
- İç içe yerleştirebilirsiniz `While` içindeki başka bir döngü yerleştirerek döngüleri. Farklı türlerde denetim yapılarını içinde başka bir iç içe yerleştirebilirsiniz. Daha fazla bilgi için [iç içe geçmiş denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ Bir döngüyü diğerinin `While` içine yerleştirerek iç içe geçirebilirsiniz. Ayrıca, farklı türlerde denetim yapılarını bir diğeri içinde iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
-## <a name="exit-while"></a>Çıkış oluştu  
- [Çıkmak sırada](../../../visual-basic/language-reference/statements/exit-statement.md) deyimi, çıkmak için başka bir yol sağlayabilir bir `While` döngü. `Exit While` Denetim takip eden deyime hemen aktarır `End While` deyimi.  
+## <a name="exit-while"></a>Çıkış sırasında çıkış  
+ [Exit While](../../../visual-basic/language-reference/statements/exit-statement.md) deyimleri, bir `While` döngüden çıkmak için başka bir yol sağlayabilir. `Exit While`, `End While` denetimi hemen takip eden deyime aktarır.  
   
- Tipik olarak kullandığınız `Exit While` bazı koşullar değerlendirildikten sonra (örneğin, bir `If...Then...Else` yapısı). Gereksiz veya hatalı bir değer veya bir sonlandırma isteği gibi yineleme devam etmek mümkün kılan bir koşul algılama bir döngüden çıkma isteyebilirsiniz. Kullanabileceğiniz `Exit While` test ettiğinizde, neden olabilecek bir koşul için bir *sonsuz bir döngüye*, bir son derece büyük veya hatta sonsuz sayıda çalıştırabileceğiniz bir döngü olduğu. Ardından `Exit While` döngüden çıkma.  
+ Genellikle bir koşul `Exit While` hesaplandıktan sonra (örneğin, bir `If...Then...Else` yapıda) kullanırsınız. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Sonsuz döngüye neden `Exit While` olabilecek bir koşul için test ettiğinizde kullanabilirsiniz. Bu,son derece büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Ardından, döngüyü atlamak `Exit While` için kullanabilirsiniz.  
   
- Herhangi bir sayıda yerleştirebilirsiniz `Exit While` herhangi bir yere deyimleri `While` döngü.  
+ Döngüde herhangi bir yere herhangi bir `Exit While` sayıda deyim yerleştirebilirsiniz. `While`  
   
- Kullanıldığında içinde iç içe geçmiş `While` döngüleri `Exit While` denetimi iç döngü dışında ve iç içe geçme daha yüksek düzeydeki içine aktarır.  
+ İç içe `While` döngüler içinde kullanıldığında, `Exit While` denetimi en içteki döngünün dışına ve sonraki yüksek iç içe geçme düzeyine aktarır.  
   
- `Continue While` Deyime hemen denetimi döngünün sonraki yinelemesine aktarır. Daha fazla bilgi için [Continue deyimi](../../../visual-basic/language-reference/statements/continue-statement.md).  
+ `Continue While` Ekstre, denetimi hemen döngüsünün bir sonraki yinelemesine aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](../../../visual-basic/language-reference/statements/continue-statement.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, Döngüdeki deyimler kadar çalışmaya devam `index` değişkendir 10'dan büyük.  
+ Aşağıdaki örnekte, döngü içindeki deyimler, `index` değişken 10 ' dan büyük olana kadar çalışmaya devam eder.  
   
  [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, kullanımını gösterir `Continue While` ve `Exit While` deyimleri.  
+ Aşağıdaki örnek, `Continue While` ve `Exit While` deyimlerinin kullanımını gösterir.  
   
  [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir metin dosyasındaki tüm satırları okur. <xref:System.IO.File.OpenText%2A> Yöntemi dosyayı açar ve döndüren bir <xref:System.IO.StreamReader> , bir karakter okur. İçinde `While` koşulu <xref:System.IO.StreamReader.Peek%2A> yöntemi `StreamReader` dosya ek karakterler içerip içermediğini belirler.  
+ Aşağıdaki örnek bir metin dosyasındaki tüm satırları okur. Yöntemi dosyayı açar ve karakterleri okuyan bir <xref:System.IO.StreamReader> döndürür. <xref:System.IO.File.OpenText%2A> Koşulunda, öğesinin`StreamReader` yöntemi dosyanın ek karakterler içerip içermediğini belirler. <xref:System.IO.StreamReader.Peek%2A> `While`  
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
   

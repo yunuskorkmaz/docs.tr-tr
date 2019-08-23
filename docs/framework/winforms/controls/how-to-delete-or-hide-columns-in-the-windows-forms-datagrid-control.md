@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70229abddb831788f521f85747db1093c941ba8a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967382"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Nasıl yapılır: Windows Forms DataGrid Denetiminde Sütunları Silme veya Gizleme
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> Denetimi değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.DataGrid> denetler; ancak, <xref:System.Windows.Forms.DataGrid> denetim korunur geriye dönük uyumluluk ve gelecekte kullanım için seçerseniz. Daha fazla bilgi için [farklar arasında Windows Forms DataGridView ve DataGrid denetimleri](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
+> Denetim yerini alır ve <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGrid> denetime işlevsellik ekler; ancak, isterseniz denetim hem geri uyumluluk hem de gelecekteki kullanım için korunur. <xref:System.Windows.Forms.DataGridView> Daha fazla bilgi için bkz. [Windows Forms DataGridView ve DataGrid denetimleri arasındaki farklar](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
- Program aracılığıyla silin veya Windows Forms sütunları gizleyin <xref:System.Windows.Forms.DataGrid> özellikleri ve yöntemleri kullanarak denetim <xref:System.Windows.Forms.GridColumnStylesCollection> ve <xref:System.Windows.Forms.DataGridColumnStyle> nesneleri (üyeleri <xref:System.Windows.Forms.DataGridTableStyle> sınıfı).  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> denetimindeki sütunları, <xref:System.Windows.Forms.GridColumnStylesCollection> ve <xref:System.Windows.Forms.DataGridColumnStyle> nesnelerinin özelliklerini ve yöntemlerini ( <xref:System.Windows.Forms.DataGridTableStyle> sınıfının üyesi olan) kullanarak program aracılığıyla silebilir veya gizleyebilirsiniz.  
   
- Silinmiş veya gizli sütunları kılavuz bağlı olduğu ve hala program aracılığıyla erişilebilir veri kaynağında varolmaya devam eder. Bundan böyle datagrid denetiminde görünür.  
+ Silinen veya gizli sütunlar, kılavuzun bağlandığı veri kaynağında hala bulunur ve yine de programlı olarak erişilebilir. Yalnızca DataGrid 'de görünür olmayacaktır.  
   
 > [!NOTE]
->  Uygulamanızın belirli sütunları veri erişimi yoktur ve bunları DataGrid'deki görüntülenmesini istemiyorsanız, ardından bu veri kaynağındaki ilk başta eklemek gerekli değildir büyük olasılıkla.  
+> Uygulamanız belirli veri sütunlarına erişmezse ve DataGrid 'de görüntülenmesini istemiyorsanız, bu durumda bunları ilk yerde veri kaynağına dahil etmek gerekli değildir.  
   
-### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Bir sütun DataGrid'den programlı olarak silmek için  
+### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>DataGrid 'den bir sütunu programlı olarak silmek için  
   
-1. Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
+1. Formunuzun bildirimler alanında, <xref:System.Windows.Forms.DataGridTableStyle> sınıfının yeni bir örneğini bildirin.  
   
-2. Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> stile uygulamak istediğiniz veri kaynağı tablosuna özelliği. Aşağıdaki örnekte <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
+2. <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> Özelliğini veri kaynağınızda stilini uygulamak istediğiniz tabloya ayarlayın. Aşağıdaki örnek, önceden ayarlanmış <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> olduğunu varsayan özelliği kullanır.  
   
-3. Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
+3. Yeni <xref:System.Windows.Forms.DataGridTableStyle> nesneyi DataGrid 'in tablo stilleri koleksiyonuna ekleyin.  
   
-4. Çağrı <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> yöntemi <xref:System.Windows.Forms.DataGrid>'s <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> sütun dizini silmek için sütun belirterek koleksiyonu.  
+4. Silinecek sütunun sütun dizinini belirterek <xref:System.Windows.Forms.DataGrid> <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> koleksiyonunun yönteminiçağırın.<xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -77,15 +77,15 @@ ms.locfileid: "61757397"
     }  
     ```  
   
-### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Bir sütunun DataGrid'deki program aracılığıyla gizleme  
+### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>DataGrid 'deki bir sütunu programlı bir şekilde gizlemek için  
   
-1. Formunuza bildirimleri alanında yeni bir örneğini bildirmeniz <xref:System.Windows.Forms.DataGridTableStyle> sınıfı.  
+1. Formunuzun bildirimler alanında, <xref:System.Windows.Forms.DataGridTableStyle> sınıfının yeni bir örneğini bildirin.  
   
-2. Ayarlama <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> özelliğini <xref:System.Windows.Forms.DataGridTableStyle> tablosuna stile uygulamak istediğiniz veri kaynağı. Aşağıdaki kod örneğinde <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> özelliği zaten ayarlanmış varsayar.  
+2. <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Öğesininözelliğini,verikaynağınızdakistilini<xref:System.Windows.Forms.DataGridTableStyle> uygulamak istediğiniz tabloya ayarlayın. Aşağıdaki kod örneği, zaten ayarlanmış <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> olduğunu varsayan özelliği kullanır.  
   
-3. Yeni Ekle <xref:System.Windows.Forms.DataGridTableStyle> DataGrid'in tablo stilleri koleksiyona nesne.  
+3. Yeni <xref:System.Windows.Forms.DataGridTableStyle> nesneyi DataGrid 'in tablo stilleri koleksiyonuna ekleyin.  
   
-4. Ayarlayarak sütunu gizleyin kendi `Width` özelliği 0 olarak gizlemek için sütunun sütun dizini belirtme.  
+4. `Width` Özelliğini 0 olarak ayarlayarak ve gizlenecek sütunun sütun dizinini belirterek sütunu gizleyin.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -126,5 +126,5 @@ ms.locfileid: "61757397"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Windows Forms DataGrid denetiminde çalışma zamanında görüntülenen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Nasıl yapılır: Windows Forms DataGrid denetimindeki çalışma zamanında görünen verileri değiştirme](change-displayed-data-at-run-time-wf-datagrid-control.md)
 - [Nasıl yapılır: Windows Forms DataGrid denetimine tablolar ve sütunlar ekleme](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

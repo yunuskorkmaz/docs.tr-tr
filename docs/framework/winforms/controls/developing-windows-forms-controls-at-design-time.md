@@ -9,92 +9,92 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 641a6c1c99169c6836c33b3e84b2ae02aba298d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11c3d9d6e7faa4741365316339d38f9fda69d059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972243"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965704"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Tasarım Zamanında Windows Forms Denetimleri Geliştirme
-Denetim yazarları için .NET Framework çok sayıda teknoloji yazma denetim sağlar. Yazarlar, artık önceden var olan denetimler koleksiyonuna davranan bileşik denetimler tasarlamak için sınırlıdır. Devralma üzerinden önceden var olan bir bileşik denetimler veya önceden var olan bir Windows Forms denetimleri kendi denetimleri oluşturabilirsiniz. Özel boyama uygulayan kendi denetimleri de tasarlayabilirsiniz. Bu seçenekler, bir büyük ölçüde esneklik tasarımı ve görsel arabirim işlevselliğini etkinleştirin. Bu özelliklerden yararlanmak için nesne tabanlı programlama kavramlarını tanımanız gerekir.  
+Denetim yazarları için .NET Framework, çok sayıda denetim yazma teknolojisi sağlar. Yazarlar artık, önceden varolan denetimlerin bir koleksiyonu olarak davranan bileşik denetimleri tasarlamaya sınırlı değildir. Devralma yoluyla, önceden varolan bileşik denetimlerden veya önceden varolan Windows Forms Denetimlerinde kendi denetimlerinizi oluşturabilirsiniz. Ayrıca, özel boyama uygulayan kendi denetimlerinizi de tasarlayabilirsiniz. Bu seçenekler, görsel arabirimin tasarımı ve işlevselliği için harika bir esneklik sağlar. Bu özelliklerden yararlanmak için nesne tabanlı programlama kavramlarıyla ilgili bilgi sahibi olmanız gerekir.  
   
 > [!NOTE]
->  Azure'un aktarımını sağlamak gerekli değildir, ancak başvurmak yararlı [devralma temelleri (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+> Devralmanın kapsamlı bir şekilde anlaşılmasına gerek yoktur, ancak [Devralma Temelleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)konusuna başvurmanız yararlı olabilir.  
   
- Web formlarında kullanmak üzere özel denetimler oluşturmak istiyorsanız [özel ASP.NET sunucu denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
+ Web Forms için kullanmak üzere özel denetimler oluşturmak istiyorsanız, bkz. [özel ASP.NET Server denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- Visual Basic'te basit bileşik denetim oluşturma işlemi gösterilmektedir.  
+ Visual Basic basit bir bileşik denetimin nasıl oluşturulacağını gösterir.  
   
- [İzlenecek yol: Visual C# ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- Bileşik Denetim basit C# dilinde oluşturma işlemi gösterilmektedir.  
+ [İzlenecek yol: Visual ile bileşik denetim yazmaC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+ İçinde C#basit bir bileşik denetimin nasıl oluşturulacağını gösterir.  
   
- [İzlenecek yol: Visual Basic ile Windows Forms Denetimi'nden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- Visual Basic kalıtımı kullanarak basit bir Windows Forms denetimi oluşturma işlemi gösterilmektedir.  
+ [İzlenecek yol: Visual Basic ile Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ Visual Basic devralma kullanılarak nasıl basit bir Windows Forms denetimi oluşturulacağını gösterir.  
   
- [İzlenecek yol: Visual C# ile Windows Forms Denetimi'nden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
- Devralma C# kullanarak basit bir Windows Forms denetimi oluşturma işlemi gösterilmektedir.  
+ [İzlenecek yol: Görsel ile Windows Forms denetiminden devralmaC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+ ' De C#devralma kullanarak basit bir Windows Forms denetiminin nasıl oluşturulacağını gösterir.  
   
- [İzlenecek yol: Üzerinde Windows Forms denetimleri etiketleri akıllı kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Windows Forms denetimlerindeki akıllı etiket özelliği kullanma işlemi gösterilmektedir.  
+ [İzlenecek yol: Windows Forms Denetimlerinde akıllı etiketleri kullanarak ortak görevleri gerçekleştirme](performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ Windows Forms Denetimlerinde akıllı etiket özelliğinin nasıl kullanılacağını gösterir.  
   
- [İzlenecek yol: DesignerSerializationVisibilityAttribute ile standart türler koleksiyonlarının seri hale getirme](serializing-collections-designerserializationvisibilityattribute.md)  
- Nasıl kullanılacağını gösterir <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> bir koleksiyonunu serileştirmek için özniteliği.  
+ [İzlenecek yol: DesignerSerializationVisibilityAttribute ile standart türlerin koleksiyonlarını serileştirme](serializing-collections-designerserializationvisibilityattribute.md)  
+ Bir koleksiyonu seri hale getirmek <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> için özniteliğini nasıl kullanacağınızı gösterir.  
   
- [İzlenecek yol: Hata ayıklama özel Windows Forms denetimleri tasarım zamanında](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
- Windows Forms denetiminin tasarım zamanı davranışını hata ayıklama işlemi gösterilmektedir.  
+ [İzlenecek yol: Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ Windows Forms denetiminin tasarım zamanı davranışının nasıl ayıklanacağını gösterir.  
   
- [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)  
- Bileşik Denetim tasarım ortamına sıkı tümleştirme işlemi açıklanır.  
+ [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)  
+ Birleşik bir denetimin tasarım ortamıyla nasıl sıkı bir şekilde tümleştirileceğini gösterir.  
   
  [Nasıl yapılır: Windows Forms için yazar denetimleri](how-to-author-controls-for-windows-forms.md)  
- Değerlendirmeleri bir Windows Forms denetimi uygulamak için genel bir bakış sağlar.  
+ Windows Forms denetimi uygulamaya yönelik hususlar hakkında genel bakış sağlar.  
   
- [Nasıl yapılır: Bileşik denetimler yazma](how-to-author-composite-controls.md)  
- Bileşik denetiminden devralarak bir denetim oluşturma işlemi gösterilmektedir.  
+ [Nasıl yapılır: Bileşik denetimleri yaz](how-to-author-composite-controls.md)  
+ Bileşik denetimden devralarak bir denetimin nasıl oluşturulacağını gösterir.  
   
  [Nasıl yapılır: UserControl sınıfından devralma](how-to-inherit-from-the-usercontrol-class.md)  
- Bileşik denetim oluşturmak için yordamı genel bir bakış sağlar.  
+ Bileşik denetim oluşturma yordamına genel bir bakış sağlar.  
   
- [Nasıl yapılır: Mevcut Windows Formları denetimlerinden devralma](how-to-inherit-from-existing-windows-forms-controls.md)  
- Genişletilmiş bir denetimin devralarak oluşturma işlemi gösterilmektedir <xref:System.Windows.Forms.Button> denetim sınıfı.  
+ [Nasıl yapılır: Mevcut Windows Forms denetimlerinden devralma](how-to-inherit-from-existing-windows-forms-controls.md)  
+ <xref:System.Windows.Forms.Button> Denetim sınıfından devralarak genişletilmiş bir denetimin nasıl oluşturulacağını gösterir.  
   
  [Nasıl yapılır: Denetim sınıfından devralma](how-to-inherit-from-the-control-class.md)  
- Genişletilmiş bir denetim oluşturma genel bir bakış sağlar.  
+ Genişletilmiş denetim oluşturma hakkında genel bakış sağlar.  
   
- [Nasıl yapılır: Tasarım zamanında denetimi formların kenarlarına hizalama](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Nasıl kullanılacağını gösterir <xref:System.Windows.Forms.Control.Dock%2A> denetiminiz kapladığı form köşesine hizalamak için özellik.  
+ [Nasıl yapılır: Tasarım zamanında form kenarlarına bir denetim hizalayın](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ Denetiminizi, denetimin kapladığı formun <xref:System.Windows.Forms.Control.Dock%2A> kenarına hizalamak için nasıl kullanacağınızı gösterir.  
   
- [Nasıl yapılır: Bir denetimi görüntüleme araç kutusu öğelerini Seç iletişim kutusu](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- Görünür bir denetiminiz yüklemek için yordam gösterir **özelleştirme araç kutusu** iletişim kutusu.  
+ [Nasıl yapılır: Araç kutusu öğelerini Seç Iletişim kutusunda bir denetim görüntüle](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+ Denetim **kutusu Özelleştir** iletişim kutusunda görünecek şekilde denetiminizi yükleme yordamını gösterir.  
   
- [Nasıl yapılır: Bir denetim için araç kutusu bit eşlemi sağlama](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Nasıl kullanılacağını gösterir <xref:System.Drawing.ToolboxBitmapAttribute> özel denetiminizin yanında bir simge görüntülemek için **araç kutusu**.  
+ [Nasıl yapılır: Denetim için araç kutusu bit eşlemi sağlama](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+ **Araç kutusunda**özel denetiminizin yanında <xref:System.Drawing.ToolboxBitmapAttribute> bir simge göstermek için öğesini nasıl kullanacağınızı gösterir.  
   
- [Nasıl yapılır: Bir UserControl denetiminin çalışma zamanı davranışını sınama](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- Nasıl kullanılacağını gösterir **UserControl Test kapsayıcısı** Bileşik Denetim davranışını test etmek için.  
+ [Nasıl yapılır: UserControl 'un çalışma zamanı davranışını test etme](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ Bir bileşik denetimin davranışını test etmek için **UserControl test kapsayıcısının** nasıl kullanılacağını gösterir.  
   
  [Windows Forms Tasarımcısında Tasarım Zamanı Hataları](design-time-errors-in-the-windows-forms-designer.md)  
- Microsoft Visual Studio ile yüklemek Windows Form Tasarımcısı başarısız olduğunda görüntülenen tasarım zamanı hata listesinin kullanımını ve anlamı açıklanmaktadır.  
+ Windows Forms tasarımcısının yüklemesi başarısız olduğunda Microsoft Visual Studio görüntülenen tasarım zamanı Hata Listesi anlamını ve kullanımını açıklar.  
   
  [Denetim ve Bileşen Yazmada Sorun Giderme](troubleshooting-control-and-component-authoring.md)  
- Özel bileşen veya denetim geliştirirken oluşabilecek genel sorunları tanılayın ve giderin gösterilmektedir.  
+ Özel bir bileşen veya denetim yazarken oluşabilecek yaygın sorunların nasıl tanılanacağı ve düzeltileceğini gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)  
- .NET Framework ile kendi özel denetimler oluşturma işlemini açıklar.  
+ .NET Framework ile kendi özel denetimlerinizi oluşturmayı açıklar.  
   
  [Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler](../../../standard/language-independence-and-language-independent-components.md)  
- Oluşturulmasını ve bileşenleri kullanımını kolaylaştırmak amacıyla tasarlanmış ortak dil çalışma zamanı tanıtır. Bu basitleştirme önemli bir yönüdür farklı programlama dilleri kullanılarak yazılmış bileşenler arasında geliştirilmiş birlikte çalışabilirlik ' dir. Ortak dil belirtimi (CLS), Araçlar ve birden fazla programlama dili ile çalışan bileşenleri oluşturmak mümkün kılar.  
+ Bileşenlerin oluşturulmasını ve kullanılmasını basitleştirmek için tasarlanan ortak dil çalışma zamanını tanıtır. Bu basitleştirmeyle önemli bir boyut, farklı programlama dilleri kullanılarak yazılmış bileşenler arasında geliştirilmiş birlikte çalışabilirlik özelliğidir. Ortak dil belirtimi (CLS), birden çok programlama diliyle çalışan araçlar ve bileşenler oluşturmayı mümkün kılar.  
   
- [İzlenecek yol: Otomatik olarak araç kutusunu özel bileşenlerle doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- Bileşen veya görüntülenecek denetim etkinleştirmeyi açıklar **özelleştirme araç kutusu** iletişim kutusu.
+ [İzlenecek yol: Araç kutusunu özel bileşenlerle otomatik olarak doldurma](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ **Özelleştirme araç** kutusu iletişim kutusunda bileşeninizin veya denetiminizin nasıl görüntüleneceğini açıklar.

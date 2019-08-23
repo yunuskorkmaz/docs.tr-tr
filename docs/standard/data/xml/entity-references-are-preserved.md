@@ -5,34 +5,34 @@ ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1c48e42e55025aff0ce1a24a3ef45ddf8005eab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965910"
 ---
 # <a name="entity-references-are-preserved"></a>Varlık Başvuruları Korunur
-Varlık başvurusu genişletilmiş, ancak korunur, XML belge nesne modeli (DOM) derlemeleri bir **XmlEntityReference** bir varlık başvurusu karşılaştığında düğümü.  
+Varlık başvurusu genişletilmemişse ancak korunmadığında, XML Belge Nesne Modeli (DOM) bir varlık başvurusuyla karşılaştığında bir **XmlEntityReference** düğümü oluşturur.  
   
- Aşağıdaki XML kullanarak  
+ Aşağıdaki XML 'i kullanarak  
   
 ```xml  
 <author>Fred</author>  
 <pubinfo>Published by &publisher;</pubinfo>  
 ```  
   
- DOM derlemeleri bir **XmlEntityReference** karşılaştığında bu düğüm `&publisher;` başvuru. **XmlEntityReference** varlık bildiriminde içeriğinden kopyalanan alt düğümleri içerir. Yukarıdaki kod örneğinde metni varlık bildirimde, bu nedenle içeren bir **XmlText** düğüm varlık referans düğümün alt düğümü olarak oluşturulur.  
+ Dom, `&publisher;` başvuruyla karşılaştığında bir **XmlEntityReference** düğümü oluşturur. **XmlEntityReference** , varlık bildiriminde içerikten kopyalanmış alt düğümleri içerir. Önceki kod örneği varlık bildiriminde metin içerir, bu nedenle bir **XmlText** düğümü varlık başvurusu düğümünün alt düğümü olarak oluşturulur.  
   
- ![Ağaç yapısı Korunan varlık başvuruları için](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
-Korunur varlık başvuruları için ağaç yapısı  
+ ![Korunan varlık başvuruları Için ağaç yapısı](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
+Korunan varlık başvuruları için ağaç yapısı  
   
- Alt düğümleri **XmlEntityReference** tüm alt kopyalarını oluşturulan düğümlerdir **XmlEntity** varlık bildirimi karşılaştığında düğümü.  
+ **XmlEntityReference** alt düğümleri, varlık bildirimi Ile karşılaşıldığında **XmlEntity** düğümünden oluşturulan tüm alt düğümlerin kopyalardır.  
   
 > [!NOTE]
->  Öğesinden kopyalanan düğümleri **XmlEntity** olmayan her zaman tam kopya varlık referans düğümün altında kez yerleştirilir. Varlık referans düğümün kapsamda bulunan ad olabilir ve bu alt düğümlerin son yapılandırma etkiler.  
+> **XmlEntity** 'den kopyalanmış düğümler, varlık başvurusu düğümü altına yerleştirildiğinde her zaman tam kopya değildir. Varlık başvurusu düğümünde kapsamda olan ve alt düğümlerin son yapılandırmasını etkileyen ad alanları olabilir.  
   
- Varsayılan olarak, genel varlıklar ister `&abc;` korunur ve **XmlEntityReference** düğümleri her zaman oluşturulur.  
+ Varsayılan olarak, gibi `&abc;` genel varlıklar korunur ve **XmlEntityReference** düğümleri her zaman oluşturulur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,31 +10,31 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71711c0392576930e97986078ec5926ff6ca9813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761292"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963019"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Kullanmadan Özelliğe Animasyon Ekleme
-Bu örnek, kullanmadan özelliğe animasyon uygulamak için bir yol gösterir. bir <xref:System.Windows.Media.Animation.Storyboard>.  
+Bu örnek, bir özelliğini kullanmadan bir özelliği bir <xref:System.Windows.Media.Animation.Storyboard>animasyon uygulamak için bir yol gösterir.  
   
 > [!NOTE]
->  Bu işlevselliği kullanıma sunulmadı [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Bir özelliğe animasyon ekleme hakkında bilgi için [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], bkz: [görsel taslak kullanarak özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md).  
+> Bu işlev ' de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]kullanılamaz. İçindeki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir özelliği hareketlendirme hakkında daha fazla bilgi için bkz. [görsel taslak kullanarak özelliğe animasyon ekleme](how-to-animate-a-property-by-using-a-storyboard.md).  
   
- Bir özellik için bir yerel animasyon uygulamak için kullanma <xref:System.Windows.UIElement.BeginAnimation%2A> yöntemi. Bu yöntem iki parametre alır: bir <xref:System.Windows.DependencyProperty> animasyon uygulamak için özellik ve bu özelliğe animasyon belirtir.  
+ Bir özelliğe yerel animasyon uygulamak için <xref:System.Windows.UIElement.BeginAnimation%2A> yöntemini kullanın. Bu yöntem iki parametre alır: bir <xref:System.Windows.DependencyProperty> animasyon uygulanacak özelliği belirten ve bu özelliğe uygulanacak animasyon.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, genişlik ve arka plan rengini animasyon ekleme işlemi gösterilmektedir bir <xref:System.Windows.Controls.Button>.  
+ Aşağıdaki örnek, öğesinin <xref:System.Windows.Controls.Button>genişlik ve arka plan rengine nasıl animasyon ekleneceğini gösterir.  
   
  [!code-cpp[animateproperty#11](~/samples/snippets/cpp/VS_Snippets_Wpf/animateproperty/CPP/LocalAnimationExample.cpp#11)]
  [!code-csharp[animateproperty#11](~/samples/snippets/csharp/VS_Snippets_Wpf/animateproperty/CSharp/LocalAnimationExample.cs#11)]
  [!code-vb[animateproperty#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animateproperty/VisualBasic/LocalAnimationExample.vb#11)]  
   
- Animasyon sınıfları çeşitli <xref:System.Windows.Media.Animation> ad mevcut özellikler farklı türde animasyon için. Özellikleri hakkında daha fazla bilgi için bkz. [animasyona genel bakış](animation-overview.md). Bağımlılık özellikleri (Bu örneklerde gösterilen özellikler türü) ve bunların özellikleri hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md).  
+ Farklı özellik türlerini hareketlendirmek için <xref:System.Windows.Media.Animation> ad alanındaki çeşitli animasyon sınıfları mevcuttur. Hareketlendirilen özellikler hakkında daha fazla bilgi için bkz. [animasyon genel bakış](animation-overview.md). Bağımlılık özellikleri (Bu örneklerde gösterilen özelliklerin türü) ve özellikleri hakkında daha fazla bilgi için bkz. [bağımlılık özelliklerine genel bakış](../advanced/dependency-properties-overview.md).  
   
- Kullanmadan animasyon uygulamak için başka bir yöntemle <xref:System.Windows.Media.Animation.Storyboard> nesnelerini; daha fazla bilgi için [özellik Animasyon Tekniklerine Genel Bakış](property-animation-techniques-overview.md).  
+ Nesneleri kullanmadan <xref:System.Windows.Media.Animation.Storyboard> hareketlendirmek için başka yollar vardır; daha fazla bilgi için bkz. [özellik animasyon tekniklerine genel bakış](property-animation-techniques-overview.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

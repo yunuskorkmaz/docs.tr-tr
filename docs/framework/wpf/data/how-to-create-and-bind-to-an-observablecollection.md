@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401431"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965471"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Nasıl yapılır: ObservableCollection Oluşturma ve Bağlama
 Bu örnek, öğe eklendiğinde veya kaldırıldığında bildirim sağlayan bir koleksiyon sınıfı olan <xref:System.Collections.ObjectModel.ObservableCollection%601> sınıfından türetilen bir koleksiyonun nasıl oluşturulacağını ve bağlanacağını gösterir.  
@@ -136,7 +136,7 @@ End Class
  Tanımı `NameItemTemplate` burada gösterilmez.  
   
 > [!NOTE]
->  Koleksiyonunuzdaki nesnelerin [bağlama kaynaklarına genel bakış](binding-sources-overview.md)bölümünde açıklanan gereksinimleri karşılaması gerekir. Özellikle, veya <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> kullanıyorsanız ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Örneğin, kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), gibi uygun bir özellik değiştirilmiş bildirim mekanizması <xref:System.ComponentModel.INotifyPropertyChanged>uygulamanızgerekirarabirim.  
+> Koleksiyonunuzdaki nesnelerin [bağlama kaynaklarına genel bakış](binding-sources-overview.md)bölümünde açıklanan gereksinimleri karşılaması gerekir. Özellikle, veya <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> kullanıyorsanız ( [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Örneğin, kaynak özellikleri dinamik olarak değiştiğinde güncelleştirilmesini istiyorsanız), gibi uygun bir özellik değiştirilmiş bildirim mekanizması <xref:System.ComponentModel.INotifyPropertyChanged>uygulamanızgerekirarabirim.  
   
  Daha fazla bilgi için [veri bağlamaya genel bakış](data-binding-overview.md)konusundaki koleksiyonlara bağlama bölümüne bakın.  
   

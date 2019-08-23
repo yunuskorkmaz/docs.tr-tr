@@ -4,64 +4,64 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 692382de81459ad52d306ca7fd05546b4e36294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856472"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963659"
 ---
 # <a name="exporting-and-importing-metadata"></a>Meta Verileri Dışarı ve İçeri Aktarma
-Windows Communication Foundation (WCF) meta verileri dışarı aktarma, hizmet uç noktaları tanımlamak ve bunları istemcilere hizmetin nasıl kullanılacağını anlamak için kullanabileceğiniz bir paralel, standartlaştırılmış gösterimine yansıtma işlemidir. Hizmet meta verileri alma, oluşturma işlemi olduğundan <xref:System.ServiceModel.Description.ServiceEndpoint> örneği veya hizmet meta verileri bölümleri.  
+Windows Communication Foundation (WCF) ' de, meta verileri dışarı aktarma işlemi, hizmet uç noktalarını açıklama ve bunları istemcilerin hizmeti nasıl kullanacağınızı anlamak için kullanabileceği paralel ve standartlaştırılmış bir gösterimde yansıtma işlemidir. Hizmet meta verilerinin içeri aktarılması, hizmet meta <xref:System.ServiceModel.Description.ServiceEndpoint> verilerinden örnek veya parçalar oluşturma işlemidir.  
   
-## <a name="exporting-metadata"></a>Meta verileri dışarı aktarma  
- Meta verileri dışarı aktarmak için <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> örnekleri kullanmak uygulaması <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlExporter> Türüdür yürütmesinin <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıf ile WCF dahil.  
+## <a name="exporting-metadata"></a>Meta veriler dışarı aktarılıyor  
+ <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> Örneklerden meta verileri dışarı aktarmak için <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıfın bir uygulamasını kullanın. Tür, WCF 'ye dahil edilen <xref:System.ServiceModel.Description.MetadataExporter> soyut sınıfın uygulamasıdır. <xref:System.ServiceModel.Description.WsdlExporter>  
   
- <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> Türü içinde kapsüllenir iliştirilmiş ilke ifadeleri ile Web Hizmetleri Açıklama Dili (WSDL) meta verileri oluşturan bir <xref:System.ServiceModel.Description.MetadataSet> örneği. Kullanabileceğiniz bir <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> çalıştırmalarınızı için meta verileri dışarı aktarmak için örnek <xref:System.ServiceModel.Description.ContractDescription> nesneleri ve <xref:System.ServiceModel.Description.ServiceEndpoint> nesneleri. Bir koleksiyonu da verebilirsiniz <xref:System.ServiceModel.Description.ServiceEndpoint> nesneleri ve bunları belirli bir hizmet adı ile ilişkilendirin.  
+ Tür <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> , bir <xref:System.ServiceModel.Description.MetadataSet> örnekte kapsüllenmiş ekli ilke ifadelerine sahip Web Hizmetleri Açıklama Dili (wsdl) meta verileri oluşturur. Nesneler ve <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ContractDescription>nesneleriçin meta verileri tekrarlayarak dışarı aktarmak için bir örneği kullanabilirsiniz. <xref:System.ServiceModel.Description.ServiceEndpoint> Ayrıca, bir <xref:System.ServiceModel.Description.ServiceEndpoint> nesne koleksiyonunu dışarı aktarabilir ve bunları belirli bir hizmet adıyla ilişkilendirebilirsiniz.  
   
 > [!NOTE]
->  Yalnızca kullanabilirsiniz `WsdlExporter` meta verileri dışarı aktarmak için `ContractDescription` tür bilgilerini, gibi ortak dil çalışma zamanı (CLR) içeren örnek bir `ContractDescription` örneği kullanılarak oluşturulan `ContractDescription.GetContract` yöntemi veya parçası olarak oluşturulan `ServiceDescription` için bir `ServiceHost` örneği. Kullanamazsınız `WsdlExporter` meta verileri dışarı aktarmak için `ContractDescription` örnekleri hizmet meta verilerden içe aktarıldı veya tür bilgisi oluşturulmuş.  
+> `WsdlExporter` Yalnızca, `ContractDescription` `ContractDescription` yöntemi kullanılarak oluşturulan veya`ServiceDescription` bir parçası olarak oluşturulan bir örnek gibi ortak dil çalışma zamanı (CLR) tür bilgilerini içeren örneklerden meta verileri dışarı aktarmak için ' i kullanabilirsiniz. `ContractDescription.GetContract` bir `ServiceHost` örnek için. ' Nı, `WsdlExporter` hizmet meta verilerinden içeri aktarılan `ContractDescription` örneklerden meta verileri dışarı aktarmak için kullanamazsınız veya tür bilgisi olmadan oluşturulabilir.  
   
-## <a name="importing-metadata"></a>Meta verileri içe aktarma  
+## <a name="importing-metadata"></a>Meta veriler içeri aktarılıyor  
   
-### <a name="importing-wsdl-documents"></a>WSDL belgeleri alma  
- WCF hizmet meta verileri içeri aktarmak için uygulaması kullanmak <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türüdür yürütmesinin <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıf ile WCF dahil. <xref:System.ServiceModel.Description.WsdlImporter> Yazın WSDL meta verilerini bağlı ilkeleri ile birlikte, içeri aktarmalar bir <xref:System.ServiceModel.Description.MetadataSet> nesne.  
+### <a name="importing-wsdl-documents"></a>WSDL belgelerini içeri aktarma  
+ WCF 'de hizmet meta verilerini içeri aktarmak için <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıfın bir uygulamasını kullanın. Tür, WCF 'ye dahil edilen <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıfın uygulamasıdır. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Tür <xref:System.ServiceModel.Description.WsdlImporter> , wsdl meta verilerini bir <xref:System.ServiceModel.Description.MetadataSet> nesnede paketlenmiş ekli ilkelerle içe aktarır.  
   
- <xref:System.ServiceModel.Description.WsdlImporter> Meta verileri içeri aktarma üzerinde denetim türü sağlar. Tüm uç noktaları, tüm bağlamaları veya tüm sözleşmelerin içeri aktarabilirsiniz. Belirli bir WSDL hizmetine, bağlama veya bağlantı noktası türü ile ilişkili uç noktaları tümünün içeri aktarabilirsiniz. Ayrıca, belirli bir WSDL bağlantı noktasını, belirli bir WSDL bağlama için bağlama veya belirli bir WSDL bağlantı türü için bir sözleşme için uç nokta içeri aktarabilirsiniz.  
+ <xref:System.ServiceModel.Description.WsdlImporter> Türü, meta verilerin nasıl içeri aktarılacağını denetlemenizi sağlar. Tüm uç noktaları, tüm bağlamaları veya sözleşmelerin tümünü içeri aktarabilirsiniz. Belirli bir WSDL hizmeti, bağlama veya bağlantı noktası türüyle ilişkili tüm uç noktaları içeri aktarabilirsiniz. Ayrıca belirli bir wsdl bağlantı noktası için, belirli bir wsdl bağlaması için bağlama veya belirli bir WSDL bağlantı noktası türü için anlaşma için uç noktayı içeri aktarabilirsiniz.  
   
- <xref:System.ServiceModel.Description.WsdlImporter> De sunan bir <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> özelliği içeri aktarılması gerekmez sözleşmeleri kümesi belirtmenizi sağlar. <xref:System.ServiceModel.Description.WsdlImporter> Sözleşmeleri kullanan <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> aynı tam ada sahip bir sözleşme meta verileri içeri aktarma yerine özellik.  
+ Ayrıca içeri aktarılması gerekmeyen <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> bir anlaşma kümesi belirtmenize olanak tanıyan bir özellik sunar. <xref:System.ServiceModel.Description.WsdlImporter> , <xref:System.ServiceModel.Description.WsdlImporter> Meta verilerden aynı nitelikli ada <xref:System.ServiceModel.Description.MetadataImporter.KnownContracts%2A> sahip bir sözleşmeyi içeri aktarmak yerine, özelliğindeki sözleşmeleri kullanır.  
   
-### <a name="importing-policies"></a>İlkeleri alma  
- <xref:System.ServiceModel.Description.WsdlImporter> Türü, işlem, iletiye eklenmiş ilke ifadeleri toplar ve uç noktası İlkesi konuları ve ardından <xref:System.ServiceModel.Description.IPolicyImportExtension> uygulamalarında <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> ilke ifadeleri içeri aktarmak için koleksiyon.  
+### <a name="importing-policies"></a>Ilkeleri içeri aktarma  
+ Türü ileti, işlem ve uç nokta ilkesi ilgililere ekli ilke ifadelerini toplar ve ardından ilke ifadelerini içeri aktarmak için <xref:System.ServiceModel.Description.IPolicyImportExtension> <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> koleksiyondaki uygulamaları kullanır. <xref:System.ServiceModel.Description.WsdlImporter>  
   
- İlke alma mantığını otomatik olarak aynı WSDL belgesinde ilke ifadeleri ilke başvuruları işler ve ile tanımlanan bir `wsu:Id` veya `xml:id` özniteliği. İlke alma mantığını ilke döngüsel başvurular karşı uygulamalar bir ilke ifadesi 4096 düğümlerine, aşağıdaki öğeleri biri olduğu bir düğüm boyutu sınırlayarak korur: `wsp:Policy`, `wsp:All`, `wsp:ExactlyOne`, `wsp:policyReference`.  
+ İlke içeri aktarma mantığı, aynı WSDL belgesindeki ilke ifadelerine ilke başvurularını otomatik olarak işler ve bir `wsu:Id` veya `xml:id` özniteliği ile tanımlanır. İlke içeri aktarma mantığı, bir ilke ifadesinin boyutunu 4096 düğüm olarak sınırlayarak, bir düğüm aşağıdaki öğelerden biri olduğunda, uygulamaları döngüsel ilke başvurularına karşı korur `wsp:Policy`:, `wsp:All`, `wsp:ExactlyOne`, `wsp:policyReference`.  
   
- İlke alma mantığını ilke ifadeleri otomatik olarak normalleştirir. İlke ifadeleri iç içe geçmiş ve `wsp:Optional` özniteliği Normalleştirilmemiş. Bitti normalleştirme işleme miktarı her adım burada verir İlkesi eklemesi veya alt öğesi 4096 adımlarına sınırlıdır bir `wsp:ExactlyOne` öğesi.  
+ İlke içeri aktarma mantığı ayrıca ilke ifadelerini otomatik olarak normalleştirir. İç içe geçmiş ilke ifadeleri `wsp:Optional` ve özniteliği normalleştirilemez. Gerçekleştirilen normalleştirme işlemi miktarı 4096 adımla sınırlıdır, burada her bir adım bir ilke onaylama veya bir `wsp:ExactlyOne` öğenin alt öğesi oluşturur.  
   
- <xref:System.ServiceModel.Description.WsdlImporter> Türü farklı WSDL ilke konuları iliştirilmiş ilke alternatifleri 32 adede kadar bir birleşimiyle çalışır. Birleşimi düzgün bir şekilde içeri aktarırsa, ilk birleşim kısmi özel bağlama oluşturmak için kullanılır.  
+ <xref:System.ServiceModel.Description.WsdlImporter> Tür, farklı WSDL ilkesi konularıyla eklenmiş olan en fazla 32 ilke alternatiflerinin bir düzeyini gerçekleştirmeye çalışır. Hiçbir birleşim düzgün bir şekilde içeri aktarılmadığında, ilk bileşim kısmi özel bağlama oluşturmak için kullanılır.  
   
 ## <a name="error-handling"></a>Hata İşleme  
- Hem <xref:System.ServiceModel.Description.MetadataExporter> ve <xref:System.ServiceModel.Description.MetadataImporter> türler açığa bir `Errors` hata ve uyarı iletilerini sırasıyla dışarı ve içeri aktarma işlemi sırasında karşılaşılan bir koleksiyonu içerebilir, kullanılabilen araçları uygularken özelliği.  
+ <xref:System.ServiceModel.Description.MetadataExporter> Hem `Errors` hem de türleri,Araçlaruygularkenkullanılabilecek,sırasıyladışarıveiçeriaktarmaişlemlerindekarşılaşılanbirhataveuyarıiletisikoleksiyonuiçerebilenbir<xref:System.ServiceModel.Description.MetadataImporter> özelliği kullanıma sunar.  
   
- <xref:System.ServiceModel.Description.WsdlImporter> Türüne karşılık gelen bir hata ekler ve içeri aktarma işlemi sırasında yakalanan özel durum için bir özel durum genellikle oluşturur, `Errors` özelliği. <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A>, <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A>, Ve <xref:System.ServiceModel.Description.WsdlImporter.ImportEndpoints%2A> yöntemleri, ancak değil throw bu özel durumlar işaretlemeniz gerekir böylece `Errors` özellik sorunları bu yöntemleri çağrılırken oluşup olmadığını belirlemek için.  
+ Tür genellikle içeri aktarma işlemi sırasında yakalanan özel durum için bir özel durum oluşturur ve `Errors` özelliğine karşılık gelen bir hata ekler. <xref:System.ServiceModel.Description.WsdlImporter> <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> Ancak,<xref:System.ServiceModel.Description.WsdlImporter.ImportEndpoints%2A> , ve yöntemleri bu özel durumları oluşturmaz, bu nedenle bu yöntemleri çağırırken herhangi bir sorun olup olmadığını `Errors` öğrenmek için özelliği denetlemeniz gerekir. <xref:System.ServiceModel.Description.WsdlImporter.ImportAllBindings%2A> <xref:System.ServiceModel.Description.WsdlImporter.ImportAllEndpoints%2A>  
   
- <xref:System.ServiceModel.Description.WsdlExporter> Beklerseniz dışarı aktarma işlemi sırasında yakalanan özel durumların türü. Hata olarak bu özel durumları yakalanmaz `Errors` özelliği. Bir kez <xref:System.ServiceModel.Description.WsdlExporter> özel durumu oluşturur, hatalı bir durumda olduğundan ve kullanılamayacak. <xref:System.ServiceModel.Description.WsdlExporter> Uyarıları ekleyin, `Errors` özelliğine bir işlem joker Eylemler ve yinelenen bağlama adları ne zaman karşılaşılan kullandığından dışarı aktarılamaz.  
+ <xref:System.ServiceModel.Description.WsdlExporter> Tür, dışa aktarma işlemi sırasında yakalanan tüm özel durumları yeniden oluşturur. Bu özel durumlar, `Errors` özelliğinde hata olarak yakalanmaz. Bir özel durum oluşturduğunda, hata hatalı durumdadır ve yeniden kullanılamaz. <xref:System.ServiceModel.Description.WsdlExporter> , <xref:System.ServiceModel.Description.WsdlExporter> Joker karakter eylemlerini kullandığından ve `Errors` yinelenen bağlama adlarına rastlana kadar bir işlem verilemediği zaman, özelliğine uyarı ekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Hizmet uç noktalarına meta verileri alma](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
- Açıklama nesnelerini indirilen meta verileri içe aktarmayı açıklar.  
+ [Nasıl yapılır: Meta verileri hizmet uç noktalarına aktar](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ İndirilen meta verilerin açıklama nesnelerine nasıl içeri aktarılacağını açıklar.  
   
- [Nasıl yapılır: Hizmet uç noktalarından meta verileri dışarı aktarma](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
- Meta verilere açıklama nesneleri dışa aktarmayı açıklar.  
+ [Nasıl yapılır: Hizmet uç noktalarından meta verileri dışarı aktar](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ Açıklama nesnelerinin meta verilere nasıl dışarı aktarılacağını açıklar.  
   
  [ServiceDescription ve WSDL Başvurusu](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
- WSDL ve açıklama nesneler arasındaki eşlemeyi tanımlar.  
+ Açıklama nesneleri ve WSDL arasındaki eşlemeyi açıklar.  
   
- [Nasıl yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için svcutil.exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
- Hizmetleri, sözleşmeler ve derlenmiş bütünleştirilmiş kodlar içindeki veri türleri için meta verileri dışarı aktarmak için Svcutil.exe kullanımı açıklanmaktadır.  
+ [Nasıl yapılır: Meta verileri derlenmiş hizmet kodundan dışarı aktarmak için Svcutil. exe kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ Derlenmiş derlemelerde hizmetlerin, sözleşmelerin ve veri türlerinin meta verilerini dışarı aktarmak için Svcutil. exe ' nin kullanımını açıklar.  
   
  [Veri Sözleşmesi Şema Başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
- Açıklar, XML Şeması (tarafından kullanılan XSD) alt <xref:System.Runtime.Serialization.DataContractSerializer> açıklayan ortak dil çalışma zamanı (CLR) için XML serileştirme türleri.  
+ XML serileştirmesi için ortak dil çalışma zamanı (CLR) türlerini <xref:System.Runtime.Serialization.DataContractSerializer> açıklayan, tarafından kullanılan XML şemasının (xsd) alt kümesini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Description.WsdlExporter>  

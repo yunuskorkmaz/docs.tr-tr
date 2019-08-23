@@ -16,48 +16,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba02373aae33baf77b72323fabf1f6ca1fe4eecf
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 0f159c0b57f2087b608fac8cbc9b9c64ceb063a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490235"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965987"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost Arabirimi
-Benzer işlevlere [Icorruntimehost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) .NET Framework sürüm 1'i aşağıdaki değişikliklerle birlikte sağlanan arabirim:  
+.NET Framework sürüm 1 ' de sağlanan [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) arabirimi aşağıdaki değişikliklerle benzer işlevler sağlar:  
   
-- Ek [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) konak denetimi arabirimi ayarlamak için yöntemi.  
+- Ana bilgisayar denetim arabirimini ayarlamak için [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md) yönteminin eklenmesi.  
   
-- Tarafından sağlanan bazı yöntemler Java'daki `ICorRuntimeHost`.  
+- Tarafından sunulan bazı yöntemlerin atlanarak `ICorRuntimeHost`.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[ExecuteApplication Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)|ClickOnce dağıtım senaryolarında bildirim tabanlı yeni bir etki alanı etkinleştirilmesi için uygulamayı belirtmek için kullanılır.|  
-|[ExecuteInAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeinappdomain-method.md)|Belirtir <xref:System.AppDomain> burada belirtilen yönetilen kodu yürütmek.|  
-|[ExecuteInDefaultAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeindefaultappdomain-method.md)|Belirtilen bütünleştirilmiş kod içinde belirtilen türün belirtilen yöntemi çağırır.|  
-|[GetCLRControl Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getclrcontrol-method.md)|Türü bir arabirim işaretçisi alır [Iclrcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) konakları ortak dil çalışma zamanı (CLR) yönlerini özelleştirmek için kullanabilirsiniz.|  
-|[GetCurrentAppDomainId Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)|Sayısal tanımlayıcısını alır <xref:System.AppDomain> , şu anda yürütülüyor.|  
-|[SetHostControl Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)|Konak denetimi arabirimini ayarlar. Çağırmalısınız `SetHostControl` çağırmadan önce `Start`.|  
-|[Start Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)|CLR'yi bir işleme başlatır.|  
-|[Stop Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-stop-method.md)|Çalışma zamanı tarafından kodun yürütülmesini durdurur.|  
-|[UnloadAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-unloadappdomain-method.md)|Bellekten <xref:System.AppDomain> belirtilen sayısal tanımlayıcısına karşılık gelir.|  
+|[ExecuteApplication Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md)|Yeni bir etki alanında etkinleştirilecek uygulamayı belirtmek için bildirim tabanlı ClickOnce dağıtım senaryolarında kullanılır.|  
+|[ExecuteInAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeinappdomain-method.md)|<xref:System.AppDomain> Belirtilen yönetilen kodun çalıştırılacağı öğesini belirtir.|  
+|[ExecuteInDefaultAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeindefaultappdomain-method.md)|Belirtilen derlemede belirtilen türde belirtilen metodu çağırır.|  
+|[GetCLRControl Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getclrcontrol-method.md)|Ana bilgisayarlarının ortak dil çalışma zamanının (CLR) yönlerini özelleştirmek için kullanabileceği [ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md) türünde bir arabirim işaretçisi alır.|  
+|[GetCurrentAppDomainId Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)|Şu anda yürütülmekte <xref:System.AppDomain> olan öğesinin sayısal tanımlayıcısını alır.|  
+|[SetHostControl Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)|Konak denetim arabirimini ayarlar. `SetHostControl` Çağrılmadan`Start`önce öğesini çağırmanız gerekir.|  
+|[Start Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)|CLR 'yi bir işlem olarak başlatır.|  
+|[Stop Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-stop-method.md)|Çalışma zamanı tarafından kodun yürütülmesini sonlandırır.|  
+|[UnloadAppDomain Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-unloadappdomain-method.md)|<xref:System.AppDomain> Belirtilen sayısal tanımlayıcıya karşılık gelen öğesini kaldırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- .NET Framework 4 ile başlayarak, kullanmaktadır [Iclrmetahost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md) işaretçisi almak için arabirimi [Iclrruntimeınfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirim ve sonra çağrı [Iclrruntimeınfo::getınterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)işaretçisi almak için yöntemi `ICLRRuntimeHost`. Önceki .NET Framework sürümlerinde, konak için bir işaretçi alır. bir `ICLRRuntimeHost` çağırarak örneği [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md). .NET Framework 2.0 sürümünde sağlanan teknolojilerin hiçbiri uygulamaları sağlamak için kullanmanız gerekir `ICLRRuntimeHost` yerine `ICorRuntimeHost`.  
+ .NET Framework 4 `ICLRRuntimeHost`' te başlayarak ICLRMetaHost arabirimini kullanarak [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) arabirimine bir işaretçi alın ve sonra bir Işaretçi almak Için [ICLRRuntimeInfo:: GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) metodunu çağırın. [](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md) .NET Framework önceki sürümlerinde, konak [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) veya [CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)çağırarak `ICLRRuntimeHost` bir örneğe yönelik bir işaretçi alır. .NET Framework sürüm 2,0 ' de sunulan teknolojilerin herhangi birine yönelik uygulamalar sağlamak için `ICLRRuntimeHost` `ICorRuntimeHost`yerine kullanmanız gerekir.  
   
 > [!IMPORTANT]
->  Çağırmayın [Başlat](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemi çağırmadan önce [ExecuteApplication](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md) bildirim tabanlı bir uygulamayı etkinleştirmek için yöntemi. Varsa `Start` yöntemi önce çağrılır `ExecuteApplication` yöntem çağrısı başarısız olur.  
+> Bildirim tabanlı bir uygulamayı etkinleştirmek için [ExecuteApplication](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-executeapplication-method.md) metodunu çağırmadan önce [Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) yöntemini çağırmayın. Yöntemi ilk kez `ExecuteApplication` çağrılırsa Yöntem çağrısı başarısız olur. `Start`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** MSCorEE.h  
+ **Üst bilgi** MSCorEE. h  
   
- **Kitaplığı:** Bir kaynak olarak MSCorEE.dll dahil  
+ **Kitaplığı** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

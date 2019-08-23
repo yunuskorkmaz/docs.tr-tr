@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 5cbe6ce6e8e36fc9460295c454014d6f3fbf3983
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635123"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962638"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Temel Kimlik Doğrulama ile Taşıma Güvenliği
-Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve istemci gösterir. Sunucusunda Güvenli Yuva Katmanı (SSL) için kullanılabilecek geçerli bir X.509 sertifikası olması gerekir ve istemcilerin sunucu sertifikasına güvenmelidir. Daha fazla Web hizmetinin kullanılabilmesi için bir SSL uygulaması zaten sahip. Daha fazla etkinleştirme temel kimlik doğrulaması hakkında Internet Information Services (IIS) hakkında bilgi için <https://go.microsoft.com/fwlink/?LinkId=83822>.  
+Aşağıdaki çizimde bir Windows Communication Foundation (WCF) hizmeti ve istemcisi gösterilmektedir. Sunucu, Güvenli Yuva Katmanı (SSL) için kullanılabilecek geçerli bir X. 509.440 sertifikasına ihtiyaç duyuyor ve istemcilerin sunucunun sertifikasına güvenmesi gerekir. Ayrıca, Web hizmeti zaten kullanılabilecek bir SSL uygulamasına sahiptir. Internet Information Services (IIS) üzerinde temel kimlik doğrulamasını etkinleştirme hakkında daha fazla bilgi için <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>bkz.  
   
- ![Temel kimlik doğrulama ile Aktarım güvenliği gösteren ekran görüntüsü.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
+ ![Temel kimlik doğrulaması ile taşıma güvenliğini gösteren ekran görüntüsü.](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|Özelliği|Açıklama|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik modu|Taşıma|  
-|Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve Hizmetleri ile|  
-|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (istemci)|Evet (HTTPS kullanarak)<br /><br /> Evet (kullanıcı adı/parola)|  
-|Bütünlüğü|Evet|  
-|Gizliliği|Evet|  
-|Taşıma|HTTPS|  
+|Güvenlik modu|Aktarım|  
+|Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle|  
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (HTTPS kullanarak)<br /><br /> Evet (Kullanıcı adı/parola aracılığıyla)|  
+|Doğruluğunu|Evet|  
+|Gizlilik|Evet|  
+|Aktarım|HTTPS|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma, bağımsız olarak çalışmaya yöneliktir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
-- Kod ile yapılandırma kullanarak tek başına bir hizmet oluşturun.  
+- Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
-- Sağlanan Yapılandırması'nı kullanarak bir hizmet oluşturma, ancak tüm uç noktalar tanımlamaz.  
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, bir Windows etki alanı kullanıcı adı ve parola aktarım güvenliği için kullanan bir hizmet uç noktası oluşturma gösterilmektedir. Hizmete istemcinin kimliğini doğrulamak için bir X.509 sertifikası gerektiğini unutmayın. Daha fazla bilgi için [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Aşağıdaki kod, aktarım güvenliği için bir Windows etki alanı Kullanıcı adı ve parolası kullanan bir hizmet uç noktası oluşturmayı gösterir. Hizmetin, istemcinin kimliğini doğrulamak için bir X. 509.440 sertifikası gerektirdiğini unutmayın. Daha fazla bilgi için bkz. [sertifikalarla çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [nasıl yapılır: SSL sertifikası](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)Ile bir bağlantı noktası yapılandırın.  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
 ## <a name="configuration"></a>Yapılandırma  
- Temel kimlik doğrulaması ile aktarım düzeyi güvenlik kullanan bir hizmet yapılandırır:  
+ Aşağıda, aktarım düzeyi güvenlik ile temel kimlik doğrulaması kullanmak için bir hizmet yapılandırılır:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -72,10 +72,10 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve iste
 ## <a name="client"></a>İstemci  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, kullanıcı adı ve parola içeren istemci kodu gösterir. Kullanıcı geçerli bir Windows kullanıcı adı ve parola sağlamalıdır unutmayın. Kullanıcı adını ve parolasını döndürmek için kod burada gösterilmez. Kullanıcıdan bilgi sorgulamak için bir iletişim kutusu veya diğer arabirim kullanın.  
+ Aşağıdaki kod, Kullanıcı adını ve parolasını içeren istemci kodunu gösterir. Kullanıcının geçerli bir Windows Kullanıcı adı ve parolası sağlaması gerektiğini unutmayın. Kullanıcı adını ve parolayı döndüren kod burada gösterilmez. Bilgileri Kullanıcı için sorgulamak üzere bir iletişim kutusu veya başka bir arabirim kullanın.  
   
 > [!NOTE]
->  Kullanıcı adı ve parola yalnızca kod kullanılarak ayarlanabilir.  
+> Kullanıcı adı ve parola yalnızca kod kullanılarak ayarlanabilir.  
   
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
@@ -84,7 +84,7 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve iste
  Aşağıdaki kod, istemci yapılandırmasını gösterir.  
   
 > [!NOTE]
->  Kullanıcı adı ve parolasını ayarlamak için yapılandırma kullanamazsınız. Burada gösterilen yapılandırma, kodla kullanıcı adını ve parolasını ayarlamak için yükseltilmelidir.  
+> Kullanıcı adını ve parolayı ayarlamak için yapılandırma kullanamazsınız. Burada gösterilen yapılandırma, Kullanıcı adı ve parolasını ayarlamak için kod kullanılarak artıralınmalıdır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -115,7 +115,7 @@ Aşağıdaki çizimde, bir Windows Communication Foundation (WCF) hizmet ve iste
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Nasıl yapılır: Bir SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Nasıl yapılır: SSL sertifikası ile bir bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Windows Server AppFabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric için güvenlik modeli](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

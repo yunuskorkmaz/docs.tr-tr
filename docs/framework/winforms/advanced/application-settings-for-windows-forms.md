@@ -7,39 +7,39 @@ helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d64aebb1cb84b39a2e2fb9a6a8375c52d58699df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963236"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Forms için Uygulama Ayarları
-Windows Forms uygulamaları ayarları özelliği oluşturulacağı, depolanacağı ve özel uygulama ve istemci üzerindeki kullanıcı tercihlerini korumak daha kolay hale getirir. Uygulama ayarları, yalnızca veritabanı bağlantı dizeleri gibi uygulama verilerini, aynı zamanda araç çubuğu konumları gibi kullanıcıya özgü verileri depolayabilir ve listeleri en son kullanılan.  
+Windows Forms uygulamalar ayarları özelliği, istemci üzerinde özel uygulama ve Kullanıcı tercihleri oluşturmayı, depolamayı ve bakımını yapmayı kolaylaştırır. Uygulama ayarları ile yalnızca veritabanı bağlantı dizeleri gibi uygulama verilerini, ancak araç çubuğu konumları ve en son kullanılan listeler gibi kullanıcıya özgü verileri de kaydedebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Uygulama Ayarlarına Genel Bakış](~/docs/framework/winforms/advanced/application-settings-overview.md)  
- Uygulamanız ve kullanıcılarınız adına ayarları veri depolamak ve oluşturmak nasıl ele alınmaktadır.  
+ [Uygulama Ayarlarına Genel Bakış](application-settings-overview.md)  
+ Uygulamanızın ve kullanıcılarınızın adına ayar verilerinin nasıl oluşturulduğunu ve depolanacağını açıklar.  
   
- [Uygulama Ayarları Mimarisi](~/docs/framework/winforms/advanced/application-settings-architecture.md)  
- Nasıl çalıştığını uygulama ayarları özelliğini açıklar ve mimariyi gruplanmış ayarları ve ayarları anahtarları gibi gelişmiş özellikleri keşfediyor.  
+ [Uygulama Ayarları Mimarisi](application-settings-architecture.md)  
+ Uygulama ayarları özelliğinin nasıl çalıştığını açıklar ve mimarinin gruplanmış ayarlar ve ayarlar anahtarlar gibi gelişmiş özelliklerini araştırır.  
   
- [Uygulama Ayarları Öznitelikleri](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
- Listeler ve bir uygulama ayarları sarmalayıcı sınıfı veya ayarları özellikleri için uygulanabilecek öznitelikleri açıklar.  
+ [Uygulama Ayarları Öznitelikleri](application-settings-attributes.md)  
+ Uygulama ayarları sarmalayıcı sınıfına veya ayarların özelliklerine uygulanabilen öznitelikleri listeler ve tanımlar.  
   
- [Özel Denetimler için Uygulama Ayarları](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
- Hangi özel kontrollerinizi üçüncü taraf uygulamalarda barındırıldığında uygulama ayarlarını kalıcı yapma olanağı vermek için gerçekleştirilmesi gereken açıklar.  
+ [Özel Denetimler için Uygulama Ayarları](application-settings-for-custom-controls.md)  
+ Özel denetimlerinizi, üçüncü taraf uygulamalarda barındırılırken uygulama ayarlarını kalıcı hale getirebilme olanağı vermek için ne yapılması gerektiğini açıklar.  
   
- [Nasıl yapılır: Uygulama ayarları oluşturma](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
- Uygulama oturumları arasında kalıcı yeni uygulama ayarları oluşturmayı gösterir.  
+ [Nasıl yapılır: Uygulama ayarları oluştur](how-to-create-application-settings.md)  
+ Uygulama oturumları arasında kalıcı olan yeni uygulama ayarları oluşturmayı gösterir.  
   
- [Nasıl yapılır: Uygulama ayarlarını doğrulama](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
- Kalıcı önce doğrulama uygulama ayarları gösterir.  
+ [Nasıl yapılır: Uygulama ayarlarını doğrulama](how-to-validate-application-settings.md)  
+ Kalıcı olmadan önce uygulama ayarlarının doğrulanmasını gösterir.  
   
 ## <a name="related-topics"></a>İlgili konular
 
 [Windows Forms yapılandırma bölümü](../../configure-apps/file-schema/winforms/index.md)    
-Belgelerin .NET Framework 4.7 ile başlayarak Windows Forms uygulaması yüksek DPI etkinleştirmek için ayarlarını destekler.
+.NET Framework 4,7 ' den başlayarak Windows Forms uygulamasında yüksek DPı desteğini etkinleştirmek için ayarları belgeler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

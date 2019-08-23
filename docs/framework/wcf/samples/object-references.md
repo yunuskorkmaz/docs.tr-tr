@@ -2,23 +2,23 @@
 title: Nesne Başvuruları
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 2a2da82d913d43aa9bc3ccfeb9f1f1eda12b0562
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ac8eba44168befae92bef30a054c00d997cc54b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008065"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965607"
 ---
 # <a name="object-references"></a>Nesne Başvuruları
-Bu örnek nesnesinin başvuruları göre sunucu ile istemci arasında nasıl geçirileceğini gösterir. Benzetimli örnek kullandığı *sosyal ağlar*. Bir sosyal ağ oluşan bir `Person` her arkadaş örneği olduğu arkadaş listesi içeren sınıf `Person` sınıfıyla kendi arkadaş listesi. Bu nesne bir grafik oluşturur. Hizmet, bu sosyal ağlarda işlemini kullanıma sunar.  
+Bu örnek, nesneleri sunucu ve istemci arasında başvuruya göre nasıl geçileceğini gösterir. Örnek, sanal *sosyal ağları*kullanır. Sosyal ağ, her arkadaşın `Person` kendi arkadaş listesi ile `Person` sınıfın bir örneği olduğu arkadaş listesini içeren bir sınıftan oluşur. Bu, nesnelerin bir grafiğini oluşturur. Hizmet, bu sosyal ağlarda işlemleri kullanıma sunar.  
   
- Bu örnekte, Internet Information Services (IIS) tarafından barındırılan hizmet ve bir konsol uygulaması (.exe) istemcidir.  
+ Bu örnekte, hizmet Internet Information Services (IIS) tarafından barındırılır ve istemci bir konsol uygulaması (. exe).  
   
 > [!NOTE]
->  Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
- `Person` Sınıfında <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği uygulandı, ile <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> alan kümesine `true` gibi bir başvuru türü bildirmek için. Tüm özelliklere sahip <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulandı.  
+ Sınıfı, öğesini bir başvuru türü olarak bildirmek `true` üzere <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> ayarlanmış olan özniteliğiilebirlikteuygulandı.<xref:System.Runtime.Serialization.DataContractAttribute> `Person` Tüm özellikler uygulanmış <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği vardır.  
   
 ```csharp
 [DataContract(IsReference=true)]  
@@ -51,7 +51,7 @@ public class Person
 }  
 ```  
   
- `GetPeopleInNetwork` İşlemi türünde bir parametre alır `Person` ve tüm kişilerin ağdaki; döndürür. diğer bir deyişle, tüm kişiler `friends` listesi, arkadaşınızın arkadaşlarınız ve yinelemeleri olmadan benzeri.  
+ İşlem, türünde `Person` bir parametre alır ve ağdaki tüm kişileri döndürür; diğer bir deyişle, `friends` listedeki tüm kişiler, arkadaşınızın arkadaşları, vb., yinelemeler olmadan. `GetPeopleInNetwork`  
   
 ```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
@@ -63,7 +63,7 @@ public List<Person> GetPeopleInNetwork(Person p)
 }  
 ```  
   
- `GetMutualFriends` İşlemi türünde bir parametre alır `Person` ve ayrıca bu kişinin sahip listesindeki tüm arkadaşlarını döndürür içinde kendi `friends` listesi.  
+ İşlem türünde `Person` bir parametre alır ve listede bu kişinin `friends` da bulunduğu tüm arkadaşlarınızı döndürür. `GetMutualFriends`  
   
 ```csharp
 public List<Person> GetMutualFriends(Person p)  
@@ -78,7 +78,7 @@ public List<Person> GetMutualFriends(Person p)
 }  
 ```  
   
- `GetCommonFriends` İşlemi türü listesini alır `Person`. Listeye iki olması beklenir `Person` içindeki nesneleri. İşlem listesini döndürür `Person` bulunan nesneleri `friends` hem listelerini `Person` Giriş listesindeki nesneler.  
+ İşlem `GetCommonFriends` , türün `Person`bir listesini alır. Listede iki `Person` nesne olması beklenir. İşlem, giriş listesindeki her iki `Person` `Person` nesnenin `friends` listelerinde bulunan nesnelerin listesini döndürür.  
   
 ```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
@@ -92,24 +92,24 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>İstemci  
- İstemci proxy kullanılarak oluşturulan **hizmet Başvurusu Ekle** Visual Studio özelliği.  
+ İstemci proxy 'si, Visual Studio 'nun **hizmet başvurusu Ekle** özelliği kullanılarak oluşturulur.  
   
- Beş oluşan bir sosyal ağ `Person` nesneleri oluşturulur. İstemci, her üç yöntemi hizmeti çağırır.  
+ Beş `Person` nesneden oluşan bir sosyal ağ oluşturulur. İstemci, hizmette üç yöntemin her birini çağırır.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+>  Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+>  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   

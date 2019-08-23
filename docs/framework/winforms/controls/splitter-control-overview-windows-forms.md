@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 934efd707f2a52da5ba604139c8e4510aad4606b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964454"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Bölümlendirici Denetimine Genel Bakış (Windows Forms)
 > [!IMPORTANT]
->  Ancak <xref:System.Windows.Forms.SplitContainer> değiştirir ve işlevsellik ekler <xref:System.Windows.Forms.Splitter> önceki sürümlerinde, denetimin <xref:System.Windows.Forms.Splitter> seçerseniz geriye dönük uyumluluk ve gelecekte kullanım için korunur.  
+> , Ve önceki sürümlerin <xref:System.Windows.Forms.Splitter> denetimine işlevsellik ekler ve bu, <xref:System.Windows.Forms.Splitter> isterseniz hem geriye dönük uyumluluk hem de gelecekte kullanılmak üzere korunur. <xref:System.Windows.Forms.SplitContainer>  
   
- Windows Forms <xref:System.Windows.Forms.Splitter> denetimleri yerleşik denetimlerin çalışma zamanında yeniden boyutlandırmak için kullanılır. <xref:System.Windows.Forms.Splitter> Değişen uzunlukları, veri bölmeleri içeren genişlikleri değişen bir bilgilerinin farklı zamanlarda, Windows Gezgini gibi sunmak için veri denetimleri ile formlarında genellikle Denetim kullanılır.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> denetimleri çalışma zamanında yerleşik denetimleri yeniden boyutlandırmak için kullanılır. <xref:System.Windows.Forms.Splitter> Denetim genellikle, veri bölmeleri farklı zamanlarda değişen genişlikler bilgisi içeren Windows Gezgini gibi, mevcut uzunluklara sahip denetimlerle birlikte formlarda kullanılır.  
   
-## <a name="working-with-the-splitter-control"></a>Bölümlendirici denetimi ile çalışma  
- Bölümlendirici denetimi tarafından yeniden boyutlandırılabilir bir denetimin yerleştirilmemiş uç cihazlarında fare işaretçisi kullanıcı işaret ettiğinde, işaretçi denetimi boyutlandırılabileceğini belirtmekte görünümünü değiştirir. Bölümlendirici denetimi ile kullanıcı hemen önce bu yerleşik denetimi yeniden boyutlandırabilirsiniz. Bu nedenle, bir yerleşik denetimin çalışma zamanında yeniden boyutlandırmak kullanıcının etkinleştirmek için bir kapsayıcının bir kenara boyutlandırılmaya denetim noktası ve ardından bu kapsayıcı aynı tarafına Bölümlendirici denetimi dock.  
+## <a name="working-with-the-splitter-control"></a>Splitter denetimiyle çalışma  
+ Kullanıcı, bir denetimin bir Splitter denetimi tarafından yeniden boyutlandırılabileceği bir denetimin yerleştirilmemiş kenarında fare işaretçisini işaret ediyorsa, işaretçiyi denetimin yeniden boyutlandırılabileceğini belirtmek için görünümünü değiştirir. Bölümlendirici denetimi ile, Kullanıcı hemen öncesindeki yerleşik denetimi yeniden boyutlandırabilir. Bu nedenle, kullanıcının çalışma zamanında yerleşik bir denetimi yeniden boyutlandırmasını etkinleştirmek için, denetimin bir kenarına yeniden boyutlandırılması için denetimi yerleştirin ve ardından Bu kapsayıcının aynı tarafına bir Splitter denetimi yerleştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Nasıl yapılır: Windows Forms'da denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
+- [Nasıl yapılır: Windows Forms denetimleri yerleştirme](how-to-dock-controls-on-windows-forms.md)
 - [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

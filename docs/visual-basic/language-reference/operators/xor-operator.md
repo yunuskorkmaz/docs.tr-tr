@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59f27b92996e1506be5967de88c22fb88e06f5b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781179"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965854"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor İşleci (Visual Basic)
-İki mantıksal dışlama gerçekleştirir `Boolean` deyimlerde ya da iki sayısal ifadeye bit tabanlı dışlama.  
+İki `Boolean` ifadede bir mantıksal dışlama veya iki sayısal ifadede bit tabanlı dışlama gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -32,18 +32,18 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>Bölümler  
  `result`  
- Gerekli. Tüm `Boolean` veya sayısal bir değişken. Boole karşılaştırma `result` (özel mantıksal veya işlecini) iki mantıksal dışlama `Boolean` değerleri. Bit düzeyinde işlemler için `result` iki sayısal bit desenlerinin (özel bit tabanlı veya işlecini) bit tabanlı dışlama temsil eden sayısal bir değerdir.  
+ Gerekli. Herhangi `Boolean` bir veya sayısal değişken. Boolean karşılaştırma `result` için iki `Boolean` değerin mantıksal dışlamasıdır (dışlamalı mantıksal ayırıcı). Bit düzeyinde işlemler `result` için iki sayısal bit deseninin bit düzeyinde dışlamasını (dışlayıcı bit düzeyinde ayırıcı) temsil eden sayısal bir değerdir.  
   
  `expression1`  
- Gerekli. Tüm `Boolean` veya sayısal ifade.  
+ Gerekli. Herhangi `Boolean` bir veya sayısal ifade.  
   
  `expression2`  
- Gerekli. Tüm `Boolean` veya sayısal ifade.  
+ Gerekli. Herhangi `Boolean` bir veya sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Boole karşılaştırma `result` olduğu `True` ve yalnızca, tam olarak birine `expression1` ve `expression2` değerlendiren `True`. Diğer bir deyişle, ve yalnızca, `expression1` ve `expression2` değerlendirmek için ters `Boolean` değerleri. Aşağıdaki tabloda gösterilmiştir nasıl `result` belirlenir.  
+ Boolean karşılaştırma için, `result` `True` ve `expression1` yalnızca tam `expression2` olarak`True`bir tane olarak değerlendirilir. Diğer bir deyişle, ve yalnızca Eğer `expression1` ve `expression2` ters `Boolean` değerler olarak değerlendirilir. Aşağıdaki tabloda nasıl `result` belirlendiği gösterilmektedir.  
   
-|Varsa `expression1` olduğu|Ve `expression2` olduğu|Değerini `result` olduğu|  
+|`expression1` İse|Ve `expression2`|Öğesinin `result` değeri|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|`True`|`False`|  
 |`True`|`False`|`True`|  
@@ -51,47 +51,47 @@ result = expression1 Xor expression2
 |`False`|`False`|`False`|  
   
 > [!NOTE]
->  Bir Boolean karşılaştırmaya `Xor` işleci yordam çağrıları yapma içerebilir her iki ifade her zaman değerlendirilir. İçin hiçbir short-circuiting karşılığı yoktur `Xor`, sonucu her zaman her iki işlenen üzerinde de bağlıdır. İçin *kısa devre* mantıksal işleçler bkz [AndAlso işleci](../../../visual-basic/language-reference/operators/andalso-operator.md) ve [OrElse işleci](../../../visual-basic/language-reference/operators/orelse-operator.md).  
+> Boole karşılaştırmasına, `Xor` işleç her zaman her iki ifadeyi değerlendirir ve bu da yordam çağrıları yapmayı içerebilir. Her iki işlenenden de her zaman bağlı olduğundan `Xor`, için bir kısa devre temelli karşılık yoktur. *Kısa* devre mantıksal işleçler için bkz. [AndAlso Işleci](../../../visual-basic/language-reference/operators/andalso-operator.md) ve [orelsa işleci](../../../visual-basic/language-reference/operators/orelse-operator.md).  
   
- Bit düzeyinde işlemler için `Xor` işleci iki sayısal ifadeye bit düzeyinde bir karşılaştırma aynı şekilde konumlandırılmış bit gerçekleştirir ve karşılık gelen, bit ayarlar `result` aşağıdaki tabloya göre.  
+ Bit düzeyinde işlemler için, `Xor` işleç iki sayısal ifadede aynı şekilde `result` konumlandırılmış bitlerin bit düzeyinde karşılaştırmasını gerçekleştirir ve karşılık gelen biti aşağıdaki tabloya göre ayarlar.  
   
-|Varsa, bit `expression1` olduğu|Ve içindeki bit `expression2` olduğu|Bit `result` olduğu|  
+|Eğer bit `expression1` ise|Ve bit `expression2` ,|İçindeki `result` bit|  
 |--------------------------------|---------------------------------|----------------------------|  
-|1.|1|0|  
-|1.|0|1.|  
-|0|1.|1|  
+|1\.|1|0|  
+|1\.|0|1\.|  
+|0|1\.|1|  
 |0|0|0|  
   
 > [!NOTE]
->  Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçler düşük önceliğe sahip olduğundan, herhangi bir bit düzeyinde işlemler doğru yürütme emin olmak için parantez içine alınmalıdır.  
+> Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru yürütmeyi sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
   
- Örneğin, 5 `Xor` 3, 6. Bu neden olduğunu görmek için bu nedenle, 5. ve 3, ikili gösterimler için 101 ve 011 Dönüştür. Ardından, ondalık sayı 6 ikili gösterimini olduğu 101 Xor 011 110, olduğunu belirlemek için önceki tabloyu kullanın.  
+ Örneğin, 5 `Xor` 3, 6 ' dır. Bunun neden olduğunu görmek için, 5 ve 3 ' ü ikili gösterimlerine, 101 ve 011 dönüştürün. Ardından önceki tabloyu kullanarak 101 XOR 011 'in 6 ondalık sayının ikili temsili olan 110 olduğunu öğrenin.  
   
 ## <a name="data-types"></a>Veri Türleri  
- İşlenenler biri oluşuyorsa `Boolean` ifadesi ve bir sayısal ifade, Visual Basic dönüştürür `Boolean` ifadesi bir sayısal değere (– 1 için `True` ve 0 `False`) ve bir bit düzeyinde işlem gerçekleştirir.  
+ İşlenenler bir `Boolean` ifadeden ve bir sayısal ifadeden oluşur Visual Basic, `Boolean` ifadeyi sayısal bir `True` değere dönüştürür (– `False`1 ve için 0) ve bit düzeyinde bir işlem gerçekleştirir.  
   
- İçin bir `Boolean` karşılaştırma, sonuç veri türü olan `Boolean`. Bit düzeyinde bir karşılaştırması için sonuç veri türü bir sayısal veri türleri için uygun türüdür `expression1` ve `expression2`. "İlişkisel ve bit düzeyinde karşılaştırmaları" tablosuna bakın [işleci sonuçlarını veri türleri](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).  
+ Bir `Boolean` karşılaştırma için sonucun veri türü olur `Boolean`. Bit düzeyinde karşılaştırma için, sonuç veri türü `expression1` ve `expression2`veri türleri için uygun sayısal bir türdür. [Işleç sonuçlarının veri türlerinde](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)"Ilişkisel ve bit düzeyinde karşılaştırmalar" tablosuna bakın.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
- `Xor` İşleci olabilir *aşırı*, işleneni, sınıf veya yapı türüne sahip olduğunda bir sınıf veya yapı davranışını tanımlayabilirsiniz, anlamına gelir. Kodunuz bu tür bir sınıf veya yapı üzerinde bu işleç kullanıyorsa, yeniden tanımlanan davranışını anladığınızdan emin olun. Daha fazla bilgi için [işleç yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ İşleç aşırı yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. `Xor` Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Xor` iki ifadelerini temel (özel mantıksal veya işlecini) mantıksal dışlama gerçekleştirmek için işleci. Sonuç bir `Boolean` tam olarak bir ifade olup olmadığını gösteren bir değer `True`.  
+ Aşağıdaki örnek, iki ifadeye `Xor` mantıksal dışlama (dışlamalı mantıksal ayırıcı) gerçekleştirmek için işlecini kullanır. Sonuç, `Boolean` `True`ifadelerden tam olarak bir tane olup olmadığını temsil eden bir değerdir.  
   
  [!code-vb[VbVbalrOperators#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#40)]  
   
- Önceki örnekte sonuçlarını üretir `False`, `True`, ve `False`sırasıyla.  
+ Önceki örnek sırasıyla `False`, `True`, ve `False`sonuçlarını üretir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Xor` mantıksal dışlama (özel mantıksal veya işlecini) bireysel iki sayısal ifadeye bit üzerinde gerçekleştirmek için işleci. Tek bir işlenen karşılık gelen bitleri 1 olarak ayarlarsanız sonucu deseninde bir bit ayarlanır.  
+ Aşağıdaki örnek, iki sayısal `Xor` ifadenin ayrı bitleri üzerinde mantıksal dışlama (dışlamalı mantıksal ayırıcı) gerçekleştirmek için işlecini kullanır. Sonuç düzenindeki bit, işlenenlerde karşılık gelen bir bitlerin tam olarak 1 olarak ayarlanması halinde ayarlanır.  
   
  [!code-vb[VbVbalrOperators#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#41)]  
   
- Önceki örnekte sırasıyla 2, 12 ve 14, sonuçlar üretir.  
+ Önceki örnek sırasıyla 2, 12 ve 14 sonuçlarını üretir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Mantıksal/bit düzeyinde işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic'de İşleç önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Mantıksal/bit düzeyinde Işleçler (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
+- [Visual Basic operatör önceliği](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic'de mantıksal ve bit düzeyinde işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic mantıksal ve bit düzeyinde Işleçler](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: b68148b08cf6b5f980bc09e497e845558ae882fb
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: c3ec6ca6feba975517a9f982bb58e4b061516a61
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962811"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF Kısmi Güven Güvenliği
 <a name="introduction"></a>Genel olarak, kötü amaçlı hasar engellemek için Internet uygulamalarının kritik sistem kaynaklarına doğrudan erişimi olması kısıtlanmalıdır. Varsayılan olarak, HTML ve istemci tarafı komut dosyası dilleri kritik sistem kaynaklarına erişemez. Windows Presentation Foundation (WPF) tarayıcıda barındırılan uygulamalar tarayıcıdan başlatılabildiğinden, benzer bir kısıtlama kümesine uymalıdır. Bu kısıtlamaları [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zorlamak için hem kod erişim güvenliği (CAS) hem de ClickOnce kullanır (bkz. [WPF Güvenlik Stratejisi-Platform güvenliği](wpf-security-strategy-platform-security.md)). Varsayılan olarak, tarayıcıda barındırılan uygulamalar Internet, yerel intranet veya yerel bilgisayar tarafından başlatıldıklarından bağımsız olarak Internet bölgesi CA 'ları izin kümesi ister. Tüm izin kümesinden daha az bir şekilde çalışan uygulamalar kısmi güvenle çalışıyor olarak kabul edilir.  
@@ -87,7 +87,7 @@ ms.locfileid: "69567534"
 |Internet|"Güven verilmedi" ile başarısız olur|XBAP 'yi bir sertifikayla imzalayın.|  
   
 > [!NOTE]
->  Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güven XBAP 'ler içindir.  
+> Önceki tabloda açıklanan davranış, ClickOnce güvenilir dağıtım modelini takip eden tam güven XBAP 'ler içindir.  
   
  Genel olarak, izin verilen izinleri aşabilir kod büyük olasılıkla hem tek başına hem de tarayıcıda barındırılan uygulamalar arasında paylaşılan ortak koddur. CA 'lar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ve bu senaryonun yönetilmesi için çeşitli teknikler sunmaktadır.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69567534"
  İzinleri denetlemek için CAS kullanılması, izin temelinde denetim yapmanız gerektiğinde uygun bir tekniktir. Bu teknik, genel olarak önerilmeyen ve performans sorunlarına sahip olabilen normal işlemenin bir parçası olarak özel durumları yakalama konusuna bağımlıdır. Bunun yerine, <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]yalnızca Internet bölgesi korumalı alanı içinde çalıştırılıyorsa, için true döndüren özelliğini kullanabilirsiniz. [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>yalnızca bir uygulamanın bir tarayıcıda çalışıp çalışmadığını ayırt eder, bu, bir uygulamanın hangi izin kümesiyle çalıştığını belirtir.  
+> <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>yalnızca bir uygulamanın bir tarayıcıda çalışıp çalışmadığını ayırt eder, bu, bir uygulamanın hangi izin kümesiyle çalıştığını belirtir.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Izinleri yönetme  
@@ -149,7 +149,7 @@ ms.locfileid: "69567534"
 |Web tarayıcısı|HTML 'e güvenli çerçeve gezintisi|Evet|Evet|  
   
 > [!NOTE]
->  Kesme ve yapıştırmaya yalnızca Kullanıcı başlatıldığında kısmi güvende izin verilir.  
+> Kesme ve yapıştırmaya yalnızca Kullanıcı başlatıldığında kısmi güvende izin verilir.  
   
  İzinleri artırmanız gerekiyorsa proje ayarlarını ve ClickOnce uygulama bildirimini değiştirmeniz gerekir. Daha fazla bilgi için bkz. [WPF XAML tarayıcı uygulamalarına genel bakış](./app-development/wpf-xaml-browser-applications-overview.md). Aşağıdaki belgeler de yararlı olabilir.  
   

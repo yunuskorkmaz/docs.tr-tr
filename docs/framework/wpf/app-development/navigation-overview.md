@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964584"
 ---
 # <a name="navigation-overview"></a>Gezintiye Genel Bakış
 
@@ -106,7 +106,7 @@ Yalnızca <xref:System.Windows.Controls.Page> biçimlendirme, içerik görüntü
 
 Biçimlendirme dosyası ve arka plan kod dosyasının birlikte çalışmasına izin vermek için aşağıdaki yapılandırma gereklidir:
 
-- Biçimlendirme ' de, `Page` öğesi `x:Class` özniteliğini içermelidir. Uygulama `x:Class` oluşturulduğunda, biçimlendirme dosyasında bulunan ' dan <xref:System.Windows.Controls.Page> türetilmiş ve `x:Class` özniteliği tarafından belirtilen ada [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] sahip bir `partial` sınıf oluşturulmasına neden olur. Bu, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) için bir ad alanı bildiriminin eklenmesini gerektirir. `partial` Oluşturulan`InitializeComponent`sınıf, olayları kaydetmek ve biçimlendirmede uygulanan özellikleri ayarlamak için çağırılır.
+- Biçimlendirme ' de, `Page` öğesi `x:Class` özniteliğini içermelidir. Uygulama yapılandırıldığında, biçimlendirme `x:Class` dosyasında bulunması Microsoft Build Engine (MSBuild) ' den <xref:System.Windows.Controls.Page> türetilen ve `x:Class` özniteliği tarafından belirtilen adı içeren bir `partial` sınıf oluşturmasına neden olur. Bu, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] şema ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` ) için bir ad alanı bildiriminin eklenmesini gerektirir. `partial` Oluşturulan`InitializeComponent`sınıf, olayları kaydetmek ve biçimlendirmede uygulanan özellikleri ayarlamak için çağırılır.
 
 - Arka plan kod içinde, sınıf, biçimlendirme içindeki `partial` `x:Class` özniteliği tarafından belirtilen aynı ada sahip bir sınıf olmalıdır ve ' den <xref:System.Windows.Controls.Page>türetmelidir. Bu, arka plan kod dosyasının, uygulama oluşturulduğunda biçimlendirme dosyası için `partial` oluşturulan sınıfla ilişkilendirilmesini sağlar (bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md)).
 
@@ -123,7 +123,7 @@ Biçimlendirme dosyası ve arka plan kod dosyasının birlikte çalışmasına i
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]bir tarayıcıda barındırılacak belirli bir uygulama altyapısı miktarı gerektirir. ' De [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], sınıfıgerekliuygulamaaltyapısınıkuranbiruygulamatanımınınparçasıdır(bkz.uygulamayönetiminegenelbakış).<xref:System.Windows.Application> [](application-management-overview.md)
 
-Bir uygulama tanımı genellikle, biçimlendirme dosyası bir [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `ApplicationDefinition` öğe olarak yapılandırıldığında hem biçimlendirme hem de arka plan kodu kullanılarak uygulanır. Aşağıda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]için uygulama tanımıdır.
+Bir uygulama tanımı, bir MSBuild`ApplicationDefinition` öğesi olarak yapılandırılmış biçimlendirme dosyası ile hem biçimlendirme hem de arka plan kodu kullanılarak uygulanır. Aşağıda bir [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]için uygulama tanımıdır.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Bir tanımlama bilgisini uygulama oturumlarında depolamak için, aşağıdaki b
 
 *AD* `=` *DEĞER*`; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-Sona erme tarihi olan bir tanımlama bilgisi, tanımlama bilgisi süresi [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] dolana kadar geçerli yüklemenin Temporary Internet Files klasöründe depolanır. Bu tür bir tanımlama bilgisi, uygulama oturumlarında devam ettiğinden *kalıcı tanımlama bilgisi* olarak bilinir.
+Son kullanma tarihine sahip bir tanımlama bilgisi, tanımlama bilgisi süresi dolana kadar geçerli Windows yüklemesinin Temporary Internet Files klasöründe depolanır. Bu tür bir tanımlama bilgisi, uygulama oturumlarında devam ettiğinden *kalıcı tanımlama bilgisi* olarak bilinir.
 
 <xref:System.Windows.Application.GetCookie%2A> Yöntemini çağırarak hem oturum hem de kalıcı tanımlama bilgilerini, <xref:System.Windows.Application.SetCookie%2A> tanımlama bilgisinin yöntemiyle ayarlandığı <xref:System.Uri> konumu geçirerek alırsınız.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: d2b35a50d9d09bffd69ae8b8217d6e778ce66ea0
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: b009c2503c7cbf6aca847fc7318135842a060f69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796408"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965048"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF Genel Bakışında Çift Yönlü Özellikler
 Diğer herhangi bir geliştirme platformunun [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aksine, çift yönlü içeriğin hızlı bir şekilde geliştirilmesini destekleyen birçok özelliğe sahiptir, örneğin, soldan sağa ve sağdan sola verileri aynı belgede. Aynı zamanda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Arapça ve İbranice kullanıcılar gibi çift yönlü özellikler gerektiren kullanıcılar için mükemmel bir deneyim oluşturur.  
@@ -154,9 +154,9 @@ Diğer herhangi bir geliştirme platformunun [!INCLUDE[TLA2#tla_winclient](../..
   
 <a name="NumberSubstitution"></a>   
 ## <a name="number-substitution"></a>Sayı değiştirme  
- Tarihsel olarak [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] , farklı kültürel şekillerinin farklı yerel ayarlar arasında birleştirilmiş olarak aynı basamakların gösterimine izin vererek, sayı değişimini destekliyordu, örneğin sayılar içinde depolanır bilinen onaltılık değerleri 0x40, 0x41, ancak seçilen dile göre gösteriliyor.  
+ Tarihsel olarak, Windows, farklı kültürel şekillerin farklı yerel ayarlar arasında birleşirken aynı basamakların gösterimine izin vererek, sayı değişimini destekliyordu, örneğin sayılar bilinen onaltılık değerler, 0x40, 0x41, ancak seçilen dile göre gösteriliyor.  
   
- Bu, uygulamaların bir dilden diğerine dönüştürülmesi gerekmeden sayısal değerleri işlemesini izin bıraktı, örneğin bir Kullanıcı [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] elektronik tabloyu yerelleştirilmiş bir Arap [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] içinde açabilir ve Arapça şeklinde rakamları görebilir, ancak bunu içinde açabilir Avrupa sürümü [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ve ayrıca aynı sayıların Avrupa gösterimi. Bu Ayrıca, genellikle aynı belgedeki sayıları karşılamadığı için virgül ayırıcıları ve yüzde simgesi gibi diğer semboller için de gereklidir.  
+ Bu, uygulamaların bir dilden diğerine dönüştürülmesi gerekmeden sayısal değerleri işlemesini izin bıraktı. Örneğin, bir Kullanıcı, yerelleştirilmiş bir Arap penceresinde bir [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] elektronik tablo açıp Arapça biçiminde şekillendirilmiş sayıları görebilir, ancak bunu bir Windows 'un Avrupa sürümü ve aynı sayıların Avrupa gösterimine bakın. Bu Ayrıca, genellikle aynı belgedeki sayıları karşılamadığı için virgül ayırıcıları ve yüzde simgesi gibi diğer semboller için de gereklidir.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]aynı gelenek devam eder ve bu özellik için, değiştirme ne zaman ve nasıl kullanıldığı konusunda daha fazla kullanıcı denetimine izin veren daha fazla destek ekler. Bu özellik herhangi bir dil için tasarlanırken, özellikle bir uygulamanın üzerinde çalışacağı çeşitli kültürler nedeniyle, belirli bir dile ait basamakların şekillendirmesinde genellikle uygulama geliştiricileri için bir zorluk olduğu çift yönlü içerik için yararlıdır.  
   
@@ -190,7 +190,7 @@ Diğer herhangi bir geliştirme platformunun [!INCLUDE[TLA2#tla_winclient](../..
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>: Sayılar, sayı kültürü için geleneksel basamaklar kullanılarak işlenir. Çoğu kültürde bu, ile <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>aynıdır. Ancak, <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> bazı Arap kültürleri için Latin basamaklı sonuçlar oluşur, ancak bu değer tüm Arap kültürleri için Arap rakamlarına neden olur.  
   
- Bu değerler çift yönlü içerik geliştiricisi için ne anlama geliyor? Çoğu durumda, geliştirici yalnızca her <xref:System.Windows.FlowDirection> bir metinsel [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğenin yalnızca tanımlama ve dil için <xref:System.Windows.Media.NumberSubstitution> , örneğin `Language="ar-SA"` , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]mantığa göre sayıların gösterilmesi için gerekli olacaktır. Aşağıdaki örnekte, Arapça bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]sürümünde çalışan bir uygulamada Arapça ve İngilizce sayıların kullanılması gösterilmektedir.  
+ Bu değerler çift yönlü içerik geliştiricisi için ne anlama geliyor? Çoğu durumda, geliştirici yalnızca her <xref:System.Windows.FlowDirection> bir metinsel [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] öğenin yalnızca tanımlama ve dil için <xref:System.Windows.Media.NumberSubstitution> , örneğin `Language="ar-SA"` , [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]mantığa göre sayıların gösterilmesi için gerekli olacaktır. Aşağıdaki örnekte, Windows 'un Arapça bir sürümünde çalışan bir [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamada Arapça ve İngilizce sayıların kullanılması gösterilmektedir.  
   
  [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964921"
 ---
 # <a name="cleartype-overview"></a>ClearType Genel Bakışı
 Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Içinde bulunan Microsoft ClearType teknolojisine genel bir bakış sağlar.  
@@ -55,7 +55,7 @@ ClearType y yönünde düzgünleştirme içeren metin
 ## <a name="hardware-acceleration"></a>Donanım hızlandırma  
  İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, daha iyi performans sağlamak ve CPU yükü ve sistem belleği gereksinimlerini azaltmak için donanım hızlandırmasının avantajlarından yararlanabilir. Bir grafik kartının piksel gölgelendiricilerini ve video belleğini kullanarak, özellikle animasyon kullanıldığında ClearType daha hızlı metin işleme sağlar.  
   
- İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, sistem genelinde ClearType ayarlarını değiştirmez. ' De [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] ClearType devre [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dışı bırakıldığında gri tonlamalı moda düzgünleştirme ayarlanır. Ayrıca, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, [ClearType TV tarayıcısı poweroyunno](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)ayarlarını değiştirmez.  
+ İçindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, sistem genelinde ClearType ayarlarını değiştirmez. Windows 'da ClearType devre dışı [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bırakıldığında gri tonlama moduna düzgünleştirme ayarlanır. Ayrıca, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ClearType, [ClearType TV tarayıcısı poweroyunno](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)ayarlarını değiştirmez.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Mimari tasarım kararlarından biri, çözünürlükten bağımsız düzeninin daha yaygın hale geçen daha yüksek çözünürlüklü DPI izleyicilerini daha iyi desteklemesidir. Bunun nedeni, her ikisi [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de çözünürlüğe bağımlı olduklarından, bazı Doğu Asya fontlarda diğer ad metin işlemesini veya bit eşlemlerini desteklememe sonucudur.  
   

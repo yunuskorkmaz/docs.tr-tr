@@ -12,21 +12,21 @@ helpviewer_keywords:
 - UI automation, finding text
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
-ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e8b69167f470afd5e3049a717978a41078db575
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969000"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI Otomasyonunu Kullanarak Metin Bulma ve Vurgulama
 > [!NOTE]
->  Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı. En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir. Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Bu konuda, sıralı olarak aramak ve her bir dize kullanarak bir metin denetiminin içeriğini içinde geçtiği vurgulamak gösterilmiştir [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ Bu konu, kullanarak [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]bir metin denetiminin içeriği içinde her bir dizenin her geçtiği yeri nasıl arayacağını ve vurgulayacağınızı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek alır bir <xref:System.Windows.Automation.TextPattern> nesneden bir metin denetimi. A <xref:System.Windows.Automation.Text.TextPatternRange> tüm belgeyi metinsel içeriğini temsil eden nesnesi, ardından kullanılarak oluşturulan <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> bu özelliği <xref:System.Windows.Automation.TextPattern>. İki ek <xref:System.Windows.Automation.Text.TextPatternRange> nesneleri için sıralı aramaya sonra oluşturulur ve işlevsellik vurgulayın.  
+ Aşağıdaki örnek, bir metin <xref:System.Windows.Automation.TextPattern> denetiminden bir nesne elde eder. Tüm <xref:System.Windows.Automation.Text.TextPatternRange> belgenin metin içeriğini temsil eden bir nesne, daha sonra bu <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> <xref:System.Windows.Automation.TextPattern>özelliği kullanılarak oluşturulur. Daha sonra <xref:System.Windows.Automation.Text.TextPatternRange> sıralı arama ve vurgulama işlevselliği için iki ek nesne oluşturulur.  
   
 [!code-csharp[FindText#StartApp](../../../samples/snippets/csharp/VS_Snippets_Wpf/FindText/CSharp/SearchWindow.cs#startapp)]
 [!code-vb[FindText#StartApp](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindText/VisualBasic/SearchWindow.vb#startapp)]  

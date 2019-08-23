@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be8d860f508644e68bf69892a63e145e7ffd5b90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2e01a5cf2b2aa25e91ebf0f8e3927858b12bea3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967564"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind Numaralandırması
-, Bilgileri kodu çözülen olay türünü gösteren [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi.  
+Bilgileri [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) yöntemi tarafından kodu çözülen olay türünü gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,25 +41,25 @@ typedef enum CorDebugDebugEventKind {
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|Modül yükleme olayı.|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|Modül kaldırma olayı.|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|İlk fırsat özel durum.|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|Bir kullanıcı ilk fırsat özel durum.|  
-|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|Kendisi için bir özel durum bir `catch` işleyici yok.|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_FIRST_CHANCE`|Birinci şans özel durumu.|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_USER_FIRST_CHANCE`|Birinci şans Kullanıcı özel durumu.|  
+|`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_CATCH_HANDLER_FOUND`|Bir `catch` işleyicinin bulunduğu özel durum.|  
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|İşlenmeyen bir özel durum.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Üye `CorDebugDebugEventKind` numaralandırma çağırarak döndürülür [Icordebugdebugevent::geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) yöntemi.  
+ `CorDebugDebugEventKind` [Icordebugdebugger gevent:: GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) yöntemi çağırarak sabit listesinin bir üyesi döndürülür.  
   
 > [!NOTE]
->  Bu numaralandırma .NET hata ayıklama senaryoları yalnızca yerel olarak kullanıma yöneliktir.  
+> Bu numaralandırma yalnızca .NET Native hata ayıklama senaryolarında kullanılmak üzere tasarlanmıştır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941095"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966553"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Nasıl yapılır: Bir Windows Forms TreeView Denetiminin Tüm Düğümlerinde Yineleme
-Her düğüm bir Windows Forms incelemeniz bazen kullanışlıdır <xref:System.Windows.Forms.TreeView> düğüm değerleri üzerinde bazı hesaplama gerçekleştirmek için denetimi. Bu işlem yapılabilir bir özyinelemeli yordamı kullanarak (yinelemeli yönteminde C# ve C++) ağacının her bir koleksiyon içindeki her bir düğümün aracılığıyla yinelenir.  
+Bazı durumlarda, düğüm değerlerinde bazı hesaplamalar gerçekleştirmek için bir Windows Forms <xref:System.Windows.Forms.TreeView> denetimindeki her düğümü incelemek yararlı olur. Bu işlem, ağacın her bir koleksiyonundaki her düğüm boyunca yinelenen bir özyinelemeli C# yordam C++(ve ' de özyinelemeli Yöntem) kullanılarak yapılabilir.  
   
- Her <xref:System.Windows.Forms.TreeNode> nesne ağaç görünümünde, ağaç görünümünde gezinmek için kullanabileceğiniz özelliklere sahiptir: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, ve <xref:System.Windows.Forms.TreeNode.Parent%2A>. Değerini <xref:System.Windows.Forms.TreeNode.Parent%2A> üst düğümünün geçerli düğüm bir özelliktir. Varsa, geçerli düğümünün alt düğümleri listelenen kendi <xref:System.Windows.Forms.TreeNode.Nodes%2A> özelliği. <xref:System.Windows.Forms.TreeView> Denetiminin kendisini <xref:System.Windows.Forms.TreeView.TopNode%2A> tüm ağaç görünümünün kök düğüm özelliği.  
+ Ağaç <xref:System.Windows.Forms.TreeNode> görünümündeki her bir nesne, ağaç görünümünde gezinmek için kullanabileceğiniz özelliklere sahiptir: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A> <xref:System.Windows.Forms.TreeNode.NextNode%2A> <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,, ve <xref:System.Windows.Forms.TreeNode.Parent%2A>. <xref:System.Windows.Forms.TreeNode.Parent%2A> Özelliğin değeri geçerli düğümün üst düğümüdür. Geçerli düğümün alt düğümleri, varsa, <xref:System.Windows.Forms.TreeNode.Nodes%2A> özelliğinde listelenir. Denetimin kendisi, tüm ağaç <xref:System.Windows.Forms.TreeView.TopNode%2A> görünümünün kök düğümü olan özelliğine sahiptir. <xref:System.Windows.Forms.TreeView>  
   
-### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView denetiminin tüm düğümlerinde yineleme için  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView denetiminin tüm düğümlerinde yinelemek için  
   
-1. Bir özyinelemeli yordam oluşturma (özyinelemeli yönteminde C# ve C++), her düğüm test eder.  
+1. Her düğümü test eden özyinelemeli bir yordam ( C# ve C++içinde özyinelemeli Yöntem) oluşturun.  
   
-2. Yordam çağrısı.  
+2. Yordamı çağırın.  
   
-     Aşağıdaki örnek, her yazdırma işlemi gösterilmektedir <xref:System.Windows.Forms.TreeNode> nesnenin <xref:System.Windows.Forms.TreeNode.Text%2A> özelliği:  
+     Aşağıdaki örnek, her <xref:System.Windows.Forms.TreeNode> bir <xref:System.Windows.Forms.TreeNode.Text%2A> nesnenin özelliğinin nasıl yazdırılacağını göstermektedir:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ Her düğüm bir Windows Forms incelemeniz bazen kullanışlıdır <xref:System.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TreeView Denetimi](treeview-control-windows-forms.md)
-- [Özyinelemeli Yordamlar](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Özyinelemeli Yordamlar](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

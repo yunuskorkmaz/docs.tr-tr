@@ -2,37 +2,37 @@
 title: İşlemler ve Eşzamanlılık
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965207"
 ---
 # <a name="transactions-and-concurrency"></a>İşlemler ve Eşzamanlılık
-Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili bir işlem oluşur. İşlemler, iş birden çok işlem tek bir birim halinde birleştirmek olanak tanır. İşlem bir noktadaki bir hata oluşması durumunda tüm güncelleştirmeleri geri ön işlem durumlarına geri alınabilir.  
+Bir işlem, paket olarak yürütülen tek bir komuttan veya bir komut grubundan oluşur. İşlemler, birden çok işlemi tek bir iş biriminde birleştirmenizi sağlar. İşlemdeki bir noktada bir hata oluşursa, tüm güncelleştirmeler ön işlem durumuna geri alınabilir.  
   
- Bir işlem için ACID özellikleri uymalıdır — kararlılık, tutarlılık, yalıtım ve dayanıklılık — veri tutarlılık garantisi için. Microsoft SQL Server, bir istemci uygulama bir güncelleştirme gerçekleştirdiğinde, günlüğe kaydetme ve işlem yönetimi olanakları kilitleme sağlayarak destek işlemleri gibi çoğu ilişkisel veritabanı sistemleri ekleme veya silme işlemi.  
+ Veri tutarlılığını güvence altına almak için bir işlemin ACID özelliklerine (kararlılık, tutarlılık, yalıtım ve dayanıklılık) uyması gerekir. Microsoft SQL Server gibi çoğu ilişkisel veritabanı sistemi, bir istemci uygulaması bir güncelleştirme, ekleme veya silme işlemi gerçekleştirdiğinde kilitleme, günlüğe kaydetme ve işlem yönetimi olanakları sağlayarak işlemleri destekler.  
   
 > [!NOTE]
->  Kilitleri uzun tutulur, birden fazla kaynak gerektiren işlemler eşzamanlılık düşürebilirsiniz. Bu nedenle, işlemleri olabildiğince kısa tutun.  
+> Kilitler çok uzun tutuluyorsa birden çok kaynağı içeren işlemler eşzamanlılık daha düşük olabilir. Bu nedenle, işlemleri mümkün olduğunca kısa tutun.  
   
- Bir işlem birden çok tablodan aynı veritabanı veya sunucu içeriyorsa, ardından saklı yordamlarda açık işlemleri genellikle daha iyi gerçekleştirin. Transact-SQL kullanarak SQL Server saklı yordamları işlemleri oluşturabilirsiniz `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, ve `ROLLBACK TRANSACTION` deyimleri. Daha fazla bilgi için SQL Server Books Online'a bakın.  
+ Bir işlem aynı veritabanı veya sunucuda birden çok tablo içeriyorsa, saklı yordamlardaki açık işlemler genellikle daha iyi gerçekleştirilir. Transact-SQL `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, ve `ROLLBACK TRANSACTION` deyimlerini kullanarak SQL Server saklı yordamda işlem oluşturabilirsiniz. Daha fazla bilgi için bkz. Books Online SQL Server.  
   
- SQL Server ve Oracle, arasında bir işlem gibi farklı kaynak yöneticileri içeren işlemler, dağıtılmış bir işlem gerektirir.  
+ SQL Server ve Oracle arasındaki bir işlem gibi farklı kaynak yöneticileriyle ilgili işlemler, dağıtılmış bir işlem gerektirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yerel İşlemler](../../../../docs/framework/data/adonet/local-transactions.md)  
- Bir veritabanında işlemleri gerçekleştirmek üzere nasıl gösterir.  
+ Bir veritabanına yönelik işlemlerin nasıl gerçekleştirileceğini gösterir.  
   
  [Dağıtılmış İşlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)  
- Dağıtılmış işlemler ADO.NET yerine getirilmesi anlatılmaktadır.  
+ ADO.NET içinde dağıtılmış işlemlerin nasıl gerçekleştirileceğini açıklar.  
   
  [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Açıklar <xref:System.Transactions> dağıtılmış işlemler ile çalışmak için SQL Server ile tümleştirme.  
+ Dağıtılmış <xref:System.Transactions> işlemlerle çalışmak için SQL Server ile tümleştirmeyi açıklar.  
   
  [İyimser Eşzamanlılık](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
- İyimser ve kötümser eşzamanlılık ve eşzamanlılık ihlaller için nasıl sınayıp doğrulayabileceğiniz açıklanır.  
+ İyimser ve Kötümser eşzamanlılık ve eşzamanlılık ihlalleri için nasıl test kullanabileceğinizi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -41,4 +41,4 @@ Tek bir komutu veya bir paket olarak çalıştırılacak komut grubuyla ilgili b
 - [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
