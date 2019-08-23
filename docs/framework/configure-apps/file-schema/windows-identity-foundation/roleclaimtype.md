@@ -3,24 +3,24 @@ title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 8c7b7c9b42ac72b878aed4e12298dc3655f1e707
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ce2e06ee895d09de193bac1fe7038e71794dda4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793880"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942534"
 ---
-# <a name="roleclaimtype"></a><span data-ttu-id="c09a6-101">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="c09a6-101">\<roleClaimType></span></span>
-<span data-ttu-id="c09a6-102">Rol türü talep koleksiyonunda tanımlayan talep türünü belirtir <xref:System.Security.Claims.ClaimsIdentity> tarafından döndürülen nesne <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> belirteci işleyicisi yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c09a6-102">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  
+# <a name="roleclaimtype"></a><span data-ttu-id="333dc-101">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="333dc-101">\<roleClaimType></span></span>
+<span data-ttu-id="333dc-102">Belirteç işleyicisinin <xref:System.Security.Claims.ClaimsIdentity> <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodu tarafından döndürülen nesneler koleksiyonundaki rol türü taleplerini tanımlayan talep türünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="333dc-102">Specifies the claim type that defines the role type claims in the collection of <xref:System.Security.Claims.ClaimsIdentity> objects returned by the <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> method of the token handler.</span></span>  
   
- <span data-ttu-id="c09a6-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="c09a6-103">\<system.identityModel></span></span>  
-<span data-ttu-id="c09a6-104">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c09a6-104">\<identityConfiguration></span></span>  
-<span data-ttu-id="c09a6-105">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="c09a6-105">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="c09a6-106">\<Ekle ></span><span class="sxs-lookup"><span data-stu-id="c09a6-106">\<add></span></span>  
-<span data-ttu-id="c09a6-107">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="c09a6-107">\<samlSecurityTokenRequirement></span></span>  
-<span data-ttu-id="c09a6-108">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="c09a6-108">\<roleClaimType></span></span>  
+ <span data-ttu-id="333dc-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="333dc-103">\<system.identityModel></span></span>  
+<span data-ttu-id="333dc-104">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="333dc-104">\<identityConfiguration></span></span>  
+<span data-ttu-id="333dc-105">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="333dc-105">\<securityTokenHandlers></span></span>  
+<span data-ttu-id="333dc-106">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="333dc-106">\<add></span></span>  
+<span data-ttu-id="333dc-107">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="333dc-107">\<samlSecurityTokenRequirement></span></span>  
+<span data-ttu-id="333dc-108">\<roleClaimType ></span><span class="sxs-lookup"><span data-stu-id="333dc-108">\<roleClaimType></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c09a6-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c09a6-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="333dc-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="333dc-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -37,28 +37,28 @@ ms.locfileid: "61793880"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c09a6-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="c09a6-110">Attributes and Elements</span></span>  
- <span data-ttu-id="c09a6-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="c09a6-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="333dc-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="333dc-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="333dc-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="333dc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c09a6-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="c09a6-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="333dc-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="333dc-112">Attributes</span></span>  
   
-|<span data-ttu-id="c09a6-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="c09a6-113">Attribute</span></span>|<span data-ttu-id="c09a6-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c09a6-114">Description</span></span>|  
+|<span data-ttu-id="333dc-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="333dc-113">Attribute</span></span>|<span data-ttu-id="333dc-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="333dc-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c09a6-115">value</span><span class="sxs-lookup"><span data-stu-id="c09a6-115">value</span></span>|<span data-ttu-id="c09a6-116">Talep türü rol talep türü için kullanılacak talep temsil eden URI belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="c09a6-116">A string that specifies the URI that represents the claim type of the claim to use for the role claim type.</span></span>|  
+|<span data-ttu-id="333dc-115">value</span><span class="sxs-lookup"><span data-stu-id="333dc-115">value</span></span>|<span data-ttu-id="333dc-116">Rol talep türü için kullanılacak talebin talep türünü temsil eden URI 'yi belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="333dc-116">A string that specifies the URI that represents the claim type of the claim to use for the role claim type.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c09a6-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="c09a6-117">Child Elements</span></span>  
- <span data-ttu-id="c09a6-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="c09a6-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="333dc-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="333dc-117">Child Elements</span></span>  
+ <span data-ttu-id="333dc-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="333dc-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c09a6-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="c09a6-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="333dc-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="333dc-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="c09a6-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="c09a6-120">Element</span></span>|<span data-ttu-id="c09a6-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c09a6-121">Description</span></span>|  
+|<span data-ttu-id="333dc-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="333dc-120">Element</span></span>|<span data-ttu-id="333dc-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="333dc-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c09a6-122">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="c09a6-122">\<samlSecurityTokenRequirement></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|<span data-ttu-id="c09a6-123">İçin yapılandırma sağlar <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> sınıfı <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıfı veya türetilmiş bir sınıf ya da bu sınıflarının biri.</span><span class="sxs-lookup"><span data-stu-id="c09a6-123">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
+|[<span data-ttu-id="333dc-122">\<samlSecurityTokenRequirement ></span><span class="sxs-lookup"><span data-stu-id="333dc-122">\<samlSecurityTokenRequirement></span></span>](samlsecuritytokenrequirement.md)|<span data-ttu-id="333dc-123"><xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> Sınıf<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> , sınıf veya bu sınıfların herhangi birinin türetilmiş bir sınıfı için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="333dc-123">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c09a6-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c09a6-124">Remarks</span></span>  
- <span data-ttu-id="c09a6-125">`<roleClaimType>` Öğe kümeleri <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> özelliği, bir <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> nesne yapılandırmadan başlatılır.</span><span class="sxs-lookup"><span data-stu-id="c09a6-125">The `<roleClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="333dc-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="333dc-124">Remarks</span></span>  
+ <span data-ttu-id="333dc-125"><xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> Bir `<roleClaimType>` nesne<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> yapılandırmadan başlatıldığında öğesi özelliği ayarlar.</span><span class="sxs-lookup"><span data-stu-id="333dc-125">The `<roleClaimType>` element sets the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A> property when a <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c09a6-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="c09a6-126">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="333dc-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="333dc-126">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
@@ -68,6 +68,6 @@ ms.locfileid: "61793880"
 </add>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c09a6-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c09a6-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="333dc-127">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="333dc-127">See also</span></span>
 
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

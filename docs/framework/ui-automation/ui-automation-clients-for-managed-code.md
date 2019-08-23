@@ -7,30 +7,30 @@ helpviewer_keywords:
 - UI Automation, clients for managed code
 - managed code, UI Automation clients
 ms.assetid: e1ed1197-3e9e-4e78-8845-92e82787faed
-ms.openlocfilehash: 39e6f2db7abaae63715c5ef9febcef357054d2bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8df3d07a18efcfbb6c30b46668ab8fec8736af5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982728"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953200"
 ---
-# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="3dc0e-102">Yönetilen Kod İçin UI Otomasyon İstemcileri</span><span class="sxs-lookup"><span data-stu-id="3dc0e-102">UI Automation Clients for Managed Code</span></span>
+# <a name="ui-automation-clients-for-managed-code"></a><span data-ttu-id="e7bf3-102">Yönetilen Kod İçin UI Otomasyon İstemcileri</span><span class="sxs-lookup"><span data-stu-id="e7bf3-102">UI Automation Clients for Managed Code</span></span>
 > [!NOTE]
->  <span data-ttu-id="3dc0e-103">Bu belge yönetilen kullanmak isteyen .NET Framework için tasarlanan [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tanımlanan sınıflar <xref:System.Windows.Automation> ad alanı.</span><span class="sxs-lookup"><span data-stu-id="3dc0e-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="3dc0e-104">En son bilgileri [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], bkz: [Windows Automation API: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="3dc0e-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+> <span data-ttu-id="e7bf3-103">Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="e7bf3-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e7bf3-104">Hakkında [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]en son bilgiler için bkz [. Windows Otomasyonu API 'si: UI Otomasyonu](https://go.microsoft.com/fwlink/?LinkID=156746).</span><span class="sxs-lookup"><span data-stu-id="e7bf3-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="3dc0e-105">Bu bölümde, genel bakışın yanı sıra UI Otomasyon istemcileri geliştirmenize yardımcı olmak için nasıl yapılır konuları içerir.</span><span class="sxs-lookup"><span data-stu-id="3dc0e-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
+ <span data-ttu-id="e7bf3-105">Bu bölümde, UI Otomasyon istemcileri geliştirmenize yardımcı olacak genel bakış ve nasıl yapılır konuları yer almaktadır.</span><span class="sxs-lookup"><span data-stu-id="e7bf3-105">This section contains overviews and how-to topics to help you develop UI Automation clients.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="3dc0e-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="3dc0e-106">In This Section</span></span>  
- [<span data-ttu-id="3dc0e-107">UI Otomasyonu ve Ekran Ölçeklendirme</span><span class="sxs-lookup"><span data-stu-id="3dc0e-107">UI Automation and Screen Scaling</span></span>](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
- [<span data-ttu-id="3dc0e-108">Standart Denetimler İçin UI Otomasyonu Desteği</span><span class="sxs-lookup"><span data-stu-id="3dc0e-108">UI Automation Support for Standard Controls</span></span>](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
- [<span data-ttu-id="3dc0e-109">İstemciler İçin UI Otomasyonu Olayları</span><span class="sxs-lookup"><span data-stu-id="3dc0e-109">UI Automation Events for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
- [<span data-ttu-id="3dc0e-110">UI Otomasyonu İstemcilerinde Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="3dc0e-110">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [<span data-ttu-id="3dc0e-111">İstemciler İçin UI Otomasyonu Özellikleri</span><span class="sxs-lookup"><span data-stu-id="3dc0e-111">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [<span data-ttu-id="3dc0e-112">UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi</span><span class="sxs-lookup"><span data-stu-id="3dc0e-112">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [<span data-ttu-id="3dc0e-113">İstemciler İçin UI Otomasyonu Denetim Düzenleri</span><span class="sxs-lookup"><span data-stu-id="3dc0e-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [<span data-ttu-id="3dc0e-114">UI Otomasyonu Öğelerini Alma</span><span class="sxs-lookup"><span data-stu-id="3dc0e-114">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
- [<span data-ttu-id="3dc0e-115">UI Otomasyonu İş Parçacığı Oluşturma Sorunları</span><span class="sxs-lookup"><span data-stu-id="3dc0e-115">UI Automation Threading Issues</span></span>](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
- [<span data-ttu-id="3dc0e-116">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="3dc0e-116">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e7bf3-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="e7bf3-106">In This Section</span></span>  
+ [<span data-ttu-id="e7bf3-107">UI Otomasyonu ve Ekran Ölçeklendirme</span><span class="sxs-lookup"><span data-stu-id="e7bf3-107">UI Automation and Screen Scaling</span></span>](../../../docs/framework/ui-automation/ui-automation-and-screen-scaling.md)  
+ [<span data-ttu-id="e7bf3-108">Standart Denetimler İçin UI Otomasyonu Desteği</span><span class="sxs-lookup"><span data-stu-id="e7bf3-108">UI Automation Support for Standard Controls</span></span>](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)  
+ [<span data-ttu-id="e7bf3-109">İstemciler İçin UI Otomasyonu Olayları</span><span class="sxs-lookup"><span data-stu-id="e7bf3-109">UI Automation Events for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
+ [<span data-ttu-id="e7bf3-110">UI Otomasyonu İstemcilerinde Önbelleğe Alma</span><span class="sxs-lookup"><span data-stu-id="e7bf3-110">Caching in UI Automation Clients</span></span>](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
+ [<span data-ttu-id="e7bf3-111">İstemciler İçin UI Otomasyonu Özellikleri</span><span class="sxs-lookup"><span data-stu-id="e7bf3-111">UI Automation Properties for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+ [<span data-ttu-id="e7bf3-112">UI Otomasyonu İstemcileri İçin Denetim Düzeni Eşlemesi</span><span class="sxs-lookup"><span data-stu-id="e7bf3-112">Control Pattern Mapping for UI Automation Clients</span></span>](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
+ [<span data-ttu-id="e7bf3-113">İstemciler İçin UI Otomasyonu Denetim Düzenleri</span><span class="sxs-lookup"><span data-stu-id="e7bf3-113">UI Automation Control Patterns for Clients</span></span>](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
+ [<span data-ttu-id="e7bf3-114">UI Otomasyonu Öğelerini Alma</span><span class="sxs-lookup"><span data-stu-id="e7bf3-114">Obtaining UI Automation Elements</span></span>](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)  
+ [<span data-ttu-id="e7bf3-115">UI Otomasyonu İş Parçacığı Oluşturma Sorunları</span><span class="sxs-lookup"><span data-stu-id="e7bf3-115">UI Automation Threading Issues</span></span>](../../../docs/framework/ui-automation/ui-automation-threading-issues.md)  
+ [<span data-ttu-id="e7bf3-116">Nasıl Yapılır Konuları</span><span class="sxs-lookup"><span data-stu-id="e7bf3-116">How-to Topics</span></span>](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="3dc0e-117">Başvuru</span><span class="sxs-lookup"><span data-stu-id="3dc0e-117">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e7bf3-117">Başvuru</span><span class="sxs-lookup"><span data-stu-id="e7bf3-117">Reference</span></span>  
  <xref:System.Windows.Automation>
