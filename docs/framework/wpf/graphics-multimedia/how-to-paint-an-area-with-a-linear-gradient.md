@@ -6,46 +6,46 @@ helpviewer_keywords:
 - brushes [WPF], painting with linear gradients
 - painting [WPF], with linear gradients
 ms.assetid: 00e0cd04-48c0-4ec5-850e-d321beb37a34
-ms.openlocfilehash: c48ff13811d784ecc7042b73b964a9e6f2d42a34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92c9ccd846dbbce043d13e6ba82b9fa8e72fa8b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916170"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Nasıl yapılır: Doğrusal Gradyan ile bir Alanı Boyama
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Media.LinearGradientBrush> doğrusal gradyan ile bir alanı boyama için sınıf. Aşağıdaki örnekte, <xref:System.Windows.Shapes.Shape.Fill%2A> , bir <xref:System.Windows.Shapes.Rectangle> sarı kırmızı, mavi yeşile geçişleri çapraz bir doğrusal gradyan ile boyanır.  
+Bu örnek, <xref:System.Windows.Media.LinearGradientBrush> doğrusal gradyan ile bir alanı boyamak için sınıfının nasıl kullanılacağını gösterir. Aşağıdaki örnekte, bir, <xref:System.Windows.Shapes.Shape.Fill%2A> sarı ile kırmızıya arasında geçiş yapan diyagonal doğrusal gradyan ile yeşil arasında bir yeşil arasında bir <xref:System.Windows.Shapes.Rectangle> şekilde boyanır.  
   
 ## <a name="example"></a>Örnek  
  [!code-xaml[GradientBrushExamples_snip#DiagonalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#diagonalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#DiagonalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#diagonalgradient1csharp)]  
   
- Aşağıdaki resimde önceki örnekte oluşturulan gradyanı gösterir.  
+ Aşağıdaki çizimde, önceki örnek tarafından oluşturulan gradyan gösterilmektedir.  
   
- ![Çapraz doğrusal gradyan](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
+ ![Köşegen doğrusal gradyan](./media/graphicsmm-diagonallgb.jpg "graphicsmm_DiagonalLGB")  
   
- Yatay doğrusal gradyan oluşturmak isterseniz değiştirme <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ve <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> , <xref:System.Windows.Media.LinearGradientBrush> ' ini (0,0.5) ve (1,0.5)'e. Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Rectangle> yatay bir doğrusal gradyan ile boyanır.  
+ Yatay doğrusal gradyan oluşturmak için, <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ve ' <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush> ı (0, 0,5) ve (1, 0,5) olarak değiştirin. Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Rectangle> Yatay doğrusal gradyan ile boyanmıştır.  
   
  [!code-xaml[GradientBrushExamples_snip#HorizontalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#horizontalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#HorizontalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#horizontalgradient1csharp)]  
   
- Aşağıdaki resimde önceki örnekte oluşturulan gradyanı gösterir.  
+ Aşağıdaki çizimde, önceki örnek tarafından oluşturulan gradyan gösterilmektedir.  
   
  ![Yatay doğrusal gradyan](./media/graphicsmm-horizontallgb.jpg "graphicsmm_HorizontalLGB")  
   
- Dikey doğrusal gradyan oluşturmak isterseniz değiştirme <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ve <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> , <xref:System.Windows.Media.LinearGradientBrush> ' ini (0.5,0) ve (0.5,1)'e. Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Rectangle> dikey bir doğrusal gradyan ile boyanır.  
+ Dikey doğrusal gradyan oluşturmak için, <xref:System.Windows.Media.LinearGradientBrush.StartPoint%2A> ve ' <xref:System.Windows.Media.LinearGradientBrush.EndPoint%2A> <xref:System.Windows.Media.LinearGradientBrush> ı (0,5, 0) ve (0,5, 1) olarak değiştirin. Aşağıdaki örnekte, bir <xref:System.Windows.Shapes.Rectangle> Dikey doğrusal gradyan ile boyanmıştır.  
   
  [!code-xaml[GradientBrushExamples_snip#VerticalGradient1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/LinearGradientBrushExample.xaml#verticalgradient1xaml)]  
   
  [!code-csharp[GradientBrushExamples_snip#VerticalGradient1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/GradientBrushExamples_snip/CSharp/LinearGradientBrushExample.cs#verticalgradient1csharp)]  
   
- Aşağıdaki resimde önceki örnekte oluşturulan gradyanı gösterir.  
+ Aşağıdaki çizimde, önceki örnek tarafından oluşturulan gradyan gösterilmektedir.  
   
  ![Dikey doğrusal gradyan](./media/graphicsmm-verticallgb.jpg "graphicsmm_VerticalLGB")  
   
 > [!NOTE]
->  Bu konudaki örnekler, başlangıç ve bitiş noktalarını ayarlamak için varsayılan koordinat sistemini kullanır. Varsayılan koordinat sistemi göreli bir sınırlayıcı kutu şöyledir: 0 gösterir sınırlayıcı kutusunun yüzde 0 ve 1, sınırlayıcı kutunun yüzde 100 gösterir. Ayarlayarak bu koordinat sistemini değiştirebilirsiniz <xref:System.Windows.Media.GradientBrush.MappingMode%2A> özellik değerine <xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>. Mutlak koordinat sistemi bir sınırlayıcı kutu göreli değil. Değerleri, doğrudan yerel alan yorumlanır.  
+> Bu konudaki örneklerde, başlangıç noktalarını ve bitiş noktalarını ayarlamak için varsayılan koordinat sistemi kullanılır. Varsayılan koordinat sistemi bir sınırlayıcı kutuya göredir: 0 sınırlayıcı kutunun yüzde 0 ' ı gösterir ve 1 sınırlayıcı kutunun yüzde 100 ' unu gösterir. <xref:System.Windows.Media.GradientBrush.MappingMode%2A> Özelliği değerine<xref:System.Windows.Media.BrushMappingMode.Absolute?displayProperty=nameWithType>ayarlayarak bu koordinat sistemini değiştirebilirsiniz. Mutlak koordinat sistemi bir sınırlayıcı kutuya göreli değildir. Değerler doğrudan yerel alanda yorumlanır.  
   
- Diğer örnekler için [Fırçalar örnek](https://go.microsoft.com/fwlink/?LinkID=159973). Gradyanlar ve diğer türleri Fırçalar hakkında daha fazla bilgi için bkz: [düz renkler ve gradyanlar genel bakış boyama](painting-with-solid-colors-and-gradients-overview.md).
+ Daha fazla örnek için bkz. [fırçalar örneği](https://go.microsoft.com/fwlink/?LinkID=159973). Degradeler ve diğer fırça türleri hakkında daha fazla bilgi için bkz. [düz renklerle boyama ve degradelere genel bakış](painting-with-solid-colors-and-gradients-overview.md).
