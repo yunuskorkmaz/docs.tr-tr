@@ -8,34 +8,34 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968721"
 ---
-# <a name="converting-strings-to-net-framework-data-types"></a><span data-ttu-id="77013-102">.NET Framework Veri Türleri için Dizeleri Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="77013-102">Converting Strings to .NET Framework Data Types</span></span>
-<span data-ttu-id="77013-103">Bir dizeyi bir .NET Framework veri türüne dönüştürmek istiyorsanız kullanmanız **XmlConvert** uygulama gereksinimlerine en uygun yöntemi.</span><span class="sxs-lookup"><span data-stu-id="77013-103">If you want to convert a string to a .NET Framework data type, use the **XmlConvert** method that fits the application requirements.</span></span> <span data-ttu-id="77013-104">Kullanılabilir tüm dönüştürme yöntemleri listesi **XmlConvert** sınıfı <xref:System.Xml.XmlConvert>.</span><span class="sxs-lookup"><span data-stu-id="77013-104">For a list of all conversion methods available in the **XmlConvert** class, see <xref:System.Xml.XmlConvert>.</span></span>  
+# <a name="converting-strings-to-net-framework-data-types"></a><span data-ttu-id="842bf-102">.NET Framework Veri Türleri için Dizeleri Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="842bf-102">Converting Strings to .NET Framework Data Types</span></span>
+<span data-ttu-id="842bf-103">Bir dizeyi .NET Framework veri türüne dönüştürmek istiyorsanız, uygulama gereksinimlerine uyan **XmlConvert** yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="842bf-103">If you want to convert a string to a .NET Framework data type, use the **XmlConvert** method that fits the application requirements.</span></span> <span data-ttu-id="842bf-104">**XmlConvert** sınıfında bulunan tüm dönüştürme yöntemlerinin listesi için bkz <xref:System.Xml.XmlConvert>.</span><span class="sxs-lookup"><span data-stu-id="842bf-104">For a list of all conversion methods available in the **XmlConvert** class, see <xref:System.Xml.XmlConvert>.</span></span>  
   
- <span data-ttu-id="77013-105">Döndürülen dize **ToString** yöntemi geçirilen verileri dize sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="77013-105">The string returned from the **ToString** method is a string version of the data that is passed in.</span></span> <span data-ttu-id="77013-106">Ayrıca, kullanarak birden fazla .NET Framework türü vardır **XmlConvert** yöntemlere kullanmayın henüz sınıfı **System.Convert** sınıfı.</span><span class="sxs-lookup"><span data-stu-id="77013-106">Additionally, there are several .NET Framework types that convert using the **XmlConvert** class yet they do not use the methods in the **System.Convert** class.</span></span> <span data-ttu-id="77013-107">**XmlConvert** sınıfı XML Şeması (XSD) veri türü belirtimi izler ve bir veri türü olan **XmlConvert** eşleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77013-107">The **XmlConvert** class follows the XML Schema (XSD) data type specification and has a data type that the **XmlConvert** can map to.</span></span>  
+ <span data-ttu-id="842bf-105">**ToString** yönteminden döndürülen dize, geçirilen verilerin dize bir sürümüdür.</span><span class="sxs-lookup"><span data-stu-id="842bf-105">The string returned from the **ToString** method is a string version of the data that is passed in.</span></span> <span data-ttu-id="842bf-106">Ayrıca, **XmlConvert** sınıfını kullanarak dönüştüren birkaç .NET Framework türü vardır ancak **System. Convert** sınıfındaki yöntemleri kullanmaz.</span><span class="sxs-lookup"><span data-stu-id="842bf-106">Additionally, there are several .NET Framework types that convert using the **XmlConvert** class yet they do not use the methods in the **System.Convert** class.</span></span> <span data-ttu-id="842bf-107">**XmlConvert** sınıfı, XML ŞEMASı (xsd) veri türü belirtimini Izler ve **XmlConvert** 'in eşleyebileceğiniz bir veri türüne sahiptir.</span><span class="sxs-lookup"><span data-stu-id="842bf-107">The **XmlConvert** class follows the XML Schema (XSD) data type specification and has a data type that the **XmlConvert** can map to.</span></span>  
   
- <span data-ttu-id="77013-108">Aşağıdaki tablo, .NET Framework veri türleri ve XML Şeması (XSD) veri türü eşlemesi kullanarak döndürülen dize türleri listelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="77013-108">The following table lists .NET Framework data types and the string types that are returned using XML Schema (XSD) data type mapping.</span></span> <span data-ttu-id="77013-109">Bu .NET Framework türleri kullanılarak işlenemez **System.Convert**.</span><span class="sxs-lookup"><span data-stu-id="77013-109">These .NET Framework types cannot be processed using **System.Convert**.</span></span>  
+ <span data-ttu-id="842bf-108">Aşağıdaki tabloda .NET Framework veri türleri ve XML şeması (XSD) veri türü eşlemesi kullanılarak döndürülen dize türleri listelenmektedir.</span><span class="sxs-lookup"><span data-stu-id="842bf-108">The following table lists .NET Framework data types and the string types that are returned using XML Schema (XSD) data type mapping.</span></span> <span data-ttu-id="842bf-109">Bu .NET Framework türleri **System. Convert**kullanılarak işlenemiyor.</span><span class="sxs-lookup"><span data-stu-id="842bf-109">These .NET Framework types cannot be processed using **System.Convert**.</span></span>  
   
-|<span data-ttu-id="77013-110">.NET Framework türü</span><span class="sxs-lookup"><span data-stu-id="77013-110">.NET Framework type</span></span>|<span data-ttu-id="77013-111">Döndürülen dize</span><span class="sxs-lookup"><span data-stu-id="77013-111">String returned</span></span>|  
+|<span data-ttu-id="842bf-110">.NET Framework türü</span><span class="sxs-lookup"><span data-stu-id="842bf-110">.NET Framework type</span></span>|<span data-ttu-id="842bf-111">Döndürülen dize</span><span class="sxs-lookup"><span data-stu-id="842bf-111">String returned</span></span>|  
 |-------------------------|---------------------|  
-|<span data-ttu-id="77013-112">Boole değeri</span><span class="sxs-lookup"><span data-stu-id="77013-112">Boolean</span></span>|<span data-ttu-id="77013-113">"true", "false"</span><span class="sxs-lookup"><span data-stu-id="77013-113">"true", "false"</span></span>|  
-|<span data-ttu-id="77013-114">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-114">Single.PositiveInfinity</span></span>|<span data-ttu-id="77013-115">"INF"</span><span class="sxs-lookup"><span data-stu-id="77013-115">"INF"</span></span>|  
-|<span data-ttu-id="77013-116">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-116">Single.NegativeInfinity</span></span>|<span data-ttu-id="77013-117">"-INF"</span><span class="sxs-lookup"><span data-stu-id="77013-117">"-INF"</span></span>|  
-|<span data-ttu-id="77013-118">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-118">Double.PositiveInfinity</span></span>|<span data-ttu-id="77013-119">"INF"</span><span class="sxs-lookup"><span data-stu-id="77013-119">"INF"</span></span>|  
-|<span data-ttu-id="77013-120">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-120">Double.NegativeInfinity</span></span>|<span data-ttu-id="77013-121">"-INF"</span><span class="sxs-lookup"><span data-stu-id="77013-121">"-INF"</span></span>|  
-|<span data-ttu-id="77013-122">DateTime</span><span class="sxs-lookup"><span data-stu-id="77013-122">DateTime</span></span>|<span data-ttu-id="77013-123">Biçim "yyyy-aa-ddTHH:mm:sszzzzzz" ve onun alt kümeleri.</span><span class="sxs-lookup"><span data-stu-id="77013-123">Format is "yyyy-MM-ddTHH:mm:sszzzzzz" and its subsets.</span></span>|  
-|<span data-ttu-id="77013-124">Zaman aralığı</span><span class="sxs-lookup"><span data-stu-id="77013-124">Timespan</span></span>|<span data-ttu-id="77013-125">Biçimidir PnYnMnTnHnMnS diğer bir deyişle, `P2Y10M15DT10H30M20S` 2 yıl, 10 ay, 15 gün, 10 saat, 30 dakika, ve 20 saniye süresidir.</span><span class="sxs-lookup"><span data-stu-id="77013-125">Format is PnYnMnTnHnMnS that is, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10 hours, 30 minutes, and 20 seconds.</span></span>|  
+|<span data-ttu-id="842bf-112">Boole değeri</span><span class="sxs-lookup"><span data-stu-id="842bf-112">Boolean</span></span>|<span data-ttu-id="842bf-113">"true", "false"</span><span class="sxs-lookup"><span data-stu-id="842bf-113">"true", "false"</span></span>|  
+|<span data-ttu-id="842bf-114">Single. PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-114">Single.PositiveInfinity</span></span>|<span data-ttu-id="842bf-115">'SI</span><span class="sxs-lookup"><span data-stu-id="842bf-115">"INF"</span></span>|  
+|<span data-ttu-id="842bf-116">Tek. NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-116">Single.NegativeInfinity</span></span>|<span data-ttu-id="842bf-117">"-INF"</span><span class="sxs-lookup"><span data-stu-id="842bf-117">"-INF"</span></span>|  
+|<span data-ttu-id="842bf-118">Double. PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-118">Double.PositiveInfinity</span></span>|<span data-ttu-id="842bf-119">'SI</span><span class="sxs-lookup"><span data-stu-id="842bf-119">"INF"</span></span>|  
+|<span data-ttu-id="842bf-120">Double. NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-120">Double.NegativeInfinity</span></span>|<span data-ttu-id="842bf-121">"-INF"</span><span class="sxs-lookup"><span data-stu-id="842bf-121">"-INF"</span></span>|  
+|<span data-ttu-id="842bf-122">DateTime</span><span class="sxs-lookup"><span data-stu-id="842bf-122">DateTime</span></span>|<span data-ttu-id="842bf-123">Biçim "yyyy-MM-ddTHH: mm: sszzzzzz" ve alt kümeleridir.</span><span class="sxs-lookup"><span data-stu-id="842bf-123">Format is "yyyy-MM-ddTHH:mm:sszzzzzz" and its subsets.</span></span>|  
+|<span data-ttu-id="842bf-124">Zaman aralığı</span><span class="sxs-lookup"><span data-stu-id="842bf-124">Timespan</span></span>|<span data-ttu-id="842bf-125">Biçim, 2 yıl, 10 ay, 15 gün, 10 saat `P2Y10M15DT10H30M20S` , 30 dakika ve 20 saniye olmak üzere pnazmntnhnmns 'dir</span><span class="sxs-lookup"><span data-stu-id="842bf-125">Format is PnYnMnTnHnMnS that is, `P2Y10M15DT10H30M20S` is a duration of 2 years, 10 months, 15 days, 10 hours, 30 minutes, and 20 seconds.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="77013-126">.NET Framework türlerinin herhangi biriyle dönüştürme kullanarak bir dize tablosunda listeleniyorsa **ToString** yöntemi, döndürülen dizeye temel tür, ancak XML Şeması (XSD) dize türü değil.</span><span class="sxs-lookup"><span data-stu-id="77013-126">If converting any of the .NET Framework types listed in the table to a string using the **ToString** method, the returned string is not the base type, but the XML Schema (XSD) string type.</span></span>  
+> <span data-ttu-id="842bf-126">Tabloda listelenen .NET Framework türlerinden herhangi birini **ToString** yöntemini kullanarak bir dizeye dönüştürürseniz, döndürülen dize temel tür değildir, ancak XML ŞEMASı (xsd) dize türüdür.</span><span class="sxs-lookup"><span data-stu-id="842bf-126">If converting any of the .NET Framework types listed in the table to a string using the **ToString** method, the returned string is not the base type, but the XML Schema (XSD) string type.</span></span>  
   
- <span data-ttu-id="77013-127">**DateTime** ve **Timespan** değer türü içinde farklı bir **DateTime** anlık süre içinde oysa temsil eder bir **TimeSpan** bir zaman aralığını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="77013-127">The **DateTime** and **Timespan** value type differs in that a **DateTime** represents an instant in time, whereas a **TimeSpan** represents a time interval.</span></span> <span data-ttu-id="77013-128">**DateTime** ve **Timespan** biçimleri, XML Şeması (XSD) veri türleri belirtiminde belirtilir.</span><span class="sxs-lookup"><span data-stu-id="77013-128">The **DateTime** and **Timespan** formats are specified in the XML Schema (XSD) data types specification.</span></span> <span data-ttu-id="77013-129">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="77013-129">For example:</span></span>  
+ <span data-ttu-id="842bf-127">**DateTime** ve **TimeSpan** değer türü, bir **Tarih** saat içinde anlık bir zaman aralığını temsil ettiğinden, bir **TimeSpan** değeri bir zaman aralığı temsil ettiğinden farklılık gösterir.</span><span class="sxs-lookup"><span data-stu-id="842bf-127">The **DateTime** and **Timespan** value type differs in that a **DateTime** represents an instant in time, whereas a **TimeSpan** represents a time interval.</span></span> <span data-ttu-id="842bf-128">**DateTime** ve **TIMESPAN** biçimleri, XML şeması (xsd) veri türleri belirtiminde belirtilir.</span><span class="sxs-lookup"><span data-stu-id="842bf-128">The **DateTime** and **Timespan** formats are specified in the XML Schema (XSD) data types specification.</span></span> <span data-ttu-id="842bf-129">Örneğin:</span><span class="sxs-lookup"><span data-stu-id="842bf-129">For example:</span></span>  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -49,11 +49,11 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- <span data-ttu-id="77013-130">**Output**</span><span class="sxs-lookup"><span data-stu-id="77013-130">**Output**</span></span>  
+ <span data-ttu-id="842bf-130">**Output**</span><span class="sxs-lookup"><span data-stu-id="842bf-130">**Output**</span></span>  
   
- <span data-ttu-id="77013-131">`<Date>2001-08-04T00:00:00</Date>`.</span><span class="sxs-lookup"><span data-stu-id="77013-131">`<Date>2001-08-04T00:00:00</Date>`.</span></span>  
+ <span data-ttu-id="842bf-131">`<Date>2001-08-04T00:00:00</Date>`.</span><span class="sxs-lookup"><span data-stu-id="842bf-131">`<Date>2001-08-04T00:00:00</Date>`.</span></span>  
   
- <span data-ttu-id="77013-132">Aşağıdaki kod bir tamsayı bir dizeye dönüştürür:</span><span class="sxs-lookup"><span data-stu-id="77013-132">The following code converts an integer to a string:</span></span>  
+ <span data-ttu-id="842bf-132">Aşağıdaki kod bir tamsayıyı bir dizeye dönüştürür:</span><span class="sxs-lookup"><span data-stu-id="842bf-132">The following code converts an integer to a string:</span></span>  
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -67,32 +67,32 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- <span data-ttu-id="77013-133">**Output**</span><span class="sxs-lookup"><span data-stu-id="77013-133">**Output**</span></span>  
+ <span data-ttu-id="842bf-133">**Output**</span><span class="sxs-lookup"><span data-stu-id="842bf-133">**Output**</span></span>  
   
  `<Number>200</Number>`  
   
- <span data-ttu-id="77013-134">Ancak, bir dizeye dönüştürüyorsanız **Boole**, **tek**, veya **çift**, döndürülen .NET Framework türü kullanırken döndürülen tür ile aynı değil **System.Convert** sınıfı.</span><span class="sxs-lookup"><span data-stu-id="77013-134">However, if you are converting a string to **Boolean**, **Single**, or **Double**, the .NET Framework type that is returned is not the same as the type returned when using the **System.Convert** class.</span></span>  
+ <span data-ttu-id="842bf-134">Ancak, bir dizeyi **Boolean**, **Single**veya **Double**'A dönüştürüyorsanız döndürülen .NET Framework türü, **System. Convert** sınıfı kullanılırken döndürülen türle aynı değildir.</span><span class="sxs-lookup"><span data-stu-id="842bf-134">However, if you are converting a string to **Boolean**, **Single**, or **Double**, the .NET Framework type that is returned is not the same as the type returned when using the **System.Convert** class.</span></span>  
   
-## <a name="string-to-boolean"></a><span data-ttu-id="77013-135">Boole dizesi</span><span class="sxs-lookup"><span data-stu-id="77013-135">String to Boolean</span></span>  
- <span data-ttu-id="77013-136">Aşağıdaki tabloda, ne tür bir dizeye dönüştürürken verilen Giriş dizeleri için oluşturulur gösterilmektedir **Boole** kullanarak **ToBoolean** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="77013-136">The following table shows what type is generated for the given input strings, when converting a string to **Boolean** using the **ToBoolean** method.</span></span>  
+## <a name="string-to-boolean"></a><span data-ttu-id="842bf-135">Boole olarak dize</span><span class="sxs-lookup"><span data-stu-id="842bf-135">String to Boolean</span></span>  
+ <span data-ttu-id="842bf-136">Aşağıdaki tabloda, **ToBoolean** yöntemi kullanılarak bir dize **Boole** değerine dönüştürülürken, verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="842bf-136">The following table shows what type is generated for the given input strings, when converting a string to **Boolean** using the **ToBoolean** method.</span></span>  
   
-|<span data-ttu-id="77013-137">Giriş parametresi geçerli bir dize</span><span class="sxs-lookup"><span data-stu-id="77013-137">Valid string input parameter</span></span>|<span data-ttu-id="77013-138">.NET framework çıktı türü</span><span class="sxs-lookup"><span data-stu-id="77013-138">.NET Framework output type</span></span>|  
+|<span data-ttu-id="842bf-137">Geçerli dize giriş parametresi</span><span class="sxs-lookup"><span data-stu-id="842bf-137">Valid string input parameter</span></span>|<span data-ttu-id="842bf-138">.NET Framework çıkış türü</span><span class="sxs-lookup"><span data-stu-id="842bf-138">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="77013-139">"true"</span><span class="sxs-lookup"><span data-stu-id="77013-139">"true"</span></span>|<span data-ttu-id="77013-140">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="77013-140">Boolean.True</span></span>|  
-|<span data-ttu-id="77013-141">"1"</span><span class="sxs-lookup"><span data-stu-id="77013-141">"1"</span></span>|<span data-ttu-id="77013-142">Boolean.True</span><span class="sxs-lookup"><span data-stu-id="77013-142">Boolean.True</span></span>|  
-|<span data-ttu-id="77013-143">"false"</span><span class="sxs-lookup"><span data-stu-id="77013-143">"false"</span></span>|<span data-ttu-id="77013-144">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="77013-144">Boolean.False</span></span>|  
-|<span data-ttu-id="77013-145">"0"</span><span class="sxs-lookup"><span data-stu-id="77013-145">"0"</span></span>|<span data-ttu-id="77013-146">Boolean.False</span><span class="sxs-lookup"><span data-stu-id="77013-146">Boolean.False</span></span>|  
+|<span data-ttu-id="842bf-139">"true"</span><span class="sxs-lookup"><span data-stu-id="842bf-139">"true"</span></span>|<span data-ttu-id="842bf-140">Boolean. true</span><span class="sxs-lookup"><span data-stu-id="842bf-140">Boolean.True</span></span>|  
+|<span data-ttu-id="842bf-141">"1"</span><span class="sxs-lookup"><span data-stu-id="842bf-141">"1"</span></span>|<span data-ttu-id="842bf-142">Boolean. true</span><span class="sxs-lookup"><span data-stu-id="842bf-142">Boolean.True</span></span>|  
+|<span data-ttu-id="842bf-143">yanlýþ</span><span class="sxs-lookup"><span data-stu-id="842bf-143">"false"</span></span>|<span data-ttu-id="842bf-144">Boolean. false</span><span class="sxs-lookup"><span data-stu-id="842bf-144">Boolean.False</span></span>|  
+|<span data-ttu-id="842bf-145">"0"</span><span class="sxs-lookup"><span data-stu-id="842bf-145">"0"</span></span>|<span data-ttu-id="842bf-146">Boolean. false</span><span class="sxs-lookup"><span data-stu-id="842bf-146">Boolean.False</span></span>|  
   
- <span data-ttu-id="77013-147">Örneğin, aşağıdaki XML verilen:</span><span class="sxs-lookup"><span data-stu-id="77013-147">For example, given the following XML:</span></span>  
+ <span data-ttu-id="842bf-147">Örneğin, aşağıdaki XML verildiğinde:</span><span class="sxs-lookup"><span data-stu-id="842bf-147">For example, given the following XML:</span></span>  
   
- <span data-ttu-id="77013-148">**Giriş**</span><span class="sxs-lookup"><span data-stu-id="77013-148">**Input**</span></span>  
+ <span data-ttu-id="842bf-148">**Giriş**</span><span class="sxs-lookup"><span data-stu-id="842bf-148">**Input**</span></span>  
   
 ```xml  
 <Boolean>true</Boolean>  
 <Boolean>1</Boolean>   
 ```  
   
- <span data-ttu-id="77013-149">Her ikisi de aşağıdaki kodda, anlaşılabilir ve **bDeğer** olduğu **System.Boolean.True**:</span><span class="sxs-lookup"><span data-stu-id="77013-149">Both can be understood by the following code, and **bvalue** is **System.Boolean.True**:</span></span>  
+ <span data-ttu-id="842bf-149">Her ikisi de aşağıdaki kod tarafından Anlaşılabiliyorsa, **bValue** ise **System. Boolean. true**:</span><span class="sxs-lookup"><span data-stu-id="842bf-149">Both can be understood by the following code, and **bvalue** is **System.Boolean.True**:</span></span>  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -105,23 +105,23 @@ Boolean bvalue = XmlConvert.ToBoolean(reader.ReadElementString());
 Console.WriteLine(bvalue);  
 ```  
   
-## <a name="string-to-single"></a><span data-ttu-id="77013-150">Tek bir dizeye</span><span class="sxs-lookup"><span data-stu-id="77013-150">String to Single</span></span>  
- <span data-ttu-id="77013-151">Aşağıdaki tabloda, ne tür bir dizeye dönüştürürken verilen Giriş dizeleri için oluşturulur gösterir bir **tek** kullanarak **ToSingle** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="77013-151">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToSingle** method.</span></span>  
+## <a name="string-to-single"></a><span data-ttu-id="842bf-150">Dizeden tek</span><span class="sxs-lookup"><span data-stu-id="842bf-150">String to Single</span></span>  
+ <span data-ttu-id="842bf-151">Aşağıdaki tabloda, bir dizeyi **ToSingle** yöntemi kullanılarak **tek tek** dönüştürme sırasında verilen giriş dizeleri için oluşturulan tür gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="842bf-151">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToSingle** method.</span></span>  
   
-|<span data-ttu-id="77013-152">Giriş parametresi geçerli bir dize</span><span class="sxs-lookup"><span data-stu-id="77013-152">Valid string input parameter</span></span>|<span data-ttu-id="77013-153">.NET framework çıktı türü</span><span class="sxs-lookup"><span data-stu-id="77013-153">.NET Framework output type</span></span>|  
+|<span data-ttu-id="842bf-152">Geçerli dize giriş parametresi</span><span class="sxs-lookup"><span data-stu-id="842bf-152">Valid string input parameter</span></span>|<span data-ttu-id="842bf-153">.NET Framework çıkış türü</span><span class="sxs-lookup"><span data-stu-id="842bf-153">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="77013-154">"INF"</span><span class="sxs-lookup"><span data-stu-id="77013-154">"INF"</span></span>|<span data-ttu-id="77013-155">Single.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-155">Single.PositiveInfinity</span></span>|  
-|<span data-ttu-id="77013-156">"-INF"</span><span class="sxs-lookup"><span data-stu-id="77013-156">"-INF"</span></span>|<span data-ttu-id="77013-157">Single.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-157">Single.NegativeInfinity</span></span>|  
+|<span data-ttu-id="842bf-154">'SI</span><span class="sxs-lookup"><span data-stu-id="842bf-154">"INF"</span></span>|<span data-ttu-id="842bf-155">Single. PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-155">Single.PositiveInfinity</span></span>|  
+|<span data-ttu-id="842bf-156">"-INF"</span><span class="sxs-lookup"><span data-stu-id="842bf-156">"-INF"</span></span>|<span data-ttu-id="842bf-157">Tek. NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-157">Single.NegativeInfinity</span></span>|  
   
-## <a name="string-to-double"></a><span data-ttu-id="77013-158">Çift için dize</span><span class="sxs-lookup"><span data-stu-id="77013-158">String to Double</span></span>  
- <span data-ttu-id="77013-159">Aşağıdaki tabloda, ne tür bir dizeye dönüştürürken verilen Giriş dizeleri için oluşturulur gösterir bir **tek** kullanarak **ToDouble** yöntemi.</span><span class="sxs-lookup"><span data-stu-id="77013-159">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToDouble** method.</span></span>  
+## <a name="string-to-double"></a><span data-ttu-id="842bf-158">Double için dize</span><span class="sxs-lookup"><span data-stu-id="842bf-158">String to Double</span></span>  
+ <span data-ttu-id="842bf-159">Aşağıdaki tabloda, **ToDouble** yöntemi kullanılarak bir dizeyi **tek tek** dönüştürmek için verilen giriş dizeleri için hangi türün oluşturulduğu gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="842bf-159">The following table shows what type is generated for the given input strings, when converting a string to a **Single** using the **ToDouble** method.</span></span>  
   
-|<span data-ttu-id="77013-160">Giriş parametresi geçerli bir dize</span><span class="sxs-lookup"><span data-stu-id="77013-160">Valid string input parameter</span></span>|<span data-ttu-id="77013-161">.NET framework çıktı türü</span><span class="sxs-lookup"><span data-stu-id="77013-161">.NET Framework output type</span></span>|  
+|<span data-ttu-id="842bf-160">Geçerli dize giriş parametresi</span><span class="sxs-lookup"><span data-stu-id="842bf-160">Valid string input parameter</span></span>|<span data-ttu-id="842bf-161">.NET Framework çıkış türü</span><span class="sxs-lookup"><span data-stu-id="842bf-161">.NET Framework output type</span></span>|  
 |----------------------------------|--------------------------------|  
-|<span data-ttu-id="77013-162">"INF"</span><span class="sxs-lookup"><span data-stu-id="77013-162">"INF"</span></span>|<span data-ttu-id="77013-163">Double.PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-163">Double.PositiveInfinity</span></span>|  
-|<span data-ttu-id="77013-164">"-INF"</span><span class="sxs-lookup"><span data-stu-id="77013-164">"-INF"</span></span>|<span data-ttu-id="77013-165">Double.NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="77013-165">Double.NegativeInfinity</span></span>|  
+|<span data-ttu-id="842bf-162">'SI</span><span class="sxs-lookup"><span data-stu-id="842bf-162">"INF"</span></span>|<span data-ttu-id="842bf-163">Double. PositiveInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-163">Double.PositiveInfinity</span></span>|  
+|<span data-ttu-id="842bf-164">"-INF"</span><span class="sxs-lookup"><span data-stu-id="842bf-164">"-INF"</span></span>|<span data-ttu-id="842bf-165">Double. NegativeInfinity</span><span class="sxs-lookup"><span data-stu-id="842bf-165">Double.NegativeInfinity</span></span>|  
   
- <span data-ttu-id="77013-166">Aşağıdaki kod yazma `<Infinity>INF</Infinity>`:</span><span class="sxs-lookup"><span data-stu-id="77013-166">The following code writes `<Infinity>INF</Infinity>`:</span></span>  
+ <span data-ttu-id="842bf-166">Aşağıdaki kod yazılır `<Infinity>INF</Infinity>`:</span><span class="sxs-lookup"><span data-stu-id="842bf-166">The following code writes `<Infinity>INF</Infinity>`:</span></span>  
   
 ```vb  
 Dim value As Double = Double.PositiveInfinity  
@@ -133,7 +133,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="77013-167">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77013-167">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="842bf-167">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="842bf-167">See also</span></span>
 
-- [<span data-ttu-id="77013-168">XML Veri Türlerini Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="77013-168">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [<span data-ttu-id="77013-169">.NET Framework Türlerini Dizelere Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="77013-169">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [<span data-ttu-id="842bf-168">XML Veri Türlerini Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="842bf-168">Conversion of XML Data Types</span></span>](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
+- [<span data-ttu-id="842bf-169">.NET Framework Türlerini Dizelere Dönüştürme</span><span class="sxs-lookup"><span data-stu-id="842bf-169">Converting .NET Framework Types to Strings</span></span>](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

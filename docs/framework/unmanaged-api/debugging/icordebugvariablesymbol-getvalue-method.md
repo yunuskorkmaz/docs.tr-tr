@@ -1,20 +1,20 @@
 ---
-title: ICorDebugVariableSymbol::GetValue yöntemi
+title: 'ICorDebugVariableSymbol:: GetValue yöntemi'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed88c8ff78006c14bdee51ba6f95aaaedd66cf41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967988"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a><span data-ttu-id="148fb-102">ICorDebugVariableSymbol::GetValue yöntemi</span><span class="sxs-lookup"><span data-stu-id="148fb-102">ICorDebugVariableSymbol::GetValue Method</span></span>
-<span data-ttu-id="148fb-103">Bir bayt dizisi olarak bir değişkenin değerini alır.</span><span class="sxs-lookup"><span data-stu-id="148fb-103">Gets the value of a variable as a byte array.</span></span>  
+# <a name="icordebugvariablesymbolgetvalue-method"></a><span data-ttu-id="5ef26-102">ICorDebugVariableSymbol:: GetValue yöntemi</span><span class="sxs-lookup"><span data-stu-id="5ef26-102">ICorDebugVariableSymbol::GetValue Method</span></span>
+<span data-ttu-id="5ef26-103">Bir değişkenin değerini bir bayt dizisi olarak alır.</span><span class="sxs-lookup"><span data-stu-id="5ef26-103">Gets the value of a variable as a byte array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="148fb-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="148fb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5ef26-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5ef26-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetValue(  
@@ -27,40 +27,40 @@ HRESULT GetValue(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="148fb-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="148fb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5ef26-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="5ef26-105">Parameters</span></span>  
  `offset`  
- <span data-ttu-id="148fb-106">[in] Değer okunacağı değişkeninde başlangıç uzaklığı.</span><span class="sxs-lookup"><span data-stu-id="148fb-106">[in] The starting offset in the variable from which to read the value.</span></span> <span data-ttu-id="148fb-107">Bu parametre, bir nesne üyesi alanlarına okuma sırasında kullanılır.</span><span class="sxs-lookup"><span data-stu-id="148fb-107">This parameter is used when reading member fields in an object.</span></span>  
+ <span data-ttu-id="5ef26-106">'ndaki Değerin okunacağı değişkenin başlangıç boşluğu.</span><span class="sxs-lookup"><span data-stu-id="5ef26-106">[in] The starting offset in the variable from which to read the value.</span></span> <span data-ttu-id="5ef26-107">Bu parametre, bir nesnedeki üye alanlarını okurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5ef26-107">This parameter is used when reading member fields in an object.</span></span>  
   
  `cbContext`  
- <span data-ttu-id="148fb-108">[in] Bayt cinsinden boyutu `context` bağımsız değişken.</span><span class="sxs-lookup"><span data-stu-id="148fb-108">[in] The size in bytes of the `context` argument.</span></span>  
+ <span data-ttu-id="5ef26-108">'ndaki `context` Bağımsız değişkenin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="5ef26-108">[in] The size in bytes of the `context` argument.</span></span>  
   
  `context`  
- <span data-ttu-id="148fb-109">[in] Değeri okumak için kullanılan iş parçacığı bağlamı.</span><span class="sxs-lookup"><span data-stu-id="148fb-109">[in] The thread context used to read the value.</span></span>  
+ <span data-ttu-id="5ef26-109">'ndaki Değeri okumak için kullanılan iş parçacığı bağlamı.</span><span class="sxs-lookup"><span data-stu-id="5ef26-109">[in] The thread context used to read the value.</span></span>  
   
  `cbValue`  
- <span data-ttu-id="148fb-110">[in] Bayt cinsinden boyutu `pValue` arabellek.</span><span class="sxs-lookup"><span data-stu-id="148fb-110">[in] The size in bytes of the `pValue` buffer.</span></span>  
+ <span data-ttu-id="5ef26-110">'ndaki `pValue` Arabelleğin bayt cinsinden boyutu.</span><span class="sxs-lookup"><span data-stu-id="5ef26-110">[in] The size in bytes of the `pValue` buffer.</span></span>  
   
  `pcbValue`  
- <span data-ttu-id="148fb-111">[out] Gerçekte yazılan bayt sayısı `pValue` arabellek.</span><span class="sxs-lookup"><span data-stu-id="148fb-111">[out] The number of bytes actually written to the `pValue` buffer.</span></span>  
+ <span data-ttu-id="5ef26-111">dışı Gerçekte `pValue` arabelleğe yazılan bayt sayısı.</span><span class="sxs-lookup"><span data-stu-id="5ef26-111">[out] The number of bytes actually written to the `pValue` buffer.</span></span>  
   
  `pValue`  
- <span data-ttu-id="148fb-112">[out] Değişkenin değerini içeren bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="148fb-112">[out] A byte array that contains the value of the variable.</span></span>  
+ <span data-ttu-id="5ef26-112">dışı Değişkenin değerini içeren bir bayt dizisi.</span><span class="sxs-lookup"><span data-stu-id="5ef26-112">[out] A byte array that contains the value of the variable.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="148fb-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="148fb-113">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5ef26-113">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="5ef26-113">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="148fb-114">Bu yöntem yalnızca .NET Native ile kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="148fb-114">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="5ef26-114">Bu yöntem yalnızca .NET Native kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="5ef26-114">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="148fb-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="148fb-115">Requirements</span></span>  
- <span data-ttu-id="148fb-116">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="148fb-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5ef26-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="5ef26-115">Requirements</span></span>  
+ <span data-ttu-id="5ef26-116">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5ef26-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="148fb-117">**Üst bilgi:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="148fb-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5ef26-117">**Üst bilgi** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="5ef26-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="148fb-118">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="148fb-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5ef26-118">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="5ef26-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="148fb-119">**.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="148fb-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="5ef26-119">**.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5ef26-119">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="148fb-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="148fb-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ef26-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5ef26-120">See also</span></span>
 
-- [<span data-ttu-id="148fb-121">ICorDebugVariableSymbol Arabirimi</span><span class="sxs-lookup"><span data-stu-id="148fb-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [<span data-ttu-id="148fb-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="148fb-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5ef26-121">ICorDebugVariableSymbol Arabirimi</span><span class="sxs-lookup"><span data-stu-id="5ef26-121">ICorDebugVariableSymbol Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
+- [<span data-ttu-id="5ef26-122">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="5ef26-122">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
