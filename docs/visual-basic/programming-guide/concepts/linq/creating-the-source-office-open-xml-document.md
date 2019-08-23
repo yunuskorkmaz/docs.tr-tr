@@ -1,28 +1,28 @@
 ---
-title: Kaynak Office Open XML belgesi (Visual Basic) oluşturma
+title: Kaynak Office Open XML belgesi (Visual Basic) oluşturuluyor
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923428"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965247"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a><span data-ttu-id="d47ce-102">Kaynak Office Open XML belgesi (Visual Basic) oluşturma</span><span class="sxs-lookup"><span data-stu-id="d47ce-102">Creating the Source Office Open XML Document (Visual Basic)</span></span>
-<span data-ttu-id="d47ce-103">Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir.</span><span class="sxs-lookup"><span data-stu-id="d47ce-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="d47ce-104">Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.</span><span class="sxs-lookup"><span data-stu-id="d47ce-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a><span data-ttu-id="ad48f-102">Kaynak Office Open XML belgesi (Visual Basic) oluşturuluyor</span><span class="sxs-lookup"><span data-stu-id="ad48f-102">Creating the Source Office Open XML Document (Visual Basic)</span></span>
+<span data-ttu-id="ad48f-103">Bu konu başlığında, bu öğreticideki diğer örneklerin kullandığı Office Open XML WordprocessingML belgesinin nasıl oluşturulacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ad48f-103">This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use.</span></span> <span data-ttu-id="ad48f-104">Bu yönergeleri izlerseniz, çıktılarınız her örnekte girilen çıktıyla eşleşir.</span><span class="sxs-lookup"><span data-stu-id="ad48f-104">If you follow these instructions, your output will match the output provided in each example.</span></span>  
   
- <span data-ttu-id="d47ce-105">Ancak, bu öğreticideki örneklerde, geçerli bir WordprocessingML belgesi ile çalışır.</span><span class="sxs-lookup"><span data-stu-id="d47ce-105">However, the examples in this tutorial will work with any valid WordprocessingML document.</span></span>  
+ <span data-ttu-id="ad48f-105">Ancak, bu öğreticideki örnekler geçerli bir WordprocessingML belgesiyle çalışacaktır.</span><span class="sxs-lookup"><span data-stu-id="ad48f-105">However, the examples in this tutorial will work with any valid WordprocessingML document.</span></span>  
   
- <span data-ttu-id="d47ce-106">Bu öğreticide bir belge oluşturmak için ya da Microsoft Office 2007 yüklü olmalıdır veya sonraki bir sürümünün yüklü veya Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d47ce-106">To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
+ <span data-ttu-id="ad48f-106">Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 veya sonraki bir sürümü yüklemiş olmanız ya da Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ad48f-106">To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.</span></span>  
   
-## <a name="creating-the-wordprocessingml-document"></a><span data-ttu-id="d47ce-107">WordprocessingML belgesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="d47ce-107">Creating the WordprocessingML Document</span></span>  
+## <a name="creating-the-wordprocessingml-document"></a><span data-ttu-id="ad48f-107">WordprocessingML belgesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="ad48f-107">Creating the WordprocessingML Document</span></span>  
   
-#### <a name="to-create-the-wordprocessingml-document"></a><span data-ttu-id="d47ce-108">WordprocessingML belgesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="d47ce-108">To create the WordprocessingML document</span></span>  
+#### <a name="to-create-the-wordprocessingml-document"></a><span data-ttu-id="ad48f-108">WordprocessingML belgesi oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="ad48f-108">To create the WordprocessingML document</span></span>  
   
-1. <span data-ttu-id="d47ce-109">Yeni bir Microsoft Word belgesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d47ce-109">Create a new Microsoft Word document.</span></span>  
+1. <span data-ttu-id="ad48f-109">Yeni bir Microsoft Word belgesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ad48f-109">Create a new Microsoft Word document.</span></span>  
   
-2. <span data-ttu-id="d47ce-110">Aşağıdaki metni yeni bir belgeye yapıştırın:</span><span class="sxs-lookup"><span data-stu-id="d47ce-110">Paste the following text into the new document:</span></span>  
+2. <span data-ttu-id="ad48f-110">Aşağıdaki metni yeni belgeye yapıştırın:</span><span class="sxs-lookup"><span data-stu-id="ad48f-110">Paste the following text into the new document:</span></span>  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,17 +42,17 @@ ms.locfileid: "61923428"
     Hello World  
     ```  
   
-3. <span data-ttu-id="d47ce-111">İlk satır stili "Başlık 1" ile biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="d47ce-111">Format the first line with the style "Heading 1".</span></span>  
+3. <span data-ttu-id="ad48f-111">İlk satırı "Başlık 1" stiliyle biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="ad48f-111">Format the first line with the style "Heading 1".</span></span>  
   
-4. <span data-ttu-id="d47ce-112">Visual Basic kodunu içeren satırları seçin.</span><span class="sxs-lookup"><span data-stu-id="d47ce-112">Select the lines that contain the Visual Basic code.</span></span> <span data-ttu-id="d47ce-113">İlk satırı ile başlayan `Imports` anahtar sözcüğü.</span><span class="sxs-lookup"><span data-stu-id="d47ce-113">The first line starts with the `Imports` keyword.</span></span> <span data-ttu-id="d47ce-114">Son satırı "End Class" dir.</span><span class="sxs-lookup"><span data-stu-id="d47ce-114">The last line is "End Class".</span></span> <span data-ttu-id="d47ce-115">Satırları courier yazı biçimi.</span><span class="sxs-lookup"><span data-stu-id="d47ce-115">Format the lines with the courier font.</span></span> <span data-ttu-id="d47ce-116">İle yeni bir stil biçimlendirir ve yeni stil "Code" olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="d47ce-116">Format them with a new style, and name the new style "Code".</span></span>  
+4. <span data-ttu-id="ad48f-112">Visual Basic kodunu içeren satırları seçin.</span><span class="sxs-lookup"><span data-stu-id="ad48f-112">Select the lines that contain the Visual Basic code.</span></span> <span data-ttu-id="ad48f-113">İlk satır `Imports` anahtar sözcüğüyle başlar.</span><span class="sxs-lookup"><span data-stu-id="ad48f-113">The first line starts with the `Imports` keyword.</span></span> <span data-ttu-id="ad48f-114">Son satır "End Class" dır.</span><span class="sxs-lookup"><span data-stu-id="ad48f-114">The last line is "End Class".</span></span> <span data-ttu-id="ad48f-115">Çizgileri Courier yazı tipiyle biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="ad48f-115">Format the lines with the courier font.</span></span> <span data-ttu-id="ad48f-116">Bunları yeni bir stille biçimlendirin ve yeni "Code" stilini adlandırın.</span><span class="sxs-lookup"><span data-stu-id="ad48f-116">Format them with a new style, and name the new style "Code".</span></span>  
   
-5. <span data-ttu-id="d47ce-117">Son olarak, çıktısını içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.</span><span class="sxs-lookup"><span data-stu-id="d47ce-117">Finally, select the entire line that contains the output, and format it with the `Code` style.</span></span>  
+5. <span data-ttu-id="ad48f-117">Son olarak, çıktıyı içeren satırın tamamını seçin ve `Code` stille biçimlendirin.</span><span class="sxs-lookup"><span data-stu-id="ad48f-117">Finally, select the entire line that contains the output, and format it with the `Code` style.</span></span>  
   
-6. <span data-ttu-id="d47ce-118">Belgeyi kaydedin ve SampleDoc.docx adlandırın.</span><span class="sxs-lookup"><span data-stu-id="d47ce-118">Save the document, and name it SampleDoc.docx.</span></span>  
+6. <span data-ttu-id="ad48f-118">Belgeyi kaydedin ve SampleDoc. docx olarak adlandırın.</span><span class="sxs-lookup"><span data-stu-id="ad48f-118">Save the document, and name it SampleDoc.docx.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="d47ce-119">Microsoft Word 2003 kullanıyorsanız **Word 2007 belgesi** içinde **farklı kaydetme türü** aşağı açılan listesi.</span><span class="sxs-lookup"><span data-stu-id="d47ce-119">If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.</span></span>  
+    > <span data-ttu-id="ad48f-119">Microsoft Word 2003 kullanıyorsanız, **farklı kaydet türü** açılan listesinde **Word 2007 belgesi** ' ni seçin.</span><span class="sxs-lookup"><span data-stu-id="ad48f-119">If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d47ce-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d47ce-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad48f-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad48f-120">See also</span></span>
 
-- [<span data-ttu-id="d47ce-121">Öğretici: (Visual Basic) WordprocessingML belgesindeki içeriği düzenleme</span><span class="sxs-lookup"><span data-stu-id="d47ce-121">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [<span data-ttu-id="ad48f-121">Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ad48f-121">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
