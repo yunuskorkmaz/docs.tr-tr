@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c037f2509aaa0a5e4c3f7a844614742b6f21bec3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f86c4388fd633c72e846c227d45eff09bb66cf44
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769143"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951115"
 ---
-# <a name="icorprofilercallbackmovedreferences-method"></a><span data-ttu-id="9740c-102">ICorProfilerCallback::MovedReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9740c-102">ICorProfilerCallback::MovedReferences Method</span></span>
-<span data-ttu-id="9740c-103">Yeni düzen sıkıştırma çöp toplama sonucu olarak yığındaki nesnelerin bildirmek için çağrılır.</span><span class="sxs-lookup"><span data-stu-id="9740c-103">Called to report the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>  
+# <a name="icorprofilercallbackmovedreferences-method"></a><span data-ttu-id="e1bc0-102">ICorProfilerCallback::MovedReferences Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e1bc0-102">ICorProfilerCallback::MovedReferences Method</span></span>
+<span data-ttu-id="e1bc0-103">Bir sıkıştırma atık toplama işleminin sonucu olarak yığında nesnelerin yeni yerleşimini raporlamak için çağırılır.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-103">Called to report the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9740c-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9740c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1bc0-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="e1bc0-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT MovedReferences(  
@@ -37,60 +37,60 @@ HRESULT MovedReferences(
     [in, size_is(cMovedObjectIDRanges)] ULONG    cObjectIDRangeLength[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9740c-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="9740c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e1bc0-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="e1bc0-105">Parameters</span></span>  
  `cMovedObjectIDRanges`  
- <span data-ttu-id="9740c-106">[in] Taşınabilir sıkıştırma çöp toplama işleminin sonucu olarak, bitişik nesnelerin blokların sayısı.</span><span class="sxs-lookup"><span data-stu-id="9740c-106">[in] The number of blocks of contiguous objects that moved as the result of the compacting garbage collection.</span></span> <span data-ttu-id="9740c-107">Diğer bir deyişle, değerini `cMovedObjectIDRanges` toplam boyutu `oldObjectIDRangeStart`, `newObjectIDRangeStart`, ve `cObjectIDRangeLength` dizileri.</span><span class="sxs-lookup"><span data-stu-id="9740c-107">That is, the value of `cMovedObjectIDRanges` is the total size of the `oldObjectIDRangeStart`, `newObjectIDRangeStart`, and `cObjectIDRangeLength` arrays.</span></span>  
+ <span data-ttu-id="e1bc0-106">'ndaki Sıkıştırma atık toplamanın sonucu olarak taşınan bitişik nesne bloklarının sayısı.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-106">[in] The number of blocks of contiguous objects that moved as the result of the compacting garbage collection.</span></span> <span data-ttu-id="e1bc0-107">Diğer `cMovedObjectIDRanges` bir deyişle, değeri `oldObjectIDRangeStart`, `newObjectIDRangeStart`, ve `cObjectIDRangeLength` dizilerinin toplam boyutudur.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-107">That is, the value of `cMovedObjectIDRanges` is the total size of the `oldObjectIDRangeStart`, `newObjectIDRangeStart`, and `cObjectIDRangeLength` arrays.</span></span>  
   
- <span data-ttu-id="9740c-108">Sonraki üç bağımsız değişkenleri `MovedReferences` paralel dizidir.</span><span class="sxs-lookup"><span data-stu-id="9740c-108">The next three arguments of `MovedReferences` are parallel arrays.</span></span> <span data-ttu-id="9740c-109">Diğer bir deyişle, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, ve `cObjectIDRangeLength[i]` tüm bitişik nesnelerinin tek bir blok ilgilendiriyor.</span><span class="sxs-lookup"><span data-stu-id="9740c-109">In other words, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, and `cObjectIDRangeLength[i]` all concern a single block of contiguous objects.</span></span>  
+ <span data-ttu-id="e1bc0-108">Sonraki üç bağımsız değişkeni `MovedReferences` paralel dizilerdir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-108">The next three arguments of `MovedReferences` are parallel arrays.</span></span> <span data-ttu-id="e1bc0-109">Diğer bir deyişle `oldObjectIDRangeStart[i]` `newObjectIDRangeStart[i]`,, ve `cObjectIDRangeLength[i]` hepsi bitişik nesnelerin tek bir bloğuna sorun.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-109">In other words, `oldObjectIDRangeStart[i]`, `newObjectIDRangeStart[i]`, and `cObjectIDRangeLength[i]` all concern a single block of contiguous objects.</span></span>  
   
  `oldObjectIDRangeStart`  
- <span data-ttu-id="9740c-110">[in] Bir dizi `ObjectID` her birinin başlangıç adresi bloğunun bitişik eski (ön çöp toplamada) olduğunda, değerleri, Canlı nesneleri bellekte.</span><span class="sxs-lookup"><span data-stu-id="9740c-110">[in] An array of `ObjectID` values, each of which is the old (pre-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
+ <span data-ttu-id="e1bc0-110">'ndaki Her biri, `ObjectID` bellekte bir bitişik ve canlı nesneler bloğunun başlangıç adresi olan, her biri eski (çöp önden koleksiyon) olan bir değerler dizisi.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-110">[in] An array of `ObjectID` values, each of which is the old (pre-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
   
  `newObjectIDRangeStart`  
- <span data-ttu-id="9740c-111">[in] Bir dizi `ObjectID` her biri yeni (sonrası çöp toplamada) başlangıç adresi bloğunun bitişik olduğunda, değerleri, Canlı nesneleri bellekte.</span><span class="sxs-lookup"><span data-stu-id="9740c-111">[in] An array of `ObjectID` values, each of which is the new (post-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
+ <span data-ttu-id="e1bc0-111">'ndaki Her biri, `ObjectID` bellekte bulunan bitişik ve canlı nesneler bloğunun başlangıç adresi olan yeni (çöp sonrası koleksiyon) olan bir değer dizisidir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-111">[in] An array of `ObjectID` values, each of which is the new (post-garbage collection) starting address of a block of contiguous, live objects in memory.</span></span>  
   
  `cObjectIDRangeLength`  
- <span data-ttu-id="9740c-112">[in] Her biri bellekte bitişik nesnelerin bir blok boyutu olan bir tamsayı dizisi.</span><span class="sxs-lookup"><span data-stu-id="9740c-112">[in] An array of integers, each of which is the size of a block of contiguous objects in memory.</span></span>  
+ <span data-ttu-id="e1bc0-112">'ndaki Her biri bellekteki bir bitişik nesne bloğunun boyutu olan tamsayılar dizisi.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-112">[in] An array of integers, each of which is the size of a block of contiguous objects in memory.</span></span>  
   
- <span data-ttu-id="9740c-113">Başvurulduğundan her blok için belirtilen bir boyutu `oldObjectIDRangeStart` ve `newObjectIDRangeStart` dizileri.</span><span class="sxs-lookup"><span data-stu-id="9740c-113">A size is specified for each block that is referenced in the `oldObjectIDRangeStart` and `newObjectIDRangeStart` arrays.</span></span>  
+ <span data-ttu-id="e1bc0-113">`oldObjectIDRangeStart` Ve`newObjectIDRangeStart` dizilerinde başvurulan her bir blok için bir boyut belirtilir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-113">A size is specified for each block that is referenced in the `oldObjectIDRangeStart` and `newObjectIDRangeStart` arrays.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9740c-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="9740c-114">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1bc0-114">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="e1bc0-114">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="9740c-115">Bu yöntem boyutları olarak raporlar `MAX_ULONG` 64-bit platformlarda 4 GB'den büyük olan nesneler için.</span><span class="sxs-lookup"><span data-stu-id="9740c-115">This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="9740c-116">4 GB'den daha büyük nesnelerin boyutunu almak için kullanın [Icorprofilercallback4::movedreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) yöntemi yerine.</span><span class="sxs-lookup"><span data-stu-id="9740c-116">To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.</span></span>  
+> <span data-ttu-id="e1bc0-115">Bu yöntem, 64- `MAX_ULONG` bit platformlarda 4 GB 'den büyük nesneler için boyutları raporlar.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-115">This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="e1bc0-116">4 GB 'den büyük nesnelerin boyutunu almak için, bunun yerine [ICorProfilerCallback4:: MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) metodunu kullanın.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-116">To get the size of objects that are larger than 4 GB, use the [ICorProfilerCallback4::MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) method instead.</span></span>  
   
- <span data-ttu-id="9740c-117">Sıkıştırma atık Toplayıcıya alanı boşaltılana sıkıştırır ve ölü nesneleri ile kapladığı belleği geri kazanır.</span><span class="sxs-lookup"><span data-stu-id="9740c-117">A compacting garbage collector reclaims the memory occupied by dead objects and compacts that freed space.</span></span> <span data-ttu-id="9740c-118">Sonuç olarak, Canlı nesneler yığında taşınmış olabilir ve `ObjectID` önceki bildirimler tarafından dağıtılan değerleri değişebilir.</span><span class="sxs-lookup"><span data-stu-id="9740c-118">As a result, live objects might be moved within the heap, and `ObjectID` values distributed by previous notifications might change.</span></span>  
+ <span data-ttu-id="e1bc0-117">Bir sıkıştırma atık toplayıcısı, ölü nesneler tarafından kullanılan belleği geri kazanır ve serbest bırakılan alanı sıkıştırır.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-117">A compacting garbage collector reclaims the memory occupied by dead objects and compacts that freed space.</span></span> <span data-ttu-id="e1bc0-118">Sonuç olarak, canlı nesneler yığın içinde taşınabilir ve `ObjectID` önceki bildirimler tarafından dağıtılan değerler değişebilir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-118">As a result, live objects might be moved within the heap, and `ObjectID` values distributed by previous notifications might change.</span></span>  
   
- <span data-ttu-id="9740c-119">Varsayımında varolan `ObjectID` değeri (`oldObjectID`) aşağıdaki aralığında yer:</span><span class="sxs-lookup"><span data-stu-id="9740c-119">Assume that an existing `ObjectID` value (`oldObjectID`) lies within the following range:</span></span>  
+ <span data-ttu-id="e1bc0-119">Var olan `ObjectID` bir değerin (`oldObjectID`) aşağıdaki aralıkta olduğunu varsayın:</span><span class="sxs-lookup"><span data-stu-id="e1bc0-119">Assume that an existing `ObjectID` value (`oldObjectID`) lies within the following range:</span></span>  
   
  `oldObjectIDRangeStart[i]` <= `oldObjectID` < `oldObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- <span data-ttu-id="9740c-120">Bu durumda, nesnenin başlangıç aralığın başından uzaklık şu şekilde olur:</span><span class="sxs-lookup"><span data-stu-id="9740c-120">In this case, the offset from the start of the range to the start of the object is as follows:</span></span>  
+ <span data-ttu-id="e1bc0-120">Bu durumda, aralığın başlangıcından nesnenin başlangıcına kadar olan fark aşağıdaki gibidir:</span><span class="sxs-lookup"><span data-stu-id="e1bc0-120">In this case, the offset from the start of the range to the start of the object is as follows:</span></span>  
   
  `oldObjectID` - `oldObjectRangeStart[i]`  
   
- <span data-ttu-id="9740c-121">İçin herhangi bir değerini `i` aşağıdaki aralığında olan:</span><span class="sxs-lookup"><span data-stu-id="9740c-121">For any value of `i` that is in the following range:</span></span>  
+ <span data-ttu-id="e1bc0-121">Aşağıdaki aralıkta `i` olan herhangi bir değeri için:</span><span class="sxs-lookup"><span data-stu-id="e1bc0-121">For any value of `i` that is in the following range:</span></span>  
   
- <span data-ttu-id="9740c-122">0 <= `i` < `cMovedObjectIDRanges`</span><span class="sxs-lookup"><span data-stu-id="9740c-122">0 <= `i` < `cMovedObjectIDRanges`</span></span>  
+ <span data-ttu-id="e1bc0-122">0 <= `i` < `cMovedObjectIDRanges`</span><span class="sxs-lookup"><span data-stu-id="e1bc0-122">0 <= `i` < `cMovedObjectIDRanges`</span></span>  
   
- <span data-ttu-id="9740c-123">Yeni hesaplayabilirsiniz `ObjectID` gibi:</span><span class="sxs-lookup"><span data-stu-id="9740c-123">you can calculate the new `ObjectID` as follows:</span></span>  
+ <span data-ttu-id="e1bc0-123">Yeni ' ni `ObjectID` aşağıda gösterildiği gibi hesaplayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="e1bc0-123">you can calculate the new `ObjectID` as follows:</span></span>  
   
- <span data-ttu-id="9740c-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span><span class="sxs-lookup"><span data-stu-id="9740c-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span></span>  
+ <span data-ttu-id="e1bc0-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span><span class="sxs-lookup"><span data-stu-id="e1bc0-124">`newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)</span></span>  
   
- <span data-ttu-id="9740c-125">Hiçbiri `ObjectID` geçirilen değerler `MovedReferences` geri çağırma sırasındaki kendisi, çöp toplama nesneleri eski konumlardan yeni konumlara taşımak ortasında olabileceği için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="9740c-125">None of the `ObjectID` values passed by `MovedReferences` are valid during the callback itself, because the garbage collection might be in the middle of moving objects from old locations to new locations.</span></span> <span data-ttu-id="9740c-126">Bu nedenle, profil oluşturucular sırasında nesneleri incelemek çalışmamalısınız bir `MovedReferences` çağırın.</span><span class="sxs-lookup"><span data-stu-id="9740c-126">Therefore, profilers should not attempt to inspect objects during a `MovedReferences` call.</span></span> <span data-ttu-id="9740c-127">A [Icorprofilercallback2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) tüm nesnelerin yeni konumlarına taşınmıştır ve İnceleme gerçekleştirilebilir geri çağırma işlemini belirtir.</span><span class="sxs-lookup"><span data-stu-id="9740c-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.</span></span>  
+ <span data-ttu-id="e1bc0-125">Çöp toplama nesneleri eski konumlardan yeni `MovedReferences` konumlara taşıma işleminin ortasında olabileceğinden, tarafından geçirilen değerlerinhiçbirigeriçağırmasırasındageçerlideğildir.`ObjectID`</span><span class="sxs-lookup"><span data-stu-id="e1bc0-125">None of the `ObjectID` values passed by `MovedReferences` are valid during the callback itself, because the garbage collection might be in the middle of moving objects from old locations to new locations.</span></span> <span data-ttu-id="e1bc0-126">Bu nedenle, profil oluşturucular bir `MovedReferences` çağrı sırasında nesneleri incelemeyi denememelidir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-126">Therefore, profilers should not attempt to inspect objects during a `MovedReferences` call.</span></span> <span data-ttu-id="e1bc0-127">[ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) geri çağırması, tüm nesnelerin yeni konumlarına taşındığını ve incelemesinin gerçekleştirilebileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-127">A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) callback indicates that all objects have been moved to their new locations and inspection can be performed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9740c-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9740c-128">Requirements</span></span>  
- <span data-ttu-id="9740c-129">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9740c-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1bc0-128">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e1bc0-128">Requirements</span></span>  
+ <span data-ttu-id="e1bc0-129">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1bc0-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9740c-130">**Üst bilgi:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="9740c-130">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e1bc0-130">**Üst bilgi** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="e1bc0-130">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="9740c-131">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9740c-131">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e1bc0-131">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="e1bc0-131">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9740c-132">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9740c-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e1bc0-132">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1bc0-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9740c-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9740c-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1bc0-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e1bc0-133">See also</span></span>
 
-- [<span data-ttu-id="9740c-134">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="9740c-134">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="9740c-135">MovedReferences2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="9740c-135">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)
-- [<span data-ttu-id="9740c-136">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="9740c-136">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="9740c-137">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="9740c-137">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="e1bc0-134">ICorProfilerCallback Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e1bc0-134">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="e1bc0-135">MovedReferences2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e1bc0-135">MovedReferences2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)
+- [<span data-ttu-id="e1bc0-136">Profil Oluşturma Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="e1bc0-136">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="e1bc0-137">Profil Oluşturma</span><span class="sxs-lookup"><span data-stu-id="e1bc0-137">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

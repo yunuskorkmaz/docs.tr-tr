@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781297"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952897"
 ---
-# <a name="functionenter-function"></a><span data-ttu-id="3f2a3-102">FunctionEnter İşlevi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-102">FunctionEnter Function</span></span>
-<span data-ttu-id="3f2a3-103">Profil Oluşturucu, denetim bir işleve geçirilen olduğunu bildirir.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-103">Notifies the profiler that control is being passed to a function.</span></span>  
+# <a name="functionenter-function"></a><span data-ttu-id="0bf94-102">FunctionEnter İşlevi</span><span class="sxs-lookup"><span data-stu-id="0bf94-102">FunctionEnter Function</span></span>
+<span data-ttu-id="0bf94-103">Profil oluşturucuya denetimin bir işleve geçtiğini bildirir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-103">Notifies the profiler that control is being passed to a function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3f2a3-104">`FunctionEnter` İşlevi, .NET Framework 2.0 sürümünde kullanım dışı ve kullanımı bir performans cezasına sebep olabilir.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="3f2a3-105">Kullanım [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) işlevini.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
+> <span data-ttu-id="0bf94-104">`FunctionEnter` İşlev 2,0 .NET Framework sürümünde kullanımdan kaldırılmıştır ve kullanımı bir performans cezası olur.</span><span class="sxs-lookup"><span data-stu-id="0bf94-104">The `FunctionEnter` function is deprecated in the .NET Framework version 2.0, and its use will incur a performance penalty.</span></span> <span data-ttu-id="0bf94-105">Bunun yerine [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) işlevini kullanın.</span><span class="sxs-lookup"><span data-stu-id="0bf94-105">Use the [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f2a3-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0bf94-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0bf94-106">Syntax</span></span>  
   
 ```cpp  
 void __stdcall FunctionEnter (  
@@ -37,36 +37,36 @@ void __stdcall FunctionEnter (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3f2a3-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3f2a3-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0bf94-107">Parametreler</span><span class="sxs-lookup"><span data-stu-id="0bf94-107">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="3f2a3-108">[in] Denetimin geçtiğini işlevi tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-108">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="0bf94-108">'ndaki Denetimin geçirildiği işlevin tanımlayıcısı.</span><span class="sxs-lookup"><span data-stu-id="0bf94-108">[in] The identifier of the function to which control is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3f2a3-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="3f2a3-109">Remarks</span></span>  
- <span data-ttu-id="3f2a3-110">`FunctionEnter` Bir geri çağırma işlevidir; uygulamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="3f2a3-111">Uygulama kullanmalısınız `__declspec`(`naked`) depolama sınıfı özniteliği.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0bf94-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0bf94-109">Remarks</span></span>  
+ <span data-ttu-id="0bf94-110">`FunctionEnter` İşlev bir geri çağırmasıdır; uygulamanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-110">The `FunctionEnter` function is a callback; you must implement it.</span></span> <span data-ttu-id="0bf94-111">Uygulamanın `__declspec`(`naked`) depolama sınıfı özniteliğini kullanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-111">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="3f2a3-112">Yürütme altyapısı, bu işlevi çağırmadan önce tüm kayıtları kaydetmez.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="0bf94-112">Yürütme altyapısı, bu işlevi çağırmadan önce hiçbir kaydı kaydetmez.</span><span class="sxs-lookup"><span data-stu-id="0bf94-112">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="3f2a3-113">Kayan nokta birimi (FPU) de dahil olmak üzere, kullandığınız tüm kayıtları girişte kaydetmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="0bf94-113">Girişte, kayan nokta birimi (FPU) dahil olmak üzere, kullandığınız tüm Yazmaçları kaydetmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="0bf94-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="3f2a3-114">Çıkışta, yığın, arayan tarafından gönderildi tüm parametreleri kapalı pencerelerinin tarafından geri yüklemelisiniz.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="0bf94-114">Çıkışta, çağıran tarafından gönderilen tüm parametreleri kaldırarak yığını geri yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="3f2a3-115">Uygulamasını `FunctionEnter` çöp toplamanın gecikeceğini çünkü engellemelisiniz değil.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="3f2a3-116">Uygulama, yığını bir çöp toplama kullanımı kolay durumda olmayabilir çünkü bir çöp toplama çalışmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="3f2a3-117">Bir çöp toplama girişiminde bulunulursa, çalışma zamanı kadar engeller `FunctionEnter` döndürür.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
+ <span data-ttu-id="0bf94-115">, Atık toplamayı `FunctionEnter` ertelendirip, uygulamanın engellenmemelidir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-115">The implementation of `FunctionEnter` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="0bf94-116">Yığın atık toplama kolay bir durumda olmadığından uygulama çöp toplamayı denememelidir.</span><span class="sxs-lookup"><span data-stu-id="0bf94-116">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="0bf94-117">Çöp toplama denendiğinde, çalışma zamanı dönüşene kadar `FunctionEnter` engeller.</span><span class="sxs-lookup"><span data-stu-id="0bf94-117">If a garbage collection is attempted, the runtime will block until `FunctionEnter` returns.</span></span>  
   
- <span data-ttu-id="3f2a3-118">Ayrıca, `FunctionEnter` işlevi değil çağırmalıdır yönetilen koda veya herhangi bir şekilde neden yönetilen bellek ayırma.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="0bf94-118">Ayrıca, `FunctionEnter` işlev yönetilen koda çağrı içermemelidir veya herhangi bir şekilde yönetilen bellek ayırmaya neden olur.</span><span class="sxs-lookup"><span data-stu-id="0bf94-118">Also, the `FunctionEnter` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3f2a3-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3f2a3-119">Requirements</span></span>  
- <span data-ttu-id="3f2a3-120">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f2a3-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0bf94-119">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0bf94-119">Requirements</span></span>  
+ <span data-ttu-id="0bf94-120">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0bf94-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3f2a3-121">**Üst bilgi:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="3f2a3-121">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="0bf94-121">**Üst bilgi** CorProf. IDL</span><span class="sxs-lookup"><span data-stu-id="0bf94-121">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="3f2a3-122">**Kitaplığı:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3f2a3-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0bf94-122">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="0bf94-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3f2a3-123">**.NET framework sürümleri:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="3f2a3-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="0bf94-123">**.NET Framework sürümleri:** 1,1, 1,0</span><span class="sxs-lookup"><span data-stu-id="0bf94-123">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3f2a3-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3f2a3-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0bf94-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0bf94-124">See also</span></span>
 
-- [<span data-ttu-id="3f2a3-125">FunctionEnter2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="3f2a3-126">FunctionLeave2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="3f2a3-127">FunctionTailcall2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="3f2a3-128">SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="3f2a3-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="3f2a3-129">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="3f2a3-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="0bf94-125">FunctionEnter2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="0bf94-125">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="0bf94-126">FunctionLeave2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="0bf94-126">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="0bf94-127">FunctionTailcall2 İşlevi</span><span class="sxs-lookup"><span data-stu-id="0bf94-127">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="0bf94-128">SetEnterLeaveFunctionHooks2 Yöntemi</span><span class="sxs-lookup"><span data-stu-id="0bf94-128">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="0bf94-129">Profil Oluşturma Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="0bf94-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

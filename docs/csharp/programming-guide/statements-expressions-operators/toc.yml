@@ -7,8 +7,6 @@
       href: expressions.md
     - name: İfade gövdeli üyeler
       href: expression-bodied-members.md
-    - name: İşleçler
-      href: operators.md
     - name: Anonim işlevler
       items:
         - name: Genel Bakış
