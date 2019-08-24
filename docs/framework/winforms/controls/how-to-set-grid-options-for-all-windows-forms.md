@@ -8,34 +8,28 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: acc329c8e61b4638b2f373860f5f13b8a98dece9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 681ae11052216c610d2f3ac7cf8846153d6a341c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211623"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987019"
 ---
-# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama
+# <a name="how-to-set-grid-options-for-all-windows-forms"></a>Nasıl yapılır: Tüm Windows Forms için kılavuz seçeneklerini ayarla
 
-Visual Studio geliştirme ortamında çalışmaya kullanılan hale tercihleri formları ve projeleri ile iş için Windows Form Tasarımcısı'nda ayarlayabilirsiniz.
+Visual Studio geliştirme ortamında çalışırken kullandığınız gibi, Windows Form Tasarımcısı birlikte çalıştığınız tüm form ve projelere yönelik tercihleri ayarlayabilirsiniz.
 
-## <a name="set-global-windows-forms-options"></a>Genel Windows Formları seçeneklerini ayarlama
+## <a name="set-global-windows-forms-options"></a>Genel Windows Forms seçeneklerini ayarla
 
-1. Visual Studio'da gelen **Araçları** menüsünde **seçenekleri**.
+1. Visual Studio 'da, **Araçlar** menüsünden **Seçenekler**' i seçin.
 
-2. Sol bölmesinde **seçenekleri** iletişim kutusu, tıklayın **Windows Form Tasarımcısı**.
+2. **Seçenekler** iletişim kutusunun sol bölmesinde **Windows Form Tasarımcısı**' ye tıklayın.
 
-   Sağ bölmede altında **düzen ayarlarını** başlık, oluşturduğunuz tüm yeni formları için kılavuz ayarları varsayılan ayarlayabilirsiniz. Bu ayarlar, kılavuz boyutu, mi denetimleri için Yaslama ve üzerinde varsayılan olarak olup içerir. Ayrıca, aşağıdaki seçeneklerden birini seçebilirsiniz **LayoutMode** ve **dayama çizgileri** Düzen modu. Dayama çizgileri hakkında daha fazla bilgi için bkz. [izlenecek yol: Forms dayama çizgileri kullanarak Windows denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).
+   Sağ bölmede, **Düzen ayarları** başlığı altında, oluşturduğunuz tüm yeni formlar için varsayılan kılavuz ayarlarını ayarlayabilirsiniz. Bu ayarlar, denetimlerin buna ek olarak eklenip eklenmeyeceğini ve varsayılan olarak açık olup olmadığını, kılavuz boyutunu içerir. Ayrıca, **SnapToGrid** ve **snaplines** düzen modları arasından seçim yapabilirsiniz. Anlık görüntü çizgileri hakkında daha fazla bilgi için [bkz. İzlenecek yol: Windows Forms denetimleri, snaplines](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)kullanarak düzenleme.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Dayama çizgileri kullanarak Windows Forms'da denetimleri düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Genel, Windows Form Tasarımcısı, Seçenekler iletişim kutusu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Windows Forms Denetimleri](index.md)
-- [Nasıl yapılır: Windows Forms'a denetimler ekleme](how-to-add-controls-to-windows-forms.md)
-- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)
-- [Nasıl yapılır: Windows formlarında sekme sırasını ayarlama](how-to-set-the-tab-order-on-windows-forms.md)
-- [Nasıl yapılır: Tarafından görüntülenen metni ayarlama bir Windows Forms denetimi](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [Seçenekler: Windows Form Tasarımcısı](/visualstudio/ide/reference/options-windows-forms-designer)

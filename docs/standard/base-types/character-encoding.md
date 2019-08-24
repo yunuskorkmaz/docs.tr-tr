@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 8beaddf6439b8c3bc8f7971786e36fdb576e9b6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 82b936b753dff4230be6162583a50524e8c5254b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934880"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987177"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde Karakter Kodlaması
 Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden değerle eşleştiren bir sistemdir. Örneğin; Morse kodu, Roma alfabesindeki her karakteri telgraf hattı üzerinden iletilmeye uygun olan bir nokta ve çizgi deseniyle eşleştiren bir karakter kodlamasıdır. Bilgisayarlar için bir karakter kodlaması, desteklenen bir karakter kümesindeki her karakteri, o karakteri temsil eden sayısal bir değerle eşleştirir. Bir karakter kodlaması iki farklı bileşene sahiptir:  
@@ -31,7 +31,7 @@ Karakterler, birçok farklı şekilde temsil edilebilen soyut varlıklardır. Bi
  Karakter kodlama, bir kodlayıcının ve kod çözücünün çalışma kurallarını açıklar. Örneğin <xref:System.Text.UTF8Encoding> sınıfı, tek bir Unicode karakterini temsil etmek için bir ile dört arasında bayt kullanan 8 bitlik Unicode Dönüştürme Biçimi (UTF-8) için kodlama ve kod çözme kurallarını açıklar. Kodlama ve kod çözme aynı zamanda doğrulamayı da içerebilir. Örneğin <xref:System.Text.UnicodeEncoding> sınıfı, geçerli yedek çiftleri olduklarından emin olmak için tüm yedekleri denetler. (Bir yedek çifti, ardından U+DC00 ile U+DFFF aralığında bir kod noktasına sahip olan bir karakter gelen U+D800 ile U+DBFF aralığında kod noktasına sahip olan bir karakterden oluşur.)  Bir geri dönüş stratejisi, bir kodlayıcının geçersiz karakterleri veya bir kod çözücünün geçersiz baytları nasıl işleyeceğini belirler.  
   
 > [!WARNING]
->  .NET Encoding sınıfları, karakter verilerini depolamak ve dönüştürmek için bir yol sağlar. İkili verileri dize biçiminde depolamak için kullanılmamaları gerekir. Kullanılan kodlamaya bağlı olarak, kodlama sınıflarıyla ikili veriyi dize biçimine dönüştürmek beklenmedik davranışa sebep olabilir ve doğru olmayan ya da bozuk veriler üretebilir. İkili verileri bir dize biçimine dönüştürmek için, <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> yöntemini kullanın.  
+> .NET Encoding sınıfları, karakter verilerini depolamak ve dönüştürmek için bir yol sağlar. İkili verileri dize biçiminde depolamak için kullanılmamaları gerekir. Kullanılan kodlamaya bağlı olarak, kodlama sınıflarıyla ikili veriyi dize biçimine dönüştürmek beklenmedik davranışa sebep olabilir ve doğru olmayan ya da bozuk veriler üretebilir. İkili verileri bir dize biçimine dönüştürmek için, <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> yöntemini kullanın.  
   
  .Net, karakterleri ve dizeleri temsil etmek için UTF-16 <xref:System.Text.UnicodeEncoding> kodlamasını (sınıfıyla temsil edilir) kullanır. Ortak dil çalışma zamanını hedef alan uygulamalar, ortak dil çalışma zamanı tarafından desteklenen Unicode karakter temsillerini başka kodlama düzenleriyle eşlemek için kodlayıcıları kullanır. Unicode olmayan kodlamalar daki karakterleri Unicode karakterleriyle eşlemek için kod çözücüler kullanırlar.  
   

@@ -2,15 +2,15 @@
 title: WCF Web HTTP Programlama Nesnesi Modeli
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 43ec16927c703ca373eaa4299093503b2fab2266
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487686"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988569"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP Programlama Nesnesi Modeli
-WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows Communication Foundation (WCF) Web Hizmetleri temel HTTP istekleri aracılığıyla kullanıma sunmak sağlar. WCF WEB HTTP programlama modeli, var olan WCF genişletilebilirlik model temelinde oluşturulmuştur. Aşağıdaki sınıfları tanımlar:  
+WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerektirmeden temel HTTP istekleri aracılığıyla Windows Communication Foundation (WCF) Web hizmetlerini kullanıma almasına olanak tanır. WCF WEB HTTP programlama modeli, mevcut WCF genişletilebilirlik modelinin üzerine kurulmuştur. Aşağıdaki sınıfları tanımlar:  
   
  **Programlama modeli:**  
   
@@ -39,65 +39,65 @@ WCF WEB HTTP programlama modeli, geliştiricilerin SOAP gerek kalmadan Windows C
 - <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, Bir hizmet işlemi için ASP.NET gösterir uygulandığında çıktı önbellek profili yapılandırma dosyasındaki tarafından önbellek yanıtları ASP .NET çıktı önbelleğinde işlemden kullanılmalıdır. Bu özellik yalnızca bir parametre, önbellek ayarlarını belirtir yapılandırma dosyasında önbellek profili adı alır.  
+ <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, Bir hizmet işlemine uygulandığında, ASP .NET Çıkış önbelleğindeki işlemden yanıtları önbelleğe almak için kullanılması gereken yapılandırma dosyasında ASP.net çıktı önbelleği profilini gösterir. Bu özellik, yapılandırma dosyasında önbellek ayarlarını belirten önbellek profili adı yalnızca bir parametre alır.  
   
-## <a name="webgetattribute"></a>WebGetAttribute  
- <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliği, bir hizmet işlemi bir HTTP GET isteklerine yanıt olarak işaretlemek için kullanılır. Pasif işlemi davranıştır ( <xref:System.ServiceModel.Description.IOperationBehavior> yöntemleri bir şey yapmak), meta veri işlemi açıklamaya ekler. Uygulama <xref:System.ServiceModel.Web.WebGetAttribute> bir davranış, bu meta veri işlemi açıklamasında arar sürece hiçbir etkisi (özellikle <xref:System.ServiceModel.Description.WebHttpBehavior>) bu hizmetin davranışı koleksiyona eklenir. <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliği isteğe bağlı parametreler aşağıdaki tabloda gösterilen alır.  
-  
-|Parametre|Açıklama|  
-|---------------|-----------------|  
-|`BodyStyle`|İsteklerin ve yanıtların gönderilen ve alınan öznitelik uygulandığı hizmet işlemi sarmalamak kontrol eder.|  
-|`RequestFormat`|İstek iletilerinin nasıl biçimlendirileceğini denetler.|  
-|`ResponseFormat`|Yanıt iletilerini nasıl biçimlendirileceğini denetler.|  
-|`UriTemplate`|Öznitelik uygulandığı hizmet işlemi için hangi HTTP isteklerinin eşlenir denetimleri URI şablonunu belirtir.|  
-  
-## <a name="webhttpbinding"></a>webHttpBinding  
- <xref:System.ServiceModel.WebHttpBinding> Sınıfı, XML, JSON ve ham ikili verileri kullanma için destek içerir <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>. Oluşan bir <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> ve <xref:System.ServiceModel.WebHttpSecurity> nesne. <xref:System.ServiceModel.WebHttpBinding> İle birlikte kullanılmak üzere tasarlanmış <xref:System.ServiceModel.Description.WebHttpBehavior>.  
-  
-## <a name="webinvokeattribute"></a>WebInvokeAttribute  
- <xref:System.ServiceModel.Web.WebInvokeAttribute> Özniteliği benzer <xref:System.ServiceModel.Web.WebGetAttribute>, ancak bir hizmet işlemi için HTTP yanıt veren bir GET dışındaki istekleri olarak işaretlemek için kullanılır. Pasif işlemi davranıştır ( <xref:System.ServiceModel.Description.IOperationBehavior> yöntemleri bir şey yapmak), meta veri işlemi açıklamaya ekler. Uygulama <xref:System.ServiceModel.Web.WebInvokeAttribute> bir davranış, bu meta veri işlemi açıklamasında arar sürece hiçbir etkisi (özellikle <xref:System.ServiceModel.Description.WebHttpBehavior>) bu hizmetin davranışı koleksiyona eklenir.  
-  
- <xref:System.ServiceModel.Web.WebInvokeAttribute> Özniteliği isteğe bağlı parametreler aşağıdaki tabloda gösterilen alır.  
+## <a name="webgetattribute"></a>'A  
+ Özniteliği <xref:System.ServiceModel.Web.WebGetAttribute> , http get isteklerine yanıt veren bir hizmet işlemini işaretlemek için kullanılır. İşlem açıklamasına meta veri ekleyen pasif bir işlem <xref:System.ServiceModel.Description.IOperationBehavior> davranışıdır (hiçbir şey yoktur). Öğesinin uygulanması <xref:System.ServiceModel.Web.WebGetAttribute> , işlem açıklamasında bu meta verileri (özellikle <xref:System.ServiceModel.Description.WebHttpBehavior>,) hizmetin davranış koleksiyonuna eklendiği takdirde hiçbir etkiye sahip değildir. <xref:System.ServiceModel.Web.WebGetAttribute> Öznitelik, aşağıdaki tabloda gösterilen isteğe bağlı parametreleri alır.  
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`BodyStyle`|İsteklerin ve yanıtların gönderilen ve alınan öznitelik uygulandığı hizmet işlemi sarmalamak kontrol eder.|  
-|`Method`|Hizmet işlemi eşlendiği HTTP yöntemi belirtir.|  
-|`RequestFormat`|İstek iletilerinin nasıl biçimlendirileceğini denetler.|  
-|`ResponseFormat`|Yanıt iletilerini nasıl biçimlendirileceğini denetler.|  
-|`UriTemplate`|Öznitelik uygulandığı hizmet işlemi için hangi GET istekleri eşlenir denetimleri URI şablonunu belirtir.|  
+|`BodyStyle`|Hizmet işleminden gönderilen ve alınan isteklerin ve yanıtların bir şekilde sarılıp döndürülmeyeceğini denetler ve özniteliği öğesine uygulanır.|  
+|`RequestFormat`|İstek iletilerinin nasıl biçimlendirildiğini denetler.|  
+|`ResponseFormat`|Yanıt iletilerinin nasıl biçimlendirildiğini denetler.|  
+|`UriTemplate`|Öznitelik uygulandığı HTTP isteklerinin hangi HTTP isteklerinin hizmet işlemine eşlendiğini denetleyen URI şablonunu belirtir.|  
+  
+## <a name="webhttpbinding"></a>WebHttpBinding  
+ <xref:System.ServiceModel.WebHttpBinding> Sınıfı ,<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>kullanarak XML, JSON ve ham ikili veriler için destek içerir. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement> ,<xref:System.ServiceModel.Channels.HttpTransportBindingElement> Ve bir<xref:System.ServiceModel.WebHttpSecurity> nesnesinden oluşur. , İle birlikte kullanılmak üzere tasarlanmıştır. <xref:System.ServiceModel.Description.WebHttpBehavior> <xref:System.ServiceModel.WebHttpBinding>  
+  
+## <a name="webinvokeattribute"></a>Webvokeattribute  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> Özniteliği ilebenzerdir,ancakbirhizmetişleminiGetdışındakihttpisteklerineyanıtverenbirhizmetişlemi<xref:System.ServiceModel.Web.WebGetAttribute>olarak işaretlemek için kullanılır. İşlem açıklamasına meta veri ekleyen pasif bir işlem <xref:System.ServiceModel.Description.IOperationBehavior> davranışıdır (hiçbir şey yoktur). Öğesinin uygulanması <xref:System.ServiceModel.Web.WebInvokeAttribute> , işlem açıklamasında bu meta verileri (özellikle <xref:System.ServiceModel.Description.WebHttpBehavior>,) hizmetin davranış koleksiyonuna eklendiği takdirde hiçbir etkiye sahip değildir.  
+  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> Öznitelik, aşağıdaki tabloda gösterilen isteğe bağlı parametreleri alır.  
+  
+|Parametre|Açıklama|  
+|---------------|-----------------|  
+|`BodyStyle`|Hizmet işleminden gönderilen ve alınan isteklerin ve yanıtların bir şekilde sarılıp döndürülmeyeceğini denetler ve özniteliği öğesine uygulanır.|  
+|`Method`|Hizmet işleminin eşlendiği HTTP yöntemini belirtir.|  
+|`RequestFormat`|İstek iletilerinin nasıl biçimlendirildiğini denetler.|  
+|`ResponseFormat`|Yanıt iletilerinin nasıl biçimlendirildiğini denetler.|  
+|`UriTemplate`|Hangi GET isteklerinin hangi GET isteklerini eşleştirdiğini denetleyen URI şablonunu belirtir özniteliği öğesine uygulanır.|  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate> Sınıfı bir dizi yapısal olarak benzer bir URI'leri tanımlamanıza izin verir. Şablonları bir yol ve sorgu olmak üzere iki bölümden oluşur. Bir yol kesimleri eğik çizgi (/) ayrılmış bir dizi oluşur. Her bir kesim değişmez değer, bir değişken değeri (yazılan kaşlı ayraçlar içinde [{}], kısıtlı içeriği tam olarak bir segmentin eşleşecek şekilde) veya bir joker karakter olabilir (yıldız işareti olarak yazılmış [\*], "yolun rest" ile eşleşir), en görünmesi gerekir Yolun sonuna. Sorgu ifadesi tamamen atlanabilir. Varsa, ad/değer çiftleri sırasız bir dizi belirtir. Sorgu ifadesinin öğeleri ya da değişmez değer çifti olabilir (? x = 2) veya değişken çiftleri (? = x {*değer*}). Eşlenmemiş değerlere izin verilmez. <xref:System.UriTemplate> WCF WEB HTTP programlama modeli tarafından belirli URI'ler ya da URI'ları grupları hizmet işlemleri eşleştirmek için dahili olarak kullanılır.  
+ Sınıfı <xref:System.UriTemplate> , yapısal olarak benzer bir URI kümesi tanımlamanızı sağlar. Şablonlar, bir yol ve bir sorgu olmak üzere iki bölümden oluşur. Bir yol, eğik çizgiyle (/) ayrılmış bir dizi kesimden oluşur. Her segment bir sabit değere sahip olabilir, bir değişken değeri (küme ayraçları [{}] içinde yazılmış, tam olarak bir segmentin içeriğiyle sınırlı) veya bir joker karakter ("yolun geri kalanı" ile eşleşen yıldız\*[] olarak yazılmış), şurada görünmelidir: Yolun sonu. Sorgu ifadesi tamamen atlanabilir. Varsa, sıralanmamış bir ad/değer çiftleri serisi belirtir. Sorgu ifadesinin öğeleri, sabit değer çiftleri (? x = 2) veya değişken çiftleri (? x = {*Value*}) olabilir. Eşlenmemiş değerlere izin verilmez. <xref:System.UriTemplate>, belirli URI 'leri veya URI gruplarını hizmet işlemlerine eşlemek için WCF WEB HTTP programlama modeli tarafından dahili olarak kullanılır.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
- <xref:System.UriTemplateTable> Sınıfı temsil eder, ilişkili bir dizi <xref:System.UriTemplate> bağlı olan nesneleri geliştirici bir nesne seçme. Eşleşen şablonlarıyla ilişkili verileri almanıza ve şablonlar kümesi, karşı aday Tekdüzen Kaynak Tanımlayıcıları (URI'lar) eşleşen olanak tanır. <xref:System.UriTemplateTable> WCF WEB HTTP programlama modeli tarafından belirli URI'ler ya da URI'ları grupları hizmet işlemleri eşleştirmek için dahili olarak kullanılır.  
+ Sınıfı, geliştiricinin seçme nesnesine göre ilişkili <xref:System.UriTemplate> bir nesne kümesini temsil eder. <xref:System.UriTemplateTable> Bu, aday Tekdüzen Kaynak tanımlayıcılarını (URI 'Ler) küme içindeki şablonlara karşı eşleştirmenizi ve eşleşen şablonlarla ilişkili verileri almanızı sağlar. <xref:System.UriTemplateTable>, belirli URI 'leri veya URI gruplarını hizmet işlemlerine eşlemek için WCF WEB HTTP programlama modeli tarafından dahili olarak kullanılır.  
   
-## <a name="webservicehost"></a>WebServiceHost  
- <xref:System.ServiceModel.Web.WebServiceHost> genişletir <xref:System.ServiceModel.ServiceHost> olmayan SOAP stili Web hizmeti barındırma daha kolay hale getirmek için. Varsa <xref:System.ServiceModel.Web.WebServiceHost> uç nokta bulur hizmet açıklamasında otomatik olarak bir varsayılan uç noktası hizmetin taban adresi oluşturur. Varsayılan bir HTTP uç oluştururken <xref:System.ServiceModel.Web.WebServiceHost> Ayrıca HTTP yardım sayfasına ve Web Hizmetleri Açıklama Dili (WSDL) alma işlevselliğini devre dışı bırakır meta veri uç noktasının varsayılan HTTP uç noktası ile aksatmaz şekilde. <xref:System.ServiceModel.Web.WebServiceHost> Ayrıca tüm uç noktalar, kullanmasını sağlar <xref:System.ServiceModel.WebHttpBinding> gerekli olan <xref:System.ServiceModel.Description.WebHttpBehavior> bağlı. Son olarak, <xref:System.ServiceModel.Web.WebServiceHost> güvenli sanal bir dizinde kullanıldığında ilişkili Internet Information Services (IIS) güvenlik ayarları ile çalışmak için uç noktanın bağlama otomatik olarak yapılandırır.  
+## <a name="webservicehost"></a>Web ServiceHost  
+ <xref:System.ServiceModel.Web.WebServiceHost>SOAP olmayan Web stili bir hizmetin barındırlanmasını kolaylaştırmak içinöğesinigenişletir.<xref:System.ServiceModel.ServiceHost> Hizmet açıklamasında hiçbir uç nokta bulduğunda,otomatikolarakhizmetintemeladresindebirvarsayılanuçnoktaoluşturur.<xref:System.ServiceModel.Web.WebServiceHost> Varsayılan HTTP uç noktası oluşturulurken Ayrıca, http <xref:System.ServiceModel.Web.WebServiceHost> yardım sayfasını ve Web Hizmetleri Açıklama Dili (wsdl) Al işlevini devre dışı bırakır. böylece, meta veri uç noktasının varsayılan HTTP uç noktasına müdahale etmez. <xref:System.ServiceModel.Web.WebServiceHost>Ayrıca, kullanan <xref:System.ServiceModel.WebHttpBinding> tüm uç noktaların gerekli <xref:System.ServiceModel.Description.WebHttpBehavior> eklenmiş olmasını sağlar. Son olarak <xref:System.ServiceModel.Web.WebServiceHost> , güvenli bir sanal dizinde kullanıldığında bitiş noktasının bağlamasını ilişkili Internet Information Services (IIS) güvenlik ayarlarıyla çalışacak şekilde otomatik olarak yapılandırır.  
   
 ## <a name="webservicehostfactory"></a>WebServiceHostFactory  
- <xref:System.ServiceModel.Activation.WebServiceHostFactory> Sınıfı dinamik olarak oluşturmak için kullanılan bir <xref:System.ServiceModel.Web.WebServiceHost> ne zaman bir hizmeti barındırılan Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) altında. Burada barındırma uygulamasını başlatır şirket içinde barındırılan bir hizmet farklı <xref:System.ServiceModel.Web.WebServiceHost>, IIS altında barındırılan hizmetleri veya olan bu sınıf oluşturmak için kullanın <xref:System.ServiceModel.Web.WebServiceHost> hizmeti. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> Yöntemi hizmeti için gelen bir istek alındığında çağrılır.  
+ Sınıfı, bir hizmet Internet Information Services (IIS) <xref:System.ServiceModel.Web.WebServiceHost> veya Windows işlem etkinleştirme hizmeti (was) altında barındırıldığı zaman dinamik olarak oluşturmak için kullanılır. <xref:System.ServiceModel.Activation.WebServiceHostFactory> Barındırma uygulamasının <xref:System.ServiceModel.Web.WebServiceHost>tarafından oluşturulduğu şirket içinde barındırılan bir hizmetin aksine, IIS altında barındırılan hizmetler veya hizmeti <xref:System.ServiceModel.Web.WebServiceHost> oluşturmak için bu sınıfı kullanın. <xref:System.ServiceModel.Activation.WebServiceHostFactory.CreateServiceHost%28System.Type%2CSystem.Uri%5B%5D%29> Yöntemi, hizmet için gelen istek alındığında çağrılır.  
   
 ## <a name="webhttpbehavior"></a>WebHttpBehavior  
- <xref:System.ServiceModel.Description.WebHttpBehavior> Sınıfı işlemi seçiciler, gerekli biçimlendiricileri sağlar ve hizmet modeli katmanında Web stili hizmet desteği vb. gerekir. Bu uç nokta davranışı uygulanır (ile birlikte kullanılan <xref:System.ServiceModel.WebHttpBinding>) ve biçimlendiricileri ve işlem Seçici SOAP hem POX uç noktalarını kullanıma sunmak aynı hizmet uygulaması sağlayan her uç noktası için belirtilmesine izin verir.  
+ <xref:System.ServiceModel.Description.WebHttpBehavior> Sınıfı, hizmet modeli katmanında Web stili hizmet desteği için gereken, gerekli biçimleri, işlem seçicileri ve benzerlerini sağlar. Bu bir uç nokta davranışı olarak uygulanır (ile <xref:System.ServiceModel.WebHttpBinding>birlikte kullanılır) ve aynı hizmet uygulamasının hem SOAP hem de POX uç noktalarını kullanıma sunmasına olanak tanıyan her bir uç nokta için biçimlendirme ve işlem seçicilerin belirtilmesini sağlar.  
   
-### <a name="extending-webhttpbehavior"></a>WebHttpBehavior genişletme  
- <xref:System.ServiceModel.Description.WebHttpBehavior> bir dizi sanal yöntem kullanarak genişletilebilirdir: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, ve <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Geliştiriciler bir sınıftan türetilebilir <xref:System.ServiceModel.Description.WebHttpBehavior> ve varsayılan davranışını özelleştirmek için bu yöntemi geçersiz kılın.  
+### <a name="extending-webhttpbehavior"></a>WebHttpBehavior 'ı genişletme  
+ <xref:System.ServiceModel.Description.WebHttpBehavior>, bir dizi sanal yöntem kullanılarak Genişletilebilir: <xref:System.ServiceModel.Description.WebHttpBehavior.GetOperationSelector%28System.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestClientFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29> <xref:System.ServiceModel.Description.WebHttpBehavior.GetReplyDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>, ve <xref:System.ServiceModel.Description.WebHttpBehavior.GetRequestDispatchFormatter%28System.ServiceModel.Description.OperationDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%29>. Geliştiriciler, ' dan <xref:System.ServiceModel.Description.WebHttpBehavior> bir sınıf türetebilir ve varsayılan davranışı özelleştirmek için bu yöntemleri geçersiz kılabilir.  
   
- <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Genişletme ilişkin bir örnektir <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Tarayıcı tabanlı ASP.NET AJAX istemciden gelen HTTP isteklerini almak Windows Communication Foundation (WCF) uç noktaları sağlar. [Hizmet HTTP POST kullanan AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) bu genişletilebilirlik noktası kullanarak, bir örnek verilmiştir.  
+ , <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> Genişletme<xref:System.ServiceModel.Description.WebHttpBehavior>örneğidir. <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>Windows Communication Foundation (WCF) uç noktalarının tarayıcı tabanlı bir ASP.NET AJAX istemcisinden HTTP istekleri almasını sağlar. [Http post kullanan AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) , bu genişletilebilirlik noktasını kullanmanın bir örneğidir.  
   
 > [!WARNING]
->  Kullanırken <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, <xref:System.UriTemplate> içinde desteklenmeyen <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> öznitelikleri.  
+> Kullanırken <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>, <xref:System.UriTemplate> <xref:System.ServiceModel.Web.WebGetAttribute> veya öznitelikleriiçindedesteklenmez<xref:System.ServiceModel.Web.WebInvokeAttribute> .  
   
 ## <a name="webhttpdispatchoperationselector"></a>WebHttpDispatchOperationSelector  
- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> Sınıfının kullandığı <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> çağrıları hizmet işlemlerine gönderileceği sınıfları.  
+ Sınıfı <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector> , hizmet <xref:System.UriTemplate> işlemlerine <xref:System.UriTemplateTable> çağrı göndermek için ve sınıflarını kullanır.  
   
 ## <a name="compatibility"></a>Uyumluluk  
- WCF WEB HTTP programlama modeli SOAP tabanlı iletileri kullanmaz ve bu nedenle WS - desteklemez * protokoller. Bununla birlikte, aynı sözleşme iki farklı uç noktası tarafından kullanıma sunma: SOAP ve diğer değil bir kullanarak SOAP kullanarak. Bkz: [nasıl yapılır: Bir sözleşmeyi SOAP ve Web istemcilerine sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) örneği.  
+ WCF WEB HTTP programlama modeli SOAP tabanlı iletiler kullanmaz ve bu nedenle WS-* protokollerini desteklemez. Ancak, aynı sözleşmeyi iki farklı uç noktayla kullanıma sunabilirsiniz: biri SOAP ve diğer SOAP kullanmayan diğeri. Bkz [. nasıl yapılır: Bir örnek için bir sözleşmeyi SOAP ve Web](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) istemcilerine sunun.  
   
 ## <a name="security"></a>Güvenlik  
- WCF WEB HTTP programlama modeli WS - desteklemediği için * protokolleri WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmeti güvenli hale getirmek için tek yolu olduğundan SSL kullanarak hizmetinize kullanıma sunmak için. IIS 7.0 SSL ayarlama hakkında daha fazla bilgi için bkz: [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ WCF WEB HTTP programlama modeli WS-* protokollerini desteklemediğinden, WCF WEB HTTP programlama modeli üzerinde oluşturulmuş bir Web hizmetini güvenli hale getirmenin tek yolu, hizmetinizi SSL kullanarak kullanıma sunmasıdır. IIS 7,0 ile SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS 'de SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

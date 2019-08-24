@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953263"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988303"
 ---
 # <a name="handling-datatable-events"></a>DataTable Olaylarını İşleme
 Nesnesi <xref:System.Data.DataTable> , bir uygulama tarafından işlenebilmesi için bir dizi olay sağlar. Aşağıdaki tabloda olayları açıklanmaktadır `DataTable` .  
@@ -33,7 +33,7 @@ Nesnesi <xref:System.Data.DataTable> , bir uygulama tarafından işlenebilmesi i
 > Satırları ekleyen veya silen çoğu işlem `ColumnChanged` ve `ColumnChanging` olaylarını oluşturmaz. `DiffGram` `ColumnChanged` `ColumnChanging` `XmlReadMode` `ReadXml` Ancak, veya, okunan xml belgesi bir`Auto` olduğunda veya olarak ayarlanmadığı takdirde yöntemi, ve olayları yükseltir. `DiffGram`  
   
 > [!WARNING]
->  Veriler, `DataSet` `RowChanged` olayın oluşturulduğu bir içinde değiştirilirse veri bozulması meydana gelebilir. Böyle bir veri bozulması oluşursa, hiçbir özel durum oluşturulmaz.  
+> Veriler, `DataSet` `RowChanged` olayın oluşturulduğu bir içinde değiştirilirse veri bozulması meydana gelebilir. Böyle bir veri bozulması oluşursa, hiçbir özel durum oluşturulmaz.  
   
 ## <a name="additional-related-events"></a>Diğer Ilgili olaylar  
  <xref:System.Data.DataTable.Constraints%2A> Özelliği bir<xref:System.Data.ConstraintCollection> örneği barındırır. <xref:System.Data.ConstraintCollection> Sınıfı bir<xref:System.Data.ConstraintCollection.CollectionChanged> olay gösterir. Bu olay, `ConstraintCollection`bir kısıtlama eklendiğinde, değiştirildiğinde veya öğesinden kaldırıldığında ateşlenir.  
@@ -71,7 +71,7 @@ Nesnesi <xref:System.Data.DataTable> , bir uygulama tarafından işlenebilmesi i
 > İfade sütunlarındaki değişiklikler hiçbir şekilde olay `DataTable` oluşturmaz. İfade sütunlarındaki değişiklikler yalnızca ve `DataView` `DataRowView` olayları yükseltir. İfade sütunlarının birden fazla sütuna bağımlılığı olabilir ve tek `DataRow` bir işlem sırasında birden çok kez değerlendirilebilirler. Her ifade değerlendirmesi olayları başlatır ve tek `DataRow` bir işlem, ifade sütunları etkileniyorsa, büyük olasılıkla aynı ifade sütunu için birden çok olay da dahil olmak üzere birden çok `ListChanged` ve `PropertyChanged` olay oluşturabilir.  
   
 > [!WARNING]
->  Olay`RowChanged` işleyicisi içinde oluşturma <xref:System.NullReferenceException> . Bir a `RowChanged` olayı `DataTable` <xref:System.NullReferenceException> içindeoluşturulursa,budurumda`DataTable`, bozuk olur.  
+> Olay`RowChanged` işleyicisi içinde oluşturma <xref:System.NullReferenceException> . Bir a `RowChanged` olayı `DataTable` <xref:System.NullReferenceException> içindeoluşturulursa,budurumda`DataTable`, bozuk olur.  
   
 ### <a name="example"></a>Örnek  
  `RowChanged`Aşağıdaki örnek ,`ColumnChanged` `RowChanging` ,,`TableCleared`,,,,, ve`TableClearing` olayları için olay işleyicilerinin nasıl oluşturulacağını göstermektedir. `RowDeleted` `RowDeleting` `ColumnChanging` `TableNewRow` Her olay işleyicisi, tetiklendiğinde konsol penceresinde çıktıyı görüntüler.  

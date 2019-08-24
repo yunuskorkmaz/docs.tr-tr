@@ -2,12 +2,12 @@
 title: Yönlendirme Tanıtımı
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933964"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988674"
 ---
 # <a name="routing-introduction"></a>Yönlendirme Tanıtımı
 Yönlendirme hizmeti ileti içeriğine göre iletileri yönlendirme yeteneğine sahip genel bir takılabilir SOAP aracı sağlar. Yönlendirme hizmeti ile hizmet toplama, hizmet sürümü oluşturma, öncelik yönlendirme ve çok noktaya yayın yönlendirme gibi senaryolar uygulamanıza olanak tanıyan karmaşık yönlendirme mantığı oluşturabilirsiniz. Yönlendirme hizmeti Ayrıca, birincil hedef uç noktasına gönderilirken bir hata oluşursa gönderilecek olan yedekleme uç noktaları listesini ayarlamanıza olanak tanıyan hata işleme sağlar.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  Yönlendirme hizmeti ile kimliğe bürünme, ASP.NET uyumluluk modundayken ASP.NET Kimliğe bürünme özelliğinin kullanımını veya kimliğe bürünmeye izin verecek şekilde yapılandırılmış Windows kimlik bilgilerinin kullanılmasını gerektirir. ASP.NET uyumluluk modu hakkında daha fazla bilgi için bkz. [WCF Hizmetleri ve ASP.net](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
->  WCF yönlendirme hizmeti temel kimlik doğrulamasıyla kimliğe bürünme özelliğini desteklemiyor.  
+> WCF yönlendirme hizmeti temel kimlik doğrulamasıyla kimliğe bürünme özelliğini desteklemiyor.  
   
  Yönlendirme hizmeti ile ASP.NET Kimliğe bürünme özelliğini kullanmak için hizmet barındırma ortamında ASP.NET uyumluluk modunu etkinleştirin. Yönlendirme hizmeti zaten ASP.NET uyumluluk moduna izin vermek üzere işaretlendi ve kimliğe bürünme otomatik olarak etkinleştirilir. Kimliğe bürünme, ASP.NET tümleştirmesi 'nin yönlendirme hizmeti ile desteklenen tek kullanımı.  
   

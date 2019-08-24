@@ -4,68 +4,68 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7545e1d7079664fd8706bdddac2ff3c8ebc27c7f
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052448"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988287"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu
 
-Bir çalışma zamanı yönergeleri (. rd.xml) belirtilen program öğelerini yansıma için kullanılabilir olup olmadığını belirten bir XML yapılandırma dosyasını bir dosyadır. Bir çalışma zamanı yönergeleri dosyasının bir örnek aşağıda verilmiştir:
+Çalışma zamanı yönergeleri (. RD. xml) dosyası, belirtilen program öğelerinin yansıma için kullanılabilir olup olmadığını belirten bir XML yapılandırma dosyasıdır. Çalışma zamanı yönergeleri dosyasına bir örnek aşağıda verilmiştir:
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
-<Application>
-  <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
-  <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
-  <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
+  <Application>
+    <Namespace Name="Contoso.Cloud.AppServices" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.ViewModels" Serialize="Required Public" />
+    <Namespace Name="ContosoClient.DataModel" Serialize="Required Public" />
+    <Namespace Name="Contoso.Reader.UtilityLib" Serialize="Required Public" />
 
-  <Namespace Name="System.Collections.ObjectModel" >
-    <TypeInstantiation Name="ObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
-    <TypeInstantiation Name="ReadOnlyObservableCollection"
-          Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
-  </Namespace>
-</Application>
+    <Namespace Name="System.Collections.ObjectModel" >
+      <TypeInstantiation Name="ObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductItem" Serialize="Public" />
+      <TypeInstantiation Name="ReadOnlyObservableCollection"
+            Arguments="ContosoClient.DataModel.ProductGroup" Serialize="Public" />
+    </Namespace>
+  </Application>
 </Directives>
 ```
 
-## <a name="the-structure-of-a-runtime-directives-file"></a>Bir çalışma zamanı yönergeleri dosyasının yapısı
+## <a name="the-structure-of-a-runtime-directives-file"></a>Çalışma zamanı yönergeleri dosyasının yapısı
 
-Çalışma zamanı yönergeleri kullanan dosya `http://schemas.microsoft.com/netfx/2013/01/metadata` ad alanı.
+Çalışma zamanı yönergeleri dosyası `http://schemas.microsoft.com/netfx/2013/01/metadata` ad alanını kullanır.
 
-Kök öğe [yönergeleri](../../../docs/framework/net-native/directives-element-net-native.md) öğesi. Sıfır veya daha fazla içerebilir [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) öğeleri ve sıfır veya bir [uygulama](../../../docs/framework/net-native/application-element-net-native.md) aşağıdaki yapı gösterildiği öğesi. Özniteliklerini [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesi, birçok farklı uygulama çalışma zamanı yansıma ilkesini tanımlayabilir veya alt öğeleri için bir kapsayıcı olarak hizmet verebilir. [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) ögesi, diğer taraftan, yalnızca bir kapsayıcıdır. Alt [uygulama](../../../docs/framework/net-native/application-element-net-native.md) ve [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) öğe türleri, yöntemleri, alanları, özellikleri ve yansıma için kullanılabilir olan olayları tanımlayın.
+Kök öğesi, [yönergeleri](../../../docs/framework/net-native/directives-element-net-native.md) öğesidir. Aşağıdaki yapıda gösterildiği gibi sıfır veya daha fazla [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi ve sıfır veya bir [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesi içerebilir. [Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin öznitelikleri, uygulama genelinde çalışma zamanı yansıma ilkesi tanımlayabilir veya alt öğeler için bir kapsayıcı olarak görev yapabilir. Öte yandan [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi yalnızca bir kapsayıcıdır. [Uygulama](../../../docs/framework/net-native/application-element-net-native.md) ve [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğelerinin alt öğeleri, yansıma için kullanılabilen türleri, yöntemleri, alanları, özellikleri ve olayları tanımlar.
 
-Başvuru bilgileri için aşağıdaki yapısından öğeleri seçin veya bakın [çalışma zamanı yönerge öğeleri](../../../docs/framework/net-native/runtime-directive-elements.md). Aşağıdaki hiyerarşi içinde özyinelemeli yapının nokta işaretler. Bu öğe isteğe bağlı veya gerekli olup ve varsa kullanılır, köşeli ayraçlar içindeki bilgileri gösterir (bir veya daha çok) kaç örneğinin izin verilir.
+Başvuru bilgileri için aşağıdaki yapıdaki öğeleri seçin veya [çalışma zamanı yönerge öğelerini](../../../docs/framework/net-native/runtime-directive-elements.md)görüntüleyin. Aşağıdaki hiyerarşide üç nokta özyinelemeli bir yapıyı işaret ediyor. Köşeli ayraçlar içindeki bilgiler, bu öğenin isteğe bağlı veya gerekli olduğunu ve kullanılıp kullanılmadığını, kaç örneğe (bir veya daha fazla) izin verildiğini gösterir.
 
-[Yönergeleri](../../../docs/framework/net-native/directives-element-net-native.md) 1:1 [uygulama](../../../docs/framework/net-native/application-element-net-native.md) [0:1] [derleme](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan tür alt sınıflarını) [O:1] [türü](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributeımplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (öznitelik değer türü içeren) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [ TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [Methodınstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (genel yöntem oluşturulmuş) [0:M] [özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [olay](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M] [türü](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M] [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [Methodınstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) () genel yöntem oluşturulmuş) [0:M] [özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [alan](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [olay](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) [0:M] [Derleme](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M] [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0:M] [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan tür alt sınıflarını) [O:1] [türü](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Attributeımplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (öznitelik değer türü içeren) [O:1] [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M] [yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [Methodınstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0:M] [özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [alan](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [olay](../../../docs/framework/net-native/event-element-net-native.md) [0:M] [Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0: M] [türü](../../../docs/framework/net-native/type-element-net-native.md) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Typeınstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (genel tür oluşturulan) [0:M]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0:M] [Methodınstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (genel yöntem oluşturulmuş) [0:M] [özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0:M] [alan](../../../docs/framework/net-native/field-element-net-native.md) [0:M] [olay](../../../docs/framework/net-native/event-element-net-native.md)[0:M]
+[Yönergeler](../../../docs/framework/net-native/directives-element-net-native.md) [1:1] [](../../../docs/framework/net-native/application-element-net-native.md) [] [0:1] [derlemesi](../../../docs/framework/net-native/assembly-element-net-native.md) [0: d] [ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a] Alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Attributewith](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0: a] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: a] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Parametre](../../../docs/framework/net-native/parameter-element-net-native.md) [0: a] [Typeparameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0: a] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) [0: a] [Derleme](../../../docs/framework/net-native/assembly-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a] [Ad alanı](../../../docs/framework/net-native/namespace-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a] Alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md) (kapsayan türün alt sınıfları) [O:1] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Attributewith](../../../docs/framework/net-native/attributeimplies-element-net-native.md) (içeren tür bir öznitelik) [O:1] [Genericparameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0: a] [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a] [Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a] [Tür](../../../docs/framework/net-native/type-element-net-native.md) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Typeörneklemesi](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) (oluşturulan genel tür) [0: a]. biçimindeki telefon numarasıdır. biçimindeki telefon numarasıdır.
+[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) [0: a] [Methodörneklemesi](../../../docs/framework/net-native/methodinstantiation-element-net-native.md) (oluşturulmuş genel yöntem) [0: a] [Özelliği](../../../docs/framework/net-native/property-element-net-native.md) [0: a] [Alan](../../../docs/framework/net-native/field-element-net-native.md) [0: a] [Olay](../../../docs/framework/net-native/event-element-net-native.md) [0: a]
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesi hiçbir öznitelik olabilir ya da ele İlkesi özniteliklerini olabilir [çalışma zamanı yönerge ve ilke bölümünden](#Directives).
+[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin hiç özniteliği olamaz veya [çalışma zamanı yönergesinde ve ilke bölümünde](#Directives)ele alınan ilke özniteliklerine sahip olabilir.
 
-A [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) öğeye sahip tek bir öznitelik `Name`, bir kitaplığı veya dosya uzantısı olmadan, derleme adını belirtir. Örneğin, aşağıdaki [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) öğesi Extensions.dll adlı bir derleme için geçerlidir.
+Bir [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi, dosya uzantısı olmadan bir `Name`kitaplığın veya derlemenin adını belirten tek bir özniteliğe sahiptir. Örneğin, aşağıdaki [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) öğesi Extensions. dll adlı bir derleme için geçerlidir.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -80,57 +80,57 @@ A [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.m
 
 <a name="Directives"></a>
 
-## <a name="runtime-directives-and-policy"></a>Çalışma zamanı yönergeleri ve ilke
+## <a name="runtime-directives-and-policy"></a>Çalışma zamanı yönergeleri ve ilkesi
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğenin kendisinin ve alt öğelerinin [Kitaplığı](../../../docs/framework/net-native/library-element-net-native.md) ve [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğeleri ilke express; diğer bir deyişle, bunlar uygulama uygulayabileceğiniz şekilde tanımlayın Yansıma bir program öğesi için. Öğesinin bir öznitelik tarafından tanımlanan ilke türü (örneğin, `Serialize`). İlke değeri özniteliğin değerine göre tanımlanır (örneğin, `Serialize="Required"`).
+[Uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğesinin kendisi ve [kitaplık](../../../docs/framework/net-native/library-element-net-native.md) ve [uygulama](../../../docs/framework/net-native/application-element-net-native.md) öğeleri Express ilkesinin alt öğeleri; diğer bir deyişle, bir uygulamanın bir program öğesine yansıma uygulayabileceği şekilde tanımlar. İlke türü, öğesinin bir özniteliği tarafından tanımlanır (örneğin, `Serialize`). İlke değeri özniteliğin değeri (örneğin, `Serialize="Required"`) tarafından tanımlanır.
 
-Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke için bir değer belirtmezseniz tüm alt öğeleri için geçerlidir. Örneğin, bir ilke tarafından belirtilen bir [türü](../../../docs/framework/net-native/type-element-net-native.md) ögesi ilke içerdiği tüm türleri ve üyeleri için bir ilke açıkça belirtilmediği için geçerlidir.
+Bir öğenin özniteliği tarafından belirtilen herhangi bir ilke, bu ilke için bir değer belirtmeyen tüm alt öğeler için geçerlidir. Örneğin, bir ilke bir [tür](../../../docs/framework/net-native/type-element-net-native.md) öğesiyle belirtilmişse, bu ilke, bir ilkenin açıkça belirtilmediği tüm içerilen türler ve Üyeler için geçerlidir.
 
-Tarafından ifade ilke [uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), [Attributeımplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [ Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md), ve [türü](../../../docs/framework/net-native/type-element-net-native.md) öğeleri tek tek üyeleri için ifade ilke farklıdır (tarafından [yöntemi](../../../docs/framework/net-native/method-element-net-native.md), [özelliği](../../../docs/framework/net-native/property-element-net-native.md), [Alan](../../../docs/framework/net-native/field-element-net-native.md), ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri).
+[Uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), attributeby, [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), alt [türler](../../../docs/framework/net-native/subtypes-element-net-native.md)ve [](../../../docs/framework/net-native/attributeimplies-element-net-native.md) [tür](../../../docs/framework/net-native/type-element-net-native.md) öğeleri tarafından ifade edilen ilke, ayrı Üyeler için ifade edilebilir ilkeden farklıdır ( [Yöntemi](../../../docs/framework/net-native/method-element-net-native.md), [özelliği](../../../docs/framework/net-native/property-element-net-native.md), [alanı](../../../docs/framework/net-native/field-element-net-native.md)ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri).
 
-### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Derlemeler, ad alanları ve türler için ilkesini belirtme
+### <a name="specifying-policy-for-assemblies-namespaces-and-types"></a>Derlemeler, ad alanları ve türler için ilke belirtme
 
-[Uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), [Attributeımplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)ve [ Tür](../../../docs/framework/net-native/type-element-net-native.md) öğeleri aşağıdaki ilke türlerinden destekler:
+[Uygulama](../../../docs/framework/net-native/application-element-net-native.md), [derleme](../../../docs/framework/net-native/assembly-element-net-native.md), [attributeme](../../../docs/framework/net-native/attributeimplies-element-net-native.md), [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md), alt [türleri](../../../docs/framework/net-native/subtypes-element-net-native.md)ve [tür](../../../docs/framework/net-native/type-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
-- `Activate`. örneklerinin etkinleştirmesi için oluşturucuları, çalışma zamanı erişimi denetler.
+- `Activate`. Örneklerin etkinleştirilmesini sağlamak için oluşturuculara çalışma zamanı erişimini denetler.
 
-- `Browse`. Program öğeleri hakkında bilgi için sorgulama denetler, ancak herhangi bir çalışma zamanı erişim sağlamaz.
+- `Browse`. Program öğeleri hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
-- `Dynamic`. Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler.
+- `Dynamic`. Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler.
 
-- `Serialize`. Oluşturucular, alanları ve tür örnekleri sıralanabilir ve üçüncü taraf kitaplıklar gibi Newtonsoft JSON seri hale getirici tarafından seri hale getirilmiş etkinleştirmek için özellikler, çalışma zamanı erişimi denetler.
+- `Serialize`. Tür örneklerinin, Newtonsoft JSON serileştirici gibi üçüncü taraf kitaplıklara serileştirilmesi ve serileştirilmesi için oluşturuculara, alanlara ve özelliklere çalışma zamanı erişimini denetler.
 
-- `DataContractSerializer`. Denetimleri İlkesi kullanan Serileştirmenin <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.
+- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> Sınıfını kullanan serileştirme için ilkeyi denetler.
 
-- `DataContractJsonSerializer`. İlke kullanan bir JSON serileştirme denetleyen <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> sınıfı.
+- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> Sınıfını kullanan JSON serileştirme için ilkeyi denetler.
 
-- `XmlSerializer`. İlke kullanan bir XML serileştirme denetleyen <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> sınıfı.
+- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> Sınıfını kullanan XML serileştirme ilkesini denetler.
 
-- `MarshalObject`. Denetim İlkesi WinRT ve COM başvuru türlerini hazırlama
+- `MarshalObject`. WinRT ve COM 'a başvuru türlerini hazırlama ilkesini denetler.
 
-- `MarshalDelegate`. Yerel kod için işlev işaretçileri olarak temsilci türleri hazırlama için ilke denetler.
+- `MarshalDelegate`. Temsilci türlerini yerel koda işlev işaretçileri olarak hazırlama ilkesini denetler.
 
-- `MarshalStructure` . Yerel kod yapılarına hazırlama için ilke denetler.
+- `MarshalStructure` . Yapıları yerel koda hazırlama ilkesini denetler.
 
-Bu ilke türleri ile ilişkili ayarlar şunlardır:
+Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
-- `All`. Tüm türleri ve araç zinciri kaldırmaz üyeleri için ilkeyi etkinleştirin.
+- `All`. Araç zincirinin kaldıramayan tüm türler ve Üyeler için ilkeyi etkinleştirin.
 
-- `Auto`. Varsayılan davranışı kullanın. (Bir ilke belirtmeden Bu ilke ayarını eşdeğer `Auto` Bu ilke, örneğin bir üst öğe tarafından geçersiz kılınmadığı sürece.)
+- `Auto`. Varsayılan davranışı kullanın. (İlke belirtilmemeksizin, ilke geçersiz `Auto` kılınmadıkça, örneğin bir üst öğe ile, bu ilkeyi ayarlamaya eşdeğerdir.)
 
-- `Excluded`. Bir program öğesi için ilke devre dışı bırakın.
+- `Excluded`. Program öğesi için ilkeyi devre dışı bırakın.
 
-- `Public`. Üye gereksizdir ve bu nedenle kaldırır araç zincirinizi belirler sürece genel türleri veya üyeleri için ilkeyi etkinleştirin. (İkinci durumda, kullanmalısınız `Required Public` üye tutulur ve yansıma yeteneklere sahip olmak.)
+- `Public`. Araç zinciri üyenin gereksiz olduğunu belirlerse ve bu nedenle uygulamayı kaldırmadığı müddetçe ortak türler veya Üyeler için ilkeyi etkinleştirin. (İkinci durumda, üyenin tutulduğundan ve yansıma özelliklerine `Required Public` sahip olduğundan emin olmak için kullanmanız gerekir.)
 
-- `PublicAndInternal`. Araç zincirinizi bunları kaldırmaz, genel ve iç türleri veya üyeleri için ilkeyi etkinleştirin.
+- `PublicAndInternal`. Araç zinciri onları kaldırmazsa ortak ve iç türler veya Üyeler için ilkeyi etkinleştirin.
 
-- `Required Public`. Genel türler ve üyeler olup olmadığını kullanılan tutmak araç zincirinizi gerektirir ve bunlar için ilke etkinleştirin.
+- `Required Public`. Ortak türleri ve üyeleri, kullanıldıkları ve kullanılmayacağı gibi tutmak ve ilke için etkinleştirmek üzere araç zinciri gerektirir.
 
-- `Required PublicAndInternal`. Hem genel hem de iç türleri ve üyeleri kullanılır olup olmadığını tutmak için araç zincirinizi gerektirir ve bunlar için ilke etkinleştirin.
+- `Required PublicAndInternal`. Araç zincirinin hem ortak hem de iç türleri ve üyeleri, kullanılmalarına bakılmaksızın ve bunları kendileri için etkinleştirin.
 
-- `Required All`. Tüm türler ve üyeler olup olmadığını kullanılan tutmak araç zincirinizi gerektirir ve bunlar için ilke etkinleştirin.
+- `Required All`. Araç zincirinin tüm türleri ve üyeleri kullanıp kullanmadığını ve bunların kullanılmadığını ve ilke için etkin olmasını gerektir.
 
-Örneğin, aşağıdaki çalışma zamanı yönergeleri dosya DataClasses.dll derlemesinde tüm türler ve üyeler için ilke tanımlar. Tüm ortak özellikler, tüm türler ve tür üyeleri için gözatma etkinleştirir serileştirilmesi etkinleştirme tüm türleri sağlar. Bu yansıma sağlar (nedeniyle `Dynamic` özniteliği) ve tüm genel türler ve üyeler için yansıma sağlar.
+Örneğin, aşağıdaki çalışma zamanı yönergeleri dosyası, veri sınıfları. dll dosyasındaki tüm türler ve Üyeler için ilkeyi tanımlar. Tüm ortak özelliklerin serileştirilmesi için yansıma kullanımını, tüm türler ve tür üyeleri için gözatmayı etkinleştirmek, tüm türler için etkinleştirmeyi etkinleştirmek ( `Dynamic` özniteliği nedeniyle) ve tüm genel türler ve Üyeler için yansıma 'yi etkinleştirmek.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -145,53 +145,53 @@ Bu ilke türleri ile ilişkili ayarlar şunlardır:
 </Directives>
 ```
 
-### <a name="specifying-policy-for-members"></a>İlke için üyeleri belirtme
+### <a name="specifying-policy-for-members"></a>Üyeler için ilke belirtme
 
-[Özelliği](../../../docs/framework/net-native/property-element-net-native.md) ve [alan](../../../docs/framework/net-native/field-element-net-native.md) öğeleri aşağıdaki ilke türlerinden destekler:
+[Özellik](../../../docs/framework/net-native/property-element-net-native.md) ve [alan](../../../docs/framework/net-native/field-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
-- `Browse` -Bu üyeyle ilgili bilgi için sorgulama kontrol eder ancak herhangi bir çalışma zamanı erişim sağlamaz.
+- `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
-- `Dynamic` -Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler. Ayrıca, kapsayan tür hakkında bilgi için sorgulama denetler.
+- `Dynamic`-Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
 
-- `Serialize` -Üye türü sıralanabilir ve kitaplıkları gibi Newtonsoft JSON seri hale getirici tarafından serisi örneklerinin etkinleştirmek için çalışma zamanı erişimi denetler. Bu ilke, Oluşturucular, alanlar ve özellikler için uygulanabilir.
+- `Serialize`-Tür örneklerinin, Newtonsoft JSON serileştirici gibi kitaplıklar tarafından serileştirilmesi ve seri durumdan çıkarılmakta olması için üyeye çalışma zamanı erişimini denetler. Bu ilke oluşturucular, alanlar ve özelliklere uygulanabilir.
 
-[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri aşağıdaki ilke türlerinden destekler:
+[Yöntemi](../../../docs/framework/net-native/method-element-net-native.md) ve [olay](../../../docs/framework/net-native/event-element-net-native.md) öğeleri aşağıdaki ilke türlerini destekler:
 
-- `Browse` -Bu üyeyle ilgili bilgi için sorgulama kontrol eder, ancak herhangi bir çalışma zamanı erişim sağlamaz.
+- `Browse`-Bu üye hakkında bilgi sorgulamayı denetler, ancak hiçbir çalışma zamanı erişimini etkinleştirmez.
 
-- `Dynamic` -Dinamik programlama etkinleştirmek için Oluşturucular, yöntemler, alanlar, özellikler ve olaylar, tüm tür üyelerini, çalışma zamanı erişimi denetler. Ayrıca, kapsayan tür hakkında bilgi için sorgulama denetler.
+- `Dynamic`-Dinamik programlamayı etkinleştirmek için oluşturucular, Yöntemler, alanlar, Özellikler ve olaylar dahil olmak üzere tüm tür üyelerine çalışma zamanı erişimini denetler. Ayrıca, kapsayan tür hakkındaki bilgileri sorgulamayı denetler.
 
- Bu ilke türleri ile ilişkili ayarlar şunlardır:
+ Bu ilke türleriyle ilişkili ayarlar şunlardır:
 
-- `Auto` -Varsayılan davranışı kullanın. (Bir ilke belirtmeden Bu ilke ayarını eşdeğer `Auto` sürece bir şey onu geçersiz kılar.)
+- `Auto`-Varsayılan davranışı kullanın. (Bir ilke belirtmeksizin, bir öğe geçersiz `Auto` kılınmadığı takdirde bu ilkeyi ayarlamaya eşdeğerdir.)
 
-- `Excluded` -Hiç üye için meta verileri içerir.
+- `Excluded`-Üyenin meta verilerini hiçbir şekilde eklemeyin.
 
-- `Included` -Çıkış üst türü varsa ilkeyi etkinleştirin.
+- `Included`-Üst tür çıktıda varsa ilkeyi etkinleştirin.
 
-- `Required` -Araç zinciri, bu üye tutmak için gerekli olsa bile görünür kullanılmayan ve ilke etkinleştirmek için.
+- `Required`-Araç zincirinin, kullanılmamış gibi görünse bile bu üyeyi tutması gerekir ve ilkeyi etkinleştirir.
 
 ## <a name="runtime-directives-file-semantics"></a>Çalışma zamanı yönergeleri dosya semantiği
 
-İlke, aynı anda daha yüksek düzeyde ve alt düzey öğeleri için tanımlanabilir. Örneğin, ilke için bir derleme ve bazı bu derlemede bulunan türleri için tanımlanabilir. Belirli bir alt düzey öğenin temsil edilmeyen, kendi üst öğesi İlkesi devralır. Örneğin, bir `Assembly` öğe varsa ancak `Type` öğesi olmayan, ilke içinde belirtilen `Assembly` derlemedeki her tür öğesi uygular. Birden çok öğe, aynı program öğesi için ilke de uygulayabilirsiniz. Örneğin, ayrı [derleme](../../../docs/framework/net-native/assembly-element-net-native.md) öğeleri tanımlamak aynı ilke öğesi için aynı derlemenin farklı. Aşağıdaki bölümlerde, belirli bir tür için ilke bu gibi durumlarda nasıl çözümleneceğini açıklanmaktadır.
+İlke, hem daha yüksek hem de alt düzey öğeler için eşzamanlı olarak tanımlanabilir. Örneğin, ilke bir derleme için ve bu derlemede yer alan bazı türler için tanımlanabilir. Belirli bir alt düzey öğe gösterilmediğinden, üst öğesinin ilkesini devralır. Örneğin, bir `Assembly` öğe mevcutsa ancak `Type` öğeler yoksa, `Assembly` öğesinde belirtilen ilke derlemedeki her tür için geçerlidir. Aynı program öğesine aynı zamanda birden çok öğe ilke uygulayabilir. Örneğin, ayrı [derleme](../../../docs/framework/net-native/assembly-element-net-native.md) öğeleri aynı derleme için aynı ilke öğesini farklı şekilde tanımlayabilir. Aşağıdaki bölümlerde, belirli bir türün ilkesinin bu durumlarda nasıl çözümlendiğini açıklanmaktadır.
 
-A [türü](../../../docs/framework/net-native/type-element-net-native.md) veya [yöntemi](../../../docs/framework/net-native/method-element-net-native.md) öğesi bir genel tür veya yöntemin, ilke kendi ilkesi olmayan tüm örneklemesi için geçerlidir. Örneğin, bir `Type` ilkesini belirtir öğesi <xref:System.Collections.Generic.List%601> belirli bir oluşturulan genel tür için geçersiz kılınmadığı sürece tüm yapılandırılmış, genel tür örneklerine uygulanır (aşağıdaki gibi bir `List<Int32>`) tarafından bir `TypeInstantiation` öğesi. Aksi takdirde, öğeleri adlı program öğesi için ilkeyi tanımlayın.
+Genel bir türün veya yöntemin [tür](../../../docs/framework/net-native/type-element-net-native.md) veya [Yöntem](../../../docs/framework/net-native/method-element-net-native.md) öğesi, kendi ilkesi olmayan tüm örneklemelerde ilkesini uygular. Örneğin, `Type` `List<Int32>`ilkesini belirten bir öğe, belirli bir oluşturulan genel tür için geçersiz kılınmadığı sürece (örneğin, bir `TypeInstantiation` öğesi tarafından), bu genel türün tüm oluşturulan örneklerine uygulanır.<xref:System.Collections.Generic.List%601> Aksi takdirde, öğeleri adlı program öğesi için ilkeyi tanımlar.
 
-Bir öğenin belirsiz olduğunda altyapısı eşleşmeleri arar ve bu tam bir eşleşme bulunursa, onu kullanır. Birden fazla eşleşme bulunursa, bir uyarı veya hata olacaktır.
+Bir öğe belirsiz olduğunda, motor eşleşme arar ve tam eşleşme bulursa onu kullanacaktır. Birden çok eşleşme bulunursa bir uyarı veya hata olur.
 
-### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>İki yönergeleri aynı program öğesi için ilkeyi uygularsanız
+### <a name="if-two-directives-apply-policy-to-the-same-program-element"></a>İki yönergeler aynı program öğesine ilke uygualıyorsa
 
-Aynı ilke türü (örneğin, bir derleme veya tür) aynı program öğesi için farklı değerlere ayarlamak iki farklı çalışma zamanı yönergeleri dosyaları öğelerinde çalışırsanız çakışma gibi çözümlenir:
+Farklı çalışma zamanı yönergeleri dosyalarındaki iki öğe aynı program öğesi (bir derleme veya tür gibi) için aynı ilke türünü farklı değerlere ayarlamaya çalışıyorsa, çakışma aşağıdaki gibi çözümlenir:
 
-1. Varsa `Excluded` öğe varsa, önceliğe sahiptir.
+1. `Excluded` Öğe varsa, önceliğe sahip olur.
 
-2. `Required` önceliğe sahip üstünde değil `Required`.
+2. `Required`, öğesinden önceliklidir `Required`.
 
-3. `All` üzerinde önceliğe sahip `PublicAndInternal`, üzerinde önceliğe sahip `Public`.
+3. `All`önceliğe sahip `Public`olan `PublicAndInternal`, önceliği olan.
 
-4. Açık herhangi bir ayar, üzerinde önceliğe sahiptir. `Auto`.
+4. Herhangi bir açık ayar önceliklidir `Auto`.
 
-Tek bir projede aşağıdaki iki çalışma zamanı yönergeleri dosyalar içeriyorsa, örneğin, serileştirme ilke DataClasses.dll için her iki ayarlanmışsa `Required Public` ve `All`. Bu durumda, seri hale getirme ilkesi olarak çözülmüş olacaktır `Required All`.
+Örneğin, tek bir proje aşağıdaki iki çalışma zamanı yönergeleri dosyasını içeriyorsa, DataClasses. dll serileştirme ilkesi hem hem de `Required Public` `All`olarak ayarlanır. Bu durumda, serileştirme ilkesi olarak `Required All`çözümlenir.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -215,13 +215,13 @@ Tek bir projede aşağıdaki iki çalışma zamanı yönergeleri dosyalar içeri
 </Directives>
 ```
 
-Ancak, tek bir çalışma zamanı yönergeleri dosyasında iki yönergeleri aynı program öğesi için aynı ilke türü ayarlamaya çalışırsanız, XML şema tanımı aracı bir hata iletisi görüntüler.
+Ancak, tek bir çalışma zamanı yönergeleri dosyasında iki yönergesi aynı program öğesi için aynı ilke türünü ayarlamaya çalışırsanız, XML şeması tanım aracında bir hata iletisi görüntülenir.
 
-### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Alt ve üst öğeler aynı ilke türü uygularsanız
+### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>Alt ve üst öğeler aynı ilke türünü uygualıyorsa
 
-Alt öğeleri geçersiz kılan, üst öğeleri dahil olmak üzere, `Excluded` ayarı. Geçersiz kılma olduğunu belirtmek için isteyeceğiniz temel nedeni `Auto`.
+Alt öğeler, `Excluded` ayarı da dahil olmak üzere üst öğelerini geçersiz kılar. Geçersiz kılma, belirtmek `Auto`istediğiniz ana nedendir.
 
-Aşağıdaki örnekte, her şey için serileştirme ilkesini `DataClasses` olmayan içinde `DataClasses.ViewModels` olacaktır `Required Public`ve her ikisinde de olan her şeyi `DataClasses` ve `DataClasses.ViewModels` olacaktır `All`.
+Aşağıdaki örnekte `DataClasses` , içinde `DataClasses.ViewModels` `Required Public`olmayan her şey için serileştirme ilkesi ayarı `DataClasses.ViewModels` , ve her ikisinde `DataClasses` de olan `All`her şey olacaktır.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -236,9 +236,9 @@ Aşağıdaki örnekte, her şey için serileştirme ilkesini `DataClasses` olmay
 </Directives>
 ```
 
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Açık genel türler ve örneklenen öğeleri aynı ilke türü uygulanacaksa
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Açık genel türler ve örneklenmiş öğeler aynı ilke türünü uygular
 
-Aşağıdaki örnekte, `Dictionary<int,int>` atanan `Browse` altyapısı vermek, diğer bir neden varsa ilke `Browse` (Aksi takdirde, varsayılan davranışı olacaktır) ilkesi; diğer her örneğinin <xref:System.Collections.Generic.Dictionary%602> sahip olur üyelerini gözatılabilir.
+Aşağıdaki `Dictionary<int,int>` örnekte, `Browse` ilke yalnızca altyapının `Browse` ilkeyi vermesi için başka bir nedeni varsa (Aksi takdirde varsayılan davranış olur), öğesinin <xref:System.Collections.Generic.Dictionary%602> her bir örneği üyelerine gözatılabilir.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -257,161 +257,161 @@ Aşağıdaki örnekte, `Dictionary<int,int>` atanan `Browse` altyapısı vermek,
 </Directives>
 ```
 
-### <a name="how-policy-is-inferred"></a>Nasıl ilke algılanır
+### <a name="how-policy-is-inferred"></a>İlke nasıl algılanır
 
-Her ilke türü bir farklı Bu ilke türünün varolup olmadığını diğer yapıları nasıl etkilediğini belirlemek kurallara sahiptir.
+Her ilke türünün, bu ilke türü varlığının diğer yapıları nasıl etkilediğini tespit eden farklı kurallar kümesi vardır.
 
-#### <a name="the-effect-of-browse-policy"></a>Göz atma İlkesi etkisi
+#### <a name="the-effect-of-browse-policy"></a>Tarayıcı ilkesinin etkisi
 
-Uygulama `Browse` ilke türü için aşağıdaki ilke değişiklikleri içerir:
+`Browse` İlkeyi bir türe uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Türün temel türü ile işaretlenmiş `Browse` ilkesi.
+- Türün temel türü `Browse` ilkeyle işaretlenir.
 
-- Bir örneklenmiş genel türü ise, türü örneklenmemiş sürümü ile işaretlenmiş `Browse` ilkesi.
+- Tür bir genel ise, türün örneklenmemiş sürümü `Browse` ilkeyle işaretlenir.
 
-- Bir temsilci türü ise `Invoke` türünde yöntemi ile işaretlenmiş `Dynamic` ilkesi.
+- Tür bir `Invoke` temsilciyise, türdeki yöntem `Dynamic` ilkeyle işaretlenir.
 
-- Her arabirim türü ile işaretlenmiş `Browse` ilkesi.
+- Türün her arabirimi `Browse` ilkeyle işaretlenir.
 
-- Türüne uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Türe uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Tür genelse, her kısıtlama türü ile işaretlenmiş `Browse` ilkesi.
+- Tür geneldir ise, her kısıtlama türü `Browse` ilkeyle işaretlenir.
 
-- Tür genelse, tür örneği üzerinde türleri ile işaretlenmiş `Browse` ilkesi.
+- Tür geneldir ise, türün örneklendiği türler `Browse` ilkeyle işaretlenir.
 
-Uygulama `Browse` ilke için bir yöntem aşağıdaki ilke değişiklikleri içerir:
+`Browse` İlkeyi bir yönteme uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Her bir yöntemin parametre türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntemin her bir parametre türü `Browse` ilkeyle işaretlenir.
 
-- Yöntemin dönüş türü ile işaretlenmiş `Browse` ilkesi.
+- Metodun dönüş türü `Browse` ilkeyle işaretlenir.
 
-- Yöntemin kapsayan tür ile işaretlenmiş `Browse` ilkesi.
+- Yöntemin kapsayan türü `Browse` ilkeyle işaretlenir.
 
-- Örneklenen bir genel yöntem yöntem ise örneklenmemiş genel yöntem ile işaretlenmiş `Browse` ilkesi.
+- Yöntem, örneklenmiş genel bir yöntem ise, örneklenmiş genel yöntem `Browse` ilkeyle işaretlenir.
 
-- Yönteme uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntemine uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Yöntem genelse, her kısıtlama türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntem geneldir ise, her kısıtlama türü `Browse` ilkeyle işaretlenir.
 
-- Yöntem genelse, yöntemi örneği türleri ile işaretlenmiş `Browse` ilkesi.
+- Yöntem genel ise, yöntemin örneklendiği türler `Browse` ilkeyle işaretlenir.
 
-Uygulama `Browse` bir alana ilke aşağıdaki ilke değişiklikleri içerir:
+`Browse` İlkeyi bir alana uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Alana uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Alana uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Alan türü ile işaretlenmiş `Browse` ilkesi.
+- Alanın türü `Browse` ilkeyle işaretlenir.
 
-- Alan ait olduğu tür ile işaretlenmiş `Browse` ilkesi.
+- Alanın ait olduğu tür `Browse` ilkeyle işaretlenir.
 
-#### <a name="the-effect-of-dynamic-policy"></a>Dinamik ilke etkisi
+#### <a name="the-effect-of-dynamic-policy"></a>Dinamik ilkenin etkisi
 
-Uygulama `Dynamic` ilke türü için aşağıdaki ilke değişiklikleri içerir:
+`Dynamic` İlkeyi bir türe uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Türün temel türü ile işaretlenmiş `Dynamic` ilkesi.
+- Türün temel türü `Dynamic` ilkeyle işaretlenir.
 
-- Bir örneklenmiş genel türü ise, türü örneklenmemiş sürümü ile işaretlenmiş `Dynamic` ilkesi.
+- Tür bir genel ise, türün örneklenmemiş sürümü `Dynamic` ilkeyle işaretlenir.
 
-- Türü bir temsilci türü ise `Invoke` türünde yöntemi ile işaretlenmiş `Dynamic` ilkesi.
+- Tür bir temsilci türü ise, `Invoke` türdeki yöntem `Dynamic` ilkeyle işaretlenir.
 
-- Her arabirim türü ile işaretlenmiş `Browse` ilkesi.
+- Türün her arabirimi `Browse` ilkeyle işaretlenir.
 
-- Türüne uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Türe uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Tür genelse, her kısıtlama türü ile işaretlenmiş `Browse` ilkesi.
+- Tür geneldir ise, her kısıtlama türü `Browse` ilkeyle işaretlenir.
 
-- Tür genelse, tür örneği üzerinde türleri ile işaretlenmiş `Browse` ilkesi.
+- Tür geneldir ise, türün örneklendiği türler `Browse` ilkeyle işaretlenir.
 
-Uygulama `Dynamic` ilke için bir yöntem aşağıdaki ilke değişiklikleri içerir:
+`Dynamic` İlkeyi bir yönteme uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Her bir yöntemin parametre türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntemin her bir parametre türü `Browse` ilkeyle işaretlenir.
 
-- Yöntemin dönüş türü ile işaretlenmiş `Dynamic` ilkesi.
+- Metodun dönüş türü `Dynamic` ilkeyle işaretlenir.
 
-- Yöntemin kapsayan tür ile işaretlenmiş `Dynamic` ilkesi.
+- Yöntemin kapsayan türü `Dynamic` ilkeyle işaretlenir.
 
-- Örneklenen bir genel yöntem yöntem ise örneklenmemiş genel yöntem ile işaretlenmiş `Browse` ilkesi.
+- Yöntem, örneklenmiş genel bir yöntem ise, örneklenmiş genel yöntem `Browse` ilkeyle işaretlenir.
 
-- Yönteme uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntemine uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Yöntem genelse, her kısıtlama türü ile işaretlenmiş `Browse` ilkesi.
+- Yöntem geneldir ise, her kısıtlama türü `Browse` ilkeyle işaretlenir.
 
-- Yöntem genelse, yöntemi örneği türleri ile işaretlenmiş `Browse` ilkesi.
+- Yöntem genel ise, yöntemin örneklendiği türler `Browse` ilkeyle işaretlenir.
 
-- Yöntemi tarafından çağrılabilir `MethodInfo.Invoke`, ve temsilci oluşturma mümkün hale <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>.
+- Yöntemi tarafından `MethodInfo.Invoke`çağrılabilir ve temsilci oluşturma tarafından <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>mümkün hale gelir.
 
-Uygulama `Dynamic` bir alana ilke aşağıdaki ilke değişiklikleri içerir:
+`Dynamic` İlkeyi bir alana uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Alana uygulanan her bir öznitelik türü ile işaretlenmiş `Browse` ilkesi.
+- Alana uygulanan her bir özniteliğin türü `Browse` ilkeyle işaretlenir.
 
-- Alan türü ile işaretlenmiş `Dynamic` ilkesi.
+- Alanın türü `Dynamic` ilkeyle işaretlenir.
 
-- Alan ait olduğu tür ile işaretlenmiş `Dynamic` ilkesi.
+- Alanın ait olduğu tür `Dynamic` ilkeyle işaretlenir.
 
-#### <a name="the-effect-of-activation-policy"></a>Etkinleştirme ilkesinin etkisini
+#### <a name="the-effect-of-activation-policy"></a>Etkinleştirme ilkesinin etkisi
 
-Bir türe etkinleştirme ilkesini uygulama aşağıdaki ilke değişiklikleri içerir:
+Etkinleştirme ilkesini bir türe uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Bir örneklenmiş genel türü ise, türü örneklenmemiş sürümü ile işaretlenmiş `Browse` ilkesi.
+- Tür bir genel ise, türün örneklenmemiş sürümü `Browse` ilkeyle işaretlenir.
 
-- Türü bir temsilci türü ise `Invoke` türünde yöntemi ile işaretlenmiş `Dynamic` ilkesi.
+- Tür bir temsilci türü ise, `Invoke` türdeki yöntem `Dynamic` ilkeyle işaretlenir.
 
-- Oluşturucu türü ile işaretlenir `Activation` ilkesi.
+- Türün oluşturucuları `Activation` ilkeyle işaretlenir.
 
-Uygulama `Activation` ilke için bir yöntem aşağıdaki ilke değişikliği içerir:
+`Activation` İlkeyi bir yönteme uygulamak aşağıdaki ilke değişikliğini içerir:
 
-- Oluşturucu tarafından çağrılabilir <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> ve <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> yöntemleri. Yöntemleri için `Activation` ilke oluşturucular yalnızca etkiler.
+- Oluşturucu <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> ve<xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> yöntemleri tarafından çağrılabilir. Yöntemler için, `Activation` ilke yalnızca oluşturucuları etkiler.
 
-Uygulama `Activation` bir alana ilke etkisi yoktur.
+`Activation` İlkeyi bir alana uygulamak hiçbir etkiye sahip değildir.
 
-#### <a name="the-effect-of-serialize-policy"></a>Serileştirme ilkesinin etkisini
+#### <a name="the-effect-of-serialize-policy"></a>Seri hale getirme ilkesinin etkisi
 
-`Serialize` İlkesi ortak yansıma tabanlı serileştiricileri kullanımını etkinleştirir. Ancak, Microsoft dışı seri hale getiricileri genişletme tam yansıma erişim desenlerini Microsoft'a bilinmemesi nedeniyle bu ilkeyi tamamen etkili olmayabilir.
+`Serialize` İlke, yaygın yansıma tabanlı serileştiricilerin kullanımını sunar. Ancak, Microsoft dışı serileştiricilerin tam yansıma erişimi desenleri Microsoft tarafından bilinmediğinden, bu ilke tamamen etkili olmayabilir.
 
-Uygulama `Serialize` ilke türü için aşağıdaki ilke değişiklikleri içerir:
+`Serialize` İlkeyi bir türe uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Türün temel türü ile işaretlenmiş `Serialize` ilkesi.
+- Türün temel türü `Serialize` ilkeyle işaretlenir.
 
-- Bir örneklenmiş genel türü ise, türü örneklenmemiş sürümü ile işaretlenmiş `Browse` ilkesi.
+- Tür bir genel ise, türün örneklenmemiş sürümü `Browse` ilkeyle işaretlenir.
 
-- Türü bir temsilci türü ise `Invoke` türünde yöntemi ile işaretlenmiş `Dynamic` ilkesi.
+- Tür bir temsilci türü ise, `Invoke` türdeki yöntem `Dynamic` ilkeyle işaretlenir.
 
-- Bir numaralandırma türü ise, bir dizi türü ile işaretlenmiş `Serialize` ilkesi.
+- Tür bir sabit listesi ise, bir tür dizisi `Serialize` ilkeyle işaretlenir.
 
-- Türü uyguluyorsa <xref:System.Collections.Generic.IEnumerable%601>, `T` ile işaretlenmiş `Serialize` ilkesi.
+- Türü uygularsa <xref:System.Collections.Generic.IEnumerable%601> `T` `Serialize` ilkeyle işaretlenir.
 
-- Tür ise <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.Generic.IList%601>, <xref:System.Collections.Generic.ICollection%601>, <xref:System.Collections.Generic.IReadOnlyCollection%601>, veya <xref:System.Collections.Generic.IReadOnlyList%601>, ardından `T[]` ve <xref:System.Collections.Generic.List%601> ile işaretlenen `Serialize` ilke. ancak arabirim türünün üye ileişaretlenmiş`Serialize`ilkesi.
+- <xref:System.Collections.Generic.IEnumerable%601>Tür ,<xref:System.Collections.Generic.IReadOnlyList%601> ,,<xref:System.Collections.Generic.List%601> , veya olarak ilkeile`Serialize` işaretlenmişse., ancak arabirim türünün hiçbir üyesi `T[]` <xref:System.Collections.Generic.IList%601> <xref:System.Collections.Generic.ICollection%601> <xref:System.Collections.Generic.IReadOnlyCollection%601> `Serialize`ilke.
 
-- Tür ise <xref:System.Collections.Generic.List%601>, üye türü ile işaretlenmiş `Serialize` ilkesi.
+- Tür ise <xref:System.Collections.Generic.List%601>, bu tür hiçbir üye `Serialize` ilkeyle işaretlenir.
 
-- Tür ise <xref:System.Collections.Generic.IDictionary%602>, <xref:System.Collections.Generic.Dictionary%602> ile işaretlenmiş `Serialize` ilkesi. ancak herhangi bir türün üyeleri ile işaretlenmiş `Serialize` ilkesi.
+- Tür ise <xref:System.Collections.Generic.IDictionary%602> <xref:System.Collections.Generic.Dictionary%602> ilkeyle işaretlenir`Serialize` . Ancak, türdeki hiçbir üye `Serialize` ilkeyle işaretlenir.
 
-- Tür ise <xref:System.Collections.Generic.Dictionary%602>, üye türü ile işaretlenmiş `Serialize` ilkesi.
+- Tür ise <xref:System.Collections.Generic.Dictionary%602>, bu tür hiçbir üye `Serialize` ilkeyle işaretlenir.
 
-- Türü uyguluyorsa <xref:System.Collections.Generic.IDictionary%602>, `TKey` ve `TValue` ile işaretlenmiş `Serialize` ilkesi.
+- Türü <xref:System.Collections.Generic.IDictionary%602> `TKey` uygularsa ve`TValue`ilkeyleişaretlenir. `Serialize`
 
-- Her Oluşturucu, her bir özellik erişimcisi ve her bir alan ile işaretlenmiş `Serialize` ilkesi.
+- Her bir Oluşturucu, her özellik erişimcisi ve her bir alan `Serialize` ilkeyle işaretlenir.
 
-Uygulama `Serialize` ilke için bir yöntem aşağıdaki ilke değişiklikleri içerir:
+`Serialize` İlkeyi bir yönteme uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Kapsayan tür ile işaretlenmiş `Serialize` ilkesi.
+- Kapsayan tür `Serialize` ilkeyle işaretlenir.
 
-- Yöntemin dönüş türü ile işaretlenmiş `Serialize` ilkesi.
+- Metodun dönüş türü `Serialize` ilkeyle işaretlenir.
 
-Uygulama `Serialize` bir alana ilke aşağıdaki ilke değişiklikleri içerir:
+`Serialize` İlkeyi bir alana uygulamak aşağıdaki ilke değişikliklerini içerir:
 
-- Kapsayan tür ile işaretlenmiş `Serialize` ilkesi.
+- Kapsayan tür `Serialize` ilkeyle işaretlenir.
 
-- Alan türü ile işaretlenmiş `Serialize` ilkesi.
+- Alanın türü `Serialize` ilkeyle işaretlenir.
 
-#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer DataContractSerializer ve DataContractJsonSerializer ilkeleri etkisi
+#### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer, DataContractSerializer ve DataContractJsonSerializer ilkelerinin etkisi
 
-Farklı `Serialize` yansıma tabanlı seri hale getiricileri genişletme için tasarlanmıştır, ilke, <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ilkeleri bir dizi .NET Native araç zinciri için bilinen seri hale getiricileri genişletme etkinleştirmek için kullanılır. Bu seri hale getiricileri genişletme yansıma kullanarak uygulanmadı, ancak çalışma zamanında seri hale getirilebilir türler kümesi benzer bir şekilde reflectable türleri olarak belirlenir.
+Yansıma tabanlı serileştiriciler <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer>için tasarlanan <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ilkenin aksine,, ve ilkeleri .NET Native araç zinciri tarafından bilinen bir seri hale getiriciler kümesini etkinleştirmek için kullanılır. `Serialize` Bu serileştiriciler yansıma kullanılarak uygulanmaz, ancak çalışma zamanında seri hale getirilebildiğiniz türler kümesi, yansıma \ olan türler gibi benzer şekilde belirlenir.
 
-Bu ilkelerden birini uygulayarak bir türe türü ile eşleşen serileştirici serileştirilecek sağlar. Ayrıca, serileştirme motoruna, statik olarak seri hale getirme gerektiği belirleyebilirsiniz herhangi bir türü ayrıca seri hale getirilebilir olur.
+Bu ilkelerin bir türe uygulanması, türün eşleşen serileştirici ile serileştirilmesine olanak sağlar. Ayrıca, serileştirme altyapısının serileştirilmesi gereken şekilde statik olarak belirleyebilmesi için herhangi bir tür de serileştirilebilir olur.
 
-Bu ilkeler, yöntemler veya alanları üzerinde etkisi yoktur.
+Bu ilkelerin Yöntemler veya alanlar üzerinde hiçbir etkisi yoktur.
 
-"Serileştiricileri farklar" bölümünde daha fazla bilgi için bkz. [geçirme bilgisayarınızı Windows Store uygulaması için .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).
+Daha fazla bilgi için [Windows mağazası uygulamanızı .NET Native geçirme](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)konusunun "Serileştiricilerle ilgili farklılıklar" bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

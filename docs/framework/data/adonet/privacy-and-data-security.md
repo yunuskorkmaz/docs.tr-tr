@@ -2,33 +2,33 @@
 title: Gizlilik ve Veri Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877547"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988722"
 ---
 # <a name="privacy-and-data-security"></a>Gizlilik ve Veri Güvenliği
-Bir ADO.NET uygulamasında hassas bilgilerini yönetme ve koruma, temel alınan ürünleri ve oluşturmak için kullanılan teknolojileri bağlıdır. ADO.NET Hizmetleri güvenli hale getirme veya verileri şifrelemek için doğrudan sağlamaz.  
+Bir ADO.NET uygulamasında hassas bilgilerin korunması ve yönetilmesi, bu bilgileri oluşturmak için kullanılan ürünlerin ve teknolojilerin üzerine bağımlıdır. ADO.NET, verileri güvenli hale getirmek veya şifrelemek için doğrudan hizmet sağlamaz.  
   
 ## <a name="cryptography-and-hash-codes"></a>Şifreleme ve karma kodları  
- .NET Framework sınıfları <xref:System.Security.Cryptography> ad alanı ADO.NET uygulamalarınızdan verilerin okuma veya yetkisiz üçüncü taraflarca değiştiren önlemek için kullanılabilir. Diğerleri yönetilen uygulamaları bazı sınıflar için yönetilmeyen Microsoft CryptoAPI sarmalayıcıları bağlıdır. [Şifreleme Hizmetleri](../../../../docs/standard/security/cryptographic-services.md) konu cryptograph nasıl uygulandığını ve belirli şifreleme görevleri nasıl gerçekleştirebileceğiniz açıklanır, .NET Framework şifreleme genel bir bakış sağlar.  
+ .NET Framework <xref:System.Security.Cryptography> ad alanındaki sınıflar, verilerin yetkisiz üçüncü taraflar tarafından okunmasını veya değiştirilmesini engellemek için ADO.NET uygulamalarınızdan kullanılabilir. Bazı sınıflar yönetilmeyen Microsoft CryptoAPI için sarmalayıcılardır, diğerleri yönetilen uygulamalardır. [Şifreleme Hizmetleri](../../../standard/security/cryptographic-services.md) konusu .NET Framework şifrelemeye genel bir bakış sağlar, cryptograph 'ın nasıl uygulandığını ve belirli şifreleme görevlerini nasıl gerçekleştirebileceğinizi açıklar.  
   
- Şifrelenmiş ve ardından şifresi veri sağlayan şifreleme, verilerin karması tek yönlü bir işlemdir. Verilerin karması, veri değiştirilmediğinden denetleyerek kurcalanmaya karşı istediğiniz gerektiğinde kullanışlıdır: aynı giriş dizelerinden göz önünde bulundurulduğunda, karma algoritmaları her zaman kolayca karşılaştırılabilir özdeş kısa çıkış değerleri üretir. [Karma kodlarla veri bütünlüğünü sağlama](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) nasıl oluşturabilir ve karma değerlerini doğrulamak açıklar.  
+ Verilerin şifrelenmesini ve sonra şifresinin çözülmesi izin veren şifrelemenin aksine, karma veriler tek yönlü bir işlemdir. Verilerin karma olması, verilerin değiştirilmediğini kontrol ederek değişiklik yapılmasını engellemek istediğinizde faydalıdır: özdeş giriş dizeleri verildiğinde, karma algoritmalar her zaman kolayca karşılaştırılabilen özdeş kısa çıkış değerleri üretir. [Karma kodlarla veri bütünlüğünü sağlamak](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) , karma değerleri nasıl oluşturabileceğiniz ve doğrulayabileceğinizi açıklar.  
   
-## <a name="encrypting-configuration-files"></a>Şifreleme yapılandırma dosyaları  
- Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güvenliğini sağlama andır. Güvenli olmayan, bir bağlantı dizesi olası bir güvenlik açığı sunar. Bağlantı dizelerini yapılandırma dosyalarında kaydedilir, .NET Framework, ortak bir öğe kümesini tanımladığı standart XML dosyalarında depolanır. Bir yapılandırma dosyasındaki hassas bilgileri şifrelemek korumalı yapılandırma sağlar. Öncelikli olarak ASP.NET uygulamaları için tasarlanmış olsa da, Windows uygulamalarında yapılandırma dosyası bölümleri şifrelemek için korumalı yapılandırma de kullanılabilir. Daha fazla bilgi için [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+## <a name="encrypting-configuration-files"></a>Yapılandırma dosyalarını şifreleme  
+ Veri kaynağınıza erişimi korumak, bir uygulamayı güvenli hale getirirken en önemli amaçlardan biridir. Bir bağlantı dizesi güvenli değilse olası bir güvenlik açığı sunar. Yapılandırma dosyalarına kaydedilen bağlantı dizeleri, .NET Framework ortak bir öğe kümesini tanımladığı standart XML dosyalarında depolanır. Korumalı yapılandırma, önemli bilgileri bir yapılandırma dosyasında şifrelemenizi sağlar. Birincil olarak ASP.NET uygulamaları için tasarlanmış olsa da, korumalı yapılandırma Windows uygulamalarındaki yapılandırma dosyası bölümlerini şifrelemek için de kullanılabilir. Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
-## <a name="securing-string-values-in-memory"></a>Dize değerlerini bellekte güvenliğini sağlama  
- Varsa bir <xref:System.String> nesne içeren bir parola, kredi kartı numarası veya kişisel veriler gibi gizli bilgiler, bilgilerin olabilecek riski uygulamayı bilgisayar bellekten veri silemezsiniz çünkü kullanıldıktan sonra göstermiştir.  
+## <a name="securing-string-values-in-memory"></a>Bellekteki dize değerlerini güvenli hale getirme  
+ Bir <xref:System.String> nesne, parola, kredi kartı numarası veya kişisel veriler gibi hassas bilgiler içeriyorsa, bu bilgilerin kullanıldıktan sonra açığa çıkmasına neden olan bir risk vardır çünkü uygulama, verileri bilgisayar belleğinden silemiyor.  
   
- A <xref:System.String> sabittir; değeri oluşturulduktan sonra değiştirilemez. Dize değeri değiştirmek için görüntülenen değişiklikleri gerçekten yeni bir örneğini oluşturmak bir <xref:System.String> nesne bellekte düz metin olarak verilerin depolanması. Ayrıca, dize örnekleri bellekten silineceği zamanı tahmin etmek mümkün değildir. Bellek geri kazanma dizeleriyle .NET atık toplama deterministic değil. Kullanmaktan kaçınmalısınız <xref:System.String> ve <xref:System.Text.StringBuilder> verilerinizi tamamen küçük harf duyarlı ise sınıfları.  
+ Bir <xref:System.String> sabittir; değeri oluşturulduktan sonra değiştirilemez. Dize değerini değiştirmek için görünen değişiklikler aslında bellekte bir <xref:System.String> nesnenin yeni bir örneğini oluşturur ve verileri düz metin olarak depolar. Ayrıca, dize örneklerinin bellekten ne zaman silineceğini tahmin etmek mümkün değildir. Dizeler içeren bellek geri kazanma .NET çöp toplama ile belirleyici değildir. Verileriniz gerçekten duyarlıysa <xref:System.String> ve <xref:System.Text.StringBuilder> sınıflarını kullanmaktan kaçının.  
   
- <xref:System.Security.SecureString> Sınıfı bellekte veri koruma API'si (DPAPI) kullanarak metin şifrelemek için yöntemler sağlar. Artık gerekli değilse, dize ardından bellekten silinir. Var olan hiçbir `ToString` hızla içeriğini okumak için yöntem bir <xref:System.Security.SecureString>. Yeni bir örneğini başlatabilir `SecureString` herhangi bir değer ile veya bir dizi için bir işaretçi geçirme <xref:System.Char> nesneleri. Ardından, dizeyle çalışmak için sınıfının çeşitli yöntemler kullanabilirsiniz. Daha fazla bilgi için indirme [SecureString örnek uygulama](https://go.microsoft.com/fwlink/?LinkId=120418), nasıl kullanılacağını gösterir `SecureString` gelen sınıfı.  
+ <xref:System.Security.SecureString> Sınıfı, bellekte veri koruma API 'si (DPAPI) kullanarak metin şifrelemek için yöntemler sağlar. Daha sonra dize artık gerekli olmadığında bellekten silinir. Bir öğesinin içeriğini hızlı bir şekilde okumak için bir <xref:System.Security.SecureString> yöntemyoktur.`ToString` Değer olmadan yeni bir örneğini `SecureString` başlatabilir veya bir <xref:System.Char> nesne dizisine bir işaretçi geçirerek bunu başlatabilirsiniz. Daha sonra dizeyle çalışmak için sınıfının çeşitli yöntemlerini kullanabilirsiniz. Daha fazla bilgi için, `SecureString` sınıfının ' den nasıl kullanılacağını gösteren [SecureString örnek uygulamasını](https://go.microsoft.com/fwlink/?LinkId=120418)indirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

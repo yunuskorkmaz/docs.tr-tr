@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleri (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: ef059eca9b97ed0c7c4fdf5a82389eff816d53b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f331546026ac6b0799947611b54e9a147a6fe7f1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958215"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988843"
 ---
 # <a name="async-return-types-visual-basic"></a>Zaman uyumsuz dönüş türleri (Visual Basic)
 Zaman uyumsuz metotlarda üç olası dönüş türü <xref:System.Threading.Tasks.Task%601>vardır <xref:System.Threading.Tasks.Task>:, ve void. Visual Basic, void dönüş türü bir [alt](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) yordam olarak yazılır. Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve Await ile Zaman Uyumsuz Programlama (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -57,7 +57,7 @@ Dim result1 As Integer = Await TaskOfT_MethodAsync()
  Aşağıdaki kodda gösterildiği gibi `TaskOfT_MethodAsync` `Await`, çağrısını uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz `TaskOfT_MethodAsync` için hemen beklenen bir yönteme çağrı bir `Task(Of Integer)`döndürür. Görev örnekteki `integerTask` değişkenine atanır. Bir olduğundan, <xref:System.Threading.Tasks.Task%601.Result> türünde bir`TResult`özelliğiiçerir. <xref:System.Threading.Tasks.Task%601> `integerTask` Bu durumda, TResult bir tamsayı türünü temsil eder. Öğesine uygulandığında, <xref:System.Threading.Tasks.Task%601.Result%2A> await ifadesi öğesinin `integerTask`özelliğinin içeriğini değerlendirir. `integerTask` `Await` Değer `result2` değişkenine atanır.  
   
 > [!WARNING]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliğine doğrudan erişmek yerine kullanarak `Await` değere erişmeniz gerekir.  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> Özelliği engelleyici bir özelliktir. Görevi tamamlanmadan önce ona erişmeye çalışırsanız, etkin olan iş parçacığı, görev tamamlanana ve değer kullanılabilir olana kadar engellenir. Çoğu durumda, özelliğine doğrudan erişmek yerine kullanarak `Await` değere erişmeniz gerekir.  
   
 ```vb  
 ' Call and await in separate statements.  

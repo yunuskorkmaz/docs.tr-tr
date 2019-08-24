@@ -2,12 +2,12 @@
 title: Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 5aaca8ae8c456e2377326ee2e9e22c3dcf6a21a7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: cdb5d819ce3af372ce44ee2c038556c1383acfe3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923007"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987216"
 ---
 # <a name="simplified-configuration"></a>Basitleştirilmiş Yapılandırma
 Windows Communication Foundation (WCF) hizmetleri yapılandırmak karmaşık bir görev olabilir. Birçok farklı seçenek vardır ve hangi ayarların gerekli olduğunu belirlemek her zaman kolay değildir. Yapılandırma dosyaları WCF hizmetlerinin esnekliğini artırırken, ayrıca sorunları bulmak için çok zor olan kaynaktır. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]Bu sorunları ele almaktadır ve hizmet yapılandırmasının boyutunu ve karmaşıklığını azaltmak için bir yol sağlar.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) hizmetleri yapılandırmak karmaşık bir
  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<`service`> öğesi gereksinimini kaldırarak bir WCF hizmetini yapılandırmayı kolaylaştırır. Bir <`service`> bölümü ekleyemez veya bir <`service`> bölümünde herhangi bir uç nokta ekleyemez ve hizmetiniz program aracılığıyla herhangi bir uç nokta tanımlamıyorsa, her biri için bir tane olmak üzere hizmetinize otomatik olarak bir dizi varsayılan uç noktası eklenir. hizmet temel adresi ve hizmetiniz tarafından uygulanan her sözleşme için. Bu uç noktaların her birinde, uç nokta adresi temel adrese karşılık gelir, bağlama ise temel adres düzeni tarafından belirlenir ve sözleşme hizmetiniz tarafından uygulanan bir sözleşmedir. Herhangi bir uç nokta veya hizmet davranışı belirtmeniz veya herhangi bir bağlama ayarı değişikliği yapmanız gerekmiyorsa, bir hizmet yapılandırma dosyası belirtmeniz gerekmez. Bir hizmet iki sözleşme uygularsa ve ana bilgisayar hem HTTP hem de TCP taşımalarını etkinleştirse, hizmet ana bilgisayarı her bir taşıyıcı kullanan her bir sözleşme için dört varsayılan uç nokta oluşturur. Varsayılan uç noktalar oluşturmak için hizmet ana bilgisayarının hangi bağlamaları kullanacağınızı bilmeleri gerekir. Bu ayarlar, <`protocolMappings``system.serviceModel`> bölümünün içindeki bir < > bölümünde belirtilmiştir. <`protocolMappings`> Bölümü, bağlama türlerine eşlenmiş Aktarım Protokolü düzenlerinin bir listesini içerir. Hizmet ana bilgisayarı, hangi bağlamanın kullanılacağını belirleyen, kendisine geçirilen temel adresleri kullanır. Aşağıdaki örnek <`protocolMappings`> öğesini kullanır.  
   
 > [!WARNING]
->  Bağlamalar veya davranışlar gibi varsayılan yapılandırma öğelerinin değiştirilmesi, bu varsayılan bağlamaları ve davranışları kullandıklarından, yapılandırma hiyerarşisinin daha düşük düzeylerinde tanımlanan Hizmetleri etkileyebilir. Bu nedenle, varsayılan bağlamaları ve davranışları değiştirmenin, bu değişikliklerin hiyerarşideki diğer hizmetleri etkileyebileceğini unutmayın.  
+> Bağlamalar veya davranışlar gibi varsayılan yapılandırma öğelerinin değiştirilmesi, bu varsayılan bağlamaları ve davranışları kullandıklarından, yapılandırma hiyerarşisinin daha düşük düzeylerinde tanımlanan Hizmetleri etkileyebilir. Bu nedenle, varsayılan bağlamaları ve davranışları değiştirmenin, bu değişikliklerin hiyerarşideki diğer hizmetleri etkileyebileceğini unutmayın.  
   
 > [!NOTE]
 > Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) altında barındırılan hizmetler, sanal dizini kendi temel adresleri olarak kullanır.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c86ab618f6434a6a9ce4f056eeb001cacc84bc
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709194"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988494"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma
 
@@ -43,7 +43,7 @@ Tarih ve saat bilgilerini kullanan .NET uygulamaları çok farklı ve bu bilgile
 .Net <xref:System.DateTime> <xref:System.DateTimeOffset> ,tarihler<xref:System.TimeZoneInfo> ve saatler ile çalışan uygulamalar oluşturmak için kullanılabilen, ,vetürleriniiçerir.<xref:System.TimeSpan>
 
 > [!NOTE]
-> Bu konu dördüncü bir tür <xref:System.TimeZone>ele almaz, çünkü işlevselliği <xref:System.TimeZoneInfo> sınıfında neredeyse tamamen dahil değildir. Mümkün olduğunda, geliştiricilerin <xref:System.TimeZoneInfo> <xref:System.TimeZone> sınıfı yerine sınıfını kullanması gerekir.
+> Bu konu, işlevselliği <xref:System.TimeZone> <xref:System.TimeZoneInfo> sınıfında neredeyse tamamen dahil olduğu için anlatılmamaktadır. Mümkün olduğunda sınıfı yerine <xref:System.TimeZoneInfo> <xref:System.TimeZone> sınıfını kullanın.
 
 ## <a name="the-datetime-structure"></a>DateTime yapısı
 

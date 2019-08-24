@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: c66ca9356d1db157688349dfeea4270001513e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949214"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988661"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer>. .NET Framework nesneleri ve XML arasında her iki yönde çevirir.<xref:System.Runtime.Serialization.DataContractSerializer> Bu konuda, serileştiricinin nasıl çalıştığı açıklanmaktadır.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içeri
  WCF Ayrıca bir yardımcı seri hale getirici <xref:System.Runtime.Serialization.NetDataContractSerializer>içerir. <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> , Ve<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricilerle benzerdir çünkü Ayrıca, seri hale getirilmiş verilerin bir parçası olarak .NET Framework tür adları da yayar. Aynı türler serileştirilmede paylaşıldığında ve seri durumdan çıkarma bittikten sonra kullanılır. Hem hem de ,<xref:System.Runtime.Serialization.XmlObjectSerializer>ortak bir temel sınıftan türet,.<xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer>  
   
 > [!WARNING]
->  , <xref:System.Runtime.Serialization.DataContractSerializer> Denetim karakterlerini içeren dizeleri xml varlıkları olarak 20 ' nin altında olan onaltılık bir değerle seri hale getirir. Bu, bir WCF hizmetine bu tür veriler gönderilirken WCF olmayan bir istemciyle ilgili soruna neden olabilir.  
+> , <xref:System.Runtime.Serialization.DataContractSerializer> Denetim karakterlerini içeren dizeleri xml varlıkları olarak 20 ' nin altında olan onaltılık bir değerle seri hale getirir. Bu, bir WCF hizmetine bu tür veriler gönderilirken WCF olmayan bir istemciyle ilgili soruna neden olabilir.  
   
 ## <a name="creating-a-datacontractserializer-instance"></a>DataContractSerializer örneği oluşturma  
  Öğesinin <xref:System.Runtime.Serialization.DataContractSerializer> bir örneğini oluşturmak önemli bir adımdır. Oluşturma işleminden sonra ayarları değiştiremezsiniz.  

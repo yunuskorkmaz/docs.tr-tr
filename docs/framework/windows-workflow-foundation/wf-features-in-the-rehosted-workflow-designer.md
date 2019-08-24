@@ -2,12 +2,12 @@
 title: Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 69c3577c82c7a0899fb94461255721f4b2ab3ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913701"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987229"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 .NET Framework 4,5 ' de Windows Workflow Foundation (WF), iş akışı Tasarımcısı deneyimine yönelik çeşitli geliştirmeler de dahil olmak üzere birçok yeni özellik sunmuştur. Bu konu başlığı altında, yeniden barındırılan Tasarımcıda Bu özelliklerden hangilerinin desteklendiği ve hangilerinin Şu anda desteklenmeyen ayrıntıları verilmektedir.
@@ -22,7 +22,7 @@ ms.locfileid: "69913701"
  .NET Framework 4,5 ' dan önce, iş akışlarındaki tüm ifadeler yalnızca Visual Basic yazdırılabilir. .NET Framework 4,5 ' de Visual Basic ifadeler yalnızca Visual Basic kullanılarak oluşturulan projeler için kullanılır. Artık C# Visual projeleri ifadeler C# için kullanılır. Visual Studio 2012 ' de iş akışları yazarken, tam işlevli C# bir ifade düzenleyicisine, dilbilgisi vurgulama ve IntelliSense gibi yetenekler sağlanır. C#önceki sürümlerde oluşturulan Visual Basic ifadeleri kullanan iş akışı projeleri çalışmaya devam edecektir.
 
 > [!WARNING]
->  C#yeniden barındırılan tasarımcıda ifadeler desteklenmez.
+> C#yeniden barındırılan tasarımcıda ifadeler desteklenmez.
 
 ## <a name="new-designer-capabilities"></a>Yeni tasarımcı özellikleri
 
@@ -30,7 +30,7 @@ ms.locfileid: "69913701"
  .NET Framework 4,5 ile tanıtılan [dosyalardaki](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bul](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bul özellikleri yeniden barındırılan tasarımcıda desteklenmez. Arama `Toolbox` , yeniden barındırılan tasarımcıda desteklenir. Bu özellikler hakkında daha fazla bilgi için bkz. [Tasarımcı arama](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
->  Yeniden barındırılan tasarımcıda [dosyalarda](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bulma](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bulma desteklenmez.
+> Yeniden barındırılan tasarımcıda [dosyalarda](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bulma](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bulma desteklenmez.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Değişken ve bağımsız değişken tasarımcısında bağlam menüsü öğesini Sil
  ' [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]De, değişkenler ve bağımsız değişkenler yalnızca klavye kullanılarak tasarımcıda silinebilir. .NET Framework 4,5 ' den başlayarak, değişkenler ve bağımsız değişkenler bağlam menüsü kullanılarak silinebilir. Bu özellik, yeniden barındırılan tasarımcıda desteklenir.
@@ -103,7 +103,7 @@ ms.locfileid: "69913701"
  ' [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]De iş akışı doğrulama hataları, iş akışı projesinin oluşturulması sırasında derleme hatası olarak sayılmaz. Bu, iş akışı doğrulama hataları olsa bile, iş akışı projesi oluşturmanın başarılı olması anlamına gelir. .NET Framework 4,5 ' de, iş akışı doğrulama hataları yapılandırmanın başarısız olmasına neden olur.
 
 > [!WARNING]
->  Yeniden barındırılan tasarımcıda derleme zamanı doğrulaması desteklenmez.  
+> Yeniden barındırılan tasarımcıda derleme zamanı doğrulaması desteklenmez.  
   
 ### <a name="design-time-background-validation"></a>Tasarım zamanı arka plan doğrulaması  
  ' [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]De, iş akışları bir ön plan işlemi olarak doğrulanmıştı, bu da karmaşık veya zaman alıcı doğrulama işlemleri sırasında Kullanıcı arabirimini engelleyebilir. İş akışı doğrulaması artık bir arka plan iş parçacığında gerçekleşirken UI engellenmeyecektir.  
@@ -142,4 +142,4 @@ ms.locfileid: "69913701"
  Sözleşme-ilk iş akışı geliştirme aracı, geliştiricinin ilk olarak kodda bir sözleşme tasarlamasına olanak tanır ve ardından Visual Studio 'da birkaç tıklama ile her işlemi temsil eden araç kutusunda otomatik olarak bir etkinlik şablonu oluşturur. Bu etkinlikler daha sonra, sözleşme tarafından tanımlanan işlemleri uygulayan bir iş akışı oluşturmak için kullanılır. İş akışı Tasarımcısı, bu işlemlerin uygulandığından ve iş akışının imzasının sözleşme imzasıyla eşleştiğinden emin olmak için iş akışı hizmetini doğrular. Geliştirici, bir iş akışı hizmetini uygulanan sözleşmelerin bir koleksiyonuyla de ilişkilendirebilirler. Sözleşme-ilk iş akışı hizmeti geliştirme hakkında daha fazla bilgi için [bkz. nasıl yapılır: Mevcut bir hizmet sözleşmesini](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)tüketen bir iş akışı hizmeti oluşturun.  
   
 > [!WARNING]
->  Sözleşme-ilk iş akışı geliştirme iş akışı tasarımcısında desteklenmez.
+> Sözleşme-ilk iş akışı geliştirme iş akışı tasarımcısında desteklenmez.

@@ -6,35 +6,38 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 2fb4ffd4d2f39f0b11f1db4d152c5922e1ac4d19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1088781a7780df71773b01a3816f024562abfcaf
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973816"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69986981"
 ---
-# <a name="windows-forms-controls"></a>Windows Forms Denetimleri
-Tasarım ve kullanıcı arabirimi, Windows Forms uygulamalarının değiştirme gibi ekleme, hizalama ve yerleştirmenize gerekecektir. Denetimleri form nesnelerin içerdiği nesneleridir. Her denetim türü kendi özellikleri, yöntemleri ve belirli bir amaç için uygun hale getiren olayları sahiptir. Tasarımcıda denetimleri işlemenizi ve denetimlerini çalışma zamanında dinamik olarak eklemek için kod yazın.  
-  
-## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms’a Denetimler Yerleştirme](putting-controls-on-windows-forms.md)  
- Formlar üzerindeki denetimler yerleştirme ilgili bağlantılar sağlar.  
-  
- [Windows Forms’da Denetimleri Düzenleme](arranging-controls-on-windows-forms.md)  
- Forms'da denetimleri düzenleme için ilgili bağlantılar sağlar.  
-  
- [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- Klavye kısayolları, metin etiketlerini kullanır, denetimleri ve değiştirici tuşlar açıklar.  
-  
- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
- Windows Forms ve temel işlemleri her denetimi ile gerçekleştirebileceğiniz çalışmak denetimleri listeler.  
-  
- [.NET Framework ile Özel Windows Forms Denetimleri Geliştirme](developing-custom-windows-forms-controls.md)  
- Arka plan bilgileri ve özel Windows Forms denetimleri geliştirme kullanıcılara yardımcı olmak için örnekleri sağlar.  
-  
- [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](developing-windows-forms-controls-at-design-time.md)  
- Tasarım ve devralma yoluyla özel denetimler oluşturma teknikleri açıklar.  
-  
-## <a name="related-sections"></a>İlgili Bölümler  
- [İstemci Uygulamaları](../../develop-client-apps.md)  
- Windows tabanlı uygulamalar geliştirmeye genel bakış sağlar.  
+# <a name="windows-forms-controls"></a>Windows Forms denetimleri
+
+Windows Forms uygulamalarınızın Kullanıcı arabirimini tasarlarken ve değiştirirken, denetimleri eklemeniz, hizalamanız ve konumlandırmanız gerekecektir. Denetimler form nesnelerinde yer alan nesnelerdir. Her denetim türü kendi özellikler, Yöntemler ve belirli bir amaca uygun hale getirmek için olaylar kümesine sahiptir. Tasarımcıda denetimleri işleyebilir ve çalışma zamanında dinamik olarak denetim eklemek için kod yazabilirsiniz.
+
+## <a name="in-this-section"></a>Bu bölümde
+
+[Windows Forms denetimleri yerleştirme](putting-controls-on-windows-forms.md)\
+Formlara denetimler yerleştirilerek ilgili bağlantılar sağlar.
+
+[Windows Forms denetimleri düzenleme](how-to-align-multiple-controls-on-windows-forms.md)\
+Formlarda denetimleri düzenleme ile ilgili makaleler.
+
+[Bireysel Windows Forms denetimlerini etiketleme ve bunlara kısayollar sağlama](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
+Klavye kısayollarının, denetimlerde metin etiketlerinin ve değiştirici anahtarların kullanımını açıklar.
+
+[Windows Forms için kullanılacak denetimler](controls-to-use-on-windows-forms.md)\
+Windows Forms ile birlikte çalışan denetimleri ve her denetim ile gerçekleştirebileceğiniz temel şeyleri listeler.
+
+[.NET Framework ile özel Windows Forms denetimleri geliştirme](developing-custom-windows-forms-controls.md)\
+, Kullanıcıların özel Windows Forms denetimleri geliştirmelerine yardımcı olacak arka plan bilgileri ve örnekler sağlar.
+
+[Tasarım zamanında Windows Forms denetimleri geliştirme](developing-windows-forms-controls-at-design-time.md)\
+Tasarım ve devralma aracılığıyla özel denetimler oluşturma tekniklerini açıklar.
+
+## <a name="related-sections"></a>İlgili bölümler
+
+[İstemci uygulamaları](../../develop-client-apps.md)\
+Windows tabanlı uygulamalar geliştirmeye genel bir bakış sağlar.

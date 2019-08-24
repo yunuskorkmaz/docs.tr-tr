@@ -3,12 +3,12 @@ title: WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 0873e878fca3fe9723c23f78d647aa443f6d0152
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9ade6b0d9e4aadb353ca148f868d548fbaacfbc3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915513"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987705"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation Kimlik Doğrulaması Modülüne Genel Bakış
 Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS-FAD) aracılığıyla ASP.NET uygulamalarında federal kimlik doğrulaması desteği içerir. Bu konu, federal kimlik doğrulamanın nasıl çalıştığını ve nasıl kullanılacağını anlamanıza yardımcı olur.  
@@ -99,7 +99,7 @@ Windows Identity Foundation (WıF), WS-Federasyon kimlik doğrulama modülü (WS
  Aşağıdaki XML, bir ASP.NET bağlı olan taraf (RP) uygulamasının yapılandırmasını gösterir. <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> Ve yapılandırma<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>bölümleriöğesialtınaeklenir `<configSections>` . Sam ve WS-FAD, `<system.webServer>` `<modules>` öğesinin altındaki / http modüllerine eklenir. Son olarak, `<system.identityModel>` WIF bileşenleri `<identityConfiguration>` ve / `<system.identityModel.services>` öğelerialtındayapılandırılır`<federationConfiguration>` . / Bu yapılandırma, varsayılan tanımlama bilgisi işleyicisidir ve `<cookieHandler>` öğesinde belirtilen bir tanımlama bilgisi işleyici türü olmadığından, öbekli tanımlama bilgisi işleyicisini belirtir.  
   
 > [!WARNING]
->  Aşağıdaki örnekte `requireHttps` , hem `<wsFederation>` öğesinin `requireSsl` özniteliği hem de `<cookieHandler>` öğesi `false`özniteliği. Bu, olası bir güvenlik tehdidi sunar. Üretimde, bu değerlerin her ikisi de ayarlanmalıdır `true`.  
+> Aşağıdaki örnekte `requireHttps` , hem `<wsFederation>` öğesinin `requireSsl` özniteliği hem de `<cookieHandler>` öğesi `false`özniteliği. Bu, olası bir güvenlik tehdidi sunar. Üretimde, bu değerlerin her ikisi de ayarlanmalıdır `true`.  
   
 ```xml  
 <configuration>  

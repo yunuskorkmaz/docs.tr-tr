@@ -2,12 +2,12 @@
 title: Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: c5dc80391ec5f655fadd31c59eef76015b9965d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949612"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988226"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Net.TCP Bağlantı Noktası Hizmetini Yapılandırma
 Net. TCP aktarımını kullanan şirket içinde barındırılan hizmetler, `ListenBacklog` ve gibi çeşitli gelişmiş ayarları denetleyebilir ve `MaxPendingAccepts`bu da ağ iletişimi için kullanılan temeldeki TCP yuvasının davranışını yönetir. Ancak, her bir yuva için bu ayarlar varsayılan olarak etkinleştirilen bağlantı noktası paylaşımını devre dışı bırakılmışsa yalnızca bağlama düzeyinde geçerlidir.  
@@ -59,7 +59,7 @@ Net. TCP aktarımını kullanan şirket içinde barındırılan hizmetler, `List
 > Kullanıcı hesabı denetimi (UAC) etkin olan sistemlerde,hesaplarıYöneticilergrubununbirüyesiolsada,yerelkullanıcılaryükseltilmişizinlergerektirir.[!INCLUDE[wv](../../../../includes/wv-md.md)] Bu kullanıcıların bağlantı noktası paylaşım hizmetini yükseltme olmadan kullanmasına izin vermek için, kullanıcının SID 'si (veya kullanıcının üye olduğu bir grubun SID 'si) SMSvcHost. exe. config dosyasının \<AllowAccounts > bölümüne açıkça eklenmelidir.  
   
 > [!WARNING]
->  Varsayılan SMSvcHost. exe. config dosyası, SMSvcHost. `etwProviderId` exe izlemenin hizmet izlemelerinde kesintiye uğramasını engellemek için bir özel belirtir.  
+> Varsayılan SMSvcHost. exe. config dosyası, SMSvcHost. `etwProviderId` exe izlemenin hizmet izlemelerinde kesintiye uğramasını engellemek için bir özel belirtir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -2,36 +2,36 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: d4908eb75324d4316ea615d1a0acc286750752e7
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487712"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988579"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
-Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri yelpazedeki Web tarayıcıları dahil olmak üzere, olası istemcileri tarafından erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimleri vardır:  
+Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri, Web tarayıcıları dahil olmak üzere en geniş olası istemciler arasında erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
   
-- **URI ve URI İşleme** URI'ler, WEB HTTP Hizmetleri tasarımında merkezi bir rol oynar. WCF WEB HTTP programlama modeli kullanan <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> URI işleme özelliklerini sağlayan sınıflar.  
+- URI **'ler ve URI işleme** URI 'Ler, WEB HTTP Hizmetleri tasarımında merkezi bir rol oynar. WCF Web http programlama modeli, <xref:System.UriTemplate> URI işleme özellikleri sağlamak için ve <xref:System.UriTemplateTable> sınıflarını kullanır.  
   
-- **GET ve POST işlemleri desteği** WEB HTTP Hizmetleri GET fiili kullanımı için veri alma, çeşitli ek olarak veri değişikliği ve Uzaktan çağırma fiilleri çağırma. WCF WEB HTTP programlama modeli kullanan <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> hizmet işlemleri hem GET hem de diğer HTTP fiilleri gibi PUT, POST ilişkilendirmek ve SİLEBİLİRSİNİZ.  
+- **Get ve post işlemleri Için destek** WEB HTTP Hizmetleri, veri değişikliği ve uzaktan çağırma için çeşitli Invoke fiillerinin yanı sıra veri alımı için GET fiilini kullanır. WCF Web http programlama modeli, hizmet işlemlerini <xref:System.ServiceModel.Web.WebGetAttribute> put <xref:System.ServiceModel.Web.WebInvokeAttribute> , post ve DELETE gibi get ve diğer http yüklemleri ile ilişkilendirmek için ve kullanır.  
   
-- **Birden çok veri biçimini** Web stili Hizmetleri'ni pek çok SOAP iletilerini yanı sıra veri işleme. WCF WEB HTTP programlama modeli kullanan <xref:System.ServiceModel.WebHttpBinding> ve <xref:System.ServiceModel.Description.WebHttpBehavior> XML belgeleri, JSON veri nesnesi ve ikili içerik görüntü, video dosyaları veya düz metin gibi akışları dahil olmak üzere birçok farklı veri biçimleri desteklemek için.  
+- **Birden çok veri biçimi** Web stili hizmetler, SOAP iletilerine ek olarak birçok türdeki veriyi işler. WCF Web http programlama modeli, XML belgeleri <xref:System.ServiceModel.WebHttpBinding> , <xref:System.ServiceModel.Description.WebHttpBehavior> JSON veri nesnesi ve görüntü, video dosyaları ya da düz metin gibi ikili içerik akışları gibi birçok farklı veri biçimini desteklemek için ve kullanır.  
   
- WCF WEB HTTP programlama modeli ulaşma WCF WEB HTTP Hizmetleri, AJAX ve JSON Hizmetleri ve dağıtım (ATOM/RSS) akışlarını Web stili senaryoları kapsayacak şekilde genişletir. AJAX ve JSON hizmetleri hakkında daha fazla bilgi için bkz. [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Dağıtım hakkında daha fazla bilgi için bkz: [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
+ WCF WEB HTTP programlama modeli, WEB HTTP Hizmetleri, AJAX ve JSON Hizmetleri ve dağıtım (ATOM/RSS) akışlarını içeren Web stili senaryolarını kapsamak için WCF 'nin erişimini genişletir. AJAX ve JSON Hizmetleri hakkında daha fazla bilgi için bkz. [AJAX Tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Dağıtım hakkında daha fazla bilgi için bkz. [WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Bir WEB HTTP hizmetinden döndürülen veri türleri hakkında ek kısıtlama yoktur. Bir WEB HTTP hizmeti işleminin serializable bir tür döndürülebilir. Hangi veri türlerini URL'de belirtilebilir bir sınırlama yoktur bir web tarayıcısı tarafından WEB HTTP hizmeti işlemleri olabileceğinden çağırın. Varsayılan olarak desteklenen hangi türleri hakkında daha fazla bilgi için bkz. **UriTemplate sorgu dizesi parametreleri ve URL'leri** bölümüne bakın. Gerçek parametre türü için bir URL içinde belirtilen parametreleri nasıl dönüştürme yapılacağını belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamanız sağlayarak varsayılan davranış değiştirilebilir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ WEB HTTP hizmetinden döndürülebilecek veri türlerinde ek kısıtlama yoktur. Herhangi bir serileştirilebilir tür, bir WEB HTTP hizmeti işleminden döndürülebilir. WEB HTTP hizmet işlemleri bir Web tarayıcısı tarafından çalıştırılabildiğinden, URL 'de hangi veri türlerinin belirtibileceği konusunda bir sınırlama vardır. Varsayılan olarak desteklenen türler hakkında daha fazla bilgi için aşağıdaki **UriTemplate sorgu dizesi parametreleri ve URL 'leri** bölümüne bakın. Varsayılan davranış, URL 'de belirtilen parametrelerin gerçek parametre türüne nasıl dönüştürüleceğini belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamanız sağlanarak değiştirilebilir. Daha fazla bilgi için bkz.<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  WCF WEB HTTP programlama modeli ile yazılmış hizmetler SOAP iletilerini kullanmayın. SOAP kullanılmadığından WCF tarafından sağlanan güvenlik özellikleri kullanılamaz. Ancak taşıma tabanlı güvenlik hizmetiniz HTTPS ile barındırarak kullanabilirsiniz. WCF güvenlik hakkında daha fazla bilgi için bkz: [güvenliğine genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+>  WCF WEB HTTP programlama modeliyle yazılan hizmetler SOAP iletileri kullanmaz. SOAP kullanılmadığından, WCF tarafından sunulan güvenlik özellikleri kullanılamaz. Ancak, hizmetinizi HTTPS ile barındırarak aktarım tabanlı güvenlik kullanabilirsiniz. WCF güvenliği hakkında daha fazla bilgi için bkz. [Güvenliğe genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  WebDAV uzantısının yüklenmesi için IIS Web HTTP Hizmetleri tüm PUT isteklerini işlemek için uzantı çalışır WebDAV bir HTTP 405 hata döndürmek neden olabilir. Bu sorunu çözmek için WebDAV uzantısının kaldırın veya WebDAV uzantısının web siteniz için devre dışı bırakabilirsiniz. Daha fazla bilgi için [IIS ve WebDav](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+> WebDAV uzantısının tüm PUT isteklerini işlemeye çalıştığı için, IIS için WebDAV uzantısını yüklemek Web HTTP hizmetlerinin HTTP 405 hatası döndürmesine neden olabilir. Bu sorunu geçici olarak çözmek için WebDAV uzantısını kaldırabilir veya Web siteniz için WebDAV uzantısını devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [IIS ve WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
-## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable ile işleme URI'si  
- URI şablonları, yapısal olarak benzer bir URI'leri büyük kümesini ifade etmek için verimli bir söz dizimi sağlar. Örneğin, aşağıdaki şablon "a" ile başlayan ve "c" Ara kesiminin ile değer bakılmaksızın son üç segment URI'lerin kümesini ifade eder: bir / {/c segmentlere}  
+## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>UriTemplate ve UriTemplateTable ile URI Işleme  
+ URI şablonları, yapısal olarak benzer URI 'lerin büyük kümelerini ifade etmek için etkili bir sözdizimi sağlar. Örneğin, aşağıdaki şablon, "a" ile başlayan ve ara segmentin değeri olmadan "c" ile biten üç kesimli tüm URI 'lerin kümesini ifade eder: a/{segment}/c  
   
- Bu şablon, URI aşağıdaki gibi açıklanmaktadır:  
+ Bu şablon, aşağıdaki gibi URI 'Leri açıklar:  
   
 - a/x/c  
   
@@ -39,24 +39,24 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli ile WCF WEB H
   
 - a/z/c  
   
-- ve benzeri.  
+- vb.  
   
- Bu şablonda değişmez değer yerine değişken bir segment kuşak gösterim ("{segment}") gösterir.  
+ Bu şablonda, süslü ayraç gösterimi ("{segment}"), değişmez değer yerine bir değişken segmentini gösterir.  
   
- .NET framework URI şablonları ile çalışma adlı bir API sağlar <xref:System.UriTemplate>. `UriTemplates` aşağıdakileri yapmanıza olanak sağlar:  
+ .NET Framework, adlı <xref:System.UriTemplate>URI şablonlarıyla ÇALıŞMAK için bir API sağlar. `UriTemplates`şunları yapmanıza izin verir:  
   
-- Aşağıdakilerden birini çağırabilirsiniz `Bind` üretmek için parametreleri kümesini yöntemleriyle bir *tamamen-kapalı URI* şablonu ile eşleşen. Başka bir deyişle, tüm değişkenler için URI şablonu gerçek değerlerle değiştirilir.  
+- Şablonla eşleşen *tam kapalı* bir URI `Bind` oluşturmak için bir parametre kümesiyle yöntemlerden birini çağırabilirsiniz. Bu, URI şablonundaki tüm değişkenlerin gerçek değerlerle değiştirildiği anlamına gelir.  
   
-- Çağırabilirsiniz `Match`() ile bir aday URI, kendi destekçi URI bölümleri ve şablon değişkenleri göre etiketli URI farklı kısımlarını içeren bir sözlüğü döndürür bir aday bölmeniz için bir şablon kullanır.  
+- Bir aday URI `Match`ile () çağırabilirsiniz. Bu, bir aday URI 'yi yapısal parçalara bölmek için şablon kullanır ve şablondaki değişkenlere göre etiketlendiği farklı URI parçalarını içeren bir sözlük döndürür.  
   
-- `Bind`() ve `Match`(), böylece çağırabilirsiniz inverses olan `Match`( `Bind`(x)); başladığınız sürümle aynı ortamıyla geri dönün.  
+- `Bind`() ve `Match`(), ( `Bind`(x)) çağırabilmeniz `Match`ve ile başlattığınız aynı ortamla geri dönebilmeniz için ters ayarlanır.  
   
- (Bir istek URİ'SİNDE tabanlı bir hizmet işlemi için gönderme olduğu gerekli özellikle sunucu üzerinde) birden çok kez olan bir dizi izlemek istediğiniz <xref:System.UriTemplate> ele bağımsız olarak içerdiği her bir veri yapısına nesneleri şablonları. <xref:System.UriTemplateTable> URI şablonları kümesini temsil eder ve verilen bir dizi şablonları ve bir aday URI en iyi eşleşmeyi seçer. Gerekli olan her yerde kullanabilirsiniz, böylece bu (WCF dahil) tüm belirli ağ yığınını ile ilişkili değildir.  
+ Bir veri yapısında bulunan bir <xref:System.UriTemplate> nesne kümesinin her birini bağımsız olarak ele geçirebileceği birçok zaman (özellikle sunucuda, URI 'ye dayalı bir hizmet işlemine bir istek gönderen gereklidir) vardır. şablondan. <xref:System.UriTemplateTable>bir dizi URI şablonu temsil eder ve bir dizi şablon ve aday URI değeri verilen en iyi eşleşmeyi seçer. Bu, herhangi bir ağ yığını (WCF dahil) ile bağlantılı değildir, bu sayede gerektiğinde kullanabilirsiniz.  
   
- WCF hizmet modeli kullanır <xref:System.UriTemplate> ve <xref:System.UriTemplateTable> hizmet işlemleri tarafından açıklanan bir URI'leri kümesi ile ilişkilendirmek için bir <xref:System.UriTemplate>. Bir hizmet işlemi ile ilişkili bir <xref:System.UriTemplate>, kullanarak <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute>. Hakkında daha fazla bilgi için <xref:System.UriTemplate> ve <xref:System.UriTemplateTable>, bkz: [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ WCF hizmet modeli, hizmet işlemlerini bir <xref:System.UriTemplate> <xref:System.UriTemplate>tarafından <xref:System.UriTemplateTable> tanımlanan bir URI kümesiyle ilişkilendirmek için ve ' ı kullanır. <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.UriTemplate> Ya<xref:System.ServiceModel.Web.WebInvokeAttribute>da kullanılarak bir hizmet işlemi ile ilişkilendirilir. <xref:System.UriTemplate> Ve<xref:System.UriTemplateTable>hakkında daha fazla bilgi için bkz. [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
-## <a name="webget-and-webinvoke-attributes"></a>WebGet ve Webınvoke öznitelikleri  
- WCF WEB HTTP Hizmetleri alma fiiller (örneğin HTTP GET) ek olarak çeşitli kullanımını fiiller (örneğin HTTP POST, PUT ve DELETE) çağırır. WCF WEB HTTP programlama modeli sağlar denetimi hem URI şablonu ve hizmet işlemlerini ile ilişkili fiili hizmet geliştiricileri <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> Ve <xref:System.ServiceModel.Web.WebInvokeAttribute> denetlemenize nasıl tek işlemler için bir URI'leri bağlanan ve HTTP yöntemleri bu bir URI'leri ile ilişkili izin verir. Örneğin, ekleme <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> aşağıdaki kodda.  
+## <a name="webget-and-webinvoke-attributes"></a>WebGet ve Webvoke öznitelikleri  
+ WCF WEB HTTP Hizmetleri, çeşitli Invoke fiillerine (örneğin, HTTP POST, PUT ve DELETE) ek olarak alma fiillerini (örneğin, HTTP GET) kullanır. WCF Web http programlama modeli, Service Developers 'in <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute>ile hizmet işlemleriyle ilişkili olan URI şablonunu ve fiilini denetlemesine olanak tanır. <xref:System.ServiceModel.Web.WebGetAttribute> Ve ,<xref:System.ServiceModel.Web.WebInvokeAttribute> tek tek işlemlerin URI 'lere ve bu URI 'ler ile ilişkili http yöntemlerine nasıl bağlandığını denetlemenize olanak tanır. Örneğin, aşağıdaki koda <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> ekleme.  
   
 ```  
 [ServiceContract]  
@@ -74,13 +74,13 @@ interface ICustomer
 }  
 ```  
   
- Yukarıdaki kod, aşağıdaki HTTP isteklerini yapmanızı sağlar.  
+ Yukarıdaki kod, aşağıdaki HTTP isteklerini yapmanıza olanak sağlar.  
   
  `GET /GetCustomer`  
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> POST, ancak varsayılan olarak, diğer fiiller için de kullanabilirsiniz.  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute>Varsayılan olarak postala, ancak diğer fiiller için de kullanabilirsiniz.  
   
 ```  
 [ServiceContract]  
@@ -96,10 +96,10 @@ interface ICustomer
 }  
 ```  
   
- WCF WEB HTTP programlama modeli kullanan bir WCF hizmeti için tam bir örnek görmek için bkz: [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
+ WCF Web http programlama modelini kullanan bir WCF hizmetinin tüm bir örneğini görmek için bkz [. nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
   
-## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL'leri  
- Bir hizmet işlemi ile ilişkili olan bir URL yazarak Web stili hizmetler bir Web tarayıcısından çağrılabilir. Bu hizmet işlemleri URL'de bir dize biçiminde belirtilmelidir sorgu dizesi parametreleri alabilir. Aşağıdaki tabloda, bir URL ve kullanılan biçimi içinde geçirilebilir türleri gösterilmektedir.  
+## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate sorgu dizesi parametreleri ve URL 'Leri  
+ Web stili hizmetler bir Web tarayıcısından, bir hizmet işlemiyle ilişkili bir URL yazılarak çağrılabilir. Bu hizmet işlemleri, URL içindeki bir dize biçiminde belirtilmesi gereken sorgu dizesi parametreleri alabilir. Aşağıdaki tabloda bir URL ve kullanılan biçim içinde geçirilebilecek türler gösterilmektedir.  
   
 |Tür|Biçimi|  
 |----------|------------|  
@@ -111,21 +111,21 @@ interface ICustomer
 |<xref:System.UInt16>|0 - 65535|  
 |<xref:System.UInt32>|0 - 4,294,967,295|  
 |<xref:System.UInt64>|0 - 18,446,744,073,709,551,615|  
-|<xref:System.Single>|-3.402823e38 - 3.402823e38 (üstel gösterim gerekli değildir)|  
-|<xref:System.Double>|-1.79769313486232e308 - 1.79769313486232e308 (üstel gösterim gerekli değildir)|  
+|<xref:System.Single>|-3.402823 E38-3.402823 E38 (üs gösterimi gerekli değildir)|  
+|<xref:System.Double>|-1.79769313486232 E308-1.79769313486232 E308 (üs gösterimi gerekli değildir)|  
 |<xref:System.Char>|Herhangi bir tek karakter|  
-|<xref:System.Decimal>|Herhangi bir ondalık standart gösteriminde (üs yok)|  
-|<xref:System.Boolean>|TRUE veya False (/ küçük harfe duyarlı durumda)|  
-|<xref:System.String>|Herhangi bir dize (dize desteklenmez ve yok kaçış yapılır null)|  
-|<xref:System.DateTime>|AA/GG/YYYY<br /><br /> AA/GG/YYYY SS [ÖÖ&AMP;#124;PM]<br /><br /> Ay gün/yıl<br /><br /> Ayın günü yıl ss [ÖÖ&#124;PM]|  
-|<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Burada DD HH günler ve = = saat, dakika, SS aa = saniye =|  
-|<xref:System.Guid>|Örneğin bir GUID:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
-|<xref:System.DateTimeOffset>|AA/GG/YYYY SS: DD: SS<br /><br /> Burada DD HH günler ve = = saat, dakika, SS aa = saniye =|  
-|Numaralandırmalar|Numaralandırma değeri örneğin, aşağıdaki kodda gösterildiği gibi sabit listesi tanımlar.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Herhangi bir tek numaralandırma değerlerinden (veya bunlara karşılık gelen bir tamsayı değerler), sorgu dizesinde belirtilebilir.|  
-|Sahip türleri bir `TypeConverterAttribute` , türüne dönüştürebilir ve gelen bir dize gösterimi.|Tür dönüştürücü üzerinde bağlıdır.|  
+|<xref:System.Decimal>|Standart gösterimdeki herhangi bir ondalık (üs yok)|  
+|<xref:System.Boolean>|True veya false (büyük/küçük harf duyarsız)|  
+|<xref:System.String>|Herhangi bir dize (null dize desteklenmez ve hiçbir kaçış yapılmaz)|  
+|<xref:System.DateTime>|AA/GG/YYYY<br /><br /> AA/GG/YYYY HH: MM: SS [&#124;PM]<br /><br /> Ayın günü yılı<br /><br /> Ay günü yıl HH: MM: SS [&#124;PM]|  
+|<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
+|<xref:System.Guid>|Bir GUID, örneğin:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
+|<xref:System.DateTimeOffset>|AA/GG/YYYY SS: DD: SS MM: SS<br /><br /> Burada gg = gün, SS = saat, MM = dakika, SS = saniye|  
+|Numaralandırmalar|Örneğin, aşağıdaki kodda gösterildiği gibi, numaralandırmayı tanımlayan sabit listesi değeri.<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> Sorgu dizesinde her bir numaralandırma değeri (veya ilgili tamsayı değerleri) belirtilebilir.|  
+|' A `TypeConverterAttribute` sahip olan türler, türü dize gösterimine ve öğesinden dönüştürebilir.|Tür Dönüştürücüne bağlıdır.|  
   
-## <a name="formats-and-the-wcf-web-http-programming-model"></a>Biçimleri ve WCF WEB HTTP programlama modeli  
- WCF WEB HTTP programlama modeli, birçok farklı veri biçimleri ile çalışmaya yeni özelliğe sahiptir. Bağlama katmanında <xref:System.ServiceModel.WebHttpBinding> okuyabilir ve aşağıdaki farklı türlerde veri yazabilirsiniz:  
+## <a name="formats-and-the-wcf-web-http-programming-model"></a>Biçimler ve WCF WEB HTTP programlama modeli  
+ WCF WEB HTTP programlama modelinin birçok farklı veri biçiminde çalışmak için yeni özellikleri vardır. Bağlama katmanında <xref:System.ServiceModel.WebHttpBinding> , aşağıdaki farklı veri türlerini okuyup yazabilir:  
   
 - XML  
   
@@ -133,15 +133,15 @@ interface ICustomer
   
 - Donuk ikili akışlar  
   
- WCF WEB HTTP programlama modeli, her türden veriyi işleyebileceği ancak karşı programlama yani <xref:System.IO.Stream>.  
+ Bu, WCF WEB HTTP programlama modelinin herhangi bir türde veriyi işleyebileceği, ancak programlama yoluyla programlama <xref:System.IO.Stream>yapabileceği anlamına gelir.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] Destek için JSON verileri (AJAX) yanı sıra dağıtım akışlarını (ATOM ve RSS dahil) sağlar. Bu özellikler hakkında daha fazla bilgi için bkz. [WCF Web HTTP biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) ve [AJAX tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]JSON verileri (AJAX) ve dağıtım akışları (ATOM ve RSS dahil) için destek sağlar. Bu özellikler hakkında daha fazla bilgi için bkz. [WCF Web http biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF dağıtımı genel bakış](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) ve [AJAX Tümleştirme ve JSON desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
-## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP programlama modeli ve güvenlik  
- WCF WEB HTTP programlama modeli WS - desteklemediği için * protokoller, güvenli bir WCF WEB HTTP hizmeti için tek yoludur hizmeti SSL ile HTTPS üzerinden göstermek için. IIS 7.0 SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS'te SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
+## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP programlama modeli ve güvenliği  
+ WCF WEB HTTP programlama modeli WS-* protokollerini desteklemediğinden, bir WCF WEB HTTP hizmetini güvenli hale getirmenin tek yolu, Hizmeti SSL kullanarak HTTPS üzerinden kullanıma sunmasıdır. IIS 7,0 ile SSL ayarlama hakkında daha fazla bilgi için bkz. [IIS 'de SSL uygulama](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP programlama modeli sorunlarını giderme  
- Ne zaman çağırma WCF WEB HTTP Hizmetleri kullanarak bir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> bir kanal oluşturmak için <xref:System.ServiceModel.Description.WebHttpBehavior> kullanan <xref:System.ServiceModel.EndpointAddress> yapılandırma dosyasını çift ise farklı bir kümesi <xref:System.ServiceModel.EndpointAddress> geçirilir <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
+ <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> Bir kanal <xref:System.ServiceModel.EndpointAddress> <xref:System.ServiceModel.EndpointAddress> oluşturmak için bir kullanarak WCF Web HTTP Hizmetleri çağrılırken, farklı bir öğesine geçirilmiş <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>olsa bile yapılandırma dosyasında kümesini kullanır.<xref:System.ServiceModel.Description.WebHttpBehavior>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

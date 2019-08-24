@@ -1,135 +1,135 @@
 ---
-title: Tanımlama grubu türleri - C# Kılavuzu
-description: C# adsız ve adlandırılmış bir tanımlama grubu türleri hakkında bilgi edinin
+title: Demet türleri- C# kılavuz
+description: İçinde adlandırılmamış ve adlandırılmış demet türleri hakkında bilgi edininC#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882057"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988413"
 ---
-# <a name="c-tuple-types"></a>C# demet türleri
+# <a name="c-tuple-types"></a>C#demet türleri
 
-C# diziler basit bir söz dizimi kullanılarak tanımladığınız türleridir. Avantajları, daha basit bir sözdizimi, dönüştürmeleri (kardinalite adlandırılır) sayısını ve türlerini öğeleri ve tutarlı kuralları kopyalar, eşitlik testleri ve atamaları göre kurallarını içerir. Bir tradeoff diziler bazı devralma ile ilişkili nesne yönelimli deyimlerini desteklemez. Bir genel bakış bölümünde alma [C# 7.0 yenilikleri içindeki diziler](whats-new/csharp-7.md#tuples) makalesi.
+C#tanımlama grupları, hafif bir sözdizimi kullanarak tanımladığınız türlerdir. Daha basit bir sözdizimi, sayıya göre dönüştürme kuralları (kardinalite olarak adlandırılır) ve öğe türleri ve kopyalar, eşitlik testleri ve atamalar için tutarlı kurallar vardır. Zorunluluğunu getirir olarak, tanımlama grupları devralma ile ilişkili nesne odaklı bazı deyimleri desteklemez. 7,0 sürümündeki yenilikler makalesindeki tanımlama bilgileri bölümüne genel bakış alabilirsiniz. [ C# ](whats-new/csharp-7.md#tuples)
 
-Bu makalede, C# 7.0 ve üzeri sürümler tanımlama grupları ile çalışma hakkında onlara ve Başlangıç Kılavuzu kullanmak için farklı yollar diziler dil kuralları öğreneceksiniz.
+Bu makalede, C# 7,0 ve sonraki sürümlerde tanımlama gruplarını ve bunları kullanmanın farklı yollarını ve tanımlama grupları ile çalışmaya yönelik ilk Kılavuzu düzenleyen dil kurallarını öğreneceksiniz.
 
 > [!NOTE]
-> Yeni diziler işlevleri <xref:System.ValueTuple> türleri.
-> NuGet paketini eklemeniz gerekir [ `System.ValueTuple` ](https://www.nuget.org/packages/System.ValueTuple/) türlerini içermez platformlarda kullanmak için.
+> Yeni tanımlama grubu özellikleri <xref:System.ValueTuple> türleri gerektirir.
+> NuGet paketini [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) türleri içermeyen platformlarda kullanabilmek için eklemeniz gerekir.
 >
-> Bu çerçevede teslim türleri kullanan diğer dil özellikleri benzer. Örnekler `async` ve `await` güvenmek `INotifyCompletion` arabirimi ve bağlı LINQ `IEnumerable<T>`. Ancak, .NET, daha fazla platform bağımsız olma gibi teslim mekanizması değişiyor. .NET Framework her zaman aynı temposu dil derleyicisi olarak yükleyeceğiniz değil. Yeni dil özellikleri üzerinde yeni türler kullanan, dil başlayamıyorsunuz türlerine NuGet paketleri olarak kullanılabilir. Bu yeni türleri ve .NET standart API için eklenen framework'ün bir parçası olarak sunulan NuGet paketini gereksinim kaldırılacak.
+> Bu, çerçeveye teslim edilen türleri kullanan diğer dil özelliklerine benzerdir. Örnek olarak ,`IEnumerable<T>`arabirime ve LINQ uygulamasına bağlı olarak verilebilir. `INotifyCompletion` `async` `await` Bununla birlikte, .NET daha fazla platforma bağımlı olduğu için teslim mekanizması değişiyor. .NET Framework, dil derleyicisi ile aynı temposunda her zaman yollanmayabilir. Yeni dil özellikleri yeni türlere dayandığınızda, bu türler dil Özellikleri sevk edildiğinde NuGet paketleri olarak kullanılabilir olacaktır. Bu yeni türler .NET Standard API 'sine eklendikçe ve Framework 'ün bir parçası olarak teslim edildiğinde, NuGet paket gereksinimi kaldırılır.
 
-Yeni bir tanımlama grubu desteği ekleme nedenleri başlayalım. Yöntemler, tek bir nesne döndürür. Diziler, daha kolay, tek bir nesnede birden çok değer paketi sağlar.
+Yeni demet desteği ekleme nedenlerinden başlayalım. Yöntemler tek bir nesne döndürür. Tanımlama grupları bu tek nesnede birden çok değeri daha kolay paketlemenize olanak tanır.
 
-.NET Framework genel zaten `Tuple` sınıfları. Bu sınıfların ancak iki önemli sınırlamalarını vardı. Biri, `Tuple` sınıflar adlandırılan özelliklerini `Item1`, `Item2`ve benzeri. Bu adları anlamsal bilgi taşır. Bunları kullanarak `Tuple` türleri özelliklerin her birini anlamını iletişim sağlamaz. Yeni dil özellikleri bildirme ve bir grup içinde öğeler için anlamsal olarak anlamlı adlar kullanın olanak sağlar.
+.NET Framework zaten genel `Tuple` sınıflar içeriyor. Ancak, bu sınıfların iki önemli sınırlaması vardı. Bunlardan biri `Tuple` için, `Item1` `Item2`özellikleri, vb. olarak adlandırılır. Bu adlar hiçbir anlam bilgisi içermez. Bu `Tuple` türlerin kullanılması, özelliklerin her birinin anlamını karşılayarak iletişim kurmasına imkan vermez. Yeni dil özellikleri, bir tanımlama grubu içindeki öğeler için anlamsal anlamlı adlar bildirme ve kullanma imkanı sağlar.
 
-`Tuple` Sınıfları neden daha fazla performans endişelerini çünkü bunlar başvuru türleri. Aşağıdakilerden birini kullanarak `Tuple` türleri nesneleri ayırma anlamına gelir. Etkin yolları üzerinde çok sayıda küçük nesne ayırma, uygulamanızın performans üzerinde ölçülebilir bir etkisi olabilir. Bu nedenle, diziler için dil desteği yeni yararlanır `ValueTuple` yapılar.
+Sınıflar `Tuple` , başvuru türleri olduklarından daha fazla performans sorunlarına neden olur. `Tuple` Türlerden birini kullanmak nesneleri ayırmayı gösterir. Etkin yollarda birçok küçük nesne ayırmak uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Bu nedenle, tanımlama grupları için dil desteği yeni `ValueTuple` yapıları kullanır.
 
-Bu eksiklikleri önlemek için aşağıdakileri oluşturabilirsiniz bir `class` veya `struct` birden çok öğe yürütmek için. Ne yazık ki sizin için daha fazla iş olduğunu ve tasarım amacınızla gizler. Yapmadan bir `struct` veya `class` hem verileri hem de davranışı ile bir tür tanımlama anlamına gelir. Çoğu zaman, yalnızca birden çok değeri tek bir nesnede depolamak istediğiniz.
+Bu eksiklikleri önlemek için, birden çok öğe taşımak `class` `struct` üzere bir veya oluşturabilirsiniz. Ne yazık ki, sizin için daha fazla çalışma ve tasarım amacınızı gizler. `struct` Ya da`class` hem veri hem de davranışla bir tür tanımladığınız anlamına gelir. Birçok kez yalnızca birden çok değeri tek bir nesnede depolamak istiyorsunuz.
 
-Dil özellikleri ve `ValueTuple` genel yapılar bu demet türleri için herhangi bir davranış (yöntem) ekleyemezsiniz kuralı uygular.
-Tüm `ValueTuple` türleridir *değişebilir yapılar*. Her üye alan genel bir alandır. Bunları çok basit hale getirir. Ancak, diziler, değiştirilemezlik önemli olduğu kullanılmamalıdır anlamına gelir.
+Dil özellikleri ve `ValueTuple` genel yapılar, bu demet türlerine herhangi bir davranış (Yöntem) ekleyemeyeceği kuralını zorlar.
+Tüm türler *değişebilir yapılarda oluşturulur.* `ValueTuple` Her üye alanı bir ortak alandır. Böylece çok hafif hale gelir. Bununla birlikte, bu, her ne kadar önemli olduğu durumlarda başlıkların kullanılması gerektiği anlamına gelir.
 
-Diziler, hem daha basit ve daha esnek veri kapsayıcılardır daha `class` ve `struct` türleri. Bu farklar araştıralım.
+Tanımlama grupları, ve `class` `struct` türlerine göre daha basit ve daha esnek veri kapsayıcılarıdır. Bu farklılıkları keşfedelim.
 
 ## <a name="named-and-unnamed-tuples"></a>Adlandırılmış ve adlandırılmamış diziler
 
-`ValueTuple` Yapı sahip alanları adlı `Item1`, `Item2`, `Item3`ve benzeri varolan tanımlanan özelliklere benzer `Tuple` türleri.
-Bu adlar için kullanabileceğiniz adlar şunlardır *diziler adlandırılmamış*. Bir demet için herhangi bir diğer alan adı belirtmezseniz, adlandırılmamış bir tanımlama grubu oluşturdunuz:
+`Item2` `Item1` `Tuple` Yapının,,, vb. adlı `Item3`alanları var olan türlerde tanımlanan özelliklere benzer şekilde. `ValueTuple`
+Bu adlar, *adlandırılmamış tanımlama grupları*için kullanabileceğiniz tek adlardır. Bir tanımlama grubu için alternatif alan adı sağlamadığınızda, adlandırılmamış bir tanımlama grubu oluşturdunuz:
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-Önceki örnekte demet sabit değeri sabitler kullanılarak başlatıldı ve öğe adları kullanılarak oluşturulan sahip olmaz *demet alan adı projeksiyonlar* C# 7.1 içinde.
+Önceki örnekteki tanımlama grubu, değişmez sabitler kullanılarak başlatılmış ve 7,1 içinde C# *demet alan adı tahminleri* kullanılarak oluşturulan öğe adlarına sahip olmayacaktır.
 
-Ancak, bir tanımlama grubu başlattığınızda her alan için daha iyi adlar vermek yeni dil özelliklerini kullanabilirsiniz. Bunun yapılması oluşturur bir *demet adlı*.
-Adlandırılmış diziler adlı öğe çözümlenmedi `Item1`, `Item2`, `Item3` ve benzeri.
-Ancak herhangi biri söz konusu öğelerin adlı için eş anlamlı sözcükler de sahiptir.
-Adlandırılmış bir tanımlama grubu, her öğe için bir ad belirterek oluşturun. Dizi başlatma bir parçası olarak adlarını belirtin bir yoludur:
+Ancak, bir tanımlama grubu başlattığınızda, her bir alana daha iyi adlar veren yeni dil özellikleri kullanabilirsiniz. Bunun yapılması adlandırılmış bir *tanımlama grubu*oluşturur.
+Adlandırılmış tanımlama gruplarının hala `Item1` `Item2` `Item3` ,, vb. adlı öğeleri vardır.
+Ancak, adlandırmış olduğunuz öğelerin herhangi biri için eş anlamlıları da vardır.
+Her öğe için ad belirterek adlandırılmış bir tanımlama grubu oluşturursunuz. Bir yol, kayıt kümesi başlatmasının parçası olarak adları belirtmektir:
 
 [!code-csharp[NamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#02_NamedTuple "Named tuple")]
 
-Bu eş anlamlıların derleyici tarafından işlenir ve dil etkili bir şekilde adlandırılmış'u diziler böylece kullanabilirsiniz. Roslyn API'leri kullanılarak bu anlamsal adları IDE'ler ve düzenleyicilerden okuyabilirsiniz. Adlandırılmış bir tanımlama grubu öğelerinin aynı derlemenin başka bir yerindeki bu anlamsal adlarıyla başvurabilirsiniz. Derleyici ile tanımladığınız adlarını değiştirir `Item*` derlenen Çıkışta oluştururken eşdeğerleri. Derlenmiş Microsoft Ara dil (MSIL) bu öğeleri tanıdığımıza adları içermez.
+Adlandırılmış tanımlama gruplarını etkin bir şekilde kullanabilmeniz için bu eş anlamlılar derleyici ve dil tarafından işlenir. Ides ve düzenleyiciler, Roslyn API 'Lerini kullanarak bu anlam adlarını okuyabilir. Adlandırılmış bir tanımlama grubunun öğelerine aynı derlemenin herhangi bir yerindeki anlam adlarıyla başvurabilirsiniz. Derleyici, derlenmiş çıktıyı oluştururken `Item*` eşdeğerleriyle tanımladığınız adların yerini alır. Derlenen Microsoft ara dili (MSIL), bu öğeleri verdiğiniz adları içermez.
 
-C# 7.1 ile başlayarak, alan adları bir demet için demet başlatmak için kullanılan değişkenleri sağlanabilir. Bu olarak adlandırılır  **[demet projeksiyon başlatıcılar](#tuple-projection-initializers)**. Aşağıdaki kod adlı bir kayıt düzeni oluşturur `accumulation` öğelerle `count` (tamsayı), ve `sum` (çift).
+7,1 ' C# den başlayarak, kayıt düzeni için alan adları, kayıt düzeni başlatmak için kullanılan değişkenlerden bulunabilir. Bu, **[demet yansıtma başlatıcıları](#tuple-projection-initializers)** olarak adlandırılır. Aşağıdaki kod öğeleriyle `count` (bir tamsayı) `accumulation` ve `sum` (bir Double) adlı bir tanımlama grubu oluşturur.
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
-Derleyici, genel yöntemleri veya özellikleri döndürülen diziler için oluşturulan bu adları iletişim kurması gerekir. Bu gibi durumlarda, derleyicinin ekler bir <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> yöntemi özniteliği. Bu öznitelik içeren bir <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> dizideki öğelerin her biri için verilen adları içeren özellik listesi.
+Derleyici, ortak Yöntemler veya özelliklerden döndürülen tanımlama grupları için oluşturduğunuz adları iletmelidir. Bu durumlarda, derleyici yöntemine bir <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute> öznitelik ekler. Bu öznitelik, kayıt <xref:System.Runtime.CompilerServices.TupleElementNamesAttribute.TransformNames> grubundaki her öğeye verilen adları içeren bir List özelliği içerir.
 
 > [!NOTE]
-> Visual Studio gibi geliştirme araçları da bu meta verileri okuyun ve IntelliSense ve meta verileri alan adları kullanarak diğer özellikleri sağlar.
+> Visual Studio gibi geliştirme araçları da bu meta verileri okur ve meta veri alanı adlarını kullanarak IntelliSense ve diğer özellikleri sağlar.
 
-Bu yeni diziler temelleri temel anlamak önemlidir ve `ValueTuple` atama kurallarını anlamak için türü adlı birbirine tanımlama grubu.
+Adlandırılmış tanımlama gruplarını birbirlerine atamaya yönelik kuralları anlamak için yeni tanımlama bilgileri ve `ValueTuple` türün temel temellerini anlamak önemlidir.
 
-## <a name="tuple-projection-initializers"></a>Tanımlama grubu projeksiyon başlatıcıları
+## <a name="tuple-projection-initializers"></a>Demet projeksiyon başlatıcıları
 
-Genel olarak, bir dizi başlatma ifadesinin sağ tarafı değişken veya alan adları kullanarak demet projeksiyon başlatıcılar çalışır.
-Açık bir ad belirtilmezse, öngörülen herhangi bir ad öncelik kazanır. Örneğin, aşağıdaki başlatıcısında öğeleridir `explicitFieldOne` ve `explicitFieldTwo`değil `localVariableOne` ve `localVariableTwo`:
+Genel olarak, demet yansıtma başlatıcıları, bir demet başlatma bildiriminin sağ tarafındaki değişken veya alan adlarını kullanarak çalışır.
+Açık bir ad verilirse, bu, yansıtılan herhangi bir adın önüne geçer. Örneğin, `explicitFieldOne` aşağıdaki başlatıcıda öğeler ve `explicitFieldTwo`değil `localVariableOne` `localVariableTwo`, ve:
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Burada açık bir ad sağlanmazsa herhangi bir alan için geçerli bir örtük adı yansıtılır. Anlam adları açıkça veya örtülü olarak sağlamak için bir gereksinim değildir. Aşağıdaki Başlatıcı alan adlarını sahip `Item1`, değeri olan `42` ve `stringContent`, "Her şey için yanıt" değeri olan:
+Açık bir adın sağlanmadığı herhangi bir alan için, geçerli bir örtük ad yansıtıldır. Açıkça veya örtük olarak anlamsal adlar sağlama gereksinimi yoktur. Aşağıdaki başlatıcıda `42` değeri olan ve `Item1` `stringContent`değeri "her şeye yanıt" olan alan adlarına sahiptir:
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
-Burada aday alan adları demet alan yansıtılan değil iki koşul vardır:
+Aday alan adlarının demet alanı üzerinde yansıtılmamaları gereken iki koşul vardır:
 
-1. Aday adı ayrılmış demet adını olduğunda. Örnekler `Item3`, `ToString`. veya `Rest`.
-1. Ne zaman aday adı açık veya örtülü başka bir tanımlama grubu alan adı yineleniyor.
+1. Aday adı, ayrılmış bir tanımlama grubu adı olduğunda. Örnekler şunlardır `Item3`. `ToString` veya `Rest`.
+1. Aday adı, başka bir demet alan adının bir yinelemesi olduğunda açık veya kapalı olur.
 
-Bu koşullar belirsizlik kaçının. Bu adlar, tanımlama grubu alanın alan adları olarak kullanıldıysa belirsizliğe neden olur. Bu koşulların hiçbiri, derleme zamanı hatalarına neden. Bunun yerine, öğeler olmadan öngörülen adları bunlar için öngörülen anlam adları yok.  Aşağıdaki örnekler, bu koşullar göstermektedir:
+Bu koşullar belirsizlik kullanmaktan kaçının. Bu adlar, bir tanımlama grubu içindeki bir alanın alan adları olarak kullanıldıklarında belirsizliğe neden olur. Bu koşullardan hiçbiri derleme zamanı hatalarına neden olur. Bunun yerine, yansıtılan adlara sahip öğeler kendileri için öngörülen semantik adlara sahip değildir.  Aşağıdaki örneklerde bu koşullar gösterilmektedir:
 
 [!code-csharp-interactive[Ambiguity](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionAmbiguities "tuples where projections are not performed")]
 
-Bu durumlarda, bir dizi alan adı projeksiyonlar kullanılabilir değil, C# 7.0 ile yazılan kod için değişiklik olacağından derleyici hataları neden olmaz.
+Bu durumlar derleyici hatalarına neden olmaz çünkü demet alan adı projeksiyonu kullanılabilir olmadığında, 7,0 ile C# yazılan koda yönelik bir değişiklik olacaktır.
 
-## <a name="equality-and-tuples"></a>Eşitlik ve diziler
+## <a name="equality-and-tuples"></a>Eşitlik ve tanımlama grupları
 
-C# 7.3 ile başlayarak, tanımlama grubu türleri desteği `==` ve `!=` işleçleri. Bu işleçler sırayla sağ bağımsız değişkeni her üyesi sol bağımsız değişkeni her üyesi karşılaştırarak çalışır. Bu karşılaştırmalar kısa devre oluşturur. Bunlar üyeleri bir çifti eşit değil olarak değerlendiriliyor durdurur. Aşağıdaki kod örnekleri kullan `==`, ancak tüm uygulamak için karşılaştırma kurallarını `!=`. Aşağıdaki kod örneği, iki tamsayı çiftleri için bir eşitlik karşılaştırması gösterir:
+7,3 ' C# den başlayarak demet türleri `==` ve `!=` işleçlerini destekler. Bu işleçler, sol bağımsız değişkenin her bir üyesini sırasıyla doğru bağımsız değişkenin her bir üyesiyle karşılaştırarak çalışır. Bu karşılaştırmalar kısa devre. Bir çift eşit olmadığı anda üyelerin değerlendirilmesi durdurulur. Aşağıdaki kod örnekleri kullanılır `==`, ancak tüm karşılaştırma kuralları için `!=`geçerlidir. Aşağıdaki kod örneği iki tamsayı çifti için bir eşitlik karşılaştırması gösterir:
 
 [!code-csharp-interactive[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Tanımlama grubu eşitliği testleri daha kullanışlı hale çeşitli kurallar vardır. Tanımlama grubu eşitliği gerçekleştirir [dönüştürmeler yükseltilmiş](~/_csharplang/spec/conversions.md#lifted-conversion-operators) diziler biri aşağıdaki kodda gösterildiği gibi boş değer atanabilir bir tanımlama grubu ise:
+Demet eşitlik testlerini daha uygun hale getirmek için çeşitli kurallar vardır. Tanımlama grubu eşitliği, aşağıdaki kodda gösterildiği gibi, tanımlama gruplarının biri null yapılabilir bir tanımlama grubu ise [yükseltilmemiş dönüştürmeleri](~/_csharplang/spec/conversions.md#lifted-conversion-operators) gerçekleştirir:
 
 [!code-csharp-interactive[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]
 
-Tanımlama grubu eşitliği, ayrıca hem de tanımlama gruplarının her üye üzerinde örtük dönüştürmeleri gerçekleştirir. Bunlar, dönüştürme, yükseltilmiş dönüştürmeler ve diğer örtük dönüştürmeleri genişletme içerir. Aşağıdaki örnekler bir tamsayı 2 bölütlü uzun bir 2-demet tamsayıya örtülü dönüştürme nedeniyle karşılaştırılabilir uzun:
+Tanımlama grubu eşitliği, her iki başlığın de her bir üyesinde örtük dönüştürmeler de gerçekleştirir. Bunlar, yükseltilmemiş dönüştürmeleri, genişleyen dönüşümler veya diğer örtük dönüştürmeler içerir. Aşağıdaki örneklerde, tamsayı 2 kayıt düzeninin, tamsayıdan Long 'a örtük dönüştürme nedeniyle uzun 2 tanımlama grubu ile karşılaştırılabilmesinin gösterilmektedir:
 
 [!code-csharp-interactive[SnippetMemberConversions](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberConversions "converting tuples for equality tests")]
 
-Tanımlama grubu üyelerinin adları eşitliği testleri katılmaz. Ancak, biri açık adlar ile sabit tanımlama grubu ise, bu adlar diğer işlenen adları eşleşmiyorsa derleyici uyarı CS8383 oluşturur.
-Her iki işlenen demet sabit olduğu durumda, uyarıyı sağ işlenen üzerinde aşağıdaki örnekte gösterildiği gibi verilmiştir:
+Demet üyelerinin adları, eşitlik için testlere katılmaz. Ancak, işlenenden biri açık adlara sahip bir demet sabit değeri ise, bu adlar diğer işlenenin adlarıyla eşleşmezse, derleyici uyarı CS8383 oluşturur.
+Her iki işlenenin de demet sabit değerleri olduğu durumlarda, aşağıdaki örnekte gösterildiği gibi uyarı sağ işlenende olur:
 
 [!code-csharp-interactive[MemberNames](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetMemberNames "Tuple member names do not participate in equality tests")]
 
-Son olarak, diziler, iç içe geçmiş bir tanımlama grubu içerebilir. Tanımlama grubu eşitliği "aşağıdaki örnekte gösterilen şeklini" iç içe geçmiş tanımlama grupları halinde aracılığıyla her işlenen karşılaştırılır:
+Son olarak, tanımlama grupları iç içe diziler içerebilir. Tanımlama grubu eşitliği, aşağıdaki örnekte gösterildiği gibi, iç içe geçmiş diziler aracılığıyla her bir işlenenin "şeklini" karşılaştırır:
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-Eşitlik (ya da eşitsizlik) için iki diziler karşılaştırmak için bir derleme zamanı hata farklı şekiller zaman sahiptirler. Derleyici iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları karşılaştırmak için deneme olmaz.
+Farklı şekilleri olduğunda, eşitlik (veya eşitsizlik) için iki tanımlama grubunu karşılaştırmak üzere bir derleme zamanı hatası. Derleyici, iç içe geçmiş tanımlama gruplarının kendisini karşılaştırmak için denenmez.
 
-## <a name="assignment-and-tuples"></a>Atama ve diziler
+## <a name="assignment-and-tuples"></a>Atama ve tanımlama grupları
 
-Burada her sağ tarafı öğe örtük karşılık gelen sol tarafı öğesine dönüştürülebilir aynı sayıda öğe olan tanımlama grubu türleri arasında atama dili destekler. Diğer dönüştürme atamalarını bulundurulmaz. Bu farklı şekillere sahip oldukları zaman bir tanımlama grubu atamak için bir derleme zamanı hatasına neden olur. Derleyici iç içe geçmiş bir tanımlama grubu herhangi bir ayrıştırma bunları atamak için deneme olmaz.
-Tanımlama grubu türleri arasında izin atamaları türlerini bakalım.
+Dil, her bir sağ taraftaki öğenin örtük olarak karşılık gelen sol taraftaki öğesine dönüştürülebileceği, aynı sayıda öğeye sahip demet türleri arasında atamayı destekler. Diğer dönüşümler atamalar için kabul edilmez. Farklı şekillerde bir tanımlama grubu atamak için bir derleme zamanı hatası vardır. Derleyici, iç içe geçmiş tanımlama gruplarının atamasını atamak için denenmez.
+Demet türleri arasında izin verilen atama türlerine bakalım.
 
-Aşağıdaki örneklerde kullanılan bu değişkenleri göz önünde bulundurun:
+Aşağıdaki örneklerde kullanılan değişkenleri göz önünde bulundurun:
 
 [!code-csharp[VariableCreation](../../samples/snippets/csharp/tuples/tuples/program.cs#03_VariableCreation "Variable creation")]
 
-İlk iki değişken `unnamed` ve `anonymous` olmayan öğeler için sağlanan anlam adlarına sahip. Alan adları `Item1` ve `Item2`.
-Son iki değişken `named` ve `differentName` öğeleri için verilen anlam adlarına sahip. Bu iki diziler öğeler için farklı adlara sahip.
+İlk iki değişken, `unnamed` ve `anonymous` öğeleri için belirtilen semantik adlara sahip değildir. Alan adları ve ' `Item1` `Item2`dir.
+Son iki değişken `named` ve `differentName` öğeler için belirtilen semantik adlara sahip. Bu iki başlık, öğeler için farklı adlara sahiptir.
 
-Dört bu tanımlama grubu aynı sayıda öğe ('önem' adlandırılır) varsa ve söz konusu öğelerin türleri aynı. Bu nedenle, tüm bu atamaları çalışır:
+Bu başlıkların dördü, aynı sayıda öğeye sahiptir (' kardinalite ' olarak adlandırılır) ve bu öğelerin türleri aynıdır. Bu nedenle, bu atamaların hepsi çalışır:
 
 [!code-csharp[VariableAssignment](../../samples/snippets/csharp/tuples/tuples/program.cs#04_VariableAssignment "Variable assignment")]
 
-Tanımlama grubu adlarını atanmamış dikkat edin. Dizideki öğelerin sırasını aşağıdaki öğelerin değerlerinin atanır.
+Başlıkların adlarının atanmadığından emin olun. Öğelerin değerleri, kayıt düzeni içindeki öğelerin sırasını izleyerek atanır.
 
-Farklı türler veya öğeleri sayıda tanımlama atanabilir değil:
+Farklı türlerin veya öğe sayılarının başlıkları atanamaz:
 
 ```csharp
 // Does not compile.
@@ -138,42 +138,42 @@ var differentShape = (1, 2, 3);
 named = differentShape;
 ```
 
-## <a name="tuples-as-method-return-values"></a>Yöntemin dönüş değeri olarak diziler
+## <a name="tuples-as-method-return-values"></a>Yöntem dönüş değerleri olarak tanımlama grubu
 
-Demetler en yaygın kullanımlarından biri, yöntemi dönüş değeridir. Bir örnek atalım. Bir sayı dizisi üzerinde için standart sapmayı hesaplar. Bu yöntem göz önünde bulundurun:
+Tanımlama grupları için en yaygın kullanımdan biri yöntem dönüş değeri olarak belirlenir. Bir örnek adım adım inceleyelim. Bir dizi sayı için standart sapmayı hesaplayan bu yöntemi göz önünde bulundurun:
 
 [!code-csharp[StandardDeviation](../../samples/snippets/csharp/tuples/tuples/statistics.cs#05_StandardDeviation "Compute Standard Deviation")]
 
 > [!NOTE]
-> Bu örnekler düzeltilemeyen örnek standart sapma hesaplaması.
-> Düzeltilmiş örnek standart sapma formülü (N-1) tarafından N yerine mean squared fark toplamı olarak çizilmesini sağlıyordu `Average` uzantı yöntemi yapar. Standart sapma bu formülleri arasındaki farklar hakkında daha fazla ayrıntı için istatistikleri metin başvurun.
+> Bu örnekler düzeltilmeyen örnek standart sapmayı hesaplar.
+> Düzeltilen örnek standart sapma formülü, `Average` iç kare farklarının toplamını, genişletme yöntemi olduğu gibi n yerine, her ne kadar (n-1) olacak şekilde böler. Standart sapma için bu formüller arasındaki farklılıklar hakkında daha fazla ayrıntı için bir istatistik metnine danışın.
 
-Yukarıdaki kod Ders Kitabı standart sapma formülü aşağıdadır. Doğru yanıtı oluşturur, ancak bu verimsiz bir uygulaması. Bu yöntem dizisi iki kez listeler: Ortalama üretmek için bir kez ve ortalama farkı karesini ortalamasını üretmek için bir kez.
-(Ortalama fark hesaplama ve bu farklar ortalaması yalnızca bir sabit listesi yapsak LINQ sorguları gevşek, değerlendirildiğini unutmayın.)
+Yukarıdaki kod, standart sapma için textbook formülünü izler. Doğru yanıtı üretir ancak bu, verimsiz bir uygulama. Bu yöntem, diziyi iki kez numaralandırır: Ortalama olarak bir kez ve ortalamanın farkının ortalamasının ortalamasını üretmek için bir kez.
+(LINQ sorgularının geç değerlendirildiğini unutmayın. bu nedenle, ortalama farklar ve bu farkların ortalaması yalnızca bir numaralandırma yapar.)
 
-Standart sapma yalnızca bir sabit listesi sırası kullanarak hesaplar alternatif bir formül yoktur.  Sıralı listeler gibi bu hesaplama iki değer üretir: dizisindeki tüm öğelerin toplamının yanı sıra, her bir değerin toplamını kare:
+Dizinin yalnızca bir listesini kullanarak standart sapmayı hesaplayan alternatif bir formül vardır.  Bu hesaplama, diziyi numaralandırdığından iki değer üretir: dizideki tüm öğelerin toplamı ve her bir değerin kare toplamı:
 
 [!code-csharp[SumOfSquaresFormula](../../samples/snippets/csharp/tuples/tuples/statistics.cs#06_SumOfSquaresFormula "Compute Standard Deviation using the sum of squares")]
 
-Bu sürümü tam bir kez sırasını numaralandırır. Ancak, yeniden kullanılabilir kod değil. Çalışmaya devam gibi birçok farklı istatistiksel hesaplamalar öğe dizisi, dizinin toplamı ve dizinin kareler toplamı kullanmak bulabilirsiniz. Şimdi bu yöntem yeniden düzenleyin ve üçünü de bu değerleri üreten bir yardımcı yöntemi yazın. Bir tanımlama grubu olarak, tüm üç değer döndürülebilir.
+Bu sürüm, diziyi tam olarak bir kez numaralandırır. Ancak yeniden kullanılabilir kod değildir. Çalışmaya devam ederseniz, birçok farklı istatistiksel hesaplamaların dizideki öğelerin sayısını, sıranın toplamını ve dizi karelerinin toplamını kullanmasını göreceksiniz. Bu yöntemi yeniden düzenleme ve bu değerlerin üçünü de üreten bir yardımcı program yöntemi yazma. Üç değer de bir tanımlama grubu olarak döndürülebilir.
 
-Numaralandırma sırasında hesaplanan üç değerden bir grup içinde depolanır. böylece bu yöntem güncelleştirelim. Bu sürümü oluşturan:
+Bu yöntemi, numaralandırma sırasında hesaplanan üç değerin bir kayıt düzeninde depolanması için güncelleştirelim. Bu sürümü oluşturur:
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Visual Studio'nun yeniden düzenleme desteği, özel bir yöntem işlevselliği temel istatistikleri için ayıklamak üzere kolaylaştırır. Size bir `private static` demet türü ile üç değerden döndüren yöntem `Sum`, `SumOfSquares`, ve `Count`:
+Visual Studio 'nun yeniden düzenleme desteği, çekirdek istatistik işlevlerinin özel bir yönteme ayıklanabilmesini kolaylaştırır. Bu,, ve `private static` `SumOfSquares` `Sum` '`Count`nin üç değeri ile demet türünü döndüren bir yöntem sunar:
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
  
-Birkaç hızlı düzenlemeler el ile yapmak istiyorsanız dil kullanabilirsiniz, daha fazla birkaç seçeneği sağlar. İlk olarak kullanabileceğiniz `var` demet sonuçtan başlatmak için bildirimi `ComputeSumAndSumOfSquares` yöntem çağrısı. İçinde üç ayrık değişkeni de oluşturabilirsiniz `ComputeSumAndSumOfSquares` yöntemi. Son sürümü, aşağıdaki kodda gösterilmiştir:
+Dil, el ile birkaç hızlı düzenleme yapmak istiyorsanız kullanabileceğiniz birkaç seçenek sağlar. İlk olarak, `var` bildirimi kullanarak `ComputeSumAndSumOfSquares` yöntem çağrısından kayıt düzeni sonucunu başlatabilirsiniz. Ayrıca, `ComputeSumAndSumOfSquares` yöntemi içinde üç ayrı değişken oluşturabilirsiniz. Son sürüm aşağıdaki kodda gösterilmiştir:
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
 
-Bu son sürümü, üç değerlerin veya bunların herhangi bir alt gereken herhangi bir yöntem için kullanılabilir.
+Bu son sürüm, bu üç değere veya bunların herhangi bir alt kümesine ihtiyacı olan herhangi bir yöntem için kullanılabilir.
 
-Dil, bu kayıt döndüren yöntemler öğelerin adlarını yönetilmesindeki diğer seçeneklerini destekler.
+Dil, bu demet döndürme yöntemlerinde öğelerin adlarını yönetmenin diğer seçeneklerini destekler.
 
-Dönüş değeri bildirimden alan adlarını kaldırın ve adlandırılmamış bir tanımlama grubu döndürür:
+Dönüş değeri bildiriminden alan adlarını kaldırabilir ve adlandırılmamış bir tanımlama grubu döndürebilirsiniz:
 
 ```csharp
 private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<double> sequence)
@@ -193,46 +193,46 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 }
 ```
 
-Bu dizi alanları adlı `Item1`, `Item2`, ve `Item3`.
-Anlam yöntemlerinden döndürülen tanımlama grubu öğelerinin adlarını sağlamanız önerilir.
+Bu kayıt düzeninin alanları, ve `Item1` `Item3`olarak adlandırılır `Item2`.
+Metotlardan döndürülen başlıkların öğelerine anlam isimleri sağlamanız önerilir.
 
-Başka bir deyim burada diziler yararlı olabilir, LINQ sorguları geliştirmekte olduğunuz durumdur. Öngörülen sonucunu bazı, tümü değil, genellikle seçili nesnelerin özelliklerini içerir.
+LINQ sorguları yazarken, tanımlama gruplarının yararlı olabilecek başka bir IOM. Son öngörülen sonuç, seçilen nesnelerin özelliklerinin tümünü değil, genellikle bazılarını içerir.
 
-Geleneksel olarak anonim bir tür olan nesneleri dizisine sorgunun sonuçlarının proje. Öncelikle anonim türler rahatça dönüş türünü bir yöntem için adlandırılabilir değildir çünkü, çok sayıda sınırlamaya sunulur. Kullanarak alternatifleri `object` veya `dynamic` sonuç türü önemli performans maliyetleri ile birlikte gelen gibi.
+Genellikle sorgunun sonuçlarını anonim bir tür bir nesne dizisine proje olarak projecekti. Bu çok sayıda kısıtlama sunuyordu, öncelikle anonim türler bir yöntem için dönüş türünde kolaylıkla adlandırılamadığından. Sonuç türü `object` olarak `dynamic` veya olarak kullanmanın alternatifleri, önemli performans maliyetleriyle birlikte geldi.
 
-Bir demet dizisi döndürme türü kolaydır ve adlarını ve türlerini öğelerin derleme zamanında ve IDE araçları aracılığıyla kullanılabilir.
-Örneğin, bir ToDo uygulaması göz önünde bulundurun. Yapılacaklar listesindeki tek bir giriş temsil etmek için aşağıdakine benzer bir sınıf tanımlayabilir:
+Bir demet türü dizisinin döndürülmesi kolaydır ve öğelerin adları ve türleri derleme zamanında ve IDE araçları aracılığıyla kullanılabilir.
+Örneğin, bir ToDo uygulaması düşünün. Yapılacaklar listesindeki tek bir girişi göstermek için aşağıdakine benzer bir sınıf tanımlayabilirsiniz:
 
 [!code-csharp[ToDoItem](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#14_ToDoItem "To Do Item")]
 
-Mobil uygulamalarınızı, yalnızca bir başlık görüntüler compact geçerli Yapılacaklar öğelerine biçiminin destekleyebilir. LINQ sorgusu bir projeksiyon, yapacağınız, yalnızca ID ve başlık içerir. Diziler bir dizi döndüren bir yöntem de bu tasarım ifade eder:
+Mobil uygulamalarınız, yalnızca başlığı görüntüleyen geçerli ToDo öğelerinin Compact formunu destekleyebilir. Bu LINQ sorgusu, yalnızca KIMLIĞI ve başlığı içeren bir projeksiyon oluşturacak. Bir tanımlama grubu sırası döndüren bir yöntem tasarımın iyi olduğunu ifade eder:
 
 [!code-csharp[QueryReturningTuple](../../samples/snippets/csharp/tuples/tuples/projectionsample.cs#15_QueryReturningTuple "Query returning a tuple")]
 
 > [!NOTE]
-> C# 7.1, demet projeksiyonlar adlandırılmış diziler özellik adlarının anonim türleri benzer bir şekilde öğelerini kullanarak oluşturmanızı sağlar. Yukarıdaki kodda, `select` sorgu projeksiyon deyiminde öğeleri olan tanımlama grubu oluşturur `ID` ve `Title`.
+> 7,1 C# ' de demet projeksiyonları, anonim türlerde özellik adlandırmasına benzer şekilde, öğeleri kullanarak, adlandırılmış tanımlama grupları oluşturmanıza imkan tanır. Yukarıdaki kodda, `select` sorgu projeksiyonun öğesi ve `Title`öğeleri `ID` içeren bir tanımlama grubu oluşturur.
 
-Adlandırılmış demet imzasının bir parçası olabilir. Derleyici sağlar ve IDE araçları statik sonucu doğru kullanıyorsanız denetimi sağlar. Sonuçları ile çalışmak için pahalı çalışma zamanı özellikleri yansıma veya dinamik bağlama gibi kullanılması gerekmez bu nedenle adlandırılmış demet ayrıca statik tür bilgilerini taşır.
+Adlandırılmış tanımlama grubu, imzanın bir parçası olabilir. Derleyicinin ve IDE araçlarının, sonucu doğru şekilde kullandığınızı, statik denetim sağlamasına imkan tanır. Adlandırılmış tanımlama grubu statik tür bilgilerini de taşır, bu nedenle, sonuçlarla çalışmak için yansıma veya dinamik bağlama gibi pahalı çalışma süresi özelliklerinin kullanılmasına gerek yoktur.
 
 ## <a name="deconstruction"></a>Ayrıştırma
 
-Tarafından bir tanımlama grubu içindeki tüm öğeler Sunu paketini *ayrıştırma* yöntemi tarafından döndürülen dizi. Diziler ayrıştırma için üç farklı yaklaşım vardır.  İlk olarak, dizideki öğelerin her biri için ayrık değişkenlerinin parantez içinde her alanın türünü açıkça bildirebilirsiniz:
+Bir yöntem tarafından döndürülen kayıt grubunu kaldırarak bir kayıt grubundaki tüm öğelerin paketini kaldırabilirsiniz. Başlıkların çıkarılması için üç farklı yaklaşım vardır.  İlk olarak, her bir alanın türünü parantez içindeki her bir öğe için ayrı değişkenler oluşturmak üzere açıkça bildirebilirsiniz:
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
-Kullanarak bir tanımlama grubu içindeki her alan için örtük olarak yazılan değişkenleri bildirebilirsiniz `var` anahtar sözcüğü parantezler dışında:
+Ayrıca, parantez dışında bir `var` anahtar sözcüğü kullanarak, bir kayıt grubundaki her bir alan için örtük olarak belirlenmiş değişkenler de bildirebilirsiniz:
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-Kullanılacak yasaldır `var` anahtar sözcüğü, bir bölümünü veya tamamını parantez içinde değişken bildirimleri ile. 
+Parantez içinde herhangi bir veya tüm değişken `var` bildirimlerinin anahtar sözcüğünü kullanmak da geçerlidir. 
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
 ```
 
-Dizideki her alan aynı türde olsa bile, belirli bir tür parantez dışında kullanamazsınız.
+Kayıt grubundaki her alan aynı türde olsa bile, parantez dışında belirli bir tür kullanamazsınız.
 
-Varolan bildirimler ile tanımlama grubu Ayrıştır:
+Mevcut bildirimlerle de tanımlama gruplarını kaldırabilirsiniz:
 
 ```csharp
 public class Point
@@ -245,35 +245,35 @@ public class Point
 ```
 
 > [!WARNING]
->  Varolan bildirimler bildirimi parantez içinde ile karıştırılamaz. Örneğin, aşağıdaki izin verilmiyor: `(var x, y) = MyMethod();`. Bu hata CS8184 çünkü oluşturur *x* parantez içinde bildirilir ve *y* daha önce başka bir yerde bildirilmiş.
+> Parantez içindeki bildirimlerle mevcut bildirimleri karıştıramazsınız. Örneğin, aşağıdakilere izin verilmez: `(var x, y) = MyMethod();`. *X* , parantez içinde bildirildiği ve *y* daha önce başka bir yerde BILDIRILDIĞI için bu hata CS8184 oluşturur.
 
-### <a name="deconstructing-user-defined-types"></a>Kullanıcı tanımlı türleri ayrıştırma
+### <a name="deconstructing-user-defined-types"></a>Kullanıcı tanımlı türleri kaldırma
 
-Yukarıda da gösterildiği gibi herhangi bir demet türü ayrıştırılabilir. Ayrıştırma (sınıflar, yapılar veya hatta arabirimleri) kullanıcı tanımlı tür üzerinde etkinleştirmek çok kolaydır.
+Herhangi bir demet türü, yukarıda gösterilen şekilde kaldırılabilir. Kullanıcı tanımlı herhangi bir tür (sınıflar, yapılar veya hatta arabirimler) üzerinde oluşturmayı etkinleştirmek de kolaydır.
 
-Türü yazarı, bir veya daha fazla tanımlayabilirsiniz `Deconstruct` dilediğiniz sayıda atayabilmeniz yöntemleri `out` türünü oluşturan veri öğelerini temsil eden değişken. Örneğin, aşağıdaki `Person` türünü tanımlayan bir `Deconstruct` ad ve soyadı temsil eden öğeyi bir kişi nesnesinin deconstructs yöntemi:
+Tür yazarı, türü oluşturan veri öğelerini temsil `Deconstruct` eden herhangi bir `out` sayıda değişkene değer atayan bir veya daha fazla yöntem tanımlayabilir. Örneğin, aşağıdaki `Person` tür bir kişi nesnesini ilk `Deconstruct` adı ve soyadı temsil eden öğelere oluşturan bir yöntemi tanımlar:
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
-Atamadan deconstruct yöntemi sağlayan bir `Person` temsil eden iki dizelere `FirstName` ve `LastName` özellikleri:
+Deyapý yöntemi, `Person` `FirstName` ve `LastName` özelliklerini temsil eden bir ile iki dizeden atamayı sağlar:
 
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
-Ayrıştırma deyiminin bile değil Yazar türleri için etkinleştirebilirsiniz.
-`Deconstruct` Yöntemi, bir nesnenin erişilebilir veri üyelerine tutucusu paketten çıkarır bir genişletme yöntemi olabilir. Gösterir aşağıdaki örnekte bir `Student` türetilen tür, `Person` türü ve deconstructs bir genişletme yöntemi bir `Student` temsil eden üç değişkenin içine `FirstName`, `LastName`ve `GPA`:
+Yazmayan türler için bile, oluşturmayı etkinleştirebilirsiniz.
+Yöntemi `Deconstruct` , bir nesnenin erişilebilir veri üyelerini paketten uygulayan bir genişletme yöntemi olabilir. Aşağıdaki örnekte, `Person` türünden türetilmiş `Student` bir tür ve,,, ve `GPA`öğelerini temsil eden `FirstName` `LastName`üç değişkene bir `Student` oluşturan uzantı yöntemi gösterilmektedir:
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
-A `Student` nesne artık sahip iki erişilebilir `Deconstruct` yöntemleri: genişletme yöntemi için bildirilen `Student` türleri ve üyesi `Person` türü. Her ikisi de kapsamındaki ve sağlayan bir `Student` iki değişkeni veya üç deconstructed için.
-Bir öğrenci üç değişkenlere atarsanız, tüm ad son adı ve GPA döndürdü. İki değişken için bir öğrenci atarsanız, yalnızca ilk adı ve Soyadı döndürülür.
+Bir `Student` nesne artık iki adet erişilebilir `Deconstruct` yönteme sahiptir: türler için `Student` belirtilen genişletme yöntemi ve `Person` türün üyesi. Her ikisi de kapsamdadır ve bir `Student` , iki değişkene veya üçüne parçalanmalarını sağlar.
+Üç değişkene bir öğrenci atarsanız, ilk ad, soyadı ve GPA döndürülür. İki değişkene bir öğrenci atarsanız, yalnızca ad ve soyadı döndürülür.
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
-Birden fazla tanımlama dikkatli olmanız gerekir `Deconstruct` yöntemleri bir sınıf ya da bir sınıf hiyerarşisi. Birden çok `Deconstruct` aynı sayıda içeren yöntemlerin `out` parametreleri hızla belirsizliğe neden olabilir. Çağıranlar kolayca istenen arayabilmesi için olmayabilir `Deconstruct` yöntemi.
+Bir sınıfta veya sınıf hiyerarşisinde birden `Deconstruct` çok yöntem tanımlamanız dikkatli olmalıdır. `Deconstruct` Aynı`out` sayıda parametreye sahip birden çok yöntem, belirsizlikleri hızlı bir şekilde neden olabilir. Çağıranlar, istenen `Deconstruct` yöntemi kolayca çağıramayabilir.
 
-Bu örnekte var olduğundan belirsiz bir çağrı için en az bir fırsat `Deconstruct` yöntemi `Person` parametreleri, iki çıkışı vardır ve `Deconstruct` yöntemi `Student` üç.
+`Deconstruct` Bu örnekte, için `Person` yönteminin iki `Deconstruct` çıkış parametresi olduğundan ve için `Student` yönteminin üç olması nedeniyle belirsiz bir çağrı için en az şans vardır.
 
-Ayrıştırma deyiminin işleçleri eşitlik testinde katılamaz. Aşağıdaki örnek, derleyici hatası CS0019 oluşturur:
+Yinelenenleri kaldırma işleçleri, test eşitliğine katılmaz. Aşağıdaki örnek, CS0019 derleyici hatası oluşturur:
 
 ```csharp
 Person p = new Person("Althea", "Goodwin");
@@ -281,8 +281,8 @@ if (("Althea", "Goodwin") == p)
     Console.WriteLine(p);
 ```
 
-`Deconstruct` Yöntemi dönüştürme `Person` nesne `p` bir demet için iki dizeyi, ancak içeren eşitliği testleri bağlamında geçerli değil.
+Yöntemi, `Person` nesneyi`p` iki dize içeren bir kayıt türüne dönüştürebilir, ancak eşitlik testleri bağlamında geçerli değildir. `Deconstruct`
 
 ## <a name="conclusion"></a>Sonuç 
 
-Adlandırılmış diziler yeni dil ve kitaplığa desteği sınıfları ve yapıları olduğu gibi birden çok öğe depolamak ancak davranışı tanımlamaz veri yapıları kullanan tasarımlar ile çalışmak çok daha kolay hale getirir. Bu, kolay ve Diziler bu türleri için kullanılacak kısa olur. Statik tür denetimi, türleri daha ayrıntılı kullanarak yazmak zorunda kalmadan tüm avantajlarını elde `class` veya `struct` söz dizimi. Bu halde bile, yardımcı program yöntemleri için en kullanışlı `private`, veya `internal`. Kullanıcı tanımlı türler, ya da oluşturma `class` veya `struct` genel yöntemlerinizi birden çok öğe içeren bir değer döndürmediğinde türleri.
+Adlandırılmış tanımlama grupları için yeni dil ve kitaplık desteği, birden çok öğeyi depolayan ancak sınıflar ve yapılar için davranış tanımlamadığınız veri yapılarını kullanan tasarımlarla çalışmayı çok daha kolay hale getirir. Bu türler için tanımlama gruplarını kullanmak kolaydır. Daha ayrıntılı `class` veya `struct` sözdizimini kullanarak tür yazmak zorunda kalmadan statik tür denetimi avantajlarından yararlanın. Bu `private`sayede bile, veya `internal`olan yardımcı program yöntemleri için en yararlı seçenektir. `class` Ya`struct` da genel yöntemleriniz birden çok öğeye sahip bir değer döndürzaman, ya da tür Kullanıcı tanımlı türler oluşturun.

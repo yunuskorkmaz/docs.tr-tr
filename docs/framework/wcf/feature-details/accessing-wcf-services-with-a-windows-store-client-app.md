@@ -2,12 +2,12 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: a2f1ef37914c932801699bb2f9c2323dd0408e7f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9316a46f809eec21f73e8eeadb49baf1748c6ca0
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964963"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988253"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar. Bu uygulamalar dokunmatik ekran arabirimi etrafında tasarlanmıştır. .NET Framework 4,5, Windows Mağazası uygulamalarının WCF hizmetlerini çağırmasını sağlar.  
@@ -19,7 +19,7 @@ Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar
 > WCF tarafından sunulmayan yerine WinRT dağıtım API 'Lerini kullanın. Daha fazla bilgi için bkz. [WinRT dağıtım API 'si](https://go.microsoft.com/fwlink/?LinkId=236265)  
   
 > [!WARNING]
->  Bir Windows Çalışma Zamanı bileşenine Web hizmeti başvurusu eklemek için Hizmet Başvurusu Ekle kullanmak desteklenmez.  
+> Bir Windows Çalışma Zamanı bileşenine Web hizmeti başvurusu eklemek için Hizmet Başvurusu Ekle kullanmak desteklenmez.  
   
 ### <a name="supported-bindings"></a>Desteklenen bağlamalar  
  Windows Mağazası uygulamalarında aşağıdaki WCF bağlamaları desteklenir:  
@@ -104,7 +104,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 3. Çağrılamıyor  
   
 > [!WARNING]
->  XmlDictionaryWriter. Write (DateTime) şimdi DateTime nesnesini bir dize olarak yazar.  
+> XmlDictionaryWriter. Write (DateTime) şimdi DateTime nesnesini bir dize olarak yazar.  
   
 ### <a name="security"></a>Güvenlik  
 
@@ -154,7 +154,7 @@ Aşağıdaki istemci kimlik bilgisi türleri Windows Mağazası uygulamalarında
  Yalnızca görev tabanlı zaman uyumsuz model kullanarak zaman uyumsuz hizmet işlemlerini tanımlamayı öneririz. Bu, bir hizmet işlemi çağrılırken Windows Mağazası uygulamalarının yanıt vermeye devam eder.  
   
 > [!WARNING]
->  Zaman uyumlu bir işlem tanımlarsanız hiçbir özel durum oluşturulmaz, ancak yalnızca zaman uyumsuz işlemler tanımlamanız önerilir.  
+> Zaman uyumlu bir işlem tanımlarsanız hiçbir özel durum oluşturulmaz, ancak yalnızca zaman uyumsuz işlemler tanımlamanız önerilir.  
   
 ### <a name="calling-wcf-services-from-windows-store-applications"></a>Windows Mağazası uygulamalarından WCF Hizmetleri çağırma  
  Oluşturulan proxy sınıfında GetBindingForEndpoint yöntemindeki kodda tüm yapılandırma yapılmalıdır. Bir hizmet işleminin çağrılması, aşağıdaki kod parçacığında gösterildiği gibi herhangi bir görev tabanlı zaman uyumsuz yöntemi çağırma ile aynı şekilde yapılır.  

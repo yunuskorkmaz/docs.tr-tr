@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a5095a44f992cb677e0a519372026730a787ab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923787"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987238"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -605,7 +605,7 @@ Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımc
 
 **.NET Standard 2,0 desteği**
 
-[.NET Standard](~/docs/standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog GÖNDERISINDE "BCL-.NET Standard 2,0 desteği" ne bakın.
+[.NET Standard](../../standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog GÖNDERISINDE "BCL-.NET Standard 2,0 desteği" ne bakın.
 
 **Yapılandırma oluşturucuları için destek**
 
@@ -623,7 +623,7 @@ Sınıfı <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=n
 
 **Salt okuma başvuruları desteği**
 
-.NET Framework 4.7.1, <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>öğesini ekler. Bu öznitelik, salt okuma başvuru dönüş türleri veya parametreleri olan üyeleri işaretlemek için dil derleyicileri tarafından kullanılır. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisinde "derleyici--ReadOnlyReferences desteği" bölümüne bakın. Başvuru dönüş değerleri hakkında daha fazla bilgi için bkz. [ref Return Values ve refC# Locals (Guide)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) ve [ref Return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET Framework 4.7.1, <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>öğesini ekler. Bu öznitelik, salt okuma başvuru dönüş türleri veya parametreleri olan üyeleri işaretlemek için dil derleyicileri tarafından kullanılır. Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog gönderisinde "derleyici--ReadOnlyReferences desteği" bölümüne bakın. Başvuru dönüş değerleri hakkında daha fazla bilgi için bkz. [ref Return Values ve refC# Locals (Guide)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) ve [ref Return values (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 

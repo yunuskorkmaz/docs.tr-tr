@@ -10,27 +10,27 @@ helpviewer_keywords:
 ms.assetid: 1167cfe6-c8aa-4096-94ba-c66c3a4edf4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fd67d5f0cb5af33dc2b79f86148557a0dca6ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 026c7d2be678c4b6aeed4e2e6f9eb43283cd04c1
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638937"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988459"
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> sorgudaki izleyen tüm işleçler sırayla işlemek için PLINQ istemek için yöntemi. Bazen sıralı işleme paralel genelde daha yavaş olsa da, doğru sonuçlar üretmek için gerekli olabilir.  
+Bu örnek, <xref:System.Linq.ParallelEnumerable.AsSequential%2A> PLINQ 'ın sorgudaki sonraki işleçleri sırayla işlemesini sağlamak için yönteminin nasıl kullanılacağını gösterir. Sıralı işleme genellikle paralel olandan daha yavaş olsa da, bazen doğru sonuçların üretilmesi gerekir.  
   
 > [!WARNING]
->  Bu örnek, kullanımını göstermek için tasarlanmıştır ve nesneleri sorgu için eşdeğer sıralı LINQ daha hızlı çalışmayabilir. Hızlandırmayı hakkında daha fazla bilgi için bkz: [plınq'te hızlandırmayı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+> Bu örnek, kullanımı göstermeye yöneliktir ve eşdeğer sıralı LINQ to Objects sorgusundan daha hızlı çalışmayabilir. Hızlı yedekleme hakkında daha fazla bilgi için bkz. [PLıNQ 'Te hızlı hızlandırı anlama](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir senaryo gösterilmektedir <xref:System.Linq.ParallelEnumerable.AsSequential%2A> özelliği için gerekli olan bir önceki sorgu yan tümcesi içinde oluşturulmuş sıralamasını koruması.  
+ Aşağıdaki örnek, sorgunun önceki bir yan tümcesinde <xref:System.Linq.ParallelEnumerable.AsSequential%2A> oluşturulan sıralamayı korumak için gereken bir senaryoyu gösterir.  
   
  [!code-csharp[PLINQ#24](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#24)]
  [!code-vb[PLINQ#24](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#24)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Derleme ve bu kodu çalıştırmak için içine yapıştırın [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) yöntemini çağıracak bir satır ekleyin, proje `Main`, F5 tuşuna basın.  
+ Bu kodu derlemek ve çalıştırmak için, [PLINQ veri örneği](../../../docs/standard/parallel-programming/plinq-data-sample.md) projesine yapıştırın, öğesinden `Main`yöntemi çağırmak için bir satır ekleyin ve F5 tuşuna basın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

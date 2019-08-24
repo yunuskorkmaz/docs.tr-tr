@@ -2,28 +2,28 @@
 title: İş Akışı Barındırma Seçenekleri
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b85f656d6262c850c81833d5c4fe4d1fb5b1ec55
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487360"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988511"
 ---
 # <a name="workflow-hosting-options"></a>İş Akışı Barındırma Seçenekleri
-Bir konsol uygulamasında barındırılan iş akışı Windows Workflow Foundation (WF) örnekleri çoğu kullanın, ancak bu gerçek iş akışları için gerçekçi bir senaryo değildir. Gerçek iş uygulamalarını iş akışlarında kalıcı işlemleri yazılan bir Windows hizmeti-geliştirici ya da IIS 7.0 veya AppFabric gibi bir sunucu uygulaması tarafından barındırılacak. Bu yaklaşımların arasındaki farklar aşağıdaki gibidir.  
+Windows Workflow Foundation (WF) örneklerinin çoğu, bir konsol uygulamasında barındırılan iş akışlarını kullanır, ancak bu gerçek dünyada iş akışları için gerçekçi bir senaryodur. Gerçek iş uygulamalarındaki iş akışları kalıcı işlemlerde (geliştirici tarafından yazılan bir Windows hizmeti veya IIS 7,0 veya AppFabric gibi bir sunucu uygulaması) barındırılacak. Bu yaklaşımlar arasındaki farklılıklar aşağıda verilmiştir.  
   
-## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>IIS Windows AppFabric ile iş akışları barındırma  
- AppFabric ile IIS kullanarak iş akışları için tercih edilen ana bilgisayardır. IIS üzerinde tek başına HTTP üzerindeki bağımlılığı kaldırır Windows Etkinleştirme hizmeti AppFabric kullanarak iş akışları için ana bilgisayar uygulamasıdır.  
+## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Windows AppFabric ile IIS 'de iş akışlarını barındırma  
+ IIS 'yi AppFabric ile kullanmak, iş akışları için tercih edilen ana bilgisayar. AppFabric kullanan iş akışları için konak uygulaması, Windows etkinleştirme hizmeti 'dir ve bu, HTTP üzerinden IIS üzerinden bağımlılığı ortadan kaldırır.  
   
-## <a name="hosting-workflows-in-iis-alone"></a>Tek başına bir IIS iş akışları barındırma  
- Yönetim ve izleme çalışan uygulamaların Bakımı kolaylaştıran AppFabric ile kullanılabilen araçları olduğundan kullanarak tek başına bir IIS 7.0, önerilmez. İş akışları yalnızca IIS 7.0 AppFabric için taşıma ile altyapıyla ilgili endişelerini yoksa tek başına barındırılması.  
+## <a name="hosting-workflows-in-iis-alone"></a>Yalnızca IIS 'de iş akışlarını barındırma  
+ Çalışan uygulamaların bakımını kolaylaştıran AppFabric ile kullanılabilen yönetim ve izleme araçları olduğundan tek başına IIS 7,0 kullanılması önerilmez. İş akışları yalnızca, AppFabric 'e geçiş ile ilgili altyapı sorunları varsa yalnızca IIS 7,0 ' de barındırılmalıdır.  
   
 > [!WARNING]
->  IIS 7.0 uygulama havuzu çeşitli nedenlerden dolayı düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuzuna iletileri kabul etmeye durdurur ve yeni isteklerini kabul etmek için yeni bir uygulama havuzu oluşturur. Bir iş akışı bir yanıt gönderdikten sonra çalışmaya devam ederse, IIS 7.0 yapılmakta olan çalışmanın uyumlu olmaz ve barındırma uygulama havuzunu geri dönüştür. Böyle, iş akışını iptal edilecek ve izleme hizmetleri kayıt bir [1004 - WorkflowInstanceAborted](1004-workflowinstanceaborted.md) neden boş alan iletisi.  
+> IIS 7,0, çeşitli nedenlerle uygulama havuzlarını düzenli aralıklarla geri dönüştürür. Bir uygulama havuzu geri dönüştürüldüğünde, IIS eski havuza ileti kabul etmeyi durduruyor ve yeni istekleri kabul etmek için yeni bir uygulama havuzu başlatır. Bir iş akışı yanıt gönderdikten sonra çalışmaya devam ederse, IIS 7,0 gerçekleştirilen çalışmanın farkında olmaz ve barındırma uygulama havuzunu geri dönüştürebilir. Bu durumda, iş akışı iptal edilir ve izleme hizmetleri boş bir neden alanıyla [1004-Workflowınstancedurdurulan](1004-workflowinstanceaborted.md) bir ileti kaydeder.  
 >   
->  Kalıcılık kullandıysanız, konak açıkça iptal edilmiş örneklerden son Kalıcılık noktası yeniden başlatmanız gerekir.  
+>  Kalıcılık kullanılırsa, konağın durdurulan örnekleri son Kalıcılık noktasından açıkça yeniden başlatması gerekir.  
 >   
->  AppFabric kullandıysanız, Kalıcılık kullanılıyorsa, iş akışı yönetimi hizmetinin sonunda son başarılı Kalıcılık noktasından iş akışı devam edecek. İş akışı iptal ettiğinde hiçbir Kalıcılık kullanılır ve iş akışı bir istek/yanıt deseni dışındaki işlemleri gerçekleştirir, veriler kaybolacak.  
+>  AppFabric kullanılıyorsa, iş akışı yönetim hizmeti, kalıcılık kullanılırsa son başarılı Kalıcılık noktasından iş akışını sürdürür. Kalıcılık kullanılmazsa ve iş akışı bir Istek/yanıt deseninin dışında işlemler gerçekleştirdiğinde, iş akışı iptal edildiğinde veriler kaybedilir.  
   
-## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Bir iş akışı özel bir Windows hizmetinde barındırma  
- İş akışı barındırmak için bir özel iş akışı hizmeti oluşturma çok sayıda kullanıma hazır AppFabric tarafından sağlanan işlevselliği çoğaltmak Geliştirici gerektirir, ancak daha fazla esneklik için özel işlevsellikle izin verir. AppFabric bir seçenek olmadığı durumlarda, bu seçenek yalnızca kabul edilmelidir.
+## <a name="hosting-a-workflow-in-a-custom-windows-service"></a>Özel bir Windows hizmetinde iş akışını barındırma  
+ İş akışını barındırmak için özel bir iş akışı hizmeti oluşturmak, geliştiricinin, AppFabric tarafından kullanıma hazır olarak sunulan işlevlerin çoğunu çoğaltmasını gerektirir, ancak özel işlevlerle daha fazla esneklik sağlar. Bu seçenek yalnızca, AppFabric bir seçenek olmadığı durumlarda dikkate alınmalıdır.

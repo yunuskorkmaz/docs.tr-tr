@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966132"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988684"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma
 Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma sunulacak uygulama arabirimlerini yapılandırmak için COM+ hizmet modeli yapılandırma komut satırı aracını (ComSvcConfig. exe) kullanın.  
@@ -29,7 +29,7 @@ Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma s
 > Bu kayıt defteri anahtarının geri döndürülmesi önemlidir. Bu bir uyumluluk anahtarıdır. Bu değişikliğin geri döndürülmesi, makinede çalışan diğer .NET uygulamalarıyla ilgili sorunlara neden olabilir).  
   
 > [!WARNING]
->  Bir Windows 8 makinesinde ComSvcConfig. exe/install kullanırken bir iletişim kutusu görüntülenir. "bilgisayarınızdaki bir uygulama şu Windows özelliğine ihtiyaç duyuyor: .NET Framework 3,5 (.NET 2,0 ve .NET 3,0 içerir) .NET Framework 3,5 yüklü değilse. Bu iletişim kutusu yoksayılabilir. Alternatif olarak, OnlyUseLatestCLR kayıt defteri anahtarını 0x00000001 DWORD değerine bağlayabilirsiniz.  
+> Bir Windows 8 makinesinde ComSvcConfig. exe/install kullanırken bir iletişim kutusu görüntülenir. "bilgisayarınızdaki bir uygulama şu Windows özelliğine ihtiyaç duyuyor: .NET Framework 3,5 (.NET 2,0 ve .NET 3,0 içerir) .NET Framework 3,5 yüklü değilse. Bu iletişim kutusu yoksayılabilir. Alternatif olarak, OnlyUseLatestCLR kayıt defteri anahtarını 0x00000001 DWORD değerine bağlayabilirsiniz.  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Web Hizmetleri olarak kullanıma sunulacak arabirim kümesine, COM+ barındırma modunu kullanarak bir arabirim eklemek için  
   

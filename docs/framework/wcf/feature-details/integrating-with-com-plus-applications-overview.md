@@ -5,101 +5,101 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590543"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988692"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ Uygulamaları ile Tümleştirme Genel Bakış
-Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. COM +'da barındırılan bir bileşen tabanlı uygulama mantığı zaten kullanıyorsanız, WCF, yeniden yazmak zorunda kalmadan yerine mevcut mantığınızı genişletmek için de kullanabilirsiniz. Mevcut COM + veya Enterprise Hizmetleri iş mantığı Web Hizmetleri aracılığıyla kullanıma sunmak istediğiniz, ortak bir senaryodur.  
+Windows Communication Foundation (WCF) dağıtılmış uygulamalar oluşturmak için zengin bir ortam sağlar. Zaten COM+ içinde barındırılan bileşen tabanlı uygulama mantığını kullanıyorsanız, WCF kullanarak mevcut mantığınızı yeniden yazmak yerine genişletebilirsiniz. Yaygın bir senaryo, Web Hizmetleri aracılığıyla mevcut COM+ veya kurumsal hizmetler iş mantığını göstermek istediğinizde olur.  
   
- Bir arabirim bir COM + bileşeni üzerinde bir Web hizmeti olarak sunulduğunda belirtimi ve bu hizmetlerin sözleşmesi uygulama başlatma zamanında gerçekleştirilir otomatik bir eşlemesi tarafından belirlenir. Aşağıdaki liste, bu eşleme için kavramsal model gösterir:  
+ Bir COM+ bileşenindeki bir arabirim bir Web hizmeti olarak sunulduğunda, bu hizmetlerin belirtimi ve anlaşması, uygulama başlatma zamanında gerçekleştirilen bir otomatik eşleme tarafından belirlenir. Aşağıdaki listede, bu eşleme için kavramsal model gösterilmektedir:  
   
-- Bir hizmetin her kullanıma sunulan bir COM sınıfı için tanımlanır.  
+- Sunulan her bir COM sınıfı için bir hizmet tanımlanmıştır.  
   
-- Hizmet sözleşmesini doğrudan yapılandırmasında tanımlı yöntemi dışlama olasılığını ile seçilen bileşenin arabirim tanımı türetilir.  
+- Hizmet sözleşmesi, yapılandırma içinde tanımlanan yöntem dışlama olasılığa sahip seçili bileşenin arabirim tanımından doğrudan türetilir.  
   
-- Bu sözleşme işlemlerinde doğrudan bileşenin arabirim tanımı yöntemlerde türetilmiştir.  
+- Bu sözleşmede bulunan işlemler, doğrudan bileşenin arabirim tanımındaki metotlardan türetilir.  
   
-- Bu işlemler için parametreleri doğrudan bileşenin yöntemi parametrelerine karşılık gelen COM birlikte çalışabilirlik türden türetilir.  
+- Bu işlemlere yönelik parametreler, doğrudan bileşen yöntemi parametrelerine karşılık gelen COM birlikte çalışabilirlik türünden türetilir.  
   
- Varsayılan adresleri ve aktarım bağlama hizmeti, bir hizmet yapılandırma dosyasında sağlanır, ancak bunlar olarak yapılandırılabilen için gereklidir.  
+ Hizmet için varsayılan adresler ve aktarım bağlamaları bir hizmet yapılandırma dosyasında sağlanır, ancak bunlar gerektiği şekilde yeniden yapılandırılabilir.  
   
 > [!NOTE]
->  COM arabirimleri ve yapılandırma değişmediği sürece sözleşmeler sunulan Web Hizmetleri için de sabit kalır. Birkaç arabirimi için bir değişiklik, kullanılabilir hizmetlerin otomatik olarak güncelleştirmez ve COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) yeniden çalıştırmayı gerektirir.  
+> COM+ arabirimleri ve yapılandırması değişmeden kaldığı sürece, sunulan Web Hizmetleri sözleşmeleri sabit kalır. Birkaç arabirimde değişiklik, kullanılabilir hizmetleri otomatik olarak güncelleştirmez ve COM+ hizmet modeli yapılandırma aracı (ComSvcConfig. exe) için yeniden çalışıyor olmalıdır.  
   
- COM + uygulama ve bileşenlerinin kimlik doğrulaması ve yetkilendirme gereksinimlerine bir Web hizmeti olarak kullanıldığında zorlanmaya devam edin.  
+ COM+ uygulamasının ve bileşenlerinin kimlik doğrulama ve yetkilendirme gereksinimleri, bir Web hizmeti olarak kullanıldığında zorlanmaya devam eder.  
   
- Çağıran bir Web hizmeti işlemi başlatırsa, işlem tabanlı olarak işaretlenmiş bileşenleri bu işlem kapsamında kaydettirin.  
+ Çağıran bir Web hizmeti işlemi başlatırsa, bileşen bu işlem kapsamı içinde işlem listeleme olarak işaretlenir.  
   
- Aşağıdaki adımlar, bir COM + bileşenin arabirimi bileşen değiştirmeden, bir Web hizmeti olarak kullanıma sunmak için gereklidir:  
+ Bileşeni değiştirmeden bir COM+ bileşeninin arabirimini Web hizmeti olarak göstermek için aşağıdaki adımlar gereklidir:  
   
-1. COM + bileşenin arabirimi bir Web hizmeti olarak kullanıma sunulabilecek olup olmadığını belirler.  
+1. COM+ bileşeni arabiriminin bir Web hizmeti olarak sunulup sunulamayacağını belirleme.  
   
-2. Uygun bir barındırma modunu seçin.  
+2. Uygun bir barındırma modu seçin.  
   
-3. COM + hizmet modeli Yapılandırma Aracı (ComSvcConfig.exe) arabirimi için bir Web hizmeti eklemek için kullanın. ComSvcConfig.exe kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet modeli yapılandırma aracı kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Arabirim için bir Web hizmeti eklemek için COM+ hizmet modeli yapılandırma aracı 'nı (ComSvcConfig. exe) kullanın. ComSvcConfig. exe ' nin nasıl kullanılacağı hakkında daha fazla bilgi için [bkz. nasıl yapılır: COM+ hizmet modeli yapılandırma aracını](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)kullanın.  
   
-4. Uygulama yapılandırma dosyasında herhangi bir ek hizmet ayarı yapılandırın. Bir bileşen yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: COM + hizmet ayarlarını yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Uygulama yapılandırma dosyasında diğer hizmet ayarlarını yapılandırın. Bir bileşeni yapılandırma hakkında daha fazla bilgi için bkz [. nasıl yapılır: COM+ hizmet ayarlarını](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)yapılandırın.  
   
-## <a name="supported-interfaces"></a>Desteklenen arabirimi  
- Bir Web hizmeti olarak kullanıma sunulabilir arabirimleri türüyle ilgili bazı kısıtlamalar vardır. Aşağıdaki türde arabirimler desteklenmez:  
+## <a name="supported-interfaces"></a>Desteklenen arabirimler  
+ Bir Web hizmeti olarak açığa çıkarılabilen arabirimlerin türü üzerinde bazı kısıtlamalar vardır. Aşağıdaki arabirim türleri desteklenmez:  
   
-- Nesne başvuruları - parametreler olarak geçen arabirimleri aşağıdaki sınırlı nesne başvuru yaklaşımı sınırlı nesne başvurusu desteği bölümünde açıklanan.  
+- Nesne başvurularını parametre olarak geçiren arabirimler-aşağıdaki sınırlı nesne başvuru yaklaşımı, sınırlı nesne başvurusu desteği bölümünde açıklanmıştır.  
   
-- Geçiş türleri, arabirimleri, .NET Framework COM birlikte çalışabilirlik dönüştürmeler ile uyumlu değildir.  
+- .NET Framework COM birlikte çalışabilirlik dönüşümleriyle uyumlu olmayan türleri geçiren arabirimler.  
   
-- Uygulama havuzu oluşturma COM + tarafından barındırıldığında özelliği etkin olan uygulamalar için arabirim.  
+- COM+ tarafından barındırıldığı zaman uygulama havuzu etkin olan uygulamalar için arabirimler.  
   
-- Uygulamaya özel olarak işaretlenmiş bileşenlerin arabirimleri.  
+- Uygulamaya özel olarak işaretlenen bileşenlerin arabirimleri.  
   
-- COM + altyapı arabirimleri.  
+- COM+ altyapı arabirimleri.  
   
-- Sistem uygulaması arabirimleri.  
+- Sistem uygulamasından arabirimler.  
   
-- Genel derleme önbelleğine eklenmemiş olan Enterprise Hizmetleri bileşenlerin arabirimleri.  
+- Genel bütünleştirilmiş kod önbelleğine eklenmemiş kurumsal hizmetler bileşenlerinden arabirimler.  
   
 ### <a name="limited-object-reference-support"></a>Sınırlı nesne başvurusu desteği  
- Bir dizi Dağıtılmış COM + bileşenleri nesneleri tarafından başvuru parametreleri, ADO kayıt kümesini nesneyi döndürme gibi kullandığından COM + tümleştirme nesne başvuru parametreleri için sınırlı destek içerir. Uygulayan nesneler için destek sınırlıdır `IPersistStream` COM arabirimi. Bu ADO kayıt kümesini nesneleri içerir ve uygulama özel COM nesneleri için uygulanabilir.  
+ Dağıtılan bir dizi COM+ bileşeni, bir ADO kayıt kümesi nesnesi döndüren nesneleri başvuru parametrelerine göre kullandığından, COM+ tümleştirmesi nesne başvuru parametreleri için sınırlı destek içerir. Destek, `IPersistStream` com arabirimini uygulayan nesnelerle sınırlıdır. Bu, ADO kayıt kümesi nesnelerini içerir ve uygulamaya özgü COM nesneleri için uygulanabilir.  
   
- Bu desteğini etkinleştirmek için ComSvcConfig.exe araç sağlar. **allowreferences** normal yöntem imzası parametresi devre dışı bırakır ve nesne başvuru parametreleri kullanılmayan emin olmak için aracın çalıştığı denetler anahtarı . Ayrıca, parametre olarak geçirmeniz nesne türlerini gerekir adlandırılacağını ve içinde tanımlanan <`persistableTypes`> alt yapılandırma öğesi <`comContract`> öğesi.  
+ Bu desteği etkinleştirmek için ComSvcConfig. exe aracı, normal yöntem imza parametresini devre dışı bırakan **allowreferences** anahtarını sağlar ve nesnenin başvuru parametrelerinin kullanılmadığından emin olmak için aracın çalıştığını denetler. Ayrıca, parametre olarak geçirdiğiniz nesne türleri, <`persistableTypes``comContract`> öğesinin bir alt öğesi olan < > yapılandırma öğesinde adlandırılmalıdır ve tanımlanmalıdır.  
   
- Bu özellik kullanıldığında, COM + tümleştirme hizmet kullanan `IPersistStream` serileştirmek veya seri durumdan nesne örneği için arabirim. Nesne örneği desteklemiyorsa `IPersistStream`, bir özel durum oluşturulur.  
+ Bu özellik kullanıldığında, com+ tümleştirme hizmeti, nesne örneğini seri hale `IPersistStream` getirmek veya seri durumdan çıkarmak için arabirimini kullanır. Nesne örneği desteklemiyorsa `IPersistStream`, bir özel durum oluşturulur.  
   
- Bir istemci uygulamasından yöntemlerde <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> nesnesi, bir nesneyi bir hizmete geçirebilir ve benzer şekilde bir nesne almak için kullanılabilir.  
+ Bir istemci uygulaması içinde, nesnesindeki Yöntemler <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> bir hizmete bir nesneyi iletmek için ve benzer şekilde bir nesne almak için kullanılabilir.  
   
 > [!NOTE]
->  Serileştirme yaklaşımın özel ve platforma özgü yapısı nedeniyle, bu WCF istemcileri ve WCF hizmetleri arasında kullanım için idealdir.  
+> Serileştirme yaklaşımının özel ve platforma özgü doğası nedeniyle bu, WCF istemcileri ve WCF hizmetleri arasında kullanılması için idealdir.  
   
-## <a name="selecting-the-hosting-mode"></a>Barındırma modu seçme  
- COM + Web hizmetlerini barındırma şu modlardan birinde kullanıma sunar:  
+## <a name="selecting-the-hosting-mode"></a>Barındırma modunu seçme  
+ COM+, Web hizmetlerini aşağıdaki barındırma modlarından birinde kullanıma sunar:  
   
-- COM +-barındırılan  
+- COM+-barındırılan  
   
-     Web hizmeti, uygulamanın adanmış COM + sunucusu işlem içinde (Dllhost.exe) barındırılır. Bu modda uygulama Web hizmeti istekleri almak için önce açıkça başlatılması gerekir. COM + Seçenekleri "Çalıştırma olarak bir NT hizmeti" veya "boştayken bırakabilirsiniz" uygulama ve hizmetlerinin boşta kapatma önlemek için kullanılabilir. Bu mod, hem Web hizmeti hem de sunucu uygulaması için DCOM erişim sağlar.  
+     Web hizmeti, uygulamanın adanmış COM+ sunucu işlemi (Dllhost. exe) içinde barındırılır. Bu mod, Web hizmeti isteklerini almadan önce uygulamanın açıkça başlatılmasını gerektirir. Uygulamanın ve hizmetlerinin boş kapatılmasını engellemek için "NT hizmeti olarak çalıştır" veya "boşta olduğunda çalışmayı bırak" COM+ seçenekleri kullanılabilir. Bu mod, sunucu uygulamasına hem Web hizmeti hem de DCOM erişimi sağlar.  
   
-- Web barındırılan  
+- Web 'de barındırılan  
   
-     Web hizmeti Web sunucusu çalışan işlemi içinde barındırılır. Bu mod, ilk istek alındığında etkin olmasını COM + gerektirmez. Bu istek alındığında uygulamanın etkin değilse, istek işleme önce otomatik olarak etkinleştirilir. Bu mod ayrıca hem Web hizmeti hem de sunucu uygulaması için DCOM erişim sağlar, ancak Web hizmeti istekleri için bir işlem atlama neden olur. Bu genellikle, kimliğe bürünme özelliğini etkinleştirmek istemci gerektirir. WCF'de, bu ile yapılabilir <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği <xref:System.ServiceModel.Security.WindowsClientCredential> özelliği genel olarak erişilebilen sınıfı <xref:System.ServiceModel.ChannelFactory%601> sınıfı, hem de <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> numaralandırma değeri.  
+     Web hizmeti bir Web sunucusu çalışan işlemi içinde barındırılır. Bu mod, ilk istek alındığında COM+ ' ın etkin olmasını gerektirmez. Bu istek alındığında uygulama etkin değilse, istek işlenmeden önce otomatik olarak etkinleştirilir. Bu mod ayrıca sunucu uygulamasına hem Web hizmeti hem de DCOM erişimi sağlar, ancak Web hizmeti istekleri için bir işlem atlamaya neden olur. Bu, genellikle istemcinin kimliğe bürünme özelliğini etkinleştirmesini gerektirir. WCF 'de, bu <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> , genel <xref:System.ServiceModel.ChannelFactory%601> sınıfın bir özelliği ve <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> numaralandırma değeri <xref:System.ServiceModel.Security.WindowsClientCredential> olarak erişilen sınıfının özelliği ile yapılabilir.  
   
-- Web barındırılan işlem içi  
+- Web 'de barındırılan işleme  
   
-     Web hizmeti ve COM + uygulama mantığı Web sunucusu çalışan işlemi içinde barındırılır. Bu, Web hizmeti istekleri için bir işlem atlama neden olmadan Web barındırılan modunun Otomatik etkinleştirme sağlar. Olumsuz yönüyse, sunucu uygulaması DCOM üzerinden erişilemez ' dir.  
+     Web hizmeti ve COM+ uygulama mantığı, Web sunucusu çalışan işlemi içinde barındırılır. Bu, Web hizmeti istekleri için bir işlem atlamaya neden olmadan Web 'de barındırılan modunun otomatik olarak etkinleştirilmesini sağlar. Dezavantajı, sunucu uygulamasına DCOM üzerinden erişilemeyeceğini unutmayın.  
   
 ### <a name="security-considerations"></a>Güvenlik Değerlendirmeleri  
- Diğer WCF hizmetlerinde olduğu gibi kullanıma sunulan hizmet için güvenlik ayarlarını yapılandırma ayarları için WCF kanalı üzerinden yönetilir. DCOM makineye özel izin ayarları gibi geleneksel DCOM güvenlik ayarlarını zorlanmaz. COM + uygulama rolleri zorlamak için "bileşen düzeyinde erişim denetimleri" yetkilendirme bileşen için etkinleştirilmesi gerekir.  
+ Diğer WCF Hizmetleri gibi, gösterilen hizmetin güvenlik ayarları WCF kanalının yapılandırma ayarları aracılığıyla yönetilir. DCOM makine genelinde izin ayarları gibi geleneksel DCOM güvenlik ayarları zorlanmaz. COM+ uygulama rollerini zorlamak için, bileşen için "bileşen düzeyinde erişim denetimleri" yetkilendirmesi etkinleştirilmelidir.  
   
- Güvenli olmayan bir bağlama kullanımını iletişim değiştirilmesine veya bilgileri açığa açık bırakabilirsiniz. Bunu önlemek için güvenli bir bağlama kullanmanız önerilir.  
+ Güvenli olmayan bir bağlamanın kullanımı, izinsiz veya bilgilerin açığa çıkması için iletişimin açık kalmasına neden olabilir. Bunu engellemek için güvenli bağlama kullanmanız önerilir.  
   
- COM +-barındırılan ve Web barındırılan modda istemci uygulamaları gerekir izin istemci kullanıcının kimliğine bürünmek için sunucu işlemi. WCF istemcileri bu yapılabilir kimliğe bürünme düzeyini ayarlayarak <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ COM+ barındırılan ve Web 'de barındırılan modlar için, istemci uygulamaların istemci kullanıcının kimliğine bürünmesi için sunucu işlemine izin vermesi gerekir. Bu işlem, kimliğe bürünme düzeyi olarak <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ayarlanarak WCF istemcilerinde yapılabilir.  
   
- Internet Information Services (IIS) veya Windows İşlem Etkinleştirme Hizmeti (WAS) HTTP aktarımı kullanarak ile Httpcfg.exe araç, aktarım uç nokta adresi ayırmak için kullanılabilir. Diğer yapılandırmalar hedeflenen hizmet olarak davranan dolandırıcı Hizmetleri karşı korumak önemlidir. Bir rogue hizmet istenen uç noktada başlatılmasını önlemek için yasal hizmeti bir NT hizmeti olarak çalıştırmak için yapılandırılabilir. Bu uç nokta adresi yanlış hizmetlerin önce talep etmek üzere yasal hizmet sağlar.  
+ HTTP aktarımını kullanan Internet Information Services (IIS) veya Windows Işlem etkinleştirme hizmeti (WAS) ile, bir taşıma uç noktası adresini ayırmak için Httpcfg. exe aracı kullanılabilir. Diğer yapılandırmalarda, amaçlanan hizmet olarak davranan standart dışı hizmetlere karşı korunması önemlidir. Standart dışı bir hizmetin istenen uç noktada başlamasını engellemek için, meşru hizmet bir NT hizmeti olarak çalışacak şekilde yapılandırılabilir. Bu, meşru bir hizmetin, herhangi bir standart dışı hizmetlerden önce Endpoint adresini talep etmesini sağlar.  
   
- Bir COM + uygulaması ile yapılandırılan COM + rolleri Web barındırılan bir hizmet olarak kullanıma sunma, uygulamanın rollerden biri için "Launch IIS işlem hesabı" eklenmelidir. Bu hesap, genellikle kullandıktan sonra temiz kapatma nesnelerin etkinleştirmek için adıyla IWAM_machinename eklenmelidir. Hesabın herhangi bir ek izin verilmemelidir.  
+ Yapılandırılmış COM+ rolleriyle bir COM+ uygulamasını Web 'de barındırılan bir hizmet olarak kullanıma sunana zaman, uygulamanın rollerinin birine "IIS Işlem hesabı 'nı Başlat" eklenmelidir. Bu hesap, genellikle IWAM_machinename adıyla birlikte, nesnelerin temiz kapatılmasını etkinleştirmek için eklenmelidir. Hesaba herhangi bir ek izin verilmemelidir.  
   
- COM + işlem özellikleri geri dönüştürme tümleşik uygulamaları kullanılamaz. Uygulamanın işlem geri dönüştürme kullanmak üzere yapılandırılmış ve bileşenlerin bir COM + barındırılan işlemde çalıştığından, hizmeti başlatılamıyor. Bu gereksinim, işlem geri dönüştürme ayarları uygulanmamış olduğundan Web barındırılan işlem modu kullanarak Hizmetleri içermez.  
+ COM+ işlem geri dönüştürme özellikleri tümleşik uygulamalarda kullanılamaz. Uygulama, işlem geri dönüşümünü kullanacak şekilde yapılandırıldıysa ve bileşenler COM+ barındırılan bir işlemde çalışıyorsa, hizmet başlatılamaz. Bu gereksinim, işlem geri dönüştürme ayarları uygulanmadığından, Web 'de barındırılan işlem içi modu kullanılarak hizmetler içermez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

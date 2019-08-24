@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbe28c01891464ff45dfec97b1d8b4685ba8a51a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4cda67145a0e624f87e93cf02ebdb6bc77c34d2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744368"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69987601"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly Yöntemi
-Bu kapsayıcı derleme döndürür `ICorDebugAssembly3` nesne.  
+Bu `ICorDebugAssembly3` nesnenin kapsayıcı derlemesini döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -24,25 +24,25 @@ HRESULT GetContainerAssembly(
   
 ## <a name="parameters"></a>Parametreler  
  `ppAssembly`  
- Kapsayıcı derlemesi temsil eden Icordebugassembly nesnenin adresini bir işaretçiye veya **null** yöntem çağrısı başarısız olursa.  
+ Kapsayıcı derlemesini temsil eden bir ICorDebugAssembly nesnesinin adresine yönelik bir işaretçi veya yöntem çağrısı başarısız olursa **null** .  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` metot çağrısı başarılı olursa; Aksi takdirde, `S_FALSE`, ve `ppAssembly` olduğu **null**.  
+ `S_OK`Yöntem çağrısı başarılı olursa; Aksi halde `S_FALSE`,, `ppAssembly` ve **null**.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu derleme başkalarıyla tek kapsayıcı derleme içinde birleştirilmiştir, bu yöntem, kapsayıcı derleme döndürür. Daha fazla bilgi ve terimler için bkz. [Icordebugprocess6::enablevirtualmodulesplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) konu.  
+ Bu derleme, tek bir kapsayıcı derlemesi içindeki diğer kullanıcılarla birleştirilmişse, bu yöntem kapsayıcı derlemesini döndürür. Daha fazla bilgi ve terminoloji için [ICorDebugProcess6:: Enablevirtualmodulebölünmesi](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) konusuna bakın.  
   
 > [!NOTE]
->  Bu yöntem yalnızca .NET Native ile kullanılabilir.  
+> Bu yöntem yalnızca .NET Native kullanılabilir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Üst bilgi:** CorDebug.idl, CorDebug.h  
+ **Üst bilgi** CorDebug. IDL, CorDebug. h  
   
- **Kitaplığı:** CorGuids.lib  
+ **Kitaplığı** Corguid. lib  
   
- **.NET framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

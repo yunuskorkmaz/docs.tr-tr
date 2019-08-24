@@ -2,18 +2,18 @@
 title: İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963336"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988811"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>İş Akışı Hizmetlerine İşlemlerin Giriş ve Çıkış Akışını Gerçekleştirme
 İş akışı hizmetleri ve istemcileri işlemlere katılabilir.  Bir hizmet işleminin bir çevresel işlemin bir parçası haline gelmesi için etkinlik <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.TransactedReceiveScope> içine bir etkinlik koyun. Bir <xref:System.ServiceModel.Activities.Send> veyaiçindeki<xref:System.ServiceModel.Activities.TransactedReceiveScope> bir etkinlik tarafından yapılan tüm çağrılar çevresel işlem içinde de yapılır. <xref:System.ServiceModel.Activities.SendReply> Bir iş akışı istemci uygulaması, <xref:System.Activities.Statements.TransactionScope> etkinlikleri kullanarak ve ortam işlemini kullanarak hizmet işlemlerini çağıran bir ortam işlemi oluşturabilir. Bu konu, işlemlere katılan bir iş akışı hizmeti ve iş akışı istemcisi oluşturma konusunda size yol gösterir.  
   
 > [!WARNING]
->  Bir iş akışı hizmeti örneği bir işlem içinde yüklenirse ve iş akışı bir <xref:System.Activities.Statements.Persist> etkinlik içeriyorsa, iş akışı örneği işlem zaman aşımına uğrayana kadar engeller.  
+> Bir iş akışı hizmeti örneği bir işlem içinde yüklenirse ve iş akışı bir <xref:System.Activities.Statements.Persist> etkinlik içeriyorsa, iş akışı örneği işlem zaman aşımına uğrayana kadar engeller.  
   
 > [!IMPORTANT]
 > Her kullanışınızda <xref:System.ServiceModel.Activities.TransactedReceiveScope> , iş akışına tüm alma işlemleri etkinlikleri içinde <xref:System.ServiceModel.Activities.TransactedReceiveScope> yerleştirmeniz önerilir.  

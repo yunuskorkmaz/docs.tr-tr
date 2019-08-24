@@ -2,42 +2,42 @@
 title: 'Nasıl yapılır: Hizmet Sürümü Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654534"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988713"
 ---
 # <a name="how-to-service-versioning"></a>Nasıl yapılır: Hizmet Sürümü Oluşturma
-Bu konuda aynı hizmetin farklı sürümlerine iletileri yönlendiren bir yönlendirme yapılandırması oluşturma için gerekli temel adımlar açıklanmaktadır. Bu örnekte, iki farklı sürümlerine bir hesap makinesi hizmet iletileri yönlendirilir `roundingCalc` (v1) ve `regularCalc` (v2). Hem uygulamalar aynı işlemleri desteği: Ancak, eski hizmet `roundingCalc`, sonuç döndürülmeden önce tüm hesaplamalar en yakın tamsayı değerine yuvarlanır. Yeni kullanılıp kullanılmayacağını belirtmek bir istemci uygulaması erişebilmelidir `regularCalc` hizmeti.  
+Bu konuda, aynı hizmetin farklı sürümlerine iletileri yönlendiren bir yönlendirme yapılandırması oluşturmak için gereken temel adımlar özetlenmektedir. Bu örnekte, iletiler bir hesap makinesi hizmetinin `roundingCalc` (v1) ve `regularCalc` (v2) iki farklı sürümüne yönlendirilir. Her iki uygulama da aynı işlemleri destekler; Ancak eski hizmet `roundingCalc`, döndürmeden önce tüm hesaplamaları en yakın tamsayı değerine yuvarlar. İstemci uygulaması, yeni `regularCalc` hizmetin kullanılıp kullanılmayacağını belirtebilmelidir.  
   
 > [!WARNING]
->  Bir özel hizmet sürümünden bir ileti yönlendirmek için yönlendirme hizmeti ileti içeriğine göre ileti hedef belirlemek mümkün olması gerekir. Aşağıda gösterilen yöntemi, istemci, sürüm bilgileri bir ileti üst bilgisi ekleyerek belirtin. Ek veri iletmek istemcileri gerektirmeyen hizmet sürümü oluşturma yöntemleri vardır. Örneğin, bir ileti için en son yönlendirilebilir veya bir hizmet veya yönlendirici en uyumlu sürümü standart SOAP Zarfı parçası kullanabilir.  
+> Bir iletiyi belirli bir hizmet sürümüne yönlendirmek için, yönlendirme hizmeti ileti içeriğini temel alarak ileti hedefini belirleyebilmelidir. Aşağıda gösterilen yöntemde, istemci, bir ileti üstbilgisine bilgi ekleyerek sürümü belirler. Hizmet sürümü oluşturma, istemcilerin ek veri geçmesini gerektirmeyen yöntemler vardır. Örneğin, bir ileti bir hizmetin en son veya en uyumlu sürümüne yönlendirilebilir veya yönlendirici standart SOAP zarfının bir parçasını kullanabilir.  
   
- Her iki hizmet tarafından sunulan işlemleri şunlardır:  
+ Her iki hizmet tarafından kullanıma sunulan işlemler şunlardır:  
   
 - Ekle  
   
 - Çıkarma  
   
-- Çarp  
+- Bilirsiniz  
   
-- Bölme  
+- Sayısına  
   
- Her iki hizmet uygulamalarını aynı işlemleri işlemek ve dışında döndürmeleri veri temel olarak aynı olduğundan, istemci uygulamalarından gönderilen iletileri bulunan temel verileri nasıl yönlendirileceğini belirlemek olanak tanımak için benzersiz değil İstek. Örneğin, eylem filtrelerini her iki hizmet için varsayılan Eylemler aynı olduğundan kullanılamaz.  
+ Her iki hizmet uygulaması da aynı işlemleri yaptığından ve temelde getirdikleri verilerden farklı olduklarından, istemci uygulamalarından gönderilen iletilerde bulunan temel veriler, bu işlemin nasıl yönlendirildiğini belirlemenizi sağlayacak kadar benzersiz değildir. isteyen. Örneğin, her iki hizmet için de varsayılan eylemler aynı olduğundan eylem filtreleri kullanılamaz.  
   
- Yönlendirici hizmetinin her sürüm için belirli bir uç noktada kullanıma veya hizmet sürümü belirten iletiyi için özel üstbilgi öğesi ekleme gibi çeşitli şekillerde çözülebilir.  Bu yaklaşımların her birinin benzersiz bir şekilde hizmetin belirli bir sürüme gelen iletileri yönlendirmek sağlar, ancak benzersiz ileti içeriğini kullanan istekler için farklı hizmet sürümleri arasında ayrım yapma, tercih edilen yöntemdir.  
+ Bu, hizmetin her bir sürümü için yönlendiricide belirli bir uç noktayı açığa çıkarmak veya hizmet sürümünü göstermek üzere iletiye özel bir üst bilgi öğesi eklemek gibi çeşitli yollarla çözülebilir.  Bu yaklaşımlardan her biri, gelen iletileri hizmetin belirli bir sürümüne benzersiz bir şekilde yönlendirmenize olanak tanır, ancak benzersiz ileti içeriğini kullanmak, farklı hizmet sürümlerine yönelik istekler arasında ayrım yapmak için tercih edilen yöntemdir.  
   
- Bu örnekte istemci uygulaması için istek iletisi 'CalcVer' özel üst bilgi ekler. Bu üst bilgi iletisi için yönlendirileceğini hizmetinin sürümü belirten bir değer içerir. Değerini '1', '2' değerini regularCalc hizmeti çağrılırken, ileti roundingCalc hizmeti tarafından işlenen gerekir gösterir. Bu iletiyi hizmetin hangi sürümünün işleyecek doğrudan denetlemek istemci uygulaması sağlar.  Özel üst bilgi iletisi içinde yer alan bir değer olduğundan, her iki hizmeti sürümleri hedefleyen iletileri almak için bir uç nokta kullanabilirsiniz. Aşağıdaki kod, bu özel üstbilgi iletiye eklemek için istemci uygulamasında kullanılabilir:  
+ Bu örnekte, istemci uygulaması ' CalcVer ' özel üstbilgisini istek iletisine ekler. Bu üst bilgi, iletinin yönlendirileceği hizmetin sürümünü belirten bir değer içerir. ' 1 ' değeri, iletinin roundingCalc hizmeti tarafından işlenmesi gerektiğini gösterir, ancak bir ' 2 ' değeri regularCalc hizmetini gösterir. Bu, istemci uygulamanın hangi hizmetin hizmet sürümünün iletiyi işleyeceğini doğrudan denetlemesini sağlar.  Özel üstbilgi ileti içinde yer alan bir değer olduğundan, hizmetin her iki sürümüne de yönelik iletileri almak için bir uç nokta kullanabilirsiniz. Aşağıdaki kod, bu özel üstbilgiyi iletiye eklemek için istemci uygulamasında kullanılabilir:  
   
 ```csharp  
 messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custom.namespace/", "2"));  
 ```  
   
-### <a name="implement-service-versioning"></a>Uygulama hizmet sürümü oluşturma  
+### <a name="implement-service-versioning"></a>Hizmet sürümü oluşturmayı Uygula  
   
-1. Temel yönlendirme hizmeti yapılandırmasını hizmet tarafından sunulan hizmet uç noktası belirterek oluşturun. Aşağıdaki örnek, iletileri almak için kullanılacak bir tek hizmet uç noktası tanımlar. Ayrıca, ileti göndermek için kullanılan istemci uç noktalarını tanımlar `roundingCalc` (v1) ve `regularCalc` (v2) Hizmetleri.  
+1. Hizmet tarafından açığa çıkarılan hizmet uç noktasını belirterek temel yönlendirme hizmeti yapılandırmasını oluşturun. Aşağıdaki örnek, ileti almak için kullanılacak tek bir hizmet uç noktasını tanımlar. Ayrıca, `roundingCalc` (v1) `regularCalc` ve (v2) hizmetlerine ileti göndermek için kullanılacak istemci uç noktalarını tanımlar.  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Hedef Uç noktalara iletileri yönlendirmek için kullanılan filtreler tanımlar.  Bu örnekte, XPath filtresi, hangi sürümü için ileti yönlendirileceğini belirlemek için "CalcVer" özel üst bilgi değeri algılamak için kullanılır. Bir XPath filtresi "CalcVer" üst bilgi içermeyen iletilerini algılamak için de kullanılır. Aşağıdaki örnek, ad alanı tablosu ve gerekli filtreleri tanımlar.  
+2. İletileri hedef uç noktalara yönlendirmek için kullanılan filtreleri tanımlayın.  Bu örnek için XPath filtresi, iletinin hangi sürüme yönlendirildiğini belirlemek için "CalcVer" özel üst bilgisinin değerini algılamak için kullanılır. XPath filtresi, "CalcVer" üstbilgisini içermeyen iletileri algılamak için de kullanılır. Aşağıdaki örnekte gerekli filtreler ve ad alanı tablosu tanımlanmaktadır.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,11 +94,11 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > S12 ad alanı öneki varsayılan ad alanı tablo olarak tanımlanır ve ad alanını temsil eden `http://www.w3.org/2003/05/soap-envelope`.
+    > S12 ad alanı ön eki, ad alanı tablosunda varsayılan olarak tanımlanır ve ad alanını `http://www.w3.org/2003/05/soap-envelope`temsil eder.
   
-3. Her filtre bir istemci uç noktası ile ilişkilendirir filtre tablo tanımlayın. İleti "CalcVer" üst bilgi değeri 1 ile içeriyorsa regularCalc hizmetine gönderilir. Başlığı 2 değerini içeriyorsa, roundingCalc hizmetine gönderilir. Üst bilgi varsa, ileti için regularCalc yönlendirilir.  
+3. Her bir filtreyi bir istemci uç noktasıyla ilişkilendiren filtre tablosunu tanımlayın. İleti, değeri 1 olan "CalcVer" üstbilgisini içeriyorsa, regularCalc hizmetine gönderilir. Üst bilgi 2 değeri içeriyorsa, roundingCalc hizmetine gönderilir. Üst bilgi yoksa, ileti regularCalc yönlendirilir.  
   
-     Aşağıdaki filtre tabloyu tanımlayan ve daha önce tanımlanan filtreler ekler.  
+     Aşağıda, filtre tablosu tanımlanmaktadır ve daha önce tanımlanan filtreler eklenir.  
   
     ```xml  
     <filterTables>  
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Filtre tablosunda bulunan filtrelerle gelen iletileri değerlendirmek için yönlendirme davranışı kullanarak hizmet uç noktaları ile filtreleme tablosu ilişkilendirmelisiniz. Aşağıdaki örnek, ilişkilendirme gösterir `filterTable1` hizmet uç noktaları ile:  
+4. Gelen iletileri filtre tablosunda yer alan filtrelere karşı değerlendirmek için, yönlendirme davranışını kullanarak filtre tablosunu hizmet uç noktalarıyla ilişkilendirmeniz gerekir. Aşağıdaki örnek, hizmet uç `filterTable1` noktaları ile ilişkilendirme gösterir:  
   
     ```xml  
     <behaviors>  
@@ -131,7 +131,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
 ## <a name="example"></a>Örnek  
- Yapılandırma dosyasının tam bir listesi verilmiştir.  
+ Yapılandırma dosyasının tüm listesi aşağıda verilmiştir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -214,7 +214,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
 ```  
   
 ## <a name="example"></a>Örnek  
- İstemci uygulamasının tam bir listesi verilmiştir.  
+ Aşağıda, istemci uygulamasının tamamen bir listesi verilmiştir.  
   
 ```csharp  
 using System;  

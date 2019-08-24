@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 966c3c17c3c42e20ad55681e1c17b13d3f466fa3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 665ede5b5a46c4093382bed5ed28a0d2bba979be
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967814"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988603"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 Windows Communication Foundation (WCF), uygulamanızdaki verileri, serileştirme adlı bir işlem olan istemciler ve hizmetler arasında aktarılan XML 'ye dönüştürmek için iki farklı serileştirme teknolojisini kullanabilir.  
@@ -97,7 +97,7 @@ Windows Communication Foundation (WCF), uygulamanızdaki verileri, serileştirme
  `IXmlSerializable` Arabirimini uygulayan türler `DataContractSerializer`tarafından tamamen desteklenir. Bu türlerin şemasını denetlemek için özniteliğiherzamanbutürlereuygulanmalıdır.<xref:System.Xml.Serialization.XmlSchemaProviderAttribute>  
   
 > [!WARNING]
->  Polimorfik türler serileştirilmiş olmanız durumunda doğru <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> türün serileştirildiğinden emin olmak için türünü türüne uygulamanız gerekir.  
+> Polimorfik türler serileştirilmiş olmanız durumunda doğru <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> türün serileştirildiğinden emin olmak için türünü türüne uygulamanız gerekir.  
   
  Şunları uygulayan `IXmlSerializable`tür üç değişken vardır: rastgele içeriği temsil eden türler, tek bir öğeyi temsil eden türler ve eski <xref:System.Data.DataSet> türler.  
   

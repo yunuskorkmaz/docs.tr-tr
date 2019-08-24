@@ -1,42 +1,42 @@
 ---
-title: 'Nasıl yapılır: Bir Windows Communication Foundation sözleşme sınıfı ile oluşturma'
+title: 'Nasıl yapılır: Sınıf ile Windows Communication Foundation sözleşmesi oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cd757107d9f62ce749d98db1d4968c02a09c5d2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787588"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988741"
 ---
-# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Nasıl yapılır: Bir Windows Communication Foundation sözleşme sınıfı ile oluşturma
-Bir Windows Communication Foundation (WCF) sözleşmesi oluşturma tercih edilen yol, bir arabirim kullanmaktır. Daha fazla bilgi için [nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Bir alternatif, Anahatlı burayı olan bir sınıf oluşturun ve ardından uygulama <xref:System.ServiceModel.ServiceContractAttribute> sınıfı özniteliği doğrudan ve <xref:System.ServiceModel.OperationContractAttribute> her sözleşmesinin bir parçası olan yöntemler için özniteliği.  
+# <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Nasıl yapılır: Sınıf ile Windows Communication Foundation sözleşmesi oluşturma
+Windows Communication Foundation (WCF) sözleşmesinin oluşturulması için tercih edilen yöntem bir arabirim kullanmaktır. Daha fazla bilgi için [nasıl yapılır: Bir hizmet sözleşmesi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)tanımlayın. Burada özetlenen alternatif, bir sınıf oluşturmak ve ardından doğrudan sınıfa <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.OperationContractAttribute> ve özniteliği, sözleşmenin bir parçası olan sınıftaki yöntemlerin her birine uygular.  
   
 > [!WARNING]
->  `[ServiceContract]` ve `[ServiceContractAttribute]` aynı işlevi görür. Aynı şeyi true `[OperationContract]` ve `[OperationContractAttribute]`. Her durumda, önceki ikincisi için Toplu özellik var.  
+> `[ServiceContract]`ve `[ServiceContractAttribute]` aynı şeyi yapın. `[OperationContract]` Ve`[OperationContractAttribute]`için aynı şey doğrudur. Her durumda, ilki ikinci için toplu bir özelliktir.  
   
- Hizmet sözleşmeleri hakkında daha fazla bilgi için bkz: [Hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md).  
+ Hizmet sözleşmeleri hakkında daha fazla bilgi için bkz. [hizmet sözleşmeleri tasarlama](../../../../docs/framework/wcf/designing-service-contracts.md).  
   
-### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Bir Windows Communication Foundation sözleşme sınıfı ile oluşturma  
+### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Bir sınıfla Windows Communication Foundation sözleşmesi oluşturma  
   
-1. Visual Basic kullanarak yeni bir sınıf oluşturun C#, veya tüm diğer ortak dil çalışma zamanı dil.  
+1. Visual Basic, C#veya diğer tüm ortak dil çalışma zamanı dilini kullanarak yeni bir sınıf oluşturun.  
   
-2. Uygulama <xref:System.ServiceModel.ServiceContractAttribute> sınıfı için sınıf.  
+2. <xref:System.ServiceModel.ServiceContractAttribute> Sınıfını sınıfına uygulayın.  
   
-3. Sınıfı yöntemleri oluşturun.  
+3. Sınıfında yöntem oluşturun.  
   
-4. Uygulama <xref:System.ServiceModel.OperationContractAttribute> genel WCF sözleşmesinin bir parçası sunulan her yöntem için sınıf.  
+4. <xref:System.ServiceModel.OperationContractAttribute> Sınıfı, genel WCF sözleşmesinin bir parçası olarak kullanıma sunulacak her bir yönteme uygulayın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği bir hizmet anlaşmasını tanımlayan bir sınıf gösterir.  
+ Aşağıdaki kod örneği, bir hizmet sözleşmesini tanımlayan bir sınıfı gösterir.  
   
  [!code-csharp[c_HowTo_CreateContractWithClass#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_createcontractwithclass/cs/source.cs#1)]
  [!code-vb[c_HowTo_CreateContractWithClass#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_createcontractwithclass/vb/source.vb#1)]  
   
- Sahip yöntemleri <xref:System.ServiceModel.OperationContractAttribute> uygulanan sınıfı, varsayılan olarak istek-yanıt iletisi deseni kullanın. Bu ileti düzeni hakkında daha fazla bilgi için bkz. [nasıl yapılır: İstek-yanıt anlaşması oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Ayrıca, oluşturabilir ve diğer ileti desenleri öznitelik özelliklerini ayarlayarak kullanın. Daha fazla örnek için bkz. [nasıl yapılır: Tek yönlü anlaşma oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) ve [nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
+ <xref:System.ServiceModel.OperationContractAttribute> Sınıf uygulanmış Yöntemler varsayılan olarak bir istek-yanıt iletisi model kullanır. Bu ileti düzeniyle ilgili daha fazla bilgi için bkz [. nasıl yapılır: Istek-yanıt Sözleşmesi](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)oluşturun. Ayrıca, özniteliğin özelliklerini ayarlayarak diğer ileti düzenlerini de oluşturabilir ve kullanabilirsiniz. Daha fazla örnek için bkz [. nasıl yapılır: Tek yönlü bir sözleşme](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) oluşturun ve [şunları yapın: Çift yönlü sözleşme](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

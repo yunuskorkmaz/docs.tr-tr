@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: 53d6bdb34ded52e49fcc8c5de98fcd45ddabadaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942773"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988324"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration >
 WS-Federation protokolü aracılığıyla federal kimlik doğrulaması kullanırken <xref:System.IdentityModel.Services.SessionAuthenticationModule> (wsfab)ve(Sam)öğesiniyapılandırır.<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Talep tabanlı erişim denetimi sağlamak <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> için veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sınıfını kullanırken öğesini yapılandırır. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
@@ -74,7 +74,7 @@ WS-Federation protokolü aracılığıyla federal kimlik doğrulaması kullanır
  Aşağıdaki XML, wsfab için ayarları belirten bir `<federationConfiguration>` öğe gösterir ve varsayılan tanımlama bilgisi işleyicisinin ( <xref:System.IdentityModel.Services.ChunkedCookieHandler> sınıfın bir örneği) Sam tarafından kullanılacağını belirtir.  
   
 > [!WARNING]
->  Bu örnekte, HTTPS kullanmak için tanımlama bilgisi işleyicisi veya WSFAE gerekmez. Bunun nedeni `requireHttps` , `<wsFederation>` öğesindeki özniteliği `requireSsl` veiçindeki`false`özniteliğidir. `<cookieHandlerElement>` Bu ayarlar, çoğu üretim ortamında bir güvenlik riski sunabilecek şekilde önerilmez.  
+> Bu örnekte, HTTPS kullanmak için tanımlama bilgisi işleyicisi veya WSFAE gerekmez. Bunun nedeni `requireHttps` , `<wsFederation>` öğesindeki özniteliği `requireSsl` veiçindeki`false`özniteliğidir. `<cookieHandlerElement>` Bu ayarlar, çoğu üretim ortamında bir güvenlik riski sunabilecek şekilde önerilmez.  
   
 ```xml  
 <system.identityModel.services>  

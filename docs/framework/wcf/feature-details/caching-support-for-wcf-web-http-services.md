@@ -2,12 +2,12 @@
 title: WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: a6a03f20fa6a853f813dc9eff3a4202ab18cad90
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 655e8807a78d542cd7fa586eca3750507891f74b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952663"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988772"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF Web HTTP hizmetinizdeki ASP.NET ' de zaten kullanılabilir olan bildirime dayalı önbelleğe alma mekanizmasını kullanmanıza olanak sağlar. Bu, WCF Web HTTP hizmet işlemlerinizin yanıtlarını önbelleğe almanıza olanak sağlar. Bir kullanıcı hizmetinize önbelleğe alma için yapılandırılmış bir HTTP Al gönderdiğinde, ASP.NET önbelleğe alınan yanıtı geri gönderir ve hizmet yöntemi çağrılmaz. Önbelleğin süresi dolarsa, bir Kullanıcı bir sonraki HTTP GET gönderdiğinde, hizmet yönteminiz çağrılır ve yanıt yeniden önbelleğe alınır. ASP.NET önbelleğe alma hakkında daha fazla bilgi için bkz. [ASP.net Caching Overview](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -40,7 +40,7 @@ public class Service
 ```
   
 > [!WARNING]
->  ASP.NET uyumluluk modu açık değilse ve bir özel durum kullanılırsa <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , bir özel durum oluşturulur.  
+> ASP.NET uyumluluk modu açık değilse ve bir özel durum kullanılırsa <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> , bir özel durum oluşturulur.  
   
  Tarafından belirtilen önbellek profili adı, <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> Web. config yapılandırma dosyanıza eklenen bir önbellek profilini tanımlar. Önbellek profili, aşağıdaki yapılandırma örneğinde gösterildiği gibi bir`outputCacheSetting`< > öğesi ile tanımlanır.  
   
