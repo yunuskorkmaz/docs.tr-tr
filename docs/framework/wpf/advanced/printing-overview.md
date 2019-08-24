@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958555"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016109"
 ---
 # <a name="printing-overview"></a>Yazdırmaya Genel Bakış
 Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uygulama geliştiricilerinin zengin yeni bir yazdırma ve yazdırma sistemi yönetim API 'Leri kümesi vardır. İle [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], bu yazdırma sistemi geliştirmelerinden bazıları, yönetilmeyen kod kullanan uygulamalar ve [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] geliştiriciler oluşturan geliştiriciler tarafından da kullanılabilir. Bu yeni işlevin çekirdeği, yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosya biçimi [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ve yazdırma yoludur.  
@@ -64,7 +64,7 @@ Microsoft .NET Framework ile, Windows Presentation Foundation (WPF) kullanan uyg
   
  , Ve Windows Forms uygulamalar tarafından [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kullanılan XPSDrv tabanlı yazıcıların kullanımını etkinleştirmek için, XPS yazıcı sürücüsü (XPSDrv) GDI 'dan XPS biçimine dönüştürmeyi destekler. XPSDrv modeli, [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] uygulamaların belgeleri yazdırabilmesi [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] için bir XPS 'ye yönelik bir dönüştürme de sağlar. Uygulamalar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] için, yazma işleminin hedef yazdırma sırasının bir XPSDrv sürücüsüne sahip olmadığı her <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> seferinde, XPS 'nin <xref:System.Windows.Xps.XpsDocumentWriter> GDI biçimine dönüştürülmesi, sınıfının ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemleri tarafından otomatik olarak gerçekleştirilir. (Windows Forms uygulamalar belge yazdıramaz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] .)  
   
- Aşağıdaki çizim, yazdırma alt sistemini gösterir ve tarafından [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]sunulan bölümleri ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri tanımlar:  
+ Aşağıdaki çizimde, yazdırma alt sistemi gösterilmektedir ve Microsoft tarafından sunulan bölümleri ve yazılım ve donanım satıcıları tarafından tanımlanan bölümleri tanımlar:  
   
  ![Ekran görüntüsü XPS Yazdırma sistemini gösterir.](./media/printing-overview/xml-paper-specification-print-system.png)  
   

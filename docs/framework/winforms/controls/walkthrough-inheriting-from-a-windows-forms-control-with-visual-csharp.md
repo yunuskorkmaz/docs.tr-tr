@@ -8,44 +8,48 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: c06639ef2f2ced8bd128adea636efe8be1715764
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 4a9a4b9bc15d2579837c3f4969a8d85293f10967
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931016"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015674"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>İzlenecek yol: Visual C ile Windows Forms denetiminden devralma\#
+# <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>İzlenecek yol: C ile Windows Forms denetiminden devralma\#
+
 Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilirsiniz. Devralma aracılığıyla standart Windows Forms denetimlerinin tüm devralınan işlevlerini koruyan ancak özel işlevleri de birleştiren denetimler oluşturabilirsiniz. Bu kılavuzda, adlı `ValueButton`basit bir devralınmış denetim oluşturacaksınız. Bu düğme standart Windows Forms <xref:System.Windows.Forms.Button> denetiminden işlevselliği devralacak ve adlı `ButtonValue`özel bir özelliği kullanıma sunacaktır.
 
-## <a name="creating-the-project"></a>Projeyi Oluşturma
- Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlamak ve varsayılan bileşenin doğru ad alanında yer aldığından emin olmak için adını belirtin.
+## <a name="create-the-project"></a>Projeyi Oluşturma
+
+Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlamak ve varsayılan bileşenin doğru ad alanında yer aldığından emin olmak için adını belirtin.
 
 ### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>ValueButtonLib denetim kitaplığını ve ValueButton denetimini oluşturmak için
 
-1. **Dosya** menüsünde, **Yeni** ' nin üzerine gelin ve ardından **Proje** ' ye tıklayarak **Yeni proje** iletişim kutusunu açın.
-
-2. Görsel C# proje listesinden **Windows Forms denetim kitaplığı** proje şablonunu seçin ve ad kutusuna yazın. `ValueButtonLib`
+1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun ve **ValueButtonLib**olarak adlandırın.
 
      Proje adı `ValueButtonLib`, varsayılan olarak kök ad alanına da atanır. Kök ad alanı, derlemedeki bileşenlerin adlarını nitelemek için kullanılır. Örneğin, iki derleme adlı `ValueButton`bileşenler içeriyorsa, `ValueButton` bileşenini kullanarak `ValueButtonLib.ValueButton`belirtebilirsiniz. Daha fazla bilgi için bkz. [ad alanları](../../../csharp/programming-guide/namespaces/index.md).
 
-3. **Çözüm Gezgini**' de, **UserControl1.cs**' a sağ tıklayıp kısayol menüsünden **Yeniden Adlandır** ' ı seçin. Dosya adını olarak `ValueButton.cs`değiştirin. '`UserControl1`' Kod öğesine yapılan tüm başvuruları yeniden adlandırmak Isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
+2. **Çözüm Gezgini**' de, **UserControl1.cs**' a sağ tıklayıp kısayol menüsünden **Yeniden Adlandır** ' ı seçin. Dosya adını **ValueButton.cs**olarak değiştirin. '`UserControl1`' Kod öğesine yapılan tüm başvuruları yeniden adlandırmak Isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
 
-4. **Çözüm Gezgini**' de, **ValueButton.cs** ' a sağ tıklayın ve **kodu görüntüle**' yi seçin.
+3. **Çözüm Gezgini**' de, **ValueButton.cs** ' a sağ tıklayın ve **kodu görüntüle**' yi seçin.
 
-5. Bildiri satırını bulun ve bu denetimin devraldığı <xref:System.Windows.Forms.UserControl> türü olarak <xref:System.Windows.Forms.Button>değiştirin. `public partial class ValueButton` `class` Bu, <xref:System.Windows.Forms.Button> devralınan denetiminizin tüm denetim işlevlerini devralmasını sağlar.
+4. Bildiri satırını bulun ve bu denetimin devraldığı <xref:System.Windows.Forms.UserControl> türü olarak <xref:System.Windows.Forms.Button>değiştirin. `public partial class ValueButton` `class` Bu, <xref:System.Windows.Forms.Button> devralınan denetiminizin tüm denetim işlevlerini devralmasını sağlar.
 
-6. **Çözüm Gezgini**, tasarımcı tarafından oluşturulan kod dosyasını göstermek için **ValueButton.cs** düğümünü açın, **ValueButton.Designer.cs**. Bu dosyayı **kod düzenleyicisinde**açın.
+5. **Çözüm Gezgini**, tasarımcı tarafından oluşturulan kod dosyasını göstermek için **ValueButton.cs** düğümünü açın, **ValueButton.Designer.cs**. Bu dosyayı **kod düzenleyicisinde**açın.
 
-7. Yöntemini bulun ve <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özelliği atayan çizgiyi kaldırın. `InitializeComponent` Bu özellik <xref:System.Windows.Forms.Button> denetimde yok.
+6. Yöntemini bulun ve <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> özelliği atayan çizgiyi kaldırın. `InitializeComponent` Bu özellik <xref:System.Windows.Forms.Button> denetimde yok.
 
-8. Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.
+7. Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.
 
     > [!NOTE]
     > Görsel tasarımcı artık kullanılamıyor. <xref:System.Windows.Forms.Button> Denetim kendi boyadığı için tasarımcıda görünümünü değiştiremedik. Görsel temsili, kodda değiştirilmediği sürece (yani, <xref:System.Windows.Forms.Button>) devraldığı sınıftan tamamen aynı olacaktır. Tasarım yüzeyine, UI öğesi içermeyen bileşenler ekleyebilirsiniz.
 
-## <a name="adding-a-property-to-your-inherited-control"></a>Devralınan Denetiecekseniz özellik ekleme
- Devralınan Windows Forms denetimlerinin olası bir kullanımı, standart Windows Forms denetimlerinin görünümü ve hisde aynı olan, ancak özel özellikler sunan denetimlerin oluşturulması. Bu bölümde, denetimi adlı `ButtonValue` bir özellik ekleyeceksiniz.
+## <a name="add-a-property-to-your-inherited-control"></a>Devralınan denetimi bir özellik ekleyin
+
+Devralınan Windows Forms denetimlerinin olası bir kullanımı, standart Windows Forms denetimlerinin görünümü ve hisde aynı olan, ancak özel özellikler sunan denetimlerin oluşturulması. Bu bölümde, denetimi adlı `ButtonValue` bir özellik ekleyeceksiniz.
 
 ### <a name="to-add-the-value-property"></a>Değer özelliğini eklemek için
 
@@ -77,14 +81,13 @@ Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilir
 
 3. Projeyi kaydetmek için **Dosya** menüsünden **Tümünü Kaydet** ' i seçin.
 
-## <a name="testing-your-control"></a>Denetiminizi test etme
- Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındırılmalıdır. Denetiminizi test etmek için, içinde çalışması için bir test projesi sağlamanız gerekir. Ayrıca, denetimi (derleyerek) oluşturarak denetiminizi test projesi için de erişilebilir yapmanız gerekir. Bu bölümde, denetiminizi oluşturacak ve bir Windows formunda test edersiniz.
+## <a name="test-the-control"></a>Denetimi test etme
+
+Denetimler tek başına projeler değildir; Bunlar bir kapsayıcıda barındırılmalıdır. Denetiminizi test etmek için, içinde çalışması için bir test projesi sağlamanız gerekir. Ayrıca, denetimi (derleyerek) oluşturarak denetiminizi test projesi için de erişilebilir yapmanız gerekir. Bu bölümde, denetiminizi oluşturacak ve bir Windows formunda test edersiniz.
 
 ### <a name="to-build-your-control"></a>Denetiminizi oluşturmak için
 
-1. Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**.
-
-     Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
+Üzerinde **derleme** menüsünde tıklatın **Çözümü Derle**. Derleme, derleyici hataları veya uyarıları olmadan başarılı olmalıdır.
 
 ### <a name="to-create-a-test-project"></a>Bir test projesi oluşturmak için
 
@@ -92,11 +95,11 @@ Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilir
 
 2. **Görsel C#**  düğümün altında **Windows** düğümünü seçin ve **Windows Forms uygulama**' ya tıklayın.
 
-3. **Ad** kutusuna yazın `Test`.
+3. **Ad** kutusuna **Test**girin.
 
 4. **Çözüm Gezgini**, test projeniz için **Başvurular** düğümüne sağ tıklayın ve ardından kısayol menüsünden **Başvuru Ekle** ' yi seçerek **Başvuru Ekle** iletişim kutusunu görüntüleyin.
 
-5. Etiketli **Projeler**sekmesine tıklayın. Projeniz proje adı altında listelenir. `ValueButtonLib` Başvuruyu test projesine eklemek için projeye çift tıklayın.
+5. Etiketli **Projeler**sekmesine tıklayın. ValueButtonLib projeniz **Proje adı**altında listelenecektir. Başvuruyu test projesine eklemek için projeye çift tıklayın.
 
 6. **Çözüm Gezgini** ' de **Test** ' e sağ tıklayın ve **Oluştur**' u seçin.
 
@@ -104,15 +107,15 @@ Visual C#ile *Devralma*aracılığıyla güçlü özel denetimler oluşturabilir
 
 1. **Çözüm Gezgini**' de, **Form1.cs** ' ye sağ tıklayıp kısayol menüsünden **tasarımcıyı görüntüle** ' yi seçin.
 
-2. **Araç kutusunda** **ValueButtonLib bileşenleri**' ne tıklayın. **ValueButton**öğesine çift tıklayın.
+2. **Araç kutusunda** **ValueButtonLib bileşenleri**' ni seçin. **ValueButton**öğesine çift tıklayın.
 
      Formda bir **ValueButton** görünür.
 
 3. **ValueButton** öğesine sağ tıklayın ve kısayol menüsünden **Özellikler** ' i seçin.
 
-4. **Özellikler** penceresinde, bu denetimin özelliklerini inceleyin. Bunlar, ek bir özellik `ButtonValue`olması dışında, standart bir düğme tarafından sunulan özelliklerle özdeş olduğunu unutmayın.
+4. **Özellikler** penceresinde, bu denetimin özelliklerini inceleyin. Bunlar, bir standart düğme tarafından sunulan özelliklerle aynıdır, ancak ek bir özellik, ButtonValue olur.
 
-5. Ayarlama `ButtonValue` özelliğini `5`.
+5. **ButtonValue** özelliğini **5**olarak ayarlayın.
 
 6. Formunuza bir<xref:System.Windows.Forms.Label> denetim eklemek için **araç kutusunun** **tüm Windows Forms** sekmesinde etiket ' e çift tıklayın.
 

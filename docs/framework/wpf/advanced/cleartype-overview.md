@@ -5,19 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dbef816a995d9f4909a887f017da29bab6fc3702
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964921"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015649"
 ---
 # <a name="cleartype-overview"></a>ClearType Genel Bakışı
 Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Içinde bulunan Microsoft ClearType teknolojisine genel bir bakış sağlar.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Teknolojiye genel bakış  
- ClearType, dizüstü ekranları, Pocket PC [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metnin okunabilirliğini artıran, tarafından geliştirilen bir yazılım teknolojisidir.  ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType 'Tan önce, bir bilgisayarın görüntüleyeceği en düşük ayrıntı düzeyi tek bir pikseldir, ancak bir LCD monitörde çalışan ClearType ile, artık metnin özelliklerini piksel genişliği kadar küçük bir sayı olarak görüntüleriz. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir.  
+ ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir.  ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType 'Tan önce, bir bilgisayarın görüntüleyeceği en düşük ayrıntı düzeyi tek bir pikseldir, ancak bir LCD monitörde çalışan ClearType ile, artık metnin özelliklerini piksel genişliği kadar küçük bir sayı olarak görüntüleriz. Ek çözüm, metin görüntüleme içindeki küçük ayrıntıların keskinliğini artırarak uzun süreleri okumayı çok daha kolay hale getirir.  
   
  ' De [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kullanılabilen ClearType, Microsoft Windows grafik cihaz arabirimi (GDI) sürümünde bulunan sürüm üzerinde çeşitli geliştirmeler içeren en son ClearType sürümüdür.  
   

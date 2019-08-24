@@ -6,60 +6,53 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 1cc854d735ba88a301d6e2f6a83fe5c8bf881380
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211414"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015759"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme
+# <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>İzlenecek yol: Akıllı etiketleri kullanarak ortak görevleri gerçekleştirme
 
-Windows Forms uygulamanız için formlar ve denetimler oluşturmak gibi art arda gerçekleştirir çok sayıda görev vardır. Karşınıza çıkacak sık gerçekleştirilen görevlerin bazıları şunlardır:
+Windows Forms uygulamanız için form ve denetimler oluştururken, defalarca gerçekleştireceğiniz birçok görev vardır. Bunlar, karşılaştığınız yaygın olarak gerçekleştirilen görevlerden bazılarıdır:
 
-- Ekleyerek veya bir sekme üzerindeki kaldırarak bir <xref:System.Windows.Forms.TabControl>.
+- Bir <xref:System.Windows.Forms.TabControl>sekme ekleme veya kaldırma.
 
-- Bir denetim için üst yerleştirme.
+- Bir denetimi üst öğesine yerleştirme.
 
-- Yönünü değiştirme bir <xref:System.Windows.Forms.SplitContainer> denetimi.
+- Bir <xref:System.Windows.Forms.SplitContainer> denetimin yönünü değiştirme.
 
-Geliştirme hızlandırmak için pek çok denetimi tasarım zamanında bu tek gibi genel görevleri gerçekleştirmenize olanak tanıyan bağlama duyarlı menüler şunlardır akıllı etiketler sunar. Bu görevleri adlı *akıllı etiket fiilleri*.
+Geliştirme hızını artırmak için, birçok denetim, tasarım zamanında tek bir hareket halinde gibi genel görevleri gerçekleştirmenize imkan tanıyan, içeriğe duyarlı menüler sunan akıllı etiketler sunar. Bu görevlere *akıllı etiket fiilleri*denir.
 
-Akıllı etiketler Tasarımcısı'nda yaşam süresi'için bir denetim örneğine bağlı kalır ve her zaman kullanılabilir.
-
-Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
-
-- Bir Windows Forms projesi oluşturma
-
-- Akıllı etiketleri kullanarak
-
-- Akıllı etiketler devre dışı bırakma ve etkinleştirme
-
-İşlemi tamamladığınızda, bu önemli bir düzen özellikleri tarafından oynadığı rol, bir anlayışa sahip olacaksınız.
+Akıllı Etiketler, tasarımcıda ömrü boyunca bir denetim örneğine bağlı kalır ve her zaman kullanılabilir.
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
-İlk adım projeyi oluşturmak ve formu ayarlamaktır.
+İlk adım projeyi oluşturmak ve formu kurmak olur.
 
-1. Visual Studio'da "SmartTagsExample" adlı bir Windows tabanlı uygulama projesi oluşturun (**dosya** > **yeni** > **proje**  >  **Visual C#**  veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms Uygulama**).
+1. Visual Studio 'da, **Smarttagsexörnek**adlı bir Windows tabanlı uygulama projesi oluşturun.
 
-2. Formda seçin **Windows Form Tasarımcısı**.
+2. **Windows Form Tasarımcısı**formunu seçin.
 
-## <a name="use-smart-tags"></a>Akıllı etiketler kullanın.
+## <a name="use-smart-tags"></a>Akıllı etiketleri kullanma
 
-Akıllı etiketler her zaman bunları teklif denetimleri tasarım zamanında kullanılabilir.
+Akıllı Etiketler, bunları sunan denetimlerde her zaman tasarım zamanında kullanılabilir.
 
-1. Sürükleme bir <xref:System.Windows.Forms.TabControl> gelen **araç kutusu** formunuza. Akıllı etiket karakterini unutmayın (![akıllı etiket karakterini](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) üzerinde yan, görüntülenen <xref:System.Windows.Forms.TabControl>.
+1. <xref:System.Windows.Forms.TabControl> **Araç kutusundan** bir öğesini formunuza sürükleyin. Öğesinin![tarafındagörüntülenen](./media/vs-winformsmttagglyph.gif)akıllı etiket karakterini (akıllı etiket karakter) unutmayın. <xref:System.Windows.Forms.TabControl>
 
-2. Akıllı etiket karakterini tıklayın. Glif yanında görüntülenen kısayol menüsünden seçin **Sekme Ekle** öğesi. Yeni bir sekme sayfası eklenir gözlemleyin <xref:System.Windows.Forms.TabControl>.
+2. Akıllı etiket glifi ' ne tıklayın. Glifin yanında görünen kısayol menüsünde **sekme öğesi Ekle** öğesini seçin. Yeni bir sekme sayfasının öğesine <xref:System.Windows.Forms.TabControl>eklendiğini gözlemleyin.
 
-3. Sürükleme bir <xref:System.Windows.Forms.TableLayoutPanel> denetimi **araç kutusu** formunuza.
+3. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
 
-4. Akıllı etiket karakterini tıklayın. Glif yanında görüntülenen kısayol menüsünden seçin **Sütun Ekle** öğesi. Yeni bir sütun eklenir gözlemleyin <xref:System.Windows.Forms.TableLayoutPanel> denetimi.
+4. Akıllı etiket glifi ' ne tıklayın. Glifin yanında görünen kısayol menüsünde, **sütun Ekle** öğesini seçin. <xref:System.Windows.Forms.TableLayoutPanel> Denetime yeni bir sütun eklendiğini gözlemleyin.
 
-5. Sürükleme bir <xref:System.Windows.Forms.SplitContainer> denetimi **araç kutusu** formunuza.
+5. <xref:System.Windows.Forms.SplitContainer> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
 
-6. Akıllı etiket karakterini tıklayın. Glif yanında görüntülenen kısayol menüsünden seçin **Yatay bölümlendirici yönlendirmesini** öğesi. Mesajının görüntülendiğini görün <xref:System.Windows.Forms.SplitContainer> denetimin ayırıcıyı, artık yatay odaklıdır.
+6. Akıllı etiket glifi ' ne tıklayın. Glifin yanında görünen kısayol menüsünde **yatay Bölümlendirici yön** öğesini seçin. <xref:System.Windows.Forms.SplitContainer> Denetimin Bölümlendirici çubuğunun artık yatay olarak yönlendirildiğini gözlemleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -67,4 +60,3 @@ Akıllı etiketler her zaman bunları teklif denetimleri tasarım zamanında kul
 - <xref:System.Windows.Forms.TabControl>
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.ComponentModel.Design.DesignerActionList>
-- [İzlenecek yol: Bir Windows Formları bileşenine akıllı etiket ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))

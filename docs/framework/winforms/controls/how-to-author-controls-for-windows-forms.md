@@ -6,19 +6,19 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 0804b9824b84a32bdd79c763031a3de4ffa54099
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039883"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015913"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Forms için Denetimler Yazma
+# <a name="how-to-author-controls-for-windows-forms"></a>Nasıl yapılır: Windows Forms için yazar denetimleri
 
 Denetim, Kullanıcı ve program arasındaki grafik bağlantısını temsil eder. Bir denetim, verileri sağlayabilir veya işleyebilir, Kullanıcı girişi kabul edebilir, olaylara yanıt verebilir veya Kullanıcı ve uygulamayı bağlayan herhangi bir sayıda diğer işlevi gerçekleştirebilir. Bir denetim temelde grafik arabirimi olan bir bileşen olduğundan, bir bileşenin yaptığı ve Kullanıcı etkileşimi sağlayan herhangi bir işleve de sahip olabilir. Denetimler, belirli amaçlarla kullanılmak üzere oluşturulur ve yazma denetimleri yalnızca başka bir programlama görevi olur. Bu şekilde, aşağıdaki adımlar denetim yazma sürecine genel bir bakış temsil eder. Bağlantılar, bireysel adımlarla ilgili ek bilgi sağlar.
-
-> [!NOTE]
-> Web Forms için kullanmak üzere özel bir denetim yazmak istiyorsanız bkz. [özel ASP.NET Server denetimleri geliştirme](https://docs.microsoft.com/previous-versions/aspnet/zt27tfhy(v=vs.100)).
 
 ## <a name="to-author-a-control"></a>Bir denetimi yazmak için
 
@@ -42,7 +42,7 @@ Denetim, Kullanıcı ve program arasındaki grafik bağlantısını temsil eder.
 
 6. Denetiminiz öğesinden <xref:System.Windows.Forms.UserControl>devralırsa, çalışma zamanı davranışını denetim projesini oluşturup **UserControl Test kapsayıcısında**çalıştırarak test edebilirsiniz. Daha fazla bilgi için [nasıl yapılır: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)'un çalışma zamanı davranışını test edin.
 
-7. Ayrıca, Windows uygulaması gibi yeni bir proje oluşturarak ve bir kapsayıcıya yerleştirerek denetiminizi test edebilir ve hatalarını ayıklayabilirsiniz. Bu işlem, izlenecek yolun bir [parçası olarak gösterilmiştir: Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)ile bileşik denetim yazma.
+7. Ayrıca, Windows uygulaması gibi yeni bir proje oluşturarak ve bir kapsayıcıya yerleştirerek denetiminizi test edebilir ve hatalarını ayıklayabilirsiniz. Bu işlem, izlenecek yolun bir [parçası olarak gösterilmiştir: Bileşik denetim](walkthrough-authoring-a-composite-control-with-visual-csharp.md)yazma.
 
 8. Her bir özelliği eklerken, yeni işlevselliği uygulamak için test projenize özellikler ekleyin.
 
@@ -52,8 +52,6 @@ Denetim, Kullanıcı ve program arasındaki grafik bağlantısını temsil eder.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Visual Basic ile bileşik denetim yazma](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [İzlenecek yol: Visual Basic ile Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Nasıl yapılır: UserControl sınıfından devralma](how-to-inherit-from-the-usercontrol-class.md)
 - [Nasıl yapılır: Denetim sınıfından devralma](how-to-inherit-from-the-control-class.md)
 - [Nasıl yapılır: Mevcut Windows Forms denetimlerinden devralma](how-to-inherit-from-existing-windows-forms-controls.md)

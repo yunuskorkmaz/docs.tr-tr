@@ -10,104 +10,69 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: b72c449ab68c9bb2ceea6f8ee78abe6771b9a8bd
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666226"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016004"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri'nden Faydalanan Windows Forms Denetimi Oluşturma
+# <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>İzlenecek yol: Tasarım zamanı özelliklerinden faydalanan bir denetim oluşturma
 
 Özel bir denetim için tasarım zamanı deneyimi, ilişkili bir özel tasarımcı Authoring ile geliştirilebilir.
 
-Bu izlenecek yol, özel bir denetim için özel tasarımcı oluşturmayı gösterir. `MarqueeControl` Adlı`MarqueeControlRootDesigner`bir türü ve ilişkili bir tasarımcı sınıfını uygulayacaksınız.
+Bu makalede özel bir denetim için nasıl özel tasarımcı oluşturacağınız açıklanmıştır. `MarqueeControl` Adlı`MarqueeControlRootDesigner`bir tür ve ilişkili tasarımcı sınıfını uygulayacaksınız.
 
-`MarqueeControl` Türü, animasyonlu ışıklar ve yanıp sönen metinle benzer bir sinemalı yazı tipine benzer bir ekran uygular.
+Türü `MarqueeControl` , animasyonlu ışıklar ve yanıp sönen metinle benzer bir tiyatro çerçevesine benzer bir ekran uygular.
 
 Bu denetim için tasarımcı, tasarım ortamıyla birlikte etkileşimde bulunur ve özel bir tasarım zamanı deneyimi sağlar. Özel tasarımcı sayesinde, bir özel `MarqueeControl` uygulamayı animasyonlu ışıklar ve yanıp sönen metni birçok birleşimde bir araya getirebilirsiniz. Bir form üzerinde, diğer Windows Forms denetimleri gibi, birleştirilmiş denetimi kullanabilirsiniz.
 
-Bu izlenecek yolda gösterilen görevler şunlardır:
-
-- Projeyi Oluşturma
-
-- Denetim kitaplığı projesi oluşturma
-
-- Özel denetim projesine başvurma
-
-- Özel bir denetim ve özel tasarımcı tanımlama
-
-- Özel denetiminizin bir örneğini oluşturma
-
-- Projeyi tasarım zamanı hata ayıklama için ayarlama
-
-- Özel denetiminizi uygulama
-
-- Özel denetiminiz için bir alt denetim oluşturma
-
-- MarqueeBorder alt denetimini oluşturma
-
-- Gölge ve filtre özelliklerine özel tasarımcı oluşturma
-
-- Bileşen değişikliklerini işleme
-
-- Özel tasarımcıya tasarımcı fiilleri ekleme
-
-- Özel Uııtypeınfo Düzenleyicisi oluşturma
-
-- Tasarımcıda özel denetiminizi test etme
-
-İşiniz bittiğinde, özel denetiminiz aşağıdakine benzer şekilde görünür:
+Bu yönergeyi tamamladığınızda, özel denetiminiz aşağıdakine benzer şekilde görünür:
 
 ![Metin ve Başlat ve Durdur düğmelerini gösteren bir kayan yazıyı gösteren uygulama.](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
-Tüm kod listesi için bkz [. nasıl yapılır: Tasarım zamanı özelliklerinden](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))faydalanan bir Windows Forms denetimi oluşturun.
+Tüm kod listesi için bkz [. nasıl yapılır: Tasarım zamanı özelliklerinden](/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))faydalanan bir Windows Forms denetimi oluşturun.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
 Bu izlenecek yolu tamamlamak için Visual Studio gerekir.
 
-## <a name="creating-the-project"></a>Projeyi Oluşturma
+## <a name="create-the-project"></a>Projeyi oluşturma
 
 İlk adım uygulama projesini oluşturmaktır. Bu projeyi, özel denetimi barındıran uygulamayı oluşturmak için kullanacaksınız.
 
-Visual Studio 'yu açın ve "MarqueeControlTest" adlı bir Windows Forms uygulama projesi oluşturun (**Dosya** > **Yeni** > **Proje** > **görseli C#**  veya **Visual Basic** . >  **Klasik Masaüstü** **Windows Forms uygulama).**  > 
+Visual Studio 'da yeni bir Windows Forms uygulama projesi oluşturun ve **MarqueeControlTest**olarak adlandırın.
 
-## <a name="creating-a-control-library-project"></a>Denetim kitaplığı projesi oluşturma
+## <a name="create-the-control-library-project"></a>Denetim kitaplığı projesi oluşturma
 
-Sonraki adım, denetim kitaplığı projesi oluşturmaktır. Yeni bir özel denetim ve buna karşılık gelen özel tasarımcı oluşturacaksınız.
+1. Çözüme bir Windows Forms denetim kitaplığı projesi ekleyin. Projeyi **MarqueeControlLibrary**olarak adlandırın.
 
-### <a name="to-create-the-control-library-project"></a>Denetim kitaplığı projesi oluşturmak için
+2. **Çözüm Gezgini**kullanarak, tercih ettiğiniz dile bağlı olarak, "UserControl1.cs" veya "UserControl1. vb" adlı kaynak dosyayı silerek projenin varsayılan denetimini silin.
 
-1. Çözüme bir Windows Forms denetim kitaplığı projesi ekleyin. Projeyi "MarqueeControlLibrary" olarak adlandırın.
+3. `MarqueeControlLibrary` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına **MarqueeControl**temel adını verin.
 
-2. **Çözüm Gezgini**kullanarak, tercih ettiğiniz dile bağlı olarak, "UserControl1.cs" veya "UserControl1. vb" adlı kaynak dosyayı silerek projenin varsayılan denetimini silin. Daha fazla bilgi için [nasıl yapılır: Öğeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))kaldırma, silme ve hariç tutma.
+4. **Çözüm Gezgini**kullanarak `MarqueeControlLibrary` projede yeni bir klasör oluşturun.
 
-3. `MarqueeControlLibrary` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına "MarqueeControl" temel adını verin.
-
-4. **Çözüm Gezgini**kullanarak `MarqueeControlLibrary` projede yeni bir klasör oluşturun. Daha fazla bilgi için [nasıl yapılır: Yeni proje öğeleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))ekleyin. "Tasarım" adlı yeni klasörü adlandırın.
-
-5. **Tasarım** klasörüne sağ tıklayın ve yeni bir sınıf ekleyin. Kaynak dosyaya "MarqueeControlRootDesigner" temel adını verin.
+5. **Tasarım** klasörüne sağ tıklayın ve yeni bir sınıf ekleyin. **MarqueeControlRootDesigner**olarak adlandırın.
 
 6. System. Design derlemesinden türler kullanmanız gerekir, bu nedenle bu başvuruyu `MarqueeControlLibrary` projeye ekleyin.
 
-    > [!NOTE]
-    > System. Design derlemesini kullanmak için, projenizin .NET Framework Istemci profilinin değil .NET Framework tam sürümünü hedeflemesi gerekir. Hedef Framework 'ü değiştirmek için bkz [. nasıl yapılır: .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)bir sürümünü hedefleyin.
-
-## <a name="referencing-the-custom-control-project"></a>Özel denetim projesine başvurma
+## <a name="reference-the-custom-control-project"></a>Özel denetim projesine başvur
 
 Bu `MarqueeControlTest` projeyi, özel denetimi test etmek için kullanacaksınız. `MarqueeControlLibrary` Derlemeye bir proje başvurusu eklediğinizde test projesi özel denetimden haberdar olur.
 
-### <a name="to-reference-the-custom-control-project"></a>Özel denetim projesine başvurmak için
+Projede, `MarqueeControlLibrary` derlemeye bir proje başvurusu ekleyin. `MarqueeControlTest` `MarqueeControlLibrary` Derlemeye doğrudan başvurmak yerine **Başvuru Ekle** iletişim kutusundaki **Projeler** sekmesini kullandığınızdan emin olun.
 
-- Projede, `MarqueeControlLibrary` derlemeye bir proje başvurusu ekleyin. `MarqueeControlTest` `MarqueeControlLibrary` Derlemeye doğrudan başvurmak yerine **Başvuru Ekle** iletişim kutusundaki **Projeler** sekmesini kullandığınızdan emin olun.
+## <a name="define-a-custom-control-and-its-custom-designer"></a>Özel bir denetim ve kendi özel tasarımcısını tanımlama
 
-## <a name="defining-a-custom-control-and-its-custom-designer"></a>Özel bir denetim ve özel tasarımcı tanımlama
- Özel denetiminiz <xref:System.Windows.Forms.UserControl> sınıfından türecektir. Bu, denetiminizin diğer denetimleri içermesini sağlar ve denetimi, varsayılan işlevselliğin harika olmasını sağlar.
+Özel denetiminiz <xref:System.Windows.Forms.UserControl> sınıfından türecektir. Bu, denetiminizin diğer denetimleri içermesini sağlar ve denetimi, varsayılan işlevselliğin harika olmasını sağlar.
 
- Özel denetiminizin ilişkili bir özel Tasarımcısı olacak. Bu, özel denetiminiz için özel olarak uyarlanmış benzersiz bir tasarım deneyimi oluşturmanıza olanak sağlar.
+Özel denetiminizin ilişkili bir özel Tasarımcısı olacak. Bu, özel denetiminiz için özel olarak uyarlanmış benzersiz bir tasarım deneyimi oluşturmanıza olanak sağlar.
 
- <xref:System.ComponentModel.DesignerAttribute> Sınıfını kullanarak denetimi Tasarımcı ile ilişkilendirirsiniz. Özel denetiminizin tüm tasarım zamanı davranışını geliştirmekte olduğunuzdan, özel tasarımcı <xref:System.ComponentModel.Design.IRootDesigner> arabirimini uygular.
+<xref:System.ComponentModel.DesignerAttribute> Sınıfını kullanarak denetimi Tasarımcı ile ilişkilendirirsiniz. Özel denetiminizin tüm tasarım zamanı davranışını geliştirmekte olduğunuzdan, özel tasarımcı <xref:System.ComponentModel.Design.IRootDesigner> arabirimini uygular.
 
 ### <a name="to-define-a-custom-control-and-its-custom-designer"></a>Özel bir denetim ve özel tasarımcı tanımlamak için
 
@@ -128,58 +93,54 @@ Bu `MarqueeControlTest` projeyi, özel denetimi test etmek için kullanacaksın�
 
 4. Bildirimini `MarqueeControlRootDesigner` <xref:System.Windows.Forms.Design.DocumentDesigner> sınıfından devralacak şekilde değiştirin. **Araç kutusu**ile tasarımcı etkileşimini belirtmek içinöğesiniuygulayın.<xref:System.ComponentModel.ToolboxItemFilterAttribute>
 
-     **Göz önünde** `MarqueeControlRootDesigner` Sınıfının tanımı, "MarqueeControlLibrary. Design" adlı bir ad alanı içine alınmıştır. Bu bildirim, tasarımcıyı tasarımla ilgili türler için ayrılmış özel bir ad alanına koyar.
+   > [!NOTE]
+   > `MarqueeControlRootDesigner` Sınıfının tanımı, MarqueeControlLibrary. Design adlı bir ad alanı içine alınmıştır. Bu bildirim, tasarımcıyı tasarımla ilgili türler için ayrılmış özel bir ad alanına koyar.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#530)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#530](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#530)]
 
-5. `MarqueeControlRootDesigner` Sınıf için oluşturucuyu tanımlayın. Oluşturucu gövdesine <xref:System.Diagnostics.Trace.WriteLine%2A> bir ifade ekleyin. Bu, hata ayıklama amacıyla yararlı olacaktır.
+5. `MarqueeControlRootDesigner` Sınıf için oluşturucuyu tanımlayın. Oluşturucu gövdesine <xref:System.Diagnostics.Trace.WriteLine%2A> bir ifade ekleyin. Bu, hata ayıklama için yararlı olacaktır.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#540)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#540](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#540)]
 
-## <a name="creating-an-instance-of-your-custom-control"></a>Özel denetiminizin bir örneğini oluşturma
- Denetiminizin özel tasarım zamanı davranışını gözlemlemek için, bir denetimin örneğini Project 'teki `MarqueeControlTest` forma yerleştirebilirsiniz.
+## <a name="create-an-instance-of-your-custom-control"></a>Özel denetiminizin bir örneğini oluşturma
 
-### <a name="to-create-an-instance-of-your-custom-control"></a>Özel denetiminizin bir örneğini oluşturmak için
-
-1. `MarqueeControlTest` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına "DemoMarqueeControl" temel adını verin.
+1. `MarqueeControlTest` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına **DemoMarqueeControl**temel adını verin.
 
 2. Dosyayı kod düzenleyicisinde açın. `DemoMarqueeControl` Dosyanın en üstünde, `MarqueeControlLibrary` ad alanını içeri aktarın:
 
-```vb
-Imports MarqueeControlLibrary
-```
+   ```vb
+   Imports MarqueeControlLibrary
+   ```
 
-```csharp
-using MarqueeControlLibrary;
-```
+   ```csharp
+   using MarqueeControlLibrary;
+   ```
 
-1. Bildirimini `DemoMarqueeControl` `MarqueeControl` sınıfından devralacak şekilde değiştirin.
+3. Bildirimini `DemoMarqueeControl` `MarqueeControl` sınıfından devralacak şekilde değiştirin.
 
-2. Projeyi oluşturun.
+4. Projeyi oluşturun.
 
-3. Windows Form Tasarımcısı `Form1` açın.
+5. Windows Form Tasarımcısı Form1 ' i açın.
 
-4. **Araç kutusunda** **MarqueeControlTest Components** sekmesini bulun ve açın. `DemoMarqueeControl` **Araç kutusundan** bir öğesini formunuza sürükleyin.
+6. **Araç kutusunda** **MarqueeControlTest Components** sekmesini bulun ve açın. `DemoMarqueeControl` **Araç kutusundan** bir öğesini formunuza sürükleyin.
 
-5. Projeyi oluşturun.
+7. Projeyi oluşturun.
 
-## <a name="setting-up-the-project-for-design-time-debugging"></a>Projeyi tasarım zamanı hata ayıklama için ayarlama
+## <a name="set-up-the-project-for-design-time-debugging"></a>Projeyi tasarım zamanı hata ayıklama için ayarlama
 
 Özel bir tasarım zamanı deneyimi geliştirirken, denetimlerinizin ve bileşenlerinizin hata ayıklaması gerekir. Projenizi tasarım zamanında hata ayıklamaya izin verecek şekilde kurmak için basit bir yol vardır. Daha fazla bilgi için bkz [. İzlenecek yol: Tasarım zamanında](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)özel Windows Forms Denetimlerinde hata ayıklama.
 
-### <a name="to-set-up-the-project-for-design-time-debugging"></a>Projeyi tasarım zamanı hata ayıklama için ayarlamak için
-
 1. `MarqueeControlLibrary` Projeye sağ tıklayın ve **Özellikler**' i seçin.
 
-2. "MarqueeControlLibrary Özellik sayfaları" iletişim kutusunda **hata ayıklama** sayfasını seçin.
+2. **MarqueeControlLibrary Özellik sayfaları** Iletişim kutusunda **hata ayıklama** sayfasını seçin.
 
-3. **Başlangıç eylemi** bölümünde **dış program Başlat**' ı seçin. Visual Studio 'nun ayrı bir örneğinde hata ayıkladığınızda, Visual Studio IDE 'ye gitmek için![üç nokta (Visual](./media/visual-studio-ellipsis-button.png)Studio 'nun Özellikler penceresi) düğmesini tıklatın. Yürütülebilir dosyanın adı devenv. exe ' dir ve varsayılan konuma yüklediyseniz, yolu%programfiles%\Microsoft Visual Studio 9.0 \ Common7\IDE\devenv.exe. ' dir
+3. **Başlangıç eylemi** bölümünde **dış program Başlat**' ı seçin. Visual Studio 'nun ayrı bir örneğinde hata ayıkladığınızda, Visual Studio IDE 'ye gitmek için![üç nokta (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) düğmesine tıklayın. Yürütülebilir dosyanın adı devenv. exe ' dir ve varsayılan konuma yüklediyseniz, yolu *% ProgramFiles (x86)% \ Microsoft Visual studio\2019\\\<Edition > \Common7\IDE\devenv.exe*olur.
 
-4. İletişim kutusunu kapatmak için Tamam ' ı tıklatın.
+4. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
-5. `MarqueeControlLibrary` Projeye sağ tıklayın ve "başlangıç projesi olarak ayarla" yı seçerek bu hata ayıklama yapılandırmasını etkinleştirin.
+5. Bu hata ayıklama yapılandırmasını etkinleştirmek için MarqueeControlLibrary projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla** ' yı seçin.
 
 ## <a name="checkpoint"></a>Checkpoint
 
@@ -187,17 +148,21 @@ Artık özel denetiminizin tasarım zamanı davranışını hata ayıklamaya haz
 
 ### <a name="to-test-the-debugging-environment-and-the-designer-association"></a>Hata ayıklama ortamını ve tasarımcı ilişkilendirmesini test etmek için
 
-1. Kaynak dosyasını **kod düzenleyicisinde** açın ve <xref:System.Diagnostics.Trace.WriteLine%2A> deyime bir kesme noktası yerleştirin. `MarqueeControlRootDesigner`
+1. **Kod düzenleyicisinde** MarqueeControlRootDesigner kaynak dosyasını açın ve <xref:System.Diagnostics.Trace.WriteLine%2A> deyime bir kesme noktası yerleştirin.
 
-2. Hata ayıklama oturumu başlatmak için F5 tuşuna basın. Visual Studio 'nun yeni bir örneğinin oluşturulduğunu unutmayın.
+2. Hata ayıklama oturumu başlatmak için **F5** tuşuna basın.
 
-3. Visual Studio 'nun yeni örneğinde, "MarqueeControlTest" çözümünü açın. **Dosya** menüsünden **son projeler** ' i seçerek çözümü kolayca bulabilirsiniz. "MarqueeControlTest. sln" çözüm dosyası en son kullanılan dosya olarak listelenecektir.
+   Visual Studio 'nun yeni bir örneği oluşturulur.
 
-4. `DemoMarqueeControl` Öğesini tasarımcıda açın. Visual Studio 'nun hata ayıklama örneğinin, kesme noktasına odaklanarak ve yürütmenin durduğunu unutmayın. Hata ayıklama oturumuna devam etmek için F5 tuşuna basın.
+3. Visual Studio 'nun yeni örneğinde, MarqueeControlTest çözümünü açın. **Dosya** menüsünden **son projeler** ' i seçerek çözümü kolayca bulabilirsiniz. MarqueeControlTest. sln çözüm dosyası en son kullanılan dosya olarak listelenecektir.
 
-Bu noktada, özel denetiminizi ve onunla ilişkili özel tasarımcıyı geliştirip hata ayıklamanızın her şey vardır. Bu izlenecek yolun geri kalanı, denetimin ve tasarımcının özelliklerini uygulama ayrıntılarına odaklanacaktır.
+4. `DemoMarqueeControl` Öğesini tasarımcıda açın.
 
-## <a name="implementing-your-custom-control"></a>Özel denetiminizi uygulama
+   Visual Studio 'nun hata ayıklama örneği, kesme noktasında odak ve yürütme işlemini alır. Hata ayıklama oturumuna devam etmek için **F5** tuşuna basın.
+
+Bu noktada, özel denetiminizi ve onunla ilişkili özel tasarımcıyı geliştirip hata ayıklamanızın her şey vardır. Bu makalenin geri kalanında, denetimin ve tasarımcının özelliklerini uygulama ayrıntılarına yoğunlaşmaktadır.
+
+## <a name="implement-the-custom-control"></a>Özel denetimi uygulama
 
 , `MarqueeControl` Bir<xref:System.Windows.Forms.UserControl> özelleştirme biraz daha vardır. İki yöntem sunar: `Start`, kayan yazı animasyonunu başlatan ve `Stop`animasyonu durduran. , `MarqueeControl` `StopMarquee` `StartMarquee` Arabirimini `IMarqueeWidget` uygulayanaltdenetimleriçerdiğindenveherbiraltdenetimivesırasıylaveyöntemleriniherbiraltdenetimdesırasıylaçağırmak`Start`için `Stop` uygulayan `IMarqueeWidget`.
 
@@ -217,7 +182,7 @@ Bu, `MarqueeControl` özelleştirmelerin bir kapsamını. Çalışma zamanı öz
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]
 
-## <a name="creating-a-child-control-for-your-custom-control"></a>Özel denetiminiz için bir alt denetim oluşturma
+## <a name="create-a-child-control-for-your-custom-control"></a>Özel denetiminiz için bir alt denetim oluşturma
 
 İki tür alt denetimi barındırır `MarqueeBorder` : denetim ve `MarqueeText` denetim. `MarqueeControl`
 
@@ -249,7 +214,9 @@ Düzenli animasyon özelliğini uygulamak için, <xref:System.ComponentModel.Bac
 
 5. **Araç kutusundan** bir <xref:System.ComponentModel.BackgroundWorker> bileşeni denetimüzerinesürükleyin.`MarqueeText` Bu bileşen `MarqueeText` denetimin kendisini zaman uyumsuz olarak güncelleştirmesine izin verir.
 
-6. <xref:System.ComponentModel.BackgroundWorker> Özellikler penceresi, `WorkerReportsProgress` bileşen ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini olarak`true`ayarlayın. Bu ayarlar, <xref:System.ComponentModel.BackgroundWorker> bileşenin düzenli olarak <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayı kullanmasına ve zaman uyumsuz güncelleştirmeleri iptal edebilmesini sağlar. Daha fazla bilgi için bkz. [BackgroundWorker Component](backgroundworker-component.md).
+6. **Özellikler** penceresinde <xref:System.ComponentModel.BackgroundWorker> , bileşen `WorkerReportsProgress` ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini **doğru**olarak ayarlayın. Bu ayarlar, <xref:System.ComponentModel.BackgroundWorker> bileşenin düzenli olarak <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayı kullanmasına ve zaman uyumsuz güncelleştirmeleri iptal edebilmesini sağlar.
+
+   Daha fazla bilgi için bkz. [BackgroundWorker Component](backgroundworker-component.md).
 
 7. Kaynak dosyasını kod düzenleyicisinde açın. `MarqueeText` Dosyanın en üstüne aşağıdaki ad alanlarını içeri aktarın:
 
@@ -294,7 +261,7 @@ Düzenli animasyon özelliğini uygulamak için, <xref:System.ComponentModel.Bac
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. Çözümü derlemek için F6 tuşuna basın.
+14. Çözümü derlemek için **F6** tuşuna basın.
 
 ## <a name="create-the-marqueeborder-child-control"></a>MarqueeBorder alt denetimini oluşturma
 
@@ -308,9 +275,9 @@ Denetimde alt denetimler olabileceğinden, <xref:System.Windows.Forms.Control.La
 
 2. **Araç kutusundan** bir <xref:System.ComponentModel.BackgroundWorker> bileşeni denetimüzerinesürükleyin.`MarqueeBorder` Bu bileşen `MarqueeBorder` denetimin kendisini zaman uyumsuz olarak güncelleştirmesine izin verir.
 
-3. <xref:System.ComponentModel.BackgroundWorker> Özellikler penceresi, `WorkerReportsProgress` bileşen ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini olarak`true`ayarlayın. Bu ayarlar, <xref:System.ComponentModel.BackgroundWorker> bileşenin düzenli olarak <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayı kullanmasına ve zaman uyumsuz güncelleştirmeleri iptal edebilmesini sağlar. Daha fazla bilgi için bkz. [BackgroundWorker Component](backgroundworker-component.md).
+3. **Özellikler** penceresinde <xref:System.ComponentModel.BackgroundWorker> , bileşen `WorkerReportsProgress` ve <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> özelliklerini **doğru**olarak ayarlayın. Bu ayarlar, <xref:System.ComponentModel.BackgroundWorker> bileşenin düzenli olarak <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayı kullanmasına ve zaman uyumsuz güncelleştirmeleri iptal edebilmesini sağlar. Daha fazla bilgi için bkz. [BackgroundWorker Component](backgroundworker-component.md).
 
-4. Özellikler penceresi, olaylar düğmesine tıklayın. <xref:System.ComponentModel.BackgroundWorker.DoWork> Ve<xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayları için işleyiciler iliştirin.
+4. **Özellikler** penceresinde, **Olaylar** düğmesini seçin. <xref:System.ComponentModel.BackgroundWorker.DoWork> Ve<xref:System.ComponentModel.BackgroundWorker.ProgressChanged> olayları için işleyiciler iliştirin.
 
 5. Kaynak dosyasını kod düzenleyicisinde açın. `MarqueeBorder` Dosyanın en üstüne aşağıdaki ad alanlarını içeri aktarın:
 
@@ -373,9 +340,9 @@ Denetimde alt denetimler olabileceğinden, <xref:System.Windows.Forms.Control.La
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#70)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#70](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#70)]
 
-## <a name="creating-a-custom-designer-to-shadow-and-filter-properties"></a>Gölge ve filtre özelliklerine özel tasarımcı oluşturma
+## <a name="create-a-custom-designer-to-shadow-and-filter-properties"></a>Gölge ve filtre özelliklerine özel tasarımcı oluşturma
 
-`MarqueeControlRootDesigner` Sınıfı, kök Tasarımcı için uygulama sağlar. Üzerinde `MarqueeControl`çalışan bu tasarımcıya ek olarak, özellikle `MarqueeBorder` denetimle ilişkili özel bir tasarımcıya ihtiyacınız olacaktır. Bu tasarımcı, özel kök tasarlayıcı bağlamında uygun olan özel davranışı sağlar.
+`MarqueeControlRootDesigner` Sınıfı, kök Tasarımcı için uygulama sağlar. Üzerinde `MarqueeControl`çalışan bu tasarımcıya ek olarak, özellikle `MarqueeBorder` denetimle ilişkili özel bir tasarımcı gerekir. Bu tasarımcı, özel kök tasarlayıcı bağlamında uygun olan özel davranışı sağlar.
 
 Özellikle, "gölgelendir" ve `MarqueeBorder` denetimdeki belirli özellikleri filtreleyerek tasarım ortamıyla etkileşimini değiştirmiş olacak.`MarqueeBorderDesigner`
 
@@ -399,7 +366,7 @@ Tasarımcılar Ayrıca özellikler ekleyebilir ve kaldırabilir. Bu örnekte, <x
 
 - <xref:System.ComponentModel.Design.ComponentDesigner.PostFilterEvents%2A>
 
-Bu yöntemleri kullanarak bir bileşenin genel arabirimini değiştirirken bu kuralları izlemeniz gerekir:
+Bu yöntemleri kullanarak bir bileşenin genel arabirimini değiştirirken bu kuralları izleyin:
 
 - Yalnızca `PreFilter` metotlarda öğe ekleme veya kaldırma
 
@@ -415,9 +382,9 @@ Bu kurallara uymak, tasarım zamanı ortamındaki tüm tasarımcılarının tasa
 
 ### <a name="to-create-a-custom-designer-to-shadow-and-filter-properties"></a>Gölge ve filtre özelliklerine özel bir tasarımcı oluşturmak için
 
-1. **Tasarım** klasörüne sağ tıklayın ve yeni bir sınıf ekleyin. Kaynak dosyaya "MarqueeBorderDesigner" temel adını verin.
+1. **Tasarım** klasörüne sağ tıklayın ve yeni bir sınıf ekleyin. Kaynak dosyaya **MarqueeBorderDesigner**temel adını verin.
 
-2. Kaynak dosyasını kod düzenleyicisinde açın. `MarqueeBorderDesigner` Dosyanın en üstüne aşağıdaki ad alanlarını içeri aktarın:
+2. MarqueeBorderDesigner kaynak dosyasını **kod düzenleyicisinde**açın. Dosyanın en üstüne aşağıdaki ad alanlarını içeri aktarın:
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#420)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#420](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#420)]
@@ -439,14 +406,15 @@ Bu kurallara uymak, tasarım zamanı ortamındaki tüm tasarımcılarının tasa
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#440)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#440)]
 
-## <a name="handling-component-changes"></a>Bileşen değişikliklerini işleme
- Sınıfı, örneklerinizin `MarqueeControl` özel tasarım zamanı deneyimini sağlar. `MarqueeControlRootDesigner` Tasarım zamanı işlevlerinin çoğu <xref:System.Windows.Forms.Design.DocumentDesigner> sınıftan devralınır; kodunuz iki özel özelleştirme uygular: bileşen değişikliklerini işleme ve tasarımcı fiilleri ekleme.
+## <a name="handle-component-changes"></a>Bileşen değişikliklerini işle
 
- Kullanıcılar `MarqueeControl` örneklerini tasarlarsa, kök tasarlayıcı, `MarqueeControl` ve alt denetimlerinde yapılan değişiklikleri izler. Tasarım zamanı ortamı, bileşen durumundaki değişiklikleri izlemek için uygun <xref:System.ComponentModel.Design.IComponentChangeService>bir hizmet sunar.
+Sınıfı, örneklerinizin `MarqueeControl` özel tasarım zamanı deneyimini sağlar. `MarqueeControlRootDesigner` Tasarım zamanı işlevlerinin çoğu <xref:System.Windows.Forms.Design.DocumentDesigner> sınıfından devralınır. Kodunuz iki özel özelleştirme uygular: bileşen değişikliklerini işleme ve tasarımcı fiilleri ekleme.
 
- Ortamı <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> yöntemiyle sorgulayarak bu hizmete bir başvuru elde edersiniz. Sorgu başarılı olursa, tasarımcı <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> olay için bir işleyici iliştirebilir ve tasarım zamanında tutarlı bir durumu korumak için gereken görevleri gerçekleştirebilir.
+Kullanıcılar `MarqueeControl` örneklerini tasarlarsa, kök tasarlayıcı, `MarqueeControl` ve alt denetimlerinde yapılan değişiklikleri izler. Tasarım zamanı ortamı, bileşen durumundaki değişiklikleri izlemek için uygun <xref:System.ComponentModel.Design.IComponentChangeService>bir hizmet sunar.
 
- `MarqueeControlRootDesigner` Sınıfı söz konusu olduğunda, <xref:System.Windows.Forms.Control.Refresh%2A> yöntemi tarafından içerilen `MarqueeControl`her `IMarqueeWidget` bir nesne üzerinde çağıracaksınız. Bu, `IMarqueeWidget` <xref:System.Windows.Forms.Control.Size%2A> üst öğesi gibi özellikler değiştirildiğinde nesnenin kendisini uygun şekilde yeniden görüntülemesine neden olur.
+Ortamı <xref:System.ComponentModel.Design.ComponentDesigner.GetService%2A> yöntemiyle sorgulayarak bu hizmete bir başvuru elde edersiniz. Sorgu başarılı olursa, tasarımcı <xref:System.ComponentModel.Design.IComponentChangeService.ComponentChanged> olay için bir işleyici iliştirebilir ve tasarım zamanında tutarlı bir durumu korumak için gereken görevleri gerçekleştirebilir.
+
+`MarqueeControlRootDesigner` Sınıfı söz konusu olduğunda, <xref:System.Windows.Forms.Control.Refresh%2A> yöntemi tarafından içerilen `MarqueeControl`her `IMarqueeWidget` bir nesne üzerinde çağıracaksınız. Bu, `IMarqueeWidget` <xref:System.Windows.Forms.Control.Size%2A> üst öğesi gibi özellikler değiştirildiğinde nesnenin kendisini uygun şekilde yeniden görüntülemesine neden olur.
 
 ### <a name="to-handle-component-changes"></a>Bileşen değişikliklerini işlemek için
 
@@ -460,7 +428,7 @@ Bu kurallara uymak, tasarım zamanı ortamındaki tüm tasarımcılarının tasa
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#560)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#560](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#560)]
 
-## <a name="adding-designer-verbs-to-your-custom-designer"></a>Özel tasarımcıya tasarımcı fiilleri ekleme
+## <a name="add-designer-verbs-to-your-custom-designer"></a>Özel tasarımcıya tasarımcı fiilleri ekleme
 
 Tasarımcı fiili, olay işleyicisine bağlı bir menü komutu olur. Tasarımcı fiilleri, tasarım zamanında bir bileşenin kısayol menüsüne eklenir. Daha fazla bilgi için bkz. <xref:System.ComponentModel.Design.DesignerVerb>.
 
@@ -480,9 +448,9 @@ Tasarımcılara iki tasarımcı fiilleri ekleyeceksiniz: **Testi Çalıştır** 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrolrootdesigner.cs#590)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]
 
-## <a name="creating-a-custom-uitypeeditor"></a>Özel Uııtypeınfo Düzenleyicisi oluşturma
+## <a name="create-a-custom-uitypeeditor"></a>Özel bir Uııtypeınfo Düzenleyicisi oluşturun
 
-Kullanıcılar için özel bir tasarım zamanı deneyimi oluşturduğunuzda, genellikle Özellikler penceresi özel bir etkileşim oluşturmak tercih edilir. Bunu oluşturarak <xref:System.Drawing.Design.UITypeEditor>yapabilirsiniz. Daha fazla bilgi için [nasıl yapılır: UI türü Düzenleyici](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120))oluşturun.
+Kullanıcılar için özel bir tasarım zamanı deneyimi oluşturduğunuzda, genellikle Özellikler penceresi özel bir etkileşim oluşturmak tercih edilir. Bunu oluşturarak <xref:System.Drawing.Design.UITypeEditor>yapabilirsiniz.
 
 `MarqueeBorder` Denetim Özellikler penceresi çeşitli özellikleri kullanıma sunar. Bu özelliklerden `MarqueeSpinDirection` ikisi ve `MarqueeLightShape` numaralandırmalar tarafından temsil edilir. Kullanıcı arabirimi türü düzenleyicisinin kullanımını göstermek için, `MarqueeLightShape` özelliği ilişkili <xref:System.Drawing.Design.UITypeEditor> bir sınıfa sahip olur.
 
@@ -510,69 +478,69 @@ Kullanıcılar için özel bir tasarım zamanı deneyimi oluşturduğunuzda, gen
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]
 
-## <a name="creating-a-view-control-for-your-custom-uitypeeditor"></a>Özel Uııtypeınfo Düzenleyicisi için bir görünüm denetimi oluşturma
+## <a name="create-a-view-control-for-your-custom-uitypeeditor"></a>Özel Uııtypeınfo Düzenleyicisi için bir görünüm denetimi oluşturma
 
-1. Özelliği iki tür açık şekli destekler: `Square` ve `Circle`. `MarqueeLightShape` Yalnızca bu değerleri Özellikler penceresi grafik olarak görüntülemek için kullanılan özel bir denetim oluşturacaksınız. Bu özel denetim, Özellikler penceresi etkileşimde bulunmak için <xref:System.Drawing.Design.UITypeEditor> sizin tarafınızdan kullanılacaktır.
+Özelliği iki tür açık şekli destekler: `Square` ve `Circle`. `MarqueeLightShape` Yalnızca bu değerleri Özellikler penceresi grafik olarak görüntülemek için kullanılan özel bir denetim oluşturacaksınız. Bu özel denetim, Özellikler penceresi etkileşimde bulunmak için <xref:System.Drawing.Design.UITypeEditor> sizin tarafınızdan kullanılacaktır.
 
 ### <a name="to-create-a-view-control-for-your-custom-ui-type-editor"></a>Özel UI türü düzenleyiciniz için bir görünüm denetimi oluşturmak için
 
-1. `MarqueeControlLibrary` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına "LightShapeSelectionControl" temel adını verin.
+1. `MarqueeControlLibrary` Projeye yeni <xref:System.Windows.Forms.UserControl> bir öğe ekleyin. Yeni kaynak dosyasına, **Açık Shapeselectioncontrol**temel adını verin.
 
-2. Araç kutusundan <xref:System.Windows.Forms.Panel> iki denetimi üzerine sürükleyin. `LightShapeSelectionControl` Onları `squarePanel` ve`circlePanel`olarak adlandırın. Yan yana düzenleyin. Her iki<xref:System.Windows.Forms.Panel> denetimin özelliğini (60, 60) olarak ayarlayın. <xref:System.Windows.Forms.Control.Size%2A> `squarePanel` Denetimin özelliğini (8, 10) olarak ayarlayın. <xref:System.Windows.Forms.Control.Location%2A> `circlePanel` Denetimin özelliğini (80, 10) olarak ayarlayın. <xref:System.Windows.Forms.Control.Location%2A> Son olarak, `LightShapeSelectionControl` öğesinin <xref:System.Windows.Forms.Control.Size%2A> özelliğini olarak ayarlayın (150, 80).
+2. Araç kutusundan <xref:System.Windows.Forms.Panel> iki denetimi üzerine sürükleyin. `LightShapeSelectionControl` Onları `squarePanel` ve`circlePanel`olarak adlandırın. Yan yana düzenleyin. Her iki <xref:System.Windows.Forms.Control.Size%2A> <xref:System.Windows.Forms.Panel> denetimin özelliğini **(60, 60)** olarak ayarlayın. Denetimin özelliğini **(8, 10)** olarak ayarlayın. <xref:System.Windows.Forms.Control.Location%2A> `squarePanel` Denetimin özelliğini **(80, 10)** olarak ayarlayın. <xref:System.Windows.Forms.Control.Location%2A> `circlePanel` Son olarak, `LightShapeSelectionControl` öğesinin <xref:System.Windows.Forms.Control.Size%2A> özelliğini olarak ayarlayın **(150, 80)** .
 
 3. Kaynak dosyasını kod düzenleyicisinde açın. `LightShapeSelectionControl` Dosyanın en üstünde, <xref:System.Windows.Forms.Design?displayProperty=nameWithType> ad alanını içeri aktarın:
 
-```vb
-Imports System.Windows.Forms.Design
-```
+   ```vb
+   Imports System.Windows.Forms.Design
+   ```
 
-```csharp
-using System.Windows.Forms.Design;
-```
+   ```csharp
+   using System.Windows.Forms.Design;
+   ```
 
-1. Ve`squarePanel` <xref:System.Windows.Forms.Control.Click> denetimleriiçin`circlePanel` olay işleyicileri uygulayın. Bu yöntemler, <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> özel <xref:System.Drawing.Design.UITypeEditor> Düzenle oturumunu sona erdirmek için çağırır.
+4. Ve`squarePanel` <xref:System.Windows.Forms.Control.Click> denetimleriiçin`circlePanel` olay işleyicileri uygulayın. Bu yöntemler, <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.CloseDropDown%2A> özel <xref:System.Drawing.Design.UITypeEditor> Düzenle oturumunu sona erdirmek için çağırır.
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#390)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#390](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#390)]
 
-2. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Adlı`editorService`bir örnek değişkeni bildirin.
+5. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> Adlı`editorService`bir örnek değişkeni bildirin.
 
-```vb
-Private editorService As IWindowsFormsEditorService
-```
+   ```vb
+   Private editorService As IWindowsFormsEditorService
+   ```
 
-```csharp
-private IWindowsFormsEditorService editorService;
-```
+   ```csharp
+   private IWindowsFormsEditorService editorService;
+   ```
 
-1. `MarqueeLightShape` Adlı`lightShapeValue`bir örnek değişkeni bildirin.
+6. `MarqueeLightShape` Adlı`lightShapeValue`bir örnek değişkeni bildirin.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#330)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#330](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#330)]
 
-2. `LightShapeSelectionControl` Oluşturucuda, <xref:System.Windows.Forms.Control.Click> olay işleyicilerini `squarePanel` ve `circlePanel` denetimlerin olaylarınaekleyin.<xref:System.Windows.Forms.Control.Click> Ayrıca, tasarım ortamından `MarqueeLightShape` `lightShapeValue` alana değeri atayan bir Oluşturucu aşırı yüklemesi tanımlayın.
+7. `LightShapeSelectionControl` Oluşturucuda, <xref:System.Windows.Forms.Control.Click> olay işleyicilerini `squarePanel` ve `circlePanel` denetimlerin olaylarınaekleyin.<xref:System.Windows.Forms.Control.Click> Ayrıca, tasarım ortamından `MarqueeLightShape` `lightShapeValue` alana değeri atayan bir Oluşturucu aşırı yüklemesi tanımlayın.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#340)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#340](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#340)]
 
-3. <xref:System.ComponentModel.Component.Dispose%2A> Yönteminde <xref:System.Windows.Forms.Control.Click> olay işleyicilerini ayırın.
+8. <xref:System.ComponentModel.Component.Dispose%2A> Yönteminde <xref:System.Windows.Forms.Control.Click> olay işleyicilerini ayırın.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#350)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#350](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#350)]
 
-4. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesine tıklayın. LightShapeSelectionControl.Designer.cs veya LightShapeSelectionControl. Designer. vb dosyasını açın ve <xref:System.ComponentModel.Component.Dispose%2A> yönteminin varsayılan tanımını kaldırın.
+9. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesine tıklayın. LightShapeSelectionControl.Designer.cs veya LightShapeSelectionControl. Designer. vb dosyasını açın ve <xref:System.ComponentModel.Component.Dispose%2A> yönteminin varsayılan tanımını kaldırın.
 
-5. `LightShape` Özelliğini uygulayın.
+10. `LightShape` Özelliğini uygulayın.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
 
-6. Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bu uygulama doldurulmuş bir kare ve daire çizecek. Ayrıca, bir şekil ya da diğeri etrafında kenarlık çizerek seçili değeri vurgulayacaktır.
+11. Geçersiz kılma <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi. Bu uygulama doldurulmuş bir kare ve daire çizecek. Ayrıca, bir şekil ya da diğeri etrafında kenarlık çizerek seçili değeri vurgulayacaktır.
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]
 
-## <a name="testing-your-custom-control-in-the-designer"></a>Tasarımcıda özel denetiminizi test etme
+## <a name="test-your-custom-control-in-the-designer"></a>Tasarımcıda özel denetiminizi test etme
 
 Bu noktada, `MarqueeControlLibrary` projeyi derleyebilirsiniz. `MarqueeControl` Sınıfından devralan bir denetim oluşturarak ve onu bir formda kullanarak uygulamanızı test edin.
 
@@ -602,31 +570,31 @@ Bu noktada, `MarqueeControlLibrary` projeyi derleyebilirsiniz. `MarqueeControl` 
 
 12. Olay işleyicilerinde, `Start` ve `Stop` üzerindeki `DemoMarqueeControl`yöntemlerini çağırın. <xref:System.Windows.Forms.Control.Click>
 
-```vb
-Private Sub startButton_Click(sender As Object, e As System.EventArgs)
-    Me.demoMarqueeControl1.Start()
-End Sub 'startButton_Click
+    ```vb
+    Private Sub startButton_Click(sender As Object, e As System.EventArgs)
+        Me.demoMarqueeControl1.Start()
+    End Sub 'startButton_Click
 
-Private Sub stopButton_Click(sender As Object, e As System.EventArgs)
-Me.demoMarqueeControl1.Stop()
-End Sub 'stopButton_Click
-```
+    Private Sub stopButton_Click(sender As Object, e As System.EventArgs)
+    Me.demoMarqueeControl1.Stop()
+    End Sub 'stopButton_Click
+    ```
 
-```csharp
-private void startButton_Click(object sender, System.EventArgs e)
-{
-    this.demoMarqueeControl1.Start();
-}
+    ```csharp
+    private void startButton_Click(object sender, System.EventArgs e)
+    {
+        this.demoMarqueeControl1.Start();
+    }
 
-private void stopButton_Click(object sender, System.EventArgs e)
-{
-    this.demoMarqueeControl1.Stop();
-}
-```
+    private void stopButton_Click(object sender, System.EventArgs e)
+    {
+        this.demoMarqueeControl1.Stop();
+    }
+    ```
 
-1. `MarqueeControlTest` Projeyi başlangıç projesi olarak ayarlayın ve çalıştırın. Formunu görüntüleyen `DemoMarqueeControl`formu görürsünüz. Animasyonu başlatmak için **Başlat** düğmesine tıklayın. Metnin yanıp sönmesi ve kenarlığın etrafında hareket eden ışıklar görmeniz gerekir.
+13. `MarqueeControlTest` Projeyi başlangıç projesi olarak ayarlayın ve çalıştırın. Formunu görüntüleyen `DemoMarqueeControl`formu görürsünüz. Animasyonu başlatmak için **Başlat** düğmesini seçin. Metnin yanıp sönmesi ve kenarlığın etrafında hareket eden ışıklar görmeniz gerekir.
 
-## <a name="next-steps"></a>Sonraki Adımlar
+## <a name="next-steps"></a>Sonraki adımlar
 
 , `MarqueeControlLibrary` Özel denetimlerin ve ilişkili tasarımcılarının basit bir uygulamasını gösterir. Bu örneği çeşitli yollarla daha karmaşık hale getirebilirsiniz:
 
@@ -636,7 +604,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
 
 - Tasarım zamanı deneyimini daha da özelleştirin. <xref:System.Windows.Forms.Control.Enabled%2A> Ve<xref:System.Windows.Forms.Control.Visible%2A>' den daha fazla özelliği gölgelendirmeyi deneyebilirsiniz ve yeni özellikler ekleyebilirsiniz. Alt öğe denetimleri yerleştirme gibi yaygın görevleri basitleştirmek için yeni tasarımcı fiilleri ekleyin.
 
-- Lisansına sahip `MarqueeControl`. Daha fazla bilgi için [nasıl yapılır: Lisans bileşenleri ve denetimleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).
+- Lisansına sahip `MarqueeControl`.
 
 - Denetimlerinizin serileştirilme şeklini ve kodun onlar için nasıl oluşturulduğunu denetleyin. Daha fazla bilgi için bkz. [dinamik kaynak kodu oluşturma ve derleme](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 
@@ -649,6 +617,3 @@ private void stopButton_Click(object sender, System.EventArgs e)
 - <xref:System.ComponentModel.Design.DesignerVerb>
 - <xref:System.Drawing.Design.UITypeEditor>
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Nasıl yapılır: Tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
-- [Tasarım zamanı desteğini genişletme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Özel tasarımcılar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

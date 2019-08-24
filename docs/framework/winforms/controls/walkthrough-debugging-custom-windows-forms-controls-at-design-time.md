@@ -15,62 +15,49 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882458"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015693"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>İzlenecek yol: Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıkla
 
-Özel denetim oluşturduğunuzda, genellikle, tasarım zamanı davranışını hata ayıklamak gerekli bulacaksınız. Özel denetim için özel bir tasarımcı yazıyorsanız bu özellikle doğrudur. Ayrıntılar için bkz [izlenecek yol: Oluşturma bir Windows Forms Visual Studio tasarım zamanı özelliklerinden yararlanır denetimin](creating-a-wf-control-design-time-features.md).
+Özel bir denetim oluşturduğunuzda, genellikle tasarım zamanı davranışından hata ayıklamanın gerekli olduğunu fark edersiniz. Özel denetiminiz için özel tasarımcı yazıyorsanız bu özellikle doğrudur. Ayrıntılar için bkz [. İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden](creating-a-wf-control-design-time-features.md)faydalanan bir Windows Forms denetimi oluşturma.
 
-Diğer .NET Framework sınıfları debug gibi özel kontrollerinizi Visual Studio kullanarak hata ayıklama yapabilirsiniz. Visual Studio'ya özel denetiminizin kodu çalıştıran ayrı bir örneğini hata ayıklayacaktır fark
-
-Bu kılavuzda gösterilen görevler aşağıdakileri içerir:
-
-- Özel denetiminizi barındırmak için bir Windows Forms projesi oluşturma
-
-- Bir denetim kitaplığı projesi oluşturma
-
-- Bir özellik için özel denetim ekleme
-
-- Konak formuna özel denetim ekleme
-
-- Tasarım zamanı hata ayıklama için projeyi ayarlama
-
-- Özel denetiminizi tasarım zamanında hata ayıklama
-
-İşlemi tamamladığınızda, özel denetiminin tasarım zamanı davranışını hata ayıklama için gerekli görevleri bir anlayışa sahip olacaksınız.
+Visual Studio 'Yu kullanarak özel denetimlerde hata ayıklaması yapabilirsiniz, tıpkı diğer .NET Framework sınıflarında hata ayıklaması yapabilirsiniz. Fark, Visual Studio 'nun özel denetiminizin kodunu çalıştıran ayrı bir örneğinde hata ayıklamanın farkından oluşur.
 
 ## <a name="create-the-project"></a>Projeyi oluşturma
 
-İlk adım, uygulama projesi oluşturmaktır. Bu proje, özel denetimin barındıran uygulaması oluşturmak için kullanır.
+İlk adım uygulama projesini oluşturmaktır. Bu projeyi, özel denetimi barındıran uygulamayı oluşturmak için kullanacaksınız.
 
-Visual Studio'da "DebuggingExample" adlı bir Windows uygulaması projesi oluşturun (**dosya** > **yeni** > **proje**  >  **Visual C#**  veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).
+Visual Studio 'da bir Windows uygulama projesi oluşturun ve **DebuggingExample**olarak adlandırın.
 
-## <a name="create-the-control-library-project"></a>Denetim Kitaplığı projesi oluşturun
+## <a name="create-the-control-library-project"></a>Denetim kitaplığı projesi oluşturma
 
-1. Ekleme bir **Windows Denetim Kitaplığı** çözüme bir proje.
+1. Çözüme bir **Windows Denetim Kitaplığı** projesi ekleyin.
 
-2. Yeni bir **UserControl** DebugControlLibrary projeye öğe. Ayrıntılar için bkz [nasıl yapılır: Yeni proje öğeleri ekleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Yeni kaynak dosyanın temel "DebugControl" adını verin.
+2. DebugControlLibrary projesine yeni bir **UserControl** öğesi ekleyin. **DebugControl**olarak adlandırın.
 
-3. Kullanarak **Çözüm Gezgini**, projenin varsayılan denetimi kod dosyası taban adı ile silerek Sil "`UserControl1`". Ayrıntılar için bkz [nasıl yapılır: , Silme, kaldırmak ve öğeleri hariç](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+3. **Çözüm Gezgini**, kod dosyasını UserControl1 temel adıyla silerek projenin varsayılan denetimini silin.
 
 4. Çözümü oluşturun.
 
 ## <a name="checkpoint"></a>Checkpoint
 
-Bu noktada, özel denetiminizi görmeye olacaktır **araç kutusu**.
+Bu noktada, **araç kutusunda**özel denetiminizi görebileceksiniz.
 
-İlerleme durumunuzu kontrol etmek için adlı yeni sekmeyi bulun **DebugControlLibrary bileşenleri** ve seçmek için tıklayın. Açıldığında, denetiminiz olarak listelenen göreceğiniz **DebugControl** varsayılan simgesinin yanında.
+İlerleme durumunu denetlemek için **DebugControlLibrary bileşenleri** adlı yeni sekmeyi bulun ve seçmek için tıklayın. Açıldığında, denetimizin, simgenin yanında **DebugControl** olarak listelendiğini göreceksiniz.
 
-## <a name="add-a-property-to-your-custom-control"></a>Bir özellik için özel denetim Ekle
+## <a name="add-a-property-to-your-custom-control"></a>Özel denetimi bir özellik ekleyin
 
-Tasarım zamanında özel denetiminizin kodu çalıştığını göstermek için özellik ekleme ve özelliği uygulayan kod içinde bir kesme noktası ayarlayın.
+Özel denetimizin kodunun tasarım zamanında çalıştığını göstermek için, özelliği uygulayan kodda bir özellik ekleyeceksiniz ve bir kesme noktası ayarlayacaksınız.
 
-1. Açık **DebugControl** içinde **Kod Düzenleyicisi**. Aşağıdaki kodu sınıf tanımına ekleyin:
+1. **Kod düzenleyicisinde** **DebugControl** ' i açın. Aşağıdaki kodu sınıf tanımına ekleyin:
 
     ```vb
     Private demoStringValue As String = Nothing
@@ -106,64 +93,62 @@ Tasarım zamanında özel denetiminizin kodu çalıştığını göstermek için
 
 2. Çözümü oluşturun.
 
-## <a name="add-your-custom-control-to-the-host-form"></a>Konak formuna özel denetim ekleme
+## <a name="add-your-custom-control-to-the-host-form"></a>Özel denetiminizi ana bilgisayar formuna ekleme
 
-Özel denetiminizi tasarım zamanı davranışını hata ayıklamak için bir konak formda özel denetim sınıfının bir örneğini yerleştirmeniz gerekir.
+Özel denetiminizin tasarım zamanı davranışının hatalarını ayıklamak için, bir ana bilgisayar formuna özel denetim sınıfının bir örneğini yerleştirebilirsiniz.
 
-1. Form1 içinde "DebuggingExample" projesinde açın **Windows Form Tasarımcısı**.
+1. "DebuggingExample" projesinde, **Windows Form Tasarımcısı**Form1 ' i açın.
 
-2. İçinde **araç kutusu**açın **DebugControlLibrary bileşenleri** sürükleyin ve sekme bir **DebugControl** forma örneği.
+2. **Araç kutusunda** **DebugControlLibrary bileşenleri** sekmesini açın ve bir **DebugControl** örneğini form üzerine sürükleyin.
 
-3. Bulma `DemoString` özel özelliğinde **özellikleri** penceresi. Herhangi bir özellik gibi değerini değiştirebileceğinize dikkat edin. Gerektiğini de unutmayın `DemoString` özelliği seçildiğinde, özellik açıklama dizesi sonunda görünür **özellikleri** penceresi.
+3. `DemoString` **Özellikler** penceresinde özel özelliğini bulun. Değerini diğer tüm özellikler gibi değiştirebileceğinizi unutmayın. Ayrıca `DemoString` özellik seçildiğinde özelliğin açıklama dizesinin **Özellikler** penceresinin altında göründüğünü unutmayın.
 
-## <a name="set-up-the-project-for-design-time-debugging"></a>Tasarım zamanı hata ayıklama için projeyi ayarlama
+## <a name="set-up-the-project-for-design-time-debugging"></a>Projeyi tasarım zamanı hata ayıklama için ayarlama
 
-Özel denetiminizin tasarım zamanı davranışını hata ayıklamak için Visual Studio'ya özel denetiminizin kodu çalıştıran ayrı bir örneğini hata ayıklayacaktır.
+Özel denetiminizin tasarım zamanı davranışınızda hata ayıklamak için, özel denetiminizin kodunu çalıştıran ayrı bir Visual Studio örneğinden hata ayıklayacaksınız.
 
-1. Sağ **DebugControlLibrary** projesi **Çözüm Gezgini** seçip **özellikleri**.
+1. **Çözüm Gezgini** **DebugControlLibrary** projesine sağ tıklayın ve **Özellikler**' i seçin.
 
-2. İçinde **DebugControlLibrary** özellik sayfasını, select **hata ayıklama** sekmesi.
+2. **DebugControlLibrary** Özellik sayfasında, **Hata Ayıkla** sekmesini seçin.
 
-     İçinde **başlatma eylemi** bölümünden **harici program Başlat**. Artık Visual Studio, ayrı bir örneğini hata ayıklama şekilde üç nokta simgesine tıklayın (![Visual Studio Özellikler penceresinde üç nokta düğmesini (…)](./media/visual-studio-ellipsis-button.png)) Visual Studio IDE için Gözat düğmesini. Yürütülebilir dosyanın adı **devenv.exe**, ve varsayılan bir konuma yüklediyseniz, %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe yoludur.
+     **Başlangıç eylemi** bölümünde **dış program Başlat**' ı seçin. Visual Studio 'nun ayrı bir örneğinde hata ayıkladığınızda, Visual Studio IDE 'ye gitmek için![üç nokta (Visual Studio](./media/visual-studio-ellipsis-button.png)'nun Özellikler penceresi) düğmesine tıklayın. Yürütülebilir dosyanın adı **devenv. exe**' dir ve varsayılan konuma yüklediyseniz, yolu *% ProgramFiles (x86)% \ Microsoft Visual studio\2019\\\<Edition > \Common7\IDE*olur.
 
-3. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.
+3. İletişim kutusunu kapatmak için **Tamam ' ı** seçin.
 
-4. Sağ **DebugControlLibrary** seçin ve proje **başlangıç projesi olarak ayarla** bu hata ayıklama yapılandırmasını etkinleştirmek için.
+4. **DebugControlLibrary** projesine sağ tıklayın ve bu hata ayıklama yapılandırmasını etkinleştirmek Için **Başlangıç projesi olarak ayarla** ' yı seçin.
 
-## <a name="debug-your-custom-control-at-design-time"></a>Özel denetiminizi tasarım zamanında hata ayıklama
+## <a name="debug-your-custom-control-at-design-time"></a>Tasarım zamanında özel denetimi hata ayıklaması yapın
 
-Özel denetiminizi Tasarım modunda çalışırken hata ayıklamak hazırsınız. Hata ayıklama oturumu başlattığınızda, Visual Studio'nun yeni bir örneği oluşturulur ve "DebuggingExample" çözümü yüklemek için kullanır. Form1 içinde açtığınızda **Form Tasarımcısı**, özel denetiminizi örneği oluşturulur ve çalıştırmaya başlayın.
+Artık tasarım modunda çalışırken özel denetimi hata ayıklamaya hazırsınız. Hata ayıklama oturumunu başlattığınızda, Visual Studio 'nun yeni bir örneği oluşturulur ve bunu "DebuggingExample" çözümünü yüklemek için kullanacaksınız. **Form tasarımcısında**Form1 ' i açtığınızda, özel denetiminizin bir örneği oluşturulur ve çalışmaya başlayacaktır.
 
-1. Açık **DebugControl** kaynak dosyada **Kod Düzenleyicisi** ve bir kesme noktası yerleştirmek `Set` erişimcisine `DemoString` özelliği.
+1. **Kod düzenleyicisinde** `Set` **DebugControl** kaynak dosyasını açın ve `DemoString` özelliğin erişimcisine bir kesme noktası yerleştirin.
 
-2. Hata ayıklama oturumu başlatmak için F5 tuşuna basın. Visual Studio'nun yeni bir örneğini oluşturulduğunu unutmayın. İki yolla örnekleri ayırt edebilirsiniz:
+2. Hata ayıklama oturumu başlatmak için **F5** tuşuna basın. Visual Studio 'nun yeni bir örneği oluşturulur. Örnekler arasında iki şekilde ayrım yapabilirsiniz:
 
-    - Hata ayıklama örneğindeki ifadesi **çalıştıran** başlık çubuğunda
+    - Hata ayıklama örneği, başlık çubuğunda **çalışan** sözcüğe sahiptir
 
-    - Hata ayıklama örneğindeki sahip **Başlat** düğmesini kendi **hata ayıklama** araç çubuğunda devre dışı
+    - Hata ayıklama örneğinde **hata ayıklama** araç çubuğundaki **Başlat** düğmesi devre dışıdır
 
-     Kesme noktasına içinde hata ayıklama örneğindeki ayarlanır.
+   Kesme noktası hata ayıklama örneğinde ayarlanır.
 
-3. Visual Studio'nun yeni örneğini "DebuggingExample" çözümü açın. Çözüm seçerek kolayca bulabilirsiniz **son projeler** gelen **dosya** menüsü. En son dosya kullanılan "DebuggingExample.sln" Çözüm dosyası listelenir.
+3. Visual Studio 'nun yeni örneğinde, "DebuggingExample" çözümünü açın. **Dosya** menüsünden **son projeler** ' i seçerek çözümü kolayca bulabilirsiniz. "DebuggingExample. sln" çözüm dosyası en son kullanılan dosya olarak listelenecektir.
 
-4. Açık olarak Form1 **Form Tasarımcısı** seçip **DebugControl** denetimi.
+4. **Form tasarımcısında** Form1 ' i açın ve **DebugControl** denetimini seçin.
 
-5. Değiştirin `DemoString` özelliği. Değişiklik yaparsanız, hata ayıklama örneğindeki Visual Studio'nun odağı alır ve yürütmeyi, kesme noktasında durur unutmayın. Özellik erişimcisi aracılığıyla tek adımlı yapabilecekleriniz gibi herhangi bir kod gerekir.
+5. `DemoString` Özelliğin değerini değiştirin. Değişikliği kaydettiğinizde, Visual Studio 'daki hata ayıklama örneği odak ve yürütme, kesme noktasında duraklar. Özellik erişimcisinde, tıpkı diğer kodlar gibi tek adım izleyebilirsiniz.
 
-6. Hata ayıklama oturumunuzu ile işiniz bittiğinde, barındırılan bir Visual Studio örneğini kapatma veya tıklayarak çıkabilirsiniz **hata ayıklamayı Durdur** hata ayıklama örneğindeki düğmesi.
+6. Hata ayıklamayı durdurmak için, Visual Studio 'nun barındırılan örneğinden çıkın veya hata ayıklama örneğindeki **hata ayıklamayı Durdur** düğmesini seçin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Tasarım zamanında özel kontrollerinizi ayıklayabilirsiniz, Visual Studio IDE denetiminizin etkileşim genişletme için çok sayıda olasılık vardır.
+Tasarım zamanında özel denetimlerde hata ayıklayabildiğinize göre, Visual Studio IDE ile denetiminizin etkileşimini genişletmeye yönelik birçok olasılık vardır.
 
-- Kullanabileceğiniz <xref:System.ComponentModel.Component.DesignMode%2A> özelliği <xref:System.ComponentModel.Component> yalnızca tasarım zamanında yürütülür kod yazmak için sınıf. Ayrıntılar için bkz <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Yalnızca tasarım zamanında yürütülecek <xref:System.ComponentModel.Component.DesignMode%2A> kodu yazmak için <xref:System.ComponentModel.Component> sınıfının özelliğini kullanabilirsiniz. Ayrıntılar için bkz <xref:System.ComponentModel.Component.DesignMode%2A>.
 
-- Birkaç öznitelik özel denetiminizin etkileşim Tasarımcısı ile düzenlemek için denetimin özelliklerini uygulayabilirsiniz. İçinde bu özniteliklerin bulabilirsiniz <xref:System.ComponentModel?displayProperty=nameWithType> ad alanı.
+- Özel denetiminizin, tasarımcı ile etkileşimini işlemek için denetiminizin özelliklerine uygulayabileceğiniz birkaç öznitelik vardır. Bu öznitelikleri <xref:System.ComponentModel?displayProperty=nameWithType> ad alanında bulabilirsiniz.
 
-- Özel denetim için özel bir tasarımcı yazabilirsiniz. Bu, Visual Studio tarafından kullanıma sunulan Genişletilebilir Tasarımcı altyapısını kullanarak tasarım deneyimi üzerinde tam denetim sağlar. Ayrıntılar için bkz [izlenecek yol: Oluşturma bir Windows Forms Visual Studio tasarım zamanı özelliklerinden yararlanır denetimin](creating-a-wf-control-design-time-features.md).
+- Özel denetiminiz için özel tasarımcı yazabilirsiniz. Bu sayede, Visual Studio tarafından sunulan Genişletilebilir tasarımcı altyapısını kullanarak tasarım deneyimi üzerinde tüm denetim elde edersiniz. Ayrıntılar için bkz [. İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden](creating-a-wf-control-design-time-features.md)faydalanan bir Windows Forms denetimi oluşturma.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)
-- [Nasıl yapılır: Erişim tasarım zamanı Hizmetleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [Nasıl yapılır: Windows Forms'ta erişim tasarım zamanı desteği](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+- [İzlenecek yol: Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](creating-a-wf-control-design-time-features.md)

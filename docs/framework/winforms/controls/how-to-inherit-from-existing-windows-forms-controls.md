@@ -8,19 +8,23 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9ac18fae126425126712dafeb80f05663dfc2ebc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966595"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015862"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma
+
 Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yoluyla var olan bir denetimden türetilmiş bir denetim oluşturabilirsiniz. Var olan bir denetimden devralınırken, bu denetimin tüm işlevselliğini ve görsel özelliklerini devralırsınız. Örneğin, öğesinden <xref:System.Windows.Forms.Button>devralınan bir denetim oluşturuyorsanız, yeni denetiminiz bir standart <xref:System.Windows.Forms.Button> denetim gibi görünür ve çalışır. Daha sonra özel yöntemlerin ve özelliklerin uygulanmasıyla yeni denetiminizin işlevselliğini genişletebilir veya değiştirebilirsiniz. Bazı denetimlerde, kendi <xref:System.Windows.Forms.Control.OnPaint%2A> metodunu geçersiz kılarak devralınmış denetiminizin görsel görünümünü de değiştirebilirsiniz.
 
 ## <a name="to-create-an-inherited-control"></a>Devralınan bir denetim oluşturmak için
 
-1. Yeni bir **Windows Forms uygulama** projesi oluşturun.
+1. Visual Studio 'da yeni bir **Windows Forms uygulama** projesi oluşturun.
 
 2. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
@@ -30,9 +34,10 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
 
      Projenize yeni bir özel denetim eklenir.
 
-4. Visual Basic kullanıyorsanız, **Çözüm Gezgini**üst kısmında **tüm dosyaları göster**' e tıklayın. CustomControl1. vb öğesini genişletin ve ardından kod düzenleyicisinde CustomControl1. Designer. vb dosyasını açın.
+4. Şunu kullanıyorsanız:
 
-5. Kullanıyorsanız C#, kod düzenleyicisi 'nde CustomControl1.cs öğesini açın.
+   - Visual Basic, **Çözüm Gezgini**üst kısmında **tüm dosyaları göster**' e tıklayın. CustomControl1. vb öğesini genişletin ve ardından kod düzenleyicisinde CustomControl1. Designer. vb dosyasını açın.
+   - C#, kod düzenleyicisinde CustomControl1.cs öğesini açın.
 
 6. Öğesinden <xref:System.Windows.Forms.Control>devralan sınıf bildirimini bulun.
 
@@ -86,6 +91,5 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
 - [Nasıl yapılır: Denetim sınıfından devralma](how-to-inherit-from-the-control-class.md)
 - [Nasıl yapılır: UserControl sınıfından devralma](how-to-inherit-from-the-usercontrol-class.md)
 - [Nasıl yapılır: Windows Forms için yazar denetimleri](how-to-author-controls-for-windows-forms.md)
-- [Visual Basic devralınan olay Işleyicileriyle ilgili sorunları giderme](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [İzlenecek yol: Visual Basic ile Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [İzlenecek yol: Görsel ile Windows Forms denetiminden devralmaC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Visual Basic devralınan olay Işleyicileriyle ilgili sorunları giderme](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [İzlenecek yol: Windows Forms denetiminden devralma](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

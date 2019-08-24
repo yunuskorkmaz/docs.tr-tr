@@ -8,59 +8,58 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: b553dd6f6c5e760a671dea6400586d7074d49f5f
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: cce9baf1523391e281593428b633c401103b42b5
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211319"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015966"
 ---
-# <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Formları Tasarımcısında Tasarım Zamanı Hataları
+# <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form Tasarımcısı tasarım zamanı hataları
 
-Bu konuda, Visual Studio'da yüklemek Windows Form Tasarımcısı başarısız olduğunda görüntülenen tasarım zamanı hata listesinin kullanımını ve anlamı açıklanmaktadır. Bu hata listesi görüntülenirse, tasarımcıda bir hatayı, ancak kodunuzda hataları düzeltmek için yardımcı olması amacıyla yorumladığınıza değil.
+Bu konuda, Windows Form Tasarımcısı yükleyemediğinde Visual Studio 'da görünen tasarım zamanı hata listesinin anlamı ve kullanımı açıklanmaktadır. Bu hata listesi görünürse, bu hatayı tasarımcıda hata olarak yorumlayamazsınız, ancak kodunuzdaki hataları düzeltmeye yardımcı olur.
 
-Bu hata listesi temel bir anlayış hatalar hakkında ayrıntılı bilgi sağlamak ve olası çözümler önerme uygulamalarınızın hatalarını ayıklamanıza yardımcı olur.
+Bu hata listesini temel olarak anlamak, hatalar hakkında ayrıntılı bilgi sağlayarak ve olası çözümleri önererek uygulamalarınızın hatalarını ayıklamanıza yardımcı olur.
 
-## <a name="the-design-time-error-list-interface"></a>Tasarım zamanı hata listesini arabirimi
+## <a name="the-design-time-error-list-interface"></a>Tasarım zamanı hata listesi arabirimi
 
-Windows Form Tasarımcısı yüklenemezse, tasarımcıda bir hata listesi görünür. Hataların kategorilere ayrılır. Örneğin, bunlar bildirilmemiş değişkenler dört örneğine sahipseniz, aynı hata kategorisi gruplandırılır. Her hata kategorisi hata özetler kısa bir açıklama içerir.
+Windows Form Tasarımcısı yüklenamazsa, tasarımcıda bir hata listesi görüntülenir. Hatalar kategoriler halinde gruplandırılır. Örneğin, bildirilmemiş değişkenlerin dört örneği varsa, bunlar aynı hata kategorisi içinde gruplandırılır. Her hata kategorisi, hatayı özetleyen kısa bir açıklama içerir.
 
-Genişletmek veya bir hata kategori hata kategorisi başlığı tıklayarak ya da genişletme/daraltma Köşeli Çift Ayraca tıklayarak Daralt. Hata kategorisi genişlettiğinizde, aşağıdaki ek Yardım görüntülenir:
+Hata kategorisi başlığına tıklayarak ya da Genişlet/Daralt köşeli çift ayraca tıklayarak bir hata kategorisini genişletebilir veya daraltabilirsiniz. Bir hata kategorisini genişlettiğinizde, aşağıdaki ek yardım görüntülenir:
 
 - Bu hatanın örnekleri.
 
-- Bu hatayla ilgili Yardım.
+- Bu hatayla ilgili yardım.
 
-- Bu hata hakkındaki Forum gönderileri.
+- Bu hatayla ilgili forum gönderileri.
 
 ### <a name="instances-of-this-error"></a>Bu hatanın örnekleri
 
-Ek hata geçerli projenizdeki tüm örneklerini listele Yardım. Birçok hata şu biçimde kesin bir konuma içerir: *[Proje adı]* *[Form adı]* satır:*[satır numarası]* sütun:*[sütun numarası]*. **Koduna Git** bağlantı kodunuzda hatanın oluştuğu konumuna götürür.
+Ek Yardım, geçerli projenizde hatanın tüm örneklerini listeler. Birçok hata, Şu biçimdeki kesin bir konum içerir: *[proje adı]* *[Form adı]* satır: *[satır numarası]* sütun: *[sütun numarası]* . **Koda git** bağlantısı sizi kodunuzda Hatanın gerçekleştiği konuma götürür.
 
-Çağrı yığını şu hata ile ilişkili ise, tıklayabilirsiniz **çağrı yığını Göster** bağlantı, çağrı yığını gösterilecek hata, daha fazla genişletir. Yığın İnceleme hata ayıklama değerli bilgiler sağlayabilir. Örneğin, bir hata oluştu önce çağrılan işlevler izleyebilirsiniz. Çağrı yığınını seçilebilir, böylelikle kopyalayın ve kaydedin.
+Bir çağrı yığını hatayla ilişkilendirilmişse çağrı yığınını **göster** bağlantısına tıklayabilirsiniz. Bu, çağrı yığınını göstermek için hatayı daha da genişletir. Yığının incelenmesiyle, değerli hata ayıklama bilgileri sağlayabilirsiniz. Örneğin, hata oluşmadan önce çağrılan işlevleri izleyebilirsiniz. Çağrı yığını seçilebilir, böylece kopyalayabilir ve kaydedebilirsiniz.
 
 > [!NOTE]
-> Visual Basic'te, tasarım zamanı hata listesini birden fazla hata görüntülemez ancak birden fazla aynı hata görüntülenebilir. Visual C++'da hataları bağlantıları/satır numarası bağlantıları goto kod yok.
+> Visual Basic, tasarım zamanı hata listesi birden çok hata görüntülemez, ancak aynı hatanın birden fazla örneğini görüntüleyebilir. Görselde C++hatalar için goto kod bağlantıları/satır numarası bağlantıları yoktur.
 
-### <a name="help-with-this-error"></a>Bu hatayla ilgili Yardım
+### <a name="forum-posts-about-this-error"></a>Bu hatayla ilgili forum gönderileri
 
-Hatanın ilişkili bir MSDN Yardım konusu için bir bağlantı içeriyorsa, Ek Yardım Yardım konusunun bağlantısını içerir. Bağlantıya tıkladığında, ilişkili bir Yardım konusu Visual Studio'da görünür.
+Ek Yardım, hatayla ilgili forum gönderileri için bir bağlantı içerir. Forumlar, hata iletisinin dizesine göre aranır. Ayrıca, aşağıdaki forumlarda aramayı deneyebilirsiniz:
 
-### <a name="forum-posts-about-this-error"></a>Bu hata hakkındaki Forum gönderileri
+- [Windows Form Tasarımcısı Forumu](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)
 
-Ek Yardım MSDN forum gönderilerini hata ile ilgili bir bağlantı içerir. Forumlar, hata iletisi dizesi göre aranır. Ayrıca aşağıdaki forumları aramayı deneyin:
-
-- [Windows Forms Tasarımcısı Forumu](https://go.microsoft.com/fwlink/?LinkId=203524)
-
-- [Windows Forms forumları](https://go.microsoft.com/fwlink/?LinkId=203523)
+- [Windows Forms Forumu](https://social.msdn.microsoft.com/Forums/windows/home?category=windowsforms)
 
 ### <a name="ignore-and-continue"></a>Yoksay ve devam et
 
-Hata koşulu yoksaymak ve tasarımcı yüklemeye devam etmek seçebilirsiniz. Bu eylem seçme içinde beklenmeyen davranışlara neden olabilir. Örneğin, denetimleri tasarım yüzeyinde görünmeyebilir.
+Hata koşulunu yoksayıp tasarımcıyı yüklemeye devam etmeyi tercih edebilirsiniz. Bu eylemi seçmek beklenmeyen davranışlara neden olabilir. Örneğin, denetimler tasarım yüzeyinde görünmeyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tasarım zamanı geliştirme sorunlarını giderme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
 - [Denetim ve Bileşen Yazmada Sorun Giderme](troubleshooting-control-and-component-authoring.md)
 - [Tasarım Zamanında Windows Forms Denetimleri Geliştirme](developing-windows-forms-controls-at-design-time.md)
-- [Windows Form Tasarımcısı hata iletileri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
+- [Windows Form Tasarımcısı hata Iletileri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

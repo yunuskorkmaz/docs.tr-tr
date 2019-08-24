@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039502"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015627"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Windows Forms’ta Basit Bağlantılı Denetim Oluşturma
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Nasıl yapılır: Bir Windows formunda basit bağlantılı denetim oluşturma
 
 *Basit bağlama*sayesinde, bir denetim içinde bir veri kümesi tablosundan sütun değeri gibi tek bir veri öğesi görüntüleyebilirsiniz. Bir denetimin herhangi bir özelliğini bir veri değerine basit bir şekilde bağlayabilirsiniz.
 
-### <a name="to-simple-bind-a-control"></a>Bir denetimi basit bağlamak için
+## <a name="to-simple-bind-a-control"></a>Bir denetimi basit bağlamak için
 
 1. Bir veri kaynağına bağlanın. Daha fazla bilgi için bkz. [veri kaynağına bağlanma](../data/adonet/connecting-to-a-data-source.md).
 
-2. Formunda, denetimi seçin ve **Özellikler** penceresini görüntüleyin.
+2. Visual Studio 'da, formdaki denetimi seçin ve **Özellikler** penceresini görüntüleyin.
 
 3. **(DataBindings)** özelliğini genişletin.
 

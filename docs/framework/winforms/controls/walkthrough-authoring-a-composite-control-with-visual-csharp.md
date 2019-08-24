@@ -1,6 +1,8 @@
 ---
 title: 'İzlenecek yol: C# ile Bileşik Denetim Yazma'
 ms.date: 03/30/2017
+dev_langs:
+- CSharp
 helpviewer_keywords:
 - custom controls [C#]
 - user controls [Windows Forms], creating with Visual C#
@@ -8,43 +10,44 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 1de1ff4147ddb8cb3316795aefd38622de205a73
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: d1af6c0e013f82569eed8d085df0249f4fb991bb
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950059"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015688"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>İzlenecek yol: Visual C ile bileşik denetim yazma\#
+# <a name="walkthrough-author-a-composite-control-with-c"></a>İzlenecek yol: C ile bileşik denetim yazma\#
 
 Bileşik denetimler, özel grafik arabirimlerinin oluşturulup yeniden kullanılabilmesi için bir yol sağlar. Bileşik denetim temelde görsel temsili olan bir bileşendir. Bu nedenle, Kullanıcı girişini doğrulayarak, görüntü özelliklerini değiştirerek veya yazar için gereken diğer görevleri gerçekleştirerek işlevselliği genişletebilen bir veya daha fazla Windows Forms denetimi, bileşeni veya kod bloklarında bulunabilir. Bileşik denetimler Windows Forms diğer denetimlerle aynı şekilde yerleştirilebilir. Bu izlenecek yolun ilk bölümünde adlı `ctlClock`basit bir bileşik denetim oluşturursunuz. İzlenecek yolun ikinci bölümünde, devralma `ctlClock` ile işlevlerini genişletebilirsiniz.
 
-## <a name="creating-the-project"></a>Projeyi Oluşturma
+## <a name="create-the-project"></a>Projeyi Oluşturma
 
 Yeni bir proje oluşturduğunuzda, kök ad alanı, derleme adı ve proje adını ayarlamak için adını belirtin ve varsayılan bileşenin doğru ad alanında yer aldığından emin olun.
 
 ### <a name="to-create-the-ctlclocklib-control-library-and-the-ctlclock-control"></a>CtlClockLib denetim kitaplığını ve ctlClock denetimini oluşturmak için
 
-1. **Dosya** menüsünde, **Yeni**' nin üzerine gelin ve ardından **Proje** ' ye tıklayarak **Yeni proje** iletişim kutusunu açın.
-
-2. Görsel C# proje listesinden **Windows Forms denetim kitaplığı** proje şablonu ' nu seçin, `ctlClockLib` **ad** kutusuna yazın ve ardından **Tamam**' a tıklayın.
+1. Visual Studio 'da yeni bir **Windows Forms denetim kitaplığı** projesi oluşturun ve **ctlClockLib**olarak adlandırın.
 
      Proje adı `ctlClockLib`, varsayılan olarak kök ad alanına da atanır. Kök ad alanı, derlemedeki bileşenlerin adlarını nitelemek için kullanılır. Örneğin, iki derleme adlı `ctlClock`bileşenler içeriyorsa, `ctlClock` bileşenini kullanarak`ctlClockLib.ctlClock.`
 
-3. Çözüm Gezgini ' de, **UserControl1.cs**' a sağ tıklayın ve ardından **Yeniden Adlandır**' a tıklayın. Dosya adını olarak `ctlClock.cs`değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
+2. **Çözüm Gezgini**' de, **UserControl1.cs**' a sağ tıklayın ve ardından **Yeniden Adlandır**' a tıklayın. Dosya adını olarak `ctlClock.cs`değiştirin. "UserControl1" kod öğesiyle tüm başvuruları yeniden adlandırmak isteyip istemediğiniz sorulduğunda **Evet** düğmesine tıklayın.
 
     > [!NOTE]
     > Varsayılan olarak, bileşik bir denetim sistem tarafından sunulan <xref:System.Windows.Forms.UserControl> sınıftan devralınır. <xref:System.Windows.Forms.UserControl> Sınıfı, tüm bileşik denetimlerin gerektirdiği işlevselliği sağlar ve standart yöntemler ve özellikler uygular.
 
-4. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
+3. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
 
-## <a name="adding-windows-controls-and-components-to-the-composite-control"></a>Bileşik denetime Windows denetimleri ve bileşenleri ekleme
+## <a name="add-windows-controls-and-components-to-the-composite-control"></a>Bileşik denetime Windows denetimleri ve bileşenleri ekleme
 
 Görsel arabirim, bileşik denetiminizin temel bir parçasıdır. Bu görsel arabirim, tasarımcı yüzeyine bir veya daha fazla Windows denetimi eklenerek uygulanır. Aşağıdaki gösteride, Windows denetimlerini bileşik denetiminizle birleştirirsiniz ve işlevselliği uygulamak için kod yazabilirsiniz.
 
 ### <a name="to-add-a-label-and-a-timer-to-your-composite-control"></a>Bileşik denetilemenize bir etiket ve süreölçer eklemek için
 
-1. Çözüm Gezgini ' de, **ctlClock.cs**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ctlClock.cs**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
 2. **Araç kutusunda** **ortak denetimler** düğümünü genişletin ve ardından **etiket**' e çift tıklayın.
 
@@ -89,13 +92,13 @@ Görsel arabirim, bileşik denetiminizin temel bir parçasıdır. Bu görsel ara
 
 9. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
 
-## <a name="adding-properties-to-the-composite-control"></a>Bileşik denetime özellikler ekleme
+## <a name="add-properties-to-the-composite-control"></a>Bileşik denetime özellikler ekleme
 
 Saat denetiminiz artık, her biri <xref:System.Windows.Forms.Label> kendi kendine ait <xref:System.Windows.Forms.Timer> özellikler kümesiyle birlikte bir denetimi ve bileşeni kapsüller. Bu denetimlerin tek tek özelliklerine denetiminizin sonraki kullanıcıları tarafından erişilemese de, uygun kod bloklarını yazarak özel özellikler oluşturabilir ve kullanıma sunabilirsiniz. Aşağıdaki yordamda, denetime, kullanıcının arka plan ve metin rengini değiştirmesini sağlayan özellikler ekleyeceksiniz.
 
 ### <a name="to-add-a-property-to-your-composite-control"></a>Bileşik denetimi bir özellik eklemek için
 
-1. Çözüm Gezgini ' de, **ctlClock.cs**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ctlClock.cs**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
      Denetiminizin **Kod Düzenleyicisi** açılır.
 
@@ -108,7 +111,7 @@ Saat denetiminiz artık, her biri <xref:System.Windows.Forms.Label> kendi kendin
 
      Bu deyimler, oluşturmak üzere olduğunuz özelliklerin değerlerini depolamak için kullanacağınız özel değişkenleri oluşturur.
 
-3. 2\. adımdaki değişken bildirimlerinin altına aşağıdaki kodu yazın.
+3. Aşağıdaki kodu adım 2 ' den değişken bildirimlerinin altına girin veya yapıştırın.
 
     ```csharp
     // Declares the name and type of the property.
@@ -146,25 +149,25 @@ Saat denetiminiz artık, her biri <xref:System.Windows.Forms.Label> kendi kendin
 
 4. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
 
-## <a name="testing-the-control"></a>Denetimi test etme
+## <a name="test-the-control"></a>Denetimi test etme
 
 Denetimler tek başına uygulamalar değildir; Bunlar bir kapsayıcıda barındırılmalıdır. Denetiminizin çalışma zamanı davranışını test edin ve özelliklerini **UserControl Test kapsayıcısı**ile çalıştırın. Daha fazla bilgi için [nasıl yapılır: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)'un çalışma zamanı davranışını test edin.
 
 ### <a name="to-test-your-control"></a>Denetiminizi test etmek için
 
-1. Projeyi derlemek için F5 tuşuna basın ve denetimi **UserControl Test kapsayıcısında**çalıştırın.
+1. Projeyi derlemek için **F5** tuşuna basın ve denetimi **UserControl Test kapsayıcısında**çalıştırın.
 
 2. Test kapsayıcısının özellik kılavuzunda, `ClockBackColor` özelliğini bulun ve ardından renk paletini göstermek için özelliği seçin.
 
 3. Tıklayarak bir renk seçin.
 
-     Denetiminizin arka plan rengi, seçtiğiniz renge değişir.
+   Denetiminizin arka plan rengi, seçtiğiniz renge değişir.
 
 4. `ClockForeColor` Özelliğin beklendiği gibi çalıştığını doğrulamak için benzer bir olay dizisi kullanın.
 
-     Bu bölümde ve önceki bölümlerde, bileşik denetim biçiminde özel işlevsellik sağlamak için bileşenlerin ve Windows denetimlerinin kod ve paketleme ile nasıl birleştirilebileceği gördünüz. Birleşik denetidiklerinizin özelliklerini açığa çıkarmak ve tamamlandıktan sonra denetiminizi test etmek için öğrendiniz. Sonraki bölümde, temel olarak kullanarak `ctlClock` devralınmış bir bileşik denetim oluşturmayı öğreneceksiniz.
+   Bu bölümde ve önceki bölümlerde, bileşik denetim biçiminde özel işlevsellik sağlamak için bileşenlerin ve Windows denetimlerinin kod ve paketleme ile nasıl birleştirilebileceği gördünüz. Birleşik denetidiklerinizin özelliklerini açığa çıkarmak ve tamamlandıktan sonra denetiminizi test etmek için öğrendiniz. Sonraki bölümde, temel olarak kullanarak `ctlClock` devralınmış bir bileşik denetim oluşturmayı öğreneceksiniz.
 
-## <a name="inheriting-from-a-composite-control"></a>Bileşik denetimden devralma
+## <a name="inherit-from-a-composite-control"></a>Bileşik denetimden devralma
 
 Önceki bölümlerde, Windows denetimlerini, bileşenleri ve kodu yeniden kullanılabilir bileşik denetimlere nasıl birleştirebileceğinizi öğrendiniz. Bileşik denetiminiz artık diğer denetimlerin derlenme temeli olarak kullanılabilir. Temel sınıftan bir sınıfın türeme işlemi *Devralma*olarak adlandırılır. Bu bölümde, adlı `ctlAlarmClock`bir bileşik denetim oluşturacaksınız. Bu denetim, `ctlClock`üst denetiminden türetilecektir. Üst yöntemleri geçersiz kılarak ve yeni yöntemler ve `ctlClock` özellikler ekleyerek işlevselliğini genişletmeyi öğreneceksiniz.
 
@@ -172,7 +175,7 @@ Devralınan bir denetim oluşturmanın ilk adımı onu üst öğesinden türemek
 
 ### <a name="to-create-the-inherited-control"></a>Devralınan denetimi oluşturmak için
 
-1. Çözüm Gezgini ' de, **ctlClockLib**' a sağ tıklayın, **Ekle**' nin üzerine gelin ve **Kullanıcı denetimi**' ne tıklayın.
+1. **Çözüm Gezgini**' de, **ctlClockLib**' a sağ tıklayın, **Ekle**' nin üzerine gelin ve **Kullanıcı denetimi**' ne tıklayın.
 
      **Yeni Öğe Ekle** iletişim kutusu açılır.
 
@@ -184,18 +187,18 @@ Devralınan bir denetim oluşturmanın ilk adımı onu üst öğesinden türemek
 
 4. **Bileşen adı**altında **ctlClock**' ye çift tıklayın.
 
-5. Çözüm Gezgini, geçerli projelere göz atabilirsiniz.
+5. **Çözüm Gezgini**, geçerli projelere göz atabilirsiniz.
 
     > [!NOTE]
     > Geçerli projeye **ctlAlarmClock.cs** adlı bir dosya eklendi.
 
-### <a name="adding-the-alarm-properties"></a>Alarm özelliklerini ekleme
+### <a name="add-the-alarm-properties"></a>Alarm özelliklerini ekleme
 
 Özellikler, devralınan bir denetime, Birleşik bir denetime eklendikçe aynı şekilde eklenir. Şimdi, denetimidir için iki özellik eklemek üzere özellik bildirimi söz dizimini kullanacaksınız: `AlarmTime`bu, uyarının bitiş tarihini ve saatini depolayan ve `AlarmSet`alarmın ayarlanmış olup olmadığını belirtecektir.
 
 #### <a name="to-add-properties-to-your-composite-control"></a>Bileşik denetimi özellikler eklemek için
 
-1. Çözüm Gezgini ' de, **ctlAlarmClock**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ctlAlarmClock**' a sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.
 
 2. `public class` İfadesini bulun. Denetiminizin öğesinden `ctlClockLib.ctlClock`devraldığını unutmayın. Açma küme ayracı (`{)` deyimin altına aşağıdaki kodu yazın.
 
@@ -228,13 +231,13 @@ Devralınan bir denetim oluşturmanın ilk adımı onu üst öğesinden türemek
     }
     ```
 
-### <a name="adding-to-the-graphical-interface-of-the-control"></a>Denetimin grafik arabirimine ekleme
+### <a name="add-to-the-graphical-interface-of-the-control"></a>Denetimin grafik arabirimine Ekle
 
 Devralınan denetiminizin devraldığı denetimle özdeş bir görsel arabirimi vardır. Kendi üst denetimiyle aynı bileşen denetimlerine sahip olur, ancak yapısal denetimlerin özellikleri özellikle gösterilmedikleri sürece kullanılamaz. Devralınan bir bileşik denetimin grafik arabirimine, herhangi bir bileşik denetime ekleyeceğiniz şekilde ekleyebilirsiniz. Alarm saatinizin görsel arabirimine eklemeye devam etmek için, alarm bir işlem olduğunda Flash olacak bir etiket denetimi ekleyeceksiniz.
 
 #### <a name="to-add-the-label-control"></a>Etiket denetimi eklemek için
 
-1. Çözüm Gezgini ' de, **ctlAlarmClock**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ctlAlarmClock**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
      İçin `ctlAlarmClock` tasarımcı ana pencerede açılır.
 
@@ -257,7 +260,7 @@ Devralınan denetiminizin devraldığı denetimle özdeş bir görsel arabirimi 
     |**TextAlign**|`MiddleCenter`|
     |**Görüne**|`false`|
 
-### <a name="adding-the-alarm-functionality"></a>Alarm Işlevlerini ekleme
+### <a name="add-the-alarm-functionality"></a>Alarm Işlevlerini ekleme
 
 Önceki yordamlarda, bileşik denetiminizdeki alarm işlevselliğini etkinleştiren Özellikler ve bir denetim eklediniz. Bu yordamda, geçerli saati alarm zamanına göre karşılaştırmak için kod ekleyeceksiniz ve aynı ise, bir alarm Flash için de aynı olduğunda. `timer1_Tick` `ctlAlarmClock` Yöntemini geçersiz kılarak ve buna ek kod ekleyerek, tüm devralınan işlevlerini `ctlClock`korurken özelliğini genişletebilirsiniz. `ctlClock`
 
@@ -317,7 +320,7 @@ Devralınan denetiminizin devraldığı denetimle özdeş bir görsel arabirimi 
 
 #### <a name="to-implement-the-shutoff-method"></a>Shutoff yöntemini uygulamak için
 
-1. Çözüm Gezgini ' de, **ctlAlarmClock.cs**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
+1. **Çözüm Gezgini**' de, **ctlAlarmClock.cs**' a sağ tıklayın ve ardından **tasarımcıyı görüntüle**' ye tıklayın.
 
      Tasarımcı açılır.
 
@@ -346,21 +349,21 @@ Devralınan denetiminizin devraldığı denetimle özdeş bir görsel arabirimi 
 
 5. Projeyi kaydetmek için **Dosya** menüsünde **Tümünü Kaydet** ' e tıklayın.
 
-### <a name="using-the-inherited-control-on-a-form"></a>Bir form üzerinde devralınmış denetimi kullanma
+### <a name="use-the-inherited-control-on-a-form"></a>Bir form üzerinde devralınan denetimi kullanma
 
-Devralınan denetiminizi, temel sınıf denetimini `ctlClock`sınadığınız şekilde test edebilirsiniz: Projeyi derlemek için F5 tuşuna basın ve denetimi **UserControl Test kapsayıcısında**çalıştırın. Daha fazla bilgi için [nasıl yapılır: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)'un çalışma zamanı davranışını test edin.
+Devralınan denetiminizi, temel sınıf denetimini `ctlClock`sınadığınız şekilde test edebilirsiniz: Projeyi derlemek için **F5** tuşuna basın ve denetimi **UserControl Test kapsayıcısında**çalıştırın. Daha fazla bilgi için [nasıl yapılır: UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)'un çalışma zamanı davranışını test edin.
 
 Denetiminizi kullanmak üzere yerleştirmek için bir form üzerinde barındırmanıza gerek duyarsınız. Standart bir bileşik denetimde olduğu gibi, devralınan bir bileşik denetim tek başına olamaz ve bir formda ya da başka bir kapsayıcıda barındırılmalıdır. Daha büyük bir işlevsellik derinliğine sahipolduğundan,testetmekiçinekkodgereklidir.`ctlAlarmClock` Bu yordamda, işlevselliğini `ctlAlarmClock`test etmek için basit bir program yazacaksınız. `AlarmTime` Özelliğini ayarlamakvegöstermekiçinkodyazacaksınızveonunkendiişlevlerinitestedecektir.`ctlAlarmClock`
 
 #### <a name="to-build-and-add-your-control-to-a-test-form"></a>Denetimi derlemek ve test formuna eklemek için
 
-1. Çözüm Gezgini ' de, **ctlClockLib**' a sağ tıklayın ve ardından **Oluştur**' a tıklayın.
+1. **Çözüm Gezgini**' de, **ctlClockLib**' a sağ tıklayın ve ardından **Oluştur**' a tıklayın.
 
-2. Çözüme yeni bir **Windows uygulaması** projesi ekleyin ve bunu `Test`adlandırın.
+2. Çözüme yeni bir **Windows uygulaması** projesi ekleyin ve **Test**edin.
 
-3. Çözüm Gezgini, test projeniz için **Başvurular** düğümüne sağ tıklayın. Başvuru Ekle iletişim kutusunu göstermek için **Başvuru Ekle** ' ye tıklayın. Etiketli **Projeler**sekmesine tıklayın. Projeniz proje adı altında listelenir. `ctlClockLib` Başvuruyu test projesine eklemek için projeye çift tıklayın.
+3. **Çözüm Gezgini**, test projeniz için **Başvurular** düğümüne sağ tıklayın. Başvuru Ekle iletişim kutusunu göstermek için **Başvuru Ekle** ' ye tıklayın. Etiketli **Projeler**sekmesine tıklayın. Projeniz proje adı altında listelenir. `ctlClockLib` Başvuruyu test projesine eklemek için projeye çift tıklayın.
 
-4. Çözüm Gezgini ' de **Test**' e sağ tıklayın ve ardından **Oluştur**' a tıklayın.
+4. **Çözüm Gezgini**' de **Test**' e sağ tıklayın ve ardından **Oluştur**' a tıklayın.
 
 5. **Araç kutusunda** **ctlClockLib Components** düğümünü genişletin.
 
@@ -395,7 +398,7 @@ Denetiminizi kullanmak üzere yerleştirmek için bir form üzerinde barındırm
     }
     ```
 
-12. Çözüm Gezgini ' de **Test**' e sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
+12. **Çözüm Gezgini**' de **Test**' e sağ tıklayın ve ardından **Başlangıç projesi olarak ayarla**' ya tıklayın.
 
 13. Üzerinde **hata ayıklama** menüsünü tıklatın **hata ayıklamayı Başlat**.
 
@@ -409,7 +412,7 @@ Denetiminizi kullanmak üzere yerleştirmek için bir form üzerinde barındırm
 
 16. Tıklayarak `btnAlarmOff`uyarıyı kapatın. Şimdi uyarıyı sıfırlayabilirsiniz.
 
-     Bu izlenecek yol, bir dizi temel kavramı kapsamıştır. Bir bileşik denetim kapsayıcısına denetimleri ve bileşenleri birleştirerek bileşik bir denetim oluşturmayı öğrendiniz. Denetime Özellik eklemeyi ve özel işlevsellik uygulamak için kod yazmayı öğrendiniz. Son bölümde, belirli bir bileşik denetimin işlevselliğini devralma yoluyla genişletmeyi ve bu yöntemleri geçersiz kılarak ana bilgisayar yöntemlerinin işlevselliğini değiştirmeyi öğrendiniz.
+Bu makalede bir dizi temel kavram ele alınmıştır. Bir bileşik denetim kapsayıcısına denetimleri ve bileşenleri birleştirerek bileşik bir denetim oluşturmayı öğrendiniz. Denetime Özellik eklemeyi ve özel işlevsellik uygulamak için kod yazmayı öğrendiniz. Son bölümde, belirli bir bileşik denetimin işlevselliğini devralma yoluyla genişletmeyi ve bu yöntemleri geçersiz kılarak ana bilgisayar yöntemlerinin işlevselliğini değiştirmeyi öğrendiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

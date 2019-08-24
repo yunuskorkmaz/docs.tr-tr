@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: de523a42f1274784a92243735a8c239a6b5bcff1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f2af32315f8f955495c51f2928c2b8eed5350759
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960236"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016090"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Grafik İşleme Kayıt Defteri Ayarları
 Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] uygulamaları etkileyen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] grafik işleme kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -70,7 +70,7 @@ Bu konu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclie
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Dize|  
   
- Kasım 2004 ' de, [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] sürücü sınama yönergelerinin yeni bir sürümünü yayımladı; bu tarihten sonra yazılan sürücüler daha iyi kararlılık sağlar. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu sürücüler için donanım hızlandırma işlem hattını kullanır ve bu tarihten önce yayımlanan XPDM sürücüleri için yazılım işlemeye geri döner.  
+ Kasım, 2004 ' de, Microsoft sürücü sınama yönergelerinin yeni bir sürümünü yayımladı; Bu tarihten sonra yazılan sürücüler daha iyi kararlılık sağlar. Varsayılan olarak, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bu sürücüler için donanım hızlandırma işlem hattını kullanır ve bu tarihten önce yayımlanan XPDM sürücüleri için yazılım işlemeye geri döner.  
   
  **Gerekli video sürücüsü tarih ayarı** , XPDM sürücüleri için alternatif bir en düşük Tarih belirtmenize olanak sağlar. Video sürücünüzün desteklemeye [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]yetecek kadar kararlı olduğundan emin değilseniz, yalnızca Kasım 2004 ' den önceki bir tarihi belirtmeniz gerekir.  
   

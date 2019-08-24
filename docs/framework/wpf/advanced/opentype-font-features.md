@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: 7d73176a68d8b4b19b6c980ef52e1f47408127fb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f1f0698afce6e64711e37ac60d0662d65bbee6b
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933681"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016135"
 ---
 # <a name="opentype-font-features"></a>OpenType Yazı Tipi Özellikleri
 
@@ -22,7 +22,7 @@ Bu konu, içindeki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType yazı tipi biçimi  
- OpenType yazı tipi biçimi, PostScript yazı tipi verileri [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] için destek ekleyen yazı tipi biçiminin bir uzantısıdır. OpenType yazı tipi biçimi, ve Adobe Corporation tarafından [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] ortaklaşa geliştirilmiştir. OpenType yazı tiplerini destekleyen OpenType yazı tipleri ve işletim sistemi hizmetleri, kullanıcılara, yazı tiplerinin anahatlar veya CFF (PostScript) anahatları içerip içermediği [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] gibi yazı tiplerini yüklemek ve kullanmak için basit bir yol sağlar.  
+ OpenType yazı tipi biçimi, PostScript yazı tipi verileri [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] için destek ekleyen yazı tipi biçiminin bir uzantısıdır. OpenType yazı tipi biçimi Microsoft ve Adobe Corporation tarafından ortaklaşa geliştirilmiştir. OpenType yazı tiplerini destekleyen OpenType yazı tipleri ve işletim sistemi hizmetleri, kullanıcılara, yazı tiplerinin anahatlar veya CFF (PostScript) anahatları içerip içermediği [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] gibi yazı tiplerini yüklemek ve kullanmak için basit bir yol sağlar.  
   
  OpenType yazı tipi biçimi aşağıdaki geliştirici güçlüklerine yöneliktir:  
   
