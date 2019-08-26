@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567475"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963389"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Normal İfade Davranışının Ayrıntıları
 .NET Framework normal ifade altyapısı, Perl, Python, Emacs ve Tcl tarafından kullanılan gibi geleneksel bir belirleyici olmayan sonlu bir Automaton (NFA) altyapısını içeren bir geri izleme normal ifade eşleştirici. Bu, onu daha hızlı bir şekilde ayırır, ancak awk, egrep veya Lex içinde bulunanlar gibi daha sınırlı, saf normal ifade belirleyici bir otomasyon (DFA) altyapılarından ayırt edilmesini sağlar. Bu Ayrıca, bunu standartlaştırılmış, ancak daha yavaş, POSIX NFAs olarak da ayırır. Aşağıdaki bölümde, normal ifade altyapısının üç türü açıklanmakta ve .NET Framework normal ifadelerin geleneksel bir NFA altyapısı kullanılarak nasıl uygulandığı açıklanmaktadır.  
@@ -31,7 +31,7 @@ ms.locfileid: "69567475"
  Geleneksel nfa motorları, programcılar tarafından daha fazla denetim sağladığından, DFA veya POSIX NSK altyapılarından daha fazla denetim sunduklarında, bu programcılar tarafından sık sık kırmız En kötü durumda, yavaş çalışabilse de, belirsizlikleri azaltan ve geri izlemeyi sınırlayan desenler kullanarak bunları doğrusal veya polinom zaman içinde bulmak için onları eğilede yapabilirsiniz. Diğer bir deyişle, NFA motorları güç ve esneklik için performans sunar, ancak çoğu durumda düzenli bir ifade iyi yazılmışsa ve geri izlemenin performansı katlanarak düşürür.  
   
 > [!NOTE]
->  Aşırı geri izleme ve bir normal ifadeyi geçici olarak çözmek için kullanmanın bir performans cezası hakkında daha fazla bilgi için bkz. [geri izleme](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Aşırı geri izleme ve bir normal ifadeyi geçici olarak çözmek için kullanmanın bir performans cezası hakkında daha fazla bilgi için bkz. [geri izleme](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="net-framework-engine-capabilities"></a>.NET Framework motoru özellikleri  
  Geleneksel bir NFA altyapısının avantajlarından yararlanmak için, .NET Framework normal ifade altyapısı, programcıların geri izleme altyapısını ele geçirmesine olanak sağlayan bir yapı kümesi içerir. Bu yapılar, eşleşmeleri daha hızlı bulmak veya diğerleri üzerinde belirli genişleimler sağlamak için kullanılabilir.  
