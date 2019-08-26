@@ -1,33 +1,28 @@
-- name: Windows Forms Denetimleri
+- name: Windows Forms denetimleri
   href: index.md
   items:
-    - name: Windows Formlarında Denetimleri Düzenleme
-      href: arranging-controls-on-windows-forms.md
+    - name: Windows Forms üzerinde denetimleri düzenleme
       items:
-        - name: 'Nasıl yapılır: Windows Forms’da Birden Çok Denetimi Hizalama'
+        - name: 'Nasıl yapılır: Birden Fazla Denetimi Hizalama'
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’da Denetimleri Bağlama'
+        - name: 'Nasıl yapılır: Denetimleri Bağlama'
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Formları Arasında Denetimleri Kopyalama'
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms''a Denetimler Yerleştirme'
+        - name: 'Nasıl yapılır: Denetimleri Yerleştirme'
           href: how-to-dock-controls-on-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’da Nesneleri Katmanlara Ayırma'
+        - name: 'Nasıl yapılır: Nesneleri Katmanlama'
           href: how-to-layer-objects-on-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms''a Denetimleri Kilitleme'
+        - name: 'Nasıl yapılır: Denetimleri Kilitleme'
           href: how-to-lock-controls-to-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’da Denetimleri Konumlandırma'
+        - name: 'Nasıl yapılır: Denetimlerin Konumlarını Belirleme'
           href: how-to-position-controls-on-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’da Denetimleri Yeniden Boyutlandırma'
+        - name: 'Nasıl yapılır: Denetimleri Yeniden Boyutlandırma'
           href: how-to-resize-controls-on-windows-forms.md
         - name: 'Nasıl yapılır: Tüm Windows Formları için Kılavuz Seçeneklerini Ayarlama'
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’da Sekme Sırasını Ayarlama'
+        - name: 'Nasıl yapılır: Sekme Sırasını Ayarlama'
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 'İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms''da Denetimleri Düzenleme'
+        - name: 'İzlenecek yol: Dayama Çizgilerini Kullanarak Denetimleri Düzenleme'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: 'Nasıl yapılır: Windows Forms’da Dayama Çizgileri ve Kılavuz ile Denetimleri Düzenleme'
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: 'Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama'
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 'İzlenecek yol: Doldurma, Kenar Boşlukları ve AutoSize Özelliği ile Windows Forms Denetimlerini Düzenleme'
@@ -35,15 +30,15 @@
     - name: Windows Formlarına Denetimler Koyma
       href: putting-controls-on-windows-forms.md
       items:
-        - name: 'Nasıl yapılır: Windows Forms’a Denetimler Ekleme'
+        - name: 'Nasıl yapılır: Denetim Ekleme'
           href: how-to-add-controls-to-windows-forms.md
-        - name: 'Nasıl yapılır: Windows Forms’a Kullanıcı Arabirimi Olmadan Denetimler Ekleme'
+        - name: 'Nasıl yapılır: Kullanıcı Arabirimi Olmadan Denetim Ekleme'
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: 'Nasıl yapılır: Çalışma Zamanında bir Denetimler Koleksiyonuna Ekleme veya Kaldırma'
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 'İzlenecek yol: Araç Kutusunu Otomatik Olarak Özel Bileşenlerle Doldurma'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: 'Nasıl yapılır: Windows Forms’a ActiveX Denetimleri Ekleme'
+        - name: 'Nasıl yapılır: ActiveX Denetimleri Ekleme'
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Bir Windows Formunda bir ActiveX Denetimi Barındırmayla İlgili Konular
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: 'Nasıl yapılır: Tasarımcı Kullanarak İptal Düğmesi olarak bir Windows Forms Düğmesi Atama'
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: 'Nasıl yapılır: Windows Forms Düğme Tıklamalarına Yanıt Verme'
+            - name: 'Nasıl yapılır: Düğme Tıklamalarına Yanıt Verme'
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Windows Forms Düğme Denetimi Seçmenin Yolları
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: CheckBox Denetimine Genel Bakış
               href: checkbox-control-overview-windows-forms.md
-            - name: 'Nasıl yapılır: Windows Forms CheckBox Tıklamalarına Yanıt Verme'
+            - name: 'Nasıl yapılır: CheckBox Tıklamalarına Yanıt Verme'
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: 'Nasıl yapılır: Windows Forms CheckBox Denetimleriyle Seçenekleri Ayarlama'
+            - name: 'Nasıl yapılır: CheckBox Denetimleriyle Seçenekleri Ayarlama'
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: CheckedListBox Denetimi
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: 'Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetimine Bağlantısız Sütun Ekleme'
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: 'Nasıl yapılır: Windows Forms DataGridView Denetimlerine Nesne Bağlama'
+                - name: 'Nasıl yapılır: DataGridView Denetimlerine Nesne Bağlama'
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: 'Nasıl yapılır: Windows Forms DataGridView Satırlarına Bağlı Nesnelere Erişme'
+                - name: 'Nasıl yapılır: DataGridView Satırlarına Bağlı Nesnelere Erişme'
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: 'Nasıl yapılır: Windows Forms DataGridViewComboBoxCell Açılır Listesindeki Nesnelere Erişme'
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: DomainUpDown Denetimine Genel Bakış
               href: domainupdown-control-overview-windows-forms.md
-            - name: 'Nasıl yapılır: Windows Forms DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme'
+            - name: 'Nasıl yapılır: DomainUpDown Denetimlerine Programlı Olarak Öğe Ekleme'
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: 'Nasıl yapılır: Windows Forms DomainUpDown Denetimlerinden Öğeleri Kaldırma'
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
