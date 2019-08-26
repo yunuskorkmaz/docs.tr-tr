@@ -3,7 +3,7 @@
   items:
     - name: Saat dilimine genel bakış
       href: time-zone-overview.md
-    - name: 'DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma '
+    - name: 'DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma'
       href: choosing-between-datetime.md
     - name: Yerel sistemde tanımlanan saat dilimlerini bulma
       href: finding-the-time-zones-on-local-system.md
@@ -39,3 +39,5 @@
       href: resolve-ambiguous-times.md
     - name: 'Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme'
       href: let-users-resolve-ambiguous-times.md
+    - name: System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
+      href: system-text-json-support.md
