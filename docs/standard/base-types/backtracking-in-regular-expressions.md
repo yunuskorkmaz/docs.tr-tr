@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378161"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968555"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Normal İfadelerde Geri Dönüş
 <a name="top"></a>Bir normal ifade deseninin isteğe bağlı [nicelik belirteçleri](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) veya [değişim yapılarını](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)içermesi durumunda geri izleme oluşur ve normal ifade altyapısı, bir eşleşme aramasına devam etmek için önceki kaydedilmiş bir duruma geri döner. Geri izleme, normal ifadelerin gücü bakımından çok önemlidir; ifadelerin güçlü ve esnek olmasına ve çok karmaşık desenlerle eşleşmelerine olanak sağlar. Aynı zamanda, bu güç bir maliyetle birlikte gelir. Geri izleme, genellikle normal ifade altyapısının performansını etkileyen tek önemli etmendir. Neyse ki, geliştirici, normal ifade motorunun davranışını ve geri izlemeyi nasıl kullandığını denetleyebilir. Bu konu, geri izlemenin nasıl çalıştığını ve nasıl kontrol edilebileceğini açıklar.  
   
 > [!NOTE]
->  Genel olarak, .NET normal ifade altyapısı gibi belirleyici olmayan sınırlı bir Otomatikton (NFA) altyapısı, geliştirici üzerinde etkili ve hızlı düzenli ifadeler oluşturma sorumluluğunu önemli bir şekilde yerleştiriyor.  
+> Genel olarak, .NET normal ifade altyapısı gibi belirleyici olmayan sınırlı bir Otomatikton (NFA) altyapısı, geliştirici üzerinde etkili ve hızlı düzenli ifadeler oluşturma sorumluluğunu önemli bir şekilde yerleştiriyor.  
   
  Bu konu aşağıdaki bölümleri içermektedir:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378161"
  4,5 .NET Framework başlayarak, en uzun aralığı temsil eden bir zaman aşımı değeri ayarlayabilirsiniz. Bu işlem, denemesi yapılmadan önce bir özel durum arar ve bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum oluşturur. Örnek normal ifadeler için <xref:System.TimeSpan> <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> oluşturucuya bir değer sağlayarak zaman aşımı aralığını belirtirsiniz. Ayrıca, her bir statik model eşleştirme yönteminin bir zaman aşımı değeri belirtmenize <xref:System.TimeSpan> izin veren bir parametreye sahip bir aşırı yüklemesi vardır. Varsayılan olarak, zaman aşımı aralığı olarak <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ayarlanır ve normal ifade motoru zaman aşımına uğrar.  
   
 > [!IMPORTANT]
->  Normal ifadeniz geri izlemeye dayalıysa, her zaman bir zaman aşımı aralığı ayarlamanızı öneririz.  
+> Normal ifadeniz geri izlemeye dayalıysa, her zaman bir zaman aşımı aralığı ayarlamanızı öneririz.  
   
  Bir <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> özel durum, normal ifade altyapısının belirtilen zaman aşımı aralığı içinde bir eşleşme bulamadığını ancak özel durumun neden gerçekleştiğini belirtmediğini belirtir. Bunun nedeni aşırı geri izleme olabilir, fakat özel durumun oluştuğu zamandaki sistem yükü nedeniyle zaman aşımı aralığı çok düşük ayarlanmış da olabilir. Özel durumu işlediğinizde, giriş dizesiyle diğer eşleştirmeleri bırakmayı veya zaman aşımı aralığını artırarak eşleştirme işlemini yeniden denemeyi seçebilirsiniz.  
   

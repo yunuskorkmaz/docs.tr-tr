@@ -1,6 +1,6 @@
 ---
-title: .NET normal ifadelerindeki karakter çıkışları
-description: Özel karakterler ve kaçış karakterlerini .NET normal ifadelerde hakkında bilgi edinin.
+title: .NET normal Ifadelerinde karakter kaçışları
+description: .NET normal ifadelerinde özel karakterler ve kaçış karakterleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,45 +18,45 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634662"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934826"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Normal İfadelerdeki Karakter Çıkışları
-Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:  
+Normal ifadede ters\\eğik çizgi () aşağıdakilerden birini belirtir:  
   
-- Aşağıdaki bölümde yer alan tabloda gösterilen aynıdır, onu izleyen karakterin özel bir karakter kullanır. Örneğin, `\b` bir normal ifade eşleştirmesi bir sözcük sınırında başlayacağını belirtir bir tutturucudur `\t` bir sekme temsil eder ve `\x020` bir alanını temsil eder.  
+- Aşağıdaki bölümde gösterildiği gibi, bu karakteri izleyen karakter özel bir karakterdir. Örneğin, `\b` bir normal ifade eşleşmesinin bir sözcük sınırında başlaması gerektiğini belirten bir bağlantıdır, `\t` bir sekmeyi temsil eder ve `\x020` bir alanı temsil eder.  
   
-- Atlanmayan dil yapısı tam anlamıyla yorumlanması gerektiğini gibi yoksa yorumlanacağını bir karakter. Örneğin, bir küme ayracı (`{`) bir miktar belirleyiciyi, ancak eğik çizgi ve ayraç tarafından tanımını başlar (`\{`) gösterir ve normal ifade altyapısının küme ayracı eşleşmesi gerekir. Benzer şekilde, tek bir ters eğik çizgi kaçış dil yapısı, ancak iki ters eğik çizgi başlangıcını işaretleyen (`\\`) normal ifade altyapısı ters eğik çizgiyi eşleşmelidir gösterir.  
+- Aksi halde, kaçışsız bir dil yapısı olarak yorumlanabilecek bir karakter, tam olarak yorumlanmalıdır. Örneğin, bir küme ayracı (`{`) bir nicelik tanımının tanımını başlatır, ancak bir ters eğik çizgiden sonra bir ayraç (`\{`), normal ifade altyapısının küme ayracı ile eşleşmesi gerektiğini gösterir. Benzer şekilde, tek bir ters eğik çizgi, kaçan dil yapısının başlangıcını işaret ediyor, ancak`\\`iki ters eğik çizgi (), normal ifade altyapısının ters eğik çizgiyle eşleşmesi gerektiğini gösterir.  
   
 > [!NOTE]
->  Karakter çıkışları, normal ifade desenleri ancak değiştirme desenleri tanınır.  
+> Karakter kaçışları normal ifade desenlerinde tanınır ancak değiştirme desenlerinde kabul edilmez.  
   
-## <a name="character-escapes-in-net"></a>.NET içinde karakter çıkışları  
- Aşağıdaki tablo, .NET içinde normal ifadeler tarafından desteklenen karakter çıkışları listeler.  
+## <a name="character-escapes-in-net"></a>.NET 'teki karakter kaçışları  
+ Aşağıdaki tabloda, .NET 'teki normal ifadeler tarafından desteklenen karakter çıkışları listelenmektedir.  
   
-|Karakter veya dizisi|Açıklama|  
+|Karakter veya sıra|Açıklama|  
 |---------------------------|-----------------|  
-|Aşağıdakiler dışında tüm karakterleri:<br /><br /> biçimindeki telefon numarasıdır. $ ^ { [ ( &#124; ) * + ? \ |Listelenenler dışında karakterler **karakter veya dizisi** sütun normal ifadeler özel bir anlamı vardır; bunların kendileri eşleşmesi.<br /><br /> İçindeki karakterleri **karakter veya dizisi** sütun, özel normal ifade dil öğe. Normal bir ifadede ayarlarla eşleşecek şekilde bunlar kaçış karakterleri veya gereken dahil bir [pozitif karakter grubu](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Örneğin, normal ifade `\$\d+` veya `[$]\d+` "$1200" ile eşleşir.|  
-|`\a`|Zil (alarm) bir karakterle eşleşir `\u0007`.|  
-|`\b`|İçinde bir `[` *character_group* `]` karakter sınıfı, Geri Al, bir eşleşme `\u0008`.  (Bkz [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında `\b` bir sözcük sınırı eşleşen bir tutturucudur. (Bkz [bağlayıcılarını](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
-|`\t`|Bir sekmeyle eşleşir, `\u0009`.|  
-|`\r`|Bir satır başı, eşleşen `\u000D`. Unutmayın `\r` yeni satır karakteri eşdeğer değildir `\n`.|  
-|`\v`|Bir dikey sekmeyle eşleşir, `\u000B`.|  
-|`\f`|Bir form besleme, eşleşen `\u000C`.|  
-|`\n`|Yeni bir satırla eşleşir `\u000A`.|  
-|`\e`|Bir çıkışla eşleşir `\u001B`.|  
-|`\` *nnn*|ASCII karakterleriyle eşleşir burada *nnn* sekizli karakter kodunu temsil eden iki veya üç basamak içerir. Örneğin, `\040` bir boşluk karakteri temsil eder. Yalnızca bir basamak varsa, bu yapı bir yeniden başvuru yorumlanır (örneğin, `\2`) veya bir yakalama grubu sayısı karşılık gelirse. (Bkz [yeniden başvuru yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
-|`\x` *nn*|ASCII karakterleriyle eşleşir burada *nn* iki basamaklı onaltılık karakter kodu.|  
-|`\c` *X*|X'harfinin denetim karakteri olduğu bir ASCII denetim karakteriyle eşleşir. Örneğin, `\cC` CTRL-c|  
-|`\u` *nnnn*|Eşleşen değeri olan bir UTF-16 kod birimini *nnnn* onaltılık. **Not:**  Unicode belirtmek için kullanılan Perl 5 karakter kaçış .NET tarafından desteklenmez. Perl 5 karakter kaçış formundadır `\x{` *####* `…}`burada *####* `…` bir dizi onaltılık basamak. Bunun yerine, `\u` *nnnn*.|  
-|`\`|Kaçış karakteri tanınmayan bir karakterle önce geldiğinde karakterle eşleşir. Örneğin, `\*` yıldız işareti (*) ile eşleşir ve aynı `\x2A`.|  
+|Aşağıdakiler hariç tüm karakterler:<br /><br /> biçimindeki telefon numarasıdır. $ ^ { [ ( &#124; ) * + ? \ |**Karakter veya dizi** sütununda listelenenler dışındaki karakterlerin normal ifadelerde özel bir anlamı yoktur; Bunlar kendileriyle eşleşir.<br /><br /> **Karakter veya dizi** sütununa dahil edilen karakterler özel normal ifade dili öğeleridir. Bunları düzenli bir ifadede eşleştirmek için, bu, kaçış veya [pozitif bir karakter grubuna](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)dahil edilmeleri gerekir. Örneğin, normal ifade `\$\d+` veya `[$]\d+` "$1200" ile eşleşir.|  
+|`\a`|Bir Bell (alarm) karakteriyle `\u0007`eşleşir.|  
+|`\b`|Bir `[` *character_group* `\u0008`karakter sınıfında, geri al, ile eşleşir.`]`  (Bkz. [karakter sınıfları](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) Bir karakter sınıfı dışında, `\b` bir sözcük sınırı ile eşleşen bir bağlantıdır. (Bkz [](../../../docs/standard/base-types/anchors-in-regular-expressions.md). Tutturucuların.)|  
+|`\t`|Bir sekmeden eşleşir, `\u0009`.|  
+|`\r`|Bir satır dönüşüyle eşleşir `\u000D`,. Yeni satır karakteri ile eşdeğer olmadığına unutmayın. `\n` `\r`|  
+|`\v`|Dikey bir sekme `\u000B`ile eşleşir.|  
+|`\f`|Bir form akışı `\u000C`ile eşleşir.|  
+|`\n`|Yeni bir satırla eşleşir, `\u000A`.|  
+|`\e`|Bir kaçış ile eşleşir `\u001B`,.|  
+|`\`*nnn*| Bir ASCII karakteriyle eşleşir, burada *nnn* sekizli karakter kodunu temsil eden iki veya üç sayıdan oluşur. Örneğin, `\040` bir boşluk karakterini temsil eder. Bu yapı yalnızca bir basamak varsa (örneğin, `\2`) veya bir yakalama grubu sayısına karşılık geliyorsa, bir geri başvuru olarak yorumlanır. (Bkz. [Backreference yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
+|`\x`*nn*|*Nn* 'in iki basamaklı bir onaltılık karakter kodu olduğu ASCII karakteriyle eşleşir.|  
+|`\c` *X*|Bir ASCII denetim karakteriyle eşleşir, burada X, denetim karakterinin harfidir. Örneğin, CTRL `\cC` -C ' dir.|  
+|`\u`*nnnn*|Değeri *nnnn* onaltılık olan bir UTF-16 kod birimiyle eşleşir. **Not:**  Unicode belirtmek için kullanılan Perl 5 karakter kaçış, .NET tarafından desteklenmez. Perl 5 karakter `\x{`kaçış biçimi *####* `…}`, *####* burada`…` bir dizi onaltılık basamak olur. Bunun yerine `\u` *nnnn*kullanın.|  
+|`\`| Bunun ardından, kaçış karakteri olarak tanınmayan bir karakter gelmesi durumunda, bu karakterle eşleşir. Örneğin, `\*` bir yıldız işareti (*) ile eşleşir ve ile `\x2A`aynıdır.|  
   
 ## <a name="an-example"></a>Bir Örnek  
- Aşağıdaki örnek, bir normal ifadede karakter çıkışları kullanımını gösterir. Bu, 2009'dan dünyanın en büyük şehirlerin ve bunların yerleştirme adlarını içeren bir dizeyi ayrıştırır. Her şehir adı, bir sekmeyle kendi popülasyondan ayrıldığı (`\t`) ya da dikey çubuk (&#124; veya `\u007c`). Tek tek Şehir ve bunların yerleştirme birbirinden bir satır başı ve satır besleme tarafından ayrılır.  
+ Aşağıdaki örnek, bir normal ifadede karakter kaçışları kullanımını gösterir. Dünyanın en büyük şehirlerinin adlarını ve 2009 içindeki popülasyonlarını içeren bir dizeyi ayrıştırır. Her şehir adı, bir sekme (`\t`) veya dikey çubuk (&#124; veya `\u007c`) tarafından popülasyondan ayrılır. Bireysel şehirler ve bunların popülasyonu bir satır başı ve satır besleme ile birbirinden ayrılır.  
   
  [!code-csharp[RegularExpressions.Language.Escapes#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.escapes/cs/escape1.cs#1)]
  [!code-vb[RegularExpressions.Language.Escapes#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.escapes/vb/escape1.vb#1)]  
@@ -65,11 +65,11 @@ Ters eğik çizgi (\\) normal bir ifadede aşağıdakilerden birini gösterir:
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
-|`\G`|Burada da son eşleşmenin sona erdiği eşleşmeye başla.|  
-|`(.+)`|Herhangi bir karakter, bir veya daha fazla kez eşleştirin. Bu ilk yakalama grubudur.|  
-|`[\t\u007c]`|Eşleşen bir sekme (`\t`) ya da dikey çubuk (&#124;).|  
-|`(.+)`|Herhangi bir karakter, bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|  
-|`\r?\n`|Bir yeni satırın izlediği bir satır başı sıfır veya bir oluşumunu eşleştirin.|  
+|`\G`|En son eşleşmenin sona erdiği eşleşmeyi Başlat.|  
+|`(.+)`|Karakterleri bir veya daha fazla kez eşleştirin. Bu ilk yakalama grubudur.|  
+|`[\t\u007c]`|Bir sekmeden (`\t`) veya dikey çubukla (&#124;) eşleştirin.|  
+|`(.+)`|Karakterleri bir veya daha fazla kez eşleştirin. Bu ikinci yakalama grubudur.|  
+|`\r?\n`|Bir satır başı ve ardından yeni bir satır gelen sıfır veya bir oluşumunu eşleştirin.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
