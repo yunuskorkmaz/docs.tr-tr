@@ -440,6 +440,28 @@
           href: core/porting/winforms.md
         - name: WPF projelerini bağlama
           href: core/porting/wpf.md
+    - name: Bağımlılık yüklemesi
+      items:
+        - name: Genel Bakış
+          href: core/dependency-loading/overview.md
+        - name: AssemblyLoadContext’i anlama
+          href: core/dependency-loading/understanding-assemblyloadcontext.md
+        - name: Yükleme ayrıntıları
+          items:
+            - name: Varsayılan bağımlılık araştırması
+              href: core/dependency-loading/default-probing.md
+            - name: Yönetilen derlemeleri yükleme
+              href: core/dependency-loading/loading-managed.md
+            - name: Uydu derlemelerini yükleme
+              href: core/dependency-loading/loading-resources.md
+            - name: Yönetilmeyen kitaplıkları yükleme
+              href: core/dependency-loading/loading-unmanaged.md
+        - name: Öğreticiler
+          items:
+            - name: Eklentilerle .NET Core uygulaması oluşturma
+              href: core/tutorials/creating-app-with-plugin-support.md
+            - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+              href: standard/assembly/unloadability-howto.md
     - name: Kaynaktan .NET Core derleme
       href: core/build/index.md
       items:
