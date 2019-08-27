@@ -1173,38 +1173,35 @@
               href: how-to-use-a-background-thread-to-search-for-files.md
     - name: .NET Framework'teki İşleve Göre Windows Forms Denetimleri
       href: windows-forms-controls-by-function.md
-    - name: Tasarım Zamanında Windows Forms Denetimleri Geliştirme
-      href: developing-windows-forms-controls-at-design-time.md
+    - name: Tasarım Zamanında Denetimler Geliştirme
       items:
-        - name: 'İzlenecek yol: Visual Basic İle Bileşik Denetim Yazma'
-          href: walkthrough-authoring-a-composite-control-with-visual-basic.md
-        - name: 'İzlenecek yol: C# ile Bileşik Denetim Yazma'
+        - name: Genel Bakış
+          href: developing-windows-forms-controls-at-design-time.md
+        - name: 'İzlenecek yol: Bileşik Denetim Yazma'
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
-        - name: 'İzlenecek yol: Visual Basic ile beraber Windows Forms Denetimi''nden Devralma'
-          href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
-        - name: 'İzlenecek yol: C# ile beraber Windows Forms Denetimi''nden Devralma'
+        - name: 'İzlenecek yol: Denetimden Devralma'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'İzlenecek yol: Windows Forms Denetimlerindeki Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme'
+        - name: 'İzlenecek yol: Akıllı Etiketleri Kullanarak Ortak Görevleri Gerçekleştirme'
           href: performing-common-tasks-using-smart-tags-on-wf-controls.md
-        - name: 'İzlenecek yol: DesignerSerializationVisibilityAttribute ile Standart Türler Koleksiyonlarının Seri Hale Getirilmesi'
+        - name: 'İzlenecek yol: Standart Türlerin Koleksiyonlarını Serileştirme'
           href: serializing-collections-designerserializationvisibilityattribute.md
-        - name: 'İzlenecek yol: Tasarım Zamanında Özel Windows Forms Denetimleri Hatalarını Ayıklama'
+        - name: 'İzlenecek yol: Özel Denetimlerde Hata Ayıklama'
           href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
-        - name: 'İzlenecek yol: Visual Studio Tasarım-Zamanı Özellikleri''nden Faydalanan Windows Forms Denetimi Oluşturma'
+        - name: 'İzlenecek yol: Tasarım Zamanı Özelliklerinden Faydalanan Denetim Oluşturma'
           href: creating-a-wf-control-design-time-features.md
-        - name: 'Nasıl yapılır: Windows Forms için Denetimler Yazma'
+        - name: 'Nasıl yapılır: Yazar Denetimleri'
           href: how-to-author-controls-for-windows-forms.md
         - name: 'Nasıl yapılır: Bileşik Denetimler Yazma'
           href: how-to-author-composite-controls.md
         - name: 'Nasıl yapılır: UserControl Sınıfından Devralma'
           href: how-to-inherit-from-the-usercontrol-class.md
-        - name: 'Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma'
+        - name: 'Nasıl yapılır: Mevcut Denetimlerden Devralma'
           href: how-to-inherit-from-existing-windows-forms-controls.md
         - name: 'Nasıl yapılır: Control Sınıfından Devralma'
           href: how-to-inherit-from-the-control-class.md
-        - name: 'Nasıl yapılır: Tasarım Zamanında Denetimi Formların Kenarlarına Hizalama'
+        - name: 'Nasıl yapılır: Denetimi Formların Kenarlarına Hizalama'
           href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
-        - name: 'Nasıl yapılır: Araç Kutusu Öğelerini Seç İletişim Kutusunda bir Denetimi Görüntüleme'
+        - name: 'Nasıl yapılır: Araç Kutusu Öğelerini Seç’te Denetim Görüntüleme'
           href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
         - name: 'Nasıl yapılır: Bir Denetim için Araç Kutusu Bit Eşlemi Sağlama'
           href: how-to-provide-a-toolbox-bitmap-for-a-control.md
