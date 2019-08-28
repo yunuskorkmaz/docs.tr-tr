@@ -2,131 +2,132 @@
 title: ASP.NET Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: a718b3f3bcbfd4bc2b74a14ba8f20cd8c335877f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9566c24756afef98c8594c8d7b542bd2ad1e5b5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925274"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045166"
 ---
-# <a name="aspnet-compatibility"></a><span data-ttu-id="740f9-102">ASP.NET Uyumluluğu</span><span class="sxs-lookup"><span data-stu-id="740f9-102">ASP.NET Compatibility</span></span>
-<span data-ttu-id="740f9-103">Bu örnek, Windows Communication Foundation (WCF) ' de ASP.NET uyumluluk modunun nasıl etkinleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="740f9-103">This sample demonstrates how to enable ASP.NET Compatibility mode in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="740f9-104">ASP.NET uyumluluk modunda çalışan hizmetler, ASP.NET uygulama ardışık düzenine tam olarak katılır ve dosya/URL yetkilendirmesi, oturum durumu ve <xref:System.Web.HttpContext> sınıf gibi ASP.net özelliklerden yararlanalabilirler.</span><span class="sxs-lookup"><span data-stu-id="740f9-104">Services running in ASP.NET Compatibility mode participate fully in the ASP.NET application pipeline and can make use of ASP.NET features such as file/URL authorization, session state, and the <xref:System.Web.HttpContext> class.</span></span> <span data-ttu-id="740f9-105"><xref:System.Web.HttpContext> Sınıfı, tanımlama bilgilerine, oturumlara ve diğer ASP.NET özelliklerine erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="740f9-105">The <xref:System.Web.HttpContext> class allows access to cookies, sessions, and other ASP.NET features.</span></span> <span data-ttu-id="740f9-106">Bu mod, bağlamaların HTTP aktarımını kullanmasını gerektirir ve hizmetin kendisi IIS 'de barındırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="740f9-106">This mode requires that the bindings use the HTTP transport and the service itself must be hosted in IIS.</span></span>  
-  
- <span data-ttu-id="740f9-107">Bu örnekte, istemci bir konsol uygulaması (yürütülebilir) ve hizmet Internet Information Services (IIS) içinde barındırılır.</span><span class="sxs-lookup"><span data-stu-id="740f9-107">In this sample, the client is a console application (an executable) and the service is hosted in Internet Information Services (IIS).</span></span>  
-  
+# <a name="aspnet-compatibility"></a><span data-ttu-id="bc62c-102">ASP.NET Uyumluluğu</span><span class="sxs-lookup"><span data-stu-id="bc62c-102">ASP.NET Compatibility</span></span>
+
+<span data-ttu-id="bc62c-103">Bu örnek, Windows Communication Foundation (WCF) ' de ASP.NET uyumluluk modunun nasıl etkinleştirileceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-103">This sample demonstrates how to enable ASP.NET Compatibility mode in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="bc62c-104">ASP.NET uyumluluk modunda çalışan hizmetler, ASP.NET uygulama ardışık düzenine tam olarak katılır ve dosya/URL yetkilendirmesi, oturum durumu ve <xref:System.Web.HttpContext> sınıf gibi ASP.net özelliklerden yararlanalabilirler.</span><span class="sxs-lookup"><span data-stu-id="bc62c-104">Services running in ASP.NET Compatibility mode participate fully in the ASP.NET application pipeline and can make use of ASP.NET features such as file/URL authorization, session state, and the <xref:System.Web.HttpContext> class.</span></span> <span data-ttu-id="bc62c-105"><xref:System.Web.HttpContext> Sınıfı, tanımlama bilgilerine, oturumlara ve diğer ASP.NET özelliklerine erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="bc62c-105">The <xref:System.Web.HttpContext> class allows access to cookies, sessions, and other ASP.NET features.</span></span> <span data-ttu-id="bc62c-106">Bu mod, bağlamaların HTTP aktarımını kullanmasını gerektirir ve hizmetin kendisi IIS 'de barındırılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bc62c-106">This mode requires that the bindings use the HTTP transport and the service itself must be hosted in IIS.</span></span>
+
+<span data-ttu-id="bc62c-107">Bu örnekte, istemci bir konsol uygulaması (yürütülebilir) ve hizmet Internet Information Services (IIS) içinde barındırılır.</span><span class="sxs-lookup"><span data-stu-id="bc62c-107">In this sample, the client is a console application (an executable) and the service is hosted in Internet Information Services (IIS).</span></span>
+
 > [!NOTE]
-> <span data-ttu-id="740f9-108">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="740f9-108">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>  
-  
-<span data-ttu-id="740f9-109">Bu örnek, çalıştırmak [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] için bir uygulama havuzu gerektirir.</span><span class="sxs-lookup"><span data-stu-id="740f9-109">This sample requires a [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] application pool in order to run.</span></span> <span data-ttu-id="740f9-110">Yeni bir uygulama havuzu oluşturmak veya varsayılan uygulama havuzunu değiştirmek için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-110">To create a new application pool, or to modify the default application pool, follow these steps.</span></span>  
+> <span data-ttu-id="bc62c-108">Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.</span><span class="sxs-lookup"><span data-stu-id="bc62c-108">The set-up procedure and build instructions for this sample are located at the end of this topic.</span></span>
 
-1. <span data-ttu-id="740f9-111">**Denetim Masası**'nı açın.</span><span class="sxs-lookup"><span data-stu-id="740f9-111">Open **Control Panel**.</span></span>  <span data-ttu-id="740f9-112">**Sistem ve güvenlik** başlığı altında **Yönetimsel Araçlar** uygulamasını açın.</span><span class="sxs-lookup"><span data-stu-id="740f9-112">Open the **Administrative Tools** applet under the **System and Security** heading.</span></span> <span data-ttu-id="740f9-113">**Internet Information Services (IIS) Yöneticisi** uygulamasını açın.</span><span class="sxs-lookup"><span data-stu-id="740f9-113">Open the **Internet Information Services (IIS) Manager** applet.</span></span>  
+<span data-ttu-id="bc62c-109">Bu örnek, çalıştırmak [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] için bir uygulama havuzu gerektirir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-109">This sample requires a [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] application pool in order to run.</span></span> <span data-ttu-id="bc62c-110">Yeni bir uygulama havuzu oluşturmak veya varsayılan uygulama havuzunu değiştirmek için aşağıdaki adımları izleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-110">To create a new application pool, or to modify the default application pool, follow these steps.</span></span>
 
-2. <span data-ttu-id="740f9-114">**Bağlantılar** bölmesinde TreeView ' ı genişletin.</span><span class="sxs-lookup"><span data-stu-id="740f9-114">Expand the treeview in the **Connections** pane.</span></span> <span data-ttu-id="740f9-115">**Uygulama havuzları** düğümünü seçin.</span><span class="sxs-lookup"><span data-stu-id="740f9-115">Select the **Application Pools** node.</span></span>  
+1. <span data-ttu-id="bc62c-111">**Denetim Masası**'nı açın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-111">Open **Control Panel**.</span></span>  <span data-ttu-id="bc62c-112">**Sistem ve güvenlik** başlığı altında **Yönetimsel Araçlar** uygulamasını açın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-112">Open the **Administrative Tools** applet under the **System and Security** heading.</span></span> <span data-ttu-id="bc62c-113">**Internet Information Services (IIS) Yöneticisi** uygulamasını açın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-113">Open the **Internet Information Services (IIS) Manager** applet.</span></span>
 
-3. <span data-ttu-id="740f9-116">Varsayılan uygulama havuzunu kullanmak [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] üzere ayarlamak için (Varolan sitelerde uyumsuzluk sorunlarına neden olabilir), **DefaultAppPool** liste öğesine sağ tıklayın ve **temel ayarlar...** öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="740f9-116">To set the default application pool to use [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (which may cause incompatibility problems with existing sites), right-click the **DefaultAppPool** list item and select **Basic Settings…**.</span></span> <span data-ttu-id="740f9-117">**.NET Framework sürüm** çekmeyi, **.NET Framework v 4.0.30128** (veya üzeri) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="740f9-117">Set the **.Net Framework Version** pull-down to **.Net Framework v4.0.30128** (or later).</span></span>  
+2. <span data-ttu-id="bc62c-114">**Bağlantılar** bölmesinde TreeView ' ı genişletin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-114">Expand the treeview in the **Connections** pane.</span></span> <span data-ttu-id="bc62c-115">**Uygulama havuzları** düğümünü seçin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-115">Select the **Application Pools** node.</span></span>
 
-4. <span data-ttu-id="740f9-118">Kullanan [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yeni bir uygulama havuzu oluşturmak için (diğer uygulamalar için uyumluluğu korumak için), **uygulama havuzları** düğümüne sağ tıklayın ve **Uygulama Havuzu Ekle...** seçeneğini belirleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-118">To create a new application pool that uses [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (to preserve compatibility for other applications), right-click the **Application Pools** node and select **Add Application Pool…**.</span></span> <span data-ttu-id="740f9-119">Yeni uygulama havuzunu adlandırın ve **.NET Framework sürüm** çekmeyi **.NET Framework v 4.0.30128** (veya üzeri) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="740f9-119">Name the new application pool, and set the **.Net Framework Version** pull-down to **.Net Framework v4.0.30128** (or later).</span></span> <span data-ttu-id="740f9-120">Aşağıdaki kurulum adımlarını çalıştırdıktan sonra, **servicemodelsamples** uygulamasına sağ tıklayın ve **Uygulamayı Yönet**, **Gelişmiş ayarlar..** . seçeneğini belirleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-120">After running the setup steps below, right-click the **ServiceModelSamples** application and select **Manage Application**, **Advanced Settings…**.</span></span> <span data-ttu-id="740f9-121">**Uygulama havuzunu** yeni uygulama havuzuna ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="740f9-121">Set the **Application Pool** to the new application pool.</span></span>  
-  
+3. <span data-ttu-id="bc62c-116">Varsayılan uygulama havuzunu kullanmak [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] üzere ayarlamak için (Varolan sitelerde uyumsuzluk sorunlarına neden olabilir), **DefaultAppPool** liste öğesine sağ tıklayın ve **temel ayarlar...** öğesini seçin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-116">To set the default application pool to use [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (which may cause incompatibility problems with existing sites), right-click the **DefaultAppPool** list item and select **Basic Settings…**.</span></span> <span data-ttu-id="bc62c-117">**.NET Framework sürüm** çekmeyi, **.NET Framework v 4.0.30128** (veya üzeri) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-117">Set the **.Net Framework Version** pull-down to **.Net Framework v4.0.30128** (or later).</span></span>
+
+4. <span data-ttu-id="bc62c-118">Kullanan [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] yeni bir uygulama havuzu oluşturmak için (diğer uygulamalar için uyumluluğu korumak için), **uygulama havuzları** düğümüne sağ tıklayın ve **Uygulama Havuzu Ekle...** seçeneğini belirleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-118">To create a new application pool that uses [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] (to preserve compatibility for other applications), right-click the **Application Pools** node and select **Add Application Pool…**.</span></span> <span data-ttu-id="bc62c-119">Yeni uygulama havuzunu adlandırın ve **.NET Framework sürüm** çekmeyi **.NET Framework v 4.0.30128** (veya üzeri) olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-119">Name the new application pool, and set the **.Net Framework Version** pull-down to **.Net Framework v4.0.30128** (or later).</span></span> <span data-ttu-id="bc62c-120">Aşağıdaki kurulum adımlarını çalıştırdıktan sonra, **servicemodelsamples** uygulamasına sağ tıklayın ve **Uygulamayı Yönet**, **Gelişmiş ayarlar..** . seçeneğini belirleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-120">After running the setup steps below, right-click the **ServiceModelSamples** application and select **Manage Application**, **Advanced Settings…**.</span></span> <span data-ttu-id="bc62c-121">**Uygulama havuzunu** yeni uygulama havuzuna ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-121">Set the **Application Pool** to the new application pool.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="740f9-122">Örnekler bilgisayarınızda zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="740f9-122">The samples may already be installed on your computer.</span></span> <span data-ttu-id="740f9-123">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-123">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="740f9-124">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.</span><span class="sxs-lookup"><span data-stu-id="740f9-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="740f9-125">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="740f9-125">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
-  
- <span data-ttu-id="740f9-126">Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="740f9-126">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="740f9-127">Sözleşme, çalışan bir sonuç tutarken bir `ICalculatorSession` dizi işlemin gerçekleştirilmesine izin veren sözleşme olarak değiştirilmiştir. `ICalculator`</span><span class="sxs-lookup"><span data-stu-id="740f9-127">The `ICalculator` contract has been modified as the `ICalculatorSession` contract to allow a set of operations to be performed, while keeping a running result.</span></span>  
-  
-```csharp  
-[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
-public interface ICalculatorSession  
-{  
-    [OperationContract]  
-    void Clear();  
-    [OperationContract]  
-    void AddTo(double n);  
-    [OperationContract]  
-    void SubtractFrom(double n);  
-    [OperationContract]  
-    void MultiplyBy(double n);  
-    [OperationContract]  
-    void DivideBy(double n);  
-    [OperationContract]  
-    double Result();  
-}  
-```  
-  
- <span data-ttu-id="740f9-128">Bu hizmet, bir hesaplama gerçekleştirmek için birden çok hizmet işlemi çağrılıp her bir istemci için özelliği kullanarak durumu korur.</span><span class="sxs-lookup"><span data-stu-id="740f9-128">The service maintains state, using the feature, for each client as multiple service operations are called to perform a calculation.</span></span> <span data-ttu-id="740f9-129">İstemci çağırarak geçerli sonucu `Result` alabilir ve çağırarak `Clear`sıfıra sıfır sonucunu temizleyebilir.</span><span class="sxs-lookup"><span data-stu-id="740f9-129">The client can retrieve the current result by calling `Result` and can clear the result to zero by calling `Clear`.</span></span>  
-  
- <span data-ttu-id="740f9-130">Hizmet, her istemci oturumu için sonucu depolamak üzere ASP.NET oturumunu kullanır.</span><span class="sxs-lookup"><span data-stu-id="740f9-130">The service uses the ASP.NET session to store the result for each client session.</span></span> <span data-ttu-id="740f9-131">Bu, hizmetin, her istemci için çalışan sonucu hizmete birden çok çağrıda korumasına olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="740f9-131">This allows the service to maintain the running result for each client across multiple calls to the service.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="740f9-132">ASP.NET oturum durumu ve WCF oturumları çok farklı şeylere sahiptir.</span><span class="sxs-lookup"><span data-stu-id="740f9-132">ASP.NET session state and WCF sessions are very different things.</span></span> <span data-ttu-id="740f9-133">WCF oturumları hakkında ayrıntılar için bkz. [oturum](../../../../docs/framework/wcf/samples/session.md) .</span><span class="sxs-lookup"><span data-stu-id="740f9-133">See [Session](../../../../docs/framework/wcf/samples/session.md) for details on WCF sessions.</span></span>
-  
- <span data-ttu-id="740f9-134">Hizmetin ASP.NET oturum durumu üzerinde bir intimate bağımlılığı vardır ve ASP.NET uyumluluk modunun düzgün şekilde çalışmasını gerektirir.</span><span class="sxs-lookup"><span data-stu-id="740f9-134">The service has an intimate dependency on ASP.NET session state and requires ASP.NET compatibility mode to function correctly.</span></span> <span data-ttu-id="740f9-135">Bu gereksinimler `AspNetCompatibilityRequirements` özniteliği uygulanarak bildirimli olarak ifade edilir.</span><span class="sxs-lookup"><span data-stu-id="740f9-135">These requirements are expressed declaratively by applying the `AspNetCompatibilityRequirements` attribute.</span></span>  
-  
-```csharp  
-[AspNetCompatibilityRequirements(RequirementsMode =  
-                       AspNetCompatibilityRequirementsMode.Required)]  
-public class CalculatorService : ICalculatorSession  
-{  
-    double Result  
-    {  // store result in AspNet Session  
-       get {  
-          if (HttpContext.Current.Session["Result"] != null)  
-             return (double)HttpContext.Current.Session["Result"];  
-          return 0.0D;  
-       }  
-       set  
-       {  
-          HttpContext.Current.Session["Result"] = value;  
-       }  
-    }  
-    public void Clear()  
-    {  
-        Result = 0.0D;  
-    }  
-    public void AddTo(double n)  
-    {  
-        Result += n;  
-    }  
-    public void SubtractFrom(double n)  
-    {  
-        Result -= n;  
-    }  
-    public void MultiplyBy(double n)  
-    {  
-        Result *= n;  
-    }  
-    public void DivideBy(double n)  
-    {  
-        Result /= n;  
-    }  
-    public double Result()  
-    {  
-        return Result;  
-    }  
-}  
-```
-  
- <span data-ttu-id="740f9-136">Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="740f9-136">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="740f9-137">İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="740f9-137">Press ENTER in the client window to shut down the client.</span></span>  
-  
-```console
-0, + 100, - 50, * 17.65, / 2 = 441.25  
-Press <ENTER> to terminate client.  
-```  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="740f9-138">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="740f9-138">To set up, build, and run the sample</span></span>  
-  
-1. <span data-ttu-id="740f9-139">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="740f9-139">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
-  
-2. <span data-ttu-id="740f9-140">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-140">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
-  
-3. <span data-ttu-id="740f9-141">Çözüm derlendikten sonra, ServiceModelSamples uygulamasını IIS 7,0 ' de ayarlamak için Setup. bat dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="740f9-141">After the solution has been built, run Setup.bat to set up the ServiceModelSamples Application in IIS 7.0.</span></span> <span data-ttu-id="740f9-142">ServiceModelSamples dizini artık bir IIS 7,0 uygulaması olarak görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="740f9-142">The ServiceModelSamples directory should now appear as an IIS 7.0 Application.</span></span>  
-  
-4. <span data-ttu-id="740f9-143">Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="740f9-143">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="740f9-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="740f9-144">See also</span></span>
+> <span data-ttu-id="bc62c-122">Örnekler bilgisayarınızda zaten yüklü olabilir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-122">The samples may already be installed on your computer.</span></span> <span data-ttu-id="bc62c-123">Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-123">Check for the following (default) directory before continuing.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> <span data-ttu-id="bc62c-124">Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bc62c-125">Bu örnek, aşağıdaki dizinde bulunur.</span><span class="sxs-lookup"><span data-stu-id="bc62c-125">This sample is located in the following directory.</span></span>
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`
 
-- [<span data-ttu-id="740f9-145">AppFabric barındırma ve kalıcılık örnekleri</span><span class="sxs-lookup"><span data-stu-id="740f9-145">AppFabric Hosting and Persistence Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193961)
+<span data-ttu-id="bc62c-126">Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır.</span><span class="sxs-lookup"><span data-stu-id="bc62c-126">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements a calculator service.</span></span> <span data-ttu-id="bc62c-127">Sözleşme, çalışan bir sonuç tutarken bir `ICalculatorSession` dizi işlemin gerçekleştirilmesine izin veren sözleşme olarak değiştirilmiştir. `ICalculator`</span><span class="sxs-lookup"><span data-stu-id="bc62c-127">The `ICalculator` contract has been modified as the `ICalculatorSession` contract to allow a set of operations to be performed, while keeping a running result.</span></span>
+
+```csharp
+[ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
+public interface ICalculatorSession
+{
+    [OperationContract]
+    void Clear();
+    [OperationContract]
+    void AddTo(double n);
+    [OperationContract]
+    void SubtractFrom(double n);
+    [OperationContract]
+    void MultiplyBy(double n);
+    [OperationContract]
+    void DivideBy(double n);
+    [OperationContract]
+    double Result();
+}
+```
+
+<span data-ttu-id="bc62c-128">Bu hizmet, bir hesaplama gerçekleştirmek için birden çok hizmet işlemi çağrılıp her bir istemci için özelliği kullanarak durumu korur.</span><span class="sxs-lookup"><span data-stu-id="bc62c-128">The service maintains state, using the feature, for each client as multiple service operations are called to perform a calculation.</span></span> <span data-ttu-id="bc62c-129">İstemci çağırarak geçerli sonucu `Result` alabilir ve çağırarak `Clear`sıfıra sıfır sonucunu temizleyebilir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-129">The client can retrieve the current result by calling `Result` and can clear the result to zero by calling `Clear`.</span></span>
+
+<span data-ttu-id="bc62c-130">Hizmet, her istemci oturumu için sonucu depolamak üzere ASP.NET oturumunu kullanır.</span><span class="sxs-lookup"><span data-stu-id="bc62c-130">The service uses the ASP.NET session to store the result for each client session.</span></span> <span data-ttu-id="bc62c-131">Bu, hizmetin, her istemci için çalışan sonucu hizmete birden çok çağrıda korumasına olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="bc62c-131">This allows the service to maintain the running result for each client across multiple calls to the service.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="bc62c-132">ASP.NET oturum durumu ve WCF oturumları çok farklı şeylere sahiptir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-132">ASP.NET session state and WCF sessions are very different things.</span></span> <span data-ttu-id="bc62c-133">WCF oturumları hakkında ayrıntılar için bkz. [oturum](../../../../docs/framework/wcf/samples/session.md) .</span><span class="sxs-lookup"><span data-stu-id="bc62c-133">See [Session](../../../../docs/framework/wcf/samples/session.md) for details on WCF sessions.</span></span>
+
+<span data-ttu-id="bc62c-134">Hizmetin ASP.NET oturum durumu üzerinde bir intimate bağımlılığı vardır ve ASP.NET uyumluluk modunun düzgün şekilde çalışmasını gerektirir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-134">The service has an intimate dependency on ASP.NET session state and requires ASP.NET compatibility mode to function correctly.</span></span> <span data-ttu-id="bc62c-135">Bu gereksinimler `AspNetCompatibilityRequirements` özniteliği uygulanarak bildirimli olarak ifade edilir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-135">These requirements are expressed declaratively by applying the `AspNetCompatibilityRequirements` attribute.</span></span>
+
+```csharp
+[AspNetCompatibilityRequirements(RequirementsMode =
+                       AspNetCompatibilityRequirementsMode.Required)]
+public class CalculatorService : ICalculatorSession
+{
+    double Result
+    {  // store result in AspNet Session
+       get {
+          if (HttpContext.Current.Session["Result"] != null)
+             return (double)HttpContext.Current.Session["Result"];
+          return 0.0D;
+       }
+       set
+       {
+          HttpContext.Current.Session["Result"] = value;
+       }
+    }
+    public void Clear()
+    {
+        Result = 0.0D;
+    }
+    public void AddTo(double n)
+    {
+        Result += n;
+    }
+    public void SubtractFrom(double n)
+    {
+        Result -= n;
+    }
+    public void MultiplyBy(double n)
+    {
+        Result *= n;
+    }
+    public void DivideBy(double n)
+    {
+        Result /= n;
+    }
+    public double Result()
+    {
+        return Result;
+    }
+}
+```
+
+<span data-ttu-id="bc62c-136">Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-136">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="bc62c-137">İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-137">Press ENTER in the client window to shut down the client.</span></span>
+
+```console
+0, + 100, - 50, * 17.65, / 2 = 441.25
+Press <ENTER> to terminate client.
+```
+
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bc62c-138">Örneği ayarlamak, derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="bc62c-138">To set up, build, and run the sample</span></span>
+
+1. <span data-ttu-id="bc62c-139">[Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.</span><span class="sxs-lookup"><span data-stu-id="bc62c-139">Be sure you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>
+
+2. <span data-ttu-id="bc62c-140">Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-140">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>
+
+3. <span data-ttu-id="bc62c-141">Çözüm derlendikten sonra, ServiceModelSamples uygulamasını IIS 7,0 ' de ayarlamak için Setup. bat dosyasını çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="bc62c-141">After the solution has been built, run Setup.bat to set up the ServiceModelSamples Application in IIS 7.0.</span></span> <span data-ttu-id="bc62c-142">ServiceModelSamples dizini artık bir IIS 7,0 uygulaması olarak görünmelidir.</span><span class="sxs-lookup"><span data-stu-id="bc62c-142">The ServiceModelSamples directory should now appear as an IIS 7.0 Application.</span></span>
+
+4. <span data-ttu-id="bc62c-143">Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.</span><span class="sxs-lookup"><span data-stu-id="bc62c-143">To run the sample in a single- or cross-computer configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bc62c-144">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bc62c-144">See also</span></span>
+
+- [<span data-ttu-id="bc62c-145">AppFabric barındırma ve kalıcılık örnekleri</span><span class="sxs-lookup"><span data-stu-id="bc62c-145">AppFabric Hosting and Persistence Samples</span></span>](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -17,68 +17,73 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965131"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041437"
 ---
-# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="88b67-102">ICLRDebuggingLibraryProvider::ProvideLibrary Yöntemi</span><span class="sxs-lookup"><span data-stu-id="88b67-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
-<span data-ttu-id="88b67-103">Ortak dil çalışma zamanı (CLR) sürümüne özel hata ayıklama kitaplıklarının isteğe bağlı olarak bulunmasını ve yüklenmesini sağlayan bir kitaplık sağlayıcısı geri çağırma arabirimi alır.</span><span class="sxs-lookup"><span data-stu-id="88b67-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="88b67-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="88b67-104">Syntax</span></span>  
-  
-```cpp  
-HRESULT ProvideLibrary(  
-     [in] const WCHAR* pwszFileName,  
-     [in] DWORD dwTimestamp,  
-     [in] DWORD dwSizeOfImage,  
-     [out] HMODULE* hModule);  
-```  
-  
-## <a name="parameters"></a><span data-ttu-id="88b67-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="88b67-105">Parameters</span></span>  
- `pwszFilename`  
- <span data-ttu-id="88b67-106">'ndaki İstenen modülün adı.</span><span class="sxs-lookup"><span data-stu-id="88b67-106">[in] The name of the module being requested.</span></span>  
-  
- `dwTimestamp`  
- <span data-ttu-id="88b67-107">'ndaki PE dosyalarının COFF dosya üstbilgisinde depolanan tarih saat damgası.</span><span class="sxs-lookup"><span data-stu-id="88b67-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
-  
- `pLibraryProvider`  
- <span data-ttu-id="88b67-108">'ndaki PE dosyalarının COFF isteğe bağlı dosya üstbilgisinde depolanan alan.`SizeOfImage`</span><span class="sxs-lookup"><span data-stu-id="88b67-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
-  
- `hModule`  
- <span data-ttu-id="88b67-109">dışı İstenen modülün tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="88b67-109">[out] The handle to the requested module.</span></span>  
-  
-## <a name="return-value"></a><span data-ttu-id="88b67-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="88b67-110">Return Value</span></span>  
- <span data-ttu-id="88b67-111">Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.</span><span class="sxs-lookup"><span data-stu-id="88b67-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
-  
-|<span data-ttu-id="88b67-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="88b67-112">HRESULT</span></span>|<span data-ttu-id="88b67-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="88b67-113">Description</span></span>|  
-|-------------|-----------------|  
-|<span data-ttu-id="88b67-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="88b67-114">S_OK</span></span>|<span data-ttu-id="88b67-115">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="88b67-115">The method completed successfully.</span></span>|  
-  
-## <a name="exceptions"></a><span data-ttu-id="88b67-116">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="88b67-116">Exceptions</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="88b67-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="88b67-117">Remarks</span></span>  
- <span data-ttu-id="88b67-118">`ProvideLibrary`hata ayıklayıcının mscordbi. dll ve Mscordacwks. dll gibi belirli CLR dosyalarını ayıklamak için gereken modüller sağlamasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="88b67-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="88b67-119">[Ilrdebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) yöntemine yapılan bir çağrı, serbest bırakılabileceğini, bu noktada tutamaçları serbest bırakmak için çağıranın sorumluluğunda olduğunu belirten modül tanıtıcılarının geçerli kalması gerekir.</span><span class="sxs-lookup"><span data-stu-id="88b67-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
-  
- <span data-ttu-id="88b67-120">Hata ayıklayıcı, hata ayıklama modülünü bulmak veya temin etmek için kullanılabilir tüm araçları kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="88b67-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
-  
-> [!IMPORTANT]
-> <span data-ttu-id="88b67-121">Bu özellik, API çağıranın yürütülebilir ve olası kötü amaçlı kod içeren modüller sağlamasına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="88b67-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="88b67-122">Güvenlik önlemi olarak çağıran, kendisini yürütmek zorunda olmadığı kodu `ProvideLibrary` dağıtmak için kullanmaz.</span><span class="sxs-lookup"><span data-stu-id="88b67-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
->   
->  <span data-ttu-id="88b67-123">Mscordbi. dll veya Mscordacwks. dll gibi önceden yayımlanmış bir kitaplıkta önemli bir güvenlik sorunu bulunursa, dolgunun dosyaların bozuk sürümlerini tanıması için düzeltme eki uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="88b67-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="88b67-124">Dolgu daha sonra dosyaların düzeltme eki eklenen sürümleri için istekler verebilir ve herhangi bir isteğe yanıt olarak sağlanmışsa hatalı sürümleri reddedebilir.</span><span class="sxs-lookup"><span data-stu-id="88b67-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="88b67-125">Bu, yalnızca Kullanıcı dolgunun yeni bir sürümüne düzeltme eki uygulanmış olması durumunda gerçekleşebilir.</span><span class="sxs-lookup"><span data-stu-id="88b67-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="88b67-126">Düzeltme eki yüklenmemiş sürümler, savunmasız kalacaktır.</span><span class="sxs-lookup"><span data-stu-id="88b67-126">Unpatched versions will remain vulnerable.</span></span>  
-  
-## <a name="requirements"></a><span data-ttu-id="88b67-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="88b67-127">Requirements</span></span>  
- <span data-ttu-id="88b67-128">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="88b67-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-  
- <span data-ttu-id="88b67-129">**Üst bilgi** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="88b67-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
-  
- <span data-ttu-id="88b67-130">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="88b67-130">**Library:** CorGuids.lib</span></span>  
-  
- <span data-ttu-id="88b67-131">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="88b67-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="88b67-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="88b67-132">See also</span></span>
+# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="da31d-102">ICLRDebuggingLibraryProvider::ProvideLibrary Yöntemi</span><span class="sxs-lookup"><span data-stu-id="da31d-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
 
-- [<span data-ttu-id="88b67-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="88b67-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="88b67-134">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="88b67-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+<span data-ttu-id="da31d-103">Ortak dil çalışma zamanı (CLR) sürümüne özel hata ayıklama kitaplıklarının isteğe bağlı olarak bulunmasını ve yüklenmesini sağlayan bir kitaplık sağlayıcısı geri çağırma arabirimi alır.</span><span class="sxs-lookup"><span data-stu-id="da31d-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="da31d-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="da31d-104">Syntax</span></span>
+
+```cpp
+HRESULT ProvideLibrary(
+     [in] const WCHAR* pwszFileName,
+     [in] DWORD dwTimestamp,
+     [in] DWORD dwSizeOfImage,
+     [out] HMODULE* hModule);
+```
+
+## <a name="parameters"></a><span data-ttu-id="da31d-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="da31d-105">Parameters</span></span>
+
+`pwszFilename` \
+<span data-ttu-id="da31d-106">'ndaki İstenen modülün adı.</span><span class="sxs-lookup"><span data-stu-id="da31d-106">[in] The name of the module being requested.</span></span>
+
+`dwTimestamp` \
+<span data-ttu-id="da31d-107">'ndaki PE dosyalarının COFF dosya üstbilgisinde depolanan tarih saat damgası.</span><span class="sxs-lookup"><span data-stu-id="da31d-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>
+
+`pLibraryProvider` \
+<span data-ttu-id="da31d-108">'ndaki PE dosyalarının COFF isteğe bağlı dosya üstbilgisinde depolanan alan.`SizeOfImage`</span><span class="sxs-lookup"><span data-stu-id="da31d-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>
+
+`hModule` \
+<span data-ttu-id="da31d-109">dışı İstenen modülün tanıtıcısı.</span><span class="sxs-lookup"><span data-stu-id="da31d-109">[out] The handle to the requested module.</span></span>
+
+## <a name="return-value"></a><span data-ttu-id="da31d-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="da31d-110">Return Value</span></span>
+
+<span data-ttu-id="da31d-111">Bu yöntem, aşağıdaki belirli Hsonuçların yanı sıra Yöntem hatasını belirten HRESULT hataları döndürür.</span><span class="sxs-lookup"><span data-stu-id="da31d-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>
+
+|<span data-ttu-id="da31d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="da31d-112">HRESULT</span></span>|<span data-ttu-id="da31d-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="da31d-113">Description</span></span>|
+|-------------|-----------------|
+|<span data-ttu-id="da31d-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="da31d-114">S_OK</span></span>|<span data-ttu-id="da31d-115">Yöntem başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="da31d-115">The method completed successfully.</span></span>|
+
+## <a name="exceptions"></a><span data-ttu-id="da31d-116">Özel Durumlar</span><span class="sxs-lookup"><span data-stu-id="da31d-116">Exceptions</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="da31d-117">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="da31d-117">Remarks</span></span>
+
+<span data-ttu-id="da31d-118">`ProvideLibrary`hata ayıklayıcının mscordbi. dll ve Mscordacwks. dll gibi belirli CLR dosyalarını ayıklamak için gereken modüller sağlamasına izin verir.</span><span class="sxs-lookup"><span data-stu-id="da31d-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="da31d-119">[Ilrdebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) yöntemine yapılan bir çağrı, serbest bırakılabileceğini, bu noktada tutamaçları serbest bırakmak için çağıranın sorumluluğunda olduğunu belirten modül tanıtıcılarının geçerli kalması gerekir.</span><span class="sxs-lookup"><span data-stu-id="da31d-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>
+
+<span data-ttu-id="da31d-120">Hata ayıklayıcı, hata ayıklama modülünü bulmak veya temin etmek için kullanılabilir tüm araçları kullanabilir.</span><span class="sxs-lookup"><span data-stu-id="da31d-120">The debugger may use any available means to locate or procure the debugging module.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="da31d-121">Bu özellik, API çağıranın yürütülebilir ve olası kötü amaçlı kod içeren modüller sağlamasına olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="da31d-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="da31d-122">Güvenlik önlemi olarak çağıran, kendisini yürütmek zorunda olmadığı kodu `ProvideLibrary` dağıtmak için kullanmaz.</span><span class="sxs-lookup"><span data-stu-id="da31d-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>
+>
+> <span data-ttu-id="da31d-123">Mscordbi. dll veya Mscordacwks. dll gibi önceden yayımlanmış bir kitaplıkta önemli bir güvenlik sorunu bulunursa, dolgunun dosyaların bozuk sürümlerini tanıması için düzeltme eki uygulanabilir.</span><span class="sxs-lookup"><span data-stu-id="da31d-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="da31d-124">Dolgu daha sonra dosyaların düzeltme eki eklenen sürümleri için istekler verebilir ve herhangi bir isteğe yanıt olarak sağlanmışsa hatalı sürümleri reddedebilir.</span><span class="sxs-lookup"><span data-stu-id="da31d-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="da31d-125">Bu, yalnızca Kullanıcı dolgunun yeni bir sürümüne düzeltme eki uygulanmış olması durumunda gerçekleşebilir.</span><span class="sxs-lookup"><span data-stu-id="da31d-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="da31d-126">Düzeltme eki yüklenmemiş sürümler, savunmasız kalacaktır.</span><span class="sxs-lookup"><span data-stu-id="da31d-126">Unpatched versions will remain vulnerable.</span></span>
+
+## <a name="requirements"></a><span data-ttu-id="da31d-127">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="da31d-127">Requirements</span></span>
+
+<span data-ttu-id="da31d-128">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da31d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+
+<span data-ttu-id="da31d-129">**Üst bilgi** CorDebug. IDL, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="da31d-129">**Header:** CorDebug.idl, CorDebug.h</span></span>
+
+<span data-ttu-id="da31d-130">**Kitaplığı** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="da31d-130">**Library:** CorGuids.lib</span></span>
+
+<span data-ttu-id="da31d-131">**.NET Framework sürümleri:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da31d-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="da31d-132">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="da31d-132">See also</span></span>
+
+- [<span data-ttu-id="da31d-133">Hata Ayıklama Arabirimleri</span><span class="sxs-lookup"><span data-stu-id="da31d-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="da31d-134">Hata Ayıklama</span><span class="sxs-lookup"><span data-stu-id="da31d-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
