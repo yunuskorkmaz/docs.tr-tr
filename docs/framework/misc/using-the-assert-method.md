@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910728"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041146"
 ---
 # <a name="using-the-assert-method"></a>Onay Yöntemini Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910728"
  <xref:System.Security.CodeAccessPermission.Assert%2A>, kod erişimi izin sınıflarında ve <xref:System.Security.PermissionSet> sınıfında çağrılabilecek bir yöntemdir. Kodunuzun (ve aşağı akış çağıranlarının), kodunuzun gerçekleştirme iznine sahip olduğu, ancak çağıranlarının yapma izni olmayan eylemleri gerçekleştirmesini sağlamak için onay kullanabilirsiniz. Güvenlik onayı, çalışma zamanının güvenlik denetimi sırasında gerçekleştirdiği normal işlemi değiştirir. Bir izin belirttiğinizde, güvenlik sistemine, onaylanan izin için kodunuzun çağıranlarını denetvermediğini söyler.  
   
 > [!CAUTION]
->  Güvenlik boşluklarını açabildiklerinden ve güvenlik kısıtlamalarını uygulamak için çalışma zamanının mekanizmasından daha az yer olabileceğinden onayları dikkatle kullanın.  
+> Güvenlik boşluklarını açabildiklerinden ve güvenlik kısıtlamalarını uygulamak için çalışma zamanının mekanizmasından daha az yer olabileceğinden onayları dikkatle kullanın.  
   
  Onaylamalar, kitaplığın yönetilmeyen koda çağrı yaptığı veya kitaplığın amaçlanan kullanımı için açıkça ilgili olmayan bir izin gerektiren bir çağrı yaptığı durumlarda faydalıdır. Örneğin, yönetilmeyen koda çağrı yapan tüm yönetilen kodların **UnmanagedCode** bayrağıyla **SecurityPermission** değeri olmalıdır. Yerel intranetten indirilen kod gibi yerel bilgisayardan kaynaklanmayan koda bu izin varsayılan olarak verilmeyecektir. Bu nedenle, yerel intranetten indirilen kodun yönetilmeyen kod kullanan bir kitaplığı çağırabilmesi için, kitaplık tarafından onaylanan izne sahip olması gerekir. Ayrıca, bazı kitaplıklar arayanlara görünmeyen ve özel izinler gerektiren çağrılar yapabilir.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910728"
  Örneğin, yüksek oranda güvenilen kitaplık sınıfınızın dosyaları silen bir yöntemi olduğunu varsayalım. Yönetilmeyen bir Win32 işlevini çağırarak dosyaya erişir. Bir çağıran, kodunuzun **silme** yöntemini, silinecek dosyanın adını geçirerek, c:\Test.txt olarak çağırır. **Delete** yöntemi içinde, kodunuz, c:\Test.exe için <xref:System.Security.Permissions.FileIOPermission> yazma erişimini temsil eden bir nesne oluşturur. (Bir dosyayı silmek için yazma erişimi gereklidir.) Kodunuz daha sonra, **Fileıişle görev** nesnesinin **talep** yöntemini çağırarak bir kesinlik güvenlik denetimini çağırır. Çağrı yığınındaki çağıranların birinde bu izin yoksa, bir <xref:System.Security.SecurityException> oluşturulur. Herhangi bir özel durum oluşursa, tüm çağıranların C:\Test! txterişim hakkına sahip olduğunu bilirsiniz. Çağıranlarınızın çoğunun yönetilmeyen koda erişim izni olmadığından eminseniz, kodunuz, yönetilmeyen kodu çağırma ve nesnenin **onaylama** yöntemini çağırma hakkını temsil <xref:System.Security.Permissions.SecurityPermission> eden bir nesne oluşturur. Son olarak, C:\Text.txt 'yi silmek için yönetilmeyen Win32 işlevini çağırır ve çağrıyı çağırana döndürür.  
   
 > [!CAUTION]
->  Kodunuzun, yaptığınız izinlerle korunan bir kaynağa erişmek için kodunuzun diğer kod tarafından kullanılabileceği durumlarda onay kullanılmadığından emin olmanız gerekir. Örneğin, adı çağıran tarafından bir parametre olarak belirtilen bir dosyaya yazan kodda, kodunuzun bir üçüncü taraf tarafından kötüye kullanılmasına açık olması nedeniyle dosyalara yazmak için dosya yazma işlemi yapmamalıdır.  
+> Kodunuzun, yaptığınız izinlerle korunan bir kaynağa erişmek için kodunuzun diğer kod tarafından kullanılabileceği durumlarda onay kullanılmadığından emin olmanız gerekir. Örneğin, adı çağıran tarafından bir parametre olarak belirtilen bir dosyaya yazan kodda, kodunuzun bir üçüncü taraf tarafından kötüye kullanılmasına açık olması nedeniyle dosyalara yazmak için dosya yazma işlemi yapmamalıdır.  
   
  Zorunlu güvenlik sözdizimini kullandığınızda, aynı yöntemde birden çok izin üzerinde onay yöntemi çağırmak bir güvenlik özel durumunun oluşturulmasına neden olur. Bunun yerine, bir **PermissionSet** nesnesi oluşturmalı, çağırmak istediğiniz bireysel izinleri geçitirsiniz ve ardından **PermissionSet** nesnesi üzerinde **onaylama** yöntemini çağırmalısınız. Bildirim temelli güvenlik sözdizimini kullandığınızda onay yöntemini birden çok kez çağırabilirsiniz.  
   

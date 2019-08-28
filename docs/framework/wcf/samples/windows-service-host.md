@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 6339666d80de6c40b390683c1dabe6925053d30d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f2024a984111a826adab31ca15f1a46f9733de5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942293"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045401"
 ---
 # <a name="windows-service-host"></a>Windows Hizmet Konağı
 Bu örnek, yönetilen bir Windows hizmetinde barındırılan bir Windows Communication Foundation (WCF) hizmetini gösterir. Windows Hizmetleri **Denetim Masası** 'ndaki Hizmetler uygulaması kullanılarak denetlenir ve sistem yeniden başlatıldıktan sonra otomatik olarak başlayacak şekilde yapılandırılabilir. Örnek, bir istemci programından ve bir Windows hizmeti programından oluşur. Hizmet bir. exe programı olarak uygulanır ve kendi barındırma kodunu içerir. Windows Işlem etkinleştirme Hizmetleri (WAS) veya Internet Information Services (IIS) gibi diğer barındırma ortamlarında, barındırma kodu yazmanız gerekmez.
@@ -19,13 +19,13 @@ Bu örnek, yönetilen bir Windows hizmetinde barındırılan bir Windows Communi
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
 > [!IMPORTANT]
->  Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
  Bu hizmeti oluşturduktan sonra, diğer tüm Windows Hizmetleri gibi InstallUtil. exe yardımcı programıyla birlikte yüklenmelidir. Hizmette değişiklik yapacaksanız, önce bunu ile `installutil /u`kaldırmanız gerekir. Bu örneğe eklenen Setup. bat ve Cleanup. bat dosyaları, Windows hizmetini yükleme ve başlatma ve Windows hizmetini kapatma ve kaldırma komutlardır. WCF hizmeti yalnızca Windows hizmeti çalışıyorsa istemcilere yanıt verebilir. Windows hizmetini **Denetim Masası** 'ndan hizmetler uygulamasını kullanarak durdurur ve istemcisini çalıştırırsanız, istemci hizmete erişmeye çalıştığında bir <xref:System.ServiceModel.EndpointNotFoundException> özel durum oluşur. Windows hizmetini yeniden başlatıp istemciyi yeniden çalıştırırsanız, iletişim başarılı olur.  
   

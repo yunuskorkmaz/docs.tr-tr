@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4474b217147aca74f2c6e5376c8f55318a05bf4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963540"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046510"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
 Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , hata işleme yordamını devre dışı bırakmak için de kullanılabilir. `On Error` İfade yapılandırılmamış hata işlemede kullanılır ve yapılandırılmış özel durum işleme yerine kullanılabilir. [Yapılandırılmış özel durum işleme](../../../standard/exceptions/index.md) .NET içinde yerleşiktir, genellikle daha etkilidir, bu nedenle uygulamanızda çalışma zamanı hatalarını işlerken önerilir.
@@ -104,7 +104,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  [!code-vb[VbVbalrErrorHandling#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#19)]
 
 > [!CAUTION]
->  Windows dinamik bağlantı kitaplıkları (dll 'Ler) çağrıları sırasında sistem hataları özel durum oluşturmaz ve Visual Basic hata yakalama ile yakalanamaz. DLL işlevlerini çağırırken, her dönüş değerini başarılı veya başarısız (API belirtimlerine göre) olarak denetlemeniz gerekir ve hata durumunda `Err` `LastDLLError` nesnenin özelliğindeki değeri kontrol edin.
+> Windows dinamik bağlantı kitaplıkları (dll 'Ler) çağrıları sırasında sistem hataları özel durum oluşturmaz ve Visual Basic hata yakalama ile yakalanamaz. DLL işlevlerini çağırırken, her dönüş değerini başarılı veya başarısız (API belirtimlerine göre) olarak denetlemeniz gerekir ve hata durumunda `Err` `LastDLLError` nesnenin özelliğindeki değeri kontrol edin.
 
 ## <a name="example"></a>Örnek
  Bu örnek öncelikle bir yordam `On Error GoTo` içindeki bir hata işleme yordamının konumunu belirtmek için ifadesini kullanır. Örnekte, sıfıra bölme girişimi 6 hata numarasını üretir. Hata, hata işleme yordamında işlenir ve denetim daha sonra hataya neden olan ifadeye döndürülür. `On Error GoTo 0` İfade hata yakalamayı kapatır. Daha sonra `On Error Resume Next` , Next ifadesinin oluşturduğu hatanın bağlamı belirli bir şekilde tanınabilmesi için hata yakalamayı erteleme için bu ifade kullanılır. Hata işlendikten sonra `Err` nesnenin özelliklerini temizlemek için kullanıldığını unutmayın. `Err.Clear`

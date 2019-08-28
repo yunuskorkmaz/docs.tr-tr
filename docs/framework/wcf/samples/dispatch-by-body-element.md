@@ -2,23 +2,23 @@
 title: Gövde Öğesine göre Dağıt
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ff6d099ad0aee0c17b011000fe78f961293a82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990294"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039769"
 ---
 # <a name="dispatch-by-body-element"></a>Gövde Öğesine göre Dağıt
-Bu örnek nasıl gelen iletiler için işlemler atamak için başka bir algoritma uygulanacağını gösterir.  
+Bu örnek, işlemler için gelen iletileri atamaya yönelik alternatif algoritmanın nasıl uygulanacağını gösterir.  
   
- Varsayılan olarak, hizmet modeli dağıtıcı iletinin WS-Addressing üzerinde temel gelen ileti için uygun işleme yöntemi seçer "Action" üst bilgi veya HTTP SOAP isteğinin eşdeğer bilgileri.  
+ Varsayılan olarak, hizmet modeli dağıtıcısı iletinin WS-Addressing "Action" başlığına veya HTTP SOAP isteğindeki eşdeğer bilgilere göre gelen bir ileti için uygun işleme yöntemini seçer.  
   
- WS izlemeyin yığınları bazı SOAP 1.1 Web Hizmetleri-ı Basic Profile 1.1 yönergeleri eylem URİ'SİNDE dayalı ancak bunun yerine SOAP gövdesi içindeki ilk öğeyi XML tam adı temel iletileri gönderme değil. Benzer şekilde, istemci tarafı bu yığınlarının SOAP 1.1 belirtiminde verilmişti bir boş veya rastgele HTTP SoapAction başlık iletileri gönderebilir.  
+ WS-ı temel 1,1 profilini izleyen bazı SOAP 1,1 Web Hizmetleri yığınları, Işlem URI 'sine bağlı olarak ileti göndermez, bunun yerine SOAP gövdesinin içindeki ilk öğenin XML nitelenmiş adına göre. Benzer şekilde, bu yığınların istemci tarafı, SOAP 1,1 belirtiminin izin verdiği boş veya rastgele bir HTTP SoapAction üst bilgisine sahip iletiler gönderebilir.  
   
- Yöntemlere iletileri gönderilen şeklini değiştirmek için örnek uygulayan <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> genişletilebilirlik arabirimdeki `DispatchByBodyElementOperationSelector`. Bu sınıf operations ileti gövdesinin ilk öğeye göre seçer.  
+ İletilerin yöntemlere nasıl dağıtıldığı şeklini değiştirmek için örnek <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> `DispatchByBodyElementOperationSelector`üzerinde genişletilebilirlik arabirimini uygular. Bu sınıf, ileti gövdesinin ilk öğesine göre işlemleri seçer.  
   
- Sınıf oluşturucu çiftleri ile doldurulmuş bir sözlük bekliyor `XmlQualifiedName` ve dizeler yapabildiği nitelenmiş adlar SOAP gövdesi ilk alt adını belirtmek ve dizeleri eşleşen işlem adı belirtin. `defaultOperationName` Karşı bu sözlük eşleşen tüm iletiler alan işlem adıdır:  
+ Sınıf oluşturucusu, `XmlQualifiedName` ve dizeleri çiftleriyle doldurulmuş bir sözlük bekler ve nitelenmiş adların, SOAP gövdesinin ilk alt öğesinin adını ve dizeler eşleşen işlem adını gösterir. , `defaultOperationName` Bu sözlükte eşleştirilemez tüm iletileri alan işlemin adıdır:  
   
 ```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
@@ -34,9 +34,9 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> uygulamalarıdır arabirimde yalnızca bir yöntem olarak oluşturmak çok basittir: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Bu yöntemin işi, bir gelen iletiyi incelemek ve geçerli uç nokta hizmet sözleşmesindeki yöntemin adı eşittir bir dize döndürecek şekilde silinir.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>arabirim üzerinde yalnızca bir yöntem olduğundan, uygulamalar derleme için oldukça basittir: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Bu yöntemin işi, gelen bir iletiyi incelemek ve geçerli uç nokta için hizmet sözleşmesindeki bir yöntemin adına eşit olan bir dize döndürmek içindir.  
   
- Bu örnekte, işlem Seçici edinme bir <xref:System.Xml.XmlDictionaryReader> gelen ileti gövdesi kullanarak kullanıcının <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Geçerli öğenin adını ve ad alanı URI almak ve bunları birleştirmek yeterlidir, böylece bu yöntem okuyucu zaten ileti gövdesinin ilk alt yerleştirir. bir `XmlQualifiedName` ardından kullanılan karşılık gelen işlemi bakmak işlem Seçici tarafından tutulan sözlüğü.  
+ Bu örnekte, işlem Seçici <xref:System.Xml.XmlDictionaryReader> , kullanarak <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>gelen iletinin gövdesini alır. Bu yöntem, geçerli öğenin adı ve ad alanı URI 'sini almak için yeterli olması ve daha sonra ilgili işlemi ' dan aramak için kullanılan bir `XmlQualifiedName` ile birleştirmek üzere ileti gövdesinin ilk alt öğesi için okuyucuyu zaten konumlandırır. işlem seçiciyle tutulan sözlük.  
   
 ```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -56,7 +56,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
 }  
 ```  
   
- İleti gövdesi ile erişme <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> veya iletinin gövdesi içeriğe erişim neden olan iletiyi bir daha ayrıntılı işleme için geçersiz olduğu anlamına gelir "okundu" olarak işaretlenecek iletinin sağlayan diğer yöntemlerden herhangi birini. Bu nedenle, işlem Seçici, aşağıdaki kodda gösterilen yöntemi ile gelen iletinin bir kopyasını oluşturur. Okuyucunun konumu denetim turu sırasında değiştirilmediğinden olduğundan, özgün iletinin tam bir kopyası sonuçları yeni oluşturulan ileti için ileti özelliklerinde ve ileti üst da kopyalanır, tarafından başvurulabilir:  
+ İleti gövdesine <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> veya iletinin gövde içeriğine erişim sağlayan diğer yöntemlerden birine erişmek iletinin "okuma" olarak işaretlenmesine neden olur, bu da iletinin daha fazla işlem için geçersiz olduğu anlamına gelir. Bu nedenle, işlem Seçicisi aşağıdaki kodda gösterilen yöntemiyle gelen iletinin bir kopyasını oluşturur. İnceleme sırasında okuyucunun konumu değişmediğinden, ileti özelliklerinin ve ileti üstbilgilerinin de kopyalandığı yeni oluşturulan ileti tarafından başvuru yapılabilir ve bu durum özgün iletinin tam bir kopyasına neden olur:  
   
 ```csharp
 private Message CreateMessageCopy(Message message,   
@@ -69,14 +69,14 @@ private Message CreateMessageCopy(Message message,
 }  
 ```  
   
-## <a name="adding-an-operation-selector-to-a-service"></a>Bir işlem Seçici için bir hizmet ekleme  
- Hizmet dağıtma işlemi Seçici Windows Communication Foundation (WCF) dağıtıcısı uzantılarıdır. Çift yönlü sözleşmeler geri çağırma kanalı yöntemlerini seçmek için de vardır çok gönderme işlemi Seçici burada açıklanan, ancak bu açıkça Bu örnekte kapsanmaz iş istemci işlemi seçicileri.  
+## <a name="adding-an-operation-selector-to-a-service"></a>Bir hizmete Işlem seçici ekleme  
+ Hizmet gönderme işlemi seçicileri Windows Communication Foundation (WCF) dağıtıcısına yönelik uzantılardır. Çift yönlü sözleşmelerin geri çağırma kanalında Yöntemler seçmek için, burada açıklanan gönderme işlemi seçicileri gibi çok daha fazla çalışan ancak bu örnekte açıkça kapsanmayan istemci işlem seçicileri de vardır.  
   
- Çoğu hizmet modeli uzantıları gibi gönderme işlemi Seçici davranışları dağıtıcı eklenir. A *davranışı* gönderme çalışma zamanı (veya istemci çalışma zamanı) bir veya daha fazla uzantıları ekler ya da aksi takdirde ayarlarını değiştirir yapılandırma nesnesi.  
+ Çoğu hizmet modeli uzantısı gibi, dağıtım işlemi seçicileri, davranışlar kullanılarak dağıtıcıya eklenir. *Davranış* , dağıtım çalışma zamanına (veya istemci çalışma zamanına) bir veya daha fazla uzantı ekleyen veya ayarlarını değiştiren bir yapılandırma nesnesidir.  
   
- İşlem Seçici anlaşması kapsamında olduğundan, burada uygulamak için uygun bir davranıştır <xref:System.ServiceModel.Description.IContractBehavior>. Arabirim üzerinde uygulandığından bir <xref:System.Attribute> türetilmiş sınıf aşağıdaki kodda gösterildiği gibi davranışı bildirimli olarak bir hizmet sözleşmeye eklenebilir. Her bir <xref:System.ServiceModel.ServiceHost> açılır ve gönderme çalışma zamanı oluşturulmuştur, tüm davranışları sözleşmeleri, işlemler ve hizmet uygulamaları özniteliklerinde olarak veya hizmet yapılandırma öğesi olarak otomatik olarak eklenir ve daha sonra istenir bulunamadı Uzantıları katkıda bulunan veya varsayılan yapılandırmayı değiştirebilirsiniz.  
+ İşlem seçicileri sözleşme kapsamı içerdiğinden, burada uygulanacak uygun davranış ' dır <xref:System.ServiceModel.Description.IContractBehavior>. Aşağıdaki kodda gösterildiği gibi arabirim türetilmiş bir <xref:System.Attribute> sınıfta uygulandığından, davranış herhangi bir hizmet sözleşmesine bildirimli olarak eklenebilir. <xref:System.ServiceModel.ServiceHost> Her açıldığında ve dağıtım çalışma zamanı yapılandırıldığında, sözleşmeler, işlemler ve hizmet uygulamalarında öznitelik olarak bulunan ya da hizmet yapılandırmasındaki öğe olarak bulunan tüm davranışlar otomatik olarak eklenir ve daha sonra istenirse uzantılara katkıda bulunun veya varsayılan yapılandırmayı değiştirin.  
   
- Konuyu uzatmamak amacıyla, aşağıdaki kod alıntı yöntemin uygulanmasını yalnızca gösterir <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, hangi etkiler yapılandırma değişikliklerini bu dağıtıcı için. Bunlar herhangi bir iş yapmadan çağırana döndürmesi için diğer yöntemler gösterilmez.  
+ Kısaltma için aşağıdaki kod alıntısı yalnızca yönteminin <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>uygulanmasını gösterir ve bu örnekteki dağıtıcı için yapılandırma değişikliklerini etkiler. Diğer yöntemler, hiçbir iş yapmadan arayan tarafa döntiğinden gösterilmez.  
   
 ```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
@@ -87,11 +87,11 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
     // public void Validate(...)  
 ```  
   
- İlk olarak, <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> işlem Seçici arama Sözlüğü'kurmak ayarlar üzerinden yineleme tarafından uygulama <xref:System.ServiceModel.Description.OperationDescription> service uç noktasının öğelerinde <xref:System.ServiceModel.Description.ContractDescription>. Her bir işlem açıklaması varlığını ardından inceledi `DispatchBodyElementAttribute` davranışı, uygulaması <xref:System.ServiceModel.Description.IOperationBehavior> Ayrıca bu örnekte tanımlanan. Bu sınıf bir davranış da olsa da, pasif ve etkin bir şekilde gönderme çalışma zamanı yapılandırma değişiklikleri gereksinimdir. Tüm yöntemleri, çağırana tüm eylemleri döndürür. Böylece meta veriler için bir işlem seçildiğinde, oluşumunu ile ilgili işlemler ilişkilendirilebilir yeni dağıtım mekanizması, yani body öğesi üzerinde tam adı gerekli işlemi davranış yalnızca bulunmaktadır.  
+ İlk olarak, <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> uygulama, hizmet uç noktasındaki <xref:System.ServiceModel.Description.OperationDescription> <xref:System.ServiceModel.Description.ContractDescription>öğeler üzerinde yineleme yaparak, işlem seçicisinin arama sözlüğünü ayarlar. Ardından, her işlem açıklaması `DispatchBodyElementAttribute` davranışın varlığı için incelenir, bu örnekte de bir <xref:System.ServiceModel.Description.IOperationBehavior> uygulama da tanımlanır. Bu sınıf aynı zamanda bir davranış olsa da pasif olur ve dağıtım çalışma zamanında hiçbir yapılandırma değişikliğini etkin bir şekilde katkıda bulunmaz. Tüm yöntemleri herhangi bir eylem yapmadan çağırana döner. İşlem davranışı yalnızca yeni dağıtım mekanizması için gerekli olan meta verilerin, yani örneğin bir işlem yerine geçen gövde öğesinin tam adı seçildiğinde ilgili işlemlerle ilişkilendirilebilen şekilde bulunur.  
   
- Böyle bir davranış bulunursa, değer çifti oluşturulan XML tam adı (`QName` özelliği) ve işlem adı (`Name` özelliği) sözlüğe eklenir.  
+ Böyle bir davranış bulunursa, XML nitelenmiş adından (`QName` özellik) ve işlem adından (`Name` özellik) oluşturulan bir değer çifti sözlüğe eklenir.  
   
- Sözlük, yeni bir doldurulduktan sonra `DispatchByBodyElementOperationSelector` bu bilgilerle oluşturulur ve gönderme zamanının işlem Seçici ayarlayın:  
+ Sözlük doldurulduktan sonra, bu bilgilerle yeni `DispatchByBodyElementOperationSelector` bir oluşturulur ve dağıtım çalışma zamanının işlem Seçicisi olarak ayarlanır:  
   
 ```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
@@ -117,12 +117,12 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 }  
 ```  
   
-## <a name="implementing-the-service"></a>Uygulama hizmeti  
- Bu örnekte doğrudan uygulanan davranışını nasıl kablo iletilerden yorumlanır ve gönderilen, hizmet sözleşmesinin bir işlev olan etkiler. Sonuç olarak, davranışı kullanmak için seçtiği herhangi bir hizmet uygulaması, hizmet sözleşmesi düzeyinde bildirilmesi gerekir.  
+## <a name="implementing-the-service"></a>Hizmeti uygulama  
+ Bu örnekte uygulanan davranış, hizmet sözleşmesinin bir işlevi olan, iletişimdeki iletilerin nasıl yorumlandığını ve yapıldığını doğrudan etkiler. Sonuç olarak, davranışı kullanmayı seçen hizmet uygulamalarında hizmet sözleşmesi düzeyinde bildirilmelidir.  
   
- Örnek Proje hizmeti geçerli `DispatchByBodyElementBehaviorAttribute` sözleşme davranışa `IDispatchedByBody` hizmet sözleşmesi ve etiketleri her iki işlem `OperationForBodyA()` ve `OperationForBodyB()` ile bir `DispatchBodyElementAttribute` işlemi davranışı. Bu sözleşme uygulayan bir hizmet için bir hizmet konağı açık olduğunda bu meta veriler daha önce anlatıldığı dağıtıcı oluşturucusu tarafından seçilir.  
+ `DispatchByBodyElementBehaviorAttribute` Örnek proje hizmeti, sözleşme davranışını `IDispatchedByBody` hizmet sözleşmesine uygular ve iki işlemin `OperationForBodyA()` her birini ve `OperationForBodyB()` bir `DispatchBodyElementAttribute` işlem davranışını Etiketler. Bu sözleşmeyi uygulayan bir hizmetin hizmet ana bilgisayarı açıldığında, bu meta veriler, daha önce açıklandığı gibi dağıtıcı Oluşturucusu tarafından alınır.  
   
- İşlem Seçici ileti gövdesi öğesinde yalnızca temel gönderir ve "Action" yoksayar olduğundan, döndürülen yanıtı "Action" başlığındaki joker atayarak denetlemek için çalışma zamanı bildirmek için gereklidir "*" için `ReplyAction` özelliği <xref:System.ServiceModel.OperationContractAttribute>. Ayrıca, "Action" özelliği için joker karakter olarak ayarlanmış bir varsayılan işlemi için gerekli olan "\*". Varsayılan işlemi dağıtılamaz ve olmayan tüm iletiler alan bir `DispatchBodyElementAttribute`:  
+ İşlem Seçici yalnızca ileti gövdesi öğesine bağlı olarak ve "eylem" öğesini yok saydığından, çalışma zamanına "*" joker karakterini "*" `ReplyAction` özelliğine atayarak döndürülen yanıtlara "eylem" üst bilgisini denetlemez şekilde söylemek gerekir <xref:System.ServiceModel.OperationContractAttribute>. Ayrıca, "\*" joker karakterine ayarlanmış "Action" özelliği olan bir varsayılan işlem olması gerekir. Varsayılan işlem, iletilemez ve ' a `DispatchBodyElementAttribute`sahip olmayan tüm iletileri alır:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -140,12 +140,12 @@ public interface IDispatchedByBody
 }  
 ```  
   
- Örnek hizmet uygulaması oldukça basittir. Her yöntem alınan ileti bir yanıt iletisi sarmalar ve istemciye geri görüntülemektedir.  
+ Örnek hizmet uygulamasının kullanımı basittir. Her yöntem alınan iletiyi bir yanıt iletisine sarar ve istemciye geri bildirir.  
   
-## <a name="running-and-building-the-sample"></a>Çalıştıran ve örnek oluşturma  
- Örneği çalıştırdığınızda, işlem yanıt gövdesi içeriğini (biçimlendirilmiş) aşağıdaki çıktıya benzer bir istemci konsol penceresinde görüntülenir.  
+## <a name="running-and-building-the-sample"></a>Örnek çalıştırma ve oluşturma  
+ Örneği çalıştırdığınızda, işlem yanıtlarının gövde içeriği, istemci konsolu penceresinde aşağıdaki (biçimlendirilen) çıktıya benzer şekilde görüntülenir.  
   
- İstemci hizmete üç iletileri, gövde öğesi adlandırılan içerik gönderir. `bodyA`, `bodyB`, ve `bodyX`sırasıyla. Önceki Açıklama ve gösterilen hizmet sözleşmesini ertelenmiş olarak gelen ileti ile `bodyA` öğesi tekrarlanarak gönderilen `OperationForBodyA()` yöntemi. İleti için hiçbir açık gönderim hedefi olduğundan `bodyX` body öğesi ileti gönderilen için `DefaultOperation()`. Her hizmet işlemleri yöntemi belirli bir öğenin içine alınan ileti gövdesi sarmalar ve, giriş ilişkilendirin ve bu örnek için açıkça iletileri çıkış yapılır döndürür:  
+ İstemci, gövde içeriği öğesi sırasıyla, `bodyA` `bodyB`, ve `bodyX`olarak adlandırılan hizmete üç ileti gönderir. Önceki açıklamadan ve hizmet sözleşmesinden ertelenebilir, `bodyA` öğesine sahip gelen ileti `OperationForBodyA()` yöntemine gönderilir. `bodyX` Gövde öğesi olan ileti için açık bir dağıtım hedefi olmadığından ileti `DefaultOperation()`öğesine gönderilir. Hizmet işlemlerinin her biri, alınan ileti gövdesini yönteme özel bir öğeye sarar ve bu örnek için giriş ve çıkış iletilerini açıkça ilişkilendirmek için yapılır.  
   
 ```xml  
 <?xml version="1.0" encoding="IBM437"?>  
@@ -162,19 +162,19 @@ public interface IDispatchedByBody
 </replyDefault>  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü derlemek için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

@@ -2,115 +2,116 @@
 title: JSON ve XML ile AJAX Hizmeti Örneği
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: a93e7bdf8cda88a1e86b59e5c3d37f049bdfcf28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62c573a844ce5382308814342330f778fa041a69
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002839"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045202"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>JSON ve XML ile AJAX Hizmeti Örneği
-Bu örnek, Windows Communication Foundation (WCF) JavaScript nesne gösterimi (JSON) veya XML veri döndüren bir zaman uyumsuz JavaScript ve XML (AJAX) hizmet oluşturma için nasıl kullanılacağını gösterir. JavaScript kodu bir Web tarayıcısı istemcisini kullanarak bir AJAX hizmete erişebilir. Bu örnek yapılar [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek.  
-  
- Diğer AJAX örnekleri farklı olarak, bu örnek, ASP.NET AJAX kullanmaz ve <xref:System.Web.UI.ScriptManager> denetimi. Bazı ek yapılandırma ile WCF AJAX Hizmetleri herhangi bir HTML sayfasında JavaScript üzerinden erişilebilir ve bu senaryo burada gösterilir. ASP.NET AJAX ile WCF kullanan bir örnek için bkz: [AJAX örnekleri](ajax.md).
-  
- Bu örnekte yanıt türü bir işlemin JSON ve XML arasında geçiş yapma gösterilmektedir. Bu işlev, mi hizmeti ASP.NET AJAX veya bir HTML/JavaScript istemci sayfası tarafından erişilecek yapılandırılmış bağımsız olarak kullanılabilir.  
-  
+
+Bu örnek, JavaScript Nesne Gösterimi (JSON) veya XML verileri döndüren zaman uyumsuz bir JavaScript ve XML (AJAX) hizmeti oluşturmak için Windows Communication Foundation (WCF) kullanımını gösterir. Bir Web tarayıcısı istemcisinden JavaScript kodu kullanarak bir AJAX hizmetine erişebilirsiniz. Bu örnek, [temel Ajax hizmet](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örneğinde oluşturulur.
+
+Diğer Ajax örneklerinin aksine, bu örnek ASP.NET AJAX ve <xref:System.Web.UI.ScriptManager> denetimini kullanmaz. Bazı ek yapılandırmalar ile, WCF AJAX hizmetlerine JavaScript aracılığıyla herhangi bir HTML sayfasından erişilebilir ve bu senaryo burada gösterilmiştir. WCF 'yi ASP.NET AJAX ile kullanmayla ilgili bir örnek için bkz. [Ajax örnekleri](ajax.md).
+
+Bu örnek, bir işlemin yanıt türünün JSON ve XML arasında nasıl değiştirileceğini gösterir. Bu işlevsellik, hizmetin ASP.NET AJAX tarafından veya bir HTML/JavaScript istemci sayfası tarafından erişilecek şekilde yapılandırılıp yapılandırılmadığına bakılmaksızın kullanılabilir.
+
 > [!NOTE]
-> Bu örnek için Kurulum yordamı ve derleme yönergelerini, bu konunun sonunda yer alır.
-  
-ASP.NET AJAX istemci kullanımını etkinleştirmek için <xref:System.ServiceModel.Activation.WebServiceHostFactory> (değil <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) .svc dosyasında. <xref:System.ServiceModel.Activation.WebServiceHostFactory> ekler bir <xref:System.ServiceModel.Description.WebHttpEndpoint> hizmetine standart uç noktası. Uç nokta, boş bir adresten .svc dosyanın göreli yapılandırılır; Bu hizmet adresini olduğu anlamına gelir `http://localhost/ServiceModelSamples/service.svc`, işlem adı dışında hiçbir ek sonekleri ile.  
-  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
+
+Non-ASP.NET AJAX istemcilerinin kullanımını etkinleştirmek için. svc dosyasında ( <xref:System.ServiceModel.Activation.WebServiceHostFactory> Not <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) kullanın. <xref:System.ServiceModel.Activation.WebServiceHostFactory>hizmete standart <xref:System.ServiceModel.Description.WebHttpEndpoint> bir uç nokta ekler. Uç nokta,. svc dosyasına göre boş bir adreste yapılandırılır; Bu, hizmetin adresinin, işlem adından farklı ek `http://localhost/ServiceModelSamples/service.svc`sonekler olmadan olduğu anlamına gelir.
+
 ```svc
-<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
-```  
-  
- Web.config dosyasında aşağıdaki bölümde, uç nokta için ek yapılandırma değişiklikleri yapmak için kullanılabilir. Hiçbir ek değişikliklerin gerekli olup olmadığını kaldırılabilir.  
-  
-```xml  
-<system.serviceModel>  
-  <standardEndpoints>  
-    <webHttpEndpoint>  
-      <!-- Use this element to configure the endpoint -->  
-      <standardEndpoint name="" />  
-    </webHttpEndpoint>  
-  </standardEndpoints>  
-</system.serviceModel>  
-```  
-  
- Varsayılan verilerin biçimlendirilmesi için <xref:System.ServiceModel.Description.WebHttpEndpoint> XML için varsayılan veri biçimi çalışırken olduğu <xref:System.ServiceModel.Description.WebScriptEndpoint> JSON. Daha fazla bilgi için [ASP.NET olmadan WCF AJAX hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
-  
- Aşağıdaki örnekte iki işlem ile standart bir WCF Hizmeti hizmetidir. Her iki işlem gerektiren <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> gövde stilini <xref:System.ServiceModel.Web.WebGetAttribute> veya <xref:System.ServiceModel.Web.WebInvokeAttribute> özel öznitelikler `webHttp` davranışı ve JSON/XML veri biçimi anahtarda ilgisi yoktur.  
-
-```csharp
-[OperationContract]  
-[WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]  
-MathResult DoMathXml(double n1, double n2);  
+<%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>
 ```
 
- Varsayılan olan XML olarak yanıt biçimi işlemi için belirtilen ayarlama [ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) davranışı. Ancak, bunu açıkça alışkanlıktır yanıt biçimi belirtin.  
-  
- Başka bir işlem kullandığı `WebInvokeAttribute` özniteliği ve XML yerine JSON yanıtı açıkça belirtir.  
+Web. config dosyasındaki aşağıdaki bölüm, uç noktada ek yapılandırma değişiklikleri yapmak için kullanılabilir. Ek değişiklik gerekmiyorsa bu, kaldırılabilir.
 
-```csharp
-[OperationContract]  
-[WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]  
-MathResult DoMathJson(double n1, double n2);  
+```xml
+<system.serviceModel>
+  <standardEndpoints>
+    <webHttpEndpoint>
+      <!-- Use this element to configure the endpoint -->
+      <standardEndpoint name="" />
+    </webHttpEndpoint>
+  </standardEndpoints>
+</system.serviceModel>
 ```
 
- Her iki durumda da karmaşık bir tür işlemleri iade Not `MathResult`, standart bir WCF veri anlaşması türü.  
-  
- İstemci Web sayfası XmlAjaxClientPage.htm kullanıcı tıkladığında, önceki iki işlemlerden birini çağırır JavaScript kodu içeren **(dönüş JSON'u) hesaplamayı** veya **hesaplamayı (dönüş XML)**  sayfasında düğme. Hizmeti çağırmak için kodu, bir JSON gövdesi oluşturur ve HTTP POST kullanarak gönderir. İstek, aksine JavaScript'te el ile oluşturulduğunda [temel AJAX hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örnek ve ASP.NET AJAX kullanılarak diğer örnekleri.  
+İçin varsayılan veri biçimi <xref:System.ServiceModel.Description.WebScriptEndpoint> XML 'dir,ancakiçinvarsayılanveribiçimiJSONolur.<xref:System.ServiceModel.Description.WebHttpEndpoint> Daha fazla bilgi için bkz. [ASP.net olmadan WCF AJAX hizmetleri oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).
+
+Aşağıdaki örnekteki hizmet, iki işlem içeren standart bir WCF hizmetidir. Her iki işlem de <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> , `webHttp` davranışa özgü olan <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> JSON/XML veri biçimi anahtarına hiçbir pul bulunmayan ve özniteliklerde gövde stilini gerektirir.
 
 ```csharp
-// Create HTTP request  
-var xmlHttp;  
-// Request instantiation code omitted…  
-// Result handler code omitted…  
-  
-// Build the operation URL  
-var url = "service.svc/ajaxEndpoint/";  
-url = url + operation;  
-  
-// Build the body of the JSON message  
-var body = '{"n1":';  
-body = body + document.getElementById("num1").value + ',"n2":';  
-body = body + document.getElementById("num2").value + '}';  
-  
-// Send the HTTP request  
-xmlHttp.open("POST", url, true);  
-xmlHttp.setRequestHeader("Content-type", "application/json");  
-xmlHttp.send(body);  
+[OperationContract]
+[WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]
+MathResult DoMathXml(double n1, double n2);
 ```
 
- Hizmet yanıt verdiğinde yanıt herhangi başka bir metin kutusuna sayfasında işlem olmadan görüntülenir. Bu, doğrudan kullanılan XML ve JSON veri biçimlerini gözlemleyin olanak sağlamak tanıtım amacıyla uygulanır.  
+İşlemin yanıt biçimi, [ \<Web http >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) davranışı için varsayılan ayar olan XML olarak belirtilir. Ancak, yanıt biçimini açıkça belirtmek iyi bir uygulamadır.
+
+Diğer işlem `WebInvokeAttribute` özniteliğini kullanır ve yanıt için XML yerine açıkça JSON belirler.
+
+```csharp
+[OperationContract]
+[WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+MathResult DoMathJson(double n1, double n2);
+```
+
+Her iki durumda da işlemler standart bir WCF veri anlaşması türü olan `MathResult`karmaşık bir tür döndürdüğüne de göz önünde.
+
+XmlAjaxClientPage. htm istemci Web sayfası, Kullanıcı **Hesaplama gerçekleştirme (JSON döndürme)** veya sayfadaki **Hesaplama (dönüş XML)** düğmelerini tıklattığında önceki Iki işlemden birini çağıran JavaScript kodunu içerir. Hizmeti çağırmak için kod bir JSON gövdesi oluşturur ve HTTP POST kullanarak gönderir. İstek, [temel Ajax hizmet](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örneği ve ASP.NET Ajax kullanan diğer örneklerin aksine, JavaScript 'te el ile oluşturulur.
+
+```csharp
+// Create HTTP request
+var xmlHttp;
+// Request instantiation code omitted…
+// Result handler code omitted…
+
+// Build the operation URL
+var url = "service.svc/ajaxEndpoint/";
+url = url + operation;
+
+// Build the body of the JSON message
+var body = '{"n1":';
+body = body + document.getElementById("num1").value + ',"n2":';
+body = body + document.getElementById("num2").value + '}';
+
+// Send the HTTP request
+xmlHttp.open("POST", url, true);
+xmlHttp.setRequestHeader("Content-type", "application/json");
+xmlHttp.send(body);
+```
+
+Hizmet yanıt verdiğinde, yanıt sayfadaki bir metin kutusunda başka işlem yapılmadan görüntülenir. Bu, kullanılan XML ve JSON veri biçimlerini doğrudan gözlemlemeye olanak tanımak için tanıtım amaçlı olarak uygulanır.
 
 ```javascript
-// Create result handler   
-xmlHttp.onreadystatechange=function(){  
-     if(xmlHttp.readyState == 4){  
-          document.getElementById("result").value = xmlHttp.responseText;  
-     }  
-}  
+// Create result handler
+xmlHttp.onreadystatechange=function(){
+     if(xmlHttp.readyState == 4){
+          document.getElementById("result").value = xmlHttp.responseText;
+     }
+}
 ```
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`  
-  
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
-  
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2. ' % S'çözüm XmlAjaxService.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-3. Gidin `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (XmlAjaxClientPage.htm proje dizininden tarayıcıda aç değil).  
-  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\XmlAjaxService`
+
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
+
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+
+2. [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümünde açıklandığı gibi XmlAjaxService. sln çözümünü oluşturun.
+
+3. Öğesine `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` gidin (proje dizininden tarayıcıda XmlAjaxClientPage. htm dosyasını açmayın).
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [HTTP POST Kullanan AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

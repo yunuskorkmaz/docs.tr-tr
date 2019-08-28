@@ -2,25 +2,25 @@
 title: Yapılandırma Kanal Fabrikası
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b74c15599ebc932a2a0ed46d646b54bec986794
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002316"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045652"
 ---
 # <a name="configuration-channel-factory"></a>Yapılandırma Kanal Fabrikası
-Bu örnek kullanımını kapsayan <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırması merkezi yönetilmesine izin verir. Bu ayrıca yapılandırma seçtikten veya uygulama etki alanı yükleme saatinden sonra değiştirildi senaryolarda yararlı olabilir.
+Bu örnek, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>kullanımını ele almaktadır. , <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırmasının merkezi yönetimine izin verir. Bu Ayrıca, uygulamanın etki alanı yükleme zamanından sonra yapılandırmanın seçildiği veya değiştiği senaryolarda yararlı olabilir.
 
 ## <a name="demonstrates"></a>Gösteriler
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>
 
 ## <a name="discussion"></a>Tartışma
- Bu örnek nasıl kullanılacağını gösterir <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> varsayılan uygulama yapılandırma dosyası kullanmak zorunda kalmadan bir istemci uygulama, belirli bir yapılandırma dosyası eklemek için.
+ Bu örnek, varsayılan uygulama yapılandırma <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> dosyasını kullanmak zorunda kalmadan, belirli bir yapılandırma dosyasını istemci uygulamasına eklemek için nasıl kullanılacağını gösterir.
 
- Örnek, iki projeden oluşan. İlk proje istemcilerden gelen iletilere yanıt vermek için çalışan basit bir hizmettir. İkinci proje iki oluşturan bir istemci uygulamasıdır <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> kullanarak nesneleri bir <xref:System.Configuration.ExeConfigurationFileMap> Test.config yapılandırma dosyası için ve onları hizmetiyle iletişim kurmak için kullanır. Her iki istemcinin Test.config içinde belirtilen yapılandırma kullanılarak hizmetiyle iletişim kurar.
+ Örnek iki projeden oluşur. İlk proje, istemcilerden gelen iletileri yanıtlamak için çalışan basit bir hizmettir. İkinci proje, test. config yapılandırma dosyası için bir <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> <xref:System.Configuration.ExeConfigurationFileMap> kullanarak iki nesne oluşturan ve hizmeti ile iletişim kurmak için bunları kullanan bir istemci uygulamasıdır. Her iki istemci de test. config dosyasında belirtilen yapılandırmayı kullanarak hizmetle iletişim kurar.
 
- Aşağıdaki kod, bir istemci uygulaması için özel bir yapılandırma dosyasına ekler.
+ Aşağıdaki kod, bir istemci uygulamasına özel bir yapılandırma dosyası ekler.
 
 ```csharp
 ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
@@ -31,23 +31,23 @@ ConfigurationChannelFactory<ICalculatorChannel> factory1 = new ConfigurationChan
 ICalculatorChannel client1 = factory1.CreateChannel();
 ```
 
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. Visual Studio 2012, yönetici ayrıcalıklarıyla açın.
+1. Yönetici ayrıcalıklarıyla Visual Studio 2012 ' i açın.
 
-2. (2 projeler) ConfigurationChannelFactory çözüme sağ tıklayın ve ardından **özellikleri**.
+2. ConfigurationChannelFactory çözümüne (2 proje) sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-3. İçinde **ortak özellikler**seçin **başlangıç projesi**ve ardından **birden fazla başlangıç projesi**.
+3. **Ortak özellikler**' de **Başlangıç projesi**' ni seçin ve ardından **birden fazla başlangıç**projesi ' ne tıklayın.
 
-4. Taşıma **hizmet** listenin başına proje ile **eylem 'Start'** ve ardından taşıyın **istemci** sonra proje **hizmet**proje ile aynı zamanda **eylem 'Start'**, bu nedenle **istemci** proje sonra yürütülür **hizmet** proje.
+4. **Hizmet** projesini listenin başına, **' Başlat ' eylemiyle**taşıyın ve ardından istemci projesi **' Başlat ' eylemiyle**birlikte **hizmet** projesinden sonra , istemci proje yürütülene taşıyın **hizmet** projesinden sonra.
 
-5. Tıklayın **Tamam**ve ardından örneği çalıştırmak için F5'i (veya CTRL + F5) tuşuna basın.
+5. **Tamam**' a tıklayın ve ardından örnek çalıştırmak için F5 tuşuna basın (veya CTRL + F5).
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

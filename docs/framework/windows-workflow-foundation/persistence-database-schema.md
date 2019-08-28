@@ -2,12 +2,12 @@
 title: Kalıcılık Veritabanı Şeması
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962890"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038329"
 ---
 # <a name="persistence-database-schema"></a>Kalıcılık Veritabanı Şeması
 Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görünümler açıklanmaktadır.  
@@ -44,7 +44,7 @@ Bu konuda, SQL Iş akışı örnek deposu tarafından desteklenen genel görün�
 |Gözden geçirme|BigInt|İş akışı sürümünün düzeltme numarası.|  
   
 > [!CAUTION]
->  **Örnekler** görünümü bir Delete tetikleyicisi de içerir. Uygun izinlere sahip kullanıcılar, iş akışı örneklerini veritabanından zorla kaldıracak bu görünüme karşı delete deyimlerini yürütebilir. İş akışı çalışma zamanının altındaki bir örneği silmek istenmeden sonuçlara neden olabileceğinden, doğrudan görünümden yalnızca son çare olarak silinmesini öneririz. Bunun yerine, iş akışı çalışma zamanının örneği sonlandırmayı sağlamak için Iş akışı örneği yönetim uç noktasını kullanın. Görünümden çok sayıda örnek silmek istiyorsanız, bu örneklerde çalışan etkin çalışma zamanları olmadığından emin olun.  
+> **Örnekler** görünümü bir Delete tetikleyicisi de içerir. Uygun izinlere sahip kullanıcılar, iş akışı örneklerini veritabanından zorla kaldıracak bu görünüme karşı delete deyimlerini yürütebilir. İş akışı çalışma zamanının altındaki bir örneği silmek istenmeden sonuçlara neden olabileceğinden, doğrudan görünümden yalnızca son çare olarak silinmesini öneririz. Bunun yerine, iş akışı çalışma zamanının örneği sonlandırmayı sağlamak için Iş akışı örneği yönetim uç noktasını kullanın. Görünümden çok sayıda örnek silmek istiyorsanız, bu örneklerde çalışan etkin çalışma zamanları olmadığından emin olun.  
   
 ## <a name="servicedeployments-view"></a>Servicedağıtımlar görünümü  
  **Servicedağıtımlar** görünümü tüm Web (IIS/WAS) barındırılan iş akışı hizmetleri için dağıtım bilgilerini içerir. Web 'de barındırılan her iş akışı örneği, bu görünümdeki bir satıra başvuran bir **ServiceDeploymentId** içerir.  

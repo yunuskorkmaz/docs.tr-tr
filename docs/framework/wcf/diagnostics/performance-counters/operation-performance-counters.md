@@ -2,24 +2,24 @@
 title: İşlem Performansı Sayaçları
 ms.date: 03/30/2017
 ms.assetid: 333a51e0-f56e-4e1a-b359-5c91ff390568
-ms.openlocfilehash: d4f5755129fecb62e6a4da98a2bf642c5e20f9c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7a9b35346333f7b910802ff2a1b1769d177f3952
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916207"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040325"
 ---
 # <a name="operation-performance-counters"></a>İşlem Performansı Sayaçları
-İşlem performansı sayaçları altında bulunan `ServiceModelOperation 4.0.0.0` Performans İzleyicisi (Perfmon.exe) görüntülerken Performans nesnesi. Her işlem, tek bir örneği vardır. Diğer bir deyişle, verilen bir sözleşme 10 işlemi varsa, 10 işlem örnekleri bu anlaşması ile ilişkilidir. Nesne örneklerini şu deseni kullanılarak adlandırılır:  
+Performans İzleyicisi (Perfmon. exe) `ServiceModelOperation 4.0.0.0` ile görüntülenirken Performans nesnesi altında işlem performansı sayaçları bulunur. Her işlemin tek bir örneği vardır. Diğer bir deyişle, belirli bir sözleşmede 10 işlem varsa, bu sözleşmeyle ilişkili 10 işlem sayacı örneği vardır. Nesne örnekleri aşağıdaki model kullanılarak adlandırılır:  
   
 ```  
 (ServiceName).(ContractName).(OperationName)@(first endpoint listener address)  
 ```  
   
- Bu sayaç, çağrı nasıl kullanıldığını ve ne kadar iyi işlemi gerçekleştiriyor ölçmek sağlar.  
+ Bu sayaç, çağrının nasıl kullanıldığını ve işlemin ne kadar iyi çalıştığını ölçmenize olanak sağlar.  
   
 > [!CAUTION]
->  Bir performans sayacı örneğinin adının uzunluğu üzerinde bir sınır yoktur. Bir Windows Communication Foundation (WCF) sayaç örneği adı en fazla uzunluğu aşıyor, WCF örnek adının bir kısmını bir karma değer ile değiştirir.  
+> Performans sayacı örneğinin adının uzunluğu için bir sınır vardır. Bir Windows Communication Foundation (WCF) sayaç örneği adı en fazla uzunluğu aştığında, WCF örnek adının bir bölümünü bir karma değerle değiştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

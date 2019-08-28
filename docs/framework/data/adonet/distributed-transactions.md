@@ -2,12 +2,12 @@
 title: Dağıtılmış İşlemler
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956766"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041243"
 ---
 # <a name="distributed-transactions"></a>Dağıtılmış İşlemler
 İşlem, diğer şeyler arasında bir birim olarak başarılı (işleme) veya başarısız (iptal) bir ilgili görevler kümesidir. *Dağıtılmış işlem* , çeşitli kaynakları etkileyen bir işlemdir. Dağıtılmış bir işlemin kaydedilmesi için tüm katılımcılar, verilerde yapılan değişikliklerin kalıcı olacağını garanti etmelidir. Sistem kilitlenme veya diğer öngörülemeyen olayları rağmen değişiklikleri kalıcı gerekir. Tek bir katılımcı bu garantiyi yapamazsa, tüm işlem başarısız olur ve işlemin kapsamındaki verilerde yapılan değişiklikler geri alınır.  
@@ -39,7 +39,7 @@ ms.locfileid: "69956766"
 > Bir bağlantı bir işleme açık olarak kaydedildikten sonra, ilk işlem tamamlanana kadar kaydı kaldırılamaz veya başka bir işlemde kayıtlı olamaz.  
   
 > [!CAUTION]
->  `EnlistTransaction`bağlantı, bağlantının <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemiyle zaten bir işlem başlamışsa bir özel durum oluşturur. Ancak, işlem veri kaynağında başlatılan yerel bir işlem ise (örneğin, açıkça bir <xref:System.Data.SqlClient.SqlCommand>kullanarak BEGIN TRANSACTION deyimin yürütülmesi), `EnlistTransaction` yerel işlemi ve varolan dağıtılmış istenen işlem. Yerel işlemin geri alındığı ve kullanılarak <xref:System.Data.Common.DbConnection.BeginTransaction%2A>başlatılmamış tüm yerel işlemleri yönetmesi gerektiğini fark edersiniz. SQL Server ile SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanıyorsanız, listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlar algılanacaktır.  
+> `EnlistTransaction`bağlantı, bağlantının <xref:System.Data.Common.DbConnection.BeginTransaction%2A> yöntemiyle zaten bir işlem başlamışsa bir özel durum oluşturur. Ancak, işlem veri kaynağında başlatılan yerel bir işlem ise (örneğin, açıkça bir <xref:System.Data.SqlClient.SqlCommand>kullanarak BEGIN TRANSACTION deyimin yürütülmesi), `EnlistTransaction` yerel işlemi ve varolan dağıtılmış istenen işlem. Yerel işlemin geri alındığı ve kullanılarak <xref:System.Data.Common.DbConnection.BeginTransaction%2A>başlatılmamış tüm yerel işlemleri yönetmesi gerektiğini fark edersiniz. SQL Server ile SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanıyorsanız, listeleme girişimi bir özel durum oluşturur. Diğer tüm durumlar algılanacaktır.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server promotable Işlemleri  
  SQL Server, yerel bir hafif işlemin yalnızca gerekli olması durumunda otomatik olarak dağıtılmış bir işleme yükseltibileceği promotable işlemlerini destekler. Bir promotable işlemi, eklenen ek yük gerekmediği takdirde dağıtılmış bir işlemin ek yükünü çağırmaz. Daha fazla bilgi ve bir kod örneği için bkz. [SQL Server Ile System. Transactions tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

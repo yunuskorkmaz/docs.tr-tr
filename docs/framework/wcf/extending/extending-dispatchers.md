@@ -4,133 +4,139 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: eeff1c78b768e2c8f5a2583db86480ad96c5a9b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655444"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046007"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
-Dağıtıcıları çağırana geri göndererek arka plandaki kanal gelen iletileri çekerek ve bunları yöntem çağrıları uygulama kodunda içine çevirme yükümlü olursunuz. Dağıtıcı uzantıları, bu işleme değiştirmenize olanak sağlar.  İnceleme veya değiştirme iletileri ya da parametreler içeriğini ileti veya parametre denetçiler uygulayabilirsiniz.  İletileri işlemleri yönlendirilir veya başka bir işlevsellik sağlayan biçimini değiştirebilirsiniz.  
-  
- Bu konu nasıl kullanılacağını açıklar <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları bir Windows Communication Foundation (WCF) hizmet uygulaması bir dağıtıcı varsayılan yürütme davranışını değiştirmek veya ıntercept iletileri, parametreleri değiştirin veya döndürmek için öncesinde veya gönderme veya bunları kanal katmandan alınırken den değerleri. Eşdeğer istemci Çalışma Zamanı Modülü ileti işleme hakkında daha fazla bilgi için bkz: [genişletme istemciler](../../../../docs/framework/wcf/extending/extending-clients.md). Rol anlamak için <xref:System.ServiceModel.IExtensibleObject%601> türleri çeşitli çalışma zamanı özelleştirme nesneleri arasında paylaşılan durum erişirken yürütmek, bkz: [genişletilebilen nesneler](../../../../docs/framework/wcf/extending/extensible-objects.md).  
-  
-## <a name="dispatchers"></a>Dağıtıcıları  
- Hizmet modeli katmanını geliştiricinin programlama modeli ve kanal katmanını sık adlı temel alınan ileti exchange arasında dönüştürme yapar. WCF kanalı ve uç nokta dağıtıcıları (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ve <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>sırasıyla) hizmet bileşenleri, yeni kanallar, iletileri, işlem dağıtma ve çağırma ve yanıt işleme alma kabul etmek için sorumludur. Alıcı nesneleri dağıtıcı nesnelerdir ancak geri çağırma anlaşması çift yönlü hizmetler uygulamalarında da inceleme, değiştirilmesi veya uzantı için dağıtıcı nesnelerine sunarsınız.  
-  
- Kanal dağıtıcı (ve yardımcı <xref:System.ServiceModel.Channels.IChannelListener>) temel kanal iletileri çeker ve bunların ilgili uç nokta dağıtıcıları için iletileri geçirir. Her uç nokta dağıtıcı sahip bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime> iletileri uygun yönlendiren <xref:System.ServiceModel.Dispatcher.DispatchOperation>, işlemi uygulayan yöntem çağırmak için sorumlu olduğu. Çeşitli isteğe bağlıdır ve gerekli uzantı sınıfları, süreç boyunca çağrılır. Bu konu, parçaların birbirine nasıl uyduğunu ve nasıl olabileceğiniz özelliklerini değiştirmek ve temel işlevlerini genişletmek için kendi kodunuzu takın açıklar.  
-  
- Dağıtıcı özellikleri ve değiştirilmiş özelleştirme nesneleri hizmet, uç nokta, sözleşme veya işlem davranışı nesneleri kullanılarak eklenir. Bu konuda, davranışları kullanmayı açıklamaz. Dağıtıcı değişiklikleri eklemek için kullanılan türleri hakkında daha fazla bilgi için bkz. [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
-  
- Aşağıdaki grafikte, hizmet mimari öğeleri üst düzey bir görünümünü sağlar.  
-  
- ![Dağıtım çalışma zamanı mimarisi](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")  
-  
-### <a name="channel-dispatchers"></a>Kanal dağıtıcıları  
- A <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ilişkilendirilecek nesnesi oluşturulur bir <xref:System.ServiceModel.Channels.IChannelListener> (dinleme URI'si olarak adlandırılır) belirli bir URI ile bir hizmeti örneği konumunda. Her <xref:System.ServiceModel.ServiceHost> nesne birçok olabilir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> nesneler, yalnızca bir dinleyicisi ile ilişkili her ve URI dinleyin. İleti geldiğinde <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> her ilişkili sorgular <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> uç nokta iletiyi kabul edebilir ve yapabilen bir iletiyi geçirmeden olmadığını nesneleri.  
-  
- İnceleme veya değişikliği için yaşam süresi ve kanal oturum davranışını denetleyen tüm özellikler kullanılabilir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> nesne. Özel kanal başlatıcılar, kanal dinleyicisi, konak, ilişkili bunlar <xref:System.ServiceModel.InstanceContext>ve benzeri.  
-  
-### <a name="endpoint-dispatchers"></a>Uç nokta dağıtıcıları  
- <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> Nesnesi gelen iletileri işlemek için sorumlu olan bir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ne zaman bir ileti hedef adresi eşleşen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> ve ileti eylem eşleşmeleri <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> özelliği. İki <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesneleri bir iletiyi kabul edebilir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> özellik değeri, daha yüksek öncelik uç noktasına belirler.  
-  
- Kullanma <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> iki ana hizmet modeli uzantı noktaları – almaya <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları – dağıtıcı işlenmesini özelleştirmek için kullanabilirsiniz. <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Sınıfı ıntercept ve dağıtıcı sözleşme kapsamında genişletmek kullanıcıların sağlar (diğer bir deyişle, Sözleşme'de tüm iletiler için). <xref:System.ServiceModel.Dispatcher.DispatchOperation> Sınıfı ıntercept ve bir işlem kapsamında dağıtıcı genişletmek kullanıcıların sağlar (diğer bir deyişle, bir işlem de tüm iletiler için).  
-  
-## <a name="scenarios"></a>Senaryolar  
- Burada birkaç nedenden dağıtıcı genişletmek için:  
-  
-- Özel ileti doğrulama. Kullanıcılar, bir ileti için belirli bir şema geçerli olduğunu zorunlu kılabilir. Bu ileti kesici arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [ileti denetçileri](../../../../docs/framework/wcf/samples/message-inspectors.md).  
-  
-- Özel ileti günlüğe kaydetme. Kullanıcılar, inceleyin ve bir uç noktası aracılığıyla akış uygulama iletileri bir dizi oturum. Bu da ileti kesici arabirimleri ile gerçekleştirilebilir.  
-  
-- Özel ileti dönüşümler. Kullanıcılar belirli Dönüşümleri (örneğin, sürüm oluşturma) çalışma zamanında iletisi uygulayabilir. Bu, yeniden ileti kesici arabirimleri ile gerçekleştirilebilir.  
-  
-- Özel veri modeli. Kullanıcılar, varsayılan olarak WCF tarafından desteklenen dışındaki bir veri seri hale getirme modeli olabilir (yani, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>ve ham iletileri). Bu ileti biçimlendirici arabirimler uygulama tarafından yapılabilir. Bir örnek için bkz. [işlem biçimlendirici ve işlem Seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
-  
-- Özel parametre doğrulama. Kullanıcı türü belirtilmiş bir parametre (XML aksine) geçerli olduğunu zorunlu kılabilir. Bu yapılabilir parametresi denetçisi arabirimleri kullanarak.  
-  
-- Özel işlem gönderme. Kullanıcılar, eylemi-Örneğin, başka bir şey üzerine body öğesi ya da bir özel ileti özelliği gönderme uygulayabilirsiniz. Bu yapılabilir kullanarak <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi. Bir örnek için bkz. [işlem biçimlendirici ve işlem Seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).  
-  
-- Nesne havuzu oluşturma. Kullanıcılar, her çağrı için yeni bir ayırma yerine örnekleri havuza alabilir. Bu örnek sağlayıcısı arabirimleri kullanılarak uygulanabilir. Bir örnek için bkz. [toplama](../../../../docs/framework/wcf/samples/pooling.md).  
-  
-- Örnek kiralama. Kullanıcılar örneği için kullanım süresi, .NET Framework uzaktan iletişim için benzer bir kiralama desen uygulayabilirsiniz. Bu yapılabilir örneği bağlam ömrü arabirimleri kullanarak.  
-  
-- Özel hata işleme. Kullanıcıların nasıl hem de yerel hata işlenir ve istemcilere geri hatalarının nasıl iletildiği denetleyebilirsiniz. Bunu kullanarak uygulanabilir <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimleri.  
-  
-- Özel yetkilendirme davranışlar. Kullanıcılar, sözleşme veya işlemi çalışma zamanı parçaları genişletme ve iletide belirteçleri temel güvenlik denetimleri ekleyerek özel erişim denetimi uygulayabilirsiniz. Bu ileti kesici veya parametre dinleyiciyi arabirimleri kullanarak gerçekleştirilebilir. Örnekler için bkz [güvenlik genişletilebilirliği](../../../../docs/framework/wcf/samples/security-extensibility.md).  
-  
-    > [!CAUTION]
-    >  Güvenlik özelliklerini değiştirerek WCF uygulamaları güvenliğini tehlikeye olanağına sahip olduğundan, güvenlikle ilgili değişiklikler dikkatli harcayıp ve dağıtımdan önce sınamanız önerilir.  
-  
-- WCF özel çalışma zamanı doğrulayıcıları. WCF uygulamaları göre kurumsal düzey ilkelerini zorlamak için Hizmetleri, sözleşmeler ve bağlamaları inceleyin özel doğrulayıcıları yükleyebilirsiniz. (Örneğin, [nasıl yapılır: Enterprise uç noktalarını kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).)  
-  
-### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime sınıfını kullanma  
- Kullanım <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfı bir hizmet ya da tek bir uç noktası'nın varsayılan davranışını değiştirmek veya bir ya da aşağıdaki hizmet işlemleri (veya çift yönlü istemci söz konusu olduğunda istemci işlemleri) hem de özel değişiklikler uygulayan nesneler Ekle:  
-  
-- Gelen iletileri dönüştürme nesneleri ve hizmet nesnesi üzerinde yöntem çağrıları olarak bu nesneleri serbest bırakma.  
-  
-- Dönüştürme nesnelerin bir hizmet işlemi çağırma giden iletilere yanıt aldı.  
-  
- <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Intercept ve bile bir ileti tanınmıyor tüm iletiler için kanal veya uç nokta dağıtıcı sözleşmeye arasında doğru genişletmenize olanak tanır. Bir ileti herhangi eşleşmeyen geldiğinde bildirilen dağıtılan işleme tarafından döndürülen sözleşmesindeki <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> özelliği. Intercept ya da belirli bir işlem için tüm iletiler arasında genişletmek için bkz: <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfı.  
-  
- Dağıtıcı genişletilebilirlik tarafından sunulan dört ana alan bulunur <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfı:  
-  
-1. Kanal bileşenleri özelliklerini kullanmak <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve bunlar tarafından döndürülen ilişkili kanal dağıtıcı <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> nasıl kanal dağıtıcı kabul eder ve kanalları kapatır özelleştirmek için özellik. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> özellikleri.  
-  
-2. İşlenen her ileti için ileti bileşenleri özelleştirilir. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>ve <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> özellikleri.  
-  
-3. Örnek bileşenleri oluşturma, yaşam süresi ve hizmet türünün örneklerini elden özelleştirin. Hizmet nesne kullanım ömrü hakkında daha fazla bilgi için bkz. <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> özelliği. Bu kategori içerir <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> özellikleri.  
-  
-4. Güvenlikle ilgili bileşenlerini aşağıdaki özellikleri kullanabilirsiniz:  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> denetim olayları yazılacağı gösterir.  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Hizmet gelen ileti tarafından sağlanan kimlik bilgilerini kullanarak bürünülecek deneyip denemeyeceğini denetler.  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> başarılı iletisi kimlik doğrulama olayları tarafından belirtilen olay günlüğüne yazılır olup olmadığını kontrol eder <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> denetimleri nasıl <xref:System.Threading.Thread.CurrentPrincipal%2A> özelliği ayarlanmış.  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Yetkilendirme olaylarının denetlenmesini nasıl gerçekleştirildiğini belirtir.  
-  
-    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> günlüğe kaydetme işlemi sırasında oluşan özel durumlar kritik olmayan engellenip engellenmeyeceğini belirtir.  
-  
- Genellikle, özel genişletme nesneleri için atanmış olan bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime> özelliği veya bir koleksiyona bir hizmet davranışını tarafından eklenen (uygulayan bir nesne <xref:System.ServiceModel.Description.IServiceBehavior>), bir sözleşme davranış (uygulayan bir nesne <xref:System.ServiceModel.Description.IContractBehavior>), veya bir uç nokta davranış (uygulayan bir nesne <xref:System.ServiceModel.Description.IEndpointBehavior>). Yükleme davranışı nesneyi programlama yoluyla veya özel bir uygulama tarafından davranışların ilgili koleksiyona eklenir sonra <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> uygulama yapılandırma dosyası kullanarak eklenecek davranışı etkinleştirmek için nesne.  
-  
- Çift yönlü istemcileri (çift yönlü bir hizmet tarafından belirtilen bir geri çağırma anlaşması uygulamak istemciler) de bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime> kullanılarak erişilebilir nesne <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> özelliği.  
-  
-### <a name="using-the-dispatchoperation-class"></a>DispatchOperation sınıfını kullanma  
- <xref:System.ServiceModel.Dispatcher.DispatchOperation> Sınıfı, konumu çalışma zamanı değişiklikleri ve ekleme kapsamındaki özel uzantıları için yalnızca bir hizmet işlemine noktası. (Bir sözleşme tüm iletiler için hizmet çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfı.)  
-  
- Yükleme <xref:System.ServiceModel.Dispatcher.DispatchOperation> bir özel hizmet davranışı nesnesini kullanarak değişiklikler.  
-  
- Kullanım <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> bulmak için özellik <xref:System.ServiceModel.Dispatcher.DispatchOperation> belirli hizmet işlemini temsil eden nesne.  
-  
- Aşağıdaki özellikleri, çalışma zamanı yürütme işlemi düzeyinde denetler:  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>, Ve <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> özelliklerini işlemi ilgili değerleri alın.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> Ve <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> işlem davranışı belirtin.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> Ve <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> özellikleri göreli kullanıcı tanımlı bir hizmet nesnenin ömrünü denetlemek <xref:System.ServiceModel.InstanceContext>.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>Ve <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> özellikleri nesneleri ve nesneleri iletileri için iletileri dönüştürme açık bir denetime olanak tanır.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> Özellik işlemi kimliğe bürünme düzeyini belirtir.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> Özelliği işlemi için özel arama bağlamı uzantısını ekler.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> Özelliği, parametre nesneler yok edileceği zaman denetler.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> Özelliği bir özel Invoker nesnesi ekler.  
-  
-- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> Özelliği inceleyin veya değiştirme parametreleri ve dönüş değerleri için kullanabileceğiniz bir özel parametre denetçisi eklemenizi sağlar.  
-  
+Dispatchler, temel alınan kanallara ait gelen iletileri çekmekten, bunları uygulama kodundaki yöntem çağırmaları içine çevirerek ve sonuçları çağırana geri gönderen sorumludurlar. Dağıtıcı uzantıları bu işlemeyi değiştirmenize izin verir.  İletilerin veya parametrelerin içeriğini denetleyen veya değiştiren ileti ya da parametre Inspectors uygulayabilirsiniz.  İletilerin işlemlere yönlendirilme biçimini değiştirebilir veya başka bir işlevsellik sağlayabilirsiniz.
+
+Bu konu, bir dağıtıcı 'ın varsayılan <xref:System.ServiceModel.Dispatcher.DispatchRuntime> yürütme <xref:System.ServiceModel.Dispatcher.DispatchOperation> davranışını değiştirmek veya iletileri, parametreleri veya dönüşü ele almak ya da değiştirmek için bir Windows Communication Foundation (WCF) hizmet uygulamasında ve sınıflarının nasıl kullanılacağını açıklar. ya da sonrasında kanal katmanından gönderilmeden veya ondan sonra gelen değerler. Eşdeğer istemci çalışma zamanı iletisi işleme hakkında daha fazla bilgi için bkz. [Istemcileri genişletme](../../../../docs/framework/wcf/extending/extending-clients.md). Farklı çalışma zamanı özelleştirme nesneleri <xref:System.ServiceModel.IExtensibleObject%601> arasında paylaşılan duruma erişirken, türlerin hangi rol üzerinde çalındığını anlamak için bkz. [Genişletilebilir nesneler](../../../../docs/framework/wcf/extending/extensible-objects.md).
+
+## <a name="dispatchers"></a>Dağıtıcılarının yerini alabilir
+
+Hizmet modeli katmanı, geliştiricilerin programlama modeli ve genellikle kanal katmanı olarak adlandırılan temel ileti değişimi arasında dönüştürme işlemini gerçekleştirir. WCF 'de kanal ve uç nokta sevkiyatcıları (<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> ve <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>sırasıyla), yeni kanalları kabul etme, iletileri alma, işlem gönderme ve çağırma ve yanıt işleme işlemlerinin sorumlu olduğu hizmet bileşenleridir. Dağıtıcı nesneleri alıcı nesneleridir, ancak çift yönlü hizmetlerdeki geri çağırma sözleşmesi uygulamaları da denetim, değişiklik veya uzantı için Dispatcher nesnelerini kullanıma sunar.
+
+Kanal dağıtıcısı (ve Yardımcısı <xref:System.ServiceModel.Channels.IChannelListener>), iletileri düşük kanaldan alıp iletileri ilgili uç noktası dağıtıcıları 'na geçirir. Her uç nokta dağıtıcılarının <xref:System.ServiceModel.Dispatcher.DispatchRuntime> , işlemi uygulayan yöntemi çağırmaktan <xref:System.ServiceModel.Dispatcher.DispatchOperation>sorumlu olan iletileri uygun bir şekilde yönlendirdiğini vardır. Çeşitli isteğe bağlı ve gerekli uzantı sınıfları, bu şekilde çağrılır. Bu konu, bu parçaların nasıl bir araya uyduğunu ve temel işlevselliği genişletmek için özellikleri nasıl değiştirebileceğinizi ve içindeki kodunuzu nasıl kullanabileceğinizi açıklar.
+
+Dağıtıcı özellikleri ve değiştirilmiş özelleştirme nesneleri, hizmet, uç nokta, anlaşma veya işlem davranışı nesneleri kullanılarak eklenir. Bu konu, davranışların nasıl kullanılacağını tanımlamaz. Dağıtıcı değişikliklerini eklemek için kullanılan türler hakkında daha fazla bilgi için bkz. [çalışma zamanını davranışlarla birlikte yapılandırma ve genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).
+
+Aşağıdaki grafik, bir hizmette mimari öğelerin üst düzey bir görünümünü sağlar.
+
+![Dağıtım çalışma zamanı mimarisi](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+
+### <a name="channel-dispatchers"></a>Kanal Sevkiyatcıları
+
+Belirli <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> bir URI 'nin (dinleme URI <xref:System.ServiceModel.Channels.IChannelListener> 'si olarak adlandırılır) bir hizmetin örneğiyle ilişkilendirilmesi için bir nesne oluşturulur. Her <xref:System.ServiceModel.ServiceHost> nesne, her biri <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> yalnızca bir dinleyici ve dinleme URI 'siyle ilişkili birçok nesneye sahip olabilir. Bir ileti geldiğinde <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> , her bir ilişkili <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesneyi, uç noktanın iletiyi kabul edip etmediğini sorgular ve iletiyi ' a iletir.
+
+Bir kanal oturumunun ömrünü ve davranışını denetleyen tüm özellikler, <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> nesne üzerinde denetleme veya değiştirme için kullanılabilir. Bunlar özel kanal başlatıcıları, kanal dinleyicisi, ana bilgisayar, ilişkili <xref:System.ServiceModel.InstanceContext>vb. içerir.
+
+### <a name="endpoint-dispatchers"></a>Endpoint Dispatchler
+
+<xref:System.ServiceModel.Dispatcher.ChannelDispatcher> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> Nesne, bir<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> iletinin hedef adresi ile eşleştiğinde ve ileti eylemi özelliği ile eşleştiğinde bir öğesinden gelen <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> iletileri işlemeden sorumludur. İki <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> nesne bir iletiyi kabul edebiliyorsanız <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.FilterPriority%2A> , özellik değeri daha yüksek öncelikli uç noktayı belirler.
+
+, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> Dağıtıcısı işlemini özelleştirmek için kullanabileceğiniz iki ana hizmet modeli uzantı noktasını <xref:System.ServiceModel.Dispatcher.DispatchRuntime> (ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfları) almak için kullanın. <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Sınıfı, kullanıcıların dağıtıcıyı anlaşma kapsamında (yani, bir sözleşmede bulunan tüm iletiler için) kesmesini ve genişletmesini sağlar. <xref:System.ServiceModel.Dispatcher.DispatchOperation> Sınıfı, kullanıcıların dağıtıcı bir işlem kapsamında (yani bir işlemdeki tüm iletiler için) kesmesini ve genişletmesine olanak tanır.
+
+## <a name="scenarios"></a>Senaryolar
+
+Dağıtıcısı genişletecek birkaç neden vardır:
+
+- Özel Ileti doğrulaması. Kullanıcılar, belirli bir şema için bir iletinin geçerli olduğunu zorlayabilir. Bu işlem, ileti yakalayıcı arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [ileti](../../../../docs/framework/wcf/samples/message-inspectors.md)denetçiler.
+
+- Özel Ileti günlüğü. Kullanıcılar bir uç nokta aracılığıyla akan bazı uygulama iletilerini inceleyebilir ve günlüğe kaydedebilir. Bu, ileti yakalayıcısı arabirimleriyle de gerçekleştirilebilir.
+
+- Özel Ileti dönüşümleri. Kullanıcılar çalışma zamanındaki iletiye bazı dönüşümler uygulayabilir (örneğin, sürüm oluşturma için). Bu, ileti yakalayıcısı arabirimleriyle birlikte gerçekleştirilebilir.
+
+- Özel veri modeli. Kullanıcılar, WCF 'de varsayılan olarak desteklenenden farklı bir veri serileştirme modeline sahip olabilir (yani <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>,, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, ve ham iletiler). Bu, ileti biçimlendirici arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+
+- Özel parametre doğrulaması. Kullanıcılar, yazılan parametrelerin geçerli olduğunu (XML 'nin aksine) zorunlu kılabilir. Bu işlem, parametre denetçisi arabirimleri kullanılarak yapılabilir.
+
+- Özel Işlem gönderme. Kullanıcılar, örneğin gövde öğesinde veya özel bir ileti özelliğinde, eylem dışında bir şeye gönderme işlemini uygulayabilir. Bu, <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi kullanılarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+
+- Nesne havuzu oluşturma. Kullanıcılar, her çağrı için yeni bir tane ayırmak yerine, örnekleri havuza alabilir. Bu, örnek sağlayıcı arabirimleri kullanılarak uygulanabilir. Bir örnek için bkz. [Pooling](../../../../docs/framework/wcf/samples/pooling.md).
+
+- Örnek Kiralama. Kullanıcılar, .NET Framework uzaktan Iletişim ile benzer örnek ömrü için bir kiralama stili uygulayabilir. Bu, örnek bağlam ömrü arabirimleri kullanılarak yapılabilir.
+
+- Özel hata Işleme. Kullanıcılar, yerel hataların nasıl işlendiğini ve hataların istemcilere nasıl geri iletildiğini denetleyebilir. Bu, <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimler kullanılarak uygulanabilir.
+
+- Özel yetkilendirme davranışları. Kullanıcılar, sözleşmenin veya Işlemin çalışma zamanı parçalarını genişleterek ve iletideki belirteçleri temel alarak güvenlik denetimleri ekleyerek özel erişim denetimi uygulayabilir. Bu, ileti yakalayıcısı ya da parametre yakalayıcısı arabirimleri kullanılarak yapılabilir. Örnekler için bkz. [güvenlik genişletilebilirliği](../../../../docs/framework/wcf/samples/security-extensibility.md).
+
+  > [!CAUTION]
+  > Güvenlik özelliklerinin değiştirilmesi, WCF uygulamalarının güvenliğinin aşılmasına neden olduğundan, dağıtıma karşı güvenlikle ilgili değişiklikler yapmanız ve dağıtımdan önce kapsamlı test yapmanız önerilir.
+
+- Özel WCF çalışma zamanı Doğrulayıcıları. WCF uygulamalarına göre kurumsal düzeyde ilkeleri zorlamak için Hizmetleri, sözleşmeleri ve bağlamaları incelemek üzere özel doğrulayıcılar yükleyebilirsiniz. (Örneğin, bkz [. nasıl yapılır: Kuruluştaki](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.)
+
+### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime sınıfını kullanma
+
+Bir hizmetin veya tek bir uç noktanın varsayılan davranışını değiştirmek ya da aşağıdaki hizmet işlemlerinin birine veya her ikisine de (bir çift yönlü istemci durumunda istemci süreçlerine) özel değişiklikler uygulayan nesneler eklemek için sınıfınıkullanın:<xref:System.ServiceModel.Dispatcher.DispatchRuntime>
+
+- Gelen iletilerin nesnelere dönüştürülmesi ve bu nesneleri bir hizmet nesnesi üzerinde yöntem çağırma olarak serbest bırakma.
+
+- Bir hizmet işleminin yanıtından alınan nesnelerinin giden iletilere çağrılması.
+
+, <xref:System.ServiceModel.Dispatcher.DispatchRuntime> Bir ileti tanınmadığında bile belirli bir sözleşmede tüm iletiler için kanal veya uç nokta dağıtıcısına müdahale etmenizi ve genişletmenizi sağlar. Bir ileti geldiğinde, bu bir ileti geldiğinde, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> özelliği tarafından döndürülen işleme gönderilir. Belirli bir işlemin tüm iletilerini kesme veya genişletme için, <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıfına bakın.
+
+<xref:System.ServiceModel.Dispatcher.DispatchRuntime> Sınıf tarafından sunulan dağıtıcı genişletilebilirliği dört ana alanı vardır:
+
+1. Kanal bileşenleri, <xref:System.ServiceModel.Dispatcher.DispatchRuntime> kanal dağıtıcısında kanalları kabul etme ve kapatma şeklini özelleştirmek için <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> özelliği tarafından döndürülen ilişkili kanal dağıtıcılarından ve özelliklerini kullanır. Bu kategori, <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> ve <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> özelliklerini içerir.
+
+2. İleti bileşenleri, işlenen her ileti için özelleştirilir. <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>Bu kategori <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> ,<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>,, ve<xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> özelliklerini içerir.
+
+3. Örnek bileşenleri, hizmet türü örneklerinin oluşturulmasını, ömrünü ve elden çıkarılmasını özelleştirir. Hizmet nesnesi yaşam süreleri hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> . özelliği. Bu kategori, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> ve özelliklerini içerir.
+
+4. Güvenlikle ilgili bileşenler aşağıdaki özellikleri kullanabilir:
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>Denetim olaylarının yazıldığı yeri belirtir.
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A>hizmetin, gelen ileti tarafından belirtilen kimlik bilgilerini kullanarak kimliğe bürünmeye çalışıp çalışmadığını denetler.
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A>başarılı ileti kimlik doğrulama olaylarının tarafından <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>belirtilen olay günlüğüne yazılıp yazılmadığını denetler.
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A><xref:System.Threading.Thread.CurrentPrincipal%2A> özelliğin nasıl ayarlandığını denetler.
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A>Yetkilendirme olaylarının denetimini nasıl gerçekleştirileceğini belirtir.
+
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A>günlüğe kaydetme işlemi sırasında oluşan kritik olmayan özel durumların engellenip engellenmeyeceğini belirtir.
+
+Genellikle, özel uzantı nesneleri bir <xref:System.ServiceModel.Dispatcher.DispatchRuntime> özelliğe atanır veya bir hizmet davranışı (uygulayan <xref:System.ServiceModel.Description.IServiceBehavior>bir nesne), bir sözleşme davranışı (uygulayan <xref:System.ServiceModel.Description.IContractBehavior>bir nesne) veya bir uç nokta tarafından koleksiyona eklenir davranış (uygulayan <xref:System.ServiceModel.Description.IEndpointBehavior>bir nesne). Daha sonra yükleme davranışı nesnesi, programlı bir şekilde veya bir uygulama yapılandırma dosyası kullanılarak bir davranışın eklenmesine olanak tanımak <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> için özel bir nesne uygulayarak, uygun davranış koleksiyonuna eklenir.
+
+Çift yönlü istemciler (bir çift yönlü hizmet tarafından belirtilen bir geri çağırma anlaşması uygulayan istemciler), <xref:System.ServiceModel.Dispatcher.DispatchRuntime> <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> özelliği kullanılarak erişilebilen bir nesneye de sahiptir.
+
+### <a name="using-the-dispatchoperation-class"></a>DispatchOperation sınıfını kullanma
+
+<xref:System.ServiceModel.Dispatcher.DispatchOperation> Sınıfı, çalışma zamanı değişikliklerinin ve yalnızca bir hizmet işlemi kapsamındaki özel uzantılar için ekleme noktasının konumudur. (Bir sözleşmede tüm iletiler için hizmet çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfını kullanın.)
+
+Özel <xref:System.ServiceModel.Dispatcher.DispatchOperation> bir hizmet davranışı nesnesi kullanarak değişiklikleri yükler.
+
+Belirli bir hizmet işlemini temsil eden <xref:System.ServiceModel.Dispatcher.DispatchOperation> nesneyi bulmak için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>
+
+Aşağıdaki özellikler çalışma zamanı yürütme işlemini işlem düzeyinde denetler:
+
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A> ,<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A> ,,<xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> , Ve özellikleri işlem için ilgili değerleri elde eder. <xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A> <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A> <xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>
+
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> Ve<xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> işlem davranışını belirtin.
+
+- Ve özellikleri, Kullanıcı tanımlı <xref:System.ServiceModel.InstanceContext>hizmet nesnesinin öğesine göre ömrünü denetler. <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A>
+
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>, Veözellikleri<xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> iletilerden nesnelere ve nesnelere dönüştürme üzerinde açık denetimi etkinleştirir. <xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>
+
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> Özelliği, işlem kimliğe bürünme düzeyini belirtir.
+
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> Özelliği, işlem için özel çağrı bağlamı uzantıları ekler.
+
+- Parametre nesneleri yok edildiğinde özelliğidenetler.<xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A>
+
+- Özel bir Invoker nesnesi eklemek için özelliği.<xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A>
+
+- Özelliği <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> , parametreleri incelemek veya değiştirmek için kullanabileceğiniz özel bir parametre denetçisi eklemenize olanak sağlar ve değerleri döndürür.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Nasıl yapılır: Hizmette iletileri denetleme ve değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Nasıl yapılır: Enterprise uç noktalarını kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Nasıl yapılır: Hizmette Iletileri İnceleme ve değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Nasıl yapılır: Parametreleri İnceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Nasıl yapılır: Kuruluştaki uç noktaları kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

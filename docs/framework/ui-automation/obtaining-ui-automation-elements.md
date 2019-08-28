@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966381"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044141"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI Otomasyon Öğelerini Alma
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966381"
  Bu konu, öğeler için <xref:System.Windows.Automation.AutomationElement> [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] nesneleri almanın çeşitli yollarını açıklamaktadır.  
   
 > [!CAUTION]
->  İstemci uygulamanız kendi Kullanıcı arabirimindeki öğeleri bulmaya çalışıyorsa, tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrıları ayrı bir iş parçacığında yapmanız gerekir. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> İstemci uygulamanız kendi Kullanıcı arabirimindeki öğeleri bulmaya çalışıyorsa, tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] çağrıları ayrı bir iş parçacığında yapmanız gerekir. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Kök öğe  
@@ -28,7 +28,7 @@ ms.locfileid: "69966381"
  Tüm öğelerin alt öğe olduğu masaüstü için kök öğe, statik <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> özelliğinden alınır.  
   
 > [!CAUTION]
->  Genel olarak, yalnızca kendi doğrudan alt öğelerini <xref:System.Windows.Automation.AutomationElement.RootElement%2A>edinmeye çalışırsınız. Alt öğeler için arama yüzlerce veya hatta binlerce öğe aracılığıyla yineleyebilir ve muhtemelen yığın taşmasına neden olabilir. Daha düşük bir düzeyde belirli bir öğe edinmeye çalışıyorsanız, aramanızı uygulama penceresinden veya bir kapsayıcıdan daha düşük bir düzeyde başlatmanız gerekir.  
+> Genel olarak, yalnızca kendi doğrudan alt öğelerini <xref:System.Windows.Automation.AutomationElement.RootElement%2A>edinmeye çalışırsınız. Alt öğeler için arama yüzlerce veya hatta binlerce öğe aracılığıyla yineleyebilir ve muhtemelen yığın taşmasına neden olabilir. Daha düşük bir düzeyde belirli bir öğe edinmeye çalışıyorsanız, aramanızı uygulama penceresinden veya bir kapsayıcıdan daha düşük bir düzeyde başlatmanız gerekir.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Koşullar  

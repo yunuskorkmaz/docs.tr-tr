@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: b433263cc4d72b6418cf75c278316444c83ada8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933502"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044229"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izlemeleri yaymak ve izleme düzeylerini ayarlamayı, Etkinlik izlemeyi ve yaymayı, uçtan uca izleme bağıntısını destekleyecek şekilde ayarlamayı ve izleme dinleyicilerini izlemelere erişim için ayarlamayı açıklar.  
@@ -145,7 +145,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
  Ayrıca, bir izleme dinleyicisini programlı bir şekilde yapılandırabilirsiniz. Daha fazla bilgi için [nasıl yapılır: İzleme dinleyicileri](https://go.microsoft.com/fwlink/?LinkId=94648) oluşturma ve başlatma ve [özel bir TraceListener oluşturma](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
->  `System.Diagnostics.XmlWriterTraceListener` , İş parçacığı açısından güvenli olmadığından izleme kaynağı, izlemeleri çıktıları sırasında kaynakları özel olarak kilitleyebilir. Birçok iş parçacığı çıkışı, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlenirse, kaynak çakışması oluşabilir ve bu durum önemli bir performans sorununa neden olur. Bu sorunu çözmek için, iş parçacığı açısından güvenli olan özel bir dinleyici uygulamalısınız.  
+> `System.Diagnostics.XmlWriterTraceListener` , İş parçacığı açısından güvenli olmadığından izleme kaynağı, izlemeleri çıktıları sırasında kaynakları özel olarak kilitleyebilir. Birçok iş parçacığı çıkışı, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlenirse, kaynak çakışması oluşabilir ve bu durum önemli bir performans sorununa neden olur. Bu sorunu çözmek için, iş parçacığı açısından güvenli olan özel bir dinleyici uygulamalısınız.  
   
 ## <a name="trace-level"></a>İzleme düzeyi  
  İzleme düzeyi izleme kaynağı `switchValue` ayarıyla denetlenir. Kullanılabilir izleme düzeyleri aşağıdaki tabloda açıklanmıştır.  
@@ -164,7 +164,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
  Ayrıntılıdan kritik ' e kadar olan düzeyler birbirlerinin üzerine yığılır, diğer bir deyişle, her bir izleme düzeyi, kapalı düzeyi hariç tüm seviyeleri içerir. Örneğin, uyarı düzeyini dinleyen bir dinleyici, kritik, hata ve uyarı izlemelerini alır. Tüm düzey, ayrıntıdan kritik ve etkinlik izleme olaylarına kadar olan olayları içerir.  
   
 > [!CAUTION]
->  Bilgi, ayrıntılı ve ActivityTracing düzeyleri, makinedeki tüm kullanılabilir kaynakları kullandıysanız ileti aktarım hızını olumsuz yönde etkileyebilecek çok sayıda izleme oluşturur.  
+> Bilgi, ayrıntılı ve ActivityTracing düzeyleri, makinedeki tüm kullanılabilir kaynakları kullandıysanız ileti aktarım hızını olumsuz yönde etkileyebilecek çok sayıda izleme oluşturur.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Bağıntı için etkinlik Izlemeyi ve yaymayı yapılandırma  
  Öznitelik için belirtilen değer, etkinlik sınırları ve uç noktalar içindeki aktarımlar için izlemeleri veren Etkinlik izlemeyi etkinleştirmek için kullanılır. `activityTracing` `switchValue`  

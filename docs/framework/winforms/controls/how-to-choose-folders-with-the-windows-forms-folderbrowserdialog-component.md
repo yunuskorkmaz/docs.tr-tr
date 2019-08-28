@@ -12,60 +12,61 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc19ea466f535f783d3b0537a973ce41c223902d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746931"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046130"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Nasıl yapılır: Windows Forms FolderBrowserDialog Bileşeni ile Klasörleri Seçme
-Genellikle, Windows, içinde oluşturduğunuz uygulamalar, en sık dosya kümesini kaydetmek için bir klasör seçmek için kullanıcılara sor gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşen kolayca bu görevi gerçekleştirmek sağlar.  
-  
-### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>FolderBrowserDialog bileşeni ile klasörleri seçme  
-  
-1. Bir yordamda denetleyin <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.Form.DialogResult%2A> iletişim kutusu nasıl kapatıldığı görmek ve değerini almak için özellik <xref:System.Windows.Forms.FolderBrowserDialog> bileşenin <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliği.  
-  
-2. İletişim kutusunun ağacı görünümü içinde görünecek kümesi en üstteki klasöre ihtiyacınız varsa, ayarlayın <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> üyesi özelliği <xref:System.Environment.SpecialFolder> sabit listesi.  
-  
-3. Ayrıca, ayarlayabileceğiniz <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> metin dizesini belirtir. özellik, klasör tarayıcı ağaç görünümü üst kısmında görünür.  
-  
-     Aşağıdaki örnekte <xref:System.Windows.Forms.FolderBrowserDialog> bileşen ne zaman Visual Studio'da bir proje oluşturun ve içine kaydetmek için bir klasör seçmeniz istenir benzer bir klasör seçmek için kullanılır. Bu örnekte, klasör adı ardından görüntülenen bir <xref:System.Windows.Forms.TextBox> form denetimi. Konumun düzenlenebilir bir alanda gibi yerleştirmek için iyi bir fikirdir bir <xref:System.Windows.Forms.TextBox> denetlemek ve böylece kullanıcılar kendi seçimi hata veya diğer sorunları durumunda düzenleyebilirsiniz. Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni ve bir <xref:System.Windows.Forms.TextBox> denetimi.  
-  
-    ```vb  
-    Public Sub ChooseFolder()  
-        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then  
-            TextBox1.Text = FolderBrowserDialog1.SelectedPath  
-        End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void ChooseFolder()  
-    {  
-        if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)   
-        {  
-            textBox1.Text = folderBrowserDialog1.SelectedPath;  
-        }  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       void ChooseFolder()  
-       {  
-          if (folderBrowserDialog1->ShowDialog() == DialogResult::OK)  
-          {  
-             textBox1->Text = folderBrowserDialog1->SelectedPath;  
-          }  
-       }  
-    ```  
-  
+
+Genellikle, oluşturduğunuz Windows uygulamalarında, bir dosya kümesini kaydetmek için kullanıcılardan bir klasör seçmesini istemek gerekecektir. Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni bu görevi kolayca gerçekleştirmenize olanak tanır.
+
+### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>FolderBrowserDialog Bileşeni ile klasörleri seçmek için
+
+1. Bir yordamda, iletişim kutusunun nasıl <xref:System.Windows.Forms.FolderBrowserDialog> kapatıldığını görmek <xref:System.Windows.Forms.Form.DialogResult%2A> ve <xref:System.Windows.Forms.FolderBrowserDialog> bileşen <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> özelliğinin değerini almak için bileşenin özelliğini denetleyin.
+
+2. İletişim kutusunun ağaç görünümünde görünecek en üstteki klasörü ayarlamanız gerekirse, <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> <xref:System.Environment.SpecialFolder> sabit listesinin bir üyesini alan özelliğini ayarlayın.
+
+3. Ayrıca, klasör tarayıcısı ağaç görünümünün <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> en üstünde görünen metin dizesini belirten özelliğini de ayarlayabilirsiniz.
+
+    Aşağıdaki örnekte, <xref:System.Windows.Forms.FolderBrowserDialog> bileşeni, Visual Studio 'da bir proje oluştururken olduğu gibi bir klasörü seçmek için kullanılır ve dosyayı kaydetmek için bir klasör seçmeniz istenir. Bu örnekte, klasör adı form üzerindeki bir <xref:System.Windows.Forms.TextBox> denetimde görüntülenir. Bu, bir denetim gibi düzenlenebilir bir alana, kullanıcıların bir hata durumunda veya başka sorunlar durumunda <xref:System.Windows.Forms.TextBox> kendi seçimini düzenleyebilmeleri için, konumunu bir şekilde yerleştirmek iyi bir fikir olabilir. Bu örnekte <xref:System.Windows.Forms.FolderBrowserDialog> <xref:System.Windows.Forms.TextBox> , bir form ve bir denetim içeren bir form varsayılır.
+
+    ```vb
+    Public Sub ChooseFolder()
+        If FolderBrowserDialog1.ShowDialog() = DialogResult.OK Then
+            TextBox1.Text = FolderBrowserDialog1.SelectedPath
+        End If
+    End Sub
+    ```
+
+    ```csharp
+    public void ChooseFolder()
+    {
+        if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+        {
+            textBox1.Text = folderBrowserDialog1.SelectedPath;
+        }
+    }
+    ```
+
+    ```cpp
+    public:
+       void ChooseFolder()
+       {
+          if (folderBrowserDialog1->ShowDialog() == DialogResult::OK)
+          {
+             textBox1->Text = folderBrowserDialog1->SelectedPath;
+          }
+       }
+    ```
+
     > [!IMPORTANT]
-    >  Bu sınıf kullanmak için ayrıcalık düzeyi verilen tarafından derlemeyi <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> parçası olan özelliği, <xref:System.Security.Permissions.FileIOPermissionAccess> sabit listesi. Kısmi güven bağlamda çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle özel bir durum fırlatabilir. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).  
-  
- Dosyaları kaydetme hakkında daha fazla bilgi için bkz: [nasıl yapılır: SaveFileDialog bileşenini kullanarak dosyaları kaydetme](how-to-save-files-using-the-savefiledialog-component.md).  
-  
+    > Bu sınıfı kullanmak için, derlemeniz, <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> <xref:System.Security.Permissions.FileIOPermissionAccess> numaralandırmanın bir parçası olan özelliği tarafından verilen bir ayrıcalık düzeyi gerektirir. Kısmi güven bağlamında çalıştırıyorsanız, işlem yetersiz ayrıcalıklar nedeniyle bir özel durum oluşturabilir. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../misc/code-access-security-basics.md).
+
+Dosyaların nasıl kaydedileceği hakkında bilgi için bkz [. nasıl yapılır: Dosyaları SaveFileDialog bileşenini](how-to-save-files-using-the-savefiledialog-component.md)kullanarak kaydedin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>

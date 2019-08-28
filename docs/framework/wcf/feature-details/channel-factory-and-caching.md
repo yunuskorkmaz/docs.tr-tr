@@ -2,115 +2,117 @@
 title: Kanal Fabrikası ve Önbelleğe Alma
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 94b3cb22c76a215944d044db0f4392005e49f2ad
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98b77071204e2c2f98609e6c5bb1ca84a896dd58
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645412"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040209"
 ---
 # <a name="channel-factory-and-caching"></a>Kanal Fabrikası ve Önbelleğe Alma
-WCF istemci uygulamalarının kullanın <xref:System.ServiceModel.ChannelFactory%601> bir WCF Hizmeti ile bir iletişim kanalı oluşturmak için sınıf.  Oluşturma <xref:System.ServiceModel.ChannelFactory%601> örnekleri aşağıdaki işlemleri içerdiğinden bazı ek yük doğurur:  
-  
-- Oluşturma <xref:System.ServiceModel.Description.ContractDescription> ağacı  
-  
-- Tüm gerekli CLR Türleri yansıtma  
-  
-- Kanal yığını oluşturma  
-  
-- Kaynaklarını atma  
-  
- WCF bu ek yükü en aza indirmek için bir WCF istemci proxy kullanırken kanal fabrikaları önbelleğe alabilir.  
-  
+
+WCF istemci uygulamaları, <xref:System.ServiceModel.ChannelFactory%601> bir WCF hizmeti ile iletişim kanalı oluşturmak için sınıfını kullanır.  Aşağıdaki <xref:System.ServiceModel.ChannelFactory%601> işlemleri içerdiğinden örnek oluşturma bazı ek yük doğurur:
+
+- <xref:System.ServiceModel.Description.ContractDescription> Ağacı oluşturma
+
+- Tüm gerekli CLR türlerini yansıtma
+
+- Kanal yığınını oluşturma
+
+- Kaynakları elden atma
+
+Bu ek yükü en aza indirmenize yardımcı olmak için WCF istemci ara sunucusu kullanırken WCF kanal fabrikalarını önbelleğe alabilir.
+
 > [!TIP]
->  Kullanırken kanal fabrikası oluşturma doğrudan denetime sahip <xref:System.ServiceModel.ChannelFactory%601> doğrudan sınıf.  
-  
- Oluşturulan WCF istemci proxy'leri [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) türetilmiştir <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> statik tanımlar <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> kanal fabrikası önbelleğe alma davranışını tanımlayan özellik. Belirli bir türü için önbellek ayarları yapılır. Örneğin, ayarlamak `ClientBase<ITest>.CacheSettings` aşağıda tanımlanan değerlerden biri olarak yalnızca bu proxy/ClientBase türü etkiler `ITest`. Belirli bir önbellek ayarını <xref:System.ServiceModel.ClientBase%601> ilk proxy/ClientBase örneği oluşturulduktan hemen sonra sabittir.  
-  
-## <a name="specifying-caching-behavior"></a>Önbelleğe alma davranışını belirtme  
- Önbelleğe alma davranışını belirtilen ayarlayarak <xref:System.ServiceModel.ClientBase%601.CacheSetting> özelliğini şu değerlerden biri.  
-  
-|Önbellek ayar değeri|Açıklama|  
-|-------------------------|-----------------|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Tüm örneklerini <xref:System.ServiceModel.ClientBase%601> uygulama etki alanında önbelleğe katılabilir. Geliştirici, önbelleğe alma için hiçbir olumsuz güvenlikle ilgili etkileri olduğunu belirledi. Önbelleğe alma açık devre dışı bile "güvenlik açısından hassas" özellikleri <xref:System.ServiceModel.ClientBase%601> erişilir. "Güvenlik açısından hassas" özelliklerini <xref:System.ServiceModel.ClientBase%601> olan <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>, <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> ve <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>.|  
-|<xref:System.ServiceModel.CacheSetting.Default>|Yalnızca örneklerini <xref:System.ServiceModel.ClientBase%601> dosyaları katılmak uygulama etki alanında önbelleğe yapılandırmasında tanımlı uç noktalarından oluşturulur. Tüm örneklerini <xref:System.ServiceModel.ClientBase%601> içinde program aracılığıyla oluşturulan bu uygulama etki alanı önbelleğe alırken katılmayacaktır. Ayrıca, önbelleğe alma bir örneği için devre dışı bırakılacak <xref:System.ServiceModel.ClientBase%601> "güvenlik açısından hassas" özelliklerinden birini erişilen sonra.|  
-|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Önbelleğe alma devre dışı olduğundan tüm örnekleri için <xref:System.ServiceModel.ClientBase%601> belli bir türdeki app-etki alanı içinde söz konusu.|  
-  
- Aşağıdaki kod parçacıkları nasıl kullanılacağını örneklendiren <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> özelliği.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))   
-         {   
-            // ...  
-            proxy.Test(msg);   
-            // ...  
-         }   
-      }   
-   }   
-}  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest { }  
-```  
-  
- Yukarıdaki kodda, tüm örneklerini `TestClient` aynı kanal fabrikası kullanır.  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.Default;   
-      int i = 1;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            if (i == 4)   
-            {   
-               ServiceEndpoint endpoint = proxy.Endpoint;   
-               ... // use endpoint in some way   
-            }   
-            proxy.Test(msg);   
-         }   
-         i++;   
-   }   
-}   
-  
-// Generated by SvcUtil.exe     
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- Tüm örneklerini yukarıdaki örnekte `TestClient` örneği #4 dışında aynı kanal fabrikası kullanırsınız. #4 örneği oluşturulan kanal fabrikası kullanımına özellikle kullanmanız gerekir. Bu ayar, belirli bir uç noktası diğer uç noktalar aynı kanal fabrikası türde farklı güvenlik ayarlarından gereken yere senaryoları için işe yarar (Bu durumda `ITest`).  
-  
-```csharp  
-class Program   
-{   
-   static void Main(string[] args)   
-   {   
-      ClientBase.CacheSettings = CacheSettings.AlwaysOff;   
-      foreach (string msg in messages)   
-      {   
-         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))   
-         {   
-            proxy.Test(msg);   
-         }           
-      }   
-   }  
-}  
-  
-// Generated by SvcUtil.exe   
-public partial class TestClient : System.ServiceModel.ClientBase, ITest {}  
-```  
-  
- Tüm örneklerini yukarıdaki örnekte `TestClient` farklı kanal fabrikaları kullanırsınız. Bu, her bir uç nokta farklı güvenlik gereksinimlerine sahip olduğunda ve önbellek için hiçbir mantıklı kullanışlıdır.  
-  
+> <xref:System.ServiceModel.ChannelFactory%601> Sınıfını doğrudan kullandığınızda kanal fabrikası oluşturma üzerinde doğrudan denetiminiz vardır.
+
+[ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Ile oluşturulan WCF istemci proxy 'leri <xref:System.ServiceModel.ClientBase%601>, öğesinden türetilir. <xref:System.ServiceModel.ClientBase%601>Kanal fabrikası önbelleğe <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> alma davranışını tanımlayan bir statik özelliği tanımlar. Belirli bir tür için önbellek ayarları yapılır. Örneğin, aşağıda tanımlanan `ClientBase<ITest>.CacheSettings` değerlerden birine ayarlandığında yalnızca türünün `ITest`proxy/ClientBase değeri etkilenir. İlk proxy/ClientBase örneği <xref:System.ServiceModel.ClientBase%601> oluşturulduktan hemen sonra, belirli bir için önbellek ayarı sabittir.
+
+## <a name="specifying-caching-behavior"></a>Önbelleğe alma davranışını belirtme
+
+Önbelleğe alma davranışı, <xref:System.ServiceModel.ClientBase%601.CacheSetting> özelliği aşağıdaki değerlerden birine ayarlanarak belirtilir.
+
+|Önbellek ayarı değeri|Açıklama|
+|-------------------------|-----------------|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOn>|Uygulama etki alanı <xref:System.ServiceModel.ClientBase%601> içindeki tüm örnekleri önbelleğe alma işlemine katılabilir. Geliştirici, önbelleğe alma işleminin olumsuz güvenlik etkilerine sahip olmadığını belirledi. "Güvenliğe duyarlı" özelliklere <xref:System.ServiceModel.ClientBase%601> erişilmesi durumunda bile önbelleğe alma devre dışı bırakılır. ' Nin <xref:System.ServiceModel.ClientBase%601> "güvenlik duyarlı" özellikleri ve <xref:System.ServiceModel.ClientBase%601.ChannelFactory%2A>' <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601.Endpoint%2A> dir.|
+|<xref:System.ServiceModel.CacheSetting.Default>|Yalnızca yapılandırma dosyalarında <xref:System.ServiceModel.ClientBase%601> tanımlanan bitiş noktalarından oluşturulan örnekleri, uygulama etki alanı içinde önbelleğe almaya katılır. Bu uygulama etki <xref:System.ServiceModel.ClientBase%601> alanı içinde programlı olarak oluşturulan tüm örnekleri, önbelleğe alma işlemine katılmaz. Ayrıca, "güvenliğe duyarlı" özelliklerden birine erişildiğinde bir <xref:System.ServiceModel.ClientBase%601> örneği için önbelleğe alma devre dışı bırakılır.|
+|<xref:System.ServiceModel.CacheSetting.AlwaysOff>|Bu, söz konusu App-Domain içindeki <xref:System.ServiceModel.ClientBase%601> belirli bir türün tüm örnekleri için önbelleğe alma kapalıdır.|
+
+Aşağıdaki kod parçacıkları, <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> özelliğinin nasıl kullanılacağını gösterir.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase<ITest>.CacheSettings = CacheSettings.AlwaysOn;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient (new BasicHttpBinding(), new EndpointAddress(address)))
+         {
+            // ...
+            proxy.Test(msg);
+            // ...
+         }
+      }
+   }
+}
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest { }
+```
+
+Yukarıdaki kodda, tüm örnekleri `TestClient` aynı kanal fabrikasını kullanır.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.Default;
+      int i = 1;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            if (i == 4)
+            {
+               ServiceEndpoint endpoint = proxy.Endpoint;
+               ... // use endpoint in some way
+            }
+            proxy.Test(msg);
+         }
+         i++;
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+Yukarıdaki örnekte, öğesinin `TestClient` tüm örnekleri, örnek #4 dışında aynı kanal fabrikası kullanır. Örnek #4, kullanımı için özel olarak oluşturulan bir kanal fabrikası kullanacaktır. Bu ayar, belirli bir uç noktanın aynı kanal fabrikası türünün diğer uç noktalarından farklı güvenlik ayarlarına ihtiyacı olan senaryolarda (Bu durumda `ITest`) çalışır.
+
+```csharp
+class Program
+{
+   static void Main(string[] args)
+   {
+      ClientBase.CacheSettings = CacheSettings.AlwaysOff;
+      foreach (string msg in messages)
+      {
+         using (TestClient proxy = new TestClient ("MyEndpoint", new EndpointAddress(address)))
+         {
+            proxy.Test(msg);
+         }
+      }
+   }
+}
+
+// Generated by SvcUtil.exe
+public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
+```
+
+Yukarıdaki örnekte, öğesinin `TestClient` tüm örnekleri farklı kanal fabrikaları kullanır. Bu, her bir uç nokta farklı güvenlik gereksinimlerine sahip olduğunda ve önbelleğe alma mantıklı olmadığında yararlıdır.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.ClientBase%601>

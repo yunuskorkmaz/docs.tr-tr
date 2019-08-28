@@ -2,22 +2,22 @@
 title: Programlama Modeli Öğe Ağacı
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: f2d89cb2a3b0f6167f043148ea793ec1c264a556
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170067"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038179"
 ---
 # <a name="programming-model-item-tree"></a>Programlama Modeli Öğe Ağacı
-Bu örnek nasıl gidileceğini gösteren <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) ağaç görünümünden bildirim temelli veriler bağlama kullanarak ağaç.
+Bu örnek, <xref:System.Activities.Presentation.Model.ModelItem> Windows Presentation Foundation (WPF) ağaç görünümünden bildirim temelli veri bağlamayı kullanarak ağaçta nasıl gezineceğinizi gösterir.
 
-## <a name="sample-details"></a>Örnek Ayrıntıları
- <xref:System.Activities.Presentation.Model.ModelItem> Ağacıdır tarafından kullanılan soyutlama [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] düzenlenmekte olan temel örneği hakkındaki verileri göstermek için altyapı. Aşağıdaki çizimde bir altyapı dahilinde çeşitli katmanları bir gösterimi olan [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
+## <a name="sample-details"></a>Örnek Ayrıntılar
+ Ağaç, düzenlenmekte olan temeldeki örnekle ilgili verileri göstermek için [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] altyapı tarafından kullanılan soyutlamadır. <xref:System.Activities.Presentation.Model.ModelItem> Aşağıdaki çizim, [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]içindeki çeşitli altyapı katmanlarının bir gösterimi.
 
  ![İş Akışı Tasarımcısı mimarisini gösteren diyagram.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
- A <xref:System.Activities.Presentation.Model.ModelItem> koleksiyonunu yanı sıra, temeldeki değeri için bir işaretçi oluşur <xref:System.Activities.Presentation.Model.ModelProperty> nesneleri. A <xref:System.Activities.Presentation.Model.ModelProperty> nesnesi sırayla oluşur adı ve türü özelliği ve buna karşılık, başka değeri için bir işaretçi gibi veri <xref:System.Activities.Presentation.Model.ModelItem>. Bazılarını işlemek için kullanılan bir değer dönüştürücü <xref:System.Activities.Presentation.Model.ModelItem>s öğesinden döndürülen bir <xref:System.Activities.Presentation.Model.ModelProperty> hale getirmek için bunları doğru ağaç görünümünde görünür. Örnek daha sonra kesin karşı programlamak nasıl gösterir <xref:System.Activities.Presentation.Model.ModelItem> aşağıdaki örnekte görüldüğü gibi kesinlik temelli sözdizimi kullanılarak ağaç.
+ , Temel alınan değerin bir işaretçisinin yanı sıra bir <xref:System.Activities.Presentation.Model.ModelProperty> nesne koleksiyonu içerir.<xref:System.Activities.Presentation.Model.ModelItem> Sırasıyla <xref:System.Activities.Presentation.Model.ModelProperty> bir nesne, özelliğin adı ve türü gibi verilerden oluşur ve sonra değer için bir işaretçi, diğeri <xref:System.Activities.Presentation.Model.ModelItem>de olur. Bir değer Dönüştürücüsü, ağaç görünümünde doğru görünmesini sağlamak için <xref:System.Activities.Presentation.Model.ModelItem>bir <xref:System.Activities.Presentation.Model.ModelProperty> öğesinden döndürülen bazı öğeleri işlemek için kullanılır. Örnek daha sonra, aşağıdaki örnekte görüldüğü gibi, zorunlu <xref:System.Activities.Presentation.Model.ModelItem> sözdizimini kullanarak nasıl imperatively program ağacına karşılık gelen gösterilmektedir.
 
 ```csharp
 ModelItem mi = wd.Context.Services.GetService<ModelService>().Root;
@@ -29,24 +29,24 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2010'da ProgrammingModelItemTree.sln çözümü açın.
+1. Visual Studio 2010 ' de Studio. sln çözümünü açın.
 
-2. Çözüm seçerek yapı **Çözümü Derle** gelen **derleme** menüsü.
+2. **Build** menüsünden **Build Solution** ' i seçerek çözümü oluşturun.
 
-3. Uygulamayı çalıştırmak için F5'e basın. WPF formu sonra görüntülenir.
+3. Uygulamayı çalıştırmak için F5'e basın. WPF formu daha sonra görüntülenir.
 
-4. Tıklayın **yük WF** yüklemek için düğmeye <xref:System.Activities.Presentation.Model.ModelItem> ve ağaç görünümüne bağlayın.
+4. Yüklemek<xref:System.Activities.Presentation.Model.ModelItem> ve ağaç görünümüne bağlamak için **WF yükle** düğmesine tıklayın.
 
-5. Tıklayarak **değişiklik modeli öğe ağacı** düğmesi ağacına bir öğe ekleyin ve bir özelliği ayarlamak için yukarıdaki kodu yürütür.
+5. **Model öğe ağacını Değiştir** düğmesine tıklamak, bir öğeyi ağaca eklemek ve bir özelliği ayarlamak için yukarıdaki kodu yürütür.
 
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

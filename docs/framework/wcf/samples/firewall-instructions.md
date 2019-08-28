@@ -2,12 +2,12 @@
 title: Güvenlik Duvarı Yönergeleri
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961403"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044945"
 ---
 # <a name="firewall-instructions"></a>Güvenlik Duvarı Yönergeleri
 Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güvenlik duvarındaki çeşitli bağlantı noktalarını veya programları etkinleştirmeniz gerekir. Örneklerin birçoğu 8000-8003 aralığındaki bağlantı noktalarını ve bağlantı noktası 9000 ' yi kullanarak iletişim kurar. Güvenlik Duvarı varsayılan olarak açıktır ve bu bağlantı noktalarına erişimi engeller. Örneklere yönelik güvenlik duvarını etkinleştirmek için, gereksinimlerinize ve güvenlik ortamınıza bağlı olarak aşağıdaki yordamlardan birini yapın:  
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
  Hangi yordamın kullanılacağı konusunda emin değilseniz, ilk seçeneği belirleyin. Başka bir satıcıdan güvenlik duvarı çalıştırıyorsanız, benzer değişiklikler yapmanız gerekebilir.  
   
 > [!IMPORTANT]
->  Güvenlik duvarı yapılandırmanızı değiştirmek güvenliği etkiler. Yaptığınız değişiklikleri kaydetmeniz ve örneklerle çalışmayı bitirdiğinizde onları kaldırmanız önerilir.  
+> Güvenlik duvarı yapılandırmanızı değiştirmek güvenliği etkiler. Yaptığınız değişiklikleri kaydetmeniz ve örneklerle çalışmayı bitirdiğinizde onları kaldırmanız önerilir.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>Örnek programları önceden etkinleştirmek için  
   
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) örneklerinin çalışabilmesi için güv
 2. **Başlat**' a tıklayın, **Çalıştır**' a `firewall.cpl`tıklayın ve yazın. Bu, **Windows Güvenlik Duvarı Denetim Masası** uygulamasını açar.  
   
     > [!NOTE]
-    >  Windows Güvenlik Duvarı üzerinden iletişim kurmayı gerektiren örnekleri çalıştırmak için güvenlik duvarı ayarlarını değiştirme izninizin olması gerekir. Bazı güvenlik duvarı ayarları kullanılamaz durumdaysa ve bilgisayarınız bir etki alanına bağlıysa, sistem yöneticiniz bu ayarları grup ilkesi aracılığıyla denetliyor olabilir.  
+    > Windows Güvenlik Duvarı üzerinden iletişim kurmayı gerektiren örnekleri çalıştırmak için güvenlik duvarı ayarlarını değiştirme izninizin olması gerekir. Bazı güvenlik duvarı ayarları kullanılamaz durumdaysa ve bilgisayarınız bir etki alanına bağlıysa, sistem yöneticiniz bu ayarları grup ilkesi aracılığıyla denetliyor olabilir.  
   
 3. Windows Güvenlik Duvarı aracılığıyla bir programa izin vermek için aşağıdaki işletim özel adımlardan birini doldurun:  
   

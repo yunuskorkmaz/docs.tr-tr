@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b56fc09b33a846fe94a52e19dc4b9c806d79c121
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911666"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044101"
 ---
 # <a name="ui-automation-events-for-clients"></a>İstemciler İçin UI Otomasyon Olayları
 > [!NOTE]
@@ -44,7 +44,7 @@ ms.locfileid: "69911666"
 > Pencere kapalı olaylarını işlemek için, olay işleyicisine geçirilen bağımsız değişken türünü olarak <xref:System.Windows.Automation.WindowClosedEventArgs>atayın. Pencerenin öğesi artık geçerli olmadığından, bilgileri almak için `sender` parametresini kullanamazsınız; bunun yerine kullanın <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A>. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]  
   
 > [!CAUTION]
->  Uygulamanız kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]etkinliklerini alabilir, olaylara abone olmak veya aboneliği kaldırmak için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] uygulamanızın iş parçacığını kullanmayın. Bunun yapılması öngörülemeyen davranışlara neden olabilirler. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Uygulamanız kendi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]etkinliklerini alabilir, olaylara abone olmak veya aboneliği kaldırmak için [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] uygulamanızın iş parçacığını kullanmayın. Bunun yapılması öngörülemeyen davranışlara neden olabilirler. Daha fazla bilgi için bkz. [UI Otomasyonu Iş parçacığı sorunları](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  Kapatılırken veya [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] olaylar uygulamaya artık ilgilenmeyen Kullanıcı Arabirimi Otomasyonu istemcileri aşağıdaki yöntemlerden birini çağırmalıdır.  
   

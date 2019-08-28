@@ -2,12 +2,12 @@
 title: Üyelik ve Rol Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948541"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039448"
 ---
 # <a name="membership-and-role-provider"></a>Üyelik ve Rol Sağlayıcısı
 Üyelik ve rol sağlayıcısı örneği, bir hizmetin, istemcilerin kimliğini doğrulamak ve yetkilendirmek için ASP.NET üyeliğini ve rol sağlayıcılarını nasıl kullanabileceğinizi gösterir.  
@@ -123,10 +123,10 @@ ms.locfileid: "69948541"
 2. [ASP.NET uygulama Hizmetleri veritabanını](https://go.microsoft.com/fwlink/?LinkId=94997)yapılandırdığınızdan emin olun.  
   
     > [!NOTE]
-    >  SQL Server Express Edition çalıştırıyorsanız, sunucu adınız .\SQLEXPRESS. olur. Bu sunucu, ASP.NET Uygulama Hizmetleri veritabanı ve Web. config bağlantı dizesinde yapılandırılırken kullanılmalıdır.  
+    > SQL Server Express Edition çalıştırıyorsanız, sunucu adınız .\SQLEXPRESS. olur. Bu sunucu, ASP.NET Uygulama Hizmetleri veritabanı ve Web. config bağlantı dizesinde yapılandırılırken kullanılmalıdır.  
   
     > [!NOTE]
-    >  ASP.NET çalışan işlem hesabının, bu adımda oluşturulan veritabanında izinleri olmalıdır. Bunu yapmak için sqlcmd yardımcı programını veya SQL Server Management Studio kullanın.  
+    > ASP.NET çalışan işlem hesabının, bu adımda oluşturulan veritabanında izinleri olmalıdır. Bunu yapmak için sqlcmd yardımcı programını veya SQL Server Management Studio kullanın.  
   
 3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.  
   

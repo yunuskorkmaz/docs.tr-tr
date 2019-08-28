@@ -2,127 +2,128 @@
 title: 'Görev 2: İş Akışı Tasarımcısını Barındırma'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 92c5fa347cc7a2c0088ab8f4fbdfddf25ffb83c1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169993"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037864"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Görev 2: İş Akışı Tasarımcısını Barındırma
-Bu konuda bir örneğini barındıran yordamı açıklanır [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasındaki.  
-  
- Yordam yapılandırır **kılavuz** Tasarımcısı içeren denetimi program aracılığıyla bir örneğini oluşturur <xref:System.Activities.Presentation.WorkflowDesigner> varsayılan içeren <xref:System.Activities.Statements.Sequence> etkinliğini kaydeder sağlamak için tasarımcı meta verisi tüm yerleşik etkinlikler ve ana bilgisayarlar için tasarımcı desteği [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] WPF uygulamasında.  
-  
-### <a name="to-host-the-workflow-designer"></a>İş akışı tasarımcısını barındırma için  
-  
-1. Açık HostingApplication proje oluşturduğunuz [görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md).  
-  
-2. Kullanımını kolaylaştırmak için penceresinin boyutunu ayarlayın [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için **MainWindow** Tasarımcısı'nda görüntülenecek F4 tuşuna basın **özellikleri** penceresinde hem de **Düzen** var. bölümünde, **genişliği** 600 değerini ve **yükseklik** 350 değerini.  
-  
-3. Kılavuz adı seçerek ayarlayın **kılavuz** Tasarımcı panelinde (kutusunun içine tıklayın **MainWindow**) ve ayarı **adı** en üstündeki özellik  **Özellikleri** "grid1" penceresine.  
-  
-4. İçinde **özellikleri** penceresinde üç noktaya tıklayın ( **...** ) yanındaki `ColumnDefinitions` açmak için özellik **Koleksiyonu Düzenleyicisi** iletişim kutusu.  
-  
-5. İçinde **Koleksiyonu Düzenleyicisi** iletişim kutusu, tıklayın **Ekle** düğmesini düzene üç sütun eklemek için üç kez. İlk sütun içerecek **araç kutusu**, ikinci sütun barındıracak [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], ve üçüncü sütunda Özellik denetçisi için kullanılacaktır.  
-  
-6. Ayarlama `Width` Ortadaki sütun değerine özelliğini "4 *".  
-  
-7. Değişiklikleri kaydetmek için **Tamam** 'a tıklayın. Aşağıdaki XAML MainWindow.xaml dosyanıza eklenir:  
-  
-    ```xml  
-    <Grid Name="grid1">  
-        <Grid.ColumnDefinitions>  
-            <ColumnDefinition />  
-            <ColumnDefinition Width="4*" />  
-            <ColumnDefinition />  
-        </Grid.ColumnDefinitions>  
-    </Grid>  
-    ```  
-  
-8. İçinde **Çözüm Gezgini**, MainWindow.xaml sağ tıklayıp **kodu görüntüle**. Aşağıdaki adımları izleyerek kodu değiştirin:  
-  
-    1. Aşağıdaki ad alanlarını ekleyin:  
-  
-        ```csharp  
-        using System.Activities;  
-        using System.Activities.Core.Presentation;  
-        using System.Activities.Presentation;  
-        using System.Activities.Presentation.Metadata;  
-        using System.Activities.Presentation.Toolbox;  
-        using System.Activities.Statements;  
-        using System.ComponentModel;  
-        ```  
-  
-    2. Örneği tutmak için bir özel üye alanı bildirmek için <xref:System.Activities.Presentation.WorkflowDesigner>, aşağıdaki kodu ekleyin `MainWindow` sınıfı.  
-  
-        ```csharp  
-        public partial class MainWindow : Window  
-        {  
-            private WorkflowDesigner wd;  
-  
-            public MainWindow()  
-            {  
-                InitializeComponent();  
-            }  
-        }  
-        ```  
-  
-    3. Aşağıdaki `AddDesigner` yönteme `MainWindow` sınıfı. Uygulama örneği oluşturur <xref:System.Activities.Presentation.WorkflowDesigner>, ekler bir <xref:System.Activities.Statements.Sequence> , etkinliğini ve grid1 Orta sütundaki yerleştirir **kılavuz**.  
-  
-        ```csharp  
-        private void AddDesigner()  
-        {  
-            //Create an instance of WorkflowDesigner class.  
-            this.wd = new WorkflowDesigner();  
-  
-            //Place the designer canvas in the middle column of the grid.  
-            Grid.SetColumn(this.wd.View, 1);  
-  
-            //Load a new Sequence as default.  
-            this.wd.Load(new Sequence());  
-  
-            //Add the designer canvas to the grid.  
-            grid1.Children.Add(this.wd.View);  
-        }  
-        ```  
-  
-    4. Tüm yerleşik etkinlikler için tasarımcı desteği eklemek için tasarımcı meta verisi kaydedin. Bu sayede özgün araç kutusundan etkinlikleri bırakmak <xref:System.Activities.Statements.Sequence> etkinliğinde [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Bunu yapmak için ekleme `RegisterMetadata` yönteme `MainWindow` sınıfı.  
-  
-        ```csharp  
-        private void RegisterMetadata()  
-        {               
-            DesignerMetadata dm = new DesignerMetadata();  
-            dm.Register();  
-        }  
-        ```  
-  
-         Etkinlik tasarımcıları kaydetme hakkında daha fazla bilgi için bkz. [nasıl yapılır: Özel Etkinlik Tasarımcısı oluşturma](how-to-create-a-custom-activity-designer.md).  
-  
-    5. İçinde `MainWindow` sınıfının oluşturucusu, tasarımcı desteği için meta verileri kaydetmek ve oluşturmak için daha önce bildirilen yöntemlere yapılan çağrılar ekleyin <xref:System.Activities.Presentation.WorkflowDesigner>.  
-  
-        ```csharp  
-        public MainWindow()  
-        {  
-            InitializeComponent();  
-  
-            // Register the metadata  
-            RegisterMetadata();  
-  
-            // Add the WFF Designer  
-            AddDesigner();  
-        }  
-        ```  
-  
+
+Bu konu, [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] bir Windows Presentation Foundation (WPF) uygulamasında örneğini barındırmak için yordamı açıklar.
+
+Yordam, tasarımcı içeren **kılavuz** denetimini yapılandırır, program aracılığıyla varsayılan <xref:System.Activities.Presentation.WorkflowDesigner> <xref:System.Activities.Statements.Sequence> bir etkinlik içeren bir örneğini oluşturur, tasarımcı meta verilerini tümü için tasarımcı desteği sağlamak üzere kaydeder. yerleşik etkinlikler ve WPF uygulamasında barındırır [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] .
+
+### <a name="to-host-the-workflow-designer"></a>İş akışı tasarımcısını barındırmak için
+
+1. Görev 1 ' de [oluşturduğunuz HostingApplication projesini açın: Yeni bir Windows Presentation Foundation uygulaması](task-1-create-a-new-wpf-app.md)oluşturun.
+
+2. Uygulamasının kullanımını [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]kolaylaştırmak için pencerenin boyutunu ayarlayın. Bunu yapmak için tasarımcıda **MainWindow** ' i seçin, **Özellikler** penceresini göstermek için F4 tuşuna basın ve **düzen** bölümünde, **Genişlik** değerini 600 değerine ve **yüksekliği** 350 değerine ayarlayın.
+
+3. Tasarımcı 'daki **kılavuz** panelini seçerek ızgara adını ayarlayın ( **MainWindow**içindeki kutuya tıklayın) ve **Özellikler** penceresinin üst kısmındaki **Name** özelliğini "grid1" olarak ayarlayın.
+
+4. **Özellikler** penceresinde, **koleksiyon Düzenleyicisi** iletişim kutusunu açmak için `ColumnDefinitions` özelliğin yanındaki üç nokta ( **...** ) simgesine tıklayın.
+
+5. Düzen **Düzenleyici** iletişim kutusunda, mizanpaja üç sütun eklemek için **Ekle** düğmesine üç kez tıklayın. İlk sütunda **araç kutusu**bulunur, ikinci sütun [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]' ı barındırır ve üçüncü sütun Özellik denetçisi için kullanılacaktır.
+
+6. Orta sütunun `Width` özelliğini "4 *" değeri olarak ayarlayın.
+
+7. Değişiklikleri kaydetmek için **Tamam** 'a tıklayın. Aşağıdaki XAML, MainWindow. xaml dosyanıza eklenir:
+
+    ```xml
+    <Grid Name="grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+    </Grid>
+    ```
+
+8. **Çözüm Gezgini**, MainWindow. xaml öğesine sağ tıklayın ve **kodu görüntüle**' yi seçin. Aşağıdaki adımları izleyerek kodu değiştirin:
+
+    1. Aşağıdaki ad alanlarını ekleyin:
+
+        ```csharp
+        using System.Activities;
+        using System.Activities.Core.Presentation;
+        using System.Activities.Presentation;
+        using System.Activities.Presentation.Metadata;
+        using System.Activities.Presentation.Toolbox;
+        using System.Activities.Statements;
+        using System.ComponentModel;
+        ```
+
+    2. Bir örneğini <xref:System.Activities.Presentation.WorkflowDesigner>tutacak bir özel üye alanı bildirmek için, `MainWindow` sınıfına aşağıdaki kodu ekleyin.
+
+        ```csharp
+        public partial class MainWindow : Window
+        {
+            private WorkflowDesigner wd;
+
+            public MainWindow()
+            {
+                InitializeComponent();
+            }
+        }
+        ```
+
+    3. `MainWindow` Sınıfına aşağıdaki `AddDesigner` yöntemi ekleyin. Uygulama öğesinin <xref:System.Activities.Presentation.WorkflowDesigner>bir örneğini oluşturur, buna bir <xref:System.Activities.Statements.Sequence> etkinlik ekler ve grid1 **Grid**'in orta sütununa yerleştirir.
+
+        ```csharp
+        private void AddDesigner()
+        {
+            //Create an instance of WorkflowDesigner class.
+            this.wd = new WorkflowDesigner();
+
+            //Place the designer canvas in the middle column of the grid.
+            Grid.SetColumn(this.wd.View, 1);
+
+            //Load a new Sequence as default.
+            this.wd.Load(new Sequence());
+
+            //Add the designer canvas to the grid.
+            grid1.Children.Add(this.wd.View);
+        }
+        ```
+
+    4. Tüm yerleşik etkinlikler için tasarımcı desteği eklemek üzere tasarımcı meta verilerini kaydedin. Bu, <xref:System.Activities.Statements.Sequence> [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]içindeki etkinlikleri araç kutusundan özgün etkinliğe düşürübilmenizi sağlar. Bunu yapmak için `RegisterMetadata` yöntemini `MainWindow` sınıfına ekleyin.
+
+        ```csharp
+        private void RegisterMetadata()
+        {
+            DesignerMetadata dm = new DesignerMetadata();
+            dm.Register();
+        }
+        ```
+
+        Etkinlik tasarımcılarını kaydetme hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir etkinlik Tasarımcısı](how-to-create-a-custom-activity-designer.md)oluşturun.
+
+    5. Sınıf oluşturucusunda, tasarımcı desteğinin meta verilerini kaydetmek ve <xref:System.Activities.Presentation.WorkflowDesigner>oluşturmak için daha önce belirtilen yöntemlere çağrılar ekleyin. `MainWindow`
+
+        ```csharp
+        public MainWindow()
+        {
+            InitializeComponent();
+
+            // Register the metadata
+            RegisterMetadata();
+
+            // Add the WFF Designer
+            AddDesigner();
+        }
+        ```
+
         > [!NOTE]
-        >  `RegisterMetadata` Yöntemi de içeren yerleşik etkinlikler Tasarımcı meta verilerini kaydeder <xref:System.Activities.Statements.Sequence> etkinlik. Çünkü `AddDesigner` yöntemi kullanan <xref:System.Activities.Statements.Sequence> etkinliği `RegisterMetadata` metodu önce çağrılmalıdır.  
-  
-9. Derleme ve çözümü çalıştırmak için F5 tuşuna basın.  
-  
-10. Bkz: [görev 3: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md) ekleme hakkında bilgi edinmek için **araç kutusu** ve **PropertyGrid** , yeniden barındırılan iş akışı Tasarımcısı için destek.  
-  
+        > Yöntemi, <xref:System.Activities.Statements.Sequence> etkinlik dahil yerleşik etkinliklerin tasarımcı meta verilerini kaydeder. `RegisterMetadata` Yöntemi etkinliğini kullandığından ,`RegisterMetadata` önce yönteminin çağrılması gerekir. <xref:System.Activities.Statements.Sequence> `AddDesigner`
+
+9. Çözümü derlemek ve çalıştırmak için F5 tuşuna basın.
+
+10. Bkz [. görev 3: Yeniden barındırılan iş akışı tasarımcısına](task-3-create-the-toolbox-and-propertygrid-panes.md) **araç kutusu** ve **PropertyGrid** desteğinin nasıl ekleneceğini öğrenmek için araç kutusu ve PropertyGrid bölmelerini oluşturun.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İş Akışı Tasarımcısını Yeniden Barındırma](rehosting-the-workflow-designer.md)
-- [1. Görev: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
-- [3. Görev: Araç kutusu ve PropertyGrid bölmeleri oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Görev 1: Yeni bir Windows Presentation Foundation uygulaması oluşturma](task-1-create-a-new-wpf-app.md)
+- [Görev 3: Araç kutusu ve PropertyGrid bölmelerini oluşturma](task-3-create-the-toolbox-and-propertygrid-panes.md)

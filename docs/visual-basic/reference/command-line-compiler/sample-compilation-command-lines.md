@@ -8,33 +8,34 @@ helpviewer_keywords:
 - compiling source code [Visual Basic], from command line
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
-ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7879c23bc64269c793c21b61b84d6f0fd4bdc24
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916766"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046287"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Örnek derleme komut satırları (Visual Basic)
-Visual Studio içinde Visual Basic programlarından derleme alternatif olarak, yürütülebilir (.exe) veya dinamik bağlantı kitaplığı (.dll) dosyaları üretmek için komut satırından derleyebilirsiniz.  
-  
- Visual Basic komut satırı derleyicisi giriş denetleyen ve dosyaları, derlemeleri ve hata ayıklama ve önişlemci seçenekleri çıkış seçenekleri eksiksiz bir kümesini destekler. Her seçenek birbirinin yerine iki biçimde kullanılabilir: `-option` ve `/option`. Bu belgelerde yalnızca `-option` formu.  
-  
- Aşağıdaki tabloda bazı örnek komut satırları, kendi kullanımınız için değiştirebileceğiniz listeler.  
-  
-|Bitiş|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|  
-|--------|---------|  
-|File.vb derleyin ve File.exe oluşturma|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
-|File.vb derleyin ve File.dll oluşturma|`vbc -target:library File.vb`|  
-|File.vb derleyin ve My.exe oluşturma|`vbc -out:My.exe File.vb`|  
-|File.vb derlemek ve bir kitaplık hem File.dll adlı bir başvuru bütünleştirilmiş kodu oluşturma|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
-|Geçerli dizindeki iyileştirmeler tüm Visual Basic dosyaları üzerinde derleyin ve `DEBUG` tanımlanmış sembol File2.exe üretme|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|  
-|Geçerli dizindeki logosu veya uyarıları görüntülemeden File2.dll hata ayıklama sürümü oluşturan tüm Visual Basic dosyaları derleme|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|  
-|Something.dll geçerli dizindeki tüm Visual Basic dosyaları derleme|`vbc -target:library -out:Something.dll *.vb`|  
-  
+
+Visual Studio içinden Visual Basic programları derlemeye alternatif olarak, çalıştırılabilir (. exe) dosyalar veya dinamik bağlantı kitaplığı (. dll) dosyaları oluşturmak için komut satırından derleme yapabilirsiniz.
+
+Visual Basic komut satırı derleyicisi, giriş ve çıkış dosyalarını, derlemeleri ve hata ayıklama ve Önişlemci seçeneklerini denetleyen tam bir seçenek kümesini destekler. Her seçenek, iki değiştirilebilir formda mevcuttur: `-option` ve. `/option` Bu belgede yalnızca `-option` form gösterilmektedir.
+
+Aşağıdaki tabloda, kendi kullanımı için değiştirebileceğiniz bazı örnek komut satırları listelenmektedir.
+
+|Bitiş|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|--------|---------|
+|Dosya. vb dosyasını derleyin ve File. exe oluşturun|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|
+|File. vb dosyasını derleyin ve File. dll dosyasını oluşturun|`vbc -target:library File.vb`|
+|Dosya. vb 'yi derleyin ve My. exe dosyasını oluşturun|`vbc -out:My.exe File.vb`|
+|File. vb derleyin ve hem bir kitaplık hem de File. dll adlı bir başvuru derlemesi oluşturun|`vbc -target:library -ref:.\debug\bin\ref\file.dll File.vb`|
+|Geçerli dizindeki tüm Visual Basic dosyalarını, iyileştirmeler açık ve `DEBUG` tanımlanan sembolle derleyin, dosya2. exe dosyasını üretir|`vbc -define:DEBUG=1 -optimize -out:File2.exe *.vb`|
+|Logo veya uyarıları görüntülemeden dosya2. dll ' nin hata ayıklama sürümünü üreten geçerli dizindeki tüm Visual Basic dosyalarını derleyin|`vbc -target:library -out:File2.dll -nowarn -nologo -debug *.vb`|
+|Geçerli dizindeki tüm Visual Basic dosyalarını bir. dll dosyasına derle|`vbc -target:library -out:Something.dll *.vb`|
+
 > [!TIP]
->  Visual Studio IDE kullanarak bir proje oluşturduğunuzda, ilişkili bilgileri görüntüleyebilir **vbc** çıktı penceresinde, derleyici seçenekleri ile komutu. Bu bilgileri görüntülemek için Aç [Seçenekler iletişim kutusu, projeler ve çözümler, derleme ve çalıştırma](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)ve ardından **MSBuild proje oluşturması çıkış ayrıntısı** için **Normal** veya daha yüksek bir ayrıntı düzeyi.   
-  
+> Visual Studio IDE kullanarak bir proje oluşturduğunuzda, ilişkili **vbc** komutuyla ilgili bilgileri çıkış penceresinde derleyici seçenekleriyle birlikte görüntüleyebilirsiniz. Bu bilgileri göstermek için, [Seçenekler Iletişim kutusu, projeler ve çözümler ' i açın ve çalıştırın](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run), sonra **MSBuild proje yapı çıkış ayrıntı** düzeyini **normal** veya daha yüksek ayrıntı düzeyi olarak ayarlayın.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Basic komut satırı derleyicisi](../../../visual-basic/reference/command-line-compiler/index.md)

@@ -16,19 +16,19 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
-ms.openlocfilehash: df7c6caf7b23824a596e94e1bd62205907b0b56a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e06b18558f6b3fa3cef47613bbaef16fb7c740f0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592414"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046200"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama
-Aşağıdaki örnek program Fibonacci numaraları hesaplayan bir form oluşturur. Hesaplama kullanıcı arabirimi hesaplama devam ettikçe gecikmeler çalışmaya devam eder, kullanıcı arabirimi iş parçacığından ayrı bir iş parçacığında çalışır.  
+Aşağıdaki örnek program Fibonaccı numaralarını hesaplayan bir form oluşturur. Hesaplama, Kullanıcı arabirimi iş parçacığından ayrı bir iş parçacığında çalışır, bu nedenle hesaplama ilerledikçe Kullanıcı arabirimi gecikmeler olmadan çalışmaya devam eder.  
   
- Visual Studio'da bu görevi için kapsamlı desteği yoktur.  
+ Visual Studio 'da bu görev için kapsamlı destek vardır.  
   
- Ayrıca bkz: [izlenecek yol: Arka plan işlemi kullanan bir Form uygulama](walkthrough-implementing-a-form-that-uses-a-background-operation.md).  
+ Ayrıca bkz [. İzlenecek yol: Arka plan Işlemi](walkthrough-implementing-a-form-that-uses-a-background-operation.md)kullanan bir form uygulama.  
   
 ## <a name="example"></a>Örnek  
  [!code-cpp[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#1)]
@@ -36,14 +36,14 @@ Aşağıdaki örnek program Fibonacci numaraları hesaplayan bir form oluşturur
  [!code-vb[System.ComponentModel.BackgroundWorker#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
-- Sistem, System.Drawing ve System.Windows.Forms derlemelere başvuruları.  
+- System, System. Drawing ve System. Windows. Forms derlemelerine başvurular.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
   
 > [!CAUTION]
->  Her türlü çoklu iş parçacığı kullanırken, büyük olasılıkla kendiniz çok önemli ve karmaşık hataları ortaya çıkarır. Başvurun [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../standard/threading/managed-threading-best-practices.md) kullanan herhangi bir çözümü uygulamadan önce çoklu iş parçacığı kullanımı.  
+> Herhangi bir sıralamanın çoklu iş parçacığı kullanımı kullanılırken, kendinizi çok önemli ve karmaşık hatalara maruz kalırsınız. Çoklu iş parçacığı kullanan herhangi bir çözümü uygulamadan önce, [yönetilen Iş parçacığı En Iyi uygulamalarına](../../../standard/threading/managed-threading-best-practices.md) danışın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

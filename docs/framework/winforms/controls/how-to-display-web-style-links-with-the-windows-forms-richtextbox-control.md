@@ -10,112 +10,113 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 05d9ad4766584b59cca7c31f49b737d4696a9921
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053535"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046179"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Nasıl yapılır: Windows Forms RichTextBox Denetimi ile Web Stili Bağlantılar Görüntüleme
-Windows Forms <xref:System.Windows.Forms.RichTextBox> denetimi, Web bağlantıları görüntüleyebilir, renkli ve altı çizili olarak. Bağlantıya tıklandığında bağlantı metni belirtilen Web sitesi gösteren bir tarayıcı penceresi açılır kod yazabilirsiniz.  
-  
-### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox denetimi ile bir Web sayfasına bağlantı için  
-  
-1. Ayarlama <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğine geçerli bir URL içeren bir dize (örneğin, "http://www.microsoft.com/").  
-  
-2. Emin <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> özelliği `true` (varsayılan).  
-  
-3. Genel yeni bir örneğini oluşturma <xref:System.Diagnostics.Process> nesne.  
-  
-4. Bir olay işleyicisi için yazma <xref:System.Windows.Forms.RichTextBox.LinkClicked> tarayıcı istediğiniz metni gönderen olay.  
-  
-     Aşağıdaki örnekte <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay bir örneğini belirtilen URL'ye Internet Explorer açılır <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliği <xref:System.Windows.Forms.RichTextBox> denetimi. Bu örnek bir formla varsayar bir <xref:System.Windows.Forms.RichTextBox> denetimi.  
-  
+
+Windows Forms <xref:System.Windows.Forms.RichTextBox> denetim, web bağlantılarını renkli ve altı çizili olarak gösterebilir. Bağlantı tıklandığında bağlantı metninde belirtilen Web sitesini gösteren tarayıcı penceresi açan bir kod yazabilirsiniz.
+
+### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>RichTextBox denetimiyle bir Web sayfasına bağlantı sağlamak için
+
+1. Özelliğini geçerli bir URL (örneğin, "http://www.microsoft.com/") içeren bir dizeye ayarlayın. <xref:System.Windows.Forms.RichTextBox.Text%2A>
+
+2. <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> Özelliğin (varsayılan) olarak `true` ayarlandığından emin olun.
+
+3. <xref:System.Diagnostics.Process> Nesnenin yeni bir genel örneğini oluşturun.
+
+4. Tarayıcıya istenen metni Gönderen <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay için bir olay işleyicisi yazın.
+
+    Aşağıdaki örnekte, <xref:System.Windows.Forms.RichTextBox.LinkClicked> olay, bir Internet Explorer örneğini <xref:System.Windows.Forms.RichTextBox> denetimin <xref:System.Windows.Forms.RichTextBox.Text%2A> özelliğinde belirtilen URL 'ye açar. Bu örnekte, bir <xref:System.Windows.Forms.RichTextBox> denetimi olan bir form varsayılır.
+
     > [!IMPORTANT]
-    >  İçinde arama <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> yöntemi karşılaşırsınız bir <xref:System.Security.SecurityException> yetersiz ayrıcalıklar nedeniyle bir kısmi güven bağlamında kod çalıştırıyorsanız, özel durum. Daha fazla bilgi için [kod erişimi güvenliği Temelleri](../../misc/code-access-security-basics.md).  
-  
-    ```vb  
-    Public p As New System.Diagnostics.Process  
-    Private Sub RichTextBox1_LinkClicked _  
-       (ByVal sender As Object, ByVal e As _  
-       System.Windows.Forms.LinkClickedEventArgs) _  
-       Handles RichTextBox1.LinkClicked  
-          ' Call Process.Start method to open a browser  
-          ' with link text as URL.  
-          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public System.Diagnostics.Process p = new System.Diagnostics.Process();  
-  
-    private void richTextBox1_LinkClicked(object sender,   
-    System.Windows.Forms.LinkClickedEventArgs e)  
-    {  
-       // Call Process.Start method to open a browser  
-       // with link text as URL.  
-       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       System::Diagnostics::Process ^ p;  
-  
-    private:  
-       void richTextBox1_LinkClicked(System::Object ^  sender,  
-          System::Windows::Forms::LinkClickedEventArgs ^  e)  
-       {  
-          // Call Process.Start method to open a browser  
-          // with link text as URL.  
-          p = System::Diagnostics::Process::Start("IExplore.exe",  
-             e->LinkText);  
-       }  
-    ```  
-  
-     (Visual C++) İşlem başlatmalıdır `p`, formunuzu oluşturucuda aşağıdaki deyim ekleyerek yapabilirsiniz:  
-  
-    ```cpp  
-    p = gcnew System::Diagnostics::Process();  
-    ```  
-  
-     (Visual C#, Visual C++) Aşağıdaki kod, olay işleyicisi kaydetmek için formun oluşturucuda yerleştirin.  
-  
-    ```csharp  
-    this.richTextBox1.LinkClicked += new   
-       System.Windows.Forms.LinkClickedEventHandler  
-       (this.richTextBox1_LinkClicked);  
-    ```  
-  
-    ```cpp  
-    this->richTextBox1->LinkClicked += gcnew  
-       System::Windows::Forms::LinkClickedEventHandler  
-       (this, &Form1::richTextBox1_LinkClicked);  
-    ```  
-  
-     Hemen çalışmaya tamamladıktan sonra oluşturduğunuz işlemi durdurmak önemlidir. Yukarıda gösterilen koda başvuran, işlemi durdurmak için kodunuzda şuna benzeyebilir:  
-  
-    ```vb  
-    Public Sub StopWebProcess()  
-       p.Kill()  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void StopWebProcess()  
-    {  
-       p.Kill();  
-    }  
-    ```  
-  
-    ```cpp  
-    public: void StopWebProcess()  
-    {  
-       p->Kill();  
-    }  
-    ```  
-  
+    > <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> Yöntemi çağırırken, yetersiz ayrıcalıklar nedeniyle kodu kısmi güven <xref:System.Security.SecurityException> bağlamında çalıştırıyorsanız bir özel durumla karşılaşacaksınız. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../misc/code-access-security-basics.md).
+
+    ```vb
+    Public p As New System.Diagnostics.Process
+    Private Sub RichTextBox1_LinkClicked _
+       (ByVal sender As Object, ByVal e As _
+       System.Windows.Forms.LinkClickedEventArgs) _
+       Handles RichTextBox1.LinkClicked
+          ' Call Process.Start method to open a browser
+          ' with link text as URL.
+          p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText)
+    End Sub
+    ```
+
+    ```csharp
+    public System.Diagnostics.Process p = new System.Diagnostics.Process();
+
+    private void richTextBox1_LinkClicked(object sender,
+    System.Windows.Forms.LinkClickedEventArgs e)
+    {
+       // Call Process.Start method to open a browser
+       // with link text as URL.
+       p = System.Diagnostics.Process.Start("IExplore.exe", e.LinkText);
+    }
+    ```
+
+    ```cpp
+    public:
+       System::Diagnostics::Process ^ p;
+
+    private:
+       void richTextBox1_LinkClicked(System::Object ^  sender,
+          System::Windows::Forms::LinkClickedEventArgs ^  e)
+       {
+          // Call Process.Start method to open a browser
+          // with link text as URL.
+          p = System::Diagnostics::Process::Start("IExplore.exe",
+             e->LinkText);
+       }
+    ```
+
+    (Görsel C++) Aşağıdaki deyiminizi formunuzun `p`yapıcısına ekleyerek yapabileceğiniz işlemi başlatmalısınız:
+
+    ```cpp
+    p = gcnew System::Diagnostics::Process();
+    ```
+
+    (Görsel C#, görsel C++) Olay işleyicisini kaydetmek için formun oluşturucusuna aşağıdaki kodu yerleştirin.
+
+    ```csharp
+    this.richTextBox1.LinkClicked += new
+       System.Windows.Forms.LinkClickedEventHandler
+       (this.richTextBox1_LinkClicked);
+    ```
+
+    ```cpp
+    this->richTextBox1->LinkClicked += gcnew
+       System::Windows::Forms::LinkClickedEventHandler
+       (this, &Form1::richTextBox1_LinkClicked);
+    ```
+
+    Üzerinde çalışmayı bitirdikten sonra oluşturduğunuz işlemi hemen durdurmak önemlidir. Yukarıda sunulan koda başvurarak, işlemi durdurmak için kodunuz şuna benzeyebilir:
+
+    ```vb
+    Public Sub StopWebProcess()
+       p.Kill()
+    End Sub
+    ```
+
+    ```csharp
+    public void StopWebProcess()
+    {
+       p.Kill();
+    }
+    ```
+
+    ```cpp
+    public: void StopWebProcess()
+    {
+       p->Kill();
+    }
+    ```
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>

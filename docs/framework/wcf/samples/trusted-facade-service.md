@@ -2,36 +2,36 @@
 title: Güvenilir Görünüm Hizmeti
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 27e541c0c9738e93678d32081e49798944160715
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665982"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045429"
 ---
 # <a name="trusted-facade-service"></a>Güvenilir Görünüm Hizmeti
-Bu senaryo örneği çağıranın kimlik bilgilerini bir hizmetten diğerine Windows Communication Foundation (WCF) kullanarak akış yapmayı gösteren güvenlik altyapısı.  
+Bu senaryo örneği, arayanın kimlik bilgilerinin bir hizmetten diğerine Windows Communication Foundation (WCF) güvenlik altyapısını kullanarak nasıl akabileceğinizi gösterir.  
   
- Bir cephe hizmeti kullanarak ortak ağ için bir hizmet tarafından sağlanan işlevselliği göstermek için bir ortak bir tasarım örüntüsüdür. Cephe hizmeti genellikle çevre ağındaki (DMZ, sivil bölge ve denetimli alt ağ olarak da bilinir) bulunur ve iş mantığını uygular ve iç verilere erişimi olan bir arka uç hizmetiyle iletişim kurar. Cephe hizmeti ve arka uç hizmeti arasındaki iletişim kanalını bir güvenlik duvarı üzerinden geçer ve yalnızca tek bir amaç için genellikle sınırlıdır.  
+ Bir hizmet tarafından bir hizmet tarafından sunulan işlevselliği bir façlade hizmeti kullanılarak kullanıma sunmak için ortak bir tasarım modelidir. Façlade hizmeti genellikle çevre ağında (DMZ, sivil bölge ve denetimli alt ağ olarak da bilinir) bulunur ve iş mantığını uygulayan ve iç verilere erişim sağlayan bir arka uç hizmetiyle iletişim kurar. Façlade hizmeti ile arka uç hizmeti arasındaki iletişim kanalı bir güvenlik duvarından geçer ve genellikle yalnızca tek bir amaçla sınırlandırılır.  
   
  Bu örnek aşağıdaki bileşenlerden oluşur:  
   
-- Hesaplayıcı istemci  
+- Hesaplayıcı istemcisi  
   
-- Hesaplayıcı cephe hizmeti  
+- Hesaplayıcı façlade hizmeti  
   
 - Hesaplayıcı arka uç hizmeti  
   
- İstek doğrulanıyor ve arayan kimlik doğrulaması için sorumlu cephe hizmetidir. Başarılı kimlik doğrulaması ve doğrulama sonra istek iç ağ çevre ağından denetimli iletişim kanalını kullanarak arka uç hizmetine iletir. Bu bilgiler, işleme, arka uç hizmetine kullanabilmesi iletilen isteğin bir parçası olarak cephe hizmet çağıranının kimliğini hakkında bilgi içerir. Çağıranının kimliğini kullanarak iletilen bir `Username` ileti içinde güvenlik belirteci `Security` başlığı. Örnek, iletme ve bu bilgileri ayıklamak için WCF güvenlik altyapısı kullanır. `Security` başlığı.  
+ Façlade hizmeti, isteği doğrulamadan ve arayanın kimliğini doğrulamaya sorumludur. Başarılı kimlik doğrulama ve doğrulamadan sonra, çevre ağdan iç ağa denetimli iletişim kanalını kullanarak isteği arka uç hizmetine iletir. İletilen isteğin bir parçası olarak, façlade hizmeti çağıranın kimliği hakkında bilgiler içerir, böylece arka uç hizmeti bu bilgileri işlemede kullanabilir. Arayanın kimliği, ileti `Username` `Security` üstbilgisinin içindeki bir güvenlik belirteci kullanılarak iletilir. Örnek, bu bilgileri `Security` üst bilgiden iletmek ve ayıklamak için WCF güvenlik altyapısını kullanır.  
   
 > [!IMPORTANT]
->  Arayan kimliğini doğrulamak için cephe hizmet arka uç hizmetine güvenir. Bu nedenle, arka uç hizmeti çağıran yeniden kimlik doğrulamasını yapmaz; iletilen istek cephe hizmeti tarafından sağlanan kimlik bilgilerini kullanır. Bu güven ilişkisi nedeniyle, arka uç hizmetine yönlendirilmiş ileti güvenilir bir kaynaktan - bu durumda, cephe hizmet geldiğinden emin olmak için cephe hizmet kimlik doğrulaması gerekir.  
+> Arka uç hizmeti, arayanın kimliğini doğrulamak için façlade hizmetine güvenir. Bu nedenle, arka uç hizmeti çağıranın kimliğini doğrulamaz; Bu, iletilen istekte façlade hizmeti tarafından sunulan kimlik bilgilerini kullanır. Bu güven ilişkisi nedeniyle, arka uç hizmeti, iletilen iletinin güvenilen bir kaynaktan geldiğinden emin olmak için façlade hizmetinin kimliğini doğrulamalıdır; bu durumda façlade hizmeti.  
   
 ## <a name="implementation"></a>Uygulama  
- Bu örnekte iki iletişim yolları vardır. İlk istemci ile cephe hizmeti arasında cephe hizmeti ve arka uç hizmeti arasında saniyedir.  
+ Bu örnekte iki iletişim yolu vardır. İlk olarak istemci ile façlade hizmeti arasında ikinci değer façlade hizmeti ve arka uç hizmeti arasındadır.  
   
-### <a name="communication-path-between-client-and-faade-service"></a>Cephe hizmet ve istemci arasındaki iletişim yolunun  
- Cephe hizmet iletişimi yolu istemcinin kullandığı `wsHttpBinding` ile bir `UserName` istemci kimlik bilgisi türü. Bu, istemcinin kullandığı kullanıcı adı ve cephe hizmet ve cephe hizmet kimlik doğrulaması için parola, istemcinin kimliğini doğrulamak için X.509 sertifikası kullanır. anlamına gelir. Bağlama yapılandırması aşağıdaki örnekteki gibi görünür.  
+### <a name="communication-path-between-client-and-faade-service"></a>Istemci ile Façlade hizmeti arasındaki iletişim yolu  
+ Façlade hizmeti iletişim yolunun istemcisi `wsHttpBinding` `UserName` istemci kimlik bilgisi türü ile kullanır. Bu, istemcinin façlade hizmetinde kimlik doğrulamak için Kullanıcı adı ve parola kullandığı ve façlade hizmetinin istemcide kimlik doğrulamak için X. 509.440 sertifikası kullandığı anlamına gelir. Bağlama yapılandırması aşağıdaki örneğe benzer şekilde görünür.  
   
 ```xml  
 <bindings>  
@@ -45,7 +45,7 @@ Bu senaryo örneği çağıranın kimlik bilgilerini bir hizmetten diğerine Win
 </bindings>  
 ```  
   
- Cephe hizmeti çağıran özel kullanarak kimlik doğrulaması `UserNamePasswordValidator` uygulaması. Tanıtım amacıyla, arayanın kullanıcıadı sunulan parolayla eşleşen kimlik doğrulaması yalnızca sağlar. Gerçek dünya durumda kullanıcı Active Directory veya özel ASP.NET üyelik sağlayıcıyı kullanarak büyük olasılıkla doğrulanır. Doğrulayıcı uygulama bulunan `FacadeService.cs` dosya.  
+ Façlade hizmeti, özel `UserNamePasswordValidator` uygulama kullanarak arayanın kimliğini doğrular. Tanıtım amacıyla, kimlik doğrulaması yalnızca arayanın Kullanıcı adının görüntülenen parolayla eşleşmesini sağlar. Gerçek dünyada, kullanıcının kimliği büyük olasılıkla Active Directory veya özel ASP.NET üyelik sağlayıcısı kullanılarak doğrulanır. Doğrulayıcı uygulama `FacadeService.cs` dosyasında bulunur.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -63,7 +63,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Özel Doğrulayıcı sağlayıcısı içinde kullanılmak üzere yapılandırılmış `serviceCredentials` cephe hizmet yapılandırma dosyasında bir davranış. Bu davranış, hizmetin X.509 sertifikası yapılandırmak için de kullanılır.  
+ Özel Doğrulayıcı, façlade hizmeti yapılandırma dosyasındaki `serviceCredentials` davranış içinde kullanılmak üzere yapılandırılır. Bu davranış, hizmetin X. 509.440 sertifikasını yapılandırmak için de kullanılır.  
   
 ```xml  
 <behaviors>  
@@ -92,10 +92,10 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
-### <a name="communication-path-between-faade-service-and-backend-service"></a>Cephe hizmeti ve arka uç hizmeti arasındaki iletişim yolunun  
- Arka uç hizmeti iletişim yolunun cephe hizmete kullanan bir `customBinding` çeşitli bağlama öğelerinin oluşur. Bu bağlamanın iki şeyi gerçekleştirir. Cephe hizmeti ve iletişimi güvenli ve güvenilir bir kaynaktan geldiğine emin olmak için arka uç hizmeti kimliğini doğrular. Ayrıca, içinde ilk çağıranının kimliğini de iletir `Username` güvenlik belirteci. Bu durumda, yalnızca ilk çağrı sahibinin kullanıcı adı arka uç hizmetine aktarılır, parola iletisinde yer almaz. Çağıran, iletilmeden önce kimlik doğrulaması için cephe hizmet arka uç hizmetine güvenir olmasıdır. Cephe hizmetin kendisini arka uç hizmetine doğruladığından, arka uç hizmetine iletilmiş istekte yer alan bilgileri güvenebilir.  
+### <a name="communication-path-between-faade-service-and-backend-service"></a>Façlade hizmeti ile arka uç hizmeti arasındaki iletişim yolu  
+ Arka uç hizmeti iletişim yolunda façlade hizmeti, çeşitli bağlama öğelerinden `customBinding` oluşan bir kullanır. Bu bağlama iki şeyi gerçekleştirir. İletişimin güvenli olduğundan ve güvenilen bir kaynaktan geldiğinden emin olmak için façlade hizmeti ve arka uç hizmeti 'nin kimliğini doğrular. Ayrıca, `Username` güvenlik belirtecinin içindeki ilk arayanın kimliğini de iletir. Bu durumda, yalnızca ilk arayanın Kullanıcı adı arka uç hizmetine iletilir, parola iletiye eklenmez. Bunun nedeni, arka uç hizmetinin isteği kendisine iletmeden önce arayanın kimliğini doğrulamak üzere façlade hizmetine güvenmesidir. Façlade hizmeti kendi arka uç hizmetinde kimliğini doğruladığından, arka uç hizmeti iletilen istekte bulunan bilgilere güvenebilirler.  
   
- Bu iletişim yolunun bağlama yapılandırması aşağıda verilmiştir.  
+ Bu iletişim yolu için bağlama yapılandırması aşağıda verilmiştir.  
   
 ```xml  
 <bindings>  
@@ -109,11 +109,11 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [ \<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) bağlama öğesi, ilk çağrı sahibinin kullanıcı adı iletim ve ayıklama üstlenir. [ \<WindowsStreamSecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) ve [ \<Connectionpoolsettings >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) cephe ve arka uç Hizmetleri kimlik doğrulaması dikkatli ve ileti koruma.  
+ Güvenlik > bağlama öğesi, ilk çağıranın Kullanıcı adı iletimi ve ayıklama işlemini gerçekleştirir. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) [ \<Windowsstreamsecurity >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) ve [ \<TcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) , façlade ve arka uç hizmetleri ile ileti korumasının kimlik doğrulamasını gerçekleştirir.  
   
- İsteği iletmek için cephe hizmet uygulaması, WCF güvenlik altyapısı bu yönlendirilmiş ileti yerleştirebilirsiniz için ilk çağrı sahibinin kullanıcı adı sağlamalısınız. İlk çağrı sahibinin kullanıcı adı olarak ayarlayarak cephe hizmet uygulamasında sağlanan `ClientCredentials` özelliği istemci proxy örneğinde cephe hizmet arka uç hizmetiyle iletişim kurmak için kullanır.  
+ İsteği iletmek için, façlade Hizmeti uygulamasının ilk çağıranın Kullanıcı adını sağlaması gerekir, böylece WCF güvenlik altyapısı bunu iletilen iletiye yerleştirebilir. İlk arayanın Kullanıcı adı, façlade hizmeti 'nin arka uç hizmetiyle iletişim kurmak için bir istemci ara `ClientCredentials` sunucu örneğindeki özelliğinde ayarlanarak façlade hizmeti uygulamasında sağlanır.  
   
- Aşağıdaki kodda gösterildiği nasıl `GetCallerIdentity` yöntemi cephe hizmette uygulanır. Aynı düzeni diğer yöntemleri kullanın.  
+ Aşağıdaki kod, yöntemin façlade hizmetinde nasıl `GetCallerIdentity` uygulandığını gösterir. Diğer yöntemler aynı kalıbı kullanır.  
   
 ```  
 public string GetCallerIdentity()  
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Önceki kodda gösterildiği gibi parola üzerinde ayarlı değil `ClientCredentials` özelliği, yalnızca kullanıcı adı ayarlanır. WCF güvenlik altyapısı tam olarak bu senaryoda, gerekli olduğu bir kullanıcı adı güvenlik belirtecini bir parola olmadan bu durumda, oluşturur.  
+ Önceki kodda gösterildiği gibi, bu, `ClientCredentials` özelliği üzerinde de ayarlanır, yalnızca Kullanıcı adı ayarlanır. WCF güvenlik altyapısı bu durumda bir parola olmadan bir Kullanıcı adı güvenlik belirteci oluşturur; Bu, tam olarak bu senaryoda gerekli olan şeydir.  
   
- Kullanıcı adı güvenlik belirtecinde yer alan bilgileri üzerindeki arka uç hizmeti, kimliğinin doğrulanması gerekir. Varsayılan olarak, WCF güvenlik belirtilen parola kullanılarak bir Windows hesabı kullanıcı eşlemeyi dener. Bu durumda, sağlanan parolası yoktur ve arka uç hizmeti kimlik doğrulaması zaten cephe hizmeti tarafından gerçekleştirildiği için kullanıcı adı kimlik doğrulaması için gerekli değildir. WCF'de özel bu işlevselliği uygulamak için `UserNamePasswordValidator` , yalnızca bir kullanıcı adı belirteci belirtilir ve herhangi ek bir kimlik doğrulaması gerçekleştirmez zorlar sağlanır.  
+ Arka uç hizmetinde, Kullanıcı adı güvenlik belirtecinde bulunan bilgilerin kimliği doğrulanmalıdır. Varsayılan olarak, WCF güvenliği, belirtilen parolayı kullanarak kullanıcıyı bir Windows hesabıyla eşlemeye çalışır. Bu durumda, kimlik doğrulaması façlade hizmeti tarafından zaten gerçekleştirildiğinden Kullanıcı adının kimliğini doğrulamak için bir parola sağlanmadı ve arka uç hizmeti gerekli değildir. WCF 'de bu işlevselliği uygulamak için, yalnızca belirteçte `UserNamePasswordValidator` bir kullanıcı adının belirtilmesini zorladığı ve ek kimlik doğrulama gerçekleştirmediğinden özel bir özel sağlanır.  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -149,7 +149,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- Özel Doğrulayıcı sağlayıcısı içinde kullanılmak üzere yapılandırılmış `serviceCredentials` cephe hizmet yapılandırma dosyasında bir davranış.  
+ Özel Doğrulayıcı, façlade hizmeti yapılandırma dosyasındaki `serviceCredentials` davranış içinde kullanılmak üzere yapılandırılır.  
   
 ```xml  
 <behaviors>  
@@ -166,7 +166,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
- Güvenilen bir cephe hizmet hesabıyla ilgili bilgileri ve kullanıcı adı bilgileri ayıklamak için arka uç hizmeti uygulaması kullanan `ServiceSecurityContext` sınıfı. Aşağıdaki kodda gösterildiği nasıl `GetCallerIdentity` yöntemi uygulanır.  
+ Kullanıcı adı bilgilerini ve güvenilir façlade Hizmeti hesabıyla ilgili bilgileri ayıklamak için arka uç hizmet uygulamasının `ServiceSecurityContext` sınıfını kullanır. Aşağıdaki kod `GetCallerIdentity` yöntemin nasıl uygulandığını gösterir.  
   
 ```  
 public string GetCallerIdentity()  
@@ -209,10 +209,10 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Cephe hizmet hesabı bilgilerini kullanarak ayıkladığınız `ServiceSecurityContext.Current.WindowsIdentity` özelliği. Arka uç hizmeti kullandığı ilk çağrıda bulunanı hakkında bilgilere erişmek için `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` özelliği. Görünüşe göre yenisiniz bir `Identity` talep türü ile `Name`. Bu talep yer alan bilgileri WCF güvenlik altyapısı tarafından otomatik olarak oluşturulan `Username` güvenlik belirteci.  
+ Façlade hizmeti hesap bilgileri, `ServiceSecurityContext.Current.WindowsIdentity` özelliği kullanılarak ayıklanır. İlk çağıran ile ilgili bilgilere erişmek için arka uç hizmeti `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` özelliğini kullanır. Bir türü `Identity` `Name`olan bir talep arar. Bu talep, `Username` güvenlik belirtecinde bulunan bilgilerden WCF güvenlik altyapısı tarafından otomatik olarak oluşturulur.  
   
-## <a name="running-the-sample"></a>Örneği çalıştırma  
- Örneği çalıştırdığınızda, işlem isteklerini ve yanıtlarını istemci konsol penceresinde görüntülenir. İstemci bilgisayarı için istemci penceresinde ENTER tuşuna basın. Hizmetleri kapatılmaya için cephe ve arka uç hizmet Konsolu pencerelerinde ENTER tuşuna basın.  
+## <a name="running-the-sample"></a>Örnek çalıştırma  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın. Hizmeti kapatmak için façlade ve arka uç hizmeti konsol penceresinde ENTER tuşuna basabilirsiniz.  
   
 ```  
 Username authentication required.  
@@ -230,13 +230,13 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Güvenilir görünüm senaryo örneği ile dahil Setup.bat toplu iş dosyasını kendisini istemcinin kimliğini doğrulamak için sertifika tabanlı güvenlik gerektiren bir cephe hizmeti çalıştırmak için ilgili bir sertifika ile sunucu yapılandırmanızı sağlar. Ayrıntılar için bu konunun sonunda Kurulum yordamına bakın.  
+ Güvenilir Faon yıl örneğine dahil olan Setup. bat toplu iş dosyası, istemci üzerinde kimlik doğrulaması yapmak için sertifika tabanlı güvenlik gerektiren façlade hizmetini çalıştırmak üzere sunucuyu ilgili sertifikayla yapılandırmanıza olanak sağlar. Ayrıntılar için bu konunun sonundaki Kurulum yordamına bakın.  
   
- Toplu iş dosyaları farklı bölümlerini kısa bir genel bakış sağlar.  
+ Aşağıdakiler, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar.  
   
 - Sunucu sertifikası oluşturuluyor.  
   
-     Setup.bat toplu iş dosyasından aşağıdaki satırları kullanılacak sunucu sertifikası oluşturun.  
+     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur.  
   
     ```  
     echo ************  
@@ -248,45 +248,45 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     `%SERVER_NAME%` Değişkeni, sunucu adını belirtir: localhost varsayılan değerdir. Depolanmış bir sertifikayla LocalMachine depolama.  
+     `%SERVER_NAME%` Değişken, sunucu adını belirtir; varsayılan değer localhost 'tur. Sertifika, LocalMachine deposunda depolanır.  
   
-- Cephe hizmetin sertifika istemcinin güvenilen sertifika depolama alanına yükleniyor.  
+- Façlade hizmetinin sertifikasını istemcinin güvenilen sertifika deposuna yükleme.  
   
-     Aşağıdaki satırı cephe hizmetin sertifika istemcisi güvenilir Kişiler deposuna kopyalar. MakeCert.exe tarafından oluşturulan sertifikaları örtük olarak istemci sistemi tarafından güvenilir değildir çünkü bu adım gereklidir. Bir istemci güvenilen kök sertifikayı kök erişim izni verilmiş bir sertifika zaten varsa — örneğin, Microsoft tarafından verilen sertifika — sunucu sertifikasında istemci sertifika deposunun doldurulması, bu adım gerekli değildir.  
+     Aşağıdaki satır façlade hizmeti sertifikasını istemci güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.  
   
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Örneği aynı makinede çalıştırmak için  
   
-1. Yolun Makecert.exe bulunduğu klasörü içerdiğinden emin olun.  
+1. Yolun, MakeCert. exe ' nin bulunduğu klasörü içerdiğinden emin olun.  
   
-2. Setup.bat örnek yükleme klasöründen çalıştırın. Bu örneği çalıştırmak için gerekli olan tüm sertifikaları yükler.  
+2. Örnek yükleme klasöründen Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.  
   
-3. Ayrı konsol penceresinde \BackendService\bin dizinden BackendService.exe başlatın  
+3. \BackendService\bin dizininden BackendService. exe ' yi ayrı bir konsol penceresinde başlatın  
   
-4. Ayrı konsol penceresinde \FacadeService\bin dizinden FacadeService.exe başlatın  
+4. \FacadeService\bin dizininden FacadeService. exe ' yi ayrı bir konsol penceresinde başlatın  
   
-5. Client.exe \client\bin başlatın. İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
+5. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
-6. İstemci ve hizmet iletişim kurabildiğini bilmiyorsanız bkz [WCF örnekleri için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
-#### <a name="to-clean-up-after-the-sample"></a>Sonra örnek temizlemek için  
+#### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-1. Bu örneği çalıştırmadan tamamladıktan sonra Cleanup.bat samples klasöründe çalıştırın.  
+1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

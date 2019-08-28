@@ -2,148 +2,150 @@
 title: Belge Onay İşlemi
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: dfc2e0a12d053733823427ac50066b1e4a0f97aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20167cd1c06c2ae57dfe48fd07ab3a0e2adf9927
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005127"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038234"
 ---
 # <a name="document-approval-process"></a>Belge Onay İşlemi
-Bu örnek, birlikte birçok Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin kullanımını gösterir. Birlikte bir belge onay işlemi senaryosu uygulayın. Bir istemci uygulaması, belgeler için onay gönderin ve onaylayın belgeleri. Kurallar onay işlemi uygular ve istemciler arasındaki iletişimi kolaylaştırmak için bir onay Yöneticisi uygulaması yok. Onay, onay çeşitli yürütebilen bir iş akışı işlemidir. Etkinlikler, tek bir onay, çekirdek onay (onaylayanlara kümesini yüzdesi) ve bir çekirdek ve dizideki tek onay içeren bir karmaşık bir onay işlemi mevcut.
+
+Bu örnek, birçok Windows Workflow Foundation (WF) ve Windows Communication Foundation (WCF) özelliklerinin birlikte kullanımını gösterir. Birlikte bir belge onay süreci senaryosu uygular. İstemci uygulaması, belgeleri onay ve onaylama için gönderebilir. İstemciler arasındaki iletişimleri kolaylaştırmak ve onay işleminin kurallarını zorlamak için bir onay Yöneticisi uygulaması vardır. Onay süreci, çeşitli onay türlerini yürütebilmesi için bir iş akışıdır. Tek bir onay, bir çekirdek onayı (bir onaylayanlar kümesinin yüzdesi) ve bir dizideki bir çekirdekte ve tek bir onaydan oluşan karmaşık bir onay işlemi almak için etkinlik vardır.
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
-  
-## <a name="sample-details"></a>Örnek Ayrıntıları  
- Aşağıdaki grafikte belge onay işlemi iş akışı gösterilmektedir:  
-  
- ![Bir belge onay işlemi iş akışı](./media/document-approval-process/document-approval-process.jpg)  
-  
- İstemcinin açısından bakıldığında, onay işlemi işlevleri gibi:  
-  
-1. Bir istemci, bir kullanıcı onayı işlemi sistemde olacak şekilde abone olur.  
-  
-2. Bir WCF istemcisi onay Yöneticisi uygulama tarafından barındırılan bir WCF hizmetine gönderir.  
-  
-3. Benzersiz bir kullanıcı kimliği, istemciye döndürülür. İstemci, artık onay işlemde katılabilir.  
-  
-4. Birleştirilmiş sonra bir istemci bir belge onay tek kullanarak, çekirdek veya karmaşık onaylama işlemlerini gönderebilirsiniz.  
-  
-5. İstemcinin arabiriminde bir düğmeye tıkladı, bir iş akışı örneği iş akışı hizmeti ana bilgisayarı istemci olarak başlatılıyor.  
-  
-6. İş akışı, onay manager uygulaması için bir onay isteği gönderir.  
-  
-7. İş Akışı Yöneticisi, bir onay işlemi temsil etmek için kendi tarafında bir iş akışı başlatır.  
-  
-8. Yönetici onayı iş akışı yürüten sonra sonuçları istemciye geri gönderilir.  
-  
-9. İstemci, sonuçları görüntüler.  
-  
-10. Bir istemci, bir onay isteği alır ve herhangi bir noktada isteğine zamanında yanıt.  
-  
-11. İstemci üzerinde barındırılan bir WCF hizmeti bir onay isteği onay Yöneticisi uygulamadan alabilir.  
-  
-12. Belge bilgilerini gözden geçirme için istemcide sunulur.  
-  
-13. Kullanıcı onaylayabileceğiniz veya reddedebileceğiniz belge.  
-  
-14. Bir WCF istemcisi, bir onay yanıtı onay Yöneticisi uygulamaya göndermek için kullanılır.  
-  
- Onay Yöneticisi uygulama açısından bakıldığında, onay işlemi işlevleri gibi:  
-  
-1. Bir istemci, onay işlemi sisteme katılmak ister.  
-  
-2. Onay Yöneticisi bir WCF hizmeti bir isteği onaylama işlemi sisteminin bir parçası olarak alır.  
-  
-3. İstemci için benzersiz bir kimlik oluşturulur. Kullanıcı bilgilerini bir veritabanında depolanır.  
-  
-4. Benzersiz kimliği kullanıcıya geri gönderilir.  
-  
-5. Bir onay isteği alma ' dir. Onay Yöneticisi bir onay işlemi yürütür.  
-  
-6. Bir onay isteği yeni bir iş akışı başlatılıyorsa onay Yöneticisi tarafından alınır.  
-  
-7. (Basit, çekirdek veya karmaşık) istek türüne bağlı olarak farklı bir etkinlik yürütülür.  
-  
-8. Gönderme ve alma bağıntı etkinliklerle onay isteğini gözden geçirme için istemci gönderme ve yanıt almak için kullanılır.  
-  
-9. Onay işlemi iş akışı sonucu istemciye gönderilir.  
-  
-## <a name="using-the-sample"></a>Örnek kullanma  
-  
-##### <a name="to-set-up-the-database"></a>Veritabanı ayarlamak için  
-  
-1. Yönetici ayrıcalıklarıyla açılan bir Visual Studio 2010 Komut isteminde bu DocumentApprovalProcess klasörüne gidin ve Setup.cmd'yi çalıştırın.  
-  
-##### <a name="to-set-up-the-application"></a>Uygulamayı kurmak için  
-  
-1. Visual Studio 2010 kullanarak DocumentApprovalProcess.sln çözüm dosyasını açın.  
-  
-2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
-  
-3. Çözümü çalıştırmak için ApprovalManager projeye sağ tıklayarak onay Yöneticisi uygulamasını başlatma **Çözüm Gezgini** tıklayıp **hata ayıklama**->**Başlat**  sağ tıklatma menüsünden Yeni bir örneği.  
-  
-     Hazır olduğunu bildiren manager'ın çıktı için bekleyin.  
-  
-##### <a name="to-run-the-single-approval-scenario"></a>Tek onayı senaryosu çalıştırmak için  
-  
-1. Yönetici izni olan bir komut istemi açın.  
-  
-2. Çözümü içeren dizine gidin.  
-  
-3. ApprovalClient\Bin\Debug klasöre gidin ve iki örneğini ApprovalClient.exe yürütün.  
-  
-4. Tıklayın **Bul**, bekle **abone** düğmesi etkinleşir.  
-  
-5. Herhangi bir kullanıcı adı yazın ve tıklayın **abone**. Bir istemci için kullanmak `UserType1` ve diğer tür `UserType2`.  
-  
-6. İçinde `UserType1` tek onay açılan menüden yazıp bir belge adı ve içerik istemci, seçin. Tıklayın **onay isteği**.  
-  
-7. İçinde `UserType2` istemci, onay bekleyen bir belge görüntülenir. Görseli seçip **onaylama** veya **Reddet**. Sonuçlar göstermesi gerekir `UserType1` istemci.  
-  
-##### <a name="to-run-the-quorum-approval-scenario"></a>Çekirdek onayı senaryosu çalıştırmak için  
-  
-1. Yönetici izni olan bir komut istemi açın.  
-  
-2. Çözümü içeren dizine gidin.  
-  
-3. ApprovalClient\Bin\Debug klasöre gidin ve ApprovalClient.exe üç örneği çalıştırın.  
-  
-4. Tıklayın **Bul**, bekle **abone** düğmesi etkinleşir.  
-  
-5. Herhangi bir kullanıcı adı yazın ve tıklayın **abone**. Bir istemci için kullanmak `UserType1` ve diğer iki tür `UserType2`.  
-  
-6. İçinde `UserType1` çekirdek onay açılan menüden yazıp bir belge adı ve içerik istemci, seçin. Tıklayın **onay isteği**. Bu isteyen iki `UserType2` istemcileri onaylayabileceğiniz veya belge. Her ikisi de while `UserType2` istemcilerin gerekir yanıt, yalnızca bir istemci onaylanması için belgeyi onaylamanız gerekir.  
-  
-7. İçinde `UserType2` istemciler, onay bekleyen bir belge görüntülenir. Görseli seçip **onaylama** veya **Reddet**. Sonuçlar göstermesi gerekir `UserType1` istemci.  
-  
-##### <a name="to-run-the-complex-approval-scenario"></a>Karmaşık onayı senaryosu çalıştırmak için  
-  
-1. Yönetici izni olan bir komut istemi açın.  
-  
-2. Çözümü içeren dizine gidin.  
-  
-3. ApprovalClient\Bin\Debug klasöre gidin ve dört örneklerini ApprovalClient.exe yürütün.  
-  
-4. Tıklayın **Bul**, bekle **abone** düğmesi etkinleşir.  
-  
-5. Herhangi bir kullanıcı adı yazın ve tıklayın **abone**. Bir istemci için kullanmak `UserType1`, iki tür kullanan `UserType2`ve son kullanımda `UserType3`.  
-  
-6. İçinde `UserType1` tek onay açılan menüden yazıp bir belge adı ve içerik istemci, seçin. Tıklayın **onay isteği**.  
-  
-7. İçinde `UserType2` istemciler, onay bekleyen bir belge görüntülenir. Görseli seçip **onaylama**, belge gönderilirse `UserType3` istemci.  
-  
-     İlk belge onaylanırsa `UserType2` çekirdek, belge geçirildiğinde `UserType3` istemci.  
-  
-8. Onaylama veya reddetme belgeden `UserType3` istemci. Sonuçlar göstermesi gerekir `UserType1` istemci.  
-  
-##### <a name="to-clean-up"></a>Temizlemek için  
-  
-1. Bir Visual Studio 2010 komut isteminden DocumentApprovalProcess klasöre gidin ve Cleanup.cmd çalıştırın.
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`
+
+## <a name="sample-details"></a>Örnek Ayrıntılar
+
+Aşağıdaki grafik belge onay süreci iş akışını göstermektedir:
+
+![Bir belge onay işlemi iş akışı](./media/document-approval-process/document-approval-process.jpg)
+
+İstemci perspektifinden, onay işlemi aşağıdaki gibi çalışır:
+
+1. İstemci, onay işlem sisteminde bir kullanıcı olarak abone olur.
+
+2. WCF istemcisi, onay Yöneticisi uygulaması tarafından barındırılan bir WCF hizmetine gönderilir.
+
+3. İstemciye benzersiz bir kullanıcı KIMLIĞI döndürülür. İstemci artık onay işlemlerine katılabilir.
+
+4. Bir istemci birleştirildikten sonra tek, çekirdek veya karmaşık onay süreçlerini kullanarak bir belgeyi onaya gönderebilir.
+
+5. İstemci arabirimindeki bir düğmeye tıkladıktan sonra istemci Iş akışı hizmet ana bilgisayarında bir iş akışı örneği başlatılıyor.
+
+6. İş akışı, onay Yöneticisi uygulamasına bir onay isteği gönderir.
+
+7. Workflow Manager, bir onay işlemini göstermek için kendi tarafında bir iş akışı başlatır.
+
+8. Yönetici onayı iş akışı yürütüldükten sonra sonuçlar istemciye geri gönderilir.
+
+9. İstemci sonuçları görüntüler.
+
+10. İstemci bir onay isteği alabilir ve herhangi bir zamanda istek için yanıt verebilir.
+
+11. İstemcide barındırılan bir WCF hizmeti, onay Yöneticisi uygulamasından bir onay isteği alabilir.
+
+12. Belge bilgileri, gözden geçirilmek üzere istemcisinde sunulur.
+
+13. Kullanıcı belgeyi onaylayabilir veya reddedebilir.
+
+14. Bir WCF istemcisi, bir onay yanıtını onay Yöneticisi uygulamasına geri göndermek için kullanılır.
+
+Onay Yöneticisi uygulamasının görünüm noktasından, onay işlemi aşağıdaki gibi çalışır:
+
+1. İstemci onay işlem sistemine katılmayı ister.
+
+2. Onay yöneticisinde bir WCF hizmeti, onay işlem sisteminin bir parçası olarak bir istek alır.
+
+3. İstemci için benzersiz bir KIMLIK oluşturulur. Kullanıcı bilgileri bir veritabanında depolanır.
+
+4. Benzersiz KIMLIK kullanıcıya geri gönderilir.
+
+5. Bir onay isteği alma. Onay Yöneticisi bir onay işlemi yürütür.
+
+6. Onay Yöneticisi tarafından yeni bir iş akışı başlatılıyor onay isteği alındı.
+
+7. İsteğin türüne (basit, çekirdek veya karmaşık) bağlı olarak farklı bir etkinlik yürütülür.
+
+8. İlişki ile gönderme ve alma etkinlikleri, gözden geçirme için istemciye onay isteği göndermek ve yanıtı almak için kullanılır.
+
+9. Onay süreci iş akışının sonucu istemciye gönderilir.
+
+## <a name="using-the-sample"></a>Örneği kullanma
+
+##### <a name="to-set-up-the-database"></a>Veritabanını ayarlamak için
+
+1. Yönetici ayrıcalıklarıyla açılan bir Visual Studio 2010 komut isteminden, bu belgeleyici klasörüne gidin ve Setup. cmd ' yi çalıştırın.
+
+##### <a name="to-set-up-the-application"></a>Uygulamayı ayarlamak için
+
+1. Visual Studio 2010 kullanarak, Belgetapprovalprocess. sln çözüm dosyasını açın.
+
+2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
+
+3. Çözümü çalıştırmak için **Çözüm Gezgini** ApprovalManager projesine sağ tıklayıp sağ tıklama menüsünden **Hata Ayıkla**->yeni örnek**Başlat** ' a tıklayarak onay Yöneticisi uygulamasını başlatın.
+
+    Yöneticinin çıkışının, olduğunu bilmenizi sağlamak için bekleyin.
+
+##### <a name="to-run-the-single-approval-scenario"></a>Tek onay senaryosunu çalıştırmak için
+
+1. Yönetici izniyle bir komut istemi açın.
+
+2. Çözümü içeren dizine gidin.
+
+3. ApprovalClient\Bin\Debug klasörüne gidin ve ApprovalClient. exe ' nin iki örneğini yürütün.
+
+4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
+
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci için ve diğer `UserType1` türü `UserType2`kullanın.
+
+6. `UserType1` İstemcide, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
+
+7. `UserType2` İstemcide onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+
+##### <a name="to-run-the-quorum-approval-scenario"></a>Çekirdek onay senaryosunu çalıştırmak için
+
+1. Yönetici izniyle bir komut istemi açın.
+
+2. Çözümü içeren dizine gidin.
+
+3. ApprovalClient\Bin\Debug klasörüne gidin ve ApprovalClient. exe ' nin üç örneğini yürütün.
+
+4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
+
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci kullanımı `UserType1` ve diğer iki tür `UserType2`için.
+
+6. `UserType1` İstemcide, açılan menüden çekirdek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın. Bu, iki `UserType2` istemcinin belgeyi onaylamasını veya reddetmesini ister. Her iki `UserType2` istemcinin da yanıt vermesi gerekir, ancak belgeyi onaylanacak şekilde yalnızca bir istemci onaylaması gerekir.
+
+7. `UserType2` İstemcilerde onay bekleyen bir belge görüntülenir. Seçin ve **Onayla** veya **Reddet**' e basın. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+
+##### <a name="to-run-the-complex-approval-scenario"></a>Karmaşık onay senaryosunu çalıştırmak için
+
+1. Yönetici izniyle bir komut istemi açın.
+
+2. Çözümü içeren dizine gidin.
+
+3. ApprovalClient\Bin\Debug klasörüne gidin ve ApprovalClient. exe ' nin dört örneğini yürütün.
+
+4. **Keşfet**' e tıklayın, **abone ol** düğmesi etkin olana kadar bekleyin.
+
+5. Herhangi bir Kullanıcı adı yazın ve **abone ol**' a tıklayın. Bir istemci kullanımı `UserType1`için, iki kullanım türü `UserType2`ve son kullanımda `UserType3`.
+
+6. `UserType1` İstemcide, açılan menüden tek onay türünü seçin ve bir belge adı ve içerik yazın. **Onay iste**' ye tıklayın.
+
+7. `UserType2` İstemcilerde onay bekleyen bir belge görüntülenir. Seçin ve **Onayla**' ya basın, belge `UserType3` istemciye geçirilir.
+
+    Belge ilk `UserType2` çekirdek tarafından onaylanırsa, belge `UserType3` istemciye geçirilir.
+
+8. Belgeyi `UserType3` istemciden onaylayın veya reddedin. Sonuçların `UserType1` istemcide gösterilmesi gerekir.
+
+##### <a name="to-clean-up"></a>Temizlemek için
+
+1. Visual Studio 2010 komut isteminden, Belgetapprovalprocess klasörüne gidin ve Cleanup. cmd ' yi çalıştırın.

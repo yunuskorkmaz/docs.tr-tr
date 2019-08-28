@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040314"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046145"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>İzlenecek yol: Görsel Devralmayı Gösterme
 
@@ -35,19 +35,19 @@ Sonuç olarak, Bu anlatım devralınan bir formdaki özel ve korunan denetimler 
 > [!CAUTION]
 > Tüm denetimler temel formdan Görsel devralmayı desteklemez. Aşağıdaki denetimler bu kılavuzda açıklanan senaryoyu desteklemez:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Devralınan form içindeki bu denetimler her zaman, kullandığınız değiştiricilere (`private`, `protected`, veya `public`) bakılmaksızın salt okunurdur.
+> Devralınan form içindeki bu denetimler her zaman, kullandığınız değiştiricilere (`private`, `protected`, veya `public`) bakılmaksızın salt okunurdur.
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Temel form içeren bir sınıf kitaplığı projesi oluşturma
 
@@ -61,7 +61,7 @@ Sonuç olarak, Bu anlatım devralınan bir formdaki özel ve korunan denetimler 
 
 5. **Dosya** menüsünde **Tümünü Kaydet** ' i seçerek projeyi ve dosyaları varsayılan konuma kaydedin.
 
- Sonraki iki yordam, temel forma düğme ekler. Görsel devralmayı göstermek için, `Modifiers` özelliklerini ayarlayarak düğmelere farklı erişim düzeyleri verirsiniz.
+Sonraki iki yordam, temel forma düğme ekler. Görsel devralmayı göstermek için, `Modifiers` özelliklerini ayarlayarak düğmelere farklı erişim düzeyleri verirsiniz.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Temel formun devralanıların değiştirebileceği bir düğme Ekle
 
@@ -135,7 +135,7 @@ Sonuç olarak, Bu anlatım devralınan bir formdaki özel ve korunan denetimler 
 
 5. Zaten açık değilse, tasarımcıda devralınan formu (**Form2**) çift tıklayarak açın.
 
-     Tasarımcıda, devralınan düğmelerin bir sembolü vardır (![Visual Basic devralma sembolünün ekran görüntüsü.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) üst köşede devralındığını gösterir.
+    Tasarımcıda, devralınan düğmelerin bir sembolü vardır (![Visual Basic devralma sembolünün ekran görüntüsü.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) üst köşede devralındığını gösterir.
 
 6. **Merhaba deyin** düğmesini seçin ve yeniden boyutlandırma tutamaçlarını gözlemleyin. Bu düğme korunduğundan, devracılar onu taşıyabilir, yeniden boyutlandırabilir, resim yazısını değiştirebilir ve başka değişiklikler yapabilir.
 

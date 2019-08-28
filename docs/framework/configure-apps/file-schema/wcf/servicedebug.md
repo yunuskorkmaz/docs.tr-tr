@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936263"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041275"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
 Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yardım bilgileri özelliklerini belirtir.  
@@ -62,7 +62,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yard�
  İçin `includeExceptionDetailInFaults` ayarı`true` ,<xref:System.ServiceModel.FaultContractAttribute>özel durum kullanılarak bildirilmemiş olsa bile, hizmetin uygulama kodu tarafından oluşturulan herhangi bir özel durumu döndürmesini sağlar. Bu ayar, sunucunun beklenmeyen bir özel durum oluşturan durumlarda hata ayıklaması yaparken faydalıdır. Bu özniteliği kullanarak, bilinmeyen özel durumun serileştirilmiş formu döndürülür ve özel durumun daha fazla ayrıntılarını inceleyebilirsiniz.  
   
 > [!CAUTION]
->  Yönetilen özel durum bilgilerini istemcilere döndürmek, özel durum ayrıntıları yetkisiz istemciler tarafından kullanılabilecek iç hizmet uygulamasıyla ilgili bilgileri kullanıma sunduğundan güvenlik riski oluşturabilir. Söz konusu güvenlik sorunları nedeniyle, yalnızca denetimli hata ayıklama senaryolarında bunu yapmanız önemle önerilir. Uygulamanızı dağıttığınızda olarak `includeExceptionDetailInFaults` `false` ayarlamanız gerekir.  
+> Yönetilen özel durum bilgilerini istemcilere döndürmek, özel durum ayrıntıları yetkisiz istemciler tarafından kullanılabilecek iç hizmet uygulamasıyla ilgili bilgileri kullanıma sunduğundan güvenlik riski oluşturabilir. Söz konusu güvenlik sorunları nedeniyle, yalnızca denetimli hata ayıklama senaryolarında bunu yapmanız önemle önerilir. Uygulamanızı dağıttığınızda olarak `includeExceptionDetailInFaults` `false` ayarlamanız gerekir.  
   
  Yönetilen özel durumla ilgili güvenlik sorunları hakkında daha fazla bilgi için bkz. [anlaşmalar ve hizmetlerde hataları belirtme ve işleme](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Kod örneği için bkz. [hizmet hata ayıklama davranışı](../../../wcf/samples/service-debug-behavior.md).  
   

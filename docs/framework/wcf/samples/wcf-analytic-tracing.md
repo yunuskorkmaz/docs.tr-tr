@@ -2,121 +2,121 @@
 title: WCF Analiz İzleme
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 95a4335ef41240e8cc85c06b7997c12d98800b1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ba4f1778059f7b960eebd42822048fa031e6961e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624242"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044541"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF Analiz İzleme
-Bu örnek ETW Windows Communication Foundation (WCF) Yazar analitik izlemeleri akışının içine kendi izleme olaylarını ekleme gösterir [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analitik izlemeleri, yüksek performans cezası ödeme yapmadan hizmetlerinizi görünürlük elde etmek kolay hale getirmek için yöneliktir. Bu örnek nasıl kullanılacağını gösterir <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API WCF hizmetleri ile tümleştirme yazma olayları.  
+Bu örnek, ' de [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) tarafından ETW 'ye yazma işlemleri için kendi izleme olaylarınızın akışa nasıl ekleneceğini gösterir. Analitik izlemeler, yüksek performans cezası ödemeksizin hizmetlerinizin görünürlüğünü daha kolay hale getirmek için tasarlanmıştır. Bu örnek, <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> WCF hizmetleriyle tümleştirilen olayları yazmak için API 'lerinin nasıl kullanılacağını gösterir.  
   
- Hakkında daha fazla bilgi için <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API'leri bkz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
+ <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 'ler hakkında daha fazla bilgi için bkz <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
- Windows olay izleme hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](https://go.microsoft.com/fwlink/?LinkId=166488).  
+ Windows 'da olay izleme hakkında daha fazla bilgi edinmek için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkId=166488).  
   
-## <a name="disposing-eventprovider"></a>EventProvider disposing  
- Bu örnekte <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> sınıfını <xref:System.IDisposable?displayProperty=nameWithType>. Bir WCF hizmeti için izleme uygularken, kullanabileceğiniz olası <xref:System.Diagnostics.Eventing.EventProvider>ait hizmet ömrü için kaynaklar. Bu nedenle ve Okunabilirlik için bu örneği hiçbir zaman Sarmalanan siler <xref:System.Diagnostics.Eventing.EventProvider>. Herhangi bir nedenle farklı hizmetiniz varsa, bu kaynağın izleme ve gereksinimleri dispose gerekir ve bu örnek yönetilmeyen kaynaklarını atma için en iyi uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakların elden hakkında daha fazla bilgi için bkz. [Implementing a Dispose Method](https://go.microsoft.com/fwlink/?LinkId=166436).  
+## <a name="disposing-eventprovider"></a>EventProvider elden atılıyor  
+ Bu örnek, uygulayan <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> <xref:System.IDisposable?displayProperty=nameWithType>sınıfını kullanır. Bir WCF hizmeti için izlemeyi uygularken, hizmetin kullanım ömrü boyunca kaynaklarını kullanabilmeniz <xref:System.Diagnostics.Eventing.EventProvider>olasıdır. Bu nedenle ve okunabilirlik için bu örnek sarmalanmamış <xref:System.Diagnostics.Eventing.EventProvider>hiçbir şekilde yok. Bazı nedenlerle hizmetinizin izleme için farklı gereksinimleri varsa ve bu kaynağı atlamazsanız, bu örneği yönetilmeyen kaynakların elden atılamamasının en iyi uygulamalarına uygun olarak değiştirmeniz gerekir. Yönetilmeyen kaynakları elden atma hakkında daha fazla bilgi için bkz. [Dispose yöntemi uygulama](https://go.microsoft.com/fwlink/?LinkId=166436).  
   
-## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma vs. Web barındırma  
- Web barındırılan hizmetler için WCF'ın analitik izlemeleri izlemeleri yayma hizmeti tanımlamak için kullanılan "HostReference" adlı bir alan sağlar. Bu modelde, Genişletilebilir kullanıcı izlemeleri katılabilir ve bu örnek, bunu yapmak için en iyi uygulamaları gösterir. Bir Web ana bilgisayarı biçimi başvuru kanal '&#124;' karakter gerçekten görünür ortaya çıkan dize, aşağıdakilerden herhangi biri olabilir:  
+## <a name="self-hosting-vs-web-hosting"></a>Kendi kendine barındırma ile Web barındırma  
+ Web 'de barındırılan hizmetlerde, WCF 'nin analitik izlemeleri, izlemeleri yayan hizmeti belirlemek için kullanılan "HostReference" adlı bir alan sağlar. Genişletilebilir kullanıcı izlemeleri bu modele katılabilir ve bu örnekte bunu gerçekleştirmek için en iyi yöntemler gösterilmektedir. Sonuçta ortaya çıkan dizedeki Kanal '&#124;' karakteri göründüğünde bir Web ana bilgisayar başvurusunun biçimi aşağıdakilerden biri olabilir:  
   
-- Uygulama kök dizininde değilse.  
+- Uygulama kökte değilse.  
   
-     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
-- Uygulama kök dizininde ise.  
+- Uygulama kökde ise.  
   
-     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
+     \<SiteName >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- Şirket içinde barındırılan hizmetler için WCF'ın analitik izlemeleri "HostReference" alanı doldurmayın. `WCFUserEventProvider` Bu örnekteki sınıf davranışını tutarlı bir şekilde şirket içinde barındırılan bir hizmet tarafından kullanıldığında.  
+ Self-hosted Hizmetleri için, WCF 'nin analitik izlemeleri "HostReference" alanını doldurmamaktadır. Bu `WCFUserEventProvider` örnekteki sınıf, kendi kendine barındırılan bir hizmet tarafından kullanıldığında tutarlı bir şekilde davranır.  
   
 ## <a name="custom-event-details"></a>Özel olay ayrıntıları  
- WCF'ın ETW Olay sağlayıcısı bildirimi hizmeti kodundaki WCF Hizmeti yazarlar tarafından yayılan için tasarlanmış üç olayları tanımlar. Aşağıdaki tabloda, üç olay dökümünü gösterir.  
+ WCF 'nin ETW olay sağlayıcısı bildirimi, WCF hizmeti yazarları tarafından hizmet kodu içinden yayınlanarak tasarlanan üç olay tanımlar. Aşağıdaki tabloda, üç olay dökümü gösterilmektedir.  
   
 |Olay|Açıklama|Olay Kimliği|  
 |-----------|-----------------|--------------|  
-|UserDefinedInformationEventOccurred|Bu olay bir notun hizmetinizdeki bir sorun meydana geldiğinde gösterin. Örneğin, bir veritabanı çağrısı yapıldıktan sonra bir olay yayabilir.|301|  
-|UserDefinedWarningOccurred|Bu yayma, bir sorun oluştuğunda, olay bir hataya neden gelecekte. Örneğin, bir veritabanına bir çağrı başarısız olur, ancak bir veri deposuna dönülüyor tarafından kurtarmanız mümkün olduğunda bir uyarı olayı yayabilir.|302|  
-|UserDefinedErrorOccurred|Hizmetinizi beklendiği gibi davranmaya başarısız olduğunda bu olay gösterin. Örneğin, bir olay veritabanına bir çağrı başarısız olursa ve, verileri başka bir yerden alınamadı yayabilir.|303|  
+|UserDefinedInformationEventOccurred|Bu olayı, hizmetinize bir sorun olmayan bir not oluştuğunda ortaya çıkar. Örneğin, bir veritabanına başarıyla çağrı yaptıktan sonra bir olay yayabilirsiniz.|301|  
+|Userdefinedwarninggerçekleşti|Bu olayı, gelecekte hata oluşmasına neden olabilecek bir sorun oluştuğunda göster. Örneğin, bir veritabanına yapılan çağrı başarısız olduğunda ancak gereksiz bir veri deposuna geri dönerek kurtarılamadığında bir uyarı olayı oluşturabilirsiniz.|302|  
+|UserDefinedErrorOccurred|Hizmetiniz beklendiği gibi davranamazsa bu olayı gösterin. Örneğin, bir veritabanına yapılan çağrı başarısız olursa ve verileri başka bir yerden alamadıysanız bir olay oluşturabilirsiniz.|303|  
   
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1. Visual Studio 2012 kullanarak WCFAnalyticTracingExtensibility.sln çözüm dosyasını açın.  
+1. Visual Studio 2012 kullanarak Wcfanaltictracingextensibility. sln çözüm dosyasını açın.  
   
 2. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.  
   
 3. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.  
   
-     Web tarayıcısında tıklayın **Calculator.svc**. WSDL belgesinde hizmet URI'si tarayıcı içinde görüntülenmesi gerekir. Bu URI'yi kopyalayın.  
+     Web tarayıcısında, **Hesaplayıcı. svc**' ye tıklayın. Hizmet için WSDL belgesinin URI 'SI tarayıcıda görünmelidir. Bu URI 'yi kopyalayın.  
   
-4. WCF test istemcisi (WcfTestClient.exe) çalıştırın.  
+4. WCF test istemcisini (WcfTestClient. exe) çalıştırın.  
   
-     WCF test istemcisi (WcfTestClient.exe) şu konumdadır `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Varsayılan Visual Studio 2012 yükleme dizini olan `C:\Program Files\Microsoft Visual Studio 10.0`.  
+     WCF Test istemcisi (WcfTestClient. exe) konumunda `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`bulunur. Varsayılan Visual Studio 2012 install dir `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5. WCF test istemcisi içinde hizmet seçerek ekleyin **dosya**, ardından **Hizmet Ekle**.  
+5. WCF Test istemcisi içinde **Dosya**' yı ve ardından **Hizmet Ekle**' yi seçerek hizmeti ekleyin.  
   
-     Uç nokta adresi giriş kutusuna ekleyin.  
+     Giriş kutusuna uç nokta adresini ekleyin.  
   
-6. Tıklayın **Tamam** iletişim kutusunu kapatmak için.  
+6. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-     Sol bölmede altında ICalculator hizmet eklenir **hizmet Projelerim**.  
+     Icalsoltor hizmeti, sol bölmede **hizmet projelerim**altında eklenir.  
   
 7. Olay Görüntüleyici uygulamasını açın.  
   
-     Hizmetini çağırmak önce Olay Görüntüleyicisi'ni başlatın ve olay günlüğüne olayları WCF hizmetinden yayılan izleme dinlediğinden emin olun.  
+     Hizmeti çağırmadan önce Olay Görüntüleyicisi başlatın ve olay günlüğünün WCF hizmetinden yayılan izleme olaylarını dinlediğinden emin olun.  
   
-8. Gelen **Başlat** menüsünde **Yönetimsel Araçlar**, ardından **Olay Görüntüleyicisi'ni**. Etkinleştirme **analitik** ve **hata ayıklama** günlükleri.  
+8. **Başlat** menüsünde, **Yönetim Araçları**' nı seçin ve ardından **Olay Görüntüleyicisi**. **Analitik** ve **hata ayıklama** günlüklerini etkinleştirin.  
   
-9. Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve ardından **Uygulama uygulamalarının**. Sağ **uygulama uygulamalarının**seçin **görünümü**, ardından **Analitik ve hata ayıklama günlüklerini göster**.  
+9. Olay Görüntüleyicisi ' deki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**ve ardından **uygulama sunucusu-uygulamalar**' a gidin. **Uygulama sunucusu-uygulamalar**' a sağ tıklayın, **Görünüm**' ü seçin ve ardından **analitik ve hata ayıklama günlüklerini görüntüleyin**.  
   
-     Emin **Analitik ve hata ayıklama günlüklerini göster** seçeneği denetlenir. Etkinleştirme **analitik** günlük.  
+     **Analitik ve hata ayıklama günlüklerini göster** seçeneğinin işaretli olduğundan emin olun. **Analitik** günlüğü etkinleştirin.  
   
-     Olay Görüntüleyicisi'nde ağaç görünümünde gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama uygulamalarının**, ardından **analitik**. Sağ **analitik** seçip **günlüğü etkinleştir**.  
+     Olay Görüntüleyicisi 'daki ağaç görünümünde **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin.  
   
-10. WCF Test İstemcisi'ı kullanarak hizmeti test edin.  
+10. WCF test Istemcisini kullanarak hizmeti test edin.  
   
-    1. WCF Test İstemcisi'nde çift **Add()** ICalculator hizmet düğümü altında.  
+    1. WCF test Istemcisinde, Icalbir hizmet düğümü altında **Add ()** öğesine çift tıklayın.  
   
-         **Add()** yöntemi sağ bölmede iki parametre ile görünür.  
+         **Add ()** yöntemi sağ bölmede iki parametre ile görünür.  
   
-    2. İlk parametresi için 2 ve 3 ' İkinci parametre için yazın.  
+    2. İkinci parametre için ilk parametre olarak 2 yazın ve 3.  
   
-    3. Tıklayın **Invoke** yöntemini çağırmak için.  
+    3. Yöntemi çağırmak için **çağır** ' a tıklayın.  
   
-11. Git **Olay Görüntüleyicisi'ni** zaten açık bir pencere. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama Sunucu uygulamaları**.  
+11. Zaten açtığınız **Olay Görüntüleyicisi** penceresine gidin. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' a gidin.  
   
-12. Sağ **analitik** düğümünü seçip alt **Yenile**.  
+12. **Analitik** düğümüne sağ tıklayın ve **Yenile**' yi seçin.  
   
-     Olaylar, sağ bölmede görüntülenir.  
+     Olaylar sağ bölmede görüntülenir.  
   
-13. 303 kimlik olayla bulun ve dosyayı açın ve içeriğini incelemek için çift tıklayın.  
+13. KIMLIĞI 303 olan olayı bulun ve çift tıklayarak içeriği açın ve içeriğini inceleyin.  
   
-     Bu olay tarafından izlenemiyor `Add()` ICalculator hizmetinin yöntemi ve bir yükü eşit "2 + 3 = 5".  
+     Bu olay, icalbir hizmet `Add()` yöntemi tarafından yayılmıştı ve "2 + 3 = 5" değerine eşit bir yüke sahip.  
   
-#### <a name="to-clean-up-optional"></a>(İsteğe bağlı) temizlemek için  
+#### <a name="to-clean-up-optional"></a>Temizlemek için (Isteğe bağlı)  
   
-1. Açık **Olay Görüntüleyicisi'ni**.  
+1. **Olay Görüntüleyicisi**açın.  
   
-2. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, ardından  **Uygulama sunucusu uygulamalar**. Sağ **analitik** seçip **devre dışı günlük**.  
+2. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**ve sonra **uygulama-sunucu uygulamaları**' na gidin. **Analitik** öğesine sağ tıklayın ve **günlüğü devre dışı bırak**' ı seçin.  
   
-3. Gidin **Olay Görüntüleyicisi'ni**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**,  **Uygulama sunucu uygulamaları**, ardından **analitik**. Sağ **analitik** seçip **Günlüğü Temizle**.  
+3. **Olay Görüntüleyicisi**, **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama-sunucu-uygulamalar**ve ardından **analitik**' e gidin. **Analitik** öğesine sağ tıklayın ve **Günlüğü Temizle**' yi seçin.  
   
-4. Tıklayın **Temizle** olayları temizleyin.  
+4. Olayları temizlemek için **Temizle** ' ye tıklayın.  
   
 ## <a name="known-issue"></a>Bilinen sorun  
- Bilinen bir sorun var. **Olay Görüntüleyicisi'ni** burada da başarısız olabilir ETW olaylarının kodunu çözmek. Bildiren bir hata iletisini görebilirsiniz: "Olay kimliği için açıklama \<kimliği > kaynağından Microsoft Windows uygulaması uygulamalarının bulunamıyor. Bu olayı oluşturan bileşen, yerel bilgisayarınızda yüklü değil veya yüklemenin bozuk. Yükleyebilir veya yerel bilgisayarda bileşen onarın." Bu hatayla karşılaşırsanız, seçin **Yenile** gelen **eylemleri** menüsü. Olay sonra düzgün bir şekilde kod çözme.  
+ **Olay Görüntüleyicisi** IÇINDE, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Şöyle bir hata iletisi görebilirsiniz: "Kaynak Microsoft-Windows- \<Application Server 'dan > olay kimliği kimliği için açıklama-uygulamalar bulunamıyor. Bu olayı başlatan bileşen yerel bilgisayarınızda yüklü değil veya yükleme bozuk. Bileşeni yerel bilgisayara yükleyebilir veya onarabilirsiniz. " Bu hatayla karşılaşırsanız, **Eylemler** menüsünden **Yenile** ' yi seçin. Olay daha sonra doğru şekilde kod çözmelidir.  
   
 > [!IMPORTANT]
->  Örnekler, bilgisayarınızda yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric Izleme örnekleri](https://go.microsoft.com/fwlink/?LinkId=193959)

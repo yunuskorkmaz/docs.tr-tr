@@ -6,53 +6,54 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: daddbee9aa5eff55bf12a5d8c53ad59001a0c308
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5069d7d3b5ef4c5b05159dac521d32f5be8abdd1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612448"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046039"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Nasıl yapılır: Tasarımcı Kullanarak bir Windows Forms Denetimini bir Türe Bağlama
-Verilerle etkileşimde bulunmak denetimleri oluştururken, bazen bir nesne yerine bir tür bir denetimine bağlamak gerekir. Genelde bir denetimi tasarım zamanında ne zaman veri kullanılamıyor olabilir, ancak yine de bir türün ortak arabirim verileri görüntülemek için verilere bağlı denetimler istediğiniz bir türe bağlama gerekir. Aşağıdaki yordamlar yeni bir oluşturma işlemini göstermektedir <xref:System.Windows.Forms.BindingSource> olan bir türü için sınır ve sonra nasıl bir türün özelliklerine bağlanacağını <xref:System.Windows.Forms.TextBox.Text%2A> özelliği bir <xref:System.Windows.Forms.TextBox>.  
-  
-### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource bir türe bağlama için  
-  
-1. Bir Windows Forms projesi oluşturun (**dosya** > **yeni** > **proje** > **Visual C#** veya **Visual Basic** > **Klasik Masaüstü** > **Windows Forms uygulamalarındaki**).  
-  
-2. İçinde **tasarım** görüntülemek için sürükleyin bir <xref:System.Windows.Forms.BindingSource> forma bileşen.  
-  
-3. İçinde **özellikleri** penceresinde için oka tıklayın <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği.  
-  
-4. İçinde **DataSource UI türü düzenleyici**, tıklayın **proje veri kaynağı Ekle**.  
-  
-5. Üzerinde **bir veri kaynağı türü seçin** sayfasında **nesne** tıklatıp **sonraki**.  
-  
-6. Bağlanılacak türünü seçin:  
-  
-    - Bağlamak istediğiniz türü geçerli projede veya türü içeren derlemeye bir başvuru olarak zaten eklendi, istediğiniz türünü bulmak için düğümleri genişletin ve ardından bu seçeneği belirleyin.  
-  
-         -veya-  
-  
-    - Bağlamak istediğiniz türü olan başvuruları listesinde şu anda başka bir derlemede tıklarsanız **Başvuru Ekle**ve ardından **projeleri** sekmesi. ' A tıklayın ve istediğiniz iş nesnesi içeren projeyi seçin **Tamam**. Bu proje, derleme, listede görünür türü bulmak için düğümleri genişletebilirsiniz. Bu nedenle, istediğiniz ve ardından bu seçeneği belirleyin.  
-  
-        > [!NOTE]
-        >  Framework ya da Microsoft derlemesi bir tür bağlamak istiyorsanız, Temizle **Gizle Microsoft veya sistem başlayan derlemeleri** onay kutusu.  
-  
-7. **İleri**'ye ve ardından **Son**'a tıklayın.  
-  
-### <a name="to-bind-the-control-to-the-bindingsource"></a>Denetimi için BindingSource bağlamak için  
-  
-1. Ekleme bir <xref:System.Windows.Forms.TextBox> form.  
-  
-2. İçinde **özellikleri** penceresini genişletin **(DataBindings)** düğümü.  
-  
-3. Yanındaki oka tıklayın <xref:System.Windows.Forms.TextBox.Text%2A> özelliği.  
-  
-4. İçinde **DataSource UI türü düzenleyici**, düğümünü genişletin <xref:System.Windows.Forms.BindingSource> daha önce eklenmiş ve istediğiniz bağlamak için ilişkili tür özelliğine seçin <xref:System.Windows.Forms.TextBox.Text%2A> özelliği <xref:System.Windows.Forms.TextBox>.  
-  
+
+Verilerle etkileşen denetimleri oluştururken, bazen bir denetimi bir nesne yerine bir türe bağlamanız gerekir. Genellikle bir denetimi tasarım zamanında bir türe bağlamanız gerekir, ancak veriler kullanılamayabilir, ancak yine de veri bağlama denetimlerinizi bir türün ortak arabiriminden verileri görüntülemesini istiyorsanız. Aşağıdaki yordamlarda, bir türe bağlı yeni <xref:System.Windows.Forms.BindingSource> bir oluşturma ve ardından türün özelliklerinden <xref:System.Windows.Forms.TextBox.Text%2A> birinin bir <xref:System.Windows.Forms.TextBox>özelliğine nasıl bağlanacağı gösterilmektedir.
+
+### <a name="to-bind-the-bindingsource-to-a-type"></a>BindingSource 'un bir türe bağlanması için
+
+1. Windows Forms projesi oluşturma (**Dosya** > **Yeni** > **Proje** > **görseli C#**  veya **Visual Basic** **Klasik** Masaüstü >   >  **Windows Forms uygulama**).
+
+2. **Tasarım** görünümü ' nde bir <xref:System.Windows.Forms.BindingSource> bileşeni formun üzerine sürükleyin.
+
+3. **Özellikler** penceresinde, <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliğin okuna tıklayın.
+
+4. **DataSource Kullanıcı arabirimi türü düzenleyicisinde**, **proje veri kaynağı Ekle**' ye tıklayın.
+
+5. **Veri kaynağı türü seçin** sayfasında, **nesne** ' yi seçin ve **İleri**' ye tıklayın.
+
+6. Bağlanacak türü seçin:
+
+    - Bağlamak istediğiniz tür geçerli projede ise veya türü içeren derleme zaten başvuru olarak eklendiyse, istediğiniz türü bulmak için düğümleri genişletin ve ardından seçin.
+
+      \-veya
+
+    - Bağlamak istediğiniz tür başka bir derlemede ise, şu anda başvurular listesinde yer alıyorsa, **Başvuru Ekle**' ye tıklayın ve ardından **Projeler** sekmesine tıklayın. İstediğiniz iş nesnesini içeren projeyi seçin ve **Tamam**' a tıklayın. Bu proje, derlemeler listesinde görünür, böylece istediğiniz türü bulmak için düğümleri genişletebilir ve ardından bunu seçebilirsiniz.
+
+      > [!NOTE]
+      > Bir Framework veya Microsoft derlemesinde bir türe bağlamak istiyorsanız, **Microsoft veya System ile başlayan derlemeleri Gizle** onay kutusunu temizleyin.
+
+7. **İleri**'ye ve ardından **Son**'a tıklayın.
+
+### <a name="to-bind-the-control-to-the-bindingsource"></a>Denetimi BindingSource 'a bağlamak için
+
+1. Forma bir <xref:System.Windows.Forms.TextBox> ekleyin.
+
+2. **Özellikler** penceresinde **(DataBindings)** düğümünü genişletin.
+
+3. <xref:System.Windows.Forms.TextBox.Text%2A> Özelliğin yanındaki oka tıklayın.
+
+4. **DataSource Kullanıcı arabirimi türü düzenleyicisinde**, daha önce <xref:System.Windows.Forms.BindingSource> eklenen için düğümünü genişletin ve <xref:System.Windows.Forms.TextBox.Text%2A> özelliğine <xref:System.Windows.Forms.TextBox>bağlamak istediğiniz bağlı türün özelliğini seçin.
+
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [BindingSource Bileşeni](bindingsource-component.md)
-- [Nasıl yapılır: Bir Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Nasıl yapılır: Windows Forms denetimini bir türe bağlama](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio'da verilere denetimler bağlama](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

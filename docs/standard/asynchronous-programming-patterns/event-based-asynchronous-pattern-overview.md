@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950688"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046479"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading> Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için <xref:System.ComponentModel.BackgroundWorker> , bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
@@ -45,7 +45,7 @@ Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt
  Olay tabanlı zaman uyumsuz model, zaman uyumsuz bir işlemin iptal edilmesine ve <xref:System.Windows.Forms.PictureBox> denetimin <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> yöntemiyle bu gereksinimi desteklediğinden emin olmanızı gerektirir. Çağırma <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> , bekleyen indirmeyi durdurmak için bir istek gönderir ve görev iptal <xref:System.Windows.Forms.PictureBox.LoadCompleted> edildiğinde olay tetiklenir.  
   
 > [!CAUTION]
->  İndirme işlemi, <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> isteğin yapıldığı gibi bitecektir, bu nedenle <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteğini yansıtmayabilir. Bu, *yarış durumu* olarak adlandırılır ve çok iş parçacıklı programlamada yaygın bir sorundur. Çoklu iş parçacıklı programlamada sorunlar hakkında daha fazla bilgi için bkz. [yönetilen Iş parçacığı En Iyi yöntemleri](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> İndirme işlemi, <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> isteğin yapıldığı gibi bitecektir, bu nedenle <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> iptal etme isteğini yansıtmayabilir. Bu, *yarış durumu* olarak adlandırılır ve çok iş parçacıklı programlamada yaygın bir sorundur. Çoklu iş parçacıklı programlamada sorunlar hakkında daha fazla bilgi için bkz. [yönetilen Iş parçacığı En Iyi yöntemleri](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Olay tabanlı zaman uyumsuz düzenin özellikleri  
  Olay tabanlı zaman uyumsuz model, belirli bir sınıf tarafından desteklenen işlemlerin karmaşıklığına bağlı olarak birkaç form alabilir. En basit sınıflarda tek bir _MethodName_**zaman uyumsuz** yöntemi ve karşılık gelen bir _MethodName_**tamamlandı** olayı olabilir. Daha karmaşık sınıfların, her biri karşılık gelen _MethodName_**tamamlandı** olayına ve bu yöntemlerin eşzamanlı sürümlerine sahip birkaç _MethodName_**zaman uyumsuz** yöntemi olabilir. Sınıflar, her zaman uyumsuz yöntem için, isteğe bağlı olarak iptali, ilerleme raporlaması ve artımlı sonuçları destekleyebilir.  

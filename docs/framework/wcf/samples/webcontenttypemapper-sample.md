@@ -2,21 +2,21 @@
 title: WebContentTypeMapper Örneği
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b15651859fd17673caf898df02c2b74a85d7612
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006329"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038535"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper Örneği
-Bu örnek, yeni içerik türleri için Windows Communication Foundation (WCF) ileti gövdesi biçimleri eşlemeyle ilgili bilgi gösterir.  
+Bu örnek, yeni içerik türlerinin Windows Communication Foundation (WCF) ileti gövdesi biçimlerine nasıl eşleneceğini gösterir.  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> Öğesi bağlayacaktır JSON, XML veya aynı uç noktasında ham ikili iletileri almak WCF sağlayan Web ileti Kodlayıcı. Kodlayıcı, HTTP content-type, isteğin bakarak iletinin gövdesi biçimini belirler. Bu örnek tanıtır <xref:System.ServiceModel.Channels.WebContentTypeMapper> içerik türü ve gövde biçimi arasındaki eşlemeyi denetlemek kullanıcının sağlar sınıfını.  
+ <xref:System.ServiceModel.Description.WebHttpEndpoint> Öğesi, WCF 'nin aynı uç noktada JSON, XML veya ham ikili mesajlar almasına izin veren Web ileti Kodlayıcısı ' nı takar. Kodlayıcı, isteğin HTTP içerik türüne bakarak iletinin gövde biçimini belirler. Bu örnek, kullanıcının <xref:System.ServiceModel.Channels.WebContentTypeMapper> içerik türü ve gövde biçimi arasındaki eşlemeyi denetlemesine olanak tanıyan sınıfını tanıtır.  
   
- WCF içerik türleri için varsayılan eşlemeleri sunmaktadır. Örneğin, `application/json` JSON değerine eşleyen ve `text/xml` eşleyen XML. JSON veya XML eşlenmemiş herhangi bir içerik türüne ham ikili biçime eşlenir.  
+ WCF, içerik türleri için bir varsayılan eşlemeler kümesi sağlar. Örneğin, `application/json` JSON ile eşlenir ve `text/xml` XML ile eşlenir. JSON veya XML ile eşlenmemiş herhangi bir içerik türü ham ikili biçime eşlenir.  
   
- Bazı senaryolarda (örneğin, anında iletme stili API), istemci tarafından döndürülen içerik türü service Geliştirici denetlemez. Örneğin, istemcilerin JSON olarak döndürebilir `text/javascript` yerine `application/json`. Bu durumda, hizmet geliştirici, türetilen bir tür sağlamalısınız <xref:System.ServiceModel.Channels.WebContentTypeMapper> belirtilen içerik türü aşağıdaki örnek kodda gösterildiği gibi doğru şekilde işlemek için.  
+ Bazı senaryolarda (örneğin, gönderme stili API 'Leri), hizmet geliştiricisi istemci tarafından döndürülen içerik türünü denetlemez. Örneğin, istemciler `text/javascript` `application/json`yerine JSON döndürebilir. Bu durumda, hizmet geliştiricisi aşağıdaki örnek kodda gösterildiği gibi, verilen içerik türünü <xref:System.ServiceModel.Channels.WebContentTypeMapper> doğru bir şekilde işlemek için öğesinden türetilen bir tür sağlamalıdır.  
   
 ```  
 public class JsonContentTypeMapper : WebContentTypeMapper  
@@ -36,9 +36,9 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 }  
 ```  
   
- Türü geçersiz kılmanız gerekir <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> yöntemi. Yöntem değerlendirmelidir `contentType` bağımsız değişkeni ve dönüş aşağıdaki değerlerden biri: <xref:System.ServiceModel.Channels.WebContentFormat.Json>, <xref:System.ServiceModel.Channels.WebContentFormat.Xml>, <xref:System.ServiceModel.Channels.WebContentFormat.Raw>, veya <xref:System.ServiceModel.Channels.WebContentFormat.Default>. Döndüren <xref:System.ServiceModel.Channels.WebContentFormat.Default> varsayılan Web ileti Kodlayıcı eşlemelere erteler. Önceki örnek kodda `text/javascript` içerik türü için JSON eşlenen ve diğer tüm eşlemeleri değişmeden kalır.  
+ Tür, <xref:System.ServiceModel.Channels.WebContentTypeMapper.GetMessageFormatForContentType%28System.String%29> yöntemi geçersiz kılmalıdır. Yöntemi `contentType` , bağımsız değişkeni değerlendirmeli ve şu değerlerden birini döndürmelidir: <xref:System.ServiceModel.Channels.WebContentFormat.Xml> <xref:System.ServiceModel.Channels.WebContentFormat.Json>,, <xref:System.ServiceModel.Channels.WebContentFormat.Raw>veya <xref:System.ServiceModel.Channels.WebContentFormat.Default>. Varsayılan <xref:System.ServiceModel.Channels.WebContentFormat.Default> Web ileti Kodlayıcısı eşlemelerine erteleyiciler döndürülüyor. Önceki örnek kodda, `text/javascript` içerik türü json ile eşlenir ve diğer tüm eşlemeler değişmeden kalır.  
   
- Kullanılacak `JsonContentTypeMapper` sınıf, uygulamanızın Web.config dosyasında aşağıdakileri kullanın:  
+ `JsonContentTypeMapper` Sınıfını kullanmak için, Web. config dosyasında aşağıdakileri kullanın:  
   
 ```xml  
 <system.serviceModel>  
@@ -50,21 +50,21 @@ public class JsonContentTypeMapper : WebContentTypeMapper
 </system.serviceModel>  
 ```  
   
- JsonContentTypeMapper kullanma gereksinimi doğrulamak için yukarıdaki yapılandırma dosyasından contentTypeMapper özniteliği kaldırın. İstemci sayfa kullanmaya çalışırken yüklenemiyordur `text/javascript` JSON içerik göndermek için.  
+ JsonContentTypeMapper kullanma gereksinimini doğrulamak için, yukarıdaki yapılandırma dosyasından contentTypeMapper özniteliğini kaldırın. JSON içeriğini göndermek için kullanılmaya `text/javascript` çalışıldığında istemci sayfası yükleme başarısız olur.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. ' % S'çözüm WebContentTypeMapperSample.sln açıklandığı gibi oluşturmak [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümünde açıklandığı gibi WebContentTypeMapperSample. sln çözümünü oluşturun.  
   
-3. Gidin `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (JCTMClientPage.htm tarayıcıda proje dizininden açmayın).  
+3. ' A gidin (bir proje dizininin içinden JCTMClientPage. htm dosyasını tarayıcıda açmayın). `http://localhost/ServiceModelSamples/JCTMClientPage.htm`  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

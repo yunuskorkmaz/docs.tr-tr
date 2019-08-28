@@ -2,16 +2,18 @@
 title: C#dil sürümü oluşturma C# -kılavuz
 description: C# Dil sürümünün projenize göre nasıl belirlendiği hakkında bilgi edinin ve bunu el ile ayarlayabileceğiniz farklı değerler.
 ms.date: 07/10/2019
-ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: fae36f5305e23fbfa1c55c5881e37391670f93ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796535"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040345"
 ---
 # <a name="c-language-versioning"></a>C#dil sürümü oluşturma
 
-Derleyici C# , projenizin hedef çerçevesine veya çerçevelerine göre varsayılan dil sürümünü belirler. Bunun nedeni, C# dilin her .NET uygulamasında kullanılamayan türleri veya çalışma zamanı bileşenlerini kullanan özelliklere sahip olması olabilir. Bu Ayrıca, projenizin her türlü hedefi için varsayılan olarak en yüksek uyumlu dil sürümünü almanızı sağlar.
+En son C# derleyici, projenizin hedef çerçevesine veya çerçevelerine göre varsayılan dil sürümünü belirler. Bunun nedeni, C# dilin her .NET uygulamasında kullanılamayan türleri veya çalışma zamanı bileşenlerini kullanan özelliklere sahip olması olabilir. Bu Ayrıca, projenizin her türlü hedefi için varsayılan olarak en yüksek uyumlu dil sürümünü almanızı sağlar.
+
+Bu makaledeki kurallar, Visual Studio 2019 veya .NET Core 3,0 SDK ile sunulan derleyici için geçerlidir. Visual C# Studio 2017 yüklemesinin parçası olan derleyiciler veya daha önceki .NET Core SDK sürümleri, varsayılan olarak C# 7,0 ' dir. 
 
 ## <a name="defaults"></a>Varsayılanları
 

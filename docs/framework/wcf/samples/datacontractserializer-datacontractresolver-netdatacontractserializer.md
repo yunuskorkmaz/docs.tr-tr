@@ -2,22 +2,22 @@
 title: NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990411"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039871"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma
-Bu örnek gösterir nasıl kullanımını <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer>. Bu örnek, uygun oluşturma işlemi gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> ve eklemek üzere onu nasıl <xref:System.Runtime.Serialization.DataContractSerializer>.
+Bu örnek, öğesinin <xref:System.Runtime.Serialization.DataContractSerializer> kullanımı ile <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevleri nasıl <xref:System.Runtime.Serialization.NetDataContractSerializer>sağladığını gösterir. Bu örnek, <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer>için nasıl oluşturulacağını ve nasıl ekleneceğini gösterir.
 
-## <a name="sample-details"></a>Örnek Ayrıntıları
- <xref:System.Runtime.Serialization.NetDataContractSerializer> farklıdır <xref:System.Runtime.Serialization.DataContractSerializer> önemli bir şekilde: <xref:System.Runtime.Serialization.NetDataContractSerializer> CLR türü bilgisi serileştirilmiş XML'de içerir <xref:System.Runtime.Serialization.DataContractSerializer> desteklemez. Bu nedenle, <xref:System.Runtime.Serialization.NetDataContractSerializer> yalnızca, aynı CLR Türleri serileştirmek hem de sona erer seri durumdan çıkarılırken paylaşıyorsa kullanılır. Ancak, kullanılacak önerilir <xref:System.Runtime.Serialization.DataContractSerializer> performansı daha iyidir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer>. İçinde serileştirilmiş bilgileri değiştirebilirsiniz <xref:System.Runtime.Serialization.DataContractSerializer> ekleyerek bir <xref:System.Runtime.Serialization.DataContractResolver> ona.
+## <a name="sample-details"></a>Örnek Ayrıntılar
+ <xref:System.Runtime.Serialization.NetDataContractSerializer>, önemli bir yoldan farklıdır: <xref:System.Runtime.Serialization.NetDataContractSerializer> seri hale getirilen XML 'de clr türü bilgilerini içerir, ancak <xref:System.Runtime.Serialization.DataContractSerializer> bunu yapmaz. <xref:System.Runtime.Serialization.DataContractSerializer> Bu nedenle <xref:System.Runtime.Serialization.NetDataContractSerializer> , yalnızca serileştirme ve serisini kaldırma uçları aynı CLR türlerini paylaşıyorsa kullanılabilir. Ancak, performansı <xref:System.Runtime.Serialization.NetDataContractSerializer>daha iyi olduğundan kullanılması <xref:System.Runtime.Serialization.DataContractSerializer> önerilir. İçine bir <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.DataContractResolver> ekleyerek ' de seri hale getirilen bilgileri değiştirebilirsiniz.
 
- Bu örnek iki projeden oluşan. İlk projenizi kullanan <xref:System.Runtime.Serialization.NetDataContractSerializer> bir nesneyi serileştirmek için. İkinci kullandığından <xref:System.Runtime.Serialization.DataContractSerializer> ile bir <xref:System.Runtime.Serialization.DataContractResolver> ilk proje ile aynı işlevselliği sağlamak için.
+ Bu örnek iki projeden oluşur. İlk proje, bir <xref:System.Runtime.Serialization.NetDataContractSerializer> nesneyi seri hale getirmek için kullanır. İkinci proje, birinci <xref:System.Runtime.Serialization.DataContractSerializer> projeyle aynı <xref:System.Runtime.Serialization.DataContractResolver> işlevselliği sağlamak için ile ile kullanır.
 
- Aşağıdaki kod örneği bir özel uygulanışı gösterilmektedir <xref:System.Runtime.Serialization.DataContractResolver> adlı `MyDataContractResolver` eklenen <xref:System.Runtime.Serialization.DataContractSerializer> DCSwithDCR projedeki.
+ Aşağıdaki kod örneği, DCSwithDCR projesinde öğesine <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> eklenen `MyDataContractResolver` özel bir adlandırılmış öğesinin uygulamasını gösterir.
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -57,27 +57,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2012 kullanarak DCRSample.sln çözüm dosyasını açın.
+1. Visual Studio 2012 kullanarak DCRSample. sln çözüm dosyasını açın.
 
-2. Çözüm dosyasını sağ tıklatın ve seçin **özellikleri**.
+2. Çözüm dosyasına sağ tıklayın ve **Özellikler**' i seçin.
 
-3. İçinde **çözüm özellik sayfaları** iletişim altında **ortak özellikler**, **başlangıç projesi**seçin **birden fazla başlangıç projesi:**.
+3. **Çözüm Özellik sayfaları** iletişim kutusunda, **ortak özellikler**, **Başlangıç projesi**altında **birden çok başlangıç**projesi seçin:.
 
-4. Yanındaki **DCSwithDCR** proje, select **Başlat** gelen **eylem** açılır.
+4. **DCSwithDCR** projesinin yanındaki **eylem** açılan listesinden **Başlat** ' ı seçin.
 
-5. Yanındaki **NetDCS** proje, select **Başlat** gelen **eylem** açılır.
+5. **NetDCS** projesinin yanındaki **eylem** açılan listesinden **Başlat** ' ı seçin.
 
-6. Tıklayın **Tamam** iletişim kutusunu kapatmak için.
+6. İletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.
 
 7. Çözümü derlemek için CTRL + SHIFT + B tuşlarına basın.
 
 8. Çözümü çalıştırmak için CTRL + F5 tuşlarına basın.
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

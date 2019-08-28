@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940875"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046399"
 ---
 # <a name="drag-and-drop-overview"></a>Sürükleme ve Bırakmaya Genel Bakış
 Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] uygulamalarda sürükle ve bırak desteğine genel bir bakış sağlar. Sürükleyip bırakma genellikle bir veya daha fazla nesne seçmek için fare (veya başka bir işaret aygıtı) kullanan bir veri aktarımı yöntemine başvurur ve bu nesneleri, [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]içindeki belirli bir bırakma hedefi üzerine sürükleyip bırakarak bunları bırakabilir.  
@@ -166,7 +166,7 @@ Bu konu, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient
  Sürükleme kaynağı sürüklenirken olay sürekli olarak getirilir. <xref:System.Windows.DragDrop.QueryContinueDrag> Bu olayı, sürükle ve bırak işlemini ESC, SHIFT, CTRL ve ALT tuşlarının yanı sıra fare düğmelerinin durumunu temel alarak hangi eylemin bittiğini belirlemek için işleyebilirsiniz. Bu olay için varsayılan işleyici, ESC tuşuna basıldığında sürükle ve bırak işlemini iptal eder ve fare düğmesi serbest bırakıldığında verileri bırakır.  
   
 > [!CAUTION]
->  Bu olaylar, sürükle ve bırak işlemi sırasında sürekli olarak oluşturulur. Bu nedenle, olay işleyicilerinde kaynakların yoğun görevlerinin olmaması gerekir.  Örneğin, <xref:System.Windows.DragDrop.GiveFeedback> olay her oluşturulduğunda yeni bir imleç oluşturmak yerine önbelleğe alınmış bir imleç kullanın.  
+> Bu olaylar, sürükle ve bırak işlemi sırasında sürekli olarak oluşturulur. Bu nedenle, olay işleyicilerinde kaynakların yoğun görevlerinin olmaması gerekir.  Örneğin, <xref:System.Windows.DragDrop.GiveFeedback> olay her oluşturulduğunda yeni bir imleç oluşturmak yerine önbelleğe alınmış bir imleç kullanın.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Bir öğeyi bırakma hedefi olarak etkinleştirme  
  Bırakma hedefi olan bir nesne, öğesinden sorumludur:  

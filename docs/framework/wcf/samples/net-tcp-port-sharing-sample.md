@@ -2,39 +2,39 @@
 title: Net.TCP Bağlantı Noktası Paylaşımı Örneği
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 62642daffb7e41fb4e023bdd18c221c9dcfd9f2f
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876376"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039193"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Bağlantı Noktası Paylaşımı Örneği
-TCP/IP protokolünün bir bağlantı noktası olarak adlandırılan 16 bit bir sayı, aynı makinede çalışan birden çok ağ uygulamalarına bağlantıları ayırt etmek için kullanır. Uygulamaya bir bağlantı noktasında dinliyorsa, bu bağlantı için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasına aynı anda dinleyemiyor.  
+TCP/IP protokolü, aynı makinede çalışan birden çok ağ uygulamasına olan bağlantıları ayırt etmek için bağlantı noktası olarak adlandırılan 16 bitlik bir sayı kullanır. Bir uygulama bir bağlantı noktasında dinliyorsa, bu bağlantı noktası için tüm TCP trafiği bu uygulamaya gider. Diğer uygulamalar bu bağlantı noktasını aynı anda dinleyemiyor.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- Birçok iletişim kuralı kullandıkları bir standart veya varsayılan bağlantı noktası numarası yok. Örneğin, HTTP protokolü, genellikle 80 numaralı TCP bağlantı noktasını kullanır. Internet Information Services (IIS) bağlantı noktası HTTP birden çok uygulama arasında paylaşmak için bir dinleyici sahiptir. IIS doğrudan bağlantı noktasını dinleyen ve iletileri ileti akışı içindeki bilgileri temel alarak uygun uygulamasına iletir. Bu bağlantı noktası iletileri almak için ayrılacak rekabet zorunda kalmadan aynı bağlantı noktası numarasını kullanmak birden çok HTTP uygulamaları sağlar.  
+ Birçok protokolün, kullandıkları standart veya varsayılan bağlantı noktası numarası vardır. Örneğin, HTTP protokolü genellikle 80 numaralı TCP bağlantı noktasını kullanır. Internet Information Services (IIS), birden çok HTTP uygulaması arasında bir bağlantı noktası paylaşmak için bir dinleyicisine sahiptir. IIS, bağlantı noktasını doğrudan dinler ve iletileri ileti akışı içindeki bilgilere göre uygun uygulamaya iletir. Bu, birden çok HTTP uygulamasının, ileti almak için bağlantı noktasını ayırmak üzere rekabet etmenize gerek kalmadan aynı bağlantı noktası numarasını kullanmasına izin verir.  
   
- NetTcp bağlantı noktası paylaşımı benzer şekilde birden çok ağ uygulamaları tek bir bağlantı noktasını paylaşmasına izin veren bir Windows Communication Foundation (WCF) özelliğidir. NetTcp bağlantı noktası paylaşma hizmeti net.tcp protokolünü kullanarak bağlantıları kabul eder ve kendi hedef adresini temel alarak iletileri iletir.  
+ NetTcp bağlantı noktası Paylaşımı, benzer şekilde birden çok ağ uygulamasının tek bir bağlantı noktasını paylaşmasına izin veren bir Windows Communication Foundation (WCF) özelliğidir. NetTcp bağlantı noktası paylaşım hizmeti, net. tcp protokolünü kullanarak bağlantıları kabul eder ve iletileri hedef adreslerine göre iletir.  
   
- NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkin değildir. Bu örneği çalıştırmadan önce hizmetini el ile etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Hizmet devre dışı bırakılırsa, sunucu uygulaması başlatılırken bir özel durum oluşturulur.  
+ NetTcp bağlantı noktası Paylaşımı hizmeti varsayılan olarak etkinleştirilmemiştir. Bu örneği çalıştırmadan önce, hizmeti el ile etkinleştirmeniz gerekir. Daha fazla bilgi için [nasıl yapılır: Net. TCP bağlantı noktası paylaşım hizmetini](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)etkinleştirin. Hizmet devre dışıysa, sunucu uygulaması başlatıldığında bir özel durum oluşturulur.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Bağlantı noktası paylaşımı etkin sunucuda ayarlayarak <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliği <xref:System.ServiceModel.NetTcpBinding> bağlama veya <xref:System.ServiceModel.Channels.TcpTransportBindingElement> bağlama öğesi. İstemci nasıl bağlantı noktası paylaşımı sunucuda kullanmak üzere yapılandırılmış bilmeniz gerekmez.  
+ Bağlantı noktası Paylaşımı, <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> <xref:System.ServiceModel.NetTcpBinding> bağlama veya <xref:System.ServiceModel.Channels.TcpTransportBindingElement> bağlama öğesinin özelliği ayarlanarak sunucuda etkindir. İstemci, bağlantı noktası paylaşımının sunucuda kullanmak üzere nasıl yapılandırıldığını öğrenmek zorunda değildir.  
   
-## <a name="enabling-port-sharing"></a>Bağlantı noktası paylaşımı etkinleştirme  
- Aşağıdaki kod, sunucuda etkinleştirme bağlantı noktası paylaşımı gösterir. Bir örneğini başlatır `ICalculator` hizmet sabit bir bağlantı noktası ile rastgele bir URI yolu. İki hizmet de aynı bağlantı noktasını paylaşabilirsiniz olsa da, böylece NetTcp bağlantı noktası paylaşma hizmeti için doğru uygulama iletileri yönlendirebilirsiniz genel uç nokta adresleri hala benzersiz olması gerekir.  
+## <a name="enabling-port-sharing"></a>Bağlantı noktası paylaşımını etkinleştirme  
+ Aşağıdaki kod, sunucuda bağlantı noktası paylaşımını etkinleştirmeyi gösterir. Rastgele bir URI yolu olan sabit `ICalculator` bir bağlantı noktasında hizmetin bir örneğini başlatır. İki hizmet aynı bağlantı noktasını paylaşsa da, NetTcp bağlantı noktası paylaşım hizmeti 'nin iletileri doğru uygulamaya yönlendirebilmesi için genel uç nokta adresleri yine de benzersiz olmalıdır.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -49,14 +49,14 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```
 
- Bağlantı noktası ile paylaşımı, bağlantı noktası numarası üzerinde bir çakışma olmadan birden çok kez hizmetini çalıştırabilirsiniz. Hizmet sonuçları ile ikinci başarısız olan iki kopyasını yukarı bağlantı noktası paylaşımı devre dışı bırakmak için kodu değiştirirseniz, başlangıç bir <xref:System.ServiceModel.AddressAlreadyInUseException>.  
+ Bağlantı noktası Paylaşımı etkinken, bağlantı noktası numarası üzerinden çakışmadan hizmeti birden çok kez çalıştırabilirsiniz. Bağlantı noktası paylaşımını devre dışı bırakmak için kodu değiştirirseniz, hizmetin iki kopyasının başlatılması ikinci hata ile <xref:System.ServiceModel.AddressAlreadyInUseException>başarısız olur.  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## <a name="running-the-sample"></a>Örneği çalıştırma  
- İletiler için bağlantı noktası paylaşımı hizmetleri doğru yönlendirilir denetlemek için test İstemcisi'ni kullanabilirsiniz.  
+## <a name="running-the-sample"></a>Örnek çalıştırma  
+ Sınama istemcisini, iletilerin bağlantı noktasını paylaşan hizmetlere doğru yönlendirildiğini denetlemek için kullanabilirsiniz.  
 
 ```csharp
 class client  
@@ -102,14 +102,14 @@ class client
 }  
 ```
 
- Hizmetin her örneği, kendi benzersiz numarasını ve adresi yazdırır. Örneğin, service.exe çalıştırdığınızda, aşağıdaki metni görebilirsiniz.  
+ Hizmetin her örneği, benzersiz sayısını ve adresini yazdırır. Örneğin, Service. exe ' yi çalıştırdığınızda aşağıdaki metni görebilirsiniz.  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
- Client.exe çalıştırdığınızda Burada gördüğünüz hizmet numarasını girin.  
+ Client. exe ' yi çalıştırdığınızda burada gördüğünüz hizmet numarasını girin.  
   
 ```  
 Enter the service number to test: 4381  
@@ -121,20 +121,20 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Bu örnek, istemcinin kullandığı oluşturulan adresini değiştirerek bir çapraz makine yapılandırmasında çalıştırılabilir. Client.cs uç nokta adresi biçim dizesi hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" olan başvuruları sunucu makinesinin IP adresiyle değiştirin. Bu değişikliği yaptıktan sonra örnek derlemeniz gerekir.  
+ Bu örnek, istemcinin kullandığı oluşturulan adresi değiştirerek, bir çapraz makine yapılandırmasında çalıştırılabilir. Client.cs içinde, uç nokta adresi biçim dizesini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" ile ilgili tüm başvuruları sunucu makinesinin IP adresiyle değiştirin. Bu değişikliği yaptıktan sonra örneği yeniden derlemeniz gerekir.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. ASP.NET 4. 0 aşağıdaki komutu kullanarak yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. NetTcp bağlantı noktası paylaşımı daha önce giriş bölümünde açıklandığı gibi hizmet etkinleştirin.  
+3. Daha önce giriş bölümünde açıklanan NetTcp bağlantı noktası paylaşım hizmetini etkinleştirin.  
   
-4. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-5. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md). Bu örneği çalıştırmak için belirli ayrıntıları daha önce çalışıyor dahil örnek bölümü.  
+5. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin. Bu örneği çalıştırmaya yönelik belirli ayrıntılar, daha önce örnek bölümünde çalışan bölümüne eklenmiştir.  

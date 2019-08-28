@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: ddaa49e65a164c7bf074a541c9a4df8f3dace1d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a764b18cc3016610b8a149631b4de89923a7a5b4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965611"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040625"
 ---
 # <a name="designing-service-contracts"></a>Hizmet Sözleşmeleri Tasarlama
 Bu konuda, hizmet sözleşmelerinin ne olduğu, nasıl tanımlandığı, hangi işlemlerin kullanılabildiği (ve temel alınan ileti değişimlerinin etkileri), hangi veri türlerinin kullanılacağı ve Senaryonuzun gereksinimleri.  
@@ -146,7 +146,7 @@ Sub Hello (ByVal greeting As String)
  Hizmeti ve bu hizmete erişen bir istemciyi oluşturma örneği için bkz [. nasıl yapılır: Bir çift yönlü sözleşme](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md) oluşturun [ve şunları yapın: Çift yönlü sözleşmeyle](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)hizmetlere erişin. Çalışan bir örnek için bkz. [çift yönlü](../../../docs/framework/wcf/samples/duplex.md). Çift yönlü sözleşmeleri kullanma sorunları hakkında daha fazla bilgi için bkz. [çift yönlü hizmetler](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   
 > [!CAUTION]
->  Bir hizmet çift yönlü bir ileti aldığında, yanıtın nereye gönderileceğini belirlemede `ReplyTo` bu gelen iletideki öğesine bakar. İletiyi almak için kullanılan kanal güvenli değilse, güvenilmeyen bir istemci `ReplyTo`, hedef makinenin bir hizmet reddi (DOS) için önde gelen kötü amaçlı bir ileti gönderebilir.  
+> Bir hizmet çift yönlü bir ileti aldığında, yanıtın nereye gönderileceğini belirlemede `ReplyTo` bu gelen iletideki öğesine bakar. İletiyi almak için kullanılan kanal güvenli değilse, güvenilmeyen bir istemci `ReplyTo`, hedef makinenin bir hizmet reddi (DOS) için önde gelen kötü amaçlı bir ileti gönderebilir.  
   
 ##### <a name="out-and-ref-parameters"></a>Out ve ref parametreleri  
  Çoğu durumda, `in` parametreleri (`ByVal` Visual Basic) ve `out` parametrelerini ve `ref` parametrelerini (`ByRef` Visual Basic) kullanabilirsiniz. Hem hem `out` de `ref` parametreleri verilerin bir işlemden döndürüldüğünü belirttiğinden, aşağıdaki gibi bir işlem imzası, işlem imzası dönüşmesine `void`rağmenbiristek/yanıtişleminingerekliolduğunubelirtir.  

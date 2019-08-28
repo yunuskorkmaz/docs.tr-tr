@@ -2,21 +2,21 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f24ccb5ba14e0b43f0e3f911a1672db5821d228
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989897"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039551"
 ---
 # <a name="jsonp"></a>JSONP
-Bu örnek JSON ile doldurma (JSONP) WCF REST Hizmetleri destekleyecek şekilde nasıl gösterir. JSONP geçerli belgedeki oluşturma betiği etiketlere göre etki alanları arası betikler çağırmak için kullanılan bir kuraldır. Sonuç bir belirtilen geri çağırma işlevi döndürülür. JSONP gibi etiketler fikrini temel `<script src="http://..." >` herhangi bir etki alanından komut değerlendirebilir ve bu etiketlere göre alınan komut diğer işlevleri zaten tanımlanabilir, kapsamında değerlendirilir.
+Bu örnek, WCF REST hizmetlerinde doldurma (JSONP) ile JSON 'ın nasıl destekleyeceğinizi gösterir. JSONP, geçerli belgede komut dosyası etiketleri oluşturarak etki alanları arası betikleri çağırmak için kullanılan bir kuraldır. Sonuç, belirtilen geri arama işlevinde döndürülür. JSONP, gibi etiketlerin `<script src="http://..." >` herhangi bir etki alanındaki betikleri değerlendirebileceği ve bu Etiketler tarafından alınan betiklerin, diğer işlevlerin zaten tanımlandığı bir kapsamda değerlendirilme fikrini temel alır.
 
 ## <a name="demonstrates"></a>Gösteriler
- Etki alanları arası JSONP ile betik oluşturma.
+ JSONP ile çapraz etki alanı betiği oluşturma.
 
 ## <a name="discussion"></a>Tartışma
- Örnek sayfa işlendikten sonra dinamik olarak bir betik bloğu tarayıcıda ekleyen bir Web sayfası içerir. Bu betik bloğu tek bir işlem olan WCF REST hizmeti çağıran `GetCustomer`. WCF REST hizmeti, bir müşterinin adı ve bir geri çağırma işlevi adı sarmalanmış adresini döndürür. WCF REST hizmeti yanıt verdiğinde, müşteri verileriyle Web sayfasına geri çağırma işlevi çağrılır ve geri çağırma işlevi, Web sayfasında veri görüntüler. Komut dosyası etiketi ekleme ve yürütme geri çağırma işlevinin ASP.NET AJAX ScriptManager denetimi tarafından otomatik olarak gerçekleştirilir. Kullanım desenini tüm ASP.NET AJAX proxy'leri, ek olarak aşağıdaki kodda gösterildiği gibi JSONP etkinleştirmek için bir satır ile aynıdır:
+ Örnek, sayfa tarayıcıda işlendikten sonra dinamik olarak bir betik bloğu ekleyen bir Web sayfası içerir. Bu betik bloğu, `GetCustomer`tek bir IŞLEMI olan bir WCF REST hizmetini çağırır. WCF REST hizmeti, bir geri çağırma işlevi adında Sarmalanan bir müşterinin adını ve adresini döndürür. WCF REST hizmeti yanıt verdiğinde, Web sayfasındaki geri çağırma işlevi müşteri verileriyle çağrılır ve geri arama işlevi, verileri Web sayfasında görüntüler. Betik etiketinin ekleme ve geri çağırma işlevinin yürütülmesi ASP.NET AJAX ScriptManager denetimi tarafından otomatik olarak gerçekleştirilir. Kullanım stili, aşağıdaki kodda gösterildiği gibi, JSONP 'yi etkinleştirmek için bir satırın eklenmesiyle birlikte tüm ASP.NET AJAX proxy 'leriyle aynıdır:
 
 ```csharp
 var proxy = new JsonpAjaxService.CustomerService();
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- Web sayfasına hizmet kullandığından WCF REST hizmeti çağırabilirsiniz <xref:System.ServiceModel.Description.WebScriptEndpoint> ile `crossDomainScriptAccessEnabled` kümesine `true`. Bu yapılandırmaların her ikisi de altında Web.config dosyasında yapılması \<system.serviceModel > öğesi.
+ Web sayfası WCF REST hizmetini çağırabilir çünkü hizmet ' i ' olarak <xref:System.ServiceModel.Description.WebScriptEndpoint> `crossDomainScriptAccessEnabled` `true`ayarlanmış olarak kullanıyor. Bu yapılandırmaların her ikisi de \<System. ServiceModel > öğesinin altındaki Web. config dosyasında yapılır.
 
 ```xml
 <system.serviceModel>
@@ -37,35 +37,35 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- ScriptManager hizmetiyle etkileşimi yönetir ve yerine JSONP erişim el ile uygulanması karmaşıklığını gizler. Zaman `crossDomainScriptAccessEnabled` ayarlanır `true` ve JSON yanıt biçimi için bir işlem olduğundan, WCF altyapısı bir geri çağırma sorgu dizesi parametresi için istek URI'sini inceler ve geri çağırma sorgu dizesi değerini JSON yanıtı sarmalayan parametre. Bu örnekte, Web sayfası şu URI'ye sahip WCF REST hizmeti çağırır.
+ ScriptManager, hizmetle etkileşimi yönetir ve JSONP erişimini el ile uygulama karmaşıklığını ortadan kaldırır. `crossDomainScriptAccessEnabled` Olarak`true` ayarlandığında ve bir işlemin yanıt biçimi JSON olduğunda, WCF altyapısı bir geri çağırma sorgusu dize parametresi için isteğin URI 'sini inceler ve JSON yanıtını geri çağırma sorgu dizesinin değeriyle sarar parametresinin. Örnekte, Web sayfası WCF REST hizmetini aşağıdaki URI ile çağırır.
 
 ```
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
- Geri çağırma sorgu dizesi parametresinin bir değeri olduğundan `JsonPCallback`, WCF hizmeti aşağıdaki örnekte gösterildiği bir JSONP yanıtı döndürür.
+ Geri arama sorgu dizesi parametresinin değeri `JsonPCallback`olduğundan, WCF hizmeti aşağıdaki örnekte gösterilen bir JSONP yanıtı döndürür.
 
 ```
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
 ```
 
- Bu JSONP yanıtı JSON, istenen Web sayfasına geri çağırma işlevi adı ile sarmalanmış olarak biçimlendirilmiş müşteri verilerini içerir. ScriptManager etki alanları arası istek gerçekleştirmek için bir komut dosyası etiketini kullanarak bu geri çağırma yürütün ve sonra ASP.NET AJAX proxy GetCustomer çalışması için geçirilen onSuccess işleyicisine sonucu geçirin.
+ Bu JSONP yanıtı, Web sayfasının istediği geri çağırma işlevi adıyla Sarmalanan JSON olarak biçimlendirilen müşteri verilerini içerir. ScriptManager, etki alanları arası isteği başarmak için bir betik etiketi kullanarak bu geri aramayı yürütür ve sonra sonucu ASP.NET AJAX proxy 'sinin GetCustomer işlemine geçirilen onSuccess işleyicisine iletir.
 
- Örnek iki ASP.NET web uygulamasından oluşur: yalnızca bir WCF hizmetini içerir ve başka bir hizmeti çağıran .aspx Web sayfası içerir. Çözüm çalışırken, Visual Studio 2012 Burada farklı etki alanlarında hizmet ve istemci canlı bir ortam oluşturur farklı noktalarında iki Web sitesi barındırır.
+ Örnek iki ASP.NET Web uygulamalarından oluşur: biri yalnızca bir WCF hizmeti içerir ve diğeri hizmeti çağıran. aspx Web sayfasını içerir. Çözümü çalıştırırken, Visual Studio 2012 farklı bağlantı noktalarında iki Web sitesini barındıracaktır. Bu, hizmetin ve istemcinin farklı etki alanlarında bulunduğu bir ortam oluşturur.
 
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
 #### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
   
-1. Çözüm için JSONP örneği açın.  
+1. JSONP örneği için çözümü açın.  
   
-2. Başlatmak için F5 tuşuna basın `http://localhost:26648/JSONPClientPage.aspx` tarayıcıda.  
+2. Tarayıcıda başlatmak `http://localhost:26648/JSONPClientPage.aspx` için F5 tuşuna basın.  
   
-3. Sayfa yüklendikten sonra "Name" ve "Address" için metin girişi değerlerle doldurulduğuna dikkat edin.  Tarayıcı sayfa işleme tamamlandıktan sonra bu değerleri WCF Hizmeti çağrısından sağlandı.
+3. Sayfa yüklendikten sonra, "ad" ve "adres" için metin girişlerinin değerlere göre doldurulduğuna dikkat edin.  Bu değerler, tarayıcı sayfayı işlemeyi tamamladıktan sonra WCF hizmetine yapılan çağrıdan sağlanmış.

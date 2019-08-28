@@ -2,12 +2,12 @@
 title: WCF Web HTTP Programlama Modeli Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988579"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045240"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP Programlama Modeli Genel Bakış
 Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB HTTP Hizmetleri oluşturmak için gereken temel öğeleri sağlar. WCF WEB HTTP Hizmetleri, Web tarayıcıları dahil olmak üzere en geniş olası istemciler arasında erişilecek şekilde tasarlanmıştır ve aşağıdaki benzersiz gereksinimlere sahiptir:  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) WEB HTTP programlama modeli, WCF ile WEB 
  WEB HTTP hizmetinden döndürülebilecek veri türlerinde ek kısıtlama yoktur. Herhangi bir serileştirilebilir tür, bir WEB HTTP hizmeti işleminden döndürülebilir. WEB HTTP hizmet işlemleri bir Web tarayıcısı tarafından çalıştırılabildiğinden, URL 'de hangi veri türlerinin belirtibileceği konusunda bir sınırlama vardır. Varsayılan olarak desteklenen türler hakkında daha fazla bilgi için aşağıdaki **UriTemplate sorgu dizesi parametreleri ve URL 'leri** bölümüne bakın. Varsayılan davranış, URL 'de belirtilen parametrelerin gerçek parametre türüne nasıl dönüştürüleceğini belirten kendi T:System.ServiceModel.Dispatcher.QueryStringConverter uygulamanız sağlanarak değiştirilebilir. Daha fazla bilgi için bkz.<xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  WCF WEB HTTP programlama modeliyle yazılan hizmetler SOAP iletileri kullanmaz. SOAP kullanılmadığından, WCF tarafından sunulan güvenlik özellikleri kullanılamaz. Ancak, hizmetinizi HTTPS ile barındırarak aktarım tabanlı güvenlik kullanabilirsiniz. WCF güvenliği hakkında daha fazla bilgi için bkz. [Güvenliğe genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+> WCF WEB HTTP programlama modeliyle yazılan hizmetler SOAP iletileri kullanmaz. SOAP kullanılmadığından, WCF tarafından sunulan güvenlik özellikleri kullanılamaz. Ancak, hizmetinizi HTTPS ile barındırarak aktarım tabanlı güvenlik kullanabilirsiniz. WCF güvenliği hakkında daha fazla bilgi için bkz. [Güvenliğe genel bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 > WebDAV uzantısının tüm PUT isteklerini işlemeye çalıştığı için, IIS için WebDAV uzantısını yüklemek Web HTTP hizmetlerinin HTTP 405 hatası döndürmesine neden olabilir. Bu sorunu geçici olarak çözmek için WebDAV uzantısını kaldırabilir veya Web siteniz için WebDAV uzantısını devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [IIS ve WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  

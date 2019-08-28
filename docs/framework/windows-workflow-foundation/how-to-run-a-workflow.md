@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962282"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044347"
 ---
 # <a name="how-to-run-a-workflow"></a>Nasıl yapılır: İş Akışı Çalıştırma
 Bu konu, başlangıç öğreticisini Windows Workflow Foundation ve bir iş akışı konağının nasıl oluşturulacağını ve önceki [nasıl yapılır: Bir iş akışı](how-to-create-a-workflow.md) konusu oluşturun.
@@ -28,7 +28,7 @@ Bu konu, başlangıç öğreticisini Windows Workflow Foundation ve bir iş akı
 2. **Çözüm Gezgini** 'de **WF45GettingStartedTutorial** çözümüne sağ tıklayın ve **Ekle**, **Yeni proje**' yi seçin.  
   
     > [!TIP]
-    >  **Çözüm Gezgini** penceresi görüntülenmiyorsa, **Görünüm** menüsünden **Çözüm Gezgini** ' i seçin.
+    > **Çözüm Gezgini** penceresi görüntülenmiyorsa, **Görünüm** menüsünden **Çözüm Gezgini** ' i seçin.
 
 3. **Yüklü** düğümde, **C#görsel**, **iş akışı** (veya **Visual Basic**, **iş akışı**) öğesini seçin.
 
@@ -46,7 +46,7 @@ Bu konu, başlangıç öğreticisini Windows Workflow Foundation ve bir iş akı
 1. Kodu göstermek için **Çözüm Gezgini** 'de **program.cs** veya **Module1. vb** öğesine çift tıklayın.
 
     > [!TIP]
-    >  **Çözüm Gezgini** penceresi görüntülenmiyorsa, **Görünüm** menüsünden **Çözüm Gezgini** ' i seçin.
+    > **Çözüm Gezgini** penceresi görüntülenmiyorsa, **Görünüm** menüsünden **Çözüm Gezgini** ' i seçin.
 
      Bu proje **Iş akışı konsol uygulaması** şablonu kullanılarak oluşturulduğundan, **program.cs** veya **Module1. vb** , aşağıdaki temel iş akışı barındırma kodunu içerir.
 

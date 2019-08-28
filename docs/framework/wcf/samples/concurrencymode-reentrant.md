@@ -2,17 +2,17 @@
 title: ConcurrencyMode Yeniden Girme
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6bb73957da055e9d867fbcb78ce78acdb8d0b76
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002338"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040135"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Yeniden Girme
-Bu örnek, bir hizmet uygulamasına ConcurrencyMode.Reentrant kullanmanın etkileri ve gerekliliğini gösterir. ConcurrencyMode.Reentrant gelir hizmet (veya geri çağırma) belirli bir zamanda yalnızca bir ileti işler (alınmak üzere `ConcurencyMode.Single`). İş parçacığı güvenliği sağlamak için Windows Communication Foundation (WCF) kilitler `InstanceContext` ileti işlenirken, böylece başka iletiler işlenebilir. Yeniden girilen modu durumunda `InstanceContext` yalnızca hizmet böylece (Bu örnekte gösterildiği gibi yeniden girilen olabilir) sonraki çağrı izin vererek giden bir çağrı yapmadan önce açılmış devamlı hizmete bir sonraki sefer kilidi almak için. Davranış göstermek için nasıl hizmet ve istemci arasında çift yönlü sözleşme kullanarak birbirlerinin iletiler gönderebilir örnek gösterir.  
+Bu örnek, bir hizmet uygulamasında ConcurrencyMode. yeniden oluşturma kullanmanın zorunludur ve etkilerini gösterir. ConcurrencyMode. yeniden, hizmetin (veya geri aramanın) belirli bir zamanda yalnızca bir iletiyi (veya ' a benzer `ConcurencyMode.Single`) işleyeceğini belirtir. Windows Communication Foundation (WCF), iş parçacığı güvenliğini sağlamak için ileti `InstanceContext` işlemeyi, başka hiçbir ileti işlenememesi için kilitler. `InstanceContext` Yeniden kullanılabilir modda, hizmet bir sonraki çağrıya izin verirken bir giden çağrı yapmadan (örneğin, örnekte gösterilen şekilde yeniden eklenebilir), daha sonra, bu hizmete bir dahaki sefer daha sonra kilidi almak için bir giden çağrı yapmadan hemen önce kilidi açılır. Davranışı göstermek için örnek, bir istemcinin ve hizmetin çift yönlü bir sözleşme kullanarak birbirleriyle nasıl ileti gönderebileceğini gösterir.  
   
- Çift yönlü sözleşme ile tanımlanan sözleşme olan `Ping` hizmet ve geri çağırma yöntemi tarafından uygulanan yöntem `Pong` istemci tarafından uygulanan. Bir istemci sunucunun çağırır `Ping` yöntemi ile bir onay sayısı böylece çağrı başlatılıyor. Hizmet, işaret sayısını 0'a eşit değil ve ardından geri çağırmalarını çalıştırır denetler `Pong` yöntemi işaret sayısını azaltma oluştu. Bu, aşağıdaki kod örneğinde tarafından gerçekleştirilir.  
+ Tanımlanan sözleşme, hizmet tarafından uygulanan `Ping` yönteme ve istemci tarafından uygulanan geri çağırma yöntemine `Pong` sahip bir çift yönlü sözleşmedir. İstemci, çağrıyı başlatan bir değer `Ping` sayısı ile sunucunun yöntemini çağırır. Hizmet, değer sayısının 0 ' a eşit olup olmadığını denetler ve ardından değer sayısını azaltılarken `Pong` geri çağırmalar yöntemini çağırır. Bu, örnekte aşağıdaki kod tarafından yapılır.  
   
 ```csharp
 public void Ping(int ticks)  
@@ -26,7 +26,7 @@ public void Ping(int ticks)
 }  
 ```  
   
- Geri çağırma'nın `Pong` aynı mantığı uygulamasına sahip `Ping` uygulaması. Diğer bir deyişle, işaret sayısı sıfır değil ve ardından çağırır denetler `Ping` yöntemi geri çağırma kanalındaki (Bu durumda, özgün göndermek için kullanılan kanal olduğu `Ping` ileti) 1 ile değer çizgisi indirildiği sayısı. İşaret sayısını 0, böylece döner ulaştığında şu geri çağrı başlatılan istemci tarafından yapılan ilk çağrı tüm yanıtlar çözülme. Bu geri çağırma uygulamasında gösterilir.  
+ Geri çağırma `Pong` uygulamasının, `Ping` uygulamayla aynı mantığı vardır. Diğer bir deyişle, değer sayısının sıfır olup olmadığını denetler ve ardından geri çağırma kanalında `Ping` yöntemi çağırır (Bu durumda, özgün `Ping` iletiyi göndermek için kullanılan kanal budur), değer sayısı 1 ile azaltılır. Değer sayısının 0 ' a ulaştığı süre, yöntemi, çağrıyı başlatan istemci tarafından yapılan ilk çağrıya geri yanıt vermez. Bu, geri çağırma uygulamasında gösterilir.  
   
 ```csharp
 public void Pong(int ticks)  
@@ -42,18 +42,18 @@ public void Pong(int ticks)
 }  
 ```  
   
- Hem `Ping` ve `Pong` yöntemlerdir yapılan ilk çağrı anlamına istek/yanıt `Ping` çağrısına kadar döndürmeyen `CallbackChannel<T>.Pong()` döndürür. İstemci üzerindeki `Pong` metodu gelecek kadar döndüremiyor `Ping` döndürür yapılan çağırın. Bekleyen istek için yanıt verebilir önce geri çağırma hem hizmet aramaların istek/yanıt vermeniz gerekir çünkü her iki uygulamaları ConcurrencyMode.Reentrant davranışı ile işaretlenmelidir.  
+ Ve yöntemlerinin her ikisi de istek/yanıt ' dir. Bu, öğesine `Ping` yapılan çağrı `CallbackChannel<T>.Pong()` geri dönene kadar geri dönmeyeceği anlamına gelir. `Pong` `Ping` İstemcide, `Pong` Yöntem döndürdüğü bir sonraki `Ping` çağrıya kadar dönemeyebilir. Hem geri çağırma hem de hizmetin bekleyen istek için yanıt vermeden önce giden istek/yanıt çağrıları yapması gerektiğinden, her iki uygulama da ConcurrencyMode. yeniden yer davranışıyla işaretlenmelidir.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerçekleştirdiğinizden emin olmak [Windows Communication Foundation örnekleri için bir kerelik Kurulum yordamı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözüm C# veya Visual Basic .NET sürümünü oluşturmak için yönergeleri izleyin. [Windows Communication Foundation örnekleri derleme](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Tek veya çapraz makine yapılandırmasında örneği çalıştırmak için yönergeleri izleyin. [Windows Communication Foundation örneklerini çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 ## <a name="demonstrates"></a>Gösteriler  
- Örneği çalıştırmak için istemci ve sunucu projeleri oluşturun. Ardından iki komut penceresi açın ve dizinleri \<örnek > \CS\Service\bin\debug ve \<örnek > \CS\Client\bin\debug dizinleri. Yazarak hizmeti başlatın `service.exe` ve Client.exe işareti giriş bağımsız değişken olarak geçirilen ilk değerle'ı çağırın. 10 saat döngüsü için örnek çıktı gösterilmektedir.  
+ Örneği çalıştırmak için, istemci ve sunucu projelerini derleyin. Sonra iki komut penceresi açın ve dizinleri \<örnek > \CS\Service\bin\debug ve \<örnek > \CS\Client\bin\debug dizinleriyle değiştirin. Ardından yazarak `service.exe` hizmeti başlatın ve ardından bir giriş bağımsız değişkeni olarak geçirilen işaret başlangıç değeriyle Client. exe dosyasını çağırın. 10 Ticks için örnek çıkış gösterilmektedir.  
   
 ```console  
 Prompt>Service.exe  
@@ -74,10 +74,10 @@ Pong: Ticks = 1
 ```  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  

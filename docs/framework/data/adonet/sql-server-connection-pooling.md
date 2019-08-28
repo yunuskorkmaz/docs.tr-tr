@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 0a8d10b9d6ae80bb4fa38445e0335151661c41eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918135"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041189"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Bir veritabanı sunucusuna bağlanmak genellikle birkaç zaman alan adımdan oluşur. Yuva veya adlandırılmış kanal gibi bir fiziksel kanal oluşturulması gerekir, sunucu ile ilk anlaşma gerçekleşmelidir, bağlantı dizesi bilgileri ayrıştırılmalıdır, bağlantının sunucu tarafından doğrulanması gerekir, çünkü geçerli işlem vb.  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Bağlantı havuzlayıcı, havuza geri yayımlandıklarında bağlantıları yeniden bulmaya göre bağlantı isteklerini karşılar. En büyük havuz boyutuna ulaşılmışsa ve kullanılabilir bir bağlantı yoksa, istek sıraya alınır. Havuzlayıcı daha sonra zaman aşımına ulaşılana kadar tüm bağlantıları geri almaya çalışır (varsayılan değer 15 saniyedir). Bağlantı zaman aşımına uğramadan havuzlayıcı isteği karşılayamaz, bir özel durum oluşturulur.  
   
 > [!CAUTION]
->  Bağlantının havuza döndürülabilmesi için, kullanmayı bitirdiğinizde bağlantıyı her zaman kapatmanızı öneririz. Bunu `Close` , `Connection` nesnesinin veya `Dispose` yöntemlerinden birini ya da içindeki C#bir deyimin içindeki tüm bağlantıları `Using` `using` ya da Visual Basic bir ifadesini kullanarak yapabilirsiniz. Açıkça kapatılmayan bağlantılar, havuza eklenmeyebilir veya havuza döndürülemez. Daha fazla bilgi için bkz. [using deyimleri](../../../csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: Visual Basic için bir sistem kaynağını](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) atma.  
+> Bağlantının havuza döndürülabilmesi için, kullanmayı bitirdiğinizde bağlantıyı her zaman kapatmanızı öneririz. Bunu `Close` , `Connection` nesnesinin veya `Dispose` yöntemlerinden birini ya da içindeki C#bir deyimin içindeki tüm bağlantıları `Using` `using` ya da Visual Basic bir ifadesini kullanarak yapabilirsiniz. Açıkça kapatılmayan bağlantılar, havuza eklenmeyebilir veya havuza döndürülemez. Daha fazla bilgi için bkz. [using deyimleri](../../../csharp/language-reference/keywords/using-statement.md) veya [nasıl yapılır: Visual Basic için bir sistem kaynağını](../../../visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) atma.  
   
 > [!NOTE]
 > Sınıfınızın `Close` `Finalize` yönteminde bir, veya ya `Connection`da başka `DataReader`bir yönetilen nesneyi çağırmayın `Dispose` . Sonlandırıcıda yalnızca, sınıfınızın doğrudan sahip olduğu yönetilmeyen kaynakları serbest bırakın. Sınıfınız hiçbir yönetilmeyen kaynağa sahip değilse, sınıf tanımınıza bir `Finalize` Yöntem eklemeyin. Daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).  

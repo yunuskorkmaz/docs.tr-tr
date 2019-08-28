@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: a6bbc2fe4bf68b50153075a251d23deebda78de5
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 085186eae034314437d5a0c1fe90e6cdf6902c5e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988661"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045847"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer>. .NET Framework nesneleri ve XML arasında her iki yönde çevirir.<xref:System.Runtime.Serialization.DataContractSerializer> Bu konuda, serileştiricinin nasıl çalıştığı açıklanmaktadır.  
@@ -138,7 +138,7 @@ Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içeri
 - Bu özellik serileştirme ve seri durumdan çıkarma işleminin daha yavaş çalışmasına neden olabilir. Verilerin çoğaltılması gerekmese de, bu modda ek nesne karşılaştırmalarının gerçekleştirilmesi gerekir.  
   
 > [!CAUTION]
->  Mod etkinleştirildiğinde, özellikle doğru kotanın `maxItemsInObjectGraph` değeri ayarlamanız önemlidir. `preserveObjectReferences` Dizilerin bu modda işlenme yöntemi nedeniyle, bir saldırganın büyük bellek tüketimine yalnızca `maxItemsInObjectGraph` kotayla sınırlı olan küçük bir kötü amaçlı ileti oluşturmasıyla kolay bir durum oluşturur.  
+> Mod etkinleştirildiğinde, özellikle doğru kotanın `maxItemsInObjectGraph` değeri ayarlamanız önemlidir. `preserveObjectReferences` Dizilerin bu modda işlenme yöntemi nedeniyle, bir saldırganın büyük bellek tüketimine yalnızca `maxItemsInObjectGraph` kotayla sınırlı olan küçük bir kötü amaçlı ileti oluşturmasıyla kolay bir durum oluşturur.  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>Veri anlaşması yedeği belirtme  
  Bazı `DataContractSerializer` Oluşturucu aşırı yüklemeleri, `dataContractSurrogate` olarak `null`ayarlanmış olabilecek bir parametreye sahiptir. Aksi takdirde, <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimini uygulayan bir tür olan bir *veri anlaşması yedeği*belirtmek için bunu kullanabilirsiniz. Daha sonra, serileştirme ve seri kaldırma işlemini özelleştirmek için arabirimini kullanabilirsiniz. Daha fazla bilgi için bkz. [veri sözleşmesi yedeklerin kapıları](../../../../docs/framework/wcf/extending/data-contract-surrogates.md).  

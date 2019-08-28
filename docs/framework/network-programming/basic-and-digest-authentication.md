@@ -19,17 +19,17 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 029243f9f8b02275c0f0a6ec1a74a9a2ca198d9c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866905"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044121"
 ---
 # <a name="basic-and-digest-authentication"></a>Temel ve Özet Kimlik Doğrulaması
-<xref:System.Net> Uygulama temel ve Özet kimlik doğrulaması RFC2617 – HTTP kimlik doğrulaması ile uyumludur: Temel ve Özet kimlik doğrulaması (kullanılabilir [World Wide Web Consortium'ın](https://www.w3.org) Web sitesi).  
+Temel ve Özet kimlik doğrulamasının uygulanmasıRFC2617–httpkimlikdoğrulamasıileuyumludur:<xref:System.Net> Temel ve Özet kimlik doğrulaması ( [World Wide Web Konsorsiyumu](https://www.w3.org) Web sitesinde kullanılabilir).  
   
- Temel kullanmak ve Özet kimlik doğrulaması için bir uygulama bir kullanıcı adı ve parola sağlamalıdır <xref:System.Net.WebRequest.Credentials%2A> özelliği <xref:System.Net.WebRequest> , aşağıdaki örnekte gösterildiği gibi Internet'ten veri isteği için kullanılan nesne.  
+ Temel ve Özet kimlik doğrulamasını kullanmak için bir uygulamanın, aşağıdaki örnekte gösterildiği gibi, Internet 'ten veri <xref:System.Net.WebRequest.Credentials%2A> istemek için kullandığı <xref:System.Net.WebRequest> nesnenin özelliğinde bir Kullanıcı adı ve parola sağlaması gerekir.  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -44,7 +44,7 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 ```  
   
 > [!CAUTION]
->  Temel ve Özet kimlik doğrulaması ile gönderilen veriler şifrelenmez, bu şekilde verileri bir saldırgan tarafından görülebilir. Ayrıca, temel kimlik doğrulaması kimlik bilgilerini (kullanıcı adı ve parola) açık bir şekilde gönderilir ve kesilebilir.  
+> Temel ve Özet kimlik doğrulamasıyla gönderilen veriler şifrelenmemiştir, bu nedenle veriler bir saldırgan tarafından görülebilir. Ayrıca, temel kimlik doğrulama kimlik bilgileri (Kullanıcı adı ve parola) açık olarak gönderilir ve yakalanabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

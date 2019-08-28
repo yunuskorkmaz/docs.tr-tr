@@ -17,51 +17,51 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e91d74b7ca5515dd63ba17a9111cadf5090dae2a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423811"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046100"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker Bileşenine Genel Bakış
-Yürütmek için uzun bir zaman alabilir çok sık gerçekleştirilen işlemler vardır. Örneğin:  
+Yürütülmesi uzun zaman alabilir çok sayıda gerçekleştirilen işlem vardır. Örneğin:  
   
-- Görüntüyü indirir  
+- Görüntü İndirmeleri  
   
-- Web hizmeti çağrıları  
+- Web hizmeti etkinleştirmeleri  
   
-- Dosya indirir ve yükler (eşler arası uygulamalar dahil)  
+- Dosya indirmeleri ve karşıya yüklemeleri (eşler arası uygulamalar için de dahil)  
   
 - Karmaşık yerel hesaplamalar  
   
 - Veritabanı işlemleri  
   
-- Göreli bellek erişimi yavaş hızını verilen, yerel disk erişimi  
+- Yerel disk erişimi, bellek erişimine göre yavaş hız olarak verildi  
   
- İşlemleri bunlar gibi çalıştırdıkları sırada engellemek, kullanıcı arabirimi neden olabilir. Duyarlı bir kullanıcı Arabirimi istediğiniz ve uzun gecikmeler gibi işlemlerle ilişkili ile karşı karşıya kalmaktadır <xref:System.ComponentModel.BackgroundWorker> bileşeni, uygun bir çözüm sağlar.  
+ Bunlar gibi işlemler, Kullanıcı arabiriminize çalışırken engel olmasına neden olabilir. Yanıt veren bir kullanıcı arabirimi istediğinizde ve söz konusu işlemlerle ilişkili uzun gecikmeler varsa, <xref:System.ComponentModel.BackgroundWorker> bileşen kullanışlı bir çözüm sağlar.  
   
- <xref:System.ComponentModel.BackgroundWorker> Bileşen zaman uyumsuz olarak ("arka planda"), zaman alıcı işlemleri yürütmek için yeteneği sağlar, uygulamanızın ana UI iş parçacığından farklı bir iş parçacığı üzerinde. Kullanılacak bir <xref:System.ComponentModel.BackgroundWorker>, yalnızca arka planda yürütülmesi için ne zaman çalışan yöntemi bildirmek ve ardından çağırmanızı <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemi. Çağıran iş parçacığını çalışan yöntemin zaman uyumsuz olarak çalışırken normal şekilde çalışmaya devam eder. Yöntemi tamamlandığında <xref:System.ComponentModel.BackgroundWorker> Açmadığınızda tarafından çağıran iş parçacığını uyarıları <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> isteğe bağlı olarak işlemin sonuçlarını içeren olay.  
+ <xref:System.ComponentModel.BackgroundWorker> Bileşen, uygulamanızın ana kullanıcı arabirimi iş parçacığından farklı bir iş parçacığında zaman uyumsuz işlemleri ("arka planda") yürütme yeteneği sağlar. Bir <xref:System.ComponentModel.BackgroundWorker>kullanmak için, arka planda hangi zaman tüketen çalışan yönteminin yürütüleceğini ve sonra <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemi çağırılacağını söylemeniz yeterlidir. Çalışan yöntemi zaman uyumsuz olarak çalışırken, çağıran iş parçacığınız normal şekilde çalışmaya devam eder. Yöntem tamamlandığında <xref:System.ComponentModel.BackgroundWorker> , isteğe bağlı olarak işlemin sonuçlarını içeren <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> olayı tetikleyerek çağıran iş parçacığını uyarır.  
   
- <xref:System.ComponentModel.BackgroundWorker> Bileşen kullanılabilir **araç kutusu**, **bileşenleri** sekmesi. Eklemek için bir <xref:System.ComponentModel.BackgroundWorker> formunuza sürükleyin <xref:System.ComponentModel.BackgroundWorker> formunuza bileşen. Bileşen tepsisinde görünür ve özelliklerini görünür **özellikleri** penceresi.  
+ Bileşen araç kutusundan, **Bileşenler** sekmesinde kullanılabilir. <xref:System.ComponentModel.BackgroundWorker> Formunuza bir <xref:System.ComponentModel.BackgroundWorker> eklemek için, <xref:System.ComponentModel.BackgroundWorker> bileşeni formunuza sürükleyin. Bileşen tepsisinde görünür ve özellikleri **Özellikler** penceresinde görünür.  
   
- Zaman uyumsuz işlemi başlatmak için <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemi. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> İsteğe bağlı alan `object` çalışan yönteminize bağımsız değişkenleri geçirmek için kullanılan parametre. <xref:System.ComponentModel.BackgroundWorker> Sınıfı kullanıma sunan <xref:System.ComponentModel.BackgroundWorker.DoWork> olayı, kendisine, iş parçacığı bağlı aracılığıyla bir <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi.  
+ Zaman uyumsuz işleminizi başlatmak için <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> yöntemini kullanın. <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A>, çalışan yönteminizin `object` bağımsız değişkenlerini geçirmek için kullanılabilen isteğe bağlı bir parametre alır. Sınıfı, çalışan iş <xref:System.ComponentModel.BackgroundWorker.DoWork> parçacığınız bir <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi aracılığıyla bağlı olan olayı ortaya koyar. <xref:System.ComponentModel.BackgroundWorker>  
   
- <xref:System.ComponentModel.BackgroundWorker.DoWork> Olay işleyicisini alır bir <xref:System.ComponentModel.DoWorkEventArgs> olan parametre bir <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> özelliği. Bu özellik parametresinden alır <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> ve çağırılacak olan çalışan yönteminize iletilen <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisi. Aşağıdaki örnek adlı bir çalışan yöntemden bir sonuç atama gösterir `ComputeFibonacci`. Konumunda bulabilirsiniz daha büyük bir örneğin parçasıdır [nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md).  
+ Olay işleyicisi bir <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> özelliği olan <xref:System.ComponentModel.DoWorkEventArgs> bir parametre alır. <xref:System.ComponentModel.BackgroundWorker.DoWork> Bu özellik öğesinden <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> parametresini alır ve <xref:System.ComponentModel.BackgroundWorker.DoWork> olay işleyicisinde çağrılabilecek çalışan yöntemine geçirilebilir. Aşağıdaki örnekte, adlı `ComputeFibonacci`bir çalışan yönteminden bir sonucun nasıl atanacağı gösterilmektedir. Daha büyük bir örnek bir parçasıdır ve bu, [nasıl yapılır: Arka plan Işlemi](how-to-implement-a-form-that-uses-a-background-operation.md)kullanan bir form uygulayın.  
   
  [!code-cpp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#5)]
  [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
  [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
- Olay işleyicileri kullanma hakkında daha fazla bilgi için bkz. [olayları](../../../standard/events/index.md).  
+ Olay işleyicilerini kullanma hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).  
   
 > [!CAUTION]
->  Her türlü çoklu iş parçacığı kullanırken, büyük olasılıkla kendiniz çok önemli ve karmaşık hataları ortaya çıkarır. Başvurun [yönetilen iş parçacığı oluşturma en iyi yöntemler](../../../standard/threading/managed-threading-best-practices.md) kullanan herhangi bir çözümü uygulamadan önce çoklu iş parçacığı kullanımı.  
+> Herhangi bir sıralamanın çoklu iş parçacığı kullanımı kullanılırken, kendinizi çok önemli ve karmaşık hatalara maruz kalırsınız. Çoklu iş parçacığı kullanan herhangi bir çözümü uygulamadan önce, [yönetilen Iş parçacığı En Iyi uygulamalarına](../../../standard/threading/managed-threading-best-practices.md) danışın.  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.ComponentModel.BackgroundWorker> sınıfı [nasıl yapılır: Arka planda işlem çalıştırma](how-to-run-an-operation-in-the-background.md).  
+ <xref:System.ComponentModel.BackgroundWorker> Sınıfını kullanma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Bir Işlemi arka planda](how-to-run-an-operation-in-the-background.md)çalıştırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilen iş parçacığı oluşturma](../../../standard/threading/index.md)
+- [Yönetilen Iş parçacığı](../../../standard/threading/index.md)
 - [Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Nasıl yapılır: Arka plan işlemi kullanan bir Form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka plan Işlemi kullanan bir form uygulama](how-to-implement-a-form-that-uses-a-background-operation.md)

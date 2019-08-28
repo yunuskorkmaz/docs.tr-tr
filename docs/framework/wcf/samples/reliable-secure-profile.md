@@ -2,40 +2,40 @@
 title: Güvenilir Güvenlik Profili
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: e1895da0805a5282fc328b0c8d48d7042a1e5784
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787575"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044823"
 ---
 # <a name="reliable-secure-profile"></a>Güvenilir Güvenlik Profili
-Bu örnek WCF oluşturmak nasıl gösterir ve [güvenilir güvenli profili](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Bu örnek uygulamasını gösterir. bir [bağlantı yap](https://go.microsoft.com/fwlink/?LinkId=178141) güvenilir Mesajlaşma ile birlikte ve isteğe bağlı olarak oluşan kanal güvenilir güvenli bir bağlama oluşturmak için güvenli bir kanal tabanlı RSP belirtimi.  
+Bu örnek, WCF ve [güvenilir güvenli profilin](https://go.microsoft.com/fwlink/?LinkId=178140) (rsp) nasıl oluşturulacağını gösterir. Bu örnek, güvenilir mesajlaşma ile birlikte oluşturabileceğiniz bir [bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=178141) kanalının uygulanmasını ve isteğe bağlı olarak RSP belirtimine dayalı güvenilir bir güvenli bağlama oluşturmak için güvenli bir kanal oluşturmayı gösterir.  
   
 > [!IMPORTANT]
->  Örnekler, makinenizde zaten yüklü. Devam etmeden önce şu (varsayılan) dizin denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Bu dizin mevcut değilse Git [Windows Communication Foundation (WCF) ve .NET Framework 4 için Windows Workflow Foundation (WF) örnekleri](https://go.microsoft.com/fwlink/?LinkId=150780) tüm Windows Communication Foundation (WCF) indirmek için ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri. Bu örnek, şu dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
 ## <a name="discussion"></a>Tartışma  
- Bu örnek, bir iki yönlü zaman uyumsuz ileti güvenilir exchange senaryosunu gösterir. Çift yönlü sözleşme hizmette olduğunu ve çift yönlü geri çağırma anlaşması istemci uygular. İstemci, ayrı bir bağlantı üzerinde beklenen bir yanıt için bir hizmet isteğine başlatır. İstek iletisi güvenilir bir şekilde gönderilir. İstemci, sonunda dinleyen bir uç nokta açmak istediğiniz değil. Bu nedenle, hizmeti ile arka kanal bu 'Bağlantı Yap' isteğinin yanıtı geri gönderilecek ilişkin 'Bağlantı Yap' isteklerin yoklar. Bu örnek, istemci dinleyen bir uç noktayı kullanıma sunmayı (ve güvenlik duvarı özel durumu oluşturulmadan), HTTP üzerinden güvenli güvenilir bir çift yönlü iletişim sağlamak nasıl gösterir.  
+ Bu örnekte, güvenilir bir zaman uyumsuz çift yönlü ileti değişimi senaryosu gösterilmektedir. Hizmetin çift yönlü bir anlaşması vardır ve istemci çift yönlü geri çağırma sözleşmesini uygular. İstemci, ayrı bir bağlantıda bir yanıt beklenildiği bir hizmete istek başlatır. İstek iletisi güvenilir bir şekilde gönderilir. İstemci sonunda bir dinleme uç noktası açmak istemiyor. Bu nedenle, hizmetin yanıtı bu ' bağlantı oluştur ' isteğinin arka kanalına geri göndermek için ' bağlantı oluştur ' isteklerini bu hizmette yoklar. Bu örnek, istemci bir dinleme uç noktası (ve güvenlik duvarı özel durumu oluşturma) olmadan HTTP üzerinden güvenli bir güvenilir çift yönlü iletişimin nasıl yapılacağını gösterir.  
   
-## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma  
+## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Açık **ReliableSecureProfile** çözüm.  
+1. **ReliableSecureProfile** çözümünü açın.  
   
-2. Sağ tıklayın **hizmet** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu hizmet ana bilgisayar başlatır.  
+2. **Çözüm Gezgini**' de **hizmet** projesine sağ tıklayın, **Hata Ayıkla**' yı seçin, bağlam menüsünden **Yeni örnek Başlat** ' ı seçin. Bu, hizmet ana bilgisayarını başlatır.  
   
-3. Sağ tıklayın **istemci** projesi **Çözüm Gezgini**seçin **hata ayıklama**, **yeni örnek Başlat** bağlam menüsünden. Bu, istemci başlatır.  
+3. **Çözüm Gezgini**' de **istemci** projesine sağ tıklayın, **Hata Ayıkla**' yı seçin, bağlam menüsünden **Yeni örnek Başlat** ' ı seçin. Bu, istemciyi başlatır.  
   
-4. Herhangi bir dize istemci konsol penceresinde satırına yazın ve ENTER'ı tıklatın. Bu, Giriş dizesinin Bu dize bir karmasını hesaplar hizmetine gönderir.  
+4. İstemci konsolu penceresinde istemde herhangi bir dizeyi yazın ve ENTER ' a tıklayın. Bu, giriş dizesini hizmete gönderir ve bu dizenin bir karmasını hesaplar.  
   
-5. Hizmet istemci konsol penceresinde sonucu görüntülemek için çift yönlü bir geri çağırma anlaşması işlemi geri çağırdığında sonucu windows istemcisi üzerinde görüntüleyin. Uzun süre çalışan bir veri işleme işleminin benzetimini yapmak için hizmette kasıtlı bir gecikme olur.  
+5. İstemci konsolu penceresinde sonucu görüntülemek için, hizmet çift yönlü geri çağırma sözleşmesi işlemini geri aradığında istemci penceresinde sonucu görüntüleyin. Hizmette, verilerin işlenmesi için uzun süredir çalışan bir işlemin benzetimini yapmak üzere bilerek bir gecikme vardır.  
   
-6. (Herhangi biri tarafından çevrimiçi ağ izleme araçları Ağ İzleyicisi, Fiddler vb. gibi) HTTP trafiğini izleme gösteren bir dizisi iletişimi için istemci ile hizmet arasında güvenilir güvenli profili tarafından düzenlenir ve nasıl oluşturduğunuzu istemci 'Bağlantı Yap' isteklere hizmet yoklar. Hizmet işlenen yanıtını geri göndermek hazır aldığında son 'Bağlantı Yap' isteğin arka kanal sonuçları geri göndermek için kullanır.  
+6. HTTP trafiğini izleme (Ağ İzleyicisi, Fiddler vb. gibi çevrimiçi ağ izleme araçlarından herhangi biri tarafından), istemci ile hizmet arasında güvenilir güvenli profille gösterildiği gibi bir iletişim sırasının ve istemcinin nasıl hizmeti ' bağlantı oluştur ' istekleri ile yoklar. Hizmet işlenen yanıtı geri göndermeye hazırsa, sonuçları geri göndermek için son ' bağlantı oluştur ' isteğinin arka kanalını kullanır.  
   
-7. Hizmeti kapatmak için hizmet konsol penceresinde ENTER tuşuna basın. İstemciyi kapatma işlemlerinin istemci konsol penceresinde ENTER tuşuna basın.
+7. Hizmeti kapatmak için hizmet konsolu penceresinde ENTER tuşuna basın. İstemcisini kapatmak için istemci konsolu penceresinde ENTER tuşuna basın.
