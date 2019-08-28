@@ -2,24 +2,24 @@
 title: Uç Noktası Performans Sayaçları
 ms.date: 03/30/2017
 ms.assetid: 7d44d576-bd4e-453b-8b76-a818ce90b806
-ms.openlocfilehash: f07e318e39a68e689ec484b09fa743623cfb51d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2352bc82998c8e87e72f331104446bac4fcb9fda
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797234"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040580"
 ---
 # <a name="endpoint-performance-counters"></a>Uç Noktası Performans Sayaçları
-Uç nokta performans sayaçları, bir uç nokta ileti nasıl kabul ortaya çıkarır verilerini yakalama. Altında bulunabilir `ServiceModelEndpoint 4.0.0.0` ile performans izleme görüntülerken Performans nesnesi. Örnekler, bu deseni kullanılarak adlandırılır:  
+Uç nokta performans sayaçları, bir uç noktanın iletileri nasıl kabul ettiğini gösteren verileri yakalar. Performans İzleyicisi ile görüntülenirken `ServiceModelEndpoint 4.0.0.0` performans nesnesi altında bulunabilir. Örnekler bu model kullanılarak adlandırılır:  
   
 ```  
 (ServiceName).(ContractName)@(endpoint listener address)  
 ```  
   
- Verileri tek işlemler için toplanan benzer, ancak yalnızca uç nokta toplanır.  
+ Veriler tek tek işlemler için toplanmaya benzerdir, ancak yalnızca uç nokta boyunca toplanır.  
   
 > [!CAUTION]
->  Bir performans sayacı örneğinin adının uzunluğu üzerinde bir sınır yoktur. Bir Windows Communication Foundation (WCF) sayaç örneği adı en fazla uzunluğu aşıyor, WCF örnek adının bir kısmını bir karma değer ile değiştirir.  
+> Performans sayacı örneğinin adının uzunluğu için bir sınır vardır. Bir Windows Communication Foundation (WCF) sayaç örneği adı en fazla uzunluğu aştığında, WCF örnek adının bir bölümünü bir karma değerle değiştirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
