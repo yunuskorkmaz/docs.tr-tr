@@ -1,126 +1,126 @@
 ---
-title: .NET sözlüğü
-description: Seçili koşulları .NET belgelerde kullanılan anlamını öğrenin.
+title: .NET Sözlüğü
+description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683099"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106919"
 ---
-# <a name="net-glossary"></a>.NET sözlüğü
+# <a name="net-glossary"></a>.NET Sözlüğü
 
-Bu sözlük birincil amacı, seçili terimleri ve tanımları olmadan .NET belgeleri sık görünen kısaltmalar anlamları açıklamak sağlamaktır.
+Bu sözlükteki birincil hedef, .NET belgelerinde tanım olmadan sık görüntülenen seçili koşulların ve kısaltmalardan anlamaktır.
 
 ## <a name="aot"></a>AOT
 
-Derleyici, zaman üretim.
+Sonraki süre derleyicisi.
 
-Benzer şekilde [JIT](#jit), ayrıca bu derleyici çevirir [IL](#il) makine kodu. Uygulama çalıştırılır ve genellikle farklı bir makinede gerçekleştirdiği önce JIT derlemesi aksine AOT derlemesi'olmuyor. Çalışma zamanında AOT takımlarına derlenmemesi çünkü derleme harcanan zamanı en aza indirmek yok. Daha fazla iyileştirme zaman harcamak anlamına gelir. AOT bağlamında tüm uygulama olduğundan, AOT derleyici zakazuje optimalizaci bağlama ve tüm başvurular izlenir ve tek bir yürütülebilir dosya oluşturulur ve tüm program analizi de gerçekleştirir.
+[JIT](#jit)'e benzer şekilde, bu derleyici Ayrıca [Il](#il) 'yi makine koduna çevirir. JıT derlemesinin aksine, uygulama yürütülmeden önce AOT derlemesi olur ve genellikle farklı bir makinede gerçekleştirilir. AOT aracı zincirleri çalışma zamanında derlenmediğinden, bu sürenin derlenmesi sırasında geçen süreyi en aza indirmeleri gerekmez. Bu, daha iyi zaman harcayabileceğiniz anlamına gelir. AOT bağlamı tüm uygulama olduğundan, AOT derleyicisi Ayrıca çapraz modül bağlamayı ve tam program analizini gerçekleştirir, bu da tüm başvuruların izlendiği ve tek bir yürütülebilir dosyanın oluşturulduğu anlamına gelir.
 
-Bkz: [CoreRT](#corert) ve [.NET yerel](#net-native).
+Bkz. [Corert](#corert) ve [.NET Native](#net-native).
 
 ## <a name="aspnet"></a>ASP.NET 
 
-.NET Framework ile birlikte gelen özgün ASP.NET uygulaması.
+.NET Framework ile birlikte gelen özgün ASP.NET uygulamasıdır.
 
-Bazen ASP.NET, ASP.NET Core dahil olmak üzere iki ASP.NET uygulamaları için başvuran bir genel bir terimdir. Belirtilen örnek terimi taşıyan anlamı bağlam tarafından belirlenir. Başvurmak için ASP.NET 4.x, Temizle sağlamak istediğinizde değil kullanmakta olduğunuz ASP.NET hem de uygulamaları auto'yu. 
+Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başvuran bir şemsiye terimidir. Belirli bir örnekte yer alan dönemin, bağlam tarafından belirlendiği anlamı. Her iki uygulamayı da belirtmek için ASP.NET kullanmadığınız net bir ASP.NET 4. x öğesine başvurun. 
 
-Bkz: [ASP.NET belgeleri](/aspnet/#pivot=aspnet).
+Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-Platformlar arası, yüksek performanslı, açık kaynaklı bir ASP.NET uygulaması üzerinde .NET Core üzerine kurulmuştur.
+.NET Core üzerinde oluşturulan ASP.NET platformlar arası, yüksek performanslı, açık kaynaklı bir uygulama.
 
-Bkz: [ASP.NET Core belgeleri](/aspnet/#pivot=core).
+[ASP.NET Core belgelerine](/aspnet/#pivot=core)bakın.
 
 ## <a name="assembly"></a>derleme
 
-A *.dll*/*.exe* API uygulamaları veya diğer derlemeler tarafından çağrılabilen bir koleksiyonunu içeren dosya.
+Uygulamalar veya diğer derlemeler tarafından çağrılabilecek bir API koleksiyonu içerebilen bir *. dll*/ *. exe* dosyası.
 
-Bir bütünleştirilmiş kod arabirimleri, sınıflar, yapılar, sabit listeleri ve temsilciler gibi türlerini içerebilir. Projenin derlemelerini *bin* klasör bazen denir *ikili dosyaları*. Ayrıca bkz: [Kitaplığı](#library).
+Bir bütünleştirilmiş kod, arabirimler, sınıflar, yapılar, numaralandırmalar ve temsilciler gibi türler içerebilir. Projenin *bin* klasöründeki derlemeler bazen *ikili dosyalar*olarak adlandırılır. Ayrıca bkz. [kitaplık](#library).
 
 ## <a name="clr"></a>CLR
 
 Ortak dil çalışma zamanı.
 
-Tam anlamı bağlam üzerinde bağlıdır, ancak bu genellikle .NET Framework çalışma zamanını gösterir. CLR bellek ayırma ve management işler. CLR ayrıca yalnızca uygulamaları yürütür, ancak ayrıca oluşturur ve kod üzerinde kolayca kullanarak derler bir sanal makine olduğu bir [JIT](#jit) derleyici. Geçerli Microsoft CLR Windows yalnızca uygulamasıdır.
+Tam anlamı bağlama bağlıdır, ancak bu genellikle .NET Framework çalışma zamanına başvurur. CLR bellek ayırmayı ve yönetimini işler. CLR Ayrıca, yalnızca uygulamaları yürüten ancak aynı zamanda bir [JIT](#jit) derleyicisi kullanarak anında kod oluşturup derleyen bir sanal makinedir. Geçerli Microsoft CLR uygulama yalnızca Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
-.NET core ortak dil çalışma zamanı.
+.NET Core ortak dil çalışma zamanı.
 
-Bu CLR aynı kod tabanını CLR oluşturulur. İlk olarak, CoreCLR Silverlight çalışma zamanı olan ve birden çok platformda çalışacak şekilde tasarlanmıştır, özellikle Windows ve OS x CoreCLR, artık .NET Core parçasıdır ve Basitleştirilmiş bir CLR sürümünü temsil eder. Hala bir [platformlar arası](#cross-platform) artık çok sayıda Linux dağıtımları da dahil olmak üzere çalışma zamanı. CoreCLR, ayrıca bir sanal makine JIT ve kod yürütme özelliklere sahip olur.
+Bu CLR, CLR ile aynı kod tabanında oluşturulmuştur. Özgün olarak CoreCLR, Silverlight 'ın çalışma zamanı ve birden çok platformda çalışacak şekilde tasarlandı, özellikle Windows ve OS X. CoreCLR artık .NET Core 'un bir parçası ve CLR 'nin basitleştirilmiş bir sürümünü temsil etmektedir. Artık çok sayıda Linux dağıtımı desteği de dahil olmak üzere [platformlar arası](#cross-platform) bir çalışma zamanı. CoreCLR Ayrıca JıT ve kod yürütme özelliklerine sahip bir sanal makinedir.
 
 ## <a name="corefx"></a>CoreFX
 
-.NET core temel sınıf kitaplığı (BCL)
+.NET Core temel sınıf kitaplığı (BCL)
 
-Kümesini oluşturan System.* kitaplıkları (ve sınırlı bir ölçüde Microsoft.*) ad alanları. Genel amaçlı, ASP.NET Core gibi daha üst düzey uygulama çerçeveleri yapı üzerinde düşük düzeyli framework BCL olur. .NET Core BCL kaynak kodunu bulunan [Corefx'te depo](https://github.com/dotnet/corefx). Ancak, .NET Core API'ları çoğunu de mevcuttur .NET Framework şekilde Corefx'te .NET Framework BCL çatal olarak düşünebilirsiniz.
+System. * (ve sınırlı ölçüde Microsoft. *) ad alanlarını oluşturan kitaplıklar kümesi. BCL, ASP.NET Core gibi daha üst düzey uygulama çerçevelerinin üzerine inşa eden genel amaçlı, alt düzey bir çerçevedir. .NET Core BCL kaynak kodu [Corefx deposunda](https://github.com/dotnet/corefx)bulunur. Ancak, .NET Core API 'lerinin çoğunluğu .NET Framework de mevcuttur. bu sayede CoreFX ' i .NET Framework BCL çatalını olarak düşünebilirsiniz.
 
 ## <a name="corert"></a>CoreRT
 
-.NET core çalışma zamanı.
+.NET Core çalışma zamanı.
 
-CLR/CoreCLR aksine CoreRT oluşturmak ve bunu içermez çünkü kod üzerinde kolayca çalıştırmak için özellikleri içermez anlamına gelir. bir sanal makine, değil bir [JIT](#jit). Ancak, dahil [GC](#gc) ve çalışma zamanı türü tanımı (RTTI) ve yansıma olanağı. Böylece meta verilerini yansıma için gerekli değildir, ancak kendi tür sistemi tasarlanmıştır. Böylece sahip bir [AOT](#aot) aracının koyma gereksiz meta verileri bağlama ve uygulama kullanmayan kod (daha da önemlisi) tanımlamak zinciri. CoreRT geliştirme aşamasında olan.
+CLR/CoreCLR 'nin aksine CoreRT bir sanal makine değildir, bu da bir [JIT](#jit)içermediğinden kod oluşturma ve çalıştırma tesislerini içermediği anlamına gelir. Ancak, [GC](#gc) ve çalışma zamanı türü tanımlama (RTTI) ve yansıma özelliğini içerir. Ancak, tür sistemi yansıma için meta verilerin gerekli olmaması için tasarlanmıştır. Bu, gereksiz meta verileri bağlayabilen bir [AOT](#aot) araç zinciri olmasını ve (daha önemlisi) uygulamanın kullandığı kodu belirlemenizi mümkün bir şekilde belirler. CoreRT geliştirme aşamasındadır.
 
-Bkz: [.NET Native ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+[.NET Native ve CoreRT tanıtımı](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) konusuna bakın
 
 ## <a name="cross-platform"></a>platformlar arası
 
-Geliştirin ve Linux, Windows ve iOS gibi birden çok farklı işletim sistemlerinde özellikle her biri için yeniden yazmak zorunda kalmadan kullanılabilir bir uygulama yürüttüklerinde yeteneği. Bu kod yeniden kullanımı ve farklı platformlarda uygulamalar arasında tutarlılık sağlar.
+Her biri için özel olarak yeniden yazmak zorunda kalmadan, Linux, Windows ve iOS gibi birden çok farklı işletim sisteminde kullanılabilen bir uygulamayı geliştirebilir ve yürütebilme özelliği. Bu, kod yeniden kullanımını ve farklı platformlardaki uygulamalar arasında tutarlılığı mümkün bir şekilde sunar.
 
 ## <a name="ecosystem"></a>ekosistemi
 
-Tüm çalışma zamanı yazılım, geliştirme araçlarını ve topluluk kaynakları, derlemek ve çalıştırmak için belirli bir teknoloji uygulamalar için kullanılır.
+Belirli bir teknoloji için uygulama derlemek ve çalıştırmak için kullanılan tüm çalışma zamanı yazılımları, geliştirme araçları ve topluluk kaynakları.
 
-".NET ekosisteminin" terimi benzer terimleri ".NET yığını" gibi üçüncü taraf uygulamaları ve kitaplıkları edilme farklıdır. Bir tümcedeki bir örnek aşağıdadır:
+".NET ekosistemi" terimi, üçüncü taraf uygulama ve kitaplıkları dahil olmak üzere ".NET Stack" gibi benzer terimlerden farklıdır. Tümcede bir örnek aşağıda verilmiştir:
 
-- "Hacktivism arkasında [.NET Standard](#net-standard) .NET ekosisteminde büyük gerekmemesi oluşturmaktır." 
+- " [.NET Standard](#net-standard) arkasındaki mosyon, .net ekosisteminde daha fazla esneklik sağlamak." 
 
 ## <a name="framework"></a>çerçeve
 
-Genel olarak, kapsamlı bir API koleksiyonudur, geliştirme ve belirli teknolojiye dayalı uygulamaların dağıtımı kolaylaştırır. Bu genel olarak, ASP.NET Core ve Windows Forms uygulama çerçeveleri örnekleridir. Ayrıca bkz: [Kitaplığı](#library).
+Genel olarak, belirli bir teknolojiyi temel alan uygulamaların geliştirilmesini ve dağıtılmasını kolaylaştıran kapsamlı bir API koleksiyonudur. Bu genel anlamda, ASP.NET Core ve Windows Forms uygulama çerçevelerinin örnekleridir. Ayrıca bkz. [kitaplık](#library).
 
-"Framework" sözcüğü aşağıdaki koşulları'nda daha ayrıntılı bir teknik anlamı:
-* [.NET Framework](#net-framework)
-* [Hedef Çerçeve](#target-framework)
-* [TFM (hedef çerçeve adı)](#tfm)
+"Framework" sözcüğünün aşağıdaki koşullarda daha belirli bir teknik anlamı vardır:
+- [.NET Framework](#net-framework)
+- [hedef çerçeve](#target-framework)
+- [TFD (hedef çerçeve bilinen adı)](#tfm)
 
-Mevcut belgelerde başvurduğu bazen "framework" bir [.NET uygulaması](#implementation-of-net). Örneğin, bir makale, bir çerçeve .NET Core çağırabilir. Bu karmaşık kullanım belgelerinden ortadan kaldırmayı planlıyoruz.
+Mevcut belgelerde, "Framework" Bazen bir [.NET uygulamasını](#implementation-of-net)ifade eder. Örneğin, bir makale .NET Core Framework 'ü çağırabilir. Bu karışık kullanımı belgelerden ortadan kaldırmaya planlıyoruz.
 
 ## <a name="gc"></a>GC
 
 Çöp toplayıcı.
 
-Çöp toplayıcı otomatik bellek yönetimi uygulamasıdır.  GC artık kullanımda olmayan nesneler tarafından kapladığı bellek serbest bırakır. 
+Çöp toplayıcı, otomatik bellek yönetiminin bir uygulamasıdır.  GC, artık kullanılmayan nesnelerin kapladığı belleği serbest bırakır. 
 
-Bkz: [çöp toplama](garbage-collection/index.md).
+Bkz. [çöp toplama](garbage-collection/index.md).
 
-## <a name="il"></a>IL
+## <a name="il"></a>DEMIRYOLU
 
-Ara dili.
+Ara dil.
 
-C# gibi daha üst düzey .NET dilleri Ara dil (IL) olarak adlandırılır ve Donanım sorun yaşamaz yönerge kümesi aşağı derleyin. IL bazen MSIL (Microsoft IL) veya CIL (ortak IL) adlandırılır.
+Gibi daha üst düzey .NET dilleri C#, ara DIL (IL) olarak adlandırılan donanımdan bağımsız bir yönerge kümesine derler. Il bazen MSIL (Microsoft Il) veya CıL (ortak Il) olarak adlandırılır.
 
 ## <a name="jit"></a>JIT
 
-Tam zamanında derleyici.
+Just-In-Time derleyicisi.
 
-Benzer şekilde [AOT](#aot), bu derleyici çevirir [IL](#il) işlemci anlayan bir makine kodu. AOT, aksine JIT derlemesi isteğe bağlı olur ve kodu çalıştırmak için gereken aynı makineye gerçekleştirilir. JIT derlemesi uygulamanın yürütülmesi sırasında gerçekleşir olduğundan, derleme zamanında bir parçasıdır. Bu nedenle, JIT derleyicileri harcanan zamanı en iyi duruma getirme kodu elde edilen kod üretebilirsiniz tasarruf karşı dengelemeniz gerekir. Ancak bir JIT gerçek donanım bilir ve farklı uygulamalar gönderin zorunda geliştiriciler boşaltabilir.
+[AOT](#aot)'ye benzer şekilde, bu derleyici [Il](#il) 'yi işlemcinin anladığı makine koduna dönüştürür. AOT 'nin aksine JıT derleme isteğe bağlı olur ve kodun üzerinde çalışması gereken makinede gerçekleştirilir. Uygulamanın yürütülmesi sırasında JıT derlemesi gerçekleşdiğinden, derleme süresi çalışma zamanının bir parçasıdır. Bu nedenle, JıT derleyicileri, kodu en iyi duruma getirmeye harcanan süreyi, sonuçta elde edilen kodun üretebildiği tasarruflarla dengelemeye yönelik Ancak, bir JıT gerçek donanımı bilir ve geliştiricilerin farklı uygulamalar sunmalarını ücretsiz olarak kullanabilir.
 
-## <a name="implementation-of-net"></a>.NET uygulaması
+## <a name="implementation-of-net"></a>.NET uygulama
 
-.NET uygulaması şunları içerir:
+.NET uygulamasına aşağıdakiler dahildir:
 
-- Bir veya daha fazla çalışma zamanları. Örnekler: CLR, CoreCLR, CoreRT.
-- .NET Standard'ın bir sürümünü uygular ve ek API'ler dahil edebilirsiniz bir sınıf kitaplığı. Örnekler: .NET Framework temel sınıf kitaplığı, .NET Core temel sınıf kitaplığı.
-- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçeveleri. Örnekler: ASP.NET, Windows Forms ve WPF, .NET Framework'teki dahil edilir.
-- İsteğe bağlı olarak, geliştirme araçları. Bazı geliştirme araçları, birden çok uygulama arasında paylaşılır.
+- Bir veya daha fazla çalışma zamanı. Örnekler: CLR, CoreCLR, CoreRT.
+- .NET Standard bir sürümünü uygulayan ve ek API 'Ler içerebilen bir sınıf kitaplığı. Örnekler: .NET Framework temel sınıf kitaplığı, .NET Core temel sınıf kitaplığı.
+- İsteğe bağlı olarak, bir veya daha fazla uygulama çerçevesi. Örnekler: ASP.NET, Windows Forms ve WPF .NET Framework dahil edilmiştir.
+- İsteğe bağlı olarak, geliştirme araçları. Bazı geliştirme araçları birden çok uygulama arasında paylaşılır.
 
-.NET uygulamaları örnekleri:
+.NET uygulamalarına örnek olarak şunlar verilebilir:
 
 - [.NET Framework](#net-framework)
 - [.NET Core](#net-core)
@@ -128,147 +128,147 @@ Benzer şekilde [AOT](#aot), bu derleyici çevirir [IL](#il) işlemci anlayan bi
 
 ## <a name="library"></a>kitaplık
 
-Uygulamaları veya diğer kitaplıkları tarafından çağrılabilen bir API koleksiyonudur. Bir veya daha fazla .NET kitaplığı oluşur [derlemeleri](#assembly).
+Uygulamalar veya diğer kitaplıklar tarafından çağrılabilen API 'lerin bir koleksiyonu. Bir .NET kitaplığı, bir veya daha fazla derlemeden [](#assembly)oluşur.
 
-Sözcükleri kitaplığı ve [framework](#framework) genellikle maliyetle aynı anlamda kullanılır.
+Sözcükler kitaplığı ve [Framework](#framework) genellikle terimler kullanılır.
 
 ## <a name="metapackage"></a>metapackage
 
-Kendi ancak hiçbir kitaplığı olan bir NuGet paketi yalnızca bağımlılıkları bir listesidir. Eklenen paketler, isteğe bağlı olarak bir hedef çerçeve için API bağlantı kurabilir.
+Kendi kitaplığı olmayan ancak yalnızca bağımlılıklar listesi olan bir NuGet paketi. Dahil edilen paketler, isteğe bağlı olarak bir hedef çerçeve için API 'YI kurabilir.
 
-Bkz: [paketler, meta paketler ve çerçeveler](../core/packages.md)
+Bkz. [paketler, Metapackages ve çerçeveler](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono, bir açık kaynak [platformlar arası](#cross-platform) küçük bir çalışma zamanı gerektiğinde .NET uygulamasında, esas olarak kullanılır. Bu, Android, Mac, iOS, tvOS ve watchOS Xamarin uygulamalarını çalıştırır ve öncelikli olarak küçük ayak izine gerektiren uygulamaları üzerinde odaklanmıştır çalışma zamanıdır.
+Mono, genellikle küçük bir çalışma zamanı gerektiğinde kullanılan açık kaynaklı, [platformlar arası](#cross-platform) bir .net uygulamasıdır. Android, Mac, iOS, tvOS ve watchOS üzerinde Xamarin uygulamalarını güçlendirir ve öncelikle küçük bir kaplama gerektiren uygulamalara odaklanılmıştır.
 
-Tüm şu anda yayımlanan .NET Standard sürümlerini destekler.
+Şu anda yayımlanmış .NET Standard sürümlerinin tümünü destekler.
 
-Tarihsel olarak, Mono .NET Framework'ün daha büyük API uygulanan ve bazı UNIX üzerinde en popüler özelliklerini benzetilmiş. Bazen UNIX bu özellikleri kullanan .NET uygulamaları çalıştırmak için kullanılır.
+Tarihsel olarak, mono .NET Framework daha büyük API 'sini uyguladık ve UNIX üzerinde en popüler yeteneklerin bazılarını öykünüyler. Bu özellik bazen UNIX üzerinde bu özellikleri kullanan .NET uygulamalarını çalıştırmak için kullanılır.
 
-Mono genellikle bir tam zamanında derleyici ile kullanılır, ancak ayrıca iOS gibi platformlarda kullanılan tam statik bir derleyici (, zamanında tamamlanan derleme) sahiptir.
+Mono genellikle tam zamanında bir derleyici ile kullanılır, ancak iOS gibi platformlarda kullanılan tam bir statik derleyici (güncel derleme) da sunar.
 
-Mono hakkında daha fazla bilgi için bkz: [Mono belgeleri](https://www.mono-project.com/docs/).
+Mono hakkında daha fazla bilgi edinmek için [mono belgelerine](https://www.mono-project.com/docs/)bakın.
 
 ## <a name="net"></a>.NET
 
-Genel terimi [.NET Standard](#net-standard) ve tüm [.NET uygulamaları](#implementation-of-net) ve iş yükleri. Her zaman büyük harfe, hiçbir zaman ".Net".
+[.NET Standard](#net-standard) ve tüm [.NET uygulamaları](#implementation-of-net) ve iş yükleri için şemsiye terimi. Her zaman büyük harfli, hiçbir zaman ".net".
 
-Bkz: [.NET Kılavuzu](index.md)
+Bkz. [.net Kılavuzu](index.md)
 
 ## <a name="net-core"></a>.NET Core 
 
-.NET bir platformlar arası, yüksek performanslı, açık kaynak uygulaması. Çekirdek ortak dil çalışma zamanı (CoreCLR), çekirdek AOT çalışma zamanı'nı (geliştirme, CoreRT), çekirdek temel sınıf kitaplığı ve Core SDK'sı içerir.
+.NET için platformlar arası, yüksek performanslı, açık kaynaklı bir uygulama. Çekirdek ortak dil çalışma zamanını (CoreCLR), çekirdek AOT çalışma zamanını (, geliştirme sırasında CoreRT), çekirdek temel sınıf kitaplığını ve temel SDK 'Yı içerir.
 
-Bkz: [.NET Core](../core/index.md).
+Bkz. [.NET Core](../core/index.md).
 
-## <a name="net-core-cli"></a>.NET core CLI
+## <a name="net-core-cli"></a>.NET Core CLI
 
-.NET Core uygulamaları geliştirmek için bir çoklu platform araç zinciri.
+.NET Core uygulamaları geliştirmek için platformlar arası araç zinciri.
 
-Bkz: [.NET Core komut satırı arabirimi (CLI) araçlarını](../core/tools/index.md).
+Bkz. [.NET Core komut satırı arabirimi (CLI) araçları](../core/tools/index.md).
 
-## <a name="net-core-sdk"></a>.NET core SDK'sı
+## <a name="net-core-sdk"></a>.NET Core SDK
 
-Kitaplıklar ve geliştiricilerin, .NET Core uygulamaları ve kitaplıkları oluşturmak araçlar kümesi. İçerir [.NET Core CLI](#net-core-cli) uygulamaları, .NET Core kitaplıkları ve oluşturmak ve çalışan uygulamalar ve dotnet yürütülebilir için çalışma zamanı oluşturmak için (*dotnet.exe*) CLI komutları çalıştırır ve uygulamaları çalıştırır.
+Geliştiricilerin .NET Core Uygulamaları ve kitaplıkları oluşturmalarına izin veren bir kitaplık ve araç kümesi. Uygulamalar oluşturmaya yönelik [.NET Core CLI](#net-core-cli) , uygulamalar oluşturmak ve çalıştırmak Için .NET Core kitaplıklarını ve çalışma ZAMANıNı ve CLI komutlarını çalıştıran ve uygulamaları çalıştıran DotNet çalıştırılabilir (*DotNet. exe*) bilgilerini içerir.
 
-Bkz: [.NET Core SDK'ya genel bakış](../core/sdk.md).
+[.NET Core SDK genel bakış](../core/sdk.md)bölümüne bakın.
 
 ## <a name="net-framework"></a>.NET Framework
 
-Yalnızca Windows üzerinde çalışan .NET uygulaması. Ortak dil çalışma zamanı (CLR), temel sınıf kitaplığı ve ASP.NET, Windows Forms ve WPF gibi uygulama framework kitaplıkları içerir.
+Yalnızca Windows üzerinde çalışan bir .NET uygulamasıdır. Ortak dil çalışma zamanını (CLR), temel sınıf kitaplığını ve ASP.NET, Windows Forms ve WPF gibi uygulama çerçevesi kitaplıklarını içerir.
 
-Bkz: [.NET Framework Kılavuzu](../framework/index.md).
+[.NET Framework Kılavuzu](../framework/index.md)' na bakın.
 
 ## <a name="net-native"></a>.NET Yerel
 
-Yerel kod tamamlanan-'ın-time (AOT), just-in-time (JIT) aksine üretir derleyici araç zinciri.
+Anında yerel kod üreten bir derleyici aracı zinciri (AOT)-ın-Time (JıT) yerine.
 
-Derleme, bir C++ Derleyici ve bağlayıcı çalıştığı benzer şekilde Geliştirici makinesinde gerçekleşir. Kullanılmayan kod kaldırır ve iyileştirmeye daha fazla zaman harcadığını. Bu kod kitaplıklarından ayıklar ve yürütülebilir dosyada birleştirir. Sonuç, tüm uygulamayı temsil eden tek bir modüldür.
+Derleme, geliştiricilerin makinesinde C++ derleyici ve bağlayıcının çalışmasına benzer şekilde gerçekleşir. Kullanılmayan kodu kaldırır ve iyileştirerek daha fazla zaman harcamalar. Kodu kitaplıklardan ayıklar ve çalıştırılabilirle birleştirir. Sonuç, uygulamanın tamamını temsil eden tek bir modüldür.
 
-UWP .NET Native tarafından desteklenen ilk uygulama çerçevesi oluştu. Şimdi, Windows, macOS ve Linux için yerel konsol uygulamaları oluşturmayı destekler.
+UWP, .NET Native tarafından desteklenen ilk uygulama çerçevesidir. Şimdi Windows, macOS ve Linux için yerel konsol uygulamaları oluşturmayı destekliyoruz.
 
-Bkz: [.NET Native ve CoreRT giriş](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
+[.NET Native ve CoreRT tanıtımı](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) konusuna bakın
 
 ## <a name="net-standard"></a>.NET Standard
 
-Bir resmi belirtimi .NET API'leri, her bir .NET uygulamasında kullanılabilir.
+.NET API 'lerinin her bir .NET uygulamasında kullanılabilen resmi bir belirtimi.
 
-.NET Standard belirtimi, belge kitaplığında adlandırılır. API uygulamaları, yalnızca belirtimleri (arabirimleri), bir kitaplık içerdiği için "kitaplık.".NET Standard çağrılacak yanıltıcı .NET Standard metapackage adını yalnızca söz konusu kullanım için belgelerinde dışında ortadan kaldırmak planlıyoruz (`NETStandard.Library`).
+.NET Standard belirtimine bazen belgelerde bir kitaplık denir. Bir kitaplık yalnızca belirtim (arabirimler) değil API uygulamalarını içerdiğinden, bir "Library" .NET Standard çağırmak yanıltıcıdır. .NET Standard metapackage (`NETStandard.Library`) adı ile ilgili olarak, belgelerden bu kullanımı ortadan kaldırmaya planlıyoruz.
 
-Bkz: [.NET Standard](net-standard.md).
+Bkz. [.NET Standard](net-standard.md).
 
 ## <a name="ngen"></a>NGEN
 
 Yerel (görüntü) oluşturma.
 
-Bu teknoloji kalıcı bir JIT derleyicisi düşünebilirsiniz. Genellikle, burada kod yürütülür, ancak derleme, genellikle yükleme zamanında oluşuyor makine kodu derler.
+Bu teknolojiyi kalıcı bir JıT derleyicisi olarak düşünebilirsiniz. Genellikle kodun yürütüldüğü makinede kodu derler, ancak derleme genellikle yüklemesi sırasında gerçekleşir.
 
-## <a name="package"></a>Paket
+## <a name="package"></a>leyebilir
 
-Bir NuGet paketi &mdash; veya yalnızca bir paketi &mdash; olduğu bir *.zip* dosyasıyla birlikte ek meta verileri yazar adı gibi aynı ada sahip bir veya daha fazla derlemeleri.
+Bir NuGet paketi &mdash; veya yalnızca bir paket &mdash; , aynı ada sahip bir veya daha fazla bütünleştirilmiş kod içeren bir *. zip* dosyasıdır ve yazar adı gibi ek meta verilerle birlikte.
 
-*.Zip* dosyasının bir *.nupkg* uzantısı ve varlıklar gibi içerebilir *.dll* dosyaları ve *.xml* dosyaları, birden çok hedef ile kullanmak için çerçeveler ve sürümleri. Bir uygulama veya kitaplık yüklendiğinde, uygulama veya kitaplık tarafından belirtilen hedef Framework'ü temel uygun varlıkları seçilir. Arabirim tanımlayan varlıkları bulunan *ref* klasörü ve uygulanması tanımlamak varlıkları bulunduğunuz *LIB* klasör.
+*. Zip* dosyası *. nupkg* uzantısına sahiptir ve birden çok hedef çerçeve ve sürümde kullanılmak üzere *. dll* dosyaları ve *. xml* dosyaları gibi varlıkları içerebilir. Bir uygulama veya kitaplığa yüklendiğinde, uygun varlıklar uygulama veya kitaplık tarafından belirtilen hedef çerçeveye göre seçilir. Arabirimi tanımlayan varlıklar *ref* klasöründedir ve uygulamayı tanımlayan varlıklar *lib* klasöründedir.
 
 ## <a name="platform"></a>platform
 
-Bir işletim sistemi ve Windows, macOS, Linux, iOS ve Android gibi üzerinde çalıştığı donanım.
+Windows, macOS, Linux, iOS ve Android gibi bir işletim sistemi ve üzerinde çalıştığı donanım.
 
-Cümleleri kullanımı örnekleri aşağıda verilmiştir:
+Cümlelerde kullanım örnekleri aşağıda verilmiştir:
 
-- ".NET core bir çoklu platform .NET uygulamasıdır." 
-- ".NET Standard platformu belirsiz modundayken PCL profilleri Microsoft platformları gösterir."
+- ".NET Core, .NET 'in platformlar arası bir uygulamasıdır." 
+- "PCL profilleri Microsoft platformlarını temsil ederken .NET Standard platforma göre belirsizdir."
 
-.NET belgeleri ".NET platformu" sık kullandığı .NET uygulaması ya da dahil tüm uygulamaları .NET yığını auto'yu. Bu kullanımları belgelerinden ortadan kaldırmak planlıyoruz için birincil (işletim sistemi/donanım) anlamı kafanız almak için bu kullanımları her ikisi de eğilimindedir.
+.NET belgeleri, .NET veya .NET Stack 'in tüm uygulamalar dahil bir uygulamasını ifade etmek için sık sık ".NET platformu" kullanır. Bu kullanımların her ikisi de birincil (OS/donanım) anlamı ile karıştırılmamalıdır. bu nedenle, bu kullanımları belgelerden ortadan kaldırmaya planlanıyoruz.
 
 ## <a name="runtime"></a>çalışma zamanı
 
-Yönetilen bir program yürütme ortamı.
+Yönetilen programın yürütme ortamı.
 
-İşletim Sisteminin çalışma zamanı ortamının parçası olan ancak .NET çalışma zamanı bir parçası değil. .NET çalışma zamanları bazı örnekleri aşağıda verilmiştir:
+İşletim sistemi çalışma zamanı ortamının bir parçasıdır ancak .NET çalışma zamanının bir parçası değildir. .NET çalışma zamanlarının bazı örnekleri aşağıda verilmiştir:
 
 - Ortak Dil Çalışma Zamanı (CLR)
 - Çekirdek ortak dil çalışma zamanı (CoreCLR)
-- (UWP için) .NET native
+- .NET Native (UWP için)
 - Mono çalışma zamanı
 
-.NET belgeleri bazen "çalışma zamanı".NET uygulaması birlikte kullanıldığı senaryolar için kullanır. Örneğin, aşağıdaki cümlelerde, "uygulama" ile "çalışma zamanı" değiştirilmelidir:
+.NET belgeleri bazen .NET uygulamasının bir uygulamasını ifade etmek için "Runtime" kullanır. Örneğin, aşağıdaki cümleler "Runtime" ın "uygulama" ile değiştirilmelidir:
 
-- "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygulayın."
-- "Birden çok çalışma zamanları üzerinde çalışması amaçlanmıştır kitaplıkları bu framework hedeflemesi gereken." (.NET Standard başvuran)
-- ".NET Standard belirli sürümlerini çeşitli .NET çalışma zamanları uygulayın. … Her .NET çalışma zamanı sürümünü destekleyen... en yüksek .NET Standard sürümünü bildirir."
+- "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular."
+- "Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir." (.NET Standard başvurma)
+- "Çeşitli .NET çalışma zamanları .NET Standard belirli sürümlerini uygular. … Her .NET çalışma zamanı sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır... "
 
-Bu tutarsız kullanım ortadan kaldırmayı planlıyoruz. 
+Bu tutarsız kullanımı ortadan kaldırmaya planlıyoruz. 
 
 ## <a name="stack"></a>yığın
 
-Programlama birlikte oluşturmak ve uygulamaları çalıştırmak için kullanılan teknolojileri kümesi.
+Uygulamaları derlemek ve çalıştırmak için birlikte kullanılan bir programlama teknolojileri kümesi.
 
-".NET yığını".NET Standard ve tüm .NET uygulamaları için ifade eder. ".NET yığını" tümceciği için bir .NET uygulaması başvurabilir. 
+".NET Stack" .NET Standard ve tüm .NET uygulamalarını ifade eder. "A .NET Stack" ifadesi bir .NET uygulamasına başvurabilir. 
 
-## <a name="target-framework"></a>Hedef Çerçeve
+## <a name="target-framework"></a>hedef çerçeve
 
-.NET uygulama veya kitaplık dayanan bir API koleksiyonudur.
+Bir .NET uygulamasının veya kitaplığının dayandığı API 'lerin koleksiyonu.
 
-Bir uygulama veya kitaplık belirtimi için standartlaştırılmış bir API kümesi genelinde tüm .NET uygulamalarında olduğu (örneğin, .NET Standard 2.0), .NET Standard'ın bir sürümünü hedefleyebilirsiniz. Bir uygulama veya kitaplık Ayrıca belirli bir .NET uygulaması sürümü, uygulamaya özel API'lerine erişimi alır durumda hedefleyebilirsiniz. Örneğin, Xamarin.iOS hedefleyen bir uygulama erişimi için sağlanan Xamarin iOS API sarmalayıcıları alır.
+Bir uygulama veya kitaplık, tüm .NET uygulamalarında standartlaştırılmış bir API kümesine yönelik belirtim olan .NET Standard bir sürümünü (örneğin, .NET Standard 2,0) hedefleyebilir. Bir uygulama veya kitaplık, belirli bir .NET uygulamasının bir sürümünü de hedefleyebilir ve bu durumda uygulamaya özgü API 'lere erişim sağlar. Örneğin, Xamarin. iOS 'u hedefleyen bir uygulama Xamarin tarafından sağlanmış iOS API sarmalayıcılarını erişim altına alır.
 
-Kullanılabilir API'ler, bir .NET uygulamasını yükleyen bir sistemde derlemeler tarafından tanımlanan bazı hedef çerçeveleri için (örneğin, .NET Framework), uygulama çerçevesi API'leri (örneğin, ASP.NET, WinForms) içerebilir. (Örneğin, .NET Standard ve .NET Core) paket tabanlı hedef çerçeve için framework API uygulama veya kitaplık yüklü paketleri tarafından tanımlanır. Bu durumda, hedef Framework'ü örtük olarak birlikte framework yaptığınız tüm paketleri başvuran bir metapackage belirtir.
+Bazı hedef çerçeveler için (örneğin, .NET Framework) kullanılabilir API 'ler, .NET uygulamasının uygulama çerçevesi API 'Leri içerebilen bir sisteme yüklediği derlemeler tarafından tanımlanır (örneğin, ASP.NET, WinForms). Paket tabanlı hedef çerçeveler için (.NET Standard ve .NET Core gibi), çerçeve API 'Leri, uygulama veya kitaplıkta yüklü paketler tarafından tanımlanır. Bu durumda, hedef çerçeve örtülü olarak Framework 'ü oluşturan tüm paketlere başvuran bir metapackage belirler.
 
-Bkz: [hedef çerçeveyi](frameworks.md).
+Bkz. [hedef çerçeveler](frameworks.md).
 
 ## <a name="tfm"></a>TFM
 
-Hedef Çerçeve adı.
+Hedef Framework bilinen adı.
 
-Bir .NET uygulaması veya kitaplığı hedef Framework'ü belirtmek için standartlaştırılmış bir belirteci biçimi. Hedef Çerçeve genellikle başvuru kısa bir ad tarafından gibi `net462`. Uzun biçimli Tfm'ler (örn. NETFramework, sürüm 4.6.2 =) var, ancak genellikle bir hedef Framework'ü belirtmek için kullanılmaz.
+.NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimi. Hedef çerçevelere genellikle gibi `net462`kısa bir ad başvurulur. Uzun biçimli TFMs (gibi. NETFramework, Version = 4.6.2) var, ancak genellikle bir hedef çerçeve belirtmek için kullanılmaz.
 
-Bkz: [hedef çerçeveyi](frameworks.md).
+Bkz. [hedef çerçeveler](frameworks.md).
 
 ## <a name="uwp"></a>UWP
 
-Evrensel Windows platformu.
+Evrensel Windows Platformu.
 
-Windows uygulamaları ve yazılım modern ve Dokunmatik kullanıma nesnelerin interneti için (IOT) oluşturmak için kullanılan bir .NET uygulaması. Bunu hedeflemek isteyebilirsiniz cihazlar farklı türde buluşturulan PC'ler, tabletler, phablets, telefonlar ve bile Xbox dahil olmak üzere tasarlanmıştır. UWP, merkezi bir mağazaya, Yürütme Ortamı (AppContainer) ve bir dizi yerine Win32 kullanmak için Windows API gibi birçok hizmetleri sunar (WinRT). Uygulamaları, C++, C#, VB.NET ve JavaScript içinde yazılabilir. C# ve vb.NET'TE kullanırken, .NET API'lerini .NET Core tarafından sağlanır.
+Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, phabizin, telefon ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini birleştirmeleri için tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar, C#, vb.net ve C++JavaScript 'te yazılabilir. C# Ve vb.net kullanıldığında .NET API 'Leri .NET Core tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
