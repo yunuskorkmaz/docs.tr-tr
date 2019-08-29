@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 44f98a6d7bf8358baf3b123b2d3b1d13009098a6
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817888"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133757"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF Güvenlik Stratejisi - Platform Güvenliği
 Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladığından, işletim sistemini, CLR 'yi ve Internet Explorer 'ı içeren temel platformun güvenlik özelliklerinden de yararlanır. Bu katmanlar, aşağıdaki şekilde [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] gösterildiği gibi, herhangi bir hata noktasını önlemeye yönelik güçlü, derinlemesine bir güvenlik modeli sağlamak için birleştirilir:  
@@ -33,7 +33,7 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladı�
 
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>İşletim sistemi güvenliği  
- İçin gereken [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]en düşük işletim sistemi düzeyi. ' Nin [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] çekirdeği, ile [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]derleme dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]uygulamasının [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] güvenlik özelliklerini içerir ve bunları daha fazla genişletir. Bu konu, için [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]önemli olan bu güvenlik özelliklerinin kapsamını ele alınmaktadır ve ayrıntılı savunma sağlamak üzere bunlarla nasıl [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tümleşir.  
+Windows çekirdeği, WPF ile oluşturulmuş olanlar da dahil olmak üzere tüm Windows uygulamaları için güvenlik temelini oluşturan çeşitli güvenlik özellikleri sağlar. Bu konu, WPF için önemli olan bu güvenlik özelliklerinin kapsamını ele almaktadır ve WPF 'in bunlarla nasıl tümleştirilebildiğinden daha ayrıntılı savunma sağlar.  
   
 <a name="Microsoft_Windows_XP_Service_Pack_2__SP2_"></a>   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
@@ -57,21 +57,21 @@ Windows Presentation Foundation (WPF), çeşitli güvenlik hizmetleri sağladı�
   
 <a name="Windows_Vista"></a>   
 ### <a name="windows-vista"></a>Windows Vista  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]üzerindeki [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] kullanıcılar, "en az ayrıcalıklı kullanıcı erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi işletim sisteminin ek güvenlik geliştirmelerinden faydalanır.  
+Windows Vista 'daki WPF kullanıcıları, "en az ayrıcalıklı kullanıcı erişimi", kod bütünlüğü denetimleri ve ayrıcalık yalıtımı gibi işletim sisteminin ek güvenlik geliştirmelerinden faydalanır.  
   
 #### <a name="user-account-control-uac"></a>Kullanıcı hesabı denetimi (UAC)  
  Günümüzde, çoğu uygulama için yükleme veya yürütme ya da her ikisi için gerekli olduğundan, Windows kullanıcıları yönetici ayrıcalıklarıyla çalışmaya eğilimlidir. Varsayılan uygulama ayarlarını kayıt defterine yazamayacak bir örnektir.  
   
  Yönetici ayrıcalıklarıyla çalıştırmak, uygulamaların yönetici ayrıcalıkları verilen işlemlerden yürütülmesi anlamına gelir. Bunun güvenlik etkisi, yönetici ayrıcalıklarıyla çalışan bir işlemi ele alan herhangi bir kötü amaçlı kodun, kritik sistem kaynaklarına erişim de dahil olmak üzere otomatik olarak bu ayrıcalıkları devralmasını sağlar.  
   
- Bu güvenlik tehditlerine karşı korumanın bir yolu, uygulamaları gereken en az sayıda ayrıcalığa sahip olacak şekilde kullanmaktır. Bu, en az ayrıcalık ilkesi olarak bilinir ve [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] işletim sisteminin temel bir özelliğidir. Bu özellik, Kullanıcı hesabı denetimi (UAC) olarak adlandırılır ve UAC tarafından [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] iki önemli şekilde kullanılır:  
+ Bu güvenlik tehditlerine karşı korumanın bir yolu, uygulamaları gereken en az sayıda ayrıcalığa sahip olacak şekilde kullanmaktır. Bu, en az ayrıcalık ilkesi olarak bilinir ve Windows işletim sisteminin temel bir özelliğidir. Bu özellik, Kullanıcı hesabı denetimi (UAC) olarak adlandırılır ve Windows UAC tarafından iki önemli şekilde kullanılır:  
   
 - Kullanıcı yönetici olsa bile, çoğu uygulamayı UAC ayrıcalıklarıyla çalıştırmak için; yalnızca yönetici ayrıcalıklarına ihtiyacı olan uygulamalar, yönetici ayrıcalıklarıyla çalışır. Yönetim ayrıcalıklarıyla çalıştırmak için uygulamaların uygulama bildiriminde açıkça veya güvenlik ilkesinde bir giriş olarak işaretlenmesi gerekir.  
   
 - Sanallaştırma gibi uyumluluk çözümleri sağlamak için. Örneğin, birçok uygulama C:\Program Files gibi kısıtlı konumlara yazmaya çalışır. UAC altında yürütülen uygulamalar için, yazma için yönetici ayrıcalıkları gerektirmeyen Kullanıcı başına alternatif bir konum vardır. UAC altında çalışan uygulamalar için, UAC 'ler C:\Program Files 'ı sanallaştırır. bu sayede, kendisine yazdıkları uygulamalar aslında alternatif, Kullanıcı başına konuma yazıyor. Bu tür bir uyumluluk çalışması, işletim sisteminin daha önce UAC 'de çalışmayan birçok uygulamayı çalıştırmasına olanak sağlar.  
   
 #### <a name="code-integrity-checks"></a>Kod bütünlüğü denetimleri  
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]kötü amaçlı kodun sistem dosyalarına veya yükleme/çalışma zamanında çekirdeğe eklenmesini önlemeye yardımcı olmak için daha derin kod bütünlüğü denetimleri içerir. Bu, sistem dosya korumasının ötesine geçer.  
+ Windows Vista, kötü amaçlı kodun sistem dosyalarına veya yükleme/çalışma zamanında çekirdeğe eklenmesini önlemeye yardımcı olmak için daha derin kod bütünlüğü denetimleri içerir. Bu, sistem dosya korumasının ötesine geçer.  
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Tarayıcıda barındırılan uygulamalar için sınırlı haklar süreci  

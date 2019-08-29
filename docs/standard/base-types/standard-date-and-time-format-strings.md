@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247a77eb2fc5341f611e86f920daac488015a680
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c8a4c1c9450d624b6c4903f9f7978e931e74551c
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040480"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133820"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart Tarih ve Saat Biçim Dizeleri
 
@@ -32,7 +32,7 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
 - Bir tarih ve saat değerinin ayrıştırma işlemi tarafından bir <xref:System.DateTime> veya <xref:System.DateTimeOffset> değere dönüştürülebileceği metin temsilini tanımlamak için.
 
 > [!TIP]
-> Biçim dizelerini sayısal veya tarih ve saat değerlerine uygulamanızı ve sonuç dizeyi görüntülemenizi sağlayan bir uygulama olan [biçimlendirme yardımcı programını](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)indirebilirsiniz.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu, ve [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)için kullanılabilir.
 
 Standart Tarih ve saat biçim dizeleri, <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleriyle birlikte kullanılabilir.
 
@@ -454,4 +454,5 @@ Biçimlendirme, geçerli iş parçacığı kültürü tarafından örtük <xref:
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
 - [Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Örnek: .NET Framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programıC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0eab81c3cad67c2b7fdd7ba42294864acd4a554
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5cacccc182b3361ffd635f2b5f32ce8c17100d08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046556"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133628"
 ---
 # <a name="custom-numeric-format-strings"></a>Özel sayısal biçim dizeleri
 
@@ -32,7 +32,7 @@ Sayısal verinin nasıl biçimlendirileceğini tanımlamak için bir veya daha f
 Özel sayısal biçim dizeleri, `ToString` tüm sayısal türdeki metodun bazı aşırı yüklemeleri tarafından desteklenir. Örneğin, <xref:System.Int32.ToString%28System.String%29> <xref:System.Int32> türünün ve <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> yöntemlerine bir sayısal biçim dizesi sağlayabilirsiniz. Özel sayısal biçim dizeleri de .net [Composite biçimlendirme özelliği](../../../docs/standard/base-types/composite-formatting.md)tarafından desteklenir ve bu `Write` , <xref:System.Console> ve <xref:System.IO.StreamWriter> sınıflarının bazı ve `WriteLine` <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemleri, yöntemi ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> yöntemi. [Dize ilişkilendirme](../../csharp/language-reference/tokens/interpolated.md) özelliği de özel sayısal biçim dizelerini destekler.
 
 > [!TIP]
-> Biçim dizelerini sayısal veya tarih ve saat değerlerine uygulamanızı ve sonuç dizeyi görüntülemenizi sağlayan bir uygulama olan [biçimlendirme yardımcı programını](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)indirebilirsiniz.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu, ve [C#](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)için kullanılabilir.
 
 <a name="table"></a>Aşağıdaki tabloda özel sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Özel sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesCustomFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
@@ -293,4 +293,5 @@ Aşağıdaki örnek iki özel sayısal biçim dizesini gösterir. Her iki durumd
 - [Biçimlendirme Türleri](../../../docs/standard/base-types/formatting-types.md)
 - [Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)
 - [Nasıl yapılır: Bir sayıyı önünde sıfır olacak şekilde doldurma](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
-- [Örnek: .NET Framework 4 biçimlendirme yardımcı programı](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programıC#()](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb)

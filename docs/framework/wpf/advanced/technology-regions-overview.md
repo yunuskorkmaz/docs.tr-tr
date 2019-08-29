@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671830"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133809"
 ---
 # <a name="technology-regions-overview"></a>Teknoloji Bölgelerine Genel Bakış
 WPF, Win32 veya DirectX gibi bir uygulamada birden çok sunum teknolojisi kullanılıyorsa, ortak bir üst düzey pencere içinde işleme alanlarının paylaşılması gerekir. Bu konu, WPF birlikte çalışabilirlik uygulamanızın sunumunu ve girişini etkileyebilecek sorunları açıklar.  
@@ -54,11 +54,9 @@ WPF, Win32 veya DirectX gibi bir uygulamada birden çok sunum teknolojisi kullan
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]katmanlı pencerelerin farklı işletim sistemlerinde farklı özellikleri vardır. Bunun nedeni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , oluşturulacak DirectX 'in kullanıldığı ve katmanlı pencerelerin, DirectX işleme değil Öncelikle GDI işlemesi için tasarlanmıştı.  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] ve üzeri donanım hızlandırmalı katmanlı pencereleri destekler. Üzerinde [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] donanım hızlandırmalı katmanlı pencereler Microsoft DirectX 'in desteğini gerektirir, bu nedenle yetenekler söz konusu makinedeki Microsoft DirectX sürümüne bağlı olacaktır.  
+- WPF, donanım hızlandırmalı katmanlı pencereleri destekler.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], özellikle işleme donanım hızlandırılmasıyla, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istediğiniz tam rengi işlemeyi garanti edemediğinden, saydamlık renk tuşlarını desteklemez.  
-  
-- Uygulamanız üzerinde [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)]çalışıyorsa DirectX yüzeyleri üzerinde katmanlı pencereler DirectX uygulaması tarafından oluşturulduğunda titreşebilir.  (Gerçek işleme sırası, Microsoft Windows Grafik Cihaz Arabirimi (GDI) katmanlı pencereyi, sonra DirectX çizmesini ve sonra Microsoft Windows Grafik Cihaz Arabirimi (GDI) katmanlı pencereyi geri koyar.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Katmanlı olmayan pencereler de bu sınırlamaya sahiptir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

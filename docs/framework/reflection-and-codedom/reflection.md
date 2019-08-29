@@ -1,8 +1,8 @@
 ---
-title: .NET Framework'te Yansıma
+title: .NET 'te yansıma
 ms.date: 03/30/2017
 helpviewer_keywords:
-- assemblies [.NET Framework], reflection
+- assemblies [.NET], reflection
 - EventInfo class, reflection
 - common language runtime, reflection
 - FieldInfo class, reflection
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8d34c5386d0ede578fec097279e9de135f4b6cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 56c3b536954118b80db2ae7f2f0d0ffdc74bac68
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940030"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133753"
 ---
-# <a name="reflection-in-the-net-framework"></a>.NET Framework'te Yansıma
+# <a name="reflection-in-net"></a>.NET 'te yansıma
 <xref:System.Reflection> Ad <xref:System.Type?displayProperty=nameWithType>alanındaki sınıflar ile birlikte, yüklü [derlemeler](../app-domains/assemblies-in-the-common-language-runtime.md) ve bunlar içinde tanımlanan türler ( [sınıflar](../../standard/base-types/common-type-system.md#classes), [arabirimler](../../standard/base-types/common-type-system.md#interfaces)ve [değer türleri](../../csharp/language-reference/keywords/value-types.md)gibi) hakkında bilgi edinmenizi sağlar. Ayrıca, çalışma zamanında tür örnekleri oluşturmak ve bunları çağırmak ve bunlara erişmek için yansıma de kullanabilirsiniz. Yansımanın belirli yönleri hakkında konular için bu genel bakışı sonundaki [Ilgili konular](#related_topics) bölümüne bakın.
   
  [Ortak dil çalışma zamanı](../../standard/clr.md) yükleyicisi, aynı uygulama kapsamına sahip nesneler etrafında tanımlanmış sınırları oluşturan [uygulama etki alanlarını](../../../docs/framework/app-domains/application-domains.md)yönetir. Bu yönetim, her derlemenin uygun uygulama etki alanına yüklenmesini ve her derleme içindeki tür hiyerarşisinin bellek yerleşimini denetlemeyi içerir.  
@@ -62,9 +62,9 @@ ms.locfileid: "69940030"
  Yansıma için başka kullanımlar vardır. JScript gibi dillere yönelik derleyiciler sembol tabloları oluşturmak için yansıma kullanır. <xref:System.Runtime.Serialization> Ad alanındaki sınıflar, verilere erişmek ve hangi alanların kalıcı olduğunu anlamak için yansıma kullanır. <xref:System.Runtime.Remoting> Ad alanındaki sınıflar, serileştirme aracılığıyla yansımayı dolaylı olarak kullanır.  
   
 ## <a name="runtime-types-in-reflection"></a>Yansımadaki Çalışma Zamanı Türleri  
- Yansıma, türleri, üyeleri, <xref:System.Type> parametreleri <xref:System.Reflection.MethodInfo>ve diğer kod varlıklarını göstermek için ve gibi sınıflar sağlar. Ancak, yansıma kullandığınızda, çoğu soyut olan (`MustInherit` Visual Basic) bu sınıflarla doğrudan çalışmanız gerekmez. Bunun yerine, ortak dil çalışma zamanı (CLR) tarafından sunulan türlerle çalışırsınız.  
+ Yansıma, türleri, üyeleri, <xref:System.Type> parametreleri <xref:System.Reflection.MethodInfo>ve diğer kod varlıklarını göstermek için ve gibi sınıflar sağlar. Ancak, yansıma kullandığınızda, en fazla soyut olan (`MustInherit` Visual Basic) bu sınıflarla doğrudan çalışmanız gerekmez. Bunun yerine, ortak dil çalışma zamanı (CLR) tarafından sunulan türlerle çalışırsınız.  
   
- Örneğin C# `typeof` , bir`GetType` `RuntimeType`nesneyialmakiçin işlecini (Visual Basic) kullandığınızda, nesne gerçekten bir olur. <xref:System.Type> `RuntimeType`öğesinden <xref:System.Type>türetilir ve tüm soyut yöntemlerin uygulamalarını sağlar.  
+ Örneğin C# `typeof` , bir`GetType` `RuntimeType`nesneyialmakiçin işlecini (Visual Basic) kullandığınızda, nesne gerçekten bir olur. <xref:System.Type> `RuntimeType`' dan <xref:System.Type> türetilir ve tüm soyut yöntemlerin uygulamalarını sağlar.  
   
  Bu çalışma zamanı sınıfları `internal` (`Friend` Visual Basic). Davranışları temel sınıf belgeleri tarafından açıklandığından, bunlar temel sınıflarından ayrı olarak açıklanmazlar.  
   
