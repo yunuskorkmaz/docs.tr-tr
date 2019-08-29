@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963598"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107270"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLı kullanarak ikili sınıflandırıcı otomatik oluşturma
 
@@ -19,11 +19,11 @@ ML.NET CLı kullanarak bir ML.NET modeli ve temel alınan C# kodu otomatik olara
 
 Bu öğreticide, aşağıdaki adımları kullanacaksınız:
 > [!div class="checklist"]
-> * Verilerinizi seçili makine öğrenimi görevi için hazırlayın
-> * CLı 'dan ' mlnet Auto-eğitme ' komutunu çalıştırın
-> * Kalite ölçümü sonuçlarını gözden geçirme
-> * Uygulamanızda modeli kullanmak C# için oluşturulan kodu anlayın
-> * Modeli eğitmek için C# kullanılan üretilen kodu keşfet
+> - Verilerinizi seçili makine öğrenimi görevi için hazırlayın
+> - CLı 'dan ' mlnet Auto-eğitme ' komutunu çalıştırın
+> - Kalite ölçümü sonuçlarını gözden geçirme
+> - Uygulamanızda modeli kullanmak C# için oluşturulan kodu anlayın
+> - Modeli eğitmek için C# kullanılan üretilen kodu keşfet
 
 > [!NOTE]
 > Bu konu, şu anda önizleme aşamasında olan ML.NET CLı aracına başvurur ve malzemeler değişebilir. Daha fazla bilgi için [ml.net giriş](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)sayfasını ziyaret edin.
@@ -259,11 +259,11 @@ Daha önemlisi, bu senaryo (Yaklaşım Analizi modeli) için de, aşağıdaki ö
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * Verilerinizi seçilen ML görevi için hazırlayın (çözülme sorunu)
-> * CLı aracında ' mlnet Auto-eğitme ' komutunu çalıştırın
-> * Kalite ölçümü sonuçlarını gözden geçirme
-> * Modeli çalıştırmak için C# oluşturulan kodu anlayın (Son Kullanıcı uygulamanızda kullanılacak kod)
-> * "En iyi C# kalite" modelini (öğrenme amaçları) eğitmek için kullanılan üretilen kodu keşfet
+> - Verilerinizi seçilen ML görevi için hazırlayın (çözülme sorunu)
+> - CLı aracında ' mlnet Auto-eğitme ' komutunu çalıştırın
+> - Kalite ölçümü sonuçlarını gözden geçirme
+> - Modeli çalıştırmak için C# oluşturulan kodu anlayın (Son Kullanıcı uygulamanızda kullanılacak kod)
+> - "En iyi C# kalite" modelini (öğrenme amaçları) eğitmek için kullanılan üretilen kodu keşfet
 
 > [!div class="nextstepaction"]
 > [ML.NET CLı ile model eğitimi otomatikleştirin](../automate-training-with-cli.md)

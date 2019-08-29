@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666475"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106947"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable uygulayan nesneleri kullanma
 
 Ortak dil çalışma zamanının atık toplayıcısı, yönetilen nesneler tarafından kullanılan belleği geri kazanır, ancak yönetilmeyen kaynakları kullanan türler, bu yönetilmeyen kaynaklara <xref:System.IDisposable> ayrılan belleğin geri kazanılmaya izin vermek için arabirimini uygular. Uygulayan <xref:System.IDisposable>bir nesneyi kullanmayı bitirdiğinizde <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> nesnenin uygulamasını çağırmanız gerekir. Bunu iki yoldan biriyle yapabilirsiniz:  
   
-* İfadesiyle veya VisualBasic`Using`ifadesiyle. C# `using`  
+- İfadesiyle veya VisualBasic`Using`ifadesiyle. C# `using`  
   
-* Bir `try/finally` blok uygulayarak.  
+- Bir `try/finally` blok uygulayarak.  
 
 ## <a name="the-using-statement"></a>Using deyimi
 
@@ -49,9 +49,9 @@ Deyim Ayrıca, iç içe geçmiş `using` deyimlere dahili olarak eşdeğer olan 
 
 Bir `try/finally` `using` deyime bir blok sarmalama yerine, `try/finally` bloğu doğrudan uygulamayı seçebilirsiniz. Bu sizin kişisel kodlama stiliniz olabilir veya bunu aşağıdaki nedenlerden biri dolayısıyla yapmak isteyebilirsiniz:  
   
-* Blokta`try` oluşan tüm `catch` özel durumları işlemek üzere bir blok eklemek için. Aksi takdirde, bir `using` `try/catch` blok yoksa `using` blok içinde oluşturulan özel durumlar olduğu gibi, ifadesiyle oluşturulan tüm özel durumlar da işlenmez.  
+- Blokta`try` oluşan tüm `catch` özel durumları işlemek üzere bir blok eklemek için. Aksi takdirde, bir `using` `try/catch` blok yoksa `using` blok içinde oluşturulan özel durumlar olduğu gibi, ifadesiyle oluşturulan tüm özel durumlar da işlenmez.  
   
-* Kapsamı, içinde bildirildiği bloğa yerel <xref:System.IDisposable> olmayan uygulayan bir nesne örneğini oluşturmak için.  
+- Kapsamı, içinde bildirildiği bloğa yerel <xref:System.IDisposable> olmayan uygulayan bir nesne örneğini oluşturmak için.  
   
 `try/catch/finally` Aşağıdaki örnek, bir <xref:System.IO.StreamReader> nesnenin örneğini oluşturma, kullanma ve atma, <xref:System.IO.StreamReader> Oluşturucu ve <xref:System.IO.StreamReader.ReadToEnd%2A> yöntemi tarafından oluşturulan özel durumları işlemek için bir blok kullanması dışında, önceki örneğe benzer. `finally` Bloktaki kodun, <xref:System.IDisposable> yöntemi<xref:System.IDisposable.Dispose%2A> çağırmadan önce değil `null` , uygulayan nesnenin olmadığını kontrol ettiğini unutmayın. Bunun başarısız olması, çalışma zamanında bir <xref:System.NullReferenceException> özel durum oluşmasına neden olabilir.  
   

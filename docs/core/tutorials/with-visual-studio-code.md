@@ -1,98 +1,98 @@
 ---
 title: C# ve Visual Studio Code kullanmaya başlama
-description: Oluşturma ve C# Visual Studio Code kullanarak ilk .NET Core uygulamanızı hata ayıklama hakkında bilgi edinin.
+description: Visual Studio Code C# kullanarak Ilk .NET Core uygulamanızı nasıl oluşturacağınızı ve hata ayıklacağınızı öğrenin.
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401847"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105100"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# ve Visual Studio Code kullanmaya başlama
 
-.NET core Windows, Linux ve macOS üzerinde çalışan uygulamalar oluşturmak için hızlı ve modüler bir platform sunar. Visual Studio Code C# uzantısı ile bir güçlü düzenleme deneyimi ile C# IntelliSense (Akıllı kod tamamlama) için tam destek ve hata ayıklama almak için kullanın.
+.NET Core, Windows, Linux ve macOS 'ta çalışan uygulamalar oluşturmaya yönelik hızlı ve modüler bir platform sağlar. IntelliSense (akıllı kod C# tamamlama) ve hata ayıklama için C# tam desteğe sahip güçlü bir düzen deneyimi almak üzere uzantıya sahip Visual Studio Code kullanın.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-1. Yükleme [Visual Studio Code'u](https://code.visualstudio.com/).
-2. Yükleme [.NET Core SDK'sı](https://www.microsoft.com/net/download/core).
-3. Yükleme [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) Visual Studio Code için. Visual Studio Code uzantılarını yükleme hakkında daha fazla bilgi için bkz. [VS Code uzantı Marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
+1. [Visual Studio Code](https://code.visualstudio.com/)'i yükler.
+2. [.NET Core SDK](https://www.microsoft.com/net/download/core)'i yükler.
+3. Visual Studio Code [ C# uzantısını](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) yükler. Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Merhaba Dünya
 
-.NET Core üzerinde basit bir "Merhaba Dünya" programıyla Haydi başlayalım:
+.NET Core üzerinde basit bir "Merhaba Dünya" programı kullanmaya başlayalım:
 
 1. Bir proje açın:
 
-    * Visual Studio Code'u açın.
-    * Soldaki menünün Gezgini simgesine tıklayın ve ardından **Klasör Aç**.
-    * Seçin **dosya** > **klasörünü Aç** olması ve C# projenize istediğiniz klasörü açmak için ana menüden **Klasör Seç**. Bizim örneğimizde, Projemizin için adlı bir klasör oluşturmakta olduğumuz *HelloWorld*.
+    - Visual Studio Code'u açın.
+    - Sol menüdeki gezgin simgesine ve ardından **klasörü aç**' a tıklayın.
+    - Ana menüden **Dosya** > **Aç klasörünü** seçerek C# projenizin içinde olmasını istediğiniz klasörü açın ve **Klasör Seç**' e tıklayın. Bizim örneğimizde *HelloWorld*adlı projemiz için bir klasör oluşturuluyoruz.
 
       ![Visual Studio Code klasörü aç](media/with-visual-studio-code/vs-code-open-folder.png)
 
-2. Bir C# projesi başlatın:
-    * Seçerek Visual Studio Code'dan tümleşik Terminalini açın **görünümü** > **tümleşik Terminalini** ana menüden.
-    * Terminal penceresinde şunu yazın `dotnet new console`.
-    * Bu komut, oluşturur bir `Program.cs` önceden yazılmış, adlı bir C# proje dosyası ile birlikte basit "Merhaba Dünya" programıyla klasörünüzdeki dosya `HelloWorld.csproj`.
+2. C# Projeyi Başlat:
+    - Ana menüden**Tümleşik Terminal** 'yi **görüntüle** > ' ye tıklayarak tümleşik terminalden Visual Studio Code açın.
+    - Terminal penceresinde, yazın `dotnet new console`.
+    - Bu komut, klasörünüzde `Program.cs` zaten yazılmış olan ve adında C# `HelloWorld.csproj`bir proje dosyası olan basit bir "Merhaba Dünya" programı olan bir dosya oluşturur.
 
-      ![Dotnet yeni komutu](media/with-visual-studio-code/dotnet-new-command.png)
+      ![DotNet yeni komutu](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Derleme varlıkları çözümlemeye:
+3. Derleme varlıklarını çözümleyin:
 
-    * İçin **.NET Core 1.x**, türü `dotnet restore`. Çalışan `dotnet restore` projenizi yapılandırmak için gereken gerekli .NET Core paketleri erişim sağlar.
+    - **.NET Core 1. x**için yazın `dotnet restore`. Çalışıyor `dotnet restore` , projenizi derlemek için gereken gerekli .NET Core paketlerine erişmenizi sağlar.
 
-      ![Dotnet restore komutu](media/with-visual-studio-code/dotnet-restore-command.png)
+      ![dotnet restore komutu](media/with-visual-studio-code/dotnet-restore-command.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-4. "Hello World" programı çalıştır:
+4. "Merhaba Dünya" programını çalıştırın:
 
-    * `dotnet run`yazın.
+    - `dotnet run`yazın.
 
-      ![Dotnet komutu çalıştırın](media/with-visual-studio-code/dotnet-run-command.png)
+      ![DotNet Run komutu](media/with-visual-studio-code/dotnet-run-command.png)
 
-Üzerinde ek kurulum Yardım almak için kısa bir video öğreticisini izleyebilirsiniz [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS), veya [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
+Ayrıca, [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [MacOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS)veya [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)hakkında daha fazla kurulum yardımı için kısa bir video öğreticisini izleyebilirsiniz.
 
 ## <a name="debug"></a>Hata ayıklama
 
-1. Açık *Program.cs* üzerine tıklayarak. Visual Studio Code'da bir C# dosyası açın ilk kez [OmniSharp](https://www.omnisharp.net/) düzenleyicide yükler.
+1. Üzerine tıklayarak *program.cs* açın. Visual Studio Code bir C# dosyayı ilk açışınızda, [Omnisharp](https://www.omnisharp.net/) , düzenleyicide yüklenir.
 
     ![Program.cs dosyasını açın](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code, oluşturmak ve uygulamanızda hata ayıklama için eksik varlıkları eklemek isteyecektir. Seçin **Evet**.
+2. Visual Studio Code, uygulamanızda derlemek ve hata ayıklamak için eksik varlıkları eklemenizi ister. **Evet**' i seçin.
 
-    ![Eksik varlıklar sor](media/with-visual-studio-code/missing-assets.png)
+    ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
 
-3. Hata ayıklama görünümünü açmak için sol taraftaki menüde hata ayıklama simgesine tıklayın.
+3. Hata ayıklama görünümünü açmak için sol taraftaki menüdeki hata ayıklama simgesine tıklayın.
 
-    ![Visual Studio Code'da hata ayıklama sekmesini açın](media/with-visual-studio-code/open-debug-tab.png)
+    ![Visual Studio Code hata ayıkla sekmesini açın](media/with-visual-studio-code/open-debug-tab.png)
 
-4. Yeşil ok Bölmenin üst kısmındaki bulun. Yanındaki açılan sahip olduğundan emin olun `.NET Core Launch (console)` seçili.
+4. Bölmenin en üstündeki yeşil oku bulun. Yanındaki açılan eklentinin `.NET Core Launch (console)` seçili olduğundan emin olun.
 
-    ![.NET Core Visual Studio Code'da seçme](media/with-visual-studio-code/select-net-core.png)
+    ![Visual Studio Code .NET Core seçme](media/with-visual-studio-code/select-net-core.png)
 
-5. Tıklayarak bir kesme noktası projenize ekleyin **Düzenleyici kenar**, sol tarafında 9. satıra yanındaki düzenleyicide satır numaralarını alanı veya metin imleç 9. satırına Düzenleyicisi ve tuşuna üzerine <kbd>F9</kbd>.
+5. Düzenleyicide satır numaralarının solundaki boşluk olan **Düzenleyici kenar boşluğuna**, 9. satırın yanında bir kesme noktası ekleyin veya metin imlecini düzenleyicide 9. satıra taşıyın ve <kbd>F9</kbd>tuşuna basın.
 
-    ![Bir kesme noktası ayarlama](media/with-visual-studio-code/set-breakpoint-vs-code.png)
+    ![Kesme noktası ayarlama](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. Hata ayıklamayı başlatmak için seçin <kbd>F5</kbd> veya yeşil oka. Önceki adımda ayarladığınız kesme noktasına ulaştığında hata ayıklayıcı, programınızın yürütülmesini durdurur.
-    * Hata ayıklarken, üst sol bölmede, yerel değişkenleri görüntüleyebilir veya hata ayıklama konsolunu kullanın.
+6. Hata ayıklamayı başlatmak için <kbd>F5</kbd> veya yeşil ok ' i seçin. Hata ayıklayıcı, önceki adımda ayarladığınız kesme noktasına ulaştığında programınızın yürütülmesini durduruyor.
+    - Hata ayıklarken, sol üst bölmedeki yerel değişkenlerinizi görüntüleyebilir veya hata ayıklama konsolunu kullanabilirsiniz.
 
-7. Hata ayıklamaya devam etmek için üstteki mavi oku seçin veya durdurmak için kırmızı kareyi üst seçin.
+7. Hata ayıklamaya devam etmek için üstteki mavi oku seçin ya da durdurmak için üstteki kırmızı kareyi seçin.
 
-    ![Çalıştırın ve Visual Studio Code'da Hata Ayıkla](media/with-visual-studio-code/run-debug-vs-code.png)
+    ![Visual Studio Code Çalıştır ve hata ayıkla](media/with-visual-studio-code/run-debug-vs-code.png)
 
 > [!TIP]
-> Daha fazla bilgi ve sorun giderme ipuçları, .NET Core ile OmniSharp Visual Studio code'da hata ayıklama için bkz: [.NET Core Hata Ayıklayıcısı ' ayarlamaya yönelik yönergeler](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+> .NET Core hata ayıklama hakkında daha fazla bilgi ve Visual Studio Code ile ilgili sorun giderme ipuçları için, [.NET Core hata ayıklayıcısını ayarlama yönergelerine](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)bakın.
 
 ## <a name="add-a-class"></a>Sınıf ekleme
 
-1. Yeni bir sınıf sağ tıklatın VSCode Gezgini'nde ekleyin ve seçmek için **yeni dosya**. Bu, VSCode içinde açtığınız klasöre yeni bir dosya ekler.
-2. Dosyanızın adı `MyClass.cs`. İle kaydetmelisiniz bir `.cs` uzantısı için bir csharp dosyası olarak tanınması için sonunda.
-3. İlk sınıfınıza oluşturmak için aşağıdaki kodu ekleyin. Buradan başvurabilmeniz için doğru ad alanını eklediğinizden emin olun, `Program.cs` dosya.
+1. Yeni bir sınıf eklemek için VSCode Gezgininde sağ tıklayıp **yeni dosya**' yı seçin. Bu, VSCode 'da açtığınız klasöre yeni bir dosya ekler.
+2. Dosyanızı `MyClass.cs`adlandırın. Bir CSharp dosyası olarak tanınabilmesi `.cs` için onu sonda bir uzantıyla kaydetmelisiniz.
+3. İlk sınıfınızı oluşturmak için aşağıdaki kodu ekleyin. `Program.cs` Dosyanıza başvurabilmeniz için doğru ad alanını eklediğinizden emin olun.
 
     ``` csharp
     using System;
@@ -109,7 +109,7 @@ ms.locfileid: "67401847"
     }
     ```
 
-4. Yeni sınıfınıza ana yönteminiz çağırmanıza `Program.cs` aşağıdaki kodu ekleyerek.
+4. Aşağıdaki kodu ekleyerek, içindeki `Program.cs` Main yönteinizden yeni sınıfınızı çağırın.
 
     ```csharp
     using System;
@@ -127,7 +127,7 @@ ms.locfileid: "67401847"
     }
     ```
 
-5. Yaptığınız değişiklikleri kaydedin ve programınızı tekrar çalıştırın. Eklenen dize ile yeni iletinin görüntülenmesi gerekir.
+5. Değişikliklerinizi kaydedin ve programınızı yeniden çalıştırın. Yeni ileti, eklenen dizeyle birlikte görünmelidir.
 
     ```console
     > dotnet run
@@ -136,11 +136,11 @@ ms.locfileid: "67401847"
 
 ## <a name="faq"></a>SSS
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Ben oluşturmak ve C# Visual Studio code'da hata ayıklama için gerekli varlıkları eksik. My hata ayıklayıcı "Yapılandırması yok." diyor.
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code derlemek ve hata ayıklamak C# için gerekli varlıkların yok. Hata ayıklayıcı "yapılandırma yok" diyor.
 
-Visual Studio kodu C# uzantısı oluşturun ve sizin için hata ayıklama için varlıklar oluşturabilir. Visual Studio Code bir C# projesi ilk kez açtığınızda, bu varlıkları oluşturmak isteyip istemediğinizi sorar. Varlık oluşturma olmadı sonra komut paletini açıp bu komutu yine de çalıştırabilirsiniz, (**Görüntüle > komut paleti**) yazarak "> .NET: Varlık oluşturma ve hata ayıklama için oluşturma". Bu seçeneğin seçilmesi gereken .vscode launch.json ve tasks.json yapılandırma dosyalarını oluşturur.
+Visual Studio Code C# uzantısı sizin için derlemek ve hata ayıklamak üzere varlık oluşturabilir. Visual Studio Code, bir C# projeyi ilk açtığınızda bu varlıkları oluşturmanız istenir. Daha sonra varlık oluşturmadıysanız, komut paletini açıp ( **> komut paletini görüntüle**) ve "> .net" yazarak bu komutu çalıştırmaya devam edebilirsiniz. Derleme ve hata ayıklama için varlık oluşturma ". Bunu seçtiğinizde, ihtiyacınız olan. vscode, Launch. JSON ve Tasks. JSON yapılandırma dosyaları oluşturulur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio Code ayarlama](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Visual Studio Code'da hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging)
+- [Visual Studio Code 'de hata ayıklama](https://code.visualstudio.com/Docs/editor/debugging)

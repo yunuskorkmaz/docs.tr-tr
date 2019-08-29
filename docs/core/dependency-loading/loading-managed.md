@@ -4,12 +4,12 @@ description: .NET Core 'da yönetilen derleme yükleme algoritması ayrıntılar
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: f368e2c20039f8679186a8d806850c9c92be8d3a
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: bf95cbd0eebed064f0198ae9b0f7a4288a938f8a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017337"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105367"
 ---
 # <a name="managed-assembly-loading-algorithm"></a>Yönetilen derleme yükleme algoritması
 
@@ -48,20 +48,20 @@ Aşağıdaki algoritma, çalışma zamanının yönetilen bir derlemeyi nasıl y
     - Yukarıdaki tabloya bakın.
 
 2. Yöntemler için, etkin <xref:System.Runtime.Loader.AssemblyLoadContext> derlemeyi yükler. `Load-by-name` Öncelik sırasına göre:
-    * `cache-by-name`Denetleniyor.
+    - `cache-by-name`Denetleniyor.
 
-    * <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
+    - <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
 
-    * Örneklerin önbelleği denetleniyor ve [yönetilen derleme varsayılan araştırma](default-probing.md#managed-assembly-default-probing) mantığı çalıştırılıyor. <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>
+    - Örneklerin önbelleği denetleniyor ve [yönetilen derleme varsayılan araştırma](default-probing.md#managed-assembly-default-probing) mantığı çalıştırılıyor. <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>
 
-    * Etkin assemblyloadcontext için olay oluşturma. <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType>
+    - Etkin assemblyloadcontext için olay oluşturma. <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType>
 
-    * <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturma.
+    - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturma.
 
 3. Diğer yük `active` <xref:System.Runtime.Loader.AssemblyLoadContext> türleri için, derlemeyi yükler. Öncelik sırasına göre:
-    * `cache-by-name`Denetleniyor.
+    - `cache-by-name`Denetleniyor.
 
-    * Belirtilen yoldan veya ham derleme nesnesinden yükleniyor.
+    - Belirtilen yoldan veya ham derleme nesnesinden yükleniyor.
 
 4. Her iki durumda da, bir derleme yeni yüklenmişse:
    - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Olay tetiklenir.

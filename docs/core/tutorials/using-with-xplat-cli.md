@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 88e9501a776a026a311c5002674c15acf2324f2b
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: a680a4b58927d915e887eea43a72983a5b349682
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868584"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105057"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Komut satırını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama
 
@@ -47,8 +47,8 @@ Hızlı bir yol açalım:
 
    Proje dosyası, bağımlılıkları geri yüklemek ve programı derlemek için gereken her şeyi belirtir.
 
-   * `OutputType` Etiket, bir konsol uygulaması başka bir deyişle bir yürütülebilir dosya oluşturduğumuz olduğunu belirtir.
-   * `TargetFramework` Etiket hangi .NET uygulamasının hedefleyebileceklerini belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeve belirtebilir ve tek bir işlemde bunların tümüne derleme yapabilirsiniz. Bu öğreticide yalnızca .NET Core 2,1 için derleme yapacağız.
+   - `OutputType` Etiket, bir konsol uygulaması başka bir deyişle bir yürütülebilir dosya oluşturduğumuz olduğunu belirtir.
+   - `TargetFramework` Etiket hangi .NET uygulamasının hedefleyebileceklerini belirtir. Gelişmiş bir senaryoda, birden çok hedef çerçeve belirtebilir ve tek bir işlemde bunların tümüne derleme yapabilirsiniz. Bu öğreticide yalnızca .NET Core 2,1 için derleme yapacağız.
 
    `Program.cs`:
 

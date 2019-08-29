@@ -1,42 +1,42 @@
 ---
-title: Null başvuru türleri için Tasarım
-description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
+title: Null yapılabilir başvuru türleriyle tasarım
+description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195835"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105849"
 ---
-# <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Tasarım amacınızla daha net bir şekilde boş değer atanabilir ve NULL olmayan bir başvuru türleri için express
+# <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Öğretici: Null yapılabilir ve null yapılamayan başvuru türleriyle tasarım amacınızı daha net bir şekilde ifade edin
 
-C#8 tanıtır **null başvuru türleri**, boş değer atanabilen değer türleri tamamlar değer türleri aynı şekilde hangi tamamlayıcı başvuru türleri. Olması için bir değişken bildirmek bir **boş değer atanabilir bir başvuru türü** ekleyerek bir `?` türü. Örneğin, `string?` temsil eden bir boş değer atanabilir `string`. Bu yeni türleri tasarım amacınızla daha net bir şekilde ifade etmek için kullanabilirsiniz: bazı değişkenler *her zaman bir değere sahip olmalıdır*, diğerleri *bir değer eksik*.
+C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Bir`?` değişkeni türüne ekleyerek **null atanabilir bir başvuru türü** olarak bildirirsiniz. Örneğin, `string?` null yapılabilen bir değeri `string`temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir.
 
-Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
+Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
-> * Boş değer atanabilir ve NULL olmayan bir başvuru türleri tasarımlarınızı dahil edilip derecelendirilir.
-> * Kod boyunca boş değer atanabilir bir başvuru türü denetimlerini etkinleştir.
-> * Burada bu tasarım kararları derleyici zorlar kod yazın.
-> * Kendi tasarımlarında null başvuru özelliğini kullanma
+> - Null yapılabilir ve null yapılamayan başvuru türlerini tasarımlarınız içine ekleyin
+> - Kodunuzun tamamında null yapılabilir başvuru türü denetimlerini etkinleştirin.
+> - Derleyicinin bu tasarım kararlarını zorladığı kodu yazın.
+> - Kendi tasarımlarınızın Nullable başvuru özelliğini kullanın
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici, kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0)sürümü ile kullanılabilir.
 
-Bu öğreticide, aşina olduğunuz varsayılır C# ve .NET, Visual Studio veya .NET Core CLI gibi.
+Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net hakkında bilgi sahibi olduğunuz varsayılır.
 
-## <a name="incorporate-nullable-reference-types-into-your-designs"></a>Null başvuru türleri tasarımlarınızı dahil edilip derecelendirilir.
+## <a name="incorporate-nullable-reference-types-into-your-designs"></a>Tasarımlarınız için null yapılabilir başvuru türleri ekleyin
 
-Bu öğreticide, bir anket çalışan modeller bir kitaplık oluşturacaksınız. Kod, gerçek hayatta kullanılan kavramları göstermek için null başvuru türleri hem atanamayan başvuru türleri kullanır. Anket sorularını hiçbir zaman null olabilir. Yanıtlayan bir sorusunun yanıtını değil tercih edebilirsiniz. Yanıtlar, bu durumda null olabilir.
+Bu öğreticide, bir anketi çalıştıran modellerle ilgili bir kitaplık oluşturacaksınız. Kod, gerçek dünya kavramlarını temsil etmek için hem Nullable başvuru türlerini hem de null değer atanamaz başvuru türlerini kullanır. Anket soruları hiçbir şekilde null olamaz. Bir yanıtlayanın soru cevaplanmayı tercih edemeyebilir. Bu durumda yanıtlar null olabilir.
 
-Bu amaç için bu örnek yazacaksınız kod ifade eder ve o hedefi derleyici zorlar.
+Bu örnek için yazdığınız kod, amacı ifade eder ve derleyici bu amacı zorunlu kılar.
 
-## <a name="create-the-application-and-enable-nullable-reference-types"></a>Uygulama oluşturma ve null başvuru türleri etkinleştirme
+## <a name="create-the-application-and-enable-nullable-reference-types"></a>Uygulamayı oluşturun ve null yapılabilir başvuru türlerini etkinleştirin
 
-Visual Studio veya komut satırı kullanarak yeni bir konsol uygulaması oluşturma `dotnet new console`. Uygulama adı `NullableIntroduction`. Uygulamayı oluşturduktan sonra etkinleştirmeniz gerekir C# 8 beta özellikleri. Açık `csproj` dosya ve ekleme bir `LangVersion` öğesine `PropertyGroup` öğesi. Katılmayı gerekir **null başvuru türleri** bile, özellik C# 8 projeleri. Bu özellik etkinleştirildikten sonra mevcut başvuru değişken bildirimlerini olur çünkü **atanamayan başvuru türleri**. Bu kararı uygun null denetimlerini varolan kodu nerede olmayabilir sorunları bulmanıza yardımcı olur, ancak özgün tasarım amacınızla doğru şekilde yansıtmaz. Özelliğini ayarlayarak açmak `Nullable` öğesine `enable`:
+Visual Studio 'da ya da kullanarak `dotnet new console`komut satırından yeni bir konsol uygulaması oluşturun. Uygulamayı `NullableIntroduction`adlandırın. Uygulamayı oluşturduktan sonra 8 Beta özelliklerini etkinleştirmeniz C# gerekir. Dosyasını açın ve `PropertyGroup` öğeye bir `LangVersion` öğe ekleyin. `csproj` 8 projesinde bile **null yapılabilir başvuru türleri** özelliğini kabul etmeniz gerekir. C# Bunun nedeni, özellik açık olduğunda, mevcut başvuru değişkeni bildirimleri **null yapılamayan başvuru türleri**haline gelir. Bu karar, mevcut kodun doğru null denetimleri olmayan sorunları bulmaya yardımcı olur, ancak özgün tasarım amacınızı doğru bir şekilde yansıtmayabilir. `Nullable` Öğesiniöğesiniöğesine`enable`ayarlayarak özelliğini açın:
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -44,42 +44,42 @@ Visual Studio veya komut satırı kullanarak yeni bir konsol uygulaması oluştu
 ```
 
 > [!IMPORTANT]
-> `Nullable` Öğe daha önce adlandırılmıştı `NullableContextOptions`. 16,2 p1, Visual Studio 2019 birlikte yeniden adlandırma verilir. .NET Core SDK'sı 3.0.100-preview5-011568 bu değişiklik yok. .NET Core CLI'yı kullanıyorsanız, kullanmanız gerekecektir `NullableContextOptions` kadar sonraki Önizleme kullanılabilir.
+> Öğe daha önce adlandırılmıştı `NullableContextOptions`. `Nullable` Yeniden adlandırma, Visual Studio 2019, 16,2-P1 ile birlikte gönderilir. 3\.0.100-preview5-011568 .NET Core SDK bu değişikliğe sahip değil. .NET Core CLI kullanıyorsanız, sonraki önizleme kullanılabilir olana kadar kullanmanız `NullableContextOptions` gerekir.
 
 > [!NOTE]
-> Zaman C# 8 (değil önizleme modunda), yayımlanan `Nullable` öğesi yeni proje şablonları tarafından eklenir. O zamana kadar el ile eklemeniz gerekir.
+> C# 8 serbest bırakıldığında (Önizleme modunda değil), `Nullable` bu öğe yeni proje şablonları tarafından eklenir. Bu şekilde, el ile eklemeniz gerekir.
 
-### <a name="design-the-types-for-the-application"></a>Uygulama türleri tasarımı
+### <a name="design-the-types-for-the-application"></a>Uygulama için türleri tasarlama
 
-Bir dizi sınıfları oluşturmak için bu anket uygulaması gerekir:
+Bu anket uygulaması için birkaç sınıf oluşturulması gerekir:
 
-- Soruların listesini modeller bir sınıf.
-- Anket için Görüşülen kişi listesini modeller bir sınıf.
-- Anket geçen bir kişiden yanıtlarını modeller bir sınıf.
+- Soruların listesini modelleyen bir sınıf.
+- Anket için iletişim kurulan kişilerin listesini modelleyen sınıf.
+- Anketi geçen bir kişiden yanıtları modelleyen sınıf.
 
-Bu tür üyeleri gereklidir ve hangi üyelerin isteğe bağlı ifade etmek için alamayan başvuru türleri ve her ikisi de boş değer atanabilir kullanımını hale getirir. Null başvuru türleri iletişim amacı açıkça tasarlama:
+Bu türler, hangi üyelerin gerekli olduğunu ve hangi üyelerin isteğe bağlı olduğunu ifade etmek için hem null yapılabilir hem de null yapılamayan başvuru türlerini kullanır. Null yapılabilir başvuru türleri, tasarım amacını açıkça iletir:
 
-- Anket parçası olan soruları hiçbir zaman null olabilir: Boş bir soru sormak için hiçbir mantıklı.
-- Katılımcıları hiçbir zaman null olabilir. Bu izleme, Görüşülen kişi, katılmak için reddedilen bile katılımcıları olmanız gerekir.
-- Soru için herhangi bir yanıt null olabilir. Katılımcıların bazı veya tüm soruları yanıtlamak reddedebilir.
+- Anketin parçası olan sorular hiçbir şekilde null olamaz: Boş bir soru sormasına hiçbir fikir vermez.
+- Yanıtlayanlar hiçbir şekilde null olamaz. Görüştüğünüz kişileri, hatta katılmayı reddeden yanıt verenleri izlemek isteyeceksiniz.
+- Bir soruya herhangi bir yanıt null olabilir. Yanıtlayanlar bazı veya tüm soruları yanıtlamak için reddedebilirler.
 
-Programlanmış varsa C#, diğer fırsatları atanamayan örnekleri bildirmek için eksik olabilir, null değerlere izin türlerine başvurmak bu nedenle alışkın olabilir:
+İçinde C#programlamış olmanız durumunda, null olamayan örnekleri bildirmek için diğer fırsatlara kaçırmış olabilecek null değerlere izin veren başvuru türlerine alışkın olabilirsiniz:
 
-- Sorular koleksiyonunu atanamayan olmalıdır.
-- Katılımcıların koleksiyonunu atanamayan olmalıdır.
+- Soruların toplanması null atanamaz olmalıdır.
+- Yanıtlayanlar koleksiyonu null atanamaz olmalıdır.
 
-Kod yazarken, başvurular için varsayılan olarak bir NULL olmayan bir başvuru türü, null başvuru özel durumu neden olabilecek yaygın hataları önler görürsünüz. Bu öğreticiden bir ders, değişkenleri bulunamadı veya null olabilir değil, hakkında kararlar yapılan ' dir. Dil sözdiziminin bu kararları express için sağlamadı. Artık bunu yapar.
+Kodu yazarken, başvurular için varsayılan olarak null yapılamayan bir başvuru türünün, null başvuru özel durumlarına yol açabilecek yaygın hataları önlediği görürsünüz. Bu öğreticiden bir derste, hangi değişkenlerin null olması gerektiğine dair kararlar vermezsiniz. Dil, bu kararları ifade etmek için sözdizimi sağlamadı. Şimdi.
 
-Oluşturacağınız uygulama aşağıdakileri yapar:
+Derlenecek uygulama aşağıdaki adımları kullanacaktır:
 
-1. Anket oluşturmak ve sorular ekleyin.
-1. Anket yanıt veren bir sözde rastgele dizi oluşturun.
-1. Hedef numara tamamlanan anket boyutuna erişene kadar yanıt verenler başvurun.
-1. Önemli istatistikleri anket yanıtları yazın.
+1. Bir anket oluşturun ve buna sorular ekleyin.
+1. Anket için sahte rastgele bir yanıt veren kümesi oluşturun.
+1. Tamamlanan anket boyutu hedef numarasına ulaşıncaya kadar yanıtlayanların iletişim kurun.
+1. Anket yanıtlarına önemli istatistikler yazın.
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Boş değer atanabilir ve atanamayan türleriyle anket oluşturun
+## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>Null yapılabilir ve null yapılamayan türler ile anketi oluşturun
 
-Anket, yazacaksınız ilk kod oluşturur. Anket sorusuna ve çalıştırma araştırma modeli için sınıflar yazacaksınız. Clearfit'in soru, yanıt biçimi göre ayırt edilen üç türü vardır: Sayı yanıtlar ve metin yanıtlar Evet/Hayır yanıtlar. Oluşturma bir `public` `SurveyQuestion` sınıfı:
+Yazacağınız ilk kod anketi oluşturur. Bir anket sorusu ve bir anket çalıştırması modellemek için sınıflar yazacaksınız. Anketiniz, yanıt biçimiyle ayırt edilen üç tür soru içerir: Evet/Hayır yanıt, sayı yanıtı ve metin yanıtı. `public` Sınıf oluşturun`SurveyQuestion` :
 
 ```csharp
 namespace NullableIntroduction
@@ -90,7 +90,7 @@ namespace NullableIntroduction
 }
 ```
 
-Derleyici, her başvuru türü değişken bildirimi olarak yorumlar bir **atanamayan** başvuru türü için boş değer atanabilir bir etkin bağlamında kod. Aşağıdaki kodda gösterildiği gibi Soru metni ve soru türü özellikleri ekleyerek, ilk uyarı görebilirsiniz:
+Derleyici, her başvuru türü değişken bildirimini, null yapılabilir etkin bağlamdaki kod için **null yapılamayan** bir başvuru türü olarak yorumlar. Aşağıdaki kodda gösterildiği gibi soru metni ve soru türü için özellikler ekleyerek ilk uyarılarınızı görebilirsiniz:
 
 ```csharp
 namespace NullableIntroduction
@@ -110,13 +110,13 @@ namespace NullableIntroduction
 }
 ```
 
-Henüz başlatılmamış olduğundan `QuestionText`, derleyici atanamayan bir özellik başlatılmamış bir uyarı verir. Tasarımınızı başlatmak üzere bir oluşturucu ekleyin için null olmayan, Soru metni gerektirir ve `QuestionType` değeri de. Tamamlanmış sınıf tanımını şu kod gibi görünür:
+Başlatılamamış `QuestionText`, derleyici null yapılamayan bir özelliğin başlatılmadığını belirten bir uyarı verir. Tasarımınız, soru metninin null olmasını gerektirir, bu nedenle onu ve `QuestionType` değeri başlatmak için bir Oluşturucu eklersiniz. Tamamlanmış sınıf tanımı aşağıdaki kod gibi görünür:
 
 [!code-csharp[DefineQuestion](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyQuestion.cs)]
 
-Oluşturucu eklemesini uyarı kaldırır. Derleyici Uyarı vermek değil oluşturucu bağımsız değişkeni de bir NULL olmayan bir başvuru türü olduğundan.
+Oluşturucuyu eklemek uyarıyı kaldırır. Oluşturucu bağımsız değişkeni aynı zamanda null atanamaz bir başvuru türüdür, bu nedenle derleyici hiçbir uyarı vermez.
 
-Ardından, oluşturun bir `public` adlı sınıfı `SurveyRun`. Bu sınıf bir listesini içeren `SurveyQuestion` nesneleri ve yöntemleri aşağıdaki kodda gösterildiği gibi ankete sorularınızı eklemek için:
+Ardından adlı `public` `SurveyRun`bir sınıf oluşturun. Bu sınıf, aşağıdaki kodda gösterildiği `SurveyQuestion` gibi ankete soru eklemek için nesnelerin ve yöntemlerin bir listesini içerir:
 
 ```csharp
 using System.Collections.Generic;
@@ -134,27 +134,27 @@ namespace NullableIntroduction
 }
 ```
 
-Önceki örneklerde olduğu gibi bir null olmayan değer Liste nesnesine başlatması gerekir veya derleyici bir uyarı verir. İkinci aşırı yüklemesi, null denetimi yoktur `AddQuestion` gerekli değildir çünkü: Bu değişken null yapılamaz bildirdikten. Değeri olamaz `null`.
+Daha önce olduğu gibi, liste nesnesini null olmayan bir değere başlatmalısınız veya derleyici bir uyarı yayınlar. İkinci aşırı yüklemesi `AddQuestion` için gerekli olmadıklarından null denetimleri yok: Bu değişkenin null değer atanamayan olduğunu bildirdiniz. Değeri olamaz `null`.
 
-Geçiş `Program.cs` düzenleyicinizde ve içeriklerini `Main` aşağıdaki kod satırlarını ile:
+Düzenleyicinizde `Program.cs` öğesine geçin ve `Main` içeriğini aşağıdaki kod satırlarıyla değiştirin:
 
 [!code-csharp[AddQuestions](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#AddQuestions)]
 
-Projenin tamamında boş değer atanabilir bir etkin bağlamında olduğundan, başarılı olduğunda uyarı alırsınız `null` herhangi bir yönteme bir değer atanamayan bir başvuru türü bekleniyor. Aşağıdaki satırı ekleyerek deneyin `Main`:
+Projenin tamamı null yapılabilir etkin bir bağlamda olduğundan, null olamayan bir başvuru türü bekleyen bir yönteme geçiş `null` yaptığınızda uyarılar alırsınız. Aşağıdaki satırı öğesine `Main`ekleyerek deneyin:
 
 ```csharp
 surveyRun.AddQuestion(QuestionType.Text, default);
 ```
 
-## <a name="create-respondents-and-get-answers-to-the-survey"></a>Katılımcıların oluşturun ve anket yanıtlarını alın
+## <a name="create-respondents-and-get-answers-to-the-survey"></a>Katılımcıları oluşturun ve ankete yanıt alın
 
-Ardından, anket yanıtlarını oluşturan kod yazın. Bu işlem, birkaç küçük görevleri içerir:
+Sonra, ankete yanıtlar üreten kodu yazın. Bu işlem birkaç küçük görevi kapsar:
 
-1. Katılımcı nesneleri oluşturan bir yöntem oluşturun. Bu kişiler anketini doldurmanız istenir temsil eder.
-1. Soruları yanıtlayan isteyen ve yanıtları toplamak veya bir katılımcı yanıt Alamadığınız belirtmeye benzetimini yapmak için mantıksal oluşturun.
-1. Yeterli katılımcıları anket ın kadar yineleyin.
+1. Yanıtlayanın nesneleri üreten bir yöntem oluşturun. Bu kişiler, anketi doldurduonları temsil eder.
+1. Bir yanıtlayanın sorularını sormasına, yanıtları toplamaya veya bir yanıtlayanın yanıt vermedi olduğunu benzetmek için mantığı oluşturun.
+1. Ankete yanıt veren yeterli sayıda yanıt verene kadar tekrarlayın.
 
-Bir anket yanıtı temsil eder, bu nedenle şimdi eklemek için bir sınıf gerekir. Boş değer atanabilir desteğini etkinleştirin. Ekleme bir `Id` özelliği ve bunu, aşağıdaki kodda gösterildiği gibi başlatan bir oluşturucu:
+Bir anket yanıtını temsil eden bir sınıfa ihtiyacınız vardır, bu nedenle şimdi ekleyin. Null yapılabilir desteğini etkinleştirin. Aşağıdaki kodda `Id` gösterildiği gibi, bir özellik ve onu başlatan bir Oluşturucu ekleyin:
 
 ```csharp
 namespace NullableIntroduction
@@ -168,61 +168,61 @@ namespace NullableIntroduction
 }
 ```
 
-Ardından, ekleme bir `static` yöntemi rastgele bir kimlik oluşturarak yeni katılımcı oluşturmak için:
+Sonra, rastgele bir `static` kimlik oluşturarak yeni katılımcılar oluşturmak için bir yöntem ekleyin:
 
 [!code-csharp[GenerateRespondents](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#Random)]
 
-Ana Bu sınıf için sorulara katılımcı anket yanıtları oluşturmak için sorumluluğundadır. Bu sorumluluk birkaç adım vardır:
+Bu sınıfın ana sorumluluğu, bir katılımcının yanıtlarını Anketteki sorulara üretmesidir. Bu sorumluluk birkaç adımdan daha sahiptir:
 
-1. Anket katılım isteyin. Kişi onayı değil eksik (veya boş) bir yanıt döndürür.
-1. Her bir soru sorun ve yanıt kaydedin. Her yanıt, ayrıca eksik (veya null) olabilir.
+1. Ankete katılım isteyin. Kişi onay vermezse, eksik (veya null) bir yanıt döndürün.
+1. Her soruyu sorun ve yanıtı kaydedin. Her cevap da eksik olabilir (veya null).
 
-Aşağıdaki kodu ekleyin, `SurveyResponse` sınıfı:
+Sınıfınıza `SurveyResponse` aşağıdaki kodu ekleyin:
 
 [!code-csharp[AnswerSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#AnswerSurvey)]
 
-Anket yanıtları için depolama bir `Dictionary<int, string>?`, gösteren null olabilir. Yeni dil özelliği tasarım hedefi, derleyici ve daha sonra Kodunuzu okuyan herkese bildirmek için kullanmakta olduğunuz. Şimdiye kadar başvuru değilse `surveyResponses` null değeri ilk denetlemeden bir derleyici uyarısı alırsınız. Bir uyarı elde etmezsiniz `AnswerSurvey` yöntemi derleyici çünkü `surveyResponses` değişkeni, bir null olmayan değer yukarıdaki ayarlanmıştır.
+Anket yanıtlarının depolaması, null olabileceğini belirten bir `Dictionary<int, string>?`' dır. Tasarım amacınızı, her ikisi de derleyiciye ve kodunuzu daha sonra okuyan herkese bildirmek için yeni dil özelliğini kullanıyorsunuz. İlk olarak null değeri `surveyResponses` denetlemeden başvuru yaptıysanız bir derleyici uyarısı alırsınız. Derleyici, değişkenin, `AnswerSurvey` `surveyResponses` yukarıda null olmayan bir değere ayarlandığını belirleyebildiğinden, yöntemde uyarı almanız gerekmez.
 
-Kullanarak `null` için yanıt eksik null başvuru türleriyle çalışmak için bir anahtar noktası vurgular: tümünü kaldırmak için amacınız değilse `null` programınızı değerleri. Bunun yerine, amacınız, kod tasarımınızı amacı ifade Yaz emin olmaktır. Eksik değerleri, kodunuzda ifade etmek için gerekli bir kavramdır. `null` Değeri, bu eksik değerleri ifade etmek için açık bir yoludur. Tüm kaldırmaya çalışırken `null` olmadan bu eksik değerleri ifade etmek için başka bir şekilde tanımlamak için yalnızca müşteri adaylarını değerleri `null`.
+Eksik `null` yanıtlar için kullanmak, null yapılabilir başvuru türleriyle çalışmak için bir anahtar noktası vurgular: Amacınız tüm `null` değerleri programınızdan kaldırmıyor. Bunun yerine amacınız, yazdığınız kodun tasarımınızın amacını ifade etmek için gereklidir. Eksik değerler kodunuzda ifade etmek için gerekli bir kavramdır. Bu `null` değer, eksik değerleri ifade etmenin açık bir yoludur. Tüm `null` değerleri kaldırmaya çalışmak, yalnızca bu eksik değerleri olmadan `null`ifade etmek için başka bir yol tanımlamaya yönlendirir.
 
-Ardından, yazmanız gereken `PerformSurvey` yönteminde `SurveyRun` sınıfı. Aşağıdaki kodu ekleyin `SurveyRun` sınıfı:
+Daha sonra, `PerformSurvey` yöntemi `SurveyRun` sınıfına yazmanız gerekir. `SurveyRun` Sınıfına aşağıdaki kodu ekleyin:
 
 [!code-csharp[PerformSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#PerformSurvey)]
 
-Yeniden Buraya, kendi seçtiğiniz bir boş değer atanabilir `List<SurveyResponse>?` yanıt null gösterir. Bu anketi tüm katılımcılara henüz verilen taşınmadığından gösterir. Yeterli onaylı kadar katılımcıların eklenen dikkat edin.
+Burada, null yapılabilir `List<SurveyResponse>?` seçiminiz, yanıtın null olabileceğini gösterir. Bu, anketin henüz herhangi bir yanıtlayanlara verilmediğini belirtir. Yanıt verenlerin yeterli olana kadar eklendiğine dikkat edin.
 
-Anket çalıştırmak için son adımı sonunda anket gerçekleştirmek için bir çağrı eklemektir `Main` yöntemi:
+Anketi çalıştırmanın son adımı, `Main` yöntemin sonunda anketi gerçekleştirmek için bir çağrı eklemektir:
 
 [!code-csharp[RunSurvey](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#RunSurvey)]
 
-## <a name="examine-survey-responses"></a>Anket yanıtlarını inceleyin
+## <a name="examine-survey-responses"></a>Anket yanıtlarını İnceleme
 
-Son adım, anket sonuçlarını görüntülemektir. Yazdığınız sınıfların çoğu için kod ekleyeceksiniz. Bu kod, boş değer atanabilir ve NULL olmayan bir başvuru türleri ayrım değerini gösterir. Aşağıdaki iki ifade gövdeli üyeler için ekleyerek başlangıç `SurveyResponse` sınıfı:
+Son adım, anket sonuçlarını görüntülemektir. Yazdığınız sınıfların çoğuna kod ekleyeceksiniz. Bu kod, null yapılabilir ve null yapılamayan başvuru türlerini ayırt etme değerini gösterir. Aşağıdaki iki Expression-Bodied member `SurveyResponse` öğesini ekleyerek başlatın:
 
 [!code-csharp[ReportResponses](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyResponse.cs#SurveyStatus)]
 
-Çünkü `surveyResponses` bir NULL olmayan bir başvuru türü seri durumdan başvurmadan önce hiçbir denetim gereklidir. `Answer` Yöntemi null olmayan bir dize döndürür, bu nedenle, aşırı yüklemesini seçin `GetValueOrDefault` , varsayılan değer için ikinci bir bağımsız değişken alır.
+`surveyResponses` Null olamayan bir başvuru türü olduğundan, kendisine başvurulmadan önce hiçbir denetim gerekli değildir. Yöntemi null yapılamayan bir dize döndürür, `GetValueOrDefault` bu nedenle varsayılan değer için ikinci bir bağımsız değişken alan aşırı yüklemesini seçin. `Answer`
 
-Ardından, bu üç ifade gövdeli üyeler ekleyin `SurveyRun` sınıfı:
+Ardından, bu üç Expression-Bodied üyelerini `SurveyRun` sınıfına ekleyin:
 
 [!code-csharp[ReportResults](../../../samples/csharp/NullableIntroduction/NullableIntroduction/SurveyRun.cs#RunReport)]
 
-`AllParticipants` Üye dikkate almak gerekir, `respondents` değişkeni null olabilir, ancak dönüş değeri null olamaz. Bu ifade kaldırarak değiştirirseniz `??` ve yöntem döndürebilir izleyen boş dizi derleyici sizi uyarır `null` ve dönüş imzası-boş değer atanabilir olmayan türü döndürür.
+Üye, `respondents` değişkenin null olabileceğini, ancak dönüş değerinin null olduğunu dikkate almalıdır. `AllParticipants` Bu ifadeyi `??` ve aşağıdaki boş diziyi kaldırarak değiştirirseniz, derleyici yöntemin döndürebileceğini `null` ve dönüş imzası null yapılamayan bir tür döndürdüğünü uyarır.
 
-Son olarak, pencerenin şu döngüyü ekleyin `Main` yöntemi:
+Son olarak, aşağıdaki döngüyü `Main` yönteminin altına ekleyin:
 
 [!code-csharp[DisplaySurveyResults](../../../samples/csharp/NullableIntroduction/NullableIntroduction/Program.cs#WriteAnswers)]
 
-Herhangi bir ihtiyaç duymazsanız `null` tüm NULL olmayan bir başvuru türleri döndürmeleri, temel alınan arabirimler tasarladığınız olduğundan bu kod, denetler.
+Bu kodda herhangi bir `null` denetim yapmanız gerekmez, çünkü hepsi null yapılamayan başvuru türleri döndürecek şekilde temel arabirimleri tasarlamış oldunuz.
 
-## <a name="get-the-code"></a>Kodu alma
+## <a name="get-the-code"></a>Kodu alın
 
-Öğreticinin tamamlanan kodu alabilirsiniz bizim [örnekleri](https://github.com/dotnet/samples) depoda [csharp/NullableIntroduction](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) klasör.
+Örnek deponuzdan, [CSharp/Nullabletanıtım](https://github.com/dotnet/samples/tree/master/csharp/NullableIntroduction) klasöründe bulunan [örnek](https://github.com/dotnet/samples) depomuza yönelik kodu alabilirsiniz.
 
-Boş değer atanabilir ve NULL olmayan bir başvuru türleri arasında tür bildirimleri değiştirerek denemeler yapın. Yanlışlıkla başvuru olmayan emin olmak için farklı uyarıları oluşturan nasıl bkz bir `null`.
+Null atanabilir ve null yapılamayan başvuru türleri arasında tür bildirimleri değiştirerek deneyin. Bunun, yanlışlıkla `null`başvurmayabilmeniz için farklı uyarılar üretmesinin nasıl yapıldığını öğrenin.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Null başvuru türleri kullanmak için mevcut bir uygulamayı geçirme tarafından daha fazla bilgi edinin:
+Mevcut bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde geçirerek daha fazla bilgi edinin:
 > [!div class="nextstepaction"]
-> [Null başvuru türleri kullanmak için uygulama yükseltme](upgrade-to-nullable-references.md)
+> [Bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde yükseltme](upgrade-to-nullable-references.md)

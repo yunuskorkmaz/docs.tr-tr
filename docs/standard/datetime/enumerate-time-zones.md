@@ -11,66 +11,66 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afc3b57659dd6719f72cefba8a6d2f1abe08c0d0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586570"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106645"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>Nasıl yapılır: Bir bilgisayarda mevcut saat dilimlerini numaralandırma
 
-Başarıyla atanan bir saat dilimi ile çalışma, saat dilimi bilgilerini sistemi için kullanılabilir olmasını gerektirir. Windows XP ve Windows Vista işletim sistemleri, bu bilgileri kayıt defterinde depolar. Ancak, dünyanın her yerinde mevcut saat dilimlerini toplam sayısı büyük olsa da, kayıt defteri bunları yalnızca bir alt kümesi hakkında bilgi içerir. Ayrıca, kayıt defterini içerikleri hem kasıtlı hem de yanlışlıkla değişikliğe tabi olduğu bir dinamik yapısıdır. Sonuç olarak, bir uygulama her zaman belirli bir saat dilimini tanımlanan ve mevcut bir sistemde olduğunu varsayamazsınız. Saat dilimi bilgileri uygulamaları kullanan birçok uygulama için ilk adımı, gerekli saat dilimlerini yerel sistemde kullanılabilir olup olmadığını belirlemek için veya kullanıcı seçmek için saat dilimlerinin listesini vermek için ' dir. Bu, bir uygulamanın yerel sistemde tanımlanan saat dilimlerini numaralandırma gerektirir.
+Belirlenen saat dilimiyle başarıyla çalışarak, bu saat dilimi hakkındaki bilgilerin sistem tarafından kullanılabilir olmasını gerektirir. Windows XP ve Windows Vista işletim sistemleri bu bilgileri kayıt defterine depolar. Ancak, dünyanın tamamında bulunan toplam saat dilimi sayısı büyük olsa da, kayıt defteri yalnızca bir alt kümesiyle ilgili bilgiler içerir. Ayrıca, kayıt defteri içeriği hem bilinçli hem de yanlışlıkla değişikliğe tabi olan dinamik bir yapıdır. Sonuç olarak, bir uygulama belirli bir saat diliminin bir sistemde tanımlandığını ve kullanılabildiğini her zaman varsayamaz. Saat dilimi bilgileri uygulamalarını kullanan birçok uygulama için ilk adım, gerekli saat dilimlerinin yerel sistemde kullanılabilir olup olmadığını belirlemektir veya kullanıcıya seçilecek saat dilimlerinin bir listesini vermektir. Bu, bir uygulamanın yerel bir sistemde tanımlanan saat dilimlerini numaralandırmasını gerektirir.
 
 > [!NOTE]
-> Bir uygulamanın yerel bir sistemde tanımlı değil belirli bir saat dilimi olup olmamasına dayanıyorsa, uygulama tarafından seri hale getirme ve saat dilimi bilgilerini seri durumdan çıkarılırken varlığını emin olabilirsiniz. Uygulama kullanıcısı seçebilmeniz için liste denetimi saat dilimini sonra eklenebilir. Ayrıntılar için bkz [nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) ve [nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+> Bir uygulama, yerel bir sistemde tanımlanmayan belirli bir saat dilimi varlığını kullanıyorsa, uygulama, saat dilimi hakkındaki bilgileri serileştirerek ve serisini kaldırarak varlığını garanti edebilir. Daha sonra saat dilimi, uygulama kullanıcısının onu seçmesini sağlamak için bir liste denetimine eklenebilir. Ayrıntılar için bkz [. nasıl yapılır: Zaman dilimlerini gömülü bir kaynağa](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) kaydedin ve [şunları yapın: Katıştırılmış bir kaynaktan](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)saat dilimlerini geri yükleyin.
 
-### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Yerel sistemde mevcut saat dilimlerini numaralandırma
+### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>Yerel sistemde mevcut olan saat dilimlerini listelemek için
 
-1. Çağrı <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemi. Genel yöntem döndürür <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> koleksiyonunu <xref:System.TimeZoneInfo> nesneleri. Koleksiyon girişlere göre sıralanır kendi <xref:System.TimeZoneInfo.DisplayName%2A> özelliği. Örneğin:
+1. Çağrı <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemi. Yöntemi, genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> bir <xref:System.TimeZoneInfo> nesne koleksiyonu döndürür. Koleksiyondaki girişler, özelliklerine göre <xref:System.TimeZoneInfo.DisplayName%2A> sıralanır. Örneğin:
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
 
-2. Tek tek listeleme <xref:System.TimeZoneInfo> kullanarak koleksiyonundaki nesneleri bir `foreach` döngüde (C#) veya bir `For Each`...`Next` (Visual Basic'te) döngü ve her bir nesneye gerekli herhangi bir işlem gerçekleştirin. Örneğin, aşağıdaki kod numaralandırır <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> koleksiyonunu <xref:System.TimeZoneInfo> 1. adım, döndürülen nesneleri ve her bir saat dilimi konsolunda görünen adını listeler.
+2. Bir <xref:System.TimeZoneInfo> C# `For Each`döngüsü (ın) veya a... kullanarak koleksiyondaki tek tek nesneleri numaralandırın. `foreach``Next` Loop (Visual Basic) ve her bir nesne üzerinde gerekli işlemleri gerçekleştirin. Örneğin, aşağıdaki kod adım 1 ' de <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> döndürülen <xref:System.TimeZoneInfo> nesnelerin koleksiyonunu numaralandırır ve konsolundaki her bir saat diliminin görünen adını listeler.
 
    [!code-csharp[System.TimeZone2.Concepts#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#12)]
    [!code-vb[System.TimeZone2.Concepts#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#12)]
 
-### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Yerel sistemdeki saat dilimlerinin listesini içeren kullanıcı sunmak için
+### <a name="to-present-the-user-with-a-list-of-time-zones-present-on-the-local-system"></a>Kullanıcıya yerel sistemde mevcut saat dilimlerinin bir listesini sunmak için
 
-1. Çağrı <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemi. Genel yöntem döndürür <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> koleksiyonunu <xref:System.TimeZoneInfo> nesneleri.
+1. Çağrı <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> yöntemi. Yöntemi, genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> bir <xref:System.TimeZoneInfo> nesne koleksiyonu döndürür.
 
-2. Adım 1'de döndürülen koleksiyon atama `DataSource` özelliği bir Windows forms veya ASP.NET denetim listesi.
+2. Adım 1 `DataSource` ' de döndürülen koleksiyonu bir Windows Forms veya ASP.net List denetiminin özelliğine atayın.
 
-3. Alma <xref:System.TimeZoneInfo> kullanıcının seçtiği bir nesne.
+3. Kullanıcının seçtiği <xref:System.TimeZoneInfo> nesneyi alın.
 
-Örneğin, bir Windows uygulaması için bir gösterim sağlar.
+Örnek, bir Windows uygulaması için bir çizim sağlar.
 
 ## <a name="example"></a>Örnek
 
-Örneğin, bir liste kutusunda bir sistemde tanımlanan saat dilimlerini görüntüleyen bir Windows uygulaması başlatır. Bu örnek, ardından değerini içeren bir iletişim kutusu görüntüler <xref:System.TimeZoneInfo.DisplayName%2A> kullanıcı tarafından seçilen saat dilimi nesnesinin özelliği.
+Örnek, bir liste kutusunda bir sistemde tanımlanan saat dilimlerini görüntüleyen bir Windows uygulaması başlatır. Örnek daha sonra Kullanıcı tarafından seçilen zaman dilimi nesnesinin <xref:System.TimeZoneInfo.DisplayName%2A> özelliğinin değerini içeren bir iletişim kutusu görüntüler.
 
 [!code-csharp[System.TimeZone2.Concepts#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#2)]
 [!code-vb[System.TimeZone2.Concepts#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#2)]
 
-En çok, denetimleri listesi (gibi <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> veya <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> denetimi), nesne değişkenleri koleksiyonu atamanıza olanak sağlamak kendi `DataSource` özelliği o koleksiyon uygulayan sürece <xref:System.Collections.IEnumerable> arabirimi. (Genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> sınıfı bunu yapar.) Koleksiyondaki tek bir nesneyi görüntülemek için bu nesnenin denetim çağrıları `ToString` nesneyi göstermek için kullanılan dize ayıklamak için yöntemi. Durumunda, <xref:System.TimeZoneInfo> nesneleri `ToString` yöntemi döndürür <xref:System.TimeZoneInfo> nesnenin görünen ad (değeri kendi <xref:System.TimeZoneInfo.DisplayName%2A> özelliği).
+Çoğu <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> liste denetimleri (veya <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> denetimi gibi), koleksiyon <xref:System.Collections.IEnumerable> arabirimini uyguladığı sürece, özelliklerine bir nesne değişkenleri `DataSource` koleksiyonu atamanıza olanak tanır. (Genel <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> sınıf bunu yapar.) Koleksiyonda tek bir nesneyi göstermek için denetim, nesneyi temsil etmek için kullanılan dizeyi ayıklamak `ToString` için bu nesnenin yöntemini çağırır. <xref:System.TimeZoneInfo> Nesneler söz konusu olduğunda `ToString` , yöntemi <xref:System.TimeZoneInfo> nesnenin görünen adını ( <xref:System.TimeZoneInfo.DisplayName%2A> özelliğinin değeri) döndürür.
 
 > [!NOTE]
-> Bir nesnenin liste denetimleri çağırmak için `ToString` yöntemi, bir koleksiyonu atayabilirsiniz <xref:System.TimeZoneInfo> nesneler denetime sahip görünen her nesne için anlamlı bir ad ve alma denetimi <xref:System.TimeZoneInfo> kullanıcının seçtiği nesne. Bu koleksiyondaki her nesne için bir dize ayıklayın, dize denetimin hangi sırayla atanır bir koleksiyonla ilişkilendirin gereğini ortadan kaldırıyor `DataSource` özelliği, kullanıcının seçtiği dizesi alma ve sonra nesneyi ayıklamak için şu dizeyi kullanın BT'nin açıklar. 
+> Liste denetimleri bir nesnenin `ToString` yöntemini çağırdığından, denetime bir nesne <xref:System.TimeZoneInfo> koleksiyonu atayabilir, denetimin her <xref:System.TimeZoneInfo> nesne için anlamlı bir ad görüntülemesini ve kullanıcının seçtiği nesneyi alabilmenizi sağlayabilirsiniz. Bu, koleksiyondaki her nesne için bir dize ayıklama gereksinimini ortadan kaldırır, dizeyi denetimin `DataSource` özelliğine atanan bir koleksiyona atar, kullanıcının seçtiği dizeyi alır ve sonra nesneyi ayıklamak için bu dizeyi kullanır burada açıklanmıştır. 
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
-Bu örnek gerektirir:
+Bu örnek şunları gerektirir:
 
-* Şu ad alanlarından alınan olduğunu:
+- Aşağıdaki ad alanları içeri aktarılmalıdır:
 
-  <xref:System> (C# kodu)
+  <xref:System>( C# kodda)
 
   <xref:System.Collections.ObjectModel>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-- [Nasıl yapılır: Saat dilimlerini katıştırılmış kaynağa kaydetme](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
+- [Nasıl yapılır: Zaman dilimlerini gömülü bir kaynağa Kaydet](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)
 - [Nasıl yapılır: Katıştırılmış bir kaynaktan saat dilimlerini geri yükleme](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)

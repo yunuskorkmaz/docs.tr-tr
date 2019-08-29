@@ -1,33 +1,33 @@
 ---
-title: Yerel birlikte çalışabilirliği - .NET
-description: . NET'te yerel bileşenleriyle arabirim öğrenin.
+title: Yerel birlikte çalışabilirlik-.NET
+description: .NET ' te yerel bileşenlerle arabirim oluşturmayı öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062717"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106813"
 ---
 # <a name="native-interoperability"></a>Native ile birlikte çalışma
 
-Aşağıdaki makaleler, "yerel birlikte çalışabilirlik".NET yapmanın çeşitli yollarını göstermektedir.
+Aşağıdaki makalelerde .NET içinde "yerel birlikte çalışabilirlik" yapmanın çeşitli yolları gösterilmektedir.
 
-Neden yerel kod içine çağırmak istiyorsunuz birkaç nedeni vardır:
+Yerel koda çağrı yapmak istemenizin birkaç nedeni vardır:
 
-* İşletim sistemleri, büyük hacimli yönetilen sınıf kitaplıklarında bulunmayan API'leri ile gelir. Bu senaryo için birinci bir örnek, donanım veya işletim sistemi yönetim işlevlerine erişimi olacaktır.
-* C stili Abı'ler (yerel Abı'ler) oluşturabilir veya diğer bileşenlerle aracılığıyla gösterilir, Java kodu gibi iletişim kurarak [Java yerel arabirimi (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) veya yerel bir bileşeni oluşturabilecek herhangi bir yönetilen dil.
-* Windows üzerinde çoğu, Microsoft Office suite gibi yüklenen yazılım programlarını temsil eder ve bunları otomatik hale getirmek ya da kullandığınız geliştiricilerin izin veren COM bileşenlerini kaydeder. Bu ayrıca yerel birlikte çalışabilirliği gerektirir.
+- İşletim sistemleri, yönetilen sınıf kitaplıklarında bulunmayan büyük bir API hacimiyle gelir. Bu senaryo için bir ana örnek, donanım veya işletim sistemi yönetim işlevlerine erişim sağlar.
+- [Java Native Interface (JNı)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) aracılığıyla veya yerel bir bileşen oluşturabilecek başka bir yönetilen dilde sunulan Java kodu gibi C stili ABR 'leri (yerel absıs) oluşturan veya üreten diğer bileşenlerle iletişim kurma.
+- Windows 'da, Microsoft Office Suite gibi yüklü yazılımların çoğu, programlarını temsil eden COM bileşenlerini kaydettirir ve geliştiricilerin bunları otomatikleştirebilmeleri veya onları kullanmasına izin verir. Bu, yerel birlikte çalışabilirlik de gerektirir.
 
-Önceki listede tüm olası durumlar ve hangi geliştirici istediğiniz/gibi/yerel bileşenleriyle arabirim oluşturmak için gerekecek senaryoları ele alınmamıştır. .NET sınıf kitaplığı, yerel birlikte çalışabilirliği destek adil birkaç Konsolu desteği ve işleme, dosya sistemi erişimini ve diğerleri gibi kendi API uygulamak için örneği için kullanır. Ancak, gerekirse bir seçenek olduğuna dikkat edin önemlidir.
+Önceki listede, geliştiricinin yerel bileşenlerle arabirim istediğini/beğenmek istediği tüm olası durumlar ve senaryolar ele alınmaktadır. .NET sınıf kitaplığı, örneğin, konsol desteği ve işleme, dosya sistemi erişimi ve diğerleri gibi API 'Lerinin bir dengeli sayısını uygulamak için yerel birlikte çalışabilirlik desteğini kullanır. Ancak, gerekirse bir seçenek olduğuna dikkat edin.
 
 > [!NOTE]
-> Bu bölümdeki örnekler çoğu için üç tüm desteklenen platformlar için .NET Core (Windows, Linux ve macOS) sunulur. Ancak, bazı kısa ve yalnızca tanım örnekler için Windows dosya adları ve uzantıları (diğer bir deyişle, kitaplıkları için "dll") kullanan tek bir örnek gösterilir. Bu özelliklerden Linux veya Macos'ta kullanılabilir değil, yalnızca bu çok kolaylık sağlamak için yapılmıştır gelmez.
+> Bu bölümdeki örneklerin çoğu, .NET Core için desteklenen üç platformda (Windows, Linux ve macOS) sunulacak. Ancak bazı Short ve tanım örneklerinde, Windows dosya adları ve uzantıları kullanan tek bir örnek gösterilir (yani, kitaplıklar için "dll"). Bu, bu özelliklerin Linux veya macOS üzerinde kullanılamadığı anlamına gelmez, ancak kolay bir sake için yapılmıştı.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Platform Çağırma (P/Invoke)](pinvoke.md)
-- [Sıralama türü](type-marshaling.md)
-- [Yerel birlikte çalışabilirliği en iyi uygulamalar](best-practices.md)
+- [Platform çağırma (P/Invoke)](pinvoke.md)
+- [Tür sıralaması](type-marshaling.md)
+- [Yerel birlikte çalışabilirlik en iyi uygulamaları](best-practices.md)

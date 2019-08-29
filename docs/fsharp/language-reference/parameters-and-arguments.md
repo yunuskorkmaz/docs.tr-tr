@@ -2,12 +2,12 @@
 title: Parametreler ve Bağımsız Değişkenler
 description: Parametreleri tanımlama F# ve işlevlere, yöntemlere ve özelliklere bağımsız değişkenleri geçirme için dil desteği hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627308"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106599"
 ---
 # <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler
 
@@ -163,9 +163,9 @@ Bu durumda, derleyici bir uyarı oluşturur ve iki özniteliği de tamamen yoksa
 
 Bir F# değerin başvuruya göre geçirilmesi, yönetilen işaretçi türleri olan [ByRef 'ler](byrefs.md)içerir. Kullanılacak tür ile ilgili kılavuz aşağıdaki gibidir:
 
-* Yalnızca `inref<'T>` işaretçiyi okumanız gerekiyorsa kullanın.
-* Yalnızca `outref<'T>` işaretçiye yazmanız gerekiyorsa kullanın.
-* Hem `byref<'T>` okuma hem de işaretçiye yazma gerekiyorsa kullanın.
+- Yalnızca `inref<'T>` işaretçiyi okumanız gerekiyorsa kullanın.
+- Yalnızca `outref<'T>` işaretçiye yazmanız gerekiyorsa kullanın.
+- Hem `byref<'T>` okuma hem de işaretçiye yazma gerekiyorsa kullanın.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

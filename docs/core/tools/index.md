@@ -1,107 +1,107 @@
 ---
-title: .NET core komut satırı arabirimi (CLI) araçları
-description: .NET Core komut satırı arabirimi (CLI) araçları ve özellikleri genel bakış.
+title: .NET Core komut satırı arabirimi (CLı) araçları
+description: .NET Core komut satırı arabirimi (CLı) araçları ve özelliklerine genel bakış.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 20a083f3e7496521243bebd6585a48c8a562c548
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569525"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105039"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET core komut satırı arabirimi (CLI) araçlarını
+# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core komut satırı arabirimi (CLı) araçları
 
-.NET Core komut satırı arabirimi (CLI), .NET uygulamaları geliştirmek için yeni bir platformlar arası zincirinin ' dir. Tümleşik geliştirme ortamlarından (IDE'ler), düzenleyiciler ve derleme düzenleyicileri tuttuğunuzda gibi CLI hangi üst düzey araçları temel altyapıdır.
+.NET Core komut satırı arabirimi (CLı), .NET uygulamaları geliştirmeye yönelik yeni bir platformlar arası araç zinciridir. CLı, tümleşik geliştirme ortamları (IDN 'ler), düzenleyiciler ve derleme yöneticileri gibi daha üst düzey araçların geri kalanı olan bir temelidir.
 
 ## <a name="installation"></a>Yükleme
 
-Yerel yükleyicilerden kullanabilir veya yükleme Kabuk betikleri kullanın:
+Yerel yükleyicileri kullanın veya yükleme kabuğu betikleri kullanın:
 
-* Yerel yükleyicilerden öncelikle geliştiricinin makinelerde kullanılır ve desteklenen kullanımı her platformun yerel mekanizması, örneğin, Ubuntu veya MSI paketleri Windows üzerinde DEB paketleri yükleyin. Bu yükleyicilerden yükleyin ve geliştirici tarafından anında kullanmak için ortamı yapılandırmak ancak makinedeki yönetici ayrıcalıkları gerektirir. Yükleme yönergeleri görüntüleyebileceğiniz [.NET Core Yükleme Kılavuzu](https://aka.ms/dotnetcoregs).
-* Kabuk betikleri, öncelikle yapı sunucuları veya yönetici ayrıcalıklarına gerek kalmadan araçları yüklemek istediğiniz zaman ayarlamak için kullanılır. Yükleme betikleri el ile yüklenmesi gereken makine Önkoşulları Yükleme yok. Daha fazla bilgi için [yükleme komut dosyası başvuru konusu](dotnet-install-script.md). Sürekli Tümleştirme (CI) yapılandırma sunucunuzda CLI'yı ayarlama hakkında daha fazla bilgi için bkz: [kullanarak .NET Core SDK'sı ve araçları, sürekli tümleştirme (CI)](using-ci-with-cli.md).
+- Yerel yükleyiciler öncelikle geliştiricinin makinelerinde kullanılır ve desteklenen her platformun yerel yükleme mekanizmasını kullanır. Örneğin, Windows üzerinde Ubuntu veya MSI paketlerinde DEB paketleri. Bu yükleyiciler, geliştirici tarafından anında kullanılmak üzere ortamı yükler ve yapılandırır, ancak makinede yönetici ayrıcalıkları gerektirir. Yükleme yönergelerini [.NET Core yükleme kılavuzunda](https://aka.ms/dotnetcoregs)görüntüleyebilirsiniz.
+- Kabuk betikleri öncelikle yapı sunucularını ayarlamak için veya araçları yönetici ayrıcalıkları olmadan yüklemek istediğinizde kullanılır. Betikleri yükleme, el ile yüklenmesi gereken makineye önkoşulları yüklemez. Daha fazla bilgi için bkz. [komut dosyası başvurusunu install konusu](dotnet-install-script.md). Sürekli tümleştirme (CI) derleme sunucunuzda CLı 'yı ayarlama hakkında daha fazla bilgi için bkz. [.NET Core SDK ve araçları sürekli tümleştirme (CI) Içinde kullanma](using-ci-with-cli.md).
 
-Varsayılan olarak, CLI yan yana (SxS) şekilde yüklediği CLI araçları birden çok sürümünü tek bir makinede bulunabilir. Birden çok sürümünün yüklü olduğu bir makinede kullanılan hangi sürümünü belirleme bölümünde daha ayrıntılı olarak açıklanmıştır [sürücü](#driver) bölümü.
+Varsayılan olarak, CLı yan yana (SxS) bir şekilde yüklenir. bu nedenle, CLı araçlarının birden çok sürümü tek bir makinede birlikte bulunabilir. Birden çok sürümün yüklü olduğu bir makinede hangi sürümün kullanıldığını belirleme, [sürücü](#driver) bölümünde daha ayrıntılı olarak açıklanmıştır.
 
-## <a name="cli-commands"></a>CLI komutları
+## <a name="cli-commands"></a>CLı komutları
 
-Aşağıdaki komutlar, varsayılan olarak yüklenir:
+Aşağıdaki komutlar varsayılan olarak yüklenir:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-**Temel komutlar**
-
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [Derleme](dotnet-build.md)
-* [Yayımlama](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [Test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [Geçirme](dotnet-migrate.md)
-* [Temizleme](dotnet-clean.md)
-* [sln](dotnet-sln.md)
-* [Yardım](dotnet-help.md)
-* [Store](dotnet-store.md)
-
-**Proje değişikliği komutları**
-
-* [Paket Ekle](dotnet-add-package.md)
-* [Başvuru ekleme](dotnet-add-reference.md)
-* [Paketi Kaldır](dotnet-remove-package.md)
-* [başvuru Kaldır](dotnet-remove-reference.md)
-* [Liste başvurusu](dotnet-list-reference.md)
-
-**Gelişmiş komutları**
-
-* [nuget Sil](dotnet-nuget-delete.md)
-* [nuget yerel öğeler](dotnet-nuget-locals.md)
-* [nuget anında iletme](dotnet-nuget-push.md)
-* [MSBuild](dotnet-msbuild.md)
-* [DotNet yükleme betiği](dotnet-install-script.md)
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 **Temel komutlar**
 
-* [new](dotnet-new.md)
-* [restore](dotnet-restore.md)
-* [Derleme](dotnet-build.md)
-* [Yayımlama](dotnet-publish.md)
-* [run](dotnet-run.md)
-* [Test](dotnet-test.md)
-* [vstest](dotnet-vstest.md)
-* [pack](dotnet-pack.md)
-* [Geçirme](dotnet-migrate.md)
-* [Temizleme](dotnet-clean.md)
-* [sln](dotnet-sln.md)
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [derlemeyi](dotnet-build.md)
+- [yayınlamanız](dotnet-publish.md)
+- [çalışmaz](dotnet-run.md)
+- [sınamanız](dotnet-test.md)
+- [VSTest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [geçiremezsiniz](dotnet-migrate.md)
+- [temizlenemedi](dotnet-clean.md)
+- [sln](dotnet-sln.md)
+- [Yardım](dotnet-help.md)
+- [saklayabilir](dotnet-store.md)
 
-**Proje değişikliği komutları**
+**Proje değiştirme komutları**
 
-* [Paket Ekle](dotnet-add-package.md)
-* [Başvuru ekleme](dotnet-add-reference.md)
-* [Paketi Kaldır](dotnet-remove-package.md)
-* [başvuru Kaldır](dotnet-remove-reference.md)
-* [Liste başvurusu](dotnet-list-reference.md)
+- [Paket ekle](dotnet-add-package.md)
+- [Başvuru Ekle](dotnet-add-reference.md)
+- [paketi kaldır](dotnet-remove-package.md)
+- [başvuruyu kaldır](dotnet-remove-reference.md)
+- [liste başvurusu](dotnet-list-reference.md)
 
-**Gelişmiş komutları**
+**Gelişmiş komutlar**
 
-* [nuget Sil](dotnet-nuget-delete.md)
-* [nuget yerel öğeler](dotnet-nuget-locals.md)
-* [nuget anında iletme](dotnet-nuget-push.md)
-* [MSBuild](dotnet-msbuild.md)
-* [DotNet yükleme betiği](dotnet-install-script.md)
+- [NuGet silme](dotnet-nuget-delete.md)
+- [NuGet Yereller](dotnet-nuget-locals.md)
+- [NuGet gönderim](dotnet-nuget-push.md)
+- [MSBUILD](dotnet-msbuild.md)
+- [DotNet install betiği](dotnet-install-script.md)
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
+
+**Temel komutlar**
+
+- [new](dotnet-new.md)
+- [restore](dotnet-restore.md)
+- [derlemeyi](dotnet-build.md)
+- [yayınlamanız](dotnet-publish.md)
+- [çalışmaz](dotnet-run.md)
+- [sınamanız](dotnet-test.md)
+- [VSTest](dotnet-vstest.md)
+- [pack](dotnet-pack.md)
+- [geçiremezsiniz](dotnet-migrate.md)
+- [temizlenemedi](dotnet-clean.md)
+- [sln](dotnet-sln.md)
+
+**Proje değiştirme komutları**
+
+- [Paket ekle](dotnet-add-package.md)
+- [Başvuru Ekle](dotnet-add-reference.md)
+- [paketi kaldır](dotnet-remove-package.md)
+- [başvuruyu kaldır](dotnet-remove-reference.md)
+- [liste başvurusu](dotnet-list-reference.md)
+
+**Gelişmiş komutlar**
+
+- [NuGet silme](dotnet-nuget-delete.md)
+- [NuGet Yereller](dotnet-nuget-locals.md)
+- [NuGet gönderim](dotnet-nuget-push.md)
+- [MSBUILD](dotnet-msbuild.md)
+- [DotNet install betiği](dotnet-install-script.md)
 
 ---
 
-CLI'yı projeleriniz için ek araçlar belirtmenizi sağlar bir genişletilebilirlik modeli devralır. Daha fazla bilgi için [.NET Core CLI genişletilebilirlik modeli](extensibility.md) konu.
+CLı, projeleriniz için ek araçlar belirtmenize olanak tanıyan bir genişletilebilirlik modeli benimsemektedir. Daha fazla bilgi için [.NET Core CLI genişletilebilirlik modeli](extensibility.md) konusuna bakın.
 
 ## <a name="command-structure"></a>Komut yapısı
 
-CLI komut yapısını oluşur [("dotnet") sürücü](#driver), [komutu](#command)ve büyük olasılıkla komut [bağımsız değişkenleri](#arguments) ve [seçenekleri](#options). Adlı bir dizinden çalıştırıldığında Göster yeni bir konsol uygulaması oluşturma ve aşağıdaki komutları komut satırından çalıştırma gibi çoğu CLI işlemi bu düzende gördüğünüz *my_app_3.sft*:
+CLı komut yapısı, [sürücüden ("DotNet")](#driver), [komuttan](#command)ve muhtemelen komut [bağımsız değişkenlerinden](#arguments) ve [seçeneklerden](#options)oluşur. Bu kalıbı, yeni bir konsol uygulaması oluşturma ve bunu komut satırından çalıştırma gibi, *my_app*adlı bir dizinden yürütüldüğünde gösterildiği gıbı birçok CLI işlemi içinde görürsünüz:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 ```console
 dotnet new console
@@ -109,7 +109,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -122,35 +122,35 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>Sürücü
 
-Sürücü adlı [dotnet](dotnet.md) ve iki sorumlulukları, ya da çalışan bir [framework bağımlı uygulama](../deploying/index.md) veya bir komut yürütülüyor. 
+Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir uygulama](../deploying/index.md) çalıştırarak ya da bir komut yürüten iki sorumluluklara sahiptir. 
 
-Framework bağımlı uygulamayı çalıştırın, sonra sürücüsü, örneğin, uygulamayı belirtmek için `dotnet /path/to/my_app.dll`. Uygulamanın DLL bulunduğu klasörün komutu yürütülürken, yalnızca yürütme `dotnet my_app.dll`. Belirli bir .NET Core çalışma zamanı sürümünü kullanmak istiyorsanız, kullanın `--fx-version <VERSION>` seçeneği (bkz [dotnet komut](dotnet.md) başvuru).
+Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll`. Komutu, uygulamanın DLL 'sinin bulunduğu klasörden yürütürken yalnızca yürütün `dotnet my_app.dll`. .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
 
-Sürücü komut sağladığında `dotnet.exe` CLI komut yürütme işlemi başlatır. Örneğin:
+Sürücüye bir komut sağlarsanız, `dotnet.exe` CLI komutu yürütme işlemini başlatır. Örneğin:
 
 ```bash
 > dotnet build
 ```
 
-İlk olarak, sürücü kullanmak için SDK'sı sürümünü belirler. Yoksa hiçbir ['global.json'](global-json.md), kullanılabilir SDK'sının en son sürümü kullanılır. Bu bir önizleme veya kararlı bir sürüm makinede en son nedir bağlı olarak, olabilir.  SDK sürümü belirlendikten sonra komutu yürütür.
+İlk olarak, sürücü kullanılacak SDK sürümünü belirler. [' Global. json '](global-json.md)yoksa SDK 'nın kullanılabilir en son sürümü kullanılır. Bu, makinede en son nelerin olduğuna bağlı olarak önizleme veya kararlı bir sürüm olabilir.  SDK sürümü belirlendikten sonra, komutunu yürütür.
 
 ### <a name="command"></a>Komut
 
-Komutu, bir eylem gerçekleştirir. Örneğin, `dotnet build` kod oluşturur. `dotnet publish` kod yayımlar. Konsolunu kullanarak bir uygulama olarak komutlar uygulanan bir `dotnet {command}` kuralı.
+Komut bir eylem gerçekleştirir. Örneğin, `dotnet build` derleme kodu. `dotnet publish`kodu yayımlar. Komutlar, bir `dotnet {command}` kural kullanılarak konsol uygulaması olarak uygulanır.
 
 ### <a name="arguments"></a>Arguments
 
-Çağrılan komut bağımsız değişkenleri komut satırında geçirdiğiniz bağımsız değişkenler. Yürüttüğünüzde örneğin `dotnet publish my_app.csproj`, `my_app.csproj` bağımsız değişken geçirilir ve yayımlanacak projeyi belirtir `publish` komutu.
+Komut satırında geçirdiğiniz bağımsız değişkenler çağrılan komutun bağımsız değişkenlerdir. Örneğin `dotnet publish my_app.csproj` `publish` , çalıştırdığınızda bağımsız değişkeni yayımlanacak projeyi belirtir ve komutuna geçirilir. `my_app.csproj`
 
 ### <a name="options"></a>Seçenekler
 
-Komut satırında geçirdiğiniz çağrılan komut seçenekleri seçeneklerdir. Yürüttüğünüzde örneğin `dotnet publish --output /build_output`, `--output` seçeneği ve değerini geçirilir `publish` komutu.
+Komut satırında geçirdiğiniz seçenekler çağrılan komuta yönelik seçeneklerdir. Örneğin `dotnet publish --output /build_output` `publish` , çalıştırdığınızda seçeneği ve değeri komutuna geçirilir. `--output`
 
-## <a name="migration-from-projectjson"></a>Project.json geçiş
+## <a name="migration-from-projectjson"></a>Project. JSON 'dan geçiş
 
-Preview 2'de üretmek için kullanılan *project.json*-tabanlı projeler başvurun [dotnet geçirme](dotnet-migrate.md) projenizi MSBuild'e geçirme hakkında bilgi için konu / *.csproj*yayın araçları ile kullanmak için. .NET Core için Önizleme 2 araçlarının sürümden önce ya da el ile oluşturulan projeleri kılavuzunda aşağıdaki proje güncelleştirmesi [: .NET Core CLI (project.json) DNX'ten geçiş](../migration/from-dnx.md) ve ardından `dotnet migrate` veya doğrudan yükseltme projelerinizi.
+*Project. JSON*tabanlı projeler oluşturmak için Preview 2 araçları 'nı kullandıysanız, sürüm araçları ile kullanmak üzere projenizi MSBuild/ *. csproj* 'a geçirme hakkında bilgi edinmek için [DotNet geçiş](dotnet-migrate.md) konusuna başvurun. Preview 2 araçları 'nın yayınlanmasından önce oluşturulan .NET Core projeleri için, [DNX 'ten .NET Core CLI (Project. JSON) ' den geçiş](../migration/from-dnx.md) yapma bölümündeki kılavuzdan sonra projeyi el ile güncelleştirin ve ardından projelerinizi kullanın `dotnet migrate` veya doğrudan yükseltin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DotNet/CLI GitHub deposu](https://github.com/dotnet/cli/)
-- [.NET core Yükleme Kılavuzu](https://aka.ms/dotnetcoregs)
+- [DotNet/CLı GitHub deposu](https://github.com/dotnet/cli/)
+- [.NET Core yükleme kılavuzu](https://aka.ms/dotnetcoregs)

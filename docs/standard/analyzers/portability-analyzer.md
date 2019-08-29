@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433945"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107510"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -17,11 +17,11 @@ Kitaplıklarınızın çok platformlu desteklemesini sağlamak istiyor musunuz? 
 
 ## <a name="common-targets"></a>Ortak hedefler
 
-* [.NET Core](../../core/index.md): Modüler bir tasarıma sahiptir, yan yana ve hedefleri platformlar arası senaryolar kullanır. Yan yana, diğer uygulamaları bozmadan yeni .NET Core sürümlerini benimsemenizi sağlar. Amacınız, uygulamanızın platformlar arası destek ile bağlantı noktası olması durumunda, bu önerilen hedeftir. 
-* . [Net standart](../../standard/net-standard.md): Tüm .NET uygulamalarında bulunan .NET Standard API 'Leri içerir. Amacınız, kitaplığınızı tüm .NET tarafından desteklenen platformlarda çalıştırmak istiyorsanız, bu önerilen hedeftir.  
-* [ASP.NET Core](/aspnet/core): .NET Core üzerinde oluşturulmuş modern bir Web çerçevesi. Amacınız, Web uygulamanızın birden çok platformu desteklemek üzere .NET Core 'a bağlantı noktası olması durumunda önerilen hedeftir.
-* .NET Core + [Platform uzantıları](../../core/porting/windows-compat-pack.md): , Kullanılabilir .NET Framework teknolojilerin çoğunu sağlayan Windows Uyumluluk Paketi 'ne ek olarak .NET Core API 'Lerini de içerir. Bu, uygulamanızın Windows 'da .NET Framework .NET Core 'a taşıma için önerilen bir hedeftir.
-* .NET Standard + [Platform uzantıları](../../core/porting/windows-compat-pack.md): , Kullanılabilir .NET Framework birçok teknolojiyi sağlayan Windows Uyumluluk Paketi 'ne ek olarak .NET Standard API 'Leri içerir. Bu, kitaplığınızın .NET Framework Windows üzerinde .NET Core 'a taşıma için önerilen bir hedeftir.
+- [.NET Core](../../core/index.md): Modüler bir tasarıma sahiptir, yan yana ve hedefleri platformlar arası senaryolar kullanır. Yan yana, diğer uygulamaları bozmadan yeni .NET Core sürümlerini benimsemenizi sağlar. Amacınız, uygulamanızın platformlar arası destek ile bağlantı noktası olması durumunda, bu önerilen hedeftir. 
+- . [Net standart](../../standard/net-standard.md): Tüm .NET uygulamalarında bulunan .NET Standard API 'Leri içerir. Amacınız, kitaplığınızı tüm .NET tarafından desteklenen platformlarda çalıştırmak istiyorsanız, bu önerilen hedeftir.  
+- [ASP.NET Core](/aspnet/core): .NET Core üzerinde oluşturulmuş modern bir Web çerçevesi. Amacınız, Web uygulamanızın birden çok platformu desteklemek üzere .NET Core 'a bağlantı noktası olması durumunda önerilen hedeftir.
+- .NET Core + [Platform uzantıları](../../core/porting/windows-compat-pack.md): , Kullanılabilir .NET Framework teknolojilerin çoğunu sağlayan Windows Uyumluluk Paketi 'ne ek olarak .NET Core API 'Lerini de içerir. Bu, uygulamanızın Windows 'da .NET Framework .NET Core 'a taşıma için önerilen bir hedeftir.
+- .NET Standard + [Platform uzantıları](../../core/porting/windows-compat-pack.md): , Kullanılabilir .NET Framework birçok teknolojiyi sağlayan Windows Uyumluluk Paketi 'ne ek olarak .NET Standard API 'Leri içerir. Bu, kitaplığınızın .NET Framework Windows üzerinde .NET Core 'a taşıma için önerilen bir hedeftir.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi 'ni kullanma
 
@@ -38,9 +38,9 @@ Visual Studio 'daki tüm projenizi çözümlemek için **Çözüm Gezgini** ' de
 
 [Apiport konsol uygulamasını](https://aka.ms/apiportdownload)da kullanabilirsiniz. 
 
-* Geçerli dizini çözümlemek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f .`
-* Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* Daha `ApiPort.exe -?` fazla yardım almak için çalıştırın
+- Geçerli dizini çözümlemek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f .`
+- Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Daha `ApiPort.exe -?` fazla yardım almak için çalıştırın
 
 Sahip olduğunuz ve bağlantı noktası yapmak istediğiniz tüm ilgili exe ve DLL dosyalarını dahil etmeniz ve uygulamanızın bağlı olduğu dosyaları dışlayamazsınız, ancak bağlantı noktası kullanamazsınız. Bu, size en uygun taşınabilirlik raporu sağlar.  
 

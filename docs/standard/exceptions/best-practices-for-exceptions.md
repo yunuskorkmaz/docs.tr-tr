@@ -1,5 +1,5 @@
 ---
-title: Özel durum - .NET için en iyi uygulamalar
+title: Özel durumlar için en iyi uygulamalar-.NET
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,92 +9,92 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: d212ba9beaa0ccc229204045c5a8174381440dfc
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e12a83d3932d11baa086310ab0be23fb431459fc
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860160"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107191"
 ---
-# <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi yöntemler
+# <a name="best-practices-for-exceptions"></a>Özel durumlar için en iyi uygulamalar
 
-İyi tasarlanmış bir uygulama, özel durumları ve hataları işleyerek uygulama kilitlenmelerini önler. Bu bölümde, özel durumlar oluşturma ve işleme için en iyi uygulamalar açıklanmaktadır.
+İyi tasarlanmış bir uygulama, özel durumları ve hataları işleyerek uygulama kilitlenmelerini önler. Bu bölümde, özel durumları işlemeye ve oluşturmaya yönelik en iyi uygulamalar açıklanmaktadır.
 
-## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Hataları kurtarmak veya kaynakları serbest bırakmak için try/catch/finally blokları kullanın
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Hataları veya yayın kaynaklarını kurtarmak için try/catch/finally bloklarını kullanın
 
-Kullanım `try` / `catch` etrafında büyük olasılıkla bir özel durum oluşturabilir kod blokları ***ve*** kodunuzu bu özel durumdan kurtarabilirsiniz. İçinde `catch` engeller, her zaman en çok türetilen sipariş durumlardan az türetilmiş için. Tüm özel durumları türetilmesi <xref:System.Exception>. Daha fazla türetilmiş özel durumları temel özel durum sınıfı için bir catch yan tümcesi öncesinde bir catch yan tümcesi tarafından işlenmesini değil. Kodunuz bir özel durumdan kurtarılamazsa, o özel durumu hiçbir öğeyi yakalamayın. Daha fazla çağrı yığınına mümkünse kurtarmak için yöntemleri sağlar.
+Büyük `try` olasılıkla özel durum oluşturabilen ve kodunuzun bu özel durumdan kurtulabildiği kod etrafındaki blokları kullanın. / `catch` `catch` Bloklar ' da, her zaman en çok türetilen özel durumu en düşük türetilmiş öğesine Sırala. Tüm özel durumlar kaynağından <xref:System.Exception>türetilir. Daha önce türetilmiş özel durumlar, bir temel özel durum sınıfı için catch yan tümcesinin önünde bulunan bir catch yan tümcesi tarafından işlenmez. Kodunuz bir özel durumdan kurtarılamadığında bu özel durumu yakalamayın. Mümkünse, çağrı yığınını daha sonra kurtarmak için yöntemleri etkinleştirin.
 
-Temiz ile ayrılan kaynakları `using` deyimleri veya `finally` engeller. Tercih ettiğiniz `using` özel durumlar oluşturulduğunda otomatik olarak kaynakları temizlemek için deyimleri. Kullanım `finally` uygulamayıp kaynakları temizlemek için blokları <xref:System.IDisposable>. Kod bir `finally` yan tümcesi bile özel durumlar oluşturulduğunda neredeyse her zaman yürütülür.
+`using` Deyimlerle`finally` ya da bloklarla ayrılan kaynakları temizleyin. Özel `using` durumlar oluştuğunda kaynakları otomatik olarak temizlemek için deyimleri tercih et. `finally` Uygulamayan<xref:System.IDisposable>kaynakları temizlemek için blokları kullanın. Bir `finally` yan tümcedeki kod, özel durumlar oluştuğunda bile neredeyse her zaman yürütülür.
 
-## <a name="handle-common-conditions-without-throwing-exceptions"></a>Genel koşullar, özel durumları atma olmadan işleme
+## <a name="handle-common-conditions-without-throwing-exceptions"></a>Özel durumlar oluşturmadan ortak koşulları işleme
 
-Oluşur ancak bir özel durum harekete, bunları özel durum kaçınır şekilde işlemesi göz önünde bulundurun olasılığı koşulları. Örneğin, zaten kapalı bir bağlantıyı kapatmak çalışırsanız elde edecekleriniz bir `InvalidOperationException`. Bunu kullanarak önlemek bir `if` kapatmak denemeden önce bağlantı durumu denetlemek için bildirimi.
+Meydana gelen ancak özel durum tetikleyebilen koşullar için, özel durumu önlemek için bunları işlemeyi göz önünde bulundurun. Örneğin, zaten kapatılmış olan bir bağlantıyı kapatmaya çalışırsanız, bir `InvalidOperationException`ile karşılaşırsınız. Bunu kapatmayı denemeden önce bağlantı durumunu denetlemek `if` için bir ifade kullanarak bunu önleyebilirsiniz.
 
 [!code-cpp[Conceptual.Exception.Handling#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#2)]
 [!code-csharp[Conceptual.Exception.Handling#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
 [!code-vb[Conceptual.Exception.Handling#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
-Kapatmadan önce bağlantı durumunu denetleme, yakalayabilir `InvalidOperationException` özel durum.
+Kapatmadan önce bağlantı durumunu denetmezseniz, `InvalidOperationException` özel durumu yakalayabilirsiniz.
 
 [!code-cpp[Conceptual.Exception.Handling#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
 [!code-csharp[Conceptual.Exception.Handling#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
 [!code-vb[Conceptual.Exception.Handling#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#3)]
 
-Seçmek için yöntem olayın meydana gelmesine ne sıklıkta beklediğinize bağlıdır.
+Seçme yöntemi, olayın ne sıklıkta gerçekleşmesini beklediğinize bağlıdır.
 
 - Olay çok sık oluşmuyorsa, yani gerçekten olağanüstüyse ve bir hatayı gösteriyorsa (beklenmeyen bir dosya sonu gibi), özel durum işlemeyi kullanın. Özel durum işleme kullandığınızda, normal koşullarda daha az kod çalıştırılır.
 
-- Olay düzenli olarak gerçekleşiyorsa ve normal yürütmenin bir parçası olarak kabul, kodda hata koşulları için kontrol edin. Sık karşılaşılan hata koşulları için iade ettiğinizde, özel durumlar önlemek için daha az kod yürütülür.
+- Olay düzenli olarak gerçekleşdiğinde ve normal yürütmenin parçası olarak kabul edildiğinde koddaki hata koşullarını denetleyin. Yaygın hata koşullarını denetlediğinizde, özel durumların önüne düşeceğinden daha az kod yürütülür.
 
-## <a name="design-classes-so-that-exceptions-can-be-avoided"></a>Sınıflar, özel durumlar önlenebilir olacağı şekilde tasarlayın
+## <a name="design-classes-so-that-exceptions-can-be-avoided"></a>Özel durumların önlenebilir olması için sınıfları tasarlayın
 
-Bir sınıfı yöntemleri sağlayabilir veya bir özel durum çağrı yapmak önlemek etkinleştirdiğiniz özellikler tetikleyecektir. Örneğin, bir <xref:System.IO.FileStream> sınıfı, dosyanın sonuna ulaşılıp ulaşılmadığını belirlemeye yardımcı yöntemler sağlar. Bu, dosyanın sonundan okuduğunuzda oluşturulan özel durum önlemek için kullanılabilir. Aşağıdaki örnek, bir özel durum tetiklemeden dosya sonuna kadar okumak gösterilmektedir.
+Bir sınıf, özel durum tetikleyebilecek bir çağrı yapmaktan kaçınmanızı sağlayan yöntemler veya özellikler sağlayabilir. Örneğin, bir <xref:System.IO.FileStream> sınıf, dosyanın sonuna ulaşılıp ulaşılmadığını belirlemenize yardımcı olan yöntemler sağlar. Bunlar, dosyanın sonundan sonra okuduğunuzda oluşturulan özel durumu önlemek için kullanılabilir. Aşağıdaki örnek, bir özel durum tetiklemeden bir dosyanın sonuna nasıl okunacağını gösterir.
 
 [!code-cpp[Conceptual.Exception.Handling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]
 
-Özel durumlar önlemek için başka bir boş (veya varsayılan) bir özel durum oluşturmaktansa çok yaygın hata durumları döndürülecek yoludur. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Null (veya varsayılan) bu tür durumlarda döndürerek, uygulama performansı üzerindeki etkisini en aza indirin.
+Özel durumların önlenmesi için başka bir yol da, özel durum oluşturmak yerine son derece yaygın hata durumları için null (veya varsayılan) döndürmaktır. Çok yaygın olan bir hata durumu, denetiminin normal akışı olarak kabul edilebilir. Bu durumlarda null (veya varsayılan) döndürerek, bir uygulamaya yönelik performans etkisini en aza indirmiş olursunuz.
 
-Değer türleri için kullanılıp kullanılmayacağını `Nullable<T>` veya varsayılan olarak, bir hata göstergesi belirli uygulamanız için dikkate alınması gereken bir şey. Kullanarak `Nullable<Guid>`, `default` olur `null` yerine `Guid.Empty`. Bazı durumlarda ekleme `Nullable<T>` , NET bir değer varsa veya absent zorlaştırabilir. Bazen, ekleme `Nullable<T>` gerekli olmayan denetleyin ve hata olası kaynakları oluşturmak için hizmet yalnızca ek durumları oluşturabilirsiniz. 
+Değer türleri için, hata göstergesi olarak `Nullable<T>` veya varsayılan olarak, belirli bir uygulamanız için göz önünde bulundurulması gereken bir şeydir. Kullanarak `Nullable<Guid>`, `default` yerine `null` olur. `Guid.Empty` Bazı zamanlarda, bir `Nullable<T>` değer varsa veya olmadığında ekleme işlemi daha net hale gelir. Diğer zamanlarda, ekleme `Nullable<T>` , gerekli olmadığını denetlemek için ek durumlar oluşturabilir ve yalnızca olası hata kaynakları oluşturmak için kullanılabilir. 
 
-## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Bir hata kodunu döndürmek yerine özel durumlar
+## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Hata kodu döndürmek yerine özel durumlar oluşturun
 
-Özel durumlar hataları çağırmak için kod dönüş kodu denetlemedi gözden kaçan geçmemektedir emin olun.
+Özel durumlar, çağrı kodu bir dönüş kodunu denetlemediğinden hataların açıklanmamasının algılanmadığından emin olun.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Önceden tanımlanmış .NET özel durum türlerini kullanın
 
-Önceden tanımlanmış bir yalnızca geçerli değildir, yeni bir özel durum sınıfı tanıtır. Örneğin:
+Yalnızca önceden tanımlanmış bir uygulama uygulanmazsa yeni bir özel durum sınıfı tanıtın. Örneğin:
 
-- Throw bir <xref:System.InvalidOperationException> bir özellik kümesi veya yöntem çağrısı bir nesnenin geçerli durumuna uygun değilse bir özel durum.
+- Bir özellik <xref:System.InvalidOperationException> kümesi veya yöntem çağrısı nesnenin geçerli durumuna uygun değilse bir özel durum oluşturur.
 
-- Throw bir <xref:System.ArgumentException> özel durum veya önceden tanımlanmış sınıfların türetilmesi <xref:System.ArgumentException> geçersiz parametreler geçirilmiş.
+- Geçersiz parametreler <xref:System.ArgumentException> geçirilirse, ' den <xref:System.ArgumentException> türetilen önceden tanımlanmış sınıflardan birini veya bir özel durum oluşturur.
 
-## <a name="end-exception-class-names-with-the-word-exception"></a>Son özel durum sınıf adlarını sözcüğü `Exception`
+## <a name="end-exception-class-names-with-the-word-exception"></a>Sözcük ile özel durum sınıfı adlarını Sonlandır`Exception`
 
-Bir özel durum gerekli olduğunda, uygun şekilde adlandırın ve türetmeniz <xref:System.Exception> sınıfı. Örneğin:
+Özel bir özel durum gerekli olduğunda, bunu uygun şekilde adlandırın ve <xref:System.Exception> sınıfından türetirsiniz. Örneğin:
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
 [!code-vb[Conceptual.Exception.Handling#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#4)]
 
-## <a name="include-three-constructors-in-custom-exception-classes"></a>Üç Oluşturucusu özel durum sınıfları içerir.
+## <a name="include-three-constructors-in-custom-exception-classes"></a>Özel özel durum sınıflarında üç Oluşturucu Ekle
 
-En az üç ortak oluşturucu kendi özel durum sınıflarınızı oluştururken kullanın: Parametresiz bir oluşturucu, bir dize iletisi alan bir oluşturucu ve bir dize iletisi ve bir iç özel durum alan bir oluşturucu.
+Kendi özel durum sınıflarınızı oluştururken en az üç ortak Oluşturucu kullanın: parametresiz Oluşturucu, bir dize iletisi alan Oluşturucu ve bir dize iletisi ve bir iç özel durum alan Oluşturucu.
 
-* <xref:System.Exception.%23ctor>, varsayılan değerleri kullanır.
+- <xref:System.Exception.%23ctor>varsayılan değerleri kullanır.
 
-* <xref:System.Exception.%23ctor%28System.String%29>, bir dize iletisi kabul eder.
+- <xref:System.Exception.%23ctor%28System.String%29>, bir dize iletisi kabul eder.
 
-* <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, kabul eden bir dize iletisi ve bir iç özel durum.
+- <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, bir dize iletisi ve bir iç özel durum kabul eder.
 
-Bir örnek için bkz [nasıl yapılır: Kullanıcı tanımlı özel durumlar oluşturma](how-to-create-user-defined-exceptions.md).
+Bir örnek için bkz [. nasıl yapılır: Kullanıcı tanımlı özel durumlar](how-to-create-user-defined-exceptions.md)oluşturun.
 
-## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Uzaktan kod yürütüldüğünde, özel durum verileri kullanılabilir olduğundan emin olun
+## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Kod uzaktan yürütüldüğünde özel durum verilerinin kullanılabilir olduğundan emin olun
 
-Kullanıcı tanımlı özel durumlar oluştururken, özel durumları için meta verileri uzaktan yürütülmekte olan kod için kullanılabilir olduğundan emin olun.
+Kullanıcı tanımlı özel durumlar oluştururken, özel durumlar için meta verilerin uzaktan yürütülen kod için kullanılabilir olduğundan emin olun.
 
-Örneğin, uygulama etki alanları destekleyen .NET uygulamalarında, uygulama etki alanları arasında özel durumları oluşabilir. Bir özel durum kodu yürütür uygulama etki alanı B uygulama etki alanı oluşturduğunu varsayalım. Uygulama etki alanı için düzgün şekilde catch ve özel durumu işlemek için b uygulama etki alanı tarafından oluşturulan özel durumu içeren derlemeyi bulabilir olmalıdır B uygulama etki alanı kendi uygulama temel bir derlemede bulunan bir özel durum oluşturur, ancak uygulama etki alanı'nın uygulama temel altında değil, uygulama etki alanı özel mümkün olmayacaktır ve ortak dil çalışma zamanı bir <xref:System.IO.FileNotFoundException> özel durum. Bu durumu önlemek için, özel durum bilgisini içeren derlemeyi iki şekilde dağıtabilirsiniz:
+Örneğin, uygulama etki alanlarını destekleyen .NET uygulamalarında, uygulama etki alanları arasında özel durumlar oluşabilir. Uygulama etki alanı A 'nın bir özel durum oluşturan kodu çalıştıran bir uygulama etki alanı oluşturduğunu varsayalım. Uygulama etki alanı A 'nın özel durumu doğru bir şekilde yakalayabilmesi ve işlemesi için, uygulama etki alanı B tarafından oluşturulan özel durumu içeren derlemeyi bulması gerekir. Uygulama etki alanı B, uygulama temeli altındaki bir derlemede bulunan ancak uygulama etki alanı a 'nın uygulama temeli altında olmayan bir özel durum oluşturursa, a uygulama etki alanı özel durumu bulamaz ve ortak dil çalışma zamanı bir <xref:System.IO.FileNotFoundException> özel durum oluşturur. Bu durumu önlemek için, özel durum bilgisini içeren derlemeyi iki şekilde dağıtabilirsiniz:
 
 - Derlemeyi iki uygulama etki alanı tarafından paylaşılan ortak bir uygulama temel dizinine koyun.
 
@@ -102,25 +102,25 @@ Kullanıcı tanımlı özel durumlar oluştururken, özel durumları için meta 
 
 - Eğer etki alanları ortak bir uygulama temel dizini paylaşmıyorsa, özel durum bilgisi içeren derlemeyi bir tanımlayıcı ad ile imzalayıp derlemeyi genel bütünleştirilmiş kod önbelleğine dağıtarak.
 
-## <a name="use-grammatically-correct-error-messages"></a>Dilbilgisi bakımından doğru hata iletileri kullanın
+## <a name="use-grammatically-correct-error-messages"></a>Dilsiz doğru hata iletilerini kullanma
 
-Açık bir cümle yazın ve bitiş için noktalama işaretleri ekleyin. Atanan dizesindeki her cümle <xref:System.Exception.Message?displayProperty=nameWithType> özelliği, nokta ile bitmelidir. Örneğin, "günlük tablosu taştı." uygun ileti dizesi olabilir.
+Temiz cümleler yazın ve son noktalama işaretlerini ekleyin. <xref:System.Exception.Message?displayProperty=nameWithType> Özelliğe atanan dizedeki her tümce bir noktayla bitmelidir. Örneğin, "günlük tablosu taşmıştır." uygun bir ileti dizesi olacaktır.
 
-## <a name="include-a-localized-string-message-in-every-exception"></a>Her özel duruma bir yerelleştirilmiş dize arar: mesaj ekleyin
+## <a name="include-a-localized-string-message-in-every-exception"></a>Her özel duruma yerelleştirilmiş bir dize iletisi ekleyin
 
-Kullanıcının gördüğü hata iletisi türetilir <xref:System.Exception.Message?displayProperty=nameWithType> özelliği oluşturulan özel durumun ve değil, özel durum sınıfı adı. Genellikle, bir değer atayın <xref:System.Exception.Message?displayProperty=nameWithType> mesajı dizesine eşliyor geçirerek özelliği `message` bağımsız değişkeni bir [özel Oluşturucu](xref:System.Exception.%23ctor%2A).
+Kullanıcının gördüğü hata iletisi, özel durum sınıfının adından değil, <xref:System.Exception.Message?displayProperty=nameWithType> oluşturulan özel durumun özelliğinden türetilir. Genellikle, ileti dizesini <xref:System.Exception.Message?displayProperty=nameWithType> `message` bir [özel durum oluşturucusunun](xref:System.Exception.%23ctor%2A)bağımsız değişkenine geçirerek özelliğe bir değer atarsınız.
 
-Yerelleştirilmiş uygulamalar için uygulamanızı oluşturabilecek her bir özel durum için ileti yerelleştirilmiş bir dize sağlamanız gerekir. Kaynak dosyaları, yerelleştirilmiş hata iletileri sağlamak için kullanır. Uygulamaları yerelleştirme ve yerelleştirilmiş dizeleri alma hakkında daha fazla bilgi için bkz: [masaüstü uygulamalarında kaynakların](../../framework/resources/index.md) ve <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
+Yerelleştirilmiş uygulamalar için, uygulamanızın oluşturabildiğini her özel durum için yerelleştirilmiş bir ileti dizesi sağlamalısınız. Yerelleştirilmiş hata iletileri sağlamak için kaynak dosyalarını kullanırsınız. Uygulamaları Yerelleştirme ve yerelleştirilmiş dizeleri alma hakkında bilgi için bkz. [masaüstü uygulamalarında kaynaklar](../../framework/resources/index.md) ve <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
-## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Özel durumlar, gerektiği gibi ek özellikler sağlar
+## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Özel özel durumlarda, gerektiğinde ek özellikler sağlayın
 
-(Ek olarak özel ileti dizesi) bir özel durum için ek özellikler sağlar. ek bilgiler nerede olursa kullanışlı olacağı programlı bir senaryo olduğunda. Örneğin, <xref:System.IO.FileNotFoundException> sağlar <xref:System.IO.FileNotFoundException.FileName> özelliği.
+Özel durum için ek özellikler sağlayın (özel ileti dizesine ek olarak), yalnızca ek bilgilerin yararlı olduğu bir programlama senaryosu varsa. Örneğin <xref:System.IO.FileNotFoundException> , <xref:System.IO.FileNotFoundException.FileName> özelliğini sağlar.
 
-## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Yığın izlemesi yararlı olacaktır, böylece bir yerde throw deyimleri
+## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Yığın izlemenin yararlı olacağı şekilde throw deyimlerini yerleştirin
 
-Burada özel durum oluşturulur ve bitişi deyim yığın izleme başlangıcı `catch` deyimi özel durumu yakalar.
+Yığın izlemesi özel durumun oluşturulduğu deyimden başlar ve özel durumu yakalayan `catch` bildirimde biter.
 
-## <a name="use-exception-builder-methods"></a>Exception Oluşturucu yöntemleri kullanın
+## <a name="use-exception-builder-methods"></a>Özel durum Oluşturucu yöntemlerini kullanın
 
 Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması yaygındır. Fazla kodu önlemek için, özel durumu oluşturmak ve döndürmek için yardımcı yöntemler kullanın. Örneğin:
 
@@ -128,11 +128,11 @@ Bir sınıfın uygulamasında aynı özel durumu farklı yerlerde oluşturması 
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]
 
-Bazı durumlarda, özel durum oluşturmak için özel durumun oluşturucusunu kullanmak daha uygun olacak. Örnek bir genel özel durum sınıfı olduğu gibi <xref:System.ArgumentException>.
+Bazı durumlarda, özel durumu oluşturmak için özel durumun oluşturucusunu kullanmak daha uygundur. Örnek, gibi genel bir özel durum sınıfıdır <xref:System.ArgumentException>.
 
-## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Özel durum nedeniyle yöntemleri yoksa tamamladığınızda durumu geri yükle
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Yöntemler özel durumlar nedeniyle tamamlanmadığınızda durumu geri yükle
 
-Bir yöntemi çağıranlar, bu yöntemde özel durum oluşturulduğunda bunun yan etkileri olmayacağını varsayabilmelidir. Örneğin, bir hesaptan geri alınmasının ve başka bir hesabı ürünü para aktarımı kodunuz ve havale yürütülürken bir özel durum mevzuatı etkin kalmasını istemezsiniz.
+Bir yöntemi çağıranlar, bu yöntemde özel durum oluşturulduğunda bunun yan etkileri olmayacağını varsayabilmelidir. Örneğin, bir hesaptan withdrawing ve başka bir hesapta bir özel durum oluşturan bir kod varsa ve depozito yürütülürken bir özel durum oluşturulursa, çekme al 'nın etkin kalmasını istemezsiniz.
 
 ```csharp
 public void TransferFunds(Account from, Account to, decimal amount)
@@ -151,9 +151,9 @@ Public Sub TransferFunds(from As Account, [to] As Account, amount As Decimal)
 End Sub
 ```
 
-Yukarıdaki yöntemi doğrudan özel durumları oluşturmaz, ancak mevzuatı tersine havale işlem başarısız olursa, böylece biçimde geliştirmelisiniz yazılmalıdır.
+Yukarıdaki yöntem, doğrudan özel durum oluşturmaz, ancak depozito işlemi başarısız olursa, çekme işleminin ters çevrilmesiyle yeniden savunma yapılmalıdır.
 
-Bu durumu yönetmek için bir havale işlem tarafından oluşturulan özel durumlar yakalayın ve geri çekilen alma yoludur.
+Bu durumu işlemenin bir yolu, depozito işlemi tarafından oluşturulan tüm özel durumları yakalamak ve geri alma işlemini geri almak olur.
 
 ```csharp
 private static void TransferFunds(Account from, Account to, decimal amount)
@@ -183,7 +183,7 @@ Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Dec
 End Sub
 ```
 
-Bu örnek kullanımını gösterir `throw` inceleyin gerek kalmadan gerçek sorunun nedenini görmek çağıranlar kolaylaştırmak özgün özel yeniden harekete geçirileceğini <xref:System.Exception.InnerException> özelliği. Yeni bir özel durum ve iç özel durum olarak özgün özel durumu içerecek şekilde bir alternatiftir:
+Bu örnek, özgün özel durumu `throw` yeniden oluşturmak için kullanımını gösterir, bu da çağıranların <xref:System.Exception.InnerException> özelliği incelemek zorunda kalmadan sorunun gerçek nedenini görmesini kolaylaştırır. Diğer bir seçenek de yeni bir özel durum oluşturmak ve asıl özel durumu iç özel durum olarak içerkullanmaktır:
 
 ```csharp
 catch (Exception ex)
@@ -212,4 +212,4 @@ End Try
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel durumlar](index.md)
+- [Özel Durumlar](index.md)

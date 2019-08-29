@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)"
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630993"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106977"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>İzlenecek yol: Async ve await kullanarak Web 'e erişme (Visual Basic)
 
@@ -22,17 +22,17 @@ Uygulamaları kendiniz derlemek istemiyorsanız, "zaman uyumsuz örnek: Web Izle
 Bu kılavuzda, aşağıdaki görevleri tamamlayadınız:
 
 > [!div class="checklist"]
-> * [WPF uygulaması oluşturma](#create-a-wpf-application)
-> * [Basit bir WPF MainWindow tasarımı](#design-a-simple-wpf-mainwindow)
-> * [Başvuru ekleme](#add-a-reference)
-> * [Gerekli Imports deyimlerini Ekle](#add-necessary-imports-statements)
-> * [Zaman uyumlu uygulama oluşturma](#create-a-synchronous-application)
-> * [Zaman uyumlu çözümü test etme](#test-the-synchronous-solution)
-> * [GetURLContents öğesini zaman uyumsuz bir metoda Dönüştür](#convert-geturlcontents-to-an-asynchronous-method)
-> * [Sumpageslikleri zaman uyumsuz bir metoda Dönüştür](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [StartButton_Click öğesini zaman uyumsuz bir metoda Dönüştür](#convert-startbutton_click-to-an-asynchronous-method)
-> * [Zaman uyumsuz çözümü test etme](#test-the-asynchronous-solution)
-> * [GetURLContentsAsync yöntemini bir .NET Framework yöntemiyle değiştirin](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [WPF uygulaması oluşturma](#create-a-wpf-application)
+> - [Basit bir WPF MainWindow tasarımı](#design-a-simple-wpf-mainwindow)
+> - [Başvuru ekleme](#add-a-reference)
+> - [Gerekli Imports deyimlerini Ekle](#add-necessary-imports-statements)
+> - [Zaman uyumlu uygulama oluşturma](#create-a-synchronous-application)
+> - [Zaman uyumlu çözümü test etme](#test-the-synchronous-solution)
+> - [GetURLContents öğesini zaman uyumsuz bir metoda Dönüştür](#convert-geturlcontents-to-an-asynchronous-method)
+> - [Sumpageslikleri zaman uyumsuz bir metoda Dönüştür](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [StartButton_Click öğesini zaman uyumsuz bir metoda Dönüştür](#convert-startbutton_click-to-an-asynchronous-method)
+> - [Zaman uyumsuz çözümü test etme](#test-the-asynchronous-solution)
+> - [GetURLContentsAsync yöntemini bir .NET Framework yöntemiyle değiştirin](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 Tüm zaman uyumsuz örnek için [örnek](#example) bölümüne bakın.
 
@@ -355,7 +355,7 @@ Bilgisayarınızda Visual Studio 2012 veya üzeri yüklü olmalıdır. Daha fazl
 
     ' A dönüştürme `SumPageSizes` `SumPageSizesAsync` işlemi tamamlanmıştır.
 
-## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>StartButton_Click öğesini zaman uyumsuz bir metoda Dönüştür
+## <a name="convert-startbutton_click-to-an-asynchronous-method"></a>StartButton_Click öğesini zaman uyumsuz bir metoda Dönüştür
 
 1. Daha önce yapmadıysanız, olay işleyicisinde, çağrılan yöntemin `SumPageSizes` adını olarak olarak `SumPageSizesAsync`değiştirin.
 

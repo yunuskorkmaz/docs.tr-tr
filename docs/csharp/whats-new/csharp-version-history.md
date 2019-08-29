@@ -3,12 +3,12 @@ title: C# Kılavuz geçmişi C#
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9962dcb0192fb27ff21b24e985a6a897703720c7
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363885"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105677"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -19,11 +19,11 @@ Bu makalede, C# dilin her bir ana sürümünün geçmişi sağlanmaktadır. C# T
 
 C# Yapı araçları, varsayılan dil sürümü olan en son ana dil sürümünü göz önünde bulundurun. Bu bölümdeki diğer makalelerde ayrıntılı olarak açıklanan ana yayınlar arasında nokta yayınları olabilir. En son özellikleri bir nokta sürümünde kullanmak için, [Derleyici dil sürümünü yapılandırmanız](../language-reference/configure-language-version.md) ve sürümü seçmeniz gerekir. 7,0 sonrasında C# üç nokta yayını vardı:
 
-* [ C# 7,3](csharp-7-3.md):
+- [ C# 7,3](csharp-7-3.md):
   - C#7,3, [Visual Studio 2017 sürüm 15,7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2,1 SDK](../../core/whats-new/dotnet-core-2-1.md)ile başlayarak kullanılabilir.
-* [ C# 7,2](csharp-7-2.md):
+- [ C# 7,2](csharp-7-2.md):
   - C#7,2, [Visual Studio 2017 sürüm 15,5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)ve [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md)ile başlayarak kullanılabilir.
-* [ C# 7,1](csharp-7-1.md):
+- [ C# 7,1](csharp-7-1.md):
   - C#7,1, [Visual Studio 2017 sürüm 15,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ve [.NET Core 2,0 SDK](../../core/whats-new/dotnet-core-2-0.md)ile başlayarak kullanılabilir.
 
 ## <a name="c-version-10"></a>C#sürüm 1,0
@@ -124,7 +124,7 @@ C#sürüm 5,0, dilin odaklanmış bir sürümüdür. Bu sürüm için neredeyse 
 
 ### <a name="see-also"></a>Ayrıca Bkz.
 
-* [Kod projesi: 5,0 ' de C# çağıran bilgi öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Kod projesi: 5,0 ' de C# çağıran bilgi öznitelikleri](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Çağıran bilgileri özniteliği, bir çok ortak yansıma kodu için kod olmadan çalıştırdığınız bağlam hakkındaki bilgileri kolayca almanızı sağlar. Tanılama ve günlüğe kaydetme görevlerinde birçok kullanımı vardır.
 

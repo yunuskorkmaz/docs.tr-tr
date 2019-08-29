@@ -3,15 +3,15 @@ title: 'Öğretici: ONNX ve ML.NET ile derin öğrenme kullanarak nesneleri Alg�
 description: Bu öğreticide, görüntülerdeki nesneleri algılamak için ML.NET ' de önceden eğitilen ONNX derin öğrenme modelinin nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/01/2019
+ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e44ea5795beb90bafe3faf0bafb463d49ba1fc41
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: deb7258326428cca01ea8734e0dc010c29177cfa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868720"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106854"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET içinde ONNX kullanarak nesneleri Algıla
 
@@ -21,11 +21,11 @@ Bir nesne algılama modelini sıfırdan eğitmek için milyonlarca parametre, b�
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Sorunu anlama
-> * ONNX 'in ne olduğunu ve ML.NET ile nasıl çalıştığını öğrenin
-> * Modeli anlama
-> * Önceden eğitilen modeli yeniden kullanma
-> * Yüklü bir modelle nesneleri Algıla
+> - Sorunu anlama
+> - ONNX 'in ne olduğunu ve ML.NET ile nasıl çalıştığını öğrenin
+> - Modeli anlama
+> - Önceden eğitilen modeli yeniden kullanma
+> - Yüklü bir modelle nesneleri Algıla
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
@@ -117,7 +117,7 @@ Artık ONNX 'in ne olduğuna ve küçük YOLOv2 nasıl çalıştığına ilişki
 
 *Program.cs* dosyasını açın ve aşağıdaki ek `using` deyimlerini dosyanın en üstüne ekleyin:
 
-[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L9)]
+[!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L1-L7)]
 
 Ardından, çeşitli varlıkların yollarını tanımlayın. 
 
@@ -125,7 +125,7 @@ Ardından, çeşitli varlıkların yollarını tanımlayın.
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
-1. Ardından, `Main` yöntemi içinde varlıklarınızın konumunu depolamak için alanlar oluşturun:
+1. Ardından, `Main` yöntemi içinde varlıklarınızın konumunu depolamak için alanlar oluşturun.
 
     [!code-csharp [AssetDefinition](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L17-L21)]
 
@@ -178,76 +178,6 @@ Yeni oluşturulan *Datayapýlarý* dizininde giriş veri sınıfınızı oluştu
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
-### <a name="add-helper-methods"></a>Yardımcı yöntemler ekleme
-
-Model, genellikle Puanlama olarak anılan ve çıktılar işlendiği bir tahmin yapıldıktan sonra, görüntü üzerinde sınırlayıcı kutuları çizmelidir. Bunu yapmak için, `DrawBoundingBox` *program.cs*'in ınsode `GetAbsolutePath` yönteminin altına adlı bir yöntem ekleyin.
-
-```csharp
-private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
-{
-
-}
-```
-
-İlk olarak, görüntüyü yükleyin ve `DrawBoundingBox` yöntemdeki yükseklik ve genişlik boyutlarını alın.
-
-[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
-
-Ardından, model tarafından algılanan her bir sınırlayıcı kutu üzerinde yinelemek için her bir For-Each döngüsü oluşturun.
-
-```csharp
-foreach (var box in filteredBoundingBoxes)
-{
-
-}
-```
-
-For-each döngüsünün içinde, sınırlayıcı kutunun boyutlarını alın.
-
-[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
-
-Sınırlayıcı kutunun boyutları model girişine `416 x 416`karşılık geldiğinden, sınırlayıcı kutu boyutlarını görüntünün gerçek boyutuyla eşleşecek şekilde ölçeklendirin.
-
-[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
-
-Ardından, her bir sınırlayıcı kutusunun üzerine gönderilecek metin için bir şablon tanımlayın. Metin, ilgili sınırlayıcı kutusunun içindeki nesnenin sınıfını ve güveni içerir.
-
-[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
-
-Görüntüde çizim yapmak için bir [`Graphics`](xref:System.Drawing.Graphics) nesneye dönüştürün.
-
-```csharp
-using (Graphics thumbnailGraphic = Graphics.FromImage(image))
-{
-    
-}
-```
-
-Kod bloğunun içinde, [`Graphics`](xref:System.Drawing.Graphics) grafiğin nesne ayarlarını ayarlayın. `using`
-
-[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
-
-Bunun altında metin ve sınırlayıcı kutusu için yazı tipi ve renk seçeneklerini ayarlayın.
-
-[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
-
-[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) Yöntemi kullanarak metni içermesi için sınırlayıcı kutunun üzerindeki bir dikdörtgeni oluşturun ve girin. Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
-
-[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
-
-Ardından, [`DrawString`](xref:System.Drawing.Graphics.DrawString*) ve [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) yöntemlerini kullanarak görüntüye metin ve sınırlayıcı kutusunu çizin.
-
-[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
-
-For-each döngüsünün dışında, içindeki `outputDirectory`görüntüleri kaydetmek için kod ekleyin.
-
-[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
-
-Uygulamanın çalışma zamanında beklendiği gibi tahmine dayalı hale getirdiğine ek geri bildirim almak için, algılanan nesneleri konsola çıkarmak `LogDetectedObjects` üzere program.cs `DrawBoundingBox` dosyasındaki yönteminin altına adlı bir yöntem ekleyin.
-
-[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
-
-Bu yöntemlerin her ikisi de modelde çıktılar üretildiğinde ve bunlar işlendiğinde yararlı olacaktır. Ancak, model çıkışlarını işlemek için işlevi oluşturun.
 
 ## <a name="create-a-parser-to-post-process-model-outputs"></a>İşlem sonrası model çıkışları için bir Ayrıştırıcı oluşturun
 
@@ -344,7 +274,7 @@ Artık boyut ve sınırlama kutuları için sınıflar oluşturuldığına göre
     - `CELL_HEIGHT`, görüntü kılavuzundaki bir hücrenin yüksekliğidir.
     - `channelStride`Kılavuzdaki geçerli hücrenin başlangıç konumudur.
 
-    Model bir görüntüye puan aldığında, `416px x 416px`girişi `13 x 13`boyutunun bir hücre kılavuzuna böler. Her hücre içerir `32px x 32px`. Her hücrede, 5 Özellik (x, y, Width, Height, güvenirlik) içeren 5 sınırlayıcı kutu vardır. Ayrıca, her sınırlayıcı kutu, bu örnekte 20 olan her bir sınıf olasılığını içerir. Bu nedenle, her hücre 125 bilgi parçasını içerir (5 özellik + 20 sınıf olasılıkların). 
+    Model, Puanlama olarak da bilinen bir tahmin yaptığında, `416px x 416px` giriş görüntüsünü `13 x 13`boyutunun bir hücre kılavuzuna böler. Her hücre içerir `32px x 32px`. Her hücrede, 5 Özellik (x, y, Width, Height, güvenirlik) içeren 5 sınırlayıcı kutu vardır. Ayrıca, her sınırlayıcı kutu, bu örnekte 20 olan her bir sınıf olasılığını içerir. Bu nedenle, her hücre 125 bilgi parçasını içerir (5 özellik + 20 sınıf olasılıkların). 
 
 Tüm 5 sınırlayıcı kutular için aşağıdan `channelStride` bir çıpası listesi oluşturun:
 
@@ -560,7 +490,7 @@ Harika! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET işlem hatları, genellikle, [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) yöntemi çağrıldığında verilerin üzerinde çalışmasını bekler. Bu durumda, eğitimle benzer bir süreç kullanılacaktır. Ancak, hiçbir gerçek eğitim gerçekleşmediğinden boş [`IDataView`](xref:Microsoft.ML.IDataView)kullanılması kabul edilebilir. Boş bir listeden [`IDataView`](xref:Microsoft.ML.IDataView) işlem hattı için yeni bir oluştur.
+    ML.NET işlem hatları, [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) yöntemi çağrıldığında üzerinde çalışılacak veri şemasını bilmelidir. Bu durumda, eğitimle benzer bir süreç kullanılacaktır. Ancak, hiçbir gerçek eğitim gerçekleşmediğinden boş [`IDataView`](xref:Microsoft.ML.IDataView)kullanılması kabul edilebilir. Boş bir listeden [`IDataView`](xref:Microsoft.ML.IDataView) işlem hattı için yeni bir oluştur.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]    
 
@@ -608,7 +538,13 @@ Neredeyse bitti! Şimdi bunu tüm kullanıma yerleştirme zamanı.
 
 ## <a name="detect-objects"></a>Nesneleri Algıla
 
-Tüm kurulumun tamamlandığına göre, bazı nesneleri algılamaya zaman atalım. `Main` *Program.cs* sınıfınızın yöntemi içinde, bir try-catch ifadesini ekleyin.
+Tüm kurulumun tamamlandığına göre, bazı nesneleri algılamaya zaman atalım. *Program.cs* sınıfınıza scorer ve ayrıştırıcıya başvurular ekleyerek başlayın.
+
+[!code-csharp [ReferenceScorerParser](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L8-L9)]
+
+### <a name="score-and-parse-model-outputs"></a>Model çıkışlarını puan ve ayrıştırma
+
+`Main` *Program.cs* sınıfınızın yöntemi içinde, bir try-catch ifadesini ekleyin.
 
 ```csharp
 try
@@ -633,7 +569,78 @@ Ardından, bir örneği `OnnxModelScorer` oluşturun ve yüklenen verileri almak
 
 [!code-csharp [ParsePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L39-L44)]
 
-Model çıkışı işlendikten sonra, görüntülerde sınırlayıcı kutuları çizmeniz zaman alır. Her bir puanlanmış görüntünün üzerinde yinelemek için bir for döngüsü oluşturun.
+Model çıkışı işlendikten sonra, görüntülerde sınırlayıcı kutuları çizmeniz zaman alır. 
+
+### <a name="visualize-predictions"></a>Tahminleri görselleştirin
+
+Model, görüntüleri puanladıktan ve çıktılar işlendikten sonra, görüntü üzerinde sınırlayıcı kutular çizmelidir. Bunu yapmak için `DrawBoundingBox` *program.cs*içindeki `GetAbsolutePath` yönteminin altına adlı bir yöntem ekleyin.
+
+```csharp
+private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
+{
+
+}
+```
+
+İlk olarak, görüntüyü yükleyin ve `DrawBoundingBox` yöntemdeki yükseklik ve genişlik boyutlarını alın.
+
+[!code-csharp [LoadImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L78-L81)]
+
+Ardından, model tarafından algılanan her bir sınırlayıcı kutu üzerinde yinelemek için her bir For-Each döngüsü oluşturun.
+
+```csharp
+foreach (var box in filteredBoundingBoxes)
+{
+
+}
+```
+
+For-each döngüsünün içinde, sınırlayıcı kutunun boyutlarını alın.
+
+[!code-csharp [GetBBoxDimensions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L86-L89)]
+
+Sınırlayıcı kutunun boyutları model girişine `416 x 416`karşılık geldiğinden, sınırlayıcı kutu boyutlarını görüntünün gerçek boyutuyla eşleşecek şekilde ölçeklendirin.
+
+[!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
+
+Ardından, her bir sınırlayıcı kutusunun üzerine gönderilecek metin için bir şablon tanımlayın. Metin, ilgili sınırlayıcı kutusunun içindeki nesnenin sınıfını ve güveni içerir.
+
+[!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
+
+Görüntüde çizim yapmak için bir [`Graphics`](xref:System.Drawing.Graphics) nesneye dönüştürün.
+
+```csharp
+using (Graphics thumbnailGraphic = Graphics.FromImage(image))
+{
+    
+}
+```
+
+Kod bloğunun içinde, [`Graphics`](xref:System.Drawing.Graphics) grafiğin nesne ayarlarını ayarlayın. `using`
+
+[!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
+
+Bunun altında metin ve sınırlayıcı kutusu için yazı tipi ve renk seçeneklerini ayarlayın.
+
+[!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
+
+[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) Yöntemi kullanarak metni içermesi için sınırlayıcı kutunun üzerindeki bir dikdörtgeni oluşturun ve girin. Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
+
+[!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
+
+Ardından, [`DrawString`](xref:System.Drawing.Graphics.DrawString*) ve [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) yöntemlerini kullanarak görüntüye metin ve sınırlayıcı kutusunu çizin.
+
+[!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
+
+For-each döngüsünün dışında, içindeki `outputDirectory`görüntüleri kaydetmek için kod ekleyin.
+
+[!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
+
+Uygulamanın çalışma zamanında beklendiği gibi tahmine dayalı hale getiren ek geri bildirimde bulunmak için, algılanan nesneleri konsola çıkarmak `LogDetectedObjects` üzere program.cs `DrawBoundingBox` dosyasındaki yönteminin altına adlı bir yöntem ekleyin.
+
+[!code-csharp [LogOuptuts](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
+
+Tahmine dayalı olarak görsel geri bildirim oluşturmaya yönelik yardımcı yöntemlere sahip olduğunuza göre, her bir puanlanmış görüntünün üzerinde yinelemek için bir for döngüsü ekleyin.
 
 ```csharp
 for (var i = 0; i < images.Count(); i++)
@@ -650,7 +657,7 @@ Bunun altında, görüntüdeki sınırlayıcı `DrawBoundingBox` kutuları çizm
 
 [!code-csharp [DrawBBoxes](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L52)]
 
-Son olarak, `LogDetectedObjects` yöntemiyle bazı günlük Logic ekleyin.
+Son olarak,, `LogDetectedObjects` tahmine dayalı olarak konsola çıkış yapmak için yöntemini kullanın.
 
 [!code-csharp [LogPredictionsOutput](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L54)]
 
@@ -704,11 +711,11 @@ Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/machin
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * Sorunu anlama
-> * ONNX 'in ne olduğunu ve ML.NET ile nasıl çalıştığını öğrenin
-> * Modeli anlama
-> * Önceden eğitilen modeli yeniden kullanma
-> * Yüklü bir modelle nesneleri Algıla
+> - Sorunu anlama
+> - ONNX 'in ne olduğunu ve ML.NET ile nasıl çalıştığını öğrenin
+> - Modeli anlama
+> - Önceden eğitilen modeli yeniden kullanma
+> - Yüklü bir modelle nesneleri Algıla
 
 Genişletilmiş bir nesne algılama örneğini araştırmak için Machine Learning örnekleri GitHub deposuna göz atın.
 > [!div class="nextstepaction"]

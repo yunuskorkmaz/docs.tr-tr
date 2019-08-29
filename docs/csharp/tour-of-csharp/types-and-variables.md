@@ -3,12 +3,12 @@ title: C#Türler ve değişkenler- C# dilin turu
 description: İçinde türleri tanımlama ve değişkenleri bildirme hakkında bilgi edininC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67661062"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105583"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -18,31 +18,31 @@ C#öğesinin değer türleri, *basit türler*, *sabit listesi türleri*, *yapı 
 
 Aşağıdakiler, tür sistemine genel bir C#bakış sağlar.
 
-* [Değer türleri][ValueTypes]
+- [Değer türleri][ValueTypes]
   - [Basit türler][SimpleTypes]
-    * İmzalanan integral: `sbyte`, `short`, `int`,`long`
-    * İşaretsiz integral: `byte`, `ushort`, `uint`,`ulong`
-    * Unicode karakterler:`char`
-    * IEEE ikili kayan nokta: `float`,`double`
-    * Yüksek duyarlıklı ondalık kayan nokta:`decimal`
-    * Boolean`bool`
+    - İmzalanan integral: `sbyte`, `short`, `int`,`long`
+    - İşaretsiz integral: `byte`, `ushort`, `uint`,`ulong`
+    - Unicode karakterler:`char`
+    - IEEE ikili kayan nokta: `float`,`double`
+    - Yüksek duyarlıklı ondalık kayan nokta:`decimal`
+    - Boolean`bool`
   - [Sabit listesi türleri][EnumTypes]
-    * Formun Kullanıcı tanımlı türleri`enum E {...}`
+    - Formun Kullanıcı tanımlı türleri`enum E {...}`
   - [Yapı türleri][StructTypes]
-    * Formun Kullanıcı tanımlı türleri`struct S {...}`
+    - Formun Kullanıcı tanımlı türleri`struct S {...}`
   - [Null yapılabilir değer türleri][NullableTypes]
-    * Bir `null` değere sahip diğer tüm değer türlerinin uzantıları
-* [Başvuru türleri][ReferenceTypes]
+    - Bir `null` değere sahip diğer tüm değer türlerinin uzantıları
+- [Başvuru türleri][ReferenceTypes]
   - [Sınıf türleri][ClassTypes]
-    * Diğer tüm türlerin Ultimate temel sınıfı:`object`
-    * Unicode dizeleri:`string`
-    * Formun Kullanıcı tanımlı türleri`class C {...}`
+    - Diğer tüm türlerin Ultimate temel sınıfı:`object`
+    - Unicode dizeleri:`string`
+    - Formun Kullanıcı tanımlı türleri`class C {...}`
   - [Arabirim türleri][InterfaceTypes]
-    * Formun Kullanıcı tanımlı türleri`interface I {...}`
+    - Formun Kullanıcı tanımlı türleri`interface I {...}`
   - [Dizi türleri][ArrayTypes]
-    * Tek ve çok boyutlu, örneğin `int[]` ve`int[,]`
+    - Tek ve çok boyutlu, örneğin `int[]` ve`int[,]`
   - [Temsilci türleri][DelegateTypes]
-    * Formun Kullanıcı tanımlı türleri`delegate int D(...)`
+    - Formun Kullanıcı tanımlı türleri`delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
@@ -89,19 +89,19 @@ C#öğesinin Birleşik tür sistemi etkin bir şekilde değer türlerinin "iste�
 
 İçinde C#alanlar, dizi öğeleri, yerel değişkenler ve parametreler dahil olmak üzere birkaç tür *değişken* vardır. Değişkenler, depolama konumlarını temsil eder ve her değişken, aşağıda gösterildiği gibi, değişkende hangi değerlerin depolanabileceğini belirleyen bir tür içerir.
 
-* Null yapılamayan değer türü
+- Null yapılamayan değer türü
   - Bu tam türden bir değer
-* Null yapılabilir değer türü
+- Null yapılabilir değer türü
   - `null` Bu tam türün değeri veya değeri
-* nesne
+- nesne
   - `null` Başvuru, herhangi bir başvuru türünün nesnesine başvuru veya herhangi bir değer türünün paketlenmiş değerine başvuru
-* Sınıf türü
+- Sınıf türü
   - `null` Başvuru, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın örneğine başvuru
-* Arabirim türü
+- Arabirim türü
   - `null` Başvuru, bu arabirim türünü uygulayan bir sınıf türü örneğine başvuru veya bu arabirim türünü uygulayan bir değer türünün paketlenmiş değerine başvuru
-* Dizi türü
+- Dizi türü
   - `null` Başvuru, bu dizi türü örneğine başvuru veya uyumlu bir dizi türü örneğine başvuru
-* Temsilci türü
+- Temsilci türü
   - Uyumlu bir temsilci türü örneğine başvuruveyabaşvuru`null`
 
 > [!div class="step-by-step"]

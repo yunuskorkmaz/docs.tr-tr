@@ -4,12 +4,12 @@ description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulund
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 6bdcb002c2e37f45c298259c2867a631b38152ca
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630857"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107283"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -17,18 +17,18 @@ ms.locfileid: "68630857"
 
 Şu durumlarda sunucu uygulamanız için .NET Core kullanın:
 
-* Platformlar arası gereksinimleriniz var.
-* Mikro hizmetleri hedefliyorsanız.
-* Docker Kapsayıcıları kullanıyorsunuz.
-* Yüksek performanslı ve ölçeklenebilir sistemleriniz olmalıdır.
-* Uygulama başına yan yana .NET sürümlerine ihtiyacınız vardır.
+- Platformlar arası gereksinimleriniz var.
+- Mikro hizmetleri hedefliyorsanız.
+- Docker Kapsayıcıları kullanıyorsunuz.
+- Yüksek performanslı ve ölçeklenebilir sistemleriniz olmalıdır.
+- Uygulama başına yan yana .NET sürümlerine ihtiyacınız vardır.
 
 Sunucu uygulamanız için .NET Framework şu durumlarda kullanın:
 
-* Uygulamanız Şu anda .NET Framework kullanıyor (öneri, geçiş yerine genişletilir).
-* Uygulamanız üçüncü taraf .NET kitaplıklarını veya .NET Core için mevcut olmayan NuGet paketlerini kullanır.
-* Uygulamanız .NET Core için kullanılamayan .NET teknolojilerini kullanır.
-* Uygulamanız .NET Core desteklemeyen bir platform kullanıyor.
+- Uygulamanız Şu anda .NET Framework kullanıyor (öneri, geçiş yerine genişletilir).
+- Uygulamanız üçüncü taraf .NET kitaplıklarını veya .NET Core için mevcut olmayan NuGet paketlerini kullanır.
+- Uygulamanız .NET Core için kullanılamayan .NET teknolojilerini kullanır.
+- Uygulamanız .NET Core desteklemeyen bir platform kullanıyor.
 
 ## <a name="when-to-choose-net-core"></a>Ne zaman .NET Core seçme
 
@@ -85,15 +85,15 @@ Bu nedenle, yalnızca kitaplıkların veya NuGet paketlerinin .NET Standard/. NE
 
 Bazı .NET Framework teknolojileri .NET Core 'da kullanılamaz. Bunlardan bazıları daha sonraki .NET Core sürümlerinde kullanılabilir olabilir. Diğerleri, .NET Core tarafından hedeflenen yeni uygulama düzenlerine uygulanmaz ve hiçbir şekilde kullanılamaz. Aşağıdaki listede, .NET Core 'da bulunmayan en yaygın teknolojiler gösterilmektedir:
 
-* ASP.NET Web Forms uygulamalar: ASP.NET Web Forms yalnızca .NET Framework kullanılabilir. ASP.NET Core, ASP.NET Web Forms için kullanılamaz. .NET Core 'a ASP.NET Web Forms getirmek için bir plan yoktur.
+- ASP.NET Web Forms uygulamalar: ASP.NET Web Forms yalnızca .NET Framework kullanılabilir. ASP.NET Core, ASP.NET Web Forms için kullanılamaz. .NET Core 'a ASP.NET Web Forms getirmek için bir plan yoktur.
 
-* ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları ASP.NET Core dahil değildir. 
+- ASP.NET Web Pages uygulamaları: ASP.NET Web sayfaları ASP.NET Core dahil değildir. 
 
-* WCF Hizmetleri uygulama. .NET Core 'dan WCF hizmetlerini kullanmak için bir [WCF-istemci kitaplığı](https://github.com/dotnet/wcf) olsa bıle, WCF sunucu uygulamasının şu anda yalnızca .NET Framework kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir, ancak geleceğe göre değerlendirilir.
+- WCF Hizmetleri uygulama. .NET Core 'dan WCF hizmetlerini kullanmak için bir [WCF-istemci kitaplığı](https://github.com/dotnet/wcf) olsa bıle, WCF sunucu uygulamasının şu anda yalnızca .NET Framework kullanılabilir. Bu senaryo, .NET Core için geçerli planın bir parçası değildir, ancak geleceğe göre değerlendirilir.
 
-* İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi) yalnızca .NET Framework mevcuttur.  WF/WCF + WF/WCF Veri Hizmetleri .NET Core 'a getirmeye yönelik bir plan yoktur.
+- İş akışı ile ilgili hizmetler: Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi) yalnızca .NET Framework mevcuttur.  WF/WCF + WF/WCF Veri Hizmetleri .NET Core 'a getirmeye yönelik bir plan yoktur.
 
-* Dil desteği: Visual Basic ve F# Şu anda .NET Core 'da destekleniyor, ancak tüm proje türleri için desteklenmiyor. Desteklenen proje şablonlarının listesi için bkz. [DotNet New Için şablon seçenekleri](../core/tools/dotnet-new.md#arguments).
+- Dil desteği: Visual Basic ve F# Şu anda .NET Core 'da destekleniyor, ancak tüm proje türleri için desteklenmiyor. Desteklenen proje şablonlarının listesi için bkz. [DotNet New Için şablon seçenekleri](../core/tools/dotnet-new.md#arguments).
 
 Resmi yol haritasını ek olarak, .NET Core 'a yönelik başka çerçeveler de vardır. Tam liste için bkz. [ana bağlantı noktası](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core)olarak Işaretlenmiş CoreFX sorunları. Bu liste, Microsoft 'un bu bileşenleri .NET Core 'a getirmeye yönelik bir taahhütünü temsil etmez. Bu, bunu yapmak için topluluktaki isteği yakalarlar. Olarak `port-to-core`işaretlenen bileşenlerden herhangi birini düşünüyorsanız, GitHub 'daki tartışmalara katılın. Bir şeyin eksik olduğunu düşünüyorsanız [Corefx deposunda](https://github.com/dotnet/corefx/issues/new)yeni bir sorun verin.
 

@@ -2,12 +2,12 @@
 title: Yapılar
 description: Küçük bir veri F# miktarı ve basit davranışları olan türler için bir sınıftan daha verimli bir kompakt nesne türü yapı hakkında bilgi edinin.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630765"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106820"
 ---
 # <a name="structures"></a>Yapılar
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 İçindeki F# "`byref`-LIKE" yapısı, yığın bağlantılı bir değer türüdür. Yönetilen yığında hiçbir şekilde ayrılmadı. Bir `byref`-LIKE yapısı, yoğun ömür ve yakalama olmayan bir güçlü denetim kümesiyle zorlandığından, yüksek performanslı programlama için yararlıdır. Kurallar şunlardır:
 
-* İşlev parametreleri, yöntem parametreleri, yerel değişkenler, yöntem geri dönüş olarak kullanılabilirler.
-* Bunlar statik veya bir sınıfın ya da normal yapının örnek üyeleri olamaz.
-* Bunlar herhangi bir kapanış yapısı (`async` Yöntemler veya lambda ifadeleri) tarafından yakalanamaz.
-* Genel parametre olarak kullanılamaz.
+- İşlev parametreleri, yöntem parametreleri, yerel değişkenler, yöntem geri dönüş olarak kullanılabilirler.
+- Bunlar statik veya bir sınıfın ya da normal yapının örnek üyeleri olamaz.
+- Bunlar herhangi bir kapanış yapısı (`async` Yöntemler veya lambda ifadeleri) tarafından yakalanamaz.
+- Genel parametre olarak kullanılamaz.
 
 Bu kurallar kullanımı çok kuvvetli olsa da, yüksek performanslı bilgi işlem taahhüdünü güvenli bir şekilde yerine getirmelerini sağlar.
 

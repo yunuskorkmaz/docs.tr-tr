@@ -13,22 +13,22 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: 68d9365e6aed247770eb250f5a2e296b710febc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8c63aa074f699fa77c25441995a2ae74b78caf8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644141"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106491"
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework ile istemci uygulamaları geliştirme
 
-.NET Framework ile Windows tabanlı uygulamalar geliştirmek için birçok yol vardır. Bu araçları ve çerçeveleri herhangi birini kullanabilirsiniz: 
+.NET Framework Windows tabanlı uygulamalar geliştirmenin birkaç yolu vardır. Bu araçlardan ve çerçevelerin herhangi birini kullanabilirsiniz: 
 
-* [Evrensel Windows Platformu (UWP)](https://developer.microsoft.com/windows/apps)
-* [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
-* [Windows Forms](../../docs/framework/winforms/index.md)
+- [Evrensel Windows Platformu (UWP)](https://developer.microsoft.com/windows/apps)
+- [Windows Presentation Foundation (WPF)](../../docs/framework/wpf/index.md)
+- [Windows Forms](../../docs/framework/winforms/index.md)
 
-Bu bölüm, Windows Presentation Foundation kullanarak veya Windows Forms kullanılarak Windows tabanlı uygulamalar oluşturmanıza nasıl açıklayan konulara içerir. Ancak, .NET Framework kullanarak web uygulamaları ve Bilgisayarları veya cihazları Microsoft Store kullanılabilir hale getirdiğiniz için istemci uygulamalarını da oluşturabilirsiniz.
+Bu bölümde, Windows Presentation Foundation kullanarak veya Windows Forms kullanarak Windows tabanlı uygulamalar oluşturmayı betimleyen konular yer almaktadır. Ancak, .NET Framework kullanarak Web uygulamaları ve Microsoft Store üzerinden kullanılabilir hale getirmek istediğiniz bilgisayarlar veya cihazlar için istemci uygulamaları da oluşturabilirsiniz.
  
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -36,27 +36,27 @@ Bu bölüm, Windows Presentation Foundation kullanarak veya Windows Forms kullan
 WPF kullanarak uygulama geliştirme hakkında bilgi sağlar.
 
 [Windows Forms](../../docs/framework/winforms/index.md)  
-Windows formları kullanarak uygulama geliştirme hakkında bilgi sağlar.
+Windows Forms kullanarak uygulama geliştirme hakkında bilgi sağlar.
 
 [Ortak İstemci Teknolojileri](../../docs/framework/common-client-technologies/index.md)  
-İstemci uygulamaları geliştirilirken kullanılabilen ek teknolojiler hakkında bilgi sağlar.
+İstemci uygulamaları geliştirirken kullanılabilecek ek teknolojiler hakkında bilgi sağlar.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Evrensel Windows platformu](https://developer.microsoft.com/windows/apps)  
-Windows 10, Windows Store aracılığıyla kullanıcılara sunabileceğiniz uygulamalarının nasıl oluşturulacağını açıklar.
+[Evrensel Windows Platformu](https://developer.microsoft.com/windows/apps)  
+Windows Mağazası aracılığıyla kullanıcılara kullanılabilir hale getirmek için Windows 10 uygulamalarının nasıl oluşturulacağını açıklar.
 
 [UWP uygulamaları için .NET](https://msdn.microsoft.com/library/windows/apps/mt185501.aspx)  
-Windows bilgisayarlara ve cihazlara dağıtılan Store uygulamaları için .NET Framework desteğini açıklar.
+Windows bilgisayarlarına ve cihazlarına dağıtılabilecek Mağaza uygulamaları için .NET Framework desteğini açıklar.
 
-[Windows Phone Silverlight için .NET API'si](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
-.NET Framework ile Windows Phone Silverlight uygulamaları oluşturmak için kullanabileceğiniz API'ları listeler.
+[Silverlight Windows Phone için .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))  
+Windows Phone Silverlight ile uygulama oluşturmak için kullanabileceğiniz .NET Framework API 'Leri listeler.
   
 [Çoklu Platformlar için Geliştirme](../../docs/standard/cross-platform/index.md)  
-.NET Framework istemci uygulaması birden çok hedef için kullanabileceğiniz farklı yöntemler açıklanır.
+Birden çok istemci uygulama türünü hedeflemek için .NET Framework kullanabileceğiniz farklı yöntemleri açıklar.
 
-[ASP.NET Web siteleri ile çalışmaya başlama](https://www.asp.net/get-started/websites)  
-ASP.NET kullanarak web uygulamaları geliştirebilirsiniz yollarını açıklar.
+[ASP.NET Web siteleri 'ni kullanmaya başlama](https://www.asp.net/get-started/websites)  
+ASP.NET kullanarak Web uygulamaları geliştirebileceğiniz yolları açıklanmaktadır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

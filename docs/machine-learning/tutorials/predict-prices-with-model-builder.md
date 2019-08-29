@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611450"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107136"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Model Oluşturucu ile gerileme kullanarak fiyatları tahmin etme
 
@@ -21,12 +21,12 @@ Model Oluşturucu fiyat tahmin şablonu, sayısal tahmin değeri gerektiren herh
 
 Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 > [!div class="checklist"]
-> * Verileri hazırlama ve anlama
-> * Senaryo seçin
-> * Verileri yükleme
-> * Modeli eğitme
-> * Modeli değerlendirme
-> * Tahmin için modeli kullanma
+> - Verileri hazırlama ve anlama
+> - Senaryo seçin
+> - Verileri yükleme
+> - Modeli eğitme
+> - Modeli değerlendirme
+> - Tahmin için modeli kullanma
 
 > [!NOTE]
 > Model Oluşturucu Şu anda önizleme aşamasındadır.
@@ -59,13 +59,13 @@ Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
 
     Belirtilen veri kümesi şu sütunları içerir:
 
-    * **vendor_id:** Taxı satıcısının KIMLIĞI bir özelliktir.
-    * **rate_code:** Taxı seyahati 'ın hız türü bir özelliktir.
-    * **passenger_count:** Seyahat üzerindeki pascuların sayısı bir özelliktir.
-    * **trip_time_in_secs:** Seyahati için geçen süre.
-    * **trip_distance:** Seyahat uzaklığı bir özelliktir.
-    * **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
-    * **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
+    - **vendor_id:** Taxı satıcısının KIMLIĞI bir özelliktir.
+    - **rate_code:** Taxı seyahati 'ın hız türü bir özelliktir.
+    - **passenger_count:** Seyahat üzerindeki pascuların sayısı bir özelliktir.
+    - **trip_time_in_secs:** Seyahati için geçen süre.
+    - **trip_distance:** Seyahat uzaklığı bir özelliktir.
+    - **payment_type:** Ödeme yöntemi (nakit veya kredi kartı) bir özelliktir.
+    - **fare_amount:** Ödenen toplam TAXI tarifeli havayolu etikettir.
 
 `label` Tahmin etmek istediğiniz sütundur. Regresyon görevi gerçekleştirirken, amaç sayısal bir değeri tahmin etmek için kullanılır. Bu fiyat tahmin senaryosunda, bir TAXI arttırıldığında 'nın maliyeti tahmin ediliyor. Bu nedenle, **fare_amount** etikettir. `features` ,`label`Modeli tahmin etmek için size izin verdiğiniz girişlerdir. Bu durumda, sütunların geri kalanı tarifeli havayolu tutarını tahmin etmek için özellik veya giriş olarak kullanılır.
 
@@ -190,12 +190,12 @@ Oluşturulan projelere başka bir çözümün içinde daha sonraki bir zamanda b
 
 Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > [!div class="checklist"]
-> * Verileri hazırlama ve anlama
-> * Senaryo seçin
-> * Verileri yükleme
-> * Modeli eğitme
-> * Modeli değerlendirme
-> * Tahmin için modeli kullanma
+> - Verileri hazırlama ve anlama
+> - Senaryo seçin
+> - Verileri yükleme
+> - Modeli eğitme
+> - Modeli değerlendirme
+> - Tahmin için modeli kullanma
 
 ### <a name="additional-resources"></a>Ek Kaynaklar
 

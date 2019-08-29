@@ -1,42 +1,42 @@
 ---
 title: Hesaplama İfadeleri
-description: Yazma hesaplamalar için uygun söz dizimini oluşturmayı F# olması sıralı ve birleşik kullanarak denetleyebilir, akışı yapılarını ve bağlamalar.
+description: "' De F# denetim akışı yapıları ve bağlamaları kullanılarak sıralanmak ve birleştirilebilecek hesaplamalar yazmak için uygun bir sözdizimi oluşturmayı öğrenin."
 ms.date: 03/15/2019
-ms.openlocfilehash: b352c5541bc31b5c583904b99651de9180c8afb3
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: bca328a09ff61fb76d30960221ee3350fcc25fc1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152024"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106579"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
-Hesaplama ifadeleri F# sıralı ve denetim akışı yapılarını ve bağlamalar kullanılarak birleştirilen hesaplamalar yazmak için kullanışlı bir söz dizimi sağlar. Hesaplama ifadesi türüne bağlı olarak bunlar, monadları, monoids monad dönüştürücüler ve applicative işlev nesneleri ifade etmenin bir yolu olarak düşünülebilir. Ancak, diğer diller aksine (gibi *gösterimi* Haskell içinde), tek bir soyutlama bağlı değil ve makroları veya diğer tür güvenmeyin azaltılarak kullanışlı ve bağlama duyarlı bir söz dizimi gerçekleştirmek için.
+İçindeki F# hesaplama ifadeleri, denetim akışı yapıları ve bağlamaları kullanılarak sıralanmak ve birleştirilebilecek hesaplamalar yazmak için kullanışlı bir sözdizimi sağlar. Hesaplama ifadesinin türüne bağlı olarak, monads, monoıd 'ler, Monad dönüştürücüler ve uygulama ve uygulama bilklerini ifade etmek için bir yol olarak düşünülebilir. Bununla birlikte, diğer dillerden farklı olarak (Haskell içindeki *Do gösterimi* gibi), bunlar tek bir soyutlama 'e bağlı değildir ve kolay ve içeriğe duyarlı bir sözdizimi gerçekleştirmek için makrolara veya diğer meta programlama formlarına güvenmeyin.
 
 ## <a name="overview"></a>Genel Bakış
 
-Hesaplamaları birçok biçimde olabilir. En yaygın hesaplamanın anlamak ve değiştirilmesi kolay olan tek iş parçacıklı yürütme biçimidir. Ancak, tüm biçimlerinin hesaplama tek iş parçacıklı yürütme basit değildir. Bazı örnekler:
+Hesaplamalar birçok form alabilir. En yaygın hesaplama biçimi, anlaşılması ve değiştirilmesi kolay olan tek iş parçacıklı yürütmektir. Ancak, tüm hesaplama biçimleri tek iş parçacıklı yürütme kadar basittir. Bazı örnekler:
 
-* Belirleyici olmayan hesaplamaları
-* Zaman uyumsuz hesaplamalar
-* Effectful hesaplamaları
-* Games'in hesaplamaları
+- Belirleyici olmayan hesaplamalar
+- Zaman uyumsuz hesaplamalar
+- Etkili hesaplamalar
+- Genel hesaplamalar
 
-Daha genel vardır *bağlama duyarlı* hesaplamalar bir uygulamanın bazı bölümlerini gerçekleştirmeniz gerekir. Belirli bir bağlam olmadan bunu yapmasını önlemek için soyutlama dışında "sızıntısı" hesaplamalar kolay olduğundan bağlama duyarlı kod yazma, zor olabilir. Bu soyutlama genellikle kendiniz tarafından olmasının nedeni yazmak zor F# yorumun yapmak için genelleştirilmiş bir yolu yoktur **hesaplama ifadeleri**.
+Daha genel olarak, bir uygulamanın belirli bölümlerinde gerçekleştirmeniz gereken *bağlama duyarlı* hesaplamalar vardır. Bağlama duyarlı kod yazmak zor olabilir. bu sayede, bu şekilde, belirli bir bağlam dışındaki hesaplamalar, bunu yapmaktan kaçınmak için soyut hale gelir. Bu soyutlamalar genellikle kendi kendinize yazmak zordur ve F# bu nedenle **Hesaplama ifadeleri**olarak adlandırılan genelleştirilmiş bir yoldur.
 
-Hesaplama ifadeleri, bağlama duyarlı hesaplamalar kodlaması için Tekdüzen bir söz dizimi ve Özet modeli sunar.
+Hesaplama ifadeleri, bağlama duyarlı hesaplamaları kodlamak için Tekdüzen bir sözdizimi ve soyutlama modeli sunar.
 
-Her hesaplama ifadesi tarafından yedeklenen bir *Oluşturucu* türü. Oluşturucu türü hesaplama ifadesi için kullanılabilen işlemleri tanımlar. Bkz: [yeni bir tür, hesaplama ifadesi oluşturma](computation-expressions.md#creating-a-new-type-of-computation-expression), özel hesaplama ifadesi oluşturma işlemini gösterir.
+Her hesaplama ifadesi bir *Oluşturucu* türü tarafından desteklenir. Oluşturucu türü hesaplama ifadesi için kullanılabilir işlemleri tanımlar. Bkz. özel bir hesaplama ifadesinin nasıl oluşturulacağını gösteren [Yeni bir hesaplama Ifadesi türü oluşturma](computation-expressions.md#creating-a-new-type-of-computation-expression).
 
-### <a name="syntax-overview"></a>Söz dizimi genel bakış
+### <a name="syntax-overview"></a>Sözdizimine genel bakış
 
-Tüm hesaplama ifadeleri, aşağıdaki biçime sahiptir:
+Tüm hesaplama ifadeleri aşağıdaki biçimdedir:
 
 ```
 builder-expr { cexper }
 ```
 
-Burada `builder-expr` hesaplama ifadesi tanımlayan bir oluşturucu türüne adıdır ve `cexper` hesaplama ifadesi ifade gövdesi. Örneğin, `async` hesaplama ifadesi kod şuna benzeyebilir:
+, hesaplama ifadesini tanımlayan bir Oluşturucu türünün adıdır ve `cexper` hesaplama ifadesinin ifade gövdesidir. `builder-expr` Örneğin, `async` hesaplama ifade kodu şöyle görünebilir:
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-Özel, ek bir söz dizimi bir hesaplama ifadesi içinde mevcut değildir önceki örnekte gösterildiği gibi. Hesaplama ifadeleri ile aşağıdaki ifade biçimleri desteklenir:
+Önceki örnekte gösterildiği gibi, bir hesaplama ifadesinde bulunan özel, ek bir sözdizimi vardır. Aşağıdaki ifade formları hesaplama ifadelerinde mümkündür:
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Her biri bu anahtar sözcükler ve diğer standart F# anahtar sözcükler yalnızca bir hesaplama ifadesinde kullanılabilir yedekleme Oluşturucu türü tanımlanmışsa. Bunun tek özel durum `match!`, kendisi kullanımına yönelik söz dizimi sugar `let!` sonucuna bir desen eşleşmesi tarafından izlenen.
+Bu anahtar sözcüklerin her biri ve diğer standart F# anahtar sözcükler yalnızca, bir hesaplama ifadesinde, yalnızca bir destek Oluşturucu türünde tanımlıysa kullanılabilir. Bunun tek istisnası `match!`, bu, sonuç üzerinde bir kalıp eşleşmesi tarafından `let!` kullanılması için kendi sözdizimsel cukr.
 
-Oluşturucu türü hesaplama ifadesi parçalarını birleştirilir biçimini yöneten özel yöntemleri tanımlayan bir nesnedir; diğer bir deyişle, hesaplama ifadesi nasıl davranacağını metotlarını denetler. Bir oluşturucu sınıf tanımlamak için başka bir çoğu işlemi özelleştirmenize olanak sağlayan söylemek yoludur F# , döngüler ve bağlamalar gibi oluşturur.
+Oluşturucu türü, hesaplama ifadesinin parçalarının birleştirilme biçimini yöneten özel yöntemleri tanımlayan bir nesnedir; diğer bir deyişle, yöntemi hesaplama ifadesinin nasıl davranacağını denetler. Bir Oluşturucu sınıfını tanımlamanın başka bir yolu da, döngüler ve bağlamalar gibi birçok F# yapı işlemini özelleştirmenizi sağlar.
 
 ### `let!`
 
-`let!` Anahtar sözcüğü bir ad ile başka bir hesaplama ifadesi için bir çağrı sonucunu bağlar:
+`let!` Anahtar sözcüğü bir çağrının sonucunu başka bir hesaplama ifadesine bir ada bağlar:
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-Bir hesaplama ifadesi ile çağrı bağlama `let`, hesaplama ifadesi sonucu almazsınız. Bunun yerine, değeri bağlı *gerçekleşmemiş* çağırmak için hesaplama ifadesi. Kullanım `let!` sonucu bağlamak için.
+İle `let`bir hesaplama ifadesine çağrı bağlarsanız hesaplama ifadesinin sonucunu elde edersiniz. Bunun yerine, *gerçekleştirilmemiş* çağrının değerini o hesaplama ifadesine bağlacaksınız. Sonuca `let!` bağlamak için kullanın.
 
-`let!` tarafından tanımlanan `Bind(x, f)` üyesi Oluşturucu türü.
+`let!`, Oluşturucu türündeki `Bind(x, f)` üye tarafından tanımlanır.
 
 ### `do!`
 
-`do!` Anahtar sözcüğü, bir hesaplama ifadesi çağıran döndürür bir `unit`-ister türü (tarafından tanımlanan `Zero` üyesi oluşturucu üzerinde):
+Anahtar sözcüğü, benzeri `unit` `Zero` tür döndüren bir hesaplama ifadesini çağırmak içindir (Oluşturucu üzerinde üye tarafından tanımlanır): `do!`
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-İçin [zaman uyumsuz iş akışı](asynchronous-workflows.md), bu tür `Async<unit>`. Türü diğer hesaplama ifadeleri için büyük olasılıkla `CExpType<unit>`.
+[Zaman uyumsuz iş akışı](asynchronous-workflows.md)için bu tür olur `Async<unit>`. Diğer hesaplama ifadeleri için türün büyük olasılıkla olması `CExpType<unit>`olasıdır.
 
-`do!` tarafından tanımlanan `Bind(x, f)` Oluşturucu türü üyesinde burada `f` üreten bir `unit`.
+`do!`, Oluşturucu türündeki `Bind(x, f)` üye tarafından tanımlanır, burada `f` bir `unit`oluşturur.
 
 ### `yield`
 
-`yield` Anahtar sözcüğü, böylece olarak kullanılabilecek bir değer hesaplama ifadesinden döndürmek için bir <xref:System.Collections.Generic.IEnumerable%601>:
+Anahtar sözcüğü, bir <xref:System.Collections.Generic.IEnumerable%601>değer olarak tüketilebilmesi için hesaplama ifadesinden bir değer döndürmektir: `yield`
 
 ```fsharp
 let squares =
@@ -112,13 +112,13 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Olduğu gibi [C# anahtar sözcüğü yield](../../csharp/language-reference/keywords/yield.md), hesaplama ifadesi içindeki her öğeyi geri yinelendiğinde olarak oluşturulur.
+[İçindeki C#yield anahtar kelimesiyle ](../../csharp/language-reference/keywords/yield.md)olduğu gibi, hesaplama ifadesindeki her öğe yinelene kadar geri getirilir.
 
-`yield` tarafından tanımlanan `Yield(x)` Oluşturucu türü üyesinde burada `x` geri yield öğedir.
+`yield`, Oluşturucu türündeki `Yield(x)` üye tarafından tanımlanır; burada `x` , geri alınacak öğedir.
 
 ### `yield!`
 
-`yield!` Anahtar sözcüğü, bir hesaplama ifadesi değerleri koleksiyonunu düzleştirme için:
+`yield!` Anahtar sözcüğü, bir hesaplama ifadesinden bir değer koleksiyonunu düzleştirme için kullanılır:
 
 ```fsharp
 let squares =
@@ -140,13 +140,13 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-Hesaplama ifadesi değerlendirildiğinde, çağıran `yield!` öğelerinden geri bir sonuç düzleştirme tek, veriyor olması.
+Değerlendirildiğinde, tarafından `yield!` çağrılan hesaplama ifadesinde kendi öğeleri bir tane geri alınır ve bu, sonucu düzleştirme.
 
-`yield!` tarafından tanımlanan `YieldFrom(x)` Oluşturucu türü üyesinde burada `x` değerleri oluşan bir koleksiyondur.
+`yield!`, bir değer koleksiyonu `YieldFrom(x)` olanOluşturucutüründekiüyetarafındantanımlanır.`x`
 
 ### `return`
 
-`return` Anahtar sözcüğü hesaplama ifadesi için karşılık gelen türünde bir değeri sarar. Hesaplama ifadeleri kullanarak yanı sıra `yield`, "bir hesaplama ifadesi tamamlamak için" kullanılır:
+`return` Anahtar sözcüğü, hesaplama ifadesine karşılık gelen türdeki bir değeri sarmalar. Kullanılarak `yield`hesaplama ifadelerinden, bir hesaplama ifadesini "tamamlaması" için kullanılır:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +159,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` tarafından tanımlanan `Return(x)` Oluşturucu türü üyesinde burada `x` sarmalamak için öğesi.
+`return`, Oluşturucu türündeki `Return(x)` üye tarafından tanımlanır; burada, kaydırabileceğiniz `x` öğedir.
 
 ### `return!`
 
-`return!` Anahtar sözcüğü bir hesaplama ifadesi değerini fark etti ve hesaplama ifadesi için karşılık gelen türü sonucu sarmalar:
+`return!` Anahtar sözcüğü bir hesaplama ifadesinin değerini yeniden ayırır ve bu sonucu hesaplama ifadesine karşılık gelen türde kaydırır:
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +175,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` tarafından tanımlanan `ReturnFrom(x)` Oluşturucu türü üyesinde burada `x` başka bir hesaplama ifadesi.
+`return!`, Oluşturucu türündeki `ReturnFrom(x)` üye tarafından tanımlanır; burada `x` başka bir hesaplama ifadesi bulunur.
 
 ### `match!`
 
-İle başlayarak F# 4.5 `match!` anahtar sözcüğü verir satır içi bir çağrı sonucunu üzerinde başka bir hesaplama ifadesi ve desen eşleştirme için:
+`match!` Anahtar sözcüğü 4,5 ile F# başlayarak, başka bir hesaplama ifadesine bir çağrı ve sonuç olarak bir model eşleşmesi sağlar:
 
 ```fsharp
 let doThingsAsync url =
@@ -190,45 +190,45 @@ let doThingsAsync url =
     }
 ```
 
-Bir hesaplama ifadesi ile çağrılırken `match!`, gibi çağrısının sonucuna fark edeceksiniz `let!`. Bu genellikle bir hesaplama ifadesi sonucu olduğu çağrıldığında kullanılır bir [isteğe bağlı](options.md).
+İle `match!`bir hesaplama ifadesi çağrılırken, bunun gibi `let!`çağrının sonucu oluşur. Bu, genellikle sonucun [isteğe bağlı](options.md)olduğu bir hesaplama ifadesi çağrılırken kullanılır.
 
 ## <a name="built-in-computation-expressions"></a>Yerleşik hesaplama ifadeleri
 
-F# Çekirdek kitaplığı, üç yerleşik hesaplama ifadeleri tanımlar: [Sequence ifadeleri](sequences.md), [zaman uyumsuz iş akışları](asynchronous-workflows.md), ve [sorgu ifadelerinde](query-expressions.md).
+Çekirdek F# kitaplık, üç yerleşik hesaplama ifadesi tanımlar: [Dizi ifadeleri](sequences.md), [zaman uyumsuz Iş akışları](asynchronous-workflows.md)ve [sorgu ifadeleri](query-expressions.md).
 
-## <a name="creating-a-new-type-of-computation-expression"></a>Yeni bir hesaplama ifadesi türü oluşturma
+## <a name="creating-a-new-type-of-computation-expression"></a>Yeni bir hesaplama Ifadesi türü oluşturuluyor
 
-Builder sınıfı oluşturarak ve sınıf üzerinde belirli özel yöntemler tanımlayarak kendi hesaplama ifadeleri özelliklerini tanımlayabilirsiniz. Builder sınıfı, isteğe bağlı olarak aşağıdaki tabloda listelendiği gibi yöntemleri tanımlayabilirsiniz.
+Bir Oluşturucu sınıfı oluşturup sınıf üzerinde belirli özel yöntemleri tanımlayarak kendi hesaplama ifadelerinizin özelliklerini tanımlayabilirsiniz. Oluşturucu sınıfı, isteğe bağlı olarak aşağıdaki tabloda listelenen yöntemleri tanımlayabilir.
 
-Aşağıdaki tablo, bir iş akışı Oluşturucu sınıfta kullanılabilir yöntemleri açıklar.
+Aşağıdaki tabloda, bir iş akışı Oluşturucu sınıfında kullanılabilecek yöntemler açıklanmıştır.
 
-|**Yöntemi**|**Tipik bir imza**|**Açıklama**|
+|**Yöntemi**|**Tipik imza (ler)**|**Açıklama**|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|İçin adlı `let!` ve `do!` hesaplama ifadeleri de.|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|Bir hesaplama ifadesi bir işlev olarak sarmalar.|
-|`Return`|`'T -> M<'T>`|İçin adlı `return` hesaplama ifadeleri de.|
-|`ReturnFrom`|`M<'T> -> M<'T>`|İçin adlı `return!` hesaplama ifadeleri de.|
-|`Run`|`M<'T> -> M<'T>` veya<br /><br />`M<'T> -> 'T`|Hesaplama ifadesi yürütür.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` veya<br /><br />`M<unit> * M<'T> -> M<'T>`|Hesaplama ifadeleri sıralama için çağrılır.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` veya<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|İçin adlı `for...do` hesaplama ifadeleri ifadelerinde.|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|İçin adlı `try...finally` hesaplama ifadeleri ifadelerinde.|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|İçin adlı `try...with` hesaplama ifadeleri ifadelerinde.|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|İçin adlı `use` hesaplama ifadeleri bağlarında.|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|İçin adlı `while...do` hesaplama ifadeleri ifadelerinde.|
-|`Yield`|`'T -> M<'T>`|İçin adlı `yield` hesaplama ifadeleri ifadelerinde.|
-|`YieldFrom`|`M<'T> -> M<'T>`|İçin adlı `yield!` hesaplama ifadeleri ifadelerinde.|
-|`Zero`|`unit -> M<'T>`|İçin boş olarak adlandırılan `else` , dallar `if...then` hesaplama ifadeleri ifadelerinde.|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Hesaplama deyimine geçirilecek gösterir `Run` üyesi olarak bir teklif. Bu, tüm tırnak içine bir hesaplama örneklerini çevirir.|
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|Hesaplama ifadelerinde `let!` ve `do!` için çağırılır.|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|Bir hesaplama ifadesini işlev olarak kaydırır.|
+|`Return`|`'T -> M<'T>`|Hesaplama ifadelerinde `return` için çağırılır.|
+|`ReturnFrom`|`M<'T> -> M<'T>`|Hesaplama ifadelerinde `return!` için çağırılır.|
+|`Run`|`M<'T> -> M<'T>`veya<br /><br />`M<'T> -> 'T`|Bir hesaplama ifadesi yürütür.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>`veya<br /><br />`M<unit> * M<'T> -> M<'T>`|Hesaplama ifadelerinde sıralama için çağırılır.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`veya<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Hesaplama ifadelerinde `for...do` ifadeler için çağırılır.|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Hesaplama ifadelerinde `try...finally` ifadeler için çağırılır.|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Hesaplama ifadelerinde `try...with` ifadeler için çağırılır.|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Hesaplama ifadelerinde `use` bağlamalar için çağırılır.|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|Hesaplama ifadelerinde `while...do` ifadeler için çağırılır.|
+|`Yield`|`'T -> M<'T>`|Hesaplama ifadelerinde `yield` ifadeler için çağırılır.|
+|`YieldFrom`|`M<'T> -> M<'T>`|Hesaplama ifadelerinde `yield!` ifadeler için çağırılır.|
+|`Zero`|`unit -> M<'T>`|Hesaplama ifadelerinde `if...then` ifadelerin `else` boş dalları için çağırılır.|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Hesaplama ifadesinin `Run` üyeye bir teklif olarak geçtiğini gösterir. Bir hesaplamanın tüm örneklerini bir teklife çevirir.|
 
-Bir oluşturucu sınıftaki yöntemlerin birçoğu kullanın ve dönüş bir `M<'T>` genellikle örneğin birleştirilmeye, hesaplamalar türünü belirtir ayrı olarak tanımlanan bir tür olan yapı `Async<'T>` zaman uyumsuz iş akışları için ve `Seq<'T>` Sıralı iş akışları. Bu yöntem imzalarını birleştirilir ve birbirleri ile iç içe geçmiş kendisine etkinleştirin; böylelikle bir yapı döndürülen iş akışı nesnesinin sonraki geçirilebilir. Derleyici, bir hesaplama ifade ayrıştırırken, yukarıdaki tabloda yöntemleri ve hesaplama ifadesi kodu kullanarak, iç içe geçmiş işlev çağrıları bir dizi ifade dönüştürür.
+Bir Oluşturucu sınıfındaki yöntemlerin birçoğu kullanır ve bir `M<'T>` yapı döndürür; Örneğin, zaman uyumsuz iş akışları için, örneğin, `Async<'T>` zaman uyumsuz iş akışları ve `Seq<'T>` sıralı iş akışları için. Bu yöntemlerin imzaları, bunların birbirleriyle birlikte birleştirilmelerini ve iç içe aktarılmasını sağlar, böylece bir yapıdan döndürülen iş akışı nesnesinin bir sonrakine geçirilmesi gerekir. Derleyici, bir hesaplama ifadesini ayrıştırdığında, önceki tablodaki yöntemleri ve hesaplama ifadesindeki kodu kullanarak, ifadeyi iç içe geçmiş işlev çağrılarının dizisine dönüştürür.
 
-İç içe geçmiş ifade aşağıdaki şekildedir:
+İç içe geçmiş ifade aşağıdaki biçimdedir:
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu sınıfta tanımlı değil göz ardı edilir. Olarak burada belirtilen hesaplama ifadesi gövdesinin `{| cexpr |}`, aşağıdaki tabloda açıklanan çevirileri tarafından Oluşturucu sınıfının yöntemlerini içeren çağırıyor çevrilir. Hesaplama ifadesi `{| cexpr |}` tanımlı yinelemeli olarak bu çevirileri göre olduğundan burada `expr` olduğu bir F# ifade ve `cexpr` hesaplama ifadesi.
+Yukarıdaki kodda, `Run` ve `Delay` çağrıları hesaplama ifadesi Oluşturucu sınıfında tanımlanmamışsa atlanır. Burada olarak `{| cexpr |}`belirtilen hesaplama ifadesinin gövdesi, aşağıdaki tabloda açıklanan Çeviriler tarafından Oluşturucu sınıfının yöntemlerini içeren çağrılara çevrilir. Hesaplama ifadesi `{| cexpr |}` bir `expr` F# ifade ve`cexpr` bir hesaplama ifadesi olduğu bu çevirilerine göre yinelemeli olarak tanımlanır.
 
 |İfade|Çeviri|
 |----------|-----------|
@@ -253,9 +253,9 @@ Yukarıdaki kodda, çağrıları `Run` ve `Delay` hesaplama ifadesi Oluşturucu 
 |<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
 |<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-Önceki tabloda `other-expr` tabloda listelenmeyen bir ifade açıklar. Bir oluşturucu sınıf tüm yöntemleri uygulayın ve tüm önceki tabloda listelenen çevirileri destek gerekmez. Uygulanmaz bu yapıları hesaplama türü ifadelerinde kullanılamaz. Örneğin desteklemek istemiyorsanız, `use` anahtar sözcüğü, hesaplama ifadeleri de tanımını çıkarabilirsiniz `Use` Oluşturucu sınıfınızdaki.
+Önceki tabloda, `other-expr` tabloda başka bir şekilde listelenmeyen bir ifade açıklanmaktadır. Bir Oluşturucu sınıfının tüm yöntemleri uygulaması ve önceki tabloda listelenen tüm çevirileri desteklemesi gerekmez. Uygulanmayan yapılar, bu türün hesaplama ifadelerinde kullanılamaz. Örneğin, hesaplama ifadelerinizin `use` anahtar sözcüğünü desteklemek istemiyorsanız, Oluşturucu sınıfınızdaki `Use` tanımını atlayabilirsiniz.
 
-Aşağıdaki kod örneği, bir hesaplama olabilecek bir dizi aynı anda tek bir adımda değerlendirilen olarak kapsülleyen bir hesaplama ifadesi gösterir. Bir ayırt edici birleşim türü `OkOrException`, ifade hata durumunu şimdiye değerlendirilen olarak kodlar. Bu kod Oluşturucu yöntemleri bazı ortak uygulamalar gibi hesaplama ifadeleri kullanabileceğiniz birkaç tipik desenleri gösterir.
+Aşağıdaki kod örneği, bir hesaplamayı tek seferde bir adım değerlendirilebilecek bir dizi adım olarak kapsülleyen bir hesaplama ifadesi gösterir. Ayrılmış bir birleşim türü `OkOrException`olan, ifadenin hata durumunu şu ana kadar değerlendirilen şekilde kodluyor. Bu kod, bazı Oluşturucu metotlarının ortak uygulamaları gibi hesaplama ifadelerinizi kullanabileceğiniz birkaç tipik deseni gösterir.
 
 ```fsharp
 // Computations that can be run step by step
@@ -378,17 +378,17 @@ comp |> step |> step
 comp |> step |> step |> step |> step 
 ```
 
-Hesaplama ifadesi ifade döndürür bir temel türü vardır. Temel alınan türü, hesaplanan bir sonuç ya da gerçekleştirilebilir Gecikmeli bir hesaplama gösterebilir veya bazı koleksiyon türü yineleme yapmak için bir yol sağlayabilir. Önceki örnekte, temel türde **sonunda**. Bir sıralama ifadesi için temel türdür <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bir sorgu ifadesi için temel türdür <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Zaman uyumsuz bir iş akışı için temel türdür [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). `Async` Nesne sonucu hesaplamak için gerçekleştirilecek işin temsil eder. Örneğin, çağrı [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) hesaplama çalıştırmak ve sonucu döndürür.
+Hesaplama ifadesinde, ifadenin döndürdüğü temel bir tür vardır. Temel alınan tür, gerçekleştirilebilecek bir sonucu veya bir Gecikmeli hesaplamayı temsil edebilir veya bazı koleksiyon türleri arasında yineleme yapmak için bir yol sağlayabilir. Önceki örnekte, temel alınan tür **sonunda**. Bir dizi ifadesi için, temel alınan tür olur <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Bir sorgu ifadesi için, temel alınan tür olur <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Zaman uyumsuz bir iş akışı için, temel alınan [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)tür olur. `Async` Nesnesi, sonucu hesaplamak için gerçekleştirilecek işi temsil eder. Örneğin, bir hesaplama yürütmek [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) ve sonucu döndürmek için öğesini çağırın.
 
-## <a name="custom-operations"></a>Özel işlemler
+## <a name="custom-operations"></a>Özel Işlemler
 
-Hesaplama ifadesi üzerinde özel bir işlemi tanımlar ve bir işleç bir hesaplama ifadesi olarak özel bir işlemi kullanın. Örneğin, bir sorgu ifadesinde bir sorgu işleci içerebilir. Özel bir işlemi tanımlarken Yield tanımlamanız gerekir ve hesaplama ifadesi yöntemleri. Özel bir işlemi tanımlamak için hesaplama ifadesi için bir oluşturucu sınıf koyun ve ardından uygulama [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Bu öznitelik, bir özel işleminde kullanılacak adı olan bir bağımsız değişkeni olarak bir dize alır. Bu ad, açılış kaşlı ayracından hesaplama deyimine başlangıcında kapsama gelir. Bu nedenle, bu bloğunda bir özel işlem olarak aynı ada sahip tanımlayıcılar kullanmamalısınız. Örneğin, tanımlayıcıların gibi kullanmaktan kaçının `all` veya `last` sorgu ifadelerinde.
+Hesaplama ifadesinde özel bir işlem tanımlayabilir ve bir hesaplama ifadesinde bir işleç olarak özel bir işlem kullanabilirsiniz. Örneğin, sorgu ifadesine bir sorgu işleci ekleyebilirsiniz. Özel bir işlem tanımladığınızda, hesaplama ifadesinde yield ve yöntemleri tanımlamanız gerekir. Özel bir işlem tanımlamak için, bunu hesaplama ifadesi için bir Oluşturucu sınıfına koyun ve ardından öğesini uygulayın [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Bu öznitelik bir dizeyi bir özel işlemde kullanılacak olan bir bağımsız değişken olarak alır. Bu ad, hesaplama ifadesinin açma küme ayracı başlangıcında kapsama girer. Bu nedenle, bu bloktaki özel bir işlemle aynı ada sahip tanımlayıcılar kullanmamanız gerekir. Örneğin, sorgu ifadelerinde veya `all` `last` gibi tanımlayıcıların kullanılmasını önleyin.
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a>Mevcut oluşturucular yeni özel işlemleri ile genişletme
+### <a name="extending-existing-builders-with-new-custom-operations"></a>Mevcut oluşturucuları yeni özel Işlemlerle genişletme
 
-Bir oluşturucu sınıf zaten varsa, kendi özel işlemler öğesinden Bu oluşturucu sınıf dışında genişletilebilir. Uzantılar, modüller bildirilmelidir. Ad alanları, aynı dosya ve tür tanımlandığı ad alanı bildirimi grubu dışında uzantı üyeleri içeremez.
+Zaten bir Oluşturucu sınıfınız varsa, özel işlemleri bu Oluşturucu sınıfının dışından genişletilebilir. Uzantılar modüllerde bildirilmelidir. Ad alanları, aynı dosya ve türün tanımlandığı aynı ad alanı bildirim grubu dışında uzantı üyeleri içeremez.
 
-Aşağıdaki örnek, varolan uzantısı gösterir `Microsoft.FSharp.Linq.QueryBuilder` sınıfı.
+Aşağıdaki örnek, varolan `Microsoft.FSharp.Linq.QueryBuilder` sınıfının uzantısını gösterir.
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with

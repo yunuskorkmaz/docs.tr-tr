@@ -1,135 +1,135 @@
 ---
-title: C# 7.0 - C# Kılavuzu yenilikler nelerdir?
-description: Yeni özelliklere genel bakış sürümünü 7.0 almak C# dili.
+title: C# 7,0 C# kılavuzundaki yenilikler
+description: C# Dilin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347452"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105722"
 ---
-# <a name="whats-new-in-c-70"></a>C# 7.0 yenilikleri
+# <a name="whats-new-in-c-70"></a>C# 7,0 sürümündeki yenilikler
 
-C# 7.0 C# dili için yeni özellikler ekler:
-* [`out` Değişkenleri](#out-variables)
-  - Bildirebilirsiniz `out` kullanıldıkları yöntemi için bağımsız değişkeni olarak satır içi değerleri.
-* [Demetler](#tuples)
-  - Birden çok ortak alanları içeren basit, adsız türleri oluşturabilirsiniz. Bu tür semantikleri, derleyiciler ve Araçlar IDE anlayın.
-* [Atılanlar](#discards)
-  - İptali atanan değer hakkında umursamaz atamalarını kullanılan geçici, salt yazılır değişkenlerdir. Diziler ve kullanıcı tanımlı türler Ayrıştırma sırasında yanı sıra ile yöntemleri çağrılırken en yararlı oldukları `out` parametreleri.
-* [Desen Eşleştirme](#pattern-matching)
-  - Rastgele türler ve bu türlerin üyelerinin değerlerini göre dallanma mantığı oluşturabilirsiniz.
-* [`ref` yerel değerleri ve dönüşleri](#ref-locals-and-returns)
-  - Diğer depolama başvuruları yöntemi yerel değişkenleri ve dönüş değerleri olabilir.
-* [Yerel İşlevler](#local-functions)
-  - İşlevler, kapsam ve görünürlük sınırlamak için diğer işlevler içinde iç içe yerleştirebilirsiniz.
-* [Daha fazla ifade gövdeli üyeler](#more-expression-bodied-members)
-  - İfadeleri kullanarak yazılabilir üye listesini geldi.
-* [`throw` İfadeleri](#throw-expressions)
-  - Daha önce olduğundan izin vermediği kod yapıları özel durumlar oluşturabilecek `throw` bir ifadesi.
-* [Genelleştirilmiş bir zaman uyumsuz dönüş türleri](#generalized-async-return-types)
-  - Yöntemleri ile bildirilmiş `async` değiştiricisi, ek olarak diğer türleri döndürebilir `Task` ve `Task<T>`.
-* [Sayısal sabit değer sözdizimi geliştirmeleri](#numeric-literal-syntax-improvements)
-  - Yeni belirteç sayısal sabitlere okunabilirliği geliştirir.
+C#7,0, C# dile bir dizi yeni özellik ekler:
+- [`out`değişkenlerinin](#out-variables)
+  - Değerleri, kullanıldığı `out` yönteme bağımsız değişken olarak satır içi olarak bildirebilirsiniz.
+- [Demetler](#tuples)
+  - Birden çok ortak alan içeren hafif, adlandırılmamış türler oluşturabilirsiniz. Derleyiciler ve IDE araçları bu türlerin semantiğini anlayın.
+- [Atılanlar](#discards)
+  - Atama, atanan değer hakkında endişelenmezseniz atamalar içinde kullanılan geçici, salt yazılır değişkenlerdir. Bunlar, tanımlama grupları ve Kullanıcı tanımlı türler oluştururken ve parametreleri ile `out` Yöntemler çağrılırken faydalıdır.
+- [Desen Eşleştirme](#pattern-matching)
+  - Bu türlerin üyelerinin rastgele türlerini ve değerlerini temel alarak dallanma mantığı oluşturabilirsiniz.
+- [`ref`Yereller ve döndürür](#ref-locals-and-returns)
+  - Yöntem yerel değişkenleri ve dönüş değerleri diğer depolamaya başvuru olabilir.
+- [Yerel Işlevler](#local-functions)
+  - Kendi kapsamını ve görünürlüğünü sınırlamak için işlevleri diğer işlevlerde iç içe geçirebilirsiniz.
+- [Daha fazla ifade-Bodied Üyeler](#more-expression-bodied-members)
+  - İfadeler kullanılarak yazılabilir üyelerin listesi artmıştır.
+- [`throw`İfadelerde](#throw-expressions)
+  - Daha önce izin verilmeyen kod yapılarında özel durumlar oluşturabilir, çünkü `throw` bir deyimidir.
+- [Genelleştirilmiş zaman uyumsuz dönüş türleri](#generalized-async-return-types)
+  - Değiştiriciyle belirtilen yöntemler `async` , `Task` ve ' `Task<T>`a ek olarak başka türler döndürebilir.
+- [Sayısal sabit değer sözdizimi geliştirmeleri](#numeric-literal-syntax-improvements)
+  - Yeni belirteçler Sayısal sabitler için okunabilirliği geliştirir.
 
-Bu makalenin geri kalanında her özelliğine genel bakış sağlar. Her bir özellik için ardındaki mantık öğreneceksiniz. Söz dizimi öğreneceksiniz. Bu özellikleri kullanarak ortamınıza keşfedebilirsiniz `dotnet try` genel aracı:
+Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. Her bir özellik için, arkasında yatan bir düşünme olduğunu öğrenirsiniz. Söz dizimini öğrenirsiniz. `dotnet try` Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz:
 
-1. Yükleme [dotnet deneyin](https://github.com/dotnet/try/blob/master/README.md#setup) genel aracı.
-1. Kopya [dotnet/try-samples](https://github.com/dotnet/try-samples) depo.
-1. Geçerli dizin kümesine *csharp7* alt *deneyin-samples* depo.
+1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
+1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
+1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
 1. `dotnet try`'i çalıştırın.
 
-## <a name="out-variables"></a>`out` Değişkenleri
+## <a name="out-variables"></a>`out`değişkenlerinin
 
-Destekleyen varolan sözdizimi `out` parametreleri bu sürümde geliştirildi. Artık bildirebilirsiniz `out` ayrı bildirim deyimindeki yazmak yerine bir yöntem çağrısının bağımsız değişken listesinde değişkenleri:
+Bu sürümde, parametreleri destekleyen `out` mevcut sözdizimi geliştirilmiştir. Artık değişkenleri, ayrı `out` bir bildirim bildirimi yazmak yerine bir yöntem çağrısının bağımsız değişken listesinde bildirebilirsiniz:
 
 [!code-csharp[OutVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVariableDeclarations "Out variable declarations")]
 
-Türünü belirtmek isteyebilirsiniz `out` , anlaşılması için değişken yukarıda da gösterildiği gibi. Ancak bir türü örtük olarak belirlenmiş yerel değişken kullanarak dili destekler:
+Yukarıda gösterildiği gibi, açıklık için `out` değişkenin türünü belirtmek isteyebilirsiniz. Ancak, dil örtük olarak yazılmış bir yerel değişken kullanmayı destekler:
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Kodu daha kolay.
-  - Out değişkeni da değil başka bir satırda yukarıdaki kullandığınız bildirdiğiniz.
-* Bir başlangıç değeri atamanız gerekmez.
-  - Bildirmek `out` bunu atanmadan önce değişken bir yöntem çağrısında kullanıldığı yanlışlıkla kullanamazsınız.
+- Kodu daha kolay okunabilir.
+  - Yukarıdaki diğer bir satırda değil, kullandığınız yerde çıkış değişkenini bildirirsiniz.
+- İlk değer atamaya gerek yoktur.
+  - Yöntemi bir yöntem `out` çağrısında kullanıldığı yerde bildirerek, yanlışlıkla onu atanmadan kullanamazsınız.
 
 ## <a name="tuples"></a>Demetler
 
-C# sınıfları ve, tasarım amacı açıklamak için kullanılan yapıları için zengin bir söz dizimi sağlar. Ancak bazen zengin Bu sözdizimi en az avantajı ile ek iş gerektirir. Birden fazla veri öğesini içeren basit bir yapıya gereken yöntemler genellikle yazabilir. Bu senaryoları desteklemek için *diziler* C# için eklendi. Diziler veri üyelerini temsil etmek için birden fazla alan içeren basit veri yapılarıdır.
-Alanlarını doğrulandı değildir ve kendi yöntem tanımlanamaz
+C#, tasarım amacını açıklamak için kullanılan sınıflar ve yapılar için zengin bir sözdizimi sağlar. Ancak bazen zengin söz dizimi çok az avantajlı ek iş gerektirir. Genellikle birden fazla veri öğesi içeren basit bir yapıya ihtiyacı olan Yöntemler yazabilirsiniz. Bu senaryoları desteklemek için , ' ye C#eklenmiştir. Tanımlama grupları, veri üyelerini temsil etmek için birden çok alan içeren hafif veri yapılarıdır.
+Alanlar doğrulanmaz ve kendi yöntemlerinizi tanımlayamazsınız
 
 > [!NOTE]
-> Diziler C# 7.0 önce kullanılabilir, ancak verimsiz ve dil desteği yok vardı.
-> Bu dizi öğeleri yalnızca olarak başvurulan geliyordu `Item1`, `Item2` ve benzeri. C# 7.0 alanlarını yeni ve daha verimli bir tanımlama grubu türleri kullanarak bir demet için anlamsal adları sağlayan diziler için dil desteği sunar.
+> Tanımlama grupları 7,0 'den C# önce kullanılabilir, ancak verimsiz ve dil desteği yoktu.
+> Bu, demet öğelerine yalnızca olarak `Item1`başvurulabilir, `Item2` vb. anlamına gelir. C#7,0, tanımlama grupları için dil desteğini tanıtır ve bu, yeni, daha verimli demet türleri kullanarak bir kayıt düzeni alanları için anlamsal adlar sağlar.
 
-Her üye için bir değer atamak, ve isteğe bağlı olarak her bir tanımlama grubu üyelerinin anlam adları sağlayarak bir tanımlama grubu oluşturabilirsiniz:
+Her üyeye bir değer atayarak ve isteğe bağlı olarak tanımlama grubu üyelerinin her birine anlamsal adlar sağlayarak bir tanımlama grubu oluşturabilirsiniz:
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-`namedLetters` Tanımlama grubu olarak adlandırılan alanları içeren `Alpha` ve `Beta`. Bu adları, yalnızca derleme zamanında mevcut ve çalışma zamanında yansıma kullanarak demet incelerken örneğin korunmaz.
+Kayıt düzeni `Alpha` ve`Beta`olarak adlandırılan alanları içerir. `namedLetters` Bu adlar yalnızca derleme sırasında bulunur ve korunmaz, örneğin, çalışma zamanında yansıma kullanarak tanımlama grubu incelenirken.
 
-Bir tanımlama grubu atamasını alanların adlarını atamada sağ tarafta da belirtebilirsiniz:
+Tanımlama grubu atamasında, atamanın sağ tarafındaki alanların adlarını da belirtebilirsiniz:
 
 [!code-csharp[ImplicitNamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#ImplicitNamedTuple "Implicitly named tuple")]
 
-Yöntemden döndürülen bir tanımlama grubu üyelerinin açmak istediğinizde zamanlar olabilir.  Dizideki değerlerin her biri için ayrı değişkenleri bildirerek bunu yapabilirsiniz. Bu paketi adlı *ayrıştırma* tanımlama grubu:
+Bir yöntemden döndürülen bir tanımlama grubunun üyelerinin paketini kaldırmak istediğiniz zamanlar olabilir.  Bu, kayıt grubundaki her bir değer için ayrı değişkenler bildirerek yapabilirsiniz. Bu paketten *çıkarılması* , kayıt düzeninin kaldırılması olarak adlandırılır:
 
 [!code-csharp[CallingWithDeconstructor](~/samples/snippets/csharp/new-in-7/program.cs#CallingWithDeconstructor "Deconstructing a tuple")]
 
-. NET'te herhangi bir tür için benzer bir ayrıştırma de sağlayabilirsiniz. Yazdığınız bir `Deconstruct` yöntemi sınıfının bir üyesi olarak. Olduğunu `Deconstruct` yöntem kümesi sağlar `out` ayıklamak istediğiniz bağımsız değişkenleri özelliklerin her biri için. Bunu göz önünde bulundurun `Point` ayıklayan deconstructor yöntemi sağlar sınıfını `X` ve `Y` koordinatları:
+Ayrıca, .NET 'teki herhangi bir tür için benzer bir deme sağlayabilirsiniz. Bir `Deconstruct` yöntemi sınıfının bir üyesi olarak yazarsınız. Bu `Deconstruct` Yöntem, ayıklamak istediğiniz her `out` bir özellik için bir dizi bağımsız değişken sağlar. Ve`X` `Point` koordinatlarınıçıkaranbirDeconstructoryöntemisağlayanbusınıfı`Y` göz önünde bulundurun:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
 
-Tek tek alanları atayarak ayıklayabileceğiniz bir `Point` bir demet için:
+Bir tanımlama grubu `Point` 'na atayarak tek tek alanları ayıklayabilirsiniz:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Diziler hakkında daha da ayrıntılı bilgi edinebilirsiniz [diziler makale](../tuples.md).
+Tanımlama grupları [makalesindeki](../tuples.md)tanımlama grupları hakkında ayrıntılı bilgi edinebilirsiniz.
 
 ## <a name="discards"></a>Atılanlar
 
-Olduğunda, genellikle bir demet ayrıştırma veya bir yöntemi çağırmak `out` parametreleri hakkında umursamaz ve kullanmayı düşünmüyorsanız değeri bir değişken tanımlayın zorunda. C# için destek ekler *atar* bu senaryonun işlenmesi için. Bir atma adı olan bir salt yazılır değişkendir `_` (alt çizgi karakteri); tüm tek bir değişkene atmak düşündüğünüz değerleri atayabilirsiniz. Bir atma gibi atanmamış bir değişkenidir; atama ifadesi dışında atma kodda kullanılamaz.
+Genellikle, bir tanımlama grubu oluştururken veya parametreler ile `out` bir yöntemi çağırırken, değeri ilgilenmediğiniz ve kullanmayı planlamadığınız bir değişken tanımlamaya zorlanır. C#Bu senaryoyu işlemek için *atma* desteği ekler. Bir atma, adı `_` (alt çizgi karakteri) olan salt yazılır bir değişkendir; atmayı planladığınız tüm değerleri tek bir değişkene atayabilirsiniz. Bir atma atanmamış değişken gibidir; atama ifadesinden ayrı olarak, atma kodda kullanılamaz.
 
-Atar, aşağıdaki senaryolarda desteklenir:
+Atma, aşağıdaki senaryolarda desteklenir:
 
-* Tanımlama grubu veya kullanıcı tanımlı türler ayrıştırma olduğunda.
-* Yöntemleri çağrılırken [kullanıma](../language-reference/keywords/out-parameter-modifier.md) parametreleri.
-* İşlemle eşleşen desende [olduğu](../language-reference/keywords/is.md) ve [geçiş](../language-reference/keywords/switch.md) deyimleri.
-* Açıkça istediğinizde bir tek başına tanımlayıcı olarak bir atma atamadan değerini belirleyin.
+- Tanımlama grupları veya Kullanıcı tanımlı türler kaldırılıyor.
+- [Out](../language-reference/keywords/out-parameter-modifier.md) parametreleri ile Yöntemler çağrılırken.
+- WITH ve [Switch](../language-reference/keywords/switch.md) deyimleriyle bir kalıp [](../language-reference/keywords/is.md) eşleştirme işleminde.
+- Bir atamanın değerini bir atma olarak açıkça tanımlamak istediğinizde tek başına tanımlayıcı olarak.
 
-Aşağıdaki örnekte tanımlayan bir `QueryCityDataForYears` farklı iki yıllık bir şehir için veri içeren bir 6 bölütlü döndüren yöntem. Örnek yöntem çağrısında yöntem tarafından döndürülen iki popülasyon değerleri ile ilgilidir ve bu nedenle kalan değerler demet tanımlama grubu deconstructs olduğunda atar gibi davranır.
+Aşağıdaki örnek, iki farklı `QueryCityDataForYears` yıl için şehir için veri içeren 6 demet döndüren bir yöntemi tanımlar. Örnekteki yöntem çağrısı yalnızca yöntemi tarafından döndürülen iki popülasyon değeriyle ilgilidir ve bu nedenle, kayıt düzeni oluşturulduğunda, kayıt düzeninde kalan değerleri atma olarak değerlendirir.
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Daha fazla bilgi için [atar](../discards.md).
+Daha fazla bilgi için bkz. [atma](../discards.md).
 
 ## <a name="pattern-matching"></a>Desen eşleştirme
 
-*Desen eşleştirme* yöntem gönderimine dışındaki bir nesne türü özellikleri uygulamak izin veren bir özelliktir. Zaten bir nesne türüne göre yöntemi gönderme hakkında bilgi sahibi. Yöntemi, bir nesnenin türüne göre gönderme uygulamak için dili sözdizimi, nesne yönelimli programlama, sanal ve geçersiz kılma yöntemleri sağlar. Temel ve türetilmiş sınıfları farklı uygulamalar sağlayabilir.
-Desen eşleştirme ifadeleri bu kavramı genişletmeniz türleri ve devralma hiyerarşisi ilişkili olmayan veri öğeleri için benzer gönderme desenleri kolayca uygulayabilirsiniz.
+*Model eşleştirme* , nesne türünden farklı özelliklerde Yöntem gönderimi uygulamanıza olanak sağlayan bir özelliktir. Büyük olasılıkla nesne türüne göre Yöntem gönderimi hakkında zaten bilgi sahibisiniz. Nesne odaklı programlamada, sanal ve geçersiz kılma yöntemleri, nesne türünü temel alarak yöntem gönderme uygulamak için dil sözdizimi sağlar. Temel ve türetilmiş sınıflar farklı uygulamalar sağlar.
+Desen eşleştirme ifadeleri, devralma hiyerarşisi aracılığıyla ilgili olmayan türler ve veri öğeleri için benzer dağıtım düzenlerini kolayca uygulayabileceğiniz şekilde bu kavramı genişletir.
 
-Desen eşleştirme destekler `is` ifadeleri ve `switch` ifadeler. Her bir nesne ve o nesnenin Aranan deseni karşılayıp karşılamadığını belirlemek için özelliklerini inceleme sağlar. Kullandığınız `when` düzeninin ek kuralları belirtmek için anahtar sözcüğü.
+Model eşleştirme, `is` ifadeleri ve `switch` ifadeleri destekler. Her biri, nesnenin aranan düzene karşılayıp karşılamadığını tespit etmek için bir nesne ve özelliklerini inceleyerek sağlar. Modele ek kurallar `when` belirtmek için anahtar sözcüğünü kullanırsınız.
 
-`is` Desen ifadesi genişletir bilinen [ `is` işleci](../language-reference/keywords/is.md#pattern-matching-with-is) bir nesne türü hakkında sorgulayabilir ve sonucu bir yönerge olarak atayın. Aşağıdaki kod bir değişkenin olup olmadığını denetler. bir `int`ve bu durumda, geçerli toplama ekler:
+Model ifadesi, bir nesneyi türü hakkında sorgulamak ve sonucu bir yönergede atamak için tanıdık [ `is` işleci](../language-reference/keywords/is.md#pattern-matching-with-is) genişletir. `is` Aşağıdaki kod, bir değişkenin bir `int`olduğunu denetler ve varsa, geçerli Sum 'a ekler:
 
 ```csharp
 if (input is int count)
     sum += count;
 ```
 
-Önceki küçük örnek geliştirmeler gösterir `is` ifade. Başvuru türleri yanı sıra değer türleri karşı sınayabilirsiniz ve başarılı sonuç doğru türde yeni bir değişkene atayabilirsiniz.
+Önceki küçük örnek, `is` ifadeye yönelik geliştirmeleri gösterir. Aynı zamanda değer türlerine ve başvuru türlerine karşı test edebilirsiniz ve başarılı sonucu doğru türdeki yeni bir değişkene atayabilirsiniz.
 
-Geçiş eşleşme ifadesi göre tanıdık bir söz dizimi olan `switch` deyimi zaten parçası C# dili. Güncelleştirilmiş switch deyimi birkaç yeni yapılar vardır:
+Anahtar eşleştirme ifadesinde, `switch` zaten C# dilin bir parçası olan bir tanıdık sözdizimi vardır. Güncelleştirilmiş switch ifadesinin çeşitli yeni yapıları vardır:
 
-- Değerlendirip türünü bir `switch` ifadesi tam sayı türleri için kısıtlı artık `Enum` türleri `string`, ya da bu türlerden birine karşılık gelen null yapılabilir bir tür. Her türlü kullanılabilir.
-- Türünü test edebilirsiniz `switch` her ifade `case` etiketi. Olduğu gibi `is` ifade atadığınız yeni bir değişken için bu türü.
-- Eklediğiniz bir `when` daha fazla değişken koşulu test etmek yan tümcesi.
-- Sırasını `case` etiketleri önemli sunuldu. Eşleştirilecek ilk dalı yürütülür. Başkalarının atlanır.
+- Bir `switch` ifadenin yöneten türü artık, bu türlerden birine karşılık gelen tamsayı türleri, `Enum` türleri `string`veya null olabilen bir türle sınırlı değildir. Herhangi bir tür kullanılabilir.
+- `switch` Her`case` etikette ifadenin türünü test edebilirsiniz. `is` İfadesinde olduğu gibi, bu türe yeni bir değişken atayabilirsiniz.
+- O değişkende daha fazla `when` test koşullarına bir yan tümce ekleyebilirsiniz.
+- `case` Etiketlerin sırası artık önemlidir. Eşleştirilecek ilk dal yürütülür; diğerleri atlanır.
 
-Aşağıdaki kod, bu yeni özellikler gösterir:
+Aşağıdaki kod bu yeni özellikleri göstermektedir:
 
 ```csharp
 public static int SumPositiveNumbers(IEnumerable<object> sequence)
@@ -160,104 +160,104 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` tanıdık sabit modelidir.
-- `case IEnumerable<int> childSequence:` bir tür desendir.
-- `case int n when n > 0:` bir türü ile ek bir desendir `when` koşul.
-- `case null:` null modelidir.
-- `default:` tanıdık varsayılan durumdur.
+- `case 0:`tanıdık sabit bir örüntü.
+- `case IEnumerable<int> childSequence:`bir tür deseninin.
+- `case int n when n > 0:`, ek `when` bir koşula sahip bir tür düzendir.
+- `case null:`null desenli bir değer.
+- `default:`tanıdık varsayılan durumdur.
 
-İçinde desen eşleştirme hakkında daha fazla bilgi [desen eşleştirme C# ](../pattern-matching.md).
+[' De C#örüntüme ](../pattern-matching.md)göre desenler eşleştirmesi hakkında daha fazla bilgi edinebilirsiniz.
 
-## <a name="ref-locals-and-returns"></a>Ref yerel değerleri ve dönüşleri
+## <a name="ref-locals-and-returns"></a>Ref Yereller ve geri dönüşler
 
-Bu özelliği kullanın ve başka bir yerde tanımlanan değişkenleri başvuruları dönüş algoritmalar sağlar. Örneğin, büyük matrisleri ile çalışma ve belirli özelliklere sahip tek bir konum bulma. Aşağıdaki yöntemi döndürür bir **başvuru** Matristeki depolama için:
+Bu özellik, tarafından kullanılan ve başka bir yerde tanımlanan değişkenlere başvuru döndüren algoritmaların yapılmasını sağlar. Bir örnek büyük matrislerle çalışıyor ve belirli özelliklere sahip tek bir konum buluyor. Aşağıdaki yöntem, matriste bu depolama için bir **başvuru** döndürür:
 
 [!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
-Dönüş değeri olarak bildirdiğiniz bir `ref` ve matris değeri aşağıdaki kodda gösterildiği gibi değiştirin:
+Aşağıdaki kodda gösterildiği gibi, dönüş değerini bir `ref` olarak bildirebilir ve matriste bu değeri değiştirebilirsiniz:
 
 [!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
-C# Dil kötüye kullanmasının korunmasına çeşitli kurallara sahip `ref` yerel değerleri ve Dönüşleri:
+C# Dil, `ref` yerelleri yanlış kullanmanızı ve şunu döndürdüğünü koruyan çeşitli kurallara sahiptir:
 
-* Eklemelisiniz `ref` yöntem imzası ve tüm anahtar sözcüğü `return` yöntemine deyimler.
-  - Bu sayede Temizle yöntemi genelinde başvuruya göre yöntemi döndürür.
-* A `ref return` değeri bir değişkene atanabilir veya bir `ref` değişkeni.
-  - Çağıran, dönüş değeri veya kopyalanıp kopyalanmadığını denetler. Atlama `ref` dönüş değeri atarken değiştiricisi çağıran bir başvuru değil depolama değerinin bir kopyasıdır istediğini gösterir.
-* Standart bir yöntem dönüş değerine atanamaz bir `ref` yerel değişken.
-  - Aşağıdaki gibi ifadeler izin vermiyor `ref int i = sequence.Count();`
-* Döndüremezsiniz bir `ref` ömürlerinin yönteminin yürütülmesi genişletmek olmayan bir değişkene.
-  - Yerel bir değişken veya benzer bir kapsama sahip bir değişken başvuru döndüremez anlamına gelir.
-* `ref` yerel değerleri ve dönüşleri zaman uyumsuz yöntemlerle kullanılamaz.
-  - Derleyici, zaman uyumsuz yöntem döndürüldüğünde başvurulan değişken son değerine ayarlandı olmadığını bilemezsiniz.
+- `ref` Anahtar sözcüğünü Yöntem imzasına ve bir yöntemindeki tüm `return` deyimlere eklemeniz gerekir.
+  - Bu, yöntem boyunca başvuruya göre döndürülen yöntemi temizler.
+- Bir `ref return` değer değişkenine `ref` veya bir değişkene atanabilir.
+  - Çağıran, dönüş değerinin kopyalanıp kopyalanmadığını denetler. Dönüş değerini atarken değiştiricinin atlanması, çağıranın depolama için bir başvuru değil, değer kopyasının istediğini gösterir. `ref`
+- Bir `ref` yerel değişkene standart bir yöntem dönüş değeri atayamazsınız.
+  - Şunun gibi deyimler izin vermez`ref int i = sequence.Count();`
+- Ömrü, yönteminin yürütülmesinden daha fazla genişlemeyen bir `ref` değişkene geri dönemez.
+  - Bu, yerel bir değişkene veya benzer kapsama sahip bir değişkene bir başvuru döndüremeyeceğiniz anlamına gelir.
+- `ref`Yereller ve geri dönüş, zaman uyumsuz yöntemlerle kullanılamaz.
+  - Zaman uyumsuz yöntem döndürüldüğünde, derleyici başvurulan değişkenin son değerine ayarlandığını bilemez.
 
-Ref yerel ayarlar ve ref değerleri kopyalama ya da birden çok kez başvurusunu kaldırma işlemlerini gerçekleştirme önleyerek daha verimlidir etkinleştirir algoritmaları döndürür.
+Ref Yereller ve ref işlevinin eklenmesi, değerleri kopyalamayı önleyerek veya birden çok kez başvuru işlemleri gerçekleştirerek daha etkili olan algoritmaların kullanılmasına izin verir.
 
-Ekleme `ref` için dönüş değeri bir [kaynağı uyumlu değişiklik](version-update-considerations.md#source-compatible-changes). Var olan kod derlenir, ancak başvuru dönüş değeri atandığında kopyalanır. Çağıranlar, depolama alanı için dönüş değeri için güncelleştirilmesi gerekir bir `ref` dönüş başvuru olarak saklamak için yerel değişken.
+Dönüş `ref` değerine ekleme, [kaynak ile uyumlu](version-update-considerations.md#source-compatible-changes)bir değişikdir. Varolan kod derlenir, ancak ref dönüş değeri atandığında kopyalanır. Çağıranlar, döndürmeyi bir başvuru olarak depolamak için dönüş değeri `ref` için depolamayı yerel bir değişkene güncelleştirmelidir.
 
-Daha fazla bilgi için [ref anahtar sözcüğü](../language-reference/keywords/ref.md) makalesi.
+Daha fazla bilgi için bkz. [ref anahtar sözcüğü](../language-reference/keywords/ref.md) makalesi.
 
 ## <a name="local-functions"></a>Yerel işlevler
 
-Sınıflar için birçok tasarım tek bir konumdan Aranan yöntemleri kapsar. Bu ek özel yöntemleri her yöntem, küçük ve odaklı tutun. *Yerel işlevler* , başka bir yöntem bağlamı içinde yöntemleri bildirmek etkinleştirin. Yerel işlevler için yerel yöntemi yalnızca içinde bildirildiği bağlamdan çağrılır görmek, okuyucular sınıfın kolaylaştırır.
+Sınıfların pek çok tasarımı yalnızca bir konumdan çağrılan yöntemleri içerir. Bu ek özel yöntemler her bir yöntemi küçük ve odaklanmış olarak tutar. *Yerel işlevler* , yöntemleri başka bir yöntem bağlamı içinde bildirmenize olanak tanır. Yerel işlevler, sınıfının okuyucularının, yerel yöntemin yalnızca bildirildiği bağlamdan çağrıldığını görmesini kolaylaştırır.
 
-Yerel işlevler için iki yaygın kullanım örnekleri vardır: Genel yineleyici yöntemleri ve genel zaman uyumsuz yöntemler. Her iki yöntem tür hataları programcılar beklenebilir daha sonra rapor kod oluşturur. Yineleyici yöntemleri, yalnızca özel durumların gözlemlenen döndürülen dizi numaralandırır kod çağırırken. Zaman uyumsuz yöntemlerde özel durumların yalnızca zaman uyulması gereken döndürülen `Task` beklenir. Aşağıdaki örnek, yerel bir işlevi kullanarak yineleyici yöntemin ayıran parametre doğrulaması gösterir:
+Yerel işlevler için iki yaygın kullanım durumu vardır: genel Yineleyici yöntemleri ve genel zaman uyumsuz yöntemler. Her iki yöntem türü, programcılar tarafından daha sonra oluşabilecek hataları raporlayan kodu oluşturur. Yineleyici metotlarda, tüm özel durumlar yalnızca döndürülen sırayı belirten kod çağrılırken izlenir. Zaman uyumsuz metotlarda, tüm özel durumlar yalnızca döndürülen geri `Task` beklendiğinde gözlemlenir. Aşağıdaki örnek, yerel bir işlev kullanarak Yineleyici uygulamasından parametre doğrulamayı ayırmayı gösterir:
 
 [!code-csharp[22_IteratorMethodLocal](~/samples/snippets/csharp/new-in-7/Iterator.cs#IteratorMethodLocal "Iterator method with local function")]
 
-Aynı yöntem ile işe `async` zaman uyumsuz işler başlamadan önce bağımsız değişken doğrulama doğan özel durumlar emin olmak için yöntemleri:
+Bağımsız değişken doğrulamasından doğan özel durumların, `async` zaman uyumsuz iş başlamadan önce oluşturulması için yöntemler ile aynı yöntem kullanılabilir:
 
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Yerel işlevleri tarafından desteklenen tasarımları bazılarını da kullanarak sağlayabilirsiniz *lambda ifadeleri*. Bu ilgi olabilir [farklar hakkında daha fazla bilgi](../local-functions-vs-lambdas.md)
+> Yerel işlevler tarafından desteklenen tasarımlardan bazıları *lambda ifadeleri*kullanılarak da gerçekleştirilebilir. [Aralarındaki farklar hakkında daha fazla](../local-functions-vs-lambdas.md) bilgi edinebilirsiniz
 
-## <a name="more-expression-bodied-members"></a>Daha fazla ifade gövdeli üyeler
+## <a name="more-expression-bodied-members"></a>Daha fazla ifade-Bodied Üyeler
 
-C# 6 sunulan [ifade gövdeli üyeler](csharp-6.md#expression-bodied-function-members) üye işlevleri ve salt okunur özellikler için. C# 7.0 ifadeleri olarak uygulanabilir izin verilen üyeleri genişletir. C# 7. 0 ', uygulayabileceğiniz *oluşturucular*, *sonlandırıcılar*, ve `get` ve `set` bulunan erişimciler *özellikleri* ve *dizin oluşturucular* . Aşağıdaki kod her örneklerini gösterir:
+C#6 eklenen [ifade-üye işlevleri için Bodied Üyeler](csharp-6.md#expression-bodied-function-members) ve salt okunurdur özellikleri. C#7,0, ifade olarak uygulanabilecek izin verilen üyeleri genişletir. 7,0 C# ' de, *Özellikler* ve *Dizin oluşturucular*üzerinde *oluşturucular*, *sonlandırıcılar*ve `get` ve `set` erişimciler uygulayabilirsiniz. Aşağıdaki kod, her birinin örneklerini gösterir:
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
 > [!NOTE]
-> Bu örnek bir sonlandırıcıya gerek yoktur, ancak sözdizimini göstermek için gösterilir. Yönetilmeyen kaynakları serbest bırakmak gerekli olmadıkça, sınıfta bir sonlandırıcı uygulamamalıdır. Kullanmayı da düşünmelisiniz <xref:System.Runtime.InteropServices.SafeHandle> yönetilmeyen kaynakları doğrudan yönetmek yerine sınıfı.
+> Bu örnekte sonlandırıcısı gerekmez, ancak söz dizimini göstermek için gösterilir. Yönetilmeyen kaynakları serbest bırakmak gerekmedikçe, sınıfınıza sonlandırıcıyı uygulamamalısınız. Ayrıca, <xref:System.Runtime.InteropServices.SafeHandle> yönetilmeyen kaynakları doğrudan yönetmek yerine sınıfını kullanmayı göz önünde bulundurmanız gerekir.
 
-İfade gövdeli üyeler için bu yeni konumlar için önemli bir kilometre temsil C# dil: Bu özellikler, açık kaynaklı çalışma topluluk üyeleri tarafından uygulanan [Roslyn](https://github.com/dotnet/Roslyn) proje.
+İfade için bu yeni konumlar-Bodied Üyeler C# dilin önemli bir kilometre taşını temsil eder: Bu özellikler, açık kaynaklı [Roslyn](https://github.com/dotnet/Roslyn) projesinde çalışan topluluk üyeleri tarafından uygulanmıştır.
 
-Bir ifade bodied üyesine bir yöntemi değiştirme bir [ikili uyumlu değişiklik](version-update-considerations.md#binary-compatible-changes).
+Bir yöntemi bir ifade ile değiştirmek, [ikili uyumlu bir değişiklik](version-update-considerations.md#binary-compatible-changes)olur.
 
 ## <a name="throw-expressions"></a>Throw ifadeleri
 
-C# ' ta, `throw` her zaman bir deyim olmuştur. Çünkü `throw` deyimi, bir ifade vardı C# uygulanamadı kullandığınız, yapıları. Bunlar, koşullu ifadeleri ve null birleşim ifadelerini bazı lambda ifadeleri dahil. İfade gövdeli üyeler eklenmesi için daha fazla konum ekler burada `throw` ifadeleri yararlı olacaktır. Bu yapılar, yazabilmesi amacıyla C# 7.0 tanıtır [ *throw ifadelerini*](../language-reference/keywords/throw.md#the-throw-expression).
+' C#De `throw` , her zaman bir beyan olmuştur. Bir ifade değil, bir deyim olduğundan, bunu kullanamadığı C# yapılar vardı. `throw` Bu dahil edilen Koşullu ifadeler, null birleştirme ifadeleri ve bazı lambda ifadeleri. İfade bululmuş üyelerin eklenmesi, `throw` ifadelerin yararlı olacağı daha fazla konum ekler. Bu yapıtın herhangi birini yazmak için 7,0, C# [throw ifadelerini](../language-reference/keywords/throw.md#the-throw-expression)tanıtır.
 
-Bu ayrıca daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetimi için ek deyimleri gerekmez.
+Bu ek, daha fazla ifade tabanlı kod yazmayı kolaylaştırır. Hata denetimi için ek deyimlere ihtiyacınız yoktur.
 
-## <a name="generalized-async-return-types"></a>Genelleştirilmiş bir zaman uyumsuz dönüş türleri
+## <a name="generalized-async-return-types"></a>Genelleştirilmiş zaman uyumsuz dönüş türleri
 
-Döndüren bir `Task` zaman uyumsuz yöntemler bir nesneden performans sorunlarını Belirli yollardaki tanıtmak. `Task` bir başvuru türü olduğundan, onu kullanarak bir nesne ayırma anlamına gelir. Burada bir yöntem ile bildirilmiş durumlarda `async` değiştiricisi önbelleğe alınmış bir sonuç döndürür ya da zaman uyumlu olarak tamamlanan, kodun önemli bölümleri performans ciddi zaman maliyetine ek ayırmaları hale gelebilir. Bu ayırmalar sıkı döngüleri oluşursa pahalı hale gelebilir.
+Zaman uyumsuz `Task` metotlardan bir nesne döndürmek, belirli yollarda performans sorunlarını ortaya çıkarabilir. `Task`bir başvuru türüdür, bu nedenle bu bir nesne ayırma anlamına gelir. `async` Değiştirici ile belirtilen bir yöntemin önbelleğe alınmış bir sonuç döndürdüğü veya zaman uyumlu olarak tamamladığı durumlarda, ek ayırmalar kodun performans açısından kritik bölümlerinde önemli bir zaman maliyeti olabilir. Bu ayırmalar sıkı Döngülerde gerçekleşirse maliyetli hale gelebilir.
 
-Bu zaman uyumsuz yöntem dönüş türleri sınırlı olmayan yeni dil özelliğin `Task`, `Task<T>`, ve `void`. Döndürülen tür yine de zaman uyumsuz desen karşılaması gerekir yani bir `GetAwaiter` yöntemi erişilebilir olmalıdır. Somut bir örnek olarak `ValueTask` yapmak için .NET framework türü eklendi bu yeni dil özelliğini kullanın:
+Yeni dil özelliği `Task`, zaman uyumsuz yöntem dönüş türlerinin, `Task<T>`ve ile `void`sınırlı olmadığı anlamına gelir. Döndürülen türün zaman uyumsuz düzene uygun olması gerekir, yani bir `GetAwaiter` yönteme erişilebilir olması gerekir. Tek bir somut örnek olarak, `ValueTask` bu yeni dil özelliğinden kullanım sağlamak için tür .NET Framework 'e eklenmiştir:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> NuGet paketini eklemeniz [ `System.Threading.Tasks.Extensions` ](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) kullanmak için <xref:System.Threading.Tasks.ValueTask%601> türü.
+> Türü kullanabilmek için NuGet paketini [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) eklemeniz gerekir. <xref:System.Threading.Tasks.ValueTask%601>
 
-Bu geliştirme ayırmaktan kaçınmak kitaplık yazarlar için en kullanışlı bir `Task` kritik kod performansı.
+Bu geliştirme, en çok bir `Task` performans kritik kodunda ayırmayı önlemek için kitaplık yazarları için yararlıdır.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Sayısal sabit değer sözdizimi geliştirmeleri
 
-Sayısal sabitlere misreading kodu ilk kez okurken anlaşılması zor yapabilirsiniz. Bit maskeleri ya da diğer simgesel değerleri için yanlış anlama fazladır. C#7.0 en okunabilir bir biçimde için kullanım sayıları yazmak için iki yeni özellikler içerir: *ikili sabit dizeler*, ve *rakam ayırıcıları*.
+Hatalı okuma sayısal sabitleri, ilk kez okurken kodu daha zor hale getirir. Bit maskeleri veya diğer sembolik değerler yanlış anlama eğilimindedir. C#7,0, tasarlanan kullanım için en okunabilir biçimde sayı yazmak için iki yeni özellik içerir: *ikili sabit değerler*ve *basamak ayırıcıları*.
 
-İçin bu kez, bit maskeleri oluştururken ya da birkaç ikili gösterimini her ikili dosyada bu sayıyı yazma en okunabilir bir kod yapar:
+Bit maskeleri oluştururken veya bir sayının ikili gösteriminin en çok okunabilen kodu yaptığı durumlarda bu süreler için bu sayıyı binary olarak yazın:
 
 [!code-csharp[ThousandSeparators](~/samples/snippets/csharp/new-in-7/Program.cs#ThousandSeparators "Thousands separators")]
 
-`0b` Sayı ikili sayı olarak yazılır sabiti başında gösterir. Genellikle bit düzenleri sunarak daha kolay olacak şekilde ikili sayılar uzun alabilirsiniz `_` ikili sabiti yukarıda gösterildiği gibi bir basamak ayırıcı olarak. Basamak ayırıcı sabiti her yerde görünebilir. Taban 10 numaraları için bir binler basamağı kullanmak yaygın ayırıcı:
+Sabitin başlangıcında, `0b` sayının bir ikili sayı olarak yazıldığını gösterir. İkili sayılar uzun sürebilir, bu nedenle, ikili Sabitte yukarıda gösterildiği gibi, `_` bir rakam ayırıcısı olarak girerek bit düzenlerini görmeyi daha kolay hale getirirsiniz. Sayı ayırıcısı, sabit içinde herhangi bir yerde görünebilir. 10 tabanında numara için bu, binlerce ayırıcı olarak kullanılması yaygındır:
 
 [!code-csharp[LargeIntegers](~/samples/snippets/csharp/new-in-7/Program.cs#LargeIntegers "Large integer")]
 
-Basamak ayırıcı ile birlikte kullanılabilir `decimal`, `float`, ve `double` türleri de:
+Rakam ayırıcısı, `decimal` `float`, ve `double` türleri ile birlikte kullanılabilir:
 
 [!code-csharp[OtherConstants](~/samples/snippets/csharp/new-in-7/Program.cs#OtherConstants "non-integral constants")]
 
-Birlikte ele alındığında Sayısal sabitler ile çok daha fazla okunabilirliği bildirebilirsiniz.
+Birlikte çalışarak, sayısal sabitleri çok daha okunaklı bir şekilde bildirebilirsiniz.

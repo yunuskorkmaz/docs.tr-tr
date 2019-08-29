@@ -1,113 +1,113 @@
 ---
-title: SDK ve .NET Core çalışma zamanı nasıl belirlendiği
-description: Bu makalede çalışma zamanı ve .NET Core SDK'sı sürümü (benzer anlamsal sürüm) şeklini öğretir.
+title: .NET Core çalışma zamanı ve SDK 'nın sürümü oluşturma
+description: Bu makale, .NET Core SDK ve çalışma zamanının nasıl sürümlendirilemez (anlamsal sürüm oluşturma ile benzerdir).
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646871"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104951"
 ---
-# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core nasıl tutulan genel bakış
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 'un sürümü oluşturma konusuna genel bakış
 
-.NET core, .NET Core çalışma zamanı ve .NET Core uygulamaları geliştirmek için ihtiyacınız olan araçları içeren SDK, ifade eder. .NET core SDK'ları, .NET Core çalışma zamanı'nın önceki bir sürümüyle çalışacak şekilde tasarlanmıştır. Bu makalede, çalışma zamanını ve SDK sürüm stratejisi açıklanmaktadır. .NET Standard için sürüm numaraları açıklaması ile tanışın makalede bulunabilir [.NET Standard](../../standard/net-standard.md#net-implementation-support).
+.NET Core, .NET Core çalışma zamanına ve uygulama geliştirmek için ihtiyacınız olan araçları içeren .NET Core SDK anlamına gelir. .NET Core SDK 'Ları .NET Core çalışma zamanının önceki bir sürümüyle çalışmak üzere tasarlanmıştır. Bu makalede çalışma zamanı ve SDK sürüm stratejisi açıklanmaktadır. .NET Standard için sürüm numaraları açıklaması, [.NET Standard](../../standard/net-standard.md#net-implementation-support)tanıtma makalesinde bulunabilir.
 
-.NET Core çalışma zamanı ve .NET Core SDK'sı, farklı bir fiyat karşılığında yeni özellikler eklemek - genel araçları daha fazla .NET Core çalışma zamanı, üretimde kullandığınız çalışma zamanı değişiklikleri daha hızlı bir şekilde güncelleştirilmiş .NET Core SDK'sı sağlar.
+.NET Core çalışma zamanı ve .NET Core SDK yeni özellikleri farklı bir hızda ekleyin. genel olarak, .NET Core SDK güncelleştirilmiş araçları .NET Core çalışma zamanından daha hızlı bir şekilde, üretimde kullandığınız çalışma zamanını değiştirenden daha hızlı sağlar.
 
 ## <a name="versioning-details"></a>Sürüm oluşturma ayrıntıları
 
-".NET Core 2.1".NET Core çalışma zamanı sürüm numarasını ifade eder. .NET Core çalışma zamanı izleyen sürüm oluşturma için büyük/küçük/düzeltme eki bir yaklaşım olan [semantic versioning](#semantic-versioning).
+".NET Core 2,1", .NET Core çalışma zamanı sürüm numarasını ifade eder. .NET Core çalışma zamanının, sürüm oluşturma için [anlam sürümü oluşturma](#semantic-versioning)sonrasında büyük/küçük/küçük Patch yaklaşımı vardır.
 
-.NET Core SDK'sını semantic versioning izleyin değil. .NET Core SDK'sını daha hızlı serbest bırakır ve kendi sürümleri hem hizalanmış çalışma zamanını ve SDK'ın kendi küçük ve yayınlar düzeltme eki iletişim kurması gerekir. .NET Core çalışma zamanı ile yayımlanan ilk iki .NET Core SDK'sı sürüm konumlarını kilitlenir. Her bir SDK sürümü, bu çalışma zamanı veya herhangi bir alt sürümü için uygulamalar oluşturabilirsiniz.
+.NET Core SDK anlam sürümü oluşturmayı takip etmez. .NET Core SDK daha hızlı ve sürümleri, hem hizalanmış çalışma zamanı hem de SDK 'nın kendi alt ve düzeltme eki sürümlerini iletmelidir. .NET Core SDK sürümünün ilk iki konumu, ile birlikte yayımlanan .NET Core çalışma zamanına kilitlidir. SDK 'nın her sürümü bu çalışma zamanına veya daha düşük bir sürüme yönelik uygulamalar oluşturabilir.
 
-SDK sürüm numarasının üçüncü konumu hem küçük iletişim kurar ve düzeltme numarası. Alt sürüm 100 ile çarpılır. İkincil sürüm 1, 2 düzeltme eki sürümü 102 olarak temsil edilir. Son iki basamak düzeltme numarasını temsil eder. Örneğin, .NET Core 2.2 sürümünü sürümleri aşağıdaki tabloda gibi oluşturabilirsiniz:
+SDK sürüm numarasının üçüncü konumu hem küçük hem de yayama numarasını iletişim kurar. İkincil sürüm 100 ile çarpılır. İkincil sürüm 1, düzeltme eki sürüm 2 102 olarak temsil edilir. Son iki basamak, düzeltme eki numarasını temsil eder. Örneğin, .NET Core 2,2 sürümü aşağıdaki tablo gibi yayınlar oluşturabilir:
 
-| Değiştir                | .NET core çalışma zamanı | .NET core SDK'sı (*) |
+| Değiştir                | .NET Core çalışma zamanı | .NET Core SDK (*) |
 |-----------------------|-------------------|-------------------|
 | İlk yayın       | 2.2.0             | 2.2.100           |
-| SDK'sı düzeltme eki             | 2.2.0             | 2.2.101           |
-| Çalışma zamanını ve SDK'sı düzeltme eki | 2.2.1             | 2.2.102           |
-| SDK'sı özelliği değiştirme    | 2.2.1             | 2.2.200           |
+| SDK Düzeltme Eki             | 2.2.0             | 2.2.101           |
+| Çalışma zamanı ve SDK Düzeltme Eki | 2.2.1             | 2.2.102           |
+| SDK özelliği değişikliği    | 2.2.1             | 2.2.200           |
 
-(\*) Bu grafik gelecekteki 2.2 kullanan .NET Core çalışma zamanı örnek olarak bir geçmiş yapıt ilk SDK'sı için .NET Core 2.1 anlamına geldiğinden 2.1.300 olduğu. Daha fazla bilgi için [.NET Core sürüm seçimi](selection.md).
+(\*) Bu grafik, .NET Core 2,1 için ilk SDK 'nın bir geçmiş yapıtı 2.1.300 olduğundan bu grafik gelecekteki bir 2,2 .NET Core çalışma zamanını örnek olarak kullanır. Daha fazla bilgi için bkz. [.NET Core sürüm seçimi](selection.md).
 
-NOTLAR:
+LARINI
 
-* SDK'sı 10 özellik güncelleştirmeleri bir çalışma zamanı özelliği güncelleştirmeden önce sahip, sürüm numaraları 1000 dizi halinde 2.2.1000 gibi sayılarla 2.2.900 aşağıdaki özellik yayını sarabilirsiniz. Bu durum gerçekleşmesi beklenen değil.
-* bir özellik yayını gerçekleşmeyeceğini olmadan 99 yayınlar eki. Bir yayın yaklaştığında bu sayı, bir özellik yayını zorlar.
+- SDK 'nın, bir çalışma zamanı özelliği güncelleştirmesinden önce 10 Özellik Güncelleştirmesi varsa, sürüm numaraları 2.2.1000 gibi sayılarla 1000 serisine, 2.2.900 ' u takip eden özellik yayını olarak da. Bu durumun gerçekleşmesi beklenmez.
+- 99 düzeltme eki sürümleri, özellik sürümü olmadan gerçekleşmez. Bir sürüm bu numaraya yaklaşırsa, bir özellik yayını zorlar.
 
-İlk teklifinde daha fazla ayrıntı görebilirsiniz [dotnet/tasarımları](https://github.com/dotnet/designs/pull/29) depo.
+[DotNet/Designs](https://github.com/dotnet/designs/pull/29) deposundaki ilk teklife daha fazla ayrıntı görebilirsiniz.
 
-## <a name="semantic-versioning"></a>Semantic versioning
+## <a name="semantic-versioning"></a>Anlamsal sürüm oluşturma
 
-.NET Core *çalışma zamanı* kabaca aynılarını [Semantic Versioning (SemVer)](https://semver.org/), kullanımını benimseyen `MAJOR.MINOR.PATCH` sürüm oluşturma, derece ve türünü tanımlamak için sürüm numarasını çeşitli bölümlerini kullanarak değiştirin.
+.NET Core *çalışma zamanı* kabaca, değişim kullanımını benimseme ve değişiklik türünü belirtmek için sürüm numarasının çeşitli kısımlarını `MAJOR.MINOR.PATCH` kullanarak, daha önce [anlamsal sürüm oluşturma (semver)](https://semver.org/)kullanır.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-İsteğe bağlı `PRERELEASE` ve `BUILDNUMBER` bölümleri hiçbir zaman desteklenen sürümleri parçasıdır ve yalnızca gecelik derlemeler, kaynak hedefler, yerel yapılar üzerinde mevcut ve desteklenmeyen Önizleme sürümleri.
+İsteğe bağlı `PRERELEASE` ve `BUILDNUMBER` parçalar, Desteklenen sürümlerin hiçbir parçası değildir ve yalnızca gecelik derlemeler, kaynak hedeflerden yerel yapılar ve desteklenmeyen önizleme sürümleri üzerinde bulunur.
 
-### <a name="understand-runtime-version-number-changes"></a>Çalışma zamanı sürümü numarası değişiklikleri anlama
+### <a name="understand-runtime-version-number-changes"></a>Çalışma zamanı sürüm numarası değişikliklerini anlama
 
-`MAJOR` ne zaman artırılır:
+`MAJOR`Şu durumlarda artırılır:
 
-* Ürün veya yeni bir ürün yönü önemli değişiklikler oluşur.
-* Yeni değişiklikler alınmıştır. Bozucu değişiklikleri kabul etmek için yüksek Çubuğu yoktur.
-* Eski bir sürümü artık desteklenmiyor.
-* Daha yeni bir `MAJOR` mevcut bir bağımlılık sürümünü benimsenen.
+- Üründe önemli değişiklikler veya yeni bir ürün yönü meydana gelir.
+- Son değişiklikler alındı. Son değişiklikleri kabul etmek için yüksek bir çubuk vardır.
+- Eski sürüm artık desteklenmiyor.
+- Mevcut bağımlılığın `MAJOR` daha yeni bir sürümü benimsemiştir.
 
-`MINOR` ne zaman artırılır:
+`MINOR`Şu durumlarda artırılır:
 
-* Genel API yüzey alanı eklenir.
-* Yeni bir davranış eklenir.
-* Daha yeni bir `MINOR` mevcut bir bağımlılık sürümünü benimsenen.
-* Yeni bir bağımlılık kullanıma sunulmuştur.
+- Ortak API yüzey alanı eklendi.
+- Yeni bir davranış eklenmiştir.
+- Mevcut bağımlılığın `MINOR` daha yeni bir sürümü benimsemiştir.
+- Yeni bir bağımlılık ortaya çıkarılmıştır.
 
-`PATCH` ne zaman artırılır:
+`PATCH`Şu durumlarda artırılır:
 
-* Hata düzeltmeleri yapılır.
-* Daha yeni bir platform için destek eklendi.
-* Daha yeni bir `PATCH` mevcut bir bağımlılık sürümünü benimsenen.
-* Herhangi bir değişiklik önceki durumlarından biri sığmıyor.
+- Hata düzeltmeleri yapılır.
+- Daha yeni bir platform için destek eklenmiştir.
+- Mevcut bağımlılığın `PATCH` daha yeni bir sürümü benimsemiştir.
+- Diğer herhangi bir değişiklik, önceki durumlardan birine uymuyor.
 
-Birden çok değişiklik olduğunda, tek tek değişikliklerden etkilenen en yüksek öğeden artırılır ve aşağıdaki sorguyu sıfırlanır. Örneğin, `MAJOR` artırılır, `MINOR` ve `PATCH` sıfırlanır. Zaman `MINOR` artırılır, `PATCH` sıfır while sıfırlama `MAJOR` dokunulmadan olduğu.
+Birden çok değişiklik olduğunda, tek tek değişikliklerden etkilenen en üst öğe artırılır ve aşağıdakiler sıfıra sıfırlanır. Örneğin, ne zaman `MAJOR` `MINOR` artırılır ve `PATCH` sıfıra sıfırlanır. Ne `MINOR` zaman artırılır, `PATCH` dokunulmadan sola sıfırlanır `MAJOR` .
 
-## <a name="version-numbers-in-file-names"></a>Dosya adları içinde sürüm numaraları
+## <a name="version-numbers-in-file-names"></a>Dosya adlarındaki sürüm numaraları
 
-.NET Core taşıma için sürümünü, örneğin, indirilen dosyaları `dotnet-sdk-2.1.300-win10-x64.exe`.
+.NET Core için indirilen dosyalar sürümü (örneğin, `dotnet-sdk-2.1.300-win10-x64.exe`) taşır.
 
 ### <a name="preview-versions"></a>Önizleme sürümleri
 
-Önizleme sürümlerine sahip bir `-preview[number]-([build]|"final")` sürümüne eklenmiş. Örneğin: `2.0.0-preview1-final`
+Önizleme sürümleri `-preview[number]-([build]|"final")` sürüme eklenmiş. Örneğin: `2.0.0-preview1-final`.
 
-### <a name="servicing-versions"></a>Sürüm hizmet verme
+### <a name="servicing-versions"></a>Hizmet sürümleri
 
-Bir yayın, yayın dalları genellikle geçtikten sonra oluşturmayı durdur günlük oluşturur ve bunun yerine hizmet yapıları üretme başlatın. Bakım sürümlerde bir `-servicing-[number]` sürümüne eklenmiş. Örneğin: `2.0.1-servicing-006924`
+Bir sürüm kapatıldıktan sonra, yayın dalları genellikle günlük derlemeler üretmeden ve bunun yerine bakım yapıları üretmede başlatılır. Hizmet sürümlerinin bir `-servicing-[number]` sürümüne eklenmiş olması gerekir. Örneğin: `2.0.1-servicing-006924`.
 
-## <a name="relationship-to-net-standard-versions"></a>İlişki .NET Standard sürümleri
+## <a name="relationship-to-net-standard-versions"></a>.NET Standard sürümleriyle ilişki
 
-.NET standart .NET başvuru bütünleştirilmiş kodu oluşur. Her platform için belirli çoklu uygulamaları vardır. Başvuru bütünleştirilmiş kodu belirli bir .NET Standard sürümünü parçası olan bir .NET API tanımını içerir. Her uygulama, belirli bir platformda .NET Standard sözleşme karşılar. .NET Standard hakkında daha fazla makaleyi edinebilirsiniz [.NET Standard](../../standard/net-standard.md) .NET Kılavuzu'nda.
+.NET Standard bir .NET başvuru derlemesinden oluşur. Her platforma özel birden çok uygulama vardır. Başvuru derlemesi, belirli bir .NET Standard sürümünün parçası olan .NET API 'lerinin tanımını içerir. Her uygulama, belirli bir platformda .NET Standard sözleşmesini yerine getirir. .NET Standard hakkında daha fazla bilgi edinmek için .NET kılavuzundaki [.NET Standard](../../standard/net-standard.md) makalesine bakın.
 
-.NET Standard başvurusu derleme kullandığı bir `MAJOR.MINOR` sürüm oluşturma düzeni. `PATCH` tanımına göre API herhangi bir değişiklik özellik kümesini ve bu nedenle yeni bir değişikliği temsil eder ve bir API Belirtimi (uygulaması) yalnızca gösterir çünkü düzeyi .NET Standard için kullanışlı değildir `MINOR` sürümü.
+.NET Standard Reference derlemesi bir `MAJOR.MINOR` sürüm oluşturma düzeni kullanır. `PATCH`düzey, yalnızca bir API belirtimi (uygulama olmadan) kullanıma sunduğundan ve tanıma göre API üzerinde yapılan herhangi bir değişiklik, özellik kümesindeki bir değişikliği ve bu nedenle yeni `MINOR` bir sürümü temsil ettiğinden .NET Standard için kullanışlı değildir.
 
-Her platformda uygulamaları, genellikle platform sürümü ve bu nedenle olmayan yetkisiz değiştirmeye karşı korumalı programcılar bu platformda .NET Standard kullanarak bir parçası olarak güncelleştirilebilir.
+Her platformdaki uygulamalar, genellikle platform sürümünün bir parçası olarak ve bu nedenle bu platformda .NET Standard kullanan programcılara yönelik olarak güncelleştirilemeyebilir.
 
-Her sürümünde .NET Core, .NET Standard'ın bir sürümünü uygular. .NET Standard'ın bir sürümünü uygulama, .NET Standard'ın önceki sürümleri için destek anlamına gelir. .NET standard ve .NET Core sürümünün bağımsız olarak. Bu, .NET Core 2.0 .NET Standard 2.0 uygulayan bir rastlantı olur. .NET core 2.1 ayrıca .NET Standard 2.0 uygular. .NET core, .NET Standard'ın gelecek sürümlerinde kullanıma sunuldukça destekleyecektir.
+.NET Core 'un her sürümü bir .NET Standard sürümünü uygular. Bir .NET Standard sürümünün uygulanması, önceki .NET Standard sürümleri için destek gerektirir. Bağımsız olarak .NET Standard ve .NET Core sürümü. .NET Core 2,0 .NET Standard 2,0 ' nin uyguladığı bir rastlantı. .NET Core 2,1 .NET Standard 2,0 ' i de uygular. .NET Core, kullanılabilir hale geldiğinde .NET Standard gelecek sürümlerini destekleyecektir.
 
 | .NET Core | .NET Standard |
 |-----------|---------------|
-| 1.0       | en fazla 1.6     |
-| 2,0       | 2.0     |
-| 2.1       | 2.0     |
+| 1.0       | 1,6 kadar     |
+| 2,0       | 2,0 kadar     |
+| 2.1       | 2,0 kadar     |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hedef çerçeveler](../../standard/frameworks.md)
 - [.NET Core dağıtımı paketleme](../build/distribution-packaging.md)
-- [.NET core destek yaşam döngüsü bilgi sayfası](https://www.microsoft.com/net/core/support)
-- [.NET core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)
-- [.NET Core için docker görüntüleri](https://hub.docker.com/_/microsoft-dotnet-core/)
+- [.NET Core destek yaşam döngüsü olgu sayfası](https://www.microsoft.com/net/core/support)
+- [.NET Core 2 + sürüm bağlama](https://github.com/dotnet/designs/issues/3)
+- [.NET Core için Docker görüntüleri](https://hub.docker.com/_/microsoft-dotnet-core/)

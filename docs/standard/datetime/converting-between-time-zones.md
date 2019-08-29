@@ -14,108 +14,108 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e08e90f61429f01f360808866fdc3d963323ba23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5b78e3985169954d71b479aa2e8a034f61afc01
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901832"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106959"
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 
-Tarihleri ve saatleri saat dilimleri arasındaki farklar işlemek için çalışan herhangi bir uygulama için giderek daha çok önem kazanmaktadır. Bir uygulama, her zaman ifade edilemez yerel saatle artık kabul edilebilir olduğu zaman kullanılabilir <xref:System.DateTime> yapısı. Örneğin, Amerika Birleşik Devletleri Doğu parçası geçerli saati gösteren bir Web sayfası güvenilirlik Doğu Asya müşteriye eksik. Bu konu, saatler bir saat diliminden dönüştürme yanı sıra nasıl dönüştürüleceğini açıklar <xref:System.DateTimeOffset> saat dilimini tanıma sınırlı değerler.
+Zaman dilimleri arasındaki farkları işlemek için tarih ve saatlerle birlikte çalışarak tüm uygulamalar için giderek daha fazla önemli hale gelir. Bir uygulama, her saatin, <xref:System.DateTime> yapıdan kullanılabilen zaman olan yerel saat içinde ifade edilebilir olduğunu varsaymaz. Örneğin, Birleşik Devletler Doğu bölümünde geçerli zamanı görüntüleyen bir Web sayfası Doğu Asya 'daki bir müşteriye karşı güvenilirlik vermez. Bu konuda, saatlerin bir saat diliminden diğerine nasıl dönüştürüleceği ve sınırlı saat dilimi tanıma olan değerlerin nasıl dönüştürüleceği <xref:System.DateTimeOffset> açıklanmaktadır.
 
-## <a name="converting-to-coordinated-universal-time"></a>Dönüştürme için Eşgüdümlü Evrensel Saat
+## <a name="converting-to-coordinated-universal-time"></a>Eşgüdümlü Evrensel saate dönüştürme
 
-Eşgüdümlü Evrensel Saat (UTC) bir yüksek duyarlıklı, atomik standart zamandır. Dünyanın saat dilimi UTC pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle, UTC saat dilimi boş veya saat dilimi bağımsız zaman bir türünü sağlar. UTC saati bir tarih zaman önerilir ve saatin taşınabilirlik bilgisayarlardaki önemlidir. (Ayrıntıları ve tarihler ve saatler kullanarak diğer en iyi yöntemler için bkz: [en iyi uygulamaları .NET Framework'DateTime ' ı kullanarak kodlama](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Tek tek saat dilimlerini UTC'ye dönüştürme zaman karşılaştırmalar kolaylaştırır.
+Eşgüdümlü Evrensel Saat (UTC), yüksek duyarlıklı, atomik bir süre standardıdır. Dünyanın saat dilimleri UTC 'den pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle UTC, bir tür saat dilimi boş veya saat dilimi nötr saati sağlar. Tarih ve saatin bilgisayarlar arasında taşınabilirliği önemli olduğunda UTC zamanının kullanılması önerilir. (Ayrıntılar ve Tarih ve saatleri kullanan diğer en iyi uygulamalar için bkz. [.NET Framework tarih saat kullanarak en iyi yöntemleri kodlama](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Bağımsız bir saat dilimini UTC 'ye dönüştürmek, zaman karşılaştırmaları kolaylaştırır.
 
 > [!NOTE]
-> Ayrıca serileştirebilen bir <xref:System.DateTimeOffset> yapısı tek bir noktadan zaman içinde kesin bir şekilde göstermek için. Çünkü <xref:System.DateTimeOffset> nesneleri depolamak bir tarih ve saat değerini utc'den uzaklığı yanı sıra, her zaman belirli bir noktaya ilişki zamanın UTC'ye temsil ederler.
+> Ayrıca, bir yapının zaman <xref:System.DateTimeOffset> içinde tek bir noktayı göstermek için bir yapıyı seri hale getirebilirsiniz. <xref:System.DateTimeOffset> Nesneler bir tarih ve saat değerini UTC 'deki uzaklığa göre depolarsa, UTC ile ilişki içinde her zaman belirli bir noktayı temsil eder.
 
-UTC'ye dönüştürün en kolay yolu çağırmaktır `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> yöntemi. Yöntem tarafından gerçekleştirilen tam dönüştürme değerine bağlıdır `dateTime` parametrenin <xref:System.DateTime.Kind%2A> özelliği, aşağıdaki tabloda gösterildiği gibi.
+Bir saati UTC 'ye dönüştürmenin en kolay yolu `static` (`Shared` Visual Basic) <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> metodunu çağırmanız. Yöntemi tarafından gerçekleştirilen tam dönüştürme, aşağıdaki tabloda gösterildiği gibi `dateTime` <xref:System.DateTime.Kind%2A> parametrenin özelliğinin değerine bağlıdır.
 
 | `DateTime.Kind`            | Dönüştürme                                                                     |
 | -------------------------- | ------------------------------------------------------------------------------ |
-| `DateTimeKind.Local`       | Yerel saat UTC'ye dönüştürür.                                                    |
-| `DateTimeKind.Unspecified` | Varsayar `dateTime` parametredir yerel saat ve UTC yerel saate dönüştürür. |
-| `DateTimeKind.Utc`         | Döndürür `dateTime` değişmeden parametresi.                                    |
+| `DateTimeKind.Local`       | Yerel saati UTC 'ye dönüştürür.                                                    |
+| `DateTimeKind.Unspecified` | `dateTime` Parametrenin yerel saat olduğunu varsayar ve yerel saati UTC 'ye dönüştürür. |
+| `DateTimeKind.Utc`         | `dateTime` Parametreyi değiştirilmemiş olarak döndürür.                                    |
 
-Aşağıdaki kod, geçerli yerel saat UTC'ye dönüştürür ve sonuç konsolda görüntüler.
+Aşağıdaki kod geçerli yerel saati UTC 'ye dönüştürür ve sonucu konsola görüntüler.
 
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
 
-Yerel saat ya da UTC tarih ve saat değerini temsil etmiyorsa <xref:System.DateTime.ToUniversalTime%2A> yöntemi büyük olasılıkla hatalı bir sonuç döndürür. Ancak, kullanabileceğiniz <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> tarihi ve saati belirtilen bir saat diliminden dönüştürmek için yöntemi. (Ayrıntılı bilgi almak için bir <xref:System.TimeZoneInfo> hedef saat dilimini temsil eden nesneyi görmek [yerel sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Aşağıdaki kod <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> Doğu Standart Saati UTC'ye dönüştürmek için yöntemi.
+Tarih ve saat değeri yerel saati veya UTC 'yi temsil etmez, <xref:System.DateTime.ToUniversalTime%2A> Yöntem muhtemelen hatalı bir sonuç döndürür. Ancak, belirli bir saat diliminden tarih ve saati dönüştürmek için <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> yöntemini kullanabilirsiniz. (Hedef saat dilimini temsil eden <xref:System.TimeZoneInfo> bir nesneyi alma hakkında daha fazla bilgi için, bkz. [yerel bir sistemde tanımlanan saat dilimlerini bulma](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Aşağıdaki kod, Doğu Standart <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> saatini UTC 'ye dönüştürmek için yöntemini kullanır.
 
 [!code-csharp[System.TimeZone2.Concepts#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#7)]
 [!code-vb[System.TimeZone2.Concepts#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#7)]
 
-Bu yöntem Not bir <xref:System.ArgumentException> varsa <xref:System.DateTime> nesnenin <xref:System.DateTime.Kind%2A> özellik ve saat dilimini eşleşmiyor. Bir uyuşmazlık varsa ortaya <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Local?displayProperty=nameWithType> ancak <xref:System.TimeZoneInfo> nesnesi, yerel saat dilimini temsil etmiyor veya <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> ancak <xref:System.TimeZoneInfo> nesnesi eşit değil <xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType>.
+Bu yöntemin, <xref:System.ArgumentException> <xref:System.DateTime> nesnenin <xref:System.DateTime.Kind%2A> özelliği ve saat dilimi yanlış olursa bir oluşturur. <xref:System.DateTime.Kind%2A> <xref:System.DateTime.Kind%2A> <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> <xref:System.TimeZoneInfo> <xref:System.TimeZoneInfo.Utc?displayProperty=nameWithType>Özellik, ancak<xref:System.TimeZoneInfo>nesne yerel saat dilimini temsil etmediği ya da özellik ise ancak nesne eşit değilse bir uyumsuzluk oluşur. <xref:System.DateTimeKind.Local?displayProperty=nameWithType>
 
-Tüm bu yöntemleri ele <xref:System.DateTime> parametreleri ve dönüş değerlerini bir <xref:System.DateTime> değeri. İçin <xref:System.DateTimeOffset> değerleri <xref:System.DateTimeOffset> yapıya sahip bir <xref:System.DateTimeOffset.ToUniversalTime%2A> örnek tarih ve saati geçerli örneğin UTC'ye dönüştürür yöntemi. Aşağıdaki örnek çağrıları <xref:System.DateTimeOffset.ToUniversalTime%2A> bir yerel saat ile birkaç kez Eşgüdümlü Evrensel Saat (UTC) dönüştürmek için yöntemi.
+Bu yöntemlerin hepsi değerleri parametre <xref:System.DateTime> olarak alır ve bir <xref:System.DateTime> değer döndürür. Değerler <xref:System.DateTimeOffset> için <xref:System.DateTimeOffset> , yapının geçerli örneğin tarih ve saatini UTC 'ye dönüştüren bir <xref:System.DateTimeOffset.ToUniversalTime%2A> örnek yöntemi vardır. Aşağıdaki örnek, yerel bir <xref:System.DateTimeOffset.ToUniversalTime%2A> saati ve diğer birkaç saati Eşgüdümlü Evrensel Saat (UTC) olarak dönüştürmek için yöntemini çağırır.
 
 [!code-csharp[System.DateTimeOffset.Methods#16](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/cs/Methods.cs#16)]
 [!code-vb[System.DateTimeOffset.Methods#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Methods/vb/Methods.vb#16)]
 
-## <a name="converting-utc-to-a-designated-time-zone"></a>İçin belirlenen bir saat dilimi UTC Dönüştürme
+## <a name="converting-utc-to-a-designated-time-zone"></a>UTC 'yi belirlenen saat dilimine dönüştürme
 
-Yerel saat UTC'ye dönüştürmek için aşağıdaki "yerel için UTC saat dönüştürme" bölümüne bakın. Sizin belirlediğiniz bir saat dilimindeki saati UTC'ye dönüştürmek için çağrı <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> yöntemi. Yöntem iki parametre alır:
+UTC 'yi yerel saate dönüştürmek için, aşağıdaki "UTC 'den yerel saate dönüştürme" bölümüne bakın. UTC 'yi belirleyeceğiniz herhangi bir zaman diliminde saate dönüştürmek için <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> yöntemini çağırın. Yöntemi iki parametre alır:
 
-* Dönüştürülecek UTC. Bu olmalıdır bir <xref:System.DateTime> ayarlanmış değer <xref:System.DateTime.Kind%2A> özelliği `Unspecified` veya `Utc`.
+- Dönüştürülecek UTC. Bu, <xref:System.DateTime.Kind%2A> özelliği veya <xref:System.DateTime> olarak`Utc`ayarlanmış bir değer olmalıdır. `Unspecified`
 
-* UTC'ye dönüştürmek için saat dilimi.
+- UTC 'nin dönüştürüleceği saat dilimi.
 
-Aşağıdaki kodu için merkezi standart saat UTC'ye dönüştürür.
+Aşağıdaki kod UTC 'yi orta standart saate dönüştürür.
 
 [!code-csharp[System.TimeZone2.Concepts#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#8)]
 [!code-vb[System.TimeZone2.Concepts#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#8)]
 
-## <a name="converting-utc-to-local-time"></a>Yerel saat UTC'ye dönüştürme
+## <a name="converting-utc-to-local-time"></a>UTC 'yi yerel saate dönüştürme
 
-Yerel saat UTC'ye dönüştürmek için çağrı <xref:System.DateTime.ToLocalTime%2A> yöntemi <xref:System.DateTime> süresi dönüştürmek istediğiniz nesne. Tam davranış yöntemi nesnenin değerine bağlıdır <xref:System.DateTime.Kind%2A> özelliği, aşağıdaki tabloda gösterildiği gibi.
+UTC 'yi yerel saate dönüştürmek için dönüştürmek istediğiniz <xref:System.DateTime.ToLocalTime%2A> <xref:System.DateTime> nesnenin yöntemini çağırın. Yönteminin tam davranışı, aşağıdaki tabloda gösterildiği gibi nesnenin <xref:System.DateTime.Kind%2A> özelliğinin değerine bağlıdır.
 
 | `DateTime.Kind`            | Dönüştürme                                                                               |
 | -------------------------- | ---------------------------------------------------------------------------------------- |
-| `DateTimeKind.Local`       | Döndürür <xref:System.DateTime> değerini değiştirmeden.                                      |
-| `DateTimeKind.Unspecified` | Varsayar <xref:System.DateTime> değeri UTC ve yerel saat UTC'ye dönüştürür. |
-| `DateTimeKind.Utc`         | Dönüştürür <xref:System.DateTime> yerel saat değeri.                                 |
+| `DateTimeKind.Local`       | <xref:System.DateTime> Değeri değiştirilmemiş olarak döndürür.                                      |
+| `DateTimeKind.Unspecified` | <xref:System.DateTime> Değerin UTC olduğunu varsayar ve UTC 'yi yerel saate dönüştürür. |
+| `DateTimeKind.Utc`         | <xref:System.DateTime> Değeri yerel saate dönüştürür.                                 |
 
 > [!NOTE]
-> <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> Yöntemi öğesine aynı şekilde davranır `DateTime.ToLocalTime` yöntemi. Dönüştürülecek tarih ve saat değeri olan işlem tek bir parametre alır.
+> <xref:System.TimeZone.ToLocalTime%2A?displayProperty=nameWithType> Yöntemi `DateTime.ToLocalTime` yöntemiyle aynı şekilde davranır. Dönüştürülecek tarih ve saat değeri olan tek bir parametre alır.
 
-Kullanarak yerel saat olarak belirlenen bir saat dilimindeki saati dönüştürebilirsiniz `static` (`Shared` Visual Basic'te) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> yöntemi. Bu teknik, sonraki bölümde ele alınmıştır.
+Ayrıca, `static` (`Shared` Visual Basic) <xref:System.TimeZoneInfo.ConvertTime%2A?displayProperty=nameWithType> metodunu kullanarak belirlenen saat diliminizdeki süreyi yerel saate dönüştürebilirsiniz. Bu teknik, sonraki bölümde ele alınmıştır.
 
-## <a name="converting-between-any-two-time-zones"></a>Her iki saat dilimleri arasında dönüştürme
+## <a name="converting-between-any-two-time-zones"></a>İki saat dilimi arasında dönüştürme
 
-Aşağıdaki iki birini kullanarak her iki saat dilimleri arasında dönüştürme yapabilirsiniz `static` (`Shared` Visual Basic'te) yöntemleri <xref:System.TimeZoneInfo> sınıfı:
+Sınıfının aşağıdaki iki `static` (`Shared` Visual Basic) yöntemlerinden birini kullanarak iki saat dilimi arasında dönüştürme yapabilirsiniz: <xref:System.TimeZoneInfo>
 
-* <xref:System.TimeZoneInfo.ConvertTime%2A>
+- <xref:System.TimeZoneInfo.ConvertTime%2A>
 
-  Bu yöntemin parametre dönüştürmek için tarih ve saat değeri olan bir `TimeZoneInfo` tarih ve saat değerinin saat dilimini temsil eden nesne ve `TimeZoneInfo` tarih ve saat değerine dönüştürmek için bu saat dilimini temsil eden nesne.
+  Bu yöntemin parametreleri, dönüştürülecek tarih ve saat değeri, `TimeZoneInfo` tarih ve saat değerinin saat dilimini temsil eden bir nesne ve Tarih ve saat değerini dönüştürmek için saat dilimini temsil eden bir `TimeZoneInfo` nesnedir.
 
-* <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>
 
-  Tarih ve saat değerini dönüştürmek için tarih ve saat değerinin saat dilimi tanımlayıcısıdır ve saat dilimi tanımlayıcı tarih ve saat değerine dönüştürmek için bu yöntemin parametre değildir.
+  Bu yöntemin parametreleri, dönüştürülecek tarih ve saat değeri, tarih ve saat değerinin saat diliminin tanımlayıcısı ve Tarih ve saat değerinin olarak dönüştürülecek saat diliminin tanımlayıcısıdır.
 
-Her iki yöntem de gerektiren <xref:System.DateTime.Kind%2A> dönüştürülecek tarih ve saat değeri özelliğine ve <xref:System.TimeZoneInfo> saat dilimini temsil eden nesne veya saat dilimi tanımlayıcı bir başkasına karşılık gelir. Aksi takdirde, bir <xref:System.ArgumentException> oluşturulur. Örneğin, varsa `Kind` tarih ve saat değerinin özelliği `DateTimeKind.Local`, değilse bir özel durum `TimeZoneInfo` yönteme parametre olarak nesne eşit değil `TimeZoneInfo.Local`. Yönteme parametre olarak geçirilen tanımlayıcısı eşit değilse bir özel ayrıca durum `TimeZoneInfo.Local.Id`.
+Her iki yöntem de, <xref:System.DateTime.Kind%2A> dönüştürülecek tarih ve saat değerinin <xref:System.TimeZoneInfo> ve saat dilimini temsil eden nesne ya da saat dilimi tanımlayıcısının bir diğerine karşılık geldiğini gerektirir. Aksi takdirde, <xref:System.ArgumentException> bir oluşturulur. Örneğin, `Kind` tarih ve saat değerinin özelliği ise `DateTimeKind.Local`, yöntemine `TimeZoneInfo.Local`parametre olarak geçirilen `TimeZoneInfo` nesne değerine eşit değilse bir özel durum oluşturulur. Yöntemine parametre olarak geçirilen tanımlayıcı değerine eşit `TimeZoneInfo.Local.Id`değilse de bir özel durum oluşturulur.
 
-Aşağıdaki örnekte <xref:System.TimeZoneInfo.ConvertTime%2A> gelen Hawaii Standart Saati yerel saate dönüştürme yöntemi.
+Aşağıdaki örnek, Haian <xref:System.TimeZoneInfo.ConvertTime%2A> standart saatinden yerel saate dönüştürmek için yöntemini kullanır.
 
 [!code-csharp[System.TimeZone2.Concepts#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#9)]
 [!code-vb[System.TimeZone2.Concepts#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#9)]
 
-## <a name="converting-datetimeoffset-values"></a>DateTimeOffset değer dönüştürme
+## <a name="converting-datetimeoffset-values"></a>DateTimeOffset değerlerini dönüştürme
 
-Tarafından temsil edilen tarih ve saat değerlerini <xref:System.DateTimeOffset> nesneleri tam olarak saat dilimi değildir çünkü nesne kendi saat diliminden zaman noktanızla ilişkisi silinir kullanan örneği oluşturulduğu. Ancak, çoğu durumda uygulama yalnızca bir tarih dönüştürme erişmesi ve zamanı iki farklı uzaklıkları UTC saati yerine özellikle saat dilimlerini tabanlı. Bu dönüştürme gerçekleştirmek için geçerli örneğin çağırabilirsiniz <xref:System.DateTimeOffset.ToOffset%2A> yöntemi. Yöntemin tek döndürmek için yöntemin olan zaman değer ve yeni tarihi uzaklığı parametredir.
+Nesneler tarafından <xref:System.DateTimeOffset> temsil edilen tarih ve saat değerleri, nesne, oluşturulduğu sırada saat dilimiyle ilişkili olmadığından tam zaman dilimi farkında değildir. Ancak çoğu durumda, bir uygulamanın bir tarih ve saati belirli saat dilimlerindeki zaman yerine UTC 'den iki farklı uzaklığa göre dönüştürmesi gerekir. Bu dönüştürmeyi gerçekleştirmek için geçerli örnek <xref:System.DateTimeOffset.ToOffset%2A> yöntemini çağırabilirsiniz. Metodun tek parametresi, yöntemin döndürülecek yeni tarih ve saat değerinin bir denkleştirilir.
 
-Örneğin, bir kullanıcının saat ve tarihi için istemesi durumunda bir Web sayfası denir ve aa/gg/yyyy ss: dd: zzzz, aşağıdaki biçimde bir dize olarak serileştirilmiş `ReturnTimeOnServer` yöntemi, tarih ve saate Web sunucusunda bu tarih ve saat değerine dönüştürür.
+Örneğin, bir Web sayfası için Kullanıcı isteğinin tarih ve saati biliniyorsa ve aa/gg/yyyy HH: mm: ss zzzz biçiminde bir dize olarak serileştirildiğinde, aşağıdaki `ReturnTimeOnServer` Yöntem bu tarih ve saat değerini Web sunucusundaki tarih ve saate dönüştürür.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
 
-Yöntem bir dize iletilmezse "1/9/2007 5:32:07-05: 00" temsil eden tarih ve saat dilimindeki saati UTC'den önceki beş saat, 1/9/2007 döndürür AM 3:32:07 -07:00 ABD'de bulunan bir sunucu için Pasifik Standart saat dilimi.
+Yöntem UTC 'den beş saat dilimde tarih ve saati bir kez geçir9/1/2007 5:32:07 -05:00 Tiyse, ABD 'de bulunan bir sunucu için 9/1/2007 3:32:07 ÖÖ-07:00 döndürür Pasifik standart saat dilimi.
 
-<xref:System.TimeZoneInfo> Sınıfı da içeren bir aşırı yüklemesini <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> saat dilimi dönüşümleri gerçekleştirir yöntemi <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> değerleri. Yöntemin parametreleri bir <xref:System.DateTimeOffset> değer ve başvuru saati olduğu dönüştürülecek saat dilimi. Yöntem çağrısı döndürür bir <xref:System.DateTimeOffset> değeri. Örneğin, `ReturnTimeOnServer` yöntemi önceki örnekte yazılan şu şekilde çağrılacak <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> yöntemi.
+Sınıfı <xref:System.TimeZoneInfo> , zaman dilimi dönüştürmelerini <xref:System.DateTimeOffset.ToOffset(System.TimeSpan)> değerlerle gerçekleştiren <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> yönteminin bir aşırı yüklemesini de içerir. Metodun parametreleri bir <xref:System.DateTimeOffset> değerdir ve zaman dilimine bir başvurudur ve bu da zamanın dönüştürülecek olan bir başvurudur. Yöntem çağrısı bir <xref:System.DateTimeOffset> değer döndürür. Örneğin, `ReturnTimeOnServer` önceki örnekteki yöntemi <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29> yöntemi çağırmak için aşağıdaki şekilde yeniden yazılabilir.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]

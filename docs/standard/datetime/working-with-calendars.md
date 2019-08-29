@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28e1979b6ceb1b343764900cc7d49a576a7a4030
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e92d5564308d31609b9fb024f3d3368a19b76b1d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630554"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106707"
 ---
 # <a name="working-with-calendars"></a>Takvimlerle çalışma
 
@@ -30,41 +30,41 @@ Tarih ve saat değeri zaman içinde bir anı gösterse de, dize gösterimi kült
 
 .Net 'teki tüm takvimler, temel takvim <xref:System.Globalization.Calendar?displayProperty=nameWithType> uygulamasını sağlayan sınıfından türetilir. Sınıfından devralan sınıflardan biri, tüm lunizki takvimlerinin temel sınıfı olan sınıftır.<xref:System.Globalization.EastAsianLunisolarCalendar> <xref:System.Globalization.Calendar> .NET aşağıdaki takvim uygulamalarını içerir:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>, Çince lunizki takvimini temsil eder.
+- <xref:System.Globalization.ChineseLunisolarCalendar>, Çince lunizki takvimini temsil eder.
 
-* <xref:System.Globalization.GregorianCalendar>, Gregoryen takvimini temsil eder. Bu takvim, <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> sabit listesi tarafından tanımlanan alt türler (Arapça ve Orta Doğu Fransızca gibi) içine bölünür. <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> Özelliği, Gregoryen takvimin alt türünü belirtir.
+- <xref:System.Globalization.GregorianCalendar>, Gregoryen takvimini temsil eder. Bu takvim, <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> sabit listesi tarafından tanımlanan alt türler (Arapça ve Orta Doğu Fransızca gibi) içine bölünür. <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> Özelliği, Gregoryen takvimin alt türünü belirtir.
 
-* <xref:System.Globalization.HebrewCalendar>Ibranice takvimini temsil eder.
+- <xref:System.Globalization.HebrewCalendar>Ibranice takvimini temsil eder.
 
-* <xref:System.Globalization.HijriCalendar>Hicri takvimi temsil eder.
+- <xref:System.Globalization.HijriCalendar>Hicri takvimi temsil eder.
 
-* <xref:System.Globalization.JapaneseCalendar>Japonca takvimi temsil eder.
+- <xref:System.Globalization.JapaneseCalendar>Japonca takvimi temsil eder.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>, Japonca ay Güneş takvimini temsil eder.
+- <xref:System.Globalization.JapaneseLunisolarCalendar>, Japonca ay Güneş takvimini temsil eder.
 
-* <xref:System.Globalization.JulianCalendar>, Jülyen takvimini temsil eder.
+- <xref:System.Globalization.JulianCalendar>, Jülyen takvimini temsil eder.
 
-* <xref:System.Globalization.KoreanCalendar>Korece takvimini temsil eder.
+- <xref:System.Globalization.KoreanCalendar>Korece takvimini temsil eder.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>, Kore ay Güneş takvimini temsil eder.
+- <xref:System.Globalization.KoreanLunisolarCalendar>, Kore ay Güneş takvimini temsil eder.
 
-* <xref:System.Globalization.PersianCalendar>, Farsça takvimini temsil eder.
+- <xref:System.Globalization.PersianCalendar>, Farsça takvimini temsil eder.
 
-* <xref:System.Globalization.TaiwanCalendar>, Tayvan takvimini temsil eder.
+- <xref:System.Globalization.TaiwanCalendar>, Tayvan takvimini temsil eder.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>, Tayvan ay Güneş takvimini temsil eder.
+- <xref:System.Globalization.TaiwanLunisolarCalendar>, Tayvan ay Güneş takvimini temsil eder.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>, Tay Budist takvimini temsil eder.
+- <xref:System.Globalization.ThaiBuddhistCalendar>, Tay Budist takvimini temsil eder.
 
-* <xref:System.Globalization.UmAlQuraCalendar>Bu, um Al Qura takvimini temsil eder.
+- <xref:System.Globalization.UmAlQuraCalendar>Bu, um Al Qura takvimini temsil eder.
 
 Bir takvim iki şekilde kullanılabilir:
 
-* Belirli bir kültür tarafından kullanılan takvim olarak. Her <xref:System.Globalization.CultureInfo> nesne, nesnenin şu anda kullandığı takvim olan geçerli bir takvime sahiptir. Tüm tarih ve saat değerlerinin dize gösterimleri, otomatik olarak geçerli kültürü ve onun geçerli takvimini yansıtır. Genellikle, geçerli takvim kültürün varsayılan takvimidir. <xref:System.Globalization.CultureInfo>nesneler Ayrıca, kültürün kullanabileceği ek takvimler dahil olmak üzere isteğe bağlı takvimlere sahiptir.
+- Belirli bir kültür tarafından kullanılan takvim olarak. Her <xref:System.Globalization.CultureInfo> nesne, nesnenin şu anda kullandığı takvim olan geçerli bir takvime sahiptir. Tüm tarih ve saat değerlerinin dize gösterimleri, otomatik olarak geçerli kültürü ve onun geçerli takvimini yansıtır. Genellikle, geçerli takvim kültürün varsayılan takvimidir. <xref:System.Globalization.CultureInfo>nesneler Ayrıca, kültürün kullanabileceği ek takvimler dahil olmak üzere isteğe bağlı takvimlere sahiptir.
 
-* Belirli bir takvimden bağımsız tek başına bir takvim olarak. Bu durumda, <xref:System.Globalization.Calendar> tarihleri takvimi yansıtan değerler olarak ifade etmek için yöntemler kullanılır.
+- Belirli bir takvimden bağımsız tek başına bir takvim olarak. Bu durumda, <xref:System.Globalization.Calendar> tarihleri takvimi yansıtan değerler olarak ifade etmek için yöntemler kullanılır.
 
-- <xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, ,,<xref:System.Globalization.KoreanLunisolarCalendar>Ve –<xref:System.Globalization.TaiwanLunisolarCalendar> altı takvim sınıfının yalnızca tek başına takvimler olarak kullanılabileceğini unutmayın. <xref:System.Globalization.PersianCalendar> <xref:System.Globalization.JulianCalendar> Herhangi bir kültür tarafından varsayılan takvim olarak veya isteğe bağlı bir takvim olarak kullanılmazlar.
+\- <xref:System.Globalization.ChineseLunisolarCalendar>, <xref:System.Globalization.JapaneseLunisolarCalendar>, ,,<xref:System.Globalization.KoreanLunisolarCalendar>Ve –<xref:System.Globalization.TaiwanLunisolarCalendar> altı takvim sınıfının yalnızca tek başına takvimler olarak kullanılabileceğini unutmayın. <xref:System.Globalization.PersianCalendar> <xref:System.Globalization.JulianCalendar> Herhangi bir kültür tarafından varsayılan takvim olarak veya isteğe bağlı bir takvim olarak kullanılmazlar.
 
 ## <a name="calendars-and-cultures"></a>Takvimler ve kültürler
 

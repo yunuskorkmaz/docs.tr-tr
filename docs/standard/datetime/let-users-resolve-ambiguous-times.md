@@ -8,55 +8,55 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70c73de068e067501cd4b1e5f80f85639e790ee2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bf97f1a08c6df13ce639466fc07472926c63987f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586382"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106631"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Nasıl yapılır: Kullanıcıların belirsiz saatleri çözmelerine izin verme
 
-Belirsiz bir saat birden fazla Eşgüdümlü Evrensel Saat (UTC için) eşleyen bir zamandır. Saatin geri sürede gibi standart saati kendi saat diliminin gün ışığından yararlanma saatine geçiş sırasında ayarlanır oluşur. Belirsiz bir saat işlerken, aşağıdakilerden birini yapabilirsiniz:
+Belirsiz bir zaman, birden fazla Eşgüdümlü Evrensel Saat (UTC) ile eşleşen bir süredir. Saat diliminin gün ışığından yararlanma saatinden standart saate geçiş sırasında olduğu gibi saat içinde saat olarak ayarlandığında meydana gelir. Belirsiz bir süre işlenirken aşağıdakilerden birini yapabilirsiniz:
 
-* Bir öğenin kullanıcı tarafından girilen veriler belirsiz saat ise belirsizliği çözmek için kullanıcıya bırakabilirsiniz.
+- Belirsiz saat Kullanıcı tarafından girilen bir veri öğesi ise, belirsizliği çözümlemek için bunu kullanıcıya bırakabilirsiniz.
 
-* Saat UTC'ye nasıl eşlendiğini hakkında bir olduğu varsayımını yaparsınız. Örneğin, belirsiz bir süre içinde saat diliminin standart saat her zaman gösterilir varsayabilirsiniz.
+- Saatin UTC 'ye nasıl eşlendiğini varsayımını unutmayın. Örneğin, saat diliminin standart saatinde belirsiz bir zamanın her zaman ifade edildiği varsayıladır.
 
-Bu konuda, bir kullanıcının belirsiz bir saat çözmek olanak gösterilmektedir.
+Bu konu başlığı altında, kullanıcının belirsiz bir süre çözümlenme yöntemi gösterilmektedir.
 
-### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Belirsiz bir saat çözmek kullanıcı izin vermek için
+### <a name="to-let-a-user-resolve-an-ambiguous-time"></a>Kullanıcının belirsiz bir süre çözmesine izin vermek için
 
-1. Tarih ve saat tarafından kullanıcı girişi alın.
+1. Kullanıcı tarafından tarih ve saat girişi al.
 
-2. Çağrı <xref:System.TimeZoneInfo.IsAmbiguousTime%2A> zaman belirsiz olup olmadığını belirlemek için yöntemi.
+2. Saatin belirsiz olup olmadığını anlamak için yönteminiçağırın.<xref:System.TimeZoneInfo.IsAmbiguousTime%2A>
 
-3. Zaman belirsiz ise, çağrı <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> dizisini almak için yöntemi <xref:System.TimeSpan> nesneleri. Belirsiz saat eşleyebilirsiniz bir UTC farkı dizideki her öğe içerir.
+3. Süre belirsizse, <xref:System.TimeSpan> nesne dizisini almak için <xref:System.TimeZoneInfo.GetAmbiguousTimeOffsets%2A> yöntemini çağırın. Dizideki her öğe, belirsiz saatin eşleyebileceğiniz UTC sapmasını içerir.
 
-4. Kullanıcı Seç istenen uzaklığı olanak tanır.
+4. Kullanıcının istenen sapmayı seçmesini sağlayın.
 
-5. UTC tarihi ve saati yerel saate kullanıcı tarafından seçilen uzaklığı çıkararak alın.
+5. Kullanıcı tarafından seçilen sapmayı yerel saatten çıkararak UTC Tarih ve saatini elde edin.
 
-6. Çağrı `static` (`Shared` Visual Basic. NET'te) <xref:System.DateTime.SpecifyKind%2A> UTC tarih ve saat değerinin ayarlanacak yöntemi <xref:System.DateTime.Kind%2A> özelliğini <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+6. `Shared` <xref:System.DateTime.SpecifyKind%2A> <xref:System.DateTime.Kind%2A> UTCTarih<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>ve saat değerinin özelliğini olarak ayarlamak için (VisualBasic.net)metodunuçağırın.`static`
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir tarih ve saat girmesini ister ve belirsiz ise belirsiz saat eşlendiği UTC saati seçmesine izin verir.
+Aşağıdaki örnek, kullanıcıdan bir tarih ve saat girmesini ister ve belirsiz ise kullanıcının belirsiz saatin eşlendiği UTC saatini seçmesini sağlar.
 
 [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
 [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
 
-Örnek kod setinin bir dizi kullanan <xref:System.TimeSpan> belirsiz saat UTC olası uzaklıklarını belirtmek için nesnelerdeki. Ancak, bu uzaklıkları kullanıcıya anlamlı olması pek olası değildir. Uzaklık anlamını açıklamak için bir uzaklık yerel saat diliminin standart saat veya kendi yaz saati temsil edip etmediğini kod da notlar. Kodu, hangi zaman standart belirler ve hangi zaman Yaz uzaklık değeri ile karşılaştırarak <xref:System.TimeZoneInfo.BaseUtcOffset%2A> özelliği. Bu özellik, saat diliminin Standart Saati ile UTC arasındaki farkı gösterir.
+Örnek kodun çekirdeği, UTC 'den belirsiz sürenin olası uzaklıklarını göstermek için bir <xref:System.TimeSpan> nesne dizisi kullanır. Ancak, bu uzaklıklar Kullanıcı için anlamlı değildir. Kaydırmanın anlamını netleştirmek için, kod ayrıca bir uzaklığın yerel saat diliminin standart saatini mi yoksa gün ışığından yararlanma saatini mi temsil ettiğini de not eder. Kod, değeri <xref:System.TimeZoneInfo.BaseUtcOffset%2A> özelliğin değeriyle karşılaştırarak hangi zamanın standart olduğunu ve ne zaman günışığından yararlanma olduğunu belirler. Bu özellik UTC ve saat diliminin standart saati arasındaki farkı gösterir.
 
-Bu örnekte, yerel saat dilimi için tüm başvuruları aracılığıyla yapılan <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> özelliği; yerel saati dilimi hiçbir zaman bir nesne değişkenine atanır. Bunun nedeni önerilen uygulama, bir çağrı <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metodu geçersiz kılar, yerel saat dilimi atandığı herhangi bir nesne.
+Bu örnekte, yerel saat dilimine yapılan tüm başvurular <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> özelliği aracılığıyla yapılır; yerel saat dilimi hiçbir zaman bir nesne değişkenine atanmaz. Bu önerilen bir uygulamadır çünkü <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> yöntemine yapılan bir çağrı, yerel saat diliminin atandığı tüm nesneleri geçersiz kılar.
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
-Bu örnek gerektirir:
+Bu örnek şunları gerektirir:
 
-* Olduğunu <xref:System> ad alanı içeri aktarılacak `using` deyimi (C# kodunda gereklidir).
+- Bu ad alanı, `using` ifadesiyle içeri aktarılmalıdır ( C# kodda gereklidir). <xref:System>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-- [Nasıl yapılır: Belirsiz saatleri çözme](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+- [Nasıl yapılır: Belirsiz zamanları çözümle](../../../docs/standard/datetime/resolve-ambiguous-times.md)

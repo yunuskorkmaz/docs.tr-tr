@@ -1,17 +1,17 @@
 ---
-title: DotNet paketi komut ekleme
-description: "'Dotnet, paket Ekle' komutunu bir projeye bir NuGet paketi başvuru eklemek için uygun bir seçenek sağlar."
+title: DotNet paket Ekle komutu
+description: "' DotNet Add Package ' komutu, bir projeye NuGet paket başvurusu eklemek için uygun bir seçenek sağlar."
 ms.date: 06/26/2019
-ms.openlocfilehash: 50a352be66f2b4bd4498d79f61dc01f56d4b00c5
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 124e42b1d5897802bb1698c8e22b7e76031391a2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569510"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105159"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**Bu makale için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -19,19 +19,19 @@ ms.locfileid: "67569510"
 
 ## <a name="name"></a>Ad
 
-`dotnet add package` -Bir proje dosyası için bir paket başvurusu ekler.
+`dotnet add package`-Proje dosyasına bir paket başvurusu ekler.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Açıklama
 
-`dotnet add package` Komutu bir proje dosyası için bir paket başvurusu eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra paket projedeki çerçevelerle uyumlu olduğundan emin olmak için bir uyumluluk denetimi yoktur. Onay başarılı olursa bir `<PackageReference>` öğesi, proje dosyasına eklenir ve [dotnet restore](dotnet-restore.md) çalıştırılır.
+Komut `dotnet add package` , bir proje dosyasına paket başvurusu eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra, paketin projedeki çerçeveler ile uyumlu olduğundan emin olmak için bir uyumluluk denetimi vardır. Denetim başarılı olursa, proje dosyasına `<PackageReference>` bir öğe eklenir ve [DotNet restore](dotnet-restore.md) çalıştırılır.
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-Örneğin, ekleme `Newtonsoft.Json` için *ToDo.csproj* aşağıdaki örneğe benzer bir çıktı üretir:
+Örneğin, `Newtonsoft.Json` *Todo. csproj* öğesine eklemek aşağıdaki örneğe benzer bir çıktı üretir:
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
@@ -46,7 +46,7 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-*ToDo.csproj* artık dosya içeren bir [ `<PackageReference>` ](/nuget/consume-packages/package-references-in-project-files) başvurulan paketi için öğesi.
+*Todo. csproj* dosyası artık başvurulan paket için [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) bir öğe içeriyor.
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
@@ -54,59 +54,59 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="arguments"></a>Arguments
 
-* **`PROJECT`**
+- **`PROJECT`**
 
-  Proje dosyasını belirtir. Belirtilmezse, komut için geçerli dizinde arar.
+  Proje dosyasını belirtir. Belirtilmemişse, komut geçerli dizinde bir arama yapar.
 
-* **`PACKAGE_NAME`**
+- **`PACKAGE_NAME`**
 
   Eklenecek paket başvurusu.
 
 ## <a name="options"></a>Seçenekler
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
-  Yalnızca belirli bir hedeflenirken paket başvurusu ekler [framework](../../standard/frameworks.md).
+  Yalnızca belirli bir [çerçeveyi](../../standard/frameworks.md)hedeflerken bir paket başvurusu ekler.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
-* **`--interactive`**
+- **`--interactive`**
 
-  Durdurmak ve kullanıcı girişi veya eylem (örneğin, kimlik doğrulamasını tamamlamak için) için beklemek için komutu sağlar. .NET Core 2.1 SDK, sürüm 2.1.400 sürümünden itibaren kullanılabilir veya üzeri.
+  Komutun, Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya yönelik). .NET Core 2,1 SDK, sürüm 2.1.400 veya sonrası ile kullanılabilir.
 
-* **`-n|--no-restore`**
+- **`-n|--no-restore`**
 
-  Geri yükleme Önizleme ve uyumluluk denetimi gerçekleştirmeden bir paket başvurusu ekler.
+  Geri yükleme önizlemesi ve uyumluluk denetimi yapılmadan bir paket başvurusu ekler.
 
-* **`--package-directory <PACKAGE_DIRECTORY>`**
+- **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Dizin paketleri geri yükleneceği yeri. Varsayılan paket geri yükleme konumu `%userprofile%\.nuget\packages` Windows üzerinde ve `~/.nuget/packages` macOS ve Linux'ta. Daha fazla bilgi için [genel paketleri, önbellek ve NuGet geçici klasörlere yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu Windows `%userprofile%\.nuget\packages` ve `~/.nuget/packages` MacOS ve Linux üzerinde bulunur. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
-  Geri yükleme işlemi sırasında kullanmak için NuGet paket kaynağı.
+  Geri yükleme işlemi sırasında kullanılacak NuGet paketi kaynağı.
 
-* **`-v|--version <VERSION>`**
+- **`-v|--version <VERSION>`**
 
-  Paket sürümü. Bkz: [NuGet Paket sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning).
+  Paketin sürümü. Bkz. [NuGet paketi sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning).
 
 ## <a name="examples"></a>Örnekler
 
-* Ekleme `Newtonsoft.Json` NuGet paketini projeye:
+- Bir `Newtonsoft.Json` projeye NuGet paketi Ekle:
 
   ```console
   dotnet add package Newtonsoft.Json
   ```
 
-* Bir paketin belirli bir sürümünü bir projeye ekleyin:
+- Bir projeye paketin belirli bir sürümünü ekleyin:
 
   ```console
   dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
   ```
 
-* Belirli bir NuGet kaynağını kullanarak paket ekleyin:
+- Belirli bir NuGet kaynağını kullanarak bir paket ekleyin:
 
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
@@ -114,5 +114,5 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Genel paketleri, önbellek ve NuGet geçici klasörlere yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [NuGet Paket sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet paketi sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning)

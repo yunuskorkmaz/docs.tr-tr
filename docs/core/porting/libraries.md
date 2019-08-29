@@ -4,12 +4,12 @@ description: .NET Framework kitaplığı projelerinin nasıl .NET Core 'a bağla
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660706"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105296"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Core 'a bağlantı noktası .NET Framework kitaplıkları
 
@@ -113,11 +113,11 @@ Yukarıdaki yaklaşımlardan proje başına temelinde karıştıracaksınız. Si
 Kodunuzu yazarken her şeyin çalıştığından emin olmanın en iyi yolu, .NET Core 'a bağlantı noktası oluştururken kodunuzun test sağlamaktır. Bunu yapmak için .NET Core için test oluşturup çalıştıran bir test çerçevesi kullanmanız gerekir. Şu anda üç seçeneğiniz vardır:
 
 - [xUnit](https://xunit.github.io/)
-  * [Başlarken](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [MSTest projesini xUnit 'e dönüştüren araç](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Başlarken](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [MSTest projesini xUnit 'e dönüştüren araç](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [Başlarken](https://github.com/nunit/docs/wiki/Installation)
-  * [MSTest 'ten NUnit 'e geçiş hakkında blog gönderisi](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [Başlarken](https://github.com/nunit/docs/wiki/Installation)
+  - [MSTest 'ten NUnit 'e geçiş hakkında blog gönderisi](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - ['I](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Taşıma için önerilen yaklaşım

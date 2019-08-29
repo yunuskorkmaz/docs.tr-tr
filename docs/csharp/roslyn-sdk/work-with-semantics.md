@@ -1,58 +1,58 @@
 ---
-title: .NET derleyici Platformu SDK'sı anlam modeli ile çalışma
-description: Bu genel bakışta anlamak ve kodunuzun anlam modeli kullandığınız türünün bir anlayış sağlar.
+title: .NET Compiler Platform SDK anlam modeliyle çalışma
+description: Bu genel bakışta, kodunuzun anlam modelini anlamak ve işlemek için kullandığınız tür hakkında bilgi sağlanır.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706643"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105662"
 ---
 # <a name="work-with-semantics"></a>Semantik ile çalışma
 
-[Sözdizimi ağacı](work-with-syntax.md) kaynak kodu sözcük ve söz dizimi yapısını temsil eder. Bu bilgiler yalnızca tüm bildirimlerinin ve kaynak mantığı tanımlamak için yeterli olsa da, hangi başvurulan belirlemek için yeterli bilgi değil. Bir ad temsil edebilir:
+[Sözdizimi ağaçları](work-with-syntax.md) , kaynak kodunun sözlü ve sözdizimsel yapısını temsil eder. Bu bilgilerin tek başına, kaynaktaki tüm bildirimleri ve mantığı tanımlamak için yeterli olmasına rağmen, ne başvurulduğunu belirlemek için yeterli bilgi yok. Bir ad şunları temsil edebilir:
 
-- bir türü
-- Bir alan
+- bir tür
+- bir alan
 - bir yöntemi
-- bir yerel değişken
+- Yerel bir değişken
 
-Her birinde benzersiz bir şekilde farklı olmasına karşın, hangisinin belirleyen bir tanımlayıcı gerçekten genellikle gerektirir derin bir anlayış dil kuralları ifade eder. 
+Bunların her biri benzersiz bir şekilde farklı olsa da, hangi tanımlayıcının gerçekten başvurduğu, genellikle dil kurallarının derinlemesine bir şekilde anlaşılmasına ihtiyaç duyar. 
 
-Kaynak kodunda temsil program öğelerini vardır ve programları daha önce derlenmiş kitaplıkları, derleme dosyalarında paketlenmiş de başvurabilirsiniz. Kaynak kodu yok ve bu nedenle hiçbir sözdizimi düğümü veya ağaçları derlemeler için kullanılabilir, ancak program içinde öğeleri yine de başvurabilir.
+Kaynak kodunda temsil edilen program öğeleri vardır ve programlar, derleme dosyalarında paketlenmiş daha önceden derlenen kitaplıklara de başvurabilir. Kaynak kodu olmasa da hiçbir sözdizimi düğümü veya ağacı derlemeler için kullanılabilir olmadığından, programlar bunların içindeki öğelere başvurabilirler.
 
-Bu görevler için gereksinim duyduğunuz **anlam modeli**.
+Bu görevler için **anlam modeli**gerekir.
 
-Kaynak kodunun sözdizimsel modelinin yanı sıra bir anlam modeli doğru tanımlayıcıları başvurulan doğru programı öğeyle eşleşmesi için kolay bir yol vererek dil kuralları kapsüller.
+Kaynak kodun sözdizimsel modelinin yanı sıra, bir anlam modeli, dil kurallarını kapsüller, bu da, başvurulan doğru program öğesiyle tanımlayıcılarla doğru bir şekilde eşleşmenin kolay bir yolunu sunar.
 
 ## <a name="compilation"></a>Derleme
 
-Derlemek için gereken her şeyi gösterimi bir derleme ise bir C# veya Visual Basic programı, tüm derleme başvuruları, derleyici seçenekleri ve kaynak dosyaları içerir. 
+Derleme, tüm derleme başvurularını, derleyici seçeneklerini ve kaynak dosyaları C# içeren bir veya Visual Basic programı derlemek için gereken her şeyin bir gösterimidir. 
 
-Bu bilgileri tek bir yerde olduğu için kaynak kodunda içerilen öğelerin daha ayrıntılı olarak açıklanabilir. Derleme her bildirilen tür, üye veya değişken bir sembol temsil eder. Yardımcı yöntemler çeşitli derleme içeren bulun ve ya da kaynak kodunda bildirilen veya bir derlemenin meta verilerini içe simgeleri ilişkilendirebilirsiniz.
+Tüm bu bilgiler tek bir yerde olduğundan, kaynak kodda bulunan öğeler daha ayrıntılı olarak açıklanabilir. Derleme, belirtilen her tür, üye veya değişkeni bir sembol olarak temsil eder. Derleme, kaynak kodda belirtilen veya bir derlemeden meta veriler olarak içeri aktarılan sembolleri bulmanıza ve ilişkilendirmede yardımcı olan çeşitli yöntemler içerir.
 
-Benzer şekilde bir söz dizimi ağacı, derlemeleri sabittir. Bir derleme oluşturduktan sonra siz veya başkaları ile paylaşımı tarafından değiştirilemez. Ancak, bir değişiklik belirten bunu gibi mevcut bir derlemeden yeni bir derleme oluşturabilirsiniz. Örneğin, bir ek kaynak dosyası veya bütünleştirilmiş kod başvurusu içerebilir dışında aynı olan her bir şekilde mevcut bir derleme, derleme oluşturabilirsiniz.
+Sözdizimi ağaçlarına benzer şekilde derlemeler sabittir. Bir derleme oluşturduktan sonra, sizin tarafınızdan veya sizinle paylaştığınız başka bir kişi tarafından değiştirilemez. Bununla birlikte, mevcut bir derlemeden yeni bir derleme oluşturabilir ve bunu yaptığınız gibi bir değişiklik belirtebilirsiniz. Örneğin, var olan bir derleme için her şekilde aynı olan bir derleme oluşturabilirsiniz, ancak ek bir kaynak dosya veya derleme başvurusu içerebilir.
 
 ## <a name="symbols"></a>Simgeleri
 
-Bir sembol kaynak kodu tarafından bildirilen veya derleme meta verileri olarak içeri aktarılan ayrı bir öğeyi temsil eder. Her ad alanı, türü, yöntem, özellik, alan, olay, parametre veya yerel değişken bir simge ile temsil edilir. 
+Bir sembol, kaynak kodu tarafından tanımlanan veya bir derlemeden meta veri olarak içeri aktarılan ayrı bir öğeyi temsil eder. Her ad alanı, tür, yöntem, özellik, alan, olay, parametre veya yerel değişken bir sembol ile temsil edilir. 
 
-Çeşitli yöntemleri ve özellikleri <xref:Microsoft.CodeAnalysis.Compilation> yazın sembolleri bulmasına yardımcı olur. Örneğin, bir sembol için bildirilen bir tür ortak meta veriler adıyla bulabilirsiniz. Tüm sembol tablosu simgeleri genel ad alanı tarafından kök erişim izni verilmiş bir ağaç olarak da erişebilirsiniz.
+<xref:Microsoft.CodeAnalysis.Compilation> Türdeki çeşitli yöntemler ve özellikler, sembolleri bulmanıza yardımcı olur. Örneğin, tanımlanmış bir tür için ortak meta veri adıyla bir simge bulabilirsiniz. Tüm sembol tablosuna, genel ad alanı tarafından kök olarak belirtilen bir sembol ağacı olarak da erişebilirsiniz.
 
-Simgeler, ayrıca derleyicinin kaynak ya da diğer başvurulan semboller gibi meta verileri belirleyen ek bilgiler içermektedir. Sembol her tür türetilen ayrı bir arabirim tarafından temsil edilen <xref:Microsoft.CodeAnalysis.ISymbol>, her biri kendi yöntemlerini ve özelliklerini derleyici topladığınız bilgileri gerçekleşen. Bu özelliklerin çoğu, doğrudan diğer semboller başvurusu. Örneğin, <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> özelliği bildirir, yöntem bildiriminde başvuran gerçek tür simgesi.
+Semboller ayrıca, derleyicinin diğer başvurulan semboller gibi kaynak veya meta verilerden belirlediği ek bilgileri de içerir. Her bir sembol türü, ' den <xref:Microsoft.CodeAnalysis.ISymbol>türetilen ayrı bir arabirim tarafından temsil edilir ve derleyicinin topladığı bilgileri ayrıntılarıyla açıklayan kendi yöntemleri ve özellikleri vardır. Bu özelliklerin birçoğu, diğer simgelere doğrudan başvurur. Örneğin, <xref:Microsoft.CodeAnalysis.IMethodSymbol.ReturnType?displayProperty=nameWithType> özelliği, yöntem bildiriminin başvurduğu gerçek tür sembolünü söyler.
 
-Semboller ad alanları, türler ve üyeler, kaynak kodu ve meta verileri arasında ortak bir gösterimini sunar. Örneğin, kaynak kodunda bildirilen bir yöntemi ve meta verileri içeri aktarılan bir yöntemi her ikisi tarafından temsil edilir bir <xref:Microsoft.CodeAnalysis.IMethodSymbol> aynı özelliklere sahip.
+Semboller, kaynak kodu ve meta veriler arasında ad alanları, türler ve üyelerin ortak bir gösterimini sunar. Örneğin, kaynak kodda belirtilen bir yöntem ve meta verilerden içeri aktarılan bir yöntem, aynı özelliklerle bir <xref:Microsoft.CodeAnalysis.IMethodSymbol> ile temsil edilir.
 
-Semboller tarafından temsil edilen CLR tür sistemine kavramsal olarak benzer <xref:System.Reflection> API henüz bunlar daha fazlasını türleri modellemek, daha zengin. Ad alanları, yerel değişkenleri ve etiketleri tüm simgelerdir. Ayrıca, bir dil kavramları, CLR kavramlarını gösterimini simgelerdir. Birçok örtüşme vardır, ancak de birçok anlamlı farklılıklar vardır. Örneğin, bir yineleyici yöntem içinde C# veya Visual Basic tek bir simge. Ancak, yineleyici yöntem CLR meta verileri çevrilir yaparken, bir tür ve birden çok yöntem vardır.
+Semboller, <xref:System.Reflection> API tarafından temsil edildiği gibi CLR türü sistemine benzerdir, ancak yalnızca daha fazla türden daha fazla modelleyerek daha hızlıdır. Ad alanları, yerel değişkenler ve Etiketler tüm sembollerdir. Ayrıca, semboller CLR kavramlarını değil, dil kavramlarının bir gösterimidir. Çok sayıda çakışma vardır ancak birçok anlamlı ayrımda vardır. Örneğin, C# veya Visual Basic bir yineleyici yöntemi tek bir sembolüdür. Ancak, yineleyici yöntemi CLR meta verilerine çevrildiğinde, bir tür ve birden çok yöntem olur.
 
 ## <a name="semantic-model"></a>Anlam modeli
 
-Anlam modeli, tek bir kaynak dosyası için anlamsal tüm bilgileri temsil eder. Aşağıdakileri keşfetmek için kullanabilirsiniz: 
+Anlam modeli, tek bir kaynak dosya için tüm anlam bilgilerini temsil eder. Aşağıdakileri öğrenmek için kullanabilirsiniz: 
 
-* Belirli bir kaynak konumda başvurulan simgeler.
-* Herhangi bir ifade sonuç türü.
-* Tüm tanılama hataları ve Uyarıları.
-* Nasıl kaynak bölge içine ve dışına değişkenleri akış.
-* Daha fazla kurgusal soruları yanıtlar.
+- Kaynakta belirli bir konumda başvurulan semboller.
+- Herhangi bir ifadenin sonuç türü.
+- Hata ve uyarı olan tüm Tanılamalar.
+- Değişkenlerin kaynak bölgeler içinde ve dışında nasıl akar.
+- Daha belirgin soruların yanıtları.

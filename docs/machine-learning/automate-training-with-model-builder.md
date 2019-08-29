@@ -4,12 +4,12 @@ description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model
 author: natke
 ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: a871c3a3751a93bdf0104c873215b164616f0664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 715c9f5854d9691fd9fc2cd771d38456405836ec
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611456"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104810"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -133,11 +133,11 @@ Model Oluşturucu eğitim verilerini bir eğitim kümesine ve bir test kümesine
 
 Model performans puanınız istediğiniz kadar iyi değilse şunları yapabilirsiniz:
 
-* Daha uzun bir süre için eğitme. Daha fazla zaman, daha fazla algoritma ve ayar denemek için otomatik makine öğrenimi altyapısı.
+- Daha uzun bir süre için eğitme. Daha fazla zaman, daha fazla algoritma ve ayar denemek için otomatik makine öğrenimi altyapısı.
 
-* Daha fazla veri ekleyin. Bazen veri miktarı yüksek kaliteli bir makine öğrenimi modelini eğitmek için yeterli değildir.
+- Daha fazla veri ekleyin. Bazen veri miktarı yüksek kaliteli bir makine öğrenimi modelini eğitmek için yeterli değildir.
 
-* Verilerinizi dengeleyin. Sınıflandırma görevleri için, eğitim kümesinin Kategoriler genelinde dengeli olduğundan emin olun. Örneğin, 100 eğitim örnekleri için dört sınıfınız varsa ve bu iki sınıf (etiket1 ve etiket2), 90 kayıt için kullanılırsa, ancak diğer iki (etiket3 ve TAG4) yalnızca kalan 10 kayıtta kullanılıyorsa, dengeli verilerin bulunmaması modelinizin eksikliğine zarar verebilir etiket3 veya TAG4 ' i tahmin edin.
+- Verilerinizi dengeleyin. Sınıflandırma görevleri için, eğitim kümesinin Kategoriler genelinde dengeli olduğundan emin olun. Örneğin, 100 eğitim örnekleri için dört sınıfınız varsa ve bu iki sınıf (etiket1 ve etiket2), 90 kayıt için kullanılırsa, ancak diğer iki (etiket3 ve TAG4) yalnızca kalan 10 kayıtta kullanılıyorsa, dengeli verilerin bulunmaması modelinizin eksikliğine zarar verebilir etiket3 veya TAG4 ' i tahmin edin.
 
 ## <a name="code"></a>Kod
 

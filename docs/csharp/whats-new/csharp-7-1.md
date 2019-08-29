@@ -2,12 +2,12 @@
 title: C# 7,1 sürümündeki yenilikler
 description: C# 7,1 sürümündeki yeni özelliklere genel bakış.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796602"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105544"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7,1 sürümündeki yenilikler
 
@@ -17,13 +17,13 @@ C#7,1, [dil sürümü seçimi](../language-reference/configure-language-version.
 
 Bu sürümdeki yeni dil özellikleri şunlardır:
 
-* [`async``Main` yöntemi](#async-main)
+- [`async``Main` yöntemi](#async-main)
   - Bir uygulama için giriş noktası `async` değiştiriciye sahip olabilir.
-* [`default`değişmez değer ifadeleri](#default-literal-expressions)
+- [`default`değişmez değer ifadeleri](#default-literal-expressions)
   - Hedef türü çıkarsanamıyor varsayılan değer ifadelerinde varsayılan değişmez ifadeleri kullanabilirsiniz.
-* [Gösterilen demet öğesi adları](#inferred-tuple-element-names)
+- [Gösterilen demet öğesi adları](#inferred-tuple-element-names)
   - Kayıt düzeni öğelerinin adları, birçok durumda demet başlatmasıyla çıkarsanamıyor.
-* [Genel tür parametrelerinde model eşleştirme](#pattern-matching-on-generic-type-parameters)
+- [Genel tür parametrelerinde model eşleştirme](#pattern-matching-on-generic-type-parameters)
   - Türü genel bir tür parametresi olan değişkenlerde model eşleşme ifadeleri kullanabilirsiniz.
 
 Son olarak, derleyici iki seçeneğe `-refout` sahiptir ve `-refonly` bu, [Başvuru derleme üretimini](#reference-assembly-generation)denetler.

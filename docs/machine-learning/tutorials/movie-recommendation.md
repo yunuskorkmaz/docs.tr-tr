@@ -2,15 +2,15 @@
 title: 'Öğretici: Film oluşturma öneren-matris oluşturma'
 description: Bu öğreticide, bir .NET Core konsol uygulamasında ML.NET ile bir film öneren oluşturma yöntemi gösterilmektedir. Adımları ve Visual C# Studio 2019 ' i kullanın.
 author: briacht
-ms.date: 07/09/2019
+ms.date: 08/26/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 82da512d437ed2c5c28601c34687494b8be4d046
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 97bdef3daa296dcb88cbb158a14668205df6fee3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666679"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107263"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Öğretici: ML.NET ile matris factorizaton kullanarak bir film öneren oluşturun
 
@@ -160,7 +160,7 @@ ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olar
 
 [Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) , veri şemasını ve dosyadaki okumaları tanımlar. Veri yolu değişkenlerini alır ve döndürür `IDataView`. Bu durumda, `Test` ve `Train` dosyalarınız için yol sağlar ve hem metin dosyası üst bilgisini hem de (sütun adlarını düzgün bir şekilde kullanabilmesi için) virgül karakter veri ayırıcısını (varsayılan ayırıcı bir sekmedir) belirtin.
 
-Yönteminizi çağırmak ve `Main()` `Train` ve verilerini`Test` döndürmek için yöntemine sonraki iki kod satırı olarak aşağıdakileri ekleyin: `LoadData()`
+Yöntemi `Main()` `Train` çağırmak veveverilerinidöndürmekiçinyöntemineaşağıdakikoduekleyin:`LoadData()` `Test`
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
 

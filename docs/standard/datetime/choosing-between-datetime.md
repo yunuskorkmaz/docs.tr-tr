@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d2ae7430c10254274eed6fb8a602aa8bc11bffb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 1c4eb8c174e70b6761784a5defe12dc8a8a1e42b
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988494"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107075"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma
 
 Tarih ve saat bilgilerini kullanan .NET uygulamaları çok farklı ve bu bilgileri çeşitli yollarla kullanabilir. Tarih ve saat bilgilerinin daha yaygın kullanımları, aşağıdakilerden birini veya daha fazlasını içerir:
 
-* Yalnızca bir tarihi yansıtmak için zaman bilgileri önemli değildir.
+- Yalnızca bir tarihi yansıtmak için zaman bilgileri önemli değildir.
 
-* Yalnızca bir zamanı yansıtmak için tarih bilgileri önemli değildir.
+- Yalnızca bir zamanı yansıtmak için tarih bilgileri önemli değildir.
 
-* Belirli bir zamana ve yere bağlı olmayan bir soyut tarih ve saati yansıtmak için (örneğin, çoğu gün 9:00 ' de gece yarısı açık olan uluslararası bir zincirde depolar).
+- Belirli bir zamana ve yere bağlı olmayan bir soyut tarih ve saati yansıtmak için (örneğin, çoğu gün 9:00 ' de gece yarısı açık olan uluslararası bir zincirde depolar).
 
-* .NET dışındaki kaynaklardan tarih ve saat bilgilerini almak için genellikle tarih ve saat bilgilerinin basit bir veri türünde depolandığı yerdir.
+- .NET dışındaki kaynaklardan tarih ve saat bilgilerini almak için genellikle tarih ve saat bilgilerinin basit bir veri türünde depolandığı yerdir.
 
-* Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlamak için. Bazı uygulamalar, bir tarih ve saatin yalnızca konak sisteminde olmasını gerektirir; Diğerleri, sistemlerin genelinde (bir sistemde serileştirilmiş bir tarih, anlamlı olarak seri durumdan çıkarılmış ve dünyanın herhangi bir yerindeki başka bir sistemde kullanılan bir tarih) olmasını gerektirir.
+- Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlamak için. Bazı uygulamalar, bir tarih ve saatin yalnızca konak sisteminde olmasını gerektirir; Diğerleri, sistemlerin genelinde (bir sistemde serileştirilmiş bir tarih, anlamlı olarak seri durumdan çıkarılmış ve dünyanın herhangi bir yerindeki başka bir sistemde kullanılan bir tarih) olmasını gerektirir.
 
-* Birden çok ilgili zamanı korumak için (istek sahibinin yerel saati ve sunucunun bir Web isteği için alındığını alma zamanı).
+- Birden çok ilgili zamanı korumak için (istek sahibinin yerel saati ve sunucunun bir Web isteği için alındığını alma zamanı).
 
-* Zaman içinde tek bir noktayı benzersiz ve kesin bir şekilde tanımlayan bir sonuçla birlikte tarih ve saat aritmetiği gerçekleştirmek için.
+- Zaman içinde tek bir noktayı benzersiz ve kesin bir şekilde tanımlayan bir sonuçla birlikte tarih ve saat aritmetiği gerçekleştirmek için.
 
 .Net <xref:System.DateTime> <xref:System.DateTimeOffset> ,tarihler<xref:System.TimeZoneInfo> ve saatler ile çalışan uygulamalar oluşturmak için kullanılabilen, ,vetürleriniiçerir.<xref:System.TimeSpan>
 
@@ -51,19 +51,19 @@ Bir <xref:System.DateTime> değer belirli bir tarih ve saati tanımlar. Bu, Tari
 
 <xref:System.DateTime> Yapı, aşağıdakileri gerçekleştiren uygulamalar için uygundur:
 
-* Yalnızca tarihlerle çalışın.
+- Yalnızca tarihlerle çalışın.
 
-* Yalnızca sürelerle çalışın.
+- Yalnızca sürelerle çalışın.
 
-* Soyut tarihler ve saatler ile çalışın.
+- Soyut tarihler ve saatler ile çalışın.
 
-* Saat dilimi bilgilerinin eksik olduğu tarih ve saatlerle çalışın.
+- Saat dilimi bilgilerinin eksik olduğu tarih ve saatlerle çalışın.
 
-* Yalnızca UTC Tarih ve saatleriyle çalışın.
+- Yalnızca UTC Tarih ve saatleriyle çalışın.
 
-* SQL veritabanları gibi .NET dışındaki kaynaklardan tarih ve saat bilgilerini alın. Genellikle, bu kaynaklar tarih ve saat bilgilerini <xref:System.DateTime> yapısıyla uyumlu basit bir biçimde depolar.
+- SQL veritabanları gibi .NET dışındaki kaynaklardan tarih ve saat bilgilerini alın. Genellikle, bu kaynaklar tarih ve saat bilgilerini <xref:System.DateTime> yapısıyla uyumlu basit bir biçimde depolar.
 
-* Tarih ve saat aritmetiği yapın, ancak genel sonuçlarla ilgilenin. Örneğin, belirli bir tarih ve saate altı ay ekleyen bir toplama işleminde, sonucun gün ışığından yararlanma saatine göre ayarlanmasının gerekip gerekmediğini genellikle önemli değildir.
+- Tarih ve saat aritmetiği yapın, ancak genel sonuçlarla ilgilenin. Örneğin, belirli bir tarih ve saate altı ay ekleyen bir toplama işleminde, sonucun gün ışığından yararlanma saatine göre ayarlanmasının gerekip gerekmediğini genellikle önemli değildir.
 
 Belirli <xref:System.DateTime> bir değer UTC 'yi temsil etmediği takdirde, bu tarih ve saat değeri genellikle bunun taşınabilirliği içinde belirsizdir veya sınırlıdır. Örneğin, bir <xref:System.DateTime> değer yerel saati gösteriyorsa, bu yerel saat dilimi içinde taşınabilir (yani değer aynı saat diliminde başka bir sistemde seri durumdan çıkarılacağından, bu değer hala kesin bir şekilde tek bir noktayı tanımlar). Yerel saat diliminin dışında, bu <xref:System.DateTime> değerde birden çok yorumlamalar olabilir. Değerin <xref:System.DateTime.Kind%2A> özelliği ise <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, daha az taşınabilir: artık aynı saat dilimi içinde ve muhtemelen ilk serileştirildiği sisteme bile belirsizdir. Yalnızca bir <xref:System.DateTime> değer UTC 'yi gösteriyorsa, bu değerin değerin kullanıldığı sistem veya saat diliminden bağımsız olarak tek bir zaman noktasını kesin bir şekilde tanımlaması durumunda.
 
@@ -76,11 +76,11 @@ Belirli <xref:System.DateTime> bir değer UTC 'yi temsil etmediği takdirde, bu 
 
 Türü, saat dilimi tanıma ile birlikte <xref:System.DateTime> türün tüm işlevlerini içerir. <xref:System.DateTimeOffset> Bu, aşağıdakileri gerçekleştiren uygulamalar için uygun hale getirir:
 
-* Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlar. <xref:System.DateTimeOffset> Türü, "Şimdi" anlamını, işlem sürelerini günlüğe kaydetmek, sistem veya uygulama olaylarının saatlerini günlüğe kaydetmek ve dosya oluşturma ve değiştirme zamanlarını kaydetmek için kullanılabilir.
+- Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlar. <xref:System.DateTimeOffset> Türü, "Şimdi" anlamını, işlem sürelerini günlüğe kaydetmek, sistem veya uygulama olaylarının saatlerini günlüğe kaydetmek ve dosya oluşturma ve değiştirme zamanlarını kaydetmek için kullanılabilir.
 
-* Genel Tarih ve saat aritmetiği gerçekleştirin.
+- Genel Tarih ve saat aritmetiği gerçekleştirin.
 
-* Bu süreler iki ayrı değer olarak veya bir yapının iki üyesi olarak depolandığı sürece birden çok ilgili zamanı koruyun.
+- Bu süreler iki ayrı değer olarak veya bir yapının iki üyesi olarak depolandığı sürece birden çok ilgili zamanı koruyun.
 
 > [!NOTE]
 > Değerler için <xref:System.DateTimeOffset> bu kullanımlar, <xref:System.DateTime> değerlerden çok daha yaygındır. Sonuç olarak, <xref:System.DateTimeOffset> uygulama geliştirme için varsayılan tarih ve saat türü olarak düşünülmelidir.
@@ -96,9 +96,9 @@ Bir <xref:System.DateTimeOffset> değer belirli bir saat dilimine bağlı değil
 
 <xref:System.TimeSpan> Yapı bir zaman aralığını temsil eder. Bu iki genel kullanım şunlardır:
 
-* İki tarih ve saat değeri arasındaki zaman aralığını yansıtır. Örneğin, bir <xref:System.DateTime> değeri başka bir değerden çıkarmak bir <xref:System.TimeSpan> değer döndürür.
+- İki tarih ve saat değeri arasındaki zaman aralığını yansıtır. Örneğin, bir <xref:System.DateTime> değeri başka bir değerden çıkarmak bir <xref:System.TimeSpan> değer döndürür.
 
-* Geçen süreyi ölçme. Örneğin, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> özelliği, geçen süreyi ölçmeye başlayan <xref:System.Diagnostics.Stopwatch> metotlardan birine yapılan çağrıdan bu yana geçen zaman aralığını yansıtan bir <xref:System.TimeSpan> değer döndürür.
+- Geçen süreyi ölçme. Örneğin, <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> özelliği, geçen süreyi ölçmeye başlayan <xref:System.Diagnostics.Stopwatch> metotlardan birine yapılan çağrıdan bu yana geçen zaman aralığını yansıtan bir <xref:System.TimeSpan> değer döndürür.
 
 Değer, belirli bir güne başvuru olmadan bir saati yansıttığına bir <xref:System.DateTime> değer değişikliği olarak da kullanılabilir. <xref:System.TimeSpan> Bu kullanım, bir tarih başvurusu <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> olmadan <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> saati temsil eden bir <xref:System.TimeSpan> değer döndüren ve özelliklerine benzerdir. Örneğin, <xref:System.TimeSpan> yapı, deponun günlük açma veya kapatma süresini yansıtmak için veya herhangi bir normal olayın gerçekleştiği süreyi temsil etmek için kullanılabilir.
 

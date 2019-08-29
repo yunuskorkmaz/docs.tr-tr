@@ -3,12 +3,12 @@ title: İçindeki C# sınıflar ve nesneler- C# dilin turu
 description: Yeni C#misiniz? Sınıflar, nesneler ve devralmayla bu genel bakışı okuyun
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971467"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105628"
 ---
 # <a name="classes-and-objects"></a>Sınıflar ve nesneler
 
@@ -32,42 +32,42 @@ Bir sınıfın üyeleri statik üyeler veya örnek üyeleridir. Statik Üyeler s
 
 Aşağıda bir sınıfın içerebileceği üye türlerine ilişkin bir genel bakış sunulmaktadır.
 
-* Sabitler
+- Sabitler
   - Sınıfla ilişkili sabit değerler
-* Alanlar
+- Alanlar
   - Sınıfın değişkenleri
-* Yöntemler
+- Yöntemler
   - Sınıfı tarafından gerçekleştirilebilecek hesaplamalar ve eylemler
-* Özellikler
+- Özellikler
   - Sınıfın adlandırılmış özelliklerini okuma ve yazma ile ilişkili eylemler
-* Dizin Oluşturucular
+- Dizin Oluşturucular
   - Bir dizi gibi sınıfın dizin oluşturma örnekleri ile ilişkili eylemler
-* Olaylar
+- Olaylar
   - Sınıfı tarafından oluşturulabilecek bildirimler
-* İşleçler
+- İşleçler
   - Sınıf tarafından desteklenen dönüşümler ve ifade işleçleri
-* Oluşturucular
+- Oluşturucular
   - Sınıfın veya sınıfın örneklerinin örneğini başlatmak için gereken eylemler
-* Sonlandırıcılar
+- Sonlandırıcılar
   - Sınıfın örneklerinden önce gerçekleştirilecek eylemler kalıcı olarak atılır
-* Türler
+- Türler
   - Sınıf tarafından tanımlanan iç içe türler
 
 ## <a name="accessibility"></a>Erişilebilirlik
 
 Bir sınıfın her üyesinin ilişkili bir erişilebilirliği vardır ve bu, üyeye erişebilen program metni bölgelerini denetler. Olası altı erişilebilirlik biçimi vardır. Bunlar aşağıda özetlenmiştir.
 
-* `public`
+- `public`
   - Erişim sınırlı değil
-* `protected`
+- `protected`
   - Bu sınıftan türetilmiş bu sınıfla veya sınıflarla sınırlı erişim
-* `internal`
+- `internal`
   - Geçerli bütünleştirilmiş koda (. exe,. dll, vb.) sınırlı erişim
-* `protected internal`
+- `protected internal`
   - İçerilen sınıfla sınırlı erişim, kapsayan sınıftan türetilmiş sınıflar veya aynı derleme içindeki sınıflar
-* `private`
+- `private`
   - Bu sınıfla sınırlı erişim
-* `private protected`
+- `private protected`
   - Aynı derleme içindeki kapsayan türden türetilmiş kapsayan sınıf veya sınıflarla sınırlı erişim
 
 ## <a name="type-parameters"></a>Tür parametreleri

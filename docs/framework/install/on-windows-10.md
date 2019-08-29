@@ -1,85 +1,85 @@
 ---
-title: Windows 10 üzerinde .NET Framework yükleme
-description: Windows 10 veya Windows Server 2016 üzerinde .NET Framework'ü yüklemeyi öğrenin.
+title: .NET Framework Windows 10 ' a yükler
+description: .NET Framework Windows 10 veya Windows Server 2016 ' e yüklemeyi öğrenin.
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422660"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106550"
 ---
-# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümleri .NET Framework yükleme
+# <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümlere .NET Framework yüklemesini
 
-.NET Framework, Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeleri gereken .NET Framework sürümlerini yüklemenize yardımcı olması. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) kullanılabilir en son sürümü.
+.NET Framework Windows üzerinde birçok uygulama çalıştırmak için gereklidir. Bu makaledeki yönergeler, ihtiyacınız olan .NET Framework sürümlerini yüklemenize yardımcı olmalıdır. [.NET Framework 4,8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) en son kullanılabilir sürümdür.
 
-Bir uygulama çalıştırmaya ve makinenizde aşağıdakine benzer bir iletişim kutusu görmesini sonra bu sayfada gelmedi:
+Bir uygulamayı çalıştırmayı ve makinenizde aşağıdakine benzer bir iletişim kutusu görmenizi tamamladıktan sonra bu sayfada gelmiş olabilirsiniz:
 
 ![Bu uygulama başlatılamadı](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-48"></a>.NET Framework 4.8
+## <a name="net-framework-48"></a>.NET Framework 4,8
 
-.NET Framework 4.8 ile birlikte gelir:
+.NET Framework 4,8 şunları içerir:
 
-* [Windows 10 Mayıs 2019 güncelleştirme](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Windows 10 Mayıs 2019 güncelleştirmesi](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [.NET Framework'ün 4.8 indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> [4,8 .NET Framework indirin](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 4.7.2 aracılığıyla .NET Framework 4.0 için oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+[.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) , 4.7.2 aracılığıyla 4,0 .NET Framework için oluşturulan uygulamaları çalıştırmak için kullanılabilir.
 
-Yükleyebileceğiniz [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) üzerinde:
+[.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48) 'yi şu şekilde yükleyebilirsiniz:
 
-* Windows 10 Ekim 2018 Güncelleştirmesi (sürüm 1809)
-* Windows 10 Nisan 2018 Güncelleştirmesi (sürüm 1803)
-* Windows 10 Fall Creators Update (1709 sürümü)
-* Windows 10 Creators Update (sürüm 1703)
-* Windows 10 Yıldönümü Güncelleştirmesi (sürüm 1607)
-* Windows Server 2019
-* Windows Server sürüm 1809
-* Windows Server sürüm 1803
-* Windows Server 2016
+- Windows 10 Ekim 2018 Güncelleştirmesi (sürüm 1809)
+- Windows 10 Nisan 2018 Güncelleştirmesi (sürüm 1803)
+- Windows 10 Fall Creators Update (sürüm 1709)
+- Windows 10 Creators Update (sürüm 1703)
+- Windows 10 yıldönümü Güncelleştirmesi (sürüm 1607)
+- Windows Server 2019
+- Windows Server, sürüm 1809
+- Windows Server, sürüm 1803
+- Windows Server 2016
 
-.NET Framework 4.8 desteklenmez:
+.NET Framework 4,8 ' de desteklenmez:
 
-* Windows 10 1507
-* Windows 10 1511
+- Windows 10 1507
+- Windows 10 1511
 
-Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4.8 yüklemek istediğiniz, ilk daha yeni bir Windows 10 sürümüne yükseltmeniz gerekir.
+Windows 10 1507 veya 1511 kullanıyorsanız ve .NET Framework 4,8 ' i yüklemek istiyorsanız, önce daha sonraki bir Windows 10 sürümüne yükseltmeniz gerekir.
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) en son desteklenen .NET Framework Windows 10 1507 ve 1511 sürümüdür.
+[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) , Windows 10 1507 ve 1511 ' de en son desteklenen .NET Framework sürümdür.
 
-.NET Framework 4.6.2, .NET Framework 4.0 4.6.2 aracılığıyla oluşturulan uygulamaları destekler.
+.NET Framework 4.6.2, 4.6.2 aracılığıyla 4,0 .NET Framework oluşturulan uygulamaları destekler.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Yüklemek için yönergeleri izleyin [Windows 10 üzerinde .NET Framework 3.5](dotnet-35-windows-10.md).
+[Windows 10 ' a .NET Framework 3,5 '](dotnet-35-windows-10.md)ü yüklemek için yönergeleri izleyin.
 
-.NET Framework 3.5 .NET Framework 1.0 3.5 aracılığıyla oluşturulan uygulamaları destekler.
+.NET Framework 3,5 ile 3,5 .NET Framework 1,0 için oluşturulmuş uygulamaları destekler.
 
 ## <a name="additional-information"></a>Ek bilgiler
 
-.NET framework 4.x önceki sürümleri için yerinde güncelleştirmeler sürümleridir. Aşağıdaki ifade etmektedir:
+.NET Framework 4. x sürümleri, önceki sürümlere yerinde güncelleştirmelerdir. Yani, şunlar anlamına gelir:
 
-- Yalnızca .NET Framework'ün bir sürümünü olabilir, makinenizde yüklü 4.x.
+- Makinenizde yalnızca bir .NET Framework 4. x sürümü yüklü olabilir.
 
-- Sonraki bir sürümü zaten yüklü değilse, makinenizde .NET Framework'ün önceki bir sürümünü yükleyemezsiniz.
+- Daha sonraki bir sürüm zaten yüklüyse makinenizde .NET Framework önceki bir sürümünü yükleyemezsiniz.
 
-- .NET Framework 4.x sürümleri, .NET Framework 4.0 bu sürümü ile oluşturulmuş uygulamaları çalıştırmak için kullanılabilir. Örneğin, .NET Framework 4.7, .NET Framework 4.0 4.7 aracılığıyla oluşturulan uygulamalarını çalıştırmak için kullanılabilir. En son sürümünü (.NET Framework 4.8), .NET Framework 4.0 ile başlayan tüm sürümleri ile oluşturulan uygulamalarını çalıştırmak için kullanılabilir.
+- .NET Framework 4. x sürümleri, bu sürümde .NET Framework 4,0 için oluşturulan uygulamaları çalıştırmak için kullanılabilir. Örneğin, .NET Framework 4,7 4,7 ile .NET Framework 4,0 için oluşturulan uygulamaları çalıştırmak için kullanılabilir. En son sürüm (.NET Framework 4,8), 4,0 ' den başlayarak .NET Framework tüm sürümleriyle oluşturulmuş uygulamaları çalıştırmak için kullanılabilir.
 
-İndirmek kullanılabilir .NET Framework'ün tüm sürümleri listesi için bkz. [.NET indirir](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) sayfası.
+İndirileceği .NET Framework tüm sürümlerinin bir listesi için bkz. [.net İndirmeleri](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) sayfası.
 
 ## <a name="help"></a>Help
 
-Yüklü .NET Framework'ün doğru sürümü alınamıyor. Yapabiliyorsanız [Yardım için Microsoft ile iletişime geçin](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
+.NET Framework yüklü olan doğru sürümü alamazsanız, [Yardım Için Microsoft 'a başvurabilirsiniz](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET yükleme](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
+- [.NET Indirmeleri](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](troubleshoot-blocked-installations-and-uninstallations.md)
-- [Geliştiriciler için .NET Framework'ü yükleme](guide-for-developers.md)
+- [Geliştiriciler için .NET Framework yüklemesi](guide-for-developers.md)

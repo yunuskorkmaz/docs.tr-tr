@@ -1,26 +1,26 @@
 ---
-title: .NET core dağıtımı paketleme
-description: Paketleme hakkında bilgi edinin adı ve sürümü .NET Core dağıtımı.
+title: .NET Core dağıtımı paketleme
+description: Dağıtım için .NET Core 'u paketleme, adlandırma ve sürüm hakkında bilgi edinin.
 author: tmds
 ms.date: 03/02/2018
 ms.custom: seodec18
-ms.openlocfilehash: b961d84053dc41e75e002c8c12419fdef99ded4b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d23147c8a38fbeea9e88c0a18e1f220e854fec1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585251"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105411"
 ---
-# <a name="net-core-distribution-packaging"></a>.NET core dağıtımı paketleme
+# <a name="net-core-distribution-packaging"></a>.NET Core dağıtımı paketleme
 
-.NET Core daha da fazla platformlarda kullanılabilir hale geldiğinde, adı, paket hakkında bilgi edinmek yararlı olur ve sürümü. Bu şekilde, paket maintainers burada .NET çalıştırmak kullanıcıların seçim ne olursa olsun, tutarlı bir deneyim sağlamak yardımcı olabilir. Bu makale, olan kullanıcılar için yararlıdır:
+.NET Core daha fazla ve daha fazla platformda kullanıma sunulduğunda, bu uygulamayı paketleme, adlandırma ve sürüm hakkında bilgi edinmek yararlı olur. Bu şekilde, paket bakım yapanlar, kullanıcıların .NET çalıştırmayı tercih etmeksizin tutarlı bir deneyim sağlanmasına yardımcı olabilir. Bu makale, şu kullanıcılar için yararlıdır:
 
-* Kaynaktan .NET Core derleme çalışılıyor.
-* Sonuçta elde edilen düzeni veya üretilen paketlerin etkileyebilecek .NET Core CLI değişiklik yapmak isteyen.
+- Kaynaktan .NET Core oluşturmaya çalışılıyor.
+- .NET Core CLI, oluşturulan yerleşimi veya paketleri etkileyebilecek değişiklikler yapmak için önerilir.
 
 ## <a name="disk-layout"></a>Disk düzeni
 
-Yüklendiğinde, .NET Core dosya şu şekilde düzenlenmiştir çeşitli bileşenlerden oluşur:
+Yüklendiğinde, .NET Core dosya sisteminde aşağıdaki gibi çeşitli bileşenlerden oluşur:
 
 ```
 .
@@ -47,80 +47,80 @@ Yüklendiğinde, .NET Core dosya şu şekilde düzenlenmiştir çeşitli bileşe
         └── dotnet               (10)
 ```
 
-- (1) **dotnet** ana bilgisayar (diğer adıyla "Karıştırıcı") iki ayrı rol yok: bir uygulamayı başlatmak için bir çalışma zamanı etkinleştirme ve komutları ona gönderileceği bir SDK'yı etkinleştirin. Konağın yerel yürütülebilir olduğundan (`dotnet.exe`).
+- (1) **DotNet** ana bilgisayar ("muxer" olarak da bilinir) iki ayrı role sahiptir: bir uygulamayı başlatmak için bir çalışma zamanı etkinleştirin ve BIR SDK 'yı ona komut göndermek için etkinleştirin. Ana bilgisayar yerel bir yürütülebilir dosyadır (`dotnet.exe`).
 
-Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu tutulan dizinler (2,3,5,6) aittir. Başka bir deyişle, birden çok sürümü yan yana yüklemenizden sistemde olabilir.
+Tek bir ana bilgisayar olsa da, diğer bileşenlerin çoğu sürümlü dizinlerde (2, 3, 5, 6) bulunur. Bu, tarafında yan yana yüklendiklerinden bu yana birden çok sürümün mevcut olabileceği anlamına gelir.
 
-- (2) **konak/fxr/\<fxr sürüm >** ana bilgisayar tarafından kullanılan çerçeve çözümlemesi mantığı içerir. Ana bilgisayar yüklü en son hostfxr kullanır. Hostfxr uygun çalışma zamanı seçmek için bir .NET Core uygulaması yürütülürken sorumludur. Örneğin, kullanılabilir olduğunda, .NET Core 2.0.0 kullandığı 2.0.5 çalışma zamanı için yerleşik uygulama. Benzer şekilde, hostfxr uygun SDK'sı, geliştirme sırasında seçer.
+- (2) **Host/FXR/\<FXR sürümü >** ana bilgisayar tarafından kullanılan çerçeve çözümleme mantığını içerir. Ana bilgisayar, yüklü en son hostfxr 'yi kullanır. Hostfxr, .NET Core uygulaması yürütürken uygun çalışma zamanının seçilmesinden sorumludur. Örneğin, .NET Core 2.0.0 için oluşturulmuş bir uygulama, varsa 2.0.5 çalışma zamanını kullanır. Benzer şekilde, hostfxr geliştirme sırasında uygun SDK 'Yı seçer.
 
-- (3) **sdk /\<sdk sürümü >** SDK (diğer adıyla "Araçlar"), yazma ve .NET Core kitaplıkları ve uygulamaları oluşturmak için kullanılan yönetilen araçlar kümesi. SDK'sı, .NET Core komut satırı arabirimi (CLI), yönetilen diller System.codeDom, MSBuild ve ilişkili derleme görevleri ve hedefleri, NuGet, yeni proje şablonları vb. içerir.
+- (3) SDK **/\<SDK sürümü >** SDK ("araç oluşturma" olarak da bilinir), .NET Core kitaplıklarını ve uygulamalarını yazmak ve derlemek için kullanılan bir yönetilen araçlar kümesidir. SDK, .NET Core komut satırı arabirimi (CLı), yönetilen diller derleyicileri, MSBuild ve ilişkili derleme görevleri ile hedefleri, NuGet, yeni proje şablonları vb. içerir.
 
-- (4) **sdk/NuGetFallbackFolder** NuGet paketlerini geri yükleme işlemi sırasında gibi bir SDK'sı tarafından kullanılan önbelleğini içeren çalıştırırken `dotnet restore` veya `dotnet build /t:Restore`.
+- (4) **SDK/nugetfallbackfolder** , veya `dotnet restore` `dotnet build /t:Restore`çalıştırılırken olduğu gibi, geri yükleme işlemi sırasında bir SDK tarafından kullanılan NuGet paketlerinin bir önbelleğini içerir.
 
-**Paylaşılan** klasörü çerçeveleri içerir. Farklı uygulamaları tarafından kullanılabilmesi için merkezi bir konumda bir dizi paylaşılan bir çerçeve sağlar.
+**Paylaşılan** klasör çerçeveler içerir. Paylaşılan bir çerçeve, farklı uygulamalar tarafından kullanılabilmesi için merkezi bir konumda bir kitaplık kümesi sağlar.
 
-- (5) **shared/Microsoft.NETCore.App/\<çalışma zamanı sürümü >** bu framework, .NET Core çalışma zamanı ve yönetilen kütüphanelerinizi destek içerir.
+- (5) **paylaşılan/Microsoft. netcore. app/\<Runtime sürümü >** bu çerçeve .NET Core çalışma zamanı ve yönetilen kitaplıkları destekler.
 
-- (6,7) **shared/Microsoft.AspNetCore. { Uygulama, tüm} /\<aspnetcore sürüm >** ASP.NET Core kitaplıkları içerir. Kitaplıklar `Microsoft.AspNetCore.App` geliştirilen ve .NET Core projesinin bir parçası desteklenir. Kitaplıklar `Microsoft.AspNetCore.All` ayrıca üçüncü taraf kitaplıklarını içeren bir üst kümesi olan.
+- (6, 7) **paylaşılan/Microsoft. AspNetCore. { App, All}/\<aspnetcore sürüm >** ASP.NET Core kitaplıklarını içerir. Altındaki `Microsoft.AspNetCore.App` kitaplıklar, .NET Core projesinin bir parçası olarak geliştirilir ve desteklenir. Altındaki `Microsoft.AspNetCore.All` kitaplıklar, üçüncü taraf kitaplıklarını da içeren bir üst kümesidir.
 
-- (8) **LICENSE.txt,ThirdPartyNotices.txt** .NET Core lisans ve üçüncü taraf kitaplıkların sırasıyla'de .NET Core, kullanılan lisansları.
+- (8) **LICENSE. txt, üçüncü taraf bildirimleri. txt** , .NET Core 'un sırasıyla kullanıldığı üçüncü taraf kitaplıkların .NET Core lisansı ve lisanslarıdır.
 
-- (9,10) **dotnet.1.gz, dotnet** `dotnet.1.gz` dotnet el ile sayfasıdır. `dotnet` dotnet host(1) için hedefine sembolik bağlantı olur. Bu dosyalar, sistem tümleştirme için iyi bilinen konumlara yüklenir.
+- (9, 10) **DotNet. 1. gz, DotNet** `dotnet.1.gz` , DotNet el ile yapılan bir sayfasıdır. `dotnet`, DotNet konağının (1) bir symbağlantıdır. Bu dosyalar, sistem tümleştirmesi için iyi bilinen konumlara yüklenir.
 
-## <a name="recommended-packages"></a>Önerilen paketleri
+## <a name="recommended-packages"></a>Önerilen paketler
 
-.NET core sürüm çalışma zamanı bileşeni temel `[major].[minor]` sürüm numaraları.
-Aynı SDK sürümünü kullanan `[major].[minor]` ve bağımsız `[patch]` için SDK'sı, özellik ve düzeltme eki semantiği birleştirir.
-Örneğin: SDK'sı sürüm 2.2.302 2,2 çalışma zamanını destekleyen SDK'sı üçüncü özelliği sürümünü ikinci düzeltme eki sürümüdür. Sürüm oluşturma nasıl çalıştığı hakkında daha fazla bilgi için bkz. [.NET Core sürüm genel bakış](../versions/index.md).
+.NET Core sürümü oluşturma çalışma zamanı bileşen `[major].[minor]` sürüm numaralarına dayalıdır.
+SDK sürümü aynı `[major].[minor]` kullanır ve SDK için özellik ve düzeltme `[patch]` eki semantiğini birleştiren bir bağımsız içerir.
+Örneğin: SDK sürümü 2.2.302, SDK 'nın 2,2 çalışma zamanını destekleyen üçüncü Özellik sürümünün ikinci düzeltme eki sürümüdür. Sürüm oluşturma 'nın nasıl çalıştığı hakkında daha fazla bilgi için bkz. [.NET Core sürümü genel bakış](../versions/index.md).
 
-Bazı paketler, adında sürüm numarasının bölümü içerir. Bu, belirli bir sürümünü yüklemek sağlar.
-Rest sürümünün sürüm adı dahil değildir. Bu işletim sistemi Paket Yöneticisi'nin güncelleştirme paketleri (örneğin, güvenlik düzeltmeleri otomatik olarak yükleme) sağlar. Desteklenen paket yöneticilerinin belirli Linux var.
+Bazı paketler, kendi adında sürüm numarasının bir parçasını içerir. Bu, belirli bir sürümü yüklemenize olanak sağlar.
+Sürümün geri kalanı sürüm adına dahil değildir. Bu, işletim sistemi paket yöneticisinin paketleri güncelleştirmesine izin verir (örneğin, otomatik olarak güvenlik düzeltmelerini yükleme). Desteklenen paket yöneticileri Linux 'a özgüdür.
 
-Aşağıdaki tabloda, önerilen paketler gösterilmektedir:
+Aşağıdaki tabloda önerilen paketler gösterilmektedir:
 
-| Ad                                    | Örnek                | Kullanım örneği: Yükle...           | İçerir           | Bağımlılıklar                                   | Sürüm            |
+| Ad                                    | Örnek                | Kullanım durumu: Yüklemesi...           | İçerir           | Bağımlılıklar                                   | Sürüm            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
-| dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı ana için en son SDK'sı    |                    | DotNet - sdk-[major]. [latestminor]               | \<SDK sürümü >     |
-| DotNet - sdk-[major]. [minor]              | DotNet sdk 2.1         | Belirli bir çalışma zamanı için en son SDK'sı |                    | DotNet - sdk-[major]. [minor]. [en son SDK'sı feat] xx | \<SDK sürümü >     |
-| DotNet - sdk-[major]. [minor]. [sdk feat] xx | DotNet sdk 2.1.3xx     | Belirli bir sdk özellik yayını    | (3),(4)            | aspnetcore - çalışma zamanı-[major]. [minor]             | \<SDK sürümü >     |
-| aspnetcore - çalışma zamanı-[major]. [minor]      | aspnetcore çalışma zamanı 2.1 | Belirli bir ASP.NET Core çalışma zamanı   | (6),[(7)]          | DotNet - çalışma zamanı-[major]. [minor]                 | \<çalışma zamanı sürüm > |
-| DotNet - çalışma zamanı-[major]. [minor]          | DotNet çalışma zamanı 2.1     | Belirli bir çalışma zamanı                | (5)                | konak fxr:\<çalışma zamanı sürümü > +                   | \<çalışma zamanı sürüm > |
-| dotnet-host-fxr                         | dotnet-host-fxr        | _Bağımlılık_                    | (2)                | konak:\<çalışma zamanı sürümü > +                       | \<çalışma zamanı sürüm > |
-| DotNet-host                             | DotNet-host            | _Bağımlılık_                    | (1),(8),(9),(10)   |                                                | \<çalışma zamanı sürüm > |
+| dotnet-sdk-[major]                      | dotnet-sdk-2           | Çalışma zamanı için en son SDK    |                    | DotNet-SDK-[birincil]. [latestminor]               | \<SDK sürüm >     |
+| DotNet-SDK-[birincil]. Bazı              | DotNet-SDK-2,1         | Belirli çalışma zamanı için en son SDK |                    | DotNet-SDK-[birincil]. [ikincil]. [en son SDK feat] xx | \<SDK sürüm >     |
+| DotNet-SDK-[birincil]. [ikincil]. [SDK feat] xx | DotNet-SDK-2.1.3 xx     | Belirli SDK özelliği sürümü    | (3), (4)            | aspnetcore-Runtime-[ana]. Bazı             | \<SDK sürüm >     |
+| aspnetcore-Runtime-[ana]. Bazı      | aspnetcore-Runtime-2,1 | Belirli ASP.NET Core çalışma zamanı   | (6),[(7)]          | DotNet-çalışma zamanı-[birincil]. Bazı                 | \<çalışma zamanı sürüm > |
+| DotNet-çalışma zamanı-[birincil]. Bazı          | DotNet-çalışma zamanı-2,1     | Belirli çalışma zamanı                | (5)                | Host-FXR:\<çalışma zamanı sürüm > +                   | \<çalışma zamanı sürüm > |
+| dotnet-host-fxr                         | dotnet-host-fxr        | _bağımlılık_                    | (2)                | Ana bilgisayar\<: çalışma zamanı sürümü > +                       | \<çalışma zamanı sürüm > |
+| DotNet-konak                             | DotNet-konak            | _bağımlılık_                    | (1), (8), (9), (10)   |                                                | \<çalışma zamanı sürüm > |
 
-Çoğu dağıtımları kaynağından oluşturulacak tüm yapıtlar gerektirir. Bu bazı paketlere etkisi:
+Çoğu dağıtım, kaynaktan oluşturulacak tüm yapıtları gerektirir. Bu, paketlere bazı etkileri vardır:
 
-- Üçüncü taraf kitaplıklar `shared/Microsoft.AspNetCore.All` kaynaktan kolayca oluşturulamıyor. Bu klasöre gelen atlanmış biçimde `aspnetcore-runtime` paket.
+- Altındaki `shared/Microsoft.AspNetCore.All` üçüncü taraf kitaplıkları kaynaktan kolayca derlenebilir. Bu nedenle, bu klasör `aspnetcore-runtime` paketten çıkarılır.
 
-- `NuGetFallbackFolder` İkili yapılardan kullanarak doldurulur `nuget.org`. Boş kalmalıdır.
+- , `NuGetFallbackFolder` Öğesinden`nuget.org`ikili yapıtlar kullanılarak doldurulur. Boş kalmalıdır.
 
-Birden çok `dotnet-sdk` paketler için de indirdiğiniz dosyaları sağlayabilir `NuGetFallbackFolder`. Paket Yöneticisi ile ilgili sorunları önlemek için bu dosyalar aynı olmalıdır (sağlama toplamı, değiştirilme tarihini ve benzeri).
+Birden `dotnet-sdk` çok paket `NuGetFallbackFolder`için aynı dosyaları sağlayabilir. Paket Yöneticisi ile ilgili sorunları önlemek için bu dosyaların aynı olması gerekir (sağlama toplamı, değiştirme tarihi vb.).
 
 ### <a name="preview-versions"></a>Önizleme sürümleri
 
-Paket maintainers Önizleme sürümleri paylaşılan çerçeve ve SDK sağlar karar verebilirsiniz. Önizleme sürümleri kullanılarak sağlanmalıdır `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]`, veya `dotnet-runtime-[major].[minor]` paketleri. Önizleme sürümleri için ana Paket sürümü sıfır olarak ayarlamanız gerekir. Bu şekilde son sürümü yükseltme paketi olarak yüklenir.
+Paket bakım yapanlar, paylaşılan çerçeve ve SDK 'nın önizleme sürümlerini sağlamaya karar verebilir. Önizleme yayınları `dotnet-sdk-[major].[minor].[sdk feat]xx`, `aspnetcore-runtime-[major].[minor]`, veya `dotnet-runtime-[major].[minor]` paketleri kullanılarak sağlanmış olabilir. Önizleme sürümleri için, paket sürümünün birincil sürümü sıfır olarak ayarlanmalıdır. Bu şekilde, son sürüm paketin yükseltmesi olarak yüklenir.
 
 ### <a name="patch-packages"></a>Düzeltme eki paketleri
 
-Bir paketin bir düzeltme eki sürümü bozucu bir değişikliğe neden olduğundan, bir paket Bakımcı sağlamak isteyebilirsiniz _paketleri düzeltme eki_. Bu paketleri otomatik olarak yükseltme değilse bir özel düzeltme eki sürümü yüklemek izin verin. Yalnızca Yöneticiler (güvenlik) ile yükseltilmiş düzeltmeleri olmayan eki paketlerini nadir durumlarda kullanın.
+Paketin bir düzeltme eki sürümü bir değişikliğe neden olabileceğinden, bir paket bakımcı _düzeltme eki paketleri_sağlamak isteyebilir. Bu paketler, otomatik olarak yükseltilmeyen belirli bir düzeltme eki sürümünü yüklemenize izin verir. Yalnızca (güvenlik) düzeltmeleriyle yükseltilmeyen nadir koşullarda yama paketlerini kullanın.
 
-Önerilen paketleri aşağıdaki tabloda gösterir ve **paketleri düzeltme eki**:
+Aşağıdaki tabloda önerilen paketler ve **düzeltme eki paketleri**gösterilmektedir:
 
 | Ad                                           | Örnek                  | İçerir         | Bağımlılıklar                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[major]. [küçük en son sdk]                     |
-| DotNet - sdk-[major]. [minor]                     | DotNet sdk 2.1           |                  | DotNet - sdk-[major]. [minor]. [en son SDK'sı feat] xx            |
-| DotNet - sdk-[major]. [minor]. [sdk feat] xx        | DotNet sdk 2.1.3xx       |                  | DotNet - sdk-[major]. [minor]. [son sdk yolu]             |
-| **DotNet - sdk-[major]. [minor]. [düzeltme]**         | DotNet sdk 2.1.300       | (3),(4)          | aspnetcore - çalışma zamanı-[major]. [minor]. [sdk düzeltme çalışma zamanı]    |
-| aspnetcore - çalışma zamanı-[major]. [minor]             | aspnetcore çalışma zamanı 2.1   |                  | aspnetcore - çalışma zamanı-[major]. [minor]. [en son düzeltme çalışma zamanı] |
-| **aspnetcore - çalışma zamanı-[major]. [minor]. [düzeltme]** | aspnetcore çalışma zamanı 2.1.0 | (6),[(7)]        | DotNet - çalışma zamanı-[major]. [minor]. [düzeltme]                    |
-| DotNet - çalışma zamanı-[major]. [minor]                 | DotNet çalışma zamanı 2.1       |                  | DotNet - çalışma zamanı-[major]. [minor]. [en son düzeltme çalışma zamanı]     |
-| **DotNet - çalışma zamanı-[major]. [minor]. [düzeltme]**     | DotNet çalışma zamanı 2.1.0     | (5)              | konak fxr:\<çalışma zamanı sürümü > +                              |
-| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | konak:\<çalışma zamanı sürümü > +                                  |
-| DotNet-host                                    | DotNet-host              | (1),(8),(9),(10) |                                                           |
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet-SDK-[birincil]. [en son SDK Minor]                     |
+| DotNet-SDK-[birincil]. Bazı                     | DotNet-SDK-2,1           |                  | DotNet-SDK-[birincil]. [ikincil]. [en son SDK feat] xx            |
+| DotNet-SDK-[birincil]. [ikincil]. [SDK feat] xx        | DotNet-SDK-2.1.3 xx       |                  | DotNet-SDK-[birincil]. [ikincil]. [en son SDK düzeltme eki]             |
+| **DotNet-SDK-[birincil]. [ikincil]. düzeltmesi**         | DotNet-SDK-2.1.300       | (3), (4)          | aspnetcore-Runtime-[ana]. [ikincil]. [SDK çalışma zamanı düzeltme eki]    |
+| aspnetcore-Runtime-[ana]. Bazı             | aspnetcore-Runtime-2,1   |                  | aspnetcore-Runtime-[ana]. [ikincil]. [son çalışma zamanı düzeltme eki] |
+| **aspnetcore-Runtime-[ana]. [ikincil]. düzeltmesi** | aspnetcore-Runtime-2.1.0 | (6),[(7)]        | DotNet-çalışma zamanı-[birincil]. [ikincil]. düzeltmesi                    |
+| DotNet-çalışma zamanı-[birincil]. Bazı                 | DotNet-çalışma zamanı-2,1       |                  | DotNet-çalışma zamanı-[birincil]. [ikincil]. [son çalışma zamanı düzeltme eki]     |
+| **DotNet-çalışma zamanı-[birincil]. [ikincil]. düzeltmesi**     | DotNet-Runtime-2.1.0     | (5)              | Host-FXR:\<çalışma zamanı sürüm > +                              |
+| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | Ana bilgisayar\<: çalışma zamanı sürümü > +                                  |
+| DotNet-konak                                    | DotNet-konak              | (1), (8), (9), (10) |                                                           |
 
-Düzeltme eki paketleri bir alternatifidir _sabitleme_ Paket Yöneticisi'ni kullanarak belirli bir sürümü için paketleri. Diğer uygulamalar/kullanıcıları etkilemeden önlemek için bu tür uygulamalar oluşturulabilen ve bir kapsayıcıda dağıtılır.
+Düzeltme Eki paketlerinin kullanılmasına bir alternatif, Paket Yöneticisi 'ni kullanarak paketleri belirli bir sürüme sabitleyebilir. Diğer uygulamaları/kullanıcıları etkilememek için, bu tür uygulamalar bir kapsayıcıda oluşturulup dağıtılabilir.
 
-## <a name="building-packages"></a>Yapı paketleri
+## <a name="building-packages"></a>Paket oluşturma
 
-[Kaynak/dotnet-derleme](https://github.com/dotnet/source-build) depo, bir .NET Core SDK'sını ve tüm bileşenlerinin kaynak tarball derleme hakkında yönergeler sağlar. Kaynak derleme deposu çıktısını bu makalenin ilk bölümünde açıklanan düzenini eşleşir.
+[DotNet/Source-Build](https://github.com/dotnet/source-build) deposu .NET Core SDK kaynak tarbol 'in ve tüm bileşenlerinin nasıl oluşturulacağı hakkında yönergeler sağlar. Kaynak-derleme deposunun çıktısı, bu makalenin ilk bölümünde açıklanan düzen ile eşleşir.

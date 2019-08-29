@@ -4,12 +4,12 @@ description: .NET Core 'da uydu derleme yükleme algoritmasının ayrıntıları
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bd703bc9f2c9af1f8ba3c6c892f963efc679d14b
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70017340"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105314"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>Uydu derleme yükleme algoritması
 
@@ -32,8 +32,8 @@ Yerelleştirilmiş kaynakları yüklemek için temel API, <xref:System.Resources
 1. `active` Örneği belirleme<xref:System.Runtime.Loader.AssemblyLoadContext> . Her durumda, `active` örnek yürüten <xref:System.Runtime.Loader.AssemblyLoadContext>derleme ' dir.
 
 2. Örnek `active` , istenen kültür için şu kadar bir uydu derlemesini yüklemeye çalışır:
-    * Önbelleği denetleniyor.
-    * İstenen <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (örneğin `es-MX`) bir alt dizin için şu anda yürütülmekte olan derlemenin dizini denetleniyor.
+    - Önbelleği denetleniyor.
+    - İstenen <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (örneğin `es-MX`) bir alt dizin için şu anda yürütülmekte olan derlemenin dizini denetleniyor.
 
         > [!NOTE]
         > Bu özellik 3,0 öncesi .NET Core 'da uygulanmadı.
@@ -43,13 +43,13 @@ Yerelleştirilmiş kaynakları yüklemek için temel API, <xref:System.Resources
         > - Büyük/küçük harf eşleştir.
         > - Küçük bir durumda olun.
 
-    * Örnek ise, [varsayılan uydu (kaynak) derleme yoklama](default-probing.md#satellite-resource-assembly-probing) mantığını çalıştırarak. `active` <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>
+    - Örnek ise, [varsayılan uydu (kaynak) derleme yoklama](default-probing.md#satellite-resource-assembly-probing) mantığını çalıştırarak. `active` <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>
 
-    * <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
+    - <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> İşlevi çağrılıyor.
 
-    * <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> Olayı oluşturma.
+    - <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> Olayı oluşturma.
 
-    * <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturma.
+    - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Olayı oluşturma.
 
 3. Bir uydu derlemesi yüklüyse:
    - <xref:System.AppDomain.AssemblyLoad?displayProperty=nameWithType> Olay tetiklenir.

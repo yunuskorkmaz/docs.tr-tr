@@ -1,67 +1,67 @@
 ---
-title: Null başvuru türleri için Tasarım
-description: Gelişmiş Bu öğretici, bir null başvuru türlerine giriş sağlar. Tasarımınız ne zaman başvuru değeri null ve boş olamaz yürüttüğünde derleyici sahip hedefi express öğreneceksiniz.
+title: Null yapılabilir başvuru türleriyle tasarım
+description: Bu gelişmiş öğretici, null yapılabilir başvuru türlerine giriş sağlar. Başvuru değerleri null olduğunda ve derleyicinin null olmadıklarında zorunlu olmadığı durumlarda tasarım amacınızı ifade etmek için bilgi edineceksiniz.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195843"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105768"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Null başvuru türleri ile mevcut kodu geçirme
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Öğretici: Mevcut kodu Nullable başvuru türleriyle geçirin
 
-C#8 tanıtır **null başvuru türleri**, boş değer atanabilen değer türleri tamamlar değer türleri aynı şekilde hangi tamamlayıcı başvuru türleri. Olması için bir değişken bildirmek bir **boş değer atanabilir bir başvuru türü** ekleyerek bir `?` türü. Örneğin, `string?` temsil eden bir boş değer atanabilir `string`. Bu yeni türleri tasarım amacınızla daha net bir şekilde ifade etmek için kullanabilirsiniz: bazı değişkenler *her zaman bir değere sahip olmalıdır*, diğerleri *bir değer eksik*. Var olan herhangi bir başvuru türü değişkenler, bir NULL olmayan bir başvuru türü yorumlanacağını. 
+C#8, null olabilen değer türleri için aynı şekilde, başvuru türlerini tamamlayan **null yapılabilir başvuru türlerini**tanıtır. Bir`?` değişkeni türüne ekleyerek **null atanabilir bir başvuru türü** olarak bildirirsiniz. Örneğin, `string?` null yapılabilen bir değeri `string`temsil eder. Tasarım amacınızı daha net bir şekilde ifade etmek için bu yeni türleri kullanabilirsiniz: bazı değişkenlerin *her zaman bir değeri olması gerekir*, bazılarında *bir değer eksik*olabilir. Bir başvuru türünün varolan değişkenleri, null olamayan bir başvuru türü olarak yorumlanır. 
 
-Bu öğreticide şunları öğrenirsiniz nasıl yapılır:
+Bu öğreticide, aşağıdakileri nasıl yapacağınızı öğreneceksiniz:
 
 > [!div class="checklist"]
-> * Kod ile çalışırken null başvuru denetimlerini etkinleştir.
-> * Tanılama ve null değerlere ilgili farklı uyarıları düzeltin.
-> * Boş değer atanabilir etkin ve boş değer atanabilir devre dışı bağlamları arasında arabirim yönetin.
-> * Boş değer atanabilir bir ek açıklama bağlamları denetler.
+> - Kodla çalışırken null başvuru denetimlerini etkinleştirin.
+> - Null değerlerle ilgili farklı uyarıları tanılayın ve düzeltin.
+> - Null yapılabilir etkin ve null yapılabilir devre dışı bağlamların arabirimini yönetin.
+> - Null yapılabilir ek açıklama bağlamlarını denetleyin.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core çalıştırmak için makinenizi ayarlamak ihtiyacınız olacak dahil olmak üzere C# 8.0 beta derleyici. C# 8 beta derleyici, kullanılabilir [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), veya en son [.NET Core 3.0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+C# 8,0 Beta derleyicisi dahil olmak üzere, makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. C# 8 Beta derleyicisi, [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)veya en son [.NET Core 3,0 Önizleme](https://dotnet.microsoft.com/download/dotnet-core/3.0)sürümü ile kullanılabilir.
 
-Bu öğreticide, aşina olduğunuz varsayılır C# ve .NET, Visual Studio veya .NET Core CLI gibi.
+Bu öğreticide, Visual Studio veya C# .NET Core CLI dahil olmak üzere, .net hakkında bilgi sahibi olduğunuz varsayılır.
 
-## <a name="explore-the-sample-application"></a>Örnek uygulamayı keşfedin
+## <a name="explore-the-sample-application"></a>Örnek uygulamayı keşfet
 
-Geçirdiğiniz örnek bir RSS Okuyucu web uygulaması akışı uygulamasıdır. Tek bir RSS akışı okur ve en son makaleler için özetlerini görüntüler. Herhangi bir siteyi ziyaret etmek için makaleleri üzerinde tıklayabilirsiniz. Uygulama yeni ancak null başvuru türleri kullanılabilir önce yazılmıştır. Ses ilkeleri uygulama tasarım kararlarına temsil edilen, ancak bu önemli dil özelliğin avantajlarından yararlanmak yok.
+Geçirilecek örnek uygulama bir RSS Akış okuyucusu web uygulamasıdır. Tek bir RSS akışından okur ve en son makalelerin özetlerini görüntüler. Siteyi ziyaret etmek için makalelerden birine tıklayabilirsiniz. Uygulama nispeten yenidir ancak null yapılabilir başvuru türleri kullanılabilir olmadan önce yazılmıştır. Uygulama için gösterilen ve bu önemli dil özelliğinden yararlanmamak için sunulan tasarım kararları.
 
-Örnek uygulamayı, uygulamanın ana işlevleri doğrulayan bir birim testi kitaplığı içerir. Oluşturulan uyarıları tabanlı uygulama değiştirirseniz proje güvenli bir şekilde, yükseltmeyi kolaylaştırır. Başlatıcı kodu indirebileceğiniz [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub deposu.
+Örnek uygulama, uygulamanın ana işlevlerini doğrulayan bir birim testi kitaplığı içerir. Oluşturulan uyarılara göre herhangi bir uygulamayı değiştirirseniz, bu proje güvenli bir şekilde yükseltmeyi daha kolay hale getirir. Başlangıç kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub deposundan indirebilirsiniz.
 
-Bir projeye geçiş amacınız açıkça amacınızla değişkenleri null olabilirliği üzerinde express ve boş değer atanabilir bir ek açıklama içerik varsa, derleyici uyarıları oluşturmaya olmayan bir şekilde bunu yeni dil özelliklerden yararlanmak için olmalıdır ve boş değer atanabilir uyarı bağlamı kümesine `enabled`.
+Bir projeyi geçirme hedefiniz yeni dil özelliklerinden faydalanmak için olmalıdır. böylece, amacınızı null olabilir ve bu nedenle, null yapılabilir ek açıklama bağlamına sahip olduğunuzda derleyicinin uyarı üretmemesi ve null yapılabilir uyarı bağlamı olarak `enabled`ayarlanır.
 
-## <a name="upgrade-the-projects-to-c-8"></a>Projeleri yükseltme C# 8
+## <a name="upgrade-the-projects-to-c-8"></a>Projeleri 8 ' e C# yükseltin
 
-İyi bir ilk adım, geçiş görevi kapsamını belirlemektir. Başlangıç projesine yükselterek C# 8.0 (veya daha yeni). Ekleme `LangVersion` hem csproj dosyalarına web projesi ve birim testi projesi öğesi:
+Geçiş görevinin kapsamını belirlemekte iyi bir ilk adım vardır. Projeyi C# 8,0 (veya daha yeni) sürümüne yükselterek başlayın. `LangVersion` Öğeyi Web projesi ve birim test projesi için her iki csproj dosyasına ekleyin:
 
 ```xml
 <LangVersion>8.0</LangVersion>
 ```
 
-Dil sürümü yükseltme seçer C# 8.0, ancak boş değer atanabilir bir ek açıklamanın bağlamı veya boş değer atanabilir uyarı bağlamı etkinleştirmez. Uyarılar olmadan derlendiğinden emin olmak için projeyi yeniden derleyin.
+Dil sürümünü yükseltmek 8,0 seçer C# , ancak null yapılabilir ek açıklama bağlamını veya null yapılabilir uyarı bağlamını etkinleştirmez. Uyarı vermeden oluşturulduğundan emin olmak için projeyi yeniden derleyin.
 
-Boş değer atanabilir bir ek açıklama bağlama ve kaç uyarıları üretilir görmek için iyi bir sonraki adım var. Doğrudan altında hem csproj dosyalarına çözümünde, şu öğeyi ekleyin `LangVersion` öğesi:
+İyi bir sonraki adım, null yapılabilir ek açıklama bağlamını açıp kaç uyarı oluşturulduğunu görmenizde yarar vardır. Çözümdeki her iki csproj dosyasına ve doğrudan `LangVersion` öğesinin altına aşağıdaki öğeyi ekleyin:
 
 ```xml
 <Nullable>enable</Nullable>
 ```
 
 > [!IMPORTANT]
-> `Nullable` Öğe daha önce adlandırılmıştı `NullableContextOptions`. 16,2 p1, Visual Studio 2019 birlikte yeniden adlandırma verilir. .NET Core SDK'sı 3.0.100-preview5-011568 bu değişiklik yok. .NET Core CLI'yı kullanıyorsanız, kullanmanız gerekecektir `NullableContextOptions` kadar sonraki Önizleme kullanılabilir.
+> Öğe daha önce adlandırılmıştı `NullableContextOptions`. `Nullable` Yeniden adlandırma, Visual Studio 2019, 16,2-P1 ile birlikte gönderilir. 3\.0.100-preview5-011568 .NET Core SDK bu değişikliğe sahip değil. .NET Core CLI kullanıyorsanız, sonraki önizleme kullanılabilir olana kadar kullanmanız `NullableContextOptions` gerekir.
 
-Bir test derlemesini ve uyarı listesini dikkat edin. Bu küçük uygulamadaki derleyici beş uyarılar oluşturur, büyük olasılıkla, bırakabilir, bu nedenle boş değer atanabilir bir ek açıklamanın bağlamı etkin ve tüm proje uyarıları düzeltme başlatın.
+Bir test derlemesi yapın ve uyarı listesine dikkat edin. Bu küçük uygulamada, derleyici beş uyarı üretir, bu nedenle null yapılabilir ek açıklama bağlamını etkin bırakıp tüm proje için uyarıları düzeltmeye başlayabilirsiniz.
 
-Bu strateji daha küçük projeler için çalışır. Tüm daha büyük projeler için boş değer atanabilir bir ek açıklama bağlam için kod tabanının tamamına sağlayarak üretilen uyarı sayısı uyarıları gidermek zorlaştırır sistematik olarak. Büyük kuruluş projeleri için genellikle bir proje teker teker geçirmek isteyeceksiniz. Her projede, aynı anda bir sınıf veya dosya geçirin.
+Bu strateji yalnızca daha küçük projeler için geçerlidir. Daha büyük projeler için, tüm kod tabanı için Nullable ek açıklama bağlamını etkinleştirerek oluşturulan uyarı sayısı, uyarıları sistematik olarak gidermeyi zorlaştırır. Daha büyük kurumsal projelerde, genellikle bir projeyi tek seferde geçirmek isteyeceksiniz. Her projede, tek bir sınıf veya dosyayı aynı anda geçirin.
 
-## <a name="warnings-help-discover-original-design-intent"></a>Özgün tasarım amacı keşfedin uyarılar Yardımı
+## <a name="warnings-help-discover-original-design-intent"></a>Uyarılar özgün tasarım amacını bulmaya yardımcı olur
 
-Birden çok uyarı üreten iki sınıf vardır. İle başlayan `NewsStoryViewModel` sınıfı. Kaldırma `Nullable` öğesi hem csproj dosyalarının uyarıları ile çalışırken kod bölümlerini kapsamını sınırlayabilirsiniz. Açık *NewsStoryViewModel.cs* dosya ve ekleme için boş değer atanabilir bir ek açıklamanın bağlamı'nı etkinleştirmek için aşağıdaki yönergeleri `NewsStoryViewModel` ve o sınıf tanımına aşağıdaki geri yükleyin:
+Birden çok uyarı oluşturan iki sınıf vardır. `NewsStoryViewModel` Sınıfıyla başlayın. Uyarı kapsamını çalıştığınız kodun bölümleriyle sınırlayabilmeniz için her iki csproj dosyasından öğeyikaldırın.`Nullable` *NewsStoryViewModel.cs* dosyasını açın ve için `NewsStoryViewModel` null yapılabilir ek açıklama bağlamını etkinleştirmek üzere aşağıdaki yönergeleri ekleyin ve bu sınıf tanımını izleyerek geri yükleyin:
 
 ```csharp
 #nullable enable
@@ -74,17 +74,17 @@ public class NewsStoryViewModel
 #nullable restore
 ```
 
-Bu iki yönergeler geçiş çalışmalarınızı odaklanmanıza yardımcı olur. Etkin olarak üzerinde çalıştığınız kod alanının boş değer atanabilir uyarıları üretilir. Tüm proje için uyarıları etkinleştirmek hazır oluncaya kadar üzerinde bırakacağız. Kullanmanız gereken `restore` yerine `disable` böylece tüm proje için boş değer atanabilir ek açıklamaları açık yanlışlıkla bağlamı daha sonra devre dışı olmayan değer. Tüm proje için boş değer atanabilir bir ek açıklama bağlamında ayarladıktan sonra tüm kaldırabilirsiniz `#nullable` pragmaları bu projeye ait.
+Bu iki yönergeler, geçiş çabalarınıza odaklanmaya yardımcı olur. Üzerinde etkin olarak çalışmakta olduğunuz kod alanı için null yapılabilir uyarılar oluşturulur. Projenin tamamına yönelik uyarıları açmaya hazırsanız, bunları açık bırakmalısınız. Projenin tamamına yönelik null `restore` yapılabilir ek `disable` açıklamaları açtığınızda bağlamı yanlışlıkla devre dışı bırakmamanızı sağlamak için yerine, bu değeri kullanın. Tüm proje için Nullable ek açıklama bağlamını etkinleştirdikten sonra, bu projeden tüm `#nullable` pragmaları kaldırabilirsiniz.
 
-`NewsStoryViewModel` Sınıfı, bir veri aktarım nesnesini (DTO) ve okuma/yazma dizeleri özelliklerinin ikisidir:
+`NewsStoryViewModel` Sınıf bir veri aktarım nesnesidir (DTO) ve özelliklerden ikisi okuma/yazma dizeleridir:
 
 [!code-csharp[InitialViewModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
-Bu iki özellik neden `CS8618`, "atanamayan özelliği başlatılmamış". Yeterli Temizle vardır: her ikisi de `string` özelliklerine sahip varsayılan değerini `null` olduğunda bir `NewsStoryViewModel` oluşturulur. Bulmak önemli olan nasıl `NewsStoryViewModel` nesnelerin oluşturulması. Bu sınıfı baktığımızda, bildiremez, `null` değeri tasarımının parçası olan veya bu nesneler için null olmayan ayarlarsanız değerlerin bir zaman oluşturulur. Haber hikayesi oluşturulan `GetNews` yöntemi `NewsService` sınıfı:
+Bu iki özellik neden `CS8618`"Nullable özelliği başlatılmamış" olur. Bu yeterince net: her iki `string` özellik de oluşturulduğunda varsayılan `null` değerine `NewsStoryViewModel` sahiptir. Bulma için önemli olan özellikler, nesnelerin `NewsStoryViewModel` nasıl oluşturulduğunu bir şeydir. Bu sınıfa baktığınızda, `null` değerin tasarımın bir parçası olup olmadığını veya bu nesnelerin her biri oluşturulduğunda null olmayan değerlere ayarlanmış olduğunu söyleyemiyoruz. Haber hikayeleri, `GetNews` `NewsService` sınıfının yönteminde oluşturulur:
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Önceki kod bloğu içinde geçmeden oldukça bit yoktur. Bu uygulamanın kullandığı [AutoMapper](https://automapper.org/) bir haber öğesi oluşturmak için NuGet paketi bir `ISyndicationItem`. Haber hikayesi öğeleri oluşturulur ve özellikler tek bir deyimde ayarlanır keşfettiniz. Tasarımı anlamına `NewsStoryViewModel` bu özellikleri hiç olmayacağını gösterir `null` değeri. Bu özellikler olmalıdır **nonnullable başvuru türleri**. En iyi özgün tasarım hedefi ifade eder. Aslında, hiçbir `NewsStoryViewModel` *olduğu* null olmayan değerler ile doğru şekilde örneği. Bu, geçerli bir düzeltme kod aşağıdaki başlatmaya yapar:
+Yukarıdaki kod bloğunda oldukça bir bit vardır. Bu uygulama, öğesinden `ISyndicationItem`bir haber öğesi oluşturmak için [automaber](https://automapper.org/) NuGet paketini kullanır. Haber hikayesi öğelerinin oluşturulduğunu ve özellikler söz konusu bir bildirimde ayarlandığını keşfettiniz. Bu, `NewsStoryViewModel` için tasarımının hiçbir `null` şekilde bu özelliklerin değer vermediğini gösterdiği anlamına gelir. Bu özellikler **null atanamaz başvuru türleri**olmalıdır. Bu, özgün tasarım amacını en iyi ifade eder. Aslında, hiçbiri `NewsStoryViewModel` null olmayan değerler ile doğru şekilde oluşturulur. Bu, aşağıdaki başlatma kodunu geçerli bir çözüm haline getirir:
 
 ```csharp
 public class NewsStoryViewModel
@@ -95,77 +95,77 @@ public class NewsStoryViewModel
 }
 ```
 
-Atamasını `Title` ve `Uri` için `default` olduğu `null` için `string` türü, programın çalışma zamanı davranışını değiştirmez. `NewsStoryViewModel` Boş değerlere sahip, ancak derleyicinin uyarı raporları artık yine de oluşturulur. **Null forgiving işleci**, `!` karakter aşağıdaki `default` ifade derleyiciye önceki ifade null değil. Diğer değişiklikler çok büyük değişiklikleri bir kod tabanına zorlamak, ancak bu uygulamada görece hızlı ve daha iyi bir çözüm yoktur, bu tekniği expedient olabilir: Olun `NewsStoryViewModel` burada tüm özellikleri ayarlanır oluşturucuda bir sabit türü. Aşağıdaki değişiklikleri yapın `NewsStoryViewModel`:
+`Title` `default` Türü için olan ve `Uri` için ataması programın çalışma zamanı davranışını değiştirmez. `null` `string` `NewsStoryViewModel` Hala null değerlerle oluşturulmuş, ancak derleyici hiçbir uyarı raporluyor. **Null-forverme işleci**, `!` `default` ifadeden sonraki karakter derleyiciye önceki ifadenin null olmadığını söyler. Bu teknik, diğer değişiklikler bir kod tabanında çok daha büyük değişiklikler yaparken, ancak bu uygulamada görece hızlı ve daha iyi bir çözüm olduğunda, bu teknik bir şekilde etkilenebilir: Oluşturucuda tüm özelliklerin ayarlandığı sabit birtüryapın.`NewsStoryViewModel` Aşağıdaki değişiklikleri `NewsStoryViewModel`yapın:
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
-Bu yapıldıktan sonra AutoMapper yapılandırır ve böylece özelliklerini ayarlamak yerine Oluşturucu kullanan kodu güncelleştirmeniz gerekir. Açık `NewsService.cs` ve dosyanın sonuna aşağıdaki kodu bulun:
+Bu yapıldıktan sonra, özellikleri ayarlamak yerine, oluşturucuyu kullanması için Automaber 'yi yapılandıran kodu güncelleştirmeniz gerekir. Açın `NewsService.cs` ve dosyanın en altında aşağıdaki kodu bulun:
 
 [!code-csharp[StarterAutoMapper](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
-Kod özelliklerini eşlemeleri `ISyndicationItem` nesnesini `NewsStoryViewModel` özellikleri. Bunun yerine bir kurucu kullanarak eşleme sağlamak üzere AutoMapper kullanmanız gerekir. Yukarıdaki kodu şu automapper yapılandırmayla değiştirin:
+Bu kod, `ISyndicationItem` nesnenin `NewsStoryViewModel` özelliklerini özelliklerine eşler. Bunun yerine bir Oluşturucu kullanarak, Automaber 'nin eşleme sağlamasını istersiniz. Yukarıdaki kodu aşağıdaki automaber yapılandırmasıyla değiştirin:
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
-Dikkat edin çünkü bu sınıf küçük ve dikkatli bir şekilde incelenmesi açmanız `#nullable enable` Bu sınıf bildiriminin üstüne yönergesi. Tüm testleri çalıştırmak ve geçmeden önce uygulamayı test etmek için bu nedenle, oluşturucuya değişiklik kopuk.
+Bu sınıf küçük olduğundan ve dikkatle incelediğiniz için `#nullable enable` , bu sınıf bildiriminin üzerindeki yönergeyi açmanız gerektiğini unutmayın. Kurucudaki değişiklik bir şeyi bozarak, tüm testleri çalıştırmak ve devam etmeden önce uygulamayı test etmek daha fazla olabilir.
 
-İlk değişiklik kümesini zaman özgün tasarımda değişkenleri ayarlanmamalıdır, belirtilen bulunacak gösterildi `null`. Teknik olarak adlandırılır **yapı tarafından doğru**. Bir nesne ve özelliklerini olamaz bildirdiğiniz `null` bunu ne zaman oluşturulur. Derleyicinin akış analizi özelliklere ayarlanmadığı için güvence sağlayan `null` yapım sonra. Bu Oluşturucu dış kod tarafından çağrılır ve bu kodu Not **boş değer atanabilir oblivious**. Yeni sözdizimi, çalışma zamanı denetimi sağlamaz. Dış kod, derleyicinin akış analizi aşmak. 
+İlk değişiklik kümesi, özgün tasarımın değişkenlerin olarak `null`ayarlanmamalıdır ne zaman yapılacağını nasıl keşfedebileceğine ilişkin olduğunu gösterdi. Teknik, **oluşturma tarafından doğru**olarak adlandırılır. Bir nesne ve özellikleri oluşturulduğunda bildiremezsiniz `null` . Derleyicinin akış analizi, bu özelliklerin oluşturma sonrasında olarak `null` ayarlanmamış olduğunu güvence altına almaktadır. Bu oluşturucunun dış kod tarafından çağrıldığını ve kodun **null değer atanabilir yükümlülüğü**olduğunu unutmayın. Yeni sözdizimi çalışma zamanı denetimi sağlamaz. Dış kod derleyicinin akış analizini atlatılabilir. 
 
-Diğer durumlarda, bir sınıf yapısını amaca farklı ipuçları sağlar. Açık *Error.cshtml.cs* dosyası *sayfaları* klasör. `ErrorViewModel` Aşağıdaki kodu içerir:
+Diğer zamanlarda, bir sınıfın yapısı amaç için farklı ipuçları sağlar. *Error.cshtml.cs* dosyasını *Sayfalar* klasöründe açın. , `ErrorViewModel` Aşağıdaki kodu içerir:
 
 [!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-Ekleme `#nullable enable` sınıf bildiriminden önce yönerge ve `#nullable restore` sonraki yönergesi. Biri, uyarı alırsınız `RequestId` başlatılmadı. Sınıf bakarak, karar `RequestId` özellik bazı durumlarda null olmalıdır. Varlığını `ShowRequestId` özelliği eksik değerleri mümkün olduğunu gösterir. Çünkü `null` geçerli Ekle `?` üzerinde `string` belirtmek için türü `RequestId` özelliği bir *boş değer atanabilir bir başvuru türü*. Son sınıfı aşağıdaki örnekteki gibi görünür:
+Sınıf bildiriminden önce `#nullable restore` `#nullable enable` yönergesini ve sonra bir yönergeyi ekleyin. Başlatılmamış bir uyarı `RequestId` alırsınız. Sınıfına bakarak, bazı durumlarda `RequestId` özelliğin NULL olması gerektiğine karar vermeniz gerekir. `ShowRequestId` Özelliğin varlığı eksik değerlerin mümkün olduğunu gösterir. Geçerli `null` olduğundan, `RequestId` özelliğin *null yapılabilir bir başvuru türü*olduğunu göstermek için `string` türüne öğesini `?` ekleyin. Son sınıf aşağıdaki örneğe benzer şekilde görünür:
 
 [!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
-Özelliğinin kullanımıyla ilgili denetleyin ve ilişkili sayfasında özelliğinin işaretlemede işlemeden önce null için işaretlendiğinden görürsünüz. Bu sınıf ile işiniz için bir null başvuru türünün güvenli bir kullanımı olmasıdır.
+Özelliğin kullanımlarını denetleyin ve ilgili sayfada özelliği, biçimlendirme sırasında işlemeden önce, özelliğinin null olarak denetlendiğini görürsünüz. Bu, null olabilen bir başvuru türünün güvenli bir kullanımı olduğundan bu sınıfla işiniz bitti.
 
-## <a name="fixing-nulls-causes-change"></a>Null değerlere düzeltme değişiklik neden olur
+## <a name="fixing-nulls-causes-change"></a>Null değerleri düzeltme değişikliğine neden olur
 
-Genellikle, bir dizi uyarı düzeltmesini ilgili kodda yeni uyarılar oluşturur. Uygulamada uyarıları düzelterek görelim `index.cshtml.cs` sınıfı. Açık `index.cshtml.cs` dosya ve kodu inceleyin. Bu dosya, dizin sayfası için arka plan kod içerir:
+Genellikle, bir uyarı kümesinin düzeltilmesi ilgili kodda yeni uyarılar oluşturur. Ayrıca, `index.cshtml.cs` sınıfını düzelterek uyarıları görelim. `index.cshtml.cs` Dosyasını açın ve kodu inceleyin. Bu dosya dizin sayfası için arkasındaki kodu içerir:
 
 [!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-Ekleme `#nullable enable` yönergesi ve iki uyarı göreceksiniz. Ne `ErrorText` özellik ya da `NewsItems` özelliği başlatılır. Bu sınıfın bir inceleme her iki özellik null bir başvuru türü olması gerektiğini düşünüyorsanız yol açar: Her ikisi de, özel ayarlayıcılar sahiptir. Tam olarak bir de atandığı `OnGet` yöntemi. Değişiklik yapmadan önce her iki özellik tüketicilerinin arayın. Sayfanın kendisi içinde `ErrorText` biçimlendirme hataları oluşturmadan önce null karşı denetlenir. `NewsItems` Koleksiyon karşı denetlenir `null`ve işaretli öğeleri koleksiyonu sahip olduğundan emin olmak. Her iki özellikleri null başvuru türleri yapmak için bir hızlı düzeltme olacaktır. Daha iyi bir düzeltme koleksiyonu bir nonnullable sağlamak olacaktır başvuru türüne ve haber alınırken, varolan bir koleksiyona öğeleri ekleyin. Eklenecek ilk düzeltmesidir `?` için `string` yazın `ErrorText`:
+`#nullable enable` Yönergesini ekleyin ve iki uyarı görürsünüz. `ErrorText` Özellik ne`NewsItems` de özellik başlatılmaz. Bu sınıfın incelenmesi, her iki özellik de null yapılabilir başvuru türleri olması gerektiğini düşünmenize yol açacaktı. Her ikisinin de özel ayarlayıcıları vardır. `OnGet` Yöntemine tam olarak bir atanır. Değişiklik yapmadan önce her iki özelliği de tüketicilere bakın. Sayfanın kendisinde `ErrorText` , herhangi bir hata için biçimlendirme oluşturmadan önce null değeri denetlenir. Koleksiyon öğesine karşı `null`denetlenir ve koleksiyonda öğeler olduğundan emin olmak için denetlenir. `NewsItems` Hızlı bir çözüm, her iki özelliği de null yapılabilir başvuru türlerini yapmak olacaktır. Daha iyi bir çözüm, koleksiyonu null yapılamayan bir başvuru türü yapmak ve haberleri alırken mevcut koleksiyona öğe eklemek olacaktır. İlk düzeltilme `?` `string` türü için türüne `ErrorText`eklemektir:
 
 [!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
-Tüm erişim nedeniyle değişiklik diğer kodlardan ripple olmaz `ErrorText` özelliği null denetimleri tarafından zaten korumalı. Ardından, başlatma `NewsItems` liste ve salt okunur özelliği yapmadan özellik ayarlayıcısını kaldırın:
+`ErrorText` Özelliğe herhangi bir erişim null denetimleri tarafından zaten korunduğu için, bu değişiklik başka bir kod aracılığıyla görünmez olmayacaktır. Sonra, `NewsItems` listeyi başlatın ve özellik ayarlayıcısını kaldırın ve salt okunur bir özellik yapar:
 
 [!code-csharp[InitializeNewsItems](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
-Uyarı sabit ancak hata sunmuştur. `NewsItems` Listedir artık **yapı tarafından doğru**, ancak liste ayarlar kod `OnGet` yeni API ile eşleşecek şekilde değiştirmeniz gerekir. Atama yerine çağrı `AddRange` haber öğeleri mevcut listeye eklemek için:
+Bu, uyarıyı düzeltti ancak bir hata sunmuştur. Liste artık oluşturma işlemi **tarafından düzeltilir**, ancak içinde `OnGet` listeyi ayarlayan kodun yeni API ile eşleşecek şekilde değiştirilmesi gerekir. `NewsItems` Atama yerine, mevcut listeye haber `AddRange` öğelerini eklemek için çağırın:
 
 [!code-csharp[AddRange](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 
-Kullanarak `AddRange` atama yerine anlamına `GetNews` yöntemi döndürebilir bir `IEnumerable` yerine bir `List`. Bir ayırma kaydeder. Metodun imzası değiştirme ve kaldırma `ToList` aşağıdaki kod örneğinde gösterildiği gibi çağrı:
+Atama `AddRange` yerine kullanmak, `GetNews` yöntemin `IEnumerable` yerine bir `List`olarak dönebileceği anlamına gelir. Bu, bir ayırmayı kaydeder. Aşağıdaki kod örneğinde gösterildiği gibi, yönteminin imzasını değiştirin ve `ToList` çağrıyı kaldırın:
 
 [!code-csharp[GetNews](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
-İmza değiştirmeyi de testleri keser. Açık `NewsServiceTests.cs` dosyası `Services` klasörü `SimpleFeedReader.Tests` proje. Gidin `Returns_News_Stories_Given_Valid_Uri` test ve türünü değiştirme `result` değişkenini `IEnumerable<NewsItem>`. Türü değiştirme anlamına gelir `Count` özelliği artık kullanılabilir, böylece değiştirin `Count` özelliğinde `Assert` çağrısıyla `Any()`:
+İmzanın değiştirilmesi, testlerin birini de keser. `NewsServiceTests.cs` Dosyayı projenin`SimpleFeedReader.Tests` klasöründe açın. `Services` Teste gidin ve `result` değişkenin türünü olarak `IEnumerable<NewsItem>`değiştirin. `Returns_News_Stories_Given_Valid_Uri` Türü değiştirmek `Count` özelliğin artık kullanılamadığı anlamına gelir, bu nedenle içindeki `Count` `Assert` özelliğini öğesine `Any()`çağrısıyla değiştirin:
 
 [!code-csharp[FixTests](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 
-Eklemeniz gerekecektir bir `using System.Linq` dosyanın başına bildirimi.
+Dosyanın başlangıcına de bir `using System.Linq` ifade eklemeniz gerekecektir.
 
-Bu değişiklik kümesini yükseltilmesine genel örnek oluşturma içeren kod güncelleştirilirken vurgular. Liste ve NULL olmayan türleri listesi öğeleri için. Boş değer atanabilir türler ya da olabilir. Aşağıdaki bildirimleri izin verilir:
+Bu değişiklik kümesi, genel örneklemeleri içeren kodu güncelleştirirken özel bir değerlendirme vurgulamaktadır. Hem liste hem de öğeler null yapılamayan türler listesinde. Ya da her ikisi de null yapılabilir türler olabilir. Aşağıdaki bildirimlere izin verilir:
 
-- `List<NewsStoryViewModel>`: nonullable görünüm modelleri nonnullable listesi.
-- `List<NewsStoryViewModel?>`: boş değer atanabilir görünüm modelleri nonnullable listesi.
-- `List<NewsStoryViewModel>?`: boş değer atanabilir nonnullable görünümü modellerin listesi.
-- `List<NewsStoryViewModel?>?`: boş değer atanabilir görünüm modelleri boş değer atanabilir listesi.
+- `List<NewsStoryViewModel>`: ullable olmayan görünüm modellerinin null yapılamayan listesi.
+- `List<NewsStoryViewModel?>`: null yapılabilir görünüm modellerinin Nullable listesi.
+- `List<NewsStoryViewModel>?`: null yapılamayan görünüm modellerinin null yapılabilir listesi.
+- `List<NewsStoryViewModel?>?`: null yapılabilir görünüm modellerinin null olabilir listesi.
 
-## <a name="interfaces-with-external-code"></a>Dış kod olan arabirimler
+## <a name="interfaces-with-external-code"></a>Dış kod içeren arabirimler
 
-Yaptığınız değişiklikleri `NewsService` sınıfı, bu nedenle açma `#nullable enable` o sınıf için ek açıklama. Bu, tüm yeni uyarılar oluştur olmaz. Ancak, sınıf dikkatli incelenmesi, derleyicinin akış analizi sınırlamaları bazılarını göstermeyi yardımcı olur. Oluşturucu inceleyin:
+`NewsService` Sınıfta değişiklikler yaptınız, bu nedenle bu sınıf için `#nullable enable` ek açıklamayı etkinleştirin. Bu, yeni uyarı oluşturmaz. Ancak, sınıfının dikkatle incelenmesi derleyicinin akış analizinin bazı sınırlamalarını göstermeye yardımcı olur. Oluşturucuyu inceleyin:
 
 [!code-csharp[ServiceConstructor](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
 
-`IMapper` Nonnullable başvuru olarak parametre türü belirtilmiş. Derleyici, gerçekten bilmez için ASP.NET Core altyapı koduna göre adlandırılır `IMapper` hiçbir zaman null olmaz. ASP.NET Core bağımlılık ekleme (dı) kapsayıcısını varsayılan kod doğru Bu nedenle gerekli bir hizmeti çözümlenemiyor bir özel durum oluşturur. Boş değer atanabilir bir ek açıklama bağlamlarla etkin kod derlenir olsa bile derleyici genel apı'lerinize tüm çağrıları doğrulanamıyor. Ayrıca, Kitaplıklarınızı henüz null başvuru türleri kullanarak geri çevirdiniz olmayan projeleri tarafından tüketilebilir. Nonnullable türleri olarak bildirdikten olsa da, genel API'ler girişleri doğrulayın.
+`IMapper` Parametre null atanamaz bir başvuru olarak yazılmış. Bu, ASP.NET Core altyapı kodu tarafından çağrılır, bu nedenle derleyici hiçbir şekilde null olacağını gerçekten `IMapper` bilmez. Varsayılan ASP.NET Core bağımlılık ekleme (dı) kapsayıcısı, gerekli bir hizmeti çözümleyemezse, kod doğru olduğunda bir özel durum oluşturur. Kodunuz null yapılabilir ek açıklama bağlamlarıyla derlense bile derleyici ortak API 'lerinize yapılan tüm çağrıları doğrulayamaz. Ayrıca, kitaplıklarınız henüz null yapılabilir başvuru türlerini kullanarak onaylanmamış projeler tarafından tüketilebilir. Bu girdileri null yapılamayan türler olarak bildirseniz bile ortak API 'lere yönelik girişleri doğrulayın.
 
-## <a name="get-the-code"></a>Kodu alma
+## <a name="get-the-code"></a>Kodu alın
 
-İlk test derleme içinde tanımlanan uyarıları düzelttik bunu şimdi iki proje için boş değer atanabilir bir ek açıklama bağlam etkinleştirebilirsiniz. Projeleri yeniden oluşturun; Derleyici Uyarı bildirir. Tamamlanan proje için kodu alma [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub deposu.
+İlk test derlenmesi sırasında belirlediğiniz uyarıları düzelttiniz, bu nedenle artık her iki proje için de null yapılabilir ek açıklama bağlamını açabilirsiniz. Projeleri yeniden derleyin; Derleyici hiçbir uyarı rapor vermez. [DotNet/Samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub deposundaki tamamlanmış projenin kodunu alabilirsiniz.
 
-Null başvuru türleri bulmanıza ve düzeltmenize nasıl işleneceğini olası hataları Yardım destekleyen yeni özellikleri `null` kodunuzda değerleri. Boş değer atanabilir bir ek açıklama bağlam etkinleştirme tasarım amacınızla express olanak tanır: bazı değişkenler hiçbir zaman null olmamalıdır, diğer değişkenler null değerler içerebilir. Bu özellikler, tasarım amacı bildirmek kolaylaştırır. Benzer şekilde, bu hedefi ihlal edildi, boş değer atanabilir uyarı bağlamı sorunu uyarılar için derleyicinin sağlar. Bu uyarılar kodunuz daha dayanıklı ve daha az throw olasılığı yaptığınız güncelleştirmeler yapmak için size yol gösterecek bir `NullReferenceException` yürütme sırasında. Böylece yerel alanlara kalan codebase dokunulmadan olmakla birlikte geçirmek için kod odaklanabilir şu bağlamlarda kapsamını kontrol edebilirsiniz. Uygulamada, bir parçası, sınıflara düzenli bakım görevi bu geçiş yapabilirsiniz. Bu öğreticinin başvuru boş değer atanabilir türleri kullanmak için bir uygulama geçiş süreci gösterilmektedir. Çekme isteği inceleyerek bu işlemin daha büyük bir gerçek örneğin keşfedebilirsiniz [Jon Skeet](https://github.com/jskeet) null başvuru türlerine eklemek için yapılan [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits).
+Null yapılabilir başvuru türlerini destekleyen yeni özellikler, kodunuzda değerleri nasıl işleyeceğiniz `null` potansiyel hataları bulmanıza ve düzeltmenize yardımcı olur. Null yapılabilir ek açıklama bağlamını etkinleştirmek, tasarım amacınızı ifade etmenizi sağlar: bazı değişkenler hiçbir şekilde null olmamalıdır, diğer değişkenler de null değerler içerebilir. Bu özellikler tasarım amacınızı bildirmenize daha kolay bir hale getirir. Benzer şekilde, null yapılabilir uyarı bağlamı derleyiciye bu amacı ihlal ettiğinizde uyarı vermesini söyler. Bu uyarılar, kodunuzu daha dayanıklı hale getirmek ve yürütme sırasında oluşturma `NullReferenceException` olasılığını azaltır. Geri kalan kod temeli dokunulmamış olsa da, geçirilecek yerel kod alanına odaklanabilmeniz için bu bağlamların kapsamını kontrol edebilirsiniz. Uygulamada, bu geçiş görevini sınıflarınıza düzenli bakımın bir parçası yapabilirsiniz. Bu öğretici, bir uygulamayı null yapılabilir başvuru türlerini kullanacak şekilde geçirme işlemini göstermiştir. Bu işlemin daha büyük bir gerçek dünya örneğini, null yapılabilir başvuru türlerini [Nodadtime](https://github.com/nodatime/nodatime/pull/1240/commits)ile birleştirmek IÇIN yapılan PR [Jon iskeet](https://github.com/jskeet) 'i inceleyerek inceleyebilirsiniz.

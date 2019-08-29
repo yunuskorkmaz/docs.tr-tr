@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 776949e86f6eb3fa6a193b303f4c731e20bac1a5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666576"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107308"
 ---
 # <a name="async-in-depth"></a>Zaman uyumsuz, derinlemesine
 
@@ -21,8 +21,8 @@ G/ç ve CPU 'ya bağlı zaman uyumsuz kod yazma, .NET görev tabanlı zaman uyum
 
 Görevler, [taahhüt modelinin Promise modeli](https://en.wikipedia.org/wiki/Futures_and_promises)olarak bilinünü uygulamak için kullanılan yapılardır.  Kısa bir süre sonra, iş daha sonraki bir noktada tamamlanacak bir "Promise" sunar ve bu da bir temiz API ile Promise ile koordine etmenizi sağlar.
 
-* `Task`değer döndürmeyen tek bir işlemi temsil eder.
-* `Task<T>`türünde `T`bir değer döndüren tek bir işlemi temsil eder.
+- `Task`değer döndürmeyen tek bir işlemi temsil eder.
+- `Task<T>`türünde `T`bir değer döndüren tek bir işlemi temsil eder.
 
 Görevler, iş parçacığı üzerinde bir soyutlama *değil* , zaman uyumsuz olarak gerçekleşen işin soyut kısımları olarak gerçekleşmekte önemlidir. Varsayılan olarak, görevler geçerli iş parçacığı üzerinde yürütülür ve uygun şekilde Işletim sisteminde iş devredebilir. İsteğe bağlı olarak, görevler `Task.Run` API aracılığıyla ayrı bir iş parçacığında çalışmak üzere açıkça istenebilir.
 
@@ -90,9 +90,9 @@ Yukarıdaki çok fazla iş olması gibi görünse de, duvar saati zamanı bakım
 
 0-1————————————————————————————————————————————————–2-3
 
-* Zaman uyumsuz bir yöntem `0` , `1` çağıranına denetim yapana kadar her şey için noktadan geçen süre.
-* `1` Noktadan`2` itibaren harcanan süre, CPU maliyeti olmadan g/ç 'de harcanan süredir.
-* Son olarak, noktadan harcanan `2` `3` süre zaman uyumsuz metoda denetim geri (ve potansiyel bir değer) geçirmekte ve bu noktada yeniden yürütüyordur.
+- Zaman uyumsuz bir yöntem `0` , `1` çağıranına denetim yapana kadar her şey için noktadan geçen süre.
+- `1` Noktadan`2` itibaren harcanan süre, CPU maliyeti olmadan g/ç 'de harcanan süredir.
+- Son olarak, noktadan harcanan `2` `3` süre zaman uyumsuz metoda denetim geri (ve potansiyel bir değer) geçirmekte ve bu noktada yeniden yürütüyordur.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Bu bir sunucu senaryosu için ne anlama geliyor?
 

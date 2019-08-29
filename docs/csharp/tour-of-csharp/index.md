@@ -1,78 +1,78 @@
 ---
-title: Turu C# - C# Kılavuzu
-description: Yeni C#? Dilinin temellerini öğrenin.
+title: C# Kılavuz turu C#
+description: Yeni C#misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706539"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105658"
 ---
-# <a name="a-tour-of-the-c-language"></a>Turu C# dil
+# <a name="a-tour-of-the-c-language"></a>C# Dilin turu
 
-C# (okunur "Bkz Sharp") bir basit, modern, nesne yönelimli ve tür kullanımı uyumlu programlama dilidir. C#kendi kökleri dilleri C ailesinde vardır ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir. Bu Turun dil ana bileşenleri'ne genel bakış sağlar. Dil etkileşimli örnekleri keşfedin, deneyin bizim [giriş C# ](../tutorials/intro-to-csharp/index.md) öğreticiler.
+C#("bkz. diyez") basit, modern, nesne odaklı ve tür açısından güvenli bir programlama dilidir. C#C 'nin dil ailesinde köklerine sahiptir ve C, C++, Java ve JavaScript programcıları için hemen tanıdık gelecektir. Bu tur, dilin önemli bileşenlerine genel bir bakış sağlar. Etkileşimli örneklerle dili araştırmak isterseniz, öğreticilere [giriş C# ](../tutorials/intro-to-csharp/index.md) deneyimimizi deneyin.
 
-C#, nesne yönelimli bir dildir ancak C# daha fazla için destek içerir ***bileşen odaklı*** programlama. Çağdaş yazılım tasarımı giderek daha fazla işlevsellik müstakil ve kendiliğinden açıklayıcı paketleri biçiminde yazılım bileşenlerini kullanır. Bu bileşenler özellikleri, yöntemleri ve olayları ile bunların bir programlama modeli sunar, anahtarıdır; bileşen hakkında tanımlayıcı bilgiler sağlayan özniteliklerine sahip oldukları; ve bunlar kendi belgelerinin dahil edilip derecelendirilir. C#dil yapıları doğrudan yaparak, bu kavramları desteklemek için sağlar C# doğal dilde çok oluşturun ve yazılım bileşenlerini kullanın.
+C#, nesne odaklı bir dildir, ancak C# daha fazla ***bileşen odaklı*** programlama desteğini içerir. Modern yazılım tasarımı giderek, yazılım bileşenlerini, kendi kendine içerilen ve kendi kendine açıklayan işlev paketleri biçiminde kullanır. Bu bileşenlere anahtar, özellikler, Yöntemler ve olaylar içeren bir programlama modeli sunduklarında; Bunlar, bileşen hakkında bildirime dayalı bilgiler sağlayan özniteliklere sahiptir; ve kendi belgelerini içerirler. C#, yazılım bileşenlerinin oluşturulması ve kullanılması için çok doğal bir C# dil sunarak, bu kavramları doğrudan desteklemek için dil yapıları sağlar.
 
-Birkaç C# ürettiği yapımı güçlü ve dayanıklı uygulamaların özellikleri: ***Çöp toplama*** otomatik olarak kullanılmayan erişilemeyen nesneler tarafından; kapladığı belleği geri kazanır ***özel durum işleme*** hata algılama ve kurtarma; yapılandırılmış ve Genişletilebilir bir yaklaşım sunan ve ***tür kullanımı uyumlu*** dilinin tasarım kılar imkansız başlatılmamış değişkenlerinden okuyun dizin için kendi sınırları ötesinde veya denetlenmeyen gerçekleştirmek için bir dizi yayınları yazın.
+Birçok C# Özellik sağlam ve dayanıklı uygulamaların yapımasına yardımcı olur: ***Çöp toplama*** , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır; ***özel durum işleme*** , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar; dilin ***tür kullanımı uyumlu*** tasarımı, başlatılmamış değişkenlerden okumayı, sınırları ötesinde dizileri dizin haline getirmek veya Denetlenmemiş tür yayınları gerçekleştirmeyi olanaksız hale getirir.
 
-C# sahip bir ***tür sistemi birleşik***. Gibi ilkel türler dahil olmak üzere tüm C# türü, `int` ve `double`, tek bir kök devral `object` türü. Bu nedenle, bir dizi ortak işlemlerini tüm türleri paylaşın ve herhangi bir tür değerleri depolanan, taşınan ve tutarlı bir şekilde üzerinde işlem. Ayrıca, C# hem kullanıcı tarafından tanımlanan başvuru türleri ve değer türleri, nesnelerin dinamik ayırması yanı sıra basit yapılar satır içi depolanmasını sağlayan destekler.
+C#Birleşik bir ***tür sistemine***sahiptir. `int` Ve `object` C# gibitemeltürlerdahilolmaküzeretümtürler,tekbirköktüründendevralınır.`double` Bu nedenle, tüm türler ortak işlemler kümesini paylaşır ve herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler, bu da nesnelerin dinamik ayrılmasına ve basit yapıların satır içi depolamamasına olanak tanır.
 
-Emin olmak için C# programlar ve kitaplıklar evrim Geçiren zamanla uyumlu bir şekilde, çok Vurgu yerleştirilir ***sürüm*** içinde C#kullanıcının tasarlayın. Birçok programlama dili bu sorun için çok az dikkat edin ve sonuç olarak, bu dillerin sonu bağımlı kitaplıkları gerekli olduğunda daha yeni sürümleri daha sık yazılan programlar sunulmuştur. Yönlerini C#kullanıcının sürüm hususları doğrudan etkileyen tasarım dahil ayrı `virtual` ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi için kurallar ve açık arabirim üyesi bildirimi için destek.
+Programlar ve kitaplıkların zaman içinde zaman içinde gelişebilmesini sağlamak için, tasarımına daha fazla vurgu konulmuştur. C# C# Birçok programlama dili bu sorunla ilgileniyor ve sonuç olarak, bu dillerde yazılmış programlar, bağımlı kitaplıkların daha yeni sürümleri tanıtıldığında gerekenden çok daha fazla. C#Sürüm oluşturma konuları tarafından doğrudan etkilenen tasarımın yönleri, ayrı `virtual` ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi kuralları ve açık arabirim üye bildirimleri için destek içerir.
 
-## <a name="hello-world"></a>Merhaba Dünya
+## <a name="hello-world"></a>Merhaba dünya
 
-"Hello, World" programı, geleneksel bir programlama dili tanıtmak için kullanılır. Bunu C# ' de şu şekildedir:
+"Hello, World" programı, genellikle bir programlama dilini tanıtmak için kullanılır. Burada yer C#verilmiştir:
 
 [!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
 
-C# kaynak dosyaları, genellikle dosya uzantısına sahip `.cs`. "Hello, World" program dosyasında depolanan varsayarak `hello.cs`, programın komut satırı kullanılarak derlenmiş:
+C#Kaynak dosyalar genellikle dosya uzantısına `.cs`sahiptir. "Hello, World" programının dosyada `hello.cs`depolandığını varsayarak, program komut satırı kullanılarak derlenir:
 
 ```console
 csc hello.cs
 ```
 
-hangi hello.exe adlı yürütülebilir bir derleme oluşturur. Çalıştırıldığında, bu uygulama tarafından üretilen çıktı.
+Hello. exe adlı bir yürütülebilir derleme üreten. Bu uygulama tarafından oluşturulan çıktı şu şekilde çalışır:
 
 ```console
 Hello, World
 ```
 
 > [!IMPORTANT]
-> `csc` Tam Framework komut ve tüm platformlarda kullanılamayabilir.
+> `csc` Komutu tam Framework için derlenir ve tüm platformlarda kullanılamayabilir.
 
-"Hello, World" programı ile başlayan bir `using` başvuran yönergesi `System` ad alanı. Ad alanlarında, C# programları ve kitaplıkları düzenleme, hiyerarşik bir yöntem sağlar. Ad alanları, türler ve diğer ad alanları içerir — örneğin, `System` ad alanı içeren bir dizi türleri gibi `Console` program ve diğer ad alanları, bir sayı gibi başvurulan sınıfı `IO` ve `Collections`. A `using` belirtilen bir ad alanı başvuruyor yönergesi bu ad alanının üyeleri olan türlerinin nitelenmemiş kullanımı sağlar. Nedeniyle `using` yönerge, programın kullanabilirsiniz `Console.WriteLine` için kısayol olarak `System.Console.WriteLine`.
+"Hello, World" programı, `using` `System` ad alanına başvuran bir yönergeyle başlar. Ad alanları, programları ve kitaplıkları düzenlemek C# için hiyerarşik bir yol sağlar. Ad alanları türler ve diğer ad alanlarını içerir — örneğin, `System` ad alanı programda başvurulan `Console` sınıf gibi bir dizi tür içerir ve `IO` ve `Collections`gibi diğer ad alanları vardır. Verilen `using` bir ad alanına başvuruda bulunan bir yönerge, bu ad alanının üyesi olan türlerin nitelenmemiş kullanımını mümkün değildir. Yönergesi nedeniyle program, için `System.Console.WriteLine`toplu olarak kullanabilir `Console.WriteLine`. `using`
 
-`Hello` "Hello, World" program tarafından bildirilen adlı yöntem tek bir üye sınıfında `Main`. `Main` Yöntemi statik değiştiriciyle bildirildi. Örnek yöntemleri anahtar sözcüğü kullanılarak belirli kapsayan nesne örneği başvurabilirsiniz ancak `this`, belirli bir nesneye başvuru olmadan statik yöntemleri çalışır. Kural gereği, adlı statik bir yöntemi `Main` bir programın giriş noktası olarak görev yapar.
+"Hello, World" programı tarafından belirtilen `Main` sınıftekbirüyeyesahiptir,yöntemiadlı.`Hello` `Main` Yöntemi statik değiştiriciyle birlikte bildirilmiştir. Örnek yöntemleri, anahtar sözcüğünü `this`kullanarak belirli bir kapsayan nesne örneğine başvurabilir, ancak statik yöntemler belirli bir nesneye başvuru olmadan çalışır. Kurala göre, adlı `Main` statik bir yöntem, bir programın giriş noktası olarak görev yapar.
 
-Program çıktısı tarafından üretilen `WriteLine` yöntemi `Console` sınıfını `System` ad alanı. Bu sınıf, varsayılan olarak, derleyici tarafından otomatik olarak başvurulur, standart sınıf kitaplıkları tarafından sağlanır.
+Programın çıktısı, `WriteLine` `System` ad alanındaki `Console` sınıfının yöntemi tarafından üretilir. Bu sınıf, varsayılan olarak derleyicinin otomatik olarak başvurduğu standart sınıf kitaplıkları tarafından sağlanır.
 
-Hakkında bilgi edinmek için çok daha fazla C#.  Aşağıdaki konularda öğelerinin genel bir bakış C# dili. Bu genel bakışlar dilinin tüm öğeleri hakkında temel bilgiler sağlar ve ayrıntılar daha kapsamlı öğeleri için gerekli bilgileri size C# dil:
+Hakkında C#daha fazla bilgi edinmek için çok daha fazla şey vardır.  Aşağıdaki konular, C# dilin öğelerine bir genel bakış sağlar. Bu genel bakışlar, dilin tüm öğeleriyle ilgili temel bilgileri sağlar ve bu C# dilin öğelerine daha ayrıntılı bilgi edinmek için gereken bilgileri verir:
 
-* [Program Yapısı](program-structure.md)
-  - Kuruluş temel kavramları öğrenin C# dil: ***programlar***, ***ad alanları***, ***türleri***, ***üyeleri***ve ***derlemeleri***.
-* [Türler ve Değişkenler](types-and-variables.md)
-  - Hakkında bilgi edinin ***değer türleri***, ***başvuru türleri***, ve ***değişkenleri*** içinde C# dili.
-* [İfadeler](expressions.md)
-  - ***İfadeleri*** oluşturulan ***işlenenler*** ve ***işleçleri***. İfade bir değer üretir.
-* [Deyimler](statements.md)
-  - Kullandığınız ***deyimleri*** eylemleri bir programın ifade etmek için.
-* [Sınıflar ve nesneler](classes-and-objects.md)
-  - ***Sınıflar*** olan en temel C# türü. ***Nesneleri*** sınıfının örnekleridir. Sınıflar kullanılarak oluşturulur ***üyeleri***, hangi de ele alınmıştır bölümüne bakın.
-* [Yapılar](structs.md)
-  - ***Yapılar*** , farklı sınıflar, değer türleri veri yapılarını.
-* [Diziler](arrays.md)
-  - Bir ***dizi*** hesaplanan dizinlerini erişilen değişken bir sayı içeren bir veri yapısıdır.
-* [Arabirimler](interfaces.md)
-  - Bir ***arabirimi*** sınıfları ve yapıları tarafından uygulanan bir sözleşmeyi tanımlar. Bir arabirim yöntemleri, özellikleri, olayları ve dizin oluşturucular içerebilir. Bir arabirim tanımlar üyelerinin uygulamalarını sağlamaz; yalnızca bir sınıf ya da arabirimi uygulayan yapının tarafından sağlanması gereken üyeleri belirtir.
-* [Sabit listeleri](enums.md)
-  - Bir ***sabit listesi türü*** adlandırılmış sabitler kümesini içeren farklı bir değer türüdür.
-* [Temsilciler](delegates.md)
-  - A ***temsilci türü*** belirli bir parametre olan yöntemlere başvuruları temsil listesi ve dönüş türü. Temsilciler, yöntemleri değişkenine atanır ve parametre olarak geçirilen varlıklar olarak değerlendirmek mümkün kılar. Diğer dillerde bulunan işlev işaretçileri kavramı temsilcileri benzerdir ancak işlev işaretçileri, nesne yönelimli ve tür kullanımı uyumlu temsilciler.
-* [Öznitelikler](attributes.md)
-  * ***Öznitelikleri*** programları türleri, üyeleri ve diğer varlıkları hakkında daha fazla bildirim temelli bilgi belirtmek etkinleştirin.
+- [Program Yapısı](program-structure.md)
+  - C# Dilde temel kurumsal kavramları öğrenin: ***Programlar***, ***ad alanları***, ***türler***, ***Üyeler***ve ***derlemeler***.
+- [Türler ve Değişkenler](types-and-variables.md)
+  - Dildeki değer ***türleri***, ***başvuru türleri***ve değişkenler hakkında bilgi edinin. C#
+- [İfadeler](expressions.md)
+  - ***İfadeler*** , ***işlenenler*** ve işleçlerdenoluşturulur. İfadeler bir değer üretir.
+- [Deyimler](statements.md)
+  - Bir programın eylemlerini ifade etmek için ***deyimlerini*** kullanırsınız.
+- [Sınıflar ve nesneler](classes-and-objects.md)
+  - ***Sınıflar*** , türlerin en temel C#larıdır. ***Nesneler*** bir sınıfın örnekleridir. Sınıflar, bu konunun de ele alındığı ***Üyeler***kullanılarak oluşturulmuştur.
+- [Yapılar](structs.md)
+  - ***Yapılar*** , sınıfların aksine değer türleri olan veri yapılarıdır.
+- [Diziler](arrays.md)
+  - ***Dizi*** , hesaplanan dizinler üzerinden erişilen çeşitli değişkenler içeren bir veri yapısıdır.
+- [Arabirimler](interfaces.md)
+  - ***Arabirim*** , sınıflar ve yapılar tarafından uygulanabilecek bir sözleşmeyi tanımlar. Arabirim, Yöntemler, özellikler, olaylar ve Dizin oluşturucular içerebilir. Arabirim, tanımladığı üyelerin uygulamalarını sağlamaz; yalnızca arabirimini uygulayan sınıflar veya yapılar tarafından sağlanması gereken üyeleri belirtir.
+- [Sabit listeleri](enums.md)
+  - ***Sabit listesi türü*** , adlandırılmış sabitler kümesi olan ayrı bir değer türüdür.
+- [Temsilciler](delegates.md)
+  - Bir ***temsilci türü*** , belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilecek ve parametre olarak geçirilen varlıklar olarak işleme olanağı tanır. Temsilciler, bazı diğer dillerde bulunan işlev işaretçileri kavramına benzerdir, ancak işlev işaretçilerinden farklı olarak Temsilciler nesne yönelimli ve tür açısından güvenlidir.
+- [Öznitelikler](attributes.md)
+  - ***Öznitelikler*** , programların türler, Üyeler ve diğer varlıklar hakkında ek bildirime dayalı bilgiler belirtmesini sağlar.
 
 > [!div class="step-by-step"]
 > [Next](program-structure.md)

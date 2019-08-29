@@ -1,69 +1,69 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876941"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104627"
 ---
-# <a name="contributing"></a>Katkıda bulunan
+# <a name="contributing"></a>Bulunan
 
-.NET belgeleri için katkıda bulunan İlginiz için teşekkür ederiz!
+.NET belgelerine katkıda bulunmak için ilgilendiğiniz için teşekkür ederiz!
 
-> Bir site genelinde katkı kılavuzunu koşullarımıza geçme işleminde duyuyoruz. 
-> Yeni bir kılavuz için ziyaret edin [Microsoft Docs katkıda bulunan Kılavuzu Genel Bakış](https://docs.microsoft.com/contribute/).
+> Kılavuzumuzu site genelinde bir katkı Kılavuzu 'na taşıma sürecimize ihtiyacımız duyuyoruz. 
+> Yeni Kılavuzu görmek için [Microsoft docs katkıda bulunan kılavuzuna genel bakış](https://docs.microsoft.com/contribute/)' ı ziyaret edin.
 
-Belge makaleleri ve barındırılan kod örnekleri katkıda bulunmak için işlem içermektedir [.NET belgeler sitesinde](https://docs.microsoft.com/dotnet). Katkılar, yazım düzeltmeleri kadar basit veya yeni makaleler gibi karmaşık olabilir.
+Belge, [.net belge sitesinde](https://docs.microsoft.com/dotnet)barındırılan makalelere ve kod örneklerine katkıda bulunma sürecini ele alır. Katkılar, yazım hatası düzeltmeleri kadar basit veya yeni makale olarak karmaşık olabilir.
 
-* [Katkıda bulunmak için işlem](#process-for-contributing)
-* [C# Etkileşimli deneyim](#the-c-interactive-experience)
-* [Gerekenler ve yapılmaması gerekenler](#dos-and-donts)
-* [Katkıda bulunan lisans sözleşmesi](#contributor-license-agreement)
+- [Katkıda bulunan için işlem](#process-for-contributing)
+- [C# Etkileşimli deneyim](#the-c-interactive-experience)
+- [DOs ve yapılmaması gerekenler](#dos-and-donts)
+- [Katkıda bulunan lisans sözleşmesi](#contributor-license-agreement)
 
-Bu depo, .NET için kavramsal belgelerde içerir. .NET belgeleri sitesini Bunun yanı sıra birden çok deposu oluşturulur:
+Bu depo, .NET kavramsal belgelerini içerir. .NET belgeleri sitesi buna ek olarak birden çok depodan oluşturulmuştur:
 
 - [Kod örnekleri ve kod parçacıkları](https://github.com/dotnet/samples)
 - [API başvurusu](https://github.com/dotnet/dotnet-api-docs)
-- [.NET derleyici Platformu SDK başvurusu](https://github.com/dotnet/roslyn-api-docs)
+- [.NET Compiler Platform SDK başvurusu](https://github.com/dotnet/roslyn-api-docs)
 
-Sorunlar ve bu depolar için görevleri buraya izlenir.
+Tüm bu depolardaki sorunlar ve görevler burada izlenir.
 
-## <a name="process-for-contributing"></a>Katkıda bulunmak için işlem
+## <a name="process-for-contributing"></a>Katkıda bulunan için işlem
 
-Temel bir anlayış ihtiyacınız [Git ve GitHub.com](https://guides.github.com/activities/hello-world/).
+[Git ve GitHub.com](https://guides.github.com/activities/hello-world/)'in temel bir şekilde anlaşılmasına ihtiyacınız vardır.
 
-**1. adım:** (Örneğin, yazım hatası düzeltme veya hemen belgelere bulduğunuz bir sorunu gidermek için bir çekme isteği açma) küçük değişiklikler için bu adımı atlayın. Yeni içerik yazma veya var olan içeriğin tamamen düzeltilmesi ilgileniyorsanız, açık bir [sorunu](https://github.com/dotnet/docs/issues) açıklayan ne yapmak istiyorsunuz.
-İçindeki içeriği **docs** klasörü, tablo, içeriği (İçindekiler tablosunda) yansıtılır bölümlere düzenlenir. Konunun TOC'de nerede yer alır tanımlayın. Teklifiniz hakkında geri bildirim alın.
+**1. Adım:** Küçük değişiklikler için bu adımı atlayın (örneğin, bir yazım hatası 'u düzelttiğinizde veya belgeler içinde bulduğunuz bir sorunu gidermek için hemen bir çekme isteği açarsanız). Yeni içerik yazmak veya var olan içerikleri kapsamlı olarak yeniden gözden aktarmak istiyorsanız, ne yapmak istediğinizi açıklayan bir [sorun](https://github.com/dotnet/docs/issues) açın.
+**Docs** klasörünün içindeki Içerikler, içindekiler tablosuna (TOC) yansıtılan bölümler halinde düzenlenmiştir. Konunun TOC 'de nerede olacağını tanımlayın. Teklifiniz hakkında geri bildirim alın.
 
 -veya-
 
-Ayrıca, mevcut sorunları için hangi topluluk Katkıları davetlidir da tercih edebilirsiniz. [Projeler .NET topluluğa katkıda bulunanlar için](https://github.com/dotnet/docs/projects/35) birçok topluluğa katkıda bulunanlar için kullanılabilir olan iş öğelerini listeler. İlgi alanlarına ve taahhüt düzeyine bağlı olarak, aşağıdaki kategorilerde sorunlar arasından seçim yapabilirsiniz:
+Ayrıca, topluluk katkılarına hoş geldiniz mevcut sorunlarından da seçim yapabilirsiniz. [.Net Community katkıda bulunanlar Için projeler](https://github.com/dotnet/docs/projects/35) , topluluk katkı sağlayanlar için kullanılabilen iş öğelerinin çoğunu listeler. İlgi alanlarınıza ve taahhüt düzeyine bağlı olarak, aşağıdaki kategorilerdeki sorunlardan seçim yapabilirsiniz:
 
-- **Bakım**. Bu kategori, bozuk ya da yanlış bağlantıları çözme, eksik kod örnekleri ekleyerek veya adresleme içerik sorunları sınırlı gibi oldukça basit Katkıları içerir. Bazı durumlarda, bu sorunları çok sayıda dosya ile ilgili. Bu durumda, başlamadan önce üzerinde çalışmak istiyorsanız bize bilmeniz gerekir.
+- **Bakım**. Bu kategori, bozuk veya hatalı bağlantıları düzeltme, eksik kod örneklerini ekleme veya sınırlı içerik sorunlarını giderme gibi oldukça basit katkıları içerir. Bazı durumlarda bu sorunlar çok sayıda dosya olabilir. Bu durumda, başlamadan önce üzerinde ne kadar çalışmak istediğinizi bize bildirmek zorunda olursunuz.
 
-- **İçerik güncelleştirmeleri**. Belge kümesinin enormity göz önünde bulundurulduğunda, içeriği kolayca güncel olmayan hale gelir ve düzeltme gerektirir. Ayrıca, neden çeşitli içerikler yinelenen veya bırakıldığı bile triplicated. İçeriği güncelleştirme içerir tek tek ilgili konulara çoğaltma ortadan kaldırmak ve tüm benzersiz içerik daha küçük belgelerinde korunmasını sağlamak için özellik alanında geçerli ya da düzeltme içerik olmasını sağlamaktan ayarlayın.
+- **İçerik güncelleştirmeleri**. Belge kümesinin her ne kadar kolay olduğu, içerik daha kolay geçmiş hale gelir ve düzeltme gerektirir. Bunlara ek olarak, çeşitli nedenlerle bazı içerikler yinelenmiş veya hatta Üçlü hale geliştirilmiştir. İçeriği güncelleştirmek, tek tek konuların geçerli olduğundan emin olmanızı veya bir özellik alanındaki içeriğin yeniden güncelleştirilmesini sağlayarak yinelemeyi ortadan kaldırmak ve tüm benzersiz içeriklerin daha küçük belge kümesinde korunduğundan emin olmanızı içerir.
 
-- **Yeni içerik yazma**. Kendi konu yazmak istiyorsanız, bu sorunları biliyoruz ki belge kümemiz eklemek istediğiniz konuları listeler. Bir konu, ancak çalışmaya başlamadan önce bunu bize bildirin. Burada listelenmeyen bir konu yazılırken ilgileniyorsanız, bir sorun açın. 
+- **Yeni içerik yazma**. Kendi konu başlığını yazmak istiyorsanız, bu sorunlar belge ayarımızı eklemek istediğimizi öğrendiğimiz konuları listeler. Bir konu üzerinde çalışmaya başlamadan önce bize bakalım, ancak. Burada listelenmeyen bir konu yazmakla ilgileniyorsanız bir sorun açın. 
 
-Ayrıca bakabilirsiniz bizim [açık sorun](https://github.com/dotnet/docs/issues) listelemek ve ilgilendiğiniz olanları üzerinde çalışılacak volunteer. Kullandığımız [yukarı-için-Dallarınızla](https://github.com/dotnet/docs/labels/up-for-grabs) etiketi sorunları katkısı için açık etiketi. 
+Ayrıca, ilginizi çekdikleriniz üzerinde çalışmak için [Açık sorunlar](https://github.com/dotnet/docs/issues) listemize ve Volunteer göz atabilirsiniz. Katkı için açık olan sorunları etiketleyerek, [for-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) etiketini kullanırız. 
 
-**2. adım:** Çatal `dotnet/docs`, `dotnet/samples` veya `dotnet/dotnet-api-docs` depoları olarak gerekli ve değişikliklerinizin bir dal oluşturun.
+**2. Adım:** `dotnet/docs` Gerektiğinde`dotnet/samples` veya yeniden`dotnet/dotnet-api-docs` oluşturun ve yaptığınız değişiklikler için bir dal oluşturun.
 
-Küçük değişiklikler için GitHub'ın web arabirimi kullanabilirsiniz. Tıklamanız yeterlidir **çatalınızı bu projenin dosyayı düzenleyin** değiştirmek için istediğiniz dosya çubuğunda. Değişiklikleri gönderdiğinizde GitHub yeni bir dal oluşturur.
+Küçük değişiklikler için GitHub 'ın Web arabirimini kullanabilirsiniz. Değiştirmek istediğiniz dosyada **Bu projenin çatalınızda dosyayı Düzenle** ' ye tıklamanız yeterlidir. Değişiklikleri gönderdiğinizde GitHub yeni dalı sizin için oluşturur.
 
-**3. adım:** Bu yeni dalda değişiklikleri yapın.
+**Adım 3:** Bu yeni dalda değişiklikleri yapın.
 
-Yeni bir konu varsa bunu kullanabilirsiniz [şablon dosyası](./styleguide/template.md) , başlangıç noktası olarak. Bu yazma yönergeleri içerir ve ayrıca Yazar bilgileri gibi her bir makaleyi için gerekli meta veriler açıklanmaktadır.
+Yeni bir konu ise, bu [şablon dosyasını](./styleguide/template.md) başlangıç noktası olarak kullanabilirsiniz. Yazma kılavuzunu içerir ve aynı zamanda yazar bilgileri gibi her bir makale için gereken meta verileri açıklar.
 
-1. adımda makale için belirlenen TOC konuma karşılık gelen klasörüne gidin.
-Bu klasör için bu bölümdeki tüm makaleleri Markdown dosyalarını içerir.
-Gerekirse, içerik için dosyaları yerleştirmek için yeni bir klasör oluşturun. Bu bölüm için ana makale adlı *index.md*.
-Görüntüleri ve diğer statik kaynaklar için adında bir alt klasör oluşturmak **medya** zaten yoksa, makale içeren klasörü içinde. İçinde **medya** klasöründe (dizin dosyası dışında) makale ada sahip bir alt klasör oluşturun.
-Daha büyük örnek içeren *örnekleri* klasör deponun kök altında.
+Adım 1 ' deki makalenize göre belirlenen TOC konumuna karşılık gelen klasöre gidin.
+Bu klasör, bu bölümdeki tüm makalelerin markın dosyalarını içerir.
+Gerekirse, içeriğinizin dosyalarını yerleştirmek için yeni bir klasör oluşturun. Bu bölümün ana makalesi *index.MD*olarak adlandırılır.
+Görüntüler ve diğer statik kaynaklar için, zaten mevcut değilse, makalenizi içeren klasörün içinde **medya** adlı bir alt klasör oluşturun. **Medya** klasörü içinde, makale adına sahip bir alt klasör oluşturun (Dizin dosyası hariç).
+Depo kökünün altındaki *örnekler* klasörüne daha büyük örnekler ekleyin.
 
-Uygun Markdown söz dizimini takip ettiğinizden emin olun. Daha fazla bilgi için [Stil Kılavuzu](./styleguide/template.md).
+Doğru markın söz dizimini izlediğinizden emin olun. Daha fazla bilgi için bkz. [Stil Kılavuzu](./styleguide/template.md).
 
-### <a name="example-structure"></a>Örnek yapısı
+### <a name="example-structure"></a>Örnek yapı
 
 ```
 docs
@@ -76,82 +76,82 @@ docs
             portability_report.png
 ```
 
-**4. adım:** Bir çekme isteği (PR) için kendi dalınızdaki gönderme `dotnet/docs/master`.
+**4. Adım:** Dalınızdan öğesine `dotnet/docs/master`bir çekme isteği (PR) gönderme.
 
-Çekme isteğiniz gereken *her zaman* ana dala hedefleyin. Yapmanız gerekenler *hiçbir zaman* Canlı dala hedefleyen bir PR açın.
+PR 'nizin *her zaman* ana dalı hedeflemesi gerekir. Canlı dalı hedefleyen bir PR 'yi *asla* açmanız gerekir.
 
-Her çekme isteği, genellikle aynı anda bir sorun gidermelidir. Çekme isteği, bir veya birden çok dosyalarda değişiklik yapabilir. Farklı dosya çubuğunda birden çok düzeltmesi ele alan ise ayrı bir PR tercih edilir.
+Her bir çekme isteği genellikle tek seferde bir sorunu ele almalıdır. PR bir veya daha fazla dosyayı değiştirebilir. Farklı dosyalarda birden çok düzeltmeyi adreslendirirken ayrı PR 'ler tercih edilir.
 
-Çekme isteğiniz var olan bir sorunu ele alıyor mu yoksa ekleyin `Fixes #Issue_Number` anahtar sözcüğü bir işleme iletisi veya çekme isteği açıklaması. Çekme isteği birleştirilirken bu şekilde, sorunu otomatik olarak kapatılır. Daha fazla bilgi için [işleme iletileri aracılığıyla sorunlarına kapatma](https://help.github.com/articles/closing-issues-via-commit-messages/).
+Çekme isteği mevcut bir sorunu ele alıyorsa, `Fixes #Issue_Number` anahtar sözcüğünü işleme iletisi veya PR açıklamasına ekleyin. Bu şekilde, çekme isteği birleştirildiğinde sorun otomatik olarak kapatılır. Daha fazla bilgi için bkz. [kayıt iletileri aracılığıyla sorunları kapatma](https://help.github.com/articles/closing-issues-via-commit-messages/).
 
-.NET ekibi, çekme isteği gözden geçirin ve onaylayın için gerekli diğer güncelleştirmeleri/değişiklikler olup olmadığını size bildirmek.
+.NET ekibi, çekme kodunuzu inceleyerek, onaylamak için gereken diğer güncelleştirmeler/değişiklikler olup olmadığını size bilmenizi sağlar.
 
-**5. adım:** Gerekli güncelleştirmeleri dalınızda ekiple açıklandığı gibi olun.
+**5. Adım:** Takımda tüm gerekli güncelleştirmeleri ekiple anlatıldığı şekilde yapın.
 
-Maintainers Çekme geri bildirim uygulandıktan sonra değişiklik onaylandıktan ana dal ile birleştirilecek.
+Bakım, geri bildirim uygulandıktan sonra değişiklik onaylandıktan sonra ana dalda çekme işlemini birleştirir.
 
-Belirli bir bir temposu üzerinde biz tüm işlemeleri ana daldan Canlı dalına gönderin ve ardından, Canlı katkılarınız görmek mümkün olacaktır https://docs.microsoft.com/dotnet/.
+Belirli bir temposunda, Ana daldaki tüm işlemeleri canlı dala gönderiyoruz ve ardından katkılarınızı şurada https://docs.microsoft.com/dotnet/ görebilirsiniz:
 
-### <a name="contributing-to-samples"></a>Örneklerine katkıda bulunan
+### <a name="contributing-to-samples"></a>Örneklere katkıda bulunma
 
-Depomuzda bulunan kodu aşağıdaki ayrım yapmaya ediyoruz:
+Depomızda bulunan kod için aşağıdaki ayrım yaptık:
 
-- Örnekler: okuyucular indirebilir ve bunları örnekleri çalıştırabilir. Tüm örnekleri eksiksiz uygulamaları ya da kitaplıkları olmalıdır. Örnek, bir kitaplık oluşturur. Burada, birim testleri veya okuyucuların kodu çalıştırmasına olanak sağlayan bir uygulama içermelidir.
+- Örnekler: okuyucular örnekleri indirebilir ve çalıştırabilir. Tüm örnekler, tamamlanmış uygulamalar veya kitaplıklar olmalıdır. Örneğin, örnek bir kitaplık oluşturduğunda, birim testlerini veya okuyucuların kodu çalıştırmasına izin veren bir uygulamayı içermesi gerekir.
 
-- kod parçacıkları: daha küçük bir kavram ya da görev gösterilmektedir. Derlenmesi ancak eksiksiz uygulamaları olması amaçlanmamıştır.
+- Kod parçacıkları: daha küçük bir kavram veya görev gösterir. Bunlar derlemelerdir, ancak bunların tamamen uygulamalar olması amaçlanmamıştır.
 
-Tüm Canlı kod [dotnet/samples](https://github.com/dotnet/samples) depo. Bizim örnek klasör yapısını bizim docs klasör yapısını eşleştiği bir modele geçiş çalışıyoruz. Sizinle standartları şunlardır:
+Kod hepsi [DotNet/Samples](https://github.com/dotnet/samples) deposunda bulunur. Örnek klasör yapımızın belge klasörü yapısıyla eşleştiği bir modele doğru çalışıyoruz. İzlediğimiz standartlar şunlardır:
 
-- En üst düzey *parçacıkları* klasörü, küçük, odaklanmış örnekleri için kod parçacıkları içerir.
-- API başvuru örnekleri, bu düzen aşağıdaki klasöründe yapıldı: *parçacıkları /\<dil > /api/\<ad > /\<apiname >*.
-- Üst düzey klasörler, diğer üst düzey klasörler eşleşen *docs* depo. Örneğin belge deposu olan bir *machine-learning/öğreticileri* klasörü ve machine learning öğreticileri örnekleri olan *samples/machine-learning/öğreticileri* klasör.
+- En üst düzey *parçacıklar* klasörü, küçük, odaklanmış örnekler için kod parçacıkları içerir.
+- API başvuru örnekleri şu düzenin ardından gelen bir klasörde: *parçacıklar\</dil >\</api/Namespace >/\<apiname >* .
+- Diğer üst düzey klasörler, *docs* deposundaki en üst düzey klasörlerle eşleşir. Örneğin, docs deposunda *makine öğrenimi/öğreticiler* klasörü ve Machine Learning öğreticilerinin örnekleri, *Samples/Machine-Learning/öğreticiler* klasöründedir.
 
-Ayrıca, tüm örnekleri altında *çekirdek* ve *standart* klasörleri oluşturun ve .NET Core tarafından desteklenen tüm platformlarda çalıştırın. CI derleme sistemimiz, zorlar. En üst düzey *framework* klasörü, yalnızca oluşturulan ve Windows üzerinde doğrulanmış örnekleri içerir.
+Ayrıca, *çekirdek* ve *Standart* klasörler altındaki tüm örneklerin .NET Core tarafından desteklenen tüm platformlarda oluşturulması ve çalışması gerekir. CI derleme sistemimiz bunu zorunlu kılacak. En üst düzey *çerçeve* klasörü yalnızca Windows 'da oluşturulan ve doğrulanan örnekleri içerir.
 
-Yeni içerik belge deposu ekler gibi Biz bu dizinler genişleyebilir. Örneğin, Xamarin dizinleri gibi ekleyeceğiz `xamarin-ios` ve `xamarin-android` dizinleri.
+Docs deposu yeni içerik eklediği için bu dizinleri genişletebiliriz. Örneğin, ve `xamarin-ios` `xamarin-android` dizinleri gibi Xamarin dizinleri ekleyeceğiz.
 
-Oluşturduğunuz her tam bir örnek içermesi gereken bir *readme.md* dosya. Bu dosya, örnek (bir veya iki paragraf) kısa bir açıklamasını içermelidir. *Readme.md* okuyucuların ne bunlar Bu örneği araştırarak öğreneceksiniz söyleyecektir. *Readme.md* dosya da içermelidir belgenin canlı bağlantı üzerinde [.NET belgeler sitesinde](https://docs.microsoft.com/dotnet/welcome).
-Burada belirli bir dosya deposu olarak o siteye eşler belirlemek için değiştirme `/docs` ile depo yolu içinde `https://docs.microsoft.com/dotnet`.
+Oluşturduğunuz her bir bütün örnek bir *README.MD* dosyası içermelidir. Bu dosya, örneğin kısa bir açıklamasını (bir veya iki paragraf) içermelidir. *README.MD* , okuyuculara bu örneği inceleyerek öğrendikleri şeyleri anlatmalıdır. *README.MD* dosyası ayrıca [.net belgeleri sitesindeki](https://docs.microsoft.com/dotnet/welcome)canlı belgenin bir bağlantısını içermelidir.
+Depodaki belirli bir dosyanın bu siteyle eşlendiği yeri tespit etmek için, depo yolundaki öğesini `/docs` ile `https://docs.microsoft.com/dotnet`değiştirin.
 
-Konu başlığınız örnek bağlantılarını da içerir. GitHub üzerinde örnek kullanıcının klasörüne doğrudan bağlayın.
+Konağınız Ayrıca örneğe bağlantılar da içerir. GitHub 'daki örnek klasörünü doğrudan bağlayın.
 
-Daha fazla bilgi için [örnekleri Benioku](https://github.com/dotnet/samples/blob/master/README.md).
+Daha fazla bilgi için bkz. [Samples Readme](https://github.com/dotnet/samples/blob/master/README.md).
 
 ## <a name="the-c-interactive-experience"></a>C# Etkileşimli deneyim
 
-Kod örnekleri kısa C# kullanabilirsiniz `csharp-interactive` belirtmek için dil etiketi bir C# tarayıcıda çalışan bir örnek. (Satır içi kod örnekleri kullan `csharp-interactive` kaynak, içerdiği parçacıkları kullanmak için etiketi `code-csharp-interactive` etiketi.) Bu kod örnekleri, makaledeki bir kod ve bir çıkış penceresinde görüntüler. Çıkış penceresi kullanıcı örneği çalıştırıldıktan sonra gelen etkileşimli kod yürütme herhangi bir çıkış görüntüler. 
+İçindeki C# kısa kod örnekleri, tarayıcıda çalışan `csharp-interactive` bir C# örnek belirtmek için Language etiketini kullanabilir. (Satır içi kod örnekleri, `csharp-interactive` kaynaktan dahil edilen kod parçacıkları için etiketini kullanır, `code-csharp-interactive` etiketini kullanın.) Bu kod örnekleri, makalede bir kod penceresi ve bir çıkış penceresi görüntüler. Çıktı penceresinde, Kullanıcı örneği çalıştırdıktan sonra etkileşimli kodu yürütmenin tüm çıktıları görüntülenir. 
 
-C# Etkileşimli deneyim değişiklikleri örnekleri ile nasıl çalışıyoruz. Sonuçları görmek için örnek ziyaretçiler çalıştırabilirsiniz. Bir dizi etkene ilgili metin ve örnek çıktı hakkında bilgi içermelidir, belirlemek.
+Etkileşimli C# deneyim, örneklerle nasıl çalışadığımızda değişiklik yaptığı şekilde değişir. Ziyaretçiler, sonuçları görmek için örneği çalıştırabilir. Örnek veya ilgili metnin çıkış hakkındaki bilgileri içermesi gerekip gerekmediğini belirlemenize yardımcı olan bir dizi etken.
 
-### <a name="when-to-display-the-expected-output-without-running-the-sample"></a>Ne zaman örneği çalıştırmadan beklenen çıktıyı görüntüleme
+### <a name="when-to-display-the-expected-output-without-running-the-sample"></a>Örnek çalıştırmadan beklenen çıkışın ne zaman görüntüleneceği
 
-- Okuyucular beklenen yanıt iş çıktısını karşılaştırabilmeniz makaleleri yeni başlayanlar için hedeflenen çıkış sağlamanız gerekir.
-- Çıkış konuya integral olduğu örnekleri bu çıkışı görüntülemelidir. Örneğin, biçimlendirilmiş metin makalelerde, örneği çalıştırmadan metin biçimi göstermelidir.
-- Hem örnek ve beklenen çıktıyı olduğunda kısa çıktısını gösteren göz önünde bulundurun. Bu işlem biraz zaman kaydeder.
-- Nasıl geçerli kültürün veya sabit kültür etkileyen çıkış açıklayan makaleler, beklenen çıktıyı açıklayan. Linux tabanlı bir konakta etkileşimli REPL (Read değerlendirmek yazdırma döngüsü) çalıştırır. Varsayılan kültürü ve sabit kültür, farklı işletim sistemleri ve makineler üzerinde farklı bir çıkış üretir. Makale Windows, Linux ve Mac sistemlerinde çıkış açıklayan.
+- Yeni başlayanlar için tasarlanan makaleler, okuyucuların, işinin çıkışını beklenen Yanıtla karşılaştırabilmesi için çıkış sağlamalıdır.
+- Çıktının konuya tamsayı olduğu örnekler bu çıktıyı görüntülemelidir. Örneğin, biçimlendirilen metin makaleleri örneği çalıştırmadan metin biçimini göstermelidir.
+- Hem örnek hem de beklenen çıkış kısaysa, çıktıyı göstermeyi göz önünde bulundurun. Biraz zaman kazandırır.
+- Geçerli kültürün veya sabit kültürün çıktıyı nasıl etkileyeceğini açıklayan makaleler beklenen çıktıyı açıklamalıdır. Linux tabanlı bir konakta etkileşimli REPL (okuma, yazdırma döngüsünü değerlendir) çalışır. Varsayılan kültür ve sabit kültür farklı işletim sistemlerinde ve makinelerde farklı çıktılar üretir. Makale, Windows, Linux ve Mac sistemlerindeki çıktıyı açıklamalıdır.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Beklenen çıktıyı örnekten hariç tutmak ne zaman 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Beklenen çıktının örnekten ne zaman dışlanacağını 
 
-- Burada örnek daha büyük bir çıkış oluşturur makalelerde, yorumlarda içermemelidir. Örneği çalıştırıldıktan sonra kodu gizler.
-- Makaleler burada örnek bir konu gösterir, ancak çıkış anlamak için tam sayı değil. Örneğin, sorgu söz dizimi açıklamak ve ardından çıkış koleksiyondaki her öğe görüntülemek için bir LINQ Sorgu çalışan kod.
+- Örneğin, örneğin daha büyük bir çıktı oluşturduğu makaleler açıklamalarda bunu içermemelidir. Örnek çalıştırıldıktan sonra kodu gizler.
+- Örneğin bir konuyu gösteren makaleler, ancak bunu anlamak için tam sayı değildir. Örneğin, sorgu sözdizimini açıklamak ve sonra çıktı koleksiyonundaki her öğeyi göstermek için bir LINQ sorgusu çalıştıran kod.
 
-## <a name="dos-and-donts"></a>Gerekenler ve yapılmaması gerekenler
+## <a name="dos-and-donts"></a>DOs ve yapılmaması gerekenler
 
-Aşağıdaki liste .NET belgelerine katkıda bulunan, dikkat etmeniz gereken bazı temel kuralları gösterir:
+Aşağıdaki listede, .NET belgelerine katkıda bulunmak için göz önünde bulundurmanız gereken bazı temel kurallar gösterilmektedir:
 
-- **Yoksa** bize bulunan büyük çekme istekleri beklenmedik. Bunun yerine, bir sorunu oluşturun ve büyük miktarda zaman yatırım önce bir yönü kabul edebilir, böylece bir tartışma başlatın.
-- **YAPMAK** okuma [Stil Kılavuzu](./styleguide/template.md) ve [ses ve sesi](./styleguide/voice-tone.md) yönergeleri.
-- **YAPMAK** kullanın [şablon](./styleguide/template.md) dosyası iş başlangıç noktası olarak.
-- **YAPMAK** makalelerde çalışmaya başlamadan önce çatalınızdaki ayrı bir dal oluşturun.
-- **YAPMAK** izleyin [GitHub akışı iş akışı](https://guides.github.com/introduction/flow/).
-- **YAPMAK** blog ve tweet (veya ne olursa olsun) Katkılarınızı, sık!
+- Büyük çekme istekleri konusunda sürmeyin. Bunun yerine bir sorun oluşturup bir tartışma başlatın, böylece büyük bir süre yatırmadan önce bir yönü kabul edebilirsiniz.
+- [Stil kılavuzunu](./styleguide/template.md) ve [ses ve ton](./styleguide/voice-tone.md) kılavuzlarını okuyun.
+- [Şablon](./styleguide/template.md) dosyasını, çalışmanızın başlangıç noktası olarak kullanın.
+- Makaleler üzerinde çalışmadan önce çatalınızda ayrı bir dal oluşturun.
+- [GitHub Flow iş akışını](https://guides.github.com/introduction/flow/)izleyin.
+- Web günlüğü ve Tweet (veya herhangi bir) katkılarınız hakkında sık sık!
 
-> Not: konuların bazıları burada belirtilen şu anda tüm yönergeleri izleyerek ve üzerinde olduğunu fark edebilirsiniz [Stil Kılavuzu](./styleguide/template.md) de. Site genelinde tutarlılık elde etmeye yönelik çalışıyoruz. Listesini kontrol edin [açık sorun](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) biz şu anda bu belirli bir hedef için takip ettiğiniz.
+> Not: bazı konuların Şu anda burada belirtilen tüm yönergeleri ve [Stil kılavuzunu](./styleguide/template.md) takip ettiğini fark edebilirsiniz. Site genelinde tutarlılık elde etmek için çalışıyoruz. O belirli hedef için izlemekte olduğumuz [Açık sorunlar](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) listesini kontrol edin.
 
 ## <a name="contributor-license-agreement"></a>Katkıda bulunan lisans sözleşmesi
 
-Oturum açmanız gerekir [.NET Foundation katılım Lisans Sözleşmesi (CLA)](https://cla.dotnetfoundation.org) Çekme isteğiniz birleştirilmeden önce. Bu, .NET Foundation projeleri için tek seferlik bir gereksinimdir. Daha fazla bilgi edinebilirsiniz [katkı lisans sözleşmeleri'ni (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) wikipedia.
+Çekme isteği birleştirilmeden önce [.net Foundation katkı lisans sözleşmesi 'ni (CLA)](https://cla.dotnetfoundation.org) imzalamanız gerekir. Bu, .NET Foundation 'daki projeler için tek seferlik bir gereksinimdir. Vivon 'da [katkı lisans sözleşmeleri (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) hakkında daha fazla bilgi edinebilirsiniz.
 
-Sözleşme: [net-foundation-katkı-lisans-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
+Sözleşme: [net-Foundation-Contribution-License-Agreement. PDF](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf)
 
-Ön sözleşme imzalayan gerekmez. Kopyalama, çatalı ve her zaman olduğu gibi çekme isteği gönderin. Çekme isteğiniz oluşturulduğunda, CLA botu tarafından sınıflandırılır. Değişiklik Önemsiz değilse (örneğin, bir yazım yanlışı sabit), çekme isteği ile etiketlenir sonra `cla-not-required`. Aksi takdirde olarak sınıflandırılır `cla-required`. CLA imzalandıktan sonra güncel ve gelecekteki tüm çekme isteklerini olarak etiketlenmiştir `cla-signed`.
+Anlaşmanın ön ucuna kaydolmanız gerekmez. PR 'yi her zamanki gibi kopyalayabilir, çatalla ve gönderebilirsiniz. Çekme isteği oluşturulduğunda, bir CLA bot tarafından sınıflandırıldı. Değişiklik önemsiz (örneğin, bir typo düzeltildi) ise, çekme isteği ile `cla-not-required`etiketlenir. Aksi takdirde, olarak `cla-required`sınıflandırılır. CLA 'yı imzaladıktan sonra, geçerli ve gelecekteki tüm çekme istekleri olarak `cla-signed`etiketlenir.

@@ -1,45 +1,45 @@
 ---
-title: ML.NET komut satırı arabirimi (CLI) aracı yükleme
-description: Genel bakış ve ML.NET komut satırı arabirimi (CLI) aracı yükleme.
+title: ML.NET komut satırı arabirimi (CLı) aracını yüklemek
+description: ML.NET komut satırı arabirimi (CLı) aracının genel bakış ve yükleme.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8b6de466a6cf72b44a16c80fc024671bc4e975e8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832927"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106896"
 ---
-# <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLI) aracı yükleme
+# <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET komut satırı arabirimi (CLı) aracını yüklemek
 
-ML.NET CLI (komut satırı arabirimi) kaliteli ML.NET modelleri ve sağladığınız eğitim veri kümeleri üzerinde tabanlı kaynak kodu oluşturmak için bir komut istemi üzerinde (Windows, Mac veya Linux) çalıştırabilirsiniz. bir araçtır.
+ML.NET CLı (komut satırı arabirimi), sağladığınız eğitim veri kümelerine göre iyi kalitede ML.NET modelleri ve kaynak kodu oluşturmak için herhangi bir komut isteminde (Windows, Mac veya Linux) çalıştırabileceğiniz bir araçtır.
 
 > [!NOTE]
-> ML.NET CLI ve ML.NET AutoML şu anda önizlemede olan bu konuda ifade eder ve malzeme değişiklik gösterebilir.
+> Bu konu, şu anda önizleme aşamasında olan ML.NET CLı ve ML.NET oto ml 'ye başvurur ve malzemeler değişebilir.
 
 ## <a name="pre-requisites"></a>Ön koşullar
 
-- [.NET core SDK'sını 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [.NET Core 2,2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 
-- (İsteğe bağlı) [Visual Studio 2017 veya 2019](https://visualstudio.microsoft.com/vs/)
+- Seçim [Visual Studio 2017 veya 2019](https://visualstudio.microsoft.com/vs/)
 
-Çalıştırabilir ya da oluşturulan C# kod projelerini Visual Studio F5 veya ile `dotnet run` (.NET Core CLI).
+Oluşturulan C# kod projelerini Visual Studio F5 ya `dotnet run` da (.NET Core CLI) ile çalıştırabilirsiniz.
 
-Not: Yükledikten sonra eğer [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.2) `dotnet tool` çalışmıyor komutu, Windows oturumunuzu kapatıp tekrar açın.
+Not: [.NET Core 2,2 SDK 'sını](https://dotnet.microsoft.com/download/dotnet-core/2.2) `dotnet tool` yükledikten sonra komut çalışmıyor, Windows oturumunu kapatıp tekrar oturum açın.
 
 ## <a name="install"></a>Yükleme
 
-ML.NET CLI herhangi diğer dotnet gibi genel aracı yüklenir. Kullandığınız `dotnet tool install` .NET Core CLI komutu. 
+ML.NET CLı, diğer DotNet genel aracı gibi yüklenir. `dotnet tool install` .NET Core CLI komutunu kullanın. 
 
-Aşağıdaki örnek, NuGet Özet akışı konumu varsayılan olarak ML.NET CLI'yı yükleme gösterilmektedir:
+Aşağıdaki örnek, ML.NET CLı 'nın varsayılan NuGet akış konumuna nasıl yükleneceğini göstermektedir:
 
 ```console
 dotnet tool install -g mlnet
 ```
 
-(Diğer bir deyişle, NuGet akışı varsayılan olarak kullanılabilir değilse) araç yüklenemiyor, hata iletileri görüntülenir. Beklediğiniz akışları denetlendiği denetleyin.
+Araç yüklenemezse (yani, varsayılan NuGet akışında yoksa) hata iletileri görüntülenir. Beklediğiniz akışların denetlendiğinden emin olun.
 
-Yükleme başarılı olursa, aracı ve yüklü sürümü çağırmak için kullanılan komut aşağıdaki örneğe benzer gösteren bir ileti görüntülenir:
+Yükleme başarılı olursa, aşağıdaki örneğe benzer şekilde, aracı ve yüklü sürümü çağırmak için kullanılan komutu gösteren bir ileti görüntülenir:
 
 ```console
 You can invoke the tool using the following command: mlnet
@@ -52,89 +52,89 @@ Aşağıdaki komutu yazarak yüklemenin başarılı olduğunu doğrulayabilirsin
 mlnet
 ```
 
-'Otomatik train' komutu gibi mlnet aracı için kullanılabilir komutlar için Yardım görmeniz gerekir.
+' Auto-eğitme ' komutu gibi mlnet aracının kullanılabilir komutları için yardım görmeniz gerekir.
 
-## <a name="install-a-specific-release-version"></a>Belirli bir sürümünü yükleyin
+## <a name="install-a-specific-release-version"></a>Belirli bir yayın sürümünü yükler
 
-Yayın öncesi bir sürümü ya da aracının belirli bir sürümü yüklemeye çalıştığınız varsa, belirtebilmeniz için [framework](../../standard/frameworks.md) aşağıdaki biçimi kullanarak:
+Bir yayın öncesi sürüm veya aracın belirli bir sürümünü yüklemeye çalışıyorsanız, [çerçeveyi](../../standard/frameworks.md) aşağıdaki biçimi kullanarak belirtebilirsiniz:
 
 ```console
 dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
-Aşağıdaki komutu yazarak paketi düzgün şekilde yüklendiğinden de göz atabilirsiniz:
+Ayrıca, aşağıdaki komutu yazarak paketin düzgün yüklenip yüklenmediğini da denetleyebilirsiniz:
 
 ```console
 dotnet tool list -g
 ```
 
-## <a name="uninstall-the-cli-package"></a>CLI paketini Kaldır
+## <a name="uninstall-the-cli-package"></a>CLı paketini kaldırma
 
-Paket yerel makinenizden kaldırmak için aşağıdaki komutu yazın:
+Paketi yerel makinenizden kaldırmak için aşağıdaki komutu yazın:
 
 ```console
 dotnet tool uninstall mlnet -g
 ```
 
-## <a name="update-the-cli-package"></a>CLI paketini güncelleştirmek
+## <a name="update-the-cli-package"></a>CLı paketini güncelleştirme
 
-Güncelleştirme paketi, yerel makinenizde aşağıdaki komutu yazın:
+Paketi yerel makinenizden güncelleştirmek için aşağıdaki komutu yazın:
 
 ```console
 dotnet tool update -g mlnet
 ```
 
-## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>CLI önerileri (sekme tabanlı otomatik tamamlama) ayarlama
+## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>CLı önerilerini ayarlama (sekme tabanlı otomatik tamamlama)
 
-ML.NET CLI dayalı olduğundan `System.CommandLine`, onu sekme tamamlama için yerleşik destek içerir.
+ML.net CLI tabanlı `System.CommandLine`olduğundan, sekme tamamlama için yerleşik desteğe sahiptir.
 
-Aşağıdaki animasyonda sekme otomatik tamamlama nasıl çalıştığına ilişkin bir örnek gösterilir:
+Aşağıdaki animasyonda sekme otomatik tamamlama 'nın nasıl çalıştığına bir örnek gösterilmektedir:
 
 ![görüntü](./media/cli-tab-completion.gif)
 
-'Sekmesinde tabanlı Otomatik Tamamlama' (parametre önerileri) çalışır *Windows PowerShell* ve *macOS/Linux bash* ancak işe yaramaz *Windows CMD*.
+' Sekme tabanlı otomatik tamamlama ' (parametre önerileri) *Windows PowerShell* ve *MacOS/Linux Bash* üzerinde çalışır, ancak *Windows cmd*'de çalışmaz.
 
-Geçerli Önizleme sürümünde, etkinleştirmek için son kullanıcı başına bir kez aşağıda özetlenen Kabuk birkaç adım gerekir. Bunu yaptıktan sonra tamamlamaları kullanılarak yazılmış tüm uygulamalar için çalışır `System.CommandLine` ML.NET CLI gibi.
+Bu ayarı etkinleştirmek için, geçerli önizleme sürümünde son kullanıcının aşağıda belirtilen her kabuk için birkaç adım olması gerekir. Bu işlem tamamlandıktan sonra, ml.net CLI gibi kullanılarak `System.CommandLine` yazılan tüm uygulamalar için tamamlama işlemleri çalışacaktır.
 
-Tamamlama etkinleştirmek için istediğiniz makinede iki işlem gerçekleştirmesi gerekir.
+Tamamlamayı etkinleştirmek istediğiniz makinede iki şey yapmanız gerekir.
 
-1. Yükleme `dotnet-suggest` aşağıdaki komutu çalıştırarak genel aracı:
+1. Aşağıdaki komutu çalıştırarak genel aracı 'nı yüklersiniz: `dotnet-suggest`
 
     ```console
     dotnet tool install dotnet-suggest -g
     ```
 
-2. Uygun dolgu komut kabuğu profilinize ekleyin. Bir kabuk profili dosyası oluşturmanız gerekebilir. Dolgu betik için kabuğundan tamamlama isteği iletir `dotnet-suggest` uygun temsilciler aracı `System.CommandLine`-uygulama tabanlı.
+2. Kabuk profilinize uygun dolgu betiğini ekleyin. Bir kabuk profili dosyası oluşturmanız gerekebilir. Dolgu betiği, kabuğunuzun `dotnet-suggest` tamamlanma isteklerini, uygun `System.CommandLine`tabanlı uygulamaya temsilci olan bir araca iletir.
 
-    * Bash için içeriğini Ekle [dotnet Öner shim.bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) için `~/.bash_profile`.
+    - Bash için [DotNet-öner-Shim. bash](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.bash) içeriğini ' ye `~/.bash_profile`ekleyin.
 
-    * PowerShell için içeriğini Ekle [dotnet Öner shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) PowerShell profiliniz için. Konsolunuzda aşağıdaki komutu çalıştırarak PowerShell profiliniz için beklenen yoldan bulabilirsiniz:
+    - PowerShell için, [DotNet-Suggest-Shim. ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) içeriğini PowerShell profilinize ekleyin. Konsolunda aşağıdaki komutu çalıştırarak, PowerShell profilinize beklenen yolu bulabilirsiniz:
 
     ```console
     echo $profile
     ``` 
 
-(Diğer Kabukları için [Ara](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) veya açık bir [sorunu](https://github.com/dotnet/System.CommandLine/issues).)
+(Diğer kabuklar için bir [sorun](https://github.com/dotnet/System.CommandLine/issues) [bulun](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) veya açın.)
 
 ## <a name="installation-directory"></a>Yükleme dizini
 
-ML.NET CLI, varsayılan dizini veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
+ML.NET CLı varsayılan dizine veya belirli bir konuma yüklenebilir. Varsayılan dizinler şunlardır:
 
-| İşletim Sistemi          | Yol                          |
+| OS          | Yol                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-SDK'yı ilk kez çalıştırdığınızda, genel araçları yüklü doğrudan çağrılabilir için bu konumları kullanıcının yoluna eklenir.
+Bu konumlar, SDK ilk kez çalıştırıldığında kullanıcının yoluna eklenir, bu nedenle genel araçlar yüklenir, böylece doğrudan çağrılabilir.
 
-Not: Genel araçları kullanıcıya özel, genel makine yok. Kullanıcıya özel olan, makinenin tüm kullanıcıları için kullanılabilir olan bir genel aracı yükleyemezsiniz anlamına gelir. Aracı yalnızca, aracının yüklendiği her kullanıcı profili için kullanılabilir.
+Not: genel araçlar, makineye genel değil, kullanıcıya özeldir. Kullanıcıya özel olması, makinenin tüm kullanıcıları için kullanılabilir olan küresel bir araç yükleyemeyeceğiniz anlamına gelir. Araç yalnızca aracın yüklendiği her kullanıcı profili için kullanılabilir.
 
-Genel araçları Ayrıca belirli bir dizindeki yüklenebilir. Belirli bir dizindeki yüklendiğinde, kullanıcı komutu kullanılabilir yolunda belirtilen dizinle komutunu çağırarak bu dizine ekleyerek emin olmanız gerekir veya belirtilen dizin içinde aracından çağırma.
-Bu durumda, .NET Core CLI bu konum otomatik olarak PATH ortam değişkenine eklemez.
+Genel araçlar, belirli bir dizine de yüklenebilir. Belirli bir dizine yüklendiğinde, kullanıcının, yolu belirtilen dizin ile çağırarak veya aracı belirtilen dizin içinden çağırarak, bu dizini da dahil ederek komutun kullanılabilir olduğundan emin olması gerekir.
+Bu durumda .NET Core CLI, bu konumu otomatik olarak PATH ortam değişkenine eklemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- ['Başlangıç ML.NET CLI aracı ile' öğretici](../tutorials/mlnet-cli.md)
-- [Otomatik olarak ML.NET CLI aracını kullanarak modelleri eğitme](../automate-training-with-cli.md)
-- [ML.NET CLI otomatik train komut Başvuru Kılavuzu](../reference/ml-net-cli-reference.md) 
-- [ML.NET CLI'de telemetri](../resources/ml-net-cli-telemetry.md)
+- [' ML.NET CLı aracıyla çalışmaya başlama ' öğreticisi](../tutorials/mlnet-cli.md)
+- [ML.NET CLı aracı ile modelleri otomatik olarak eğitme](../automate-training-with-cli.md)
+- [ML.NET CLı otomatik eğitme komut başvuru kılavuzu](../reference/ml-net-cli-reference.md) 
+- [ML.NET CLı 'de telemetri](../resources/ml-net-cli-telemetry.md)

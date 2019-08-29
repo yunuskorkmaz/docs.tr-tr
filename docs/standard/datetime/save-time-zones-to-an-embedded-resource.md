@@ -12,73 +12,73 @@ helpviewer_keywords:
 ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ca39d989cc7bc16ec2678ba5fa53710899f3ac4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912710"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107152"
 ---
 # <a name="how-to-save-time-zones-to-an-embedded-resource"></a>Nasıl yapılır: Saat dilimlerini eklenmiş kaynağa kaydetme
 
-Genellikle saat dilimiyle uyumlu bir uygulama belirli bir saat dilimini gerektirir. Ancak, çünkü tek kullanılabilirliğini <xref:System.TimeZoneInfo> yerel sisteminin kayıt defterinde depolanan bilgileri bağımlı nesneler, Alışıldığı bile kullanılabilir saat dilimi yok. Ayrıca, özel saat dilimleri hakkında bilgi örneği kullanarak <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi ile diğer saat dilimi bilgileri kayıt depolanmaz. Gerektiğinde bu saat dilimlerini kullanılabilir olmasını sağlamak için seri hale getirme tarafından kaydedin ve daha sonra seri durumdan çıkarılırken tarafından geri yükleyebilirsiniz.
+Saat dilimi ile uyumlu bir uygulama genellikle belirli bir saat dilimi varlığını gerektirir. Ancak, tek tek <xref:System.TimeZoneInfo> nesnelerin kullanılabilirliği yerel sistemin kayıt defterinde depolanan bilgilere bağlı olduğundan, geleneksel kullanılabilir saat dilimleri de bulunmayabilir. Ayrıca, <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi kullanılarak oluşturulan özel Saat dilimleriyle ilgili bilgiler, kayıt defterindeki diğer saat dilimi bilgileriyle depolanmaz. Bu saat dilimlerinin gerekli olmaları durumunda kullanılabilir olmasını sağlamak için bunları serileştirerek kaydedebilir ve daha sonra bunları seri durumdan kaldırarak geri yükleyebilirsiniz.
 
-Genellikle, seri hale getirilirken bir <xref:System.TimeZoneInfo> nesne saat dilimiyle uyumlu uygulama dışında gerçekleşir. Seri hale getirilmiş tutmak için kullanılan veri deposu bağlı olarak <xref:System.TimeZoneInfo> nesneler, saat dilimi veri seri hale getirilemiyor bir kurulum veya yükleme yordamı (örneğin, veriler bir uygulama kayıt defteri anahtarında depolanır) bir parçası olarak ya da çalışan bir yardımcı programı yordamının parçası olarak son uygulama (örneğin, serileştirilmiş veriler .NET XML kaynak (.resx) dosyası depolandığında) derlenmeden önce.
+Genellikle, bir <xref:System.TimeZoneInfo> nesneyi seri hale getirme zaman dilimi kullanan uygulamadan ayrı olarak meydana gelir. Seri hale getirilmiş <xref:System.TimeZoneInfo> nesneleri tutmak için kullanılan veri deposuna bağlı olarak, saat dilimi verileri bir kurulum veya yükleme yordamının parçası olarak (örneğin, verilerin kayıt defterinin bir uygulama anahtarında depolanması) veya çalışan bir yardımcı program yordamının bir parçası olarak serileştirilmeyebilir. son uygulama derlenmesinden önce (örneğin, serileştirilmiş veriler bir .NET XML kaynak (. resx) dosyasında depolandığında).
 
-Uygulama ile derlenmiş olan bir kaynak dosyasına ek olarak, çeşitli veri depoları için saat dilimi bilgileri kullanılabilir. Bunlar aşağıdakileri içerir:
+Uygulamayla derlenen bir kaynak dosyasına ek olarak, saat dilimi bilgileri için diğer birçok veri deposu kullanılabilir. Bunlar aşağıdakileri içerir:
 
-* Kayıt defteri. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time bölgeleri anahtarlarını kullanmak yerine özel saat dilimi veri depolamak için bir uygulama anahtarlarını kendi uygulama anahtarı kullanması gerektiğini unutmayın.
+- Kayıt defteri. Bir uygulamanın, özel saat dilimi verilerini depolamak için, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time bölgelerinin alt anahtarlarını kullanmak yerine kendi uygulama anahtarının alt anahtarlarını kullanması gerektiğini unutmayın.
 
-* Yapılandırma dosyaları.
+- Yapılandırma dosyaları.
 
-* Diğer sistem dosyaları.
+- Diğer sistem dosyaları.
 
-### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Bir .resx dosyasına serileştirmek tarafından bir saat dilimi kaydetmek için
+### <a name="to-save-a-time-zone-by-serializing-it-to-a-resx-file"></a>Bir saat dilimini bir. resx dosyasına serileştirerek kaydetmek için
 
-1. Var olan bir saat dilimi almak veya yeni bir saat dilimi oluşturun.
+1. Mevcut bir saat dilimini alın veya yeni bir saat dilimi oluşturun.
 
-   Var olan bir saat dilimi almak için bkz: [nasıl yapılır: Ön tanımlı UTC ve yerel saat dilimi nesnelerine erişim](../../../docs/standard/datetime/access-utc-and-local.md) ve [nasıl yapılır: Bir Timezoneınfo nesnesinin örneğini oluşturma](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+   Mevcut bir saat dilimini almak için bkz [. nasıl yapılır: Önceden tanımlanmış UTC ve yerel saat dilimi nesnelerine](../../../docs/standard/datetime/access-utc-and-local.md) erişin ve [şunları yapın: Bir TimeZoneInfo nesnesi](../../../docs/standard/datetime/instantiate-time-zone-info.md)örneği oluşturun.
 
-   Yeni bir saat dilimi oluşturmak amacıyla bir aşırı yüklemelerinden birini çağırın <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yöntemi. Daha fazla bilgi için [nasıl yapılır: Ayarlama kuralları olmadan saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) ve [nasıl yapılır: Ayarlama kuralları ile saat dilimleri oluşturma](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md).
+   Yeni bir saat dilimi oluşturmak için, <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> yönteminin aşırı yüklemelerinin birini çağırın. Daha fazla bilgi için [nasıl yapılır: Ayarlama kuralları](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) olmadan saat dilimleri oluşturun ve [şunları yapın: Ayarlama kuralları](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)ile saat dilimleri oluşturun.
 
-2. Çağrı <xref:System.TimeZoneInfo.ToSerializedString%2A> saat diliminin veri içeren bir dize oluşturmak için yöntemi.
+2. Saat diliminin verilerini içeren bir dize oluşturmak için yönteminiçağırın.<xref:System.TimeZoneInfo.ToSerializedString%2A>
 
-3. Örneği bir <xref:System.IO.StreamWriter> nesne adı ve isteğe bağlı olarak için .resx dosyasının yolunu sağlayarak <xref:System.IO.StreamWriter> sınıf oluşturucusu.
+3. Ad ve <xref:System.IO.StreamWriter> isteğe bağlı olarak. resx dosyasının <xref:System.IO.StreamWriter> yolunu, sınıf oluşturucusuna ekleyerek bir nesne oluşturun.
 
-4. Örneği bir <xref:System.Resources.ResXResourceWriter> geçirerek nesne <xref:System.IO.StreamWriter> nesnesini <xref:System.Resources.ResXResourceWriter> sınıf oluşturucusu.
+4. <xref:System.IO.StreamWriter> <xref:System.Resources.ResXResourceWriter> Nesneyi<xref:System.Resources.ResXResourceWriter> sınıf oluşturucusuna geçirerek bir nesne oluşturun.
 
-5. Geçişi saat dilimine ait dize olarak serileştirilmiş <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> yöntemi.
+5. Saat diliminin serileştirilmiş dizesini <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> yöntemine geçirin.
 
 6. Çağrı <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> yöntemi.
 
 7. Çağrı <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> yöntemi.
 
-8. Kapat <xref:System.IO.StreamWriter> çağırarak kendi <xref:System.IO.StreamWriter.Close%2A> yöntemi.
+8. Yöntemini çağırarak nesneyi kapatın. <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter.Close%2A>
 
-9. Oluşturulan bir .resx dosyası, uygulamanın Visual Studio projenize ekleyin.
+9. Oluşturulan. resx dosyasını uygulamanın Visual Studio projesine ekleyin.
 
-10. Kullanarak **özellikleri** Visual Studio penceresinde emin olun, .resx dosyasının **derleme eylemi** özelliği **gömülü kaynak**.
+10. Visual Studio 'da **Özellikler** penceresini kullanarak,. resx dosyasının **derleme eylemi** özelliğinin **gömülü kaynak**olarak ayarlandığından emin olun.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek serileştiren bir <xref:System.TimeZoneInfo> Orta Standart Saati temsil eden nesne ve <xref:System.TimeZoneInfo> SerializedTimeZones.resx adlı bir .NET XML kaynak dosyası Palmer istasyonu, Antarktika zamanı temsil eden nesne. Orta Standart Saati, genellikle kayıt defterinde tanımlanır; PALMER istasyonu, Antarktika, özel bir zaman dilimi olur.
+Aşağıdaki örnek, merkezi standart saati <xref:System.TimeZoneInfo> <xref:System.TimeZoneInfo> ve Palmer istasyonunu temsil eden bir nesneyi, Antarktika zaman SerializedTimeZones. resx adlı bir .NET XML kaynak dosyasına temsil eden bir nesneyi seri hale getirir. Merkezi Standart saat genellikle kayıt defterinde tanımlanır; Palmer Istasyonu, Antarktika özel bir saat dilimsidir.
 
 [!code-csharp[TimeZone2.Serialization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#1)]
 [!code-vb[TimeZone2.Serialization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#1)]
 
-Bu örnekte serileştiren <xref:System.TimeZoneInfo> bunlar bir kaynak dosyasında derleme zamanında kullanılabilir olacak şekilde nesneleri.
+Bu örnek, derleme <xref:System.TimeZoneInfo> zamanında bir kaynak dosyasında kullanılabilmesi için nesneleri seri hale getirir.
 
-Çünkü <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> yöntemi .NET XML kaynak dosyası için tam başlık bilgilerini ekler, kaynakları var olan bir dosyaya eklemek için kullanılamaz. Örnek için SerializedTimeZones.resx dosyasını denetleyerek bu işler ve, varsa, tüm kaynaklarını dışında depolama iki saat dilimleri için genel serileştirilmiş <xref:System.Collections.Generic.Dictionary%602> nesne. Var olan dosyayı ardından silinir ve mevcut kaynakları yeni SerializedTimeZones.resx dosyasına eklenir. Seri hale getirilmiş saat dilimi veri bu dosyaya da eklenir.
+<xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> Yöntemi bir .NET XML kaynak dosyasına tüm başlık bilgilerini eklediğinden, mevcut bir dosyaya kaynak eklemek için kullanılamaz. Bu örnek, SerializedTimeZones. resx dosyasını denetleyerek ve varsa, iki serileştirilmiş zaman dilimi dışındaki tüm kaynaklarını genel <xref:System.Collections.Generic.Dictionary%602> bir nesneye depolayarak bunu gerçekleştirir. Varolan dosya daha sonra silinir ve var olan kaynaklar yeni bir SerializedTimeZones. resx dosyasına eklenir. Seri hale getirilmiş saat dilimi verileri de bu dosyaya eklenir.
 
-Anahtar (veya **adı**) kaynakları alanlarının gömülü boşluklar içermemelidir. <xref:System.String.Replace%28System.String%2CSystem.String%29> Yöntemi, kaynak dosyasına atanmadan önce tüm gömülü boşluklar saat dilimi tanımlayıcıları kaldırmak için çağrılır.
+Kaynakların anahtar (veya **ad**) alanları, gömülü boşluklar içermemelidir. <xref:System.String.Replace%28System.String%2CSystem.String%29> Yöntemi, kaynak dosyasına atanmadan önce saat dilimi tanımlayıcılarında tüm gömülü boşlukları kaldırmak için çağrılır.
 
-## <a name="compiling-the-code"></a>Kod derleme
+## <a name="compiling-the-code"></a>Kodu derleme
 
-Bu örnek gerektirir:
+Bu örnek şunları gerektirir:
 
-* Projeye bir başvuru System.Windows.Forms.dll ve System.Core.dll eklenmesi gerektiğini.
+- System. Windows. Forms. dll ve System. Core. dll ' ye bir başvuru projeye eklenir.
 
-* Şu ad alanlarından alınan olduğunu:
+- Aşağıdaki ad alanları içeri aktarılmalıdır:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

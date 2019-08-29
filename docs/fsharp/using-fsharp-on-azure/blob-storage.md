@@ -3,12 +3,12 @@ title: F# kullanarak Azure Blob depolama kullanmaya başlama
 description: Azure Blob depolama ile yapılandırılmamış verileri bulutta depolayın.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: c8b42339ff1d76f262e956b5e34cc598e0fc855d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c765f38cba7642e813a5966d3b7754c5ce45abbd
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630516"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107117"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F kullanarak Azure Blob depolama ile çalışmaya başlama\#
 
@@ -26,7 +26,7 @@ Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/
 
 Bu makaledeki örnekler, bir F# uygulama ya da bir F# komut dosyasında kullanılabilir. Bir F# betik oluşturmak için, örneğin `.fsx` `blobs.fsx`, F# geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Ardından, bir `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` [](https://fsprojects.github.io/Paket/) `Microsoft.WindowsAzure.Configuration.dll` [](https://www.nuget.org/) yönergesikullanarakvepaketlerinivebaşvurusunuyüklemekiçinpaketveyaNuGet`#r` gibi bir [Paket Yöneticisi](package-management.md) kullanın.
+Ardından, [](https://fsprojects.github.io/Paket/) bir `WindowsAzure.Storage` `Microsoft.WindowsAzure.ConfigurationManager` `WindowsAzure.Storage.dll` [](https://www.nuget.org/) `Microsoft.WindowsAzure.Configuration.dll` [](package-management.md) yönergesikullanarakvepaketlerinivebaşvurusunuyüklemekiçinpaketveyaNuGet`#r` gibi bir paket Yöneticisi kullanın.
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekle
 
@@ -186,9 +186,9 @@ Aşağıdaki örnek, yeni bir ekleme blobu oluşturur ve basit bir günlüğe ka
 
 Birden fazla istemciden veya birden çok işlem örneğiyle bir Blobun eşzamanlı erişimini desteklemek için **ETags** veya **kiralamalar**kullanabilirsiniz.
 
-* **ETag** -Blobun veya kapsayıcının başka bir işlem tarafından değiştirildiğini algılamaya yönelik bir yol sağlar
+- **ETag** -Blobun veya kapsayıcının başka bir işlem tarafından değiştirildiğini algılamaya yönelik bir yol sağlar
 
-* **Kira** -bir zaman dilimi için bir Blobun özel, yenilenebilir, yazma veya silme erişimi elde etmek için bir yol sağlar
+- **Kira** -bir zaman dilimi için bir Blobun özel, yenilenebilir, yazma veya silme erişimi elde etmek için bir yol sağlar
 
 Daha fazla bilgi için bkz. [Microsoft Azure depolama eşzamanlılık yönetimi](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/).
 

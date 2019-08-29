@@ -2,12 +2,12 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 347ad691b8d439fdf1696f790d4a838a73c57b5a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626344"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105150"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -55,15 +55,15 @@ Projeye özgü araçlar için, `dotnet restore` önce aracın paketlenmesi gerek
 
 Yok sayan `dotnet restore` üç özel ayar vardır:
 
-* [Bindingyönlendirmeler](/nuget/schema/nuget-config-file#bindingredirects-section)
+- [Bindingyönlendirmeler](/nuget/schema/nuget-config-file#bindingredirects-section)
 
   Bağlama yeniden yönlendirmeleri `<PackageReference>` öğelerle çalışmaz ve .NET Core yalnızca NuGet paketleri `<PackageReference>` için öğeleri destekler.
 
-* [çözümden](/nuget/schema/nuget-config-file#solution-section)
+- [çözümden](/nuget/schema/nuget-config-file#solution-section)
 
   Bu ayar Visual Studio 'ya özeldir ve .NET Core için uygulanmaz. .NET Core bir `packages.config` dosya kullanmaz ve bunun yerine NuGet `<PackageReference>` paketleri için öğeleri kullanır.
 
-* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+- [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
 
   NuGet, güvenilen paketlerin [platformlar arası doğrulanmasını henüz desteklemediğinden](https://github.com/NuGet/Home/issues/7939) , bu ayar geçerli değildir.
 

@@ -18,116 +18,116 @@ helpviewer_keywords:
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb91ed8edd0c5cd3cb1d051157596f311718195d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901933"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107058"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime ve DateTimeOffset arasında dönüştürme
 
-Rağmen <xref:System.DateTimeOffset> yapısı sağlar bir saat dilimini Tanıma ' büyük ölçüde <xref:System.DateTime> yapısı, <xref:System.DateTime> parametreleri yöntem çağrılarında daha yaygın olarak kullanılır. Bu nedenle, dönüştürme yeteneği <xref:System.DateTimeOffset> değerler <xref:System.DateTime> değerleri ve tersi özellikle önemlidir. Bu konu, mümkün olduğunca saat dilimi bilgilerini koruyan bir şekilde dönüştürmeler gerçekleştirmek nasıl gösterir.
+Yapısı yapıdan daha fazla sayıda saat dilimi tanıma <xref:System.DateTime> sağlasa da, parametreler yöntem çağrılarında daha yaygın olarak kullanılır. <xref:System.DateTime> <xref:System.DateTimeOffset> Bu nedenle, <xref:System.DateTimeOffset> <xref:System.DateTime> değerleri değerlere dönüştürebilme ve tam tersi özellikle önemlidir. Bu konuda, bu dönüşümler mümkün olduğunca çok saat dilimi bilgilerini koruyan bir şekilde nasıl gerçekleştirileceği gösterilmektedir.
 
 > [!NOTE]
-> Hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> türleri saat diliminde saatleri temsil eden, bazı sınırlamalar sahiptir. İle kendi <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTime> yalnızca Eşgüdümlü Evrensel Saat (UTC) ve sistemin yerel saat dilimi yansıtacak şekilde yapamaz. <xref:System.DateTimeOffset> bir süre UTC ile olan uzaklığı, ancak gerçek saat dilimi uzaklığı, ait yansıtmaz yansıtır. Saat değerleri ve saat dilimleri için destek hakkında daha fazla ayrıntı için bkz: [seçme arasında DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo](../../../docs/standard/datetime/choosing-between-datetime.md).
+> <xref:System.DateTime> Hem<xref:System.DateTimeOffset> hem de türlerinin saat dilimlerindeki zamanları temsil eden bazı sınırlamaları vardır. <xref:System.DateTime.Kind%2A> ÖzelliğiileyalnızcaEşgüdümlüEvrenselSaat(UTC)vesisteminyerel<xref:System.DateTime> saat dilimini yansıtabilir. <xref:System.DateTimeOffset>saatin UTC 'den sapmasını yansıtır, ancak bu kaydırın ait olduğu gerçek saat dilimini yansıtmaz. Saat değerleri ve saat dilimleri desteğiyle ilgili ayrıntılar için bkz. [DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma](../../../docs/standard/datetime/choosing-between-datetime.md).
 
-## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTimeOffset ilk tarih-saat dönüştürme
+## <a name="conversions-from-datetime-to-datetimeoffset"></a>Tarih saatten DateTimeOffset 'e dönüştürme
 
-<xref:System.DateTimeOffset> Yapısı gerçekleştirmek için iki eşdeğer yöntemleri sağlayan <xref:System.DateTime> için <xref:System.DateTimeOffset> çoğu dönüştürmeleri için uygun olan dönüştürme:
+Yapı <xref:System.DateTimeOffset> , çoğu Dönüştürmelere uygun <xref:System.DateTimeOffset> dönüştürme yapmak <xref:System.DateTime> için iki eşdeğer yol sağlar:
 
-* <xref:System.DateTimeOffset.%23ctor%2A> Oluşturan yeni bir oluşturucu <xref:System.DateTimeOffset> nesnesini temel alan bir <xref:System.DateTime> değeri.
+- <xref:System.DateTimeOffset> Bir <xref:System.DateTimeOffset.%23ctor%2A> değeregöreyenibir<xref:System.DateTime> nesne oluşturan Oluşturucu.
 
-* Atayabilirsiniz örtülü dönüştürme işlecine bir <xref:System.DateTime> değerini bir <xref:System.DateTimeOffset> nesne.
+- <xref:System.DateTime> Bir<xref:System.DateTimeOffset> nesneye değer atamanıza izin veren örtük dönüştürme işleci.
 
-UTC ve yerel <xref:System.DateTime> değerleri <xref:System.DateTimeOffset.Offset%2A> ortaya çıkan özellik <xref:System.DateTimeOffset> değeri UTC veya yerel saat dilimi farkı doğru olarak yansıtır. Örneğin, aşağıdaki kod bir UTC saati eşdeğerine dönüştürür <xref:System.DateTimeOffset> değeri.
+UTC ve yerel <xref:System.DateTime> değerler için <xref:System.DateTimeOffset.Offset%2A> , sonuçta elde edilen <xref:System.DateTimeOffset> değerin özelliği UTC veya yerel saat dilimi sapmasını doğru bir şekilde yansıtır. Örneğin, aşağıdaki kod UTC saatini eşdeğer <xref:System.DateTimeOffset> değerine dönüştürür.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#1)]
 
-Bu durumda, uzaklığı `utcTime2` 00:00 değişkendir. Benzer şekilde, aşağıdaki kod bir yerel saat eşdeğerine dönüştürür <xref:System.DateTimeOffset> değeri.
+Bu durumda, `utcTime2` değişkeninin boşluğu 00:00 ' dir. Benzer şekilde, aşağıdaki kod yerel saati eşdeğer <xref:System.DateTimeOffset> değerine dönüştürür.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#2)]
 
-Ancak, <xref:System.DateTime> ayarlanmış değerleri <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, bu iki dönüştürme yöntemleri bir <xref:System.DateTimeOffset> olan uzaklığı, yerel saat dilimi değeri. Bu ABD bölgesinde çalıştırılan aşağıdaki örnekte gösterilmiştir Pasifik Standart saat dilimi.
+Ancak, <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTime> <xref:System.DateTimeOffset> olan değerler için, bu iki dönüştürme yöntemi, yerel saat diliminin bir değeri olan bir değer oluşturur. <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> Bu, ABD 'de çalıştırılan aşağıdaki örnekte gösterilmiştir Pasifik standart saat dilimi.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#3)]
 
-Varsa <xref:System.DateTime> tarih ve UTC ve yerel saat dilimi dışında bir şey saat değeri yansıtır, kendisine dönüştürebilirsiniz bir <xref:System.DateTimeOffset> değeri ve aşırı yüklenmiş çağırarak saat dilimi bilgilerini korumak <xref:System.DateTimeOffset.%23ctor%2A> Oluşturucusu. Örneğin, aşağıdaki örnekte örnekleyen bir <xref:System.DateTimeOffset> merkezi standart saat gösteren nesne.
+Değer, tarihi ve saati yerel saat dilimi veya UTC dışında bir şekilde yansıtıyor ise, bu değeri bir <xref:System.DateTimeOffset> değere dönüştürebilir ve daha fazla yüklenmiş <xref:System.DateTimeOffset.%23ctor%2A> oluşturucuyu çağırarak saat dilimi bilgilerini koruyabilirsiniz. <xref:System.DateTime> Örneğin, aşağıdaki örnek, merkezi standart saatini <xref:System.DateTimeOffset> yansıtan bir nesnesi oluşturur.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#4)]
 
-Bu oluşturucu aşırı yüklemesi, ikinci parametresi bir <xref:System.TimeSpan> zaman uzaklığını UTC biçiminden temsil eden nesne çağrılarak alınabilir <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> yöntemi zaman karşılık gelen saat dilimi. Tek parametresi yöntemin <xref:System.DateTime> dönüştürülecek tarih ve saati gösteren bir değer. Gün ışığından yararlanma saat dilimi destekliyorsa, bu parametre, belirli bir tarih ve saat için uygun uzaklık belirlemek yöntem sağlar.
+Bu Oluşturucu aşırı yüklemesinin ikinci parametresi olan zamanın UTC <xref:System.TimeSpan> 'den sapmasını temsil eden bir nesne, zaman karşılık gelen saat diliminin <xref:System.TimeZoneInfo.GetUtcOffset%28System.DateTime%29?displayProperty=nameWithType> yöntemi çağırarak alınmalıdır. Metodun tek parametresi <xref:System.DateTime> , dönüştürülecek tarihi ve saati temsil eden değerdir. Saat dilimi yaz saati kaydetme süresini destekliyorsa, bu parametre, yöntemin bu belirli tarih ve saat için uygun sapmayı belirlemesine izin verir.
 
-## <a name="conversions-from-datetimeoffset-to-datetime"></a>DateTime DateTimeOffset öğesinden dönüştürme
+## <a name="conversions-from-datetimeoffset-to-datetime"></a>DateTimeOffset 'ten DateTime 'a dönüşümler
 
-<xref:System.DateTimeOffset.DateTime%2A> Özelliği gerçekleştirmek için kullanılan en yaygın olarak <xref:System.DateTimeOffset> için <xref:System.DateTime> dönüştürme. Ancak, döndürür bir <xref:System.DateTime> ayarlanmış değer <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Unspecified>, aşağıdaki örnekte gösterildiği gibi.
+Özelliği, <xref:System.DateTime> dönüştürmek için en yaygın olarak kullanılır <xref:System.DateTimeOffset>. <xref:System.DateTimeOffset.DateTime%2A> Ancak, aşağıdaki örnekte gösterildiği <xref:System.DateTime> gibi <xref:System.DateTimeKind.Unspecified>, <xref:System.DateTime.Kind%2A> özelliği olan bir değer döndürür.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#5)]
 
-Bunun hakkında herhangi bir bilgi anlamı <xref:System.DateTimeOffset> değerinin ilişki UTC'ye dönüştürme kayıp olduğunda <xref:System.DateTimeOffset.DateTime%2A> özelliği kullanılır. Bu etkiler <xref:System.DateTimeOffset> çünkü UTC saati veya sistemin yerel saate karşılık gelen değerleri <xref:System.DateTimeOffset.DateTime%2A> yapısını yansıtan bu iki saat dilimindeki bir yalnızca kendi <xref:System.DateTime.Kind%2A> özelliği.
+Bu, <xref:System.DateTimeOffset> <xref:System.DateTimeOffset.DateTime%2A> özellik kullanıldığında değerin UTC ile olan ilişkisi ile ilgili tüm bilgilerin kaybolduğu anlamına gelir. Bu, <xref:System.DateTimeOffset> yapı, <xref:System.DateTimeOffset.DateTime%2A> <xref:System.DateTime.Kind%2A> özelliğinde yalnızca iki saat dilimini yansıttığından UTC saatine veya sistemin yerel saatine karşılık gelen değerleri etkiler.
 
-Dönüştürülürken mümkün olduğunca fazla saat dilimi bilgilerini korumak için bir <xref:System.DateTimeOffset> için bir <xref:System.DateTime> kullanabileceğiniz değeri <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> özellikleri.
+Bir <xref:System.DateTimeOffset> <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> değere dönüştürürken mümkün olduğunca çok zaman dilimi bilgilerini korumak için ve özelliklerini kullanabilirsiniz. <xref:System.DateTime>
 
-### <a name="converting-a-utc-time"></a>UTC saati dönüştürme
+### <a name="converting-a-utc-time"></a>UTC saatini dönüştürme
 
-Belirtmek için bir dönüştürülmüş <xref:System.DateTimeOffset.DateTime%2A> değeri UTC saati, değerini alabilir <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> özelliği. Bu farklıdır <xref:System.DateTimeOffset.DateTime%2A> iki yolla özelliği:
+Dönüştürülmüş <xref:System.DateTimeOffset.DateTime%2A> bir değerin UTC saati olduğunu göstermek için <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> özelliğin değerini alabilirsiniz. <xref:System.DateTimeOffset.DateTime%2A> Özellikten iki şekilde farklılık gösterir:
 
-* Döndürür bir <xref:System.DateTime> ayarlanmış değer <xref:System.DateTime.Kind%2A> özelliği <xref:System.DateTimeKind.Utc>.
+- Özelliği <xref:System.DateTime> olan<xref:System.DateTime.Kind%2A>bir değer döndürür. <xref:System.DateTimeKind.Utc>
 
-* Varsa <xref:System.DateTimeOffset.Offset%2A> özellik değeri eşit değil <xref:System.TimeSpan.Zero?displayProperty=nameWithType>, saat UTC'ye dönüştürür.
+- Özellik değeri eşit <xref:System.TimeSpan.Zero?displayProperty=nameWithType>değilse, saati UTC 'ye dönüştürür. <xref:System.DateTimeOffset.Offset%2A>
 
 > [!NOTE]
-> Dönüştürülen uygulamanız gerekiyorsa <xref:System.DateTime> değerlerini zaman içinde kesin bir şekilde tek bir nokta tanımlamak, kullanmayı düşünmelisiniz <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> tüm özellik <xref:System.DateTimeOffset> için <xref:System.DateTime> dönüştürme.
+> Uygulamanız, dönüştürülmüş <xref:System.DateTime> değerlerin bir zamanda tek bir noktayı kesin bir şekilde <xref:System.DateTime> belirlemesini gerektiriyorsa, tüm <xref:System.DateTimeOffset> dönüştürmeleri işlemek için <xref:System.DateTimeOffset.UtcDateTime%2A?displayProperty=nameWithType> özelliğini kullanmayı göz önünde bulundurmanız gerekir.
 
-Aşağıdaki kod <xref:System.DateTimeOffset.UtcDateTime%2A> dönüştürmek için özellik bir <xref:System.DateTimeOffset> eşit olan uzaklık değeri <xref:System.TimeSpan.Zero?displayProperty=nameWithType> için bir <xref:System.DateTime> değeri.
+Aşağıdaki kod <xref:System.DateTimeOffset.UtcDateTime%2A> , bir <xref:System.TimeSpan.Zero?displayProperty=nameWithType> <xref:System.DateTimeOffset> değerideğereeşitolanbirdeğeridönüştürmekiçinözelliğinikullanır.<xref:System.DateTime>
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#6)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#6)]
 
-Aşağıdaki kod <xref:System.DateTimeOffset.UtcDateTime%2A> özelliği üzerinde bir saat dilimi dönüştürmesi hem bir tür dönüştürmesi gerçekleştirmek için bir <xref:System.DateTimeOffset> değeri.
+Aşağıdaki kod, bir <xref:System.DateTimeOffset.UtcDateTime%2A> <xref:System.DateTimeOffset> değer üzerinde hem saat dilimi dönüştürmesi hem de tür dönüştürmesi gerçekleştirmek için özelliğini kullanır.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#12)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#12)]
 
-### <a name="converting-a-local-time"></a>Yerel saat dönüştürme
+### <a name="converting-a-local-time"></a>Yerel saati dönüştürme
 
-Belirtmek için bir <xref:System.DateTimeOffset> değer yerel saat temsil eder, geçirebilirsiniz <xref:System.DateTime> tarafından döndürülen değer <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> özelliğini `static` (`Shared` Visual Basic'te) <xref:System.DateTime.SpecifyKind%2A> yöntemi. Yöntemi, tarih ve saat, birinci parametre olarak geçirilen döndürür, ancak ayarlar <xref:System.DateTime.Kind%2A> , ikinci parametre tarafından belirtilen değere özelliği. Aşağıdaki kod <xref:System.DateTime.SpecifyKind%2A> dönüştürülürken yöntemi bir <xref:System.DateTimeOffset> olan uzaklığı, yerel saat dilimi karşılık gelen bir değer.
+<xref:System.DateTimeOffset> Bir değerin yerel saati temsil ettiğini göstermek için, `static` <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> özelliği tarafından döndürülen <xref:System.DateTime> değeri (`Shared` Visual Basic) <xref:System.DateTime.SpecifyKind%2A> yöntemine geçirebilirsiniz. Yöntemi, ilk parametresi olarak kendisine geçirilen tarih ve saati döndürür, ancak <xref:System.DateTime.Kind%2A> özelliğini ikinci parametresi tarafından belirtilen değere ayarlar. Aşağıdaki kod, bir değeri <xref:System.DateTime.SpecifyKind%2A> yerel saat dilimine karşılık <xref:System.DateTimeOffset> gelen bir değer dönüştürülürken yöntemini kullanır.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-Ayrıca <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> dönüştürmek için özellik bir <xref:System.DateTimeOffset> yerel değer <xref:System.DateTime> değeri. <xref:System.DateTime.Kind%2A> Özelliği döndürülen <xref:System.DateTime> değer <xref:System.DateTimeKind.Local>. Aşağıdaki kod <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> dönüştürülürken özelliği bir <xref:System.DateTimeOffset> olan uzaklığı, yerel saat dilimi karşılık gelen bir değer. 
+Bir <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> değeri<xref:System.DateTimeOffset> yerel birdeğeredönüştürmekiçin<xref:System.DateTime> özelliğini de kullanabilirsiniz. Döndürülen <xref:System.DateTime.Kind%2A> değerin<xref:System.DateTime> özelliği<xref:System.DateTimeKind.Local>. Aşağıdaki kod, yerel saat <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> dilimine karşılık gelen bir <xref:System.DateTimeOffset> değer dönüştürülürken özelliğini kullanır. 
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
 
-Aldığınızda bir <xref:System.DateTime> kullanarak değer <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> özellik, özelliğin `get` erişimci ilk dönüştürür <xref:System.DateTimeOffset> değerini UTC'ye, ardından bunu yerel saat olarak çağırarak dönüştüren <xref:System.DateTimeOffset.ToLocalTime%2A> yöntemi. Yani arasında bir değer alabilir <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> bir tür dönüştürmesi gerçekleştirmek aynı anda bir saat dilimi dönüştürmesi gerçekleştirmek için özellik. Ayrıca, yerel saat diliminin ayarlama kuralları dönüşüm gerçekleştirme içinde uygulanan anlamına gelir. Aşağıdaki kod kullanışını <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> hem bir türü hem de saat dilimi dönüştürmesi gerçekleştirmek için özellik.
+<xref:System.DateTime> <xref:System.DateTimeOffset> Özelliğinikullanarakbir<xref:System.DateTimeOffset.ToLocalTime%2A> değer aldığınızda, özelliğin erişimcisiöncedeğeriUTC'yedönüştürür,ardındanyönteminiçağırarakyerelsaatedönüştürür.`get` <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> Bu, bir tür dönüştürmesi gerçekleştirirken bir saat dilimi dönüştürmesi <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> gerçekleştirmek için özelliğinden bir değer alabilmeniz anlamına gelir. Ayrıca, dönüştürme işlemi sırasında yerel saat diliminin ayarlama kurallarının uygulandığı anlamına gelir. Aşağıdaki kod, hem tür hem de saat <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> dilimi dönüştürmesi gerçekleştirmek için özelliğinin kullanımını gösterir.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#11)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#11)]
 
-### <a name="a-general-purpose-conversion-method"></a>Bir genel amaçlı bir dönüştürme yöntemi
+### <a name="a-general-purpose-conversion-method"></a>Genel amaçlı bir dönüştürme yöntemi
 
-Aşağıdaki örnek adlı bir yöntem tanımlar `ConvertFromDateTimeOffset` dönüştüren <xref:System.DateTimeOffset> değerler <xref:System.DateTime> değerleri. Üzerinde uzaklığı bağlı olarak, belirler olmadığını <xref:System.DateTimeOffset> değeri UTC saati, yerel saat ya da başka bir zaman ve döndürülen tarih ve saat değerinin tanımlar <xref:System.DateTime.Kind%2A> özelliği uygun şekilde.
+Aşağıdaki örnek, değerleri `ConvertFromDateTimeOffset` <xref:System.DateTime> değerlere dönüştüren <xref:System.DateTimeOffset> adlı bir yöntemi tanımlar. Bu, sapmasını temel alarak <xref:System.DateTimeOffset> değerin UTC saati, yerel saat veya başka bir zaman olduğunu belirler ve döndürülen tarih ve saat <xref:System.DateTime.Kind%2A> değerinin özelliğini uygun şekilde tanımlar.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#8)]
 
-İzleme örneği çağrıları `ConvertFromDateTimeOffset` yöntemini <xref:System.DateTimeOffset> UTC saati, yerel saat ve ABD'deki bir süre temsil değerleri Merkezi standart saat dilimi.
+Aşağıdaki örnek, bir UTC `ConvertFromDateTimeOffset` saatini, yerel <xref:System.DateTimeOffset> saati ve ABD 'de bir saati temsil eden değerleri dönüştürmek için yöntemini çağırır. Merkezi Standart saat dilimi.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#9)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#9)]
 
-Bu kod, uygulama ve onun tarih ve saat değerlerini kaynağına bağlı olarak her zaman geçerli olmayabilir iki varsayımlar kullandığına dikkat edin:
+Bu kodun, uygulamaya ve Tarih ve saat değerlerinin kaynağına bağlı olarak her zaman geçerli olmayabilir:
 
-* Bir tarih ve saat olan uzaklık değeri varsayar <xref:System.TimeSpan.Zero?displayProperty=nameWithType> UTC temsil eder. Aslında, UTC saati, belirli bir saat dilimini değildir, ancak saatler dünyanın saat diliminde olduğu ile ilgili olarak standart saati. Saat dilimi uzaklığı de sahip olabilir <xref:System.TimeSpan.Zero>.
+- Bu, bir tarih ve saat değerinin, <xref:System.TimeSpan.Zero?displayProperty=nameWithType> sapmasını UTC 'yi temsil ettiğini varsayar. Aslında, UTC belirli bir saat diliminde bir zaman değildir, ancak dünyanın saat dilimlerindeki saatlerin standartlaştırılmış olduğu zamana göre belirlenir. Saat dilimleri de bir uzaklığa <xref:System.TimeSpan.Zero>sahip olabilir.
 
-* Bu, bir tarih ve saat olan uzaklığı yerel saat dilimi eşit yerel saat dilimini temsil edildiğini varsayar. Tarih ve saat değerlerini kendi özgün saat diliminden noktanızla ilişkisi olduğundan, bu durumda olmayabilir; Tarih ve saat aynı uzaklığı olan başka bir saat dilimindeki kaynaklanan.
+- Yerel saat dilimine eşit olan bir tarih ve saatin yerel saat dilimini temsil ettiğini varsayar. Tarih ve saat değerlerinin özgün saat dilimlerinden ilişkisi olmadığından, bu durum olmayabilir; Tarih ve saat, aynı uzaklığa sahip başka bir saat diliminde kaynaklı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

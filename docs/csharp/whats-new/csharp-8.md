@@ -2,12 +2,12 @@
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın. Bu makale, Preview 5 ile güncel değildir.
 ms.date: 02/12/2019
-ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363887"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105505"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -16,10 +16,10 @@ C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
 - [Salt okunur Üyeler](#readonly-members)
 - [Varsayılan arabirim üyeleri](#default-interface-members)
 - [Desenler eşleşen geliştirmeler](#more-patterns-in-more-places):
-  * [Anahtar ifadeleri](#switch-expressions)
-  * [Özellik desenleri](#property-patterns)
-  * [Demet desenleri](#tuple-patterns)
-  * [Konumsal desenler](#positional-patterns)
+  - [Anahtar ifadeleri](#switch-expressions)
+  - [Özellik desenleri](#property-patterns)
+  - [Demet desenleri](#tuple-patterns)
+  - [Konumsal desenler](#positional-patterns)
 - [Bildirimleri kullanma](#using-declarations)
 - [Statik yerel işlevler](#static-local-functions)
 - [Atılabilir ref yapıları](#disposable-ref-structs)

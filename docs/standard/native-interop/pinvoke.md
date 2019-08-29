@@ -1,71 +1,71 @@
 ---
-title: Platform Çağırma (P/Invoke)
-description: . NET'te P/Invoke aracılığıyla yerel işlevleri çağırma hakkında bilgi edinin.
+title: Platform çağırma (P/Invoke)
+description: .NET 'te P/Invoke aracılığıyla yerel işlevlerin nasıl çağrılacağını öğrenin.
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582559"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106793"
 ---
-# <a name="platform-invoke-pinvoke"></a>Platform Çağırma (P/Invoke)
+# <a name="platform-invoke-pinvoke"></a>Platform çağırma (P/Invoke)
 
-P/Invoke, yapılar, geri çağırmaları ve işlevleri yönetilmeyen kitaplıklarında, yönetilen koddan erişmenize olanak sağlayan bir teknolojidir. Çoğu P/Invoke API'sinin iki ad alanlarında bulunan: `System` ve `System.Runtime.InteropServices`. Bu iki ad alanlarını kullanarak size yerel bir bileşeni ile iletişim kurmak istediğiniz açıklamak için Araçlar.
+P/Invoke, yönetilen kodunuzun yönetilmeyen kitaplıklardaki yapılara, geri çağırmaları ve işlevlere erişmenize olanak tanıyan bir teknolojidir. P/Invoke API 'sinin çoğu iki ad alanında yer alır: `System` ve. `System.Runtime.InteropServices` Bu iki ad alanını kullanmak, yerel bileşenle nasıl iletişim kurmak istediğinizi betimleyen araçlar sağlar.
 
-En yaygın örnekten başlayalım ve, yönetilmeyen işlevleri, yönetilen kodda çağırma. Bir komut satırı uygulamasından bir ileti kutusu gösterelim:
+En yaygın örnek, ve yönetilen kodunuzda yönetilmeyen işlevleri çağıran için başlayalım. Komut satırı uygulamasından bir ileti kutusu gösterelim:
 
 [!code-csharp[MessageBox](~/samples/snippets/standard/interop/pinvoke/messagebox.cs)]
 
-Önceki örnekte basit bir işlemdir ancak ne yönetilen koddan yönetilmeyen işlevleri çağırmak gerekli olan kapalı göstermez. Şimdi örnek adım:
+Önceki örnek basittir, ancak yönetilen koddan yönetilmeyen işlevleri çağırmak için nelerin gerekli olduğunu gösterir. Örneğin:
 
-* Satır #1 gösterir kullanarak deyimi için `System.Runtime.InteropServices` gereken tüm öğeleri içeren ad alanı.
-* Satır #7 tanıtır `DllImport` özniteliği. Bu öznitelik, çalışma zamanı yönetilmeyen DLL yükleyeceğini bildirdiğinde önemlidir. Geçirilen dize bizim hedef işlevi DLL ' dir. Ayrıca, hangi belirtir [karakter kümesi](./charset.md) dizeleri taşıma için kullanılacak. Son olarak, bu işlev çağrı yaptığını belirtir [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) ve kullanıcı ile alabilirsiniz. Bu nedenle çalışma zamanı hata kodu yakalamalısınız <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
-* #8 nin en önemli özelliği P/Invoke iş satırıdır. Bir yönetilen yöntemin tanımlar **tam aynı imzaya** yönetilmeyen olarak. Fark, yeni bir anahtar sözcük bildirime sahip `extern`çağırdığınızda, çalışma zamanı bu söyleyen dış bir Metoda ve, çalışma zamanı içinde belirtilen DLL bulmalısınız `DllImport` özniteliği.
+- Line #1, `System.Runtime.InteropServices` gereken tüm öğeleri tutan ad alanı için using ifadesini gösterir.
+- Satır #7 `DllImport` özniteliği tanıtır. Bu öznitelik, çalışma zamanına yönetilmeyen DLL yüklemesi gerektiğini söylediğinden önemlidir. Geçirilen dize, hedef işlevimizin bulunduğu DLL 'dir. Ayrıca, dizeleri sıralamak için kullanılacak [karakter kümesini](./charset.md) belirtir. Son olarak, bu işlevin [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) öğesini çağırdığından ve çalışma zamanının, kullanıcının aracılığıyla <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>alabilmesi için hata kodunu yakalamasına yönelik olduğunu belirtir.
+- Line #8, P/Invoke işinin Crux 'tir. Yönetilmeyen bir **imzayla aynı imzaya** sahip bir yönetilen yöntemi tanımlar. Bildiriminde, çalışma zamanına bir dış yöntem olduğunu söyleyen ve bunu `extern`çağırdığınızda çalışma zamanının onu `DllImport` özniteliğinde belirtilen DLL 'de bulması gerektiğini fark eden yeni bir anahtar sözcük vardır.
 
-Yönetilen herhangi bir yöntemi gibi örneğin geri kalanı yöntemi yalnızca çalıştırır.
+Örneğin geri kalanı, yöntemi diğer yönetilen yöntemler gibi çağırmak için yalnızca yöntemini çağırır.
 
-MacOS için örneğe benzerdir. Kitaplıkta adını `DllImport` macOS farklı bir düzeni adlandırma dinamik kitaplıklar olduğundan değiştirmek özniteliği gerekiyor. Aşağıdaki örnek kullanımları `getpid(2)` işlevi uygulamanın işlem Kimliğini alın ve konsola yazdırabilirsiniz:
+Örnek, macOS için benzerdir. MacOS, adlandırma dinamik kitaplıklarının farklı `DllImport` bir şemasına sahip olduğundan, öznitelikteki kitaplığın adının değişmesi gerekir. Aşağıdaki örnek, uygulamanın işlem `getpid(2)` kimliğini almak ve konsola yazdırmak için işlevini kullanır:
 
 [!code-csharp[getpid macOS](~/samples/snippets/standard/interop/pinvoke/getpid-macos.cs)]
 
-Ayrıca, Linux üzerinde de benzerdir. İşlev adı, beri aynıdır `getpid(2)` standardıdır [POSIX](https://en.wikipedia.org/wiki/POSIX) sistem çağrısı.
+Linux üzerinde de benzerdir. İşlev adı, standart bir [POSIX](https://en.wikipedia.org/wiki/POSIX) sistem çağrısı `getpid(2)` olduğundan aynıdır.
 
 [!code-csharp[getpid Linux](~/samples/snippets/standard/interop/pinvoke/getpid-linux.cs)]
 
-## <a name="invoking-managed-code-from-unmanaged-code"></a>Yönetilen koddan yönetilmeyen kodu çağırma
+## <a name="invoking-managed-code-from-unmanaged-code"></a>Yönetilmeyen koddan yönetilen kodu çağırma
 
-Çalışma zamanı iletişim geri işlev işaretçileri kullanarak yönetilen koda yerel işlevleri çağırmanızı etkinleştirme, her iki yönde akmasına izin verir. Yönetilen kodda işaretçisinin bir işlev işaretçisine en yakın şey bir **temsilci**, geri çağırmaları yerel koddan yönetilen koda izin vermek için kullanılan budur.
+Çalışma zamanı, iletişimin her iki yönde de akmasını sağlar ve işlev işaretçilerini kullanarak yerel işlevlerden yönetilen koda geri çağrı yapmanıza olanak tanır. Yönetilen koddaki bir işlev işaretçisi için en yakın şey bir **temsilcisidir**, bu nedenle yerel koddan yönetilen koda geri çağırmaları sağlamak için kullanılır.
 
-Bu özelliği kullanmak için bir yol, daha önce açıklanan yönetilen yerel işlemiyle benzerdir. Belirli bir geri çağırma için imzayla eşleşen bir temsilci tanımlama ve, dış metoduna geçirin. Çalışma zamanı her şeyi ilgileniriz.
+Bu özelliği kullanmanın yöntemi, daha önce açıklanan yönetilen to Native işleme benzerdir. Belirli bir geri çağırma için imzayla eşleşen bir temsilci tanımlayın ve bunu dış yönteme geçirin. Çalışma zamanı, diğer her şeyi ele alır.
 
 [!code-csharp[EnumWindows](~/samples/snippets/standard/interop/pinvoke/enumwindows.cs)]
 
-Örnek walking önce çalışmak için ihtiyacınız yönetilmeyen işlevleri imzalarını gözden geçirmek uygundur. Tüm windows numaralandırmak için çağrılacak işlev aşağıdaki imzası vardır: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+Bu örnekte yürüyerek, birlikte çalışmanız gereken yönetilmeyen işlevlerin imzalarını gözden geçirmeniz iyi olur. Tüm pencereleri numaralandırmak için çağrılacak işlev aşağıdaki imzaya sahiptir:`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
 
-İlk parametre bir geri çağırma ' dir. Aşağıdaki imza söz konusu geri çağırma vardır: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+İlk parametre bir geri çağırmasıdır. Söyde bulunan geri çağırma aşağıdaki imzaya sahiptir:`BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
 
-Şimdi, örnek atalım:
+Şimdi örnek olarak şunu inceleyelim:
 
-* #9. satırına örnekte geri çağırma, yönetilmeyen koddan imzayla eşleşen bir temsilci tanımlar. LPARAM ve HWND türleri nasıl temsil edildiğini fark kullanarak `IntPtr` yönetilen kod.
-* #13 ve #14. satır tanıtmak `EnumWindows` user32.dll kitaplığından işlevi.
-* Satırları #17-20 temsilci uygulayın. Bu basit örnekte, yalnızca tutamaç konsola çıktı istiyoruz.
-* Son olarak, satır #24, dış yöntemi çağrılır ve Temsilcide geçirildi.
+- Örnekteki satır #9, yönetilmeyen koddan geri aramanın imzasıyla eşleşen bir temsilciyi tanımlar. LParam ve HWND türlerinin yönetilen kodda kullanarak `IntPtr` nasıl temsil edileceğini görürsünüz.
+- Satırlar #13 ve #14 User32. `EnumWindows` dll kitaplığından işlevi ortaya çıkarabilir.
+- Satır #17-20 temsilciyi uygular. Bu basit örnek için, tanıtıcıyı yalnızca konsola çıkarmak istiyoruz.
+- Son olarak, satır #24, dış yöntem, temsilciyle çağrılır ve geçirilir.
 
-Linux ve Macos'ta örnekleri aşağıda gösterilmiştir. Bunlar için kullandığımız `ftw` bulunabilir işlevi `libc`, C Kitaplığı. Bu işlev, dizin hiyerarşileri geçirmek için kullanılır ve bir işlev işaretçisi, parametrelerinden biri alır. Aşağıdaki imza söz konusu işlev vardır: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
+Linux ve macOS örnekleri aşağıda gösterilmiştir. Bunlar için, C Kitaplığı 'nda `ftw` `libc`bulunan işlevini kullanırız. Bu işlev dizin hiyerarşileri arasında geçiş yapmak için kullanılır ve parametrelerinden biri olarak bir işlev işaretçisi alır. Diyor işlevi şu imzaya sahiptir: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
 [!code-csharp[ftw Linux](~/samples/snippets/standard/interop/pinvoke/ftw-linux.cs)]
 
-macOS örnek aynı işlevi kullanır ve tek fark, bağımsız değişkeni `DllImport` macOS tutar gibi öznitelik `libc` farklı bir yerde.
+MacOS örneği aynı işlevi kullanır ve MacOS farklı bir yerde devam `DllImport` `libc` ederken, tek fark özniteliğin bağımsız değişkenidir.
 
 [!code-csharp[ftw macOS](~/samples/snippets/standard/interop/pinvoke/ftw-macos.cs)]
 
-Yönetilen türler verilen her iki durumda da, parametre ve önceki örneklerin her ikisi de parametrelere bağlıdır. Çalışma zamanı "doğru şeyi" mu ve bunları kendi eşdeğerleri diğer tarafındaki işler. Nasıl türleri için yerel kodda sayfamızı üzerinde sıralanmış hakkında bilgi edinin [türü hazırlama](type-marshaling.md).
+Yukarıdaki örneklerin her ikisi de parametrelere bağımlıdır ve her iki durumda da parametreler yönetilen türler olarak verilir. Çalışma zamanı "doğru şeyi" yapar ve bunları diğer tarafta eşdeğerleri halinde işler. Türlerin [tür sıralaması](type-marshaling.md)üzerindeki sayfamızda yerel koda nasıl sıralantığından ilgili bilgi edinin.
 
 ## <a name="more-resources"></a>Daha fazla kaynak
 
-- [PInvoke.net wiki](https://www.pinvoke.net/) mükemmel bir Wiki ile ortak Windows API'leri ve bunları çağırma hakkında bilgi.
-- [P/Invoke içinde C++/CLI](/cpp/dotnet/native-and-dotnet-interoperability)
-- [P/Invoke üzerinde Mono belgeleri](https://www.mono-project.com/docs/advanced/pinvoke/)
+- [PInvoke.net wiki](https://www.pinvoke.net/) , yaygın Windows API 'leri ve bunların nasıl çağrılacağını içeren harika bir wiki.
+- [/CLI ' da C++P/Invoke](/cpp/dotnet/native-and-dotnet-interoperability)
+- [P/Invoke üzerinde mono belgeleri](https://www.mono-project.com/docs/advanced/pinvoke/)

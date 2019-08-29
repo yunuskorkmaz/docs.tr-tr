@@ -1,5 +1,5 @@
 ---
-title: Paketleme ve dağıtma kaynakları .NET uygulamaları
+title: .NET uygulamalarında kaynakları paketleme ve dağıtma
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,97 +28,97 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135655"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105908"
 ---
-# <a name="packaging-and-deploying-resources-in-net-apps"></a>Paketleme ve dağıtma kaynakları .NET uygulamaları
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET uygulamalarında kaynakları paketleme ve dağıtma
 
-Uygulamaları üzerinde .NET Framework kaynak tarafından temsil edilen Yöneticisi kullanan <xref:System.Resources.ResourceManager> yerelleştirilmiş kaynakları almak için sınıf. Resource Manager, paketleme ve dağıtma kaynakları için bir merkez ve ışınsal modelini kullanıldığını varsayar. Yerelleştirilemez yürütülebilir kod ve nötr olarak adlandırılan tek bir kültürü için kaynaklar içeren ana derleme hub'ı olan veya varsayılan kültür. Geri dönüş kültürü uygulamanın varsayılan kültürüdür; yerelleştirilmiş kaynaklar bulunamazsa kullanılan kültürdür. Her bir uçtaki tek bir kültür için kaynaklar içeriyor ancak hiçbir kod içermiyor bir uydu derlemeye bağlanır.
+Uygulamalar, yerelleştirilmiş kaynakları almak için <xref:System.Resources.ResourceManager> sınıfı tarafından temsil edilen .NET Framework kaynak yöneticisi güvenir. Kaynak Yöneticisi, bir hub ve bağlı bileşen modelinin kaynakları paketleyip dağıtmak için kullanıldığını varsayar. Hub, yerelleştirilemeyen yürütülebilir kodu ve bağımsız veya varsayılan kültür olarak adlandırılan tek bir kültürün kaynaklarını içeren ana derlemedir. Varsayılan kültür, uygulamanın geri dönüş kültürüdür; Bu, yerelleştirilmiş kaynaklar bulunamazsa kaynakları kullanılan kültürdür. Her bir bağlı bileşen tek bir kültürün kaynaklarını içeren bir uydu derlemesine bağlanır, ancak herhangi bir kod içermez.
 
-Bu model için çeşitli avantajları vardır:
+Bu modelin çeşitli avantajları vardır:
 
-- Bir uygulamayı dağıttıktan sonra yeni kültürleri için kaynakları artımlı olarak ekleyebilirsiniz. Kültüre özgü kaynaklar sonraki geliştirme süresini önemli ölçüde gerektirdiğinden bu, ana uygulamanızın ilk sürüm ve kültüre özgü kaynaklar daha sonraki bir tarihte teslim sağlar.
+- Bir uygulamayı dağıttıktan sonra, yeni kültürler için artımlı olarak kaynak ekleyebilirsiniz. Kültüre özgü kaynakların sonraki geliştirmesi önemli miktarda zaman gerektirebileceğinden, bu, önce ana uygulamanızı serbest bırakmanıza ve daha sonra kültüre özgü kaynaklar sunmanıza olanak tanır.
 
-- Güncelleştirme ve uygulamayı yeniden derlemeye gerek kalmadan uygulama uydu derlemeleri değiştirin.
+- Uygulamanın uydu derlemelerini uygulamayı yeniden derlemeden güncelleştirebilir ve değiştirebilirsiniz.
 
-- Belirli bir kültür için gerekli tüm kaynakları içeren uydu derlemeleri yüklemek bir uygulama gerekir. Bu durum, sistem kaynaklarının kullanımını önemli ölçüde azaltabilir.
+- Uygulamanın yalnızca belirli bir kültür için gereken kaynakları içeren uydu derlemelerini yüklemesi gerekir. Bu, sistem kaynaklarının kullanımını önemli ölçüde azaltabilir.
 
- Ancak, vardır de dezavantajları Bu model için:
+ Ancak, bu modelin olumsuz yönleri de vardır:
 
-- Birden fazla kaynakları yönetmeniz gerekir.
+- Birden çok kaynak kümesini yönetmeniz gerekir.
 
-- Bazı yapılandırmalar test etmeniz gerekir çünkü bir uygulamayı test ilk maliyetini artırır. Uzun vadede, daha kolay ve daha az pahalı bir çekirdek uygulamayı test edin ve çeşitli paralel uluslararası sürümlerinden korumak için daha birçok Uyduları ile test etmek olacağını unutmayın.
+- Birkaç yapılandırmayı test etmeniz gerektiğinden, bir uygulamanın test edilmesine yönelik başlangıç maliyeti artar. Uzun vadede, birden çok uydu ile bir çekirdek uygulamanın test etmek ve birkaç paralel uluslararası sürümü test etmek için daha kolay ve daha düşük maliyetli olacağını unutmayın.
 
 ## <a name="resource-naming-conventions"></a>Kaynak Adlandırma Kuralları
 
-Uygulamanızdaki kaynaklarından paketlediğinizde, ortak dil çalışma zamanı bekliyor kaynak adlandırma kuralları kullanarak bunları adı olmalıdır. Çalışma zamanı kaynak kültür adını kullanarak tanımlar. Her kültür, genellikle bir dili ile ilişkilendirilmiş bir iki harf, küçük harf kültür adı birleşimi olan benzersiz bir ad verilir ve gerekirse, bir iki harfli, büyük bir alt ad ilişkili bir ülke veya bölge ile. Alt ad ayrılmış bir tire (-), bir kültür adı izler. Örnek, Japonya'da en-US olarak Amerika Birleşik Devletleri, Avusturya konuşulan gibi Almanca için Almanya veya de AT konuşulan gibi Almanca için de-DE, konuşulan İngilizce konuşulan olarak Japonca için ja-JP verilebilir. Bkz: **dil etiketi** sütununda [Windows tarafından desteklenen dil/bölge adlarının listesini](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Kültür adları izleyin tarafından tanımlanan standart [BCP 47](https://tools.ietf.org/html/bcp47).
+Uygulamanızın kaynaklarını paketlemeyi seçtiğinizde, ortak dil çalışma zamanının beklediği kaynak adlandırma kurallarını kullanarak bunları adlandırmalısınız. Çalışma zamanı bir kaynağı kültür adına göre tanımlar. Her kültüre, genellikle bir dille ilişkili iki harfli, küçük harfli bir kültür adının birleşimi ve gerekirse, bir ülke veya bölgeyle ilişkili iki harfli, büyük harfli bir alt kültür adı olan benzersiz bir ad verilir. Alt kültür adı, bir tire (-) ile ayrılmış olarak kültür adını izler. Japonca, Japonya 'da konuşulan Japonca için ja-JP, Birleşik Devletler Ingilizce için en-US, Almanya 'da konuşulan olarak Almanca için de, Almanya için de ve [Windows tarafından desteklenen dil/bölge adları listesindeki](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) **Dil etiketi** sütununa bakın. Kültür adları [BCP 47](https://tools.ietf.org/html/bcp47)tarafından tanımlanan standardı izler.
 
 > [!NOTE]
-> Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz: [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) ve [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
+> Kaynak dosyaları oluşturma hakkında daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) ve [uydu derlemeleri oluşturma](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).
 
 <a name="cpconpackagingdeployingresourcesanchor1"></a>
 
 ## <a name="the-resource-fallback-process"></a>Kaynak Geri Dönüş İşlemi
 
-Paketleme ve dağıtma kaynakları için merkez ve ışınsal modelini, uygun kaynakları bulmak için bir geri dönüş işlemi kullanır. Bir uygulama, mevcut olmayan bir yerelleştirilmiş kaynak isterse, kullanıcının uygulama en yakından eşleşen uygun bir geri dönüş kaynak bilgisayarın istemek ve bir özel durum oluşturur ortak dil çalışma zamanı kültürler hiyerarşisini arar olarak yalnızca bir Son çare. Uygun bir kaynak bulunamıyorsa hiyerarşinin her düzeyinde çalışma zamanı otomatik olarak bunu kullanır. Kaynak bulunamazsa, arama, İleri düzeyde devam eder.
+Paketleme ve dağıtım kaynakları için merkez ve bağlı bileşen modeli, uygun kaynakları bulmak için bir geri dönüş işlemi kullanır. Bir uygulama kullanılamayan bir yerelleştirilmiş kaynak isterse, ortak dil çalışma zamanı, kullanıcının applicationın isteğiyle en yakından eşleşen uygun bir geri dönüş kaynağı için kültürlerin hiyerarşisini arar ve yalnızca bir özel durum oluşturur Son çare. Hiyerarşinin her düzeyinde, uygun bir kaynak bulunursa çalışma zamanı onu kullanır. Kaynak bulunamazsa, arama bir sonraki düzeyde devam eder.
 
-Arama performansını artırmak için uygulama <xref:System.Resources.NeutralResourcesLanguageAttribute> özniteliği ana derlemenizi ve ana bütünleştirilmiş kod ile çalışacak dilden adını geçirin.
+Arama performansını geliştirmek için, <xref:System.Resources.NeutralResourcesLanguageAttribute> özniteliği ana derlemenizin içine uygulayın ve ana derlemeinizle birlikte çalışacak bağımsız dilin adını geçirin.
 
-### <a name="net-framework-resource-fallback-process"></a>.NET framework kaynak geri dönüş işlemi
+### <a name="net-framework-resource-fallback-process"></a>Kaynak geri dönüş işlemini .NET Framework
 
 .NET Framework kaynak geri dönüş işlemi aşağıdaki adımları içerir:
 
 > [!TIP]
-> Kullanılacak çözebileceğiniz [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) kaynak geri dönüş işlemi ve işlemin çalışma zamanı araştırmaları için kaynak derlemeleri en iyi duruma getirmek için yapılandırma öğesi. Daha fazla bilgi için [kaynak geri dönüş işlemini en iyi duruma getirme](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) bölümü.
+> Kaynak geri dönüş işlemini ve kaynak derlemeler için çalışma zamanı araştırmalarını iyileştirmek için [ \<relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) yapılandırma öğesini kullanabilirsiniz. Daha fazla bilgi için [kaynak geri dönüş Işlemini En Iyi duruma getirme](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing) bölümüne bakın.
 
-1. Çalışma zamanı ilk denetimleri [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md) uygulamanız için istenen kültürüyle eşleşen bir derleme için.
+1. Çalışma zamanı, uygulamanız için istenen kültür ile eşleşen bir derleme için [genel derleme önbelleğini](../../../docs/framework/app-domains/gac.md) denetler.
 
-     Birçok uygulama tarafından paylaşılan kaynak derlemeleri genel derleme önbelleğine depolayabilirsiniz. Bu, her uygulamada dizin yapısını kaynakların belirli kümeleri eklemek zorunda kalmaktan kurtarır. Çalışma zamanı derlemeye bir başvuruda bulunursa, derleme istenen kaynak için arama yapar. Bu derlemede giriş bulunursa, istenen kaynak kullanır. Giriş bulamazsa arama devam eder.
+     Genel derleme önbelleği, birçok uygulama tarafından paylaşılan kaynak derlemelerini depolayabilirler. Bu, oluşturduğunuz her uygulamanın dizin yapısına belirli kaynak kümelerini dahil etmek zorunda kalmaktan kurtarır. Çalışma zamanı derlemeye bir başvuru bulursa, istenen kaynak için derlemeyi arar. Girdiyi derlemede bulursa, istenen kaynağı kullanır. Girişi bulamazsa, aramaya devam eder.
 
-2. Çalışma zamanı şu anda yürütülen derleme için istenen kültürüyle eşleşen bir alt dizinin sonraki denetler. Bu alt bulunursa, o alt istenen kültürü için geçerli bir uydu derlemesine arar. Çalışma zamanı, ardından istenen kaynak için uydu derleme arar. Derlemede kaynak bulursa, onu kullanır. Kaynak bulamazsa arama devam eder.
+2. Sonraki çalışma zamanı, istenen kültür ile eşleşen bir alt dizin için şu anda yürütülmekte olan derlemenin dizinini denetler. Alt dizini bulursa, istenen kültür için geçerli bir uydu derlemesi için bu alt dizini arar. Çalışma zamanı daha sonra, istenen kaynak için uydu derlemesinde arama yapar. Kaynağı derlemede bulursa, onu kullanır. Kaynak bulamazsa, aramaya devam eder.
 
-3. Çalışma zamanı uydu derlemeye isteğe bağlı olarak yüklü olup olmadığını belirlemek için Windows Yükleyici sonraki sorgular. Bu nedenle, yüklemesini ele alır, derlemeyi yükler ve, veya istenen kaynak arar. Derlemede kaynak bulursa, onu kullanır. Kaynak bulamazsa arama devam eder.
+3. Sonraki çalışma zamanı, uydu derlemesinin isteğe bağlı olarak yüklenip yüklenmeyeceğini öğrenmek için Windows Installer sorgular. Bu durumda, yüklemeyi işler, derlemeyi yükler ve veya istenen kaynağı arar. Kaynağı derlemede bulursa, onu kullanır. Kaynak bulamazsa, aramaya devam eder.
 
-4. Çalışma zamanı oluşturur <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> uydu derlemesini bulamıyor olduğunu belirtmek için olay. Olayı işlemek seçerseniz, olay işleyicisi kaynaklarını arama için kullanılacak olan uydu derlemeye bir başvuruda döndürebilir. Aksi takdirde, olay işleyicisini döndürür `null` ve aramaya devam eder.
+4. Çalışma zamanı <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı, uydu derlemesini bulamadığını belirtecek şekilde oluşturur. Olayı derlemeyi seçerseniz, olay işleyiciniz, kaynakları arama için kullanılacak olan uydu derlemesine bir başvuru döndürebilir. Aksi takdirde, olay işleyicisi döndürülür `null` ve arama devam eder.
 
-5. Çalışma zamanı sonraki aramaları genel derleme önbelleği yeniden, bu süre için istenen üst derlemenin kültür. Ana derleme genel derleme önbelleğinde varsa, çalışma zamanı derleme istenen kaynak için arama yapar.
+5. Sonraki çalışma zamanı, genel derleme önbelleğinde bu kez, istenen kültür için üst derleme için yeniden arama yapar. Üst derleme genel derleme önbelleğinde varsa, çalışma zamanı, istenen kaynak için derlemeyi arar.
 
-     Üst kültüre uygun geri dönüş kültürü tanımlanır. Geri dönüş aday olarak üst öğeleri sağlayan herhangi bir kaynağa bir özel durum için tercih edilir çünkü göz önünde bulundurun. Bu işlem kaynakları yeniden sağlar. İstenen kaynak yerelleştirmek alt kültürü yalnızca gerektirmez üst düzeyde belirli bir kaynağa içermelidir. Örneğin, uydu derlemeler için sağlarsanız `en` (nötr İngilizce) `en-GB` (Birleşik Krallık'ta konuşulan olarak İngilizce), ve `en-US` (Amerika Birleşik Devletleri'nde konuşulan olarak İngilizce), `en` uydu ortak içerebilir terminolojisinde ve `en-GB` ve `en-US` Uyduları farklı koşullar için geçersiz kılmalar sağlayabilirdi.
+     Üst kültür uygun geri dönüş kültürü olarak tanımlanır. Herhangi bir kaynağın sağlanması bir özel durum oluşturmak tercih ettiğinden, üst öğeleri geri dönüş adayları olarak değerlendirin. Bu işlem, kaynakları yeniden kullanmanıza da olanak tanır. Yalnızca alt kültürün istenen kaynağı yerelleştirilmesi gerekmiyorsa, üst düzeyde belirli bir kaynağı dahil etmelisiniz. Örneğin, ( `en` bağımsız İngilizce) için uydu derlemeleri, `en-GB` (Birleşik Krallık 'ta konuşulan İngilizce) ve `en-US` (Birleşik Devletler `en` İngilizcede İngilizce) sağlarsanız, uydu ortak terminoloji ve `en-GB` ve `en-US` uydular, yalnızca farklı şartlar için geçersiz kılmalar sağlayabilir.
 
-6. Çalışma zamanı, bir üst dizin içerip içermediğini görmek için şu anda çalıştırılan derlemenin dizinin sonraki denetler. Bir üst dizin varsa, çalışma zamanı üst kültürü için geçerli bir uydu derlemesine dizinde arar. Derleme bulursa, çalışma zamanı derleme istenen kaynak için arama yapar. Kaynak bulursa, onu kullanır. Kaynak bulamazsa arama devam eder.
+6. Sonraki çalışma zamanı, ana dizin içerip içermediğini görmek için şu anda yürütülmekte olan derlemenin dizinini denetler. Bir üst dizin varsa, çalışma zamanı, üst kültürün geçerli bir uydu derlemesi için dizini arar. Derlemeyi bulursa, çalışma zamanı, istenen kaynak için derlemeyi arar. Kaynağı bulursa onu kullanır. Kaynak bulamazsa, aramaya devam eder.
 
-7. Çalışma zamanı üst uydu derlemeye isteğe bağlı olarak yüklü olup olmadığını belirlemek için Windows Yükleyici sonraki sorgular. Bu nedenle, yüklemesini ele alır, derlemeyi yükler ve, veya istenen kaynak arar. Derlemede kaynak bulursa, onu kullanır. Kaynak bulamazsa arama devam eder.
+7. Sonraki çalışma zamanı, üst uydu derlemesinin isteğe bağlı olarak yüklenip yüklenmeyeceğini öğrenmek için Windows Installer sorgular. Bu durumda, yüklemeyi işler, derlemeyi yükler ve veya istenen kaynağı arar. Kaynağı derlemede bulursa, onu kullanır. Kaynak bulamazsa, aramaya devam eder.
 
-8. Çalışma zamanı oluşturur <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> uygun bir geri dönüş kaynağı bulamadı olduğunu belirtmek için olay. Olayı işlemek seçerseniz, olay işleyicisi kaynaklarını arama için kullanılacak olan uydu derlemeye bir başvuruda döndürebilir. Aksi takdirde, olay işleyicisini döndürür `null` ve aramaya devam eder.
+8. Çalışma zamanı <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı, uygun bir geri dönüş kaynağı bulamadığını belirtecek şekilde oluşturur. Olayı derlemeyi seçerseniz, olay işleyiciniz, kaynakları arama için kullanılacak olan uydu derlemesine bir başvuru döndürebilir. Aksi takdirde, olay işleyicisi döndürülür `null` ve arama devam eder.
 
-9. Çalışma zamanı sonraki arar önceki üç adımı birçok olası düzeyleri ile olduğu gibi derlemelerini üst. Her bir kültür tarafından tanımlanan yalnızca bir üste sahip <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> özelliği, ancak üst öğesi kendi üst sahip olabilir. Üst arama kültürler durakları bir kültür ayarlandığında <xref:System.Globalization.CultureInfo.Parent%2A> özelliği döndürür <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>; temel, sabit kültür olarak kabul edilmez üst kültür veya kaynaklarınız olamayacağı bir kültür kaynak.
+9. Daha sonra çalışma zamanı, önceki üç adımda olduğu gibi, üst derlemeleri birçok olası düzey aracılığıyla arar. Her kültürün, <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> özelliği tarafından tanımlanan yalnızca bir üst öğesi vardır ancak bir üst öğenin kendi üst öğesi olabilir. Bir kültürün <xref:System.Globalization.CultureInfo.Parent%2A> <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>özelliği döndürüldüğünde üst kültürler için arama işlemi duraklar; kaynak geri dönüşü için, sabit kültür bir üst kültür veya kaynaklara sahip olan bir kültür olarak kabul edilmez.
 
-10. Başlangıçta belirtilen kültürü ve tüm üst öğeleri aranır ve kaynak tarafından hala bulunamazsa, kaynak varsayılan (Temel) kültürü için kullanılır. Genellikle, kaynaklar için varsayılan kültürü ana uygulama derlemesinde dahil edilir. Değerini belirtmek ancak <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> için <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> özelliği <xref:System.Resources.NeutralResourcesLanguageAttribute> kaynaklar için ultimate geri dönüş konumu ana derleme yerine, bir uydu derlemesine olduğunu belirtmek için özniteliği.
+10. İlk olarak belirtilen kültür ve tüm ebeveynler arandıysa ve kaynak hala bulunamazsa, varsayılan (geri dönüş) kültürün kaynağı kullanılır. Genellikle, varsayılan kültür için kaynaklar ana uygulama derlemesine dahil edilmiştir. Ancak, kaynaklar için en son geri dönüş <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> konumunun ana <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> derleme yerine bir <xref:System.Resources.NeutralResourcesLanguageAttribute> uydu derlemesi olduğunu göstermek için özniteliğinin özelliği için bir değer belirtebilirsiniz.
 
     > [!NOTE]
-    > Varsayılan kaynak ana derleme ile derlenmiş yalnızca bir kaynaktır. Kullanarak bir uydu derlemesine belirtmediğiniz sürece <xref:System.Resources.NeutralResourcesLanguageAttribute> özniteliği, ultimate geri dönüş (son üst öğe) olan. Bu nedenle, varsayılan bir kaynak kümesini her zaman, ana derlemeye dahil öneririz. Bu durum, oluşturulan öğesinden özel durumlar önlemeye yardımcı olur. Duyarlıymış belirli olsa bile varsayılan kaynak dahil olmak üzere, tüm kaynaklar için bir geri dönüş sunulabilmesi ve bu en az bir kaynak dosyası her zaman kullanıcı için mevcuttur.
+    > Varsayılan kaynak, ana derlemeyle derlenebilecek tek kaynaktır. <xref:System.Resources.NeutralResourcesLanguageAttribute> Özniteliğini kullanarak bir uydu derlemesi belirtmediğiniz müddetçe, bu, en son geri dönüş (son üst öğe) öğesidir. Bu nedenle, ana derlemenizin her zaman varsayılan bir kaynak kümesi içermesini öneririz. Bu, özel durumların oluşmasını önlemeye yardımcı olur. Varsayılan bir kaynak dahil ederek, tüm kaynaklar için bir geri dönüş sağlarsınız ve çok önemli olmasa bile Kullanıcı için en az bir kaynağın her zaman mevcut olduğundan emin olabilirsiniz.
 
-11. Son olarak, çalışma zamanı varsayılan (Temel) kültürü için bir kaynak bulmazsa bir <xref:System.Resources.MissingManifestResourceException> veya <xref:System.Resources.MissingSatelliteAssemblyException> kaynak bulunamadı belirtmek için özel durum oluştu.
+11. Son olarak, çalışma zamanı varsayılan (geri dönüş) kültürü için bir kaynak bulamazsa, kaynağın bulunamadığını <xref:System.Resources.MissingManifestResourceException> göstermek <xref:System.Resources.MissingSatelliteAssemblyException> için bir veya özel durum oluşturulur.
 
-Örneğin, İspanyolca (Meksika) için yerelleştirilmiş bir kaynağı uygulama isteklerini varsayalım ( `es-MX` kültür). Çalışma zamanı, Genel Derleme Önbelleği ilk eşleşen derleme için arama yapar. `es-MX`, ancak bunun yerine bulmuyorsa. Çalışma zamanı için o anda yürütülen derlemenin dizini ardından araması bir `es-MX` dizin. Bu başarısız olursa, çalışma zamanı genel derleme önbelleği yeniden uygun geri dönüş kültürü yansıtan bir üst derleme için arama yapar; bu durumda, `es` (İspanyolca). Ana derleme bulunamazsa, çalışma zamanı üst derlemeler için tüm olası düzeylerini arar `es-MX` karşılık gelen kaynak bulana kadar kültür. Bir kaynak bulunmazsa, çalışma zamanı kaynağı için varsayılan kültürü kullanır.
+Örneğin, uygulamanın İspanyolca (Meksika) için yerelleştirilmiş bir kaynak istediğini varsayalım ( `es-MX` kültür). Çalışma zamanı önce, eşleşen `es-MX`derleme için genel derleme önbelleğinde arama yapmaz, ancak bulamaz. Çalışma zamanı daha sonra bir `es-MX` dizin için yürütülmekte olan derlemenin dizinini arar. Çalışma zamanı, genel derleme önbelleğini, uygun geri dönüş kültürünü yansıtan bir üst derleme için yeniden arar — bu durumda `es` (İspanyolca). Üst derleme bulunamazsa, çalışma zamanı karşılık gelen bir kaynağı bulana kadar `es-MX` kültür için tüm olası üst derleme düzeylerini arar. Bir kaynak bulunamazsa, çalışma zamanı varsayılan kültür için kaynağı kullanır.
 
 <a name="Optimizing"></a>
 
-#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>.NET Framework kaynak geri dönüş işlemi en iyi duruma getirme
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>.NET Framework kaynak geri dönüş Işlemini iyileştirme
 
-Aşağıdaki koşullarda, çalışma zamanı kaynakları uydu derlemelerinde arar işlem iyileştirebilirsiniz.
+Aşağıdaki koşullarda, çalışma zamanının uydu derlemelerindeki kaynakları arayacağı süreci iyileştirebilirsiniz
 
-- Uydu derlemeleri, kod derleme ile aynı konumda dağıtılır. Kod derleme yüklüyse [genel derleme önbelleği](../../../docs/framework/app-domains/gac.md), uydu derlemeleri genel derleme önbelleğinde da yüklenir. Bir kod derlemesi bir dizinde yüklü değilse, uydu derlemelerinin bu dizinin kültüre özgü klasörlere yüklenir.
+- Uydu derlemeleri kod derlemesiyle aynı konumda dağıtılır. Kod derlemesi [genel derleme önbelleğinde](../../../docs/framework/app-domains/gac.md)yüklüyse, uydu derlemeleri genel bütünleştirilmiş kod önbelleğine de yüklenir. Kod derlemesi bir dizinde yüklüyse, uydu derlemeleri bu dizinin kültüre özgü klasörlerine yüklenir.
 
-- Uydu derlemeleri isteğe bağlı olarak yüklü değildir.
+- Uydu derlemeleri isteğe bağlı olarak yüklenmez.
 
-- Uygulama kodu işlemiyor <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.
+- Uygulama kodu <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı işlemez.
 
-Araştırma için uydu derlemeleri dahil ederek en iyi duruma [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesi ve ayarı kendi `enabled` özniteliğini `true` gösterildiği gibi uygulama yapılandırma dosyası Aşağıdaki örnekte.
+`enabled` [ \<Relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesini ekleyerek ve özniteliğini `true` aşağıdaki gibi uygulama yapılandırma dosyasında olarak ayarlayarak uydu derlemeleri için araştırmayı iyileştirebilirsiniz örneğinde.
 
 ```xml
 <configuration>
@@ -128,100 +128,100 @@ Araştırma için uydu derlemeleri dahil ederek en iyi duruma [ \<relativeBindFo
 </configuration>
 ```
 
-Uydu derlemeler için en iyi duruma getirilmiş araştırma, bir katılım özelliğidir. Diğer bir deyişle, çalışma zamanı konusunda belgelenen adımları izler [kaynak geri dönüş işlemi](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) sürece [ \<relativeBindForResources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğedir uygulamanın yapılandırmada mevcut Dosya ve kendi `enabled` özniteliği `true`. Bu durumda, bir uydu derlemesi için yoklama işlemi şu şekilde değiştirilir:
+Uydu derlemeleri için iyileştirilmiş araştırma bir katılım özelliğidir. Diğer bir deyişle, çalışma zamanı, `enabled` uygulama yapılandırma dosyasında [ \<relativebindforresources >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) öğesi mevcut olmadığı ve özniteliği ayarlanmış olmadığı sürece [kaynak geri dönüş işleminde](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) belgelenen adımları izler. `true`. Bu durumda, bir uydu derlemesini araştırma işlemi aşağıdaki gibi değiştirilmiştir:
 
-- Çalışma zamanı uydu derlemesi için araştırma için üst kod derleme konumunu kullanır. Ana derleme genel derleme önbelleğinde yüklü değilse, çalışma zamanı önbelleğinde ancak uygulamanın dizinine araştırmaları. Ana derlemenin bir uygulama dizininde yüklü değilse, çalışma zamanı uygulama dizininde, ancak genel derleme önbelleğinde araştırmaları.
+- Çalışma zamanı, uydu derlemesi için araştırma yapmak üzere ana kod derlemesinin konumunu kullanır. Üst derleme genel derleme önbelleğinde yüklüyse, çalışma zamanı önbellekte araştırıyor ancak uygulamanın dizininde değil. Üst derleme bir uygulama dizinine yüklenirse, çalışma zamanı uygulama dizininde araştırıyor ancak genel derleme önbelleğinde değil.
 
-- Çalışma zamanı uydu derlemelerinin isteğe bağlı yükleme için Windows Installer sorgu değil.
+- Çalışma zamanı, uydu derlemelerinin isteğe bağlı yüklemesi için Windows Installer sorgulayamaz.
 
-- Belirli kaynak derlemesi için yoklama başarısız olursa, çalışma zamanı yükseltmez <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay.
+- Belirli bir kaynak derlemesinin araştırması başarısız olursa, çalışma zamanı <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı oluşturmaz.
 
-### <a name="net-core-resource-fallback-process"></a>.NET core kaynak geri dönüş işlemi
+### <a name="net-core-resource-fallback-process"></a>.NET Core kaynak geri dönüş işlemi
 
 .NET Core kaynak geri dönüş işlemi aşağıdaki adımları içerir:
 
-1. Çalışma zamanı, istenen kültürü için bir uydu derlemesini yüklemeyi dener.
-     * Şu anda yürütülen derleme için istenen kültürüyle eşleşen bir alt dizinden denetler. Bu alt bulunursa, o alt istenen kültürü için geçerli bir uydu derlemesine arar ve yükler.
+1. Çalışma zamanı, istenen kültür için bir uydu derlemesini yüklemeye çalışır.
+     - İstenen kültür ile eşleşen bir alt dizin için şu anda yürütülmekte olan derlemenin dizinini denetler. Alt dizini bulursa, bu alt dizini istenen kültür için geçerli bir uydu derlemesi için arar ve yükler.
 
        > [!NOTE]
-       > Büyük küçük harfe duyarlı dosya sistemleri (diğer bir deyişle, Linux ve macOS) ile işletim sistemlerinde, kültür adı alt arama büyük/küçük harf duyarlıdır. Alt ad durumunu tam olarak eşleşmelidir <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (örneğin, `es` veya `es-MX`).
+       > Büyük/küçük harfe duyarlı dosya sistemlerine (Linux ve macOS) sahip işletim sistemlerinde, kültür adı alt dizin araması büyük/küçük harfe duyarlıdır. Alt dizin adı, <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (örneğin, `es` veya `es-MX`) durumuyla tam olarak eşleşmelidir.
 
        > [!NOTE]
-       > Programcı bir özel bütünleştirilmiş kod yükleme bağlamından türetilen değilse <xref:System.Runtime.Loader.AssemblyLoadContext>, karmaşık bir durumdur. Yürütülen derleme özel bağlamına yüklendi, çalışma zamanı uydu derlemesini özel bağlamına yükler. Bu belgenin kapsamı dışındadır ayrıntılar bulunur. Bkz: <xref:System.Runtime.Loader.AssemblyLoadContext>.
+       > Programcı, ' den <xref:System.Runtime.Loader.AssemblyLoadContext>özel bir derleme yük bağlamını türediyse, durum karmaşıktır. Yürütülen derleme özel içeriğe yüklenmişse, çalışma zamanı uydu derlemesini özel bağlama yükler. Bu belge için Ayrıntılar kapsam dışında. Bkz <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-     * Uydu birleştirin, bulunmadı, <xref:System.Runtime.Loader.AssemblyLoadContext> başlatır <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> uydu derlemesini bulamıyor olduğunu belirtmek için olay. Olayı işlemek seçerseniz, olay işleyicisi yükleyin ve uydu derlemeye bir başvuru döndürür.
-     * Bir uydu derlemesine hala bulunamadı, AssemblyLoadContext tetiklemek AppDomain neden olan bir <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> uydu derlemesini bulamıyor olduğunu belirtmek için olay. Olayı işlemek seçerseniz, olay işleyicisi yükleyin ve uydu derlemeye bir başvuru döndürür.
+     - Bir uydu montajı bulunmazsa <xref:System.Runtime.Loader.AssemblyLoadContext> , bu <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> olayı uydu derlemesini bulamadığını belirtecek şekilde oluşturur. Olayı tanıtıcıyı seçerseniz, olay işleyiciniz uydu derlemesine bir başvuru yükleyebilir ve döndürebilir.
+     - Bir uydu derlemesi yine de bulunmazsa assemblyloadcontext, uygulama etki alanının uydu derlemesini bulamadığını göstermek için bir <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olay tetiklemesine neden olur. Olayı tanıtıcıyı seçerseniz, olay işleyiciniz uydu derlemesine bir başvuru yükleyebilir ve döndürebilir.
 
-2. Çalışma zamanı uydu derlemesi bulunursa, istenen kaynak için arar. Derlemede kaynak bulursa, onu kullanır. Kaynak bulamazsa arama devam eder.
+2. Bir uydu derlemesi bulunursa, çalışma zamanı istenen kaynak için bunu arar. Kaynağı derlemede bulursa, onu kullanır. Kaynak bulamazsa, aramaya devam eder.
 
      > [!NOTE]
-     > Kaynak uydu bütünleştirilmiş kod içinde bulmak için çalışma zamanı tarafından istenen kaynak dosyası için arar <xref:System.Resources.ResourceManager> geçerli <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>. Kaynak dosya içinde istenen kaynak adını arar. Ya da bulunmazsa, kaynak değerlendirilir olarak bulunamadı.
+     > Uydu derlemesi içindeki bir kaynağı bulmak için, çalışma zamanı, <xref:System.Resources.ResourceManager> <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>için tarafından istenen kaynak dosyasını arar. Kaynak dosyasında, istenen kaynak adını arar. Herhangi biri bulunmazsa, kaynak bulunamadı olarak kabul edilir.
 
-3. Çalışma zamanı üst kültür derlemeler birçok olası düzeyleri, her zaman 1 ve 2 adımları yinelemekten sonraki arar.
+3. Sonraki çalışma zamanı, her zaman 1 & 2. adımları her tekrarlanışında, üst kültür derlemelerini çok potansiyel düzeyler aracılığıyla arar.
 
-     Üst kültüre uygun bir geri dönüş kültürü tanımlanır. Geri dönüş aday olarak üst öğeleri sağlayan herhangi bir kaynağa bir özel durum için tercih edilir çünkü göz önünde bulundurun. Bu işlem kaynakları yeniden sağlar. İstenen kaynak yerelleştirmek alt kültürü yalnızca gerektirmez üst düzeyde belirli bir kaynağa içermelidir. Örneğin, uydu derlemeler için sağlarsanız `en` (nötr İngilizce), `en-GB` (Birleşik Krallık'ta konuşulan olarak İngilizce), ve `en-US` (Amerika Birleşik Devletleri'nde konuşulan olarak İngilizce), `en` uydu ortak içerir terminolojisinde ve `en-GB` ve `en-US` Uyduları farklı koşullar için geçersiz kılmalar sağlar.
+     Üst kültür uygun bir geri dönüş kültürü olarak tanımlanır. Herhangi bir kaynağın sağlanması bir özel durum oluşturmak tercih ettiğinden, üst öğeleri geri dönüş adayları olarak değerlendirin. Bu işlem, kaynakları yeniden kullanmanıza da olanak tanır. Yalnızca alt kültürün istenen kaynağı yerelleştirilmesi gerekmiyorsa, üst düzeyde belirli bir kaynağı dahil etmelisiniz. Örneğin, ( `en` bağımsız İngilizce) için uydu derlemeleri, `en-GB` (Birleşik Krallık 'ta konuşulan İngilizce) ve (Birleşik Devletler İngilizce) `en` ile `en-US` , uydu ortak terminoloji ve `en-GB` ve `en-US` uydular, yalnızca farklı şartlar için geçersiz kılmalar sağlar.
 
-     Her bir kültür tarafından tanımlanan yalnızca bir üste sahip <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> özelliği, ancak üst öğesi kendi üst sahip olabilir. Üst arama kültürler durakları bir kültür ayarlandığında <xref:System.Globalization.CultureInfo.Parent%2A> özelliği döndürür <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Geri dönüş kaynağı için bir üst kültür veya kaynaklarınız olamayacağı bir kültür sabit kültür dikkate alınmaz.
+     Her kültürün, <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType> özelliği tarafından tanımlanan yalnızca bir üst öğesi vardır ancak bir üst öğenin kendi üst öğesi olabilir. Bir kültürün <xref:System.Globalization.CultureInfo.Parent%2A> <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>özelliği döndürüldüğünde üst kültürleri için arama durduruluyor. Kaynak geri dönüşü için, sabit kültür bir üst kültür veya kaynaklara sahip bir kültür olarak kabul edilmez.
 
-4. Başlangıçta belirtilen kültürü ve tüm üst öğeleri aranır ve kaynak tarafından hala bulunamazsa, kaynak varsayılan (Temel) kültürü için kullanılır. Genellikle, kaynaklar için varsayılan kültürü ana uygulama derlemesinde dahil edilir. Değerini belirtmek ancak <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> için <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> kaynaklar için ultimate geri dönüş konumu ana derleme yerine bir uydu derlemesine olduğunu belirtmek için özellik.
+4. İlk olarak belirtilen kültür ve tüm ebeveynler arandıysa ve kaynak hala bulunamazsa, varsayılan (geri dönüş) kültürün kaynağı kullanılır. Genellikle, varsayılan kültür için kaynaklar ana uygulama derlemesine dahil edilmiştir. Ancak, kaynaklar için en son geri dönüş <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> konumunun ana <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> derleme yerine bir uydu derlemesi olduğunu göstermek için özelliği için bir değer belirtebilirsiniz.
 
     > [!NOTE]
-    > Varsayılan kaynak ana derleme ile derlenmiş yalnızca bir kaynaktır. Kullanarak bir uydu derlemesine belirtmediğiniz sürece <xref:System.Resources.NeutralResourcesLanguageAttribute> özniteliği, ultimate geri dönüş (son üst öğe) olan. Bu nedenle, varsayılan bir kaynak kümesini her zaman, ana derlemeye dahil öneririz. Bu durum, oluşturulan öğesinden özel durumlar önlemeye yardımcı olur. Varsayılan kaynak dosyası dahil, bir geri dönüş için tüm kaynakları sağlamak ve duyarlıymış belirli olsa bile en az bir kaynağı her zaman kullanıcı için mevcut olduğundan emin olun.
+    > Varsayılan kaynak, ana derlemeyle derlenebilecek tek kaynaktır. <xref:System.Resources.NeutralResourcesLanguageAttribute> Özniteliğini kullanarak bir uydu derlemesi belirtmediğiniz müddetçe, bu, en son geri dönüş (son üst öğe) öğesidir. Bu nedenle, ana derlemenizin her zaman varsayılan bir kaynak kümesi içermesini öneririz. Bu, özel durumların oluşmasını önlemeye yardımcı olur. Varsayılan bir kaynak dosyası ekleyerek, tüm kaynaklar için bir geri dönüş sağlarsınız ve çok önemli olmasa bile Kullanıcı için en az bir kaynağın her zaman mevcut olduğundan emin olursunuz.
 
-5. Son olarak, çalışma zamanı (Temel) varsayılan kültür için bir kaynak dosyası bulamazsa bir <xref:System.Resources.MissingManifestResourceException> veya <xref:System.Resources.MissingSatelliteAssemblyException> kaynak bulunamadı belirtmek için özel durum oluştu. Kaynak dosya bulundu, ancak istenen kaynak mevcut değil. istek döndürür `null`.
+5. Son olarak, çalışma zamanı varsayılan (geri dönüş) kültürü için bir kaynak dosyası bulamazsa, kaynağın bulunamadığını <xref:System.Resources.MissingManifestResourceException> göstermek <xref:System.Resources.MissingSatelliteAssemblyException> için bir veya özel durum oluşturulur. Kaynak dosyası bulunursa ancak istenen kaynak yoksa istek geri döner `null`.
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Uydu Derlemesi için Ultimate Geri Dönüş
 
-İsteğe bağlı olarak, ana derlemesinden kaynakları kaldırmak ve çalışma zamanı ultimate geri dönüş kaynakları belirli bir kültüre karşılık gelen bir uydu derlemesinden yükleyeceğini belirtin. Geri dönüş işlemini denetlemek için kullandığınız <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> oluşturucusu ve için bir değer <xref:System.Resources.UltimateResourceFallbackLocation> parametresi ana derleme veya bir uydu derlemesine Resource Manager geri dönüş kaynakları ayıklamak olup olmadığını belirtir.
+İsteğe bağlı olarak ana derlemeden kaynakları kaldırabilir ve çalışma zamanının, belirli bir kültüre karşılık gelen bir uydu derlemesinden en son geri dönüş kaynaklarını yüklemesi gerektiğini belirtebilirsiniz. Geri dönüş işlemini denetlemek için, <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> oluşturucuyu kullanır ve Kaynak Yöneticisi bir <xref:System.Resources.UltimateResourceFallbackLocation> parametre için, temel derlemeden veya bir uydu derlemesinden geri dönüş kaynakları ayıklanıp ayıklanmayacağını belirten bir değer sağlarsınız.
 
-Aşağıdaki .NET Framework örnekte <xref:System.Resources.NeutralResourcesLanguageAttribute> Fransızca için bir uydu derlemeye bir uygulamanın geri dönüş kaynakları depolamak için öznitelik (`fr`) dili. Örnek adlı bir tek dize kaynağını tanımlayan iki metin tabanlı kaynak dosyalarına sahip `Greeting`. İlk olarak resources.fr.txt, Fransızca Dil kaynağı içeriyor.
+Aşağıdaki .NET Framework örnek, bir uygulamanın <xref:System.Resources.NeutralResourcesLanguageAttribute> geri dönüş kaynaklarını Fransızca (`fr`) dili için bir uydu derlemesinde depolamak üzere özniteliğini kullanır. Örnek, adlı `Greeting`tek bir dize kaynağını tanımlayan iki metin tabanlı kaynak dosyasına sahiptir. Birincisi, Resources. fr. txt, bir Fransızca dil kaynağı içerir.
 
 ```
 Greeting=Bon jour!
 ```
 
-İkincisi, resources,ru.txt, Rusça Dil kaynağı içeriyor.
+İkinci, kaynak, ru. txt, bir Rusça dil kaynağı içerir.
 
 ```
 Greeting=Добрый день
 ```
 
-Bu iki dosyayı çalıştırarak .resources dosyalarına derlenir [kaynak dosya oluşturucu (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) komut satırından. Fransızca Dil kaynağı için komut şöyledir:
+Bu iki dosya, komut satırından [kaynak dosya Oluşturucu (Resgen. exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) çalıştırılarak. resources dosyalarına derlenir. Fransızca dil kaynağı için komut şu şekilde olur:
 
-**resgen.exe resources.fr.txt**
+**Resgen. exe resources. fr. txt**
 
-Rusça Dil kaynağı için komut şöyledir:
+Rusça dil kaynağı için komut şu şekilde olur:
 
-**resgen.exe resources.ru.txt**
+**Resgen. exe resources. ru. txt**
 
-Çalıştırarak dinamik bağlantı kitaplıkları içinde gömülü .resources dosyaları [derleme Bağlayıcısı (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) komuttan satır için Fransızca Dil kaynağı şu şekilde:
+. Resources dosyaları, Fransızca dili kaynağı için komut satırından aşağıdaki gibi, [derleme Bağlayıcısı (al. exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) çalıştırılarak dinamik bağlantı kitaplıklarına katıştırılır:
 
-**al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**
+**Al/t: lib/Embed: resources. fr. resources/Culture: fr/Out: fr\Example1.resources.dll**
 
-ve aşağıdaki gibi Rusça Dil kaynağı için:
+ve Rusça dil kaynağı için aşağıdaki gibi:
 
-**al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**
+**Al/t: lib/Embed: resources. ru. resources/Culture: ru/Out: ru\Example1.resources.dll**
 
-Uygulama kaynak kodunu Example1.cs veya Example1.vb adındaki bir dosyada yer alıyor. İçerdiği <xref:System.Resources.NeutralResourcesLanguageAttribute> varsayılan uygulama kaynağı fr alt dizinde olduğunu belirtmek için özniteliği. Kaynak Yöneticisi'ni başlatır, değerini alır `Greeting` kaynak ve konsolda görüntüler.
+Uygulama kaynak kodu Example1.cs veya example1. vb adlı bir dosyada bulunur. Varsayılan uygulama kaynağının <xref:System.Resources.NeutralResourcesLanguageAttribute> fr alt dizininde olduğunu göstermek için özniteliğini içerir. Kaynak Yöneticisi başlatır, `Greeting` kaynağın değerini alır ve bunu konsola görüntüler.
 
 [!code-csharp[Conceptual.Resources.Packaging#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.packaging/cs/example1.cs#1)]
 [!code-vb[Conceptual.Resources.Packaging#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.packaging/vb/example1.vb#1)]
 
-Ardından, C# kaynak kodunu komut satırından şu şekilde derleyebilirsiniz:
+Ardından aşağıdaki gibi komut C# satırından kaynak kodu derleyebilirsiniz:
 
 ```console
 csc Example1.cs
 ```
 
-Visual Basic Derleyicisi için komutu çok benzer:
+Visual Basic Derleyicisi komutu çok benzerdir:
 
 ```console
 vbc Example1.vb
 ```
 
-Ana derlemede gömülü kaynak olduğundan, kullanarak derleme gerekmez `/resource` geçin.
+Ana derlemede ekli kaynak olmadığından, `/resource` anahtarını kullanarak derlemeniz gerekmez.
 
-Örnek dilinden Rusça dışındaki herhangi bir sistemde çalıştırdığınızda, aşağıdaki çıkışı görüntüler:
+Dilini Rusça dışında bir şey olan bir sistemden çalıştırdığınızda, aşağıdaki çıktıyı görüntüler:
 
 ```
 Bon jour!
@@ -229,7 +229,7 @@ Bon jour!
 
 ## <a name="suggested-packaging-alternative"></a>Önerilen Paketleme Alternatifi
 
-Zaman ve bütçe kısıtlamaları bir kaynak için uygulamanızın desteklediği her bir alt kümesini oluşturmasını engelleyebilir. Bunun yerine, tüm subcultures ilgili bir üst kültür kullanabilir, tek bir uydu derlemesi oluşturabilirsiniz. Örneğin, bölgeye özgü İngilizce kaynakları isteği kullanıcılar tarafından alınan tek bir İngilizce uydu derlemesi (TR) ve bölgeye özgü Almanca kaynakları isteyen kullanıcılar için tek Almanca uydu derlemesi (de) sağlayabilirsiniz. Örneğin, Almanca için (de-DE), Almanya'da konuşulan gibi Avusturya (de-AT) ve İsviçre (de-CH) Alman uydu derlemeye (de) dönmesi ister. Varsayılan kaynakları son geri dönüş olan ve bu nedenle, uygulamanızın kullanıcılarının çoğunluğu tarafından istenen kaynakları olmalıdır böylece bu kaynaklara dikkatle seçin. Bu yaklaşım, daha az duyarlıymış özgüdür, ancak uygulamanızın yerelleştirme maliyetlerini önemli ölçüde azaltabilirsiniz kaynakları dağıtır.
+Zaman veya bütçe kısıtlamaları, uygulamanızın desteklediği her alt kültür için bir kaynak kümesi oluşturmanızı önleyebilir. Bunun yerine, bir üst kültür için tüm ilgili alt kültürlerin kullanabileceği tek bir uydu derlemesi oluşturabilirsiniz. Örneğin, bölgeye özgü Ingilizce kaynaklar isteyen kullanıcılar tarafından alınan tek bir Ingilizce uydu bütünleştirilmiş kodu (en) ve bölgeye özgü Alman kaynakları isteyen kullanıcılar için tek bir Alman uydu derlemesi (de) sağlayabilirsiniz. Örneğin, Almanya (de-DE), Avusturya (de-AT) ve Isviçre (de-CH) için Almanca için istekler, Almanya uydu derlemesine (de) geri döner. Varsayılan kaynaklar son geri dönüşlerdir ve bu nedenle uygulamanızın kullanıcılarının büyük bölümü tarafından istenen kaynaklar olması gerekir, bu nedenle bu kaynakları dikkatle seçin. Bu yaklaşım, daha az özel olan kaynakları dağıtır, ancak uygulamanızın yerelleştirme maliyetlerini önemli ölçüde azaltabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

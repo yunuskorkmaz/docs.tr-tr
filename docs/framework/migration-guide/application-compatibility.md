@@ -8,71 +8,71 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623783"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106481"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework'te Uygulama Uyumluluğu
 
 ## <a name="introduction"></a>Giriş
-Uyumluluk, her bir .NET yayının çok önemli bir hedeftir. Uyumluluk sağlar her sürümü eklenebilir, böylece önceki sürümleri çalışmaya devam eder. Öte yandan, (güvenlik sorunlarını gidermek, performansı artırmak veya hataları düzeltmek için) önceki işlev değişiklikleri mevcut kod veya sonraki bir sürümünü altında çalışan uygulamalara uyumluluk sorunlarına neden olabilir. .NET Framework yeniden hedefleme değişiklikleri ve çalışma zamanı değişiklikleri algılar. Yeniden hedefleme değişiklikleri, ancak sonraki bir sürümü üzerinde çalışan belirli bir .NET Framework sürümünü hedefleyen uygulamaları etkiler. Çalışma zamanı değişiklikleri, belirli bir sürümü üzerinde çalışan tüm uygulamaları etkiler.
+Uyumluluk, her bir .NET sürümünün çok önemli bir hedefidir. Uyumluluk, her sürümün eklenebilir olmasını sağlar, bu nedenle önceki sürümler çalışmaya devam edecektir. Öte yandan, önceki işlevlerde yapılan değişiklikler (performansı artırmak, güvenlik sorunlarını gidermek veya hataları gidermek için), mevcut koddaki veya sonraki bir sürümde çalışan mevcut uygulamalarda uyumluluk sorunlarına neden olabilir. .NET Framework yeniden hedefleme değişikliklerini ve çalışma zamanı değişikliklerini tanır. Yeniden hedefleme değişiklikleri, .NET Framework belirli bir sürümünü hedefleyen, ancak sonraki bir sürümde çalışan uygulamaları etkiler. Çalışma zamanı değişiklikleri, belirli bir sürümde çalışan tüm uygulamaları etkiler.
 
-Her bir uygulama tarafından belirtilen .NET Framework'ün belirli bir sürümünü hedefler:
+Her uygulama, tarafından belirtilebilen .NET Framework belirli bir sürümünü hedefler:
 
-* Visual Studio'da hedef Framework'ü tanımlama.
-* Hedef Çerçeve proje dosyasında belirtme.
-* Uygulama bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute> kaynak koduna.
+- Visual Studio 'da hedef çerçeve tanımlama.
+- Hedef Framework bir proje dosyasında belirtiliyor.
+- <xref:System.Runtime.Versioning.TargetFrameworkAttribute> Kaynak koda uygulama.
 
-Hangi hedef değerinden daha yeni bir sürümü üzerinde çalışırken, .NET Framework quirked davranışı hedeflenen sürümün taklit etmek için kullanır. Diğer bir deyişle, uygulama Framework'ün daha yeni sürümlerde çalışır, ancak daha eski bir sürümünde çalışıyorsa gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunları birçoğu bu quirking modeliyle azalır. .NET Framework sürümü, bir uygulama hedefleri kodun çalıştığı uygulama etki alanı için giriş derleme hedef sürümünü göre belirlenir. Tüm ek derlemeler hedefleyen uygulama etki alanı, .NET Framework sürümü yüklendi. Örneğin, yürütülebilir bir dosya söz konusu olduğunda, yürütülebilir hedefleri çerçevedir, tüm derlemeleri, uygulama etki alanı altında çalıştırılacağı uyumluluk modu.
+Hedeflenenden daha yeni bir sürümde çalışırken, .NET Framework, eski hedeflenen sürümü taklit etmek için olağandışı davranışı kullanır. Diğer bir deyişle, uygulama Framework 'ün daha yeni bir sürümünde çalışır, ancak eski sürümde çalışıyor gibi davranır. .NET Framework sürümleri arasındaki uyumluluk sorunlarının birçoğu, bu olağandışı model aracılığıyla azaltıldığında. Uygulamanın hedeflediği .NET Framework sürümü, kodun üzerinde çalıştığı uygulama etki alanı için giriş derlemesinin hedef sürümüne göre belirlenir. Bu uygulama etki alanı hedefine yüklenen ve .NET Framework sürümü olan tüm ek derlemeler. Örneğin, yürütülebilir dosya olması durumunda, çalıştırılabilir hedef çerçeve, uygulama etki alanındaki tüm derlemeler altında çalışır.
 
 ## <a name="runtime-changes"></a>{1&gt;Çalışma zamanı değişiklikleri&lt;1}
 
-Çalışma zamanı sorunlarına bir makinede yeni bir çalışma zamanı yerleştirilir ve aynı ikili dosyaları çalıştırın, ancak farklı bir davranış görülür ortaya çıkan olanlardır. Bir ikili için .NET Framework 4.0 derlenmişse 4.5 veya sonraki sürümlerinde .NET Framework 4.0 uyumluluk modunda çalışır. 4.5 etkileyen değişiklikler birçoğu 4.0 için derlenmiş bir ikili etkilemez. Bu, uygulama etki alanına özgü ve giriş bütünleştirilmiş kodun ayarlarına bağlıdır.
+Çalışma zamanı sorunları, bir makineye yeni bir çalışma zamanı yerleştirildiğinde ve aynı ikililerin çalıştırılmasından, ancak farklı davranışların görüldüğünde ortaya çıkan olanlardır. .NET Framework 4,0 için bir ikili derlenmişse, 4,5 veya sonraki sürümlerde .NET Framework 4,0 uyumluluk modunda çalıştırılır. 4,5 ' i etkileyen birçok değişikliğin birçoğu, 4,0 için derlenen ikiliyi etkilemez. Bu, AppDomain 'e özeldir ve giriş derlemesinin ayarlarına bağlıdır.
 
 ## <a name="retargeting-changes"></a>Yeniden hedefleme değişiklikleri
 
-Yeniden hedefleme sorunları 4.0 hedef bütünleştirilmiş 4.5 hedefine artık ayarlandığında ortaya çıkan olanlardır. Artık derleme yeni özelliklerin yanı sıra eski özelliklere olası uyumluluk sorunları olarak kabul eder. Yeniden, bu giriş derlemesi tarafından şekilde belirlenmiştir derleme kullanan bir konsol uygulaması ya da derlemeye başvuran Web sitesidir.
+Yeniden hedefleme sorunları, 4,0 hedefleyen bir derleme artık Target 4,5 olarak ayarlandığında ortaya çıkan sorunlardır. Artık derleme, yeni özelliklerin yanı sıra eski özelliklere yönelik olası uyumluluk sorunlarını da giderir. Bu, giriş derlemesi tarafından belirlenir, bu nedenle derlemeyi kullanan konsol uygulaması veya derlemeye başvuran web sitesi.
 
-## <a name="net-compatibility-diagnostics"></a>.NET uyumluluğu tanılama
+## <a name="net-compatibility-diagnostics"></a>.NET uyumluluk tanılaması
 
-.NET uyumluluğu tanılama Roslyn tabanlı Çözümleyicileri, .NET Framework sürümleri arasındaki uygulama uyumluluk sorunlarını tanımlamaya yardımcı olan. Belirli bir geçiş için yalnızca bir alt uygulanır ancak bu liste tüm kullanılabilir Çözümleyicileri içerir. Hangi sorunlarını planlanan geçiş için geçerlidir ve yalnızca bu belirir Çözümleyicileri belirler.
+.NET uyumluluk Tanılaması, .NET Framework sürümleri arasındaki uygulama uyumluluk sorunlarını belirlemenize yardımcı olan Roslyn destekli çözümleyiciler. Bu liste tüm çözümleyiciler içerir, ancak belirli bir geçişe yalnızca bir alt küme uygulanacaktır. Çözümleyiciler, planlı geçiş için geçerli olan sorunları tespit eder ve yalnızca bunları yüzey olarak görür.
 
-Her sorun, aşağıdaki bilgileri içerir:
+Her sorun aşağıdaki bilgileri içerir:
 
-- Önceki bir sürümden değişikliklerin açıklaması.
+- Önceki sürümden nelerin değiştiğini açıklama.
 
-- Nasıl değişiklik müşteriler ve herhangi bir geçici çözüm sürümler arasında uyumluluğu korumak kullanılabilir olup etkiler.
+- Değişikliğin müşterileri nasıl etkilediği ve sürümler arasında uyumluluğu korumak için herhangi bir geçici çözüm olup olmadığı.
 
-- Ne kadar önemli olduğunu değişikliği'nin bir değerlendirme. Bir uyumluluk sorununu kategorilere ayrılabilir gibi:
+- Değişikliğin ne kadar önemli olduğunu gösteren bir değerlendirme. Uygulama uyumluluğu sorunu şöyle kategorize edilir:
 
     |   |   |
     |---|---|
-    |Ana|Çok sayıda uygulamayı etkileyen veya kod değişikliği gerektiren önemli bir değişiklik.|
-    |İkincil|Az sayıda uygulamayı etkileyen veya az miktarda kod değişikliği gerektiren bir değişiklik.|
-    |Uç durum|Bir değişiklik belirli, genel olmayan senaryolar altında uygulamaları etkiler.|
-    |Geçirgen|Bir değişiklik ile uygulamanın geliştiricisi veya kullanıcısı üzerinde fark edilebilir etkisi.|
+    |Ana|Çok sayıda uygulamayı etkileyen veya kodun önemli bir şekilde değiştirilmesini gerektiren önemli bir değişiklik.|
+    |İkincil|Az sayıda uygulamayı etkileyen veya küçük bir kod değişikliği gerektiren bir değişiklik.|
+    |Uç durum|Uygulamaları çok özel, yaygın olmayan senaryolar altında etkileyen bir değişiklik.|
+    |Geçirgen|Uygulamanın geliştiricisi veya kullanıcısı üzerinde belirgin bir etkiye sahip olmayan bir değişiklik.|
 
-- Sürüm değişikliği framework ilk görüntülendiğinde gösterir. Bazı değişiklikler belirli bir sürümünde sunulan ve sonraki bir sürümde geri; Bu da gösterilir.
+- Sürüm, değişikliğin çerçevede ilk kez göründüğünü gösterir. Bazı değişiklikler belirli bir sürümde tanıtılmıştır ve sonraki bir sürümde geri döndürülür; Bu da belirtilir.
 
 - Değişiklik türü:
 
     |   |   |
     |---|---|
-    |Yeniden Hedefleme|Bu değişiklik, .NET Framework'ün yeni bir sürümünü hedefleyecek şekilde derlenen uygulamaları etkiler.|
-    |Çalışma zamanı|Bu değişiklik, .NET Framework'ün önceki bir sürümünü hedefler, ancak daha sonraki bir sürümü üzerinde çalışan mevcut bir uygulamayı etkiler.|
+    |Yeniden Hedefleme|Değişiklik, .NET Framework yeni bir sürümünü hedeflemek için yeniden derlenen uygulamaları etkiler.|
+    |Çalışma zamanı|Değişiklik, .NET Framework önceki bir sürümünü hedefleyen, ancak sonraki bir sürümde çalışan mevcut bir uygulamayı etkiler.|
 
-- Etkilenen API'leri, varsa.
+- Varsa, etkilenen API 'ler.
 
-- Kullanılabilir tanılama kimlikleri
+- Kullanılabilir tanılamaların kimlikleri
 
 ## <a name="usage"></a>Kullanım
-Başlamak için aşağıdaki uyumluluk değişiklik türünü seçin:
+Başlamak için, aşağıdaki uyumluluk değişikliği türünü seçin:
 
-* [Yeniden Hedefleme Değişiklikleri](./retargeting/index.md)
-* [Çalışma Zamanı Değişiklikleri](./runtime/index.md)
+- [Yeniden Hedefleme Değişiklikleri](./retargeting/index.md)
+- [Çalışma Zamanı Değişiklikleri](./runtime/index.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

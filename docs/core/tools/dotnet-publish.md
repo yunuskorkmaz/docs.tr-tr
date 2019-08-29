@@ -2,12 +2,12 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu .NET Core projenizi bir dizinde yayımlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 972937ac1bc32b3749d4e1b6b8874c3516f5680c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331037"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105143"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -49,10 +49,10 @@ dotnet publish [-h|--help]
 
 `dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
-* *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
-* *. Deps. JSON* dosyası, projenin tüm bağımlılıklarını içerir.
-* uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası, ayrıca çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
-* NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
+- *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
+- *. Deps. JSON* dosyası, projenin tüm bağımlılıklarını içerir.
+- uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası, ayrıca çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
+- NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
 
 `dotnet publish` Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md). Yayımlanan bir uygulamanın dizin yapısı için bkz. [Dizin yapısı](/aspnet/core/hosting/directory-structure).
 

@@ -16,71 +16,71 @@ helpviewer_keywords:
 ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01314c160fc531f5c97a1369c8444dce7f590d53
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912762"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106608"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>Tarih ve saatlerle aritmetik işlemler gerçekleştirme
 
-Olsa da hem <xref:System.DateTime> ve <xref:System.DateTimeOffset> yapıları değerlerine aritmetik işlemleri üyeleri sağlayabilir, aritmetik işlemler sonuçlarını çok farklıdır. Bu konuda bu farklılıkları inceler, tarih ve saat verilerinin saat dilimini tanıma derece ilgili ve tam olarak kullanarak tarih ve saat verileri saat dilimi kullanan işlemlerini nasıl gerçekleştireceğinizi açıklar.
+Hem hem de <xref:System.DateTime> <xref:System.DateTimeOffset> yapıları, değerleri üzerinde aritmetik işlemler gerçekleştiren Üyeler sağlamasına rağmen aritmetik işlemlerin sonuçları çok farklıdır. Bu konu, bu farklılıkları inceler, bunları tarih ve saat verilerinde zaman dilimi tanıma derecelerde ilişkilendirir ve Tarih ve saat verilerini kullanarak tam saat dilimi ile gerçekleştirilen işlemlerin nasıl gerçekleştirileceğini açıklar.
 
-## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a>Koleksiyonlardaki karşılaştırmalar ve DateTime değerlerini içeren aritmetik işlemler
+## <a name="comparisons-and-arithmetic-operations-with-datetime-values"></a>Tarih saat değerleri ile karşılaştırmalar ve aritmetik işlemler
 
-<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> Özelliği sağlayan bir <xref:System.DateTimeKind> tarih ve saati yerel saat, Eşgüdümlü Evrensel Saat (UTC) veya belirtilmeyen bir saat dilimindeki saati temsil edip etmediğini belirten atanacak değer. Ancak, bu sınırlı saat dilimi bilgilerini karşılaştırma veya tarih ve saat aritmetiği gerçekleştirme göz ardı edilir <xref:System.DateTimeKind> değerleri. Geçerli yerel saat geçerli UTC saati ile karşılaştırır, aşağıdaki örnek bunu göstermektedir.
+Özelliği yerel saati, <xref:System.DateTimeKind> Eşgüdümlü Evrensel saati (UTC) veya belirtilmeyen bir saat dilimindeki saati temsil edip etmediğini göstermek için bir değerin tarih ve saate atanmasını sağlar. <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> Ancak, değerler üzerinde <xref:System.DateTimeKind> tarih ve saat aritmetiği karşılaştırırken veya gerçekleştirilirken bu sınırlı saat dilimi bilgisi yok sayılır. Geçerli yerel saati geçerli UTC saatine göre karşılaştıran aşağıdaki örnek, bunu gösterir.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual2.vb#2)]
 
-<xref:System.DateTime.CompareTo%28System.DateTime%29> Yöntemi raporları yerel saat öncesi (veya küçüktür) UTC saati ve çıkarma işlemi gösterir, ABD'deki bir sistem için yerel saati ile UTC arasındaki fark Pasifik Standart saat dilimi yedi saattir. Ancak bu iki değerden zaman tek bir nokta farklı temsilleri sağladığından, bu durumda bu zaman aralığı UTC'den yerel saat diliminin uzaklığı için tamamen ilişkilerinizi temizleyin.
+<xref:System.DateTime.CompareTo%28System.DateTime%29> Yöntemi, yerel saatin UTC saatinden (veya ondan küçüktür) daha eski olduğunu bildiriyor ve çıkarma işlemi, ABD 'deki bir sistem için UTC ve yerel saat arasındaki farkı gösterir Pasifik standart saat dilimi yedi saattir. Ancak, bu iki değer tek bir noktaya ait farklı gösterimler sağladığından bu zaman aralığı, yerel saat diliminin UTC 'ye olan farkı ile tamamen aynı olur.
 
-Daha genel <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği tarafından döndürülen sonuçlar etkilemez <xref:System.DateTime.Kind> karşılaştırma ve aritmetik yöntemleri (karşılaştırma zaman iki özdeş noktalar da anlaşılacağı gibi), ancak bu sonuçlar yorumunu etkileyebilir. Örneğin:
+Daha genel olarak, <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özelliği karşılaştırma ve aritmetik yöntemler tarafından <xref:System.DateTime.Kind> döndürülen sonuçları etkilemez (aynı zamanda iki özdeş noktasının karşılaştırılmasının yanı sıra, bu sonuçların yorumunu etkileyebilse de). Örneğin:
 
-* İki tarih ve saat değerleri üzerinde ayarlanmış herhangi bir aritmetik işlemin sonucu gerçekleştirilen <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özellikleri eşit <xref:System.DateTimeKind> iki değer arasındaki gerçek zaman aralığını yansıtır. Benzer şekilde, bu iki tarih ve saat değerleri karşılaştırma doğru bir şekilde zamanları arasındaki ilişkiyi yansıtır.
+- İki tarih ve saat değeri üzerinde gerçekleştirilen herhangi bir aritmetik işlemin sonucu, özelliklerinin <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> ikisi de eşit <xref:System.DateTimeKind> olan iki değer arasındaki gerçek zaman aralığını yansıtır. Benzer şekilde, iki tarih ve saat değerinin karşılaştırılması saatler arasındaki ilişkiyi doğru bir şekilde yansıtır.
 
-* İki tarih ve saat değerleri üzerinde ayarlanmış herhangi aritmetikte veya Karşılaştırma işleminin sonucu gerçekleştirilen <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özellikleri eşit <xref:System.DateTimeKind> veya farklı olan iki tarih ve saat değerlerini <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özellik değerleri yansıtır saatin farkı iki değer arasında.
+- İki tarih ve saat değeri <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> üzerinde gerçekleştirilen her türlü aritmetik veya karşılaştırma işleminin sonucu, her ikisi de farklı <xref:System.DateTimeKind> <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> özellik değerlerine eşit veya iki tarih ve saat değerleri, saat cinsinden farkı yansıtır iki değer arasında.
 
-* Belirli bir değeri belirsiz veya geçersiz değil veya yerel saat diliminin geçiş veya gün ışığından yararlanma neden ayarlama kuralları etkisini hesabı yararlanabilir mi yoksa yerel tarih ve saat değerleri üzerinde aritmetikte veya karşılaştırma işlemlerinde düşünün zaman kazandırır.
+- Yerel Tarih ve saat değerlerinde aritmetik veya karşılaştırma işlemleri, belirli bir değerin belirsiz veya geçersiz olup olmadığını düşünmüyor ya da yerel saat diliminin günışığından veya tarihine kadar olan tüm ayarlama kurallarının etkisinin bir hesabını alırlar tasarruf süresi.
 
-* Karşılaştırır veya yerel saati ile UTC arasındaki farkı hesaplar herhangi bir işlem sonucu UTC'den yerel saat diliminin uzaklığı için eşit bir zaman aralığı içerir.
+- UTC ve yerel bir saat arasındaki farkı karşılaştıran veya hesaplayan herhangi bir işlem, yerel saat diliminin, sonuçta UTC 'ye olan uzaklığa eşit bir zaman aralığı içerir.
 
-* Basit saatin karşılaştırır veya belirtilmeyen bir saat ve UTC veya yerel saat arasındaki farkı hesaplar herhangi bir işlem yansıtır. Saat dilimi farklarını değil olarak değerlendirilir ve sonuç saat dilimi ayarlama kurallarını uygulama yansıtmaz.
+- Belirtilmeyen bir saat ve UTC ya da yerel saat arasındaki farkı karşılaştıran veya hesaplayan tüm işlemler basit saat süresini yansıtır. Saat dilimi farklılıkları dikkate alınmamaktadır ve sonuç, saat dilimi ayarlama kurallarının uygulamasını yansıtmaz.
 
-* Karşılaştırır veya iki arasındaki farkı hesaplar herhangi bir işlem saatleri, iki farklı saat dilimlerinde saati arasındaki farkı gösteren bir bilinmeyen aralık içerebilir belirtilmemiş.
+- İki belirtilmemiş zaman arasındaki farkı karşılaştıran veya hesaplayan herhangi bir işlem, iki farklı saat dilimindeki zaman arasındaki farkı yansıtan bilinmeyen bir Aralık içerebilir.
 
-Hangi saat diliminde farklar tarih ve saat hesaplamaları etkilemez birçok senaryo vardır (bunlardan bazıları için bkz [DateTime, DateTimeOffset, TimeSpan ve Timezoneınfo arasında seçim](../../../docs/standard/datetime/choosing-between-datetime.md)) veya, bağlam Tarih ve saat verileri karşılaştırma veya aritmetik işlemleri anlamı tanımlar.
+Zaman dilimi farklılıklarının tarih ve saat hesaplamalarını etkilemediği pek çok senaryo vardır (bunlardan bazılarının bir tartışması için, bkz. Tarih [saat, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapma](../../../docs/standard/datetime/choosing-between-datetime.md)) veya tarih ve saat verisi bağlamı karşılaştırma veya aritmetik işlemlerin anlamını tanımlar.
 
-## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a>Koleksiyonlardaki karşılaştırmalar ve DateTimeOffset değer aritmetik işlemler
+## <a name="comparisons-and-arithmetic-operations-with-datetimeoffset-values"></a>DateTimeOffset değerleri ile karşılaştırmalar ve aritmetik işlemler
 
-A <xref:System.DateTimeOffset> yalnızca bir tarih ve saat, aynı zamanda bu tarih ve saat UTC'ye göre kesin bir şekilde tanımlayan bir uzaklık değeri içerir. Bu eşitlik için biraz farklı bir biçimde tanımlamak mümkün kılar <xref:System.DateTimeOffset> değerleri. Oysa <xref:System.DateTime> değerler aynı tarih ve saat değeri varsa eşit <xref:System.DateTimeOffset> değerler her ikisi de zaman içinde aynı noktaya başvuruyorsa eşit. Böylece bir <xref:System.DateTimeOffset> daha doğru ve karşılaştırmaları ve iki tarihleri ve saatleri arasındaki aralığı belirlemek çoğu aritmetik işlemler kullanıldığında yorumu geçirilmesi gereken daha az bir değer. Aşağıdaki örnek, <xref:System.DateTimeOffset> UTC ve yerel karşılaştırıldığında önceki örneğe eşdeğerdir <xref:System.DateTimeOffset> değerlerini, bu davranışı farklılık gösterir.
+Bir <xref:System.DateTimeOffset> değer yalnızca bir tarih ve saat değil, bu tarih ve saati UTC 'ye göre kesin bir şekilde tanımlayan bir uzaklıktan oluşur. Bu, eşitlik ' ın <xref:System.DateTimeOffset> değerlere göre biraz farklı şekilde tanımlanması mümkün olur. Aynı tarih ve saat değerine sahip olmaları durumunda <xref:System.DateTimeOffset> Değerlereşitse,herikisideaynınoktayabaşvurduklarındadeğerlereşittir.<xref:System.DateTime> Bu, karşılaştırmalarda ve iki tarih ve saat arasındaki aralığı belirlemede en çok aritmetik işlemlerde bir değer daha doğru ve daha az bir <xref:System.DateTimeOffset> değer sağlar. Aşağıdaki örnek, <xref:System.DateTimeOffset> yerel ve UTC <xref:System.DateTimeOffset> değerlerini karşılaştırmakta olan bir önceki örneğe eşdeğerdir, bu farkı davranışa göre gösterir.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual3.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual3.vb#3)]
 
-Bu örnekte, <xref:System.DateTimeOffset.CompareTo%2A> yöntemi gösterir geçerli yerel saat ve geçerli UTC saatine eşittir ve çıkarılmasının çalıştığını <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> değerleri gösteren iki zaman arasındaki farkı olduğunu <xref:System.TimeSpan.Zero?displayProperty=nameWithType>.
+Bu örnekte, <xref:System.DateTimeOffset.CompareTo%2A> yöntemi geçerli yerel saatin ve geçerli UTC zamanının eşit olduğunu ve <xref:System.DateTimeOffset.CompareTo(System.DateTimeOffset)> değerlerin çıkarılması iki kez <xref:System.TimeSpan.Zero?displayProperty=nameWithType>arasındaki farkın olduğunu gösterir.
 
-Kullanmanın baş sınırlama <xref:System.DateTimeOffset> tarih ve saat aritmetiği değerleri olan, ancak <xref:System.DateTimeOffset> değerlere sahip bazı saat dilimini tanıma, bunlar tamamen saat dilimi farkında değildir. Ancak <xref:System.DateTimeOffset> değerinin uzaklığı UTC saat diliminin uzaklığı yansıtan zaman bir <xref:System.DateTimeOffset> değişkenine bir değerin ilk atandığı, saat diliminden bundan sonra ilişkilendirmesi olur. Artık doğrudan tanımlanabilir bir saat ile ilişkili olduğundan, toplama ve çıkarma tarih ve saat aralığı göz önünde bulundurmaz saat diliminin ayarlama kuralları.
+Tarih ve saat aritmetiği içindeki <xref:System.DateTimeOffset> değerlerin kullanılması, değerlerin bir saat dilimi tanıma sahip <xref:System.DateTimeOffset> olmasına rağmen, bu değerler tam zaman dilimi farkında değildir. Değerin boşluğu <xref:System.DateTimeOffset> , bir <xref:System.DateTimeOffset> değişken ilk olarak bir değere atandığında bir zaman diliminin UTC 'den sapmasını yansıtmasına karşın, bundan sonra saat diliminden bir ilişkisi olur. Artık tanınabilir bir süre ile doğrudan ilişkili olmadığından, tarih ve saat aralıklarının eklenmesi ve çıkarılması bir saat diliminin ayarlama kurallarını dikkate almaz.
 
-Göstermek için gün ışığından yararlanma saatine ABD'deki geçiş Merkezi standart saat dilimi 2: 00'da gerçekleşir 9 Mart 2008. Bu iki ve yarım saat aralığı 1:30 AM Orta Standart Saati için eklediğiniz anlamına gelir 9 Mart 2008'de bir tarih ve saat 5: 00'da, üretmelidir. 9 Mart 2008. Aşağıdaki örnekte gösterildiği gibi ancak ek 4: 00'da sonucudur 9 Mart 2008. Zaman içinde duyuyoruz ilgilenen saat diliminde olmasa da bu bu işlemin sonucunu doğru noktası zamanında temsil Not (diğer bir deyişle, beklenen saat dilimi yok uzaklık).
+Göstermek için ABD 'de yaz saati kaydetme zamanına geçiş Merkezi Standart saat dilimi 2:00 saat içinde gerçekleşir 9 Mart 2008 ' de. Bu, iki ve yarı saat aralığını 1:30 ' in orta standart saatine eklemek anlamına gelir. 9 Mart 2008 ' de, 5:00 ' de bir tarih ve saat üretilmesi gerekir 9 Mart 2008 ' de. Ancak, aşağıdaki örnekte gösterildiği gibi, eklemenin sonucu 4:00 ' dir. 9 Mart 2008 ' de. Bu işlemin sonucunun zaman içinde doğru noktayı temsil ettiğini, ancak ilgilendiğiniz saat dilimindeki zaman olmasa da (beklenen saat dilimi denketmesine sahip olmadığı) unutmayın.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual4.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual4.vb#4)]
 
-## <a name="arithmetic-operations-with-times-in-time-zones"></a>Saatleri saat diliminde aritmetik işlemler
+## <a name="arithmetic-operations-with-times-in-time-zones"></a>Zaman dilimlerinde zamanlarla aritmetik işlemler
 
-<xref:System.TimeZoneInfo> Sınıfı bir dizi bunlar saatler bir saat diliminden diğerine dönüştürdüğünüzde, düzeltmeleri otomatik olarak uygulama dönüştürme yöntemleri içerir. Bunlar aşağıdakileri içerir:
+Sınıfı <xref:System.TimeZoneInfo> , saatleri bir saat diliminden diğerine dönüştürtiklerinde otomatik olarak ayarlamaları uygulayan bir dizi dönüştürme yöntemi içerir. Bunlar aşağıdakileri içerir:
 
-* <xref:System.TimeZoneInfo.ConvertTime%2A> Ve <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> saatleri herhangi iki saat dilimleri arasında dönüştürme yöntemleri.
+- İki saat <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A> dilimi arasında saat dönüştüren veyöntemleri.<xref:System.TimeZoneInfo.ConvertTime%2A>
 
-* <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> Ve <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> belirli bir saat dilimindeki saati UTC'ye dönüştürün ya da belirli bir saat dilimindeki saati UTC'ye dönüştürün yöntemleri.
+- Ve belirli <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> bir saat dilimindeki saati UTC 'ye dönüştüren veya UTC 'yi belirli bir saat dilimindeki zamana dönüştüren ve yöntemleri. <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>
 
-Ayrıntılar için bkz [saatleri saat dilimleri arasında dönüştürme](../../../docs/standard/datetime/converting-between-time-zones.md).
+Ayrıntılar için bkz. [saat dilimleri arasında süreleri dönüştürme](../../../docs/standard/datetime/converting-between-time-zones.md).
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> Sınıfı, tarih ve saat aritmetiği gerçekleştirdiğinizde ayarlama kuralları otomatik olarak geçerli olan herhangi bir yöntem sağlamaz. Ancak, bir saat dilimindeki saati UTC'ye dönüştürme, aritmetik işlemi gerçekleştiren ve ardından saat dilimindeki saati dön UTC'den dönüştürme bunu yapabilirsiniz. Ayrıntılar için bkz [nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md).
+Sınıfı <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)> , tarih ve saat aritmetiği gerçekleştirirken ayarlama kurallarını otomatik olarak uygulayan herhangi bir yöntem sağlamaz. Bununla birlikte, bir saat dilimindeki saati UTC 'ye dönüştürerek, aritmetik işlemi gerçekleştirerek ve UTC 'den saat diliminizdeki zamana doğru dönüştürmeden bunu yapabilirsiniz. Ayrıntılar için bkz [. nasıl yapılır: Tarih ve Saat Aritmetiğinde](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)saat dilimlerini kullanın.
 
-Örneğin, aşağıdaki kod iki-ve-a-yarım saat 2: 00'da için eklenen önceki koda benzer 9 Mart 2008. Ancak, tarih ve saat aritmetiği gerçekleştirir ve ardından sonucu UTC'den merkezi standart saat geri dönüştürür önce merkezi standart saat UTC'ye dönüştürür olduğundan, sonuçta elde edilen zaman merkezi standart saat diliminin gün ışığından geçiş yansıtır saat.
+Örneğin, aşağıdaki kod, 2:00 ve 2 ' ye iki-a-yarı saat ekleyen önceki koda benzer. 9 Mart 2008 ' de. Bununla birlikte, tarih ve saat aritmetiği yapmadan önce bir merkezi standart saati UTC 'ye dönüştürdüğünden ve sonucu UTC 'den standart saate dönüştürdüğünde, sonuçta elde edilen süre, merkezi standart saat diliminin günışığından yararlanma 'a geçişini yansıtır ışınızda.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual5.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual5.vb#5)]
@@ -88,4 +88,4 @@ Ayrıntılar için bkz [saatleri saat dilimleri arasında dönüştürme](../../
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tarihler, saatler ve saat dilimleri](../../../docs/standard/datetime/index.md)
-- [Nasıl yapılır: Tarih ve saat aritmetiğinde saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
+- [Nasıl yapılır: Tarih ve Saat Aritmetiğinde Saat dilimlerini kullanma](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)
