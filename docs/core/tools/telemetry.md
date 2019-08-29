@@ -1,133 +1,141 @@
 ---
-title: .NET core SDK'sı telemetri
-description: Analiz, hangi verileri toplanır ve nasıl devre dışı bırakmak için kullanım bilgileri toplamasına .NET Core SDK'sı telemetri özellikleri keşfedin.
-author: richlander
-ms.date: 06/20/2018
+title: .NET Core SDK telemetri
+description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
+author: KathleenDollard
+ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397750"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133693"
 ---
-# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="42cb2-103">.NET core SDK'sı telemetri</span><span class="sxs-lookup"><span data-stu-id="42cb2-103">.NET Core SDK telemetry</span></span>
+# <a name="net-core-sdk-telemetry"></a><span data-ttu-id="946d7-103">.NET Core SDK telemetri</span><span class="sxs-lookup"><span data-stu-id="946d7-103">.NET Core SDK telemetry</span></span>
 
-<span data-ttu-id="42cb2-104">[.NET Core SDK'sı](index.md) içeren bir [telemetri özellik](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) , kullanım bilgilerini toplar.</span><span class="sxs-lookup"><span data-stu-id="42cb2-104">The [.NET Core SDK](index.md) includes a [telemetry feature](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) that collects usage information.</span></span> <span data-ttu-id="42cb2-105">.NET ekibi geliştirilebilir bu nedenle araçları nasıl kullanıldığını anladığını önemlidir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-105">It's important that the .NET Team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="42cb2-106">Daha fazla bilgi için [.NET Core SDK'sı Telemetri öğrendiklerimizi](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).</span><span class="sxs-lookup"><span data-stu-id="42cb2-106">For more information, see [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/).</span></span>
+<span data-ttu-id="946d7-104">[.NET Core SDK](index.md) , .NET Core CLI çöktüğünde kullanım verilerini ve özel durum bilgilerini toplayan bir telemetri özelliği içerir.</span><span class="sxs-lookup"><span data-stu-id="946d7-104">The [.NET Core SDK](index.md) includes a telemetry feature that collects usage data and exception information when the .NET Core CLI crashes.</span></span> <span data-ttu-id="946d7-105">.NET Core CLI .NET Core SDK ile birlikte gelir ve .NET Core uygulamalarınızı oluşturmanızı, test etmeniz ve yayımlamanıza olanak tanıyan fiiller kümesidir.</span><span class="sxs-lookup"><span data-stu-id="946d7-105">The .NET Core CLI comes with the .NET Core SDK and is the set of verbs that enable you to build, test, and publish your .NET Core apps.</span></span> <span data-ttu-id="946d7-106">.NET ekibinin, araçların iyileştirilmesi için nasıl kullanıldığını anladığından emin olmanız önemlidir.</span><span class="sxs-lookup"><span data-stu-id="946d7-106">It's important that the .NET team understands how the tools are used so they can be improved.</span></span> <span data-ttu-id="946d7-107">Hatalar hakkında bilgi, takımın sorunları çözmesine ve hataları düzeltmesine yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="946d7-107">Information on failures helps the team resolve problems and fix bugs.</span></span>
 
-<span data-ttu-id="42cb2-107">Anonim ve yayınlanan hem Microsoft hem de altında topluluk tarafından kullanım için toplu bir biçimde toplanan verileri [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span><span class="sxs-lookup"><span data-stu-id="42cb2-107">The collected data is anonymous and published in an aggregated form for use by both Microsoft and the community under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span>
+<span data-ttu-id="946d7-108">Toplanan veriler anonimdir ve [Creative Commons Attribution Lisansı](https://creativecommons.org/licenses/by/4.0/)kapsamında toplu olarak yayımlanır.</span><span class="sxs-lookup"><span data-stu-id="946d7-108">The collected data is anonymous and published in aggregate under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).</span></span> 
 
-## <a name="scope"></a><span data-ttu-id="42cb2-108">Kapsam</span><span class="sxs-lookup"><span data-stu-id="42cb2-108">Scope</span></span>
+## <a name="scope"></a><span data-ttu-id="946d7-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="946d7-109">Scope</span></span>
 
-<span data-ttu-id="42cb2-109">`dotnet` Komutu, hem uygulama hem de .NET Core CLI başlatmak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="42cb2-109">The `dotnet` command is used to launch both apps and the .NET Core CLI.</span></span> <span data-ttu-id="42cb2-110">`dotnet` Komutun kendisindeki telemetri toplamak değil.</span><span class="sxs-lookup"><span data-stu-id="42cb2-110">The `dotnet` command itself doesn't collect telemetry.</span></span> <span data-ttu-id="42cb2-111">.NET Core CLI komutları tarafından çalıştırılan `dotnet` komut telemetri toplar.</span><span class="sxs-lookup"><span data-stu-id="42cb2-111">The .NET Core CLI commands run by the `dotnet` command collect the telemetry.</span></span>
+<span data-ttu-id="946d7-110">`dotnet`iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için.</span><span class="sxs-lookup"><span data-stu-id="946d7-110">`dotnet` has two functions: to run apps, and to execute CLI commands.</span></span> <span data-ttu-id="946d7-111">Aşağıdaki biçimde bir uygulamayı başlatmak `dotnet` için kullanılırken telemetri toplanmaz:</span><span class="sxs-lookup"><span data-stu-id="946d7-111">Telemetry *isn't collected* when using `dotnet` to start an application in the following format:</span></span>
 
-<span data-ttu-id="42cb2-112">Telemetri *etkin değilse* kullanırken `dotnet` kendisine bağlı bir komut ile komutu:</span><span class="sxs-lookup"><span data-stu-id="42cb2-112">Telemetry *isn't enabled* when using the `dotnet` command itself, with no command attached:</span></span>
+- `dotnet [path-to-app].dll`
 
-- `dotnet`
-- `dotnet [path-to-app]`
-
-<span data-ttu-id="42cb2-113">Telemetri *etkin* kullanırken [.NET Core CLI komutları](index.md), örneğin:</span><span class="sxs-lookup"><span data-stu-id="42cb2-113">Telemetry *is enabled* when using the [.NET Core CLI commands](index.md), such as:</span></span>
+<span data-ttu-id="946d7-112">Telemetri, şöyle [.NET Core CLI komutlardan](index.md)biri kullanılarak *toplanır* :</span><span class="sxs-lookup"><span data-stu-id="946d7-112">Telemetry *is collected* when using any of the [.NET Core CLI commands](index.md), such as:</span></span>
 
 - `dotnet build`
 - `dotnet pack`
-- `dotnet restore`
 - `dotnet run`
 
-## <a name="how-to-opt-out"></a><span data-ttu-id="42cb2-114">İptal etme</span><span class="sxs-lookup"><span data-stu-id="42cb2-114">How to opt out</span></span>
+## <a name="how-to-opt-out"></a><span data-ttu-id="946d7-113">Devre dışı bırakma</span><span class="sxs-lookup"><span data-stu-id="946d7-113">How to opt out</span></span>
 
-<span data-ttu-id="42cb2-115">.NET Core SDK'sı telemetri özellik varsayılan olarak etkindir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-115">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="42cb2-116">Ayarlayarak telemetri özelliği iyileştirilmiş `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenine `1` veya `true`.</span><span class="sxs-lookup"><span data-stu-id="42cb2-116">Opt out of the telemetry feature by setting the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span>
+<span data-ttu-id="946d7-114">.NET Core SDK telemetri özelliği varsayılan olarak etkindir.</span><span class="sxs-lookup"><span data-stu-id="946d7-114">The .NET Core SDK telemetry feature is enabled by default.</span></span> <span data-ttu-id="946d7-115">Telemetri özelliğini devre dışı bırakmak için, `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini veya `true`olarak `1` ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="946d7-115">To opt out of the telemetry feature, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable to `1` or `true`.</span></span> 
 
-## <a name="data-points"></a><span data-ttu-id="42cb2-117">Veri noktaları</span><span class="sxs-lookup"><span data-stu-id="42cb2-117">Data points</span></span>
+<span data-ttu-id="946d7-116">Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafından tek bir telemetri girişi de gönderilir.</span><span class="sxs-lookup"><span data-stu-id="946d7-116">A single telemetry entry is also sent by the .NET Core SDK installer when a successful installation happens.</span></span> <span data-ttu-id="946d7-117">Devre dışı bırakmak için, .NET Core SDK `DOTNET_CLI_TELEMETRY_OPTOUT` yüklemeden önce ortam değişkenini ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="946d7-117">To opt out, set the `DOTNET_CLI_TELEMETRY_OPTOUT` environment variable before you install the .NET Core SDK.</span></span>
 
-<span data-ttu-id="42cb2-118">Bu özellik aşağıdaki verileri toplar:</span><span class="sxs-lookup"><span data-stu-id="42cb2-118">The feature collects the following data:</span></span>
+## <a name="disclosure"></a><span data-ttu-id="946d7-118">Savunmasız</span><span class="sxs-lookup"><span data-stu-id="946d7-118">Disclosure</span></span>
 
-- <span data-ttu-id="42cb2-119">Zaman damgası çağırma&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-119">Timestamp of invocation&#8224;</span></span>
-- <span data-ttu-id="42cb2-120">Komutu (örneğin "derleme") çağrılır&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-120">Command invoked (for example, "build")&#8224;</span></span>
-- <span data-ttu-id="42cb2-121">Coğrafi konumunu belirlemek için kullanılan üç sekizli IP adresi&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-121">Three octet IP address used to determine geographical location&#8224;</span></span>
-- <span data-ttu-id="42cb2-122">`ExitCode` komutu</span><span class="sxs-lookup"><span data-stu-id="42cb2-122">`ExitCode` of the command</span></span>
-- <span data-ttu-id="42cb2-123">Test Çalıştırıcısı (için test projeleri)</span><span class="sxs-lookup"><span data-stu-id="42cb2-123">Test runner (for test projects)</span></span>
-- <span data-ttu-id="42cb2-124">İşletim sistemi ve sürümü&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-124">Operating system and version&#8224;</span></span>
-- <span data-ttu-id="42cb2-125">Çalışma zamanı kimlikleri çalışma zamanları düğümünde mevcut olup olmadığı</span><span class="sxs-lookup"><span data-stu-id="42cb2-125">Whether runtime IDs are present in the runtimes node</span></span>
-- <span data-ttu-id="42cb2-126">.NET core SDK sürümü&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-126">.NET Core SDK version&#8224;</span></span>
-
-<span data-ttu-id="42cb2-127">&#8224;Bu ölçüm yayımlanır.</span><span class="sxs-lookup"><span data-stu-id="42cb2-127">&#8224;This metric is published.</span></span>
-
-<span data-ttu-id="42cb2-128">.NET Core 2.0 SDK'sı ile başlayarak, yeni veri noktaları toplanır:</span><span class="sxs-lookup"><span data-stu-id="42cb2-128">Starting with .NET Core 2.0 SDK, new data points are collected:</span></span>
-
-- <span data-ttu-id="42cb2-129">`dotnet` komut bağımsız değişkenleri ve seçenekleri: yalnızca bağımsız değişkenleri ve seçenekleri toplanan (değil rasgele dizeleri) bilinir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-129">`dotnet` command arguments and options: only known arguments and options are collected (not arbitrary strings).</span></span>
-- <span data-ttu-id="42cb2-130">SDK'sı bir kapsayıcıda kullanılıp kullanılmadığını.</span><span class="sxs-lookup"><span data-stu-id="42cb2-130">Whether the SDK is running in a container.</span></span>
-- <span data-ttu-id="42cb2-131">Hedef çerçeve.</span><span class="sxs-lookup"><span data-stu-id="42cb2-131">Target frameworks.</span></span>
-- <span data-ttu-id="42cb2-132">Karma MAC adresi: bir şifreleme açısından (SHA256) anonim ve benzersiz bir kimliği için bir makine.</span><span class="sxs-lookup"><span data-stu-id="42cb2-132">Hashed MAC address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> <span data-ttu-id="42cb2-133">Bu ölçüm yayımlanan değil.</span><span class="sxs-lookup"><span data-stu-id="42cb2-133">This metric isn't published.</span></span>
-- <span data-ttu-id="42cb2-134">Karma geçerli çalışma dizini.</span><span class="sxs-lookup"><span data-stu-id="42cb2-134">Hashed current working directory.</span></span>
-
-<span data-ttu-id="42cb2-135">Bu özellik, kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz.</span><span class="sxs-lookup"><span data-stu-id="42cb2-135">The feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="42cb2-136">Bu, kodunuzu taramaz ve adı, depo veya yazar gibi hassas proje düzeyi verileri ayıklamak değil.</span><span class="sxs-lookup"><span data-stu-id="42cb2-136">It doesn't scan your code and doesn't extract sensitive project-level data, such as name, repo, or author.</span></span> <span data-ttu-id="42cb2-137">Veriler güvenli bir şekilde kullanarak Microsoft sunucularına gönderilir [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) kısıtlı erişim'in altında tutulması ve katı güvenlik denetimleri güvenli altında yayımlanan teknoloji [Azuredepolama](https://azure.microsoft.com/services/storage/) sistemler.</span><span class="sxs-lookup"><span data-stu-id="42cb2-137">The data is sent securely to Microsoft servers using [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
-
-<span data-ttu-id="42cb2-138">.NET ekibi araçları nasıl kullanıldığını ve bunlar da ne araçlarla hedeflediğiniz platformun değil çalışıyorsanız bilmek istemektedir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-138">The .NET team wants to know how the tools are used and if they're working well, not what you're building with the tools.</span></span> <span data-ttu-id="42cb2-139">Telemetri hassas veriler ya da toplama şüpheleniyorsanız veri endpoınt yapılıyor veya uygunsuz bir şekilde ele, sorunu bildirin [dotnet/CLI](https://github.com/dotnet/cli/issues) araştırma için depo.</span><span class="sxs-lookup"><span data-stu-id="42cb2-139">If you suspect that the telemetry is collecting sensitive data or that the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository for investigation.</span></span>
-
-## <a name="published-data"></a><span data-ttu-id="42cb2-140">Yayımlanan veriler</span><span class="sxs-lookup"><span data-stu-id="42cb2-140">Published data</span></span>
-
-<span data-ttu-id="42cb2-141">Yayımlanan veriler üç aylık olarak kullanılabilir ve listelenen [.NET Core SDK'sı kullanım verilerini](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md).</span><span class="sxs-lookup"><span data-stu-id="42cb2-141">Published data is available quarterly and are listed at [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md).</span></span> <span data-ttu-id="42cb2-142">Bir veri dosyasının sütunları şunlardır:</span><span class="sxs-lookup"><span data-stu-id="42cb2-142">The columns of a data file are:</span></span>
-
-- <span data-ttu-id="42cb2-143">Timestamp</span><span class="sxs-lookup"><span data-stu-id="42cb2-143">Timestamp</span></span>
-- <span data-ttu-id="42cb2-144">Örnekleri&#8224;</span><span class="sxs-lookup"><span data-stu-id="42cb2-144">Occurrences&#8224;</span></span>
-- <span data-ttu-id="42cb2-145">Komut</span><span class="sxs-lookup"><span data-stu-id="42cb2-145">Command</span></span>
-- <span data-ttu-id="42cb2-146">Coğrafi konum&#8225;</span><span class="sxs-lookup"><span data-stu-id="42cb2-146">Geography&#8225;</span></span>
-- <span data-ttu-id="42cb2-147">OSFamily</span><span class="sxs-lookup"><span data-stu-id="42cb2-147">OSFamily</span></span>
-- <span data-ttu-id="42cb2-148">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="42cb2-148">RuntimeID</span></span>
-- <span data-ttu-id="42cb2-149">OSVersion</span><span class="sxs-lookup"><span data-stu-id="42cb2-149">OSVersion</span></span>
-- <span data-ttu-id="42cb2-150">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="42cb2-150">SDKVersion</span></span>
-
-<span data-ttu-id="42cb2-151">&#8224;*Oluşum* sütunu bu komutun kullanın, sıranın ölçümler için o gün toplam sayısını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="42cb2-151">&#8224;The *Occurrences* column displays the aggregate count of that command's use for that row's metrics that day.</span></span>
-
-<span data-ttu-id="42cb2-152">&#8225;Genellikle, *Coğrafya* sütun bir ülke/bölge adını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="42cb2-152">&#8225;Typically, the *Geography* column displays the name of a country/region.</span></span> <span data-ttu-id="42cb2-153">Bazı durumlarda, bu sütunda, .NET Core Antarktika ya da yanlış konum verileri kullanarak Araştırmacıları nedeniyle Antarktika, kıta görünür.</span><span class="sxs-lookup"><span data-stu-id="42cb2-153">In some cases, the continent of Antarctica appears in this column, either due to researchers using .NET Core in Antarctica or incorrect location data.</span></span>
-
-### <a name="example"></a><span data-ttu-id="42cb2-154">Örnek</span><span class="sxs-lookup"><span data-stu-id="42cb2-154">Example</span></span>
-
-| <span data-ttu-id="42cb2-155">Timestamp</span><span class="sxs-lookup"><span data-stu-id="42cb2-155">Timestamp</span></span>      | <span data-ttu-id="42cb2-156">Örnekleri</span><span class="sxs-lookup"><span data-stu-id="42cb2-156">Occurrences</span></span> | <span data-ttu-id="42cb2-157">Komut</span><span class="sxs-lookup"><span data-stu-id="42cb2-157">Command</span></span> | <span data-ttu-id="42cb2-158">Geography</span><span class="sxs-lookup"><span data-stu-id="42cb2-158">Geography</span></span> | <span data-ttu-id="42cb2-159">OSFamily</span><span class="sxs-lookup"><span data-stu-id="42cb2-159">OSFamily</span></span> | <span data-ttu-id="42cb2-160">RuntimeID</span><span class="sxs-lookup"><span data-stu-id="42cb2-160">RuntimeID</span></span>     | <span data-ttu-id="42cb2-161">OSVersion</span><span class="sxs-lookup"><span data-stu-id="42cb2-161">OSVersion</span></span> | <span data-ttu-id="42cb2-162">SDKVersion</span><span class="sxs-lookup"><span data-stu-id="42cb2-162">SDKVersion</span></span> |
-| -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| <span data-ttu-id="42cb2-163">4/16/2017 0:00</span><span class="sxs-lookup"><span data-stu-id="42cb2-163">4/16/2017 0:00</span></span> | <span data-ttu-id="42cb2-164">8</span><span class="sxs-lookup"><span data-stu-id="42cb2-164">8</span></span>           | <span data-ttu-id="42cb2-165">Çalıştırma</span><span class="sxs-lookup"><span data-stu-id="42cb2-165">run</span></span>     | <span data-ttu-id="42cb2-166">Uganda</span><span class="sxs-lookup"><span data-stu-id="42cb2-166">Uganda</span></span>    | <span data-ttu-id="42cb2-167">Darwin</span><span class="sxs-lookup"><span data-stu-id="42cb2-167">Darwin</span></span>   | <span data-ttu-id="42cb2-168">osx.10.12 x64</span><span class="sxs-lookup"><span data-stu-id="42cb2-168">osx.10.12-x64</span></span> | <span data-ttu-id="42cb2-169">10.12</span><span class="sxs-lookup"><span data-stu-id="42cb2-169">10.12</span></span>     | <span data-ttu-id="42cb2-170">1.0.1</span><span class="sxs-lookup"><span data-stu-id="42cb2-170">1.0.1</span></span>      |
-
-### <a name="datasets"></a><span data-ttu-id="42cb2-171">Veri kümeleri</span><span class="sxs-lookup"><span data-stu-id="42cb2-171">Datasets</span></span>
-
-- [<span data-ttu-id="42cb2-172">2016 - S3</span><span class="sxs-lookup"><span data-stu-id="42cb2-172">2016 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
-- [<span data-ttu-id="42cb2-173">2016 - 4</span><span class="sxs-lookup"><span data-stu-id="42cb2-173">2016 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
-- [<span data-ttu-id="42cb2-174">2017 - S1</span><span class="sxs-lookup"><span data-stu-id="42cb2-174">2017 - Q1</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
-- [<span data-ttu-id="42cb2-175">2017 - S2</span><span class="sxs-lookup"><span data-stu-id="42cb2-175">2017 - Q2</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
-- [<span data-ttu-id="42cb2-176">2017 - S3</span><span class="sxs-lookup"><span data-stu-id="42cb2-176">2017 - Q3</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
-- [<span data-ttu-id="42cb2-177">2017 - 4</span><span class="sxs-lookup"><span data-stu-id="42cb2-177">2017 - Q4</span></span>](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
-
-<span data-ttu-id="42cb2-178">Ek veri kümeleri, standart bir URL biçimi kullanılarak gönderilir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-178">Additional datasets are posted using a standard URL format.</span></span> <span data-ttu-id="42cb2-179">Değiştirin `<YEAR>` yıl ve Değiştir `<QUARTER>` yılın çeyreği ile (kullanın `1`, `2`, `3`, veya `4`).</span><span class="sxs-lookup"><span data-stu-id="42cb2-179">Replace `<YEAR>` with the year and replace `<QUARTER>` with the quarter of the year (use `1`, `2`, `3`, or `4`).</span></span> <span data-ttu-id="42cb2-180">Dosyaları sekmeyle ayrılmış değerler (*TSV*) biçimi.</span><span class="sxs-lookup"><span data-stu-id="42cb2-180">The files are in tab-separated values (*TSV*) format.</span></span>
-
-`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
-
-## <a name="license"></a><span data-ttu-id="42cb2-181">Lisans</span><span class="sxs-lookup"><span data-stu-id="42cb2-181">License</span></span>
-
-<span data-ttu-id="42cb2-182">Microsoft Dağıtım .NET Core ile lisanslanan [Microsoft Yazılımı Lisans koşulları: Microsoft .NET kitaplığı](https://aka.ms/dotnet-core-eula).</span><span class="sxs-lookup"><span data-stu-id="42cb2-182">The Microsoft distribution of .NET Core is licensed with the [Microsoft Software License Terms: Microsoft .NET Library](https://aka.ms/dotnet-core-eula).</span></span> <span data-ttu-id="42cb2-183">Veri toplama ve işleme hakkında daha fazla bilgi için "Veri" başlıklı bölüme bakın.</span><span class="sxs-lookup"><span data-stu-id="42cb2-183">For details on data collection and processing, see the section entitled "Data."</span></span>
-
-<span data-ttu-id="42cb2-184">[.NET NuGet paketleri](https://www.nuget.org/profiles/dotnetframework) aynı lisans kullanın, ancak telemetri etkinleştirme (bkz [kapsam](#scope)).</span><span class="sxs-lookup"><span data-stu-id="42cb2-184">[.NET NuGet packages](https://www.nuget.org/profiles/dotnetframework) use the same license but don't enable telemetry (see [Scope](#scope)).</span></span>
-
-## <a name="disclosure"></a><span data-ttu-id="42cb2-185">Açığa çıkması</span><span class="sxs-lookup"><span data-stu-id="42cb2-185">Disclosure</span></span>
-
-<span data-ttu-id="42cb2-186">İlk birini çalıştırdığınızda, .NET Core SDK'sı aşağıdaki metni görüntüler [.NET Core CLI komutları](index.md) (örneğin, `dotnet restore`).</span><span class="sxs-lookup"><span data-stu-id="42cb2-186">The .NET Core SDK displays the following text when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet restore`).</span></span> <span data-ttu-id="42cb2-187">Metin, çalıştırmakta olduğunuz SDK'sı sürümüne bağlı olarak biraz değişebilir.</span><span class="sxs-lookup"><span data-stu-id="42cb2-187">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="42cb2-188">Nasıl Microsoft, veri toplama hakkında size bildirir, bu "İlk Çalıştırma" deneyimi sunar.</span><span class="sxs-lookup"><span data-stu-id="42cb2-188">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
+<span data-ttu-id="946d7-119">.NET Core SDK, [.NET Core CLI komutlarından](index.md) birini (örneğin, `dotnet build`) ilk kez çalıştırdığınızda aşağıdakine benzer metni görüntüler.</span><span class="sxs-lookup"><span data-stu-id="946d7-119">The .NET Core SDK displays text similar to the following when you first run one of the [.NET Core CLI commands](index.md) (for example, `dotnet build`).</span></span> <span data-ttu-id="946d7-120">Metin, çalıştırmakta olduğunuz SDK sürümüne bağlı olarak biraz farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="946d7-120">Text may vary slightly depending on the version of the SDK you're running.</span></span> <span data-ttu-id="946d7-121">Bu "ilk çalıştırma" deneyimi, Microsoft 'un veri toplamayı nasıl bildisidir.</span><span class="sxs-lookup"><span data-stu-id="946d7-121">This "first run" experience is how Microsoft notifies you about data collection.</span></span>
 
 ```console
-Welcome to .NET Core!
----------------------
-Learn more about .NET Core: https://aka.ms/dotnet-docs
-Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
-
 Telemetry
 ---------
-The .NET Core tools collect usage data in order to help us improve your experience.
-The data is anonymous and doesn't include command-line arguments.
-The data is collected by Microsoft and shared with the community.
-You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
 
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-## <a name="see-also"></a><span data-ttu-id="42cb2-189">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="42cb2-189">See also</span></span>
+## <a name="data-points"></a><span data-ttu-id="946d7-122">Veri noktaları</span><span class="sxs-lookup"><span data-stu-id="946d7-122">Data points</span></span>
 
-- [<span data-ttu-id="42cb2-190">.NET Core SDK'sı Telemetri öğrendiklerimizi</span><span class="sxs-lookup"><span data-stu-id="42cb2-190">What we've learned from .NET Core SDK Telemetry</span></span>](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/)
-- [<span data-ttu-id="42cb2-191">Telemetri başvuru kaynağı (dotnet/CLI depo)</span><span class="sxs-lookup"><span data-stu-id="42cb2-191">Telemetry reference source (dotnet/cli repo)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
-- [<span data-ttu-id="42cb2-192">.NET core SDK'sı kullanım verileri</span><span class="sxs-lookup"><span data-stu-id="42cb2-192">.NET Core SDK Usage Data</span></span>](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+<span data-ttu-id="946d7-123">Telemetri özelliği, Kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz.</span><span class="sxs-lookup"><span data-stu-id="946d7-123">The telemetry feature doesn't collect personal data, such as usernames or email addresses.</span></span> <span data-ttu-id="946d7-124">Kodunuzu taramaz ve ad, depo veya yazar gibi proje düzeyi verileri ayıklamaz.</span><span class="sxs-lookup"><span data-stu-id="946d7-124">It doesn't scan your code and doesn't extract project-level data, such as name, repository, or author.</span></span> <span data-ttu-id="946d7-125">Veriler, [Azure izleyici](https://azure.microsoft.com/services/monitor/) teknolojisini kullanan Microsoft sunucularına güvenli bir şekilde gönderilir, sınırlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında yayımlanır.</span><span class="sxs-lookup"><span data-stu-id="946d7-125">The data is sent securely to Microsoft servers using [Azure Monitor](https://azure.microsoft.com/services/monitor/) technology, held under restricted access, and published under strict security controls from secure [Azure Storage](https://azure.microsoft.com/services/storage/) systems.</span></span>
+
+<span data-ttu-id="946d7-126">Gizliliğinizi korumak bizim için önemlidir.</span><span class="sxs-lookup"><span data-stu-id="946d7-126">Protecting your privacy is important to us.</span></span> <span data-ttu-id="946d7-127">Telemetrinin hassas verileri toplamasını veya verilerin güvenle veya uygun şekilde işlenmekte olduğunu düşünüyorsanız, [DotNet/CLI](https://github.com/dotnet/cli/issues) deposunda bir sorun yapın veya araştırma [dotnet@microsoft.com](mailto:dotnet@microsoft.com) için bir e-posta gönderin.</span><span class="sxs-lookup"><span data-stu-id="946d7-127">If you suspect the telemetry is collecting sensitive data or the data is being insecurely or inappropriately handled, file an issue in the [dotnet/cli](https://github.com/dotnet/cli/issues) repository or send an email to [dotnet@microsoft.com](mailto:dotnet@microsoft.com) for investigation.</span></span>
+
+<span data-ttu-id="946d7-128">Telemetri özelliği aşağıdaki verileri toplar:</span><span class="sxs-lookup"><span data-stu-id="946d7-128">The telemetry feature collects the following data:</span></span>
+
+| <span data-ttu-id="946d7-129">SDK sürümleri</span><span class="sxs-lookup"><span data-stu-id="946d7-129">SDK versions</span></span> | <span data-ttu-id="946d7-130">Veri</span><span class="sxs-lookup"><span data-stu-id="946d7-130">Data</span></span> |
+|--------------|------|
+| <span data-ttu-id="946d7-131">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-131">All</span></span>          | <span data-ttu-id="946d7-132">Çağırma zaman damgası.</span><span class="sxs-lookup"><span data-stu-id="946d7-132">Timestamp of invocation.</span></span> |
+| <span data-ttu-id="946d7-133">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-133">All</span></span>          | <span data-ttu-id="946d7-134">Komut çağrıldı (örneğin, "Build"), 2,1 'den başlayarak karma hale getirilmiş.</span><span class="sxs-lookup"><span data-stu-id="946d7-134">Command invoked (for example, "build"), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="946d7-135">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-135">All</span></span>          | <span data-ttu-id="946d7-136">Coğrafi konumu belirlemede kullanılan üç sekizli IP adresi.</span><span class="sxs-lookup"><span data-stu-id="946d7-136">Three octet IP address used to determine the geographical location.</span></span> |
+| <span data-ttu-id="946d7-137">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-137">All</span></span>          | <span data-ttu-id="946d7-138">İşletim sistemi ve sürümü.</span><span class="sxs-lookup"><span data-stu-id="946d7-138">Operating system and version.</span></span> |
+| <span data-ttu-id="946d7-139">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-139">All</span></span>          | <span data-ttu-id="946d7-140">SDK 'nın üzerinde çalıştığı çalışma zamanı KIMLIĞI (RID).</span><span class="sxs-lookup"><span data-stu-id="946d7-140">Runtime ID (RID) the SDK is running on.</span></span> |
+| <span data-ttu-id="946d7-141">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-141">All</span></span>          | <span data-ttu-id="946d7-142">.NET Core SDK sürümü.</span><span class="sxs-lookup"><span data-stu-id="946d7-142">.NET Core SDK version.</span></span> |
+| <span data-ttu-id="946d7-143">Tümü</span><span class="sxs-lookup"><span data-stu-id="946d7-143">All</span></span>          | <span data-ttu-id="946d7-144">Telemetri profili: isteğe bağlı bir değer yalnızca açık Kullanıcı kabul etme ve Microsoft 'ta dahili olarak kullanılan bir değerdir.</span><span class="sxs-lookup"><span data-stu-id="946d7-144">Telemetry profile: an optional value only used with explicit user opt-in and used internally at Microsoft.</span></span> |
+| <span data-ttu-id="946d7-145">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-145">>=2.0</span></span>        | <span data-ttu-id="946d7-146">Komut bağımsız değişkenleri ve seçenekleri: birkaç bağımsız değişken ve seçenek toplanır (rastgele dizeler değil).</span><span class="sxs-lookup"><span data-stu-id="946d7-146">Command arguments and options: several arguments and options are collected (not arbitrary strings).</span></span> <span data-ttu-id="946d7-147">[Toplanan seçeneklere](#collected-options)bakın.</span><span class="sxs-lookup"><span data-stu-id="946d7-147">See [collected options](#collected-options).</span></span> <span data-ttu-id="946d7-148">2\.1.300 sonrasında karma hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="946d7-148">Hashed after 2.1.300.</span></span> |
+| <span data-ttu-id="946d7-149">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-149">>=2.0</span></span>         | <span data-ttu-id="946d7-150">SDK 'nın bir kapsayıcıda çalışıp çalışmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="946d7-150">Whether the SDK is running in a container.</span></span> |
+| <span data-ttu-id="946d7-151">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-151">>=2.0</span></span>         | <span data-ttu-id="946d7-152">2,1 ' den `TargetFramework` başlayarak karma hale getirilmiş hedef çerçeveler (olaydan).</span><span class="sxs-lookup"><span data-stu-id="946d7-152">Target frameworks (from the `TargetFramework` event), hashed starting in 2.1.</span></span> |
+| <span data-ttu-id="946d7-153">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-153">>=2.0</span></span>         | <span data-ttu-id="946d7-154">Karma medya Access Control (MAC) adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="946d7-154">Hashed Media Access Control (MAC) address: a cryptographically (SHA256) anonymous and unique ID for a machine.</span></span> |
+| <span data-ttu-id="946d7-155">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-155">>=2.0</span></span>         | <span data-ttu-id="946d7-156">Karma hale getirilmiş geçerli çalışma dizini.</span><span class="sxs-lookup"><span data-stu-id="946d7-156">Hashed current working directory.</span></span> |
+| <span data-ttu-id="946d7-157">> = 2.0</span><span class="sxs-lookup"><span data-stu-id="946d7-157">>=2.0</span></span>         | <span data-ttu-id="946d7-158">Karma yükleyici exe dosya adına sahip başarı raporunu yükleme.</span><span class="sxs-lookup"><span data-stu-id="946d7-158">Install success report, with hashed installer exe filename.</span></span> |
+| <span data-ttu-id="946d7-159">> = 2.1.300</span><span class="sxs-lookup"><span data-stu-id="946d7-159">>=2.1.300</span></span>     | <span data-ttu-id="946d7-160">Çekirdek sürümü.</span><span class="sxs-lookup"><span data-stu-id="946d7-160">Kernel version.</span></span> |
+| <span data-ttu-id="946d7-161">> = 2.1.300</span><span class="sxs-lookup"><span data-stu-id="946d7-161">>=2.1.300</span></span>     | <span data-ttu-id="946d7-162">Libc sürümü/sürümü.</span><span class="sxs-lookup"><span data-stu-id="946d7-162">Libc release/version.</span></span> |
+| <span data-ttu-id="946d7-163">> = 3.0.100</span><span class="sxs-lookup"><span data-stu-id="946d7-163">>=3.0.100</span></span>     | <span data-ttu-id="946d7-164">Çıktının yeniden yönlendirilme (true veya false).</span><span class="sxs-lookup"><span data-stu-id="946d7-164">Whether the output was redirected (true or false).</span></span> |
+| <span data-ttu-id="946d7-165">> = 3.0.100</span><span class="sxs-lookup"><span data-stu-id="946d7-165">>=3.0.100</span></span>     | <span data-ttu-id="946d7-166">CLı/SDK kilitlenmesinde, özel durum türü ve yığın izlemesi (yalnızca CLı/SDK kodu, gönderilen yığın izlemesinde bulunur).</span><span class="sxs-lookup"><span data-stu-id="946d7-166">On a CLI/SDK crash, the exception type and its stack trace (only CLI/SDK code is included in the stack trace sent).</span></span> <span data-ttu-id="946d7-167">Daha fazla bilgi için bkz. [.NET Core CLI/SDK kilitlenme özel durum telemetrisi toplandı](#net-core-clisdk-crash-exception-telemetry-collected).</span><span class="sxs-lookup"><span data-stu-id="946d7-167">For more information, see [.NET Core CLI/SDK crash exception telemetry collected](#net-core-clisdk-crash-exception-telemetry-collected).</span></span> |
+
+### <a name="collected-options"></a><span data-ttu-id="946d7-168">Toplanan seçenekler</span><span class="sxs-lookup"><span data-stu-id="946d7-168">Collected options</span></span>
+
+<span data-ttu-id="946d7-169">Bazı komutlar ek veriler gönderir.</span><span class="sxs-lookup"><span data-stu-id="946d7-169">Certain commands send additional data.</span></span> <span data-ttu-id="946d7-170">Bir komut alt kümesi ilk bağımsız değişkeni gönderir:</span><span class="sxs-lookup"><span data-stu-id="946d7-170">A subset of commands sends the first argument:</span></span>
+
+| <span data-ttu-id="946d7-171">Komut</span><span class="sxs-lookup"><span data-stu-id="946d7-171">Command</span></span>               | <span data-ttu-id="946d7-172">Gönderilen ilk bağımsız değişken verileri</span><span class="sxs-lookup"><span data-stu-id="946d7-172">First argument data sent</span></span>                |
+|-----------------------|-----------------------------------------|
+| `dotnet help <arg>`   | <span data-ttu-id="946d7-173">İçin komut yardımı sorgulanırken.</span><span class="sxs-lookup"><span data-stu-id="946d7-173">The command help is being queried for.</span></span>  |
+| `dotnet new <arg>`    | <span data-ttu-id="946d7-174">Şablon adı (karma).</span><span class="sxs-lookup"><span data-stu-id="946d7-174">The template name (hashed).</span></span>             |
+| `dotnet add <arg>`    | <span data-ttu-id="946d7-175">Sözcük `package` veya .`reference`</span><span class="sxs-lookup"><span data-stu-id="946d7-175">The word `package` or `reference`.</span></span>      |
+| `dotnet remove <arg>` | <span data-ttu-id="946d7-176">Sözcük `package` veya .`reference`</span><span class="sxs-lookup"><span data-stu-id="946d7-176">The word `package` or `reference`.</span></span>      |
+| `dotnet list <arg>`   | <span data-ttu-id="946d7-177">Sözcük `package` veya .`reference`</span><span class="sxs-lookup"><span data-stu-id="946d7-177">The word `package` or `reference`.</span></span>      |
+| `dotnet sln <arg>`    | <span data-ttu-id="946d7-178">, Veya `add` `list` sözcüğü.`remove`</span><span class="sxs-lookup"><span data-stu-id="946d7-178">The word `add`, `list`, or `remove`.</span></span>    |
+| `dotnet nuget <arg>`  | <span data-ttu-id="946d7-179">, Veya `delete` `locals` sözcüğü.`push`</span><span class="sxs-lookup"><span data-stu-id="946d7-179">The word `delete`, `locals`, or `push`.</span></span> |
+
+<span data-ttu-id="946d7-180">Bir komut alt kümesi, kullanıldıkları takdirde, değerleriyle birlikte, seçili seçenekleri gönderir:</span><span class="sxs-lookup"><span data-stu-id="946d7-180">A subset of commands sends selected options if they're used, along with their values:</span></span>
+
+| <span data-ttu-id="946d7-181">Seçenek</span><span class="sxs-lookup"><span data-stu-id="946d7-181">Option</span></span>                  | <span data-ttu-id="946d7-182">Komutlar</span><span class="sxs-lookup"><span data-stu-id="946d7-182">Commands</span></span>                                                                                       |
+|-------------------------|------------------------------------------------------------------------------------------------|
+| `--verbosity`           | <span data-ttu-id="946d7-183">Tüm komutlar</span><span class="sxs-lookup"><span data-stu-id="946d7-183">All commands</span></span>                                                                                   |
+| `--language`            | `dotnet new`                                                                                   |
+| `--configuration`       | <span data-ttu-id="946d7-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span><span class="sxs-lookup"><span data-stu-id="946d7-184">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`</span></span>                  |
+| `--framework`           | <span data-ttu-id="946d7-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span><span class="sxs-lookup"><span data-stu-id="946d7-185">`dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest`</span></span> |
+| `--runtime`             | <span data-ttu-id="946d7-186">`dotnet build`,`dotnet publish`</span><span class="sxs-lookup"><span data-stu-id="946d7-186">`dotnet build`,  `dotnet publish`</span></span>                                                              |
+| `--platform`            | `dotnet vstest`                                                                                |
+| `--logger`              | `dotnet vstest`                                                                                |
+| `--sdk-package-version` | `dotnet migrate`                                                                               |
+
+<span data-ttu-id="946d7-187">`--verbosity` Ve`--sdk-package-version`dışında, diğer tüm değerler .NET Core 2.1.100 SDK ile başlayarak karma hale getirilir.</span><span class="sxs-lookup"><span data-stu-id="946d7-187">Except for `--verbosity` and `--sdk-package-version`, all the other values are hashed starting with .NET Core 2.1.100 SDK.</span></span>
+
+## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a><span data-ttu-id="946d7-188">.NET Core CLI/SDK kilitlenme özel durum telemetrisi toplandı</span><span class="sxs-lookup"><span data-stu-id="946d7-188">.NET Core CLI/SDK crash exception telemetry collected</span></span>
+
+<span data-ttu-id="946d7-189">.NET Core CLI/SDK kilitlenirse, CLı/SDK kodunun özel durum ve yığın izlemesinin adını toplar.</span><span class="sxs-lookup"><span data-stu-id="946d7-189">If the .NET Core CLI/SDK crashes, it collects the name of the exception and stack trace of the CLI/SDK code.</span></span> <span data-ttu-id="946d7-190">Bu bilgiler, sorunları değerlendirmek ve .NET Core SDK ve CLı kalitesini geliştirmek için toplanır.</span><span class="sxs-lookup"><span data-stu-id="946d7-190">This information is collected to assess problems and improve the quality of the .NET Core SDK and CLI.</span></span> <span data-ttu-id="946d7-191">Bu makalede Topladığımız veriler hakkında bilgi sağlanır.</span><span class="sxs-lookup"><span data-stu-id="946d7-191">This article provides information about the data we collect.</span></span> <span data-ttu-id="946d7-192">Ayrıca, kullanıcıların kendi .NET Core SDK kendi sürümünü oluşturma konusunda ipuçları, kişisel veya hassas bilgilerin yanlışlıkla açıklanmasını önleyebilir.</span><span class="sxs-lookup"><span data-stu-id="946d7-192">It also provides tips on how users building their own version of the .NET Core SDK can avoid inadvertent disclosure of personal or sensitive information.</span></span>
+
+### <a name="types-of-collected-data"></a><span data-ttu-id="946d7-193">Toplanan veri türleri</span><span class="sxs-lookup"><span data-stu-id="946d7-193">Types of collected data</span></span>
+
+<span data-ttu-id="946d7-194">.NET Core CLI, uygulamanızda özel durumlar değil yalnızca CLı/SDK özel durumları için bilgi toplar.</span><span class="sxs-lookup"><span data-stu-id="946d7-194">.NET Core CLI collects information for CLI/SDK exceptions only, not exceptions in your application.</span></span> <span data-ttu-id="946d7-195">Toplanan veriler, özel durumun ve yığın izlemenin adını içerir.</span><span class="sxs-lookup"><span data-stu-id="946d7-195">The collected data contains the name of the exception and the stack trace.</span></span> <span data-ttu-id="946d7-196">Bu yığın izlemesi CLı/SDK kodudur.</span><span class="sxs-lookup"><span data-stu-id="946d7-196">This stack trace is of CLI/SDK code.</span></span>
+
+<span data-ttu-id="946d7-197">Aşağıdaki örnek, toplanan veri türünü gösterir:</span><span class="sxs-lookup"><span data-stu-id="946d7-197">The following example shows the kind of data that is collected:</span></span>
+
+```
+System.IO.IOException
+at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)
+at System.IO.StreamWriter.Write(Char[] buffer)
+at System.IO.TextWriter.WriteLine()
+at System.IO.TextWriter.SyncTextWriter.WriteLine()
+at Microsoft.DotNet.Cli.Utils.Reporter.WriteLine()
+at Microsoft.DotNet.Tools.Run.RunCommand.EnsureProjectIsBuilt()
+at Microsoft.DotNet.Tools.Run.RunCommand.Execute()
+at Microsoft.DotNet.Tools.Run.RunCommand.Run(String[] args)
+at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryClient)
+at Microsoft.DotNet.Cli.Program.Main(String[] args)
+```
+
+### <a name="avoid-inadvertent-disclosure-information"></a><span data-ttu-id="946d7-198">Yanlışlıkla açıklanmaktan kaçının</span><span class="sxs-lookup"><span data-stu-id="946d7-198">Avoid inadvertent disclosure information</span></span>
+
+<span data-ttu-id="946d7-199">.NET Core katkıda bulunanlar ve başkalarının oluşturdukları .NET Core SDK bir sürümünü çalıştıran herkes kendi SDK kaynak kodu yolunu dikkate almalıdır.</span><span class="sxs-lookup"><span data-stu-id="946d7-199">.NET Core contributors and anyone else running a version of the .NET Core SDK that they built themselves should consider the path to their SDK source code.</span></span> <span data-ttu-id="946d7-200">Özel hata ayıklama derlemesi olan veya özel derleme sembol dosyalarıyla yapılandırılmış bir .NET Core SDK kullanırken kilitlenme oluşursa, derleme makinesinden SDK kaynak dosyası yolu, yığın izlemenin bir parçası olarak toplanır ve karma değildir.</span><span class="sxs-lookup"><span data-stu-id="946d7-200">If a crash occurs while using a .NET Core SDK that is a custom debug build or configured with custom build symbol files, the SDK source file path from the build machine is collected as part of the stack trace and isn't hashed.</span></span>
+
+<span data-ttu-id="946d7-201">Bu nedenle, .NET Core SDK özel derlemeleri yol adları kişisel veya hassas bilgileri sunan dizinlerde yer içermemelidir.</span><span class="sxs-lookup"><span data-stu-id="946d7-201">Because of this, custom builds of the .NET Core SDK shouldn't be located in directories whose path names expose personal or sensitive information.</span></span> 
+
+## <a name="see-also"></a><span data-ttu-id="946d7-202">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="946d7-202">See also</span></span>
+
+- [<span data-ttu-id="946d7-203">.NET Core CLI telemetri-2019 S2 verileri</span><span class="sxs-lookup"><span data-stu-id="946d7-203">.NET Core CLI Telemetry - 2019 Q2 Data</span></span>](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [<span data-ttu-id="946d7-204">Telemetri başvuru kaynağı (DotNet/CLI deposu)</span><span class="sxs-lookup"><span data-stu-id="946d7-204">Telemetry reference source (dotnet/cli repository)</span></span>](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
