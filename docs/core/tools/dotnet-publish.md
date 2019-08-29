@@ -2,24 +2,24 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu .NET Core projenizi bir dizinde yayımlar.
 ms.date: 05/29/2018
-ms.openlocfilehash: 8cefeae17e464e14abc54dce1feb414a72c44164
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 972937ac1bc32b3749d4e1b6b8874c3516f5680c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331037"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105143"
 ---
-# <a name="dotnet-publish"></a><span data-ttu-id="4c8cf-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="4c8cf-103">dotnet publish</span></span>
+# <a name="dotnet-publish"></a><span data-ttu-id="a9e0a-103">dotnet publish</span><span class="sxs-lookup"><span data-stu-id="a9e0a-103">dotnet publish</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="4c8cf-104">Ad</span><span class="sxs-lookup"><span data-stu-id="4c8cf-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="a9e0a-104">Ad</span><span class="sxs-lookup"><span data-stu-id="a9e0a-104">Name</span></span>
 
-<span data-ttu-id="4c8cf-105">`dotnet publish`-Uygulamayı ve bağımlılıklarını bir barındırma sistemine dağıtım için bir klasöre paketler.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-105">`dotnet publish` - Packs the application and its dependencies into a folder for deployment to a hosting system.</span></span>
+<span data-ttu-id="a9e0a-105">`dotnet publish`-Uygulamayı ve bağımlılıklarını bir barındırma sistemine dağıtım için bir klasöre paketler.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-105">`dotnet publish` - Packs the application and its dependencies into a folder for deployment to a hosting system.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="4c8cf-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="4c8cf-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="a9e0a-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="a9e0a-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="4c8cf-107">.NET Core 2,1</span><span class="sxs-lookup"><span data-stu-id="4c8cf-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="a9e0a-107">.NET Core 2,1</span><span class="sxs-lookup"><span data-stu-id="a9e0a-107">.NET Core 2.1</span></span>](#tab/netcore21)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -27,7 +27,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="4c8cf-108">.NET Core 2,0</span><span class="sxs-lookup"><span data-stu-id="4c8cf-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="a9e0a-108">.NET Core 2,0</span><span class="sxs-lookup"><span data-stu-id="a9e0a-108">.NET Core 2.0</span></span>](#tab/netcore20)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -35,7 +35,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="4c8cf-109">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="4c8cf-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="a9e0a-109">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="a9e0a-109">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -45,193 +45,193 @@ dotnet publish [-h|--help]
 
 ---
 
-## <a name="description"></a><span data-ttu-id="4c8cf-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4c8cf-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="a9e0a-110">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a9e0a-110">Description</span></span>
 
-<span data-ttu-id="4c8cf-111">`dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-111">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="4c8cf-112">Çıktı aşağıdaki varlıkları içerir:</span><span class="sxs-lookup"><span data-stu-id="4c8cf-112">The output includes the following assets:</span></span>
+<span data-ttu-id="a9e0a-111">`dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-111">`dotnet publish` compiles the application, reads through its dependencies specified in the project file, and publishes the resulting set of files to a directory.</span></span> <span data-ttu-id="a9e0a-112">Çıktı aşağıdaki varlıkları içerir:</span><span class="sxs-lookup"><span data-stu-id="a9e0a-112">The output includes the following assets:</span></span>
 
-* <span data-ttu-id="4c8cf-113">*DLL* uzantılı bir derlemede ara DIL (IL) kodu.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-113">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
-* <span data-ttu-id="4c8cf-114">*. Deps. JSON* dosyası, projenin tüm bağımlılıklarını içerir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-114">*.deps.json* file that includes all of the dependencies of the project.</span></span>
-* <span data-ttu-id="4c8cf-115">uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası, ayrıca çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-115">*.runtimeconfig.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
-* <span data-ttu-id="4c8cf-116">NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-116">The application's dependencies, which are copied from the NuGet cache into the output folder.</span></span>
+- <span data-ttu-id="a9e0a-113">*DLL* uzantılı bir derlemede ara DIL (IL) kodu.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-113">Intermediate Language (IL) code in an assembly with a *dll* extension.</span></span>
+- <span data-ttu-id="a9e0a-114">*. Deps. JSON* dosyası, projenin tüm bağımlılıklarını içerir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-114">*.deps.json* file that includes all of the dependencies of the project.</span></span>
+- <span data-ttu-id="a9e0a-115">uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası, ayrıca çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-115">*.runtimeconfig.json* file that specifies the shared runtime that the application expects, as well as other configuration options for the runtime (for example, garbage collection type).</span></span>
+- <span data-ttu-id="a9e0a-116">NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-116">The application's dependencies, which are copied from the NuGet cache into the output folder.</span></span>
 
-<span data-ttu-id="4c8cf-117">`dotnet publish` Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-117">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution.</span></span> <span data-ttu-id="4c8cf-118">Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-118">It's the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="4c8cf-119">Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-119">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span> <span data-ttu-id="4c8cf-120">Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-120">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span> <span data-ttu-id="4c8cf-121">Yayımlanan bir uygulamanın dizin yapısı için bkz. [Dizin yapısı](/aspnet/core/hosting/directory-structure).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-121">For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).</span></span>
+<span data-ttu-id="a9e0a-117">`dotnet publish` Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-117">The `dotnet publish` command's output is ready for deployment to a hosting system (for example, a server, PC, Mac, laptop) for execution.</span></span> <span data-ttu-id="a9e0a-118">Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-118">It's the only officially supported way to prepare the application for deployment.</span></span> <span data-ttu-id="a9e0a-119">Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-119">Depending on the type of deployment that the project specifies, the hosting system may or may not have the .NET Core shared runtime installed on it.</span></span> <span data-ttu-id="a9e0a-120">Daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-120">For more information, see [.NET Core Application Deployment](../deploying/index.md).</span></span> <span data-ttu-id="a9e0a-121">Yayımlanan bir uygulamanın dizin yapısı için bkz. [Dizin yapısı](/aspnet/core/hosting/directory-structure).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-121">For the directory structure of a published application, see [Directory structure](/aspnet/core/hosting/directory-structure).</span></span>
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a><span data-ttu-id="4c8cf-122">Arguments</span><span class="sxs-lookup"><span data-stu-id="4c8cf-122">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="a9e0a-122">Arguments</span><span class="sxs-lookup"><span data-stu-id="a9e0a-122">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="4c8cf-123">Yayımlanacak proje.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-123">The project to publish.</span></span> <span data-ttu-id="4c8cf-124">Bir [C#](csproj.md), F#veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, F#ya da Visual Basic proje dosyası içeren bir dizinin yolu.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-124">It's either the path and filename of a [C#](csproj.md), F#, or Visual Basic project file, or the path to a directory that contains a C#, F#, or Visual Basic project file.</span></span> <span data-ttu-id="4c8cf-125">Belirtilmezse, varsayılan olarak geçerli dizini alır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-125">If not specified, it defaults to the current directory.</span></span>
+<span data-ttu-id="a9e0a-123">Yayımlanacak proje.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-123">The project to publish.</span></span> <span data-ttu-id="a9e0a-124">Bir [C#](csproj.md), F#veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, F#ya da Visual Basic proje dosyası içeren bir dizinin yolu.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-124">It's either the path and filename of a [C#](csproj.md), F#, or Visual Basic project file, or the path to a directory that contains a C#, F#, or Visual Basic project file.</span></span> <span data-ttu-id="a9e0a-125">Belirtilmezse, varsayılan olarak geçerli dizini alır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-125">If not specified, it defaults to the current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="4c8cf-126">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="4c8cf-126">Options</span></span>
+## <a name="options"></a><span data-ttu-id="a9e0a-126">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="a9e0a-126">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="4c8cf-127">.NET Core 2,1</span><span class="sxs-lookup"><span data-stu-id="4c8cf-127">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="a9e0a-127">.NET Core 2,1</span><span class="sxs-lookup"><span data-stu-id="a9e0a-127">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="4c8cf-128">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-128">Defines the build configuration.</span></span> <span data-ttu-id="4c8cf-129">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-129">The default value is `Debug`.</span></span>
+<span data-ttu-id="a9e0a-128">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-128">Defines the build configuration.</span></span> <span data-ttu-id="a9e0a-129">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-129">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="4c8cf-130">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-130">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="4c8cf-131">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-131">You must specify the target framework in the project file.</span></span>
+<span data-ttu-id="a9e0a-130">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-130">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="a9e0a-131">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-131">You must specify the target framework in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="4c8cf-132">Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-132">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="4c8cf-133">Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-133">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="a9e0a-132">Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-132">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="a9e0a-133">Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-133">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="4c8cf-134">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-134">Prints out a short help for the command.</span></span>
+<span data-ttu-id="a9e0a-134">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-134">Prints out a short help for the command.</span></span>
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="4c8cf-135">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-135">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="4c8cf-136">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-136">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="4c8cf-137">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-137">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="4c8cf-138">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-138">This option is available starting with .NET Core 2.0 SDK.</span></span>
+<span data-ttu-id="a9e0a-135">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-135">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="a9e0a-136">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-136">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="a9e0a-137">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-137">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="a9e0a-138">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-138">This option is available starting with .NET Core 2.0 SDK.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="4c8cf-139">Yayımlamadan önce projeyi oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-139">Doesn't build the project before publishing.</span></span> <span data-ttu-id="4c8cf-140">Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-140">It also implicitly sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="a9e0a-139">Yayımlamadan önce projeyi oluşturmaz.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-139">Doesn't build the project before publishing.</span></span> <span data-ttu-id="a9e0a-140">Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-140">It also implicitly sets the `--no-restore` flag.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="4c8cf-141">Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-141">Ignores project-to-project references and only restores the root project.</span></span>
+<span data-ttu-id="a9e0a-141">Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-141">Ignores project-to-project references and only restores the root project.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="4c8cf-142">Komutu çalıştırılırken örtük geri yükleme yürütülmez.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-142">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="a9e0a-142">Komutu çalıştırılırken örtük geri yükleme yürütülmez.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-142">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="4c8cf-143">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-143">Specifies the path for the output directory.</span></span> <span data-ttu-id="4c8cf-144">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-144">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="4c8cf-145">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-145">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+<span data-ttu-id="a9e0a-143">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-143">Specifies the path for the output directory.</span></span> <span data-ttu-id="a9e0a-144">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-144">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="a9e0a-145">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-145">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
 
 `--self-contained`
 
-<span data-ttu-id="4c8cf-146">.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-146">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="4c8cf-147">Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-147">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="4c8cf-148">Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-148">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
+<span data-ttu-id="a9e0a-146">.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-146">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="a9e0a-147">Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-147">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="a9e0a-148">Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-148">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="4c8cf-149">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-149">Publishes the application for a given runtime.</span></span> <span data-ttu-id="4c8cf-150">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-150">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="4c8cf-151">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-151">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="4c8cf-152">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-152">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+<span data-ttu-id="a9e0a-149">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-149">Publishes the application for a given runtime.</span></span> <span data-ttu-id="a9e0a-150">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-150">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="a9e0a-151">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-151">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="a9e0a-152">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-152">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="4c8cf-153">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="4c8cf-154">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="4c8cf-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="a9e0a-153">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-153">Sets the verbosity level of the command.</span></span> <span data-ttu-id="a9e0a-154">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="a9e0a-154">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="4c8cf-155">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-155">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+<span data-ttu-id="a9e0a-155">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-155">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="4c8cf-156">.NET Core 2,0</span><span class="sxs-lookup"><span data-stu-id="4c8cf-156">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="a9e0a-156">.NET Core 2,0</span><span class="sxs-lookup"><span data-stu-id="a9e0a-156">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="4c8cf-157">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-157">Defines the build configuration.</span></span> <span data-ttu-id="4c8cf-158">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-158">The default value is `Debug`.</span></span>
+<span data-ttu-id="a9e0a-157">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-157">Defines the build configuration.</span></span> <span data-ttu-id="a9e0a-158">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-158">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="4c8cf-159">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-159">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="4c8cf-160">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-160">You must specify the target framework in the project file.</span></span>
+<span data-ttu-id="a9e0a-159">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-159">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="a9e0a-160">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-160">You must specify the target framework in the project file.</span></span>
 
 `--force`
 
-<span data-ttu-id="4c8cf-161">Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-161">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="4c8cf-162">Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-162">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
+<span data-ttu-id="a9e0a-161">Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-161">Forces all dependencies to be resolved even if the last restore was successful.</span></span> <span data-ttu-id="a9e0a-162">Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-162">Specifying this flag is the same as deleting the *project.assets.json* file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="4c8cf-163">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-163">Prints out a short help for the command.</span></span>
+<span data-ttu-id="a9e0a-163">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-163">Prints out a short help for the command.</span></span>
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="4c8cf-164">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-164">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="4c8cf-165">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-165">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="4c8cf-166">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-166">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="4c8cf-167">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-167">This option is available starting with .NET Core 2.0 SDK.</span></span>
+<span data-ttu-id="a9e0a-164">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-164">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="a9e0a-165">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-165">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="a9e0a-166">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-166">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="a9e0a-167">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-167">This option is available starting with .NET Core 2.0 SDK.</span></span>
 
 `--no-dependencies`
 
-<span data-ttu-id="4c8cf-168">Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-168">Ignores project-to-project references and only restores the root project.</span></span>
+<span data-ttu-id="a9e0a-168">Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-168">Ignores project-to-project references and only restores the root project.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="4c8cf-169">Komutu çalıştırılırken örtük geri yükleme yürütülmez.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-169">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="a9e0a-169">Komutu çalıştırılırken örtük geri yükleme yürütülmez.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-169">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="4c8cf-170">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-170">Specifies the path for the output directory.</span></span> <span data-ttu-id="4c8cf-171">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-171">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="4c8cf-172">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-172">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+<span data-ttu-id="a9e0a-170">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-170">Specifies the path for the output directory.</span></span> <span data-ttu-id="a9e0a-171">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-171">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="a9e0a-172">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-172">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
 
 `--self-contained`
 
-<span data-ttu-id="4c8cf-173">.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-173">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="4c8cf-174">Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-174">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="4c8cf-175">Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-175">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
+<span data-ttu-id="a9e0a-173">.NET Core çalışma zamanını uygulamanızla yayımlar, böylece çalışma zamanının hedef makinede yüklü olması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-173">Publishes the .NET Core runtime with your application so the runtime doesn't need to be installed on the target machine.</span></span> <span data-ttu-id="a9e0a-174">Bir çalışma zamanı tanımlayıcısı belirtilmişse, varsayılan değeri olur `true`.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-174">If a runtime identifier is specified, its default value is `true`.</span></span> <span data-ttu-id="a9e0a-175">Farklı dağıtım türleri hakkında daha fazla bilgi için bkz. [.NET Core uygulama dağıtımı](../deploying/index.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-175">For more information about the different deployment types, see [.NET Core application deployment](../deploying/index.md).</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="4c8cf-176">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-176">Publishes the application for a given runtime.</span></span> <span data-ttu-id="4c8cf-177">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-177">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="4c8cf-178">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-178">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="4c8cf-179">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-179">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+<span data-ttu-id="a9e0a-176">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-176">Publishes the application for a given runtime.</span></span> <span data-ttu-id="a9e0a-177">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-177">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="a9e0a-178">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-178">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="a9e0a-179">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-179">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="4c8cf-180">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-180">Sets the verbosity level of the command.</span></span> <span data-ttu-id="4c8cf-181">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="4c8cf-181">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="a9e0a-180">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-180">Sets the verbosity level of the command.</span></span> <span data-ttu-id="a9e0a-181">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="a9e0a-181">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="4c8cf-182">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-182">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+<span data-ttu-id="a9e0a-182">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-182">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="4c8cf-183">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="4c8cf-183">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="a9e0a-183">.NET Core 1. x</span><span class="sxs-lookup"><span data-stu-id="a9e0a-183">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="4c8cf-184">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-184">Defines the build configuration.</span></span> <span data-ttu-id="4c8cf-185">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-185">The default value is `Debug`.</span></span>
+<span data-ttu-id="a9e0a-184">Yapı yapılandırmasını tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-184">Defines the build configuration.</span></span> <span data-ttu-id="a9e0a-185">Varsayılan değer `Debug` şeklindedir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-185">The default value is `Debug`.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="4c8cf-186">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-186">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="4c8cf-187">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-187">You must specify the target framework in the project file.</span></span>
+<span data-ttu-id="a9e0a-186">Belirtilen [hedef çerçeve](../../standard/frameworks.md)için uygulamayı yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-186">Publishes the application for the specified [target framework](../../standard/frameworks.md).</span></span> <span data-ttu-id="a9e0a-187">Hedef çerçeveyi proje dosyasında belirtmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-187">You must specify the target framework in the project file.</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="4c8cf-188">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-188">Prints out a short help for the command.</span></span>
+<span data-ttu-id="a9e0a-188">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-188">Prints out a short help for the command.</span></span>
 
 `--manifest <PATH_TO_MANIFEST_FILE>`
 
-<span data-ttu-id="4c8cf-189">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-189">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="4c8cf-190">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-190">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="4c8cf-191">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-191">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="4c8cf-192">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-192">This option is available starting with .NET Core 2.0 SDK.</span></span>
+<span data-ttu-id="a9e0a-189">Uygulamayla yayımlanmış paket kümesini kırpmak için kullanılacak bir veya birkaç [hedef bildirimi](../deploying/runtime-store.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-189">Specifies one or several [target manifests](../deploying/runtime-store.md) to use to trim the set of packages published with the app.</span></span> <span data-ttu-id="a9e0a-190">Bildirim dosyası, [ `dotnet store` komutun](dotnet-store.md)çıktısının bir parçasıdır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-190">The manifest file is part of the output of the [`dotnet store` command](dotnet-store.md).</span></span> <span data-ttu-id="a9e0a-191">Birden çok bildirim belirtmek için her bildirim `--manifest` için bir seçenek ekleyin.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-191">To specify multiple manifests, add a `--manifest` option for each manifest.</span></span> <span data-ttu-id="a9e0a-192">Bu seçenek .NET Core 2,0 SDK ile başlayarak kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-192">This option is available starting with .NET Core 2.0 SDK.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="4c8cf-193">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-193">Specifies the path for the output directory.</span></span> <span data-ttu-id="4c8cf-194">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-194">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
-<span data-ttu-id="4c8cf-195">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-195">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
+<span data-ttu-id="a9e0a-193">Çıkış dizini için yolu belirtir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-193">Specifies the path for the output directory.</span></span> <span data-ttu-id="a9e0a-194">Belirtilmemişse, varsayılan olarak *./bin/[Configuration]/[Framework]/Publish/* , çerçeveye bağlı bir dağıtım için veya *./bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* için otomatik olarak kapsanan bir dağıtım için.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-194">If not specified, it defaults to *./bin/[configuration]/[framework]/publish/* for a framework-dependent deployment or *./bin/[configuration]/[framework]/[runtime]/publish/* for a self-contained deployment.</span></span>
+<span data-ttu-id="a9e0a-195">Yol göreli ise, oluşturulan çıkış dizini geçerli çalışma dizinine değil, proje dosyası konumuna göre belirlenir.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-195">If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.</span></span>
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-<span data-ttu-id="4c8cf-196">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-196">Publishes the application for a given runtime.</span></span> <span data-ttu-id="4c8cf-197">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-197">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="4c8cf-198">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-198">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="4c8cf-199">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-199">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
+<span data-ttu-id="a9e0a-196">Uygulamayı belirli bir çalışma zamanı için yayımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-196">Publishes the application for a given runtime.</span></span> <span data-ttu-id="a9e0a-197">Bu, [kendinden bağımsız bir dağıtım (SCD)](../deploying/index.md#self-contained-deployments-scd)oluşturulurken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-197">This is used when creating a [self-contained deployment (SCD)](../deploying/index.md#self-contained-deployments-scd).</span></span> <span data-ttu-id="a9e0a-198">Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-198">For a list of Runtime Identifiers (RIDs), see the [RID catalog](../rid-catalog.md).</span></span> <span data-ttu-id="a9e0a-199">Varsayılan, [çerçeveye bağımlı bir dağıtımı (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)yayımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-199">Default is to publish a [framework-dependent deployment (FDD)](../deploying/index.md#framework-dependent-deployments-fdd).</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="4c8cf-200">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-200">Sets the verbosity level of the command.</span></span> <span data-ttu-id="4c8cf-201">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="4c8cf-201">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="a9e0a-200">Komutun ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-200">Sets the verbosity level of the command.</span></span> <span data-ttu-id="a9e0a-201">İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`</span><span class="sxs-lookup"><span data-stu-id="a9e0a-201">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `--version-suffix <VERSION_SUFFIX>`
 
-<span data-ttu-id="4c8cf-202">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-202">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
+<span data-ttu-id="a9e0a-202">Proje dosyasının sürüm alanındaki yıldız işaretini (`*`) değiştirecek olan sürüm sonekini tanımlar.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-202">Defines the version suffix to replace the asterisk (`*`) in the version field of the project file.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="4c8cf-203">Örnekler</span><span class="sxs-lookup"><span data-stu-id="4c8cf-203">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="a9e0a-203">Örnekler</span><span class="sxs-lookup"><span data-stu-id="a9e0a-203">Examples</span></span>
 
-<span data-ttu-id="4c8cf-204">Projeyi geçerli dizinde yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="4c8cf-204">Publish the project in the current directory:</span></span>
+<span data-ttu-id="a9e0a-204">Projeyi geçerli dizinde yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="a9e0a-204">Publish the project in the current directory:</span></span>
 
 `dotnet publish`
 
-<span data-ttu-id="4c8cf-205">Belirtilen proje dosyasını kullanarak uygulamayı yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="4c8cf-205">Publish the application using the specified project file:</span></span>
+<span data-ttu-id="a9e0a-205">Belirtilen proje dosyasını kullanarak uygulamayı yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="a9e0a-205">Publish the application using the specified project file:</span></span>
 
 `dotnet publish ~/projects/app1/app1.csproj`
 
-<span data-ttu-id="4c8cf-206">Şu `netcoreapp1.1` Framework 'ü kullanarak projeyi geçerli dizinde yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="4c8cf-206">Publish the project in the current directory using the `netcoreapp1.1` framework:</span></span>
+<span data-ttu-id="a9e0a-206">Şu `netcoreapp1.1` Framework 'ü kullanarak projeyi geçerli dizinde yayımlayın:</span><span class="sxs-lookup"><span data-stu-id="a9e0a-206">Publish the project in the current directory using the `netcoreapp1.1` framework:</span></span>
 
 `dotnet publish --framework netcoreapp1.1`
 
-<span data-ttu-id="4c8cf-207">`netcoreapp1.1` Çerçevesini ve`OS X 10.10` çalışma zamanını kullanarak geçerli uygulamayı yayımlayın (Bu RID 'yi proje dosyasında listemalısınız).</span><span class="sxs-lookup"><span data-stu-id="4c8cf-207">Publish the current application using the `netcoreapp1.1` framework and the runtime for `OS X 10.10` (you must list this RID in the project file).</span></span>
+<span data-ttu-id="a9e0a-207">`netcoreapp1.1` Çerçevesini ve`OS X 10.10` çalışma zamanını kullanarak geçerli uygulamayı yayımlayın (Bu RID 'yi proje dosyasında listemalısınız).</span><span class="sxs-lookup"><span data-stu-id="a9e0a-207">Publish the current application using the `netcoreapp1.1` framework and the runtime for `OS X 10.10` (you must list this RID in the project file).</span></span>
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
-<span data-ttu-id="4c8cf-208">Geçerli uygulamayı yayımlayın ancak projeden projeye (P2P) başvurularını geri yüklemeyin, ancak geri yükleme işlemi sırasında yalnızca kök proje (.NET Core SDK 2,0 ve üzeri sürümler):</span><span class="sxs-lookup"><span data-stu-id="4c8cf-208">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
+<span data-ttu-id="a9e0a-208">Geçerli uygulamayı yayımlayın ancak projeden projeye (P2P) başvurularını geri yüklemeyin, ancak geri yükleme işlemi sırasında yalnızca kök proje (.NET Core SDK 2,0 ve üzeri sürümler):</span><span class="sxs-lookup"><span data-stu-id="a9e0a-208">Publish the current application but don't restore project-to-project (P2P) references, just the root project during the restore operation (.NET Core SDK 2.0 and later versions):</span></span>
 
 `dotnet publish --no-dependencies`
 
-## <a name="see-also"></a><span data-ttu-id="4c8cf-209">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4c8cf-209">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9e0a-209">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a9e0a-209">See also</span></span>
 
-- [<span data-ttu-id="4c8cf-210">Hedef çerçeveler</span><span class="sxs-lookup"><span data-stu-id="4c8cf-210">Target frameworks</span></span>](../../standard/frameworks.md)
-- [<span data-ttu-id="4c8cf-211">Çalışma zamanı tanımlayıcı (RID) kataloğu</span><span class="sxs-lookup"><span data-stu-id="4c8cf-211">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+- [<span data-ttu-id="a9e0a-210">Hedef çerçeveler</span><span class="sxs-lookup"><span data-stu-id="a9e0a-210">Target frameworks</span></span>](../../standard/frameworks.md)
+- [<span data-ttu-id="a9e0a-211">Çalışma zamanı tanımlayıcı (RID) kataloğu</span><span class="sxs-lookup"><span data-stu-id="a9e0a-211">Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
