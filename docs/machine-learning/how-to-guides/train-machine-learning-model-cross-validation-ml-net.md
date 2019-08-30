@@ -1,26 +1,26 @@
 ---
-title: Çapraz doğrulama kullanarak makine öğrenme modeli eğitme
-description: Çapraz doğrulama ML.NET daha güçlü makine öğrenimi modelleri oluşturmak için kullanmayı öğrenin. Çapraz doğrulama, eğitim ve veriler çeşitli bölümlere ayırır ve bu bölümler birden çok algoritmalarına eğitir model değerlendirme teknik ' dir.
-ms.date: 06/25/2019
+title: Çapraz doğrulama kullanarak makine öğrenimi modelini eğitme
+description: ML.NET içinde daha güçlü makine öğrenimi modelleri oluşturmak için çapraz doğrulamayı nasıl kullanacağınızı öğrenin. Çapraz doğrulama, verileri birkaç bölüme ayıran ve bu bölümlerde birden çok algoritmaya yönelik bir eğitim ve model değerlendirme tekniğidir.
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to,title-hack-0625
-ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f29103d0cf59cdec10a641b05ce359bf95c01ccd
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397654"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169052"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation"></a>Çapraz doğrulama kullanarak makine öğrenme modeli eğitme
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Çapraz doğrulama kullanarak makine öğrenimi modelini eğitme
 
-Çapraz doğrulama ML.NET daha güçlü makine öğrenimi modelleri eğitmek için kullanmayı öğrenin. 
+ML.NET içinde daha güçlü makine öğrenimi modelleri eğitmek için çapraz doğrulamayı nasıl kullanacağınızı öğrenin. 
 
-Çapraz doğrulama, eğitim ve veriler çeşitli bölümlere ayırır ve bu bölümler birden çok algoritmalarına eğitir model değerlendirme teknik ' dir. Bu teknik, eğitim işlem verileri tutarak modelinin sağlamlık artırır. Görünmeyen gözlemler performans iyileştirme yanı sıra veri kısıtlı ortamlarında, daha küçük bir veri kümesiyle eğitim modelleri için etkili bir aracı olabilir.
+Çapraz doğrulama, verileri birkaç bölüme ayıran ve bu bölümlerde birden çok algoritmaya yönelik bir eğitim ve model değerlendirme tekniğidir. Bu teknik eğitim sürecinde veri tutarak modelin sağlamlığını geliştirir. Veri kısıtlı ortamlarda, görünmeyen gözlemlerdeki performansı iyileştirmeye ek olarak, daha küçük bir veri kümesiyle eğitim modelleri için etkili bir araç olabilir.
 
 ## <a name="the-data-and-data-model"></a>Veri ve veri modeli
 
-Belirtilen bir dosyadan veri, aşağıdaki biçime sahiptir:
+Aşağıdaki biçime sahip bir dosyadan verilen veriler:
 
 ```text
 Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($), Current Price ($)
@@ -30,7 +30,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1120.00, 47504.98, 45129.73, 43775.84, 46792.41
 ```
 
-Verileri gibi bir sınıf tarafından modellenebilir `HousingData`:
+Veriler, gibi `HousingData` bir sınıfa göre modellenebilir ve ' [`IDataView`](xref:Microsoft.ML.IDataView)a yüklenir.
 
 ```csharp
 public class HousingData
@@ -48,13 +48,11 @@ public class HousingData
 }
 ```
 
-İçinde verilerin bir [ `IDataView` ](xref:Microsoft.ML.IDataView).
-
 ## <a name="prepare-the-data"></a>Verileri hazırlama
 
-Veri machine learning modeli oluşturmak üzere kullanmadan önce önceden işler. Bu örnekte `Size` ve `HistoricalPrices` sütunları adlı yeni bir sütun için çıkış tek özellik vektör içine birleştirilir `Features` kullanarak [ `Concatenate` ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) yöntemi. ML.NET algoritmalarda beklenen biçime veri alma yanı sıra sütunlarını ardışık düzende sonraki işlemleri her ayrı sütun yerine birleştirilmiş sütun için bir kez işlemi uygulayarak en iyi duruma getirir. 
+Machine Learning modelini derlemek için kullanmadan önce verileri önceden işleyin. Bu örnekte, `Size` ve `HistoricalPrices` sütunları, [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) yöntemi kullanılarak adlı `Features` yeni bir sütuna çıktı olan tek bir özellik vektörü içinde birleştirilir. ML.NET algoritmaları tarafından beklenen biçimde verileri almaya ek olarak sütunları bitiştirme, her ayrı sütun yerine birleştirilmiş sütun için işlemi bir kez uygulayarak işlem hattındaki sonraki işlemleri iyileştirir. 
 
-Sütunları tek bir vektörü birleştirilir sonra [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) uygulanan `Features` almak için sütun `Size` ve `HistoricalPrices` aynı 0-1 aralığında. 
+[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) Sütunlar tek bir vektörde birleştirildikten sonra, almak `Features` `Size` `HistoricalPrices` için sütuna, 0-1 arasındaki aynı aralığa uygulanır. 
 
 ```csharp
 // Define data prep estimator
@@ -69,12 +67,12 @@ ITransformer dataPrepTransformer = dataPrepEstimator.Fit(data);
 IDataView transformedData = dataPrepTransformer.Transform(data);
 ```
 
-## <a name="train-model-with-cross-validation"></a>Çapraz doğrulama modeli eğitme
+## <a name="train-model-with-cross-validation"></a>Çapraz doğrulama ile modeli eğitme
 
-Önceden işlenmiş hesaplandıktan sonra modeli eğitmek için zaman gelir. İlk olarak, en yakın olan makine öğrenme gerçekleştirilecek görevi uygun algoritmayı seçin. Tahmin edilen değer sayısal sürekli bir değeri olduğundan, regresyon görevdir. ML.NET tarafından uygulanan regresyon algoritmalarından biri olan [ `StochasticDualCoordinateAscentCoordinator` ](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) algoritması. Çapraz doğrulama kullanımı modeli eğitmek için [ `CrossValidate` ](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) yöntemi. 
+Veriler önceden işlendikten sonra modeli eğitmeniz zaman alabilir. İlk olarak, gerçekleştirilecek makine öğrenimi göreviyle en yakından hizalanan algoritmayı seçin. Tahmin edilen değer sayısal bir sürekli değer olduğundan, görev gerileme olur. ML.NET tarafından uygulanan regresyon algoritmalarından biri [`StochasticDualCoordinateAscentCoordinator`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) algoritmadır. Çapraz doğrulama ile modeli eğitme [`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) yöntemini kullanın. 
 
 > [!NOTE]
-> Bu örnek bir doğrusal regresyon modeli kullansa da, CrossValidate Anomali algılama hariç ML.NET görevlerinde öğrenme tüm makine için geçerlidir.
+> Bu örnek, bir doğrusal regresyon modeli kullansa da, çapraz doğrulama, ML.NET içinde anomali algılama hariç diğer tüm makine öğrenimi görevleri için geçerlidir.
 
 ```csharp
 // Define StochasticDualCoordinateAscent algorithm estimator
@@ -84,18 +82,18 @@ IEstimator<ITransformer> sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimator, numberOfFolds: 5);
 ```
 
-[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*) aşağıdaki işlemleri gerçekleştirir:
+[`CrossValidate`](xref:Microsoft.ML.RegressionCatalog.CrossValidate*)Aşağıdaki işlemleri gerçekleştirir:
 
-1. Belirli bölümleri içinde belirtilen değere eşit sayıda veriyi bölümler `numberOfFolds` parametresi. Her bölüm sonucu bir [ `TrainTestData` ](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) nesne.
-1. Belirtilen makine öğrenimi algoritma estimator eğitim veri kümesi üzerinde kullanarak bölümlerin her bir modeli eğitilir.
-1. Her modelin performans kullanarak değerlendirilir [ `Evaluate` ](xref:Microsoft.ML.RegressionCatalog.Evaluate*) sınama veri kümesi üzerinde yöntemi. 
-1. Model, ölçümlerle birlikte modellerinin her biri için döndürülür.
+1. Verileri, `numberOfFolds` parametresinde belirtilen değere eşit sayıda bölüm için bölümler. Her bölümün sonucu bir [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) nesnedir.
+1. Bir model, eğitim veri kümesindeki belirtilen makine öğrenimi algoritması tahmin aracı 'ı kullanılarak bölümlerin her birinde eğitilir.
+1. Her modelin performansı, test veri kümesindeki [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) yöntemi kullanılarak değerlendirilir. 
+1. Modeller, modellerin her biri için, ölçümleriyle birlikte döndürülür.
 
-Sonuç depolanan `cvResults` koleksiyonudur [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesneleri. Bu nesne eğitilen model yanı sıra erişilebilir her iki formu olan ölçümler içerir [ `Model` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) ve [ `Metrics` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) özellikleri sırasıyla. Bu örnekte `Model` özelliği türüdür [ `ITransformer` ](xref:Microsoft.ML.ITransformer) ve `Metrics` özelliği türüdür [ `RegressionMetrics` ](xref:Microsoft.ML.Data.RegressionMetrics). 
+İçinde `cvResults` depolanan sonuç bir [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesne koleksiyonudur. Bu nesne, hem eğitilen modeli hem de her ikisi de sırasıyla erişilebilir [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) olan ölçümleri ve [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) özellikleri içerir. Bu örnekte, `Model` özelliği türündedir [`ITransformer`](xref:Microsoft.ML.ITransformer) ve `Metrics` özelliği türündedir [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Ölçümleri farklı eğitilen modelleri için üzerinden erişilebilir `Metrics` kişinin özelliği [ `CrossValidationResult` ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesne. Bu durumda, [R karesi alınmış ölçüm](https://en.wikipedia.org/wiki/Coefficient_of_determination) erişilen ve değişkeninde depolanan `rSquared`. 
+Farklı eğitilen modellere yönelik ölçümlere tekil `Metrics` [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) nesnenin özelliği aracılığıyla erişilebilir. Bu durumda, [R-kare ölçüsüne](https://en.wikipedia.org/wiki/Coefficient_of_determination) erişilir ve değişkenine `rSquared`depolanır. 
 
 ```csharp
 IEnumerable<double> rSquared = 
@@ -103,7 +101,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-İçeriğini incelemek, `rSquared` değişken çıktısı beş değerleri 0-1'den daha yakın yerlerde 1 arasında en iyi anlamına gelir olmalıdır. R kare seçme gibi ölçümleri kötü gerçekleştirmek için en iyi modellerinden kullanma. Ardından, tahminlerde veya ile ek işlemleri gerçekleştirmek için en iyi modeli seçin.
+`rSquared` Değişkenin içeriğini inceleyebileceğiniz çıktının en iyi şekilde 1 ' e yakın olduğu 0-1 arasında beş değer olmalıdır. R-kare gibi ölçümleri kullanarak en iyi performansa sahip modelleri seçin. Daha sonra, tahmine dayalı hale getirmek veya ek işlemleri gerçekleştirmek için en iyi modeli seçin.
 
 ```csharp
 // Select all models

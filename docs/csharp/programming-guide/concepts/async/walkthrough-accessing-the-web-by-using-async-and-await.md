@@ -2,12 +2,12 @@
 title: "İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme"
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 986f3985783c6ae941d437fe557998f67557f5af
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0c80bb079e66a56d6bbc30ba43269aee7ac4ab5b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595517"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168371"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme
 
@@ -237,7 +237,7 @@ Sayıları görüntülemenin birkaç saniye sürdiğine dikkat edin. Bu süre bo
 
 2. `GetResponseAsync`<xref:System.Threading.Tasks.Task%601>döndürür. Bu durumda, *görev dönüş değişkeni* `TResult`, türündedir <xref:System.Net.WebResponse>. Görev, istenen veriler indirildikten ve görevin tamamlanmasını `WebResponse` çalıştırdıktan sonra gerçek bir nesne oluşturmak için bir taahhüddir.
 
-     Görevden `WebResponse` değeri almak için, aşağıdaki kodda gösterildiği gibi çağrısına [](../../../language-reference/keywords/await.md) `GetResponseAsync`bir Await işleci uygulayın.
+     Görevden `WebResponse` değeri almak için, aşağıdaki kodda gösterildiği gibi çağrısına [](../../../language-reference/operators/await.md) `GetResponseAsync`bir Await işleci uygulayın.
 
     ```csharp
     using (WebResponse response = await webReq.GetResponseAsync())
@@ -692,7 +692,7 @@ namespace AsyncExampleWPF
 
 - [Zaman uyumsuz örnek: Web Izlenecek yol (C# ve Visual Basic) erişimi](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Async ve await (C#) ile zaman uyumsuz programlama](./index.md)
 - [Zaman uyumsuz dönüş türleriC#()](./async-return-types.md)
 - [Görev tabanlı zaman uyumsuz programlama (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)

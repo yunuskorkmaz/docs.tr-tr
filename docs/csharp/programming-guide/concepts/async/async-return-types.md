@@ -2,12 +2,12 @@
 title: Zaman uyumsuz dönüş türleriC#()
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c0dae6b4357ce89325ecb9b7d70ffd79f4e9417
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922035"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168394"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleriC#()
 Zaman uyumsuz metotlar aşağıdaki dönüş türlerine sahip olabilir:
@@ -31,7 +31,7 @@ Aşağıdaki örnekte, `GetLeisureHours` async yöntemi bir tamsayı döndüren 
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-Yöntemi içindeki bir `leisureHours`await ifadesi `GetLeisureHours` içinden çağrıldığında, await ifadesi yöntemi tarafından döndürülen görevde depolanan tamsayı değerini (değeri) alır. `GetLeisureHours` `ShowTodaysInfo` Await ifadeleri hakkında daha fazla bilgi için bkz. [await](../../../language-reference/keywords/await.md).  
+Yöntemi içindeki bir `leisureHours`await ifadesi `GetLeisureHours` içinden çağrıldığında, await ifadesi yöntemi tarafından döndürülen görevde depolanan tamsayı değerini (değeri) alır. `GetLeisureHours` `ShowTodaysInfo` Await ifadeleri hakkında daha fazla bilgi için bkz. [await](../../../language-reference/operators/await.md).  
   
 Aşağıdaki kodda gösterildiği gibi `GetLeisureHours` `await`, çağrısını uygulamasından ayırarak bunun nasıl gerçekleştiğini daha iyi anlayabilirsiniz. Yönteminin bildiriminden bekleyebileceğiniz `GetLeisureHours` için hemen beklenen bir yönteme çağrı bir `Task<int>`döndürür. Görev örnekteki `integerTask` değişkenine atanır. Bir olduğundan, <xref:System.Threading.Tasks.Task%601.Result> türünde bir`TResult`özelliğiiçerir. <xref:System.Threading.Tasks.Task%601> `integerTask` Bu durumda, `TResult` bir tamsayı türünü temsil eder. Öğesine uygulandığında, <xref:System.Threading.Tasks.Task%601.Result%2A> await ifadesi öğesinin `integerTask`özelliğinin içeriğini değerlendirir. `integerTask` `await` Değer `ret` değişkenine atanır.  
   
@@ -83,4 +83,4 @@ Aşağıdaki örnek, zaman uyumsuz bir olay işleyicisinin davranışını göst
 - [İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Zaman uyumsuz programlarda denetim akışı (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)

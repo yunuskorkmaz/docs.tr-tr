@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587063"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168963"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek Yolları
 İzlenecek yollar, yaygın senaryolar için adım adım yönergeler sunarak ürün veya belirli bir özellik alanı hakkında öğrenmeye başlamak için iyi bir yer sunar.  
@@ -21,7 +21,7 @@ ms.locfileid: "69587063"
 ## <a name="in-this-section"></a>Bu Bölümde  
 
  [Async ve await kullanarak Web 'e erişme](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Async](./language-reference/keywords/async.md) ve [await](./language-reference/keywords/await.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.  
+ [Async](./language-reference/keywords/async.md) ve [await](./language-reference/operators/await.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.  
   
  [Veya Visual Basic içinde C# Windows çalışma zamanı bileşeni oluşturma ve JavaScript 'ten çağırma](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Bir Windows çalışma zamanı türünün nasıl oluşturulacağını, bir Windows çalışma zamanı bileşende nasıl paketleyip, sonra JavaScript kullanarak Windows için oluşturulan bir [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] uygulamadan bileşen çağırılacağını gösterir.  

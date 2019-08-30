@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: a94f1f358a2d0fbfd489ac3d34375b6f883dd4fa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e401b40e1c11504e3c27d5b3601d71ef8f5821e1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965451"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169003"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML Tür Dönüştürücülerine Genel Bakış
 Tür dönüştürücüler, XAML biçimlendirme içindeki bir dizeden bir nesne grafiğinde belirli nesnelere dönüştüren bir nesne yazıcı için arz mantığı sağlar. .NET Framework XAML hizmetlerinde, tür dönüştürücüsü öğesinden <xref:System.ComponentModel.TypeConverter>türetilen bir sınıf olmalıdır. Bazı dönüştürücüler XAML kayıt yolunu da destekler ve serileştirme biçimlendirmesinde bir nesneyi dize biçiminde seri hale getirmek için kullanılabilir. Bu konu, XAML 'deki tür dönüştürücülerinin nasıl ve ne zaman çağrılacağını açıklar ve metot geçersiz kılmaları <xref:System.ComponentModel.TypeConverter>için uygulama önerisi sağlar.  
@@ -93,9 +93,9 @@ Tür dönüştürücüler, XAML biçimlendirme içindeki bir dizeden bir nesne g
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute uygulanıyor  
- Özel tür dönüştürücüsünün .NET Framework xaml Hizmetleri tarafından özel bir sınıf için davranan tür dönüştürücüsü olarak kullanılabilmesi için, [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> ' yi sınıf tanımınıza uygulamanız gerekir. Özniteliği <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> aracılığıyla belirttiğiniz, özel tür dönüştürücünün tür adı olmalıdır. Bu özniteliği uygularsanız, bir XAML işlemcisi, özellik türünün özel sınıf türünü kullandığı değerleri işlediğinde, dizeleri belirtebilir ve nesne örnekleri döndürebilir.  
+ Özel tür dönüştürücüsünün .NET Framework xaml Hizmetleri tarafından özel bir sınıf için davranan tür dönüştürücüsü olarak kullanılabilmesi için, <xref:System.ComponentModel.TypeConverterAttribute> ' yi sınıf tanımınıza uygulamanız gerekir. Özniteliği <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> aracılığıyla belirttiğiniz, özel tür dönüştürücünün tür adı olmalıdır. Bu özniteliği uygularsanız, bir XAML işlemcisi, özellik türünün özel sınıf türünü kullandığı değerleri işlediğinde, dizeleri belirtebilir ve nesne örnekleri döndürebilir.  
   
- Ayrıca özellik başına bir tür dönüştürücüsü sağlayabilirsiniz. [!INCLUDE[TLA#tla_netframewkattr](../../../includes/tlasharptla-netframewkattr-md.md)] Sınıf tanımına bir `set` / `get` uygulamak yerine, bunu bir özellik tanımına (Ana tanım, içindeki uygulamaları değil) uygulayın. <xref:System.ComponentModel.TypeConverterAttribute> Özelliğin türü, özel tür dönüştürücülü tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, bir XAML işlemcisi bu özelliğin değerlerini işlediğinde, giriş dizelerini işleyebilir ve nesne örnekleri döndürebilir. Özellik başına tür dönüştürücüsü tekniği, Microsoft .net çerçevesinden veya sınıf tanımını denetleyemeyip bir başka kitaplıktan bir <xref:System.ComponentModel.TypeConverterAttribute> Özellik türü kullanmayı tercih ediyorsanız özellikle yararlıdır.  
+ Ayrıca özellik başına bir tür dönüştürücüsü sağlayabilirsiniz. Sınıf tanımına bir <xref:System.ComponentModel.TypeConverterAttribute> uygulamak yerine, bunu bir özellik tanımına (Ana tanım, içindeki `set` uygulamaları `get` / değil) uygulayın. Özelliğin türü, özel tür dönüştürücülü tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, bir XAML işlemcisi bu özelliğin değerlerini işlediğinde, giriş dizelerini işleyebilir ve nesne örnekleri döndürebilir. Özellik başına tür dönüştürücüsü tekniği, Microsoft .net çerçevesinden veya sınıf tanımını denetleyemeyip bir başka kitaplıktan bir <xref:System.ComponentModel.TypeConverterAttribute> Özellik türü kullanmayı tercih ediyorsanız özellikle yararlıdır.  
   
  Özel bir ekli üye için tür dönüştürme davranışı sağlamak için, ekli üye <xref:System.ComponentModel.TypeConverterAttribute> için uygulama `Get` deseninin erişimci metoduna uygulayın.  
   

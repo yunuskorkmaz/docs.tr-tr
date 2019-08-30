@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666552"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169142"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
 Zaman uyumsuz işlemlerle çalışmak için görev tabanlı zaman uyumsuz model (TAP) kullandığınızda geri çağırmaları kullanarak, engellemeden beklemeyi elde edebilirsiniz.  Görevler için, bu gibi yöntemler <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>aracılığıyla elde edilir. Dil tabanlı zaman uyumsuz destek, zaman uyumsuz işlemlerin normal Denetim akışında beklemesine izin vererek geri çağırmaları gizler ve derleyicinin ürettiği kod aynı API düzeyi desteğini sağlar.
 
 ## <a name="suspending-execution-with-await"></a>Await ile yürütmeyi askıya alma
- .NET Framework 4,5 ' den başlayarak, C# içindeki [await](../../csharp/language-reference/keywords/await.md) anahtar sözcüğünü ve zaman uyumsuz olarak await <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneler için Visual Basic [await işlecini](../../visual-basic/language-reference/operators/await-operator.md) kullanabilirsiniz. Bir <xref:System.Threading.Tasks.Task> 'ı`void`beklerken, ifadetüründedir.`await` Bir <xref:System.Threading.Tasks.Task%601> 'ı`TResult`beklerken, ifadetüründedir.`await` Bir `await` ifade, zaman uyumsuz bir metodun gövdesinde gerçekleşmelidir. .NET Framework 4,5 Visual Basic dil C# desteği hakkında daha fazla bilgi için bkz. C# ve Visual Basic dil belirtimleri.
+ .NET Framework 4,5 ' den başlayarak, C# içindeki [await](../../csharp/language-reference/operators/await.md) anahtar sözcüğünü ve zaman uyumsuz olarak await <xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> nesneler için Visual Basic [await işlecini](../../visual-basic/language-reference/operators/await-operator.md) kullanabilirsiniz. Bir <xref:System.Threading.Tasks.Task> 'ı`void`beklerken, ifadetüründedir.`await` Bir <xref:System.Threading.Tasks.Task%601> 'ı`TResult`beklerken, ifadetüründedir.`await` Bir `await` ifade, zaman uyumsuz bir metodun gövdesinde gerçekleşmelidir. .NET Framework 4,5 Visual Basic dil C# desteği hakkında daha fazla bilgi için bkz. C# ve Visual Basic dil belirtimleri.
 
  Kapakların altında, await işlevi bir devamlılık kullanarak göreve bir geri çağırma işlemini kurar.  Bu geri çağırma, askıya alma noktasındaki zaman uyumsuz yöntemi sürdürür. Zaman uyumsuz yöntem devam ettirildiğinde, abeklelen işlem başarıyla tamamlanırsa ve bir <xref:System.Threading.Tasks.Task%601>ise `TResult` , döndürülür.  Durum, durumunda sonlandıysa <xref:System.OperationCanceledException> , bir özel durum oluşturulur. <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.TaskStatus.Canceled>  <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.TaskStatus.Faulted> Durum, durumunda sonlandıysa, hataya neden olan özel durum atılır. <xref:System.Threading.Tasks.Task%601> Bir `Task` , birden çok özel durumun sonucu olarak hata verebilir, ancak bu özel durumların yalnızca biri yayılır. Ancak, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> özelliği tüm hataları içeren <xref:System.AggregateException> bir özel durum döndürür.
 

@@ -2,12 +2,12 @@
 title: Async ve await (C#) Ile görev zaman uyumsuz programlama MODELI (TAP)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bfe32b2eaefb9ce813ca74bed450a935e33dc9d4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: abe1ab777a17ba8cba15a27b02d389a9ede3caf0
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595610"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167895"
 ---
 # <a name="task-asynchronous-programming-model"></a>Zaman uyumsuz görev programlama modeli
 
@@ -38,7 +38,7 @@ Zaman uyumsuz tabanlı yaklaşım otomatik bir iletimin eşdeğerini, zaman uyum
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a>Zaman uyumsuz yöntemlerin yazılması daha kolaydır
 
-' Deki C# [Async](../../../language-reference/keywords/async.md) ve [await](../../../language-reference/keywords/await.md) anahtar sözcükleri zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak, bir zaman uyumlu Yöntem oluştururken neredeyse kolayca zaman uyumsuz bir yöntem oluşturmak için .NET Framework, .NET Core veya Windows Çalışma Zamanı kaynaklarını kullanabilirsiniz. `async` Anahtar sözcüğünü kullanarak tanımladığınız zaman uyumsuz yöntemler, *zaman uyumsuz yöntemler*olarak adlandırılır.
+' Deki C# [Async](../../../language-reference/keywords/async.md) ve [await](../../../language-reference/operators/await.md) anahtar sözcükleri zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak, bir zaman uyumlu Yöntem oluştururken neredeyse kolayca zaman uyumsuz bir yöntem oluşturmak için .NET Framework, .NET Core veya Windows Çalışma Zamanı kaynaklarını kullanabilirsiniz. `async` Anahtar sözcüğünü kullanarak tanımladığınız zaman uyumsuz yöntemler, *zaman uyumsuz yöntemler*olarak adlandırılır.
 
 Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Kodda yer alan hemen hemen her şey size tamamen tanıdık gelmiş olmalıdır.
 
@@ -156,7 +156,7 @@ Zaman uyumsuz programlamaya zaman uyumsuz yaklaşım, hemen hemen her durumda va
 
 [Zaman](../../../language-reference/keywords/async.md) uyumsuz değiştirici kullanarak bir yöntemin zaman uyumsuz bir yöntem olduğunu belirtirseniz, aşağıdaki iki özelliği etkinleştirirsiniz.
 
-- İşaretlenen zaman uyumsuz yöntem, askıya alma noktaları belirlemek için [await](../../../language-reference/keywords/await.md) kullanabilir. `await` İşleci, zaman uyumsuz yöntemin, beklenen zaman uyumsuz işlem tamamlanana kadar bu noktanın ötesine devam edemeyeceğini derleyiciye bildirir. Bu sırada denetim, zaman uyumsuz yönteminin arayanına döner.
+- İşaretlenen zaman uyumsuz yöntem, askıya alma noktaları belirlemek için [await](../../../language-reference/operators/await.md) kullanabilir. `await` İşleci, zaman uyumsuz yöntemin, beklenen zaman uyumsuz işlem tamamlanana kadar bu noktanın ötesine devam edemeyeceğini derleyiciye bildirir. Bu sırada denetim, zaman uyumsuz yönteminin arayanına döner.
 
      Bir `await` ifadede zaman uyumsuz bir yöntemin askıya alınması yöntemden bir çıkış oluşturmaz ve `finally` bloklar çalıştırılmaz.
 
@@ -168,7 +168,7 @@ Zaman uyumsuz bir yöntem, genellikle bir `await` işlecin bir veya daha fazla �
 
 - [async](../../../language-reference/keywords/async.md)
 
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 
 ## <a name="BKMK_ReturnTypesandParameters"></a>Dönüş türleri ve parametreleri
 
@@ -343,6 +343,7 @@ namespace AsyncFirstExample
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/keywords/await.md)
+- [await](../../../language-reference/operators/await.md)
 - [Zaman uyumsuz programlama](../../../async.md)
 - [Zaman uyumsuz genel bakış](../../../../standard/async.md)
+ 

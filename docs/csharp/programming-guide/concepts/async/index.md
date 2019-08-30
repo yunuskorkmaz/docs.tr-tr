@@ -1,66 +1,66 @@
 ---
-title: C# zaman uyumsuz programlama
-description: Genel bir bakış C# await, görev ve görev kullanarak zaman uyumsuz, zaman uyumsuz programlama için dil desteği<T>
+title: İçinde zaman uyumsuz programlamaC#
+description: Async, await, C# Task ve Task kullanılarak zaman uyumsuz programlama için dil desteğine genel bakış<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: a306ff75357f9f61ec9b086485472d99de5ad083
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4ed48a2e74dde5ae0f24ebd680ace133e05e15d4
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307134"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167884"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Görev zaman uyumsuz programlama modeli C\#
+# <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile zaman uyumsuz programlama
 
-Görev zaman uyumsuz programlama modeli (TAP) zaman uyumsuz kod bir Özet sağlar. Deyimler, olduğu gibi her zaman bir dizisi olarak kodunu yazın. Sonraki başlamadan önce her deyimi tamamlar ancak bu kodu okuyabilirsiniz. Bu deyimleri bazıları iş Başlat ve dönüş çünkü derleyici bir dizi dönüşümleri gerçekleştirir bir <xref:System.Threading.Tasks.Task> , devam eden çalışmayı temsil eder.
+Görev zaman uyumsuz programlama modeli (TAP), zaman uyumsuz kod üzerinde bir soyutlama sağlar. Her zaman olduğu gibi, kodu deyimler dizisi olarak yazarsınız. Bu kodu, bir sonraki başlamadan önce her bir deyimin tamamlansa da okuyabilirsiniz. Derleyici bir dizi dönüştürme gerçekleştirir, çünkü bu deyimlerden bazıları işe başlayabilir ve devam eden çalışmayı temsil <xref:System.Threading.Tasks.Task> eden bir döndürür.
 
-Bu söz dizimi amacı olan: kod, bir dizi ifadeleri gibi okumaktadır, ancak dış kaynak tahsisine dayalı olarak çok daha karmaşık bir sırayla yürütür ve görevleri tamamlandığında etkinleştirin. Kişilerin ne zaman uyumsuz görevler içeren işlemler için yönergeler vermek benzerdir. Bu makale boyunca yönergeleri örneği görmek için bir kahvaltı yapmak için kullanacağınız nasıl `async` ve `await` anahtar sözcükleri zaman uyumsuz yönergeler bir dizi içeren kod hakkında nedeni kolaylaştırır. Aşağıdakine benzer bir kahvaltı yapma açıklamak için aşağıdaki listeyi yönergeleri yazmalısınız:
+Bu sözdiziminin amacı: bir deyim dizisi gibi okuyan kodu etkinleştirin, ancak dış kaynak ayırmaya ve görevler tamamlandığında çok daha karmaşık bir sırayla yürütülür. Kullanıcıların zaman uyumsuz görevler içeren işlemlere yönelik yönergeler verme yöntemi benzerdir. Bu makalede, ve `async` `await` anahtar sözcüklerinin, bir dizi zaman uyumsuz yönergeler içeren kodla ilgili neden olmasının nasıl daha kolay olduğunu görmek için bir yönergeler örneği kullanacaksınız. Daha hızlı nasıl yapılacağını açıklamak için aşağıdaki listeye benzer yönergeler yazın:
 
-1. Kahve dök.
-1. Bir kaydırma ısı ve ardından iki örneğin sucuklu fry.
-1. Üç dilimleri bacon fry.
-1. Ekmekler iki parça kutlayın.
-1. Bildirim için ezmesi ve Başınızı ekleyin.
-1. Bir cam Portakal suyu, dök.
+1. Kahve kupa dök.
+1. Bir Pan, sonra da iki Yumura kadar bir kaydır.
+1. Bacon üç dilimi.
+1. İki adet içerik.
+1. Bildirim 'e alın ve sıkıştı ekleyin.
+1. Turuncu bir büyütece bir cam dök.
 
-Deneyimi Aşçılık ile varsa, bu yönergeleri yürütülür **zaman uyumsuz olarak**. Örneğin sucuklu için kaydırma hazırlanıyor Başlat sonra bacon başlatın. İçinde toaster ekmek put sonra Örneğin sucuklu başlatın. İşlemin her adımında bir görev başlatın ardından dikkatinizi dinlediğiniz için hazır olan görevleri açmak.
+Pişirme deneyiminiz varsa, bu yönergeleri **zaman uyumsuz**olarak yürütebilirsiniz. Yumurlar için kaydırmayı ısıncak ve sonra Bacon 'u başlatacak. Ekseyi Toaster ' a yerleştirip yumurtalar ' ı başlatın. İşlemin her adımında bir görev başlatır, sonra ilgilenmeniz için uygun olan görevlere dikkat etmeniz gerekir.
 
-Kahvaltı Aşçılık, paralel olmayan zaman uyumsuz iş iyi bir örnektir. Bu görevleri tek bir kişi (veya iş parçacığı) işleyebilir. Kahvaltı benzerliği devam, tek bir kişi kahvaltı zaman uyumsuz olarak ilk tamamlanmadan önce sonraki görev başlatarak yapabilirsiniz. Birisi izliyor olup olmadığını Aşçılık ilerler. Örneğin sucuklu için kaydırma hazırlanıyor başlar başlamaz, bacon frying başlayabilirsiniz. Bir kez bacon başladığında, ekmek toaster koyabilirsiniz.
+Pişirme kahileri, paralel olmayan bir zaman uyumsuz çalışmaya yönelik iyi bir örnektir. Bir kişi (veya iş parçacığı), tüm bu görevleri işleyebilir. Breakfast benzerleme vurguladı devam ederken bir kişi, ilk tamamlanmadan önce sonraki görevi başlatarak zaman uyumsuz olarak zaman uyumsuz hale getirebilirsiniz. Pişirme işlemi, birisinin onu izliyor olup olmadığı konusunda ilerler. Yumurlar için kaydırma işlemini başlattığınızda, Bacon kızartma başlayabilirsiniz. Bacon başladıktan sonra, ekseyi Toaster 'a yerleştirebilirsiniz.
 
-Bir paralel algoritma için birden çok aşçılarına (veya iş parçacığı) gerekir. Örneğin sucuklu oluşturmak bir bacon ve benzeri. Her biri, bir görev için odaklanmış. Her cook (veya iş parçacığı) zaman uyumlu olarak bacon ters çevirmek hazır olması ya da açılan için bildirim için bekleyen engellenebilir. 
+Paralel bir algoritma için birden çok ortak iş (veya iş parçacığı) gerekir. Bunlardan biri, bir, Bacon, vb. olur. Her biri yalnızca bir göreve odaklanılmıştır. Her bir Cook (veya iş parçacığı), Bacon 'un çevrilmeye hazırlanması veya bildirim açılanması için zaman uyumlu olarak engelleniyor. 
 
-Şimdi, olarak yazılan bu yönergeleri göz önünde bulundurun C# ifadeleri:
+Şimdi, deyimler olarak C# yazılan aynı yönergeleri göz önünde bulundurun:
 
 [!code-csharp[SynchronousBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-starter/Program.cs#Main)]
 
-Bilgisayarlar, aynı şekilde yaptığı bu yönergeleri yorumlar yok. Sonraki deyimi geçmeden önce iş tamamlanana kadar bilgisayar her deyim engeller. Bir unsatisfying kahvaltı oluşturur. Sonraki görevlerde, önceki görevlerden tamamlamadığı kadar çalışmaya mıydı. Kahvaltı oluşturmak için daha uzun sürer ve bazı öğeler hizmet önce soğuk edindiğiniz. 
+Bilgisayarlar bu yönergeleri insanlar ile aynı şekilde yorumlamaz. Bir sonraki ifadeye geçmeden önce, bilgisayar her bir bildirimde, iş tamamlanana kadar engeller. Bu, karşılanunan bir Breakfast oluşturur. Daha sonraki görevler, önceki görevler tamamlanana kadar başlatılamaz. Daha uzun sürer ve bazı öğeler sunulmadan önce soğuk hale gelir. 
 
-Yukarıdaki yönergeleri zaman uyumsuz olarak yürütmek için bilgisayar istiyorsanız, zaman uyumsuz kod yazmanız gerekir.
+Bilgisayarın yukarıdaki yönergeleri zaman uyumsuz olarak yürütmesini istiyorsanız, zaman uyumsuz kod yazmanız gerekir.
 
-Bu sorunlar, bugün yazma programları için önemlidir. İstemci programları yazdığınızda, kullanıcı girişine yanıt olarak UI istersiniz. Uygulamanızı bir telefon Web'den veri yüklenirken dondurulmuş görünür hale olmamalıdır. Sunucu programlarından yazdığınızda, engellenen iş parçacıkları istemezsiniz. Bu iş parçacıkları, diğer isteklerine hizmet. Zaman uyumsuz seçenekler varken zaman uyumlu bir kod kullanarak küçük expensively ölçeklendirme olanağı gelmez. Bu engellenen iş parçacıkları için ödeme yaparsınız.
+Bu sorunlar, bugün yazdığınız programlar için önemlidir. İstemci programları yazdığınızda, kullanıcı ARABIRIMININ Kullanıcı girişine yanıt vermesini istersiniz. Uygulamanız, Web 'den veri indirirken bir telefonu dondurulmuş hale döndürmemelidir. Sunucu programları yazdığınızda, iş parçacıklarının engellenmesini istemezsiniz. Bu iş parçacıkları diğer isteklere hizmet verebilir. Zaman uyumsuz alternatifler mevcut olduğunda zaman uyumlu kod kullanarak daha ucuz bir şekilde ölçeklendirme imkanına sahip olabilirsiniz. Engellenen bu iş parçacıkları için ödeme yaparsınız.
 
-Başarılı modern uygulamalar, zaman uyumsuz kod gerektirir. Dil desteği olmadan geri çağırmaları, tamamlama veya özgün kodun amacı engellediği başka bir yolla zaman uyumsuz kod yazma gereklidir. Zaman uyumlu bir kod avantajlarından anlaşılması kolay olmasıdır. Adım adım eylemleri tarama ve anlaşılmasını kolaylaştırır. Geleneksel zaman uyumsuz modeller, odağı zorla zaman uyumsuz kod yapısını, kodun temel eylemleri üzerinde değil.
+Başarılı modern uygulamalar zaman uyumsuz kod gerektirir. Dil desteği olmadan, zaman uyumsuz kod gerekli geri çağırmaları, tamamlanma olaylarını veya başka bir deyişle, kodun orijinal hedefini görünmez hale gelir. Zaman uyumlu kodun avantajı, anlaşılması kolay bir işlemdir. Adım adım eylemler, taramayı ve anlamayı kolaylaştırır. Geleneksel zaman uyumsuz modeller kodun temel eylemlerine değil, kodun zaman uyumsuz yapısına odaklanmaya zorlanır.
 
-## <a name="dont-block-await-instead"></a>Engelleme, bunun yerine await yok
+## <a name="dont-block-await-instead"></a>Engelleme, yerine await
 
-Yukarıdaki kod, hatalı bir uygulama gösterilmektedir: zaman uyumsuz işlemleri gerçekleştirmek için zaman uyumlu kod oluşturma. Bu kod, yazıldığı gibi herhangi bir iş yapmasını yürütme iş parçacığını engeller. Görevlerden herhangi birini devam ederken durdurulmayacaktır. Ekmekler koymaya sonra toaster stared gibi sorgulamanıza olacaktır. Herkes bildirim POP kadar size Konuşmayı yoksay. 
+Yukarıdaki kodda kötü bir uygulama gösterilmektedir: zaman uyumsuz işlemleri gerçekleştirmek için zaman uyumlu kod oluşturma. Yazıldığı gibi, bu kod başka herhangi bir işi yapmadan yürüten iş parçacığını engeller. Görevlerden herhangi biri devam ederken bu işlem kesintiye uğramaz. Bu, ' ın içine yerleştirdikten sonra Toaster ' ta başmış gibi olacaktır. Bildirim alınana kadar sizi konuşuyor olan herkesi yoksayabilirsiniz. 
 
-Görevler çalışırken iş parçacığını engellemez, böylece bu kodu güncelleştirerek başlayalım. `await` Anahtar sözcüğü, bir görev başlatır ve ardından o görev tamamlandıktan sonra yürütmeye devam etmek için engelleyici olmayan bir yol sağlar. Basit bir zaman uyumsuz yap sürümü kahvaltı kodu aşağıdaki kod parçacığı gibi görünür:
+İş parçacığı, görevler çalışırken engellenmemesi için bu kodu güncelleyerek başlayalım. `await` Anahtar sözcüğü, bir görevi başlatmak için engellenmeyen bir yöntem sağlar ve ardından bu görev tamamlandığında yürütmeye devam eder. Bir Breakfast kodu oluştur 'un basit bir zaman uyumsuz sürümü aşağıdaki kod parçacığına benzer:
 
 [!code-csharp[SimpleAsyncBreakfast](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V2/Program.cs#Main)]
 
-Bu kod, örneğin sucuklu veya bacon Aşçılık sırada engellemez. Bu kod, ancak herhangi bir görevi başlatılmaz. Yine de bildirim içinde toaster yerleştirin ve onu POP kadar adresinden stare. Ancak, en azından, ilgilenmenizi istediği herkes yanıtlamayı ister. İlk tarifinizi sırada birden çok sipariş yerleştirildiği bir restoran başka bir kahvaltı cook başlatabilir.
+Bu kod, yumurtalar veya Bacon pişirirken engellenmez. Bu kod, diğer görevleri de başlatmayacaktır. Yine de bildirim, siz de bir araya gelene kadar Toaster 'a yerleştirirsiniz. Ancak en azından, ilgilenmeniz istenen herkese yanıt verirsiniz. Birden çok siparişin yerleştirildiği bir restoran içinde, ilk pişirme sırasında Cook bir daha hızlı başlatılabilir.
 
-Şimdi, kahvaltı üzerinde çalışan iş parçacığı henüz tamamlanmadı başlatılan tüm görev beklerken bloke değildir. Bazı uygulamalar için bu değişiklik tüm gereken kullanılır. Bu değişikliği yalnızca kullanıcıya bir GUI uygulama hala yanıt verir. Ancak, bu senaryo için daha fazla istersiniz. Her bileşen görevleri sırayla yürütülen istemezsiniz. Bileşen görevlerin her biri önceki görevin tamamlanmasını bekleme önce başlatmak daha iyidir.
+Şimdi, henüz bitmemiş olan herhangi bir başlatılan görevi beklerken, Kahvalı üzerinde çalışan iş parçacığı engellenmiyor. Bazı uygulamalarda, bu değişiklik gereklidir. Yalnızca bu değişikliğe sahip bir GUI uygulaması kullanıcıya yanıt veriyor. Ancak, bu senaryo için daha fazla bilgi istersiniz. Her bileşen görevinin her ardışık olarak yürütülmesini istemezsiniz. Önceki görevin tamamlanmasını beklerken önce her bir bileşen görevinin başlatılması daha iyidir.
 
-## <a name="start-tasks-concurrently"></a>Eşzamanlı olarak başlangıç görevleri
+## <a name="start-tasks-concurrently"></a>Görevleri eşzamanlı olarak Başlat
 
-Birçok senaryoda birkaç bağımsız görev hemen başlamak istiyorsanız. Ardından, her görev bittikçe hazır olan başka bir iş devam edebilirsiniz. Kahvaltı benzerleme daha hızlı bir şekilde bitti kahvaltı nasıl ulaşabileceğinizi olmasıdır. Her şey bitti ayrıca Al aynı anda yakın. Sık erişimli kahvaltı elde edersiniz.
+Birçok senaryoda, birkaç bağımsız görevi hemen başlatmak istersiniz. Ardından, her bir görev tamamlandığında, daha önce hazırlanmaya devam edebilirsiniz. Kahhızlı benzerleme vurguladı, daha hızlı bir şekilde daha hızlı bir şekilde daha hızlı bir şekilde yapılır. Her şeyin aynı anda kapatılmasını de sağlar. Sık erişimli bir kahvaltı alacaksınız.
 
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Ve ilişkili sınıflar nedeni, sürmekte olan görevler hakkında için kullanabilirsiniz. Aslında kahvaltı oluşturacak şekilde daha yakından benzeyen bir kod yazmanızı sağlar. Örneğin sucuklu bacon ve bildirim aynı anda Aşçılık başlar. Her eylem gerektirdiğinden, dikkatinizi görev açın, sonraki eylemi ilgileniriz sonra başka bir şey ilgilenmenizi gerektiren await.
+Ve <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ilgili türler, sürmekte olan görevlerle ilgili nedenlerle kullanabileceğiniz sınıflardır. Bu sayede, aslında daha iyi bir şekilde daha çok benzeyen bir kod yazmanızı sağlar. Eggs, Bacon ve bildirim ' ı aynı anda aşalım. Her biri bir eylem gerektirdiğinden, bu göreve dikkat etmeniz, sonraki eylemi ele almanız ve daha sonra ilgilenmeniz gereken başka bir şey için await ' ı kapatmanız gerekir.
 
-Bir görevi başlatıp oturum tutun <xref:System.Threading.Tasks.Task> işi temsil eden nesne. Artıracaksınız `await` her görev kendi sonucu ile çalışmaya başlamadan önce.
+Bir görevi başlatır ve işi temsil eden <xref:System.Threading.Tasks.Task> nesneyi basılı tutabilirsiniz. Sonucuyla çalışmadan önce her görevi gerçekleştirirsiniz. `await`
 
-Bu değişiklikler kahvaltı koda olalım. İlk adım, bunları bekleyen yerine bunların başlattığınızda işlemleri için görevleri depolamaktır:
+Bu değişiklikleri Breakfast kodunda yapalim. İlk adım, işlemler için görevleri her zaman beklerken depolamak yerine depolarlar:
 
 ```csharp
 Coffee cup = PourCoffee();
@@ -82,7 +82,7 @@ Console.WriteLine("oj is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Ardından, taşımak `await` kahvaltı tanıtıcısıyla önce deyimleri, yöntemin sonuna Yumurta ve bacon için:
+Daha sonra, bir sonraki ve `await` yumurg deyimlerini, Breakfast sunmadan önce yönteminin sonuna taşıyabilirsiniz:
 
 ```csharp
 Coffee cup = PourCoffee();
@@ -105,28 +105,28 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Yukarıdaki kod daha iyi çalışır. Zaman uyumsuz görevlerin tümü aynı anda başlatın. Sonuçları yalnızca ihtiyacınız olduğunda her görev bekler. Yukarıdaki kod, farklı mikro isteği yapan ve ardından sonuçları birleştirir tek bir sayfada bir web uygulamasındaki kod benzer olabilir. Tüm istekleri hemen sonra yapacaksınız `await` olan tüm görevleri ve web sayfası oluşturun.
+Yukarıdaki kod daha iyi çalışmaktadır. Tüm zaman uyumsuz görevleri aynı anda başlatabilirsiniz. Her bir görevi yalnızca sonuçlara ihtiyacınız olduğunda bekleolursunuz. Yukarıdaki kod, farklı mikro hizmetlere istek yapan bir Web uygulamasındaki koda benzer ve sonuçları tek bir sayfada birleştirir. Tüm istekleri hemen, ardından `await` tüm bu görevleri ve Web sayfasını oluşturduğunuz şekilde yaparsınız.
 
-## <a name="composition-with-tasks"></a>Görevler oluşturma
+## <a name="composition-with-tasks"></a>Görevlerle oluşturma
 
- Bildirim dışında aynı anda kahvaltı hazır her şeye sahip. Bildirim zaman uyumsuz bir işlem (ekmek toasting) ve zaman uyumlu işlemler (ezmesi ve Başınızı ekleme) olarak sunuluyor. Bu kod güncelleştirme bir önemli kavramı gösterir:
+ Bildirim hariç her şeyi aynı anda kah, daha hızlı bir şekilde hazırlayın. Bildirim, zaman uyumsuz bir işlemin (Ekleyici) ve zaman uyumlu işlemlerin (alın ve sıkışan) bir bileşim haline getirilmesi. Bu kodun güncelleştirilmesi önemli bir kavramı gösterir:
 
 > [!IMPORTANT]
-> Zaman uyumlu iş tarafından izlenen zaman uyumsuz bir işlem olarak bir zaman uyumsuz bir işlemdir. Başka bir deyişle, belirtilen zaman uyumsuz bir işlemi herhangi bir kısmını ise, tüm zaman uyumsuz bir işlemdir.
+> Zaman uyumsuz bir işlemin ardından zaman uyumlu iş tarafından oluşturulması zaman uyumsuz bir işlemdir. Başka bir şekilde ifade edilen bir işlemin herhangi bir bölümü zaman uyumsuz ise, tüm işlem zaman uyumsuzdur.
 
-Yukarıdaki kod, kullanabileceğiniz gösterdi <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601> çalışmakta olan görevlerin tutacak nesne. `await` Her görev kendi sonucu kullanmadan önce. Sonraki adım, diğer iş bileşimini temsil eden yöntemleri oluşturmaktır. Kahvaltı sunmadan önce ezmesi ve Başınızı eklemeden önce ekmek toasting temsil eden görev await istersiniz. Aşağıdaki kod ile çalışan temsil edebilir:
+Yukarıdaki kod, çalışan görevleri tutmak için veya <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> nesneleri kullanacağınızı gösterdi. Sonucunu `await` kullanmadan önce her görevi gerçekleştirebilirsiniz. Sonraki adım, diğer çalışmanın birleşimini temsil eden yöntemler oluşturmaktır. Kahvileri sunmadan önce, Butter ve sıkışmadan önce Ekleyici 'yi temsil eden görevi beklemek istersiniz. Bu işi aşağıdaki kodla temsil edebilirsiniz:
 
 [!code-csharp[ComposeToastTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
 
-Önceki yöntem sahip `async` imzası değiştiricisi. Bu sinyalleri için derleyici bu yöntemini içeren bir `await` deyimi; zaman uyumsuz işlemleri içerir. Bu yöntem ekmek toasts sonra ezmesi ve Başınızı ekler görevi temsil eder. Bu yöntem döndürür bir <xref:System.Threading.Tasks.Task%601> , bu üç işlemi olarak temsil eder. Artık kod ana blok olur:
+Önceki yöntem imzasında `async` değiştiriciye sahiptir. Bu yöntemin bir `await` ifade içerdiğini derleyiciye bildirir; zaman uyumsuz işlemler içerir. Bu yöntem, Ekleyici ve sıkışıklığı ekleyen görevi temsil eder. Bu yöntem, bu <xref:System.Threading.Tasks.Task%601> üç işlemin oluşumunu temsil eden bir döndürür. Kodun ana bloğu şu şekilde olur:
 
 [!code-csharp[StartConcurrentTasks](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-V3/Program.cs#Main)]
 
-Önceki değişiklik, zaman uyumsuz kod ile çalışmak için önemli bir teknik gösterilmektedir. Görevler, bir görev döndüren yeni bir yöntem işlemlere ayrılarak oluşturun. Bu görevi beklemek ne zaman seçebilirsiniz. Eşzamanlı olarak başka görevler başlatabilirsiniz.
+Önceki değişiklik, zaman uyumsuz kod ile çalışmak için önemli bir teknik gösterilmiştir. İşlemleri bir görevi döndüren yeni bir yönteme ayırarak görevleri oluşturursunuz. Bu görevin ne zaman bekleme seçeneğini belirleyebilirsiniz. Diğer görevleri eşzamanlı olarak başlatabilirsiniz.
 
-## <a name="await-tasks-efficiently"></a>Görevleri verimli bir şekilde await
+## <a name="await-tasks-efficiently"></a>Görevleri verimli olarak await
 
-Dizi `await` sonunda, yukarıdaki kod deyimlerini geliştirilmiş yöntemleri kullanılarak `Task` sınıfı. Bu API'leri biri <xref:System.Threading.Tasks.Task.WhenAll%2A>, döndüren bir <xref:System.Threading.Tasks.Task> tamamlanan kendi bağımsız değişken listesindeki tüm görevleri tamamladıktan sonra aşağıdaki kodda gösterildiği gibi:
+Önceki kodun sonundaki `await` deyim dizileri, `Task` sınıfının yöntemleri kullanılarak artırılabilir. Bu API <xref:System.Threading.Tasks.Task.WhenAll%2A>'lerden biri, aşağıdaki kodda gösterildiği gibi <xref:System.Threading.Tasks.Task> , bağımsız değişken listesindeki tüm görevler tamamlandığında tamamlanan bir döndürür.
 
 ```csharp
 await Task.WhenAll(eggTask, baconTask, toastTask);
@@ -136,12 +136,12 @@ Console.WriteLine("toast is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
-Başka bir seçenek kullanmaktır <xref:System.Threading.Tasks.Task.WhenAny%2A>, döndüren bir `Task<Task>` tamamlanan bağımsız değişkenlerinden biri tamamlar. Zaten bitmiş bilerek döndürülen göreve await. Aşağıdaki kod nasıl kullanabileceğinizi gösterir <xref:System.Threading.Tasks.Task.WhenAny%2A> tamamlayın ve ardından sonucunu işlemek için ilk görevi beklemek için. Tamamlanan görevin sonucu işlendikten sonra tamamlanmış bir görevin geçirilen görevler listesinden kaldırmak `WhenAny`.
+Diğer bir seçenek <xref:System.Threading.Tasks.Task.WhenAny%2A>de, bağımsız değişkenlerinden herhangi biri `Task<Task>` tamamlandığında tamamlanan bir döndürür. Döndürülen görevi, zaten bitdiğinin farkında olacak şekilde beklede olursunuz. Aşağıdaki kod, ilk görevin bitmesini beklemek için <xref:System.Threading.Tasks.Task.WhenAny%2A> nasıl kullanabileceğinizi gösterir ve sonra sonucunu işleyebilir. Tamamlanan görevden elde edilen sonucu işledikten sonra, bu tamamlanmış görevi öğesine `WhenAny`geçirilen görev listesinden kaldırırsınız.
 
 [!code-csharp[AwaitAnyTask](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
 
-Tüm bu değişiklikler, son sürümü sonra `Main` şu kod gibi görünür:
+Tüm bu değişiklikler yapıldıktan sonra nihai sürümü `Main` aşağıdaki kod gibi görünür:
 
 [!code-csharp[Final](~/samples/snippets/csharp/tour-of-async/AsyncBreakfast-final/Program.cs#Main)]
 
-Bu son kod zaman uyumsuzdur. Daha doğru bir şekilde, bir kişinin bir kahvaltı nasıl cook yansıtır. Bu makalede ilk kod örneği önceki kodla karşılaştırın. Kod okumasını hala NET core eylemlerdir. Bu kod, bu makalenin başında bir kahvaltı yapmak için bu yönergeleri okuduğunuz aynı şekilde okuyabilir. Dil özellikleri için `async` ve `await` herkesin hale getirir bu yazılı yönergelere izlemek için çeviri sağlayın: oluşturabilir ve görevlerin tamamlanmasını beklerken engelleme gibi görevleri başlatın.
+Bu son kod zaman uyumsuzdur. Bu, bir kişinin ne kadar hızlı bir şekilde bir kahtacağını daha doğru yansıtır. Yukarıdaki kodu, bu makaledeki ilk kod örneğiyle karşılaştırın. Temel eylemler, kodu okumayı hala temizler. Bu kodu, bu makalenin başlangıcında bir daha hızlı hale getirmek için bu talimatları okuduğunuzdan aynı şekilde okuyabilirsiniz. İçin `async` dil özellikleri ve `await` çeviri, her birinin bu yazılı yönergeleri izlemesini sağlar: Başlangıç görevleri, yaptığınız gibi başlatın ve görevlerin tamamlanmasını beklemeyi engellemez.

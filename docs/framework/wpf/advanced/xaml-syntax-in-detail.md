@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958793"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168998"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ayrıntılı XAML Sözdizimi
 Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanımlanmaktadır. Bu terimler, hem WPF belgeleri için hem de XAML kullanan diğer çerçeveler veya System. xaml düzeyinde XAML dil desteği tarafından etkinleştirilen temel XAML kavramlarını için bu belgenin geri kalanında sık kullanılır. Bu konu, [xaml genel bakış (WPF)](xaml-overview-wpf.md)konu başlığında sunulan temel terminoloji üzerinde genişletilir.  
@@ -62,7 +62,7 @@ Bu konuda, XAML söz dizimi öğelerini tanımlamakta kullanılan terimler tanı
   
 - Açma etiketi sağ açılı ayraç (>) ile tamamlanmalıdır. Diğer nesne öğeleri, özellik öğeleri veya iç metin, açma etiketini izleyebilir. Burada tam olarak hangi içeriklerin dahil olabileceği, genellikle öğenin nesne modeliyle kısıtlanır. Nesne öğesi için eşdeğer kapanış etiketi, doğru iç içe geçme ve diğer açılış ve kapanış etiketi çiftleriyle dengede bulunmalıdır.  
   
- .NET tarafından uygulanan XAML, nesne öğelerini türler, öznitelikler veya olaylar ve XAML ad alanları ile CLR ad alanları ve derleme öğelerine eşleyen bir kurallar kümesine sahiptir. WPF ve .NET Framework için XAML nesne öğeleri, başvurulan derlemelerde tanımlanan [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] türlerle eşlenir ve öznitelikler bu türlerin üyeleriyle eşlenir. XAML 'de bir CLR türüne başvurduğunuzda, bu türdeki devralınan üyelere de erişebilirsiniz.  
+ .NET tarafından uygulanan XAML, nesne öğelerini türler, öznitelikler veya olaylar ve XAML ad alanları ile CLR ad alanları ve derleme öğelerine eşleyen bir kurallar kümesine sahiptir. WPF ve .NET için XAML nesne öğeleri, başvurulan derlemelerde tanımlanan .NET türleriyle eşlenir ve öznitelikler bu türlerin üyeleriyle eşlenir. XAML 'de bir CLR türüne başvurduğunuzda, bu türdeki devralınan üyelere de erişebilirsiniz.  
   
  Örneğin, aşağıdaki örnek, <xref:System.Windows.Controls.Button> sınıfının yeni bir örneğini örnekleyen ve ayrıca bir <xref:System.Windows.FrameworkElement.Name%2A> özniteliği ve bu öznitelik için bir değer belirten nesne öğesi sözdizimidir:  
   

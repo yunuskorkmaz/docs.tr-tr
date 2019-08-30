@@ -1,26 +1,26 @@
 ---
 title: Modeli eğitme ve değerlendirme
-description: Makine öğrenimi modellerini oluşturun, Ölçümler ve Ölçüm performans ML.NET ile toplama öğrenin. Makine öğrenme modeli yeni verileri kullanarak tahmin yapmayı sağlayan eğitim verilerini içinde desen tanımlar.
-ms.date: 06/25/2019
+description: Makine öğrenimi modelleri oluşturmayı, ölçümleri toplamayı ve ML.NET ile performansı ölçmeyi öğrenin. Bir Machine Learning modeli, yeni verileri kullanarak tahmine dayalı hale getirmek için eğitim verileri içindeki desenleri tanımlar.
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397636"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169042"
 ---
 # <a name="train-and-evaluate-a-model"></a>Modeli eğitme ve değerlendirme
 
-Makine öğrenimi modellerini oluşturun, Ölçümler ve Ölçüm performans ML.NET ile toplama öğrenin. Bu örnek bir regresyon modeli eğitir olsa da, diğer algoritmalar çoğunu kavramları uygulanabilir.
+Makine öğrenimi modelleri oluşturmayı, ölçümleri toplamayı ve ML.NET ile performansı ölçmeyi öğrenin. Bu örnek bir regresyon modeli sunmakla birlikte, kavramlar diğer algoritmaların çoğunluğu genelinde uygulanabilir.
 
-## <a name="split-data-for-training-and-testing"></a>Verileri eğitim ve test için bölme
+## <a name="split-data-for-training-and-testing"></a>Eğitim ve test için verileri bölme
 
-Makine öğrenme modelinin amacı, eğitim verilerini içinde desen belirlemektir. Bu düzenleri, yeni verileri kullanarak tahmin yapmak için kullanılır.
+Machine Learning modelinin amacı, eğitim verileri içindeki desenleri belirlemektir. Bu desenler, yeni verileri kullanarak tahmine dayalı hale getirmek için kullanılır.
 
-Aşağıdaki veri modeli verilen:
+Veriler, gibi `HousingData`bir sınıfa göre modellenebilir.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Verilerin bir [ `IDataView` ](xref:Microsoft.ML.IDataView):
+' A yüklenen aşağıdaki veriler verilirler [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-Kullanım [ `TrainTestSplit` ](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) train verileri bölme ve test kümeleri için yöntem. Sonuç olacaktır bir [ `TrainTestData` ](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) iki içeren bir nesne [ `IDataView` ](xref:Microsoft.ML.IDataView) üyeleri, biri train kümesi ve diğer test kümesi için. Verileri bölme yüzdesi belirlenir `testFraction` parametresi. Aşağıdaki kod parçacığında, özgün verilerin test kümesi için yüzde 20 kullanıma tutuyor.
+Verileri tren ve test kümelerine bölmek için [yönteminikullanın.`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) Sonuç, biri tren kümesi [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) ve diğeri test kümesi [`IDataView`](xref:Microsoft.ML.IDataView) için olmak üzere iki üye içeren bir nesne olacaktır. Veri bölme yüzdesi `testFraction` parametreye göre belirlenir. Aşağıdaki kod parçacığı, test kümesi için özgün verilerin yüzde 20 ' sini tutuyor.
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -92,17 +92,17 @@ IDataView testData = dataSplit.TestSet;
 
 ## <a name="prepare-the-data"></a>Verileri hazırlama
 
-Verilerin machine learning modeli eğitimi önce önceden işlenmiş olması gerekir. Veri hazırlama hakkında daha fazla bilgi bulunabilir [veri hazırlama ile ilgili nasıl yapılır makalesi](prepare-data-ml-net.md) yanı sıra [ `transforms page` ](../resources/transforms.md).
+Bir makine öğrenimi modeli eğitimi öncesinde verilerin önceden işlenmesi gerekir. Veri hazırlama hakkında daha fazla bilgi için [veri hazırlığı nasıl yapılır makalesi](prepare-data-ml-net.md) ve [`transforms page`](../resources/transforms.md)' de bulunabilir.
 
-ML.NET algoritmaları giriş sütun türleri kısıtlamalar vardır. Ayrıca, herhangi bir değer belirtildiğinde giriş ve çıkış sütun adları için varsayılan değerler kullanılır.
+ML.NET algoritmalarının giriş sütunu türlerinde kısıtlamalar vardır. Ayrıca, hiçbir değer belirtilmediğinde, giriş ve çıkış sütun adları için varsayılan değerler kullanılır.
 
-### <a name="working-with-expected-column-types"></a>Beklenen sütun türleri ile çalışma
+### <a name="working-with-expected-column-types"></a>Beklenen sütun türleriyle çalışma
 
-ML.NET, makine öğrenimi algoritmaları, giriş olarak bilinen boyutunun bir kayan nokta vektör bekler. Uygulama [ `VectorType` ](xref:Microsoft.ML.Data.VectorTypeAttribute) özniteliğini tüm verileri sayısal biçimde zaten ve olmaya yönelik veri modelinizi birlikte (yani, görüntü piksel) işlenir. 
+ML.NET ' deki makine öğrenimi algoritmaları, girdi olarak bilinen boyutun kayan bir vektörünü bekler. Tüm veriler zaten sayısal biçimde olduğunda ve birlikte işlenmek üzere tasarlanıyorsa (örn. resim piksel), [özniteliğiverimodelinizeuygulayın.`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 
 
-Veriler, tüm sayısal değil ve tek tek her sütun farklı veri dönüşümleri uygulamak kullanmak istiyorsanız [ `Concatenate` ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) yöntemi tüm sütunları işlenmemiş tüm sütunları tek tek birleştirmek için Yeni bir sütun çıkışları tek bir özellik vektörü. 
+Veriler tümüyle sayısal değilse ve her sütuna ayrı ayrı veri dönüştürmeleri uygulamak istiyorsanız, tüm sütunları tek bir özellik vektöründe birleştirmek için [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) tüm sütunlar işlendikten sonra yöntemi kullanın. Yeni bir sütuna çıktı. 
 
-Aşağıdaki kod parçacığı birleştirir `Size` ve `HistoricalPrices` adlı yeni bir sütun çıktı bir tek özellik vektör sütunlara `Features`. Ölçekler, fark olduğundan [ `NormalizeMinMax` ](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) uygulanan `Features` veri'leri normalleştirmek için sütun.
+Aşağıdaki kod parçacığı, ve `Size` `HistoricalPrices` sütunlarını, adlı `Features`yeni bir sütuna çıktı olan tek bir özellik vektörü halinde birleştirir. Ölçeklerde bir farklılık olduğundan, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) verileri normalleştirmek için `Features` sütuna uygulanmış olması gerekir.
 
 ```csharp
 // Define Data Prep Estimator
@@ -119,21 +119,21 @@ ITransformer dataPrepTransformer = dataPrepEstimator.Fit(trainData);
 IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 ```
 
-### <a name="working-with-default-column-names"></a>Varsayılan sütun adları ile çalışma
+### <a name="working-with-default-column-names"></a>Varsayılan sütun adlarıyla çalışma
 
-ML.NET algoritmalarını hiçbiri belirtilen varsayılan sütun adları kullanın. Tüm Eğitmenler adlı bir parametreye sahip `featureColumnName` algoritması ve geçerli de sahip oldukları bir parametre için beklenen değer çağrıldığında girişleri için `labelColumnName`. Varsayılan olarak, bu değerler `Features` ve `Label` sırasıyla. 
+ML.NET algoritmaları, hiçbiri belirtilmediğinde varsayılan sütun adlarını kullanır. Tüm traers, algoritmanın girdileri için çağrılan `featureColumnName` bir parametreye sahiptir ve geçerli olduğunda, beklenen `labelColumnName`değer için bir parametre de vardır. Varsayılan olarak bu değerler `Features` ve `Label` sırasıyla. 
 
-Kullanarak [ `Concatenate` ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) yöntemi yeni bir sütun oluşturmak için ön işleme sırasında `Features`, içinde zaten mevcut olduğundan, algoritma parametrelerinde özelliği sütun adını belirtmek için gerek yoktur Ön işlemden `IDataView`. Etiket sütunu `CurrentPrice`, ancak [ `ColumnName` ](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliği, veri modelinde kullanılır, ML.NET yeniden adlandırır `CurrentPrice` sütuna `Label` sağlama gereksinimini kaldırır `labelColumnName` Makine öğrenimi algoritması estimator parametresi. 
+Adlı [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) `IDataView`yeni bir sütun oluşturmak için ön işleme sırasında yöntemini kullanarak, önceden işlenmiş durumda olduğundan, algoritmanın parametrelerinde özellik sütunu adını belirtmeniz gerekmez. `Features` Etiket sütunu, ancak `CurrentPrice` [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) öznitelik veri modelinde kullanıldığı `CurrentPrice` `Label` için ml.net, Machine Learning algoritmasına parametresağlamagereksiniminikaldıransütunuyenidenadlandırır.`labelColumnName` Tahmin Aracı. 
 
-Varsayılan sütun adlarını kullanmak istemiyorsanız, özellik ve etiket sütunlarının adlarını makine öğrenimi algoritması estimator tarafından sonraki kod parçacığında gösterildiği gibi tanımlarken parametreler olarak geçirin:
+Varsayılan sütun adlarını kullanmak istemiyorsanız, sonraki kod parçacığında gösterildiği gibi Machine Learning algoritması tahmin Aracı ' ı tanımlarken, özelliğin adlarını ve etiket sütunlarını parametre olarak etiketleyin:
 
 ```csharp
 var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelColumnName: "MyLabelColumnName", featureColumnName: "MyFeatureColumnName");
 ```
 
-## <a name="train-the-machine-learning-model"></a>Machine learning modeli eğitme
+## <a name="train-the-machine-learning-model"></a>Makine öğrenimi modelini eğitme
 
-Verileri önceden işlenmiş olduğunda kullanın [ `Fit` ](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) yöntemi ile machine learning modelini eğitmek için [ `StochasticDualCoordinateAscent` ](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) regresyon algoritması.
+Veriler önceden işlendikten sonra, makine öğrenimi modelini [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) gerileme algoritmayla eğitme yöntemini kullanın.
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -143,23 +143,23 @@ var sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 ```
 
-## <a name="extract-model-parameters"></a>Model parametreleri Ayıkla
+## <a name="extract-model-parameters"></a>Model parametrelerini Ayıkla
 
-Eğitilen modelin sonra öğrenilen ayıklamak [ `ModelParameters` ](xref:Microsoft.ML.Trainers.ModelParametersBase%601) İnceleme ya da yeniden eğitim için. [ `LinearRegressionModelParameters` ](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) Eğilim ve öğrenilen katsayıları veya eğitim modeli ağırlıkları sağlayın. 
+Model eğitilirken İnceleme veya yeniden eğitim için öğrenilen [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) ' ı ayıklayın. Eğitilen modelin sapve öğrenilen katsayılarını veya ağırlıklarını [sağlar.`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> Diğer modelleri, kendi görevlere özgü parametrelere sahip. Örneğin, [K-ortalamaları algoritması](xref:Microsoft.ML.Trainers.KMeansTrainer) veri kümesine üzerinde centroids koyar ve [ `KMeansModelParameters` ](xref:Microsoft.ML.Trainers.KMeansModelParameters) bu öğrenilen centroids depolayan bir özellik içeriyor. Daha fazla bilgi için ziyaret [ `Microsoft.ML.Trainers` API belgeleri](xref:Microsoft.ML.Trainers) ve içeren sınıflar için konum `ModelParameters` adında. 
+> Diğer modellerin görevlerine özgü parametreleri vardır. Örneğin, [K-anlamı algoritması](xref:Microsoft.ML.Trainers.KMeansTrainer) , verileri centroıd 'ler temelinde kümeye koyar ve [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) Bu öğrenilen centroıd 'leri depolayan bir özelliği içerir. Daha fazla bilgi edinmek için [ `Microsoft.ML.Trainers` API belgelerini](xref:Microsoft.ML.Trainers) ziyaret edin ve adlarını içeren `ModelParameters` sınıfları arayın. 
 
-## <a name="evaluate-model-quality"></a>Model kalitesi değerlendir
+## <a name="evaluate-model-quality"></a>Model kalitesini değerlendir
 
-En iyi performansa sahip model seçmenize yardımcı olması için test verilerini performansını değerlendirmek için gereklidir. Kullanım [ `Evaluate` ](xref:Microsoft.ML.RegressionCatalog.Evaluate*) eğitim modeli için çeşitli ölçümleri ölçme yöntemi.
+En iyi performans sağlayan modeli seçmenize yardımcı olmak için test verilerinde performansını değerlendirmek gereklidir. Eğitilen modele yönelik çeşitli ölçümleri ölçmek için [yönteminikullanın.`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*)
 
 > [!NOTE]
-> `Evaluate` Yöntemi üreten farklı ölçümlere bağlı olarak hangi machine learning görev gerçekleştirildi. Daha fazla bilgi için ziyaret [ `Microsoft.ML.Data` API belgeleri](xref:Microsoft.ML.Data) ve içeren sınıflar için konum `Metrics` adında. 
+> Yöntemi `Evaluate` , hangi makine öğrenimi görevinin gerçekleştirildiğine bağlı olarak farklı ölçümler üretir. Daha fazla ayrıntı için [ `Microsoft.ML.Data` API belgelerini](xref:Microsoft.ML.Data) ziyaret edin ve adlarını içeren `Metrics` sınıfları arayın. 
 
 ```csharp
 // Measure trained model performance
@@ -175,9 +175,9 @@ double rSquared = trainedModelMetrics.RSquared;
 ```
 
 Önceki kod örneğinde:  
-1. Test veri kümesini kullanarak önceden tanımlanmış veri hazırlama dönüşümleri önceden işlenir. 
-2. Eğitilen makine öğrenimi modeli, test verileri üzerindeki tahminlerde bulunmak için kullanılır.
-3. İçinde `Evaluate` yöntemi, değerleri `CurrentPrice` sınama veri kümesi sütunu karşı karşılaştırılır `Score` yeni çıkış sütununun tahminler elde etmek için regresyon ölçümler hesaplamak için model, bunlardan biri, R karesi alınmış depolanır`rSquared` değişkeni.
+1. Test veri kümesi önceden tanımlanmış veri hazırlama dönüştürmeleri kullanılarak önceden işlenir. 
+2. Eğitilen makine öğrenimi modeli, test verilerinde tahminleri yapmak için kullanılır.
+3. Yönteminde, test veri `CurrentPrice` `Score` kümesi sütunundaki değerler, regresyon modeli için ölçümleri hesaplamak üzere yeni çıkış tahminlerinin sütunuyla karşılaştırılır, bunlardan biri R-kare `Evaluate` `rSquared` değişken.
 
 > [!NOTE]
-> Küçük Bu örnekte, bir sayı olan R kare 0-1 sınırlı veri boyutu nedeniyle aralıkta değil. Gerçek hayattaki bir senaryoda, 0 ile 1 arasında bir değer görmeyi beklemelisiniz.
+> Bu küçük örnekte, R-kare, verilerin sınırlı büyüklüğü nedeniyle 0-1 aralığında olmayan bir sayıdır. Gerçek dünyada bir senaryoda, 0 ile 1 arasında bir değer görmeniz beklenir.

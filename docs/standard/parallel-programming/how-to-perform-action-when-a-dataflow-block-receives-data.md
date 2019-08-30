@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54eb9723f44924919ca1b4631e35e1e4da4af2af
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 17167467f52ab9afb8d7500f4f0eb744d8f60a6e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666352"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169030"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme
 *Yürütme veri akışı blok* türleri, veri alırken Kullanıcı tarafından sağlanmış bir temsilciyi çağırır. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, Vesınıfları<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> yürütme veri akışı blok türleridir. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> Yürütme veri akışı bloğuna `delegate` bir çalışma`Sub` işlevi sağladığınızda anahtar sözcüğünü <xref:System.Action%601>( <xref:System.Func%602>Visual Basic),,, veya lambda ifadesini kullanabilirsiniz. Bu belgede <xref:System.Func%602> , yürütme blokları üzerinde işlem gerçekleştirmek için ve lambda ifadelerinin nasıl kullanılacağı açıklanmaktadır.  
@@ -34,7 +34,7 @@ ms.locfileid: "69666352"
  [Veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) belgesindeki temsilci türlerinin Bölüm Özeti, <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, ve <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> nesnelerine sağlayabilmeniz için temsilci türlerini özetler. Tablo ayrıca temsilci türünün zaman uyumlu veya zaman uyumsuz olarak çalışıp çalışmadığını belirtir.  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Bu örnek, veri akışı bloğu görevini <xref:System.Func%602> eşzamanlı olarak <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> gerçekleştirmek için nesnesine türünde bir temsilci sağlar. Veri akışı bloğunun zaman uyumsuz olarak davranmasına izin vermek için, veri akışı bloğuna <xref:System.Func%601> türünde bir temsilci sağlayın. Bir veri akışı bloğu zaman uyumsuz olarak davrandığı zaman, veri akışı bloğunun görevi yalnızca döndürülen <xref:System.Threading.Tasks.Task%601> nesne bittiğinde tamamlanır. Aşağıdaki `CountBytes` örnek, Yöntemi değiştirir ve [zaman](../../csharp/language-reference/keywords/async.md) uyumsuz ve [await](../../csharp/language-reference/keywords/await.md) işleçlerini (Visual Basic içinde[Async](../../visual-basic/language-reference/modifiers/async.md) ve [await](../../visual-basic/language-reference/operators/await-operator.md) ) kullanır. Bu, belirtilen dosyada sıfır olan toplam bayt sayısını zaman uyumsuz olarak hesaplar. Yöntemi <xref:System.IO.FileStream.ReadAsync%2A> , zaman uyumsuz olarak dosya okuma işlemleri gerçekleştirir.  
+ Bu örnek, veri akışı bloğu görevini <xref:System.Func%602> eşzamanlı olarak <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> gerçekleştirmek için nesnesine türünde bir temsilci sağlar. Veri akışı bloğunun zaman uyumsuz olarak davranmasına izin vermek için, veri akışı bloğuna <xref:System.Func%601> türünde bir temsilci sağlayın. Bir veri akışı bloğu zaman uyumsuz olarak davrandığı zaman, veri akışı bloğunun görevi yalnızca döndürülen <xref:System.Threading.Tasks.Task%601> nesne bittiğinde tamamlanır. Aşağıdaki `CountBytes` örnek, Yöntemi değiştirir ve [zaman](../../csharp/language-reference/keywords/async.md) uyumsuz ve [await](../../csharp/language-reference/operators/await.md) işleçlerini (Visual Basic içinde[Async](../../visual-basic/language-reference/modifiers/async.md) ve [await](../../visual-basic/language-reference/operators/await-operator.md) ) kullanır. Bu, belirtilen dosyada sıfır olan toplam bayt sayısını zaman uyumsuz olarak hesaplar. Yöntemi <xref:System.IO.FileStream.ReadAsync%2A> , zaman uyumsuz olarak dosya okuma işlemleri gerçekleştirir.  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  

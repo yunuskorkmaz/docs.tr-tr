@@ -1,5 +1,5 @@
 ---
-title: try-finally - C# başvurusu
+title: try-finally- C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,45 +9,45 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: e8442438d06e8853e159b717b1f86fdce5c4b8f7
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: a8d18a6ae8b3f8f6cde76b1b296ac6a317ca1ed1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422150"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168574"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# Başvurusu)
 
-Kullanarak bir `finally` bloğu içinde ayrılan tüm kaynakları temizleyebilirsiniz bir [deneyin](try-catch.md) bloğu ve kodu çalıştırabilir bir özel durum meydana gelse bile `try` blok. Genellikle, deyimleri bir `finally` denetimi terk ettiğinde çalıştırmak blok bir `try` deyimi. Denetim aktarımı yürütülmesini normal yürütülmesi sonucunda oluşabilir bir `break`, `continue`, `goto`, veya `return` deyimi veya bir özel durumun yayılmasının `try` deyimi.
+Bir `finally` blok kullanarak, bir [TRY](try-catch.md) bloğunda ayrılan tüm kaynakları temizleyebilir ve bir `try` özel durum bloğunda meydana gelirse bile kodu çalıştırabilirsiniz. Genellikle, denetim bir `finally` `try` deyiminden ayrıldığında blok deyimleri çalışır. Denetimin aktarımı normal yürütme,, `break`, veya `continue` `goto` `return` bildiriminin yürütülmesi ya da deyimdenbirözeldurumunyayılmasındankaynaklanıyorolabilir.`try`
 
-İşlenen özel durum, ilişkili içinde `finally` blokun çalıştırılacak. Ancak, özel durum işlenmezse yürütülmesini `finally` bloğunun nasıl özel durumu geriye doğru izlenme işleminin tetiklenir. Buna karşılık, bilgisayarınızın nasıl ayarlandığına bağlıdır.
+İşlenmiş bir özel durum içinde, ilişkili `finally` bloğun çalıştırılması garanti edilir. Ancak, özel durum işlenmemiş ise, `finally` bloğun yürütülmesi özel durum geriye doğru tetikleme işleminin tetiklendiği duruma bağlıdır. Bu da, bilgisayarınızın nasıl ayarlanmayacağına bağlıdır.
 
-Genelde işlenmeyen bir özel durum sona erdiğinde bir uygulama olup olmadığını `finally` blokunun çalıştırılıp çalıştırılmaması önemli değildir. Ancak, varsa bir `finally` bile bu durumda, tek bir çözüm çalıştırılması gereken bloğudur eklemek için bir `catch` bloğunu `try` - `finally` deyimi. Alternatif olarak, oluşturulmuş olabilecek istisnayı yakalamak mümkündür `try` bloğu bir `try` - `finally` çağrı yığınının üstlerinde deyimi. Diğer bir deyişle, özel durum içeren yöntemi çağıran yöntemi yakalayabilir `try` - `finally` deyimi, veya bu yöntemi çağıran yöntemdeki veya çağrı yığınındaki herhangi bir yöntemi. Özel durum yakalanmazsa yürütülmesini `finally` blok bağlı olup bir işletim sistemi bir özel durum harekete seçer üzerinde bırakma işlemi.
+Genellikle, işlenmeyen bir özel durum uygulamayı sona erdirdiğinde, `finally` bloğun çalıştırılıp çalıştırılmayacağı önemli değildir. Ancak, bu durumda bile çalıştırılması gereken bir `finally` blokta deyimler varsa, bir çözüm `finally` ifadeye bir `catch` blok `try` - eklemektir. Alternatif olarak, çağrı yığınının `try` üst kısmında yer alan bir `try` - `finally` deyimin bloğunda ortaya atılmış olabilecek özel durumu yakalayabilirsiniz. Diğer bir deyişle, bir yöntemi, `try` `finally` ifadeyi içeren - yöntemi veya bu yöntemi çağıran yöntemi ya da çağrı yığınında herhangi bir yöntemi çağıran yöntemini yakalayabilirsiniz. Özel durum yakalanmadığında, `finally` bloğun yürütülmesi işletim sisteminin özel durum geriye doğru izleme işlemi tetiklemeyi seçip seçmediğine bağlıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, geçersiz dönüştürme deyimi neden olan bir `System.InvalidCastException` özel durum. İşlenmeyen özel durum.
+Aşağıdaki örnekte, geçersiz bir dönüştürme açıklaması `System.InvalidCastException` özel duruma neden olur. Özel durum işlenmemiş olur.
 
 [!code-csharp[csrefKeywordsExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#4)]
 
-Aşağıdaki örnekte, bir özel durumdan `TryCast` yöntemi bir yöntem çağrı yığınında yığınından uzakta yakalandı.
+Aşağıdaki örnekte, `TryCast` yöntem içindeki bir özel durum, çağrı yığınının ardından bir yöntemde yakalanır.
 
 [!code-csharp[csrefKeywordsExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#6)]
 
-Hakkında daha fazla bilgi için `finally`, bkz: [try-catch-finally](try-catch-finally.md).
+Hakkında `finally`daha fazla bilgi için bkz. [try-catch-finally](try-catch-finally.md).
 
-C# ayrıca içerir [using deyimi](using-statement.md), için benzer işlevsellik sağlayan <xref:System.IDisposable> bir sözdizimindeki nesneleri.
+C#Ayrıca, uygun bir sözdiziminde nesneler için <xref:System.IDisposable> benzer işlevler sağlayan [using ifadesini](using-statement.md)de içerir.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [TRY deyimin](~/_csharplang/spec/statements.md#the-try-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [try, throw ve catch Deyimleri (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
-- [Nasıl yapılır: Açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [Nasıl yapılır: Özel durumları açık olarak oluştur](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

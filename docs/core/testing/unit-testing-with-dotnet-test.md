@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 5319e33c314187ccce3e9832c4b01d93ba86c3ce
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1013e14690bb3cfc17e339bfd5045e6d10bc3d3e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626420"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168146"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test C# ve xUnit kullanarak .NET Core 'da birim testi
 
@@ -22,13 +22,13 @@ Bir kabuk penceresi açın. Çözümü tutmak için *birim-test-using-DotNet-tes
 Yeni bir çözüm oluşturmak için bu [`dotnet new sln`](../tools/dotnet-new.md) yeni dizinin içinde öğesini çalıştırın. Bir çözüme sahip olmak, hem sınıf kitaplığını hem de birim testi projesini yönetmeyi kolaylaştırır.
 Çözüm dizini içinde bir *Primeservice* dizini oluşturun. Bu nedenle, dizin ve dosya yapısı şu şekilde olmalıdır:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
 ```
 
-Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* *olarak yeniden*adlandırın. Önce `PrimeService` sınıfın başarısız bir uygulamasını oluşturursunuz:
+Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* olarak yenidenadlandırın. Önce `PrimeService` sınıfın başarısız bir uygulamasını oluşturursunuz:
 
 ```csharp
 using System;
@@ -49,7 +49,7 @@ Dizini *birim-test-using-DotNet-test* dizinine geri çevirin.
 
 Sınıf Kitaplığı projesini çözüme eklemek için [DotNet sln](../tools/dotnet-sln.md) komutunu çalıştırın:
 
-```
+```console
 dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
@@ -57,7 +57,7 @@ dotnet sln add ./PrimeService/PrimeService.csproj
 
 Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -78,7 +78,7 @@ Ardından, *Primeservice. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin
 
 Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. `dotnet new`önceki adımda xUnit ve xUnit Çalıştırıcısı eklenmiştir. Şimdi, `PrimeService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -86,7 +86,7 @@ GitHub 'daki [örnekler deposunda](https://github.com/dotnet/samples/blob/master
 
 Son çözüm düzeni aşağıda gösterilmiştir:
 
-```
+```console
 /unit-testing-using-dotnet-test
     unit-testing-using-dotnet-test.sln
     /PrimeService
@@ -99,7 +99,7 @@ Son çözüm düzeni aşağıda gösterilmiştir:
 
 Çözüme test projesi eklemek için, *birim-test-using-DotNet-test* dizininde [DotNet sln](../tools/dotnet-sln.md) komutunu çalıştırın:
 
-```
+```console
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 

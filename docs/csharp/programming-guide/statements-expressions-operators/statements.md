@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 0ec741d085ca52d52999d2e10cf5f687cc885219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c50d9e8db2668f2138653858e42b8ed07d3e1e9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921787"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168956"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 Bir programın aldığı eylemler deyimler bölümünde ifade edilir. Yaygın eylemler, belirli bir koşula bağlı olarak değişkenleri bildirme, değer atama, yöntemleri çağırma, koleksiyonlar aracılığıyla döngü oluşturma ve bir veya başka bir kod bloğuna dallandırma içerir. Bir programda deyimlerin yürütülme sırası, denetim akışı veya yürütme akışı olarak adlandırılır. Programın çalışma zamanında aldığı girişe nasıl davrandığına bağlı olarak, denetim akışı, programın her çalıştırılışında farklılık gösterebilir.  
@@ -32,7 +32,7 @@ Bir programın aldığı eylemler deyimler bölümünde ifade edilir. Yaygın ey
 |Atlama deyimleri|Atdeyimlerini, kodun başka bir bölümüne aktarma denetimi. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [Kes](../../language-reference/keywords/break.md), [devam](../../language-reference/keywords/continue.md), [varsayılan](../../language-reference/keywords/switch.md), [goto](../../language-reference/keywords/goto.md), [Return](../../language-reference/keywords/return.md), [yield](../../language-reference/keywords/yield.md)|  
 |Özel durum işleme deyimleri|Özel durum işleme deyimleri, çalışma zamanında oluşan olağanüstü koşullardan sorunsuz bir şekilde kurtarmanızı sağlar. Daha fazla bilgi için aşağıdaki konulara bakın:<br /><br /> [throw](../../language-reference/keywords/throw.md), [try-catch](../../language-reference/keywords/try-catch.md), [try-finally](../../language-reference/keywords/try-finally.md), [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)|  
 |[Checked ve unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Checked ve unchecked deyimleri, sonuçta elde edilen değeri tutmak için çok küçük bir değişkende depolandığında sayısal işlemlere taşma olmasına izin verilip verilmeyeceğini belirtmenizi sağlar. Daha fazla bilgi için bkz. [Checked](../../language-reference/keywords/checked.md) ve [unchecked](../../language-reference/keywords/unchecked.md).|  
-|`await` İfade|[Zaman uyumsuz](../../language-reference/keywords/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../../language-reference/keywords/await.md) işlecini kullanabilirsiniz. Denetim zaman uyumsuz yöntemde `await` bir ifadeye ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yöntem içindeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir.<br /><br /> Basit bir örnek için, [yöntemlerin](../classes-and-structs/methods.md)"zaman uyumsuz metotlar" bölümüne bakın. Daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md).|  
+|`await` İfade|[Zaman uyumsuz](../../language-reference/keywords/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../../language-reference/operators/await.md) işlecini kullanabilirsiniz. Denetim zaman uyumsuz yöntemde `await` bir ifadeye ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yöntem içindeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir.<br /><br /> Basit bir örnek için, [yöntemlerin](../classes-and-structs/methods.md)"zaman uyumsuz metotlar" bölümüne bakın. Daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md).|  
 |`yield return` İfade|Yineleyici, bir koleksiyon üzerinde liste veya dizi gibi özel bir yineleme gerçekleştirir. Bir yineleyici, her öğeyi birer birer döndürmek için [yield return](../../language-reference/keywords/yield.md) ifadesini kullanır. Bir `yield return` ifadeye ulaşıldığında, koddaki geçerli konum hatırlanır. Yineleyici bir sonraki sefer çağrıldığında, yürütme o konumdan yeniden başlatılır.<br /><br /> Daha fazla bilgi için bkz. [yineleyiciler](../concepts/iterators.md).|  
 |`fixed` İfade|Fixed deyimleri, çöp toplayıcısının taşınabilir bir değişkenin yerini değiştirmesini engeller. Daha fazla bilgi için bkz. [düzeltildi](../../language-reference/keywords/fixed-statement.md).|  
 |`lock` İfade|Lock deyimleri tek seferde yalnızca bir iş parçacığına kod bloklarına erişimi sınırlamanıza olanak sağlar. Daha fazla bilgi için bkz. [Lock](../../language-reference/keywords/lock-statement.md).|  

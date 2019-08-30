@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944689"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169101"
 ---
 # <a name="binding-sources-overview"></a>Kaynakların Bağlanmasına Genel Bakış
 Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvurur. Bu konuda, bağlama kaynağı olarak kullanabileceğiniz nesne türleri ele alınmaktadır.  
@@ -42,7 +42,7 @@ Veri bağlamada bağlama kaynak nesnesi, verileri aldığınız nesneye başvuru
 ### <a name="other-characteristics"></a>Diğer özellikler  
  Aşağıdaki listede dikkat edilecek diğer önemli noktaları verilmiştir:  
   
-- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]nesnesini oluşturmak istiyorsanız, sınıfının parametresiz bir oluşturucusu olmalıdır. Gibi bazı [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] dillerde C#parametresiz Oluşturucu sizin için oluşturulmuş olabilir.  
+- İçinde [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]nesnesini oluşturmak istiyorsanız, sınıfının parametresiz bir oluşturucusu olmalıdır. Gibi bazı .NET dillerde C#parametresiz Oluşturucu sizin için oluşturulmuş olabilir.  
   
 - Bağlama için bağlama kaynak özellikleri olarak kullandığınız özellikler, sınıfınızın ortak özellikleri olmalıdır. Açıkça tanımlanan arabirim özelliklerine bağlama amaçları için erişilemez, ya da hiçbir temel uygulamasına sahip olmayan korumalı, özel, iç veya sanal özellikler olabilir.  
   

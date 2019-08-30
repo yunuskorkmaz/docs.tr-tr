@@ -1,32 +1,32 @@
 ---
-title: Test yayımlanmış çıktısı dotnet vstest ile
-description: Testleri yayımlanan kitaplıklarındaki yerine dotnet vstest komutuyla bir kaynak kod üzerinde çalıştırmayı öğrenin.
+title: DotNet VSTest ile yayımlanan çıktıyı test etme
+description: Kaynak kodu yerine,, DotNet VSTest komutuyla testlerin yayımlanmış kitaplıklarda nasıl çalıştırılacağını öğrenin.
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ac03053bc762d0176e087545871ca8a145cd41e
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665825"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168287"
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a>Test yayımlanmış çıktısı dotnet vstest ile
+# <a name="test-published-output-with-dotnet-vstest"></a>DotNet VSTest ile yayımlanan çıktıyı test etme
 
-Kullanarak zaten yayımlanmış çıkışı üzerinde testler çalıştırabilirsiniz `dotnet vstest` komutu. Bu xUnit, MSTest ve NUnit testleri çalışır. Yalnızca yayımlanan çıkışınızı parçası olan DLL dosyasını bulun ve çalıştırın:
+`dotnet vstest` Komutunu kullanarak, zaten yayınlanmış çıkış üzerinde testler çalıştırabilirsiniz. Bu işlem xUnit, MSTest ve NUnit testlerinde çalışır. Yalnızca yayınlanmış çıktılarınızın parçası olan DLL dosyasını bulun ve çalıştırın:
 
-```
+```console
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-Burada `<MyPublishedTests>` yayımlanan test projenizin adıdır.
+`<MyPublishedTests>` , Yayımlanan test projenizin adıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki komutları yayımlanan bir DLL çalışan testler gösterilmiştir.
+Aşağıdaki komutlar, yayımlanmış bir DLL üzerinde testleri çalıştırmayı gösterir.
 
-```
+```console
 dotnet new mstest -o MyProject.Tests
 cd MyProject.Tests
 dotnet publish -o out
@@ -34,10 +34,10 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Not: Uygulama dışındaki bir çerçeve hedefleme, `netcoreapp` çalıştırmaya devam `dotnet vstest` framework bayrakla hedeflenen çerçevenin geçirerek komutu. Örneğin: `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"` Visual Studio 2017 güncelleştirme 5'te istenen framework otomatik olarak algılanır.
+> Not: Uygulamanız dışında `netcoreapp` bir çerçeveyi hedefliyorsanız, bir Framework bayrağıyla hedeflenen Çerçeveyi geçirerek `dotnet vstest` komutunu yine de çalıştırabilirsiniz. Örneğin: `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. Visual Studio 2017 güncelleştirme 5 ' te istenen çerçeve otomatik olarak algılanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dotnet testi ve xUnit ile birim testi](unit-testing-with-dotnet-test.md)
-- [Dotnet testi ve NUnit ile birim testi](unit-testing-with-nunit.md)
-- [Dotnet testi ve MSTest ile birim testi](unit-testing-with-mstest.md)
+- [DotNet test ve xUnit ile birim testi](unit-testing-with-dotnet-test.md)
+- [DotNet test ve NUnit ile birim testi](unit-testing-with-nunit.md)
+- [DotNet test ve MSTest ile birim testi](unit-testing-with-mstest.md)

@@ -2,12 +2,12 @@
 title: Temsilcilerde (C#) varyans kullanma
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 00e11d4ce755c8c75b73023fec14d95ebc96b4fe
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 980caf8d5e4699115d203a89fab7994d18cc1707
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595268"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168359"
 ---
 # <a name="using-variance-in-delegates-c"></a>Temsilcilerde (C#) varyans kullanma
 Bir temsilciye bir yöntem atadığınızda, *Kovaryans* ve *değişken varyans* , bir temsilci türünü Yöntem imzasıyla eşleştirmek için esneklik sağlar. Kovaryans, bir metodun, temsilde tanımlı olandan daha fazla türetilmiş dönüş türüne sahip olmasını sağlar. Değişken Varyans, temsilci türünden daha az türetilmiş parametre türlerine sahip bir yönteme izin verir.  
@@ -50,8 +50,23 @@ class Program
   
 ## <a name="example-2-contravariance"></a>Örnek 2: Kontravaryans  
   
-### <a name="description"></a>Açıklama  
- Bu örnek, temsilci imza parametre türünün temel türü olan bir türün parametrelerine sahip yöntemlerle nasıl kullanılabileceğinizi gösterir. Değişken varyans ile ayrı işleyiciler yerine bir olay işleyicisi kullanabilirsiniz. Örneğin `EventArgs` , bir giriş parametresini kabul eden bir olay işleyicisi oluşturabilir ve bu `MouseEventArgs` `Button.MouseClick` parametreyi parametre `TextBox.KeyDown` olarak bir türü `KeyEventArgs` ve parametre gönderen bir olayla birlikte kullanabilirsiniz.  
+### <a name="description"></a>Açıklama
+
+Bu örnek, temsilci imza parametre türünün temel türleri olan parametrelere sahip Yöntemler ile temsilcilerin nasıl kullanılabileceğini gösterir. Değişken varyans ile ayrı işleyiciler yerine bir olay işleyicisi kullanabilirsiniz. Aşağıdaki örnek iki temsilcinin kullanımını sağlar:
+
+- <xref:System.Windows.Forms.KeyEventHandler> [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) olayının imzasını tanımlayan bir temsilci. İmzası:
+
+   ```csharp
+   public delegate void KeyEventHandler(object sender, KeyEventArgs e)
+   ```
+
+- <xref:System.Windows.Forms.MouseEventHandler> [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) olayının imzasını tanımlayan bir temsilci. İmzası:
+
+   ```csharp
+   public delegate void MouseEventHandler(object sender, MouseEventArgs e)
+   ```
+
+Örnek, <xref:System.EventArgs> parametresiyle bir olay işleyicisini tanımlar ve `Button.KeyDown` hem hem de `Button.MouseClick` olaylarını işlemek için onu kullanır. Bu <xref:System.EventArgs> <xref:System.Windows.Forms.KeyEventArgs> ,<xref:System.Windows.Forms.MouseEventArgs>hem hem de temel türü olduğundan bunu yapabilir. 
   
 ### <a name="code"></a>Kod  
   

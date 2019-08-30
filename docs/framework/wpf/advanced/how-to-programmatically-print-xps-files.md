@@ -8,55 +8,55 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6642fad7d20e60a8b92e5860b763511f4fc0be72
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052449"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169176"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Nasıl yapılır: Program Aracılığıyla XPS Dosyalarını Yazdırma
-Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.AddJob%2A> yazdırmak için yöntemi [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] açmadan dosyaları bir <xref:System.Windows.Controls.PrintDialog> veya İlkesi, tüm [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] hiç.  
+<xref:System.Printing.PrintQueue.AddJob%2A> [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Bir veyaöğesini[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] açmadan dosyaları yazdırmak için yönteminin bir aşırı yüklemesini kullanabilirsiniz. <xref:System.Windows.Controls.PrintDialog>  
   
- Ayrıca yazdırabilirsiniz [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] çok kullanarak dosyaları <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> ve <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> yöntemlerinin <xref:System.Windows.Xps.XpsDocumentWriter>. Bu hakkında daha fazla bilgi için [XPS Belge yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Ayrıca, <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> uygulamasının birçok ve yöntemlerini kullanarak dosyaları yazdırabilirsiniz. <xref:System.Windows.Xps.XpsDocumentWriter> Bunun hakkında daha fazla bilgi için, [BIR XPS belgesi yazdırılıyor](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)).  
   
- Başka bir şekilde yazdırma [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] kullanmaktır <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> veya <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> yöntemlerinin <xref:System.Windows.Controls.PrintDialog> denetimi. Bkz: [Yazdır iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
+ Yazdırmanın [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> <xref:System.Windows.Controls.PrintDialog> başka bir yolu da denetimin veyayöntemlerininbiryoludur.<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> Bkz. [yazdırma Iletişim kutusu çağırma](how-to-invoke-a-print-dialog.md).  
   
 ## <a name="example"></a>Örnek  
- Üç parametre kullanarak yönelik temel adımlar <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi aşağıdaki gibidir. Aşağıdaki örnekte ayrıntılarını verir.  
+ Üç parametreli <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi kullanmanın ana adımları aşağıdaki gibidir. Aşağıdaki örnekte ayrıntılar verilmektedir.  
   
-1. Yazıcı XPSDrv yazıcısı olup olmadığını belirler. (Bkz [yazdırma genel bakış](printing-overview.md) XPSDrv hakkında daha fazla bilgi için.)  
+1. Yazıcının bir XPSDrv yazıcı olup olmadığını belirleme. (XPSDrv hakkında daha fazla bilgi için bkz. [yazdırmayla Ilgili genel bakış](printing-overview.md) )  
   
-2. Yazıcı XPSDrv yazıcısı değilse, çoklu iş parçacığı için iş parçacığının grubunu ayarlayın.  
+2. Yazıcı bir XPSDrv yazıcı değilse, iş parçacığının Apartment öğesini tek iş parçacığı olarak ayarlayın.  
   
-3. Bir yazdırma sunucusu ve yazdırma sırası nesne örneği.  
+3. Yazdırma sunucusu ve yazdırma kuyruğu nesnesi örneği oluşturun.  
   
-4. Yazdırılacak dosyayı bir proje adı belirterek bu yöntemi çağırın ve <xref:System.Boolean> bayrak belirten XPSDrv yazıcısı yazıcı olup olmadığını.  
+4. Bir iş adı, yazdırılacak dosya ve yazıcının bir XPSDrv yazıcı olup olmadığını belirten bir <xref:System.Boolean> bayrak belirterek yöntemi çağırın.  
   
- Aşağıdaki örnekte, tüm yazdırma toplu işlemi gösterilmektedir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bir dizindeki dosyaları. Uygulamanın üç parametre depolayacağınız dizini belirtmek için kullanıcıdan rağmen <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi gerekli olmadığı bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Sahip olduğunuz herhangi bir kod yolunda kullanılabilir bir [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosya adı ve kendisine geçirebilirsiniz yolu.  
+ Aşağıdaki örnekte, bir dizindeki tüm [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosyaları toplu olarak nasıl yazdırabileceğiniz gösterilmektedir. Uygulama kullanıcıdan Dizin belirtmesini isterse, ancak üç parametreli <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Yöntem bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gerektirmez. Bu, kendisine geçirebileceğiniz bir dosya adı ve yolunuz varsa herhangi [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bir kod yolunda kullanılabilir.  
   
- Üç parametre <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> aşırı yükünü <xref:System.Printing.PrintQueue.AddJob%2A> bir tek iş parçacığı grubu çalıştırmalısınız her <xref:System.Boolean> parametresi `false`, XPSDrv yazıcısı kullanıldığında, olması gerekir. Bununla birlikte, varsayılan grup durumu için [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] birden çok iş parçacığıdır. Bu varsayılan örnek XPSDrv yazıcısı varsaydığından tersine çevrilmesi gerekir.  
+ Öğesinin <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> <xref:System.Boolean> `false`Üç parametreli aşırı yüklemesi, parametresi her olduğunda tek bir iş parçacığı grubu içinde çalışmalıdır ve bu, XPSDrv olmayan bir yazıcı kullanılırken olması gerekir. <xref:System.Printing.PrintQueue.AddJob%2A> Ancak, .NET için varsayılan Grup durumu birden çok iş parçacığıdır. Örnek XPSDrv olmayan bir yazıcıya varsaydığından bu varsayılan değer ters alınmalıdır.  
   
- Varsayılan değeri değiştirmek için iki yolu vardır. Bir kolayca ediyor <xref:System.STAThreadAttribute> (diğer bir deyişle, "`[System.STAThreadAttribute()]`") uygulamanın ilk satırının hemen üstüne `Main` yöntemi (genellikle "`static void Main(string[] args)`"). Ancak, çoğu uygulama gerektiren `Main` yöntemi ikinci bir yöntem olduğundan, birden çok iş parçacıklı durumuna sahiptir: çağrı yerleştirmek <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> Grup durumu ayarlanmış ayrı bir iş parçacığı <xref:System.Threading.ApartmentState.STA> ile <xref:System.Threading.Thread.SetApartmentState%2A>. Aşağıdaki örnekte, ikinci bu tekniği kullanır.  
+ Varsayılanı değiştirmek için iki yol vardır. Tek yol <xref:System.STAThreadAttribute> , uygulamanın `Main` yönteminin`[System.STAThreadAttribute()]`ilksatırınınhemenüzerinde(yani"")yalnızca("")eklemektir.`static void Main(string[] args)` `Main` Ancak birçok uygulama, yöntemin çok iş parçacıklı bir grup durumuna sahip olmasını gerektirir, bu nedenle ikinci bir yöntem vardır: <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> çağrısını, Grup durumu ile <xref:System.Threading.Thread.SetApartmentState%2A>olarak <xref:System.Threading.ApartmentState.STA> ayarlanan ayrı bir iş parçacığında koyun. Aşağıdaki örnek bu ikinci tekniği kullanır.  
   
- Buna örnek oluşturarak başlar. bir <xref:System.Threading.Thread> nesne ve geçirerek bir **PrintXPS** yöntemi olarak <xref:System.Threading.ThreadStart> parametresi. ( **PrintXPS** yöntemi, örnek tanımlanır.) Sonraki iş parçacığı bir tek iş parçacığı grubu olarak ayarlanır. Yalnızca kalan kod `Main` yöntemi yeni iş parçacığını başlatır.  
+ Buna göre, örnek bir <xref:System.Threading.Thread> nesneyi örnekleyerek ve bir **PrintXPS** metodunu <xref:System.Threading.ThreadStart> parametresi olarak geçirerek başlar. ( **PrintXPS** yöntemi örnekte daha sonra tanımlanır.) Daha sonra iş parçacığı tek bir iş parçacığı grubu olarak ayarlanır. `Main` Yöntemin yalnızca geri kalan kodu yeni iş parçacığını başlatır.  
   
- Örneğin et bulunduğu `static` **BatchXPSPrinterçPrintXPS** yöntemi. Bir yazdırma sunucusunu ve kuyruk oluşturduktan sonra yöntemi içeren bir dizin için kullanıcıdan [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosyaları. Dizinin var olup olmadığını ve varlığından destek alan doğrulama sonra \*.xps dosyaları içinde yöntem her bir dosya yazdırma sırasını ekler. Örneği geçiriyoruz şekilde yazıcı XPSDrv olmayan, olduğunu varsayar `false` son parametresi için <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> yöntemi. Bu nedenle, yöntem doğrulayacaktır [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması diline dönüştürülecek denemeden önce dosyayı işaretlemede. Doğrulama başarısız olursa bir özel durum oluşturulur. Örnek kod özel durumu yakalar, bu hakkında kullanıcıya bildirim ve sonraki işlemek için Git [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosya.  
+ Örneğin et, `static` **batchxpsprınter. PrintXPS** yönteminde bulunur. Yazdırma sunucusu ve sıra oluşturduktan sonra, Yöntemi kullanıcıdan dosya içeren [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bir dizin ister. Dizinin varlığını ve içindeki \*. XPS dosyalarının varlığını doğruladıktan sonra, yöntemi bu her bir dosyayı yazdırma kuyruğuna ekler. Örnek, yazıcının XPSDrv olmayan olduğunu varsayar, bu yüzden `false` <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metodun son parametresine geçiririz. Bu nedenle yöntemi, dosyanın yazıcının sayfa açıklaması diline [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dönüştürmeyi denemeden önce dosyadaki biçimlendirmeyi doğrular. Doğrulama başarısız olursa, bir özel durum oluşturulur. Örnek kod, özel durumu yakalar, kullanıcıyı hakkında bilgilendirir ve sonra bir sonraki [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosyayı işlemeye devam eder.  
   
  [!code-csharp[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/csharp/VS_Snippets_Wpf/BatchPrintXPSFiles/CSharp/Program.cs#batchprintxpsfiles)]
  [!code-vb[BatchPrintXPSFiles#BatchPrintXPSFiles](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BatchPrintXPSFiles/visualbasic/program.vb#batchprintxpsfiles)]  
   
- XPSDrv yazıcısı kullandığınız sonra son parametre ayarlayabileceğiniz `true`. Bu durumda, bu yana [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması dili, yöntem, doğrulamadan veya başka bir sayfa açıklaması dili dönüştürme, yazıcıya dosya gönderir. Tasarım zamanında XPSDrv yazıcısı uygulamayı kullanarak emin değilseniz, okumak için uygulamayı değiştirebilirsiniz <xref:System.Printing.PrintQueue.IsXpsDevice%2A> özelliği ve dal bulgulara göre.  
+ Bir XPSDrv yazıcı kullanıyorsanız, son parametresini olarak `true`ayarlayabilirsiniz. Bu durumda, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] yazıcının sayfa açıklaması dili olduğundan, yöntemi dosyayı doğrulamadan veya başka bir sayfa açıklaması diline dönüştürmeden dosyayı yazıcıya gönderir. Uygulamanın bir XPSDrv yazıcı kullanıp kullanmadığını tasarlarken tasarım zamanında emin değilseniz, uygulamayı bulma <xref:System.Printing.PrintQueue.IsXpsDevice%2A> özelliğine göre özelliği ve dalı okumasını sağlayacak şekilde değiştirebilirsiniz.  
   
- Başlangıçta olacağından az XPSDrv kullanılabilir sürümünden sonra hemen [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] ve Microsoft .NET Framework, bir XPSDrv yazıcısı XPSDrv yazıcısı olarak değerlendiremez gerekebilir. Bunu yapmak için uygulamanızı çalıştıran bilgisayara aşağıdaki kayıt defteri anahtarı dosyaların listesini Pipelineconfig.xml'i ekleyin:  
+ [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Ve Microsoft .NET Framework 'ün yayımlanmasından hemen sonra birkaç XPSDrv yazıcısı kullanılabilir olacağı için, XPSDrv olmayan bir yazıcıyı bir XPSDrv yazıcı olarak gizleyebilmeniz gerekebilir. Bunu yapmak için, uygulamanızı çalıştıran bilgisayarın aşağıdaki kayıt defteri anahtarındaki, Pipelineconfig. xml ' i dosya listesine ekleyin:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter>* \DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\ *\<PseudoXPSPrinter>* \DependentFiles  
   
- Burada  *\<PseudoXPSPrinter >* herhangi bir yazdırma sırası. Makine daha sonra yeniden başlatılması gerekiyor.  
+ sözde >, herhangi bir yazdırma kuyruğu olsun.  *\<* Makinenin yeniden başlatılması gerekir.  
   
- Bu gizleme geçirmenize olanak tanır `true` son parametre olarak <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> ancak bir özel duruma neden olmadan  *\<PseudoXPSPrinter >* gerçekten XPSDrv yazıcısı değil yalnızca anlamsız yazdırır.  
+ Bu gizleme `true` <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>  *birözeldurumanedenolmadansonparametresiolarakgeçirmenizeimkantanır,ancaksözde>,gerçektenbirXPSDrvyazıcıolmadığından,yalnızcaatıkyazdırılır.\<*  
   
- **Not** kolaylık sağlamak için yukarıdaki örnekte varlığını kullanan bir \*.xps uzantısı bir dosya, test olarak [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bu uzantıya sahip dosya yok. [İsXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) bir testi için bir dosya yolu [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] geçerlilik.  
+ **Göz önünde** Kolaylık olması için yukarıdaki örnek, bir dosyanın olduğu \* [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]test olarak bir. XPS uzantısının varlığını kullanır. Ancak, [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dosyaların bu uzantıya sahip olması gerekmez. [İsXPS. exe (ısxps uygunluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) bir dosyayı [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] bir geçerliliği test etmenin bir yoludur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -65,8 +65,8 @@ Bir aşırı yüklemesini kullanabilirsiniz <xref:System.Printing.PrintQueue.Add
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
 - [XPS belgeleri](/windows/desktop/printdocs/documents)
-- [XPS Belge yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [Yönetilen ve yönetilmeyen iş parçacığı oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [isXPS.exe (isXPS uyumluluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+- [XPS belgesi yazdırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
+- [Yönetilen ve yönetilmeyen Iş parçacığı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [isXPS. exe (ısxps uygunluk aracı)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [WPF'deki Belgeler](documents-in-wpf.md)
 - [Yazdırmaya Genel Bakış](printing-overview.md)

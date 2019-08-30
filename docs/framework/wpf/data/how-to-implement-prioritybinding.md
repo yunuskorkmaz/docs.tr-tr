@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937441"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169082"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Nasıl yapılır: PriorityBinding Uygulama
 <xref:System.Windows.Data.PriorityBinding>' [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] de bir bağlama listesi belirterek. Bağlamaların listesi, en yüksek öncelikten en düşük önceliğe göre sıralanır. En yüksek öncelikli bağlama işlendiğinde başarıyla bir değer döndürürse, listedeki diğer bağlamaları işlemeye hiçbir zaman gerek yoktur. En yüksek öncelikli bağlamanın değerlendirilmesi uzun zaman alacağından, daha yüksek bir öncelik bağlamasının bir değeri başarıyla döndürünceye kadar bir değer döndüren bir sonraki en yüksek öncelik kullanılır.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937441"
  Get erişimcisi `SlowestDP` , `_slowestDP` veri üyesinin değerini döndürmeden önce 5 saniye bekler.  
   
 > [!NOTE]
-> Bu örnek yalnızca tanıtım amaçlıdır. Yönergeler [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] , bir alan kümesinden daha yavaş büyüklüğü olan özellikleri tanımlamaya karşı önerilir. Daha fazla bilgi için bkz. [Özellikler ve yöntemler arasında seçim yapma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
+> Bu örnek yalnızca tanıtım amaçlıdır. .NET yönergeleri, bir alan kümesinden daha yavaş büyüklüğü olan özellikleri tanımlamaya karşı önerilir. Daha fazla bilgi için bkz. [Özellikler ve yöntemler arasında seçim yapma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

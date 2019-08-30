@@ -2,12 +2,12 @@
 title: Programlama kavramları (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 7668ca6bba0b938e569886cfa9f1985eaa48c5d0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3fcb1ca76c49919b00b74d955b7aadaa2e882f2a
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594988"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168338"
 ---
 # <a name="programming-concepts-c"></a>Programlama kavramları (C#)
 Bu bölümde, C# dildeki programlama kavramları açıklanmaktadır.  
@@ -17,7 +17,7 @@ Bu bölümde, C# dildeki programlama kavramları açıklanmaktadır.
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[.NET’te bütünleştirilmiş kodlar](../../../standard/assembly/index.md)|Derlemelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
-|[Async ve await (C#) ile zaman uyumsuz programlama](./async/index.md)|İçinde C# [Async](../../language-reference/keywords/async.md) ve [await](../../language-reference/keywords/await.md) anahtar sözcüklerini kullanarak zaman uyumsuz çözümlerin nasıl yazılacağını açıklar. Bir anlatım içerir.|  
+|[Async ve await (C#) ile zaman uyumsuz programlama](./async/index.md)|İçinde C# [Async](../../language-reference/keywords/async.md) ve [await](../../language-reference/operators/await.md) anahtar sözcüklerini kullanarak zaman uyumsuz çözümlerin nasıl yazılacağını açıklar. Bir anlatım içerir.|  
 |[Öznitelikler (C#)](./attributes/index.md)|Öznitelikleri kullanarak türler, alanlar, Yöntemler ve özellikler gibi programlama öğeleriyle ilgili ek bilgiler sağlamayı açıklar.|  
 |[Arayan bilgileri (C#)](./caller-information.md)|Bir yöntemin çağıranı hakkında nasıl bilgi elde edileceğini açıklar. Bu bilgiler, kaynak kodun dosya yolunu ve satır numarasını ve arayanın üye adını içerir.|  
 |[Koleksiyonlar (C#)](./collections.md)|.NET Framework tarafından sunulan bazı koleksiyon türlerini açıklar. Basit koleksiyonların ve anahtar/değer çiftlerinin koleksiyonlarının nasıl kullanılacağını gösterir.|  

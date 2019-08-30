@@ -1,5 +1,5 @@
 ---
-title: try-catch-finally - C# başvurusu
+title: try-catch-finally- C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - finally blocks [C#]
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
-ms.openlocfilehash: 787005ec09a2c5c4f0e5033c83fd6a7ab7875b7e
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 9f2c82fb140e18454491660d17b570db0a8a2aef
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422163"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168585"
 ---
 # <a name="try-catch-finally-c-reference"></a>try-catch-finally (C# Başvurusu)
 
-Bir ortak kullanımı da, `catch` ve `finally` elde edilir ve kaynakları birlikte olan bir `try` engelleme, olağanüstü durumlarda içeren bir `catch` engelleyin ve kaynakları serbest `finally` blok.
+`catch` `try` Ve `finally` `catch` birlikte ortak kullanımı, bir blokta kaynak almak ve kullanmak, bir bloktaki olağanüstü koşullara uğramak ve bloktaki kaynakları serbest bırakmektir. `finally`
 
- Daha fazla bilgi ve yeniden özel durumları atma ilişkin örnekler için bkz. [try-catch](try-catch.md) ve [özel durumları atma](../../../standard/exceptions/index.md). Hakkında daha fazla bilgi için `finally` engellemek için bkz: [try-finally](try-finally.md).
+ Özel durumları yeniden oluşturma hakkında daha fazla bilgi ve örnek için bkz. [try-catch](try-catch.md) ve [özel durum atma](../../../standard/exceptions/index.md). `finally` Blok hakkında daha fazla bilgi için bkz. [try-finally](try-finally.md).
 
 ## <a name="example"></a>Örnek
 
@@ -28,14 +28,14 @@ Bir ortak kullanımı da, `catch` ve `finally` elde edilir ve kaynakları birlik
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Daha fazla bilgi için, [ C# dil belirtiminin](~/_csharplang/spec/introduction.md) [TRY deyimin](~/_csharplang/spec/statements.md#the-try-statement) bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [try, throw ve catch Deyimleri (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
-- [Nasıl yapılır: Açıkça özel durumlar oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [Nasıl yapılır: Özel durumları açık olarak oluştur](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
 - [using Deyimi](using-statement.md)

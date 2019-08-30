@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 0b64088f43b69a982fc305fc16ad10edd1faa593
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8c39fe75eea5042657cab533a0a557d966802a1b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966055"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169019"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters ve XAML
 Bu konu, dizeden Genel XAML dil özelliği olarak tür dönüştürme amacını tanıtır. .NET Framework, <xref:System.ComponentModel.TypeConverter> sınıfı, xaml öznitelik kullanımında Özellik değeri olarak kullanılabilecek yönetilen özel sınıf için uygulamanın bir parçası olarak belirli bir amaca hizmet eder. Özel bir sınıf yazarsanız ve sınıfınızın örneklerinin xaml ayarlanabilir öznitelik değerleri olarak kullanılabilir olmasını istiyorsanız, sınıfınıza bir <xref:System.ComponentModel.TypeConverterAttribute> uygulama uygulamanız, özel <xref:System.ComponentModel.TypeConverter> bir sınıf yazmanız veya her ikisini de yapmanız gerekebilir.  
@@ -103,9 +103,9 @@ Bu konu, dizeden Genel XAML dil özelliği olarak tür dönüştürme amacını 
   
 <a name="Applying_the_TypeConverterAttribute"></a>   
 ## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute uygulanıyor  
- Özel tür dönüştürücüsünün bir XAML işlemcisi tarafından özel bir sınıf için davranan tür dönüştürücüsü olarak kullanılabilmesi için, [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> öğesini sınıf tanımınıza uygulamanız gerekir. Özniteliği <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> aracılığıyla belirttiğiniz, özel tür dönüştürücünün tür adı olmalıdır. Bu öznitelik uygulandığında, XAML işlemcisi özellik türünün özel sınıf türünü kullandığı değerleri işlediğinde, dizeleri belirtebilir ve nesne örnekleri döndürebilir.  
+ Özel tür dönüştürücüsünün bir XAML işlemcisi tarafından özel bir sınıf için davranan tür dönüştürücüsü olarak kullanılabilmesi için, <xref:System.ComponentModel.TypeConverterAttribute> öğesini sınıf tanımınıza uygulamanız gerekir. Özniteliği <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> aracılığıyla belirttiğiniz, özel tür dönüştürücünün tür adı olmalıdır. Bu öznitelik uygulandığında, XAML işlemcisi özellik türünün özel sınıf türünü kullandığı değerleri işlediğinde, dizeleri belirtebilir ve nesne örnekleri döndürebilir.  
   
- Ayrıca özellik başına bir tür dönüştürücüsü sağlayabilirsiniz. [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] Sınıf tanımına bir `set` / `get` uygulamak yerine, bunu bir özellik tanımına (Ana tanım, içindeki uygulamaları değil) uygulayın. <xref:System.ComponentModel.TypeConverterAttribute> Özelliğin türü, özel tür dönüştürücülü tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, XAMLprocessor bu özelliğin değerlerini işlediğinde, giriş dizelerini işleyebilir ve nesne örnekleri döndürebilir. Özellik başına tür dönüştürücüsü tekniği, Microsoft .net çerçevesinden veya sınıf tanımını denetleyemeyip bir başka kitaplıktan bir <xref:System.ComponentModel.TypeConverterAttribute> Özellik türü kullanmayı tercih ediyorsanız özellikle yararlıdır.  
+ Ayrıca özellik başına bir tür dönüştürücüsü sağlayabilirsiniz. Sınıf tanımına bir <xref:System.ComponentModel.TypeConverterAttribute> uygulamak yerine, bunu bir özellik tanımına (Ana tanım, içindeki `set` uygulamaları `get` / değil) uygulayın. Özelliğin türü, özel tür dönüştürücülü tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, bir XAML işlemcisi bu özelliğin değerlerini işlediğinde, giriş dizelerini işleyebilir ve nesne örnekleri döndürebilir. Özellik başına tür dönüştürücüsü tekniği, Microsoft .net çerçevesinden veya sınıf tanımını denetleyemeyip bir başka kitaplıktan bir <xref:System.ComponentModel.TypeConverterAttribute> Özellik türü kullanmayı tercih ediyorsanız özellikle yararlıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

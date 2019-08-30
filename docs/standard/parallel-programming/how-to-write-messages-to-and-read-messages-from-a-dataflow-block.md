@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cc4dc3a0692000958d66222e6cdc30acf874189
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 22d0f8abd1481bfd75a0d08f49b28cebf78bb4cb
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666374"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169145"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma
 Bu belgede, bir veri akışı bloğunda ileti yazmak ve iletileri okumak için TPL veri akışı kitaplığı 'nın nasıl kullanılacağı açıklanmaktadır. TPL veri akışı kitaplığı, veri akışı bloğundan ileti yazmak ve iletileri okumak için hem zaman uyumlu hem de zaman uyumsuz yöntemler sağlar. Bu belge <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> sınıfını kullanır. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Sınıfı iletileri arabelleğe alır ve hem ileti kaynağı hem de ileti hedefi olarak davranır.  
@@ -40,7 +40,7 @@ Bu belgede, bir veri akışı bloğunda ileti yazmak ve iletileri okumak için T
  [!code-vb[TPLDataflow_ReadWrite#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#4)]  
   
 ## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a>Veri akışı bloğundan zaman uyumsuz olarak yazma ve okuma  
- Aşağıdaki örnek, bir <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> nesneye zaman uyumsuz olarak yazma için yöntemini ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> aynı nesneden zaman uyumsuz olarak okuma yöntemini kullanır. Bu örnek, verileri zaman uyumsuz ve hedef bloğundan[](../../visual-basic/language-reference/modifiers/async.md) okumak için [](../../visual-basic/language-reference/operators/await-operator.md) zaman [uyumsuz](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/keywords/await.md) işleçlerini (Visual Basic) kullanır. Yöntemi <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> , iletileri ertelemek için bir veri akışı bloğunu etkinleştirmeniz gerektiğinde faydalıdır. Bu <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> Yöntem, veriler kullanılabilir hale geldiğinde veriler üzerinde işlem yapmak istediğinizde faydalıdır. İletilerin ileti blokları arasında nasıl yayılır hakkında daha fazla bilgi için, [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)' na geçirme bölümüne bakın.  
+ Aşağıdaki örnek, bir <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> nesneye zaman uyumsuz olarak yazma için yöntemini ve <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> aynı nesneden zaman uyumsuz olarak okuma yöntemini kullanır. Bu örnek, verileri zaman uyumsuz ve hedef bloğundan[](../../visual-basic/language-reference/modifiers/async.md) okumak için [](../../visual-basic/language-reference/operators/await-operator.md) zaman [uyumsuz](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/operators/await.md) işleçlerini (Visual Basic) kullanır. Yöntemi <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> , iletileri ertelemek için bir veri akışı bloğunu etkinleştirmeniz gerektiğinde faydalıdır. Bu <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> Yöntem, veriler kullanılabilir hale geldiğinde veriler üzerinde işlem yapmak istediğinizde faydalıdır. İletilerin ileti blokları arasında nasıl yayılır hakkında daha fazla bilgi için, [veri akışı](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)' na geçirme bölümüne bakın.  
   
  [!code-csharp[TPLDataflow_ReadWrite#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#5)]
  [!code-vb[TPLDataflow_ReadWrite#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#5)]  
