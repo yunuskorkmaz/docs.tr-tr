@@ -9,52 +9,52 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "61674902"
 ---
 # <a name="using-application-domains"></a>Uygulama Etki Alanlarını Kullanma
-Uygulama etki alanı yalıtım ortak dil çalışma zamanı için bir birim sağlayın. Bunlar oluşturulur ve bir işlem içinde çalıştırın. Uygulama etki alanları genellikle Uygulama çalışma zamanını bir işleme yükleme ve bir uygulama etki alanındaki kullanıcı kodunun yürütülmesi için sorumlu olan bir çalışma zamanı ana bilgisayarı tarafından oluşturulur. Çalışma zamanı ana bilgisayarı, bir varsayılan uygulama etki alanı ve bir işlem oluşturur ve yönetilen kod içindeki çalıştırır. Çalışma zamanı ana bilgisayarları, ASP.NET, Microsoft Internet Explorer ve Windows Kabuğu'nu içerir.  
+Uygulama etki alanları, ortak dil çalışma zamanı için bir yalıtım birimi sağlar. Bunlar bir işlem içinde oluşturulup çalıştırılır. Uygulama etki alanları genellikle çalışma zamanının bir işleme yüklenmesi ve bir uygulama etki alanı içinde Kullanıcı kodu yürütmesi ile ilgili bir uygulama olan bir çalışma zamanı ana bilgisayarı tarafından oluşturulur. Çalışma zamanı ana bilgisayarı bir işlem ve varsayılan bir uygulama etki alanı oluşturur ve içinde yönetilen kodu çalıştırır. Çalışma zamanı Konakları ASP.NET, Microsoft Internet Explorer ve Windows kabuğu içerir.  
   
- Çoğu uygulama için kendi uygulama etki alanı oluşturma gerekmez; çalışma zamanı ana bilgisayarı tüm gerekli uygulama etki alanları oluşturulur. Ancak, oluşturabilir ve uygulamanızın kod yalıtmak için veya kullanın ve DLL'lerini Kaldır için gereken ek uygulama etki alanları yapılandırın.  
+ Çoğu uygulama için kendi uygulama etki alanınızı oluşturmanız gerekmez; çalışma zamanı ana bilgisayarı sizin için gerekli uygulama etki alanlarını oluşturur. Ancak, uygulamanızın kodu yalıtması veya dll 'Leri kullanması veya yüklemesi gerekiyorsa ek uygulama etki alanları oluşturabilir ve yapılandırabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bir uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- Program aracılığıyla uygulama etki alanı oluşturmayı açıklar.  
+ [Nasıl yapılır: Uygulama etki alanı oluşturma](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ Programlı olarak bir uygulama etki alanı oluşturma işlemini açıklar.  
   
- [Nasıl yapılır: Bir uygulama etki alanını boşaltma](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
- Program aracılığıyla uygulama etki alanını kaldırma işlemini açıklamaktadır.  
+ [Nasıl yapılır: Uygulama etki alanını kaldırma](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ Bir uygulama etki alanını programlı olarak nasıl kaldırabileceğinizi açıklar.  
   
- [Nasıl yapılır: Bir uygulama etki alanını yapılandırma](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
- Uygulama etki alanı yapılandırma için bir giriş sağlar.  
+ [Nasıl yapılır: Uygulama etki alanı yapılandırma](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ Uygulama etki alanı yapılandırmaya bir giriş sağlar.  
   
  [Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma](../../../docs/framework/app-domains/retrieve-setup-information.md)  
- Bir uygulama etki alanından kurulum bilgilerini alma açıklar.  
+ Bir uygulama etki alanından kurulum bilgilerinin nasıl alınacağını açıklar.  
   
- [Nasıl yapılır: Uygulama etki alanına derlemeler yükleme](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
- Uygulama etki alanına bir derlemeyi yüklemek açıklar.  
+ [Nasıl yapılır: Derlemeleri bir uygulama etki alanına yükleme](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+ Bir derlemenin uygulama etki alanına nasıl yükleneceğini açıklar.  
   
- [Nasıl yapılır: Derlemeden tür ve üye bilgilerini alma](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- Bir derleme hakkında bilgi almak nasıl açıklar.  
+ [Nasıl yapılır: Bir derlemeden tür ve üye bilgilerini alma](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ Bir derleme hakkında bilgilerin nasıl alınacağını açıklar.  
   
  [Gölge Kopyalama Bütünleştirilmiş Kodları](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
- Bunlar kullanımdayken nasıl gölge kopyalama derlemeleri güncelleştirmeler sağlar ve gölge kopyalama yapılandırma açıklanmaktadır.  
+ Gölge kopyalamanın, kullanıldıkları sırada derlemeler için güncelleştirmelerin nasıl izin verdiğini ve gölge kopyalamayı nasıl yapılandıracağınızı açıklar.  
   
- [Nasıl yapılır: İlk fırsat özel durum bildirimleri alma](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
- Ortak dil çalışma zamanı için özel durum işleyicileri aramaya başlamadan önce bir özel durum, olarak oluşturuldu bir bildirim nasıl alabileceğiniz açıklanır.  
+ [Nasıl yapılır: Birinci şans özel durum bildirimlerini al](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ Ortak dil çalışma zamanı özel durum işleyicilerini aramaya başlamadan önce bir özel durumun oluşturulduğu bildirimini nasıl alacağınızı açıklar.  
   
  [Bütünleştirilmiş Kod Yüklerini Çözme](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- Kullanma hakkında yönergeler sağlar <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> derleme yükleme hataları çözmek için olay.  
+ Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı kullanma hakkında rehberlik sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.AppDomain>  
- Uygulama etki alanını temsil eder. Oluşturma ve uygulama etki alanları denetlemek için yöntemler sağlar.  
+ Bir uygulama etki alanını temsil eder. Uygulama etki alanları oluşturmak ve denetlemek için yöntemler sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Ortak Dil Çalışma Zamanı Modülündeki Bütünleştirilmiş Kodlar](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Derlemeler tarafından gerçekleştirilen işlevler genel bir bakış sağlar.  
+ Derlemeler tarafından gerçekleştirilen işlevlere genel bir bakış sağlar.  
   
  [Bütünleştirilmiş Kodlarla Programlama](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  Derlemelerde nasıl öznitelik oluşturacağınızı, işaretleyeceğinizi ve ayarlayacağınızı açıklar.  
@@ -65,5 +65,5 @@ Uygulama etki alanı yalıtım ortak dil çalışma zamanı için bir birim sağ
  [Uygulama Etki Alanları](../../../docs/framework/app-domains/application-domains.md)  
  Uygulama etki alanları üzerine kavramsal bir genel bakış sağlar.  
   
- [Yansıma genel bakış](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Nasıl kullanılacağını açıklar **yansıma** derleme hakkında bilgi edinmek için sınıf.
+ [Yansımaya genel bakış](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ Bir derleme hakkında bilgi almak için **yansıma** sınıfının nasıl kullanılacağını açıklar.
