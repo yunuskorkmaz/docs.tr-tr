@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910681"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206031"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Kısmen Güvenilen Koddan Kitaplıkları Kullanma
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> Bu konu, tanımlayıcı adlı derlemelerin davranışını ele almaktadır ve yalnızca [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) derlemeler için geçerlidir. [Güvenlik açısından saydam kod,](../../../docs/framework/misc/security-transparent-code-level-2.md) .NET Framework 4 veya sonraki sürümlerde düzey 2 derlemeleri tanımlayıcı adlarla etkilenmez. Güvenlik sisteminde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+> Bu konu, tanımlayıcı adlı derlemelerin davranışını ele almaktadır ve yalnızca [düzey 1](security-transparent-code-level-1.md) derlemeler için geçerlidir. [Güvenlik açısından saydam kod,](security-transparent-code-level-2.md) .NET Framework 4 veya sonraki sürümlerde düzey 2 derlemeleri tanımlayıcı adlarla etkilenmez. Güvenlik sisteminde yapılan değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../security/security-changes.md).  
   
- Kitaplık yazıcısı özel olarak <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliğin kullanımına izin vermedikleri takdirde, ana bilgisayar veya korumalı kuruluşlarının tam güveninden daha az alan uygulamaların paylaşılan yönetilen kitaplıkları çağırmalarına izin verilmez. Bu nedenle, uygulama yazarları bazı kitaplıkların kısmen güvenilen bağlamdan edinilemeyeceği farkında olmalıdır. Varsayılan olarak, kısmi güven [korumalı](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) alanında yürütülen ve tam güven derlemeleri listesinde olmayan tüm kodlar kısmen güvenilirdir. Kodunuzun kısmen güvenilen bir içerikten yürütülmesini veya kısmen güvenilen kod tarafından çağrılması beklenmiyorsa, bu bölümdeki bilgilerle ilgilenmeniz gerekmez. Ancak kısmen güvenilen kodla etkileşimde bulunmak zorunda olan veya kısmen güvenilen bağlamdan çalışan bir kod yazarsanız, aşağıdaki faktörleri göz önünde bulundurmanız gerekir:  
+ Kitaplık yazıcısı özel olarak <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliğin kullanımına izin vermedikleri takdirde, ana bilgisayar veya korumalı kuruluşlarının tam güveninden daha az alan uygulamaların paylaşılan yönetilen kitaplıkları çağırmalarına izin verilmez. Bu nedenle, uygulama yazarları bazı kitaplıkların kısmen güvenilen bağlamdan edinilemeyeceği farkında olmalıdır. Varsayılan olarak, kısmi güven [korumalı](how-to-run-partially-trusted-code-in-a-sandbox.md) alanında yürütülen ve tam güven derlemeleri listesinde olmayan tüm kodlar kısmen güvenilirdir. Kodunuzun kısmen güvenilen bir içerikten yürütülmesini veya kısmen güvenilen kod tarafından çağrılması beklenmiyorsa, bu bölümdeki bilgilerle ilgilenmeniz gerekmez. Ancak kısmen güvenilen kodla etkileşimde bulunmak zorunda olan veya kısmen güvenilen bağlamdan çalışan bir kod yazarsanız, aşağıdaki faktörleri göz önünde bulundurmanız gerekir:  
   
 - Kitaplıkların birden çok uygulama tarafından paylaşılması için bir tanımlayıcı ad ile imzalanması gerekir. Güçlü adlar, kodunuzun genel derleme önbelleğine yerleştirilmesine veya bir korumalı alana alma <xref:System.AppDomain>tam güven listesine eklenmiş olmasını sağlar ve tüketicilere, belirli bir mobil kod parçasının gerçekten sizin için kaynak olduğunu doğrulamasına izin verir.  
   
-- Varsayılan olarak, tanımlayıcı adlı [düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md) paylaşılan kitaplıklar, kitaplık yazarının hiçbir şey yapmasına gerek kalmadan otomatik olarak tam güven için örtük bir [LinkDemand](../../../docs/framework/misc/link-demands.md) gerçekleştirir.  
+- Varsayılan olarak, tanımlayıcı adlı [düzey 1](security-transparent-code-level-1.md) paylaşılan kitaplıklar, kitaplık yazarının hiçbir şey yapmasına gerek kalmadan otomatik olarak tam güven için örtük bir [LinkDemand](link-demands.md) gerçekleştirir.  
   
 - Çağıran, tam güvene sahip değilse ancak yine de böyle bir kitaplığı çağırmaya çalışırsa, çalışma zamanı bir <xref:System.Security.SecurityException> oluşturur ve çağıranın kitaplığa bağlantı yapmasına izin verilmez.  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69910681"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [Kod erişim güvenliği](code-access-security.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487851"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206060"
 ---
 # <a name="security-transparent-code"></a>Güvenliği Saydam Kod
 
@@ -20,34 +20,34 @@ ms.locfileid: "66487851"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Güvenlik, etkileşen üç parça içerir: korumalı alana alma, izinler ve zorlama. Korumalı alana alma, tam olarak güvenilir ve diğer kodların korumalı bir alanda izinlerle kısıtlanmış olduğu yere bazı kod yalıtılmış etki alanları oluşturma uygulaması anlamına gelir. Korumalı alan izin kümesi içinde çalışan uygulama kodu, saydam olarak kabul edilir; diğer bir deyişle, güvenliği etkileyen herhangi bir işlem gerçekleştirilemiyor. Korumalı alan kanıt tarafından belirlenir kodların (<xref:System.Security.Policy.Evidence> sınıfı). Kanıt, korumalı alanlar hangi belirli izinleri gerektirir ve hangi tür korumalı alanların oluşturulabileceğini oluşturulabilir tanımlar. Zorlama yalnızca kendi izin kümesinde yürütmek için saydam kodu anlamındadır.
+Güvenlik üç etkileşen parçadan oluşur: korumalı alana alma, izinler ve zorlama. Korumalı alana alma, bazı kodların tamamen güvenilir olarak işlendiği ve diğer kodun, korumalı alan için izin kümesindeki izinlerle kısıtlandığı yalıtılmış etki alanları oluşturma uygulaması anlamına gelir. Korumalı alanın izin kümesi içinde çalışan uygulama kodu saydam olarak kabul edilir; diğer bir deyişle, güvenliği etkileyebilecek herhangi bir işlem gerçekleştiremez. Korumalı alan için izin kümesi kanıt (<xref:System.Security.Policy.Evidence> sınıf) tarafından belirlenir. Kanıt, korumalı alanlar için hangi belirli izinlerin gerekli olduğunu ve ne tür bir sanal alanının oluşturulabileceğini belirler. Zorlama, saydam kodun yalnızca kendi izin kümesi içinde yürütülmesine izin vermeyi ifade eder.
 
 > [!IMPORTANT]
-> Güvenlik İlkesi, .NET Framework'ün önceki sürümlerinde anahtar bir öğe bulunamadı. .NET Framework 4 ile başlayarak, güvenlik ilkesi kullanılmıyor. Güvenlik İlkesi saydamlığından güvenlik farklıdır. Bu değişikliğin etkileri hakkında daha fazla bilgi için bkz. [kod erişimi güvenliği ilkesi uyumluluğu ve geçiş](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> Güvenlik ilkesi, önceki .NET Framework sürümlerindeki bir anahtar öğesidir. .NET Framework 4 ' te başlayarak güvenlik ilkesi artık kullanılmıyor. Güvenlik ilkesinin Eleme işlemi güvenlik saydamlığına göre ayrıdır. Bu değişikliğin etkileri hakkında daha fazla bilgi için bkz. [kod erişimi güvenlik Ilkesi uyumluluğu ve geçişi](code-access-security-policy-compatibility-and-migration.md).
 
-Bu konuda, saydamlık modeli daha ayrıntılı açıklanmaktadır. Aşağıdaki bölümleri içerir:
+Bu konu başlığı altında saydamlık modeli daha ayrıntılı olarak açıklanmaktadır. Aşağıdaki bölümleri içerir:
 
 - [Saydamlık modelinin amacı](#purpose)
 
 - [Saydamlık düzeyini belirtme](#level)
 
-- [Saydamlığı zorlama](#enforcement)
+- [Saydamlık zorlaması](#enforcement)
 
 <a name="purpose"></a>
 
 ## <a name="purpose-of-the-transparency-model"></a>Saydamlık Modelinin Amacı
 
-Saydamlık altyapısının bir parçası çalışan kodu uygulamadan bir parçası olarak çalışan koddan ayıran zorlama mekanizmasıdır. Saydamlık arama yerel kodu gibi ayrıcalıklı işler (kritik kod) yapmak için kodu ve kod (saydam kod) olamaz arasında bir engel çizer. Saydam kod komutları, çalışan bir izin kümesi sınırları içinde ancak olamaz yürütün, öğesinden türetilen veya kritik kod içeriyor.
+Saydamlık, altyapının bir parçası olarak çalışan koddan uygulamanın bir parçası olarak çalışan kodu ayıran bir zorlama mekanizmasıdır. Saydamlık, yerel kodu çağırma gibi ayrıcalıklı şeyler (kritik kod) ve (saydam kod) olmayan kod arasında, kod arasında bir engel çizer. Saydam kod, komutları üzerinde çalıştığı izin kümesi sınırları içinde yürütebilir, ancak kritik kodu yürütülemez, onlardan türetemez veya içeremez.
 
-Saydamlık uygulatma işleminin birincil amacı, farklı ayrıcalık tabanlı kod gruplarını yalıtmak için basit ve etkili bir mekanizma sağlamaktır. Korumalı alana alma modeli bağlamında, bu ayrıcalık gruplarına ya da olan tam güvenilir (yani değil sınırlıdır) veya kısmen güvenilir (diğer bir deyişle, izin verilen korumalı alan kümesini sınırlı).
+Saydamlık zorlamasının birincil amacı, farklı kod gruplarını ayrıcalığa göre yalıtmak için basit ve etkili bir mekanizma sağlamaktır. Korumalı alana alma modelinin bağlamı içinde, bu ayrıcalık grupları tamamen güvenilir (yani, sınırlı değil) veya kısmen güvenilir (yani, korumalı alana verilen izin kümesiyle kısıtlıdır).
 
 > [!IMPORTANT]
-> Saydamlık modeli, kod erişim güvenliğini aşıyor. Saydamlık tam zamanında derleyici tarafından zorlanır ve tam güven de dahil olmak üzere bir derleme için ayarlanmış vermeler bağımsız olarak yürürlükte kalır.
+> Saydamlık modeli kod erişim güvenliğini geri sarar. Saydamlık, tam zamanında derleyici tarafından zorlanır ve tam güven dahil olmak üzere derleme için izin kümesine bakılmaksızın geçerli olmaya devam eder.
 
-Saydamlık, .NET Framework 2.0 sürümünde güvenlik modelini basitleştirmek ve yazma ve güvenli kitaplıkları ve uygulamaları dağıtma daha kolay hale getirmek için kullanılmaya başlandı. Saydam kod kısmen güvenilir uygulamaların geliştirilmesini basitleştirmek için Microsoft Silverlight uygulamasında da kullanılır.
+Saydamlık, güvenlik modelini basitleştirmek ve güvenli kitaplık ve uygulama yazmayı ve dağıtmayı kolaylaştırmak için .NET Framework sürüm 2,0 ' de tanıtılmıştı. Saydam kod ayrıca, kısmen güvenilen uygulamaların geliştirilmesini basitleştirmek için Microsoft Silverlight 'ta de kullanılır.
 
 > [!NOTE]
-> Kısmen güvenilen bir uygulama geliştirirken, hedef ana bilgisayarlarınızın izin gereksinimleri bilmeniz gerekir. Bazı ana bilgisayarlar tarafından izin verilmeyen kaynakları kullanan bir uygulama geliştirebilirsiniz. Bu uygulama hatasız derlenir, ancak barındırılan ortama yüklendiğinde başarısız olur. Visual Studio kullanarak uygulama geliştirdiyseniz, geliştirme ortamından ayarlanan sınırlı izin kümesinde veya kısmi güvende hata ayıklamayı etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Sınırlı izinler ile ClickOnce uygulamasında hata ayıklama](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions). ClickOnce uygulamaları için sağlanan hesaplama izinleri özelliği kısmen güvenilen uygulamalar için de kullanılabilir.
+> Kısmen güvenilen bir uygulama geliştirdiğinizde, hedef konaklarınızın izin gereksinimlerini bilmeniz gerekir. Bazı konaklar tarafından izin verilmeyen kaynakları kullanan bir uygulama geliştirebilirsiniz. Bu uygulama hata olmadan derlenir, ancak barındırılan ortama yüklendiğinde başarısız olur. Uygulamanızı Visual Studio kullanarak geliştirdiyseniz, kısmi güvende veya geliştirme ortamından kısıtlı bir izin kümesinde hata ayıklamayı etkinleştirebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Kısıtlanmış Izinlerle](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)ClickOnce uygulamasında hata ayıklayın. ClickOnce uygulamaları için sağlanan Izinleri hesapla özelliği, kısmen güvenilen bir uygulama için de kullanılabilir.
 
 [Başa dön](#top)
 
@@ -55,58 +55,58 @@ Saydamlık, .NET Framework 2.0 sürümünde güvenlik modelini basitleştirmek v
 
 ## <a name="specifying-the-transparency-level"></a>Saydamlık Düzeyini Belirtme
 
-Derleme düzeyi <xref:System.Security.SecurityRulesAttribute> öznitelik açıkça seçer <xref:System.Security.SecurityRuleSet> derlemenin izleyeceği kuralları. Kuralları nerede yüksek düzeyler güvenlik kurallarının daha sıkı zorlama ortalama bir sayısal düzey sistemi altında düzenlenir.
+Derleme düzeyi <xref:System.Security.SecurityRulesAttribute> özniteliği, derlemenin takip olacağı <xref:System.Security.SecurityRuleSet> kuralları açıkça seçer. Kurallar sayısal düzey bir sistem altında düzenlenir ve daha yüksek düzeyler güvenlik kurallarının daha sıkı bir şekilde zorlanmasını demektir.
 
 Düzeyler şunlardır:
 
-- 2. düzey (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 saydamlık kuralları.
+- Düzey 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 Saydamlık kuralları.
 
-- Düzey 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 saydamlık kuralları.
+- Düzey 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2,0 saydamlık kuralları.
 
-İki saydamlık düzeyi arasındaki başlıca fark, düzey 1'ın derlemenin dışından çağrılar için saydamlık kuralları uygulamaması ve yalnızca uyumluluk için tasarlanmış olan.
+İki saydamlık düzeyi arasındaki birincil fark, düzey 1 ' in, derleme dışından yapılan çağrılar için saydamlık kurallarını zorlayamadığını ve yalnızca uyumluluk için tasarlanmıştır.
 
 > [!IMPORTANT]
-> Yalnızca uyumluluk için düzey 1 saydamlığını belirtmelisiniz; diğer bir deyişle, kullandığı .NET Framework 3.5 veya daha önce geliştirilmiştir yalnızca kod için düzey 1 belirtin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği veya saydamlık modeli kullanmayan. Örneğin, kısmen güvenilmeyen çağrıcılara (APTCA) gelen çağrıları izin veren .NET Framework 2.0 derlemeleri için seviye 1 saydamlık kullanın. .NET Framework 4 için geliştirilmiş kod için her zaman Düzey 2 Asetatını kullanın.
+> Düzey 1 saydamlığı yalnızca uyumluluk için belirtmelisiniz; diğer bir deyişle, yalnızca düzey 1 ' i yalnızca <xref:System.Security.AllowPartiallyTrustedCallersAttribute> özniteliği kullanan veya saydamlık modelini kullanmayan .NET Framework 3,5 veya önceki bir sürümüyle geliştirilmiş kod için belirtin. Örneğin, kısmen güvenilen çağıranların (APTCA) çağrılara izin veren .NET Framework 2,0 derlemeleri için düzey 1 saydamlığı kullanın. .NET Framework 4 için geliştirilen kod için her zaman düzey 2 saydamlığı kullanın.
 
 ### <a name="level-2-transparency"></a>Düzey 2 saydamlık
 
-Düzey 2 saydamlık, .NET Framework 4'te tanıtıldı. Bu modelin üç İlkesi saydam kod güvenlik güvenli kritik kod ve güvenlik açısından kritik kod ' dir.
+Düzey 2 saydamlık .NET Framework 4 ' te tanıtılmıştı. Bu modelin üç listesi saydam kod, güvenli güvenlik açısından kritik kod ve güvenlik açısından kritik koddur.
 
-- (Tam güven dahil), verilen izinleri bakılmaksızın saydam kod, yalnızca diğer saydam kodu veya güvenli-kritik kodu çağırabilir. Kod kısmen güvenilen ise, yalnızca etki alanı izin kümesi tarafından izin verilen eylemleri gerçekleştirebilir. Saydam kod aşağıdaki işlemleri yapamaz:
+- Saydam kod, verilen izinlerden bağımsız olarak (tam güven dahil), yalnızca diğer saydam kodu veya güvenlik açısından güvenli kritik kodu çağırabilir. Kod kısmen güvenilirse, yalnızca etki alanının izin kümesi tarafından izin verilen eylemleri gerçekleştirebilir. Saydam kod şunları yapılamıyor:
 
-  - Gerçekleştirmek bir <xref:System.Security.CodeAccessPermission.Assert%2A> işlemi veya ayrıcalık yükseltme.
+  - Bir <xref:System.Security.CodeAccessPermission.Assert%2A> işlem veya ayrıcalık yükselmesi gerçekleştirin.
 
-  - Güvenli olmayan veya doğrulanamaz kod içerir.
+  - Güvenli olmayan veya doğrulanamayan kod içeriyor.
 
-  - Doğrudan kritik kodu çağırın.
+  - Kritik kodu doğrudan çağırın.
 
-  - Sahip kodu veya yerel koda çağrı <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> özniteliği.
+  - <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> Özniteliği olan yerel kodu veya kodu çağırın.
 
-  - Tarafından korunan üyeyi çağırın bir <xref:System.Security.Permissions.SecurityAction.LinkDemand>.
+  - Tarafından korunan bir üyeyi çağırın <xref:System.Security.Permissions.SecurityAction.LinkDemand>.
 
-  - Kritik türlerden devral
+  - Kritik türlerden devralma.
 
-    Ayrıca, saydam yöntemleri kritik sanal yöntemleri geçersiz kılmaz veya kritik arabirim yöntemlerini uygulamaz.
+    Ayrıca, saydam Yöntemler kritik sanal yöntemleri geçersiz kılamaz veya kritik arabirim yöntemleri uygulayamaz.
 
-- Güvenlik-güvenli-kritik kodu tam olarak güvenilirdir ancak saydam kod tarafından çağrılabilir. Bu, tam güven kodu sınırlı yüzey alanı sunar. Düzeltmeler ve güvenlik doğrulamaları güvenli kritik kodda olur.
+- Güvenli kritik kod, tamamen güvenilirdir ancak saydam kod tarafından çağrılabilir. Tam güven kodu sınırlı bir yüzey alanı sunar. Güvenli kritik kodda doğruluk ve güvenlik doğrulamaları meydana gelir.
 
-- Güvenlik açısından kritik kod, herhangi bir kodu çağırabilir ve tam olarak güvenilirdir ancak saydam kod tarafından çağrılamaz.
+- Güvenlik açısından kritik kod herhangi bir kodu çağırabilir ve tamamen güvenilirdir, ancak saydam kod tarafından çağrılamaz.
 
 ### <a name="level-1-transparency"></a>Düzey 1 Saydamlık
 
-Düzey 1 saydamlık modeli, geliştiricilerin bir güvenlik denetimine tâbi kod miktarını azaltmak için .NET Framework sürüm 2.0 kullanılmaya başlandı. Düzey 1 saydamlık, 2.0 sürümünde genel olarak kullanılabilir olmasına rağmen güvenlik denetimi amacıyla yalnızca Microsoft'ta öncelikli olarak kullanıldığı. Ek açıklamalar aracılığıyla, geliştiriciler hangi türlerin ve üyelerin güvenlik yükseltmeleri ve diğer güvenilir eylemleri (güvenlik açısından kritik) gerçekleştirebileceği hangi (güvenlik açısından saydam) gerçekleştiremeyeceğini. Saydam olarak tanımlanan kod, yüksek derecede güvenlik denetimi, gerektirmez. Düzey 1 saydamlık, saydamlık zorlamanın derleme içinde sınırlı olduğunu belirtir. Diğer bir deyişle, herhangi bir genel türler ve güvenlik açısından kritik olarak tanımlanan üyeleri yalnızca derleme içinde güvenlik açısından kritik. Bunlar gelen derlemenin dışından çağrıldığında bu türler ve üyeler için güvenliği zorlamak istiyorsanız, tam güven için bağlantı isteklerini kullanmanız gerekir. Bunu yapmazsanız, herkese görünür kritik güvenlik türleri ve üyeleri güvenlik-güvenli-kritik olarak kabul edilir ve derleme dışından kısmen güvenilen kod tarafından çağrılabilir.
+Düzey 1 saydamlık modeli, geliştiricilerin bir güvenlik denetimine tabi olan kod miktarını azaltmasını sağlamak için .NET Framework sürüm 2,0 ' de tanıtılmıştır. Düzey 1 saydamlığın sürümü 2,0 ' de herkese açık olmasına rağmen, bu, öncelikli olarak yalnızca Microsoft 'un güvenlik denetimi amaçlarıyla kullanılmıştı. Ek açıklamalar aracılığıyla, geliştiriciler hangi türlerin ve üyelerin güvenlik yükseltmeleri ve diğer güvenilir eylemleri (güvenlik açısından kritik) gerçekleştirebilmesini ve hangilerinin (güvenlik açısından saydam) gerçekleştirebilmesini bildirebilirler. Saydam olarak tanımlanan kod, yüksek derecede güvenlik denetimi gerektirmez. Düzey 1 saydamlık, saydamlık zorlamasının derleme dahilinde sınırlı olduğunu belirtir. Diğer bir deyişle, güvenlik açısından kritik olarak tanımlanan genel türler veya Üyeler yalnızca derleme içinde güvenlik açısından kritik öneme sahiptir. Bu türler ve Üyeler, derleme dışından çağrıldığında güvenliği zorlamak istiyorsanız, tam güven için bağlantı taleplerini kullanmanız gerekir. Aksi takdirde, herkese açık güvenlik açısından kritik türler ve Üyeler güvenlik açısından kritik olarak değerlendirilir ve derleme dışında kısmen güvenilen kod tarafından çağrılabilir.
 
-Düzey 1 saydamlık modelinde aşağıdaki sınırlamalar bulunmaktadır:
+Düzey 1 saydamlık modeli aşağıdaki sınırlamalara sahiptir:
 
-- Kritik güvenlik türleri ve genel olan üyelere güvenlik açısından saydam koddan erişilebilir.
+- Güvenlik açısından kritik türler ve ortak olan üyelere güvenlik açısından saydam koddan erişilebilir.
 
-- Saydamlık ek açıklamaları yalnızca bir derlemenin içinde uygulanır.
+- Saydamlık ek açıklamaları yalnızca bir bütünleştirilmiş kod içinde zorlanır.
 
-- Güvenlik açısından kritik türler ve üyeler derlemenin dışından çağrılar için güvenliği zorlamak için bağlantı talepleri kullanmanız gerekir.
+- Güvenlik açısından kritik türler ve üyelerin, derleme dışından çağrılar için güvenliği zorlamak üzere bağlantı taleplerini kullanması gerekir.
 
-- Devralma kuralları zorunlu kılınmaz.
+- Devralma kuralları zorlanmaz.
 
-- Saydam kod tam güvende çalıştırıldığında zararlı işlemler yapma olasılığı vardır.
+- Bu olası, tam güvende çalıştırıldığında zararlı işlemler yapmak için saydam kod vardır.
 
 [Başa dön](#top)
 
@@ -114,9 +114,9 @@ Düzey 1 saydamlık modelinde aşağıdaki sınırlamalar bulunmaktadır:
 
 ## <a name="transparency-enforcement"></a>Saydamlığı Zorlama
 
-Saydamlık kuralları saydamlık hesaplanana kadar zorlanmaz. O zaman bir <xref:System.InvalidOperationException> saydamlık kuralı ihlal edilirse oluşturulur. Saydamlığın hesaplandığı zaman pek çok unsura bağlıdır ve tahmin edilemez. En geç hesaplanır. .NET Framework 4'te montaj düzeyi saydamlık hesaplaması .NET Framework 2.0 sürümünde vermiyor daha çabuk ortaya çıkar. Tek garanti, saydamlık hesaplama gerekli olduğu zamana göre gerçekleşmesidir. Bu, nasıl just-ın-time (JIT) derleyici noktası bir yöntem derlendiğinde ve bu yöntemde herhangi bir hata algılandığında değiştirmesine benzer. Saydamlık hesaplama kodunuzu saydamlık hatası yoksa görünmez durumdadır.
+Saydamlık kuralları, saydamlık hesaplanana kadar zorlanmaz. Bu sırada, bir saydamlık <xref:System.InvalidOperationException> kuralı ihlal edilirse bir oluşturulur. Saydamlığın hesaplandığı zaman, birden fazla etkene bağlıdır ve tahmin edilemez. Mümkün olduğunca geç hesaplanır. .NET Framework 4 ' te, derleme düzeyi saydamlık hesaplaması, .NET Framework 2,0 ' de bulunandan daha erken gerçekleşir. Tek garanti, saydamlık hesaplamasının gerekli olduğu zamana göre gerçekleşeceğdir. Bu, Just-In-Time (JıT) derleyicisinin bir yöntem derlendiğinde ve bu yöntemdeki herhangi bir hata algılandığında noktayı değiştireme yöntemine benzer. Kodunuzda saydamlık hatası yoksa saydamlık hesaplaması görünmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliği saydam kod, düzey 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Güvenliği saydam kod, Düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Güvenliği saydam kod, düzey 1](security-transparent-code-level-1.md)
+- [Güvenliği saydam kod, düzey 2](security-transparent-code-level-2.md)

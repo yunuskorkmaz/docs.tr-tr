@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 414d9764d8de0a1d7cd395a3192a097d48983856
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594095"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205372"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Nasıl yapılır: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
 Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir. Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.  
@@ -16,7 +16,7 @@ Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağ
   
 1. Bu adları names1. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin:  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -31,7 +31,7 @@ Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağ
   
 2. Bu adları names2. txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  

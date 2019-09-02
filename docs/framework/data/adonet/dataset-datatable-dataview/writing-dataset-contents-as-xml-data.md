@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
-ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8a8656bb68832a09490e656903fd68788bdeb1d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607027"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203103"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>XML Verileri Olarak DataSet İçeriği Yazma
-ADO.NET içinde bir XML temsilini yazabileceğiniz bir <xref:System.Data.DataSet>, ile veya olmadan şeması. XML ile satır içi şema bilgileri ise XML Şeması Tanım Dili (XSD) kullanarak yazılır. Tablo tanımları şema içeriyor <xref:System.Data.DataSet> ilişki ve kısıtlama tanımları yanı sıra.  
+ADO.NET içinde, şemasına sahip veya olmadan bir <xref:System.Data.DataSet>XML temsili yazabilirsiniz. Şema bilgileri XML ile satır içi içeriyorsa, XML şeması tanım dili (XSD) kullanılarak yazılır. Şema, ilişki ve kısıtlama tanımlarının tablo tanımlarını <xref:System.Data.DataSet> içerir.  
   
- Olduğunda bir <xref:System.Data.DataSet> XML verileri, satır olarak yazılır <xref:System.Data.DataSet> geçerli sürümlerine yazılır. Ancak, <xref:System.Data.DataSet> böylece hem geçerli hem de satır özgün değerlerine dahil edilecek bir DiffGram da yazılabilir.  
+ Bir <xref:System.Data.DataSet> , XML verileri olarak yazıldığında, <xref:System.Data.DataSet> içindeki satırlar geçerli sürümlerinde yazılır. Ancak, hem <xref:System.Data.DataSet> geçerli hem de satırların orijinal değerlerinin dahil edilmesini sağlamak için de bir DiffGram olarak yazılabilir.  
   
- XML gösterimini <xref:System.Data.DataSet> bir dosyaya, bir akışa yazılabilir bir **XmlWriter**, veya bir dize. Bu seçenek, XML gösterimini nasıl aktarım için büyük esneklik sağlar <xref:System.Data.DataSet>. XML gösterimini elde etmek için <xref:System.Data.DataSet> bir dize kullanmak **GetXml** aşağıdaki örnekte gösterildiği gibi yöntemi.  
+ Öğesinin <xref:System.Data.DataSet> XML temsili bir dosyaya, akışa, bir **XmlWriter**'a veya bir dizeye yazılabilir. Bu seçimler, <xref:System.Data.DataSet>öğesinin XML gösterimini taşımanın harika bir esnekliğini sağlar. Öğesinin <xref:System.Data.DataSet> XML temsilini bir dize olarak almak için aşağıdaki örnekte gösterildiği gibi **GetXml** metodunu kullanın.  
   
 ```vb  
 Dim xmlDS As String = custDS.GetXml()  
@@ -27,21 +27,21 @@ Dim xmlDS As String = custDS.GetXml()
 string xmlDS = custDS.GetXml();  
 ```  
   
- **GetXml** XML gösterimini döndürür <xref:System.Data.DataSet> şema bilgileri olmadan. Şema bilgileri yazılacak <xref:System.Data.DataSet> (olarak XML şema) kullanan bir dizeye **GetXmlSchema**.  
+ **GetXml** şema bilgilerinin <xref:System.Data.DataSet> olmayan XML gösterimini döndürür. Şema bilgilerini <xref:System.Data.DataSet> (XML şeması olarak) bir dizeye yazmak için **GetXmlSchema**kullanın.  
   
- Yazılacak bir <xref:System.Data.DataSet> bir dosya için akışı veya **XmlWriter**, kullanın **WriteXml** yöntemi. Geçirmek için ilk parametre **WriteXml** hedefi olan XML çıktısı. Örneğin, bir dosya adı içeren bir dizeyi geçirmek bir **System.IO.TextWriter** nesne ve benzeri. İsteğe bağlı ikinci parametresi, geçirdiğiniz bir **XmlWriteMode** nasıl yazılacak XML çıktısı olduğunu belirtmek için.  
+ Bir <xref:System.Data.DataSet> dosyaya, akışa veya **XmlWriter**'a yazmak için **WriteXml** yöntemini kullanın. **WriteXml** öğesine geçirdiğiniz ilk parametre, XML çıkışının hedefdir. Örneğin, bir dosya adı, bir **System. IO. TextWriter** nesnesi vb. içeren bir dize geçirin. XML çıkışının nasıl yazılacağını belirtmek için bir **XmlWriteMode** isteğe bağlı ikinci parametresini geçirebilirsiniz.  
   
- Aşağıdaki tabloda ilişkin seçenekler gösterilir **XmlWriteMode**.  
+ Aşağıdaki tabloda **XmlWriteMode**seçenekleri gösterilmektedir.  
   
 |XmlWriteMode option|Açıklama|  
 |-------------------------|-----------------|  
-|**IgnoreSchema**|Geçerli içeriği Yazar <xref:System.Data.DataSet> olmadan bir XML Şeması XML verileri olarak. Bu varsayılandır.|  
-|**WriteSchema**|Geçerli içeriği Yazar <xref:System.Data.DataSet> XML Şeması satır içi olarak ilişkisel yapı ile XML verileri olarak.|  
-|**DiffGram**|Tüm Yazar <xref:System.Data.DataSet> bir DiffGram özgün ve geçerli değerleri dahil. Daha fazla bilgi için [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**IgnoreSchema**|XML şeması olmadan, XML verilerinin <xref:System.Data.DataSet> geçerli içeriğini yazar. Bu varsayılandır.|  
+|**WriteSchema seçeneğine ayarlayın**|XML verilerinin güncel içeriğini <xref:System.Data.DataSet> ilişkisel yapıda satır içi xml şeması olarak yazar.|  
+|**Içeriyor**|Özgün ve geçerli <xref:System.Data.DataSet> değerler dahil olmak üzere bir DiffGram olarak tümünü yazar. Daha fazla bilgi için bkz. [DiffGram](diffgrams.md).|  
   
- Bir XML temsilini yazılırken bir <xref:System.Data.DataSet> içeren **DataRelation** nesneler, büyük olasılıkla her ilişkinin ilgili üst öğeleri içinde iç içe geçmiş alt öğe satırları için elde edilen XML Environment. Bunu gerçekleştirmek için ayarlanmış **iç içe** özelliği **DataRelation** için **true** eklediğinizde **DataRelation** için<xref:System.Data.DataSet>. Daha fazla bilgi için [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ <xref:System.Data.DataSet> **DataRelation** nesneleri içeren bir XML temsili yazarken, sonuçta elde edilen XML 'nin ilgili üst öğeleri içinde iç içe geçmiş her ilişkinin alt satırlarına sahip olmasını istersiniz. Bunu gerçekleştirmek için, **DataRelation** 'ı öğesine <xref:System.Data.DataSet>eklediğinizde **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlayın. Daha fazla bilgi için bkz. [DataRelation Ile Iç Içe geçme](nesting-datarelations.md).  
   
- XML gösterimini yazma konusunda iki örnek aşağıda verilmiştir bir <xref:System.Data.DataSet> dosyaya. İlk örnek, bir dize olarak elde edilen XML dosyası adını geçirir. **WriteXml**. İkinci örnek geçen bir **System.IO.StreamWriter** nesne.  
+ Aşağıda bir dosyasına bir <xref:System.Data.DataSet> dosyasının XML gösteriminin nasıl yazılacağı hakkında iki örnek verilmiştir. İlk örnek, sonuçta elde edilen XML için dosya adını **WriteXml**öğesine bir dize olarak geçirir. İkinci örnek, bir **System. IO. StreamWriter** nesnesi geçirir.  
   
 ```vb  
 custDS.WriteXml("Customers.xml", XmlWriteMode.WriteSchema)  
@@ -63,21 +63,21 @@ custDS.WriteXml(xmlSW, XmlWriteMode.WriteSchema);
 xmlSW.Close();  
 ```  
   
-## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>XML öğeleri, öznitelikleri ve metin sütunları eşleme  
- Bir tablo sütunu XML nasıl temsil edildiğini belirtebilirsiniz kullanarak **Columnmapping'in** özelliği **DataColumn** nesne. Aşağıdaki tabloda farklı gösterilmektedir **MappingType** değerleri **Columnmapping'in** bir tablo sütunu ve elde edilen XML özelliği.  
+## <a name="mapping-columns-to-xml-elements-attributes-and-text"></a>Sütunları XML öğeleri, öznitelikleri ve metin ile eşleme  
+ **DataColumn** nesnesinin **ColumnMapping** özelliğini kullanarak bir tablo sütununun XML olarak nasıl temsil edileceğini belirtebilirsiniz. Aşağıdaki tablo, bir tablo sütununun **ColumnMapping** özelliği ve elde edilen XML Için farklı **MappingType** değerlerini gösterir.  
   
 |MappingType değeri|Açıklama|  
 |-----------------------|-----------------|  
-|**Öğe**|Bu varsayılandır. Sütun, burada ColumnName öğe adı, sütunun içeriğine öğenin metin olarak yazılmış bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
-|**Öznitelik**|Sütun XML öğesi geçerli satıra burada ColumnName özniteliğin adını ve sütun içeriğini öznitelik değeri olarak yazılmış bir XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|Bir sütunun içeriğine metin XML öğesi geçerli satır olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Unutmayın **SimpleContent** sahip bir tablo için bir sütun ayarlanamaz **öğesi** sütunları veya iç içe geçmiş ilişkileri.|  
-|**Gizli**|Sütun XML çıktısında yazılmaz.|  
+|**Öğe**|Bu varsayılandır. Sütun, ColumnName 'un öğenin adı olduğu ve sütunun içeriği öğenin metni olarak yazıldığı bir XML öğesi olarak yazılır. Örneğin:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**Öznitelik**|Sütun, ColumnName 'un özniteliğin adı olduğu ve sütunun içeriğinin öznitelik değeri olarak yazıldığı geçerli satır için XML öğesinin XML özniteliği olarak yazılır. Örneğin:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
+|**'Dir**|Sütunun içeriği, geçerli satırın XML öğesinde metin olarak yazılır. Örneğin:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> **Öğe** sütunları veya iç içe ilişkiler içeren bir tablonun sütunu için **simpleContent** ayarlanamaz.|  
+|**Lene**|Sütun XML çıktısında yazılmadı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
-- [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [XSD Olarak DataSet Schema Bilgilerini Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [DiffGrams](diffgrams.md)
+- [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)
+- [XSD Olarak DataSet Schema Bilgilerini Yazma](writing-dataset-schema-information-as-xsd.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607504"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204413"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet’i bir XmlDataDocument ile Eşitleme
-Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma siparişinin tek bir adımda gösterir <xref:System.Data.DataSet> ile eşitlenen bir <xref:System.Xml.XmlDataDocument>. Aşağıdaki örneklerde oluşturma bir **veri kümesi** kaynak XML belgesi yalnızca bir kısmını eşleşen bir simge durumuna küçültülmüş şema ile. Örneklerde bir **XmlDataDocument** kaynak XML belge kalitesini korumak için etkinleştirme **veri kümesi** bir alt XML belgesi oluşturmak için kullanılacak.  
+Bu bölümde, bir satın alma siparişinin işlenmesinde bir adım gösterilir ve bir, <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument>ile kesin olarak yazılmış bir şekilde eşitlenmiş. Aşağıdaki örneklerde, yalnızca kaynak XML belgesinin yalnızca bir bölümüyle eşleşen küçültülmüş bir şemaya sahip bir **veri kümesi** oluşturulur. Örnekler, kaynak XML belgesinin aslına uygunluk düzeyini korumak için bir **XmlDataDocument** kullanır ve bu da **veri kümesinin** XML belgesinin bir alt kümesini açığa çıkarmak için kullanılmasını sağlar.  
   
- Aşağıdaki XML belgesi için bir sipariş ilişkin tüm bilgileri içerir: Müşteri bilgileri, sıralı öğeleri, sevkiyat bilgilerini ve benzeri.  
+ Aşağıdaki XML belgesi, bir satın alma siparişiyle ilgili tüm bilgileri içerir: müşteri bilgileri, sipariş edilen öğeler, gönderim bilgileri vb.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -109,9 +109,9 @@ Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma sipariş
 </PurchaseOrder>  
 ```  
   
- Önceki XML belgesinde satın alma siparişi bilgileri işlem tek bir adımda, sipariş şirketin geçerli envanterinden doldurulması için içindir. Satın alma siparişi tüm içeriğini görmek şirketin ambarından sırasını doldurmak için sorumlu çalışan gerekmez; bunların yalnızca siparişi için ürün bilgi Bkz gerekir. XML belgesinden yalnızca ürün bilgilerini kullanıma sunmak için türü kesin belirlenmiş oluşturma **veri kümesi** ürün ve miktarların eşlenir sipariş XML Şeması Tanım Dili (XSD) şemaya, bir şema ile yazılmış. Hakkında daha fazla bilgi için türü kesin belirlenmiş **veri kümesi** nesneleri bkz [yazılan veri kümeleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+ Önceki XML belgesinde yer alan satın alma siparişi bilgilerini işlemenin bir adımı şirketin geçerli envanterinden doldurulacak şekilde yapılır. Siparişin şirket ambarından doldurulmasından sorumlu çalışan, satın alma siparişinin tüm içeriğini görmeniz gerekmez; yalnızca sipariş için ürün bilgilerini görmeleri gerekir. Yalnızca ürün bilgilerini XML belgesinden göstermek için, XML şeması tanım dili (XSD) şeması olarak yazılmış ve sıralanan ürünlerle ve miktarlarla eşleşen bir şemaya sahip kesin türü belirtilmiş bir **veri kümesi** oluşturun. Türü kesin belirlenmiş **veri kümesi** nesneleri hakkında daha fazla bilgi için bkz. [Typed DataSet](typed-datasets.md).  
   
- Aşağıdaki kod şemasından gösterir kesin olarak belirlenmiş **veri kümesi** Bu örnek için oluşturulur.  
+ Aşağıdaki kod, bu örnek için türü kesin belirlenmiş **veri kümesinin** oluşturulduğu şemayı gösterir.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ Bu bölüm işleme kullanarak türü kesin belirlenmiş bir satın alma sipariş
 </xs:schema>  
 ```  
   
- Yalnızca bu bilgiden fark **OrderDetails** ve **ürünleri** orijinal XML belgesi öğeleri için şema dahil edilecek **veri kümesi**. Eşitleme **veri kümesi** ile bir **XmlDataDocument** dahil olmayan öğeler sağlar **veri kümesi** XML belgesi açık kalır.  
+ Yalnızca özgün XML belgesinin **OrderDetails** ve **Products** öğelerinden alınan bilgilerin **veri kümesinin**şemasına dahil edildiğini fark edebilirsiniz. **Veri kümesini** bir **XmlDataDocument** Ile eşitlemek, **VERI kümesinde** yer alan öğelerin XML belgesiyle kalıcı olmasını sağlar.  
   
- Kesin olarak belirlenmiş ile **veri kümesi** oluşturulan XML şemasından (bir ad alanı ile **Northwind.FillOrder**), özgün XML belgesi bir kısmını eşitleyerek kullanıma sunulabilecek  **Veri kümesi** ile **XmlDataDocument** kaynak XML belgesinden yüklendi. Dikkat **veri kümesi** üretilen yapısı ancak verileri şema içeriyor. XML verilerinin yüklediğinizde veri doldurulur **XmlDataDocument**. Yüklemeye çalışırsanız bir **XmlDataDocument** , eşitlenmiş ile bir **veri kümesi** veri içeriyorsa, bir özel durum oluşturulur.  
+ XML şemasından ( **Northwind. FillOrder**'ın ad alanı ile) oluşturulan türü kesin belirlenmiş **veri kümesi** ile, özgün XML belgesinin bir bölümü, **veri kümesi** tarafından yüklenen **XmlDataDocument** ile eşitlenerek gösterilebilir kaynak XML belgesinden. Şemadan oluşturulan veri **kümesinin** yapı içerdiğini, ancak hiçbir veri olmadığını unutmayın. XML öğesini **XmlDataDocument**'e yüklediğinizde veriler doldurulur. Zaten veri içeren bir veri **kümesiyle** eşitlenmiş bir **XmlDataDocument** yüklemeye çalışırsanız, bir özel durum oluşturulur.  
   
- Sonra **veri kümesi** (ve **XmlDataDocument**) güncelleştirildi, **XmlDataDocument** tarafından göz ardı öğeleri ardından değiştirilmiş XML belgesi yazma **Veri kümesi** hala sağlam, aşağıda gösterildiği gibi. Öğeleri sipariş doldurduktan sonra satın alma siparişi senaryoda değiştirilmiş bir XML belgesi ardından sipariş işleme, belki de şirketin sevkiyat departmanı sonraki adımına geçirilebilir.  
+ **Veri kümesi** (ve **XmlDataDocument**) güncelleştirildikten sonra, **XmlDataDocument** daha sonra değiştirilmiş xml belgesini aşağıda gösterildiği gibi **veri kümesi** tarafından yok sayılmış öğelerle yazabilir. Satın alma siparişi senaryosunda, sipariş öğeleri doldurulduktan sonra değiştirilen XML belgesi, belki de şirketin sevkiyat departmanı için sipariş sürecinde bir sonraki adıma geçirilebilir.  
   
 ```vb  
 Imports System  
@@ -233,5 +233,5 @@ public class Sample
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet ve XmlDataDocument Eşitlemesi](dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

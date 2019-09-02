@@ -2,17 +2,17 @@
 title: İlişkilerin Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: f8a9aba493dfe82466608ea60932ddfec5ef64f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879677"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204764"
 ---
 # <a name="inferring-relationships"></a>İlişkilerin Çıkarımını Yapma
-Tablo olarak ortaya çıkan bir öğe ayrıca bir tablo olarak ortaya çıkan bir alt öğe varsa bir <xref:System.Data.DataRelation> iki tablo arasında oluşturulur. Yeni bir sütun adıyla **ParentTableName_Id** üst öğe için oluşturulan tabloyu hem alt öğe için oluşturulan tabloyu eklenir. **Columnmapping'in** bu kimlik sütununun özellik ayarlanacak **MappingType.Hidden**. Sütun üst tablo için otomatik artırma birincil anahtarı olacaktır ve kullanılacak **DataRelation** iki tablo arasında. Eklenen kimlik sütununun veri türünün **System.Int32**, veri türü diğer tüm çıkarsanan sütun olduğu **System.String**. A <xref:System.Data.ForeignKeyConstraint> ile **DeleteRule** = **Cascade** ayrıca yeni bir sütun üst ve alt tablolarında kullanılarak oluşturulur.  
+Tablo olarak gösterilen bir öğe, tablo olarak da gösterilen bir alt öğe içeriyorsa, iki tablo arasında bir <xref:System.Data.DataRelation> oluşturulur. Üst öğe için oluşturulan tabloya ve alt öğe için oluşturulan tabloya **ParentTableName_Id** adlı yeni bir sütun eklenir. Bu kimlik sütununun **ColumnMapping** özelliği **MappingType. Hidden**olarak ayarlanacak. Sütun üst tablo için otomatik olarak artan birincil anahtar olur ve iki tablo arasında **DataRelation** için kullanılacaktır. Eklenen kimlik sütununun veri türü, System. **String**olan diğer tüm çıkartılan sütunların veri türünden farklı olarak **System. Int32**olacaktır. Hem üst hem de alt tablolardaki yeni sütun kullanılarak **DeleteRule** = **Cascade** ilebirlikteoluşturulur.<xref:System.Data.ForeignKeyConstraint>  
   
- Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -23,58 +23,58 @@ Tablo olarak ortaya çıkan bir öğe ayrıca bir tablo olarak ortaya çıkan bi
 </DocumentElement>  
 ```  
   
- Çıkarma işlemi, iki tablo oluşturur: **Element1** ve **ChildElement1**.  
+ Çıkarım işlemi iki tablo oluşturacak: **Element1** ve **ChildElement1**.  
   
- **Element1** tablo iki sütun vardır: **Element1_Id** ve **ChildElement2**. **Columnmapping'in** özelliği **Element1_Id** sütun ayarlanacak **MappingType.Hidden**. **Columnmapping'in** özelliği **ChildElement2** sütun ayarlanacak **MappingType.Element**. **Element1_Id** sütun birincil anahtarı olarak ayarlanacak **Element1** tablo.  
+ **Element1** tablosunun iki sütunu olacaktır: **Element1_Id** ve **ChildElement2**. **Element1_Id** sütununun **ColumnMapping** özelliği **MappingType. Hidden**olarak ayarlanacak. **ChildElement2** sütununun **ColumnMapping** özelliği **MappingType. element**olarak ayarlanacak. **Element1_Id** sütunu, **Element1** tablosunun birincil anahtarı olarak ayarlanır.  
   
- **ChildElement1** tablo üç sütun vardır: **attr1**, **attr2** ve **Element1_Id**. **Columnmapping'in** özelliği **attr1** ve **attr2** sütunları ayarlanacak **MappingType.Attribute**. **Columnmapping'in** özelliği **Element1_Id** sütun ayarlanacak **MappingType.Hidden**.  
+ **ChildElement1** tablosunda üç sütun olacak: **attr1**, **attr2** ve **Element1_Id**. **Attr1** ve **attr2** sütunlarının **ColumnMapping** özelliği **MappingType. Attribute**olarak ayarlanacak. **Element1_Id** sütununun **ColumnMapping** özelliği **MappingType. Hidden**olarak ayarlanacak.  
   
- A **DataRelation** ve **ForeignKeyConstraint** kullanılarak oluşturulan **Element1_Id** her iki tablonun sütunlarından.  
+ Bir **DataRelation** ve **ForeignKeyConstraint** , her iki tablodan **Element1_Id** sütunları kullanılarak oluşturulacaktır.  
   
- **Veri kümesi:** DocumentElement  
+ **Veri kümesi** DocumentElement  
   
- **Tablo:** Element1  
+ **Tablosundan** Element1  
   
 |Element1_Id|ChildElement2|  
 |------------------|-------------------|  
-|0|Text2|  
+|0|Metin2|  
   
- **Tablo:** ChildElement1  
+ **Tablosundan** ChildElement1  
   
 |attr1|attr2|Element1_Id|  
 |-----------|-----------|------------------|  
-|Değer1|Value2|0|  
+|value1|value2|0|  
   
- **DataRelation:** Element1_ChildElement1  
+ **Nesnesinin** Element1_ChildElement1  
   
  **ParentTable:** Element1  
   
  **ParentColumn:** Element1_Id  
   
- **Geldiği:** ChildElement1  
+ **Childschema** ChildElement1  
   
  **ChildColumn:** Element1_Id  
   
- **İç içe geçmiş:** Doğru  
+ **Ble** Doğru  
   
- **ForeignKeyConstraint:** Element1_ChildElement1  
+ **ForeignKeyConstraint** Element1_ChildElement1  
   
- **Sütun:** Element1_Id  
+ **Sütunuyla** Element1_Id  
   
  **ParentTable:** Element1  
   
- **Geldiği:** ChildElement1  
+ **Childschema** ChildElement1  
   
- **DeleteRule:** Basamakla  
+ **DeleteRule:** Seçilemez  
   
  **AcceptRejectRule:** Yok.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
+- [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
+- [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
+- [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

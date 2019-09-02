@@ -2,29 +2,29 @@
 title: Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 4cc4cb530b7252f35469fd4bb43bf6da9c1a3e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64604032"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203444"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
-**Keyref** öğesi bir belge içindeki öğeleri arasında bağlantı kurmanızı sağlar. Bu, ilişkisel bir veritabanındaki yabancı anahtar ilişkisi için benzer. Bir şema belirtiyorsa **keyref** öğesi, öğenin karşılık gelen bir yabancı anahtar kısıtlaması tablolar sütunlar üzerinde şema eşleme işlemi sırasında dönüştürülür <xref:System.Data.DataSet>. Varsayılan olarak, **keyref** öğesi ayrıca oluşturur bir ilişki ile **ParentTable**, **geldiği**, **ParentColumn**ve  **ChildColumn** özellikler üzerinde ilişkisi belirtilmiş.  
+**Keyref** öğesi bir belge içindeki öğeler arasında bağlantı kurmanıza olanak sağlar. Bu, ilişkisel bir veritabanındaki yabancı anahtar ilişkisine benzerdir. Bir şema **keyref** öğesini belirtiyorsa, öğesi şema eşleme işlemi sırasında, <xref:System.Data.DataSet>tablolarındaki sütunlarda karşılık gelen bir yabancı anahtar kısıtlamasına dönüştürülür. Varsayılan olarak, **keyref** öğesi ilişki üzerinde belirtilen **ParentTable**, **ChildTable**, **ParentColumn**ve **ChildColumn** özellikleriyle da bir ilişki oluşturur.  
   
- Aşağıdaki tabloda ana hatlarını **msdata** öznitelikleri içinde belirtebileceğiniz **keyref** öğesi.  
+ Aşağıdaki tabloda, **keyref** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|Varsa **ConstraintOnly = "true"** belirtilen **keyref** şema öğesi, bir kısıtlama oluşturuldu, ancak hiçbir ilişkisi oluşturulur. Bu öznitelik belirtilmezse (veya **False**), kısıtlama hem ilişki oluşturulan **veri kümesi**.|  
-|**msdata:ConstraintName**|Varsa **ConstraintName** özniteliği belirtilirse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **adı** özniteliği **keyref** şema öğesi sağlar kısıtlama adı **veri kümesi**.|  
-|**msdata:UpdateRule**|Varsa **UpdateRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **UpdateRule** kısıtlaması özelliğinde  **Veri kümesi**. Aksi takdirde **UpdateRule** özelliği **Cascade**.|  
-|**msdata:DeleteRule**|Varsa **DeleteRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **DeleteRule** kısıtlaması özelliğinde  **Veri kümesi**. Aksi takdirde **DeleteRule** özelliği **Cascade**.|  
-|**msdata:AcceptRejectRule**|Varsa **AcceptRejectRule** özniteliği belirtilirse **keyref** şema öğesi, değeri atanır **AcceptRejectRule** kısıtlamaözelliği **Veri kümesi**. Aksi takdirde **AcceptRejectRule** özelliği **hiçbiri**.|  
+|**msdata:ConstraintOnly**|Şemada **keyref** öğesinde **ConstraintOnly = "true"** belirtilirse, bir kısıtlama oluşturulur, ancak ilişki oluşturulmaz. Bu öznitelik belirtilmemişse (veya **false**olarak ayarlanırsa), hem kısıtlama hem de Ilişki **veri kümesinde**oluşturulur.|  
+|**msdata:ConstraintName**|**ConstraintName** özniteliği belirtilmişse, değeri kısıtlamanın adı olarak kullanılır. Aksi takdirde, şemadaki **keyref** öğesinin **Name** özniteliği, **veri kümesinde**kısıtlama adını sağlar.|  
+|**msdata:UpdateRule**|Şemadaki **keyref** öğesinde **UpdateRule** özniteliği belirtilmişse, değeri **veri kümesindeki** **UpdateRule** kısıtlama özelliğine atanır. Aksi takdirde **UpdateRule** özelliği **Cascade**olarak ayarlanır.|  
+|**msdata:DeleteRule**|Şemadaki **keyref** öğesinde **DeleteRule** özniteliği belirtilmişse, değeri **veri kümesindeki** **DeleteRule** kısıtlama özelliğine atanır. Aksi takdirde, **DeleteRule** özelliği **Cascade**olarak ayarlanır.|  
+|**msdata:AcceptRejectRule**|Bir şemadaki **keyref** öğesinde **AcceptRejectRule** özniteliği belirtilmişse, değeri **veri kümesindeki** **AcceptRejectRule** kısıtlama özelliğine atanır. Aksi takdirde **AcceptRejectRule** özelliği **none**olarak ayarlanır.|  
   
- Aşağıdaki örnek belirten bir şema içeriyor **anahtarı** ve **keyref** arasındaki ilişkileri **OrderNumber** alt öğesi **sırası**  öğesi ve **OrderNo** alt öğesi **OrderDetail** öğesi.  
+ Aşağıdaki örnek, **Order** öğesinin **OrderNumber** alt öğesi ve OrderNo alt öğesi ile **OrderDetail** arasındaki **anahtar** ve **keyref** ilişkilerini belirten bir şema içerir dosyalarında.  
   
- Örnekte, **OrderNumber** alt öğesi **OrderDetail** öğesi başvurduğu **OrderNo** anahtar alt öğesi **sipariş**öğesi.  
+ Örnekte, **OrderDetail** öğesinin **OrderNumber** alt öğesi **Order** öğesinin **OrderNo** anahtar alt öğesine başvurur.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -66,16 +66,16 @@ ms.locfileid: "64604032"
 </xs:schema>  
 ```  
   
- Aşağıdaki XML Şeması Tanım Dili (XSD) şemaya eşleme işlemi üretir **veri kümesi** iki tabloya:  
+ XML şeması tanım dili (XSD) şema eşleme işlemi aşağıdaki **veri kümesini** iki tabloyla üretir:  
   
 ```  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- Ayrıca, **veri kümesi** aşağıdaki kısıtlamalar tanımlar:  
+ Ayrıca, **veri kümesi** aşağıdaki kısıtlamaları tanımlar:  
   
-- Benzersiz kısıtlama **sipariş** tablo.  
+- **Order** tablosundaki benzersiz bir kısıtlama.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- Arasında bir ilişki **sipariş** ve **OrderDetail** tablolar. **İç içe** özelliği **False** iki öğe şemasında değil nedeniyle.  
+- **Order** ve **OrderDetail** tabloları arasındaki ilişki. **Iç içe** geçmiş özelliği **false** olarak ayarlanır çünkü iki öğe şemada iç içe değildir.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
-- Bir yabancı anahtar kısıtlaması **OrderDetail** tablo.  
+- **OrderDetail** tablosundaki yabancı anahtar kısıtlaması.  
   
     ```  
               ConstraintName: OrderNoRef  
@@ -111,6 +111,6 @@ Order(OrderNumber, EmpNumber)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

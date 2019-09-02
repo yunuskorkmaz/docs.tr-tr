@@ -2,12 +2,12 @@
 title: Zaman uyumsuz programlarda denetim akışı (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: bac47393814737b0e6f635845f5dfcd95bad6328
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168476"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204448"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Zaman uyumsuz programlarda denetim akışı (C#)
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 Etiketlenmiş konumların her biri, "BIR"-"ALTıDA", programın geçerli durumuyla ilgili bilgileri görüntüler. Aşağıdaki çıktı üretilir:
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -240,7 +240,7 @@ Projeyi çalıştırmak için aşağıdaki adımları gerçekleştirin:
 
     Aşağıdaki çıktı görüntülenir:
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  Son olarak gerçek bir dize oluşturmak `client.GetStringAsync` için görevi bir Promise olarak düşünebilirsiniz. Bu sırada, bu, `AccessTheWebAsync` ' de taahhüt edilen `client.GetStringAsync`dizeye bağlı değilse, bu iş, bekleme sırasında `client.GetStringAsync` devam edebilir. Örnekte, "üç" olarak etiketlenen aşağıdaki çıktı satırları, bağımsız iş yapmak için fırsatı temsil eder
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  ' De `AccessTheWebAsync`olduğu `startButton_Click` gibi, görev beklenene kadar zaman uyumsuz görevin (`getLengthTask`) sonuçlarına bağlı olmayan çalışmaya devam edebilir. Aşağıdaki çıktı satırları bu işi temsil eder.
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -347,7 +347,7 @@ int contentLength = await getLengthTask;
 
 `AccessTheWebAsync` İşlemin tamamlandığını `client.GetStringAsync` işaret ederse, içindeki işleme askıya alma işleminden serbest bırakılır ve await ifadesinin ötesinde devam edebilir. Aşağıdaki çıktı satırları işleme sürdürme temsil eder.
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -368,7 +368,7 @@ FIVE:  Back in AccessTheWebAsync.
 
 Aşağıdaki çıktı satırları içinde `startButton_Async`işleme sürdürme temsil eder:
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.

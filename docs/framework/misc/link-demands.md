@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3bde5b18437cc9890f660f018e81582a4d708d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f040e1e1706e1f84ced8b253ff3fb15dbcbd6e1e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910914"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206015"
 ---
 # <a name="link-demands"></a>Bağlantı Talepleri
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -32,7 +32,7 @@ ms.locfileid: "69910914"
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>, Veyığın<xref:System.Security.CodeAccessPermission.PermitOnly%2A> ilerleme değiştiricileri bağlantı taleplerinin değerlendirilmesini etkilemez. <xref:System.Security.CodeAccessPermission.Deny%2A>  Bağlantı talepleri bir yığın ilerleme işlemi gerçekleştirmediğinden, yığın ilerleme değiştiricilerin bağlantı taleplerini etkilemez.  
   
- Bir bağlantı talebi tarafından korunan bir yönteme [yansıma](../../../docs/framework/reflection-and-codedom/reflection.md)aracılığıyla erişiliyorsa, bağlantı talebi, yansıma aracılığıyla erişilen kodun hemen çağırışını denetler. Bu, hem yöntem bulma hem de yansıma kullanılarak gerçekleştirilen yöntem çağırma için geçerlidir. Örneğin, kodun bir bağlantı talebi tarafından korunan bir yöntemi <xref:System.Reflection.MethodInfo> temsil eden bir nesneyi döndürmek için yansıma kullandığını varsayın ve sonra bu **MethodInfo** nesnesini, özgün yöntemi çağırmak için nesnesini kullanan başka bir koda geçirir. Bu durumda, bağlantı isteği denetimi iki kez gerçekleşir: **MethodInfo** nesnesini döndüren kod için bir kez ve onu çağıran kod için bir kez.  
+ Bir bağlantı talebi tarafından korunan bir yönteme [yansıma](../reflection-and-codedom/reflection.md)aracılığıyla erişiliyorsa, bağlantı talebi, yansıma aracılığıyla erişilen kodun hemen çağırışını denetler. Bu, hem yöntem bulma hem de yansıma kullanılarak gerçekleştirilen yöntem çağırma için geçerlidir. Örneğin, kodun bir bağlantı talebi tarafından korunan bir yöntemi <xref:System.Reflection.MethodInfo> temsil eden bir nesneyi döndürmek için yansıma kullandığını varsayın ve sonra bu **MethodInfo** nesnesini, özgün yöntemi çağırmak için nesnesini kullanan başka bir koda geçirir. Bu durumda, bağlantı isteği denetimi iki kez gerçekleşir: **MethodInfo** nesnesini döndüren kod için bir kez ve onu çağıran kod için bir kez.  
   
 > [!NOTE]
 > Statik oluşturucular, uygulamanın kod yürütme yolu dışında, sistem tarafından çağrılamadığından, statik sınıf oluşturucusunda gerçekleştirilen bir bağlantı isteği oluşturucuyu korumaz. Sonuç olarak, bir bağlantı isteği tüm sınıfa uygulandığında, sınıfın geri kalanını korusa da statik bir oluşturucuya erişimi koruyamaz.  
@@ -57,4 +57,4 @@ public static string ReadData()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Öznitelikler](../../standard/attributes/index.md)
-- [Kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md)
+- [Kod erişim güvenliği](code-access-security.md)

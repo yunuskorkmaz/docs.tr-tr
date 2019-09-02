@@ -1,23 +1,23 @@
 ---
 title: .NET Core komut satırı ile projeleri düzenleme ve test etme
-description: Bu öğreticide, düzenlemek ve test komut satırından .NET Core projeleri açıklanmaktadır.
+description: Bu öğreticide, .NET Core projelerini komut satırından düzenleme ve test etme işlemleri açıklanmaktadır.
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: ef7263985288445fca273f37389876aeac2f136b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a8724c971521b8d65700d61a1ce523c1dfdddf0a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051951"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203004"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core komut satırı ile projeleri düzenleme ve test etme
 
-Bu öğreticide aşağıdaki [Windows/Linus/macos'ta komut satırını kullanarak .NET Core ile çalışmaya başlama](using-with-xplat-cli.md), Gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmek için basit bir konsol uygulaması oluşturmayı sürüyor. Kodunuzu düzenlemek için klasörleri kullanmayı gösteren sonra Bu öğreticide, bir konsol uygulaması ile nasıl genişletileceğini gösterir [xUnit](https://xunit.github.io/) testi çerçevesi.
+Bu öğretici, [komut satırını kullanarak Windows/Linux/macOS 'ta .NET Core ile çalışmaya başlama](using-with-xplat-cli.md), gelişmiş ve iyi düzenlenmiş uygulamalar geliştirmeye yönelik basit bir konsol uygulaması oluşturma aşamasından daha fazla yararlanılarak. Kodunuzu düzenlemek için klasörleri nasıl kullanacağınızı gösterdikten sonra, bu öğreticide [xUnit](https://xunit.github.io/) test çerçevesiyle bir konsol uygulamasını nasıl genişletebileceğinizi gösterir.
 
-## <a name="using-folders-to-organize-code"></a>Kod düzenlemek için klasörleri'ni kullanarak
+## <a name="using-folders-to-organize-code"></a>Kodu düzenlemek için klasörleri kullanma
 
-Bir konsol uygulamasına yeni türlerini tanıtır istiyorsanız, bunu uygulama türlerini içeren dosyaları ekleyerek yapabilirsiniz. Örneğin dosyaları içeren eklediğiniz `AccountInformation` ve `MonthlyReportRecords` türleri projeniz için proje dosya yapısı düz ve kolay gidin:
+Konsol uygulamasına yeni türler eklemek istiyorsanız, türleri uygulamaya içeren dosyaları ekleyerek bunu yapabilirsiniz. Örneğin, projenize ve `AccountInformation` `MonthlyReportRecords` türlerini içeren dosyaları eklerseniz, proje dosya yapısı düz ve gezinmek kolaydır:
 
 ```
 /MyProject
@@ -27,9 +27,9 @@ Bir konsol uygulamasına yeni türlerini tanıtır istiyorsanız, bunu uygulama 
 |__Program.cs
 ```
 
-Ancak, bu yalnızca iyi projenizin boyutu nispeten küçük olduğunda çalışır. Ne olacağını düşünün projeye 20 türleri eklerseniz? Proje kesinlikle gidin ve ile çok sayıda dosya projenin kök dizinini doldurmak korumak kolay değildir.
+Ancak, bu yalnızca projenizin boyutu nispeten küçük olduğunda iyi bir şekilde geçerlidir. Projeye 20 tür eklerseniz ne olacağını anlaz edebilir misiniz? Projenin, bu birçok dosya üzerinde gezinilmesi ve projenin kök dizinini oluşturma konusunda kesinlikle kolay olması gerekmez.
 
-Proje düzenlemek için yeni bir klasör oluşturun ve adlandırın *modelleri* tür dosyalarını tutacak. Türü dosyaları içine yerleştirebilir *modelleri* klasörü:
+Projeyi düzenlemek için yeni bir klasör oluşturun ve bunu tür dosyalarını tutacak şekilde modelleyen şekilde adlandırın. Tür dosyalarını *modeller* klasörüne yerleştirin:
 
 ```
 /MyProject
@@ -40,17 +40,17 @@ Proje düzenlemek için yeni bir klasör oluşturun ve adlandırın *modelleri* 
 |__Program.cs
 ```
 
-Mantıksal olarak klasörlere Grup dosyaları gidin ve korumak kolay projeleri. Sonraki bölümde, klasör ve birim testi ile daha karmaşık bir örnek oluşturun.
+Dosyaları klasörlere mantıksal olarak gruplandıran projeler arasında gezinmek ve bakım yapmak kolaydır. Sonraki bölümde, klasörler ve birim testi ile daha karmaşık bir örnek oluşturursunuz.
 
-## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>Düzenleme ve NewTypes Evcil Hayvanlar örneğini kullanarak test etme
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>NewTypes pets örneğini kullanarak düzenleme ve test etme
 
 ### <a name="building-the-sample"></a>Örnek oluşturma
 
-Aşağıdaki adımları için aşağıdakilerden birini kullanarak izleyebilirsiniz [NewTypes Evcil Hayvanlar örnek](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) veya dosya ve klasörlerinizi oluşturun. Testler ayrıca mantıksal olarak klasörlere daha sonra ayrıca daha fazla test sorgulamasına yerleştirilir ve türlerini mantıksal olarak daha fazla türlerinin eklenmesi daha sonra izin veren bir klasör yapısına düzenlenir.
+Aşağıdaki adımlar için, [Newtypes pets örneğini](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) kullanarak takip edebilir veya kendi dosya ve klasörlerinizi oluşturabilirsiniz. Türler, daha sonra daha fazla türden eklenmesine izin veren bir klasör yapısına mantıksal olarak düzenlenir ve testler daha sonra daha fazla test eklenmesine izin veren klasörlere de mantıksal olarak yerleştirilir.
 
-İki tür örnek içeren `Dog` ve `Cat`ve bunları ortak bir arabirim uygulamak `IPet`. İçin `NewTypes` amacınız projesidir evcil hayvan ilgili tür olarak düzenlemek için bir *Evcil Hayvanlar* klasör. Daha sonra başka bir dizi türleri eklenirse *WildAnimals* bunlar, örneğin, yerleştirilir *NewTypes* klasör yanı sıra *Evcil Hayvanlar* klasör. *WildAnimals* klasör hayvanlar gibi olmayan hayvanlar türleri içerebilir `Squirrel` ve `Rabbit` türleri. Bu şekilde türleri eklendikçe proje de düzenli olarak kalır.
+Örnek iki tür `Dog` içerir ve `Cat`ve, ortak bir arabirim `IPet`uygular. Projeniz için amacınız, Evcil hayvan ile ilgili türleri bir pets klasörü olarak düzenmaktır. `NewTypes` Daha sonra başka bir tür kümesi eklenirse, *WildAnimals* Örneğin, *pets* klasörüyle birlikte *newtypes* klasörüne yerleştirilirler. *WildAnimals* klasörü, `Squirrel` ve `Rabbit` türleri gibi pets olmayan hayvanlar için türler içerebilir. Bu şekilde, türler eklendikçe, proje iyi organize edilmiş kalır.
 
-Aşağıdaki klasör yapısını, belirtilen dosya içeriği oluşturun:
+Belirtilen dosya içeriğiyle aşağıdaki klasör yapısını oluşturun:
 
 ```
 /NewTypes
@@ -97,21 +97,21 @@ Woof!
 Meow!
 ```
 
-İsteğe bağlı alıştırma: Yeni bir evcil hayvan türü gibi ekleyebilirsiniz bir `Bird`, bu proje genişleterek. Kuşbakışı olun `TalkToOwner` yöntemi verin bir `Tweet!` sahibine. Uygulamayı yeniden çalıştırın. Çıkış içerir `Tweet!`
+İsteğe bağlı alıştırma: Bu projeyi genişleterek `Bird`, gibi yeni bir evcil hayvan türü ekleyebilirsiniz. Kuşın `TalkToOwner` yönteminin sahibine `Tweet!` vermesini sağlayın. Uygulamayı yeniden çalıştırın. Çıktıda şunlar yer alır`Tweet!`
 
-### <a name="testing-the-sample"></a>Örnek test etme
+### <a name="testing-the-sample"></a>Örneği test etme
 
-`NewTypes` Proje yerinde olduğundan ve bir klasörde Evcil Hayvanlar ilgili türleri tutarak düzenlediğiniz. Ardından, test projenizi oluşturmak ve testleri yazmaya [xUnit](https://xunit.github.io/) test çerçevesi. Birim testi, otomatik olarak bunlar düzgün şekilde çalıştıklarından olduğunu onaylamak için evcil hayvan türlerinizi davranışını denetlemesine olanak tanır.
+`NewTypes` Proje yerinde ve pets ile ilgili türleri bir klasörde tutarak düzenlemiş olursunuz. Ardından, test projenizi oluşturun ve [xUnit](https://xunit.github.io/) test çerçevesi ile testleri yazmaya başlayın. Birim testi, sorunsuz şekilde çalıştığının nasıl yapılacağını onaylamak için evcil hayvan türlerinizi davranışını otomatik olarak denetlemenizi sağlar.
 
-Geri gidin *src* klasör oluşturup bir *test* klasörüyle bir *NewTypesTests* içindeki klasör. Bir komut istemi'nden en *NewTypesTests* klasöründe yürütme `dotnet new xunit`. Bu, iki dosya oluşturur: *NewTypesTests.csproj* ve *UnitTest1.cs*.
+*Src* klasörüne geri gidin ve Içinde *newtypestests* klasörünü içeren bir *Test* klasörü oluşturun. *Newtypestests* klasöründen bir komut isteminde yürütün `dotnet new xunit`. Bu iki dosya üretir: *Newtypestests. csproj* ve *UnitTest1.cs*.
 
-Test projesi türleri şu anda test edilemez `NewTypes` ve bir proje başvurusu gerektirir `NewTypes` proje. Bir proje başvurusu eklemek için [ `dotnet add reference` ](../tools/dotnet-add-reference.md) komutu:
+Test projesi şu anda içindeki `NewTypes` türleri test edemez ve `NewTypes` projeye bir proje başvurusu gerektiriyor. Bir proje başvurusu eklemek için [`dotnet add reference`](../tools/dotnet-add-reference.md) komutunu kullanın:
 
-```
+```console
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-Veya el ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>` düğüme *NewTypesTests.csproj* dosyası:
+Ya da `<ItemGroup>` *newtypestests. csproj* dosyasına bir düğüm ekleyerek proje başvurusunu el ile ekleme seçeneğiniz de vardır:
 
 ```xml
 <ItemGroup>
@@ -123,14 +123,14 @@ Veya el ile ekleyerek proje başvurusu ekleme seçeneğiniz de bir `<ItemGroup>`
 
 [!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
 
-*NewTypesTests.csproj* dosyası şunları içerir:
+*Newtypestests. csproj* dosyası şunları içerir:
 
-* Başvuru paketi `Microsoft.NET.Test.Sdk`, altyapı test .NET
-* Başvuru paketi `xunit`, xUnit testi çerçevesi
-* Başvuru paketi `xunit.runner.visualstudio`, test Çalıştırıcısı
-* Proje başvurusu `NewTypes`, kodu test etmek için
+* .Net test altyapısına `Microsoft.NET.Test.Sdk`paket başvurusu
+* Paket başvurusu `xunit`, xUnit test çerçevesi
+* Test Çalıştırıcısı 'na `xunit.runner.visualstudio`paket başvurusu
+* Proje başvurusu `NewTypes`, sınanacak kod
 
-Adını değiştirmek *UnitTest1.cs* için *PetTests.cs* dosyasındaki kodu aşağıdakiyle değiştirin:
+*UnitTest1.cs* adını *PetTests.cs* olarak değiştirin ve dosyadaki kodu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -159,12 +159,12 @@ public class PetTests
 }
 ```
 
-İsteğe bağlı alıştırma: Eklediyseniz bir `Bird` verir türü daha önce bir `Tweet!` sahibine bir test yöntemine ekleyin *PetTests.cs* dosyası `BirdTalkToOwnerReturnsTweet`denetlemek için `TalkToOwner` yöntemi doğru çalıştığı `Bird` yazın.
+İsteğe bağlı alıştırma: `Bird` Sahibe bir `TalkToOwner` `BirdTalkToOwnerReturnsTweet` `Bird` daha önceden veren bir tür eklediyseniz, yöntemin tür için doğru çalışıp çalışmadığını denetlemek için PetTests.cs dosyasına bir test yöntemi ekleyin. `Tweet!`
 
 > [!NOTE]
-> Beklediğiniz ancak `expected` ve `actual` değerler eşit olan ilk onaylama `Assert.NotEqual` denetimini, bu değerler olduğunu belirtir *eşit değil*. Her zaman başlangıçta test mantığını denetlemek için başarısız bir test oluşturun. Testin başarısız olduğunu onayladıktan sonra onaylama test geçmesine izin verecek şekilde ayarlayın.
+> `expected` `Assert.NotEqual` Ve değerlerinin`actual` eşit olmasını bekleseniz de, Check ile bir ilk onaylama, bu değerlerin *eşit*olmadığını belirtir. Testin mantığını denetlemek için her zaman ilk olarak bir test oluşturun. Testin başarısız olduğunu doğruladıktan sonra, testi geçirmeye izin verecek şekilde ayarlayın.
 
-Tam proje yapısını gösterir:
+Aşağıda, tüm proje yapısı gösterilmektedir:
 
 ```
 /NewTypes
@@ -182,13 +182,13 @@ Tam proje yapısını gösterir:
       |__NewTypesTests.csproj
 ```
 
-Başlangıç *test/NewTypesTests* dizin. Test projesi ile geri [ `dotnet restore` ](../tools/dotnet-restore.md) komutu. Testler ile [ `dotnet test` ](../tools/dotnet-test.md) komutu. Bu komut, proje dosyasında belirtilen test Çalıştırıcısı başlatır.
+*Test/NewTypesTests* dizininde başlatın. Test projesini [`dotnet restore`](../tools/dotnet-restore.md) komutuyla geri yükleyin. [`dotnet test`](../tools/dotnet-test.md) Komutu ile testleri çalıştırın. Bu komut, proje dosyasında belirtilen Test Çalıştırıcısı 'nı başlatır.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Test başarısız olur ve konsolu, beklendiği gibi aşağıdaki çıkışı görüntüler:
+Beklenen şekilde test başarısız olur ve konsolu aşağıdaki çıktıyı görüntüler:
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -216,13 +216,13 @@ Test Run Failed.
 Test execution time: 1.7000 Seconds
 ```
 
-Testlerinizin onaylamaları değiştirme `Assert.NotEqual` için `Assert.Equal`:
+Testlerinizin `Assert.NotEqual` onaylamalarını şu şekilde `Assert.Equal`değiştirin:
 
 [!code-csharp[PetTests class](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
 
-Testleri yeniden çalıştırın `dotnet test` komutunu ve aşağıdaki çıktıyı alın:
+`dotnet test` Komutu ile testleri yeniden çalıştırın ve aşağıdaki çıktıyı alın:
 
-```
+```output
 Test run for c:\Users\ronpet\repos\samples\core\console-apps\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp2.1\NewTypesTests.dll(.NETCoreApp,Version=v2.1)
 Microsoft (R) Test Execution Command Line Tool Version 15.8.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -234,6 +234,6 @@ Test Run Successful.
 Test execution time: 1.6029 Seconds
 ```
 
-Geçiş testi. Evcil hayvan türleri yöntemleri, sahibi konuşurken doğru değerleri döndürür.
+Test geçişleri. Evcil hayvan türleri ' yöntemleri, sahibiyle konuşurken doğru değerleri döndürür.
 
-Düzenleme ve xUnit kullanarak projeleri test teknikleri öğrendiniz. Bunları kendi projelerinde uygulayarak bu teknikler ile ileri gidin. *İyi Kodlamalar!*
+XUnit kullanarak projeleri düzenleme ve test etme tekniklerini öğrendiniz. Bunları kendi projelerinize uygulayarak bu tekniklerle ileri gidin. *Kodlarım kutlu olsun!*

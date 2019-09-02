@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: acf5af755d6322f75a616005cc904d464564bc81
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915824"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203951"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Hizmetinden DataSet Kullanma
-, <xref:System.Data.DataSet> Internet üzerinden veri aktarımını kolaylaştırmak için kısmen bağlantısız bir tasarıma göre tasarlanmıştır. Veri kümesi, **veri KÜMESININ** içeriğini bir XML Web hizmetinden bir istemciye ve geriye doğru akışa almak için gereken ek bir kodlama olmadan XML Web hizmetlerinden bir giriş veya çıkış olarak belirtime için "serileştirilebilir" olur. **Veri kümesi** örtük olarak, DiffGram biçimi KULLANıLARAK bir XML akışına dönüştürülür, ağ üzerinden gönderilir ve ardından XML akışından alma ucunda bir **veri kümesi** olarak yeniden oluşturulur. Bu, XML Web hizmetlerini kullanarak ilişkisel verileri iletmek ve döndürmek için çok basit ve esnek bir yöntem sunar. DiffGram biçimi hakkında daha fazla bilgi için bkz. [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
+, <xref:System.Data.DataSet> Internet üzerinden veri aktarımını kolaylaştırmak için kısmen bağlantısız bir tasarıma göre tasarlanmıştır. Veri kümesi, **veri KÜMESININ** içeriğini bir XML Web hizmetinden bir istemciye ve geriye doğru akışa almak için gereken ek bir kodlama olmadan XML Web hizmetlerinden bir giriş veya çıkış olarak belirtime için "serileştirilebilir" olur. **Veri kümesi** örtük olarak, DiffGram biçimi KULLANıLARAK bir XML akışına dönüştürülür, ağ üzerinden gönderilir ve ardından XML akışından alma ucunda bir **veri kümesi** olarak yeniden oluşturulur. Bu, XML Web hizmetlerini kullanarak ilişkisel verileri iletmek ve döndürmek için çok basit ve esnek bir yöntem sunar. DiffGram biçimi hakkında daha fazla bilgi için bkz. [DiffGram](diffgrams.md).  
   
  Aşağıdaki örnek, ilişkisel verileri (değiştirilen veriler dahil) taşımak için **veri kümesini** kullanan bir XML Web hizmeti ve istemcisinin nasıl oluşturulacağını gösterir ve tüm güncelleştirmeleri özgün veri kaynağına geri çözümler.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "69915824"
     }  
     ```  
   
-     Tipik bir senaryoda, iyimser eşzamanlılık ihlallerini yakalamak için **UpdateCustomers** yöntemi yazılır. Kolaylık olması için örnek bunu içermez. İyimser eşzamanlılık hakkında daha fazla bilgi için bkz. [Iyimser eşzamanlılık](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
+     Tipik bir senaryoda, iyimser eşzamanlılık ihlallerini yakalamak için **UpdateCustomers** yöntemi yazılır. Kolaylık olması için örnek bunu içermez. İyimser eşzamanlılık hakkında daha fazla bilgi için bkz. [Iyimser eşzamanlılık](../optimistic-concurrency.md).  
   
 2. Bir XML Web hizmeti proxy 'si oluşturun.  
   
@@ -261,11 +261,11 @@ ms.locfileid: "69915824"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataAdapter’dan bir DataSet Doldurma](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [ADO.NET](../index.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [DataTables](datatables.md)
+- [DataAdapter’dan bir DataSet Doldurma](../populating-a-dataset-from-a-dataadapter.md)
+- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../updating-data-sources-with-dataadapters.md)
+- [DataAdapter Parametreleri](../dataadapter-parameters.md)
 - [Web Hizmetleri Açıklama Dili Aracı (wsdl. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

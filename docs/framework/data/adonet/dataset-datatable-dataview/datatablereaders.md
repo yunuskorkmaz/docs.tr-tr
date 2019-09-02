@@ -2,28 +2,28 @@
 title: DataTableReaders
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: a790335a25327563e3dab6093449345b99afd048
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ff7868b59c6fdc4e6c443be1b831accc84f36a6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607874"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203822"
 ---
 # <a name="datatablereaders"></a>DataTableReaders
-<xref:System.Data.DataTableReader> İçeriğini sunan bir <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> bir veya daha fazla salt okunur, salt iletme sonucu biçiminde ayarlar.  
+, <xref:System.Data.DataTableReader> Bir veya daha fazla salt <xref:System.Data.DataTable> okuma, <xref:System.Data.DataSet> yalnızca ileri bir sonuç kümesi biçiminde bir veya bir veya ' nin içeriğini gösterir.  
   
- Oluştururken bir **DataTableReader** gelen bir **DataTable**, ortaya çıkan **DataTableReader** nesne içeren bir sonuç aynı veri kümesini  **DataTable** uygulamayı, silindi olarak işaretlendi herhangi bir satır dışında oluşturulduğu öğesinden. Orijinal ile aynı sırada sütunlar görüntülenir **DataTable**.  
+ **DataTable**'Dan bir **DataTableReader** oluşturduğunuzda, sonuçta elde edilen **DataTableReader** nesnesi, oluşturulduğu **DataTable** ile aynı verilere sahip bir sonuç kümesi içerir, ancak şu şekilde işaretlenmiş satırlar hariç miyor. Sütunlar, özgün **DataTable**ile aynı sırada görünür.  
   
- A **DataTableReader** çağırarak oluşturulmuş olsa bile, birden çok sonuç kümesi içerebilir <xref:System.Data.DataSet.CreateDataReader%2A>. Sonuçları aynı sırada bulunan **DataTable** içinde **veri kümesi** nesnenin <xref:System.Data.DataSet.Tables%2A> koleksiyonu.  
+ **DataTableReader** , çağırarak <xref:System.Data.DataSet.CreateDataReader%2A>oluşturulduysa birden çok sonuç kümesi içerebilir. Sonuçlar, **veri kümesi** nesnesinin <xref:System.Data.DataSet.Tables%2A> koleksiyonundaki **DataTable** ile aynı sıralardır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataReader Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datareader.md)  
- Nasıl oluşturulacağı açıklanmaktadır bir **DataTableReader** nesne.  
+ [DataReader Oluşturma](creating-a-datareader.md)  
+ **DataTableReader** nesnesinin nasıl oluşturulduğunu açıklar.  
   
- [DataTable İçinde Gezinme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datatables.md)  
- Kullanımını açıklar **okuma** içeriğini taşımak için yöntemi bir **DataTableReader**.  
+ [DataTable İçinde Gezinme](navigating-datatables.md)  
+ **DataTableReader**içerikleri arasında gezinmek için **Read** yönteminin kullanımını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

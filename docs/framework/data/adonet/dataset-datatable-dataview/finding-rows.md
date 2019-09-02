@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880067"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203723"
 ---
 # <a name="finding-rows"></a>Satırları Bulma
-Satırları sıralama anahtar değerlerine göre kullanarak arayabilirsiniz <xref:System.Data.DataView.Find%2A> ve <xref:System.Data.DataView.FindRows%2A> yöntemlerinin <xref:System.Data.DataView>. Arama büyük/küçük harfe duyarlılık değeri **Bul** ve **FindRows** yöntemleri tarafından belirlenir **CaseSensitive** özelliği temel <xref:System.Data.DataTable>. Arama değerleri bir sonuç döndürmek için mevcut anahtar değerlerini sıralama tamamen eşleşmelidir.  
+<xref:System.Data.DataView.Find%2A> Ve<xref:System.Data.DataView.FindRows%2A> yöntemlerini<xref:System.Data.DataView>kullanarak sıralama anahtarı değerlerine göre satırları arayabilirsiniz. **Find** ve **FindRows** metotlarındaki arama değerlerinin büyük/küçük harf duyarlılığı, temeldeki <xref:System.Data.DataTable>öğesinin **CaseSensitive** özelliğine göre belirlenir. Bir sonuç döndürmek için, arama değerleri, mevcut sıralama anahtarı değerleriyle eşleşmelidir.  
   
- **Bul** yöntemi dizini bir tamsayı döndürür <xref:System.Data.DataRowView> arama ölçütleriyle eşleşen. Birden fazla satır, yalnızca ilk eşleşen dizinine arama ölçütleri eşleşiyorsa **DataRowView** döndürülür. Herhangi bir eşleşme bulunursa **Bul** -1 döndürür.  
+ **Find** yöntemi, arama ölçütleriyle eşleşen öğesinin <xref:System.Data.DataRowView> diziniyle bir tamsayı döndürür. Arama ölçütleriyle eşleşen birden fazla satır varsa, yalnızca ilk eşleşen **DataRowView** 'ın dizini döndürülür. Eşleşme bulunmazsa, **bul** -1 döndürür.  
   
- Birden çok satır eşleşen arama sonuçları döndürmek için **FindRows** yöntemi. **FindRows** yalnızca gibi çalışır **Bul** yöntemi, BT'nin döndürür dışında bir **DataRowView** tüm eşleşen satırları başvuran bir dizi **DataView**. Herhangi bir eşleşme bulunursa **DataRowView** dizi, boş olacaktır.  
+ Birden çok satırla eşleşen arama sonuçları döndürmek için **FindRows** yöntemini kullanın. **FindRows** , **Find** yöntemi gibi çalışarak, **DataView**Içindeki tüm eşleşen satırlara başvuran bir **DataRowView** dizisi döndürür. Hiçbir eşleşme bulunmazsa, **DataRowView** dizisi boş olur.  
   
- Kullanılacak **Bul** veya **FindRows** sıralama belirtmelisiniz yöntemleri ayarlayarak ya da sipariş **ApplyDefaultSort** için **true** kullanarak veya **Sıralama** özelliği. Sıralama düzeni belirtilmediği takdirde, bir özel durum oluşturulur.  
+ **Find** veya **FindRows** yöntemlerini kullanmak için, **ApplyDefaultSort** ' i **true** olarak ayarlayarak ya da **Sort** özelliğini kullanarak bir sıralama düzeni belirtmeniz gerekir. Sıralama düzeni belirtilmemişse, bir özel durum oluşturulur.  
   
- **Bul** ve **FindRows** yöntemleri bir dizi değere uzunluğunu sıralama düzeninde sütun sayısı ile eşleşen girdi olarak alır. Tek bir sütun üzerinde bir sıralama söz konusu olduğunda, tek bir değer geçirebilirsiniz. Birden çok sütun içeren sıralama düzenleri için bir nesne dizisi geçirin. Birden çok sütunu sıralama için belirtilen sütunların sırasını nesne dizideki değerlerin eşleşmesi gerektiğini unutmayın **sıralama** özelliği **DataView**.  
+ **Find** ve **FindRows** yöntemleri, uzunluğu sıralama düzeninde olan sütun sayısıyla eşleşen girdi olarak bir dizi değer alır. Tek bir sütunda sıralama söz konusu olduğunda tek bir değer geçirebilirsiniz. Birden çok sütun içeren sıralama düzenleri için bir nesne dizisi geçirirsiniz. Birden çok sütunda sıralama için, nesne dizisindeki değerlerin **DataView**'ın **Sort** özelliğinde belirtilen sütunların sırasıyla eşleşmesi gerektiğini unutmayın.  
   
- Aşağıdaki örnekte gösterildiği kod **Bul** karşı çağrılan yöntemi bir **DataView** ile bir tek sütun sıralama düzeni.  
+ Aşağıdaki kod örneğinde, tek sütunlu sıralama düzeninde bir **DataView** Ile çağrılan **Find** yöntemi gösterilmektedir.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Varsa, **sıralama** özelliği, birden çok sütun belirtir, her sütun için arama değerlerine sahip bir nesne dizisi tarafından belirtilen sırada geçmelidir **sıralama** özelliği, aşağıdaki kod örneğinde olduğu gibi.  
+ **Sıralama** özelliği birden çok sütun belirtiyorsa, her bir sütunun arama değerleriyle birlikte, aşağıdaki kod örneğinde olduğu gibi **sıralama** özelliği tarafından belirtilen sırada bir nesne dizisi geçirmeniz gerekir.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,5 +97,5 @@ else
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

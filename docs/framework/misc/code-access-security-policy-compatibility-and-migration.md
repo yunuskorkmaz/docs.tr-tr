@@ -7,46 +7,46 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 9563dae9ba5d144300549e7f33f5f5a9feb1d410
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690287"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205640"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Kod Erişim Güvenlik İlkesi Uyumluluğu ve Geçiş
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-Kod erişimi güvenliği (CAS) ilkesi kısmı .NET Framework 4'te eski haline getirilmiştir. Geçersiz ilke türleri ve üyeleri çağırırsanız sonuç olarak, derleme uyarıları ve çalışma zamanı özel durumları karşılaşabileceğiniz [açıkça](#explicit_use) veya [örtük olarak](#implicit_use) (aracılığıyla, diğer türler ve Üyeler).
+Kod erişim güvenliği (CAS) ilke bölümü .NET Framework 4 ' te kullanımdan kaldırılmıştır. Sonuç olarak, eski ilke türlerini ve üyelerini [açıkça](#explicit_use) veya [örtük](#implicit_use) olarak çağırırsanız (diğer türler ve Üyeler aracılığıyla) derleme uyarıları ve çalışma zamanı özel durumları ile karşılaşabilirsiniz.
 
-Ya da uyarıları ve hataları önleyebilirsiniz:
+Uyarıları ve hataları aşağıdakilerden birini yaparak önleyebilirsiniz:
 
-- [Geçiş](#migration) eski çağrıları için .NET Framework 4 değiştirmeler için.
+- Kullanılmayan çağrılar için .NET Framework 4 yerine [geçme](#migration) .
 
    \- veya -
 
-- Kullanarak [ \<NetFx40_LegacySecurityPolicy > yapılandırma öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) eski CAS ilkesi davranışı kabul etme.
+- Eski CAS ilkesi davranışını kabul etmek için [ NetFx40_LegacySecurityPolicy>yapılandırmaöğesinikullanma.\<](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)
 
 Bu konu aşağıdaki bölümleri içermektedir:
 
-- [Açık kullanın](#explicit_use)
+- [Açık kullanım](#explicit_use)
 
-- [Örtük kullanım](#implicit_use)
+- [Örtülü kullanım](#implicit_use)
 
 - [Hatalar ve Uyarılar](#errors_and_warnings)
 
-- [Geçişi: Eski çağrıları için değiştirme](#migration)
+- [Geçiş Eski çağrılar için değiştirme](#migration)
 
-- [Uyumluluk: Eski CAS ilkesini seçeneğiyle](#compatibility)
+- [Kları CAS Ilkesi eski seçeneğini kullanma](#compatibility)
 
 <a name="explicit_use"></a>
 
-## <a name="explicit-use"></a>Açık kullanın
+## <a name="explicit-use"></a>Açık kullanım
 
-Korumalı alan için CAS ilkesini doğrudan güvenlik ilkesini değiştirmek veya üyeleri artık kullanılmayan ve varsayılan olarak hataya neden.
+Güvenlik ilkesini doğrudan işleyen veya korumalı alan için CAS ilkesi gerektiren Üyeler artık kullanılmıyor ve varsayılan olarak hata üretecektir.
 
-Bu örnekleri şunlardır:
+Bunlara şunlar örnek verilmiştir:
 
 - <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType>
 
@@ -70,11 +70,11 @@ Bu örnekleri şunlardır:
 
 <a name="implicit_use"></a>
 
-## <a name="implicit-use"></a>Örtük kullanım
+## <a name="implicit-use"></a>Örtülü kullanım
 
-Birkaç derleme yükleme üretim hataları örtük kendi CAS ilkesini kullanımı nedeniyle aşırı. Bu aşırı yüklemeler ele bir <xref:System.Security.Policy.Evidence> CAS ilkesini çözmek ve izin sağlamak için kullanılan parametre kümesi için bir derleme verin.
+Çeşitli derleme yükleme aşırı yüklemeleri, CAS ilkesinin örtük kullanımları nedeniyle hata üretir. Bu aşırı yüklemeler, <xref:System.Security.Policy.Evidence> CAS ilkesini çözümlemek için kullanılan bir parametre alır ve bir derleme için izin verme kümesi sağlar.
 
-Bazı örnekler aşağıda verilmiştir. Alan geçersiz aşırı olanlardır <xref:System.Security.Policy.Evidence> bir parametre olarak:
+Bazı örnekler aşağıda verilmiştir. Kullanılmayan aşırı yüklemeler parametre olarak ele <xref:System.Security.Policy.Evidence> alınır:
 
 - <xref:System.Activator.CreateInstanceFrom%2A?displayProperty=nameWithType>
 
@@ -98,23 +98,23 @@ Bazı örnekler aşağıda verilmiştir. Alan geçersiz aşırı olanlardır <xr
 
 ## <a name="errors-and-warnings"></a>Hatalar ve Uyarılar
 
-Kullanıldıklarında aşağıdaki hata iletilerinden artık kullanılmayan türler ve üyeler oluşturur. Unutmayın <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> türün kendisine eski değil.
+Kullanılmayan türler ve Üyeler, kullanıldıkları zaman aşağıdaki hata iletilerini oluşturur. <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> Türün kendisinin eski olmadığına unutmayın.
 
 Derleme zamanı uyarısı:
 
 `warning CS0618: '<API Name>' is obsolete: 'This method is obsolete and will be removed in a future release of the .NET Framework. Please use <suggested alternate API>. See <link> for more information.'`
 
-Çalışma zamanı özel durum:
+Çalışma zamanı özel durumu:
 
 <xref:System.NotSupportedException>: `This method uses CAS policy, which has been obsoleted by the .NET Framework. In order to enable CAS policy for compatibility reasons, please use the <NetFx40_LegacySecurityPolicy> configuration switch. Please see <link> for more information.`
 
 <a name="migration"></a>
 
-## <a name="migration-replacement-for-obsolete-calls"></a>Geçişi: Eski çağrıları için değiştirme
+## <a name="migration-replacement-for-obsolete-calls"></a>Geçiş Eski çağrılar için değiştirme
 
-### <a name="determining-an-assemblys-trust-level"></a>Bir derlemenin güven düzeyine belirleme
+### <a name="determining-an-assemblys-trust-level"></a>Derlemenin güven düzeyini belirleme
 
-CAS ilkesini genellikle bir derlemenin belirlemek için kullanılan veya uygulama etki alanının izin kümesi vermek ya da güven düzeyi. .NET Framework 4 güvenlik ilkesi çözmek zorunda değildir aşağıdaki kullanışlı özellikler sunar:
+CAS ilkesi, genellikle bir derlemenin veya uygulama etki alanının izin verme kümesini veya güven düzeyini belirlemede kullanılır. .NET Framework 4, güvenlik ilkesini çözümlemek zorunda olmayan aşağıdaki yararlı özellikleri sunar:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,26 +126,26 @@ CAS ilkesini genellikle bir derlemenin belirlemek için kullanılan veya uygulam
 
 ### <a name="application-domain-sandboxing"></a>Uygulama etki alanı korumalı alana alma
 
-<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Yöntemi, genellikle uygulama etki alanında derlemeleri korumalı alana alma için kullanılır. .NET Framework 4 kullanmak için olmayan üyeleri ortaya koyar <xref:System.Security.Policy.PolicyLevel> bu amaç için. Daha fazla bilgi için [nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> Yöntemi genellikle bir uygulama etki alanındaki derlemeler için korumalı alana alma kullanılır. .NET Framework 4, bu amaçla kullanılması <xref:System.Security.Policy.PolicyLevel> gereken üyeleri kullanıma sunar. Daha fazla bilgi için [nasıl yapılır: Bir korumalı alanda](how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.
 
-### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Kısmen güvenli ya da makul bir izin için kümesinin belirleme güvenilen kod
+### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Kısmen güvenilen kod için güvenli veya makul bir Izin kümesi belirleme
 
-Ana bilgisayar genellikle barındırılan bir korumalı alana alma kodu için uygun izinler belirlemeniz gerekir. Önce .NET Framework 4, CAS ilkesini ile bunu yapmanın bir yolu sağlanan <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> yöntemi. Bunun yerine, .NET Framework 4 sağlar <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> yöntemi için sağlanan kanıt kümesi güvenli, standart bir izin verir.
+Ana bilgisayarların, genellikle korumalı alana alma barındırılan kodu için uygun izinleri belirlemesi gerekir. .NET Framework 4 ' den önce, CAS ilkesi <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> yöntemi ile bunu yapmak için bir yol sağladı. Bunun yerine, .NET Framework 4, sağlanan kanıt <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> için güvenli, standart bir izin kümesi döndüren yöntemini sağlar.
 
-### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Korumalı alana alma olmayan senaryolar: Derleme yüklerini için aşırı yüklemeleri
+### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Korumalı alana alma olmayan senaryolar: Derleme yükleri için aşırı yüklemeler
 
-Aksi takdirde derleme korumalı alana alma yerine mevcut olmayan parametreleri kullanmak bir derleme yük aşırı kullanılmasının nedeni olabilir. .NET Framework 4 ile başlayarak, derleme yükleme gerektirmez aşırı bir <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> bir bu gibi bir durumda parametre olarak nesne <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, bu senaryoyu etkinleştirmek.
+Derleme yükü aşırı yüklemesi kullanmanın nedeni, derleme korumalı alana alma yerine, aksi durumda kullanılamayan parametreleri kullanmak olabilir. .NET Framework 4 ' den başlayarak, bir parametre olarak bir <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> nesne gerektirmeyen derleme yükü aşırı yüklemeleri, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>Örneğin, bu senaryoyu etkinleştirin.
 
-Korumalı alan için bir derleme istiyorsanız kullanın <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> aşırı yükleme.
+Bir derlemenin korumalı alanını istiyorsanız, <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> aşırı yüklemeyi kullanın.
 
 <a name="compatibility"></a>
 
-## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Uyumluluk: Eski CAS ilkesini seçeneğiyle
+## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Kları CAS Ilkesi eski seçeneğini kullanma
 
-[ \<NetFx40_LegacySecurityPolicy > yapılandırma öğesi](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) bir işlem veya kitaplık eski CAS ilkesini kullanan belirtmenize olanak tanır. Bu öğe etkinleştirdiğinizde, ilke ve kanıt aşırı framework'ün önceki sürümlerinde olduğu gibi çalışır.
+NetFx40_LegacySecurityPolicy > Configuration öğesi bir işlemin veya kitaplığın eski CAS ilkesini kullanmasını belirtmenize olanak tanır. [ \<](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) Bu öğeyi etkinleştirdiğinizde, ilke ve kanıt aşırı yüklemeleri Framework 'ün önceki sürümlerinde olduğu gibi çalışacaktır.
 
 > [!NOTE]
-> Bir çalışma zamanı sürümü için CAS ilkesini değiştirme başka bir sürümü CAS ilkesini etkilemez bu nedenle CA ilkesi davranışını bir çalışma zamanı sürümü temelinde belirtilir.
+> CAS ilkesi davranışı çalışma zamanı sürümü temelinde belirtilmiştir, bu nedenle bir çalışma zamanı sürümü için CAS ilkesini değiştirmek, başka bir sürümün CAS ilkesini etkilemez.
 
 ```xml
 <configuration>
@@ -157,5 +157,5 @@ Korumalı alan için bir derleme istiyorsanız kullanın <xref:System.AppDomain.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Korumalı alanda kısmen güvenilen kodu çalıştırma](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Nasıl yapılır: Bir korumalı alanda kısmen güvenilen kod Çalıştır](how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Güvenli Kodlama Yönergeleri](../../standard/security/secure-coding-guidelines.md)

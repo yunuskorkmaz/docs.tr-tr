@@ -1,13 +1,13 @@
 ---
-title: DotNet Paketi komutu
-description: Dotnet paketi komut, .NET Core projesi için NuGet paketlerini oluşturur.
+title: DotNet paketi komutu
+description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 12/04/2018
-ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c5c00f3bb06e5bc5579c0d3d6bdd39fbdf3db656
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876038"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202848"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -15,21 +15,21 @@ ms.locfileid: "65876038"
 
 ## <a name="name"></a>Ad
 
-`dotnet pack` -Kod bir NuGet paketine paketleri.
+`dotnet pack`-Kodu bir NuGet paketine paketler.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
-```
+```console
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -39,15 +39,15 @@ dotnet pack [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet pack` Komut projeyi derler ve NuGet paketleri oluşturur. Bu komutun sonucuna ilişkin bir NuGet paketidir. Varsa `--include-symbols` seçeneği varsa, hata ayıklama sembolleri içeren başka bir paket oluşturulur.
+`dotnet pack` Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir. `--include-symbols` Seçenek varsa, hata ayıklama sembollerini içeren başka bir paket oluşturulur.
 
-Paketlenmiş proje, NuGet bağımlılıklarını eklenir *.nuspec* düzgün bulunmaları dosyası, çözümlenen paketi yüklendiğinde. Projeden projeye başvurular projesi içinde paketlendi değildir. Şu anda projeden projeye bağımlılıkları varsa, her proje bir paket olmalıdır.
+Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
-Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı engellemek istiyorsanız, geçmesi `--no-build` seçeneği. Bu seçenek genellikle kod daha önce oluşturulmuş bildiğiniz sürekli tümleştirme (CI) derleme senaryolarda yararlıdır.
+Varsayılan olarak, `dotnet pack` önce projeyi oluşturur. Bu davranışı önlemek istiyorsanız, `--no-build` seçeneğini geçirin. Bu seçenek genellikle kodun daha önce oluşturulduğunu bildiğiniz sürekli tümleştirme (CI) derleme senaryolarında yararlıdır.
 
-MSBuild özellikleri sağlayabilir `dotnet pack` paketleme işlemi için komutu. Daha fazla bilgi için [NuGet meta veri özelliklerini](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölüm birkaç farklı senaryolar için MSBuild -p anahtar kullanmayı gösterir.
+Paketleme işlemi için `dotnet pack` komutuna MSBuild özellikleri sağlayabilirsiniz. Daha fazla bilgi için bkz. [NuGet meta veri özellikleri](csproj.md#nuget-metadata-properties) ve [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference). [Örnekler](#examples) bölümü, MSBuild-p anahtarının birkaç farklı senaryo için nasıl kullanılacağını gösterir.
 
-Web projeleri, varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için aşağıdaki özelliği ekleyin, *.csproj* dosyası:
+Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı geçersiz kılmak için, *. csproj* dosyanıza aşağıdaki özelliği ekleyin:
 
 ```xml
 <PropertyGroup>
@@ -61,155 +61,155 @@ Web projeleri, varsayılan olarak packable değildir. Varsayılan davranışı g
 
 * **`PROJECT`**
 
-  Paketi için proje. Ya da bir yolu olan bir [csproj dosyasını](csproj.md) veya bir dizine. Belirtilmezse, geçerli dizin için varsayılan olarak.
+  Paketedilecek proje. Bu, [csproj dosyasının](csproj.md) veya bir dizinin yoludur. Belirtilmezse, varsayılan olarak geçerli dizini alır.
 
 ## <a name="options"></a>Seçenekler
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
 
 * **`--force`**
 
-  Son geri yükleme başarılı olduysa bile çözülmesi için tüm bağımlılıkların zorlar. Bu bayrak belirten aynıdır silme *project.assets.json* dosya.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
 
 * **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
 * **`--include-source`**
 
-  NuGet paketinin kaynak dosyaları içerir. Kaynak dosyaların dahil `src` klasördeki `nupkg`.
+  NuGet paketindeki kaynak dosyalarını içerir. Kaynak dosyaları `src` `nupkg`içindeki klasörüne dahil edilmiştir.
 
 * **`--include-symbols`**
 
-  Sembolleri oluşturur `nupkg`.
+  Sembolleri `nupkg`oluşturur.
 
 * **`--no-build`**
 
-  Paketleme önce projenizi değil. Ayrıca örtülü olarak ayarlar `--no-restore` bayrağı.
+  Paketleme öncesinde projeyi oluşturmaz. Ayrıca `--no-restore` bayrağı örtülü olarak ayarlar.
 
 * **`--no-dependencies`**
 
-  Projeden projeye başvurular yoksayar ve yalnızca kök proje geri yükler.
+  Projeden projeye başvuruları yoksayar ve yalnızca kök projeyi geri yükler.
 
 * **`--no-restore`**
 
-  Örtük bir geri yükleme komutu çalıştırırken yürütülmez.
+  Komutu çalıştırılırken örtük geri yükleme yürütülmez.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Yerleşik paketler belirtilen dizine yerleştirir.
+  Oluşturulan paketleri belirtilen dizine koyar.
 
 * **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Paketleri geri yüklemek için hedef çalışma zamanı belirtir. Çalışma zamanı tanımlayıcılarının (RID'ler) bir listesi için bkz. [RID Kataloğu](../rid-catalog.md).
+  Paketlerinin geri yükleneceği hedef çalışma zamanını belirtir. Çalışma zamanı tanımlayıcıları (RID 'Ler) listesi için bkz. [RID kataloğu](../rid-catalog.md).
 
 * **`-s|--serviceable`**
 
-  Pakette tutulabilmesi bayrağını ayarlar. Daha fazla bilgi için [.NET Blog: .NET 4.5.1 destekleyen Microsoft güvenlik güncelleştirmeleri için .NET NuGet kitaplıklarını](https://aka.ms/nupkgservicing).
+  Paketteki hizmet verebilir bayrağını ayarlar. Daha fazla bilgi için bkz. [.net blogu: .NET 4.5.1, .net NuGet kitaplıkları Için Microsoft güvenlik güncelleştirmelerini destekler](https://aka.ms/nupkgservicing).
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Değerini tanımlayan `$(VersionSuffix)` projesinde MSBuild özelliği.
+  Projedeki `$(VersionSuffix)` MSBuild özelliğinin değerini tanımlar.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 * **`-c|--configuration {Debug|Release}`**
 
-  Derleme yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
+  Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` şeklindedir.
 
 * **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
 * **`--include-source`**
 
-  NuGet paketinin kaynak dosyaları içerir. Kaynak dosyaların dahil `src` klasördeki `nupkg`.
+  NuGet paketindeki kaynak dosyalarını içerir. Kaynak dosyaları `src` `nupkg`içindeki klasörüne dahil edilmiştir.
 
 * **`--include-symbols`**
 
-  Sembolleri oluşturur `nupkg`.
+  Sembolleri `nupkg`oluşturur.
 
 * **`--no-build`**
 
-  Paketleme önce projenizi değil.
+  Paketleme öncesinde projeyi oluşturmaz.
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Yerleşik paketler belirtilen dizine yerleştirir.
+  Oluşturulan paketleri belirtilen dizine koyar.
 
 * **`-s|--serviceable`**
 
-  Pakette tutulabilmesi bayrağını ayarlar. Daha fazla bilgi için [.NET Blog: .NET 4.5.1 destekleyen Microsoft güvenlik güncelleştirmeleri için .NET NuGet kitaplıklarını](https://aka.ms/nupkgservicing).
+  Paketteki hizmet verebilir bayrağını ayarlar. Daha fazla bilgi için bkz. [.net blogu: .NET 4.5.1, .net NuGet kitaplıkları Için Microsoft güvenlik güncelleştirmelerini destekler](https://aka.ms/nupkgservicing).
 
 * **`--version-suffix <VERSION_SUFFIX>`**
 
-  Değerini tanımlayan `$(VersionSuffix)` projesinde MSBuild özelliği.
+  Projedeki `$(VersionSuffix)` MSBuild özelliğinin değerini tanımlar.
 
 * **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, ve `diag[nostic]`.
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]`
 
 ---
 
 ## <a name="examples"></a>Örnekler
 
-* Geçerli dizindeki proje paketi:
+* Projeyi geçerli dizinde paketleme:
 
   ```console
   dotnet pack
   ```
 
-* Paketi `app1` proje:
+* `app1` Projeyi paketleme:
 
   ```console
   dotnet pack ~/projects/app1/project.csproj
   ```
 
-* Geçerli dizinde proje pack ve sonuçta elde edilen paketler halinde yerleştirin `nupkgs` klasörü:
+* Projeyi geçerli dizinde paketedin ve elde edilen paketleri `nupkgs` klasörüne yerleştirin:
 
   ```console
   dotnet pack --output nupkgs
   ```
 
-* Geçerli dizinde içinde proje pack `nupkgs` klasörü ve derleme adımı atla:
+* Geçerli dizindeki `nupkgs` projeyi klasöre paketlayın ve derleme adımını atlayın:
 
   ```console
   dotnet pack --no-build --output nupkgs
   ```
 
-* Projeyle Sürüm soneki olarak yapılandırılmış `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` içinde *.csproj* dosya, geçerli proje pack ve elde edilen paket sürümü ile belirtilen sonek güncelleştirin:
+* Projenin sürüm soneki `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` *. csproj* dosyasında olarak yapılandırıldığında, geçerli projeyi paketleyin ve elde edilen paket sürümünü verilen sonek ile güncelleştirin:
 
   ```console
   dotnet pack --version-suffix "ci-1234"
   ```
 
-* Paket sürümü kümesine `2.1.0` ile `PackageVersion` MSBuild özelliği:
+* Paket sürümünü `PackageVersion` MSBuild özelliği ile `2.1.0` olarak ayarlayın:
 
   ```console
   dotnet pack -p:PackageVersion=2.1.0
   ```
 
-* Belirli bir proje pack [hedef Framework'ü](../../standard/frameworks.md):
+* Projeyi belirli bir [hedef çerçeve](../../standard/frameworks.md)için paketleme:
 
   ```console
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-* Proje paketi ve belirli bir çalışma zamanı (Windows 10) geri yükleme işlemi için (.NET Core SDK 2.0 ve sonraki sürümler) kullanın:
+* Projeyi paketleme ve geri yükleme işlemi için belirli bir çalışma zamanı (Windows 10) kullanın (.NET Core SDK 2,0 ve sonraki sürümler):
 
   ```console
   dotnet pack --runtime win10-x64
   ```
 
-* Project kullanarak paketi bir [.nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
+* Bir [. nuspec dosyası](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)kullanarak projeyi paketleme:
 
   ```console
   dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget

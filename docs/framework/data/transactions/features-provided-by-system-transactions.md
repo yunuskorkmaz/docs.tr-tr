@@ -2,37 +2,37 @@
 title: System.Transactions Tarafından Sağlanan Özellikler
 ms.date: 03/30/2017
 ms.assetid: e458cef9-63b5-4401-b448-1536dcd9d9e5
-ms.openlocfilehash: 75277090652cd439d3466a307790f4b918ddb090
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3ef924edf34ae19be9eace85aaee5340025de7d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645712"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205967"
 ---
 # <a name="features-provided-by-systemtransactions"></a>System.Transactions Tarafından Sağlanan Özellikler
-Bu bölümde tarafından sağlanan özellikleri nasıl kullanabileceğiniz açıklanmaktadır <xref:System.Transactions> kendi işlem uygulama ve Kaynak Yöneticisi yazmak için ad alanı. Özellikle, bu bölüm, oluşturma ve bir işlemde (yerel veya dağıtılmış) bir veya birden fazla katılımcıları ile katılmak kapsar.  
+Bu bölümde, <xref:System.Transactions> kendi işlem uygulamanızı ve Resource Manager 'ı yazmak için ad alanı tarafından sunulan özellikleri nasıl kullanabileceğiniz açıklanmaktadır. Özellikle, bu bölüm bir veya birden çok katılımcı ile bir işlem (yerel veya dağıtılmış) oluşturmayı ve katılmayı ele alır.  
   
-## <a name="overview-of-systemtransactions"></a>System.Transactions genel bakış  
- Sınıfları tarafından sunulan altyapıyı <xref:System.Transactions> ad alanı yaptığı işlem programlama basit ve etkili SQL Server, ADO.NET, Message Queuing (MSMQ) ve Microsoft Dağıtılmış işlem tarafından başlatılan işlemleri destekleyerek Düzenleyicisi (MSDTC). <xref:System.Transactions> Ad alanı, temel hem bir açık bir programlama modeli sağlar <xref:System.Transactions.Transaction> sınıfı, aynı zamanda örtük bir programlama modeli kullanarak <xref:System.Transactions.TransactionScope> içinde işlemleri otomatik olarak yönetilir altyapısı tarafından sınıfı. Bu iki modeli kullanarak bir işlem uygulama oluşturma hakkında daha fazla bilgi için bkz. [bir işlem uygulama yazma](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).  
+## <a name="overview-of-systemtransactions"></a>System. Transactions 'a genel bakış  
+ <xref:System.Transactions> Ad alanındaki sınıflar tarafından sunulan altyapı, SQL Server, ADO.net, Message Queuing (MSMQ) ve Microsoft Dağıtılmış işleminde başlatılan işlemleri destekleyerek, işlem programlamanın basit ve etkili olmasını sağlar. Düzenleyici (MSDTC). Ad alanı, <xref:System.Transactions.Transaction> sınıfı kullanan bir açık programlama modeli ve ayrıca, işlem altyapısı tarafından otomatik olarak yönetilen <xref:System.Transactions.TransactionScope> sınıfı kullanarak örtülü programlama modeli sağlar. <xref:System.Transactions> Bu iki modeli kullanarak bir işlem uygulaması oluşturma hakkında daha fazla bilgi için bkz. [Işlem uygulaması yazma](writing-a-transactional-application.md).  
   
- <xref:System.Transactions> Ad alanı türleri için bir kaynak yöneticisi uygulamak de sağlar. İşlem ve iş hareket yöneticisi ile işbirliği yaparak kararlılık ve yalıtım uygulama sağlamak için kullanılan kalıcı veya geçici Veri Kaynağı Yöneticisi yönetir. Tarafından sağlanan işlem yöneticisi <xref:System.Transactions> birden çok geçici kaynakları veya tek bir kalıcı kaynağı içeren hareketleri altyapısını destekler. Kaynak Yöneticisi uygulama ile ilgili daha fazla bilgi için bkz: [Kaynak Yöneticisi uygulama](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md).  
+ <xref:System.Transactions> Ad alanı türleri için bir kaynak yöneticisi uygulamak de sağlar. Kaynak Yöneticisi bir işlemde kullanılan dayanıklı veya geçici verileri yönetir ve uygulamayı bir kararlılık ve yalıtıma garantisi sağlamak için işlem yöneticisiyle birlikte çalışır. <xref:System.Transactions> Altyapı tarafından sunulan işlem yöneticisi birden çok geçici kaynak veya tek bir dayanıklı kaynak içeren işlemleri destekler. Kaynak Yöneticisi uygulama hakkında daha fazla bilgi için bkz. [uygulama kaynak yöneticisi](implementing-a-resource-manager.md).  
   
- İşlem Yöneticisi DTC gibi bir disk tabanlı hareket yöneticisi ile bir ek kalıcı Kaynak Yöneticisi ile bir işlem kendisini kaydeder olduğunda eşgüdümünü sağlayarak dağıtılmış işlemler için yerel işlemler de saydam bir şekilde iletir. Anahtar iki yolu vardır, <xref:System.Transactions> Gelişmiş performans altyapı sağlar.  
+ İşlem Yöneticisi ayrıca, ek bir dayanıklı Kaynak Yöneticisi bir işlemle kendisini listelediğinden, DTC gibi disk tabanlı bir işlem yöneticisiyle koordine ederek, yerel işlemleri dağıtılmış işlemlere da saydam şekilde ilerletir. <xref:System.Transactions> Altyapının gelişmiş performans sağladığı iki anahtar yolu vardır.  
   
-- Sağlar dinamik yükseltme <xref:System.Transactions> altyapı bir işlemde birden çok dağıtılmış kaynaklara yayıldığında MSDTC yalnızca ilgilenir. Dinamik yükseltme hakkında daha fazla bilgi için. bkz: [işlem yönetim yükseltme](../../../../docs/framework/data/transactions/transaction-management-escalation.md) konu.  
+- Bir işlem birden çok dağıtılmış kaynağa yayıldığında <xref:System.Transactions> altyapının yalnızca MSDTC 'yi almasını sağlayan dinamik yükseltme. Dinamik yükseltme hakkında daha fazla bilgi için. [Işlem yönetimi yükseltme](transaction-management-escalation.md) konusuna bakın.  
   
-- İşlem sırasında katılan yalnızca varlık ise işlem sahipliği veritabanı gibi bir kaynak veren promotable listeler. Gerekirse, <xref:System.Transactions> altyapı yine de yönetim MSDTC hareketin İlerlet. Bu, daha fazla MSDTC kullanma olasılığını azaltır. Promotable liste kapsamdaki konudaki derinliği[tek aşamalı işleme ve yükseltilebilir tek aşamalı bildirim kullanarak en iyi duruma getirme](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
+- Bir veritabanı gibi bir kaynağın, işleme katılan tek varlıktır durumunda işlemin sahipliğini almasına izin veren promotable, kayıtlar. Daha sonra, gerekirse, <xref:System.Transactions> altyapı işlemin yönetimini MSDTC 'ye de gönderebilir. Bu, daha fazla MSDTC kullanma olasılığını azaltır. Promotable[kaydı, tek aşamalı işleme ve promotable tek aşamalı bildirimi kullanılarak](optimization-spc-and-promotable-spn.md)konu iyileştirmede derinlemesine anlatılacaktır.  
   
- <xref:System.Transactions> AllowPartiallyTrustedCallers (APTCA), DistributedTransactionPermission(DTP) ve kısıtlamak tam güven - erişim kaynak türleri için onu kullanıma sunan - ad alanı, üç güven düzeyleri tanımlar. Çeşitli hakkında daha fazla bilgi için güven düzeyleri bkz [güvenlik güven düzeyleri kaynakları erişme](../../../../docs/framework/data/transactions/security-trust-levels-in-accessing-resources.md).  
+ Ad <xref:System.Transactions> alanı, sunduğu kaynak türlerine erişimi kısıtlayan, üç güven düzeyi olan allowpartiallytrustedçağıranı (aptca), DistributedTransactionPermission (DTP) ve tam güven düzeyini tanımlar. Çeşitli güven düzeyleri hakkında daha fazla bilgi için bkz. [kaynaklara erişim Içindeki güvenlik güven düzeyleri](security-trust-levels-in-accessing-resources.md).  
   
 ## <a name="in-this-section"></a>Bu bölümde  
   
-### <a name="writing-a-transactional-application"></a>Bir işlem uygulama yazma  
- <xref:System.Transactions> Ad alanı, işlem uygulamaları oluşturmak için iki modeli sağlar. [İşlem kapsamı kullanarak örtük işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) açıklar nasıl <xref:System.Transactions> ad alanı destekler kullanarak örtük işlemleri oluşturma <xref:System.Transactions.TransactionScope> sınıfı.  
+### <a name="writing-a-transactional-application"></a>Işlem uygulaması yazma  
+ Ad <xref:System.Transactions> alanı, işlem uygulamaları oluşturmak için iki model sağlar. [İşlem kapsamını kullanarak örtük bir işlem uygulamak](implementing-an-implicit-transaction-using-transaction-scope.md) , <xref:System.Transactions> ad alanının <xref:System.Transactions.TransactionScope> sınıfını kullanarak örtük işlemler oluşturmayı nasıl desteklediğini açıklar.  
   
- [CommittableTransaction kullanarak belirtik işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md) açıklar nasıl <xref:System.Transactions> ad alanı destekler kullanarak açık işlemleri oluşturma <xref:System.Transactions.CommittableTransaction> sınıfı.  
+ [CommittableTransaction kullanılarak açık bir işlem uygulamak](implementing-an-explicit-transaction-using-committabletransaction.md) , <xref:System.Transactions> ad alanının <xref:System.Transactions.CommittableTransaction> sınıfı kullanılarak açık işlemler oluşturmayı nasıl desteklediğini açıklar.  
   
- Bir işlem uygulama yazma kapsayan ek için bkz: [bir işlem uygulama yazma](../../../../docs/framework/data/transactions/writing-a-transactional-application.md).  
+ İşlemsel uygulama yazmayı kapsayan ek konular için bkz. [bir Işlem uygulaması yazma](writing-a-transactional-application.md).  
   
 ### <a name="implementing-a-resource-manager"></a>Bir kaynak yöneticisi uygulama  
- Bir işlemde katılabilir bir kaynak yöneticisi uygulamak için bkz: [Kaynak Yöneticisi uygulama](../../../../docs/framework/data/transactions/implementing-a-resource-manager.md). Bu bölüm, bir işlem hatası ve en iyi duruma getirme en iyi uygulamalar sonra kurtarma Sistemi'ne bir kaynak liste kapsar.
+ Bir işleme katılabileceğiniz bir kaynak yöneticisi uygulamak için bkz. [uygulama kaynak yöneticisi](implementing-a-resource-manager.md). Bu bölüm bir kaynağın kayıt işlemini, bir işlem yürüten, hatadan sonra kurtarmaya ve en iyi duruma getirme en iyi yöntemlerini ele alır.

@@ -2,43 +2,43 @@
 title: DataTable Verilerini Düzenleme
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785430"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203497"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable Verilerini Düzenleme
-Oluşturduktan sonra bir <xref:System.Data.DataTable> içinde bir <xref:System.Data.DataSet>, bir veritabanında bir tablo kullanırken yaptığınız aynı etkinlikler gerçekleştirebilirsiniz. Ekleyebilir, görüntüleyin, düzenleyin ve tablo verilerini silme; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilir. Verileri değiştirirken bir **DataTable**, değişikliklerin doğru olduğundan ve programlı olarak geçir belirlemek olup olmadığını da doğrulayabilirsiniz.  
+<xref:System.Data.DataTable> Bir<xref:System.Data.DataSet>içinde bir oluşturduktan sonra, veritabanında bir tablo kullanırken yaptığınız aynı etkinlikleri gerçekleştirebilirsiniz. Tablodaki verileri ekleyebilir, görüntüleyebilir, düzenleyebilir ve silebilirsiniz; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilirsiniz. **DataTable**'daki verileri değiştirirken, değişikliklerin doğru olup olmadığını da doğrulayabilirsiniz ve değişiklikleri programlı olarak kabul edip reddetmeyeceğinizi belirleyebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataTable’a Veri Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
- Yeni satırları oluşturun ve bunları bir tabloya ekleyin açıklanmaktadır.  
+ [DataTable’a Veri Ekleme](adding-data-to-a-datatable.md)  
+ Yeni satırlar oluşturmayı ve bunları bir tabloya eklemeyi açıklar.  
   
- [DataTable’daki Verileri Görüntüleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/viewing-data-in-a-datatable.md)  
- Bir satırda, verilerin geçerli ve özgün sürümlerine dahil olmak üzere verilere nasıl erişileceğini açıklar.  
+ [DataTable’daki Verileri Görüntüleme](viewing-data-in-a-datatable.md)  
+ Verilerin orijinal ve güncel sürümleri dahil olmak üzere bir satırdaki verilere nasıl erişebileceğinizi açıklar.  
   
- [Load Yöntemi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
- Kullanımını açıklar **yük** doldurmak için yöntemi bir **DataTable** satırlarla.  
+ [Load Yöntemi](the-load-method.md)  
+ DataTable ile bir **DataTable** dolgusu için **Load** yönteminin kullanımını açıklar.  
   
- [DataTable Düzenlemeleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
- Önerilen değişiklikler doğrulandı ve kabul kadar bir satır için değişiklikleri askıya alma dahil olmak üzere, bir satırdaki verileri değiştirmek açıklanmaktadır.  
+ [DataTable Düzenlemeleri](datatable-edits.md)  
+ Önerilen değişiklikler doğrulanana ve kabul edilene kadar bir satırdaki değişiklikleri askıya alma dahil olmak üzere, bir satırdaki verilerin nasıl değiştirileceğini açıklar.  
   
- [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
- Bir satırın farklı durumları hakkında bilgi sağlar.  
+ [Satır Durumları ve Satır Sürümleri](row-states-and-row-versions.md)  
+ Bir satırın farklı durumlarıyla ilgili bilgiler sağlar.  
   
- [DataRow Silme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarow-deletion.md)  
- Tablodan bir satır kaldırmayı açıklar.  
+ [DataRow Silme](datarow-deletion.md)  
+ Tablodaki bir satırın nasıl kaldırılacağını açıklar.  
   
- [Satır Hatası Bilgileri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
- Her bir uygulamadaki verileri sorunları çözmenize yardımcı olması için satır, hata bilgilerini nasıl ekleneceğini açıklar.  
+ [Satır Hatası Bilgileri](row-error-information.md)  
+ Bir uygulama içindeki verilerle ilgili sorunları çözmeye yardımcı olmak için, her satır için hata bilgilerinin nasıl ekleneceğini açıklar.  
   
- [AcceptChanges ve RejectChanges](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)  
- Kabul etme veya reddetme bir satır için yapılan değişiklikleri açıklar.  
+ [AcceptChanges ve RejectChanges](acceptchanges-and-rejectchanges.md)  
+ Bir satıra yapılan değişikliklerin nasıl kabul edileceği veya reddedileceği açıklanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [DataTable Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTables](datatables.md)
+- [DataTable Olaylarını İşleme](handling-datatable-events.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

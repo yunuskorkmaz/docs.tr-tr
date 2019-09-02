@@ -2,28 +2,28 @@
 title: Türü Belirtilmiş DataSets
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33876cb9f614a93cab2fa3fd9d056f94dd1e9038
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607132"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203158"
 ---
 # <a name="typed-datasets"></a>Türü Belirtilmiş DataSets
-Zayıf yazılmış değişkenlerin yoluyla değerlere geç bağlanan erişime birlikte <xref:System.Data.DataSet> kesin türü belirtilmiş bir benzetme verilerine erişim sağlar. Tablolar ve parçası olan sütunlar **veri kümesi** değişkenleri kesin ve kullanımı kolay adları kullanılarak erişilebilir.  
+Kesin tür belirtilmiş değişkenlerle, değerlere geç bağlanma erişimi sayesinde, <xref:System.Data.DataSet> kesin olarak yazılmış bir metaphor aracılığıyla verilere erişim sağlar. **Veri kümesinin** parçası olan tablo ve sütunlara, Kullanıcı dostu adlar ve kesin belirlenmiş değişkenler kullanılarak erişilebilir.  
   
- Bir türü belirtilmiş **veri kümesi** türetildiği bir sınıf olan bir **veri kümesi**. Bu nedenle, tüm yöntemler, olaylar ve özelliklerini devralır bir **veri kümesi**. Ayrıca, belirlenmiş **veri kümesi** kesin türü belirtilmiş yöntemler, olaylar ve özellikleri sağlar. Bu ad, koleksiyon tabanlı bir yöntem kullanmak yerine, tablolar ve sütunlar ulaşabileceğiniz anlamına gelir. Geliştirilmiş okunabilirliğini yazılmış bir kod tarafından **veri kümesi** Visual Studio .NET kod düzenleyici siz yazarken satırları otomatik olarak tamamlamak de sağlar.  
+ Türü belirtilmiş **veri** kümesi, bir **veri kümesinden**türetilen sınıftır. Bu nedenle, bir **veri kümesinin**tüm yöntemlerini, olaylarını ve özelliklerini devralır. Ayrıca, yazılmış bir **veri kümesi** kesin türü belirtilmiş Yöntemler, olaylar ve özellikler sağlar. Bu, koleksiyon tabanlı yöntemler kullanmak yerine tablolara ve sütunlara ada göre erişebileceğiniz anlamına gelir. Kodun geliştirilmiş okunurluğu dışında, yazılmış bir **veri kümesi** aynı zamanda Visual Studio .NET kod düzenleyicisinin satırları yazarken otomatik olarak tamamlamasını sağlar.  
   
- Ayrıca, türü kesin belirlenmiş **veri kümesi** değerlere erişim için derleme zamanında doğru türü olarak sağlar. Türü kesin belirlenmiş ile **veri kümesi**, kodu derlenmiş yerine, çalışma zamanında tür uyuşmazlığı hatalar yakalanır.  
+ Ayrıca, türü kesin belirlenmiş **veri kümesi** , derleme zamanında doğru tür olarak değerlere erişim sağlar. Türü kesin belirlenmiş bir **veri kümesiyle**, kod çalışma zamanı yerine derlendiğinde, tür uyuşmazlığı hataları yakalanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kesin Türü Belirtilmiş DataSets Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-strongly-typed-datasets.md)  
- Oluşturma ve kullanma türü kesin belirlenmiş açıklar **veri kümesi**.  
+ [Kesin Türü Belirtilmiş DataSets Oluşturma](generating-strongly-typed-datasets.md)  
+ Türü kesin belirlenmiş bir **veri kümesini**oluşturmayı ve kullanmayı açıklar.  
   
- [Türü Belirtilmiş DataSets için Yorum Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/annotating-typed-datasets.md)  
- Türü kesin belirlenmiş oluşturmak için kullanılan XML Şeması Tanım Dili (XSD) şemaya açıklama açıklar **veri kümesi**vermek için **veri kümesi** öğeleri kolay adlar arka plandaki şema boyutlandırabiliriz.  
+ [Türü Belirtilmiş DataSets için Yorum Ekleme](annotating-typed-datasets.md)  
+ Temel alınan şemayı değiştirmeden **veri kümesi** öğelerine kolay adlar vermek için, türü kesin belirlenmiş bir **veri kümesi**oluşturmak için kullanılan XML ŞEMASı tanım dili (xsd) şemasına nasıl açıklama ekleneceğini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

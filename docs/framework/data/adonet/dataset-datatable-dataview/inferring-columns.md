@@ -2,30 +2,30 @@
 title: Sütunların Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034287"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203597"
 ---
 # <a name="inferring-columns"></a>Sütunların Çıkarımını Yapma
-ADO.NET için tabloları olarak çıkarsamak için hangi öğelerin bir XML belgesinden belirledi sonra bir <xref:System.Data.DataSet>, ardından bu tablonun sütunlarını algılar. ADO.NET 2.0 sunulan her biri için kesin türü belirtilmiş veri türünü çıkarsar yeni bir şema çıkarımı altyapısının **simpleType** öğesi. Önceki sürümlerde, veri türü bir çıkarsanan **simpleType** öğe bulunamadı her zaman **xsd: String'e**.  
+ADO.net, bir XML belgesinden bir <xref:System.Data.DataSet>için tablo olarak hangi öğelerin çıkarması gerektiğini belirledikten sonra, bu tablolar için sütunları algılar. ADO.NET 2,0, her **simpleType** öğe için kesin olarak belirlenmiş bir veri türünü gösteren yeni bir şema çıkarımı altyapısı sunmuştur. Önceki sürümlerde, gösterilen bir **simpleType** öğenin veri türü her zaman **xsd: String**idi.  
   
-## <a name="migration-and-backward-compatibility"></a>Geçiş ve geriye dönük uyumluluk  
- **ReadXml** yöntemi türünde bir bağımsız değişken alır **InferSchema**. Bu bağımsız değişken kesmesi davranışını önceki sürümleriyle uyumlu belirtmenizi sağlar. Kullanılabilir değerler için **InferSchema** numaralandırma aşağıdaki tabloda gösterilmiştir.  
+## <a name="migration-and-backward-compatibility"></a>Geçiş ve geri uyumluluk  
+ **ReadXml** yöntemi **ınsetype**türünde bir bağımsız değişken alır. Bu bağımsız değişken, önceki sürümlerle uyumlu çıkarım davranışı belirtmenize olanak tanır. **Inseschema** numaralandırması için kullanılabilir değerler aşağıdaki tabloda gösterilmiştir.  
   
  <xref:System.Data.XmlReadMode.InferSchema>  
- Her zaman olarak basit bir tür çıkarımını yapma geriye dönük uyumluluk sağlar <xref:System.String>.  
+ , Bir basit türü her zaman olarak <xref:System.String>değiştirerek geriye dönük uyumluluk sağlar.  
   
  <xref:System.Data.XmlReadMode.InferTypedSchema>  
- Kesin türü belirtilmiş veri türü çıkarır. Birlikte kullanılırsa bir özel durum oluşturur. bir <xref:System.Data.DataTable>.  
+ Kesin tür belirtilmiş bir veri türünü haller. İle kullanılırsa bir <xref:System.Data.DataTable>özel durum oluşturur.  
   
  <xref:System.Data.XmlReadMode.IgnoreSchema>  
- Herhangi bir satır içi şema yoksayar ve mevcut verileri okuyan <xref:System.Data.DataSet> şema.  
+ Herhangi bir satır içi şemayı yoksayar ve verileri var olan <xref:System.Data.DataSet> şemaya okur.  
   
 ## <a name="attributes"></a>Öznitelikler  
- Sınıfında tanımlandığı gibi [tabloların çıkarımını yapma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-tables.md), özniteliklere sahip bir öğe bir tablo çıkarılan. Bu öğenin öznitelikleri olarak tablonun sütunlarını ardından çıkarılan. **Columnmapping'in** sütunların özellik ayarlanacak **MappingType.Attribute**, XML şema geri yazılmışsa sütun adları öznitelik olarak yazılır emin olmak için. Öznitelik değerleri, tabloda bir satır depolanır. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+ [Tablolarda](inferring-tables.md)tanımlandığı gibi, öznitelikleri olan bir öğesi tablo olarak çıkarsolur. Daha sonra bu öğenin öznitelikleri tablo için sütun olarak algılanır. Şema XML 'e geri yazılmışsa sütun adlarının öznitelik olarak yazılmasını sağlamak için sütunların **ColumnMapping** özelliği **MappingType. Attribute**olarak ayarlanır. Özniteliklerin değerleri tablodaki bir satırda depolanır. Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -33,18 +33,18 @@ ADO.NET için tabloları olarak çıkarsamak için hangi öğelerin bir XML belg
 </DocumentElement>  
 ```  
   
- Çıkarma işlemi adlı bir tablo oluşturur **Element1** iki sütunlu **attr1** ve **attr2**. **Columnmapping'in** hem sütunların özellik ayarlanacak **MappingType.Attribute**.  
+ Çıkarım işlemi, **Element1** adında, **attr1** ve **attr2**olmak üzere iki sütunlu bir tablo oluşturur. Her iki sütunun **ColumnMapping** özelliği **MappingType. Attribute**olarak ayarlanır.  
   
- **Veri kümesi:** DocumentElement  
+ **Veri kümesi** DocumentElement  
   
- **Tablo:** Element1  
+ **Tablosundan** Element1  
   
 |attr1|attr2|  
 |-----------|-----------|  
-|Değer1|Value2|  
+|value1|value2|  
   
-## <a name="elements-without-attributes-or-child-elements"></a>Öğeler olmadan öznitelikleri veya alt öğeleri  
- Hiçbir alt öğeler veya öznitelikleri bir öğe varsa, bir sütun olarak çıkarılan. **Columnmapping'in** sütununun özellik ayarlanacak **MappingType.Element**. Alt öğelere metin tablosunda bir satıra depolanır. Örneğin, aşağıdaki XML göz önünde bulundurun:  
+## <a name="elements-without-attributes-or-child-elements"></a>Öznitelikleri veya alt öğeleri olmayan öğeler  
+ Bir öğenin alt öğesi veya özniteliği yoksa, sütun olarak algılanır. Sütunun **ColumnMapping** özelliği **MappingType. element**olarak ayarlanacak. Alt öğeler için metin, tablodaki bir satırda saklanır. Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
 ```xml  
 <DocumentElement>  
@@ -55,21 +55,21 @@ ADO.NET için tabloları olarak çıkarsamak için hangi öğelerin bir XML belg
 </DocumentElement>  
 ```  
   
- Çıkarma işlemi adlı bir tablo oluşturur **Element1** iki sütunlu **ChildElement1** ve **ChildElement2**. **Columnmapping'in** hem sütunların özellik ayarlanacak **MappingType.Element**.  
+ Çıkarım işlemi, **Element1** adında, **ChildElement1** ve **ChildElement2**olmak üzere iki sütunlu bir tablo oluşturur. Her iki sütunun **ColumnMapping** özelliği **MappingType. element**olarak ayarlanır.  
   
- **Veri kümesi:** DocumentElement  
+ **Veri kümesi** DocumentElement  
   
- **Tablo:** Element1  
+ **Tablosundan** Element1  
   
 |ChildElement1|ChildElement2|  
 |-------------------|-------------------|  
-|text1|Text2|  
+|Text1|Metin2|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
+- [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
+- [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

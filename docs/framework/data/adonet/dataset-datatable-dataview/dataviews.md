@@ -2,63 +2,63 @@
 title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f362e4807bce4fb0e3e8c9ae8cdd6b4704fc28aa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034339"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203794"
 ---
 # <a name="dataviews"></a>DataViews
-A <xref:System.Data.DataView> depolanan veriler alanının farklı görünümlerini oluşturmanızı sağlayan bir <xref:System.Data.DataTable>, veri bağlama uygulamalarda sık kullanılan bir özellik. Kullanarak bir **DataView**sıralamalar farklı olan bir tabloda verilerini açığa çıkarabilir ve verileri satır durum ya da bir filtre ifadesi temelinde göre filtre uygulayabilirsiniz.  
+, Genellikle veri bağlama uygulamalarında kullanılan bir özellik olan, <xref:System.Data.DataView> içinde depolanan verilerin farklı görünümlerini <xref:System.Data.DataTable>oluşturmanızı sağlar. Bir **DataView**kullanarak verileri farklı sıralama siparişleriyle bir tabloda kullanıma sunabilirsiniz ve verileri satır durumuna göre veya bir filtre ifadesine göre filtreleyebilirsiniz.  
   
- A **DataView** temel alınan verileri dinamik bir görünümünü sağlar **DataTable**: oluşunca içerik, sıralama ve üyelik değişiklikleri yansıtacak. Bu davranışı farklıdır **seçin** yöntemi **DataTable**, döndüren bir <xref:System.Data.DataRow> alan bir tablodaki dizisi üzerinde belirli bir filtre ve/veya sıralama düzeni: Bu içeriği değişiklikleri yansıtır. Tablo, ancak üyeliğini temel alınan ve sıralama statik kalır. Dinamik yeteneklerini **DataView** veri bağlama uygulamalar için ideal bir çözüm oluşturur.  
+ Bir **DataView** , temel alınan **DataTable**'daki verilerin dinamik bir görünümünü sağlar: içerik, sıralama ve üyelik, gerçekleşen değişiklikleri yansıtır. Bu davranış, belirli bir filtre ve/veyasıralama düzenini temel alan bir <xref:System.Data.DataRow> tablodan dizi döndüren DataTable 'ın **Select** yönteminden farklıdır: Bu içerik, temel tablodaki değişiklikleri yansıtır, ancak üyeliği ve sıralama statik kalır. **DataView** 'ın dinamik özellikleri, veri bağlama uygulamaları için ideal hale getirir.  
   
- A **DataView** dinamik veri için uygulayabileceğiniz farklı sıralama ve filtreleme ölçütlerini çok veritabanı görünümü, tek bir dizi görünümünü sağlar. Ancak, bir veritabanı görünümü aksine bir **DataView** tablo olarak işlenemiyorsa ve birleştirilmiş tablolar görünümünü sağlayamaz. Ayrıca kaynak tablosunda mevcut sütunları hariç tutamazsınız ya da kaynak tablosunda bulunmayan hesaplama sütunlar gibi bir sütun ekleyebilirsiniz.  
+ Bir **DataView** size, farklı sıralama ve filtreleme ölçütleri uygulayabileceğiniz bir veritabanı görünümü gibi tek bir veri kümesinin dinamik görünümünü sağlar. Ancak, bir veritabanı görünümünün aksine, bir **DataView** tablo olarak kabul edilemez ve birleştirilmiş tabloların bir görünümünü sağlayamaz. Kaynak tabloda mevcut olmayan sütunları da dışlayamazsınız ve kaynak tabloda bulunmayan hesaplama sütunları gibi sütunları ekleyebilirsiniz.  
   
- Kullanabileceğiniz bir <xref:System.Data.DataView.DataViewManager%2A> tüm tablolarda görünüm ayarlarını yönetmek için bir **veri kümesi**. **DataViewManager** her tablo için varsayılan görünüm ayarlarını yönetmek için kullanışlı bir yol sağlar. Bir denetim için birden fazla tablonun bağlanırken bir **veri kümesi**, bağlayıcı için bir **DataViewManager** ideal bir seçenektir.  
+ Bir **veri kümesindeki**tüm <xref:System.Data.DataView.DataViewManager%2A> tablolar için görünüm ayarlarını yönetmek üzere bir kullanabilirsiniz. **DataViewManager** , her tablo için varsayılan görünüm ayarlarını yönetmenin kolay bir yolunu sağlar. Bir denetimi bir **veri kümesinin**birden fazla tablosuna bağlarken **DataViewManager** 'a bağlama ideal seçenektir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataView Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
- Nasıl oluşturulacağını açıklar bir **DataView** için bir **DataTable**.  
+ [DataView Oluşturma](creating-a-dataview.md)  
+ **DataTable**Için bir **DataView** oluşturmayı açıklar.  
   
- [Verileri Sıralama ve Filtreleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
- Özelliklerini ayarlama işlemi açıklanmaktadır bir **DataView** veri satırları kümelerine filtre belirli ölçütlere geri dönmek için ya da belirli sıralama düzeninde verileri döndürür.  
+ [Verileri Sıralama ve Filtreleme](sorting-and-filtering-data.md)  
+ Bir **DataView** özelliklerinin belirli filtre ölçütlerine uyan veri satırlarının alt kümelerini döndürme veya belirli bir sıralama düzeninde verileri döndürme için nasıl ayarlanacağını açıklar.  
   
- [DataRows ve DataRowViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
- Tarafından kullanıma sunulan veri erişim açıklar **DataView**.  
+ [DataRows ve DataRowViews](datarows-and-datarowviews.md)  
+ **DataView**tarafından sunulan verilere nasıl erişebileceğinizi açıklar.  
   
- [Satırları Bulma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
- Belirli bir satır bulun açıklar bir **DataView**.  
+ [Satırları Bulma](finding-rows.md)  
+ **DataView**içinde belirli bir satırın nasıl bulunacağını açıklar.  
   
- [ChildViews ve İlişkileri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
- Veri görünümlerini kullanarak bir üst-alt ilişkisi oluşturmayı açıklar bir **DataView**.  
+ [ChildViews ve İlişkileri](childviews-and-relations.md)  
+ Bir **DataView**kullanarak üst-alt ilişkiden veri görünümlerinin nasıl oluşturulduğunu açıklar.  
   
- [DataView Değiştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
- Açıklar temel alınan verilerde değişiklik yapma **DataTable** aracılığıyla **DataView**güncelleştirmelerini devre dışı bırakma veya etkinleştirme dahil olmak üzere.  
+ [DataView Değiştirme](modifying-dataviews.md)  
+ Güncelleştirmeleri etkinleştirme veya devre dışı bırakma dahil olmak üzere **DataView**aracılığıyla temel alınan **DataTable** 'daki verilerin nasıl değiştirileceğini açıklar.  
   
- [DataView Olaylarını İşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
- Nasıl kullanılacağını açıklar **ListChanged** bildirim almak için bir olay olduğunda içeriği veya sırasını bir **DataView** güncelleştiriliyor.  
+ [DataView Olaylarını İşleme](handling-dataview-events.md)  
+ Bir **DataView** içeriği veya sırası güncelleştirilirken bildirim almak Için **ListChanged** olayının nasıl kullanılacağını açıklar.  
   
- [DataView Yönetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
- Nasıl kullanılacağını açıklayan bir **DataViewManager** yönetmek için **DataView** her tablo için ayarları bir **veri kümesi**.  
+ [DataView Yönetme](managing-dataviews.md)  
+ Bir **veri kümesindeki**her tablo için **DataView** ayarlarını yönetmek üzere **DataViewManager** 'ın nasıl kullanılacağını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [ASP.NET Web Uygulamaları](https://docs.microsoft.com/previous-versions/655cec97(v=vs.100))  
- ASP.NET uygulamaları, Web Forms ve Web hizmetleri oluşturmak için genel bakışın yanı sıra ayrıntılı, adım adım yordamlar sağlar.  
+ ASP.NET uygulamaları, Web Forms ve Web hizmetleri oluşturmak için genel bakış ve ayrıntılı, adım adım yordamlar sağlar.  
   
  [Windows uygulamaları](https://docs.microsoft.com/previous-versions/ms184421(v=vs.100))  
- Windows Forms ve konsol uygulamaları ile çalışma hakkında ayrıntılı bilgiler sağlar.  
+ Windows Forms ve konsol uygulamalarıyla çalışma hakkında ayrıntılı bilgi sağlar.  
   
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Açıklar **veri kümesi** nesne ve uygulama verilerini yönetmek için nasıl kullanabilirsiniz.  
+ [DataSets, DataTables ve DataViews](index.md)  
+ **Veri kümesi** nesnesini ve uygulama verilerini yönetmek için nasıl kullanabileceğinizi açıklar.  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- Açıklar **DataTable** nesne ve tek başına veya bir parçası olarak uygulama verilerini yönetmek için kullanma hakkında bir **veri kümesi**.  
+ [DataTables](datatables.md)  
+ **DataTable** nesnesini ve uygulama verilerini kendi başına veya bir **veri kümesinin**parçası olarak yönetmek için nasıl kullanabileceğinizi açıklar.  
   
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
- ADO.NET açıklar mimarisi ve bileşenleri ve mevcut veri kaynaklarına erişim ve uygulama verilerini yönetmek için ADO.NET kullanma.  
+ [ADO.NET](../index.md)  
+ ADO.NET mimarisini ve bileşenlerini ve var olan veri kaynaklarına erişmek ve uygulama verilerini yönetmek için ADO.NET 'in nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

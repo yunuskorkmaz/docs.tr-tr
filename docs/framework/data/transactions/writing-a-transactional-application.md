@@ -2,42 +2,42 @@
 title: İşlem Uygulaması Yazma
 ms.date: 03/30/2017
 ms.assetid: a4d891f2-6fc8-4395-93c6-6819492406e0
-ms.openlocfilehash: 048df434ff0ada2ab5f8c7473913f6c34c05d1a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 318771c83a5b7ebc0f3fb2bb8c59240269a2dea9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793497"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205816"
 ---
 # <a name="writing-a-transactional-application"></a>İşlem Uygulaması Yazma
-Bir işlem uygulama programcısı tarafından sağlanan iki programlama modeli yararlanabilirsiniz <xref:System.Transactions> bir işlem oluşturmak için ad alanı. Açık bir programlama modeli kullanarak kullanabilir <xref:System.Transactions.Transaction> sınıf veya içinde işlemleri otomatik olarak yönetilir altyapısı tarafından kullanarak örtük programlama modeli <xref:System.Transactions.TransactionScope> sınıfı. Geliştirme için örtük işlem model kullanmanızı öneririz. Bir işlem kapsamda kullanma hakkında daha fazla bilgi bulabilirsiniz [işlem kapsamı kullanarak örtük işlem uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) konu.  
+Bir işlem uygulaması programlayıcı olarak, bir işlem oluşturmak için <xref:System.Transactions> ad alanı tarafından sunulan iki programlama modelinden yararlanabilirsiniz. Sınıfını kullanarak açık programlama modelini <xref:System.Transactions.Transaction> ya da işlem altyapısı <xref:System.Transactions.TransactionScope> tarafından otomatik olarak yönetilecek örtük programlama modelini kullanabilirsiniz. Geliştirme için örtük işlem modelini kullanmanızı öneririz. İşlem kapsamı [kullanarak örtük bir Işlem uygulama](implementing-an-implicit-transaction-using-transaction-scope.md) konusunda bir işlem kapsamının nasıl kullanılacağına ilişkin daha fazla bilgi edinebilirsiniz.  
   
- Her iki modelleri program tutarlı bir duruma ulaştığında bir işlem Sistemi'ne destekler. Kaydetme başarılı olursa, işlem getirilir. Yürütme başarısız olursa işlem durdurur. Uygulama programı başarıyla işlem tamamlanamıyor, durdurma ve hareketin etkileri geri almak çalışır.  
+ Her iki model de program tutarlı bir duruma ulaştığında işlem yürütmeyi destekler. Yürütme başarılı olursa, işlem durda işlenir. İşleme başarısız olursa, işlem iptal edilir. Uygulama programı işlemi başarıyla tamamlayamadıysanız, işlemin etkilerini durdurmayı ve geri almayı dener.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
-### <a name="creating-a-transaction"></a>Bir işlem oluşturma  
- <xref:System.Transactions> Ad alanı, bir işlem oluşturmak için iki modeli sağlar. Bu modelleri aşağıdaki konulara değinilmektedir.  
+### <a name="creating-a-transaction"></a>Işlem oluşturma  
+ Ad <xref:System.Transactions> alanı, işlem oluşturmak için iki model sağlar. Bu modelleri aşağıdaki konulara değinilmektedir.  
   
- [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)  
+ [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](implementing-an-implicit-transaction-using-transaction-scope.md)  
   
- Açıklayan nasıl <xref:System.Transactions> ad alanı destekler kullanarak örtük işlemleri oluşturma <xref:System.Transactions.TransactionScope> sınıfı.  
+ <xref:System.Transactions> Ad alanının <xref:System.Transactions.TransactionScope> sınıfını kullanarak örtük işlemler oluşturmayı nasıl desteklediğini açıklar.  
   
- [CommittableTransaction Kullanarak Belirtik İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [CommittableTransaction Kullanarak Belirtik İşlem Uygulama](implementing-an-explicit-transaction-using-committabletransaction.md)  
   
- Açıklayan nasıl <xref:System.Transactions> ad alanı destekler kullanarak açık işlemleri oluşturma <xref:System.Transactions.CommittableTransaction> sınıfı.  
+ <xref:System.Transactions> Ad alanının <xref:System.Transactions.CommittableTransaction> sınıfını kullanarak açık işlemler oluşturmayı nasıl desteklediğini açıklar.  
   
-### <a name="escalating-transaction-management"></a>İşlem Yönetim Etkinleºmesini  
- Başka bir uygulama etki alanındaki bir kaynağa erişmek bir işlem ihtiyacı olduğunda veya başka bir kalıcı Kaynak Yöneticisi'nde listeleme istiyorsanız, işlem otomatik olarak MSDTC tarafından yönetilmek üzere ilerletilmiş. İşlem yükseltme kapsanan [işlem yönetim yükseltme](../../../../docs/framework/data/transactions/transaction-management-escalation.md) konu.  
+### <a name="escalating-transaction-management"></a>Işlem yönetimini ilerleme  
+ Bir işlemin başka bir uygulama etki alanındaki bir kaynağa erişmesi gerektiğinde veya başka bir dayanıklı Resource Manager 'da listeleme yapmak istiyorsanız, işlem otomatik olarak MSDTC tarafından yönetilmek üzere ilerletildi. İşlem yükseltme, [Işlem yönetimi yükseltme](transaction-management-escalation.md) konusunda ele alınmıştır.  
   
 ### <a name="concurrency"></a>Eşzamanlılık  
- Konu [DependentTransaction ile eşzamanlılığı yönetme](../../../../docs/framework/data/transactions/managing-concurrency-with-dependenttransaction.md) kullanarak zaman uyumsuz görevler arasında eşzamanlılık nasıl sağlanabilir gösterir <xref:System.Transactions.DependentTransaction> sınıfı.  
+ [DependentTransaction ile eşzamanlılık yönetme](managing-concurrency-with-dependenttransaction.md) konusu, <xref:System.Transactions.DependentTransaction> sınıfı kullanılarak zaman uyumsuz görevler arasında eşzamanlılık elde edilebileceğinizi gösterir.  
   
 ### <a name="com-interop"></a>COM + birlikte çalışma  
- Konu [Kurumsal Hizmetler ve COM + işlemleri ile birlikte çalışabilirlik](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md) COM + işlemleri ile etkileşime, dağıtılmış işlemler nasıl yapabileceğiniz gösterir.  
+ [Kurumsal Hizmetler ve com+ işlemleri Ile birlikte çalışabilirlik](interoperability-with-enterprise-services-and-com-transactions.md) konusu, dağıtılmış işlemlerinizi com+ işlemleriyle nasıl etkileşime girecağınızı gösterir.  
   
 ### <a name="diagnostics"></a>Tanılamalar  
- [Tanılama izlemeleri](../../../../docs/framework/data/transactions/diagnostic-traces.md) tarafından oluşturulan izleme kodları nasıl kullanabileceğinizi açıklar <xref:System.Transactions> uygulamanızdaki hataları gidermek için altyapı.  
+ [Tanılama izlemeleri](diagnostic-traces.md) , <xref:System.Transactions> uygulamalarınızda hata gidermek için altyapı tarafından oluşturulan izleme kodlarını nasıl kullanabileceğinizi açıklar.  
   
 ### <a name="working-within-aspnet"></a>ASP.NET içinde çalışma  
- [ASP.NET'te System.Transactions kullanma](../../../../docs/framework/data/transactions/using-system-transactions-in-aspnet.md) konu açıklar nasıl başarıyla kullanabileceğiniz <xref:System.Transactions> içinde bir ASP.NET uygulaması.
+ [ASP.net ' de using System. Transactions](using-system-transactions-in-aspnet.md) , bir ASP.NET uygulamasının içinde nasıl başarıyla <xref:System.Transactions> kullanabileceğinizi açıklar.

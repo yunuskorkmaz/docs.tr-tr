@@ -1,21 +1,21 @@
 ---
-title: Kaynak Office Open XML belgesi (C#) oluşturma
+title: Kaynak Office Open XML belgesi (C#) oluşturuluyor
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 024b6c80cdedf38fd2dcee77562c0105df7bd033
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d6c4d8866bba58e86735099a62041894a9faa9b1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690100"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204159"
 ---
-# <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Open XML belgesi (C#) oluşturma
+# <a name="creating-the-source-office-open-xml-document-c"></a>Kaynak Office Open XML belgesi (C#) oluşturuluyor
 
-Bu konu, diğer bu öğreticideki örneklerde Office Open XML WordprocessingML belgesi nasıl oluşturacağınızı gösterir. Bu yönergeleri izleyin, çıkış her örnekte sağlanan çıkış eşleşir.
+Bu konu başlığında, bu öğreticideki diğer örneklerin kullandığı Office Open XML WordprocessingML belgesinin nasıl oluşturulacağı gösterilmektedir. Bu yönergeleri izlerseniz, çıktılarınız her örnekte girilen çıktıyla eşleşir.
 
-Ancak, bu öğreticideki örneklerde, geçerli bir WordprocessingML belgesi ile çalışır.
+Ancak, bu öğreticideki örnekler geçerli bir WordprocessingML belgesiyle çalışacaktır.
 
-Bu öğreticide bir belge oluşturmak için ya da Microsoft Office 2007 yüklü olmalıdır veya sonraki bir sürümünün yüklü veya Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.
+Bu öğreticinin kullandığı belgeyi oluşturmak için Microsoft Office 2007 veya sonraki bir sürümü yüklemiş olmanız ya da Word, Excel ve PowerPoint 2007 dosya biçimleri için Microsoft Office Uyumluluk Paketi ile Microsoft Office 2003 olmalıdır.
 
 ## <a name="creating-the-wordprocessingml-document"></a>WordprocessingML belgesi oluşturma
 
@@ -23,9 +23,9 @@ Bu öğreticide bir belge oluşturmak için ya da Microsoft Office 2007 yüklü 
 
 1. Yeni bir Microsoft Word belgesi oluşturun.
 
-2. Aşağıdaki metni yeni bir belgeye yapıştırın:
+2. Aşağıdaki metni yeni belgeye yapıştırın:
 
-    ```
+    ```text
     Parsing WordprocessingML with LINQ to XML
 
     The following example prints to the console.
@@ -43,13 +43,13 @@ Bu öğreticide bir belge oluşturmak için ya da Microsoft Office 2007 yüklü 
     Hello World
     ```
 
-3. İlk satır stili "Başlık 1" ile biçimlendirin.
+3. İlk satırı "Başlık 1" stiliyle biçimlendirin.
 
-4. C# kodu içeren satırları seçin. İlk satırı ile başlayan `using` anahtar sözcüğü. Son satır son kapanış ayracından değil. Satırları courier yazı biçimi. İle yeni bir stil biçimlendirir ve yeni stil "Code" olarak adlandırın.
+4. C# Kodu içeren satırları seçin. İlk satır `using` anahtar sözcüğüyle başlar. Son satır son kapanış ayracı. Çizgileri Courier yazı tipiyle biçimlendirin. Bunları yeni bir stille biçimlendirin ve yeni "Code" stilini adlandırın.
 
-5. Son olarak, çıktısını içeren tüm satırı seçin ve ile biçimlendirmeniz `Code` stili.
+5. Son olarak, çıktıyı içeren satırın tamamını seçin ve `Code` stille biçimlendirin.
 
-6. Belgeyi kaydedin ve SampleDoc.docx adlandırın.
+6. Belgeyi kaydedin ve SampleDoc. docx olarak adlandırın.
 
     > [!NOTE]
-    > Microsoft Word 2003 kullanıyorsanız **Word 2007 belgesi** içinde **farklı kaydetme türü** aşağı açılan listesi.
+    > Microsoft Word 2003 kullanıyorsanız, **farklı kaydet türü** açılan listesinde **Word 2007 belgesi** ' ni seçin.

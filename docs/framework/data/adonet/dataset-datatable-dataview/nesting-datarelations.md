@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 7975e17bd957a822bf3d60d487eb928cee84bd28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607329"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203263"
 ---
 # <a name="nesting-datarelations"></a>DataRelations’ı İç İçe Yerleştirme
-Verilerin ilişkisel bir temsilini içinde tek tek tablolar, bir sütun veya sütun kümesini kullanarak birbirleriyle satırları içerir. ADO.NET'te <xref:System.Data.DataSet>, tablolar arasında ilişki kullanılarak uygulanan bir <xref:System.Data.DataRelation>. Oluştururken bir **DataRelation**, sütun üst-alt ilişkileri yalnızca ilişkisi yönetilir. Tabloları ve sütunları ayrı varlıklardır. XML sağlayan veri hiyerarşik temsili, iç içe geçmiş alt öğelerini içeren üst öğeler tarafından üst-alt ilişkilerini temsil edilir.  
+Verilerin ilişkisel bir gösteriminde, tek tek tablolar bir sütun veya sütun kümesi kullanılarak birbirleriyle ilişkili satırları içerir. ADO.net <xref:System.Data.DataSet>, tablolar arasındaki ilişki bir <xref:System.Data.DataRelation>kullanılarak uygulanır. Bir **DataRelation**oluşturduğunuzda, sütunların üst-alt ilişkileri yalnızca ilişki üzerinden yönetilir. Tablolar ve sütunlar ayrı varlıklardır. XML 'in sağladığı verilerin hiyerarşik gösteriminde, üst-alt ilişkileri iç içe geçmiş alt öğeler içeren üst öğeler tarafından temsil edilir.  
   
- İç içe alt nesnelerin kolaylaştırmak için bir **veri kümesi** ile eşitlenen bir <xref:System.Xml.XmlDataDocument> veya XML verileri olarak kullanılarak yazılmış **WriteXml**, **DataRelation** kullanıma sunan bir **iç içe** özelliği. Ayarı **iç içe** özelliği bir **DataRelation** için **true** alt satırları XML verileri olarak yazılırken üst sütun içinde iç içe ilişkisinin neden olan veya eşitlenen bir **XmlDataDocument**. **İç içe** özelliği **DataRelation** olduğu **false**, varsayılan olarak.  
+ Bir **veri kümesi** , **WriteXml**kullanılarak XML verileriyle eşitlendiğinde <xref:System.Xml.XmlDataDocument> veya yazılmış olduğunda alt nesnelerin iç içe koyulmasını kolaylaştırmak için, bir **iç içe geçmiş** özelliği gösterir. Bir **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlamak, ilişkinin alt satırlarının XML verisi olarak yazıldığında veya bir **XmlDataDocument**ile eşitlendiğinde üst sütun içinde iç içe olmasına neden olur. **DataRelation** 'ın **Nested** özelliği varsayılan olarak **false 'tur**.  
   
- Örneğin, aşağıdakileri dikkate alın **veri kümesi**.  
+ Örneğin, aşağıdaki **veri kümesini**göz önünde bulundurun.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Çünkü **iç içe** özelliği **DataRelation** nesnesi ayarlanmadı **true** bu **veri kümesi**, alt nesneler iç içe değil üst öğe içinde olduğunda bu **veri kümesi** XML verileri olarak temsil edilir. XML gösterimini dönüştürme bir **veri kümesi** içeren ilgili **veri kümesi**s ile iç içe veri ilişkileri performansın yavaşlamasına neden olabilir. Veri ilişkileri içe öneririz. Bunu yapmak için ayarlanmış **iç içe** özelliğini **true**. Ardından kod, yukarıdan aşağıya hiyerarşik XPath sorgu ifadeleri bulmak ve verileri dönüştürmek için kullandığı XSLT stil sayfası içinde yazın.  
+ Bu **veri**kümesi için **DataRelation** nesnesinin **Nested** özelliği **true** olarak ayarlanmadığından, bu **veri kümesi** XML verisi olarak temsil edildiğinde alt nesneler üst öğeler içinde iç içe değildir. İç içe olmayan veri ilişkileri ile ilgili **veri kümesini**Içeren bir **veri kümesinin** XML gösterimini dönüştürmek, performansın düşmesine neden olabilir. Veri ilişkilerini iç içe etmenizi öneririz. Bunu yapmak için, **Iç Içe geçmiş** özelliği **true**olarak ayarlayın. Ardından, verileri bulmak ve dönüştürmek için yukarıdan aşağı hiyerarşik XPath sorgu ifadelerini kullanan XSLT stil sayfasına kod yazın.  
   
- Aşağıdaki kod örneği, arama sonucu gösterir **WriteXml** üzerinde **veri kümesi**.  
+ Aşağıdaki kod örneği, **veri kümesinde** **WriteXml** çağırmanın sonucunu gösterir.  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Unutmayın **müşteriler** öğesi ve **siparişler** öğeleri Eşdüzey öğeleri olarak gösterilir. İsterseniz **siparişler** kendi ilgili üst öğelerinin alt öğe olarak gösterilecek öğeler **iç içe** özelliği **DataRelation** içinayarlanmışolmasıgerekir**true** ve aşağıdakileri ekleyin:  
+ **Customers** öğesi ve **Orders** öğelerinin eşdüzey öğeler olarak gösterildiğini unutmayın. **Orders** öğelerinin kendi üst öğelerinin alt öğeleri olarak gösterilmesini Istiyorsanız, **DataRelation** 'ın **Nested** özelliği **true** olarak ayarlanmalıdır ve aşağıdakileri eklemelisiniz:  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- Aşağıdaki kod, ne elde edilen çıkış, şöyle görünmelidir gösterir ile **siparişler** öğeleri, ilgili üst öğeleri içinde iç içe geçmiş.  
+ Aşağıdaki kod, elde edilen çıktının nasıl görüneceğine, ilgili üst öğelerinin içine yerleştirilmiş **Orders** öğeleriyle gösterir.  
   
 ```xml  
 <CustomerOrders>  
@@ -133,7 +133,7 @@ customerOrders.Nested = true;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataRelations Ekleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [DataRelations Ekleme](adding-datarelations.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

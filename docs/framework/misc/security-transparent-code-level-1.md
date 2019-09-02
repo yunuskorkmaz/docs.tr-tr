@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca30448c24efc48be3d68c6b3fa03c949b72d1a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d1c108e75c0e2da3d513669f5b8b02bada43b983
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910704"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206083"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Saydamlık, geliştiricilerin kısmen güvenilen koda işlevsellik sunan daha güvenli .NET Framework kitaplıklar yazmasını sağlar. 1\. düzey saydamlık .NET Framework sürüm 2,0 ' de tanıtılmıştı ve öncelikle yalnızca Microsoft içinde kullanılmıştı. 4\. .NET Framework başlayarak [düzey 2 saydamlığını](../../../docs/framework/misc/security-transparent-code-level-2.md)kullanabilirsiniz. Ancak, 1. düzey saydamlık, önceki güvenlik kuralları ile çalışması gereken eski kodu tanımlayabilmeniz için korunur.  
+ Saydamlık, geliştiricilerin kısmen güvenilen koda işlevsellik sunan daha güvenli .NET Framework kitaplıklar yazmasını sağlar. 1\. düzey saydamlık .NET Framework sürüm 2,0 ' de tanıtılmıştı ve öncelikle yalnızca Microsoft içinde kullanılmıştı. 4\. .NET Framework başlayarak [düzey 2 saydamlığını](security-transparent-code-level-2.md)kullanabilirsiniz. Ancak, 1. düzey saydamlık, önceki güvenlik kuralları ile çalışması gereken eski kodu tanımlayabilmeniz için korunur.  
   
 > [!IMPORTANT]
 > Düzey 1 saydamlığı yalnızca uyumluluk için belirtmelisiniz; diğer bir deyişle, düzey 1 ' i yalnızca, <xref:System.Security.AllowPartiallyTrustedCallersAttribute> veya kullanan ya da saydamlık modelini kullanmayan .NET Framework 3,5 veya önceki bir sürümüyle geliştirilen kod için belirtir. Örneğin, kısmen güvenilen çağıranların (APTCA) çağrılara izin veren .NET Framework 2,0 derlemeleri için düzey 1 saydamlığı kullanın. .NET Framework 4 için geliştirilen kod için her zaman düzey 2 saydamlığı kullanın.  
@@ -132,5 +132,5 @@ public class B
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliği saydam kod, düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
-- [Güvenlik Değişiklikleri](../../../docs/framework/security/security-changes.md)
+- [Güvenliği saydam kod, düzey 2](security-transparent-code-level-2.md)
+- [Güvenlik Değişiklikleri](../security/security-changes.md)

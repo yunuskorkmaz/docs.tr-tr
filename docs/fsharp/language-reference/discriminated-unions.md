@@ -2,12 +2,12 @@
 title: Ayrılmış Birleşimler
 description: Ayırt edici birleşimler kullanmayı F# öğrenin.
 ms.date: 05/16/2016
-ms.openlocfilehash: fa4f011a8d5fd6725a44e030b423e79244a18734
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3ed05fdb144d7266adc1718cdf015ab64680f3d8
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106765"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206165"
 ---
 # <a name="discriminated-unions"></a>Ayrılmış Birleşimler
 
@@ -87,7 +87,7 @@ Genellikle, büyük/küçük harf tanımlayıcıları birleşim adıyla niteleme
 F# Ayırt edici birleşimler, genellikle tek bir tür sarmalama için etki alanı modellemesinde kullanılır. Temel alınan değeri, aynı zamanda kalıp eşleştirme aracılığıyla ayıklamak çok kolaydır. Tek bir durum için eşleşme ifadesi kullanmanız gerekmez:
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 Aşağıdaki örnek şunu gösterir:

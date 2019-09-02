@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 56f6e13763b5230e046c0838892393b3672a54be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8bff92fe40ec668dfa634c3b97f2f1df238f159b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937037"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203957"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet’e XSLT Dönüşümü Uygulama
 Öğesinin<xref:System.Data.DataSet> **WriteXml** yöntemi, bir **veri kümesinin** içeriğini XML verisi olarak yazmanızı sağlar. Ortak bir görev daha sonra söz konusu XML 'i XSL dönüşümleri (XSLT) kullanarak başka bir biçime dönüştürmeye yönelik olur. Ancak, bir **veri kümesini** ile <xref:System.Xml.XmlDataDocument> eşitleme, ilk olarak **veri** kümesinin içeriğini **WriteXml**kullanarak XML verileri olarak yazmak zorunda kalmadan bir **veri kümesinin** içeriğine bir XSLT stil sayfası uygulamanıza olanak sağlar.  
@@ -59,7 +59,7 @@ ms.locfileid: "69937037"
  Aşağıdaki kod, **veri kümesini** doldurur ve XSLT stil sayfasını uygular.  
   
 > [!NOTE]
-> İlişki içeren bir **veri kümesine** XSLT stil sayfası uyguluyorsanız, iç içe geçmiş her ilişki için ' ın **iç içe** <xref:System.Data.DataRelation> özelliğini **true** olarak ayarlarsanız en iyi performansı elde edersiniz. Bu, hiyerarşide gezinmek ve verileri dönüştürmek için doğal yukarıdan aşağı işleme uygulayan XSLT stil sayfalarını kullanmanıza olanak tanır (örneğin, önceki eşdüzey ve aşağıdaki-eşdüzey stili). sayfa düğümü test ifadeleri) bölümüne gidin. İç içe geçmiş ilişkiler hakkında daha fazla bilgi için bkz. [Iç Içe geçme istekleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+> İlişki içeren bir **veri kümesine** XSLT stil sayfası uyguluyorsanız, iç içe geçmiş her ilişki için ' ın **iç içe** <xref:System.Data.DataRelation> özelliğini **true** olarak ayarlarsanız en iyi performansı elde edersiniz. Bu, hiyerarşide gezinmek ve verileri dönüştürmek için doğal yukarıdan aşağı işleme uygulayan XSLT stil sayfalarını kullanmanıza olanak tanır (örneğin, önceki eşdüzey ve aşağıdaki-eşdüzey stili). sayfa düğümü test ifadeleri) bölümüne gidin. İç içe geçmiş ilişkiler hakkında daha fazla bilgi için bkz. [Iç Içe geçme istekleri](nesting-datarelations.md).  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -125,5 +125,5 @@ writer.Close();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [DataSet ve XmlDataDocument Eşitlemesi](dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

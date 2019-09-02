@@ -2,12 +2,12 @@
 title: Zaman uyumsuz görevleri bir süre sonra iptal et (C#)
 ms.date: 07/20/2015
 ms.assetid: 194282c2-399f-46da-a7a6-96674e00b0b3
-ms.openlocfilehash: e00ff51e987275c6c84822f7095c82ed03b53176
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 110c4700d0d2afc87f9144bf258cdd4991f107f4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595764"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204341"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-c"></a>Zaman uyumsuz görevleri bir süre sonra iptal et (C#)
 
@@ -76,7 +76,7 @@ private async void startButton_Click(object sender, RoutedEventArgs e)
 
  Çıktının tüm Web siteleri, Web sitesi veya bazı Web siteleri için çıktıyı gösterebileceğini doğrulamak için programı birkaç kez çalıştırın. Aşağıdaki çıktı bir örnektir.
 
-```
+```output
 Length of the downloaded string: 35990.
 
 Length of the downloaded string: 407399.

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623390"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205062"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument Eşitlemesi
-ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework XML sınıfları kullanabilirsiniz. Tarihsel olarak, bu iki verilerini sunumu ayrı olarak kullanılmış. Ancak, .NET Framework verilerine ilişkisel ve hiyerarşik temsillerini gerçek zamanlı, zaman uyumlu erişiminizi sağlar **veri kümesi** nesne ve <xref:System.Xml.XmlDataDocument> nesne, sırasıyla.  
+ADO.net <xref:System.Data.DataSet> , size verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework bulunan XML sınıflarını kullanabilirsiniz. Geçmişte, bu iki veri gösterimi ayrı olarak kullanılmıştır. Ancak .NET Framework, veri **kümesi** nesnesi ve <xref:System.Xml.XmlDataDocument> nesnesi aracılığıyla hem ilişkisel hem de verilerin hiyerarşik temsillerine gerçek zamanlı, zaman uyumlu erişim sağlar.  
   
- Olduğunda bir **veri kümesi** ile eşitlenen bir **XmlDataDocument**, her iki nesne tek bir veri kümesiyle çalıştığınız. Bunun anlamı bir değişiklik yapılırsa **veri kümesi**, değişiklik yansıtılır **XmlDataDocument**ve bunun tersi de geçerlidir. Arasındaki ilişkiyi **veri kümesi** ve **XmlDataDocument** büyük esneklik yerleşik hizmetler tüm paketini erişmek için tek bir veri kümesini kullanarak tek bir uygulama vererek oluşturur. geçici bir çözüm **veri kümesi** (örneğin, Web Forms ve Windows Forms denetimleri ve Visual Studio .NET tasarımcıları), Genişletilebilir Stil Sayfası Dili (XSL), XSLT Dönüşümleri (XSLT) ve XML Path gibi XML Hizmetleri paketi yanı sıra Dil (XPath). Hedef uygulama ile Hizmetleri ayarladığı vermeyeceklerini yoktur; her ikisi de kullanılabilir.  
+ Bir **veri kümesi** bir **XmlDataDocument**ile eşitlendiğinde, her iki nesne de tek bir veri kümesiyle çalışır. Bu, **veri kümesinde**bir değişiklik yapılırsa, değişikliğin **XmlDataDocument**'te yansıtıldığı ve tam tersi anlamına gelir. Veri kümesi ile **XmlDataDocument** arasındaki ilişki, tek bir veri kümesini kullanarak tek bir uygulamaya izin vererek çok sayıda esneklik oluşturur ve veri kümesinin tamamında (Web Forms gibi) yerleşik olarak bulunan tüm hizmet paketine erişebilir. Windows Forms denetimleri ve Visual Studio .NET tasarımcıları), ayrıca Genişletilebilir Stil sayfası dili (XSL), XSL dönüştürmeleri (XSLT) ve XML yol dili (XPath) dahil XML Hizmetleri paketi. Uygulamayla hedeflediğiniz hizmet kümesini seçmeniz gerekmez; her ikisi de mevcuttur.  
   
- Eşitleyebilirsiniz birkaç şekilde bir **veri kümesi** ile bir **XmlDataDocument**. Şunları yapabilirsiniz:  
+ Bir **veri kümesini** **XmlDataDocument**ile eşzamanlı hale getirmek için kullanabileceğiniz çeşitli yollar vardır. Şunları yapabilirsiniz:  
   
-- Doldurma bir **veri kümesi** şeması (diğer bir deyişle, ilişkisel bir yapısı) ve verilerle ve ardından yeni bir eşitleme **XmlDataDocument**. Bu, hiyerarşik bir görünümü var olan ilişkisel veri sağlar. Örneğin:  
+- Bir **veri kümesini** şema (yani, ilişkisel bir yapı) ve verilerle doldurun ve ardından yeni bir **XmlDataDocument**ile eşitler. Bu, varolan ilişkisel verilerin hiyerarşik bir görünümünü sağlar. Örneğin:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,11 +37,11 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
-- Doldurma bir **veri kümesi** yalnızca şema ile (bir türü kesin belirlenmiş gibi **veri kümesi**), ile eşitlemek bir **XmlDataDocument**ve ardından Yük  **XmlDataDocument** XML belgesinden. Bu, var olan hiyerarşik verilerin ilişkisel bir görünümünü sağlar. Sütun adlarının ve tablo adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
+- Bir **veri kümesini** yalnızca şemayla (türü kesin belirlenmiş bir **veri kümesi**) doldurun, bir **XmlDataDocument**ile eşitler ve ardından bir XML belgesinden **XmlDataDocument** öğesini yükleyin. Bu, varolan hiyerarşik verilerin ilişkisel bir görünümünü sağlar. **Veri kümesi** şemanızın tablo adları ve sütun adları, EŞITLENMESINI istediğiniz XML öğelerinin adlarıyla eşleşmelidir. Bu eşleştirme, büyük/küçük harfe duyarlıdır.  
   
-     Unutmayın, şema **veri kümesi** yalnızca ilişkisel görünümünüzde kullanıma sunmak istiyorsanız XML öğeleri ile eşleşmesi gerekir. Bu şekilde, çok büyük bir XML belgesi ve oldukça küçük bir ilişkisel "Pencere" Bu belge üzerinde olabilir. **XmlDataDocument** tüm XML belgesi olsa bile korur **veri kümesi** yalnızca küçük bir kısmını kullanıma sunar. (Bu ayrıntılı bir örnek için bkz. [bir DataSet'i bir XmlDataDocument ile eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md).)  
+     **Veri kümesi** şemasının yalnızca ilişkisel görünüminizdeki göstermek istediğiniz XML öğeleriyle eşleşmesi gerektiğini unutmayın. Bu şekilde, bu belgede çok büyük bir XML belgeniz ve çok küçük bir ilişkisel "pencere" olabilir. **Veri kümesi** yalnızca küçük bir kısmını kullanıma sunsa, **XmlDataDocument** tüm XML belgesini korur. (Bunun ayrıntılı bir örneği için bkz. [bir veri kümesini XmlDataDocument Ile eşitleme](synchronizing-a-dataset-with-an-xmldatadocument.md).)  
   
-     Aşağıdaki kod örneği oluşturma adımlarını gösteren bir **veri kümesi** ve şeması doldurma, ardından ile eşitleme bir **XmlDataDocument**. Unutmayın **veri kümesi** şema yalnızca gerekli öğeleri eşleştirilecek **XmlDataDocument** kullanarak kullanıma sunmak istediğiniz **veri kümesi**.  
+     Aşağıdaki kod örneği, bir **veri kümesi** oluşturma ve şemasını doldurma ve sonra onu bir **XmlDataDocument**ile eşitleme adımlarını gösterir. **Veri kümesi** şemasının yalnızca **veri kümesini**kullanarak sergilemek istediğiniz **XmlDataDocument** nesnesinden öğelerle eşleşmesi gerektiğini unutmayın.  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -61,11 +61,11 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
-     Yüklenemiyor bir **XmlDataDocument** ile eşitlenmişse bir **veri kümesi** verilerini içeren. bir özel durum oluşturulur.  
+     Veri içeren bir veri **kümesiyle** eşitlendiğinde **XmlDataDocument** ' i yükleyemezsiniz. Bir özel durum oluşturulur.  
   
-- Yeni bir **XmlDataDocument** XML belgesinden yükleyin ve ardından ilişkisel görünümünü kullanarak veri erişim **veri kümesi** özelliği **XmlDataDocument**. Şemasını ayarlamanız gerekir **veri kümesi** veri görmeden önce **XmlDataDocument** kullanarak **veri kümesi**. Tablo adlarının, sütun yeniden adları, **veri kümesi** şema ile eşitlenme istediğiniz XML öğeleri adları aynı olmalıdır. Bu eşleştirme büyük küçük harfe duyarlı değildir.  
+- Yeni bir **XmlDataDocument** oluşturun ve bunu bir XML belgesinden yükleyin ve ardından **XmlDataDocument**'in **DataSet** özelliğini kullanarak verilerin ilişkisel görünümüne erişin. Veri **kümesini**kullanarak **XmlDataDocument** 'teki herhangi bir veriyi görüntüleyebilmeniz için veri **kümesinin** şemasını ayarlamanız gerekir. Yine, **veri kümesi** şemanızda tablo adları ve sütun adları, EŞITLENMELERINI istediğiniz XML öğelerinin adlarıyla eşleşmelidir. Bu eşleştirme, büyük/küçük harfe duyarlıdır.  
   
-     Aşağıdaki kod örneği, verilerin ilişkisel görünümüne erişime izin gösterilmiştir bir **XmlDataDocument**.  
+     Aşağıdaki kod örneğinde, bir **XmlDataDocument**'teki verilerin ilişkisel görünümüne nasıl erişebileceğiniz gösterilmektedir.  
   
     ```vb  
     Dim xmlDoc As XmlDataDocument = New XmlDataDocument  
@@ -85,33 +85,33 @@ ADO.NET <xref:System.Data.DataSet> verilerin ilişkisel bir gösterimini sağlar
     xmlDoc.Load("XMLDocument.xml");  
     ```  
   
- Başka bir avantajı, eşitleme bir **XmlDataDocument** ile bir **veri kümesi** bir XML belgesi kalitesini korunmasıdır. Varsa **veri kümesi** kullanarak bir XML belgesi doldurulur **ReadXml**, verileri kullanarak bir XML belgesi olarak geri yazıldığında **WriteXml** , önemli ölçüde farklı olabilir Orijinal XML belgesi. Bunun nedeni, **veri kümesi** boşluk veya, XML belgesi öğe sırası gibi hiyerarşik bilgileri gibi biçimlendirme korumaz. **Veri kümesi** ayrıca şemasını eşleşmediğinden yoksayıldı öğeleri XML belgesindeki içermiyor **veri kümesi**. Eşitleme bir **XmlDataDocument** ile bir **veri kümesi** içinde tutulması için özgün XML belgesi hiyerarşik ve biçimlendirme öğesi yapısını sağlayan **XmlDataDocument**, ancak **veri kümesi** sadece veri ve şema bilgilerini uygun içeren **veri kümesi**.  
+ Bir **XmlDataDocument** Ile bir **veri kümesiyle** eşitlemenin başka BIR avantajı da bir XML belgesinin uygunlubir korunabilmesidir. Veri **kümesi** , **READXML**kullanılarak bir XML belgesinden doldurulursa, VERILER **WriteXml** kullanılarak bir XML BELGESI olarak geri yazıldığında, özgün XML belgesinden önemli ölçüde farklı olabilir. Bunun nedeni, **veri kümesinin** boşluk gibi BIÇIMLENDIRMELERI veya XML belgesinden öğe sırası gibi hiyerarşik bilgileri korumadığından kaynaklanır. **Veri kümesi** , **veri kümesinin**ŞEMASıYLA eşleşmediği için yoksayılan XML belgesinden öğeleri içermez. Bir **XmlDataDocument** Ile bir **veri** KÜMESIYLE eşitleme, özgün XML belgesinin biçimlendirme ve hiyerarşik öğe yapısının **XmlDataDocument**'Te tutulmasını sağlar, ancak veri **kümesi** yalnızca verileri içerir ve **veri kümesine**uygun şema bilgileri.  
   
- Eşitlerken bir **veri kümesi** ile bir **XmlDataDocument**, sonuçları alınıp alınmayacağını bağlı olarak farklı olabilir, <xref:System.Data.DataRelation> nesneler iç içe. Daha fazla bilgi için [iç içe DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
+ Bir **veri kümesini** **XmlDataDocument**ile eşitlerken sonuçlar, nesnelerinizin <xref:System.Data.DataRelation> iç içe yerleştirilmiş olmasına bağlı olarak farklılık gösterebilir. Daha fazla bilgi için bkz. [DataRelation Ile Iç Içe geçme](nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DataSet’i bir XmlDataDocument ile Eşitleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
- Türü kesin belirlenmiş eşitleme gösterir **veri kümesi**, en az şeması ile bir **XmlDataDocument**.  
+ [DataSet’i bir XmlDataDocument ile Eşitleme](synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ Türü kesin belirlenmiş bir **veri kümesinin**, en az şemayla, **XmlDataDocument**ile eşitlenmesi gösterilmektedir.  
   
- [DataSet Üzerinde XPath Sorgusu Gerçekleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
- Bir XPath sorgusu gerçekleştirme içeriğine gösterir bir **veri kümesi**.  
+ [DataSet Üzerinde XPath Sorgusu Gerçekleştirme](performing-an-xpath-query-on-a-dataset.md)  
+ Bir **veri kümesinin**içeriğinde XPath sorgusu gerçekleştirmeyi gösterir.  
   
- [DataSet’e XSLT Dönüşümü Uygulama](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
- XSLT dönüşümü uygulama içeriğini gösteren bir **veri kümesi**.  
+ [DataSet’e XSLT Dönüşümü Uygulama](applying-an-xslt-transform-to-a-dataset.md)  
+ Bir **veri kümesinin**içeriğine XSLT dönüşümü uygulamayı gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- Açıklayan nasıl **veri kümesi** yükleniyor ve içeriğini kalıcı dahil olmak üzere bir veri kaynağı olarak XML ile etkileşime giren bir **veri kümesi** XML verileri olarak.  
+ [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
+ Veri kümesinin, XML verileri olarak bir veri **kümesinin** içeriğini yükleme ve kalıcı hale getirme da dahil olmak üzere XML ile XML ile nasıl etkileşime gireceğini açıklar.  
   
- [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- Önemini açıklar iç içe geçmiş **DataRelation** nesneleri içeriğini temsil eden, bir **veri kümesi** XML verileri olarak ve bu ilişkileri nasıl oluşturulacağını açıklar.  
+ [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)  
+ Bir **veri kümesinin** içeriğini XML verisi olarak temsil eden Iç içe **DataRelation** nesnelerinin önemini açıklar ve bu ilişkilerin nasıl oluşturulacağını açıklar.  
   
- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Açıklar **veri kümesi** ve uygulama verilerini yönetmek ve ilişkisel veritabanları ve XML gibi veri kaynaklarıyla etkileşim kurmak için kullanma.  
+ [DataSets, DataTables ve DataViews](index.md)  
+ Veri **kümesini** ve uygulama verilerini yönetmek ve ilişkisel VERITABANLARı ile XML dahil veri kaynaklarıyla etkileşim kurmak için kullanmayı açıklar.  
   
  <xref:System.Xml.XmlDataDocument>  
- Hakkında başvuru bilgileri içerir **XmlDataDocument** sınıfı.  
+ **XmlDataDocument** sınıfı hakkında başvuru bilgileri içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 68b2f75681bef6c43b7eb2072d6e9266408ca102
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0907aa2a66e1bf51fefc7bed8ea2612cc0c830fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607188"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203222"
 ---
 # <a name="sorting-and-filtering-data"></a>Verileri Sıralama ve Filtreleme
-<xref:System.Data.DataView> İçindeki verileri sıralama ve filtreleme çeşitli yollarını sağlar bir <xref:System.Data.DataTable>:  
+, <xref:System.Data.DataView> Bir<xref:System.Data.DataTable>içindeki verileri sıralamak ve filtrelemek için çeşitli yollar sağlar:  
   
-- Kullanabileceğiniz <xref:System.Data.DataView.Sort%2A> tek belirtmek için özelliği veya sıralama düzenlerine ve ASC (artan) ve (Azalan) DESC parametreleri içeren birden çok sütunu.  
+- <xref:System.Data.DataView.Sort%2A> Özelliğini kullanarak tek veya birden çok sütun sıralama düzeni belirtebilir ve ASC (artan) ve DESC (azalan) parametreleri dahil edebilirsiniz.  
   
-- Kullanabileceğiniz <xref:System.Data.DataView.ApplyDefaultSort%2A> özelliği otomatik olarak bir sıralama düzeni artan düzende oluşturmak için temel tablonun sütunlarının ve birincil anahtar sütunu üzerinde. <xref:System.Data.DataView.ApplyDefaultSort%2A> yalnızca geçerli **sıralama** özelliği null bir başvuru ya da boş bir dize ve tabloda bir birincil anahtar tanımlı olduğunda.  
+- <xref:System.Data.DataView.ApplyDefaultSort%2A> Özelliğini, tablonun birincil anahtar sütununa veya sütunlarına göre artan sırada otomatik olarak bir sıralama düzeni oluşturmak için kullanabilirsiniz. <xref:System.Data.DataView.ApplyDefaultSort%2A>yalnızca **sıralama** özelliği null veya boş bir dize olduğunda ve tablonun tanımlı bir birincil anahtarı olduğunda geçerlidir.  
   
-- Kullanabileceğiniz <xref:System.Data.DataView.RowFilter%2A> satır kümelerine belirtmek için özellik sütun değerlerine bağlı. İçin geçerli ifadeler hakkında daha fazla ayrıntı için **RowFilter** özelliğine başvuru bilgilerine bakın <xref:System.Data.DataColumn.Expression%2A> özelliği <xref:System.Data.DataColumn> sınıfı.  
+- Özelliğini, <xref:System.Data.DataView.RowFilter%2A> sütun değerlerine göre satır alt kümelerini belirtmek için kullanabilirsiniz. **RowFilter** özelliği için geçerli ifadeler hakkında daha fazla bilgi için, <xref:System.Data.DataColumn.Expression%2A> <xref:System.Data.DataColumn> sınıfının özelliği için başvuru bilgilerine bakın.  
   
-     Verilerin bir alt kümesini, dinamik bir görünüm sağlayarak veriler üzerinde belirli bir sorgu sonuçlarını kullanma dönmek istiyorsanız <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> yöntemlerinin **DataView** en iyi performans elde etmek için değil ayarı **RowFilter** özelliği. Ayarı **RowFilter** özelliği yükü uygulamanıza ekleme ve performansı azaltarak veri dizini oluşturur. **RowFilter** özelliği en iyi şekilde kullanılır verilere bağlı uygulamada nereye bağlantılı denetim filtrelenmiş sonuçları görüntüler. **Bul** ve **FindRows** yöntemleri, yeniden oluşturulması için dizini gerek kalmadan geçerli dizini yararlanın. Hakkında daha fazla bilgi için **Bul** ve **FindRows** yöntemleri bkz [satırları bulma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md).  
+     Verilerin bir alt kümesinin dinamik bir görünümünü sağlamanın aksine, veriler üzerinde belirli bir sorgunun sonuçlarını döndürmek istiyorsanız, şu şekilde ayarlamak <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView.FindRows%2A> **yerine en iyi performansı elde etmek için DataView 'ın veya yöntemlerini kullanın RowFilter** özelliği. **RowFilter** özelliğinin ayarlanması, verilerin dizinini yeniden oluşturur, uygulamanıza ek yük ekler ve performansı azaltır. **RowFilter** özelliği, bir bağlantılı denetimin filtrelenmiş sonuçları görüntülediği veriye dayalı bir uygulamada en iyi şekilde kullanılır. **Find** ve **FindRows** yöntemleri, dizinin yeniden oluşturulmasını gerektirmeden geçerli dizinden yararlanır. **Find** ve **FindRows** yöntemleri hakkında daha fazla bilgi Için bkz. [satırları bulma](finding-rows.md).  
   
-- Kullanabileceğiniz <xref:System.Data.DataView.RowStateFilter%2A> özelliği görüntülemek için hangi satır sürümleri belirtin. **DataView** örtük olarak bağlı olarak kullanıma sunmak için hangi satır sürümünü yönetir **RowState** temel alınan satır. Örneğin, varsa **RowStateFilter** ayarlanır **DataViewRowState.Deleted**, **DataView** sunan **özgün** satır sürümü tüm **silinmiş** olduğundan satırları hiçbir **geçerli** satır sürümü. Satır hangi satır sürümünü kullanarak açıklanmasını belirlemek **RowVersion** özelliği **DataRowView**.  
+- Hangi satır sürümlerinin görüntüleneceği <xref:System.Data.DataView.RowStateFilter%2A> belirlemek için özelliğini kullanabilirsiniz. **DataView** , temel alınan satırın **RowState** öğesine bağlı olarak hangi satır sürümünün sergileceğini dolaylı olarak yönetir. Örneğin, **RowStateFilter** , **DataViewRowState. Deleted**olarak ayarlandıysa, **geçerli** satır sürümü bulunmadığından **DataView** , **silinen** tüm satırların **orijinal** satır sürümünü kullanıma sunar. **DataRowView**'ın **ROWVERSION** özelliğini kullanarak bir satırın hangi satır sürümünün gösterilmesini belirleyebilirsiniz.  
   
-     Aşağıdaki tabloda ilişkin seçenekler gösterilir **DataViewRowState**.  
+     Aşağıdaki tabloda, **DataViewRowState**seçenekleri gösterilmektedir.  
   
     |DataViewRowState seçenekleri|Açıklama|  
     |------------------------------|-----------------|  
-    |**CurrentRows**|**Geçerli** satır sürümü tüm **Unchanged**, **eklenen**, ve **değiştirilen** satır. Bu varsayılandır.|  
-    |**Eklendi**|**Geçerli** satır sürümü tüm **eklenen** satır.|  
-    |**silindi**|**Özgün** satır sürümü tüm **silinmiş** satır.|  
-    |**ModifiedCurrent**|**Geçerli** satır sürümü tüm **değiştirilen** satır.|  
-    |**ModifiedOriginal**|**Özgün** satır sürümü tüm **değiştirilen** satır.|  
+    |**CurrentRows**|Tüm **değişmemiş**, **eklenen**ve **değiştirilen** satırların **geçerli** satır sürümü. Bu varsayılandır.|  
+    |**Eklenirse**|Tüm **eklenen** satırların **geçerli** satır sürümü.|  
+    |**Miyor**|**Silinen** tüm satırların **orijinal** satır sürümü.|  
+    |**ModifiedCurrent**|**Değiştirilen** tüm satırların **geçerli** satır sürümü.|  
+    |**Modifiedorijinal**|**Değiştirilen** tüm satırların **orijinal** satır sürümü.|  
     |**Yok.**|Satır yok.|  
-    |**OriginalRows**|**Özgün** satır sürümü tüm **Unchanged**, **değiştirilen**, ve **silinmiş** satır.|  
-    |**değişmedi**|**Geçerli** satır sürümü tüm **Unchanged** satır.|  
+    |**OriginalRows**|Tüm **değişmemiş**, **değiştirilen**ve **silinen** satırların **orijinal** satır sürümü.|  
+    |**Değiştirilmediği**|**Değişmeyen** tüm satırların **geçerli** satır sürümü.|  
   
- Satır durumları ve satır sürümleri hakkında daha fazla bilgi için bkz. [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Satır durumları ve satır sürümleri hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
   
- Aşağıdaki kod örneği, stoktaki birim sayısını ya da yeniden sıralama düzeyi eşit olduğu tüm ürünleri gösterir sıralanmış sağlayıcı kimliği ve ardından ürün adına göre öncelikle bir görünüm oluşturur.  
+ Aşağıdaki kod örneği, stoktaki birim sayısının yeniden sipariş düzeyine eşit veya daha küçük olduğu, önce Tedarikçi KIMLIĞI ve ardından ürün adına göre sıralanmış tüm ürünleri gösteren bir görünüm oluşturur.  
   
 ```vb  
 Dim prodView As DataView = New DataView(prodDS.Tables("Products"), _  
@@ -62,5 +62,5 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

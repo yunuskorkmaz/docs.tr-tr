@@ -7,19 +7,19 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602483"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202915"
 ---
 # <a name="-c-compiler-options"></a>@ (C# Derleyici Seçenekleri)
 @ Seçeneği, derlemek için derleyici seçeneklerini ve kaynak kodu dosyalarını içeren bir dosya belirtmenizi sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
-```  
+```console  
 @response_file  
 ```  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69602483"
   
  Bir derlemede birden fazla yanıt dosyası belirtmek için, birden çok yanıt dosyası seçeneği belirtin. Örneğin:  
   
-```  
+```console  
 @file1.rsp @file2.rsp  
 ```  
   

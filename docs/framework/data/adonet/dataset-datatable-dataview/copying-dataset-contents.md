@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: 29afeb84498f2b1d000940ddc28545602a44d408
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626145"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205168"
 ---
 # <a name="copying-dataset-contents"></a>DataSet İçeriklerini Kopyalama
-Bir kopyasını oluşturabilirsiniz bir <xref:System.Data.DataSet> böylece özgün veriler etkilenmeden verileri ile çalışma veya iş verilerin bir alt kümesi ile bir **veri kümesi**. Kopyalama işlemi sırasında bir **veri kümesi**, şunları yapabilirsiniz:  
+Özgün verileri etkilemeden verilerle çalışabilmeniz veya bir <xref:System.Data.DataSet> veri **kümesindeki**verilerin bir alt kümesiyle çalışmanız için bir kopyasını oluşturabilirsiniz. Bir **veri kümesini**kopyalarken şunları yapabilirsiniz:  
   
-- Tam bir kopyasını oluşturma **veri kümesi**şema, veri, satır durum bilgilerini ve satır sürümleri dahil olmak üzere.  
+- Şema, veri, satır durum bilgileri ve satır sürümleri dahil olmak üzere **veri kümesinin**tam bir kopyasını oluşturun.  
   
-- Oluşturma bir **veri kümesi** varolan şema içeren **veri kümesi**, ancak yalnızca değiştirilen satırları. Değiştirilmiş tüm satırları döndürür veya belirli bir belirtin **DataRowState**. Satır durumları hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+- Mevcut bir **veri kümesinin**şemasını Içeren bir **veri kümesi** oluşturun, ancak yalnızca değiştirilmiş olan satırları. Değiştirilen tüm satırları döndürebilir veya belirli bir **DataRowState**belirtebilirsiniz. Satır durumları hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
   
-- Şema veya ilişkisel yapısını kopyası **veri kümesi** yalnızca, tüm satırları kopyalama olmadan. Satırları, varolan içine aktarılabilir <xref:System.Data.DataTable> kullanarak <xref:System.Data.DataTable.ImportRow%2A>.  
+- Herhangi bir satırı kopyalamadan yalnızca **veri kümesinin** şemasını veya ilişkisel yapısını kopyalayın. Satırlar var olan <xref:System.Data.DataTable> bir using <xref:System.Data.DataTable.ImportRow%2A>öğesine aktarılabilir.  
   
- Tam bir kopyasını oluşturmak için **veri kümesi** hem şema hem de veri içeren, kullanın <xref:System.Data.DataSet.Copy%2A> yöntemi **veri kümesi**. Aşağıdaki kod örneği, tam bir kopyasını oluşturma işlemi gösterilmektedir **veri kümesi**.  
+ Hem şema hem de verileri içeren **veri kümesinin** tam bir kopyasını oluşturmak için, <xref:System.Data.DataSet.Copy%2A> **veri kümesinin**yöntemini kullanın. Aşağıdaki kod örneği, **veri kümesinin**tam bir kopyasının nasıl oluşturulacağını gösterir.  
   
 ```vb  
 Dim copyDataSet As DataSet = customerDataSet.Copy()  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Bir kopyasını oluşturmak için bir **veri kümesi** içeren şema ve yalnızca verileri temsil eden **eklenen**, **değiştirilen**, veya **silinmiş** satır kullanın <xref:System.Data.DataSet.GetChanges%2A> yöntemi **veri kümesi**. Ayrıca **GetChanges** geçirerek yalnızca belirtilen satır durumuna sahip satır döndürülecek bir **DataRowState** değer çağrılırken **GetChanges**. Aşağıdaki kod örneğinde nasıl geçirileceğini gösterir. bir **DataRowState** çağırırken **GetChanges**.  
+ Şemayı ve yalnızca **eklenen**, **değiştirilen**veya **silinen** satırları temsil eden verileri içeren bir <xref:System.Data.DataSet.GetChanges%2A> **veri kümesinin** kopyasını oluşturmak için, **veri kümesinin**yöntemini kullanın. GetChanges 'ı çağırırken yalnızca belirtilen satır durumundaki satırları döndürmek için **GetChanges** 'ı da kullanabilirsiniz. Aşağıdaki kod örneği, **GetChanges**çağrılırken **DataRowState** 'in nasıl geçirileceğini gösterir.  
   
 ```vb  
 ' Copy all changes.  
@@ -48,9 +48,9 @@ DataSet changeDataSet = customerDataSet.GetChanges();
 DataSet addedDataSet= customerDataSet.GetChanges(DataRowState.Added);  
 ```  
   
- Bir kopyasını oluşturmak için bir **veri kümesi** kullanmak, yalnızca şema içeren <xref:System.Data.DataSet.Clone%2A> yöntemi **veri kümesi**. Ayrıca var olan satır kopyalanan ekleyebilirsiniz **veri kümesi** kullanarak **ImportRow** yöntemi **DataTable**. **ImportRow** veri satırı durumu ve satır sürüm bilgilerini belirtilen tabloya ekler. Sütun değerleri eklenir yalnızca sütun adı eşleştiği ve veri türü uyumludur.  
+ Yalnızca şemayı içeren bir **veri kümesinin** kopyasını oluşturmak için <xref:System.Data.DataSet.Clone%2A> **veri kümesinin**yöntemini kullanın. Ayrıca, **DataTable**'ın **ImportRow** yöntemini kullanarak kopyalanan **veri kümesine** mevcut satırları ekleyebilirsiniz. **ImportRow** , belirtilen tabloya veri, satır durumu ve satır sürümü bilgilerini ekler. Sütun değerleri yalnızca sütun adının eşleştiği ve veri türünün uyumlu olduğu yerlerde eklenir.  
   
- Aşağıdaki kod örneği bir kopyasını oluşturur. bir **veri kümesi** ve ardından özgün satırları ekler **veri kümesi** için **müşteriler** tablosundaki **veri kümesi**  kopya müşteriler için burada **CountryRegion alanı** sütununun değeri "Germany".  
+ Aşağıdaki kod örneği, bir **veri kümesinin** kopyasını oluşturur ve ardından orijinal **veri kümesindeki** satırları, **Ülke Bölgesi** sütununun "Almanya" değerine sahip olduğu müşteriler için **veri kümesi** kopyasının **müşteriler** tablosuna ekler. ".  
   
 ```vb  
 Dim customerDataSet As New DataSet  
@@ -98,5 +98,5 @@ foreach (DataRow copyRow in copyRows)
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

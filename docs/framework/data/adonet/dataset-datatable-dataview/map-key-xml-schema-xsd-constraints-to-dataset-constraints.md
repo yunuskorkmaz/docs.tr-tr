@@ -2,28 +2,28 @@
 title: Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: 46a980f06198c6f06bb13824c65cfb5309eec154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6fcdae77c2f2ac07ea5cd16baf07cd5de36d25b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034235"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203471"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
-Şemada, bir öğenin anahtar kısıtlaması belirtebilir veya özniteliğini kullanarak **anahtar** öğesi. Öğe veya öznitelik bir anahtar kısıtlaması belirtilen şema örnek benzersiz değerlere sahip olmalıdır ve null değer olamaz.  
+Bir şemada, **anahtar** öğesini kullanarak bir öğe veya öznitelik üzerinde anahtar kısıtlaması belirtebilirsiniz. Anahtar kısıtlamasının belirtilen öğesi veya özniteliği herhangi bir şema örneğinde benzersiz değerlere sahip olmalı ve null değerlere sahip olamaz.  
   
- Anahtar kısıtlaması, bir anahtar kısıtlaması tanımlandığı sütunu null değerler alamaz dışında benzersiz kısıtlama için benzerdir.  
+ Anahtar kısıtlaması, anahtar kısıtlamasının tanımlandığı sütunun null değerlere sahip olmadığı durumlar dışında, UNIQUE kısıtlamasına benzerdir.  
   
- Aşağıdaki tabloda ana hatlarını **msdata** belirleyebilirsiniz öznitelikleri **anahtar** öğesi.  
+ Aşağıdaki tabloda, **anahtar** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Bu öznitelik belirtilmezse, değeri kısıtlama adı kullanılır. Aksi takdirde, **adı** özniteliği kısıtlama adı değerini sağlar.|  
-|**msdata:PrimaryKey**|Varsa `PrimaryKey="true"` var, **IsPrimaryKey** kısıtlaması özelliği **true**, bu nedenle birincil anahtar kolaylaştırır. **AllowDBNull** column özelliği ayarlandığında **false**, birincil anahtarlar null değerler olamaz.|  
+|**msdata:ConstraintName**|Bu öznitelik belirtilmişse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **Name** özniteliği kısıtlama adının değerini sağlar.|  
+|**msdata:PrimaryKey**|Varsa `PrimaryKey="true"` , **IsPrimaryKey** kısıtlama özelliği **true**olarak ayarlanır ve bu sayede birincil anahtar yapılır. **AllowDBNull** Column özelliği **false**olarak ayarlanır, çünkü birincil anahtarlar null değerlere sahip olamaz.|  
   
- Bir anahtar kısıtlaması belirtilirse şema dönüştürmek eşleme işlemi ile tablosunda benzersiz kısıtlama oluşturur **AllowDBNull** column özelliği ayarlanmış **false** her sütun için kısıtlama. **IsPrimaryKey** de UNIQUE kısıtlaması özelliği ayarlanmış **false** belirtmiş olduğunuz sürece `msdata:PrimaryKey="true"` üzerinde **anahtar** öğesi. Bu kısıtlama, şemada aynıdır `PrimaryKey="true"`.  
+ Anahtar kısıtlamasının belirtildiği şemayı dönüştürürken, eşleme işlemi kısıtlamadaki her bir sütun için **AllowDBNull** Column özelliği **false** olarak ayarlanmış tabloda benzersiz bir kısıtlama oluşturur. **Anahtar** öğesinde `msdata:PrimaryKey="true"` belirtmediğiniz müddetçe, UNIQUE kısıtlamasının **IsPrimaryKey** özelliği de **false** olarak ayarlanır. Bu, şemadaki şema `PrimaryKey="true"`içindeki benzersiz bir kısıtlama ile aynıdır.  
   
- Aşağıdaki şema örnekte **anahtarı** öğesi üzerinde anahtar kısıtlaması belirtir **CustomerID** öğesi.  
+ Aşağıdaki şema örneğinde, **anahtar** öğesi **MüşteriNo** öğesinde anahtar kısıtlamasını belirtir.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ ms.locfileid: "62034235"
 </xs:schema>   
 ```  
   
- **Anahtarı** öğesi belirtir değerlerini **CustomerID** alt öğesi **müşteriler** öğesi benzersiz değerlere sahip olmalıdır ve null değer olamaz. XML Şeması Tanım Dili (XSD) şemaya çevirme aşağıdaki tabloda eşleme işlemi oluşturur:  
+ **Anahtar** öğesi, **Customers** öğesinin **MüşteriNo** alt öğesi değerlerinin benzersiz değerlere sahip olması gerektiğini belirtir ve null değerlere sahip olamaz. XML şeması tanım dili (XSD) şemasını çevirirken, eşleme işlemi aşağıdaki tabloyu oluşturur:  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- XML şema eşleme ayrıca oluşturur bir **UniqueConstraint** üzerinde **CustomerID** sütun, aşağıda gösterildiği gibi <xref:System.Data.DataSet>. (Kolaylık olması için yalnızca ilgili özellikleri gösterilmektedir.)  
+ XML Şeması eşleme, aşağıda <xref:System.Data.DataSet>gösterildiği gibi **MüşteriNo** sütununda bir **UniqueConstraint kısıtlaması** de oluşturur. (Kolaylık sağlaması için yalnızca ilgili özellikler gösterilir.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,12 +74,12 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- İçinde **veri kümesi** , oluşturulduğunda, **IsPrimaryKey** özelliği **UniqueConstraint** ayarlanır **true** çünkü şeması belirtir `msdata:PrimaryKey="true"` içinde **anahtar** öğesi.  
+ Oluşturulan **veri kümesinde** , şema **anahtar** öğesinde belirttiğinden `msdata:PrimaryKey="true"` **UniqueConstraint** 'in **IsPrimaryKey** özelliği **true** olarak ayarlanır.  
   
- Değerini **ConstraintName** özelliği **UniqueConstraint** içinde **veri kümesi** değeri **msdata:ConstraintName** Belirtilen öznitelik **anahtar** şema öğesi.  
+ **Veri kümesindeki** **uniquekısıtlamasının** **ConstraintName** özelliğinin değeri, şemadaki **anahtar** öğesinde belirtilen **msdata: ConstraintName** özniteliğinin değeridir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

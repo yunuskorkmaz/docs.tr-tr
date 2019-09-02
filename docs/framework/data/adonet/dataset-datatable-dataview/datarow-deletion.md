@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 7c80294c4bc879e6a1df4c9d1170eef14b8b83de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46109ee1781b8b509df87b4203c51a55b9f596ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915808"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205110"
 ---
 # <a name="datarow-deletion"></a>DataRow Silme
 Nesnesinden <xref:System.Data.DataRow> bir nesneyi <xref:System.Data.DataTable> silmek için kullanabileceğiniz iki yöntem vardır: <xref:System.Data.DataRowCollection> nesnenin **Remove** <xref:System.Data.DataRow.Delete%2A> yöntemi ve **DataRow** nesnesinin yöntemi. Yöntemi, **DataRowCollection**öğesinden bir <xref:System.Data.DataRow.Delete%2A> **DataRow** siler, yöntem yalnızca silme satırını işaretler. <xref:System.Data.DataRowCollection.Remove%2A> Gerçek kaldırma, uygulama **AcceptChanges** yöntemini çağırdığında oluşur. Kullanarak <xref:System.Data.DataRow.Delete%2A>, kaldırma işleminin gerçekten kaldırılmadan önce hangi satırların silinmek üzere işaretlendiğini programlı bir şekilde denetleyebilirsiniz. Bir satır silinmek üzere işaretlendiğinde, <xref:System.Data.DataRow.RowState%2A> özelliği olarak <xref:System.Data.DataRow.Delete%2A>ayarlanır.  
@@ -49,5 +49,5 @@ workRow.Delete();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
 - [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

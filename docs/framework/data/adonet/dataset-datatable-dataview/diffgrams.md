@@ -2,17 +2,17 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934474"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204883"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram, veri öğelerinin geçerli ve orijinal sürümlerini tanımlayan bir XML biçimidir. , <xref:System.Data.DataSet> İçeriğini yüklemek ve sürdürmek ve bir ağ bağlantısı üzerinden aktarım için içeriğini serileştirmek için DiffGram biçimini kullanır. Bir <xref:System.Data.DataSet> DiffGram olarak yazıldığında, hem <xref:System.Data.DataSet> **özgün** **hem de sütun değerleri dahil olmak üzere içeriği doğru şekilde yeniden oluşturmak için, DiffGram değerini tüm gerekli bilgilerle doldurur. Geçerli** satır sürümleri, satır hata bilgileri ve satır sırası.  
   
- XML Web hizmetinden bir <xref:System.Data.DataSet> gönderme ve alma işlemi yaparken, DiffGram biçimi örtülü olarak kullanılır. Ayrıca, <xref:System.Data.DataSet> **ReadXml** yöntemini kullanarak bir XML 'in içeriğini yüklerken veya <xref:System.Data.DataSet> **WriteXml** metodunu kullanarak XML içindeki içeriğini yazarken, içeriğin bir DiffGram olarak okunacağını veya yazıldığını belirtebilirsiniz. Daha fazla bilgi için bkz. [XML 'Den veri kümesi yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) ve [XML verileri olarak veri kümesi içerikleri yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ XML Web hizmetinden bir <xref:System.Data.DataSet> gönderme ve alma işlemi yaparken, DiffGram biçimi örtülü olarak kullanılır. Ayrıca, <xref:System.Data.DataSet> **ReadXml** yöntemini kullanarak bir XML 'in içeriğini yüklerken veya <xref:System.Data.DataSet> **WriteXml** metodunu kullanarak XML içindeki içeriğini yazarken, içeriğin bir DiffGram olarak okunacağını veya yazıldığını belirtebilirsiniz. Daha fazla bilgi için bkz. [XML 'Den veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML verileri olarak veri kümesi içerikleri yazma](writing-dataset-contents-as-xml-data.md).  
   
  DiffGram biçimi öncelikle .NET Framework tarafından, içeriği için bir <xref:System.Data.DataSet>serileştirme biçimi olarak kullanıldığında, bir Microsoft SQL Server veritabanındaki tablolardaki verileri değiştirmek için de DiffGram kullanabilirsiniz.  
   
@@ -133,8 +133,8 @@ DiffGram, veri öğelerinin geçerli ve orijinal sürümlerini tanımlayan bir X
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML Verileri Olarak DataSet İçeriği Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
+- [XML Verileri Olarak DataSet İçeriği Yazma](writing-dataset-contents-as-xml-data.md)
+- [DataSets, DataTables ve DataViews](index.md)
 - [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

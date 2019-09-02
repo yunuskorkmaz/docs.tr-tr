@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034365"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205053"
 ---
 # <a name="datatable-constraints"></a>DataTable Kısıtlamaları
-Kısıtlamaları verileri kısıtlamalarını uygulamak için kullanabileceğiniz bir <xref:System.Data.DataTable>, veri bütünlüğünü korumak için. Bir sınırlamadır uygulanan otomatik bir kural, bir sütun veya ilgili sütunlar için belirleyen kursu eyleminin bir satırın değerini şekilde değiştirildiğinde. Kısıtlamaları zorunlu olduğunda `System.Data.DataSet.EnforceConstraints` özelliği <xref:System.Data.DataSet> olduğu **true**. Nasıl ayarlanacağı gösteren kod örneği için `EnforceConstraints` özelliği bkz <xref:System.Data.DataSet.EnforceConstraints%2A> başvuru konusu.  
+Verilerin bütünlüğünü sağlamak için, bir <xref:System.Data.DataTable>içindeki veriler üzerinde kısıtlama zorlamak üzere kısıtlamaları kullanabilirsiniz. Kısıtlama bir sütuna veya ilgili sütunlara uygulanan bir otomatik kuraldır ve bir satırın değeri bir değer değiştiğinde eylem kursu belirler. `System.Data.DataSet.EnforceConstraints` Özelliği true<xref:System.Data.DataSet> olduğunda kısıtlamalar uygulanır. `EnforceConstraints` Özelliği ayarlamayı gösteren bir kod örneği için <xref:System.Data.DataSet.EnforceConstraints%2A> bkz. başvuru konusu.  
   
- ADO.NET'te kısıtlamaları iki tür vardır: <xref:System.Data.ForeignKeyConstraint> ve <xref:System.Data.UniqueConstraint>. Ekleyerek en az iki tablo arasında bir ilişki oluşturduğunuzda varsayılan olarak, her iki kısıtlamalar otomatik olarak oluşturulan bir <xref:System.Data.DataRelation> için **veri kümesi**. Ancak, bu davranışı belirtilerek devre dışı bırakabilirsiniz **createConstraints** = **false** ilişki oluştururken.  
+ ADO.NET içinde iki tür kısıtlama vardır: <xref:System.Data.ForeignKeyConstraint> <xref:System.Data.UniqueConstraint>ve. Varsayılan olarak, <xref:System.Data.DataRelation> **veri kümesine**bir ekleyerek iki veya daha fazla tablo arasında bir ilişki oluşturduğunuzda her iki kısıtlama otomatik olarak oluşturulur. Ancak, ilişki oluştururken**yanlış** **createkısıtlamalarını** = belirterek bu davranışı devre dışı bırakabilirsiniz.  
   
 ## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
- A **ForeignKeyConstraint** hakkında güncelleştirme ve silme ilişkili tablolar için nasıl yayılır kuralları zorunlu kılar. Örneğin, bir değer, bir tablonun satır güncelleştirilemiyor veya silinemiyor ve aynı değeri de birinde kullanılır veya tabloları, ilgili daha fazla bir **ForeignKeyConstraint** ilişkili tabloların ne olacağını belirler.  
+ Bir **ForeignKeyConstraint** , ilgili tablolarda güncelleştirmelerin ve silinme işlemlerinin nasıl yayıldığı hakkında kurallara zorlar. Örneğin, bir tablonun bir satırındaki bir değer güncellenir veya silinirse ve aynı değer aynı zamanda bir veya daha fazla ilişkili tabloda kullanılıyorsa, **ForeignKeyConstraint** ilişkili tablolarda ne olduğunu belirler.  
   
- <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> Ve <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> özelliklerini **ForeignKeyConstraint** silin veya ilgili bir tabloda bir satırı güncelleştirmek kullanıcının çalışır olduğunda gerçekleştirilecek eylem tanımlayın. Aşağıdaki tablo kullanılabilecek farklı ayarlar açıklanır **DeleteRule** ve **UpdateRule** özelliklerini **ForeignKeyConstraint**.  
+ ForeignKeyConstraint <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> ve <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> özellikleri, Kullanıcı ilgili tablodaki bir satırı silmeye veya güncelleştirmeye çalıştığında gerçekleştirilecek eylemi tanımlar. Aşağıdaki tabloda, **ForeignKeyConstraint**'In **DeleteRule** ve **UpdateRule** özellikleri için kullanılabilen farklı ayarlar açıklanmaktadır.  
   
 |Kural ayarı|Açıklama|  
 |------------------|-----------------|  
-|**Basamakla**|Silin veya ilişkili satırları güncelleştirin.|  
-|**SetNull**|İlişkili satırların değerleri ayarlayın **DBNull**.|  
-|**SetDefault**|Değerleri ilişkili satırları için varsayılan değer olarak ayarlayın.|  
-|**Yok.**|İlgili satır eylem yok. Bu varsayılandır.|  
+|**Seçilemez**|İlişkili satırları silin veya güncelleştirin.|  
+|**SetNull**|İlgili satırlardaki değerleri **DBNull**olarak ayarlayın.|  
+|**SetDefault**|İlgili satırlardaki değerleri varsayılan değere ayarlayın.|  
+|**Yok.**|İlgili satırlarda hiçbir işlem yapın. Bu varsayılandır.|  
   
- A **ForeignKeyConstraint** yaymak olarak değişiklikleriyle ilgili sütunları, kısıtlayabilirsiniz. Özellikleri için bağlı olarak **ForeignKeyConstraint** bir sütunun varsa **EnforceConstraints** özelliği **veri kümesi** olduğu **true**, belirli işlemleri üst satırda bir özel durum neden olur. Örneğin, varsa **DeleteRule** özelliği **ForeignKeyConstraint** olduğu **hiçbiri**, herhangi bir alt satır varsa, bir üst satır silinemiyor.  
+ Bir **ForeignKeyConstraint** , ilişkili sütunlardaki değişiklikleri kısıtlayabilir ve yayabilir. Bir sütunun **ForeignKeyConstraint** için ayarlanan özelliklere bağlı olarak, **veri kümesinin** **enforcekısıtlamalar** özelliği **true**ise, üst satırda belirli işlemleri gerçekleştirmek bir özel durumla sonuçlanır. Örneğin, **ForeignKeyConstraint** 'In **DeleteRule** özelliği **none**ise, bir üst satır alt satırları varsa silinemez.  
   
- Bir yabancı anahtar kısıtlaması bir dizi kullanarak sütunları arasında veya tek bir sütun oluşturabilirsiniz **ForeignKeyConstraint** Oluşturucusu. Ortaya çıkan geçirmek **ForeignKeyConstraint** nesnesini **Ekle** tablonun yöntemi **kısıtlamaları** özelliğinin bir **ConstraintCollection**. Oluşturucu bağımsız ilişkin çeşitli aşırı yükler için de geçirebilirsiniz **Ekle** yöntemi bir **ConstraintCollection** oluşturmak için bir **ForeignKeyConstraint**.  
+ **ForeignKeyConstraint** oluşturucusunu kullanarak, tek sütunlar arasında veya bir sütun dizisi arasında yabancı anahtar kısıtlaması oluşturabilirsiniz. Elde edilen **ForeignKeyConstraint** nesnesini tablonun **kısıtlamalar** özelliğinin **Add** yöntemine geçirin, bu bir **ConstraintCollection**. Ayrıca, bir **ForeignKeyConstraint**oluşturmak için, Oluşturucu bağımsız değişkenlerini bir **ConstraintCollection** **Add** yönteminin çeşitli aşırı yüküne geçirebilirsiniz.  
   
- Oluştururken bir **ForeignKeyConstraint**, geçirebilirsiniz **DeleteRule** ve **UpdateRule** değerleri oluşturucusu için bağımsız değişkenler veya olarak ayarlayabilirsiniz gibi özellikleri Örnek (burada **DeleteRule** değeri ayarı **hiçbiri**).  
+ Bir **ForeignKeyConstraint**oluştururken, **DeleteRule** ve **UpdateRule** değerlerini bağımsız değişken olarak oluşturucuya geçirebilirsiniz ya da aşağıdaki örnekte olduğu gibi özellikler olarak ayarlayabilirsiniz (burada **DeleteRule** değeri olarak ayarlanır **) Yok**).  
   
 ```vb  
 Dim custOrderFK As ForeignKeyConstraint = New ForeignKeyConstraint("CustOrderFK", _  
@@ -54,27 +54,27 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 ```  
   
 ### <a name="acceptrejectrule"></a>AcceptRejectRule  
- Satırlara değişiklikler kullanarak kabul edilen **AcceptChanges** yöntemi veya iptal edilmiş kullanarak **RejectChanges** yöntemi **veri kümesi**, **DataTable**, veya **DataRow**. Olduğunda bir **veri kümesi** içeren **sağlayan**, çağrılıyor **AcceptChanges** veya **RejectChanges** yöntemleriniuygular **AcceptRejectRule**. **AcceptRejectRule** özelliği **ForeignKeyConstraint** alt gerçekleştirilecek eylemi belirler ne zaman satırları **AcceptChanges** veya  **RejectChanges** üst satırda çağrılır.  
+ Satırlarda yapılan değişiklikler **AcceptChanges** yöntemi kullanılarak kabul edilebilir veya **DataSet**, **DataTable**veya **DataRow**' ın **RejectChanges** yöntemi kullanılarak iptal edilebilir. Bir **veri kümesi** **ForeignKeyConstraints**Içerdiğinde, **AcceptChanges** veya **RejectChanges** yöntemlerini çağırmak **AcceptRejectRule**'yi zorlar. **ForeignKeyConstraint** 'ın **AcceptRejectRule** özelliği, üst satırda **AcceptChanges** veya **RejectChanges** çağrıldığında alt satırlarda hangi eylemin alınacağını belirler.  
   
- Aşağıdaki tabloda kullanılabilir ayarlarını listeler **AcceptRejectRule**.  
+ Aşağıdaki tabloda, **AcceptRejectRule**için kullanılabilir ayarlar listelenmektedir.  
   
 |Kural ayarı|Açıklama|  
 |------------------|-----------------|  
-|**Basamakla**|Veya alt satırlara değişiklikler reddedebilirsiniz.|  
-|**Yok.**|Alt satırlar üzerinde eylem yok. Bu varsayılandır.|  
+|**Seçilemez**|Alt satırlardaki değişiklikleri kabul edin veya reddedin.|  
+|**Yok.**|Alt satırlarda hiçbir işlem yapın. Bu varsayılandır.|  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, oluşturur bir <xref:System.Data.ForeignKeyConstraint>, birkaç dahil olmak üzere özellikleri ayarlar <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>ve bu gruba ekler <xref:System.Data.ConstraintCollection> , bir <xref:System.Data.DataTable> nesne.  
+ Aşağıdaki örnek bir <xref:System.Data.ForeignKeyConstraint>oluşturur, ve <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>dahil olmak üzere bazı özelliklerini ayarlar <xref:System.Data.ConstraintCollection> ve bir <xref:System.Data.DataTable> nesnesinin öğesine ekler.  
   
  [!code-csharp[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/CS/source.cs#1)]
  [!code-vb[DataWorks Data.AcceptRejectRule#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.AcceptRejectRule/VB/source.vb#1)]  
   
-## <a name="uniqueconstraint"></a>UniqueConstraint  
- **UniqueConstraint** tek bir sütun veya sütun bir dizi atanan nesne, bir **DataTable**, tüm verilerini belirtilen sütun veya sütunlar satır benzersiz olmasını sağlar. Bir sütun veya sütun dizisi için benzersiz bir Kısıt kullanarak oluşturabileceğiniz **UniqueConstraint** Oluşturucusu. Ortaya çıkan geçirmek **UniqueConstraint** nesnesini **Ekle** tablonun yöntemi **kısıtlamaları** özelliğinin bir **ConstraintCollection**. Oluşturucu bağımsız ilişkin çeşitli aşırı yükler için de geçirebilirsiniz **Ekle** yöntemi bir **ConstraintCollection** oluşturmak için bir **UniqueConstraint**. Oluştururken bir **UniqueConstraint** bir sütun veya sütunlar için isteğe bağlı olarak bir birincil anahtar sütun veya sütunlar olup olmadığını belirtebilirsiniz.  
+## <a name="uniqueconstraint"></a>UniqueConstraint kısıtlaması  
+ Tek bir sütuna veya bir **DataTable**içindeki bir sütun dizisine atanabilecek **UniqueConstraint** nesnesi, belirtilen sütundaki veya sütunlardaki tüm verilerin her satır için benzersiz olmasını sağlar. **UniqueConstraint** oluşturucuyu kullanarak bir sütun veya sütun dizisi için benzersiz bir kısıtlama oluşturabilirsiniz. Elde edilen **UniqueConstraint** nesnesini, **ConstraintCollection**olan tablonun **kısıtlamalar** özelliğinin **Add** metoduna geçirin. Ayrıca, bir **UniqueConstraint kısıtlaması**oluşturmak için, Oluşturucu bağımsız değişkenlerini bir **ConstraintCollection** **Add** yönteminin çeşitli aşırı yüküne geçirebilirsiniz. Bir sütun veya sütun için bir **UniqueConstraint kısıtlaması** oluştururken, isteğe bağlı olarak sütun veya sütunların birincil anahtar olup olmadığını belirtebilirsiniz.  
   
- Ayarlayarak bir sütun için benzersiz bir Kısıt oluşturabilirsiniz **benzersiz** sütununun özellik **true**. Alternatif olarak, ayarı **benzersiz** özelliğini tek bir sütuna **false** oluşabilecek herhangi bir benzersiz kısıtlamayı kaldırır. Bir sütun veya sütunlar bir tablo için birincil anahtar olarak tanımlayan benzersiz bir kısıtlaması belirtilen sütun veya sütunlar için otomatik olarak oluşturur. Bir sütun kaldırırsanız **PrimaryKey** özelliği bir **DataTable**, **UniqueConstraint** kaldırılır.  
+ Ayrıca, sütunun **Unique** özelliğini **true**olarak ayarlayarak bir sütun için benzersiz bir kısıtlama oluşturabilirsiniz. Alternatif olarak, tek bir sütunun **Unique** özelliğinin **false** olarak ayarlanması, var olabilecek herhangi bir benzersiz kısıtlamayı kaldırır. Bir tablo için birincil anahtar olarak bir sütun veya sütun tanımlamak, belirtilen sütun veya sütunlar için otomatik olarak benzersiz bir kısıtlama oluşturur. **DataTable**'ın **PrimaryKey** özelliğinden bir sütunu kaldırırsanız, **UniqueConstraint kısıtlaması** kaldırılır.  
   
- Aşağıdaki örnek, oluşturur bir **UniqueConstraint** iki sütunu için bir **DataTable**.  
+ Aşağıdaki örnek, bir **DataTable**'ın iki sütunu Için bir **UniqueConstraint kısıtlaması** oluşturur.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -98,6 +98,6 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.DataTable>
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
-- [DataTable Şema Tanımı](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable Şema Tanımı](datatable-schema-definition.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

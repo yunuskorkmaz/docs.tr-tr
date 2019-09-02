@@ -1,25 +1,25 @@
 ---
 title: DotNet sln komutu
-description: Dotnet sln komutu eklemek, kaldırmak ve bir çözüm dosyası projelerinde listelemek için uygun bir seçenek sağlar.
+description: DotNet-sln komutu bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir seçenek sağlar.
 ms.date: 06/13/2018
-ms.openlocfilehash: a88e22c68f639f2a42e59f9a271e431f04e24a2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f18d6a2851d955d07cecc0cbc4c161cf0ec3e08
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665006"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202796"
 ---
-# <a name="dotnet-sln"></a>DotNet sln
+# <a name="dotnet-sln"></a>dotnet sln
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Ad
 
-`dotnet sln` -.NET Core çözüm dosyasını değiştirir.
+`dotnet sln`-Bir .NET Core çözüm dosyasını değiştirir.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
-```
+```console
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -30,11 +30,11 @@ dotnet sln [-h|--help]
 
 ## <a name="description"></a>Açıklama
 
-`dotnet sln` Komutu eklemek, kaldırmak ve bir çözüm dosyası projelerinde listelemek için kolay bir yol sağlar.
+`dotnet sln` Komut, bir çözüm dosyasındaki projeleri eklemek, kaldırmak ve listelemek için kullanışlı bir yol sağlar.
 
-Kullanılacak `dotnet sln` komutu, çözüm dosyası zaten var olmalıdır. Oluşturmak ihtiyacınız varsa [yeni dotnet](dotnet-new.md) komutu gibi aşağıdaki örnekte:
+`dotnet sln` Komutunu kullanmak için, çözüm dosyası zaten var olmalıdır. Bir tane oluşturmanız gerekiyorsa, aşağıdaki örnekte olduğu gibi [DotNet New](dotnet-new.md) komutunu kullanın:
 
-```
+```console
 dotnet new sln
 ```
 
@@ -44,13 +44,13 @@ dotnet new sln
 
 `add <GLOBBING_PATTERN>`
 
-Bir proje ya da birden çok proje, çözüm dosyasına eklenir. [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı terminaller üzerinde desteklenir.
+Çözüm dosyasına bir proje veya birden çok proje ekler. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı terminallerde desteklenir.
 
 `remove <PROJECT> ...`
 
 `remove <GLOBBING_PATTERN>`
 
-Bir proje ya da birden çok proje çözümü dosyasından kaldırır. [Glob desenlerinin](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı terminaller üzerinde desteklenir.
+Çözüm dosyasından bir projeyi veya birden çok projeyi kaldırır. [Glob desenleri](https://en.wikipedia.org/wiki/Glob_(programming)) UNIX/Linux tabanlı terminallerde desteklenir.
 
 `list`
 
@@ -60,39 +60,39 @@ Bir çözüm dosyasındaki tüm projeleri listeler.
 
 `SOLUTION_NAME`
 
-Çözüm dosyası kullanın. Belirtilmezse, komut için geçerli dizinde arar. Dizinde birden fazla çözüm dosyası varsa, biri belirtilmelidir.
+Kullanılacak çözüm dosyası. Belirtilmemişse, komut geçerli dizinde bir arama yapar. Dizinde birden çok çözüm dosyası varsa, birinin belirtilmesi gerekir.
 
 ## <a name="options"></a>Seçenekler
 
 `-h|--help`
 
-Komut için kısa bir Yardım yazdırır.
+Komut için kısa bir yardım yazdırır.
 
 ## <a name="examples"></a>Örnekler
 
-Bir C# projesi çözüme ekleyin:
+Bir çözüme C# proje ekleme:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj`
 
-Bir C# projesi bir çözümden Kaldır:
+Bir C# projeyi çözümden kaldırma:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj`
 
-Birden çok C# projeleri çözüme ekleyin:
+Bir çözüme C# birden çok proje ekleyin:
 
 `dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
 
-Birden çok C# projelerini bir çözümden Kaldır:
+Bir çözümden C# birden çok proje kaldırma:
 
 `dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
 
-Birden çok C# projelerinde, Glob deseni kullanılarak çözüm ekleyin:
+Bir glob C# deseninin kullanıldığı bir çözüme birden fazla proje ekleyin:
 
 `dotnet sln todo.sln add **/*.csproj`
 
-Birden çok C# projelerinde, Glob deseni kullanılarak bir çözümden kaldırmak:
+Bir glob C# deseninin kullanıldığı bir çözümden birden fazla projeyi kaldırma:
 
 `dotnet sln todo.sln remove **/*.csproj`
 
 > [!NOTE]
-> Genelleştirme CLI özelliği ancak yerine bir komut kabuğu özelliği değil. Dosyalar başarılı bir şekilde genişletmek için genelleştirme destekleyen bir kabuk kullanmanız gerekir. Genelleştirme hakkında daha fazla bilgi için bkz: [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).
+> Glob, bir CLı özelliği değil, bir komut kabuğu özelliği değil. Dosyaları başarılı bir şekilde genişletmek için glob destekleyen bir kabuk kullanmanız gerekir. Glob hakkında daha fazla bilgi için bkz. [Vikipedi](https://en.wikipedia.org/wiki/Glob_(programming)).

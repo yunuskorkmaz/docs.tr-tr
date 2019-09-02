@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 18d8a22e20626a30585f556f97b54c65f1ab46a2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 19b62c24d00903d1494a755dbeabb460935cdacd
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645785"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205934"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction Kullanarak Belirtik İşlem Uygulama
-<xref:System.Transactions.CommittableTransaction> Sınıfı sağlar sınıfını kullanarak bir işlem kullanmak uygulamalar için açık bir yol <xref:System.Transactions.TransactionScope> örtülü olarak sınıf. Birden fazla işlev çağrıları veya birden çok iş parçacığı çağrı aynı işlem kullanmak istediğiniz uygulamalar için yararlıdır. Farklı <xref:System.Transactions.TransactionScope> sınıfı, uygulama yazıcı gerekiyor özellikle çağrılacak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> tamamlama veya işlem iptal için yöntemleri.  
+Sınıfı, uygulamaların bir işlem kullanması için açık bir yol sağlar, bu da <xref:System.Transactions.TransactionScope> sınıfı örtülü olarak kullanmaktır. <xref:System.Transactions.CommittableTransaction> Birden çok işlev çağrısı veya birden çok iş parçacığı çağrısı genelinde aynı işlemi kullanmak isteyen uygulamalar için yararlıdır. Sınıfının aksine, uygulama yazıcısının işlem yürütmek veya durdurmak için özel olarak <xref:System.Transactions.CommittableTransaction.Commit%2A> ve <xref:System.Transactions.Transaction.Rollback%2A> yöntemlerini çağırması gerekir. <xref:System.Transactions.TransactionScope>  
   
-## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction sınıfı genel bakış  
+## <a name="overview-of-the-committabletransaction-class"></a>CommittableTransaction sınıfına genel bakış  
  <xref:System.Transactions.CommittableTransaction> Sınıf türetilir <xref:System.Transactions.Transaction> sınıfı, bu nedenle tüm işlevselliğini ikincisi sağlama. Özellikle yararlıdır <xref:System.Transactions.Transaction.Rollback%2A> yöntemi <xref:System.Transactions.Transaction> geri almak için de kullanılabilir sınıf bir <xref:System.Transactions.CommittableTransaction> nesne.  
   
- <xref:System.Transactions.Transaction> Sınıf benzer <xref:System.Transactions.CommittableTransaction> sınıfının ancak teklif değil bir `Commit` yöntemi. Bu işlem nesnesi (veya bunun kopyalar) diğer yöntemleri (büyük olasılıkla diğer iş parçacıkları) için işlem taahhüt olduğunda hala denetleme sırasında geçirmenizi sağlar. Çağrılan listeleme ve işlem ancak yalnızca oluşturan oy kodudur <xref:System.Transactions.CommittableTransaction> nesnenin hareketi olanağı vardır.  
+ <xref:System.Transactions.Transaction> Sınıf benzer <xref:System.Transactions.CommittableTransaction> sınıfının ancak teklif değil bir `Commit` yöntemi. Bu işlem, işlemin ne zaman planlanmakta olduğunu denetlerken, işlem nesnesini (veya bunların klonlarını) diğer yöntemlere (potansiyel olarak diğer iş parçacıklarında) geçirmenize olanak sağlar. Çağrılan kod, işlem üzerinde listeleme ve oy verebilir, ancak yalnızca <xref:System.Transactions.CommittableTransaction> nesnenin Oluşturucusu işlemi işleme olanağına sahiptir.  
   
  Followings ile çalışırken dikkat etmelisiniz <xref:System.Transactions.CommittableTransaction> sınıfı  
   
-- Oluşturma bir <xref:System.Transactions.CommittableTransaction> işlem ortam işlem ayarlı değil. Özel olarak ayarlayın ve kaynak yöneticileri sağ işlem bağlamında uygun olduğunda çalıştırmak emin olmak için ortam işlem sıfırlamak gerekir. Geçerli ortam hareket ayarlamak için statik ayarlayarak yoludur <xref:System.Transactions.Transaction.Current%2A> özelliği genel <xref:System.Transactions.Transaction> nesne.  
+- <xref:System.Transactions.CommittableTransaction> İşlem oluşturmak çevresel işlem yapmaz. Kaynak yöneticilerinin uygun olduğunda doğru işlem bağlamında çalışmasını sağlamak için, ortam işlemini özellikle ayarlamanız ve sıfırlamanız gerekir. Geçerli ortam işlemini ayarlama yöntemi, genel <xref:System.Transactions.Transaction.Current%2A> <xref:System.Transactions.Transaction> nesnede statik özelliği ayarlamadır.  
   
-- Bir <xref:System.Transactions.CommittableTransaction> nesne olamaz yeniden kullanılabilecek. Bir kez bir <xref:System.Transactions.CommittableTransaction> nesne kaydedilmiş veya geri alınmış, bir işlemde yeniden kullanılamaz. Diğer bir deyişle, geçerli ortam işlem bağlamı olarak ayarlanamaz.  
+- Bir <xref:System.Transactions.CommittableTransaction> nesne olamaz yeniden kullanılabilecek. Bir <xref:System.Transactions.CommittableTransaction> nesne kaydedildikten veya geri alındıktan sonra, bir işlem içinde yeniden kullanılamaz. Diğer bir deyişle, geçerli ortam işlem bağlamı olarak ayarlanamaz.  
   
-## <a name="creating-a-committabletransaction"></a>Bir CommittableTransaction oluşturma  
+## <a name="creating-a-committabletransaction"></a>CommittableTransaction oluşturma  
  Aşağıdaki örnek, yeni bir oluşturur <xref:System.Transactions.CommittableTransaction> ve onu kaydeder.  
   
  [!code-csharp[Tx_CommittableTx#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/tx_committabletx/cs/committabletxwithsql.cs#1)]
  [!code-vb[Tx_CommittableTx#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/tx_committabletx/vb/committabletxwithsql.vb#1)]  
   
- Bir örneğini oluşturmaktan <xref:System.Transactions.CommittableTransaction> ortam işlem bağlamı otomatik olarak ayarlanmadı. Bu nedenle, bir kaynak yöneticisi üzerinde herhangi bir işlemi bu işlemin bir parçası değil. Statik <xref:System.Transactions.Transaction.Current%2A> özelliği genel <xref:System.Transactions.Transaction> nesnesi ortam işlem almak veya ayarlamak için kullanılır ve uygulama el ile kaynak yöneticileri işlem sırasında katılabilir emin olmak için ayarlamanız gerekir. Eski ortam işlem kaydedin ve kullanmayı bitirdiğinizde geri içinde iyi bir uygulamadır <xref:System.Transactions.CommittableTransaction> nesne.  
+ Bir örneğinin <xref:System.Transactions.CommittableTransaction> oluşturulması, ortam işlem bağlamını otomatik olarak yapmaz. Bu nedenle, bir kaynak yöneticisi üzerinde herhangi bir işlem bu işlemin bir parçası değildir. <xref:System.Transactions.Transaction.Current%2A> Genel<xref:System.Transactions.Transaction> nesnedeki static özelliği, ortam işlemini ayarlamak ya da almak için kullanılır ve uygulama, kaynak yöneticilerinin işleme katılmasını sağlamak için el ile ayarlamanız gerekir. Ayrıca, eski çevresel işlemi kaydetmek ve <xref:System.Transactions.CommittableTransaction> nesneyi kullanmayı bitirdiğinizde geri yüklemek iyi bir uygulamadır.  
   
- Hareketi tamamlamak için açıkça çağırmak ihtiyacınız <xref:System.Transactions.CommittableTransaction.Commit%2A> yöntemi. Bir işlemin geri alınması için çağırmalısınız <xref:System.Transactions.Transaction.Rollback%2A> yöntemi. Unutmayın kadar önemlidir bir <xref:System.Transactions.CommittableTransaction> kaydedilmiş veya işlem hala kilitli olduğunu, tüm kaynaklardan döndürülmesine.  
+ İşlemi yürütmek için <xref:System.Transactions.CommittableTransaction.Commit%2A> yöntemi açıkça çağırmanız gerekir. Bir işlemi geri almak için <xref:System.Transactions.Transaction.Rollback%2A> yöntemini çağırmanız gerekir. Bir <xref:System.Transactions.CommittableTransaction> işlem kaydedilene veya geri alınana kadar, bu işlemde yer alan tüm kaynakların hala kilitli olduğuna dikkat edin.  
   
  Bir <xref:System.Transactions.CommittableTransaction> işlev çağrıları ve dizileri arasında nesne kullanılabilir. Ancak, bu özel durumları işlemek ve özellikle çağırmak için uygulama geliştiricisi kadar kadar <xref:System.Transactions.Transaction.Rollback%28System.Exception%29> yöntemi hataları durumunda.  
   
 ## <a name="asynchronous-commit"></a>Zaman uyumsuz tamamlama  
- <xref:System.Transactions.CommittableTransaction> Sınıfı zaman uyumsuz bir işlem Sistemi'ne yönelik bir mekanizma sağlar. Birden çok veritabanı erişimi ve olası ağ gecikmesi gerektirebilir gibi bir işlem kaydı önemli ölçüde uzun sürebilir. Yüksek verimlilik uygulamalarında kilitlenmeleri önlemek istediğinizde, işlem iş sürede tamamlamak için zaman uyumsuz tamamlama kullanın ve yürütme işlemini bir arka plan görevini çalıştırın. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> Ve <xref:System.Transactions.CommittableTransaction.EndCommit%2A> yöntemlerinin <xref:System.Transactions.CommittableTransaction> sınıfı, bunu yapmak izin.  
+ <xref:System.Transactions.CommittableTransaction> Sınıfı ayrıca bir işlemi zaman uyumsuz olarak yürütmek için bir mekanizma sağlar. Bir işlem işleme, birden çok veritabanı erişimi ve olası ağ gecikmesi olabileceği için önemli ölçüde zaman alabilir. Yüksek performanslı uygulamalarda kilitlenmeleri önlemek istediğinizde, işlem işini en kısa sürede tamamlamak için zaman uyumsuz yürütmeyi kullanabilir ve tamamlama işlemini bir arka plan görevi olarak çalıştırabilirsiniz. <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> Ve <xref:System.Transactions.CommittableTransaction.EndCommit%2A> yöntemlerinin <xref:System.Transactions.CommittableTransaction> sınıfı, bunu yapmak izin.  
   
- Çağırabilirsiniz <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> yürütme Soyguncu iş parçacığı havuzu için bir iş parçacığı gönderme. Ayrıca, çağırabilirsiniz <xref:System.Transactions.CommittableTransaction.EndCommit%2A> işlem gerçekten kaydedildi, belirlemek için. İşlem teslim herhangi bir nedenle başarısız olursa <xref:System.Transactions.CommittableTransaction.EndCommit%2A> işlem özel durumu oluşturur. İşlem henüz zaman teslim edilmemiş varsa <xref:System.Transactions.CommittableTransaction.EndCommit%2A> olduğunu hareket kaydedilmiş veya iptal kadar çağrılır, çağrıyı yapan engellenir.  
+ Çağırabilirsiniz <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> yürütme Soyguncu iş parçacığı havuzu için bir iş parçacığı gönderme. İşlemin gerçekten kaydedilmiş olup <xref:System.Transactions.CommittableTransaction.EndCommit%2A> olmadığını belirleme çağrısı yapabilirsiniz. İşlem herhangi bir nedenden dolayı işleme başarısız olursa, <xref:System.Transactions.CommittableTransaction.EndCommit%2A> bir işlem özel durumu oluşturur. İşlem henüz zamana <xref:System.Transactions.CommittableTransaction.EndCommit%2A> göre yürütülmemişse, işlem kaydedilene veya durduruluncaya kadar çağrı engellenir.  
   
- Bir zaman uyumsuz tamamlama yapmak için kolay Sistemi'ne tamamlandığında çağrılacak bir geri çağırma yöntemi sağlayarak yoludur. Ancak, çağırmalıdır <xref:System.Transactions.CommittableTransaction.EndCommit%2A> özgün yöntemini <xref:System.Transactions.CommittableTransaction> arama çağırmak için kullanılan nesne. Bu nesne elde etmek üzere alta yapabilecekleriniz *IAsyncResult* geri çağırma yöntemi parametresinin bu yana <xref:System.Transactions.CommittableTransaction> sınıfının Implements <xref:System.IAsyncResult> sınıfı.  
+ Bir zaman uyumsuz tamamlama yapmak için kolay Sistemi'ne tamamlandığında çağrılacak bir geri çağırma yöntemi sağlayarak yoludur. Ancak, çağırmalıdır <xref:System.Transactions.CommittableTransaction.EndCommit%2A> özgün yöntemini <xref:System.Transactions.CommittableTransaction> arama çağırmak için kullanılan nesne. Bu nesneyi almak için, <xref:System.Transactions.CommittableTransaction> sınıf sınıfı uyguladığı <xref:System.IAsyncResult> için geri çağırma yönteminin *IAsyncResult* parametresini alt türe dönüştürebilirsiniz.  
   
  Aşağıdaki örnek, bir zaman uyumsuz tamamlama nasıl yapılacağı gösterir.  
   
@@ -87,5 +87,5 @@ void OnCommitted(IAsyncResult asyncResult)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [İşlem Gerçekleştirme](../../../../docs/framework/data/transactions/index.md)
+- [İşlem Kapsamı Kullanarak Örtük İşlem Uygulama](implementing-an-implicit-transaction-using-transaction-scope.md)
+- [İşlem Gerçekleştirme](index.md)

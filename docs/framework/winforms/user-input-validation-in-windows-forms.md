@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 0a1d6c4c18e658d71f1baf90763e121314ea35d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7ee99d1b264f508882418c83da8e82759b0d95fa
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916290"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206127"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Forms'ta Kullanıcı Girdisi Doğrulama
 Kullanıcılar uygulamanıza veri girerken, uygulamanız onu kullanmadan önce verilerin geçerli olduğunu doğrulamak isteyebilirsiniz. Belirli metin alanlarının sıfır uzunlukta olmaması, bir alanın bir telefon numarası veya başka bir doğru biçimlendirilmiş veri türü olarak biçimlendirilmesi veya bir dizenin bir veritabanının güvenliğini tehlikeye atamak için kullanılabilecek güvenli olmayan bir karakter içermediğinden emin olmanız gerekebilir. Windows Forms, uygulamanızda girişi doğrulamanız için kullanabileceğiniz çeşitli yollar sağlar.  
@@ -85,7 +85,7 @@ Kullanıcılar uygulamanıza veri girerken, uygulamanız onu kullanmadan önce v
   
 - <xref:System.Windows.Forms.Form.Close%2A> Yöntemini programlı olarak çağırarak.  
   
- Ancak, bazı durumlarda, denetimlerde değerlerin geçerli olup olmamasına bakılmaksızın kullanıcının formu kapatmasını sağlamak isteyebilirsiniz. Formun <xref:System.Windows.Forms.Form.Closing> olayı için bir işleyici oluşturarak doğrulamayı geçersiz kılabilir ve yine de geçersiz veri içeren bir formu kapatabilirsiniz. Olayında <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini olarak `false`ayarlayın. Bu, formu kapatmaya zorlar. Daha fazla bilgi ve bir örnek için bkz <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>.  
+ Ancak, bazı durumlarda, denetimlerde değerlerin geçerli olup olmamasına bakılmaksızın kullanıcının formu kapatmasını sağlamak isteyebilirsiniz. Formun <xref:System.Windows.Forms.Form.FormClosing> olayı için bir işleyici oluşturarak doğrulamayı geçersiz kılabilir ve yine de geçersiz veri içeren bir formu kapatabilirsiniz. Olayında <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> özelliğini olarak `false`ayarlayın. Bu, formu kapatmaya zorlar. Daha fazla bilgi ve bir örnek için bkz <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>.  
   
 > [!NOTE]
 > Formun bu şekilde kapatılmasını zorlarsanız, form içindeki denetimlerin henüz kaydedilmemiş tüm verileri kaybolur. Ayrıca, kalıcı formlar, kapandıklarında denetimlerin içeriğini doğrulamaz. Odağı bir denetime kilitlemek için hala denetim doğrulaması kullanabilirsiniz, ancak formu kapatmayla ilgili davranış konusunda endişe etmeniz gerekmez.  
@@ -93,7 +93,7 @@ Kullanıcılar uygulamanıza veri girerken, uygulamanız onu kullanmadan önce v
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
-- <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
-- <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox Denetimi](./controls/maskedtextbox-control-windows-forms.md)
 - [Normal İfade Örnekleri](../../standard/base-types/regular-expression-examples.md)

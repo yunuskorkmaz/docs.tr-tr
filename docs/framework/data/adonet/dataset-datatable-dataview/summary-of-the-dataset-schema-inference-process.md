@@ -2,39 +2,39 @@
 title: DataSet Şema Çıkarımı İşleminin Özeti
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 3c43b834f7a85f43cefd29a1ceba2260145e7d1b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5266d08212e5259bd5b242a70d61e29ad9008006
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607076"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203251"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>DataSet Şema Çıkarımı İşleminin Özeti
-Çıkarım işlemi önce hangi öğelerin tablo olarak çıkarılan XML belgesinden belirler. Kalan XML'den çıkarımı işleminin bu tablonun sütunlarını belirler. İç içe tablolar için çıkarım işlem oluşturur iç içe geçmiş <xref:System.Data.DataRelation> ve <xref:System.Data.ForeignKeyConstraint> nesneleri.  
+Çıkarım işlemi ilk olarak XML belgesinden, hangi öğelerin tablo olarak gösterileceğini belirler. Kalan XML 'den, çıkarım işlemi bu tabloların sütunlarını belirler. İç içe tablolar için, çıkarım işlemi iç <xref:System.Data.DataRelation> içe <xref:System.Data.ForeignKeyConstraint> ve nesneler oluşturur.  
   
- Çıkarım kuralları kısa bir özeti aşağıda verilmiştir:  
+ Aşağıda, çıkarım kurallarının kısa bir özeti verilmiştir:  
   
-- Öznitelikleri olan öğeler, tablo olarak algılanır.  
+- Öznitelikleri olan öğeler tablo olarak algılanır.  
   
-- Alt öğeleri olan öğeler, tablo olarak algılanır.  
+- Alt öğeleri olan öğeler tablo olarak algılanır.  
   
 - Yinelenen öğeler tek bir tablo olarak algılanır.  
   
-- Belge veya kök öğe öznitelikleri ve sütun olarak çıkarılan hiçbir alt öğe varsa, olarak algılanır bir <xref:System.Data.DataSet>. Aksi takdirde, belge öğesi bir tablo olarak algılanır.  
+- Belge, veya kök, öğe bir özniteliğe sahip değilse ve sütun olarak çıkarsanmayacak alt öğe yoksa, bir <xref:System.Data.DataSet>olarak algılanır. Aksi halde, belge öğesi tablo olarak algılanır.  
   
-- Öznitelikleri sütun olarak algılanır.  
+- Öznitelikler sütun olarak algılanır.  
   
-- Hiçbir öznitelik veya alt öğeleri olan ve bu tekrarlamayın, öğeleri, sütunlar olarak algılanır.  
+- Öznitelikleri veya alt öğeleri olmayan ve tekrarsız öğeler sütun olarak algılanır.  
   
-- Ayrıca ortaya çıkan diğer öğeleri içinde iç içe geçmiş tablo olarak algılanan öğeler için farklı tabloları, iç içe bir **DataRelation** iki tablo arasında oluşturulur. Adlı yeni, birincil bir anahtar sütunu **Tablename_ıd** her iki tabloya eklenen ve tarafından kullanılan **DataRelation**. A **ForeignKeyConstraint** kullanarak iki tablo arasında oluşturulan **Tablename_ıd** sütun.  
+- Tablo olarak da gösterilen diğer öğeler içinde iç içe geçmiş tablolar olarak gösterilen öğeler için, iki tablo arasında iç içe bir **DataRelation** oluşturulur. Her iki tabloya da **TableName_Id** adlı yeni bir birincil anahtar sütunu eklenir ve **DataRelation**tarafından kullanılır. **TableName_Id** sütununu kullanan iki tablo arasında bir **ForeignKeyConstraint** oluşturulur.  
   
-- Tablo olarak çıkarılan ve metin içeriyor ancak hiçbir alt öğeleri olan öğeler için yeni bir sütun adındaki **TableName_Text** metnini öğelerin her biri için oluşturulur. Tablo olarak algılanır ve metin ancak de alt öğeye sahip bir öğe, metin göz ardı edilir.  
+- Tablo olarak gösterilen ve metin içeren ancak hiç alt öğesi olmayan öğeler için, öğelerin her birinin metni için **TableName_Text** adlı yeni bir sütun oluşturulur. Bir öğe tablo olarak algılanır ve metin içeriyorsa, ancak alt öğeleri de varsa, metin yok sayılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSet içinde XML kullanma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
+- [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
+- [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
+- [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

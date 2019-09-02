@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: 8b93b0564bbd6d760193f11d23d97ccb2cb4c943
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88f35d90f02b44b88f4bb7c6fac6a94a09afe81a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928512"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204847"
 ---
 # <a name="handling-dataset-events"></a>DataSet Olaylarını İşleme
 Nesnesi üç olay sağlar: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, ve <xref:System.Data.DataSet.MergeFailed>. <xref:System.Data.DataSet>  
@@ -53,11 +53,11 @@ private static void DataSetMergeFailed(
 > [!NOTE]
 > Ve `DataSet` nesneleri `DataTable` , ' dan <xref:System.ComponentModel.MarshalByValueComponent> devralınır<xref:System.Runtime.Serialization.ISerializable> ve uzaktan iletişim için arabirimi destekler. Bunlar uzaktan kullanılabilecek tek ADO.NET nesneleridir. Daha fazla bilgi için bkz. [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  
   
- İle `DataSet`çalışırken kullanılabilir diğer olaylar hakkında daha fazla bilgi için, bkz. [DataTable olaylarını işleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) ve [DataAdapter olaylarını işleme](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ İle `DataSet`çalışırken kullanılabilir diğer olaylar hakkında daha fazla bilgi için, bkz. [DataTable olaylarını işleme](handling-datatable-events.md) ve [DataAdapter olaylarını işleme](../handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables ve DataViews](index.md)
 - [Veriler doğrulanıyor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
 - [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

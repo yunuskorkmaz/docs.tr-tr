@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910746"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206109"
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910746"
 ## <a name="link-demands-and-wrappers"></a>Bağlantı taleplerini ve sarmalayıcıları  
  Bağlantı taleplerine sahip özel bir koruma durumu güvenlik altyapısında güçlenebilir, ancak kodunuzda olası bir zayıflığın kaynağı olmaya devam etmektedir.  
   
- Tam güvenilir kod bir [LinkDemand](../../../docs/framework/misc/link-demands.md)tarafından korunan bir özelliği, olayı veya yöntemi çağırırsa, çağıran Için **LinkDemand** izin denetimi karşılanıyorsa çağrı başarılı olur. Ayrıca, tam olarak güvenilir kod, bir özelliğin adını alan ve yansıma kullanarak **Get** erişimcisini çağıran bir sınıfı kullanıma sunarsa, Kullanıcı kodu bu özelliğe erişim hakkına sahip olmasa bile **Get** erişimcisine çağrı başarılı olur. Bunun nedeni, **LinkDemand** 'in yalnızca hemen güvenilen kod olan hemen çağrıyı denetlediğinde. Temelde, tam olarak güvenilen kod, kullanıcı kodunun bu çağrıyı yapma hakkına sahip olduğundan emin olmadan Kullanıcı kodu adına ayrıcalıklı bir çağrı yapıyor.  
+ Tam güvenilir kod bir [LinkDemand](link-demands.md)tarafından korunan bir özelliği, olayı veya yöntemi çağırırsa, çağıran Için **LinkDemand** izin denetimi karşılanıyorsa çağrı başarılı olur. Ayrıca, tam olarak güvenilir kod, bir özelliğin adını alan ve yansıma kullanarak **Get** erişimcisini çağıran bir sınıfı kullanıma sunarsa, Kullanıcı kodu bu özelliğe erişim hakkına sahip olmasa bile **Get** erişimcisine çağrı başarılı olur. Bunun nedeni, **LinkDemand** 'in yalnızca hemen güvenilen kod olan hemen çağrıyı denetlediğinde. Temelde, tam olarak güvenilen kod, kullanıcı kodunun bu çağrıyı yapma hakkına sahip olduğundan emin olmadan Kullanıcı kodu adına ayrıcalıklı bir çağrı yapıyor.  
   
  Bu tür güvenlik boşluklarını önlemeye yardımcı olmak için, ortak dil çalışma zamanı denetimi bir yönteme, oluşturucuya, özelliğe veya bir **LinkDemand**tarafından korunan olaya dolaylı çağrı üzerinde tam yığın yürüme talebine genişletir. Bu koruma, bazı performans maliyetleri doğurur ve güvenlik denetiminin semantiğini değiştirir; tam yığın ilerme isteği, daha hızlı, tek düzeyli bir denetim geçirildiğinde başarısız olabilir.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910746"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand>kod erişimi güvenlik yığını yürüme 'yi belirtir. Yığındaki tüm çağıranlar, geçirilecek belirtilen izne veya kimliğe sahip olmalıdır. Yığın farklı çağıranlar içerebileceğinden, her çağrıda **talep** oluşur. Bir yöntemi tekrar tekrar çağırırsanız, bu güvenlik denetimi her seferinde gerçekleşir. **Talep** , LTE saldırılarına karşı iyi bir koruma; üzerinden almaya çalışan yetkisiz kod algılanır.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) tam ZAMANıNDA (JIT) derleme zamanında gerçekleşir ve yalnızca anında çağrıyı denetler. Bu güvenlik denetimi çağıranın çağıranı denetlemez. Bu denetim başarılı olduktan sonra, çağıranın kaç kez arayanına bakılmaksızın ek bir güvenlik yükü yoktur. Ancak, LTE saldırılarına karşı koruma de yoktur. **LinkDemand**ile, testi geçen ve kodunuza başvuruda bulunan tüm kodlar, kötü amaçlı kodun yetkili kodu kullanarak çağrı yapmasına izin vererek güvenlik kesintiye uğramasına yol açabilir. Bu nedenle, tüm olası zayıf yanlar tamamen önlenemez olmadığı için **LinkDemand** kullanmayın.  
+- [LinkDemand](link-demands.md) tam ZAMANıNDA (JIT) derleme zamanında gerçekleşir ve yalnızca anında çağrıyı denetler. Bu güvenlik denetimi çağıranın çağıranı denetlemez. Bu denetim başarılı olduktan sonra, çağıranın kaç kez arayanına bakılmaksızın ek bir güvenlik yükü yoktur. Ancak, LTE saldırılarına karşı koruma de yoktur. **LinkDemand**ile, testi geçen ve kodunuza başvuruda bulunan tüm kodlar, kötü amaçlı kodun yetkili kodu kullanarak çağrı yapmasına izin vererek güvenlik kesintiye uğramasına yol açabilir. Bu nedenle, tüm olası zayıf yanlar tamamen önlenemez olmadığı için **LinkDemand** kullanmayın.  
   
     > [!NOTE]
-    > .NET Framework 4 ' te, bağlantı talepleri derlemelerdeki <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> özniteliğiyle değiştirilmiştir. <xref:System.Security.SecurityCriticalAttribute> Tam güven için bağlantı talebine eşdeğerdir; ancak, devralma kurallarını da etkiler. Bu değişiklik hakkında daha fazla bilgi için bkz. [güvenlik-saydam kod, düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > .NET Framework 4 ' te, bağlantı talepleri derlemelerdeki <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> özniteliğiyle değiştirilmiştir. <xref:System.Security.SecurityCriticalAttribute> Tam güven için bağlantı talebine eşdeğerdir; ancak, devralma kurallarını da etkiler. Bu değişiklik hakkında daha fazla bilgi için bkz. [güvenlik-saydam kod, düzey 2](security-transparent-code-level-2.md).  
   
  **LinkDemand** kullanılırken gereken ek önlemler ayrı ayrı programlanabilir olmalıdır; güvenlik sistemi, zorlamada yardımcı olabilir. Herhangi bir hata, güvenlik zayıflılığını açar. Kodunuzu kullanan tüm yetkili kodların, aşağıdakileri yaparak ek güvenlik uygulamaktan sorumlu olması gerekir:  
   

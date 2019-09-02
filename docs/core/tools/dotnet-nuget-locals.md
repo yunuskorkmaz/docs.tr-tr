@@ -1,18 +1,18 @@
 ---
-title: DotNet nuget Yereller komutu
-description: Dotnet nuget Yereller komutu kaldırır veya http istek önbelleği, geçici bir önbellekte ya da makine genelindeki genel paketler klasörü gibi yerel NuGet kaynakları listeler.
+title: DotNet NuGet Yereller komutu
+description: DotNet NuGet Yereller komutu http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasörü gibi yerel NuGet kaynaklarını temizler veya listeler.
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 6436bbaee7ae50f4b225c32b2245c737b0d359c3
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 0cf025f91a7582fafc401799cd1d8b933b087535
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539263"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202471"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**Bu konu için geçerlidir: ✓** .NET Core SDK'sı 1.x ve sonraki sürümler
+**Bu konu şu şekilde geçerlidir: ✓** .NET Core 1. x SDK ve sonraki sürümleri
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -20,75 +20,75 @@ ms.locfileid: "67539263"
 
 ## <a name="name"></a>Ad
 
-`dotnet nuget locals` -Temizler veya yerel NuGet kaynakları listeler.
+`dotnet nuget locals`-Yerel NuGet kaynaklarını temizler veya listeler.
 
-## <a name="synopsis"></a>Synopsis
+## <a name="synopsis"></a>Özeti
 
-```
+```console
 dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
 dotnet nuget locals [-h|--help]
 ```
 
 ## <a name="description"></a>Açıklama
 
-`dotnet nuget locals` Komut temizler veya http istek önbelleği, geçici bir önbellekte ya da makine genelindeki genel paketleri klasörünü yerel NuGet kaynakları listeler.
+`dotnet nuget locals` Komut, http-istek önbelleği, geçici önbellek veya makine genelindeki genel paketler klasöründeki yerel NuGet kaynaklarını temizler veya listeler.
 
 ## <a name="arguments"></a>Arguments
 
 * **`CACHE_LOCATION`**
 
-  Liste veya temizlemek için önbellek konumu. Aşağıdaki değerlerden birini kabul eder:
+  Listelemek veya temizlemek için önbellek konumu. Aşağıdaki değerlerden birini kabul eder:
 
-  * `all` -Tüm önbellek türleri için belirtilen işlem geçerli olduğunu gösterir: http istek önbelleği, genel paketleri yazma önbelleği ve geçici önbellek.
-  * `http-cache` -Belirtilen işlem yalnızca http isteğini önbelleğe uygulandığını gösterir. Bir önbellek konumlarını etkilenmez.
-  * `global-packages` -Belirtilen işlem yalnızca genel paketleri önbelleğe uygulandığını gösterir. Bir önbellek konumlarını etkilenmez.
-  * `temp` -Belirtilen işlem yalnızca geçici önbelleğe uygulandığını gösterir. Bir önbellek konumlarını etkilenmez.
+  * `all`-Belirtilen işlemin tüm önbellek türlerine uygulandığını belirtir: http-istek önbelleği, genel paketler önbelleği ve geçici önbellek.
+  * `http-cache`-Belirtilen işlemin yalnızca http istek önbelleğine uygulanacağını gösterir. Diğer önbellek konumları etkilenmez.
+  * `global-packages`-Belirtilen işlemin yalnızca genel paketler önbelleğine uygulanacağını gösterir. Diğer önbellek konumları etkilenmez.
+  * `temp`-Belirtilen işlemin yalnızca geçici önbelleğe uygulandığını belirtir. Diğer önbellek konumları etkilenmez.
 
 ## <a name="options"></a>Seçenekler
 
 * **`--force-english-output`**
 
-  Uygulamayı bir sabit, İngilizce tabanlı kültürü kullanarak çalıştırmak için zorlar.
+  Uygulamayı, sabit, Ingilizce tabanlı bir kültür kullanılarak çalışmaya zorlar.
 
 * **`-h|--help`**
 
-  Komut için kısa bir Yardım yazdırır.
+  Komut için kısa bir yardım yazdırır.
 
 * **`-c|--clear`**
 
-  Açık seçeneği, belirtilen önbellek türü açık bir işlem yürütür. Önbellek dizin içeriğini silinen yinelemeli olarak var. Yürütülen kullanıcı/Grup dosyalar için önbellek dizinleri de iznine sahip olmalıdır. Aksi durumda, seçili olmayan dosyaların/klasörlerin belirten bir hata görüntülenir.
+  Clear seçeneği, belirtilen önbellek türü üzerinde açık bir işlem yürütür. Önbellek dizinlerinin içeriği yinelemeli olarak silinir. Yürütülen Kullanıcı/Grup, önbellek dizinlerindeki dosyalar üzerinde izne sahip olmalıdır. Aksi takdirde, temizlenmeyen dosyaları/klasörleri gösteren bir hata görüntülenir.
 
 * **`-l|--list`**
 
-  Liste seçeneği, belirtilen önbellek türü konumunu görüntülemek için kullanılır.
+  Liste seçeneği, belirtilen önbellek türünün konumunu göstermek için kullanılır.
 
 ## <a name="examples"></a>Örnekler
 
-* Tüm yerel önbellek dizini (http-önbellek dizini, paketleri genel önbellek dizini ve geçici önbellek dizini) yollarını görüntüler:
+* Tüm yerel önbellek dizinlerinin (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini) yollarını görüntüler:
 
   ```console
   dotnet nuget locals –l all
   ```
 
-* Yerel http önbellek dizin yolunu görüntüler:
+* Yerel http önbelleği dizininin yolunu görüntüler:
 
   ```console
   dotnet nuget locals --list http-cache
   ```
 
-* Tüm yerel önbellek dizinleri (http-önbellek dizini, paketleri genel önbellek dizini ve geçici önbellek dizini) tüm dosyaları siler:
+* Tüm yerel önbellek dizinlerindeki tüm dosyaları temizler (http-önbellek dizini, genel paketler önbellek dizini ve geçici önbellek dizini):
 
   ```console
   dotnet nuget locals --clear all
   ```
 
-* Yerel paketler genel önbellek dizindeki tüm dosyaları siler:
+* Yerel genel paketler önbellek dizinindeki tüm dosyaları temizler:
 
   ```console
   dotnet nuget locals -c global-packages
   ```
 
-* Yerel geçici önbellek dizindeki tüm dosyaları siler:
+* Yerel geçici önbellek dizinindeki tüm dosyaları temizler:
 
   ```console
   dotnet nuget locals -c temp
@@ -96,4 +96,4 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Kullanırken sık karşılaşılan sorunlar ve hatalar hakkında bilgi için `dotnet nuget locals` komutu, bkz: [NuGet önbelleğini yönetme](/nuget/consume-packages/managing-the-nuget-cache).
+`dotnet nuget locals` Komutunu kullanırken yaygın sorunlar ve hatalar hakkında bilgi için bkz. [NuGet önbelleğini yönetme](/nuget/consume-packages/managing-the-nuget-cache).

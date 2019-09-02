@@ -5,78 +5,78 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607936"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203367"
 ---
 # <a name="merging-dataset-contents"></a>DataSet İçeriklerini Birleştirme
 
-Kullanabileceğiniz <xref:System.Data.DataSet.Merge%2A> içeriğini birleştirmek için yöntemi bir <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, veya <xref:System.Data.DataRow> içine var olan bir dizi `DataSet`. Yeni verilerin nasıl çeşitli Etkenler ve seçeneklerini etkileyen varolan içine birleştirilir `DataSet`.
+<xref:System.Data.DataSet.Merge%2A> Bir <xref:System.Data.DataRow> ,veya<xref:System.Data.DataTable>dizisinin içeriğini varolan`DataSet`bir, veya dizisinin içeriğine birleştirmek için yöntemini kullanabilirsiniz. <xref:System.Data.DataSet> Birçok etken ve seçenek, yeni verilerin mevcut `DataSet`bir ile nasıl birleştirildiğini etkiler.
 
 ## <a name="primary-keys"></a>Birincil anahtarlar
 
-Yeni veri ve şema bir birleştirmeden alma tabloda birincil anahtar varsa, yeni satır, gelen veri aynı olan mevcut satırlarla eşleştirilir <xref:System.Data.DataRowVersion.Original> birincil anahtar değerleri gelen verilerdeki gideriyor. Gelen şema sütunlarından mevcut şema eşleşen, var olan satırlardaki verileri değiştirildi. Varolan şema eşleşmeyen sütun göz ardı veya temel alınarak eklenen <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> parametresi. Var olan tüm satırları eşleşmeyen birincil anahtar değerlerine sahip yeni satırlar için var olan tablo eklenir.
+Bir birleştirmeden yeni veri ve şema alan tablonun birincil anahtarı varsa, gelen verilerdeki yeni satırlar, gelen verilerdeki aynı <xref:System.Data.DataRowVersion.Original> birincil anahtar değerlerine sahip varolan satırlarla eşleştirilir. Gelen şemadaki sütunlar var olan şemadan eşleşiyorsa, varolan satırlardaki veriler değiştirilir. Varolan şemayla eşleşmeyen sütunlar yok sayılır veya <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> parametreye göre eklenir. Varolan satırlarla eşleşmeyen birincil anahtar değerleri olan yeni satırlar varolan tabloya eklenir.
 
-Gelen veya var olan satır satır durumunu varsa <xref:System.Data.DataRowState.Added>, birincil anahtar değerlerini kullanarak eşleştirilir <xref:System.Data.DataRowVersion.Current> birincil anahtar değeri `Added` çünkü satır hiçbir `Original` satır sürümü yok.
+Gelen veya mevcut satırlarda <xref:System.Data.DataRowState.Added>satır durumu varsa, `Original` satır sürümü mevcut olmadığından birincil anahtar değerleri `Added` satırın <xref:System.Data.DataRowVersion.Current> birincil anahtar değeri kullanılarak eşleştirilir.
 
-Gelen bir tablo ve mevcut bir tabloyu bir sütunla aynı ada ancak farklı veri türleri içeriyorsa, özel durum oluşur ve <xref:System.Data.DataSet.MergeFailed> olayı `DataSet` tetiklenir. Gelen bir tablo ve var olan bir tablo anahtarları tanımladığınız, ancak birincil anahtarları farklı sütunlar için bir özel durum oluşturulur ve `MergeFailed` olayı `DataSet` tetiklenir.
+Gelen bir tablo ve varolan bir tablo, aynı ada ancak farklı veri türlerine sahip bir sütun içeriyorsa, bir özel durum oluşturulur ve <xref:System.Data.DataSet.MergeFailed> olay `DataSet` tetiklenir. Bir gelen tablo ve var olan bir tabloda hem tanımlanmış anahtarlar varsa, ancak birincil anahtarlar farklı sütunlara ait ise, bir özel durum oluşturulur ve `MergeFailed` olay `DataSet` tetiklenir.
 
-Bir birleştirmeden yeni veri alma tablosu birincil anahtar yoksa, yeni satır, gelen veri mevcut tablosundaki satırlara eşleştirilemiyor ve bunun yerine mevcut tablosuna eklenir.
+Bir birleştirmeden yeni veri alan tablonun birincil anahtarı yoksa, gelen verilerden yeni satırlar tablodaki varolan satırlarla eşleştirilemez ve bunun yerine var olan tabloya eklenir.
 
 ## <a name="table-names-and-namespaces"></a>Tablo adları ve ad alanları
 
-<xref:System.Data.DataTable> nesneleri isteğe bağlı olarak atanabilir bir <xref:System.Data.DataTable.Namespace%2A> özellik değeri. Zaman <xref:System.Data.DataTable.Namespace%2A> değerler atanır, bir <xref:System.Data.DataSet> birden çok içerebilir <xref:System.Data.DataTable> nesnelerle aynı <xref:System.Data.DataTable.TableName%2A> değeri. Birleştirme işlemleri sırasında hem de <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataTable.Namespace%2A> birleştirme hedefi tanımlamak için kullanılır. Hayır ise <xref:System.Data.DataTable.Namespace%2A> , yalnızca atanmış <xref:System.Data.DataTable.TableName%2A> birleştirme hedefi tanımlamak için kullanılır.
+<xref:System.Data.DataTable>isteğe bağlı olarak, nesnelere bir <xref:System.Data.DataTable.Namespace%2A> Özellik değeri atanabilir. Değerler atandığında, bir <xref:System.Data.DataSet> , <xref:System.Data.DataTable> aynı<xref:System.Data.DataTable.TableName%2A> değere sahip birden fazla nesne içerebilir. <xref:System.Data.DataTable.Namespace%2A> Birleştirme işlemleri sırasında, <xref:System.Data.DataTable.TableName%2A> ve <xref:System.Data.DataTable.Namespace%2A> birleştirmenin hedefini belirlemek için kullanılır. Hiçbiri <xref:System.Data.DataTable.Namespace%2A> atanmamışsa, <xref:System.Data.DataTable.TableName%2A> yalnızca bir birleştirmenin hedefini tanımlamak için kullanılır.
 
 > [!NOTE]
-> Bu davranış, .NET Framework'ün 2.0 sürümünde değiştirildi. Sürüm 1.1, ad alanları desteklendi ancak birleştirme işlemleri sırasında yoksayıldı. Bu nedenle, bir <xref:System.Data.DataSet> kullanan <xref:System.Data.DataTable.Namespace%2A> özellik değerleri, çalıştırdığınız .NET Framework sürümüne bağlı olarak farklı davranışlar olacaktır. Örneğin, iki olduğunu varsayalım `DataSets` içeren `DataTables` aynı <xref:System.Data.DataTable.TableName%2A> özellik değerlerinin ancak farklı <xref:System.Data.DataTable.Namespace%2A> özellik değerleri. Farklı .NET Framework 1.1 sürümünde <xref:System.Data.DataTable.Namespace%2A> adları, iki birleştirilirken yoksayılacak <xref:System.Data.DataSet> nesneleri. Ancak, nedenleri iki yeni birleştirme sürüm 2.0 ile başlayarak `DataTables` hedef oluşturulacak <xref:System.Data.DataSet>. Özgün `DataTables` birleştirme tarafından etkilenmez.
+> Bu davranış .NET Framework sürüm 2,0 ' de değiştirildi. Sürüm 1,1 ' de, ad alanları desteklenmiş ancak birleştirme işlemleri sırasında yok sayıldı. Bu nedenle, özellik değerlerini <xref:System.Data.DataSet> kullanan <xref:System.Data.DataTable.Namespace%2A> bir, çalıştırdığınız .NET Framework sürümüne bağlı olarak farklı davranışlara sahip olacaktır. Örneğin, aynı `DataSets` <xref:System.Data.DataTable.Namespace%2A> `DataTables` özellik<xref:System.Data.DataTable.TableName%2A> değerlerinin ancak farklı özellik değerlerinin bulunduğu iki içeren bir sahip olduğunuzu varsayalım. .NET Framework sürüm 1,1 ' de, iki <xref:System.Data.DataTable.Namespace%2A> <xref:System.Data.DataSet> nesne birleştirilirken farklı adlar yok sayılır. Ancak, sürüm 2,0 ' den itibaren birleştirme, hedefte `DataTables` <xref:System.Data.DataSet>iki yeni oluşturulmasına neden olur. Özgün `DataTables` , birleştirme tarafından etkilenmeyecektir.
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Gönderdiğinizde bir `DataSet`, `DataTable`, veya `DataRow` için dizi `Merge` yöntemi, var olan değişiklikleri koruma yazılıp yazılmayacağını belirten isteğe bağlı parametreler içerebilir `DataSet`ve bulunan yeni şema öğeleri nasıl ele alınacağını gelen veri. Bu parametre bir Boole bayrağı gelen veri olduktan sonra ilk <xref:System.Data.LoadOption.PreserveChanges>, var olan değişiklikler korumak gerekip gerekmediğini belirten `DataSet`. Varsa `PreserveChanges` bayrağı ayarlandığında `true`, gelen değerleri mevcut değerleri üzerine `Current` var olan satır satır sürümü. Varsa `PreserveChanges` bayrağı ayarlandığında `false`, gelen değerleri mevcut değerlerin üzerine `Current` var olan satır satır sürümü. Varsa `PreserveChanges` bayrak belirtilmezse, ayarlanır `false` varsayılan olarak. Satır sürümleri hakkında daha fazla bilgi için bkz: [satır durumları ve satır sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+`DataSet` `DataTable`Yöntemine bir, `DataSet`veya `DataRow` dizisi geçirdiğinizde, var olan değişikliklerin korunup korunmayacağını ve yeni şema öğelerinin nasıl işleneceğini belirten isteğe bağlı parametreleri ekleyebilirsiniz `Merge` gelen verilerde. Gelen veriler sonrasında bu parametrelerin ilki, var olan <xref:System.Data.LoadOption.PreserveChanges> `DataSet`değişikliklerin korunup korunmayacağını belirten bir Boole bayrağıdır. Bayrak olarak `true`ayarlandıysa, gelen değerler varolan satırın `Current` satır sürümünde varolan değerlerin üzerine yazmaz. `PreserveChanges` Bayrak olarak `false`ayarlandıysa, gelen değerler varolan satırın `Current` satır sürümünde varolan değerlerin üzerine yazar. `PreserveChanges` Bayrak belirtilmemişse, varsayılan olarak olarak `false` ayarlanır. `PreserveChanges` Satır sürümleri hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).
 
-Zaman `PreserveChanges` olan `true`, var olan satır verileri saklanır <xref:System.Data.DataRowVersion.Current> verilerden sırasında var olan satır satır sürümü <xref:System.Data.DataRowVersion.Original> var olan satır satır sürümü verilerle yazılır `Original` satır sürümünü gelen satırın. <xref:System.Data.DataRow.RowState%2A> Var olan satır kümesine <xref:System.Data.DataRowState.Modified>. Aşağıdaki özel durumlarını uygulayın:
+`PreserveChanges` <xref:System.Data.DataRowVersion.Current> `Original` Ne zaman, mevcut satırdaki veriler<xref:System.Data.DataRowVersion.Original> Mevcut satırın satır sürümünde korunur, ancak mevcut satırın satır sürümünden alınan veriler, satırdaki verilerle birlikte yazılır `true` gelen satırın sürümü. Var olan satırın öğesine <xref:System.Data.DataRowState.Modified>ayarlanır. <xref:System.Data.DataRow.RowState%2A> Aşağıdaki özel durumlar geçerlidir:
 
-- Var olan satır varsa bir `RowState` , `Deleted`bu `RowState` kalır `Deleted` ve ayarlı değil `Modified`. Bu durumda, gelen satırın verilerden hala barındırılacaktır `Original` satır sürümü mevcut satırın üzerine `Original` var olan satır satır sürümü (gelen satırın sahip olmadığı sürece bir `RowState` , `Added`).
+- `RowState` Var olan satır `Deleted`' a sahipse, bu `RowState` kalır `Deleted` ve olarak `Modified`ayarlanır. Bu durumda, gelen `Original` satırdaki veriler mevcut satırın satır sürümünde depolanmaya devam eder, var olan satırın `Original` satır sürümünün üzerine yazılır ( `Added`gelen satır öğesine sahip `RowState` olmadığı müddetçe).
 
-- Gelen satırın varsa bir `RowState` , `Added`, verilerden `Original` satır sürümü mevcut satırın yazılmaz gelen satırın verilerle gelen satırın sahip olmadığından bir `Original` satır sürümü.
+- `RowState` Gelen satırın `Added` 'a`Original` sahip olması durumunda, gelen satırda bir satır sürümü bulunmadığından, mevcut satırın satırsürümündekiverilerinüzerinegelensatırdakiverileriyazılmaz.`Original`
 
-Zaman `PreserveChanges` olduğu `false`hem `Current` ve `Original` satır sürümleri mevcut sıradaki gelen satırın verilerle yazılır ve `RowState` var olan satır kümesine `RowState` gelen satırın. Aşağıdaki özel durumlarını uygulayın:
+`PreserveChanges` `Original` `RowState` `RowState` Ne zaman, var olan `Current` satırdaki ve satır sürümlerinin her ikisi de gelen satırdaki verilerle üzerine yazılır ve var olan satır gelen satırın öğesine ayarlanır. `false` Aşağıdaki özel durumlar geçerlidir:
 
-- Gelen satırın varsa bir `RowState` , `Unchanged` ve var olan bir satır sahip bir `RowState` , `Modified`, `Deleted`, veya `Added`, `RowState` var olan satır kümesine `Modified`.
+- `RowState` Gelen satır `Deleted` `RowState` `Unchanged` `Modified`' a sahipse ve `Added`var olan satır,, veya`RowState` ' a sahipse, var olan satırın öğesine ayarlanır. `Modified`
 
-- Gelen satırın varsa bir `RowState` , `Added`, ve var olan bir satır sahip bir `RowState` , `Unchanged`, `Modified`, veya `Deleted`, `RowState` var olan satır kümesine `Modified`. Ayrıca, verileri `Original` var olan satır satır sürümü üzerine gelen satırın verilerle gelen satırın sahip olmadığından bir `Original` satır sürümü.
+- `RowState` Gelen satır `Modified` `Deleted` `Modified`' a `RowState` sahipse ve var olan satır `Unchanged`,, veya`RowState` ' a sahipse, var olan satırın `Added`öğesine ayarlanır. Ayrıca, gelen satır bir `Original` `Original` satır sürümüne sahip olmadığından, mevcut satırın satır sürümündeki verilerin, gelen satırdaki verilerle üzerine yazılmaz.
 
 ## <a name="missingschemaaction"></a>MissingSchemaAction
 
-Kullanabileceğiniz isteğe bağlı <xref:System.Data.MissingSchemaAction> parametresinin `Merge` yöntemi belirtmek için nasıl `Merge` var olan bir parçası olmayan gelen veri şeması öğeleri işleyecek `DataSet`.
+Mevcut <xref:System.Data.MissingSchemaAction> `Merge` `Merge` bir parçasıolmayangelenverilerdekişemaöğelerininasılişleyeceğinizibelirtmekiçinyöntemininisteğebağlıparametresinikullanabilirsiniz.`DataSet`
 
-Aşağıdaki tablo için seçenekleri açıklar `MissingSchemaAction`.
+Aşağıdaki tabloda seçeneklerini `MissingSchemaAction`açıklanmaktadır.
 
 |MissingSchemaAction seçeneği|Açıklama|
 |--------------------------------|-----------------|
-|<xref:System.Data.MissingSchemaAction.Add>|Yeni şema ile ilgili bilgileri `DataSet` ve yeni sütunlar gelen değerlerle doldurmak. Bu varsayılandır.|
-|<xref:System.Data.MissingSchemaAction.AddWithKey>|Yeni şema ve birincil anahtar bilgisini ekleme `DataSet` ve yeni sütunlar gelen değerlerle doldurmak.|
-|<xref:System.Data.MissingSchemaAction.Error>|Eşleşmeyen şema bilgileri mı yoksa bir özel durum.|
-|<xref:System.Data.MissingSchemaAction.Ignore>|Yeni şema bilgileri yoksayın.|
+|<xref:System.Data.MissingSchemaAction.Add>|Yeni şema bilgilerini öğesine `DataSet` ekleyin ve yeni sütunları gelen değerlerle doldurun. Bu varsayılandır.|
+|<xref:System.Data.MissingSchemaAction.AddWithKey>|Yeni şemayı ve birincil anahtar bilgilerini öğesine `DataSet` ekleyin ve yeni sütunları gelen değerlerle doldurun.|
+|<xref:System.Data.MissingSchemaAction.Error>|Eşleşmeyen şema bilgileriyle karşılaşılırsa bir özel durum oluşturur.|
+|<xref:System.Data.MissingSchemaAction.Ignore>|Yeni şema bilgilerini yoksayın.|
 
 ## <a name="constraints"></a>Kısıtlamalar
 
-İle `Merge` yöntemi kısıtlamalar değil tüm yeni veri eklendiğini kadar varolan kontrol `DataSet`. Veriler eklendikten sonra kısıtlamaları geçerli değerlere uygulanır `DataSet`. Kodunuzu kısıtlama ihlali nedeniyle atılan özel durumları işleme emin olmanız gerekir.
+Yöntemiyle, tüm yeni veriler mevcut `DataSet`olana kadar kısıtlamalar denetlenmez. `Merge` Veriler eklendikten sonra, içindeki `DataSet`geçerli değerler üzerinde kısıtlamalar zorlanır. Kodunuzun, kısıtlama ihlalleri nedeniyle oluşturulan tüm özel durumları işlediğinden emin olmanız gerekir.
 
-Varolan bir satırın içinde bir durum düşünün bir `DataSet` olduğu bir `Unchanged` 1 satır birincil bir anahtar değere sahip. Bir birleştirme işlemi sırasında bir `Modified` gelen satırı bir `Original` birincil anahtar değeri 2 ve `Current` 1, var olan satır ve gelen satırın birincil anahtarı değerini değil olarak kabul edilir çünkü eşleşen `Original` birincil anahtar değerlerini farklı. Ancak, birleştirme tamamlandı ve kısıtlamaları denetlenir, bir özel durum nedeniyle oluşturulur `Current` birincil anahtar değerlerini birincil anahtar sütunu için benzersizlik kısıtlamasını ihlal ediyor.
+İçindeki `DataSet` mevcut bir satırın `Unchanged` , birincil anahtar değeri 1 olan bir satır olduğu bir durum düşünün. `Modified` Birincil anahtar `Original` `Original` değeri 2 ve birincilanahtardeğeri1olangelensatırasahipbirbirleştirmeişlemisırasında,birincilanahtardeğerlerinedeniylemevcutsatırvegelensatıreşleşenkabuledilmez`Current` olduğu. Ancak, birleştirme tamamlandığında ve kısıtlamalar denetlendiğinde, `Current` birincil anahtar değerleri birincil anahtar sütunu için benzersiz kısıtlamayı ihlal ettiğinden bir özel durum oluşturulur.
 
 > [!NOTE]
-> Sütun gibi bir kimlik sütunu artan otomatik içeren bir veritabanı tablosuna satır eklendiğinde, INSERT tarafından döndürülen kimlik sütunu değeri değeri eşleşmeyebilir `DataSet`, yerine eklenmesi döndürülen satırları neden birleştirilir. Daha fazla bilgi için [alınırken kimlik veya otomatik sayı değerlerini](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Bir kimlik sütunu gibi bir otomatik artan sütun içeren bir veritabanı tablosuna satırlar yerleştirildiğinde, ekleme tarafından döndürülen kimlik sütunu değeri, içindeki değeriyle eşleşmeyebilir ve `DataSet`döndürülen satırların birleştirilme yerine eklenmesine neden olabilir. Daha fazla bilgi için bkz. [kimlik veya OtomatikSayı değerlerini alma](../retrieving-identity-or-autonumber-values.md).
 
-Aşağıdaki kod örneği iki birleştirir `DataSet` tek farklı şemalarla nesneleri `DataSet` iki gelen birleştirilmiş şemalarda `DataSet` nesneleri.
+Aşağıdaki kod örneği iki `DataSet` nesneyi, iki gelen `DataSet` nesnenin birleştirilmiş şemalarıyla `DataSet` farklı şemalarla birleştirir.
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
 
-Aşağıdaki kod örneği, mevcut bir alan `DataSet` güncelleştirmeler ve bu güncelleştirmeleri geçişleri bir `DataAdapter` veri kaynağında işlenecek. Sonuçlar daha sonra özgün birleştirilmiş `DataSet`. Bir hata ile sonuçlandır değişiklikleri reddetme sonra birleştirilen değişiklikleri ile kaydedilmiş `AcceptChanges`.
+Aşağıdaki kod örneği, güncelleştirmeleriyle birlikte var `DataSet` olan bir güncelleştirme alır ve bu güncelleştirmeleri veri `DataAdapter` kaynağında işlenmek üzere öğesine geçirir. Sonuçlar bundan sonra orijinalde `DataSet`birleştirilir. Bir hatayla sonuçlanan değişiklikleri reddetmeden sonra, birleştirilmiş değişiklikler ile birlikte `AcceptChanges`kaydedilir.
 
 [!code-csharp[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.MergeAcceptChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.MergeAcceptChanges/VB/source.vb#1)]
@@ -86,9 +86,9 @@ Aşağıdaki kod örneği, mevcut bir alan `DataSet` güncelleştirmeler ve bu g
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Satır Durumları ve Satır Sürümleri](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [DataAdapters ve DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Kimliği veya Otomatik Sayı Değerlerini Alma](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables ve DataViews](index.md)
+- [Satır Durumları ve Satır Sürümleri](row-states-and-row-versions.md)
+- [DataAdapters ve DataReaders](../dataadapters-and-datareaders.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
+- [Kimliği veya Otomatik Sayı Değerlerini Alma](../retrieving-identity-or-autonumber-values.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

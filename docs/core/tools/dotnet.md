@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI araçları için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 06/04/2018
-ms.openlocfilehash: 7e1915610732151487353f2d14586597f801ddfb
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 61542a3fff8bba6e2c3e55a4db5a746620d79ca1
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167913"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202516"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -22,22 +22,23 @@ ms.locfileid: "70167913"
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2,1](#tab/netcore21)
 
 ```console
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2,0](#tab/netcore20)
 
 ```console
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1. x](#tab/netcore1x)
 
 ```console
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
 ---
@@ -59,6 +60,12 @@ Ek *. Deps. JSON* dosyasının yolu.
 `--additionalprobingpath <PATH>`
 
 Araştırmanın yoklama ilkesini ve derlemelerini içeren yol.
+
+`--depsfile`
+
+Bir *Deps. JSON* dosyasının yolu.
+
+Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıkların, derleme bağımlılıklarının ve sürüm bilgilerinin bir listesini içerir. Bu dosya hakkında daha fazla bilgi için bkz. GitHub üzerinde [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
 
 `-d|--diagnostics`
 
@@ -93,6 +100,12 @@ Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını ta
 
  Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
+`--runtimeconfig`
+
+*Runtimeconfig. JSON* dosyasının yolu.
+
+*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
+
 `-v|--verbosity <LEVEL>`
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
@@ -110,6 +123,12 @@ Ek *. Deps. JSON* dosyasının yolu.
 `--additionalprobingpath <PATH>`
 
 Araştırmanın yoklama ilkesini ve derlemelerini içeren yol.
+
+`--depsfile`
+
+Bir *Deps. JSON* dosyasının yolu.
+
+Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıkların, derleme bağımlılıklarının ve sürüm bilgilerinin bir listesini içerir. Bu dosya hakkında daha fazla bilgi için bkz. [GitHub üzerinde çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-d|--diagnostics`
 
@@ -131,6 +150,12 @@ Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --
 
  , Olarak `0`ayarlandıysa, ikincil sürüm iletmeyi devre dışı bırakır. Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
+`--runtimeconfig`
+
+*Runtimeconfig. JSON* dosyasının yolu.
+
+*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha ayrıntılı bilgi için bkz. [GitHub 'Da çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
+
 `-v|--verbosity <LEVEL>`
 
 Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler `q[uiet]` `m[inimal]` ,`n[ormal]`,, ve .`diag[nostic]` `d[etailed]` Her komutta desteklenmez; Bu seçeneğin kullanılabilir olup olmadığını anlamak için belirli komut sayfasına bakın.
@@ -144,6 +169,12 @@ Kullanımda olan .NET Core SDK sürümünü yazdırır.
 `--additionalprobingpath <PATH>`
 
 Araştırmanın yoklama ilkesini ve derlemelerini içeren yol.
+
+`--depsfile`
+
+Bir *Deps. JSON* dosyasının yolu.
+
+Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıkların, derleme bağımlılıklarının ve sürüm bilgilerinin bir listesini içerir. Bu dosya hakkında daha fazla bilgi için bkz. [GitHub üzerinde çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-d|--diagnostics`
 
@@ -160,6 +191,12 @@ Gibi belirli bir komutun `dotnet build --help`belgelerini yazdırır. `dotnet --
 `--info`
 
 .NET Core yüklemesi ve geçerli işletim sistemi gibi makine ortamıyla ilgili ayrıntılı bilgileri yazdırır ve .NET Core sürümünün SHA 'sini yürütün.
+
+`--runtimeconfig`
+
+*Runtimeconfig. JSON* dosyasının yolu.
+
+*Runtimeconfig. JSON* dosyası, çalışma zamanı yapılandırma ayarlarını içeren bir yapılandırma dosyasıdır. Daha ayrıntılı bilgi için bkz. [GitHub 'Da çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md).
 
 `-v|--verbosity <LEVEL>`
 
@@ -355,3 +392,7 @@ Birincil paket önbelleği. Ayarlanmamışsa, varsayılan `$HOME/.nuget/packages
 .NET Core araçları kullanımıyla ilgili verilerin toplanıp Microsoft 'a gönderilip gönderilmeyeceğini belirtir. Telemetri özelliğini `true` devre dışı bırakmak için olarak ayarlayın (değerler `true`, `1`veya `yes` kabul edildi). Aksi takdirde, telemetri `false` özelliklerini (değerler `false`, `0`veya `no` kabul edildi) kabul etmek için olarak ayarlayın. Ayarlanmamışsa, varsayılan `false` olarak ve telemetri özelliği etkindir.
 
 ---
+
+## <a name="see-also"></a>Ayrıca bkz.
+
+- [Çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)

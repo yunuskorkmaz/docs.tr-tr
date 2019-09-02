@@ -1,5 +1,5 @@
 ---
-title: extern değiştiricisi - C# başvurusu
+title: extern değiştirici- C# başvuru
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,39 +9,39 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755894"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203008"
 ---
 # <a name="extern-c-reference"></a>extern (C# Başvurusu)
 
-`extern` Değiştiricisi dışarıdan uygulanan bir yöntemi bildirmek için kullanılır. Yaygın `extern` değiştiricisinin `DllImport` yönetilmeyen koda çağrı yapmak birlikte çalışma hizmetlerini kullanırken özniteliği. Bu durumda, yöntem olarak da bildirilmeleri gerekir `static`, aşağıdaki örnekte gösterildiği gibi:
+`extern` Değiştirici, dışarıdan uygulanan bir yöntemi bildirmek için kullanılır. Bir `extern` değiştiricinin ortak kullanımı, yönetilmeyen koda çağrı `DllImport` yapmak için birlikte çalışabilirlik Hizmetleri kullandığınızda özniteliğiyle birlikte bulunur. Bu durumda, aşağıdaki örnekte gösterildiği gibi yöntemi de olarak `static`bildirilmelidir:
 
 ```csharp
 [DllImport("avifil32.dll")]
 private static extern void AVIFileInit();
 ```
 
-`extern` Anahtar sözcüğü, tek bir derleme içinde aynı bileşenin farklı sürümlerine başvurmayı olanaklı kılan bir dış derleme takma adı da tanımlayabilir. Daha fazla bilgi için [extern diğer adı](extern-alias.md).
+`extern` Anahtar sözcüğü aynı zamanda bir dış derleme diğer adı tanımlayabilir, bu da aynı bileşenin farklı sürümlerine tek bir bütünleştirilmiş kod içinden başvuruda bulunmak mümkün hale gelir. Daha fazla bilgi için bkz. [extern diğer ad](extern-alias.md).
 
-Kullanılacak bir hata olduğunu [soyut](abstract.md) ve `extern` birlikte aynı üyeyi değiştirmek için değiştiriciler. Kullanarak `extern` değiştiricisi anlamına gelir yöntemin C# kodunun dışında uygulandığını kullanarak ise `abstract` değiştiricisini kullanmak yöntem uygulamasının sınıfta sağlanmadığı anlamına gelir;.
+Aynı üyeyi değiştirmek için [soyut](abstract.md) ve `extern` değiştiricilerin birlikte kullanılması hatadır. Değiştiricinin kullanılması, yöntemin C# kod dışında uygulandığı anlamına gelir `abstract` , ancak değiştiricinin kullanılması, yöntem uygulamasının sınıfta sağlanmadığı anlamına gelir. `extern`
 
 extern anahtar sözcüğünün kullanımları, C++'a göre C#'de daha fazladır. C# anahtar sözcüğünü C++ anahtar sözcüğüyle karşılaştırmak için, C++ Dilinde Bağlantı Belirtmek için extern Kullanma Başvurusu'na bakın.
 
 ## <a name="example-1"></a>Örnek 1
 
-Bu örnekte, program kullanıcıdan bir dize alır ve bir ileti kutusu içinde görüntüler. Programın kullandığı `MessageBox` User32.dll kitaplığından aktarılan yöntemi.
+Bu örnekte, Program kullanıcıdan bir dize alır ve iletiyi bir ileti kutusu içinde görüntüler. Program, User32. `MessageBox` dll kitaplığından içeri aktarılan yöntemi kullanır.
 
 [!code-csharp[csrefKeywordsModifiers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#8)]
 
 ## <a name="example-2"></a>Örnek 2
 
-Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı gösterilmektedir.
+Bu örnek, bir C# C kitaplığına (yerel dll) çağıran bir programı gösterir.
 
-1. Aşağıdaki C dosyası oluşturun ve adlandırın `cmdll.c`:
+1. Aşağıdaki C dosyasını oluşturun ve adlandırın `cmdll.c`:
 
     ```c
     // cmdll.c
@@ -52,9 +52,9 @@ Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı g�
     }
     ```
 
-2. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cmdll.c` yazarak dosya **cl -LD cmdll.c** komut isteminde.
+2. Visual Studio yükleme dizininden bir Visual Studio x64 (veya x32) yerel araçlar komut istemi penceresi açın ve komut istemine `cmdll.c` **CL-ld Cmdll. c** yazarak dosyayı derleyin.
 
-3. Aynı dizinde, aşağıdaki C# dosyası oluşturun ve adlandırın `cm.cs`:
+3. Aynı dizinde aşağıdaki C# dosyayı oluşturun ve adlandırın `cm.cs`:
 
     ```csharp
     // cm.cs
@@ -72,15 +72,15 @@ Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı g�
     }
     ```
 
-4. Visual Studio Kurulum dizininden bir Visual Studio x64 (veya x32) yerel Araçlar komut istemi penceresi açın ve `cm.cs` yazarak dosyası:
+4. Visual Studio yükleme dizininden bir Visual Studio x64 (veya x32) yerel araçlar komut istemi penceresi açın ve şunu yazarak `cm.cs` dosyayı derleyin:
 
-    > **CSC cm.cs** (x64 için komut istemi) — veya — **csc-platform: x 86 cm.cs** (x32 için komut istemi)
+    > **csc cm.cs** (x64 komut istemi için) — veya — **csc-platform: x86 cm.cs** (x32 komut istemi için)
 
-    Bu yürütülebilir dosya oluşturur `cm.exe`.
+    Bu, yürütülebilir dosyayı `cm.exe`oluşturur.
 
-5. `cm.exe`'i çalıştırın. `SampleMethod` Yöntemi 5 değerini değerin 10 ile çarpılmış olarak döndüren DLL dosyasına geçirir.  Program şu çıktıyı üretir:
+5. `cm.exe`'i çalıştırın. `SampleMethod` Yöntemi, 5 değerini, 10 ile çarpılan değeri döndüren dll dosyasına geçirir.  Program aşağıdaki çıktıyı üretir:
 
-    ```
+    ```output
     SampleMethod() returns 50.
     ```
 
@@ -91,7 +91,7 @@ Bu örnekte, bir C kitaplığına (bir yerel DLL) çağıran bir C# programı g�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
-- [C# başvurusu](../index.md)
+- [C#Başvurunun](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [C# Anahtar Sözcükleri](index.md)
 - [Değiştiriciler](modifiers.md)

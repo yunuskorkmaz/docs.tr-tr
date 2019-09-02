@@ -2,12 +2,12 @@
 title: Word belgelerinde metin bulma (C#)
 ms.date: 07/20/2015
 ms.assetid: 82f86677-560b-49dc-a089-610409939b2a
-ms.openlocfilehash: 99a6bc2bb08af47ab725ef94ae8cd77d54cbad0a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 173472b9dbd669476c3e5529655d111b88b0dba2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594345"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205386"
 ---
 # <a name="finding-text-in-word-documents-c"></a>Word belgelerinde metin bulma (C#)
 Bu konu, bir şeyi yararlı yapmak için önceki sorguları genişletir: belgede bir dizenin tüm yinelemelerini bulur.  
@@ -167,7 +167,7 @@ class Program
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 StyleName:Code >        Console.WriteLine("Hello World");<  
 StyleName:Code >Hello World<  
 ```  
@@ -314,7 +314,7 @@ class Program
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 StyleName:Code ><  
 ```  
   

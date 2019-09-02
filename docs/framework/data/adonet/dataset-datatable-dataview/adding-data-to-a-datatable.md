@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034534"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205485"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
-Oluşturduktan sonra bir <xref:System.Data.DataTable> ve sütunları ve kısıtlamaları kullanarak yapısını tanımlamak, tabloya yeni satır veri ekleyin. Yeni bir satır eklemek için yeni bir değişken türü olarak bildirin <xref:System.Data.DataRow>. Yeni bir **DataRow** çağırdığınızda nesnesi döndürülen <xref:System.Data.DataTable.NewRow%2A> yöntemi. **DataTable** oluşturur sonra **DataRow** nesne temel tablosunun yapısı üzerinde tarafından tanımlanan <xref:System.Data.DataColumnCollection>.  
+' I oluşturup <xref:System.Data.DataTable> , sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişkeni tür <xref:System.Data.DataRow>olarak bildirin. <xref:System.Data.DataTable.NewRow%2A> Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür. **DataTable** daha sonra, <xref:System.Data.DataColumnCollection>tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur.  
   
- Aşağıdaki örnek yeni bir satır çağırarak denetlediği oluşturma işlemini gösterir **NewRow** yöntemi.  
+ Aşağıdaki örnek, **NewRow** yöntemini çağırarak yeni bir satır oluşturmayı gösterir.  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -25,7 +25,7 @@ Dim workRow As DataRow = workTable.NewRow()
 DataRow workRow = workTable.NewRow();  
 ```  
   
- Ardından, aşağıdaki örnekte gösterildiği gibi bir dizini veya sütun adı'nı kullanarak yeni eklenen satır işleyebilirsiniz.  
+ Daha sonra, aşağıdaki örnekte gösterildiği gibi, yeni eklenen satırı bir dizin veya sütun adı kullanarak düzenleyebilirsiniz.  
   
 ```vb  
 workRow("CustLName") = "Smith"  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Yeni satır veri eklendikten sonra **Ekle** satır eklemek için kullanılan yöntemi <xref:System.Data.DataRowCollection>aşağıdaki kodda gösterilen.  
+ Veriler yeni satıra eklendikten sonra, aşağıdaki kodda gösterildiği <xref:System.Data.DataRowCollection>gibi **ekleme** yöntemi satırı öğesine eklemek için kullanılır.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- Ayrıca, çağırabilirsiniz **Ekle** değerleri dizisi geçirerek yeni bir satır eklemek için yöntemi yazılı olarak <xref:System.Object>aşağıdaki örnekte gösterildiği gibi.  
+ Ayrıca <xref:System.Object>, aşağıdaki örnekte gösterildiği gibi, bir değerler dizisine geçirerek yeni bir satır eklemek için **Add** yöntemini çağırabilirsiniz.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Bir dizisi olarak yazılan değerlerin geçirerek **nesne**, **Ekle** yöntemi içindeki tabloya yeni bir satır oluşturur ve nesne dizideki değerleri için sütun değerlerini ayarlar. Dizideki değerleri tablodaki göründükleri sıraya göre sütunlara sıralı olarak eşleştirilir unutmayın.  
+ **Add** yöntemine **nesne**olarak yazılan bir değer dizisinin geçirilmesi, tablonun içinde yeni bir satır oluşturur ve sütun değerlerini nesne dizisindeki değerler olarak ayarlar. Dizideki değerlerin, tabloda göründükleri sıraya göre sütunları sırayla eşleştirdiğini unutmayın.  
   
- Aşağıdaki örnek 10 satır, yeni oluşturulan ekler **müşteriler** tablo.  
+ Aşağıdaki örnek, yeni oluşturulan **müşteriler** tablosuna 10 satır ekler.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [DataTable Verilerini Düzenleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

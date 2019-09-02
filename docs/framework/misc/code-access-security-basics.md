@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbf97b3bc72a12f8920e3a3cace3f7c31ed1e71a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d77683dde24eeec5de7f1e541a6cc86f3b0c6617
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910980"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205625"
 ---
 # <a name="code-access-security-basics"></a>Kod Erişim Güvenliği Temelleri
 
@@ -32,13 +32,13 @@ Ortak dil çalışma zamanını hedefleyen etkili uygulamalar yazmak için aşa�
 
 - **Güvenli sınıf kitaplıkları**: Güvenli bir sınıf kitaplığı, kitaplığın arayanların, kitaplığın sunduğu kaynaklara erişim izni olduğundan emin olmak için güvenlik taleplerini kullanır. Örneğin, güvenli bir sınıf kitaplığı, arayanların dosya oluşturmak için izinlere sahip olduğunu talep eden dosyalar oluşturmak için bir yönteme sahip olabilir. .NET Framework, güvenli sınıf kitaplıklarından oluşur. Kodunuzun kullandığı herhangi bir kitaplığa erişmek için gereken izinlere dikkat etmeniz gerekir. Daha fazla bilgi için bu konunun ilerleyen kısımlarında [güvenli sınıf kitaplıklarını kullanma](#secure_library) bölümüne bakın.
 
-- **Saydam kod**: .NET Framework 4 ' ten başlayarak, belirli izinleri tanımlamaya ek olarak kodunuzun güvenlik açısından saydam olarak çalıştırılıp çalıştırılmayacağını de belirlemelisiniz. Güvenliği saydam kod, güvenlik açısından kritik olarak tanımlanan türleri veya üyeleri çağıramaz. Bu kural, kısmen güvenilen uygulamaların yanı sıra tam güvenle uygulamalara da uygulanır. Daha fazla bilgi için bkz. [güvenlik-saydam kod](../../../docs/framework/misc/security-transparent-code.md).
+- **Saydam kod**: .NET Framework 4 ' ten başlayarak, belirli izinleri tanımlamaya ek olarak kodunuzun güvenlik açısından saydam olarak çalıştırılıp çalıştırılmayacağını de belirlemelisiniz. Güvenliği saydam kod, güvenlik açısından kritik olarak tanımlanan türleri veya üyeleri çağıramaz. Bu kural, kısmen güvenilen uygulamaların yanı sıra tam güvenle uygulamalara da uygulanır. Daha fazla bilgi için bkz. [güvenlik-saydam kod](security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
 ## <a name="writing-verifiably-type-safe-code"></a>Verifi, türü güvenli kod yazma
 
-Tam zamanında (JıT) derleme kodu inceleyen ve kodun tür açısından güvenli olup olmadığını belirlemeyi denediğinde doğrulama işlemini gerçekleştirir. Tür kullanımı için doğrulama sırasında kanıtlanmış koda, doğruıolarak *tür kullanımı güvenli kod*denir. Kod türü güvenli olabilir, ancak doğrulama işleminin veya derleyicinin sınırlamaları nedeniyle, tam olarak tür kullanımı güvenli olmayabilir. Dillerin hepsi tür açısından güvenli değildir ve Microsoft Visual C++gibi bazı dil derleyicileri tür kullanımı güvenli yönetilen kod üretemiyor. Kullandığınız dil derleyicisinin, doğruıya türü güvenli kod oluşturup oluşturmayacağını öğrenmek için derleyicinin belgelerine başvurun. Yalnızca belirli dil yapılarından kaçındığınızda, doğruıda tür açısından güvenli kod üreten bir dil derleyicisi kullanırsanız, kodunuzun doğruıya türü güvenli olup olmadığını anlamak için [PEVerify aracını](../../../docs/framework/tools/peverify-exe-peverify-tool.md) kullanmak isteyebilirsiniz.
+Tam zamanında (JıT) derleme kodu inceleyen ve kodun tür açısından güvenli olup olmadığını belirlemeyi denediğinde doğrulama işlemini gerçekleştirir. Tür kullanımı için doğrulama sırasında kanıtlanmış koda, doğruıolarak *tür kullanımı güvenli kod*denir. Kod türü güvenli olabilir, ancak doğrulama işleminin veya derleyicinin sınırlamaları nedeniyle, tam olarak tür kullanımı güvenli olmayabilir. Dillerin hepsi tür açısından güvenli değildir ve Microsoft Visual C++gibi bazı dil derleyicileri tür kullanımı güvenli yönetilen kod üretemiyor. Kullandığınız dil derleyicisinin, doğruıya türü güvenli kod oluşturup oluşturmayacağını öğrenmek için derleyicinin belgelerine başvurun. Yalnızca belirli dil yapılarından kaçındığınızda, doğruıda tür açısından güvenli kod üreten bir dil derleyicisi kullanırsanız, kodunuzun doğruıya türü güvenli olup olmadığını anlamak için [PEVerify aracını](../tools/peverify-exe-peverify-tool.md) kullanmak isteyebilirsiniz.
 
 Güvenlik ilkesi kodun doğrulamayı atlamasına izin veriyorsa, doğruısiz tür kullanımı güvenli olmayan kod yürütmeyi deneyebilir. Ancak, tür güvenliği çalışma zamanının derlemeleri yalıtma mekanizmasından önemli bir parçası olduğundan, kod güvenlik tür kurallarını ihlal ederse güvenlik güvenilir bir şekilde zorlanamaz. Varsayılan olarak, tür kullanımı güvenli olmayan kodun yalnızca yerel bilgisayardan geldiği durumlarda çalışmasına izin verilir. Bu nedenle, mobil kod tür kullanımı uyumlu olmalıdır.
 
@@ -55,7 +55,7 @@ Kod erişimi güvenliği, kod yazarken insan hatası olasılığını ortadan ka
 Bildirime dayalı güvenlik sözdizimi, güvenlik bilgilerini kodunuzun [meta verilerine](../../standard/metadata-and-self-describing-components.md) yerleştirmek için [özniteliklerini](../../standard/attributes/index.md) kullanır. Öznitelikleri, kullanmak istediğiniz istek, talep veya geçersiz kılma türünü belirtmek için derleme, sınıf veya üye düzeyinde yerleştirilebilir. İstekler, çalışma zamanı güvenlik sistemini, uygulamanızın ihtiyacı olan veya istemediğiniz izinlerle ilgili bilgilendirmek için ortak dil çalışma zamanını hedefleyen uygulamalarda kullanılır. Talepler ve geçersiz kılmalar, kaynakların çağıranlara karşı korunmasına yardımcı olmak veya varsayılan güvenlik davranışını geçersiz kılmak için kitaplıklarda kullanılır.
 
 > [!NOTE]
-> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).
+> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../security/security-changes.md).
 
 Bildirim temelli güvenlik çağrıları kullanmak için, izin nesnesinin durum verilerini, ihtiyacınız olan belirli bir izin biçimini temsil etmek üzere başlatmalısınız. Her yerleşik izin, gerçekleştirmek istediğiniz güvenlik işleminin türünü tanımlayan bir <xref:System.Security.Permissions.SecurityAction> sabit listesi geçen bir özniteliğe sahiptir. Ancak izinler, kendilerine özel olan kendi parametrelerini de kabul eder.
 
@@ -105,7 +105,7 @@ Kesinlik temelli güvenlik sözdizimi, çağırmak istediğiniz izin nesnesinin 
 
 Güvenlik çağrısını yapmadan önce, izin nesnesinin durum verilerini, ihtiyacınız olan iznin belirli bir biçimini temsil etmek üzere başlatmalısınız. Örneğin, bir <xref:System.Security.Permissions.FileIOPermission> nesne oluştururken, tüm dosyalara Kısıtlanmamış erişimi veya dosyalara erişimi temsil edebilmesi için, **filei, görev** nesnesini başlatmak üzere oluşturucuyu kullanabilirsiniz. Ya da, nesnenin temsil etmesini istediğiniz erişim türünü (yani oku, Ekle veya yaz) ve nesnenin hangi dosyaları koruyacağınızı belirten parametreleri geçirerek farklı bir **dosya adlı görev** nesnesi kullanabilirsiniz.
 
-Tek bir güvenlik nesnesini çağırmak için zorunlu güvenlik sözdizimi kullanmanın yanı sıra, bir izin kümesindeki bir grup izinleri başlatmak için kullanabilirsiniz. Örneğin, bu teknik, tek bir yöntemde birden çok izne yapılan [](../../../docs/framework/misc/using-the-assert-method.md) onay çağrılarını güvenilir bir şekilde gerçekleştirmenin tek yoludur. <xref:System.Security.PermissionSet> Ve<xref:System.Security.NamedPermissionSet> sınıflarını kullanarak bir grup izin oluşturun ve ardından istenen güvenlik çağrısını çağırmak için uygun yöntemi çağırın.
+Tek bir güvenlik nesnesini çağırmak için zorunlu güvenlik sözdizimi kullanmanın yanı sıra, bir izin kümesindeki bir grup izinleri başlatmak için kullanabilirsiniz. Örneğin, bu teknik, tek bir yöntemde birden çok izne yapılan [](using-the-assert-method.md) onay çağrılarını güvenilir bir şekilde gerçekleştirmenin tek yoludur. <xref:System.Security.PermissionSet> Ve<xref:System.Security.NamedPermissionSet> sınıflarını kullanarak bir grup izin oluşturun ve ardından istenen güvenlik çağrısını çağırmak için uygun yöntemi çağırın.
 
 Talepler ve geçersiz kılmalar gerçekleştirmek için zorunlu sözdizimi kullanabilirsiniz ancak istekler için izin vermez. İzin durumunu başlatmak için ihtiyaç duyduğunuz bilgiler yalnızca çalışma zamanında bilindiğinde bildirime dayalı sözdizimi yerine talepler ve geçersiz kılmalar için tanımlayıcı sözdizimini kullanabilirsiniz. Örneğin, çağıranların belirli bir dosyayı okuma izni olduğundan emin olmak istiyorsanız, ancak çalışma zamanına kadar bu dosyanın adını bilemezsiniz, bir zorunlu talep kullanın. Ayrıca, bir koşulun sahip olup olmadığını ve testin sonucuna bağlı olarak, bir güvenlik talebi (veya değil), çalışma zamanında belirlemeniz gerektiğinde, bildirim temelli denetimler yerine zorunlu denetimleri kullanmayı seçebilirsiniz.
 
@@ -164,8 +164,8 @@ Uygulamanızın yönetilmeyen koda erişmesi gereken bir işlem gerçekleştirme
 - <xref:System.Security.Permissions.FileIOPermission>
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
-- [Vermediğini](../../../docs/framework/misc/using-the-assert-method.md)
-- [Kod erişim güvenliği](../../../docs/framework/misc/code-access-security.md)
-- [Kod erişim güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)
+- [Vermediğini](using-the-assert-method.md)
+- [Kod erişim güvenliği](code-access-security.md)
+- [Kod erişim güvenliği temelleri](code-access-security-basics.md)
 - [Öznitelikler](../../standard/attributes/index.md)
 - [Meta Veriler ve Kendiliğinden Açıklayıcı Bileşenler](../../standard/metadata-and-self-describing-components.md)

@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b2bfd1b0490572e78c8ce365491a8d48db87684
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607420"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204576"
 ---
 # <a name="modifying-dataviews"></a>DataView Değiştirme
-Kullanabileceğiniz <xref:System.Data.DataView> eklemek, silmek veya temel tablodaki veri satırlarının değiştirin. Kullanabilme **DataView** temel tablodaki verileri değiştirmek için üç Boole özelliklerinden birini ayarlayarak denetlenir **DataView**. Bu özellikleri <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A>, ve <xref:System.Data.DataView.AllowDelete%2A>. Bunlar ayarlandığından **true** varsayılan olarak.  
+Temel tablodaki veri satırlarını <xref:System.Data.DataView> eklemek, silmek veya değiştirmek için öğesini kullanabilirsiniz. Temel tablodaki verileri değiştirmek için **DataView** kullanma özelliği, **DataView**'ın üç Boole özelliğinden biri ayarlanarak denetlenir. Bu özellikler, <xref:System.Data.DataView.AllowNew%2A> <xref:System.Data.DataView.AllowEdit%2A> ve<xref:System.Data.DataView.AllowDelete%2A>' dir. Varsayılan olarak **true** olarak ayarlanmıştır.  
   
- Varsa **AllowNew** olduğu **true**, kullanabileceğiniz <xref:System.Data.DataView.AddNew%2A> yöntemi **DataView** yeni bir <xref:System.Data.DataRowView>. Yeni bir satır olmadığına dikkat edin, aslında eklenen temel alınan <xref:System.Data.DataTable> kadar <xref:System.Data.DataRowView.EndEdit%2A> yöntemi **DataRowView** çağrılır. Varsa <xref:System.Data.DataRowView.CancelEdit%2A> yöntemi **DataRowView** olan çağrılır, yeni satır atılır. Ayrıca tek düzen unutmayın **DataRowView** birer güncelleştirir. Eğer **AddNew** veya **BeginEdit** yöntemi **DataRowView** bekleyen satır bulunduğu sürece **EndEdit** üzerinde örtük olarak çağırılamaz Bekleyen satır. Zaman **EndEdit** olan çağrılır, değişiklikler temel alınan uygulanır **DataTable** ve daha sonra olabilir kaydedilmiş veya kullanarak **AcceptChanges** veya  **RejectChanges** yöntemlerinin **DataTable**, **veri kümesi**, veya **DataRow** nesne. Varsa **AllowNew** olduğu **false**, eğer bir özel durum **AddNew** yöntemi **DataRowView**.  
+ **AllowNew** **true**ise, yeni <xref:System.Data.DataView.AddNew%2A> <xref:System.Data.DataRowView>bir oluşturmak için **DataView** yöntemini kullanabilirsiniz. Yeni bir satırın, <xref:System.Data.DataTable> **DataRowView** 'ın <xref:System.Data.DataRowView.EndEdit%2A> yöntemi çağrılana kadar temeldeki temel içine eklenmediğini unutmayın. <xref:System.Data.DataRowView.CancelEdit%2A> **DataRowView** 'ın yöntemi çağrılırsa, yeni satır atılır. Aynı anda yalnızca bir **DataRowView** öğesini düzenleyebileceğinizi unutmayın. Bekleyen bir satır varken **DataRowView** 'ın **AddNew** veya **BeginEdit** metodunu çağırırsanız, **EndEdit** , bekleyen satırda örtük olarak çağırılır. **EndEdit** çağrıldığında, değişiklikler temel alınan **DataTable** 'a uygulanır ve daha sonra **DataTable**, **DataSet veya** **veri kümesinin AcceptChanges veya RejectChanges yöntemleri kullanılarak uygulanabilir veya reddedilebilir. DataRow** nesnesi. **AllowNew** **yanlış**Ise, **DataRowView**'ın **AddNew** metodunu çağırdığınızda bir özel durum oluşturulur.  
   
- Varsa **AllowEdit** olduğu **true**, içeriğini değiştirebileceğiniz bir **DataRow** aracılığıyla **DataRowView**. Kullanarak temel alınan satır için değişiklikleri doğrulayabilirsiniz **DataRowView.EndEdit** kullanarak değişiklikleri veya reddetme **DataRowView.CancelEdit**. Bir kerede yalnızca bir satır düzenlenebilir unutmayın. Çağırırsanız **AddNew** veya **BeginEdit** yöntemlerinin **DataRowView** bekleyen satır bulunduğu sürece **EndEdit** üzerinde örtük olarak çağırılamaz Bekleyen satır. Zaman **EndEdit** çağrılır, önerilen değişikliklerin yerleştirildiğinde **geçerli** arka plandaki satır sürümü **DataRow** ve daha sonra olabilir kaydedilmiş veya kullanarakreddetti **AcceptChanges** veya **RejectChanges** yöntemlerinin **DataTable**, **veri kümesi**, veya **DataRow** nesne. Varsa **AllowEdit** olduğu **false**, bir değer değiştirmeyi denerseniz bir özel durum **DataView**.  
+ **AllowEdit** **true**ise, bir **DataRow** 'ın içeriğini **DataRowView**aracılığıyla değiştirebilirsiniz. **DataRowView. EndEdit** kullanarak temel alınan satırdaki değişiklikleri doğrulayabilirsiniz veya **DataRowView. CancelEdit**kullanarak değişiklikleri reddedebilirsiniz. Tek seferde yalnızca bir satırın düzenlenebileceğini unutmayın. Bekleyen bir satır varken **DataRowView** 'ın **AddNew** veya **BeginEdit** yöntemlerini çağırırsanız, **EndEdit** , bekleyen satırda örtük olarak çağırılır. **EndEdit** çağrıldığında, önerilen değişiklikler temel alınan **DataRow** 'ın **geçerli** satır sürümüne yerleştirilir ve daha sonra, **' nin AcceptChanges veya RejectChanges yöntemleri kullanılarak gerçekleştirilebilir DataTable**, **DataSet**veya **DataRow** nesnesi. **AllowEdit** **false**ise, **DataView**içindeki bir değeri değiştirmeye çalışırsanız bir özel durum oluşturulur.  
   
- Var olan bir zaman **DataRowView** düzenlenirse, temel alınan olayları **DataTable** yine de önerilen değişiklikleri gerçekleştirilecektir. Eğer unutmayın **EndEdit** veya **CancelEdit** temel üzerinde **DataRow**, bekleyen değişiklikleri uygulanan veya olup olmamasına bakılmaksızın iptal  **EndEdit** veya **CancelEdit** üzerinde çağrılır **DataRowView**.  
+ Varolan bir **DataRowView** düzenlenirken, temel alınan **DataTable** olayları, önerilen değişikliklerle yine de oluşturulur. Temel alınan **DataRow**üzerinde **EndEdit** veya **CancelEdit** çağırırsanız, bekleyen değişikliklerin, **DataRowView**üzerinde **EndEdit** veya **CancelEdit** çağrılıp çağrılmadığına bakılmaksızın uygulanacağını veya iptal edildiğini unutmayın.  
   
- Varsa **AllowDelete** olduğu **true**, satırlardan silebilirsiniz **DataView** kullanarak **Sil** yöntemi **DataView**  veya **DataRowView** nesne ve satırları silindi temel **DataTable**. Daha sonra tamamlama veya reddetme kullanarak siler **AcceptChanges** veya **RejectChanges** sırasıyla. Varsa **AllowDelete** olduğu **false**, çağırırsanız bir özel durum **Sil** yöntemi **DataView** veya  **DataRowView**.  
+ **AllowDelete** **true**ise DataView veya **DataRowView** nesnesinin **Delete** yöntemini kullanarak **DataView** nesnesinden satırları silebilirsiniz ve satırlar temeldeki **DataTable**'dan silinir. Daha sonra, sırasıyla **AcceptChanges** veya **RejectChanges** kullanarak silmeleri kaydedebilir veya reddedebilirsiniz. **AllowDelete** **false**Ise, **DataView** veya **DataRowView**'ın **Delete** yöntemini çağırdığınızda bir özel durum oluşturulur.  
   
- Aşağıdaki kod örneği kullanarak devre dışı bırakır. **DataView** için delete satırları ve temel alınan kullanarak tablo için yeni bir satır ekler **DataView**.  
+ Aşağıdaki kod örneği, satırları silmek için **DataView** kullanımını devre dışı bırakır ve **DataView**kullanarak temel tabloya yeni bir satır ekler.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -56,5 +56,5 @@ newDRV.EndEdit();
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataViews](dataviews.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

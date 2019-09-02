@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 1929e854-23a0-4bb1-94be-e8aa3b609e32
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f79fd3e0678fc0bba0d3074904f9ce9460fc6c20
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ffe4f3e000c80610d5a105dddef90f9cfd51f0dc
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910925"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205591"
 ---
 # <a name="dangerous-permissions-and-policy-administration"></a>Tehlikeli İzinler ve İlke Yönetimi
 .NET Framework izin sağladığı korumalı işlemlerden bazıları güvenlik sisteminin atlalanmasına izin verebilir. Bu tehlikeli izinler yalnızca güvenilir koda ve yalnızca gerekli şekilde verilmelidir. Bu izinler verildiğinde, genellikle kötü amaçlı koda karşı savunma yoktur.  
   
 > [!NOTE]
-> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../security/security-changes.md).  
   
  Tehlikeli izinler aşağıdaki tabloda açıklanmıştır.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "69910925"
 |<xref:System.Security.Permissions.SecurityPermissionFlag.SkipVerification>|Doğrulama olmadan kod herhangi bir işlem yapabilir.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence>|Geçersiz kılınan bulgu, güvenlik ilkesini kullanabilir.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPolicy>|Güvenlik ilkesini değiştirme özelliği güvenliği devre dışı bırakabilir.|  
-|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Serileştirme kullanımı erişilebilirlik mekanizmalarını değiştirebilir. Ayrıntılar için bkz. [güvenlik ve serileştirme](../../../docs/framework/misc/security-and-serialization.md).|  
+|<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>|Serileştirme kullanımı erişilebilirlik mekanizmalarını değiştirebilir. Ayrıntılar için bkz. [güvenlik ve serileştirme](security-and-serialization.md).|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlPrincipal>|Geçerli sorumluyu ayarlama özelliği rol tabanlı güvenliği kullanabilir.|  
 |<xref:System.Security.Permissions.SecurityPermissionFlag.ControlThread>|İş parçacıkları ile ilişkili güvenlik durumu nedeniyle iş parçacıklarının işlenmesi tehlikelidir.|  
 |<xref:System.Security.Permissions.ReflectionPermission>||  

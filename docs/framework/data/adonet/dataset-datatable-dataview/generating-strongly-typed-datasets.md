@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 2d3dc99d78ee9ceb3e8e1cac22fc5571cc1545ba
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504099"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203696"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
-XML şemasından XML şeması tanım dili ile (XSD) standart uyumlu göz önünde bulundurulduğunda, türü kesin belirlenmiş oluşturabileceğiniz <xref:System.Data.DataSet> Windows Yazılım Geliştirme Seti (SDK) ile sağlanan XSD.exe'nin aracını kullanarak.  
+XML şeması tanım dili (xsd) standardına uygun bir XML şeması verildiğinde, Windows yazılım geliştirme seti (SDK) ile sağlanan <xref:System.Data.DataSet> xsd. exe aracını kullanarak kesin bir tür oluşturabilirsiniz.  
   
- (Bir xsd veritabanı tabloları oluşturmak için bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> veya [Visual Studio'da veri kümeleriyle çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
+ (Veritabanı tablolarından bir xsd oluşturmak için, bkz <xref:System.Data.DataSet.WriteXmlSchema%2A> . veya [Visual Studio 'da veri kümeleri ile çalışma](/visualstudio/data-tools/dataset-tools-in-visual-studio)).  
   
- Aşağıdaki kod oluşturma sözdizimi gösterir bir **veri kümesi** bu aracı kullanarak.  
+ Aşağıdaki kod, bu aracı kullanarak bir **veri kümesi** oluşturmak için söz dizimini gösterir.  
   
 ```  
 xsd.exe /d /l:CS XSDSchemaFileName.xsd /eld /n:XSDSchema.Namespace  
 ```  
   
- Bu sözdizimi `/d` yönergesi oluşturmak için aracı söyleyen bir **veri kümesi**ve `/l:` Aracı (örneğin, C# veya Visual Basic .NET) kullanmak için hangi dilde söyler. İsteğe bağlı `/eld` yönergesi belirtir, LINQ to DataSet oluşturulan sorgu için kullanabileceğiniz **veri kümesi.** Bu seçenek kullanılır, `/d` seçeneği de belirtildiğinde. Daha fazla bilgi için [yazılan veri kümelerini sorgulama](../../../../../docs/framework/data/adonet/querying-typed-datasets.md). İsteğe bağlı `/n:` yönergesi ayrıca bir ad alanı oluşturmak için aracı söyler **veri kümesi** adlı **XSDSchema.Namespace**. Komut çıktısı, derlenmiş ve bir ADO.NET uygulamasında kullanılan XSDSchemaFileName.cs ' dir. Oluşturulan kod, bir kitaplık veya bir modül derlenebilir.  
+ Bu sözdiziminde, `/d` yönerge, araca bir **veri kümesi**oluşturmasını söyler ve `/l:` araca hangi dilin kullanılacağını (örneğin, C# veya Visual Basic .net) söyler. İsteğe bağlı `/eld` yönerge, oluşturulan **veri kümesinde** sorgulama yapmak için LINQ to DataSet kullanacağınızı belirtir. `/d` Seçenek de belirtildiğinde bu seçenek kullanılır. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümelerini sorgulama](../querying-typed-datasets.md). İsteğe bağlı `/n:` yönerge, araca **XSDSchema. Namespace**adlı **veri kümesi** için de bir ad alanı oluşturmasını söyler. Komutun çıktısı, bir ADO.NET uygulamasında derlenebilecek ve kullanılabilecek olan XSDSchemaFileName.cs 'dir. Oluşturulan kod bir kitaplık veya modül olarak derlenebilir.  
   
- Aşağıdaki kodu kullanarak C# Derleyici (csc.exe) kitaplık olarak oluşturulan kodu derlemek için sözdizimi gösterilmektedir.  
+ Aşağıdaki kod, C# derleyicinin (CSC. exe) kullanılarak oluşturulan kodu bir kitaplık olarak derlemek için söz dizimini gösterir.  
   
 ```  
 csc.exe /t:library XSDSchemaFileName.cs /r:System.dll /r:System.Data.dll  
 ```  
   
- `/t:` Yönergesi söyleyen bir kitaplığa derlemek için araç ve `/r:` yönergeleri derlemek için rcxdtı.dll bağımlı kitaplıkları belirtin. Derleyiciye ADO.NET uygulamayla derlenirken geçirilebilir XSDSchemaFileName.dll, komut çıktısı olan `/r:` yönergesi.  
+ Yönergesi, araca bir kitaplığa derlemeyi söyler `/r:` ve yönergeler derlemek için gereken bağımlı kitaplıkları belirler. `/t:` Komutun çıktısı, `/r:` yönergeyle bir ADO.NET uygulaması derlenirken derleyiciye geçirilebilen XSDSchemaFileName. dll ' dir.  
   
- Aşağıdaki kod, xsd.exe'nin için bir ADO.NET uygulamasında geçirilen ad alanı erişmek için söz dizimini gösterir.  
+ Aşağıdaki kod, bir ADO.NET uygulamasında XSD. exe ' ye geçirilen ad alanına erişim söz dizimini gösterir.  
   
 ```vb  
 Imports XSDSchema.Namespace  
@@ -43,7 +43,7 @@ Imports XSDSchema.Namespace
 using XSDSchema.Namespace;  
 ```  
   
- Aşağıdaki kod örneği bir türü belirtilmiş kullanan **veri kümesi** adlı **CustomerDataSet** müşterilerin listesini yüklemeye **Northwind** veritabanı. Kullanarak veriler yüklendikten sonra **dolgu** yöntemi, örneğin her müşteri döngü **müşteriler** belirlenmiş kullanarak tablo **CustomersRow** ( **DataRow**) nesne. Bu doğrudan erişim sağlayan **CustomerID** için ile karşılık olarak sütun **DataColumnCollection**.  
+ Aşağıdaki kod örneği, **Northwind** veritabanından müşterilerin bir listesini yüklemek Için **customerdataset** adlı bir türü belirtilmiş **veri kümesini** kullanır. **Fill** yöntemi kullanılarak veriler yüklendikten sonra örnek, yazılan **CustomersRow** (**DataRow**) nesnesini kullanarak **müşteriler** tablosundaki her bir müşteri için döngü gerçekleştirilir. Bu, **DataColumnCollection**yerine **MüşteriNo** sütununa doğrudan erişim sağlar.  
   
 ```vb  
 Dim customers As CustomerDataSet= New CustomerDataSet()  
@@ -73,7 +73,7 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
   Console.WriteLine(customerRow.CustomerID);  
 ```  
   
- Aşağıda bir örnek için kullanılan XML şeması vardır.  
+ Örnek için kullanılan XML şeması aşağıda verilmiştir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -98,6 +98,6 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
-- [Türü Belirtilmiş DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Türü Belirtilmiş DataSets](typed-datasets.md)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

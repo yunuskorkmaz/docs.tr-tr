@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Projeksiyon türünü denetleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 559cfb2a38ba76fb37a17100f0441498223852d7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a44f7616beba3e07f6e44cc279c67468abc779e3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594028"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204097"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Nasıl yapılır: Projeksiyon türünü denetleme (C#)
 Projeksiyon, tek bir veri kümesini alma, filtreleme, şeklini değiştirme ve hatta türünü değiştirme işlemidir. Çoğu sorgu ifadesi tahminleri gerçekleştirir. Bu bölümde gösterilen sorgu ifadelerinin çoğu, ' <xref:System.Collections.Generic.IEnumerable%601> ın <xref:System.Xml.Linq.XElement>' i değerlendirin, ancak başka türden Koleksiyonlar oluşturmak için projeksiyonun türünü kontrol edebilirsiniz. Bu konuda bunun nasıl yapılacağı gösterilmektedir.  
@@ -62,7 +62,7 @@ class Program
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 GREAL:Great Lakes Food Market:Howard Snyder  
 HUNGC:Hungry Coyote Import Store:Yoshi Latimer  
 LAZYK:Lazy K Kountry Store:John Steel  

@@ -2,47 +2,47 @@
 title: XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-ms.openlocfilehash: cdbfba96c4cfe52cfbd58246be60842540a84754
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b0082b534b8df10ac5277cf2f5aa5b2d2e40c11b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603994"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204626"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
-XML Şeması Tanım Dili (XSD) öğeleri ve öznitelikleri tanımlar belirtilmesi kısıtlamaları sağlar. Bir XML Şeması ilişkisel şemasında eşlerken bir <xref:System.Data.DataSet>, XML şema kısıtlamaları uygun ilişkisel tabloları ve sütunları kısıtlamalar eşleştirilmiş **veri kümesi**.  
+XML şeması tanım dili (XSD), kısıtlama tanımladığı öğeler ve özniteliklerde kısıtlamaların belirtilmesini sağlar. Bir XML şemasını bir <xref:System.Data.DataSet>' deki ilişkisel şemayla eşlerken, XML şeması kısıtlamaları **veri kümesindeki**tablolar ve sütunlarda uygun ilişkisel kısıtlamalara eşlenir.  
   
- Bu bölümde, aşağıdaki XML şema kısıtlamaları eşleme ele alınmaktadır:  
+ Bu bölüm, aşağıdaki XML şeması kısıtlamalarının eşlemesini anlatmaktadır:  
   
-- Benzersizlik kısıtlamasını kullanarak belirtilen **benzersiz** öğesi.  
+- **Unique** öğesi kullanılarak belirtilen benzersizlik kısıtlaması.  
   
-- Anahtar kısıtlamasını kullanarak belirtilen **anahtar** öğesi.  
+- **Key** öğesi kullanılarak belirtilen anahtar kısıtlaması.  
   
-- Kullanarak belirtilen keyref kısıtlama **keyref** öğesi.  
+- Keyref öğesi kullanılarak belirtilen keyref kısıtlaması .  
   
- Bir öğe veya öznitelik bir kısıtlama kullanarak belirli kısıtlamalara belgenin herhangi bir örneğindeki öğe değerlerini belirtin. Örneğin, bir anahtar kısıtlaması bir **CustomerID** alt öğesi bir **müşteri** şema öğesi gösterir değerlerini **CustomerID** alt öğesi olmalıdır. herhangi bir belge örneğindeki benzersiz ve null değerlere izin verilmemektedir.  
+ Bir öğe veya öznitelik üzerinde bir kısıtlama kullanarak, herhangi bir belgenin örneğindeki öğe değerleri üzerinde belirli kısıtlamalar belirtirsiniz. Örneğin, şemadaki bir **Müşteri** öğesinin **MüşteriNo** alt öğesinde bir anahtar kısıtlaması, **MüşteriNo** alt öğesinin değerlerinin herhangi bir belge örneğinde benzersiz olması gerektiğini ve null değerlere izin verilmediğini gösterir.  
   
- Kısıtlamaları da arasında öğeleri ve özniteliklerinin belgede, belge içindeki bir ilişki kurmak için belirtilebilir. Anahtar ve keyref kısıtlamaları şemada kısıtlamaları belge öğeleri ve öznitelikleri arasında bir ilişki výsledek belgenin içinde belirtmek için kullanılır.  
+ Belge içinde ilişki kurmak için bir belgedeki öğeler ve öznitelikler arasında da bir kısıtlama belirtilebilir. Anahtar ve keyref kısıtlamaları, belge içindeki kısıtlamaları belirtmek için şemada kullanılır ve belge öğeleri ile öznitelikler arasında bir ilişki elde edilir.  
   
- Bu şema kısıtlamaları eşleme işlemi içinde oluşturulmuş tablolarda uygun kısıtlamaları dönüştürür **veri kümesi**.  
+ Eşleme işlemi, bu şema kısıtlamalarını **veri kümesi**içinde oluşturulan tablolardaki uygun kısıtlamalara dönüştürür.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- İçinde benzersiz kısıtlamalar oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
+ [Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Bir **veri kümesinde**benzersiz kısıtlamalar oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
   
- [Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- İçindeki anahtar kısıtlamaları (benzersiz kısıtlamalar burada null değerlere izin verilmez) oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
+ [Anahtar XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](map-key-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Bir **veri kümesinde**anahtar kısıtlamalarını (null değerlere izin verilmeyen benzersiz kısıtlamalar) oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
   
- [Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Keyref (yabancı anahtar) kısıtlamalarını oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
+ [Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ Bir **veri kümesinde**keyref (yabancı anahtar) kısıtlamalarını oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- İlişkisel yapısını veya şema biri açıklar bir **veri kümesi** XSD şema oluşturuldu.  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ XSD şemasından oluşturulan bir **veri kümesinin** ilişkisel yapısını veya şemasını açıklar.  
   
- [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Tablo sütunlarını arasındaki ilişkileri oluşturmak için kullanılan XML Şeması öğeleri açıklar bir **veri kümesi**.  
+ [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)  
+ Bir **veri kümesindeki**tablo sütunları arasında ilişki oluşturmak IÇIN kullanılan xml şema öğelerini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

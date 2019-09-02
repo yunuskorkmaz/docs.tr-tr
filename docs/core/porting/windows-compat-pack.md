@@ -1,61 +1,61 @@
 ---
-title: .NET Core kod bağlantı noktası için Windows Uyumluluk Paketi kullanma
-description: Windows Uyumluluk Paketi hakkında bilgi edinmek ve nasıl, kullanabilir, bağlantı noktası var olan .NET Framework kodu .NET Core için
+title: .NET Core 'a bağlantı noktası için Windows Uyumluluk paketini kullanın
+description: Windows Uyumluluk Paketi hakkında bilgi edinin ve mevcut .NET Framework kodunu .NET Core 'a bağlamak için nasıl kullanabileceğinizi öğrenin
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663108"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202556"
 ---
-# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core kod bağlantı noktası için Windows Uyumluluk Paketi kullanma
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>.NET Core 'a bağlantı noktası için Windows Uyumluluk paketini kullanın
 
-.NET Core için mevcut kodu taşıyorsanız, bulunan en yaygın sorunlardan bazılarını, API ve .NET Framework yalnızca bulunur teknolojilerini bağımlılıklardır. *Windows Uyumluluk Paketi* .NET Core uygulamaları ve .NET standart kitaplıkları oluşturmak çok daha kolay olacak şekilde bu teknolojilerin birçoğu sağlar.
+Mevcut kodun .NET Core 'a taşıma sırasında bulunan en yaygın sorunlardan bazıları yalnızca .NET Framework bulunan API ve teknolojilerin bağımlılıklarıdır. *Windows Uyumluluk Paketi* bu teknolojilerin çoğunu sağlar, bu sayede .NET Core uygulamaları ve .NET Standard kitaplıklarını derlemek çok daha kolay olur.
 
-Bu mantıksal bir pakettir [.NET Standard 2.0 uzantısı](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) önemli ölçüde artar API kümesi ve varolan kodu derlendiğinden emin neredeyse değişikliğe. Ancak .NET Standard'ın promise tutulabilmesi için ("tüm .NET uygulamalarında sağlayan API kümesi sağlıyor"), bu kayıt defteri gibi tüm platformlarda Windows Yönetim Araçları (WMI) çalışamaz teknolojileri eklemediğiniz veya yansıma yayma API'ler.
+Bu paket, API kümesini önemli ölçüde artıran ve neredeyse hiçbir değişiklik yapılmaksızın mevcut kodu derlenen [.NET Standard 2,0 ' nin](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) mantıksal bir uzantısıdır. Ancak .NET Standard taahhüdünü korumak için ("tüm .NET uygulamalarının sağladığı API kümesidir"), bu, kayıt defteri, Windows Yönetim Araçları (WMI) veya yansıma yayma gibi tüm platformlarda çalışmadığınız teknolojileri içermemektedir GetVersionEx.
 
-*Windows Uyumluluk Paketi* .NET Standard en üstünde yer alan ve Windows sadece teknolojileri erişim sağlar. .NET Core ancak bir ilk adım Windows kalabilmek için plan taşımak istediğiniz müşteriler özellikle yararlıdır. Bu senaryoda yalnızca Windows teknolojileri kullanacak şekilde boyutlandırılmamışsa, yalnızca bir geçiş hurdle sıfır mimari avantajlarla olur.
+*Windows Uyumluluk paketi* .NET Standard en üstünde bulunur ve yalnızca Windows olan teknolojiler için erişim sağlar. .NET Core 'a geçmek isteyen ancak ilk adım olarak Windows 'ta kalmak için plan yapmak isteyen müşteriler için özellikle faydalıdır. Bu senaryoda, yalnızca Windows teknolojilerini kullanamayacak, sıfır mimari avantajları olan yalnızca bir geçiş değildir.
 
 ## <a name="package-contents"></a>Paket içeriği
 
-*Windows Uyumluluk Paketi* NuGet paketi sağlanan [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) ve .NET Core veya .NET Standard hedefleyen projeleri başvurulabilir.
+*Windows Uyumluluk Paketi* , [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) NuGet paketi aracılığıyla sağlanır ve .NET Core veya .NET Standard hedefleyen projelerden başvurulabilir.
 
-Yaklaşık 20. 000 sağladığı API'leri, yalnızca Windows yanı platformlar arası API'lerinden aşağıdaki teknoloji alanları dahil olmak üzere:
+Aşağıdaki teknoloji alanlarından yalnızca Windows 'un yanı sıra platformlar arası API 'Ler dahil olmak üzere 20.000 API 'si sağlar:
 
 * Kod Sayfaları
 * CodeDom
 * Yapılandırma
 * Dizin Hizmetleri
-* Çizim
+* İnizde
 * ODBC
 * İzinler
 * Bağlantı Noktaları
-* Windows erişim denetim listeleri (ACL)
+* Windows Access Control listeleri (ACL)
 * Windows Communication Foundation (WCF)
-* Windows şifreleme
+* Windows şifrelemesi
 * Windows olay günlüğü
 * Windows Yönetim Araçları (WMI)
 * Windows performans sayaçları
 * Windows Kayıt Defteri
-* Windows çalışma zamanı önbelleğe alma
+* Windows Çalışma Zamanı önbelleğe alma
 * Windows Hizmetleri
 
-Daha fazla bilgi için [uyumluluk paketinin belirtim](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
+Daha fazla bilgi için bkz. [Uyumluluk paketinin belirtimi](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Kullanmaya başlayın
 
-1. Taşıma önce göz atın emin olun [taşıma işlemi](index.md).
+1. Taşıma işleminden önce, [taşıma işlemine](index.md)göz atın.
 
-2. .NET Core veya .NET Standard için mevcut kodu taşıyorsanız, NuGet paketini yüklemek [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
+2. Mevcut kodu .NET Core 'a veya .NET Standard taşıma sırasında [Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)NuGet paketini yüklemek.
 
-3. Windows üzerinde kalmak istiyorsanız, başlamaya hazırsınız.
+3. Windows üzerinde kalmak isterseniz, hazırsınız demektir.
 
-4. Linux veya Macos'ta .NET Core uygulaması veya .NET Standard kitaplığı çalıştırmak istediğiniz kullanırsanız [API Çözümleyicisi](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) platformlar arası çalışmaz API kullanım bulunamadı.
+4. Linux veya macOS 'ta .NET Core uygulamasını veya .NET Standard kitaplığını çalıştırmak istiyorsanız, platformlar arası çalışmayan API 'lerin kullanımını bulmak için [API Çözümleyicisi](../../standard/analyzers/api-analyzer.md) ' ni kullanın.
 
-5. Bu API kullanımları Kaldır, bunları platformlar arası alternatif ile değiştirin veya gibi bir platform denetimi kullanarak bunları koruma:
+5. Bu API 'lerin kullanımlarını kaldırın, bunları platformlar arası alternatifler ile değiştirin ya da şunun gibi bir platform denetimi kullanarak koruma edin:
 
     ```csharp
     private static string GetLoggingPath()
@@ -77,4 +77,4 @@ Daha fazla bilgi için [uyumluluk paketinin belirtim](https://github.com/dotnet/
     }
     ```
 
-Bir tanıtım için kullanıma [Windows Uyumluluk Paketi Channel 9 video](https://channel9.msdn.com/Events/Connect/2017/T123).
+Tanıtım için [Windows Uyumluluk Paketi 'Nin Channel 9 videosunu](https://channel9.msdn.com/Events/Connect/2017/T123)inceleyin.

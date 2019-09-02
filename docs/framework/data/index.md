@@ -6,18 +6,18 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 428fe49584523bb1386b100838034fc161455d3b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 74256cb52756e790a0e3eb8980f65f1a85445204
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965157"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205996"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework'te Veri ve Modelleme
 Bu bölüm, ADO.NET, dil ile tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML kullanarak verilere erişme hakkında bilgi sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ADO.NET](../../../docs/framework/data/adonet/index.md)  
+ [ADO.NET](./adonet/index.md)  
  ADO.NET mimarisini ve uygulama verilerini yönetmek ve Microsoft SQL Server, OLE DB veri kaynakları ve XML dahil olmak üzere veri kaynaklarıyla etkileşim kurmak için ADO.NET sınıflarının nasıl kullanılacağını açıklar.  
   
  [Dil ile Tümleşik Sorgu (LINQ)](../../csharp/programming-guide/concepts/linq/index.md)  
@@ -26,10 +26,10 @@ Bu bölüm, ADO.NET, dil ile tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML
  [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)  
  Visual Basic kullanarak dil ile tümleşik sorgu (LINQ) için ilgili belgelere bağlantılar sağlar.  
   
- [İşlem Gerçekleştirme](../../../docs/framework/data/transactions/index.md)  
+ [İşlem Gerçekleştirme](./transactions/index.md)  
  İşlemler için .NET Framework desteğini açıklar.  
   
- [WCF Veri Hizmetleri 4.5](../../../docs/framework/data/wcf/index.md)  
+ [WCF Veri Hizmetleri 4.5](./wcf/index.md)  
  Web 'de veya intranette veri hizmetlerini dağıtmak için WCF Veri Hizmetleri kullanma hakkında bilgi sağlar.  
   
  [XML Belgeleri ve Verileri](../../standard/data/xml/index.md)  
@@ -42,7 +42,7 @@ Bu bölüm, ADO.NET, dil ile tümleşik sorgu (LINQ), WCF Veri Hizmetleri ve XML
  [Microsoft SQL Server modelleme teknolojileri](https://go.microsoft.com/fwlink/?LinkId=193039)  
  Hızlı ve özelleştirilmiş veri tabanlı uygulama tasarımını ve geliştirmeyi etkinleştiren bir teknoloji kümesini açıklar.  
   
- [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  
+ [Geliştirme Kılavuzu](../development-guide.md)  
  Dinamik programlama, birlikte çalışabilirlik, genişletilebilirlik, bellek yönetimi ve iş parçacığı oluşturma hakkında uygulama ve bilgilerinizi oluşturma, yapılandırma, hatasını ayıklama, güvenliğini sağlama ve dağıtma gibi, uygulama geliştirmesine yönelik tüm temel teknoloji alanları ve görevleri için kılavuz sağlar.  
   
  [Güvenlik](../../standard/security/index.md)  

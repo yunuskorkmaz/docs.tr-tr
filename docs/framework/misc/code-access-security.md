@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f089a4482173fd9697738c1643c33c05da4212
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bdb4e84170d4d3b95b8b51f12e0787937aaaf961
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910956"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205653"
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,11 +34,11 @@ ms.locfileid: "69910956"
  .NET Framework, bilgisayar sistemlerinin kötü amaçlı mobil koddan korunmasına yardımcı olmak için kod erişim güvenliği adlı bir güvenlik mekanizması sağlar, bilinmeyen kaynaklardan gelen kodun korumayla çalışmasına izin vermek ve güvenilen kodun kasıtlı ya da yanlışlıkla oluşmasını önlemek için güvenliği tehlikeye atma. Kod erişim güvenliği, kodun kaynaklandığı ve kodun kimliğinin diğer yönlerine bağlı olarak kodun farklı derecelerde güvenilir olmasını sağlar. Kod erişimi güvenliği, kod üzerinde farklı güven düzeyleri de uygular ve bu da çalışması için tam güvenilir olması gereken kod miktarını en aza indirir. Kod erişim güvenliğini kullanmak, kodunuzun kötü amaçlı veya hata doldurulmuş kod ile kötüye kullanılması olasılığını azaltabilir. Kodunuzun gerçekleştirmesine izin verilmesi gereken işlem kümesini belirtebileceğiniz için yükümlülük azalmasına olanak sağlayabilir. Kod erişimi güvenliği, kodunuzda güvenlik açıklarına neden olabilecek hasarı en aza indirmenize de yardımcı olabilir.  
   
 > [!NOTE]
-> Kod erişim güvenliği için .NET Framework 4 ' te önemli değişiklikler yapılmıştır. En önemli değişiklik [güvenlik saydamlığına](../../../docs/framework/misc/security-transparent-code.md)sahiptir, ancak kod erişim güvenliğini etkileyen diğer önemli değişiklikler de vardır. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../../../docs/framework/security/security-changes.md).  
+> Kod erişim güvenliği için .NET Framework 4 ' te önemli değişiklikler yapılmıştır. En önemli değişiklik [güvenlik saydamlığına](security-transparent-code.md)sahiptir, ancak kod erişim güvenliğini etkileyen diğer önemli değişiklikler de vardır. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](../security/security-changes.md).  
   
- Kod erişimi güvenliği birincil olarak kitaplık kodunu ve kısmen güvenilen uygulamaları etkiler. Kitaplık geliştiricileri, kısmen güvenilen uygulamalardan kendi kodlarını yetkisiz erişimlerden korumalıdır. Kısmen güvenilen uygulamalar, Internet gibi dış kaynaklardan yüklenen uygulamalardır. Masaüstünüzde veya yerel intranette yüklü olan uygulamalar tam güvende çalışır. Tam güven uygulamaları, tamamen güvenilir olduklarından, [güvenlik açısından saydam](../../../docs/framework/misc/security-transparent-code.md)olarak işaretlenmedikçe, kod erişim güvenliği tarafından etkilenmez. Tam güvenle uygulamalara yönelik tek sınırlama, <xref:System.Security.SecurityTransparentAttribute> özniteliğiyle işaretlenen uygulamaların <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlenen kodu çağıramasıdır. Kısmen güvenilen uygulamalar, kod erişimi güvenliğinin uygulanabilmesi için bir korumalı alanda (örneğin, Internet Explorer 'da) çalıştırılmalıdır. Bir uygulamayı Internet 'ten indirip masaüstünüzden çalıştırmayı denerseniz şu iletiyle bir <xref:System.NotSupportedException> ileti alırsınız: "Bir ağ konumundan bir derlemeyi yükleme girişiminde bulunuldu ve bu, derlemenin önceki .NET Framework korumalı olmasını sağlar. .NET Framework bu sürümü, varsayılan olarak CAS ilkesini etkinleştirmez, bu nedenle bu yük tehlikeli olabilir. " Uygulamanın güvenilir olduğundan eminseniz, [ \<loadFromRemoteSources > öğesini](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)kullanarak tam güven olarak çalışmasını sağlayabilirsiniz. Bir uygulamayı bir korumalı alanda çalıştırma hakkında bilgi için bkz [. nasıl yapılır: Bir korumalı alanda](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.  
+ Kod erişimi güvenliği birincil olarak kitaplık kodunu ve kısmen güvenilen uygulamaları etkiler. Kitaplık geliştiricileri, kısmen güvenilen uygulamalardan kendi kodlarını yetkisiz erişimlerden korumalıdır. Kısmen güvenilen uygulamalar, Internet gibi dış kaynaklardan yüklenen uygulamalardır. Masaüstünüzde veya yerel intranette yüklü olan uygulamalar tam güvende çalışır. Tam güven uygulamaları, tamamen güvenilir olduklarından, [güvenlik açısından saydam](security-transparent-code.md)olarak işaretlenmedikçe, kod erişim güvenliği tarafından etkilenmez. Tam güvenle uygulamalara yönelik tek sınırlama, <xref:System.Security.SecurityTransparentAttribute> özniteliğiyle işaretlenen uygulamaların <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle işaretlenen kodu çağıramasıdır. Kısmen güvenilen uygulamalar, kod erişimi güvenliğinin uygulanabilmesi için bir korumalı alanda (örneğin, Internet Explorer 'da) çalıştırılmalıdır. Bir uygulamayı Internet 'ten indirip masaüstünüzden çalıştırmayı denerseniz şu iletiyle bir <xref:System.NotSupportedException> ileti alırsınız: "Bir ağ konumundan bir derlemeyi yükleme girişiminde bulunuldu ve bu, derlemenin önceki .NET Framework korumalı olmasını sağlar. .NET Framework bu sürümü, varsayılan olarak CAS ilkesini etkinleştirmez, bu nedenle bu yük tehlikeli olabilir. " Uygulamanın güvenilir olduğundan eminseniz, [ \<loadFromRemoteSources > öğesini](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)kullanarak tam güven olarak çalışmasını sağlayabilirsiniz. Bir uygulamayı bir korumalı alanda çalıştırma hakkında bilgi için bkz [. nasıl yapılır: Bir korumalı alanda](how-to-run-partially-trusted-code-in-a-sandbox.md)kısmen güvenilen kodu çalıştırın.  
   
- Ortak dil çalışma zamanını hedefleyen tüm yönetilen kodlar, bu kod tek bir kod erişim güvenliği çağrısı yapmasa bile, kod erişim güvenliği avantajlarından yararlanır. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../../../docs/framework/misc/code-access-security-basics.md).  
+ Ortak dil çalışma zamanını hedefleyen tüm yönetilen kodlar, bu kod tek bir kod erişim güvenliği çağrısı yapmasa bile, kod erişim güvenliği avantajlarından yararlanır. Daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](code-access-security-basics.md).  
   
 <a name="key_functions"></a>   
 ## <a name="key-functions-of-code-access-security"></a>Kod erişim güvenliği 'nin önemli Işlevleri  
@@ -58,7 +58,7 @@ ms.locfileid: "69910956"
   
  Aşağıdaki çizimde, bir derleme a4 içindeki bir yöntem çağıranların izin P 'ye sahip olduğu durumlarda oluşan yığın izlenecek sonuç gösterilmektedir.  
   
- ![Kod erişim güvenliği](../../../docs/framework/misc/media/slide-10a.gif "slide_10a")  
+ ![Kod erişim güvenliği](media/slide-10a.gif "slide_10a")  
 Güvenlik yığını ilerleme  
   
 <a name="related_topics"></a>   
@@ -66,9 +66,9 @@ Güvenlik yığını ilerleme
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Kod erişim güvenliği temelleri](../../../docs/framework/misc/code-access-security-basics.md)|Kod erişim güvenliğini ve en yaygın kullanımları açıklar.|  
-|[Güvenliği saydam kod, düzey 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|.NET Framework 4 ' teki güvenlik saydamlığı modelini açıklar.|  
-|[Kısmen güvenilen koddan kitaplıkları kullanma](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Yönetilmeyen kod ile kullanım için kitaplıkların nasıl etkinleştirileceğini ve yönetilmeyen koddan kitaplıkların nasıl kullanılacağını açıklar.|  
+|[Kod erişim güvenliği temelleri](code-access-security-basics.md)|Kod erişim güvenliğini ve en yaygın kullanımları açıklar.|  
+|[Güvenliği saydam kod, düzey 2](security-transparent-code-level-2.md)|.NET Framework 4 ' teki güvenlik saydamlığı modelini açıklar.|  
+|[Kısmen güvenilen koddan kitaplıkları kullanma](using-libraries-from-partially-trusted-code.md)|Yönetilmeyen kod ile kullanım için kitaplıkların nasıl etkinleştirileceğini ve yönetilmeyen koddan kitaplıkların nasıl kullanılacağını açıklar.|  
 |[Temel Güvenlik Kavramları](../../standard/security/key-security-concepts.md)|.NET Framework güvenlik sisteminde kullanılan önemli koşulların ve kavramların çoğuna genel bir bakış sağlar.|  
 |[Rol Tabanlı Güvenlik](../../standard/security/role-based-security.md)|Rollere göre güvenliğin nasıl ekleneceğini açıklar.|  
 |[Şifreleme Hizmetleri](../../standard/security/cryptographic-services.md)|Uygulamalarınızın nasıl şifreleneceğini açıklar.|

@@ -2,51 +2,51 @@
 title: DataSet içinde XML kullanma
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: 9e586ff0c6f28dd5919bc8b1bc640389a5cad610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba68f0fbe84a9877596ddfefd56f71a5889cf8de
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607093"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203146"
 ---
 # <a name="using-xml-in-a-dataset"></a>DataSet içinde XML kullanma
-ADO.NET ile doldurmak için bir <xref:System.Data.DataSet> bir XML akışı veya belge. XML akışı veya belge için sağlamak için kullanabileceğiniz <xref:System.Data.DataSet> verileri, şema bilgileri veya her ikisi de. XML akışı ya da belge sağlanan bilgilerin mevcut verileriniz veya şema bilgileri zaten var. birleştirilebilir <xref:System.Data.DataSet>.  
+ADO.NET ile bir XML akışından veya <xref:System.Data.DataSet> belgesinden bir örneği doldurabilirsiniz. XML akışını veya belgeyi, verileri, şema bilgilerini ya da her <xref:System.Data.DataSet> ikisini sağlamak için kullanabilirsiniz. XML akışından veya belgesinden sağlanan bilgiler, <xref:System.Data.DataSet>içinde zaten mevcut olan mevcut verilerle veya şema bilgileriyle birleştirilebilir.  
   
- ADO.NET Ayrıca, bir XML temsilini oluşturmanıza olanak tanır bir <xref:System.Data.DataSet>, ile veya olmadan taşıma için şema <xref:System.Data.DataSet> başka tarafından kullanılmak üzere HTTP üzerinden uygulama veya XML özellikli platform. Bir XML temsilini, bir <xref:System.Data.DataSet>, verileri XML'de yazılır ve satır içi gösteriminde ise şeması XML Şeması Tanım Dili (XSD) kullanarak yazılır. XML ve XML Şeması sağlamak uygun bir biçimde içeriğini aktarmak için bir <xref:System.Data.DataSet> uzak istemcilere gelen ve giden.  
+ Ayrıca, başka bir uygulama veya XML özellikli platform tarafından kullanılmak <xref:System.Data.DataSet>üzere http <xref:System.Data.DataSet> üzerinden taşımak için, şeması ile veya olmadan bir XML temsili oluşturmanıza da olanak sağlar. Bir <xref:System.Data.DataSet>öğesinin xml gösteriminde, veriler XML biçiminde yazılır ve bu şema, temsilde satır içi içeriyorsa XML şeması tanım dili (xsd) kullanılarak yazılır. XML ve XML şeması, uzak istemcilerden ve içindeki içeriğini <xref:System.Data.DataSet> aktarmaya yönelik kolay bir biçim sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)  
- DiffGram, okumak ve içeriğini yazmak için kullanılan XML biçimi Ayrıntılar sağlayan bir <xref:System.Data.DataSet>.  
+ [DiffGrams](diffgrams.md)  
+ Öğesinin içeriğini okumak ve yazmak için kullanılan bir XML biçimi olan DiffGram üzerinde ayrıntılar sağlar <xref:System.Data.DataSet>.  
   
- [XML’den DataSet Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- İçeriği yüklerken dikkate alınması gereken farklı seçenekler açıklanır bir <xref:System.Data.DataSet> XML belgesinden.  
+ [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)  
+ Bir XML belgesinden bir <xref:System.Data.DataSet> öğesinin içeriğini yüklerken göz önünde bulundurmanız gereken farklı seçenekleri açıklar.  
   
- [XML Verileri Olarak DataSet İçeriği Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- İçeriğini oluşturma adımları ele alınmaktadır bir <xref:System.Data.DataSet> XML verileri ve farklı XML biçimlendirme seçeneklerini kullanabilirsiniz.  
+ [XML Verileri Olarak DataSet İçeriği Yazma](writing-dataset-contents-as-xml-data.md)  
+ Bir <xref:System.Data.DataSet> as XML verisi içeriğini ve kullanabileceğiniz farklı XML biçimi seçeneklerini nasıl üretebileceğinizi açıklar.  
   
- [XML’den DataSet Schema Bilgilerini Yükleme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- Anlatılmaktadır <xref:System.Data.DataSet> şemasını yüklemek için kullanılan yöntemleri bir <xref:System.Data.DataSet> XML.  
+ [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)  
+ XML 'nin şemasını yüklemek için kullanılan yöntemleriaçıklar.<xref:System.Data.DataSet> <xref:System.Data.DataSet>  
   
- [XSD Olarak DataSet Schema Bilgilerini Yazma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)  
- Bir XML şeması ve bir oluşturmak nasıl kullanıldığı açıklanır bir <xref:System.Data.DataSet>.  
+ [XSD Olarak DataSet Schema Bilgilerini Yazma](writing-dataset-schema-information-as-xsd.md)  
+ Bir XML şeması için kullanımları ve öğesinden <xref:System.Data.DataSet>bir oluşturma hakkında ele alınmaktadır.  
   
- [DataSet ve XmlDataDocument Eşitlemesi](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- Tek bir veri kümesi, ilişkisel ve hiyerarşik görünümler eşzamanlı erişim, .NET Framework'teki yetenektir ele alır ve arasında zaman uyumlu bir ilişki oluşturulacağını gösterir bir <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument>.  
+ [DataSet ve XmlDataDocument Eşitlemesi](dataset-and-xmldatadocument-synchronization.md)  
+ Tek bir veri kümesinin hem ilişkisel hem de hiyerarşik görünümlerine zaman uyumlu erişim .NET Framework, ve arasında <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument>zaman uyumlu bir ilişki oluşturmayı gösteren özelliği ele alır.  
   
- [DataRelations’ı İç İçe Yerleştirme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
- Önemini açıklar iç içe geçmiş <xref:System.Data.DataRelation> nesneleri içeriğini temsil eden, bir <xref:System.Data.DataSet> XML verileri olarak ve bunların nasıl oluşturulacağı açıklanmaktadır.  
+ [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)  
+ XML verilerinin bir <xref:System.Data.DataSet> as içeriğini <xref:System.Data.DataRelation> temsil eden iç içe nesnelerin önemini açıklar ve bunların nasıl oluşturulacağını açıklar.  
   
- [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- İlişkisel yapısını veya şema biri açıklar bir <xref:System.Data.DataSet> XML şema oluşturuldu.  
+ [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ XML şemasından oluşturulan öğesinin <xref:System.Data.DataSet> ilişkisel yapısını veya şemasını açıklar.  
   
- [XML’den DataSet İlişkisel Yapısını Çıkarma](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
- Elde edilen ilişkisel yapısını veya şema biri açıklar bir <xref:System.Data.DataSet> XML öğeleri çıkarılan olduğunda oluşturulur.  
+ [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)  
+ XML öğelerinden çıkarlandığınızda oluşturulan öğesinin <xref:System.Data.DataSet> elde edilen ilişkisel yapısını veya şemasını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ADO.NET’e Genel Bakış](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
- ADO.NET açıklar mimarisi ve bileşenleri ve uygulama verilerini yönetmek için de mevcut veri kaynaklarına erişmek için bunları kullanmayı öğrenin.  
+ [ADO.NET’e Genel Bakış](../ado-net-overview.md)  
+ ADO.NET mimarisini ve bileşenlerini ve mevcut veri kaynaklarına erişmek için bunların yanı sıra uygulama verilerini yönetmek için nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSets, DataTables ve DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataSets, DataTables ve DataViews](index.md)
+- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
