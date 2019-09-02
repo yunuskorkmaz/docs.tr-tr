@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 0e56b97ad7b375c69184e0f1928183612abfef42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bbd0d980b65bfbc9240faa8506f2e41875ec6e6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034456"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205186"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="89528-102">ChildViews ve İlişkileri</span><span class="sxs-lookup"><span data-stu-id="89528-102">ChildViews and Relations</span></span>
-<span data-ttu-id="89528-103">Tablolar arasında bir ilişki varsa, bir <xref:System.Data.DataSet>, oluşturabileceğiniz bir <xref:System.Data.DataView> kullanarak ilgili alt tablosundan satırları içeren <xref:System.Data.DataRowView.CreateChildView%2A> yöntemi <xref:System.Data.DataRowView> üst tablosundaki satırlar için.</span><span class="sxs-lookup"><span data-stu-id="89528-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="89528-104">Örneğin, aşağıdaki görüntüler kod **kategorileri** ve bunların ilgili **ürünleri** alfabetik olarak sıralanmış **CategoryName** ve **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="89528-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="dd509-102">ChildViews ve İlişkileri</span><span class="sxs-lookup"><span data-stu-id="dd509-102">ChildViews and Relations</span></span>
+<span data-ttu-id="dd509-103">İçindeki <xref:System.Data.DataSet>tablolar arasında bir ilişki varsa, üst tablodaki satırların <xref:System.Data.DataRowView.CreateChildView%2A> yöntemini <xref:System.Data.DataRowView> kullanarak ilgili <xref:System.Data.DataView> alt tablodan içeren bir satır oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dd509-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="dd509-104">Örneğin, aşağıdaki kod **kategorileri** ve Ilgili **ürünlerini** **CategoryName** ve **ProductName**öğesine göre sıralanmış alfabetik sırada görüntüler.</span><span class="sxs-lookup"><span data-stu-id="dd509-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,10 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="89528-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="89528-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dd509-105">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dd509-105">See also</span></span>
 
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [<span data-ttu-id="89528-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="89528-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [<span data-ttu-id="89528-107">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="89528-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="dd509-106">DataViews</span><span class="sxs-lookup"><span data-stu-id="dd509-106">DataViews</span></span>](dataviews.md)
+- [<span data-ttu-id="dd509-107">ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="dd509-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

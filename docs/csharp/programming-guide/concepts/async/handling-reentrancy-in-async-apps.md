@@ -2,41 +2,41 @@
 title: Zaman uyumsuz uygulamalarda yeniden girişi işleme (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 78d6b786e5d54a75325d8a7a31b3e12eef7184e8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 3b6c5e29559a5350bdce7ad8bcf971281bb79994
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595646"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204302"
 ---
-# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="bdf5b-102">Zaman uyumsuz uygulamalarda yeniden girişi işleme (C#)</span><span class="sxs-lookup"><span data-stu-id="bdf5b-102">Handling Reentrancy in Async Apps (C#)</span></span>
+# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="6cd14-102">Zaman uyumsuz uygulamalarda yeniden girişi işleme (C#)</span><span class="sxs-lookup"><span data-stu-id="6cd14-102">Handling Reentrancy in Async Apps (C#)</span></span>
 
-<span data-ttu-id="bdf5b-103">Uygulamanıza zaman uyumsuz kod eklediğinizde, işlem tamamlanmadan önce zaman uyumsuz bir işlemi yeniden girmeye işaret eden yeniden giriş yapmayı göz önünde bulundurmalı ve muhtemelen engellemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="bdf5b-104">Yeniden giriş için olanaklar tanımlamazsanız ve işleyemezseniz, bu durum beklenmedik sonuçlara neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>
+<span data-ttu-id="6cd14-103">Uygulamanıza zaman uyumsuz kod eklediğinizde, işlem tamamlanmadan önce zaman uyumsuz bir işlemi yeniden girmeye işaret eden yeniden giriş yapmayı göz önünde bulundurmalı ve muhtemelen engellemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="6cd14-104">Yeniden giriş için olanaklar tanımlamazsanız ve işleyemezseniz, bu durum beklenmedik sonuçlara neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>
 
-<span data-ttu-id="bdf5b-105">**Bu konudaki**</span><span class="sxs-lookup"><span data-stu-id="bdf5b-105">**In this topic**</span></span>
+<span data-ttu-id="6cd14-105">**Bu konudaki**</span><span class="sxs-lookup"><span data-stu-id="6cd14-105">**In this topic**</span></span>
 
-- [<span data-ttu-id="bdf5b-106">Yeniden giriş tanıma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)
+- [<span data-ttu-id="6cd14-106">Yeniden giriş tanıma</span><span class="sxs-lookup"><span data-stu-id="6cd14-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)
 
-- [<span data-ttu-id="bdf5b-107">Yeniden giriş işleme</span><span class="sxs-lookup"><span data-stu-id="bdf5b-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)
+- [<span data-ttu-id="6cd14-107">Yeniden giriş işleme</span><span class="sxs-lookup"><span data-stu-id="6cd14-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)
 
-  - [<span data-ttu-id="bdf5b-108">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="bdf5b-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)
+  - [<span data-ttu-id="6cd14-108">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="6cd14-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)
 
-  - [<span data-ttu-id="bdf5b-109">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="bdf5b-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)
+  - [<span data-ttu-id="6cd14-109">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="6cd14-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)
 
-  - [<span data-ttu-id="bdf5b-110">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)
+  - [<span data-ttu-id="6cd14-110">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="6cd14-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)
 
-- [<span data-ttu-id="bdf5b-111">Örnek uygulamayı inceleme ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)
+- [<span data-ttu-id="6cd14-111">Örnek uygulamayı inceleme ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="6cd14-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> <span data-ttu-id="bdf5b-112">Örneği çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="6cd14-112">Örneği çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-## <a name="BKMK_RecognizingReentrancy"></a><span data-ttu-id="bdf5b-113">Yeniden giriş tanıma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-113">Recognizing Reentrancy</span></span>
+## <a name="BKMK_RecognizingReentrancy"></a><span data-ttu-id="6cd14-113">Yeniden giriş tanıma</span><span class="sxs-lookup"><span data-stu-id="6cd14-113">Recognizing Reentrancy</span></span>
 
-<span data-ttu-id="bdf5b-114">Bu konudaki örnekte, kullanıcılar bir dizi Web sitesini indiren ve indirilen toplam bayt sayısını hesaplayan bir zaman uyumsuz uygulamayı başlatmak için bir **Başlat** düğmesi seçer.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="bdf5b-115">Örneğin zaman uyumlu bir sürümü, bir kullanıcının düğmeyi kaç kez seçtiğinden bağımsız olarak aynı şekilde yanıt verir, çünkü ilk kez sonra, uygulama çalışmaya bitene kadar UI iş parçacığı bu olayları yoksayar.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="bdf5b-116">Ancak zaman uyumsuz bir uygulamada, UI iş parçacığı yanıt vermeye devam eder ve tamamlanmadan önce zaman uyumsuz işlemi yeniden girebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>
+<span data-ttu-id="6cd14-114">Bu konudaki örnekte, kullanıcılar bir dizi Web sitesini indiren ve indirilen toplam bayt sayısını hesaplayan bir zaman uyumsuz uygulamayı başlatmak için bir **Başlat** düğmesi seçer.</span><span class="sxs-lookup"><span data-stu-id="6cd14-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="6cd14-115">Örneğin zaman uyumlu bir sürümü, bir kullanıcının düğmeyi kaç kez seçtiğinden bağımsız olarak aynı şekilde yanıt verir, çünkü ilk kez sonra, uygulama çalışmaya bitene kadar UI iş parçacığı bu olayları yoksayar.</span><span class="sxs-lookup"><span data-stu-id="6cd14-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="6cd14-116">Ancak zaman uyumsuz bir uygulamada, UI iş parçacığı yanıt vermeye devam eder ve tamamlanmadan önce zaman uyumsuz işlemi yeniden girebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>
 
-<span data-ttu-id="bdf5b-117">Aşağıdaki örnek, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse beklenen çıktıyı gösterir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="bdf5b-118">İndirilen Web sitelerinin listesi, her sitenin bayt cinsinden boyutu ile görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="bdf5b-119">Toplam bayt sayısı sonda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-119">The total number of bytes appears at the end.</span></span>
+<span data-ttu-id="6cd14-117">Aşağıdaki örnek, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse beklenen çıktıyı gösterir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="6cd14-118">İndirilen Web sitelerinin listesi, her sitenin bayt cinsinden boyutu ile görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="6cd14-119">Toplam bayt sayısı sonda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-119">The total number of bytes appears at the end.</span></span>
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -49,9 +49,9 @@ ms.locfileid: "69595646"
 TOTAL bytes returned:  890591
 ```
 
-<span data-ttu-id="bdf5b-120">Ancak Kullanıcı düğmeyi birden çok kez seçerse, olay işleyicisi sürekli olarak çağrılır ve yükleme işlemi her seferinde yeniden girilir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="bdf5b-121">Sonuç olarak, birkaç zaman uyumsuz işlem aynı anda çalışır, çıkış sonuçları birbirine bırakır ve toplam bayt sayısı kafa karıştırıcı olur.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>
+<span data-ttu-id="6cd14-120">Ancak Kullanıcı düğmeyi birden çok kez seçerse, olay işleyicisi sürekli olarak çağrılır ve yükleme işlemi her seferinde yeniden girilir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="6cd14-121">Sonuç olarak, birkaç zaman uyumsuz işlem aynı anda çalışır, çıkış sonuçları birbirine bırakır ve toplam bayt sayısı kafa karıştırıcı olur.</span><span class="sxs-lookup"><span data-stu-id="6cd14-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -86,29 +86,29 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591
 ```
 
-<span data-ttu-id="bdf5b-122">Bu çıkışın sonuna kadar kayarak bu çıktıyı üreten kodu gözden geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="bdf5b-123">Çözümü yerel bilgisayarınıza indirerek ve ardından WebsiteDownload projesini çalıştırarak veya kendi projenizi oluşturmak için bu konunun sonundaki kodu kullanarak kodu deneyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="bdf5b-124">Daha fazla bilgi ve yönergeler için bkz. [Örnek uygulamayı inceleme ve çalıştırma](#BKMD_SettingUpTheExample).</span><span class="sxs-lookup"><span data-stu-id="bdf5b-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>
+<span data-ttu-id="6cd14-122">Bu çıkışın sonuna kadar kayarak bu çıktıyı üreten kodu gözden geçirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="6cd14-123">Çözümü yerel bilgisayarınıza indirerek ve ardından WebsiteDownload projesini çalıştırarak veya kendi projenizi oluşturmak için bu konunun sonundaki kodu kullanarak kodu deneyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="6cd14-124">Daha fazla bilgi ve yönergeler için bkz. [Örnek uygulamayı inceleme ve çalıştırma](#BKMD_SettingUpTheExample).</span><span class="sxs-lookup"><span data-stu-id="6cd14-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>
 
-## <a name="BKMK_HandlingReentrancy"></a><span data-ttu-id="bdf5b-125">Yeniden giriş işleme</span><span class="sxs-lookup"><span data-stu-id="bdf5b-125">Handling Reentrancy</span></span>
+## <a name="BKMK_HandlingReentrancy"></a><span data-ttu-id="6cd14-125">Yeniden giriş işleme</span><span class="sxs-lookup"><span data-stu-id="6cd14-125">Handling Reentrancy</span></span>
 
-<span data-ttu-id="bdf5b-126">Uygulamanızın ne yaptığını istediğinize bağlı olarak çeşitli yollarla yeniden giriş gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="bdf5b-127">Bu konu aşağıdaki örnekleri sunmaktadır:</span><span class="sxs-lookup"><span data-stu-id="bdf5b-127">This topic presents the following examples:</span></span>
+<span data-ttu-id="6cd14-126">Uygulamanızın ne yaptığını istediğinize bağlı olarak çeşitli yollarla yeniden giriş gerçekleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="6cd14-127">Bu konu aşağıdaki örnekleri sunmaktadır:</span><span class="sxs-lookup"><span data-stu-id="6cd14-127">This topic presents the following examples:</span></span>
 
-- [<span data-ttu-id="bdf5b-128">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="bdf5b-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)
+- [<span data-ttu-id="6cd14-128">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="6cd14-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)
 
-  <span data-ttu-id="bdf5b-129">İşlem çalışırken kullanıcının kesintiye uğramaması için **Başlat** düğmesini devre dışı bırakın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>
+  <span data-ttu-id="6cd14-129">İşlem çalışırken kullanıcının kesintiye uğramaması için **Başlat** düğmesini devre dışı bırakın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>
 
-- [<span data-ttu-id="bdf5b-130">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="bdf5b-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)
+- [<span data-ttu-id="6cd14-130">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="6cd14-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)
 
-  <span data-ttu-id="bdf5b-131">Kullanıcı **Başlat** düğmesini yeniden seçtiğinde çalışmaya devam eden tüm işlemleri iptal edin ve son istenen işlemin devam etmesine izin verin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>
+  <span data-ttu-id="6cd14-131">Kullanıcı **Başlat** düğmesini yeniden seçtiğinde çalışmaya devam eden tüm işlemleri iptal edin ve son istenen işlemin devam etmesine izin verin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>
 
-- [<span data-ttu-id="bdf5b-132">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)
+- [<span data-ttu-id="6cd14-132">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="6cd14-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)
 
-  <span data-ttu-id="bdf5b-133">Tüm istenen işlemlerin zaman uyumsuz olarak çalışmasına izin verin, ancak her bir işlemin sonuçlarının bir arada ve sırayla görünmesi için çıktının görüntülenmesini koordine edin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>
+  <span data-ttu-id="6cd14-133">Tüm istenen işlemlerin zaman uyumsuz olarak çalışmasına izin verin, ancak her bir işlemin sonuçlarının bir arada ve sırayla görünmesi için çıktının görüntülenmesini koordine edin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>
 
-### <a name="BKMK_DisableTheStartButton"></a><span data-ttu-id="bdf5b-134">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="bdf5b-134">Disable the Start Button</span></span>
+### <a name="BKMK_DisableTheStartButton"></a><span data-ttu-id="6cd14-134">Başlat düğmesini devre dışı bırak</span><span class="sxs-lookup"><span data-stu-id="6cd14-134">Disable the Start Button</span></span>
 
-<span data-ttu-id="bdf5b-135">`StartButton_Click` Olay işleyicisinin en üstündeki düğmeyi devre dışı bırakarak, bir işlem çalışırken **Başlat** düğmesini engelleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="bdf5b-136">Böylece, kullanıcılar uygulamayı yeniden çalıştırabilmeleri için işlem `finally` bittiğinde düğmeyi bir blok içinden yeniden etkinleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>
+<span data-ttu-id="6cd14-135">`StartButton_Click` Olay işleyicisinin en üstündeki düğmeyi devre dışı bırakarak, bir işlem çalışırken **Başlat** düğmesini engelleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="6cd14-136">Böylece, kullanıcılar uygulamayı yeniden çalıştırabilmeleri için işlem `finally` bittiğinde düğmeyi bir blok içinden yeniden etkinleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>
 
-<span data-ttu-id="bdf5b-137">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="bdf5b-138">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="bdf5b-139">Projenin adı DisableStartButton olur.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-139">The name of the project is DisableStartButton.</span></span>
+<span data-ttu-id="6cd14-137">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="6cd14-138">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="6cd14-139">Projenin adı DisableStartButton olur.</span><span class="sxs-lookup"><span data-stu-id="6cd14-139">The name of the project is DisableStartButton.</span></span>
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -135,17 +135,17 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-<span data-ttu-id="bdf5b-140">Değişikliklerin bir sonucu olarak, Web siteleri indirilirken düğme yanıt `AccessTheWebAsync` vermez, bu nedenle işlem yeniden girilemez.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>
+<span data-ttu-id="6cd14-140">Değişikliklerin bir sonucu olarak, Web siteleri indirilirken düğme yanıt `AccessTheWebAsync` vermez, bu nedenle işlem yeniden girilemez.</span><span class="sxs-lookup"><span data-stu-id="6cd14-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>
 
-### <a name="BKMK_CancelAndRestart"></a><span data-ttu-id="bdf5b-141">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="bdf5b-141">Cancel and Restart the Operation</span></span>
+### <a name="BKMK_CancelAndRestart"></a><span data-ttu-id="6cd14-141">Işlemi iptal edin ve yeniden başlatın</span><span class="sxs-lookup"><span data-stu-id="6cd14-141">Cancel and Restart the Operation</span></span>
 
-<span data-ttu-id="bdf5b-142">**Başlat** düğmesini devre dışı bırakmak yerine düğmeyi etkin tutabilirsiniz, ancak kullanıcı bu düğmeyi yeniden seçerse, zaten çalışmakta olan işlemi iptal edin ve en son başlatılan işlemin devam etmesine izin verin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>
+<span data-ttu-id="6cd14-142">**Başlat** düğmesini devre dışı bırakmak yerine düğmeyi etkin tutabilirsiniz, ancak kullanıcı bu düğmeyi yeniden seçerse, zaten çalışmakta olan işlemi iptal edin ve en son başlatılan işlemin devam etmesine izin verin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>
 
-<span data-ttu-id="bdf5b-143">İptal hakkında daha fazla bilgi için bkz. [zaman uyumsuz uygulamanızda Ince ayar yapmaC#()](./fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="bdf5b-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md).</span></span>
+<span data-ttu-id="6cd14-143">İptal hakkında daha fazla bilgi için bkz. [zaman uyumsuz uygulamanızda Ince ayar yapmaC#()](./fine-tuning-your-async-application.md).</span><span class="sxs-lookup"><span data-stu-id="6cd14-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](./fine-tuning-your-async-application.md).</span></span>
 
-<span data-ttu-id="bdf5b-144">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="bdf5b-145">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="bdf5b-146">Projenin adı, geçersiz bir şekilde başlatılır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-146">The name of the project is CancelAndRestart.</span></span>
+<span data-ttu-id="6cd14-144">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="6cd14-145">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="6cd14-146">Projenin adı, geçersiz bir şekilde başlatılır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-146">The name of the project is CancelAndRestart.</span></span>
 
-1. <span data-ttu-id="bdf5b-147">Tüm yöntemler <xref:System.Threading.CancellationTokenSource> için kapsam `cts`içinde olan bir değişken bildirin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>
+1. <span data-ttu-id="6cd14-147">Tüm yöntemler <xref:System.Threading.CancellationTokenSource> için kapsam `cts`içinde olan bir değişken bildirin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>
 
     ```csharp
     public partial class MainWindow : Window   // Or class MainPage
@@ -154,7 +154,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         CancellationTokenSource cts;
     ```
 
-2. <span data-ttu-id="bdf5b-148">' `StartButton_Click`De, bir işlemin zaten devam edilip edilmeyeceğini saptayın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="bdf5b-149">Değeri null ise, `cts` zaten etkin olan bir işlem yoktur.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="bdf5b-150">Değer null değilse, zaten çalışmakta olan işlem iptal edilir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-150">If the value isn't null, the operation that is already running is canceled.</span></span>
+2. <span data-ttu-id="6cd14-148">' `StartButton_Click`De, bir işlemin zaten devam edilip edilmeyeceğini saptayın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="6cd14-149">Değeri null ise, `cts` zaten etkin olan bir işlem yoktur.</span><span class="sxs-lookup"><span data-stu-id="6cd14-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="6cd14-150">Değer null değilse, zaten çalışmakta olan işlem iptal edilir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-150">If the value isn't null, the operation that is already running is canceled.</span></span>
 
     ```csharp
     // *** If a download process is already underway, cancel it.
@@ -164,7 +164,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     }
     ```
 
-3. <span data-ttu-id="bdf5b-151">Geçerli `cts` işlemi temsil eden farklı bir değere ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-151">Set `cts` to a different value that represents the current process.</span></span>
+3. <span data-ttu-id="6cd14-151">Geçerli `cts` işlemi temsil eden farklı bir değere ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-151">Set `cts` to a different value that represents the current process.</span></span>
 
     ```csharp
     // *** Now set cts to a new value that you can use to cancel the current process
@@ -173,7 +173,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     cts = newCTS;
     ```
 
-4. <span data-ttu-id="bdf5b-152">Öğesinin `StartButton_Click`sonunda, geçerli işlem tamamlanmıştır, bu yüzden `cts` geri değerini null olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>
+4. <span data-ttu-id="6cd14-152">Öğesinin `StartButton_Click`sonunda, geçerli işlem tamamlanmıştır, bu yüzden `cts` geri değerini null olarak ayarlayın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>
 
     ```csharp
     // *** When the process is complete, signal that another process can begin.
@@ -181,7 +181,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         cts = null;
     ```
 
-<span data-ttu-id="bdf5b-153">Aşağıdaki kod, içindeki `StartButton_Click`tüm değişiklikleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="bdf5b-154">Ekler yıldız işaretiyle işaretlenir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-154">The additions are marked with asterisks.</span></span>
+<span data-ttu-id="6cd14-153">Aşağıdaki kod, içindeki `StartButton_Click`tüm değişiklikleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="6cd14-154">Ekler yıldız işaretiyle işaretlenir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-154">The additions are marked with asterisks.</span></span>
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -220,15 +220,15 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-<span data-ttu-id="bdf5b-155">' `AccessTheWebAsync`De, aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-155">In `AccessTheWebAsync`, make the following changes.</span></span>
+<span data-ttu-id="6cd14-155">' `AccessTheWebAsync`De, aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-155">In `AccessTheWebAsync`, make the following changes.</span></span>
 
-- <span data-ttu-id="bdf5b-156">İptal belirtecini `StartButton_Click`kabul etmek için bir parametre ekleyin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>
+- <span data-ttu-id="6cd14-156">İptal belirtecini `StartButton_Click`kabul etmek için bir parametre ekleyin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>
 
-- <span data-ttu-id="bdf5b-157">`GetAsync` <xref:System.Net.Http.HttpClient.GetAsync%2A> Bir<xref:System.Threading.CancellationToken> bağımsız değişkeni kabul ettiğinden Web sitelerini indirmek için yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>
+- <span data-ttu-id="6cd14-157">`GetAsync` <xref:System.Net.Http.HttpClient.GetAsync%2A> Bir<xref:System.Threading.CancellationToken> bağımsız değişkeni kabul ettiğinden Web sitelerini indirmek için yöntemini kullanın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>
 
-- <span data-ttu-id="bdf5b-158">İndirilen her `DisplayResults` Web sitesinin sonuçlarını göstermek için çağrılmadan önce, geçerli işlemin `ct` iptal edildiğini doğrulamak için denetleyin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>
+- <span data-ttu-id="6cd14-158">İndirilen her `DisplayResults` Web sitesinin sonuçlarını göstermek için çağrılmadan önce, geçerli işlemin `ct` iptal edildiğini doğrulamak için denetleyin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>
 
-<span data-ttu-id="bdf5b-159">Aşağıdaki kod, yıldız işaretiyle işaretlenen bu değişiklikleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-159">The following code shows these changes, which are marked with asterisks.</span></span>
+<span data-ttu-id="6cd14-159">Aşağıdaki kod, yıldız işaretiyle işaretlenen bu değişiklikleri gösterir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-159">The following code shows these changes, which are marked with asterisks.</span></span>
 
 ```csharp
 // *** Provide a parameter for the CancellationToken from StartButton_Click.
@@ -268,9 +268,9 @@ async Task AccessTheWebAsync(CancellationToken ct)
 }
 ```
 
-<span data-ttu-id="bdf5b-160">Bu uygulama çalışırken **Başlat** düğmesini birkaç kez seçerseniz, aşağıdaki çıktıya benzeyen sonuçlar üretmelidir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>
+<span data-ttu-id="6cd14-160">Bu uygulama çalışırken **Başlat** düğmesini birkaç kez seçerseniz, aşağıdaki çıktıya benzeyen sonuçlar üretmelidir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>
 
-```
+```output
 1. msdn.microsoft.com/library/hh191443.aspx                83732
 2. msdn.microsoft.com/library/aa578028.aspx               205273
 3. msdn.microsoft.com/library/jj155761.aspx                29019
@@ -296,19 +296,19 @@ Download canceled.
 TOTAL bytes returned:  890591
 ```
 
-<span data-ttu-id="bdf5b-161">Kısmi listeleri ortadan kaldırmak için, kullanıcının işlemi her yeniden başlatışında metin `StartButton_Click` kutusunu temizlemek için içindeki ilk kod satırının açıklamasını kaldırın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>
+<span data-ttu-id="6cd14-161">Kısmi listeleri ortadan kaldırmak için, kullanıcının işlemi her yeniden başlatışında metin `StartButton_Click` kutusunu temizlemek için içindeki ilk kod satırının açıklamasını kaldırın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>
 
-### <a name="BKMK_RunMultipleOperations"></a><span data-ttu-id="bdf5b-162">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-162">Run Multiple Operations and Queue the Output</span></span>
+### <a name="BKMK_RunMultipleOperations"></a><span data-ttu-id="6cd14-162">Birden çok Işlemi çalıştırma ve çıktıyı sıraya alma</span><span class="sxs-lookup"><span data-stu-id="6cd14-162">Run Multiple Operations and Queue the Output</span></span>
 
-<span data-ttu-id="bdf5b-163">Bu üçüncü örnek, Kullanıcı **Başlat** düğmesini her seçtiğinde uygulamanın başka bir zaman uyumsuz işlem başlatması ve tüm işlemlerin tamamlamada çalışması için en karmaşıktır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="bdf5b-164">Tüm istenen işlemler, listeden zaman uyumsuz olarak Web sitelerini indirir, ancak işlemlerden alınan çıkış sıralı olarak sunulur.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="bdf5b-165">Diğer bir deyişle, gerçek indirme etkinliği araya eklemeli, bu da bir yandan [yeniden](#BKMK_RecognizingReentrancy) giriş, ancak her grup için sonuçların listesi ayrı olarak sunulur.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>
+<span data-ttu-id="6cd14-163">Bu üçüncü örnek, Kullanıcı **Başlat** düğmesini her seçtiğinde uygulamanın başka bir zaman uyumsuz işlem başlatması ve tüm işlemlerin tamamlamada çalışması için en karmaşıktır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="6cd14-164">Tüm istenen işlemler, listeden zaman uyumsuz olarak Web sitelerini indirir, ancak işlemlerden alınan çıkış sıralı olarak sunulur.</span><span class="sxs-lookup"><span data-stu-id="6cd14-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="6cd14-165">Diğer bir deyişle, gerçek indirme etkinliği araya eklemeli, bu da bir yandan [yeniden](#BKMK_RecognizingReentrancy) giriş, ancak her grup için sonuçların listesi ayrı olarak sunulur.</span><span class="sxs-lookup"><span data-stu-id="6cd14-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>
 
-<span data-ttu-id="bdf5b-166">İşlemler, görüntüleme işlemi için <xref:System.Threading.Tasks.Task>bir `pendingWork`ağ geçidi denetleyicisi görevi gören küresel bir şekilde paylaşır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>
+<span data-ttu-id="6cd14-166">İşlemler, görüntüleme işlemi için <xref:System.Threading.Tasks.Task>bir `pendingWork`ağ geçidi denetleyicisi görevi gören küresel bir şekilde paylaşır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>
 
-<span data-ttu-id="bdf5b-167">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="bdf5b-168">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="bdf5b-169">Projenin adı örneği indirip queueresults.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-169">The name of the project is QueueResults.</span></span>
+<span data-ttu-id="6cd14-167">Bu senaryoyu ayarlamak için, [Örnek uygulamayı gözden geçirmek ve çalıştırmak](#BKMD_SettingUpTheExample)için belirtilen temel kodda aşağıdaki değişiklikleri yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="6cd14-168">Ayrıca, tamamlanmış uygulamayı [zaman uyumsuz örneklerden indirebilirsiniz: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="6cd14-169">Projenin adı örneği indirip queueresults.</span><span class="sxs-lookup"><span data-stu-id="6cd14-169">The name of the project is QueueResults.</span></span>
 
-<span data-ttu-id="bdf5b-170">Aşağıdaki çıktıda, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse sonuç gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="bdf5b-171">Harf etiketi,, sonucun **Başlangıç** düğmesinin seçildiği ilk sefer olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="bdf5b-172">Sayılar, indirme hedefleri listesindeki URL 'lerin sırasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-172">The numbers show the order of the URLs in the list of download targets.</span></span>
+<span data-ttu-id="6cd14-170">Aşağıdaki çıktıda, Kullanıcı **Başlat** düğmesini yalnızca bir kez seçerse sonuç gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="6cd14-171">Harf etiketi,, sonucun **Başlangıç** düğmesinin seçildiği ilk sefer olduğunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="6cd14-172">Sayılar, indirme hedefleri listesindeki URL 'lerin sırasını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-172">The numbers show the order of the URLs in the list of download targets.</span></span>
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -326,9 +326,9 @@ TOTAL bytes returned:  918876
 #Group A is complete.
 ```
 
-<span data-ttu-id="bdf5b-173">Kullanıcı **Başlat** düğmesini üç kez seçerse, uygulama aşağıdaki satırlara benzer bir çıktı üretir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="bdf5b-174">Numara işareti (#) ile başlayan bilgi satırları, uygulamanın ilerlemesini izler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>
+<span data-ttu-id="6cd14-173">Kullanıcı **Başlat** düğmesini üç kez seçerse, uygulama aşağıdaki satırlara benzer bir çıktı üretir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="6cd14-174">Numara işareti (#) ile başlayan bilgi satırları, uygulamanın ilerlemesini izler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>
 
-```
+```output
 #Starting group A.
 #Task assigned for group A.
 
@@ -382,13 +382,13 @@ TOTAL bytes returned:  920526
 #Group C is complete.
 ```
 
-<span data-ttu-id="bdf5b-175">Grup A tamamlanmadan önce B ve C grupları başlar, ancak her grubun çıktısı ayrı olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="bdf5b-176">Önce Grup A 'nın tüm çıktıları, ardından Grup B için tüm çıktılar ve sonra Grup C için tüm çıktılar görüntülenir. Uygulama her zaman grupları sırayla görüntüler ve her grup için her zaman tek tek Web siteleri hakkındaki bilgileri URL 'Ler listesinde görünecek şekilde görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>
+<span data-ttu-id="6cd14-175">Grup A tamamlanmadan önce B ve C grupları başlar, ancak her grubun çıktısı ayrı olarak görünür.</span><span class="sxs-lookup"><span data-stu-id="6cd14-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="6cd14-176">Önce Grup A 'nın tüm çıktıları, ardından Grup B için tüm çıktılar ve sonra Grup C için tüm çıktılar görüntülenir. Uygulama her zaman grupları sırayla görüntüler ve her grup için her zaman tek tek Web siteleri hakkındaki bilgileri URL 'Ler listesinde görünecek şekilde görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>
 
-<span data-ttu-id="bdf5b-177">Ancak, indirmelerin gerçekten gerçekleştiği sırayı tahmin edemezseniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="bdf5b-178">Birden çok grup başlatıldıktan sonra, oluşturdukları yükleme görevlerinin hepsi etkindir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="bdf5b-179">-1 ' in B-1 ' den önce indirileceğini varsaymazsınız ve-1 ' in-2 ' den önce indirildiğini varsaymazsınız.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>
+<span data-ttu-id="6cd14-177">Ancak, indirmelerin gerçekten gerçekleştiği sırayı tahmin edemezseniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="6cd14-178">Birden çok grup başlatıldıktan sonra, oluşturdukları yükleme görevlerinin hepsi etkindir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="6cd14-179">-1 ' in B-1 ' den önce indirileceğini varsaymazsınız ve-1 ' in-2 ' den önce indirildiğini varsaymazsınız.</span><span class="sxs-lookup"><span data-stu-id="6cd14-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>
 
-#### <a name="global-definitions"></a><span data-ttu-id="bdf5b-180">Genel tanımlar</span><span class="sxs-lookup"><span data-stu-id="bdf5b-180">Global Definitions</span></span>
+#### <a name="global-definitions"></a><span data-ttu-id="6cd14-180">Genel tanımlar</span><span class="sxs-lookup"><span data-stu-id="6cd14-180">Global Definitions</span></span>
 
-<span data-ttu-id="bdf5b-181">Örnek kod, tüm metotlardan görülebilen aşağıdaki iki genel bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>
+<span data-ttu-id="6cd14-181">Örnek kod, tüm metotlardan görülebilen aşağıdaki iki genel bildirimi içerir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>
 
 ```csharp
 public partial class MainWindow : Window  // Class MainPage in Windows Store app.
@@ -398,11 +398,11 @@ public partial class MainWindow : Window  // Class MainPage in Windows Store app
     private char group = (char)('A' - 1);
 ```
 
-<span data-ttu-id="bdf5b-182">`Task` Değişkeni,görüntülemesürecinifazlagörürveherhangibirgrubunbaşkabirgrubungörüntülemeişlemini`pendingWork`kesintiye uğramasını önler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="bdf5b-183">Karakter değişkeni `group`, sonuçların beklenen sırada göründüğünü doğrulamak için farklı gruplardan çıktıyı Etiketler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>
+<span data-ttu-id="6cd14-182">`Task` Değişkeni,görüntülemesürecinifazlagörürveherhangibirgrubunbaşkabirgrubungörüntülemeişlemini`pendingWork`kesintiye uğramasını önler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="6cd14-183">Karakter değişkeni `group`, sonuçların beklenen sırada göründüğünü doğrulamak için farklı gruplardan çıktıyı Etiketler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>
 
-#### <a name="the-click-event-handler"></a><span data-ttu-id="bdf5b-184">Click olay Işleyicisi</span><span class="sxs-lookup"><span data-stu-id="bdf5b-184">The Click Event Handler</span></span>
+#### <a name="the-click-event-handler"></a><span data-ttu-id="6cd14-184">Click olay Işleyicisi</span><span class="sxs-lookup"><span data-stu-id="6cd14-184">The Click Event Handler</span></span>
 
-<span data-ttu-id="bdf5b-185">Olay işleyicisi `StartButton_Click`, Kullanıcı **Başlat** düğmesini her seçtiğinde grup harfini artırır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="bdf5b-186">Ardından işleyici, indirme `AccessTheWebAsync` işlemini çalıştırmak için çağırır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>
+<span data-ttu-id="6cd14-185">Olay işleyicisi `StartButton_Click`, Kullanıcı **Başlat** düğmesini her seçtiğinde grup harfini artırır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="6cd14-186">Ardından işleyici, indirme `AccessTheWebAsync` işlemini çalıştırmak için çağırır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -428,13 +428,13 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="bdf5b-187">AccessTheWebAsync yöntemi</span><span class="sxs-lookup"><span data-stu-id="bdf5b-187">The AccessTheWebAsync Method</span></span>
+#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="6cd14-187">AccessTheWebAsync yöntemi</span><span class="sxs-lookup"><span data-stu-id="6cd14-187">The AccessTheWebAsync Method</span></span>
 
-<span data-ttu-id="bdf5b-188">Bu örnek iki `AccessTheWebAsync` yönteme böler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="bdf5b-189">İlk yöntem `AccessTheWebAsync`, bir grup için tüm indirme görevlerini başlatır ve görüntüleme işlemini denetlemek `pendingWork` için ayarlar.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="bdf5b-190">Yöntemi, bir dil ile tümleşik sorgu (LINQ sorgusu) kullanır <xref:System.Linq.Enumerable.ToArray%2A> ve tüm indirme görevlerini aynı anda başlatır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>
+<span data-ttu-id="6cd14-188">Bu örnek iki `AccessTheWebAsync` yönteme böler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="6cd14-189">İlk yöntem `AccessTheWebAsync`, bir grup için tüm indirme görevlerini başlatır ve görüntüleme işlemini denetlemek `pendingWork` için ayarlar.</span><span class="sxs-lookup"><span data-stu-id="6cd14-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="6cd14-190">Yöntemi, bir dil ile tümleşik sorgu (LINQ sorgusu) kullanır <xref:System.Linq.Enumerable.ToArray%2A> ve tüm indirme görevlerini aynı anda başlatır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>
 
-<span data-ttu-id="bdf5b-191">`AccessTheWebAsync`ardından, `FinishOneGroupAsync` her indirmenin tamamlanmasını beklemek için çağırır ve uzunluğunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>
+<span data-ttu-id="6cd14-191">`AccessTheWebAsync`ardından, `FinishOneGroupAsync` her indirmenin tamamlanmasını beklemek için çağırır ve uzunluğunu görüntüler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>
 
-<span data-ttu-id="bdf5b-192">`FinishOneGroupAsync``pendingWork` içinde`AccessTheWebAsync`öğesine atanan bir görev döndürür.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="bdf5b-193">Bu değer, görev tamamlanmadan önce başka bir işlem kesintiye uğramasını önler.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-193">That value prevents interruption by another operation before the task is complete.</span></span>
+<span data-ttu-id="6cd14-192">`FinishOneGroupAsync``pendingWork` içinde`AccessTheWebAsync`öğesine atanan bir görev döndürür.</span><span class="sxs-lookup"><span data-stu-id="6cd14-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="6cd14-193">Bu değer, görev tamamlanmadan önce başka bir işlem kesintiye uğramasını önler.</span><span class="sxs-lookup"><span data-stu-id="6cd14-193">That value prevents interruption by another operation before the task is complete.</span></span>
 
 ```csharp
 private async Task<char> AccessTheWebAsync(char grp)
@@ -461,11 +461,11 @@ private async Task<char> AccessTheWebAsync(char grp)
 }
 ```
 
-#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="bdf5b-194">FinishOneGroupAsync yöntemi</span><span class="sxs-lookup"><span data-stu-id="bdf5b-194">The FinishOneGroupAsync Method</span></span>
+#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="6cd14-194">FinishOneGroupAsync yöntemi</span><span class="sxs-lookup"><span data-stu-id="6cd14-194">The FinishOneGroupAsync Method</span></span>
 
-<span data-ttu-id="bdf5b-195">Bu yöntem bir gruptaki indirme görevleri boyunca geçiş yapar, her birini bekliyor, indirilen Web sitesinin uzunluğunu görüntülüyor ve uzunluğu toplamına ekliyor.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>
+<span data-ttu-id="6cd14-195">Bu yöntem bir gruptaki indirme görevleri boyunca geçiş yapar, her birini bekliyor, indirilen Web sitesinin uzunluğunu görüntülüyor ve uzunluğu toplamına ekliyor.</span><span class="sxs-lookup"><span data-stu-id="6cd14-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>
 
-<span data-ttu-id="bdf5b-196">' Deki `FinishOneGroupAsync` ilk ifade, `pendingWork` yöntemi girerken, zaten görüntüleme işleminde olan veya zaten bekleyen bir işlemi etkilemediğinden emin olmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="bdf5b-197">Bu tür bir işlem devam ediyorsa, giriş işleminin tamamlanmasını beklemesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>
+<span data-ttu-id="6cd14-196">' Deki `FinishOneGroupAsync` ilk ifade, `pendingWork` yöntemi girerken, zaten görüntüleme işleminde olan veya zaten bekleyen bir işlemi etkilemediğinden emin olmak için kullanır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="6cd14-197">Bu tür bir işlem devam ediyorsa, giriş işleminin tamamlanmasını beklemesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>
 
 ```csharp
 private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)
@@ -491,15 +491,15 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 }
 ```
 
-#### <a name="points-of-interest"></a><span data-ttu-id="bdf5b-198">Ilgi çekici noktaları</span><span class="sxs-lookup"><span data-stu-id="bdf5b-198">Points of Interest</span></span>
+#### <a name="points-of-interest"></a><span data-ttu-id="6cd14-198">Ilgi çekici noktaları</span><span class="sxs-lookup"><span data-stu-id="6cd14-198">Points of Interest</span></span>
 
-<span data-ttu-id="bdf5b-199">Çıktıda diyez işareti (#) ile başlayan bilgi satırları bu örneğin nasıl çalıştığını açıklığa kavuşturacak.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>
+<span data-ttu-id="6cd14-199">Çıktıda diyez işareti (#) ile başlayan bilgi satırları bu örneğin nasıl çalıştığını açıklığa kavuşturacak.</span><span class="sxs-lookup"><span data-stu-id="6cd14-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>
 
-<span data-ttu-id="bdf5b-200">Çıktıda aşağıdaki desenler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-200">The output shows the following patterns.</span></span>
+<span data-ttu-id="6cd14-200">Çıktıda aşağıdaki desenler gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-200">The output shows the following patterns.</span></span>
 
-- <span data-ttu-id="bdf5b-201">Bir grup, önceki bir grup çıktısını görüntülerken başlatılabilir, ancak önceki grubun çıktısının görüntülenmediği kesintiye uğramaz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>
+- <span data-ttu-id="6cd14-201">Bir grup, önceki bir grup çıktısını görüntülerken başlatılabilir, ancak önceki grubun çıktısının görüntülenmediği kesintiye uğramaz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>
 
-    ```
+    ```output
     #Starting group A.
     #Task assigned for group A. Download tasks are active.
 
@@ -533,63 +533,63 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908
     ```
 
-- <span data-ttu-id="bdf5b-202">Bu görev, `FinishOneGroupAsync` yalnızca ilk başlatılan A grubuna yönelik olarak null olur. `pendingWork`</span><span class="sxs-lookup"><span data-stu-id="bdf5b-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="bdf5b-203">A grubu, ulaştığı `FinishOneGroupAsync`zaman bir await ifadesini henüz tamamlamamıştı.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="bdf5b-204">Bu nedenle, denetim öğesine `AccessTheWebAsync`döndürülmemiştir ve ilk `pendingWork` atama gerçekleşmemiştir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>
+- <span data-ttu-id="6cd14-202">Bu görev, `FinishOneGroupAsync` yalnızca ilk başlatılan A grubuna yönelik olarak null olur. `pendingWork`</span><span class="sxs-lookup"><span data-stu-id="6cd14-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="6cd14-203">A grubu, ulaştığı `FinishOneGroupAsync`zaman bir await ifadesini henüz tamamlamamıştı.</span><span class="sxs-lookup"><span data-stu-id="6cd14-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="6cd14-204">Bu nedenle, denetim öğesine `AccessTheWebAsync`döndürülmemiştir ve ilk `pendingWork` atama gerçekleşmemiştir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>
 
-- <span data-ttu-id="bdf5b-205">Aşağıdaki iki satır, her zaman çıktıda birlikte görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="bdf5b-206">Bu kod, içindeki bir grubun işlemini başlatma ve `StartButton_Click` `pendingWork`grup için bir görev atama arasında hiçbir şekilde kesintiye uğramaz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>
+- <span data-ttu-id="6cd14-205">Aşağıdaki iki satır, her zaman çıktıda birlikte görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="6cd14-206">Bu kod, içindeki bir grubun işlemini başlatma ve `StartButton_Click` `pendingWork`grup için bir görev atama arasında hiçbir şekilde kesintiye uğramaz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>
 
-    ```
+    ```output
     #Starting group B.
     #Task assigned for group B. Download tasks are active.
     ```
 
-    <span data-ttu-id="bdf5b-207">Bir grup `StartButton_Click`girdikten sonra işlem, işlem girene `FinishOneGroupAsync`kadar await ifadesi tamamlanmaz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="bdf5b-208">Bu nedenle, başka hiçbir işlem bu kod segmenti sırasında denetim elde edebilir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-208">Therefore, no other operation can gain control during that segment of code.</span></span>
+    <span data-ttu-id="6cd14-207">Bir grup `StartButton_Click`girdikten sonra işlem, işlem girene `FinishOneGroupAsync`kadar await ifadesi tamamlanmaz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="6cd14-208">Bu nedenle, başka hiçbir işlem bu kod segmenti sırasında denetim elde edebilir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-208">Therefore, no other operation can gain control during that segment of code.</span></span>
 
-## <a name="BKMD_SettingUpTheExample"></a><span data-ttu-id="bdf5b-209">Örnek uygulamayı inceleme ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-209">Reviewing and Running the Example App</span></span>
+## <a name="BKMD_SettingUpTheExample"></a><span data-ttu-id="6cd14-209">Örnek uygulamayı inceleme ve çalıştırma</span><span class="sxs-lookup"><span data-stu-id="6cd14-209">Reviewing and Running the Example App</span></span>
 
-<span data-ttu-id="bdf5b-210">Örnek uygulamayı daha iyi anlamak için indirebilir, kendiniz derleyebilir veya uygulamayı uygulamadan bu konunun sonundaki kodu inceleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>
+<span data-ttu-id="6cd14-210">Örnek uygulamayı daha iyi anlamak için indirebilir, kendiniz derleyebilir veya uygulamayı uygulamadan bu konunun sonundaki kodu inceleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="bdf5b-211">Örneği bir Windows Presentation Foundation (WPF) masaüstü uygulaması olarak çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
+> <span data-ttu-id="6cd14-211">Örneği bir Windows Presentation Foundation (WPF) masaüstü uygulaması olarak çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>
 
-### <a name="BKMK_DownloadingTheApp"></a><span data-ttu-id="bdf5b-212">Uygulama indiriliyor</span><span class="sxs-lookup"><span data-stu-id="bdf5b-212">Downloading the App</span></span>
+### <a name="BKMK_DownloadingTheApp"></a><span data-ttu-id="6cd14-212">Uygulama indiriliyor</span><span class="sxs-lookup"><span data-stu-id="6cd14-212">Downloading the App</span></span>
 
-1. <span data-ttu-id="bdf5b-213">[Zaman uyumsuz örneklerden sıkıştırılmış dosyayı indirin: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>
+1. <span data-ttu-id="6cd14-213">[Zaman uyumsuz örneklerden sıkıştırılmış dosyayı indirin: .NET masaüstü uygulamalarında](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)yeniden giriş yapın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>
 
-2. <span data-ttu-id="bdf5b-214">İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
+2. <span data-ttu-id="6cd14-214">İndirdiğiniz dosyayı sıkıştırmasını açın ve ardından Visual Studio 'Yu başlatın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>
 
-3. <span data-ttu-id="bdf5b-215">Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>
+3. <span data-ttu-id="6cd14-215">Menü çubuğunda **Dosya**, **Aç**, **Proje/çözüm**' ü seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>
 
-4. <span data-ttu-id="bdf5b-216">Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve çözüm (. sln) dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>
+4. <span data-ttu-id="6cd14-216">Sıkıştırması açılmış örnek kodun bulunduğu klasöre gidin ve çözüm (. sln) dosyasını açın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>
 
-5. <span data-ttu-id="bdf5b-217">**Çözüm Gezgini**' de, çalıştırmak istediğiniz projenin kısayol menüsünü açın ve ardından **StartupProject olarak ayarla**' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>
+5. <span data-ttu-id="6cd14-217">**Çözüm Gezgini**' de, çalıştırmak istediğiniz projenin kısayol menüsünü açın ve ardından **StartupProject olarak ayarla**' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>
 
-6. <span data-ttu-id="bdf5b-218">Projeyi derlemek ve çalıştırmak için CTRL + F5 tuşlarını seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-218">Choose the CTRL+F5 keys to build and run the project.</span></span>
+6. <span data-ttu-id="6cd14-218">Projeyi derlemek ve çalıştırmak için CTRL + F5 tuşlarını seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-218">Choose the CTRL+F5 keys to build and run the project.</span></span>
 
-### <a name="BKMK_BuildingTheApp"></a><span data-ttu-id="bdf5b-219">Uygulamayı oluşturma</span><span class="sxs-lookup"><span data-stu-id="bdf5b-219">Building the App</span></span>
+### <a name="BKMK_BuildingTheApp"></a><span data-ttu-id="6cd14-219">Uygulamayı oluşturma</span><span class="sxs-lookup"><span data-stu-id="6cd14-219">Building the App</span></span>
 
-<span data-ttu-id="bdf5b-220">Aşağıdaki bölümde, örneği WPF uygulaması olarak derlemek için kod sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-220">The following section provides the code to build the example as a WPF app.</span></span>
+<span data-ttu-id="6cd14-220">Aşağıdaki bölümde, örneği WPF uygulaması olarak derlemek için kod sağlanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-220">The following section provides the code to build the example as a WPF app.</span></span>
 
-##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="bdf5b-221">WPF uygulaması derlemek için</span><span class="sxs-lookup"><span data-stu-id="bdf5b-221">To build a WPF app</span></span>
+##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="6cd14-221">WPF uygulaması derlemek için</span><span class="sxs-lookup"><span data-stu-id="6cd14-221">To build a WPF app</span></span>
 
-1. <span data-ttu-id="bdf5b-222">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-222">Start Visual Studio.</span></span>
+1. <span data-ttu-id="6cd14-222">Visual Studio’yu çalıştırın.</span><span class="sxs-lookup"><span data-stu-id="6cd14-222">Start Visual Studio.</span></span>
 
-2. <span data-ttu-id="bdf5b-223">Menü çubuğunda, **dosya**, **yeni**, **proje**.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>
+2. <span data-ttu-id="6cd14-223">Menü çubuğunda, **dosya**, **yeni**, **proje**.</span><span class="sxs-lookup"><span data-stu-id="6cd14-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>
 
-     <span data-ttu-id="bdf5b-224">**Yeni proje** iletişim kutusu açılır.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-224">The **New Project** dialog box opens.</span></span>
+     <span data-ttu-id="6cd14-224">**Yeni proje** iletişim kutusu açılır.</span><span class="sxs-lookup"><span data-stu-id="6cd14-224">The **New Project** dialog box opens.</span></span>
 
-3. <span data-ttu-id="bdf5b-225">**Yüklü şablonlar** bölmesinde, **görsel C#** ' i genişletin ve ardından **Windows**' u genişletin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>
+3. <span data-ttu-id="6cd14-225">**Yüklü şablonlar** bölmesinde, **görsel C#** ' i genişletin ve ardından **Windows**' u genişletin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>
 
-4. <span data-ttu-id="bdf5b-226">Proje türleri listesinde **WPF uygulaması**' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-226">In the list of project types, choose **WPF Application**.</span></span>
+4. <span data-ttu-id="6cd14-226">Proje türleri listesinde **WPF uygulaması**' nı seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-226">In the list of project types, choose **WPF Application**.</span></span>
 
-5. <span data-ttu-id="bdf5b-227">Projeyi `WebsiteDownloadWPF`adlandırın ve **Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>
+5. <span data-ttu-id="6cd14-227">Projeyi `WebsiteDownloadWPF`adlandırın ve **Tamam** düğmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>
 
-     <span data-ttu-id="bdf5b-228">Yeni proje **Çözüm Gezgini**görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-228">The new project appears in **Solution Explorer**.</span></span>
+     <span data-ttu-id="6cd14-228">Yeni proje **Çözüm Gezgini**görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6cd14-228">The new project appears in **Solution Explorer**.</span></span>
 
-6. <span data-ttu-id="bdf5b-229">Visual Studio Code düzenleyicisinde **MainWindow. xaml** sekmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
+6. <span data-ttu-id="6cd14-229">Visual Studio Code düzenleyicisinde **MainWindow. xaml** sekmesini seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>
 
-     <span data-ttu-id="bdf5b-230">Sekme görünür değilse, **Çözüm Gezgini**' de MainWindow. xaml için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>
+     <span data-ttu-id="6cd14-230">Sekme görünür değilse, **Çözüm Gezgini**' de MainWindow. xaml için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>
 
-7. <span data-ttu-id="bdf5b-231">MainWindow. xaml ' nin **xaml** görünümünde, kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>
+7. <span data-ttu-id="6cd14-231">MainWindow. xaml ' nin **xaml** görünümünde, kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>
 
     ```csharp
     <Window x:Class="WebsiteDownloadWPF.MainWindow"
@@ -607,13 +607,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>
     ```
 
-     <span data-ttu-id="bdf5b-232">Bir metin kutusu ve bir düğme içeren basit bir pencere, MainWindow. xaml **Tasarım** görünümünde görünür.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>
+     <span data-ttu-id="6cd14-232">Bir metin kutusu ve bir düğme içeren basit bir pencere, MainWindow. xaml **Tasarım** görünümünde görünür.</span><span class="sxs-lookup"><span data-stu-id="6cd14-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>
 
-8. <span data-ttu-id="bdf5b-233">İçin <xref:System.Net.Http>bir başvuru ekleyin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-233">Add a reference for <xref:System.Net.Http>.</span></span>
+8. <span data-ttu-id="6cd14-233">İçin <xref:System.Net.Http>bir başvuru ekleyin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-233">Add a reference for <xref:System.Net.Http>.</span></span>
 
-9. <span data-ttu-id="bdf5b-234">**Çözüm Gezgini**' de, MainWindow.xaml.cs için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
+9. <span data-ttu-id="6cd14-234">**Çözüm Gezgini**' de, MainWindow.xaml.cs için kısayol menüsünü açın ve **kodu görüntüle**' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>
 
-10. <span data-ttu-id="bdf5b-235">MainWindow.xaml.cs ' de, kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>
+10. <span data-ttu-id="6cd14-235">MainWindow.xaml.cs ' de, kodu aşağıdaki kodla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>
 
     ```csharp
     using System;
@@ -718,11 +718,11 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     }
     ```
 
-11. <span data-ttu-id="bdf5b-236">Programı çalıştırmak için CTRL + F5 tuşlarını seçin ve sonra **Başlat** düğmesini birkaç kez seçin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>
+11. <span data-ttu-id="6cd14-236">Programı çalıştırmak için CTRL + F5 tuşlarını seçin ve sonra **Başlat** düğmesini birkaç kez seçin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>
 
-12. <span data-ttu-id="bdf5b-237">[Başlat düğmesini devre dışı bırak](#BKMK_DisableTheStartButton)' dan değişiklikleri yapın, [işlemi Iptal edin ve yeniden başlatın](#BKMK_CancelAndRestart)ya da [birden çok işlem çalıştırın ve çıktıyı kuyruğa](#BKMK_RunMultipleOperations) alarak yeniden giriş işlemini idare edin.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>
+12. <span data-ttu-id="6cd14-237">[Başlat düğmesini devre dışı bırak](#BKMK_DisableTheStartButton)' dan değişiklikleri yapın, [işlemi Iptal edin ve yeniden başlatın](#BKMK_CancelAndRestart)ya da [birden çok işlem çalıştırın ve çıktıyı kuyruğa](#BKMK_RunMultipleOperations) alarak yeniden giriş işlemini idare edin.</span><span class="sxs-lookup"><span data-stu-id="6cd14-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="bdf5b-238">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bdf5b-238">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6cd14-238">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6cd14-238">See also</span></span>
 
-- [<span data-ttu-id="bdf5b-239">İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme</span><span class="sxs-lookup"><span data-stu-id="bdf5b-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [<span data-ttu-id="bdf5b-240">Async ve await (C#) ile zaman uyumsuz programlama</span><span class="sxs-lookup"><span data-stu-id="bdf5b-240">Asynchronous Programming with async and await (C#)</span></span>](./index.md)
+- [<span data-ttu-id="6cd14-239">İzlenecek yol: Async ve await (C#) kullanarak Web 'e erişme</span><span class="sxs-lookup"><span data-stu-id="6cd14-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [<span data-ttu-id="6cd14-240">Async ve await (C#) ile zaman uyumsuz programlama</span><span class="sxs-lookup"><span data-stu-id="6cd14-240">Asynchronous Programming with async and await (C#)</span></span>](./index.md)
