@@ -160,8 +160,6 @@
           href: core/tutorials/with-visual-studio.md
         - name: Visual Studio 2017’de .NET Core ile bir Visual Basic Merhaba Dünya uygulaması derleme
           href: core/tutorials/vb-with-visual-studio.md
-        - name: Eklentilerle .NET Core uygulaması oluşturma
-          href: core/tutorials/creating-app-with-plugin-support.md
         - name: 'Visual Studio 2017’yi kullanarak C# veya Visual Basic .NET Core Merhaba Dünya uygulamanızda hata ayıklama'
           href: core/tutorials/debugging-with-visual-studio.md
         - name: Visual Studio 2017 ile Merhaba Dünya uygulamanızı yayımlama
@@ -219,6 +217,8 @@
           href: core/tutorials/testing-with-cli.md
         - name: Platformlar Arası Araçlarla Kitaplık Geliştirme
           href: core/tutorials/libraries.md
+        - name: Eklentilerle .NET Core uygulaması oluşturma
+          href: core/tutorials/creating-app-with-plugin-support.md
         - name: ASP.NET Core uygulamaları geliştirme
           href: core/tutorials/aspnet-core.md
         - name: Yerel koddan .NET Core barındırma
