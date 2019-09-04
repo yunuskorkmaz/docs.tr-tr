@@ -49,11 +49,11 @@ Normal ifadede ters\\eğik çizgi () aşağıdakilerden birini belirtir:
 |`\f`|Bir form akışı `\u000C`ile eşleşir.|  
 |`\n`|Yeni bir satırla eşleşir, `\u000A`.|  
 |`\e`|Bir kaçış ile eşleşir `\u001B`,.|  
-|`\`*nnn*| Bir ASCII karakteriyle eşleşir, burada *nnn* sekizli karakter kodunu temsil eden iki veya üç sayıdan oluşur. Örneğin, `\040` bir boşluk karakterini temsil eder. Bu yapı yalnızca bir basamak varsa (örneğin, `\2`) veya bir yakalama grubu sayısına karşılık geliyorsa, bir geri başvuru olarak yorumlanır. (Bkz. [Backreference yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
+|`\`*nnn*&#124; Bir ASCII karakteriyle eşleşir, burada *nnn* sekizli karakter kodunu temsil eden iki veya üç sayıdan oluşur. Örneğin, `\040` bir boşluk karakterini temsil eder. Bu yapı yalnızca bir basamak varsa (örneğin, `\2`) veya bir yakalama grubu sayısına karşılık geliyorsa, bir geri başvuru olarak yorumlanır. (Bkz. [Backreference yapıları](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
 |`\x`*nn*|*Nn* 'in iki basamaklı bir onaltılık karakter kodu olduğu ASCII karakteriyle eşleşir.|  
 |`\c` *X*|Bir ASCII denetim karakteriyle eşleşir, burada X, denetim karakterinin harfidir. Örneğin, CTRL `\cC` -C ' dir.|  
 |`\u`*nnnn*|Değeri *nnnn* onaltılık olan bir UTF-16 kod birimiyle eşleşir. **Not:**  Unicode belirtmek için kullanılan Perl 5 karakter kaçış, .NET tarafından desteklenmez. Perl 5 karakter `\x{`kaçış biçimi *####* `…}`, *####* burada`…` bir dizi onaltılık basamak olur. Bunun yerine `\u` *nnnn*kullanın.|  
-|`\`| Bunun ardından, kaçış karakteri olarak tanınmayan bir karakter gelmesi durumunda, bu karakterle eşleşir. Örneğin, `\*` bir yıldız işareti (*) ile eşleşir ve ile `\x2A`aynıdır.|  
+|`\`&#124; Bunun ardından, kaçış karakteri olarak tanınmayan bir karakter gelmesi durumunda, bu karakterle eşleşir. Örneğin, `\*` bir yıldız işareti (*) ile eşleşir ve ile `\x2A`aynıdır.|  
   
 ## <a name="an-example"></a>Bir Örnek  
  Aşağıdaki örnek, bir normal ifadede karakter kaçışları kullanımını gösterir. Dünyanın en büyük şehirlerinin adlarını ve 2009 içindeki popülasyonlarını içeren bir dizeyi ayrıştırır. Her şehir adı, bir sekme (`\t`) veya dikey çubuk (&#124; veya `\u007c`) tarafından popülasyondan ayrılır. Bireysel şehirler ve bunların popülasyonu bir satır başı ve satır besleme ile birbirinden ayrılır.  
