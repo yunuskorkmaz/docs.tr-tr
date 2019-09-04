@@ -26,12 +26,14 @@
                   href: bindingredirect-element.md
                 - name: <codeBase> Öğesi
                   href: codebase-element.md
+                - name: <publisherPolicy> Öğesi
+                  href: publisherpolicy-element.md
             - name: <probing> Öğesi
               href: probing-element.md
-            - name: <publisherPolicy> Öğesi
-              href: publisherpolicy-element.md
             - name: <qualifyAssembly> Öğesi
               href: qualifyassembly-element.md
+            - name: <supportPortability> Öğesi
+              href: supportportability-element.md
         - name: <bypassTrustedAppStrongNames> Öğesi
           href: bypasstrustedappstrongnames-element.md
         - name: <CompatSortNLSVersion> Öğesi
@@ -82,23 +84,6 @@
           href: relativebindforresources-element.md
         - name: <shadowCopyVerifyByTimestamp> Öğesi
           href: shadowcopyverifybytimestamp-element.md
-        - name: <supportPortability> Öğesi
-          href: supportportability-element.md
-        - name: <system.runtime.caching> Öğesi (Önbellek Ayarları)
-          href: system-runtime-caching-element-cache-settings.md
-          items:
-            - name: <memoryCache> Öğesi (Önbellek Ayarları)
-              href: memorycache-element-cache-settings.md
-              items:
-                - name: <namedCaches> Öğesi (Önbellek Ayarları)
-                  href: namedcaches-element-cache-settings.md
-                  items:
-                    - name: <namedCaches> için <add> Öğesi
-                      href: add-element-for-namedcaches.md
-                    - name: <namedCaches> için <clear> Öğesi
-                      href: clear-element-for-namedcaches.md
-                    - name: <namedCaches> için <remove> Öğesi
-                      href: remove-element-for-namedcaches.md
         - name: <Thread_UseAllCpuGroups> Öğesi
           href: thread-useallcpugroups-element.md
         - name: <ThrowUnobservedTaskExceptions> Öğesi
@@ -111,3 +96,18 @@
           href: userandomizedstringhashalgorithm-element.md
         - name: <UseSmallInternalThreadStacks> Öğesi
           href: usesmallinternalthreadstacks-element.md
+    - name: <system.runtime.caching> Öğesi (Önbellek Ayarları)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: <memoryCache> Öğesi (Önbellek Ayarları)
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: <namedCaches> Öğesi (Önbellek Ayarları)
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: <namedCaches> için <add> Öğesi
+                  href: add-element-for-namedcaches.md
+                - name: <namedCaches> için <clear> Öğesi
+                  href: clear-element-for-namedcaches.md
+                - name: <namedCaches> için <remove> Öğesi
+                  href: remove-element-for-namedcaches.md
