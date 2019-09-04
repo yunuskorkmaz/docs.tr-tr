@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77c2d93ae324b6acbf8fc8dc25cd3e4d1a652f48
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 3c9169e2936742c82ba27327ac07f0aa1b4c645c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107346"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254037"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -119,7 +119,7 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 3. Parametreleri uygun şekilde ayarlayın.
 
    ```
-   Main Class: org.apache.spark.deploy.DotnetRunner
+   Main Class: org.apache.spark.deploy.dotnet.DotnetRunner
    Arguments /dbfs/apps/<your-app-name>.zip <your-app-main-class>
    ```
  
@@ -163,7 +163,7 @@ Bu adım, bir küme için yalnızca bir kere gereklidir.
 2. Aşağıdaki `spark-submit` parametrelerle yapılandırın:
 
       ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
       ```
 
 3. Databricks çalışma alanınızdaki Databricks kümenize gidin. **İşler**altında işiniz ' ı seçin ve ardından işi çalıştırmak Için **Şimdi Çalıştır** ' ı seçin.
