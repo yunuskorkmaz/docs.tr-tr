@@ -3,23 +3,24 @@ title: <userNameSecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-ms.openlocfilehash: fed8964e03b80e365fdc5eafd45b4fc372a6e352
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5863c01e97e7f5fb6fe07c43174c0d6cb7a0a25d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944260"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251741"
 ---
-# <a name="usernamesecuritytokenhandlerrequirement"></a><span data-ttu-id="0ed1d-101">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="0ed1d-101">\<userNameSecurityTokenHandlerRequirement></span></span>
-<span data-ttu-id="0ed1d-102"><xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-102">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>  
+# <a name="usernamesecuritytokenhandlerrequirement"></a><span data-ttu-id="12978-101">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="12978-101">\<userNameSecurityTokenHandlerRequirement></span></span>
+<span data-ttu-id="12978-102"><xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> Sınıf veya türetilmiş sınıflar için yapılandırma sağlar.</span><span class="sxs-lookup"><span data-stu-id="12978-102">Provides configuration for the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> class or derived classes.</span></span>  
   
- <span data-ttu-id="0ed1d-103">\<system.identityModel></span><span class="sxs-lookup"><span data-stu-id="0ed1d-103">\<system.identityModel></span></span>  
-<span data-ttu-id="0ed1d-104">\<IdentityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="0ed1d-104">\<identityConfiguration></span></span>  
-<span data-ttu-id="0ed1d-105">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="0ed1d-105">\<securityTokenHandlers></span></span>  
-<span data-ttu-id="0ed1d-106">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="0ed1d-106">\<add></span></span>  
-<span data-ttu-id="0ed1d-107">\<userNameSecurityTokenHandlerRequirement ></span><span class="sxs-lookup"><span data-stu-id="0ed1d-107">\<userNameSecurityTokenHandlerRequirement></span></span>  
+<span data-ttu-id="12978-103">[ **\<Yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="12978-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="12978-104">&nbsp;&nbsp;[ **\<System. IdentityModel >** ](system-identitymodel.md)</span><span class="sxs-lookup"><span data-stu-id="12978-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span></span>\
+<span data-ttu-id="12978-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<IdentityConfiguration >** ](identityconfiguration.md)</span><span class="sxs-lookup"><span data-stu-id="12978-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span></span>\
+<span data-ttu-id="12978-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)</span><span class="sxs-lookup"><span data-stu-id="12978-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)</span></span>\
+<span data-ttu-id="12978-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Ekle**](add.md)</span><span class="sxs-lookup"><span data-stu-id="12978-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)</span></span>\
+<span data-ttu-id="12978-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<userNameSecurityTokenHandlerRequirement >**</span><span class="sxs-lookup"><span data-stu-id="12978-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<userNameSecurityTokenHandlerRequirement>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ed1d-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0ed1d-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="12978-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="12978-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -34,28 +35,28 @@ ms.locfileid: "69944260"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0ed1d-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ed1d-109">Attributes and Elements</span></span>  
- <span data-ttu-id="0ed1d-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="12978-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="12978-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="12978-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="12978-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0ed1d-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="0ed1d-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="12978-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="12978-112">Attributes</span></span>  
   
-|<span data-ttu-id="0ed1d-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="0ed1d-112">Attribute</span></span>|<span data-ttu-id="0ed1d-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ed1d-113">Description</span></span>|  
+|<span data-ttu-id="12978-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="12978-113">Attribute</span></span>|<span data-ttu-id="12978-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="12978-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0ed1d-114">membershipProviderName</span><span class="sxs-lookup"><span data-stu-id="0ed1d-114">membershipProviderName</span></span>|<span data-ttu-id="0ed1d-115"><xref:System.Web.Security.MembershipProvider> Güvenlik belirteci işleyicisi tarafından kullanılması gereken öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-115">Specifies the <xref:System.Web.Security.MembershipProvider> that should be used by the security token handler.</span></span>|  
+|<span data-ttu-id="12978-115">membershipProviderName</span><span class="sxs-lookup"><span data-stu-id="12978-115">membershipProviderName</span></span>|<span data-ttu-id="12978-116"><xref:System.Web.Security.MembershipProvider> Güvenlik belirteci işleyicisi tarafından kullanılması gereken öğesini belirtir.</span><span class="sxs-lookup"><span data-stu-id="12978-116">Specifies the <xref:System.Web.Security.MembershipProvider> that should be used by the security token handler.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0ed1d-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ed1d-116">Child Elements</span></span>  
- <span data-ttu-id="0ed1d-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-117">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="12978-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="12978-117">Child Elements</span></span>  
+ <span data-ttu-id="12978-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="12978-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="0ed1d-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="0ed1d-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="12978-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="12978-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="0ed1d-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="0ed1d-119">Element</span></span>|<span data-ttu-id="0ed1d-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="0ed1d-120">Description</span></span>|  
+|<span data-ttu-id="12978-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="12978-120">Element</span></span>|<span data-ttu-id="12978-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="12978-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0ed1d-121">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="0ed1d-121">\<add></span></span>](add.md)|<span data-ttu-id="0ed1d-122">Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-122">Adds the specified security token handler to the token handler collection.</span></span>|  
+|[<span data-ttu-id="12978-122">\<> Ekle</span><span class="sxs-lookup"><span data-stu-id="12978-122">\<add></span></span>](add.md)|<span data-ttu-id="12978-123">Belirtilen güvenlik belirteci işleyicisini belirteç işleyici koleksiyonuna ekler.</span><span class="sxs-lookup"><span data-stu-id="12978-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0ed1d-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="0ed1d-123">Remarks</span></span>  
- <span data-ttu-id="0ed1d-124"><xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> Bir `<userNameSecurityTokenHandlerRequirement>` nesne<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> yapılandırmadan başlatıldığında öğesi özelliği ayarlar.</span><span class="sxs-lookup"><span data-stu-id="0ed1d-124">The `<userNameSecurityTokenHandlerRequirement>` element sets the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> property when a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> object is initialized from configuration.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="12978-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="12978-124">Remarks</span></span>  
+ <span data-ttu-id="12978-125"><xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> Bir `<userNameSecurityTokenHandlerRequirement>` nesne<xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> yapılandırmadan başlatıldığında öğesi özelliği ayarlar.</span><span class="sxs-lookup"><span data-stu-id="12978-125">The `<userNameSecurityTokenHandlerRequirement>` element sets the <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> property when a <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> object is initialized from configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0ed1d-125">Örnek</span><span class="sxs-lookup"><span data-stu-id="0ed1d-125">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="12978-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="12978-126">Example</span></span>  
   
 ```xml  
 <add type="System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler, System.IdentityModel.Services">  

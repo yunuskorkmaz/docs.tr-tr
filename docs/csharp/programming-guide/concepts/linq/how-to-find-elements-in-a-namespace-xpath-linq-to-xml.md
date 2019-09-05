@@ -1,25 +1,25 @@
 ---
-title: 'Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (C#)'
+title: 'Nasıl yapılır: Ad alanındaki öğeleri bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: 63f3d883964df4a94bb30ad78f50f814562840a4
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: d85426cf7a7073c35b51157e59687e2b3bcdcf8a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690052"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253676"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="ca02e-102">Nasıl yapılır: Bir Namespace (XPath-LINQ to XML) içindeki öğeleri bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="ca02e-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="9a2b5-102">Nasıl yapılır: Ad alanındaki öğeleri bulma (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9a2b5-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
 
-<span data-ttu-id="ca02e-103">XPath ifadeleri düğüm, belirli bir ad alanında bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ca02e-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="ca02e-104">XPath ifadeleri, ad alanı öneklerini ad alanları belirtmek için kullanın.</span><span class="sxs-lookup"><span data-stu-id="ca02e-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="ca02e-105">Ad alanı öneklerini içeren bir XPath ifadesi ayrıştırılamadı XPath yöntemlere uygulayan bir nesne geçmelidir. <xref:System.Xml.IXmlNamespaceResolver>.</span><span class="sxs-lookup"><span data-stu-id="ca02e-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="ca02e-106">Bu örnekte <xref:System.Xml.XmlNamespaceManager>.</span><span class="sxs-lookup"><span data-stu-id="ca02e-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>
+<span data-ttu-id="9a2b5-103">XPath ifadeleri, belirli bir ad alanındaki düğümleri bulabilir.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="9a2b5-104">XPath ifadeleri ad alanlarını belirtmek için ad alanı öneklerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="9a2b5-105">Ad alanı önekleri içeren bir XPath ifadesini ayrıştırmak için, uygulayan <xref:System.Xml.IXmlNamespaceResolver>XPath yöntemlerine bir nesne geçirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="9a2b5-106">Bu örnekte, <xref:System.Xml.XmlNamespaceManager>kullanılır.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>
 
-<span data-ttu-id="ca02e-107">XPath ifadesidir:</span><span class="sxs-lookup"><span data-stu-id="ca02e-107">The XPath expression is:</span></span>
+<span data-ttu-id="9a2b5-107">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="9a2b5-107">The XPath expression is:</span></span>
 
 `./aw:*`
 
-## <a name="example"></a><span data-ttu-id="ca02e-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="ca02e-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9a2b5-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="9a2b5-108">Example</span></span>
 
-<span data-ttu-id="ca02e-109">Aşağıdaki örnek iki ad alanları içeren bir XML ağacı okur.</span><span class="sxs-lookup"><span data-stu-id="ca02e-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="ca02e-110">Bunu kullanan bir <xref:System.Xml.XmlReader> XML belgesi okumak için.</span><span class="sxs-lookup"><span data-stu-id="ca02e-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="ca02e-111">Ardından alır bir <xref:System.Xml.XmlNameTable> gelen <xref:System.Xml.XmlReader>ve bir <xref:System.Xml.XmlNamespaceManager> gelen <xref:System.Xml.XmlNameTable>.</span><span class="sxs-lookup"><span data-stu-id="ca02e-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="ca02e-112">Kullandığı <xref:System.Xml.XmlNamespaceManager> öğeleri seçerken.</span><span class="sxs-lookup"><span data-stu-id="ca02e-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>
+<span data-ttu-id="9a2b5-109">Aşağıdaki örnek, iki ad alanı içeren bir XML ağacını okur.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="9a2b5-110">XML belgesini okumak <xref:System.Xml.XmlReader> için bir kullanır.</span><span class="sxs-lookup"><span data-stu-id="9a2b5-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="9a2b5-111">Daha sonra öğesinden ve <xref:System.Xml.XmlNameTable> <xref:System.Xml.XmlReader> <xref:System.Xml.XmlNamespaceManager> arasında bir alır. <xref:System.Xml.XmlNameTable></span><span class="sxs-lookup"><span data-stu-id="9a2b5-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="9a2b5-112">Öğeleri seçerken kullanır <xref:System.Xml.XmlNamespaceManager> .</span><span class="sxs-lookup"><span data-stu-id="9a2b5-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>
 
 ```csharp
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");
@@ -41,9 +41,9 @@ foreach (XElement el in list2)
     Console.WriteLine(el);
 ```
 
-<span data-ttu-id="ca02e-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ca02e-113">This example produces the following output:</span></span>
+<span data-ttu-id="9a2b5-113">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="9a2b5-113">This example produces the following output:</span></span>
 
-```
+```output
 Results are identical
 <aw:PurchaseOrder PONumber="11223" Date="2000-01-15" xmlns:aw="http://www.adventure-works.com">
     <aw:ShippingAddress>
