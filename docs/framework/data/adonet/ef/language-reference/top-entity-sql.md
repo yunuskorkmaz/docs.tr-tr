@@ -1,17 +1,17 @@
 ---
-title: ÜST (varlık SQL)
+title: ÜST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879768"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248980"
 ---
-# <a name="top-entity-sql"></a>ÜST (varlık SQL)
+# <a name="top-entity-sql"></a>ÜST (Entity SQL)
 
-SELECT yan tümcesi, isteğe bağlı tüm/DISTINCT değiştirici izleyen bir isteğe bağlı TOP alt yan tümcesinin olabilir. TOP alt yan tümcesi yalnızca ilk satır kümesini sorgu sonuç döndüren belirtir.
+SELECT yan tümcesi isteğe bağlı ALL/DISTINCT değiştiricisinden sonra isteğe bağlı bir TOP Sub yan tümcesine sahip olabilir. TOP alt yan tümcesi, sorgu sonucundan yalnızca ilk satır kümesinin döndürüleceğini belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,40 +21,40 @@ SELECT yan tümcesi, isteğe bağlı tüm/DISTINCT değiştirici izleyen bir ist
 
 ## <a name="arguments"></a>Arguments
 
-`n` Sayısal ifade döndürülecek satır sayısını belirtir. `n` tek bir sayısal değişmez değerin veya tek bir parametre olabilir.
+`n`Döndürülecek satır sayısını belirten sayısal ifade. `n`tek bir sayısal sabit değer veya tek bir parametre olabilir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-TOP ifadesi tek sayısal sabit değer ya da tek bir parametre olmalıdır. Sabit bir hazır değer kullandıysanız, değişmez değer türü örtük olarak promotable EDM.Int64 (byte, Int16, Int32 veya Int64 veya promotable için EDM.Int64 türüne eşlenen herhangi bir sağlayıcı türü) için ve değeri büyük veya sıfıra eşit olmalıdır. Aksi takdirde bir özel durum oluşturulur. Bir parametre bir ifade kullanılırsa, parametre türü de EDM.Int64 için örtük olarak promotable olmalı, ancak parametre değerlerini geç sınırlanmış çünkü derleme sırasında gerçek parametre değerinin hiçbir doğrulama olacaktır.
+ÜSTTEKI ifade tek bir sayısal sabit değer veya tek bir parametre olmalıdır. Sabit bir değişmez değer kullanılırsa, değişmez değer türü Edm. Int64 (Byte, int16, Int32 veya Int64) veya Edm. Int64 'e yükseltilebilir bir tür ile eşlenen herhangi bir sağlayıcı türü olmalıdır ve değeri sıfırdan büyük veya sıfıra eşit olmalıdır. Aksi takdirde bir özel durum oluşturulur. Bir parametre bir ifade olarak kullanılıyorsa, parametre türü de Edm. Int64 öğesine örtülü olarak yükseltilebilir olmalıdır, ancak parametre değerleri geç sınırlanmış olduğundan derleme sırasında gerçek parametre değerinin doğrulaması olmayacaktır.
 
-Sabit üst ifadesi örneği verilmiştir:
+Aşağıda bir sabit üst ifadeye örnek verilmiştir:
 
 ```sql
 select distinct top(10) c.a1, c.a2 from T as a
 ```
 
-Parametreli TOP ifadesi örneği verilmiştir:
+Aşağıda parametreli üst ifadeye örnek verilmiştir:
 
 ```sql
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-Sorgu sıralanmış sürece üst belirleyici değildir. Kararlı bir sonuç gerekiyorsa kullanın [atla](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) ve [sınırı](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) alt yan tümceleri içinde [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) yan tümcesi. TOP ve SKIP/LIMIT birbirini dışlar.
+Sorgu sıralanmadığı takdirde TOP belirleyici değildir. Belirleyici bir sonuca ihtiyacınız varsa [order by](order-by-entity-sql.md) yan tümcesindeki [SKIP](skip-entity-sql.md) ve [LIMIT](limit-entity-sql.md) alt tümcesini kullanın. TOP ve SKIP/LIMIT birbirini dışlıyor.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, sorgu sonucu döndürülecek bir en üst satır belirlemek için üst kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:
+Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, sorgu sonucundan döndürülecek en üstteki bir satırı belirtmek için üst öğesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.
 
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:
+2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:
 
     [!code-csharp[DP EntityServices Concepts 2#TOP](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#top)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

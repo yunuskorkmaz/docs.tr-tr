@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: 37234d8f0631ea11ea0d9c7d4e8f027a7266814e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 141b19c545360f92c2689252cf9aefd1ef156cf0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958449"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251416"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma
 Bu konu, okul veritabanına bağlı olarak aşağıdaki dosyaları oluşturmak için EDM Oluşturucu (EdmGen. exe) aracının nasıl kullanılacağını gösterir:  
@@ -22,7 +22,7 @@ Bu konu, okul veritabanına bağlı olarak aşağıdaki dosyaları oluşturmak i
   
 - Dosyaları görüntüleyin.  
   
- EdmGen. exe aracı, yukarıda listelenen dosyaları oluşturmak için/Mode: FullGeneration kullanır. EdmGen. exe komutları hakkında daha fazla bilgi için bkz. [EDM Oluşturucu (EdmGen. exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
+ EdmGen. exe aracı, yukarıda listelenen dosyaları oluşturmak için/Mode: FullGeneration kullanır. EdmGen. exe komutları hakkında daha fazla bilgi için bkz. [EDM Oluşturucu (EdmGen. exe)](edm-generator-edmgen-exe.md).  
   
  Modeli ve eşleme dosyalarını oluşturmak için EdmGen. exe ' yi kullanırsanız, Visual Studio projenizi kullanmak [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]için yine de yapılandırmanız gerekir. Daha fazla bilgi için [nasıl yapılır: Entity Framework projesini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))el ile yapılandırın.  
   
@@ -55,8 +55,8 @@ Bu konu, okul veritabanına bağlı olarak aşağıdaki dosyaları oluşturmak i
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Modelleme ve Eşleme](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
+- [Modelleme ve Eşleme](modeling-and-mapping.md)
 - [Nasıl yapılır: Entity Framework projesini el ile yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))
 - [Nasıl yapılır: Sorgu performansını artırmak için görünümleri önceden oluşturun](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))
 - [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Nasıl yapılır: Dosya modeli ve eşleme dosyalarını doğrulamak için EdmGen. exe kullanma](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [Nasıl yapılır: Dosya modeli ve eşleme dosyalarını doğrulamak için EdmGen. exe kullanma](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

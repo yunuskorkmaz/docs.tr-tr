@@ -1,16 +1,16 @@
 ---
-title: (Mod) (Varlık SQL)
+title: Modül (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a30306539d45c3718d2e948e9717997bbe2104fa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760486"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250077"
 ---
-# <a name="modulo-entity-sql"></a>(Mod) (Varlık SQL)
-Bir başkası tarafından ayrılmış bir ifadenin kalanı döndürür.  
+# <a name="modulo-entity-sql"></a>Modül (Entity SQL)
+Bir ifadenin kalan kısmını başka bir ifade döndürür.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,23 +20,23 @@ dividend % divisor
   
 ## <a name="arguments"></a>Arguments  
  `dividend`  
- Bölmek için sayısal ifade. `dividend` sayısal veri türleri herhangi birinin herhangi bir geçerli ifade var.  
+ Bölünecek sayısal ifade. `dividend`, herhangi bir sayısal veri türü için geçerli bir ifadedir.  
   
  `divisor`  
- Bölünenin bölüneceği sayısal ifade. `divisor` sayısal veri türleri herhangi birinin herhangi bir geçerli ifade var.  
+ Bölüneni bölmek için sayısal ifade. `divisor`, herhangi bir sayısal veri türü için geçerli bir ifadedir.  
   
 ## <a name="result-types"></a>Sonuç türleri  
  Edm.Int32  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu % aritmetik işleç bir başkası tarafından ayrılmış tek bir ifade kalanını döndürmek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, bir ifadenin kalan kısmını başka bir ifade döndürmek için% aritmetik işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

@@ -1,27 +1,27 @@
 ---
-title: 'Nasıl yapılır: Tüm düğümlerin bir ağaç listesinde (C#)'
+title: 'Nasıl yapılır: Bir ağaçtaki tüm düğümleri listeleme (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: 16d61e146e3721d8d5110d89e651aeb33ee556cd
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486681"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253559"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: Tüm düğümlerin bir ağaç listesinde (C#)
-Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bir yöntem veya özellik ağaç etkilemesi öğrenme zaman yararlı olabilir. Metin biçiminde tüm düğümleri listeleyen bir yaklaşım, tam olarak ve özellikle herhangi bir düğüm ağaçta tanımlayan bir XPath ifadesi oluşturmaktır.  
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Nasıl yapılır: Bir ağaçtaki tüm düğümleri listeleme (C#)
+Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olur. Bu, bir yöntemin veya özelliğin ağacı nasıl etkilediğini tam olarak öğrenirken yararlı olabilir. Bir metinsel form içindeki tüm düğümleri listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.  
   
- XPath ifadeleri kullanarak yürütmek özellikle yararlı değil [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. XPath ifadeleri daha düşük performansa sahip [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] çok daha güçlü sorgular. Ancak, XPath düğümleri XML ağacındaki tanımlamak için bir yol işe yarar.  
+ Kullanılarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]XPath ifadelerinin yürütülmesi özellikle yararlı değildir. XPath ifadeleri [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulardan poorer performansa sahiptir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular çok daha güçlüdür. Ancak, XML ağacındaki düğümleri belirlemenin bir yolu olarak, XPath iyi bir sonuç verir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek adlı bir işlev gösterir `GetXPath` XML ağacında, herhangi bir düğüm için belirli bir XPath ifadesi oluşturur. Bir ad alanı düğümleri olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı öneklerini kullanılarak oluşturulur.  
+ Bu örnek, XML ağacındaki herhangi `GetXPath` bir düğüm için belirli bir XPath ifadesi oluşturan adlı bir işlevi gösterir. Düğümler bir ad alanında olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı önekleri kullanılarak oluşturulur.  
   
- Örnek daha sonra birden fazla düğüm örneği içeren küçük bir XML ağacı oluşturur. Alt düğümler yinelenir ve her düğüm için XPath ifadesi yazdırır.  
+ Örnek daha sonra birkaç düğüm türüne örnek içeren küçük bir XML ağacı oluşturur. Daha sonra alt düğümler boyunca yinelenir ve her düğüm için XPath ifadesini yazdırır.  
   
- XML bildirimi ağacında bir düğümü olmadığını fark edeceksiniz.  
+ XML bildiriminin ağaçta bir düğüm olmadığına dikkat edin.  
   
- Birden fazla düğümleri içeren bir XML dosyası verilmiştir:  
+ Aşağıda, çeşitli düğüm türlerini içeren bir XML dosyası verilmiştir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,9 +37,9 @@ Bazen bir ağaçtaki tüm düğümleri listelemek yararlıdır. Bu tam olarak bi
 </Root>  
 ```  
   
- XPath ifadeleri olarak ifade edilen yukarıdaki XML ağacı düğümler listesi verilmiştir:  
+ Aşağıda, XPath ifadeleri olarak ifade edilen Yukarıdaki XML ağacındaki düğümlerin listesi verilmiştir:  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  

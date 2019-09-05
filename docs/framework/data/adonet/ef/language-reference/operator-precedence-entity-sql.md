@@ -1,34 +1,34 @@
 ---
-title: İşleç önceliği (varlık SQL)
+title: İşleç önceliği (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d8c78f410708fd1aa843ee8f14f7243a9f686c0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760356"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249776"
 ---
-# <a name="operator-precedence-entity-sql"></a>İşleç önceliği (varlık SQL)
-Olduğunda bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu sahip birden çok işleç, İşleç önceliği işlemleri gerçekleştirilir sırasını belirler. Yürütme sırası, sorgu sonucu olarak önemli ölçüde etkileyebilir.  
+# <a name="operator-precedence-entity-sql"></a>İşleç önceliği (Entity SQL)
+Bir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorguda birden çok işleç olduğunda, işleç önceliği işlemlerin gerçekleştirileceği diziyi belirler. Yürütmenin sırası, sorgu sonucunu önemli ölçüde etkileyebilir.  
   
- İşleçler, öncelik düzeyleri aşağıdaki tabloda gösterilen sahip. Daha yüksek bir düzeye sahip bir işleç, daha düşük bir düzeye sahip bir işleç önce değerlendirilir.  
+ İşleçler aşağıdaki tabloda gösterilen öncelik düzeylerine sahiptir. Daha yüksek düzeyi olan bir işleç, daha düşük düzeydeki bir işleçten önce değerlendirilir.  
   
 |Düzey|İşlem türü|İşleç|  
 |-----------|--------------------|--------------|  
-|1.|Birincil|`. , [] ()`|  
-|2|Birli|`! not`|  
+|1\.|Birincil|`. , [] ()`|  
+|2|Li|`! not`|  
 |3|Çarpma|`* / %`|  
-|4|Eklenebilir|`+ -`|  
+|4|Msal|`+ -`|  
 |5|Sıralama|`< > <= >=`|  
 |6|Eşitlik|`= != <>`|  
 |7|Koşullu VE|`and &&`|  
 |8|Koşullu VEYA|`or &#124;&#124;`|  
   
- İki işleç bir ifadede aynı işleci öncelik düzeyine sahip olduğunuzda, bunlar, sağdan sola değerlendirilir sorgu konumlarına göre. Örneğin, `x+y-z` değerlendirmesinde `(x+y)-z`.  
+ Bir ifadedeki iki operatör aynı operatör öncelik düzeyine sahip olduğunda, sorgudaki konumlarına göre soldan sağa değerlendirilir. Örneğin, `x+y-z` olarak `(x+y)-z`değerlendirilir.  
   
- Parantez tanımlı sorgu işleçleri önceliği geçersiz kılmak için kullanabilirsiniz. Parantez içindeki her şeyi ilk sonuç parantezler dışında herhangi bir işleç tarafından kullanılabilir önce tek bir sonuç elde etmek üzere değerlendirilir. Örneğin, `x+y*z` çarpar `y` tarafından `z` ve ekler `x`, ancak `(x+y)*z` ekler `x` için `y` ve sonucu çarpan `z`.  
+ Bir sorgudaki operatörlerin tanımlanmış önceliğini geçersiz kılmak için parantezleri kullanabilirsiniz. Parantez içindeki her şey, sonucun parantez dışında herhangi bir operatör tarafından kullanılabilmesi için önce tek bir sonuç verecek şekilde değerlendirilir. Örneğin, `x+y*z` ile `x` `(x+y)*z` `z`çarpar `y` ve sonra ekler, ancak sonucunu öğesine `x` ekler`y` ve sonra sonucu ile çarpar. `z`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

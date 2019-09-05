@@ -5,43 +5,43 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032961"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254261"
 ---
 # <a name="printing-how-to-topics"></a>Yazdırma ile İlgili Nasıl Yapılır Konuları
-Bu bölümdeki konular, yazdırma kullanımını göstermektedir ve yazdırma sistemi yönetimi özellikleri bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yanı sıra yeni [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] yazdırma yolu.  
+Bu bölümdeki konularda, ' de bulunan [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] yazdırma ve yazdırma sistemi Yönetimi özelliklerinin yanı sıra yeni XML Kağıt Belirtimi (XPS) yazdırma yolu 'nın nasıl kullanılacağı gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Yazdır İletişim Kutusu Çağırma](how-to-invoke-a-print-dialog.md)  
- Yönergeler için XAML biçimlendirmesi bildirmek bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim nesnesi ve iletişim kutusundan bir Windows Presentation Foundation (WPF) uygulaması içinde çağırmak için kod kullanarak.  
+ Bir [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] yazdırma iletişim kutusu nesnesi bildirmek ve bir Windows Presentation Foundation (WPF) uygulaması içinden iletişim kutusunu çağırmak için kod kullanmak üzere xaml işaretlemesi için yönergeler.  
   
  [Yazıcı Kopyalama](how-to-clone-a-printer.md)  
- Kuyruk varolan tam olarak aynı özelliklere sahip ikinci bir yazdırma sırasını yüklemek yönergeleri yazdırın.  
+ Mevcut bir yazdırma kuyruğu ile tam olarak aynı özelliklerle ikinci bir yazdırma sırasının nasıl yükleneceğine ilişkin yönergeler.  
   
  [Sorunlu Yazdırma İşini Tanımlama](how-to-diagnose-problematic-print-job.md)  
- Yazdırma bir yazdırma işini tanımlama için yazdırma sıraları yazdırma işlerini ve özelliklerini kullanma yönergeleri.  
+ Yazdırma kuyruklarını ve yazdırma işlerinin özelliklerini kullanarak yazdırılmayan bir yazdırma işini tanılamak için yönergeler.  
   
  [Günün Bu Saatinde Yazdırmanın Yapılıp Yapılmayacağını Keşfetme](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
- İşin yazdırılabilir özelliklerini yazdırma sıraları yazdırma işlerini ve günün hangi saatlerinde programlı olarak karar vermek için kullanma yönergeleri.  
+ İş için günün hangi saatlere basılamayacağına programlı olarak karar vermek için yazdırma kuyruklarını ve yazdırma işlerini kullanma yönergeleri.  
   
  [Yazdırma Kuyruklarının Alt Kümesini Numaralandırma](how-to-enumerate-a-subset-of-print-queues.md)  
- Belirli özelliklere sahip yazıcıların listesini oluşturmak için yönergeler.  
+ Belirli özelliklere sahip yazıcıların listesini oluşturmaya yönelik yönergeler.  
   
  [Yazdırma Sistemi Nesnesi Özelliklerini Yansıma Olmadan Alma](how-to-get-print-system-object-properties-without-reflection.md)  
- Sistem nesnesinin özelliklerini ve bunların türlerini çalışma zamanında bulma için yönergeleri yazdırın.  
+ Çalışma zamanı yazdırma sistem nesnesinin özelliklerine ve türlerine nasıl keşfedilecek hakkında yönergeler.  
   
  [Program Aracılığıyla XPS Dosyalarını Yazdırma](how-to-programmatically-print-xps-files.md)  
- Yönergeler için hızlı yazdırma [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] dosyaları gerek kalmadan bir [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ XML Kağıt Belirtimi (XPS) dosyalarını için [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]gerek olmadan hızlı yazdırma yönergeleri.  
   
  [Uzaktan Yazıcıların Durumunu Araştırma](how-to-remotely-survey-the-status-of-printers.md)  
- Bir hizmet oluşturma için yönergeler bu kağıt sıkıştı veya başka bir sorunla karşılaşmış bulmak için yazıcıları anket.  
+ Yazıcı, kağıt sıkışması veya başka bir sorunla karşılaşanlar bulmaya yönelik bir yardımcı program oluşturmaya yönelik yönergeler.  
   
  [PrintTickets'i Doğrulama ve Birleştirme](how-to-validate-and-merge-printtickets.md)  
- Bir yazdırma bileti geçerli olduğunu ve bunu yazıcı tarafından desteklenmeyen herhangi bir şey istenmediğini denetimi yönelik yönergeler.  
+ Yazdırma biletinin geçerli olup olmadığını denetleme ve yazıcı tarafından desteklenmeyen bir şey isteme hakkında yönergeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

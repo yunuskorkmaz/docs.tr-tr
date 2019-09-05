@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 512ca398831541c30a6c0c1e305c5c6269c13ddb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593645"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253782"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Nasıl yapılır: Bir ad alanındaki tüm düğümleri bul (C#)
 Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
@@ -37,7 +37,7 @@ foreach (XElement el in awElements)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Nodes in the http://www.adventure-works.com namespace  
 {http://www.adventure-works.com}Child3  
 {http://www.adventure-works.com}GrandChild2  

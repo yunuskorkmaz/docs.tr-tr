@@ -1,17 +1,17 @@
 ---
-title: (Varlık SQL) gidin
+title: GIT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2c6c2ae4c593da1d5fe8cdf3015eb0e31e4b12b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307331"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249945"
 ---
-# <a name="navigate-entity-sql"></a>(Varlık SQL) gidin
+# <a name="navigate-entity-sql"></a>GIT (Entity SQL)
 
-Oluşturulan varlıklar arasında ilişki üzerinden gider.
+Varlıklar arasında belirlenen ilişkinin üzerine gider.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -21,27 +21,27 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="arguments"></a>Arguments
 
-`instance-expression` Bir varlık örneği.
+`instance-expression`Bir varlık örneği.
 
-`relationship-type` Kavramsal şema tanım dili (CSDL) dosyasından bir ilişki türü adı. `relationship-type` Olarak nitelenmiş \<ad alanı >.\< ilişki türü adı >.
+`relationship-type`Kavramsal şema tanım dili (CSDL) dosyasından ilişkinin tür adı. , `relationship-type` Ad alanı > \<olarak nitelenir\< . ilişki türü adı >.
 
-`to` İlişki sonu.
+`to`İlişkinin sonu.
 
-`from` İlişki başlangıcı.
+`from`İlişkinin başlangıcı.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-Varsa önem düzeyini sonlandırmak için 1, dönüş değeri olacak `Ref<T>`. Varsa önem düzeyini sonlandırmak için n olduğundan, dönüş değeri olacak `Collection<Ref<T>>`.
+To end 'in kardinalitesi 1 ise, dönüş değeri `Ref<T>`olacaktır. To end 'in kardinalitei n ise, dönüş değeri `Collection<Ref<T>>`olacaktır.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Birinci sınıf yapıları varlık veri modeli (EDM) ilişkisidir. İki veya daha fazla varlık türleri ilişkiler oluşturulabilir ve kullanıcılar üzerinde bir bitiş (varlık) arasında ilişki gidebilir. `from` ve `to` ilişki içinde ad çözümlemesi belirsizlik olmaz olduğunda koşullu olarak isteğe bağlıdır.
+İlişkiler Varlık Veri Modeli (EDM) ilk sınıf yapılardır. İki veya daha fazla varlık türü arasında ilişkiler kurulabilir ve kullanıcılar bir uçtan diğerine (varlık) ilişki üzerinde gezinebilirsiniz. `from`ve `to` ilişki içinde ad çözümlemesinde hiçbir belirsizlik olmadığında koşullu olarak isteğe bağlıdır.
 
-NAVIGATE O ve C alanında geçerli değil.
+GIT, O ve C alanında geçerlidir.
 
-Bir gezinti yapısı genel formu aşağıda verilmiştir:
+Bir gezinti yapısının genel formu aşağıdaki şekildedir:
 
-navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )
+Git (`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ]])
 
 Örneğin:
 
@@ -50,35 +50,35 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-OrderCustomer olduğu `relationship`, müşteri ve sipariş `to-end` (müşteri) ve `from-end` (sıra) ilişki. OrderCustomer oluştu n: 1 ilişki sonra Ref navıgate ifadesi sonuç türü olan\<Müşteri >.
+Burada ordercustomer `relationship`, ve müşteri ve sipariş `to-end` ilişkinin (müşteri) ve `from-end` (sipariş) olduğu yerdir. Ordercustomer bir n:1 ilişkisiyse, gezinme ifadesinin sonuç türü ref\<Customer > olur.
 
-Bu ifadenin daha basit form aşağıda verilmiştir:
+Bu ifadenin daha basit biçimi aşağıdaki şekildedir:
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Benzer şekilde, aşağıdaki biçimde bir sorguda navıgate ifadesi bir koleksiyon oluşturur < Ref\<sipariş >>.
+Benzer şekilde, aşağıdaki formun bir sorgusunda, gezin ifadesi bir koleksiyon < başvuru\<sırası > > oluşturur.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
 From LOB.Customers as c
 ```
 
-Örnek ifade bir varlık/başvuru türü olmalıdır.
+Örnek ifadesi bir varlık/başvuru türü olmalıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki varlık SQL sorgusu NAVIGATE işleci oluşturulan adresi ve SalesOrderHeader varlık türleri ilişkinin üzerine gitmek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:
+Aşağıdaki Entity SQL sorgusu, Address ve SalesOrderHeader varlık türleri arasında belirlenen ilişki üzerinde gezinmek için GEZINME işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:
 
-1. Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.
 
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:
+2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:
 
  [!code-csharp[DP EntityServices Concepts 2#NAVIGATE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#navigate)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Nasıl yapılır: Gezinme işleci ile ilişkilerde gezinme](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Nasıl yapılır: Gezinme Işleçle Ilişkilerde gezin](navigate-entity-sql.md)

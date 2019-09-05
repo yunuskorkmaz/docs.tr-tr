@@ -2,12 +2,12 @@
 title: Değişmez değerler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953295"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250346"
 ---
 # <a name="literals-entity-sql"></a>Değişmez değerler (Entity SQL)
 Bu konuda, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değer desteği açıklanmaktadır.  
@@ -15,14 +15,14 @@ Bu konuda, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez de
 ## <a name="null"></a>Null  
  Null sabit değeri herhangi bir tür için null değerini temsil etmek için kullanılır. Null sabit değeri herhangi bir türle uyumludur.  
   
- Türü belirtilmiş null değerler, null değişmez değer üzerinden bir atama ile oluşturulabilir. Daha fazla bilgi için bkz. [cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Türü belirtilmiş null değerler, null değişmez değer üzerinden bir atama ile oluşturulabilir. Daha fazla bilgi için bkz. [cast](cast-entity-sql.md).  
   
- Boş kayan null sabit değerlerinin kullanılabileceği durumlar hakkında kurallar için bkz. [null sabit değerler ve tür çıkarımı](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Boş kayan null sabit değerlerinin kullanılabileceği durumlar hakkında kurallar için bkz. [null sabit değerler ve tür çıkarımı](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boole değeri  
  Boole sabit değerleri, anahtar kelimeleri `true` ve `false`ile temsil edilir.  
   
-## <a name="integer"></a>Tamsayı  
+## <a name="integer"></a>Integer  
  Tamsayı sabit değerleri veya <xref:System.Int32> <xref:System.Int64>türünde olabilir. <xref:System.Int32> Değişmez değer bir dizi sayısal karakterdir. <xref:System.Int64> Sabit değer, bir büyük harf ile izlenen sayısal karakterlerin serisidir.  
   
 ## <a name="decimal"></a>Ondalık  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 403c331787df7eb538302df2ecc332a663e68d71
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593802"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253829"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>Nasıl yapılır: Isteğe bağlı bir öğe (C#) üzerinde filtrele
 Bazen, XML belgenizde bulunduğundan emin olmasanız da bir öğeye filtre uygulamak isteyebilirsiniz. Arama, belirli bir öğede alt öğe yoksa, filtre uygulayarak bir null başvuru özel durumu tetiklememesi için yürütülmelidir. Aşağıdaki örnekte, `Child5` öğesinin bir `Type` alt öğesi yoktur, ancak sorgu yine de doğru yürütülür.  
@@ -47,7 +47,7 @@ foreach(string str in cList)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  

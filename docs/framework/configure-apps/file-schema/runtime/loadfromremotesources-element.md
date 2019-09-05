@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920712"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252473"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > öğesi
 .NET Framework 4 ve üzeri sürümlerde uzak kaynaklardan yüklenen derlemelerin tam güven verilip verilmeyeceğini belirtir.
@@ -20,9 +20,9 @@ ms.locfileid: "69920712"
 > [!NOTE]
 > Visual Studio proje hata listesindeki bir hata iletisi veya bir derleme hatası nedeniyle bu makaleye yönlendirilmiş olmanız durumunda bkz [. nasıl yapılır: Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))'da Web 'Den bir bütünleştirilmiş kod kullanın.  
   
- \<Yapılandırma >  
-\<çalışma zamanı >  
-\<loadFromRemoteSources >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

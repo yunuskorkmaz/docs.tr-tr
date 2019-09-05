@@ -2,12 +2,12 @@
 title: SıNıR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: e637218bb3db69d4b09fd734b939fd30f50ed806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 432dfe2c8b2b87daf885be6de4da9bbeaaa37638
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961881"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250441"
 ---
 # <a name="limit-entity-sql"></a>SıNıR (Entity SQL)
 Fiziksel sayfalama, ORDER BY yan tümcesinde LIMIT alt yan tümcesi kullanılarak gerçekleştirilebilir. SıNıR, ORDER BY yan tümcesinde ayrı olarak kullanılamaz.  
@@ -30,7 +30,7 @@ Fiziksel sayfalama, ORDER BY yan tümcesinde LIMIT alt yan tümcesi kullanılara
 ## <a name="example"></a>Örnek  
  Aşağıdaki Entity SQL sorgusu, SELECT ifadesinde döndürülen nesneler üzerinde kullanılan sıralama düzenini belirtmek için LIMIT ile ORDER BY işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
   
 2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
@@ -38,7 +38,7 @@ Fiziksel sayfalama, ORDER BY yan tümcesinde LIMIT alt yan tümcesi kullanılara
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
 - [Nasıl yapılır: Sorgu sonuçları aracılığıyla sayfa](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [Disk Belleği](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [Disk Belleği](paging-entity-sql.md)
+- [TOP](top-entity-sql.md)

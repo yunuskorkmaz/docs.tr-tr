@@ -3,19 +3,20 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942405"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251866"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate >
 Belirteçleri şifrelemek ve şifrelerini çözmek için kullanılan X. 509.440 sertifikasını yapılandırır.  
   
- \<System. IdentityModel. Services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel. Services >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceCertificate >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

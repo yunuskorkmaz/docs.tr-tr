@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
-ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c92f65c22fe4b4128a171c757bb9e9c0ccbc3fee
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032714"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247728"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>Türü Genel IEnumerable Öğesine Dönüştürme
-Kullanım <xref:System.Linq.Enumerable.AsEnumerable%2A> genel yazılan bağımsız değişkenini döndürmesine izin `IEnumerable`.  
+<xref:System.Linq.Enumerable.AsEnumerable%2A> Genel`IEnumerable`olarak yazılmış bağımsız değişkeni döndürmek için kullanın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (genel varsayılan kullanılarak `Query`) SQL sorgu dönüştürün ve sunucu üzerinde yürütülen isteriz. Ancak `where` yan tümcesi kullanıcı tanımlı bir istemci-tarafı yöntemi başvurur (`isValidProduct`), dönüştürülemeyen SQL.  
+ Bu örnekte, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (varsayılan genel `Query`kullanılarak) sorguyu SQL 'e dönüştürmeye ve sunucuda yürütmeye çalışacaktır. Ancak yan tümce, SQL 'e dönüştürülemeyen Kullanıcı tanımlı bir istemci tarafı yöntemine`isValidProduct`() başvurur. `where`  
   
- İstemci tarafı genel belirtmek için çözümüdür <xref:System.Collections.Generic.IEnumerable%601> uygulaması `where` genel değiştirilecek <xref:System.Linq.IQueryable%601>. Harekete geçirerek bunu <xref:System.Linq.Enumerable.AsEnumerable%2A> işleci.  
+ Çözüm, genel <xref:System.Collections.Generic.IEnumerable%601> `where` 'ideğiştirmekiçinistemcitarafıgenel<xref:System.Linq.IQueryable%601>uygulamasını belirtmektir. Bunu, <xref:System.Linq.Enumerable.AsEnumerable%2A> işlecini çağırarak yapabilirsiniz.  
   
  [!code-csharp[DLinqQueryExamples#46](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#46)]
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Sorgu Örnekleri](query-examples.md)

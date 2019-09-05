@@ -1,30 +1,30 @@
 ---
-title: Desteklenmeyen ifadeler (varlık SQL)
+title: Desteklenmeyen Ifadeler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: af0e00f470584883b6a65b63f2650c1c359b404c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 956fe117eb0c59392c3999046bc70deaed268ac6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489862"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248775"
 ---
 # <a name="unsupported-expressions"></a>Desteklenmeyen ifadeler
 
-Bu konu, desteklenmeyen Transact-SQL deyimleri açıklar [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Daha fazla bilgi için [varlık SQL farkı Transact-SQL'in](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).
+Bu konuda ' de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]desteklenmeyen Transact-SQL ifadeleri açıklanmaktadır. Daha fazla bilgi için bkz. [Entity SQL Transact-SQL öğesinden farklı](how-entity-sql-differs-from-transact-sql.md).
 
-## <a name="quantified-predicates"></a>Sayısal doğrulamaları
+## <a name="quantified-predicates"></a>Niceleştirilmiş koşullar
 
-Transact-SQL, yapıları aşağıdaki biçime sağlar:
+Transact-SQL aşağıdaki formun yapılarına izin verir:
 
 ```sql
 sal > all (select salary from employees)
 sal > any (select salary from employees)
 ```
 
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)], ancak bu yapıları desteklemez. Eşdeğer ifade yazılabilir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] gibi:
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]Ancak, bu tür yapıları desteklemez. Denk ifadeler ' de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aşağıdaki gibi yazılabilir:
 
 ```sql
 not exists(select 0 from employees as e where sal <= e.salary)
@@ -33,9 +33,9 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* işleci
 
-Transact-SQL kullanılmasını desteklediği * tüm sütunları dışarı öngörülen olduğunu belirtmek için SELECT yan tümcesinde işleci. Bu desteklenmeyen [!INCLUDE[esql](../../../../../../includes/esql-md.md)].
+Transact-SQL, tüm sütunların yansıtıldığını göstermek için SELECT yan tümcesinde * işlecinin kullanımını destekler. Bu, içinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)]desteklenmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL ile Transact-SQL Arasındaki Farklar](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)
+- [Entity SQL ile Transact-SQL Arasındaki Farklar](how-entity-sql-differs-from-transact-sql.md)

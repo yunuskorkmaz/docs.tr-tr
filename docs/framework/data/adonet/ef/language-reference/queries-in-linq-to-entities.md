@@ -2,12 +2,12 @@
 title: LINQ to Entities Sorguları
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: e6d4b5d1095deb80a866bb0e3821ea10578d7925
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 561fa3217a80a8437b7c4d175d5a1156096ac241
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933744"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249565"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir LINQ sorgusunda, her zaman programlama nesneleriyle çalışırsınız.  
@@ -24,50 +24,50 @@ Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkise
 ### <a name="query-expression-syntax"></a>Sorgu Ifadesi söz dizimi  
  Sorgu ifadeleri bildirime dayalı bir sorgu sözdizimidir. Bu sözdizimi, bir geliştiricinin Transact-SQL ile benzer şekilde biçimlendirilen üst düzey bir dilde sorgu yazmasını sağlar. Sorgu ifadesi söz dizimini kullanarak, çok az kodlu veri kaynakları üzerinde bile karmaşık filtreleme, sıralama ve gruplama işlemleri gerçekleştirebilirsiniz. Daha fazla bilgi için [temel sorgu işlemleri (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md). Sorgu ifadesi sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Yansıtma](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-projection.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Yansıtma](query-expression-syntax-examples-projection.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Menin](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Menin](query-expression-syntax-examples-filtering.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Sıralama](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Sıralama](query-expression-syntax-examples-ordering.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Toplama Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Toplama Işleçleri](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Leme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-partitioning.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Leme](query-expression-syntax-examples-partitioning.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: JOIN Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-join-operators.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: JOIN Işleçleri](query-expression-syntax-examples-join-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Öğe Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-element-operators.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Öğe Işleçleri](query-expression-syntax-examples-element-operators.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Gruplama](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Gruplama](query-expression-syntax-examples-grouping.md)  
   
-- [Sorgu Ifadesi söz dizimi örnekleri: Ilişkilerde gezinme](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+- [Sorgu Ifadesi söz dizimi örnekleri: Ilişkilerde gezinme](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Yöntem tabanlı sorgu söz dizimi  
  LINQ to Entities sorguları oluşturmanın başka bir yolu da Yöntem tabanlı sorgular kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Yöntem tabanlı sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Yansıtma](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-projection.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Yansıtma](method-based-query-syntax-examples-projection.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Menin](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Menin](method-based-query-syntax-examples-filtering.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Sıralama](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Sıralama](method-based-query-syntax-examples-ordering.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Toplama Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Toplama Işleçleri](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Leme](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-partitioning.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Leme](method-based-query-syntax-examples-partitioning.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Dönüştürü](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-conversion.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Dönüştürü](method-based-query-syntax-examples-conversion.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: JOIN Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-join-operators.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: JOIN Işleçleri](method-based-query-syntax-examples-join-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Öğe Işleçleri](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-element-operators.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Öğe Işleçleri](method-based-query-syntax-examples-element-operators.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Gruplama](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Gruplama](method-based-query-syntax-examples-grouping.md)  
   
-- [Yöntem tabanlı sorgu söz dizimi örnekleri: Ilişkilerde gezinme](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+- [Yöntem tabanlı sorgu söz dizimi örnekleri: Ilişkilerde gezinme](method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)
 - [C#'de LINQ Kullanmaya Başlama](../../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Visual Basic LINQ ile çalışmaya başlama](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Entity Framework birleştirme seçenekleri ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)

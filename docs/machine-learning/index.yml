@@ -6,20 +6,18 @@ metadata:
   title: 'ML.NET belgeleri-öğreticiler, API başvurusu'
   meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
   ms.topic: landing-page
-  ms.date: 04/18/2019
-  ms.author: cgronlun
-  author: cjgronlund
+  ms.date: 08/15/2019
+  ms.author: nakersha
+  author: natke
 abstract:
   description: 'Özel makine öğrenimi çözümleri oluşturmak ve bunları .NET uygulamalarıyla tümleştirmek için açık kaynaklı ve platformlar arası bir makine öğrenimi çerçevesi olan ML.NET ''yi nasıl kullanacağınızı öğrenin. Öğreticiler, kod örnekleri, API başvurusu ve diğer belgeler size nasıl yapılacağını göstermektedir.'
 sections:
-  - title: Başlarken
-    items:
-      - type: paragraph
-        text: Machine Learning uygulamasının ML.NET ile nasıl oluşturulduğunu öğrenmek için <a href="/dotnet/machine-learning/how-does-mldotnet-work">ml.net nedir ve nasıl çalışır</a>? Ya da <b>Microsoft.ml</b> NuGet paketini uygulamanıza ekleyerek başlayın.
   - title: Adım adım öğreticiler
     items:
       - type: paragraph
         text: 'ML.NET ile ortak çözümler oluşturmayı öğrenin:'
+      - type: paragraph
+        text: '<b>Ml.NET API ''si Ile geliştirin</b>:'
       - type: list
         style: unordered
         items:
@@ -30,13 +28,40 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Matris factoru ile bir film öneren oluşturma</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow ile özel görüntü Sınıflandırıcısı oluşturma</a>
           - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">ONNX ile görüntülerdeki nesneleri Algıla</a>
-  - title: Başvuru ve kaynaklar
-    items:
       - type: paragraph
-        text: 'ML.NET API ''SI iki paket kümesine sahiptir: sürüm bileşenleri ve önizleme bileşenleri. Yayın API ''SI, veri işleme bileşenleri, ikili sınıflandırma için algoritmalar, çok sınıflı sınıflandırma, regresyon, anomali algılama, zaman serisi ve tahmin, derecelendirme, model kaydetme ve yükleme, ONNX ve TensorFlow model işleme ve çok daha fazla! Önizleme API ''SI, öneri görevleri için algoritmalar ve standart derin öğrenme modelleri için destek içerir.'
+        text: 'Grafik Visual Studio uzantısı olan <b>model Oluşturucu ''Yu kullanın</b>:'
       - type: list
         style: unordered
         items:
-          - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API 'SI</a>
-          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET Preview API 'SI</a>
-          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET örnekleri: C#''F#</a>'
+          - html: <a href="/dotnet/machine-learning/tutorials/predict-prices-with-model-builder">Model Oluşturucu ile fiyatları tahmin etme</a>
+      - type: paragraph
+        text: '<b>Ml.net CLI ''Yi çalıştırın</b>:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/mlnet-cli">ML.NET CLı ile yaklaşımı çözümleyin</a>
+  - title: Örnekler
+    items:
+      - type: paragraph
+        text: 'C# Ve F#içindeki uygulamalar için GitHub ''daki <a href="https://github.com/dotnet/machinelearning-samples">örnekler deposuna</a> bakın.'
+  - title: Başvuru
+    items:
+      - type: paragraph
+        text: <b>ML.NET API 'SI</b>
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="/dotnet/api/?view=ml-dotnet">Release ml.NET API ''si</a> , veri işleme bileşenleri, ikili sınıflandırma için algoritmalar, birden çok Lass sınıflandırması, regresyon, anomali algılama, zaman serisi ve tahmin, derecelendirme, model kaydetme ve yükleme, Onnx ve TensorFlow için bileşenler içerir model işleme ve çok daha fazlası!'
+          - html: '<a href="/dotnet/api/?view=ml-dotnet-preview">Preview ml.NET API ''si</a> , öneri görevleri için algoritmalar ve standart derin öğrenme modelleri için destek içerir.'
+      - type: paragraph
+        text: <b>Oto ml API 'SI</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/index?view=automl-dotnet">Auto ML API 'SI</a>
+      - type: paragraph
+        text: <b>ML.NET CLı başvurusu</b>
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/reference/ml-net-cli-reference">ML.NET CLı komut başvurusu</a>

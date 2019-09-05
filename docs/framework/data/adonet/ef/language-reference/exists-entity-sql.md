@@ -1,16 +1,16 @@
 ---
-title: (Varlık SQL) var.
+title: VAR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: 72d96c5f24fcedf870370de3792680831145a454
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20e18bf536f2b89eca9515b3c5dca7ca7fbd6fe5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034209"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250984"
 ---
-# <a name="exists-entity-sql"></a>(Varlık SQL) var.
-Bir koleksiyonu boş olup olmadığını belirler.  
+# <a name="exists-entity-sql"></a>VAR (Entity SQL)
+Bir koleksiyonun boş olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,26 +20,26 @@ Bir koleksiyonu boş olup olmadığını belirler.
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Bir koleksiyonu döndüren herhangi bir geçerli ifade.  
+ Bir koleksiyon döndüren geçerli bir ifade.  
   
  DEĞİL  
- EXISTS sonucunu negatif olduğunu belirtir.  
+ Sonucunun var olduğunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` koleksiyon boş değilse; Aksi takdirde, `false`.  
+ `true`koleksiyon boş değilse, Aksi takdirde `false`,.  
   
 ## <a name="remarks"></a>Açıklamalar  
- EXISTS biridir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri ayarlayın. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] küme işleci soldan sağa doğru değerlendirilir. Öncelik bilgilerini [!INCLUDE[esql](../../../../../../includes/esql-md.md)] işleçleri, bakın [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
+ EXISTS, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set işleçlerinden biridir. Tüm [!INCLUDE[esql](../../../../../../includes/esql-md.md)] küme işleçleri soldan sağa değerlendirilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Set işleçleri için öncelik bilgileri için bkz. [except](except-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgu EXISTS işleci koleksiyonun boş olup olmadığını belirlemek için kullanır. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, koleksiyonun boş olup olmadığını anlamak için EXISTS işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

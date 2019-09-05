@@ -1,169 +1,169 @@
 ---
-title: Güvenlik konuları (varlık çerçevesi)
+title: Güvenlik konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d1fb104f336938cc83d53cae71a8132f9b648dc6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539834"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248548"
 ---
-# <a name="security-considerations-entity-framework"></a>Güvenlik konuları (varlık çerçevesi)
-Bu konuda, geliştirme, dağıtma ve çalıştırma için belirli güvenlik konuları açıklanmaktadır. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamalar. Güvenli .NET Framework uygulamaları oluşturmaya yönelik önerileri de izlemelidir. Daha fazla bilgi için [güvenliğine genel bakış](../../../../../docs/framework/data/adonet/security-overview.md).  
+# <a name="security-considerations-entity-framework"></a>Güvenlik konuları (Entity Framework)
+Bu konuda, uygulamaları geliştirmeye, dağıtmaya ve çalıştırmaya [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] özgü güvenlik konuları açıklanmaktadır. Ayrıca, güvenli .NET Framework uygulamalar oluşturmaya yönelik önerileri de izlemeniz gerekir. Daha fazla bilgi için bkz. [Güvenliğe genel bakış](../security-overview.md).  
   
 ## <a name="general-security-considerations"></a>Genel güvenlik konuları  
- Aşağıdaki güvenlik hususlarını kullanan tüm uygulamalar için uygulama [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Aşağıdaki güvenlik konuları, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]kullanan tüm uygulamalar için geçerlidir.  
   
-#### <a name="use-only-trusted-data-source-providers"></a>Yalnızca güvenilir veri kaynak sağlayıcıları kullanır.  
- Veri kaynağı ile iletişim kurmak için bir sağlayıcı aşağıdakileri yapmanız gerekir:  
+#### <a name="use-only-trusted-data-source-providers"></a>Yalnızca güvenilir veri kaynağı sağlayıcıları kullanın.  
+ Bir sağlayıcının veri kaynağıyla iletişim kurması için aşağıdakileri yapması gerekir:  
   
-- Bağlantı dizesini alma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- ' Dan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]bağlantı dizesini alın.  
   
-- Veri kaynağının yerel sorgu diline komut ağacı çevir.  
+- Komut ağacını veri kaynağının yerel sorgu diline çevirin.  
   
-- Birleştirin ve sonuç kümesi döndürür.  
+- Sonuç kümelerini birleştirin ve döndürün.  
   
- Oturum açma işlemi sırasında kullanıcının parolasını temel bilgileri temel alınan veri kaynağının ağ kitaplıkları sunucuya geçirilir. Kötü amaçlı bir sağlayıcı kullanıcı kimlik bilgilerini çalan, kötü amaçlı sorgular oluşturmak veya sonuç kümesiyle değiştirmesine.  
+ Oturum açma işlemi sırasında, Kullanıcı parolasını temel alan bilgiler, temel alınan veri kaynağının ağ kitaplıkları aracılığıyla sunucusuna geçirilir. Kötü amaçlı bir sağlayıcı Kullanıcı kimlik bilgilerini çalabilir, kötü amaçlı sorgular oluşturabilir veya sonuç kümesiyle daha fazla oynayabilir.  
   
-#### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Bağlantınızı hassas verileri korumak için şifreleme.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Doğrudan veri şifreleme işlemez. Kullanıcılar, veri, ortak bir ağ üzerinden erişirseniz, uygulama güvenliğini artırmak için veri kaynağı şifreli bir bağlantı oluşturmanız gerekir. Daha fazla bilgi için veri kaynağınız için güvenlikle ilgili belgelere bakın. SQL Server veri kaynağı için bkz: [SQL Server bağlantılarını şifreleme](https://go.microsoft.com/fwlink/?LinkId=119544).  
+#### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Hassas verileri korumak için bağlantınızı şifreleyin.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Veri şifrelemeyi doğrudan işlemez. Kullanıcılar bir genel ağ üzerinden verilere erişebilirse, uygulamanızın güvenliği artırmak için veri kaynağıyla şifreli bir bağlantı kurması gerekir. Daha fazla bilgi için, veri kaynağınıza yönelik güvenlikle ilgili belgelere bakın. SQL Server veri kaynağı için bkz. [SQL Server bağlantıları şifreleme](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
-#### <a name="secure-the-connection-string"></a>Bağlantı dizesi güvenli hale getirin.  
- Veri kaynağı erişimi korumaya en önemli hedeflerinden bir uygulamanın güvenliğini sağlama andır. Bir bağlantı dizesi, güvenli olmayan veya hatalı oluşturulmuş olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin olarak depolamak ya da bellekte kalıcı sisteminizin ödün riski oluşur. Bağlantı dizelerinin güvenliğini sağlamak için önerilen yöntemler şunlardır:  
+#### <a name="secure-the-connection-string"></a>Bağlantı dizesinin güvenliğini sağlayın.  
+ Veri kaynağınıza erişimi korumak, bir uygulamayı güvenli hale getirirken en önemli amaçlardan biridir. Bir bağlantı dizesi, güvenliği sağlanmayacaksa veya yanlış oluşturulursa, olası bir güvenlik açığı sunar. Bağlantı bilgilerini düz metin olarak depoladığınızda veya bellekte kalıcı hale getirikten, sisteminizin tamamını tehlikeye atdığınızda. Bağlantı dizelerini güvenli hale getirmek için önerilen yöntemler aşağıda verilmiştir:  
   
-- Windows kimlik doğrulaması ile SQL Server veri kaynağı kullanın.  
+- Windows kimlik doğrulamasını bir SQL Server veri kaynağıyla kullanın.  
   
-     Bağlantı dizesi, bir SQL Server veri kaynağına bağlanmak için Windows kimlik doğrulaması kullandığınızda, oturum açma ve parola bilgilerini içermiyor.  
+     SQL Server veri kaynağına bağlanmak için Windows kimlik doğrulaması kullandığınızda bağlantı dizesinde oturum açma ve parola bilgileri bulunmaz.  
   
-- Korumalı yapılandırmayı kullanarak yapılandırma dosyasının bölümlerini şifreler.  
+- Korumalı yapılandırmayı kullanarak yapılandırma dosyası bölümlerini şifreleyin.  
   
-     ASP.NET sayesinde bir yapılandırma dosyasındaki hassas bilgileri şifrelemek korumalı yapılandırma adı verilen bir özellik sağlar. Öncelikli olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarını yapılandırma dosyalarında bölümleri şifrelemek için korumalı yapılandırma da kullanabilirsiniz. Yeni korumalı yapılandırma özelliklerinin ayrıntılı bir açıklaması için bkz [şifreleme yapılandırma bilgilerini kullanarak korumalı Yapılandırması](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
+     ASP.NET, bir yapılandırma dosyasındaki hassas bilgileri şifrelemenizi sağlayan korumalı yapılandırma adlı bir özellik sağlar. Birincil olarak ASP.NET için tasarlanmış olsa da, Windows uygulamalarındaki yapılandırma dosyalarının bölümlerini şifrelemek için korumalı yapılandırma ' yı da kullanabilirsiniz. Yeni korunan yapılandırma özelliklerine ilişkin ayrıntılı bir açıklama için bkz. [korumalı yapılandırma kullanarak yapılandırma bilgilerini şifreleme](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).  
   
-- Bağlantı dizeleri, güvenli yapılandırma dosyalarında Store.  
+- Bağlantı dizelerini güvenli yapılandırma dosyalarında depolayın.  
   
-     Bağlantı dizelerini kaynak kodunuzda hiçbir zaman ekleme. Bağlantı dizelerini uygulamanızın kodunda eklemek gereğini ortadan kaldırır bir yapılandırma dosyalarında depolayabilir. Varsayılan olarak, varlık veri modeli Sihirbazı bağlantı dizeleri uygulama yapılandırma dosyasında depolar. Yetkisiz erişimi önlemek için bu dosyanın güvenlik altına almanız gerekir.  
+     Kaynak kodunuza asla bağlantı dizelerini katıştırmanız gerekir. Bağlantı dizelerini, uygulamanızın koduna ekleme gereksinimini ortadan kaldıran yapılandırma dosyalarında depolayabilirler. Varsayılan olarak, Varlık Veri Modeli Sihirbazı bağlantı dizelerini uygulama yapılandırma dosyasında depolar. Yetkisiz erişimi engellemek için bu dosyayı güvenli hale getirin.  
   
-- Bağlantı dizesi Oluşturucular, dinamik bir bağlantı oluşturulurken kullanın.  
+- Bağlantıları dinamik olarak oluştururken bağlantı dizesi oluşturucuları kullanın.  
   
-     Bağlantı dizeleri çalışma zamanında oluşturmalıdır kullanırsanız <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfı. Bu dize builder sınıfı doğrulanıyor ve geçersiz giriş bilgileri kaçış bağlantı dizesi ekleme saldırılarını önlemeye yardımcı olur. Daha fazla bilgi için [nasıl yapılır: Bir EntityConnection bağlantı dizesi oluşturma](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Uygun dize builder sınıfı parçası olan veri kaynağı bağlantı dizesi oluşturmak için de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bağlantı dizesi. ADO.NET sağlayıcıları için bağlantı dizesi oluşturucular hakkında daha fazla bilgi için bkz. [bağlantı dizesi oluşturucular](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Çalışma zamanında bağlantı dizeleri oluşturmanız gerekiyorsa, <xref:System.Data.EntityClient.EntityConnectionStringBuilder> sınıfını kullanın. Bu dize Oluşturucu sınıfı, geçersiz giriş bilgilerini doğrulayarak ve aşarak bağlantı dizesi ekleme saldırılarını önlemeye yardımcı olur. Daha fazla bilgi için [nasıl yapılır: Bir EntityConnection bağlantı dizesi](how-to-build-an-entityconnection-connection-string.md)oluşturun. Ayrıca, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] bağlantı dizesinin parçası olan veri kaynağı bağlantı dizesini oluşturmak için uygun dize Oluşturucu sınıfını kullanın. ADO.NET sağlayıcıları için bağlantı dizesi oluşturucuları hakkında daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
   
- Daha fazla bilgi için [bağlantı bilgilerini koruma](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../protecting-connection-information.md).  
   
-#### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Güvenilmeyen kullanıcıların bir EntityConnection sunmaz.  
- Bir <xref:System.Data.EntityClient.EntityConnection> nesnesi, temel alınan bağlantı, bağlantı dizesi kullanıma sunar. Erişimi olan bir kullanıcı bir <xref:System.Data.EntityClient.EntityConnection> nesne da değiştirebilir <xref:System.Data.ConnectionState> temel alınan bağlantı. <xref:System.Data.EntityClient.EntityConnection> Sınıf iş parçacığı güvenli değil.  
+#### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>Bir EntityConnection 'ı güvenilmeyen kullanıcılarla kullanıma sunma.  
+ Bir <xref:System.Data.EntityClient.EntityConnection> nesne, temel alınan bağlantının bağlantı dizesini gösterir. Bir <xref:System.Data.EntityClient.EntityConnection> nesneye erişimi olan bir Kullanıcı, <xref:System.Data.ConnectionState> temel alınan bağlantının öğesini de değiştirebilir. Sınıf <xref:System.Data.EntityClient.EntityConnection> , iş parçacığı güvenli değil.  
   
-#### <a name="do-not-pass-connections-outside-the-security-context"></a>Güvenlik bağlamı dışında bağlantı geçirmeyin.  
- Bağlantı kurulduktan sonra bu güvenlik bağlamı dışında geçmelidir değil. Örneğin, bir bağlantı açmak için izni olan bir iş parçacığı, genel bir konumda bağlantı depolanmamalıdır. Ardından bağlantıyı genel bir konumda kullanılabilir haldeyse, başka bir kötü amaçlı iş parçacığı kendisine verilen bu izin olmadan bağlantı kullanabilirsiniz.  
+#### <a name="do-not-pass-connections-outside-the-security-context"></a>Bağlantıları güvenlik bağlamı dışında geçirmeyin.  
+ Bir bağlantı kurulduktan sonra, onu güvenlik bağlamı dışına iletmemelidir. Örneğin, bir bağlantıyı açma iznine sahip bir iş parçacığı bağlantıyı genel bir konumda depomamalıdır. Bağlantı genel bir konumda kullanılabiliyorsa, başka bir kötü amaçlı iş parçacığı bu izne açıkça verilmeden açık bağlantıyı kullanabilir.  
   
-#### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>Oturum açma bilgileri ve parolaları içinde bir bellek dökümü görünür olabileceğine dikkat edin.  
- Bağlantı dizesinde veri kaynağı oturum açma ve parola bilgilerini sağlandığında, atık toplama kaynaklarını geri kazanır kadar bu bilgileri bellekte tutulur. Bu, bir parola dizesi artık bellek olmadığında belirlemek mümkün kılar. Bir uygulama çökerse, bir bellek dökümü dosyasına önemli güvenlik bilgileri içerebilir ve uygulama ve herhangi bir kullanıcı bilgisayarda yönetici erişimine sahip çalıştıran kullanıcının bellek dökümü dosyasına görüntüleyebilirsiniz. Microsoft SQL Server bağlantıları için Windows kimlik doğrulaması kullanın.  
+#### <a name="be-aware-that-logon-information-and-passwords-may-be-visible-in-a-memory-dump"></a>Oturum açma bilgilerinin ve parolaların bir bellek dökümünde görünebilir olabileceğini unutmayın.  
+ Bağlantı dizesinde veri kaynağı oturum açma ve parola bilgileri sağlandığında bu bilgiler, atık toplama geri kazanır kaynaklara kadar bellekte tutulur. Bu, bir parola dizesinin artık bellekte ne zaman kalmadığını belirlemeyi olanaksız hale getirir. Bir uygulama kilitlenirse, bir bellek dökümü dosyası gizli güvenlik bilgileri içerebilir ve uygulamayı çalıştıran kullanıcı ve bilgisayara yönetici erişimi olan herhangi bir Kullanıcı, bellek dökümü dosyasını görüntüleyebilir. Microsoft SQL Server bağlantılar için Windows kimlik doğrulamasını kullanın.  
   
-#### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>Kullanıcılar, veri kaynağındaki yalnızca gerekli izinleri verin.  
- Bir veri kaynağı Yöneticisi, kullanıcılara yalnızca gerekli izinleri vermeniz gerekir. Olsa da [!INCLUDE[esql](../../../../../includes/esql-md.md)] değil gibi INSERT, UPDATE veya DELETE, kullanıcıların verileri değiştirme desteği DML deyimleri veri kaynağına bağlantı erişmeye devam edebilirsiniz yapar. Kötü niyetli bir kullanıcı, veri kaynağının dillerinde DML deyimleri yürütmek için bu bağlantıyı kullanabilirsiniz.  
+#### <a name="grant-users-only-the-necessary-permissions-in-the-data-source"></a>Kullanıcılara yalnızca veri kaynağında gerekli izinleri verin.  
+ Bir veri kaynağı Yöneticisi yalnızca kullanıcılara gerekli izinleri vermelidir. [!INCLUDE[esql](../../../../../includes/esql-md.md)] INSERT, Update veya DELETE gibi verileri değiştiren DML deyimlerini desteklemeseler de, kullanıcılar veri kaynağı bağlantısına erişmeye devam edebilir. Kötü amaçlı bir Kullanıcı bu bağlantıyı, veri kaynağının yerel dilinde DML deyimlerini yürütmek için kullanabilir.  
   
-#### <a name="run-applications-with-the-minimum-permissions"></a>En düşük izinlere sahip uygulamalar çalıştırın.  
- Bir yönetilen bir uygulamanın tam güven iznine çalışmasına izin verdiğinizde, .NET Framework bilgisayarınıza uygulamanın erişimi kısıtlamaz. Bu bir güvenlik açığı, uygulamanızdaki tüm sisteminin güvenliğini bozmasına gerek sağlayabilir. .NET Framework kod erişim güvenliği ve başka bir güvenlik mekanizması kullanmak için uygulamalar kısmi güven izinleri kullanarak ve en düşük işlev uygulamasını etkinleştirmek için gereken izinler kümesini ile çalıştırmanız gerekir. Aşağıdaki kod erişim izinleri olan en düşük izinleri, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama gereksinimlerine göre:  
+#### <a name="run-applications-with-the-minimum-permissions"></a>Uygulamaları minimum izinlerle çalıştırın.  
+ Yönetilen bir uygulamanın tam güven izniyle çalışmasına izin vermek için .NET Framework, uygulamanın bilgisayarınıza erişimini sınırlamaz. Bu, uygulamanızdaki bir güvenlik açığını sistemin tüm güvenliğinin aşılmasına olanak tanıyabilir. .NET Framework kod erişimi güvenliğini ve diğer güvenlik mekanizmalarını kullanmak için, uygulamaları kısmi güven izinleri kullanarak ve uygulamanın çalışmasını sağlamak için gereken minimum izin kümesiyle çalıştırmalısınız. Aşağıdaki kod erişim izinleri, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamanız için gereken en düşük izinlerdir:  
   
-- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> belirtilen meta veri dosyaları açmaya veya <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> meta veri dosyaları için bir dizin aranacak.  
+- <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> belirtilen meta veri dosyalarını açmak veya <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> meta veri dosyaları için bir dizin aramak için.  
   
-- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> Entities sorgularında LINQ desteklemek için.  
+- <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> LINQ to Entities sorguları desteklemek için.  
   
-- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> listeleme için bir <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
+- <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> bir <xref:System.Transactions> öğesinegörelisteleme<xref:System.Transactions.Transaction>.  
   
-- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> özel durumları kullanarak seri hale getirmek için <xref:System.Runtime.Serialization.ISerializable> arabirimi.  
+- <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> arabirimini<xref:System.Runtime.Serialization.ISerializable> kullanarak özel durumları seri hale getirmek için.  
   
-- Veritabanı bağlantısı açın ve veritabanı komutları gibi yürütecek izni <xref:System.Data.SqlClient.SqlClientPermission> bir SQL Server veritabanı için.  
+- Veritabanı bağlantısı açma ve veritabanı <xref:System.Data.SqlClient.SqlClientPermission> için bir SQL Server veritabanı gibi komutları yürütme izni.  
   
- Daha fazla bilgi için [kod erişimi güvenliği ve ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
+ Daha fazla bilgi için bkz. [kod erişimi güvenliği ve ADO.net](../code-access-security.md).  
   
 #### <a name="do-not-install-untrusted-applications"></a>Güvenilmeyen uygulamalar yüklemeyin.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Herhangi bir güvenlik izni zorunlu kılmaz ve bunu güvenilir olup olmamasına bakılmaksızın işlemindeki herhangi bir kullanıcı tarafından sağlanan veri nesnesi kod çağırır. Kimlik doğrulama ve yetkilendirme istemcinin gerçekleştirilir, uygulama ve veri deposu tarafından emin olun.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Herhangi bir güvenlik izinlerini zorlamaz ve güvenilir olup olmamasına bakılmaksızın işlem içinde Kullanıcı tarafından sağlanan veri nesne kodu çağırır. İstemcinin kimlik doğrulamasının ve yetkilendirmesinin, veri deposu ve uygulamanız tarafından gerçekleştirildiğinden emin olun.  
   
-#### <a name="restrict-access-to-all-configuration-files"></a>Tüm yapılandırma dosyaları için erişimi kısıtlayın.  
- Bir yönetici, yapılandırma enterprisesec.config, security.config, machine.conf, dahil olmak üzere, bir uygulama için belirttiğiniz tüm dosyaları ve uygulama yapılandırma dosyasını yazma erişimi kısıtlamanız gerekir \< *uygulama* >. exe.config olarak.  
+#### <a name="restrict-access-to-all-configuration-files"></a>Tüm yapılandırma dosyalarına erişimi kısıtlayın.  
+ Bir yöneticinin, enterprisesec. config, Security. config, Machine. conf ve uygulama yapılandırma dosyası \< *uygulaması*> dahil olmak üzere bir uygulama için yapılandırmayı belirten tüm dosyalara yazma erişimini kısıtlamalı olması gerekir. exe. config.  
   
- Sağlayıcının değişmez adı app.config dosyasında değiştirilebilir. İstemci uygulaması, Fabrika modeline güçlü bir ad kullanarak alttaki sağlayıcı standart sağlayıcısı üzerinden erişmek için sorumluluğunu üstlenmelidir.  
+ Sağlayıcı sabit adı App. config dosyasında değiştirilebilir. İstemci uygulaması, bir güçlü ad kullanarak standart sağlayıcı fabrikası aracılığıyla temel sağlayıcıya erişim sorumluluğunu almalıdır.  
   
-#### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Model ve eşleme dosyalarını kısıtlayın.  
- Bir yönetici, model ve eşleme dosyalarını (.edmx, .csdl, .ssdl ve .msl) yalnızca model veya eşlemelerini değiştirmek kullanıcılar için yazma erişimi kısıtlamanız gerekir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yalnızca çalışma zamanında bu dosyalarına yönelik okuma erişimi gerektirir. Yönetici ayrıca nesne katmanı ve varlık veri modeli araçları tarafından oluşturulan önceden derlenmiş görünümü kaynak kodu dosyaları için erişimi sınırlamanız gerekir.  
+#### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Model ve eşleme dosyalarıyla izinleri kısıtlayın.  
+ Bir yöneticinin model ve eşleme dosyalarına (. edmx,. csdl,. ssdl ve. MSL) yazma erişimini kısıtlamalı ve yalnızca modeli veya eşlemeleri değiştiren kullanıcılara kısıtlama gerekir. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Yalnızca çalışma zamanında bu dosyalara okuma erişimi gerektirir. Yönetici ayrıca, Varlık Veri Modeli araçları tarafından oluşturulan nesne katmanına ve önceden derlenmiş görünüm kaynak kodu dosyalarına erişimi kısıtlamalı.  
   
 ## <a name="security-considerations-for-queries"></a>Sorgular için güvenlik konuları  
- Aşağıdaki güvenlik hususlarını kavramsal model sorgulanırken uygulayın. Bu noktalar uygulamak [!INCLUDE[esql](../../../../../includes/esql-md.md)] EntityClient kullanan sorgular ve LINQ, kullanarak nesne sorgularını [!INCLUDE[esql](../../../../../includes/esql-md.md)]ve Sorgu Oluşturucu yöntemleri.  
+ Kavramsal model sorgulanırken aşağıdaki güvenlik konuları geçerlidir. Bu noktalar, EntityClient [!INCLUDE[esql](../../../../../includes/esql-md.md)] kullanan sorgular ve LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)]ve sorgu Oluşturucu yöntemleri kullanılarak nesne sorguları için geçerlidir.  
   
-#### <a name="prevent-sql-injection-attacks"></a>SQL ekleme saldırıları engeller.  
- Uygulamaları sık dış girişi (bir kullanıcı veya başka bir dış aracı) alan ve bu giriş temelinde eylemleri gerçekleştirebilirsiniz. Herhangi bir kullanıcı veya bir dış aracı doğrudan veya dolaylı olarak türetilmiş giriş izinsiz eylemler gerçekleştirmek için hedef dili söz dizimini kullanan içerik olabilir. Bu işleme, hedef dil bir yapılandırılmış sorgu dili (SQL), Transact-SQL gibi olduğunda SQL ekleme saldırısına bilinir. Kötü niyetli bir kullanıcı sorguyu doğrudan komutları ekleme ve bir veritabanı tablosu bırakın, hizmet reddine neden veya aksi halde gerçekleştirilmekte olan işlemin yapısını değiştirebilirsiniz.  
+#### <a name="prevent-sql-injection-attacks"></a>SQL ekleme saldırılarını önleyin.  
+ Uygulamalar genellikle dış giriş alır (bir kullanıcı veya başka bir harici aracıdan) ve bu girişe göre eylemler gerçekleştirir. Kullanıcı veya dış aracıdan doğrudan veya dolaylı olarak türetilen tüm girişler, yetkisiz eylemler gerçekleştirmek için hedef dilin söz dizimini kullanan içeriğe sahip olabilir. Hedef dil Transact-SQL gibi bir Yapılandırılmış Sorgu Dili (SQL) olduğunda, bu işleme SQL ekleme saldırısı olarak bilinir. Kötü niyetli bir Kullanıcı, komutları doğrudan sorguya ekleyebilir, bir veritabanı tablosunu bırakabilir, hizmet reddine neden olabilir veya gerçekleştirilen işlemin yapısını değiştirebilir.  
   
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)] ekleme saldırılarını:  
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]ekleme saldırıları:  
   
-     SQL ekleme saldırılarına karşı yapılabilir [!INCLUDE[esql](../../../../../includes/esql-md.md)] tarafından kötü amaçlı bir sorgu koşulu ve parametre adları kullanılan değerleri giriş sağlama. SQL ekleme riskini önlemek için hiçbir kullanıcı girişi ile birleştirmemelisiniz [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut metni.  
+     SQL ekleme saldırıları ' de [!INCLUDE[esql](../../../../../includes/esql-md.md)] , bir sorgu koşulunda ve parametre adlarında kullanılan değerlere kötü amaçlı giriş sağlayarak gerçekleştirilebilir. SQL ekleme riskinden kaçınmak için, Kullanıcı girişini hiçbir şekilde [!INCLUDE[esql](../../../../../includes/esql-md.md)] komut metniyle birleştirmelisiniz.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, her yerde değişmez değerleri kabul edildiğini parametreleri kabul eder. Sorguyu doğrudan yerine bir dış aracı ekleme değişmez parametreli sorgular kullanmanız gerekir. Kullanmayı da düşünmelisiniz [Sorgu Oluşturucu yöntemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) varlık SQL güvenli bir şekilde oluşturmak için.  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]sorgular, sabit değerlerin kabul edildiği her yerde parametreleri kabul eder. Harici bir aracıdan doğrudan sorguya ekleme sabit değerleri yerine parametreli sorgular kullanmanız gerekir. Ayrıca, Entity SQL güvenli bir şekilde oluşturmak için [Sorgu Oluşturucu yöntemleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) kullanmayı göz önünde bulundurmanız gerekir.  
   
-- LINQ to Entities ekleme saldırılarını:  
+- LINQ to Entities ekleme saldırıları:  
   
-     Sorgu oluşturma LINQ to Entities'de mümkün olsa da, bu nesne modeli API aracılığıyla gerçekleştirilir. Farklı [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular, LINQ to Entities sorgularında, dize düzenlemesi veya birleştirme kullanarak değil oluşur ve bunlar geleneksel SQL ekleme saldırılarına açık değildir.  
+     Sorgu kompozisyonu LINQ to Entities mümkün olsa da, nesne modeli API 'SI aracılığıyla yapılır. Sorguların [!INCLUDE[esql](../../../../../includes/esql-md.md)] aksine, LINQ to Entities sorguları dize düzenleme veya birleştirme kullanılarak oluşmazlar ve geleneksel SQL ekleme saldırılarına maruz kalabilir.  
   
-#### <a name="prevent-very-large-result-sets"></a>Çok büyük sonuç kümelerinin engelleyin.  
- Çok büyük bir sonuç kümesi, istemci sonuç kümesinin boyutuna orantılı kaynak kullanan işlemleri gerçekleştiriliyorsa kapatmak istemci sistemi neden olabilir. Beklenmedik bir şekilde büyük sonuç kümeleri, aşağıdaki koşullarda oluşabilir:  
+#### <a name="prevent-very-large-result-sets"></a>Çok büyük sonuç kümelerini önleyin.  
+ Çok büyük bir sonuç kümesi, istemci, kaynakları sonuç kümesinin boyutuyla orantılı şekilde kullanan işlemler yapıyorsa istemci sistemin kapatılmasını sağlayabilir. Beklenmedik şekilde büyük sonuç kümeleri aşağıdaki koşullarda oluşabilir:  
   
-- Büyük bir veritabanında sorgularda, uygun filtre koşulları dahil değildir.  
+- Uygun filtre koşullarını içermeyen büyük bir veritabanına göre sorgular.  
   
-- Sorgularda, sunucuda Kartezyen birleştirmeleri oluşturun.  
+- Sunucuda Kartezyen birleştirmeler oluşturan sorgularda.  
   
-- İçinde iç içe geçmiş [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgular.  
+- İç içe [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorgularda.  
   
- Kullanıcı girişi kabul ederken giriş sonuç kümeleri sistem başa çıkabilir değerinden daha büyük hale gelmesine neden olamaz emin olmanız gerekir. Ayrıca <xref:System.Linq.Queryable.Take%2A> yöntemi LINQ to Entities'de veya [sınırı](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) işlecinde [!INCLUDE[esql](../../../../../includes/esql-md.md)] sonuç kümesinin boyutunu sınırlamak için.  
+ Kullanıcı girişini kabul ettiğinizde, girişin sonuç kümelerinin sistem tarafından işleyebileceğinden daha büyük olmasına neden olduğundan emin olmanız gerekir. Sonuç kümesinin boyutunu sınırlamak için <xref:System.Linq.Queryable.Take%2A> LINQ to Entities veya ' [!INCLUDE[esql](../../../../../includes/esql-md.md)] de [LIMIT](./language-reference/limit-entity-sql.md) işleci içindeki yöntemi de kullanabilirsiniz.  
   
-#### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Iqueryable sonuçları döndüren ifşa edildi yöntemlere çağıranlar potansiyel olarak güvenilmeyen olduğunda kaçının.  
- Geri dönmekten kaçının <xref:System.Linq.IQueryable%601> potansiyel olarak güvenilmeyen arayanlara aşağıdaki nedenlerle kullanıma sunulan yöntemleri türleri:  
+#### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Potansiyel olarak güvenilmeyen arayanlara Yöntemler oluştururken IQueryable sonuçlarının Döndürülmekten kaçının.  
+ Potansiyel olarak <xref:System.Linq.IQueryable%601> güvenilmeyen çağıranlara gösterilen metotlardan türler aşağıdaki nedenlerle döndürülmekten kaçının:  
   
-- Kullanıma sunan bir sorgunun bir tüketici bir <xref:System.Linq.IQueryable%601> türü sonuç kümesinin boyutunu artırın veya Güvenli verilerin açığa sonucu üzerinde yöntemleri çağırmak. Örneğin, aşağıdaki yöntem imzasını göz önünde bulundurun:  
+- Bir <xref:System.Linq.IQueryable%601> tür sunan sorgunun tüketicisi, güvenli verileri açığa çıkaran veya sonuç kümesinin boyutunu artıran sonuç üzerinde Yöntemler çağırabilir. Örneğin, aşağıdaki yöntem imzasını göz önünde bulundurun:  
   
     ```  
     public IQueryable<Customer> GetCustomer(int customerId)  
     ```  
   
-     Bu sorgunun bir tüketici çağırabilir `.Include("Orders")` döndürülen üzerinde `IQueryable<Customer>` sorgu kullanıma sunmak için istediniz değil veri almak için. Bu yöntemin dönüş türünü değiştirerek önlenebilir <xref:System.Collections.Generic.IEnumerable%601> ve bir yöntemi çağırma (gibi `.ToList()`), sonuçları gerçekleştiren.  
+     Bu sorgunun bir tüketicisi, sorgunun açığa `.Include("Orders")` çıkarmak istemediğiniz verileri `IQueryable<Customer>` almak için döndürülen üzerinde çağırabilir. Bu durum, yöntemin <xref:System.Collections.Generic.IEnumerable%601> dönüş türünün ( `.ToList()`gibi) sonuçları üreten bir yöntemi (gibi) değiştirip çağırarak önlenebilir.  
   
-- Çünkü <xref:System.Linq.IQueryable%601> sonuçları, üzerinden kullanıma sunan bir sorgunun bir tüketici yinelendiğinde sorguları çalıştırılır bir <xref:System.Linq.IQueryable%601> türü attığı özel durumları yakalamak. Özel durumlar için tüketici amaçlanmaz bilgiler içerebilir.  
+- Sonuçlar üzerinde yinelendiğinde <xref:System.Linq.IQueryable%601> sorgularyürütüldüğüiçin,birtürsunansorgununbirtüketicisioluşturulan<xref:System.Linq.IQueryable%601> özel durumları yakalayabilir. Özel durumlar, tüketiciye yönelik tasarlanmamış bilgiler içerebilir.  
   
-## <a name="security-considerations-for-entities"></a>Varlıkları için güvenlik konuları  
- Aşağıdaki güvenlik konuları oluşturma ve varlık türleri ile çalışmaktan olduğunda geçerlidir.  
+## <a name="security-considerations-for-entities"></a>Varlıklara yönelik güvenlik konuları  
+ Aşağıdaki güvenlik konuları, oluşturma ve varlık türleriyle çalışırken geçerlidir.  
   
-#### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Bir Objectcontext'e uygulama etki alanları arasında paylaşmayın.  
- Paylaşımı bir <xref:System.Data.Objects.ObjectContext> ile birden fazla uygulama etki alanı bağlantı dizesindeki bilgiler ortaya çıkarabilir. Bunun yerine, serileştirilmiş nesneler veya nesne grafiklerini diğer uygulama etki alanı denetleyicisine aktarmak ve ardından bu nesnelere ekleyin bir <xref:System.Data.Objects.ObjectContext> uygulama etki alanındaki. Daha fazla bilgi için [nesneleri serileştirmek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
+#### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Uygulama etki alanları arasında bir ObjectContext paylaşmayın.  
+ Birden fazla uygulama etki alanı ilepaylaşma,bağlantıdizesindebilgisunabilir.<xref:System.Data.Objects.ObjectContext> Bunun yerine, seri hale getirilmiş nesneleri veya nesne grafiklerini diğer uygulama etki alanına aktarmanız ve ardından bu nesneleri bu uygulama etki <xref:System.Data.Objects.ObjectContext> alanında bir öğesine eklemeniz gerekir. Daha fazla bilgi için bkz. [nesneleri serileştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738446(v=vs.100)).  
   
-#### <a name="prevent-type-safety-violations"></a>Tür güvenlik ihlallerini önleyin.  
- Tür güvenliği ihlal edilirse [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nesnelerdeki verilerin bütünlüğünü garanti edemez. Güvenilmeyen uygulamaların tam güvenilir kod erişimi güvenliği çalışmasına izin verirseniz tür güvenlik ihlallerini oluşabilir.  
+#### <a name="prevent-type-safety-violations"></a>Tür güvenliği ihlallerini engelleyin.  
+ Tür güvenliği ihlal edilirse [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , nesnelerdeki verilerin bütünlüğünü garanti edemez. Güvenilmeyen uygulamaların tam güvenle kod erişim güvenliği ile çalışmasına izin verirseniz tür güvenlik ihlalleri oluşabilir.  
   
-#### <a name="handle-exceptions"></a>Özel durumları işler.  
- Erişim yöntemleri ve özellikleri bir <xref:System.Data.Objects.ObjectContext> bir try-catch bloğu içinde. Özel durumları yakalama engeller girişleri gösterme gelen işlenmeyen özel durumları <xref:System.Data.Objects.ObjectStateManager> veya model bilgileri (örneğin, tablo adları) kullanıcılar için uygulamanızın.  
+#### <a name="handle-exceptions"></a>Özel durumları işleyin.  
+ Try-catch bloğunun <xref:System.Data.Objects.ObjectContext> içindeki yöntem ve özelliklere erişin. Yakalama özel durumları, işlenmeyen özel durumların, <xref:System.Data.Objects.ObjectStateManager> veya model bilgilerinde (tablo adları gibi) uygulamanızın kullanıcılarına sunulmasını önler.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET uygulamaları için güvenlik konuları  
 
-ASP.NET uygulamalarında yolları ile çalışırken aşağıdakileri dikkate almanız gerekir.  
+ASP.NET uygulamalarında yollarla çalışırken aşağıdakileri göz önünde bulundurmanız gerekir.  
   
-#### <a name="verify-whether-your-host-performs-path-checks"></a>Ana yolu denetimleri gerçekleştirir olup olmadığını doğrulayın.  
- Zaman `|DataDirectory|` (kanal sembolleri alınmış) değiştirme dizesi kullanılır, ADO.NET doğrular çözümlenen yol desteklenir. Örneğin, "..." arkasında izin verilmiyor `DataDirectory`. Web uygulaması kök işleci çözmek için aynı denetlemenin (`~`) ASP.NET barındırma işlemi tarafından gerçekleştirilir. IIS bu denetimi gerçekleştirir; Bununla birlikte, IIS dışında konakları çözümlenen yol desteklendiğini doğrulayın değil. Dağıttığınız konak davranışı bilmeniz gereken bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama.  
+#### <a name="verify-whether-your-host-performs-path-checks"></a>Ana bilgisayarınızda yol denetimleri yapıp gerçekleştirmediğini doğrulayın.  
+ `|DataDirectory|` (Kanal sembolleri içine alınmış) değiştirme dizesi kullanıldığında, ADO.net çözümlenen yolun desteklendiğini doğrular. Örneğin, ".." arkasında `DataDirectory`yer verilmez. Web uygulaması kök işlecini (`~`) çözümlemek için aynı denetim, ASP.NET barındırma işlemi tarafından gerçekleştirilir. IIS bu denetimi gerçekleştirir; Ancak, IIS dışındaki konaklar çözümlenen yolun desteklendiğini doğrulayamayabilir. Bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamayı dağıttığınız konağın davranışını bilmeniz gerekir.  
   
-#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Çözümlenen yol adları hakkında varsayımlar yapmayın.  
- Olsa da değerlere kök işleci (`~`) ve `DataDirectory` değiştirme dizesi Çözümle kalmalıdır sabit uygulamanın çalışma zamanı sırasında [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ana bilgisayarın bu değerleri değiştirme kısıtlamaz.  
+#### <a name="do-not-make-assumptions-about-resolved-path-names"></a>Çözümlenmiş yol adları hakkında varsayımlar yapmayın.  
+ Kök işlecinin (`~`) `DataDirectory` ve değiştirme dizesinin çözümlenme değerlerinin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamanın çalışma zamanı sırasında sabit kalması gerekir, ancak konağın bu değerleri değiştirmesini kısıtlamaz.  
   
-#### <a name="verify-the-path-length-before-deployment"></a>Dağıtımdan önce yol uzunluğu doğrulayın.  
- Dağıtmadan önce bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama emin olmanız gerekir, kök işleci (~) değerlerini ve `DataDirectory` değiştirme dizesi yol uzunluğu işletim sisteminde sınırlarını aşan değil. ADO.NET veri sağlayıcıları yol uzunluğu geçerli sınırlar içinde olduğundan emin olun değil.  
+#### <a name="verify-the-path-length-before-deployment"></a>Dağıtımdan önce yol uzunluğunu doğrulayın.  
+ Bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamayı dağıtılmadan önce, kök işlecinin (~) ve `DataDirectory` değiştirme dizesinin değerlerinin işletim sistemindeki yol uzunluğunun sınırlarını aşmadığından emin olmalısınız. ADO.NET veri sağlayıcıları, yol uzunluğunun geçerli sınırlar dahilinde olmasını sağlamaz.  
   
-## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET meta veriler için güvenlik konuları  
- Aşağıdaki güvenlik konuları oluşturma ve model ve eşleme dosyalarını çalışma uygulayın.  
+## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET meta verileri için güvenlik konuları  
+ Model ve eşleme dosyalarını oluştururken ve bunlarla çalışırken aşağıdaki güvenlik konuları geçerlidir.  
   
-#### <a name="do-not-expose-sensitive-information-through-logging"></a>Günlüğe kaydetme üzerinden hassas bilgiler açığa çıkarmayın.  
-ADO.NET meta verileri hizmet bileşenleri herhangi bir özel bilgi oturum açmayın. Erişim kısıtlamaları nedeniyle döndürülen sonuç yoksa, veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içerebilir bir özel durum oluşturma yerine sıfır sonuçların döndürülmesi gerekir.  
+#### <a name="do-not-expose-sensitive-information-through-logging"></a>Günlüğe kaydetme yoluyla hassas bilgileri gösterme.  
+ADO.NET meta veri hizmeti bileşenleri özel bilgileri günlüğe almaz. Erişim kısıtlamaları nedeniyle döndürülebilecek sonuçlar varsa, veritabanı yönetim sistemleri ve dosya sistemleri, hassas bilgiler içerebilecek bir özel durum yerine sıfır sonuç döndürmelidir.  
   
-#### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Güvenilir olmayan kaynaklardan gelen MetadataWorkspace nesneleri kabul etmez.  
- Uygulamaları kabul örneklerini <xref:System.Data.Metadata.Edm.MetadataWorkspace> güvenilmeyen kaynaklardan sınıfı. Bunun yerine, açıkça oluşturmak ve gerekir bu tür bir kaynaktan bir çalışma alanı doldurun.  
+#### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Güvenilmeyen kaynaklardan MetadataWorkspace nesnelerini kabul etmez.  
+ Uygulamalar, <xref:System.Data.Metadata.Edm.MetadataWorkspace> güvenilmeyen kaynaklardan sınıfının örneklerini kabul etmemelidir. Bunun yerine, bir çalışma alanını açıkça bir kaynaktan oluşturmanız ve doldurmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
-- [Geçiş Konuları](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [Dağıtım Konuları](deployment-considerations.md)
+- [Geçiş Konuları](migration-considerations.md)

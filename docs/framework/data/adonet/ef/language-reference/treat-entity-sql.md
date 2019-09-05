@@ -2,12 +2,12 @@
 title: IŞLE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7393bef32b3e057eca51eb516cb72cd2de126c2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929298"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248962"
 ---
 # <a name="treat-entity-sql"></a>IŞLE (Entity SQL)
 Belirli bir temel türdeki bir nesneyi belirtilen türetilmiş türün bir nesnesi olarak değerlendirir.  
@@ -68,5 +68,5 @@ WHERE p IS OF (NamespaceName.Employee)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Null Değer Atanabilir Yapılandırılmış Türler](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Null Değer Atanabilir Yapılandırılmış Türler](nullable-structured-types-entity-sql.md)

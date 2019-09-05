@@ -1,17 +1,17 @@
 ---
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın. Bu makale, Preview 5 ile güncel değildir.
-ms.date: 02/12/2019
-ms.openlocfilehash: 14c86fe4b1ecd1c89ebbbb082c5c9956bc51e03e
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 09/02/2019
+ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105505"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252898"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
-C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır. 
+C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
 
 - [Salt okunur Üyeler](#readonly-members)
 - [Varsayılan arabirim üyeleri](#default-interface-members)
@@ -26,6 +26,7 @@ C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
 - [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Zaman uyumsuz akışlar](#asynchronous-streams)
 - [Dizinler ve aralıklar](#indices-and-ranges)
+- [Ara değerli tam dizelerin geliştirilmesi](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
 > Bu makale 8,0 Preview 5 için C# son güncelleştirilme aşamasındadır.
@@ -376,7 +377,8 @@ Zaman uyumsuz akışları [oluşturma ve](../tutorials/generate-consume-asynchro
 
 Aralıklar ve dizinler, veya <xref:System.Span%601> <xref:System.ReadOnlySpan%601>dizisinde alt aralıklar belirtmek için bir kısa söz dizimi sağlar.
 
-Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır.
+Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
+
 - <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
 - Bir dizinin sıranın sonuna göreli olduğunu belirten işleç.`^`
 - <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
@@ -444,3 +446,7 @@ var text = words[phrase];
 ```
 
 Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
+
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ara değerli tam dizelerin geliştirilmesi
+
+`@` Birliktebulunan`$@"..."` [](../language-reference/tokens/interpolated.md) tam`@$"..."` dizelerde ve belirteçlerin sırası herhangi biri olabilir: her ikisi de geçerli bir ara tür dizelerdir. `$` Önceki C# sürümlerde, `$` belirtecin `@` belirteçten önce görünmesi gerekir.

@@ -2,12 +2,12 @@
 title: Atla (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: b6335086ce5b61cf23db2bf967d1a82f322e83b3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 19d3001fb8f226b02f16167dfb51ce1caa80ba3b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043619"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249229"
 ---
 # <a name="skip-entity-sql"></a>Atla (Entity SQL)
 
@@ -40,7 +40,7 @@ ORDER BY yan tümcesinde bir SKIP ifadesi Sub yan tümcesi varsa, sonuçlar sır
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
 - [Nasıl yapılır: Sorgu sonuçları aracılığıyla sayfa](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [Disk Belleği](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [Disk Belleği](paging-entity-sql.md)
+- [TOP](top-entity-sql.md)

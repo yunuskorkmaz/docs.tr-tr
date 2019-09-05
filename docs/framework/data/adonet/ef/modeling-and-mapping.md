@@ -2,18 +2,18 @@
 title: Modelleme ve Eşleme
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
-ms.openlocfilehash: 55fea170d98c737197d1e3e26c8d25fd97760ddd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 33064d35b7ac4c469df3ca6f0111cc84ef10eb08
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583587"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248494"
 ---
 # <a name="modeling-and-mapping"></a>Modelleme ve Eşleme
-İçinde [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tanımlayabilirsiniz depolama modeli, kavramsal model ve uygulamanızı en iyi iki şekilde arasındaki eşlemeyi uygun. Varlık veri modeli araçları Visual Studio'da oluşturmanızı sağlayan bir. [edmx dosyası](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) bir veritabanı veya bir grafik modeli ve ardından güncelleştirme veritabanı ya da model değiştiğinde, dosya.  
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]İçinde, kavramsal modeli, depolama modelini ve iki ile uygulamanıza en uygun şekilde eşleme tanımlayabilirsiniz. Visual Studio 'daki Varlık Veri Modeli araçları, oluşturmanıza izin verir. bir veritabanından veya bir grafik modelden [edmx dosyası](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)) ve sonra veritabanı ya da model değiştiğinde bu dosyayı güncelleştirin.  
   
- Entity Framework 4.1 ile başlangıç Code First geliştirme program aracılığıyla kullanarak bir model oluşturabilirsiniz. Code First geliştirmeye yönelik iki farklı senaryo vardır. Her iki durumda da geliştirici bir model, .NET Framework sınıf tanımları kodlayarak tanımlar ve ardından isteğe bağlı olarak ek eşlemesi veya yapılandırma veri ek açıklamaları ya da fluent API'sini kullanarak belirtir.  
+ Entity Framework 4,1 ' den başlayarak, Code First geliştirmeyi kullanarak programlı bir şekilde model de oluşturabilirsiniz. Code First geliştirmesi için iki farklı senaryo vardır. Her iki durumda da geliştirici, .NET Framework sınıf tanımlarını kodlayarak bir model tanımlar ve isteğe bağlı olarak, veri açıklamalarını veya Fluent API kullanarak ek eşleme veya yapılandırma belirtir.  
   
- Daha fazla bilgi için [oluşturma ve bir kavramsal Model eşlemesi](https://go.microsoft.com/fwlink/?LinkId=235016).  
+ Daha fazla bilgi için bkz. [kavramsal model oluşturma ve eşleme](https://go.microsoft.com/fwlink/?LinkId=235016).  
   
- EDM Oluşturucu olan .NET Framework ile birlikte de kullanabilirsiniz. EdmGen.exe varolan bir veri kaynağından .csdl .ssdl ve .msl dosyaları oluşturur. Ayrıca, model ve eşleme içeriği el ile de oluşturabilirsiniz. Daha fazla bilgi için [EDM Oluşturucu (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).
+ Ayrıca, .NET Framework dahil edilen EDM oluşturucuyu de kullanabilirsiniz. EdmGen. exe, var olan bir veri kaynağından. csdl,. ssdl ve. MSL dosyalarını oluşturur. Ayrıca modeli ve eşleme içeriğini el ile oluşturabilirsiniz. Daha fazla bilgi için bkz. [EDM Oluşturucu (EdmGen. exe)](edm-generator-edmgen-exe.md).

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 2104cb4e853888efffe6b289ac1400530be25473
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5113de6d8d333983e6e26579ff9803a9f5a62816
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015603"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254168"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType Kayıt Defteri Ayarları
 Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt defteri ayarlarına genel bir bakış sağlar.  
@@ -19,7 +19,7 @@ Bu konu, WPF uygulamaları tarafından kullanılan Microsoft ClearType kayıt de
 ## <a name="technology-overview"></a>Teknolojiye genel bakış  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bir görüntüleme cihazına metin işleyen uygulamalar, Gelişmiş okuma deneyimi sağlamak için ClearType özelliklerini kullanır. ClearType, dizüstü ekranları, Pocket PC ekranları ve düz panel izleyicileri gibi mevcut LCD 'lerde (sıvı kristal ekranlar) metinlerin okunabilirliğini artıran Microsoft tarafından geliştirilen bir yazılım teknolojisidir. ClearType, bir LCD ekranın her pikseline tek dikey renk Stripe öğelerine erişerek işe yarar. ClearType hakkında daha fazla bilgi için bkz. [ClearType Genel Bakış](cleartype-overview.md).  
   
- ClearType ile işlenen metin, çeşitli görüntü cihazlarında görüntülendiklerinde önemli ölçüde farklı görünebilir. Örneğin, küçük sayıda izleyici renk Stripe öğelerini, daha sık görülen kırmızı, yeşil, mavi ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) sıra yerine mavi, yeşil, kırmızı düzende uygular.  
+ ClearType ile işlenen metin, çeşitli görüntü cihazlarında görüntülendiklerinde önemli ölçüde farklı görünebilir. Örneğin, küçük sayıda izleyici renk Stripe öğelerini, daha sık görülen kırmızı, yeşil, mavi (RGB) sıra yerine mavi, yeşil, kırmızı düzende uygular.  
   
  ClearType ile işlenen metin, farklı renk duyarlılığı düzeylerine sahip kişiler tarafından görüntülendiklerinde önemli ölçüde farklı şekilde de görüntülenebilir. Bazı bireyler renk açısından hafif farklılıkları diğerlerinden daha iyi algılayabilirler.  
   

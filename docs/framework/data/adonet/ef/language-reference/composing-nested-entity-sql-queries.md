@@ -2,18 +2,18 @@
 title: İç İçe Geçmiş Entity SQL Sorguları Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3aa2e53b584eece9cc5e2d26791c78ffe33f9e35
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606231"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251143"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>İç İçe Geçmiş Entity SQL Sorguları Oluşturma
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir zengin işlevsel bir dildir. Yapı bloğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL aksine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tablosal sonuçtaki kümesine sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerleri, parametre veya iç içe geçmiş deyimler olabilir karmaşık ifadeleri oluşturmayı destekler. İfade bir değer parametreli veya başka bir ifadenin oluşur.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)], zengin bir işlevsel dildir. Yapı Taşı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir ifadedir. Geleneksel SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 'den farklı olarak tablosal sonuç kümesiyle sınırlı değildir: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] değişmez değerler, parametreler veya iç içe geçmiş deyimlere sahip karmaşık ifadeler oluşturmayı destekler. İfadedeki bir değer parametreli olabilir veya başka bir ifadeden oluşabilir.  
   
-## <a name="nested-expressions"></a>İç içe geçmiş deyimler  
- İç içe geçmiş bir ifade kabul döndürür türünde bir değer herhangi bir yerde yerleştirilebilir. Örneğin:  
+## <a name="nested-expressions"></a>İç içe geçmiş Ifadeler  
+ İç içe geçmiş bir ifade, döndürdüğü türden bir değerin kabul edildiği her yerde yerleştirilebilir. Örneğin:  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- İç içe yerleştirilmiş sorguda projeksiyon yan tümcesinde yerleştirilebilir. Örneğin:  
+ İç içe geçmiş bir sorgu, bir izdüşüm yan tümcesine yerleştirilebilir. Örneğin:  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)], iç içe geçmiş sorgular parantez içinde her zaman alınmalıdır:  
+ İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)], iç içe sorguların her zaman parantez içine alınması gerekir:  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- Aşağıdaki örnek düzgün ifadeleri iç içe gösterilmektedir [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Nasıl yapılır: UNION iki sorgunun sipariş](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
+ Aşağıdaki örnek, içindeki [!INCLUDE[esql](../../../../../../includes/esql-md.md)]ifadelerin nasıl düzgün bir şekilde iç içe alınacağını gösterir: [Nasıl yapılır: Iki sorgunun](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))birleşimini sıralayın.  
   
-## <a name="nested-queries-in-projection"></a>İç içe geçmiş sorgularda projeksiyonu  
- Proje yan tümcesi iç içe geçmiş sorgularda sunucuda Kartezyen ürün sorgulara çevrilmiş. SQL Server dahil olmak üzere bazı arka uç sunucular bu sunucu performansını olumsuz etkileyebilir, çok büyük almak TempDB tablodaki neden olabilir.  
+## <a name="nested-queries-in-projection"></a>Yansıtmada iç içe geçmiş sorgular  
+ Project yan tümcesindeki iç içe geçmiş sorgular, sunucuda Kartezyen ürün sorgularına çevrilebilir. SLQ sunucusu dahil bazı arka uç sunucularında, bu, TempDB tablosunun çok büyük sürmesine neden olabilir ve bu da sunucu performansını olumsuz yönde etkileyebilir.  
   
- Bu tür bir sorgu örneği verilmiştir:  
+ Bu tür bir sorgunun örneği aşağıda verilmiştir:  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a>İç içe geçmiş sorgular sıralama  
- Varlık Çerçevesi'nde, iç içe geçmiş bir ifade herhangi bir sorguda yerleştirilebilir. Entity SQL sorguları yazma büyük esneklik izin verdiğinden, bir iç içe geçmiş sorguları sıralamasını içeren bir sorgu yazmak mümkündür. Ancak, iç içe bir sorgu sırasını korunmaz.  
+## <a name="ordering-nested-queries"></a>Iç Içe sorguları sıralama  
+ Entity Framework, iç içe geçmiş bir ifade sorgunun herhangi bir yerine yerleştirilebilir. Entity SQL sorguları yazarken harika esneklik sağladığından, iç içe geçmiş sorguların sıralamasını içeren bir sorgu yazmak mümkündür. Ancak, iç içe geçmiş bir sorgunun sırası korunmaz.  
   
 ```  
 -- The following query will order the results by last name.  
@@ -77,4 +77,4 @@ SELECT C2.FirstName, C2.LastName
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

@@ -6,32 +6,31 @@ f1_keywords:
 - vb.AutoImplementedProperty
 helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
-- properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649667"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254026"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
-*Otomatik uygulanan Özellikler* hızlı bir şekilde kod yazmak zorunda kalmadan bir sınıfın bir özelliği belirtmenize olanak verir `Get` ve `Set` özelliği. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi ilişkili oluşturmaya ek olarak özellik değişkeni depolamak için özel bir alan otomatik olarak oluşturur. `Get` ve `Set` yordamları.  
+*Otomatik uygulanan özellikler* `Get` `Set` , kod yazmak zorunda kalmadan bir sınıfın özelliğini hızlı bir şekilde belirtmenizi sağlar. Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi otomatik olarak, ilişkili `Get` ve `Set` yordamları oluşturmaya ek olarak özellik değişkenini depolamak için bir özel alan oluşturur.  
   
- Otomatik uygulanan özelliklerle tek bir satırda varsayılan bir değer de dahil olmak üzere, bir özellik bildirilebilir. Aşağıdaki örnek, üç özellik bildirimini gösterir.  
+ Otomatik uygulanan özellikler ile, varsayılan değer de dahil olmak üzere tek bir satırda bildirilebilecek bir özellik. Aşağıdaki örnek, üç özellik bildirimini gösterir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#1)]  
   
- Otomatik uygulanan bir özellik, özellik değeri özel bir alanda depolandığı bir özellik eşdeğerdir. Aşağıdaki kod örneği, otomatik uygulanan bir özellik gösterilmektedir.  
+ Otomatik uygulanan bir özellik, özellik değerinin özel bir alanda depolandığı bir özelliğe eşdeğerdir. Aşağıdaki kod örneği, otomatik olarak uygulanan bir özelliği gösterir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#5)]  
   
- Aşağıdaki kod örneği, önceki otomatik uygulanan özellik örneğin eşdeğer kodu gösterir.  
+ Aşağıdaki kod örneği, önceki otomatik uygulanan özellik örneği için denk kodu gösterir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#2)]  
   
- Aşağıdaki kod, salt okunur özellikler uygulama göster:  
+ Aşağıdaki kod, salt okunur özellikleri uygulamayı gösterir:  
   
 ```vb  
 Class Customer  
@@ -45,58 +44,58 @@ Class Customer
 End Class  
 ```  
   
- Örnekte gösterildiği gibi özelliğine başlatma ifadeleri ile atayabilir veya içeren türün yapıcı özelliklerinde atayabilirsiniz.  Salt okunur özellikler yedekleme alanlarına herhangi bir zamanda atayabilirsiniz.  
+ Örneğinde gösterildiği gibi başlatma ifadeleriyle özelliğe atayabilirsiniz veya kapsayan türün oluşturucusunda özelliklere atayabilirsiniz.  Herhangi bir zamanda ReadOnly özelliklerinin yedekleme alanlarına atayabilirsiniz.  
   
 ## <a name="backing-field"></a>Destek alanı  
- Otomatik uygulanan bir özellik bildirdiğinizde, Visual Basic adlı gizli bir özel alan otomatik olarak oluşturur. *destek alanı* özellik değeri içerecek. Yedekleme alan adı, alt çizgi (_) tarafından öncesinde otomatik uygulanan özellik adıdır. Örneğin, adında bir otomatik uygulanan özellik bildirirseniz `ID`, yedekleme alanını adlı `_ID`. Olarak da adlandırılır sınıfınızın bir üye içerip içermediğini `_ID`çakışması üretmek ve Visual Basic derleyici hatası bildirir.  
+ Otomatik olarak uygulanan bir özellik bildirdiğinizde, Visual Basic otomatik olarak, özellik değerini içerecek şekilde, *yedekleme alanı* olarak adlandırılan gizli bir özel alan oluşturur. Yedekleme alanı adı, önce bir alt çizgi (_) tarafından gerçekleştirilen otomatik uygulanan özellik adıdır. Örneğin, adlı `ID`otomatik uygulanan bir özellik bildirirseniz, yedekleme alanı olarak adlandırılır `_ID`. Aynı zamanda adlı `_ID`sınıfınızın bir üyesini dahil ederseniz, bir adlandırma çakışması üretir ve bir derleyici hatası Visual Basic rapor edebilirsiniz.  
   
- Destek alanı ayrıca aşağıdaki özelliklere sahiptir:  
+ Ayrıca, yedekleme alanı aşağıdaki özelliklere sahiptir:  
   
-- Her zaman erişim değiştiricisini destek alanı olan `Private`, özelliği bir farklı erişim düzeyi gibi olsa bile `Public`.  
+- , Özelliği gibi farklı bir erişim düzeyine `Private` `Public`sahip olsa bile, yedekleme alanı için erişim değiştiricisi her zaman olur.  
   
-- Özellik olarak işaretlenmişse `Shared`, yedekleme alanını da paylaşılır.  
+- Özelliği olarak `Shared`işaretlenmişse, yedekleme alanı da paylaşılır.  
   
-- Özelliği için belirtilen öznitelikler için destek alanı geçerli değildir.  
+- Özelliği için belirtilen öznitelikler, yedekleme alanı için geçerlidir.  
   
-- Destek alanı, sınıf içindeki kod ve İzleme penceresi gibi hata ayıklama araçları'ndan erişilebilir. Ancak, yedekleme alanını IntelliSense Sözcük tamamlama listesinde göstermez.  
+- Yedekleme alanına, sınıf içindeki koddan ve izleme penceresi gibi hata ayıklama araçlarından erişilebilir. Ancak, yedekleme alanı bir IntelliSense sözcük tamamlama listesinde gösterilmez.  
   
-## <a name="initializing-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik başlatma  
- Bir alanı başlatmak için kullanılan herhangi bir ifade başlatma otomatik olarak uygulanan bir özellik için geçerli değil. Otomatik uygulanan bir özellik başlattığınızda, ifade değerlendirilir ve geçirilen `Set` özelliği için yordamı. Aşağıdaki kod örnekleri başlangıç değerleri içeren bazı otomatik uygulanan özellikler gösterir.  
+## <a name="initializing-an-auto-implemented-property"></a>Otomatik uygulanan özellik başlatılıyor  
+ Bir alanı başlatmak için kullanılabilecek herhangi bir ifade, otomatik olarak uygulanan bir özelliğin başlatılması için geçerlidir. Otomatik uygulanan bir özelliği başlattığınızda, ifade değerlendirilir ve özellik `Set` yordamına geçirilir. Aşağıdaki kod örnekleri, başlangıç değerlerini içeren bazı otomatik uygulanmış özellikleri gösterir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
   
- Otomatik uygulanan bir üyesi olan bir özellik başlatılamıyor bir `Interface`, veya olarak işaretlenmiş bir `MustOverride`.  
+ Bir `Interface`veya işaretli `MustOverride`bir üyesi olan bir otomatik uygulanan özelliği başlatamıyor.  
   
- Otomatik uygulanan bir özellik üyesi bildirdiğinizde bir `Structure`, olarak işaretlenmişse yalnızca otomatik uygulanan özellik başlatabilirsiniz `Shared`.  
+ Otomatik uygulanan bir özelliği bir `Structure`üyesi olarak bildirdiğinizde, yalnızca olarak `Shared`işaretlenmişse otomatik uygulanan özelliğini başlatabilirsiniz.  
   
- Otomatik uygulanan bir özellik olarak bir dizi bildirdiğinizde açıkça dizi sınırları belirtemezsiniz. Ancak, bir değer bir dizi Başlatıcısı kullanarak aşağıdaki örneklerde gösterildiği gibi sağlayabilirsiniz.  
+ Otomatik uygulanan bir özelliği dizi olarak bildirdiğinizde açık dizi sınırları belirtemezsiniz. Ancak, aşağıdaki örneklerde gösterildiği gibi bir dizi başlatıcısı kullanarak bir değer sağlayabilirsiniz.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
-## <a name="property-definitions-that-require-standard-syntax"></a>Standart söz dizimi gerektiren özellik tanımları  
- Otomatik uygulanan özellikler kullanışlı ve çok sayıda programlama senaryolarını destekler. Ancak, otomatik uygulanan bir özellik kullanamazsınız ve bunun yerine standart kullanmalısınız durumlar vardır veya *Genişletilmiş*, özellik sözdizimi.  
+## <a name="property-definitions-that-require-standard-syntax"></a>Standart sözdizimi gerektiren özellik tanımları  
+ Otomatik uygulanan özellikler kullanışlı ve birçok programlama senaryosunu destekler. Ancak, otomatik olarak uygulanan bir özelliği kullanabileceğiniz durumlar vardır ve bunun yerine standart ya da *genişletilmiş*, özellik sözdizimini kullanmanız gerekir.  
   
- Genişletilmiş özellik tanımı sözdizimleri aşağıdakilerden herhangi biri yapmak istiyorsanız kullanmak zorunda:  
+ Aşağıdakilerden birini yapmak istiyorsanız genişletilmiş özellik tanımı sözdizimini kullanmanız gerekir:  
   
-- Kodu `Get` veya `Set` yordamı gelen değerleri doğrulamak için kodu gibi bir özelliğin `Set` yordamı. Örneğin, özellik değeri ayarlamadan önce bir telefon numarasını temsil eden bir dize gerekli rakam sayısını içerdiğini doğrulamak isteyebilirsiniz.  
+- Yordamda gelen değerleri `Get` `Set` doğrulamak için kod gibi bir özelliğin veya yordamına kod ekleyin. `Set` Örneğin, bir telefon numarasını temsil eden bir dizenin, özellik değerini ayarlamadan önce gereken sayıda rakamları içerdiğini doğrulamak isteyebilirsiniz.  
   
-- Belirtmek için farklı erişilebilirlik `Get` ve `Set` yordamı. Örneğin, yapmak isteyebilirsiniz `Set` yordamı `Private` ve `Get` yordamı `Public`.  
+- `Get` Ve`Set` yordamı için farklı erişilebilirlik belirtin. Örneğin, `Set` yordamı `Private` ve `Get` yordamı yapmakisteyebilirsiniz.`Public`  
   
-- Özellikleri oluşturma `WriteOnly`.  
+- Olan özellikleri oluşturun `WriteOnly`.  
   
-- Parametreli özelliklerini kullanma (dahil olmak üzere `Default` özellikleri). İçin ek parametreler belirtmek için veya bir özellik için bir parametreyi belirtmek için genişletilmiş bir özellik bildirmelidir `Set` yordamı.  
+- Parametreli özellikleri kullanın (Özellikler `Default` dahil). Özelliği için bir parametre belirtmek veya `Set` yordamın ek parametrelerini belirtmek için genişletilmiş bir özellik bildirmeniz gerekir.  
   
-- Yedekleme alana bir öznitelik veya destek alanı erişim düzeyini değiştirebilirsiniz.  
+- Yedekleme alanına bir öznitelik yerleştirin veya yedekleme alanının erişim düzeyini değiştirin.  
   
-- XML açıklamaları için yedekleme alanı sağlar.  
+- Yedekleme alanı için XML açıklamaları sağlayın.  
   
-## <a name="expanding-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik genişletme  
- Otomatik uygulanan bir özellik içeren bir genişletilmiş özelliğe Dönüştür varsa bir `Get` veya `Set` yordamı, Visual Basic Kod Düzenleyicisi oluşturabileceği otomatik olarak `Get` ve `Set` yordamlar ve `End Property`özelliği için deyimi. İmleç bir boş satır şu koyarsanız kod oluşturulur `Property` deyimi, bir `G` (için `Get`) veya bir `S` (için `Set`) ve ENTER tuşuna basın. Visual Basic Kod Düzenleyicisi'ni otomatik olarak oluşturduğu `Get` veya `Set` yordamın sonunda ENTER tuşuna bastığınızda, salt okunur ve salt yazılır özellikler için bir `Property` deyimi.  
+## <a name="expanding-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik genişletiliyor  
+ Otomatik uygulanan bir özelliği `Get` bir veya `Set` yordamı içeren genişletilmiş bir özelliğe dönüştürmeniz gerekiyorsa, Visual Basic kod `Get` Düzenleyicisi otomatik olarak ve `Set` yordamlarını oluşturabilir ve `End Property`özelliği için bildirim. Bu kod, imleci `Property` deyimden sonra boş bir satıra yerleştirirseniz, bir `G` (için `Get`) veya bir `S` (için `Set`) yazın ve ENTER tuşuna basın. Visual Basic kod Düzenleyicisi, bir `Get` `Property` deyimin sonunda ENTER `Set` tuşuna bastığınızda salt okunurdur ve salt yazılır özellikler için otomatik olarak or yordamını üretir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bildirme ve Visual Basic'te bir varsayılan özelliğini çağırın](./how-to-declare-and-call-a-default-property.md)
-- [Nasıl yapılır: Bir özelliği karışık erişim düzeyleriyle bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Nasıl yapılır: Visual Basic varsayılan bir özellik bildirin ve çağırın](./how-to-declare-and-call-a-default-property.md)
+- [Nasıl yapılır: Karışık erişim düzeylerine sahip bir özellik bildirme](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property Deyimi](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)

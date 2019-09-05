@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: Önceki eşdüzeyi (XPath-LINQ to XML) bulun (C#)'
+title: 'Nasıl yapılır: Hemen önceki eşdüzey öğeyi bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 7d1d49f262b13f769ab1d28de8b75d214d8abe64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bc0a3250cf1f56ebf9a367f6472be8f3230cee5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486719"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253626"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Nasıl yapılır: Önceki eşdüzeyi (XPath-LINQ to XML) bulun (C#)
-Bazen bir düğüme önceki eşdüzeyi bulma istersiniz. XPath başlangıcı yerine sonundan önceki eşdüzey eksenleri için konumsal doğrulamaları semantiği fark nedeniyle [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bu daha ilgi çekici karşılaştırmalar biridir.  
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Nasıl yapılır: Hemen önceki eşdüzey öğeyi bulma (XPath-LINQ to XML) (C#)
+Bazen bir düğüme hemen önceki eşdüzey öğeyi bulmak isteyebilirsiniz. XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]'teki önceki eşdüzey eksenlerine yönelik konumsal koşulların semantiğinin farkı nedeniyle bu, daha ilginç karşılaştırmalardan biridir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu kullandığı <xref:System.Linq.Enumerable.Last%2A> son düğümü tarafından döndürülen bir koleksiyonda bulunacak işleci <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>. Aksine, XPath ifadesi hemen önceki öğeyi bulmak için 1 değerini bir koşul kullanır.  
+ Bu örnekte [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgu, tarafından <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>döndürülen koleksiyondaki son <xref:System.Linq.Enumerable.Last%2A> düğümü bulmak için işlecini kullanır. Buna karşılık, XPath ifadesi hemen önceki öğeyi bulmak için değeri 1 olan bir koşul kullanır.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -47,7 +47,7 @@ Console.WriteLine(el1);
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Results are identical  
 <Child3 />  
 ```  

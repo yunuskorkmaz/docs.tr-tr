@@ -1,16 +1,16 @@
 ---
-title: = (Eşittir) (varlık SQL)
+title: = (Eşittir) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: ec87ec682e1773c001c225567a35b3cedc9c5aba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333164"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251001"
 ---
-# <a name="-equals-entity-sql"></a>= (Eşittir) (varlık SQL)
-İki ifadenin eşitlik karşılaştırır.  
+# <a name="-equals-entity-sql"></a>= (Eşittir) (Entity SQL)
+İki ifadenin eşitliğini karşılaştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -22,23 +22,23 @@ expression == expression
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Herhangi bir geçerli ifade. Her iki ifade, örtük olarak dönüştürülebilir veri türlerine sahip olmalıdır.  
+ Herhangi bir geçerli ifade. Her iki ifade örtülü olarak dönüştürülebilir veri türlerine sahip olmalıdır.  
   
 ## <a name="result-types"></a>Sonuç türleri  
- `true` Sol ifade doğru ifade eşitse; Aksi takdirde, `false`.  
+ `true`sol ifade sağ ifadeye eşitse; Aksi takdirde `false`,.  
   
 ## <a name="remarks"></a>Açıklamalar  
- == İşleci, eşdeğer =.  
+ = = İşleci = = ile eşdeğerdir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu kullanır = karşılaştırma işleci iki ifadenin eşitlik karşılaştırma için. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu iki ifadenin eşitliğini karşılaştırmak için = Comparison işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. [Aşağıdaki adımları uygulayın: StructuralType sonuçları](../how-to-execute-a-query-that-returns-structuraltype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecuteStructuralTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

@@ -2,15 +2,15 @@
 title: (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 3da9c9a2864219836c8aff6e0dc9e98656ba673f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 993e71e6fee2e18806da789bdb10a488337d030f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043707"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250947"
 ---
 # <a name="from-entity-sql"></a>(Entity SQL)
-[Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) deyimlerinde kullanılan koleksiyonu belirtir.
+[Select](select-entity-sql.md) deyimlerinde kullanılan koleksiyonu belirtir.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -167,6 +167,6 @@ select {1} from {2, 3}
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Sorgu İfadeleri](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Null Değer Atanabilir Yapılandırılmış Türler](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Sorgu İfadeleri](query-expressions-entity-sql.md)
+- [Null Değer Atanabilir Yapılandırılmış Türler](nullable-structured-types-entity-sql.md)

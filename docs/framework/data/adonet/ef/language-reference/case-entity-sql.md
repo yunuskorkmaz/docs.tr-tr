@@ -1,16 +1,16 @@
 ---
-title: Durum (varlık SQL)
+title: Büyük/küçük harf (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489494"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251248"
 ---
-# <a name="case-entity-sql"></a>Durum (varlık SQL)
-Bir dizi olarak değerlendirilir `Boolean` sonucu belirlemek için ifadeler.  
+# <a name="case-entity-sql"></a>Büyük/küçük harf (Entity SQL)
+Sonucu belirleyecek bir `Boolean` ifade kümesi değerlendirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -26,38 +26,38 @@ END
   
 ## <a name="arguments"></a>Arguments  
  `n`  
- Bu çoklu gösteren bir yer tutucudur, `Boolean_expression` ARDINDAN `result_expression` yan tümceleri kullanılabilir.  
+ , Yan `Boolean_expression` tümcelerinin `result_expression` kullanılabileceğini gösteren bir yer tutucudur.  
   
- ARDINDAN `result_expression`  
- İfade olduğunda döndürülen `Boolean_expression` değerlendiren `true`. `result expression` Herhangi bir geçerli ifade var.  
+ NI`result_expression`  
+ , Olarak `Boolean_expression` `true`değerlendirildiğinde döndürülen ifadedir. `result expression`geçerli bir ifadedir.  
   
- ELSE `else_result_expression`  
- İfade yok karşılaştırma işlemi olmaması halinde döndürülür `true`. Bu bağımsız değişken atlanırsa ve herhangi bir karşılaştırma işleminin sonucunu veren `true`, servis talebi null döndürür. `else_result_expression` Herhangi bir geçerli ifade var. Veri türlerini `else_result_expression` ve tüm `result_expression` örtük bir dönüştürme olmalıdır veya aynı olmalıdır.  
+ DEĞILSE`else_result_expression`  
+ , Hiçbir karşılaştırma işleminin değerlendirilmediğinde `true`döndürülen ifadedir. Bu bağımsız değişken atlanırsa ve bir karşılaştırma işlemi olarak `true`değerlendiriliyorsa, Case null değerini döndürür. `else_result_expression`geçerli bir ifadedir. Ve ' `else_result_expression`ninveritürleri aynıolmalıdırveyaörtükbirdönüştürmeolmalıdır.`result_expression`  
   
- NE ZAMAN `Boolean_expression`  
- Olan `Boolean` Aranan büyük/küçük harf biçimi kullanıldığında değerlendirilen ifade. `Boolean_expression` herhangi bir geçerli olduğu `Boolean` ifade.  
+ OLUŞTURULURKEN`Boolean_expression`  
+ , Aranan Case biçimi kullanıldığında değerlendirilen ifadedir.`Boolean` `Boolean_expression`geçerli `Boolean` bir ifadedir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Kümesinden türlerinde en yüksek öncelik türünü döndürüyor `result_expression` ve isteğe bağlı `else_result_expression`.  
+ İçindeki tür kümesinden en yüksek öncelik türünü, `result_expression` ve isteğe bağlı `else_result_expression`olarak döndürür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case ifadesi, Transact-SQL case ifadesi benzer şekilde görünür. Case ifadesi, bir dizi hangi ifadesi uygun bir sonuç verir belirlemek için koşullu test yapmak için kullanın. Case ifadesi bu tür bir dizi bir veya daha fazla geçerli `Boolean` doğru sonuç ifadesi belirlemek için ifadeler.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case ifadesi Transact-SQL Case ifadesine benzer. Hangi ifadenin uygun sonucu olacağını belirleyen bir dizi koşullu test oluşturmak için Case ifadesini kullanın. Case ifadesinin bu biçimi, doğru sonuç ifadesini belirlemekte bir veya daha fazla `Boolean` ifadeye yönelik bir dizi için geçerlidir.  
   
- Durum işlevi değerlendirir `Boolean_expression` her zaman yan tümcesi sırada belirtilen ve döndürür `result_expression` ilk `Boolean_expression` olarak değerlendirilen `true`. Kalan ifade değerlendirilmez. Hayır ise `Boolean_expression` değerlendiren `true`, veritabanı altyapısı döndürür `else_result_expression` ELSE yan belirtilmezse, ya da ELSE yan tümce belirtilirse bir null değer.  
+ Case işlevi, belirtilen `Boolean_expression` sırada her bir yan tümce için değerlendirilir ve öğesini değerlendiren `true`ilk `result_expression` `Boolean_expression` döndürür. Kalan ifadeler değerlendirilmez. Hiçbir `Boolean_expression` `else_result_expression` değerlendirme yoksa, veritabanı altyapısı Eğer bir else yan tümcesi belirtilmişse veya else yan tümcesi belirtilmemişse null değeri döndürür. `true`  
   
- CASE ifadesi, bir çoklu küme döndüremez.  
+ CASE deyimleri bir çoklu küme döndüremez.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusu, bir dizi değerlendirmek için CASE ifadesi kullanır. `Boolean` sonucu belirlemek üzere ifadeler. Sorgu, AdventureWorks satış modelini temel alıyor. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, sonucu tespit etmek için bir dizi `Boolean` ifadeyi değerlendirmek üzere Case ifadesini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [THEN](then-entity-sql.md)
+- [SELECT](select-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

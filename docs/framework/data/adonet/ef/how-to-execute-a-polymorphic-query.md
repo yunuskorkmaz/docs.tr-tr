@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
-ms.openlocfilehash: 08ae5722267ef781ed6bee59c7895269f63a75e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49e0a6b44af0729959fabf6278cc6d8ecf37a16b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606196"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251505"
 ---
 # <a name="how-to-execute-a-polymorphic-query"></a>Nasıl yapılır: Çok Biçimli Sorgu Yürütme
 
-Bu konuda, bir çok biçimli yürütülecek gösterilmektedir [!INCLUDE[esql](../../../../../includes/esql-md.md)] kullanarak sorgu [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) işleci.
+Bu konuda, [OFTYPE](./language-reference/oftype-entity-sql.md) işleci kullanılarak çok biçimli [!INCLUDE[esql](../../../../../includes/esql-md.md)] bir sorgunun nasıl yürütüleceği gösterilmektedir.
 
-### <a name="to-run-the-code-in-this-example"></a>Bu örnekte, kodu çalıştırmak için
+### <a name="to-run-the-code-in-this-example"></a>Bu örnekteki kodu çalıştırmak için
 
-1. Ekleme [Okul modeli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) projenize ve projenizi Entity Framework kullanmak üzere yapılandırın. Daha fazla bilgi için [nasıl yapılır: Varlık veri modeli Sihirbazı'nı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).
+1. [Okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) projenize ekleyin ve projenizi Entity Framework kullanacak şekilde yapılandırın. Daha fazla bilgi için [nasıl yapılır: Varlık Veri Modeli Sihirbazı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))'nı kullanın.
 
-2. Uygulamanız için kod sayfasında, aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
+2. Uygulamanızın kod sayfasında, aşağıdaki `using` deyimleri ekleyin (`Imports` Visual Basic):
 
     [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
     [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]
 
-3. İçindeki adımları izleyerek bir tablo başına hiyerarşi devralma için kavramsal model değiştirme [izlenecek yol: Devralma - tablo başına hiyerarşi eşleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
+3. Adım adım [İzlenecek adımları izleyerek kavramsal modeli bir hiyerarşi başına tablo devralım olacak şekilde değiştirin: Eşleme devralma-tablo başına hiyerarşi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716683(v=vs.100)).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, almak ve yalnızca koleksiyonunu görüntülemek için bir OFTYPE işleci kullanır. `OnsiteCourses` koleksiyonundan `Courses`.
+Aşağıdaki örnek, yalnızca `OnsiteCourses` bir `Courses`koleksiyonundan bir koleksiyon almak ve göstermek için bir OFTYPE işleci kullanır.
 
 [!code-csharp[DP EntityServices Concepts#PolymorphicQuery](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#polymorphicquery)]
 [!code-vb[DP EntityServices Concepts#PolymorphicQuery](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#polymorphicquery)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity Framework için EntityClient Sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
-- [Entity SQL Dili](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Entity Framework için EntityClient Sağlayıcısı](entityclient-provider-for-the-entity-framework.md)
+- [Entity SQL Dili](./language-reference/entity-sql-language.md)

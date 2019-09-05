@@ -5,71 +5,71 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d3f24fb335169c2b38ce945377bc4e64a47fe9d5
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 2d9df4d479605c0a2514fe30a9150ab7bcfe904e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539915"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251164"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenmiş Sorgular (LINQ to Entities)
-Birden çok kez varlık Çerçevesi'nde yapısal olarak benzer sorguları yürüten bir uygulamanız varsa, sorgu bir kez derleyerek ve birkaç kez farklı parametrelerle yürütme sık performansı artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri alma gerekebilir; Şehir, çalışma zamanında bir forma kullanıcı tarafından belirtilir. LINQ to Entities, bu amaç için derlenmiş sorgular kullanmayı destekler.  
+Entity Framework birden çok kez yapısal olarak benzer sorgular yürüten bir uygulamanız varsa, sorguyu bir kez derleyerek ve farklı parametrelerle birkaç kez yürüterek performansı sıklıkla artırabilirsiniz. Örneğin, bir uygulama belirli bir şehirdeki tüm müşterileri almak zorunda kalabilir. Şehir, çalışma zamanında Kullanıcı tarafından bir formda belirtilir. LINQ to Entities, bu amaçla derlenen sorguların kullanılmasını destekler.  
   
- .NET Framework 4.5 ile başlayarak, LINQ sorguları otomatik olarak önbelleğe. Ancak, bu sonraki yürütme sayısı maliyeti azaltmak için derlenmiş LINQ sorguları kullanmaya devam edebilirsiniz ve derlenmiş sorgular otomatik olarak önbelleğe LINQ sorguları daha verimli olabilir. LINQ to Entities sorguları Not geçerli `Enumerable.Contains` işleci bellek içi koleksiyonlara otomatik olarak önbelleğe alınmaz. Bellek içi koleksiyonları derlenmiş LINQ sorgularında ayrıca kümesini parametreleştirme izin verilmez.  
+ .NET Framework 4,5 ' den başlayarak LINQ sorguları otomatik olarak önbelleğe alınır. Ancak, daha sonra yürütmelerin ve derlenmiş sorguların bu maliyeti azaltmak için derlenen LINQ sorgularını kullanmaya devam edebilirsiniz. bu da, otomatik olarak önbelleğe alınan LINQ sorgularından daha verimli olabilir. Bu işleci, `Enumerable.Contains` bellek içi koleksiyonlara uygulayan LINQ to Entities sorgularının otomatik olarak önbelleğe alınmadığını unutmayın. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametreleştirmeye izin verilmez.  
   
- <xref:System.Data.Objects.CompiledQuery> Sınıfı, derleme ve sorguları yeniden kullanım için önbelleğe alınmasını sağlar. Kavramsal olarak, bu sınıf içeren bir <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi ile çeşitli aşırı yükler. Çağrı `Compile` derlenmiş sorguyu temsil etmek için yeni bir temsilci oluşturmak için yöntemi. `Compile` İle sağlanan yöntemleri, bir <xref:System.Data.Objects.ObjectContext> ve bazı sonucu üreten bir temsilci dönüş parametresi değerleri (gibi bir <xref:System.Linq.IQueryable%601> örnek). Sorgu bir kez yalnızca ilk yürütme sırasında derler. Sorgu için derleme ayarlarken birleştirme seçeneklerini daha sonra değiştirilemez. Sorgu derlenmiş sonra yalnızca ilkel tür parametrelerinin sağlayabilirsiniz, ancak oluşturulan SQL değiştirirsiniz sorgunun bölümlerini değiştirilemiyor. Daha fazla bilgi için [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)  
+ Sınıfı <xref:System.Data.Objects.CompiledQuery> , yeniden kullanım için sorguları derleme ve önbelleğe alma sağlar. Kavramsal olarak, bu sınıf birkaç <xref:System.Data.Objects.CompiledQuery>aşırı `Compile` yükleme içeren bir yöntemi içerir. Derlenen sorguyu temsil etmek üzere yeni bir temsilci oluşturmak için yönteminiçağırın.`Compile` <xref:System.Data.Objects.ObjectContext> <xref:System.Linq.IQueryable%601> Ve parametre değerleriyle birlikte sunulan Yöntemler,bazısonuçlarüretenbirtemsilcidöndürür(örneğin,birörnek).`Compile` Sorgu yalnızca ilk yürütme sırasında bir kez derlenir. Derleme sırasında sorgu için ayarlanan birleştirme seçenekleri daha sonra değiştirilemez. Sorgu derlendikten sonra yalnızca temel tür parametreleri sağlayabilirsiniz ancak oluşturulan SQL 'yi değiştirecek sorgunun parçalarını değiştiremezsiniz. Daha fazla bilgi için bkz. [Entity Framework birleştirme seçenekleri ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)  
   
- LINQ to Entities sorgu ifadelerinde, <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi derler genel biri tarafından temsil edilir `Func` gibi Temsilciler <xref:System.Func%605>. En fazla sorgu ifadesi kapsülleyebilir bir `ObjectContext` parametre, dönüş parametresi ve 16 sorgu parametreleri. 16'dan fazla sorgu parametreleri gerekiyorsa, sorgu parametreleri özelliklerini temsil eden bir yapı oluşturabilirsiniz. Özellikler ayarlandıktan sonra sorgu ifadesinde yapısına özelliklerini kullanabilirsiniz.  
+ Yöntemi derleyen LINQ to Entities sorgu ifadesi <xref:System.Data.Objects.CompiledQuery> `Func` <xref:System.Func%605>, genel temsilcilerden biri (gibi) ile temsil edilir. `Compile` En çok, sorgu ifadesi bir `ObjectContext` parametreyi, dönüş parametresini ve 16 sorgu parametresini kapsülleyebilirsiniz. 16 ' dan fazla sorgu parametresi gerekliyse, özellikleri sorgu parametrelerini temsil eden bir yapı oluşturabilirsiniz. Daha sonra özellikleri ayarladıktan sonra sorgu ifadesindeki yapıda özellikleri kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve ardından kabul eden bir sorguyu çağırır bir <xref:System.Decimal> giriş parametresi ve toplam süre değerinden büyük veya eşittir $200,00 olduğu siparişler bir dizi döndürür:  
+ Aşağıdaki örnek, bir <xref:System.Decimal> giriş parametresi kabul eden bir sorgu çağırır ve sonra, ödenecek toplam değer $200,00 ' den büyük veya buna eşit olan bir sipariş dizisi döndürür:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery2)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery2)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek derler ve ardından döndüren bir sorgu çağıran bir <xref:System.Data.Objects.ObjectQuery%601> örneği:  
+ Aşağıdaki örnek, bir <xref:System.Data.Objects.ObjectQuery%601> örnek döndüren bir sorgu derler ve çağırır:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery1_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery1_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery1_mq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve daha sonra ürün listesi fiyatlar ortalamasını döndüren bir sorgu çalıştırır bir <xref:System.Decimal> değeri:  
+ Aşağıdaki örnek, ürün listesi fiyatlarının ortalamasını bir <xref:System.Decimal> değer olarak döndüren bir sorguyu derler ve çağırır:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery3_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve ardından kabul eden bir sorguyu çağırır bir <xref:System.String> giriş parametresi ve döndürür bir `Contact` , e-posta adresi belirtilen dize ile başlar:  
+ Aşağıdaki örnek, bir <xref:System.String> giriş parametresi kabul eden bir sorguyu derler ve sonra bir e-posta adresinin belirtilen dizeyle başladığı bir `Contact` sorgu çağırır:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve ardından kabul eden bir sorguyu çağırır <xref:System.DateTime> ve <xref:System.Decimal> küçüktür $300.00 olan giriş parametreleri ve bir dizi, sipariş tarihi 8 Mart 2003'ten daha sonra olduğu ve son toplam siparişleri döndürür:  
+ Aşağıdaki örnek, parametreleri kabul <xref:System.DateTime> eden ve <xref:System.Decimal> giriş yapan bir sorgu çağırır ve sonra sipariş tarihinin 8 Mart 2003 ' den daha geç olduğu ve süresi $300,00 ' den küçük olan bir sıra dizisi döndürüyor:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery5)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery5)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve ardından kabul eden bir sorguyu çağırır bir <xref:System.DateTime> giriş parametresi ve sipariş tarihi 8 Mart 2004 ' sonraki olduğu siparişler bir dizisini döndürür. Bu sorgu, anonim türdeki sipariş bilgileri bir dizisi olarak döndürür. Anonim türler tür parametrelerinde belirtemezsiniz derleyici tarafından çıkarılan <xref:System.Data.Objects.CompiledQuery>'s `Compile` yöntemi ve türü sorguda tanımlanır.  
+ Aşağıdaki örnek, bir <xref:System.DateTime> giriş parametresi kabul eden bir sorgu çağırır ve sonra sipariş tarihinin 8 Mart 2004 ' den sonraki bir sıra sırasını döndürür. Bu sorgu, düzen bilgilerini anonim türlerin bir dizisi olarak döndürür. Anonim türler derleyici tarafından algılanır, bu nedenle <xref:System.Data.Objects.CompiledQuery>kendi `Compile` yönteminde tür parametreleri belirtemezsiniz ve tür sorgunun kendisinde tanımlanmış.  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery6)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery6)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, derler ve ardından, kullanıcı tanımlı yapısı giriş parametresi kabul eden ve siparişlerinin bir dizi döndürür bir sorgu çalıştırır. Başlangıç tarihi, bitiş tarihi ve toplam sorgu parametreleri nedeniyle yapısını tanımlar ve Mart 3 ve 8 Mart 2003 toplam $700.00 büyüktür son siparişlere sorguyu döndürür.  
+ Aşağıdaki örnek, Kullanıcı tanımlı bir yapı giriş parametresini kabul eden ve bir dizi siparişi döndüren bir sorguyu derler ve çağırır. Yapı başlangıç tarihi, bitiş tarihi ve toplam son sorgu parametresini tanımlar ve sorgu, $700,00 Mart 3 ve 8 Mart 2003 tarihleri arasında, ' den büyük bir süre ile gönderilen siparişleri döndürür.  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery7)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery7)]  
   
- Sorgu parametrelerini tanımlayan yapısı:  
+ Sorgu parametrelerini tanımlayan yapı:  
   
  [!code-csharp[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#myparamsstruct)]
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
-- [Entity Framework birleştirme seçeneklerini ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [ADO.NET Entity Framework](../index.md)
+- [LINQ to Entities](linq-to-entities.md)
+- [Entity Framework birleştirme seçenekleri ve derlenmiş sorgular](https://go.microsoft.com/fwlink/?LinkId=199591)

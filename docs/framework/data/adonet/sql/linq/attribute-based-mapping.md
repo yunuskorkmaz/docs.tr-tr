@@ -2,22 +2,22 @@
 title: Öznitelik Tabanlı Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964090"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248071"
 ---
 # <a name="attribute-based-mapping"></a>Öznitelik Tabanlı Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]öznitelikleri uygulayarak veya bir dış eşleme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dosyası kullanarak bir SQL Server veritabanını nesne modeliyle eşler. Bu konu, öznitelik tabanlı yaklaşımı özetler.  
   
- En basit formunda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , bir veritabanını bir <xref:System.Data.Linq.DataContext>, bir sınıfa, bir tabloya ve sütunları ve bu sınıfların özellikleriyle ilişkilerini eşler. Öznitelikleri, nesne modelinizdeki devralma hiyerarşisini eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
+ En basit formunda [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , bir veritabanını bir <xref:System.Data.Linq.DataContext>, bir sınıfa, bir tabloya ve sütunları ve bu sınıfların özellikleriyle ilişkilerini eşler. Öznitelikleri, nesne modelinizdeki devralma hiyerarşisini eşlemek için de kullanabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
   
- Visual Studio kullanan geliştiriciler genellikle Nesne İlişkisel Tasarımcısı kullanarak öznitelik tabanlı eşleme gerçekleştirir. Ayrıca, SQLMetal komut satırı aracını kullanabilir veya öznitelikleri kendiniz kodlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
+ Visual Studio kullanan geliştiriciler genellikle Nesne İlişkisel Tasarımcısı kullanarak öznitelik tabanlı eşleme gerçekleştirir. Ayrıca, SQLMetal komut satırı aracını kullanabilir veya öznitelikleri kendiniz kodlayabilirsiniz. Daha fazla bilgi için [nasıl yapılır: Visual Basic veya C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)içinde nesne modeli oluşturun.  
   
 > [!NOTE]
-> Ayrıca, bir dış XML dosyası kullanarak da eşleyebilirsiniz. Daha fazla bilgi için bkz. [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> Ayrıca, bir dış XML dosyası kullanarak da eşleyebilirsiniz. Daha fazla bilgi için bkz. [dış eşleme](external-mapping.md).  
   
  Aşağıdaki bölümlerde, öznitelik tabanlı eşleme daha ayrıntılı olarak açıklanır. Daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping> . ad alanı.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69964090"
 > AssociationAttribute ve ColumnAttribute Storage Özellik değerleri büyük/küçük harfe duyarlıdır. Örneğin, AssociationAttribute. Storage özelliğinin özniteliğinde kullanılan değerlerin, kodun başka bir yerinde kullanılan ilgili özellik adları için büyük/küçük harf ile eşleştiğinden emin olun. Bu, genellikle büyük/küçük harf duyarlı olmayan, hatta Visual Basic dahil olmak üzere tüm .NET programlama dilleri için geçerlidir. Depolama özelliği hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>AssociationAttribute özniteliği  
- Bu özniteliği, veritabanındaki bir ilişkilendirmeyi temsil edecek bir özelliği (örneğin, birincil anahtar ilişkisine yabancı anahtar) belirlemek için kullanın. İlişkiler hakkında daha fazla bilgi için bkz [. nasıl yapılır: Veritabanı Ilişkilerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md)eşleyin.  
+ Bu özniteliği, veritabanındaki bir ilişkilendirmeyi temsil edecek bir özelliği (örneğin, birincil anahtar ilişkisine yabancı anahtar) belirlemek için kullanın. İlişkiler hakkında daha fazla bilgi için bkz [. nasıl yapılır: Veritabanı Ilişkilerini](how-to-map-database-relationships.md)eşleyin.  
   
  Aşağıdaki tabloda bu özniteliğin özellikleri açıklanmaktadır.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "69964090"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Başvuru](reference.md)

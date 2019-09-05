@@ -2,20 +2,20 @@
 title: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606673"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251570"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
 
-Çıkış sorgu komut ağaçlarını yakından sorguları SQL ifade model. Ancak, SQL bir çıkış komut ağacından oluşturulurken bazı sık karşılaşılan zorluklar sağlayıcısı yazıcılar için vardır. Bu konuda, bu sorunları ele alınmıştır. Sonraki konu başlığında örnek sağlayıcısı bu sorunları gidermek üzere nasıl gösterir.
+Çıktı sorgu komut ağaçları SQL 'de ifade edilecek şekilde daha yakından model sorguları. Ancak, bir çıkış komut ağacından SQL oluştururken sağlayıcı yazıcılarında ilgili bazı yaygın sorunlar vardır. Bu konuda bu sorunlar ele alınmaktadır. Bir sonraki konu başlığında, örnek sağlayıcı bu güçlükleri nasıl ele alınacağını göstermektedir.
 
-## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a>Bir SQL SELECT deyimi içinde Dbexpression'dan düğümleri gruplandırma
+## <a name="group-dbexpression-nodes-in-a-sql-select-statement"></a>SQL SELECT deyiminde DbExpression düğümlerini gruplandırma
 
-Aşağıdaki şekil, iç içe bir yapı normal bir SQL deyimi vardır:
+Tipik bir SQL ifadesinin aşağıdaki şekle ait iç içe bir yapısı vardır:
 
 ```sql
 SELECT …
@@ -25,11 +25,11 @@ GROUP BY …
 ORDER BY …
 ```
 
-Bir veya daha fazla yan tümceleri boş olabilir.  İç içe geçmiş bir SELECT deyimi, tüm satırların oluşabilir.
+Bir veya daha fazla yan tümce boş olabilir.  İç içe bir SELECT ifadesinin herhangi bir satırda oluşması olabilir.
 
-Bir SQL SELECT deyimi sorgu komut ağacı, olası bir çevirisini her ilişkisel işleç için bir alt sorgu oluşturur. Ancak, okunması zor olabilecek gereksiz iç içe geçmiş alt sorgulara neden.  Bazı veri depoları sorgu sonlanmayacağından.
+Bir SQL SELECT ifadesine sorgu komut ağacının olası bir çevirisi, her ilişkisel operatör için bir alt sorgu oluşturur. Bununla birlikte, okunması zor olan, gereksiz iç sorgulara yol açacaktı.  Bazı veri depolarında sorgu kötü bir şekilde çalışabilir.
 
-Örneğin, aşağıdaki sorgu komut ağacı göz önünde bulundurun.
+Örnek olarak, aşağıdaki sorgu komut ağacını göz önünde bulundurun
 
 ```
 Project (
@@ -41,7 +41,7 @@ a.x,
 )
 ```
 
-Verimsiz bir çeviri oluşturur:
+Verimsiz bir çeviri şunları üretir:
 
 ```sql
 SELECT a.x
@@ -50,11 +50,11 @@ FROM (   SELECT *
          WHERE b.y = 5) as a
 ```
 
-Her ilişkisel ifade düğüme yeni bir SQL SELECT deyimi olacağını unutmayın.
+Her ilişkisel ifade düğümünün yeni bir SQL SELECT deyimi haline geldiğini unutmayın.
 
-Bu nedenle, doğruluk korurken tek bir SQL SELECT deyimi içinde mümkün olduğunca çok ifade düğümleri toplamak önemlidir.
+Bu nedenle, doğruluğu korurken çok sayıda ifade düğümünü tek bir SQL SELECT deyimine mümkün olduğunca toplamak önemlidir.
 
-Yukarıda verilen örneği için bu tür bir toplama sonucu şöyle olacaktır:
+Yukarıda sunulan örnek için bu tür toplamın sonucu şöyle olacaktır:
 
 ```sql
 SELECT b.x
@@ -62,11 +62,11 @@ FROM TableA as b
 WHERE b.y = 5
 ```
 
-## <a name="flatten-joins-in-a-sql-select-statement"></a>Bir SQL SELECT deyimi birleşimlerde düzleştirme
+## <a name="flatten-joins-in-a-sql-select-statement"></a>SQL SELECT deyimindeki birleştirmeleri düzleştirme
 
-Tek bir SQL SELECT deyimi içinde birden çok düğüm toplayarak bir kullanım durumu, tek bir SQL SELECT deyimi birden fazla birleştirme ifadelere yeniden hesaplanır. İki girdi arasında tek bir birleştirme DbJoinExpression'temsil eder. Ancak, tek bir SQL SELECT deyimi bir parçası olarak, birden fazla birleştirme belirtilebilir. Bu durumda birleştirmeler belirtilen sıraya göre gerçekleştirilir.
+Birden çok düğümü tek bir SQL SELECT deyimi içinde birleştiren bir durum, birden çok JOIN ifadesini tek bir SQL SELECT deyimi içine toplayarak. DbJoinExpression iki giriş arasındaki tek bir birleştirmeyi temsil eder. Ancak, tek bir SQL SELECT ifadesinin parçası olarak birden fazla JOIN belirlenebilir. Bu durumda, birleştirmeler belirtilen sırada gerçekleştirilir.
 
-Omurgası birleştirmeler sol, (başka bir birleşimin sol alt olarak görünen JOIN), daha kolay tek bir SQL SELECT deyimi içinde düzleştirilebilir. Örneğin, aşağıdaki sorgu komut ağacı göz önünde bulundurun:
+Sol sırt birleşimleri (başka bir birleşimin sol alt öğesi olarak görünen birleşimler), tek bir SQL SELECT ifadesinde daha kolay bir şekilde düzleştirilir. Örneğin, aşağıdaki sorgu komut ağacını göz önünde bulundurun:
 
 ```
 InnerJoin(
@@ -79,7 +79,7 @@ InnerJoin(
 )
 ```
 
-Bu doğru içine çevrilebilir:
+Bu, öğesine doğru şekilde çevrilebilir:
 
 ```sql
 SELECT *
@@ -88,7 +88,7 @@ LEFT OUTER JOIN TableB as c ON b.y = c.x
 INNER JOIN TableC as d ON b.y = d.z
 ```
 
-Ancak, sol olmayan Sırt birleştirmeler kolayca düzleştirilmiş kullanılamaz ve bunları düzleştirilecek denememelisiniz. Örneğin, aşağıdaki sorguyu birleşimlerde ağaç komut:
+Ancak, sol olmayan sırtı birleştirmeleri kolayca düzleştirilmez ve bunları düzleştirmeniz gerekmez. Örneğin, aşağıdaki sorgu komut ağacındaki birleşimler:
 
 ```
 InnerJoin(
@@ -101,7 +101,7 @@ InnerJoin(
 )
 ```
 
-Bir alt sorgusu ile SQL SELECT deyimi çevrilmesi.
+Alt sorgu ile bir SQL SELECT ifadesine çevrilir.
 
 ```sql
 SELECT *
@@ -113,40 +113,40 @@ INNER JOIN (SELECT *
 ON b.y = d.z
 ```
 
-## <a name="input-alias-redirecting"></a>Giriş diğer adı yeniden yönlendirme
+## <a name="input-alias-redirecting"></a>Giriş diğer adı yönlendirme
 
-Giriş diğer adı yeniden yönlendirme açıklamak için DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression, ilişkisel ifadelerin yapısı göz önünde bulundurun ve DbSkipExpression.
+Girdi diğer adını yeniden yönlendirmeyi açıklamak için, DbFilterExpression, DbProjectExpression, DbCrossJoinExpression, DbJoinExpression, DbSortExpression, DbGroupByExpression, DbApplyExpression gibi ilişkisel ifadelerin yapısını göz önünde bulundurun. DbSkipExpression.
 
-Bu tür her bir giriş koleksiyonu tanımlayan bir veya daha fazla giriş özelliği vardır ve her bir girişe karşılık gelen bir bağlama değişken her giriş öğesinin bir koleksiyon geçişi sırasında temsil etmek için kullanılır. Bağlama değişkeni girişi öğesinde, örneğin bir DbFilterExpression koşul özelliğini ya da projeksiyon özelliği bir DbProjectExpression söz konusu olduğunda kullanılır.
+Bu türlerin her birinde, bir giriş koleksiyonu tanımlayan bir veya daha fazla giriş özelliği bulunur ve her girişe karşılık gelen bir bağlama değişkeni, bu girişin her bir öğesini bir koleksiyon çapraz geçişi sırasında temsil etmek için kullanılır. Bağlama değişkeni, giriş öğesine başvururken, örneğin bir DbFilterExpression 'ın koşul özelliğindeki veya bir DbProjectExpression 'ın Projection özelliğinin kullanıldığı durumlarda kullanılır.
 
-Daha fazla ilişkisel ifade düğümleri tek bir SQL SELECT deyimi içinde toplama ve onu kullanan bağlama değişkeni bir ilişkisel ifade kullanıldı (örneğin bir DbProjectExpression yansıtma özelliğinin bir parçası) parçası olan bir ifade değerlendirme zaman olabilir birden fazla ifade bağlamaları tek bir ölçüde yönlendirilmesi yaptığınız gibi giriş diğer adı ile aynı olmaması.  Bu sorun, diğer adını yeniden adlandırma adı verilir.
+Birden fazla ilişkisel ifade düğümünü tek bir SQL SELECT deyimine toplayarak ve ilişkisel bir ifadenin parçası olan bir ifadeyi değerlendirirken (örneğin, bir DbProjectExpression 'ın Projection özelliğinin bir parçası olarak), kullandığı bağlama değişkeni birden çok ifade bağlaması tek bir ölçüde yönlendirilmek zorunda olacağından, girişin diğer adıyla aynı değildir.  Bu soruna yeniden adlandırma adı verilir.
 
-Bu konudaki ilk örnek göz önünde bulundurun. Naïve çeviri yapılması ve projeksiyon a.x (DbPropertyExpression (bir, bir x)) çevirme, bunun içine çevirmek doğru olup olmadığını `a.x` çünkü diğer adlı giriş bağlama değişkeni eşleştirmek için "a" olarak sahip olabiliyoruz.  Ancak, her iki düğüm ile tek bir SQL SELECT deyimi toplanırken içine aynı DbPropertyExpression çevirmek ihtiyacınız `b.x`, "b" ile diğer adlı giriş süredir.
+Bu konudaki ilk örneği göz önünde bulundurun. Naïve çevirisini yapar ve projeksiyonu bir. x (DbPropertyExpression (a, x)) çeviriyorsa, bağlama değişkeni ile eşleşmesi için girişin "a `a.x` " olarak başka bir ad alanı olduğu için ' a çevirmek doğru olur.  Ancak, hem düğümleri tek bir SQL SELECT deyimi içinde toplayarak, girişin "b" ile başka bir ad alanı olduğu için aynı `b.x`DbPropertyExpression ' a çevirmeniz gerekir.
 
-## <a name="join-alias-flattening"></a>Diğer ad düzleştirme katılın
+## <a name="join-alias-flattening"></a>Diğer ad düzleştirmeyi Birleştir
 
-Diğer ilişkisel içindeki herhangi bir ifade bir çıktı komut ağacı, her biri girişleri birine karşılık gelen iki sütunlardan oluşan bir satır olduğundan bir sonuç türü DbJoinExpression çıkarır. Birleştirme sonucu kaynaklanan bir skaler özelliğe erişmek için yerleşik bir DbPropertyExpression başka bir DbPropertyExpression olur.
+Bir çıkış komut ağacındaki diğer tüm ilişkisel deyimlerden farklı olarak, DbJoinExpression, her biri girdilerden birine karşılık gelen iki sütundan oluşan bir satır olan sonuç türünü çıktı. Bir DbPropertyExpression, bir birleşimden kaynaklanan skaler bir özelliğe erişmek üzere yapılandırıldığında, başka bir DbPropertyExpression üzerinde bulunur.
 
-Örnek 2 ve 3. örnek "b.c.y" içinde "a.b.y" örnek olarak verilebilir. Ancak karşılık gelen SQL deyimlerinde bunlar "b.y" adlandırılır. Bu yeniden yumuşatma, diğer ad birleştirme düzleştirme çağrılır.
+Örnek 2 ' de "a. b. y" ve örnek 3 ' te "b. c. y" verilebilir. Bununla birlikte, bunlara karşılık gelen SQL deyimlerine "b. y" olarak başvurulur. Bu yeniden takma ad, JOIN diğer adı düzleştirme olarak adlandırılır.
 
-## <a name="column-name-and-extent-alias-renaming"></a>Sütun adı ve uzantısı diğer adını yeniden adlandırma
+## <a name="column-name-and-extent-alias-renaming"></a>Sütun adı ve uzantı diğer adı yeniden adlandırma
 
-Girişleri katılan tüm sütunları bir ad çakışması oluşabilir, listelenirken bir projeksiyon ile tamamlanması bir birleşimi olan bir SQL SELECT sorgu varsa, bir giriş olarak birden fazla aynı sütun adı sahip olabilir. Çakışma önlemek için sütun için farklı bir ad kullanın.
+Bir birleşime sahip bir SQL SELECT sorgusunun projeksiyon ile tamamlanması gerekiyorsa, tüm katılan sütunları girdilerden Numaralandırırken, birden fazla girişin aynı sütun adına sahip olabileceğinden bir ad çakışması meydana gelebilir. Çarpışmadan kaçınmak için sütun için farklı bir ad kullanın.
 
-Ayrıca, birleşimler düzleştirme, tablo (veya alt sorgular) adlandırılması gerek bu durum çakışan diğer adlar, olabilir.
+Ayrıca, birleştirmeleri düzleştirme sırasında, katılım tabloları (veya alt sorgular), bu durumda yeniden adlandırılması gereken diğer adları çarpışmış olabilir.
 
-## <a name="avoid-select-"></a>SELECT önlemek *
+## <a name="avoid-select-"></a>SELECT * kullanmaktan kaçının
 
-Kullanmayın `SELECT *` temel tabloları seçin. Depolama modelinde bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulama yalnızca veritabanı tablodaki sütunların bir alt kümesini içerebilir. Bu durumda, `SELECT *` hatalı bir sonuç üretebilir. Bunun yerine, bir katılımcı ifadenin sonuç türü sütun adları kullanarak katılan tüm sütunları belirtmeniz gerekir.
+Temel tablolardan seçim `SELECT *` yapmak için kullanmayın. Bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uygulamadaki depolama modeli yalnızca veritabanı tablosundaki sütunların bir alt kümesini içerebilir. Bu durumda, `SELECT *` yanlış sonuç verebilir. Bunun yerine, katılan ifadelerin sonuç türünden sütun adlarını kullanarak tüm katılan sütunları belirtmeniz gerekir.
 
-## <a name="reuse-of-expressions"></a>Yeniden ifade
+## <a name="reuse-of-expressions"></a>Ifadelerin yeniden kullanılması
 
-İfadeleri yeniden geçirilen sorgu komut ağacı [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Her bir ifade yalnızca bir kez sorgu komutu ağaçta görünür varsaymayın.
+İfadeler tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]geçirilen sorgu komut ağacında yeniden kullanılabilir. Sorgu komut ağacında her bir ifadenin yalnızca bir kez göründüğünü varsaymayın.
 
-## <a name="mapping-primitive-types"></a>Eşleme ilkel türler
+## <a name="mapping-primitive-types"></a>Temel türleri eşleme
 
-Tüm olası değerler uyacak şekilde, kavramsal (EDM) tür sağlayıcısı türleri eşlerken geniş türü (Int32) eşlenmesi gerekir. Ayrıca, BLOB türleri gibi birçok işlem için kullanılamaz türleriyle eşleme önlemek (örneğin, `ntext` SQL Server).
+Kavramsal (EDM) türlerini sağlayıcı türlerine eşlerken, tüm olası değerlerin sığması için en geniş türe (Int32) eşleme yapmanız gerekir. Ayrıca, blob türleri gibi çok sayıda işlem için kullanılamayan türlere eşlemektan kaçının (örneğin, `ntext` SQL Server).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Üretimi](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [SQL Üretimi](sql-generation.md)

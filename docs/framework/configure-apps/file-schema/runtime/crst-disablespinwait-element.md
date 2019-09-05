@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8a91e21120ecebbe7af2fb93798bc68d274fa92c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663834"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252722"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait > öğesi
 
 Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı bırakılacağını belirtir.  
   
- \<Yapılandırma >  
-\<çalışma zamanı >  
-\<Crst_DisableSpinWait >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<Crst_DisableSpinWait >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

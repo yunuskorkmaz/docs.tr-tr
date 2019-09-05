@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 96c6e5860866b302491ad882ef325d45feab9c39
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68626470"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253923"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>DotNet test F# ve MSTest kullanarak .NET Core 'da birim testi kitaplıkları
 
@@ -41,7 +41,7 @@ Dizini- *FSharp dizinine sahip birim-test ile* yeniden değiştirin. Çözüme [
 
 Sonra, *MathService. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yapısını gösterir:
 
-```
+```console
 /unit-testing-with-fsharp
     unit-testing-with-fsharp.sln
     /MathService
@@ -62,7 +62,7 @@ Sonra, *MathService. Tests* dizinini oluşturun. Aşağıdaki ana hat dizin yap�
 
 Test projesi, birim testlerini oluşturmak ve çalıştırmak için diğer paketlerin kullanılmasını gerektirir. `dotnet new`önceki adımda MSTest ve MSTest Çalıştırıcısı eklenmiştir. Şimdi, `MathService` sınıf kitaplığını projeye başka bir bağımlılık olarak ekleyin. [`dotnet add reference`](../tools/dotnet-add-reference.md) Şu komutu kullanın:
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 

@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: Bir alt öğesi (XPath-LINQ to XML) alt öğeleri bulma (C#)'
+title: 'Nasıl yapılır: Alt öğenin alt öğelerini bul (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: a049ede1d533c4afc67892b7889debbe673e51c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485475"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253711"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Bir alt öğesi (XPath-LINQ to XML) alt öğeleri bulma (C#)
-Bu konuda, belirli bir ada sahip bir alt öğenin alt öğeleri almak gösterilmektedir.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Nasıl yapılır: Alt öğenin alt öğelerini bul (XPath-LINQ to XML) (C#)
+Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri nasıl alınacağı gösterilmektedir.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir sözcük işleme belgesi bir XML gösteriminden metin ayıklama sorunları benzetimini yapar. Bu ilk tüm seçer `Paragraph` öğeleri ve ardından tüm seçer `Text` her alt öğeleri `Paragraph` öğesi. Bu alt seçemiyorum `Text` öğelerini `Comment` öğesi.  
+ Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm `Paragraph` öğeleri seçer ve ardından her `Paragraph` bir öğenin tüm `Text` alt öğelerini seçer. Bu, `Text` `Comment` öğesinin alt öğelerini seçmeyin.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -70,7 +70,7 @@ Console.WriteLine(str2);
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  

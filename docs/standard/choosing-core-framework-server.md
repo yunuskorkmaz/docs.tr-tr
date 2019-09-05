@@ -4,12 +4,12 @@ description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulund
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 520920566e8a55eef2d506dc4a8085f57ef1c0bb
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70107283"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254211"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -28,7 +28,7 @@ Sunucu uygulamanız için .NET Framework şu durumlarda kullanın:
 - Uygulamanız Şu anda .NET Framework kullanıyor (öneri, geçiş yerine genişletilir).
 - Uygulamanız üçüncü taraf .NET kitaplıklarını veya .NET Core için mevcut olmayan NuGet paketlerini kullanır.
 - Uygulamanız .NET Core için kullanılamayan .NET teknolojilerini kullanır.
-- Uygulamanız .NET Core desteklemeyen bir platform kullanıyor.
+- Uygulamanız .NET Core desteklemeyen bir platform kullanıyor. Windows, macOS ve Linux .NET Core 'u destekler.
 
 ## <a name="when-to-choose-net-core"></a>Ne zaman .NET Core seçme
 

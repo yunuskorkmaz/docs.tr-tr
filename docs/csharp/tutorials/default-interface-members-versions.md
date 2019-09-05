@@ -3,12 +3,12 @@ title: İçindeki varsayılan arabirim üyelerini kullanarak arabirimleri güven
 description: Bu gelişmiş öğreticide, var olan arabirim tanımlarına, bu arabirimi uygulayan tüm sınıfları ve yapıları bozmadan nasıl güvenli bir şekilde yeni yetenekler ekleyebileceğiniz açıklanır.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9e0e4324b2474292064a760db9727d7dec6561d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971433"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252911"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Öğretici: 8,0 'de C# varsayılan arabirim üyeleriyle arabirimleri güncelleştirme
 
@@ -37,7 +37,7 @@ Sıralamayı temsil eden ikinci bir arabirim tanımlarlar:
 
 Bu arabirimlerde, takım kullanıcılarına müşterilerine daha iyi bir deneyim oluşturmak için bir kitaplık oluşturabilir. Bu kişilerin hedefi, mevcut müşterilerle daha derin bir ilişki oluşturmak ve yeni müşterilerle ilişkilerini geliştirmektir.
 
-Şimdi, bir sonraki sürüm için kitaplığı yükseltmeniz zaman atalım. İstenen özelliklerden biri, çok sayıda siparişi olan müşteriler için bağlılık programı indirimi sunar. Bu yeni bağlılık programı indirimi, bir müşteri sipariş yaptığında uygulanır. Belirli indirim, her müşterinin bir özelliğidir. Her ıcustomer uygulaması, bağlılık programı indirimi için farklı kurallar ayarlayabilir. 
+Şimdi, bir sonraki sürüm için kitaplığı yükseltmeniz zaman atalım. İstenen özelliklerden biri, çok sayıda siparişi olan müşteriler için bağlılık programı indirimi sunar. Bu yeni bağlılık programı indirimi, bir müşteri sipariş yaptığında uygulanır. Belirli indirim, her müşterinin bir özelliğidir. Her bir `ICustomer` uygulama, bağlılık programı indirimi için farklı kurallar ayarlayabilir. 
 
 Bu işlevi eklemenin en doğal yolu, `ICustomer` arabirimi herhangi bir bağlılık programı indirimi uygulamak için bir yöntemle geliştirmektir. Bu tasarım önerisi, deneyimli geliştiriciler arasında sorun oluşmasına neden oldu: "Arabirimler yayımlandıklarında sabittir! Bu bir son değişiklik! " C#8,0, arabirimleri yükseltmek için *varsayılan arabirim uygulamalarını* ekler. Kitaplık yazarları arabirime yeni üyeler ekleyebilir ve bu üyeler için varsayılan bir uygulama sağlar.
 
@@ -47,7 +47,7 @@ Varsayılan arabirim uygulamaları, geliştiricilerin bu uygulamayı geçersiz k
 
 Takım, en olası varsayılan uygulamada anlaşmıştır: müşteriler için bağlılık programı indirimi.
 
-Yükseltme, iki özellik ayarlama işlevini sağlamalıdır: indirimle uygun olması gereken siparişlerin sayısı ve indirimin yüzdesi. Bu, varsayılan arabirim üyeleri için mükemmel bir senaryo sağlar. Icustomer arabirimine bir yöntem ekleyebilir ve en olası uygulamayı sağlayabilirsiniz. Tüm mevcut ve tüm yeni uygulamalar varsayılan uygulamayı kullanabilir veya kendi özelliklerini sağlayabilir.
+Yükseltme, iki özellik ayarlama işlevini sağlamalıdır: indirimle uygun olması gereken siparişlerin sayısı ve indirimin yüzdesi. Bu, varsayılan arabirim üyeleri için mükemmel bir senaryo sağlar. `ICustomer` Arabirime bir yöntem ekleyebilir ve en olası uygulamayı sağlayabilirsiniz. Tüm mevcut ve tüm yeni uygulamalar varsayılan uygulamayı kullanabilir veya kendi özelliklerini sağlayabilir.
 
 Önce, uygulamaya yeni yöntemi ekleyin:
 

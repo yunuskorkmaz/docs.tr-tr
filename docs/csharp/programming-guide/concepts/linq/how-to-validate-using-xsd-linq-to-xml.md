@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: XSD kullanarak doğrula (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 47704a5aa06bb837c9d76516762330e4aa24e074
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0e35e12efa9530fd5bbcf7a21e86ed03c1325bc4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592232"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253250"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>Nasıl yapılır: XSD kullanarak doğrula (LINQ to XML) (C#)
 Ad <xref:System.Xml.Schema> alanı, bir xml ağacının bir XML şeması tanım dili (xsd) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> yöntem belgelerine bakın.  
@@ -66,7 +66,7 @@ Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Validating doc1  
 doc1 validated  
   
@@ -111,7 +111,7 @@ Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Attempting to validate  
 custOrdDoc validated  
   

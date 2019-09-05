@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Iki koleksiyonu birleştirin (LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: aa774e23cfd232709f9824826f5084fe6049ef37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 82083a24da9a5356a8ff8e8430b61bb5d41f7c72
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593201"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253570"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Nasıl yapılır: Iki koleksiyonu birleştirin (LINQ to XML) (C#)
 XML belgesindeki bir öğe veya öznitelik, bazen başka bir öğe veya özniteliğe başvurabilir. Örneğin, [örnek xml dosyası: Müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML belgesi, müşterilerin ve siparişlerin listesinin bir listesini içerir. Her `Customer` öğe bir `CustomerID` özniteliği içerir. Her `Order` öğe bir `CustomerID` öğesi içerir. Her siparişte bulunan `CustomerID` `CustomerID` öğe, bir müşterinin özniteliği anlamına gelir.  
@@ -76,7 +76,7 @@ if (!errors)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Attempting to validate, custOrdDoc validated  
 <Root>  
   <Order>  

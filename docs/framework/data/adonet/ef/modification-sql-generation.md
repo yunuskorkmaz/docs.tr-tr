@@ -2,24 +2,24 @@
 title: Değişiklik SQL Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034144"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248569"
 ---
 # <a name="modification-sql-generation"></a>Değişiklik SQL Oluşturma
 
-Bu bölümde bir değişiklik SQL oluşturma modülü için geliştirme anlatılmaktadır, (SQL:1999-uyumlu veritabanı) sağlayıcısı. Bu modül, uygun SQL INSERT, UPDATE veya DELETE deyimlerine bir değişikliği komut ağacı çevirmek için sorumludur.
+Bu bölümde, (SQL: 1999 uyumlu veritabanı) sağlayıcınız için bir değiştirme SQL oluşturma modülünün nasıl geliştirilmesi anlatılmaktadır. Bu modül, bir değiştirme komut ağacını uygun SQL INSERT, UPDATE veya DELETE ifadelerine çevirmekten sorumludur.
 
-Select deyimleri için SQL oluşturma hakkında daha fazla bilgi için bkz. [SQL oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation.md).
+Select deyimleri için SQL üretimi hakkında daha fazla bilgi için bkz. [SQL üretimi](sql-generation.md).
 
-## <a name="overview-of-modification-command-trees"></a>Değişiklik komut ağaçlarını genel bakış
+## <a name="overview-of-modification-command-trees"></a>Değiştirme komut ağaçlarına genel bakış
 
-Değişiklik SQL oluşturma modülü, belirli bir giriş DbModificationCommandTree üzerinde temel veritabanı özgü değişiklik SQL deyimleri oluşturur.
+Değişiklik SQL oluşturma modülü, belirli bir giriş DbModificationCommandTree temelinde veritabanına özel değişiklik SQL deyimleri oluşturur.
 
-Bir DbModificationCommandTree nesne modeli, bir DML işlemi (bir ekleme, güncelleştirme veya silme işlemi) değişiklik temsilidir DbCommandTree devralıyor. Üç uygulamaları DbModificationCommandTree vardır:
+DbModificationCommandTree bir değiştirme DML işleminin (bir INSERT, Update veya delete işlemi), DbCommandTree 'den devralan bir nesne modeli gösterimidir. DbModificationCommandTree ' nin üç uygulaması vardır:
 
 - DbInsertCommandTree
 
@@ -27,15 +27,15 @@ Bir DbModificationCommandTree nesne modeli, bir DML işlemi (bir ekleme, güncel
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree ve tarafından üretilen kendi uygulamalarını [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] her zaman tek bir satır işlemi temsil eder. Bu bölümde, .NET Framework sürüm 3.5, kısıtlama olmadan bu türleri açıklanmaktadır.
+DbModificationCommandTree ve tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] üretilen uygulamaları her zaman tek bir satır işlemini temsil eder. Bu bölümde, .NET Framework sürüm 3,5 ' de kısıtlamaları olan bu türler açıklanmaktadır.
 
-![Diyagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diyagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree ayarlama değiştirme işlemi için hedef temsil eden bir hedef özelliği vardır. Giriş kümesinde tanımlayan hedefin ifade her zaman DbScanExpression özelliğidir.  Bir DbScanExpression ya da bir tablo veya Görünüm temsil edebilir veya bir veri kümesi meta verileri özelliği, hedef "sorgu tanımlama" ise null olmayan bir sorgu ile tanımlanan.
+DbModificationCommandTree, değişiklik işlemi için hedef kümesini temsil eden bir Target özelliğine sahiptir. Giriş kümesini tanımlayan hedefin Expression özelliği her zaman DbScanExpression ' dır.  Bir DbScanExpression bir tabloyu veya görünümü temsil edebilir ya da hedefin "sorgu tanımlaması" meta veri özelliği null değilse bir sorgu ile tanımlanmış bir veri kümesini temsil edebilir.
 
-Bir sorgu temsil eder bir DbScanExpression yalnızca bir sağlayıcı değiştirme hedefi belirlenen modelde tanımlayan bir sorgu kullanarak tanımlandı, ancak hiçbir işlev karşılık gelen bir değiştirme işlemi için sağlanan ulaşabilir. Sağlayıcıları (SqlClient, örneğin, daha önceden) senaryosunu desteklemek mümkün olmayabilir.
+Bir sorguyu temsil eden bir DbScanExpression, küme, modelde bir tanımlama sorgusu kullanılarak tanımlanmışsa ancak ilgili değişiklik işlemi için hiçbir işlev sağlanmadıysa yalnızca bir değişikliğin hedefi olarak bir sağlayıcıya ulaşabilir. Sağlayıcılar böyle bir senaryoyu destekleyemeyebilir (örneğin, SqlClient).
 
-DbInsertCommandTree komut ağaç olarak ifade edilen bir tek satır ekleme işlemi temsil eder.
+DbInsertCommandTree, komut ağacı olarak ifade edilen tek satırlık ekleme işlemini temsil eder.
 
 ```csharp
 public sealed class DbInsertCommandTree : DbModificationCommandTree {
@@ -44,43 +44,43 @@ public sealed class DbInsertCommandTree : DbModificationCommandTree {
 }
 ```
 
-DbUpdateCommandTree komut ağaç olarak ifade edilen bir tek satır güncelleştirme işlemi temsil eder.
+DbUpdateCommandTree, komut ağacı olarak ifade edilen tek satırlık bir güncelleştirme işlemini temsil eder.
 
-DbDeleteCommandTree komut ağaç olarak ifade edilen bir tek satır silme işlemini temsil eder.
+DbDeleteCommandTree, komut ağacı olarak ifade edilen tek satırlık silme işlemini temsil eder.
 
-### <a name="restrictions-on-modification-command-tree-properties"></a>Değişiklik komut ağacı özellikleri kısıtlamaları
+### <a name="restrictions-on-modification-command-tree-properties"></a>Değiştirme komut ağacı özelliklerindeki kısıtlamalar
 
-Aşağıdaki bilgileri ve kısıtlamaları değişikliği komut ağacı özellikleri için geçerlidir.
+Aşağıdaki bilgiler ve kısıtlamalar değiştirme komut ağacı özellikleri için geçerlidir.
 
-#### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>DbInsertCommandTree ve DbUpdateCommandTree döndürme
+#### <a name="returning-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>DbInsertCommandTree ve DbUpdateCommandTree içine dönme
 
-Null olmadığında, döndürme komutu bir okuyucu döndürdüğünü gösterir. Aksi takdirde, komut, etkilenen satır sayısı (eklendiğinde veya güncelleştirildiğinde) belirten bir skaler değer döndürmelidir.
+Null olmayan, döndürme komutun bir okuyucu döndürdüğünü gösterir. Aksi takdirde, komut etkilenen satır sayısını belirten bir skaler değer döndürmelidir (ekli veya güncelleştirilmiş).
 
-Döndürme değeri, eklenen veya güncelleştirilen satırı tabanlı döndürülmesi gereken sonuçlar bir projeksiyon belirtir. Yalnızca Dbnewınstanceexpression her biriyle ilgili DbModificationCommandTree hedefi için bir başvuruyu temsil eden bir DbVariableReferenceExpression üzerinden bir DbPropertyExpression olan bağımsız bir satırı temsil eden türünde olabilir. Özellikleri döndürme her zaman depolama üretilen veya hesaplanan değerleri özelliğinde kullanılan DbPropertyExpressions tarafından temsil edilir. Satır eklenmekte tablonun en az bir özellik olarak oluşturulan ya da (StoreGeneratedPattern.Identity veya StoreGeneratedPattern.Computed olarak ssdl işaretli) hesaplanan deposu belirtildiğinde DbInsertCommandTree içinde döndürme null değil. Döndürme DbUpdateCommandTrees içinde null değil, satır güncelleştiriliyor tablonun en az bir özellik deposu olarak belirtildiğinde (olarak işaretlenmişse StoreGeneratedPattern.Computed ssdl içinde) hesaplanan.
+Döndürülen değer, girilen veya güncellenen satıra göre döndürülecek sonuçların projeksiyonunu belirtir. Yalnızca bir satırı temsil eden DbNewInstanceExpression oluşturamıyor türünde olabilir ve bağımsız değişkenlerinin her biri, karşılık gelen DbModificationCommandTree hedefine bir başvuruyu temsil eden bir DbVariableReferenceExpression üzerinde bir DbPropertyExpression olur. Döndürülen özellikte kullanılan Dbpropertydeyimleriyle temsil edilen özellikler, her zaman üretilen veya hesaplanan değerleri depolar. DbInsertCommandTree içinde, satır eklenmekte olan tablonun en az bir özelliği depo oluşturuldu veya hesaplandı (StoreGeneratedPattern. Identity veya StoreGeneratedPattern. ssdl içinde hesaplanan) olarak belirtildiğinde, döndüren döndürme null değildir. DbUpdateCommandTrees içinde, satırın güncelleştirilmekte olduğu tablonun en az bir özelliği (StoreGeneratedPattern. ssdl içinde hesaplanan) olarak belirtildiğinde, döndüren döndürme null değildir.
 
-#### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>SetClauses DbInsertCommandTree ve DbUpdateCommandTree
+#### <a name="setclauses-in-dbinsertcommandtree-and-dbupdatecommandtree"></a>DbInsertCommandTree ve DbUpdateCommandTree içindeki Settümceleri
 
-INSERT listesini SetClauses belirtir veya güncelleştirme ekleme veya güncelleştirme işlemi tanımlayan bir yan tümceleri ayarlayın.
+Settümceleri ekleme veya güncelleştirme işlemini tanımlayan INSERT veya Update set yan tümceleri listesini belirtir.
 
 ```
 The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
 ```
 
-Özellik güncelleştirilmesi gereken özelliği belirtir. Her zaman ilgili DbModificationCommandTree hedefinin bir başvuruyu temsil eder bir DbVariableReferenceExpression üzerinden bir DbPropertyExpression olur.
+Özelliği, güncellenmesi gereken özelliği belirtir. Bir DbVariableReferenceExpression üzerinde her zaman bir DbPropertyExpression, buna karşılık gelen DbModificationCommandTree hedefine yönelik bir başvuruyu temsil eder.
 
-Değer özelliğini güncelleştirmek yeni değeri belirtir. Tür ya da DbConstantExpression veya DbNullExpression.
+Değer, özelliği güncelleştirilecek yeni değeri belirtir. Bu, DbConstantExpression veya Dbsnullexpression türünde olabilir.
 
-#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>Koşul DbUpdateCommandTree ve DbDeleteCommandTree
+#### <a name="predicate-in-dbupdatecommandtree-and-dbdeletecommandtree"></a>DbUpdateCommandTree ve DbDeleteCommandTree içindeki koşul
 
-Hedef koleksiyonun üyeleri güncelleştirildiğinde veya silindiğinde belirlemek için kullanılan karşılaştırma koşulu belirtir. Bu yerleşik DbExpressions aşağıdaki alt kümesini bir ifade ağacı şöyledir:
+Koşul, hedef koleksiyonun hangi üyelerinin güncelleştirileceğini veya silineceğini belirlemekte kullanılan koşulu belirtir. Bu, Dbdeyimlerden oluşan aşağıdaki alt kümesini oluşturulmuş bir ifade ağacıdır:
 
-- DbComparisonExpression türde bir DbPropertyExpression aşağıda kısıtlı olarak olan sağ alt ve sol alt bir DbConstantExpression ile eşittir.
+- Sağ alt öğesi, aşağıda kısıtlanmış bir DbPropertyExpression ve bir DbConstantExpression sol alt öğesi olacak şekilde, türü eşittir DbComparisonExpression.
 
 - DbConstantExpression
 
-- Üzerinden bir DbPropertyExpression kısıtlı olarak DbIsNullExpression
+- Aşağıda kısıtlanmış bir DbPropertyExpression üzerinde Dbissnullexpression
 
-- Karşılık gelen DbModificationCommandTree hedefi için bir başvuruyu temsil eden bir DbVariableReferenceExpression üzerinden DbPropertyExpression.
+- Karşılık gelen DbModificationCommandTree hedefine yönelik bir başvuruyu temsil eden bir DbVariableReferenceExpression üzerinde DbPropertyExpression.
 
 - DbAndExpression
 
@@ -88,35 +88,35 @@ Hedef koleksiyonun üyeleri güncelleştirildiğinde veya silindiğinde belirlem
 
 - DbOrExpression
 
-## <a name="modification-sql-generation-in-the-sample-provider"></a>Örnek sağlayıcısında değişiklik SQL oluşturma
+## <a name="modification-sql-generation-in-the-sample-provider"></a>Örnek sağlayıcıda değişiklik SQL üretimi
 
-[Entity Framework örnek sağlayıcısı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) destekleyen bir ADO.NET veri sağlayıcıları bileşenlerini gösterir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Bu, bir SQL Server 2005 veritabanını hedefler ve System.Data.SqlClient ADO.NET 2.0 veri sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.
+[Entity Framework örnek sağlayıcı](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) , [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]tarafından desteklenen ADO.NET veri sağlayıcılarının bileşenlerini gösterir. SQL Server 2005 veritabanını hedefler ve System. Data. SqlClient ADO.NET 2,0 Veri Sağlayıcısı üzerine bir sarmalayıcı olarak uygulanır.
 
-Değişiklik SQL oluşturma Modülü (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) örnek sağlayıcısı bir giriş DbModificationCommandTree alır ve tek bir değişiklik büyük olasılıkla döndürmek için bir select deyimi tarafından izlenen SQL deyimini oluşturan bir okuyucu tarafından DbModificationCommandTree belirtildi. Hedef SQL Server veritabanı tarafından oluşturulan komutları şeklini etkileyeceğini unutmayın.
+Örnek sağlayıcının (SQL Generation\DmlSqlGenerator.cs dosyasında bulunur) değişiklik SQL oluşturma modülü, bir giriş DbModificationCommandTree alır ve tek bir değişiklik SQL deyiminden sonra bir SELECT deyiminden sonra gelen bir DbModificationCommandTree tarafından belirtilmişse okuyucu. Oluşturulan komutların şeklinin hedef SQL Server veritabanından etkileneceğini unutmayın.
 
-### <a name="helper-classes-expressiontranslator"></a>Yardımcı sınıfları: ExpressionTranslator
+### <a name="helper-classes-expressiontranslator"></a>Yardımcı sınıflar: ExpressionTranslator
 
-ExpressionTranslator DbExpression türünde tüm değişiklik komut ağacı özellikleri için ortak bir basit translator işlevi görür. Bu değişikliği komut ağacı özelliklerini sınırlı olan ifade türleri çeviri destekler ve göz önünde belirli kısıtlamalar ile oluşturulmuş.
+ExpressionTranslator, DbExpression türünde tüm değiştirme komut ağacı özellikleri için ortak bir basit çevirici işlevi görür. Yalnızca değiştirme komutu ağacının özelliklerinin kısıtlandığı ve belirli kısıtlamalarla birlikte oluşturulduğu ifade türlerinin çevirisini destekler.
 
-Aşağıdaki bilgiler, belirli ifade türleri (Önemsiz çevirileri düğümleri atlanır) ziyaret açıklanır.
+Aşağıdaki bilgiler belirli ifade türlerini ziyaret etmenizi açıklar (önemsiz çevirileri olan düğümler atlanır).
 
 ### <a name="dbcomparisonexpression"></a>DbComparisonExpression
 
-ExpressionTranslator preserveMemberValues ile oluşturulan zaman = true ve sağa sabiti (DbNullExpression) yerine bir DbConstantExpression, sol işleneni (DbPropertyExpressions) ile ilişkilendirir DbConstantExpression. Dönüş bir Select deyimi etkilenen satır tanımlamak üzere oluşturulan gerekiyorsa, kullanılır.
+ExpressionTranslator, preserveMemberValues = true ile oluşturulduğunda ve sağdaki sabit değeri bir DbConstantExpression (Dbsnullexpression yerine) olduğunda, sol işleneni (DbPropertyExpression) bununla ilişkilendirir DbConstantExpression. Bu, etkilenen satırı tanımlamak için bir return SELECT ifadesinin oluşturulması gerekiyorsa kullanılır.
 
 ### <a name="dbconstantexpression"></a>DbConstantExpression
 
-Ziyaret edilen her sabit bir parametre oluşturulur.
+Her ziyaret edilen sabit için bir parametre oluşturulur.
 
 ### <a name="dbpropertyexpression"></a>DbPropertyExpression
 
-Oluşturma (tablo değişkeni kullanıldığında, yalnızca güncelleştirme senaryolarda gerçekleşir) bir diğer ad oluşturduğu sürece her zaman temsil eden girdi tablosu DbPropertyExpression örneğini düşünüldüğünde, takma ad için girişi belirtilmesi gerekiyor; Çeviri varsayılan olarak özellik adıdır.
+Oluşturma işlemi her zaman giriş tablosunu temsil ettiğinden, kuşak bir diğer ad oluşturmadıysa (yalnızca bir tablo değişkeni kullanıldığında güncelleştirme senaryolarında olur), giriş için diğer ad belirtilmesi gerekmez; Çeviri varsayılan olarak özellik adını alır.
 
-## <a name="generating-an-insert-sql-command"></a>Bir INSERT SQL komutu oluşturma
+## <a name="generating-an-insert-sql-command"></a>INSERT SQL komutu oluşturma
 
-Oluşturulan INSERT komutu için belirli bir DbInsertCommandTree örnek sağlayıcısında aşağıdaki iki INSERT şablonlardan birini izler.
+Örnek sağlayıcıda verilen bir DbInsertCommandTree için, oluşturulan INSERT komutu aşağıdaki iki ekleme şablonundan birini izler.
 
-İlk şablon SetClauses listesinde değerlerine INSERT gerçekleştirmek için bir komut vardır ve döndürme özelliği null değildi, eklenen satır için döndürme özelliğinde belirtilen dönüş özellikleri için bir SELECT deyimi. Koşul öğe "\@ @ROWCOUNT > 0" değeri bir satır eklenmişse true. Koşul öğe "keyMemberI keyValueI = &#124; SCOPE_IDENTITY()" şeklini alır "keyMemberI SCOPE_IDENTITY() =" SCOPE_IDENTITY() bir kimlik (eklenen son kimlik değeri döndürdüğünden keyMemberI depoda üretilmiş bir anahtar ise yalnızca depoda üretilmiş) sütunu.
+İlk şablonda, Setyan tümceleri listesindeki değerleri verilen ekleme işlemini gerçekleştirmeye yönelik bir komut ve döndürülen özellik null değilse, ekli satır için döndürülen özellikte belirtilen özellikleri döndürecek bir SELECT deyimidir. Bir satır eklenirse,\@ "@ROWCOUNT > 0" koşul öğesi doğru. "KeyMemberI = keyValueI &#124; scope_identity ()" koşul öğesi, "keyMemberI = scope_identity ()" şeklini, ancak keyMemberI 'nin bir kimliğe ekli en son kimlik değerini döndürdüğü "keymemberi = ()" şeklini alır ( Depo oluşturuldu) sütunu.
 
 ```sql
 -- first insert Template
@@ -128,7 +128,7 @@ VALUES (setClauseValue0, .. setClauseValueN) |  DEFAULT VALUES
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-INSERT burada birincil anahtarı depoda üretilmiş ancak bir tamsayı türü değil ve bu nedenle scope_identity()) ile kullanılamaz, bir satır eklemeyi belirtiyorsa, ikinci şablon gereklidir. Depoda üretilmiş bir bileşik anahtarı varsa de kullanılır.
+INSERT, birincil anahtarın depoda oluşturulduğu, ancak bir tamsayı türü olmadığı ancak bu nedenle scope_identity () ile birlikte kullanılamayan bir satır eklemeyi belirtiyorsa ikinci şablon gereklidir. Bu, Birleşik bir depoda oluşturulan anahtar varsa da kullanılır.
 
 ```sql
 -- second insert template
@@ -144,9 +144,9 @@ JOIN <target> AS t ON g.KeyMember0 = t.KeyMember0 AND … g.KeyMemberN = t.KeyMe
  WHERE @@ROWCOUNT > 0
 ```
 
-Örnek sağlayıcısı ile birlikte modeli kullanan bir örnek verilmiştir. Bu, bir DbInsertCommandTree INSERT komutu oluşturur.
+Örnek sağlayıcıda bulunan modeli kullanan bir örnek aşağıda verilmiştir. DbInsertCommandTree öğesinden bir INSERT komutu oluşturur.
 
-Aşağıdaki kod, bir kategori ekler:
+Aşağıdaki kod bir kategori ekler:
 
 ```csharp
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {
@@ -158,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Bu kod, sağlayıcıya geçirilir aşağıdaki komut ağacı üretir:
+Bu kod, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir:
 
 ```
 DbInsertCommandTree
@@ -187,7 +187,7 @@ DbInsertCommandTree
       |_Var(target).CategoryID
 ```
 
-Aşağıdaki SQL deyimini örnek sağlayıcısında üreten mağazası komut şöyledir:
+Örnek sağlayıcının ürettiği mağaza komutu aşağıdaki SQL deyimidir:
 
 ```sql
 insert [dbo].[Categories]([CategoryName], [Description], [Picture])
@@ -197,9 +197,9 @@ from [dbo].[Categories]
 where @@ROWCOUNT > 0 and [CategoryID] = scope_identity()
 ```
 
-## <a name="generating-an-update-sql-command"></a>Bir güncelleştirme SQL komutu oluşturma
+## <a name="generating-an-update-sql-command"></a>Bir Update SQL komutu oluşturuluyor
 
-Bir verilen DbUpdateCommandTree için oluşturulan güncelleştirme komutunu aşağıdaki şablonu temel alan:
+Belirli bir DbUpdateCommandTree için, oluşturulan güncelleştirme komutu aşağıdaki şablona dayalıdır:
 
 ```sql
 -- UPDATE Template
@@ -212,13 +212,13 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Sahte set yan tümcesi set yan tümcesi olan ("@i = 0") hiçbir set yan tümceleri yalnızca belirtilen. Tüm depolama sütunları yeniden hesaplanan emin olmak için budur.
+Set yan tümcesi, yalnızca set yan tümceleri belirtilmemişse,@i sahte set yan tümcesine ("= 0") sahiptir. Bu, tüm mağaza hesaplanmış sütunlarının yeniden hesaplanmasını sağlamaktır.
 
-Yalnızca döndürme özelliği null değilse, döndürme özelliğinde belirtilen özellikleri döndürmek için bir select deyimi oluşturuldu.
+Yalnızca döndüren özelliği null değilse, return özelliğinde belirtilen özellikleri döndürmek için bir SELECT ifadesinin oluşturulması gerekir.
 
-Aşağıdaki örnek, bir güncelleştirme komutu oluşturmak için örnek sağlayıcısı ile model kullanır.
+Aşağıdaki örnek, bir Update komutu oluşturmak için örnek sağlayıcıda bulunan modeli kullanır.
 
-Aşağıdaki kullanıcı kodu bir kategori güncelleştirir:
+Aşağıdaki Kullanıcı kodu bir kategoriyi güncelleştirir:
 
 ```csharp
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {
@@ -228,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Bu kullanıcı kodu sağlayıcısına geçirilen aşağıdaki komut ağacı üretir:
+Bu Kullanıcı kodu, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir:
 
 ```
 DbUpdateCommandTree
@@ -249,7 +249,7 @@ DbUpdateCommandTree
 |_Returning
 ```
 
-Örnek sağlayıcısında aşağıdaki depolama komutu üretir:
+Örnek sağlayıcı aşağıdaki Store komutunu üretir:
 
 ```sql
 update [dbo].[Categories]
@@ -257,9 +257,9 @@ set [CategoryName] = @p0
 where ([CategoryID] = @p1)
 ```
 
-### <a name="generating-a-delete-sql-command"></a>Silme SQL komutu oluşturma
+### <a name="generating-a-delete-sql-command"></a>Bir DELETE SQL komutu oluşturuluyor
 
-Bir verilen DbDeleteCommandTree için oluşturulan DELETE komutu aşağıdaki şablonu temel alan:
+Belirli bir DbDeleteCommandTree için, oluşturulan DELETE komutu aşağıdaki şablona dayalıdır:
 
 ```sql
 -- DELETE Template
@@ -267,9 +267,9 @@ DELETE <target>
 WHERE <predicate>
 ```
 
-Aşağıdaki örnek, bir silme komutu oluşturmak için örnek sağlayıcısı ile model kullanır.
+Aşağıdaki örnek, bir Delete komutu oluşturmak için örnek sağlayıcıda bulunan modeli kullanır.
 
-Aşağıdaki kullanıcı kodu bir kategoriyi siler:
+Aşağıdaki Kullanıcı kodu bir kategoriyi siler:
 
 ```csharp
 using (NorthwindEntities northwindContext = new NorthwindEntities()) {
@@ -279,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 }
 ```
 
-Bu kullanıcı kodu sağlayıcısına geçirilen aşağıdaki komut ağacı üretir.
+Bu Kullanıcı kodu, sağlayıcıya geçirilen aşağıdaki komut ağacını üretir.
 
 ```
 DbDeleteCommandTree
@@ -293,7 +293,7 @@ DbDeleteCommandTree
     |_10
 ```
 
-Aşağıdaki depolama komutu örnek sağlayıcısı tarafından üretilir:
+Aşağıdaki mağaza komutu örnek sağlayıcı tarafından üretilir:
 
 ```sql
 delete [dbo].[Categories]
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Entity Framework Veri Sağlayıcısı Yazma](writing-an-ef-data-provider.md)

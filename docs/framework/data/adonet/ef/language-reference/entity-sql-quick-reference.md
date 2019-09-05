@@ -2,22 +2,22 @@
 title: Entity SQL Hızlı Başvurusu
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7780359d981b130118cb73d4892f3dcb4b6e2e7d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785261"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251023"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL Hızlı Başvurusu
-Bu konu, hızlı başvuru sağlar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular. Sorgular, bu konuda, AdventureWorks satış modeline dayanır.  
+Bu konu, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgulara hızlı bir başvuru sağlar. Bu konudaki sorgular AdventureWorks Sales Model ' i temel alır.  
   
 ## <a name="literals"></a>Sabit değerler  
   
 ### <a name="string"></a>Dize  
- Unicode ve Unicode olmayan karakter dize değişmez değerleri vardır. Unicode dizelerini ile n tanımlandıkları Örneğin, `N'hello'`.  
+ Unicode ve Unicode olmayan karakter dizesi değişmez değerleri vardır. Unicode dizeleri, N ile sona erer. Örneğin, `N'hello'`.  
   
- Unicode olmayan dize sabitinin bir örnek verilmiştir:  
+ Aşağıda Unicode olmayan bir dize sabit değeri örneği verilmiştir:  
   
 ```  
 'hello'  
@@ -29,10 +29,10 @@ Bu konu, hızlı başvuru sağlar. [!INCLUDE[esql](../../../../../../includes/es
   
 |Değer|  
 |-----------|  
-|Merhaba|  
+|herkese|  
   
 ### <a name="datetime"></a>DateTime  
- DateTime değişmez değerlerine, tarih ve saat bölümleri zorunludur. Varsayılan değerler yoktur.  
+ DateTime değişmez değerlerinde hem tarih hem de saat kısımları zorunludur. Varsayılan değer yok.  
   
  Örnek:  
   
@@ -46,10 +46,10 @@ DATETIME '2006-12-25 01:01'
   
 |Değer|  
 |-----------|  
-|12/25/2006 01:01: 00'DA|  
+|12/25/2006 1:01:00|  
   
-### <a name="integer"></a>Tamsayı  
- Tamsayı sabit değerlerinde Int32 türünü olabilir (123) UInt32 (123U), Int64 (123L) ve UInt64 (123UL).  
+### <a name="integer"></a>Integer  
+ Tamsayı sabit değerleri Int32 (123), UInt32 (123U), Int64 (123L) ve UInt64 (123UL) türünde olabilir.  
   
  Örnek:  
   
@@ -62,17 +62,17 @@ DATETIME '2006-12-25 01:01'
   
 |Değer|  
 |-----------|  
-|1.|  
+|1\.|  
 |2|  
 |3|  
   
 ### <a name="other"></a>Diğer  
- Tarafından desteklenen diğer sabitler [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olan GUID, ikili, kayan nokta/Double, Decimal, ve `null`. Null değişmez değerlerine [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kavramsal modeldeki diğer her tür ile uyumlu olarak değerlendirilir.  
+ Tarafından [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklenen diğer sabit değerler GUID, ikili, float/double, Decimal ve `null`' dir. İçindeki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] null sabit değerler, kavramsal modeldeki diğer her türle uyumlu olarak değerlendirilir.  
   
-## <a name="type-constructors"></a>Türü oluşturucuları  
+## <a name="type-constructors"></a>Tür oluşturucuları  
   
 ### <a name="row"></a>ROW  
- [Satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) bir anonim, yapısal olarak yazılmış (kayıt) değeri olarak oluşturur: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [Satır](row-entity-sql.md) , içinde olduğu gibi anonim, yapısal olarak yazılmış bir (kayıt) değeri oluşturur:`ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Örnek:  
   
@@ -85,13 +85,13 @@ SELECT VALUE row (product.ProductID as ProductID, product.Name
   
 |ProductID|Ad|  
 |---------------|----------|  
-|1.|Ayarlanabilir yarış|  
-|879|Çok amaçlı bisiklet bağımsız|  
-|712|AWC logolu Kasket|  
+|1\.|Ayarlanabilir yarış|  
+|879|Tüm amaç bisiklet Standı|  
+|712|AWC logosu üst sınırı|  
 |...|...|  
   
 ### <a name="multiset"></a>MULTISET  
- [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md) koleksiyonları gibi oluşturur:  
+ [Çoklu küme](multiset-entity-sql.md) yapıları, örneğin:  
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
@@ -105,10 +105,10 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
 |ProductID|Ad|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Yarış Panniers, büyük|PA T100|…|  
+|842|Touring-Panniler, büyük|PA-T100|…|  
   
 ### <a name="object"></a>Nesne  
- [Konstruktor Typu adlı](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) gibi kullanıcı tanımlı nesneler (adlandırılmış), yapıları `person("abc", 12)`.  
+ [Adlandırılmış tür Oluşturucu](named-type-constructor-entity-sql.md) (adlandırılmış), `person("abc", 12)`gibi Kullanıcı tanımlı nesneler oluşturur.  
   
  Örnek:  
   
@@ -121,16 +121,16 @@ AS o
   
  Çıktı:  
   
-|SalesOrderDetailID|CarrierTrackingNumber|OrderQty|ProductID|...|  
+|Salesorderdetailıd|CarrierTrackingNumber|Ordermik|ProductID|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
-|1.|4911-403C-98|1.|776|...|  
+|1\.|4911-403C-98|1\.|776|...|  
 |2|4911-403C-98|3|777|...|  
 |...|...|...|...|...|  
   
 ## <a name="references"></a>Referanslar  
   
 ### <a name="ref"></a>REF  
- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md) bir varlık türü örneğine başvuru oluşturur. Örneğin, aşağıdaki sorgu, siparişler varlık kümesinde her sipariş varlığı için başvuru döndürür:  
+ [Ref](ref-entity-sql.md) bir varlık türü örneğine başvuru oluşturur. Örneğin, aşağıdaki sorgu, siparişler varlık kümesindeki her bir order varlığına başvuruları döndürür:  
   
 ```  
 SELECT REF(o) AS OrderID FROM Orders AS o  
@@ -140,12 +140,12 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
 |Değer|  
 |-----------|  
-|1.|  
+|1\.|  
 |2|  
 |3|  
 |...|  
   
- Aşağıdaki örnek, bir varlığın bir özelliğe erişmek için özelliği çıkarma işleci (.) kullanır. Özelliği ayıklama işleci kullanılmadığında otomatik olarak başvurusu kaldırılmış bir başvurudur.  
+ Aşağıdaki örnek, bir varlığın bir özelliğine erişmek için özellik ayıklama işleci (.) kullanır. Özellik ayıklama işleci kullanıldığında, başvuru otomatik olarak başvuru yapılır.  
   
  Örnek:  
   
@@ -159,12 +159,12 @@ SELECT VALUE REF(p).Name FROM
 |Değer|  
 |-----------|  
 |Ayarlanabilir yarış|  
-|Çok amaçlı bisiklet bağımsız|  
-|AWC logolu Kasket|  
+|Tüm amaç bisiklet Standı|  
+|AWC logosu üst sınırı|  
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md) başvuru değeri ve bu sonucu başvuru oluşturur başvurusunu kaldırır. Örneğin, aşağıdaki sorguyu siparişler varlık kümesindeki her sipariş için sipariş varlıklara üretir: `SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`...  
+ [Deref](deref-entity-sql.md) bir başvuru değerine başvurur ve başvurunun sonucunu üretir. Örneğin, aşağıdaki sorgu, siparişler varlık kümesindeki her bir sıra için sıra varlıklarını üretir: `SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2`..  
   
  Örnek:  
   
@@ -178,12 +178,12 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |Değer|  
 |-----------|  
 |Ayarlanabilir yarış|  
-|Çok amaçlı bisiklet bağımsız|  
-|AWC logolu Kasket|  
+|Tüm amaç bisiklet Standı|  
+|AWC logosu üst sınırı|  
 |...|  
   
-### <a name="createref-and-key"></a>CREATEREF VE ANAHTARI  
- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md) bir anahtarını geçirerek başvuru oluşturur. [ANAHTAR](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md) ifade türü referansı ile anahtar bölümünü ayıklar.  
+### <a name="createref-and-key"></a>CREATEREF VE ANAHTAR  
+ [CreateRef](createref-entity-sql.md) anahtar geçirerek bir başvuru oluşturur. [Anahtar](key-entity-sql.md) , tür başvurusu olan bir ifadenin anahtar kısmını ayıklar.  
   
  Örnek:  
   
@@ -204,7 +204,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 ## <a name="functions"></a>İşlevler  
   
 ### <a name="canonical"></a>Canonical  
- Ad alanı için [kurallı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) Edm, olarak olduğundan `Edm.Length("string")`. Kurallı işlev ile aynı ada sahip bir işlev içeren başka bir ad alanı içe sürece ad alanını belirtmek zorunda değildir. İki ad alanı aynı işlevi varsa, kullanıcı özel tam adı gerekir.  
+ [Kurallı işlevler](canonical-functions.md) için ad alanı, içinde `Edm.Length("string")`olduğu gibi EDM 'dir. Kurallı bir işlevle aynı ada sahip bir işlev içeren başka bir ad alanı içeri aktarılmadığı sürece, ad alanını belirtmeniz gerekmez. İki ad alanı aynı işleve sahip ise, Kullanıcı tam adı özel olmalıdır.  
   
  Örnek:  
   
@@ -216,14 +216,14 @@ SELECT Length(c. FirstName) As NameLen FROM
   
  Çıktı:  
   
-|NameLen|  
+|Ad uzunluğu|  
 |-------------|  
 |6|  
 |6|  
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft sağlayıcıya özgü  
- [Microsoft sağlayıcısı özel işlevler](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) bulunan `SqlServer` ad alanı.  
+ [Microsoft sağlayıcıya özgü işlevler](../sqlclient-for-ef-functions.md) `SqlServer` ad alanıdır.  
   
  Örnek:  
   
@@ -242,7 +242,7 @@ SELECT SqlServer.LEN(c.EmailAddress) As EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>Ad Alanları  
- [KULLANARAK](../../../../../../docs/framework/data/adonet/ef/language-reference/using-entity-sql.md) sorgu ifadesinde kullanılan ad alanlarını belirtir.  
+ [USING](using-entity-sql.md) , bir sorgu ifadesinde kullanılan ad alanlarını belirtir.  
   
  Örnek:  
   
@@ -257,7 +257,7 @@ using SqlServer; LOWER('AA');
 |aa|  
   
 ## <a name="paging"></a>Disk Belleği  
- Disk belleği bildirerek ifade edilen bir [atla](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) ve [sınırı](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) için alt yan tümceleri [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) yan tümcesi.  
+ Sayfalama, bir [SKIP](skip-entity-sql.md) ve [LIMIT](limit-entity-sql.md) alt tümceleri [order by](order-by-entity-sql.md) yan tümcesine bildirerek ifade edilebilir.  
   
  Örnek:  
   
@@ -268,14 +268,14 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Çıktı:  
   
-|Kimlik|Ad|  
+|ID|Ad|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
-|12|Aguilar|  
+|12|Agular|  
   
 ## <a name="grouping"></a>Gruplandırma  
- [GRUPLANDIRMA tarafından](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) bir sorgu tarafından döndürülen hangi nesnelere grupları belirtir ([seçin](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) ifade olan yerleştirilecek.  
+ [Gruplandırma ölçütü](group-by-entity-sql.md) , sorgu ([Select](select-entity-sql.md)) ifadesi tarafından döndürülen nesnelerin yerleştirileceği grupları belirler.  
   
  Örnek:  
   
@@ -288,13 +288,13 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
   
 |name|  
 |----------|  
-|Tümünü Sıradağlar bilgisayar bütünleştirilmiş kod|  
-|ML Sıradağlar bilgisayar bütünleştirilmiş kod|  
-|HL Sıradağlar bilgisayar bütünleştirilmiş kod|  
+|LL Sıradağlar koltuk derlemesi|  
+|ML Sıradağlar koltuk derlemesi|  
+|HL Sıradağlar koltuk derlemesi|  
 |...|  
   
 ## <a name="navigation"></a>Gezinti  
- İlişkinin gezinme işleci bir varlıktan (Bitiş) (sona erdirmek için) başka bir ilişkisi üzerinden gitmenizi sağlar. [NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md) ilişki türü tam olarak alır \<ad alanı >.\< ilişki türü adı >. Git başvuru dönüşleri\<T >, kardinalitesi sonlandırmak için 1'dir. Varsa önem düzeyini sonlandırmak için n, koleksiyonu olan < Ref\<T >> döndürülür.  
+ İlişki gezintisi işleci, bir varlıktan (uçtan uca) ilişki üzerinde gezinmenize izin verir. [Git](navigate-entity-sql.md) > ad alanı olarak \<nitelenmiş ilişki türünü alır.\< ilişki türü adı >. To end 'in\<kardinalite değeri 1 ise, git, ref T > döndürür. To end 'in kardinalitei n ise, < ref\<T > > koleksiyonu döndürülür.  
   
  Örnek:  
   
@@ -306,17 +306,17 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
   
  Çıktı:  
   
-|AddressID|  
+|Adres SID 'si|  
 |---------------|  
-|1.|  
+|1\.|  
 |2|  
 |3|  
 |...|  
   
-## <a name="select-value-and-select"></a>DEĞER VE SEÇ'İ SEÇİN  
+## <a name="select-value-and-select"></a>DEĞER ' I SEÇIN VE  
   
-### <a name="select-value"></a>DEĞER SEÇİN  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT VALUE yan tümcesi, örtük satır oluşturma atlamayı sağlar. SELECT VALUE yan tümcesinde yalnızca bir öğe belirtilebilir. Böyle bir yan tümcesi kullanıldığında, öğelerin SELECT yan tümcesinde etrafında hiçbir satır sarmalayıcı oluşturulur ve istediğiniz şekle koleksiyonu, örneğin üretilebilir: `SELECT VALUE a`.  
+### <a name="select-value"></a>DEĞER SEÇIN  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]örtük satır oluşturmayı atlamak için değer Seç yan tümcesini sağlar. SELECT VALUE yan tümcesinde yalnızca bir öğe belirtilebilir. Böyle bir yan tümce kullanıldığında, SELECT yan tümcesindeki öğelerin çevresinde bir satır sarmalayıcı oluşturulmadı ve istenen şeklin bir koleksiyonu üretilebilinir, örneğin: `SELECT VALUE a`.  
   
  Örnek:  
   
@@ -329,26 +329,26 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |Ad|  
 |----------|  
 |Ayarlanabilir yarış|  
-|Çok amaçlı bisiklet bağımsız|  
-|AWC logolu Kasket|  
+|Tüm amaç bisiklet Standı|  
+|AWC logosu üst sınırı|  
 |...|  
   
 ### <a name="select"></a>SEÇ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] row oluşturucusunda rastgele satırları oluşturmak için de sağlar. SELECT yansıtma bir veya daha fazla öğeleri ve sonuçları bir veri kayıttaki alanları ile örneğin alır: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Ayrıca satır oluşturucusunu rastgele satırlar oluşturmak için de sağlar. Projeksiyde bir veya daha fazla öğe alır ve alanlar içeren bir veri kaydıyla sonuçlanır, örneğin: `SELECT a, b, c`.  
   
  Örnek:  
   
- SELECT p.Name, p.ProductID AdventureWorksEntities.Product p çıktı olarak gelen:  
+ AdventureWorksEntities. Product öğesinden p çıkışı olarak p.Name, p. ProductID 'yi SEÇIN:  
   
 |Ad|ProductID|  
 |----------|---------------|  
-|Ayarlanabilir yarış|1.|  
-|Çok amaçlı bisiklet bağımsız|879|  
-|AWC logolu Kasket|712|  
+|Ayarlanabilir yarış|1\.|  
+|Tüm amaç bisiklet Standı|879|  
+|AWC logosu üst sınırı|712|  
 |...|...|  
   
-## <a name="case-expression"></a>CASE İFADESİ  
- [Case ifadesi](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md) sonucu belirlemek için Boolean ifadeler bir dizi olarak değerlendirilir.  
+## <a name="case-expression"></a>CASE IFADESI  
+ [Case ifadesi](case-entity-sql.md) sonucu belirleyecek bir dizi Boole ifadesi değerlendirir.  
   
  Örnek:  
   
@@ -364,5 +364,5 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

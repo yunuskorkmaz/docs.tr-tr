@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 61230ffc5cd055ee64de9d519cdfb4d76c856ca3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a242ecdc774d67721aee640e75847317c1b815d6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038057"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247542"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Saklı Yordamları Özel Olarak Kullanarak İşlemleri Özelleştirme
-Yalnızca saklı yordamları kullanarak veri erişimi sık karşılaşılan bir senaryodur.  
+Yalnızca saklı yordamlar kullanılarak verilere erişim, yaygın bir senaryodur.  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Sağlanan örnek değiştirebileceğiniz [özelleştirme işlemleri tarafından kullanarak saklı yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) bile (Bu, dinamik SQL yürütülmesine neden olur) ilk sorgu bir saklı yordam sarmalayan bir yöntem çağrısının ile değiştirerek.  
+ Saklı yordamları kullanarak, bir saklı yordamı sarmalayan ilk sorgu (dinamik SQL yürütmeye neden olur) bir yöntem çağrısıyla değiştirerek, [Işlemleri özelleştirme](customizing-operations-by-using-stored-procedures.md) bölümünde belirtilen örneği değiştirebilirsiniz.  
   
- Varsayar `CustomersByCity` aşağıdaki örnekteki gibi bir yöntem.  
+ Aşağıdaki `CustomersByCity` örnekte olduğu gibi yönteminin yöntemi olduğunu varsayalım.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[DLinqOverrideDefaultSproc#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/northwind.cs#4)]
  [!code-vb[DLinqOverrideDefaultSproc#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/northwind.vb#4)]  
   
- Aşağıdaki kodu herhangi bir dinamik SQL çalıştırır.  
+ Aşağıdaki kod herhangi bir dinamik SQL olmadan yürütülür.  
   
  [!code-csharp[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefaultSproc/cs/Program.cs#5)]
  [!code-vb[DLinqOverrideDefaultSproc#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Geliştiricinin Varsayılan Davranışı Geçersiz Kılma Sorumlulukları](responsibilities-of-the-developer-in-overriding-default-behavior.md)

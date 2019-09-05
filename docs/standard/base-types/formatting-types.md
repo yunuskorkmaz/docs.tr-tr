@@ -1,5 +1,5 @@
 ---
-title: . NET'te biçimlendirme türleri
+title: .NET 'teki biçimlendirme türleri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -27,35 +27,35 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 82dc1e36ae5a0eede7099c8e13ac9a2393bbb904
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026037"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253976"
 ---
-# <a name="formatting-types-in-net"></a>. NET'te biçimlendirme türleri
+# <a name="formatting-types-in-net"></a>.NET 'teki biçimlendirme türleri
 
-Biçimlendirme, böylece ortaya çıkan dize kullanıcılara görüntülenebilir ya da orijinal veri türünü geri yüklemek için seri durumdan, sınıf, yapı ya da numaralandırma değerinin bir örneğinin kendi dize sunumuna dönüştürme işlemidir. Bu dönüştürme, bir dizi güçlük çıkarabilir:
+Biçimlendirme, bir sınıf, yapı veya numaralandırma değerinin bir örneğini dize gösterimine dönüştürme işlemidir. böylece, sonuçta elde edilen dize kullanıcılara görüntülenebilir veya orijinal veri türünü geri yüklemek için seri durumdan çıkarılmış olur. Bu dönüştürme bir dizi zorluklara neden olabilir:
 
-- Değerlerin dahili olarak depolanma biçimi, kullanıcıların bunları görüntülemek istediğiniz şekilde yansıtmayabilir. Örneğin, bir telefon numarası, kullanıcı dostu olmayan 8009999999 formunda saklanabilir. Bunun yerine 800-999-9999 görüntülenmelidir. Bkz: [özel biçim dizeleri](#customStrings) bir sayıyı bu şekilde biçimlendiren bir örnek için bölüm.
+- Değerlerin dahili olarak depolandığı yol, kullanıcıların bunları görüntülemek istedikleri yöntemi göstermez. Örneğin, bir telefon numarası, Kullanıcı dostu olmayan 8009999999 biçiminde depolanabilir. Bunun yerine 800-999-9999 olarak gösterilmesi gerekir. Bu şekilde bir sayıyı biçimlendiren bir örnek için [özel biçim dizeleri](#customStrings) bölümüne bakın.
 
-- Bazen bir nesnenin dize gösterimine dönüştürme sezgisel değildir. Örneğin, bunu bir sıcaklık nesnesinin ya da bir kişi nesnesinin dize gösterimini nasıl görünmelidir açık değildir. Bir sıcaklık nesnesini birçok şekilde biçimlendiren bir örnek için bkz. [standart biçim dizeleri](#standardStrings) bölümü.
+- Bazen bir nesnenin dize gösterimine dönüştürülmesi sezgisel değildir. Örneğin, bir sıcaklık nesnesinin veya bir kişi nesnesinin dize gösteriminin nasıl görünmesi net değildir. Bir sıcaklık nesnesini çeşitli yollarla biçimlendiren bir örnek için bkz. [standart biçim dizeleri](#standardStrings) bölümü.
 
-- Değerleri genellikle kültüre duyarlı biçimlendirme gerektirir. Örneğin, sayıları parasal değerleri yansıtmak için kullanan bir uygulamada, sayısal dizeler geçerli kültürün para birimi sembolünü, Grup ayırıcısını içermelidir (, çoğu kültürde olduğu binlik ayırıcı) ve ondalık sembolünü. Bir örnek için bkz. [biçim sağlayıcıları ve Iformatprovider arabirimi ile kültüre duyarlı biçimlendirme](#FormatProviders) bölümü.
+- Değerler genellikle kültüre duyarlı biçimlendirme gerektirir. Örneğin, parasal değerleri yansıtmak için sayı kullanan bir uygulamada, sayısal dizeler geçerli kültürün para birimi simgesini, Grup ayırıcısını (çoğu kültürde, binlerce ayırıcıdır) ve ondalık sembolünü içermelidir. Örneğin, [biçim sağlayıcıları ve IFormatProvider arabirimi Ile kültüre duyarlı biçimlendirme](#FormatProviders) bölümüne bakın.
 
-- Bir uygulama aynı değeri farklı şekillerde göstermek durumunda kalabilir. Örneğin, bir uygulama bir numaralandırma üyesine adını bir dize gösterimini görüntüleyerek ya da bunu temel değerini görüntüleyerek temsil edebilir. Üye biçimlendiren bir örnek için <xref:System.DayOfWeek> numaralandırması farklı şekillerde bkz [standart biçim dizeleri](#standardStrings) bölümü.
+- Uygulamanın aynı değeri farklı şekillerde görüntülemesi gerekebilir. Örneğin, bir uygulama, adının bir dize gösterimini görüntüleyerek veya onun temel aldığı değerini görüntüleyerek bir numaralandırma üyesini temsil edebilir. <xref:System.DayOfWeek> Sabit listesinin bir üyesini farklı yollarla biçimlendiren bir örnek için bkz. [standart biçim dizeleri](#standardStrings) bölümü.
 
 > [!NOTE]
-> Biçimlendirme bir türün değerini bir dize temsiline dönüştürür. Ayrıştırma biçimlendirmenin tersidir. Bir ayrıştırma işlemi kendi dize temsilinde bir veri türü örneği oluşturur. Dizeleri diğer veri türlerine dönüştürme hakkında daha fazla bilgi için bkz: [dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md).
+> Biçimlendirme bir türün değerini dize temsiline dönüştürür. Ayrıştırma biçimlendirmenin tersidir. Bir ayrıştırma işlemi, dize gösteriminden bir veri türü örneği oluşturur. Dizeleri diğer veri türlerine dönüştürme hakkında daha fazla bilgi için bkz. [dizeleri ayrıştırma](../../../docs/standard/base-types/parsing-strings.md).
 
-.NET, geliştiricilerin bu gereksinimleri karşılamasını sağlayan zengin biçimlendirme desteği sağlar.
+.NET, geliştiricilerin bu gereksinimleri ele almasını sağlayan zengin biçimlendirme desteği sağlar.
 
 Bu genel bakış aşağıdaki bölümleri içerir:
 
-- [. NET'te biçimlendirme](#NetFormatting)
+- [.NET 'te biçimlendirme](#NetFormatting)
 
-- [Biçimlendirme ToString yöntemini kullanarak varsayılan](#DefaultToString)
+- [ToString yöntemini kullanarak varsayılan biçimlendirme](#DefaultToString)
 
 - [ToString yöntemini geçersiz kılma](#OverrideToString)
 
@@ -65,167 +65,167 @@ Bu genel bakış aşağıdaki bölümleri içerir:
 
   - [Özel biçim dizeleri](#customStrings)
 
-  - [Biçim dizeleri ve .NET sınıfı kitaplık türleri](#stringRef)
+  - [Biçim dizeleri ve .NET sınıf kitaplığı türleri](#stringRef)
 
-- [Biçim sağlayıcıları ve Iformatprovider arabirimi ile kültüre duyarlı biçimlendirme](#FormatProviders)
+- [Biçim sağlayıcıları ve IFormatProvider arabirimi ile kültüre duyarlı biçimlendirme](#FormatProviders)
 
-  - [Sayısal değerleri kültüre duyarlı biçimlendirme](#numericCulture)
+  - [Sayısal değerlerin kültüre duyarlı biçimlendirmesi](#numericCulture)
 
-  - [Tarih ve saat değerlerini kültüre duyarlı biçimlendirme](#dateCulture)
+  - [Tarih ve saat değerlerini kültüre duyarlı olarak biçimlendirme](#dateCulture)
 
-- [Iformattable arabirimi](#IFormattable)
+- [IFormattable arabirimi](#IFormattable)
 
 - [Bileşik Biçimlendirme](#CompositeFormatting)
 
-- [Icustomformatter ile özel biçimlendirme](#Custom)
+- [ICustomFormatter ile özel biçimlendirme](#Custom)
 
-- [İlgili Konular](#RelatedTopics)
+- [İlgili konular](#RelatedTopics)
 
 - [Başvuru](#Reference)
 
 <a name="NetFormatting"></a>
 
-## <a name="formatting-in-net"></a>. NET'te biçimlendirme
+## <a name="formatting-in-net"></a>.NET 'te biçimlendirme
 
-Varsayılan uygulamasıdır biçimlendirme temel mekanizması <xref:System.Object.ToString%2A?displayProperty=nameWithType> tartışılan yöntemi [ToString yöntemini kullanarak biçimlendirme varsayılan](#DefaultToString) bu konunun ilerleyen bölümlerinde. Ancak, .NET, değiştirmek ve kendi varsayılan biçimlendirme desteğini genişletmek için birçok yol sağlar. Bunlar aşağıdakileri içerir:
+Biçimlendirme için temel mekanizma, bu konunun ilerleyen kısımlarında yer olarak <xref:System.Object.ToString%2A?displayProperty=nameWithType> [ToString yöntemi kullanılarak varsayılan biçimlendirme ile](#DefaultToString) bahsedilen yöntemin varsayılan uygulamasıdır. Ancak .NET, varsayılan biçimlendirme desteğini değiştirmek ve genişletmek için çeşitli yollar sunar. Bunlar aşağıdakileri içerir:
 
-- Geçersiz kılma <xref:System.Object.ToString%2A?displayProperty=nameWithType> bir nesnenin değerinin özel bir dize temsilini tanımlamak için yöntemi. Daha fazla bilgi için [ToString yöntemini geçersiz kılma](#OverrideToString) bu konunun ilerleyen bölümlerinde.
+- Bir nesnenin değerinin özel bir dize gösterimini tanımlamak için yönteminigeçersizkılma.<xref:System.Object.ToString%2A?displayProperty=nameWithType> Daha fazla bilgi için bu konunun devamındaki [ToString metodunu geçersiz kılma](#OverrideToString) bölümüne bakın.
 
-- Birden çok nesnenin değerinin dize gösterimine olanak tanıyan biçim belirticileri tanımlama. Örneğin, aşağıdaki ifade, "X" biçim belirticisi bir tamsayı bir onaltılık değerinin dize gösterimine dönüştürür.
+- Bir nesnenin değerinin dize gösterimine birden çok form geçirmesine imkan tanıyan biçim belirticileri tanımlama. Örneğin, aşağıdaki deyimdeki "X" Biçim belirleyicisi bir tamsayıyı onaltılık bir değerin dize gösterimine dönüştürür.
 
      [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
      [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]
 
-     Biçim tanımlayıcıları hakkında daha fazla bilgi için bkz. [ToString yöntemi ve biçim dizeleri](#FormatStrings) bölümü.
+     Biçim belirticileri hakkında daha fazla bilgi için bkz. [ToString yöntemi ve biçim dizeleri](#FormatStrings) bölümü.
 
-- Belirli bir kültürün biçimlendirme kurallarını yararlanmak için biçim sağlayıcılar kullanma. Örneğin, aşağıdaki deyim, en-US kültürünün biçimlendirme kurallarını kullanarak bir para birimi değeri görüntüler.
+- Belirli bir kültürün biçimlendirme kurallarından yararlanmak için biçim sağlayıcıları kullanma. Örneğin, aşağıdaki ifade, en-US kültürün biçimlendirme kurallarını kullanarak bir para birimi değeri görüntüler.
 
      [!code-csharp[Conceptual.Formatting.Overview#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#10)]
      [!code-vb[Conceptual.Formatting.Overview#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#10)]
 
-     Biçim sağlayıcılarla biçimlendirme hakkında daha fazla bilgi için bkz. [biçim sağlayıcıları ve Iformatprovider arabirimi](#FormatProviders) bölümü.
+     Biçim sağlayıcılarıyla biçimlendirme hakkında daha fazla bilgi için, [biçim sağlayıcıları ve IFormatProvider arabirimi](#FormatProviders) bölümüne bakın.
 
-- Uygulama <xref:System.IFormattable> içeren iki dize dönüşümü desteklemek için arabirimi <xref:System.Convert> sınıfı ve bileşik biçimlendirme. Daha fazla bilgi için [Iformattable arabirimi](#IFormattable) bölümü.
+- Hem sınıf hem de bileşik biçimlendirme <xref:System.IFormattable> <xref:System.Convert> ile dize dönüştürmeyi desteklemek için arabirimini uygulama. Daha fazla bilgi için [IFormattable arabirimi](#IFormattable) bölümüne bakın.
 
-- Daha büyük bir dizedeki bir değerin dize gösterimini katıştırmak için bileşik biçimlendirme kullanma. Daha fazla bilgi için [bileşik biçimlendirme](#CompositeFormatting) bölümü.
+- Daha büyük bir dizedeki bir değerin dize gösterimini katıştırmak için bileşik biçimlendirme kullanma. Daha fazla bilgi için [Bileşik biçimlendirme](#CompositeFormatting) bölümüne bakın.
 
-- Uygulama <xref:System.ICustomFormatter> ve <xref:System.IFormatProvider> bir özel biçimlendirme çözümü sağlamak için. Daha fazla bilgi için [Icustomformatter ile özel biçimlendirme](#Custom) bölümü.
+- Tüm <xref:System.ICustomFormatter> özel <xref:System.IFormatProvider> biçimlendirme çözümünü sağlamak ve uygulamak. Daha fazla bilgi için [ıccustomformatter Ile özel biçimlendirme](#Custom) bölümüne bakın.
 
-Aşağıdaki bölümlerde, bir nesneyi dize gösterimine dönüştürmek için bu yöntemleri incelemektedir.
+Aşağıdaki bölümlerde, bir nesneyi dize gösterimine dönüştürmeye yönelik bu yöntemler incelenmekte.
 
 <a name="DefaultToString"></a>
 
 ## <a name="default-formatting-using-the-tostring-method"></a>ToString Yöntemini Kullanarak Varsayılan Biçimlendirme
 
-Türetilen her tür <xref:System.Object?displayProperty=nameWithType> otomatik olarak bir parametresiz devralan `ToString` yöntemi varsayılan olarak türün adını döndürür. Aşağıdaki örnekte varsayılan `ToString` yöntemi. Adlı bir sınıf tanımlar `Automobile` uygulaması olmayan. Sınıf oluşturulduğunda ve kendi `ToString` yöntemi çağrıldığında, tür adını görüntüler. Unutmayın `ToString` yöntemi örnekte açıkça çağrılmaz. <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> Örtük olarak çağırır `ToString` nesnesinin yöntemi için bir bağımsız değişkeni olarak geçirilir.
+Öğesinden <xref:System.Object?displayProperty=nameWithType> türetilen her tür, varsayılan olarak türün adını döndüren `ToString` parametresiz bir yöntemi otomatik olarak devralır. Aşağıdaki örnek, varsayılan `ToString` yöntemi gösterir. Uygulama içermeyen adlı `Automobile` bir sınıfı tanımlar. Sınıf örneği oluşturulduğunda ve `ToString` yöntemi çağrıldığında, tür adını görüntüler. `ToString` Yöntemin örnekte açıkça çağrılmadığını unutmayın. Yöntemi örtük olarak kendisine bir `ToString` bağımsız değişken olarak geçirilen nesne yöntemini çağırır. <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType>
 
 [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> İle başlayan [!INCLUDE[win81](../../../includes/win81-md.md)], Windows çalışma zamanı içeren bir <xref:Windows.Foundation.IStringable> tek bir yöntemi ile arabirim [Istringable](xref:Windows.Foundation.IStringable.ToString%2A), varsayılan biçimlendirme desteği sağlar. Ancak Yönetilen türlerin uygulamamasını öneririz `IStringable` arabirimi. Daha fazla bilgi için bkz. "Windows çalışma zamanı ve `IStringable` arabirimi" bölümünde <xref:System.Object.ToString%2A?displayProperty=nameWithType> başvuru sayfası.
+> ' Den [!INCLUDE[win81](../../../includes/win81-md.md)]itibaren Windows çalışma zamanı, varsayılan biçimlendirme <xref:Windows.Foundation.IStringable> desteği sağlayan [ıtringable. ToString](xref:Windows.Foundation.IStringable.ToString%2A)adlı tek bir yönteme sahip bir arabirim içerir. Ancak, yönetilen türlerin `IStringable` arabirimi uygulamamalarını öneririz. Daha fazla bilgi için `IStringable` <xref:System.Object.ToString%2A?displayProperty=nameWithType> başvuru sayfasındaki "Windows çalışma zamanı ve arabirim" bölümüne bakın.
 
-Arabirimler dışında tüm türler türetildiği <xref:System.Object>, bu işlev özel sınıflarınıza ya da yapıları için otomatik olarak sağlanır. Bununla birlikte, varsayılan olarak sağlanan işlev `ToString` yöntemi sınırlıdır: Türü tanımlamasına rağmen türün bir örneğini hakkındaki tüm bilgileri sağlamak başarısız olur. Bu nesne hakkında bilgi sağlayan nesnenin dize gösterimini sağlamak için geçersiz kılmanız gerekir `ToString` yöntemi.
+Arabirimler dışındaki tüm türler öğesinden <xref:System.Object>türetildiğinden, bu işlev özel sınıflarınıza veya yapılarına otomatik olarak sağlanır. Ancak, varsayılan `ToString` yöntem tarafından sunulan işlevsellik sınırlıdır: Türü tanımlasa da, türün bir örneği hakkında herhangi bir bilgi sağlamaz. Bu nesne hakkında bilgi sağlayan bir nesnenin dize gösterimini sağlamak için, `ToString` yöntemini geçersiz kılmanız gerekir.
 
 > [!NOTE]
-> Yapıları devralmanız <xref:System.ValueType>, hangi sırayla türetilmiş olan <xref:System.Object>. Ancak <xref:System.ValueType> geçersiz kılmalar <xref:System.Object.ToString%2A?displayProperty=nameWithType>, uygulaması aynıdır.
+> Yapıları öğesinden <xref:System.ValueType>devralınır, bu da öğesinden <xref:System.Object>türetilir. Geçersiz <xref:System.ValueType> kılmalarına <xref:System.Object.ToString%2A?displayProperty=nameWithType>karşın uygulamasının aynı olmasına rağmen.
 
 <a name="OverrideToString"></a>
 
 ## <a name="overriding-the-tostring-method"></a>ToString Yöntemini Geçersiz Kılma
 
-Bir türün adını görüntülemek, genellikle sınırlı bir kullanımdır ve bir örneği bir diğerinden ayırt etmesine Türlerinizin tüketicilerinin izin vermiyor. Ancak, kılabilirsiniz `ToString` bir daha kullanışlı bir nesne değeri temsili sağlamak için yöntemi. Aşağıdaki örnekte tanımlayan bir `Temperature` nesne ve geçersiz kılmalar, `ToString` sıcaklığı Santigrat derece olarak görüntülemek için yöntemi.
+Bir türün adının görüntülenmesi genellikle sınırlı kullanıma sahiptir ve türlerinizin tüketicilerinin bir örneği diğerinden ayırt edilmesine izin vermez. Ancak, bir nesnenin değerinin daha `ToString` kullanışlı bir temsilini sağlamak için yöntemini geçersiz kılabilirsiniz. Aşağıdaki örnek, bir `Temperature` nesnesini tanımlar ve, sıcaklığın santigrat derece cinsinden gösterilmesi için `ToString` yöntemini geçersiz kılar.
 
 [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
 [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]
 
-. NET'te, `ToString` yöntemi her temel değer türünün adı yerine nesnenin değerini görüntülemek için kılınmış. Aşağıdaki tablo her ilkel tür için geçersiz kılma gösterir. Geçersiz kılınan yöntemlerin çoğunun başka bir aşırı yüklemesini çağırmak Not `ToString` yöntemi ve kendi türünün genel biçimini tanımlar, "G" Biçim belirleyicisi geçirin ve bir <xref:System.IFormatProvider> geçerli kültürü temsil eden nesne.
+.NET sürümünde, `ToString` her ilkel değer türünün yöntemi, nesnenin adının adı yerine bir değerini gösterecek şekilde geçersiz kılındı. Aşağıdaki tabloda her ilkel tür için geçersiz kılma gösterilmektedir. Geçersiz kılınan yöntemlerin çoğu `ToString` yöntemin başka bir aşırı yüklemesini çağırır ve bunu, türü için genel biçimi ve geçerli kültürü temsil eden bir <xref:System.IFormatProvider> nesneyi tanımlayan "G" Biçim belirleyicisi ' ne geçirdiğini unutmayın.
 
-|Tür|ToString'i geçersiz kılma|
+|Tür|ToString geçersiz kılma|
 |----------|-----------------------|
-|<xref:System.Boolean>|Döndürür <xref:System.Boolean.TrueString?displayProperty=nameWithType> veya <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
-|<xref:System.Byte>|Çağrıları `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Byte> geçerli kültür için değer.|
-|<xref:System.Char>|Karakteri bir dize olarak döndürür.|
-|<xref:System.DateTime>|Çağrıları `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` geçerli kültür için tarih ve saat değerini biçimlendirmek için.|
-|<xref:System.Decimal>|Çağrıları `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Decimal> geçerli kültür için değer.|
-|<xref:System.Double>|Çağrıları `Double.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Double> geçerli kültür için değer.|
-|<xref:System.Int16>|Çağrıları `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Int16> geçerli kültür için değer.|
-|<xref:System.Int32>|Çağrıları `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Int32> geçerli kültür için değer.|
-|<xref:System.Int64>|Çağrıları `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Int64> geçerli kültür için değer.|
-|<xref:System.SByte>|Çağrıları `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.SByte> geçerli kültür için değer.|
-|<xref:System.Single>|Çağrıları `Single.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.Single> geçerli kültür için değer.|
-|<xref:System.UInt16>|Çağrıları `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.UInt16> geçerli kültür için değer.|
-|<xref:System.UInt32>|Çağrıları `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.UInt32> geçerli kültür için değer.|
-|<xref:System.UInt64>|Çağrıları `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` biçimlendirmek için <xref:System.UInt64> geçerli kültür için değer.|
+|<xref:System.Boolean>|<xref:System.Boolean.TrueString?displayProperty=nameWithType> Ya<xref:System.Boolean.FalseString?displayProperty=nameWithType>da döndürür.|
+|<xref:System.Byte>|Geçerli `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Byte> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Char>|Karakteri dize olarak döndürür.|
+|<xref:System.DateTime>|Geçerli `DateTime.ToString("G", DatetimeFormatInfo.CurrentInfo)` kültürün tarih ve saat değerini biçimlendirmek için çağrılar.|
+|<xref:System.Decimal>|Geçerli `Decimal.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Decimal> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Double>|Geçerli `Double.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Double> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Int16>|Geçerli `Int16.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Int16> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Int32>|Geçerli `Int32.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Int32> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Int64>|Geçerli `Int64.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Int64> değeri biçimlendirmek için çağrılar.|
+|<xref:System.SByte>|Geçerli `SByte.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.SByte> değeri biçimlendirmek için çağrılar.|
+|<xref:System.Single>|Geçerli `Single.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.Single> değeri biçimlendirmek için çağrılar.|
+|<xref:System.UInt16>|Geçerli `UInt16.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.UInt16> değeri biçimlendirmek için çağrılar.|
+|<xref:System.UInt32>|Geçerli `UInt32.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.UInt32> değeri biçimlendirmek için çağrılar.|
+|<xref:System.UInt64>|Geçerli `UInt64.ToString("G", NumberFormatInfo.CurrentInfo)` kültür için <xref:System.UInt64> değeri biçimlendirmek için çağrılar.|
 
 <a name="FormatStrings"></a>
 
 ## <a name="the-tostring-method-and-format-strings"></a>ToString Yöntemi ve Biçim Dizeleri
 
-Varsayılan bağlı olan `ToString` yöntemi veya geçersiz kılma `ToString` nesne tek bir dize temsili varsa uygundur. Ancak, bir nesnenin değerini, genellikle birden çok temsile sahiptir. Örneğin bir sıcaklık Fahrenhayt derece, Santigrat derece ve Kelvin cinsinden ifade edilebilir. Benzer şekilde, tamsayı değeri 10 10 ' da dahil olmak üzere çeşitli şekillerde temsil edilebilir 10.0, 1.0e01 ya da $10,00.
+Varsayılan `ToString` yönteme veya geçersiz kılmaya `ToString` bağlı olarak, bir nesnenin tek bir dize gösterimine sahip olması durumunda uygundur. Ancak, bir nesnenin değerinde genellikle birden çok temsili vardır. Örneğin, sıcaklık Fahrenhayt, santigrat veya Kelvin derece olarak ifade edilebilir. Benzer şekilde, 10 tamsayı değeri 10, 10,0, 1.0 E01 veya $10,00 dahil olmak üzere çeşitli yollarla temsil edilebilir.
 
-Tek bir değerin birden çok dize gösterimini etkinleştirmek için .NET biçim dizeleri kullanır. Bir biçim dizesi içeren bir dize veya tek karakterleri veya tanımladığınız karakter grubu olan daha önceden tanımlı Biçim belirleyicisi olan nasıl `ToString` yöntemi çıktısını biçimlendirme. Biçim dizesi bir parametre olarak nesnenin geçirilir `ToString` yöntemi ve nesnenin değerinin dize gösterimini nasıl görüneceğini belirler.
+Tek bir değerin birden çok dize temsillerine sahip olmasını sağlamak için, .NET biçim dizelerini kullanır. Biçim dizesi, bir veya daha fazla önceden tanımlanmış biçim belirticilerini içeren bir dizedir. tek karakter ya da, `ToString` yöntemin çıktısını nasıl biçimlendirmek gerektiğini tanımlayan karakter gruplarıdır. Biçim dizesi daha sonra nesne `ToString` yöntemine bir parametre olarak geçirilir ve bu nesnenin değerinin dize temsilinin nasıl görüntüleneceğini belirler.
 
-Önceden tanımlanmış biçim belirticileri kümesi tüm sayısal türler, tarih ve saat türleri ve. NET'te Numaralandırma türleri destekler. Biçim dizeleri Ayrıca, uygulama tanımlı veri türleri, birden çok dize gösterimini tanımlamak için de kullanabilirsiniz.
+.NET 'teki tüm sayısal türler, tarih ve saat türleri ve numaralandırma türleri önceden tanımlanmış bir biçim belirteçleri kümesini destekler. Uygulama tanımlı veri türlerinizin birden fazla dize temsilini tanımlamak için biçim dizelerini de kullanabilirsiniz.
 
 <a name="standardStrings"></a>
 
 ### <a name="standard-format-strings"></a>Standart Biçim Dizeleri
 
-Standart biçim dizesi, uygulandığı, kaç hane görüntülenme şeklini etkiler bir isteğe bağlı bir hassas belirleyici ile birlikte nesnenin dize temsili tanımlar alfabetik bir karakter olan bir tek biçim belirticisi içerir Sonuç dizesi. Duyarlık belirtici atlanırsa veya desteklenmeyen ise bir standart biçim tanımlayıcısı bir standart biçim dizesine eşdeğerdir.
+Standart bir biçim dizesi, uygulandığı nesnenin dize gösterimini tanımlayan bir alfabetik karakter olan tek bir Biçim belirleyicisi içerir ve bu, içinde kaç basamak gösterileceğini etkileyen isteğe bağlı bir duyarlık belirticisiyle birlikte sonuç dizesi. Duyarlık belirticisi atlanırsa veya desteklenmiyorsa, standart bir biçim belirticisi standart biçim dizesine eşdeğerdir.
 
-.NET, tüm sayısal türler, tüm tarih ve saat türleri ve tüm numaralandırma türleri için standart biçim belirticileri kümesi tanımlar. Örneğin bu kategorilerden her biri bir değer türü genel dize temsili tanımlar bir "G" Standart Biçim belirleyicisi destekler.
+.NET, tüm sayısal türler, tüm tarih ve saat türleri ve tüm numaralandırma türleri için standart biçim belirticileri kümesi tanımlar. Örneğin, bu kategorilerin her biri bir "G" standart biçim belirticisini destekler ve bu tür bir değerin genel dize gösterimini tanımlar.
 
-Numaralandırma türleri için standart biçim dizeleri bir değerin dize gösterimini doğrudan kontrol eder. Bir sabit listesi değerinin geçilen biçim dizeleri `ToString` yöntemi, değerin dize adıyla ("G" ve "F" biçim belirticileri), arka plandaki tamsayı değeriyle ("D" biçim belirticisi) yoksa onaltılık değeriyle ("X kullanarak görüntülenip görüntülenmeyeceğini belirler "biçim belirticisi). Aşağıdaki örnek biçimlendirmek için standart biçim dizeleri kullanışını bir <xref:System.DayOfWeek> numaralandırma değeri.
+Sabit listesi türleri için standart biçim dizeleri, bir değerin dize temsilini doğrudan denetler. Bir numaralandırma değerinin `ToString` yöntemine geçirilen biçim dizeleri değerin dize adı ("G" ve "F" biçim belirticileri), temel alınan integral değeri ("D" Biçim Belirleyicisi) veya onaltılı değeri ("X") kullanılarak görüntülenip görüntülenmeyeceğini belirleme. "Biçim Belirleyicisi). Aşağıdaki örnek, bir <xref:System.DayOfWeek> sabit listesi değerini biçimlendirmek için standart biçim dizelerinin kullanımını gösterir.
 
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
 
-Sabit listesi biçim dizeleri hakkında daha fazla bilgi için bkz: [sabit listesi biçim dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md).
+Numaralandırma biçim dizeleri hakkında daha fazla bilgi için bkz. [numaralandırma biçim dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md).
 
-Sayısal türlerin standart biçim dizeleri, genellikle, tam görünümü bir veya daha fazla özellik değeri tarafından denetlenen bir sonuç dizesini tanımlar. Örneğin, "C" biçim belirticisi bir sayıyı bir para birimi değeri olarak biçimlendirir. Çağırdığınızda `ToString` yöntemini tek parametre olarak "C" biçim belirticisi, aşağıdaki özellik değerleri geçerli kültürün <xref:System.Globalization.NumberFormatInfo> nesne sayısal değerin dize gösterimini tanımlamak için kullanılır:
+Sayısal türler için standart biçim dizeleri, genellikle kesin görünümü bir veya daha fazla özellik değeri tarafından denetlenen bir sonuç dizesi tanımlar. Örneğin, "C" biçim belirticisi bir sayıyı para birimi değeri olarak biçimlendirir. Tek parametre olarak " `ToString` C" biçim belirticisiyle yöntemi çağırdığınızda, geçerli <xref:System.Globalization.NumberFormatInfo> kültürün nesnesinden aşağıdaki özellik değerleri, sayısal değerin dize gösterimini tanımlamak için kullanılır:
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A> Geçerli kültürün para birimi sembolünü belirten özelliği.
+- Geçerli kültürün para birimi sembolünü belirten özelliği.<xref:System.Globalization.NumberFormatInfo.CurrencySymbol%2A>
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A> Veya <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> aşağıdakileri belirleyen bir tamsayı döndüren özelliği:
+- Aşağıdakileri belirleyen <xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A> bir tamsayı döndüren veyaözelliği:<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>
 
-  - Para birimi sembolünün yerleşimini.
+  - Para birimi sembolünün yerleşimi.
 
-  - Olup negatif değerler başta bir eksi işareti, sonda bir eksi işareti veya parantezler ile gösterilir.
+  - Negatif değerlerin önünde eksi işareti, sondaki eksi işareti veya parantezle gösterilip gösterilmeyeceğini belirtir.
 
-  - Olup bir alanı sayısal değer ile para birimi sembolü arasında görünür.
+  - Sayısal değer ve para birimi simgesi arasında bir boşluk görünüp görüntülenmediğini belirtir.
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A> Özelliği sonuç dizesinde kesirli bir basamak sayısını tanımlar.
+- Sonuç dizesindeki kesirli basamakların sayısını tanımlayan özelliği.<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A>
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A> Sonuç dizesindeki ondalık ayırma sembolünü tanımlayan özellik.
+- Sonuç dizesinde ondalık ayırıcı sembolünü tanımlayan özelliği.<xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator%2A>
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A> Grup ayırma sembolünü tanımlayan özellik.
+- Grup ayırıcı sembolünü tanımlayan özelliği.<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>
 
-- <xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A> Küsur işaretinin solundaki her gruptaki rakam sayısını tanımlayan özellik.
+- Her bir gruptaki basamakların ondalık basamak sayısını tanımlayan özelliği.<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>
 
-- <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> Negatif değerleri göstermek için parantez kullanılmıyorsa sonuç dizesinde kullanılacak negatif işaretini belirleyen özelliği.
+- Parantez negatif değerleri belirtmek için kullanılmazsa, sonuç dizesinde kullanılan negatif işareti belirleyen özelliği.<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>
 
-Ayrıca, bir sayısal biçim dizeleri bir hassas belirleyici içerebilir. Bu tanımlayıcının anlamını biçim dizesi hangi kullanılır, ancak genellikle basamakların toplam sayısı veya sonuç dizesinde görünmesi gereken kesirli bir basamak sayısını gösterir bağlıdır. Örneğin, aşağıdaki örnek "X 4" standart sayısal dizesi ve duyarlık belirtici dört onaltılık basamağı olan bir dize değeri oluşturmak için kullanır.
+Ayrıca, sayısal biçim dizeleri bir duyarlık belirticisi içerebilir. Bu belirticinin anlamı, kullanıldığı biçim dizesine bağlıdır, ancak genellikle sonuç dizesinde görünmesi gereken toplam basamak sayısını veya kesirli basamak sayısını belirtir. Örneğin, aşağıdaki örnek, dört onaltılık basamağa sahip bir dize değeri oluşturmak için "x4" standart sayısal dizesini ve duyarlık belirticisini kullanır.
 
 [!code-csharp[Conceptual.Formatting.Overview#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/precisionspecifier1.cs#6)]
 [!code-vb[Conceptual.Formatting.Overview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/precisionspecifier1.vb#6)]
 
-Standart sayısal biçimlendirme dizeleri hakkında daha fazla bilgi için bkz: [standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md).
+Standart sayısal biçimlendirme dizeleri hakkında daha fazla bilgi için bkz. [Standart sayısal biçim dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md).
 
-Tarih ve saat değerleri için standart biçim dizeleri için belirli bir tarafından depolanan özel biçim dizelerinin diğer adlarıdır <xref:System.Globalization.DateTimeFormatInfo> özelliği. Örneğin, çağırma `ToString` yöntemi ile "D" biçim belirticisi bir tarih ve saat değerinin tarih ve saat geçerli kültürün içinde depolanan özel biçim dizesi kullanarak görüntüler <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> özelliği. (Özel biçim dizeleri hakkında daha fazla bilgi için bkz. [sonraki bölümde](#customStrings).) Aşağıdaki örnek bu ilişkiyi göstermektedir.
+Tarih ve saat değerleri için standart biçim dizeleri, belirli <xref:System.Globalization.DateTimeFormatInfo> bir özellik tarafından depolanan özel biçim dizeleri için diğer adlardır. Örneğin, "D" `ToString` biçim belirticisi ile tarih ve saat değerinin yöntemini çağırmak, geçerli <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> kültürün özelliğinde depolanan özel biçim dizesini kullanarak tarih ve saati gösterir. (Özel biçim dizeleri hakkında daha fazla bilgi için [sonraki bölüme](#customStrings)bakın.) Aşağıdaki örnekte bu ilişki gösterilmektedir.
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
 
-Standart tarih ve saat biçim dizeleri hakkında daha fazla bilgi için bkz: [standart tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
+Standart Tarih ve saat biçim dizeleri hakkında daha fazla bilgi için bkz. [Standart Tarih ve saat biçim dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md).
 
-Nesne tarafından üretilen uygulama tanımlı bir nesnenin dize temsilini tanımlamak için standart biçim dizeleri kullanabilirsiniz `ToString(String)` yöntemi. Nesnenizin desteklediği özgül standart biçim belirticileri tanımlayabilir ve bunların büyük küçük harfe duyarlı veya duyarsız olup olmadığını belirleyebilirsiniz. Uygulamanıza `ToString(String)` yöntemi şunları desteklemelidir:
+Ayrıca, nesne `ToString(String)` yöntemi tarafından üretilen uygulama tanımlı bir nesnenin dize temsilini tanımlamak için standart biçim dizelerini de kullanabilirsiniz. Nesnenizin desteklediği belirli standart biçim belirticilerini tanımlayabilir ve bunların büyük/küçük harfe duyarlı olup olmadığını belirleyebilirsiniz. `ToString(String)` Yöntemi uygulamanız aşağıdakileri desteklemelidir:
 
-- Nesnenin geleneksel ya da genel bir biçimini temsil eden bir "G" Biçim belirleyicisi. Nesnenizin parametresiz aşırı yüklemesi `ToString` yöntemini çağırın, `ToString(String)` "G" standart biçim dizesine geçmek ve aşırı yükleme.
+- Nesnenin bir normal veya ortak biçimini temsil eden bir "G" biçim belirticisi. Nesnenizin `ToString` yönteminin Parametresiz aşırı yüklemesi, `ToString(String)` aşırı yüklemesini çağırmalıdır ve "G" standart biçim dizesine iletmelidir.
 
-- Bir null başvuruya eşit olan bir biçim belirtici için destek (`Nothing` Visual Basic'te). Bir null başvuruya eşit olan bir biçim belirtici "G" biçimli belirleyiciye eşdeğer kabul edilmelidir.
+- Null başvuruya eşit olan bir Biçim belirleyicisi desteği (`Nothing` Visual Basic). Null başvurusuna eşit olan bir biçim belirticisi "G" biçim belirticisine eşdeğer olarak kabul edilmelidir.
 
-Örneğin, bir `Temperature` sınıfı, dahili olarak sıcaklığı Santigrat derece cinsinden depolayabilir ve değerini temsil etmek için biçim Belirleyicileri kullanma `Temperature` Santigrat derece, fahrenhayt derece ve Kelvin cinsinden nesne. Aşağıdaki örnek, bir gösterim sağlar.
+Örneğin, bir `Temperature` sınıf, sıcaklığın derece derece cinsinden dahili olarak depolanmasını sağlayabilir ve `Temperature` nesne değerini santigrat, derece Fahrenhayt ve Kelvin cinsinden temsil etmek için biçim belirticilerini kullanabilir. Aşağıdaki örnek, bir gösterim sağlar.
 
 [!code-csharp[Conceptual.Formatting.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/appstandard1.cs#7)]
 [!code-vb[Conceptual.Formatting.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/appstandard1.vb#7)]
@@ -234,93 +234,93 @@ Nesne tarafından üretilen uygulama tanımlı bir nesnenin dize temsilini tanı
 
 ### <a name="custom-format-strings"></a>Özel Biçim Dizeleri
 
-Standart biçim dizelerine ek olarak, .NET, hem sayısal değerler hem de tarih ve saat değerleri için özel biçim dizeleri tanımlar. Bir özel biçim dizesinde bir değerin dize temsilini tanımlayan bir veya daha fazla özel biçim belirleyicisinden oluşur. Örneğin, özel tarih ve saat biçim dizesi "yyyy/mm/dd hh:mm:ss.ffff t zzz" formundaki kendi dize temsiline dönüştürür "2008/11/15 07:45:00.0000 P -08:00" en-US kültürü için. Benzer şekilde, özel biçim dizesi "0000", tamsayı değeri 12 "0012"'ye dönüştürür. Özel biçim dizeleri tam bir listesi için bkz. [özel tarih ve saat biçim dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).
+Standart biçim dizelerine ek olarak, .NET, hem sayısal değerler hem de tarih ve saat değerleri için özel biçim dizelerini tanımlar. Özel biçim dizesi, bir değerin dize gösterimini tanımlayan bir veya daha fazla özel biçim belirticisinden oluşur. Örneğin, "yyyy/AA/GG SS: DD: ss. ffff t zzz" özel tarih ve saat biçimi dizesi, en-US kültürü için bir tarihi "2008/11/15 07:45:00.0000 P-08:00" biçiminde dize gösterimine dönüştürür. Benzer şekilde, "0000" özel biçim dizesi 12 tamsayı değerini "0012" olarak dönüştürür. Özel biçim dizelerinin tüm listesi için bkz. [özel tarih ve saat biçimi dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md) ve [özel sayısal biçim dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md).
 
-Yüzde (%) bir biçim dizesi tek özel biçim belirleyicisinden oluşuyorsa, biçim belirticisi gelmelidir bir standart biçim belirteci ile Karışıklığı önlemek için simge. Aşağıdaki örnek, belirli bir tarihin ayın tek basamaklı veya iki basamaklı bir sayı görüntülemek için "M" özel Biçim belirleyicisi kullanır.
+Bir biçim dizesi tek bir özel biçim belirticisinden oluşuyorsa, Biçim belirleyicisi öncesinde% (%) olmalıdır Standart biçim belirticisiyle karışıklık oluşmasını önlemek için simge. Aşağıdaki örnek, belirli bir tarihin ayın tek basamaklı veya iki basamaklı bir sayısını göstermek için "d" özel biçim belirticisini kullanır.
 
 [!code-csharp[Conceptual.Formatting.Overview#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/singlecustom1.cs#8)]
 [!code-vb[Conceptual.Formatting.Overview#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/singlecustom1.vb#8)]
 
-Tarih ve saat değerleri için birçok standart biçim dizesi özellikleri tarafından tanımlanan özel biçim dizeleri için diğer adlardır <xref:System.Globalization.DateTimeFormatInfo> nesne. Özel biçim dizeleri de sayısal değerler ya da tarih ve saat değerleri için uygulama tanımlı biçimlendirme sunarken önemli ölçüde esneklik sunar. Birden fazla özel biçim belirticileri bir tek özel biçim dizesinde birleştirerek hem sayısal değerler hem de tarih ve saat değerleri için kendi özel sonuç dizelerinizi tanımlayabilirsiniz. Aşağıdaki örnek, haftanın gününü ay adı, gün ve yıl sonra parantez içinde gösteren özel bir biçim dizesi tanımlar.
+Tarih ve saat değerleri için birçok standart biçim dizesi, <xref:System.Globalization.DateTimeFormatInfo> nesnesinin özellikleri tarafından tanımlanan özel biçim dizeleri için diğer adlardır. Özel biçim dizeleri, sayısal değerler veya tarih ve saat değerleri için uygulama tanımlı biçimlendirme sağlamaya yönelik önemli bir esneklik sunar. Birden çok özel biçim belirticilerini tek bir özel biçim dizesinde birleştirerek, hem sayısal değerler hem de tarih ve saat değerleri için kendi özel sonuç dizelerinizi tanımlayabilirsiniz. Aşağıdaki örnek, ay adı, gün ve yıldan sonra parantez içinde haftanın gününü gösteren bir özel biçim dizesi tanımlar.
 
 [!code-csharp[Conceptual.Formatting.Overview#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/custom1.cs#9)]
 [!code-vb[Conceptual.Formatting.Overview#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/custom1.vb#9)]
 
-Aşağıdaki örnek, görüntüleyen bir özel biçim dizesi tanımlar. bir <xref:System.Int64> değerini bölge koduyla birlikte standart, yedi rakamlı ABD telefon numarası olarak.
+Aşağıdaki örnek, alan kodu ile birlikte standart, yedi basamaklı <xref:System.Int64> ABD telefon numarası olarak bir değeri görüntüleyen bir özel biçim dizesi tanımlar.
 
 [!code-csharp[Conceptual.Formatting.Overview#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/telnumber1.cs#21)]
 [!code-vb[Conceptual.Formatting.Overview#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/telnumber1.vb#21)]
 
-Standart biçim dizeleri genelde uygulamanızın tanımladığı türlerin biçimlendirme ihtiyaçlarının çoğunu yönetebilmesine rağmen türlerinizi biçimlendirmek için özel biçim belirticileri da tanımlayabilir.
+Standart biçim dizeleri, uygulama tanımlı türlerinizin çoğu biçimlendirme ihtiyaçlarını genellikle işleyebilir, ancak türlerinizi biçimlendirmek için özel biçim belirticileri de tanımlayabilirsiniz.
 
 <a name="stringRef"></a>
 
-### <a name="format-strings-and-net-types"></a>Biçim dizeleri ve .NET türleri
+### <a name="format-strings-and-net-types"></a>Biçimlendirme dizeleri ve .NET türleri
 
-Tüm sayısal türlerin (diğer bir deyişle, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>ve <xref:System.Numerics.BigInteger>türleri), hem de <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, ve tüm numaralandırma türleri, biçim dizeleri ile biçimlendirme desteği. Her türü tarafından desteklenen özel biçim dizeleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
+Tüm sayısal türler ( <xref:System.Byte> <xref:System.Int64> <xref:System.UInt16> Yani,<xref:System.UInt32>,,,,,, ,,<xref:System.UInt64>, ve <xref:System.Single> <xref:System.Decimal> <xref:System.Double> <xref:System.Int16> <xref:System.Int32> <xref:System.SByte> <xref:System.Numerics.BigInteger>türlerin <xref:System.DateTime>yanı sıra <xref:System.DateTimeOffset> ,<xref:System.Guid>,, ve tüm numaralandırma türleri, biçim dizeleriyle biçimlendirmeyi destekler. <xref:System.TimeSpan> Her tür tarafından desteklenen belirli biçim dizeleri hakkında daha fazla bilgi için aşağıdaki konulara bakın:
 
 |Başlık|Tanım|
 |-----------|----------------|
-|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerlerin ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
-|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özel biçimler oluşturan biçim dizelerini açıklar.|
-|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.|
-|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|İçin uygulamaya özel biçimler oluşturan biçim dizelerini açıklar <xref:System.DateTime> ve <xref:System.DateTimeOffset> değerleri.|
-|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
-|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özel biçimler oluşturan biçim dizelerini açıklar.|
-|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsillerini oluşturmak için kullanılan standart biçim dizelerini açıklar.|
-|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|İçin standart biçim dizelerini açıklar <xref:System.Guid> değerleri.|
+|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerlerin yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> Ve<xref:System.DateTimeOffset> değerlerinin yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|<xref:System.DateTime> Ve<xref:System.DateTimeOffset> değerleri için uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıklarının yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize gösterimlerini oluşturmak için kullanılan standart biçim dizelerini açıklar.|
+|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Değerler için <xref:System.Guid> standart biçim dizelerini açıklar.|
 
 <a name="FormatProviders"></a>
 
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>Biçim Sağlayıcıları ve IFormatProvider Arabirimi ile Kültüre Duyarlı Biçimlendirme
 
-Biçim belirticileri nesnelerin biçimlendirme özelleştirmenize izin vermesine rağmen genellikle anlamlı dize gösterimi nesnelerin üretme ek biçimlendirme bilgisi gerekir. Örneğin, bir sayı gibi "C" standart biçim dizesi ya da bir özel biçim dizesi kullanarak bir para birimi değeri olarak biçimlendirme "$ #, #. 00" gerektirir, en azından geçerli para birimi sembolü, Grup ayırıcı ve ondalık ayırıcısı olarak hakkında bilgi biçimlendirilen dize içinde kullanılabilir. . NET'te, bu ek biçimlendirme bilgisi kullanılabilir hale <xref:System.IFormatProvider> bir veya daha fazla aşırı yüküne bir parametre olarak sağlanan arabirim `ToString` sayısal türlerin ve tarih ve saat türlerinin yöntemi. <xref:System.IFormatProvider> uygulamaları,. NET'te kültüre özgü biçimlendirmeyi desteklemek için kullanılır. Aşağıdaki örnek üç biçimlendirildiğinde bir nesnenin dize gösterimini nasıl değiştiğini gösterir <xref:System.IFormatProvider> farklı kültürü temsil eden nesneleri.
+Biçim belirticileri nesnelerin biçimlendirmesini özelleştirmenizi sağlar, ancak nesnelerin anlamlı bir dize gösterimini üretmek genellikle ek biçimlendirme bilgileri gerektirir. Örneğin, "C" standart biçim dizesi veya "$ #, #. 00" gibi özel bir biçim dizesi kullanarak bir sayıyı para birimi değeri olarak biçimlendirmek, en azından doğru para birimi sembolü, Grup ayırıcısı ve ondalık ayırıcısının olması için gereken bilgileri gerektirir biçimlendirilen dizeye dahil etmek için kullanılabilir. .NET sürümünde bu ek biçimlendirme bilgileri, sayısal türler ve Tarih ve <xref:System.IFormatProvider> saat türleri `ToString` yönteminin bir veya daha fazla aşırı yüküne bir parametre olarak sağlanan arabirim aracılığıyla kullanılabilir hale getirilir. <xref:System.IFormatProvider>uygulamalar, .NET 'te kültüre özgü biçimlendirmeyi desteklemek için kullanılır. Aşağıdaki örnek, bir nesnenin dize temsilinin farklı kültürleri temsil eden üç <xref:System.IFormatProvider> nesneyle biçimlendirildiğinde nasıl değiştiği gösterilmektedir.
 
 [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
 [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]
 
-<xref:System.IFormatProvider> Arabirimi içeren bir yöntem <xref:System.IFormatProvider.GetFormat%28System.Type%29>, biçimlendirme bilgilerini sağlayan nesne türünü belirten tek bir parametre vardır. Yöntemi o türün bir nesnesini sağlayabiliyorsa, bunu döndürür. Aksi takdirde, null bir başvuru döndürür (`Nothing` Visual Basic'te).
+Arabirim, biçimlendirme bilgileri sağlayan nesne <xref:System.IFormatProvider.GetFormat%28System.Type%29>türünü belirten tek bir parametreye sahip olan bir yöntemini içerir. <xref:System.IFormatProvider> Yöntemi bu türden bir nesne sağlayabiliyorsanız, döndürür. Aksi halde, null bir başvuru döndürür (`Nothing` Visual Basic).
 
-<xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> bir geri çağırma yöntemidir. Çağırdığınızda bir `ToString` içeren yöntemi aşırı yüklemesini bir <xref:System.IFormatProvider> parametresini çağırır <xref:System.IFormatProvider.GetFormat%2A> yöntem <xref:System.IFormatProvider> nesne. <xref:System.IFormatProvider.GetFormat%2A> Yöntemi tarafından belirtilen gerekli biçimlendirme bilgilerini sağlayan bir nesne döndürmekten sorumludur kendi `formatType` parametresi, `ToString` yöntemi.
+<xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>bir geri çağırma yöntemidir. Bir `ToString` <xref:System.IFormatProvider> parametreiçeren<xref:System.IFormatProvider.GetFormat%2A> bir yöntem aşırı yüklemesini çağırdığınızda, bu nesnenin yöntemini çağırır. <xref:System.IFormatProvider> Yöntemi, `formatType` parametresi`ToString` tarafından belirtilen gerekli biçimlendirme bilgilerini yöntemine döndüren bir nesne döndürmekten sorumludur. <xref:System.IFormatProvider.GetFormat%2A>
 
-Bir dizi biçimlendirme ya da dize dönüştürme yöntem türü parametresi içerir <xref:System.IFormatProvider>, ancak yöntem çağrıldığında birçok durumda parametrenin değeri yoksayılır. Aşağıdaki tablo bazı parametresini ve türünü kullanan bir biçimlendirme yöntemlerini listeler <xref:System.Type> geçtikleri nesne <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yöntemi.
+Bir dizi biçimlendirme veya dize dönüştürme yöntemi, türünde <xref:System.IFormatProvider>bir parametre içerir, ancak çoğu durumda, yöntemi çağrıldığında parametresinin değeri yok sayılır. Aşağıdaki tabloda, parametresini kullanan bazı biçimlendirme yöntemleri ve <xref:System.Type> <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> yönteme geçirdikleri nesnenin türü listelenmektedir.
 
-|Yöntem|Tür `formatType` parametresi|
+|Yöntem|`formatType` Parametrenin türü|
 |------------|------------------------------------|
-|`ToString` sayısal türlerin yöntemi|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
-|`ToString` Tarih ve saat türlerinin yöntemi|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
+|`ToString`sayısal türlerin yöntemi|<xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>|
+|`ToString`Tarih ve saat türleri yöntemi|<xref:System.Globalization.DateTimeFormatInfo?displayProperty=nameWithType>|
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|
 
 > [!NOTE]
-> `ToString` Sayısal türlerin ve tarih ve saat türlerinin yöntemleri aşırı yüklenmiştir ve aşırı yüklemeleri yalnızca bazıları şunlardır bir <xref:System.IFormatProvider> parametresi. Bir yöntem türünde bir parametre yoksa <xref:System.IFormatProvider>, tarafından döndürülen nesne <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği bunun yerine geçirilen. Örneğin, varsayılan bir çağrı <xref:System.Int32.ToString?displayProperty=nameWithType> yöntemi sonuçta sonuçları aşağıdaki gibi bir yöntem çağrısında: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.
+> Sayısal türlerin ve Tarih ve saat türlerinin <xref:System.IFormatProvider> yöntemleriaşırıyüklenmiştirveyalnızcabazıaşırıyüklemelerinbirparametresivardır.`ToString` Bir yöntemde türünde <xref:System.IFormatProvider>parametre yoksa, bunun yerine <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliği tarafından döndürülen nesne geçirilir. Örneğin, varsayılan <xref:System.Int32.ToString?displayProperty=nameWithType> metoda yapılan bir çağrı sonuç olarak aşağıdaki gibi bir yöntem çağrısıyla sonuçlanır: `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.
 
-.NET uygulayan üç sınıf sunar <xref:System.IFormatProvider>:
+.NET aşağıdakileri uygulayan <xref:System.IFormatProvider>üç sınıf sağlar:
 
-- <xref:System.Globalization.DateTimeFormatInfo>, belirli bir kültür için tarih ve saat değerleri için biçimlendirme bilgileri sağlayan bir sınıf. Kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> uygulaması kendinin bir örneğini döndürür.
+- <xref:System.Globalization.DateTimeFormatInfo>, belirli bir kültür için tarih ve saat değerleri için biçimlendirme bilgileri sağlayan bir sınıf. <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> Uygulamanın kendisi bir örneğini döndürür.
 
-- <xref:System.Globalization.NumberFormatInfo>, belirli bir kültür için sayısal biçimlendirme bilgilerini sağlayan bir sınıf. Kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> uygulaması kendinin bir örneğini döndürür.
+- <xref:System.Globalization.NumberFormatInfo>, belirli bir kültür için sayısal biçimlendirme bilgileri sağlayan bir sınıf. <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> Uygulamanın kendisi bir örneğini döndürür.
 
-- <xref:System.Globalization.CultureInfo>. Kendi <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> uygulama ya da döndürebilir bir <xref:System.Globalization.NumberFormatInfo> sayısal biçimlendirme bilgilerini sağlayan nesne veya <xref:System.Globalization.DateTimeFormatInfo> tarih ve saat değerleri için biçimlendirme bilgileri sağlayan nesne.
+- <xref:System.Globalization.CultureInfo>. Uygulama <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> , tarih ve saat değerleri <xref:System.Globalization.NumberFormatInfo> için biçimlendirme bilgilerini sağlamak üzere <xref:System.Globalization.DateTimeFormatInfo> sayısal biçimlendirme bilgileri veya nesne sağlamak için bir nesne döndürebilir.
 
-Ayrıca bu sınıfların herhangi birini değiştirmek için kendi biçim sağlayıcılarınızı uygulayabilirsiniz. Ancak, uygulamanızın <xref:System.IFormatProvider.GetFormat%2A> yöntemi, biçimlendirme bilgileri sağlaması gerekiyorsa önceki tabloda listelenen tür nesnesi geri döndürmesi gerekir `ToString` yöntemi.
+Bu sınıfların herhangi birini değiştirmek için kendi biçim sağlayıcınızı de uygulayabilirsiniz. Ancak, uygulamanızın <xref:System.IFormatProvider.GetFormat%2A> yöntemi, `ToString` yönteme biçimlendirme bilgileri sağlaması gerekiyorsa, önceki tabloda listelenen türde bir nesne döndürmelidir.
 
 <a name="numericCulture"></a>
 
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>Sayısal Değerleri Kültüre Duyarlı Olarak Biçimlendirme
 
-Varsayılan olarak, sayısal değerlerin biçimlendirilmesi kültüre duyarlıdır. Bir biçimlendirme yöntemi çağırdığınızda bir kültür belirtmezseniz geçerli iş parçacığı kültürünün biçimlendirme kuralları kullanılır. Bu, geçerli iş parçacığı kültürünü dört kez değiştirdikten sonra çağıran aşağıdaki örnekte gösterilmiştir <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> yöntemi. Her durumda sonuç dizesi geçerli kültürün biçimlendirme kurallarını yansıtır. Bunun nedeni, `ToString` ve `ToString(String)` yöntemleri her sayısal türün yapılan çağrıları sarmasıdır `ToString(String, IFormatProvider)` yöntemi.
+Varsayılan olarak, sayısal değer biçimlendirmesi kültüre duyarlıdır. Bir biçimlendirme yöntemini çağırdığınızda bir kültür belirtmezseniz, geçerli iş parçacığı kültürünün biçimlendirme kuralları kullanılır. Bu, geçerli iş parçacığı kültürünü dört kez değiştiren ve sonra <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> yöntemi çağıran aşağıdaki örnekte gösterilmiştir. Her durumda, sonuç dizesi geçerli kültürün biçimlendirme kurallarını yansıtır. Bunun nedeni, `ToString` ve `ToString(String)` yöntemlerinin her sayısal tür `ToString(String, IFormatProvider)` metoduna çağrı kaydırması.
 
 [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
 [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]
 
-Çağırarak bir sayısal değer belirli bir kültür için biçimlendirebilirsiniz bir `ToString` olan aşırı yüklenmiş bir `provider` parametresi ve aşağıdakilerden birini geçirme:
+Ayrıca, bir `ToString` `provider` parametresi olan bir aşırı yüklemeyi çağırarak ve bu parametreyi aşağıdakilerden birini geçirerek belirli bir kültür için sayısal bir değeri biçimlendirebilirsiniz:
 
-- A <xref:System.Globalization.CultureInfo> biçimlendirme kuralları kullanılacak kültürü temsil eden nesne. Kendi <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi değerini döndürür <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> özelliğinin <xref:System.Globalization.NumberFormatInfo> sayısal değerler için kültüre özgü biçimlendirme bilgileri sağlayan nesne.
+- Biçimlendirme kuralları kullanılacak olan kültürü temsil eden nesne.<xref:System.Globalization.CultureInfo> Yöntemi, sayısal değerler için kültüre özgü <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> biçimlendirme bilgileri sağlayan <xref:System.Globalization.NumberFormatInfo> nesnesi olan özelliğinin değerini döndürür. <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType>
 
-- A <xref:System.Globalization.NumberFormatInfo> kullanılacak kültüre özgü biçimlendirme kurallarını tanımlayan nesne. Kendi <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> yöntemi kendinin bir örneğini döndürür.
+- Kullanılacak <xref:System.Globalization.NumberFormatInfo> kültüre özgü biçimlendirme kurallarını tanımlayan bir nesne. <xref:System.Globalization.NumberFormatInfo.GetFormat%2A> Yöntemi kendi örneğini döndürür.
 
-Aşağıdaki örnekte <xref:System.Globalization.NumberFormatInfo> bir kayan nokta sayısını biçimlendirmek için İngilizce (ABD) ve İngilizce (İngiltere) kültürlerini ve Fransızca ve Rusça bağımsız kültürlerini temsil eden nesneleri.
+Aşağıdaki örnek, bir <xref:System.Globalization.NumberFormatInfo> kayan noktalı sayıyı biçimlendirmek için İngilizce (Birleşik Devletler) ve İngilizce (Büyük Britanya) kültürlerini ve Fransızca ve Rusça bağımsız kültürlerini temsil eden nesneleri kullanır.
 
 [!code-csharp[Conceptual.Formatting.Overview#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific4.cs#20)]
 [!code-vb[Conceptual.Formatting.Overview#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific4.vb#20)]
@@ -329,18 +329,18 @@ Aşağıdaki örnekte <xref:System.Globalization.NumberFormatInfo> bir kayan nok
 
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Tarih ve Saat Değerlerini Kültüre Duyarlı Olarak Biçimlendirme
 
-Varsayılan olarak, tarih ve saat değerlerinin biçimlendirilmesi kültüre duyarlıdır. Bir biçimlendirme yöntemi çağırdığınızda bir kültür belirtmezseniz geçerli iş parçacığı kültürünün biçimlendirme kuralları kullanılır. Bu, geçerli iş parçacığı kültürünü dört kez değiştirdikten sonra çağıran aşağıdaki örnekte gösterilmiştir <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> yöntemi. Her durumda sonuç dizesi geçerli kültürün biçimlendirme kurallarını yansıtır. Bunun nedeni, <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>, ve <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> yöntemleri yapılan çağrıları sarmasıdır <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> ve <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemleri.
+Varsayılan olarak, tarih ve saat değerlerinin biçimlendirmesi kültüre duyarlıdır. Bir biçimlendirme yöntemini çağırdığınızda bir kültür belirtmezseniz, geçerli iş parçacığı kültürünün biçimlendirme kuralları kullanılır. Bu, geçerli iş parçacığı kültürünü dört kez değiştiren ve sonra <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> yöntemi çağıran aşağıdaki örnekte gösterilmiştir. Her durumda, sonuç dizesi geçerli kültürün biçimlendirme kurallarını yansıtır. Bunun nedeni,, <xref:System.DateTime.ToString?displayProperty=nameWithType>ve <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> yöntemlerinin<xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> ve yöntemlerineçağrıları<xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> sarması nedeniyle oluşur.
 
 [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
 [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]
 
-Çağırarak bir tarih ve saat değerini belirli bir kültür için biçimlendirebilirsiniz bir <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> veya <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> olan aşırı yüklenmiş bir `provider` parametresi ve aşağıdakilerden birini geçirme:
+Ayrıca, bir <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> `provider` parametresi olan bir veya <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> daha fazla yük çağırarak ve bu parametreyi aşağıdakilerden birini geçirerek belirli bir kültür için bir tarih ve saat değeri biçimlendirebilirsiniz:
 
-- A <xref:System.Globalization.CultureInfo> biçimlendirme kuralları kullanılacak kültürü temsil eden nesne. Kendi <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> yöntemi değerini döndürür <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> özelliğinin <xref:System.Globalization.DateTimeFormatInfo> tarih ve saat değerleri için kültüre özgü biçimlendirme bilgileri sağlayan nesne.
+- Biçimlendirme kuralları kullanılacak olan kültürü temsil eden nesne.<xref:System.Globalization.CultureInfo> Yöntemi, tarih ve saat değerleri için <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> kültüre özgü biçimlendirme bilgileri sağlayan <xref:System.Globalization.DateTimeFormatInfo> nesnesi olan özelliğinin değerini döndürür. <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType>
 
-- A <xref:System.Globalization.DateTimeFormatInfo> kullanılacak kültüre özgü biçimlendirme kurallarını tanımlayan nesne. Kendi <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> yöntemi kendinin bir örneğini döndürür.
+- Kullanılacak <xref:System.Globalization.DateTimeFormatInfo> kültüre özgü biçimlendirme kurallarını tanımlayan bir nesne. <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> Yöntemi kendi örneğini döndürür.
 
-Aşağıdaki örnekte <xref:System.Globalization.DateTimeFormatInfo> bir tarihi biçimlendirmek için İngilizce (ABD) ve İngilizce (İngiltere) kültürlerini ve Fransızca ve Rusça bağımsız kültürlerini temsil eden nesneleri.
+Aşağıdaki örnek, bir <xref:System.Globalization.DateTimeFormatInfo> tarihi biçimlendirmek için İngilizce (Birleşik Devletler) ve İngilizce (Büyük Britanya) kültürlerini ve Fransızca ve Rusça bağımsız kültürlerini temsil eden nesneleri kullanır.
 
 [!code-csharp[Conceptual.Formatting.Overview#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific2.cs#18)]
 [!code-vb[Conceptual.Formatting.Overview#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific2.vb#18)]
@@ -349,20 +349,20 @@ Aşağıdaki örnekte <xref:System.Globalization.DateTimeFormatInfo> bir tarihi 
 
 ## <a name="the-iformattable-interface"></a>IFormattable Arabirimi
 
-Genellikle, aşırı yükleyen türler `ToString` bir biçim dizesi ile yöntemi ve bir <xref:System.IFormatProvider> parametresi de uygulamak <xref:System.IFormattable> arabirimi. Bu arabirim bir tek üyeye sahip <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, parametre olarak hem bir biçim dizesi hem de bir biçim sağlayıcısı içeren.
+Genellikle, `ToString` yöntemi bir biçim dizesi ve bir <xref:System.IFormatProvider> parametre ile aşırı yükleyen türler de <xref:System.IFormattable> arabirimini uygular. Bu arabirimin, parametre olarak hem biçim <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>dizesi hem de biçim sağlayıcısını içeren tek bir üyesi vardır.
 
-Uygulama <xref:System.IFormattable> arabirimini uygulama tanımlı sınıfınız iki avantaj sağlar:
+Uygulama tanımlı sınıfınız için arabirimiuygulamakikiavantajsunar:<xref:System.IFormattable>
 
-- Dize dönüştürme için destek <xref:System.Convert> sınıfı. Çağrılar <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> ve <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> yöntemi çağrısı, <xref:System.IFormattable> uygulama otomatik olarak.
+- <xref:System.Convert> Sınıfı tarafından dize dönüştürme desteği. Ve yöntemlerine yapılan çağrılar <xref:System.IFormattable> uygulamanızı otomatik olarak çağırır. <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType>
 
-- Bileşik biçimlendirme desteği. Bir biçim öğesi içeren bir biçim dizesi özel türünüzü biçimlendirmek için kullanılan, ortak dil çalışma zamanı otomatik olarak çağırır, <xref:System.IFormattable> uygulama ve biçim dizesine geçirir. Bileşik yöntemleriyle gibi biçimlendirme hakkında daha fazla bilgi için <xref:System.String.Format%2A?displayProperty=nameWithType> veya <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, bkz: [bileşik biçimlendirme](#CompositeFormatting) bölümü.
+- Bileşik biçimlendirme desteği. Özel türünü biçimlendirmek için bir biçim dizesi içeren bir biçim öğesi kullanılırsa, ortak dil çalışma zamanı <xref:System.IFormattable> uygulamanızı otomatik olarak çağırır ve biçim dizesini geçirir. <xref:System.String.Format%2A?displayProperty=nameWithType> Veya<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>gibi yöntemlerle bileşik biçimlendirme hakkında daha fazla bilgi için bkz. [Bileşik biçimlendirme](#CompositeFormatting) bölümü.
 
-Aşağıdaki örnekte tanımlayan bir `Temperature` uygulayan sınıf <xref:System.IFormattable> arabirimi. Bu, "C" veya "G" biçim belirticilerini, sıcaklığı Santigrat cinsinden görüntülemek için sıcaklığı Fahrenhayt cinsinden görüntülemek için "F" biçim belirticisi ve "K" biçim belirticisi sıcaklığı Kelvin cinsinden görüntülemek için destekler.
+Aşağıdaki örnek, <xref:System.IFormattable> arabirimini uygulayan `Temperature` bir sınıfı tanımlar. Sıcaklığın Santide gösterilmesi için "C" veya "G" biçim belirticilerini destekler, sıcaklığın Fahrenolması için "F" biçim belirticisi ve sıcaklığın Kelvin cinsinden gösterilmesi için "K" Biçim belirleyicisi.
 
 [!code-csharp[Conceptual.Formatting.Overview#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#12)]
 [!code-vb[Conceptual.Formatting.Overview#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#12)]
 
-Aşağıdaki örnek bir `Temperature` nesne. Ardından <xref:System.Convert.ToString%2A> yöntemi ve farklı elde etmek için çeşitli bileşik biçimli dizeler dize temsillerini kullanan bir `Temperature` nesne. Bu yöntem çağrılarından her sırayla çağırır <xref:System.IFormattable> uygulaması `Temperature` sınıfı.
+Aşağıdaki örnek bir `Temperature` nesnesi başlatır. Daha sonra <xref:System.Convert.ToString%2A> yöntemi çağırır ve bir `Temperature` nesnenin farklı dize gösterimlerini almak için birkaç bileşik biçim dizesi kullanır. Bu yöntem çağrılarının her biri, sırasıyla <xref:System.IFormattable> `Temperature` sınıfının uygulamasını çağırır.
 
 [!code-csharp[Conceptual.Formatting.Overview#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformattable.cs#13)]
 [!code-vb[Conceptual.Formatting.Overview#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformattable.vb#13)]
@@ -371,38 +371,38 @@ Aşağıdaki örnek bir `Temperature` nesne. Ardından <xref:System.Convert.ToSt
 
 ## <a name="composite-formatting"></a>Bileşik Biçimlendirme
 
-Bazı yöntemler gibi <xref:System.String.Format%2A?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, bileşik biçimlendirmeyi destekler. Bir bileşik biçimlendirme dizesi, sıfır, bir veya daha fazla nesne dize gösterimini içeren tek bir dize döndüren bir şablon türüdür. Her nesne bileşik Biçim dizesinde bir dizini oluşturulmuş bir biçim öğesi tarafından temsil edilir. Biçim öğesinin dizin, yöntemin parametre listesinde temsil ettiği nesnenin konumuna karşılık gelir. Dizinler sıfır tabanlıdır. Örneğin, aşağıdaki çağrı <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi, birinci biçim öğesi olan `{0:D}`, dize temsili ile değiştirilir `thatDate`; ikinci biçim öğesi olan `{1}`, dizetemsiliiledeğiştirilir`item1`; ve üçüncü biçim öğesi olan `{2:C2}`, dize temsili ile değiştirilir `item1.Value`.
+<xref:System.String.Format%2A?displayProperty=nameWithType> Ve<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>gibi bazı yöntemler bileşik biçimlendirmeyi destekler. Bileşik biçim dizesi, sıfır, bir veya daha fazla nesnenin dize gösterimini içeren tek bir dize döndüren bir şablon türüdür. Her nesne, bileşik biçim dizesinde dizinli biçim öğesi tarafından temsil edilir. Biçim öğesinin dizini, yöntemin parametre listesinde temsil ettiği nesnenin konumuna karşılık gelir. Dizinler sıfır tabanlıdır. Örneğin, <xref:System.String.Format%2A?displayProperty=nameWithType> yöntemi için aşağıdaki çağrıda, ilk biçim `{0:D}`öğesi öğesinin `thatDate`dize temsili ile değiştirilmiştir; ikinci biçim öğesi `{1}`, öğesinin `item1`dizetemsiliiledeğiştirilmiştir; ve üçüncü biçim öğesi `{2:C2}`, öğesinin `item1.Value`dize temsili ile değiştirilmiştir.
 
 [!code-csharp[Conceptual.Formatting.Overview#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite1.cs#14)]
 [!code-vb[Conceptual.Formatting.Overview#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite1.vb#14)]
 
-Bir biçim öğesi, karşılık gelen nesnenin dize gösterimini ile değiştirerek yanı sıra, biçim öğeleri de aşağıdaki denetlemenize olanak verir:
+Bir biçim öğesini karşılık gelen nesnenin dize gösterimiyle değiştirmeye ek olarak, biçim öğeleri de şunları denetlemenize olanak tanır:
 
-- Nesne uyguluyorsa, bir nesne bir dize olarak temsil edilen belirli yoludur <xref:System.IFormattable> arabirim ve biçim dizeleri destekler. Öğenin dizini ile izleyerek bunu bir `:` (üste) tarafından geçerli bir biçim dizesi. Önceki örnek "d" (kısa tarih deseni) biçim dizesi içeren bir date değeri biçimlendirme tarafından bu işlem (örn, `{0:d}`) ve biçim dizesi "C2" ile bir sayısal biçimlendirme (örneğin, `{2:C2}` iki para birimi değeri olarak sayıyı temsil etmek için kesirli ondalık basamaklar.
+- Nesne, <xref:System.IFormattable> arayüzü uygularsa ve biçim dizelerini destekliyorsa, nesnenin dize olarak temsil edildiği belirli bir yoldur. Bunu, `:` (iki nokta üst üste) ve ardından geçerli bir biçim dizesi olan biçim öğesinin dizinini izleyerek yapabilirsiniz. Önceki örnekte bu, bir tarih değerini "d" (kısa tarih düzeniyle) biçim dizesiyle (örn. `{0:d}`) ve sayısal bir değeri "C2" biçim dizesiyle (örn `{2:C2}` . sayıyı iki ile para birimi değeri olarak göstermek için) biçimlendirerek oldu kesirli ondalık basamaklar.
 
-- Nesnenin dize gösterimi ve bu alandaki dize gösteriminin hizalama içeren alan genişliği. Öğenin dizini ile izleyerek bunu bir `,` (virgül) ve ardından alan genişliği. Dize alanı alan genişliği pozitif bir değer varsa ve bunu sol alan genişliği negatif bir değer ise hizalanır sağa hizalanır. Aşağıdaki örnek sol-20 karakter alanda tarih değerleri, ve onu sağ-ondalık değerleri 11 karakterli bir alanda kesirli bir basamak ile hizalar.
+- Nesnenin dize gösterimini içeren alanın genişliği ve bu alandaki dize gösteriminin hizalaması. Bunu, biçim öğesinin dizinini `,` (virgül) ve alan genişliğini izleyerek yapın. Alan genişliği pozitif bir değer ise, dize alana sağa hizalanır ve alan genişliği negatif bir değer ise sola hizalanır. Aşağıdaki örnek, tarih değerlerini 20 karakterlik bir alanda sola hizalar ve ondalık değerleri, 11 karakterlik bir alanda tek bir kesirli basamakla sağa hizalar.
 
      [!code-csharp[Conceptual.Formatting.Overview#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/composite2.cs#22)]
      [!code-vb[Conceptual.Formatting.Overview#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/composite2.vb#22)]
 
-     Hizalama dizesi bileşeni hem biçim dizesi bileşeni mevcut olması durumunda, önceki ikinci önündeki, Not (örneğin, `{0,-20:g}`.
+     Hizalama dizesi bileşeni ve biçim dizesi bileşeni varsa, ilki ikincinin (örneğin, `{0,-20:g}`) önünde olduğunu unutmayın.
 
-Bileşik biçimlendirme hakkında daha fazla bilgi için bkz. [bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md).
+Bileşik biçimlendirme hakkında daha fazla bilgi için bkz. [Bileşik biçimlendirme](../../../docs/standard/base-types/composite-formatting.md).
 
 <a name="Custom"></a>
 
 ## <a name="custom-formatting-with-icustomformatter"></a>ICustomFormatter ile Özel Biçimlendirme
 
-İki bileşik biçimlendirme yöntemi, <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, özel biçimlendirmeyi destekleyen bir biçim sağlayıcı parametresi içerir. Bu biçimlendirme yöntemlerinden biri çağrıldığında, arabimini bir <xref:System.Type> temsil eden bir nesne bir <xref:System.ICustomFormatter> biçim sağlayıcısının arabirimine <xref:System.IFormatProvider.GetFormat%2A> yöntemi. <xref:System.IFormatProvider.GetFormat%2A> Yöntemi döndürmekten sorumludur ardından <xref:System.ICustomFormatter> özel biçimlendirme sağlayan uygulama.
+İki bileşik biçimlendirme yöntemi <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ve <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, özel biçimlendirmeyi destekleyen bir biçim sağlayıcısı parametresi içerir. Bu biçimlendirme yöntemlerinden herhangi biri çağrıldığında, bir <xref:System.Type> <xref:System.ICustomFormatter> arabirimi temsil eden bir nesneyi biçim sağlayıcısının <xref:System.IFormatProvider.GetFormat%2A> yöntemine geçirir. Yöntemi, daha sonra özel biçimlendirme sağlayan <xref:System.ICustomFormatter> uygulamanın döndürülmesinden sorumludur. <xref:System.IFormatProvider.GetFormat%2A>
 
-<xref:System.ICustomFormatter> Arabirimi tek bir yöntemi vardır <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>, yani bir bileşik biçimlendirme yöntemi, bir bileşik biçimlendirme dizesi her biçimlendirme öğesi için bir kez tarafından otomatik olarak çağrılır. <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> Yönteminin üç parametresi vardır: temsil eden bir biçim dizesi `formatString` bağımsız değişkeni bir biçim öğesindeki Biçimlendirilecek bir nesne ve bir <xref:System.IFormatProvider> Hizmetleri biçimlendirme sağlayan nesne. Genellikle, uygulayan sınıf <xref:System.ICustomFormatter> ayrıca uygulayan <xref:System.IFormatProvider>, bu son parametre özel biçimlendirme bir başvuru sınıfının kendisine olacak şekilde. Yöntem, Biçimlendirilecek nesnenin özel bir biçimlendirilmiş dize gösterimini döndürür. Yöntem nesneyi biçimlendiremiyorsa, bir null başvuru döndürmesi gerekir (`Nothing` Visual Basic'te).
+Arabirim, bileşik biçimlendirme yöntemi tarafından otomatik <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>olarak çağrılan tek bir yönteme sahiptir ve bir bileşik biçim dizesindeki her biçim öğesi için bir kez. <xref:System.ICustomFormatter> Yöntemi üç parametreye sahiptir: bir biçim öğesinde `formatString` bağımsız değişkeni temsil eden bir biçim dizesi, biçimlendirilecek bir nesne ve <xref:System.IFormatProvider> biçimlendirme hizmetleri sağlayan bir nesne. <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> Genellikle, uygulayan <xref:System.ICustomFormatter> sınıf de uygular <xref:System.IFormatProvider>, bu nedenle bu son parametre özel biçimlendirme sınıfının kendisi için bir başvurudur. Yöntemi, biçimlendirilecek nesnenin özel bir biçimli dize gösterimini döndürür. Yöntem nesneyi biçimlendiremiyor ise, null bir başvuru döndürmelidir (`Nothing` Visual Basic).
 
-Aşağıdaki örnek sağlayan bir <xref:System.ICustomFormatter> adlı uygulama `ByteByByteFormatter` , gösteren tamsayı değerlerini iki rakamlı onaltılık değerler ardından bir boşluk olarak.
+Aşağıdaki örnek, tam sayı <xref:System.ICustomFormatter> değerlerini bir `ByteByByteFormatter` boşluk ile izleyen iki basamaklı onaltılık değerlerin bir sırası olarak görüntüleyen adlı bir uygulama sağlar.
 
 [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
 [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]
 
-Aşağıdaki örnekte `ByteByByteFormatter` tamsayı değerlerini biçimlendirmek için sınıf. Unutmayın <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> yöntemi ikinci birden çok kez çağrılır <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> yöntemi çağrısında varsayılan <xref:System.Globalization.NumberFormatInfo> sağlayıcısı olduğundan üçüncü yöntem çağrısında kullanılan.`ByteByByteFormatter.Format` yöntemi "N0" biçim dizesini tanımadığından ve bir null başvuru döndürür (`Nothing` Visual Basic'te).
+Aşağıdaki örnek, tamsayı değerlerini `ByteByByteFormatter` biçimlendirmek için sınıfını kullanır. Yöntemin ikinci <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> Yöntem çağrısında birden çok kez çağrıldığını ve varsayılan <xref:System.Globalization.NumberFormatInfo> sağlayıcının üçüncü yöntem çağrısında kullanıldığını unutmayın, çünkü. <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>`ByteByByteFormatter.Format` Yöntem, "N0" biçim dizesini tanımıyor ve null bir başvuru döndürüyor (`Nothing` Visual Basic).
 
 [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
 [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]
@@ -413,16 +413,16 @@ Aşağıdaki örnekte `ByteByByteFormatter` tamsayı değerlerini biçimlendirme
 
 |Başlık|Tanım|
 |-----------|----------------|
-|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerlerin ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
-|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özel biçimler oluşturan biçim dizelerini açıklar.|
-|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar <xref:System.DateTime> değerleri.|
-|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|İçin uygulamaya özel biçimler oluşturan biçim dizelerini açıklar <xref:System.DateTime> değerleri.|
-|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıkları ortak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
-|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özel biçimler oluşturan biçim dizelerini açıklar.|
-|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize temsillerini oluşturmak için kullanılan standart biçim dizelerini açıklar.|
-|[Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)|Bir veya daha fazla biçimlendirilmiş değerin bir dizeye katıştırmak açıklar. Dize daha sonra konsolda gösterilebilir veya bir akışa yazılabilir.|
-|[Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)|Özel biçimlendirme işlemlerini gerçekleştirmek için adım adım talimatları sağlayan konuları listeler.|
-|[Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)|Nesnelerinin bu nesnelerin dize temsillerini açıklanan değerlere nasıl başlatılacağını açıklar. Ayrıştırma biçimlendirmenin ters işlemidir.|
+|[Standart Sayısal Biçim Dizeleri](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Sayısal değerlerin yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel Sayısal Biçim Dizeleri](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Sayısal değerler için uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Standart Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|<xref:System.DateTime> Değerlerin yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel Tarih ve Saat Biçim Dizeleri](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|Değerler için <xref:System.DateTime> uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Standart TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/standard-timespan-format-strings.md)|Zaman aralıklarının yaygın olarak kullanılan dize temsillerini oluşturan standart biçim dizelerini açıklar.|
+|[Özel TimeSpan Biçim Dizeleri](../../../docs/standard/base-types/custom-timespan-format-strings.md)|Zaman aralıkları için uygulamaya özel biçimler oluşturan özel biçim dizelerini açıklar.|
+|[Sabit Listesi Biçim Dizeleri](../../../docs/standard/base-types/enumeration-format-strings.md)|Numaralandırma değerlerinin dize gösterimlerini oluşturmak için kullanılan standart biçim dizelerini açıklar.|
+|[Bileşik Biçimlendirme](../../../docs/standard/base-types/composite-formatting.md)|Bir veya daha fazla biçimli değerin bir dizeye nasıl ekleneceğini açıklar. Dize daha sonra konsolda görüntülenebilir veya bir akışa yazılabilir.|
+|[Biçimlendirme İşlemlerini Gerçekleştirme](../../../docs/standard/base-types/performing-formatting-operations.md)|Belirli biçimlendirme işlemlerini gerçekleştirmeye yönelik adım adım yönergeler sağlayan konuları listeler.|
+|[Dizeleri Ayrıştırma](../../../docs/standard/base-types/parsing-strings.md)|Nesnelerin, bu nesnelerin dize temsilleri tarafından tanımlanan değerlere nasıl başlatılacağını açıklar. Ayrıştırma biçimlendirmenin ters işlemidir.|
 
 <a name="Reference"></a>
 

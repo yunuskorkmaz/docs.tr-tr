@@ -2,97 +2,97 @@
 title: Kurallı Matematik İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: f575785bb198251ef50ba3563e736946253c9526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760642"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250302"
 ---
 # <a name="math-canonical-functions"></a>Kurallı Matematik İşlevleri
 
-Entity SQL aşağıdaki kurallı matematik işlevleri içerir:
+Entity SQL aşağıdaki matematik kurallı işlevlerini içerir:
   
-## <a name="absvalue"></a>Abs(Value)
+## <a name="absvalue"></a>ABS (değer)
 
-Mutlak değerini döndürür `value`.
+Öğesinin `value`mutlak değerini döndürür.
 
 **Bağımsız Değişkenler**
 
-Bir `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, ve `Decimal`.
+`Int16` ,`Byte` ,,`Decimal`,, ,Ve.`Double` `Int32` `Int64` `Single`
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 `Abs(-2)`
 
-## <a name="ceilingvalue"></a>Ceiling(Value)
+## <a name="ceilingvalue"></a>Tavan (değer)
 
-Küçük olmayan en küçük tamsayı döndürür daha `value`.
+Küçüktür olan `value`en küçük tamsayıyı döndürür.
 
 **Bağımsız Değişkenler**
 
-A `Single`, `Double`, ve `Decimal`.
+`Single`, ,`Double`Ve .`Decimal`
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 [!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
 [!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
 
-## <a name="floorvalue"></a>Floor(Value)
+## <a name="floorvalue"></a>Floor (değer)
 
-Değerinden büyük olmayan en büyük tamsayı döndürür `value`.
+Değerinden `value`büyük olmayan en büyük tamsayıyı döndürür.
 
 **Bağımsız Değişkenler**
 
-A `Single`, `Double`, ve `Decimal`.
+`Single`, ,`Double`Ve .`Decimal`
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
 [!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
 
-## <a name="powervalue-exponent"></a>Güç (değeri, üs)
+## <a name="powervalue-exponent"></a>Güç (değer, üs)
 
-Belirtilen sonuç döndüren `value` belirtilen `exponent`.
+Belirtilen öğesinin `value` sonucunu belirtilen `exponent`şekilde döndürür.
 
 **Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
-|`value` | Bir `Int32, Int64, Double`, veya `Decimal`. |
-|`exponent` | Bir `Int64`, `Double`, veya `Decimal`. |
+|`value` | `Int32, Int64, Double`, Veya`Decimal`. |
+|`exponent` | Bir `Int64`, `Double`veya .`Decimal` |
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 `Power(748.58,2)`
 
-## <a name="roundvalue"></a>Round(Value)
+## <a name="roundvalue"></a>Round (değer)
 
-Tamsayı bölümünü döndürür `value`, en yakın tamsayıya yuvarlanır.
+Öğesinin `value`tamsayı bölümünü döndürür, en yakın tamsayıya yuvarlanır.
 
 **Bağımsız Değişkenler**
 
-A `Single`, `Double`, ve `Decimal`.
+`Single`, ,`Double`Ve .`Decimal`
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
@@ -100,46 +100,46 @@ Türünü `value`.
 
 ## <a name="roundvalue-digits"></a>Round (değer, basamak)
 
-Döndürür `value`, yuvarlanır yakın belirtilen `digits`.
+`value` Belirtilen`digits`en yakın değere yuvarlanır ve döndürür.
 
 **Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
-|`value`|`Double` veya `Decimal`.|
-|`digits`|`Int16` veya `Int32`.|
+|`value`|`Double`veya `Decimal`.|
+|`digits`|`Int16`veya `Int32`.|
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 `Round(748.58,1)`
 
-## <a name="truncatevalue-digits"></a>(Değer, basamak) Kes
+## <a name="truncatevalue-digits"></a>Kes (değer, basamak)
 
-Döndürür `value`, kesilmiş yakın belirtilen `digits`.
+`value` Belirtilen`digits`en yakın değere kesilen öğesini döndürür.
 
 **Bağımsız Değişkenler**
 
 |  |  |
 |--|--|
-|`value`|`Double` veya `Decimal`.|
-|`digits`|`Int16` veya `Int32`.|
+|`value`|`Double`veya `Decimal`.|
+|`digits`|`Int16`veya `Int32`.|
 
 **Dönüş değeri**
 
-Türünü `value`.
+Türü `value`.
 
 **Örnek**
 
 `Truncate(748.58,1)`  
   
- Bu işlevler döndüreceği `null` verildiyse `null` giriş.  
+ Bu işlevler, verilen `null` `null` giriş durumunda döndürülür.  
   
- Microsoft SQL istemci yönetilen sağlayıcısında eşdeğer bir işlevselliği kullanılabilir. Daha fazla bilgi için [Entity Framework işlevleri için SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ Eşdeğer işlevsellik, Microsoft SQL Istemci tarafından yönetilen sağlayıcıda bulunur. Daha fazla bilgi için bkz. [Entity Framework işlevleri Için SqlClient](../sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kurallı İşlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Kurallı İşlevler](canonical-functions.md)

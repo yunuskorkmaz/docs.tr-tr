@@ -1,19 +1,19 @@
 ---
-title: Değişkenleri (varlık SQL)
+title: Değişkenler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3eed222a-f8f6-46b6-9cd5-220cc0e4e5d8
-ms.openlocfilehash: bf6fa95e38d1eb5817fd67165b6993cbb0755fd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5be9c80c2fce877f179d79f6b2c22f11e31e65a0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879781"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248685"
 ---
-# <a name="variables-entity-sql"></a>Değişkenleri (varlık SQL)
+# <a name="variables-entity-sql"></a>Değişkenler (Entity SQL)
 ## <a name="variable"></a>Değişken  
- Değişken ifade geçerli kapsamda tanımlı adlandırılmış bir ifade bir başvurudur. Bir değişken başvurusu geçerli olmalıdır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tanımlandığı gibi tanımlayıcısı [tanımlayıcıları](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ Değişken ifadesi, geçerli kapsamda tanımlanan bir adlandırılmış ifadeye başvurudur. Bir değişken başvurusu, [tanımlayıcılarında](identifiers-entity-sql.md)tanımlandığı [!INCLUDE[esql](../../../../../../includes/esql-md.md)] gibi geçerli bir tanımlayıcı olmalıdır.  
   
- Aşağıdaki örnek ifade bir değişken kullanımını gösterir. `c` İçinde FROM yan tümcesi değişkeni tanımıdır. Kullanımını `c` SELECT yan tümcesi, değişken başvurusu temsil eder.  
+ Aşağıdaki örnek, ifadesindeki bir değişkenin kullanımını gösterir. `c` From yan tümcesinde değişkenin tanımıdır. Select yan tümcesinde `c` kullanımı, değişken başvurusunu temsil eder.  
   
 ```  
 select c   
@@ -22,6 +22,6 @@ from LOB.customers as c
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanımlayıcılar](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)
-- [Parametreler](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md)
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Tanımlayıcılar](identifiers-entity-sql.md)
+- [Parametreler](parameters-entity-sql.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

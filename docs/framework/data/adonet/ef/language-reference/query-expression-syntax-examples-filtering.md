@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c27cb89c-1c1d-4988-9f38-950eda3cb275
-ms.openlocfilehash: b9e8cf238d35ec9a6fc9c6d013c4d92b00dced78
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84de36b79ed646d73a8f2d8e00c26d8dcf6de4b7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955784"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249513"
 ---
 # <a name="query-expression-syntax-examples-filtering"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Filtreleme
-Bu konudaki örneklerde, sorgu ifadesi sözdizimini kullanarak `Where` [AdventureWorks Sales modelini](https://archive.codeplex.com/?p=msftdbprodsamples) sorgulamak için ve `Where…Contains` yöntemlerinin nasıl kullanılacağı gösterilmektedir. Note, burada...`Contains` , [derlenmiş bir sorgunun](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)parçası olarak kullanılamaz.  
+Bu konudaki örneklerde, sorgu ifadesi sözdizimini kullanarak `Where` [AdventureWorks Sales modelini](https://archive.codeplex.com/?p=msftdbprodsamples) sorgulamak için ve `Where…Contains` yöntemlerinin nasıl kullanılacağı gösterilmektedir. Note, burada...`Contains` , [derlenmiş bir sorgunun](compiled-queries-linq-to-entities.md)parçası olarak kullanılamaz.  
   
  Bu örneklerde kullanılan AdventureWorks Sales modeli, AdventureWorks örnek veritabanındaki Contact, Address, Product, SalesOrderHeader ve SalesOrderDetail tablolarından oluşturulmuştur.  
   
@@ -67,4 +67,4 @@ Bu konudaki örneklerde, sorgu ifadesi sözdizimini kullanarak `Where` [Adventur
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities Sorguları](queries-in-linq-to-entities.md)

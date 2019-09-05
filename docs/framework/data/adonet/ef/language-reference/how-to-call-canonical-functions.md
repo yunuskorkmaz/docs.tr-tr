@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 01a638d494b988e29ccf07763a7e0aecf54cc11c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ad4576a5c7a3f2be4b68e4060df191932ceeb19
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936063"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250838"
 ---
 # <a name="how-to-call-canonical-functions"></a>Nasıl yapılır: Kurallı İşlevleri Çağırma
-Sınıfı <xref:System.Data.Objects.EntityFunctions> , LINQ to Entities sorgularda kullanılacak kurallı işlevleri kullanıma sunan yöntemler içerir. Kurallı işlevler hakkında daha fazla bilgi için bkz. [kurallı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+Sınıfı <xref:System.Data.Objects.EntityFunctions> , LINQ to Entities sorgularda kullanılacak kurallı işlevleri kullanıma sunan yöntemler içerir. Kurallı işlevler hakkında daha fazla bilgi için bkz. [kurallı işlevler](canonical-functions.md).  
   
 > [!NOTE]
 > Sınıfındaki ve <xref:System.Data.Objects.EntityFunctions.AsNonUnicode%2A> yöntemlerinin Kurallı işlev eşdeğerleri yoktur. <xref:System.Data.Objects.EntityFunctions.AsUnicode%2A> <xref:System.Data.Objects.EntityFunctions>  
   
  Bir değer kümesi üzerinde hesaplama gerçekleştiren ve tek bir değer döndüren (Toplama kurallı işlevler olarak da bilinir) kurallı işlevler doğrudan çağrılabilir. Diğer kurallı işlevler, yalnızca bir LINQ to Entities sorgusunun parçası olarak çağrılabilir. Bir toplama işlevini doğrudan çağırmak için, işlevine bir <xref:System.Data.Objects.ObjectQuery%601> öğesine geçirmeniz gerekir. Daha fazla bilgi için aşağıdaki ikinci örneğe bakın.  
   
- LINQ to Entities sorgularda ortak dil çalışma zamanı (CLR) yöntemlerini kullanarak, bazı kurallı işlevleri çağırabilirsiniz. Kurallı işlevlerle eşlenen CLR yöntemlerinin listesi için bkz. [CLR yöntemi Ile kurallı Işlev eşleme](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
+ LINQ to Entities sorgularda ortak dil çalışma zamanı (CLR) yöntemlerini kullanarak, bazı kurallı işlevleri çağırabilirsiniz. Kurallı işlevlerle eşlenen CLR yöntemlerinin listesi için bkz. [CLR yöntemi Ile kurallı Işlev eşleme](clr-method-to-canonical-function-mapping.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, [AdventureWorks Sales modelini](https://archive.codeplex.com/?p=msftdbprodsamples)kullanır. Örnek, ve <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> `SellEndDate` arasındaki`SellStartDate` farkın 365 günden daha az olduğu tüm ürünleri döndürmek için yöntemini kullanan LINQ to Entities bir sorgu yürütür:  
@@ -36,5 +36,5 @@ Sınıfı <xref:System.Data.Objects.EntityFunctions> , LINQ to Entities sorgular
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Entities Sorgularında Çağırma İşlevleri](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities Sorgularında Çağırma İşlevleri](calling-functions-in-linq-to-entities-queries.md)
+- [LINQ to Entities Sorguları](queries-in-linq-to-entities.md)

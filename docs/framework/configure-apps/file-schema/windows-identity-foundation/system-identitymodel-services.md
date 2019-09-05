@@ -3,17 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943653"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251803"
 ---
 # <a name="systemidentitymodelservices"></a>\<System. IdentityModel. Services >
 WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma bölümü.  
   
- \<System. IdentityModel. Services >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System. IdentityModel. Services >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -43,7 +44,7 @@ WS-Federation protokolünü kullanarak kimlik doğrulaması için yapılandırma
  Sam ve `<system.identityModel.services>` wsfae ayarlarını sağlamak için uygulamanızın yapılandırma dosyasına bir bölüm ekleyin.  
   
 > [!IMPORTANT]
-> Kodunuzda talep tabanlı <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> erişim denetimi <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sağlamak için veya sınıfını kullanırken, yetkilendirme kararları almak için kullanılan talep Yetkilendirme Yöneticisi (<xref:System.Security.Claims.ClaimsAuthorizationManager>) ve ilkesi bir `<identityConfiguration>` Bu bölümdeki bir `<federationConfiguration>` öğeden örtük veya açık olarak başvurulan öğe. Daha fazla bilgi için [ \<FederationConfiguration >](federationconfiguration.md) öğesinin altındaki açıklamalara bakın.  
+> Kodunuzda talep tabanlı <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> erişim denetimi <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sağlamak için veya sınıfını kullanırken, yetkilendirme kararları almak için kullanılan talep Yetkilendirme Yöneticisi (<xref:System.Security.Claims.ClaimsAuthorizationManager>) ve ilkesi bir `<identityConfiguration>` Bu bölümdeki bir `<federationConfiguration>` öğeden örtük veya açık olarak başvurulan öğe. Daha fazla bilgi için [ \<FederationConfiguration >](federationconfiguration.md) **öğesinin altındaki açıklamalara** bakın.  
   
  `<system.identityModel.services>` Bölümü sınıfı<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> tarafından temsil edilir. Bölümünde yapılandırılan alt `<federationConfiguration>` öğelerin koleksiyonu <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> sınıfı tarafından temsil edilir.  
   

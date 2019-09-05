@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972179"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254066"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF masaüstü uygulamam
 
@@ -143,7 +143,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
 1. <xref:System.Windows.Controls.Page.Title%2A> "`ExpenseIt - Home`" Olarak ayarlayın.
 
-1. `DesignHeight` Ve`DesignWidth` öğesi değerlerini 300 piksel olarak ayarlayın.
+1. Öğesini 350 piksel `DesignWidth` ve ile 500 piksel olarak ayarlayın. `DesignHeight`
 
     XAML artık Visual Basic için aşağıdaki gibi görünür:
 
@@ -184,7 +184,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
 1. <xref:System.Windows.Controls.Page.Title%2A> "`ExpenseIt - View Expense`" Olarak ayarlayın.
 
-1. `DesignHeight` Ve`DesignWidth` öğesi değerlerini 300 piksel olarak ayarlayın.
+1. Öğesini 350 piksel `DesignWidth` ve ile 500 piksel olarak ayarlayın. `DesignHeight` 
 
     *ExpenseReportPage. xaml* artık Visual Basic ' de aşağıdakine benzer:
 
@@ -282,7 +282,7 @@ Her denetim, <xref:System.Windows.Controls.Grid> <xref:System.Windows.Controls.G
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
    > [!TIP]
-   > Ayrıca, denetimleri **araç kutusu** penceresinden tasarım penceresine sürükleyerek ve sonra Özellikler penceresinde özelliklerini ayarlayarak da oluşturabilirsiniz.
+   > Ayrıca, denetimleri **araç kutusu** penceresinden tasarım penceresine sürükleyerek ve sonra **Özellikler penceresinde özelliklerini** ayarlayarak da oluşturabilirsiniz.
 
 2. Uygulamayı derleyin ve çalıştırın.
 

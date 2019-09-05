@@ -1,34 +1,34 @@
 ---
-title: Dağıtım konuları (varlık çerçevesi)
+title: Dağıtım değerlendirmeleri (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 736de555c5731d08227c558115cb235650761cc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3e78fc413e50deda67aa8992179e500afa671f8d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633566"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251611"
 ---
-# <a name="deployment-considerations-entity-framework"></a>Dağıtım konuları (varlık çerçevesi)
-Bu konuda, veri erişimi için ADO.NET Entity Framework kullanan uygulamaları dağıtma hakkında bilgi sağlar. Varlık çerçevesi hakkında daha fazla bilgi için bkz: [Başlarken](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
+# <a name="deployment-considerations-entity-framework"></a>Dağıtım değerlendirmeleri (Entity Framework)
+Bu konuda, veri erişimi için ADO.NET Entity Framework kullanan uygulamaları dağıtma hakkında bilgi sağlanır. Entity Framework hakkında daha fazla bilgi için bkz. [Başlarken.](getting-started.md)  
   
- Entity Framework ile tümleştirin ve Visual Studio'da geliştirme daha kolay hale getirmek araçları kümesi sağlar. Daha fazla bilgi için [ADO.NET varlık veri modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). Bu konuda, Entity Framework tabanlı bir uygulama dağıtmak için belirli teknolojileri kullanmayı açıklamaz.  
+ Entity Framework, ile tümleşen bir araç kümesi sağlar ve Visual Studio 'da geliştirmeyi kolaylaştırır. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)). Bu konu, Entity Framework tabanlı bir uygulama dağıtmak için belirli teknolojilerin nasıl kullanılacağını tanımlamaz.  
   
- Visual Studio için dağıtma ve ClickOnce dağıtımı gibi dağıtmaya olanakları sağlar. Daha fazla bilgi için [dağıtımı uygulamaları ve bileşenleri](/visualstudio/deployment/deploying-applications-services-and-components) Visual Studio belgelerinde.  
+ Visual Studio, ClickOnce dağıtımı gibi uygulamaların dağıtılması ve dağıtılması için tesis sağlar. Daha fazla bilgi için bkz. Visual Studio belgelerindeki [Uygulamaları ve bileşenleri dağıtma](/visualstudio/deployment/deploying-applications-services-and-components) .  
   
- Entity Framework kullanan bir uygulamayı dağıttığınızda, aşağıdaki maddeler geçerlidir:  
+ Entity Framework kullanan bir uygulamayı dağıtırken aşağıdaki noktalar geçerlidir:  
   
-- Entity Framework, .NET Framework 3.5 Service Pack 1 ile (SP1) ile başlayan .NET Framework'ün bir bileşenidir. .NET Framework 3.5 SP1 veya sonraki bir sürümünü Entity Framework tabanlı bir uygulama dağıtırken yüklendiğinden emin olmalısınız.  
+- Entity Framework, .NET Framework 3,5 hizmet paketi 1 ' den (SP1) başlayarak .NET Framework bir bileşenidir. Entity Framework tabanlı bir uygulama dağıtımında .NET Framework 3,5 SP1 veya sonraki bir sürümün yüklü olduğundan emin olmanız gerekir.  
   
-- Varlık veri modeli Sihirbazı tarafından oluşturulan bir kavramsal model, bağlantı dizesini uygulama yapılandırma dosyasında oluşturulur. Model ve eşleme dosyalarını uygulama kaynakları eklenebilir veya çıkış dizinine kopyalanır. Varsayılan olarak, bunlar katıştırılmış uygulama kaynaklar olarak dağıtılır. Kullanım `Metadata Artifact Processing` özelliği varlık Tasarımcısı dosyasının bu seçeneklerden birini belirleyin. Daha fazla bilgi için [nasıl yapılır: Model kopyalayın ve çıkış dizinine dosyaları eşleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100)).  
+- Varlık Veri Modeli Sihirbazı tarafından kavramsal bir model oluşturulduğunda, uygulama yapılandırma dosyasında bir bağlantı dizesi oluşturulur. Model ve eşleme dosyaları uygulama kaynakları olarak gömülebilir veya çıkış dizinine kopyalanabilirler. Varsayılan olarak, katıştırılmış uygulama kaynakları olarak dağıtılır. Bu seçeneklerden birini belirlemek için Entity Desisgner dosyasının özelliğinikullanın.`Metadata Artifact Processing` Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını çıkış dizinine](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100))kopyalayın.  
   
-- Model ve eşleme (kavramsal şema tanım dili (CSDL), depo şeması tanım dili (SSDL) ve eşleme belirtimi dili (MSL) ifade edilir) bilgileri dağıtılan uygulamayla birlikte ve konumda emin olun bağlantı dizesi tarafından belirtilmiş. Daha fazla bilgi için [bağlantı dizeleri](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+- Model ve eşleme bilgilerinin (kavramsal şema tanım dili (CSDL), mağaza şeması tanım dili (SSDL) ve eşleme belirtimi dili (MSL) ile ifade edilen) uygulamayla ve konumda birlikte dağıtıldığından emin olun bağlantı dizesi tarafından belirtilen. Daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md).  
   
-- Model ve eşleme bilgileri uygulama kaynakları olarak katıştırma yeniden derleyin ve kavramsal model her güncelleştirildiğinde uygulama dağıtmanız gerekir.  
+- Model ve eşleme bilgilerini uygulama kaynakları olarak eklediğinizde, kavramsal model her güncelleştirildiği zaman uygulamayı yeniden derlemeniz ve yeniden dağıtmanız gerekir.  
   
-- Entity Framework, .NET Framework'ün bir bileşen olduğundan, .NET Framework lisans sözleşmenize göre izin verilen olarak uygulamanızla birlikte yeniden dağıtılabilir.  
+- Entity Framework, .NET Framework bir bileşeni olduğundan, .NET Framework lisans sözleşmesinin izin verdiği şekilde uygulamanızla birlikte yeniden dağıtılabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
-- [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [ADO.NET Entity Framework](index.md)
+- [Geliştirme ve Dağıtım Konuları](development-and-deployment-considerations.md)

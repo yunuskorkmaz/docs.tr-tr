@@ -1,56 +1,56 @@
 ---
-title: Tür sistemi (varlık SQL)
+title: Tür sistemi (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: d86c97834b9cc6698da8664ff2a09ceda7cc0043
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f9b41181d9a7a7f23123f2e1b71893000b34d4a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641226"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248933"
 ---
-# <a name="type-system-entity-sql"></a>Tür sistemi (varlık SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir dizi türlerini destekler:  
+# <a name="type-system-entity-sql"></a>Tür sistemi (Entity SQL)
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir dizi türü destekler:  
   
-- (Basit) temel türler gibi `Int32` ve `String.`  
+- `Int32` Ve gibi temel (basit) türler`String.`  
   
-- Şemada gibi tanımlı nominal türlerinden <xref:System.Data.Metadata.Edm.EntityType>, <xref:System.Data.Metadata.Edm.ComplexType>, ve <xref:System.Data.Metadata.Edm.RelationshipType>.  
+- <xref:System.Data.Metadata.Edm.RelationshipType>Şemasında <xref:System.Data.Metadata.Edm.EntityType> tanımlanan,,vegibideğerlernominaltürler<xref:System.Data.Metadata.Edm.ComplexType>.  
   
-- Şema içinde açıkça tanımlanmayan anonim türler: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, ve <xref:System.Data.Metadata.Edm.RefType>.  
+- Şemada tanımlanmamış anonim türler açıkça: <xref:System.Data.Metadata.Edm.CollectionType>, <xref:System.Data.Metadata.Edm.RowType>, ve <xref:System.Data.Metadata.Edm.RefType>.  
   
- Bu bölümde, ancak varlık SQL tarafından desteklenen şema içinde açıkça tanımlanmayan anonim türler açıklanmaktadır. Basit ve nominal türleri hakkında daha fazla bilgi için bkz. [kavramsal Model türleri (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl).  
+ Bu bölümde, şemada açıkça tanımlanmayan ancak Entity SQL tarafından desteklenen anonim türler açıklanmaktadır. İlkel ve nominal türler hakkında bilgi için bkz. [kavramsal model türleri (csdl)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl).  
   
-## <a name="rows"></a>Satırları  
- Satır oluşan yazılı ve adlandırılmış üyelerinin sırasını bir satırı yapısını bağlıdır. Satır türü kimliksiz sahiptir ve öğesinden devralınamaz. Üye sırasıyla eşdeğer ise aynı satır türü örneklerini eşdeğerdir. Satırları, yapısal denklik ötesinde davranışı yok ve ortak dil çalışma zamanı'nda eşdeğeri sahiptir. Satır veya satır koleksiyonu içeren yapıları, sorguları neden olabilir. API bağlama arasında [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular ve konak dil tanımlar satırları bir sonuç getirdi sorguda nasıl gerçekleşir. Bir satır örneği oluşturma hakkında daha fazla bilgi için bkz: [oluşturma türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+## <a name="rows"></a>Sütunları  
+ Bir satırın yapısı, yazılan ve satırın içerdiği adlandırılmış üyelerin dizisine bağlıdır. Bir satır türünün kimliği yok ve öğesinden devralınamıyor. Aynı satır türünün örnekleri, Üyeler sırasıyla eşdeğer olduğunda eşdeğerdir. Satırlarda yapısal denklik değerinin ötesinde hiçbir davranış yoktur ve ortak dil çalışma zamanına denk değildir. Sorgular, satırları veya satır koleksiyonlarını içeren yapılara yol açabilir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Sorgular ve ana bilgisayar dili arasındaki API bağı, sonuçları üreten sorguda satırların nasıl yapıldığını tanımlar. Satır örneği oluşturma hakkında daha fazla bilgi için bkz. [tür](constructing-types-entity-sql.md)oluşturma.  
   
 ## <a name="collections"></a>Koleksiyonlar  
- Koleksiyon türleri, sıfır veya daha fazla diğer nesnelerin örneklerini temsil eder. Koleksiyon oluşturma hakkında daha fazla bilgi için bkz: [oluşturma türleri](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Koleksiyon türleri, diğer nesnelerin sıfır veya daha fazla örneğini temsil eder. Koleksiyon oluşturma hakkında daha fazla bilgi için bkz. [tür](constructing-types-entity-sql.md)oluşturma.  
   
 ## <a name="references"></a>Referanslar  
- Bir başvuru, bir özel varlık kümesinde belirli bir varlığa mantıksal bir işaretçisidir.  
+ Başvuru, belirli bir varlık kümesindeki belirli bir varlığa yönelik mantıksal bir işaretçisidir.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oluşturun, ayrıştırma ve başvurular arasında gitmek için aşağıdaki işleçleri destekler:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)], başvuruları oluşturmak, oluşturmak ve bunlar arasında gezinmek için aşağıdaki işleçleri destekler:  
   
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
+- [REF](ref-entity-sql.md)  
   
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
+- [CREATEREF](createref-entity-sql.md)  
   
-- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+- [KEY](key-entity-sql.md)  
   
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+- [DEREF](deref-entity-sql.md)  
   
- Üye erişim (nokta) işlecini kullanarak başvuru gidebilirsiniz (`.`). Aşağıdaki kod parçacığı r (başvuru) özelliği üzerinden giderek (sıra), kimlik özelliği ayıklar.  
+ Üye erişimi (nokta) işlecini (`.`) kullanarak bir başvuruya gidebilirsiniz. Aşağıdaki kod parçacığı, r (Reference) özelliğinde gezinerek ID özelliğini (sıra) ayıklar.  
   
 ```  
 select o2.r.Id   
 from (select ref(o) as r from LOB.Orders as o) as o2   
 ```  
   
- Başvuru değeri null ise veya başvuru hedefinin yoksa sonuç NULL'dur.  
+ Başvuru değeri null ise veya başvurunun hedefi yoksa sonuç null olur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)
-- [CSDL, SSDL ve MSL Belirtimleri](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [CAST](cast-entity-sql.md)
+- [CSDL, SSDL ve MSL Belirtimleri](csdl-ssdl-and-msl-specifications.md)

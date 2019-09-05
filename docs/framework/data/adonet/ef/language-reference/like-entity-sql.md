@@ -2,12 +2,12 @@
 title: Beğen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912279"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250508"
 ---
 # <a name="like-entity-sql"></a>Beğen (Entity SQL)
 Belirli bir karakterin `String` belirtilen bir Düzenle eşleşip eşleşmediğini belirler.  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Örnek  
  Aşağıdaki iki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, belirli bir karakter dizesinin belirtilen bir Düzenle eşleşip eşleşmediğini anlamak için LIKE ve kaçış işleçlerini kullanır. İlk sorgu, karakterlerle `Name` `Down_`başlayan öğesini arar. Alt çizgi (`_`) bir joker karakter olduğundan bu sorgu kaçış seçeneğini kullanır. Kaçış seçeneğini belirtmeden, sorgu, ardından alt çizgi karakteri dışında bir `Name` tek karakter gelen kelimeyle `Down` başlayan tüm değerleri arar. Sorgular AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
 2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

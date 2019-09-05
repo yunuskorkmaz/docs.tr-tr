@@ -5,119 +5,119 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79a14e787b4fe1aa1b16ad661b11a43b12bdd718
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032895"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247374"
 ---
 # <a name="data-binding"></a>Veri Bağlama
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Kılavuz denetimleri gibi ortak denetimler bağlama destekler. Özellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri kılavuzu için bağlama ve ana öğe-ayrıntı bağlama, hem görüntüleme ve güncelleştirme işleme için temel desenleri tanımlar.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]kılavuz denetimleri gibi ortak denetimlere bağlamayı destekler. Özellikle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veri kılavuzuna bağlama ve Master-Detail bağlamasını işleme için temel desenleri tanımlar ve bunların her ikisi de görüntüleme ve güncelleştirme ' ye göre yapılır.
 
-## <a name="underlying-principle"></a>Temel alınan İlkesi
+## <a name="underlying-principle"></a>Temel Ilke
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL sorguları yürütme bir veritabanı için. Sonuçları kesin `IEnumerable`. Bu nesneler Normal ortak dil çalışma zamanı (CLR) nesneleri olduğundan, sıradan bir nesne veri bağlama sonuçları görüntülemek için kullanılabilir. Öte yandan, değişiklik işlemleri (ekleme, güncelleştirme ve silme) ek adımlar gerektirir.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bir [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] veritabanında yürütmek için sorguları SQL 'e çevirir. Sonuçlar kesin olarak türdedir `IEnumerable`. Bu nesneler sıradan ortak dil çalışma zamanı (CLR) nesneleri olduğundan, sonuçları göstermek için sıradan nesne veri bağlama kullanılabilir. Diğer taraftan, değiştirme işlemleri (ekler, güncelleştirmeler ve silmeler) ek adımlar gerektirir.
 
 ## <a name="operation"></a>Çalışma
 
-Windows Forms denetimleri için örtük olarak bağlama gerçekleştirilir uygulayarak <xref:System.ComponentModel.IListSource>. Genel veri kaynakları <xref:System.Data.Linq.Table%601> (`Table<T>` içinde C# veya `Table(Of T)` Visual Basic'te) ve genel `DataQuery` uygulamak için güncelleştirilen <xref:System.ComponentModel.IListSource>. Kullanıcı Arabirimi (UI) veri bağlama altyapısı (Windows Forms ve Windows Presentation Foundation) hem de uygular, veri kaynağı olup olmadığını test <xref:System.ComponentModel.IListSource>. Bu nedenle, sorgu doğrudan bir affectation bir veri kaynağına bir denetimin örtük olarak çağrıları yazma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki örnekte olduğu gibi koleksiyon oluşturma:
+Windows Forms denetimlerine örtük olarak bağlama, uygulama <xref:System.ComponentModel.IListSource>tarafından gerçekleştirilir. Veri kaynakları genel <xref:System.Data.Linq.Table%601> (`Table<T>` Visual Basic C# içinde `Table(Of T)` veya içinde) ve genel `DataQuery` , uygulamak <xref:System.ComponentModel.IListSource>üzere güncelleştirilmiştir. Kullanıcı arabirimi (UI) veri bağlama motorları (Windows Forms ve Windows Presentation Foundation) her ikisi de veri kaynağının <xref:System.ComponentModel.IListSource>uygulanıp gösterilmeyeceğini test edin. Bu nedenle, bir denetimin veri kaynağına bir sorgunun doğrudan affectation yazmak, aşağıdaki örnekte olduğu gibi, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] koleksiyon oluşturmayı dolaylı olarak çağırır:
 
 [!code-csharp[DLinqDataBinding#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#1)]
 [!code-vb[DLinqDataBinding#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#1)]
 
-Aynı Windows Presentation Foundation ile oluşur:
+Aynı durum Windows Presentation Foundation oluşur:
 
 [!code-csharp[DLinqDataBinding#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDataBinding/cs/Program.cs#2)]
 [!code-vb[DLinqDataBinding#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDataBinding/vb/Module1.vb#2)]
 
-Toplama kuşakları genel uygulanan <xref:System.Data.Linq.Table%601> ve genel `DataQuery` içinde <xref:System.ComponentModel.IListSource.GetList%2A>.
+Koleksiyon oluşturmaları, içinde <xref:System.Data.Linq.Table%601> <xref:System.ComponentModel.IListSource.GetList%2A>genel ve genel `DataQuery` olarak uygulanır.
 
-## <a name="ilistsource-implementation"></a>IListSource uygulama
+## <a name="ilistsource-implementation"></a>ISource uygulama
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulayan <xref:System.ComponentModel.IListSource> iki konumda:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]iki <xref:System.ComponentModel.IListSource> konumda uygular:
 
-- Veri kaynağı bir <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gözatar tabloyu doldurmak için bir `DataBindingList` tablosunda bir başvuru tutan bir koleksiyon.
+- Veri kaynağı bir <xref:System.Data.Linq.Table%601>: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tabloya bir başvuru tutan bir `DataBindingList` koleksiyonu dolduracak şekilde tabloya gözatar.
 
 - Veri kaynağı bir <xref:System.Linq.IQueryable%601>. İki senaryo vardır:
 
-  - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulur <xref:System.Data.Linq.Table%601> gelen <xref:System.Linq.IQueryable%601>, kaynak sürümü için izin verir ve ilk madde işaretinde olduğu gibi bir durumdur.
+  - <xref:System.Data.Linq.Table%601> ,Öğesinden<xref:System.Linq.IQueryable%601>temel alınan öğesini bulursa,kaynaksürümeizinverirvedurumilkmaddeişaretinoktasıylaaynıolur.[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]
 
-  - Varsa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] temel bulunamıyor <xref:System.Data.Linq.Table%601>, kaynak sürümü için izin vermez (örneğin, `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Genel doldurmak için sorgu gözatar `SortableBindingList`, basit olduğu <xref:System.ComponentModel.BindingList%601> , belirli bir özellik için T varlıklar için sıralama özelliği uygular.
+  - Temel arama bulamazsa, kaynak sürüme izin vermez (örneğin, `groupby`). <xref:System.Data.Linq.Table%601> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]belirli bir özellik için T varlıklarının sıralama `SortableBindingList`özelliğini uygulayan basit <xref:System.ComponentModel.BindingList%601> olan, genel olarak dolduracak şekilde sorguya göz atar.
 
 ## <a name="specialized-collections"></a>Özelleştirilmiş Koleksiyonlar
 
-Bu belgede daha önce açıklanan birçok özellik için <xref:System.ComponentModel.BindingList%601> bazı farklı sınıfları için özel. Bu sınıfların genel `SortableBindingList` ve genel `DataBindingList`. Her ikisi de internal olarak bildirilir.
+Bu belgede <xref:System.ComponentModel.BindingList%601> daha önce açıklanan birçok özellik için bazı farklı sınıflarda özelleştirilmiş. Bu sınıflar genel `SortableBindingList` ve geneldir `DataBindingList`. Her ikisi de iç olarak bildirilmiştir.
 
 ### <a name="generic-sortablebindinglist"></a>Genel SortableBindingList
 
-Bu sınıf devraldığı <xref:System.ComponentModel.BindingList%601>, ve sıralanabilir bir sürümü <xref:System.ComponentModel.BindingList%601>. Sıralama, bir bellek içi çözümüdür ve hiçbir zaman veritabanı ile iletişim kurar. <xref:System.ComponentModel.BindingList%601> uygulayan <xref:System.ComponentModel.IBindingList> ancak varsayılan olarak sıralamayı desteklemiyor. Ancak, <xref:System.ComponentModel.BindingList%601> uygulayan <xref:System.ComponentModel.IBindingList> sanal *çekirdek* yöntemleri. Bu yöntemler, bir kolayca kılabilirsiniz. Genel `SortableBindingList` geçersiz kılmalar <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>, <xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A>, <xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A>, ve <xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore` çağıran <xref:System.ComponentModel.IBindingList.ApplySort%2A> ve belirli bir özellik için T öğelerin listesini sıralar.
+Bu sınıf öğesinden <xref:System.ComponentModel.BindingList%601>devralır ve sıralanabilir bir <xref:System.ComponentModel.BindingList%601>sürümüdür. Sıralama, bellek içi bir çözümdür ve veritabanının kendisiyle hiçbir şekilde iletişim kurar. <xref:System.ComponentModel.BindingList%601>uygular <xref:System.ComponentModel.IBindingList> ancak varsayılan olarak sıralamayı desteklemez. Ancak, <xref:System.ComponentModel.BindingList%601> sanal <xref:System.ComponentModel.IBindingList> *çekirdek* yöntemleriyle uygular. Bu yöntemleri kolayca geçersiz kılabilirsiniz. Genel `SortableBindingList` geçersiz <xref:System.ComponentModel.BindingList%601.SupportsSortingCore%2A>kılmalar ,<xref:System.ComponentModel.BindingList%601.SortPropertyCore%2A> ,<xref:System.ComponentModel.BindingList%601.SortDirectionCore%2A>, ve<xref:System.ComponentModel.BindingList%601.ApplySortCore%2A>. `ApplySortCore`tarafından <xref:System.ComponentModel.IBindingList.ApplySort%2A> çağrılır ve belirli bir özellik için T öğelerinin listesini sıralar.
 
-Özellik T'ye ait değilse bir özel durum oluşturulur
+Özellik T 'ye ait değilse bir özel durum tetiklenir.
 
-Sıralama, elde etmek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genel oluşturur `SortableBindingList.PropertyComparer` genel devralan sınıf <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> ve T verilen tür için bir varsayılan karşılaştırıcı uygular, `PropertyDescriptor`ve bir yönü. Bu sınıf dinamik olarak bir `Comparer` Burada T, t `PropertyType` , `PropertyDescriptor`. Ardından, varsayılan karşılaştırıcı statik genel alınır `Comparer`. Varsayılan bir örnek, yansıma yoluyla alınır.
+Sıralamayı başarmak için, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genel <xref:System.Collections.Generic.Comparer%601.System%23Collections%23IComparer%23Compare%2A> 'den devralan `SortableBindingList.PropertyComparer` genel bir sınıf oluşturur ve belirli bir tür T, a `PropertyDescriptor`ve yön için varsayılan bir karşılaştırıcı uygular. Bu sınıf dinamik olarak t `Comparer` `PropertyType` 'in öğesinin `PropertyDescriptor`bulunduğu bir t 'yi oluşturur. Ardından, varsayılan karşılaştırıcı statik genel `Comparer`' ten alınır. Varsayılan örnek yansıma kullanılarak elde edilir.
 
-Genel `SortableBindingList` de temel sınıfı olan `DataBindingList`. Genel `SortableBindingList` askıya alma veya sürdürme öğeleri için iki sanal yöntemler ekleme/kaldırma izleme sunar. Bu iki yöntem sıralama gibi temel özellikleri için kullanılabilir, ancak gerçekten üst sınıflar gibi genel tarafından uygulanacaktır `DataBindingList`.
+Genel `SortableBindingList` Ayrıca için `DataBindingList`temel sınıftır. Genel `SortableBindingList` , öğe ekleme/kaldırma izleme için iki sanal yöntem sunar. Bu iki yöntem sıralama gibi temel özellikler için kullanılabilir, ancak gerçekten genel `DataBindingList`gibi üst sınıflar tarafından uygulanır.
 
 ### <a name="generic-databindinglist"></a>Genel DataBindingList
 
-Bu sınıf genel devralır `SortableBindingLIst`. Genel `DataBindingList` genel arka plandaki üzerinde bir başvuru tutar `Table` genel, `IQueryable` koleksiyonun ilk doldurma için kullanılır. Genel `DatabindingList` izleme öğesi Ekle/Kaldır için'geçersiz kılarak koleksiyonuna ekler `InsertItem`() ve `RemoveItem`(). Ayrıca, soyut askıya alma/izleme özelliğini izleme koşullu olarak yapmak için sürdürme uygular. Bu özellik genel kılar `DataBindingList` sınıfları izleme özelliğinin bir üst grubun tüm polimorfik kullanım yararlanın.
+Bu sınıf genel `SortableBindingLIst`öğesinden devralır. Genel `DataBindingList` , koleksiyonun ilk doldurulmasıyla ilgili genel `Table` `IQueryable` genel genelin temel alınarak bir başvuruyu tutar. Genel `DatabindingList` , () ve `RemoveItem`() üzerine `InsertItem`yazarak koleksiyona ekleme/kaldırma öğesi için izleme ekler. Ayrıca, izleme koşullu yapmak için soyut askıya alma/yeniden başlatma izleme özelliğini uygular. Bu özellik genel `DataBindingList` kullanıma sunar ve üst sınıfların izleme özelliğinin tüm polimoral kullanımlarından yararlanır.
 
-## <a name="binding-to-entitysets"></a>Entityset'i bağlama
+## <a name="binding-to-entitysets"></a>EntitySets 'lere bağlama
 
-Bağlama `EntitySet` özel bir durum olduğundan `EntitySet` uygulayan koleksiyondan zaten <xref:System.ComponentModel.IBindingList>. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sıralama ve iptal etme ekler (<xref:System.ComponentModel.ICancelAddNew>) destekler. Bir `EntitySet` sınıfı, varlıkları depolamak için bir iç listesi kullanır. Bu bir listedir genel bir genel dizi göre düşük düzeyde bir toplama `ItemList` sınıfı.
+' A bağlama <xref:System.ComponentModel.IBindingList> `EntitySet` `EntitySet` işlemi, zaten uygulayan bir koleksiyon olduğundan özel bir durumdur. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sıralama ve iptal etme (<xref:System.ComponentModel.ICancelAddNew>) desteği ekler. Bir `EntitySet` sınıf varlıkları depolamak için iç liste kullanır. Bu liste, genel bir diziyi, genel `ItemList` sınıfını temel alan alt düzey bir koleksiyondur.
 
 ### <a name="adding-a-sorting-feature"></a>Sıralama özelliği ekleme
 
-Diziler sunan sort yöntemi (`Array.Sort()`) ile kullanılabilecek bir `Comparer` t, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genel kullanır `SortableBindingList.PropertyComparer` bunu elde etmek için bu konuda daha önce açıklanan sınıfı `Comparer` özelliği ve üzerinde sıralanacak yönü. Bir `ApplySort` yöntemi için genel eklenen `ItemList` bu özellik çağırmak için.
+Diziler, bir `Comparer` T ile kullanabileceğiniz`Array.Sort()`bir sıralama yöntemi () sunar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bu `Comparer` , özelliği ve sıralanacak yönü almak `SortableBindingList.PropertyComparer` için bu konuda daha önce açıklanan genel sınıfı kullanır. Bu `ApplySort` özelliği çağırmak için bir yöntem `ItemList` genel 'e eklenir.
 
-Üzerinde `EntitySet` tarafı, artık sahip olduğunuz sıralama desteği bildirmek:
+`EntitySet` Tarafında, artık sıralama desteği bildirmeniz gerekir:
 
-- <xref:System.ComponentModel.IBindingList.SupportsSorting%2A> döndürür `true`.
+- <xref:System.ComponentModel.IBindingList.SupportsSorting%2A>döndürür `true`.
 
-- <xref:System.ComponentModel.IBindingList.ApplySort%2A> çağrıları `entities.ApplySort()` ardından `OnListChanged()`.
+- <xref:System.ComponentModel.IBindingList.ApplySort%2A>çağırır `entities.ApplySort()` ve sonra `OnListChanged()`.
 
-- <xref:System.ComponentModel.IBindingList.SortDirection%2A> ve <xref:System.ComponentModel.IBindingList.SortProperty%2A> özellikleri yerel Üyeler'de depolanan geçerli sıralama tanımını gösterin.
+- <xref:System.ComponentModel.IBindingList.SortDirection%2A>ve <xref:System.ComponentModel.IBindingList.SortProperty%2A> özellikleri, yerel üyelerde depolanan geçerli sıralama tanımını kullanıma sunar.
 
-Ne zaman bir System.Windows.Forms.BindingSource kullanın ve bir EntitySet bağlama\<TEntity > System.Windows.Forms.BindingSource.DataSource için EntitySet çağırmalıdır\<TEntity >. GetNewBindingList BindingSource.List güncelleştirilecek.
+System. Windows. Forms. BindingSource 'u kullandığınızda ve System. Windows. Forms\<. BindingSource. DataSource 'a bir EntitySet TEntity > bağladığınızda, EntitySet\<TEntity > çağırmanız gerekir. BindingSource. List öğesini güncelleştirmek için GetNewBindingList.
 
-Bir System.Windows.Forms.BindingSource kullanın BindingSource.DataMember özelliğini ayarlayın ve Entityset'i sunan BindingSource.DataMember içinde adında bir özelliğe sahip bir sınıf için BindingSource.DataSource ayarlayın,\<TEntity >, EntitySet çağırmak zorunda değilsiniz\<TEntity >. BindingSource.List ancak güncelleştirilecek GetNewBindingList sıralama özelliğini kaybedersiniz.
+Bir System. Windows. Forms. BindingSource kullanın ve BindingSource. DataMember özelliğini ve BindingSource. DataSource ' ı\<TEntity > sunan BindingSource. DataMember içinde adlı bir sınıfa ayarlarsanız, EntitySet\<TEntity > çağırmanız gerekmez. BindingSource. List öğesini güncelleştirmek için GetNewBindingList. ancak sıralama özelliğini kaybedersiniz.
 
 ## <a name="caching"></a>Önbelleğe Alma
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları <xref:System.ComponentModel.IListSource.GetList%2A>. Windows Forms BindingSource sınıfı bu arabirimi karşıladığında threes için tek bir bağlantı zaman GetList() çağırır. Bu durumu çözmek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] depolamak ve her zaman aynı oluşturulan koleksiyon döndürmek için örnek başına bir önbellek uygular.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sorgular uygular <xref:System.ComponentModel.IListSource.GetList%2A>. Windows Forms BindingSource sınıfı bu arabirimi karşılıyorsa, tek bir bağlantı için GetList () Threes saatini çağırır. Bu durumu geçici olarak çözmek için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , depolanacak örnek başına bir önbellek uygular ve her zaman aynı oluşturulmuş koleksiyonu döndürür.
 
 ## <a name="cancellation"></a>İptal Etme
 
-<xref:System.ComponentModel.IBindingList> tanımlayan bir <xref:System.ComponentModel.IBindingList.AddNew%2A> denetimleri tarafından bağlanmış bir derlemeden yeni bir öğe oluşturmak için kullanılan yöntem. `DataGridView` Bu özellik çok iyi kendi üst bilgisindeki bir yıldız görünür son satır içerdiğinde denetimi gösterir. Yıldız yeni bir öğe ekleyebileceğiniz gösterilmektedir.
+<xref:System.ComponentModel.IBindingList>bir bağlantılı <xref:System.ComponentModel.IBindingList.AddNew%2A> koleksiyondan yeni bir öğe oluşturmak için denetimler tarafından kullanılan bir yöntemi tanımlar. Denetim `DataGridView` , son görünür satır üst bilgisinde yıldız içerdiğinde bu özelliğin çok iyi olduğunu gösterir. Yıldız, size yeni bir öğe ekleyebilmeniz gerektiğini gösterir.
 
-Bu özellik ek olarak, bir koleksiyon de uygulayabilirsiniz <xref:System.ComponentModel.ICancelAddNew>. Bu özellik, öğe veya doğrulandı iptal etme veya yeni düzenlenebilir olduğunu doğrulamak için denetimleri sağlar.
+Bu özelliğe ek olarak, bir koleksiyon da <xref:System.ComponentModel.ICancelAddNew>uygulanabilir. Bu özellik, denetimlerin yeni düzenlenmiş öğenin doğrulanıp doğrulanmadığını veya doğrulamasını sağlar.
 
-<xref:System.ComponentModel.ICancelAddNew> Tüm uygulanan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] databound koleksiyonları (genel `SortableBindingList` ve genel `EntitySet`). Her iki uygulamada da bulunan kodu aşağıdaki şekilde gerçekleştirir:
+<xref:System.ComponentModel.ICancelAddNew>Tüm [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlama koleksiyonlarında (genel `SortableBindingList` ve genel `EntitySet`) uygulanır. Her iki uygulamada da kod aşağıdaki gibi gerçekleştirilir:
 
-- Sağlar öğeleri eklenebilecek ve sonra koleksiyondan kaldırılır.
+- Öğelerin eklenmesine ve sonra koleksiyondan kaldırılmasına izin verir.
 
-- Kullanıcı Arabirimi sürümü kaydetmeyen bir işlevi sürece değişiklikleri izlemiyor.
+- , Kullanıcı arabirimi sürümü yürütmediğinden değişiklikleri izlemez.
 
-- Sürüm iptal sürece değişiklikleri izlemiyor (<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>).
+- , Sürüm iptal edildiği (<xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>) sürece değişiklikleri izlemez.
 
-- Sürüm işlendiğinde izleme sağlar (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>).
+- Sürüm yürütüldüğü zaman izlemeye izin verir (<xref:System.ComponentModel.ICancelAddNew.EndNew%2A>).
 
-- Yeni öğe nereden geliyor değil, normal şekilde davranır koleksiyonu sağlar <xref:System.ComponentModel.IBindingList.AddNew%2A>.
+- Yeni öğe <xref:System.ComponentModel.IBindingList.AddNew%2A>geldiği takdirde koleksiyonun normal şekilde davranmasına izin verir.
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Bu bölümde gidermenize yardımcı olabilecek birkaç öğeleri çağırır, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlama uygulamaları.
+Bu bölüm, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veri bağlama uygulamalarınızın sorunlarını gidermenize yardımcı olabilecek birkaç öğeyi çağırır.
 
-- Özellikleri kullanmanız gerekir; yalnızca alanlara kullanarak yeterli değildir. Windows Forms, bu kullanımı gerektirir.
+- Özellikleri kullanmanız gerekir; yalnızca alanların kullanılması yeterli değildir. Windows Forms Bu kullanımı gerektirir.
 
-- Varsayılan olarak, `image`, `varbinary`, ve `timestamp` veritabanı türleriyle eşlenmesini bayt dizisi. Çünkü `ToString()` desteklenmeyen Bu senaryoda, bu nesneler görüntülenemiyor.
+- Varsayılan `image` `timestamp` olarak,, ,veveritabanıtürleribaytdizisineeşlenir.`varbinary` `ToString()` Bu senaryoda desteklenmediğinden, bu nesneler görüntülenemez.
 
-- Bir ayarlayıcı birincil anahtara eşlenen bir sınıf üyesine sahiptir ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne kimliği değişikliğini desteklemez. Bu nedenle, eşlemede kullanılan birincil/benzersiz anahtar veritabanında güncelleştirilemez. Çağırdığınızda kılavuzundaki bir değişiklik neden olan bir özel durum <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.
+- Birincil anahtarla eşlenmiş bir sınıf üyesinin bir ayarlayıcısı vardır, ancak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne kimliği değişikliğini desteklemez. Bu nedenle, eşlemede kullanılan birincil/benzersiz anahtar veritabanında güncelleştirilemez. Kılavuzda bir değişiklik, çağırdığınızda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>bir özel duruma neden olur.
 
-- Varlığın iki ayrı kılavuzlarda (örneğin, bir ana ve başka bir ayrıntı) bağlıysa bir `Delete` ayrıntılı kılavuz için ana kılavuz dağıtılmaz.
+- Bir varlık iki ayrı kılavuzla (örneğin, bir ana ve başka bir ayrıntı) bağlanmışsa, ana kılavuzdaki bir `Delete` , ayrıntı kılavuzuna yayılmaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Arka Plan Bilgileri](background-information.md)

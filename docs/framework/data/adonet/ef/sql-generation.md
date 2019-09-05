@@ -2,30 +2,30 @@
 title: SQL Üretimi
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c18e88967fcba2b8414bfc171412eba908002b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879159"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248410"
 ---
 # <a name="sql-generation"></a>SQL Üretimi
-Sağlayıcı için yazdığınız zaman [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], çevirme gerekir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] belirli bir veritabanı için SQL Server Transact-SQL veya PL/SQL Oracle gibi anlayabilmeniz SQL içine ağaçları komutu. Bu bölümde, için SQL oluşturma bileşeni (için SELECT sorgusu) geliştirme hakkında bilgi edineceksiniz bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı. Ekleme hakkında bilgi için güncelleştirme ve sorguları silmek için bkz [değişiklik SQL oluşturma](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
+İçin [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]bir sağlayıcı yazdığınızda, komut ağaçlarını, belirli bir veritabanının [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] anlayabileceği şekilde SQL 'e çevirmeniz gerekir, örneğin SQL Server için Transact-SQL veya Oracle için PL/SQL. Bu bölümde, bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcının SQL oluşturma bileşeni (seçme sorguları için) geliştirmeyi öğreneceksiniz. Ekleme, güncelleştirme ve silme sorguları hakkında daha fazla bilgi için bkz. [DEĞIŞIKLIK SQL oluşturma](modification-sql-generation.md).  
   
- Bu bölümde anlamak için aşina olmalısınız [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve ADO.NET sağlayıcısı modeli. Komut ağaçlarının de anlamanız gerekir ve <xref:System.Data.Common.CommandTrees.DbExpression>.  
+ Bu bölümü anlamak için [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ve ADO.NET sağlayıcı modeliyle ilgili bilgi sahibi olmanız gerekir. Komut ağaçlarını ve <xref:System.Data.Common.CommandTrees.DbExpression>de anlamanız gerekir.  
   
-## <a name="the-role-of-the-sql-generation-module"></a>SQL üretimi modülü rolü  
- SQL üretimi modülün bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcısı bir SQL:1999 hedefleyen bir tek SQL SELECT INTO deyimi belirli sorgu komut ağacı çevirir-uyumlu veritabanı. Oluşturulan SQL kadar az sorguları mümkün olduğunca iç içe. SQL üretimi modülü çıkış sorgu komut ağacı basitleştirin değil. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Örneğin ardışık filtre düğümlerinin daraltma ve birleşimler ortadan kaldırarak bunu.  
+## <a name="the-role-of-the-sql-generation-module"></a>SQL oluşturma modülünün rolü  
+ Bir [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sağlayıcının SQL oluşturma modülü, belirli bir sorgu komut ağacını SQL: 1999 ile uyumlu bir veritabanını hedefleyen tek bir SQL SELECT ifadesine dönüştürür. Oluşturulan SQL 'in mümkün olduğunca az sayıda iç içe sorgusu olmalıdır. SQL oluşturma modülü çıkış sorgusu komut ağacını basitleştirmemelidir. Bu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , örneğin, birleştirmeleri ortadan kaldırarak ve ardışık filtre düğümlerini daraltarak bu şekilde yapılır.  
   
- <xref:System.Data.Common.DbProviderServices> Sınıftır içine komut ağaçlarını dönüştürmek için SQL oluşturma katmanında erişmek için başlangıç noktası <xref:System.Data.Common.DbCommand>.  
+ Sınıfı, komut <xref:System.Data.Common.DbCommand>ağaçlarını dönüştürmek için SQL oluşturma katmanına erişmenin başlangıç noktasıdır. <xref:System.Data.Common.DbProviderServices>  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Komut Ağaçlarının Şekli](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
+ [Komut Ağaçlarının Şekli](the-shape-of-the-command-trees.md)  
   
- [Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler](generating-sql-from-command-trees-best-practices.md)  
   
- [Örnek Sağlayıcısında SQL Oluşturma](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
+ [Örnek Sağlayıcısında SQL Oluşturma](sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity Framework Veri Sağlayıcısı Yazma](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Entity Framework Veri Sağlayıcısı Yazma](writing-an-ef-data-provider.md)

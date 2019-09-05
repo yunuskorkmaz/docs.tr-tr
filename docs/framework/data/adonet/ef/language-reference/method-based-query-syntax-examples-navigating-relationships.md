@@ -5,49 +5,49 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 56ae913da3ca06a08b5bacc5ce225597980467a6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539455"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250143"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: İlişkilerde Geziniliyor
-Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ilişkilendirme ucunda varlıkları bulmak için kullanılan kısayol özellik. Bir varlıktan diğerine giderler veya ilgili varlıkları ilişkilendirme aracılığıyla tek bir varlık kümesi bir kullanıcı Gezinti özellikleri sağlar. Bu konu, gezinti özellikleri LINQ to Entities sorgularında ile ilişkilerde gezinme konusunda metot tabanlı sorgu söz dizimi örnekler sağlar.  
+İçindeki gezinti özellikleri, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] varlıkların sonunda varlıkları bulmak için kullanılan kısayol özellikleridir. Gezinti özellikleri, bir kullanıcının bir varlıktan diğerine veya bir varlıktan bir ilişki kümesi aracılığıyla ilgili varlıklara dolaşmayı sağlar. Bu konu, LINQ to Entities sorgularda gezinti özellikleri aracılığıyla ilişkilerde nasıl geziniminin Yöntem tabanlı sorgu söz dizimine örnekler sağlar.  
   
- Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
+ Bu örneklerde kullanılan AdventureWorks Sales modeli, AdventureWorks örnek veritabanındaki Contact, Address, Product, SalesOrderHeader ve SalesOrderDetail tablolarından oluşturulmuştur.  
   
- Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
+ Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
 ## <a name="example"></a>Örnek  
- Metot tabanlı sorgu söz dizimi kullanan aşağıdaki örnekte <xref:System.Linq.Queryable.SelectMany%2A> Soyadı tüm siparişleri kişileri almak için yöntemi olan "Zhou". `Contact.SalesOrderHeader` Koleksiyonu almak için kullanılan gezinme özelliği `SalesOrderHeader` her kişi için nesneleri.  
+ Yöntem tabanlı sorgu sözdiziminde aşağıdaki örnek, son adı "Zhou <xref:System.Linq.Queryable.SelectMany%2A> " olan kişilerin tüm emirlerini almak için yöntemini kullanır. Gezinti özelliği, her bir kişinin `SalesOrderHeader` nesne koleksiyonunu almak için kullanılır. `Contact.SalesOrderHeader`  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders_mq)]
  [!code-vb[DP L2E Examples#SelectEachContactsOrders_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selecteachcontactsorders_mq)]  
   
 ## <a name="example"></a>Örnek  
- Metot tabanlı sorgu söz dizimi aşağıdaki örnekte kullanan <xref:System.Linq.Queryable.Select%2A> tüm kişi kimliklerini almak için yöntemi ve Soyadı her kişi için toplam süre "Zhou" toplamıdır. `Contact.SalesOrderHeader` Koleksiyonu almak için kullanılan gezinme özelliği `SalesOrderHeader` her kişi için nesneleri. `Sum` Yöntemi kullanan `Contact.SalesOrderHeader` toplam toplamak için gezinme özelliği her kişi için tüm siparişleri son.  
+ Yöntem tabanlı sorgu sözdiziminde aşağıdaki örnek, son adı "Zhou <xref:System.Linq.Queryable.Select%2A> " olan her kişi için tüm iletişim kimliklerini ve toplam toplamı almak için yöntemini kullanır. Gezinti özelliği, her bir kişinin `SalesOrderHeader` nesne koleksiyonunu almak için kullanılır. `Contact.SalesOrderHeader` Yöntemi, her bir `Contact.SalesOrderHeader` kişi için tüm siparişlerin ödenmesi gereken toplam miktarı toplamak için gezinti özelliğini kullanır. `Sum`  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders2_mq)]
  [!code-vb[DP L2E Examples#SelectEachContactsOrders2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selecteachcontactsorders2_mq)]  
   
 ## <a name="example"></a>Örnek  
- Metot tabanlı sorgu söz dizimi aşağıdaki örnekte, "Zhou" Soyadı olan kişileri tüm siparişleri alır. `Contact.SalesOrderHeader` Koleksiyonu almak için kullanılan gezinme özelliği `SalesOrderHeader` her kişi için nesneleri. Kişinin adı ve sipariş anonim bir tür döndürülür.  
+ Yöntem tabanlı sorgu sözdiziminde aşağıdaki örnek, son adı "Zhou" olan kişilerin tüm emirlerini alır. Gezinti özelliği, her bir kişinin `SalesOrderHeader` nesne koleksiyonunu almak için kullanılır. `Contact.SalesOrderHeader` Kişinin adı ve siparişleri anonim bir türde döndürülür.  
   
  [!code-csharp[DP L2E Examples#SelectEachContactsOrders3_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selecteachcontactsorders3_mq)]
  [!code-vb[DP L2E Examples#SelectEachContactsOrders3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selecteachcontactsorders3_mq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `SalesOrderHeader.Address` ve `SalesOrderHeader.Contact` koleksiyonu almak için Gezinti özellikleri `Address` ve `Contact` her siparişle ilişkili nesneleri. Her bir siparişe şehri Seattle döndürülür için anonim bir tür içinde olan sokak adresi kişinin soyadı sayısı ve toplam süre satış siparişi.  
+ `SalesOrderHeader.Address` Aşağıdaki örnek, ve ' nin `SalesOrderHeader.Contact` her bir `Address` siparişle ilişkili nesneleri ve `Contact` koleksiyonunu almak için ve gezinti özelliklerini kullanır. Kişinin Soyadı, sokak adresi, satış siparişi numarası ve Seattle şehrine yönelik her bir sipariş için bir anonim türde döndürülen toplam ad.  
   
  [!code-csharp[DP L2E Examples#GetOrderInfoThruRelationships_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#getorderinfothrurelationships_mq)]
  [!code-vb[DP L2E Examples#GetOrderInfoThruRelationships_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#getorderinfothrurelationships_mq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Where` 1 Aralık 2003 sonra yapıldığı siparişleri bulmak için yöntem ve kullandığı `order.SalesOrderDetail` her siparişi için ayrıntıları almak için gezinme özelliği.  
+ Aşağıdaki örnek, 1 Aralık `Where` 2003 ' den sonra yapılan siparişleri bulmak için yöntemini kullanır ve ardından her bir siparişin ayrıntılarını almak `order.SalesOrderDetail` için gezinti özelliğini kullanır.  
   
  [!code-csharp[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#wherenavproperty)]
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
@@ -55,4 +55,4 @@ Gezinti özellikleri [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-m
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İlişkiler, gezinti özellikleri ve yabancı anahtarlar](/ef/ef6/fundamentals/relationships)
-- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities Sorguları](queries-in-linq-to-entities.md)

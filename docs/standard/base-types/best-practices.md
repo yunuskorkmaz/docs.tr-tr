@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: a945c53f3206f29cf2b07fea86ba3e8e3af11645
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988820"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254220"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 'teki normal Ifadeler için en iyi uygulamalar
 <a name="top"></a>.NET 'teki normal ifade altyapısı, metni karşılaştırma ve eşleştirme yerine, metin işleme ve eşleme yapmak yerine, metni işleyen güçlü, tam özellikli bir araçtır. Çoğu durumda desen eşleme işlemini hızlı ve verimli şekilde yapar. Ancak bazı durumlarda normal ifade motoru çok yavaş görünebilir. Aşırı durumlarda saatler ve hatta günler boyunca görece küçük bir girişi işlerken yanıt vermeyi durdurmuş gibi bile görünebilir.  
@@ -96,7 +96,7 @@ ms.locfileid: "69988820"
 > Yöntem çağrılarında aynı normal ifade tekrar tekrar kullanılıyorsa veya uygulama normal ifade nesnelerini yoğun olarak kullanıyorsa, yöntem çağrısının biçimi (statik, yorumlanan, derlenmiş) performansı etkiler.  
   
 ### <a name="static-regular-expressions"></a>Statik Normal İfadeler  
- Statik normal ifade yöntemleri, bir normal ifade nesnesine aynı normal ifadeyi tekrar tekrar ön değer olarak atamaya alternatif olarak önerilir. Normal ifade nesneleri tarafından kullanılan normal ifade desenlerinden farklı olarak örnek yöntemi çağrılarında kullanılan desenlerin işlem kodları veya derlenmiş Microsoft ara dili (MSIL), normal ifade motoru tarafından dahili olarak önbelleğe alınır.  
+ Statik normal ifade yöntemleri, bir normal ifade nesnesine aynı normal ifadeyi tekrar tekrar ön değer olarak atamaya alternatif olarak önerilir. Normal ifade nesneleri tarafından kullanılan normal ifade desenlerinden farklı olarak, statik yöntem çağrılarında kullanılan desenlerden işlem kodları veya derlenmiş Microsoft ara dili (MSIL), normal ifade motoru tarafından dahili olarak önbelleğe alınır.  
   
  Örneğin bir olay işleyicisi, kullanıcı girişini onaylamak için sık sık başka bir yöntem çağırır. Bu, bir <xref:System.Windows.Forms.Button> <xref:System.Windows.Forms.Control.Click> denetimin olayının adlı `IsValidCurrency`bir yöntemi çağırmak için kullanıldığı, bu, kullanıcının bir para birimi simgesi ve ardından en az bir ondalık basamak yazıp girmediğini denetleyen aşağıdaki kodda yansıtılır.  
   

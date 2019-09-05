@@ -3,18 +3,19 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: c4dbb31bb7961f0d33df9d1faee8fe36ecb520a3
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 148b2f3e12fbfbf85b800f0ca7f5dc7dc1845d24
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988324"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252007"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration >
 WS-Federation protokolü aracılığıyla federal kimlik doğrulaması kullanırken <xref:System.IdentityModel.Services.SessionAuthenticationModule> (wsfab)ve(Sam)öğesiniyapılandırır.<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> Talep tabanlı erişim denetimi sağlamak <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> için veya <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> sınıfını kullanırken öğesini yapılandırır. <xref:System.Security.Claims.ClaimsAuthorizationManager>  
   
- \<System. IdentityModel. Services >  
-\<federationConfiguration >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. IdentityModel. Services >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<federationConfiguration >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

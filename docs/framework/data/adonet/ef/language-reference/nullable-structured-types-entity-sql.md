@@ -1,77 +1,77 @@
 ---
-title: Boş değer atanabilir yapılandırılmış türler (varlık SQL)
+title: Null yapılabilir yapılandırılmış türler (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6e1669bdc62de379051df60d6650fddb0c808da4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641826"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249807"
 ---
-# <a name="nullable-structured-types-entity-sql"></a>Boş değer atanabilir yapılandırılmış türler (varlık SQL)
-A `null` yapılandırılmış bir tür örneği örneği yok. Bu, tüm özelliklere sahip mevcut bir örneğinden farklı `null` değerleri.  
+# <a name="nullable-structured-types-entity-sql"></a>Null yapılabilir yapılandırılmış türler (Entity SQL)
+Yapılandırılmış bir türün örneği mevcut olmayan bir örneğidir. `null` Bu, tüm özelliklerde `null` değer bulunan mevcut bir örnekten farklıdır.  
   
- Bu konuda, hangi türlerin boş değer atanabilir ve ürün hangi kod desenleri gibi boş değer atanabilir yapılandırılmış türler açıklanmaktadır `null` boş değer atanabilir yapılandırılmış türler örnekleri.  
+ Bu konuda, hangi türlerin null yapılabilir olduğu ve hangi kod desenlerinin `null` yapılandırılmış null yapılabilir türleri örnekleri oluşturulduğu dahil null yapılabilir yapılandırılmış türler açıklanmaktadır.  
   
-## <a name="kinds-of-nullable-structured-types"></a>Tür boş değer atanabilir yapılandırılmış türler  
- Boş değer atanabilir yapı türleri üç tür vardır:  
+## <a name="kinds-of-nullable-structured-types"></a>Null yapılabilir yapılandırılmış türler türü  
+ Üç tür atanabilir yapı türü vardır:  
   
-- Satır türü.  
+- Satır türleri.  
   
 - Karmaşık türler.  
   
 - Varlık türleri.  
   
-## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Null yapılandırılmış türlerin örneklerini oluşturan kod desenleri  
- Aşağıdaki senaryolarda üretmek `null` örnekleri:  
+## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>Yapılandırılmış türlerin null örneklerini üreten kod desenleri  
+ Aşağıdaki senaryolar örnekleri üretir `null` :  
   
-- Şekillendirme `null` yapılandırılmış bir tür olarak:  
+- Yapılandırılmış `null` bir tür olarak şekillendirme:  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
-- Türetilmiş bir tür için bir temel türden yukarı çevrim:  
+- Bir temel türün türetilmiş bir tür için yukarı ataması:  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
-- Dış birleşim koşul false üzerinde:  
+- Yanlış koşula dış birleşim:  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     --or  
+     --veya  
   
     ```  
     Collection1 RIGHT OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-     --or  
+     --veya  
   
     ```  
     Collection1 FULL OUTER JOIN Collection2  
     ON FalseCondition  
     ```  
   
-- Başvuruluyor bir `null` başvurusu:  
+- `null` Başvurunun başvurusunu kaldırma:  
   
     ```  
     DEREF(NullRef)  
     ```  
   
-- ANYELEMENT öğesinden boş koleksiyon alma:  
+- Boş bir koleksiyondan ANYELEMENT alma:  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
-- Denetleme `null` yapılandırılmış türleri örnekleri:  
+- Yapılandırılmış türlerin `null` örnekleri denetleniyor:  
   
     ```csharp  
     ...  
@@ -90,4 +90,4 @@ A `null` yapılandırılmış bir tür örneği örneği yok. Bu, tüm özellikl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)

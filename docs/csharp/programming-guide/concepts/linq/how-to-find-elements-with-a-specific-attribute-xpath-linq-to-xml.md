@@ -1,23 +1,23 @@
 ---
-title: 'Nasıl yapılır: (XPath-LINQ to XML) belirli bir özniteliğe sahip öğeleri bulma (C#)'
+title: 'Nasıl yapılır: Belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
-ms.openlocfilehash: fc1bc285a066dcb1843dcb626b1b3b354f28da74
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1e71dd7f6619c051d0e3cdef2726daff82ba3d70
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486811"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253665"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: (XPath-LINQ to XML) belirli bir özniteliğe sahip öğeleri bulma (C#)
-Bazen belirli bir özniteliği olan tüm öğeleri bulmak istediğiniz. Özniteliğin içeriği hakkında endişe değildir. Bunun yerine, seçilecek öznitelik varlığı üzerinde temel istediğiniz.  
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Nasıl yapılır: Belirli bir özniteliğe sahip öğeleri bulma (XPath-LINQ to XML) (C#)
+Bazen belirli bir özniteliğe sahip olan tüm öğeleri bulmak isteyebilirsiniz. Özniteliğin içeriğiyle ilgili endişeleriniz yok. Bunun yerine, özniteliğinin varlığına göre ' ı seçmek istersiniz.  
   
- XPath ifadesidir:  
+ XPath ifadesi:  
   
  `./*[@Select]`  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kodu olan öğeleri seçer `Select` özniteliği.  
+ Aşağıdaki kod yalnızca `Select` özniteliği olan öğeleri seçer.  
   
 ```csharp  
 XElement doc = XElement.Parse(  
@@ -50,7 +50,7 @@ foreach (XElement el in list1)
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  

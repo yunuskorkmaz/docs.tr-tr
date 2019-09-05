@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3071b25392048161ebb40c39842f5da0dce3475
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2fa32d64f3ce440981c5f26d731051a118ed9254
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920825"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252662"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > öğesi
 Bir iş parçacığı başlatıldığında tam iş parçacığı yığınının uygulanıp uygulanmadığını belirtir.  
   
- \<Yapılandırma >  
-\<çalışma zamanı >  
-\<disableCommitThreadStack >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<çalışma zamanı >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCommitThreadStack >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,7 +37,7 @@ Bir iş parçacığı başlatıldığında tam iş parçacığı yığınının 
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|etkinletir|Gerekli öznitelik.<br /><br /> Tüm iş parçacığı yığınının iş parçacığı başlangıcında (varsayılan davranış) devre dışı bırakılıp bırakılmadığını belirtir.|  
+|enabled|Gerekli öznitelik.<br /><br /> Tüm iş parçacığı yığınının iş parçacığı başlangıcında (varsayılan davranış) devre dışı bırakılıp bırakılmadığını belirtir.|  
   
 ## <a name="enabled-attribute"></a>etkin Öznitelik  
   

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Önceki eşdüzey öğeleri bul (XPath-LINQ to XML)C#()'
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: d47a2d72efd8891108999d5576da52eb2b6285b1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593427"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253654"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Nasıl yapılır: Önceki eşdüzey öğeleri bul (XPath-LINQ to XML)C#()
 Bu konu, XPath `preceding-sibling` eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] alt <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> ekseniyle karşılaştırır.  
@@ -45,7 +45,7 @@ foreach (XElement el in list2)
   
  Bu örnek aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Results are identical  
 <CompanyName>Great Lakes Food Market</CompanyName>  
 <ContactName>Howard Snyder</ContactName>  

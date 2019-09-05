@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: b47a46f9fd9ef3ef1935fa7a88c2e60fe80db09d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bebc8d890325ec4ab090470952e11b90d0e37ef
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964139"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248114"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET ve LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ADO.NET teknolojisinin bir parçasıdır. Bu, ADO.NET sağlayıcı modeli tarafından sunulan hizmetleri temel alır. Bu nedenle, kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mevcut ADO.NET uygulamalarıyla karıştırabilir ve geçerli ADO.net çözümlerini uygulamasına [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]geçirebilirsiniz. Aşağıdaki çizim ilişkinin üst düzey bir görünümünü sağlar.  
   
- ![LINQ to SQL ve ADO.net](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
+ ![LINQ to SQL ve ADO.net](./media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>Bağlantılar  
  Oluştururken var olan bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>ADO.net bağlantısı sağlayabilirsiniz. <xref:System.Data.Linq.DataContext> (Sorgular dahil) tüm işlemler bu sağlanmış bağlantıyı kullanır. Bağlantı zaten açıksa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bununla işiniz bittiğinde olduğu gibi bırakır.  
@@ -59,5 +59,5 @@ ms.locfileid: "69964139"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Nasıl yapılır: Bir ADO.NET komutu ve DataContext arasındaki bağlantıyı yeniden kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [Nasıl yapılır: Bir ADO.NET komutu ve DataContext arasındaki bağlantıyı yeniden kullanma](how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

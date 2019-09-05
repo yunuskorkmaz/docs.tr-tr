@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5090616705c799f2905226b4892fa1fbe50bfbf3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61615044"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249534"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Toplama İşleçleri
-Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, ve <xref:System.Linq.Enumerable.Sum%2A> sorgulamak için yöntemleri [AdventureWorks satışları modeli](https://archive.codeplex.com/?p=msftdbprodsamples) sorgu ifadesi söz dizimini kullanarak. Bu örneklerde kullanılan AdventureWorks satışları modeli kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarda AdventureWorks örnek veritabanı oluşturulur.  
+Bu konudaki örneklerde,,, ve <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.Min%2A> yöntemlerininsorguifadesisözdiziminikullanarakAdventureWorksSalesmodelinisorgulamakiçin<xref:System.Linq.Enumerable.Sum%2A> nasıl kullanılacağı [](https://archive.codeplex.com/?p=msftdbprodsamples) gösterilmektedir. Bu örneklerde kullanılan AdventureWorks Sales modeli, AdventureWorks örnek veritabanındaki Contact, Address, Product, SalesOrderHeader ve SalesOrderDetail tablolarından oluşturulmuştur.  
   
- Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
+ Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -23,19 +23,19 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="average"></a>Ortalama  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Average%2A> ortalama liste fiyatı her stilin ürünleri bulmak için yöntemi.  
+ Aşağıdaki örnek, her bir <xref:System.Linq.Enumerable.Average%2A> stilin ürünlerinin ortalama liste fiyatını bulmak için yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#average2_mq)]
  [!code-vb[DP L2E Examples#Average2_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#average2_mq)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Average%2A> ortalama toplam son her biri için almak için kimliği başvurun  
+ Aşağıdaki örnek, her <xref:System.Linq.Enumerable.Average%2A> bir kişi kimliği için Ortalama toplamı almak için kullanır.  
   
  [!code-csharp[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averagegrouped_mq)]
  [!code-vb[DP L2E Examples#AverageGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averagegrouped_mq)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Average%2A> her kişi için siparişleri ortalama toplam son almak için.  
+ Aşağıdaki örnek, her <xref:System.Linq.Enumerable.Average%2A> bir kişi için ödenecek ortalama toplam olan siparişleri almak için kullanır.  
   
  [!code-csharp[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#averageelements_mq)]
  [!code-vb[DP L2E Examples#AverageElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#averageelements_mq)]  
@@ -43,13 +43,13 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="count"></a>Count  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Count%2A> kişi kimlikleri listesini ve kaç her siparişleri döndürmek için vardır.  
+ Aşağıdaki örnek, iletişim <xref:System.Linq.Enumerable.Count%2A> kimliklerinin bir listesini ve her birinin kaç tane siparişi olduğunu döndürmek için kullanır.  
   
  [!code-csharp[DP L2E Examples#CountNested](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countnested)]
  [!code-vb[DP L2E Examples#CountNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countnested)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek ürünleri rengine göre gruplandırır ve kullandığı <xref:System.Linq.Enumerable.Count%2A> ürün sayısı, her bir renk grubu döndürmek için.  
+ Aşağıdaki örnek, ürünleri renge göre gruplandırır ve her <xref:System.Linq.Enumerable.Count%2A> renk grubundaki ürünlerin sayısını döndürmek için kullanır.  
   
  [!code-csharp[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countgrouped)]  
@@ -57,13 +57,13 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="max"></a>Maks.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Max%2A> en büyük toplam süre almak için yöntemi her biri için bağlantı kimliği.  
+ Aşağıdaki örnek, her bir <xref:System.Linq.Enumerable.Max%2A> iletişim kimliği için en fazla toplamı almak üzere yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxgrouped_mq)]
  [!code-vb[DP L2E Examples#MaxGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxgrouped_mq)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Max%2A> siparişleri en büyük toplam son almak için yöntemi her biri için bağlantı kimliği.  
+ Aşağıdaki örnek, her bir <xref:System.Linq.Enumerable.Max%2A> kişi kimliği için en büyük toplam olan siparişleri almak için yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
@@ -71,13 +71,13 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="min"></a>Min.  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Min%2A> küçük toplam süre almak için yöntemi her biri için bağlantı kimliği.  
+ Aşağıdaki örnek, her bir <xref:System.Linq.Enumerable.Min%2A> kişi kimliği için en küçük toplamı almak üzere yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#mingrouped_mq)]
  [!code-vb[DP L2E Examples#MinGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#mingrouped_mq)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Min%2A> küçük toplam siparişleri almak için yöntemi her kişi için son.  
+ Aşağıdaki örnek, her kişi <xref:System.Linq.Enumerable.Min%2A> için en küçük Toplam olan siparişleri almak için yöntemini kullanır.  
   
  [!code-csharp[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#minelements_mq)]
  [!code-vb[DP L2E Examples#MinElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#minelements_mq)]  
@@ -85,11 +85,11 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="sum"></a>Toplam  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Linq.Enumerable.Sum%2A> toplam süre almak için yöntemi her biri için bağlantı kimliği.  
+ Aşağıdaki örnek, her bir <xref:System.Linq.Enumerable.Sum%2A> iletişim kimliği için bir süre için bu yöntemi kullanır.  
   
  [!code-csharp[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#sumgrouped_mq)]
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to Entities Sorguları](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [LINQ to Entities Sorguları](queries-in-linq-to-entities.md)

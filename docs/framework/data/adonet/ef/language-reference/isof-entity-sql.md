@@ -1,16 +1,16 @@
 ---
-title: ISOF (varlık SQL)
+title: IOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b746a82f72fc7f42f9d91ddd0a7d6f4f86ac0bb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772378"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250571"
 ---
-# <a name="isof-entity-sql"></a>ISOF (varlık SQL)
-Belirtilen tür veya onun alt türlerinden birini bir ifadenin türü olup olmadığını belirler.  
+# <a name="isof-entity-sql"></a>IOF (Entity SQL)
+Bir ifadenin türünün belirtilen türde mi yoksa alt türlerinden biri mi olduğunu belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,42 +20,42 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
   
 ## <a name="arguments"></a>Arguments  
  `expression`  
- Türünü belirlemek için tüm geçerli sorgu ifadesi.  
+ Türünü belirleyecek geçerli bir sorgu ifadesi.  
   
  DEĞİL  
- EDM olumsuz duruma getirir. Boolean sonucu olduğundan.  
+ EDM 'yi geçersiz kılar. ' Nin Boolean sonucu.  
   
  YALNIZCA  
- OLDUĞUNDAN, döndüren belirtir `true` yalnızca `expression` türünde `type` ve herhangi bir alt türleri.  
+ Öğesinin `true` yalnızcatürü`type` ise ve alt türlerinden herhangi biri değilse, bu döndürdüğünü belirtir. `expression`  
   
  `type`  
- Sınanacak tür `expression` karşı. İsim uzayıyla nitelenmiş tür olmalıdır.  
+ Sınanacak `expression` tür. Tür ad alanı nitelenmiş olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` varsa `expression` olan türü T, T bir taban türü veya türetilmiş bir tür ise `type`; null ise `expression` çalışma zamanında null; Aksi takdirde, `false`.  
+ `true`Eğer `expression` t ve t türünde ise, bir temel tür ya da türetilmiş bir `type`tür; çalışma zamanında null ise null `expression` ; Aksi durumda, `false`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İfadeleri `expression IS NOT OF (type)` ve `expression IS NOT OF (ONLY type)` sözdizimsel olarak eşdeğer `NOT (expression IS OF (type))` ve `NOT (expression IS OF (ONLY type))`sırasıyla.  
+ İfadeler `expression IS NOT OF (type)` ve `expression IS NOT OF (ONLY type)` sırasıyla `NOT (expression IS OF (type))` ve ile`NOT (expression IS OF (ONLY type))`aynıdır.  
   
- Aşağıdaki tabloda davranışını gösteren `IS OF` bazı tipik ve köşe desenleri üzerinden işleci. Sağlayıcı çağrılır önce tüm istemci tarafında özel durumlar:  
+ Aşağıdaki tabloda, bazı tipik ve köşe `IS OF` desenlerinde işlecin davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
-|null olduğundan, (EntityType)|Oluşturur|  
-|null olduğundan, (ComplexType)|Oluşturur|  
-|null olduğundan, (RowType)|Oluşturur|  
-|KABUL (null AS EntityType) olduğundan, (EntityType)|DBNull döndürür|  
-|KABUL (null AS ComplexType) olduğundan, (ComplexType)|Oluşturur|  
-|KABUL (null AS RowType) olduğundan, (RowType)|Oluşturur|  
-|EntityType olan (EntityType),|True/false döndürür|  
-|ComplexType olduğu (ComplexType),|Oluşturur|  
-|RowType olduğu (RowType),|Oluşturur|  
+|null (EntityType)|Oluşturur|  
+|null (ComplexType)|Oluşturur|  
+|null (RowType)|Oluşturur|  
+|DAVRAN (EntityType olarak null), (EntityType)|DBNull döndürür|  
+|DAVRAN (ComplexType olarak null), (ComplexType)|Oluşturur|  
+|DEĞERLENDIR (RowType olarak null), (RowType)|Oluşturur|  
+|EntityType (EntityType)|True/false döndürür|  
+|ComplexType (ComplexType)|Oluşturur|  
+|RowType, (RowType)|Oluşturur|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu olan işlecini bir sorgu ifadesinde türü belirlemek için kullanır ve ardından OnsiteCourse türünden nesnelerin bir koleksiyonunu kurs türdeki bir nesneyi dönüştürmek için kabul işlecini kullanır. Sorgu dayanır [Okul modeli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)).  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir sorgu ifadesinin türünü tespit etmek için işleç ' i kullanır ve sonra bir nesne türünü, onsitekurs türünde bir nesne koleksiyonuna dönüştürmek için değerlendir işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

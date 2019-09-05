@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 165fb1524daa781c29037bf1c9cb2b3013504177
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d43ec0cdf5b5bb03854dffc7132dddb4c9ae76fd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539748"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249262"
 ---
 # <a name="query-results"></a>Sorgu Sonuçları
-Bir LINQ to Entities sorgusunda komut ağaçlarını dönüştürülür ve yürütülen sonra sorgu sonuçları genellikle aşağıdakilerden biri döndürülür:  
+Bir LINQ to Entities sorgusu komut ağaçlarına dönüştürüldükten ve yürütüldükten sonra sorgu sonuçları genellikle aşağıdakilerden biri olarak döndürülür:  
   
-- Sıfır veya daha fazla yazılan bir varlığın nesnelerin veya projeksiyon kavramsal modeldeki karmaşık türleri koleksiyonu.  
+- Sıfır veya daha fazla yazılmış varlık nesnesi koleksiyonu veya kavramsal modeldeki karmaşık türlerin bir projeksiyonu.  
   
 - Kavramsal model tarafından desteklenen CLR türleri.  
   
-- Satır içi koleksiyonları.  
+- Satır içi Koleksiyonlar.  
   
 - Anonim türler.  
   
- Veri kaynağına karşı sorgu yürütüldü, sonuç CLR türleriyle gerçekleştirilmiş ve istemciye döndürülen. Tüm nesne gerçekleştirme tarafından gerçekleştirilen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Eşleştirilemez arasında sonucunda herhangi bir hata [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] ve CLR özel nesne gerçekleştirme sırasında durum oluşturulmasına neden olur.  
+ Sorgu veri kaynağına karşı yürütüldüğünde, sonuçlar CLR türlerine getirilir ve istemciye döndürülür. Tüm nesne gerçekleştirmesi, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]tarafından gerçekleştirilir. İle clr arasında eşleme yapılmamasına neden olan herhangi bir hata [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] , nesne materialization sırasında özel durumların oluşturulmasına neden olur.  
   
- Sorgu yürütme ilkel kavramsal model türü döndürürse, tek başına ve bağlantısı kesilmiş olan CLR türlerini sonuçları oluşur [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Sorgu yazılan varlığın nesnelerinin bir koleksiyonunu döndürür, ancak tarafından temsil edilen <xref:System.Data.Objects.ObjectQuery%601>, bu türleri nesne bağlamı tarafından izlenir. Tüm nesne davranışı (örneğin, alt/üst koleksiyonları, değişiklik izleme, çok biçimlilik ve benzeri) olan sınıfında tanımlandığı gibi [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Bu işlev, kapasitede sınıfında tanımlandığı gibi kullanılabilir [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için [nesneleriyle çalışma](../../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
+ Sorgu yürütmesi basit kavramsal model türleri döndürürse, sonuçlar tek başına olan ve bağlantısı kesilen [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]CLR türlerinden oluşur. Ancak sorgu, türü ile <xref:System.Data.Objects.ObjectQuery%601>temsil edilen bir tür varlık nesneleri koleksiyonu döndürürse, bu türler nesne bağlamı tarafından izlenir. Tüm nesne davranışları (alt/üst koleksiyonlar, değişiklik izleme, çok biçimlilik vb [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].) içinde tanımlanmıştır. Bu işlev, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]içinde tanımlandığı şekilde kapasitesinde kullanılabilir. Daha fazla bilgi için bkz. [nesneleriyle çalışma](../working-with-objects.md).  
   
- Yapı türleri (örneğin anonim türler ve null olabilir karmaşık türler) sorgularından döndürülen olabilir `null` değeri. Bir <xref:System.Data.Objects.DataClasses.EntityCollection%601> döndürülen bir varlığın özelliği biri de olabilir `null` değeri. Bu, bir varlık koleksiyon özelliğini yansıtma gelen sonuçlanabilir `null` arama gibi değeri <xref:System.Linq.Queryable.FirstOrDefault%2A> üzerinde bir <xref:System.Data.Objects.ObjectQuery%601> , öğe yok.  
+ Sorgulardan döndürülen yapı türleri (anonim türler ve null yapılabilir karmaşık türler gibi) `null` değer olabilir. Döndürülen <xref:System.Data.Objects.DataClasses.EntityCollection%601> bir varlığın özelliği de bir `null` değer olabilir. Bu, herhangi bir öğeye sahip olmayan bir `null` <xref:System.Data.Objects.ObjectQuery%601> ' ın çağrılması <xref:System.Linq.Queryable.FirstOrDefault%2A> gibi, değer olan bir varlığın koleksiyon özelliğinin yansıtıyapılmasının oluşmasına neden olabilir.  
   
- Bazı durumlarda, bir sorgu yürütmesi sırasında gerçekleştirilmiş bir sonuç üretmek için görünebilir ancak sorgu sunucuda yürütülür ve varlık nesnesi hiçbir zaman CLR'de gerçekleştirilmiş. Nesne gerçekleştirme, yan etkileri bağlı, bu sorunlara neden olabilir.  
+ Belirli durumlarda, yürütme sırasında gerçekleştirilmiş sonuç oluşturmak için bir sorgu görünebilir, ancak sorgu sunucuda yürütülecektir ve varlık nesnesi hiçbir şekilde CLR 'de gerçekleştirilmeyecektir. Bu, nesne materialization 'in yan etkileriyle ilgili olarak sorun oluşmasına neden olabilir.  
   
- Aşağıdaki örnek, özel bir sınıf içerir `MyContact`, ile bir `LastName` özelliği. Zaman `LastName` özelliği ayarlanmış bir `count` değişkeni artırılır. İki aşağıdaki sorguları yürütün, ilk sorgu artırır `count` karşın ikinci sorgu erişemez. Bunun nedeni, ikinci sorgu `LastName` özelliği sonuçlardan öngörülen ve `MyContact` sınıf hiçbir zaman oluşturulduğu, mağaza sorguyu yürütmek için gerekli olmadığından.  
+ Aşağıdaki örnek, `LastName` özelliği ile özel bir sınıfı `MyContact`içerir. Özellik ayarlandığında, bir `count` değişken artırılır. `LastName` Aşağıdaki iki sorguyu çalıştırırsanız, ikinci sorgu bu sırada ilk sorgu artacaktır `count` . Bunun nedeni, ikinci sorgudaki `LastName` özelliğin sonuçlardan yansıtıldığı `MyContact` ve sınıfın depoda hiçbir şekilde oluşturulamadığından, sorgunun mağazada yürütülmesi gerekmediği için değildir.  
   
  [!code-csharp[DP L2E Materialization Example#MaterializationSideEffects](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Materialization Example/CS/Program.cs#materializationsideeffects)]
  [!code-vb[DP L2E Materialization Example#MaterializationSideEffects](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Materialization Example/VB/Module1.vb#materializationsideeffects)]  

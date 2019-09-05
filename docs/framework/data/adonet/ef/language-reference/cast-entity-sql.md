@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935825"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251242"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Bir veri türündeki bir ifadeyi diğerine dönüştürür.  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  Dönüştürülebilir herhangi bir geçerli ifade `data_type`.  
   
  `data_type`  
- Hedef sistem tarafından sağlanan veri türü. Temel bir (skaler) türü olmalıdır. `data_type` Kullanılan sorgu alanına göre değişir. Bir sorgu ile <xref:System.Data.EntityClient.EntityCommand>yürütülürse, veri türü kavramsal modelde tanımlanan bir türdür. Daha fazla bilgi için bkz. [csdl belirtimi](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Bir sorgu ile <xref:System.Data.Objects.ObjectQuery%601>yürütülürse, veri türü ortak dil çalışma zamanı (CLR) türüdür.  
+ Hedef sistem tarafından sağlanan veri türü. Temel bir (skaler) türü olmalıdır. `data_type` Kullanılan sorgu alanına göre değişir. Bir sorgu ile <xref:System.Data.EntityClient.EntityCommand>yürütülürse, veri türü kavramsal modelde tanımlanan bir türdür. Daha fazla bilgi için bkz. [csdl belirtimi](csdl-specification.md). Bir sorgu ile <xref:System.Data.Objects.ObjectQuery%601>yürütülürse, veri türü ortak dil çalışma zamanı (CLR) türüdür.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  İle `data_type`aynı değeri döndürür.  
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Örnek  
  Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir veri türünün bir ifadesini diğerine dönüştürmek için cast işlecini kullanır. Sorgu AdventureWorks Sales modelini temel alır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
 2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
@@ -61,4 +61,4 @@ CAST( e as T )
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

@@ -2,26 +2,26 @@
 title: EDM Oluşturucu (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 688989fea6037cc989267e14b103210c2a995afa
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584584"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251624"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM Oluşturucu (EdmGen.exe)
 
-EdmGen.exe ile çalışmak için kullanılan bir komut satırı aracı olan [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve eşleme dosyaları. Aşağıdakileri yapmak için Edmgen.exe'yi Aracı'nı kullanabilirsiniz:
+EdmGen. exe, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] model ve eşleme dosyalarıyla çalışmak için kullanılan bir komut satırı aracıdır. EdmGen. exe aracını kullanarak şunları gerçekleştirebilirsiniz:
 
-- Bir veri kaynağına özgü .NET Framework Veri Sağlayıcısı'nı kullanarak bir veri kaynağına bağlanmak ve kavramsal model (.csdl), depolama modelinin (.ssdl) ve tarafından kullanılan eşleme (.msl) dosyaları oluşturma [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+- Veri kaynağına özgü .NET Framework veri sağlayıcısı kullanarak bir veri kaynağına bağlanın ve tarafından [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]kullanılan kavramsal model (. csdl), depolama modeli (. ssdl) ve eşleme (. MSL) dosyalarını oluşturun. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
 
-- Mevcut bir model doğrulayın. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını doğrulama için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md).
+- Mevcut bir modeli doğrulayın. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)doğrulamak Için EdmGen. exe ' yi kullanın.
 
-- Bir C# veya Visual Basic kod kavramsal model (.csdl) dosyasından oluşturulan nesne sınıfları içeren bir dosya oluşturun. Daha fazla bilgi için [nasıl yapılır: Nesne Katmanı kodu üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md).
+- Kavramsal model C# (. csdl) dosyasından oluşturulan nesne sınıflarını içeren bir veya Visual Basic kodu dosyası oluşturun. Daha fazla bilgi için [nasıl yapılır: Nesne katmanı kodu](how-to-use-edmgen-exe-to-generate-object-layer-code.md)oluşturmak Için EdmGen. exe ' yi kullanın.
 
-- Mevcut bir model için önceden üretilmiş görünümleri içeren bir C# veya Visual Basic kod dosyası oluşturur. Daha fazla bilgi için [nasıl yapılır: Sorgu performansını artırmak için önceden görünümlerin](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
+- Mevcut bir C# model için önceden oluşturulmuş görünümleri içeren bir veya Visual Basic kodu dosyası oluşturun. Daha fazla bilgi için [şunları yapın: Sorgu performansını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))artırmak Için görünümleri önceden oluşturun.
 
-EdmGen.exe aracı .NET Framework dizinine yüklenir. Çoğu durumda bu C:\windows\Microsoft.NET\Framework\v4.0 içinde bulunur. 64-bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0 içinde bulunur. EdmGen.exe aracı Visual Studio Komut İstemi'nden de erişebilirsiniz (tıklayın **Başlat**, işaret **tüm programlar**, işaret **Microsoft Visual Studio 2010**, işaret **Visual Studio Araçları**ve ardından **Visual Studio 2010 Komut İstemi**).
+EdmGen. exe aracı .NET Framework dizinine yüklenir. Çoğu durumda, bu C:\windows\Microsoft.NET\Framework\v4.0. içinde bulunur 64 bit sistemler için bu C:\windows\Microsoft.NET\Framework64\v4.0. konumunda bulunur Ayrıca, EdmGen. exe aracına Visual Studio komut isteminden erişebilirsiniz ( **Başlat**' a tıklayın, **tüm programlar**' ın üzerine gelin, Microsoft Visual Studio Visual Studio Araçları **2010**' nin üzerine gelinve ardından **Visual Studio 2010 ' ye tıklayabilirsiniz. Komut Istemi**).
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -31,51 +31,51 @@ EdmGen /mode:choice [options]
 
 ## <a name="mode"></a>Mod
 
-EdmGen.exe aracını kullanırken, şu modlardan birini belirtmeniz gerekir.
+EdmGen. exe aracını kullanırken aşağıdaki modlardan birini belirtmeniz gerekir.
 
 |Mod|Açıklama|
 |----------|-----------------|
-|`/mode:ValidateArtifacts`|.Csdl .ssdl ve .msl dosyaları doğrular ve herhangi bir hata veya uyarıları görüntüler.<br /><br /> Bu seçenek en az birini gerektirir `/inssdl` veya `/incsdl` bağımsız değişkenler. Varsa `/inmsl` belirtilen `/inssdl` ve `/incsdl` bağımsız değişkenleri gereklidir de.|
-|`/mode:FullGeneration`|Belirtilen veritabanı bağlantı bilgilerini kullanır `/connectionstring` nesne katmanı seçeneği ve .csdl, .ssdl .msl, oluşturur ve dosyaları görüntüleyin.<br /><br /> Bu seçenek gerektirir bir `/connectionstring` bağımsız değişkeni ve ya da bir `/project` bağımsız değişkeni veya `/outssdl`, `/outcsdl`, `/outmsdl`, `/outobjectlayer`, `/outviews`, `/namespace`, ve `/entitycontainer` bağımsız değişkenler.|
-|`/mode:FromSSDLGeneration`|Belirtilen .ssdl dosyasından .csdl ve .msl dosyaları, kaynak kodu ve görünümler oluşturur.<br /><br /> Bu seçenek gerektirir `/inssdl` bağımsız değişkeni ve ya da bir `/project` bağımsız değişkeni veya `/outcsdl`, `/outmsl`, `/outobjectlayer`, `/outviews`, `/namespace,` ve `/entitycontainer` bağımsız değişkenler.|
-|`/mode:EntityClassGeneration`|.Csdl dosyasından oluşturulan sınıflar içeren kaynak kodu dosyası oluşturur.<br /><br /> Bu seçenek gerektirir `/incsdl` bağımsız değişkeni ve ya da `/project` bağımsız değişkeni veya `/outobjectlayer` bağımsız değişken. `/language` Bağımsız değişken isteğe bağlıdır.|
-|`/mode:ViewGeneration`|.csdl, .ssdl .msl dosyaları oluşturulan görünümleri içeren bir kaynak kodu dosyası oluşturur.<br /><br /> Bu seçenek gerektirir `/inssdl`, `/incsdl`, `/inmsl,` ve her iki `/project` veya `/outviews` bağımsız değişkenler. `/language` Bağımsız değişken isteğe bağlıdır.|
+|`/mode:ValidateArtifacts`|. Csdl,. ssdl ve. MSL dosyalarını doğrular ve hataları ya da uyarıları görüntüler.<br /><br /> Bu seçenek `/inssdl` veya `/incsdl` bağımsız değişkenlerden en az birini gerektirir. `/inmsl` Belirtilmişse vebağımsız`/incsdl`değişkenlerdegereklidir. `/inssdl`|
+|`/mode:FullGeneration`|`/connectionstring` Seçeneğinde belirtilen veritabanı bağlantı bilgilerini kullanır ve. csdl,. ssdl,. MSL, nesne katmanı ve görünüm dosyalarını oluşturur.<br /><br /> Bu seçenek, bir `/connectionstring` bağımsız değişken ve bir `/project` `/outmsdl` `/outcsdl` `/outssdl` `/entitycontainer` bağımsız değişken ya`/namespace`da,,,,, ve bağımsız değişken gerektirir. `/outobjectlayer` `/outviews`|
+|`/mode:FromSSDLGeneration`|Belirtilen. ssdl dosyasından. csdl ve. MSL dosyalarını, kaynak kodunu ve görünümleri oluşturur.<br /><br /> Bu seçenek `/inssdl` bağımsız değişkeni ve `/outmsl`bir `/project` `/outcsdl`bağımsızdeğişkeni ya`/namespace,` da,`/entitycontainer` ,, ve bağımsız değişkenlerini gerektirir. `/outobjectlayer` `/outviews`|
+|`/mode:EntityClassGeneration`|. Csdl dosyasından oluşturulan sınıfları içeren bir kaynak kodu dosyası oluşturur.<br /><br /> Bu seçenek bağımsız değişkeni `/incsdl` ve bağımsız değişkeni ya `/project` `/outobjectlayer` da bağımsız değişkenini gerektirir. `/language` Bağımsız değişken isteğe bağlıdır.|
+|`/mode:ViewGeneration`|. Csdl,. ssdl ve. msl dosyalarından oluşturulan görünümleri içeren bir kaynak kodu dosyası oluşturur.<br /><br /> Bu seçenek,, `/inssdl` `/inmsl,` ve `/incsdl` yada`/outviews`bağımsızdeğişkenlerinigerektirir. `/project` `/language` Bağımsız değişken isteğe bağlıdır.|
 
 ## <a name="options"></a>Seçenekler
 
 |Seçenek|Açıklama|
 |------------|-----------------|
-|`/p[roject]:`\<dize >|Proje adını belirtir. Proje adı varsayılan olarak ayarlamak, model ve eşleme dosyaları, nesne kaynak dosyasının adını ve görünümü nesil kaynak dosyasının adını adını ad alanı için kullanılır. Varlık kapsayıcı adı kümesine \<Proje > bağlamı.|
-|`/prov[ider]:`\<dize >|Depolama modeli (.ssdl) dosyası oluşturmak için kullanılacak .NET Framework veri sağlayıcısı adı. SQL Server için .NET Framework veri sağlayıcısı varsayılan sağlayıcıdır (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/p[roject]:`\<dize >|Kullanılacak projenin adını belirtir. Proje adı, ad alanı ayarı için varsayılan olarak, model ve eşleme dosyalarının adı, nesne kaynak dosyasının adı ve görünüm oluşturma kaynak dosyasının adı olarak kullanılır. Varlık kapsayıcı adı, Project > bağlamı \<olarak ayarlanır.|
+|`/prov[ider]:`\<dize >|Depolama modeli (. ssdl) dosyasını oluşturmak için kullanılacak .NET Framework veri sağlayıcısının adı. Varsayılan sağlayıcı, SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) için .NET Framework veri sağlayıcısı.|
 |`/c[onnectionstring]:`\<bağlantı dizesi >|Veri kaynağına bağlanmak için kullanılan dizeyi belirtir.|
-|`/incsdl:`\<Dosya >|.csdl dosya veya dizin .csdl dosyaların nerede olduğunu belirtir. Birden çok dizini veya .csdl dosyaları belirtmek için bu bağımsız değişken birden çok kez belirtilebilir. Birden çok dizini belirten sınıflar oluşturmak için kullanışlı olabilir (`/mode:EntityClassGeneration`) veya görünümleri (`/mode:ViewGeneration`) kavramsal model çeşitli dosyalar arasında bölüneceğini zaman. Birden çok modeli doğrulamak istediğiniz zaman da yararlı olabilir (`/mode:ValidateArtifacts`).|
-|`/refcsdl:`\<Dosya >|Ek .csdl dosya veya dosyalar kaynak .csdl dosyadaki tüm başvuruları çözümlemek için kullanılan belirtir. (Kaynak .csdl dosyası değil, tarafından belirtilen dosya `/incsdl` seçeneği). `/refcsdl` Dosyası kaynak .csdl dosyası bağımlı olduğu türleri içerir. Bu bağımsız değişken birden çok kez belirtilebilir.|
-|`/inmsl:`\<Dosya >|.msl dosya veya dizin .msl dosyaların nerede olduğunu belirtir. Birden çok dizini veya .msl dosyaları belirtmek için bu bağımsız değişken birden çok kez belirtilebilir. Birden çok dizini belirtme görünümleri oluşturmak için kullanışlı olabilir (`/mode:ViewGeneration`) kavramsal model çeşitli dosyalar arasında bölüneceğini zaman. Birden çok modeli doğrulamak istediğiniz zaman da yararlı olabilir (`/mode:ValidateArtifacts`).|
-|`/inssdl:`\<Dosya >|.Ssdl dosya veya .ssdl dosyasının bulunduğu dizini belirtir. Birden çok dizini veya .ssdl dosyaları belirtmek için bu bağımsız değişken birden çok kez belirtilebilir. Birden çok modeli doğrulamak istediğiniz durumlarda bu kullanışlı olabilir `(/mode:ValidateArtifacts)`.|
-|`/outcsdl:`\<Dosya >|Oluşturulacak .csdl dosyasının adını belirtir.|
-|`/outmsl:`\<Dosya >|Oluşturulacak .msl dosyasının adını belirtir.|
-|`/outssdl:`\<Dosya >|Oluşturulacak .ssdl dosyasının adını belirtir.|
-|`/outobjectlayer:`\<Dosya >|.Csdl dosyasından oluşturulan nesneleri içeren kaynak kodu dosyasının adını belirtir.|
+|`/incsdl:`\<Dosya >|. Csdl dosyasını veya. csdl dosyalarının bulunduğu bir dizini belirtir. Birkaç dizin veya. csdl dosyası belirleyebilmeniz için, bu bağımsız değişken birden çok kez belirtilebilir. Birden çok dizin belirtilmesi, kavramsal model birçok Dosya arasında`/mode:EntityClassGeneration`bölündüğünde sınıfları (`/mode:ViewGeneration`) veya görünümleri () oluşturmak için yararlı olabilir. Bu, birden çok modeli (`/mode:ValidateArtifacts`) doğrulamak istediğinizde de yararlı olabilir.|
+|`/refcsdl:`\<Dosya >|Kaynak. csdl dosyasındaki başvuruları çözümlemek için kullanılan ek. csdl dosyasını veya dosyalarını belirtir. (Kaynak. csdl dosyası, `/incsdl` seçeneği tarafından belirtilen dosyadır). `/refcsdl` Dosya, kaynak. csdl dosyasının bağlı olduğu türleri içerir. Bu bağımsız değişken birden çok kez belirtilebilir.|
+|`/inmsl:`\<Dosya >|. Msl dosyasını veya. msl dosyalarının bulunduğu bir dizini belirtir. Birkaç dizin veya. msl dosyası belirleyebilmeniz için bu bağımsız değişken birden çok kez belirtilebilir. Birden çok dizin belirtilmesi, kavramsal model birçok Dosya arasında`/mode:ViewGeneration`bölündüğünde görünümler () oluşturmak için yararlı olabilir. Bu, birden çok modeli (`/mode:ValidateArtifacts`) doğrulamak istediğinizde de yararlı olabilir.|
+|`/inssdl:`\<Dosya >|. Ssdl dosyasını veya. ssdl dosyasının bulunduğu bir dizini belirtir. Birkaç dizin veya. ssdl dosyası belirleyebilmeniz için bu bağımsız değişken birden çok kez belirtilebilir. Bu, birden çok modeli `(/mode:ValidateArtifacts)`doğrulamak istediğinizde yararlı olabilir.|
+|`/outcsdl:`\<Dosya >|Oluşturulacak. csdl dosyasının adını belirtir.|
+|`/outmsl:`\<Dosya >|Oluşturulacak. msl dosyasının adını belirtir.|
+|`/outssdl:`\<Dosya >|Oluşturulacak. ssdl dosyasının adını belirtir.|
+|`/outobjectlayer:`\<Dosya >|. Csdl dosyasından oluşturulan nesneleri içeren kaynak kodu dosyasının adını belirtir.|
 |`/outviews:`\<Dosya >|Oluşturulan görünümleri içeren kaynak kodu dosyasının adını belirtir.|
-|`/language:`[VB&#124;CSharp]|Oluşturulan kaynak kodu dosyaları dilini belirtir. C# dil Varsayılanları.|
-|`/namespace:`\<dize >|Kullanılacak modeli ad alanını belirtir. Ad alanı çalıştırırken .csdl dosyasında ayarlanır `/mode:FullGeneration` veya `/mode:FromSSDLGeneration`. Ad alanı çalıştırırken kullanılmayan `/mode:EntityClassGeneration`.|
-|`/entitycontainer:`\<dize >|Uygulamak için bir ad belirtir `<EntityContainer>` oluşturulan model ve eşleme dosyalarını öğesi.|
-|`/pl[uralize]`|Singulars ve gerçekleştirebilse için İngilizce dil kuralları uygular `Entity`, `EntitySet`, ve `NavigationProperty` adlarında kavramsal model. Bu seçenek, aşağıdaki eylemleri gerçekleştirir:<br /><br /> -Tüm olun `EntityType` tekil adları.<br />-Tüm olun `EntitySet` çoğul adları.<br />-İçin her `NavigationProperty` en fazla bir varlık döndüren, adı tekil yapın.<br />-İçin her `NavigationProperty` birden fazla varlık getiren, adın çoğul olun.|
-|`/SuppressForeignKeyProperties or /nofk`|Yabancı anahtar sütunları kavramsal modelin varlık türlerini skaler özellikleri olarak gösterilen engeller.|
+|`/language:`[VB&#124;CSharp]|Oluşturulan kaynak kodu dosyalarının dilini belirtir. Dil varsayılan olarak C#olur.|
+|`/namespace:`\<dize >|Kullanılacak model ad alanını belirtir. `/mode:FullGeneration` Veya`/mode:FromSSDLGeneration`çalıştırılırken ad alanı. csdl dosyasında ayarlanır. Ad alanı çalıştırılırken `/mode:EntityClassGeneration`kullanılmaz.|
+|`/entitycontainer:`\<dize >|Oluşturulan model ve eşleme dosyalarındaki `<EntityContainer>` öğeye uygulanacak adı belirtir.|
+|`/pl[uralize]`|Kavramsal modeldeki `Entity`, ve adlarına ve adlara yönelik olarak, `EntitySet`, ve `NavigationProperty` adları için İngilizce-dil kuralları uygular. Bu seçenek aşağıdaki eylemleri gerçekleştirir:<br /><br /> -Tüm `EntityType` adları tekil yapın.<br />-Tüm `EntitySet` adları plural yapın.<br />-En çok `NavigationProperty` bir varlık döndüren her bir için, adı tekil yapın.<br />-Birden fazla `NavigationProperty` varlık döndüren her bir için, adı plural yapın.|
+|`/SuppressForeignKeyProperties or /nofk`|Yabancı anahtar sütunlarının, kavramsal modeldeki varlık türlerinde skaler özellikler olarak gösterilmesini engeller.|
 |`/help` veya `?`|Araç için komut sözdizimini ve seçenekleri görüntüler.|
-|`/nologo`|Telif hakkı iletisini görüntülenmesini bastırır.|
-|`/targetversion:` \<dize >|Oluşturulan kodu derlemek için kullanılacak .NET Framework sürümü. Desteklenen 4 ve 4.5 sürümleridir. Varsayılan olarak 4.|
+|`/nologo`|Telif hakkı iletisinin görüntülenmesini önler.|
+|`/targetversion:`\<dize >|Oluşturulan kodu derlemek için kullanılacak .NET Framework sürümü. Desteklenen sürümler 4 ve 4,5 ' dir. Varsayılan değer 4 ' dir.|
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
+[Nasıl yapılır: Modeli ve eşleme dosyalarını oluşturmak için EdmGen. exe kullanma](how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)
 
-[Nasıl yapılır: Nesne Katmanı kodu üretmek için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-object-layer-code.md)
+[Nasıl yapılır: Nesne katmanı kodu oluşturmak için EdmGen. exe kullanma](how-to-use-edmgen-exe-to-generate-object-layer-code.md)
 
-[Nasıl yapılır: Model ve eşleme dosyalarını doğrulama için Edmgen.exe'yi kullanın](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+[Nasıl yapılır: Dosya modeli ve eşleme dosyalarını doğrulamak için EdmGen. exe kullanma](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [Varlık Veri Modeli](../../../../../docs/framework/data/adonet/entity-data-model.md)
-- [CSDL, SSDL ve MSL Belirtimleri](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Varlık Veri Modeli](../entity-data-model.md)
+- [CSDL, SSDL ve MSL Belirtimleri](./language-reference/csdl-ssdl-and-msl-specifications.md)

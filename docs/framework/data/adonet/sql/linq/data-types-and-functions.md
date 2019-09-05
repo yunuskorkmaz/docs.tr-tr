@@ -2,36 +2,36 @@
 title: Veri Türleri ve İşlevleri
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
-ms.openlocfilehash: 58633259d62e4191f4420eb866febc7b4c8cbe31
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 864c3a4668e3a405260d897596c4e94cc83419a8
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582824"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247219"
 ---
 # <a name="data-types-and-functions"></a>Veri Türleri ve İşlevleri
-Aşağıdaki tabloda listelenen konular, SQL desteği üyeleri, yapıları ve ortak dil çalışma zamanı (CLR) yayınları için LINQ açıklar. Desteklenen üyeleri ve yapıları, LINQ to SQL sorgularında kullanılabilir.  
+Aşağıdaki tabloda listelenen konularda, ortak dil çalışma zamanının (CLR) üyeleri, yapıları ve yayınları için LINQ to SQL desteği açıklanır. Desteklenen Üyeler ve yapılar, LINQ to SQL sorgularınızda kullanılmak üzere kullanılabilir.  
   
- Tabloda desteklenmeyen bir öğe LINQ to SQL CLR üyesi, yapı veya tür dönüştürme çeviremez anlamına gelir. SQL Server üzerinde yürütme için. Yine de bunları kodunuzda kullanmak mümkün olabilir, ancak sorgu Transact-SQL veya veritabanından sonuçları alındıktan sonra çevrilir önce bunlar değerlendirilmelidir.  
+ Tablodaki desteklenmeyen bir öğe, LINQ to SQL CLR üyesini, yapıyı veya SQL Server yürütme için dönüştürmeyi çeviremediği anlamına gelir. Bunları kodunuzda kullanmaya devam edebilirsiniz, ancak sorgu Transact-SQL ' e çevrilmeden veya sonuçlar veritabanından alındıktan sonra değerlendirilmelidir.  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|CLR türleri ve SQL Server türleri arasında eşleme ayrıntılı bir matrisi verilmektedir.|  
-|[Temel Veri Türleri](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[Boole Veri Türleri](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[Null Semantikler](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|Bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] null ve boş değer atanabilir sorunları tartışmak konuları.|  
-|[Sayısal ve Karşılaştırma İşleçleri](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[Dizi İşleçleri](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[System.Convert Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-convert-methods.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[System.DateTime Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)|SQL desteği üyeleri için LINQ açıklar <xref:System.DateTime?displayProperty=nameWithType> yapısı.|  
-|[System.DateTimeOffset Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-datetimeoffset-methods.md)|SQL desteği üyeleri için LINQ açıklar <xref:System.DateTimeOffset?displayProperty=nameWithType> yapısı.|  
-|[System.Math Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-math-methods.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[System.Object Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-object-methods.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[System.String Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|.NET Framework davranışındaki farklılıklar özetlenmiştir.|  
-|[System.TimeSpan Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)|SQL desteği üyeleri için LINQ açıklar <xref:System.TimeSpan?displayProperty=nameWithType> yapısı.|  
-|[Desteklenmeyen İşlev](../../../../../../docs/framework/data/adonet/sql/linq/unsupported-functionality.md)|Desteklenmeyen işlevleri açıklanmıştır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
+|[SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)|CLR türleri ve SQL Server türleri arasında ayrıntılı bir eşleşme matrisi sağlar.|  
+|[Temel Veri Türleri](basic-data-types.md)|.NET Framework davranış farklarını özetler.|  
+|[Boole Veri Türleri](boolean-data-types.md)|.NET Framework davranış farklarını özetler.|  
+|[Null Semantikler](null-semantics.md)|Null ve null [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yapılabilir sorunları tartışan konuların bağlantılarını sağlar.|  
+|[Sayısal ve Karşılaştırma İşleçleri](numeric-and-comparison-operators.md)|.NET Framework davranış farklarını özetler.|  
+|[Dizi İşleçleri](sequence-operators.md)|.NET Framework davranış farklarını özetler.|  
+|[System.Convert Yöntemleri](system-convert-methods.md)|.NET Framework davranış farklarını özetler.|  
+|[System.DateTime Yöntemleri](system-datetime-methods.md)|<xref:System.DateTime?displayProperty=nameWithType> Yapının üyeleri için LINQ to SQL desteğini açıklar.|  
+|[System.DateTimeOffset Yöntemleri](system-datetimeoffset-methods.md)|<xref:System.DateTimeOffset?displayProperty=nameWithType> Yapının üyeleri için LINQ to SQL desteğini açıklar.|  
+|[System.Math Yöntemleri](system-math-methods.md)|.NET Framework davranış farklarını özetler.|  
+|[System.Object Yöntemleri](system-object-methods.md)|.NET Framework davranış farklarını özetler.|  
+|[System.String Yöntemleri](system-string-methods.md)|.NET Framework davranış farklarını özetler.|  
+|[System.TimeSpan Yöntemleri](system-timespan-methods.md)|<xref:System.TimeSpan?displayProperty=nameWithType> Yapının üyeleri için LINQ to SQL desteğini açıklar.|  
+|[Desteklenmeyen İşlev](unsupported-functionality.md)|' De [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]desteklenmeyen işlevselliği açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [SQL-CLR Tür Uyumsuzlukları](sql-clr-type-mismatches.md)
+- [Başvuru](reference.md)

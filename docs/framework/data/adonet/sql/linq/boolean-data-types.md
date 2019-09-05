@@ -2,12 +2,12 @@
 title: Boole Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f200445d2ba7846f9dc467c7f06bce4225c88865
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fa3327315593bd54fc51f67bf9964da8d683c5d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964076"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248050"
 ---
 # <a name="boolean-data-types"></a>Boole Veri Türleri
 Boole işleçleri, ortak dil çalışma zamanında (CLR) beklenen şekilde çalışır, ancak kısa devre dışı davranış çevrilmez. Örneğin, Visual Basic `AndAlso` işleci `And` işleç gibi davranır. C# .`&` `&&`  
@@ -25,4 +25,4 @@ Boole işleçleri, ortak dil çalışma zamanında (CLR) beklenen şekilde çal�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)

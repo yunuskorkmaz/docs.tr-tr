@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988420"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252982"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan türünde <xref:System.String> bir nesnedir. Dahili olarak, metin sıralı bir salt okunabilir <xref:System.Char> nesne koleksiyonu olarak depolanır. C# Dizenin sonunda null sonlandırma karakteri yoktur; Bu nedenle C# , bir dize herhangi bir sayıda katıştırılmış null karakteri (' \ 0 ') içerebilir. Bir dizenin `Char` özelliği, Unicode karakter sayısını değil, içerdiği nesne sayısını temsil eder. <xref:System.String.Length%2A> Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
@@ -107,7 +107,7 @@ Bir <xref:System.String.Format%2A?displayProperty=nameWithType> biçim dizesi ol
 ## <a name="null-strings-and-empty-strings"></a>Null dizeler ve boş dizeler  
  Boş dize, sıfır karakter içeren bir <xref:System.String?displayProperty=nameWithType> nesne örneğidir. Boş dizeler, genellikle boş bir metin alanını göstermek için çeşitli programlama senaryolarında kullanılır. Nesneleri boş dizeler üzerinde çağırabilirsiniz, çünkü bunlar geçerli <xref:System.String?displayProperty=nameWithType> nesneler. Boş dizeler aşağıdaki şekilde başlatılır:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   

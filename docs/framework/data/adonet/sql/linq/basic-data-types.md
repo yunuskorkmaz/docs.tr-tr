@@ -2,12 +2,12 @@
 title: Temel Veri Türleri
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b01a49afa99fc7ecdb7a113a5056e37d901527a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e85adb928925bf161e6e2d6ef935a20606f8eb32
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964072"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248030"
 ---
 # <a name="basic-data-types"></a>Temel Veri Türleri
 LINQ to SQL sorguları, Microsoft SQL Server yürütülmeden önce Transact-SQL ' e çevirdiklerinden. LINQ to SQL, temel veri türleri için SQL Server gereken yerleşik işlevlerin çoğunu destekler.  
@@ -24,5 +24,5 @@ LINQ to SQL sorguları, Microsoft SQL Server yürütülmeden önce Transact-SQL 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Öğeleri Sırala (C#)'
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 074428413fa57d8f0e5ae94970c2aeeeb9e4cc7c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e5f76518437954ac683ec2e3e30ad9007c280f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69592461"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253307"
 ---
 # <a name="how-to-sort-elements-c"></a>Nasıl yapılır: Öğeleri Sırala (C#)
 Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılacağını gösterir.  
@@ -28,7 +28,7 @@ foreach (decimal el in prices)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  
@@ -57,7 +57,7 @@ foreach (decimal el in prices)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 0.99  
 4.95  
 6.99  

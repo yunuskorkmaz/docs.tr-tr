@@ -1,19 +1,19 @@
 ---
-title: 'Nasıl yapılır: LINQ to XML kullanarak sözlükleri çalışın (C#)'
+title: 'Nasıl yapılır: LINQ to XML (C#) kullanarak sözlüklerle çalışma'
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 196720ff9c17e62f8da9e65e1b8c481fed5074cc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55512e6039010d74d390c805c119935c436f9834
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484719"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253234"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Nasıl yapılır: LINQ to XML kullanarak sözlükleri çalışın (C#)
-Genellikle, diğer veri yapılarını XML ve XML veri yapılarını çeşitleri dönüştürmek uygundur. Bu konuda dönüştürerek genel bu yaklaşım, belirli bir uygulama gösterilmektedir. bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>Nasıl yapılır: LINQ to XML (C#) kullanarak sözlüklerle çalışma
+Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte bir form içinde bir sorgu projelerde yeni bir işlev oluşturma <xref:System.Xml.Linq.XElement> nesneleri ve sonuçta elde edilen koleksiyon geçirilen bağımsız değişken olarak kök oluşturucuya <xref:System.Xml.Linq.XElement> nesne.  
+ Bu örnek, bir sorgu projelerinin yeni <xref:System.Xml.Linq.XElement> nesne ve elde edilen koleksiyonun bir bağımsız değişken olarak kök <xref:System.Xml.Linq.XElement> nesnenin oluşturucusuna geçirildiği işlevsel oluşturma formunu kullanır.  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -40,7 +40,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, XML'den bir sözlük oluşturur.  
+ Aşağıdaki kod XML 'den bir sözlük oluşturur.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -59,10 +59,9 @@ foreach (string str in dict.Keys)
   
  Bu kod aşağıdaki çıktıyı üretir:  
   
-```  
+```output  
 Child1:Value1  
 Child2:Value2  
 Child3:Value3  
 Child4:Value4  
 ```  
-  

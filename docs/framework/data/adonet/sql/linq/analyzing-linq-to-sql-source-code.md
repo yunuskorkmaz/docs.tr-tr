@@ -2,12 +2,12 @@
 title: LINQ to SQL Kaynak Kodunu Analiz Etme
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 4b23e0df1ee762dd22d43cd1be050db70481db50
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dda19800a9aea0d644740c5378f6d5065181993e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964103"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248078"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>LINQ to SQL Kaynak Kodunu Analiz Etme
 Aşağıdaki adımları kullanarak, Northwind örnek veritabanından kaynak kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] üretebilirsiniz. Farklı öğelerin nasıl eşleştirildiğini daha iyi görmek için nesne modeli öğelerini veritabanı öğeleriyle karşılaştırabilirsiniz.  
@@ -15,9 +15,9 @@ Aşağıdaki adımları kullanarak, Northwind örnek veritabanından kaynak kodu
 > [!NOTE]
 > Visual Studio kullanan geliştiriciler, bu kodu oluşturmak için O/R tasarımcısını kullanabilir.  
   
-1. Geliştirme bilgisayarınızda zaten Northwind örnek veritabanınız yoksa ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+1. Geliştirme bilgisayarınızda zaten Northwind örnek veritabanınız yoksa ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md).  
   
-2. Visual Basic veya C# kaynak dosyası oluşturmak Için SQLMetal komut satırı aracını kullanın. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Komut istemine aşağıdaki komutları yazarak, saklı yordamları ve işlevleri içeren Visual Basic ve C# kaynak dosyaları oluşturabilirsiniz:  
+2. Visual Basic veya C# kaynak dosyası oluşturmak Için SQLMetal komut satırı aracını kullanın. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md). Komut istemine aşağıdaki komutları yazarak, saklı yordamları ve işlevleri içeren Visual Basic ve C# kaynak dosyaları oluşturabilirsiniz:  
   
     - `sqlmetal /code:northwind.vb /language:vb "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
@@ -25,5 +25,5 @@ Aşağıdaki adımları kullanarak, Northwind örnek veritabanından kaynak kodu
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Başvuru](reference.md)
+- [Arka Plan Bilgileri](background-information.md)

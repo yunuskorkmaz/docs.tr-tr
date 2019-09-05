@@ -2,40 +2,40 @@
 title: Entity SQL ile Transact-SQL Arasındaki Farklar
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-ms.openlocfilehash: 54d7a3fa8ce6e8a0aba6194bfc034eb4d47dbf60
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1a4bf8267ee5f036effc5f7bc91c28d1485b7612
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489924"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250857"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL ile Transact-SQL Arasındaki Farklar
-Bu konuda arasındaki farklar açıklanmaktadır [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ve Transact-SQL.  
+Bu konu, ve Transact- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SQL arasındaki farkları açıklamaktadır.  
   
-## <a name="inheritance-and-relationships-support"></a>Devralma ve ilişkiler desteği  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] doğrudan kavramsal varlık şemalarıyla çalışan ve devralma ve ilişkiler gibi kavramsal model özelliklerini de destekler.  
+## <a name="inheritance-and-relationships-support"></a>Devralma ve Ilişkiler desteği  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]doğrudan kavramsal varlık şemaları ile çalışarak devralma ve ilişkiler gibi kavramsal model özelliklerini destekler.  
   
- Devralma ile çalışırken, genellikle üst örnekleri koleksiyonundan bir alt örneklerini seçmek yararlıdır. [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md) işlecinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] (benzer şekilde `oftype` içinde C# dizileri) bu özelliği sunar.  
+ Devralmayla çalışırken, genellikle bir üst tür alt türünün örneklerini seçmek yararlıdır. `oftype` İçindeki [](oftype-entity-sql.md) [!INCLUDE[esql](../../../../../../includes/esql-md.md)] OfType işleci ( C# dizilerine benzer şekilde) bu yeteneği sağlar.  
   
 ## <a name="support-for-collections"></a>Koleksiyonlar için destek  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Koleksiyonlar, birinci sınıf varlıklar olarak değerlendirir. Örneğin:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]koleksiyonları birinci sınıf varlıklar olarak değerlendirir. Örneğin:  
   
-- Koleksiyon ifadeleri geçerli bir `from` yan tümcesi.  
+- Koleksiyon ifadeleri `from` yan tümcesinde geçerlidir.  
   
-- `in` ve `exists` alt sorgular genelleştirilmiş koleksiyonlarınız izin vermek için.  
+- `in`ve `exists` alt sorgular tüm koleksiyonlara izin verecek şekilde genelleştirilir.  
   
-     Alt sorgu koleksiyonu türüdür. `e1 in e2` ve `exists(e)` olan [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bu işlemleri gerçekleştirmek için oluşturur.  
+     Alt sorgu tek bir koleksiyon türüdür. `e1 in e2`ve `exists(e)` bu işlemleri [!INCLUDE[esql](../../../../../../includes/esql-md.md)] gerçekleştirmek için yapılardır.  
   
-- Ayarlama işlemleri, gibi `union`, `intersect`, ve `except`, artık koleksiyonlarda çalışır.  
+- ,, Ve `union` `intersect` gibi`except`işlemleri, artık koleksiyonlar üzerinde çalışır.  
   
-- Birleştirmeler koleksiyonlarda çalışır.  
+- Birleşimler koleksiyonlar üzerinde çalışır.  
   
-## <a name="support-for-expressions"></a>İfadeler için destek  
- Transact-SQL alt sorgular (tablolar) ve ifadeler (satırları ve sütunları) sahiptir.  
+## <a name="support-for-expressions"></a>Ifadeler için destek  
+ Transact-SQL 'de alt sorgular (tablolar) ve ifadeler (satırlar ve sütunlar) vardır.  
   
- Koleksiyonlar ve iç içe geçmiş koleksiyonlar desteklemek için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] her şey bir ifade yapar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Transact-SQL daha fazla birleştirilebilir olan — her ifade her yerde kullanılabilir. Sorgu ifadeleri her zaman öngörülen türleri koleksiyonlarında ve neden olabilir bir toplama ifadesi izin verilen her yerde kullanılabilir. Desteklenmeyen Transact-SQL deyimleri hakkında bilgi için [!INCLUDE[esql](../../../../../../includes/esql-md.md)], bkz: [desteklenmeyen ifadeler](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md).  
+ Koleksiyonları ve iç içe koleksiyonları [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemek için her şeyi bir ifadeye getirir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)], Transact-SQL ' den daha birleştirilebilir — her ifade her yerde kullanılabilir. Sorgu ifadeleri her zaman öngörülen türlerin koleksiyonlarına neden olur ve koleksiyon ifadesine izin verildiğinde her yerde kullanılabilir. ' De [!INCLUDE[esql](../../../../../../includes/esql-md.md)]desteklenmeyen Transact-SQL ifadeleri hakkında daha fazla bilgi için bkz. [Desteklenmeyen ifadeler](unsupported-expressions-entity-sql.md).  
   
- Aşağıdaki tüm geçerli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular:  
+ Tüm geçerli [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgular aşağıda verilmiştir:  
   
 ```  
 1+2 *3  
@@ -46,79 +46,79 @@ e1 union all e2
 set(e1)  
 ```  
   
-## <a name="uniform-treatment-of-subqueries"></a>Alt sorgular Tekdüzen adların kullanımı  
- Tablolarda, Vurgu göz önünde bulundurulduğunda, Transact-SQL alt sorgular bağlamsal yorumu gerçekleştirir. Örneğin, bir alt sorguda `from` yan tümcesi bir çoklu küme (tablo) olarak kabul edilir. Ancak kullanılan aynı alt sorgu `select` yan tümcesi skaler bir alt sorgu olarak kabul edilir. Benzer şekilde, sol tarafında kullanılan alt sorgu bir `in` işleci, skaler bir alt sorgu sağ tarafındaki multiset alt sorgu beklenmektedir sırada olacak şekilde değerlendirilir.  
+## <a name="uniform-treatment-of-subqueries"></a>Alt sorguları Tekdüzen olarak Işleme  
+ Tablo üzerinde vurgusu verildiğine göre Transact-SQL, alt sorgular için bağlama yorumu uygular. Örneğin, `from` yan tümcesindeki bir alt sorgu bir çoklu küme (tablo) olarak kabul edilir. Ancak `select` yan tümcesinde kullanılan aynı alt sorgu skaler bir alt sorgu olarak kabul edilir. Benzer şekilde, bir `in` işlecin sol tarafında kullanılan bir alt sorgu skaler bir alt sorgu olarak değerlendirilir ve sağ taraftaki bir çoklu küme alt sorgusu olması beklenir.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Bu farklar ortadan kaldırır. Bir ifade içinde kullanıldığı bağlamda benzemez Tekdüzen bir yorumu vardır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] multiset alt sorgular olması için tüm alt sorgulara göz önünde bulundurur. Skaler değer Alt sorgudan isteniyorsa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sağlar `anyelement` işleci (Bu durumda, alt) bir koleksiyon üzerinde çalışır ve koleksiyondan bir singleton değeri ayıklar.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Bu farklılıkları ortadan kaldırır. Bir ifade, kullanıldığı bağlama bağlı olmayan bir Tekdüzen yorumu içeriyor. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]tüm alt sorguları çoklu küme alt sorguları olacak şekilde değerlendirir. Alt sorgudan skaler bir değer isteniyorsa, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir koleksiyon üzerinde çalışan `anyelement` işleci (Bu durumda alt sorgu) sağlar ve koleksiyondan tek bir değer ayıklar.  
   
-### <a name="avoiding-implicit-coercions-for-subqueries"></a>Alt sorgular için örtük zorlamayı kaçınma  
- İlgili bir yan etkisi Tekdüzen değerlendirilmesi, alt sorgularda, alt sorgularda örtük dönüştürülmesi için skaler değerler ' dir. Özellikle, Transact-SQL, bir çoklu küme satır (ile tek bir alan) örtük olarak alanın veri türü olan bir skaler değer olarak dönüştürülür.  
+### <a name="avoiding-implicit-coercions-for-subqueries"></a>Alt sorgular için örtük zorlamalar önleme  
+ Tek biçimli alt sorgular için ilgili bir yan etkisi, alt sorguları skaler değerlere örtülü olarak dönüştürmedir. Özellikle Transact-SQL ' de bir dizi çoklu küme (tek bir alan ile), veri türü alanın bulunduğu bir skalar değere örtülü olarak dönüştürülür.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Bu örtük zorlama desteklemez. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tekil değer bir koleksiyondan ayıklanacak ANYELEMENT işleci sağlar ve bir `select value` yan tümcesi bir sorgu ifadesinde sırasında satır sarmalayıcı oluşturmaktan kaçınmak için.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Bu örtük zorlaması desteklemez. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir koleksiyondan tek bir değer ayıklamak için AnyElement işlecini ve sorgu ifadesi sırasında satır sarmalayıcı `select value` oluşturulmasını önlemek için bir yan tümceyi sağlar.  
   
-## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Değer seçin: Örtük satır sarmalayıcı kaçınma  
- Select yan tümcesinde bir Transact-SQL alt öğeleri çevresinde satır sarmalayıcı yan tümcesinde örtük olarak oluşturur. Bu, skalerler nesneleri ve koleksiyonları oluşturamıyoruz anlamına gelir. Transact-SQL bir rowtype bir alan ve bir tekliyi değeri aynı veri türünde arasında örtük bir zorlama sağlar.  
+## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Değer seçin: Örtük satır sarmalayıcısı önleme  
+ Bir Transact-SQL alt sorgusunda SELECT yan tümcesi, yan tümcesindeki öğelerin etrafında örtük olarak bir satır sarmalayıcı oluşturur. Bu, yapı veya nesne koleksiyonları oluşturduğumuz anlamına gelir. Transact-SQL, tek bir alanla RowType ve aynı veri türünde tek bir değer arasında örtük bir zorlama sağlar.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sağlar `select value` yan tümcesi örtük satır oluşturma atlanacak. Yalnızca bir öğe belirtilebilir bir `select value` yan tümcesi. Böyle bir yan tümcesi kullanıldığında, öğeler etrafında hiçbir satır sarmalayıcı oluşturulur `select` yan tümcesi ve istediğiniz şekle koleksiyonunu oluşturulur, örneğin: `select value a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]örtük satır oluşturmayı atlamak için yantümcesağlar.`select value` `select value` Yan tümcesinde yalnızca bir öğe belirtilebilir. Böyle bir yan tümce kullanıldığında, `select` yan tümcesindeki öğeler etrafında satır sarmalayıcı oluşturulmadı ve istenen şeklin bir koleksiyonu üretilmeyebilir, örneğin:. `select value a`  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] row oluşturucusunda rastgele satırları oluşturmak için de sağlar. `select` projeksiyon bir veya daha fazla öğeleri ve sonuçları bir veri kayıttaki alanları ile aşağıdaki gibi alır:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Ayrıca satır oluşturucusunu rastgele satırlar oluşturmak için de sağlar. `select`projeksiyondaki bir veya daha fazla öğeyi alır ve alanları içeren bir veri kaydının aşağıdaki gibi sonuçlarını alır:  
   
  `select a, b, c`  
   
-## <a name="left-correlation-and-aliasing"></a>Sol bağıntı ve diğer ad kullanımı  
- Transact-SQL, ifadeleri belirli bir kapsamda (tek bir yan tümce ister `select` veya `from`) ifadeler aynı kapsam içinde daha önce tanımlanan başvuramaz. Bazı diyalektler (Transact-SQL de dahil olmak üzere) SQL bunların sınırlı forms desteği `from` yan tümcesi.  
+## <a name="left-correlation-and-aliasing"></a>Sol bağıntı ve diğer ad  
+ Transact-SQL içinde, belirli bir kapsamdaki ifadeler (veya `select` `from`gibi tek bir yan tümce), aynı kapsamda daha önce tanımlanan ifadelere başvuramaz. SQL 'in bazı diatıtılarını (Transact-SQL dahil), `from` yan tümcesinde bunların sınırlı biçimlerini destekler.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] içinde sol bağıntılar genelleştirir `from` yan tümcesi ve aynı şekilde davranır. İfadelerde `from` yan tümcesi aynı yan ek söz dizimi gerek kalmadan eski tanımları (sol tanımları) başvurabilir.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]`from` yan tümce içinde sol bağıntıları genelleştirir ve bunları bir şekilde değerlendirir. `from` Yan tümcesindeki ifadeler, ek sözdizimi gerekmeden aynı yan tümce içindeki önceki tanımlara (sol ve diğer tanımlar) başvurabilir.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ayrıca sorguları ilgili ek kısıtlamalar getirir `group by` yan tümceleri. İfadelerde `select` yan tümcesi ve `having` gibi sorguların yan tümcesi için yalnızca başvurabilir `group by` diğer adlarını aracılığıyla anahtarları. Şu yapı Transact-SQL ancak bunlar içinde değil geçerli [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Ayrıca, yan tümceleri içeren `group by` sorgularda ek kısıtlamalar uygular. Bu tür sorguların `having` `group by` yan tümce ve yan tümcesindeki ifadeler yalnızca diğer adları aracılığıyla anahtarlara başvurabilir. `select` Aşağıdaki yapı Transact-SQL ' te geçerlidir ancak içinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)]yoktur:  
   
 ```  
 select t.x + t.y from T as t group by t.x + t.y  
 ```  
   
- Bunu yapmak için [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
+ Bunu yapmak [!INCLUDE[esql](../../../../../../includes/esql-md.md)]için:  
   
 ```  
 select k from T as t group by (t.x + t.y) as k  
 ```  
   
-## <a name="referencing-columns-properties-of-tables-collections"></a>Başvuru tabloları (koleksiyonlar) sütunları (özellikleri)  
- Sütun başvurularının tümü [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tablo diğer adıyla nitelendirilmesi gerekir. Şu yapı (varsayarak `a` geçerli bir sütun tablonun `T`) Transact-SQL ancak de geçerli olduğu [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+## <a name="referencing-columns-properties-of-tables-collections"></a>Tabloların (koleksiyonlar) sütunlarına (Özellikler) başvurma  
+ İçindeki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tüm sütun başvuruları tablo diğer adıyla nitelenmelidir. Aşağıdaki yapı (tablonun `a` `T`geçerli bir sütunu olduğunu varsayarak), Transact-SQL ' de geçerli, ancak içinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)]değil.  
   
 ```  
 select a from T  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Formu  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Form  
   
 ```  
 select t.a as A from T as t  
 ```  
   
- Tablo diğer adları isteğe bağlı olarak `from` yan tümcesi. Tablonun adını örtük diğer ad olarak kullanılır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aşağıdaki biçimi de sağlar:  
+ Tablo diğer adları, `from` yan tümcesinde isteğe bağlıdır. Tablonun adı örtük diğer ad olarak kullanılır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Aşağıdaki biçime de izin verir:  
   
 ```  
 select Tab.a from Tab  
 ```  
   
 ## <a name="navigation-through-objects"></a>Nesneler aracılığıyla gezinme  
- Transact-SQL kullanır "." gösterimi sütunları (satırının) başvuru için bir tablo. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir nesnenin özelliklerini gezinmeyi desteklemek için bu gösterim (programlama dillerinden ödünç) genişletir.  
+ Transact-SQL, bir tablonun (bir satırı) sütunlarına başvurmak için "." gösterimini kullanır. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir nesnenin özellikleri aracılığıyla gezinmeyi desteklemek için bu gösterimi (programlama dillerinden ödünç alınan) genişletir.  
   
- Örneğin, varsa `p` olduğundan bir ifade yazın kişi, aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] adresi bu kişinin şehrini başvuran söz dizimi.  
+ Örneğin, `p` kişi türünde bir ifadesiyse, bu kişinin adresinin şehrine başvurmak için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sözdizimi aşağıdaki gibidir.  
   
 ```  
 p.Address.City   
 ```  
   
-## <a name="no-support-for-"></a>Desteği *  
- Transact-SQL destekler nitelenmemiş * sözdizimi için tüm bir satırda ve tam bir diğer ad olarak \* sözdizimi (t\*) söz konusu tablonun alanlar için bir kısayol olarak. Ayrıca Transact-SQL özel sayısını sağlar (\*) null değerler içeren bir toplama.  
+## <a name="no-support-for-"></a>\* Desteği yok  
+ Transact-SQL, tüm satır için bir diğer ad olarak nitelenmemiş * sözdizimini ve bu tablonun alanları için \* bir kısayol olarak nitelenmiş\*sözdizimini (t.) destekler. Ayrıca Transact-SQL, null değerler içeren özel bir Count (\*) toplamasına izin verir.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemediği * yapısı. Transact-SQL sorguları formun `select * from T` ve `select T1.* from T1, T2...` ifade edilebilir [!INCLUDE[esql](../../../../../../includes/esql-md.md)] olarak `select value t from T as t` ve `select value t1 from T1 as t1, T2 as t2...`sırasıyla. Ayrıca, bu yapıları devralma (değer substitutability) işleme sırasında `select *` çeşitleri bildirilen türü için üst düzey özelliklerini kısıtlı.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]* yapısını desteklemez. Formunun `select * from T` Transact-SQL sorguları ve `select T1.* from T1, T2...` sırasıyla ve [!INCLUDE[esql](../../../../../../includes/esql-md.md)] `select value t from T as t` `select value t1 from T1 as t1, T2 as t2...`olarak ifade edilebilir. Ayrıca, bu yapılar devralma (değer substitutability), ancak `select *` varyantlar, belirtilen türün en üst düzey özellikleriyle sınırlandırılır.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklemediği `count(*)` toplama. Bunun yerine `count(0)` kullanın.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]`count(*)` toplamasını desteklemez. Bunun yerine `count(0)` kullanın.  
   
-## <a name="changes-to-group-by"></a>Gruplama Ölçütü değişiklikleri  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] diğer ad kullanımı, destekler `group by` anahtarları. İfadelerde `select` yan tümcesi ve `having` yan tümcesi başvurmalıdır `group by` anahtarlarında bu diğer adları. Örneğin, bu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] söz dizimi:  
+## <a name="changes-to-group-by"></a>Gruplandırma ölçütü  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]anahtarların diğer adını `group by` destekler. Yan tümce ve `having` yan tümcesindeki ifadeler, `group by` bu diğer adlar aracılığıyla anahtarlara başvurmalıdır. `select` Örneğin, bu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] söz dizimi:  
   
 ```  
 select k1, count(t.a), sum(t.a)  
@@ -126,7 +126,7 @@ from T as t
 group by t.b + t.c as k1  
 ```  
   
- ... Aşağıdaki Transact-SQL eşdeğerdir:  
+ ... Aşağıdaki Transact-SQL ' e eşdeğerdir:  
   
 ```  
 select b + c, count(*), sum(a)   
@@ -134,23 +134,23 @@ from T
 group by b + c  
 ```  
   
-## <a name="collection-based-aggregates"></a>Koleksiyon tabanlı toplamaları  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iki tür toplamlar destekler.  
+## <a name="collection-based-aggregates"></a>Koleksiyon tabanlı toplamalar  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]iki tür toplamaları destekler.  
   
- Koleksiyon tabanlı toplamlar koleksiyonlarda çalışır ve toplanan sonucu. Bu sorguda her yerde görünebilir ve gerekli olmayan bir `group by` yan tümcesi. Örneğin:  
+ Koleksiyon tabanlı toplamalar koleksiyonlar üzerinde çalışır ve toplanmış sonucu üretir. Bunlar sorgunun herhangi bir yerinde görünebilir ve `group by` yan tümce gerektirmez. Örneğin:  
   
 ```  
 select t.a as a, count({1,2,3}) as b from T as t     
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ayrıca SQL stili toplamalar destekler. Örneğin:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)], SQL stili toplamlarını da destekler. Örneğin:  
   
 ```  
 select a, sum(t.b) from T as t group by t.a as a  
 ```  
   
 ## <a name="order-by-clause-usage"></a>ORDER BY yan tümcesi kullanımı  
- Transact-SQL yalnızca üstteki Seç belirtilmesi ORDER BY yan tümcesi sağlar... KAYNAK.. Burada engelleyin. İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] iç içe geçmiş bir ORDER BY deyimi kullanabilirsiniz ve her yerde sorguda yerleştirilebilir, ancak iç içe geçmiş bir sorgusunda sıralama korunur.  
+ Transact-SQL ORDER BY yan tümcelerinin yalnızca en üstteki SELECT içinde belirtilmesini sağlar. KAYNAK.. WHERE bloğu. İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , iç içe geçmiş bir ifade kullanabilirsiniz ve sorgu içinde herhangi bir yere yerleştirilebilir, ancak iç içe bir sorgudaki sıralama korunmaz.  
   
 ```  
 -- The following query will order the results by the last name  
@@ -168,50 +168,50 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="identifiers"></a>Tanımlayıcılar  
- Transact-SQL, tanımlayıcı karşılaştırmasına geçerli veritabanı harmanlaması üzerinde temel alır. İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)], tanımlayıcılar her zaman büyük/küçük harfe duyarsızdır ve aksan duyarlı (diğer bir deyişle, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ayıran karakter vurgulanmış ve vurgulanmamış; Örneğin, 'bir' 'ấ için' eşit değildir). [!INCLUDE[esql](../../../../../../includes/esql-md.md)] aynı görünür, ancak farklı bir karakter olarak farklı kod sayfalarından olan harf sürümleri değerlendirir. Daha fazla bilgi için [giriş karakter kümesi](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md).  
+ Transact-SQL ' de tanımlayıcı karşılaştırması, geçerli veritabanının harmanlanmasını temel alır. İçinde [!INCLUDE[esql](../../../../../../includes/esql-md.md)]tanımlayıcılar her zaman büyük/küçük harfe duyarlıdır ve aksan duyarlıdır (yani [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , aksanlı ve aksanlı karakterler arasında ayrım yapar; örneğin, ' a ', ' ấ ' değerine eşit değildir). [!INCLUDE[esql](../../../../../../includes/esql-md.md)]aynı görünen, ancak farklı kod sayfalarından farklı karakter olan harflerin sürümlerini değerlendirir. Daha fazla bilgi için bkz. [giriş karakter kümesi](input-character-set-entity-sql.md).  
   
-## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Transact-SQL işlevleri varlık SQL kullanılamıyor  
- Aşağıdaki Transact-SQL işlevleri kullanıma sunulmadı [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+## <a name="transact-sql-functionality-not-available-in-entity-sql"></a>Transact-SQL Işlevselliği Entity SQL kullanılamıyor  
+ Aşağıdaki Transact-SQL işlevselliği ' de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]kullanılamaz.  
   
  DML  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] şu anda DML deyimleri için destek sağlar (ekleme, güncelleştirme ve silme).  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Şu anda DML deyimleri (INSERT, Update, Delete) için destek sağlamaz.  
   
  DDL  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] geçerli sürümünde DDL desteği sağlar.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]geçerli sürümde DDL desteği sağlamaz.  
   
  Kesin Programlama Karşılaştırması  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Transact-SQL aksine kesin programlama için destek sağlar. Bunun yerine bir programlama dili kullanın.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)], Transact-SQL ' den farklı olarak, kesinlik temelli programlama için destek sağlamaz. Bunun yerine bir programlama dili kullanın.  
   
- İşlevleri gruplandırma  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] henüz destek işlevleri (örneğin, CUBE, ROLLUP ve GROUPING_SET) gruplandırma için sağlamaz.  
+ Gruplandırma Işlevleri  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]henüz gruplandırma işlevleri için destek sağlamaz (örneğin, CUBE, ROLLUP ve GROUPING_SET).  
   
- Analitik İşlevler  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] yok (henüz) analitik işlevler için destek sağlar.  
+ Analitik Işlevler  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)](henüz) analitik işlevler için destek sağlamaz.  
   
- Yerleşik işlevleri, işleçler  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] destekler, İşlevler ve işleçler Transact-SQL'in kümesini yerleşik. Bu işleç ve işlevlerini büyük depolama sağlayıcıları tarafından desteklenmesi olasılığı düşüktür. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Sağlayıcı bildiriminde belirtilen depolama özgü işlevleri kullanır. Ayrıca, [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] yerleşik bildirmek olanak tanır ve var olan kullanıcı tanımlı deposuna İşlevler, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kullanılacak.  
+ Yerleşik Işlevler, Işleçler  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Transact-SQL ' in yerleşik işlevlerinin ve işleçlerinin bir alt kümesini destekler. Bu işleçler ve işlevler büyük olasılıkla ana mağaza sağlayıcıları tarafından desteklenmektedir. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]bir sağlayıcı bildiriminde belirtilen mağazaya özgü işlevleri kullanır. Ayrıca, kullanımı için [!INCLUDE[esql](../../../../../../includes/esql-md.md)] yerleşik ve Kullanıcı tanımlı var olan depolama işlevlerini bildirmenize olanaktanır.[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]  
   
- İpuçları  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Sorgu ipuçları mekanizmalar sağlamaz.  
+ Yapılandıracak  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]sorgu ipuçları için mekanizmalar sağlamaz.  
   
- Sorgu sonuçları toplu işleme  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Toplu işlem sorgu sonuçları desteklemez. Örneğin, geçerli Transact-SQL (toplu iş olarak gönderme) aşağıdadır:  
+ Sorgu sonuçlarını toplu işleme  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]sorgu sonuçlarını toplu olarak oluşturmayı desteklemez. Örneğin, aşağıda geçerli Transact-SQL (Batch olarak gönderme) verilmiştir:  
   
 ```  
 select * from products;  
 select * from catagories;  
 ```  
   
- Ancak, eşdeğer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] desteklenmiyor:  
+ Ancak eşdeğer [!INCLUDE[esql](../../../../../../includes/esql-md.md)] bir değer desteklenmez:  
   
 ```  
 Select value p from Products as p;  
 Select value c from Categories as c;  
 ```  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Yalnızca komut başına bir sonuç oluşturmayı sorgu deyimini destekler.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]komut başına yalnızca bir sonuç oluşturan sorgu bildirisini destekler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL’e Genel Bakış](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Desteklenmeyen İfadeler](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)
+- [Entity SQL’e Genel Bakış](entity-sql-overview.md)
+- [Desteklenmeyen İfadeler](unsupported-expressions-entity-sql.md)

@@ -2,12 +2,12 @@
 title: Performans konuları (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4836125205f3d4cbbe852c92f2a88aca331ded70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 99969d7991f613bd8049aac81669583372e0f2c6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962245"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248525"
 ---
 # <a name="performance-considerations-entity-framework"></a>Performans konuları (Entity Framework)
 Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity Framework uygulamaların performansını artırmaya yardımcı olmak için bazı hususlar sağlar.  
@@ -20,7 +20,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
 |Meta veriler yükleniyor|Düzey|Her uygulama etki alanında bir kez.|Entity Framework tarafından kullanılan model ve eşleme meta verileri bir ' a <xref:System.Data.Metadata.Edm.MetadataWorkspace>yüklenir. Bu meta veriler genel olarak önbelleğe alınır ve aynı uygulama etki alanındaki <xref:System.Data.Objects.ObjectContext> diğer örnekleri için kullanılabilir.|  
 |Veritabanı bağlantısı açılıyor|Orta<sup>1</sup>|Gerektiğinde.|Veritabanına açık bir bağlantı değerli bir kaynak [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] kullandığından, veritabanı bağlantısını yalnızca gerektiğinde açar ve kapatır. Ayrıca bağlantıyı açık bir şekilde açabilirsiniz. Daha fazla bilgi için bkz. [bağlantıları ve Işlemleri yönetme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).|  
 |Görünümler üretiliyor|Yüksek|Her uygulama etki alanında bir kez. (Önceden oluşturulmuş olabilir.)|Entity Framework, kavramsal bir modelde sorgu yürütebilmesi veya veri kaynağına değişiklikleri kaydedebilmek için, veritabanına erişmek üzere bir yerel sorgu görünümleri kümesi oluşturması gerekir. Bu görünümlerin oluşturulması için yüksek maliyetli olduğundan, görünümleri önceden oluşturabilir ve tasarım zamanında projeye ekleyebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Sorgu performansını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))artırmak Için görünümleri önceden oluşturun.|  
-|Sorgu hazırlanıyor|Orta<sup>2</sup>|Her benzersiz sorgu için bir kez.|Sorgu komutunu oluşturma, model ve eşleme meta verilerini temel alan bir komut ağacı oluşturma ve döndürülen verilerin şeklini tanımlama maliyetlerini içerir. Artık hem Entity SQL sorgu komutları hem de LINQ sorguları önbelleğe alındığından, aynı sorgunun sonraki yürütmeleri daha az zaman alır. Daha sonraki yürütmeler ve derlenmiş sorgularda bu maliyeti azaltmak için derlenen LINQ sorgularını kullanmaya devam edebilirsiniz ve derlenen sorgular otomatik olarak önbelleğe alınan LINQ sorgularından daha verimli olabilir. Daha fazla bilgi için bkz. [derlenmiş sorgular (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). LINQ sorgu yürütmesi hakkında genel bilgi için bkz. [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Not:**  Bu işleci, `Enumerable.Contains` bellek içi koleksiyonlara uygulayan LINQ to Entities sorguları otomatik olarak önbelleğe alınmaz. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametreleştirmeye izin verilmez.|  
+|Sorgu hazırlanıyor|Orta<sup>2</sup>|Her benzersiz sorgu için bir kez.|Sorgu komutunu oluşturma, model ve eşleme meta verilerini temel alan bir komut ağacı oluşturma ve döndürülen verilerin şeklini tanımlama maliyetlerini içerir. Artık hem Entity SQL sorgu komutları hem de LINQ sorguları önbelleğe alındığından, aynı sorgunun sonraki yürütmeleri daha az zaman alır. Daha sonraki yürütmeler ve derlenmiş sorgularda bu maliyeti azaltmak için derlenen LINQ sorgularını kullanmaya devam edebilirsiniz ve derlenen sorgular otomatik olarak önbelleğe alınan LINQ sorgularından daha verimli olabilir. Daha fazla bilgi için bkz. [derlenmiş sorgular (LINQ to Entities)](./language-reference/compiled-queries-linq-to-entities.md). LINQ sorgu yürütmesi hakkında genel bilgi için bkz. [LINQ to Entities](./language-reference/linq-to-entities.md). **Not:**  Bu işleci, `Enumerable.Contains` bellek içi koleksiyonlara uygulayan LINQ to Entities sorguları otomatik olarak önbelleğe alınmaz. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametreleştirmeye izin verilmez.|  
 |Sorgu Yürütülüyor|Düşük<sup>2</sup>|Her sorgu için bir kez.|ADO.NET veri sağlayıcısı kullanılarak, komutu veri kaynağında yürütme maliyeti. Çoğu veri kaynağı sorgu planlarını aştığından, aynı sorgunun daha sonraki yürütmeleri daha da az zaman alabilir.|  
 |Türleri yükleme ve doğrulama|Düşük<sup>3</sup>|Her <xref:System.Data.Objects.ObjectContext> örnek için bir kez.|Türler, kavramsal modelin tanımladığı türlere göre yüklenir ve onaylanır.|  
 |İzleme|Düşük<sup>3</sup>|Bir sorgunun döndürdüğü her nesne için bir kez. <sup>4</sup>|Bir sorgu <xref:System.Data.Objects.MergeOption.NoTracking> Merge seçeneğini kullanıyorsa, bu aşama performansı etkilemez.<br /><br /> Sorgu <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges>, veya <xref:System.Data.Objects.MergeOption.OverwriteChanges> Merge seçeneğinikullanıyorsasorgusonuçlarıiçindeizlenir.<xref:System.Data.Objects.ObjectStateManager> Sorgu tarafından döndürülen ve <xref:System.Data.Objects.ObjectStateEntry> içinde <xref:System.Data.Objects.ObjectStateManager>oluşturmak için kullanılan her izlenen nesne için oluşturulur. <xref:System.Data.EntityKey> İçin var olan <xref:System.Data.Objects.ObjectStateEntry> bir nesnesi bulunursa ,varolannesnedöndürülür.<xref:System.Data.EntityKey> <xref:System.Data.Objects.MergeOption.PreserveChanges>, Veya<xref:System.Data.Objects.MergeOption.OverwriteChanges> seçeneği kullanılırsa, nesne döndürülmeden önce güncelleştirilir.<br /><br /> Daha fazla bilgi için bkz. [kimlik çözümleme, durum yönetimi ve değişiklik izleme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896269(v=vs.100)).|  
@@ -32,7 +32,7 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
   
  <sup>3</sup> toplam maliyet, sorgu tarafından döndürülen nesne sayısıyla orantılı olarak artar.  
   
- <sup>4</sup> EntityClient sorguları bir <xref:System.Data.EntityClient.EntityDataReader> nesne yerine döndürdüğü için bu ek yük, EntityClient sorguları için gerekli değildir. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
+ <sup>4</sup> EntityClient sorguları bir <xref:System.Data.EntityClient.EntityDataReader> nesne yerine döndürdüğü için bu ek yük, EntityClient sorguları için gerekli değildir. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="additional-considerations"></a>Ek konular  
  Aşağıda Entity Framework uygulamaların performansını etkileyebilecek diğer noktalar verilmiştir.  
@@ -41,10 +41,10 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
  Sorgular kaynak kullanımı yoğun olabileceğinden, kodunuzun hangi noktada ve bir sorgunun yürütülebileceğini göz önünde bulundurun.  
   
 #### <a name="deferred-versus-immediate-execution"></a>Ertelenmiş ve anında yürütme  
- Bir <xref:System.Data.Objects.ObjectQuery%601> veya LINQ sorgusu oluşturduğunuzda sorgu hemen yürütülemeyebilir. Sorgu yürütme `foreach` , (C#) veya `For Each` (Visual Basic) numaralandırması sırasında veya bir <xref:System.Collections.Generic.List%601> koleksiyonu dolduracak şekilde atandığında, sonuçlar gerekene kadar ertelenir. Ya <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> da gibi <xref:System.Data.Objects.ObjectQuery%601> tekbir<xref:System.Linq.Enumerable.Any%2A>sorgu döndüren LINQ yöntemini çağırdığınızda sorgu yürütme hemen başlar. <xref:System.Linq.Enumerable.First%2A> Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) ve [sorgu yürütme (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md).  
+ Bir <xref:System.Data.Objects.ObjectQuery%601> veya LINQ sorgusu oluşturduğunuzda sorgu hemen yürütülemeyebilir. Sorgu yürütme `foreach` , (C#) veya `For Each` (Visual Basic) numaralandırması sırasında veya bir <xref:System.Collections.Generic.List%601> koleksiyonu dolduracak şekilde atandığında, sonuçlar gerekene kadar ertelenir. Ya <xref:System.Data.Objects.ObjectQuery%601.Execute%2A> da gibi <xref:System.Data.Objects.ObjectQuery%601> tekbir<xref:System.Linq.Enumerable.Any%2A>sorgu döndüren LINQ yöntemini çağırdığınızda sorgu yürütme hemen başlar. <xref:System.Linq.Enumerable.First%2A> Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)) ve [sorgu yürütme (LINQ to Entities)](./language-reference/query-execution.md).  
   
 #### <a name="client-side-execution-of-linq-queries"></a>LINQ sorgularının istemci tarafı yürütmesi  
- Bir LINQ sorgusunun yürütülmesi, veri kaynağını barındıran bilgisayarda gerçekleşse de, bir LINQ sorgusunun bazı kısımları istemci bilgisayarda değerlendirilemeyebilir. Daha fazla bilgi için, [sorgu yürütme (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)konusunun mağaza yürütme bölümüne bakın.  
+ Bir LINQ sorgusunun yürütülmesi, veri kaynağını barındıran bilgisayarda gerçekleşse de, bir LINQ sorgusunun bazı kısımları istemci bilgisayarda değerlendirilemeyebilir. Daha fazla bilgi için, [sorgu yürütme (LINQ to Entities)](./language-reference/query-execution.md)konusunun mağaza yürütme bölümüne bakın.  
   
 ### <a name="query-and-mapping-complexity"></a>Sorgu ve eşleme karmaşıklığı  
  Tek tek sorguların ve varlık modelindeki eşlemenin karmaşıklığı, sorgu performansı üzerinde önemli bir etkiye sahip olacaktır.  
@@ -155,4 +155,4 @@ Bu konu, ADO.NET Entity Framework performans özelliklerini açıklar ve Entity 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Geliştirme ve Dağıtım Konuları](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+- [Geliştirme ve Dağıtım Konuları](development-and-deployment-considerations.md)

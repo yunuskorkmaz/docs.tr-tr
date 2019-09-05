@@ -1,16 +1,16 @@
 ---
-title: (Varlık SQL) kullanma
+title: KULLANMA (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: e14b7857a65898683939647c872c48d0b3fe458a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9495e5daf88326c5a682172d835c3349fe79e571
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034113"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248753"
 ---
-# <a name="using-entity-sql"></a>(Varlık SQL) kullanma
-Bir sorgu ifadesinde kullanılan ad alanlarını belirtir.  
+# <a name="using-entity-sql"></a>KULLANMA (Entity SQL)
+Sorgu ifadesinde kullanılan ad alanlarını belirtir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -20,17 +20,17 @@ USING [ alias = ] namespace
   
 ## <a name="arguments"></a>Arguments  
  `alias`  
- Bir ad alanı ile nitelemek için daha kısa bir diğer ad belirtir.  
+ Bir ad alanını nitelemek için daha kısa bir diğer ad belirtir.  
   
  `namespace`  
- Geçerli bir ad alanı.  
+ Geçerli herhangi bir ad alanı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL sorgusunu kullanarak işleci bir sorgu ifadesinde kullanılan ad alanları belirtmek için kullanır. Derleme ve bu sorguyu çalıştırmak için bu adımları izleyin:  
+ Aşağıdaki Entity SQL sorgusu, bir sorgu ifadesinde kullanılan ad alanlarını belirtmek için USING işlecini kullanır. Bu sorguyu derlemek ve çalıştırmak için aşağıdaki adımları izleyin:  
   
-1. Verilen yordamı izleyin [nasıl yapılır: PrimitiveType sonuçları döndüren bir sorgu yürütme](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. [Aşağıdaki adımları uygulayın: PrimitiveType sonuçları](../how-to-execute-a-query-that-returns-primitivetype-results.md)döndüren bir sorgu yürütün.  
   
-2. Aşağıdaki sorguda bağımsız değişken olarak geçirmek `ExecutePrimitiveTypeQuery` yöntemi:  
+2. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
   
 ```  
 using SqlServer; RAND()  
@@ -38,5 +38,5 @@ using SqlServer; RAND()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ad Alanları](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Ad Alanları](namespaces-entity-sql.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)

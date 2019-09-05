@@ -1,16 +1,16 @@
 ---
-title: İŞLEV (varlık SQL)
+title: Işlev (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: efab5f1abbc5e0c22e404c37dc80dd5aafa09ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae8da3985f11a2e9f52852876a21f50a412e3b27
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879612"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250932"
 ---
-# <a name="function-entity-sql"></a>İŞLEV (varlık SQL)
-Bir işlev bir varlık SQL sorgusu komutu kapsamında tanımlar.  
+# <a name="function-entity-sql"></a>Işlev (Entity SQL)
+Bir Entity SQL sorgu komutunun kapsamındaki bir işlevi tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -33,27 +33,27 @@ FUNCTION function-name
  İşlevin adı.  
   
  `parameter-name`  
- İşlev bir parametre adı.  
+ İşlevdeki bir parametrenin adı.  
   
  `function_expression`  
- İşlev, geçerli bir varlık SQL ifadesi. Komut içinde işlev üzerinde işlem yapabileceğiniz `parameter_name` işleve geçirilen parametreler.  
+ İşlevi olan geçerli bir Entity SQL ifadesi. İşlevindeki komut, işleve geçirilen parametrelere göre `parameter_name` hareket edebilir.  
   
  `data_type`  
- Desteklenen bir tür adı.  
+ Desteklenen bir türün adı.  
   
- KOLEKSİYON (< type_definition`>` )  
- Desteklenen türler, satır veya başvuruları koleksiyonunu döndüren bir ifade.  
+ KOLEKSIYON (< type_definition`>` )  
+ Desteklenen türlerin, satırların veya başvuruların koleksiyonunu döndüren bir ifade.  
   
- REF **(**`data_type`**)**  
- Bir varlık türü referansı döndüren bir ifade.  
+ REF **(** `data_type` **)**  
+ Bir varlık türüne başvuru döndüren bir ifade.  
   
- SATIR **(**`row_expression`**)**  
- Anonim, döndüren bir ifade, yapısal olarak bir veya daha fazla değer kayıtlardan yazdınız. Daha fazla bilgi için [satır](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ SATIR **(** `row_expression` **)**  
+ Bir veya daha fazla değerden adsız, yapısal olarak yazılmış kayıtlar döndüren bir ifade. Daha fazla bilgi için bkz. [satır](row-entity-sql.md).  
   
 ## <a name="remarks"></a>Açıklamalar  
- İşlev imzası farklı olduğu sürece, aynı ada sahip birden çok işlev satır içi olarak bildirilebilir. Daha fazla bilgi için [işlev aşırı yükleme çözünürlüğü](../../../../../../docs/framework/data/adonet/ef/language-reference/function-overload-resolution-entity-sql.md).  
+ İşlev imzaları farklı olduğu sürece, aynı ada sahip birden çok işlev satır içi olarak bildirilemez. Daha fazla bilgi için bkz. [Işlev aşırı yükleme çözünürlüğü](function-overload-resolution-entity-sql.md).  
   
- Bu komutta yalnızca tanımlandıktan sonra bir satır içi işlevi bir varlık SQL komutunu çağrılabilir. Ancak, satır içi işlev önce ya da çağrılan işlevi tanımlandıktan sonra başka bir satır içi işlev içinde çağrılabilir. B işlevi tanımlanmadan önce aşağıdaki örnekte, B işlevi bir çağrıları işlev:  
+ Satır içi bir işlev, bir Entity SQL komutunda, yalnızca bu komutta tanımlandıktan sonra çağrılabilir. Ancak, satır içi bir işlev başka bir satır içi işlevin içinde, çağrılan işlev tanımlanmadan önce veya sonra çağrılabilir. Aşağıdaki örnekte, B işlevi tanımlanmadan önce bir çağrı işlevi B işlevini işle:  
   
  `Function A() as ('A calls B. ' + B())`  
   
@@ -61,21 +61,21 @@ FUNCTION function-name
   
  `A()`  
   
- Daha fazla bilgi için [nasıl yapılır: Bir kullanıcı tanımlı işlevi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
+ Daha fazla bilgi için [nasıl yapılır: Kullanıcı tanımlı bir Işlev](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))çağırın.  
   
- İşlevler Ayrıca model içinde bildirilebilir. Model içinde bildirilen işlevlerle aynı şekilde komutta bildirilen satır içi işlevleri gibi yürütülür. Daha fazla bilgi için [kullanıcı tanımlı işlevler](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
+ İşlevler ayrıca modelin kendisinde de belirtilebilir. Modelde belirtilen işlevler, komutta satır içi olarak belirtilen işlevlerle aynı şekilde yürütülür. Daha fazla bilgi için bkz. [Kullanıcı tanımlı işlevler](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL komutunu bir işlevi tanımlayan `Products` döndürülen ürünleri filtrelemek için bir tamsayı değeri alır.  
+ Aşağıdaki Entity SQL komutu döndürülen ürünlerin filtreleneceği `Products` bir tamsayı değeri alan bir işlevi tanımlar.  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function1)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki varlık SQL komutunu bir işlevi tanımlayan `StringReturnsCollection` döndürülen kişiler filtrelemek için dizeleri koleksiyonunu alır.  
+ Aşağıdaki Entity SQL komutu, döndürülen kişileri filtrelemek `StringReturnsCollection` için bir dize koleksiyonu alan bir işlevi tanımlar.  
   
  [!code-csharp[DP EntityServices Concepts 2#FUNCTION2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#function2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Entity SQL Başvurusu](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Entity SQL Dili](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Entity SQL Başvurusu](entity-sql-reference.md)
+- [Entity SQL Dili](entity-sql-language.md)
