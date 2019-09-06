@@ -1,0 +1,27 @@
+---
+title: Hizmet odaklı mimari
+description: Mikro hizmetler ile hizmet odaklı mimari (SOA) arasındaki temel farklılıkları öğrenin.
+ms.date: 09/20/2018
+ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70296217"
+---
+# <a name="service-oriented-architecture"></a><span data-ttu-id="3f213-103">Hizmet odaklı mimari</span><span class="sxs-lookup"><span data-stu-id="3f213-103">Service-oriented architecture</span></span>
+
+<span data-ttu-id="3f213-104">Hizmet odaklı mimari (SOA), aşırı kullanılan bir terimdir ve farklı kişilere farklı şeyler sunmaktır.</span><span class="sxs-lookup"><span data-stu-id="3f213-104">Service-oriented architecture (SOA) was an overused term and has meant different things to different people.</span></span> <span data-ttu-id="3f213-105">Ancak, ortak paydası olarak, SOA, alt sistemler veya Katmanlar gibi farklı türler olarak sınıflandırılabilen birden fazla hizmete (en yaygın olarak HTTP Hizmetleri) oluşturarak uygulamanızı yapılandıracağı anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="3f213-105">But as a common denominator, SOA means that you structure your application by decomposing it into multiple services (most commonly as HTTP services) that can be classified as different types like subsystems or tiers.</span></span>
+
+<span data-ttu-id="3f213-106">Bu hizmetler artık, dağıtım sorunlarını çözen Docker Kapsayıcıları olarak dağıtılabilir, çünkü tüm bağımlılıklar kapsayıcı görüntüsüne dahil edilmiştir.</span><span class="sxs-lookup"><span data-stu-id="3f213-106">Those services can now be deployed as Docker containers, which solves deployment issues, because all the dependencies are included in the container image.</span></span> <span data-ttu-id="3f213-107">Ancak, SOA uygulamalarını ölçeklendirmeniz gerektiğinde, tek Docker konaklarına dayalı dağıtım yapıyorsanız ölçeklenebilirlik ve kullanılabilirlik güçlüklerine sahip olabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3f213-107">However, when you need to scale up SOA applications, you might have scalability and availability challenges if you're deploying based on single Docker hosts.</span></span> <span data-ttu-id="3f213-108">Bu, daha sonraki bölümlerde, mikro hizmetler için dağıtım yaklaşımlarının açıklandığı gibi Docker kümeleme yazılımının veya bir Orchestrator tarafından size yardımcı olabilir.</span><span class="sxs-lookup"><span data-stu-id="3f213-108">This is where Docker clustering software or an orchestrator can help you, as explained in later sections where deployment approaches for microservices are described.</span></span>
+
+<span data-ttu-id="3f213-109">Docker Kapsayıcıları hem geleneksel hizmet yönelimli mimariler hem de daha gelişmiş mikro hizmet mimarileri için yararlıdır (ancak gerekli değildir).</span><span class="sxs-lookup"><span data-stu-id="3f213-109">Docker containers are useful (but not required) for both traditional service-oriented architectures and the more advanced microservices architectures.</span></span>
+
+<span data-ttu-id="3f213-110">Mikro hizmetler SOA 'den türetilir, ancak SOA, mikro hizmetler mimarisinden farklıdır.</span><span class="sxs-lookup"><span data-stu-id="3f213-110">Microservices derive from SOA, but SOA is different from microservices architecture.</span></span> <span data-ttu-id="3f213-111">Büyük merkezi aracılar, kuruluş düzeyindeki merkezi düzenleyiciler ve [kurumsal Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) gibi özellikler Ise genellikle SOA 'de bulunur.</span><span class="sxs-lookup"><span data-stu-id="3f213-111">Features like large central brokers, central orchestrators at the organization level, and the [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) are typical in SOA.</span></span> <span data-ttu-id="3f213-112">Ancak çoğu durumda bunlar, mikro hizmet topluluğundaki daha etkili bir alışkanlığa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="3f213-112">But in most cases, these are anti-patterns in the microservice community.</span></span> <span data-ttu-id="3f213-113">Aslında, bazı kişiler "mikro hizmet mimarisi SOA tamamlandı."</span><span class="sxs-lookup"><span data-stu-id="3f213-113">In fact, some people argue that "The microservice architecture is SOA done right."</span></span>
+
+<span data-ttu-id="3f213-114">Bu kılavuz, mikro hizmetlere odaklandığı için, bir SOA yaklaşımı mikro hizmet mimarisinde kullanılan gereksinimlerden ve tekniklerin daha az bir şekilde düşüktür.</span><span class="sxs-lookup"><span data-stu-id="3f213-114">This guide focuses on microservices, because a SOA approach is less prescriptive than the requirements and techniques used in a microservice architecture.</span></span> <span data-ttu-id="3f213-115">Mikro hizmet tabanlı bir uygulamanın nasıl oluşturulduğunu biliyorsanız, daha basit bir hizmet yönelimli uygulama oluşturmayı da bilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="3f213-115">If you know how to build a microservice-based application, you also know how to build a simpler service-oriented application.</span></span>
+
+>[!div class="step-by-step"]
+><span data-ttu-id="3f213-116">[Önceki](docker-application-state-data.md)İleri
+>[](microservices-architecture.md)</span><span class="sxs-lookup"><span data-stu-id="3f213-116">[Previous](docker-application-state-data.md)
+[Next](microservices-architecture.md)</span></span>
