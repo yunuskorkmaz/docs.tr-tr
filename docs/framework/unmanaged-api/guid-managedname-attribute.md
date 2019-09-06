@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 110d6eb0abcf4b4ce73f1ee9d27e27122f360270
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777916"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374432"
 ---
-# <a name="guidmanagedname-attribute"></a>GUID_ManagedName Özniteliği
-Bileşen Nesne Modeli (COM) kitaplığı için yönetilen ad alanı adını belirten bir özel arabirim özniteliği tanımlar.  
+# <a name="guid_managedname-attribute"></a>GUID_ManagedName Özniteliği
+Bir bileşen nesne modeli (COM) kitaplığı için yönetilen ad alanı adını belirten bir özel arabirim özniteliği tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,10 +36,10 @@ Bileşen Nesne Modeli (COM) kitaplığı için yönetilen ad alanı adını beli
   
 ## <a name="parameters"></a>Parametreler  
  `value`  
- Kitaplığı yönetilen bir ad alanı adı.  
+ Kitaplık için yönetilen ad alanı adı.  
   
 ## <a name="definition"></a>Tanım  
- `GUID_ManagedName` içinde COR.h şu şekilde tanımlanır:  
+ `GUID_ManagedName`, Cor. h içinde aşağıdaki gibi tanımlanır:  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Özel arabirim özniteliği tür kitaplığında bir nesne için meta verileri tanımlar.  
+ Özel bir arabirim özniteliği tür kitaplığındaki bir nesne için meta verileri tanımlar.  
   
- Kullanım <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> veya <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> özniteliğinden yönetilen adı alınamadı.  
+ Özniteliğinden <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> yönetilen <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> adı almak için veya kullanın.  
   
- Daha fazla bilgi için [arabirim öznitelikleri](/cpp/windows/interface-attributes) Visual c++'ta başvuru belgeleri.  
+ Daha fazla bilgi için görsel C++ başvuru belgelerindeki [arabirim öznitelikleri](/cpp/windows/attributes/interface-attributes) bölümüne bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir kitaplık tanımı kullanarak gösterir `GUID_ManagedName` özniteliği.  
+ Aşağıdaki örnek, `GUID_ManagedName` özniteliğini kullanan bir kitaplık tanımını gösterir.  
   
 ```  
 [  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Üst bilgi:** COR.h
+ **Üst bilgi** Cor. h

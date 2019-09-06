@@ -2,12 +2,12 @@
 title: İlişkisel veritabanlarınızı Azure 'a geçirin
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin | ilişkisel veritabanlarınızı Azure 'a geçirin
 ms.date: 04/28/2018
-ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660728"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374103"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>İlişkisel veritabanlarınızı Azure 'a geçirin
 
@@ -17,7 +17,7 @@ Azure 'da, veritabanı sunucularınızı doğrudan IaaS VM 'lerine (saf kaldırm
 
 ![Azure 'da veritabanı geçiş yolları](./media/image3-1.png)
 
-> **Şekil 3-1.** Azure 'da veritabanı geçiş yolları
+**Şekil 3-1.** Azure 'da veritabanı geçiş yolları
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Azure SQL veritabanı yönetilen örneği 'ne geçiş
 

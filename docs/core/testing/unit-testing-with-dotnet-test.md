@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.custom: seodec18
-ms.openlocfilehash: 1013e14690bb3cfc17e339bfd5045e6d10bc3d3e
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 1a6c8ed515e62bed921290a54e3d9687bb889a4d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168146"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374147"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>DotNet test C# ve xUnit kullanarak .NET Core 'da birim testi
 
 Bu öğreticide, birim testi kavramlarını öğrenmek için bir örnek çözüm oluşturma adım adım yönergeler sunarak etkileşimli bir deneyim sağlanır. Önceden oluşturulmuş bir çözüm kullanarak öğreticiyi izlemeyi tercih ediyorsanız, başlamadan önce [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>Kaynak proje oluşturma
 
@@ -28,7 +30,7 @@ Yeni bir çözüm oluşturmak için bu [`dotnet new sln`](../tools/dotnet-new.md
     /PrimeService
 ```
 
-Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* olarak yenidenadlandırın. Önce `PrimeService` sınıfın başarısız bir uygulamasını oluşturursunuz:
+Kaynak projeyi oluşturmak için *primeservice* 'i geçerli [`dotnet new classlib`](../tools/dotnet-new.md) Dizin yapın ve çalıştırın. *Class1.cs* *olarak yeniden*adlandırın. Önce `PrimeService` sınıfın başarısız bir uygulamasını oluşturursunuz:
 
 ```csharp
 using System;

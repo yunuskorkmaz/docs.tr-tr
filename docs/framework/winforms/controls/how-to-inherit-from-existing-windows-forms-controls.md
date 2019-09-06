@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015862"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373245"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Nasıl yapılır: Mevcut Windows Forms Denetimlerinden Devralma
 
@@ -26,22 +26,22 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
 
 1. Visual Studio 'da yeni bir **Windows Forms uygulama** projesi oluşturun.
 
-2. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
+1. **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.
 
-     **Yeni Öğe Ekle** iletişim kutusu görünür.
+    **Yeni Öğe Ekle** iletişim kutusu görünür.
 
-3. **Yeni öğe Ekle** Iletişim kutusunda **özel denetim ' e**çift tıklayın.
+1. **Yeni öğe Ekle** Iletişim kutusunda **özel denetim ' e**çift tıklayın.
 
-     Projenize yeni bir özel denetim eklenir.
+    Projenize yeni bir özel denetim eklenir.
 
-4. Şunu kullanıyorsanız:
+1. Şunu kullanıyorsanız:
 
-   - Visual Basic, **Çözüm Gezgini**üst kısmında **tüm dosyaları göster**' e tıklayın. CustomControl1. vb öğesini genişletin ve ardından kod düzenleyicisinde CustomControl1. Designer. vb dosyasını açın.
-   - C#, kod düzenleyicisinde CustomControl1.cs öğesini açın.
+    - Visual Basic, **Çözüm Gezgini**üst kısmında **tüm dosyaları göster**' e tıklayın. CustomControl1. vb öğesini genişletin ve ardından kod düzenleyicisinde CustomControl1. Designer. vb dosyasını açın.
+    - C#, kod düzenleyicisinde CustomControl1.cs öğesini açın.
 
-6. Öğesinden <xref:System.Windows.Forms.Control>devralan sınıf bildirimini bulun.
+1. Öğesinden <xref:System.Windows.Forms.Control>devralan sınıf bildirimini bulun.
 
-7. Taban sınıfını, devralması istediğiniz denetim olarak değiştirin.
+1. Taban sınıfını, devralması istediğiniz denetim olarak değiştirin.
 
      Örneğin, öğesinden <xref:System.Windows.Forms.Button>devralma yapmak istiyorsanız, sınıf bildirimini aşağıdaki şekilde değiştirin:
 
@@ -54,11 +54,11 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Visual Basic kullanıyorsanız, CustomControl1. Designer. vb dosyasını kaydedin ve kapatın. Kod Düzenleyicisi 'nde CustomControl1. vb dosyasını açın.
+1. Visual Basic kullanıyorsanız, CustomControl1. Designer. vb dosyasını kaydedin ve kapatın. Kod Düzenleyicisi 'nde CustomControl1. vb dosyasını açın.
 
-9. Denetiminizin dahil olacağı özel yöntemleri veya özellikleri uygulayın.
+1. Denetiminizin dahil olacağı özel yöntemleri veya özellikleri uygulayın.
 
-10. Denetiminizin grafik görünümünü değiştirmek istiyorsanız, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılın.
+1. Denetiminizin grafik görünümünü değiştirmek istiyorsanız, <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini geçersiz kılın.
 
     > [!NOTE]
     > Geçersiz <xref:System.Windows.Forms.Control.OnPaint%2A> kılma, tüm denetimlerin görünümünü değiştirmenize izin vermez. Tüm boyama pencerelerinin Windows tarafından (örneğin, <xref:System.Windows.Forms.TextBox>) yaptığı denetimler hiçbir şekilde <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemini çağırmaz ve bu nedenle özel kodu hiçbir şey kullanmaz. <xref:System.Windows.Forms.Control.OnPaint%2A> Yöntemin kullanılabilir olup olmadığını görmek için değiştirmek istediğiniz belirli denetim için yardım belgelerine başvurun. Tüm Windows form denetimlerinin listesi için bkz. [Windows Forms Için kullanılacak denetimler](controls-to-use-on-windows-forms.md). Bir denetim <xref:System.Windows.Forms.Control.OnPaint%2A> üye yöntemi olarak listelenmiyorsa, bu yöntemi geçersiz kılarak görünümünü değiştiremezsiniz. Özel boyama hakkında daha fazla bilgi için bkz. [özel denetim boyama ve işleme](custom-control-painting-and-rendering.md).
@@ -83,7 +83,7 @@ Varolan bir denetimin işlevselliğini genişletmek istiyorsanız, devralma yolu
     }
     ```
 
-11. Denetiminizi kaydedin ve test edin.
+1. Denetiminizi kaydedin ve test edin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

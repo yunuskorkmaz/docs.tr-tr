@@ -2,12 +2,12 @@
 title: Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676966"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373927"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Mevcut .NET uygulamalarını buluta Iyileştirilmiş uygulamalarla modernleştirin nedenleri
 
@@ -41,9 +41,9 @@ Aşağıdaki listede, bulutta Iyileştirilmiş uygulamalar için ana taraf veya 
 
 Şekil 4-2, buluta Iyileştirilmiş bir uygulamanın ana isteğe bağlı ananlarına gösterir. Uyguladığınız daha fazla sayıda işlem, müşterilerinizin beklentilerini karşıladığı için uygulamanızın başarılı olması için readier.
 
-> ![Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma](./media/image2.png)
->
-> **Şekil 4-2.** Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma
+![Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma](./media/image2.png)
+
+**Şekil 4-2.** Bulut için Iyileştirilmiş uygulamanın ana paragraf oluşturma
 
 Özetlemek gerekirse, bulut ile Iyileştirilmiş bir uygulama, bulut bilgi işlem modelinden faydalanan uygulamalar oluşturma ve yönetmeye yönelik bir yaklaşım, bir kapsayıcı birleşimi, yönetilen bulut altyapısı, dayanıklı uygulama teknikleri, izleme, sürekli teslim ve DevOps, mevcut uygulamalarınızın yeniden mimari ve yeniden kodlenmesi gerekmeden.
 

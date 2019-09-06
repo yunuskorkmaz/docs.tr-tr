@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015730"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373682"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>İzlenecek yol: Standart türlerin koleksiyonlarını serileştirme
 
@@ -90,8 +90,8 @@ Denetiminizin serileştirme davranışını test etmek için, bunu bir forma yer
 
 5. **Dize koleksiyonu düzenleyicisine**birkaç dize yazın. Her bir dizenin sonunda **ENTER** tuşuna basarak onları ayırın. Dizeleri girmeyi tamamladığınızda **Tamam** ' a tıklayın.
 
-> [!NOTE]
-> Yazdığınız dizeler içinde <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`görüntülenir.
+    > [!NOTE]
+    > Yazdığınız dizeler içinde <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`görüntülenir.
 
 6. **Çözüm Gezgini**, **tüm dosyaları göster** düğmesine tıklayın.
 

@@ -2,12 +2,12 @@
 title: Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Mevcut .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 ms.date: 04/29/2018
-ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677029"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374017"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Varolan .NET uygulamalarını Windows kapsayıcıları olarak dağıtma
 
@@ -51,9 +51,9 @@ Birçok kuruluş, aşağıdaki nedenlerden dolayı mevcut tek parçalı uygulama
 
 [Docker](https://www.docker.com/) , uygulamaların bulutta veya şirket içinde çalışabilen taşınabilir, kendi kendine yeterli kapsayıcılar olarak dağıtımını otomatik hale getiren [Açık kaynaklı bir projem](https://github.com/docker/docker) . Docker Ayrıca bu teknolojiyi tanıtan ve geliştikçe bir [şirkettir](https://www.docker.com/) . Şirket, Microsoft dahil olmak üzere Cloud, Linux ve Windows satıcılarıyla işbirliği içinde çalışmaktadır.
 
-![](./media/image6.png)
+![Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır](./media/image6.png)
 
-> **Şekil 4-6.** Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır
+**Şekil 4-6.** Docker, kapsayıcıyı karma bulutun tüm katmanlarında dağıtır
 
 Sanal makineleri bildiğiniz bir kişiye, kapsayıcılar benzer şekilde benzerdir. Bir kapsayıcı, bir işletim sistemini çalıştırır, bir dosya sistemine sahiptir ve fiziksel veya sanal bilgisayar sistemi gibi bir ağ üzerinden erişilebilir. Ancak, kapsayıcıların arkasındaki teknoloji ve kavramlar, sanal makinelerden büyük ölçüde farklıdır. Bir geliştirici görünümünden bir kapsayıcı tek bir işlem gibi ele alınmalıdır. Aslında, bir kapsayıcı bir işlem için tek bir giriş noktasına sahiptir.
 
@@ -83,9 +83,9 @@ Linux için, resmi .NET Docker görüntülerinde (Deklik gibi) Çoklu destekler 
 
 Şekil 4-7, uygulamanın .NET Framework sürümüne bağlı olarak hedefleyebilir işletim sistemi sürümlerini gösterir.
 
-![](./media/image7.png)
+![.NET Framework sürümüne göre hedeflenecek işletim sistemleri](./media/image7.png)
 
-> **Şekil 4-7.** .NET Framework sürümüne göre hedeflenecek işletim sistemleri
+**Şekil 4-7.** .NET Framework sürümüne göre hedeflenecek işletim sistemleri
 
 .NET Framework uygulamalarına dayalı mevcut veya eski uygulamalar için geçiş senaryolarında, ana bağımlılıklar Windows ve IIS ' de bulunur. Tek seçeneğiniz, Windows Server Core ve .NET Framework temel alınarak Docker görüntülerini kullanmaktır.
 
@@ -138,9 +138,9 @@ Windows üzerinde veya Hyper-V yalıtımı olmadan bir kapsayıcı çalıştırm
 Önceki bölümlerde, Docker kapsayıcılarının avantajları ve .NET uygulamalarına özgü kapsayıcı görüntüleri hakkında ayrıntılı bilgiler de açıklanmıştı. Uygulamanın geliştirilmesi veya Kapsayıcılı olması için tüm bu genel bilgiler temel bir uygulamadır.
 Bununla birlikte, üretim dağıtım ortamı veya soru-cevap geliştirme/test Microsoft Azure ortamları hakkında düşünürken, bulutta tam bir kapsayıcı ekosistemi olan açık ve çok çeşitli seçenekler sağlar (Aşağıdaki diyagramda gösterilmektedir). Belirli uygulamanızın ihtiyaçlarına bağlı olarak, bir veya başka bir Azure ürünü seçmeniz gerekir.
 
-![](./media/image7.5.png)
+![Azure 'da kapsayıcı ekosistemi](./media/image7.5.png)
 
-> **Şekil 4-7,5.** Azure 'da kapsayıcı ekosistemi
+**Şekil 4-7,5.** Azure 'da kapsayıcı ekosistemi
 
 Azure 'da kapsayıcı ekosisteminden, altyapı olarak kabul edilen kapsayıcıları destekleyen aşağıdaki ürünler:
 - **Azure Container Instances (ACI)**

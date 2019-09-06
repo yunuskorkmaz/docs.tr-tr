@@ -2,12 +2,12 @@
 title: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 description: Bu e-defterle, mevcut uygulamaları Azure bulutuna ve kapsayıcılara kaldırıp modernleştirin ve bunlarla aynı şekilde geçiş yapmayı öğrenin.
 ms.date: 04/28/2018
-ms.openlocfilehash: ab2b58441af7aed6a8cd868751339b555a345565
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 99265e6179554214ae1684b6ea266693be7f80c1
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660852"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374160"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin (2. sürüm)
 
@@ -72,7 +72,7 @@ Kuruluşun en iyi uzun süreli çevikliği ve değeri olan modern uygulamalarda,
 
  ![Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları](./media/image1-1.png)
 
-> **Şekil 1-1**. Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları
+**Şekil 1-1**. Mevcut .NET uygulamaları ve hizmetleri için modernleştirme yolları
 
 Her geçiş yaklaşımının kullanılmasına yönelik farklı avantajları ve nedenleri vardır. Uygulamaları buluta geçirdiğinizde tek bir yaklaşım seçebilirsiniz veya birden fazla yaklaşımdan belirli bileşenleri seçebilirsiniz. Bireysel uygulamalar tek bir yaklaşım veya vade durumuyla sınırlı değildir. Örneğin, yaygın bir karma yaklaşım belirli şirket içi bileşenlere ve buluttaki diğer bileşenlere sahip olabilir.
 
@@ -111,7 +111,7 @@ Birçok mevcut .NET uygulaması günümüzde .NET Framework 4. x 3,5 .NET Framew
 
 ![Mevcut .NET Web uygulamalarını modernize etmek için her bir vade düzeyi için birincil teknolojiler](./media/image1-2.png)
 
-> **Şekil 1-2.** Mevcut .NET Web uygulamalarını modernize etmek için her bir vade düzeyi için birincil teknolojiler
+**Şekil 1-2.** Mevcut .NET Web uygulamalarını modernize etmek için her bir vade düzeyi için birincil teknolojiler
 
 Şekil 1-2, en yaygın senaryoları vurgular, ancak mimariye geldiğinde birçok karma ve karışık değişim mümkündür. Örneğin, vade modeller yalnızca mevcut Web uygulamalarındaki tek parçalı mimarilere değil, aynı zamanda hizmet yönü, N katmanı ve diğer mimari stili çeşitlemelerini da uygular. Bir veya başka bir mimari türü ve ilgili teknolojilerin üzerindeki daha yüksek odak veya yüzde, uygulamalarınızın genel vade düzeyini belirler.
 
@@ -129,7 +129,7 @@ Bu ilk modernleştirme sırasında, buluttan [Azure Application Insights](https:
 
 ![Her bir modernleştirme vade düzeyi için iç teknolojiler](./media/image1-3.png)
 
-> **Şekil 1-3.** Her bir modernleştirme vade düzeyi için iç teknolojiler
+**Şekil 1-3.** Her bir modernleştirme vade düzeyi için iç teknolojiler
 
 ## <a name="lift-and-shift-scenario"></a>Asansör ve kaydırma senaryosu
 
@@ -137,7 +137,7 @@ Yükseltme ve kaydırma geçişleri için uygulama senaryolarınızda birçok fa
 
 ![Bulutta saf IaaS senaryosu örneği](./media/image1-4.png)
 
-> **Şekil 1-4**. Bulutta saf IaaS senaryosu örneği
+**Şekil 1-4**. Bulutta saf IaaS senaryosu örneği
 
 ## <a name="modernization-scenarios"></a>Modernleştirme senaryoları
 
@@ -145,13 +145,13 @@ Modernleştirme senaryolarında yalnızca söz konusu vade düzeyindeki öğeler
 
 !["Seçme ve seçme" senaryosu, IaaS, DevOps ve kapsayıcılama varlıkları üzerinde veritabanıyla birlikte](./media/image1-5.png)
 
-> **Şekil 1-5.** "Seçme ve seçme" senaryosu, IaaS, DevOps ve kapsayıcılama varlıkları üzerinde veritabanıyla birlikte
+**Şekil 1-5.** "Seçme ve seçme" senaryosu, IaaS, DevOps ve kapsayıcılama varlıkları üzerinde veritabanıyla birlikte
 
 Daha sonra, birçok mevcut .NET Framework uygulamasına yönelik ideal senaryo olarak, çok az iş açısından önemli avantajlar elde etmek için buluta Iyileştirilmiş bir uygulamaya geçiş yapabilirsiniz. Bu yaklaşım ayrıca, olası gelecek bir evrimi olarak bulutta yerel için de ayarlar. Şekil 1-6 bir örnek gösterir.
 
 ![Windows kapsayıcıları ve yönetilen Hizmetleri olan örnek buluta Iyileştirilmiş uygulamalar senaryosu](./media/image1-6.png)
 
-> **Şekil 1-6.** Windows kapsayıcıları ve yönetilen Hizmetleri olan örnek buluta Iyileştirilmiş uygulamalar senaryosu
+**Şekil 1-6.** Windows kapsayıcıları ve yönetilen Hizmetleri olan örnek buluta Iyileştirilmiş uygulamalar senaryosu
 
 Ayrıca, belirli senaryolar için birkaç mikro hizmet ekleyerek, buluta Iyileştirilmiş mevcut uygulamanızı genişletebilirsiniz. Bu, sizi, mevcut kılavuzun ana odağı olmayan, bulut Yerel modeli düzeyine taşır.
 
@@ -161,7 +161,7 @@ Bu kılavuz, Şekil 1-7 ' de gösterildiği gibi örnek senaryoların belirli bi
 
 ![Bulutta yerel, bu kılavuzda kapsanmıyor](./media/image1-7.png)
 
-> **Şekil 1-7.** Bulutta yerel, bu kılavuzda kapsanmıyor
+**Şekil 1-7.** Bulutta yerel, bu kılavuzda kapsanmıyor
 
 Bu kılavuzun odağı özeldir. Bu, mevcut .NET uygulamalarınızın, yeniden mimari ve kod değişikliği olmadan bir yükseltme ve kaydırma işlemlerini gerçekleştirmek için uygulayabileceğiniz yolu gösterir. Son olarak, uygulamanızı nasıl Iyileştirecağınızı gösterir.
 

@@ -2,12 +2,12 @@
 title: Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulut için hazırlık dayanıklı Hizmetleri oluşturun. Buluttaki geçici hataları benimseme
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68677041"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373966"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Bulut için hazır olan dayanıklı hizmetler derleme: Buluttaki geçici hataları benimseme
 
@@ -29,7 +29,7 @@ HTTP Hizmetleri kullanan bir uygulamada benzer bir senaryo meydana gelebilir. K�
 
 ![Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi arızalar](./media/image9.png)
 
-> **Şekil 4-9.** Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi arızalar
+**Şekil 4-9.** Üstel geri alma ile yeniden denemeler tarafından işlenen kısmi arızalar
 
 Bu teknikleri, hem HTTP kaynaklarında hem de veritabanı kaynaklarında kullanabilirsiniz. Şekil 4-9 ' de, uygulama 3 katmanlı bir mimariye dayanır, bu nedenle hizmet düzeyinde (HTTP) ve veri katmanı düzeyinde (TCP) Bu tekniklerin olması gerekir. Veritabanına ek olarak yalnızca tek bir uygulama katmanını kullanan tek parçalı bir uygulamada (ek hizmet veya mikro hizmet olmadan), veritabanı bağlantı düzeyindeki geçici hataların işlenmesi yeterli olabilir. Bu senaryoda, veritabanı bağlantısının yalnızca belirli bir yapılandırması gerekir.
 

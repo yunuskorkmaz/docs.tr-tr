@@ -2,12 +2,12 @@
 title: Bulutta Yerel uygulamalar nedir?
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Bulutta yerel uygulamalar hakkında ne olacak?
 ms.date: 04/28/2018
-ms.openlocfilehash: 26adb87c426442ebf0e88165e521819e3a49d175
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676933"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373912"
 ---
 # <a name="what-about-cloud-native-applications"></a>Bulutta Yerel uygulamalar nedir?
 
@@ -17,7 +17,7 @@ ms.locfileid: "68676933"
 
 ![Bulutta yerel uygulamaları konumlandırma](./media/image3.png)
 
-> **Şekil 4-3.** Bulutta yerel uygulamaları konumlandırma
+**Şekil 4-3.** Bulutta yerel uygulamaları konumlandırma
 
 Bulut Yerel modernleştirme vade düzeyi genellikle yeni geliştirme yatırımları gerektirir. Bulutta yerel düzeye geçiş, genellikle, bağımsız olarak dağıtılabilecek ve ölçeklendirilebilen otonom alt sistemler (mikro hizmetler) oluşturarak büyük uygulamalardaki ölçeği büyük ölçüde artırmak için iş gereği tarafından dağıtılır uygulamanın diğer alanlarından, uzun vadede maliyetleri düşürürken ve bu otonom uygulamanın önemli rekabet avantajları sağlayan parçalarının artmasını artırma.
 
@@ -25,9 +25,9 @@ Bulutta yerel uygulamaların başlıca temel değerleri, çeviklik ile gelişebi
 
 Şekil 4-4, bulut Yerel modelinin ana özelliklerini gösterir.
 
-> ![Bulutta yerel özellikler, mikro hizmetler, kapsayıcılar, bulut-dayanıklı, düzenleyiciler ve sunucusuz](./media/image4.png)
->
-> **Şekil 4-4.** Bulutta yerel özellikler
+![Bulutta yerel özellikler, mikro hizmetler, kapsayıcılar, bulut-dayanıklı, düzenleyiciler ve sunucusuz](./media/image4.png)
+
+**Şekil 4-4.** Bulutta yerel özellikler
 
 Ayrıca, yapay zeka (AI), Machine Learning (ML) ve IoT gibi diğer hizmetleri ekleyerek temel Modern Web uygulamalarını ve bulutta yerel uygulamaları genişletebilirsiniz. Bulut için Iyileştirilmiş olası yaklaşımlardan herhangi birini genişletmek için bu hizmetlerden herhangi birini kullanabilirsiniz.
 

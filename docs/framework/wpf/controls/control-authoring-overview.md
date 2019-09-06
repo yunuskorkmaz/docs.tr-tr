@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401550"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374532"
 ---
 # <a name="control-authoring-overview"></a>Denetim Yazımına Genel Bakış
 
@@ -197,9 +197,9 @@ Daha önce açıklandığı gibi CLR `get` ve `set` erişimcileri, "bağımlıl�
 
 Aşağıdaki yönergeleri kullanarak özel denetimlere Ekli Özellikler uygulamalısınız:
 
-- `public` `static` Yöntemikullanılarak<xref:System.Windows.DependencyProperty>  oluşturulan birformPropertyName`Property` 'e sahip. `readonly` <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Geçirilen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Özellik adı *PropertyName*ile aynı olmalıdır.
+- `public` `static` Yöntemikullanılarak<xref:System.Windows.DependencyProperty> oluşturulan birformPropertyName`Property` 'e sahip. `readonly` <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Geçirilen <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Özellik adı *PropertyName*ile aynı olmalıdır.
 
-- `public` `static` *PropertyName* ve PropertyName adlı `Set`bir çift clr yöntemiuygulayın.`Get` Her iki yöntem de ilk bağımsız değişkeni <xref:System.Windows.DependencyProperty> olarak sınıfından türetilmiş bir sınıfı kabul etmelidir. PropertyName yöntemi, türü özelliği için kayıtlı veri türüyle eşleşen bir bağımsız değişkeni de kabul eder.  `Set` PropertyName yöntemi aynı türde bir değer döndürmelidir.  `Get` PropertyName yöntemi eksikse, özelliği salt okunurdur olarak işaretlenir.  `Set`
+- `public` `static` *PropertyName* vePropertyName adlı `Set`bir çift clr yöntemiuygulayın.`Get` Her iki yöntem de ilk bağımsız değişkeni <xref:System.Windows.DependencyProperty> olarak sınıfından türetilmiş bir sınıfı kabul etmelidir. PropertyName yöntemi, türü özelliği için kayıtlı veri türüyle eşleşen bir bağımsız değişkeni de kabul eder. `Set` PropertyName yöntemi aynı türde bir değer döndürmelidir. `Get` PropertyName yöntemi eksikse, özelliği salt okunurdur olarak işaretlenir. `Set`
 
 - `Set`*PropertyName* ve `Get` *PropertyName* , sırasıyla hedef bağımlılık nesnesi <xref:System.Windows.DependencyObject.GetValue%2A> üzerindeki <xref:System.Windows.DependencyObject.SetValue%2A> ve yöntemlerine doğrudan yönlendirmelidir. Tasarımcılar, yöntem sarmalayıcısı aracılığıyla arayarak veya hedef bağımlılık nesnesine doğrudan çağrı yaparak ekli özelliğe erişebilir.
 
@@ -264,7 +264,7 @@ Bir temaya özgü kaynaklar, belirli bir dosya adına sahip bir kaynak sözlüğ
 
 Her tema için bir kaynak tanımlamanız gerekmez. Belirli bir tema için bir kaynak tanımlanmamışsa denetim, kaynağı denetler `Classic.xaml` . Kaynak, geçerli temaya veya ' de `Classic.xaml`karşılık gelen dosyada tanımlanmamışsa, Denetim adlı `generic.xaml`bir kaynak sözlüğü dosyasında olan genel kaynağı kullanır.  `generic.xaml` Dosya, temaya özgü kaynak sözlüğü dosyalarıyla aynı klasörde bulunur. `generic.xaml` , Belirli bir Windows temasına karşılık gelmese de, hala Tema düzeyi bir sözlüktür.
 
-[NumericUpDown özel denetimi Tema ve UI Otomasyonu desteği örneği](https://go.microsoft.com/fwlink/?LinkID=160025) , `NumericUpDown` denetim için iki kaynak sözlükleri içerir: biri genel. xaml ve diğeri Luna. NormalColor. xaml içinde bulunur.  İki denetim şablonu arasındaki farkı görmek için uygulamayı çalıştırabilir ve Windows XP 'deki Gümüş tema arasında geçiş yapabilirsiniz. (Windows Vista çalıştırıyorsanız, Luna. NormalColor. xaml ' i Aero. NormalColor. xaml olarak yeniden adlandırabilir ve Windows Klasik ve Windows Vista için varsayılan tema gibi iki tema arasında geçiş yapabilirsiniz.)
+[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) Or [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown özel denetimi; Tema ve UI Otomasyonu desteği örneği, `NumericUpDown` denetim için iki kaynak sözlükleri içerir: biri Generic. xaml içinde, diğeri de Luna. NormalColor. xaml ' de bulunur. 
 
 Temayı özel kaynak sözlüğü <xref:System.Windows.Controls.ControlTemplate> dosyalarından birine yerleştirdiğinizde, denetiminiz için bir statik oluşturucu oluşturmanız ve aşağıdaki örnekte gösterildiği gibi, üzerinde <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>yöntemini çağırmanız gerekir.
 

@@ -2,12 +2,12 @@
 title: İzleme ve telemetri ile uygulamalarınızı modernleştirme
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | İzleme ve telemetri ile uygulamalarınızı modernleştirin
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676981"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373961"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>İzleme ve telemetri ile uygulamalarınızı modernleştirme
 
@@ -21,7 +21,7 @@ Application Insights, birden çok platformda çalışan Web geliştiricileri iç
 
 ![Application Insights izleme panosu](./media/image10.png)
 
-> **Şekil 4-10.** Application Insights izleme panosu
+**Şekil 4-10.** Application Insights izleme panosu
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Docker altyapınızı Log Analytics ve kapsayıcı Izleme çözümü ile izleyin
 
@@ -45,7 +45,7 @@ Log Analytics [kapsayıcı izleme çözümü](https://docs.microsoft.com/azure/l
 
 ![Log Analytics kapsayıcı Izleme çözümü](./media/image11.png)
 
-> **Şekil 4-11.** Log Analytics kapsayıcı Izleme çözümü
+**Şekil 4-11.** Log Analytics kapsayıcı Izleme çözümü
 
 Log Analytics kapsayıcı Izleme çözümünü kullanarak şunları yapabilirsiniz:
 

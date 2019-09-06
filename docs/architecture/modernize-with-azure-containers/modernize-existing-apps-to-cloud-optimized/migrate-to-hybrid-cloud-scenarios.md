@@ -2,12 +2,12 @@
 title: Karma bulut senaryolarına geçiş
 description: Azure bulut ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirin | Karma bulut senaryolarına geçiş
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676993"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373942"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Karma bulut senaryolarına geçiş
 
@@ -27,7 +27,7 @@ Azure Stack, kuruluşunuzun veri merkezinden Azure hizmetleri sunmanıza olanak 
 
 ![Azure Stack ve Azure ile Microsoft hibrit bulut platformu](./media/image13.jpg)
 
-> **Şekil 4-13.** Azure Stack ve Azure ile Microsoft hibrit bulut platformu
+**Şekil 4-13.** Azure Stack ve Azure ile Microsoft hibrit bulut platformu
 
 Azure Stack, gereksinimlerinizi karşılamak için iki dağıtım seçeneği sunulur:
 

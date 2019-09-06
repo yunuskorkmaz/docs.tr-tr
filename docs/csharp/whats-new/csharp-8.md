@@ -1,13 +1,13 @@
 ---
 title: C# 8,0 C# kılavuzundaki yenilikler
 description: 8,0 ' de C# bulunan yeni özelliklere genel bakış alın. Bu makale, Preview 5 ile güncel değildir.
-ms.date: 09/02/2019
-ms.openlocfilehash: 7210f2e978f307b3ecef2eff272fea0d19025de6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.date: 09/04/2019
+ms.openlocfilehash: b281c55a5911d81503a6af80e393469be1124280
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252898"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374006"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 sürümündeki yenilikler
 
@@ -26,6 +26,7 @@ C# Dilde daha önce deneyebileceğiniz birçok geliştirme vardır.
 - [Boş değer atanabilir başvuru türleri](#nullable-reference-types)
 - [Zaman uyumsuz akışlar](#asynchronous-streams)
 - [Dizinler ve aralıklar](#indices-and-ranges)
+- [Yönetilmeyen oluşturulmuş türler](#unmanaged-constructed-types)
 - [Ara değerli tam dizelerin geliştirilmesi](#enhancement-of-interpolated-verbatim-strings)
 
 > [!NOTE]
@@ -446,6 +447,33 @@ var text = words[phrase];
 ```
 
 Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
+
+## <a name="unmanaged-constructed-types"></a>Yönetilmeyen oluşturulmuş türler
+
+7,3 ve önceki sürümlerde, oluşturulmuş bir tür (en az bir tür bağımsız değişkeni içeren bir tür) yönetilmeyen bir tür olamaz. [](../language-reference/builtin-types/unmanaged-types.md) C# 8,0 ile C# başlayarak, oluşturulmuş bir değer türü yalnızca yönetilmeyen türlerin alanlarını içeriyorsa yönetilmez.
+
+Örneğin, genel `Coords<T>` türün aşağıdaki tanımı verildiğinde:
+
+```csharp
+public struct Coords<T>
+{
+    public T X;
+    public T Y;
+}
+```
+
+türü, C# 8,0 ve üzeri bir yönetilmeyen türdür. `Coords<int>` Herhangi bir yönetilmeyen tür için olduğu gibi, bu türden bir değişkene bir işaretçi oluşturabilir veya bu türün örnekleri için [yığında bir bellek bloğu ayırabilirsiniz](../language-reference/operators/stackalloc.md) :
+
+```csharp
+Span<Coords<int>> coordinates = stackalloc[]
+{
+    new Coords<int> { X = 0, Y = 0 },
+    new Coords<int> { X = 0, Y = 3 },
+    new Coords<int> { X = 4, Y = 0 }
+};
+```
+
+Daha fazla bilgi için bkz. [yönetilmeyen türler](../language-reference/builtin-types/unmanaged-types.md).
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ara değerli tam dizelerin geliştirilmesi
 

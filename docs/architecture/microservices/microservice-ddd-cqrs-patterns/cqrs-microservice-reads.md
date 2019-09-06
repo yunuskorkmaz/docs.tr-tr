@@ -1,0 +1,199 @@
+---
+title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
+ms.date: 10/08/2018
+ms.openlocfilehash: f791546e2fc00e276ab55302802a5534465ace58
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.translationtype: MT
+ms.contentlocale: tr-TR
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70295991"
+---
+# <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
+
+Okuma/sorgular için, eShopOnContainers başvuru uygulamasından gelen sıralama mikro hizmeti, sorguları DDD modeli ve işlem alanından bağımsız olarak uygular. Bu, öncelikle sorgular ve işlemler için talepler büyük ölçüde farklı olduğundan yapıldı. Yazar, etki alanı mantığı ile uyumlu olması gereken işlemleri yürütür. Diğer yandan sorgular, ıdempotent ve etki alanı kurallarından ayrılmış olabilir.
+
+Şekil 7-3 ' de gösterildiği gibi yaklaşım basittir. API arabirimi, Web API denetleyicileri tarafından, kaber gibi mikro nesne Ilişkisel Eşleyici (ORM) ve Kullanıcı arabirimi uygulamalarının ihtiyaçlarına bağlı olarak dinamik Viewmodeller gibi bir altyapı kullanılarak uygulanır.
+
+![Basitleştirilmiş bir CQRS yaklaşımında bulunan sorgular-tarafı için en basit yaklaşım, yalnızca bir Micro-ORM gibi, dinamik ViewModel döndüren veritabanı sorgulanarak uygulanabilir.](./media/image3.png)
+
+**Şekil 7-3**. Bir CQRS mikro hizmetindeki sorgular için en basit yaklaşım
+
+Bu, sorgular için mümkün olan en basit yaklaşımdır. Sorgu tanımları veritabanını sorgular ve her sorgu için anında oluşturulmuş dinamik bir ViewModel döndürür. Sorgular ıdempotent olduğundan, bir sorgu kaç kez çalıştırıldıklarından bağımsız olarak verileri değiştirmez. Bu nedenle, işlem tarafında, Toplamalar ve diğer desenler gibi kullanılan DDD deseniyle kısıtlanması gerekmez ve sorguların işlem alanından ayrılması neden olur. Yalnızca Kullanıcı arabiriminin gerek duyduğu verilerin veritabanını sorgular ve SQL deyimlerinin kendisi hariç her yerde statik olarak tanımlanması gerekmeyen dinamik bir ViewModel (ViewModel için sınıf olmadan) döndürür.
+
+Bu basit bir yaklaşım olduğundan, sorgular tarafı için gereken kod (örneğin, mikro ORM 'yi kullanan kod [gibi)](https://github.com/StackExchange/Dapper) [aynı Web API projesi içinde](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)uygulanabilir. Şekil 7-4 bunu gösterir. Sorgular, eShopOnContainers çözümünde **sıralama. API** mikro hizmet projesinde tanımlanmıştır.
+
+![Uygulama > sorguları klasörünü gösteren sıralama. API projesinin Çözüm Gezgini görünümü.](./media/image4.png)
+
+**Şekil 7-4**. EShopOnContainers 'da sıralama mikro hizmetindeki sorgular
+
+## <a name="use-viewmodels-specifically-made-for-client-apps-independent-from-domain-model-constraints"></a>Etki alanı modeli kısıtlamalarından bağımsız olarak istemci uygulamaları için özel olarak oluşturulan Viewmodeller kullanın
+
+Sorgular, istemci uygulamaları için gereken verileri elde etmek üzere gerçekleştirildiğinden, bu tür sorgular tarafından döndürülen verilere bağlı olarak istemciler için de yapılabilir. Bu modeller veya Veri Aktarımı nesneleri (DTOs) Viewmodeller olarak adlandırılır.
+
+Döndürülen veriler (ViewModel), veritabanındaki birden çok varlık veya tablodan ya da işlem alanı için etki alanı modelinde tanımlanan birden çok toplama arasında veri birleştirme sonucu olabilir. Bu durumda, etki alanı modelinden bağımsız sorgular oluştururken, toplamalar sınırları ve kısıtlamaları tamamen yok sayılır ve ihtiyacınız olan herhangi bir tabloyu ve sütunu sorgulayabilirsiniz. Bu yaklaşım, sorguları oluşturan veya güncelleştiren geliştiriciler için harika esneklik ve verimlilik sağlar.
+
+Viewmodeller sınıflarda tanımlanmış statik türler olabilir. Ya da geliştiriciler için çok çevik olan, gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir (sıralama mikro hizmetinde uygulandığı gibi).
+
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Sorguları gerçekleştirmek için mikro ORM olarak kaber kullanma 
+
+Sorgulamak için herhangi bir mikro ORM, Entity Framework Core veya hatta düz ADO.NET kullanabilirsiniz. Örnek uygulamada, Gamze 'nin eShopOnContainers 'daki sıralama mikro hizmeti, popüler mikro ORM 'nin iyi bir örneği olarak seçilmiştir. Çok hafif bir çerçeve olduğundan, harika performans ile düz SQL sorguları çalıştırabilir. Kaber kullanarak, birden fazla tabloya erişebilen ve birleştiren bir SQL sorgusu yazabilirsiniz.
+
+Kaber, açık kaynaklı bir projem (orijinal, Sam Saffron tarafından oluşturulan) ve [Stack Overflow](https://stackoverflow.com/)' de kullanılan yapı taşlarının bir parçasıdır. Kaber 'yi kullanmak için, aşağıdaki şekilde gösterildiği gibi, bunu yalnızca [kaber NuGet paketi](https://www.nuget.org/packages/Dapper)aracılığıyla yüklemeniz gerekir:
+
+![VS 'de NuGet paketlerini yönet görünümünde görüntülenen kaber paketi.](./media/image4.1.png)
+
+Kodunuzun kaber genişletme yöntemlerine erişimi olması için using ifadesini de eklemeniz gerekir.
+
+Kodunuzda kaber kullandığınızda, <xref:System.Data.SqlClient.SqlConnection> <xref:System.Data.SqlClient> ad alanında bulunan sınıfını doğrudan kullanırsınız. Queryasync yöntemi ve <xref:System.Data.SqlClient.SqlConnection> sınıfı genişleten diğer uzantı yöntemleri aracılığıyla sorguları basit ve performanslı bir şekilde çalıştırabilirsiniz.
+
+## <a name="dynamic-versus-static-viewmodels"></a>Dinamik ve statik Viewmodellere karşı
+
+Görüntü modellerini sunucu tarafında istemci uygulamalarına döndürürken, Viewmodeller verileri istemci uygulamayla aynı şekilde tutacağından, bu görünümleri varlık modelinizin iç etki alanı varlıklarıyla farklı olabilecek DTOs (Veri Aktarımı nesneleri) olarak düşünebilirsiniz. belirtilmesi. Bu nedenle, birçok durumda, birden fazla etki alanı varlıklarından gelen verileri toplayabilir ve istemci uygulamasının bu verilere nasıl ihtiyaç duyuşına göre Viewmodellerini tam olarak oluşturabilirsiniz.
+
+Bu viewmodeller veya DTOS, daha sonraki bir kod parçacığında gösterilen `OrderSummary` sınıf gibi açıkça (veri sahibi sınıfları olarak) tanımlanabilir veya yalnızca sorgular tarafından döndürülen özniteliklere dinamik olarak dinamik Görünüm modelleri veya dinamik DTU 'lar döndürebilir. türüyle.
+
+### <a name="viewmodel-as-dynamic-type"></a>Dinamik tür olarak ViewModel
+
+Aşağıdaki kodda gösterildiği gibi, `ViewModel` yalnızca bir sorgu tarafından döndürülen öznitelikleri temel alan *dinamik* bir tür döndürerek sorgular tarafından doğrudan döndürülebilecek. Bu, döndürülecek özniteliklerin alt kümesinin sorgunun kendisini temel aldığı anlamına gelir. Bu nedenle, sorguya veya birleşime yeni bir sütun eklerseniz, bu veriler döndürülen `ViewModel`öğesine dinamik olarak eklenir.
+
+```csharp
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using System.Dynamic;
+using System.Collections.Generic;
+
+public class OrderQueries : IOrderQueries
+{
+    public async Task<IEnumerable<dynamic>> GetOrdersAsync()
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            connection.Open();
+            return await connection.QueryAsync<dynamic>(
+                @"SELECT o.[Id] as ordernumber,
+                o.[OrderDate] as [date],os.[Name] as [status],
+                SUM(oi.units*oi.unitprice) as total
+                FROM [ordering].[Orders] o
+                LEFT JOIN[ordering].[orderitems] oi ON o.Id = oi.orderid
+                LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
+                GROUP BY o.[Id], o.[OrderDate], os.[Name]");
+        }
+    }
+}
+```
+
+Önemli nokta, dinamik bir tür kullanarak, döndürülen veri koleksiyonu, dinamik olarak ViewModel olarak toplanır.
+
+**Ları** Bu yaklaşım, bir sorgunun SQL cümlesini her güncelleştirdiğinizde statik ViewModel sınıflarını değiştirme gereksinimini azaltır. Bu tasarımın ardından, kodlama, basit ve hızlı bir şekilde, gelecekteki değişikliklere göre geliştikçe oldukça çevik bir yaklaşım sağlar.
+
+**Larını** Uzun dönemde dinamik türler, istemci uygulamalarıyla bir hizmetin netliğini ve uyumluluğunu olumsuz yönde etkileyebilir. Ayrıca, swashbuckle gibi ara yazılım yazılımı, dinamik türler kullanılıyorsa döndürülen türlerde belge düzeyini sağlayamaz.
+
+### <a name="viewmodel-as-predefined-dto-classes"></a>Önceden tanımlanmış DTO sınıfları olarak ViewModel
+
+**Uzmanları**: Statik olarak önceden tanımlanmış ViewModel sınıfları olan "sözleşmeler" gibi açık DTO sınıflarına dayalı olması, genel API 'lerde ancak aynı uygulama tarafından kullanılsa da uzun süreli mikro hizmetler için kesinlikle daha iyidir.
+
+Swagger için yanıt türleri belirtmek isterseniz, dönüş türü olarak açık DTO sınıfları kullanmanız gerekir. Bu nedenle, önceden tanımlanmış DTO sınıfları Swagger 'dan daha zengin bilgiler sunmanıza olanak tanır. Bu, API belgelerini ve API 'YI tükettiği uyumluluğu geliştirir.
+
+**Dezavantajlarını**: Daha önce belirtildiği gibi, kodu güncelleştirirken, DTO sınıflarını güncelleştirmek için biraz daha adım sürer.
+
+*Deneyimimize göre ipucu*: EShopOnContainers 'daki sıralama mikro hizmetinde uygulanan sorgularda, dinamik görünüm modellerini kullanarak geliştirmekte ve erken geliştirme aşamalarında çok basittir ve çevik hale gelir. Ancak, geliştirme işlemi bir kez alındıktan sonra, mikro hizmetin tüketicilerinin "sözleşmeler" olarak kullanılan açık bir tür olduğunu bilmesini sağlamak için, API 'Leri yeniden oluşturmayı ve ViewModel için statik veya önceden tanımlanmış DTOs kullanmayı seçtik.
+
+Aşağıdaki örnekte, sorgunun nasıl veri döndürünü bir açık ViewModel DTO sınıfı kullanarak görebilirsiniz: OrderSummary sınıfı.
+
+```csharp
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using System.Dynamic;
+using System.Collections.Generic;
+
+public class OrderQueries : IOrderQueries
+{
+  public async Task<IEnumerable<OrderSummary>> GetOrdersAsync()
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            connection.Open();
+            var result = await connection.QueryAsync<OrderSummary>(
+                  @"SELECT o.[Id] as ordernumber, 
+                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  SUM(oi.units*oi.unitprice) as total
+                  FROM [ordering].[Orders] o
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
+                  GROUP BY o.[Id], o.[OrderDate], os.[Name]
+                  ORDER BY o.[Id]");
+        }
+    } 
+}
+```
+
+#### <a name="describe-response-types-of-web-apis"></a>Web API 'lerinin yanıt türlerini açıkla
+
+Web API 'Leri ve mikro hizmetleri kullanan geliştiriciler, özellikle yanıt türleri ve hata kodları (Standart değilse) ile ilgili olarak en iyi şekilde verilen şeydir. Bunlar XML açıklamaları ve veri ek açıklamalarında işlenir.
+
+Swagger Kullanıcı arabiriminde doğru belgeler olmadan, tüketici hangi türlerin döndürülmekte olduğunu veya hangi HTTP kodlarının döndürüleceğini bilmede değildir. Bu sorun eklenerek düzeltildiği için <xref:Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute?displayProperty=nameWithType>, swashbuckle aşağıdaki kodda gösterildiği gibi API dönüş modeli ve değerleri hakkında daha zengin bilgiler oluşturabilir:
+
+```csharp
+namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
+{
+    [Route("api/v1/[controller]")]
+    [Authorize]
+    public class OrdersController : Controller
+    {
+        //Additional code...
+        [Route("")]
+        [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<OrderSummary>),
+            (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetOrders()
+        {
+            var userid = _identityService.GetUserIdentity();
+            var orders = await _orderQueries
+                .GetOrdersFromUserAsync(Guid.Parse(userid));
+            return Ok(orders);
+        }
+    }
+}
+```
+
+Ancak, `ProducesResponseType` öznitelik bir tür olarak dinamik kullanamaz, ancak aşağıdaki örnekte gösterildiği gibi, `OrderSummary` ViewModel gibi açık türlerin kullanılmasını gerektirir:
+
+```csharp
+public class OrderSummary
+{
+    public int ordernumber { get; set; }
+    public DateTime date { get; set; }
+    public string status { get; set; }
+    public double total { get; set; }
+}
+```
+
+Bu, açık olarak döndürülen türlerin uzun dönemde dinamik türlerden daha iyi olmasının diğer bir nedenidir. `ProducesResponseType` Özniteliğini kullanırken, olası HTTP hatalarını/kodlarını (200, 400 vb. gibi) hangi beklenen sonucun olduğunu de belirtebilirsiniz.
+
+Aşağıdaki görüntüde, Swagger Kullanıcı arabiriminin ResponseType bilgilerini nasıl gösterdiğini görebilirsiniz.
+
+![Sıralama API 'SI için Swagger Kullanıcı arabirimi sayfasının tarayıcı görünümü.](./media/image5.png)
+
+**Şekil 7-5**. Bir Web API 'sinden yanıt türlerini ve olası HTTP durum kodlarını gösteren Swagger Kullanıcı arabirimi
+
+Görüntüde, ViewModel türlerine ve döndürülebilecek olası HTTP durum kodlarına göre bazı örnek değerlerin üzerine bakabilirsiniz.
+
+## <a name="additional-resources"></a>Ek kaynaklar
+
+- **Dapper** \
+ <https://github.com/StackExchange/dapper-dot-net>
+
+- **Julie Lerman. Veri noktaları-daber, Entity Framework ve hibrit uygulamalar (MSDN Mag. article)**  \
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
+
+- **Swagger kullanarak Web API 'SI yardım sayfalarını ASP.NET Core** \
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
+
+>[!div class="step-by-step"]
+>[Önceki](eshoponcontainers-cqrs-ddd-microservice.md)İleri
+>[](ddd-oriented-microservice.md)

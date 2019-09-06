@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987238"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374445"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework yenilikler
 
@@ -32,7 +32,7 @@ Bu makalede, .NET Framework aşağıdaki sürümlerindeki temel yeni özellikler
 - [.NET Framework 4.5.1](#v451)
 - [.NET Framework 4.5](#v45)
 
-Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değişikliğe tabidir. .NET Framework hakkında genel bilgi için bkz. Başlarken [](../get-started/index.md). Desteklenen platformlar için bkz. [sistem gereksinimleri](../get-started/system-requirements.md). İndirme bağlantıları ve yükleme yönergeleri için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md).
+Bu makale, her yeni özellik hakkında kapsamlı bilgi sağlamaz ve değişikliğe tabidir. .NET Framework hakkında genel bilgi için [bkz. Başlarken](../get-started/index.md). Desteklenen platformlar için bkz. [sistem gereksinimleri](../get-started/system-requirements.md). İndirme bağlantıları ve yükleme yönergeleri için bkz. [Yükleme Kılavuzu](../install/guide-for-developers.md).
 
 > [!NOTE]
 > .NET Framework ekibi, platform desteğini genişletmek ve sabit koleksiyonlar ve SıMD özellikli vektör türleri gibi yeni işlevsellik tanıtmak için NuGet ile bant dışı özellikleri de serbest bırakır. Daha fazla bilgi için bkz. [Ek sınıf kitaplıkları ve API 'ler](../additional-apis/index.md) ve [.NET Framework ve bant dışı yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md).
@@ -174,7 +174,7 @@ Hizmet sistem durumu, gibi `https://contoso:81/Service1?health` `https://contoso
 
 **Yüksek DPı geliştirmeleri**
 
-.NET Framework 4,8 ' de WPF, Monitor v2 DPı tanıma ve karma mod DPı ölçeklendirme için destek ekler. Yüksek DPı geliştirmesi hakkında daha fazla bilgi için bkz. [Windows üzerinde yüksek DPI masaüstü uygulaması geliştirme](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) .
+.NET Framework 4,8 ' de WPF, Monitor v2 DPı tanıma ve karma mod DPı ölçeklendirme için destek ekler. Yüksek DPı geliştirmesi hakkında daha fazla bilgi için bkz. [Windows üzerinde yüksek DPI masaüstü uygulaması geliştirme](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) .
 
 .NET Framework 4,8, karma mod DPı ölçeklendirmesini (Windows 10 Nisan 2018 ' den başlayarak) destekleyen platformlar üzerindeki yüksek DPı WPF uygulamalarında barındırılan HWNDs ve Windows Forms birlikte çalışabilirlik desteğini geliştirir. Barındırılan HWNDs veya Windows Forms denetimleri [Setthreaddpihostingbehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) ve [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)çağırarak karışık mod DPI ölçekli pencereler olarak oluşturulduysa, her bir Monitor v2 WPF uygulamasında barındırılabilir ve boyutlandırılabilir ve uygun şekilde ölçeklendirildi. Bu tür barındırılan içerikler yerel DPı 'de işlenmez; Bunun yerine, işletim sistemi barındırılan içeriği uygun boyuta ölçeklendirir. Monitör başına v2 DPı tanıma moduna yönelik destek Ayrıca, WPF denetimlerinin yüksek DPı uygulamasındaki yerel bir pencerede barındırılmasına (yani, üstü olarak) olanak tanır.
 
@@ -605,7 +605,7 @@ Ayrıca, .NET Framework 4.7.1 ' deki önemli bir odak, bir uygulamanın yardımc
 
 **.NET Standard 2,0 desteği**
 
-[.NET Standard](../../standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) blog GÖNDERISINDE "BCL-.NET Standard 2,0 desteği" ne bakın.
+[.NET Standard](../../standard/net-standard.md) , standart sürümünü destekleyen her bir .NET uygulamasında kullanılabilir olması gereken bir API kümesini tanımlar. .NET Framework 4.7.1, .NET Standard 2,0 ' yi tam olarak destekler ve .NET Standard 2,0 ' de tanımlanan [200 API 'leri](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt) ekler ve .NET Framework 4.6.1, 4.6.2 ve 4,7. (.NET Framework bu sürümlerinin yalnızca hedef sistemde ek .NET Standard destek dosyaları da dağıtılmışsa .NET Standard 2,0 desteklediğine unutmayın.) Daha fazla bilgi için, [.NET Framework 4.7.1 çalışma zamanı ve derleyici özellikleri blog gönderisinde](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) "BCL-.NET Standard 2,0 desteği" ne bakın.
 
 **Yapılandırma oluşturucuları için destek**
 
@@ -1305,7 +1305,7 @@ Müşterilerin HSM 'de depolanan sütun ana anahtarlarıyla korunan Always Encry
 
 **AlwaysOn <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> için geliştirilmiş bağlantı davranışı**
 
-SqlClient artık otomatik olarak bir AlwaysOn kullanılabilirlik grubuna (AG) daha hızlı bağlantılar sağlar. Uygulamanızın farklı bir alt ağda bir AlwaysOn kullanılabilirlik grubuna (AG) bağlanıp bağlanmadığını saydam bir şekilde algılar ve geçerli etkin sunucuyu hızlıca bulup sunucuya bağlantı sağlar. Bu sürümden önce, bir uygulamanın bir AlwaysOn kullanılabilirlik grubuna bağlanmakta olduğunu göstermek için bağlantı `"MultisubnetFailover=true"` dizesini içerecek şekilde ayarlaması gerekiyordu. Bağlantı anahtar sözcüğünü öğesine `true`ayarlamadan, bir uygulama bir AlwaysOn kullanılabilirlik grubuna bağlanılırken zaman aşımı ile karşılaşabilir. Bu sürümle, bir uygulamanın artık olarak <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> `true` ayarlanması gerekmez. Always on kullanılabilirlik grupları için SqlClient desteği hakkında daha fazla bilgi için bkz. [yüksek kullanılabilirlik Için SqlClient desteği, olağanüstü durum kurtarma](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+SqlClient artık otomatik olarak bir AlwaysOn kullanılabilirlik grubuna (AG) daha hızlı bağlantılar sağlar. Uygulamanızın farklı bir alt ağda bir AlwaysOn kullanılabilirlik grubuna (AG) bağlanıp bağlanmadığını saydam bir şekilde algılar ve geçerli etkin sunucuyu hızlıca bulup sunucuya bağlantı sağlar. Bu sürümden önce, bir uygulamanın bir AlwaysOn kullanılabilirlik grubuna bağlanmakta olduğunu göstermek için bağlantı `"MultisubnetFailover=true"` dizesini içerecek şekilde ayarlaması gerekiyordu. Bağlantı anahtar sözcüğünü öğesine `true`ayarlamadan, bir uygulama bir AlwaysOn kullanılabilirlik grubuna bağlanılırken zaman aşımı ile karşılaşabilir. Bu sürümle, bir uygulamanın artık `true` olarak *ayarlanması* <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> gerekmez. Always on kullanılabilirlik grupları için SqlClient desteği hakkında daha fazla bilgi için bkz. [yüksek kullanılabilirlik Için SqlClient desteği, olağanüstü durum kurtarma](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1443,7 +1443,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
     Tarayıcı ve Web sunucusu (Windows üzerinde IIS) tüm işleri çalışır. Kullanıcılarınız için herhangi bir ağır kaldırma yapmanız gerekmez.
 
-    [Büyük tarayıcıların çoğu http/2](https://www.wikipedia.org/wiki/HTTP/2)' yi desteklediğinden, sunucunuz bunu destekliyorsa, kullanıcılarınızın http/2 desteğinden faydalanır olması olasıdır.
+    [Büyük tarayıcıların çoğu http/2 ' yi desteklediğinden](https://www.wikipedia.org/wiki/HTTP/2), sunucunuz bunu destekliyorsa, kullanıcılarınızın http/2 desteğinden faydalanır olması olasıdır.
 
   - **Belirteç bağlama protokolü desteği**
 
@@ -1643,7 +1643,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
   - **Dokunmatik daha iyidir**
 
-    İletişim üzerindeki müşteri [](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) raporları, .NET Framework 4,6 ' de öngörülemeyen davranış üretir. Windows Mağazası uygulamaları ve WPF uygulamaları için çift dokunma eşiği artık Windows 8.1 ve üzeri sürümlerde aynıdır.
+    İletişim [üzerindeki müşteri raporları, .NET Framework](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) 4,6 ' de öngörülemeyen davranış üretir. Windows Mağazası uygulamaları ve WPF uygulamaları için çift dokunma eşiği artık Windows 8.1 ve üzeri sürümlerde aynıdır.
 
   - **Saydam alt pencere desteği**
 

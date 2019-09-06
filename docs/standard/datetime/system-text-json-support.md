@@ -1,5 +1,5 @@
 ---
-title: System. Text. JSON içinde DateTime ve DateTimeOffset desteği
+title: System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 description: DateTime ve DateTimeOffset türlerinin System. Text. JSON kitaplığında nasıl desteklenbir genel bakış.
 ms.technology: dotnet-standard
 author: layomia
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 182694a3d2df02d5e2c709e33a02bd9fa7d20383
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5bff01b10b2bdea4fdcfee86e348c47f44d50103
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69973193"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374470"
 ---
-# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System. Text. JSON içinde DateTime ve DateTimeOffset desteği
+# <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json üzerinde DateTime ve DateTimeOffset desteği
 
 System. Text. JSON kitaplığı ISO 8601:-2019 genişletilmiş profiline <xref:System.DateTime> göre <xref:System.DateTimeOffset> ayrıştırır ve yazar ve değerlerini kaydeder.
 [Dönüştürücüler](https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1?view=netcore-3.0) ile <xref:System.Text.Json.JsonSerializer>serileştirme ve seri durumdan çıkarma için özel destek sağlar.

@@ -2,26 +2,26 @@
 title: Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 description: Azure bulut ve Windows kapsayıcıları Ile mevcut .NET uygulamalarını modernleştirin.
 ms.date: 04/28/2018
-ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660748"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373980"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Mevcut .NET uygulamalarını Azure IaaS 'ye yükseltme ve kaydırma (bulut altyapısına hazırlanın)
 
 > Minin İlk adım olarak, şirket içi yatırımınızın yanı sıra donanım ve ağ bakımının toplam maliyetini azaltmak için, mevcut uygulamalarınızı bulutta yeniden barındırmanız yeterlidir.
 
-Mevcut uygulamalarınızı Azure hizmet olarak altyapı (IaaS) platformuna geçirme işlemine geçmeden önce, Azure 'Da IaaS 'ye doğrudan geçiş yapmak istediğiniz nedenleri analiz etmeniz önemlidir . Bu modernon vade düzeyindeki senaryo temelde, geçerli şirket içi altyapınızı kullanmaya devam etmek yerine buluttaki VM 'Leri kullanmaya başlamadır.
+Mevcut uygulamalarınızı Azure hizmet olarak altyapı (IaaS) platformuna geçirme işlemine geçmeden önce, Azure 'Da IaaS 'ye doğrudan geçiş *yapmak istediğiniz nedenleri analiz etmeniz önemlidir* . Bu modernon vade düzeyindeki senaryo temelde, geçerli şirket içi altyapınızı kullanmaya devam etmek yerine buluttaki VM 'Leri kullanmaya başlamadır.
 
-Analiz etmek için başka bir nokta de yalnızca Azure 'da daha gelişmiş yönetilen hizmetler eklemek yerine saf IaaS bulutuna geçiş yapmak isteyebilirsiniz. İlk yerde IaaS için hangi durumların gerekli olabileceğini belirleme.
+Analiz etmek için başka bir *nokta de yalnızca* Azure 'da daha gelişmiş yönetilen hizmetler eklemek yerine saf IaaS bulutuna geçiş yapmak isteyebilirsiniz. İlk yerde IaaS için hangi durumların gerekli olabileceğini belirleme.
 
 Şekil 2-1, bulut altyapısına uygun olan uygulamaları modernleştirme vade düzeylerinde konumlandırır:
 
 ![Bulut altyapısına yönelik özellikli uygulamaları konumlandırma](./media/image2-1.png)
 
-> **Şekil 2-1.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
+**Şekil 2-1.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
 
 ## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Mevcut .NET Web uygulamaları neden Azure IaaS 'ye geçirilir?
 
@@ -65,7 +65,7 @@ Azure geçişi, iş yüklerinizin işletmeye en az etkiyle geçiş yapma ve Azur
 
 ![Bulut altyapısına yönelik özellikli uygulamaları konumlandırma](./media/image2-2.png)
 
-> **Şekil 2-2.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
+**Şekil 2-2.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
 
 ## <a name="use-azure-site-recovery-to-migrate-your-existing-vms-to-azure-vms"></a>Mevcut VM 'lerinizi Azure VM 'lerine geçirmek için Azure Site Recovery kullanın
 
@@ -77,7 +77,7 @@ Site Recovery Ayrıca, kısmen şirket içinde ve kısmen Azure 'da olan karma o
 
 ![Bulut altyapısına yönelik özellikli uygulamaları konumlandırma](./media/image2-3.png)
 
-> **Şekil 2-3.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
+**Şekil 2-3.** Bulut altyapısına yönelik özellikli uygulamaları konumlandırma
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
