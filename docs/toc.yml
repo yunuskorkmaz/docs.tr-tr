@@ -262,7 +262,7 @@
     - name: Docker
       items:
         - name: .NET ve Docker’a Giriş
-          href: core/docker/intro-net-docker.md
+          href: core/docker/introduction.md
         - name: .NET Core uygulamasını kapsayıcılı hale getirme
           href: core/docker/build-container.md
         - name: Visual Studio’da Kapsayıcı Araçları
