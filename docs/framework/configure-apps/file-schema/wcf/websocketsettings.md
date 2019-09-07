@@ -2,21 +2,24 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940316"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399142"
 ---
-# <a name="websocketsettings"></a><span data-ttu-id="5c8c7-101">\<webSocketSettings ></span><span class="sxs-lookup"><span data-stu-id="5c8c7-101">\<webSocketSettings></span></span>
-<span data-ttu-id="5c8c7-102">Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-102">A configuration element used to specify Web Socket settings.</span></span>  
+# <a name="websocketsettings"></a><span data-ttu-id="6a7a1-101">\<webSocketSettings ></span><span class="sxs-lookup"><span data-stu-id="6a7a1-101">\<webSocketSettings></span></span>
+<span data-ttu-id="6a7a1-102">Web yuva ayarlarını belirtmek için kullanılan bir yapılandırma öğesi.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-102">A configuration element used to specify Web Socket settings.</span></span>  
   
-<span data-ttu-id="5c8c7-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5c8c7-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="5c8c7-104">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="5c8c7-104">\<bindings></span></span>  
-<span data-ttu-id="5c8c7-105">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="5c8c7-105">\<netHttpBinding></span></span>  
+<span data-ttu-id="6a7a1-103">[ **\<Yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="6a7a1-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="6a7a1-104">&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="6a7a1-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="6a7a1-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)</span><span class="sxs-lookup"><span data-stu-id="6a7a1-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)</span></span>\
+<span data-ttu-id="6a7a1-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)</span><span class="sxs-lookup"><span data-stu-id="6a7a1-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<netHttpBinding>**](nethttpbinding.md)</span></span>\
+<span data-ttu-id="6a7a1-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** </span><span class="sxs-lookup"><span data-stu-id="6a7a1-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**</span></span>\
+<span data-ttu-id="6a7a1-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**</span><span class="sxs-lookup"><span data-stu-id="6a7a1-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webSocketSettings>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c8c7-106">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="5c8c7-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a7a1-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="6a7a1-109">Syntax</span></span>  
   
 ```xml  
 <netHttpBinding>
@@ -33,41 +36,41 @@ ms.locfileid: "69940316"
 </netHttpBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5c8c7-107">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="5c8c7-107">Attributes and Elements</span></span>  
- <span data-ttu-id="5c8c7-108">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="6a7a1-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="6a7a1-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="6a7a1-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5c8c7-109">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="5c8c7-109">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="6a7a1-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="6a7a1-112">Attributes</span></span>  
   
-|<span data-ttu-id="5c8c7-110">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="5c8c7-110">Attribute</span></span>|<span data-ttu-id="5c8c7-111">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5c8c7-111">Description</span></span>|  
+|<span data-ttu-id="6a7a1-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="6a7a1-113">Attribute</span></span>|<span data-ttu-id="6a7a1-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6a7a1-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="5c8c7-112">Createnocertificate Ationonconnection</span><span class="sxs-lookup"><span data-stu-id="5c8c7-112">createNotificationOnConnection</span></span>|<span data-ttu-id="5c8c7-113">Bağlantı kurulduğunda bir bildirimin gönderilip gönderilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-113">Specifies whether a notification is sent upon connection.</span></span>|  
-|<span data-ttu-id="5c8c7-114">Disablepayloadmaskeleme</span><span class="sxs-lookup"><span data-stu-id="5c8c7-114">disablePayloadMasking</span></span>|<span data-ttu-id="5c8c7-115">Web yuva maskeleme 'nin devre dışı bırakılıp bırakılmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-115">Specifies whether Web Socket masking is disabled.</span></span>|  
-|<span data-ttu-id="5c8c7-116">Keepaliveınterval</span><span class="sxs-lookup"><span data-stu-id="5c8c7-116">keepAliveInterval</span></span>|<span data-ttu-id="5c8c7-117">Canlı tut aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-117">Specifies the keep alive interval.</span></span>|  
-|<span data-ttu-id="5c8c7-118">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="5c8c7-118">maxPendingConnections</span></span>|<span data-ttu-id="5c8c7-119">Hizmette gönderimi bekleyen en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-119">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
-|<span data-ttu-id="5c8c7-120">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="5c8c7-120">receiveBufferSize</span></span>|<span data-ttu-id="5c8c7-121">Alma arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-121">Specifies the size of the receive buffer.</span></span>|  
-|<span data-ttu-id="5c8c7-122">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="5c8c7-122">sendBufferSize</span></span>|<span data-ttu-id="5c8c7-123">Gönderme arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-123">Specifies the size of the send buffer.</span></span>|  
-|<span data-ttu-id="5c8c7-124">Alt protokolü</span><span class="sxs-lookup"><span data-stu-id="5c8c7-124">subProtocol</span></span>|<span data-ttu-id="5c8c7-125">Web yuvası alt protokolünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-125">Specifies the Web Socket subprotocol.</span></span>|  
-|<span data-ttu-id="5c8c7-126">transportUsage</span><span class="sxs-lookup"><span data-stu-id="5c8c7-126">transportUsage</span></span>|<span data-ttu-id="5c8c7-127">Web Yuvaları ne zaman kullanılacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-127">Specifies when to use Web Sockets.</span></span>|  
+|<span data-ttu-id="6a7a1-115">Createnocertificate Ationonconnection</span><span class="sxs-lookup"><span data-stu-id="6a7a1-115">createNotificationOnConnection</span></span>|<span data-ttu-id="6a7a1-116">Bağlantı kurulduğunda bir bildirimin gönderilip gönderilmeyeceğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-116">Specifies whether a notification is sent upon connection.</span></span>|  
+|<span data-ttu-id="6a7a1-117">Disablepayloadmaskeleme</span><span class="sxs-lookup"><span data-stu-id="6a7a1-117">disablePayloadMasking</span></span>|<span data-ttu-id="6a7a1-118">Web yuva maskeleme 'nin devre dışı bırakılıp bırakılmadığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-118">Specifies whether Web Socket masking is disabled.</span></span>|  
+|<span data-ttu-id="6a7a1-119">Keepaliveınterval</span><span class="sxs-lookup"><span data-stu-id="6a7a1-119">keepAliveInterval</span></span>|<span data-ttu-id="6a7a1-120">Canlı tut aralığını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-120">Specifies the keep alive interval.</span></span>|  
+|<span data-ttu-id="6a7a1-121">maxPendingConnections</span><span class="sxs-lookup"><span data-stu-id="6a7a1-121">maxPendingConnections</span></span>|<span data-ttu-id="6a7a1-122">Hizmette gönderimi bekleyen en fazla bağlantı sayısını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-122">Specifies the maximum number of connections awaiting dispatch on the service.</span></span>|  
+|<span data-ttu-id="6a7a1-123">receiveBufferSize</span><span class="sxs-lookup"><span data-stu-id="6a7a1-123">receiveBufferSize</span></span>|<span data-ttu-id="6a7a1-124">Alma arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-124">Specifies the size of the receive buffer.</span></span>|  
+|<span data-ttu-id="6a7a1-125">sendBufferSize</span><span class="sxs-lookup"><span data-stu-id="6a7a1-125">sendBufferSize</span></span>|<span data-ttu-id="6a7a1-126">Gönderme arabelleğinin boyutunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-126">Specifies the size of the send buffer.</span></span>|  
+|<span data-ttu-id="6a7a1-127">Alt protokolü</span><span class="sxs-lookup"><span data-stu-id="6a7a1-127">subProtocol</span></span>|<span data-ttu-id="6a7a1-128">Web yuvası alt protokolünü belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-128">Specifies the Web Socket subprotocol.</span></span>|  
+|<span data-ttu-id="6a7a1-129">transportUsage</span><span class="sxs-lookup"><span data-stu-id="6a7a1-129">transportUsage</span></span>|<span data-ttu-id="6a7a1-130">Web Yuvaları ne zaman kullanılacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-130">Specifies when to use Web Sockets.</span></span>|  
   
-## <a name="transportusage-attribute"></a><span data-ttu-id="5c8c7-128">transportUsage özniteliği</span><span class="sxs-lookup"><span data-stu-id="5c8c7-128">transportUsage Attribute</span></span>  
+## <a name="transportusage-attribute"></a><span data-ttu-id="6a7a1-131">transportUsage özniteliği</span><span class="sxs-lookup"><span data-stu-id="6a7a1-131">transportUsage Attribute</span></span>  
   
-|<span data-ttu-id="5c8c7-129">Değer</span><span class="sxs-lookup"><span data-stu-id="5c8c7-129">Value</span></span>|<span data-ttu-id="5c8c7-130">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5c8c7-130">Description</span></span>|  
+|<span data-ttu-id="6a7a1-132">Değer</span><span class="sxs-lookup"><span data-stu-id="6a7a1-132">Value</span></span>|<span data-ttu-id="6a7a1-133">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6a7a1-133">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="5c8c7-131">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="5c8c7-131">WhenDuplex</span></span>|<span data-ttu-id="5c8c7-132">Sözleşme çift yönlü olduğunda Web soketi protokolünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-132">Use the Web Socket protocol when the contract is duplex.</span></span>|  
-|<span data-ttu-id="5c8c7-133">Her zaman</span><span class="sxs-lookup"><span data-stu-id="5c8c7-133">Always</span></span>|<span data-ttu-id="5c8c7-134">Sözleşmeye bakılmaksızın her zaman Web soketi protokolünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-134">Always use the Web Socket protocol regardless of the contract.</span></span>|  
-|<span data-ttu-id="5c8c7-135">hiçbir zaman</span><span class="sxs-lookup"><span data-stu-id="5c8c7-135">Never</span></span>|<span data-ttu-id="5c8c7-136">Web yuvası protokolünü hiçbir şekilde kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-136">Never use the Web Socket protocol.</span></span>|  
+|<span data-ttu-id="6a7a1-134">WhenDuplex</span><span class="sxs-lookup"><span data-stu-id="6a7a1-134">WhenDuplex</span></span>|<span data-ttu-id="6a7a1-135">Sözleşme çift yönlü olduğunda Web soketi protokolünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-135">Use the Web Socket protocol when the contract is duplex.</span></span>|  
+|<span data-ttu-id="6a7a1-136">Her zaman</span><span class="sxs-lookup"><span data-stu-id="6a7a1-136">Always</span></span>|<span data-ttu-id="6a7a1-137">Sözleşmeye bakılmaksızın her zaman Web soketi protokolünü kullanın.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-137">Always use the Web Socket protocol regardless of the contract.</span></span>|  
+|<span data-ttu-id="6a7a1-138">hiçbir zaman</span><span class="sxs-lookup"><span data-stu-id="6a7a1-138">Never</span></span>|<span data-ttu-id="6a7a1-139">Web yuvası protokolünü hiçbir şekilde kullanmayın.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-139">Never use the Web Socket protocol.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="5c8c7-137">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="5c8c7-137">Child Elements</span></span>  
- <span data-ttu-id="5c8c7-138">Yok.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-138">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="6a7a1-140">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="6a7a1-140">Child Elements</span></span>  
+ <span data-ttu-id="6a7a1-141">Yok.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-141">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="5c8c7-139">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="5c8c7-139">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="6a7a1-142">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="6a7a1-142">Parent Elements</span></span>  
   
-|<span data-ttu-id="5c8c7-140">Öğe</span><span class="sxs-lookup"><span data-stu-id="5c8c7-140">Element</span></span>|<span data-ttu-id="5c8c7-141">Açıklama</span><span class="sxs-lookup"><span data-stu-id="5c8c7-141">Description</span></span>|  
+|<span data-ttu-id="6a7a1-143">Öğe</span><span class="sxs-lookup"><span data-stu-id="6a7a1-143">Element</span></span>|<span data-ttu-id="6a7a1-144">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6a7a1-144">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="5c8c7-142">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="5c8c7-142">\<netHttpBinding></span></span>|<span data-ttu-id="5c8c7-143">NetHttpBinding belirtir</span><span class="sxs-lookup"><span data-stu-id="5c8c7-143">Specifies the NetHttpBinding</span></span>|  
+|<span data-ttu-id="6a7a1-145">\<netHttpBinding></span><span class="sxs-lookup"><span data-stu-id="6a7a1-145">\<netHttpBinding></span></span>|<span data-ttu-id="6a7a1-146">NetHttpBinding belirtir</span><span class="sxs-lookup"><span data-stu-id="6a7a1-146">Specifies the NetHttpBinding</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="5c8c7-144">Örnek</span><span class="sxs-lookup"><span data-stu-id="5c8c7-144">Example</span></span>  
- <span data-ttu-id="5c8c7-145">Aşağıdaki örnek, \<WebSocketSettings > öğesinin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-145">The following example shows how to use the \<webSocketSettings> element.</span></span>  
+## <a name="example"></a><span data-ttu-id="6a7a1-147">Örnek</span><span class="sxs-lookup"><span data-stu-id="6a7a1-147">Example</span></span>  
+ <span data-ttu-id="6a7a1-148">Aşağıdaki örnek, \<WebSocketSettings > öğesinin nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-148">The following example shows how to use the \<webSocketSettings> element.</span></span>  
   
 ```xml  
 <netHttpBinding>
@@ -84,13 +87,13 @@ ms.locfileid: "69940316"
 </netHttpBinding>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5c8c7-146">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5c8c7-146">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a7a1-149">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6a7a1-149">See also</span></span>
 
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [<span data-ttu-id="5c8c7-147">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="5c8c7-147">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="5c8c7-148">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="5c8c7-148">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="5c8c7-149">Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma</span><span class="sxs-lookup"><span data-stu-id="5c8c7-149">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [<span data-ttu-id="5c8c7-150">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="5c8c7-150">\<binding></span></span>](../../../misc/binding.md)
+- [<span data-ttu-id="6a7a1-150">Bağlamalar</span><span class="sxs-lookup"><span data-stu-id="6a7a1-150">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="6a7a1-151">Sistem Tarafından Sağlanan Bağlamaları Yapılandırma</span><span class="sxs-lookup"><span data-stu-id="6a7a1-151">Configuring System-Provided Bindings</span></span>](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="6a7a1-152">Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma</span><span class="sxs-lookup"><span data-stu-id="6a7a1-152">Using Bindings to Configure Services and Clients</span></span>](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [<span data-ttu-id="6a7a1-153">\<bağlama ></span><span class="sxs-lookup"><span data-stu-id="6a7a1-153">\<binding></span></span>](../../../misc/binding.md)

@@ -3,23 +3,24 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 094fbf95042c00287fb8dfcca28753cfe501a8d8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940225"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398763"
 ---
-# <a name="etwtracking"></a><span data-ttu-id="bba40-101">\<etwTracking ></span><span class="sxs-lookup"><span data-stu-id="bba40-101">\<etwTracking></span></span>
-<span data-ttu-id="bba40-102">Bir hizmetin, kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant>etw izlemeyi kullanmasına izin veren bir hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="bba40-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
+# <a name="etwtracking"></a><span data-ttu-id="4d654-101">\<etwTracking ></span><span class="sxs-lookup"><span data-stu-id="4d654-101">\<etwTracking></span></span>
+<span data-ttu-id="4d654-102">Bir hizmetin, kullanarak <xref:System.Activities.Tracking.EtwTrackingParticipant>etw izlemeyi kullanmasına izin veren bir hizmet davranışı.</span><span class="sxs-lookup"><span data-stu-id="4d654-102">A service behavior that allows a service to utilize ETW tracking using an <xref:System.Activities.Tracking.EtwTrackingParticipant>.</span></span>  
   
-<span data-ttu-id="bba40-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="bba40-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="bba40-104">\<davranışlar ></span><span class="sxs-lookup"><span data-stu-id="bba40-104">\<behaviors></span></span>  
-<span data-ttu-id="bba40-105">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="bba40-105">\<serviceBehaviors></span></span>  
-<span data-ttu-id="bba40-106">\<davranış ></span><span class="sxs-lookup"><span data-stu-id="bba40-106">\<behavior></span></span>  
-<span data-ttu-id="bba40-107">\<etwTracking ></span><span class="sxs-lookup"><span data-stu-id="bba40-107">\<etwTracking></span></span>  
+<span data-ttu-id="4d654-103">[ **\<Yapılandırma >** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="4d654-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="4d654-104">&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="4d654-104">&nbsp;&nbsp;[**\<system.ServiceModel>**](system-servicemodel-of-workflow.md)</span></span>\
+<span data-ttu-id="4d654-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="4d654-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<behaviors>**](behaviors-of-workflow.md)</span></span>\
+<span data-ttu-id="4d654-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="4d654-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceBehaviors>**](servicebehaviors-of-workflow.md)</span></span>\
+<span data-ttu-id="4d654-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors-of-workflow.md)</span><span class="sxs-lookup"><span data-stu-id="4d654-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors-of-workflow.md)</span></span>\
+<span data-ttu-id="4d654-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<etwTracking >**</span><span class="sxs-lookup"><span data-stu-id="4d654-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<etwTracking>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bba40-108">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="bba40-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d654-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4d654-109">Syntax</span></span>  
   
 ```xml  
 <behaviors>
@@ -31,33 +32,33 @@ ms.locfileid: "69940225"
 </behaviors>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bba40-109">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="bba40-109">Attributes and Elements</span></span>  
- <span data-ttu-id="bba40-110">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="bba40-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4d654-110">Öznitelikler ve Öğeler</span><span class="sxs-lookup"><span data-stu-id="4d654-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4d654-111">Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.</span><span class="sxs-lookup"><span data-stu-id="4d654-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bba40-111">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="bba40-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="4d654-112">Öznitelikler</span><span class="sxs-lookup"><span data-stu-id="4d654-112">Attributes</span></span>  
   
-|<span data-ttu-id="bba40-112">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="bba40-112">Attribute</span></span>|<span data-ttu-id="bba40-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bba40-113">Description</span></span>|  
+|<span data-ttu-id="4d654-113">Öznitelik</span><span class="sxs-lookup"><span data-stu-id="4d654-113">Attribute</span></span>|<span data-ttu-id="4d654-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4d654-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="bba40-114">ProfilAdı</span><span class="sxs-lookup"><span data-stu-id="bba40-114">profileName</span></span>|<span data-ttu-id="bba40-115">Bu davranışla ilişkili izleme profili adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="bba40-115">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
+|<span data-ttu-id="4d654-115">ProfilAdı</span><span class="sxs-lookup"><span data-stu-id="4d654-115">profileName</span></span>|<span data-ttu-id="4d654-116">Bu davranışla ilişkili izleme profili adını belirten bir dize.</span><span class="sxs-lookup"><span data-stu-id="4d654-116">A string that specifies the name of the tracking profile associated with this behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bba40-116">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="bba40-116">Child Elements</span></span>  
- <span data-ttu-id="bba40-117">Yok.</span><span class="sxs-lookup"><span data-stu-id="bba40-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="4d654-117">Alt Öğeler</span><span class="sxs-lookup"><span data-stu-id="4d654-117">Child Elements</span></span>  
+ <span data-ttu-id="4d654-118">Yok.</span><span class="sxs-lookup"><span data-stu-id="4d654-118">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bba40-118">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="bba40-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="4d654-119">Üst Öğeler</span><span class="sxs-lookup"><span data-stu-id="4d654-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="bba40-119">Öğe</span><span class="sxs-lookup"><span data-stu-id="bba40-119">Element</span></span>|<span data-ttu-id="bba40-120">Açıklama</span><span class="sxs-lookup"><span data-stu-id="bba40-120">Description</span></span>|  
+|<span data-ttu-id="4d654-120">Öğe</span><span class="sxs-lookup"><span data-stu-id="4d654-120">Element</span></span>|<span data-ttu-id="4d654-121">Açıklama</span><span class="sxs-lookup"><span data-stu-id="4d654-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="bba40-121">\<\<ServiceBehavior > davranış ></span><span class="sxs-lookup"><span data-stu-id="bba40-121">\<behavior> of \<serviceBehaviors></span></span>](behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="bba40-122">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="bba40-122">Specifies a behavior element.</span></span>|  
+|[<span data-ttu-id="4d654-122">\<\<ServiceBehavior > davranış ></span><span class="sxs-lookup"><span data-stu-id="4d654-122">\<behavior> of \<serviceBehaviors></span></span>](behavior-of-servicebehaviors-of-workflow.md)|<span data-ttu-id="4d654-123">Bir davranış öğesi belirtir.</span><span class="sxs-lookup"><span data-stu-id="4d654-123">Specifies a behavior element.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bba40-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="bba40-123">Remarks</span></span>  
- <span data-ttu-id="bba40-124">Bu yapılandırma öğesi, hizmetin davranış yapılandırmasına eklendiğinde bir iş akışı hizmeti üzerinde bir izleme katılımcısı yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="bba40-124">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d654-124">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="4d654-124">Remarks</span></span>  
+ <span data-ttu-id="4d654-125">Bu yapılandırma öğesi, hizmetin davranış yapılandırmasına eklendiğinde bir iş akışı hizmeti üzerinde bir izleme katılımcısı yapılandırır.</span><span class="sxs-lookup"><span data-stu-id="4d654-125">When added to the service’s behavior configuration, this configuration element configures a tracking participant on a workflow service.</span></span>  
   
- <span data-ttu-id="bba40-125">İzleme katılımcıları iş akışından yayılan izleme verilerini almak ve farklı ortalamalarına depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bba40-125">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="bba40-126">Benzer şekilde, izleme kayıtlarında yapılan tüm gönderi işlemleri izleme katılımcısının içinden de yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="bba40-126">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
+ <span data-ttu-id="4d654-126">İzleme katılımcıları iş akışından yayılan izleme verilerini almak ve farklı ortalamalarına depolamak için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4d654-126">Tracking participants are used to get the tracking data emitted from the workflow and store it into different mediums.</span></span> <span data-ttu-id="4d654-127">Benzer şekilde, izleme kayıtlarında yapılan tüm gönderi işlemleri izleme katılımcısının içinden de yapılabilir.</span><span class="sxs-lookup"><span data-stu-id="4d654-127">Likewise, any post processing on the tracking Records can also be done within the tracking participant.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bba40-127">Örnek</span><span class="sxs-lookup"><span data-stu-id="bba40-127">Example</span></span>  
- <span data-ttu-id="bba40-128">Aşağıdaki yapılandırma örneği, Web. config dosyasında yapılandırılmış standart ETW izleme katılımcısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="bba40-128">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
+## <a name="example"></a><span data-ttu-id="4d654-128">Örnek</span><span class="sxs-lookup"><span data-stu-id="4d654-128">Example</span></span>  
+ <span data-ttu-id="4d654-129">Aşağıdaki yapılandırma örneği, Web. config dosyasında yapılandırılmış standart ETW izleme katılımcısını gösterir.</span><span class="sxs-lookup"><span data-stu-id="4d654-129">The following configuration example shows the standard ETW tracking participant being configured in the Web.config file.</span></span>  
   
- <span data-ttu-id="bba40-129">ETW izleme katılımcısı tarafından ETW 'ye izleme kayıtlarını yazmak için kullanılan sağlayıcı kimliği,  **\<Tanılama >** bölümünde tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="bba40-129">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="bba40-130">İzleme katılımcısının, abone olduğu izleme kayıtlarını belirtmek için kendisiyle ilişkili bir profili vardır.</span><span class="sxs-lookup"><span data-stu-id="bba40-130">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="bba40-131">Bu,  **\<Add >** öğesinin **ProfileName** özniteliği tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="bba40-131">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="bba40-132">Bunlar tanımlandıktan sonra, izleme katılımcısı  **\<etwTracking >** hizmeti davranışına eklenir.</span><span class="sxs-lookup"><span data-stu-id="bba40-132">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="bba40-133">Bu işlem, Izleme kayıtlarını almaya başlaması için seçilen Izleme katılımcılarını Iş akışı örneğinin uzantılarına ekler.</span><span class="sxs-lookup"><span data-stu-id="bba40-133">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
+ <span data-ttu-id="4d654-130">ETW izleme katılımcısı tarafından ETW 'ye izleme kayıtlarını yazmak için kullanılan sağlayıcı kimliği,  **\<Tanılama >** bölümünde tanımlanmıştır.</span><span class="sxs-lookup"><span data-stu-id="4d654-130">The Provider Id that the ETW Tracking Participant uses for writing the Tracking Records to ETW is defined in the **\<diagnostics>** section.</span></span> <span data-ttu-id="4d654-131">İzleme katılımcısının, abone olduğu izleme kayıtlarını belirtmek için kendisiyle ilişkili bir profili vardır.</span><span class="sxs-lookup"><span data-stu-id="4d654-131">The tracking participant has a profile associated with it to specify the tracking records it has subscribed to.</span></span> <span data-ttu-id="4d654-132">Bu,  **\<Add >** öğesinin **ProfileName** özniteliği tarafından tanımlanır.</span><span class="sxs-lookup"><span data-stu-id="4d654-132">This is defined by the **profileName** attribute of the **\<add>** element.</span></span> <span data-ttu-id="4d654-133">Bunlar tanımlandıktan sonra, izleme katılımcısı  **\<etwTracking >** hizmeti davranışına eklenir.</span><span class="sxs-lookup"><span data-stu-id="4d654-133">Once these are defined, the Tracking Participant is added to the **\<etwTracking>** service behavior.</span></span> <span data-ttu-id="4d654-134">Bu işlem, Izleme kayıtlarını almaya başlaması için seçilen Izleme katılımcılarını Iş akışı örneğinin uzantılarına ekler.</span><span class="sxs-lookup"><span data-stu-id="4d654-134">This will add the selected Tracking Participants to the Workflow instance’s extensions, so that they begin to receive the Tracking Records.</span></span>  
   
 ```xml  
 <configuration>   
@@ -84,9 +85,9 @@ ms.locfileid: "69940225"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bba40-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bba40-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d654-135">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4d654-135">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [<span data-ttu-id="bba40-135">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="bba40-135">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [<span data-ttu-id="bba40-136">İzleme Katılımcıları</span><span class="sxs-lookup"><span data-stu-id="bba40-136">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
+- [<span data-ttu-id="4d654-136">İş Akışı Takip ve İzleme</span><span class="sxs-lookup"><span data-stu-id="4d654-136">Workflow Tracking and Tracing</span></span>](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [<span data-ttu-id="4d654-137">İzleme Katılımcıları</span><span class="sxs-lookup"><span data-stu-id="4d654-137">Tracking Participants</span></span>](../../../windows-workflow-foundation/tracking-participants.md)
