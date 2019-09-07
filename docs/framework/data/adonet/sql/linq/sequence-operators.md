@@ -2,26 +2,26 @@
 title: Dizi İşleçleri
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: 96f36681c4933d3aa15547c00e003b6d9c18d704
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: d975949d95c7cd0a4009ef9e988d3625a46defef
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398536"
 ---
 # <a name="sequence-operators"></a>Dizi İşleçleri
-Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veya daha fazla aşağıdaki kalitelerini dizisi işleçleri desteklemez:  
+Genel olarak, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki kalitelerden birine veya daha fazlasına sahip dizi işleçlerini desteklemez:  
   
-- Bir lambda ile dizin parametresi alır.  
+- Dizin parametresiyle bir lambda alın.  
   
-- Sıralı satır özellikleri gibi güvenin <xref:System.Linq.Queryable.TakeWhile%2A>.  
+- Gibi sıralı satırların <xref:System.Linq.Queryable.TakeWhile%2A>özelliklerine güvenin.  
   
-- Rastgele bir CLR mantığınız gibi güvenin <xref:System.Collections.Generic.IComparer%601>.  
+- Gibi rastgele bir CLR uygulamasına <xref:System.Collections.Generic.IComparer%601>güvenin.  
   
-|Desteklenmeyen örnekleri|  
+|Desteklenmeyen örnekler|  
 |-----------------------------|  
 |<xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
-|<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29?displayProperty=nameWithType>|  
+|<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.TakeWhile%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.TakeWhile%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29?displayProperty=nameWithType>|  
@@ -42,8 +42,8 @@ Genel olarak bakıldığında, [!INCLUDE[vbtecdlinq](../../../../../../includes/
 |<xref:System.Linq.Enumerable.Aggregate%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2C%60%601%2CSystem.Func%7B%60%601%2C%60%600%2C%60%601%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%29?displayProperty=nameWithType>|  
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="differences-from-net"></a>.NET arasındaki farklar  
- Tüm desteklenen dizisi işleçleri iş dışındaki ortak dil çalışma zamanında (CLR) beklendiği gibi `Average`. `Average` Oysa ortalama türü ile aynı türde bir değer döndürür CLR'de `Average` döndürür ya da her zaman bir <xref:System.Double> veya <xref:System.Decimal>. Kaynak bağımsız değişkenini açıkça ise dönüştürme çift / ondalık ya da Seçici bıraktığı çift / ondalık, sonuçta elde edilen SQL böyle bir dönüştürme de sahip olur ve sonucu beklendiği gibi olacaktır.  
+## <a name="differences-from-net"></a>.NET farklılıkları  
+ Tüm desteklenen dizi işleçleri, için `Average`dışında, ortak dil çalışma zamanında (CLR) beklendiği gibi çalışır. `Average`aynı türde bir değeri, ortalama olan türle, clr `Average` 'nin her zaman bir <xref:System.Double> veya <xref:System.Decimal>olarak döndürdüğü bir değer döndürür. Kaynak bağımsız değişkeni açıkça Double/Decimal olarak veya seçici Double/Decimal olarak ayarlanırsa, sonuçta elde edilen SQL de böyle bir dönüştürme olur ve sonuç beklendiği gibi olacaktır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

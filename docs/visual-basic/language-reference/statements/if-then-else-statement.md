@@ -21,12 +21,12 @@ helpviewer_keywords:
 - If function [Visual Basic], and If...Then...Else statements
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
-ms.openlocfilehash: e0b365afaa8cf7dff130cf01d2937be629e5f7a8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: db81a1c41809b563d5f9d0777c3feb064c5e540b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106526"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400705"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else Deyimi (Visual Basic)
 
@@ -34,7 +34,7 @@ ms.locfileid: "70106526"
 
 ## <a name="syntax"></a>Sözdizimi
 
-```
+```vb
 ' Multiline syntax:
 If condition [ Then ]
     [ statements ]
@@ -61,7 +61,7 @@ Bu makale, `If`... öğesinin kullanımını gösteren birkaç örnek içerir. `
 `condition` \
 Gerekli. İfadesini. Örtük olarak dönüştürülebilir `True` birveri`False`türü veya ya da olarak değerlendirilmelidir. `Boolean`
 
-İfade [hiçbir şey](../../../visual-basic/language-reference/nothing.md)olarak `False` değerlendirilen [null yapılabilir](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` bir değişkense, koşul ifade gibi değerlendirilir ve `Else` blok yürütülür.
+İfade [hiçbir şey](../../../visual-basic/language-reference/nothing.md) `False`olarak değerlendirilen [null yapılabilir](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean` bir değişkense, koşul ifade gibi değerlendirilir ve `ElseIf` bloklar varsa değerlendirilir veya `Else` blok ise varsa yürütülür.
 
 `Then` \
 Tek satır sözdiziminde gereklidir; çok satırlı sözdiziminde isteğe bağlı.

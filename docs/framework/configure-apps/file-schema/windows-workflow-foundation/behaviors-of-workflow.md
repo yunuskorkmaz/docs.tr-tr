@@ -3,17 +3,19 @@ title: <behaviors>iş akışı
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 7dd3b0b20c9d7accd80a85b3693e67ffc9b729e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05a15cdf5c043eb5d94b36028324310d2b7a8413
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946002"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398872"
 ---
 # <a name="behaviors-of-workflow"></a>\<iş akışının davranışlar >
 Bu öğe **Servicedavranışlar** koleksiyonunu içerir.  Koleksiyondaki her öğe iş akışı hizmetler tarafından kullanılan davranışı öğeleri tanımlar. Her davranış öğesi, benzersiz **ad** özniteliği tarafından tanımlanır.  
   
- \<system.ServiceModel>  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<sistemin. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<davranışlar >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

@@ -2,22 +2,23 @@
 title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: 2ee9a715929641abc605a31ac00fb154b863cc8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b3187cb51b6fd32797c9ad401c704d5f16c6f7e8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935844"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399920"
 ---
 # <a name="secureconversationbootstrap"></a>\<Securebir Bootstrap >
 Güvenli konuşma hizmeti başlatmak için kullanılan varsayılan değerleri belirtir.  
   
- \<system.serviceModel>  
-\<bağlama >  
-\<customBinding >  
-\<bağlama >  
-\<Güvenlik >  
-\<Securebir Bootstrap >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Securebir Bootstrap >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

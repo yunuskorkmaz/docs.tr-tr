@@ -6,24 +6,25 @@ dev_langs:
 - vb
 author: thraka
 ms.author: adegeo
-ms.date: 08/21/2019
-ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.date: 09/05/2019
+ms.openlocfilehash: 2d18e7750e0c2e2a44028d1e906a8536e47d979d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037843"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394293"
 ---
-# <a name="whats-new-in-net-core-30-preview-8"></a>.NET Core 3,0 'deki yenilikler (Önizleme 8)
+# <a name="whats-new-in-net-core-30-preview-9"></a>.NET Core 3,0 'deki yenilikler (Önizleme 9)
 
-Bu makalede .NET Core 3,0 'deki yenilikler açıklanmaktadır (Preview 8 ' den fazla). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
+Bu makalede .NET Core 3,0 ' deki yenilikler açıklanmaktadır (Preview 9 ' dan fazla). En büyük geliştirmelerden biri, Windows Masaüstü uygulamaları için destek içerir (yalnızca Windows). .NET Core 3,0 SDK bileşeni Windows Masaüstü 'Nü kullanarak Windows Forms ve Windows Presentation Foundation (WPF) uygulamalarınızın bağlantı noktası oluşturabilirsiniz. Temiz olması için, Windows Masaüstü bileşeni yalnızca Windows 'da desteklenir ve Windows 'a dahildir. Daha fazla bilgi için bu makalenin devamındaki [Windows Masaüstü](#windows-desktop) bölümüne bakın.
 
-.NET Core 3,0, 8,0 için C# destek ekler. [En son Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview)sürümünü kullanmanız veya OmniSharp uzantısıyla Visual Studio Code önerilir.
+.NET Core 3,0, 8,0 için C# destek ekler. [Visual Studio 2019 16,3 Preview 3](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+preview), [Mac için Visual Studio 8,3](https://docs.microsoft.com/visualstudio/mac/install-preview?view=vsmac-2019)veya  **C# uzantıya**sahip [Visual Studio Code](https://code.visualstudio.com/) kullanmanız kesinlikle önerilir.
 
-Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 Preview 8 ' i indirin ve kullanmaya](https://aka.ms/netcore3download) başlayın.
+Şimdi Windows, macOS veya Linux 'ta [.NET Core 3,0 Preview 9 ' u indirin ve](https://aka.ms/netcore3download) kullanmaya başlayın.
 
 Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara bakın:
 
+- [.NET Core 3,0 Preview 9 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/)
 - [.NET Core 3,0 Preview 8 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)
 - [.NET Core 3,0 Preview 7 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7/)
 - [.NET Core 3,0 Preview 6 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
@@ -35,9 +36,9 @@ Her önizleme sürümü hakkında daha fazla bilgi için aşağıdaki duyurulara
 
 ## <a name="production-supported-preview"></a>Üretim için desteklenen Önizleme
 
-.NET Core Preview 8, Microsoft tarafından önceden hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. Preview 8 ' de nelerin değiştiği hakkında daha fazla bilgi için, [Preview 8 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-8/)' ne bakın.
+.NET Core Preview 9, Microsoft tarafından önceden hazırlanarak üretim olarak kabul edilir ve tam olarak desteklenmektedir. Sürüm 7 ' den itibaren, yayınlar yeni özellikler eklemek yerine polishing .NET Core 3,0 ' ye odaklanacaktır. Preview 9 ' da nelerin değiştiği hakkında daha fazla bilgi için bkz. [Preview 9 duyurusu](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-9/).
 
-Önceki bir önizleme sürümünü kullanıyorsanız devam eden "canlı çalış" desteği için Preview 8 ' e geçmeniz gerekir.
+Önceki bir önizleme sürümünü kullanıyorsanız, devam eden "canlı çalış" desteği için Preview 9 ' a geçmeniz gerekir.
 
 ## <a name="net-core-sdk-windows-installer"></a>.NET Core SDK Windows Installer
 
@@ -402,7 +403,7 @@ Visual Studio Code tarafından oluşturulan [**Launch. JSON**](https://github.co
 
 ### <a name="jsondocument"></a>JsonDocument
 
-<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType>, `Utf8JsonReader`üzerine kurulmuştur. , `JsonDocument` JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur belge nesne modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, adlı <xref:System.Text.Json.JsonElement> `RootElement`bir özellik `JsonDocument` olarak kullanıma sunulan tür aracılığıyla erişilebilir. JSON metnini ortak .net türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir.`JsonElement` Tipik bir JSON yükünü ayrıştırma ve ' ı kullanarak `JsonDocument` tüm üyelerine erişme, makul ölçüde boyutlandırılabilir (yani , < 1 MB) veriler için çok az ayırmayla 3x ' den daha hızlıdır.
+<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType>, `Utf8JsonReader`üzerine kurulmuştur. , `JsonDocument` JSON verilerini ayrıştırabilme ve rasgele erişimi ve numaralandırmayı desteklemek için sorgulanabilen salt okunurdur belge nesne modeli (DOM) oluşturma olanağı sağlar. Verileri oluşturan JSON öğelerine, adlı <xref:System.Text.Json.JsonElement> `RootElement`bir özellik `JsonDocument` olarak kullanıma sunulan tür aracılığıyla erişilebilir. JSON metnini ortak .net türlerine dönüştürmek için API 'lerle birlikte JSON dizisini ve nesne numaralandırıcıları içerir.`JsonElement` Tipik bir JSON yükünü ayrıştırma ve ' ı kullanarak `JsonDocument` tüm üyelerine erişme, makul ölçüde boyutlandırılabilir (yani, < 1 MB) veriler için çok az ayırmayla 3x ' den daha hızlıdır.
 
 Başlangıç noktası olarak kullanılabilecek `JsonDocument` ve ' `JsonElement` nin örnek kullanımı aşağıda verilmiştir:
 

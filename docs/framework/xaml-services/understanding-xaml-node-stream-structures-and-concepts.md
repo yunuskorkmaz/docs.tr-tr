@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364315"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400729"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML Düğüm Akış Yapılarını ve Kavramlarını Anlama
 
@@ -85,9 +85,6 @@ Bir load path XAML düğümü döngüsünün bu temel örneği, XAML okuyucuyu v
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>Düğüm döngüsü kavramının ötesinde XAML 'e erişme
 
 XAML düğüm döngüsü dışında bir XAML temsili ile çalışmanın diğer olası yolları vardır. Örneğin, dizine alınmış bir düğümü okuyabilen bir XAML okuyucusu veya özel erişim düğümlerine, ya `x:Name` `x:Uid`da diğer tanımlayıcılara göre doğrudan erişebilir. .NET Framework XAML Hizmetleri tam uygulama sağlamaz, ancak hizmetler ve destek türleri aracılığıyla önerilen bir model sağlar. Daha fazla bilgi için bkz. <xref:System.Xaml.IXamlIndexingReader> ve <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Microsoft, Microsoft XAML araç seti olarak bilinen bir bant dışı yayın da üretir. Bu bant dışı sürüm, hala yayın öncesi aşamalarda bulunur. Ancak, yayın öncesi bileşenleriyle çalışmak istiyorsanız, Microsoft XAML araç seti XAML araçları ve XAML 'nin statik analizi için bazı ilginç kaynaklar sağlar. Microsoft XAML araç seti bir XAML DOM API 'SI, FxCop analizi desteği ve Silverlight için XAML şeması bağlamı içerir. Daha fazla bilgi için bkz. [MICROSOFT xaml araç seti](https://code.msdn.microsoft.com/XAML).
 
 <a name="working_with_the_current_node"></a>
 

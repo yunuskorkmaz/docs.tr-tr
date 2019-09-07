@@ -2,21 +2,22 @@
 title: <security> / <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: be5ebacec466caf8d8a77bf552f42da1861e77a1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 88aa2898472c20c9e52cfd5830c0e41e8ea9ba21
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936622"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399810"
 ---
 # <a name="security-of-netpeerbinding"></a>\<\<netpeerbinding > Güvenlik >
 Kullanılan kimlik doğrulaması türü ve ileti aktarımı için kullanılan güvenlik dahil olmak üzere [ \<NetPeerTcpBinding >](netpeertcpbinding.md)güvenlik ayarlarını tanımlar.  
   
- \<system.ServiceModel>  
-\<bağlama >  
-\<netPeerBinding >  
-\<bağlama >  
-\<Güvenlik >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Güvenlik >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

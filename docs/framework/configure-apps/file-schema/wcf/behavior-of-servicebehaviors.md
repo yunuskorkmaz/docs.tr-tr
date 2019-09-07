@@ -2,12 +2,12 @@
 title: <behavior> / <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: 8c847368934cc4cd8ccaab017ede00b7b8963897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17fac5c519f41588ef90383f024e645b809b49b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926412"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400600"
 ---
 # <a name="behavior-of-servicebehaviors"></a>\<\<ServiceBehavior > davranış >
 `behavior` Öğesi içeren bir koleksiyon için bir hizmet davranışını ayarlar. Her davranış tarafından dizine kendi `name`. Hizmetler, `behaviorConfiguration` [ \<uç nokta >](endpoint-element.md) öğesinin özniteliğini kullanarak bu ad aracılığıyla her davranışa bağlanabilir. Bu ayarları yeniden tanımlama olmadan davranışı yapılandırmaların paylaşmak uç noktaları sağlar. İle [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]başlayarak, bağlamaların ve davranışların bir ada sahip olması gerekmez. Varsayılan yapılandırma ve ad Less bağlamaları ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
@@ -15,10 +15,11 @@ ms.locfileid: "69926412"
 > [!NOTE]
 > [ \< \<](../windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md) [ \<SendMessageChannelCache >](../windows-workflow-foundation/sendmessagechannelcache.md) öğesi gibi Windows Workflow etkinliklerine özgü davranış öğeleri ServiceBehavior > sayfasının davranış > belgelenmiştir.  
   
- \<system.ServiceModel>  
-\<davranışlar >  
-\<serviceBehaviors>  
-\<davranış >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<davranış >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

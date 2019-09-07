@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 5090616705c799f2905226b4892fa1fbe50bfbf3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 54b5ab6fc5eac6ba522a58afa3aa3c0218e86bcf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249534"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397190"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Sorgu İfadesi Söz Dizimi Örnekleri: Toplama İşleçleri
-Bu konudaki örneklerde,,, ve <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.Min%2A> yöntemlerininsorguifadesisözdiziminikullanarakAdventureWorksSalesmodelinisorgulamakiçin<xref:System.Linq.Enumerable.Sum%2A> nasıl kullanılacağı [](https://archive.codeplex.com/?p=msftdbprodsamples) gösterilmektedir. Bu örneklerde kullanılan AdventureWorks Sales modeli, AdventureWorks örnek veritabanındaki Contact, Address, Product, SalesOrderHeader ve SalesOrderDetail tablolarından oluşturulmuştur.  
+Bu konudaki örneklerde,,, ve <xref:System.Linq.Enumerable.Average%2A> <xref:System.Linq.Enumerable.Max%2A> <xref:System.Linq.Enumerable.Count%2A> <xref:System.Linq.Enumerable.Min%2A> yöntemlerininsorguifadesisözdiziminikullanarakAdventureWorksSalesmodelinisorgulamakiçin<xref:System.Linq.Enumerable.Sum%2A> nasıl kullanılacağı [](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) gösterilmektedir. Bu örneklerde kullanılan AdventureWorks Sales modeli, AdventureWorks örnek veritabanındaki Contact, Address, Product, SalesOrderHeader ve SalesOrderDetail tablolarından oluşturulmuştur.  
   
  Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
   

@@ -2,22 +2,23 @@
 title: <serviceCertificate> / <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: 36a228da262095bfe05d66c6d44ac73ba0ca401b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 513dcad7f4325d653df87fe9cc27572c25e153c5
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399666"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<\<ServiceCredentials > > ServiceCertificate
 Ileti güvenlik modunu kullanan istemcilere hizmetin kimliğini doğrulamak için kullanılacak bir X. 509.952 sertifikası belirtin.  
   
- \<system.ServiceModel>  
-\<davranışlar >  
-\<serviceBehaviors>  
-\<davranış >  
-\<serviceCredentials>  
-\<serviceCertificate >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranışlar >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Servicedavranışlar >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<davranış >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceCertificate >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

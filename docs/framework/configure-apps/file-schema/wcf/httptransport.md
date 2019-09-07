@@ -2,21 +2,22 @@
 title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: 2d651101b720d427391274d0e02690588123cd53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51558a7f51ddeab4652abcc72376cb50a22c239b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925517"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400366"
 ---
 # <a name="httptransport"></a>\<httpTransport >
 Özel bağlama için SOAP iletileri iletmek üzere bir HTTP aktarımı belirtir.  
   
- \<system.serviceModel>  
-\<bağlama >  
-\<customBinding >  
-\<bağlama >  
-\<httpTransport >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<httpTransport >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

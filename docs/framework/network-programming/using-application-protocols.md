@@ -13,18 +13,17 @@ helpviewer_keywords:
 - receiving data, application protocols
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
-ms.openlocfilehash: ffb47c6384a5c26599a65c9837f3b9d1d9332e9f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a127776544830e299118aefadf1735a856c095dd
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796883"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398512"
 ---
 # <a name="using-application-protocols"></a>Uygulama Protokolleri Kullanma
-.NET Framework, yaygın olarak kullanılan Internet uygulama protokolleri destekler. Bu bölüm hakkında bilgi içerir [HTTP](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerini kullanarak şirket bilgilerinin yanı sıra [Windows Sockets](../../../docs/framework/network-programming/sockets.md) özel protokoller uygulamak için arabirim.  
+.NET Framework, yaygın olarak kullanılan Internet uygulama protokollerini destekler. Bu bölüm, [http](../../../docs/framework/network-programming/http.md), "TCP" ve "UDP" protokollerinin yanı sıra özel protokoller uygulamak Için [Windows Sockets](../../../docs/framework/network-programming/sockets.md) arabirimini kullanmayla ilgili bilgiler içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Framework'te Ağ Programlaması](../../../docs/framework/network-programming/index.md)
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

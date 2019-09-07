@@ -2,22 +2,23 @@
 title: <transport> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: ce8b2acb7d87b094958e20ca0b6cca9fc8266a8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911981"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399264"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<\<WS2007HttpBinding > taşıma >
 HTTP taşıması için kimlik doğrulama ayarlarını tanımlar.  
   
- \<system.serviceModel>  
-\<bağlama >  
-\<ws2007HttpBinding>  
-\<bağlama >  
-\<Güvenlik >  
-\<Taşıma >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Taşıma >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

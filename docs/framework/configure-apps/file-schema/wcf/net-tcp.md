@@ -2,18 +2,19 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a3a17655f5469fe84c0b684ebdac9848bbfba84
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933045"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397688"
 ---
 # <a name="nettcp"></a>\<net. TCP >
 NET için yapılandırma ayarlarını belirtir. Birden çok işlemin aynı TCP bağlantı noktasını paylaşmasına izin veren TCP bağlantı noktası paylaşım hizmeti.  
   
- \<system.serviceModel.activation>  
-\<net. TCP >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel. Activation >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<net. TCP >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

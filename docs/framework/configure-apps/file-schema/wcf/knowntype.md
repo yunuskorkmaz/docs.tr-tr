@@ -2,21 +2,22 @@
 title: <knownType>
 ms.date: 03/30/2017
 ms.assetid: ee2b7be3-7148-4a3a-b861-48e7330615e5
-ms.openlocfilehash: a0794314cfcb87df00d66b6832356fb130787eba
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61f51b2ecd572ba254317a01e0f514503c7cc9e4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928863"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397879"
 ---
 # <a name="knowntype"></a>\<knownType >
 Seri durumdan çıkarma sırasında tarafından <xref:System.Runtime.Serialization.DataContractSerializer> kullanılacak bir tür belirtir. Öğesi, bir "bildirildiği tür" alanı veya özelliği tarafından döndürülen bir "bilinen tür" belirtir. Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](../../../wcf/feature-details/data-contract-known-types.md).  
   
- \<System. Runtime. Serialization >  
-\<dataContractSerializer >  
-\<declaredTypes > öğesi  
-\<\<DeclaredTypes > > ekleyin  
-\<knownType > öğesi  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Runtime. Serialization >** ](system-runtime-serialization.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dataContractSerializer >** ](datacontractserializer.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<declaredTypes >** ](declaredtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> Ekle**](add-of-declaredtypes-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<knownType >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

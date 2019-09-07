@@ -4,20 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 7d847ffd4c1e3d924b9c45497c1b2ee172887e8b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c2d0a5729aeea3cd30e07ce1cfa485bda7b8ed20
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933006"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400135"
 ---
 # <a name="nettcpbinding"></a>\<netTcpBinding>
 
 Makineler arası iletişim için güvenli, güvenilir ve iyileştirilmiş bir bağlama belirtir. Varsayılan olarak, ileti güvenliği ve kimlik doğrulaması, ileti teslimi için TCP ve ikili ileti kodlaması için Windows güvenliği ile bir çalışma zamanı iletişim yığını oluşturur.
 
-\<system.ServiceModel>  
-\<bağlama >  
-\<netTcpBinding>  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<netTcpBinding >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   

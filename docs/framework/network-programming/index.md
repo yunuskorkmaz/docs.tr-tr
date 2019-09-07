@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Internet, .NET Framework Internet services
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
-ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 245c843d13e70a807807f4e462dd1a5357c25665
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642418"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398530"
 ---
 # <a name="network-programming-in-the-net-framework"></a>.NET Framework'te Ağ Programlaması
 Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tümleştirilebilen katmanlı, genişletilebilir ve yönetilen Internet hizmetleri sağlar. Ağ uygulamalarınız, yeni Internet protokollerinden otomatik olarak yararlanabilmek için takılabilir protokolleri temel alabilir veya ağ ile yuva düzeyinde çalışmak için Windows yuva arabiriminin yönetilen uygulamasını kullanabilir.  
@@ -41,7 +41,7 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  Ağ izlemenin yönetilen uygulama tarafından oluşturulan yöntem çağrıları ve ağ trafiğiyle ilgili bilgiler almak için nasıl kullanılacağını açıklar.  
   
  [Ağ Uygulamaları için Önbellek Yönetimi](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- Kullanan uygulamalar için önbelleğe almayı kullanmak üzere açıklar <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType>, ve <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> sınıfları.  
+ <xref:System.Net.WebClient?displayProperty=nameWithType> ,<xref:System.Net.WebRequest?displayProperty=nameWithType>Ve sınıflarını<xref:System.Net.HttpWebRequest?displayProperty=nameWithType> kullanan uygulamalar için önbelleğe almanın nasıl kullanılacağını açıklar.  
   
  [Ağ Programlama Güvenliği](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Standart Internet güvenliği ve kimlik doğrulama tekniklerinin nasıl kullanılacağını açıklar.  
@@ -53,44 +53,44 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  Proxy'lerin nasıl yapılandırılacağını açıklar.  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
- Ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplamak nasıl açıklar ve ayrıca uzak bir ana bilgisayar kullanılarak ulaşılıp ulaşılamayacağının nasıl açıklar <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfı.  
+ Ağ olayları, değişiklikler, istatistikler ve özellikler hakkında bilgi toplama işlemini açıklar ve ayrıca <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> sınıfı kullanılarak uzak bir ana bilgisayarın erişilebilir olup olmadığını nasıl belirleyebileceğinizi açıklar.  
   
  [System.Uri ad alanında sürüm 2.0’da yapılan değişiklikler](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
- İçin yapılan birkaç değişikliği açıklar <xref:System.Uri?displayProperty=nameWithType> sürüm 2.0 hatalı davranışı, kullanılabilirliği geliştirmek ve güvenliği artırın.  
+ Sürüm 2,0 ' de, yanlış <xref:System.Uri?displayProperty=nameWithType> davranışa düzeltilen, Kullanılabilirliği geliştiren ve güvenliği geliştiren birkaç değişikliği açıklar.  
   
  [System.Uri’de Uluslararası Kaynak Tanımlayıcı Desteği](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
- Yapılan geliştirmeleri açıklar <xref:System.Uri?displayProperty=nameWithType> sınıfında sürüm 3.5, 3.0 SP1 ve 2.0 SP1 uluslararası kaynak tanımlayıcı (IRI) ve Uluslararası yapılan etki alanı adı (IDN) desteği.  
+ Uluslararası kaynak tanımlayıcı ( <xref:System.Uri?displayProperty=nameWithType> IRI) ve uluslararası etki alanı adı (IDN) desteği için 3,5, 3,0 SP1 ve 2,0 SP1 sürümündeki sınıfa yönelik geliştirmeleri açıklar.  
   
  [Sürüm 3.5’teki Yuva Performansı Geliştirmeleri](../../../docs/framework/network-programming/socket-performance-enhancements-in-version-3-5.md)  
- Bir dizi geliştirmeleri açıklar <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> sürüm 3.5, 3.0 SP1 ve 2.0 SP1 özel yüksek performanslı yuva uygulamaları tarafından kullanılabilecek bir diğer zaman uyumsuz desen sağlayan sınıf.  
+ Özel yüksek performanslı yuva uygulamaları tarafından kullanılabilen <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> alternatif bir zaman uyumsuz model sağlayan sürüm 3,5, 3,0 SP1 ve 2,0 SP1 içindeki sınıfa yönelik iyileştirmeler kümesini açıklar.  
   
  [Eş Adı Çözümleme Protokolü](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
- Sunucusuz ve dinamik ad kayıt ve ad çözümleme protokolü olan Eş Adı Çözümleme Protokolü'nü (PNRP) desteklemek için Sürüm 3.5'e eklenen desteği açıklar. Bu yeni özellikler tarafından desteklenen <xref:System.Net.PeerToPeer?displayProperty=nameWithType> ad alanı.  
+ Sunucusuz ve dinamik ad kayıt ve ad çözümleme protokolü olan Eş Adı Çözümleme Protokolü'nü (PNRP) desteklemek için Sürüm 3.5'e eklenen desteği açıklar. Bu yeni özellikler <xref:System.Net.PeerToPeer?displayProperty=nameWithType> ad alanı tarafından desteklenir.  
   
  [Eşler Arası İş Birliği](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
- PNRP'yi temel alan Eşler Arası İşbirliği'ni desteklemek için Sürüm 3.5'e eklenen desteği açıklar. Bu yeni özellikler tarafından desteklenen <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> ad alanı.  
+ PNRP'yi temel alan Eşler Arası İşbirliği'ni desteklemek için Sürüm 3.5'e eklenen desteği açıklar. Bu yeni özellikler <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> ad alanı tarafından desteklenir.  
   
  [Sürüm 3.5 SP1’de HttpWebRequest için NTLM kimlik doğrulamasındaki değişiklikler](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
- Sürüm 3.5 SP1 ' yapılan tümleşik Windows kimlik doğrulaması tarafından işlenir etkileyen güvenlik değişikliklerini açıklar <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, ve System.Net ad alanındaki ilgili sınıflar.  
+ Tümleşik Windows kimlik doğrulamasının <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> <xref:System.Net.HttpListener?displayProperty=nameWithType> <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>,,, ve System.net ad alanındaki ilgili sınıflar tarafından nasıl işlendiğini etkileyen sürüm 3,5 SP1 'de yapılan güvenlik değişikliklerini açıklar.  
   
  [Genişletilmiş Koruma ile Tümleşik Windows Kimlik Doğrulaması](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
- Tümleşik Windows kimlik doğrulaması etkileyen genişletilmiş koruma tarafından işlenen geliştirmeleri açıklar <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, ve ilgili sınıflar <xref:System.Net?displayProperty=nameWithType> ve ilgili ad alanları.  
+ Tümleşik Windows kimlik doğrulamasının,,,, ve içindeki ve ilgili <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>sınıfların işlenme <xref:System.Net.HttpListener?displayProperty=nameWithType> <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType> <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType> <xref:System.Net.Security.SslStream?displayProperty=nameWithType>biçimini etkileyen genişletilmiş koruma geliştirmeleri açıklanmaktadır. <xref:System.Net?displayProperty=nameWithType> öznitelikleri.  
   
  [IPv6 ve Teredo kullanarak NAT Geçişi](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
- Eklenen geliştirmeleri açıklar <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>, ve <xref:System.Net.Sockets?displayProperty=nameWithType> IPv6 ve Teredo kullanan NAT geçişini desteklemek için.  
+ IPv6 ve Teredo kullanılarak NAT <xref:System.Net?displayProperty=nameWithType>geçişini <xref:System.Net.NetworkInformation?displayProperty=nameWithType>desteklemek için <xref:System.Net.Sockets?displayProperty=nameWithType> , ve ad alanlarına eklenen geliştirmeleri açıklar.  
   
  [Windows Mağazası Uygulamaları için Ağ Yalıtımı](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
- Ağ yalıtımı etkisini açıklar, sınıflar <xref:System.Net>, <xref:System.Net.Http>, ve <xref:System.Net.Http.Headers> ad [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] uygulamalar.  
+ <xref:System.Net>, ,Ve<xref:System.Net.Http.Headers>ad alanlarındaki sınıflar uygulamalardakullanıldığındaağyalıtımınınetkileriniaçıklar.[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] <xref:System.Net.Http>  
   
  [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)  
- Ağ bağlantıları için indirilebilir sınıfları kullanan programlama örnekleri <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> ad alanları.  
+ ,, <xref:System.Net>,,,, <xref:System.Net.Mime> <xref:System.Net.Configuration> <xref:System.Net.NetworkInformation> <xref:System.Net.Cache> <xref:System.Net.Mail> ,<xref:System.Net.Sockets> , Ad alanlarında sınıfları kullanan indirilebilir ağ programlama örneklerine bağlantılar. <xref:System.Net.Security> <xref:System.Net.PeerToPeer>  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Net?displayProperty=nameWithType>  
- Günümüzde ağlarda kullanılan birçok protokol için basit bir programlama arabirimi sağlar. <xref:System.Net.WebRequest?displayProperty=nameWithType> Ve <xref:System.Net.WebResponse?displayProperty=nameWithType> bu ad alanındaki sınıfları, takılabilir protokollerin temelini olduğu.  
+ Günümüzde ağlarda kullanılan birçok protokol için basit bir programlama arabirimi sağlar. Bu ad <xref:System.Net.WebResponse?displayProperty=nameWithType> alanındaki vesınıflarıtakılabilirprotokollerintemelinioluşturur.<xref:System.Net.WebRequest?displayProperty=nameWithType>  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
- Kullanılarak elde edilen kaynaklarının önbellek ilkelerini tanımlamak için kullanılan sabit listeleri ve türlerini tanımlayan <xref:System.Net.WebRequest?displayProperty=nameWithType> ve <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> sınıfları.  
+ <xref:System.Net.WebRequest?displayProperty=nameWithType> Ve<xref:System.Net.HttpWebRequest?displayProperty=nameWithType> sınıfları kullanılarak elde edilen kaynaklar için önbellek ilkelerini tanımlamak üzere kullanılan türleri ve numaralandırmaları tanımlar.  
   
  <xref:System.Net.Configuration?displayProperty=nameWithType>  
  Uygulamaların System.Net ad alanlarının yapılandırma ayarlarına programlı bir şekilde erişmek ve bunları güncelleştirmek için kullandığı sınıflar.  
@@ -99,13 +99,13 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
  Modern HTTP uygulamaları için programlama arabirimi sağlayan sınıflar.  
   
  <xref:System.Net.Http.Headers?displayProperty=nameWithType>  
- Tarafından kullanılan HTTP üstbilgilerinin koleksiyonları için destek sağlayan <xref:System.Net.Http?displayProperty=nameWithType> ad alanı  
+ <xref:System.Net.Http?displayProperty=nameWithType> Ad alanı tarafından kullanılan http üst bilgileri koleksiyonları için destek sağlar  
   
  <xref:System.Net.Mail?displayProperty=nameWithType>  
  SMTP protokolünü kullanarak e-posta oluşturan ve gönderen sınıflar.  
   
  <xref:System.Net.Mime?displayProperty=nameWithType>  
- Sınıfları tarafından kullanılan çok amaçlı Internet posta Değişimi (MIME) üstbilgilerini temsil etmek için kullanılan türleri tanımlar <xref:System.Net.Mail?displayProperty=nameWithType> ad alanı.  
+ <xref:System.Net.Mail?displayProperty=nameWithType> Ad alanındaki sınıflar tarafından kullanılan çok amaçlı Internet posta değişimi (MIME) üstbilgilerini temsil etmek için kullanılan türleri tanımlar.  
   
  <xref:System.Net.NetworkInformation?displayProperty=nameWithType>  
  Ağ olayları, değişiklikler, istatistikler ve özellikler hakkında programlı bir şekilde bilgi toplayan sınıflar.  
@@ -136,8 +136,7 @@ Microsoft .NET Framework, uygulamalarınızla hızlı ve kolay bir şekilde tüm
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamalar](../../../docs/framework/network-programming/tls.md)
+- [.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları](../../../docs/framework/network-programming/tls.md)
 - [Görsel Katman Programlama ile İlgili Nasıl Yapılır Konuları](../../../docs/framework/network-programming/network-programming-how-to-topics.md)
 - [Ağ Programlama Örnekleri](../../../docs/framework/network-programming/network-programming-samples.md)
-- [MSDN Kod Galerisi'nde .NET için ağ örnekleri](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-- [HttpClient örneği](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [HttpClient örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

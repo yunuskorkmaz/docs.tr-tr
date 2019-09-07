@@ -2,22 +2,23 @@
 title: <message> / <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 59449ec5f8f048e27313d088be0ca951915ef5e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 987c51f65f5c36a70724fd62fecaf737943c2d9a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931499"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398027"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<\<WS2007HttpBinding > ileti >
 WS2007HttpBinding > öğesinin ileti düzeyi güvenliğine [ \<](ws2007httpbinding.md) yönelik ayarları tanımlar.  
   
- \<system.ServiceModel>  
-\<bağlama >  
-\<ws2007HttpBinding>  
-\<bağlama >  
-\<Güvenlik >  
-\<ileti >  
+[ **\<Yapılandırma >** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bağlama >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bağlama >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Güvenlik >** ](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ileti >**  
   
 ## <a name="syntax"></a>Sözdizimi  
   
