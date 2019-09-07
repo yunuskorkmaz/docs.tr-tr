@@ -6,12 +6,12 @@ title: .NET Belgeleri
 description: C#, Visual Basic ve F# kullanarak herhangi bir platformda çeşitli uygulamalar oluşturmak için .NET kullanmayı öğrenin. API başvurusuna, örnek koda, öğreticilere ve daha fazlasına göz atın.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: c2a70c2d297b1ec2ef797e9d6084339f32c59c48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972382"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799296"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -111,12 +111,12 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/core">.NET Core Kılavuzu</a></h3>
+                                                <h3><a href="/dotnet/core/">.NET Core Kılavuzu</a></h3>
                                                 <p><a href="/dotnet/core/get-started">Başlarken</a></p>
-                                                <p><a href="/dotnet/core/tutorials">Öğreticiler</a></p>
-                                                <p><a href="/dotnet/core/porting">.NET Framework’ten Taşıma</a></p>
-                                                <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
-                                                <p><a href="/ef/core/index">EF Core</a></p>
+                                                <p><a href="/dotnet/core/tutorials/">Öğreticiler</a></p>
+                                                <p><a href="/dotnet/core/porting/">.NET Framework’ten Taşıma</a></p>
+                                                <p><a href="/aspnet/core/getting-started/">ASP.NET Core</a></p>
+                                                <p><a href="/ef/core/">EF Core</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -152,11 +152,11 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">Platformlar arası geliştirme</a></p>
-                                                <p><a href="/xamarin/ios">Xamarin.iOS Kılavuzu</a></p>
-                                                <p><a href="/xamarin/android">Xamarin.Android Kılavuzu</a></p>
-                                                <p><a href="/xamarin/xamarin-forms">Xamarin.Forms Kılavuzu</a></p>
+                                                <h3><a href="/xamarin/">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform/">Platformlar arası geliştirme</a></p>
+                                                <p><a href="/xamarin/ios/">Xamarin.iOS Kılavuzu</a></p>
+                                                <p><a href="/xamarin/android/">Xamarin.Android Kılavuzu</a></p>
+                                                <p><a href="/xamarin/xamarin-forms/">Xamarin.Forms Kılavuzu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -172,11 +172,11 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/csharp">C# Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">Başlarken</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# Turu</a></p>
-                                                <p><a href="/dotnet/csharp/whats-new">C# Yenilikleri</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">C# Dili Başvurusu</a></p>
+                                                <h3><a href="/dotnet/csharp/">C# Kılavuzu</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started/">Başlarken</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp/">C# Turu</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new/">C# Yenilikleri</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference/">C# Dili Başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +192,10 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/fsharp">F# Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Başlarken</a></p>
+                                                <h3><a href="/dotnet/fsharp/">F# Kılavuzu</a></h3>
+                                                <p><a href="/dotnet/fsharp/get-started/">Başlarken</a></p>
                                                 <p><a href="/dotnet/fsharp/tour">F# Turu</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">F# Dili Başvurusu</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference/">F# Dili Başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -211,10 +211,10 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/visual-basic">Visual Basic Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">Başlarken</a></p>
-                                                <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic Turu</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic Dili Başvurusu</a></p>
+                                                <h3><a href="/dotnet/visual-basic/">Visual Basic Kılavuzu</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started/">Başlarken</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">İzlenecek Yollar</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference/">Visual Basic Dili Başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -230,11 +230,11 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/machine-learning">ML.NET Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">Öğreticiler</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Kaynaklar</a></p>
+                                                <h3><a href="/dotnet/machine-learning/">ML.NET Kılavuzu</a></h3>
+                                                <p><a href="/dotnet/machine-learning/tutorials/">Öğreticiler</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/">Kaynaklar</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Sözlük</a></p>
-                                                <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API başvurusu</a></p>
+                                                <p><a href="/dotnet/api/?view=ml-dotnet">ML.NET API başvurusu</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -250,9 +250,9 @@ ms.locfileid: "68972382"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/spark">Apache Spark için .NET Kılavuzu</a></h3>
-                                                <p><a href="/dotnet/spark/tutorials">Öğreticiler</a></p>
-                                                <p><a href="/dotnet/spark/resources">Kaynaklar</a></p>
+                                                <h3><a href="/dotnet/spark/">Apache Spark için .NET Kılavuzu</a></h3>
+                                                <p><a href="/dotnet/spark/tutorials/">Öğreticiler</a></p>
+                                                <p><a href="/dotnet/spark/resources/">Kaynaklar</a></p>
                                                 <p><a href="/dotnet/api/?view=spark-dotnet">Apache Spark için .NET API başvurusu</a></p>
                                             </div>
                                         </div>
@@ -262,7 +262,6 @@ ms.locfileid: "68972382"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">.NET belgelerine ve örneklerine katkıda bulunun</a></p>
-                                    <p><a href="/dotnet/project-json">Belgelerin Visual Studio 2015/project.json sürümünü bulun</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -271,7 +270,7 @@ ms.locfileid: "68972382"
                         <a href="#web">Web</a>
                         <ul id="web" class="cardsC">
                             <li>
-                                <a href="https://www.asp.net/get-started">
+                                <a href="https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -366,25 +365,6 @@ ms.locfileid: "68972382"
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="/aspnet/core/tutorials/xplat">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>ASP.NET Core çoklu platform öğreticileri</h3>
-                                                    <p>ASP.NET Core ile web uygulamaları veya Web API'leri oluşturmayı öğrenin.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -431,7 +411,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
+                                <a href="/dotnet/fsharp/using-fsharp-on-azure/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -456,7 +436,7 @@ ms.locfileid: "68972382"
                         <a href="#mobile">Mobil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
-                                <a href="/xamarin/ios">
+                                <a href="/xamarin/ios/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -475,7 +455,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/android">
+                                <a href="/xamarin/android/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -494,7 +474,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/xamarin-forms">
+                                <a href="/xamarin/xamarin-forms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -518,7 +498,7 @@ ms.locfileid: "68972382"
                         <a href="#desktop">Masaüstü</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-                                <a href="/uwp">
+                                <a href="/uwp/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -538,7 +518,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/wpf/index">
+                                <a href="/dotnet/framework/wpf/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -558,7 +538,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/dotnet/framework/winforms/index">
+                                <a href="/dotnet/framework/winforms/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -577,7 +557,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/xamarin/mac">
+                                <a href="/xamarin/mac/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -685,7 +665,7 @@ ms.locfileid: "68972382"
                         <a href="#ml-ai">Makine Öğrenmesi ve AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
-                                <a href="/dotnet/machine-learning">
+                                <a href="/dotnet/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -704,7 +684,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/cognitive-services">
+                                <a href="/azure/cognitive-services/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -723,7 +703,7 @@ ms.locfileid: "68972382"
                                 </a>
                             </li>
                             <li>
-                                <a href="/azure/machine-learning">
+                                <a href="/azure/machine-learning/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
