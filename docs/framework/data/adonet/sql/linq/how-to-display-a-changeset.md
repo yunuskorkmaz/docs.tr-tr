@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
-ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f49e123e6e980501d330eeecf2719023cdff8e7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903116"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781969"
 ---
-# <a name="how-to-display-a-changeset"></a><span data-ttu-id="dc6fc-102">Nasıl yapılır: Değişiklik Kümesini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="dc6fc-102">How to: Display a ChangeSet</span></span>
-<span data-ttu-id="dc6fc-103">Tarafından izlenen değişiklikleri görüntüleyebileceğiniz bir <xref:System.Data.Linq.DataContext> kullanarak <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span><span class="sxs-lookup"><span data-stu-id="dc6fc-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
+# <a name="how-to-display-a-changeset"></a><span data-ttu-id="592b0-102">Nasıl yapılır: Değişiklik Kümesini Görüntüleme</span><span class="sxs-lookup"><span data-stu-id="592b0-102">How to: Display a ChangeSet</span></span>
+<span data-ttu-id="592b0-103">Kullanarak tarafından <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext.GetChangeSet%2A>izlenen değişiklikleri görüntüleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="592b0-103">You can view changes tracked by a <xref:System.Data.Linq.DataContext> by using <xref:System.Data.Linq.DataContext.GetChangeSet%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dc6fc-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="dc6fc-104">Example</span></span>  
- <span data-ttu-id="dc6fc-105">Aşağıdaki örnek, müşterilerin, şehir Londra olduğundan, Paris için Şehir değiştirir ve değişiklikleri veritabanına geri gönderir alır.</span><span class="sxs-lookup"><span data-stu-id="dc6fc-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
+## <a name="example"></a><span data-ttu-id="592b0-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="592b0-104">Example</span></span>  
+ <span data-ttu-id="592b0-105">Aşağıdaki örnek, şehri Londra olan müşterileri alır, şehri Istanbul olarak değiştirir ve değişiklikleri veritabanına geri gönderir.</span><span class="sxs-lookup"><span data-stu-id="592b0-105">The following example retrieves customers whose city is London, changes the city to Paris, and submits the changes back to the database.</span></span>  
   
  [!code-csharp[DLinqDebuggingSupport#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqDebuggingSupport/cs/Program.cs#2)]
  [!code-vb[DLinqDebuggingSupport#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqDebuggingSupport/vb/Module1.vb#2)]  
   
- <span data-ttu-id="dc6fc-106">Bu kodun çıktısı aşağıdakine benzer görünür.</span><span class="sxs-lookup"><span data-stu-id="dc6fc-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="dc6fc-107">Son Özet sekiz değişiklikler yapıldı gösterdiğine dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="dc6fc-107">Note that the summary at the end shows that eight changes were made.</span></span>  
+ <span data-ttu-id="592b0-106">Bu koddan alınan çıktı aşağıdakine benzer şekilde görünür.</span><span class="sxs-lookup"><span data-stu-id="592b0-106">Output from this code appears similar to the following.</span></span> <span data-ttu-id="592b0-107">Sonundaki Özet sekiz değişikliğin yapıldığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="592b0-107">Note that the summary at the end shows that eight changes were made.</span></span>  
 
  ```console
 CustomerID: AROUT
@@ -51,6 +51,6 @@ CustomerID: SPECD
 Total changes: {Added: 0, Removed: 0, Modified: 8}
 ```
   
-## <a name="see-also"></a><span data-ttu-id="dc6fc-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dc6fc-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="592b0-108">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="592b0-108">See also</span></span>
 
-- [<span data-ttu-id="dc6fc-109">Hata Ayıklama Desteği</span><span class="sxs-lookup"><span data-stu-id="dc6fc-109">Debugging Support</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [<span data-ttu-id="592b0-109">Hata Ayıklama Desteği</span><span class="sxs-lookup"><span data-stu-id="592b0-109">Debugging Support</span></span>](debugging-support.md)

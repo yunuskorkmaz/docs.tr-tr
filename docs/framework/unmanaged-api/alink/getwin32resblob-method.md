@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741788"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777361"
 ---
-# <a name="getwin32resblob-method"></a><span data-ttu-id="2712b-102">GetWin32ResBlob Metodu</span><span class="sxs-lookup"><span data-stu-id="2712b-102">GetWin32ResBlob Method</span></span>
-<span data-ttu-id="2712b-103">Win32 kaynak blob alır.</span><span class="sxs-lookup"><span data-stu-id="2712b-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="2712b-104">Derleme Seçenekleri'ni ayarladıktan sonra bu yöntemi çağırın.</span><span class="sxs-lookup"><span data-stu-id="2712b-104">Call this method after setting assembly options.</span></span>  
+# <a name="getwin32resblob-method"></a><span data-ttu-id="4ca28-102">GetWin32ResBlob Metodu</span><span class="sxs-lookup"><span data-stu-id="4ca28-102">GetWin32ResBlob Method</span></span>
+<span data-ttu-id="4ca28-103">Win32 kaynak blobu alır.</span><span class="sxs-lookup"><span data-stu-id="4ca28-103">Retrieves Win32 resource blob.</span></span> <span data-ttu-id="4ca28-104">Derleme seçeneklerini ayarladıktan sonra bu yöntemi çağırın.</span><span class="sxs-lookup"><span data-stu-id="4ca28-104">Call this method after setting assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2712b-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2712b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ca28-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="4ca28-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetWin32ResBlob(  
@@ -39,33 +39,33 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2712b-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2712b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ca28-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="4ca28-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="2712b-107">Derleme kimliği.</span><span class="sxs-lookup"><span data-stu-id="2712b-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="4ca28-107">Derlemenin KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="4ca28-107">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="2712b-108">Win32 sürüm kaynağı oluşturulurken kullanılacak dosya adını almak için kullanılan dosya simgesi</span><span class="sxs-lookup"><span data-stu-id="2712b-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
+ <span data-ttu-id="4ca28-108">Win32 sürüm kaynağı oluşturulurken kullanılacak dosya adını almak için kullanılan dosya belirteci</span><span class="sxs-lookup"><span data-stu-id="4ca28-108">File token used to retrieve the filename to be used when constructing the Win32 Version resource</span></span>  
   
  `fDll`  
- <span data-ttu-id="2712b-109">Dosya bir DLL için bir EXE false ise, TRUE.</span><span class="sxs-lookup"><span data-stu-id="2712b-109">TRUE if file is a DLL, false for an EXE.</span></span>  
+ <span data-ttu-id="4ca28-109">Dosya DLL ise TRUE, bir EXE için false.</span><span class="sxs-lookup"><span data-stu-id="4ca28-109">TRUE if file is a DLL, false for an EXE.</span></span>  
   
  `pszIconFile`  
- <span data-ttu-id="2712b-110">Kaynak blob eklenecek isteğe bağlı simge.</span><span class="sxs-lookup"><span data-stu-id="2712b-110">Optional icon to insert into the resource blob.</span></span>  
+ <span data-ttu-id="4ca28-110">Kaynak blobuna eklenecek isteğe bağlı simge.</span><span class="sxs-lookup"><span data-stu-id="4ca28-110">Optional icon to insert into the resource blob.</span></span>  
   
  `ppResBlob`  
- <span data-ttu-id="2712b-111">Kaynak blob alır.</span><span class="sxs-lookup"><span data-stu-id="2712b-111">Receives the resource blob.</span></span>  
+ <span data-ttu-id="4ca28-111">Kaynak blobu alır.</span><span class="sxs-lookup"><span data-stu-id="4ca28-111">Receives the resource blob.</span></span>  
   
  `pcbResBlob`  
- <span data-ttu-id="2712b-112">Kabarcık boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="2712b-112">Receives the size of the blob.</span></span>  
+ <span data-ttu-id="4ca28-112">Blobun boyutunu alır.</span><span class="sxs-lookup"><span data-stu-id="4ca28-112">Receives the size of the blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2712b-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2712b-113">Return Value</span></span>  
- <span data-ttu-id="2712b-114">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="2712b-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ca28-113">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="4ca28-113">Return Value</span></span>  
+ <span data-ttu-id="4ca28-114">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="4ca28-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2712b-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2712b-115">Requirements</span></span>  
- <span data-ttu-id="2712b-116">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="2712b-116">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ca28-115">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="4ca28-115">Requirements</span></span>  
+ <span data-ttu-id="4ca28-116">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="4ca28-116">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2712b-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2712b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ca28-117">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="4ca28-117">See also</span></span>
 
-- [<span data-ttu-id="2712b-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2712b-118">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="2712b-119">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="2712b-119">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="2712b-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="2712b-120">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="4ca28-118">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4ca28-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="4ca28-119">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="4ca28-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="4ca28-120">ALink API</span><span class="sxs-lookup"><span data-stu-id="4ca28-120">ALink API</span></span>](index.md)
