@@ -1,57 +1,57 @@
 ---
-title: Bir veri hizmeti istemci uygulaması (WCF Veri Hizmetleri) kullanma
+title: Istemci uygulamasında bir veri hizmeti kullanma (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 050c1a67a367a6dd5175c535fe89fb0010ae8cbc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660551"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790287"
 ---
-# <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Bir veri hizmeti istemci uygulaması (WCF Veri Hizmetleri) kullanma
-Kullanıma sunan bir hizmet erişebileceğiniz bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bir URI ile bir Web tarayıcısı sağlanarak akış. Bir kaynak adresi URI sağlar ve istek iletilerinin erişmek veya kaynak temsil eden temel alınan verileri değiştirmek için bu adrese gönderilir. Tarayıcı bir HTTP GET komutu çalıştırır ve istenen kaynak olarak döndüren bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış. Daha fazla bilgi için [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
+# <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Istemci uygulamasında bir veri hizmeti kullanma (WCF Veri Hizmetleri)
+Bir Web tarayıcısına URI sağlayarak bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı kullanıma sunan bir hizmete erişebilirsiniz. URI, bir kaynağın adresini sağlar ve isteğin gösterdiği temel verilere erişmek veya değiştirmek için bu adreslere gönderilen istek iletileri gönderilir. Tarayıcı bir http get komutu yayınlar ve istenen kaynağı bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış olarak döndürür. Daha fazla bilgi için bkz. [bir Web tarayıcısından hizmete erişme](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
   
- Bir Web tarayıcısı, test etmek için yararlı olabilir ancak bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmeti döndürür beklenen verileri, üretim [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ayrıca oluşturmanıza olanak sağlayan Hizmetleri güncelleştirin ve verileri silmek uygulama kodu tarafından genel olarak erişilen veya dil komut dosyası bir Web sayfasında. Bu konu nasıl erişmek genel bir bakış sağlar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir istemci uygulamasından akışları.  
+ Bir Web tarayıcısı, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmetin beklenen verileri döndürdüğü test etmek için yararlı olsa da, veri oluşturma, güncelleştirme ve silme işlemleri için genellikle uygulama kodu veya betik dilleri tarafından erişilen üretim hizmetleri [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] bir Web sayfasında. Bu konu, bir istemci uygulamasından akışlara erişme [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hakkında genel bakış sağlar.  
   
-## <a name="accessing-and-changing-data-using-rest-semantics"></a>Erişim ve REST semantiği kullanarak verileri değiştirme  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] yardımcı garanti açığa çıkaran hizmetler arasında birlikte çalışabilirlik [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları ve kullanan uygulamaları [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları. Uygulama erişimi ve verileri değiştirme bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-belirli bir HTTP eylemi ve karşı eyleme gerçekleştirilmelidir bir varlık kaynağı ele alan bir URI ile istek iletiler göndererek hizmet tabanlı. Varlık verilerini sağlanmalıdır, ileti gövdesinde özel olarak kodlanmış bir yükü olarak sağlanır.  
+## <a name="accessing-and-changing-data-using-rest-semantics"></a>REST semantiğini kullanarak verilere erişme ve verileri değiştirme  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]akışları kullanan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışlar ve uygulamalar [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sunan hizmetler arasında birlikte çalışabilirlik garantisi sağlanmasına yardımcı olur. Uygulamalar, belirli bir http eyleminin istek [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]iletilerini ve eylemin gerçekleştirilmesi gereken bir varlık kaynağını adresleyen bir URI ile bir tabanlı hizmette verilere erişir ve bu verileri değiştirebilir. Varlık verileri sağlanmalı, iletinin gövdesinde özel olarak kodlanmış bir yük olarak sağlanır.  
   
 ### <a name="http-actions"></a>HTTP eylemleri  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] destekler gerçekleştirmek için aşağıdaki HTTP eylemleri oluşturma, okuma, güncelleştirme ve silme işlemleri adresli kaynak temsil eden varlık verileri üzerinde:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], çözümlenmiş kaynağın gösterdiği varlık verilerinde oluşturma, okuma, güncelleştirme ve silme işlemlerini gerçekleştirmek için aşağıdaki HTTP eylemlerini destekler:  
   
-- **HTTP GET** -bir kaynak bir tarayıcıdan erişildiğinde bu varsayılan değerdir. Yükü yok istek iletisinde sağlanır ve istenen veriler içeren bir yükü yanıt yöntemiyle döndürülür.  
+- **Http get** -bir tarayıcıdan bir kaynağa erişildiğinde bu varsayılan eylemdir. İstek iletisinde yük sağlanmadı ve istenen verileri içeren bir yük ile yanıt metodu döndürülür.  
   
-- **HTTP POST** -sağlanan kaynak içinde yeni varlık verilerini ekler. İstek iletisinin yükteki eklenecek veri sağlanır. Yanıt iletisinin yükü, yeni oluşturulan varlığın verilerini içerir. Bu, herhangi bir otomatik olarak oluşturulan anahtar değeri içerir. Üst bilgi de ele alan yeni varlık Kaynak URI içeriyor.  
+- **Http post** -yeni varlık verilerini sağlanan kaynağa ekler. Eklenecek veriler istek iletisi yükünde sağlanır. Yanıt iletisinin yükü, yeni oluşturulan varlığa ilişkin verileri içerir. Bu, tüm otomatik oluşturulan anahtar değerlerini içerir. Üst bilgi ayrıca yeni varlık kaynağına adresleyen URI 'yi içerir.  
   
-- **HTTP DELETE** -belirtilen kaynak temsil eden varlık verilerini siler. Bir yük istek veya yanıt iletilerindeki mevcut değil.  
+- **Http Delete** -belirtilen kaynağın temsil ettiği varlık verilerini siler. İstek veya yanıt iletilerinde yük yok.  
   
-- **HTTP PUT** - istenen kaynak varlık veri istek iletisi yükteki sağlanan yeni verilerle mevcut değiştirir.  
+- **Http put** -istenen kaynaktaki mevcut varlık verilerini istek iletisi yükünde sağlanan yeni verilerle değiştirir.  
   
-- **HTTP birleştirme** - yalnızca varlık verilerini değiştirmek için veri kaynağındaki bir ekleme ardından delete yürütürken verimsizlikleri nedeniyle [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] yeni bir HTTP birleştirme eylemi tanıtır. İstek iletisinin yükü adresli varlık kaynağı değiştirmesi gereken özellikleri içerir. HTTP birleştirme HTTP belirtimini tanımlanmadığından üzerinden olmayan bir HTTP birleştirme isteği yönlendirmek için ek işleme gerektirebilir[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanan sunucuları.  
+- **Http birleştirme** -yalnızca varlık verilerini [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] değiştirmek için veri kaynağındaki bir INSERT tarafından izlenen bir delete tarafından izlenen verimsizlikleri 'in yeni bir http birleştirme eylemi tanıtıldığı için. İstek iletisinin yükü, belirtilen varlık kaynağında değiştirilmesi gereken özellikleri içerir. Http belirtimi http belirtiminde tanımlanmadığı için, bir http birleştirme isteğini[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanmayan sunucular aracılığıyla yönlendirmek için ek işlem gerektirebilir.  
   
- Daha fazla bilgi için [OData: İşlemleri](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Daha fazla bilgi için bkz [. OData: İşlemler](https://go.microsoft.com/fwlink/?LinkId=185792).  
   
 ### <a name="payload-formats"></a>Yük biçimleri  
- Bir HTTP PUT, HTTP POST ve HTTP birleştirme isteği için bir istek iletisi yükü, veri hizmetine gönderdiğiniz varlık verilerini içerir. Akıştaki içeriği ileti üzerinde veri biçimi bağlıdır. Böyle bir yükü de silme dışındaki tüm eylemler HTTP yanıtlarını içerir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] erişim ve veri hizmeti ile değiştirmek için aşağıdaki yük biçimleri destekler:  
+ Bir HTTP PUT, HTTP POST veya HTTP MERGE isteği için, bir istek iletisinin yükü veri hizmetine göndereceğiniz varlık verilerini içerir. Yükün içeriği iletinin veri biçimine bağlıdır. SILME dışındaki tüm eylemlere yönelik HTTP yanıtları de böyle bir yük içerir. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]hizmeti ile erişmek ve verileri değiştirmek için aşağıdaki yük biçimlerini destekler:  
   
-- **Atom** -tarafından tanımlanan diğer bir deyişle, XML tabanlı ileti kodlama [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Atom yayımlama Web akışları, pod yayınlarını, Wiki'ler için veri değişimi, HTTP üzerinden etkinleştirmek için protokol (AtomPub) ve XML tabanlı Internet işlevselliği için bir genişletme olarak. Daha fazla bilgi için [OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** -Web akışları, Pod yayınları, wiksıs ve [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] XML tabanlı Internet işlevselliği için http üzerinden veri değişimi etkinleştirmek üzere Atom yayımlama Protokolü 'nün (AtomPub) uzantısı olarak tanımlanan XML tabanlı bir ileti kodlaması. Daha fazla bilgi için bkz [. OData: Atom biçimi](https://go.microsoft.com/fwlink/?LinkId=185794).  
   
-- **JSON** -JavaScript nesne gösterimi (JSON) olan bir alt kümeyi programlama JavaScript dilinin temel bir basit veri değişim biçimi. Daha fazla bilgi için [OData: JSON biçiminde](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JAVASCRIPT nesne GÖSTERIMI (JSON), JavaScript programlama dilinin bir alt kümesini temel alan hafif bir veri değişim biçimidir. Daha fazla bilgi için bkz [. OData: JSON biçimi](https://go.microsoft.com/fwlink/?LinkId=185795).  
   
- HTTP isteği iletisi üst bilgisinde yükü ileti biçimi istenir. Daha fazla bilgi için [OData: İşlemleri](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ Yükün ileti biçimi HTTP istek iletisi üstbilgisinde istendi. Daha fazla bilgi için bkz [. OData: İşlemler](https://go.microsoft.com/fwlink/?LinkID=185792).  
   
-## <a name="accessing-and-changing-data-using-client-libraries"></a>Erişme ve verileri istemci kitaplığı kullanarak değiştirme  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] daha kolay kullanmayı sağlayan istemci kütüphaneleri içerir bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework ve Silverlight tabanlı istemci uygulamalarından akış. Bu kitaplıklar, HTTP iletileri gönderip basitleştirir. Bunlar ayrıca varlık verilerini temsil eden CLR nesneleri iletisi yüküne çevir. İstemci kitaplıkları iki çekirdek sınıfı özelliği <xref:System.Data.Services.Client.DataServiceContext> ve <xref:System.Data.Services.Client.DataServiceQuery%601>. Bu sınıflar, bir veri hizmetini sorgulama ve CLR nesne olarak döndürülen varlığı verilerle çalışmak etkinleştirin. Daha fazla bilgi için [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) ve [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
+## <a name="accessing-and-changing-data-using-client-libraries"></a>Istemci kitaplıklarını kullanarak verilere erişme ve verileri değiştirme  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].NET Framework ve Silverlight tabanlı istemci uygulamalarından bir akışı daha kolay bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] şekilde kullanmanıza olanak tanıyan istemci kitaplıklarını içerir. Bu kitaplıklar HTTP iletileri göndermeyi ve almayı basitleştirir. Ayrıca, ileti yükünü varlık verilerini temsil eden CLR nesnelerine çevirirler. İstemci kitaplıkları iki çekirdek sınıfı <xref:System.Data.Services.Client.DataServiceContext> ve. <xref:System.Data.Services.Client.DataServiceQuery%601> Bu sınıflar bir veri hizmetini sorgulamanızı ve ardından döndürülen varlık verileriyle CLR nesneleri olarak çalışmanızı sağlar. Daha fazla bilgi için bkz. [WCF veri Hizmetleri Istemci kitaplığı](wcf-data-services-client-library.md) ve [WCF veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
- Kullanabileceğiniz **hizmet Başvurusu Ekle** veri hizmetine başvuru eklemek için Visual Studio'da iletişim kutusu. Bu araç, başvurulan veri hizmetinden hizmet meta verileri ister ve oluşturur <xref:System.Data.Services.Client.DataServiceContext> , veri hizmetini temsil eder, aynı zamanda varlıkları temsil eden istemci veri hizmeti sınıfları oluşturur. Daha fazla bilgi için [veri hizmeti istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
+ Bir veri hizmetine başvuru eklemek için Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusunu kullanabilirsiniz. Bu araç, başvurulan bir veri hizmetinden hizmet meta verilerini ister ve bir veri <xref:System.Data.Services.Client.DataServiceContext> hizmetini temsil eden öğesini oluşturur, ayrıca varlıkları temsil eden istemci veri hizmeti sınıflarını oluşturur. Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma](generating-the-data-service-client-library-wcf-data-services.md).  
   
- Programlama kitaplığı kullanmak için kullanabileceğiniz bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] diğer türde istemci uygulamalar akış. Daha fazla bilgi için [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
+ Başka türdeki istemci uygulamalarında bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı tüketmek için kullanabileceğiniz programlama kitaplıkları mevcuttur. Daha fazla bilgi için bkz. [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
-- [Hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+- [Veri Hizmeti Kaynaklarına Erişme](accessing-data-service-resources-wcf-data-services.md)
+- [Hızlı başlangıç](quickstart-wcf-data-services.md)

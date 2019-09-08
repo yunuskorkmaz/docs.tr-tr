@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fb752822cd406585f7f4a257ea4c51dab7b1f16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778503"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795455"
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache İşlevi
-İndirilen derleme genel derleme önbelleğini temizler.  
+İndirilen derlemelerin genel derleme önbelleğini temizler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -35,15 +35,15 @@ HRESULT ClearDownloadCache ();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Fusion.dll ve kullanımda olan mscorwks.dll'ye. Fusion.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.  
+ **Kitaplığı** Fusion. dll ve mscorwks. dll. .NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine Fusion. dll kullanın.  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)
+- [Genel Derleme Önbelleği](../../app-domains/gac.md)

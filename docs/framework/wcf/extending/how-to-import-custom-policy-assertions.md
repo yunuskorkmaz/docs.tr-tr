@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363849"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795612"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma
 İlke onayları bir hizmet uç noktasının yeteneklerini ve gereksinimlerini anlatmaktadır.  İstemci uygulamaları, hizmet meta verilerinde ilke onayları kullanarak istemci bağlamasını yapılandırabilir veya bir hizmet uç noktası için hizmet sözleşmesini özelleştirebilir.  
@@ -25,7 +25,7 @@ ms.locfileid: "68363849"
   
 3. Yapılandırma dosyası kullanma. Aşağıdaki yordamlara bakın.  
   
-4. [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ile bir yapılandırma dosyası kullanma. Aşağıdaki yordamlara bakın.  
+4. [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)ile bir yapılandırma dosyası kullanma. Aşağıdaki yordamlara bakın.  
   
 5. İlke İçeri Aktarıcı programlı bir şekilde ekleniyor. Aşağıdaki yordamlara bakın.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68363849"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Özel ilke alma aracını bir yapılandırma dosyası kullanarak meta veri sistemine eklemek için  
   
-1. İçeri aktarma türünü `<extensions>` , istemci yapılandırma dosyasındaki [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) öğesinin içindeki öğeye ekleyin.  
+1. İçeri aktarma türünü `<extensions>` , istemci yapılandırma dosyasındaki [ \<PolicyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md) öğesinin içindeki öğeye ekleyin.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ ms.locfileid: "68363849"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Özel ilke İçeri Aktarıcı ' yı Svcutil. exe kullanarak meta veri sistemine eklemek için  
   
-1. Alıcı türünü `<extensions>` Svcutil. exe. config yapılandırma dosyasındaki [ \<PolicyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) öğesinin içindeki öğeye ekleyin. Ayrıca, `/svcutilConfig` seçeneği kullanılarak farklı bir yapılandırma dosyasına kayıtlı ilke İçeri Aktarıcı türlerini yüklemek için Svcutil. exe ' yi de kullanabilirsiniz.  
+1. Alıcı türünü `<extensions>` Svcutil. exe. config yapılandırma dosyasındaki [ \<PolicyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md) öğesinin içindeki öğeye ekleyin. Ayrıca, `/svcutilConfig` seçeneği kullanılarak farklı bir yapılandırma dosyasına kayıtlı ilke İçeri Aktarıcı türlerini yüklemek için Svcutil. exe ' yi de kullanabilirsiniz.  
   
-2. Meta verileri içeri aktarmak için [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın ve içeri aktarma otomatik olarak çağrılır.  
+2. Meta verileri içeri aktarmak için [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın ve içeri aktarma otomatik olarak çağrılır.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Özel ilke içe aktarıcı 'nın meta veri sistemine programlı bir şekilde eklenmesini sağlamak için  
   
@@ -68,4 +68,4 @@ ms.locfileid: "68363849"
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
-- [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)
+- [Meta Veri Sistemini Genişletme](extending-the-metadata-system.md)

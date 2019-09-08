@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: 4eb96eaf409fd34e9b10a469ed31fbbe18ebac5e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9250ca09fb5e28655e39f8d91d991fdb3bffcdbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046007"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795751"
 ---
 # <a name="extending-dispatchers"></a>Dağıtıcıları Genişletme
 Dispatchler, temel alınan kanallara ait gelen iletileri çekmekten, bunları uygulama kodundaki yöntem çağırmaları içine çevirerek ve sonuçları çağırana geri gönderen sorumludurlar. Dağıtıcı uzantıları bu işlemeyi değiştirmenize izin verir.  İletilerin veya parametrelerin içeriğini denetleyen veya değiştiren ileti ya da parametre Inspectors uygulayabilirsiniz.  İletilerin işlemlere yönlendirilme biçimini değiştirebilir veya başka bir işlevsellik sağlayabilirsiniz.
 
-Bu konu, bir dağıtıcı 'ın varsayılan <xref:System.ServiceModel.Dispatcher.DispatchRuntime> yürütme <xref:System.ServiceModel.Dispatcher.DispatchOperation> davranışını değiştirmek veya iletileri, parametreleri veya dönüşü ele almak ya da değiştirmek için bir Windows Communication Foundation (WCF) hizmet uygulamasında ve sınıflarının nasıl kullanılacağını açıklar. ya da sonrasında kanal katmanından gönderilmeden veya ondan sonra gelen değerler. Eşdeğer istemci çalışma zamanı iletisi işleme hakkında daha fazla bilgi için bkz. [Istemcileri genişletme](../../../../docs/framework/wcf/extending/extending-clients.md). Farklı çalışma zamanı özelleştirme nesneleri <xref:System.ServiceModel.IExtensibleObject%601> arasında paylaşılan duruma erişirken, türlerin hangi rol üzerinde çalındığını anlamak için bkz. [Genişletilebilir nesneler](../../../../docs/framework/wcf/extending/extensible-objects.md).
+Bu konu, bir dağıtıcı 'ın varsayılan <xref:System.ServiceModel.Dispatcher.DispatchRuntime> yürütme <xref:System.ServiceModel.Dispatcher.DispatchOperation> davranışını değiştirmek veya iletileri, parametreleri veya dönüşü ele almak ya da değiştirmek için bir Windows Communication Foundation (WCF) hizmet uygulamasında ve sınıflarının nasıl kullanılacağını açıklar. ya da sonrasında kanal katmanından gönderilmeden veya ondan sonra gelen değerler. Eşdeğer istemci çalışma zamanı iletisi işleme hakkında daha fazla bilgi için bkz. [Istemcileri genişletme](extending-clients.md). Farklı çalışma zamanı özelleştirme nesneleri <xref:System.ServiceModel.IExtensibleObject%601> arasında paylaşılan duruma erişirken, türlerin hangi rol üzerinde çalındığını anlamak için bkz. [Genişletilebilir nesneler](extensible-objects.md).
 
 ## <a name="dispatchers"></a>Dağıtıcılarının yerini alabilir
 
@@ -22,11 +22,11 @@ Hizmet modeli katmanı, geliştiricilerin programlama modeli ve genellikle kanal
 
 Kanal dağıtıcısı (ve Yardımcısı <xref:System.ServiceModel.Channels.IChannelListener>), iletileri düşük kanaldan alıp iletileri ilgili uç noktası dağıtıcıları 'na geçirir. Her uç nokta dağıtıcılarının <xref:System.ServiceModel.Dispatcher.DispatchRuntime> , işlemi uygulayan yöntemi çağırmaktan <xref:System.ServiceModel.Dispatcher.DispatchOperation>sorumlu olan iletileri uygun bir şekilde yönlendirdiğini vardır. Çeşitli isteğe bağlı ve gerekli uzantı sınıfları, bu şekilde çağrılır. Bu konu, bu parçaların nasıl bir araya uyduğunu ve temel işlevselliği genişletmek için özellikleri nasıl değiştirebileceğinizi ve içindeki kodunuzu nasıl kullanabileceğinizi açıklar.
 
-Dağıtıcı özellikleri ve değiştirilmiş özelleştirme nesneleri, hizmet, uç nokta, anlaşma veya işlem davranışı nesneleri kullanılarak eklenir. Bu konu, davranışların nasıl kullanılacağını tanımlamaz. Dağıtıcı değişikliklerini eklemek için kullanılan türler hakkında daha fazla bilgi için bkz. [çalışma zamanını davranışlarla birlikte yapılandırma ve genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).
+Dağıtıcı özellikleri ve değiştirilmiş özelleştirme nesneleri, hizmet, uç nokta, anlaşma veya işlem davranışı nesneleri kullanılarak eklenir. Bu konu, davranışların nasıl kullanılacağını tanımlamaz. Dağıtıcı değişikliklerini eklemek için kullanılan türler hakkında daha fazla bilgi için bkz. [çalışma zamanını davranışlarla birlikte yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).
 
 Aşağıdaki grafik, bir hizmette mimari öğelerin üst düzey bir görünümünü sağlar.
 
-![Dağıtım çalışma zamanı mimarisi](../../../../docs/framework/wcf/extending/media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
+![Dağıtım çalışma zamanı mimarisi](./media/wcfc-dispatchruntimearchc.gif "wcfc_DispatchRuntimeArchc")
 
 ### <a name="channel-dispatchers"></a>Kanal Sevkiyatcıları
 
@@ -44,30 +44,30 @@ Bir kanal oturumunun ömrünü ve davranışını denetleyen tüm özellikler, <
 
 Dağıtıcısı genişletecek birkaç neden vardır:
 
-- Özel Ileti doğrulaması. Kullanıcılar, belirli bir şema için bir iletinin geçerli olduğunu zorlayabilir. Bu işlem, ileti yakalayıcı arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [ileti](../../../../docs/framework/wcf/samples/message-inspectors.md)denetçiler.
+- Özel Ileti doğrulaması. Kullanıcılar, belirli bir şema için bir iletinin geçerli olduğunu zorlayabilir. Bu işlem, ileti yakalayıcı arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [ileti](../samples/message-inspectors.md)denetçiler.
 
 - Özel Ileti günlüğü. Kullanıcılar bir uç nokta aracılığıyla akan bazı uygulama iletilerini inceleyebilir ve günlüğe kaydedebilir. Bu, ileti yakalayıcısı arabirimleriyle de gerçekleştirilebilir.
 
 - Özel Ileti dönüşümleri. Kullanıcılar çalışma zamanındaki iletiye bazı dönüşümler uygulayabilir (örneğin, sürüm oluşturma için). Bu, ileti yakalayıcısı arabirimleriyle birlikte gerçekleştirilebilir.
 
-- Özel veri modeli. Kullanıcılar, WCF 'de varsayılan olarak desteklenenden farklı bir veri serileştirme modeline sahip olabilir (yani <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>,, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, ve ham iletiler). Bu, ileti biçimlendirici arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+- Özel veri modeli. Kullanıcılar, WCF 'de varsayılan olarak desteklenenden farklı bir veri serileştirme modeline sahip olabilir (yani <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>,, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, ve ham iletiler). Bu, ileti biçimlendirici arabirimlerini uygulayarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../samples/operation-formatter-and-operation-selector.md).
 
 - Özel parametre doğrulaması. Kullanıcılar, yazılan parametrelerin geçerli olduğunu (XML 'nin aksine) zorunlu kılabilir. Bu işlem, parametre denetçisi arabirimleri kullanılarak yapılabilir.
 
-- Özel Işlem gönderme. Kullanıcılar, örneğin gövde öğesinde veya özel bir ileti özelliğinde, eylem dışında bir şeye gönderme işlemini uygulayabilir. Bu, <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi kullanılarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md).
+- Özel Işlem gönderme. Kullanıcılar, örneğin gövde öğesinde veya özel bir ileti özelliğinde, eylem dışında bir şeye gönderme işlemini uygulayabilir. Bu, <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> arabirimi kullanılarak yapılabilir. Bir örnek için bkz. [Işlem biçimlendirici ve Işlem seçici](../samples/operation-formatter-and-operation-selector.md).
 
-- Nesne havuzu oluşturma. Kullanıcılar, her çağrı için yeni bir tane ayırmak yerine, örnekleri havuza alabilir. Bu, örnek sağlayıcı arabirimleri kullanılarak uygulanabilir. Bir örnek için bkz. [Pooling](../../../../docs/framework/wcf/samples/pooling.md).
+- Nesne havuzu oluşturma. Kullanıcılar, her çağrı için yeni bir tane ayırmak yerine, örnekleri havuza alabilir. Bu, örnek sağlayıcı arabirimleri kullanılarak uygulanabilir. Bir örnek için bkz. [Pooling](../samples/pooling.md).
 
 - Örnek Kiralama. Kullanıcılar, .NET Framework uzaktan Iletişim ile benzer örnek ömrü için bir kiralama stili uygulayabilir. Bu, örnek bağlam ömrü arabirimleri kullanılarak yapılabilir.
 
 - Özel hata Işleme. Kullanıcılar, yerel hataların nasıl işlendiğini ve hataların istemcilere nasıl geri iletildiğini denetleyebilir. Bu, <xref:System.ServiceModel.Dispatcher.IErrorHandler> arabirimler kullanılarak uygulanabilir.
 
-- Özel yetkilendirme davranışları. Kullanıcılar, sözleşmenin veya Işlemin çalışma zamanı parçalarını genişleterek ve iletideki belirteçleri temel alarak güvenlik denetimleri ekleyerek özel erişim denetimi uygulayabilir. Bu, ileti yakalayıcısı ya da parametre yakalayıcısı arabirimleri kullanılarak yapılabilir. Örnekler için bkz. [güvenlik genişletilebilirliği](../../../../docs/framework/wcf/samples/security-extensibility.md).
+- Özel yetkilendirme davranışları. Kullanıcılar, sözleşmenin veya Işlemin çalışma zamanı parçalarını genişleterek ve iletideki belirteçleri temel alarak güvenlik denetimleri ekleyerek özel erişim denetimi uygulayabilir. Bu, ileti yakalayıcısı ya da parametre yakalayıcısı arabirimleri kullanılarak yapılabilir. Örnekler için bkz. [güvenlik genişletilebilirliği](../samples/security-extensibility.md).
 
   > [!CAUTION]
   > Güvenlik özelliklerinin değiştirilmesi, WCF uygulamalarının güvenliğinin aşılmasına neden olduğundan, dağıtıma karşı güvenlikle ilgili değişiklikler yapmanız ve dağıtımdan önce kapsamlı test yapmanız önerilir.
 
-- Özel WCF çalışma zamanı Doğrulayıcıları. WCF uygulamalarına göre kurumsal düzeyde ilkeleri zorlamak için Hizmetleri, sözleşmeleri ve bağlamaları incelemek üzere özel doğrulayıcılar yükleyebilirsiniz. (Örneğin, bkz [. nasıl yapılır: Kuruluştaki](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.)
+- Özel WCF çalışma zamanı Doğrulayıcıları. WCF uygulamalarına göre kurumsal düzeyde ilkeleri zorlamak için Hizmetleri, sözleşmeleri ve bağlamaları incelemek üzere özel doğrulayıcılar yükleyebilirsiniz. (Örneğin, bkz [. nasıl yapılır: Kuruluştaki](how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.)
 
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime sınıfını kullanma
 
@@ -137,6 +137,6 @@ Aşağıdaki özellikler çalışma zamanı yürütme işlemini işlem düzeyind
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Nasıl yapılır: Hizmette Iletileri İnceleme ve değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [Nasıl yapılır: Parametreleri İnceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [Nasıl yapılır: Kuruluştaki uç noktaları kilitleme](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [Nasıl yapılır: Hizmette Iletileri İnceleme ve değiştirme](how-to-inspect-and-modify-messages-on-the-service.md)
+- [Nasıl yapılır: Parametreleri İnceleme veya değiştirme](how-to-inspect-or-modify-parameters.md)
+- [Nasıl yapılır: Kuruluştaki uç noktaları kilitleme](how-to-lock-down-endpoints-in-the-enterprise.md)

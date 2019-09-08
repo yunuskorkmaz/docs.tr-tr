@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aee9b986c1e26c1b2e34dac7151a00172451bbad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697933"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796557"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName Arabirimi
-Açıklayan ve bir derlemenin benzersiz kimliği ile çalışmak için yöntemler sağlar.  
+Bir derlemenin benzersiz kimliğini tanımlamak ve bunlarla çalışmak için yöntemler sağlar.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[Clone Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-clone-method.md)|Bu basit bir kopyasını oluşturur `IAssemblyName` nesne.|  
-|[Finalize Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-finalize-method.md)|Böylece `IAssemblyName` kaynakları serbest bırakmak ve yok edici çağrılmadan önce diğer temizleme işlemleri gerçekleştirmek için nesne.|  
-|[GetDisplayName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)|Okunabilir bu başvurduğu derlemenin adını alır `IAssemblyName` nesne.|  
-|[GetName Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getname-method.md)|Basit, şifrelenmemiş bu başvurduğu derlemenin adını alır `IAssemblyName` nesne.|  
-|[GetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getproperty-method.md)|Başvurulan tarafından belirtilen özellik için bir işaretçi alır `PropertyId`.|  
-|[GetVersion Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getversion-method.md)|Bu tarafından başvurulan derlemenin sürüm bilgilerini alır `IAssemblyName` nesne.|  
-|[IsEqual Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)|Belirtilen bir olup olmadığını belirler `IAssemblyName` nesnedir şuna eşit `IAssemblyName`bağlı olarak belirtilen karşılaştırma bayrakları.|  
-|[SetProperty Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-setproperty-method.md)|Belirtilen tarafından başvurulan özelliğin değerini ayarlar `PropertyId`.|  
+|[Clone Yöntemi](iassemblyname-clone-method.md)|Bu `IAssemblyName` nesnenin basit bir kopyasını oluşturur.|  
+|[Finalize Yöntemi](iassemblyname-finalize-method.md)|Bu `IAssemblyName` nesnenin, yıkıcısı çağrılmadan önce kaynakları serbest bırakma ve diğer temizleme işlemlerini gerçekleştirmesine izin verir.|  
+|[GetDisplayName Yöntemi](iassemblyname-getdisplayname-method.md)|Bu `IAssemblyName` nesne tarafından başvurulan derlemenin okunabilir adını alır.|  
+|[GetName Yöntemi](iassemblyname-getname-method.md)|Bu `IAssemblyName` nesnenin başvurduğu derlemenin basit, şifrelenmemiş adını alır.|  
+|[GetProperty Yöntemi](iassemblyname-getproperty-method.md)|Belirtilen `PropertyId`özelliğin başvurduğu özelliğe bir işaretçi alır.|  
+|[GetVersion Yöntemi](iassemblyname-getversion-method.md)|Bu `IAssemblyName` nesne tarafından başvurulan derleme için sürüm bilgilerini alır.|  
+|[IsEqual Yöntemi](iassemblyname-isequal-method.md)|Belirtilen karşılaştırma bayraklarını temel `IAssemblyName` alarak belirtilen bir nesnenin bu `IAssemblyName`değere eşit olup olmadığını belirler.|  
+|[SetProperty Yöntemi](iassemblyname-setproperty-method.md)|Belirtilen `PropertyId`öğesinin başvurduğu özelliğin değerini ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)
+- [IAssemblyEnum Arabirimi](iassemblyenum-interface.md)

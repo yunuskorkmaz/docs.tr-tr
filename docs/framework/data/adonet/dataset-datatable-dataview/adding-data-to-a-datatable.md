@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2a001ac8b3d4b8cd9618b3ced7bdf578ebae2e22
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205485"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786601"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
 ' I oluşturup <xref:System.Data.DataTable> , sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişkeni tür <xref:System.Data.DataRow>olarak bildirin. <xref:System.Data.DataTable.NewRow%2A> Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür. **DataTable** daha sonra, <xref:System.Data.DataColumnCollection>tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur.  
@@ -92,4 +92,4 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
 - [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

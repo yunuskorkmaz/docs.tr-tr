@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7cd02a0a315ffdb155af09ac4e4fabbea1724a4d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938490"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780840"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express Kullanıcı Örnekleri
 Microsoft SQL Server Express Edition (SQL Server Express), yalnızca SQL Server (`SqlClient`) için .NET Framework veri sağlayıcısı kullanılırken kullanılabilen Kullanıcı örneği özelliğini destekler. Bir kullanıcı örneği, bir üst örnek tarafından oluşturulan SQL Server Express veritabanı altyapısının ayrı bir örneğidir. Kullanıcı örnekleri, yerel bilgisayarlarında yönetici olmayan kullanıcıların SQL Server Express veritabanlarına ekler ve bunlara bağlanmasına izin verir. Her örnek, bireysel kullanıcının güvenlik bağlamı altında, tek örnekli Kullanıcı bazında çalışır.  
@@ -152,7 +152,7 @@ private static void OpenSqlConnection()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [Bağlantı Dizeleri](../connection-strings.md)
+- [Veri Kaynağına Bağlanma](../connecting-to-a-data-source.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

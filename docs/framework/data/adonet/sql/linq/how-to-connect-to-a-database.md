@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: ebf630c08714a2e5162ba072f88b7fbdef7ca0f4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964055"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793867"
 ---
 # <a name="how-to-connect-to-a-database"></a>Nasıl yapılır: Veritabanına Bağlanma
 , <xref:System.Data.Linq.DataContext> Bir veritabanına bağlandığınız, nesneleri buradan alacağınız ve değişiklikleri geri gönderen ana iletken. <xref:System.Data.Linq.DataContext> Yalnızca bir ADO.net <xref:System.Data.SqlClient.SqlConnection>kullandığınız gibi kullanırsınız. Aslında <xref:System.Data.Linq.DataContext> , sağladığınız bir bağlantı veya bağlantı dizesi ile başlatılır. Daha fazla bilgi için [DataContext yöntemi (O/R Tasarımcısı)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
@@ -18,7 +18,7 @@ ms.locfileid: "69964055"
  ' Nin <xref:System.Data.Linq.DataContext> amacı, veritabanına karşı yapılacak isteklerinizi SQL sorgularına dönüştürmek ve ardından nesneleri sonuçlardan elde etmek üzere çevirsağlamaktır. <xref:System.Data.Linq.DataContext> [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] , `Where` Ve gibistandartsorguişleçleriileaynıoperatördeseninin`Select`uygulanması ile etkinleştirilir.  
   
 > [!IMPORTANT]
-> Güvenli bir bağlantının sürdürülmesi en yüksek öneme sahiptir. Daha fazla bilgi için bkz. [LINQ to SQL güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+> Güvenli bir bağlantının sürdürülmesi en yüksek öneme sahiptir. Daha fazla bilgi için bkz. [LINQ to SQL güvenlik](security-in-linq-to-sql.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnekte <xref:System.Data.Linq.DataContext> , Northwind örnek veritabanına bağlanmak ve şehri Londra olan müşterilerin satırlarını almak için kullanılır.  
@@ -41,4 +41,4 @@ ms.locfileid: "69964055"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veritabanı ile İletişim Kurma](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)
+- [Veritabanı ile İletişim Kurma](communicating-with-the-database.md)

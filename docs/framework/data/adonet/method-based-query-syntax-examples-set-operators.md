@@ -1,35 +1,35 @@
 ---
-title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Ayarlama işleçleri (LINQ to DataSet)'
+title: 'Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Işleç ayarlama (LINQ to DataSet)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa93af15-28af-4b5e-846b-897308410edb
-ms.openlocfilehash: 48aa6044f39be93f144b6c4af5137b131dda0b30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 481c0ed7e39b8f958ccdae01e4589d54b3ff2446
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772144"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783582"
 ---
-# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Ayarlama işleçleri (LINQ to DataSet)
-Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Intersect%2A>, ve <xref:System.Linq.Enumerable.Union%2A> veri satırları kümelerinin değer tabanlı karşılaştırma işlemleri gerçekleştirmek için işleçleri.[ Verileri içine bir DataSet yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md) bkz [DataRow karşılaştırma](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md) hakkında daha fazla bilgi için <xref:System.Data.DataRowComparer>.  
+# <a name="method-based-query-syntax-examples-set-operators-linq-to-dataset"></a>Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Işleç ayarlama (LINQ to DataSet)
+Bu konudaki örneklerde, veri satırı kümelerinde değer tabanlı karşılaştırma <xref:System.Linq.Enumerable.Distinct%2A>işlemleri <xref:System.Linq.Enumerable.Except%2A>gerçekleştirmek <xref:System.Linq.Enumerable.Intersect%2A>için, <xref:System.Linq.Enumerable.Union%2A> , ve işleçlerinin nasıl kullanılacağı gösterilmektedir.[ Veri kümesine veri yükleme](loading-data-into-a-dataset.md) hakkında <xref:System.Data.DataRowComparer>daha fazla bilgi Için bkz. [DataRow karşılaştırması](comparing-datarows-linq-to-dataset.md) .  
   
- `FillDataSet` Bu örneklerde kullanılan yöntemi belirtilen [verileri bir DataSet içine Yükleniyor](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).  
+ Bu örneklerde kullanılan [](loading-data-into-a-dataset.md) yöntemiverileribirverikümesineyüklerken`FillDataSet` belirtilmiştir.  
   
- Bu konudaki örnekler AdventureWorks örnek veritabanındaki kişi, adres, ürün, SalesOrderHeader ve satış siparişi ayrıntısını tablolarını kullanın.  
+ Bu konudaki örneklerde, AdventureWorks örnek veritabanındaki Ilgili kişi, adres, ürün, SalesOrderHeader ve SalesOrderDetail tabloları kullanılmaktadır.  
   
- Aşağıdaki örneklerde bu konudaki `using` / `Imports` ifadeleri:  
+ Bu konudaki örnekler aşağıdaki `using` / `Imports` deyimleri kullanır:  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- Daha fazla bilgi için [nasıl yapılır: Visual Studio'da bir LINQ to DataSet projesi oluşturma](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).  
+ Daha fazla bilgi için [nasıl yapılır: Visual Studio](how-to-create-a-linq-to-dataset-project-in-vs.md)'Da bir LINQ to DataSet projesi oluşturun.  
   
 ## <a name="distinct"></a>Distinct  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.Distinct%2A> yöntemi bir dizideki yinelenen öğeleri kaldırın.  
+ Bu örnek, <xref:System.Linq.Enumerable.Distinct%2A> bir dizideki yinelenen öğeleri kaldırmak için yöntemini kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#distinctrows)]
  [!code-vb[DP LINQ to DataSet Examples#DistinctRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#distinctrows)]  
@@ -37,7 +37,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="except"></a>Dışlama  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.Except%2A> görünen kişileri ilk tablonun ancak ikinci döndürmek için yöntemi.  
+ Bu örnek, ilk <xref:System.Linq.Enumerable.Except%2A> tabloda görünen ancak ikincide olmayan kişileri döndürmek için yöntemini kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Except2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#except2)]
  [!code-vb[DP LINQ to DataSet Examples#Except2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#except2)]  
@@ -45,7 +45,7 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="intersect"></a>Kesiştir  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.Intersect%2A> her iki tabloda görünen kişileri döndürmek için yöntemi.  
+ Bu örnek, <xref:System.Linq.Enumerable.Intersect%2A> her iki tabloda görünen kişileri döndürmek için yöntemini kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#intersect2)]
  [!code-vb[DP LINQ to DataSet Examples#Intersect2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#intersect2)]  
@@ -53,14 +53,14 @@ Bu konudaki örnekler nasıl kullanılacağını gösteren <xref:System.Linq.Enu
 ## <a name="union"></a>UNION  
   
 ### <a name="example"></a>Örnek  
- Bu örnekte <xref:System.Linq.Enumerable.Union%2A> benzersiz kişiler iki tablo birini döndürmek için yöntemi.  
+ Bu örnek, <xref:System.Linq.Enumerable.Union%2A> iki tablodan birindeki benzersiz kişileri döndürmek için yöntemini kullanır.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#union2)]
  [!code-vb[DP LINQ to DataSet Examples#Union2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#union2)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet’e Veri Yükleme](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [Standart sorgu işleçlerine genel bakış (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Standart sorgu işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [DataSet’e Veri Yükleme](loading-data-into-a-dataset.md)
+- [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)
+- [Standart sorgu Işleçlerine genelC#bakış ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

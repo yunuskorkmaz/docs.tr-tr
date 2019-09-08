@@ -2,46 +2,46 @@
 title: Programlama Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: c63fbedc1cf7484943614c50e7dd7554a2ddea0e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c33c7749599de0450a9f969e5802485d154a61e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742932"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781246"
 ---
 # <a name="programming-guide"></a>Programlama Kılavuzu
-Bu bölüm oluşturma ve kullanma hakkında bilgi içerir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli. Visual Studio kullanıyorsanız, Nesne İlişkisel Tasarımcısı bu görevlerin çoğunu gerçekleştirmek için kullanabilirsiniz.  
+Bu bölüm, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modelinizi oluşturma ve kullanma hakkında bilgi içerir. Visual Studio kullanıyorsanız, aynı görevlerin birçoğunu gerçekleştirmek için Nesne İlişkisel Tasarımcısı de kullanabilirsiniz.  
   
- Microsoft Docs belirli sorunlar için de arama yapabilir ve katılmak [LINQ Forumu](https://go.microsoft.com/fwlink/?LinkId=76488), uzmanlarıyla ayrıntılı daha karmaşık konuları burada tartışabilir miyiz. Son olarak, [LINQ to SQL: ilişkisel veri .NET Language-Integrated sorgusu](https://go.microsoft.com/fwlink/?LinkId=93205) incelemeyi ayrıntıları [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknolojisi, Visual Basic ve C# kod örnekleri ile tamamlandı.  
+ Ayrıca, belirli sorunlar için Microsoft Docs arayabilir ve uzmanlarla ayrıntılı olarak daha karmaşık konular tartışabilirsiniz [LINQ forumuna](https://go.microsoft.com/fwlink/?LinkId=76488)katılabilirsiniz. Son olarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , [LINQ to SQL: ilişkisel veri teknik incelemesi için .NET dil tümleşik sorgusu](https://go.microsoft.com/fwlink/?LinkId=93205) , Visual Basic ve C# kod örnekleriyle birlikte tamamlanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- Bir nesne modeli oluşturmayı açıklar.  
+ [Nesne Modeli Oluşturma](creating-the-object-model.md)  
+ Bir nesne modelinin nasıl oluşturulacağını açıklar.  
   
- [Veritabanı ile İletişim Kurma](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)  
- Nasıl kullanılacağını açıklayan bir <xref:System.Data.Linq.DataContext> veritabanı bir kanalı olarak nesnesi.  
+ [Veritabanı ile İletişim Kurma](communicating-with-the-database.md)  
+ Bir <xref:System.Data.Linq.DataContext> nesnenin veritabanına bir iletken olarak nasıl kullanılacağını açıklar.  
   
- [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)  
- Sorguları yürütmek açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ve birçok örnekler sağlar.  
+ [Veritabanını Sorgulama](querying-the-database.md)  
+ ' De [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sorguların nasıl yürütüleceğini açıklar ve birçok örnek sağlar.  
   
- [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)  
- Açıklayan nasıl veritabanındaki verileri değiştirme.  
+ [Veri Değişiklikleri Yapma ve Gönderme](making-and-submitting-data-changes.md)  
+ Veritabanındaki verileri değiştirme işlemini açıklar.  
   
- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
- Hata ayıklama için kullanılabilir desteğini açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeleri.  
+ [Hata Ayıklama Desteği](debugging-support.md)  
+ Projelerde hata ayıklama [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] için kullanılabilen desteği açıklar.  
   
- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- Ek öğeler, yeni veritabanları oluşturmak eşzamanlılık çakışma çözümü gibi ve daha gelişmiş kullanıcılar için daha fazlasını içerir.  
+ [Arka Plan Bilgileri](background-information.md)  
+ , Daha gelişmiş kullanıcılar için eşzamanlılık çakışma çözümü, yeni veritabanları oluşturma ve daha fazlası gibi ek öğeler içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
- Açıklayan konulara bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] teknoloji ve özellikleri göstermektedir.  
+ [LINQ to SQL](index.md)  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Teknolojiyi açıklayan ve özellikleri gösteren konuların bağlantılarını sağlar.  
   
- [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
- Saklı yordamlar kullanma işlemini gösteren konulara bağlantılar içerir.  
+ [Saklı Yordamlar](stored-procedures.md)  
+ Saklı yordamların nasıl kullanılacağını gösteren konuların bağlantılarını içerir.  
   
- [Lınq'ye giriş (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)  
- SQL kullanarak LINQ hakkında bilgi edinmek başlayan yardımcı olacak kaynaklar sunulmaktadır C#.
+ [LINQ (C#) uygulamasına giriş](../../../../../csharp/programming-guide/concepts/linq/index.md)  
+ Kullanarak C#LINQ to SQL hakkında bilgi edinmenize başlamanıza yardımcı olacak kaynaklar sağlar.
 
- [Lınq'ye giriş (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- LINQ-SQL Visual Basic kullanma hakkında bilgi edinmek başlayan yardımcı olacak kaynaklar sunulmaktadır.
+ [LINQ 'e giriş (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ Visual Basic kullanarak LINQ to SQL hakkında bilgi edinmenize başlamanıza yardımcı olacak kaynaklar sağlar.

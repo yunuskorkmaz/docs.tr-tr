@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741628"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777088"
 ---
 # <a name="importtypes-method"></a>ImportTypes Yöntemi
-Türleri aracılığıyla alınan her bir kapsamdan içeri aktarma başlatır [ImportFile yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+[ImportFile yöntemi](importfile-method.md)aracılığıyla içeri aktarılan her kapsamdan türlerin içeri aktarılmasını başlatır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Almak için derleme kimliği.  
+ İçeri aktarılacak derlemenin KIMLIĞI.  
   
  `FileToken`  
- Alınacak dosya kimliği.  
+ İçeri aktarılacak dosyanın KIMLIĞI.  
   
  `dwScope`  
- İçeri aktarmak için sıfır tabanlı kapsam.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `phEnum`  
- Numaralandırıcı tanıtıcı türleri için bu kapsamda yer alır.  
+ Bu kapsamdaki türler için numaralandırıcı tanıtıcısını alır.  
   
  `ppImportScope`  
- İsteğe bağlı olarak alan [Imetadataımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) arabirimi.  
+ İsteğe bağlı olarak [IMetaDataImport arabirim](../metadata/imetadataimport-interface.md) arabirimini alır.  
   
  `pdwCountOfTypes`  
- İsteğe bağlı olarak belirtilen kapsamda türleri sayısını alır.  
+ İsteğe bağlı olarak, belirtilen kapsamdaki türlerin sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

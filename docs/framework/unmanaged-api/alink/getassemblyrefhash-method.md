@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49ea7fbe9f491028a85fae543d126fd9d4f2d940
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741900"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777198"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash Yöntemi
-Belirli bir derleme için bir karma blob alır.  
+Verilen derleme için bir karma blobu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,22 +38,22 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parametreler  
  `FileToken`  
- Karma başvuruda bulunacak derlemesinin kimliği.  
+ Karmasının başvurabileceği derlemenin KIMLIĞI.  
   
  `ppvHash`  
- Sonuçta elde edilen karma blob alır.  
+ Elde edilen karma blobu alır.  
   
  `pcbHash`  
- Karma blob bayt cinsinden boyutunu alır.  
+ Karma Blobun boyutunu bayt cinsinden alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

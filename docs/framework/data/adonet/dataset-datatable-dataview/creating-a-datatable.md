@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: 64ba7a8e6bd6361e14d1f16576e377575b088bbe
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e48359041f92e7b534513aa461a293a822bede19
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205146"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786493"
 ---
 # <a name="creating-a-datatable"></a>DataTable Oluşturma
 Bir <xref:System.Data.DataTable>bellek içi ilişkisel veri tablosunu temsil eden bir tablosu, bağımsız olarak oluşturulup kullanılabilir veya diğer .NET Framework nesneleri tarafından, genellikle bir <xref:System.Data.DataSet>üyesi olarak kullanılabilir.  
   
  Uygun **DataTable** oluşturucusunu kullanarak bir **DataTable** nesnesi oluşturabilirsiniz. Bunu **DataTable** nesnesinin **Tables** koleksiyonuna eklemek Için **Add** metodunu kullanarak **veri kümesine** ekleyebilirsiniz.  
   
- Ayrıca, **DataAdapter** nesnesinin **Fill** veya **FillSchema** yöntemlerini kullanarak, ya da **ReadXml**, ReadXmlSchema kullanarak önceden tanımlanmış veya Çıkarsanan xml şemasından **DataTable** nesneleri de oluşturabilirsiniz.ya da **veri kümesinin** **InferXmlSchema** yöntemleri. Bir **veri kümesinin** **Tables** koleksiyonunun bir üyesi olarak bir **DataTable** ekledikten sonra, bunu başka bir **veri kümesinin**tablo koleksiyonuna ekleyemediğini unutmayın.  
+ Ayrıca, **DataAdapter** nesnesinin **Fill** veya **FillSchema** yöntemlerini **kullanarak,** ya da **ReadXml**, ReadXmlSchema kullanarak önceden tanımlanmış veya Çıkarsanan xml şemasından **DataTable** nesneleri de oluşturabilirsiniz.ya da **veri kümesinin** **InferXmlSchema** yöntemleri. Bir **veri kümesinin** **Tables** koleksiyonunun bir üyesi olarak bir **DataTable** ekledikten sonra, bunu başka bir **veri kümesinin**tablo koleksiyonuna ekleyemediğini unutmayın.  
   
  İlk olarak bir **DataTable**oluşturduğunuzda, bir şeması (yani bir yapı) yoktur. Tablonun şemasını tanımlamak için, nesneleri oluşturmanız ve tablonun <xref:System.Data.DataColumn> **Columns** koleksiyonuna eklemeniz gerekir. Ayrıca tablo için bir birincil anahtar sütunu tanımlayabilir ve tablonun **kısıtlamalar** koleksiyonuna **kısıtlama** nesneleri oluşturabilir ve ekleyebilirsiniz. Bir **DataTable**şemasını tanımladıktan sonra, tablodaki **satır** koleksiyonuna **DataRow** nesneleri ekleyerek tabloya veri satırları ekleyebilirsiniz.  
   
@@ -57,4 +57,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 - [DataAdapter’dan bir DataSet Doldurma](../populating-a-dataset-from-a-dataadapter.md)
 - [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
 - [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

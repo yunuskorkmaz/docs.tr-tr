@@ -1,81 +1,81 @@
 ---
-title: (LINQ to DataSet) sorgudan DataTable oluşturma
+title: Sorgudan DataTable oluşturma (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 4b95ec5a3e83fa5553a154ed64704312726153cf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504209"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785637"
 ---
-# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>(LINQ to DataSet) sorgudan DataTable oluşturma
-Veri bağlama yaygın olan <xref:System.Data.DataTable> nesne. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi sorgunun sonuçlarını alır ve verileri kopyalayan bir <xref:System.Data.DataTable>, ardından kullanılabileceği için veri bağlama. Ne zaman veri işlemleri gerçekleştirdi, yeni <xref:System.Data.DataTable> kaynağa geri birleştirilmiş <xref:System.Data.DataTable>.  
+# <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Sorgudan DataTable oluşturma (LINQ to DataSet)
+Veri bağlama, <xref:System.Data.DataTable> nesnenin yaygın bir kullanımı. Yöntemi bir sorgunun sonuçlarını alır ve verileri ' a <xref:System.Data.DataTable>kopyalar ve bu da veri bağlama için kullanılabilir. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Veri işlemleri gerçekleştirildiğinde, yeni <xref:System.Data.DataTable> kaynak <xref:System.Data.DataTable>geri birleştirilir.  
   
- <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi oluşturmak için aşağıdaki işlemi kullanır bir <xref:System.Data.DataTable> sorgudan:  
+ Yöntemi bir sorgudan <xref:System.Data.DataTable> oluşturmak için aşağıdaki işlemi kullanır: <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi klonlar bir <xref:System.Data.DataTable> kaynak tablosundan (bir <xref:System.Data.DataTable> uygulayan nesne <xref:System.Linq.IQueryable%601> arabirimi). <xref:System.Collections.IEnumerable> Kaynak genellikle kaynaklanan bir LINQ veri kümesini ifade veya yöntem sorgu.  
+1. Yöntemi kaynak tablodan ( <xref:System.Data.DataTable> arabirimini<xref:System.Linq.IQueryable%601> uygulayan bir <xref:System.Data.DataTable> nesne) bir klonlar. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Kaynak <xref:System.Collections.IEnumerable> , genellikle bir LINQ to DataSet ifadesi veya yöntem sorgusundan kaynaklı.  
   
-2. Kopyalanan şemasını <xref:System.Data.DataTable> ilk sütunlarından yerleşik numaralandırılan <xref:System.Data.DataRow> nesnedir kaynak tablosu ve kopyalanan tablosunun adı "query", eklenmiş şekilde bir sözcükle kaynak tablosunun adı.  
+2. Klonlanmış <xref:System.Data.DataTable> öğesinin şeması, kaynak tablodaki ilk numaralandırılmış <xref:System.Data.DataRow> nesnenin sütunlarından oluşturulur ve kopyalanan tablonun adı, "Query" sözcüğünün eklendiği kaynak tablonun adıdır.  
   
-3. Kaynak tablodaki her satır için içerik satır yeni bir kopyalanır <xref:System.Data.DataRow> sonra kopyalanan tabloya eklenen nesne. <xref:System.Data.DataRow.RowState%2A> Ve <xref:System.Data.DataRow.RowError%2A> özelliklerini kopyalama işlemi korunur. Bir <xref:System.ArgumentException> oluşturulur <xref:System.Data.DataRow> nesnelerdir kaynağındaki farklı tablolardan.  
+3. Kaynak tablodaki her satır için, satırın içeriği yeni <xref:System.Data.DataRow> bir nesneye kopyalanır ve kopyalanan tabloya eklenir. <xref:System.Data.DataRow.RowState%2A> Ve<xref:System.Data.DataRow.RowError%2A> özellikleri kopyalama işlemi boyunca korunur. <xref:System.ArgumentException> Kaynaktaki <xref:System.Data.DataRow> nesneler farklı tablolardan ise oluşturulur.  
   
-4. Kopyalanan <xref:System.Data.DataTable> sonuçta döndürülen <xref:System.Data.DataRow> sorgulanabilir giriş tablosundaki nesneler kopyalanır. Kaynak sırası herhangi içermiyorsa <xref:System.Data.DataRow> nesneler, yöntem boş bir döndürür <xref:System.Data.DataTable>.  
+4. Kopyalanan <xref:System.Data.DataTable> , giriş sorgulanabilir tablosundaki tüm <xref:System.Data.DataRow> nesneler kopyalandıktan sonra döndürülür. Kaynak dizisi herhangi <xref:System.Data.DataRow> bir nesne içermiyorsa, yöntem boş <xref:System.Data.DataTable>döndürür.  
   
- Çağırmanın Not <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi yürütmek için kaynak tabloda bağlı sorgu neden olur.  
+ <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi çağırmanın kaynak tabloya bağlanan sorgunun yürütülmesine neden olacağını unutmayın.  
   
- Zaman <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi, bir null başvuru veya null yapılabilir değer türü kaynak tablosunda bir satıra karşılaştığında, değeri ile değiştirir <xref:System.DBNull.Value>. Bu şekilde, boş değerlerin işlenme düzgün biçimde döndürülen <xref:System.Data.DataTable>.  
+ Yöntem, kaynak tablodaki bir satırda null ya da null değer türü ile karşılaştığında değeri ile <xref:System.DBNull.Value>değiştirir. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Bu şekilde, null değerler döndürülen <xref:System.Data.DataTable>içinde doğru işlenir.  
   
- Not: <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi, birden çok satırlar döndüren bir sorgu girdi olarak kabul <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> nesneleri. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Yöntemi kaynaktan kopyalar veriler ancak özellikleri <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> döndürülen nesnelere <xref:System.Data.DataTable>. Özellikleri döndürülen üzerinde açıkça ayarlamak ihtiyacınız olacak <xref:System.Data.DataTable>, gibi <xref:System.Data.DataTable.Locale%2A> ve <xref:System.Data.DataTable.TableName%2A>.  
+ Not: Yöntemi <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> , birden fazla <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> nesnesinden satırları döndüresağlayan bir sorgu girişi olarak kabul eder. Yöntemi verileri kopyalama, ancak özellikleri kaynak <xref:System.Data.DataTable> veya <xref:System.Data.DataSet> nesnelerden geri döndürülecek <xref:System.Data.DataTable>şekilde değil. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Döndürülen <xref:System.Data.DataTable> ,ve<xref:System.Data.DataTable.TableName%2A>gibiözellikleri açıkça ayarlamanız gerekecektir. <xref:System.Data.DataTable.Locale%2A>  
   
- Aşağıdaki örnek, 8 Ağustos 2001'den sonra siparişleri SalesOrderHeader tabloyu sorgular ve kullandığı <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi oluşturmak için bir <xref:System.Data.DataTable> Bu sorgudan. <xref:System.Data.DataTable> Sonra bağlı bir <xref:System.Windows.Forms.BindingSource>, proxy olarak görev yapan bir <xref:System.Windows.Forms.DataGridView>.  
+ Aşağıdaki örnek, 5 Ağustos 2001 ' den sonraki siparişler için SalesOrderHeader tablosunu sorgular ve bu sorgudan <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> bir <xref:System.Data.DataTable> oluşturmak için yöntemini kullanır. Daha sonra bir için proxy <xref:System.Windows.Forms.DataGridView>görevi <xref:System.Windows.Forms.BindingSource>gören bir öğesine bağlanır. <xref:System.Data.DataTable>  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>Özel CopyToDataTable oluşturma\<T > yöntemi  
- Varolan <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemleri yalnızca çalışan bir <xref:System.Collections.Generic.IEnumerable%601> kaynak yeri genel parametre `T` türünde <xref:System.Data.DataRow>. Bu faydalı olsa da bir dizi skaler türler, anonim türler döndüren sorgular veya tablo birleştirmeler gerçekleştirme sorguları oluşturulacak tablolar izin vermez. İki özel uygulamak nasıl bir örnek için `CopyToDataTable` bir skaler veya anonim türü dizisinden bir tablo yükleme yöntemlerini [nasıl yapılır: CopyToDataTable uygulamak\<T > Burada T genel türünün DataRow olmadığı](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)s.  
+## <a name="creating-a-custom-copytodatatablet-method"></a>Özel bir CopyToDataTable\<T > yöntemi oluşturma  
+ Mevcut <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemler yalnızca genel parametrenin <xref:System.Collections.Generic.IEnumerable%601> `T` türü<xref:System.Data.DataRow>olan bir kaynak üzerinde çalışır. Bu faydalı olsa da, tabloların, anonim türler döndüren sorgulardan veya tablo birleştirmelerini gerçekleştiren sorgulardan bir skalar türler dizisinden oluşturulmasını izin vermez. Skalar veya anonim türler dizisinden bir tablo yükleyen iki `CopyToDataTable` özel yöntemin nasıl uygulanacağı hakkında bir örnek için bkz [. nasıl yapılır: Genel tür t 'in\<bir DataRow](implement-copytodatatable-where-type-not-a-datarow.md)olmadığından CopyToDataTable T > uygulayın.  
   
- Bu bölümdeki örneklerde, aşağıdaki özel türlerini kullanır:  
+ Bu bölümdeki örneklerde aşağıdaki özel türler kullanılır:  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#itemclass)]
  [!code-vb[DP Custom CopyToDataTable Examples#ItemClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#itemclass)]  
   
 ### <a name="example"></a>Örnek  
- Bu örnek üzerinde birleştirme gerçekleştirir `SalesOrderHeader` ve `SalesOrderDetail` çevrimiçi siparişler Ağustos ay almak için tablolar ve sorgudan bir tablo oluşturur.  
+ Bu örnek, Ağustos ayında çevrimiçi siparişleri `SalesOrderHeader` almak `SalesOrderDetail` ve sorgudan bir tablo oluştururken, ve tabloları üzerinde bir JOIN gerçekleştirir.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#join)]
  [!code-vb[DP Custom CopyToDataTable Examples#Join](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#join)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir koleksiyon için fiyat $9.99 büyük öğelerin sorgular ve öğesinden gelen soru sonuçları bir tablo oluşturur.  
+ Aşağıdaki örnek, $9,99 'den büyük bir fiyat öğeleri için bir koleksiyonu sorgular ve sorgu sonuçlarından bir tablo oluşturur.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintotable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintotable)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, fiyat 9,99 büyük öğelerinin bir koleksiyonu sorgular ve sonuçları projeleri. Anonim türdeki döndürülen dizinin var olan bir tabloya yüklenir.  
+ Aşağıdaki örnek, bir koleksiyonu 9,99 ' den büyük bir fiyat öğeleri için sorgular ve sonuçları projeler için sorgular. Döndürülen anonim türler dizisi varolan bir tabloya yüklenir.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsintoexistingtable)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsIntoExistingTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsintoexistingtable)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir koleksiyon öğelerinin fiyat $9.99 büyük sorgular ve sonuçları projeleri. Anonim türdeki döndürülen dizinin var olan bir tabloya yüklenir. Tablo şemasını olduğundan otomatik olarak genişletildiğinden `Book` ve `Movies` sınıfından türetilen türler `Item` türü.  
+ Aşağıdaki örnek, bir koleksiyonu $9,99 ' den büyük bir fiyat öğeleri için sorgular ve sonuçları projeler için sorgular. Döndürülen anonim türler dizisi varolan bir tabloya yüklenir. `Book` Ve`Movies` türleri türündentüretildiğindentabloşemasıotomatikolarakgenişletilir.`Item`  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loaditemsexpandschema)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadItemsExpandSchema](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loaditemsexpandschema)]  
   
 ### <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir koleksiyon için fiyat $9.99 büyük öğelerin sorgular ve bir dizisini döndürür <xref:System.Double>, yeni bir tabloya yüklendi.  
+ Aşağıdaki örnek, bir koleksiyonu $9,99 ' den büyük olan öğeler için sorgular ve yeni bir tabloya yüklenen <xref:System.Double>bir dizisini döndürür.  
   
  [!code-csharp[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#loadscalarsequence)]
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Programlama Kılavuzu](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
-- [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [Programlama Kılavuzu](programming-guide-linq-to-dataset.md)
+- [Genel Alan ve SetField Yöntemleri](generic-field-and-setfield-methods-linq-to-dataset.md)
+- [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)

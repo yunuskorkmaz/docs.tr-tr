@@ -2,27 +2,27 @@
 title: Hizmet işlemi süresini belirleme
 ms.date: 03/30/2017
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-ms.openlocfilehash: fd7dec5784f50a0613b574822a31202a859b34c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9bc38f40b22eca8278905440ee69af9f38b81a0d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798118"
 ---
 # <a name="determining-service-operation-duration"></a>Hizmet işlemi süresini belirleme
-Bir Windows Communication Foundation (WCF) uygulamasında çözümleme izleme etkinleştirilirse, bir hizmet işlemi için yürütme süresini olay günlüğünü inceleyerek kolayca belirlenebilir.  Bu konuda, bir hizmet işlemi tamamlamak için gereken süreyi belirlemek nasıl gösterir.  
+Analitik izleme bir Windows Communication Foundation (WCF) uygulamasında etkinleştirilmişse, bir hizmet işlemi için yürütme süresi, olay günlüğü incelenerek kolayca belirlenebilir.  Bu konuda, bir hizmet işleminin tamamlanma süresini belirleme işlemi gösterilmektedir.  
   
 ### <a name="determining-service-operation-execution-duration"></a>Hizmet işlemi yürütme süresini belirleme  
   
-1. Olay Görüntüleyicisi'ni tıklatarak açın **Başlat**, **çalıştırma**, girerek `eventvwr.exe`.  
+1. **Başlat**, **çalıştır**ve girerek `eventvwr.exe`Olay Görüntüleyicisi açın.  
   
-2. Çözümleme izleme etkinleştirmediyseniz genişletin **uygulama ve hizmet günlükleri**, **Microsoft**, **Windows**, **uygulama sunucu uygulamaları** . Seçin **görünümü**, **Göster Analitik ve hata ayıklama günlüklerini**. Sağ **analitik** seçip **günlüğü etkinleştir**. Hizmet işlemi çalıştırıldıktan sonra izlemeleri görüntülenebilir, böylece Olay Görüntüleyicisi'ni açık bırakın.  
+2. Analitik izlemeyi etkinleştirmediyseniz, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' ı genişletin. **Görünüm**, **analitik ve hata ayıklama günlüklerini göster**' i seçin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin. İzlemelerin, hizmet işlemi çalıştırıldıktan sonra görüntülenebilmesi için Olay Görüntüleyicisi açık bırakın.  
   
-3. Ardından, bir hizmet projesi ve hizmetle etkileşime giren istemci projesi içeren bir WCF uygulamasını açın.  İzleyerek bu tür bir uygulama oluşturabilirsiniz [başlangıç Öğreticisi](../../../../../docs/framework/wcf/getting-started-tutorial.md).  Yüklü WCF örnekleri varsa açabileceğiniz [Başlarken](../../../../../docs/framework/wcf/samples/getting-started-sample.md), öğreticide oluşturulan projeyi içerir.  
+3. Ardından, bir hizmet projesi ve bu hizmetle etkileşime sahip bir istemci projesi içeren bir WCF uygulaması açın.  [Kullanmaya başlama öğreticisini](../../getting-started-tutorial.md)izleyerek böyle bir uygulama oluşturabilirsiniz.  WCF örnekleri yüklüyse, öğreticide oluşturulan tamamlanmış projeyi içeren [Başlarken](../../samples/getting-started-sample.md)' i açabilirsiniz.  
   
-4. Sunucu uygulaması tuşlarına basarak yürütme **F5**. İstemci uygulamayı sağ tıklayarak yürütme **istemci** proje ve seçerek **hata ayıklama**, **yeni örnek Başlat**.  
+4. **F5**tuşuna basarak sunucu uygulamasını yürütün. İstemci uygulamasını, **istemci** projesine sağ tıklayıp **Hata Ayıkla**, **Yeni örnek Başlat**' ı seçerek yürütün.  
   
-5. Olay Görüntüleyicisi ' nde, analitik günlüğü yenileyin ve olayları olay kimliğine göre sırala  Olay Kimliği ile olayları arayın [214 - OperationCompleted](../../../../../docs/framework/wcf/diagnostics/etw/214-operationcompleted.md).  Bu olaylar, hangi işlemleri tamamladıktan ve işlem süresince neydi gösterilir.  Aşağıdaki olay süresi bir ekleme işlemi gösterilmektedir.  
+5. Olay Görüntüleyicisi, analitik günlüğünü yenileyin ve olayları olay KIMLIĞINE göre sıralayın.  Olay KIMLIĞI 214 olan olayları ara [-OperationCompleted](214-operationcompleted.md).  Bu olaylar hangi işlemlerin tamamlandığını ve işlemin süresini gösterir.  Aşağıdaki olay bir ekleme işleminin süresini gösterir.  
   
     ```Output  
     An OperationInvoker completed the call to the 'Add' method.  The method call duration was '3' ms.  

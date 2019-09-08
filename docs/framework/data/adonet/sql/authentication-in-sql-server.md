@@ -2,12 +2,12 @@
 title: SQL Server’da Kimlik Doğrulaması
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 1723552a48ebfa41e8d6a0f963154fc3b864119d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957488"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794286"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server’da Kimlik Doğrulaması
 SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik doğrulama modunu destekler.  
@@ -69,7 +69,7 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
  SQL Server, [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] veya sonraki sürümlerde çalışırken SQL Server oturum açma işlemleri için Windows parola ilkesi mekanizmaları sağlar. Parola karmaşıklığı ilkeleri, olası parola sayısını artırarak deneme yanılma saldırılarını ortadan kaldırır. SQL Server, ' de [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] kullanılan karmaşıklık ve süre sonu ilkelerini SQL Server içinde kullanılan parolalara uygulayabilir.  
   
 > [!IMPORTANT]
-> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için öğesini kullanın. <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Bağlantı dizelerini Kullanıcı girişinden bitiştirme, bağlantı dizesi ekleme saldırısına karşı savunmasız bırakabilir. Çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturmak için öğesini kullanın. <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
@@ -80,8 +80,8 @@ SQL Server, Windows kimlik doğrulama modu ve karma mod olmak üzere iki kimlik 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [Veri Kaynağına Bağlanma](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Bağlantı Dizeleri](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [Veri Kaynağına Bağlanma](../connecting-to-a-data-source.md)
+- [Bağlantı Dizeleri](../connection-strings.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 0b2bfd1b0490572e78c8ce365491a8d48db87684
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3e811410ea9fdd4be0cbd84b895483f69f58b0d0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786047"
 ---
 # <a name="modifying-dataviews"></a>DataView Değiştirme
 Temel tablodaki veri satırlarını <xref:System.Data.DataView> eklemek, silmek veya değiştirmek için öğesini kullanabilirsiniz. Temel tablodaki verileri değiştirmek için **DataView** kullanma özelliği, **DataView**'ın üç Boole özelliğinden biri ayarlanarak denetlenir. Bu özellikler, <xref:System.Data.DataView.AllowNew%2A> <xref:System.Data.DataView.AllowEdit%2A> ve<xref:System.Data.DataView.AllowDelete%2A>' dir. Varsayılan olarak **true** olarak ayarlanmıştır.  
@@ -21,7 +21,7 @@ Temel tablodaki veri satırlarını <xref:System.Data.DataView> eklemek, silmek 
   
  Varolan bir **DataRowView** düzenlenirken, temel alınan **DataTable** olayları, önerilen değişikliklerle yine de oluşturulur. Temel alınan **DataRow**üzerinde **EndEdit** veya **CancelEdit** çağırırsanız, bekleyen değişikliklerin, **DataRowView**üzerinde **EndEdit** veya **CancelEdit** çağrılıp çağrılmadığına bakılmaksızın uygulanacağını veya iptal edildiğini unutmayın.  
   
- **AllowDelete** **true**ise DataView veya **DataRowView** nesnesinin **Delete** yöntemini kullanarak **DataView** nesnesinden satırları silebilirsiniz ve satırlar temeldeki **DataTable**'dan silinir. Daha sonra, sırasıyla **AcceptChanges** veya **RejectChanges** kullanarak silmeleri kaydedebilir veya reddedebilirsiniz. **AllowDelete** **false**Ise, **DataView** veya **DataRowView**'ın **Delete** yöntemini çağırdığınızda bir özel durum oluşturulur.  
+ **AllowDelete** **true**ise **DataView veya** **DataRowView** nesnesinin **Delete** yöntemini kullanarak **DataView** nesnesinden satırları silebilirsiniz ve satırlar temeldeki **DataTable**'dan silinir. Daha sonra, sırasıyla **AcceptChanges** veya **RejectChanges** kullanarak silmeleri kaydedebilir veya reddedebilirsiniz. **AllowDelete** **false**Ise, **DataView** veya **DataRowView**'ın **Delete** yöntemini çağırdığınızda bir özel durum oluşturulur.  
   
  Aşağıdaki kod örneği, satırları silmek için **DataView** kullanımını devre dışı bırakır ve **DataView**kullanarak temel tabloya yeni bir satır ekler.  
   
@@ -57,4 +57,4 @@ newDRV.EndEdit();
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataViews](dataviews.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

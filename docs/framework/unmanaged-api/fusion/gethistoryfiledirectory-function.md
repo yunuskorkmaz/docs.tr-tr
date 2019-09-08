@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778659"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796855"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory İşlevi
 Uygulama geçmişi dizininin yolunu alır.  
@@ -37,33 +37,33 @@ HRESULT GetHistoryFileDirectory (
   
 ## <a name="parameters"></a>Parametreler  
  `wzDir`  
- [out] Yol uygulama geçmiş dizinine tutan bir arabellek.  
+ dışı Uygulama geçmişi dizininin yolunu tutan bir arabellek.  
   
  `pdwSize`  
- [out içinde] Arabellek uzunluğu.  
+ [in, out] Arabelleğin uzunluğu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki değerlere ek olarak Wınerror dosyasında tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki değerlere ek olarak WinError. h dosyasında tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
 |S_OK|Yöntem başarıyla tamamlandı.|  
-|E_INVALIDARG|`wzDir` veya `pdwSize` null ya da sürüm dizesi yanlış.|  
+|E_INVALIDARG|`wzDir`ya `pdwSize` da null ya da sürüm dizesi yanlış.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Başarıyla tamamlandığında, `pdwSize` bağımsız değişkeni yol dizesini uzunluğunu ayarlayın.  
+ Başarıyla tamamlandığında `pdwSize` bağımsız değişkeni yol dizesinin uzunluğuna ayarlanır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Fusion.dll ve kullanımda olan mscorwks.dll'ye. Fusion.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.  
+ **Kitaplığı** Fusion. dll ve mscorwks. dll. .NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine Fusion. dll kullanın.  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CreateHistoryReader İşlevi](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache İşlevi](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [CreateHistoryReader İşlevi](createhistoryreader-function.md)
+- [NukeDownloadedCache İşlevi](nukedownloadedcache-function.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

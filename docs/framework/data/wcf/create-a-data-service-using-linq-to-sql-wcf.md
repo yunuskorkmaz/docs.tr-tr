@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: LINQ to SQL veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma'
+title: 'Nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,72 +8,72 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 582b2ad779fa69e5f0ec6d985b183ec0e768d5d1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7a1075b680ec3310e1bd8d712579872333c6ebed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633537"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791057"
 ---
-# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Nasıl yapılır: LINQ to SQL veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma
+# <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)
 
-WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Yansıma sağlayıcısı döndüren üyeleri ortaya koyar herhangi bir sınıfın alan bir veri modeli tanımlamanızı sağlayan bir <xref:System.Linq.IQueryable%601> uygulaması. Veri kaynağındaki güncelleştirmeler yapmak için bu sınıflar da uygulamalıdır <xref:System.Data.Services.IUpdatable> arabirimi. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md). Bu konu LINQ to SQL sınıfları, yansıma sağlayıcısını kullanarak Northwind örnek veritabanına erişim oluşturma yanı sıra, bu veri sınıflara göre veri hizmeti oluşturulacağını gösterir.
+WCF Veri Hizmetleri, veri hizmeti olarak varlık verilerini gösterir. Yansıma sağlayıcısı, bir <xref:System.Linq.IQueryable%601> uygulamayı döndüren üyeleri sunan herhangi bir sınıfa dayalı bir veri modeli tanımlamanızı sağlar. Veri kaynağındaki verilerde güncelleştirme yapabilmek için, bu sınıfların de <xref:System.Data.Services.IUpdatable> arabirimini uygulaması gerekir. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md). Bu konu başlığı altında, yansıma sağlayıcısını kullanarak Northwind örnek veritabanına erişen LINQ to SQL sınıfları oluşturma ve bu veri sınıflarını temel alan veri hizmetini oluşturma işlemi gösterilmektedir.
 
-## <a name="to-add-linq-to-sql-classes-to-a-project"></a>LINQ to SQL sınıfları bir projeye eklemek için
+## <a name="to-add-linq-to-sql-classes-to-a-project"></a>Bir projeye LINQ to SQL sınıfları eklemek için
 
-1. Gelen bir Visual Basic veya C# uygulamasından üzerinde **proje** menüsünde tıklatın **Ekle** > **yeni öğe**.
+1. C# Visual Basic veya uygulamanın içinden, **Proje** menüsünde**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. Tıklayın **LINQ to SQL sınıfları** şablonu.
+2. **LINQ to SQL sınıfları** şablonuna tıklayın.
 
-3. Adla değiştirin **Northwind.dbml**.
+3. Adı **Northwind. dbml**olarak değiştirin.
 
 4. **Ekle**'yi tıklatın.
 
-     Northwind.dbml dosyası projenize eklenir ve Object Relational Designer (O/R Tasarımcısı) açar.
+     Northwind. dbml dosyası projeye eklenir ve Nesne İlişkisel Tasarımcısı (O/R Designer) açılır.
 
-5. İçinde **sunucu**/**veritabanı Gezgini**, Northwind altında genişletin **tabloları** sürükleyin `Customers` Object Relational Designer (O/R üzerine tablo Tasarımcı).
+5. `Customers` **Sunucu**/**veritabanı Gezgini**' de, Northwind altında **Tablolar** ' ı genişletin ve tabloyu nesne ilişkisel Tasarımcısı (O/R Designer) üzerine sürükleyin.
 
-     A `Customer` varlık sınıfı oluşturulur ve tasarım yüzeyinde görünür.
+     Bir `Customer` varlık sınıfı oluşturulur ve tasarım yüzeyinde görüntülenir.
 
-6. Yineleme adım 6 için `Orders`, `Order_Details`, ve `Products` tablolar.
+6. `Orders` ,`Order_Details`Ve tabloları`Products` için 6. adımı yineleyin.
 
-7. LINQ SQL sınıfları ve seçeneğini temsil eden yeni bir .dbml dosyası sağ **kodu görüntüle**.
+7. LINQ to SQL sınıfları temsil eden New. dbml dosyasına sağ tıklayın ve **kodu görüntüle**' ye tıklayın.
 
-     Bu devralınan sınıf için bir parçalı sınıf tanımını içeren Northwind.cs adlı yeni bir arka plan kod sayfası oluşturur <xref:System.Data.Linq.DataContext> bu durumda olan sınıf `NorthwindDataContext`.
+     Bu, bu örnekte olduğu <xref:System.Data.Linq.DataContext> `NorthwindDataContext`sınıfından devralan sınıf için kısmi bir sınıf tanımı içeren Northwind.cs adlı yeni bir arka plan kod sayfası oluşturur.
 
-8. Northwind.cs kod dosyasının içeriğini aşağıdaki kodla değiştirin. Bu kod genişleterek yansıma sağlayıcısı uygulayan <xref:System.Data.Linq.DataContext> ve LINQ to SQL tarafından oluşturulan veri sınıfları:
+8. Northwind.cs kod dosyasının içeriğini aşağıdaki kodla değiştirin. Bu kod, <xref:System.Data.Linq.DataContext> LINQ to SQL tarafından oluşturulan ve veri sınıflarını genişleterek yansıma sağlayıcısını uygular:
 
      [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.cs#linq2sqlprovider)]
      [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.vb#linq2sqlprovider)]
 
-### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>Bir LINQ to SQL tabanlı veri modelini kullanarak bir veri hizmeti oluşturmak için
+### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>LINQ to SQL tabanlı bir veri modeli kullanarak veri hizmeti oluşturmak için
 
-1. İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti** şablondan **Web** kategorisi.
+2. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisinden **WCF veri hizmeti** şablonunu seçin.
 
-   ![Visual Studio 2015'te WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.
+   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.
 
-3. Hizmet için bir ad sağlayın ve ardından **Tamam**.
+3. Hizmet için bir ad sağlayın ve ardından **Tamam**' a tıklayın.
 
-     Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur. Varsayılan olarak, kod düzenleyicisi penceresi açılır.
+     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır.
 
-4. Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindDataContext`.
+4. Veri Hizmeti kodunda, veri hizmetini tanımlayan sınıfın tanımındaki, bu `/* TODO: put your data source class name here */` örnekte olduğu `NorthwindDataContext`gibi veri modelinin varlık kapsayıcısı olan türde olan açıklamayı değiştirin.
 
-5. Veri Hizmeti için kodda yer tutucusunu değiştirin `InitializeService` işlevi aşağıdaki:
+5. Veri Hizmeti kodunda, `InitializeService` işlevdeki yer tutucu kodunu aşağıdaki gibi değiştirin:
 
      [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.svc.cs#enableaccess)]
      [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.svc.vb#enableaccess)]
 
-     Bu üç belirtilen varlık kümesi için kaynaklara erişmeye yetkili istemcilere sağlar.
+     Bu, yetkili istemcilerin belirtilen üç varlık kümesi için kaynaklara erişmesini sağlar.
 
-6. Bir Web tarayıcısı kullanarak Northwind.svc veri hizmeti test etmek için konusundaki yönergeleri izleyin. [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
+6. Northwind. svc veri hizmetini bir Web tarayıcısı kullanarak test etmek için [bir Web tarayıcısından hizmete erişme](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)konusundaki yönergeleri izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)
-- [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+- [Nasıl yapılır: Bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma](create-a-data-service-using-an-adonet-ef-data-wcf.md)
+- [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](create-a-data-service-using-rp-wcf-data-services.md)
+- [Veri Hizmetleri Sağlayıcıları](data-services-providers-wcf-data-services.md)

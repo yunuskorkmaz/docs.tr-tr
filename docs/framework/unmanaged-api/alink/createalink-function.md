@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 993848711f41c9e03b969a3c611982a5c8bc860d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742210"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787624"
 ---
 # <a name="createalink-function"></a>CreateALink İşlevi
-Assembly Linker örneği oluşturur ve belirtilen arabirim için bir işaretçi ayarlar.  
+Derleme bağlayıcının bir örneğini oluşturur ve belirtilen arabirime bir işaretçi ayarlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,12 +40,12 @@ HRESULT CreateALink (
   
 |Parametre|Açıklama|  
 |---------------|-----------------|  
-|`riid`|Assembly Linker arabirimlerinden birini fiziksel adı.|  
-|`ppInterface`|Başarıyla tamamlandığında bir işaretçi içeren konuma `riid` arabirimi.|  
+|`riid`|Bütünleştirilmiş kod bağlayıcı arabirimlerinden birinin fiziksel adı.|  
+|`ppInterface`|Başarılı tamamlamadaki konum, `riid` arabirime yönelik bir işaretçi içerir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Kitaplık**: alink.dll  
+ **Kitaplık**: ALink. dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)

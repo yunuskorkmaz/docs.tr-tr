@@ -8,48 +8,48 @@ helpviewer_keywords:
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c76db644ffee478003d834460c155c4ec6d0070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b91f2a749557f94a68f1929d649824719160d9ee
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944618"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786959"
 ---
 # <a name="constants-unmanaged-api-reference"></a>Sabitler (Yönetilmeyen API Başvurusu)
-Bu konuda, dil türü, dil satıcı ve CorSym.idl içinde tanımlanan belge türü sabitleri açıklanmaktadır.  
+Bu konuda, CorSym. IDL içinde tanımlanan dil türü, dil satıcısı ve belge türü sabitleri açıklanmaktadır.  
   
 ## <a name="language-type-constants"></a>Dil türü sabitleri  
- Aşağıdaki tablo, dil programlama dilleri tanımlayan GUID'leri temsil eden türü sabitleri gösterir.  
+ Aşağıdaki tabloda, programlama dillerini tanımlayan GUID 'Leri temsil eden dil türü sabitleri gösterilmektedir.  
   
 |Sembol|Açıklama|  
 |------------|-----------------|  
-|CorSym_LanguageType_C|C dili belirtir.|  
-|CorSym_LanguageType_CPlusPlus|C++ dili belirtir.|  
-|CorSym_LanguageType_CSharp|Gösterir C# dili.|  
-|CorSym_LanguageType_Basic|Temel dil gösterir.|  
-|CorSym_LanguageType_Java|Java dil gösterir.|  
-|CorSym_LanguageType_Cobol|COBOL dili gösterir.|  
-|CorSym_LanguageType_Pascal|Pascal dili gösterir.|  
-|CorSym_LanguageType_ILAssembly|Microsoft Ara dili (MSIL) derleme kodu gösterir.|  
-|CorSym_LanguageType_JScript|JScript dili belirtir.|  
-|CorSym_LanguageType_SMC|SMS dili gösterir.|  
-|CorSym_LanguageType_MCPlusPlus|.NET Framework için etkin C++ dili belirtir.|  
+|CorSym_LanguageType_C|C dilini gösterir.|  
+|CorSym_LanguageType_CPlusPlus|C++ Dili gösterir.|  
+|CorSym_LanguageType_CSharp|C# Dili gösterir.|  
+|CorSym_LanguageType_Basic|Temel dili gösterir.|  
+|CorSym_LanguageType_Java|Java dilini gösterir.|  
+|CorSym_LanguageType_Cobol|COBOL dilini gösterir.|  
+|CorSym_LanguageType_Pascal|Pascal dilini gösterir.|  
+|CorSym_LanguageType_ILAssembly|Microsoft ara dili (MSIL) derleme kodunu gösterir.|  
+|CorSym_LanguageType_JScript|JScript dilini gösterir.|  
+|CorSym_LanguageType_SMC|SMC dilini gösterir.|  
+|CorSym_LanguageType_MCPlusPlus|.NET Framework için C++ etkin dili gösterir.|  
   
-## <a name="language-vendor-constants"></a>Dil satıcı sabitleri  
- Aşağıdaki tabloda, dil, programlama dili satıcıları tanımlayan GUID'leri temsil eden satıcıya sabitleri gösterir.  
+## <a name="language-vendor-constants"></a>Dil satıcısı sabitleri  
+ Aşağıdaki tabloda, programlama dili satıcılarını tanımlayan GUID 'Leri temsil eden dil satıcısı sabitleri gösterilmektedir.  
   
 |Sembol|Açıklama|  
 |------------|-----------------|  
-|CorSym_LanguageVendor_Microsoft|Microsoft gösterir.|  
+|CorSym_LanguageVendor_Microsoft|Microsoft 'ı gösterir.|  
   
 ## <a name="document-type-constants"></a>Belge türü sabitleri  
- Aşağıdaki tabloda, belge türlerini tanımlayan GUID'leri temsil eden türü sabitleri belge gösterir.  
+ Aşağıdaki tabloda, belge türlerini tanımlayan GUID 'Leri temsil eden belge türü sabitleri gösterilmektedir.  
   
 |Sembol|Açıklama|  
 |------------|-----------------|  
-|CorSym_DocumentType_Text|Bir metin belgesini belirtir.|  
-|CorSym_DocumentType_MC|Metin olmayan belge gösterir.|  
+|CorSym_DocumentType_Text|Bir metin belgesini gösterir.|  
+|CorSym_DocumentType_MC|Metin olmayan bir belgeyi gösterir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen API Başvurusu](../../../docs/framework/unmanaged-api/index.md)
+- [Yönetilmeyen API Başvurusu](index.md)

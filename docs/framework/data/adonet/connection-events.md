@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: 8ed62d0193639b434d66c446e3b9d0c184577a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949556"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785739"
 ---
 # <a name="connection-events"></a>Bağlantı Olayları
 .NET Framework veri sağlayıcılarının tümünde, bir veri kaynağından bilgilendirici iletileri almak veya bir **bağlantının** durumunun değişip değişmediğini öğrenmek için kullanabileceğiniz iki olayla birlikte **bağlantı** nesneleri vardır. Aşağıdaki tabloda **bağlantı** nesnesinin olayları açıklanmaktadır.  
@@ -107,5 +107,5 @@ protected static void OnStateChange(object sender,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

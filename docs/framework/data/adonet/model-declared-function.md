@@ -2,12 +2,12 @@
 title: model-declared function
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 73e716f1c42dfbbb91dc6456212de2a331d7c4ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb2fca52604bd57f25469f5621c292a27638c76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943923"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794803"
 ---
 # <a name="model-declared-function"></a>model-declared function
 Model olarak tanımlanmış bir *işlev* , kavramsal modelde belirtilen ancak bu kavramsal modelde tanımlı olmayan bir işlevdir. İşlev barındırma veya depolama ortamında tanımlanmış olabilir. Örneğin, model tarafından tanımlanan bir işlev, veritabanında tanımlanmış bir işlevle eşleştirilebilir ve bu nedenle kavramsal modelde sunucu tarafı işlevselliği ortaya çıkabilir.  
@@ -30,5 +30,5 @@ Model olarak tanımlanmış bir *işlev* , kavramsal modelde belirtilen ancak bu
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](entity-data-model.md)

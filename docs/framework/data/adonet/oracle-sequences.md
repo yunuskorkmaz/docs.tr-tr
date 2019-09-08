@@ -2,30 +2,30 @@
 title: Oracle Dizileri
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 4ba7b750d48613b80eca0ef3c7c2da127977498d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 772aeda94215ccc8e1eff0e1145ed0399791197d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632337"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794592"
 ---
 # <a name="oracle-sequences"></a>Oracle Dizileri
-Oracle için .NET Framework veri sağlayıcısı kullanarak ekler gerçekleştirdikten sonra anahtar Oracle sırası sunucu tarafından oluşturulan değerleri almak için destek sağlar. <xref:System.Data.OracleClient.OracleDataAdapter>.  
+Oracle için .NET Framework Veri Sağlayıcısı, kullanarak ekleme gerçekleştirildikten sonra, <xref:System.Data.OracleClient.OracleDataAdapter>sunucu tarafından oluşturulan anahtar Oracle dizi değerlerinin alınması için destek sağlar.  
   
- SQL Server ve Oracle, birincil anahtar olarak belirlenebilir sütunları otomatik olarak artırma oluşturmayı destekler. Tabloya satır eklendikçe bu değerler sunucu tarafından oluşturulur. SQL Server'da, bir sütunun kimlik özelliği ayarlayın; Oracle bir dizi oluşturun. Otomatik artış sütunları SQL Server ve Oracle dizileri arasındaki fark olmasıdır:  
+ SQL Server ve Oracle, birincil anahtar olarak belirlenebilir sütunları otomatik olarak arttırın oluşturulmasını destekler. Bu değerler, bir tabloya satırlar eklendikçe sunucu tarafından oluşturulur. SQL Server, bir sütunun Identity özelliğini ayarlarsınız; Oracle 'da bir sıra oluşturursunuz. Oracle 'daki SQL Server ve diziler içindeki otomatik artırma sütunları arasındaki fark şudur:  
   
-- SQL Server'daki sütun otomatik artış sütunu olarak işaretlemek ve yeni bir satır ekleyin, SQL Server otomatik olarak yeni sütun değerlerini oluşturur.  
+- SQL Server, bir sütunu otomatik artış sütunu olarak işaretlersiniz ve yeni bir satır eklediğinizde SQL Server otomatik olarak sütun için yeni değerler oluşturur.  
   
-- Oracle, tablonuzda bir sütun için yeni değerler oluşturmak için bir sıra oluşturmak, ancak sıra ve tablo veya sütun arasında doğrudan bağlantı yoktur. Oracle dizisi, bir tablo veya saklı yordam gibi bir nesnedir.  
+- Oracle 'da, tablonuzdaki bir sütun için yeni değerler oluşturmak üzere bir dizi oluşturur, ancak sıra ile tablo veya sütun arasında doğrudan bir bağlantı yoktur. Oracle dizisi, tablo veya saklı yordam gibi bir nesnedir.  
   
- Bir Oracle veritabanında bir dizi oluşturduğunuzda, bunun başlangıçtaki değerini ve Artım değerleri arasında tanımlayabilirsiniz. Ayrıca, yeni satırları göndermeden önce yeni değerler dizisi sorgulayabilirsiniz. Veritabanına eklemeden önce anahtar değerlerinin yeni satırlar için kodunuzu tanıyabilmesi anlamına gelir.  
+ Oracle veritabanında bir dizi oluşturduğunuzda, başlangıç değerini ve değerleri arasındaki artışı tanımlayabilirsiniz. Yeni satırları göndermeden önce yeni değerler için de sırayı sorgulayabilirsiniz. Bu, kodunuzun veritabanına eklemeden önce yeni satırlar için anahtar değerlerini tanıyabileceği anlamına gelir.  
   
- SQL Server ve ADO.NET kullanarak otomatik artış sütunları oluşturma hakkında daha fazla bilgi için bkz. [alınırken kimlik veya otomatik sayı değerlerini](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) ve [AutoIncrement sütunları oluşturma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ SQL Server ve ADO.NET kullanarak otomatik artış sütunları oluşturma hakkında daha fazla bilgi için bkz. [kimlik veya OtomatikSayı değerlerini alma](retrieving-identity-or-autonumber-values.md) ve [AutoIncrement sütunları oluşturma](./dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki C# örneği, nasıl Oracle veritabanından yeni dizisi değerleri alabilir gösterir. Örneğin, yeni satırlar göndermek için kullanılan INSERT INTO sorgusunu sırayla başvuruyor ve Oracle10g içinde tanıtılan DÖNDÜRME yan tümcesi kullanılarak oluşturulan dizisi değeri döndürür. Örnek, bir dizi yeni satırlarda bekleyen ekler. bir <xref:System.Data.DataTable> ADO kullanarak. NET otomatik artış işlevi "yer tutucusunu" birincil anahtar değerlerini oluşturur. ADO.NET için yeni satır oluşturulan değeri Artır "yer tutucusu" olduğuna dikkat edin. Bu, veritabanının ADO.NET oluşturur olanlardan farklı değerler üretebilir anlamına gelir.  
+ Aşağıdaki C# örnekte, Oracle veritabanından nasıl yeni dizi değerleri alabileceğiniz gösterilmektedir. Örnek, yeni satırları göndermek için kullanılan INSERT INTO sorgusunda bulunan diziye başvurur ve sonra Oracle10g içinde tanıtılan döndürme yan tümcesi kullanılarak oluşturulan dizi değerini döndürür. Örnek, ADO kullanarak bir <xref:System.Data.DataTable> dizi bekleyen yeni satır ekler. "Yer tutucu" birincil anahtar değerleri oluşturmak için NET 'in otomatik artış işlevselliği. Yeni satır için ADO.NET artış değeri yalnızca bir "PlaceHolder" olduğunu unutmayın. Bu, veritabanının ADO.NET tarafından oluşturulanlarından farklı değerler üretebileceği anlamına gelir.  
   
- Bekleyen eklemeleri veritabanına göndermeden önce örnek satırlar içeriğini görüntüler. Ardından, yeni bir kod oluşturur <xref:System.Data.OracleClient.OracleDataAdapter> nesne ve ayarlar, <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> ve <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> özellikleri. Örnek Çıktı parametreleri kullanarak sunucu tarafından oluşturulan değerleri döndürülme mantığının de sağlar. Örnek daha sonra bekleyen satırları göndermek için güncelleştirme yürütür ve içeriğini görüntüler <xref:System.Data.DataTable>.  
+ Bekleyen eklemeleri veritabanına göndermeden önce, örnek satırların içeriğini görüntüler. Ardından, kod yeni <xref:System.Data.OracleClient.OracleDataAdapter> bir nesne oluşturur ve <xref:System.Data.OracleClient.OracleDataAdapter.InsertCommand%2A> ve <xref:System.Data.OracleClient.OracleDataAdapter.UpdateBatchSize%2A> özelliklerini ayarlar. Örnek ayrıca çıkış parametrelerini kullanarak sunucu tarafından oluşturulan değerleri döndürme mantığını sağlar. Daha sonra örnek, bekleyen satırları göndermek için güncelleştirmeyi yürütür ve içeriğini <xref:System.Data.DataTable>görüntüler.  
   
 ```csharp  
 public void OracleSequence(String connectionString)  
@@ -100,5 +100,5 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle ve ADO.NET](oracle-and-adonet.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -2,34 +2,34 @@
 title: entity container
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 58642c6cc794f931387ac7a76dd64d368957f14b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 95740fb9d8b357a4fa160af6fdafb139711283cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586957"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795249"
 ---
 # <a name="entity-container"></a>entity container
-Bir *varlık kapsayıcısı* mantıksal bir gruplandırmasıdır [varlık kümeleri](../../../../docs/framework/data/adonet/entity-set.md), [ilişki Setleri](../../../../docs/framework/data/adonet/association-set.md), ve [işlev içeri aktarmalar](../../../../docs/framework/data/adonet/model-declared-function.md).  
+Bir *varlık kapsayıcısı* , [varlık kümelerinin](entity-set.md), [ilişkilendirme kümelerinin](association-set.md)ve [işlev içeri aktarmalarının](model-declared-function.md)mantıksal gruplandırmasıdır.  
   
- Aşağıdaki kavramsal modelde tanımlı bir varlık kapsayıcısının true olması gerekir:  
+ Aşağıdaki bir kavramsal modelde tanımlanan bir varlık kapsayıcısının doğru olması gerekir:  
   
-- En az bir varlık kapsayıcısı her kavramsal modelde tanımlanması gerekir.  
+- Her kavramsal modelde en az bir varlık kapsayıcısının tanımlanması gerekir.  
   
 - Varlık kapsayıcısının her kavramsal model içinde benzersiz bir adı olmalıdır.  
   
- Varlık kapsayıcısı varlık kümeleri veya varlık türleri veya bir veya daha fazla ad alanı içinde tanımlanan ilişkileri kullanın ve ilişki Setleri tanımlayabilirsiniz. Daha fazla bilgi için [varlık veri modeli: Ad alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md).  
+ Bir varlık kapsayıcısı, bir veya daha fazla ad alanında tanımlanan varlık türlerini veya ilişkilerini kullanan varlık kümelerini veya ilişki kümelerini tanımlayabilir. Daha fazla bilgi için bkz [. varlık veri modeli: Ad](entity-data-model-namespaces.md)alanları.  
   
 ## <a name="example"></a>Örnek  
- Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`.  Daha fazla bilgi için sonraki örneğe bakın.  
+ Aşağıdaki diyagramda üç varlık türü olan kavramsal model gösterilmektedir: `Book`, `Publisher`, ve `Author`.  Daha fazla bilgi için bkz. sonraki örnek.  
   
- ![Üç varlık türleri ile örnek modeli](./media/entity-container/example-model-three-entity-types.gif)  
+ ![Üç varlık türüne sahip örnek model](./media/entity-container/example-model-three-entity-types.gif)  
   
- Diyagram varlık kapsayıcı bilgilerini sağlamadığından olsa da, kavramsal modelin varlık kapsayıcısı tanımlamanız gerekir. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir DSL kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Yukarıdaki diyagramda gösterilen kavramsal modelin varlık kapsayıcısı aşağıdaki CSDL tanımlar. Varlık kapsayıcı adı bir XML özniteliği tanımlandığını aklınızda bulundurun.  
+ Diyagram varlık kapsayıcı bilgilerini iletmese de, kavramsal model bir varlık kapsayıcısı tanımlamalıdır. [ADO.NET Entity Framework](./ef/index.md) kavramsal modelleri tanımlamak için kavramsal şema tanım dili ([csdl](./ef/language-reference/csdl-specification.md)) adlı bir DSL kullanır. Aşağıdaki CSDL, Yukarıdaki diyagramda gösterilen kavramsal model için bir varlık kapsayıcısı tanımlar. Varlık kapsayıcısı adının bir XML özniteliğinde tanımlandığını unutmayın.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](entity-data-model.md)

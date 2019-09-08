@@ -2,36 +2,36 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 2d7db741cea5421b2391588c0479f44e2b478ca3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 214140bb8fcf43154b014ea3db609d355a27af7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626420"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794632"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
-Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleBFile> Oracle ile çalışmak için kullanılan sınıfı <xref:System.Data.OracleClient.OracleType.BFile> veri türü.  
+Oracle için .NET Framework veri sağlayıcısı, Oracle <xref:System.Data.OracleClient.OracleBFile> <xref:System.Data.OracleClient.OracleType.BFile> veri türüyle çalışmak için kullanılan sınıfını içerir.  
   
- Oracle **BDOSYA** veri türü olan Oracle **LOB** boyut sınırı 4 gigabayt ikili verilerle bir başvuru içeren veri türü. Oracle **BDOSYA** diğer Oracle'dan farklı **LOB** veri türlerini içeren, veriler işletim sistemi yerine fiziksel bir dosya sunucusunda depolanır. Unutmayın **BDOSYA** veri türü veri salt okunur erişim sağlar.  
+ Oracle **bDosya** veri türü, en fazla 4 gigabayt boyutlu ikili verilere başvuru Içeren bir Oracle **lob** veri türüdür. Oracle **bDosya** , verileri sunucu yerine işletim sistemindeki fiziksel bir dosyada depolanan diğer Oracle **lob** veri türlerinden farklıdır. **BDosya** veri türünün verilere salt okunurdur erişimi sağladığını unutmayın.  
   
- Diğer özelliklerini bir **BDOSYA** ondan ayırt veri türü bir **LOB** olan BT'nin veri türü:  
+ **Bir bu veri türünün** bir **lob** veri türünden ayırt edilmesini sağlayan diğer özellikleri şunlardır:  
   
 - Yapılandırılmamış verileri içerir.  
   
 - Sunucu tarafı parçalama destekler.  
   
-- Kopyalama semantiği kullanan başvuru. Örneğin, bir kopyalama işlemi gerçekleştirirseniz bir **BDOSYA**, yalnızca **BDOSYA** (aynı dosyaya bir başvuru) Bulucu kopyalanır. Dosyadaki dosya kopyalanmaz.  
+- Başvuru kopyalama semantiğini kullanır. Örneğin, bir **bDosya**üzerinde kopyalama işlemi gerçekleştirirseniz, yalnızca **bDosya** Konumlandırıcı (dosyanın bir başvurusu) kopyalanır. Dosyadaki veriler kopyalanmaz.  
   
- **BDOSYA** veri türü, boyutu büyük LOB'lar başvurmak için kullanılması gerekir ve bu nedenle, veritabanında depolamak pratik değildir. Daha fazla istemci ve sunucu iletişimi ek yük dahil kullanırken bir **BDOSYA** veri türü ile karşılaştırıldığında **LOB** veri türü. Erişmek için daha verimli bir **BDOSYA** yalnızca az miktarda veriniz almak gerekiyorsa. Tüm nesnesi elde etmeniz gerekiyorsa veritabanı yerleşik LOB'lar erişmek için daha verimlidir.  
+ **BDosya** veri türü,, boyutu büyük olan LOBs 'ye başvurmak için kullanılmalıdır ve bu nedenle veritabanında depolanması pratik değildir. **Lob** veri türü ile karşılaştırıldığında bir **bDosya** veri türü kullanılırken daha fazla istemci, sunucu ve iletişim yükü söz konusu olur. Yalnızca az miktarda veri edinmeniz gerekiyorsa, bir **bDosya** 'ya erişmek daha etkilidir. Nesnenin tamamını edinmeniz gerekiyorsa, veritabanına yerleşik lob 'Ları erişmek daha etkilidir.  
   
- NULL olmayan her **OracleBFile** nesne, temel alınan fiziksel dosya konumunu tanımlayan iki varlık ile ilişkilendirilmiş:  
+ NULL olmayan her bir **Oraclebdosya** nesnesi, temel alınan fiziksel dosyanın konumunu tanımlayan iki varlıkla ilişkilendirilir:  
   
-1. Dosya sistemindeki bir dizin için bir veritabanı diğer adı olan bir Oracle dizin nesnesi ve  
+1. Dosya sistemindeki bir dizin için veritabanı diğer adı olan Oracle DIZIN nesnesi ve  
   
-2. Dizin nesneyle ilişkili dizinde bulunan temel alınan fiziksel dosyanın dosya adı.  
+2. DIZIN nesnesiyle ilişkili dizinde bulunan, temel alınan fiziksel dosyanın dosya adı.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki C# örneği nasıl oluşturabileceğinizi gösteren bir **BDOSYA** bir Oracle tablo ve ardından bunu biçiminde alma bir **OracleBFile** nesne. Örnek kullanarak gösterir <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleBFile** **arama** ve **okuma** yöntemleri. Bu örneği kullanmak için öncelikle adlı bir dizin oluşturmanız gerekir Not "c:\\\bfiles" ve "MyFile.jpg" Oracle sunucusunda adlı bir dosya.  
+ Aşağıdaki C# örnek, bir Oracle tablosunda bir **bDosya** oluşturma ve bunu bir **oraclebdosya** nesnesi biçiminde alma işlemlerinin nasıl yapılacağını gösterir. Örnek <xref:System.Data.OracleClient.OracleDataReader> , nesnesinin ve **oraclebdosya** **Seek** ve **Read** yöntemlerinin kullanımını gösterir. Bu örneği kullanmak için, önce Oracle sunucusunda "c:\\\bfiles" adlı bir dizin ve "dosyam. jpg" adlı dosyayı oluşturmanız gerektiğini unutmayın.  
   
 ```csharp  
 using System;  
@@ -88,5 +88,5 @@ public class Sample
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle ve ADO.NET](oracle-and-adonet.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

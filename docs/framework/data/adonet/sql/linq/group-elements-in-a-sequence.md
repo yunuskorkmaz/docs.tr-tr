@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
-ms.openlocfilehash: 50887acefdd5d0feaf9d0885e9ee842f44f0ef65
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc490b579e841a0e9b3724fe0e8789cc9411683d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915046"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782186"
 ---
 # <a name="group-elements-in-a-sequence"></a>Dizideki Öğeleri Gruplama
 <xref:System.Linq.Enumerable.GroupBy%2A> İşleci bir sıranın öğelerini gruplandırır. Aşağıdaki örnekler Northwind veritabanını kullanır.  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.GroupBy%2A> Sorgularda null sütun değerleri bazen bir <xref:System.InvalidOperationException>oluşturabilir. Daha fazla bilgi için [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)konusunun "GroupBy InvalidOperationException" bölümüne bakın.  
+> <xref:System.Linq.Enumerable.GroupBy%2A> Sorgularda null sütun değerleri bazen bir <xref:System.InvalidOperationException>oluşturabilir. Daha fazla bilgi için [sorun giderme](troubleshooting.md)konusunun "GroupBy InvalidOperationException" bölümüne bakın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, bölümlerine `Products` göre `CategoryID`.  
@@ -74,5 +74,5 @@ ms.locfileid: "69915046"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Sorgu Örnekleri](query-examples.md)
+- [Örnek Veritabanları İndirme](downloading-sample-databases.md)

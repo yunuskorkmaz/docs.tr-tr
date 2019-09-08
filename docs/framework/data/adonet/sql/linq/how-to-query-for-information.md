@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e538d288-2070-40ca-9da6-4fbc68cd6ad0
-ms.openlocfilehash: 2987e43c83bf84e32cd05a870b24da40dd37d8b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ed32bbe7d27357cbed7d77dd235b698a65c0e29e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943549"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793542"
 ---
 # <a name="how-to-query-for-information"></a>Nasıl yapılır: Bilgi Sorgulama
 İçindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgular, içindeki [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]sorgularla aynı sözdizimini kullanır. Tek fark, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgularda başvurulan nesnelerin bir veritabanındaki öğelerle eşlendiğine sahiptir. Daha fazla bilgi için bkz. [LINQ Sorgularına Giriş (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]yazdığınız sorguları eşdeğer SQL sorgularına çevirir ve işlenmek üzere sunucuya gönderir.  
   
- [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Sorguların bazı özelliklerinin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalarda özel ilgilenilmesi gerekebilir. Daha fazla bilgi için bkz. [sorgu kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md).  
+ [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] Sorguların bazı özelliklerinin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalarda özel ilgilenilmesi gerekebilir. Daha fazla bilgi için bkz. [sorgu kavramları](query-concepts.md).  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki sorgu, Londra 'dan müşterilerin bir listesini ister. Bu örnekte, `Customers` Northwind örnek veritabanındaki bir tablodur.  
@@ -27,6 +27,6 @@ ms.locfileid: "69943549"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Nesne Modeli Oluşturma](creating-the-object-model.md)
+- [Örnek Veritabanları İndirme](downloading-sample-databases.md)
+- [Veritabanını Sorgulama](querying-the-database.md)

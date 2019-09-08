@@ -1,23 +1,23 @@
 ---
-title: Yerel işlevler - C# Programlama Kılavuzu
+title: Yerel işlevler- C# Programlama Kılavuzu
 ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f572f683511fe90951f841c80eae448a9cb6054b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646234"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785083"
 ---
-# <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# programlama Kılavuzu)
+# <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
-C# 7.0, C# destekleyen'ile başlayan *yerel işlevler*. Yerel işlevler başka bir üye iç içe geçmiş özel bir tür yöntemlerdir. Bunlar, yalnızca kendi kapsayan üyeden çağrılabilir. Yerel işlevler içinde bildirilen ve çağrılır:
+7,0 ile C# başlayarak C# *Yerel işlevleri*destekler. Yerel işlevler, başka bir üyede iç içe yerleştirilmiş bir türün özel yöntemleridir. Yalnızca kendi kapsayıcı üyelerinden çağrılabilir. Yerel işlevler içinde bildirilebilecek ve şuradan çağrılabilir:
 
-- Yöntemler, özellikle Yineleyici ve zaman uyumsuz yöntemleri
+- Yöntemler, özellikle Yineleyici yöntemleri ve zaman uyumsuz yöntemler
 - Oluşturucular
 - Özellik erişimcileri
 - Olay erişimcileri
@@ -26,56 +26,56 @@ C# 7.0, C# destekleyen'ile başlayan *yerel işlevler*. Yerel işlevler başka b
 - Sonlandırıcılar
 - Diğer yerel işlevler
 
-Ancak, yerel işlevler bir ifade gövdeli üyenin içinde bildirilemez.
+Ancak, yerel işlevler ifade-Bodied üyesi içinde bildirilemez.
 
 > [!NOTE]
-> Bazı durumlarda, bir lambda ifadesi, ayrıca yerel bir işlev tarafından desteklenen işlevselliği uygulamak için kullanabilirsiniz. Bir karşılaştırması için bkz. [Lambda ifadeleri karşılaştırma yerel işlevler](../../local-functions-vs-lambdas.md).
+> Bazı durumlarda, bir yerel işlev tarafından desteklenen işlevselliği uygulamak için bir lambda ifadesi kullanabilirsiniz. Bir karşılaştırma için bkz. [Yerel Işlevler lambda ifadelerine kıyasla](../../local-functions-vs-lambdas.md).
 
-Yerel işlevler Temizle, kodun amacı olun. Herkes okuma, kod yöntemi içeren yöntemi tarafından çağrılabilir dışında olduğunu görebilirsiniz. Takım projeleri için bunlar da yanlışlıkla doğrudan yerlerden yöntemini çağırmak başka bir geliştirici imkansız hale sınıf veya yapı içinde.
+Yerel işlevler, kodunuzun amacını açık hale getirir. Kodunuzu okuyan herkes, yöntemin kapsayan Yöntem dışında çağrılabilir olmadığını görebilir. Ekip projeleri için, başka bir geliştiricinin yöntemi doğrudan sınıf veya yapı içinde başka bir yerde çağırmak olanaksız hale getirir.
  
 ## <a name="local-function-syntax"></a>Yerel işlev sözdizimi
 
-Yerel bir işlev içeren bir üye iç içe geçmiş bir yöntemde olarak tanımlanır. Tanımı sözdizimi aşağıdaki gibidir:
+Yerel bir işlev, kapsayan bir üye içinde iç içe geçmiş bir yöntem olarak tanımlanır. Tanımı aşağıdaki sözdizimine sahiptir:
 
 ```txt
 <modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
 ```
 
-Yerel işlevler kullanabileceğiniz [zaman uyumsuz](../../language-reference/keywords/async.md) ve [güvenli](../../language-reference/keywords/unsafe.md) değiştiriciler. 
+Yerel işlevler, [zaman uyumsuz](../../language-reference/keywords/async.md) ve [güvenli olmayan](../../language-reference/keywords/unsafe.md) değiştiriciler kullanabilir. 
 
-Yöntem parametreleri içeren üyesinde tanımlanan tüm yerel değişkenlerin yerel işlevde erişilebilir olduğunu unutmayın. 
+Kendi Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan tüm yerel değişkenlerin yerel işlevde erişilebilir olduğunu unutmayın. 
 
-Bir yöntem tanımını bir yerel işlev tanımı aşağıdaki öğeleri içeremez:
+Bir yöntem tanımının aksine, yerel bir işlev tanımı aşağıdaki öğeleri içeremez:
 
-- Üye erişim değiştiricisi. Tüm yerel işlevler özel olduğundan, bir erişim değiştiricisidir gibi `private` anahtar sözcüğü, Derleyici Hatası CS0106, "'private' değiştiricisi bu öğe için geçerli değil." oluşturur
+- Üye erişim değiştiricisi. Tüm yerel işlevler özel olduğundan, `private` anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, "özel ' değiştiricisi Bu öğe için geçerli değil."
  
-- [Statik](../../language-reference/keywords/static.md) anahtar sözcüğü. Dahil olmak üzere `static` anahtar sözcüğü, Derleyici Hatası CS0106 oluşturur, "'static' değiştiricisi bu öğe için geçerli değil."
+- [Static](../../language-reference/keywords/static.md) anahtar sözcüğü. "Static ' değiştiricisi Bu öğe için geçerli değil, anahtarsözcüğünüCS0106derleyicihatasıoluşturuyor."`static`
 
-Ayrıca, öznitelikler, yerel bir işlev veya parametrelerini uygulanamaz ve tür parametreleri. 
+Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne uygulanamaz. 
  
-Aşağıdaki örnek adlı bir yerel işlev tanımlar `AppendPathSeparator` adlı bir yöntem özel olan `GetText`:
+Aşağıdaki örnek adlı bir yerel işlevi `AppendPathSeparator` `GetText`tanımlar:
    
 [!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
 ## <a name="local-functions-and-exceptions"></a>Yerel işlevler ve özel durumlar
 
-Yerel işlevler yararlı özelliklerini hemen yüzey özel durumlara izin verebilirsiniz biridir. Yöntemi yineleyiciler için özel durumlar döndürülen dizi yalnızca numaralandırılana zaman ve yineleyici alınamaz zaman takip edilir. Döndürülen görevin bekletildiğinde zaman uyumsuz yöntemler için zaman uyumsuz bir yöntem içinde oluşturulan özel durumlar gözlenmiştir. 
+Yerel işlevlerin yararlı özelliklerinden biri, özel durumların hemen yüzeyine izin verebilir. Yöntem yineleyiciler için, özel durumlar yalnızca döndürülen dizi numaralandırıldıktan sonra, yineleyici alındığında değil, ortaya çıkacak. Zaman uyumsuz metotlar için, bir zaman uyumsuz yöntemde oluşturulan özel durumlar, döndürülen görev beklendiğinde gözlemlenir. 
 
-Aşağıdaki örnekte tanımlayan bir `OddSequence` tek sayıları belirtilen bir aralıktaki arasında numaralandırır yöntemi. Bir sayı için 100'den büyük geçirdiği için `OddSequence` Numaralandırıcı yöntemi çağırılıyorsa yöntem bir <xref:System.ArgumentOutOfRangeException>. Örneğin çıktısında gösterildiği gibi özel durum sayıları yalnızca yineleme yapmak ve Numaralandırıcı alamaz zamanı ortaya çıkarır.
+Aşağıdaki örnek, belirtilen bir `OddSequence` Aralık arasındaki tek sayıları numaralandırır bir yöntemi tanımlar. `OddSequence` Numaralandırıcı yöntemine 100 ' den büyük bir sayı geçirdiğinden, yöntemi bir <xref:System.ArgumentOutOfRangeException>oluşturur. Örneğin çıkışının gösterdiği gibi, özel durum yalnızca sayıları tekrarladığı zaman, numaralandırıcıyı alırken değil, yüzeyleri.
 
 [!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
-Bunun yerine, doğrulama yapılırken bir özel durum oluşturabilecek ve yerel bir işlevden yineleyici döndürerek yineleyici almadan önce aşağıdaki örnekte görüldüğü gibi.
+Bunun yerine, aşağıdaki örnekte gösterildiği gibi, bir yerel işlevden Yineleyici döndürerek, doğrulama gerçekleştirirken ve yineleyici almadan önce bir özel durum oluşturabilirsiniz.
 
 [!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
-Yerel İşlevler, zaman uyumsuz işlemi dışında özel durumları işlemek için benzer bir şekilde kullanılabilir. Normalde, zaman uyumsuz yöntemde oluşan özel durum iç özel durumları incelemeniz gerektiren bir <xref:System.AggregateException>. Yerel işlevler hızlı başarısız olma ve özel durum hem zaman uyumlu olarak gözlemlenen izin vermek kodunuzu izin verir.
+Yerel işlevler, zaman uyumsuz işlem dışındaki özel durumları işlemek için benzer bir şekilde kullanılabilir. Genellikle, zaman uyumsuz yöntemde oluşturulan özel durumlar, öğesinin <xref:System.AggregateException>iç özel durumlarını incelemenizi gerektirir. Yerel işlevler, kodunuzun hızlı bir şekilde başarısız olmasına olanak tanır ve özel durumun hem zaman uyumlu olarak hem de aynı şekilde gözlemlenip
 
-Aşağıdaki örnekte adlı bir zaman uyumsuz yöntem `GetMultipleAsync` belirtilen sayıda saniye için Duraklat ve o saniye sayısını rastgele katları olan bir değer döndürür. En büyük gecikme değeri 5 saniyedir; bir <xref:System.ArgumentOutOfRangeException> değer 5'ten büyük olduğunda oluşur. Aşağıdaki örnekte gösterildiği gibi 6 değeri olduğunda oluşturulan özel durum geçirilen `GetMultipleAsync` yöntemi içinde kaydırılır bir <xref:System.AggregateException> sonra `GetMultipleAsync` yöntemi yürütülmesine başlar.
+Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için `GetMultipleAsync` adlı zaman uyumsuz bir yöntem kullanır ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; değer <xref:System.ArgumentOutOfRangeException> 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, `GetMultipleAsync` yöntemine 6 değeri geçirildiğinde oluşturulan özel durum, `GetMultipleAsync` Yöntem yürütmeye başladıktan sonra bir <xref:System.AggregateException> öğesine kaydırılır.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-İle yöntemi yineleyici yaptığımız gibi Biz bu örnekte, zaman uyumsuz yöntemi çağırmadan önce doğrulamayı gerçekleştirmek için kodu yeniden düzenleyebilirsiniz. Aşağıdaki örnekte gösterildiği çıktısı olarak <xref:System.ArgumentOutOfRangeException> , sarmalanmamış bir <xref:System.AggregateException>.
+Yöntem yineleyicisi ile yaptığımız gibi, zaman uyumsuz metodu çağırmadan önce doğrulamayı gerçekleştirmek için bu örnekteki kodu yeniden düzenleyebilirsiniz. Aşağıdaki örnekteki Çıktının gösterdiği gibi, ' <xref:System.ArgumentOutOfRangeException> a <xref:System.AggregateException>sarmalanmaz.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 

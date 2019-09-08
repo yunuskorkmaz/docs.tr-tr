@@ -2,24 +2,24 @@
 title: InvariantAssertionFailed
 ms.date: 03/30/2017
 ms.assetid: 96c8a97a-3c04-4c35-9302-a6648ccfe5b6
-ms.openlocfilehash: fca9e79227673372cd4e760567e5b9808b669e1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b171b27fd9cf564389347c4411f15c5c413a7236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969942"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797779"
 ---
 # <a name="invariantassertionfailed"></a>InvariantAssertionFailed
-Kimliği: 106  
+Numarasını 106  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: İzleme  
+ Alan İzleme  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, sabit bir onaylama işlemi yanlış olduğunu gösterir. Olay iletisi, işlem adı ve işlem kimliği listeler  
+ Bu olay, sabit bir onaylama 'nın yanlış olduğunu gösterir. Olayda ileti, işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

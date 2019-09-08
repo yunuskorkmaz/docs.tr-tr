@@ -2,12 +2,12 @@
 title: ADO.NET içinde bağlantı dizeleri
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8f726ca71ba955ef542d15e0e8318c2b310e607e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363753"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784907"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET içinde bağlantı dizeleri
 
@@ -57,23 +57,23 @@ Tüm bağlantı dizeleri yukarıda açıklanan temel sözdizimini paylaşır. Ta
 
 Yazım hataları hatalara neden olabilir. Örneğin, `Integrated Security=true` geçerlidir, ancak `IntegratedSecurity=true` hataya neden olur.
 
-Kimliği doğrulanmamış Kullanıcı girişinden, çalışma zamanında el ile oluşturulan bağlantı dizeleri, dize ekleme saldırılarına karşı savunmasız kalır ve veri kaynağındaki güvenliği tehlikeye at. Bu sorunları gidermek için, *ADO.NET* 2,0 her bir *.NET Framework* veri sağlayıcısı için [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md) sunmuştur. Bu bağlantı dizesi oluşturucuları, parametreleri kesin türü belirtilmiş özellikler olarak kullanıma sunar ve veri kaynağına gönderilmeden önce bağlantı dizesinin doğrulanmasını mümkün hale getirir.
+Kimliği doğrulanmamış Kullanıcı girişinden, çalışma zamanında el ile oluşturulan bağlantı dizeleri, dize ekleme saldırılarına karşı savunmasız kalır ve veri kaynağındaki güvenliği tehlikeye at. Bu sorunları gidermek için, *ADO.NET* 2,0 her bir *.NET Framework* veri sağlayıcısı için [bağlantı dizesi oluşturucuları](connection-string-builders.md) sunmuştur. Bu bağlantı dizesi oluşturucuları, parametreleri kesin türü belirtilmiş özellikler olarak kullanıma sunar ve veri kaynağına gönderilmeden önce bağlantı dizesinin doğrulanmasını mümkün hale getirir.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+[Bağlantı dizesi oluşturucuları](connection-string-builders.md)\
 Çalışma zamanında geçerli bağlantı dizeleri `ConnectionStringBuilder` oluşturmak için sınıfların nasıl kullanılacağını gösterir.
 
-[Bağlantı dizeleri ve yapılandırma dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md)\
 Yapılandırma dosyalarındaki bağlantı dizelerinin nasıl depolanacağını ve alınacağını gösterir.
 
-[Bağlantı dizesi sözdizimi](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Bağlantı dizesi sözdizimi](connection-string-syntax.md)\
 , `SqlClient`, Ve `OracleClient` `OleDb`için sağlayıcıyaözelbağlantıdizelerininnasılyapılandırılacağınıaçıklar.`Odbc`
 
-[Bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+[Bağlantı bilgilerini koruma](protecting-connection-information.md)\
 Bir veri kaynağına bağlanmak için kullanılan bilgileri koruma tekniklerini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Veri Kaynağına Bağlanma](/cpp/data/odbc/connecting-to-a-data-source)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

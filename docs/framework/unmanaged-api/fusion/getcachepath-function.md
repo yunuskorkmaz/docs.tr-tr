@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92366190c769344b41923cbb25ed4b04afceaae9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778661"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796899"
 ---
 # <a name="getcachepath-function"></a>GetCachePath İşlevi
-Belirtilen bayraklar kullanarak önbelleğe alınmış derleme yolunu alır.  
+Belirtilen bayrakları kullanarak önbelleğe alınmış derlemenin yolunu alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,22 +40,22 @@ HRESULT GetCachePath (
   
 ## <a name="parameters"></a>Parametreler  
  `dwCacheFlags`  
- [in] Bir [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) önbelleğe alınan bir derleme kaynağını belirten değer.  
+ 'ndaki Önbelleğe alınmış derlemenin kaynağını gösteren bir [asm_cache_flags](asm-cache-flags-enumeration.md) değeri.  
   
  `pwzCachePath`  
- [out] Döndürülen işaretçi yolu.  
+ dışı Yolun döndürülen işaretçisi.  
   
  `pcchPath`  
- [out içinde] İstenen maksimum uzunluğunu `pwzCachePath`ve iade, gerçek uzunluğunu temel `pwzCachePath`.  
+ [in, out] İstenen maksimum uzunluk `pwzCachePath`ve dönüş sonrasında gerçek `pwzCachePath`uzunluğu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASM_CACHE_FLAGS Sabit Listesi](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [ASM_CACHE_FLAGS Sabit Listesi](asm-cache-flags-enumeration.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

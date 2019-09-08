@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c434595414fd5bdabeae96d959aaa6be6d84af2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38f48f2d95829d2c8111065e5f4ede4e43a16d63
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753968"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796656"
 ---
 # <a name="iassemblynamegetdisplayname-method"></a>IAssemblyName::GetDisplayName Yöntemi
-Okunabilir bu başvurduğu derlemenin adını alır [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesne.  
+Bu [IAssemblyName](iassemblyname-interface.md) nesnesi tarafından başvurulan derlemenin okunabilir adını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT GetDisplayName (
   
 ## <a name="parameters"></a>Parametreler  
  `szDisplayName`  
- [out] Başvurulan derlemenin adını içeren dize arabelleği.  
+ dışı Başvurulan derlemenin adını içeren dize arabelleği.  
   
  `pccDisplayName`  
- [out içinde] Boyutu `szDisplayName` geniş karakter, bir sonlandırıcı null karakter de dahil olmak üzere.  
+ [in, out] Bir null Sonlandırıcı `szDisplayName` karakteri de dahil olmak üzere geniş karakter cinsinden boyutu.  
   
  `dwDisplayFlags`  
- [in] Bitsel bir birleşimi [asm_dısplay_flags](../../../../docs/framework/unmanaged-api/fusion/asm-display-flags-enumeration.md) özelliklerini etkileyen değerleri `szDisplayName`.  
+ 'ndaki Özelliklerini`szDisplayName`etkileyen [ASM_DISPLAY_FLAGS](asm-display-flags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName Arabirimi](iassemblyname-interface.md)
+- [Fusion Sabit Listeleri](fusion-enumerations.md)

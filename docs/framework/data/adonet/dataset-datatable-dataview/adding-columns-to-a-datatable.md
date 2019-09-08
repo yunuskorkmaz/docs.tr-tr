@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 105537a5fccef6de7266407c78cc915f8c5d8678
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204049"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784849"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable’a Sütun Ekleme
 , Tablonun **Columns** özelliği tarafından <xref:System.Data.DataColumn> başvurulan nesnelerin bir koleksiyonunu içerir.<xref:System.Data.DataTable> Bu sütun koleksiyonu, tüm kısıtlamalarla birlikte, tablonun şemasını veya yapısını tanımlar.  
@@ -47,7 +47,7 @@ workTable.Columns.Add("Purchases", typeof(Double));
  Örnekte, **CustId** sütununun özelliklerinin **DBNull** değerlerine izin vermeyeceğini ve değerlerin benzersiz olduğunu kısıtlamak olduğuna dikkat edin. Ancak, tablosunun birincil anahtar sütunu olarak **CustId** sütununu tanımlarsanız, **AllowDBNull** özelliği otomatik olarak **false** olarak ayarlanır ve **Unique** özelliği otomatik olarak **doğru**olarak ayarlanır. Daha fazla bilgi için bkz. [birincil anahtarları tanımlama](defining-primary-keys.md).  
   
 > [!CAUTION]
-> Bir sütun için bir sütun adı sağlanmazsa, sütuna, **DataColumnCollection**'a eklendiğinde "Sütun1" ile başlayan, sütun için artımlı bir varsayılan ad verilir. Sağladığınız ad, **DataColumnCollection**içinde varolan bir varsayılan sütun adıyla çakışabileceğinden, bir sütun adı belirttiğinizde "sütun*N*" adlandırma kuralına engel olmasını öneririz. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
+> Bir sütun için bir sütun adı sağlanmazsa, sütuna, **DataColumnCollection**'a eklendiğinde "Sütun1"*ile başlayan, sütun için* artımlı bir varsayılan ad verilir. Sağladığınız ad, **DataColumnCollection**içinde varolan bir varsayılan sütun adıyla çakışabileceğinden, bir sütun adı belirttiğinizde "sütun*N*" adlandırma kuralına engel olmasını öneririz. Sağlanan ad zaten varsa, bir özel durum oluşturulur.  
   
  <xref:System.Xml.Linq.XElement> İçindeki bir <xref:System.Data.DataColumn.DataType%2A> '<xref:System.Data.DataTable>ıolarak kullanıyorsanız, verileri okurken XML serileştirme çalışmaz. <xref:System.Data.DataColumn> Örneğin, <xref:System.Xml.XmlDocument> `DataTable.WriteXml` yöntemini kullanarak bir yazarsanız, XML 'e Serileştirmeden sonra içinde <xref:System.Xml.Linq.XElement>ek bir üst düğüm vardır. Bu sorunu geçici olarak çözmek için <xref:System.Data.SqlTypes.SqlXml> <xref:System.Xml.Linq.XElement>yerine türünü kullanın. `ReadXml`ve `WriteXml` ile<xref:System.Data.SqlTypes.SqlXml>düzgün çalışır.  
   
@@ -58,4 +58,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
 - <xref:System.Data.DataTable>
 - [DataTable Şema Tanımı](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

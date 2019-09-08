@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b9bec757071a98e085ccdeee3fc66bfc07f52bc
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b78789344050fd5e1cb0ee3492bf330fbf92bc88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040158"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798928"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
-Bir tür kitaplığını yükler ve dahili olarak başvurulan tüm tür kitaplıklarını çözümlemek için sağlanan [ıtypeelibresolver arabirimini](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) kullanır.  
+Bir tür kitaplığını yükler ve dahili olarak başvurulan tüm tür kitaplıklarını çözümlemek için sağlanan [ıtypeelibresolver arabirimini](itypelibresolver-interface.md) kullanır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -50,7 +50,7 @@ HRESULT LoadTypeLibWithResolver(
 - `REGKIND_NONE`: Bu tür kitaplığını kaydetme.  
   
  `pTlbResolver`  
- 'ndaki [Itypeelibresolver arabiriminin](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)uygulanması için bir işaretçi.  
+ 'ndaki [Itypeelibresolver arabiriminin](itypelibresolver-interface.md)uygulanması için bir işaretçi.  
   
  `pptlib`  
  dışı Yüklenmekte olan tür kitaplığına bir başvuru.  
@@ -70,22 +70,22 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Tür kitaplığı veya DLL yüklenemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) , derlemeyi `LoadTypeLibWithResolver` tür kitaplığı dönüştürme işlemi sırasında işlevini çağırır.  
+ [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../../tools/tlbexp-exe-type-library-exporter.md) , derlemeyi `LoadTypeLibWithResolver` tür kitaplığı dönüştürme işlemi sırasında işlevini çağırır.  
   
  Bu işlev, kayıt defterine en az erişimli olan belirtilen tür kitaplığını yükler. Bu işlev daha sonra, her birinin yüklenmesi ve üst tür kitaplığına eklenmesi gereken dahili olarak Başvurulmuş tür kitaplıkları için tür kitaplığını inceler.  
   
- Başvurulan bir tür kitaplığının yüklenebilmesi için, başvuru dosyası yolunun tam dosya yoluna çözülmesi gerekir. Bu, `pTlbResolver` parametreye geçilen [ITypeLibResolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)tarafından verilen [resolvettypeınfo yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) aracılığıyla gerçekleştirilir.  
+ Başvurulan bir tür kitaplığının yüklenebilmesi için, başvuru dosyası yolunun tam dosya yoluna çözülmesi gerekir. Bu, `pTlbResolver` parametreye geçilen [ITypeLibResolver arabirimi](itypelibresolver-interface.md)tarafından verilen [resolvettypeınfo yöntemi](resolvetypelib-method.md) aracılığıyla gerçekleştirilir.  
   
  Başvurulan tür kitaplığının tam dosya yolu bilindiğinde, `LoadTypeLibWithResolver` işlev yüklenir ve başvurulan tür kitaplığını üst tür kitaplığına ekler ve birleştirilmiş bir ana tür kitaplığı oluşturur.  
   
  İşlev, iç başvurulan tüm tür kitaplıklarını çözümleyip yükledikten sonra, `pptlib` parametresindeki ana çözümlenen tür kitaplığına bir başvuru döndürür.  
   
- İşlev genellikle, `pTlbResolver` parametresi içinde kendi iç [ITypeLibResolver arabirimini](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) sağlayan [Tlbexp. exe (tür kitaplığı verme programı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır. `LoadTypeLibWithResolver`  
+ İşlev genellikle, `pTlbResolver` parametresi içinde kendi iç [ITypeLibResolver arabirimini](itypelibresolver-interface.md) sağlayan [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır. `LoadTypeLibWithResolver`  
   
- Doğrudan çağrı `LoadTypeLibWithResolver` yaparsanız kendi [ITypeLibResolver arabirimi](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) uygulamanızı sağlamanız gerekir.  
+ Doğrudan çağrı `LoadTypeLibWithResolver` yaparsanız kendi [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamanızı sağlamanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi** TlbRef. h  
   
@@ -95,5 +95,5 @@ HRESULT LoadTypeLibWithResolver(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp Yardımcı İşlevleri](index.md)
 - [LoadTypeLibEx Işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

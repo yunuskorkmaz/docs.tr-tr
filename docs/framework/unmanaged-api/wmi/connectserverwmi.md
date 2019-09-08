@@ -1,6 +1,6 @@
 ---
 title: ConnectServerWmi işlevi (yönetilmeyen API Başvurusu)
-description: ConnectServerWmi işlev bir WMI ad alanı için bir bağlantı oluşturmak için DCOM kullanır.
+description: ConnectServerWmi işlevi, bir WMI ad alanına bağlantı oluşturmak için DCOM kullanır.
 ms.date: 11/06/2017
 api_name:
 - ConnectServerWmi
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e88129f737ee493432d06acc6ad45f8653dd1eb4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2ebb268dcee877f4e9aea0c88852333897030dd1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636766"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798745"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi işlevi
 
-Belirtilen bir bilgisayardaki bir WMI ad alanına DCOM aracılığıyla yapılan bağlantı oluşturur.
+Belirtilen bir bilgisayardaki WMI ad alanına DCOM aracılığıyla bir bağlantı oluşturur.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -49,72 +49,72 @@ HRESULT ConnectServerWmi (
 ## <a name="parameters"></a>Parametreler
 
 `strNetworkResource`\
-[in] Geçerli bir işaretçi `BSTR` , doğru WMI ad alanının nesne yolu içerir. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
+'ndaki Doğru WMI ad alanının `BSTR` nesne yolunu içeren geçerli bir işaretçi. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın.
 
 `strUser`\
-[in] Geçerli bir işaretçi `BSTR` , kullanıcı adını içerir. A `null` değeri, geçerli güvenlik bağlamı gösterir. Kullanıcı geçerli olandan farklı bir etki alanından ise `strUser` ters eğik çizgiyle bölünerek etki alanı ve kullanıcı adı da içerebilir. `strUser` Ayrıca kullanıcı asıl adı (UPN) biçiminde gibi olabilir `userName@domainName`. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
+'ndaki Kullanıcı adını içeren geçerli `BSTR` bir işaretçisi. Bir `null` değer geçerli güvenlik bağlamını gösterir. Kullanıcı geçerli olandan farklı bir etki alanından farklıysa, `strUser` bir ters eğik çizgiyle ayrılmış etki alanını ve Kullanıcı adını da içerebilir. `strUser`, gibi Kullanıcı asıl adı (UPN) biçiminde de olabilir `userName@domainName`. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın.
 
 `strPassword`\
-[in] Geçerli bir işaretçi `BSTR` , parola içeriyor. A `null` geçerli güvenlik bağlamı gösterir. Boş bir dize ("") geçerli sıfır uzunlukta bir parola belirtir.
+'ndaki Parolayı içeren geçerli `BSTR` bir işaretçisi. Geçerli güvenlik bağlamını gösterir. `null` Boş bir dize ("") geçerli bir sıfır uzunlukta parolayı gösterir.
 
 `strLocale`\
-[in] Geçerli bir işaretçi `BSTR` bilgi almak için doğru yerel gösterir. Microsoft yerel ayar tanımlayıcılarını için dize biçimindedir "MS\_*xxx*" burada *xxx* yerel ayar tanıtıcısı (LCID) gösteren onaltılık biçimde bir dizedir. Geçersiz bir yerel ayar belirtilmezse yöntem döndürür `WBEM_E_INVALID_PARAMETER` hariç Windows 7 varsayılan yerel ayar sunucusunun kullanıldığı bunun yerine,. Varsa ' null1, geçerli yerel ayarı kullanılır.
+'ndaki Bilgi alımı için doğru yerel `BSTR` ayarı gösteren geçerli bir işaretçisi. Microsoft yerel ayar tanımlayıcıları için, dizenin biçimi "MS\_*XXX*", burada *XXX* , yerel ayar tanımlayıcısını (LCID) gösteren onaltılık biçimli bir dizedir. Geçersiz bir yerel ayar belirtilmişse, yöntem bunun yerine sunucunun `WBEM_E_INVALID_PARAMETER` varsayılan yerel ayarının kullanıldığı Windows 7 hariç döndürülür. Eğer ' null1, geçerli yerel ayar kullanılır.
 
 `lSecurityFlags`\
-[in] Geçirilecek bayrakları `ConnectServerWmi` yöntemi. Bu parametre için sıfır (0) değerini sonuçları çağrısında `ConnectServerWmi` yalnızca bir sunucu bağlantısı kurulduktan sonra döndürüyor. Bu uygulamada süresiz olarak sunucunun bozuk olup olmadığını yanıt vermiyorsa sonuçlanabilir. Geçerli bir değerler şunlardır:
+'ndaki `ConnectServerWmi` Yönteme geçirilecek bayraklar. Bu parametre için sıfır (0) değeri, yalnızca sunucuya bağlantı kurulduktan sonra `ConnectServerWmi` döndürme çağrısına neden olur. Bu, sunucu bozulur bir uygulamanın süresiz olarak yanıt vermemesine neden olabilir. Diğer geçerli değerler şunlardır:
 
 | Sabit  | Değer  | Açıklama  |
 |---------|---------|---------|
-| `CONNECT_REPOSITORY_ONLY` | 0x40 | İç kullanım için ayrılmıştır. Kullanmayın. |
-| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi` iki dakika içinde ya da daha az döndürür. |
+| `CONNECT_REPOSITORY_ONLY` | 0x40 | Dahili kullanım için ayrılmıştır. Kullanmayın. |
+| `WBEM_FLAG_CONNECT_USE_MAX_WAIT` | 0x80 | `ConnectServerWmi`iki dakika veya daha kısa bir süre döndürür. |
 
 `strAuthority`\
-[in] Kullanıcı etki alanı adı. Aşağıdaki değerlere sahip olabilir:
+'ndaki Kullanıcının etki alanı adı. Aşağıdaki değerlere sahip olabilir:
 
 | Değer | Açıklama |
 |---------|---------|
-| Boş | NTLM kimlik doğrulaması kullanılır ve geçerli kullanıcının NTLM etki alanı kullanılır. Varsa `strUser` belirtir (önerilen konum) buraya belirtilmemelidir. İşlev döndürür `WBEM_E_INVALID_PARAMETER` iki parametrede de etki alanı belirtirseniz. |
-| Kerberos:*asıl adı* | Kerberos kimlik doğrulaması kullanılır ve bu parametre bir Kerberos asıl adı içerir. |
+| adet | NTLM kimlik doğrulaması kullanılır ve geçerli kullanıcının NTLM etki alanı kullanılır. Etki alanını (önerilen konum) belirtiyorsa,buradabelirtilmemelidir.`strUser` İşlevi, etki `WBEM_E_INVALID_PARAMETER` alanını her iki parametrede de belirtirseniz döndürür. |
+| Kerberos:*asıl ad* | Kerberos kimlik doğrulaması kullanılır ve bu parametre bir Kerberos asıl adı içerir. |
 | NTLMDOMAIN:*etki alanı adı* | NT LAN Manager kimlik doğrulaması kullanılır ve bu parametre bir NTLM etki alanı adı içerir. |
 
 `pCtx`\
-[in] Genellikle, bu parametre `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) nesnesi bir veya daha fazla dinamik sınıfı sağlayıcıları tarafından gerekiyor.
+'ndaki Genellikle, bu parametre `null`. Aksi takdirde, bir veya daha fazla dinamik sınıf sağlayıcısı için gereken bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) nesnesine yönelik bir işaretçidir.
 
 `ppNamespace`\
-[out] İşlevi döndüğünde, bir işaretçi alır bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesne belirtilen ad alanına bağlı. İşaret edecek şekilde ayarlanmış `null` bir hata olduğunda.
+dışı İşlev döndüğünde, belirtilen ad alanına göre bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine bir işaretçi alır. Bir hata olduğunda ' ı işaret `null` etmek üzere ayarlanır.
 
 `impLevel`\
-[in] Kimliğe bürünme düzeyi.
+'ndaki Kimliğe bürünme düzeyi.
 
 `authLevel`\
-[in] Yetkilendirme düzeyi.
+'ndaki Yetkilendirme düzeyi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) yöntemi.
+Bu işlev, [IWbemLocator:: ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) yöntemine bir çağrı kaydırır.
 
-Yerel erişim için varsayılan ad alanı `strNetworkResource` basit nesne yolu olabilir: "kök\varsayılan" veya "\\.\root\default". Uzak bir bilgisayarda varsayılan ad alanı erişimi için COM veya Microsoft ile uyumlu ağ kullanarak dahil bilgisayar adı: "\\myserver\root\default". Bilgisayar adı, ayrıca bir DNS adı veya IP adresi olabilir. `ConnectServerWmi` İşlevi IPv6 çalıştıran bilgisayarlarla da bağlanabilir bir IPv6 adresi kullanarak.
+Varsayılan ad alanına `strNetworkResource` yerel erişim için basit bir nesne yolu olabilir: "root\default" veya "\\.\root\default". COM veya Microsoft uyumlu ağ kullanarak uzak bir bilgisayardaki varsayılan ad alanına erişim için, bilgisayar adı: "\\myserver\root\default" ifadesini ekleyin. Bilgisayar adı da bir DNS adı veya IP adresi olabilir. `ConnectServerWmi` İşlevi IPv6 adresini kullanarak IPv6 çalıştıran bilgisayarlarla da bağlanabilir.
 
-`strUser` Boş bir dize olamaz. Etki alanı belirtilirse `strAuthority`, bu da de dahil edilmemesi gerekir `strUser`, ya da bir işlev döndürür `WBEM_E_INVALID_PARAMETER`.
+`strUser`boş bir dize olamaz. Etki alanı içinde `strAuthority`belirtilmişse, ' de `strUser`dahil edilmemelidir ya da işlev döndürülür `WBEM_E_INVALID_PARAMETER`.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi:** WMINet_Utils.idl
+ **Üst bilgi** WMINet_Utils. IDL
 
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

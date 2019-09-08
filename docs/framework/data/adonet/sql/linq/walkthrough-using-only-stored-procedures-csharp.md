@@ -2,19 +2,19 @@
 title: 'İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 69419dd5bb49c2e47315d0079df3a7b575ad9afd
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: f980402c976db9ee327a7b726e36a0a4d9d6d73f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971772"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792089"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>İzlenecek yol: Yalnızca Saklı Yordamları Kullanma (C#)
 
 Bu izlenecek yol, yalnızca saklı yordamları yürüterek verilere erişmek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] için temel uçtan uca bir senaryo sağlar. Bu yaklaşım genellikle veritabanı yöneticileri tarafından veri deposuna nasıl erişildiğini sınırlamak için kullanılır.
 
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Uygulamalarda saklı yordamları, özellikle, `Update`ve `Delete` işlemleri için `Create`varsayılan davranışı geçersiz kılmak için de kullanabilirsiniz. Daha fazla bilgi için bkz. [Insert, Update ve DELETE Işlemlerini özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Uygulamalarda saklı yordamları, özellikle, `Update`ve `Delete` işlemleri için `Create`varsayılan davranışı geçersiz kılmak için de kullanabilirsiniz. Daha fazla bilgi için bkz. [Insert, Update ve DELETE Işlemlerini özelleştirme](customizing-insert-update-and-delete-operations.md).
 
 Bu izlenecek yolun amaçları doğrultusunda, Northwind örnek veritabanındaki Saklı yordamlarla eşleştirilmiş iki yöntem kullanacaksınız: CustOrdersDetail ve CustOrderHist. Eşleme, bir C# dosya oluşturmak Için SQLMetal komut satırı aracını çalıştırdığınızda oluşur. Daha fazla bilgi için bu izlenecek yolun ilerleyen kısımlarında yer aldığı Önkoşullar bölümüne bakın.
 
@@ -32,7 +32,7 @@ Bu izlenecek yol aşağıdakileri gerektirir:
 
 - Northwind örnek veritabanı.
 
-     Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanını indirdikten sonra, Kuzey WND. mdf dosyasını c:\linqtest7 klasörüne kopyalayın.
+     Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md). Veritabanını indirdikten sonra, Kuzey WND. mdf dosyasını c:\linqtest7 klasörüne kopyalayın.
 
 - Northwind C# veritabanından oluşturulan bir kod dosyası.
 
@@ -40,7 +40,7 @@ Bu izlenecek yol aşağıdakileri gerektirir:
 
      **SqlMetal/Code: "c:\linqtest7\northwind.cs"/Language: CSharp "c:\linqtest7\kuzey WND.mdf"/sprocs/Functions/plurleştir**
 
-     Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).
+     Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).
 
 ## <a name="overview"></a>Genel Bakış
 
@@ -74,7 +74,7 @@ Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 
 5. **Konum** kutusunda, proje dosyalarınızı nerede depolamak istediğinizi doğrulayın.
 
-6.           **Tamam**'ı tıklatın.
+6. **Tamam**'ı tıklatın.
 
      Windows Form Tasarımcısı açılır.
 
@@ -199,5 +199,5 @@ Bu projeyi, bazı değişiklikler yaparak geliştirebilirsiniz. Örneğin, kulla
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)
+- [Saklı Yordamlar](stored-procedures.md)

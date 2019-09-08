@@ -2,12 +2,12 @@
 title: XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-ms.openlocfilehash: fd32d024acca393dcc8241f047a305e763682866
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d00f07ee3338941b7de1bb890f71cd3c2d120246
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204863"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784650"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkileri Oluşturma
 Bir <xref:System.Data.DataSet>üzerinde üst-alt ilişkisi oluşturarak iki veya daha fazla sütun arasında bir ilişki oluşturursunuz. Bir XML şeması tanım dili (XSD) şeması içindeki bir **veri kümesi** ilişkisini göstermenin üç yolu vardır:  
@@ -99,4 +99,4 @@ msdata:childkey="" />
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

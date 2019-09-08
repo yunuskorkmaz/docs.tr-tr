@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 75cb5ea166c36de5c0921fbbd830021719497cda
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5c32afc913443787ad8371f31f1fe330b126398
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792760"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Dizideki Öğeleri Döndürme veya Atlama
 <xref:System.Linq.Queryable.Take%2A> İşleci kullanarak bir dizide verilen sayıda öğeyi döndürün ve sonra kalanı atlayın.  
@@ -18,7 +18,7 @@ ms.locfileid: "69963854"
  Bir dizide verilen sayıda öğeyi atlamak için işlecinikullanınveardındankalanıgeridöndürün.<xref:System.Linq.Queryable.Skip%2A>  
   
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 ' de sorgularda kullanıldıkları bazı sınırlamalar vardır. Daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)içindeki "SQL Server 2000 'de özel durumları atla ve al" girişi.  
+> <xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 ' de sorgularda kullanıldıkları bazı sınırlamalar vardır. Daha fazla bilgi için bkz. [sorun giderme](troubleshooting.md)içindeki "SQL Server 2000 'de özel durumları atla ve al" girişi.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Linq.Queryable.Skip%2A> SQL`NOT EXISTS` yan tümcesiyle bir alt sorgu kullanarak çevirir. Bu çeviri aşağıdaki sınırlamalara sahiptir:  
   
@@ -80,5 +80,5 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [Standart Sorgu İşleci Çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+- [Sorgu Örnekleri](query-examples.md)
+- [Standart Sorgu İşleci Çevirisi](standard-query-operator-translation.md)

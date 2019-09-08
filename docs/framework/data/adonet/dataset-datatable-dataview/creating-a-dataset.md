@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: 19badb009ebe95c52ab1dbbaef96f280c769553b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d496167b7bce31491402414c43ae0bcdee423b89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205162"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786500"
 ---
 # <a name="creating-a-dataset"></a>DataSet Oluşturma
 Oluşturucuyu çağırarak bir <xref:System.Data.DataSet> örneğini oluşturabilirsiniz. <xref:System.Data.DataSet> İsteğe bağlı olarak bir ad bağımsız değişkeni belirtin. İçin <xref:System.Data.DataSet>bir ad belirtmezseniz, ad "NewDataSet" olarak ayarlanır.  
@@ -31,4 +31,4 @@ DataSet customerOrders = new DataSet("CustomerOrders");
 
 - [DataAdapter’dan bir DataSet Doldurma](../populating-a-dataset-from-a-dataadapter.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

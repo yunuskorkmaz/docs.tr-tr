@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd1f5faa0efe141dc064f0150b94807b90e7e2b8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934449"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794826"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter ile Verileri Değiştirme
 Bir <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> <xref:System.Data.Common.DbDataAdapter> nesne yöntemi, fabrikanızı oluşturduğunuz sırada belirtilen temel alınan veri sağlayıcısına kesin olarak yazılmış bir nesne sağlar. <xref:System.Data.Common.DbProviderFactory> Daha sonra bir veri kaynağına <xref:System.Data.Common.DbCommandBuilder> veri <xref:System.Data.DataSet> eklemek, güncelleştirmek ve silmek için komut oluşturmak üzere bir kullanabilirsiniz.  
@@ -32,7 +32,7 @@ Bir <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> <xref:Syste
   
 |Veri sağlayıcısı|Parametre adlandırma sözdizimi|  
 |-------------------|-----------------------------|  
-|`SqlClient`|Parametre adı olarak `@`adlandırılmış parametreleri kullanır.|  
+|`SqlClient`|Parametre adı olarak `@`adlandırılmış parametreleri *kullanır.*|  
 |`OracleClient`|, *Parmname* (veya `:` *parmname*) biçiminde adlandırılmış parametreleri kullanır.|  
 |`OleDb`|Bir soru işaretiyle (`?`) belirtilen Konumsal parametre işaretçilerini kullanır.|  
 |`Odbc`|Bir soru işaretiyle (`?`) belirtilen Konumsal parametre işaretçilerini kullanır.|  
@@ -44,7 +44,7 @@ Bir <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> <xref:Syste
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DbProviderFactories](dbproviderfactories.md)
+- [DbProviderFactory Alma](obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand ve DbException](dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

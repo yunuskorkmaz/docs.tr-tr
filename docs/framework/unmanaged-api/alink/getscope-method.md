@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741847"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777215"
 ---
 # <a name="getscope-method"></a>GetScope Metodu
-Bir içeri aktarma kapsamı alır.  
+İçeri aktarma kapsamı alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme için alınacak benzersiz kimliği.  
+ İçeri aktarılacak derlemenin benzersiz KIMLIĞI.  
   
  `FileToken`  
- Alınacak benzersiz kimliği dosyanın.  
+ İçeri aktarılacak dosyanın benzersiz KIMLIĞI.  
   
  `dwScope`  
- İçeri aktarmak için sıfır tabanlı kapsam.  
+ İçeri aktarılacak sıfır tabanlı kapsam.  
   
  `ppImportScope`  
- Alan [Imetadataımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) kapsam için arabirim.  
+ Kapsam için [IMetaDataImport arabirimi](../metadata/imetadataimport-interface.md) arabirimini alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

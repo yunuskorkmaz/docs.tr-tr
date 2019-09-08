@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 075f952e6d5b3e863ca720bb206f33471809d09e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 633ff0f787b33d45a247f7a3f890a58973c87479
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754088"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796634"
 ---
 # <a name="iassemblyenumreset-method"></a>IAssemblyEnum::Reset Yöntemi
-Bu sıfırlar [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) başlangıç konumuna nesne.  
+Bu [IAssemblyEnum](iassemblyenum-interface.md) nesnesini başlangıç konumuna sıfırlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -36,12 +36,12 @@ HRESULT Reset (
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [IAssemblyEnum Arabirimi](iassemblyenum-interface.md)

@@ -2,24 +2,24 @@
 title: WasConnectionTimedout
 ms.date: 03/30/2017
 ms.assetid: be762c57-5641-4761-bd74-ce42603d40bc
-ms.openlocfilehash: 925020738b69e3db97ac9b0f6e084825eaa90c3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db3b689eabeeca31e9b7879739360edce8bbd310
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944332"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796036"
 ---
 # <a name="wasconnectiontimedout"></a>WasConnectionTimedout
-Kimliği: 163  
+Numarasını 163  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: SMSvcHost  
+ Alan SMSvcHost  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, Windows İşlem Etkinleştirme Hizmeti (WAS) gerektiren bir bağlantı, işlem adı ve kimliği listeleme zaman aşımına uğradı gösterir.  
+ Bu olay, Windows Işlem etkinleştirme hizmeti 'nin (WAS) zaman aşımına uğraması gerektiğini, işlem adını ve KIMLIĞINI listelemek için bir bağlantı gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

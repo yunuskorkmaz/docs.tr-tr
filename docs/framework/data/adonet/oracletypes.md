@@ -2,12 +2,12 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: 2f3820a0a61241643894533cc431ecc88b58fcef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938885"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783270"
 ---
 # <a name="oracletypes"></a>OracleTypes
 Oracle için .NET Framework Veri Sağlayıcısı, Oracle veri türleriyle çalışmak için kullanabileceğiniz çeşitli yapılar içerir. Bunlar ve <xref:System.Data.OracleClient.OracleNumber> <xref:System.Data.OracleClient.OracleString>içerir.  
@@ -117,5 +117,5 @@ public void ReadOracleTypesExample(string connectionString)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle ve ADO.NET](oracle-and-adonet.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

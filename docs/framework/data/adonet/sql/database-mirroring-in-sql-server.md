@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 31fb8af4653cefc8027f4061b46b9a29d8d07f8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 81e8bd5ba9274c84ffe18f617978b61238ebeff2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963994"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782435"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server’da Veritabanı Yansıtması
 SQL Server veritabanı yansıtma, bir SQL Server veritabanının kopyasını veya yansıtmasını bekleyen bir sunucuda tutmanıza olanak sağlar. Yansıtma, verilerin iki ayrı kopyasının her zaman olmasını sağlar ve yüksek kullanılabilirlik ve tamamen veri artıklığı sağlar. SQL Server için .NET Veri Sağlayıcısı, veritabanı yansıtma için örtülü destek sağlar; böylece Geliştirici, bir SQL Server veritabanı için yapılandırıldıktan sonra herhangi bir eylemde bulunan veya herhangi bir kod yazmanıza gerek kalmaz. Ayrıca <xref:System.Data.SqlClient.SqlConnection> , nesnesi, <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>içinde bir yük devretme ortağı sunucusunun adı sağlamaya izin veren bir açık bağlantı modunu destekler.  
@@ -65,4 +65,4 @@ string activeServer = connection.DataSource;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

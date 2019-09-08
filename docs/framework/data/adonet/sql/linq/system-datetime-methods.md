@@ -2,20 +2,20 @@
 title: System.DateTime Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 85af6f252362b811356d68a3ae220df2bb813882
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876778"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792424"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime Yöntemleri
-LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, işleçler ve özellikleri kullanılabilir. Yöntemi, işleci veya özelliği desteklenmeyen olduğunda, LINQ to SQL üyesi için SQL Server üzerinde yürütme çeviremez. Kodunuzda bu üyeleri kullanabilir, Transact-SQL veya veritabanından sonuçları alındıktan sonra sorgu çevrilir önce ancak bunlar değerlendirilmelidir.  
+Aşağıdaki LINQ to SQL desteklenen yöntemler, işleçler ve Özellikler LINQ to SQL sorgularda kullanılabilir. Bir yöntem, işleç veya özellik desteklenmiyorsa LINQ to SQL, üyeyi SQL Server yürütme için çeviremez. Kodunuzda bu üyeleri kullanabilirsiniz, ancak sorgu Transact-SQL ' e çevrilmeden veya sonuçlar veritabanından alındıktan sonra değerlendirilmelidir.  
   
-## <a name="supported-systemdatetime-members"></a>Desteklenen System.DateTime üyeleri  
- Nesne modeli ya da dış eşleme dosyası eşlenen sonra LINQ to SQL aşağıdaki çağırmanızı sağlar <xref:System.DateTime?displayProperty=nameWithType> to SQL sorgularında LINQ içinde üyeleri.  
+## <a name="supported-systemdatetime-members"></a>Desteklenen System. DateTime üyeleri  
+ Nesne modelinde veya dış eşleme dosyasında eşlendikten sonra LINQ to SQL, aşağıdaki <xref:System.DateTime?displayProperty=nameWithType> üyeleri LINQ to SQL sorguları içinde çağırabilmeniz için izin verir.  
   
-|Desteklenen <xref:System.DateTime> yöntemleri|Desteklenen <xref:System.DateTime> işleçleri|Desteklenen <xref:System.DateTime> özellikleri|  
+|Desteklenen <xref:System.DateTime> Yöntemler|Desteklenen <xref:System.DateTime> işleçler|Desteklenen <xref:System.DateTime> Özellikler|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
@@ -31,8 +31,8 @@ LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, 
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## <a name="members-not-supported-by-linq-to-sql"></a>LINQ to SQL tarafından desteklenmeyen üyeleri  
- Aşağıdaki üyeleri LINQ içinde SQL sorguları desteklenmez.  
+## <a name="members-not-supported-by-linq-to-sql"></a>LINQ to SQL tarafından desteklenmeyen Üyeler  
+ LINQ to SQL sorgularda aşağıdaki Üyeler desteklenmez.  
   
 |||  
 |-|-|  
@@ -46,17 +46,17 @@ LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, 
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## <a name="method-translation-example"></a>Çeviri örnek yöntemi  
- SQL Server için göndermeden önce tüm yöntemleri LINQ to SQL tarafından desteklenen Transact-SQL çevrilir. Örneğin, aşağıdaki desenin göz önünde bulundurun.  
+## <a name="method-translation-example"></a>Yöntem çevirisi örneği  
+ LINQ to SQL tarafından desteklenen tüm yöntemler, SQL Server gönderilmeden önce Transact-SQL ' e çevrilir. Örneğin, aşağıdaki kalıbı göz önünde bulundurun.  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
- Tanındığında, SQL Server için doğrudan bir çağrı çevrilir `DATEDIFF` işlev, şu şekilde:  
+ Tanındığında, aşağıdaki şekilde SQL Server `DATEDIFF` işlevine doğrudan bir çağrıya çevrilir:  
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>SQLMethods tarih ve saat yöntemleri  
- Tarafından sunulan yöntemlerine ek olarak <xref:System.DateTime> yapısı, LINQ to SQL sunar ve aşağıdaki tablodan listelenen yöntemleri <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> tarih ve saat ile çalışmak için sınıf.  
+ <xref:System.DateTime> Yapı tarafından sunulan yöntemlerin yanı sıra, LINQ to SQL tarih ve saat ile çalışmaya yönelik <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> sınıftan aşağıdaki tabloda listelenen yöntemleri sunar.  
   
 ||||  
 |-|-|-|  
@@ -66,7 +66,7 @@ LINQ to SQL sorguları kullanmak, aşağıdaki LINQ to SQL desteklenen yöntem, 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Sorgu Kavramları](query-concepts.md)
+- [Nesne Modeli Oluşturma](creating-the-object-model.md)
+- [SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)

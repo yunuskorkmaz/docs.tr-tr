@@ -3,12 +3,12 @@ title: LINQ ile Çalışma
 description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma yöntemleriyle diziler oluşturma ve Eager ile yavaş değerlendirme arasında ayrım yapma öğretilir.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f80567510509ba0c7f205ccbd5e587f9ad31f531
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587186"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785871"
 ---
 # <a name="working-with-linq"></a>LINQ ile Çalışma
 
@@ -30,7 +30,7 @@ Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çal�
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core](https://www.microsoft.com/net/core) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux, OS X veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
+.NET Core 'u çalıştırmak için makinenizi ayarlamanız gerekir. Yükleme yönergelerini [.NET Core indirme](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Ubuntu Linux, OS X veya bir Docker kapsayıcısında çalıştırabilirsiniz. En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/) kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
 
 ## <a name="create-the-application"></a>Uygulamayı oluşturma
 

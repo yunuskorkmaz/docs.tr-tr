@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 44e99db2d75fcd8e84f91f0afc8da54ff6c3f707
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8128fd3cab0ca20da87a1a98c2657aefab96beaf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931164"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779823"
 ---
 # <a name="query-projections-wcf-data-services"></a>Sorgu tahminleri (WCF Veri Hizmetleri)
 
@@ -38,7 +38,7 @@ Varlık türlerinin, varlık anahtarını oluşturan bir veya daha fazla kimlik 
 
 - Türün adında `ID`bir özelliği olduğunda.
 
-- Türün Type adlı`ID`bir özelliği varsa, burada tür adıdır .
+- Türün *Type adlı*`ID`bir özelliği varsa, burada *tür adıdır* .
 
 Varsayılan olarak, sorgu sonuçlarını istemcide tanımlı bir türe proje yaparken, projeksiyde istenen özellikler istemci türünde bulunmalıdır. Ancak, `true` <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> özelliği içinbirdeğeribelirttiğinizde,projeksiyondabelirtilenözelliklerinistemcitüründegerçekleşmesigerekmez.<xref:System.Data.Services.Client.DataServiceContext>
 
@@ -102,7 +102,7 @@ Aşağıda, sonuçlar varlık ve varlık olmayan türlere yansıtılanmakta olan
 
 Bir sorgu projeksiyonu tanımlarken aşağıdaki ek konular geçerlidir.
 
-- Atom biçimi için özel akışlar tanımladığınızda, tanımlanmış özel eşlemelere sahip tüm varlık özelliklerinin projeksiyonda eklendiğinden emin olmanız gerekir. Eşlenen bir varlık özelliği projeksiyonde yer olmadığında veri kaybı oluşabilir. Daha fazla bilgi için bkz. [akış özelleştirmesi](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).
+- Atom biçimi için özel akışlar tanımladığınızda, tanımlanmış özel eşlemelere sahip tüm varlık özelliklerinin projeksiyonda eklendiğinden emin olmanız gerekir. Eşlenen bir varlık özelliği projeksiyonde yer olmadığında veri kaybı oluşabilir. Daha fazla bilgi için bkz. [akış özelleştirmesi](feed-customization-wcf-data-services.md).
 
 - Veri hizmetinin veri modelindeki varlık özelliklerinin tümünü içermeyen bir öngörülen türe ekleme yapıldığında, istemcideki projeksiyonde bulunmayan özellikler varsayılan değerlerine ayarlanır...
 
@@ -112,10 +112,10 @@ Bir sorgu projeksiyonu tanımlarken aşağıdaki ek konular geçerlidir.
 
 - Projeksiyon bir gezinti özelliği içerdiğinde, ilgili nesneler <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi çağırmak zorunda kalmadan örtük olarak yüklenir. Yöntem <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> , tasarlanan bir sorguda kullanım için desteklenmiyor.
 
-- İstemcideki sorgu tahminleri sorguları, istek URI 'sindeki `$select` sorgu seçeneğini kullanacak şekilde çevrilir. Yansıtma içeren bir sorgu, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] `$select` sorgu seçeneğini desteklemeyen önceki bir sürümüne karşı yürütüldüğünde bir hata döndürülür. Bu durum, veri hizmeti <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> için öğesinin bir değerine <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>ayarlandığı durumlarda da gerçekleşebilir. Daha fazla bilgi için bkz. [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+- İstemcideki sorgu tahminleri sorguları, istek URI 'sindeki `$select` sorgu seçeneğini kullanacak şekilde çevrilir. Yansıtma içeren bir sorgu, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] `$select` sorgu seçeneğini desteklemeyen önceki bir sürümüne karşı yürütüldüğünde bir hata döndürülür. Bu durum, veri hizmeti <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> için öğesinin bir değerine <xref:System.Data.Services.Common.DataServiceProtocolVersion.V1>ayarlandığı durumlarda da gerçekleşebilir. Daha fazla bilgi için bkz. [veri hizmeti sürümü oluşturma](data-service-versioning-wcf-data-services.md).
 
-Daha fazla bilgi için [nasıl yapılır: Proje sorgu sonuçları](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md).
+Daha fazla bilgi için [nasıl yapılır: Proje sorgu sonuçları](how-to-project-query-results-wcf-data-services.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+- [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)

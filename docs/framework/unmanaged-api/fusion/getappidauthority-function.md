@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 536f3249593333234f7f09921007b483fb80cf79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8471610008bee02c7cc4e7654b21d6aca5dcf53a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778594"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796278"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority İşlevi
-Bir işaretçi alır bir [Iappıdauthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) uygulama kimlikleri ve başvurular için anahtarları yöneten bir örneği.  
+Uygulama kimlikleri ve başvuruları için anahtarları yöneten bir [ıappidaduthority](iappidauthority-interface.md) örneğine yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,16 +37,16 @@ HRESULT GetAppIdAuthority (
   
 ## <a name="parameters"></a>Parametreler  
  `ppIAppIdAuthority`  
- [out] Döndürülen `IAppIdAuthority` işaretçi.  
+ dışı Döndürülen `IAppIdAuthority` işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Isolation.h  
+ **Üst bilgi** Yalıtım. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAppIdAuthority Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAppIdAuthority Arabirimi](iappidauthority-interface.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40953d03904e3268770c8a1b6e212873ec66d2dd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 17e96f56c57d896397489e27bcc072d8e7df05ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761842"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796544"
 ---
 # <a name="iassemblynamesetproperty-method"></a>IAssemblyName::SetProperty Yöntemi
 Belirtilen özellik tanımlayıcısı tarafından başvurulan özelliğin değerini ayarlar.  
@@ -39,21 +39,21 @@ HRESULT SetProperty (
   
 ## <a name="parameters"></a>Parametreler  
  `PropertyId`  
- [in] Değeri ayarlanacak özelliğin benzersiz tanımlayıcısı.  
+ 'ndaki Değeri ayarlanacak özelliğin benzersiz tanımlayıcısı.  
   
  `pvProperty`  
- [in] Tarafından başvurulan özelliğini ayarlamak olan değer `PropertyId`.  
+ 'ndaki Tarafından `PropertyId`başvurulan özelliğin ayarlanacağı değer.  
   
  `cbProperty`  
- [in] Bayt cinsinden boyutu, `pvProperty`.  
+ 'ndaki Bayt cinsinden boyutu `pvProperty`.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName Arabirimi](iassemblyname-interface.md)

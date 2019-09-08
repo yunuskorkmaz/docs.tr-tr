@@ -2,24 +2,24 @@
 title: NonFatalUnexpectedStateMachineEvent
 ms.date: 03/30/2017
 ms.assetid: bfa37c10-cf1b-4325-b756-6ef200606510
-ms.openlocfilehash: 30a8fc53eb31f9d02a597f6d57c7abee30c41e47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4be0f7719ef20d0ebb0a048d6a2ca9bf75b24d05
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999126"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797666"
 ---
 # <a name="nonfatalunexpectedstatemachineevent"></a>NonFatalUnexpectedStateMachineEvent
-Kimliği: 148  
+Numarasını 148  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir Durum makinesi beklenmeyen bir olay işleme oluşmaya çalıştığını belirtir. Olay önemli kabul edilmez. İşlem kimliği, durum makine, geçerli durumu, geçmiş, olay adı, olay ayrıntıları, işlem adı ve işlem kimliği, olay listeler  
+ Bu olay bir durum makinesinin beklenmeyen bir olayı işlemeye çalıştı olduğunu gösterir. Olay önemli kabul edilmez. Olay işlem KIMLIĞI, durum makinesi, geçerli durum, geçmiş, olay adı, olay ayrıntıları, işlem adı ve işlem KIMLIĞI listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

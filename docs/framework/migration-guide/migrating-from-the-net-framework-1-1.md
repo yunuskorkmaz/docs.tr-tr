@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833514"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779467"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1'den Geçiş
 
-[!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümlerini .NET Framework 1.1 desteklemez. Sonuç olarak, .NET Framework 1.1 hedefleyen uygulamalar değişiklik olmadan çalışmaz [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir işletim sistemi sürümleri. Bu konu altında .NET Framework 1.1 hedefleyen bir uygulamayı çalıştırmak için gerekli adımları ele alınmaktadır [!INCLUDE[win7](../../../includes/win7-md.md)] ve Windows işletim sisteminin sonraki sürümleri. .NET Framework 1.1 hakkında daha fazla bilgi ve [!INCLUDE[win8](../../../includes/win8-md.md)], bkz: [Windows 8 ve sonraki sürümlerinde .NET Framework 1.1 uygulamalarını çalıştırma](../../../docs/framework/install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)]Windows işletim sisteminin ve sonraki sürümleri 1,1 .NET Framework desteklemez. Sonuç olarak, 1,1 .NET Framework hedefleyen uygulamalar hiçbir değişiklik [!INCLUDE[win7](../../../includes/win7-md.md)] yapılmadan veya sonraki işletim sistemi sürümlerinde çalışmaz. Bu konuda, Windows işletim sisteminin altında [!INCLUDE[win7](../../../includes/win7-md.md)] ve sonraki sürümlerinde 1,1 .NET Framework hedefleyen bir uygulamayı çalıştırmak için gereken adımlar ele alınmaktadır. 1,1 ve [!INCLUDE[win8](../../../includes/win8-md.md)].NET Framework hakkında daha fazla bilgi için, bkz. [Windows 8 ve sonraki sürümlerde .NET Framework 1,1 uygulamaları çalıştırma](../install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Yeniden hedefleme veya yeniden derleme
 
-Çalıştırmak için .NET Framework 1.1 kullanılarak derlenen bir uygulamayı almanın iki yolu vardır [!INCLUDE[win7](../../../includes/win7-md.md)] veya sonraki bir Windows işletim sistemi:
+.NET Framework 1,1 kullanılarak derlenen bir uygulamayı [!INCLUDE[win7](../../../includes/win7-md.md)] veya daha sonraki bir Windows işletim sistemini çalıştırmak için iki yol vardır:
 
-- Uygulamayı .NET Framework 4 ve sonraki sürümler altında çalışacak şekilde hedefleyebilirsiniz. Yeniden hegefleme gerektiriyor eklediğiniz bir [ \<supportedRuntime >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) .NET Framework 4 ve sonraki sürümler altında çalıştırılmasına izin verir uygulamanın yapılandırma dosyası öğesi. Bu tür bir yapılandırma dosyası, aşağıdaki biçimi alır:
+- .NET Framework 4 ve sonraki sürümlerde çalıştırmak için uygulamayı yeniden hedefleyebilirsiniz. Yeniden hedefleme, uygulamanın yapılandırma dosyasına .NET Framework 4 ve sonraki sürümlerde çalışmasına izin veren bir [ \<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi eklemenizi gerektirir. Bu tür bir yapılandırma dosyası aşağıdaki biçimi alır:
 
     ```xml
     <configuration>
@@ -32,19 +32,19 @@ ms.locfileid: "66833514"
     </configuration>
     ```
 
-- Bir derleyici ile uygulamayı hedefleyen .NET Framework 4 veya sonraki bir sürümünü yeniden derleyebilirsiniz. İlk olarak geliştirme ve çözümünüzü derlemek için Visual Studio 2003 kullandıysanız, çözümü Visual Studio 2010'da açabilirsiniz (ve muhtemelen sonraki sürümlerinde çok) ve **proje uyumluluğu** çözüm dönüştürmek için iletişim kutusu ve Microsoft Build Engine (MSBuild) biçimine Visual Studio 2003'te kullanılan biçimlerden konumundan proje dosyaları.
+- .NET Framework 4 veya sonraki bir sürümünü hedefleyen bir derleyici ile uygulamayı yeniden derleyebilirsiniz. Çözümünüzü geliştirmek ve derlemek için ilk olarak Visual Studio 2003 kullandıysanız, çözümü Visual Studio 2010 ' de (ve belki de sonraki sürümlerde) açabilir ve **Proje uyumluluğu** iletişim kutusunu kullanarak çözümü ve proje dosyalarını Visual Studio 2003 tarafından Microsoft Build Engine (MSBuild) biçiminde kullanılan biçimler.
 
-Olup, yeniden derleyin veya uygulamanızı yeniden hedeflediğinizde tercih ettiğinize bakılmaksızın, uygulamanızın sonraki .NET Framework sürümlerinde sunulan değişikliklerden etkilenip etkilenmediğini belirlemeniz gerekir. Bu değişiklikler iki çeşittir:
+Uygulamanızı yeniden derlemeyi veya yeniden hedeflemeniz tercih etmeksizin, uygulamanızın .NET Framework sonraki sürümlerinde tanıtılan değişikliklerden etkilenip etkilenmediğini belirlemeniz gerekir. Bu değişiklikler iki tür:
 
-- .NET Framework 1.1 ve sonraki sürümlerinde .NET Framework'ün arasında gerçekleşen değişikliklerin kesiliyor.
+- .NET Framework .NET Framework 1,1 ve sonraki sürümleri arasında gerçekleşen son değişiklikler.
 
-- Türleri ve kullanım dışı olarak işaretlenmiş veya sonraki sürümlerinde .NET Framework ve .NET Framework 1.1 arasında eski tür üyeleri.
+- .NET Framework 1,1 ve sonraki .NET Framework sürümleri arasında kullanım dışı veya kullanımdan kaldırılmış olarak işaretlenmiş türler ve tür üyeleri.
 
-Uygulamanızı yeniden hedeflediğinizde veya yeniden derlemeniz olsun, hem büyük değişiklikleri ve kullanılmayan türlerin ve üyelerin .NET Framework 1.1 sonra yayımlanmış olan .NET Framework'ün her sürümü için gözden geçirmelisiniz.
+Uygulamanızı yeniden hedeflemenize veya yeniden derlemenize bakılmaksızın, .NET Framework 1,1 ' den sonra yayınlanan .NET Framework her sürümü için hem son değişiklikleri hem de eski türleri ve üyeleri gözden geçirmeniz gerekir.
 
 ## <a name="breaking-changes"></a>Yeni Değişiklikler
 
-Bir değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak geçici bir çözüm kullanılabilir olan her ikisi için yeniden hedeflenmiş ve yeniden derlenmiş uygulamalar. Bazı durumlarda, bir alt öğesine ekleyebileceğiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasına öğesidir. Örneğin, dize sıralama şu yapılandırma dosyasını geri yükler ve karşılaştırma davranışını .NET Framework 1. 1 ' kullanılan ve bir yeniden hedeflenen ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
+Son değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak, yeniden hedeflenen ve yeniden derlenen uygulamalar için geçici bir çözüm bulunabilir. Bazı durumlarda, önceki davranışı geri yüklemek için uygulamanızın yapılandırma dosyasının [ \<çalışma zamanı >](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesine bir alt öğe ekleyebilirsiniz. Örneğin, aşağıdaki yapılandırma dosyası .NET Framework 1,1 ' de kullanılan dize sıralamayı ve karşılaştırma davranışını geri yükler ve yeniden hedeflenmiş ya da yeniden derlenmiş bir uygulama ile kullanılabilir.
 
 ```xml
 <configuration>
@@ -56,16 +56,16 @@ Bir değişiklik gerçekleştiğinde, belirli değişikliğe bağlı olarak geç
 
 Ancak, bazı durumlarda, kaynak kodunuzu değiştirmeniz ve uygulamanızı yeniden derlemeniz gerekebilir.
 
-Uygulamanızdaki olası yeni değişikliklerin etkisini değerlendirmek için şu değişiklik listesini gözden geçirmeniz gerekir:
+Uygulamanızdaki olası son değişikliklerin etkisini değerlendirmek için aşağıdaki değişiklik listelerini gözden geçirmeniz gerekir:
 
-- [.NET Framework 2.0 sürümünde yeni değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) .NET Framework 1.1 hedefleyen bir uygulamayı etkileyebilecek bir .NET Framework 2.0 SP1 içindeki belge değişiklikleri.
+- [.NET Framework 2,0 ' deki önemli değişiklikler](https://go.microsoft.com/fwlink/?LinkId=125263) , .NET Framework 1,1 ' i hedefleyen bir uygulamayı etkileyebilecek .NET Framework 2,0 SP1 'deki değişiklikleri belgelemektedir.
 
-- [.NET Framework 3.5 SP1 içindeki değişiklikleri](https://go.microsoft.com/fwlink/?LinkID=186989) .NET Framework 3.5 ve .NET Framework 3.5 SP1 arasındaki değişiklikleri belgeler.
+- [.NET Framework 3,5 SP1 'Deki değişiklikler](https://go.microsoft.com/fwlink/?LinkID=186989) , .NET Framework 3,5 ve .NET Framework 3,5 SP1 arasındaki değişiklikleri belgelemektedir.
 
-- [.NET framework 4 geçiş sorunları](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) .NET Framework 3.5 SP1'i ve .NET Framework 4 arasındaki değişiklikleri belgeler.
+- [.NET Framework 4 geçiş sorunları](net-framework-4-migration-issues.md) .NET Framework 3,5 SP1 ile .NET Framework 4 arasındaki değişiklikleri belgeler.
 
 ## <a name="obsolete-types-and-members"></a>Eski türler ve Üyeler
 
-Kullanım dışı türlerin ve üyelerin etkisi, yeniden hedeflenen uygulamalar için biraz farklıdır ve yeniden derlenmiş uygulamalar. Eski türler ve üyeler kullanımını, eski türü veya üye fiziksel olarak derlemesinden kaldırılmadığı sürece yeniden hedeflenen uygulamayı etkilemez. Genellikle eski türleri veya üyeleri kullanan bir uygulama yeniden derlendiğinde, derleyici bir derleyici hatası yerine uyarısı üretilir. Ancak, bazı durumlarda, bir derleyici hatası oluşturur ve eski türü veya üyeyi kullanan kod başarıyla derleme yapmaz. Bu durumda, uygulamanızı yeniden derlemeden önce kullanılmayan tür veya üyeyi çağıran kaynak kodunu yeniden yazmanız gerekir. Eski türler ve üyeler hakkında daha fazla bilgi için bkz. [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md).
+Kullanım dışı bırakılan türlerin ve üyelerin etkileri, yeniden hedeflenecek uygulamalar ve uygulamaları yeniden derlenmesi için biraz farklıdır. Eski tür veya üye derlemeden fiziksel olarak kaldırılmadığı takdirde, artık kullanılmayan türlerin ve üyelerin kullanılması yeniden hedeflenen uygulamayı etkilemez. Eski türleri veya üyeleri kullanan bir uygulamayı yeniden derleme, genellikle derleyici hatası yerine bir derleyici uyarısı üretir. Ancak, bazı durumlarda bir derleyici hatası oluşturur ve eski türü veya üyeyi kullanan kod başarıyla derlenmez. Bu durumda, uygulamanızı yeniden derlemeniz için önce eski türü veya üyeyi çağıran kaynak kodu yeniden yazmanız gerekir. Eski türler ve Üyeler hakkında daha fazla bilgi için bkz. [Sınıf kitaplığındaki artık kullanılmıyor](../whats-new/whats-obsolete.md).
 
-Tür ve .NET Framework 2.0 SP1 sürümünden itibaren kullanımdan üyelerin etkisini değerlendirmek için bkz: [Sınıf Kitaplığı'nda ne kullanılmıyor](../../../docs/framework/whats-new/whats-obsolete.md). Eski tür ve üye listelerini gözden geçirmek için .NET Framework 2.0 SP1, .NET Framework 3.5 ve .NET Framework 4.
+.NET Framework 2,0 SP1 'in yayımlanmasından bu yana kullanımdan kaldırılan türlerin ve üyelerin etkisini değerlendirmek için bkz. [Sınıf kitaplığındaki yenilikler nelerdir](../whats-new/whats-obsolete.md). .NET Framework 2,0 SP1, 3,5 .NET Framework ve .NET Framework 4 için eski türlerin ve üyenin listesini gözden geçirin.

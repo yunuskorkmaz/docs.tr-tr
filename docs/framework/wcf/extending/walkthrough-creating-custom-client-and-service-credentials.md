@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: e59d578407ece9f22925abff57737cca8bf78eac
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: d49df909521b3b5e5cf509c1367821856e91e30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795476"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma
 
@@ -42,11 +42,11 @@ Bu konu, özel istemci ve hizmet kimlik bilgilerinin nasıl uygulanacağını ve
 
 Özel kimlik bilgileri sınıfının oluşturulması, kimlik bilgilerini özelleştirme nedeni kimlik bilgileri sağlama, güvenlik belirteci serileştirme veya kimlik doğrulama ile ilgili WCF davranışını değiştirmek olduğu için yalnızca ilk adımdır. Bu bölümdeki diğer konular, özel serileştiriciler ve kimlik doğrulayıcılar oluşturmayı açıklamaktadır. Bu konuda, serinin ilk konusu olan özel kimlik bilgisi sınıfı oluşturma işlemi. Sonraki eylemler (özel serileştiriciler ve kimlik doğrulayıcılar oluşturma), yalnızca özel kimlik bilgileri oluşturulduktan sonra yapılabilir. Bu konu başlığı altında yer alan ek Konular şunları içerir:
 
-- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](how-to-create-a-custom-security-token-provider.md)
 
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](how-to-create-a-custom-security-token-authenticator.md)
 
-- [Nasıl yapılır: Özel bir belirteç](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)oluşturun.
+- [Nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
 
 ## <a name="procedures"></a>Yordamlar
 
@@ -70,11 +70,11 @@ Bu konu, özel istemci ve hizmet kimlik bilgilerinin nasıl uygulanacağını ve
 
 1. Öğesinden <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>türetilmiş yeni bir sınıf tanımlayın.
 
-2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)oluşturun.
+2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](how-to-create-a-custom-security-token-provider.md)oluşturun.
 
-3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcısı](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)oluşturun.
+3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcısı](how-to-create-a-custom-security-token-authenticator.md)oluşturun.
 
-4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)oluşturun.
+4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
 
     [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
     [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]
@@ -158,11 +158,11 @@ Yapılandırma işleyicisi sınıfına sahip olduktan sonra, WCF yapılandırma 
 
 1. <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> Sınıfından türetilmiş yeni bir sınıf tanımlayın.
 
-2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)oluşturun.
+2. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci sağlayıcıları hakkında daha fazla bilgi için bkz [. nasıl yapılır: Özel bir güvenlik belirteci sağlayıcısı](how-to-create-a-custom-security-token-provider.md)oluşturun.
 
-3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcı](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md) konusu oluşturun.
+3. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> Özel<xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> bir uygulama oluşturulması gerekiyorsa, yöntemi geçersiz kılın. Özel güvenlik belirteci kimlik doğrulayıcılar hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir güvenlik belirteci kimlik doğrulayıcı](how-to-create-a-custom-security-token-authenticator.md) konusu oluşturun.
 
-4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)oluşturun.
+4. İsteğe bağlı. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29> Özel<xref:System.IdentityModel.Selectors.SecurityTokenSerializer> bir oluşturulması gerekiyorsa yöntemi geçersiz kılın. Özel güvenlik belirteçleri ve özel güvenlik belirteci serileştiricileri hakkında daha fazla bilgi için [bkz. nasıl yapılır: Özel bir belirteç](how-to-create-a-custom-token.md)oluşturun.
 
     [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
     [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]
@@ -188,6 +188,6 @@ Daha önce "`To create a configuration handler for custom client credentials`" v
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Nasıl yapılır: Özel belirteç oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Nasıl yapılır: Özel güvenlik belirteci sağlayıcısı oluşturma](how-to-create-a-custom-security-token-provider.md)
+- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](how-to-create-a-custom-security-token-authenticator.md)
+- [Nasıl yapılır: Özel belirteç oluşturma](how-to-create-a-custom-token.md)

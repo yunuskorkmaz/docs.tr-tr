@@ -2,24 +2,24 @@
 title: MessageLoggingOff
 ms.date: 03/30/2017
 ms.assetid: 98cb139d-cb10-4d8c-9087-3dc3c6f23521
-ms.openlocfilehash: be81e25b907edff4e33b86d95efd8edee6898cfb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2d939c3cd505ea9c3f95fd16bdc73958b5bf8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999301"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797735"
 ---
 # <a name="messageloggingoff"></a>MessageLoggingOff
-Kimliği: 117  
+Numarasını 117  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay günlüğe ileti kaydetme kapatıldı olduğunu gösterir. Olay işlem kimliği ve işlem adını listeler.  
+ Bu olay ileti günlüğe kaydetmenin kapalı olduğunu gösterir. Olayda işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

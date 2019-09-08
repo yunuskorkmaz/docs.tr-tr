@@ -5,76 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: adf854429f2b13fd2421252a6281ad96d9d88500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dfd5d951750de2ab918c51dd9f4f2deeb8a6318
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655561"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793824"
 ---
 # <a name="formulate-projections"></a>Projeksiyonlar Düzenleme
-Aşağıdaki örneklerde gösterildiği nasıl `select` deyiminde C# ve `Select` deyimi Visual Basic'te, form sorgu projeksiyonları diğer özellikleri ile birleştirilebilir.  
+Aşağıdaki örneklerde, içindeki Visual Basic `select` C# ve `Select` içindeki deyimin, sorgu projeksiyonlarını biçimlendirmek için diğer özelliklerle nasıl birleştirileceği gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) için kişi adlarını bir dizisini döndürmek için `Customers`.  
+ `Select` Aşağıdaki örnek, için`select` C# birdiziiletişimadıdöndürmeküzereVisualBasic(içindekiyantümce)içindeyantümcesini`Customers`kullanır.  
   
  [!code-csharp[DLinqQueryExamples#57](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#57)]
  [!code-vb[DLinqQueryExamples#57](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#57)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) ve *anonim türler* kişi adlarını bir dizisini döndürmek için telefon numaraları için `Customers`.  
+ Aşağıdaki örnek, için `Select` C#`select` bir`Customers`dizi iletişim adı ve telefon numarası döndürmek üzere Visual Basic (içindeki yan tümce) ve *anonim türlerde* yan tümcesini kullanır.  
   
  [!code-csharp[DLinqQueryExamples#58](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#58)]
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) ve *anonim türler* adları bir dizisini döndürmek ve çalışanlar için telefonu numaraları. `FirstName` Ve `LastName` alanları tek bir alana birleştirilir (`Name`) ve `HomePhone` alan yeniden adlandırılamaz `Phone` elde edilen sırada.  
+ Aşağıdaki örnek, çalışanlar için `Select` bir ad ve telefon`select` numarası sırası C#döndürmek üzere Visual Basic (içindeki yan tümce) ve *anonim türlerde* yan tümcesini kullanır. `Name` `Phone` Ve alanları tek bir alan`HomePhone` () içinde birleştirilir ve alan, sonuçta elde edilen dizide olarak yeniden adlandırılır. `LastName` `FirstName`  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) ve *anonim türler* tüm bir dizisini döndürmek için `ProductID`s ve adlı hesaplanan değeri `HalfPrice`. Bu değeri şuna ayarlı `UnitPrice` 2 tarafından ayrılmış.  
+ Aşağıdaki örnek, içinde `Select` C#Visual Basic (`select` yan tümce) ve *anonim türler* içindeki yan tümcesini kullanarak tüm `ProductID`s 'leri ve adlı `HalfPrice`bir hesaplanmış değeri döndürür. Bu değer 2 ile `UnitPrice` bölünmüş olarak ayarlanır.  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) ve bir *koşullu ifade* ürün adı ve ürün kullanılabilirliği bir dizisini döndürmek için.  
+ Aşağıdaki örnek, bir ürün `Select` adı ve ürün kullanılabilirliği`select` dizisi döndürmek C#için Visual Basic (içindeki yan tümce) ve *koşul deyimi* içinde yan tümcesini kullanır.  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir Visual Basic kullanan `Select` yan tümcesi (`select` yan tümcesinde C#) ve bir *türü bilinen* çalışanlar adlarını bir dizisini döndürmek için (ad).  
+ Aşağıdaki örnek, çalışanların adlarının bir `Select` dizisini döndürmek`select` için bir C#Visual Basic yan tümcesini (içinde yan tümce) ve *bilinen bir türü* (adı) kullanır.  
   
  [!code-csharp[DLinqQueryExamples#62](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#62)]
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte `Select` ve `Where` Visual Basic'te (`select` ve `where` içinde C#) döndürülecek bir *dizisi filtrelenmiş* kişi adlarının Londra bulunan müşteriler için.  
+ Aşağıdaki örnek, Londra `Select` 'daki `Where` müşterilere yönelik olarak`select` filtrelenmiş `where` bir C#iletişim adları *dizisi* döndürmek için Visual Basic (ve içinde) kullanır.  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte bir `Select` Visual Basic'te yan tümcesi (`select` yan tümcesinde C#) ve *anonim türler* döndürülecek bir *alt şeklinde* müşterilerle ilgili veri.  
+ Aşağıdaki örnek, müşteriler hakkında `Select` verilerin *şekillendirilmiş bir alt kümesini* döndürmek C#için Visual Basic (`select` içindeki yan tümce) ve *anonim türlerde* bir yan tümce kullanır.  
   
  [!code-csharp[DLinqQueryExamples#64](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#64)]
  [!code-vb[DLinqQueryExamples#64](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#64)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte iç içe sorgu sonrasında şu sonuçların döndürülmesi için kullanır:  
+ Aşağıdaki örnek, aşağıdaki sonuçları döndürmek için iç içe geçmiş sorguları kullanır:  
   
-- Tüm siparişleri ve bunlara karşılık gelen bir dizi `OrderID`s.  
+- Tüm siparişlerin ve bunlara karşılık gelen `OrderID`sözleşmelerinin sırası.  
   
-- İndirim siparişi öğeler bir alt dizi.  
+- Bir iskontonun bulunduğu sıradaki öğelerin alt sırası.  
   
-- Sevkiyat ücreti dahil edilmezse kaydedilmiş para miktarı.  
+- Sevkiyat maliyeti dahil değilse kaydedilen para miktarı.  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+- [Sorgu Örnekleri](query-examples.md)

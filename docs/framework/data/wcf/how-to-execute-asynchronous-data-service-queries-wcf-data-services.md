@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: b5530dea50a6fab8478639def9624f8715ae3f3e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 14bfc138c5ece45184fb939f19aaf3d7e73e7294
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952389"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790577"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
-> Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yönteminin yürütülmesini açıkça sıramalısınız. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+> Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yönteminin yürütülmesini açıkça sıramalısınız. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
- Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, sorguyu başlatmak için <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemini çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir. Satır içi temsilci, sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sonuçlarını göstermek için yöntemini çağırır.  
@@ -31,4 +31,4 @@ ms.locfileid: "69952389"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)

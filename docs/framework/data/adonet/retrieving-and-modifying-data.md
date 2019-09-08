@@ -2,66 +2,66 @@
 title: ADO.NET’te Veri Alma ve Değiştirme
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: a5ac8fbd2a53d2670471c1ef5e59508f582ed944
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 78012a6a5ecdfac0e4cd7c4939ae3ab0036ab716
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881430"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782856"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET’te Veri Alma ve Değiştirme
-Herhangi bir veritabanı uygulama birincil işlevi bir veri kaynağına bağlanmak ve içerdiği veriler alınıyor. ADO.NET, .NET Framework veri sağlayıcıları kullanarak veri almak için de komutları yürütmek olanak tanıyan bir uygulama ve bir veri kaynağı arasında bir köprü olarak hizmet verecek bir **DataReader** veya **DataAdapter** . Herhangi bir veritabanı uygulama anahtar işlevi veritabanında depolanan verileri güncelleştirmek için olanağıdır. ADO.NET ile veri güncelleştirme kullanılmasına **DataAdapter** ve <xref:System.Data.DataSet>, ve **komut** nesneler; ve bu da gerektirebilir işlemleri kullanma.  
+Herhangi bir veritabanı uygulamasının birincil işlevi bir veri kaynağına bağlanıyor ve içerdiği verileri alıyor. ADO.NET veri sağlayıcıları bir uygulama ile veri kaynağı arasında bir köprü olarak görev yapar ve ayrıca, bir **DataReader** veya **DataAdapter**kullanarak veri alma ve komutları yürütmenize olanak tanır. .NET Framework Herhangi bir veritabanı uygulamasının anahtar işlevi, veritabanında depolanan verileri güncelleştirebilme olanağıdır. ADO.net ' de, verilerin güncelleştirilmesi **DataAdapter** ve <xref:System.Data.DataSet> **Command** nesnelerinin yanı sıra işlemleri kullanmayı da gerektirebilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
- Nasıl bir veri kaynağına bağlantı kurmak ve bağlantı olayları ile çalışma konusunda açıklanmaktadır.  
+ [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)  
+ Bir veri kaynağına nasıl bağlantı kurulacağını ve bağlantı olaylarıyla nasıl çalışabileceğinizi açıklar.  
   
- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)  
- Bağlantı dizeleri kullanarak, bağlantı dizesi anahtar sözcükler, güvenlik bilgileri de dahil olmak üzere ve depolamak ve bunları almak çeşitli yönlerini açıklayan konuları içerir.  
+ [Bağlantı Dizeleri](connection-strings.md)  
+ Bağlantı dizesi anahtar sözcükleri, güvenlik bilgileri ve bunları depolama ve alma gibi bağlantı dizelerini kullanmanın çeşitli yönlerini açıklayan konuları içerir.  
   
- [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)  
- .NET Framework veri sağlayıcıları için bağlantı havuzu açıklar.  
+ [Bağlantı Havuzu](connection-pooling.md)  
+ .NET Framework veri sağlayıcıları için bağlantı havuzunu açıklar.  
   
- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- Komutlar ve komut oluşturucular oluşturma parametreleri yapılandırmak nasıl ve almak ve verileri değiştirmek için komutları yürütmek nasıl eklendiğini açıklayan konulara içerir.  
+ [Komutlar ve Parametreler](commands-and-parameters.md)  
+ Komutların ve komut oluşturucuların nasıl oluşturulacağını, parametrelerin nasıl yapılandırılacağını ve verilerin alınması ve değiştirilmesi için komutların nasıl yürütüleceğini açıklayan konuları içerir.  
   
- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- DataReader, DataAdapters parametrelerini açıklayan, DataAdapter olaylarını işleme ve toplu işlemleri gerçekleştirme konuları içerir.  
+ [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)  
+ DataReaders, DataAdapter, Parameters, DataAdapter olaylarını işleme ve Batch işlemleri gerçekleştirme konularını açıklayan konuları içerir.  
   
- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- Yerel işlemler, dağıtılmış işlemler gerçekleştirmek ve iyimser eşzamanlılık ile çalışmak nasıl eklendiğini açıklayan konulara içerir.  
+ [İşlemler ve Eşzamanlılık](transactions-and-concurrency.md)  
+ Yerel işlemlerin nasıl gerçekleştirileceğini, dağıtılmış işlemlerin ve iyimser eşzamanlılık ile nasıl çalıştığını açıklayan konuları içerir.  
   
- [Kimliği veya Otomatik Sayı Değerlerini Alma](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Eşleme için oluşturulan değerleri bir örnek sağlar bir **kimlik** için bir SQL Server tablo veya sütun bir **sayı** tablodaki eklenen bir satır içeren bir sütun için bir Microsoft Access tablosundaki. Birleştirme kimlik değerleri açıklar bir `DataTable`.  
+ [Kimliği veya Otomatik Sayı Değerlerini Alma](retrieving-identity-or-autonumber-values.md)  
+ Bir SQL Server tablosundaki bir **kimlik** sütunu için veya bir Microsoft Access tablosundaki bir **OtomatikSayı** alanı için oluşturulan değerleri bir tabloda bulunan satır sütunuyla eşlemek için bir örnek sağlar. İçindeki kimlik değerlerini birleştirmeyi açıklar `DataTable`.  
   
- [İkili Verileri Alma](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- İkili verileri veya büyük veri yapılarını kullanarak alınacak açıklar `CommandBehavior`.`SequentialAccess` varsayılan davranışını değiştirmek için bir `DataReader`.  
+ [İkili Verileri Alma](retrieving-binary-data.md)  
+ Kullanılarak `CommandBehavior`ikili verilerin veya büyük veri yapılarının nasıl alınacağını açıklar.`SequentialAccess` Varsayılan davranışını `DataReader`değiştirmek için.  
   
- [Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- Saklı yordam giriş parametreleri ve çıkış parametreleri bir veritabanında yeni bir kimlik değeri döndüren bir satır eklemek için nasıl kullanılacağını açıklar.  
+ [Saklı Yordamlarla Verileri Değiştirme](modifying-data-with-stored-procedures.md)  
+ Yeni bir kimlik değeri döndüren bir veritabanına satır eklemek için saklı yordam giriş parametrelerinin ve çıkış parametrelerinin nasıl kullanılacağını açıklar.  
   
- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- Kullanılabilir veritabanlarını veya kataloglar, tabloları ve görünümleri bir veritabanındaki tabloları ve diğer şema bilgileri bir veri kaynağından mevcut kısıtlamalar alma yolları açıklanır.  
+ [Veritabanı Şema Bilgilerini Alma](retrieving-database-schema-information.md)  
+ Kullanılabilir veritabanlarının veya katalogların, tabloların ve görünümlerin bir veritabanında, tablolar için var olan kısıtlamaların ve bir veri kaynağından alınan diğer şema bilgilerinin nasıl alınacağını açıklar.  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- Sağlayıcı fabrikası modelini açıklar ve taban sınıflardaki kullanmayı gösteren `System.Data.Common` ad alanı.  
+ [DbProviderFactories](dbproviderfactories.md)  
+ Sağlayıcı fabrikası modelini açıklar ve `System.Data.Common` ad alanındaki temel sınıfların nasıl kullanılacağını gösterir.  
   
- [ADO.NET’te Veri İzleme](../../../../docs/framework/data/adonet/data-tracing.md)  
- ADO.NET veri yerleşik izleme işlevselliği nasıl sağladığını açıklar.  
+ [ADO.NET’te Veri İzleme](data-tracing.md)  
+ ADO.NET 'in yerleşik veri izleme işlevselliği nasıl sağladığını açıklar.  
   
- [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)  
- İçin kullanılabilen performans sayaçlarının açıklar `SqlClient` ve `OracleClient`.  
+ [Performans Sayaçları](performance-counters.md)  
+ `SqlClient` Ve`OracleClient`için kullanılabilir performans sayaçlarını açıklar.  
   
- [Zaman uyumsuz programlama](../../../../docs/framework/data/adonet/asynchronous-programming.md)  
+ [Zaman uyumsuz programlama](asynchronous-programming.md)  
  Zaman uyumsuz programlama için ADO.NET desteğini açıklar.  
   
- [SqlClient Akış Desteği](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- SQL Server'dan veri akışı, tam olarak belleğe zorunda kalmadan uygulamaları yazmak nasıl ele alınmaktadır.  
+ [SqlClient Akış Desteği](sqlclient-streaming-support.md)  
+ Verilerin belleğe tam olarak yüklenmesini gerektirmeden SQL Server veri akışı yapan uygulamaların nasıl yazılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Türü Eşlemeleri](data-type-mappings-in-ado-net.md)
+- [DataSets, DataTables ve DataViews](./dataset-datatable-dataview/index.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
+- [SQL Server ve ADO.NET](./sql/index.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

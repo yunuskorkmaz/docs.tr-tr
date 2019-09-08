@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 851abcae9c3edea5c971bd2bc4523c3cec757cc9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770972"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796810"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>IAssemblyCache::CreateAssemblyScavenger Yöntemi
-Fusion teknoloji tarafından iç kullanım için ayrılmıştır.  
+Fusion teknolojisinin iç kullanımı için ayrılmıştır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,15 +37,15 @@ HRESULT CreateAssemblyScavenger (
   
 ## <a name="parameters"></a>Parametreler  
  `ppUnkReserved`  
- [out] Döndürülen `IUnknown` işaretçi.  
+ dışı Döndürülen `IUnknown` işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache Arabirimi](iassemblycache-interface.md)

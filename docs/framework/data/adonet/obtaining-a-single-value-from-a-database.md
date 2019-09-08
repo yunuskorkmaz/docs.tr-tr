@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b38526cd-a62a-48cb-822a-e91dfa68e02d
-ms.openlocfilehash: 5eb81fd2a64f06f1252f71e251e58df568e7407c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb43d21546a0e98e87aab23db9213309b62320b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772079"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794740"
 ---
 # <a name="obtaining-a-single-value-from-a-database"></a>Veritabanından Tek Değer Alma
-Yalnızca tek bir değer dönüş veritabanı bilgileri yerine bir tablo veya veri akışını biçiminde gerekebilir. Örneğin, sonuç sayısı gibi bir toplama işlevinin isteyebilirsiniz (\*), SUM(Price) veya AVG(Quantity). **Komut** nesnesi kullanarak tek değerler döndürülecek yeteneği sağlar **ExecuteScalar** yöntemi. **ExecuteScalar** yöntemi döndürür, skaler değer olarak, sonuç kümesi ilk satırının ilk sütununu değeri.  
+Tablo veya veri akışı biçiminde değil, yalnızca tek bir değer olan veritabanı bilgilerini döndürmeniz gerekebilir. Örneğin, Count (\*), Sum (price) veya AVG (Quantity) gibi bir toplama işlevinin sonucunu döndürmek isteyebilirsiniz. **Komut** nesnesi, **ExecuteReader metodunu** yöntemini kullanarak tek değerler döndürme yeteneği sağlar. **ExecuteReader metodunu** yöntemi, bir skaler değer olarak sonuç kümesinin ilk satırının ilk sütununun değeri olarak döndürür.  
   
- Aşağıdaki kod örneği kullanarak veritabanını yeni bir değer ekler. bir <xref:System.Data.SqlClient.SqlCommand>. <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A> Yöntemi eklenen kaydın Kimlik sütununda değer döndürmek için kullanılır.  
+ Aşağıdaki kod örneği, kullanarak <xref:System.Data.SqlClient.SqlCommand>veritabanına yeni bir değer ekler. <xref:System.Data.SqlClient.SqlCommand.ExecuteScalar%2A> Yöntemi, ekli kaydın kimlik sütunu değerini döndürmek için kullanılır.  
   
  [!code-csharp[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/CS/source.cs#1)]
  [!code-vb[DataWorks SqlCommand.ExecuteScalar#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlCommand.ExecuteScalar/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Komutlar ve Parametreler](commands-and-parameters.md)
+- [Komut Yürütme](executing-a-command.md)
+- [DbConnection, DbCommand ve DbException](dbconnection-dbcommand-and-dbexception.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

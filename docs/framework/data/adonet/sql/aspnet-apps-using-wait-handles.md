@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877766"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794397"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Bekleme Tanıtıcıları Kullanan ASP.NET Uygulamaları
-Uygulamanız bir anda yalnızca bir zaman uyumsuz işlemi işlenirken zaman uyumsuz işlemleri işlemek için yoklama modelleri ve geri çağırma yararlıdır. Bekleme modeller, birden çok zaman uyumsuz işleme için daha esnek bir yol sağlar. Adlı iki bekleme modeli vardır <xref:System.Threading.WaitHandle> bunları uygulamak için kullanılan yöntemleri: bekleme (Any) modeli ve bekleme (Tümü) modeli.  
+Zaman uyumsuz işlemleri işlemek için geri çağırma ve yoklama modelleri, uygulamanız aynı anda yalnızca bir zaman uyumsuz işlem işlerken yararlıdır. Bekleme modelleri birden çok zaman uyumsuz işlemi işlemenin daha esnek bir yolunu sağlar. Bunları uygulamak için kullanılan <xref:System.Threading.WaitHandle> yöntemler için adlandırılmış iki bekleme modeli vardır: bekleme (any) modeli ve Wait (ALL) modeli.  
   
- Ya da bekleme modelini kullanmak için kullanmanız gerekir <xref:System.IAsyncResult.AsyncWaitHandle%2A> özelliği <xref:System.IAsyncResult> tarafından döndürülen nesne <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, veya <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> yöntemleri. <xref:System.Threading.WaitHandle.WaitAny%2A> Ve <xref:System.Threading.WaitHandle.WaitAll%2A> yöntemleri göndermenizi gerektiren <xref:System.Threading.WaitHandle> nesneler bir bağımsız değişken olarak birlikte gruplandırılmış bir dizi.  
+ Bekleme modelini kullanmak için,, veya <xref:System.IAsyncResult.AsyncWaitHandle%2A> <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> <xref:System.IAsyncResult> <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> yöntemleri<xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> tarafından döndürülen nesnesinin özelliğini kullanmanız gerekir. Ve yöntemlerinin her ikisi de <xref:System.Threading.WaitHandle> nesneleri bir dizide birlikte gruplanmış bir bağımsız değişken olarak göndermenizi gerektirir. <xref:System.Threading.WaitHandle.WaitAll%2A> <xref:System.Threading.WaitHandle.WaitAny%2A>  
   
- Her iki bekleme yöntemi zaman uyumsuz işlemlerin tamamlanması bekleniyor izleyin. <xref:System.Threading.WaitHandle.WaitAny%2A> Yöntemi herhangi bir işlemlerinin tamamlanması veya zaman aşımı için bekler. Belirli bir işlem tamamlandığında, öğrendikten sonra sonuçları işleyebilir ve ardından sonraki işlemin tamamlanması veya zaman aşımı için beklemeye devam. <xref:System.Threading.WaitHandle.WaitAll%2A> Yöntemi bekler tüm işlemlerin dizisindeki <xref:System.Threading.WaitHandle> örnekleri tamamlanması veya devam etmeden önce zaman aşımı.  
+ Her iki bekleme yöntemi de zaman uyumsuz işlemleri izler, tamamlanması bekleniyor. <xref:System.Threading.WaitHandle.WaitAny%2A> Yöntemi işlemin tamamlanmasını bekler veya zaman aşımına uğrar. Belirli bir işlemin tamamlandığını öğrendikten sonra, sonuçlarını işleyebilir ve sonra bir sonraki işlemin tamamlanmasını veya zaman aşımını beklemeye devam edebilirsiniz. Yöntemi, devam etmeden önce <xref:System.Threading.WaitHandle> örneklerin dizisindeki tüm işlemlerin tamamlanmasını veya zaman aşımına gelmesini bekler. <xref:System.Threading.WaitHandle.WaitAll%2A>  
   
- Bekleme modelleri çoğu çarpıcı, farklı sunucularda bazı uzunlukta birden çok işlemi çalıştırmak ihtiyacınız olduğunda ya da aynı anda tüm sorguları işlemek için güçlü sunucunuzdur avantajdır. Burada verilen örneklerde, üç sorgu değişimlerle SELECT sorgusu için değişen uzunluktaki WAITFOR komutlar ekleyerek uzun işlemler taklit.  
+ Farklı sunucularda bir uzunluğun birden çok işlemini çalıştırmanız gerektiğinde veya sunucunuz aynı anda tüm sorguları işlemek için yeterince güçlü olduğunda, bekleme modellerinin avantajı en fazla çaba harcar. Burada sunulan örneklerde, üç sorgu uzun işlemlere benzeerek değişen uzunluklara ilişkin WAITFOR sorguları ' ı SEÇIN.  
   
-## <a name="example-wait-any-model"></a>Örnek: Bekleme (herhangi) modeli  
- Aşağıdaki örnek, bekleme (herhangi) modelini gösterir. Üç zaman uyumsuz işlem başladıktan sonra <xref:System.Threading.WaitHandle.WaitAny%2A> herhangi biri tamamlanması için beklenecek yöntemi çağrılır. Her işlem tamamlandığında <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> yöntemi çağrılır ve ortaya çıkan <xref:System.Data.SqlClient.SqlDataReader> nesne okunur. Bu noktada, gerçek yaşam uygulaması büyük olasılıkla kullanacağınız <xref:System.Data.SqlClient.SqlDataReader> sayfasının bir bölümü doldurmak için. Bu basit örnekte işleminin tamamlanmasını zaman işleme karşılık gelen bir metin kutusuna eklenir. Birlikte ele alındığında noktası metin kutularına zamanları gösterilmiştir: Kod, bir işlemin tamamlanmasını her zaman yürütülür.  
+## <a name="example-wait-any-model"></a>Örnek: Bekleme (any) modeli  
+ Aşağıdaki örnekte, bekleme (any) modeli gösterilmektedir. Üç zaman uyumsuz işlem başlatıldıktan sonra, <xref:System.Threading.WaitHandle.WaitAny%2A> yöntemi, bunlardan herhangi birinin tamamlanmasını beklemek için çağrılır. Her işlem tamamlandığında, <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> yöntemi çağrılır ve elde edilen <xref:System.Data.SqlClient.SqlDataReader> nesne okunurdur. Bu noktada, gerçek dünya uygulaması büyük olasılıkla sayfanın bir bölümünü doldurmak <xref:System.Data.SqlClient.SqlDataReader> için kullanabilir. Bu basit örnekte, işlemin tamamlandığı zaman işleme karşılık gelen bir metin kutusuna eklenir. Birlikte getirildiğinde, metin kutularındaki süreler noktayı gösterir: Her işlem tamamlandığında kod yürütülür.  
   
- Bu örnekte ayarlamak için yeni bir ASP.NET Web sitesi projesi oluşturun. Bir yerde bir <xref:System.Web.UI.WebControls.Button> denetimi ve dört <xref:System.Web.UI.WebControls.TextBox> (her denetim için varsayılan adı kabul etme) sayfadaki denetimleri.  
+ Bu örneği ayarlamak için yeni bir ASP.NET Web sitesi projesi oluşturun. Sayfaya bir <xref:System.Web.UI.WebControls.Button> denetim ve dört <xref:System.Web.UI.WebControls.TextBox> denetim yerleştirin (her denetim için varsayılan adı kabul edin).  
   
- Ortamınız için gerektiği gibi bağlantı dizesini değiştirerek formun sınıfına aşağıdaki kodu ekleyin.  
+ Aşağıdaki kodu formun sınıfına ekleyin ve ortamınız için gerektiği şekilde bağlantı dizesini değiştirme.  
   
 ```vb  
 ' Add these to the top of the class  
@@ -312,14 +312,14 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>Örnek: Bekleme (Tümü) modeli  
- Aşağıdaki örnekte, bekleme (Tümü) modeli gösterilmektedir. Üç zaman uyumsuz işlem başladıktan sonra <xref:System.Threading.WaitHandle.WaitAll%2A> işlemlerin tamamlanmasını bekleyin veya zaman aşımı yöntemi çağrılır.  
+## <a name="example-wait-all-model"></a>Örnek: Bekle (tümü) modeli  
+ Aşağıdaki örnekte Wait (tümü) modeli gösterilmektedir. Üç zaman uyumsuz işlem başlatıldıktan sonra, <xref:System.Threading.WaitHandle.WaitAll%2A> işlemlerin tamamlanmasını veya zaman aşımına gelmesini beklemek için yöntemi çağırılır.  
   
- (Any) modeli bekleme örneği gibi işleminin tamamlanmasını zaman işleme karşılık gelen bir metin kutusuna eklenir. Tekrar metin kutularına zamanları noktası göstermektedir: Kod aşağıdaki <xref:System.Threading.WaitHandle.WaitAny%2A> yöntemi yalnızca tüm işlemler tamamlandıktan sonra yürütülür.  
+ Bekleme (any) modeli örneğinde olduğu gibi, işlemin tamamlandığı süre işleme karşılık gelen bir metin kutusuna eklenir. Yine, metin kutularındaki süreler noktayı gösterir: <xref:System.Threading.WaitHandle.WaitAny%2A> Yöntemi izleyen kod yalnızca tüm süreçler tamamlandıktan sonra yürütülür.  
   
- Bu örnekte ayarlamak için yeni bir ASP.NET Web sitesi projesi oluşturun. Bir yerde bir <xref:System.Web.UI.WebControls.Button> denetimi ve dört <xref:System.Web.UI.WebControls.TextBox> (her denetim için varsayılan adı kabul etme) sayfadaki denetimleri.  
+ Bu örneği ayarlamak için yeni bir ASP.NET Web sitesi projesi oluşturun. Sayfaya bir <xref:System.Web.UI.WebControls.Button> denetim ve dört <xref:System.Web.UI.WebControls.TextBox> denetim yerleştirin (her denetim için varsayılan adı kabul edin).  
   
- Ortamınız için gerektiği gibi bağlantı dizesini değiştirerek formun sınıfına aşağıdaki kodu ekleyin.  
+ Aşağıdaki kodu formun sınıfına ekleyin ve ortamınız için gerektiği şekilde bağlantı dizesini değiştirme.  
   
 ```vb  
 ' Add these to the top of the class  
@@ -581,5 +581,5 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zaman Uyumsuz İşlemler](asynchronous-operations.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -1,6 +1,6 @@
 ---
 title: GetMethod işlevi (yönetilmeyen API Başvurusu)
-description: GetMethod işlevi bir yöntem hakkındaki bilgileri alır.
+description: GetMethod işlevi bir yöntem hakkında bilgi alır.
 ms.date: 11/06/2017
 api_name:
 - GetMethod
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 419fb33155cfa91199e52110da29efd44d606f4b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636606"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798573"
 ---
 # <a name="getmethod-function"></a>GetMethod işlevi
 
-Belirtilen yöntem hakkındaki bilgileri alır.
+Belirtilen yöntem hakkında bilgi alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -45,48 +45,48 @@ HRESULT GetMethod (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-[in] Yöntem adı. Bu parametre olamaz `null` ve geçerli bir işaret etmelidir `LPCWSTR`.
+'ndaki Yöntem adı. Bu parametre geçerli olamaz `null` ve geçerli `LPCWSTR`bir işaret etmelidir.
 
 `lFlags`\
-[in] Ayrılmış. Bu parametre 0 olmalıdır.
+'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `ppInSignature`\
-[out] Adresine bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yönteme parametreleri açıklayan örneği. Bu ayarlanırsa, bu parametre yoksayılır `null`.
+dışı Yöntemine yönelik parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre, olarak `null`ayarlandıysa yok sayılır.
 
 `ppOutSignature`\
-[out] Adresine bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemin out Parametreleri açıklayan örneği. Bu ayarlanırsa, bu parametre yoksayılır `null`.
+dışı Yönteme giden parametreleri açıklayan bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğinin adresine yönelik bir işaretçi. Bu parametre, olarak `null`ayarlandıysa yok sayılır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik bulunamadı. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemi.
+Bu işlev, [IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) yöntemine bir çağrı kaydırır.
 
-Windows Yönetim ayarlayabilirsiniz [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçisine `null` yöntemi hiçbir parametreleri varsa.
+Windows yönetimi, metotta parametre yoksa, [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) işaretçisini `null` ' a ayarlayabilir.
 
-İçinde `ppInSignature` ve `ppOutSignature` iç ve dış parametrelerin, sırasıyla özellikleri olarak açıklayan bir `IWbemClassObject` sistem sınıfının örneğini [_upravit](/windows/desktop/WmiSdk/--parameters). Özelliklerinde `ppInSignature` adlandırılır `Param` *n*burada *n* parametresi yöntem imzası konumudur (gibi `Param1`, `Param2`vb..). Özelliklerinde `ppOutSignature` olarak da adlandırılır `Param` *n*, ve dönüş değeri olarak adlandırılan `ReturnValue`. Daha fazla bilgi ve örnek için bkz. [IWbemClassObject::GetMethod yöntemi](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+`IWbemClassObject` Ve `ppInSignature` '`ppOutSignature` de, bir sistem sınıfı [_parametreleri](/windows/desktop/WmiSdk/--parameters)örneğindeki özellikler olarak sırasıyla ve içinde ve dışarı parametreleri açıklama. `ppInSignature` İçindeki Özellikler *n*olarak adlandırılır `Param`; burada *n* , yöntem imzasında `Param1` `Param2`parametre konumudur (örneğin, vb.). İçindeki `ppOutSignature` özellikler de n olarak adlandırılır `Param`ve dönüş değeri olarak adlandırılır. `ReturnValue` Daha fazla bilgi ve örnek için bkz. [IWbemClassObject:: GetMethod metodu](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** WMINet_Utils.idl
+**Üst bilgi** WMINet_Utils. IDL
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

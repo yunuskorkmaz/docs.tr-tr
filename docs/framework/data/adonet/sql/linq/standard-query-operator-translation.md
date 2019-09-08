@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 4df1653b7bd6865ad9f5d7d3fb9be6815dcfe018
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661871"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781021"
 ---
 # <a name="standard-query-operator-translation"></a>Standart Sorgu İşleci Çevirisi
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Standart sorgu işleçleri SQL komutlara çevirir. Sorgu işlemcisi veritabanının SQL çeviri yürütme semantikleri belirler.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Standart sorgu Işleçlerini SQL komutlarına çevirir. Veritabanının sorgu işlemcisi SQL çevirisi 'nin yürütme semantiğini belirler.
 
-Standart sorgu işleçleri karşı tanımlanmış *dizileri*. Bir sıra *sıralı* ve dizinin her öğesi için başvuru kimliği kullanır. Daha fazla bilgi için [standart sorgu işleçlerine genel bakış (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [standart sorgu işleçlerine genel bakış (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
+Standart sorgu Işleçleri *sıralara*göre tanımlanır. Bir sıra *sıralanır* ve dizideki her öğe için başvuru kimliğini kullanır. Daha fazla bilgi için bkz. [Standart sorgu işleçlerineC#genel bakış ()](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) veya [Standart sorgu işleçleri genel bakış (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).
 
-SQL ilgilenen öncelikli olarak *değer kümeleri sıralanmamış*. Sıralamadır genellikle bir açıkça belirtilen, bir sorgu sonucunu yerine Ara sonuçlar uygulanan sonrası işlem. Kimlik değerleri tarafından tanımlanır. Bu nedenle SQL sorguları multisets ile dağıtılacak anlaşılabilir (*paketleri*) yerine *ayarlar*.
+SQL, birincil olarak *sırasız değer kümeleriyle anlaşmalar yapar*. Sıralama genellikle, ara sonuçlar yerine bir sorgunun nihai sonucuna uygulanan, açıkça belirtilmiş, işleme sonrası bir işlemdir. Kimlik, değerler tarafından tanımlanır. Bu nedenle SQL sorguları, *kümeler*yerine çoklu kümeler (*bAdım*) ile uğraşmak üzere anlaşılmıştır.
 
-Standart sorgu işleçleri ve kendi SQL çeviri için SQL Server sağlayıcısı arasındaki farklar aşağıdaki paragraflara açıklayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+Aşağıdaki paragraflarda, için [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server sağlayıcısı Için standart sorgu işleçleri ve SQL çevirisi arasındaki farklılıklar açıklanır.
 
 ## <a name="operator-support"></a>İşleç desteği
 
-### <a name="concat"></a>concat
+### <a name="concat"></a>Concat
 
-<xref:System.Linq.Enumerable.Concat%2A> Yöntemi alıcı sırası ve bağımsız değişken sırası olduğu aynı sıralı multisets için tanımlanır. <xref:System.Linq.Enumerable.Concat%2A> gibi çalışır `UNION ALL` genel sıraya göre ve ardından multisets üzerinden.
+<xref:System.Linq.Enumerable.Concat%2A> Yöntemi, alıcı sırasının ve bağımsız değişkenin sırası aynı olduğu sıralı çoklu kümeler için tanımlanır. <xref:System.Linq.Enumerable.Concat%2A>Çoklu kümeler `UNION ALL` üzerinde olduğu gibi çalışarak ortak sıra kullanılır.
 
-Son adım, sonuçları üretti önce SQL sıralaması. <xref:System.Linq.Enumerable.Concat%2A> bağımsız değişkenlerinin sırası korumaz. Uygun sıralama emin olmak için açıkça sonuçlarını sıralamanız gerekir <xref:System.Linq.Enumerable.Concat%2A>.
+Son adım, sonuçlar üretilmadan önce SQL 'de sıralamaktır. <xref:System.Linq.Enumerable.Concat%2A>bağımsız değişkenlerinin sırasını korumaz. Uygun sıralamayı sağlamak için, sonuçlarını <xref:System.Linq.Enumerable.Concat%2A>açıkça sipariş etmeniz gerekir.
 
-### <a name="intersect-except-union"></a>INTERSECT, birleşim dışında
+### <a name="intersect-except-union"></a>Intersect, Except, birleşim
 
-<xref:System.Linq.Enumerable.Intersect%2A> Ve <xref:System.Linq.Enumerable.Except%2A> yöntemlerdir kümelerinde yalnızca iyi tanımlanmış. Semantiği multisets için tanımlı değil.
+<xref:System.Linq.Enumerable.Intersect%2A> Ve<xref:System.Linq.Enumerable.Except%2A> yöntemleri yalnızca kümeler üzerinde iyi tanımlanmış. Multisets semantiği tanımsızdır.
 
-<xref:System.Linq.Enumerable.Union%2A> Yöntemi multisets için (etkili bir şekilde SQL UNION ALL yan tümcesinin sonucu) multisets sırasız birleşimi olarak tanımlanır.
+<xref:System.Linq.Enumerable.Union%2A> Yöntemi multisets 'ler için, birden çok küme için tanımlanır (SQL 'deki UNION ALL yan tümcesinin sonucu etkin değildir).
 
-### <a name="take-skip"></a>Sınav zamanı, Atla
+### <a name="take-skip"></a>Al, atla
 
-<xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> yöntemlerdir karşı yalnızca iyi tanımlanmış *kümeleri sıralı*. Sırasız kümeleri veya multisets semantiği tanımsızdır.
+<xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> yöntemleri yalnızca *sıralı kümelere*karşı iyi tanımlanmış. Sıralanmamış kümeler veya birden çok küme semantiği tanımsızdır.
 
 > [!NOTE]
-> <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 sorguları içinde kullanıldığında belirli sınırlamaları vardır. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+> <xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 ' de sorgularda kullanıldıkları bazı sınırlamalar vardır. Daha fazla bilgi için bkz. [sorun giderme](troubleshooting.md)içindeki "SQL Server 2000 'de özel durumları atla ve al" girişi.
 
-SQL'de sıralama sınırlamaları nedeniyle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bağımsız değişkeni yöntemin sonucu için bu yöntemlerin sıralama taşımak çalışır. Örneğin, aşağıdakileri dikkate alın [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu:
+SQL 'de sıralamaya yönelik sınırlamalar nedeniyle, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bu yöntemlerin bağımsız değişkeninin sıralamasını yöntemin sonucuna taşımaya çalışır. Örneğin, aşağıdaki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguyu göz önünde bulundurun:
 
 [!code-csharp[DLinqSQOTranslation#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#1)]
 [!code-vb[DLinqSQOTranslation#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#1)]
 
-Bu kod için oluşturulan SQL gibi sonuna sıralama taşır:
+Bu kod için oluşturulan SQL, aşağıdaki gibi sıralamayı sonuna taşıdır:
 
 ```sql
 SELECT TOP 1 [t0].[CustomerID], [t0].[CompanyName],
@@ -66,50 +66,50 @@ WHERE (NOT (EXISTS(
 ORDER BY [t0].[CustomerID]
 ```
 
-Tüm belirtilen sıralama ne zaman tutarlı olmasını belirgin hale gelir <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> birbirine zincirlenmiş. Aksi takdirde, sonuçlar tanımsızdır.
+Belirtilen tüm sıralama, ve <xref:System.Linq.Enumerable.Take%2A> <xref:System.Linq.Enumerable.Skip%2A> birlikte zincirleme zaman tutarlı hale gelmelidir. Aksi takdirde, sonuçlar tanımsızdır.
 
-Her ikisi de <xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> standart sorgu işleci belirtimine göre negatif olmayan, sabit tamsayı bağımsız değişkenler için iyi tanımlanmış olması.
+Her ikisi de <xref:System.Linq.Enumerable.Take%2A> , standart sorgu işleci belirtimine göre negatif olmayan, sabit tamsayı bağımsız değişkenleri için iyi tanımlanmıştır. <xref:System.Linq.Enumerable.Skip%2A>
 
-### <a name="operators-with-no-translation"></a>Çeviri sahip işleçler
+### <a name="operators-with-no-translation"></a>Çevirisi olmayan işleçler
 
-Aşağıdaki yöntemleri tarafından bunların çevirisi yapılmaz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En yaygın nedeni, sırasız multisets dizileri arasındaki farktır.
+Aşağıdaki yöntemler tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çevrilmez. En yaygın neden, sıralanmamış çoklu kümeler ve diziler arasındaki farktır.
 
-|İşleçler|Stratejinin|
+|İşleçler|Mantığı anladığınızdan|
 |---------------|---------------|
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|Diziler üzerinde değil, multisets üzerinde SQL sorguları çalışır. `ORDER BY` Son yan tümce sonuçları uygulanması gerekir. Bu nedenle, bu iki yöntem için genel amaçlı çeviri yoktur.|
-|<xref:System.Linq.Enumerable.Reverse%2A>|Bu yöntemin çeviri sıralı bir küme için mümkündür, ancak şu anda tarafından çevrilmez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|Bu yöntemlerin çeviri sıralı bir küme için mümkündür, ancak şu anda tarafından çevrilmez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
-|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL sorguları dizinlenebilir dizileri göre değil, multisets üzerinde çalışır.|
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (varsayılan bağımsız değişken ile aşırı yükleme)|Genel olarak, rastgele bir demet için bir varsayılan değer belirtilemez. Diziler için null değerler, bazı durumlarda dış birleştirmeler ile mümkündür.|
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL sorguları diziler üzerinde değil, çoklu kümeler üzerinde çalışır. `ORDER BY`sonuçlara uygulanan son yan tümce olmalıdır. Bu nedenle, bu iki yöntem için genel amaçlı bir çeviri yoktur.|
+|<xref:System.Linq.Enumerable.Reverse%2A>|Bu yöntemin çevirisi, sıralı bir küme için mümkündür ancak şu anda tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çevrilmez.|
+|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|Bu yöntemlerin çevirisi, sıralı bir küme için mümkündür ancak şu anda tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çevrilmez.|
+|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL sorguları, dizine eklenebilir diziler üzerinde değil, çoklu kümeler üzerinde çalışır.|
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>(varsayılan bağımsız değişken ile aşırı yükleme)|Genel olarak, rastgele bir tanımlama grubu için varsayılan bir değer belirtilemez. Dış birleştirmeler aracılığıyla bazı durumlarda, diziler için null değerler mümkündür.|
 
 ## <a name="expression-translation"></a>İfade çevirisi
 
-### <a name="null-semantics"></a>Null semantikler
+### <a name="null-semantics"></a>Null semantiği
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL null karşılaştırma semantiği uygulamaz. Karşılaştırma işleçleri sözdizimsel olarak SQL eşdeğerlerine dönüştürülür. Bu nedenle, sunucu veya bağlantı ayarları tarafından tanımlanan SQL semantiği semantiği yansıtır. Örneğin, iki null değerler varsayılan SQL Server Ayarları altında eşit olarak kabul edilir, ancak semantiği değiştirmek için ayarları değiştirebilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları dönüştürdüğünde sunucu ayarlarını dikkate almaz.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL 'de null karşılaştırma semantiğini uygulamaz. Karşılaştırma işleçleri, sözdizimsel olarak SQL eşdeğerlerine çevrilir. Bu nedenle, semantik, sunucu veya bağlantı ayarları tarafından tanımlanan SQL semantiğini yansıtır. Örneğin, iki null değer varsayılan SQL Server ayarları altında eşit olarak değerlendirilir, ancak semantiğini değiştirmek için ayarları değiştirebilirsiniz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]sorguları çevirdiğinde sunucu ayarlarını dikkate almaz.
 
-Değişmez değeri null ile bir karşılaştırması için uygun SQL sürümü çevrilir (`is null` veya `is not null`).
+Null değerli bir karşılaştırma, uygun SQL sürümüne (`is null` veya `is not null`) çevrilir.
 
-Değerini `null` harmanlamasında SQL Server tarafından tanımlanır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] harmanlama değiştirmez.
+Harmanlama `null` içindeki değeri SQL Server tarafından tanımlanır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]harmanlamayı değiştirmez.
 
 ### <a name="aggregates"></a>Toplamlar
 
-Standart sorgu işleci toplama yöntemi <xref:System.Linq.Enumerable.Sum%2A> sıfıra yalnızca null içeren bir dizi veya boş bir dizi için değerlendirir. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], SQL semantiği sol değiştirmeden, ve <xref:System.Linq.Enumerable.Sum%2A> değerlendiren `null` yerine yalnızca null içeren bir dizi veya boş bir dizi için sıfır.
+Standart sorgu işleci toplama yöntemi <xref:System.Linq.Enumerable.Sum%2A> boş bir sıra veya yalnızca null değer içeren bir sıra için sıfır olarak değerlendirilir. ' [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]De, SQL 'in semantiği değişmeden bırakılır ve <xref:System.Linq.Enumerable.Sum%2A> boş bir sıra veya `null` yalnızca null değerleri içeren bir sıra için sıfır yerine olarak değerlendirilir.
 
-Toplamalar Ara sonuçlar SQL sınırlamalar uygulanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. <xref:System.Linq.Enumerable.Sum%2A> 32-bit tamsayı miktarlar hesaplanan 64-bit sonuçları kullanarak. Taşma için oluşabilir bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirisi <xref:System.Linq.Enumerable.Sum%2A>bile standart sorgu işleci uygulaması karşılık gelen bir bellek içi dizisi taşmaya neden olmaz.
+Ara sonuçlarda SQL sınırlamaları, içindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]toplamalar için geçerlidir. <xref:System.Linq.Enumerable.Sum%2A> 32 bitlik tamsayı miktarları 64 bit sonuçlar kullanılarak hesaplanmaz. Standart sorgu işleci uygulamasının karşılık [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gelen bellek <xref:System.Linq.Enumerable.Sum%2A>içi dizide taşma olmasına neden olmasa bile, bir çevirisi için taşma gerçekleşebilir.
 
-Benzer şekilde, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] çevirisi <xref:System.Linq.Enumerable.Average%2A> tamsayı değerleri olarak hesaplanır bir `integer`, olarak değil bir `double`.
+Benzer şekilde, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tamsayı değerlerinin <xref:System.Linq.Enumerable.Average%2A> çevirisi bir `double`olarak değil bir `integer`olarak hesaplanır.
 
 ### <a name="entity-arguments"></a>Varlık bağımsız değişkenleri
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varlık türleri kullanılmak üzere etkinleştirir <xref:System.Linq.Enumerable.GroupBy%2A> ve <xref:System.Linq.Enumerable.OrderBy%2A> yöntemleri. Bu işleçler çeviriyi türünde bir bağımsız değişken kullanımı belirterek bu türün tüm üyeleri için eşdeğer olarak kabul edilir. Örneğin, aşağıdaki kod eşdeğerdir:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.Enumerable.GroupBy%2A> ve<xref:System.Linq.Enumerable.OrderBy%2A> yöntemlerinde varlık türlerinin kullanılmasını sağlar. Bu işleçlerin çevirisinde, bir türün bağımsız değişkeninin kullanımı, bu türün tüm üyelerini belirtmeye eşdeğer olarak kabul edilir. Örneğin, aşağıdaki kod eşdeğerdir:
 
 [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
 [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]
 
-### <a name="equatable--comparable-arguments"></a>Equatable / karşılaştırılabilir bağımsız değişkenleri
+### <a name="equatable--comparable-arguments"></a>Equatable/karşılaştırılabilir bağımsız değişkenler
 
-Aşağıdaki yöntemlerden birini uygulamasında eşitlik bağımsız değişkenleri gereklidir:
+Aşağıdaki yöntemlerin uygulanmasında bağımsız değişkenlerin eşitliği gereklidir:
 
 - <xref:System.Linq.Enumerable.Contains%2A>
 
@@ -121,21 +121,21 @@ Aşağıdaki yöntemlerden birini uygulamasında eşitlik bağımsız değişken
 
 - <xref:System.Linq.Enumerable.Except%2A>
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Eşitlik ve karşılaştırma için destekleyen *düz* bağımsız değişkenler, ancak veya dizileri içeren olmayan bağımsız değişkenler için. Düz bir bağımsız değişken için bir SQL satırını eşlenmiş bir türdür. Bir projeksiyon bir dizisini içermez statik olarak belirlenebilir bir veya daha fazla varlık türleri, düz bir bağımsız değişken olarak kabul edilir.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*düz* bağımsız değişkenler için eşitlik ve karşılaştırmayı destekler, ancak dizileri olan veya içeren bağımsız değişkenler için değildir. Düz bir bağımsız değişken, bir SQL satırına eşlenebilir bir türdür. Statik olarak belirlenebileceği bir veya daha fazla varlık türünün projeksiyonu düz bir bağımsız değişken olarak kabul edilir.
 
-Düz bağımsız değişkenleri örnekleri aşağıda verilmiştir:
+Düz bağımsız değişkenlerin örnekleri aşağıda verilmiştir:
 
 [!code-csharp[DLinqSQOTranslation#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#3)]
 [!code-vb[DLinqSQOTranslation#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#3)]
 
-Olmayan-düz (hiyerarşik) bağımsız örnekleri aşağıda verilmiştir.
+Aşağıda, düz olmayan (hiyerarşik) bağımsız değişkenlerin örnekleri verilmiştir.
 
 [!code-csharp[DLinqSQOTranslation#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#4)]
 [!code-vb[DLinqSQOTranslation#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#4)]
 
-### <a name="visual-basic-function-translation"></a>Visual Basic işlevi çeviri
+### <a name="visual-basic-function-translation"></a>Visual Basic Işlev çevirisi
 
-Visual Basic derleyici tarafından kullanılan aşağıdaki yardımcı İşlevler, karşılık gelen SQL işleç ve işlevlerini için çevrilir:
+Visual Basic Derleyicisi tarafından kullanılan aşağıdaki yardımcı işlevler, karşılık gelen SQL işleçleri ve işlevlerine çevrilir:
 
 - `CompareString`
 
@@ -152,27 +152,27 @@ Dönüştürme yöntemleri:
 |ToBoolean|ToSByte|ToByte|ToChar|
 |ToCharArrayRankOne|ToDate|ToDecimal|ToDouble|
 |ToInteger|ToUInteger|ToLong|ToULong|
-|ToShort|ToUShort|ToSingle|ToString|
+|ToShort|ToUShort|ToSingle|Yönte|
 
 ## <a name="inheritance-support"></a>Devralma Desteği
 
 ### <a name="inheritance-mapping-restrictions"></a>Devralma eşleme kısıtlamaları
 
-Daha fazla bilgi için [nasıl yapılır: Devralma hiyerarşilerini eşleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).
+Daha fazla bilgi için [nasıl yapılır: Harita devralma hiyerarşileri](how-to-map-inheritance-hierarchies.md).
 
 ### <a name="inheritance-in-queries"></a>Sorgularda devralma
 
-C# atamalar yalnızca yansıtma içinde desteklenir. Başka bir yerde kullanılan atamaları değil çevrilir ve göz ardı edilir. SQL yanı sıra işlev adlarını, SQL gerçekten yalnızca ortak dil çalışma zamanı (CLR) eşdeğerini gerçekleştirir <xref:System.Convert>. Diğer bir deyişle, SQL, bir tür değeri diğerine değiştirebilirsiniz. Başka bir tür olarak aynı bitleri yeniden yorumlamak güvenli olmayabilecek bir kavram yoktur çünkü cast CLR eşdeğeri yoktur. Bir C# dönüştürme works neden yalnızca yerel olarak olmasıdır. Düğümlerde değil.
+C#Atamalar yalnızca projeksiyde desteklenir. Başka bir yerde kullanılan yayınlar çevrilmez ve yok sayılır. SQL işlev adlarından de, SQL aslında yalnızca ortak dil çalışma zamanının (CLR) <xref:System.Convert>eşdeğerini uygular. Diğer bir deyişle, SQL bir tür değerini başka bir türe değiştirebilir. Başka bir türden farklı bitleri yeniden yorumlama kavramı olmadığından, CLR cast ' ın eşdeğeri yoktur. Bu, bir C# dönüştürmenin yalnızca yerel olarak çalışmasına neden olur. Bu uzak değildir.
 
-İşleçler `is` ve `as`ve `GetType` yöntemi sınırlı olmayan `Select` işleci. Bunlar ayrıca diğer sorgu işleçleri kullanılabilir.
+İşleçleri, `is` `Select` ve `as` ve`GetType` yöntemi işleçle kısıtlanmaz. Bunlar aynı zamanda diğer sorgu işleçleri içinde de kullanılabilir.
 
 ## <a name="sql-server-2008-support"></a>SQL Server 2008 desteği
 
-.NET Framework 3.5 SP1 ile başlayarak, LINQ to SQL eşlemesi yeni tarih ve saat türleri SQL Server 2008 ile sunulan destekler. Ancak, bu yeni türleri için eşlenen değerleri karşı çalışırken kullanabileceğiniz SQL sorgu işleçleri için LINQ için bazı sınırlamalar vardır.
+.NET Framework 3,5 SP1 ile başlayarak LINQ to SQL, SQL Server 2008 ile tanıtılan yeni tarih ve saat türleriyle eşlemeyi destekler. Ancak, bu yeni türlere eşlenen değerlere karşı çalışırken kullanabileceğiniz LINQ to SQL sorgu işleçleri için bazı sınırlamalar vardır.
 
-### <a name="unsupported-query-operators"></a>Desteklenmeyen sorgu işleçleri
+### <a name="unsupported-query-operators"></a>Desteklenmeyen sorgu Işleçleri
 
-Yeni SQL Server tarih ve saat türlerinin eşlenen değerleri aşağıdaki sorgu işleçleri desteklenmez: `DATETIME2`, `DATE`, `TIME`, ve `DATETIMEOFFSET`.
+Aşağıdaki sorgu işleçleri, yeni SQL Server Tarih ve saat türleriyle eşlenen değerlerde desteklenmez `DATETIME2`:, `DATE`, `TIME`, ve `DATETIMEOFFSET`.
 
 - `Aggregate`
 
@@ -184,13 +184,13 @@ Yeni SQL Server tarih ve saat türlerinin eşlenen değerleri aşağıdaki sorgu
 
 - `Sum`
 
-Bu SQL Server tarih ve saat türlerinin eşleme hakkında daha fazla bilgi için bkz. [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).
+Bu SQL Server Tarih ve saat türleriyle eşleştirme hakkında daha fazla bilgi için bkz. [SQL-CLR tür eşleme](sql-clr-type-mapping.md).
 
 ## <a name="sql-server-2005-support"></a>SQL Server 2005 desteği
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Aşağıdaki SQL Server 2005 özellikleri desteklemez:
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], aşağıdaki SQL Server 2005 özelliklerini desteklemez:
 
-- Saklı yordamlar SQL CLR için yazılır.
+- SQL CLR için yazılan saklı yordamlar.
 
 - Kullanıcı tanımlı tür.
 
@@ -198,47 +198,47 @@ Bu SQL Server tarih ve saat türlerinin eşleme hakkında daha fazla bilgi için
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 desteği
 
-Aşağıdaki SQL Server 2000 sınırlamalar (Microsoft SQL Server 2005'e kıyasla) etkileyen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] destekler.
+Aşağıdaki SQL Server 2000 sınırlamaları (Microsoft SQL Server 2005 ile karşılaştırıldığında) desteği etkiler [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .
 
-### <a name="cross-apply-and-outer-apply-operators"></a>Çapraz Uygula ve dış işleçleri Uygula
+### <a name="cross-apply-and-outer-apply-operators"></a>Çapraz uygulama ve dış uygulama Işleçleri
 
-Bu işleçler, SQL Server 2000'de kullanılamaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir dizi uygun birleştirmelerle değiştirilecek yeniden dener.
+Bu işleçler SQL Server 2000 ' de kullanılamaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]uygun birleştirmelere göre değiştirmek için bir dizi yeniden yazmaya çalışır.
 
-`Cross Apply` ve `Outer Apply` ilişki gezintiler için oluşturulur. Bu tür yeniden olası sorgu kümesi iyi tanımlı değil. Bu nedenle, SQL Server 2000 için desteklenen en küçük grup sorguların ilişki Gezinti içermeyen kümesidir.
+`Cross Apply`ve `Outer Apply` ilişki gezginlerini için oluşturulur. Bu tür yeniden yazar mümkün olan sorgu kümesi iyi tanımlanmamıştır. Bu nedenle, SQL Server 2000 için desteklenen minimum sorgu kümesi ilişki gezintisi içermeyen bir kümesidir.
 
-### <a name="text--ntext"></a>Text / ntext
+### <a name="text--ntext"></a>Text/ntext
 
-Veri türleri `text`  /  `ntext` karşı belirli sorgu işlemleri kullanılamaz `varchar(max)`  /  `nvarchar(max)`, Microsoft SQL Server 2005 tarafından desteklenir.
+Veri türleri `text`  /   / , Microsoft SQL Server 2005 tarafından desteklenen belirli sorgu işlemlerinde `varchar(max)`kullanılamaz. `ntext` `nvarchar(max)`
 
-Bu sınırlama için herhangi bir çözüm kullanılabilir. Özellikle, kullanamazsınız `Distinct()` eşlendiğine üyeleri içeren herhangi bir sonuç üzerinde `text` veya `ntext` sütunları.
+Bu sınırlama için hiçbir çözüm yok. Özellikle, `Distinct()` `text` veya sütunlarınaeşlenenÜyeleriçerenherhangibirsonuçüzerindekullanamazsınız.`ntext`
 
-### <a name="behavior-triggered-by-nested-queries"></a>İç içe geçmiş sorgular tarafından tetiklenen davranışı
+### <a name="behavior-triggered-by-nested-queries"></a>Iç Içe geçmiş sorgular tarafından tetiklenen davranış
 
-SQL Server 2000 (SP4) aracılığıyla bağlayıcı iç içe geçmiş sorgular tarafından tetiklenen olmasını sağlayan bazı özelliklere sahiptir. Bu idiosyncrasies tetikleyen SQL sorguları kümesini, iyi tanımlanmış değil. Bu nedenle, bir dizi tanımlanamaz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguları SQL Server özel durumlarına neden.
+SQL Server 2000 (SP4) bağlayıcı, iç içe geçmiş sorgular tarafından tetiklenen bazı idosynyenilere sahiptir. Bu deyimi tetikleyen SQL sorguları kümesi iyi tanımlanmamıştır. Bu nedenle, SQL Server özel durumlara neden olabilecek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu kümesini tanımlayamazsınız.
 
-### <a name="skip-and-take-operators"></a>Skip ve Take işleçleri
+### <a name="skip-and-take-operators"></a>Atla ve Al Işleçleri
 
-<xref:System.Linq.Enumerable.Take%2A> ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 sorguları içinde kullanıldığında belirli sınırlamaları vardır. "Atla ve SQL Server 2000'de özel durumlar'ı Al" girdisinde daha fazla bilgi için bkz. [sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).
+<xref:System.Linq.Enumerable.Take%2A>ve <xref:System.Linq.Enumerable.Skip%2A> SQL Server 2000 ' de sorgularda kullanıldıkları bazı sınırlamalar vardır. Daha fazla bilgi için bkz. [sorun giderme](troubleshooting.md)içindeki "SQL Server 2000 'de özel durumları atla ve al" girişi.
 
 ## <a name="object-materialization"></a>Nesne Gerçekleştirme
 
-Materialization bir veya daha fazla SQL sorguları tarafından döndürülen satırlar CLR nesnesi oluşturur.
+Materialization bir veya daha fazla SQL sorgusu tarafından döndürülen satırlardan CLR nesneleri oluşturur.
 
-- Aşağıdaki çağrıları *yerel olarak yürütüldüğü* materialization bir parçası olarak:
+- Aşağıdaki çağrılar, materialization 'ın bir parçası olarak *yerel olarak yürütülür* :
 
   - Oluşturucular
 
-  - `ToString` projeksiyonlar yöntemleri
+  - `ToString`projeksiylerdeki Yöntemler
 
-  - Projeksiyonlar içinde tür atamaları
+  - Yansıtmalarda tür atamaları
 
-- Aşağıdaki yöntemleri <xref:System.Linq.Enumerable.AsEnumerable%2A> yöntemdir *yerel olarak yürütüldüğü*. Bu yöntem, anında yürütülmesine neden olmaz.
+- <xref:System.Linq.Enumerable.AsEnumerable%2A> Yöntemi izleyen Yöntemler *yerel olarak yürütülür*. Bu yöntem, hemen yürütmeye neden olmaz.
 
-- Kullanabileceğiniz bir `struct` dönüş türü bir sorgu sonucunun veya sonuç türünün bir üyesi olarak. Varlık sınıfları için gereklidir. Anonim türler sınıf örneklerinin gerçekleştirilmiş ancak projeksiyonda adlandırılmış yapıları (varlıklar olmayan) kullanılabilir.
+- Bir `struct` Sorgu sonucunun dönüş türü olarak veya sonuç türünün üyesi olarak ' i kullanabilirsiniz. Varlıkların sınıflar olması gerekir. Anonim türler sınıf örnekleri olarak gerçekleştirilir, ancak adlandırılmış yapılar (varlık olmayan) projeksiyonde kullanılabilir.
 
-- Dönüş türü bir sorgu sonucunun üyesi türünde olabilir <xref:System.Linq.IQueryable%601>. Yerel koleksiyon olarak gerçekleştirilip.
+- Bir sorgu sonucunun dönüş türünün bir üyesi türünde <xref:System.Linq.IQueryable%601>olabilir. Yerel bir koleksiyon olarak gerçekleştirilmiş olur.
 
-- Aşağıdaki yöntemlerden neden *hemen materialization* yöntemleri uygulanan dizisi:
+- Aşağıdaki yöntemler, yöntemlerin uygulandığı dizinin *hemen* bir şekilde oluşturulmasına neden olur:
 
   - <xref:System.Linq.Enumerable.ToList%2A>
 
@@ -248,9 +248,9 @@ Materialization bir veya daha fazla SQL sorguları tarafından döndürülen sat
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Dizideki Öğeleri Döndürme veya Atlama](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
-- [İki Diziyi Birleştirme](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
-- [İki Dizi Arasındaki Küme Farkını Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)
-- [İki Dizinin Küme Kesişimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-intersection-of-two-sequences.md)
-- [İki Dizinin Küme Birleşimini Döndürme](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-union-of-two-sequences.md)
+- [Başvuru](reference.md)
+- [Dizideki Öğeleri Döndürme veya Atlama](return-or-skip-elements-in-a-sequence.md)
+- [İki Diziyi Birleştirme](concatenate-two-sequences.md)
+- [İki Dizi Arasındaki Küme Farkını Döndürme](return-the-set-difference-between-two-sequences.md)
+- [İki Dizinin Küme Kesişimini Döndürme](return-the-set-intersection-of-two-sequences.md)
+- [İki Dizinin Küme Birleşimini Döndürme](return-the-set-union-of-two-sequences.md)

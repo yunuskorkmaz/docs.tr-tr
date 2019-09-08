@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946582"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791876"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server için Sağlayıcı İstatistikleri
 .NET Framework sürüm 2,0 ' den başlayarak, SQL Server için .NET Framework Veri Sağlayıcısı, çalışma zamanı istatistiklerini destekler. Geçerli bir Connection nesneniz oluşturulduktan <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> `True` sonra <xref:System.Data.SqlClient.SqlConnection> nesnesinin özelliğini ayarlayarak istatistikleri etkinleştirmeniz gerekir. İstatistikler etkinleştirildikten sonra, <xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection> nesnenin <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> yöntemi aracılığıyla bir başvuru alarak bunları bir "anlık görüntü" olarak gözden geçirebilirsiniz. Liste/değer çifti sözlüğü girdileri kümesi olarak listeyi numaralandırın. Bu ad/değer çiftleri sırasız. İstediğiniz zaman, sayaçları sıfırlamak için <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> <xref:System.Data.SqlClient.SqlConnection> nesnesinin yöntemini çağırabilirsiniz. İstatistik toplama etkinleştirilmediyse, bir özel durum oluşturulmaz. Ayrıca <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> , ilki çağrılmadan <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> çağrılırsa, alınan değerler her girdinin başlangıç değerleridir. İstatistikleri etkinleştirir, uygulamanızı bir süre için çalıştırın ve sonra istatistikleri devre dışı bırakırsanız, alınan değerler istatistiklerin devre dışı bırakıldığı noktaya kadar toplanan değerleri yansıtır. Toplanan tüm istatistiksel değerler her bağlantı için yapılır.  
@@ -340,5 +340,5 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

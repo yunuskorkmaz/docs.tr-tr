@@ -2,12 +2,12 @@
 title: İleti Akışı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: cee579f272700ca37228bacecdf387d03637610a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bfbd1523f1d5db4a94cf3af03a03779af14655d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963053"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795968"
 ---
 # <a name="message-flow-overview"></a>İleti Akışı Genel Bakış
 Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler arasında causal ilişkilerinin belirlenmesi gerekir. Durum izleme, sorun giderme ve kök neden analizi gibi kritik senaryoları desteklemek için bir istek akışının parçası olan çeşitli bileşenleri anlamak önemlidir. .NET Framework 4 ' te çeşitli hizmetler arasındaki izlemelerin bağıntısını etkinleştirmek için aşağıdaki özellikler aracılığıyla destek ekledik:
@@ -18,7 +18,7 @@ Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler aras
 
 - WF için ETW izleme: Bu özellik, iş akışının geçerli durumuna ve ilerlemesini görünürlük sağlamak için WF hizmetleri tarafından oluşturulan izleme kayıtlarını kullanır.
 
- İzleme veya izleme kaydında günlüğe kaydedilen hatalar, kod kusurlarını veya hatalı biçimlendirilmiş iletileri bulmak için kullanılabilir. Olayın ileti üstbilgisindeki bağıntı düğümünün ActivityId özelliği, hatalı etkinliği belirlemede kullanılabilir. İleti akışı izlemeyi etkinlik KIMLIĞINE göre etkinleştirmek için bkz. [Ileti akışı Izlemeyi yapılandırma](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). Bu konuda, başlangıç öğreticisinde oluşturulan projede ileti akışı izlemenin nasıl etkinleştirileceği gösterilmektedir.
+ İzleme veya izleme kaydında günlüğe kaydedilen hatalar, kod kusurlarını veya hatalı biçimlendirilmiş iletileri bulmak için kullanılabilir. Olayın ileti üstbilgisindeki bağıntı düğümünün ActivityId özelliği, hatalı etkinliği belirlemede kullanılabilir. İleti akışı izlemeyi etkinlik KIMLIĞINE göre etkinleştirmek için bkz. [Ileti akışı Izlemeyi yapılandırma](./etw/configuring-message-flow-tracing.md). Bu konuda, başlangıç öğreticisinde oluşturulan projede ileti akışı izlemenin nasıl etkinleştirileceği gösterilmektedir.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Başlangıç öğreticisinde ileti akışı izlemeyi etkinleştirmek için
 
@@ -26,7 +26,7 @@ Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler aras
 
 2. Analitik izlemeyi etkinleştirmediyseniz, **uygulamalar ve hizmetler günlükleri**, **Microsoft**, **Windows**, **uygulama sunucusu-uygulamalar**' ı genişletin. **Görünüm**, **analitik ve hata ayıklama günlüklerini göster**' i seçin. **Analitik** öğesine sağ tıklayın ve **günlüğü etkinleştir**' i seçin. İzlemelerin görüntülenebilmesi için Olay Görüntüleyicisi açık bırakın.
 
-3. Visual Studio 2012 ' de başlangıç [öğreticisinde](../../../../docs/framework/wcf/getting-started-tutorial.md) oluşturulan örneği açın. Hizmetin oluşturulabilmesi için Visual Studio 2012 ' i yönetici olarak çalıştırmanız gerektiğini unutmayın. WCF örnekleri yüklüyse, öğreticide oluşturulan tamamlanmış projeyi içeren [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i açabilirsiniz.
+3. Visual Studio 2012 ' de başlangıç [öğreticisinde](../getting-started-tutorial.md) oluşturulan örneği açın. Hizmetin oluşturulabilmesi için Visual Studio 2012 ' i yönetici olarak çalıştırmanız gerektiğini unutmayın. WCF örnekleri yüklüyse, öğreticide oluşturulan tamamlanmış projeyi içeren [Başlarken](../samples/getting-started-sample.md)' i açabilirsiniz.
 
 4. **Hizmet** projesine sağ tıklayın ve **Ekle**, **Yeni öğe**' yi seçin. **Uygulama yapılandırma dosyası** ' nı seçin ve **Tamam**' ı tıklatın.
 
@@ -40,7 +40,7 @@ Birbirine bağlı hizmetler içeren dağıtılmış bir sistemde, hizmetler aras
     </system.serviceModel>
     ```
 
-6. CTRL + F5 tuşlarına basarak sunucu uygulamasını hata ayıklamadan yürütün. İstemci projesine sağ tıklayıp **Hata Ayıkla**, **Yeni örnek Başlat**' ı seçerek istemci projesini yürütün.
+6. CTRL + F5 tuşlarına basarak sunucu uygulamasını hata ayıklamadan yürütün. **İstemci projesine** sağ tıklayıp **Hata Ayıkla**, **Yeni örnek Başlat**' ı seçerek istemci projesini yürütün.
 
 7. İstemciden sunucuya olayları izlemek için, aşağıdakileri Istemci projesindeki uygulama yapılandırma dosyasına ekleyin.
 

@@ -2,12 +2,12 @@
 title: Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 104fdd78ce3f4b9c18f09fc41fddebe46815d217
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791619"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Yüksek Kullanılabilirlik, Olağanüstü Durum Kurtarma için SqlClient Desteği
 Bu konuda, yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Kullanılabilirlik Grupları için SqlClient desteği (.NET Framework 4,5 ' de eklenmiştir) açıklanmaktadır.  AlwaysOn Kullanılabilirlik Grupları özellik SQL Server 2012 eklendi. AlwaysOn Kullanılabilirlik Grupları hakkında daha fazla bilgi için bkz. SQL Server Books Online.  
@@ -98,5 +98,5 @@ Bu konuda, yüksek kullanılabilirlik, olağanüstü durum kurtarma--AlwaysOn Ku
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Özellikleri ve ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

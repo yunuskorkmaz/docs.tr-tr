@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: fc6fafa474805c2644bb2deabdceed192776ac76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: de7109e0fed0eb7c1975ad7360a7588ef9b294ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938760"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793147"
 ---
 # <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>Nasıl yapılır: Hangi Üyelerin Eşzamanlılık Çakışmaları için Test Edildiğini Belirtme
 İyimser eşzamanlılık çakışmalarının algılanması için güncelleştirme denetimlerinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] hangi üyelerin ekleneceğini <xref:System.Data.Linq.Mapping.ColumnAttribute> belirtmek üzere bir öznitelik üzerinde <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> özelliğe üç Numaralandırmalardan birini uygulayın.  
   
- Özelliği (tasarım zamanında eşlenir), içindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çalışma zamanı eşzamanlılık özellikleriyle birlikte kullanılır. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)bakış.  
+ Özelliği (tasarım zamanında eşlenir), içindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çalışma zamanı eşzamanlılık özellikleriyle birlikte kullanılır. <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış.  
   
 > [!NOTE]
 > Özgün üye değerleri, hiçbir üye olarak `IsVersion=true`belirlenmedikçe geçerli veritabanı durumuyla karşılaştırılır. Daha fazla bilgi için bkz. <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
@@ -48,5 +48,5 @@ ms.locfileid: "69938760"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md)
+- [Veri Değişiklikleri Yapma ve Gönderme](making-and-submitting-data-changes.md)

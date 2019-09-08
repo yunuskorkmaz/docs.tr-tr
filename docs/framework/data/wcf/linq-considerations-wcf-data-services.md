@@ -9,28 +9,28 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: d2d03e11c49d3bde042cc46811f21cc2d899b4b8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0d2d1dac43dd178680adbc123d5ce4f88fc0cc0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952249"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779877"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ hususları (WCF Veri Hizmetleri)
-Bu konu, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]LINQ sorgularının nasıl oluşturulduğu ve yürütüldüğü ve ' i uygulayan bir veri hizmetini sorgulamak için LINQ kullanma sınırlamaları hakkında bilgi sağlar. Tabanlı bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]veri hizmetine yönelik sorgu oluşturma ve yürütme hakkında daha fazla bilgi için bkz. [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Bu konu, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]LINQ sorgularının nasıl oluşturulduğu ve yürütüldüğü ve ' i uygulayan bir veri hizmetini sorgulamak için LINQ kullanma sınırlamaları hakkında bilgi sağlar. Tabanlı bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]veri hizmetine yönelik sorgu oluşturma ve yürütme hakkında daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>LINQ sorguları oluşturuluyor  
  LINQ, uygulayan <xref:System.Collections.Generic.IEnumerable%601>bir nesne koleksiyonuna karşı sorgu oluşturma imkanı sağlar. Visual Studio 'daki **hizmet başvurusu Ekle** iletişim kutusu ve DataSvcUtil. exe aracı, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmetin bir gösterimini, öğesinden <xref:System.Data.Services.Client.DataServiceContext>devralan bir varlık kapsayıcı sınıfı olarak oluşturmak için kullanılır ve bunu temsil eden nesneler akışlara döndürülen varlıklar. Bu araçlar, hizmet tarafından akış olarak gösterilen koleksiyonlar için varlık kapsayıcı sınıfında özellikler de oluşturur. Veri hizmetini kapsülleyen sınıfın bu özelliklerinin her biri, döndürür <xref:System.Data.Services.Client.DataServiceQuery%601>. Sınıfı, LINQ tarafından tanımlanan <xref:System.Linq.IQueryable%601> arabirimi uyguladığından, istemci kitaplığı tarafından sunulan veri hizmetine gönderilen akışlara yönelik bir LINQ sorgusu oluşturabilir ve bu, istemci kitaplığı tarafından veri hizmetine gönderilen bir sorgu isteği URI 'sine çevrilir. <xref:System.Data.Services.Client.DataServiceQuery%601> yürütme.  
   
 > [!IMPORTANT]
-> LINQ sözdiziminde ifade edilen sorgu kümesi, veri Hizmetleri tarafından [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanılan URI sözdiziminde etkinleştirilenlerden daha yavaştır. <xref:System.NotSupportedException> Sorgu, hedef veri hizmetindeki bir URI ile eşleştirilemez olduğunda tetiklenir. Daha fazla bilgi için bu konudaki [Desteklenmeyen LINQ yöntemlerine](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) bakın.  
+> LINQ sözdiziminde ifade edilen sorgu kümesi, veri Hizmetleri tarafından [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kullanılan URI sözdiziminde etkinleştirilenlerden daha yavaştır. <xref:System.NotSupportedException> Sorgu, hedef veri hizmetindeki bir URI ile eşleştirilemez olduğunda tetiklenir. Daha fazla bilgi için bu konudaki [Desteklenmeyen LINQ yöntemlerine](linq-considerations-wcf-data-services.md#unsupportedMethods) bakın.  
   
  Aşağıdaki örnek, $30 'den daha fazla nakliye maliyeti `Orders` olan bir LINQ sorgusudur ve en son teslim tarihinden itibaren sevkiyat tarihine göre sonuçları sıralar:  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Bu LINQ sorgusu, Northwind tabanlı [hızlı başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) veri hizmeti 'ne karşı yürütülen AŞAĞıDAKI sorgu URI 'sine çevrilir:  
+ Bu LINQ sorgusu, Northwind tabanlı [hızlı başlangıç](quickstart-wcf-data-services.md) veri hizmeti 'ne karşı yürütülen AŞAĞıDAKI sorgu URI 'sine çevrilir:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
@@ -46,11 +46,11 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci her iki tür oluşturulmuş sorguyu bir sorgu URI 'sine çevirebilir ve sorgu yöntemlerini sorgu ifadesine ekleyerek bir LINQ sorgusunu genişletebilirsiniz. Bir sorgu ifadesine ya <xref:System.Data.Services.Client.DataServiceQuery%601>da öğesine Yöntem sözdizimini ekleyerek LINQ sorguları oluşturduğunuzda, işlemler sorgu URI 'sine yöntemlerin çağrıldığı sırada eklenir. Bu, her sorgu seçeneğini sorgu <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> URI 'sine eklemek için yöntemini çağırmaya eşdeğerdir.  
   
 ## <a name="executing-linq-queries"></a>LINQ sorguları yürütülüyor  
- Sorgunun eklendiği gibi <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>bazı LINQ sorgu yöntemleri, sorgunun yürütülmesine neden olur. Bir sorgu, `foreach` döngü sırasında veya sorgu bir `List` koleksiyona atandığında olduğu gibi, sonuçlar örtük olarak numaralandırıldıktan sonra da yürütülür. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Sorgunun eklendiği gibi <xref:System.Linq.Enumerable.First%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29> <xref:System.Linq.Enumerable.Single%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%29>bazı LINQ sorgu yöntemleri, sorgunun yürütülmesine neden olur. Bir sorgu, `foreach` döngü sırasında veya sorgu bir `List` koleksiyona atandığında olduğu gibi, sonuçlar örtük olarak numaralandırıldıktan sonra da yürütülür. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
- İstemci iki bölümde bir LINQ sorgusu yürütür. Mümkün olduğunda, bir sorgudaki LINQ ifadeleri ilk olarak istemcide değerlendirilir ve ardından bir URI tabanlı sorgu oluşturulup hizmette verilere göre değerlendirme için veri hizmetine gönderilir. Daha fazla bilgi için, [veri hizmetini sorgularken](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md) [Istemci ile sunucu yürütme karşılaştırması](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md#executingQueries) bölümüne bakın.  
+ İstemci iki bölümde bir LINQ sorgusu yürütür. Mümkün olduğunda, bir sorgudaki LINQ ifadeleri ilk olarak istemcide değerlendirilir ve ardından bir URI tabanlı sorgu oluşturulup hizmette verilere göre değerlendirme için veri hizmetine gönderilir. Daha fazla bilgi için, [veri hizmetini sorgularken](querying-the-data-service-wcf-data-services.md) [Istemci ile sunucu yürütme karşılaştırması](querying-the-data-service-wcf-data-services.md#executingQueries) bölümüne bakın.  
   
- Bir LINQ sorgusu, uyumlu bir sorgu URI 'sine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]çevrilemez, yürütme denendiğinde bir özel durum oluşturulur. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Bir LINQ sorgusu, uyumlu bir sorgu URI 'sine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]çevrilemez, yürütme denendiğinde bir özel durum oluşturulur. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="linq-query-examples"></a>LINQ sorgu örnekleri  
  Aşağıdaki bölümlerde yer alan örneklerde, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmette yürütülen LINQ sorgularının türleri gösterilmektedir.  
@@ -136,7 +136,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expand  
- Bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] veri hizmetini sorguladığınızda, sorgunun hedeflediği varlıkla ilgili varlıkların döndürülen akışı dahil edilmesini isteyebilirsiniz. Yöntemi, LINQ sorgusunun hedeflediği varlık <xref:System.Data.Services.Client.DataServiceQuery%601> kümesi için, `path` parametresi olarak sağlanan ilgili varlık kümesi adı ile çağrılır. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Daha fazla bilgi için bkz. [ertelenmiş Içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ Bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] veri hizmetini sorguladığınızda, sorgunun hedeflediği varlıkla ilgili varlıkların döndürülen akışı dahil edilmesini isteyebilirsiniz. Yöntemi, LINQ sorgusunun hedeflediği varlık <xref:System.Data.Services.Client.DataServiceQuery%601> kümesi için, `path` parametresi olarak sağlanan ilgili varlık kümesi adı ile çağrılır. <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> Daha fazla bilgi için bkz. [ertelenmiş Içerik yükleme](loading-deferred-content-wcf-data-services.md).  
   
  Aşağıdaki örneklerde, <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> yöntemi bir sorguda kullanmanın eşdeğer yolları gösterilmektedir:  
   
@@ -212,7 +212,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Sorgu Projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
-- [Nesne Gerçekleştirme](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
+- [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)
+- [Sorgu Projeksiyonları](query-projections-wcf-data-services.md)
+- [Nesne Gerçekleştirme](object-materialization-wcf-data-services.md)
 - [OData URI kuralları](https://go.microsoft.com/fwlink/?LinkID=185564)

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending metadata [WCF]
 ms.assetid: 8c6b3b00-61b8-4589-8fa5-546cc33719bf
-ms.openlocfilehash: 7ccef0c2b908a8f78249742decd6c46a862e541e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3ce7e1a228e6303be1009c7b72f4e889b40c536
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991308"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795725"
 ---
 # <a name="extending-the-metadata-system"></a>Meta Veri Sistemini Genişletme
-Windows Communication Foundation (WCF) meta veri sistemini sınıfları ve arabirimleri hizmet tabanlı uygulamaları uygulamak için gereken meta verileri temsil eden bir grubudur. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel bir WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimler yapılandırın.  
+Windows Communication Foundation (WCF) meta veri sistemi, hizmet tabanlı uygulamaları uygulamak için gereken meta verileri temsil eden bir sınıf ve arabirim grubudur. Sınıfları değiştirin veya genişletin ya da Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onayları gibi özel meta verileri dışarı ve içeri aktarmak için arabirimleri uygulayın ve yapılandırın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
- Uygulamak ve kullanmak nasıl açıklar <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> özel ilke onaylamalarını WSDL belgelerine katıştırmanıza olanak arabirimi.  
+ [WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma](exporting-custom-metadata-for-a-wcf-extension.md)  
+ WSDL belgelerine özel ilke onayları eklemek için <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> arabirimin nasıl uygulanacağını ve kullanılacağını açıklar.  
   
- [WCF Uzantısı için Özel Meta Verileri İçe Aktarma](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)  
- Uygulamak ve kullanmak nasıl açıklar <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> okuyun ve özel ilke onaylamalarını WSDL belgelerde yanıtlamak için arabirim.  
+ [WCF Uzantısı için Özel Meta Verileri İçe Aktarma](importing-custom-metadata-for-a-wcf-extension.md)  
+ WSDL belgelerindeki özel ilke onaylamalarını okumak <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> ve yanıtlamak için arabirimin nasıl uygulanacağını ve kullanılacağını açıklar.  
   
- [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)  
- Özel bağlama meta veri değişimi açıklar.
+ [Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma](publishing-and-retrieving-metadata-over-a-custom-binding.md)  
+ Özel Bağlamalar üzerinden meta verilerin nasıl değiş tokuş edileceğini açıklar.

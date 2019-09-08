@@ -2,12 +2,12 @@
 title: Türü Belirtilmiş DataSets
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 33876cb9f614a93cab2fa3fd9d056f94dd1e9038
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 7c8111e0e62a57b6745a5ea0387fc65a05839df8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203158"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785844"
 ---
 # <a name="typed-datasets"></a>Türü Belirtilmiş DataSets
 Kesin tür belirtilmiş değişkenlerle, değerlere geç bağlanma erişimi sayesinde, <xref:System.Data.DataSet> kesin olarak yazılmış bir metaphor aracılığıyla verilere erişim sağlar. **Veri kümesinin** parçası olan tablo ve sütunlara, Kullanıcı dostu adlar ve kesin belirlenmiş değişkenler kullanılarak erişilebilir.  
@@ -26,4 +26,4 @@ Kesin tür belirtilmiş değişkenlerle, değerlere geç bağlanma erişimi saye
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

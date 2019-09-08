@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964730"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780880"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Parametre Olarak XML Değerleri Belirtme
 Bir sorgu, değeri bir XML dizesi olan bir parametre gerektiriyorsa, geliştiriciler bu değeri **sqlxml** veri türünün bir örneğini kullanarak sağlayabilir. Gerçekten bir püf noktası yoktur; SQL Server XML sütunları, parametre değerlerini diğer veri türleriyle tamamen aynı şekilde kabul eder.  
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [SQL Server'da XML Verileri](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server'da XML Verileri](xml-data-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

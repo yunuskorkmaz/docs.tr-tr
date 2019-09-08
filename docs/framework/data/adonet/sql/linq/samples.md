@@ -2,12 +2,12 @@
 title: Örnekler
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: ac5298fd781d617b8a9c8cd637232b344a04f530
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3d695825ff98388469ae68fec6223efa3d010969
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945171"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792698"
 ---
 # <a name="samples"></a>Örnekler
 Bu konu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek kod içeren Visual Basic ve C# çözümlerin bağlantılarını sağlar.  
@@ -29,5 +29,5 @@ Bu konu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ör
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL](index.md)
 - [LINQ to SQL Izlenecek yollar](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

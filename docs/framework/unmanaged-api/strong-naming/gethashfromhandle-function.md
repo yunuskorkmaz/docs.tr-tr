@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa5d5ee469d41cca46ea05fa4111ce3abff808d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3eac353252f5a97402cbd883895b3e397c39edd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771910"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799175"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle İşlevi
-Belirtilen dosya tanıtıcısıyla belirtilen karma algoritması kullanarak bir dosyanın içeriğini üzerinden bir karma oluşturur.  
+Belirtilen karma algoritmasını kullanarak, belirtilen dosya tanıtıcısına sahip dosyanın içeriği üzerinde bir karma oluşturur.  
   
- Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md) yöntemi yerine.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,30 +42,30 @@ HRESULT GetHashFromHandle (
   
 ## <a name="parameters"></a>Parametreler  
  `hFile`  
- [in] Karma hale getirilecek dosya tanıtıcısı.  
+ 'ndaki Karma hale getirilen dosyanın tanıtıcısı.  
   
  `piHashAlg`  
- [out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.  
+ [in, out] Karma algoritmayı belirten bir sabit. Varsayılan algoritma için sıfır kullanın.  
   
  `pbHash`  
- [out] Döndürülen karma arabellek.  
+ dışı Döndürülen karma arabelleği.  
   
  `cchHash`  
- [in] İstenen en büyük boyutunu `pbHash`.  
+ 'ndaki İstenen en büyük boyut `pbHash`.  
   
  `pchHash`  
- [out] Döndürülen bayt cinsinden boyutu `pbHash`.  
+ dışı Döndürülen `pbHash`bayt cinsinden boyutu.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetHashFromHandle Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromHandle Yöntemi](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

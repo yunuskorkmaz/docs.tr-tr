@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending bindings [WCF]
 ms.assetid: 5e40d306-b3c1-4429-80c4-fbb1d956856c
-ms.openlocfilehash: f631c5df13c5633c22ef1d7179a0b7d135797b3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: efaec84a6a6c6be5cca20d1e6a9c7c18a48169ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967602"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795762"
 ---
 # <a name="extending-bindings"></a>Bağlamaları Genişletme
-Aktarım, kodlama ve bir uç noktaya bağlanmak için gerekli protokolü bağlamaları belirtin. Bağlama uzantıları ve özel bağlamalar uygulama özellikleri desteklemek için gereken özel iletişim işlevselliğini uygular.  
+Bağlamalar bir uç noktaya bağlanmak için gereken aktarım, kodlama ve Protokolü belirler. Bağlama uzantıları ve özel bağlamalar, uygulama özelliklerini desteklemek için gereken özel iletişim işlevlerini uygular.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[Bağlamalar ve Bağlama Öğeleri](../../../../docs/framework/wcf/extending/bindings-and-binding-elements.md)|Bağlamaları, bağlama öğeleri ve nasıl bunlar genişletilmiş ve kullanıldığını açıklar.|  
-|[Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)|Nasıl kullanılacağını açıklar <xref:System.ServiceModel.Channels.CustomBinding> sistem tarafından tanımlanan ve üçüncü taraf bağlama öğeleri kullanılarak özel bağlamalar oluşturmak için sınıf.|  
-|[Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)|Bağlamalar ve başkaları tarafından kullanılan bir bağlama öğeleri oluşturmayı açıklar.|  
+|[Bağlamalar ve Bağlama Öğeleri](bindings-and-binding-elements.md)|Bağlamaları, bağlama öğelerini ve bunların nasıl kullanıldığını ve genişletildikleri açıklanmaktadır.|  
+|[Özel Bağlamalar](custom-bindings.md)|Sınıfının, <xref:System.ServiceModel.Channels.CustomBinding> sistem tarafından tanımlanan ve üçüncü taraf bağlama öğelerini kullanarak özel bağlamalar oluşturmak için nasıl kullanılacağını açıklar.|  
+|[Kullanıcı Tanımlı Bağlamalar Oluşturma](creating-user-defined-bindings.md)|Bağlama ve diğer kullanıcılar tarafından kullanılabilecek bağlama öğelerinin nasıl oluşturulacağını açıklar.|  
   
 ## <a name="reference"></a>Başvuru  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [BindingElement Oluşturma](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
+ [BindingElement Oluşturma](creating-a-bindingelement.md)  
   
- [Yapılandırma ve Meta Veri Desteği](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [Yapılandırma ve Meta Veri Desteği](configuration-and-metadata-support.md)

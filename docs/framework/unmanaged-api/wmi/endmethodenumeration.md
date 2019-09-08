@@ -1,6 +1,6 @@
 ---
 title: EndMethodEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: EndMethodEnumeration işlevi bir yöntem sabit listesi sırası sonlandırır.
+description: EndMethodEnumeration işlevi bir yöntem numaralandırma sırasını sonlandırır.
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ea692c055b0537394ad5e16501d4162faef12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdcf49bd748a423b1cebfba88644aa961f1c7b65
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746835"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799347"
 ---
 # <a name="endmethodenumeration-function"></a>EndMethodEnumeration işlevi
-Bir çağrı ile başlatılan bir numaralandırma sırasını sonlandırıyor [BeginMethodEnumeration işlevi](beginmethodenumeration.md).  
+[Beginmethodenumeration işlevi](beginmethodenumeration.md)çağrısıyla başlatılan bir numaralandırma dizisini sonlandırır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,32 +40,32 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Bir iç hata oluştu. |
+|`WBEM_E_UNEXPECTED` | 0x8004101D | Bir iç hata oluştu. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) yöntemi.
+Bu işlev, [IWbemClassObject:: EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) yöntemine bir çağrı kaydırır.
 
-Sabit listesi sırası kullanılarak çağıran başlar [BeginMethodEnumeration işlevi](beginmethodenumeration.md)ve ardından çağırır [NextMethod işlevi](nextmethod.md )yöntemi dönene kadar `WBEM_S_NO_MORE_DATA`. İsteğe bağlı olarak çağıran çağırarak sırası tamamlandıktan `EndMethodEnumeration`. Çağıranın numaralandırma erken çağırarak sonlandırabilir `EndMethodEnumeration` dilediğiniz zaman.
+Çağıran, [Beginmethodenumeration işlevini](beginmethodenumeration.md)kullanarak numaralandırma sırasını başlatır ve ardından Yöntem dönene `WBEM_S_NO_MORE_DATA`kadar [NextMethod işlevini](nextmethod.md )çağırır. Çağıran, isteğe bağlı olarak diziyi çağırarak `EndMethodEnumeration`sonlandırır. Çağıran, herhangi bir zamanda çağırarak `EndMethodEnumeration` sabit listesini erken sonlandıramayabilir.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils.idl  
+ **Üst bilgi** WMINet_Utils. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

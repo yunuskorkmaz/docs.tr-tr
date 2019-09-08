@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 'da WPF uygulaması oluşturma
-ms.date: 03/20/2019
+title: 'Öğretici: Visual Studio 2019-.NET Framework ilk WPF uygulamanızı oluşturma'
+ms.date: 09/06/2019
 dev_langs:
 - csharp
 - vb
@@ -8,44 +8,41 @@ helpviewer_keywords:
 - getting started [WPF], WPF
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
+ms.topic: tutorial
+ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.custom: vs-dotnet
-ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c8b7f6f3bdbf3adc7c355e88cfe1f569cc0cb76f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254066"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799336"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>İzlenecek yol: İlk WPF masaüstü uygulamam
+# <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Öğretici: Visual Studio 2019 ' de ilk WPF uygulamanızı oluşturma
 
 Bu makalede, çoğu WPF uygulaması için ortak olan öğeleri içeren bir Windows Presentation Foundation (WPF) masaüstü uygulaması geliştirme gösterilmektedir: Extensible Application Markup Language (XAML) işaretleme, arka plan kod, uygulama tanımları, denetimler, düzen, veri bağlama ve stiller. Uygulamayı geliştirmek için Visual Studio 'Yu kullanırsınız. 
 
-Bu izlenecek yol aşağıdaki adımları içerir:
+Bu öğreticide şunların nasıl yapıladığını öğreneceksiniz:
+> [!div class="checklist"]
+> - WPF projesi oluşturun.
+> - Uygulamanın kullanıcı arabiriminin (UI) görünümünü tasarlamak için XAML kullanın.
+> - Uygulamanın davranışını derlemek için kod yazın.
+> - Uygulamayı yönetmek için bir uygulama tanımı oluşturun.
+> - Uygulama kullanıcı arabirimini oluşturmak için denetimler ekleyin ve düzeni oluşturun.
+> - Uygulamanın kullanıcı arabiriminde tutarlı bir görünüm için stiller oluşturun.
+> - Kullanıcı arabirimini verileri veri kaynağından doldurmak ve verileri ve Kullanıcı arabirimini eşitlenmiş halde tutmak için veri ARABIRIMINE bağlayın.
 
-- Uygulamanın kullanıcı arabiriminin (UI) görünümünü tasarlamak için XAML kullanın.
-
-- Uygulamanın davranışını derlemek için kod yazın.
-
-- Uygulamayı yönetmek için bir uygulama tanımı oluşturun.
-
-- Uygulama kullanıcı arabirimini oluşturmak için denetimler ekleyin ve düzeni oluşturun.
-
-- Uygulamanın kullanıcı arabiriminde tutarlı bir görünüm için stiller oluşturun.
-
-- Kullanıcı arabirimini verileri veri kaynağından doldurmak ve verileri ve Kullanıcı arabirimini eşitlenmiş halde tutmak için veri ARABIRIMINE bağlayın.
-
-İzlenecek yolun sonuna kadar, kullanıcıların seçili kişilere ait gider raporlarını görüntülemesine olanak sağlayan tek başına bir Windows uygulaması oluşturacaksınız. Uygulama, tarayıcı stili bir pencerede barındırılan çeşitli WPF sayfalarından oluşur.
+Öğreticinin sonuna kadar, kullanıcıların seçili kişilere ait gider raporlarını görüntülemesine olanak sağlayan tek başına bir Windows uygulaması oluşturacaksınız. Uygulama, tarayıcı stili bir pencerede barındırılan çeşitli WPF sayfalarından oluşur.
 
 > [!TIP]
-> Bu yönergeyi oluşturmak için kullanılan örnek kod hem Visual Basic C# hem de [WPF uygulaması örnek kodu](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)için kullanılabilir.
+> Bu öğreticide kullanılan örnek kod hem Visual Basic C# hem de [eğitim WPF uygulaması örnek kodu](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/WalkthroughFirstWPFApp)için kullanılabilir.
 >
-> Bu makalenin sağ üst tarafındaki açılan eklentiyi kullanarak, C# **\< />** ve Visual Basic arasında örnek kodun kod dilini değiştirebilirsiniz.
+> Bu sayfanın üst kısmındaki dil seçicisini kullanarak, ve Visual Basic arasında C# örnek kodun kod dilini değiştirebilirsiniz.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Visual Studio 2017 veya üzeri (Bu makalede Visual Studio 2019 kullanılır)
+- **.Net masaüstü geliştirme** iş yükü yüklü olan [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) .
 
    Visual Studio 'nun en son sürümünü yükleme hakkında daha fazla bilgi için bkz. [Visual Studio 'Yu yükleme](/visualstudio/install/install-visual-studio).
 
@@ -210,7 +207,7 @@ Bu bölümde, uygulamaya iki sayfa ve bir görüntü ekleyeceksiniz.
 
     [!code-vb[ExpenseIt#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-1. Projeye *filigran. png* adlı bir resim ekleyin. Kendi görüntünüzü oluşturabilir, dosyayı örnek koddan kopyalayabilir veya [buradan](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png)edinebilirsiniz.
+1. Projeye *filigran. png* adlı bir resim ekleyin. Kendi görüntünüzü oluşturabilir, dosyayı örnek koddan kopyalayabilir veya [Microsoft/WPF-Samples](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png) GitHub deposundan alabilirsiniz.
 
     1. Proje düğümüne sağ tıklayın ve**Varolan öğe** **Ekle** > ' yi seçin veya **SHIFT**+**alt**+**A**'ya basın.
 
@@ -475,11 +472,8 @@ Aşağıdaki çizimde denetimler, düzen, stiller, `ExpenseIt` veri bağlama ve 
 > Bu örnek, WPF 'nin belirli bir özelliğini gösterir ve güvenlik, yerelleştirme ve erişilebilirlik gibi şeyler için en iyi uygulamaları izlemez. WPF ve .NET uygulama geliştirmenin en iyi uygulamalarının kapsamlı kapsamı için aşağıdaki konulara bakın:
 >
 > - [Erişilebilirlik](../../ui-automation/accessibility-best-practices.md)
->
 > - [Güvenlik](../security-wpf.md)
->
 > - [WPF Genelleştirme ve yerelleştirme](../advanced/wpf-globalization-and-localization-overview.md)
->
 > - [WPF performansı](../advanced/optimizing-wpf-application-performance.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar

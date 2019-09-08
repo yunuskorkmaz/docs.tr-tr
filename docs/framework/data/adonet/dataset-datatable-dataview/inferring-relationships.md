@@ -2,12 +2,12 @@
 title: İlişkilerin Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 92a4953dc7f5119ffbf171ff2a7bf5b58e896638
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c9c13453e4a830fcda337e8163649ba6491a995
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204764"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785368"
 ---
 # <a name="inferring-relationships"></a>İlişkilerin Çıkarımını Yapma
 Tablo olarak gösterilen bir öğe, tablo olarak da gösterilen bir alt öğe içeriyorsa, iki tablo arasında bir <xref:System.Data.DataRelation> oluşturulur. Üst öğe için oluşturulan tabloya ve alt öğe için oluşturulan tabloya **ParentTableName_Id** adlı yeni bir sütun eklenir. Bu kimlik sütununun **ColumnMapping** özelliği **MappingType. Hidden**olarak ayarlanacak. Sütun üst tablo için otomatik olarak artan birincil anahtar olur ve iki tablo arasında **DataRelation** için kullanılacaktır. Eklenen kimlik sütununun veri türü, System. **String**olan diğer tüm çıkartılan sütunların veri türünden farklı olarak **System. Int32**olacaktır. Hem üst hem de alt tablolardaki yeni sütun kullanılarak **DeleteRule** = **Cascade** ilebirlikteoluşturulur.<xref:System.Data.ForeignKeyConstraint>  
@@ -77,4 +77,4 @@ Tablo olarak gösterilen bir öğe, tablo olarak da gösterilen bir alt öğe i�
 - [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)
 - [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

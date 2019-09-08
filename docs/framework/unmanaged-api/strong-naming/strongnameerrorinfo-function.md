@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6f495500b087b9e24936acd414f1aff463d7f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 021fa1668247bc59a4412d2b5f4bac3f5ee8cc6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781069"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799119"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo İşlevi
-Tanımlayıcı ad işlevlerden biri tarafından tetiklendi son hata kodu alır.  
+Tanımlayıcı ad işlevlerinden biri tarafından oluşturulan son hata kodunu alır.  
   
  Bu işlev kullanım dışı bırakıldı.  
   
@@ -39,16 +39,16 @@ HRESULT StrongNameErrorInfo ();
 ```  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Tanımlayıcı ad işlevlerden biri tarafından ayarlanmış son COM hata kodu.  
+ Tanımlayıcı ad işlevlerinden biri tarafından ayarlanan son COM hata kodu.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Tanımlayıcı ad yöntemlerin çoğu, basit bir iade `true` veya `false` başarılı olarak tamamlanmasına göstergesi. Kullanım `StrongNameErrorInfo` tanımlayıcı ad işlevleri tarafından oluşturulan son hata belirten HRESULT almak için işlevi.  
+ Tanımlayıcı ad yöntemlerinin çoğu, başarılı bir tamamlamayı basit `true` veya `false` bir şekilde döndürür. Tanımlayıcı ad işlevleri tarafından oluşturulan son hatayı belirten bir HRESULT almak için işlevinikullanın.`StrongNameErrorInfo`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  

@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb71263201c86a93ca0bfbd783f2b8512055e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94c76213acb66116105d181e9961a33976047ee7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783113"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798243"
 ---
 # <a name="setsecurity-function"></a>SetSecurity işlevi
 
-Geçerli iş parçacığıyla ilişkilendirilmiş kimliğe bürünme belirtecini alır. 
+Geçerli iş parçacığıyla ilişkili kimliğe bürünme belirtecini alır. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -41,24 +41,24 @@ HRESULT SetSecurity (
 ## <a name="parameters"></a>Parametreler
 
 `pNeedToReset`\
-[out] İşlevi döndüğünde, bir işaretçi içeren bir `boolean` belirten belirteç çağırarak sıfırlama olmadığını [ResetSecurity](resetsecurity.md) işlevi.
+dışı İşlev döndürüldüğünde, belirtecin [resetsecurity](resetsecurity.md) işlevini çağırarak sıfırlanmasının `boolean` gerekip gerekmediğini belirten bir işaretçi içerir.
 
 `token`\
-[out] İşlevi döndüğünde, geçerli iş parçacığıyla ilişkilendirilmiş kimliğe bürünme belirtecini işlemek için bir işaretçi içerir. Değeri olabilir `null` geçerli iş parçacığıyla ilişkilendirilmiş hiçbir belirteç olup olmadığını. 
+dışı İşlev döndürüldüğünde, geçerli iş parçacığıyla ilişkili kimliğe bürünme belirtecinin tanıtıcısına yönelik bir işaretçi içerir. Geçerli iş parçacığıyla ilişkili `null` bir belirteç yoksa değeri bu olabilir. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-İşlev başarılı olursa, dönüş değeri olduğu `S_OK` (0).
+İşlev başarılı olursa, dönüş değeri (0) `S_OK` olur.
 
-İşlev başarısız olursa, dönüş değeri sıfır olmayan hata kodudur. Genişletilmiş hata bilgilerini almak için arama [Geterrorınfo](geterrorinfo.md) işlevi.
+İşlev başarısız olursa, dönüş değeri sıfır olmayan bir hata kodudur. Genişletilmiş hata bilgilerini almak için [GetErrorInfo](geterrorinfo.md) işlevini çağırın.
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üst bilgi:** WMINet_Utils.idl
+ **Üst bilgi** WMINet_Utils. IDL
 
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

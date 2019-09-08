@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af5a200578c34464b5f8d86e568d08d814b46a29
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f6140e5f85a7ee21773c96a5abdccadaddab92e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742153"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777451"
 ---
 # <a name="embedresource-method"></a>EmbedResource Yöntemi
-Katıştırılmış bir kaynağı bildirir. Bu yöntem kaynağın gerçekten ekleme değil.  
+Gömülü bir kaynak bildirir. Bu yöntem, kaynağı aslında eklemez.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,28 +41,28 @@ HRESULT EmbedResource(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme kimliği.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- Belirteç veya derleme Kimliğini içeren kaynak dosyasının dosya.  
+ Kaynağı içeren dosyanın belirteç veya derleme KIMLIĞI.  
   
  `pszResourceName`  
  Kaynağın adı.  
   
  `dwOffset`  
- RVA kaynaktan uzaklığı.  
+ Kaynak RVA 'dan konum.  
   
  `dwFlags`  
- Erişilebilirlik bayrakları gibi `mrPublic` ve `mrPrivate`. Bu bayrak için geçirilebilir [DefineExportedType yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `mrPublic` Ve`mrPrivate`gibi erişilebilirlik bayrakları. Bu bayraklar [DefineExportedType yöntemine](../metadata/imetadataassemblyemit-defineexportedtype-method.md)geçirilebilir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

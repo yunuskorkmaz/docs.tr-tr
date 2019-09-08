@@ -2,24 +2,24 @@
 title: PerformanceCounterInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 85050ac6-7f7b-4dd3-8e5e-f5116d7c9906
-ms.openlocfilehash: d55e3ee9b6dac6fd22fc6685cfef9c33f513ed4e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8a6ef03074be8aee45dc5804329b601ff914b9d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999145"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796219"
 ---
 # <a name="performancecounterinitializationfailure"></a>PerformanceCounterInitializationFailure
-Kimliği: 149  
+Numarasını 149  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir performans sayacı başlatmak başarısız olduğunu gösterir. Sayaç adı, özel durum, işlem adı ve işlem kimliği, olay listeler  
+ Bu olay, bir performans sayacının başlatılamadığından hata olduğunu gösterir. Olayda sayaç adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

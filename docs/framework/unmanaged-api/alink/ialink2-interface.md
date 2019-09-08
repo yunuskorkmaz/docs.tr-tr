@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789772"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777173"
 ---
 # <a name="ialink2-interface"></a>IALink2 Arabirimi
-Destekleyici [Ialink arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) bildirme gibi yeni meta veri arabirimleri üzerinde çalışan yöntemleri tarafından [Imetadataemit2 arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Buna ek olarak, özgün Ialink arabirimler üzerinden ek kullanım esneklik sağlayan yöntemler Ialink2 bildirir.  
+[IMetaDataEmit2 arabirimi](../metadata/imetadataemit2-interface.md)gibi daha yeni meta veri arabirimleri üzerinde çalışan Yöntemler bildirerek [IALink arabirimini](ialink-interface.md) tamamlar. Ayrıca, IALink2, özgün IALink arabirimleri üzerinde ek kullanım esnekliği sağlayan yöntemler bildirir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+ [AddFile2 Yöntemi](addfile2-method.md)  
   
- [EmitAssembly Yöntemi](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [EmitAssembly Yöntemi](emitassembly-method.md)  
   
- [EmitInternalExportedTypes Yöntemi](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [EmitInternalExportedTypes Yöntemi](emitinternalexportedtypes-method.md)  
   
- [GetFileDef Yöntemi](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [GetFileDef Yöntemi](getfiledef-method.md)  
   
  GetPublicKeyToken Metodu  
   
- [GetScope2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [GetScope2 Yöntemi](getscope2-method.md)  
   
- [ImportFileEx Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [ImportFileEx Yöntemi](importfileex-method.md)  
   
- [ImportFileEx2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [ImportFileEx2 Yöntemi](importfileex2-method.md)  
   
- [ImportTypes2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [ImportTypes2 Yöntemi](importtypes2-method.md)  
   
- [SetAssemblyFile2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [SetAssemblyFile2 Yöntemi](setassemblyfile2-method.md)  
   
- [SetPEKind Yöntemi](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [SetPEKind Yöntemi](setpekind-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)

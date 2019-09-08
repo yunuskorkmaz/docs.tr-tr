@@ -2,24 +2,24 @@
 title: WmiDeleteInstanceFailed
 ms.date: 03/30/2017
 ms.assetid: 4d61107a-1428-4281-8d1b-372240f4a723
-ms.openlocfilehash: 419daf32c7494a694923407b0974df62213a7f13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e3cd61200e965c3239f50c5468851ab793c16eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944241"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796022"
 ---
 # <a name="wmideleteinstancefailed"></a>WmiDeleteInstanceFailed
-Kimliği: 122  
+Numarasını 122  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WMI DeleteInstance isteği işlenmedi gösterir. Özel durum, işlem adı ve işlem kimliği, olay listeler  
+ Bu olay, WMI DeleteInstance isteğinin işlenmediğini belirtir. Olayda özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

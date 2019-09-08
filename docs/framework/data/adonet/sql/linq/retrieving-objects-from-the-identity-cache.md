@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d14b15f72bd196d8b3a61f22c614516e17d2e95b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963831"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781235"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Kimlik Önbelleğinden Nesne Alma
 Bu konu, <xref:System.Data.Linq.DataContext>tarafından yönetilen kimlik önbelleğinden bir nesne döndüren LINQ to SQL sorgularının türlerini açıklar.  
@@ -20,7 +20,7 @@ Bu konu, <xref:System.Data.Linq.DataContext>tarafından yönetilen kimlik önbel
  Genellikle, bir LINQ to SQL sorgusunun kimlik önbelleğinden bir nesne döndürmesi için, sorgunun bir nesnenin birincil anahtarını temel almalıdır ve tek bir nesne döndürmesi gerekir. Özellikle, sorgu aşağıda gösterilen genel formlardan birinde olmalıdır.  
   
 > [!NOTE]
-> Önceden derlenen sorgular, kimlik önbelleğinden nesne döndürmez. Önceden derlenen sorgular hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.CompiledQuery> . ve [nasıl yapılır: Sorguları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)depolayın ve yeniden kullanın.  
+> Önceden derlenen sorgular, kimlik önbelleğinden nesne döndürmez. Önceden derlenen sorgular hakkında daha fazla bilgi için bkz <xref:System.Data.Linq.CompiledQuery> . ve [nasıl yapılır: Sorguları](how-to-store-and-reuse-queries.md)depolayın ve yeniden kullanın.  
   
  Bir sorgu, kimlik önbelleğinden bir nesne almak için aşağıdaki genel formlardan birinde olmalıdır:  
   
@@ -66,7 +66,7 @@ Bu konu, <xref:System.Data.Linq.DataContext>tarafından yönetilen kimlik önbel
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Nesne Kimliği](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [Sorgu Kavramları](query-concepts.md)
+- [Nesne Kimliği](object-identity.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [Nesne Kimliği](object-identity.md)

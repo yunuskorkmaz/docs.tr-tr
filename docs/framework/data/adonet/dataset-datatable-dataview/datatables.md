@@ -2,17 +2,17 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 12255f738dea0a4713389e599468d1a7fab67d23
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204966"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784696"
 ---
 # <a name="datatables"></a>DataTables
 Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan oluşur. ADO.net ' de <xref:System.Data.DataTable> nesneler, bir **veri kümesindeki**tabloları temsil etmek için kullanılır. **DataTable** , bellek içi ilişkisel verilerin bir tablosunu temsil eder; verileri yereldir. İçinde bulunduğu, ancak **DataAdapter** kullanarak Microsoft SQL Server bir veri kaynağından doldurulabilen, daha fazla bilgi için bkz. veri [kümesini DataAdapter 'tan doldurma](../populating-a-dataset-from-a-dataadapter.md).  
   
- **DataTable** sınıfı, .NET Framework sınıf kitaplığı içindeki **System. Data** ad alanının bir üyesidir. Bir **DataTable** 'ı bağımsız olarak veya bir **veri kümesinin**üyesi olarak oluşturabilir ve kullanabilirsiniz ve **datatable** nesneleri de dahil diğer <xref:System.Data.DataView>.NET Framework nesneleriyle birlikte kullanılabilir. DataSet nesnesinin **Tables** özelliği aracılığıyla bir **veri kümesindeki** tablo koleksiyonuna erişirsiniz.  
+ **DataTable** sınıfı, .NET Framework sınıf kitaplığı içindeki **System. Data** ad alanının bir üyesidir. Bir **DataTable** 'ı bağımsız olarak veya bir **veri kümesinin**üyesi olarak oluşturabilir ve kullanabilirsiniz ve **datatable** nesneleri de dahil diğer <xref:System.Data.DataView>.NET Framework nesneleriyle birlikte kullanılabilir. **DataSet nesnesinin** **Tables** özelliği aracılığıyla bir **veri kümesindeki** tablo koleksiyonuna erişirsiniz.  
   
  Bir tablonun şeması veya yapısı, sütunlar ve kısıtlamalar ile temsil edilir. <xref:System.Data.DataColumn> Nesneleri<xref:System.Data.UniqueConstraint> ve nesneleri kullanarak bir DataTable şemasını tanımlarsınız. <xref:System.Data.ForeignKeyConstraint> Bir tablodaki sütunlar bir veri kaynağındaki sütunlarla eşlenir, deyimlerden hesaplanan değerler içerebilir, değerlerini otomatik olarak artırır veya birincil anahtar değerleri içerebilir.  
   
@@ -57,4 +57,4 @@ Bir <xref:System.Data.DataSet> tablo, ilişki ve kısıtlama koleksiyonundan olu
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

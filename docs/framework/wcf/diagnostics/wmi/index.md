@@ -2,12 +2,12 @@
 title: Tanılama için Windows Yönetim İzlemesini Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046013"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795922"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Tanılama için Windows Yönetim İzlemesini Kullanma
 Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI) sağlayıcısı aracılığıyla çalışma zamanında bir hizmetin İnceleme verilerini gösterir.  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
   
  WMI sağlayıcısı, çalışma zamanında WBEM ile uyumlu bir arabirim aracılığıyla izleme sunan bir bileşendir. Öznitelik/değer çiftlerine sahip bir WMI nesneleri kümesinden oluşur. Çiftler bir dizi basit türden olabilir. Yönetim Araçları, çalışma zamanında arabirim aracılığıyla hizmetlere bağlanabilir. WCF, adresler, bağlamalar, davranışlar ve dinleyicileri gibi hizmetlerin özniteliklerini gösterir.  
   
- Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki örnek yapılandırmada `wmiProviderEnabled` gösterildiği gibi [ \<System. ServiceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) bölümündeki [ \<Tanılama >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) özniteliği aracılığıyla yapılır.  
+ Yerleşik WMI sağlayıcısı, uygulamanın yapılandırma dosyasında etkinleştirilebilir. Bu, aşağıdaki örnek yapılandırmada `wmiProviderEnabled` gösterildiği gibi [ \<System. ServiceModel >](../../../configure-apps/file-schema/wcf/system-servicemodel.md) bölümündeki [ \<Tanılama >](../../../configure-apps/file-schema/wcf/diagnostics.md) özniteliği aracılığıyla yapılır.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) bir WCF Windows Yönetim Araçları (WMI)
 > [!CAUTION]
 > WMI verilerine programlı olarak erişmek için .NET Framework sağlanan yöntemleri kullanırsanız, bu tür yöntemlerin bağlantı kurulurken özel durumlar oluşturduğunu bilmelisiniz. Bu bağlantı, <xref:System.Management.ManagementObject> örneğin oluşturulması sırasında, ancak gerçek veri değişimini içeren ilk istekte kurulmaz. Bu nedenle, olası özel durumları `try..catch` yakalamak için bir blok kullanmanız gerekir.  
   
- İzleme ve mesaj günlüğü düzeyini, WMI 'daki `System.ServiceModel` izleme kaynağı için de ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu, bu Boole özelliklerini sunan [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) örneğine erişerek yapılabilir `LogMessagesAtServiceLevel`:, `LogMessagesAtTransportLevel`, `LogMalformedMessages`ve `TraceLevel`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu işlem, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz.  
+ İzleme ve mesaj günlüğü düzeyini, WMI 'daki `System.ServiceModel` izleme kaynağı için de ileti günlüğe kaydetme seçeneklerini değiştirebilirsiniz. Bu, bu Boole özelliklerini sunan [AppDomainInfo](appdomaininfo.md) örneğine erişerek yapılabilir `LogMessagesAtServiceLevel`:, `LogMessagesAtTransportLevel`, `LogMalformedMessages`ve `TraceLevel`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu işlem, çalışma zamanında ileti günlüğe kaydetmeyi etkin bir şekilde etkinleştirir. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz.  
   
- İleti günlüğe kaydetme için hiçbir ileti günlüğe kaydetme veya `System.ServiceModel` yapılandırma dosyasında izleme dinleyicilerinin belirtilmediği durumlarda, değişiklikler WMI tarafından kabul edilse de, değişikliklerinizin etkin olmadığı farkında olmalısınız. İlgili dinleyicileri doğru şekilde ayarlama hakkında daha fazla bilgi için bkz. [Ileti günlüğe kaydetmeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) ve [izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi uygulama başlatıldığında etkilidir ve değiştirilemez.  
+ İleti günlüğe kaydetme için hiçbir ileti günlüğe kaydetme veya `System.ServiceModel` yapılandırma dosyasında izleme dinleyicilerinin belirtilmediği durumlarda, değişiklikler WMI tarafından kabul edilse de, değişikliklerinizin etkin olmadığı farkında olmalısınız. İlgili dinleyicileri doğru şekilde ayarlama hakkında daha fazla bilgi için bkz. [Ileti günlüğe kaydetmeyi yapılandırma](../configuring-message-logging.md) ve [izlemeyi yapılandırma](../tracing/configuring-tracing.md). Yapılandırma tarafından belirtilen diğer tüm izleme kaynaklarının izleme düzeyi uygulama başlatıldığında etkilidir ve değiştirilemez.  
   
  WCF, komut `GetOperationCounterInstanceName` dosyası oluşturmak için bir yöntem sunar. Bu yöntem, bir işlem adı ile sağlarsanız bir performans sayacı örnek adı döndürür. Ancak, girişinizi doğrulamaz. Bu nedenle, yanlış bir işlem adı sağlarsanız, yanlış bir sayaç adı döndürülür.  
   

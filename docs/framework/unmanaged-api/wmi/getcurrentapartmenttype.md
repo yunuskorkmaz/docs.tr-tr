@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037959"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798620"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType işlevi
 Çağıranın yürütüldüğü grup türünü alır.   
@@ -61,7 +61,7 @@ dışı Arayanın Apartmanı belirten bir [Apttype](/windows/win32/api/objidlbas
 Bu işlev, [ICommandText Threadingınfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metoduna bir çağrıyı sarmalanmış.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi** WMINet_Utils. IDL  
   

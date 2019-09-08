@@ -2,12 +2,12 @@
 title: 'İyimser Eşzamanlılık: Genel Bakış'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
-ms.openlocfilehash: a61d4c5b35f3797539fe845045b8a959b0351350
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fa7d423c0abc07e0d97f7d0d4d557aa11d675ee4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938625"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792931"
 ---
 # <a name="optimistic-concurrency-overview"></a>İyimser Eşzamanlılık: Genel Bakış
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]iyimser eşzamanlılık denetimini destekler. Aşağıdaki tabloda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgelerde iyimser eşzamanlılık için uygulanan terimler açıklanmaktadır:  
@@ -44,26 +44,26 @@ ms.locfileid: "69938625"
 |Kullanıcı1|Alfred||Pazarlama|  
 |Kullanıcı2||Mary|Hizmet|  
   
- Bu gibi çakışmaları farklı yollarla çözebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)yönetin.  
+ Bu gibi çakışmaları farklı yollarla çözebilirsiniz. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını](how-to-manage-change-conflicts.md)yönetin.  
   
 ## <a name="conflict-detection-and-resolution-checklist"></a>Çakışma algılama ve çözümleme denetim listesi  
  Çakışmaları dilediğiniz ayrıntı düzeyinde tespit edebilir ve çözebilirsiniz. Bir Extreme 'de, her çakışmayı üç şekilde (bkz <xref:System.Data.Linq.RefreshMode>.) ek bir şekilde çözebilirsiniz. Diğer bir deyişle, çakışma içindeki her üye için her çakışma türü için belirli bir eylem belirleyebilirsiniz.  
   
 - Nesne modelinizde <xref:System.Data.Linq.Mapping.UpdateCheck> seçenekleri belirtin veya gözden geçirin.  
   
-     Daha fazla bilgi için [nasıl yapılır: Eşzamanlılık çakışmaları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)Için hangi üyelerin test edildiğini belirtin.  
+     Daha fazla bilgi için [nasıl yapılır: Eşzamanlılık çakışmaları](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)Için hangi üyelerin test edildiğini belirtin.  
   
 - Çağrın try/catch bloğunda <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, özel durumların hangi noktada oluşturulması gerektiğini belirtin.  
   
-     Daha fazla bilgi için [nasıl yapılır: Eşzamanlılık özel durumlarının ne zaman oluşturulur](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)belirtin.  
+     Daha fazla bilgi için [nasıl yapılır: Eşzamanlılık özel durumlarının ne zaman oluşturulur](how-to-specify-when-concurrency-exceptions-are-thrown.md)belirtin.  
   
 - Ne kadar çakışma ayrıntısı almak istediğinizi saptayın ve try/catch blobuna uygun olarak kod ekleyin.  
   
-     Daha fazla bilgi için [nasıl yapılır: Varlık çakışma bilgilerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) alın ve [şunları yapın: Üye çakışma bilgilerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md)alın.  
+     Daha fazla bilgi için [nasıl yapılır: Varlık çakışma bilgilerini](how-to-retrieve-entity-conflict-information.md) alın ve [şunları yapın: Üye çakışma bilgilerini](how-to-retrieve-member-conflict-information.md)alın.  
   
 - Keşfettiğiniz çeşitli çakışmaları nasıl çözümlemek istediğinizi kodunuzaekleyin.`catch` `try` /  
   
-     Daha fazla bilgi için [nasıl yapılır: Veritabanı değerlerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)koruyarak çakışmaları çözümleyin, [nasıl yapılır: Veritabanı değerlerinin](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)üzerine yazarak çakışmaları çözün ve [şunları yapın: Veritabanı değerleriyle](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md)birleştirerek çakışmaları çözün.  
+     Daha fazla bilgi için [nasıl yapılır: Veritabanı değerlerini](how-to-resolve-conflicts-by-retaining-database-values.md)koruyarak çakışmaları çözümleyin, [nasıl yapılır: Veritabanı değerlerinin](how-to-resolve-conflicts-by-overwriting-database-values.md)üzerine yazarak çakışmaları çözün ve [şunları yapın: Veritabanı değerleriyle](how-to-resolve-conflicts-by-merging-with-database-values.md)birleştirerek çakışmaları çözün.  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>Çakışma bulmayı ve çözümlemeyi destekleyen LINQ to SQL türleri  
  ' De [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] iyimser eşzamanlılık içindeki çakışmaların çözümlenmesini desteklemeye yönelik sınıflar ve özellikler şunları içerir:  
@@ -90,4 +90,4 @@ ms.locfileid: "69938625"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md)

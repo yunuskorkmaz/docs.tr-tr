@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f274befe78e45be3e53335572fd9c1e0b401fd3
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce0f11547d4b16516b7c78d1b1947f5c4bc831a3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040180"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798804"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
 Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.  
@@ -61,12 +61,12 @@ HRESULT ResolveTypeLib(
  dışı `bstrSimpleName` Parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) için bir işaretçi.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Yöntemi, [Tlbexp. exe (tür kitaplığı verme programı)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) işleme sırasında [LoadTypeLibWithResolver işlevi](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) tarafından çağrılır. `ResolveTypeLib`  
+ Yöntemi, [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) işleme sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağrılır. `ResolveTypeLib`  
   
  Bu arabirimin özel uygulamaları, `bstrSimpleName` parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) döndürmelidir.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
  **Üst bilgi** TlbRef. IDL, TlbRef. h  
   
@@ -76,5 +76,5 @@ HRESULT ResolveTypeLib(
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tlbexp Yardımcı İşlevleri](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+- [Tlbexp Yardımcı İşlevleri](index.md)
 - [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

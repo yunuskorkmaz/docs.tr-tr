@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 009da2579a6fe15cea3913ae5844fc886da2586c
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910739"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793507"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Nasıl yapılır: Sütunları Sınıf Üyesi Olarak Temsil Etme
-Kullanım [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> bir alan veya özellik bir veritabanı sütunu ile ilişkilendirmek için özniteliği.  
+Bir alanı veya özelliği bir veritabanı sütunuyla ilişkilendirmek için özniteliğinikullanın.<xref:System.Data.Linq.Mapping.ColumnAttribute> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
   
-### <a name="to-map-a-field-or-property-to-a-database-column"></a>Bir alan veya özellik bir veritabanı sütununa eşlemek için  
+### <a name="to-map-a-field-or-property-to-a-database-column"></a>Bir alanı veya özelliği bir veritabanı sütunuyla eşlemek için  
   
-- Ekleme <xref:System.Data.Linq.Mapping.ColumnAttribute> özniteliği için özellik veya alan bildirimi.  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute> Özniteliği özellik veya alan bildirimine ekleyin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod haritaları `CustomerID` alanındaki `Customer` sınıfının `CustomerID` sütununda `Customers` veritabanı tablosu.  
+ Aşağıdaki `CustomerID` kod, `Customer` sınıfındaki `Customers` alanını veritabanı tablosundaki sütunuylaeşler.`CustomerID`  
   
  [!code-csharp[DLinqCustomize#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#2)]
  [!code-vb[DLinqCustomize#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#2)]  
   
- Belirtmek zorunda değilsiniz <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> adı çıkarılan varsa özelliği. Bir ad belirtmezseniz, adı, özellik veya alan aynı ada olduğu varsayılmıştır.  
+ Ad çıkarsancan <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> özelliğini belirtmeniz gerekmez. Bir ad belirtmezseniz, ad, özellik veya alanla aynı ada sahip olacak şekilde adlandırılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL Nesne Modeli](the-linq-to-sql-object-model.md)
+- [Nasıl yapılır: Kod düzenleyicisini kullanarak varlık sınıflarını özelleştirme](how-to-customize-entity-classes-by-using-the-code-editor.md)

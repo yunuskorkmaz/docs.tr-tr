@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: dd70c8d238ba47744eec6ab4a4c6bc1e80a3d0b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204883"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784661"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram, veri öğelerinin geçerli ve orijinal sürümlerini tanımlayan bir XML biçimidir. , <xref:System.Data.DataSet> İçeriğini yüklemek ve sürdürmek ve bir ağ bağlantısı üzerinden aktarım için içeriğini serileştirmek için DiffGram biçimini kullanır. Bir <xref:System.Data.DataSet> DiffGram olarak yazıldığında, hem <xref:System.Data.DataSet> **özgün** **hem de sütun değerleri dahil olmak üzere içeriği doğru şekilde yeniden oluşturmak için, DiffGram değerini tüm gerekli bilgilerle doldurur. Geçerli** satır sürümleri, satır hata bilgileri ve satır sırası.  
@@ -137,4 +137,4 @@ DiffGram, veri öğelerinin geçerli ve orijinal sürümlerini tanımlayan bir X
 - [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
 - [XML Verileri Olarak DataSet İçeriği Yazma](writing-dataset-contents-as-xml-data.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

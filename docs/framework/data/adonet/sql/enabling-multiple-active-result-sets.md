@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938193"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782401"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Birden Çok Etkin Sonuç Kümesini Etkinleştirme
 Birden çok etkin sonuç kümesi (MARS), tek bir bağlantıda birden çok toplu işi yürütmeye izin vermek için SQL Server ile birlikte çalışarak bir özelliktir. MARS, SQL Server ile kullanım için etkinleştirildiğinde, kullanılan her komut nesnesi bağlantıya bir oturum ekler.  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS işlemleri iş parçacığı açısından güvenli değildir.  
   
 ### <a name="connection-pooling"></a>Bağlantı Havuzu  
- MARS etkin bağlantıları, diğer tüm bağlantılar gibi havuza alınır. Bir uygulama iki bağlantı açarsa, MARS ve diğeri de MARS devre dışı bırakıldığında iki bağlantı ayrı havuzlardır. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ MARS etkin bağlantıları, diğer tüm bağlantılar gibi havuza alınır. Bir uygulama iki bağlantı açarsa, MARS ve diğeri de MARS devre dışı bırakıldığında iki bağlantı ayrı havuzlardır. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Toplu yürütme ortamı SQL Server  
  Bir bağlantı açıldığında, varsayılan bir ortam tanımlanmıştır. Bu ortam daha sonra bir mantıksal MARS oturumuna kopyalanır.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Birden Çok Etkin Sonuç Kümesi (MARS)](multiple-active-result-sets-mars.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

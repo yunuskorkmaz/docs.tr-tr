@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 561ebd7ac6948fa42f73ebb4f1eb97c574e6d7e7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3add49d48a569664d4cbb6b5c26d5f3379b6f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963174"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794404"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader kullanarak veri alma
 **DataReader**kullanarak verileri almak Için, **komut** nesnesinin bir örneğini oluşturun ve sonra bir veri kaynağından satırları almak için **Command. ExecuteReader** çağırarak bir **DataReader** oluşturun. **DataReader** , yordamsal mantığın bir veri kaynağından oluşan sonuçları sırayla verimli bir şekilde işlemesini sağlayan, arabelleğe alınmamış bir veri akışı sağlar. Veriler bellekte önbelleğe alınmadığı için büyük miktarlarda veri alırken **DataReader** iyi bir seçimdir.
@@ -35,7 +35,7 @@ Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kulla
 ## <a name="closing-the-datareader"></a>DataReader kapatılıyor  
  **DataReader** nesnesini kullanmayı bitirdiğinizde her zaman **Close** yöntemini çağırın.  
   
- Komutunuz çıkış parametrelerini veya dönüş değerlerini Içeriyorsa, **DataReader** kapatılana kadar bu değerler kullanılamaz.  
+ **Komutunuz** çıkış parametrelerini veya dönüş değerlerini Içeriyorsa, **DataReader** kapatılana kadar bu değerler kullanılamaz.  
   
  Bir **DataReader** açık olsa da **bağlantı** , bu **DataReader**tarafından özel olarak kullanılıyor. Özgün **DataReader** kapatılana kadar, başka bir **DataReader**oluşturma da dahil olmak üzere **bağlantı**için herhangi bir komut yürütemezsiniz.  
   
@@ -49,7 +49,7 @@ Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kulla
  [!code-vb[DataWorks SqlClient.NextResult#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.NextResult/VB/source.vb#1)]  
   
 ## <a name="getting-schema-information-from-the-datareader"></a>DataReader 'tan şema bilgileri alma  
- Bir **DataReader** açıkken, **GetSchemaTable** yöntemini kullanarak geçerli sonuç kümesiyle ilgili şema bilgilerini alabilirsiniz. **GetSchemaTable** , geçerli <xref:System.Data.DataTable> sonuç kümesi için şema bilgilerini içeren satırlar ve sütunlar ile doldurulmuş bir nesne döndürür. **DataTable** , sonuç kümesinin her bir sütunu için bir satır içerir. Şema tablosunun her sütunu, sonuç kümesinin satırlarında döndürülen sütunların bir özelliğine eşlenir; burada sütunadı, özelliğin adıdır ve sütununun değeri özelliğin değeridir. Aşağıdaki örnek, **DataReader**için şema bilgilerini yazar.  
+ Bir **DataReader** açıkken, **GetSchemaTable** yöntemini kullanarak geçerli sonuç kümesiyle ilgili şema bilgilerini alabilirsiniz. **GetSchemaTable** , geçerli <xref:System.Data.DataTable> sonuç kümesi için şema bilgilerini içeren satırlar ve sütunlar ile doldurulmuş bir nesne döndürür. **DataTable** , sonuç kümesinin her bir sütunu için bir satır içerir. Şema tablosunun her sütunu, sonuç kümesinin satırlarında döndürülen sütunların bir özelliğine eşlenir; burada **sütunadı** , özelliğin adıdır ve sütununun değeri özelliğin değeridir. Aşağıdaki örnek, **DataReader**için şema bilgilerini yazar.  
   
  [!code-csharp[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.GetSchemaTable#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetSchemaTable/VB/source.vb#1)]  
@@ -57,7 +57,7 @@ Sorgu sonuçlarından bir satır almak için **DataReader. Read** metodunu kulla
 ## <a name="working-with-ole-db-chapters"></a>OLE DB bölümler ile çalışma  
  Hiyerarşik satır kümeleri veya bölümler (OLE DB türü **dbtype_hchapter**, ADO türü **adbölüm**) kullanılarak <xref:System.Data.OleDb.OleDbDataReader>alınabilir. Bölüm içeren bir sorgu **DataReader**olarak döndürüldüğünde, bölüm bu **DataReader** 'da bir sütun olarak döndürülür ve bir **DataReader** nesnesi olarak sunulur.  
   
- ADO.NET **veri kümesi** , tablolar arasında üst-alt ilişkilerini kullanarak hiyerarşik satır kümelerini temsil etmek için de kullanılabilir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
+ ADO.NET **veri kümesi** , tablolar arasında üst-alt ilişkilerini kullanarak hiyerarşik satır kümelerini temsil etmek için de kullanılabilir. Daha fazla bilgi için bkz. [veri kümeleri, DataTable ve DataView](./dataset-datatable-dataview/index.md).  
   
  Aşağıdaki kod örneği, bir müşteri listesindeki her müşteri için siparişlerin bir bölüm sütununu oluşturmak üzere MSDataShape sağlayıcısını kullanır.  
   
@@ -255,11 +255,11 @@ adapter.Fill(ds);
 ```
 
 > [!NOTE]
-> Bir **OverflowException**'ı önlemek için, değeri bir <xref:System.Data.DataRow>içinde depolamadan önce Oracle Number türünden geçerli bir .NET Framework türüne dönüştürme işleminin de işlemesini öneririz. Bir OverflowException 'ın oluşup <xref:System.Data.Common.DataAdapter.FillError> oluşmadığını öğrenmek için olayını kullanabilirsiniz. <xref:System.Data.Common.DataAdapter.FillError> Olay hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+> Bir **OverflowException**'ı önlemek için, değeri bir <xref:System.Data.DataRow>içinde depolamadan önce Oracle Number türünden geçerli bir .NET Framework türüne dönüştürme işleminin de işlemesini öneririz. Bir OverflowException 'ın oluşup <xref:System.Data.Common.DataAdapter.FillError> oluşmadığını öğrenmek için olayını kullanabilirsiniz. <xref:System.Data.Common.DataAdapter.FillError> Olay hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Veritabanı Şema Bilgilerini Alma](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
+- [Komutlar ve Parametreler](commands-and-parameters.md)
+- [Veritabanı Şema Bilgilerini Alma](retrieving-database-schema-information.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

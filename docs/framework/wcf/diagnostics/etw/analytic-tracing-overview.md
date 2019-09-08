@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6170accc01e837bba0afb446f67a6c6272e7dde7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592109"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798209"
 ---
 # <a name="analytic-tracing-overview"></a>Çözümleme İzleme Genel Bakış
-Analitik izleme [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] yüksek performanslı ve düşük ayrıntı izleme özelliği için olay izleme Windows (ETW üstünde) ayarlayın. ETW çekirdek izleme işlemlerinin ek yükü büyük ölçüde azaltmak için düzeyinde çalışır. Verimli bir şekilde kullanıcı ve çekirdek modu olaylarını arabelleğe alır ve dinamik günlük kaydını etkinleştirme hizmetin yeniden başlatılması gerekmeden sağlar. Sonraki günlükleri yayılan ve alınan olay izleme verileri mevcut değil.  
+' De [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] analitik izleme, Windows için olay izlemenin (ETW) üzerine ayarlanmış yüksek performanslı ve düşük düzeyde ayrıntı izleme özelliğidir. ETW, izleme işlemlerinin yükünü büyük ölçüde azaltmak için çekirdek düzeyinde çalışır. Kullanıcı ve çekirdek modu olaylarını etkin bir şekilde arabelleğe alır ve hizmetin yeniden başlatılmasına gerek kalmadan günlük kaydının dinamik olarak etkinleştirilmesini sağlar. İzleme verileri, oluşturulduktan ve alındıktan sonra olay günlüklerinde kullanılabilir.  
   
- ETW hakkında daha fazla bilgi için bkz: [artırmak hata ayıklama ve performans ayarlama ETW ile](https://go.microsoft.com/fwlink/?LinkId=164781).  
+ ETW hakkında daha fazla bilgi için bkz. [ETW Ile hata ayıklamayı ve performans ayarlamayı geliştirme](https://go.microsoft.com/fwlink/?LinkId=164781).  
   
- Uygulama, analiz etmek için Windows Sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra [!INCLUDE[wv](../../../../../includes/wv-md.md)] ve [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] ek günlükler uygulama ve hizmet günlükleri en üst düzey düğümü altında sunulan. Bu yeni günlükler amacı, belirli bir uygulama veya sistem genelinde etkisi (örneğin, güvenlik olay günlüğüne kaydedebilir olayların türünü) genel olaylar yerine belirli bir bileşen için olayları depolamaktır. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] birleştirir ve WCF ileti günlüklerini WCF izleme olaylarını günlüğe kaydetmeyi ilişkilendirir ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] kayıtları uygulamalar ve hizmet günlükleri izleme.  
+ Uygulamayı çözümlemek için Windows sistem, güvenlik ve uygulama olay günlüklerini kullanmanın yanı sıra, [!INCLUDE[wv](../../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] uygulamalar ve hizmetler günlükleri üst düzey düğümü altında ek Günlükler kullanıma sunulmuştur. Bu yeni günlüklerin amacı, belirli bir uygulama için olayları veya sistem genelinde etkileri olan (güvenlik olay günlüğünün kaydedebileceği olayların türü gibi) genel olaylar yerine belirli bir bileşeni depolar. [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)]WCF İzleme olaylarının, WCF ileti günlüklerinin ve [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] izleme kayıtlarının, uygulama ve hizmet günlüklerine kaydedilmesini birleştirir ve ilişkilendirir.  
   
-## <a name="concepts-and-capabilities"></a>Kavramları ve özellikleri  
- Aşağıdaki kavramları ve özellikleri WCF analiz izleme uygulayın.  
+## <a name="concepts-and-capabilities"></a>Kavramlar ve yetenekler  
+ Aşağıdaki kavramlar ve yetenekler WCF analitik Izleme için geçerlidir.  
   
 ### <a name="enabling-wcf-diagnostics-settings"></a>WCF tanılama ayarlarını etkinleştirme  
- WCF tanılama içinde etkin \<system.serviceModel >\<Tanılama > yapılandırma bölümü.  
+ WCF tanılama, \<System. ServiceModel >\<Tanılama > yapılandırma bölümünde etkinleştirilmiştir.  
   
 ```xml  
 <system.serviceModel>  
   <diagnostics>  
 ```  
   
- IIS Web barındırılan bir sanal uygulama için tanılama ayarları WCF etkinleştirilmişse, ' Web.config dosyası. Başka bir seçenek, uygulama içinde bir alt dizindeki bir Web.config oluşturmaktır.  Bu seçenek, tüm alt dizini içindeki Hizmetler ayarlarını uygular.  Tanılama ayarları uygulamadaki tüm hizmetler için tutarlı bir şekilde başlatıldığını emin olmak için ayarları Web.config uygulama dizini ve uygulama içinde bireysel alt dizinlerden biri içinde olmalıdır.  
+ Web 'de barındırılan bir IIS sanal uygulaması için WCF Tanılama ayarları, ' Web. config dosyasında etkindir. Diğer bir seçenek de uygulama içindeki bir alt dizinde Web. config oluşturmaktır.  Bu seçenek, ayarları bir alt dizin içindeki tüm hizmetlere uygular.  Tanılama ayarlarının uygulamadaki tüm hizmetler için tutarlı bir şekilde başlatıldığından emin olmak için, ayarların uygulama dizinindeki Web. config içinde olması ve uygulamadaki ayrı alt dizinlerden birinde olmaması gerekir.  
   
 ### <a name="channels"></a>Kanallar  
- ETW kanalları kullanarak doğrudan izleme olayları belirli bir hedef kitle için yazılım bileşenlerini sağlar. Örneğin, bir kanala sistem yöneticileri için olayları ve olayları, uygulama geliştiricilerin dikkatli hakkında başka bir kanala gönderebilirsiniz. Kanal adlı ve Windows ile Olay Görüntüleyicisi'ni kullanarak bir kanalın olay tüketicileri görüntüleyebilmesi için kayıtlı.  
+ ETW, yazılım bileşenlerinin kanalları kullanarak belirli bir hedef kitleye olayları doğrudan izlemesini sağlar. Örneğin, sistem yöneticileri için olayları tek bir kanala ve uygulama geliştiricilerinin başka bir kanala karşı ilgilenme olaylarını gönderebilirsiniz. Kanallar, tüketicilerin Olay Görüntüleyicisi kullanarak bir kanalın olaylarını görüntüleyebilmeleri için Windows ile adlandırılır ve kaydedilir.  
   
- WCF'de çözümleme izleme özelliği [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] Microsoft-Windows-uygulaması-Server-uygulamalar kanala yazar. Bu kanal, üretimde WCF hizmetlerinin sistem durumunu izlemek istediğiniz kullanıcılar için özel olarak tasarlanmıştır. Bu, olayların birçok sistem durumu izleme kullanılabilir ayarlayabilir ve sorun giderme senaryoları küçük tanımlar.  
+ WCF için Microsoft-Windows-Application [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] -Server-Applications kanalına yazma işlemlerinde analitik izleme özelliği. Bu kanal, üretimde WCF hizmetlerinin sistem durumunu izlemek isteyen kullanıcılar için özel olarak tasarlanmıştır. Birçok sistem durumu izleme ve sorun giderme senaryosunda kullanılabilecek küçük, olay kümesini tanımlar.  
   
- Olay izleme için Windows bildirim iletileri olay günlüğüne düzgün bir şekilde çözülür biçimde etkinleştirmek için komut satırında ServiceModelReg aracı şu şekilde kullanın:  
+ İletilerin olay günlüğünde doğru şekilde kodu çözülecek şekilde Windows bildirimi için olay Izlemeyi etkinleştirmek üzere komut satırındaki ServiceModelReg aracını aşağıdaki gibi kullanın:  
   
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>Dinamik yapılandırma  
- ETW altyapı izleme olmasını sağlar etkin ve standart Windows araçlarını kullanarak dinamik olarak yapılandırılır. Daha fazla bilgi için [dinamik olarak etkinleştirme analitik izleme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).  
+ ETW altyapısı, izlemenin etkin ve standart Windows araçları kullanılarak dinamik olarak yapılandırılmasını sağlar. Daha fazla bilgi için bkz. [analitik Izlemeyi dinamik olarak etkinleştirme](dynamically-enabling-analytic-tracing.md).  
   
-### <a name="message-flow-tracing"></a>İleti akışı izlemeyi  
- İleti akışı izlemeyi etkinleştirme hakkında daha fazla bilgi için bkz. [ileti akışı izlemeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md).  
+### <a name="message-flow-tracing"></a>İleti akışı Izleme  
+ İleti akışı izlemenin nasıl etkinleştirileceği hakkında daha fazla bilgi için bkz. [Ileti akışı Izlemeyi yapılandırma](configuring-message-flow-tracing.md).  
   
 ### <a name="keywords"></a>anahtar sözcükler  
- Anahtar sözcükler, izleme iletilerini filtrelemek ve .NET Framework'ün bileşeni olay yayılan tanımlamak için kullanılır. Daha fazla bilgi için [dinamik olarak etkinleştirme analitik izleme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md).
+ Anahtar sözcükler, izleme iletilerini filtrelemek için kullanılır ve hangi .NET Framework bileşeni olayı yayındığını tanımlar. Daha fazla bilgi için bkz. [analitik Izlemeyi dinamik olarak etkinleştirme](dynamically-enabling-analytic-tracing.md).

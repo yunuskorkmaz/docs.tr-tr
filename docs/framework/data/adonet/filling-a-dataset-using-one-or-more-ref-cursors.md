@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
-ms.openlocfilehash: 30e50ae171ec9733e222c55e98d1cfcfa535d4e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b80edb522d26896d33cacff757390e5a7bf757e6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879378"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783870"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma
-Bu Microsoft Visual Basic örnek iki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.  
+Bu Microsoft Visual Basic örneği, iki ref cursor parametresi döndüren bir PL/SQL saklı yordamını yürütür ve döndürülen satırları içeren <xref:System.Data.DataSet> bir doldurur.  
   
 ```vb  
 Private Sub Button1_Click(ByVal sender As Object, _  
@@ -48,5 +48,5 @@ Private Sub Button1_Click(ByVal sender As Object, _
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle REF CURSOR](oracle-ref-cursors.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

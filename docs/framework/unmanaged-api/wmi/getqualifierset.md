@@ -1,6 +1,6 @@
 ---
 title: GetQualifierSet işlevi (yönetilmeyen API Başvurusu)
-description: Bir sınıf veya örnek için ayarlanmış niteleyicisi GetQualifierSet işlevi alır.
+description: GetQualifierSet işlevi, bir sınıf veya örnek için niteleyici kümesini alır.
 ms.date: 11/06/2017
 api_name:
 - GetQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746467"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798469"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet işlevi
-Bir sınıf örneği veya bir sınıf tanımı için ayarlanmış niteleyicisi alır.
+Bir sınıf örneği veya sınıf tanımı için niteleyici kümesini alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,38 +41,38 @@ HRESULT GetQualifierSet (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `ppQualSet`  
-[out] Niteleyiciler sınıf nesnesi erişimi sağlayan bir arabirim işaretçisi alır. `ppQualSet` olamaz `null`. Bir hata gerçekleşirse, yeni bir nesne döndürülmez ve işaretçi solda değiştirilmemiş. 
+dışı Sınıf nesnesinin niteleyicilerine erişime izin veren arabirim işaretçisini alır. `ppQualSet``null`olamaz. Bir hata oluşursa, yeni bir nesne döndürülmez ve işaretçi değiştirilmemiş olarak kalır. 
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen yöntem yok. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre `null`. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemi. 
+Bu işlev, [IWbemClassObject:: GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) yöntemine bir çağrı kaydırır. 
 
-[IWbemQualifierSet işaretçi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) eklemek, düzenlemek veya bu niteleyiciler silme çağıran olanak tanır. Tüm örnek veya sınıf tanımına eklenen, düzenlenen veya silinen tür niteleyicileri uygulayın.
+[IWbemQualifierSet işaretçisi](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) , çağıranın bu niteleyicileri eklemesine, düzenlemesine veya silmesine izin verir. Bu tür eklenmiş, düzenlenmiş veya silinen niteleyiciler, tüm örnek veya sınıf tanımı için geçerlidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils.idl  
+ **Üst bilgi** WMINet_Utils. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 496d6f6ffef8d15e368979a67a8beed62ab86c38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 481a56f923c4218cd8689c578ce990785aee0ab3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918187"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782715"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>DataView ile sıralama (LINQ to DataSet)
 Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı arabirimi denetimi aracılığıyla bir istemciye sunma özelliği, veri bağlamanın önemli bir yönüdür. <xref:System.Data.DataView>verileri sıralamak ve belirli sıralama ölçütlerine göre sıralanmış veri satırlarını döndürmek için çeşitli yollar sağlar. Dize tabanlı sıralama yeteneklerine <xref:System.Data.DataView> ek olarak sıralama ölçütlerine yönelik ifadeler de kullanabilirsiniz. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler, dize tabanlı sıralamaya göre çok daha karmaşık ve güçlü sıralama işlemlerine izin verir. Bu konuda, kullanarak <xref:System.Data.DataView>sıralama için her iki yaklaşım da açıklanmaktadır.  
@@ -20,7 +20,7 @@ Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı 
   
  İfade tabanlı sıralama, daha basit dize tabanlı sıralamaya kıyasla daha güçlü ve karmaşık sıralama sağlar. Dize tabanlı ve ifade tabanlı sıralamanın birbirini dışlamadığını unutmayın. Dize tabanlı <xref:System.Data.DataView.Sort%2A> , bir sorgudan oluşturulduktan <xref:System.Data.DataView> sonra ayarlandıysa, sorgudan çıkarılan ifade tabanlı filtre temizlenir ve sıfırlanamaz.  
   
- ' A <xref:System.Data.DataView> ait dizin, her ikisi de <xref:System.Data.DataView> oluşturulduğunda ve sıralama ya da filtreleme bilgisi değiştirildiğinde oluşturulur. Tarafından oluşturulan LINQ to DataSet sorgusunda <xref:System.Data.DataView> sıralama ölçütlerini sağlayarak en iyi performansı elde edersiniz ve sıralama bilgilerini daha sonra değiştirmez. Daha fazla bilgi için bkz. [DataView performansı](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ ' A <xref:System.Data.DataView> ait dizin, her ikisi de <xref:System.Data.DataView> oluşturulduğunda ve sıralama ya da filtreleme bilgisi değiştirildiğinde oluşturulur. Tarafından oluşturulan LINQ to DataSet sorgusunda <xref:System.Data.DataView> sıralama ölçütlerini sağlayarak en iyi performansı elde edersiniz ve sıralama bilgilerini daha sonra değiştirmez. Daha fazla bilgi için bkz. [DataView performansı](dataview-performance.md).  
   
 > [!NOTE]
 > Çoğu durumda, sıralama için kullanılan ifadelerin yan etkileri olmaması ve belirleyici olması gerekir. Ayrıca, sıralama işlemleri herhangi bir sayıda yürütülene kadar, ifadeler bir dizi yürütme sayısına bağlı herhangi bir mantığı içermemelidir.  
@@ -48,7 +48,7 @@ Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı 
   
  Dize tabanlı ve ifade tabanlı sıralama işlevselliği birbirini dışlıyor. Özelliği ayarlandığında, <xref:System.Data.DataView> tarafından oluşturulan sorgudan devralınan ifade tabanlı sıralama temizlenir. <xref:System.Data.DataView.Sort%2A>  
   
- Dize tabanlı <xref:System.Data.DataView.Sort%2A> filtreleme hakkında daha fazla bilgi için bkz. [verileri sıralama ve filtreleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Dize tabanlı <xref:System.Data.DataView.Sort%2A> filtreleme hakkında daha fazla bilgi için bkz. [verileri sıralama ve filtreleme](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Örnek  
  Takip eden örnek, kişi <xref:System.Data.DataView> tablosundan bir oluşturur ve satırları son ada göre azalan düzende sıralar, ardından ilk adı artan sırada yapar:  
@@ -83,6 +83,6 @@ Verileri belirli ölçütlere göre sıralama ve sonra verileri bir kullanıcı 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView ile Filtreleme](filtering-with-dataview-linq-to-dataset.md)
 - [Verileri Sıralama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb546145(v=vs.120))

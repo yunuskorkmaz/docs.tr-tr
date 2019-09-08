@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee30d4f32e05fab27ae70052b28d3d152594cf90
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778419"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795372"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader İşlevi
-Belirtilen dosya için geçmiş okuyucu oluşturur.  
+Belirtilen dosya için bir geçmiş okuyucu oluşturur.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -37,26 +37,26 @@ HRESULT CreateHistoryReader (
   
 ## <a name="parameters"></a>Parametreler  
  `wzFilePath`  
- [in] Dosya yolu.  
+ 'ndaki Dosya yolu.  
   
  `ppHistoryReader`  
- [out] Başarıyla tamamlandığında, geçmiş Okuyucu için bir işaretçi içerir.  
+ dışı Başarılı tamamlandığında, geçmiş okuyucu için bir işaretçi içerir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Bu yöntem, aşağıdaki tabloda açıklanan değerlere ek olarak Wınerror içinde tanımlanan standart COM hata kodlarını döndürür.  
+ Bu yöntem, aşağıdaki tabloda açıklanan değerlere ek olarak, WinError. h içinde tanımlanan standart COM hata kodlarını döndürür.  
   
 |Dönüş kodu|Açıklama|  
 |-----------------|-----------------|  
-|S_OK|Yöntemi başarıyla tamamlandığını gösterir.|  
-|E_INVALIDARG|Bildiren `wzFilePath` veya `ppHistoryReader` null bir başvuru ayarlayın.|  
+|S_OK|Metodun başarıyla tamamlandığını gösterir.|  
+|E_INVALIDARG|`wzFilePath` Bunun veya`ppHistoryReader` null bir başvuruya ayarlandığını gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Kitaplığı:** Fusion.dll  
+ **Kitaplığı** Fusion. dll  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

@@ -2,24 +2,24 @@
 title: ProtocolStopFailure
 ms.date: 03/30/2017
 ms.assetid: 8b246f8f-eb0f-430b-a82b-3d55aad287a1
-ms.openlocfilehash: 1032305600526868fca5d2e1517238e3cabdc92b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9df41480d110ff4ba8066a85a9d1d5debe045900
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999030"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796148"
 ---
 # <a name="protocolstopfailure"></a>ProtocolStopFailure
-Kimliği: 147  
+Numarasını 147  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WS-Atomic işlem Protokolü hizmetini durdurmak başarısız olduğunu gösterir. Olay Protokolü kimliği, protokol adı, özel durum, işlem adı ve işlem kimliği listeler  
+ Bu olay, WS Atomik Işlem Protokolü hizmetinin duramayacağını gösterir. Olayda protokol KIMLIĞI, protokol adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

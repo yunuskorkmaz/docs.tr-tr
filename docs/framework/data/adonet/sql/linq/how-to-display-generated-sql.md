@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3ed431709266b636804c6c00450b26684550d8b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793761"
 ---
 # <a name="how-to-display-generated-sql"></a>Nasıl yapılır: Oluşturulan SQL’i Görüntüleme
-Sorgular ve değişiklik kullanarak işleme için oluşturulan SQL kodu görüntüleyebilirsiniz <xref:System.Data.Linq.DataContext.Log%2A> özelliği. Bu yaklaşım anlamak için yararlı olabilir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] işlevselliği ve belirli sorunları hata ayıklama.  
+<xref:System.Data.Linq.DataContext.Log%2A> Özelliğini kullanarak sorgular için oluşturulan SQL kodunu ve değişiklik işlemeyi görüntüleyebilirsiniz. Bu yaklaşım, işlevselliği anlamak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ve belirli sorunların hatalarını ayıklamak için yararlı olabilir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.Data.Linq.DataContext.Log%2A> özelliği kod yürütülmeden önce SQL kodu konsol penceresinde görüntüler.  Bu özelliği kullanmak için sorgu, ekleme, güncelleştirme ve silme komutları.  
+ Aşağıdaki örnek, kod yürütülmeden <xref:System.Data.Linq.DataContext.Log%2A> önce konsol penceresinde SQL kodunu göstermek için özelliğini kullanır.  Bu özelliği sorgu, INSERT, Update ve DELETE komutlarıyla birlikte kullanabilirsiniz.  
   
- Visual Basic yürüttüğünüzde gördüğünüz satırla konsol penceresinden veya C# izleyen kod.  
+ Konsol penceresindeki satırlar, aşağıdaki Visual Basic veya C# kodu yürüttüğünüzde gördüğünüz şeydir.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
@@ -44,4 +44,4 @@ SEVES
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+- [Hata Ayıklama Desteği](debugging-support.md)

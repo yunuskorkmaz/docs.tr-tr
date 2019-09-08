@@ -10,24 +10,24 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: 324537ac018086669abccc21235f9a9359b413cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05a90c4020f225414b21e82684e46b3c2abda010
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662844"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797076"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>Nasıl yapılır: Özel Sorumlu Kimliği Oluşturma
-<xref:System.Security.Permissions.PrincipalPermissionAttribute> Hizmet yöntemleri erişimi denetleme, bildirim temelli bir yoludur. Bu öznitelik kullanırken <xref:System.ServiceModel.Description.PrincipalPermissionMode> numaralandırma yetkilendirme denetimleri gerçekleştirmek için modu belirtir. Bu modu ayarlandığında <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>, özel bir belirtmesini sağlayan <xref:System.Security.Principal.IPrincipal> sınıfı tarafından döndürülen <xref:System.Threading.Thread.CurrentPrincipal%2A> özelliği. Bu konuda senaryoyu gösteren zaman <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> özel yetkilendirme ilkesi ve özel bir kural ile birlikte kullanılır.  
+, <xref:System.Security.Permissions.PrincipalPermissionAttribute> Hizmet yöntemlerine erişimi denetlemenin bildirime dayalı bir yöntemidir. Bu öznitelik <xref:System.ServiceModel.Description.PrincipalPermissionMode> kullanılırken listeleme, yetkilendirme denetimleri gerçekleştirme modunu belirtir. Bu mod olarak <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>ayarlandığında, kullanıcının <xref:System.Threading.Thread.CurrentPrincipal%2A> özelliği tarafından döndürülen özel <xref:System.Security.Principal.IPrincipal> bir sınıf belirtmesini sağlar. Bu konu başlığı altında, özel <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> bir yetkilendirme ilkesiyle birlikte kullanılan ve özel bir sorumlu olan senaryo gösterilmektedir.  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.Security.Permissions.PrincipalPermissionAttribute>, bkz: [nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).  
+ Kullanma <xref:System.Security.Permissions.PrincipalPermissionAttribute>hakkında daha fazla bilgi için bkz [. nasıl yapılır: PrincipalPermissionAttribute sınıfıyla](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)erişimi kısıtlayın.  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[PrincipalPermissionMode#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/principalpermissionmode/cs/source.cs#8)]
  [!code-vb[PrincipalPermissionMode#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/principalpermissionmode/vb/source.vb#8)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Aşağıdaki ad alanlarına başvurular, kodu derlemek için gereklidir:  
+ Kodu derlemek için aşağıdaki ad alanlarına başvurular gereklidir:  
   
 - <xref:System>  
   
@@ -53,5 +53,5 @@ ms.locfileid: "64662844"
 
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Nasıl yapılır: ASP.NET rol sağlayıcısını bir hizmetle kullanma](../feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Nasıl yapılır: PrincipalPermissionAttribute sınıfı ile erişimi kısıtlama](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)

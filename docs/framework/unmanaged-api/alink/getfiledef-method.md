@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a51e8c83d0949f68a41f6a4e10396adbc4f3c9c1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741897"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787455"
 ---
 # <a name="getfiledef-method"></a>GetFileDef Yöntemi
-(Aksine ALink tarafından atanan simgesi) meta verilerinde kullanılan gerçek FileDef belirteci alır.  
+Meta verilerde kullanılan gerçek FileDef belirtecini alır (ALink tarafından atanan belirtecin aksine).  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,10 +38,10 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme kimliği.  
+ Derlemenin KIMLIĞI.  
   
  `TargetFile`  
- Belirteç eklenen dosyanın AddFile yöntemi veya Addımport yöntemi alınan gibi.  
+ AddFile yönteminden veya AddImport yönteminden alınan eklenen dosyanın belirteci.  
   
  `pScope`  
  FileDef belirtecini alır.  
@@ -50,10 +50,10 @@ HRESULT GetFileDef(
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [ALink API](index.md)

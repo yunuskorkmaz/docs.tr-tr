@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: f8400b214bc9ba3a28eeec05f6171953b42bc6f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c023f7610576c017c91fdb919322acdf9003767a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938738"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781645"
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Nasıl yapılır: Sorguları Depolama ve Yeniden Kullanma
 Yapısal olarak benzer sorguları birçok kez yürüten bir uygulamanız varsa, genellikle sorguyu bir kez derleyerek ve farklı parametrelerle birkaç kez yürüterek performansı artırabilirsiniz. Örneğin, bir uygulamanın belirli bir şehirde yer alan tüm müşterileri alması gerekebilir. burada şehir, bir formdaki Kullanıcı tarafından çalışma zamanında belirtilir. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Bu amaçla *derlenen sorguların* kullanımını destekler.  
@@ -36,5 +36,5 @@ Yapısal olarak benzer sorguları birçok kez yürüten bir uygulamanız varsa, 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Data.Linq.CompiledQuery>
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Sorgu Kavramları](query-concepts.md)
+- [Veritabanını Sorgulama](querying-the-database.md)

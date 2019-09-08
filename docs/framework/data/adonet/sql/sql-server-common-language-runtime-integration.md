@@ -2,47 +2,47 @@
 title: SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b40c6a1576b87d9bb4a7eb4b1ee3df8828b892
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876349"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780863"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Ortak Dil Çalışma Zamanı Modülü Tümleştirmesi
-SQL Server 2005, ortak dil çalışma zamanı (CLR) bileşeni .NET Framework'ün tümleştirme Microsoft Windows için kullanıma sunuldu. Bu, saklı yordamlar, Tetikleyiciler, kullanıcı tanımlı türler, kullanıcı tarafından tanımlanan İşlevler, kullanıcı tanımlı toplamları ve akış tablo değerli işlevler, Microsoft Visual Basic .NET ve Microsoft da dahil olmak üzere, herhangi bir .NET Framework dili kullanarak yazabildiğinizi anlamına gelir. Visual C#. <xref:Microsoft.SqlServer.Server> Ad alanı, yönetilen kod Microsoft SQL Server ortamı ile etkileşimde bulunmasını yeni uygulama programlama arabirimleri (API) kümesini içerir.  
+SQL Server 2005, Microsoft Windows için .NET Framework ortak dil çalışma zamanı (CLR) bileşeninin tümleştirilmesine tanıtılmıştır. Bu, Microsoft Visual Basic .NET ve Microsoft dahil olmak üzere herhangi bir .NET Framework dilini kullanarak saklı yordamları, Tetikleyicileri, Kullanıcı tanımlı türleri, Kullanıcı tanımlı özellikleri, Kullanıcı tanımlı toplamları ve akış tablosu değerli işlevleri yazabileceğiniz anlamına gelir. Görsel C#. Ad <xref:Microsoft.SqlServer.Server> alanı, yönetilen kodun Microsoft SQL Server ortamıyla etkileşime girebilmesi için bir dizi yeni uygulama programlama arabirimi (API) içerir.  
   
- Bu bölümde, özellikler ve SQL Server ortak dil çalışma zamanı (CLR) tümleştirmesini ve SQL Server işlem içi belirli uzantılar ADO.NET özgü davranışları açıklanmaktadır.  
+ Bu bölümde, SQL Server ortak dil çalışma zamanı (CLR) tümleştirmesine özgü özellikler ve davranışlar ve ADO.NET için işleme özgü SQL Server uzantıları açıklanmaktadır.  
   
- Bu bölümde, SQL Server CLR Tümleştirmesi ile programlamaya başlamak için yeterli bilgi yalnızca sağlamaya yöneliktir ve kapsamlı olacak şekilde tasarlanmamıştır. Daha ayrıntılı bilgi için SQL Server Books Online'nın sürümü kullandığınız SQL Server sürümü için bkz.  
+ Bu bölüm, SQL Server CLR tümleştirmesiyle çalışmaya başlamak için yalnızca yeterli bilgi sağlamak amacıyla tasarlanmıştır ve kapsamlı bir şekilde değildir. Daha ayrıntılı bilgi için, kullanmakta olduğunuz SQL Server sürümü için SQL Server Books Online sürümüne bakın.  
   
- **SQL Server Çevrimiçi Kitapları**  
+ **Books Online SQL Server**  
   
 1. [Ortak dil çalışma zamanı (CLR) tümleştirme programlama kavramları](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server CLR Tümleştirmesine Giriş](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
- SQL Server CLR tümleştirmesine giriş sağlar. Ek konulara bağlantılar sağlar.  
+ [SQL Server CLR Tümleştirmesine Giriş](introduction-to-sql-server-clr-integration.md)  
+ CLR tümleştirmesi SQL Server için bir giriş sağlar. Ek konuların bağlantılarını sağlar.  
   
- [Kullanıcı Tanımlı CLR İşlevleri](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
- Uygulamak ve çeşitli CLR işlevleri kullanmak nasıl açıklar: Tablo değerli, skaler ve kullanıcı tanımlı toplama işlevleri.  
+ [Kullanıcı Tanımlı CLR İşlevleri](clr-user-defined-functions.md)  
+ Çeşitli CLR işlevleri türlerinin nasıl uygulanacağını ve kullanılacağını açıklar: tablo değerli, skaler ve Kullanıcı tanımlı toplama işlevleri.  
   
- [Kullanıcı Tanımlı CLR Türleri](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
- Uygulama ve kullanıcı tanımlı CLR türlerini kullanan açıklar. Ek konulara bağlantılar sağlar.  
+ [Kullanıcı Tanımlı CLR Türleri](clr-user-defined-types.md)  
+ CLR kullanıcı tanımlı türlerin nasıl uygulanacağını ve kullanılacağını açıklar. Ek konuların bağlantılarını sağlar.  
   
- [CLR Saklı Yordamları](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  
- Uygulama ve CLR saklı yordamlar kullanma açıklanır. Ek konulara bağlantılar sağlar.  
+ [CLR Saklı Yordamları](clr-stored-procedures.md)  
+ CLR saklı yordamlarının nasıl uygulanacağını ve kullanılacağını açıklar. Ek konuların bağlantılarını sağlar.  
   
- [CLR Tetikleyicileri](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
- Uygulama ve CLR Tetikleyicileri kullanma açıklanır. Ek konulara bağlantılar sağlar.  
+ [CLR Tetikleyicileri](clr-triggers.md)  
+ CLR tetikleyicilerinin nasıl uygulanacağını ve kullanılacağını açıklar. Ek konuların bağlantılarını sağlar.  
   
- [Bağlam Bağlantısı](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
- İçerik Bağlantısı açıklar.  
+ [Bağlam Bağlantısı](the-context-connection.md)  
+ Bağlam bağlantısını açıklar.  
   
- [SQL Server İşlem İçine Özgü ADO.NET Davranışı](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
- ADO.NET ve içerik bağlantısı için SQL Server işlem içi belirli uzantılarını açıklar. Ek konulara bağlantılar sağlar.  
+ [SQL Server İşlem İçine Özgü ADO.NET Davranışı](sql-server-in-process-specific-behavior-of-adonet.md)  
+ ADO.NET öğesine ve bağlam bağlantısına yönelik işleme özgü uzantıları SQL Server açıklar. Ek konuların bağlantılarını sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

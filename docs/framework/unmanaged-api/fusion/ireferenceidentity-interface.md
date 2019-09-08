@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd46ea26532074c9ea42da4d07a38ed583aad076
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789688"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796361"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity Arabirimi
-Kod nesnesi benzersiz imzası bir başvuruyu temsil eder.  
+Bir kod nesnesinin benzersiz imzasına bir başvuruyu temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Yeni bir arabirim işaretçisi alır `IReferenceIdentity` için aynı olan örneği `IReferenceIdentity`, belirtilen öznitelik değişiklikleri dışında.|  
-|`IReferenceIdentity::EnumAttributes`|Bir arabirim işaretçisi alır bir `IEnumIDENTITY_ATTRIBUTE` bununla ilişkili öznitelikleri içeren örneğini `IReferenceIdentity`.|  
-|`IReferenceIdentity::GetAttribute`|Belirtilen ada sahip belirtilen ad alanı özniteliğinin değerini alır.|  
-|`IReferenceIdentity::SetAttribute`|Belirtilen ad alanı ve belirtilen değere belirtilen ada sahip özniteliğini ayarlar.|  
+|`IReferenceIdentity::Clone`|Belirtilen öznitelik değişiklikleri dışında, bu `IReferenceIdentity` `IReferenceIdentity`ile özdeş olan yeni bir örneğe bir arabirim işaretçisi alır.|  
+|`IReferenceIdentity::EnumAttributes`|`IEnumIDENTITY_ATTRIBUTE` Bu`IReferenceIdentity`ile ilişkili öznitelikleri içeren bir örneğe bir arabirim işaretçisi alır.|  
+|`IReferenceIdentity::GetAttribute`|Belirtilen ad alanındaki özniteliğin değerini belirtilen adla alır.|  
+|`IReferenceIdentity::SetAttribute`|Belirtilen ad alanına ve belirtilen ada sahip olan özniteliği belirtilen değere ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Isolation.h  
+ **Üst bilgi** Yalıtım. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumIDENTITY_ATTRIBUTE Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)
+- [IEnumIDENTITY_ATTRIBUTE Arabirimi](ienumidentity-attribute-interface.md)

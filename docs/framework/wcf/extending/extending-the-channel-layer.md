@@ -4,25 +4,25 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
-ms.openlocfilehash: e60d8ef1a5191c6407b01eb1a2456a06aeeb1914
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76ca76d7973403c657b8f68bfde9619df36f220e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857915"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797144"
 ---
 # <a name="extending-the-channel-layer"></a>Kanal Katmanını Genişletme
-Kanal katmanını, istemciler ve hizmetler arasında ileti alışverişi sorumludur. Kanal uzantıları, güvenlik veya SOAP iletilerini gerçekleştirmek için yeni bir ağ aktarımı uygulama gibi aktarım işlevleri gibi yeni Protokolü işlevi uygulayabilirsiniz.  
+Kanal katmanı, istemciler ve hizmetler arasındaki ileti alışverişinin sorumluluğundadır. Kanal uzantıları, SOAP iletilerini taşımak için yeni bir ağ taşıması uygulama gibi güvenlik veya aktarım işlevselliği gibi yeni protokol işlevleri uygulayabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Kanal Modeline Genel Bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)  
- Hangi kanalları özelliklerdir, sağladıkları ve hem hizmeti ve bir istemci uygulamasını nasıl çalıştıkları üst düzey bir genel bakış sağlar.  
+ [Kanal Modeline Genel Bakış](channel-model-overview.md)  
+ Kanalların ne olduğu, sağladıkları Özellikler ve bir hizmette ve istemci uygulamasında nasıl çalıştıkları hakkında üst düzey bir genel bakış sağlar.  
   
- [Geliştirme Kanalları](../../../../docs/framework/wcf/extending/developing-channels.md)  
- Derinlik kanal altyapı çeşitli play rolleri, durumu altyapısı ve durumu yaşam döngüsünün nasıl çalıştığını, özel durumlar ve hataların nasıl ele alınacağını, meta veri desteği ekleme ve ileti kodlayıcılarla kanalların nasıl çalıştığı açıklanmaktadır.  
+ [Geliştirme Kanalları](developing-channels.md)  
+ Çeşitli kanal altyapısı türlerinin oynamakta olduğu, durum altyapısı ve durum yaşam döngüsünün nasıl çalıştığı, meta veri desteğinin nasıl uygulanacağı ve kanalların ileti kodlayıcılarıyla nasıl çalıştığı hakkında ayrıntılı olarak açıklanmaktadır.  
   
- [Özel Kodlayıcılar](../../../../docs/framework/wcf/extending/custom-encoders.md)  
- Kanallar ve oluşturmak nasıl ileti kodlayıcılar yürütebilirsiniz rolünü açıklar.  
+ [Özel Kodlayıcılar](custom-encoders.md)  
+ İleti kodlayıcılarındaki kanallar üzerinde oynamakta olan rolü ve bir oluşturma işlemini açıklar.  
   
- [Özel Akış Yükseltmeleri](../../../../docs/framework/wcf/extending/custom-stream-upgrades.md)  
- Akış odaklı taşımalar tarafından sağlanan akışları yükseltme işlemi açıklanır.
+ [Özel Akış Yükseltmeleri](custom-stream-upgrades.md)  
+ Akışa dayalı aktarımlar tarafından belirtilen akışları yükseltme işlemini açıklar.

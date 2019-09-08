@@ -2,24 +2,24 @@
 title: WmiUnregistrationFailed
 ms.date: 03/30/2017
 ms.assetid: 7d1d31a7-efab-492d-b0ff-3233d5dc7a2a
-ms.openlocfilehash: ea2227fbeb7ad77b1c48dee932117bc0e03d8812
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b22d341e7106c13bff1618760ab220ce4f21c0e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944150"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796000"
 ---
 # <a name="wmiunregistrationfailed"></a>WmiUnregistrationFailed
-Kimliği: 127  
+Numarasını 127  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WMI Sağlayıcısı kaydı olmadığını gösterir. WMI nesnesi, hata, işlem adı ve işlem kimliği, olay listeler  
+ Bu olay, WMI sağlayıcısının kaydedilmemiş olduğunu gösterir. Olayda WMI nesnesi, hata, işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

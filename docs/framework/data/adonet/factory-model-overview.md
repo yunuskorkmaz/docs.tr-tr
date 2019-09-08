@@ -2,26 +2,26 @@
 title: Fabrika Modeline Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d50ddd3b02b66a5b2be41eaba5cf9a497b5f1b3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879105"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795080"
 ---
 # <a name="factory-model-overview"></a>Fabrika Modeline Genel Bakış
-ADO.NET 2.0 sunulan yeni taban sınıflardaki <xref:System.Data.Common> ad alanı. Temel sınıflar abstract, bunlar doğrudan oluşturulamaz anlamına gelir. İçerirler <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, ve <xref:System.Data.Common.DbDataAdapter> ve .NET Framework veri sağlayıcıları tarafından aşağıdaki gibi paylaşılan <xref:System.Data.SqlClient> ve <xref:System.Data.OleDb>. Temel sınıflar eklenmesi, yeni arayüz oluşturmaya gerek olmadan .NET Framework veri sağlayıcıları için işlevselliği ekleme basitleştirir.  
+ADO.NET 2,0, <xref:System.Data.Common> ad alanında yeni temel sınıflar sunmuştur. Taban sınıflar soyuttur, yani doğrudan örneklenemez. <xref:System.Data.Common.DbConnection> ,Ve<xref:System.Data.SqlClient> gibi .NET Framework veri sağlayıcıları<xref:System.Data.OleDb>tarafından paylaşılır. <xref:System.Data.Common.DbCommand> <xref:System.Data.Common.DbDataAdapter> Temel sınıfların eklenmesi, yeni arabirimler oluşturmak zorunda kalmadan .NET Framework veri sağlayıcılarına işlevsellik eklenmesini basitleştirir.  
   
- ADO.NET 2.0, belirli veri sağlayıcısında bağlı olmayan genel veri erişim kodu yazmak bir geliştirici sağlayan soyut taban sınıfları de kullanıma sunulmuştur.  
+ ADO.NET 2,0, bir geliştiricinin belirli bir veri sağlayıcısına bağımlı olmayan genel veri erişim kodu yazmasını sağlayan soyut temel sınıflar da sunmuştur.  
   
-## <a name="the-factory-design-pattern"></a>Fabrika tasarım deseni  
- Sağlayıcı-bağımsız kod yazmak için programlama modeli arasında birden çok sağlayıcı access veritabanları için tek bir API kullanır "fabrikası" tasarım desenini kullanımı temel alır. Yalnızca gerçek Fabrika gibi diğer nesneleri oluşturmak için özel bir nesne kullanımı için çağırdığı gibi bu düzen aptly adlandırılır. Fabrika tasarım deseni daha ayrıntılı bir açıklaması için bkz. [yazma genel veri erişim kodu ASP.NET 2.0 ve ADO.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=55915).
+## <a name="the-factory-design-pattern"></a>Fabrika tasarım kalıbı  
+ Sağlayıcıdan bağımsız kod yazmak için programlama modeli, birden çok sağlayıcı genelinde veritabanlarına erişmek için tek bir API kullanan "fabrika" tasarım deseninin kullanımına dayanır. Bu model, gerçek bir fabrika gibi yalnızca diğer nesneleri oluşturmak için özel bir nesnenin kullanımını çağırdığı için oldukça adlandırılır. Fabrika tasarım deseninin daha ayrıntılı bir açıklaması için, bkz. [ASP.NET 2,0 ve ADO.NET 2,0 ' de genel veri erişim kodu yazma](https://go.microsoft.com/fwlink/?LinkId=55915).
   
- ADO.NET 2.0 ile başlayarak <xref:System.Data.Common.DbProviderFactories> sağlar sınıfını `static` (veya `Shared` Visual Basic'te) oluşturmak için yöntemleri bir <xref:System.Data.Common.DbProviderFactory> örneği. Örnek, ardından sağlayıcı bilgileri ve çalışma zamanında sağlanan bağlantı dizesi göre doğru türü kesin belirlenmiş bir nesne döndürür.  
+ ADO.NET 2,0 ile <xref:System.Data.Common.DbProviderFactories> başlayarak, sınıfı bir <xref:System.Data.Common.DbProviderFactory> örnek `static` oluşturmak için `Shared` (veya Visual Basic) yöntemler sağlar. Örnek daha sonra sağlayıcı bilgilerine ve çalışma zamanında sağlanan bağlantı dizesine göre doğru bir kesin türü belirtilmiş nesne döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DbProviderFactory Alma](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand ve DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
-- [DbDataAdapter ile Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DbProviderFactory Alma](obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand ve DbException](dbconnection-dbcommand-and-dbexception.md)
+- [DbDataAdapter ile Verileri Değiştirme](modifying-data-with-a-dbdataadapter.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

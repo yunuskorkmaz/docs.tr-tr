@@ -2,12 +2,12 @@
 title: XML Şema Kısıtlamaları ve İlişkileri
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202983"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784190"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML Şema Kısıtlamaları ve İlişkileri
 Bir XML şeması tanım dili (XSD) şemasında, kısıtlamalar (benzersiz, anahtar ve keyref kısıtlamaları) ve ilişkileri ( **msdata: Relationship** ek açıklaması kullanılarak) belirtebilirsiniz. Bu konuda bir XML şemasında belirtilen kısıtlamaların ve ilişkilerin, <xref:System.Data.DataSet>oluşturmak için nasıl yorumlanacağı açıklanmaktadır.  
@@ -189,4 +189,4 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

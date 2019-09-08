@@ -2,45 +2,45 @@
 title: association set
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: b7ded35986d27dedccbc3846f8791974bb225398
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43ab6cf9f1ee8cb971810add6b9a89467726f3e2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592578"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785036"
 ---
 # <a name="association-set"></a>association set
-Bir *ilişki kümesi* için mantıksal bir kapsayıcıdır [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) örnekleri aynı türde. Bir ilişki kümesi, bir veri yapısı modelleme değil; diğer bir deyişle, veriler veya ilişkileri yapısını açıklamaz. Böylece bir veri deposuna eşlenebilir bunun yerine, bir ilişki kümesi bir yapısı (örneğin, ortak dil çalışma zamanı veya bir SQL Server veritabanı) barındıran veya depolama ortamı için Grup ilişkilendirme örnekleri için sağlar.  
+*İlişki kümesi* , aynı türde [ilişki](association-type.md) örnekleri için mantıksal bir kapsayıcıdır. Bir ilişki kümesi, bir veri modelleme yapısı değildir; diğer bir deyişle, verilerin veya ilişkilerin yapısını tanımlamaz. Bunun yerine, bir ilişki kümesi, ilişki örneklerini gruplamak için bir barındırma veya depolama ortamı (ortak dil çalışma zamanı veya bir SQL Server veritabanı gibi) için bir yapı sağlar. böylece bir veri deposuna eşlenebilir.  
   
- Bir ilişki kümesi içinde tanımlanan bir [varlık kapsayıcısı](../../../../docs/framework/data/adonet/entity-container.md), mantıksal bir gruplandırması olan [varlık kümeleri](../../../../docs/framework/data/adonet/entity-set.md) ve ilişki Setleri.  
+ Bir ilişki kümesi, [varlık kümelerinin](entity-set.md) ve ilişkilendirme kümelerinin mantıksal bir gruplandırması olan bir [varlık kapsayıcısı](entity-container.md)içinde tanımlanır.  
   
- Bir ilişki kümesi için bir tanım, aşağıdaki bilgileri içerir:  
+ İlişki kümesi için bir tanım aşağıdaki bilgileri içerir:  
   
-- İlişkilendirmenin adını ayarlayın. (Gerekli)  
+- İlişki kümesi adı. Istenir  
   
-- Hangi örnekleri içerecek ilişkilendirme. (Gerekli)  
+- Örnek içereceği ilişki. Istenir  
   
-- İki [ilişkilendirme ucu ayarlanmış](../../../../docs/framework/data/adonet/association-set-end.md).  
+- İki [ilişkilendirme kümesi sona erer](association-set-end.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda iki ilişkilendirmeleri kavramsal bir modelle gösterilmektedir: `PublishedBy`, ve `WrittenBy`. İlişki Setleri hakkında bilgi diyagramda ilettiği değil olsa da, bir sonraki diyagramda bu modeli temelinde varlık setleri ve ilişki Setleri bir örnek gösterir.  
+ Aşağıdaki diyagramda iki ilişkiye sahip kavramsal bir model gösterilmektedir: `PublishedBy`ve. `WrittenBy` İlişki kümeleri hakkındaki bilgiler diyagramda bir şekilde gelse de, sonraki diyagramda bu modele göre ilişki kümelerinin ve varlık kümelerinin bir örneği gösterilmektedir.  
   
- ![Üç varlık türleri ile örnek modeli](./media/association-set/example-model-three-entity-types.gif)  
+ ![Üç varlık türüne sahip örnek model](./media/association-set/example-model-three-entity-types.gif)  
   
- Aşağıdaki örnek, bir ilişki kümesi gösterir (`PublishedBy`) ve iki varlık kümeleri (`Books` ve `Publishers`) yukarıda gösterilen kavramsal model göre. İçinde BI `Books` varlık kümesini temsil eden bir örneğini `Book` çalışma zamanında varlık türü. Benzer şekilde, Pj temsil eden bir `Publisher` örneğini `Publishers` varlık kümesi. BiPj örneğini temsil eder `PublishedBy` ilişkilendirmeyi `PublishedBy` ilişki kümesi.  
+ Aşağıdaki örnek, yukarıda gösterilen kavramsal modele bağlı`PublishedBy`olarak bir ilişki kümesi ()`Books` ve `Publishers`iki varlık kümesini (ve) gösterir. Varlık kümesindeki bı, çalışma zamanında `Book` varlık türünün bir örneğini temsil eder. `Books` Benzer şekilde, PJ `Publisher` `Publishers` varlık kümesindeki bir örneği temsil eder. Bipj, `PublishedBy` `PublishedBy` ilişki kümesindeki ilişkilendirmenin bir örneğini temsil eder.  
   
- ![Kümeleri örnek gösteren ekran görüntüsü.](./media/association-set/sets-example-association.gif)  
+ ![Bir küme örneği gösteren ekran görüntüsü.](./media/association-set/sets-example-association.gif)  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL, yukarıdaki diyagramda her bir ilişkilendirme için bir ilişki ile varlık kapsayıcısı tanımlar. Adı ve her bir ilişkilendirme ilişkisi Not XML öznitelikleri kullanılarak tanımlanır.  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](./ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki CSDL, Yukarıdaki diyagramda bulunan her ilişkilendirme için bir ilişki kümesiyle bir varlık kapsayıcısını tanımlar. Her ilişkilendirme kümesi için ad ve ilişkilendirmenin XML öznitelikleri kullanılarak tanımlandığını unutmayın.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- Bu ilişki, iki ilişkilendirme kümelerinin paylaşım uzun başına birden çok ilişki kümesi tanımlamak mümkündür bir [ilişkilendirme ayarlanmış son](../../../../docs/framework/data/adonet/association-set-end.md). Varlık kapsayıcısı için iki ilişki Setleri ile aşağıdaki CSDL tanımlar `WrittenBy` ilişkilendirme. Birden çok varlık kümesi için tanımlanmış bildirim `Book` ve `Author` varlık türleri ve hiçbir ilişki paylaşımları ilişkilendirme kümesi uç ayarlayın.  
+ İki ilişkilendirme kümesi bir [ilişki kümesi ucu](association-set-end.md)paylaştığından, ilişkilendirme başına birden çok ilişki kümesi tanımlanması mümkündür. Aşağıdaki csdl `WrittenBy` ilişki için iki ilişkilendirme kümesiyle bir varlık kapsayıcısını tanımlar. `Book` Ve`Author` varlık türleri için birden çok varlık kümesi tanımlandığından ve hiçbir ilişkilendirme kümesinin bir ilişki kümesi ucu paylaştığından emin olun.  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [foreign key property](../../../../docs/framework/data/adonet/foreign-key-property.md)
+- [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](entity-data-model.md)
+- [foreign key property](foreign-key-property.md)

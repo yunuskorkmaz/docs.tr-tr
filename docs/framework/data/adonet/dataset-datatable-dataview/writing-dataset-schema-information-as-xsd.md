@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e530831-695e-49ff-8f0b-e5b0c526b8eb
-ms.openlocfilehash: f9664d8e7bc221da68492140f30419ea8fb0d316
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f86e9100489ddf35d8ef5f98e386306a7dbfd4ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204369"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784173"
 ---
 # <a name="writing-dataset-schema-information-as-xsd"></a>XSD Olarak DataSet Schema Bilgilerini Yazma
 XML şeması tanım dili (xsd) <xref:System.Data.DataSet> şemasının şemasını yazabilirsiniz, böylece onu bir XML belgesinde veya bunlarla ilişkili verilerle birlikte aktarabilirsiniz. XML şeması bir dosyaya, akışa, bir <xref:System.Xml.XmlWriter>veya dizeye yazılabilir; türü kesin belirlenmiş bir **veri kümesi**oluşturmak için kullanışlıdır. Türü kesin belirlenmiş **veri kümesi** nesneleri hakkında daha fazla bilgi için bkz. [Typed DataSet](typed-datasets.md).  
@@ -55,4 +55,4 @@ string schemaString = dataSet.GetXmlSchema();
 - [XML Verileri Olarak DataSet İçeriği Yazma](writing-dataset-contents-as-xml-data.md)
 - [Türü Belirtilmiş DataSets](typed-datasets.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

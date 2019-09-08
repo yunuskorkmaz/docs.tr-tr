@@ -2,20 +2,20 @@
 title: Oracle Şema Koleksiyonları
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb91a90ae7323283556954caa401646a2063a37e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878481"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783289"
 ---
 # <a name="oracle-schema-collections"></a>Oracle Şema Koleksiyonları
 
-Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiyonları ek olarak aşağıdaki belirli şema koleksiyonları destekler:
+Oracle için Microsoft .NET Framework Veri Sağlayıcısı, ortak şema koleksiyonlarına ek olarak aşağıdaki belirli şema koleksiyonlarını destekler:
 
 - Sütunlar
 
-- Dizinleri
+- Dizinlerde
 
 - IndexColumns
 
@@ -25,7 +25,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 
 - Eş anlamlılar
 
-- Tabloları
+- Takvimleri
 
 - Kullanıcılar
 
@@ -35,7 +35,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 
 - Paketler
 
-- PackageBodies
+- Packagegövdeler
 
 - Arguments
 
@@ -43,7 +43,7 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 
 - PrimaryKeys
 
-- ForeignKeys
+- Yabancıanahtarlar
 
 - ForeignKeyColumns
 
@@ -51,335 +51,335 @@ Oracle için Microsoft .NET Framework veri sağlayıcısı, ortak şema koleksiy
 
 ## <a name="columns"></a>Sütunlar
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Tablo, görünüm veya kümesinin sahibi.|
+|INDE|Dize|Tablo, görünüm veya küme sahibi.|
 |TABLE_NAME|Dize|Tablo, görünüm veya küme adı.|
 |COLUMN_NAME|Dize|Sütun adı.|
-|Kimlik|Ondalık|Sütun sayısı, oluşturulan olarak sıralayın.|
-|VERİ TÜRÜ|Dize|Sütunun veri türü.|
-|UZUNLUĞU|Ondalık|Sütun bayt cinsinden uzunluğu.|
-|DUYARLIK|Ondalık|Sayı veri türü için Ondalık Duyarlığı; ikili duyarlık kayan veri türü, null için diğer veri türleri için.|
-|ÖLÇEK|Ondalık|Bir sayı ondalık noktasının sağındaki basamak.|
-|BOŞ DEĞER ATANABİLİR|Dize|Bir sütunu null değerlere izin verip vermediğini belirtir. Değer N sütunu bir NOT NULL kısıtlaması varsa veya sütun birincil ANAHTARIN parçası ise.|
+|ID|Ondalık|Sütunun oluşturulduğu şekilde sıra numarası.|
+|X|Dize|Sütunun veri türü.|
+|UZUNLUKLU|Ondalık|Sütunun bayt cinsinden uzunluğu.|
+|DUYARLILIK|Ondalık|Sayı veri türü için ondalık duyarlık; FLOAT veri türü için ikili duyarlık, diğer tüm veri türleri için null.|
+|ÖLÇEK|Ondalık|Bir sayı içinde ondalık noktanın sağına doğru olan rakamlar.|
+|YAPILAMAZ|Dize|Bir sütunun null değerlere izin verip Vermemediğini belirtir. Sütunda NULL olmayan bir kısıtlama varsa veya sütun BIRINCIL ANAHTARıN parçasıysa değer N.|
 
-## <a name="indexes"></a>Dizinleri
+## <a name="indexes"></a>Dizinlerde
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Sahip dizini|
+|INDE|Dize|Dizinin sahibi|
 |INDEX_NAME|Dize|Dizinin adı.|
-|INDEX_TYPE|Dize|Dizin (NORMAL, bit eşlem, NORMAL işlev tabanlı, bit eşlem işlevi tabanlı veya etki alanı) türü.|
+|INDEX_TYPE|Dize|Dizin türü (NORMAL, BIT eşlem, Işlev tabanlı NORMAL, Işlev tabanlı BIT eşlem veya etkı alanı).|
 |TABLE_OWNER|Dize|Dizinli nesnenin sahibi.|
-|TABLE_NAME|Dize|Dizinli nesnesinin adı.|
-|TABLE_TYPE|Dize|(Örneğin, tablo, küme) dizini oluşturulan nesnenin türü.|
-|BENZERSİZLİK|Dize|Dizini benzersiz veya NONUNIQUE olup olmadığı.|
-|SIKIŞTIRMA|Dize|Dizin etkin veya devre dışı olup olmadığı.|
-|PREFIX_LENGTH|Ondalık|Önek sıkıştırma anahtar sütun sayısı.|
-|TABLESPACE_NAME|Dize|Dizin içeren tablo adı.|
+|TABLE_NAME|Dize|Dizinli nesnenin adı.|
+|TABLE_TYPE|Dize|Dizinli nesnenin türü (örneğin, tablo, küme).|
+|KOŞULDAKI|Dize|Dizinin BENZERSIZ mi yoksa BENZERSIZ mi olduğunu belirtir.|
+|MASIYLA|Dize|Dizinin ETKIN mi yoksa devre DıŞı mı olduğunu belirtir.|
+|PREFIX_LENGTH|Ondalık|Sıkıştırma anahtarının ön ekine ait sütun sayısı.|
+|TABLESPACE_NAME|Dize|Dizini içeren tablo alanının adı.|
 |INI_TRANS|Ondalık|İlk işlem sayısı.|
 |MAX_TRANS|Ondalık|En fazla işlem sayısı.|
-|INITIAL_EXTENT|Ondalık|İlk kapsamın boyutu.|
-|NEXT_EXTENT|Ondalık|İkincil yerleşimi boyutu.|
-|MIN_EXTENTS|Ondalık|Kapsam segment izin verilen en düşük sayısı.|
-|MAX_EXTENTS|Ondalık|Kapsam segment izin verilen en fazla sayısı.|
-|PCT_INCREASE|Ondalık|Kapsam boyutunu artış yüzdesi.|
-|PCT_THRESHOLD|Ondalık|Dizin girdisi izin verilen blok alan yüzdesi eşiği.|
-|INCLUDE_COLUMN|Ondalık|Dizini düzenlenmiş tabloda birincil anahtar (taşma olmayan) dizine dahil edilecek sütun kimliği son sütunu. Bu sütun için COLUMN_ID sütununun eşler * _TAB_COLUMNS veri sözlüğü görünümleri.|
-|LİSTE|Ondalık|Bu kesimin için ayrılan işlem liste sayısı.|
-|FREELIST_GROUPS|Ondalık|Bu kesimin için ayrılan freelist grubu sayısı.|
-|PCT_FREE|Ondalık|Boş bir blok içindeki minimum yüzdesi.|
-|GÜNLÜĞE KAYDETME|Dize|Günlük bilgileri.|
-|BLEVEL|Ondalık|B *-Ağaç düzeyi: yaprak bloklarla kendi kök bloğunun dizine derinliği. 0 derinliğini kök bloğu ve yaprak bloğu aynı olduğunu gösterir.|
-|LEAF_BLOCKS|Ondalık|Dizin içindeki yaprak bloğu sayısı.|
-|DISTINCT_KEYS|Ondalık|Farklı dizinli değerlerinin sayısı. BENZERSİZ ve PRIMARY KEY kısıtlamaları zorunlu kılma dizinleri için bu değeri (USER_TABLES. tablodaki satır sayısını aynıdır NUM_ROWS).|
-|AVG_LEAF_BLOCKS_PER_KEY|Ondalık|Dizindeki her benzersiz değer göründüğü yaprak blokların en yakın tamsayıya yuvarlanır ortalama sayısı. BENZERSİZ ve PRIMARY KEY kısıtlamaları zorunlu kılma dizinleri için bu değer her zaman 1'dir.|
-|AVG_DATA_BLOCKS_PER_KEY|Ondalık|Farklı bir değer en yakın tamsayıya yuvarlanır dizindeki işaret ettiği tabloda veri ortalama sayısıdır engeller. Bu istatistik dizinli sütunlar için belirli bir değer içeren satırları içeren veri bloklarını ortalama sayısıdır.|
-|CLUSTERING_FACTOR|Ondalık|Dizin değerlerine göre tablosundaki satırları sırasını gösterir.|
-|DURUMU|Dize|Bölümlenmemişse dizini geçerli veya UNUSABLE olup olmadığı.|
-|NUM_ROWS|Ondalık|Dizin içinde satır sayısını belirtir.|
-|SAMPLE_SIZE|Ondalık|Dizin analiz etmek için kullanılan örnek boyutu.|
-|LAST_ANALYZED|DateTime|Bu dizini en yakın zamanda çözümlendi tarih.|
-|DEGREE|Dize|Dizin tarama için örnek başına iş parçacığı sayısı.|
-|ÖRNEKLERİ|Dize|Hangi örneklerinde sayısı taranacak dizinler.|
-|BÖLÜMLENMİŞ|Dize|Bu dizin olup bölümlenen (Evet &#124; yok).|
-|GEÇİCİ|Dize|Dizin geçici bir tablo olup olmadığı.|
-|OLUŞTURULAN|Dize|Dizin adı sistem tarafından oluşturulan olup (Y&#124;N).|
-|İKİNCİL|Dize|Dizin Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup (Y&#124;N).|
+|INITIAL_EXTENT|Ondalık|İlk uzantının boyutu.|
+|NEXT_EXTENT|Ondalık|İkincil uzantıların boyutu.|
+|MIN_EXTENTS|Ondalık|Segmentte izin verilen en az uzantı sayısı.|
+|MAX_EXTENTS|Ondalık|Segmentte izin verilen en fazla uzantı sayısı.|
+|PCT_INCREASE|Ondalık|Kapsam boyutunun yüzde artışı.|
+|PCT_THRESHOLD|Ondalık|Dizin girişi başına izin verilen blok alanı eşik yüzdesi.|
+|INCLUDE_COLUMN|Ondalık|Dizin düzenlenmiş tablo birincil anahtar (taşma olmayan) dizinine dahil edilecek son sütunun sütun KIMLIĞI. Bu sütun, * _TAB_COLUMNS veri sözlüğü görünümlerinin COLUMN_ID sütunuyla eşlenir.|
+|FREELISTS|Ondalık|Bu kesime ayrılan işlem freelists sayısı.|
+|FREELIST_GROUPS|Ondalık|Bu kesime ayrılan freelist gruplarının sayısı.|
+|PCT_FREE|Ondalık|Bir bloktaki en az boş alan yüzdesi.|
+|AÇMAK|Dize|Günlüğe kaydetme bilgileri.|
+|BLEVEL|Ondalık|B *-ağaç düzeyi: kök bloğundan yaprak bloklarına dizinin derinliği. 0 derinliği, kök bloğunun ve yaprak bloğunun aynı olduğunu gösterir.|
+|LEAF_BLOCKS|Ondalık|Dizindeki yaprak blok sayısı|
+|DISTINCT_KEYS|Ondalık|Farklı dizinli değerlerin sayısı. BENZERSIZ ve BIRINCIL anahtar kısıtlamalarını zorlayan dizinler için, bu değer tablodaki satır sayısıyla aynıdır (USER_TABLES. NUM_ROWS).|
+|AVG_LEAF_BLOCKS_PER_KEY|Ondalık|Dizindeki her farklı değerin en yakın tamsayıya yuvarlanır şekilde göründüğü yaprak bloklarının ortalama sayısı. BENZERSIZ ve BIRINCIL anahtar kısıtlamalarını zorlayan dizinler için bu değer her zaman 1 ' dir.|
+|AVG_DATA_BLOCKS_PER_KEY|Ondalık|Dizindeki ayrı bir değer tarafından işaret edilen, en yakın tamsayıya yuvarlanan, tablodaki ortalama veri bloğu sayısı. Bu istatistik, dizinli sütunlar için verilen bir değer içeren satırları içeren veri bloklarının ortalama sayısıdır.|
+|CLUSTERING_FACTOR|Ondalık|Tablodaki satırların sıralama miktarını, dizinin değerlerine göre gösterir.|
+|DURUMLARINA|Dize|Bölümlenmemiş dizinin GEÇERLI veya kullanılamaz durumda olup olmadığı.|
+|NUM_ROWS|Ondalık|Dizindeki satır sayısı.|
+|SAMPLE_SIZE|Ondalık|Dizini çözümlemek için kullanılan örneğin boyutu.|
+|LAST_ANALYZED|DateTime|Bu dizinin en son çözümlenme tarihi.|
+|ÖLÇÜDE|Dize|Dizini taramak için örnek başına iş parçacığı sayısı.|
+|LARINDA|Dize|Üzerinde taranacak dizinlerin sayısını gösteren örnek sayısı.|
+|ILDI|Dize|Bu dizinin bölümlenmiş olup olmadığı (Evet &#124; Hayır).|
+|AYIRMAYA|Dize|Dizinin geçici bir tabloda olup olmadığı.|
+|ÜRET|Dize|Dizinin adının sistem tarafından oluşturulup oluşturulmayacağını belirtir (Y&#124;N).|
+|IK|Dize|Dizinin Oracle9i veri kartuşunu (Y&#124;N) Odcıındexcreate yöntemi tarafından oluşturulan ikincil nesne olup olmadığı.|
 |BUFFER_POOL|Dize|Dizin blokları için kullanılacak varsayılan arabellek havuzunun adı.|
-|USER_STATS|Dize|Olup istatistikleri doğrudan kullanıcı tarafından girilen.|
-|SÜRESİ|Dize|Geçici tablo süresini gösterir: (1) SYS$ oturum: satır 2) SYS$ işlem oturum süresi boyunca korunur: satırları işleme, kalıcı bir tablo için Null 3) sonra silinir.|
-|PCT_DIRECT_ACCESS|Ondalık|İkincil bir dizin için dizin düzenli bir tablosunda, geçerli satırlarla yüzdesini tahmin|
-|ITYP_OWNER|Dize|Etki alanı dizini için indextype sahibi.|
-|ITYP_NAME|Dize|Etki alanı dizini için indextype adı.|
-|PARAMETRELERİ|Dize|Etki alanı dizini için parametre dizesi.|
-|GLOBAL_STATS|Dize|Bölümlenmiş dizinleri için istatistik dizini (Evet) bir bütün olarak incelenerek toplanan veya temel dizin bölümlerini ve subpartitions (Hayır) İstatistikler tahmini gösterir.|
-|DOMIDX_STATUS|Dize|Etki alanı dizini durumunu yansıtır. NULL: Belirtilen dizin, bir etki alanı dizini değil. Geçerli: dizini geçerli bir etki alanı dizini değil. IDXTYP_INVLD: Bu etki alanı dizininin dizin türü geçersiz.|
-|DOMIDX_OPSTATUS|Dize|Bir etki alanı dizini gerçekleştirilen bir işlem durumunu yansıtır: NULL: Belirtilen dizin, bir etki alanı dizini değil. Geçerli: hatasız işlemi gerçekleştirildi. Başarısız oldu: işlem bir hata ile başarısız oldu.|
-|FUNCIDX_STATUS|Dize|İşlev tabanlı bir dizin durumunu gösterir: NULL: Bu işlev tabanlı değil dizin yeniden etkin: işlev tabanlı bir dizin etkin, devre dışı: işlevi tabanlı dizini devre dışı bırakıldı.|
-|JOIN_INDEX|Dize|Bu bir birleştirme dizin olup olmadığını gösterir.|
+|USER_STATS|Dize|İstatistiklerin Kullanıcı tarafından doğrudan girilip girilmediğini belirtir.|
+|SÜRENIN|Dize|Geçici bir tablonun süresini gösterir: 1) SYS $ SESSION: Bu satır, oturum süresince saklanır, 2) SYS $ TRANSACTION: satır, IŞLEMEDEN sonra silinir, 3) kalıcı tablo için null.|
+|PCT_DIRECT_ACCESS|Ondalık|Dizin düzenlenmiş bir tablodaki ikincil dizin için, GEÇERLI tahminle satır yüzdesi|
+|ITYP_OWNER|Dize|Bir etki alanı dizini için, IndexType sahibi.|
+|ITYP_NAME|Dize|Bir etki alanı dizini için IndexType adı.|
+|PARAMETRELERE|Dize|Bir etki alanı dizini için parametre dizesi.|
+|GLOBAL_STATS|Dize|Bölümlenmiş dizinler için, istatistiklerin bir bütün olarak (Evet) çözümlenerek toplandığını veya temel alınan dizin bölümlerindeki ve alt bölümlerdeki istatistiklerden (Hayır) tahmin edilip edilmeyeceğini belirtir.|
+|DOMIDX_STATUS|Dize|Etki alanı dizininin durumunu yansıtır. NULL: belirtilen dizin bir etki alanı dizini değil. GEÇERLI: dizin geçerli bir etki alanı dizinidir. IDXTYP_INVLD: Bu etki alanı dizininin Dizin türü geçersiz.|
+|DOMIDX_OPSTATUS|Dize|Bir etki alanı dizininde gerçekleştirilen bir işlemin durumunu yansıtır: NULL: belirtilen dizin bir etki alanı dizini değil. GEÇERLI: işlem hata olmadan gerçekleştirildi. Başarısız oldu: işlem bir hata ile başarısız oldu.|
+|FUNCIDX_STATUS|Dize|İşlev tabanlı dizinin durumunu gösterir: NULL: Bu bir işlev tabanlı dizin değil, ETKIN: işlev tabanlı dizin etkin, devre DıŞı: işlev tabanlı dizin devre dışı bırakıldı.|
+|JOIN_INDEX|Dize|Bunun bir JOIN dizini olup olmadığını gösterir.|
 
 ## <a name="indexcolumns"></a>IndexColumns
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|INDEX_OWNER|Dize|Dizin sahibi.|
+|INDEX_OWNER|Dize|Dizinin sahibi.|
 |INDEX_NAME|Dize|Dizinin adı.|
-|TABLE_OWNER|Dize|Tablo veya kümesinin sahibi.|
-|TABLE_NAME|Dize|Tablo veya küme adı.|
-|COLUMN_NAME|Dize|Sütun adı veya nesne türü sütunu özniteliği.|
-|COLUMN_POSITION|Ondalık|Sütun veya içinde dizin özniteliği konumu.|
-|COLUMN_LENGTH|Ondalık|Sütun dizini oluşturulmuş uzunluğu.|
-|CHAR_LENGTH|Ondalık|Sütun uzunluğu en fazla kod noktası.|
-|DESCEND|Dize|Olup sütun azalan düzende sıralanır.|
+|TABLE_OWNER|Dize|Tablo veya küme sahibi.|
+|TABLE_NAME|Dize|Tablonun veya kümenin adı.|
+|COLUMN_NAME|Dize|Sütun adı veya nesne türü sütununun özniteliği.|
+|COLUMN_POSITION|Ondalık|Dizinin içindeki sütun veya özniteliğin konumu.|
+|COLUMN_LENGTH|Ondalık|Sütunun dizini oluşturulmuş uzunluğu.|
+|CHAR_LENGTH|Ondalık|Sütunun en büyük kod noktası uzunluğu.|
+|AZALMAZ|Dize|Sütunun azalan sırada sıralanıp sıralanmayacağı.|
 
 ## <a name="procedures"></a>Yordamlar
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi.|
-|OBJECT_NAME|Dize|Nesnesinin adı.|
-|SUBOBJECT_NAME|Dize|Alt nesneye (örneğin, bölüm) adı.|
-|OBJECT_ID|Ondalık|Nesne sözlük nesnesi sayısı.|
-|DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesnesi sayısı.|
-|LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve izinlerinizi dahil) bir DDL komutundan elde edilen nesnenin için zaman damgası.|
-|ZAMAN DAMGASI|Dize|' % S'nesne (karakter veri) belirtimi için zaman damgası.|
-|DURUMU|Dize|Bir nesnenin (geçerli, geçersiz veya yok) durumu.|
-|GEÇİCİ|Dize|Nesne geçici olup (geçerli oturumu bu nesnesinde yerleştirilen veri görebilirsiniz).|
-|OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|
-|İKİNCİL|Dize|Bu Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığını (Y &#124; N).|
-|OLUŞTURULAN|DateTime|Nesne oluşturulduğu tarih.|
+|INDE|Dize|Nesnenin sahibi.|
+|OBJECT_NAME|Dize|Nesnenin adı.|
+|SUBOBJECT_NAME|Dize|Alt nesne adı (örneğin, Bölüm).|
+|OBJECT_ID|Ondalık|Nesnenin sözlük nesne numarası.|
+|DATA_OBJECT_ID|Ondalık|Nesneyi içeren segmentin sözlük nesnesi numarası.|
+|LAST_DDL_TIME|DateTime|Bir DDL komutundan kaynaklanan nesnenin son değiştirildiği zaman damgası (izin verilen ve iptal edilen dahil).|
+|TIMESTAMP|Dize|Nesnenin belirtimi için zaman damgası (karakter verileri).|
+|DURUMLARINA|Dize|Nesnenin durumu (GEÇERLI, GEÇERSIZ veya yok).|
+|AYIRMAYA|Dize|Nesnenin geçici olup olmadığı (geçerli oturum yalnızca bu nesnenin kendisine yerleştirilmiş verileri görebilir).|
+|ÜRET|Dize|Bu nesne sisteminin adı üretildi mi? (Y &#124; N).|
+|IK|Dize|Bu, Oracle9i veri kartuşunun Odcıındexcreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığı (Y &#124; N).|
+|YARATIL|DateTime|Nesnenin oluşturulduğu tarih.|
 
 ## <a name="sequences"></a>Diziler
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SEQUENCE_OWNER|Dize|Sıranın sahibinin adı.|
+|SEQUENCE_OWNER|Dize|Dizinin sahibinin adı.|
 |SEQUENCE_NAME|Dize|Sıra adı.|
-|MIN_VALUE|Ondalık|En küçük değer dizisi.|
-|MAX_VALUE|Ondalık|Dizinin en büyük değer.|
-|INCREMENT_BY|Ondalık|Değer dizisi olarak artırılır.|
-|CYCLE_FLAG|Dize|Sınıra ulaştıktan üzerinde etrafını Sar dizisi.|
+|MIN_VALUE|Ondalık|Sıranın en küçük değeri.|
+|MAX_VALUE|Ondalık|Sıranın en büyük değeri.|
+|INCREMENT_BY|Ondalık|Dizinin artarak değeri.|
+|CYCLE_FLAG|Dize|Sıra, sınır sınırına ulaşılması sırasında kaydırılır.|
 |ORDER_FLAG|Dize|Sıra numaraları sırayla oluşturulur.|
-|CACHE_SIZE|Ondalık|Önbellek için sıra numaralarının sayısı.|
-|LAST_NUMBER|Ondalık|Son dizi diske yazılan numarası. Bir dizi önbelleğe alma, yazılan numarası kullanıp kullanmadığını disk dizisi önbelleğine yerleştirilen son sayıdır. Bu sayı, kullanılan son sıra numarasından daha büyük olması olasıdır.|
+|CACHE_SIZE|Ondalık|Önbelleğe eklenecek sıra numarası sayısı.|
+|LAST_NUMBER|Ondalık|Diske yazılan son sıra numarası. Bir dizi önbelleğe alma kullanıyorsa diske yazılan sayı, sıra önbelleğine yerleştirilmiş son sayıdır. Bu sayı büyük olasılıkla kullanılan son sıra numarasından daha büyük olabilir.|
 
 ## <a name="synonyms"></a>Eş anlamlılar
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Eş anlamlı sahibi.|
-|SYNONYM_NAME|Dize|Eş adı.|
-|TABLE_OWNER|Dize|Anlamlının başvuruda nesnenin sahibi.|
-|TABLE_NAME|Dize|Anlamlının başvuruda nesnesinin adı.|
+|INDE|Dize|Eş anlamlının sahibi.|
+|SYNONYM_NAME|Dize|Eş anlamlının adı.|
+|TABLE_OWNER|Dize|Eş anlamlı tarafından başvurulan nesnenin sahibi.|
+|TABLE_NAME|Dize|Eş anlamlı tarafından başvurulan nesnenin adı.|
 |DB_LINK|Dize|Varsa, başvurulan veritabanı bağlantısının adı.|
 
-## <a name="tables"></a>Tabloları
+## <a name="tables"></a>Takvimleri
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Tablonun sahibi.|
+|INDE|Dize|Tablonun sahibi.|
 |TABLE_NAME|Dize|Tablonun adı.|
-|TÜRÜ|Dize|Tablo türü.|
+|TÜRÜYLE|Dize|Tablo türü.|
 
 ## <a name="users"></a>Kullanıcılar
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|NAME|Dize|Kullanıcı adı.|
-|Kimlik|Ondalık|Kullanıcı Kimliği sayısı.|
+|NAME|Dize|Kullanıcının adı.|
+|ID|Ondalık|Kullanıcının KIMLIK numarası.|
 |CREATEDATE|DateTime|Kullanıcı oluşturma tarihi.|
 
 ## <a name="views"></a>Görünümler
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Görünümün sahibi.|
+|INDE|Dize|Görünümün sahibi.|
 |VIEW_NAME|Dize|Görünümün adı.|
-|TEXT_LENGTH|Ondalık|Görünüm metnin uzunluğu.|
-|METİN|Dize|Metni görüntüleyin.|
-|TYPE_TEXT_LENGTH|Ondalık|Türü belirtilmiş görünüm türü yan tümcesi uzunluğu.|
-|TYPE_TEXT|Dize|Türü belirtilmiş görünüm türü yan tümcesi.|
-|OID_TEXT_LENGTH|Ondalık|Türü belirtilmiş görünüm ile OID yan tümcesi uzunluğu.|
-|OID_TEXT|Dize|Türü belirtilmiş görünüm OID yan TÜMCESİYLE.|
-|VIEW_TYPE_OWNER|Dize|Görünüm türü belirtilmiş görünüm ise Görünüm türü sahibi.|
-|VIEW_TYPE|Dize|Görünüm türü belirtilmiş görünüm ise Görünüm türü.|
-|SUPERVIEW_NAME|Dize|Değerlendirmesi adı.|
+|TEXT_LENGTH|Ondalık|Görünüm metninin uzunluğu.|
+|TEXT|Dize|Metni görüntüleyin.|
+|TYPE_TEXT_LENGTH|Ondalık|Türü belirlenmiş görünümün tür yan tümcesinin uzunluğu.|
+|METIN_TÜRÜ|Dize|Türü belirlenmiş görünümün tür tümcesi.|
+|OID_TEXT_LENGTH|Ondalık|Türü belirtilmiş görünümün WıTH OID yan tümcesinin uzunluğu.|
+|OID_TEXT|Dize|Türü belirtilmiş görünümün OID yan tümcesi.|
+|VIEW_TYPE_OWNER|Dize|Görünüm yazılı bir görünüm ise görünümün türü sahibi.|
+|VIEW_TYPE|Dize|Görünüm yazılı bir görünüm ise görünümün türü.|
+|SUPERVIEW_NAME|Dize|Üst görünümün adı.|
 
 ## <a name="functions"></a>İşlevler
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi.|
-|OBJECT_NAME|Dize|Nesnesinin adı.|
-|SUBOBJECT_NAME|Dize|Alt nesneye (örneğin, bölüm) adı.|
-|OBJECT_ID|Ondalık|Nesne sözlük nesnesi sayısı.|
-|DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesnesi sayısı.|
-|OBJECT_TYPE|Dize|Nesne türü.|
-|OLUŞTURULAN|DateTime|Nesne oluşturulduğu tarih.|
-|LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve izinlerinizi dahil) bir DDL komutundan elde edilen nesnenin için zaman damgası.|
-|ZAMAN DAMGASI|Dize|' % S'nesne (karakter veri) belirtimi için zaman damgası|
-|DURUMU|Dize|Bir nesnenin (geçerli, geçersiz veya yok) durumu.|
-|GEÇİCİ|Dize|Nesne geçici olup (geçerli oturumu bu nesnesinde yerleştirilen veri görebilirsiniz).|
-|OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|
-|İKİNCİL|Dize|Bu Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığını (Y &#124; N).|
+|INDE|Dize|Nesnenin sahibi.|
+|OBJECT_NAME|Dize|Nesnenin adı.|
+|SUBOBJECT_NAME|Dize|Alt nesne adı (örneğin, Bölüm).|
+|OBJECT_ID|Ondalık|Nesnenin sözlük nesne numarası.|
+|DATA_OBJECT_ID|Ondalık|Nesneyi içeren segmentin sözlük nesnesi numarası.|
+|OBJECT_TYPE|Dize|Nesnenin türü.|
+|YARATIL|DateTime|Nesnenin oluşturulduğu tarih.|
+|LAST_DDL_TIME|DateTime|Bir DDL komutundan kaynaklanan nesnenin son değiştirildiği zaman damgası (izin verilen ve iptal edilen dahil).|
+|TIMESTAMP|Dize|Nesnenin belirtimi için zaman damgası (karakter verileri)|
+|DURUMLARINA|Dize|Nesnenin durumu (GEÇERLI, GEÇERSIZ veya yok).|
+|AYIRMAYA|Dize|Nesnenin geçici olup olmadığı (geçerli oturum yalnızca bu nesnenin kendisine yerleştirilmiş verileri görebilir).|
+|ÜRET|Dize|Bu nesne sisteminin adı üretildi mi? (Y &#124; N).|
+|IK|Dize|Bu, Oracle9i veri kartuşunun Odcıındexcreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığı (Y &#124; N).|
 
 ## <a name="packages"></a>Paketler
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi.|
-|OBJECT_NAME|Dize|Nesnesinin adı.|
-|SUBOBJECT_NAME|Dize|Alt nesneye (örneğin, bölüm) adı.|
-|OBJECT_ID|Ondalık|Nesne sözlük nesnesi sayısı.|
-|DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesnesi sayısı.|
-|LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve izinlerinizi dahil) bir DDL komutundan elde edilen nesnenin için zaman damgası.|
-|ZAMAN DAMGASI|Dize|' % S'nesne (karakter veri) belirtimi için zaman damgası.|
-|DURUMU|Dize|Bir nesnenin (geçerli, geçersiz veya yok) durumu.|
-|GEÇİCİ|Dize|Nesne geçici olup (geçerli oturumu bu nesnesinde yerleştirilen veri görebilirsiniz).|
-|OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|
-|İKİNCİL|Dize|Bu Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığını (Y &#124; N).|
-|OLUŞTURULAN|DateTime|Nesne oluşturulduğu tarih.|
+|INDE|Dize|Nesnenin sahibi.|
+|OBJECT_NAME|Dize|Nesnenin adı.|
+|SUBOBJECT_NAME|Dize|Alt nesne adı (örneğin, Bölüm).|
+|OBJECT_ID|Ondalık|Nesnenin sözlük nesne numarası.|
+|DATA_OBJECT_ID|Ondalık|Nesneyi içeren segmentin sözlük nesnesi numarası.|
+|LAST_DDL_TIME|DateTime|Bir DDL komutundan kaynaklanan nesnenin son değiştirildiği zaman damgası (izin verilen ve iptal edilen dahil).|
+|TIMESTAMP|Dize|Nesnenin belirtimi için zaman damgası (karakter verileri).|
+|DURUMLARINA|Dize|Nesnenin durumu (GEÇERLI, GEÇERSIZ veya yok).|
+|AYIRMAYA|Dize|Nesnenin geçici olup olmadığı (geçerli oturum yalnızca bu nesnenin kendisine yerleştirilmiş verileri görebilir).|
+|ÜRET|Dize|Bu nesne sisteminin adı üretildi mi? (Y &#124; N).|
+|IK|Dize|Bu, Oracle9i veri kartuşunun Odcıındexcreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığı (Y &#124; N).|
+|YARATIL|DateTime|Nesnenin oluşturulduğu tarih.|
 
-## <a name="packagebodies"></a>PackageBodies
+## <a name="packagebodies"></a>Packagegövdeler
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi.|
-|OBJECT_NAME|Dize|Nesnesinin adı.|
-|SUBOBJECT_NAME|Dize|Alt nesneye (örneğin, bölüm) adı.|
-|OBJECT_ID|Ondalık|Nesne sözlük nesnesi sayısı.|
-|DATA_OBJECT_ID|Ondalık|Nesne içeren kesim sözlük nesnesi sayısı.|
-|LAST_DDL_TIME|DateTime|Son değiştirilme (verir ve izinlerinizi dahil) bir DDL komutundan elde edilen nesnenin için zaman damgası.|
-|ZAMAN DAMGASI|Dize|' % S'nesne (karakter veri) belirtimi için zaman damgası.|
-|DURUMU|Dize|Bir nesnenin (geçerli, geçersiz veya yok) durumu.|
-|GEÇİCİ|Dize|Nesne geçici olup (geçerli oturumu bu nesnesinde yerleştirilen veri görebilirsiniz).|
-|OLUŞTURULAN|Dize|Bu nesne sistem tarafından oluşturulan adı neydi? (Y &#124; N).|
-|İKİNCİL|Dize|Bu Oracle9i veri Kartuş ODCIIndexCreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığını (Y &#124; N).|
-|OLUŞTURULAN|DateTime|Nesne oluşturulduğu tarih.|
+|INDE|Dize|Nesnenin sahibi.|
+|OBJECT_NAME|Dize|Nesnenin adı.|
+|SUBOBJECT_NAME|Dize|Alt nesne adı (örneğin, Bölüm).|
+|OBJECT_ID|Ondalık|Nesnenin sözlük nesne numarası.|
+|DATA_OBJECT_ID|Ondalık|Nesneyi içeren segmentin sözlük nesnesi numarası.|
+|LAST_DDL_TIME|DateTime|Bir DDL komutundan kaynaklanan nesnenin son değiştirildiği zaman damgası (izin verilen ve iptal edilen dahil).|
+|TIMESTAMP|Dize|Nesnenin belirtimi için zaman damgası (karakter verileri).|
+|DURUMLARINA|Dize|Nesnenin durumu (GEÇERLI, GEÇERSIZ veya yok).|
+|AYIRMAYA|Dize|Nesnenin geçici olup olmadığı (geçerli oturum yalnızca bu nesnenin kendisine yerleştirilmiş verileri görebilir).|
+|ÜRET|Dize|Bu nesne sisteminin adı üretildi mi? (Y &#124; N).|
+|IK|Dize|Bu, Oracle9i veri kartuşunun Odcıındexcreate yöntemi tarafından oluşturulan ikincil bir nesne olup olmadığı (Y &#124; N).|
+|YARATIL|DateTime|Nesnenin oluşturulduğu tarih.|
 
 ## <a name="arguments"></a>Arguments
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi adı.|
+|INDE|Dize|Nesnenin sahibinin adı.|
 |PACKAGE_NAME|Dize|Paket adı.|
-|OBJECT_NAME|Dize|Yordam veya işlevin adı.|
+|OBJECT_NAME|Dize|Yordamın veya işlevin adı.|
 |ARGUMENT_NAME|Dize|Bağımsız değişkenin adı.|
-|KONUMU|Ondalık|İşlev dönüş değeri için konum bağımsız değişken listesi veya NULL.|
-|DİZİSİ|Ondalık|Tüm iç içe geçme düzeylerini dahil olmak üzere, bağımsız değişken dizisi.|
-|DEFAULT_VALUE|Dize|Bağımsız değişkeni için varsayılan değer.|
-|DEFAULT_LENGTH|Ondalık|Bağımsız değişkeni için varsayılan değerin uzunluğu.|
-|IN_OUT|Dize|Bağımsız değişken yönü (IN, OUT veya IN/OUT).|
-|DATA_LENGTH|Ondalık|Sütun bayt cinsinden uzunluğu.|
-|DATA_PRECISION|Ondalık|Ondalık basamak (sayı) veya ikili basamak (FLOAT) cinsinden uzunluğu.|
-|DATA_SCALE|Ondalık|Bir sayı ondalık noktasının sağındaki basamak.|
+|YERINE|Ondalık|Bağımsız değişken listesinde konum veya işlev dönüş değeri için NULL.|
+|SIRASINA|Ondalık|Tüm iç içe düzeyler dahil bağımsız değişken sırası.|
+|DEFAULT_VALUE|Dize|Bağımsız değişken için varsayılan değer.|
+|DEFAULT_LENGTH|Ondalık|Bağımsız değişken için varsayılan değer uzunluğu.|
+|IN_OUT|Dize|Bağımsız değişken yönü (ın, OUT veya ın/OUT).|
+|DATA_LENGTH|Ondalık|Sütunun bayt cinsinden uzunluğu.|
+|DATA_PRECISION|Ondalık|Ondalık basamaklar (sayı) veya ikili basamaklar (FLOAT) uzunluğu.|
+|DATA_SCALE|Ondalık|Bir sayı içinde ondalık noktanın sağına doğru olan rakamlar.|
 |DATA_TYPE|Dize|Bağımsız değişkenin veri türü.|
 
 ## <a name="uniquekeys"></a>UniqueKeys
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Kısıtlama tanımının sahibi.|
+|INDE|Dize|Kısıtlama tanımının sahibi.|
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|
-|TABLE_NAME|Dize|Tablo (veya Görünüm) ile kısıtlaması tanımıyla ilişkili ad.|
-|SEARCH_CONDITION|Dize|Bir denetim kısıtlaması için arama koşulunu metni.|
-|R_OWNER|Dize|Tablonun sahibi için bir başvuru kısıtlamasındaki denir.|
+|TABLE_NAME|Dize|Kısıtlama tanımıyla tabloyla (veya görünümde) ilişkili ad.|
+|SEARCH_CONDITION|Dize|Bir denetim kısıtlamasının arama koşulunun metni.|
+|R_OWNER|Dize|Başvuru kısıtlamasında başvurulan tablo sahibi.|
 |R_CONSTRAINT_NAME|Dize|Başvurulan tablo için benzersiz kısıtlama tanımının adı.|
-|DELETE_RULE|Dize|Kural için bir başvuru kısıtlamasını (art ARDA veya eylem yok) silin.|
-|DURUMU|Dize|(Etkin veya devre dışı) kısıtlaması zorlama durumu.|
-|DEFERRABLE|Dize|Kısıtlama deferrable olup olmadığı.|
-|DOĞRULANDI|Dize|Olup tüm verileri (veya DOĞRULANMAMIŞ DOĞRULANACAĞINI) kısıtlama ilişkiden.|
-|OLUŞTURULAN|Dize|Kısıtlama adı kullanıcı veya sistem tarafından oluşturulan olup olmadığı.|
-|HATALI|Dize|Bu kısıtlama, belirsiz bir şekilde bir yüzyıl belirtir Evet değeri gösterir. Bu belirsizlik işlemler sırasında kaynaklanan hataları önlemek için kısıtlaması ile birlikte dört haneli yıla TO_DATE işlevi kullanarak yeniden yazın.|
-|KULLANAN|Dize|Olup etkinleştirilmiş bir kısıtlama zorlanan zorlanmamış veya.|
-|LAST_CHANGE|DateTime|Ne zaman kısıtlaması en son etkin veya devre dışı|
-|INDEX_OWNER|Dize|Dizine sahip olan kullanıcı adı|
+|DELETE_RULE|Dize|Başvuru kısıtlamasının kuralını silin (CASCADE veya NO ACTıON).|
+|DURUMLARINA|Dize|Kısıtlamanın zorlama durumu (ETKIN veya devre DıŞı).|
+|ERTETE|Dize|Kısıtlamanın erteedilip edilmeyeceğini belirtir.|
+|DOĞRULANMASI|Dize|Tüm verilerin kısıtlamaya ulanmayacağı (DOĞRULANAN veya DOĞRULANMADı).|
+|ÜRET|Dize|Kısıtlamanın adının Kullanıcı veya sistem tarafından oluşturulup oluşturulmayacağını belirtir.|
+|HATALI|Dize|Evet değeri, bu kısıtlamanın bir yüzün belirsiz şekilde olduğunu belirtir. Bu belirsizlik nedeniyle oluşan hataları önlemek için, TO_DATE işlevini kullanarak kısıtlamayı dört basamaklı bir yıl ile yeniden yazın.|
+|ALMASI|Dize|Etkin bir kısıtlamanın zorlanıp zorlanmayacağı.|
+|LAST_CHANGE|DateTime|Kısıtlama en son etkin veya devre dışı olduğunda|
+|INDEX_OWNER|Dize|Dizine sahip olan kullanıcının adı|
 |INDEX_NAME|Dize|Dizinin adı|
 
 ## <a name="primarykeys"></a>PrimaryKeys
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Kısıtlama tanımının sahibi.|
+|INDE|Dize|Kısıtlama tanımının sahibi.|
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|
-|TABLE_NAME|Dize|Tablo (veya Görünüm) ile kısıtlaması tanımıyla ilişkili ad.|
-|SEARCH_CONDITION|Dize|Bir denetim kısıtlaması için arama koşulunu metni.|
-|R_OWNER|Dize|Tablonun sahibi için bir başvuru kısıtlamasındaki denir.|
+|TABLE_NAME|Dize|Kısıtlama tanımıyla tabloyla (veya görünümde) ilişkili ad.|
+|SEARCH_CONDITION|Dize|Bir denetim kısıtlamasının arama koşulunun metni.|
+|R_OWNER|Dize|Başvuru kısıtlamasında başvurulan tablo sahibi.|
 |R_CONSTRAINT_NAME|Dize|Başvurulan tablo için benzersiz kısıtlama tanımının adı.|
-|DELETE_RULE|Dize|Kural için bir başvuru kısıtlamasını (art ARDA veya eylem yok) silin.|
-|DURUMU|Dize|(Etkin veya devre dışı) kısıtlaması zorlama durumu.|
-|DEFERRABLE|Dize|Kısıtlama deferrable olup olmadığı.|
-|DOĞRULANDI|Dize|Olup tüm verileri (veya DOĞRULANMAMIŞ DOĞRULANACAĞINI) kısıtlama ilişkiden.|
-|OLUŞTURULAN|Dize|Kısıtlama adı kullanıcı veya sistem tarafından oluşturulan olup olmadığı.|
-|HATALI|Dize|Bu kısıtlama, belirsiz bir şekilde bir yüzyıl belirtir Evet değeri gösterir. Bu belirsizlik işlemler sırasında kaynaklanan hataları önlemek için kısıtlaması ile birlikte dört haneli yıla TO_DATE işlevi kullanarak yeniden yazın.|
-|KULLANAN|Dize|Olup etkinleştirilmiş bir kısıtlama zorlanan zorlanmamış veya.|
-|LAST_CHANGE|DateTime|Ne zaman kısıtlaması en son etkin veya devre dışı.|
-|INDEX_OWNER|Dize|Dizine sahip olan kullanıcı adı.|
+|DELETE_RULE|Dize|Başvuru kısıtlamasının kuralını silin (CASCADE veya NO ACTıON).|
+|DURUMLARINA|Dize|Kısıtlamanın zorlama durumu (ETKIN veya devre DıŞı).|
+|ERTETE|Dize|Kısıtlamanın erteedilip edilmeyeceğini belirtir.|
+|DOĞRULANMASI|Dize|Tüm verilerin kısıtlamaya ulanmayacağı (DOĞRULANAN veya DOĞRULANMADı).|
+|ÜRET|Dize|Kısıtlamanın adının Kullanıcı veya sistem tarafından oluşturulup oluşturulmayacağını belirtir.|
+|HATALI|Dize|Evet değeri, bu kısıtlamanın bir yüzün belirsiz şekilde olduğunu belirtir. Bu belirsizlik nedeniyle oluşan hataları önlemek için, TO_DATE işlevini kullanarak kısıtlamayı dört basamaklı bir yıl ile yeniden yazın.|
+|ALMASI|Dize|Etkin bir kısıtlamanın zorlanıp zorlanmayacağı.|
+|LAST_CHANGE|DateTime|Kısıtlama en son etkin veya devre dışı olduğunda.|
+|INDEX_OWNER|Dize|Dizine sahip olan kullanıcının adı.|
 |INDEX_NAME|Dize|Dizinin adı.|
 
-## <a name="foreignkeys"></a>ForeignKeys
+## <a name="foreignkeys"></a>Yabancıanahtarlar
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
 |PRIMARY_KEY_CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|
 |PRIMARY_KEY_OWNER|Dize|Kısıtlama tanımının sahibi.|
-|PRIMARY_KEY_TABLE_NAME|Dize|Tablo (veya Görünüm) ile kısıtlaması tanımıyla ilişkili ad|
+|PRIMARY_KEY_TABLE_NAME|Dize|Kısıtlama tanımıyla tablo (veya Görünüm) ile ilişkili ad|
 |FOREIGN_KEY_OWNER|Dize|Kısıtlama tanımının sahibi.|
 |FOREIGN_KEY_CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|
-|FOREIGN_KEY_TABLE_NAME|Dize|Tablo (veya Görünüm) ile kısıtlaması tanımıyla ilişkili ad.|
-|SEARCH_CONDITION|Dize|Bir denetim kısıtlaması için arama koşulunu metni|
-|R_OWNER|Dize|Tablonun sahibi için bir başvuru kısıtlamasındaki denir.|
+|FOREIGN_KEY_TABLE_NAME|Dize|Kısıtlama tanımıyla tabloyla (veya görünümde) ilişkili ad.|
+|SEARCH_CONDITION|Dize|Bir denetim kısıtlamasının arama koşulunun metni|
+|R_OWNER|Dize|Başvuru kısıtlamasında başvurulan tablo sahibi.|
 |R_CONSTRAINT_NAME|Dize|Başvurulan tablo için benzersiz kısıtlama tanımının adı.|
-|DELETE_RULE|Dize|Kural için bir başvuru kısıtlamasını (art ARDA veya eylem yok) silin.|
-|DURUMU|Dize|(Etkin veya devre dışı) kısıtlaması zorlama durumu.|
-|DOĞRULANDI|Dize|Olup tüm verileri (veya DOĞRULANMAMIŞ DOĞRULANACAĞINI) kısıtlama ilişkiden.|
-|OLUŞTURULAN|Dize|Kısıtlama adı kullanıcı veya sistem tarafından oluşturulan olup olmadığı.|
-|KULLANAN|Dize|Olup etkinleştirilmiş bir kısıtlama zorlanan zorlanmamış veya.|
-|LAST_CHANGE|DateTime|Ne zaman kısıtlaması en son etkin veya devre dışı.|
-|INDEX_OWNER|Dize|Dizine sahip olan kullanıcı adı.|
+|DELETE_RULE|Dize|Başvuru kısıtlamasının kuralını silin (CASCADE veya NO ACTıON).|
+|DURUMLARINA|Dize|Kısıtlamanın zorlama durumu (ETKIN veya devre DıŞı).|
+|DOĞRULANMASI|Dize|Tüm verilerin kısıtlamaya ulanmayacağı (DOĞRULANAN veya DOĞRULANMADı).|
+|ÜRET|Dize|Kısıtlamanın adının Kullanıcı veya sistem tarafından oluşturulup oluşturulmayacağını belirtir.|
+|ALMASI|Dize|Etkin bir kısıtlamanın zorlanıp zorlanmayacağı.|
+|LAST_CHANGE|DateTime|Kısıtlama en son etkin veya devre dışı olduğunda.|
+|INDEX_OWNER|Dize|Dizine sahip olan kullanıcının adı.|
 |INDEX_NAME|Dize|Dizinin adı.|
 
 ## <a name="foreignkeycolumns"></a>ForeignKeyColumns
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Kısıtlama tanımının sahibi.|
+|INDE|Dize|Kısıtlama tanımının sahibi.|
 |CONSTRAINT_NAME|Dize|Kısıtlama tanımının adı.|
-|TABLE_NAME|Dize|Kısıtlama tanımıyla tablosunun adı.|
-|COLUMN_NAME|Dize|Sütun veya öznitelik kısıtlaması tanımında belirtilen nesne türü sütununun adı.|
-|KONUMU|Ondalık|Özgün konumu sütun veya öznitelik nesnesinin tanımı.|
+|TABLE_NAME|Dize|Kısıtlama tanımına sahip tablonun adı.|
+|COLUMN_NAME|Dize|Kısıtlama tanımında belirtilen nesne türü sütununun sütun veya özniteliğinin adı.|
+|YERINE|Ondalık|Nesnenin tanımındaki sütunun veya özniteliğin orijinal konumu.|
 
 ## <a name="procedureparameters"></a>ProcedureParameters
 
-|ColumnName|DataType|Açıklama|
+|Tation|DataType|Açıklama|
 |----------------|--------------|-----------------|
-|SAHİBİ|Dize|Nesnenin sahibi.|
-|OBJECT_NAME|Dize|Yordam veya işlevin adı.|
-|PACKAGE_NAME|Dize|Yordam veya işlevin adı.|
-|OBJECT_ID|Ondalık|Nesne nesnesi sayısı.|
-|AŞIRI YÜKLEME|Dize|Benzersiz tanımlayıcı aşırı yükleme.|
+|INDE|Dize|Nesnenin sahibi.|
+|OBJECT_NAME|Dize|Yordamın veya işlevin adı.|
+|PACKAGE_NAME|Dize|Yordamın veya işlevin adı.|
+|OBJECT_ID|Ondalık|Nesnenin nesne numarası.|
+|YÜKLEMEK|Dize|Aşırı yükleme benzersiz tanımlayıcısı.|
 |ARGUMENT_NAME|Dize|Bağımsız değişkenin adı.|
-|KONUMU|Ondalık|Konum bağımsız değişken listesi veya bir işlev dönüş değeri null.|
-|DİZİSİ|Ondalık|Tüm iç içe geçme düzeylerini dahil olmak üzere, bağımsız değişken dizisi.|
-|DATA_LEVEL|Ondalık|Bileşik türler için bağımsız değişken derinliğini iç içe geçirme.|
+|YERINE|Ondalık|Bağımsız değişken listesindeki konum veya bir işlev dönüş değeri için null.|
+|SIRASINA|Ondalık|Tüm iç içe düzeyler dahil bağımsız değişken sırası.|
+|DATA_LEVEL|Ondalık|Bileşik türlerin bağımsız değişkeninin iç içe geçme derinliği.|
 |DATA_TYPE|Dize|Bağımsız değişkenin veri türü.|
-|DEFAULT_VALUE|Dize|Bağımsız değişkeni için varsayılan değer.|
-|DEFAULT_LENGTH|Ondalık|Bağımsız değişkeni için varsayılan değerin uzunluğu.|
-|IN_OUT|Dize|Bağımsız değişken yönü (IN, OUT veya IN/OUT).|
-|DATA_LENGTH|Ondalık|Uzunluğu (bayt cinsinden) sütunu.|
-|DATA_PRECISION|Ondalık|Ondalık basamak (sayı) veya ikili basamak (FLOAT) cinsinden uzunluğu.|
-|DATA_SCALE|Ondalık|Bir sayı ondalık noktasının sağındaki basamak.|
-|RADIX|Ondalık|Bağımsız değişken tabanı için bir sayı.|
-|CHARACTER_SET_NAME|Dize|Karakter kümesi bağımsız değişkeni adı.|
-|TYPE_OWNER|Dize|Bağımsız değişken türünü sahibi.|
-|TYPE_NAME|Dize|Bağımsız değişkenin türünün adı. Tür paketini yerel bir tür ise (diğer bir deyişle, bir paket belirtiminde bildirildiği), bu sütun paketinin adını görüntüler.|
-|TYPE_SUBNAME|Dize|Yalnızca yerel paket türleri için ilgili. TYPE_NAME sütununda tanımlanan paketinde bildirilen türü adını görüntüler.|
-|TYPE_LINK|Dize|Uzak bir paket TYPE_NAME sütununda tanımlanan paketi olduğunda yalnızca paket yerel türleri için ilgili. Bu sütun uzak paketine başvurmak için kullanılan veritabanı bağlantısını görüntüler.|
-|PLS_TYPE|Dize|Sayısal bağımsız değişkenleri, bağımsız değişkenin PL/SQL türünün adı. Aksi durumda null.|
+|DEFAULT_VALUE|Dize|Bağımsız değişken için varsayılan değer.|
+|DEFAULT_LENGTH|Ondalık|Bağımsız değişken için varsayılan değerin uzunluğu.|
+|IN_OUT|Dize|Bağımsız değişken yönü (ın, OUT veya ın/OUT).|
+|DATA_LENGTH|Ondalık|Sütunun uzunluğu (bayt cinsinden).|
+|DATA_PRECISION|Ondalık|Ondalık basamaklar (sayı) veya ikili basamaklar (FLOAT) uzunluğu.|
+|DATA_SCALE|Ondalık|Sayıdaki ondalık noktanın sağ tarafındaki rakamlar.|
+|TABAN|Ondalık|Sayı için taban bağımsız değişkeni.|
+|CHARACTER_SET_NAME|Dize|Bağımsız değişken için karakter kümesi adı.|
+|TYPE_OWNER|Dize|Bağımsız değişkenin türünün sahibi.|
+|TYPE_NAME|Dize|Bağımsız değişkenin türünün adı. Tür bir paket yerel türüdür (yani bir paket belirtiminde bildirilirse), bu sütunda paketin adı görüntülenir.|
+|TYPE_SUBNAME|Dize|Yalnızca paket yerel türleri için geçerlidir. TYPE_NAME sütununda tanımlanan pakette belirtilen türün adını görüntüler.|
+|TYPE_LINK|Dize|Yalnızca TYPE_NAME sütununda tanımlanan paket uzak bir paket olduğunda, paket yerel türleri için geçerlidir. Bu sütun, uzak pakete başvurmak için kullanılan veritabanı bağlantısını görüntüler.|
+|PLS_TYPE|Dize|Sayısal bağımsız değişkenler için bağımsız değişkenin PL/SQL türünün adı. Aksi durumda null.|
 |CHAR_LENGTH|Ondalık|Dize veri türleri için karakter sınırı.|
-|CHAR_USED|Dize|Bayt (B) veya char sınırı (C) dizesi resmi olup olmadığını belirtir.|
+|CHAR_USED|Dize|Bayt sınırının (B) veya char sınırının (C) dize için resmi olup olmadığını gösterir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

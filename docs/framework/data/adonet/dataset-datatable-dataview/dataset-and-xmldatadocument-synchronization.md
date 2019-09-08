@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 3bbe28423385cae0f09f301c03b2b1a59edf101d
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: e76e81153cb7d074fe975744c6b6041ee04be90f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205062"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785422"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet ve XmlDataDocument Eşitlemesi
 ADO.net <xref:System.Data.DataSet> , size verilerin ilişkisel bir gösterimini sağlar. Hiyerarşik veri erişimi için .NET Framework bulunan XML sınıflarını kullanabilirsiniz. Geçmişte, bu iki veri gösterimi ayrı olarak kullanılmıştır. Ancak .NET Framework, veri **kümesi** nesnesi ve <xref:System.Xml.XmlDataDocument> nesnesi aracılığıyla hem ilişkisel hem de verilerin hiyerarşik temsillerine gerçek zamanlı, zaman uyumlu erişim sağlar.  
   
- Bir **veri kümesi** bir **XmlDataDocument**ile eşitlendiğinde, her iki nesne de tek bir veri kümesiyle çalışır. Bu, **veri kümesinde**bir değişiklik yapılırsa, değişikliğin **XmlDataDocument**'te yansıtıldığı ve tam tersi anlamına gelir. Veri kümesi ile **XmlDataDocument** arasındaki ilişki, tek bir veri kümesini kullanarak tek bir uygulamaya izin vererek çok sayıda esneklik oluşturur ve veri kümesinin tamamında (Web Forms gibi) yerleşik olarak bulunan tüm hizmet paketine erişebilir. Windows Forms denetimleri ve Visual Studio .NET tasarımcıları), ayrıca Genişletilebilir Stil sayfası dili (XSL), XSL dönüştürmeleri (XSLT) ve XML yol dili (XPath) dahil XML Hizmetleri paketi. Uygulamayla hedeflediğiniz hizmet kümesini seçmeniz gerekmez; her ikisi de mevcuttur.  
+ Bir **veri kümesi** bir **XmlDataDocument**ile eşitlendiğinde, her iki nesne de tek bir veri kümesiyle çalışır. Bu, **veri kümesinde**bir değişiklik yapılırsa, değişikliğin **XmlDataDocument**'te yansıtıldığı ve tam tersi anlamına gelir. **Veri kümesi Ile** **XmlDataDocument** arasındaki ilişki, tek bir veri kümesini kullanarak tek bir uygulamaya izin vererek çok sayıda esneklik oluşturur **ve veri kümesinin tamamında (Web Forms** gibi) yerleşik olarak bulunan tüm hizmet paketine erişebilir. Windows Forms denetimleri ve Visual Studio .NET tasarımcıları), ayrıca Genişletilebilir Stil sayfası dili (XSL), XSL dönüştürmeleri (XSLT) ve XML yol dili (XPath) dahil XML Hizmetleri paketi. Uygulamayla hedeflediğiniz hizmet kümesini seçmeniz gerekmez; her ikisi de mevcuttur.  
   
  Bir **veri kümesini** **XmlDataDocument**ile eşzamanlı hale getirmek için kullanabileceğiniz çeşitli yollar vardır. Şunları yapabilirsiniz:  
   
@@ -101,7 +101,7 @@ ADO.net <xref:System.Data.DataSet> , size verilerin ilişkisel bir gösterimini 
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
- Veri kümesinin, XML verileri olarak bir veri **kümesinin** içeriğini yükleme ve kalıcı hale getirme da dahil olmak üzere XML ile XML ile nasıl etkileşime gireceğini açıklar.  
+ Veri kümesinin, XML verileri olarak bir veri **kümesinin** içeriğini yükleme ve kalıcı hale getirme da dahil olmak üzere XML ile XML ile **nasıl etkileşime** gireceğini açıklar.  
   
  [DataRelations’ı İç İçe Yerleştirme](nesting-datarelations.md)  
  Bir **veri kümesinin** içeriğini XML verisi olarak temsil eden Iç içe **DataRelation** nesnelerinin önemini açıklar ve bu ilişkilerin nasıl oluşturulacağını açıklar.  
@@ -114,4 +114,4 @@ ADO.net <xref:System.Data.DataSet> , size verilerin ilişkisel bir gösterimini 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

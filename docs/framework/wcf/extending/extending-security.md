@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], extending
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
-ms.openlocfilehash: 95dacf3ef975be1ddd56db747936cca35db50625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45216493a3afa23f24a085964a2c43e19b197d4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857928"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797125"
 ---
 # <a name="extending-security"></a>Güvenliği Genişletme
-Yeni talep türlerini ve özel belirteçler uyum sağlamak için Windows Communication Foundation (WCF) güvenlik altyapısı genişletebilirsiniz. Bu bölümdeki konular, size nasıl yapıldığını gösterir.  
+Yeni talep türlerini ve özel belirteçleri barındırmak için Windows Communication Foundation (WCF) güvenlik altyapısını genişletebilirsiniz. Bu bölümdeki konular, bunun nasıl yapıldığını göstermektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
   
- [Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
- Özel kimlik doğrulama sırasında kimlik modeli nasıl kullanıldığını açıklar.  
+ [Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması](custom-credential-and-credential-validation.md)  
+ Özel kimlik bilgileri doğrulanırken kimlik modelinin nasıl kullanıldığını açıklar.  
   
- [Özel Belirteçler](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- Bir güvenlik belirteci hizmeti (STS) öğesinden verilen belirteçler genellikle SAML belirteçlerini cihazlardır. Bu konuda, özel bir belirteç türünün nasıl oluşturulacağı açıklanmaktadır.  
+ [Özel Belirteçler](custom-tokens.md)  
+ Bir güvenlik belirteci hizmetinden (STS) verilen belirteçler genellikle SAML belirteçleridir. Bu konu başlığı altında, özel bir belirteç türünün nasıl oluşturulacağı açıklanmaktadır.  
   
- [Özel Yetkilendirme](../../../../docs/framework/wcf/extending/custom-authorization.md)  
- Özel yetkilendirme uygulanacağını açıklar.  
+ [Özel Yetkilendirme](custom-authorization.md)  
+ Özel yetkilendirmenin nasıl uygulanacağını açıklar.  
   
- [Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)  
+ [Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma](overriding-the-identity-of-a-service-for-authentication.md)  
  Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılmayı açıklar.  
   
- [Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)  
- Özel uç nokta kimlik doğrulama işlemi gösterilmektedir.  
+ [Nasıl yapılır: Özel bir Istemci Kimliği Doğrulayıcısı oluşturma](how-to-create-a-custom-client-identity-verifier.md)  
+ Özel bir uç nokta kimliğinin nasıl doğrulandığını gösterir.  
   
- [Nasıl yapılır: İmzalama için ayrı X.509 sertifikaları kullanma ve şifreleme](../../../../docs/framework/wcf/extending/how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
- İletiler genellikle imzalı ve tek bir sertifika ile şifrelenir. Bu konu açıklar nasıl iki sertifika, gerekli olduğunda kullanılabilir.  
+ [Nasıl yapılır: Imzalama ve şifreleme için ayrı X. 509.440 sertifikaları kullanma](how-to-use-separate-x-509-certificates-for-signing-and-encryption.md)  
+ İletiler genellikle tek bir sertifikayla imzalanıp şifrelenir. Bu konuda, gerektiğinde iki sertifikanın nasıl kullanılabileceği açıklanmaktadır.  
   
- [Nasıl yapılır: Bir X.509 sertifikasının şifreleme sağlayıcısını değiştirme](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Nasıl bir X.509 sertifikasının özel anahtar sağlamak için kullanılan şifreleme sağlayıcısını değiştirme ve Windows Communication Foundation (WCF) altyapısına sağlayıcı tümleştirmek nasıl açıklar.  
+ [Nasıl yapılır: X. 509.440 sertifikasının özel anahtarı için şifreleme sağlayıcısını değiştirme](change-cryptographic-provider-x509-certificate-private-key.md)  
+ X. 509.440 sertifikasının özel anahtarını sağlamak için kullanılan şifreleme sağlayıcısının ve sağlayıcının Windows Communication Foundation (WCF) çerçevesiyle nasıl tümleştirileceği açıklanmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
@@ -51,10 +51,10 @@ Yeni talep türlerini ve özel belirteçler uyum sağlamak için Windows Communi
  <xref:System.IdentityModel.Selectors>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Güvenlik](../feature-details/security.md)  
   
- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Temel WCF Programlama](../basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe Genel Bakış](../feature-details/security-overview.md)

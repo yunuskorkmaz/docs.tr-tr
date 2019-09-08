@@ -2,12 +2,12 @@
 title: Sütunların Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: 651d132fd76ba9015d4730a5e519bc679608e275
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2718cbcf29799f99c8648b129fdb6079a6f6d344
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203597"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786180"
 ---
 # <a name="inferring-columns"></a>Sütunların Çıkarımını Yapma
 ADO.net, bir XML belgesinden bir <xref:System.Data.DataSet>için tablo olarak hangi öğelerin çıkarması gerektiğini belirledikten sonra, bu tablolar için sütunları algılar. ADO.NET 2,0, her **simpleType** öğe için kesin olarak belirlenmiş bir veri türünü gösteren yeni bir şema çıkarımı altyapısı sunmuştur. Önceki sürümlerde, gösterilen bir **simpleType** öğenin veri türü her zaman **xsd: String**idi.  
@@ -72,4 +72,4 @@ ADO.net, bir XML belgesinden bir <xref:System.Data.DataSet>için tablo olarak ha
 - [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
 - [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

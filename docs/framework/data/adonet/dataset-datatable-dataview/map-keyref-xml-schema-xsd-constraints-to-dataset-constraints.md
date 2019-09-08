@@ -2,12 +2,12 @@
 title: Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 611322065a4df53d1a3149ef4e1ca5592f149081
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: b5ffe69886b08903feab4373b1cd5c5244b3b3b9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203444"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784519"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Keyref XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 **Keyref** öğesi bir belge içindeki öğeler arasında bağlantı kurmanıza olanak sağlar. Bu, ilişkisel bir veritabanındaki yabancı anahtar ilişkisine benzerdir. Bir şema **keyref** öğesini belirtiyorsa, öğesi şema eşleme işlemi sırasında, <xref:System.Data.DataSet>tablolarındaki sütunlarda karşılık gelen bir yabancı anahtar kısıtlamasına dönüştürülür. Varsayılan olarak, **keyref** öğesi ilişki üzerinde belirtilen **ParentTable**, **ChildTable**, **ParentColumn**ve **ChildColumn** özellikleriyle da bir ilişki oluşturur.  
@@ -22,7 +22,7 @@ ms.locfileid: "70203444"
 |**msdata:DeleteRule**|Şemadaki **keyref** öğesinde **DeleteRule** özniteliği belirtilmişse, değeri **veri kümesindeki** **DeleteRule** kısıtlama özelliğine atanır. Aksi takdirde, **DeleteRule** özelliği **Cascade**olarak ayarlanır.|  
 |**msdata:AcceptRejectRule**|Bir şemadaki **keyref** öğesinde **AcceptRejectRule** özniteliği belirtilmişse, değeri **veri kümesindeki** **AcceptRejectRule** kısıtlama özelliğine atanır. Aksi takdirde **AcceptRejectRule** özelliği **none**olarak ayarlanır.|  
   
- Aşağıdaki örnek, **Order** öğesinin **OrderNumber** alt öğesi ve OrderNo alt öğesi ile **OrderDetail** arasındaki **anahtar** ve **keyref** ilişkilerini belirten bir şema içerir dosyalarında.  
+ Aşağıdaki örnek, **Order** öğesinin **OrderNumber** alt öğesi ve **OrderNo** alt öğesi ile **OrderDetail** arasındaki **anahtar** ve **keyref** ilişkilerini belirten bir şema içerir dosyalarında.  
   
  Örnekte, **OrderDetail** öğesinin **OrderNumber** alt öğesi **Order** öğesinin **OrderNo** anahtar alt öğesine başvurur.  
   
@@ -113,4 +113,4 @@ Order(OrderNumber, EmpNumber)
 
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -2,24 +2,24 @@
 title: ComPlusInvokingMethodFailedMismatchedTransactions
 ms.date: 03/30/2017
 ms.assetid: d13f1978-ff42-443a-939f-75c8c8d50286
-ms.openlocfilehash: e0e498ecd372da56e2aba4304a7164127cd8f574
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31f7e577d34337435fa56d57dba46b979b63a2f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999394"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798026"
 ---
 # <a name="complusinvokingmethodfailedmismatchedtransactions"></a>ComPlusInvokingMethodFailedMismatchedTransactions
-Kimliği: 135  
+Numarasını 135  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- ComPlus: Yöntem çağrısı işlem uyuşmazlığı.  
+ ComPlus Yöntem çağrısı işlemi uyumsuzluğu.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

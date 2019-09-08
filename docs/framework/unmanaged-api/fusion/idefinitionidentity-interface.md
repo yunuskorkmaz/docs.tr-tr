@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff23330f307c10eac134048de39a6e19a67c75b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 84c595bfdcca84ee43a53e2ea913cc978ae0953e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697543"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796528"
 ---
 # <a name="idefinitionidentity-interface"></a>IDefinitionIdentity Arabirimi
-Uygulama geçerli kapsamda tanımlar kod benzersiz imzası temsil eder.  
+Geçerli kapsamdaki uygulamayı tanımlayan kodun benzersiz imzasını temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IDefinitionIdentity::Clone`|Yeni bir arabirim işaretçisi alır `IDefinitionIdentity` için aynı olan nesne `IDefinitionIdentity`, belirtilen öznitelik değişiklikleri dışında.|  
-|`IDefinitionIdentity::EnumAttributes`|Bir arabirim işaretçisi alır bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) bununla ilişkili öznitelikleri içeren nesne `IDefinitionIdentity`.|  
-|`IDefinitionIdentity::GetAttribute`|Belirtilen ad alanında belirtilen ada sahip bir öznitelik değerini alır.|  
-|`IDefinitionIdentity::SetAttribute`|Belirtilen değer için belirtilen ad alanında belirtilen ada sahip özniteliğini ayarlar.|  
+|`IDefinitionIdentity::Clone`|Belirtilen öznitelik değişiklikleri dışında, bu `IDefinitionIdentity` `IDefinitionIdentity`nesneyle özdeş olan yeni bir nesne için bir arabirim işaretçisi alır.|  
+|`IDefinitionIdentity::EnumAttributes`|Bir [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) nesnesine, bununla ilişkili `IDefinitionIdentity`öznitelikleri içeren bir arabirim işaretçisi alır.|  
+|`IDefinitionIdentity::GetAttribute`|Belirtilen ad alanında belirtilen ada sahip özniteliğin değerini alır.|  
+|`IDefinitionIdentity::SetAttribute`|Belirtilen ad alanında belirtilen ada sahip özniteliği belirtilen değere ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Isolation.h  
+ **Üst bilgi** Yalıtım. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)

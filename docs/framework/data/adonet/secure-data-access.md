@@ -2,12 +2,12 @@
 title: Güvenli Veri Erişimi
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963147"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782768"
 ---
 # <a name="secure-data-access"></a>Güvenli Veri Erişimi
 Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritabanında bulunan güvenlik mekanizmalarını anlamanız gerekir. Uygulamanızın içerebileceği diğer özelliklerin veya bileşenlerin güvenlik etkilerine de dikkat etmeniz gerekir.  
@@ -23,10 +23,10 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Bağlantı dizelerini şifrelemek için korumalı yapılandırma kullanma gibi, bağlantı bilgilerini korumak için en iyi güvenlik uygulamalarını ve tekniklerini açıklar.|  
+|[Bağlantı Bilgilerini Koruma](protecting-connection-information.md)|Bağlantı dizelerini şifrelemek için korumalı yapılandırma kullanma gibi, bağlantı bilgilerini korumak için en iyi güvenlik uygulamalarını ve tekniklerini açıklar.|  
 |[Veri erişimi stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Verilere erişmek ve veritabanı işlemlerini gerçekleştirmek için öneriler sağlar.|  
-|[Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)|Çalışma zamanında Kullanıcı girişinden bağlantı dizeleri oluşturmayı açıklar.|  
-|[SQL Server Güvenliğine Genel Bakış](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
+|[Bağlantı Dizesi Oluşturucular](connection-string-builders.md)|Çalışma zamanında Kullanıcı girişinden bağlantı dizeleri oluşturmayı açıklar.|  
+|[SQL Server Güvenliğine Genel Bakış](./sql/overview-of-sql-server-security.md)|SQL Server güvenlik mimarisini açıklar.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Parametreli Komutlar ve SQL ekleme  
  Parametreli komutların kullanılması SQL ekleme saldırılarına karşı koruma sağlamaya yardımcı olur. Bu, bir saldırgan "bir komutu sunucuda güvenliği tehlikeye atacak bir SQL ifadesine" çıkarır ". Parametreli Komutlar bir dış kaynaktan alınan değerlerin Transact-SQL ifadesinin bir parçası değil yalnızca değer olarak geçirilmesini sağlayarak SQL ekleme saldırılarına karşı koruma sağlar. Sonuç olarak, bir değere eklenen Transact-SQL komutları veri kaynağında yürütülmez. Bunun yerine, yalnızca bir parametre değeri olarak değerlendirilir. Güvenlik avantajlarına ek olarak, Parametreli Komutlar bir Transact-SQL ifadesiyle veya bir saklı yordama geçirilen değerleri düzenlemek için kullanışlı bir yöntem sağlar.  
@@ -35,9 +35,9 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[DataAdapter Parametreleri](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Parametrelerinin ile `DataAdapter`nasıl kullanılacağını açıklar.|  
-|[Saklı Yordamlarla Verileri Değiştirme](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Parametrelerin nasıl belirtileceğini ve bir dönüş değeri elde edileceğini açıklar.|  
-|[SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Veri erişimini kapsüllemek için SQL Server saklı yordamların nasıl kullanılacağını açıklar.|  
+|[DataAdapter Parametreleri](dataadapter-parameters.md)|Parametrelerinin ile `DataAdapter`nasıl kullanılacağını açıklar.|  
+|[Saklı Yordamlarla Verileri Değiştirme](modifying-data-with-stored-procedures.md)|Parametrelerin nasıl belirtileceğini ve bir dönüş değeri elde edileceğini açıklar.|  
+|[SQL Server'da Saklı Yordam İzinlerini Yönetme](./sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Veri erişimini kapsüllemek için SQL Server saklı yordamların nasıl kullanılacağını açıklar.|  
   
 ## <a name="script-exploits"></a>Betiği kötüye  
  Betik kullanımı, bir Web sayfasına eklenen kötü amaçlı karakterleri kullanan başka bir ekleme biçimidir. Tarayıcı, ekli karakterleri doğrulamaz ve sayfanın bir parçası olarak bunları işler.  
@@ -84,14 +84,14 @@ Güvenli ADO.NET kodu yazmak için, temel alınan veri deposunda veya veritaban�
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Yönetilmeyen Kod ile Birlikte Çalışma](../../../../docs/framework/interop/index.md)|COM bileşenlerinin .NET Framework ve COM 'a .NET Framework bileşenlerin nasıl sunulebileceği hakkında konuları içerir.|
+|[Yönetilmeyen Kod ile Birlikte Çalışma](../../interop/index.md)|COM bileşenlerinin .NET Framework ve COM 'a .NET Framework bileşenlerin nasıl sunulebileceği hakkında konuları içerir.|
 |[Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Birincil birlikte çalışma derlemeleri, iş parçacığı oluşturma ve özel sıralama gibi gelişmiş konuları içerir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
+- [SQL Server Güvenliği](./sql/sql-server-security.md)
 - [Veri erişimi stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Bilgilerini Koruma](protecting-connection-information.md)
+- [Bağlantı Dizesi Oluşturucular](connection-string-builders.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

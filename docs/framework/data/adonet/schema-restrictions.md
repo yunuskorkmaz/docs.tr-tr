@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 1a2c32d133799ee5338c18d0f51bced49cb3dc4b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d0250e573dc24bfcad97a2f2606cb2e6c8e520da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963171"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782763"
 ---
 # <a name="schema-restrictions"></a>Şema Kısıtlamaları
 **GetSchema** yönteminin ikinci isteğe bağlı parametresi döndürülen şema bilgisi miktarını sınırlamak için kullanılan kısıtlamalardır ve **GetSchema** yöntemine dizeler dizisi olarak geçirilir. Dizideki konum, geçirebileceğinizi belirten değerleri belirler ve bu, kısıtlama numarasına eşdeğerdir.  
@@ -263,4 +263,4 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

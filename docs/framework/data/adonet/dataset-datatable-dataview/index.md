@@ -2,12 +2,12 @@
 title: DataSets, DataTables ve DataViews
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 4b5e81f415685d6ee3529c7e4f9d389e8017427e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1744f6c6d8ea3c28a8dab30c0d201ae1dacc7ee3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203641"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786187"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables ve DataViews
 ADO.net <xref:System.Data.DataSet> , içerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. Bir <xref:System.Data.DataSet> , verileri içeren tablolar ve tablolar arasındaki ilişkiler dahil olmak üzere tüm veri kümesini temsil eder.  
@@ -81,4 +81,4 @@ ADO.net <xref:System.Data.DataSet> , içerdiği verilerin kaynağından bağıms
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET](../index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

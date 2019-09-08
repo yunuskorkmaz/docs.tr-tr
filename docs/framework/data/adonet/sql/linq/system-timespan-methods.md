@@ -2,12 +2,12 @@
 title: System.TimeSpan Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: ec27f8f17a6709efef1a8230b521778095ae1257
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a7eb3c979219003d497ec752b36ec54ef081b43
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947085"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781050"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan Yöntemleri
 İçin <xref:System.TimeSpan?displayProperty=nameWithType> üye desteği büyük ölçüde kullandığınız .NET Framework ve Microsoft SQL Server sürümlerine bağlıdır.  
@@ -34,11 +34,11 @@ ms.locfileid: "69947085"
 > LINQ to SQL ile bir SQL <xref:System.TimeSpan?displayProperty=nameWithType> `TIME` sütunuyla eşleme özelliği, .NET Framework 3,5 SP1 ve daha fazlasını gerektirir. SQL `TIME` veri türü yalnızca Microsoft SQL Server 2008 ve daha ötesi bir sürümünde kullanılabilir.  
   
 ### <a name="addition-and-subtraction"></a>Toplama ve çıkarma  
- CLR <xref:System.TimeSpan?displayProperty=nameWithType> türü ekleme ve çıkarma desteği sağlasa da, SQL `TIME` türü değildir. Bu nedenle, LINQ to SQL sorgularınız, SQL `TIME` türüne eşlendiklerinde ekleme ve çıkarma işlemi gerçekleştirmeye çalıştıklarında hatalar oluşturur. SQL [-CLR tür EŞLEMESINDE](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)SQL tarih ve saat türleriyle çalışmaya yönelik başka hususlar bulabilirsiniz.  
+ CLR <xref:System.TimeSpan?displayProperty=nameWithType> türü ekleme ve çıkarma desteği sağlasa da, SQL `TIME` türü değildir. Bu nedenle, LINQ to SQL sorgularınız, SQL `TIME` türüne eşlendiklerinde ekleme ve çıkarma işlemi gerçekleştirmeye çalıştıklarında hatalar oluşturur. SQL [-CLR tür EŞLEMESINDE](sql-clr-type-mapping.md)SQL tarih ve saat türleriyle çalışmaya yönelik başka hususlar bulabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Nesne Modeli Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Sorgu Kavramları](query-concepts.md)
+- [Nesne Modeli Oluşturma](creating-the-object-model.md)
+- [SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)

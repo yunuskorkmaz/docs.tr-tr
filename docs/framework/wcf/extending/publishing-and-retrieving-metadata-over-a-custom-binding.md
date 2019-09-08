@@ -2,34 +2,34 @@
 title: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 329daa39a14ed4c839ecbaa6cf9df036ceabee34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991217"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795508"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
-<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Meta veri uç noktası için bir hizmet eklemek için destek sağlar. Bu meta veri uç noktalarını bir URL, HTTP GET isteklerine yanıt verebilir bir `?wsdl` querystring ve WS-MetadataExchange (MEX) belirtiminde tanımlanan WS aktarım GET istekleri. MEX uç noktaları uygulayan <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> sözleşme.  
+, <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Bir hizmete meta veri uç noktası ekleme desteği sağlar. Bu meta veri uç noktaları, bir `?wsdl` QueryString ve WS-MetadataExchange (MEX) belirtiminde tanımlandığı şekilde ws-Transfer get istekleri olan bir URL 'de http get isteklerine yanıt verebilir. MEX uç noktaları <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> sözleşmeyi uygular.  
   
 ## <a name="publishing-metadata-over-a-custom-binding"></a>Özel bağlama üzerinden meta verileri yayımlama  
- Meta veri uç noktalarını HTTPS GET ve HTTP GET meta veri uç noktalarını ayarlayarak etkinleştirilen <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> özelliklerine `true`. Bu uç noktalar için olan bağlamaları yapılandırılamaz.  
+ HTTP get meta veri uç noktaları ve https veri al uç noktaları, <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> özellikleri olarak `true`ayarlanarak etkinleştirilir. Bu uç noktaların bağlamaları yapılandırılamaz.  
   
- <xref:System.ServiceModel.Description.IMetadataExchange> Sözleşmesi, ancak kullanılabilir özel bağlamalar kullananlar çünkü dahil olmak üzere, herhangi bir noktayla <xref:System.ServiceModel.Description.IMetadataExchange> uç noktaları için başka bir Windows Communication Foundation (WCF) Hizmeti uç aynıdır. Sistem tarafından sağlanan bir bağlamayı yapılandırmasını değiştirmek nasıl biliyorsanız, veya nasıl yapılandırılacağını bildiğiniz bir <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>, bağlama ile kullanmak için yapılandırabilirsiniz. ardından bir <xref:System.ServiceModel.Description.IMetadataExchange> uç noktası.  
+ Ancak, diğer tüm Windows Communication Foundation (WCF) hizmet uç noktası ile aynı olduğundan <xref:System.ServiceModel.Description.IMetadataExchange> , sözleşme,ÖzelBağlamalarkullananlardahilolmaküzereherhangibiruçnoktailekullanılabilir.<xref:System.ServiceModel.Description.IMetadataExchange> Sistem tarafından sağlanmış bir bağlamanın yapılandırmasını nasıl değiştireceğiniz veya uygulamasının nasıl yapılandırılacağını <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>bildiğiniz durumlarda, bir bağlamayı bir <xref:System.ServiceModel.Description.IMetadataExchange> uç nokta ile kullanmak üzere yapılandırabilirsiniz.  
   
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>Özel bağlama üzerinden meta verileri alma  
- Standart HTTP veya HTTPS GET istekleri kullanarak HTTP Get ve HTTPS Get meta veri uç noktalarından meta verileri alınabilir.  
+ Meta veriler, standart HTTP veya HTTPS GET istekleri kullanılarak HTTP GET ve HTTPS Get meta veri uç noktalarından alınabilir.  
   
- Bir MEX meta veri uç noktasından meta verilerini almak için genel olarak WCF tarafından desteklenen standart MEX bağlamaları birini kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Türünü ve Svcutil.exe aracını otomatik olarak seçin belirtilen meta veri uç noktası adresini temel alan bu standart MEX bağlamaların bir tanesini.  
+ Bir MEX meta veri uç noktasından meta verileri almak için genellikle WCF tarafından desteklenen standart MEX bağlamalarından birini kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> Type ve Svcutil. exe aracı, belirtilen meta veri uç noktasının adresini temel alarak bu standart MEX bağlamalarından birini otomatik olarak seçer.  
   
- MEX meta veri uç noktasının standart MEX bağlamaları olandan farklı bir bağlama kullanıyorsa, tarafından kullanılan bağlama yapılandırabileceğiniz <xref:System.ServiceModel.Description.MetadataExchangeClient> göre sağlama veya kod kullanarak bir <xref:System.ServiceModel.Description.IMetadataExchange> istemcisi bitiş noktası yapılandırması. Svcutil.exe aracını, yapılandırma dosyasından otomatik olarak yükleyen bir <xref:System.ServiceModel.Description.IMetadataExchange> URI şeması meta veri uç noktası adresi için aynı ada sahip istemci uç noktası yapılandırması.  
+ Bir MEX meta veri uç noktası standart MEX bağlamalarından birinin farklı bir bağlamasını kullanıyorsa, <xref:System.ServiceModel.Description.MetadataExchangeClient> using kodu tarafından kullanılan bağlamayı yapılandırabilir veya bir <xref:System.ServiceModel.Description.IMetadataExchange> istemci uç noktası yapılandırması sağlayabilirsiniz. Svcutil. exe aracı, yapılandırma dosyasından, meta veri uç noktası <xref:System.ServiceModel.Description.IMetadataExchange> adresinin URI şeması ile aynı ada sahip bir istemci uç noktası yapılandırması otomatik olarak yüklenir.  
   
 ## <a name="security"></a>Güvenlik  
- Özel bağlama üzerinden meta veri yayımlama sırasında bağlama gerektirir meta verileriniz güvenlik desteği sağladığını emin olun. Örneğin, istemci meta verilerini almak için sağ sahip olduğundan emin olun ve bilgilerin açığa çıkmasını önlemek için meta verilerinizi ve uygulamanızı daha güvenli yapılandırarak yapabileceğiniz, <xref:System.ServiceModel.Description.IMetadataExchange> uç nokta kimlik doğrulaması ve şifreleme gerektirecek şekilde. Örnek [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) bu senaryo gösterir.  
+ Özel bir bağlama üzerinden meta veriler yayımlarken, bağlamanın meta verilerinizin gerektirdiği güvenlik desteğini sağladığından emin olun. Örneğin, bilgilerin açığa çıkmasına engel olmak ve istemcinizin meta verileri elde etmek için doğru olduğundan emin olmak için, <xref:System.ServiceModel.Description.IMetadataExchange> uç noktanızı kimlik doğrulama ve şifreleme gerektirecek şekilde yapılandırarak meta verilerinizi ve uygulamanızı daha güvenli hale getirebilirsiniz. Örnek [özel güvenli meta veri uç noktası](../samples/custom-secure-metadata-endpoint.md) bu senaryoyu gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmetleri Güvenli Hale Getirme](../../../../docs/framework/wcf/securing-services.md)
-- [WS-MetadataExchange Bağlamaları](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [Nasıl yapılır: Yapılandırma özel bir WS-Metadata değişimi bağlaması](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Nasıl yapılır: Bağlama üzerinden meta verileri bir olmayan - MEX alma](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Hizmetleri Güvenli Hale Getirme](../securing-services.md)
+- [WS-MetadataExchange Bağlamaları](ws-metadataexchange-bindings.md)
+- [Nasıl yapılır: Özel WS-Metadata Exchange bağlamasını yapılandırma](how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Nasıl yapılır: MEX olmayan bağlama üzerinden meta verileri alma](how-to-retrieve-metadata-over-a-non-mex-binding.md)

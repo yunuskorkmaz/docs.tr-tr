@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: afa760d890cf2857737372af5a9d3ba7c2749e6c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 054898a3520cbc2b607fc26b94b72b9896ad9c71
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949412"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786690"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView nesnesi oluşturma (LINQ to DataSet)
 LINQ to DataSet bağlamında oluşturmak <xref:System.Data.DataView> için iki yol vardır. Bir LINQ to DataSet sorgusundan <xref:System.Data.DataTable>bir <xref:System.Data.DataView> oluşturabilirsiniz veya <xref:System.Data.DataTable>türü bir veya türü belirlenmiş ya da işaretsiz bir şekilde oluşturabilirsiniz. Her iki durumda da <xref:System.Data.DataView> <xref:System.Data.DataTableExtensions.AsDataView%2A> uzantısını uzantı yöntemlerinden birini kullanarak oluşturursunuz; <xref:System.Data.DataView> LINQ to DataSet bağlamında doğrudan oluşturulabilir değildir.  
@@ -19,7 +19,7 @@ LINQ to DataSet bağlamında oluşturmak <xref:System.Data.DataView> için iki y
   
  <xref:System.Data.DataView>filtre ve sıralama gibi, dizini kullanan işlemlerin performansını önemli ölçüde artıran bir dizin oluşturur. ' A <xref:System.Data.DataView> ait dizin, her ikisi de <xref:System.Data.DataView> oluşturulduğunda ve sıralama ya da filtreleme bilgisi değiştirildiğinde oluşturulur. Oluşturma ve daha sonra sıralama veya filtreleme bilgilerini ayarlama, dizinin en az iki kez oluşturulmasına neden olur: oluşturulduğunda bir kez <xref:System.Data.DataView> ve sıralama veya filtre özelliklerinden herhangi biri değiştirildiğinde. <xref:System.Data.DataView>  
   
- Filtreleme ve sıralama <xref:System.Data.DataView>hakkında daha fazla bilgi için bkz. DataView [ile filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
+ Filtreleme ve sıralama <xref:System.Data.DataView>hakkında daha fazla bilgi için bkz. DataView [ile filtreleme](filtering-with-dataview-linq-to-dataset.md) ve [DataView ile sıralama](sorting-with-dataview-linq-to-dataset.md).  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet sorgusundan DataView oluşturma  
  Bir <xref:System.Data.DataView> nesne, sonuçların bir <xref:System.Data.DataRow> nesne projeksiyonu olduğu LINQ to DataSet sorgusunun sonuçlarından oluşturulabilir. Yeni oluşturulan <xref:System.Data.DataView> , filtreleme ve sıralama bilgilerini, oluşturulduğu sorgudan devralır.  
@@ -72,6 +72,6 @@ LINQ to DataSet bağlamında oluşturmak <xref:System.Data.DataView> için iki y
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView ile Filtreleme](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView ile Filtreleme](filtering-with-dataview-linq-to-dataset.md)
+- [DataView ile Sıralama](sorting-with-dataview-linq-to-dataset.md)

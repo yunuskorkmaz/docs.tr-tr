@@ -2,24 +2,24 @@
 title: FailedToCreateMessageLoggingTraceSource
 ms.date: 03/30/2017
 ms.assetid: 75e91aad-6d83-4e5e-8c70-fed1625e522f
-ms.openlocfilehash: e50c881bf10e05508408814c28c8570745b672fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44654b22bc83fcf681cee19a728993ba72efdb4b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774991"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797959"
 ---
 # <a name="failedtocreatemessageloggingtracesource"></a>FailedToCreateMessageLoggingTraceSource
-Kimliği: 115  
+Numarasını 115  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay günlüğe ileti kaydetme izleme kaynağı oluşturmak başarısız olduğunu gösterir. Özel durum, işlem adı ve işlem kimliği, olay listeler  
+ Bu olay ileti günlüğünün izleme kaynağını oluşturamayacağını gösterir. Olay özel durum, işlem adı ve işlem KIMLIĞI listelemektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741728"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777119"
 ---
 # <a name="importfileex-method"></a>ImportFileEx Yöntemi
-İçeri aktarmalar, derleme veya modül ilişkisiz gösterilir.  
+Belirtilen derleme veya ilişkisiz modül içeri aktarır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,34 +42,34 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametreler  
  `pszFilename`  
- Alınacağı dosyasının tam adı.  
+ İçinden içeri aktarılacak dosyanın tam adı.  
   
  `pszTargetName`  
- Hedef dosya isteğe bağlı adı.  
+ Hedef dosyanın isteğe bağlı adı.  
   
  `fSmartImport`  
- TRUE ise Importtypes kullanılır, aksi takdirde içe aktarma el ile uygulanması gerekir.  
+ TRUE ise ImportTypes kullanılır, aksi takdirde içeri aktarma işlemi el ile gerçekleştirilmelidir.  
   
  `dwOpenFlags`  
- Boyunca geçirilecek bayrakları [OpenScope yöntemi](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ [OpenScope metoduna](../metadata/imetadatadispenser-openscope-method.md)geçirilecek bayraklar.  
   
  `pImportToken`  
- İçeri aktarılan dosya Kimliğini alır.  
+ İçeri aktarılmakta olan dosyanın KIMLIĞINI alır.  
   
  `ppAssemblyScope`  
- Derleme içeri aktarma kapsamı alır [Imetadataassemblyımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) arabirimi. Dosya bir derleme değilse NULL olarak ayarlanır.  
+ Derleme içeri aktarma kapsamı [IMetaDataAssemblyImport Arabirimi](../metadata/imetadataassemblyimport-interface.md) arabirimini alır. Dosya bir derleme değilse NULL olarak ayarlanır.  
   
  `pdwCountOfScopes`  
- İçeri aktarılan dosyaları ve/veya kapsamları sayısını alır.  
+ İçeri aktarılan dosya ve/veya kapsamların sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [ALink API](index.md)

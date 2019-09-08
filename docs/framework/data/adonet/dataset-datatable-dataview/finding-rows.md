@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ad10557a55b498fe004bff6ce89801e975e7138b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786324"
 ---
 # <a name="finding-rows"></a>Satırları Bulma
 <xref:System.Data.DataView.Find%2A> Ve<xref:System.Data.DataView.FindRows%2A> yöntemlerini<xref:System.Data.DataView>kullanarak sıralama anahtarı değerlerine göre satırları arayabilirsiniz. **Find** ve **FindRows** metotlarındaki arama değerlerinin büyük/küçük harf duyarlılığı, temeldeki <xref:System.Data.DataTable>öğesinin **CaseSensitive** özelliğine göre belirlenir. Bir sonuç döndürmek için, arama değerleri, mevcut sıralama anahtarı değerleriyle eşleşmelidir.  
@@ -98,4 +98,4 @@ else
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataViews](dataviews.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

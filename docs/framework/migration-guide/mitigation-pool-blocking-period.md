@@ -1,29 +1,29 @@
 ---
-title: 'Azaltma: Havuz engelleme süresi'
+title: Mayı Havuz engelleme süresi
 ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bd548bbafda34202705dda3dda148aae941e2b
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 71f1b06e53b3851ca3f65edc1755527779b42a67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251106"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789964"
 ---
-# <a name="mitigation-pool-blocking-period"></a>Azaltma: Havuz engelleme süresi
-Azure SQL veritabanlarına bağlantı için süre engelleme bağlantı havuzu kaldırıldı.  
+# <a name="mitigation-pool-blocking-period"></a>Mayı Havuz engelleme süresi
+Bağlantı havuzu engelleme süresi Azure SQL veritabanlarına bağlantılar için kaldırılmıştır.  
   
 ## <a name="additional-description"></a>Ek açıklama  
- Uygulama, veritabanına bağlanırken geçici bağlantı hatası karşılaştığında bağlantı havuzu hata önbelleğe alır ve 1 5 saniye boyunca yeniden harekete olduğundan .NET Framework 4.6.1 ve önceki sürümlerle bağlantı denemesi hızlı bir şekilde yeniden denenemez Min. Daha fazla bilgi için [SQL Server Connection Pooling (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md). Bu sorunlu bağlantılar için genellikle gelen birkaç saniye içinde kurtarıldığı geçici hatalar çoğunlukla başarısız Azure SQL veritabanları, davranıştır. Bağlantı havuzu engelleme özelliği veritabanı kullanılabilir olsa bile, uygulama kapsamlı bir dönem için veritabanına bağlanamıyor anlamına gelir. Bu, Azure SQL veritabanlarına bağlanmak ve birkaç saniye içinde işlemek gereken web apps için özellikle sorunlu, davranıştır.  
+ .NET Framework 4.6.1 ve önceki sürümlerde, bir uygulama bir veritabanına bağlanırken geçici bir bağlantı hatasıyla karşılaştığında bağlantı girişimi hızlı bir şekilde yeniden denenemez, çünkü bağlantı havuzu hatayı önbelleğe alır ve 5 saniye ile 1 ' e yeniden atar Min. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../data/adonet/sql-server-connection-pooling.md). Bu davranış, genellikle birkaç saniye içinde kurtarılan geçici hatalarla başarısız olan Azure SQL veritabanlarına bağlantı için sorunlu olur. Bağlantı havuzu engelleme özelliği, uygulamanın veritabanı kullanılabilir olsa bile kapsamlı bir süre için veritabanına bağlanamamasıdır. Bu davranış, Azure SQL veritabanlarına bağlanan ve birkaç saniye içinde işlenmesi gereken Web uygulamaları için özellikle sorunlu olur.  
   
- .NET Framework 4.6.2 ile başlayarak, bağlantı için bilinen bir Azure SQL veritabanları için açık olan istekleri (*. database.windows.net, \*. database.chinacloudapi.cn, \*. database.usgovcloudapi.net, \*. database.cloudapi.de ), açık bağlantı hataları önbelleğe alınmaz. Diğer tüm bağlantı girişimleri için bağlantı havuzu engelleme süresi zorlanmaya devam eder.  
+ .NET Framework 4.6.2 ile başlayarak, bilinen Azure SQL veritabanlarına yönelik bağlantı açık istekleri (*. Database.Windows.net, \*. Database.chinacloudapi.cn, \*. Database.usgovcloudapi.net, \*. Database.cloudapi.de) ), bağlantı açma hataları önbelleğe alınmaz. Diğer tüm bağlantı girişimleri için, bağlantı havuzu engelleme süresi zorlanmaya devam eder.  
   
 ## <a name="impact"></a>Etki  
- Bu değişiklik, böylece bulut özellikli uygulamalar performansını iyileştirme, Azure SQL veritabanları için hemen yeniden denenmesi bağlantı açık denemesi sağlar.  
+ Bu değişiklik, bağlantı açma denemesinin Azure SQL veritabanları için hemen yeniden denenmeye olanak tanır ve böylece bulut özellikli uygulamaların performansını geliştirir.  
   
 ## <a name="mitigation"></a>Azaltma  
- Yeni ayarlayarak, olumsuz bu değişiklikten etkilenen uygulamaları için bağlantı havuzu engelleme süresi yapılandırılabilir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType> özelliği.  Özelliğinin değeri bir üyesidir <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> numaralandırmadan üç değerden birini alabilir:  
+ Bu değişiklikten olumsuz etkilenen uygulamalar için, bağlantı havuzu engelleme süresi yeni <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A?displayProperty=nameWithType> özellik ayarlanarak yapılandırılabilir.  Özelliğinin değeri, üç değerden birini ele alan <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> numaralandırmanın bir üyesidir:  
   
 - <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>
   
@@ -31,8 +31,8 @@ Azure SQL veritabanlarına bağlantı için süre engelleme bağlantı havuzu ka
   
 - <xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock?displayProperty=nameWithType>
   
- Ayarlayarak önceki davranış geri yüklenebilir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> özelliğini <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>.  
+ Önceki davranış <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> özelliği olarak <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType>ayarlanarak geri yüklenebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
+- [Çalışma Zamanı Değişiklikleri](runtime-changes-in-the-net-framework-4-6-2.md)

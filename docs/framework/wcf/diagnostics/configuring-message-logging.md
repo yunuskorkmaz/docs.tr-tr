@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f9324370539b41d21365e0bd126c2f632ac67789
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: db538634dccf22fb954ccf0827909e5cf3563f77
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044292"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798168"
 ---
 # <a name="configuring-message-logging"></a>İleti Günlüğe Kaydetmeyi Yapılandırma
 
@@ -47,7 +47,7 @@ Aşağıdaki örnek, günlüğü nasıl etkinleştireceğinizi ve ek seçenekler
 </system.serviceModel>
 ```
 
-İleti günlüğe kaydetme ayarları hakkında daha fazla bilgi için bkz. [izleme ve Ileti günlüğe kaydetme Için önerilen ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).
+İleti günlüğe kaydetme ayarları hakkında daha fazla bilgi için bkz. [izleme ve Ileti günlüğe kaydetme Için önerilen ayarlar](./tracing/recommended-settings-for-tracing-and-message-logging.md).
 
 Kullanmak istediğiniz dinleyicinin adını ve türünü belirtmek için'ikullanabilirsiniz.`add` Örnek yapılandırmada, dinleyici "Messages" olarak adlandırılır ve standart .NET Framework İzleme dinleyicisini (`System.Diagnostics.XmlWriterTraceListener`) kullanılacak tür olarak ekler. `System.Diagnostics.XmlWriterTraceListener`Kullanıyorsanız, yapılandırma dosyasında çıkış dosyasının konumunu ve adını belirtmeniz gerekir. Bu, günlük dosyasının adı `initializeData` ayarlanarak yapılır. Aksi takdirde, sistem bir özel durum oluşturur. Günlükleri varsayılan bir dosyaya yayan özel bir dinleyici da uygulayabilirsiniz.
 
@@ -62,7 +62,7 @@ Günlüğe kaydetme düzeyi ve ek seçenekler, günlük düzeyi ve seçenekler b
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">
 ```
 
-İzleme kaynağını devre dışı bırakmak istiyorsanız, `logMessagesAtServiceLevel`bunun yerine `messageLogging` öğesinin, `logMalformedMessages`ve `logMessagesAtTransportLevel` özniteliklerini kullanmanız gerekir. Tüm bu öznitelikleri olarak `false`ayarlamanız gerekir. Bu, önceki kod örnekteki yapılandırma dosyası kullanılarak, yapılandırma Düzenleyicisi Kullanıcı arabirimi arabiriminden veya WMI kullanılarak yapılabilir. Yapılandırma Düzenleyicisi aracı hakkında daha fazla bilgi için bkz. [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md). WMI hakkında daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+İzleme kaynağını devre dışı bırakmak istiyorsanız, `logMessagesAtServiceLevel`bunun yerine `messageLogging` öğesinin, `logMalformedMessages`ve `logMessagesAtTransportLevel` özniteliklerini kullanmanız gerekir. Tüm bu öznitelikleri olarak `false`ayarlamanız gerekir. Bu, önceki kod örnekteki yapılandırma dosyası kullanılarak, yapılandırma Düzenleyicisi Kullanıcı arabirimi arabiriminden veya WMI kullanılarak yapılabilir. Yapılandırma Düzenleyicisi aracı hakkında daha fazla bilgi için bkz. [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md). WMI hakkında daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](./wmi/index.md).
 
 ## <a name="logging-levels-and-options"></a>Günlük düzeyleri ve Seçenekler
 
@@ -101,7 +101,7 @@ Kullanıcı, günlük düzeylerine ek olarak aşağıdaki seçenekleri belirtebi
 
 Yapılandırma dosyasında bir izleme dinleyicisi tanımlanmazsa, belirtilen günlüğe kaydetme düzeyinden bağımsız olarak günlüğe kaydetme çıkışı oluşturulmaz.
 
-Bu bölümde açıklanan öznitelikler gibi ileti günlüğü seçenekleri, Windows Yönetim Araçları (WMI) kullanılarak çalışma zamanında değiştirilebilir. Bu, bu Boole özelliklerini sunan [AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) örneğine erişerek yapılabilir: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`ve `LogMalformedMessages`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu, çalışma zamanında ileti günlüğe kaydetmeyi etkili bir şekilde sunar. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](../../../../docs/framework/wcf/diagnostics/wmi/index.md).
+Bu bölümde açıklanan öznitelikler gibi ileti günlüğü seçenekleri, Windows Yönetim Araçları (WMI) kullanılarak çalışma zamanında değiştirilebilir. Bu, bu Boole özelliklerini sunan [AppDomainInfo](./wmi/appdomaininfo.md) örneğine erişerek yapılabilir: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`ve `LogMalformedMessages`. Bu nedenle, ileti günlüğe kaydetme için bir izleme dinleyicisi yapılandırırsanız, ancak bu seçenekleri `false` yapılandırma bölümünde ayarlarsanız, daha sonra uygulamanın çalıştığı zaman olarak `true` değiştirebilirsiniz. Bu, çalışma zamanında ileti günlüğe kaydetmeyi etkili bir şekilde sunar. Benzer şekilde, yapılandırma dosyanızda ileti günlüğünü etkinleştirirseniz, WMI kullanarak çalışma zamanında devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [Tanılama için Windows Yönetim araçları kullanma](./wmi/index.md).
 
 İleti `source` günlüğündeki alan, iletinin hangi bağlamda günlüğe kaydedileceğini belirtir: istek iletisi gönderirken/alırken, istek-yanıt veya 1 yönlü istek, hizmet modeli veya aktarım katmanında veya hatalı biçimlendirilmiş bir ileti durumunda.
 
@@ -174,6 +174,6 @@ Ayrıca, ek seçeneklerle özel bir dinleyici de yapılandırabilirsiniz. Özel 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)
+- [\<messageLogging >](../../configure-apps/file-schema/wcf/messagelogging.md)
+- [Günlüğe İleti Kaydetme](message-logging.md)
+- [İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar](./tracing/recommended-settings-for-tracing-and-message-logging.md)

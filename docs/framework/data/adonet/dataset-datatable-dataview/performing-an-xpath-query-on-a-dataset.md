@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 56d1d11240934036994a14e454cf1a1d8b95226a
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204528"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784367"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet Üzerinde XPath Sorgusu Gerçekleştirme
 Eşitlenmiş <xref:System.Data.DataSet> ve <xref:System.Xml.XmlDataDocument> arasındaki ilişki, **XmlDataDocument** 'e erişen XML Path Language (XPath) sorgusu gibi XML hizmetlerinden yararlanabilirsiniz ve belirli işlevselliği daha kolay bir şekilde gerçekleştirebilir doğrudan **veri kümesine** erişme. Örneğin, bir **veri kümesindeki**diğer tablolarla ilişkilerde gezinmek için bir <xref:System.Data.DataTable> ' ın SELECT metodunu kullanmak yerine, bir veri **kümesiyle**eşitlenen bir **XmlDataDocument** üzerinde bir XPath sorgusu gerçekleştirebilirsiniz. bir <xref:System.Xml.XmlNodeList>biçimindeki XML öğelerinin listesi. **XmlNodeList**içindeki düğümler <xref:System.Xml.XmlElement> , düğüm olarak atama, daha sonra, eşitlenen <xref:System.Data.DataRow> **tablodaki satırlara eşleşen başvuruları döndürmek için XmlDataDocument 'in GetRowFromElement yöntemine geçirilebilir Veri kümesi**.  
@@ -104,4 +104,4 @@ foreach (XmlNode xmlNode in nodeList)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSet ve XmlDataDocument Eşitlemesi](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

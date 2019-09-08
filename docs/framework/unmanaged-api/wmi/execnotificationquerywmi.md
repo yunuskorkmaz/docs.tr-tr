@@ -1,6 +1,6 @@
 ---
 title: ExecNotificationQueryWmi işlevi (yönetilmeyen API Başvurusu)
-description: ExecNotificationQueryWmi işlevi olaylarını almak için bir sorgu yürütür.
+description: ExecNotificationQueryWmi işlevi, olayları almak için bir sorgu yürütür.
 ms.date: 11/06/2017
 api_name:
 - ExecNotificationQueryWmi
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aa2233bab82f3cd4d1bbcb59f5714c6e4dc91aa5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636552"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798650"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi işlevi
 
-Olayları almak için bir sorgu yürütür. Çağrı hemen döndürür ve geldikçe çağırana döndürülen Numaralandırıcı olaylar için yoklama. Döndürülen Numaralandırıcı serbest sorguyu iptal eder.
+Olayları almak için bir sorgu yürütür. Çağrı hemen döndürülür ve çağıran, gelen olaylar için döndürülen numaralandırıcıyı yoklayabilirler. Döndürülen Numaralandırıcı serbest bırakıldığında sorgu iptal edilir.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -50,81 +50,81 @@ HRESULT ExecNotificationQueryWmi (
 ## <a name="parameters"></a>Parametreler
 
 `strQueryLanguage`\
-[in] Windows Management tarafından desteklenen geçerli bir sorgu dili olan bir dize. WMI Sorgu Dili kısaltması "WQL" olmalıdır.
+'ndaki Windows yönetimi tarafından desteklenen geçerli sorgu diline sahip bir dize. WMI Sorgu Dili için kısaltmasının "WQL" olması gerekir.
 
 `strQuery`\
-[in] Sorgu metni. Bu parametre olamaz `null`.
+'ndaki Sorgunun metni. Bu parametre `null`olamaz.
 
 `lFlags`\
-[in] Bu işlevin davranışını etkileyen aşağıdaki iki bayrakların birleşimi. Bu değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.
+'ndaki Bu işlevin davranışını etkileyen aşağıdaki iki bayrakların birleşimi. Bu değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.
 
 | Sabit | Değer  | Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. Bu bayrak ayarlanmazsa, çağrı başarısız olur. Olayları sürekli olarak alınan kullanıcı döndürülen Numaralandırıcı yoklaması gerekir yani olmasıdır. Bu çağrı süresiz olarak engelleme, mümkün kılar. |
-| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev yalnızca iletme bir numaralandırıcı döndürür. Genellikle, yalnızca iletme numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılar daha az bellek kullanır, ancak çağrısına izin verme [kopya](clone.md). |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrak, yarı zaman uyumlu bir çağrıya neden olur. Bu bayrak ayarlanmamışsa, çağrı başarısız olur. Bunun nedeni, olayların sürekli olarak alınması anlamına gelir, yani Kullanıcı Döndürülen numaralandırıcısı yoklamalıdır. Bu çağrıyı süresiz olarak engellemek olanaksız hale getirir. |
+| `WBEM_FLAG_FORWARD_ONLY` | 0x20 | İşlev, salt ileri bir Numaralandırıcı döndürür. Genellikle, yalnızca ileri Numaralandırıcılar daha hızlıdır ve geleneksel numaralandırıcılardan daha az bellek kullanır, ancak [kopyalama](clone.md)çağrılarına izin vermez. |
 
 `pCtx`\
-[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen olaylar sağlayarak sağlayıcı tarafından kullanılan bir örnek.
+'ndaki Genellikle, bu değer `null`. Aksi takdirde, istenen olayları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
 
 `ppEnum`\
-[out] Eğer hiç Hata oluşmazsa, işaretçi örnekleri sorgunun sonuç kümesinde almak çağırıcı veren numaralandırıcıyı alır. Bkz: [açıklamalar](#remarks) bölümünde daha fazla bilgi için.
+dışı Herhangi bir hata oluşursa, çağıranın sorgunun sonuç kümesindeki örnekleri almasına izin veren Numaralandırıcı için işaretçiyi alır. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın.
 
 `authLevel`\
-[in] Yetkilendirme düzeyi.
+'ndaki Yetkilendirme düzeyi.
 
 `impLevel`\
-[in] Kimliğe bürünme düzeyi.
+'ndaki Kimliğe bürünme düzeyi.
 
 `pCurrentNamespace`\
-[in] Bir işaretçi bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) geçerli ad alanını temsil eden nesne.
+'ndaki Geçerli ad alanını temsil eden bir [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) nesnesine yönelik bir işaretçi.
 
 `strUser`\
-[in] Kullanıcı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
+'ndaki Kullanıcı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
 `strPassword`\
-[in] Parola. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
+'ndaki Parola. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
 `strAuthority`\
-[in] Kullanıcı etki alanı adı. Bkz: [ConnectServerWmi](connectserverwmi.md) işlevi daha fazla bilgi için.
+'ndaki Kullanıcının etki alanı adı. Daha fazla bilgi için bkz. [Connectserverwmi](connectserverwmi.md) işlevi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcı, bir veya daha fazla işlev döndürebilir sınıfları görüntüleme izni yok. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcının işlevin döndüregörüntüleyebileceği bir veya daha fazla sınıfı görüntüleme izni yok. |
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Sorgu var olmayan bir sınıfı belirtiyor. |
-| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Çok fazla olay teslimini kesinlik istendi. Daha büyük bir yoklama toleransı belirtilmesi gerekir. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu, Windows Yönetim sunabileceğinden daha fazla bilgi ister. Bu `HRESULT` isteğinde bir ad alanındaki tüm nesneler yoklamak üzere Olay sorgusu sonuçları döndürülür. |
-| `WBEM_E_INVALID_QUERY` | 0x80041017 | Sorgu söz dizimi hatası vardı. |
+| `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Olayların tesliminde çok fazla duyarlılık istendi. Daha büyük bir yoklama toleransı belirtilmelidir. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Sorgu Windows yönetiminin sağlayabileceğinden daha fazla bilgi ister. Bu `HRESULT` , bir olay sorgusu bir ad alanındaki tüm nesneleri yoklamaya yönelik bir istek ile sonuçlanırsa döndürülür. |
+| `WBEM_E_INVALID_QUERY` | 0x80041017 | Sorguda sözdizimi hatası vardı. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | İstenen sorgu dili desteklenmiyor. |
-| `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Sorgu çok daha karmaşıktır. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durdu ve yeniden başlatılıyor. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
-| `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Sorgu nelze analyzovat. |
+| `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Sorgu çok karmaşık. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durmuş ve yeniden başlatılıyor. [Connectserverwmi](connectserverwmi.md) ' i yeniden çağırın. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ve WMI arasındaki uzak yordam çağrısı (RPC) bağlantısı başarısız oldu. |
+| `WBEM_E_UNPARSABLE_QUERY` | 0x80041058 | Sorgu ayrıştırılamıyor. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemServices::ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) yöntemi.
+Bu işlev, [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) yöntemine bir çağrı kaydırır.
 
-Çağıran düzenli aralıklarla işlev döndürdükten sonra döndürülen geçirir. `ppEnum` nesnesini [sonraki](next.md) meydana gelen olayları kullanılabilir olup olmadığını görmek için işlev.
+İşlev çağrıldıktan sonra, çağıran herhangi bir olayın kullanılabilir olup olmadığını `ppEnum` görmek için çağıran nesneyi düzenli olarak [sonraki](next.md) işleve geçirir.
 
-Bununla ilgili sınırlamalar sayısını `AND` ve `OR` WQL sorguları kullanılabilir anahtar sözcükler. Çok sayıda karmaşık bir sorguda kullanılan WQL anahtar sözcükleri döndürmek WMI neden olabilecek `WBEM_E_QUOTA_VIOLATION` (veya 0x8004106c) hata kodunu bir `HRESULT` değeri. WQL anahtar sözcük sınırını nasıl karmaşık sorgu olduğuna bağlıdır.
+WQL sorgularında kullanılabilecek `AND` ve `OR` anahtar sözcük sayısı için sınırlar vardır. Karmaşık bir sorguda kullanılan çok sayıda wql anahtar sözcüğü, `WBEM_E_QUOTA_VIOLATION` WMI 'nin (veya 0x8004106c) hata kodunu `HRESULT` değer olarak döndürmesine neden olabilir. WQL anahtar kelimesinin sınırı, sorgunun ne kadar karmaşık olduğuna bağlıdır.
 
-İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
+İşlev çağrısı başarısız olursa, [GetErrorInfo](geterrorinfo.md) işlevini çağırarak ek hata bilgileri alabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** WMINet_Utils.idl
+**Üst bilgi** WMINet_Utils. IDL
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

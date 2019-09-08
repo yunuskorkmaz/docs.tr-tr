@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b01c7cea477182c7590664ae9e850e99a89c4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796400"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference Yöntemi
-Bir işaretçi alır [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) bu tarafından temsil edilen yapısı [Iınstallreferenceıtem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) nesne.  
+Bu [IInstallReferenceItem](iinstallreferenceitem-interface.md) nesnesinin temsil ettiği [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) yapısına yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>Parametreler  
  `ppRefData`  
- [out] Döndürülen `FUSION_INSTALL_REFERENCE` işaretçi.  
+ dışı Döndürülen `FUSION_INSTALL_REFERENCE` işaretçi.  
   
  `dwFlags`  
- [in] Sonra genişletilebilmek için ayrılmış. `dwFlags` 0 (sıfır) olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `dwFlags`0 (sıfır) olmalıdır.  
   
  `pvReserved`  
- [in] Sonra genişletilebilmek için ayrılmış. `pvReserved` null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`null bir başvuru olmalıdır.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IInstallReferenceItem Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [FUSION_INSTALL_REFERENCE Yapısı](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [IInstallReferenceItem Arabirimi](iinstallreferenceitem-interface.md)
+- [FUSION_INSTALL_REFERENCE Yapısı](fusion-install-reference-structure.md)

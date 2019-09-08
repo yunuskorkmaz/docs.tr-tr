@@ -2,19 +2,19 @@
 title: İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203486"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784443"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>İç İçe Geçmiş Şema Öğeleri Arasında Örtük İlişkileri Eşleme
 Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmiş karmaşık türlere sahip olabilir. Bu durumda, eşleme işlemi varsayılan eşlemeyi uygular ve içinde <xref:System.Data.DataSet>aşağıdakileri oluşturur:  
   
 - Karmaşık türlerin her biri için bir tablo (üst ve alt).  
   
-- Üst öğede benzersiz bir kısıtlama yoksa, TableName _ID adlı tablo tanımı başına bir ek birincil anahtarsütunu, *TableName* , üst tablonun adıdır.  
+- Üst öğede benzersiz bir kısıtlama yoksa, TableName *_ID*adlı tablo tanımı başına bir ek birincil anahtar sütunu, *TableName* , üst tablonun adıdır.  
   
 - Birincil anahtar olarak ek sütunu tanımlayan üst tabloda birincil anahtar kısıtlaması ( **IsPrimaryKey** özelliği **true**olarak ayarlanarak). Kısıtlama, 1, 2\# , \# 3 vb. olduğu kısıtlamadır. Örneğin, ilk kısıtlamanın varsayılan adı Constraint1 ' dir.  
   
@@ -101,4 +101,4 @@ Bir XML şeması tanım dili (XSD) şeması, bir diğeri içinde iç içe geçmi
 
 - [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)
 - [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -2,37 +2,37 @@
 title: Komutlar ve Parametreler
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: a769e8cbd5138e78136df018abe058ac6c568951
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1d0c3adb56e5ff44b5c5e065ac040f25584a1946
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198133"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784960"
 ---
 # <a name="commands-and-parameters"></a>Komutlar ve Parametreler
-Bir veri kaynağı ile bağlantı kurulduktan sonra komutları yürütmek ve sonuçları döndürür kullanarak veri kaynağına bir <xref:System.Data.Common.DbCommand> nesne. Bir komut oluşturucular çalışıyorsanız ve .NET Framework veri sağlayıcısı kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağında yürütmek için bir SQL deyimi gibi isteğe bağlı bağımsız değişkenlere gerçekleştirebileceğiniz bir <xref:System.Data.Common.DbConnection> nesnesi veya bir <xref:System.Data.Common.DbTransaction> nesne. Bu gibi durumlarda, bu nesneleri ayrıca komut özellikleri olarak yapılandırabilirsiniz. Ayrıca belirli bir bağlantı kullanarak bir komut oluşturun <xref:System.Data.Common.DbConnection.CreateCommand%2A> yöntemi bir `DbConnection` nesne. Komutu tarafından yürütülen SQL deyimini kullanarak yapılandırılabilir <xref:System.Data.Common.DbCommand.CommandText%2A> özelliği.  
+Bir veri kaynağına bağlantı kurulduktan sonra, komutları yürütebilir ve sonuçları bir <xref:System.Data.Common.DbCommand> nesne kullanarak veri kaynağından döndürebilirsiniz. Üzerinde çalıştığınız .NET Framework veri sağlayıcısı için komut oluşturucularından birini kullanarak bir komut oluşturabilirsiniz. Oluşturucular, veri kaynağı, <xref:System.Data.Common.DbConnection> nesne <xref:System.Data.Common.DbTransaction> veya nesne üzerinde yürütülecek bir SQL deyimsi gibi isteğe bağlı bağımsız değişkenler alabilir. Bu nesneleri komutun özellikleri olarak da yapılandırabilirsiniz. Ayrıca, <xref:System.Data.Common.DbConnection.CreateCommand%2A> bir `DbConnection` nesnenin yöntemini kullanarak belirli bir bağlantı için bir komut oluşturabilirsiniz. Komutu tarafından yürütülen SQL deyimleri <xref:System.Data.Common.DbCommand.CommandText%2A> özelliği kullanılarak yapılandırılabilir.  
   
- .NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir `Command` nesne. OLE DB için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OleDb.OleDbCommand> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlCommand> nesnesi, ODBC için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleCommand> nesne.  
+ .NET Framework eklenen her .NET Framework veri sağlayıcısının bir `Command` nesnesi vardır. OLE DB için .NET Framework veri sağlayıcısı bir <xref:System.Data.OleDb.OleDbCommand> nesne içerir, veri sağlayıcısı için .NET Framework SQL Server bir <xref:System.Data.SqlClient.SqlCommand> nesnesi içerir, ODBC için .NET Framework veri sağlayıcısı bir <xref:System.Data.Odbc.OdbcCommand> nesne ve .NET Framework Oracle için veri sağlayıcısı bir <xref:System.Data.OracleClient.OracleCommand> nesne içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)  
- ADO.NET açıklar `Command` nesne ve nasıl sorgular ve veri kaynaklarında komutları yürütmek için kullanılır.  
+ [Komut Yürütme](executing-a-command.md)  
+ ADO.net `Command` nesnesini ve bir veri kaynağına karşı sorguları ve komutları yürütmek için nasıl kullanılacağını açıklar.  
   
- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- İle çalışmayı açıklar `Command` yönü, veri türleri ve parametre söz dizimi de dahil olmak üzere parametreleri.  
+ [Parametreleri ve Parametre Veri Türlerini Yapılandırma](configuring-parameters-and-parameter-data-types.md)  
+ Yön, veri `Command` türleri ve parametre sözdizimi dahil olmak üzere parametrelerle çalışmayı açıklar.  
   
- [CommandBuilders ile Komut Oluşturma](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md)  
- Komut oluşturucular için INSERT, UPDATE ve DELETE komutlarını otomatik olarak oluşturmak için kullanmayı açıklar bir `DataAdapter` olan tek tablolu bir SELECT komutu.  
+ [CommandBuilders ile Komut Oluşturma](generating-commands-with-commandbuilders.md)  
+ Tek tablo seçme komutu olan bir `DataAdapter` için otomatik olarak INSERT, Update ve DELETE komutlarını oluşturmak üzere komut oluşturucuların nasıl kullanılacağını açıklar.  
   
- [Veritabanından Tek Değer Alma](../../../../docs/framework/data/adonet/obtaining-a-single-value-from-a-database.md)  
- Nasıl kullanılacağını açıklar `ExecuteScalar` yöntemi bir `Command` tek bir değer bir veritabanı sorgusundan döndürülecek nesne.  
+ [Veritabanından Tek Değer Alma](obtaining-a-single-value-from-a-database.md)  
+ Bir veritabanı sorgusundan tek bir `ExecuteScalar` değer döndürmek için `Command` nesnesinin yönteminin nasıl kullanılacağını açıklar.  
   
- [Verileri Değiştirmek için Komutları Kullanma](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
- Saklı yordamları ya da veri tanımlama dili (DDL) deyimleri yürütmek için veri sağlayıcısı kullanmayı açıklar.  
+ [Verileri Değiştirmek için Komutları Kullanma](using-commands-to-modify-data.md)  
+ Saklı yordamları veya veri tanımlama dili (DDL) deyimlerini yürütmek için bir veri sağlayıcısının nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSets, DataTables ve DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
+- [DataSets, DataTables ve DataViews](./dataset-datatable-dataview/index.md)
+- [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

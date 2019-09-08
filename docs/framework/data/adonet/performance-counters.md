@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 360e4a956aec74b6b71185d6acf2f4071d22e2ae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a529cae724d24b47d856f86744eebe87d68cb158
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951215"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783305"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 'de performans sayaçları
 ADO.NET 2,0 <xref:System.Data.SqlClient> , ve <xref:System.Data.OracleClient>için desteği içeren performans sayaçları için genişletilmiş destek sunmuştur. Önceki ADO.net sürümlerinde bulunan performanssayaçlarıkullanımdankaldırılmıştırvebukonudaelealınanyeniperformanssayaçlarıyladeğiştirilmiştir.<xref:System.Data.SqlClient> Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, <xref:System.Diagnostics.PerformanceCounter> <xref:System.Diagnostics> Windows Performans İzleyicisi kullanılarak izlenebilir veya ad alanındaki sınıfı kullanılarak programlı bir şekilde erişilebilir.  
@@ -396,9 +396,9 @@ class Program
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [OLE DB, ODBC ve Oracle Bağlantı Havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
+- [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)
+- [OLE DB, ODBC ve Oracle Bağlantı Havuzu](ole-db-odbc-and-oracle-connection-pooling.md)
 - [ASP.NET için performans sayaçları](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
-- [Çalışma Zamanı Profili Oluşturma](../../../../docs/framework/debug-trace-profile/runtime-profiling.md)
+- [Çalışma Zamanı Profili Oluşturma](../../debug-trace-profile/runtime-profiling.md)
 - [Performans eşiklerini Izlemeye giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a336e2d4516eaa43decf156f25a62729859a3ff0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 08b9fdee1138becd4cd5a933f96021c470aadf1f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778714"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796781"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo Yöntemi
 Belirtilen derleme hakkında istenen verileri alır.  
@@ -39,25 +39,25 @@ HRESULT QueryAssemblyInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Fusion.idl içinde tanımlanan bayraklar. Aşağıdaki değerleri desteklenir:  
+ 'ndaki Fusion. IDL içinde tanımlanan bayraklar. Aşağıdaki değerler desteklenir:  
   
-- QUERYASMINFO_FLAG_VALIDATE (0X00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
-- QUERYASMINFO_FLAG_GETSIZE (0X00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in] Veriler alınır derlemenin adı.  
+ 'ndaki Verilerin alınacağı derlemenin adı.  
   
  `pAsmInfo`  
- [out içinde] Bir [assembly_ınfo](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) içeren derleme hakkında daha fazla veri yapısı.  
+ [in, out] Derleme hakkında veri içeren bir [ASSEMBLY_INFO](assembly-info-structure.md) yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache Arabirimi](iassemblycache-interface.md)

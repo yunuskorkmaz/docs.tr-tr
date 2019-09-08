@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 4661dffa037504d9157f30af12d4308a4d7644a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946917"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792136"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (C#)
 
@@ -23,7 +23,7 @@ Bu izlenecek yol, Visual C# Development ayarları kullanılarak yazılmıştır.
 
 - Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest5") kullanır. Yönergeye başlamadan önce bu klasörü oluşturun.
 
-- Bu izlenecek yol, Northwind örnek veritabanı gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanını indirdikten sonra, dosyayı c:\linqtest5 klasörüne kopyalayın.
+- Bu izlenecek yol, Northwind örnek veritabanı gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md). Veritabanını indirdikten sonra, dosyayı c:\linqtest5 klasörüne kopyalayın.
 
 ## <a name="overview"></a>Genel Bakış
 
@@ -140,7 +140,7 @@ Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturdu�
 2. Uygulamada hata ayıklamak için F5 tuşuna basın.
 
     > [!NOTE]
-    > Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
+    > Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
 
      Konsol penceresinde sorgu sonuçları aşağıdaki gibi görünmelidir:
 
@@ -160,10 +160,10 @@ Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturdu�
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-[İzlenecek yol: İlişkiler genelinde sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) konusu Bu izlenecek yolun sona erdiği yerde devam eder. İlişkiler Kılavuzu 'ndaki sorgu, ilişkisel bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanındaki *birleştirmelere* benzer şekilde tablolar arasında nasıl sorgu yapılacağını gösterir.
+[İzlenecek yol: İlişkiler genelinde sorgulama (C#)](walkthrough-querying-across-relationships-csharp.md) konusu Bu izlenecek yolun sona erdiği yerde devam eder. İlişkiler Kılavuzu 'ndaki sorgu, ilişkisel bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] veritabanındaki *birleştirmelere* benzer şekilde tablolar arasında nasıl sorgu yapılacağını gösterir.
 
 Sorgu Ilişkileri genelinde sorgu yapmak istiyorsanız, bir önkoşul olan, az önce tamamladığınız izlenecek yol için çözümü kaydettiğinizden emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama'
+title: 'Nasıl yapılır: Bir proje veri kaynağı kullanarak veri bağlama (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,116 +8,116 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 69a0ec657f0a8cec34048776a4767cec23d091d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85d5974f43349d91d56a1ab41b314521a6ee7348
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645633"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780171"
 ---
-# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Proje veri kaynağı (WCF Veri Hizmetleri) kullanarak verileri bağlama
+# <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Nasıl yapılır: Bir proje veri kaynağı kullanarak veri bağlama (WCF Veri Hizmetleri)
 
-Bir WCF Veri Hizmetleri istemci uygulamasında oluşturulan veri nesneleri temel alan veri kaynakları oluşturabilirsiniz. Kullanarak bir veri hizmetine başvuru eklerken **hizmet Başvurusu Ekle** iletişim kutusunda, bir proje veri kaynağı ile birlikte oluşturulan istemci veri sınıfları oluşturulur. Bir veri kaynağı hizmeti kullanıma sunan veriler her bir valık kümesi oluşturulur. Bu veri kaynağı öğe sürükleyerek hizmetten alınan verileri görüntüleyen formları oluşturabilirsiniz **veri kaynakları** tasarımcıya penceresi. Bu öğeler, veri kaynağına bağlı denetimler haline gelir. Yürütme sırasında bu veri kaynağı örneğine bağlı <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfını, ki bu veri hizmetine bir sorgu tarafından döndürülen nesnelerle doldurulur. Daha fazla bilgi için [denetimlere veri bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+Bir WCF Veri Hizmetleri istemci uygulamasındaki oluşturulan veri nesnelerine dayalı veri kaynakları oluşturabilirsiniz. **Hizmet başvurusu Ekle** iletişim kutusunu kullanarak bir veri hizmetine bir başvuru eklediğinizde, oluşturulan istemci veri sınıflarıyla birlikte bir proje veri kaynağı oluşturulur. Veri hizmetinin sunduğu her bir varlık kümesi için bir veri kaynağı oluşturulur. Bu veri kaynağı öğelerini tasarımcıda veri **kaynakları** penceresinden sürükleyerek, hizmetten veri görüntüleyen formlar oluşturabilirsiniz. Bu öğeler veri kaynağına bağlanan denetimler haline gelir. Yürütme sırasında, bu veri kaynağı, veri hizmetine bir sorgu tarafından döndürülen <xref:System.Data.Services.Client.DataServiceCollection%601> nesnelerle doldurulan bir sınıfının örneğine bağlanır. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](binding-data-to-controls-wcf-data-services.md).
 
- Otomatik olarak oluşturulan istemci verilerinin ve bu konuda kullanım Northwind örnek veri hizmeti sınıfları hizmeti. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+ Bu konudaki örneklerde, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıfları kullanılır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.
 
-## <a name="use-a-project-data-source-in-a-wpf-window"></a>Bir WPF penceresinde proje veri kaynağı kullanma
+## <a name="use-a-project-data-source-in-a-wpf-window"></a>WPF penceresinde bir proje veri kaynağı kullanma
 
-1. Visual Studio'da bir WPF projesi Northwind verileri hizmeti bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: Bir veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. Visual Studio 'da, bir WPF projesinde, Northwind Data Service 'e bir başvuru ekleyin. Daha fazla bilgi için [nasıl yapılır: Veri hizmeti başvurusu](how-to-add-a-data-service-reference-wcf-data-services.md)ekleyin.
 
-2. İçinde **veri kaynakları** penceresini genişletin `Customers` düğümünde **NorthwindEntities** proje veri kaynağı.
+2. **Veri kaynakları** penceresinde, **NorthwindEntities** proje `Customers` veri kaynağındaki düğümünü genişletin.
 
-3. Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
+3. **MüşteriNo** öğesine tıklayın, listeden **ComboBox** ' ı seçin ve **MüşteriNo** öğesini **müşteriler** düğümünden tasarımcıya sürükleyin.
 
-     Bu pencere için XAML dosyasında aşağıdaki nesne öğeleri oluşturur:
+     Bu, pencere için XAML dosyasında aşağıdaki nesne öğelerini oluşturur:
 
-    - A <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Özelliği üst düzey <xref:System.Windows.Controls.Grid> nesne öğesi ayarlandığından bu yeni <xref:System.Windows.Data.CollectionViewSource>.
+    - <xref:System.Windows.Data.CollectionViewSource> Adlı`customersViewSource`bir öğe. <xref:System.Windows.Data.CollectionViewSource>Üst <xref:System.Windows.FrameworkElement.DataContext%2A> düzey<xref:System.Windows.Controls.Grid> nesne öğesinin özelliği bu yeni olarak ayarlanmıştır.
 
-    - Verilere bağlı <xref:System.Windows.Controls.ComboBox> adlı `CustomerID`.
+    - <xref:System.Windows.Controls.ComboBox> Adlı`CustomerID`bir veri ile bağlantılı.
 
     - A <xref:System.Windows.Controls.Label>.
 
-4. Sürükleme **siparişler** tasarımcıya gezinme özelliği.
+4. **Orders** Navigation özelliğini tasarımcıya sürükleyin.
 
-     Bu pencere için XAML dosyasında aşağıdaki ek nesne öğeleri oluşturur:
+     Bu, pencere için XAML dosyasında aşağıdaki ek nesne öğelerini oluşturur:
 
-    - İkinci <xref:System.Windows.Data.CollectionViewSource> adlı bir öğe `customersOrdersViewSource`, kaynağı `customerViewSource`.
+    - `customerViewSource`Adlı <xref:System.Windows.Data.CollectionViewSource> ikincibiröğesi,`customersOrdersViewSource`' nin kaynağı.
 
-    - Verilere bağlı <xref:System.Windows.Controls.DataGrid> adlı Denetim `ordersDataGrid`.
+    - <xref:System.Windows.Controls.DataGrid> Adlı`ordersDataGrid`veri bağlantılı denetim.
 
-5. (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
+5. Seçim **Müşteriler** düğümündeki ek öğeleri tasarımcıya sürükleyin.
 
-6. Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
+6. Form için kod sayfasını açın ve aşağıdaki `using` deyimleri ekleyin (`Imports` Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7. Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
+7. Formu tanımlayan kısmi sınıfta, bir <xref:System.Data.Objects.ObjectContext> örnek oluşturan ve `customerID` sabiti tanımlayan aşağıdaki kodu ekleyin.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8. Tasarımcıda penceresi seçin.
+8. Tasarımcıda pencereyi seçin.
 
     > [!NOTE]
-    > Kendisi yerine seçme içinde pencerenin içerik pencere seçtiğinizden emin olun. Pencerenin seçtiyseniz **adı** metin kutusunun üstüne yakın bir yere **özellikleri** penceresini, pencerenin adını içermelidir.
+    > Penceredeki içeriği seçmek yerine pencerenin kendisini seçtiğinizden emin olun. Pencere seçilirse, **Özellikler** penceresinin üst kısmındaki **ad** metin kutusu pencerenin adını içermelidir.
 
-9. İçinde **özellikleri** penceresinde **olayları** düğmesi.
+9. **Özellikler** penceresinde, **Olaylar** düğmesini seçin.
 
-10. Bulma **Loaded** olay ve bu olayın yanındaki aşağı açılan listesinde çift tıklatarak.
+10. **Yüklenen** olayı bulun ve ardından bu olayın yanındaki açılan listeye çift tıklayın.
 
-     Visual Studio pencere için arka plan kod dosyasını açıp oluşturur bir <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi.
+     Visual Studio, pencere için arka plan kod dosyasını açar ve bir <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisi oluşturur.
 
-11. Yeni oluşturulan <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisine aşağıdaki kodu kopyalayıp yapıştırın.
+11. Yeni oluşturulan <xref:System.Windows.FrameworkElement.Loaded> olay işleyicisinde aşağıdaki kodu kopyalayın ve yapıştırın.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf2.xaml.cs#customersordersdatabindingwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf2.xaml.vb#customersordersdatabindingwpf)]
 
-12. Bu kod örneği oluşturur <xref:System.Data.Services.Client.DataServiceCollection%601> için `Customers` türüne göre döndüren bir LINQ Sorgu yürütme bir <xref:System.Collections.Generic.IEnumerable%601> , `Customers` yanı sıra ilgili `Orders` Northwind veri hizmetinden nesneleri ve içinbağlar`customersViewSource`.
+12. Bu kod, Northwind Data Service <xref:System.Data.Services.Client.DataServiceCollection%601> 'ten ilgili `Customers` `Customers` `Orders` nesnelerle birlikte döndüren <xref:System.Collections.Generic.IEnumerable%601> bir LINQ sorgusunun yürütülmesine dayanarak tür için bir örneği oluşturur ve `customersViewSource`.
 
-## <a name="use-a-project-data-source-in-a-windows-form"></a>Bir Windows formda proje veri kaynağı kullanma
+## <a name="use-a-project-data-source-in-a-windows-form"></a>Bir Windows formunda bir proje veri kaynağı kullanma
 
-1. İçinde **veri kaynakları** penceresini genişletin **müşteriler** düğümünde **NorthwindEntities** proje veri kaynağı.
+1. **Veri kaynakları** penceresinde, **NorthwindEntities** proje veri kaynağındaki **müşteriler** düğümünü genişletin.
 
-2. Tıklayın **CustomerID** öğesi, select **ComboBox** listesi ve sürükleme **CustomerID** öğesini **müşteriler** düğümü Tasarımcı.
+2. **MüşteriNo** öğesine tıklayın, listeden **ComboBox** ' ı seçin ve **MüşteriNo** öğesini **müşteriler** düğümünden tasarımcıya sürükleyin.
 
-     Bu form aşağıdaki denetimleri oluşturur:
+     Bu, formunda aşağıdaki denetimleri oluşturur:
 
-    - Örneği <xref:System.Windows.Forms.BindingSource> adlı `customersBindingSource`.
+    - <xref:System.Windows.Forms.BindingSource> Adlandırılmış`customersBindingSource`bir örneği.
 
-    - Örneği <xref:System.Windows.Forms.BindingNavigator> adlı `customersBindingNavigator`. Gerekmeyen şekilde, bu denetim silebilirsiniz.
+    - <xref:System.Windows.Forms.BindingNavigator> Adlandırılmış`customersBindingNavigator`bir örneği. Gerekli olacağı için bu denetimi silebilirsiniz.
 
-    - Verilere bağlı <xref:System.Windows.Forms.ComboBox> adlı `CustomerID`.
+    - <xref:System.Windows.Forms.ComboBox> Adlı`CustomerID`bir veri ile bağlantılı.
 
     - A <xref:System.Windows.Forms.Label>.
 
-3. Sürükleme **siparişler** forma gezinme özelliği.
+3. **Orders** Navigation özelliğini forma sürükleyin.
 
-4. Bu oluşturur `ordersBindingSource` denetimini <xref:System.Windows.Forms.BindingSource.DataSource%2A> ayarlamak denetim özelliğini `customersBindingSource` ve <xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliğini `Customers`. Ayrıca oluşturur `ordersDataGridView` formunda bir uygun şekilde başlıklı etiket denetimi tarafından eşlik veriye bağlı denetim.
+4. Bu, denetimin `ordersBindingSource` <xref:System.Windows.Forms.BindingSource.DataSource%2A> özelliği `customersBindingSource` olan ve<xref:System.Windows.Forms.BindingSource.DataMember%2A> özelliği olarak`Customers`ayarlanmış olan denetimi oluşturur. Ayrıca, düzgün bir `ordersDataGridView` şekilde adlandırılmış etiket denetimiyle birlikte, formda veriye bağlı denetimi oluşturur.
 
-5. (İsteğe bağlı) Ek öğeleri sürükleyin **müşteriler** tasarımcıya düğümü.
+5. Seçim **Müşteriler** düğümündeki ek öğeleri tasarımcıya sürükleyin.
 
-6. Form için kod sayfasını açın ve aşağıdakileri ekleyin `using` deyimleri (`Imports` Visual Basic'te):
+6. Form için kod sayfasını açın ve aşağıdaki `using` deyimleri ekleyin (`Imports` Visual Basic):
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersusing)]
 
-7. Form tanımlayan kısmi class içinde oluşturan aşağıdaki kodu ekleyin. bir <xref:System.Data.Objects.ObjectContext> tanımlar ve örnek `customerID` sabit.
+7. Formu tanımlayan kısmi sınıfta, bir <xref:System.Data.Objects.ObjectContext> örnek oluşturan ve `customerID` sabiti tanımlayan aşağıdaki kodu ekleyin.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdefinition)]
 
-8. Form Tasarımcısı'nda formu çift tıklatın.
+8. Form tasarımcısında, forma çift tıklayın.
 
-     Bu form için kod sayfası açılır ve işleyen yöntem oluşturur `Load` olayı.
+     Bu, formun kod sayfasını açar ve formun `Load` olayını işleyen yöntemi oluşturur.
 
-9. İçinde `Load` olay işleyicisine aşağıdaki kodu kopyalayıp yapıştırın.
+9. `Load` Olay işleyicisinde aşağıdaki kodu kopyalayın ve yapıştırın.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabinding)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDataBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabinding)]
 
-10. Bu kod örneği oluşturur <xref:System.Data.Services.Client.DataServiceCollection%601> için `Customers` türüne göre yürütülmesini bir <xref:System.Data.Services.Client.DataServiceQuery%601> döndüren bir <xref:System.Collections.Generic.IEnumerable%601> , `Customers` Northwind verileri hizmeti ve bağlar `customersBindingSource`.
+10. Bu kod, Northwind Data Service <xref:System.Data.Services.Client.DataServiceCollection%601> `Customers` 'ten ' `Customers` i döndüren <xref:System.Collections.Generic.IEnumerable%601> ve ' a bağlayan `customersBindingSource`bir <xref:System.Data.Services.Client.DataServiceQuery%601> öğesinin yürütülmesini temel alan türü için bir örneği oluşturur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)
+- [Nasıl yapılır: Windows Presentation Foundation öğelerine veri bağlama](bind-data-to-wpf-elements-wcf-data-services.md)

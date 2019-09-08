@@ -4,190 +4,190 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc0772cbb35f7c149af7eac04239d7349fa79f27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587500"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797205"
 ---
 # <a name="data-contract-surrogates"></a>Veri Sözleşmesi Yedekleri
-Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Gelişmiş bir özelliktir. Bu özellik türü özelleştirme ve kullanıcılar nasıl bir tür, seri durumdan çıkarılmış veya öngörülen meta verileri içine serileştirilmiş değiştirmek istediğiniz durumlarda değiştirme için kullanılmak üzere tasarlanmıştır. Bir veri anlaşması türü, alanlar ve özellikler ile işaretlenmemiş için belirtilmemiş bazı senaryolar, bir vekil nerede kullanılabilir olduğunda <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği veya kullanıcılar şema farklılıkları dinamik olarak oluşturmak istediğiniz.  
+Veri anlaşması *yedeği* , veri anlaşması modeli üzerine inşa olan gelişmiş bir özelliktir. Bu özellik, kullanıcıların bir türün serileştirilme, seri durumdan çıkarılan veya yansıtılma göre meta verileri değiştirmek istedikleri durumlarda tür özelleştirmesi ve değiştirme için kullanılmak üzere tasarlanmıştır. Bir vekil 'in kullanılabileceği bazı senaryolar tür için bir veri anlaşması belirtilmediğinde, alanlar ve Özellikler <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelik ile işaretlenmez veya kullanıcılar dinamik olarak şema çeşitlemeleri oluşturmak istiyor.  
   
- Serileştirme ve seri durumundan çıkarma elde ile veri sözleşme vekil kullanırken <xref:System.Runtime.Serialization.DataContractSerializer> .NET Framework'ten XML gibi uygun bir biçime dönüştürmek için. Veri sözleşmesi temsilci türleri için XML Şeması belgeleri (XSD) gibi meta veri gösterimleri üretirken dışarı meta verilerini değiştirmek için de kullanılabilir. İçeri aktarma, bağlı kod meta verilerinden oluşturulur ve vekil Bu örnekte oluşturulan kod da özelleştirmek için kullanılabilir.  
+ Serileştirme ve seri durumdan çıkarma, .NET Framework, XML gibi uygun bir <xref:System.Runtime.Serialization.DataContractSerializer> biçime dönüştürmek için kullanılırken veri sözleşmesi yedeği ile gerçekleştirilir. Veri sözleşmesi yedek, XML şema belgeleri (XSD) gibi meta veri gösterimleri üretilirken türler için aktarılmış meta verileri değiştirmek için de kullanılabilir. İçeri aktarma işleminden sonra kod meta verilerden oluşturulur ve yedek bu durumda, oluşturulan kodu özelleştirmek için kullanılabilir.  
   
-## <a name="how-the-surrogate-works"></a>Vekil nasıl çalışır?  
- Bir yedek başka bir tür ("surrogated" türü) için eşleme bir türü tarafından ("özgün") çalışır. Aşağıdaki örnek, özgün türü gösterir `Inventory` ve yeni bir yedek `InventorySurrogated` türü. `Inventory` Türü seri hale getirilebilir değil ancak `InventorySurrogated` türü:  
+## <a name="how-the-surrogate-works"></a>Vekil nasıl kullanılır?  
+ Bir vekil, bir tür ("orijinal" tür) diğer bir türe ("yedeklerin Gated" türü) eşleyerek işe yarar. Aşağıdaki örnek orijinal türünü `Inventory` ve yeni bir yedek `InventorySurrogated` türünü gösterir. Tür serileştirilebilir değil, `InventorySurrogated` ancak tür: `Inventory`  
   
  [!code-csharp[C_IDataContractSurrogate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#1)]  
   
- Bir veri anlaşması için bu sınıfın tanımlı değil çünkü veri sözleşme ile bir vekil sınıfı için sınıf dönüştürün. Surrogated sınıfı aşağıdaki örnekte gösterilmiştir:  
+ Bu sınıf için bir veri sözleşmesi tanımlanmadığı için, sınıfı bir veri sözleşmesine sahip bir yedek sınıfa dönüştürün. Yedeklerin Gated class aşağıdaki örnekte gösterilmiştir:  
   
  [!code-csharp[C_IDataContractSurrogate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#2)]  
   
-## <a name="implementing-the-idatacontractsurrogate"></a>IDataContractSurrogate uygulama  
- Veri sözleşmesi vekil kullanmak için uygulama <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimi.  
+## <a name="implementing-the-idatacontractsurrogate"></a>Idatacontractvekil uygulama  
+ Veri sözleşmesi yedek öğesini kullanmak için <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimini uygulayın.  
   
- Her yöntem genel bir bakış aşağıdadır <xref:System.Runtime.Serialization.IDataContractSurrogate> olası bir uygulama.  
+ Aşağıda, olası bir uygulamayla <xref:System.Runtime.Serialization.IDataContractSurrogate> ilgili her bir yönteme genel bakış verilmiştir.  
   
 ### <a name="getdatacontracttype"></a>GetDataContractType  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Yöntemi başka bir tür eşler. Bu yöntem serileştirme, seri durumundan çıkarma, içeri ve dışarı aktarma için gereklidir.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Yöntemi bir türü diğerine eşler. Serileştirme, seri durumdan çıkarma, içeri aktarma ve dışarı aktarma için bu yöntem gereklidir.  
   
- İlk görev türleri ne olacağını tanımlayan diğer türlerine eşlenir. Örneğin:  
+ İlk görev, diğer türlere hangi türlerin eşlenildiğini tanımlar. Örneğin:  
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
-- Seri hale getirme üzerinde bu yöntem tarafından döndürülen eşleme sonradan surrogated örneği özgün örneğe çağırarak dönüştürmek için kullanılan <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi.  
+- Serileştirme sırasında, bu yöntem tarafından döndürülen eşleme daha sonra <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi çağırarak orijinal örneği bir yedeklerin geçitli örneğine dönüştürmek için kullanılır.  
   
-- Seri durumundan çıkarma işleminde, bu yöntem tarafından döndürülen eşleme, temsilci türünün bir örneği seri durumdan çıkarılacak seri hale getirici tarafından kullanılır. Daha sonra çağıran <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> surrogated örneği özgün türün bir örneğine dönüştürülecek.  
+- Seri durumdan çıkarma sırasında, bu yöntem tarafından döndürülen eşleme, seri hale getirici tarafından, yedek türünün bir örneğinde seri durumdan çıkarmak için kullanılır. Daha sonra, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> yedekleri bulunan örneği orijinal türün bir örneğine dönüştürmeyi çağırır.  
   
-- Dışarı aktarma üzerinde bu yöntem tarafından döndürülen vekil türü meta verileri oluşturmak için veri anlaşması almak için yansıtılır.  
+- Dışarı aktarma sırasında, bu yöntem tarafından döndürülen vekil türü, meta verileri oluşturmak için kullanılacak veri sözleşmesini almak üzere yansıtılır.  
   
-- İçeri aktarma işlemi sırasında Başlangıç türü desteğine başvurma gibi amaçlarla kullanmak için veri anlaşması almak için yansıtılan bir temsilci türü değiştirilir.  
+- İçeri aktarma işleminde, başlangıç türü, destek gibi amaçlarla kullanılacak veri sözleşmesini almak için yansıtılan bir vekil türüne değiştirilir.  
   
- <xref:System.Type> Parametredir, seri durumdan çıkarılmış, içeri aktarılan veya dışarı aktarılan serileştirilmekte olan nesnenin türü. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Vekil türü işlemez, yöntem giriş türünü döndürmesi gerekir. Aksi takdirde, uygun surrogated türü döndürür. Çok sayıda eşlemeleri, yedek birden fazla varsa, bu yöntemde tanımlanabilir.  
+ <xref:System.Type> Parametresi seri hale getirilen, seri durumdan çıkarılan, içeri aktarılan veya aktarılan nesnenin türüdür. Yedek türü işlemezse yöntemin giriş türünü döndürmesi gerekir. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Aksi takdirde, uygun yedeklerin geçitli türünü döndürün. Birden fazla yedek tür varsa, bu yöntemde çok sayıda eşleme tanımlanabilir.  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Yönteminin çağrılmaması için yerleşik veri sözleşme temelleri gibi <xref:System.Int32> veya <xref:System.String>. Diziler, kullanıcı tanımlı türler ve diğer veri yapılarını gibi diğer türleri için her türü için bu yöntem çağrılır.  
+ Yöntemi, <xref:System.Int32> veya<xref:System.String>gibi yerleşik veri anlaşması temelleri için çağrılmaz. <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> Diziler, Kullanıcı tanımlı türler ve diğer veri yapıları gibi diğer türler için, bu yöntem her bir tür için çağrılır.  
   
- Önceki örnekte, yöntem denetler `type` parametresi ve `Inventory` benzerdir. Bu nedenle, yöntem için eşleniyorsa `InventorySurrogated`. Her bir seri hale getirme seri durumundan çıkarma, şemayı İçeri Aktar veya dışarı aktarma şeması olarak adlandırılır, bu işlev varsayılan türleri arasındaki eşlemeyi belirlemek için çağrılır.  
+ Önceki örnekte, yöntemi `type` parametrenin ve `Inventory` karşılaştırılabilir olup olmadığını denetler. Öyleyse, yöntemi ile `InventorySurrogated`eşlenir. Bir serileştirme, seri kaldırma, içeri aktarma şeması veya dışa aktarma şeması çağrıldığında, türler arasındaki eşlemeyi belirlemekte bu işlev ilk olarak çağırılır.  
   
 ### <a name="getobjecttoserialize-method"></a>GetObjectToSerialize yöntemi  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> Yöntemi özgün tür örneği yerine temsilci konulduğundan türü örneğine dönüştürür. Yöntemi, seri hale getirme için gereklidir.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> Yöntemi, özgün tür örneğini yedeklerin geçişli tür örneğine dönüştürür. Serileştirme için yöntemi gerekir.  
   
- Fiziksel veri eşleştirilir özgün örneğinden için yedek uygulayarak şeklini tanımlamak için sonraki adımdır <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi. Örneğin:  
+ Bir sonraki adım, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> yöntemi uygulayarak fiziksel verilerin özgün örnekten vekil 'e eşlenme şeklini tanımlamaktır. Örneğin:  
   
  [!code-csharp[C_IDataContractSurrogate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#4)]  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> Yöntemi, bir nesne seri olduğunda çağrılır. Bu yöntem, özgün türünden surrogated türündeki alanlar için veri aktarır. Alanlar doğrudan alanları vekil eşlenebilir veya özgün veri değişikliklerini vekil içinde depolanabilir. Bazı olası kullanımları şunlardır: doğrudan alanlarını eşleme surrogated alanlarında depolanan veriler üzerinde işlem gerçekleştirme ya da özgün türün XML surrogated alanında depolama.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> Yöntemi bir nesne serileştirildiğinde çağrılır. Bu yöntem, verileri özgün türünden yedeklerin geçişli tür alanlarına aktarır. Alanlar doğrudan vekil alanlarla eşleştirilebilir veya orijinal verilerin düzenlemeleri vekil içinde depolanabilir. Bazı olası kullanımlar şunlardır: alanları doğrudan eşleme, yedekleri geçitli alanlarda depolanacak veriler üzerinde işlem yapma veya orijinal türün XML 'sini, yedekleri geçitli alanda depolama.  
   
- `targetType` Parametre bildirilen üye türüne başvuruyor. Bu parametre, tarafından döndürülen surrogated türüdür <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> yöntemi. Seri hale getirici, döndürülen nesne bu türüne atanabilir uygulamaz. `obj` Nesneyi serileştirmek için bir parametredir ve gerekirse, yedek için dönüştürülür. Bu yöntem, surrogated nesne işlemez giriş nesnesi döndürmelidir. Aksi takdirde, yeni bir vekil nesne döndürülür. Nesne null ise temsilci çağrılmaz. Çok sayıda vekil eşlemeleri farklı örnekleri için bu yöntem içinde tanımlanabilir.  
+ `targetType` Parametresi, üyenin belirtilen türüne başvurur. Bu parametre, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> yöntemi tarafından döndürülen yedeklerin kapılı türüdür. Seri hale getirici, döndürülen nesnenin bu türe atanabilir olmasını zorunlu kılmaz. `obj` Parametresi, seri hale getirilecek nesnedir ve gerekirse, bu nesnenin vekil değerine dönüştürülür. Bu yöntem, bir yedeklerin, nesneyi işlemezse giriş nesnesini döndürmelidir. Aksi takdirde, yeni yedek nesne döndürülür. Nesne null ise vekil çağrılmaz. Farklı örnekler için çok sayıda vekil eşleme bu yöntem içinde tanımlanabilir.  
   
- Oluştururken bir <xref:System.Runtime.Serialization.DataContractSerializer>, nesne başvuruları korumak için bildirebilirsiniz. (Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).) Bu ayarı gerçekleştirilir `preserveObjectReferences` yapıcısına parametresinde `true`. Bu durumda, tüm sonraki serializations, yalnızca başvuru akışa yazmak olduğundan yedek bir nesne için yalnızca bir kez çağrılır. Varsa `preserveObjectReferences` ayarlanır `false`, sonra bir örneği ile her karşılaşmanızda vekil çağrılır.  
+ Bir <xref:System.Runtime.Serialization.DataContractSerializer>oluştururken, bunu nesne başvurularını koruyacak şekilde bildirebilirsiniz. (Daha fazla bilgi için bkz. [serileştirme ve serisini kaldırma](../feature-details/serialization-and-deserialization.md).) Bu, oluşturucusunun içindeki `preserveObjectReferences` parametresi olarak `true`ayarlanarak yapılır. Bu durumda, sonraki tüm serileştirmeler yalnızca akışa başvuru yazdığından, bir nesne için yedek yalnızca bir kez çağırılır. `preserveObjectReferences` Olarak`false`ayarlanırsa, bir örnek ile karşılaşıldığında, yedek çağırılır.  
   
- Seri hale getirilmiş örneği türü bildirilen türü farklıysa, tür bilgileri akışa Örneğin, yazılan `xsi:type` diğer uçta seri durumdan örneği izin vermek için. Bu işlem, nesne olmayan ya da yerine temsilci konulduğundan olup olmadığını gerçekleşir.  
+ Seri hale getirilmiş Örneğin türü, belirtilen türden farklıysa, örneğin, `xsi:type` örneğin diğer uçta seri durumdan çıkarılmaya izin vermek için tür bilgileri akışa yazılır. Bu işlem, nesnenin yedeklerin yapılıp yapılmayacağını belirtir.  
   
- Yukarıdaki örnek verileri dönüştürür `Inventory` , örneğine `InventorySurrogated`. Bu nesne türünü denetler ve surrogated türe dönüştürmek için gerekli işlemeleri gerçekleştirir. Bu durumda, alanlarını `Inventory` sınıfı doğrudan kopyalanır üzerinden `InventorySurrogated` sınıfı alanları.  
+ Yukarıdaki örnek, örneğin verisini `Inventory` öğesine `InventorySurrogated`dönüştürür. Nesnenin türünü denetler ve yedeklerin kapılı türe dönüştürmek için gerekli düzenlemeleri gerçekleştirir. Bu durumda, `Inventory` sınıfının alanları doğrudan `InventorySurrogated` sınıf alanlarına kopyalanır.  
   
 ### <a name="getdeserializedobject-method"></a>GetDeserializedObject yöntemi  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> Yöntemi yerine temsilci konulduğundan tür örneği özgün türü örneğine dönüştürür. Seri durumundan çıkarma için gereklidir.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> Yöntemi, yedeklerin kapılı tür örneğini orijinal tür örneğine dönüştürür. Seri durumdan çıkarma için gereklidir.  
   
- Sıradaki görev, fiziksel veri özgün vekil örneğinden eşleştirilecek yol tanımlamaktır. Örneğin:  
+ Sonraki görev, fiziksel verilerin vekil örnekten orijinale nasıl eşleştirilecektir. Örneğin:  
   
  [!code-csharp[C_IDataContractSurrogate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#5)]  
   
- Bu yöntem, yalnızca bir nesne seri kaldırma sırasında çağrılır. Temsilci türünden ters veri eşlemesi seri durumundan çıkarma için özgün türünü sağlar. Benzer şekilde `GetObjectToSerialize` yöntemi, bazı olası kullanımı doğrudan alan veri değişimi, veriler üzerinde işlemler gerçekleştirmek ve XML verileri depolamak için olabilir. Seri durumdan çıkarmak olduğunda her zaman tam veri değerleri özgün veri dönüştürme işlemeleri nedeniyle elde değil.  
+ Bu yöntem yalnızca bir nesnenin serisini kaldırma işlemi sırasında çağrılır. Yedek türden seri durumundan çıkarma için, özgün türüne geri doğru veri eşleme sağlar. `GetObjectToSerialize` Yönteme benzer şekilde, bazı olası kullanımlar alan verilerini doğrudan değiş tokuş etmek, veriler üzerinde işlemler gerçekleştirmek ve XML verilerini depolamak olabilir. Seri durumdan çıkarma sırasında, veri dönüştürmesinde yapılan düzenlemeler nedeniyle her zaman özgün verilerden tam veri değerlerini elde edebilirsiniz.  
   
- `targetType` Parametre bildirilen üye türüne başvuruyor. Bu parametre, tarafından döndürülen surrogated türüdür `GetDataContractType` yöntemi. `obj` Parametresi seri durumdan nesneye başvurur. Bunun yerine temsilci konulduğundan, nesne özgün türüne dönüştürülebilir. Bu yöntem, yedek nesne işlemez giriş nesnesi döndürür. Aksi takdirde, dönüştürme tamamlandığında seri durumdan çıkarılmış nesne döndürülür. Vekil birden fazla varsa, veri dönüştürme vekil birincil türü her her tür belirterek ve kendi dönüştürme sağlayabilir.  
+ `targetType` Parametresi, üyenin belirtilen türüne başvurur. Bu parametre, `GetDataContractType` yöntemi tarafından döndürülen yedeklerin kapılı türüdür. `obj` Parametresi, serisi kaldırılan nesneye başvurur. Nesne, bir yedek ise özgün türüne dönüştürülebilir. Bu yöntem, yedek nesneyi işlemezse giriş nesnesini döndürür. Aksi takdirde, seri durumdan çıkarılan nesne, dönüştürme işlemi tamamlandıktan sonra döndürülür. Birden fazla yedek tür varsa, her bir türü ve dönüşümünü belirterek, her biri için, vekil 'ten birincil türe veri dönüştürme sağlayabilirsiniz.  
   
- Nesneyi döndürürken, iç nesne tabloları bu yedek tarafından döndürülen nesne ile güncelleştirilir. Sonraki tüm başvuruları örneğine surrogated örneği nesne tablolardan elde eder.  
+ Bir nesne döndürüldüğünde, iç nesne tabloları bu vekil tarafından döndürülen nesneyle güncelleştirilir. Bir örneğe yapılan sonraki başvurular, nesne tablolarından yedeklerin geçitli örneğini elde eder.  
   
- Önceki örnekte türünden nesnelerin dönüştürür `InventorySurrogated` ilk yazmasını `Inventory`. Bu durumda, veriler doğrudan geri aktarılır `InventorySurrogated` , karşılık gelen alanlara `Inventory`. Hiçbir veri değişikliklerini olduğundan, alanların her biri üye serileştirme önce aynı değerleri içerir.  
+ Önceki örnek, türü `InventorySurrogated` nesneleri ilk türe `Inventory`geri dönüştürür. Bu durumda, veriler doğrudan içindeki `InventorySurrogated` `Inventory`karşılık gelen alanlara geri aktarılır. Veri düzenlemeleri bulunmadığından, her üye alanı serileştirme öncesindeki değerlerle aynı değerleri içerecektir.  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport yöntemi  
- Bir şema verirken <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> yöntemi, isteğe bağlıdır. Dışarı aktarılan şemasına ek verileri veya ipuçları eklemek için kullanılır. Ek veri üyesi düzeyinde veya tür düzeyinde eklenebilir. Örneğin:  
+ Bir şemayı <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> dışarı aktarırken Yöntem isteğe bağlıdır. Bu, diğer verileri veya ipuçlarını, dışarıya aktarılmış şemaya eklemek için kullanılır. Ek veriler üye düzeyinde veya tür düzeyinde eklenebilir. Örneğin:  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
- Bu yöntemle (iki aşırı yükleme) eklenmesi ek meta veri bilgileri, üyenin veya türün düzeyinde ya da sağlar. Genel veya özel ve dışarı aktarma ve içeri aktarma şemasının korunması yorumları üyesi olup olmadığı hakkında ipuçları dahil etmek mümkündür. Bu yöntem gibi bilgiler kaybolacak. Bu yöntem, ekleme veya üyeleri veya türleri silinmesine neden olmaz, ancak ek veri şemaları ya da bu düzeyler, yerine ekler.  
+ Bu Yöntem (iki aşırı yükleme ile), ek bilgilerin üye veya tür düzeyinde meta verilere eklenmesine olanak sunar. Bir üyenin genel mi yoksa özel mi olduğunu ve şemanın dışa ve içeri aktarılması boyunca korunacak açıklamaları eklemek mümkündür. Bu tür bilgiler bu yöntem olmadan kaybedilir. Bu yöntem üye veya türlerin eklenmesine veya silinmesine neden olmaz, bunun yerine bu düzeylerin her birindeki şemalara daha fazla veri ekler.  
   
- Yöntem aşırı yüklendi ve ya da sürebilir bir `Type` (`clrtype` parametresi) veya <xref:System.Reflection.MemberInfo> (`memberInfo` parametresi). Her zaman ikinci parametresi olan bir `Type` (`dataContractType` parametresi). Her üye ve yerine temsilci konulduğundan türü için bu yöntem çağrılır `dataContractType` türü.  
+ Yöntemi aşırı yüklendi ve `Type` bir (`clrtype` parametre) ya <xref:System.Reflection.MemberInfo> da (`memberInfo` parametre) alabilir. İkinci parametre her zaman bir `Type` (`dataContractType` parametre). Bu yöntem, her üye için ve yedeklerin Gated `dataContractType` Type türü için çağrılır.  
   
- Bu aşırı yüklemeler birini ya da döndürmelidir `null` veya seri hale getirilebilir bir nesne. Dışarı aktarılan şema içinde ek açıklama olarak bir null olmayan nesne seri hale. İçin `Type` aşırı yükleme, şemaya verilen her bir türü bu yönteme ilk parametrede surrogated türü ile birlikte gönderilir `dataContractType` parametresi. İçin `MemberInfo` aşırı yükleme, şemaya verilen her bir üyesi olarak bilgilerini gönderir `memberInfo` ikinci parametrede surrogated türüne sahip parametre.  
+ Bu aşırı yüklemelerin her biri ya da `null` serileştirilebilir bir nesne döndürmelidir. Null olmayan bir nesne, bir ek açıklama olarak, verilecek şemaya seri hale getirilebilir. Aşırı yüklemede, şemaya aktarılmış her tür, `dataContractType` parametre olarak yedeklerin geçitli türü ile birlikte ilk parametrede bu yönteme gönderilir. `Type` Aşırı yükleme için, şemaya aktarılmış her üye, bilgilerini ikinci parametrede yedeklerin geçitli türü olan `memberInfo` parametre olarak gönderir. `MemberInfo`  
   
-#### <a name="getcustomdatatoexport-method-type-type"></a>(Tür, türü) GetCustomDataToExport yöntemi  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> Yöntemi, her tür tanımı için şema dışarı aktarma sırasında çağrılır. Yöntem bilgi şeması içindeki türleri verirken ekler. Tanımlanan her tür, şemada eklenmesi gereken herhangi bir ek veriyi olup olmadığını belirlemek için bu yönteme gönderilir.  
+#### <a name="getcustomdatatoexport-method-type-type"></a>GetCustomDataToExport yöntemi (tür, tür)  
+ Yöntemi <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Type%2CSystem.Type%29?displayProperty=nameWithType> , her tür tanımı için şema dışarı aktarma sırasında çağrılır. Yöntemi, dışarı aktarırken şema içindeki türlere bilgi ekler. Tanımlanan her tür, şemaya eklenmesi gereken herhangi bir ek veri olup olmadığını öğrenmek için bu yönteme gönderilir.  
   
-#### <a name="getcustomdatatoexport-method-memberinfo-type"></a>GetCustomDataToExport yöntemi (MemberInfo, türü)  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Reflection.MemberInfo%2CSystem.Type%29?displayProperty=nameWithType> Dışarı aktarılan türlerinde her üye için dışarı aktarma sırasında çağrılır. Bu işlev, dışa aktarma sırasında şema eklenecek üyeleri için açıklamalar özelleştirmenizi sağlar. Bilgi sınıf içindeki her üye için herhangi bir ek veriyi şemada eklenmesi gerekip gerekmediğini kontrol etmek için bu yönteme gönderilir.  
+#### <a name="getcustomdatatoexport-method-memberinfo-type"></a>GetCustomDataToExport yöntemi (MemberInfo, tür)  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%28System.Reflection.MemberInfo%2CSystem.Type%29?displayProperty=nameWithType> Dışarı aktarılmış türlerindeki her üye için dışarı aktarma sırasında çağrılır. Bu işlev, dışa aktarma sırasında şemaya dahil edilecek Üyeler için herhangi bir yorumu özelleştirmenizi sağlar. Sınıf içindeki her üyeye ait bilgiler, şemaya eklemek gerekip gerekmediğini denetlemek için bu yönteme gönderilir.  
   
- Arar yukarıdaki örnekte `dataContractType` vekil her üyesi için. Ardından, her bir alan için uygun erişim değiştiricisi döndürür. Bu özelleştirme, erişim değiştiricileri için varsayılan değer geneldir. Bu nedenle, bunların gerçek erişim kısıtlamaları nelerdir ne olursa olsun dışarı aktarılan şema kullanılarak oluşturulan kodda genel olarak tüm üyelerinin tanımlanması. Bu uygulama, üye kullanılmadığında `numpens` vekil özel olarak tanımlanan olsa da dışarı aktarılan şemada genel olacaktır. Dışarı aktarılan şema, bu yöntem kullanılarak erişim değiştiricisi özel olarak oluşturulabilir.  
+ Yukarıdaki örnek, `dataContractType` her bir vekil üye için ' i arar. Ardından, her bir alan için uygun erişim değiştiricisini döndürür. Bu özelleştirme olmadan, erişim değiştiricileri için varsayılan değer geneldir. Bu nedenle, tüm Üyeler gerçek erişim kısıtlamalarının ne olduğuna bakılmaksızın, dışarıya aktarılmış şema kullanılarak oluşturulan kodda ortak olarak tanımlanır. Bu uygulamayı kullanmadığında, üye `numpens` , özel olarak tanımlansa bile, bu uygulamada ortak olur. Bu yöntemin kullanımı ile, verdiğiniz şemada erişim değiştiricisi özel olarak oluşturulabilir.  
   
 ### <a name="getreferencedtypeonimport-method"></a>GetReferencedTypeOnImport yöntemi  
- Bu yöntem eşler <xref:System.Type> , özgün türü için temsilci. Bu yöntem, şema içeri aktarma için isteğe bağlıdır.  
+ Bu yöntem, asıl <xref:System.Type> öğesinin türünü özgün türe eşler. Bu yöntem, şema içe aktarılması işlemini için isteğe bağlıdır.  
   
- Bir şema içeri aktarır ve bir yedek oluşturma için kod oluşturur, sonraki görev özgün türü için bir yedek örneği türünü tanımlamaktır.  
+ Bir şemayı içeri aktaran ve kendisi için kod üreten bir yedek oluştururken, bir sonraki görev, bir yedek örneğin türünü özgün türüne tanımlamaktır.  
   
- Oluşturulan kodun var olan bir kullanıcı türü başvuru yapması gerekiyorsa, bu uygulama tarafından gerçekleştirilir <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A> yöntemi.  
+ Oluşturulan kodun var olan bir kullanıcı türüne başvurması gerekiyorsa bu, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A> yöntemi uygulayarak yapılır.  
   
- Şema içeri aktarırken, her tür bildirimi yerine temsilci konulduğundan veri anlaşması bir türe eşlemek için bu yöntem çağrılır. Dize parametreleri `typeName` ve `typeNamespace` surrogated türün ad alanı ve adını tanımlayın. Dönüş değeri <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A> yeni bir tür oluşturulması gerekip gerekmediğini belirlemek için kullanılır. Bu yöntem, geçerli bir tür veya null döndürmelidir. Geçerli türler için döndürülen tür, oluşturulan kodda başvurulan türü olarak kullanılır. Null değeri döndürülürse, hiçbir tür başvurulan ve yeni bir tür oluşturulması gerekir. Birkaç temsilciler varsa, her temsilci türüne geri başlangıç türü için eşleme gerçekleştirmek mümkündür.  
+ Bir şemayı içeri aktarırken, bu yöntem her tür bildirimi için, yedekleri geçitli veri sözleşmesini bir türle eşlemek için çağrılır. Dize parametreleri `typeName` ve `typeNamespace` yedeklerin geçişli türünün adını ve ad alanını tanımlar. İçin <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%2A> dönüş değeri, yeni bir türün oluşturulması gerekip gerekmediğini belirlemekte kullanılır. Bu yöntem, geçerli bir tür ya da null döndürmelidir. Geçerli türler için döndürülen tür, oluşturulan kodda başvurulan bir tür olarak kullanılacaktır. Null döndürülürse, hiçbir türe başvurulmayacak ve yeni bir tür oluşturulmalıdır. Birden fazla yedekli kapı varsa, her bir yedek türü için eşlemeyi ilk türüne geri almak mümkündür.  
   
- `customData` Parametredir özgün yönteminden döndürülen nesne <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>. Bu `customData` vekil yazarlar ek veri ipuçları içeri aktarma sırasında kodu oluşturmak için kullanılacak meta verilere eklemek istediğinizde kullanılır.  
+ Parametresi, ilk olarak öğesinden <xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A>döndürülen nesnedir. `customData` Bu `customData` , yedek yazarları kod oluşturmak için içeri aktarma sırasında kullanılacak meta verilere ek veri/İpucu eklemek istediğinizde kullanılır.  
   
 ### <a name="processimportedtype-method"></a>ProcessImportedType yöntemi  
- <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> Yöntemi şema içeri aktarma oluşturulan herhangi bir tür özelleştirir. Bu yöntem, isteğe bağlıdır.  
+ Yöntemi <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> , şema içe aktarılması işlemini oluşturulan herhangi bir türü özelleştirir. Bu yöntem isteğe bağlıdır.  
   
- Şema içeri aktarırken, bu yöntem özelleştirilmesi gereken tüm içeri aktarılan türü ve derleme bilgiler sağlar. Örneğin:  
+ Bir şemayı içeri aktarırken, bu yöntem tüm içeri aktarılan tür ve derleme bilgilerinin özelleştirilme için izin verir. Örneğin:  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
- İçeri aktarma sırasında oluşturulan her tür için bu yöntem çağrılır. Belirtilen değişiklik <xref:System.CodeDom.CodeTypeDeclaration> veya değiştirme <xref:System.CodeDom.CodeCompileUnit>. Bu ad, üyeleri, öznitelikler ve diğer birçok özelliklerini değiştirme içerir `CodeTypeDeclaration`. İşlem tarafından `CodeCompileUnit`, yönergeleri, ad alanları, başvurulan derlemeleri ve diğer birçok yönünü değiştirmek mümkündür.  
+ İçeri aktarma sırasında, oluşturulan her tür için bu yöntem çağrılır. Belirtilen <xref:System.CodeDom.CodeTypeDeclaration> ' i değiştirin veya <xref:System.CodeDom.CodeCompileUnit>değiştirin. Bu, adının, üyelerin, özniteliklerin ve diğer diğer özelliklerinin `CodeTypeDeclaration`değiştirilmesini içerir. `CodeCompileUnit`Öğesini işleyerek, yönergeleri, ad alanlarını, başvurulan derlemeleri ve diğer birkaç yönü değiştirmek mümkündür.  
   
- `CodeTypeDeclaration` Parametresi ' % s'kod DOM türü bildirimini içerir. `CodeCompileUnit` Kod işlemek için değiştirme parametresi sağlar.  Döndüren `null` atılmadan tür bildiriminde sonuçlanır. Buna karşılık, döndürülürken bir `CodeTypeDeclaration`, değişiklikler korunur.  
+ `CodeTypeDeclaration` Parametresi, kod Dom türü bildirimini içerir. Parametresi `CodeCompileUnit` , kodu işlemeye yönelik değişikliğe izin verir.  Tür `null` bildiriminde sonuçlar atılmak üzere döndürülüyor. Buna karşılık, bir `CodeTypeDeclaration`döndürürken, değişiklikler korunur.  
   
- Meta veri dışarı aktarma sırasında özel veriler eklenir, böylece kullanılabilmesi için içeri aktarma işlemi sırasında kullanıcıya sağlanması gerekir. Bu özel veri programlama modeli ipuçları veya diğer açıklamaları için kullanılabilir. Her `CodeTypeDeclaration` ve <xref:System.CodeDom.CodeTypeMember> örnek olarak özel veri içeren <xref:System.CodeDom.CodeObject.UserData%2A> başvurusuna özelliği `IDataContractSurrogate` türü.  
+ Meta veri dışa aktarma sırasında özel veriler eklenirse, kullanılabilmesi için içeri aktarma sırasında kullanıcıya sağlanması gerekir. Bu özel veriler, programlama modeli ipuçlarına veya diğer açıklamalara yönelik olarak kullanılabilir. Her `CodeTypeDeclaration` ve <xref:System.CodeDom.CodeTypeMember> örnek, <xref:System.CodeDom.CodeObject.UserData%2A> özelliği olarak özel verileri içerir ve `IDataContractSurrogate` türüne atayın.  
   
- Yukarıdaki örnekte alınan şema üzerinde bazı değişiklikler yapar. Kod, bir yedek kullanarak özgün türün özel üyeleri korur. Şema içeri aktarırken varsayılan erişim değiştiricisidir `public`. Bu nedenle, tüm üyeleri vekil şema, bu örnekte olduğu gibi değiştirilmediği sürece herkes tarafından görülebilir. Dışarı aktarma sırasında özel veri üyeleri özel olan ilgili meta verilere eklenir. Örneğin, özel verileri arar, erişim değiştiricisi özeldir ve ardından uygun bir üye öznitelikleri ayarlayarak özel olacak şekilde değiştirir olup olmadığını denetler. Bu özelleştirme olmadan `numpens` üye genel olarak tanımlanmış özel yerine.  
+ Yukarıdaki örnekte, içeri aktarılan şemada bazı değişiklikler gerçekleştirilir. Kod, bir yedek kullanarak özgün türün özel üyelerini korur. Bir şemayı `public`içeri aktarırken varsayılan erişim değiştiricisi. Bu nedenle, bu örnekte olduğu gibi, yedek şemanın tüm üyeleri değiştirilmediği sürece ortak olur. Dışarı aktarma sırasında özel veriler, hangi üyelerin özel olduğu hakkında meta verilere eklenir. Örnek, özel verileri arar, erişim değiştiricisinin özel olup olmadığını denetler ve ardından özniteliklerini ayarlayarak uygun üyeyi özel olarak değiştirir. Bu özelleştirme olmadan, `numpens` üye özel yerine ortak olarak tanımlanır.  
   
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes yöntemi  
- Bu yöntem, şemadan tanımlanan özel veri türlerini alır. Yöntemi, şema içeri aktarma için isteğe bağlıdır.  
+ Bu yöntem şemadan tanımlanan özel veri türlerini alır. Yöntemi, şema içe aktarılması işlemini için isteğe bağlıdır.  
   
- Şema dışarı ve içeri aktarma başında yöntemi çağrılır. Şema içe veya dışa kullanılan özel veri türleri yöntemi döndürür. Yönteme bir <xref:System.Collections.ObjectModel.Collection%601> ( `customDataTypes` parametresi), türleri koleksiyonu. Yöntemi, bu koleksiyona ek bilinen türleri eklemeniz gerekir. Bilinen özel veri türleri, serileştirme ve seri durumundan çıkarma özel veri kullanımının etkinleştirmek için gerekli olan <xref:System.Runtime.Serialization.DataContractSerializer>. Daha fazla bilgi için [veri sözleşme bilinen türleri](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Yöntemi, şema dışa aktarma ve içeri aktarma başlangıcında çağrılır. Yöntemi, aktarılan veya içeri aktarılan şemada kullanılan özel veri türlerini döndürür. Yöntemi, bir tür koleksiyonu <xref:System.Collections.ObjectModel.Collection%601> olan bir `customDataTypes` (parametresi) geçirilir. Yöntemi bu koleksiyona ek bilinen türler eklemeli. Bilinen özel veri türleri, <xref:System.Runtime.Serialization.DataContractSerializer>kullanarak özel verilerin serileştirilmesi ve serisini kaldırma özelliğini etkinleştirmek için gereklidir. Daha fazla bilgi için bkz. [veri sözleşmesi bilinen türleri](../feature-details/data-contract-known-types.md).  
   
-## <a name="implementing-a-surrogate"></a>Bir yedek uygulama  
- Veri sözleşmesi vekil WCF içinde kullanmak için birkaç özel yordamları izlemelisiniz.  
+## <a name="implementing-a-surrogate"></a>Yedek uygulama  
+ WCF 'de veri sözleşme yedeği kullanmak için birkaç özel yordamı izlemeniz gerekir.  
   
-### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Serileştirme ve seri durumundan çıkarma için bir yedek kullanmak için  
- Kullanım <xref:System.Runtime.Serialization.DataContractSerializer> serileştirme ve seri durumundan çıkarma veri yedeği ile gerçekleştirmek için. <xref:System.Runtime.Serialization.DataContractSerializer> Tarafından oluşturulan <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Vekil de belirtilmelidir.  
+### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>Serileştirme ve seri durumdan çıkarma için bir yedek kullanmak için  
+ Vekil ile verilerin serileştirilmesi ve serisini kaldırma işlemini gerçekleştirmek içinkullanın.<xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> , Tarafından<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>oluşturulur. Yedek de belirtilmelidir.  
   
-##### <a name="to-implement-serialization-and-deserialization"></a>Serileştirme ve seri durumundan çıkarma uygulamak için  
+##### <a name="to-implement-serialization-and-deserialization"></a>Serileştirme ve seri durumdan çıkarma uygulamak için  
   
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.ServiceHost> hizmetiniz için. Eksiksiz yönergeler için bkz: [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Hizmetiniz <xref:System.ServiceModel.ServiceHost> için bir örneği oluşturun. Tüm yönergeler için bkz. [Temel WCF programlama](../basic-wcf-programming.md).  
   
-2. İçin her <xref:System.ServiceModel.Description.ServiceEndpoint> belirtilen hizmet ana bilgisayarı, bulmak, <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Belirtilen hizmet <xref:System.ServiceModel.Description.ServiceEndpoint> ana bilgisayarının her biri için, konumunu <xref:System.ServiceModel.Description.OperationDescription>bulun.  
   
-3. Örneği olup olmadığını belirlemek için işlem davranışları aracılığıyla aramayı <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunur.  
+3. Öğesinin <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bir örneğinin bulunduğunu öğrenmek için işlem davranışlarıyla arama yapın.  
   
-4. Varsa bir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ayarla, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> vekil yeni bir örneğini özelliğini. Hayır ise <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamadı, ardından yeni bir örneğini oluşturun ve ayarlayın <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> yeni davranış için yeni bir örneğini vekil üyesi.  
+4. Bir <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunursa, <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> özelliğini yeni bir yedek örneğine ayarlayın. Hayır <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> bulunamazsa, yeni bir örnek oluşturun ve yeni davranışın <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> üyesini, yeni bir örnek örneğine ayarlayın.  
   
-5. Son olarak, bu yeni davranış için geçerli işlem davranışları, aşağıdaki örnekte gösterildiği gibi ekleyin:  
+5. Son olarak, aşağıdaki örnekte gösterildiği gibi, bu yeni davranışı geçerli işlem davranışlarına ekleyin:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
-### <a name="to-use-a-surrogate-for-metadata-import"></a>Bir yedek meta veri alma için kullanılacak  
- İstemci tarafı kod oluşturmak için WSDL ve XSD gibi meta veriler içeri aktarılırken vekil XSD şema, kod oluşturma için sorumlu bileşenine eklenmesi gerekir <xref:System.Runtime.Serialization.XsdDataContractImporter>. Bunu yapmak için doğrudan değiştirme <xref:System.ServiceModel.Description.WsdlImporter> meta verileri almak için kullanılır.  
+### <a name="to-use-a-surrogate-for-metadata-import"></a>Meta verilerin Içeri aktarılması için bir yedek kullanmak için  
+ İstemci tarafı kodu oluşturmak için WSDL ve XSD gibi meta verileri içeri aktarırken, XSD şemasından <xref:System.Runtime.Serialization.XsdDataContractImporter>kod oluşturmaktan sorumlu bileşene eklenmelidir. Bunu yapmak için, meta verileri içeri <xref:System.ServiceModel.Description.WsdlImporter> aktarmak için kullanılan ' ı doğrudan değiştirin.  
   
-##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Meta verileri içeri aktarma için bir temsilci uygulamak için  
+##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Meta veri içe aktarılması işlemini için bir yedek uygulamak için  
   
-1. Meta verileri kullanarak içeri aktarma <xref:System.ServiceModel.Description.WsdlImporter> sınıfı.  
+1. <xref:System.ServiceModel.Description.WsdlImporter> Sınıfını kullanarak meta verileri içeri aktarın.  
   
-2. Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlenecek yöntemi olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractImporter> tanımlanmış.  
+2. Bir nesnenin<xref:System.Runtime.Serialization.XsdDataContractImporter> tanımlanıp tanımlanmadığını denetlemek için yönteminikullanın.<xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>  
   
-3. Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractImporter> ve kendi <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ImportOptions> sınıfı. Aksi takdirde içeri Aktarıcı tarafından döndürülen kullanın `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
+3. <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> Yöntemi döndürürse `false`, yeni <xref:System.Runtime.Serialization.XsdDataContractImporter> <xref:System.Runtime.Serialization.ImportOptions> bir oluşturun ve <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> özelliğini sınıfının yeni bir örneği olarak ayarlayın. Aksi takdirde, `out` <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yönteminin parametresi tarafından döndürülen içe aktarıcı 'yı kullanın.  
   
-4. Varsa <xref:System.Runtime.Serialization.XsdDataContractImporter> hiçbir <xref:System.Runtime.Serialization.ImportOptions> tanımlanan ve ardından yeni bir örneğini özelliğini ayarlayın <xref:System.Runtime.Serialization.ImportOptions> sınıfı.  
+4. Tanımlı değilse, özelliğini <xref:System.Runtime.Serialization.ImportOptions> sınıfının yeni bir örneği olacak şekilde ayarlayın. <xref:System.Runtime.Serialization.XsdDataContractImporter> <xref:System.Runtime.Serialization.ImportOptions>  
   
-5. Ayarlama <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ImportOptions> , <xref:System.Runtime.Serialization.XsdDataContractImporter> vekil yeni bir örneğini için.  
+5. <xref:System.Runtime.Serialization.ImportOptions> Öğesinin <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> özelliğininözelliğini,yeni<xref:System.Runtime.Serialization.XsdDataContractImporter> bir yedek örneğine ayarlayın.  
   
-6. Ekleme <xref:System.Runtime.Serialization.XsdDataContractImporter> tarafından döndürülen koleksiyona <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlImporter> (devralınan <xref:System.ServiceModel.Description.MetadataExporter> sınıfı.)  
+6. Öğesinin özelliği tarafından döndürülen <xref:System.ServiceModel.Description.MetadataExporter> koleksiyona ekleyin (sınıfından devralınmış.) <xref:System.ServiceModel.Description.WsdlImporter> <xref:System.Runtime.Serialization.XsdDataContractImporter> <xref:System.ServiceModel.Description.MetadataExporter.State%2A>  
   
-7. Kullanım <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> yöntemi <xref:System.ServiceModel.Description.WsdlImporter> veri sözleşmeleri şeması içindeki tüm içeri aktarabilirsiniz. Son adımda kod vekil çağırarak yüklenen şemaları oluşturulur.  
+7. Şema içindeki tüm veri sözleşmelerini <xref:System.ServiceModel.Description.WsdlImporter> içeri aktarmak için yönteminikullanın.<xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> Son adım sırasında kod, vekil içine çağırarak yüklenen şemalardan oluşturulur.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
-### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta veri dışarı aktarma için bir yedek kullanmak için  
- Varsayılan meta veri hizmeti için WCF verilirken, WSDL hem XSD şema oluşturulması gerekir. Yedek oluşturma XSD şeması için veri anlaşması türleri, sorumlu bileşenine eklenmesi gerekir <xref:System.Runtime.Serialization.XsdDataContractExporter>. Bunu yapmak için ya da uygulayan bir davranışı kullanmak <xref:System.ServiceModel.Description.IWsdlExportExtension> değiştirmek için <xref:System.ServiceModel.Description.WsdlExporter>, veya doğrudan değiştirme <xref:System.ServiceModel.Description.WsdlExporter> meta verileri dışarı aktarmak için kullanılır.  
+### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta verileri dışarı aktarma için bir yedek kullanmak için  
+ Varsayılan olarak, bir hizmet için WCF 'den meta veriler dışarı aktarılırken hem WSDL hem de XSD şemasının oluşturulması gerekir. Vekil, veri anlaşması türleri <xref:System.Runtime.Serialization.XsdDataContractExporter>için xsd şeması oluşturmaktan sorumlu bileşene eklenmelidir. Bunu yapmak için, <xref:System.ServiceModel.Description.IWsdlExportExtension> <xref:System.ServiceModel.Description.WsdlExporter>öğesini değiştirmek için uygulayan bir davranış kullanın ya da meta verileri dışarı aktarmak için kullanılan'ıdoğrudandeğiştirin.<xref:System.ServiceModel.Description.WsdlExporter>  
   
-##### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta veri dışarı aktarma için bir yedek kullanmak için  
+##### <a name="to-use-a-surrogate-for-metadata-export"></a>Meta verileri dışarı aktarma için bir yedek kullanmak için  
   
-1. Yeni bir <xref:System.ServiceModel.Description.WsdlExporter> veya `wsdlExporter` geçirilen <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> yöntemi.  
+1. Yeni <xref:System.ServiceModel.Description.WsdlExporter> bir oluşturun veya <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> yöntemine geçirilen `wsdlExporter` parametreyi kullanın.  
   
-2. Kullanım <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> denetlemek için işlev olup olmadığını bir <xref:System.Runtime.Serialization.XsdDataContractExporter> tanımlanmış.  
+2. Tanımlanmış olup olmadığını denetlemek için <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>işlevinikullanın <xref:System.Runtime.Serialization.XsdDataContractExporter> .  
   
-3. Varsa <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> döndürür `false`, yeni bir <xref:System.Runtime.Serialization.XsdDataContractExporter> oluşturulan XML şemaları ile <xref:System.ServiceModel.Description.WsdlExporter>ve döndürdüğü koleksiyona ekleyin <xref:System.ServiceModel.Description.MetadataExporter.State%2A> özelliği <xref:System.ServiceModel.Description.WsdlExporter>. Tarafından döndürülen verici kullanmayacak `out` parametresinin <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yöntemi.  
+3. <xref:System.Runtime.Serialization.XsdDataContractExporter> <xref:System.ServiceModel.Description.WsdlExporter> <xref:System.ServiceModel.Description.MetadataExporter.State%2A> Öğesini döndürürse ,`false`öğesinden oluşturulan xml şemaları ile yeni bir oluşturun ve öğesinin özelliği tarafından döndürülen koleksiyona ekleyin. <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> <xref:System.ServiceModel.Description.WsdlExporter> Aksi takdirde, `out` <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> yönteminin parametresi tarafından döndürülen Dışarı Aktarıcı 'yı kullanın.  
   
-4. Varsa <xref:System.Runtime.Serialization.XsdDataContractExporter> hiçbir <xref:System.Runtime.Serialization.ExportOptions> tanımlanan sonra ayarlanmış <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> özelliğine yeni bir örneğini <xref:System.Runtime.Serialization.ExportOptions> sınıfı.  
+4. Tanımlı değilse <xref:System.Runtime.Serialization.ExportOptions> , özelliğinisınıfınınyenibirörneğineayarlayın.<xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> <xref:System.Runtime.Serialization.XsdDataContractExporter> <xref:System.Runtime.Serialization.ExportOptions>  
   
-5. Ayarlama <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> özelliği <xref:System.Runtime.Serialization.ExportOptions> , <xref:System.Runtime.Serialization.XsdDataContractExporter> vekil yeni bir örneğini için. Meta verileri dışarı aktarma için sonraki adımlar herhangi bir değişiklik gerektirmez.  
+5. <xref:System.Runtime.Serialization.ExportOptions> Öğesinin <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> özelliğininözelliğini,yeni<xref:System.Runtime.Serialization.XsdDataContractExporter> bir yedek örneğine ayarlayın. Meta verilerin dışarı aktarılması için sonraki adımlarda herhangi bir değişiklik yapılması gerekmez.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
@@ -198,4 +198,4 @@ Veri anlaşması *vekil* veri anlaşması modeli üzerinde oluşturulmuş, Geli�
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.Runtime.Serialization.ImportOptions>
 - <xref:System.Runtime.Serialization.ExportOptions>
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Anlaşmalarını Kullanma](../feature-details/using-data-contracts.md)

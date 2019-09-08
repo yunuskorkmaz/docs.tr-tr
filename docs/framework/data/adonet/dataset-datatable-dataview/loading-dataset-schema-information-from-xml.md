@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: 4eb211ed13b5f2fe066cd7570c97ae324b187b34
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: db0df68aa89cdd5c8bf94ad95a2b8bc9b36d5685
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203503"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786213"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>XML’den DataSet Schema Bilgilerini Yükleme
 A <xref:System.Data.DataSet> (tablolarının, sütunlarının, ilişkilerin ve kısıtlamalarının) şeması programlı bir şekilde tanımlanabilir, bir veya bir <xref:System.Data.Common.DataAdapter>XML belgesinden **Fill** ya da **FillSchema** yöntemleriyle oluşturulur. Bir XML belgesinden **veri kümesi** şema bilgilerini yüklemek Için, **veri kümesinin** **ReadXmlSchema** veya **InferXmlSchema** yöntemini kullanabilirsiniz. **ReadXmlSchema** , XML şeması tanım DILI (xsd) şeması veya satır Içi XML şemasına sahıp bir XML belgesi Içeren belgeden **veri kümesi** şema bilgilerini yüklemenize veya çıkarmanıza olanak sağlar. **InferXmlSchema** , BELIRTTIĞINIZ belirli XML ad alanlarını YOKSAYARAK şemayı XML belgesinden çıkarmanızı sağlar.  
@@ -54,7 +54,7 @@ xmlStream.Close();
 ```  
   
 ## <a name="inferxmlschema"></a>InferXmlSchema  
- Veri kümesinin, **veri kümesinin** **InferXmlSchema** yöntemini kullanarak bir XML belgesinden şemasını çıkarmasını da söyleyebilirsiniz. **InferXmlSchema** , her ikisi de de bir **XmlReadMode** for **InferSchema** (verileri ve KERS şeması yükler) ve okunan belge satır içi şema içermiyorsa, her ikisi de aynı şekilde çalışır. Ancak, **InferXmlSchema** , şema çıkarsandığınızda yok SAYıLACAK belirli XML ad alanlarını belirtmenize olanak tanıyan ek bir özellik sunar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir dosya adı, akış veya **XMLREADER**ile belirtilen XML belgesinin konumu. ve işlem tarafından yok sayılacak XML ad alanlarının dize dizisi.  
+ Veri **kümesinin,** **veri kümesinin** **InferXmlSchema** yöntemini kullanarak bir XML belgesinden şemasını çıkarmasını da söyleyebilirsiniz. **InferXmlSchema** **, her ikisi** de de bir **XmlReadMode** for **InferSchema** ( **verileri ve** KERS şeması yükler) ve okunan belge satır içi şema içermiyorsa, her ikisi de aynı şekilde çalışır. Ancak, **InferXmlSchema** , şema çıkarsandığınızda yok SAYıLACAK belirli XML ad alanlarını belirtmenize olanak tanıyan ek bir özellik sunar. **InferXmlSchema** iki gerekli bağımsız değişkeni alır: bir dosya adı, akış veya **XMLREADER**ile belirtilen XML belgesinin konumu. ve işlem tarafından yok sayılacak XML ad alanlarının dize dizisi.  
   
  Örneğin, aşağıdaki XML 'i göz önünde bulundurun:  
   
@@ -92,4 +92,4 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 - [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
 - [XML’den DataSet Yükleme](loading-a-dataset-from-xml.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

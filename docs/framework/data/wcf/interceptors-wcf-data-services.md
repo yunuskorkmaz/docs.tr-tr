@@ -1,5 +1,5 @@
 ---
-title: Dinleyiciler (WCF Data Services)
+title: Yakalayıcılar (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,46 +8,46 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 17926e144fae206d702c2bcb4f88dd2093442ed5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7decfdd738e71a01afa8cb32604953142b46e588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790445"
 ---
-# <a name="interceptors-wcf-data-services"></a>Dinleyiciler (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bir uygulamanın işlem için özel mantığı ekleyebilirsiniz, böylece istek iletileri izlemesine olanak sağlar. Gelen iletiler verileri doğrulamak için bu özel mantığı kullanabilirsiniz. Bir sorgu isteğinin kapsamı gibi istek başına bir özel yetkilendirme ilkesi eklemek için kısıtlamanız için de kullanabilirsiniz.  
+# <a name="interceptors-wcf-data-services"></a>Yakalayıcılar (WCF Veri Hizmetleri)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]bir işleme özel mantık ekleyebilmeniz için, bir uygulamanın istek iletilerini ele almasını sağlar. Gelen iletilerdeki verileri doğrulamak için bu özel mantığı kullanabilirsiniz. Ayrıca, istek başına özel bir yetkilendirme ilkesi eklemek gibi bir sorgu isteğinin kapsamını kısıtlamak için de kullanabilirsiniz.  
   
- Durdurma data Service'te özel öznitelikli yöntem tarafından gerçekleştirilir. Bu yöntemleri çağıran [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ileti işleme uygun noktaya. Kesiciler varlık kümesi olarak tanımlanır ve hizmet işlemleri gibi dinleyiciyi yöntemleri İstek parametreleri kabul edemez. Bir HTTP GET isteği işlerken, sorgu dinleyiciyi yöntemleri, dinleyiciyi'nın varlık örneğini ayarlanmış olup olmadığını belirleyen bir lambda ifadesi, sorgu sonuçları döndürülmelidir döndürmesi gerekir. Bu ifade, istenen işlem iyice daraltmak için veri hizmeti tarafından kullanılır. Aşağıda bir örnek sorgu dinleyiciyi tanımıdır.  
+ Yakatasyon, veri hizmetindeki özel olarak öznitelikli yöntemler tarafından gerçekleştirilir. Bu yöntemler tarafından [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ileti işleme uygun noktada çağrılır. Yakalayıcılar, varlık başına ayarlanan temelinde tanımlanır ve bakım yöntemleri, hizmet işlemleri gibi istekten parametreleri kabul edemez. Bir HTTP GET isteği işlenirken çağrılan sorgu yakalayıcısı yöntemleri, bir yakacının varlık kümesi örneğinin sorgu sonuçları tarafından döndürülüp döndürülmeyeceğini belirleyen bir lambda ifadesi döndürmelidir. Bu ifade, istenen işlemi daha fazla iyileştirmek için veri hizmeti tarafından kullanılır. Aşağıda sorgu yakalayıcısı 'nın örnek bir tanımı verilmiştir.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Daha fazla bilgi için [nasıl yapılır: Veri hizmeti iletilerini ıntercept](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veri hizmeti Iletilerini](how-to-intercept-data-service-messages-wcf-data-services.md)durdurur.  
   
- Sorgu olmayan işlemleri işlerken olarak adlandırılan, değişiklik dinleyicileri döndürmelidir `void` (`Nothing` Visual Basic'te). Değişiklik dinleyiciyi yöntemleri, aşağıdaki iki parametreyi kabul etmeniz gerekir:  
+ Sorgu olmayan işlemler işlenirken çağrılan, değişiklik dinleyicileri ( `void` `Nothing` Visual Basic) döndürmesi gerekir. Değişiklik yakalayıcısı metotları aşağıdaki iki parametreyi kabul etmelidir:  
   
-1. Varlık kümesinin varlık türüyle uyumlu bir tür parametresi. Veri Hizmeti değişiklik dinleyiciyi çağırdığında, bu parametrenin değeri istek tarafından gönderilen varlık bilgilerini ücreti yansıtılır.  
+1. Varlık kümesinin varlık türü ile uyumlu olan bir türün parametresi. Veri hizmeti değişiklik yakalayıcısını istediğinde, bu parametrenin değeri istek tarafından gönderilen varlık bilgilerini yansıtır.  
   
-2. Türünde bir parametre <xref:System.Data.Services.UpdateOperations>. Bu parametrenin değeri, veri hizmeti değişiklik dinleyiciyi çağırdığında, isteği gerçekleştirmeye çalışan işlemi ücreti yansıtılır.  
+2. Türünde <xref:System.Data.Services.UpdateOperations>bir parametre. Veri hizmeti değişiklik yakalayıcısını istediğinde, bu parametrenin değeri isteğin gerçekleştirmeye çalıştığı işlemi yansıtır.  
   
- Bir değişiklik dinleyiciyi bir örneğin tanımı aşağıda verilmiştir.  
+ Aşağıda, değişiklik yakalayıcısı 'nın örnek bir tanımı verilmiştir.  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Daha fazla bilgi için [nasıl yapılır: Veri hizmeti iletilerini ıntercept](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veri hizmeti Iletilerini](how-to-intercept-data-service-messages-wcf-data-services.md)durdurur.  
   
- Aşağıdaki öznitelikler durdurma için desteklenir.  
+ Aşağıdaki öznitelikler, yakalaşmayı destekler.  
   
- **[QueryInterceptor (** *EntitySetName* **)]**  
- Yöntemleriyle <xref:System.Data.Services.QueryInterceptorAttribute> uygulanan öznitelik kaynak hedef varlık kümesi için bir HTTP GET isteği alındığında çağrılır. Bu yöntemlerin her zaman biçiminde bir lambda ifadesi döndürmelidir `Expression<Func<T,bool>>`.  
+ **[Queryyakalayıcısı (** *entitySetName* **)]**  
+ <xref:System.Data.Services.QueryInterceptorAttribute> Özniteliği uygulanmış olan Yöntemler, hedeflenen varlık kümesi kaynağı için bir http get isteği alındığında çağırılır. Bu yöntemlerin, her zaman biçiminde `Expression<Func<T,bool>>`bir lambda ifadesi döndürmesi gerekir.  
   
- **[ChangeInterceptor (** *EntitySetName* **)]**  
- Yöntemleriyle <xref:System.Data.Services.ChangeInterceptorAttribute> uygulanan öznitelik kaynak hedef varlık kümesi için bir HTTP GET isteği dışındaki HTTP isteği alındığında çağrılır. Bu yöntemlerin her zaman döndürmelidir `void` (`Nothing` Visual Basic'te).  
+ **[Changeyakalayıcısı (** *entitySetName* **)]**  
+ Hedeflenen varlık kümesi kaynağı için http get isteği dışında bir http isteği alındığında, özniteliğiuygulanmışmetotlarçağırılır.<xref:System.Data.Services.ChangeInterceptorAttribute> Bu yöntemlerin her zaman dönmesi `void` gerekir`Nothing` (Visual Basic).  
   
- Daha fazla bilgi için [nasıl yapılır: Veri hizmeti iletilerini ıntercept](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veri hizmeti Iletilerini](how-to-intercept-data-service-messages-wcf-data-services.md)durdurur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet İşlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+- [Hizmet İşlemleri](service-operations-wcf-data-services.md)

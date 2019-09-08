@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6c2e741df594e265fdef51a602a9a4927733b7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2bfb43002b79fd3e499272b87756bdc3ab0b589
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741870"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787332"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope Metodu
-Kapsamı belirli bir türden alır.  
+Verilen bir türün kapsamını alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT GetResolutionScope(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme kimliği.  
+ Derlemenin KIMLIĞI.  
   
  `FileToken`  
- Geçirilmesi gereken başvuru dosya.  
+ Bir başvuru gerektiren dosya.  
   
  `TargetFile`  
- Dosyanın belirteç türü, genellikle alınan tanımlanan [ImportFile yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+ Türü tanımlanmış, genellikle [ImportFile yöntemiyle](importfile-method.md)alınan dosyanın belirteci.  
   
  `pScope`  
- Derleme veya modül başvurusu alır.  
+ Derlemeyi veya modül başvurusunu alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

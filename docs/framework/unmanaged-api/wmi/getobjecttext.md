@@ -1,6 +1,6 @@
 ---
 title: GetObjectText işlevi (yönetilmeyen API Başvurusu)
-description: GetObjectText işlevi bir metin işleme bir nesnenin MOF sözdiziminde döndürür.
+description: GetObjectText işlevi, MOF sözdiziminde bir nesnenin metinsel işlemesini döndürür.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4438b000a8ecf95949350d3665267276a1d959ec
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d47fcd59204a4d114fc9f0dc5bc4550ba1681f33
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746487"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798499"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText işlevi
-Nesnenin değerinin metinsel bir işleme Yönetilen Nesne Biçimi (MOF) söz diziminde döndürür.
+Yönetilen Nesne Biçimi (MOF) sözdiziminde nesnenin metinsel işlemesini döndürür.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,47 +42,47 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `lFlags`  
-[in] Normalde 0. Varsa `WBEM_FLAG_NO_FLAVORS` (veya 0x1) belirtilirse, niteleyicileri yayma veya flavor bilgileri olmadan dahil edilir.
+'ndaki Normalde 0. `WBEM_FLAG_NO_FLAVORS` (Veya 0x1) belirtilirse, niteleyiciler yayma veya Flavor bilgisi olmadan dahil edilir.
 
 `pstrObjectText`   
-[out] Bir işaretçi bir `null` girişi. Üzerinde iade, yeni ayrılan `BSTR` , içeren nesnenin MOF sözdizimi işleme.  
+dışı `null` Açık giriş işaretçisi. Dönüşte, nesnenin MOF sözdizimi `BSTR` işleme içeren yeni bir ayrılmış.  
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) yöntemi.
+Bu işlev, [IWbemClassObject:: GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) yöntemine bir çağrı kaydırır.
 
-Döndürülen MOF metin nesnesine ilişkin tüm bilgileri, ancak orijinal nesneyi yeniden oluşturmaya yapabilmek MOF derleyicisi için yeterli bilgi içermiyor. Örneğin, yayılan niteleyicileri ya da üst sınıfı özellikleri dahil edilir.
+Döndürülen MOF metni nesneyle ilgili tüm bilgileri içermiyor, ancak özgün nesneyi yeniden oluşturmak için yalnızca MOF derleyicisi için yeterli bilgi yok. Örneğin, hiçbir yayılmış niteleyici veya üst sınıf özelliği dahil değildir.
 
-Aşağıdaki algoritması, bir yöntemin parametre metin yeniden oluşturmak için kullanılır:
+Aşağıdaki algoritma bir yöntemin parametrelerinin metnini yeniden oluşturmak için kullanılır:
 
-1. Parametre tanımlayıcı değerlerini sırasına göre yeniden sıralanmış.
-1. Parametre olarak belirtilen `[in]` ve `[out]` tek bir parametre birleştirilir.
+1. Parametreler, tanımlayıcı değerlerinin sırasıyla yeniden sıralandır.
+1. `[in]` Ve`[out]` olarak belirtilen parametreler tek bir parametre içinde birleştirilir.
  
-`pstrObjectText` bir işaretçi olmalıdır bir `null` işlev çağrıldığında; bu işaretçisi serbest çünkü yöntem çağrısından önce geçerli bir dizeye işaret etmelidir değil.
+`pstrObjectText`işlev çağrıldığında bir `null` öğesine işaretçi olmalıdır; işaretçi serbest bırakılmadığı için yöntem çağrısından önce geçerli olan bir dizeye işaret etmelidir.
 
 ## <a name="requirements"></a>Gereksinimler  
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils.idl  
+ **Üst bilgi** WMINet_Utils. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

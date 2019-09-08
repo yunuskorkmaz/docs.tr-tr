@@ -2,12 +2,12 @@
 title: XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203782"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786337"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 Bu bölüm bir XML şeması tanım dili (xsd) şema belgesinden `DataSet` bir öğesinin ilişkisel şemasının nasıl oluşturulduğunu gösteren bir genel bakış sağlar. Genel olarak, bir şema `complexType` öğesinin her alt öğesi için `DataSet`içinde bir tablo oluşturulur. Tablo yapısı, karmaşık türün tanımına göre belirlenir. Tablolar, `DataSet` şemadaki en üst düzey öğelerde oluşturulur. Ancak, bir `complexType` tablo, `complexType` öğe başka `complexType` bir öğenin içinde iç içe olduğunda yalnızca üst düzey öğe için oluşturulur, bu durumda `DataSet`iç içe `complexType` öğe içinde bir `DataTable` ile eşlenir.  
@@ -98,4 +98,4 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

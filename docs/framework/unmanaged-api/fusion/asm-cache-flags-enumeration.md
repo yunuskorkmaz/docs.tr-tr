@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27caa9916b5adab2b2049a8f66ac34fed40e4d7f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0e3e9da3db71d3e24b2a60ff032a631680055b88
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778582"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795280"
 ---
-# <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
-Tarafından temsil edilen bir derleme kaynağını gösterir [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) genel derleme önbelleğinde.  
+# <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS Numaralandırması
+Genel derleme önbelleğinde [IAssemblyCacheItem](iassemblycacheitem-interface.md) tarafından temsil edilen bir derlemenin kaynağını gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,23 +42,23 @@ typedef enum {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|Önceden derlenmiş bütünleştirilmiş kodlarda önbelleğini, Ngen.exe kullanarak sıralar.|  
-|`ASM_CACHE_GAC`|Genel Derleme Önbelleği numaralandırır.|  
-|`ASM_CACHE_DOWNLOAD`|Gölge kopyalar silinmiş ya da isteğe bağlı olarak yüklenen derlemeleri listeler.|  
-|`ASM_CACHE_ROOT`|Bildiren [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi, ortak dil çalışma zamanı (CLR) sürüm 2.0 için genel bütünleştirilmiş kod önbelleğine yolu döndürmelidir. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
-|`ASM_CACHE_ROOT_EX`|Bildiren [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) işlevi döndürmelidir yolu için genel derleme önbelleği için CLR sürüm 4. Yalnızca bir çağrı bağlamında anlamlı [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).|  
+|`ASM_CACHE_ZAP`|Ngen. exe ' yi kullanarak önceden derlenmiş derlemelerin önbelleğini numaralandırır.|  
+|`ASM_CACHE_GAC`|Genel derleme önbelleğini numaralandırır.|  
+|`ASM_CACHE_DOWNLOAD`|İsteğe bağlı olarak indirilen veya gölge kopyalanmış derlemeleri numaralandırır.|  
+|`ASM_CACHE_ROOT`|[GetCachePath](getcachepath-function.md) işlevinin, ortak dil çalışma zamanı (CLR) sürüm 2,0 için genel derleme önbelleği yolunu döndürmesi gerektiğini gösterir. Yalnızca bir [GetCachePath](getcachepath-function.md)çağrısı bağlamında anlamlıdır.|  
+|`ASM_CACHE_ROOT_EX`|[GetCachePath](getcachepath-function.md) işlevinin CLR sürüm 4 için genel derleme önbelleğinin yolunu döndürmesi gerektiğini gösterir. Yalnızca bir [GetCachePath](getcachepath-function.md)çağrısı bağlamında anlamlıdır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetCachePath İşlevi](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [IAssemblyCacheItem Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [GetCachePath İşlevi](getcachepath-function.md)
+- [IAssemblyCacheItem Arabirimi](iassemblycacheitem-interface.md)
+- [Fusion Sabit Listeleri](fusion-enumerations.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: 24d0d44f5964708164f89b0d9fa6c4c1aac7da0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 70596d6acb62fa01092e5e55dd3b6c84eb162b5d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204510"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784336"
 ---
 # <a name="row-states-and-row-versions"></a>Satır Durumları ve Satır Sürümleri
 ADO.NET satır durumlarını ve sürümlerini kullanarak tablolardaki satırları yönetir. Satır durumu bir satırın durumunu belirtir; satır sürümleri, geçerli, orijinal ve varsayılan değerleri de dahil olmak üzere, değiştirildiğinde bir satırda depolanan değerleri korur. Örneğin, bir satırdaki bir sütunda değişiklik yaptıktan sonra, satırda satır durumu `Modified`ve iki satır sürümü vardır: `Current`, geçerli satır değerlerini içeren ve `Original`satır değerlerini içeren sütun değiştirilmelidir.  
@@ -99,4 +99,4 @@ foreach (DataRow delRow in delRows)
 - [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
 - [DataSets, DataTables ve DataViews](index.md)
 - [DataAdapters ve DataReaders](../dataadapters-and-datareaders.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

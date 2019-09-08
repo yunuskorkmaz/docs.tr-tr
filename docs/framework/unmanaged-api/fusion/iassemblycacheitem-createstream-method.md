@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629890"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796736"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream Yöntemi
 
-Belirtilen ada ve biçimi bir akış oluşturur.
+Belirtilen ad ve biçimle bir akış oluşturur.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -44,30 +44,30 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>Parametreler
 
 `dwFlags`\
-[in] Fusion.idl içinde tanımlanan bayraklar.
+'ndaki Fusion. IDL içinde tanımlanan bayraklar.
 
 `pszStreamName`\
-[in] Oluşturulacak Akış adı.
+'ndaki Oluşturulacak akışın adı.
 
 `dwFormat`\
-[in] Akışla için dosya biçimi.
+'ndaki Akışa eklenecek dosyanın biçimi.
 
 `dwFormatFlags`\
-[in] Fusion.idl içinde tanımlanan özel biçim bayrakları.
+'ndaki Fusion. IDL içinde tanımlı formata özgü bayraklar.
 
 `ppIStream`\
-[out] Döndürülen adresini bir işaretçiye [IStream](/windows/desktop/api/objidl/nn-objidl-istream) örneği.
+dışı Döndürülen [IStream](/windows/desktop/api/objidl/nn-objidl-istream) örneğinin adresine yönelik bir işaretçi.
 
 `puliMaxSize`\
-[, isteğe bağlı] En büyük boyutu tarafından başvuruda bulunulan akışın `ppIStream`.
+[ın, isteğe bağlı] Tarafından `ppIStream`başvurulan akışın en büyük boyutu.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** Fusion.h
+**Üst bilgi** Fusion. h
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

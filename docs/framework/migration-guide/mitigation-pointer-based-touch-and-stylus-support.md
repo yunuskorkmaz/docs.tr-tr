@@ -1,5 +1,5 @@
 ---
-title: 'Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği'
+title: Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379895"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779232"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği
 
-.NET Framework 4.7 hedefleyen ve Windows 10 Creators güncelleştirmesi ile başlayarak Windows sistemleri üzerinde çalışan WPF uygulamalarını isteğe bağlı olarak etkinleştirebilir `WM_POINTER`-WPF dokunma/ekran kalemi yığın tabanlı.
+Windows 10 Creators Update ile başlayan .NET Framework 4,7 ve Windows sistemlerinde çalışan WPF uygulamaları, isteğe bağlı `WM_POINTER`tabanlı bir WPF dokunmatik/Stilus yığınını etkinleştirebilir.
 
 ## <a name="impact"></a>Etki
 
-Geliştiriciler, işaretçi temelli dokunma/kalemi destek açıkça etkinleştirmeyin WPF dokunma/ekran kalemi davranışında değişiklik görmeniz gerekir.
+İşaretçi tabanlı dokunmatik/ekran kalemi desteğinin açıkça etkinleştirilmedikleri geliştiriciler WPF dokunma/ekran kalemi davranışında değişiklik görmez.
 
-İsteğe bağlı bilinen geçerli sorunlar aşağıda verilmiştir `WM_POINTER`-dokunma/ekran kalemi yığın tabanlı:
+İsteğe bağlı `WM_POINTER`tabanlı dokunmatik/Stilus Stack ile ilgili olarak bilinen geçerli sorunlar şunlardır:
 
-- Gerçek zamanlı mürekkep desteği yoktur.
+- Gerçek zamanlı mürekkep oluşturma desteği yoktur.
 
-   Mürekkep ve ekran kalemi eklenti hala çalışırken, düşük performansa neden olabilecek UI iş parçacığı üzerinde işlenir.
+   Mürekkep oluşturma ve ekran kalemi eklentileri çalışmaya devam ederken, Kullanıcı arabirimi iş parçacığında işlenir ve bu da kötü performansa yol açabilir.
 
-- Davranış değişiklikleri nedeniyle değişiklikler, dokunma/ekran kalemi olaylardan yükseltmede fare olayları.
+- Dokunmatik/ekran kalemi olaylarından fare olaylarına yükseltme yapılan değişiklikler nedeniyle davranış değişiklikleri.
 
-  - İşleme farklı şekilde davranabilir.
+  - Düzenleme farklı davranabilirler.
 
-  - Sürükle ve bırak, dokunma girişini ilgili geri bildirim göstermez. (Bu iğne girişi etkilemez.)
+  - Sürükle/bırak, dokunma girişi için uygun geri bildirimi göstermez. (Bu, Stilus girişini etkilemez.)
 
-  - Sürükle ve bırak, dokunma/ekran kalemi olayları artık başlatılabilir.
+  - Sürükle/bırak, artık dokunmatik/ekran kalemi olaylarında başlatılamaz.
 
-      Bu durum uygulama fare girişi algılandığında kadar yanıt veremez duruma gelmesine neden olabilir. Bunun yerine, geliştiriciler, sürükle başlatmak ve fare olayları bırakın.
+      Bu, fare girişi algılanana kadar uygulamanın yanıt vermemesine neden olabilir. Bunun yerine, geliştiriciler fare olaylarından sürükle ve bırak işlemini başlatmalıdır.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>Dokunma/kalemi WM_POINTER tabanlı desteklemek için seçim
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>WM_POINTER tabanlı dokunmatik/ekran kalemi desteğiyle opzip
 
-Bu yığın etkinleştirmek isteyen geliştiricilerin aşağıdakileri, uygulamanın app.config dosyasına ekleyebilirsiniz:
+Bu yığını etkinleştirmek isteyen geliştiriciler aşağıdakini uygulamanın App. config dosyasına ekleyebilir:
 
 ```xml
 <configuration>
@@ -52,8 +52,8 @@ Bu yığın etkinleştirmek isteyen geliştiricilerin aşağıdakileri, uygulama
 </configuration>
 ```
 
-Bu girişi kaldırılıyor veya ve değerini `false` isteğe bağlı Bu yığın kapatır.
+Bu giriş kaldırılıyor veya değeri, bu isteğe `false` bağlı yığını devre dışı olarak ayarlanıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework 4.7 yeniden hedefleme değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4,7 'de yeniden hedefleme değişiklikleri](retargeting-changes-in-the-net-framework-4-7.md)

@@ -2,23 +2,23 @@
 title: Null Semantikler
 ms.date: 03/30/2017
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-ms.openlocfilehash: eb1e96ba44c5d64e8366a654c2d06d89c9b46c9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b18c0a699840d11f5e4add05147672f9bb69e9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767548"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792974"
 ---
 # <a name="null-semantics"></a>Null Semantikler
-Aşağıdaki tabloda çeşitli bölümlerine bağlantılar sağlar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] belgeleri nerede `null` (`Nothing` Visual Basic'te) sorunlar ele alınmıştır.  
+Aşağıdaki tabloda, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `null` (`Nothing` Visual Basic) sorunların ele alındığı, belgelerin çeşitli bölümlerinin bağlantıları verilmiştir.  
   
 |Konu|Açıklama|  
 |-----------|-----------------|  
-|[SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)|Bu konunun "Null Semantikler" bölümünde üç durumlu SQL Boole iki durumlu ortak dil çalışma zamanı (CLR) karşı tartışılması içerir <xref:System.Boolean>, değişmez değer `Nothing` (Visual Basic) ve `null` (C#) ve diğer benzer sorun.|  
-|[Standart Sorgu İşleci Çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)|Bu konunun "Null Semantikler" bölümünde, null karşılaştırma semantiği açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|  
-|[System.String Yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md)|Bu konunun "Farklar gelen .NET" bölümünde değerinin 0'dan nasıl açıklar <xref:System.String.LastIndexOf%2A> dizenin null olduğunu ya da bulunan konumu 0 olduğu anlamına gelebilir.|  
-|[Sayısal Dizideki Değerlerin Toplamını Hesaplama](../../../../../../docs/framework/data/adonet/sql/linq/compute-the-sum-of-values-in-a-numeric-sequence.md)|Açıklayan nasıl <xref:System.Linq.Enumerable.Sum%2A> işleci değerlendirilen `null` (`Nothing` Visual Basic'te) yerine boş bir dizi veya yalnızca null içeren bir dizi için 0.|  
+|[SQL-CLR Tür Uyumsuzlukları](sql-clr-type-mismatches.md)|Bu konunun "null semantiği" bölümünde, üç durumlu SQL Boolean ile iki durumlu ortak dil çalışma <xref:System.Boolean>zamanı (CLR), değişmez değer `Nothing` (Visual Basic) ve `null` (C#) ve benzeri benzer tartışmalar yer almaktadır. çıkışları.|  
+|[Standart Sorgu İşleci Çevirisi](standard-query-operator-translation.md)|Bu konunun "null semantiği" bölümünde ' de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]null karşılaştırma semantiği açıklanmaktadır.|  
+|[System.String Yöntemleri](system-string-methods.md)|Bu konunun <xref:System.String.LastIndexOf%2A> ".net farkları" bölümünde, dizenin null veya bulunan konumun 0 olduğu anlamına gelebilir.|  
+|[Sayısal Dizideki Değerlerin Toplamını Hesaplama](compute-the-sum-of-values-in-a-numeric-sequence.md)|Yalnızca null değerleri <xref:System.Linq.Enumerable.Sum%2A> veya boş bir `null` dizi`Nothing` içeren bir sıra için 0 yerine, işlecin (Visual Basic) olarak nasıl değerlendirileceğini açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)

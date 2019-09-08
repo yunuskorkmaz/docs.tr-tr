@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: fde1e2ace09e31234d199876ae7f063e01e7a7e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8157d296636d0f8661a35af35de561f5cc49c30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203975"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784814"
 ---
 # <a name="adding-datarelations"></a>DataRelations Ekleme
 Birden çok <xref:System.Data.DataSet> <xref:System.Data.DataTable> nesne ile, bir tabloyu başka bir <xref:System.Data.DataRelation> tabloyla ilişkilendirmek, tablolar arasında gezinmek ve ilişkili bir tablodan alt veya üst satırları döndürmek için nesneleri kullanabilirsiniz.  
@@ -38,4 +38,4 @@ customerOrders.Relations.Add("CustOrders",
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

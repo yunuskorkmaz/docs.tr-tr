@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Bir toplu işlemi (WCF Veri Hizmetleri) sorguları yürütme'
+title: 'Nasıl yapılır: Toplu Işteki sorguları yürütme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a825fe83ff62d935740fb69871ba2d1e2120e9ec
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876271"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790499"
 ---
-# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Nasıl yapılır: Bir toplu işlemi (WCF Veri Hizmetleri) sorguları yürütme
-Kullanarak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] istemci kitaplığı, tek bir toplu işlemde birden fazla sorgu veri hizmetinden yürütebilirsiniz. Daha fazla bilgi için [toplu işleme işlemlerini](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md).  
+# <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>Nasıl yapılır: Toplu Işteki sorguları yürütme (WCF Veri Hizmetleri)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını kullanarak, tek bir toplu işte veri hizmetinde birden fazla sorgu yürütebilirsiniz. Daha fazla bilgi için bkz. [toplu Işlem işlemleri](batching-operations-wcf-data-services.md).  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl çağrılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> dizisi yürütülecek yöntemi <xref:System.Data.Services.Client.DataServiceRequest%601> hem döndüren sorgular içeren nesneleri `Customers` ve `Products` Northwind verileri hizmeti nesneleri. Koleksiyonu <xref:System.Data.Services.Client.QueryOperationResponse%601> döndürülen nesneleri <xref:System.Data.Services.Client.DataServiceResponse> numaralandırılmış alan şeklinde ve her nesnelerinin koleksiyonunu <xref:System.Data.Services.Client.QueryOperationResponse%601> da numaralandırılmış alan şeklinde.  
+ Aşağıdaki örnek, Northwind Data Service 'ten hem <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> hem de `Customers` `Products` nesneleri döndüren sorguları içeren <xref:System.Data.Services.Client.DataServiceRequest%601> bir nesne dizisi yürütmek için yönteminin nasıl çağrılacağını gösterir. <xref:System.Data.Services.Client.QueryOperationResponse%601> Döndürülen <xref:System.Data.Services.Client.QueryOperationResponse%601> nesne<xref:System.Data.Services.Client.DataServiceResponse> koleksiyonu numaralandırılır ve her birinde bulunan nesnelerin koleksiyonu da numaralandırılır.  
   
  [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#batchquery)]
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)

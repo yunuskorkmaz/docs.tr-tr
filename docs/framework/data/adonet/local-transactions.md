@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: a0cb72913c10712ece188a782095b93f98cdc0b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 979d51a97245bc9616349679ec8cf05cae8c595a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955780"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783713"
 ---
 # <a name="local-transactions"></a>Yerel İşlemler
 ADO.NET içindeki işlemler, tek bir iş birimi olarak yürütülmesi için birden çok görevi birbirine bağlamak istediğinizde kullanılır. Örneğin, bir uygulama iki görevleri gerçekleştirir düşünün. İlk olarak, sipariş bilgilerini içeren bir tabloyu günceller. İkinci olarak, sipariş edilen öğeleri borçlandırarak envanter bilgilerini içeren bir tabloyu günceller. Her iki görev başarısız olursa, her iki güncelleştirme de geri alınır.  
@@ -49,7 +49,7 @@ ADO.NET içindeki işlemler, tek bir iş birimi olarak yürütülmesi için bird
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Dağıtılmış İşlemler](../../../../docs/framework/data/adonet/distributed-transactions.md)
-- [SQL Server ile System.Transactions Tümleştirmesi](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [İşlemler ve Eşzamanlılık](transactions-and-concurrency.md)
+- [Dağıtılmış İşlemler](distributed-transactions.md)
+- [SQL Server ile System.Transactions Tümleştirmesi](system-transactions-integration-with-sql-server.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

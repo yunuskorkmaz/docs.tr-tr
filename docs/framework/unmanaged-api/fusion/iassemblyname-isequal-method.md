@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1fc128d15c56981f4bc6122e38e0514d006e29e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 926bdcee3a3c3974c8546f3a6dfe98f0b62c93c8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768615"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796561"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual Yöntemi
-Belirtilen bir olup olmadığını belirler [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) nesnedir şuna eşit `IAssemblyName`bağlı olarak belirtilen karşılaştırma bayrakları.  
+Belirtilen bir [IAssemblyName](iassemblyname-interface.md) nesnesinin, belirtilen karşılaştırma bayraklarını temel alarak `IAssemblyName`bu değere eşit olup olmadığını belirler.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -38,19 +38,19 @@ HRESULT IsEqual (
   
 ## <a name="parameters"></a>Parametreler  
  `pName`  
- [in] `IAssemblyName` Bu Karşılaştırılacak nesne `IAssemblyName`.  
+ 'ndaki `IAssemblyName` Bu`IAssemblyName`nesnenin karşılaştırılacağı nesne.  
   
  `dwCmpFlags`  
- [in] Bitsel bir birleşimi [ASM_CMP_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cmp-flags-enumeration.md) karşılaştırma etkileyen değerleri.  
+ 'ndaki Karşılaştırmayı etkileyen [ASM_CMP_FLAGS](asm-cmp-flags-enumeration.md) değerlerinin bit düzeyinde birleşimi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Net Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [IAssemblyName Arabirimi](iassemblyname-interface.md)
+- [Fusion Sabit Listeleri](fusion-enumerations.md)

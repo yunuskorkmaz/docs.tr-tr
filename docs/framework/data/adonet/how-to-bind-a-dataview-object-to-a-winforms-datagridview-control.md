@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b73d60a-6049-446a-85a7-3e5a68b183e2
-ms.openlocfilehash: 1fd85fdead2e971f439841dc67d461fcf7b2e08b
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 3a3089073cdc5afb4ee51caca9114b401c740b45
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504386"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795008"
 ---
 # <a name="how-to-bind-a-dataview-object-to-a-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetimine DataView Nesnesi Bağlama
-<xref:System.Windows.Forms.DataGridView> Denetimi verileri tablo biçiminde görüntülemek için güçlü ve esnek bir yol sağlar. <xref:System.Windows.Forms.DataGridView> Denetim bağlı olacağı şekilde standart Windows Forms veri bağlama modelini destekleyen <xref:System.Data.DataView> ve çeşitli diğer veri kaynakları. Çoğu durumda, ancak siz bağlanacağı bir <xref:System.Windows.Forms.BindingSource> veri kaynağıyla etkileşim ayrıntılarını yönetecek bileşeni.  
+Denetim <xref:System.Windows.Forms.DataGridView> , verileri tablolu biçimde görüntülemenin güçlü ve esnek bir yolunu sağlar. Denetim standart Windows Forms veri bağlama modelini destekler, bu nedenle diğer birçok veri kaynağına <xref:System.Data.DataView> bağlanır. <xref:System.Windows.Forms.DataGridView> Ancak çoğu durumda, veri kaynağıyla etkileşim ayrıntılarını yönetecek bir <xref:System.Windows.Forms.BindingSource> bileşene bağlayabilirsiniz.  
   
- Hakkında daha fazla bilgi için <xref:System.Windows.Forms.DataGridView> denetlemek için bkz: [DataGridView denetimine genel bakış](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
+ <xref:System.Windows.Forms.DataGridView> Denetim hakkında daha fazla bilgi için bkz. [DataGridView denetimine genel bakış](../../winforms/controls/datagridview-control-overview-windows-forms.md).  
   
-### <a name="to-connect-a-datagridview-control-to-a-dataview"></a>DataGridView denetimine DataView nesnesine bağlamak için  
+### <a name="to-connect-a-datagridview-control-to-a-dataview"></a>Bir DataGridView denetimini bir DataView 'a bağlamak için  
   
-1. Bir veritabanından veri alma ayrıntılarını işlemek için bir yöntem uygulayın. Aşağıdaki kod örneğinde uygular bir `GetData` başlatan yöntem bir <xref:System.Data.SqlClient.SqlDataAdapter> bileşeni ve doldurmak için kullandığı bir <xref:System.Data.DataSet>. Ayarladığınızdan emin olun `connectionString` değişken veritabanınız için uygun olan bir değer. Yüklü SQL Server AdventureWorks örnek veritabanı ile bir sunucu için erişim gerekir.  
+1. Veritabanından veri alma ayrıntılarını işlemek için bir yöntem uygulayın. Aşağıdaki kod örneği, bir `GetData` <xref:System.Data.SqlClient.SqlDataAdapter> bileşeni Başlatan bir yöntemi uygular ve onu doldurması için <xref:System.Data.DataSet>kullanır. Değişkeni, `connectionString` veritabanınız için uygun bir değere ayarladığınızdan emin olun. AdventureWorks SQL Server örnek veritabanının yüklü olduğu bir sunucuya erişmeniz gerekecektir.  
   
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1GetData](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1getdata)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1GetData](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1getdata)]  
   
-2. İçinde <xref:System.Windows.Forms.Form.Load> olay işleyicisi formunuza bağlama <xref:System.Windows.Forms.DataGridView> denetimini <xref:System.Windows.Forms.BindingSource> bileşen ve çağrıya `GetData` veritabanından veri almak için yöntemi. <xref:System.Data.DataView> Bir LINQ ilgili veri kümesini sorgulamak için oluşturulan <xref:System.Data.DataTable> ve ardından bağlı <xref:System.Windows.Forms.BindingSource> bileşeni.  
+2. Formunuzun olay işleyicisinde, <xref:System.Windows.Forms.DataGridView> denetimi <xref:System.Windows.Forms.BindingSource> bileşene bağlayın ve verileri veritabanından almak için `GetData` yöntemini çağırın. <xref:System.Windows.Forms.Form.Load> , <xref:System.Data.DataView> <xref:System.Windows.Forms.BindingSource> Kişi <xref:System.Data.DataTable> üzerinde LINQ to DataSet bir sorgudan oluşturulur ve ardından bileşene bağlanır.  
   
      [!code-csharp[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/CS/Form1.cs#ldvsample1formload)]
      [!code-vb[DP DataViewWinForms Sample#LDVSample1FormLoad](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataViewWinForms Sample/VB/Form1.vb#ldvsample1formload)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)

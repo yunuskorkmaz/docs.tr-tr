@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6c417eec9583ff069c9d61fa31e9c14f3931130
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778513"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796273"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult Numaralandırması
-İki derleme kimliklerinin denklik tarafından belirlenen şekilde gösteren [Compareassemblyıdentity](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md) işlevi.  
+[CompareAssemblyIdentity](compareassemblyidentity-function.md) işlevi tarafından belirlendiği şekilde, iki derleme kimliğinin denklik olduğunu gösterir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -49,29 +49,29 @@ typedef enum _tagAssemblyComparisonResult {
   
 |Üye adı|Açıklama|  
 |-----------------|-----------------|  
-|`ACR_EquivalentFullMatch`|Tüm derleme karşılaştırma eşlemesinde alanları gösterir.|  
-|`ACR_EquivalentFXUnified`|Derlemeleri derleme sürüm numaralarının .NET Framework sürüm 2.0 ortak dil çalışma zamanı (CLR) sürümünü Birleştirici göre eşdeğer olarak kabul edilir olduğunu gösterir.|  
-|`ACR_EquivalentPartialFXUnified`|.NET Framework 2.0 derleme sürüm numaraları CLR birleştirmesi göre derlemelerin kısmi eşleşme gösterir.|  
-|`ACR_EquivalentPartialMatch`|Kısmi eşleşme derlemelerin gösterir.|  
-|`ACR_EquivalentPartialUnified`|Eski sürüm numaraları birleştirmesi alarak derlemeleri kısmi bir eşleşme belirtir.|  
-|`ACR_EquivalentPartialWeakNamed`|Kısmi eşleşme yalnızca adlandırılmış derlemelerin gösterir.|  
-|`ACR_EquivalentUnified`|Derlemeler sürüm numaraları .NET Framework'ün eski sürümlerinde CLR birleştirmesi göre eşdeğer olarak kabul edilir olduğunu gösterir.|  
-|`ACR_EquivalentWeakNamed`|Olan sürüm numaraları yoksayıldı iki yalnızca adlandırılmış derlemeler arasında bir eşleşme belirtir.|  
-|`ACR_NonEquivalent`|İki derleme eşleşme oluştuğunu gösterir.|  
-|`ACR_NonEquivalentPartialVersion`|İki derlemenin yalnızca kısmen eşleşen kendi sürüm numaraları dışında eşleştiğini gösterir.|  
-|`ACR_NonEquivalentVersion`|İki derlemenin eşleşmiyor, sürüm numaraları dışında eşleştiğini gösterir.|  
-|`ACR_Unknown`|Denkliği olmayan nedeni bilinmiyor gösterir.|  
+|`ACR_EquivalentFullMatch`|Karşılaştırmayla eşleşen tüm derleme alanlarının eşleştiğini gösterir.|  
+|`ACR_EquivalentFXUnified`|Derlemelerin .NET Framework sürüm 2,0 ' deki derleme sürüm numaralarının ortak dil çalışma zamanı sürümü 'ne (CLR) göre eşit kabul edileceğini gösterir.|  
+|`ACR_EquivalentPartialFXUnified`|.NET Framework 2,0 ' deki derleme sürümü numaralarının CLR içeriğini temel alarak derlemelerin kısmi bir eşleşme olduğunu gösterir.|  
+|`ACR_EquivalentPartialMatch`|Derlemelerin kısmi bir eşleşmesini gösterir.|  
+|`ACR_EquivalentPartialUnified`|Sürüm numaralarının eski listesini temel alarak derlemelerin kısmi bir eşleşmesinin olduğunu gösterir.|  
+|`ACR_EquivalentPartialWeakNamed`|Yalnızca adlandırılmış derlemelerin kısmi bir eşleşmesini gösterir.|  
+|`ACR_EquivalentUnified`|Derlemelerin, .NET Framework eski sürümlerindeki sürüm numaralarının CLR 'ye göre eşit kabul edileceğini gösterir.|  
+|`ACR_EquivalentWeakNamed`|Sürüm numaraları yoksayılmış olan iki adet adlandırılmış derleme arasındaki eşleşmeyi gösterir.|  
+|`ACR_NonEquivalent`|İki derleme arasında hiçbir eşleşme olmadığını gösterir.|  
+|`ACR_NonEquivalentPartialVersion`|İki derlemenin, yalnızca kısmen eşleşen sürüm numaraları hariç eşleştiğini gösterir.|  
+|`ACR_NonEquivalentVersion`|Eşleşmeyen iki derlemenin sürüm numaraları hariç eşleştiğini belirtir.|  
+|`ACR_Unknown`|Non-denkliği için nedenin bilinmediğini gösterir.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [CompareAssemblyIdentity İşlevi](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)
-- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+- [CompareAssemblyIdentity İşlevi](compareassemblyidentity-function.md)
+- [Fusion Sabit Listeleri](fusion-enumerations.md)

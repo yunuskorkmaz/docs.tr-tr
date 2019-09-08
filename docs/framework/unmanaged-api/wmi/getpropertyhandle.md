@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6dc2792b572aae30e9989c81967b86f340d7b83
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d72b0da43971a74a08a249b19dfc0d446eeb5e6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038254"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798545"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle işlevi
 
@@ -79,7 +79,7 @@ Tutamaçları, `CIM_OBJECT` ve `CIM_ARRAY`dışındaki tüm veri türlerinin öz
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
 **Üst bilgi** WMINet_Utils. IDL
 

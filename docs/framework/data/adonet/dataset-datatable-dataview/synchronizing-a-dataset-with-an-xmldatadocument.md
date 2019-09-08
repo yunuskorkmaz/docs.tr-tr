@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204413"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784272"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>DataSet’i bir XmlDataDocument ile Eşitleme
 Bu bölümde, bir satın alma siparişinin işlenmesinde bir adım gösterilir ve bir, <xref:System.Data.DataSet> <xref:System.Xml.XmlDataDocument>ile kesin olarak yazılmış bir şekilde eşitlenmiş. Aşağıdaki örneklerde, yalnızca kaynak XML belgesinin yalnızca bir bölümüyle eşleşen küçültülmüş bir şemaya sahip bir **veri kümesi** oluşturulur. Örnekler, kaynak XML belgesinin aslına uygunluk düzeyini korumak için bir **XmlDataDocument** kullanır ve bu da **veri kümesinin** XML belgesinin bir alt kümesini açığa çıkarmak için kullanılmasını sağlar.  
@@ -234,4 +234,4 @@ public class Sample
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSet ve XmlDataDocument Eşitlemesi](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

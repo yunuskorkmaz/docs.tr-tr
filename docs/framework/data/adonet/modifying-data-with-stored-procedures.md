@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: ebf5c61010a6f658d846ed435ea3a7d18d0d3832
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 46c92301b717e285c4c18241f84d0069069c7bdc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934446"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783533"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Saklı Yordamlarla Verileri Değiştirme
 Saklı yordamlar verileri giriş parametresi olarak kabul edebilir ve verileri çıkış parametreleri, sonuç kümeleri veya dönüş değerleri olarak döndürebilir. Aşağıdaki örnek, ADO.NET 'in giriş parametrelerini, çıkış parametrelerini ve dönüş değerlerini nasıl göndereceğini ve alacağını gösterir. Örnek, birincil anahtar sütununun SQL Server veritabanında bir kimlik sütunu olduğu tabloya yeni bir kayıt ekler.  
@@ -41,7 +41,7 @@ RETURN @@ROWCOUNT
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Komut Yürütme](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
+- [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
+- [Komut Yürütme](executing-a-command.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

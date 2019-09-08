@@ -2,12 +2,12 @@
 title: Tabloların Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: 84cee828f2d3c918a12e449da5b01a3d72d86333
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 52ffd3fe90eb491dd01acf8538276cc828fdb309
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203522"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784484"
 ---
 # <a name="inferring-tables"></a>Tabloların Çıkarımını Yapma
 Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.net ilk olarak tabloları temsil eden XML öğelerini belirler. Aşağıdaki XML yapıları **veri kümesi** şemasının bir tablosu ile sonuçlanır:  
@@ -125,4 +125,4 @@ Bir XML belgesinden bir <xref:System.Data.DataSet> şemayı kullanırken, ADO.ne
 - [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
 - [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

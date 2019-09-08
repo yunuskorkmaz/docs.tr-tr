@@ -2,12 +2,12 @@
 title: Gizlilik ve Veri Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: e4f603d35b4fc03eff990570e725a9d063c19faa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04e405307d3aa42388c396cd69c465ba7ec70d35
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69988722"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783234"
 ---
 # <a name="privacy-and-data-security"></a>Gizlilik ve Veri Güvenliği
 Bir ADO.NET uygulamasında hassas bilgilerin korunması ve yönetilmesi, bu bilgileri oluşturmak için kullanılan ürünlerin ve teknolojilerin üzerine bağımlıdır. ADO.NET, verileri güvenli hale getirmek veya şifrelemek için doğrudan hizmet sağlamaz.  
@@ -18,7 +18,7 @@ Bir ADO.NET uygulamasında hassas bilgilerin korunması ve yönetilmesi, bu bilg
  Verilerin şifrelenmesini ve sonra şifresinin çözülmesi izin veren şifrelemenin aksine, karma veriler tek yönlü bir işlemdir. Verilerin karma olması, verilerin değiştirilmediğini kontrol ederek değişiklik yapılmasını engellemek istediğinizde faydalıdır: özdeş giriş dizeleri verildiğinde, karma algoritmalar her zaman kolayca karşılaştırılabilen özdeş kısa çıkış değerleri üretir. [Karma kodlarla veri bütünlüğünü sağlamak](../../../standard/security/ensuring-data-integrity-with-hash-codes.md) , karma değerleri nasıl oluşturabileceğiniz ve doğrulayabileceğinizi açıklar.  
   
 ## <a name="encrypting-configuration-files"></a>Yapılandırma dosyalarını şifreleme  
- Veri kaynağınıza erişimi korumak, bir uygulamayı güvenli hale getirirken en önemli amaçlardan biridir. Bir bağlantı dizesi güvenli değilse olası bir güvenlik açığı sunar. Yapılandırma dosyalarına kaydedilen bağlantı dizeleri, .NET Framework ortak bir öğe kümesini tanımladığı standart XML dosyalarında depolanır. Korumalı yapılandırma, önemli bilgileri bir yapılandırma dosyasında şifrelemenizi sağlar. Birincil olarak ASP.NET uygulamaları için tasarlanmış olsa da, korumalı yapılandırma Windows uygulamalarındaki yapılandırma dosyası bölümlerini şifrelemek için de kullanılabilir. Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+ Veri kaynağınıza erişimi korumak, bir uygulamayı güvenli hale getirirken en önemli amaçlardan biridir. Bir bağlantı dizesi güvenli değilse olası bir güvenlik açığı sunar. Yapılandırma dosyalarına kaydedilen bağlantı dizeleri, .NET Framework ortak bir öğe kümesini tanımladığı standart XML dosyalarında depolanır. Korumalı yapılandırma, önemli bilgileri bir yapılandırma dosyasında şifrelemenizi sağlar. Birincil olarak ASP.NET uygulamaları için tasarlanmış olsa da, korumalı yapılandırma Windows uygulamalarındaki yapılandırma dosyası bölümlerini şifrelemek için de kullanılabilir. Daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](protecting-connection-information.md).  
   
 ## <a name="securing-string-values-in-memory"></a>Bellekteki dize değerlerini güvenli hale getirme  
  Bir <xref:System.String> nesne, parola, kredi kartı numarası veya kişisel veriler gibi hassas bilgiler içeriyorsa, bu bilgilerin kullanıldıktan sonra açığa çıkmasına neden olan bir risk vardır çünkü uygulama, verileri bilgisayar belleğinden silemiyor.  
@@ -29,6 +29,6 @@ Bir ADO.NET uygulamasında hassas bilgilerin korunması ve yönetilmesi, bu bilg
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
+- [SQL Server Güvenliği](./sql/sql-server-security.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

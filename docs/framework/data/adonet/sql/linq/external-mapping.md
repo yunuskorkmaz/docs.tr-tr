@@ -2,12 +2,12 @@
 title: Dış Eşleme
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 70372473eb2de5d3c4751e237e7beb66315b690e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39cdd7b23bd90ff8938dda9eee630149ce6ddbea
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950323"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793992"
 ---
 # <a name="external-mapping"></a>Dış Eşleme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], veritabanının veri modeliyle nesne modelinize eşleme belirtmek için ayrı bir XML dosyası kullandığınız bir işlem olan *dış eşlemeyi*destekler. Dış eşleme dosyası kullanmanın avantajları şunlardır:  
@@ -23,7 +23,7 @@ ms.locfileid: "69950323"
   
 - Eşleme dosyası bir XML dosyası olmalıdır.  
   
-- XML eşleme dosyası XML şema tanımı dosyasında geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
+- XML eşleme dosyası XML şema tanımı dosyasında geçerli olmalıdır. Daha fazla bilgi için [nasıl yapılır: DBML ve dış eşleme dosyalarını](how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
 - Dış eşleme, öznitelik tabanlı eşlemeyi geçersiz kılar. Diğer bir deyişle, oluşturmak için bir <xref:System.Data.Linq.DataContext> <xref:System.Data.Linq.DataContext> dış eşleme kaynağı kullandığınızda sınıflarda oluşturduğunuz tüm eşleme özniteliklerini yoksayar. Bu davranış, sınıfın dış eşleme dosyasına dahil edilip edilmemesinin doğru olması durumunda geçerlidir.  
   
@@ -32,10 +32,10 @@ ms.locfileid: "69950323"
 ## <a name="xml-schema-definition-file"></a>XML şema tanımı dosyası  
  ' Deki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dış eşleme, aşağıdaki XML şema tanımına karşı geçerli olmalıdır.  
   
- Bu şema tanımı dosyasını bir DBML dosyasını doğrulamak için kullanılan şema tanım dosyasından ayırt edin. Daha fazla bilgi için bkz. [LINQ to SQL 'de kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)).  
+ Bu şema tanımı dosyasını bir DBML dosyasını doğrulamak için kullanılan şema tanım dosyasından ayırt edin. Daha fazla bilgi için bkz. [LINQ to SQL 'de kod oluşturma](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını XML şemaları iletişim kutusunda "LinqToSqlMapping. xsd" olarak bulur. Bir dış eşleme dosyasını doğrulamak için bu dosyayı doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
+> Visual Studio kullanıcıları Ayrıca bu XSD dosyasını XML şemaları iletişim kutusunda "LinqToSqlMapping. xsd" olarak bulur. Bir dış eşleme dosyasını doğrulamak için bu dosyayı doğru şekilde kullanmak için bkz [. nasıl yapılır: DBML ve dış eşleme dosyalarını](how-to-validate-dbml-and-external-mapping-files.md)doğrulayın.  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -143,6 +143,6 @@ elementFormDefault="qualified" >
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Nasıl yapılır: Nesne modelini dış dosya olarak oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [LINQ to SQL’de Kod Oluşturma](code-generation-in-linq-to-sql.md)
+- [Başvuru](reference.md)
+- [Nasıl yapılır: Nesne modelini dış dosya olarak oluşturma](how-to-generate-the-object-model-as-an-external-file.md)

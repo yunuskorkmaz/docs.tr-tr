@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 962163b51507647fd975815c214891a6d692e66c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 5f28179b43cb0af2d75e9e5b13783bc7287c8886
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203951"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784777"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web Hizmetinden DataSet Kullanma
-, <xref:System.Data.DataSet> Internet üzerinden veri aktarımını kolaylaştırmak için kısmen bağlantısız bir tasarıma göre tasarlanmıştır. Veri kümesi, **veri KÜMESININ** içeriğini bir XML Web hizmetinden bir istemciye ve geriye doğru akışa almak için gereken ek bir kodlama olmadan XML Web hizmetlerinden bir giriş veya çıkış olarak belirtime için "serileştirilebilir" olur. **Veri kümesi** örtük olarak, DiffGram biçimi KULLANıLARAK bir XML akışına dönüştürülür, ağ üzerinden gönderilir ve ardından XML akışından alma ucunda bir **veri kümesi** olarak yeniden oluşturulur. Bu, XML Web hizmetlerini kullanarak ilişkisel verileri iletmek ve döndürmek için çok basit ve esnek bir yöntem sunar. DiffGram biçimi hakkında daha fazla bilgi için bkz. [DiffGram](diffgrams.md).  
+, <xref:System.Data.DataSet> Internet üzerinden veri aktarımını kolaylaştırmak için kısmen bağlantısız bir tasarıma göre tasarlanmıştır. Veri kümesi, **veri kümesinin** IÇERIĞINI bir XML Web hizmetinden bir istemciye ve geriye doğru akışa almak için gereken ek bir kodlama olmadan XML Web hizmetlerinden bir giriş veya çıkış olarak belirtime için "serileştirilebilir **" olur.** **Veri kümesi** örtük olarak, DiffGram biçimi KULLANıLARAK bir XML akışına dönüştürülür, ağ üzerinden gönderilir ve ardından XML akışından alma ucunda bir **veri kümesi** olarak yeniden oluşturulur. Bu, XML Web hizmetlerini kullanarak ilişkisel verileri iletmek ve döndürmek için çok basit ve esnek bir yöntem sunar. DiffGram biçimi hakkında daha fazla bilgi için bkz. [DiffGram](diffgrams.md).  
   
  Aşağıdaki örnek, ilişkisel verileri (değiştirilen veriler dahil) taşımak için **veri kümesini** kullanan bir XML Web hizmeti ve istemcisinin nasıl oluşturulacağını gösterir ve tüm güncelleştirmeleri özgün veri kaynağına geri çözümler.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "70203951"
   
      Sizin için Visual Studio 'Nun Web hizmeti proxy sınıfını oluşturmasını istiyorsanız, yalnızca istemci projesini oluşturun ve Çözüm Gezgini penceresinde, projeye sağ tıklayın, **Web başvurusu Ekle**' ye tıklayın ve Web hizmeti ' ni listeden seçin. Hizmetler (Web hizmeti geçerli çözüm içinde veya geçerli bilgisayarda yoksa, Web hizmeti uç noktasının adresini sağlamak gerekebilir.) XML Web hizmeti proxy 'sini kendiniz oluşturursanız (önceki adımda açıklandığı gibi), istemci kodunuza içeri aktarabilir ve XML Web hizmeti yöntemlerini kullanabilirsiniz. Aşağıdaki örnek kod, ara kitaplığı içeri aktarır, müşterilerin listesini almak için **GetCustomers** çağırır, yeni bir müşteri ekliyor ve sonra **UpdateCustomers**güncelleştirmeleriyle birlikte bir **veri kümesi** döndürüyor.  
   
-     Örnek DataSet **. GetChanges** tarafından döndürülen **veri kümesini** **UpdateCustomers** olarak geçirdiğine dikkat edin çünkü yalnızca değiştirilen satırların **UpdateCustomers**'a geçirilmesi gerekir. **UpdateCustomers** , çözümlenen değişiklikleri ve tüm satır hata bilgilerini güncelleştirmeden birleştirmek için, daha sonra mevcut **veri kümesiyle** birleştirebilen çözümlenmiş **veri kümesini**döndürür. Aşağıdaki kod, Web başvurusu oluşturmak için Visual Studio kullandığınızı ve **Web başvurusu Ekle** Iletişim kutusunda dssample için Web başvurusunu yeniden adlandırdığınızı varsayar.  
+     Örnek DataSet **. GetChanges** tarafından döndürülen **veri kümesini** **UpdateCustomers** olarak geçirdiğine dikkat edin çünkü yalnızca değiştirilen satırların **UpdateCustomers**'a geçirilmesi gerekir. **UpdateCustomers** , çözümlenen değişiklikleri ve tüm satır hata bilgilerini güncelleştirmeden birleştirmek için, daha sonra mevcut **veri kümesiyle** **birleştirebilen** çözümlenmiş **veri kümesini**döndürür. Aşağıdaki kod, Web başvurusu oluşturmak için Visual Studio kullandığınızı ve **Web başvurusu Ekle** Iletişim kutusunda dssample için Web başvurusunu yeniden adlandırdığınızı varsayar.  
   
     ```vb  
     Imports System  
@@ -268,4 +268,4 @@ ms.locfileid: "70203951"
 - [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../updating-data-sources-with-dataadapters.md)
 - [DataAdapter Parametreleri](../dataadapter-parameters.md)
 - [Web Hizmetleri Açıklama Dili Aracı (wsdl. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

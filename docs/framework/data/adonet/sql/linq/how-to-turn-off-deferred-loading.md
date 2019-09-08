@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
-ms.openlocfilehash: f68db5a5a0092fc4cf37746f2a4dc81e40ee4a9d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6559392527bb02afe9cea61e704f1f371c6d5470
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938684"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781659"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>Nasıl yapılır: Geciktirilmiş Yüklemeyi Kapatma
-Giderek ertelenmiş yüklemeyi <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> `false`devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [ertelenmiş ve hemen yükleme](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+Giderek ertelenmiş yüklemeyi <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> `false`devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [ertelenmiş ve hemen yükleme](deferred-versus-immediate-loading.md).  
   
 > [!NOTE]
-> Ertelenmiş yükleme, nesne izleme kapalıyken etkili bir şekilde kapalıdır. Daha fazla bilgi için [nasıl yapılır: Bilgileri salt okuma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)olarak alın.  
+> Ertelenmiş yükleme, nesne izleme kapalıyken etkili bir şekilde kapalıdır. Daha fazla bilgi için [nasıl yapılır: Bilgileri salt okuma](how-to-retrieve-information-as-read-only.md)olarak alın.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, ' i ' ye <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> `false`ayarlayarak ertelenmiş yüklemenin nasıl kapatılacağı gösterilmektedir.  
@@ -26,5 +26,5 @@ Giderek ertelenmiş yüklemeyi <xref:System.Data.Linq.DataContext.DeferredLoadin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Sorgu Kavramları](query-concepts.md)
+- [Veritabanını Sorgulama](querying-the-database.md)

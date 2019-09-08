@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: a29efbc1b4d886afe4329df011b522e4d589e2ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949501"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785689"
 ---
 # <a name="connection-string-builders"></a>Bağlantı Dizesi Oluşturucular
 Önceki ADO.NET sürümlerinde, birleştirilmiş dize değerleriyle bağlantı dizeleri derleme zamanı denetimi gerçekleşmediğinden, çalışma zamanında yanlış bir anahtar sözcük oluşturulur <xref:System.ArgumentException>. .NET Framework veri sağlayıcılarının her biri, el ile yapıldıysa geçerli bağlantı dizeleri oluşturmak için bağlantı dizesi anahtar sözcükleri için farklı sözdizimi destekliyordu. Bu sorunu gidermek için, ADO.NET 2,0 her bir .NET Framework veri sağlayıcısı için yeni bağlantı dizesi oluşturucuları sunmuştur. Her veri sağlayıcısı, öğesinden <xref:System.Data.Common.DbConnectionStringBuilder>devralan türü kesin belirlenmiş bir bağlantı dizesi Oluşturucu sınıfı içerir. Aşağıdaki tabloda .NET Framework veri sağlayıcıları ve ilişkili bağlantı dizesi Oluşturucu sınıfları listelenmektedir.  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  Bir bağlantı dizesi oluşturucusunun aşırı yüklenmiş oluşturucularından biri, bir <xref:System.String> bağımsız değişken olarak alır. Bu, daha sonra Kullanıcı girişinden tamamlanabilir kısmi bir bağlantı dizesi sağlamanıza olanak sağlar. Kısmi bağlantı dizesi bir yapılandırma dosyasında depolanabilir ve çalışma zamanında elde edilebilir.  
   
 > [!NOTE]
-> Ad alanı, Web uygulamaları <xref:System.Web.Configuration.WebConfigurationManager> <xref:System.Configuration.ConfigurationManager> için ve Windows uygulamaları için kullanan yapılandırma dosyalarına programlı erişim sağlar. <xref:System.Configuration> Bağlantı dizeleri ve yapılandırma dosyalarıyla çalışma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+> Ad alanı, Web uygulamaları <xref:System.Web.Configuration.WebConfigurationManager> <xref:System.Configuration.ConfigurationManager> için ve Windows uygulamaları için kullanan yapılandırma dosyalarına programlı erişim sağlar. <xref:System.Configuration> Bağlantı dizeleri ve yapılandırma dosyalarıyla çalışma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md).  
   
 ### <a name="example"></a>Örnek  
  Bu örnek, bir yapılandırma dosyasından kısmi bağlantı dizesinin alınması <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>ve öğesinin <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>ve <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> özelliklerini ayarlayarak tamamlanışını gösterir. Yapılandırma dosyası aşağıdaki gibi tanımlanır.  
@@ -81,6 +81,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Gizlilik ve Veri Güvenliği](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Dizeleri](connection-strings.md)
+- [Gizlilik ve Veri Güvenliği](privacy-and-data-security.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

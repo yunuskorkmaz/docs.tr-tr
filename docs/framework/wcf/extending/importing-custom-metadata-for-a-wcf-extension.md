@@ -2,19 +2,19 @@
 title: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 36bc4c9291b60ae5ad6e9964c361ed9e7a7c8317
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6f858cbe86bd2965decf42be5daa7b3f7d3c8c2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963492"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796934"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF Uzantısı için Özel Meta Verileri İçe Aktarma
 Windows Communication Foundation (WCF) ' de, meta veri içeri aktarma işlemi, bir hizmetin soyut temsilini veya meta verilerinden bir bileşen parçalarını oluşturma işlemidir. Örneğin, WCF bir hizmet için <xref:System.ServiceModel.Description.ServiceEndpoint> bir wsdl <xref:System.ServiceModel.Channels.Binding> belgesinden örnekleri <xref:System.ServiceModel.Description.ContractDescription> , örnekleri veya örnekleri içeri aktarabilir. WCF 'de hizmet meta verilerini içeri aktarmak için <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> soyut sınıfın bir uygulamasını kullanın. <xref:System.ServiceModel.Description.MetadataImporter> Sınıfından türetilen türler, WCF 'deki WS-Policy Import mantığının avantajlarından yararlanan meta veri biçimlerini içeri aktarmaya yönelik destek uygular.  
   
  Özel meta veriler, sistem tarafından belirtilen meta veri içe aktarıcılar tarafından içeri aktarılamıyor XML öğelerinden oluşur. Genellikle buna özel WSDL uzantıları ve özel ilke onayları dahildir.  
   
- Bu bölümde, özel WSDL uzantıları ve ilke onaylamaları 'nın nasıl içeri aktarılacağı açıklanmaktadır. İçeri aktarma işlemine odaklanmaz. Meta verilerin özel veya sistem tarafından desteklenmesinden bağımsız olarak dışa ve içeri aktarılan türleri kullanma hakkında daha fazla bilgi için bkz. [meta verileri dışarı ve içeri](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)aktarma.  
+ Bu bölümde, özel WSDL uzantıları ve ilke onaylamaları 'nın nasıl içeri aktarılacağı açıklanmaktadır. İçeri aktarma işlemine odaklanmaz. Meta verilerin özel veya sistem tarafından desteklenmesinden bağımsız olarak dışa ve içeri aktarılan türleri kullanma hakkında daha fazla bilgi için bkz. [meta verileri dışarı ve içeri](../feature-details/exporting-and-importing-metadata.md)aktarma.  
   
 ## <a name="overview"></a>Genel Bakış  
  Tür, WCF 'ye dahil edilen <xref:System.ServiceModel.Description.MetadataImporter> soyut sınıfın uygulamasıdır. <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Türü <xref:System.ServiceModel.Description.WsdlImporter> , wsdl meta verilerini bir <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> nesnede paketlenmiş ekli ilkelerle içe aktarır. Varsayılan içeri aktarıcılar tanımayan ilke onayları ve WSDL uzantıları, içeri aktarmaya yönelik kayıtlı özel ilkeye ve WSDL ımporallara geçirilir. Genellikle Importers, Kullanıcı tanımlı bağlama öğelerini desteklemek veya içeri aktarılan sözleşmeyi değiştirmek için uygulanır.  
@@ -25,17 +25,17 @@ Windows Communication Foundation (WCF) ' de, meta veri içeri aktarma işlemi, b
   
 2. Açıklama nesnelerinden oluşturmadan önce içeri aktarıcılar için ilke onayları sunan <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> arabirimini uygulama ve kullanma. Bu arabirimi, indirilen ilkelere göre bağlamayı veya sözleşmeyi incelemek veya değiştirmek için kullanabilirsiniz.  
   
- Özel WSDL ve ilke onayları dışarı aktarma hakkında daha fazla bilgi için bkz. [BIR WCF uzantısı Için özel meta verileri dışarı aktarma](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
+ Özel WSDL ve ilke onayları dışarı aktarma hakkında daha fazla bilgi için bkz. [BIR WCF uzantısı Için özel meta verileri dışarı aktarma](exporting-custom-metadata-for-a-wcf-extension.md).  
   
 ## <a name="importing-custom-wsdl-extensions"></a>Özel WSDL uzantılarını içeri aktarma  
  WSDL uzantılarını içeri aktarma desteği eklemek için, <xref:System.ServiceModel.Description.IWsdlImportExtension> arabirimini uygulayın ve ardından uygulamanıza <xref:System.ServiceModel.Description.WsdlImporter.WsdlImportExtensions%2A> ekleyin. , <xref:System.ServiceModel.Description.WsdlImporter> Uygulama yapılandırma dosyanıza kayıtlı <xref:System.ServiceModel.Description.IWsdlImportExtension> arabirimin uygulamalarını da yükleyebilir. Bir dizi WSDL Importers kaydı varsayılan olarak kaydedilir ve kayıtlı WSDL Importers sırası önemli olur.  
   
  Özel wsdl İçeri Aktarıcı tarafından <xref:System.ServiceModel.Description.WsdlImporter>yüklenip kullanıldığında, <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> ilk olarak yöntemi içeri aktarma işleminden önce meta verilerin değiştirilmesini etkinleştirmek için çağırılır. Ardından, meta verilerden içeri aktarılan sözleşmelerin değiştirilmesini sağlamak <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> için yöntemi çağrılmadan sonra anlaşmalar içeri aktarılır. Son olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> içeri aktarılan uç noktaların değiştirilmesini etkinleştirmek için yöntemi çağırılır.  
   
- Daha fazla bilgi için [nasıl yapılır: Özel WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)'yi içeri aktar.  
+ Daha fazla bilgi için [nasıl yapılır: Özel WSDL](how-to-import-custom-wsdl.md)'yi içeri aktar.  
   
 ### <a name="importing-custom-policy-assertions"></a>Özel Ilke onaylamalarını içeri aktarma  
- Type <xref:System.ServiceModel.Description.WsdlImporter> ve [ServiceModel Metadata Utility aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) , WSDL belgelerine eklenen ilke ifadelerinde çeşitli ilke onaylama türlerini otomatik olarak işler. Bu araçlar, WSDL bağlamaları ve WSDL bağlantı noktalarına eklenen ilke ifadelerini toplar, normalleştirin ve birleştirir.  
+ Type <xref:System.ServiceModel.Description.WsdlImporter> ve [ServiceModel Metadata Utility aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , WSDL belgelerine eklenen ilke ifadelerinde çeşitli ilke onaylama türlerini otomatik olarak işler. Bu araçlar, WSDL bağlamaları ve WSDL bağlantı noktalarına eklenen ilke ifadelerini toplar, normalleştirin ve birleştirir.  
   
  Özel ilke onayları alma desteği eklemek için, <xref:System.ServiceModel.Description.IPolicyImportExtension> arabirimini uygulayın ve ardından uygulamanıza <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A> ekleyin. , <xref:System.ServiceModel.Description.MetadataImporter> Uygulama yapılandırma dosyanıza kayıtlı <xref:System.ServiceModel.Description.IPolicyImportExtension> arabirimin uygulamalarını da yükleyebilir. Bir dizi ilke içe aktarıcılar varsayılan olarak kaydedilir ve kayıtlı ilke içe aktarıcılar önemli olur.  
   
@@ -50,6 +50,6 @@ Windows Communication Foundation (WCF) ' de, meta veri içeri aktarma işlemi, b
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Özel WSDL 'yi içeri aktar](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [Nasıl yapılır: Özel Ilke onaylamalarını içeri aktar](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [Nasıl yapılır: ServiceContractGenerator için bir uzantı yazma](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+- [Nasıl yapılır: Özel WSDL 'yi içeri aktar](how-to-import-custom-wsdl.md)
+- [Nasıl yapılır: Özel Ilke onaylamalarını içeri aktar](how-to-import-custom-policy-assertions.md)
+- [Nasıl yapılır: ServiceContractGenerator için bir uzantı yazma](how-to-write-an-extension-for-the-servicecontractgenerator.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 342583cdbf6a1501f1bc70c6a9be5d7009c390eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2112600dfcef65b1c85445b03806ce8e9cab6a27
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782059"
 ---
 # <a name="how-to-control-how-much-related-data-is-retrieved"></a>Nasıl yapılır: Ne Kadar İlgili Verilerin Alındığını Denetleme
 Ana Hedefinizdeki ilgili verilerin aynı anda alınması gereken verileri belirtmek için yönteminikullanın.<xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> Örneğin, müşterilerin siparişleriyle ilgili bilgilere ihtiyacınız olduğunu biliyorsanız, sipariş bilgilerinin Müşteri bilgileriyle aynı zamanda alındığından emin <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> olmak için kullanabilirsiniz. Bu yaklaşım, her iki bilgi kümesi için yalnızca bir seyahat veritabanına neden olur.  
@@ -26,4 +26,4 @@ Ana Hedefinizdeki ilgili verilerin aynı anda alınması gereken verileri belirt
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veritabanını Sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [Veritabanını Sorgulama](querying-the-database.md)

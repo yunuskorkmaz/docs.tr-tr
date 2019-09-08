@@ -2,12 +2,12 @@
 title: SQL Server’da Yetkilendirme ve İzinler
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 66bf347543641808cc463d8035223fcf59b08231
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9b041a078494cd29d6cab5297728d233dafa236
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918107"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782592"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>SQL Server’da Yetkilendirme ve İzinler
 Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların erişimini sağlamak için açıkça izin vermeniz gerekir. Her güvenli kılınabilir nesne, izin deyimleri kullanılarak bir sorumluya verilebilecek izinlere sahiptir.  
@@ -60,9 +60,9 @@ Veritabanı nesneleri oluşturduğunuzda, kullanıcılara kullanıcıların eri�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server’da Sunucu ve Veritabanı Rolleri](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [SQL Server’da Kimlik Doğrulaması](authentication-in-sql-server.md)
+- [SQL Server’da Sunucu ve Veritabanı Rolleri](server-and-database-roles-in-sql-server.md)
+- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](ownership-and-user-schema-separation-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

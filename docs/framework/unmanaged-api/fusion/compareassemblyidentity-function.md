@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d4e936c8b732e4cc4a60df8c11b37c86c4a415
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b52d3af38bd09ce5864c25d27e148dbd7f4639b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778485"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795451"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity İşlevi
-Eşdeğer olup olmadığını belirlemek için iki derleme kimlikleri karşılaştırır.  
+, Eşdeğer olup olmadıklarını anlamak için iki derleme kimliğini karşılaştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,49 +42,49 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="parameters"></a>Parametreler  
  `pwzAssemblyIdentity1`  
- [in] Metinsel karşılaştırma ilk derlemesinde kimliği.  
+ 'ndaki Karşılaştırmayla ilk derlemenin metinsel kimliği.  
   
  `fUnified1`  
- [in] Kullanıcı tanımlı Birleştirici için gösteren bir Boole bayrağı `pwzAssemblyIdentity1`.  
+ 'ndaki Kullanıcı tarafından belirtilen için `pwzAssemblyIdentity1`birleştirme belirten bir Boole bayrağı.  
   
  `pwzAssemblyIdentity2`  
- [in] Metinsel karşılaştırma ikinci derlemesinde kimliği.  
+ 'ndaki Karşılaştırmayla ikinci derlemenin metinsel kimliği.  
   
  `fUnified2`  
- [in] Kullanıcı tanımlı Birleştirici için gösteren bir Boole bayrağı `pwzAssemblyIdentity2`.  
+ 'ndaki Kullanıcı tarafından belirtilen için `pwzAssemblyIdentity2`birleştirme belirten bir Boole bayrağı.  
   
  `pfEquivalent`  
- [out] İki derlemeyi eşdeğer olup olmadığını belirten bir Boole bayrağı.  
+ dışı İki derlemenin eşdeğer olup olmadığını belirten bir Boolean bayrak.  
   
  `pResult`  
- [out] Bir [AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md) karşılaştırma hakkında ayrıntılı bilgi içeren bir sabit listesi.  
+ dışı Karşılaştırma hakkında ayrıntılı bilgi içeren bir [AssemblyComparisonResult](assemblycomparisonresult-enumeration.md) numaralandırması.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `pfEquivalent` iki derlemeyi eşdeğer olup olmadığını gösteren bir Boole değeri döndürür. `pResult` döndürür `AssemblyComparisonResult` değerine ilişkin daha ayrıntılı bir neden vermek için değerleri `pfEquivalent`.  
+ `pfEquivalent`iki derlemenin eşdeğer olup olmadığını gösteren bir Boole değeri döndürür. `pResult`değeri için daha ayrıntılı `AssemblyComparisonResult` bir neden vermek üzere değerlerden birini döndürür. `pfEquivalent`  
   
 ## <a name="remarks"></a>Açıklamalar  
- `CompareAssemblyIdentity` denetler olmadığını `pwzAssemblyIdentity1` ve `pwzAssemblyIdentity2` eşdeğerdir. `pfEquivalent` ayarlanır `true` altında bir veya daha fazla aşağıdaki koşullardan biri:  
+ `CompareAssemblyIdentity``pwzAssemblyIdentity1` ve`pwzAssemblyIdentity2` eşdeğer olup olmadığını denetler. `pfEquivalent`, aşağıdaki koşullardan `true` biri veya birkaçı altında olarak ayarlanır:  
   
-- İki derleme kimlikleri büyük/küçük harf eşdeğerdir. Kesin adlandırılmış derlemelerin için denkliği derleme adı, sürüm, ortak anahtar belirteci ve kültür aynı olmasını gerektirir. Yalnızca adlandırılmış derlemeler için derleme adı ve kültür bir eşleşme denkliği gerektirir.  
+- İki derleme kimliği eşdeğerdir. Kesin adlandırılmış derlemeler için, denkliği derleme adı, sürüm, ortak anahtar belirteci ve kültürün aynı olmasını gerektirir. Yalnızca adlandırılmış derlemeler için, denkliği derleme adı ve kültür üzerinde bir eşleşme gerektirir.  
   
-- Derleme kimlikleri'hem de .NET Framework derlemelerini bakın. Bu durum döndürür `true` bile derleme sürüm numaraları eşleşmiyor.  
+- Her iki derleme kimliği de .NET Framework çalışan derlemelere başvurur. Bu koşul, `true` derleme sürüm numaraları eşleşmediğinden bile döndürür.  
   
-- İki derlemenin Yönetilen derlemeler değildir ancak `fUnified1` veya `fUnified2` ayarlandı `true`.  
+- İki derleme yönetilen derlemeler değildir, ancak `fUnified1` veya `fUnified2` olarak `true`ayarlanmıştır.  
   
- `fUnified` Bayrağı belirten kesin adlandırılmış bütünleştirilmiş kod sürümü sayısı kadar tüm sürüm numaraları için kesin adlandırılmış derlemeyi eşdeğer olarak değerlendirilir. Örneğin, varsa değerini `pwzAssemblyIndentity1` olan "MyAssembly, sürüm 3.0.0.0, culture = neutral, publicKeyToken = =..." ve değerini `fUnified1` olduğu `true`, bu sürüm için 0.0.0.0 3.0.0.0 MyAssembly tüm sürümlerini gerektiğini gösterir eşdeğer olarak kabul edilir. Böyle bir durumda ise `pwzAssemblyIndentity2` aynı derlemenin başvurduğu `pwzAssemblyIndentity1`, onu daha düşük bir sürüm numarası olan `pfEquivalent` ayarlanır `true`. Varsa `pwzAssemblyIdentity2` daha yüksek bir sürüm numarası, başvuran `pfEquivalent` ayarlanır `true` yalnızca değerini `fUnified2` olduğu `true`.  
+ `fUnified` Bayrak, kesin adlandırılmış derlemenin sürüm numarasına kadar olan tüm sürüm sayılarının kesin adlandırılmış derleme ile eşdeğer kabul edileceğini gösterir. Örneğin, değeri `pwzAssemblyIndentity1` "MyAssembly, Version = 3.0.0.0, Culture = neutral, PublicKeyToken =...." ve `fUnified1` değeri `true`ise, bu, tüm MyAssembly sürümünün 0.0.0.0 ve 3.0.0.0 olarak olduğunu gösterir. eşdeğer olarak kabul edilir. Böyle bir durumda `pwzAssemblyIndentity2` , daha `pfEquivalent` düşük bir sürüm `true`numarasına sahip olması dışında `pwzAssemblyIndentity1`, ile aynı derlemeye başvuruyorsa, olarak ayarlanır. `fUnified2` `pfEquivalent` `true` Daha yüksek bir sürüm numarasına `true`başvuruyorsa, yalnızca değeri ise olarak ayarlanır. `pwzAssemblyIdentity2`  
   
- `pResult` Parametresi neden iki derlemeyi eşdeğer veya eşdeğer değil olarak kabul edilir hakkında ayrıntılı bilgi içerir. Daha fazla bilgi için [AssemblyComparisonResult numaralandırması](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md).  
+ `pResult` Parametresi, iki derlemenin neden eşdeğer olarak kabul edildiği veya eşdeğer olmadığı hakkında belirli bilgiler içerir. Daha fazla bilgi için bkz. [AssemblyComparisonResult numaralandırması](assemblycomparisonresult-enumeration.md).  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [AssemblyComparisonResult Sabit Listesi](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)
+- [AssemblyComparisonResult Sabit Listesi](assemblycomparisonresult-enumeration.md)

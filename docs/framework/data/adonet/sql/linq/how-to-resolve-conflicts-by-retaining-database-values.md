@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: 828f0a21ca1ea4155f31dfbc87b01dc8c4b81e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e42f48a188741c3ddff44f6444fa351192c8175f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928732"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793341"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>Nasıl yapılır: Veritabanı Değerlerini Tutarak Çakışmaları Çözümleme
-Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, veritabanında bulunan değerleri bekletmek için kullanabilirsiniz <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> . Nesne modelindeki geçerli değerlerin üzerine yazılır. Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)bakış.  
+Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, veritabanında bulunan değerleri bekletmek için kullanabilirsiniz <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> . Nesne modelindeki geçerli değerlerin üzerine yazılır. Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış.  
   
 > [!NOTE]
 > Her durumda, istemcideki kayıt, veritabanındaki güncelleştirilmiş verileri alarak yenilenir. Bu eylem, sonraki güncelleştirme denemasının aynı eşzamanlılık denetimlerinde başarısız olmasına neden olur.  
@@ -42,4 +42,4 @@ Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md)

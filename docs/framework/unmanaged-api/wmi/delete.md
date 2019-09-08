@@ -1,6 +1,6 @@
 ---
 title: Delete işlevi (yönetilmeyen API Başvurusu)
-description: Silme işlevi, belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımından siler.
+description: Delete işlevi, belirtilen özelliği ve tüm niteleyicileri bir CıM sınıf tanımından siler.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 965143eadd6e2dde498d5ee73e4f9e8bfded8a6e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636729"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798675"
 ---
 # <a name="delete-function"></a>Delete işlevi
 
-Belirtilen özellik ve tüm alt niteleyicileri bir CIM sınıfı tanımını siler.
+Belirtilen özelliği ve tüm niteleyicileri bir CıM sınıf tanımından siler.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -42,41 +42,41 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-[in] Silmek için özellik adı. `wszName` Geçerli bir işaretçi olmalıdır `LPCWSTR`.
+'ndaki Silinecek özelliğin adı. `wszName`geçerli `LPCWSTR`bir işaretçi olmalıdır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Özelliği silinemiyor. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Özellik silinemiyor. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` geçersizdir. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik yok. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
-| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Özellik, bir taban sınıftan devralınır. |
-| `WBEM_E_SYSTEM_PROPERTY` | | Bir sistem özelliği özelliğidir. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamaya yetecek bellek yok. |
+| `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | Özelliği bir temel sınıftan devralınır. |
+| `WBEM_E_SYSTEM_PROPERTY` | | Özelliği bir sistem özelliğidir. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | İşlevi, geçerli sınıf için bir geçersiz kılma varsayılan değer silindi. Bu özelliğin üst sınıftaki varsayılan değeri yeniden etkinleştirildi. |
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | İşlev geçerli sınıf için geçersiz kılma varsayılan değerini sildi. Üst sınıftaki bu özellik için varsayılan değer yeniden etkinleştirildi. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) yöntemi.
+Bu işlev, [IWbemClassObject::D Sil](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) yöntemine bir çağrı kaydırır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** WMINet_Utils.idl
+**Üst bilgi** WMINet_Utils. IDL
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

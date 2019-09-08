@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfb39183b7ed1db749ef8ae93475576c78f36fca
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd283c3bffedd8e61cf71d0839bff6809d7f3902
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778695"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796757"
 ---
 # <a name="iassemblycacheitemabortitem-method"></a>IAssemblyCacheItem::AbortItem Yöntemi
-Derleme genel derleme önbelleğinde serbest bırakılmadan önce temizleme işlemleri gerçekleştirmesini sağlar.  
+Genel derleme önbelleğindeki derlemenin, serbest bırakmadan önce temizleme işlemlerini gerçekleştirmesine izin verir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,12 +34,12 @@ HRESULT AbortItem ();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyCacheItem Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem Arabirimi](iassemblycacheitem-interface.md)

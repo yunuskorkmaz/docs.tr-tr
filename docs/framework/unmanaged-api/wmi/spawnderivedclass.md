@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f05f349699b28262c1628cadc6e9a0fb0a3459c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783096"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798236"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass işlevi
-Belirtilen bir nesneden bir yeni türetilmiş bir sınıf oluşturur.    
+Belirtilen nesneden yeni türetilmiş sınıf nesnesi oluşturur.    
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,44 +41,44 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `lFlags`  
-[in] Ayrılmış. Bu parametre 0 olmalıdır.
+'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `ppNewClass`  
-[out] Yeni sınıf tanımı nesnesi işaretçisini alır. Bir hata oluşursa, yeni bir nesne değil döndürdü ve `ppNewClass` sol değiştirilmemiş. Değeri olamaz `null`.
+dışı Yeni sınıf tanımı nesnesine yönelik işaretçiyi alır. Bir hata oluşursa, yeni bir nesne döndürülmez ve `ppNewClass` değiştirilmemiş olarak kalır. Değeri `null`olamaz.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Bir sınıftan bir örnek UNICODE gibi bir geçersiz işlem istendi. |
-| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıfı tamamen tanımlanan veya yeni bir türetilmiş sınıf izin verilmeyen biçimde ile Windows Yönetimi, kayıtlı. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` olan `null`. |
+| `WBEM_E_INVALID_OPERATION` | 0x80041016 | Örnekten bir sınıfı oluşturmak gibi geçersiz bir işlem istendi. |
+| `WBEM_E_INCOMPLETE_CLASS` | Kaynak sınıf tamamen tanımlanmamış veya Windows yönetimine kaydolmadı, bu nedenle yeni bir türetilmiş sınıfa izin verilmez. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass``null`. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemi.
+Bu işlev, [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı kaydırır.
 
-`ptr` üst sınıfın üretilmiş nesne haline gelir. bir sınıf tanımı olmalıdır. Döndürülen nesne geçerli nesneye öğesinin olur.
+`ptr`oluşturulan nesnenin üst sınıfı haline gelen bir sınıf tanımı olmalıdır. Döndürülen nesne geçerli nesnenin bir alt sınıfı olur.
 
-Yeni Nesne döndürdü `ppNewClass` otomatik olarak geçerli nesne öğesinin alt sınıfı haline gelir. Bu davranışı geçersiz kılınamaz. Alt sınıflar (türetilmiş sınıflar) oluşturulabilmesi için diğer bir yöntem yoktur.
+`ppNewClass` Otomatik olarak döndürülen yeni nesne, geçerli nesnenin bir alt sınıfı olur. Bu davranışın üzerine yazılamıyor. Alt sınıfların (türetilmiş sınıflar) oluşturulabilmesi için başka bir yöntem yoktur.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils.idl  
+ **Üst bilgi** WMINet_Utils. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

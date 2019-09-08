@@ -4,12 +4,12 @@ description: .NET ' te bir sunucu uygulaması oluştururken göz önünde bulund
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 37f7a4e3d543711af9ef40e458edfa1cac076db2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e5df362231b0786a58a4c3c9ae8f5a167930a12e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799259"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
 
@@ -108,6 +108,6 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core ' u desteklemez. B
 - [Hedef çerçeveler](frameworks.md)
 - [.NET Core Kılavuzu](../core/index.md)
 - [.NET Framework 'den .NET Core 'a taşıma](../core/porting/index.md)
-- [.NET ve Docker’a Giriş](../core/docker/intro-net-docker.md)
+- [.NET ve Docker’a Giriş](../core/docker/introduction.md)
 - [.NET bileşenlerine genel bakış](components.md)
 - [.NET mikro hizmetleri. Kapsayıcılı .NET Uygulamaları Mimarisi](../architecture/microservices/index.md)

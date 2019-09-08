@@ -4,44 +4,44 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2c0163d03a19a7bc00ae705fd633ef4f0880082
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941649"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776562"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Yönetilmeyen API Başvurusu)
-Authenticode XrML lisans oluşturma ve doğrulama modülü destekler.  
+Authenticode XrML lisans oluşturma ve doğrulama modülünü destekler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [_AxlGetIssuerPublicKeyHash İşlevi](../../../../docs/framework/unmanaged-api/authenticode/axlgetissuerpublickeyhash-function.md)  
- Belirtilen sertifika imzalamak için kullanılan özel anahtarıyla ilişkilendirilmiş ortak anahtar SHA-1 karmasını alır.  
+ [_AxlGetIssuerPublicKeyHash İşlevi](axlgetissuerpublickeyhash-function.md)  
+ Belirtilen sertifikayı imzalamak için kullanılan özel anahtarla ilişkili ortak anahtarın SHA-1 karmasını alır.  
   
- [_AxlPublicKeyBlobToPublicKeyToken İşlevi](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
- Tanımlayıcı ad ortak anahtar belirteci, bir CSP PUBLICKEYBLOB biçiminden hesaplar.  
+ [_AxlPublicKeyBlobToPublicKeyToken İşlevi](axlpublickeyblobtopublickeytoken-function.md)  
+ Bir CSP PUBLICKEYBLOB biçiminden tanımlayıcı ad ortak anahtar belirtecini hesaplar.  
   
- [_AxlRSAKeyValueToPublicKeyToken İşlevi](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
- Tanımlayıcı ad bir ortak anahtar belirteci için bir mod ve üs dönüştürür.  
+ [_AxlRSAKeyValueToPublicKeyToken İşlevi](axlrsakeyvaluetopublickeytoken-function.md)  
+ Bir mod ve üs değeri bir tanımlayıcı ad ortak anahtar belirtecine dönüştürür.  
   
- [CertFreeAuthenticodeSignerInfo İşlevi](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
- Axl_authentıcode_sıgner_ınfo yapısı için ayrılan kaynakları serbest bırakır.  
+ [CertFreeAuthenticodeSignerInfo İşlevi](certfreeauthenticodesignerinfo-function.md)  
+ AXL_AUTHENTICODE_SIGNER_INFO yapısı için ayrılan kaynakları boşaltır.  
   
- [CertFreeAuthenticodeTimestamperInfo İşlevi](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md)  
- Axl_authentıcode_tımestamper_ınfo yapısı için ayrılan kaynakları serbest bırakır.  
+ [CertFreeAuthenticodeTimestamperInfo İşlevi](certfreeauthenticodetimestamperinfo-function.md)  
+ AXL_AUTHENTICODE_TIMESTAMPER_INFO yapısı için ayrılan kaynakları boşaltır.  
   
- [CertTimestampAuthenticodeLicense İşlevi](../../../../docs/framework/unmanaged-api/authenticode/certtimestampauthenticodelicense-function.md)  
- CertCreateAuthenticodeLicense tarafından oluşturulan bir Authenticode XrML lisans zaman damgaları.  
+ [CertTimestampAuthenticodeLicense İşlevi](certtimestampauthenticodelicense-function.md)  
+ Zaman damgaları CertCreateAuthenticodeLicense tarafından oluşturulan bir Authenticode XrML lisansı.  
   
- [CertVerifyAuthenticodeLicense İşlevi](../../../../docs/framework/unmanaged-api/authenticode/certverifyauthenticodelicense-function.md)  
- Authenticode XrML lisans geçerliliğini doğrular.  
+ [CertVerifyAuthenticodeLicense İşlevi](certverifyauthenticodelicense-function.md)  
+ Authenticode XrML lisansının geçerliliğini doğrular.  
   
- [AXL_AUTHENTICODE_SIGNER_INFO Yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
- Authenticode imzalayan bilgileri tanımlar.  
+ [AXL_AUTHENTICODE_SIGNER_INFO Yapısı](axl-authenticode-signer-info-structure.md)  
+ Authenticode imzalayan bilgilerini tanımlar.  
   
- [AXL_AUTHENTICODE_TIMESTAMPER_INFO Yapısı](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
- Zaman stamper Authenticode bilgileri tanımlar.  
+ [AXL_AUTHENTICODE_TIMESTAMPER_INFO Yapısı](axl-authenticode-timestamper-info-structure.md)  
+ Authenticode zaman Stamper bilgilerini tanımlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen API Başvurusu](../../../../docs/framework/unmanaged-api/index.md)
+- [Yönetilmeyen API Başvurusu](../index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: abc9183666602a7ef369e690e3ae499f8c7b8b11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203367"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784402"
 ---
 # <a name="merging-dataset-contents"></a>DataSet İçeriklerini Birleştirme
 
@@ -91,4 +91,4 @@ Aşağıdaki kod örneği, güncelleştirmeleriyle birlikte var `DataSet` olan b
 - [DataAdapters ve DataReaders](../dataadapters-and-datareaders.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
 - [Kimliği veya Otomatik Sayı Değerlerini Alma](../retrieving-identity-or-autonumber-values.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

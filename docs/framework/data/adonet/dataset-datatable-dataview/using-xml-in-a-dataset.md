@@ -2,12 +2,12 @@
 title: DataSet içinde XML kullanma
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: ba68f0fbe84a9877596ddfefd56f71a5889cf8de
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: ca04f524685e080be6af12a4df6eda585a908683
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203146"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784260"
 ---
 # <a name="using-xml-in-a-dataset"></a>DataSet içinde XML kullanma
 ADO.NET ile bir XML akışından veya <xref:System.Data.DataSet> belgesinden bir örneği doldurabilirsiniz. XML akışını veya belgeyi, verileri, şema bilgilerini ya da her <xref:System.Data.DataSet> ikisini sağlamak için kullanabilirsiniz. XML akışından veya belgesinden sağlanan bilgiler, <xref:System.Data.DataSet>içinde zaten mevcut olan mevcut verilerle veya şema bilgileriyle birleştirilebilir.  
@@ -49,4 +49,4 @@ ADO.NET ile bir XML akışından veya <xref:System.Data.DataSet> belgesinden bir
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

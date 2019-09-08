@@ -16,33 +16,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fba17a2ffad9220acdbc79726efe0d3d4184978a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193604068e379d62107b25f2bc348cd7c8bc6e98
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697985"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796709"
 ---
 # <a name="iassemblycacheitem-interface"></a>IAssemblyCacheItem Arabirimi
-Tek bir derleme genel derleme önbelleğinde temsil eder.  
+Genel derleme önbelleğindeki tek bir derlemeyi temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[AbortItem Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-abortitem-method.md)|Derleme genel derleme önbelleğinde serbest bırakılmadan önce temizleme işlemleri gerçekleştirmesini sağlar.|  
-|[Commit Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-commit-method.md)|Bellek için önbelleğe alınan derleme başvurusu kaydeder.|  
-|[CreateStream Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-createstream-method.md)|Belirtilen ada ve biçimi bir akış oluşturur.|  
+|[AbortItem Yöntemi](iassemblycacheitem-abortitem-method.md)|Genel derleme önbelleğindeki derlemenin, serbest bırakmadan önce temizleme işlemlerini gerçekleştirmesine izin verir.|  
+|[Commit Yöntemi](iassemblycacheitem-commit-method.md)|Önbelleğe alınmış derleme başvurusunu belleğe kaydeder.|  
+|[CreateStream Yöntemi](iassemblycacheitem-createstream-method.md)|Belirtilen ad ve biçimle bir akış oluşturur.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
-- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)
+- [Genel Derleme Önbelleği](../../app-domains/gac.md)
+- [IAssemblyCache Arabirimi](iassemblycache-interface.md)

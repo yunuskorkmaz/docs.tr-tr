@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 481e0983a40bb551d08894ea32f76f332b8fe5a3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1e369fe52a2a529fb3511d9a65067b4a56ec1e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943134"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797260"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Çalışma Zamanını Davranışlarla Yapılandırma ve Genişletme
-Davranışlar, varsayılan davranışı değiştirmenize ve Windows Communication Foundation (WCF) istemci ve hizmet uygulamalarında hizmet yapılandırmasını incelemek ve doğrulamak veya çalışma zamanı davranışını değiştirmek için özel uzantılar eklemenize olanak tanır. Bu konu, davranış arabirimlerini, bunların nasıl uygulanacağını ve hizmet açıklamasına (bir hizmet uygulamasına) veya uç noktaya (bir istemci uygulamasında) program aracılığıyla veya bir yapılandırma dosyasına nasıl ekleneceğini açıklar. Sistem tarafından sunulan davranışları kullanma hakkında daha fazla bilgi için bkz. [hizmet çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) ve [Istemci çalışma zamanı davranışını belirtme](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
+Davranışlar, varsayılan davranışı değiştirmenize ve Windows Communication Foundation (WCF) istemci ve hizmet uygulamalarında hizmet yapılandırmasını incelemek ve doğrulamak veya çalışma zamanı davranışını değiştirmek için özel uzantılar eklemenize olanak tanır. Bu konu, davranış arabirimlerini, bunların nasıl uygulanacağını ve hizmet açıklamasına (bir hizmet uygulamasına) veya uç noktaya (bir istemci uygulamasında) program aracılığıyla veya bir yapılandırma dosyasına nasıl ekleneceğini açıklar. Sistem tarafından sunulan davranışları kullanma hakkında daha fazla bilgi için bkz. [hizmet çalışma zamanı davranışını belirtme](../specifying-service-run-time-behavior.md) ve [Istemci çalışma zamanı davranışını belirtme](../specifying-client-run-time-behavior.md).  
   
 ## <a name="behaviors"></a>Davranışlar  
  Davranış türleri, hizmet veya hizmet uç noktası açıklaması nesnelerine (sırasıyla hizmet veya istemci), bu nesneler bir WCF hizmetini veya WCF istemcisini yürüten bir çalışma zamanı oluşturmak için Windows Communication Foundation (WCF) tarafından kullanılmadan önce eklenir. Çalışma zamanı oluşturma işlemi sırasında bu davranışlar çağrıldığında, çalışma zamanı özelliklerine ve anlaşma, bağlamalar ve adresler tarafından oluşturulan çalışma zamanını değiştiren yöntemlere erişebilecektir.  
@@ -32,7 +32,7 @@ Davranışlar, varsayılan davranışı değiştirmenize ve Windows Communicatio
  Değiştirebileceğiniz özelliklere ve uygulayabileceğiniz özelleştirme arabirimlerine hizmet ve istemci çalışma zamanı sınıfları üzerinden erişilir. Hizmet türleri <xref:System.ServiceModel.Dispatcher.DispatchRuntime> ve <xref:System.ServiceModel.Dispatcher.DispatchOperation> sınıflarıdır. İstemci türleri <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıflarıdır. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Ve<xref:System.ServiceModel.Dispatcher.DispatchRuntime> sınıfları, sırasıyla istemci genelindeki ve hizmet genelindeki çalışma zamanı özelliklerine ve uzantı koleksiyonlarına erişmek için genişletilebilirlik giriş noktalarıdır. Benzer şekilde, <xref:System.ServiceModel.Dispatcher.DispatchOperation>vesınıfları sırasıyla istemci işlemini ve hizmet işlemi çalışma zamanı özelliklerini ve uzantı koleksiyonlarını da kullanıma sunar. <xref:System.ServiceModel.Dispatcher.ClientOperation> Ancak, daha geniş kapsamlı çalışma zamanı nesnesine işlem çalışma zamanı nesnesinden erişebilir ve gerekirse bunun tersini yapabilirsiniz.  
   
 > [!NOTE]
-> Bir istemcinin yürütme davranışını değiştirmek için kullanabileceğiniz çalışma zamanı özellikleri ve uzantı türleri hakkında bir tartışma için bkz. [Istemcileri genişletme](../../../../docs/framework/wcf/extending/extending-clients.md). Bir hizmet dağıtıcısı 'nin yürütme davranışını değiştirmek için kullanabileceğiniz çalışma zamanı özellikleri ve uzantı türleri hakkında bir tartışma için bkz. [dispatchers 'ı genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
+> Bir istemcinin yürütme davranışını değiştirmek için kullanabileceğiniz çalışma zamanı özellikleri ve uzantı türleri hakkında bir tartışma için bkz. [Istemcileri genişletme](extending-clients.md). Bir hizmet dağıtıcısı 'nin yürütme davranışını değiştirmek için kullanabileceğiniz çalışma zamanı özellikleri ve uzantı türleri hakkında bir tartışma için bkz. [dispatchers 'ı genişletme](extending-dispatchers.md).  
   
  Çoğu WCF kullanıcısı çalışma zamanında doğrudan etkileşime girmez; Bunun yerine, yapılandırma dosyalarındaki sınıflarda veya davranışlarda uç noktalar, sözleşmeler, bağlamalar, adresler ve davranış öznitelikleri gibi temel programlama modeli yapılarını kullanırlar. Bu yapılar, açıklama ağacı tarafından tanımlanan bir hizmet veya istemciyi desteklemek için bir çalışma zamanı oluşturma belirtiminin tamamı olan *Açıklama ağacını*oluşturur.  
   
@@ -110,7 +110,7 @@ Davranışlar, varsayılan davranışı değiştirmenize ve Windows Communicatio
  Hizmet ve uç nokta ve sözleşme davranışları, kodda veya öznitelikler kullanılarak belirtime göre tasarlanmış olabilir; yalnızca hizmet ve uç nokta davranışları, uygulama veya Web yapılandırma dosyaları kullanılarak yapılandırılabilir. Öznitelikleri kullanarak davranışları göstermek, geliştiricilerin, çalışma zamanında eklenemeyen, kaldırılamayan veya değiştirilemeyen derleme zamanında bir davranış belirtmesini sağlar. Bu, genellikle bir hizmetin doğru çalışması için her zaman gerekli olan davranışlar için uygundur (örneğin, <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> özniteliğe yönelik işlem ile ilgili parametreler). Yapılandırma kullanarak davranışları göstermek, geliştiricilerin bu davranışların belirtimini ve yapılandırmalarını hizmeti dağıtan kullanıcılara bırakmasını sağlar. Bu, isteğe bağlı bileşenler veya hizmet için meta verilerin sunulup sunulmadığı veya bir hizmetin belirli yetkilendirme yapılandırması gibi dağıtıma özgü bir yapılandırma olan davranışlar için uygundur.  
   
 > [!NOTE]
-> Ayrıca, şirket uygulama ilkelerini Machine. config yapılandırma dosyasına ekleyerek ve bu öğeleri aşağı kilitleyerek, şirket uygulama ilkelerini zorlamak için yapılandırmayı destekleyen davranışları kullanabilirsiniz. Bir açıklama ve örnek için bkz [. nasıl yapılır: Kuruluştaki](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.  
+> Ayrıca, şirket uygulama ilkelerini Machine. config yapılandırma dosyasına ekleyerek ve bu öğeleri aşağı kilitleyerek, şirket uygulama ilkelerini zorlamak için yapılandırmayı destekleyen davranışları kullanabilirsiniz. Bir açıklama ve örnek için bkz [. nasıl yapılır: Kuruluştaki](how-to-lock-down-endpoints-in-the-enterprise.md)uç noktaları kilitle.  
   
  Yapılandırma kullanarak bir davranışı ortaya çıkarmak için, geliştiricinin türetilmiş bir sınıfını <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> oluşturması ve sonra bu uzantıyı yapılandırmayla kaydetmesi gerekir.  
   

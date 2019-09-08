@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: f3b0fe20ae9f6eb50f26d044f18e02214ce97757
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 87ca9b75d641035b268c6737822f198d1eea87e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038472"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777503"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework ile Aktarım Katmanı Güvenliği (TLS) en iyi uygulamaları
 
 Aktarım Katmanı Güvenliği (TLS) protokolü, Internet üzerinden gönderilen bilgilerin gizliliğini korumaya yardımcı olmak üzere tasarlanmış bir sektör standardıdır. [TLS 1,2](https://tools.ietf.org/html/rfc5246) , önceki sürümlere yönelik güvenlik geliştirmeleri sağlayan bir standarttır. TLS 1,2, daha hızlı ve güvenliği artmıştır ve en yeni yayınlanan standart [TLS 1,3](https://tools.ietf.org/html/rfc8446) ile değiştirilmiştir. Bu makalede, TLS protokolünü kullanan .NET Framework uygulamalarının güvenliğini sağlamaya yönelik öneriler sunulmaktadır.
 
-.NET Framework uygulamaların güvende kalmasını sağlamak için TLS sürümü sabit olarak kodlanmamalıdır. .NET Framework uygulamalar, işletim sisteminin (OS) desteklediği TLS sürümünü kullanmalıdır.
+.NET Framework uygulamaların güvende kalmasını sağlamak için TLS sürümü **sabit olarak kodlanmamalıdır.** .NET Framework uygulamalar, işletim sisteminin (OS) desteklediği TLS sürümünü kullanmalıdır.
 
 Bu belge şunları hedefler:
 
@@ -66,7 +66,9 @@ Aşağıdaki bölümlerde, belirli bir TLS veya SSL sürümü kullanmadığını
 
 ### <a name="for-http-networking"></a>HTTP ağı için
 
-<xref:System.Net.ServicePointManager>.NET Framework 4,7 ve sonraki sürümler kullanılarak, varsayılan olarak en iyi güvenlik protokolü ve sürümünü seçme işletim sistemi varsayılan olarak belirlenmiştir. Mümkünse varsayılan işletim sistemi en iyi seçimini almak için, <xref:System.Net.ServicePointManager.SecurityProtocol> özelliği için bir değer ayarlayın. Aksi takdirde, olarak <xref:System.Net.SecurityProtocolType.SystemDefault>ayarlayın.
+<xref:System.Net.ServicePointManager>.NET Framework 4,7 ve sonraki sürümlerin kullanılması, işletim sisteminde yapılandırılan varsayılan güvenlik protokolünü kullanır. Mümkünse varsayılan işletim sistemi seçimini almak için, <xref:System.Net.ServicePointManager.SecurityProtocol?displayProperty=nameWithType> özelliği için varsayılan olarak <xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType>değerini ayarlayın.
+
+<xref:System.Net.SecurityProtocolType.SystemDefault?displayProperty=nameWithType> Ayarı ,<xref:System.Net.ServicePointManager> işletim sistemi tarafından yapılandırılan varsayılan güvenlik protokolünü kullanmasına neden olduğundan, uygulamanız üzerinde çalıştığı işletim sistemine göre farklı şekilde çalışabilir. Örneğin, Windows 7 SP1, Windows 8 ve Windows 10 TLS 1,2 kullanırken TLS 1,0 kullanır.
 
 Bu makalenin geri kalanı, HTTP ağı için .NET Framework 4,7 veya sonraki sürümleri hedeflerken ilgili değildir.
 
@@ -98,7 +100,7 @@ Varsayılan olarak, .NET Framework 4,7 ve sonraki sürümler TLS 1,2 kullanacak 
 - İşletim sisteminin kullanılacak <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement.SslProtocols> <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>ayarı yaparak en iyi güvenlik protokolünü seçmesine izin vermek için WCF 'yi yapılandırın.
 - **Veya** yapılandırma yoluyla `system.serviceModel/bindings/customBinding/binding/sslStreamSecurity:sslProtocols`kullanılan protokolü yapılandırın.
 
-Özel bir bağlama kullanmıyorsanız **ve** yapılandırma kullanarak WCF bağlamasını ayarlıyorsanız, yapılandırma yoluyla `system.serviceModel/bindings/netTcpBinding/binding/security/transport:sslProtocols`kullanılan protokolü ayarlayın.
+Özel bir bağlama **kullanmıyorsanız ve yapılandırma kullanarak** WCF bağlamasını ayarlıyorsanız, yapılandırma yoluyla `system.serviceModel/bindings/netTcpBinding/binding/security/transport:sslProtocols`kullanılan protokolü ayarlayın.
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>Sertifika kimlik bilgileriyle WCF Ileti güvenliği için
 

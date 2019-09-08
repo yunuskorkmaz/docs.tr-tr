@@ -2,24 +2,24 @@
 title: ComPlusServiceHostStartingServiceError
 ms.date: 03/30/2017
 ms.assetid: 10994991-3717-4352-ad58-c22c3eff60d5
-ms.openlocfilehash: a0ea251cefb2a99d06fa41effee37648883fb613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 62a4c5c0fab8874c7911d10f36a5cd83b77c618f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969669"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798009"
 ---
 # <a name="complusservicehoststartingserviceerror"></a>ComPlusServiceHostStartingServiceError
-Kimliği: 130  
+Numarasını 130  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, COM + hizmet başlatılırken bir hata oluştu gösterir. Olay CLSID, yedek, özel durum, işlem adı ve işlem kimliği AppID listeler  
+ Bu olay, COM+ hizmetini başlatırken bir hata oluştuğunu gösterir. Olay AppID, CLSID, vekil, özel durum, işlem adı ve işlem KIMLIĞI listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

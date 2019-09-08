@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 3a1b0b947b97eac52e06626d2ed6d47bb9700147
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a98239886d6745bbb6e13e71a12764008460cdd7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949456"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785667"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Bağlantı Dizeleri ve Yapılandırma Dosyaları
-Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıklarına ve bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda derlenen şifrelenmemiş bağlantı dizeleri [ıldadsm. exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aracı kullanılarak görüntülenebilir. Ayrıca, bağlantı dizesi herhangi bir zaman değişirse uygulamanızın yeniden derlenmesi gerekir. Bu nedenlerden dolayı, bağlantı dizelerini bir uygulama yapılandırma dosyasında depolamanızı öneririz.  
+Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıklarına ve bakım sorunlarına yol açabilir. Bir uygulamanın kaynak kodunda derlenen şifrelenmemiş bağlantı dizeleri [ıldadsm. exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) Aracı kullanılarak görüntülenebilir. Ayrıca, bağlantı dizesi herhangi bir zaman değişirse uygulamanızın yeniden derlenmesi gerekir. Bu nedenlerden dolayı, bağlantı dizelerini bir uygulama yapılandırma dosyasında depolamanızı öneririz.  
   
 ## <a name="working-with-application-configuration-files"></a>Uygulama yapılandırma dosyalarıyla çalışma  
  Uygulama yapılandırma dosyaları, belirli bir uygulamaya özgü ayarları içerir. Örneğin, bir ASP.NET uygulamasının bir veya daha fazla **Web. config** dosyası olabilir ve bir Windows uygulaması isteğe bağlı bir **app. config** dosyasına sahip olabilir. Yapılandırma dosyaları ortak öğeleri paylaşır, ancak bir yapılandırma dosyasının adı ve konumu uygulamanın ana bilgisayarına bağlı olarak değişir.  
@@ -36,7 +36,7 @@ Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıkları
 ```  
   
 > [!NOTE]
-> Bir bağlantı dizesinin bir bölümünü yapılandırma dosyasına kaydedebilir ve çalışma zamanında bunu gerçekleştirmek için <xref:System.Data.Common.DbConnectionStringBuilder> sınıfını kullanabilirsiniz. Bu, bağlantı dizesinin, zaman içinde veya bir yapılandırma dosyasına hassas bilgileri kaydetmek istemediğiniz senaryolarda faydalıdır... Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+> Bir bağlantı dizesinin bir bölümünü yapılandırma dosyasına kaydedebilir ve çalışma zamanında bunu gerçekleştirmek için <xref:System.Data.Common.DbConnectionStringBuilder> sınıfını kullanabilirsiniz. Bu, bağlantı dizesinin, zaman içinde veya bir yapılandırma dosyasına hassas bilgileri kaydetmek istemediğiniz senaryolarda faydalıdır... Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](connection-string-builders.md).  
   
 ### <a name="using-external-configuration-files"></a>Dış yapılandırma dosyalarını kullanma  
  Dış yapılandırma dosyaları, tek bir bölümden oluşan bir yapılandırma dosyasının bir parçasını içeren ayrı dosyalardır. Dış yapılandırma dosyasına daha sonra ana yapılandırma dosyası tarafından başvurulur. **ConnectionString** bölümünü fiziksel olarak ayrı bir dosyada depolamak, uygulama dağıtıldıktan sonra bağlantı dizelerinin düzenlenebileceği durumlarda faydalıdır. Örneğin, standart ASP.NET davranışı yapılandırma dosyaları değiştirildiğinde bir uygulama etki alanını yeniden başlatmakta, bu da durum bilgilerinin kaybolmasına neden olur. Ancak, bir dış yapılandırma dosyasının değiştirilmesi, uygulamanın yeniden başlatılmasına neden olmaz. Dış yapılandırma dosyaları ASP.NET ile sınırlı değildir; Bunlar, Windows uygulamaları tarafından da kullanılabilir. Ayrıca, dosya erişimi güvenliği ve izinleri dış yapılandırma dosyalarına erişimi kısıtlamak için kullanılabilir. Çalışma zamanında dış yapılandırma dosyalarıyla çalışma işlemi saydamdır ve özel bir kodlama gerektirmez.  
@@ -171,9 +171,9 @@ Uygulamanızın koduna bağlantı dizeleri katıştırmak, güvenlik açıkları
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Dizesi Oluşturucular](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [Bağlantı Bilgilerini Koruma](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Bağlantı Dizesi Oluşturucular](connection-string-builders.md)
+- [Bağlantı Bilgilerini Koruma](protecting-connection-information.md)
 - [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))
-- [Uygulamaları Yapılandırma](../../../../docs/framework/configure-apps/index.md)
+- [Uygulamaları Yapılandırma](../../configure-apps/index.md)
 - [ASP.NET Web sitesi yönetimi](https://docs.microsoft.com/previous-versions/aspnet/6hy1xzbw(v=vs.100))
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

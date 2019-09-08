@@ -2,12 +2,12 @@
 title: Öğe Metni Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203535"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784546"
 ---
 # <a name="inferring-element-text"></a>Öğe Metni Çıkarımını Yapma
 Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğeler içeren öğeler gibi) çıkarsmayacak alt öğe içermiyorsa, **TableName_Text** adlı yeni bir sütun, öğe için çıkartılan tabloya eklenir. Öğesinde bulunan metin, tablodaki bir satıra eklenir ve yeni sütunda depolanır. Yeni sütunun **ColumnMapping** özelliği **MappingType. simpleContent**olarak ayarlanır.  
@@ -57,4 +57,4 @@ Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğel
 - [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
 - [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

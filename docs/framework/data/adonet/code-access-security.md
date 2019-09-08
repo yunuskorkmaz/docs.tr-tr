@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 080432670c68623433a6b4e61adba77cf6fa5ec7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948259"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786863"
 ---
 # <a name="code-access-security-and-adonet"></a>Kod Erişimi Güvenliği ve ADO.NET
 .NET Framework, her ikisi de ortak dil çalışma zamanı (CLR) tarafından sağlanan ortak bir altyapı kullanılarak uygulanan, rol tabanlı güvenlik ve kod erişim güvenliği (CAS) sağlar. Yönetilmeyen kod dünyasında, çoğu uygulama kullanıcı veya sorumlu izinleriyle yürütülür. Sonuç olarak, kötü amaçlı veya hata doldurulmuş yazılımlar yükseltilmiş ayrıcalıklara sahip bir kullanıcı tarafından çalıştırıldığında bilgisayar sistemleri zarar görmüş ve özel veri güvenliği tehlikeye girebilir.  
@@ -47,15 +47,15 @@ ms.locfileid: "69948259"
   
  CLR, yönetilen kod üzerinde kısıtlamaları zorlama mekanizmasını uygulamak için izinleri kullanır. Rol tabanlı güvenlik izinleri, bir kullanıcının (veya Kullanıcı adına işlem yapan aracının) belirli bir kimliğe sahip olup olmadığını bulmak için bir mekanizma sağlar veya belirtilen rolün bir üyesidir. Daha fazla bilgi için bkz. [güvenlik izinleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- Oluşturmakta olduğunuz uygulamanın türüne bağlı olarak, veritabanında rol tabanlı izinleri uygulamayı da göz önünde bulundurmanız gerekir. SQL Server rol tabanlı güvenlik hakkında daha fazla bilgi için bkz. [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Oluşturmakta olduğunuz uygulamanın türüne bağlı olarak, veritabanında rol tabanlı izinleri uygulamayı da göz önünde bulundurmanız gerekir. SQL Server rol tabanlı güvenlik hakkında daha fazla bilgi için bkz. [SQL Server Security](./sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Bütünleştirilmiş kodlar  
- Derlemeler bir .NET Framework uygulaması için temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinlerini oluşturur. Derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak bir tür ve kaynak koleksiyonu sağlar. CLR 'ye bir tür, bir derleme bağlamı dışında yok. Derlemeleri oluşturma ve dağıtma hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
+ Derlemeler bir .NET Framework uygulaması için temel dağıtım, sürüm denetimi, yeniden kullanım, etkinleştirme kapsamı ve güvenlik izinlerini oluşturur. Derleme, birlikte çalışacak ve mantıksal bir işlevsellik birimi oluşturacak bir tür ve kaynak koleksiyonu sağlar. CLR 'ye bir tür, bir derleme bağlamı dışında yok. Derlemeleri oluşturma ve dağıtma hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../../app-domains/programming-with-assemblies.md).  
   
 ### <a name="strong-naming-assemblies"></a>Tanımlayıcı adlandırma bütünleştirilmiş kodları  
  Güçlü bir ad veya dijital imza, derleme kimliğinden basit metin adı, sürüm numarası ve kültür bilgileri (sağlanmışsa) ve bir ortak anahtar ve dijital imza dahil oluşur. Dijital imza, karşılık gelen özel anahtar kullanılarak bir derleme dosyasından oluşturulur. Derleme dosyası, derlemeyi oluşturan tüm dosyaların adlarını ve karmalarını içeren derleme bildirimini içerir.  
   
- Bir derlemeyi tanımlayıcı adlandırma bir uygulamaya veya bileşene, başka yazılımın açıkça kendisine başvurabileceği benzersiz bir kimlik verir. Sağlam adlandırma koruyucuları derlemeleri, barındırma kodu içeren bir derleme tarafından sızdırılmakta. Güçlü adlandırma, bir bileşenin farklı sürümleri arasında sürüm tutarlılığını de sağlar. Genel derleme önbelleği 'ne (GAC) dağıtılacak tanımlayıcı ad derlemelerini yapmanız gerekir. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Bir derlemeyi tanımlayıcı adlandırma bir uygulamaya veya bileşene, başka yazılımın açıkça kendisine başvurabileceği benzersiz bir kimlik verir. Sağlam adlandırma koruyucuları derlemeleri, barındırma kodu içeren bir derleme tarafından sızdırılmakta. Güçlü adlandırma, bir bileşenin farklı sürümleri arasında sürüm tutarlılığını de sağlar. Genel derleme önbelleği 'ne (GAC) dağıtılacak tanımlayıcı ad derlemelerini yapmanız gerekir. Daha fazla bilgi için bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>ADO.NET 2,0 ' de kısmi güven  
  ADO.NET 2,0 ' de .NET Framework Veri Sağlayıcısı SQL Server, Veri Sağlayıcısı için .NET Framework OLE DB, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı kısmen güvenilen ortamlarda çalıştırılabilir. .NET Framework önceki sürümlerinde, yalnızca <xref:System.Data.SqlClient> tam güvenle güvenilen uygulamalardan daha az desteklenmelidir.  
@@ -78,7 +78,7 @@ ms.locfileid: "69948259"
 |`Unrestricted`|Kaynak üzerinde Kısıtlanmamış iznin bildirilip bildirilmemiş olduğunu gösterir. Devralındığı <xref:System.Security.Permissions.SecurityAttribute>yer.|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString sözdizimi  
- Aşağıdaki örnek, yalnızca belirli bir bağlantı dizesinin `connectionStrings` kullanılmasına izin vermek için bir yapılandırma dosyası öğesinin nasıl kullanılacağını gösterir. Yapılandırma dosyalarından bağlantı dizelerini depolama ve alma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri](../../../../docs/framework/data/adonet/connection-strings.md) .  
+ Aşağıdaki örnek, yalnızca belirli bir bağlantı dizesinin `connectionStrings` kullanılmasına izin vermek için bir yapılandırma dosyası öğesinin nasıl kullanılacağını gösterir. Yapılandırma dosyalarından bağlantı dizelerini depolama ve alma hakkında daha fazla bilgi için bkz. [bağlantı dizeleri](connection-strings.md) .  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "69948259"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Özel bir Izin kümesiyle kısmi güven etkinleştiriliyor  
- Belirli bir bölge için <xref:System.Data.SqlClient> izin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. Gibi varsayılan izin kümeleri `LocalIntranet`değiştirilemez. <xref:System.Data.SqlClient> Örneğin, ' `LocalIntranet`a <xref:System.Security.Policy.Zone> sahip olan koda ilişkin izinleri eklemek için, bir sistem yöneticisi için izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak <xref:System.Data.SqlClient> yeniden adlandırabilir, izinleri ekleyebilir, içeri aktarabilirsiniz `LocalIntranet` [Caspol. exe (kod erişimi güvenlik ilkesi aracı)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)kullanarak CustomLocalIntranet izin kümesi ve izin kümesini `LocalIntranet_Zone` CustomLocalIntranet olarak ayarlayın.  
+ Belirli bir bölge için <xref:System.Data.SqlClient> izin kullanımını etkinleştirmek üzere bir sistem yöneticisinin özel bir izin kümesi oluşturması ve belirli bir bölge için izin kümesi olarak ayarlaması gerekir. Gibi varsayılan izin kümeleri `LocalIntranet`değiştirilemez. <xref:System.Data.SqlClient> Örneğin, ' `LocalIntranet`a <xref:System.Security.Policy.Zone> sahip olan koda ilişkin izinleri eklemek için, bir sistem yöneticisi için izin kümesini kopyalayabilir, "CustomLocalIntranet" olarak <xref:System.Data.SqlClient> yeniden adlandırabilir, izinleri ekleyebilir, içeri aktarabilirsiniz `LocalIntranet` [Caspol. exe (kod erişimi güvenlik ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak CustomLocalIntranet izin kümesi ve izin kümesini `LocalIntranet_Zone` CustomLocalIntranet olarak ayarlayın.  
   
 ### <a name="sample-permission-set"></a>Örnek Izin kümesi  
  Aşağıda kısmen güvenilen bir senaryoda SQL Server için .NET Framework Veri Sağlayıcısı bir örnek izin kümesi verilmiştir. Özel izin kümeleri oluşturma hakkında bilgi için bkz. [Caspol. exe kullanarak Izin kümelerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -190,13 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Yönetilmeyen kodla birlikte çalışabilirlik  
- CLR dışında çalışan koda yönetilmeyen kod denir. Bu nedenle, CA 'LAR gibi güvenlik mekanizmaları yönetilmeyen koda uygulanamaz. COM bileşenleri, ActiveX arabirimleri ve Windows API işlevleri, yönetilmeyen koda örnektir. Yönetilmeyen kod yürütürken, genel uygulama güvenliğini tehlikeye atmanız için özel güvenlik konuları geçerlidir. Daha fazla bilgi için bkz. [yönetilmeyen kodla birlikte çalışma](../../../../docs/framework/interop/index.md).  
+ CLR dışında çalışan koda yönetilmeyen kod denir. Bu nedenle, CA 'LAR gibi güvenlik mekanizmaları yönetilmeyen koda uygulanamaz. COM bileşenleri, ActiveX arabirimleri ve Windows API işlevleri, yönetilmeyen koda örnektir. Yönetilmeyen kod yürütürken, genel uygulama güvenliğini tehlikeye atmanız için özel güvenlik konuları geçerlidir. Daha fazla bilgi için bkz. [yönetilmeyen kodla birlikte çalışma](../../interop/index.md).  
   
  .NET Framework, COM birlikte çalışabilirliğine erişim sağlayarak mevcut COM bileşenlerine geriye dönük uyumluluğu da destekler. Com bileşenlerini, ilgili COM türlerini içe aktarmak için COM birlikte çalışma araçlarını kullanarak bir .NET Framework uygulamasına ekleyebilirsiniz. İçeri aktarıldıktan sonra COM türleri kullanıma hazırlardır. COM birlikte çalışması Ayrıca COM istemcilerinin, derleme meta verilerini bir tür kitaplığına vererek ve yönetilen bileşeni bir COM bileşeni olarak kaydederek yönetilen koda erişmesini sağlar. Daha fazla bilgi için bkz. [GELIŞMIŞ com birlikte çalışabilirliği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
 - [Yerel ve .NET Framework kodundaki güvenlik](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rol Tabanlı Güvenlik](../../../standard/security/role-based-security.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

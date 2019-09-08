@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
-ms.openlocfilehash: 9bff69e28aa17da87da7e94d4e110c0375f043ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: f1c1fd77bed700fae8e5a658da8b267120518ca9
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203696"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786299"
 ---
 # <a name="generating-strongly-typed-datasets"></a>Kesin Türü Belirtilmiş DataSets Oluşturma
 XML şeması tanım dili (xsd) standardına uygun bir XML şeması verildiğinde, Windows yazılım geliştirme seti (SDK) ile sağlanan <xref:System.Data.DataSet> xsd. exe aracını kullanarak kesin bir tür oluşturabilirsiniz.  
@@ -100,4 +100,4 @@ foreach(CustomerDataSet.CustomersRow customerRow in customers.Customers)
 - <xref:System.Data.DataSet>
 - [Türü Belirtilmiş DataSets](typed-datasets.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)
