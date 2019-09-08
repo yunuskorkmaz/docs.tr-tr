@@ -2,20 +2,20 @@
 title: Dağıtma Hizmetleri
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
-ms.openlocfilehash: 2c3cd17b597fafcd02b9155089bc583fafbc9dea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684b781c568518cfb321d8021e4f7062e855e6aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784988"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798133"
 ---
 # <a name="deploying-services"></a>Dağıtma Hizmetleri
-Bu konuda, bir çalışma zamanı ortamına bir Windows Communication Foundation (WCF) uygulamanın nasıl dağıtılacağı açıklanmaktadır.  
+Bu konuda, bir Windows Communication Foundation (WCF) uygulamasını çalışma zamanı ortamına nasıl dağıtabileceğiniz açıklanmaktadır.  
   
-## <a name="choosing-the-hosting-environment-for-your-application"></a>Barındırma ortamı, uygulamanız için seçme  
- WCF hizmetleri destekleyen yönetilen kodu herhangi bir Windows işlem içinde çalıştırmak için tasarlanmıştır. Etkin duruma gelmesi bir hizmet oluşturup kendi bağlam ve yaşam süresini denetleyen bir çalışma zamanı ortamında barındırılması gerekir. Barındırma seçenekleri aralığı içinde basit bir konsol uygulaması server ortamları gibi bir Windows hizmeti, Internet Information Services (IIS) olarak ya da bir çalışan işlemi için çalışan Windows Etkinleştirme Hizmeti (WAS) tarafından yönetilir. WCF uygulamanız için farklı barındırma seçenekleri gözden geçirmek için bkz: [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).  
+## <a name="choosing-the-hosting-environment-for-your-application"></a>Uygulamanız için barındırma ortamı seçme  
+ WCF Hizmetleri, yönetilen kodu destekleyen herhangi bir Windows işleminde çalışmak üzere tasarlanmıştır. Etkin hale gelmesi için bir hizmetin kendisini oluşturan bir çalışma zamanı ortamı içinde barındırılması ve bağlamını ve ömrünü denetmasıdır. Barındırma seçenekleri, en basit konsol uygulaması içinde, Windows hizmeti, Internet Information Services (IIS) gibi sunucu ortamlarına veya Windows etkinleştirme hizmeti (WAS) tarafından yönetilen bir çalışan işlemi içinde çalışmaya göre değişir. WCF uygulamanızın farklı barındırma seçeneklerini gözden geçirmek için bkz. [barındırma hizmetleri](../hosting-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
+- [Barındırma](../feature-details/hosting.md)
+- [Barındırma Hizmetleri](../hosting-services.md)

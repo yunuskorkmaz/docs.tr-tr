@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41e79a4c9587e3e738039cbf6a84087a2e7fc9b1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741961"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787467"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll İşlevi
-Bulur ve ileti DLL yükler. İleti DLL'si yüklenmedi veya bulunamadı değil, 0 döndürür. İleti DLL adı bir dil kimliği olan bir alt veya geçerli dizinde olması gerekir.  
+İleti DLL 'sini bulur ve yükler. İleti DLL dosyası bulunamıyorsa veya yüklenemezse 0 döndürür. İleti DLL 'SI, adı bir dil KIMLIĞI, ya da geçerli dizinde olan bir alt dizinde olmalıdır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -34,10 +34,10 @@ HINSTANCE WINAPI GetALinkMessageDll();
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** alink.h  
+ **Üstbilgi:** ALink. h  
   
- **Kitaplık**: alink.dll  
+ **Kitaplık**: ALink. dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)

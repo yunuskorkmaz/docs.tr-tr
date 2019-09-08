@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: d45d472a2996c0b501af70a0a2a6d2d669dedb4d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 89357b1d05526438c939a73663c5b7b6273df4ac
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043526"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790397"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Nesne materialization (WCF Veri Hizmetleri)
 
-.NET Framework tabanlı bir istemci uygulamasında bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı tüketmek için hizmet başvurusu Ekle iletişim kutusunu kullandığınızda, akış tarafından kullanıma sunulan veri modelindeki her bir varlık türü için eşdeğer veri sınıfları oluşturulur. Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verileri, bu oluşturulan istemci veri hizmeti sınıflarından birinin bir örneğine getirilir. İzlenen nesneler için birleştirme seçenekleri ve kimlik çözümlemesi hakkında daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).
+.NET Framework tabanlı bir istemci uygulamasında bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı tüketmek için hizmet başvurusu Ekle iletişim kutusunu kullandığınızda, akış tarafından kullanıma sunulan veri modelindeki her bir varlık türü için eşdeğer veri sınıfları oluşturulur. Daha fazla bilgi için bkz. [veri hizmeti Istemci kitaplığı oluşturma](generating-the-data-service-client-library-wcf-data-services.md). Bir sorgu tarafından döndürülen varlık verileri, bu oluşturulan istemci veri hizmeti sınıflarından birinin bir örneğine getirilir. İzlenen nesneler için birleştirme seçenekleri ve kimlik çözümlemesi hakkında daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](managing-the-data-service-context-wcf-data-services.md).
 
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Ayrıca araç tarafından oluşturulan veri sınıflarını kullanmak yerine kendi istemci veri hizmeti sınıflarınızı tanımlamanızı sağlar. Bu, "düz eski CLR nesnesi" (POCO) veri sınıfları olarak da bilinen kendi veri sınıflarınızı kullanmanıza olanak sağlar. Bu tür özel veri sınıfları kullanılırken, ya da veri sınıfını, ya da <xref:System.Data.Services.Common.DataServiceKeyAttribute> veya <xref:System.Data.Services.Common.DataServiceEntityAttribute> istemci üzerindeki tür adlarının veri hizmetinin veri modelindeki tür adlarıyla eşleştiğinden emin olmalısınız.
 
@@ -38,10 +38,10 @@ Kitaplık sorgu yanıt iletisini aldıktan sonra, [!INCLUDE[ssODataShort](../../
 
     - Karmaşık özellikler, yanıttan karmaşık türün özellikleriyle ayarlanan yeni bir karmaşık tür örneğine ayarlanır.
 
-    - İlgili varlıkların bir koleksiyonunu döndüren gezinti özellikleri yeni veya var olan bir örneğine <xref:System.Collections.Generic.ICollection%601>ayarlanır; burada `T` ilgili varlık türüdür. İlgili nesneler öğesine <xref:System.Data.Services.Client.DataServiceContext>yüklenmediği müddetçe bu koleksiyon boştur. Daha fazla bilgi için bkz. [ertelenmiş Içerik yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).
+    - İlgili varlıkların bir koleksiyonunu döndüren gezinti özellikleri yeni veya var olan bir örneğine <xref:System.Collections.Generic.ICollection%601>ayarlanır; burada `T` ilgili varlık türüdür. İlgili nesneler öğesine <xref:System.Data.Services.Client.DataServiceContext>yüklenmediği müddetçe bu koleksiyon boştur. Daha fazla bilgi için bkz. [ertelenmiş Içerik yükleme](loading-deferred-content-wcf-data-services.md).
 
       > [!NOTE]
-      > Oluşturulan istemci veri sınıfları veri bağlamayı destekledikleri zaman, gezinti özellikleri bunun yerine <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfının örneklerini döndürür. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).
+      > Oluşturulan istemci veri sınıfları veri bağlamayı destekledikleri zaman, gezinti özellikleri bunun yerine <xref:System.Data.Services.Client.DataServiceCollection%601> sınıfının örneklerini döndürür. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](binding-data-to-controls-wcf-data-services.md).
 
 4. <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity> Olay tetiklenir.
 
@@ -49,5 +49,5 @@ Kitaplık sorgu yanıt iletisini aldıktan sonra, [!INCLUDE[ssODataShort](../../
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Sorgu Projeksiyonları](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
+- [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)
+- [Sorgu Projeksiyonları](query-projections-wcf-data-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 016e2efae68c02c8c5a10ab74419599bc41be3a8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90a70eaa2b5aeb8ef1f1659d7912b9ae5abc4eca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959387"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794242"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
 SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türlerini tanıtır. Yeni veri türleri tarih ve saat için ayrı türler, daha fazla Aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. .NET Framework sürüm 3,5 hizmet paketi (SP) 1 ' den başlayarak, SQL Server (<xref:System.Data.SqlClient>) için .NET Framework veri sağlayıcısı, SQL Server 2008 veritabanı altyapısının tüm yeni özellikleri için tam destek sağlar. Bu yeni özellikleri SqlClient kullanmak için .NET Framework 3,5 SP1 (veya sonraki bir sürümü) yüklemelisiniz.  
@@ -88,7 +88,7 @@ Bir <xref:System.Data.SqlClient.SqlParameter> öğesinin veri türünü, önceki
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Değerin null yapılabilir olup olmayacağını alır veya ayarlar. Sunucuya null bir parametre değeri gönderdiğinizde, <xref:System.DBNull> `null` (`Nothing` Visual Basic) yerine belirtmeniz gerekir. Veritabanı boş değerleri hakkında daha fazla bilgi için bkz. [null değerlerini işleme](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Değerin null yapılabilir olup olmayacağını alır veya ayarlar. Sunucuya null bir parametre değeri gönderdiğinizde, <xref:System.DBNull> `null` (`Nothing` Visual Basic) yerine belirtmeniz gerekir. Veritabanı boş değerleri hakkında daha fazla bilgi için bkz. [null değerlerini işleme](handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Değeri temsil etmek için kullanılan en fazla basamak sayısını alır veya ayarlar. Tarih ve saat veri türleri için bu ayar yok sayılır.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|, `Time` `DateTime2`Ve içindeğerinsaatkısmınınçözümlendiğiondalıkbasamaklarınsayısınıalırveyaayarlar.`DateTimeOffset` Varsayılan değer 0 ' dır. Bu, gerçek ölçeğin değerden çıkarılan ve sunucuya gönderildiği anlamına gelir.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Tarih ve saat veri türleri için yoksayıldı.|  
@@ -101,7 +101,7 @@ Bir <xref:System.Data.SqlClient.SqlParameter> öğesinin veri türünü, önceki
 ### <a name="creating-parameters"></a>Parametreleri oluşturma  
  <xref:System.Data.SqlClient.SqlParameter> Yapıcısını kullanarak veya metodunu`Add` <xref:System.Data.SqlClient.SqlCommand> çağırarakbirkoleksiyonaekleyerek<xref:System.Data.SqlClient.SqlCommand.Parameters%2A> bir nesne oluşturabilirsiniz. <xref:System.Data.SqlClient.SqlParameterCollection> Yöntemi `Add` , Oluşturucu bağımsız değişkenleri ya da varolan bir parametre nesnesi olarak alınır.  
   
- Bu konunun sonraki bölümlerinde tarih ve saat parametrelerinin nasıl belirtilme örnekleri verilmiştir. Parametrelerle çalışma hakkında daha fazla örnek için bkz. [parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) ve [DataAdapter parametrelerini](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)yapılandırma.  
+ Bu konunun sonraki bölümlerinde tarih ve saat parametrelerinin nasıl belirtilme örnekleri verilmiştir. Parametrelerle çalışma hakkında daha fazla örnek için bkz. [parametreleri ve parametre veri türlerini](../configuring-parameters-and-parameter-data-types.md) ve [DataAdapter parametrelerini](../dataadapter-parameters.md)yapılandırma.  
   
 ### <a name="date-example"></a>Tarih örneği  
  Aşağıdaki kod parçası, bir `date` parametrenin nasıl belirtileceğini göstermektedir.  
@@ -241,7 +241,7 @@ command.Parameters.AddWithValue( _
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server Veri Türleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Veri Türü Eşlemeleri](../sql-server-data-type-mappings.md)
+- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../configuring-parameters-and-parameter-data-types.md)
+- [SQL Server Veri Türleri ve ADO.NET](sql-server-data-types.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9853f974230ee755a33bc46ca6ba3e086051b236
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25364330dafdf858c4b41e9a05731c37e97fbb57
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778472"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795438"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext İşlevi
 Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
@@ -37,22 +37,22 @@ HRESULT CreateApplicationContext (
   
 ## <a name="parameters"></a>Parametreler  
  `pName`  
- [in] Bir kolay ad için bir işaretçi.  
+ 'ndaki Kolay bir ad işaretçisi.  
   
  `ppCtx`  
- [out] Uygulama bağlamı için bir işaretçi.  
+ dışı Uygulama bağlamına yönelik bir işaretçi.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak Fusion.dll dahil  
+ **Kitaplığı** Fusion. dll ' ye kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+- [IAssemblyCache Arabirimi](iassemblycache-interface.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)
+- [Genel Derleme Önbelleği](../../app-domains/gac.md)

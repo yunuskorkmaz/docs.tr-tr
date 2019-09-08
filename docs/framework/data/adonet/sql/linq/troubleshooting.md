@@ -2,74 +2,74 @@
 title: Sorun giderme
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0eede70b67cbaef4805fc7fc5f07fc51e342ea3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742750"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780984"
 ---
 # <a name="troubleshooting"></a>Sorun giderme
-Aşağıdaki bilgiler, karşılaşabileceğiniz bazı sorunları gösterir, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalar ve aksi takdirde bu sorunların etkisini azaltmak veya önlemek için öneriler sunar.  
+Aşağıdaki bilgiler, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uygulamalarınızda karşılaşabileceğiniz bazı sorunları açığa çıkarır ve bu sorunların etkisini önlemek veya bunun etkisini azaltmak için öneriler sağlar.  
   
- Ek sorunlar açıklanmıştır [sık sorulan sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
+ [Sık sorulan sorularla](frequently-asked-questions.md)ilgili ek sorunlar ele alınır.  
   
-## <a name="unsupported-standard-query-operators"></a>Desteklenmeyen Standart sorgu işleçleri  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tüm standart sorgu işleci yöntemleri desteklemez (örneğin, <xref:System.Linq.Enumerable.ElementAt%2A>). Sonuç olarak, derleme projeleri yine de çalışma zamanı hataları oluşturabilir. Daha fazla bilgi için [standart sorgu işleci çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="unsupported-standard-query-operators"></a>Desteklenmeyen Standart sorgu Işleçleri  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Tüm standart sorgu işleci yöntemlerini (örneğin, <xref:System.Linq.Enumerable.ElementAt%2A>) desteklemez. Sonuç olarak, derlenen projeler hala çalışma zamanı hataları oluşturabilir. Daha fazla bilgi için bkz. [Standart sorgu Işleci çevirisi](standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Bellek sorunları  
- Bir sorgu bir bellek içi koleksiyonu içeriyorsa ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, bellek, iki koleksiyon belirtilen düzene bağlı olarak, sorgu çalıştırılmış. Sorgu bellekte yürütülmelidir, veritabanı tablosundan veri alınması gerekecektir.  
+ Bir sorgu bellek içi koleksiyon içeriyorsa ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>bu sorgu, iki koleksiyonun belirtilme sırasına bağlı olarak bellekte çalıştırılabilir. Sorgunun bellekte yürütülmesi gerekiyorsa, veritabanı tablosundaki verilerin alınması gerekir.  
   
- Bu yaklaşımı verimsiz ve önemli bellek ve işlemci kullanım neden olabilir. Çoklu etki alanı sorgularını kaçınmaya çalışın.  
+ Bu yaklaşım verimsiz değildir ve önemli bellek ve işlemci kullanımına neden olabilir. Bu tür çok etki alanlı sorgulardan kaçınmaya çalışın.  
   
-## <a name="file-names-and-sqlmetal"></a>Dosya adlarını ve SQLMetal  
- Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adının bağlantı dizesine eklenmesi (kullanarak **/conn** seçeneği) desteklenmiyor. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+## <a name="file-names-and-sqlmetal"></a>Dosya adları ve SQLMetal  
+ Bir giriş dosyası adı belirtmek için, adı komut satırına giriş dosyası olarak ekleyin. Dosya adının bağlantı dizesine dahil edilmesi ( **/Conn** seçeneği kullanılarak) desteklenmez. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Sınıf kitaplığı projeleri  
- Nesne İlişkisel Tasarımcısı bağlantı dizesinde oluşturur `app.config` proje dosyası. Sınıf kitaplık projeleri içinde `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Tasarım zamanı dosyalarında sağlanan bağlantı dizesi kullanır. Değer değiştirme `app.config` uygulamanızı bağlandığı veritabanını değiştirmez.  
+ Nesne İlişkisel Tasarımcısı, proje `app.config` dosyasında bir bağlantı dizesi oluşturur. Sınıf kitaplığı projelerinde, `app.config` dosya kullanılmaz. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Tasarım zamanı dosyalarında sağlanmış olan bağlantı dizesini kullanır. İçindeki `app.config` değeri değiştirmek, uygulamanızın bağlandığı veritabanını değiştirmez.  
   
-## <a name="cascade-delete"></a>Art arda silme  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] desteklemez veya art arda silme işlemleri tanıyın. Bunu yönelik kısıtlamalar içeren bir tabloda bir satır silmek istiyorsanız, aşağıdakilerden birini yapmalısınız:  
+## <a name="cascade-delete"></a>Basamaklı silme  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], Cascade silme işlemlerini desteklemez veya tanımıyor. Kısıtlama içeren bir tablodaki bir satırı silmek isterseniz, aşağıdakilerden birini yapmanız gerekir:  
   
-- Ayarlama `ON DELETE CASCADE` veritabanında yabancı anahtar kısıtlaması kuralı.  
+- `ON DELETE CASCADE` Kuralı veritabanındaki yabancı anahtar kısıtlamasından ayarlayın.  
   
-- Kendi kodunuzu ilk üst nesnenin silinmesini engelleyen alt nesneleri silmek için kullanın.  
+- Üst nesnenin silinmesini önleyen alt nesneleri silmek için kendi kodunuzu kullanın.  
   
- Aksi takdirde, bir <xref:System.Data.SqlClient.SqlException> özel durumu oluşturulur.  
+ Aksi takdirde, <xref:System.Data.SqlClient.SqlException> bir özel durum oluşturulur.  
   
- Daha fazla bilgi için [nasıl yapılır: Veritabanından satır silme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Daha fazla bilgi için [nasıl yapılır: Veritabanından](how-to-delete-rows-from-the-database.md)satırları silin.  
   
 ## <a name="expression-not-queryable"></a>İfade sorgulanabilir değil  
- "[İfade] ifade sorgulanabilir değil; alırsanız bir derleme başvurunuz mu eksik?" hata, aşağıdakilerden emin olun:  
+ "Ifadesi [ifade] sorgulanabilir değil; bir derleme başvurunuz mu eksik? " hata, aşağıdakilerden emin olun:  
   
-- .NET Compact Framework 3.5, uygulamanızın hedeflediği.  
+- Uygulamanız 3,5 .NET Compact Framework hedefliyor.  
   
-- Bir başvuru sahip `System.Core.dll` ve `System.Data.Linq.dll`.  
+- `System.Core.dll` Ve`System.Data.Linq.dll`için bir başvurunuz vardır.  
   
-- Sahip olduğunuz bir `Imports` (Visual Basic) veya `using` yönergesi (C#) için <xref:System.Linq> ve <xref:System.Data.Linq>.  
+- `Imports` `using` VeC#için bir<xref:System.Linq> (Visual Basic) ya da () yönergesine sahipsiniz. <xref:System.Data.Linq>  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
- Hata ayıklama sırasında bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje, bir varlığın ilişkileri çapraz. Bunun yapılması, bu öğeler önbelleğine getirir ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kendi varlığını haberdar olur. Daha sonra yürütülecek çalışırsanız <xref:System.Data.Linq.Table%601.Attach%2A> veya <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> veya aynı anahtara sahip birden çok satır üretir benzer bir yöntem bir <xref:System.Data.Linq.DuplicateKeyException> oluşturulur.  
+ Bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projede hata ayıklama sırasında bir varlığın ilişkilerine geçiş yapabilirsiniz. Bunun yapılması, bu öğeleri önbelleğe getirir ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bunların varlığını algılar. Daha sonra veya <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> aynı anahtara sahip <xref:System.Data.Linq.Table%601.Attach%2A> birden çok satır üreten benzer bir yöntemi veya çalıştırmayı denerseniz, bir <xref:System.Data.Linq.DuplicateKeyException> oluşturulur.  
   
 ## <a name="string-concatenation-exceptions"></a>Dize birleştirme özel durumları  
- Birleştirme işlenenlerde eşlenen `[n]text` ve diğer `[n][var]char` desteklenmiyor. Birleştirme türleri iki farklı kümesi için eşleşen dizeleri için bir özel durum. Daha fazla bilgi için [System.String yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
+ `[n]text` Ve diğeri`[n][var]char` ile eşlenmiş işlenenler üzerinde birleştirme desteklenmez. İki farklı tür kümesiyle eşlenen dizelerin birleşimi için bir özel durum oluşturulur. Daha fazla bilgi için bkz. [System. String yöntemleri](system-string-methods.md).  
   
-## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Atla ve SQL Server 2000'de özel durumlarını Al  
- Kimlik üyeleri kullanmanız gerekir (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) kullandığınızda, <xref:System.Linq.Queryable.Take%2A> veya <xref:System.Linq.Queryable.Skip%2A> karşı bir SQL Server 2000 veritabanı. Sorgu gereken tek bir tabloyu (diğer bir deyişle, olmayan bir birleşim) karşı veya olmalıdır bir <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A>, veya <xref:System.Linq.Queryable.Union%2A> işlemi ve içermemelidir bir <xref:System.Linq.Queryable.Concat%2A> işlemi. Daha fazla bilgi için "SQL Server 2000 desteği" bölümüne bakın. [standart sorgu işleci çevirisi](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 ' de atlama ve özel durum alma  
+ SQL Server 2000 veritabanına karşı veya<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> <xref:System.Linq.Queryable.Skip%2A> kullandığınızda <xref:System.Linq.Queryable.Take%2A> kimlik üyeleri () kullanmanız gerekir. Sorgu tek bir tabloda (yani, bir JOIN değil) veya bir <xref:System.Linq.Queryable.Distinct%2A> <xref:System.Linq.Queryable.Intersect%2A>, <xref:System.Linq.Queryable.Except%2A>, veya <xref:System.Linq.Queryable.Union%2A> işlem olmalıdır ve bir <xref:System.Linq.Queryable.Concat%2A> işlem içermemelidir. Daha fazla bilgi için [Standart sorgu Işleci çevirisi](standard-query-operator-translation.md)içindeki "SQL Server 2000 desteği" bölümüne bakın.  
   
- SQL Server 2005'e bu gereksinim geçerli değildir.  
+ Bu gereksinim 2005 SQL Server için geçerlidir.  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Bir sütun değeri null olduğunda bu durum bir <xref:System.Linq.Enumerable.GroupBy%2A> göre gruplandırılan sorgu bir `boolean` ifade gibi `group x by (Phone==@phone)`. İfade, çünkü bir `boolean`, anahtar olarak algılanır `boolean`değil `nullable` `boolean`. Çevrilmiş karşılaştırma null vermediğinde girişimi atama yapılan bir `nullable` `boolean` için bir `boolean`, ve özel durum oluşturulur.  
+ Bu özel durum, <xref:System.Linq.Enumerable.GroupBy%2A> `boolean` bir ifadeye göre gruplandıran bir sorguda bir sütun değeri null olduğunda oluşturulur. `group x by (Phone==@phone)` İfade bir `boolean`olduğu `boolean`için, anahtar değil `nullable` `boolean`olarak algılanır. Çevrilmiş karşılaştırma null değeri üretirse, `nullable` `boolean`' a atamak `boolean` için bir girişimde bulunuldu ve özel durum oluşturulur.  
   
- (Null değerlere false değerlendirilecek istediğiniz varsayılarak) bu durumdan kaçınmak için aşağıdaki gibi bir yaklaşım kullanın:  
+ Bu durumdan kaçınmak için (null değerleri yanlış olarak değerlendirmek istediğiniz varsayılarak), aşağıdaki gibi bir yaklaşım kullanın:  
   
  `GroupBy="(Phone != null) && (Phone=@Phone)"`  
   
-## <a name="oncreated-partial-method"></a>OnCreated() kısmi yöntemi  
- Oluşturulan yöntemi `OnCreated()` nesne Oluşturucu çağrılır, senaryo görüntüleneceği dahil olmak üzere her zaman çağrılır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özgün değerler için bir kopya yapmak için bir oluşturucuyu çağırır. Uygularsanız, bu davranışı dikkate alın `OnCreated()` kendi kısmi sınıf yöntemi.  
+## <a name="oncreated-partial-method"></a>OnCreated () kısmi yöntemi  
+ Oluşturulan Yöntem `OnCreated()` , [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] içindeki bir kopya oluşturmak için oluşturucuyu çağıran senaryo da dahil olmak üzere, nesne oluşturucusunun her çağrılışında çağrılır. `OnCreated()` Yöntemi kendi kısmi sınıfınıza uygularsanız, bu davranışı hesaba alın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama Desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Hata Ayıklama Desteği](debugging-support.md)
+- [Sık Sorulan Sorular](frequently-asked-questions.md)

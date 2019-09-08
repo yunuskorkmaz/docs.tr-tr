@@ -5,38 +5,38 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663871"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797231"
 ---
 # <a name="custom-bindings"></a>Özel Bağlamalar
 
-Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı, sistem tarafından sağlanan bağlamalar birini hizmetinizin gereksinimlerini karşılamıyor. Tüm bağlamalar bağlama öğelerinin sıralı bir kümesinden oluşturulur. Özel bağlamalar, sistem tarafından sağlanan bağlama öğeleri kümesinden oluşturulabilir veya kullanıcı tanımlı özel bağlama öğelerini içerebilir. Özel bağlama öğeleri, örneğin, yeni taşıma veya bir hizmet uç noktasında kodlayıcılar kullanımını etkinleştirmek için kullanabilirsiniz. Çalışan örnekler için bkz [özel bağlama örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Daha fazla bilgi için [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+Sistem tarafından belirtilen bağlamalardan biri hizmetinizin gereksinimlerini karşılamadığında <xref:System.ServiceModel.Channels.CustomBinding> sınıfı kullanabilirsiniz. Tüm bağlamalar sıralı bir bağlama öğeleri kümesinden oluşturulur. Özel Bağlamalar, sistem tarafından sağlanmış bir bağlama öğelerinden oluşturulabilir veya Kullanıcı tanımlı özel bağlama öğeleri içerebilir. Bir hizmet uç noktasında yeni aktarımların veya kodlayıcıların kullanımını etkinleştirmek için, örneğin, özel bağlama öğelerini kullanabilirsiniz. Çalışma örnekleri için bkz. [özel bağlama örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Daha fazla bilgi için bkz [ \<. CustomBinding >](../../configure-apps/file-schema/wcf/custombinding.md).
 
 ## <a name="construction-of-a-custom-binding"></a>Özel bağlama oluşturma
 
-Özel bağlama kullanılarak oluşturulur <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> bağlama "belirli bir sırayla dizilir" öğelerinin bir koleksiyondan Oluşturucusu:
+Özel bağlama, belirli bir sırada " <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> yığılmış" olan bağlama öğeleri koleksiyonundan Oluşturucu kullanılarak oluşturulur:
 
-- En üstünde isteğe bağlı olduğu <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> akmasını sağlar sınıfını işlemler.
+- En üstte, akan işlemlere izin <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> veren isteğe bağlı bir sınıftır.
 
-- Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> bir oturum ve mekanizmaları WS-ReliableMessaging belirtiminde tanımlanan sıralamasını sağlayan sınıf. Bir oturum SOAP ve aktarım aracılar arası.
+- Next, WS- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> ReliableMessaging belirtiminde tanımlanan bir oturum ve sıralama mekanizmalarını sağlayan isteğe bağlı bir sınıftır. Bir oturum, SOAP ve aktarım aracıları arası olabilir.
 
-- Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.SecurityBindingElement> yetkilendirme, kimlik doğrulaması, koruma ve gizlilik gibi güvenlik özelliklerini sağlayan sınıf.
+- Daha sonra yetkilendirme, <xref:System.ServiceModel.Channels.SecurityBindingElement> kimlik doğrulama, koruma ve gizlilik gibi güvenlik özellikleri sağlayan isteğe bağlı bir sınıftır.
 
-- Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> çift yönlü iletişim, gibi HTTP desteği olmayan bir Aktarım Protokolü ile iki şekilde çift yönlü iletişim olanağı sağlayan sınıf.
+- Daha sonra, http <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> gibi çift yönlü iletişimi desteklemeyen bir Aktarım Protokolü ile iki yönlü çift yönlü iletişim olanağı sağlayan isteğe bağlı bir sınıftır.
 
-- Sonraki isteğe bağlı olduğu <xref:System.ServiceModel.Channels.OneWayBindingElement>) tek yönlü iletişim sağlayan sınıf.
+- Next, tek yönlü <xref:System.ServiceModel.Channels.OneWayBindingElement>iletişim sağlayan bir isteğe bağlı) sınıftır.
 
-- Sonraki aşağıdakilerden biri olabilecek bir isteğe bağlı Akış güvenlik bağlama öğesi var.
+- Next, aşağıdakilerden biri olabilecek isteğe bağlı bir akış güvenlik bağlama öğesidir.
 
   - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
   - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
-- Sonraki gerekli ileti kodlama bağlama öğesi var. Kendi ileti Kodlayıcı veya üç ileti kodlama bağlamaları birini kullanabilirsiniz:
+- Next, gerekli bir ileti kodlama bağlama öğesidir. Kendi ileti kodlayıcısını veya üç ileti kodlama bağlamalarından birini kullanabilirsiniz:
 
   - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
@@ -44,7 +44,7 @@ Kullanabileceğiniz <xref:System.ServiceModel.Channels.CustomBinding> sınıfı,
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-Altta bir gerekli aktarım öğesidir. Kendi taşıma veya Windows Communication Foundation (WCF) sağlayan aşağıdaki aktarım bağlama öğeleriyle birini kullanabilirsiniz:
+En altta gerekli bir taşıma öğesidir. Kendi taşıyıcıyı veya aşağıdaki taşıma bağlama öğelerinden birini Windows Communication Foundation (WCF) aşağıdakileri sağlar:
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -62,23 +62,23 @@ Altta bir gerekli aktarım öğesidir. Kendi taşıma veya Windows Communication
 
 - <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
 
-Aşağıdaki tabloda, her katman için seçenekler özetlenmektedir.
+Aşağıdaki tabloda her bir katmanın seçenekleri özetlenmektedir.
 
 |Katman|Seçenekler|Gerekli|
 |-----------|-------------|--------------|
 |İşlemler|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Hayır|
 |Güvenilirlik|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Hayır|
 |Güvenlik|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Hayır|
-|Encoding|İkili, ileti aktarım en iyi duruma getirme mekanizması (MTOM) özel bir metin|Evet|
-|Taşıma|TCP, HTTP, HTTPS, adlandırılmış kanallar (IPC olarak da bilinir), eşler arası (P2P), Message Queuing (MSMQ olarak da bilinir), özel|Evet|
+|Encoding|Metin, ikili, Ileti Iletimi Iyileştirme mekanizması (MTOM), özel|Evet|
+|Aktarım|TCP, HTTP, HTTPS, adlandırılmış kanallar (IPC olarak da bilinir), eşler arası (P2P), Message Queuing (MSMQ olarak da bilinir), özel|Evet|
 
-Ayrıca, kendi bağlama öğeleri tanımlayıp bunları herhangi bir önceki tanımlanmış katmanları arasında ekleyebilirsiniz.
+Ayrıca, kendi bağlama öğelerinizi tanımlayabilir ve bunları önceki tanımlı katmanlardan herhangi biri arasına ekleyebilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uç Nokta Oluşturmaya Genel Bakış](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Nasıl yapılır: Sistem tarafından sağlanan bir bağlamayı özelleştirme](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Özel Bağlama](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [Uç Nokta Oluşturmaya Genel Bakış](../endpoint-creation-overview.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../using-bindings-to-configure-services-and-clients.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)
+- [Nasıl yapılır: Sistem tarafından sağlanmış bağlamayı özelleştirme](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md)
+- [Özel Bağlama](../samples/custom-binding.md)

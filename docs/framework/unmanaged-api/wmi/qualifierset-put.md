@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Put işlevi (yönetilmeyen API Başvurusu)
-description: Adlandırılmış niteleyicisi ve değerini QualifierSet_Put işlevi yazar.
+description: QualifierSet_Put işlevi, adlandırılmış niteleyiciyi ve değerini yazar.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Put
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377860"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798265"
 ---
-# <a name="qualifiersetput-function"></a>QualifierSet_Put işlevi
+# <a name="qualifierset_put-function"></a>QualifierSet_Put işlevi
 
-Değer ve adlandırılmış niteleyicisi yazar. Yeni niteleyici aynı adlı önceki değerin üzerine yazar. Niteleyici mevcut değilse oluşturulur.
+Adlandırılmış niteleyiciyi ve değeri yazar. Yeni niteleyici, aynı ada sahip bir önceki değerin üzerine yazar. Niteleyici yoksa, oluşturulur.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -44,51 +44,51 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
+'ndaki Bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği işaretçisi.
 
 `wszName`\
-[in] Yazılacak niteleyicisi adı.
+'ndaki Yazılacak niteleyicinin adı.
 
 `pVal`\
-[in] Geçerli bir işaretçi `VARIANT` yazılacak niteleyicisi içeriyor. Bu parametre olamaz `null`.
+'ndaki Yazılacak niteleyiciyi içeren geçerli `VARIANT` bir işaretçisi. Bu parametre `null`olamaz.
 
 `lFlavor`\
-[in] Bu niteleyici için'istenen niteleyici özelliği tanımlayan sabitlerden biri. Varsayılan değer `WBEM_FLAVOR_OVERRIDABLE` (0).
+'ndaki Bu niteleyici için istenen niteleyici türlerini tanımlayan aşağıdaki sabitlerden biri. Varsayılan değer `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Niteleyici bir türetilmiş sınıf veya örnek geçersiz kılınabilir. **Varsayılan değer budur.** |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1. | Niteleyici örneklere yayılır. |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Türetilmiş sınıflara niteleyici yayılır. |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Niteleyici bir türetilmiş sınıf veya örnek geçersiz kılınamaz. |
-| `WBEM_FLAVOR_AMENDED` | 0x80 | Niteleyici yerelleştirilir. |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | Niteleyici, türetilmiş bir sınıfta veya örnekte geçersiz kılınabilir. **Bu varsayılan değerdir.** |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1\. | Niteleyici örneklere yayılır. |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | Niteleyici türetilmiş sınıflara yayılır. |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | Niteleyici, türetilmiş bir sınıfta veya örnekte geçersiz kılınamaz. |
+| `WBEM_FLAVOR_AMENDED` | 0x80 | Niteleyici yereldir. |
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Belirtmek için geçersiz bir girişimde bulunuldu oluştu **anahtar** niteleyici bir özellikte bir anahtar olamaz. Anahtarlar nesnenin sınıf tanımında belirtilir ve örnek başına temelinde değiştirilemez. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametresi geçerli bir niteleyici türü değil. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Çağrı mümkün değil `QualifierSet_Put` edinilen nesneyi izin vermediğinden niteleyici yöntemini geçersiz kılar. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Anahtar olmayan bir özellikte **anahtar** niteleyicisi belirtmeye yönelik geçersiz bir girişim vardı. Anahtarlar bir nesne için sınıf tanımında belirtilir ve örnek temelinde değiştirilemez. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametre geçerli bir niteleyici türü değil. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Sahip olan nesne geçersiz kılmalara izin `QualifierSet_Put` vermediğinden, niteleyicinin yöntemi çağrılamaz. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) yöntemi.
+Bu işlev, [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) yöntemine bir çağrı kaydırır.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** WMINet_Utils.idl
+**Üst bilgi** WMINet_Utils. IDL
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

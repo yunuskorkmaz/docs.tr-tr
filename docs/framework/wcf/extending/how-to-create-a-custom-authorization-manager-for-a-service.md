@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: ffdfe41db05eb5f2dd55a233f8ed646401777d0f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9c28cb81b78f80505cfcf5f7e4dfdba083bd0793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040293"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797113"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma
 
@@ -58,17 +58,17 @@ Bir hizmet için özel Yetkilendirme Yöneticisi kaydı, kod veya yapılandırma
 
 1. Hizmet için yapılandırma dosyasını açın.
 
-2. Davranışlara > bir [ \<ServiceAuthorization>ekleyin](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) . [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+2. Davranışlara > bir [ \<ServiceAuthorization>ekleyin](../../configure-apps/file-schema/wcf/serviceauthorization-element.md) . [ \<](../../configure-apps/file-schema/wcf/behaviors.md)
 
-    ServiceAuthorization `serviceAuthorizationManagerType` >, bir öznitelik ekleyin ve değerini özel yetkilendirme yöneticisini temsil eden türe ayarlayın. [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)
+    ServiceAuthorization `serviceAuthorizationManagerType` >, bir öznitelik ekleyin ve değerini özel yetkilendirme yöneticisini temsil eden türe ayarlayın. [ \<](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)
 
 3. İstemci ve hizmet arasındaki iletişimin güvenliğini sağlayan bir bağlama ekleyin.
 
-    Bu iletişim için seçilen bağlama, Özel Yetkilendirme Yöneticisi 'nin yetkilendirme kararları almak için kullandığı, <xref:System.IdentityModel.Policy.AuthorizationContext>öğesine eklenen talepleri belirler. Sistem tarafından sağlanmış bağlamalar hakkında daha fazla bilgi için bkz. [sistem tarafından sunulan bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md).
+    Bu iletişim için seçilen bağlama, Özel Yetkilendirme Yöneticisi 'nin yetkilendirme kararları almak için kullandığı, <xref:System.IdentityModel.Policy.AuthorizationContext>öğesine eklenen talepleri belirler. Sistem tarafından sağlanmış bağlamalar hakkında daha fazla bilgi için bkz. [sistem tarafından sunulan bağlamalar](../system-provided-bindings.md).
 
-4. `behaviorConfiguration` [ Bir\<Service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) öğesi ekleyerek ve öznitelik değerini [ \<davranış >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi için ad özniteliğinin değerine ayarlayarak, davranışı bir hizmet uç noktasıyla ilişkilendirin.
+4. `behaviorConfiguration` [ Bir\<Service >](../../configure-apps/file-schema/wcf/service.md) öğesi ekleyerek ve öznitelik değerini [ \<davranış >](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) öğesi için ad özniteliğinin değerine ayarlayarak, davranışı bir hizmet uç noktasıyla ilişkilendirin.
 
-    Hizmet uç noktası yapılandırma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Yapılandırmada](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)bir hizmet uç noktası oluşturun.
+    Hizmet uç noktası yapılandırma hakkında daha fazla bilgi için bkz [. nasıl yapılır: Yapılandırmada](../feature-details/how-to-create-a-service-endpoint-in-configuration.md)bir hizmet uç noktası oluşturun.
 
     Aşağıdaki kod örneği özel yetkilendirme Yöneticisini `Samples.MyServiceAuthorizationManager`kaydeder.
 
@@ -114,7 +114,7 @@ Bir hizmet için özel Yetkilendirme Yöneticisi kaydı, kod veya yapılandırma
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, <xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemini geçersiz kılmayı içeren bir sınıfın temel bir uygulamasını gösterir. Örnek kod, <xref:System.IdentityModel.Policy.AuthorizationContext> özel bir talep için ' i inceler ve `true` bu özel talep için kaynak, <xref:System.ServiceModel.OperationContext>öğesinden eylem değeri ile eşleştiğinde döndürür. Bir <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfın daha kapsamlı bir uygulanması için bkz. [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md).
+Aşağıdaki kod örneği, <xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> yöntemini geçersiz kılmayı içeren bir sınıfın temel bir uygulamasını gösterir. Örnek kod, <xref:System.IdentityModel.Policy.AuthorizationContext> özel bir talep için ' i inceler ve `true` bu özel talep için kaynak, <xref:System.ServiceModel.OperationContext>öğesinden eylem değeri ile eşleştiğinde döndürür. Bir <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfın daha kapsamlı bir uygulanması için bkz. [Yetkilendirme İlkesi](../samples/authorization-policy.md).
 
 [!code-csharp[c_CustomAuthMgr#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#2)]
 [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]
@@ -122,4 +122,4 @@ Aşağıdaki kod örneği, <xref:System.ServiceModel.ServiceAuthorizationManager
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Yetkilendirme İlkesi](../../../../docs/framework/wcf/samples/authorization-policy.md)
+- [Yetkilendirme İlkesi](../samples/authorization-policy.md)

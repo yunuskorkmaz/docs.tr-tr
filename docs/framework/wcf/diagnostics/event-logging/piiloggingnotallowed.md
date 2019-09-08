@@ -2,24 +2,24 @@
 title: PiiLoggingNotAllowed
 ms.date: 03/30/2017
 ms.assetid: fc34a0b6-fee7-4da4-b146-b0c1c8b7519a
-ms.openlocfilehash: 7e1ee746c16eabfa84d96d9157a6248f640e5a1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24b31c33b31bb0ef763de30ce24fbc28f03aa039
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797664"
 ---
 # <a name="piiloggingnotallowed"></a>PiiLoggingNotAllowed
-Kimliği: 108  
+Numarasını 108  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: İzleme  
+ Alan İzleme  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bilinen hiçbir PII oturum olduğunuzu gösterir. Bilinen PII günlüğe izin verilmez. Bilinen PII günlüğe izin vermek için ayarlanmış "enableLoggingKnownPii" `true` Machine.Config'deki. Olay işlem kimliği ve işlem adını listeler.  
+ Bu olay, hiç bilinen PII günlüğe kaydedilmeyeceğini gösterir. Bilinen PII günlüğüne izin verilmiyor. Bilinen PII 'nin günlüğe kaydedilmesine izin vermek için, "enableLoggingKnownPII" `true` değerini Machine. config içinde olarak ayarlayın. Olayda işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

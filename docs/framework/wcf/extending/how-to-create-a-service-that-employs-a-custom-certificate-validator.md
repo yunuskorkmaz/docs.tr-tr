@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: 156d661fd5602333fae8066f3062b442a1df19af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b2407c293de7f11b90586f5a55bd759a4ea734aa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951700"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795684"
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma
 Bu konu, Özel Sertifika doğrulayıcı 'nın nasıl uygulanacağını ve istemci ya da hizmet kimlik bilgilerinin varsayılan sertifika doğrulama mantığını özel sertifika doğrulayıcısı ile değiştirecek şekilde nasıl yapılandırılacağını gösterir.  
@@ -35,15 +35,15 @@ Bu konu, Özel Sertifika doğrulayıcı 'nın nasıl uygulanacağını ve istemc
   
 #### <a name="to-specify-a-custom-certificate-validator-in-service-configuration"></a>Hizmet yapılandırmasında özel bir sertifika Doğrulayıcısı belirtmek için  
   
-1. [System. ServiceModel > öğesine bir > öğesi ve servicedavranışlar > ekleyin. \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. [System. ServiceModel > öğesine bir > öğesi ve servicedavranışlar > ekleyin. \<](../../configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md) [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. `name` [ Bir\<davranış >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ekleyin ve özniteliği uygun bir değere ayarlayın.  
+2. `name` [ Bir\<davranış >](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ekleyin ve özniteliği uygun bir değere ayarlayın.  
   
-3. Öğeye`<behavior>` bir [ \<ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) ekleyin.  
+3. Öğeye`<behavior>` bir [ \<ServiceCredentials >](../../configure-apps/file-schema/wcf/servicecredentials.md) ekleyin.  
   
 4. `<serviceCredentials>` Öğeye bir `<clientCertificate>` öğe ekleyin.  
   
-5. `<clientCertificate>` Öğeye bir [ \<kimlik doğrulaması >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) ekleyin.  
+5. `<clientCertificate>` Öğeye bir [ \<kimlik doğrulaması >](../../configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) ekleyin.  
   
 6. `customCertificateValidatorType` Özniteliği Doğrulayıcı türü olarak ayarlayın. Aşağıdaki örnek, özniteliğini ad alanına ve türün adına ayarlar.  
   
@@ -69,17 +69,17 @@ Bu konu, Özel Sertifika doğrulayıcı 'nın nasıl uygulanacağını ve istemc
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>İstemcideki yapılandırmayı kullanarak özel bir sertifika Doğrulayıcısı belirtmek için  
   
-1. [System. ServiceModel > öğesine bir > öğesi ve servicedavranışlar > ekleyin. \<](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+1. [System. ServiceModel > öğesine bir > öğesi ve servicedavranışlar > ekleyin. \<](../../configure-apps/file-schema/wcf/system-servicemodel.md) [ \<](../../configure-apps/file-schema/wcf/servicebehaviors.md) [ \<](../../configure-apps/file-schema/wcf/behaviors.md)  
   
-2. [ Bir\<endpointdavranışlar >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) öğesi ekleyin.  
+2. [ Bir\<endpointdavranışlar >](../../configure-apps/file-schema/wcf/endpointbehaviors.md) öğesi ekleyin.  
   
 3. Bir `<behavior>` öğesi ekleyin ve `name` özniteliği uygun bir değere ayarlayın.  
   
-4. [ Bir\<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) öğesi ekleyin.  
+4. [ Bir\<ClientCredentials >](../../configure-apps/file-schema/wcf/clientcredentials.md) öğesi ekleyin.  
   
-5. [ Bir\<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)ekleyin.  
+5. [ Bir\<ServiceCertificate >](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)ekleyin.  
   
-6. Aşağıdaki örnekte gösterildiği gibi bir [ \<kimlik doğrulama >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) ekleyin.  
+6. Aşağıdaki örnekte gösterildiği gibi bir [ \<kimlik doğrulama >](../../configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) ekleyin.  
   
 7. `customCertificateValidatorType` Özniteliği Doğrulayıcı türü olarak ayarlayın.  
   
@@ -116,7 +116,7 @@ Bu konu, Özel Sertifika doğrulayıcı 'nın nasıl uygulanacağını ve istemc
   
 #### <a name="to-specify-a-custom-certificate-validator-using-code-on-the-client"></a>İstemcideki kodu kullanarak özel bir sertifika Doğrulayıcısı belirtmek için  
   
-1. <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> Özelliğini kullanarak özel sertifika Doğrulayıcısı belirtin. <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> Özelliğini kullanarak istemci kimlik bilgilerine erişebilirsiniz. ( [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan istemci sınıfı her zaman <xref:System.ServiceModel.ClientBase%601> sınıfından türetilir.)  
+1. <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> Özelliğini kullanarak özel sertifika Doğrulayıcısı belirtin. <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> Özelliğini kullanarak istemci kimlik bilgilerine erişebilirsiniz. ( [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan istemci sınıfı her zaman <xref:System.ServiceModel.ClientBase%601> sınıfından türetilir.)  
   
 2. Ayarlama <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> özelliğini <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.  
   

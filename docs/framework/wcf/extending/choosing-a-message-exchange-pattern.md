@@ -2,15 +2,15 @@
 title: Bir İleti Değişim Deseni seçin
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcbea30b53142ed68db9ac138f8c7a665ca1729
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951856"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797294"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Bir İleti Değişim Deseni seçin
-Özel bir aktarım yazarken ilk adım, geliştirmekte olduğunuz kanal için hangi *ileti Exchange desenlerinin* (veya MEPs) gerekli olduğuna karar vermeye yöneliktir. Bu konu başlığı altında sunulan seçenekler açıklanmakta ve çeşitli gereksinimler ele alınmaktadır. Bu, [kanalların geliştirilmesi](../../../../docs/framework/wcf/extending/developing-channels.md)bölümünde açıklanan Kanal geliştirme görev listesindeki ilk görevdir.  
+Özel bir aktarım yazarken ilk adım, geliştirmekte olduğunuz kanal için hangi *ileti Exchange desenlerinin* (veya MEPs) gerekli olduğuna karar vermeye yöneliktir. Bu konu başlığı altında sunulan seçenekler açıklanmakta ve çeşitli gereksinimler ele alınmaktadır. Bu, [kanalların geliştirilmesi](developing-channels.md)bölümünde açıklanan Kanal geliştirme görev listesindeki ilk görevdir.  
   
 ## <a name="six-message-exchange-patterns"></a>Altı Ileti değişimi desenleri  
  Aralarından seçim yapabileceğiniz üç/PS vardır:  
@@ -27,7 +27,7 @@ ms.locfileid: "69951856"
   
      Çift yönlü MEP, istemci tarafından rastgele sayıda iletinin gönderilmesini ve herhangi bir sırada alınmasını sağlar. Çift yönlü MEP, konuşulan her sözcüğün bir ileti olduğu bir telefon konuşması gibidir. Her iki taraf da bu MEP 'de gönderebildiğinden ve alabileceği için, istemci ve hizmet kanalları <xref:System.ServiceModel.Channels.IDuplexChannel>tarafından uygulanan arabirim.  
   
- ![İleti değişim modelini seçme](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![İleti değişim modelini seçme](./media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Üç temel ileti değişim deseni. Üstten alta: veri birimi, istek-yanıt ve çift yönlü.  
   
  Bu MEPs 'lerin her biri, *oturumları*da destekleyebilir. Bir oturum (ve türünün <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>uygulanması), bir kanalda gönderilen ve alınan tüm iletileri ilişkilendirir. İstek ve yanıt bağıntılı olduğundan, istek-yanıt deseninin tek başına iki ileti oturumu vardır. Buna karşılık, oturumları destekleyen istek-yanıt deseninin, o kanaldaki tüm istek/yanıt çiftlerinin birbirleriyle bağıntılı olduğu anlamına gelir. Bu, aralarından seçim yapabileceğiniz toplam altı MEPs sağlar:  
@@ -52,7 +52,7 @@ ms.locfileid: "69951856"
   
  Kanal nesne modelinde her mantıksal oturum, bir oturum kanalının bir örneği olarak bildirimlidir. Bu nedenle, istemci tarafından oluşturulan ve hizmette kabul edilen her yeni oturum, her bir tarafta yeni bir oturumsuz kanala karşılık gelir. Aşağıdaki diyagramda, en üstteki, sessionless kanalların yapısı ve en altta, oturum kanalların yapısı gösterilmektedir.  
   
- ![İleti değişim modelini seçme](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![İleti değişim modelini seçme](./media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  İstemci yeni bir oturumsuz kanal oluşturur ve bir ileti gönderir. Hizmet tarafında, kanal dinleyicisi bu iletiyi alır ve yeni bir oturuma ait olduğunu algılar ve yeni bir oturum kanalı oluşturur ve uygulamayı uygulamaya (kanal dinleyicisinde AcceptChannel çağıran uygulamaya yanıt olarak) sahip olur. Daha sonra uygulama bu iletiyi ve sonraki tüm iletileri aynı oturumda, aynı oturumdaki kanal üzerinden gönderilir.  
   
@@ -94,4 +94,4 @@ ms.locfileid: "69951856"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kanal Modeline Genel Bakış](../../../../docs/framework/wcf/extending/channel-model-overview.md)
+- [Kanal Modeline Genel Bakış](channel-model-overview.md)

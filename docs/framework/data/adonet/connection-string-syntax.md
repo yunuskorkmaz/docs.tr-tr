@@ -2,12 +2,12 @@
 title: Bağlantı Dizesi Söz Dizimi
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949465"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784921"
 ---
 # <a name="connection-string-syntax"></a>Bağlantı Dizesi Söz Dizimi
 Her .NET Framework veri sağlayıcısının, sağlayıcıya `Connection` özgü <xref:System.Data.Common.DbConnection.ConnectionString%2A> bir özelliği ve <xref:System.Data.Common.DbConnection> öğesinden devralan bir nesnesi vardır. Her sağlayıcının özel bağlantı dizesi söz dizimi, `ConnectionString` özelliğinde belgelenmiştir. Aşağıdaki tabloda .NET Framework bulunan dört veri sağlayıcısı listelenmektedir.  
@@ -30,7 +30,7 @@ Her .NET Framework veri sağlayıcısının, sağlayıcıya `Connection` özgü 
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Bağlantı dizesi oluşturucuları, çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturma izni verir, bu nedenle kodunuzda bağlantı dizesi değerlerini el ile birleştirmek zorunda değilsiniz. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Bağlantı dizesi oluşturucuları, çalışma zamanında sözdizimsel olarak geçerli bağlantı dizeleri oluşturma izni verir, bu nedenle kodunuzda bağlantı dizesi değerlerini el ile birleştirmek zorunda değilsiniz. Daha fazla bilgi için bkz. [bağlantı dizesi oluşturucuları](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Windows Kimlik Doğrulaması  
  Bunu destekleyen veri kaynaklarına bağlanmak için Windows kimlik doğrulaması (bazen *Tümleşik güvenlik*olarak adlandırılır) kullanmanızı öneririz. Bağlantı dizesinde kullanılan sözdizimi sağlayıcıya göre değişir. Aşağıdaki tabloda .NET Framework veri sağlayıcılarıyla kullanılan Windows kimlik doğrulama sözdizimi gösterilmektedir.  
@@ -90,7 +90,7 @@ Ayrıca, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> `
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>SQL Server Express Kullanıcı örneklerine bağlanma ve Iliştirme  
  Kullanıcı örnekleri SQL Server Express bir özelliktir. Bu kişiler, en az ayrıcalıklı yerel Windows hesabında çalışan bir kullanıcının yönetici ayrıcalıklarına gerek duymadan bir SQL Server veritabanı eklemesi ve çalıştırmasına izin verir. Kullanıcı örneği, bir hizmet olarak değil kullanıcının Windows kimlik bilgileriyle yürütülür.  
   
- Kullanıcı örnekleriyle çalışma hakkında daha fazla bilgi için bkz. [SQL Server Express Kullanıcı örnekleri](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Kullanıcı örnekleriyle çalışma hakkında daha fazla bilgi için bkz. [SQL Server Express Kullanıcı örnekleri](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>TrustServerCertificate kullanma  
  `TrustServerCertificate` Anahtar sözcüğü yalnızca geçerli bir sertifikayla SQL Server örneğine bağlanılırken geçerlidir. `TrustServerCertificate` , Olarak`true`ayarlandığında, aktarım katmanı, kanalı şifrelemek ve güveni doğrulamak üzere sertifika zincirini atlamak için SSL kullanır.  
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Veri Kaynağına Bağlanma](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Dizeleri](connection-strings.md)
+- [Veri Kaynağına Bağlanma](connecting-to-a-data-source.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940080"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793648"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Nasıl yapılır: Dinamik Olarak Veritabanı Oluşturma
 LINQ to SQL, bir nesne modeli ilişkisel veritabanıyla eşlenir. Eşleme, ilişkisel veritabanının yapısını betimleyen öznitelik tabanlı eşleme veya bir dış eşleme dosyası kullanılarak etkinleştirilir. Her iki senaryoda da, <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> yöntemini kullanarak veritabanının yeni bir örneğini oluşturabileceğiniz ilişkisel veritabanı hakkında yeterli bilgi vardır.  
@@ -50,8 +50,8 @@ LINQ to SQL, bir nesne modeli ilişkisel veritabanıyla eşlenir. Eşleme, iliş
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Veri Değişiklikleri Yapma ve Gönderme](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Öznitelik Tabanlı Eşleme](attribute-based-mapping.md)
+- [Dış Eşleme](external-mapping.md)
+- [SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [Veri Değişiklikleri Yapma ve Gönderme](making-and-submitting-data-changes.md)

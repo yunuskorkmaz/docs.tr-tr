@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946777"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792123"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>İzlenecek yol: Basit Nesne Modeli ve Sorgu (Visual Basic)
 
@@ -25,7 +25,7 @@ Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştı
 
 - Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest") kullanır. Yönergeye başlamadan önce bu klasörü oluşturun.
 
-- Bu izlenecek yol, Northwind örnek veritabanı gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanını indirdikten sonra, dosyayı c:\linqtest klasörüne kopyalayın.
+- Bu izlenecek yol, Northwind örnek veritabanı gerektirir. Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md). Veritabanını indirdikten sonra, dosyayı c:\linqtest klasörüne kopyalayın.
 
 ## <a name="overview"></a>Genel Bakış
 
@@ -144,7 +144,7 @@ Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturdu�
 2. Uygulamada hata ayıklamak için F5 tuşuna basın.
 
     > [!NOTE]
-    > Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
+    > Uygulamanız bir çalışma zamanı hatası oluşturursa, [Izlenecek yollara göre öğrenme](learning-by-walkthroughs.md)konusunun sorun giderme bölümüne bakın.
 
      İleti kutusu, altı müşterinin bir listesini görüntüler. Konsol penceresinde oluşturulan SQL kodu görüntülenir.
 
@@ -158,10 +158,10 @@ Bu adımda, aslında sorguyu yürütütemezsiniz. Önceki adımlarda oluşturdu�
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-[İzlenecek yol: İlişkiler genelinde sorgulama (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) konusu Bu izlenecek yolun sona erdiği yerde devam eder. İlişkiler genelinde sorgulama izlenecek yol, ilişkisel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veritabanındaki *birleştirmelere* benzer şekilde tablolar arasında nasıl sorgu yapılacağını gösterir.
+[İzlenecek yol: İlişkiler genelinde sorgulama (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md) konusu Bu izlenecek yolun sona erdiği yerde devam eder. İlişkiler genelinde sorgulama izlenecek yol, ilişkisel [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bir veritabanındaki *birleştirmelere* benzer şekilde tablolar arasında nasıl sorgu yapılacağını gösterir.
 
 Ilişkiler genelinde sorgulama yapmak istiyorsanız, bir önkoşul olan, az önce tamamladığınız yönergeler için çözümü kaydettiğinizden emin olun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)

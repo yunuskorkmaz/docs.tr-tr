@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203174"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785875"
 ---
 # <a name="the-load-method"></a>Load Yöntemi
 Bir veri kaynağından satırları <xref:System.Data.DataTable.Load%2A> içeren bir <xref:System.Data.DataTable> ile yüklemek için yöntemini kullanabilirsiniz. Bu, en basit biçimiyle bir **DataReader**olan tek bir parametreyi kabul eden aşırı yüklenmiş bir yöntemdir. Bu formda, yalnızca **DataTable** 'ı satırları ile yükler. İsteğe bağlı olarak, verilerin **DataTable**'a nasıl eklendiğini denetlemek için **LoadOption** parametresini belirtebilirsiniz.  
@@ -21,7 +21,7 @@ Bir veri kaynağından satırları <xref:System.Data.DataTable.Load%2A> içeren 
 |LoadOption değeri|Açıklama|  
 |----------------------|-----------------|  
 |**OverwriteRow**|Gelen satırlarda zaten **DataTable**içinde olan bir satırla aynı **PrimaryKey** değeri varsa, her sütunun **özgün** ve **geçerli** değerleri gelen satırdaki değerlerle yerine, **RowState** özelliği ise olarak ayarlanır. **Değiştirilmez**.<br /><br /> **DataTable** 'da zaten mevcut olmayan veri kaynağındaki satırlar, bir **RowState** değeri **değiştirilmeden**eklenir.<br /><br /> Bu seçenek, veri kaynağının içeriğiyle eşleşecek şekilde **DataTable** 'ın içeriğini yeniler.|  
-|**PreserveCurrentValues (varsayılan)**|Gelen satırlarda zaten **DataTable**içinde olan bir satır Ile aynı **PrimaryKey** değeri varsa, **özgün** değer gelen satırın içeriğine ayarlanır ve **geçerli** değer değiştirilmez.<br /><br /> **RowState** **eklendiğinde** veya **değiştirilirse**, **değiştirildi**olarak ayarlanır.<br /><br /> **RowState** **silinmişse**silinen kalır.<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **Unchanged**olarak ayarlanır.|  
+|**PreserveCurrentValues (varsayılan)**|Gelen satırlarda zaten **DataTable**içinde olan bir satır Ile aynı **PrimaryKey** değeri varsa, **özgün** değer gelen satırın içeriğine ayarlanır ve **geçerli** değer değiştirilmez.<br /><br /> **RowState** **eklendiğinde** veya **değiştirilirse**, **değiştirildi**olarak ayarlanır.<br /><br /> **RowState** **silinmişse** **silinen kalır.**<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **Unchanged**olarak ayarlanır.|  
 |**UpdateCurrentValues**|Gelen satırlar zaten **DataTable**içinde olan satır Ile aynı **PrimaryKey** değerine sahip Ise, **geçerli** değer **özgün** değere kopyalanır ve **geçerli** değer, gelen satırın içeriğine ayarlanır.<br /><br /> **DataTable** Içindeki **RowState** **eklendiyse**, **RowState** **eklenmiş**olarak kalır. **Değiştirilmiş** veya **Silinmiş**olarak Işaretlenen satırlarda, **RowState** **değiştirilir**.<br /><br /> Veri kaynağından **DataTable** 'da zaten mevcut olmayan satırlar eklenir ve **RowState** , **eklendi**olarak ayarlanır.|  
   
  Aşağıdaki örnek, **Northwind** veritabanındaki çalışanların Doğum günlerini listesini göstermek için **Load** yöntemini kullanır.  
@@ -71,4 +71,4 @@ End Sub
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771949"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783338"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-Oracle için .NET Framework veri sağlayıcısı içerir <xref:System.Data.OracleClient.OracleLob> Oracle ile çalışmak için kullanılan sınıfı **LOB** veri türleri.  
+Oracle için .NET Framework veri sağlayıcısı, Oracle <xref:System.Data.OracleClient.OracleLob> **lob** veri türleriyle çalışmak için kullanılan sınıfını içerir.  
   
- Bir **OracleLob** bunlardan biri olabilir <xref:System.Data.OracleClient.OracleType> veri türleri:  
+ Bir **OracleLob** şu <xref:System.Data.OracleClient.OracleType> veri türlerinden biri olabilir:  
   
 |Veri türü|Açıklama|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB** boyut sınırı 4 gigabayt ile ikili verileri içeren veri türü. Bu eşleyen bir **dizi** türü **bayt**.|  
-|**CLOB**|Oracle **CLOB** sunucusuyla boyut sınırı 4 gigabayt kümesinde varsayılan karakter tabanlı, karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
-|**NClob**|Oracle **NCLOB** Ulusal karakter boyut sınırı 4 gigabayt sunucusu üzerinde kümesini temel karakter verileri içeren veri türü. Bu eşlendiği **dize**.|  
+|**Blob**|En fazla 4 gigabayt büyüklüğünde ikili veri içeren bir Oracle **BLOB** veri türü. Bu, **byte**türünde bir **diziye** eşlenir.|  
+|**CLOB**|Sunucu üzerindeki varsayılan karakter kümesini temel alan, en fazla 4 gigabayt boyutunda karakter verisi içeren bir Oracle **CLOB** veri türü. Bu **dize**ile eşlenir.|  
+|**NClob**|Sunucu üzerinde en fazla 4 gigabayt olan Ulusal karakter kümesine dayalı karakter verisi içeren Oracle **NCLOB** veri türü. Bu **dize**ile eşlenir.|  
   
- Bir **OracleLob** farklıdır bir <xref:System.Data.OracleClient.OracleBFile> içeren veriler yerine sunucunun işletim sistemini fiziksel bir dosyasında depolanır. Farklı bir okuma-yazma nesnesi ayrıca olabilir bir **OracleBFile**, bu değer her zaman salt okunur.  
+ Bir<xref:System.Data.OracleClient.OracleBFile> **OracleLob** , verilerin işletim sistemindeki fiziksel bir dosya yerine sunucuda depolanabileceği öğesinden farklıdır. Ayrıca, her zaman salt okunurdur olan **Oraclebdosya**'dan farklı olarak bir okuma-yazma nesnesi de olabilir.  
   
-## <a name="creating-retrieving-and-writing-to-a-lob"></a>Oluşturmaya, almaya ve bir LOB için yazma  
- Aşağıdaki C# örneği nasıl bir Oracle tablosunda LOB'lar oluşturun ve ardından alabilir ve bunlara biçiminde yazmak gösterir **OracleLob** nesneleri. Örnek kullanarak gösterir <xref:System.Data.OracleClient.OracleDataReader> nesne ve **OracleLob** **okuma** ve **yazma** yöntemleri. Oracle örnekte **BLOB**, **CLOB**, ve **NCLOB** veri türleri.  
+## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB oluşturma, alma ve yazma  
+ Aşağıdaki örnek C# , bir Oracle tablosunda lob 'ları nasıl oluşturabileceğiniz ve ardından **OracleLob** nesneleri biçiminde bu öğeleri alma ve bunlara yazma işlemlerinin nasıl yapılacağını gösterir. Örnek <xref:System.Data.OracleClient.OracleDataReader> , nesne ve **OracleLob** **okuma** ve **yazma** yöntemlerinin kullanımını gösterir. Örnek, Oracle **BLOB**, **CLOB**ve **NCLOB** veri türlerini kullanır.  
   
 ```csharp  
 using System;  
@@ -215,8 +215,8 @@ public class LobExample
 }  
 ```  
   
-## <a name="creating-a-temporary-lob"></a>Geçici bir LOB'ı oluşturma  
- Aşağıdaki C# örneği, geçici bir LOB oluşturma işlemini gösterir.  
+## <a name="creating-a-temporary-lob"></a>Geçici bir LOB oluşturma  
+ Aşağıdaki C# örnek, GEÇICI bir lob oluşturmayı gösterir.  
   
 ```csharp  
 OracleConnection conn = new OracleConnection(  
@@ -249,5 +249,5 @@ tx.Commit();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Oracle ve ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Oracle ve ADO.NET](oracle-and-adonet.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

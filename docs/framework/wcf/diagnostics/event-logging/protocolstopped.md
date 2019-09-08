@@ -2,24 +2,24 @@
 title: ProtocolStopped
 ms.date: 03/30/2017
 ms.assetid: bc4c892f-b5ed-40cd-979c-382f4bed41b6
-ms.openlocfilehash: b2c2ca8ac54e4a8cee18660f55a632fb5605c30b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4d2b9dd26e1b31322f09f68c6ee48182ccf88ab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999017"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797589"
 ---
 # <a name="protocolstopped"></a>ProtocolStopped
-Kimliği: 151  
+Numarasını 151  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WS-Atomic işlem protokolü hizmetinin durdurulduğunu gösterir. Olay Protokolü kimliği, protokol adı, işlem adı ve işlem kimliği listeler biçimindeki telefon numarasıdır.  
+ Bu olay, WS Atomik Işlem Protokolü hizmetinin durdurulduğunu gösterir. Olayda protokol KIMLIĞI, protokol adı, işlem adı ve işlem KIMLIĞI listelenmektedir. biçimindeki telefon numarasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

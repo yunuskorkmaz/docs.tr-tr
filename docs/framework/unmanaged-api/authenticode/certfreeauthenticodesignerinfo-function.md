@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42f5685a9a976be7a3a73badf286f77216e43106
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 357a2ca0ffc733adb14a21624cbe28fb754c8240
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741235"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776734"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo İşlevi
-İçin ayrılan kaynakları serbest bırakan [axl_authentıcode_sıgner_ınfo](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) yapısı.  
+[AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md) yapısı için ayrılan kaynakları boşaltır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -29,11 +29,11 @@ HRESULT CertFreeAuthenticodeSignerInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `pSignerInfo`  
- [out içinde] Yayımlanacak imzalayan bilgileri. Bkz: [axl_authentıcode_sıgner_ınfo](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) yapısı.  
+ [in, out] Yayımlanacak imzalayan bilgileri. Bkz. [AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md) yapısı.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` işlev başarılı olursa. Aksi takdirde bir hata kodu döndürür.  
+ `S_OK`işlev başarılı olursa. Aksi takdirde, bir hata kodu döndürür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Azaltma: Uygulama etki alanlarında nesneleri seri durumdan çıkarma'
+title: Mayı Uygulama etki alanları arasında nesnelerin serisini kaldırma
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd0cbd4c688815139d83a742bb75c54eebbe55b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d172503cee4e3880f493c68d5789e17c64a82a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648468"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790004"
 ---
-# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Azaltma: Uygulama etki alanlarında nesneleri seri durumdan çıkarma
+# <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Mayı Uygulama etki alanları arasında nesnelerin serisini kaldırma
 Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fazla uygulama etki alanı kullandığında, uygulama etki alanları arasında nesnelerin mantıksal çağrı bağlamında serisini kaldırma girişimi özel bir durum oluşturur.  
   
 ## <a name="diagnosing-the-issue"></a>Sorunu tanılama  
@@ -50,4 +50,4 @@ Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [Çalışma Zamanı Değişiklikleri](runtime-changes-in-the-net-framework-4-5-1.md)

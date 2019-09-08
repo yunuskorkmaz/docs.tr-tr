@@ -5,68 +5,68 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86d5fc63168330502f81dfa464fcd2c04f014760
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607793"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785067"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
-Bu konudaki kod listeleri aşağıdaki ADO.NET teknolojileri kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir:
+Bu konudaki kod listeleri, aşağıdaki ADO.NET teknolojilerini kullanarak bir veritabanından nasıl veri alınacağını gösterir:
 
 - ADO.NET veri sağlayıcıları:
 
   - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
 
-  - [OleDb](#oledb) (`System.Data.OleDb`)
+  - [OLEDB](#oledb) (`System.Data.OleDb`)
 
   - [Odbc](#odbc) (`System.Data.Odbc`)
 
   - [OracleClient](#oracleclient) (`System.Data.OracleClient`)
 
-- ADO.NET varlık çerçevesi:
+- ADO.NET Entity Framework:
 
   - [LINQ to Entities](#linq-to-entities)
 
-  - [Türü belirlenmiş ObjectQuery](#typed-objectquery)
+  - [Tür ObjectQuery](#typed-objectquery)
 
   - [EntityClient](#entityclient) (`System.Data.EntityClient`)
 
 - [LINQ to SQL](#linq-to-sql)
 
-## <a name="adonet-data-provider-examples"></a>ADO.NET veri sağlayıcı örneği
-Aşağıdaki kod listeleri ADO.NET veri sağlayıcıları kullanarak bir veritabanından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Veriler içerisinde geri dönmemiş ise bir `DataReader`. Daha fazla bilgi için [alma verileri kullanarak bir DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
+## <a name="adonet-data-provider-examples"></a>ADO.NET veri sağlayıcısı örnekleri
+Aşağıdaki kod listelerinde, ADO.NET veri sağlayıcıları kullanılarak bir veritabanından nasıl veri alacağınızı gösterilmektedir. Veriler bir `DataReader`içinde döndürülür. Daha fazla bilgi için bkz. [DataReader kullanarak veri alma](retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-Bu örnekteki kod için bağlanabildiğinizi varsayar `Northwind` örnek veritabanını Microsoft SQL Server. Kod oluşturur bir <xref:System.Data.SqlClient.SqlCommand> Ürünler tablosundan satırları seçmek için ekleme bir <xref:System.Data.SqlClient.SqlParameter> sonuçları belirtilen parametre, bu durumda 5 değerinden bir UnitPrice satırları sınırlamak için. <xref:System.Data.SqlClient.SqlConnection> İçinde açılan bir `using` bloğu, kaynakları kapalı ve kod çıktığında elden emin olmanızı sağlar. Kod kullanarak komutu yürütür. bir <xref:System.Data.SqlClient.SqlDataReader>ve sonuçları konsol penceresinde görüntüler.
+Bu örnekteki kod, Microsoft SQL Server `Northwind` örnek veritabanına bağlanabildiğinizi varsayar. Kod, Ürünler tablosundan <xref:System.Data.SqlClient.SqlCommand> satırları seçmek için bir oluşturur ve bu durumda 5, <xref:System.Data.SqlClient.SqlParameter> belirtilen parametre değerinden daha büyük bir UnitPrice değeri olan satırları satırlara kısıtlamak için bir değer ekler. , <xref:System.Data.SqlClient.SqlConnection> Bir`using` blok içinde açılır ve bu, kodun çıkış sırasında kaynakların kapatılmasını ve aktiften çıkarılmasını sağlar. Kod, komutunu kullanarak <xref:System.Data.SqlClient.SqlDataReader>komutu yürütür ve sonuçları konsol penceresinde görüntüler.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
 
 ### <a name="oledb"></a>OleDb
-Bu örnekteki kod Microsoft Access Northwind örnek veritabanına bağlanabildiğinizi varsayar. Kod oluşturur bir <xref:System.Data.OleDb.OleDbCommand> Ürünler tablosundan satırları seçmek için ekleme bir <xref:System.Data.OleDb.OleDbParameter> sonuçları belirtilen parametre, bu durumda 5 değerinden bir UnitPrice satırları sınırlamak için. <xref:System.Data.OleDb.OleDbConnection> İçine açıldığında bir `using` bloğu, kaynakları kapalı ve kod çıktığında elden emin olmanızı sağlar. Kod kullanarak komutu yürütür. bir <xref:System.Data.OleDb.OleDbDataReader>ve sonuçları konsol penceresinde görüntüler.
+Bu örnekteki kod, Microsoft Access Northwind örnek veritabanına bağlanabildiğinizi varsayar. Kod, Ürünler tablosundan <xref:System.Data.OleDb.OleDbCommand> satırları seçmek için bir oluşturur ve bu durumda 5, <xref:System.Data.OleDb.OleDbParameter> belirtilen parametre değerinden daha büyük bir UnitPrice değeri olan satırları satırlara kısıtlamak için bir değer ekler. , <xref:System.Data.OleDb.OleDbConnection> Bir`using` bloğun içinde açılır ve bu, kodun çıkış sırasında kaynakların kapatılmasını ve aktiften çıkarılmasını sağlar. Kod, komutunu kullanarak <xref:System.Data.OleDb.OleDbDataReader>komutu yürütür ve sonuçları konsol penceresinde görüntüler.
 
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-Bu örnekteki kod Microsoft Access Northwind örnek veritabanına bağlanabildiğinizi varsayar. Kod oluşturur bir <xref:System.Data.Odbc.OdbcCommand> Ürünler tablosundan satırları seçmek için ekleme bir <xref:System.Data.Odbc.OdbcParameter> sonuçları belirtilen parametre, bu durumda 5 değerinden bir UnitPrice satırları sınırlamak için. <xref:System.Data.Odbc.OdbcConnection> İçinde açılan bir `using` bloğu, kaynakları kapalı ve kod çıktığında elden emin olmanızı sağlar. Kod kullanarak komutu yürütür. bir <xref:System.Data.Odbc.OdbcDataReader>ve sonuçları konsol penceresinde görüntüler.
+Bu örnekteki kod, Microsoft Access Northwind örnek veritabanına bağlanabildiğinizi varsayar. Kod, Ürünler tablosundan <xref:System.Data.Odbc.OdbcCommand> satırları seçmek için bir oluşturur ve bu durumda 5, <xref:System.Data.Odbc.OdbcParameter> belirtilen parametre değerinden daha büyük bir UnitPrice değeri olan satırları satırlara kısıtlamak için bir değer ekler. , <xref:System.Data.Odbc.OdbcConnection> Bir`using` blok içinde açılır ve bu, kodun çıkış sırasında kaynakların kapatılmasını ve aktiften çıkarılmasını sağlar. Kod, komutunu kullanarak <xref:System.Data.Odbc.OdbcDataReader>komutu yürütür ve sonuçları konsol penceresinde görüntüler.
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
 
 ### <a name="oracleclient"></a>OracleClient
-Bu örnekteki kod tanıtım bağlantı varsayar. Bir Oracle sunucusunda müşteri. Ayrıca, System.Data.OracleClient.dll bir başvuru eklemeniz gerekir. Kod verileri döndürür bir <xref:System.Data.OracleClient.OracleDataReader>.
+Bu örnekteki kod, TANıTıMA bir bağlantı olduğunu varsayar. Bir Oracle sunucusunda MÜŞTERI. System. Data. OracleClient. dll ' ye de bir başvuru eklemeniz gerekir. Kod, içindeki <xref:System.Data.OracleClient.OracleDataReader>verileri döndürür.
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework örnekleri
-Aşağıdaki kod listeleri varlıkları bir varlık veri modeli (EDM) sorgulayarak bir veri kaynağından veri almak nasıl ekleyebileceğiniz gösterilmektedir. Bu örnekler, Northwind örnek veritabanını temel alan bir model kullanır. Entity Framework hakkında daha fazla bilgi için bkz: [Entity Framework'e Genel Bakış](../../../../docs/framework/data/adonet/ef/overview.md).
+Aşağıdaki kod listeleri bir Varlık Veri Modeli (EDM) içindeki varlıkları sorgulayarak bir veri kaynağından nasıl veri alınacağını göstermektedir. Bu örnekler, Northwind örnek veritabanına dayalı bir model kullanır. Entity Framework hakkında daha fazla bilgi için bkz. [Entity Framework genel bakış](./ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar
-Bu örnekteki kod, yalnızca kullanıcı, Categoryıd'si ve CategoryName özellikleri içeren bir anonim tür öngörülen kategorileri nesneleri olarak verileri döndürmek için LINQ sorgusu kullanır. Daha fazla bilgi için [LINQ to Entities genel bakış](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+Bu örnekteki kod, verileri kategori nesneleri olarak döndürmek için, yalnızca CategoryID ve CategoryName özelliklerini içeren anonim bir tür olarak tasarlanan bir LINQ sorgusu kullanır. Daha fazla bilgi için bkz. [LINQ to Entities genel bakış](./ef/language-reference/linq-to-entities.md).
 
 ```csharp
 using System;
@@ -136,8 +136,8 @@ Class LinqSample
 End Class
 ```
 
-### <a name="typed-objectquery"></a>Türü belirlenmiş ObjectQuery
-Bu örnekteki kod bir <xref:System.Data.Objects.ObjectQuery%601> veri kategorileri nesneler olarak döndürülecek. Daha fazla bilgi için [nesne sorgularını](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
+### <a name="typed-objectquery"></a>Tür ObjectQuery
+Bu örnekteki kod, verileri kategori nesneleri <xref:System.Data.Objects.ObjectQuery%601> olarak döndürmek için bir kullanır. Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
-Bu örnekteki kod bir <xref:System.Data.EntityClient.EntityCommand> varlık SQL sorgusu yürütülemedi. Bu sorgu kategorileri varlık türünün örneğini temsil eden kayıtlarını içeren bir liste döndürür. Bir <xref:System.Data.EntityClient.EntityDataReader> sonuç kümesinde veri kayıtlarını erişmek için kullanılır. Daha fazla bilgi için [Entity Framework için EntityClient sağlayıcısı](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
+Bu örnekteki kod, Entity SQL bir sorgu <xref:System.Data.EntityClient.EntityCommand> yürütmek için bir kullanır. Bu sorgu, kategori varlık türünün örneklerini temsil eden kayıtların bir listesini döndürür. <xref:System.Data.EntityClient.EntityDataReader> Sonuç kümesindeki veri kayıtlarına erişmek için kullanılır. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](./ef/entityclient-provider-for-the-entity-framework.md).
 
 ```csharp
 using System;
@@ -271,7 +271,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ - SQL
-Bu örnekteki kod, yalnızca kullanıcı, Categoryıd'si ve CategoryName özellikleri içeren bir anonim tür öngörülen kategorileri nesneleri olarak verileri döndürmek için LINQ sorgusu kullanır. Bu örnekte, Northwind veri bağlama temel alınmıştır. Daha fazla bilgi için [Başlarken](../../../../docs/framework/data/adonet/sql/linq/getting-started.md).
+Bu örnekteki kod, verileri kategori nesneleri olarak döndürmek için, yalnızca CategoryID ve CategoryName özelliklerini içeren anonim bir tür olarak tasarlanan bir LINQ sorgusu kullanır. Bu örnek, Northwind veri bağlamını temel alır. Daha fazla bilgi için bkz [. Başlarken](./sql/linq/getting-started.md).
 
 ```csharp
 using System;
@@ -345,9 +345,8 @@ End Class
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
 - [Veri uygulamaları oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [Bir varlık veri modeli (varlık çerçevesi görevler) sorgulama](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [Nasıl yapılır: Anonim türdeki nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Varlık Veri Modeli sorgulama (Entity Framework görevler)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [Nasıl yapılır: Anonim tür nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

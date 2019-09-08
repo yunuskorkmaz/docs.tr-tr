@@ -2,46 +2,46 @@
 title: Veritabanını Sorgulama
 ms.date: 03/30/2017
 ms.assetid: eefb8b0c-ff07-4e86-a3d3-567479523fe9
-ms.openlocfilehash: fdcfaa3fc0d08df07027d44399612fb688b920d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c48879d8e3ae699ef749fc14923358174010aae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918040"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782077"
 ---
 # <a name="querying-the-database"></a>Veritabanını Sorgulama
-Bu konu grubu geliştirin ve sorguları yürütmek açıklar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeleri.  
+Bu konu grubu, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projelerde sorguları geliştirmeyi ve yürütmeyi açıklamaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Bilgi sorgulama](../../../../../../docs/framework/data/adonet/sql/linq/how-to-query-for-information.md)  
- Kısaca gösterilir nasıl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgular, temel olarak aynı [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] genellikle sorgular.  
+ [Nasıl yapılır: Bilgi sorgula](how-to-query-for-information.md)  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Sorguların genellikle [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] sorgularla aynı olduğunu kısaca gösterir.  
   
- [Nasıl yapılır: Salt okunur olarak bilgileri alınamıyor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-information-as-read-only.md)  
- Veri değişiklik planlı sorgu performansını artırmak açıklar.  
+ [Nasıl yapılır: Bilgileri salt okuma olarak alma](how-to-retrieve-information-as-read-only.md)  
+ Verilerde hiçbir değişiklik planlanolmadığında sorgu performansının nasıl artırılacağını açıklar.  
   
- [Nasıl yapılır: Ne kadar ilgili verilerin alındığını denetleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)  
- Ana hedef birlikte hangi ilgili verilerin alındığını denetleme açıklar.  
+ [Nasıl yapılır: Ilgili verilerin ne kadar alındığını denetleme](how-to-control-how-much-related-data-is-retrieved.md)  
+ Ana hedefle birlikte hangi ilgili verilerin birlikte alındığını nasıl denetleneceğini açıklar.  
   
- [Nasıl yapılır: İlgili verileri filtreleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-related-data.md)  
- Bir alt sorgu kullanarak ilgili verileri almak nasıl açıklar.  
+ [Nasıl yapılır: Ilgili verileri filtrele](how-to-filter-related-data.md)  
+ Bir alt sorgu kullanarak ilgili verilerin nasıl alınacağını açıklar.  
   
- [Nasıl yapılır: Geciktirilmiş yüklemeyi kapatma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-turn-off-deferred-loading.md)  
- Geciktirilmiş yüklemeyi kapatma açıklar.  
+ [Nasıl yapılır: Ertelenmiş yüklemeyi kapat](how-to-turn-off-deferred-loading.md)  
+ Ertelenmiş yüklemeyi devre dışı bırakma işlemini açıklar.  
   
- [Nasıl yapılır: Doğrudan SQL sorguları yürütme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-queries.md)  
- SQL dilini kullanarak sorguları göndermek nasıl açıklar.  
+ [Nasıl yapılır: SQL sorgularını doğrudan Yürüt](how-to-directly-execute-sql-queries.md)  
+ SQL Language kullanılarak sorguların nasıl gönderileceği açıklanır.  
   
- [Nasıl yapılır: Store ve yeniden sorguları](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)  
- Sorgu derleme bir kez ancak farklı parametrelerle birden çok kez kullanın açıklar.  
+ [Nasıl yapılır: Sorguları depolayın ve yeniden kullanın](how-to-store-and-reuse-queries.md)  
+ Bir sorgunun bir kez nasıl derlenip farklı parametrelerle birden çok kez nasıl kullanılacağı açıklanmaktadır.  
   
- [Nasıl yapılır: Sorgularda bileşik anahtarlar işleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-handle-composite-keys-in-queries.md)  
- Burada işleci yalnızca tek bir bağımsız değişken alır bir sorguda birden fazla sütun içerecek şekilde açıklar.  
+ [Nasıl yapılır: Sorgularda bileşik anahtarları işle](how-to-handle-composite-keys-in-queries.md)  
+ Bir sorguda birden fazla sütunun, işlecin yalnızca tek bir bağımsız değişken aldığı bir sorguya nasıl ekleneceğini açıklar.  
   
- [Nasıl yapılır: Tek seferde birçok nesne alma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-many-objects-at-once.md)  
- Nasıl kullanılacağını açıklar <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
+ [Nasıl yapılır: Aynı anda birçok nesneyi al](how-to-retrieve-many-objects-at-once.md)  
+ ' Nin nasıl <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>kullanılacağını açıklar.  
   
- [Nasıl yapılır: DataContext düzeyinde filtreleme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-filter-at-the-datacontext-level.md)  
- Başka bir kullanımını açıklar <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>.  
+ [Nasıl yapılır: DataContext düzeyinde filtrele](how-to-filter-at-the-datacontext-level.md)  
+ Uygulamasının <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>başka bir kullanımını açıklar.  
   
- [Sorgu Örnekleri](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- Birçok sorgularının örnekleri sağlar.
+ [Sorgu Örnekleri](query-examples.md)  
+ Birçok sorguya örnek sağlar.

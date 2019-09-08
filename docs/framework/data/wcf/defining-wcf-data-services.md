@@ -4,61 +4,61 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 05006ff3-02dc-410e-831e-54ec3e7e24ef
-ms.openlocfilehash: ac75f5fd91f68d9403dc7b42325bf8970f0c6794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9280936a16d50283c01120c9dc046e65a0a79ae
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765654"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790877"
 ---
 # <a name="defining-wcf-data-services"></a>WCF Veri Hizmetlerini Tanımlama
 
-Bu bölümde verileri olarak kullanıma sunmak için WCF veri hizmetlerini oluşturup yapılandırın açıklar bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış. Bir veri hizmeti oluşturmak için gerekli temel adımlar hakkında daha fazla bilgi için bkz. [verilerinizi hizmet olarak kullanıma sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md).
+Bu bölümde, verileri [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akış olarak göstermek için WCF veri Hizmetleri oluşturma ve yapılandırma açıklanmaktadır. Veri hizmeti oluşturmak için gereken temel adımlar hakkında daha fazla bilgi için bkz. [verilerinizi hizmet olarak gösterme](exposing-your-data-as-a-service-wcf-data-services.md).
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
- [Veri Hizmeti Yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
+ [Veri Hizmeti Yapılandırma](configuring-the-data-service-wcf-data-services.md)
 
- WCF Veri Hizmetleri tarafından sağlanan veri hizmeti yapılandırma seçeneklerini açıklar.
+ WCF Veri Hizmetleri tarafından sunulan veri hizmeti yapılandırma seçeneklerini açıklar.
 
- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Veri Hizmetleri Sağlayıcıları](data-services-providers-wcf-data-services.md)
 
- Verileri bir veri hizmeti olarak kullanıma sunmak için sağlayıcı modeli açıklar.
+ Veri hizmeti olarak verileri açığa çıkarmak için sağlayıcı modellerini açıklar.
 
- [Hizmet İşlemleri](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)
+ [Hizmet İşlemleri](service-operations-wcf-data-services.md)
 
- Sunucu üzerinde yöntemleri açığa hizmet işlemleri tanımlamak açıklar.
+ Sunucuda Yöntemler sunan hizmet işlemlerinin nasıl tanımlanacağını açıklar.
 
- [Akış Özelleştirme](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md)
+ [Akış Özelleştirme](feed-customization-wcf-data-services.md)
 
- Veri akışı öğeleri ve veri hizmeti sağlayıcısı tarafından tanımlanan veri modeli'ndeki varlıkları arasında bir eşleme oluşturma işlemini açıklar.
+ Veri akışında veri hizmeti sağlayıcısı ve öğeleri tarafından tanımlanan veri modelindeki varlıklar arasında bir eşlemenin nasıl oluşturulduğunu açıklar.
 
- [Durdurucular](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)
+ [Durdurucular](interceptors-wcf-data-services.md)
 
- Veri Hizmeti isteklerinde özel iş mantığını gerçekleştirmek için dinleyiciyi yöntemleri tanımlamak açıklar.
+ Veri hizmetine yönelik isteklerde özel iş mantığı gerçekleştirmek için dinleyici oluşturma yöntemlerinin nasıl tanımlanacağını açıklar.
 
- [WCF Veri Hizmetleri Geliştirme ve Dağıtma](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
+ [WCF Veri Hizmetleri Geliştirme ve Dağıtma](developing-and-deploying-wcf-data-services.md)
 
- Geliştirin ve Visual Studio kullanarak bir veri hizmeti dağıtma açıklanır.
+ Visual Studio kullanarak bir veri hizmetinin nasıl geliştirileceği ve dağıtılacağı açıklanmaktadır.
 
- [WCF Veri Hizmetlerinin Güvenliğini Sağlama](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
+ [WCF Veri Hizmetlerinin Güvenliğini Sağlama](securing-wcf-data-services.md)
 
- Kimlik doğrulama ve yetkilendirme için veri hizmeti ve diğer güvenlik konuları açıklanmaktadır.
+ Veri hizmeti için kimlik doğrulaması ve yetkilendirmeyi ve diğer güvenlik konularını açıklar.
 
- [Veri Hizmeti Barındırma](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
+ [Veri Hizmeti Barındırma](hosting-the-data-service-wcf-data-services.md)
 
- Veri Hizmeti için bir konak seçin açıklar.
+ Veri hizmetiniz için bir konak seçme işlemini açıklar.
 
- [Veri Hizmeti Sürümü Oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)
+ [Veri Hizmeti Sürümü Oluşturma](data-service-versioning-wcf-data-services.md)
 
- OData farklı sürümleriyle çalışmaya açıklar.
+ OData 'in farklı sürümleriyle nasıl çalışabileceğinizi açıklar.
 
- [WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları](../../../../docs/framework/data/wcf/wcf-data-services-protocol-implementation-details.md)
+ [WCF Veri Hizmetleri Protokol Uygulama Ayrıntıları](wcf-data-services-protocol-implementation-details.md)
 
- WCF Veri Hizmetleri tarafından şu anda uygulanmaz ve isteğe bağlı işlevler OData protokolü açıklar.
+ WCF Veri Hizmetleri tarafından şu anda uygulanmayan OData protokolünün isteğe bağlı işlevlerini açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
-- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)
+- [Veri Hizmeti Kaynaklarına Erişme](accessing-data-service-resources-wcf-data-services.md)
+- [Başlarken](getting-started-with-wcf-data-services.md)

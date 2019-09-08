@@ -8,75 +8,75 @@ helpviewer_keywords:
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab7cbac98af24e89ec4da3cc9737b0cadf5cc394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7324ddb63f000f55a16c4963c808f658aa9098a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789785"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787323"
 ---
 # <a name="ialink-interface"></a>IALink Arabirimi
-.NET Framework derlemeleri oluştururken yardımcı olur. Diğerlerinin yanı sıra arabirimi birden çok modül derlemeler için derleme bildirimleri yazma, derlemeleri tanımlayıcı adlarla imzalama ve netmodule'ler oluşturmaya yardımcı yöntemler içerir.  
+.NET Framework derlemeleri oluşturulmasına yardımcı olur. Diğer şeyler arasında arabirim, çok modüllü derlemeler için derleme bildirimleri yazma, güçlü adlara sahip derlemeleri imzalama ve netmodules oluşturma konusunda yardımcı olan yöntemleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [AddFile yöntemi](../../../../docs/framework/unmanaged-api/alink/addfile-method.md)  
+ [AddFile yöntemi](addfile-method.md)  
   
- [Addımport yöntemi](../../../../docs/framework/unmanaged-api/alink/addimport-method.md)  
+ [AddImport yöntemi](addimport-method.md)  
   
- [CloseAssembly Yöntemi](../../../../docs/framework/unmanaged-api/alink/closeassembly-method.md)  
+ [CloseAssembly Yöntemi](closeassembly-method.md)  
   
- [CloseEnum Yöntemi](../../../../docs/framework/unmanaged-api/alink/closeenum-method.md)  
+ [CloseEnum Yöntemi](closeenum-method.md)  
   
- [EmbedResource Yöntemi](../../../../docs/framework/unmanaged-api/alink/embedresource-method.md)  
+ [EmbedResource Yöntemi](embedresource-method.md)  
   
- [EmitAssemblyCustomAttribute Yöntemi](../../../../docs/framework/unmanaged-api/alink/emitassemblycustomattribute-method.md)  
+ [EmitAssemblyCustomAttribute Yöntemi](emitassemblycustomattribute-method.md)  
   
- [EmitManifest Yöntemi](../../../../docs/framework/unmanaged-api/alink/emitmanifest-method.md)  
+ [EmitManifest Yöntemi](emitmanifest-method.md)  
   
- [EndMerge Yöntemi](../../../../docs/framework/unmanaged-api/alink/endmerge-method.md)  
+ [EndMerge Yöntemi](endmerge-method.md)  
   
- [EnumCustomAttributes Yöntemi](../../../../docs/framework/unmanaged-api/alink/enumcustomattributes-method.md)  
+ [EnumCustomAttributes Yöntemi](enumcustomattributes-method.md)  
   
- [EnumImportTypes Yöntemi](../../../../docs/framework/unmanaged-api/alink/enumimporttypes-method.md)  
+ [EnumImportTypes Yöntemi](enumimporttypes-method.md)  
   
- [ExportNestedType Yöntemi](../../../../docs/framework/unmanaged-api/alink/exportnestedtype-method.md)  
+ [ExportNestedType Yöntemi](exportnestedtype-method.md)  
   
- [ExportNestedTypeForwarder Yöntemi](../../../../docs/framework/unmanaged-api/alink/exportnestedtypeforwarder-method.md)  
+ [ExportNestedTypeForwarder Yöntemi](exportnestedtypeforwarder-method.md)  
   
- [ExportType Yöntemi](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)  
+ [ExportType Yöntemi](exporttype-method.md)  
   
- [ExportTypeForwarder Yöntemi](../../../../docs/framework/unmanaged-api/alink/exporttypeforwarder-method.md)  
+ [ExportTypeForwarder Yöntemi](exporttypeforwarder-method.md)  
   
- [FreeWin32ResBlob Yöntemi](../../../../docs/framework/unmanaged-api/alink/freewin32resblob-method.md)  
+ [FreeWin32ResBlob Yöntemi](freewin32resblob-method.md)  
   
- [GetAssemblyRefHash Yöntemi](../../../../docs/framework/unmanaged-api/alink/getassemblyrefhash-method.md)  
+ [GetAssemblyRefHash Yöntemi](getassemblyrefhash-method.md)  
   
- [GetResolutionScope Yöntemi](../../../../docs/framework/unmanaged-api/alink/getresolutionscope-method.md)  
+ [GetResolutionScope Yöntemi](getresolutionscope-method.md)  
   
- [GetScope metodu](../../../../docs/framework/unmanaged-api/alink/getscope-method.md)  
+ [GetScope yöntemi](getscope-method.md)  
   
- [GetWin32ResBlob Yöntemi](../../../../docs/framework/unmanaged-api/alink/getwin32resblob-method.md)  
+ [GetWin32ResBlob Yöntemi](getwin32resblob-method.md)  
   
- [ImportFile Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)  
+ [ImportFile Yöntemi](importfile-method.md)  
   
- [ImportFile2 Yöntemi](../../../../docs/framework/unmanaged-api/alink/importfile2-method.md)  
+ [ImportFile2 Yöntemi](importfile2-method.md)  
   
- [ImportTypes Yöntemi](../../../../docs/framework/unmanaged-api/alink/importtypes-method.md)  
+ [ImportTypes Yöntemi](importtypes-method.md)  
   
  "Init yöntemi"  
   
- [LinkResource Yöntemi](../../../../docs/framework/unmanaged-api/alink/linkresource-method.md)  
+ [LinkResource Yöntemi](linkresource-method.md)  
   
- [PreCloseAssembly Yöntemi](../../../../docs/framework/unmanaged-api/alink/precloseassembly-method.md)  
+ [PreCloseAssembly Yöntemi](precloseassembly-method.md)  
   
- [SetAssemblyFile Yöntemi](../../../../docs/framework/unmanaged-api/alink/setassemblyfile-method.md)  
+ [SetAssemblyFile Yöntemi](setassemblyfile-method.md)  
   
- [SetAssemblyProps Yöntemi](../../../../docs/framework/unmanaged-api/alink/setassemblyprops-method.md)  
+ [SetAssemblyProps Yöntemi](setassemblyprops-method.md)  
   
- [SetNonAssemblyFlags Yöntemi](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
+ [SetNonAssemblyFlags Yöntemi](setnonassemblyflags-method.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [ALink API](index.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)

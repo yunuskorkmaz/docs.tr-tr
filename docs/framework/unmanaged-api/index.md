@@ -9,58 +9,58 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677bee7319a80e405098f0dd5c8684765806c5f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984171"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796878"
 ---
 # <a name="unmanaged-api-reference"></a>Yönetilmeyen API Başvurusu
-Bu bölüm, çalışma zamanı ana bilgisayarları, derleyiciler, çözücüler, obfuscators, hata ayıklayıcıları ve profil oluşturucuları gibi yönetilen-kodla ilgili uygulamaları tarafından kullanılan yönetilmeyen API'ları hakkında bilgi içerir.  
+Bu bölüm, çalışma zamanı Konakları, derleyiciler, kod çözücüler, gizleme, hata ayıklayıcılar ve profil oluşturucular gibi yönetilen kodla ilgili uygulamalar tarafından kullanılabilecek yönetilmeyen API 'Ler hakkında bilgiler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Ortak Veri Türleri](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
- Özellikle yönetilmeyen profil oluşturma ve hata ayıklama API'leri kullanılan ortak veri türleri listeler.  
+ [Ortak Veri Türleri](common-data-types-unmanaged-api-reference.md)  
+ Özellikle yönetilmeyen profil oluşturma ve hata ayıklama API 'Lerinde kullanılan ortak veri türlerini listeler.  
   
- [ALINK](../../../docs/framework/unmanaged-api/alink/index.md)  
- .NET Framework derlemeleri ve bağlantısız modülleri oluşturmayı destekler ALink API açıklar.  
+ [ALINK](./alink/index.md)  
+ .NET Framework derlemeleri ve ilişkisiz modülleri oluşturmayı destekleyen ALink API 'sini açıklar.  
   
- [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
- Authenticode XrML lisans oluşturma ve doğrulama modülü destekler.  
+ [Authenticode](./authenticode/index.md)  
+ Authenticode XrML lisans oluşturma ve doğrulama modülünü destekler.  
   
- [Sabitler](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
- CorSym.idl içinde tanımlanmış sabitleri açıklar.  
+ [Sabitler](constants-unmanaged-api-reference.md)  
+ Corsyd. IDL içinde tanımlanan sabitleri açıklar.  
   
  [Özel arabirim öznitelikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
- Bileşen Nesne Modeli (COM) özel arabirim öznitelikleri açıklar.  
+ Bileşen nesne modeli (COM) özel arabirim özniteliklerini açıklar.  
   
- [Hata Ayıklama](../../../docs/framework/unmanaged-api/debugging/index.md)  
- Ortak dil çalışma zamanı (CLR) ortamında çalışan kodda hata ayıklamak hata ayıklayıcı sağlar hata ayıklama API açıklar.  
+ [Hata Ayıklama](./debugging/index.md)  
+ Bir hata ayıklayıcının ortak dil çalışma zamanı (CLR) ortamında çalışan kodun hatalarını ayıklamasını sağlayan hata ayıklama API 'sini açıklar.  
   
- [Tanılama Simge Deposu](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
- Bir hata ayıklayıcı tarafından kullanım için sembol bilgisi oluşturmak bir derleyici sağlayan tanılama sembol deposu API'sini açıklar.  
+ [Tanılama Simge Deposu](./diagnostics/index.md)  
+ Bir derleyicinin hata ayıklayıcı tarafından kullanılmak üzere sembol bilgisi oluşturmasını sağlayan tanılama sembol deposu API 'sini açıklar.  
   
- [Fusion](../../../docs/framework/unmanaged-api/fusion/index.md)  
- Doğru uygulama için bu kaynakları sürümlerinin bulmak için bir uygulamanın kaynak özelliklerine erişmek bir çalışma zamanı ana bilgisayarı sağlayan fusion API açıklar.  
+ [Fusion](./fusion/index.md)  
+ Uygulama için bu kaynakların doğru sürümlerini bulmak üzere bir çalışma zamanı konağının bir uygulama kaynaklarının özelliklerine erişmesini sağlayan Fusion API 'sini açıklar.  
   
- [Barındırma](../../../docs/framework/unmanaged-api/hosting/index.md)  
- CLR uygulamalarıyla tümleştirmeleri için yönetilmeyen ana bilgisayarları etkinleştirir barındırma API'si açıklar.  
+ [Barındırma](./hosting/index.md)  
+ Yönetilmeyen ana bilgisayarların CLR 'yi uygulamalarıyla tümleştirmesini sağlayan barındırma API 'sini açıklar.  
   
- [Meta Veriler](../../../docs/framework/unmanaged-api/metadata/index.md)  
- Bir bileşenin meta verileri olmadan CLR tarafından yüklenen türleri erişmek veya oluşturmak bir istemci bir derleyici gibi sağlayan API meta veriler açıklanmaktadır.  
+ [Meta Veriler](./metadata/index.md)  
+ Bir derleyicinin, CLR tarafından yüklenen türler olmadan bir bileşenin meta verilerini oluşturmasına veya erişmesine olanak tanıyan meta veri API 'sini açıklar.  
   
- [Profil Oluşturma](../../../docs/framework/unmanaged-api/profiling/index.md)  
- Bir profil oluşturucunun CLR tarafından bir programın yürütülmesi izlenemedi sağlar profil oluşturma API açıklar.  
+ [Profil Oluşturma](./profiling/index.md)  
+ Profil oluşturucunun bir programın CLR tarafından yürütülmesini izlemesini sağlayan profil oluşturma API 'sini açıklar.  
   
- [Kesin Adlandırma](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
- Tanımlayıcı ad derlemeleri imzalama yönetmek bir istemci sağlayan güçlü adlandırma API açıklar.  
+ [Kesin Adlandırma](./strong-naming/index.md)  
+ Bir istemcinin derlemeler için tanımlayıcı ad imzalamayı yönetmesine olanak tanıyan güçlü adlandırma API 'sini açıklar.  
 
  [WMI ve Performans Sayaçları](wmi/index.md)  
- Windows Yönetim Araçları (WMI) kitaplıkları çağrılar sarmalama API'leri açıklar.
+ Windows Yönetim Araçları (WMI) kitaplıklarına çağrıları kaymakta olan API 'Leri açıklar.
   
- [Tlbexp Yardımcı İşlevleri](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- Tür kitaplığı dışarı Aktarıcı tarafından (Tlbexp.exe) derleme için tür kitaplığını dönüştürme işlemi sırasında kullanılan arabirimi ve iki yardımcı işlev açıklar.  
+ [Tlbexp Yardımcı İşlevleri](./tlbexp/index.md)  
+ Tür kitaplığı verme programı (Tlbexp. exe) tarafından derlemeden tür kitaplığı dönüştürme işlemi sırasında kullanılan iki yardımcı işlevi ve arabirimi açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Geliştirme Kılavuzu](../../../docs/framework/development-guide.md)  

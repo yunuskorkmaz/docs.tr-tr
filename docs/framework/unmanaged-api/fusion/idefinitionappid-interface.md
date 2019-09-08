@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929909a7f2c4fa1799c8fed94787b8f853c7eac2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697244"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796514"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId Arabirimi
-Uygulama geçerli kapsamda tanımlar kod için benzersiz bir tanımlayıcı temsil eder.  
+Geçerli kapsamda uygulamayı tanımlayan kod için benzersiz tanımlayıcıyı temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|`IDefinitionAppId::get_Codebase`|Bu kod temsil eden bir biçimlendirilmiş dize alır `IDefinitionAppId` nesne.|  
-|`IDefinitionAppId::put_Codebase`|Bu kod ayarlar `IDefinitionAppId` belirtilen nesneye biçimlendirilmiş dize değeri.|  
-|`IDefinitionAppId::EnumAppPath`|Bir arabirim işaretçisi alır bir [Ienumdefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md) geçerli uygulama yolu derlemeleri içeren nesne.|  
-|`IDefinitionAppId::SetAppPath`|Uygulama yolu geçerli kapsamda belirtilen tarafından başvurulan değer derleme için ayarlar [Idefinitionıdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) nesne.|  
-|`IDefinitionAppId::get_SubscriptionId`|Abonelik için bu belirteci tanımlayıcı bir dize gösterimini bir işaretçi alır `IDefinitionAppId` nesne.|  
-|`IDefinitionAppId::put_SubscriptionId`|Bir abonelik için belirteç tanımlayıcısı için ayarlar `IDefinitionAppId` nesne belirtilen dize değeri.|  
+|`IDefinitionAppId::get_Codebase`|Bu `IDefinitionAppId` nesnedeki kodu temsil eden biçimli bir dize alır.|  
+|`IDefinitionAppId::put_Codebase`|Bu `IDefinitionAppId` nesnenin kodunu belirtilen biçimli dize değerine ayarlar.|  
+|`IDefinitionAppId::EnumAppPath`|Geçerli uygulama yolundaki derlemeleri içeren bir [IEnumDefinitionIdentity](ienumdefinitionidentity-interface.md) nesnesine yönelik bir arabirim işaretçisi alır.|  
+|`IDefinitionAppId::SetAppPath`|Geçerli kapsamdaki derleme için uygulama yolunu, belirtilen [IDefinitionIdentity](idefinitionidentity-interface.md) nesnesinin başvurduğu değere ayarlar.|  
+|`IDefinitionAppId::get_SubscriptionId`|Bu `IDefinitionAppId` nesne için bir abonelik için belirteç tanımlayıcısının dize gösterimine yönelik bir işaretçi alır.|  
+|`IDefinitionAppId::put_SubscriptionId`|Bu `IDefinitionAppId` nesne için bir aboneliğin Belirteç tanımlayıcısını belirtilen dize değerine ayarlar.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Isolation.h  
+ **Üst bilgi** Yalıtım. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)

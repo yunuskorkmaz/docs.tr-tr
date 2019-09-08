@@ -9,43 +9,43 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d03a0ae3bc84106d72803b22050a7c75a037be12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755613"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780103"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Nasıl yapılır: IIS üzerinde çalışan bir WCF veri hizmeti geliştirme
 
-Bu konuda, WCF Veri Hizmetleri Internet Information Services (IIS) üzerinde çalışan bir ASP.NET Web uygulaması tarafından barındırılıyor Northwind örnek veritabanını temel alan bir veri hizmeti oluşturmak için nasıl kullanılacağını gösterir. ASP.NET geliştirme sunucusu üzerinde çalışan ASP.NET Web uygulaması olarak aynı Northwind verileri hizmeti oluşturmak nasıl bir örnek için bkz [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
+Bu konu, Internet Information Services (IIS) üzerinde çalışan bir ASP.NET Web uygulaması tarafından barındırılan Northwind örnek veritabanına dayalı bir veri hizmeti oluşturmak için WCF Veri Hizmetleri nasıl kullanacağınızı gösterir. ASP.NET geliştirme sunucusunda çalışan bir ASP.NET Web uygulaması olarak aynı Northwind Data Service 'in nasıl oluşturulacağı hakkında bir örnek için [WCF veri hizmetleri hızlı başlangıç](quickstart-wcf-data-services.md)bölümüne bakın.
 
 > [!NOTE]
-> Northwind verileri hizmeti oluşturmak için Northwind örnek veritabanıyla yerel bilgisayarda yüklü gerekir. Bu örnek veritabanı karşıdan yüklemek için indirme sayfasında bakın [örnek veritabanları için SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+> Northwind veri hizmetini oluşturmak için, yerel bilgisayara Northwind örnek veritabanını yüklemiş olmanız gerekir. Bu örnek veritabanını indirmek için indirme sayfasına, [SQL Server Için örnek veritabanlarına](https://go.microsoft.com/fwlink/?linkid=24758)bakın.
 
-Bu konuda Entity Framework kullanarak bir veri hizmeti oluşturulacağını gösterir. Diğer Veri Hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için [Veri Hizmetleri sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
+Bu konuda, Entity Framework sağlayıcısı kullanılarak bir veri hizmetinin nasıl oluşturulacağı gösterilmektedir. Diğer veri hizmetleri sağlayıcıları kullanılabilir. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).
 
-Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine erişmesini](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+Hizmeti oluşturduktan sonra, veri hizmeti kaynaklarına açıkça erişim sağlamanız gerekir. Daha fazla bilgi için [nasıl yapılır: Veri hizmetine](how-to-enable-access-to-the-data-service-wcf-data-services.md)erişimi etkinleştirin.
 
-## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS üzerinde çalışan ASP.NET web uygulaması oluşturun
+## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS üzerinde çalışan ASP.NET Web uygulaması oluşturma
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
 
-2. İçinde **yeni proje** iletişim kutusunda **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Web**  kategorisi.
+2. **Yeni proje** iletişim kutusunda, **yüklü** > [ **C# Visual** veya **Visual Basic**] > **Web** kategorisini seçin.
 
-3. Seçin **ASP.NET Web uygulaması** şablonu.
+3. **ASP.NET Web uygulaması** şablonunu seçin.
 
-4. Girin `NorthwindService` olarak projenin adı.
+4. Projenin `NorthwindService` adı olarak girin.
 
 5. **Tamam**'ı tıklatın.
 
-6. Üzerinde **proje** menüsünde **NorthwindService özellikleri**.
+6. **Proje** menüsünde, **NorthwindService özellikleri**' ni seçin.
 
-7. Seçin **Web** sekmesine tıklayın ve ardından **kullanım yerel IIS Web sunucusunda**.
+7. **Web** sekmesini seçin ve ardından **yerel IIS Web sunucusu kullan**' ı seçin.
 
-8. Tıklayın **sanal dizin oluştur** ve ardından **Tamam**.
+8. **Sanal dizin oluştur** ' a ve ardından **Tamam**' a tıklayın.
 
-9. Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:
+9. Komut isteminden yönetici ayrıcalıklarıyla, aşağıdaki komutlardan birini yürütün (işletim sistemine bağlı olarak):
 
     - 32 bit sistemler:
 
@@ -59,9 +59,9 @@ Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağl
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-     Bu bilgisayarda Windows Communication Foundation (WCF) kayıtlı olduğundan emin olur.
+     Bu, Windows Communication Foundation (WCF) bilgisayarda kayıtlı olduğundan emin olmanızı sağlar.
 
-10. Yönetici ayrıcalıklarıyla komut isteminden (işletim sistemi) bağlı olarak aşağıdaki komutlardan birini yürütün:
+10. Komut isteminden yönetici ayrıcalıklarıyla, aşağıdaki komutlardan birini yürütün (işletim sistemine bağlı olarak):
 
     - 32 bit sistemler:
 
@@ -75,33 +75,33 @@ Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağl
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-     Bu WCF bilgisayara yüklendikten sonra IIS doğru şekilde çalışmasını sağlar. Ayrıca IIS yeniden başlatmanız gerekebilir.
+     Bu, bilgisayarda WCF yüklendikten sonra IIS 'nin düzgün şekilde çalıştığından emin olmanızı sağlar. Ayrıca IIS 'yi de yeniden başlatmanız gerekebilir.
 
-11. IIS7'de ASP.NET uygulama çalıştığında, aşağıdaki adımları da gerçekleştirmeniz gerekir:
+11. ASP.NET uygulaması ııS7 üzerinde çalıştığında, aşağıdaki adımları da gerçekleştirmeniz gerekir:
 
-    1. IIS Yöneticisi'ni açın ve altındaki PhotoService uygulamaya gidin **varsayılan Web sitesi**.
+    1. IIS Yöneticisi 'Ni açın ve **varsayılan Web sitesi**altında photoservice uygulamasına gidin.
 
-    2. İçinde **özellikler görünümü**, çift **kimlik doğrulaması**.
+    2. **Özellikler Görünümü**' nde, **kimlik doğrulaması**' na çift tıklayın.
 
-    3. Üzerinde **kimlik doğrulaması** sayfasında **anonim kimlik doğrulaması**.
+    3. **Kimlik doğrulama** sayfasında, **anonim kimlik doğrulaması**' nı seçin.
 
-    4. İçinde **eylemleri** bölmesinde tıklayın **Düzenle** altında hangi anonim kullanıcıların siteye bağlanacak güvenlik sorumlusu ayarlamak üzere.
+    4. **Eylemler** bölmesinde, anonim kullanıcıların siteye bağlanacağı güvenlik sorumlusunu ayarlamak için **Düzenle** ' ye tıklayın.
 
-    5. İçinde **anonim kimlik doğrulama bilgilerini Düzenle** iletişim kutusunda **uygulama havuzu kimliği**.
+    5. **Anonim kimlik doğrulaması kimlik bilgilerini düzenle** Iletişim kutusunda **uygulama havuzu kimliği**' ni seçin.
 
     > [!IMPORTANT]
-    > Ağ hizmeti hesabı kullandığınızda, anonim kullanıcılara bu hesaba ilişkin tüm iç ağ erişimini verin.
+    > Ağ hizmeti hesabı 'nı kullandığınızda, anonim kullanıcılara bu hesapla ilişkili tüm iç ağ erişimini vermiş olursunuz.
 
-12. Visual Studio'da SQL Server Management Studio, sqlcmd.exe yardımcı programı veya Transact-SQL Düzenleyicisi'ni kullanarak Northwind veritabanına ekli olan SQL Server örneği üzerinde aşağıdaki Transact-SQL komutu yürütün:
+12. Visual Studio 'daki SQL Server Management Studio, sqlcmd. exe yardımcı programını veya Transact-SQL düzenleyicisini kullanarak, Northwind veritabanının eklendiği SQL Server örneğine karşı aşağıdaki Transact-SQL komutunu yürütün:
 
     ```sql
     CREATE LOGIN [NT AUTHORITY\NETWORK SERVICE] FROM WINDOWS;
     GO
     ```
 
-    Bu, IIS çalıştırmak için kullanılan Windows hesabının SQL Server örneğinde bir oturum oluşturur. Bu SQL Server örneğine bağlanmak IIS sağlar.
+    Bu, IIS çalıştırmak için kullanılan Windows hesabının SQL Server örneğinde bir oturum açma oluşturur. Bu, IIS 'nin SQL Server örneğine bağlanmasını sağlar.
 
-13. Northwind veritabanına ekli ile aşağıdaki Transact-SQL komutlarını yürütün:
+13. Northwind veritabanı ekli olarak, aşağıdaki Transact-SQL komutlarını yürütün:
 
     ```sql
     USE Northwind
@@ -118,50 +118,50 @@ Hizmeti oluşturduktan sonra veri hizmeti kaynaklarına erişimi açıkça sağl
     GO
     ```
 
-    Bu verileri okumak ve Northwind veritabanına veri yazmak IIS sağlayan yeni oturum açma hakkı verir.
+    Bu, yeni oturum açma haklarına izin verir ve bu da IIS 'nin Northwind veritabanına verileri okumasını ve verileri yazmasını sağlar.
 
 ## <a name="define-the-data-model"></a>Veri modelini tanımlama
 
-1. İçinde **Çözüm Gezgini**ASP.NET proje adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **ADO.NET varlık veri modeli**.
+2. **Yeni öğe Ekle** iletişim kutusunda **ADO.net varlık veri modeli**' yi seçin.
 
-3. Veri modeli için adını, `Northwind.edmx`.
+3. Veri modeli adı için, yazın `Northwind.edmx`.
 
-4. Varlık veri modeli Sihirbazı'nda seçin **veritabanından Oluştur**ve ardından **sonraki**.
+4. Varlık Veri Modeli sihirbazında, **veritabanından oluştur**' u seçin ve ardından **İleri**' ye tıklayın.
 
-5. Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:
+5. Aşağıdaki adımlardan birini gerçekleştirerek veri modelini veritabanına bağlayın ve ardından **İleri**' ye tıklayın:
 
-    - Önceden yapılandırılmış bir veritabanı bağlantısı yoksa tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://go.microsoft.com/fwlink/?LinkId=123631). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
+    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına](https://go.microsoft.com/fwlink/?LinkId=123631)bağlantı oluşturun. Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
 
          \- veya -
 
-    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
+    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantınız varsa, bağlantı listesinden bu bağlantıyı seçin.
 
-6. Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.
+6. Sihirbazın son sayfasında, veritabanındaki tüm tablolar için onay kutularını seçin ve görünümler ve saklı yordamlar onay kutularını temizleyin.
 
-7. Tıklayın **son** sihirbazı kapatın.
+7. Sihirbazı kapatmak için **son** ' a tıklayın.
 
 ## <a name="create-the-data-service"></a>Veri hizmetini oluşturma
 
-1. İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti**.
+2. **Yeni öğe Ekle** iletişim kutusunda, **WCF veri hizmeti**' ni seçin.
 
-   ![Visual Studio 2015'te WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.
+   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.
 
-3. Hizmet adını girin `Northwind`.
+3. Hizmetin adı için girin `Northwind`.
 
-     Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur. Varsayılan olarak, kod düzenleyicisi penceresi açılır. İçinde **Çözüm Gezgini**, hizmet adı, Northwind ve uzantısını içerir. svc.cs veya. svc.vb.
+     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır. **Çözüm Gezgini**, hizmetin adı, Northwind ve uzantısı. svc.cs veya. svc. vb ' dir.
 
-4. Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindEntities`. Sınıf tanımını aşağıdaki görünmesi gerekir:
+4. Veri Hizmeti kodunda, veri hizmetini tanımlayan sınıfın tanımındaki, bu `/* TODO: put your data source class name here */` örnekte olduğu `NorthwindEntities`gibi veri modelinin varlık kapsayıcısı olan türde olan açıklamayı değiştirin. Sınıf tanımı aşağıdaki gibi görünmelidir:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Verilerinizi Hizmet Olarak Kullanıma Sunma](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)
+- [Verilerinizi Hizmet Olarak Kullanıma Sunma](exposing-your-data-as-a-service-wcf-data-services.md)

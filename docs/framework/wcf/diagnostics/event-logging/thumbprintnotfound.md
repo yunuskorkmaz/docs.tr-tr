@@ -2,24 +2,24 @@
 title: ThumbPrintNotFound
 ms.date: 03/30/2017
 ms.assetid: 0e901d43-5359-4f06-a564-6e5821253ece
-ms.openlocfilehash: 97b1106cb5618ca4278f273127da26296b91d858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd729c1ef050aeafa51b5a4c58f2d3d8a26fb7c2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944436"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796080"
 ---
 # <a name="thumbprintnotfound"></a>ThumbPrintNotFound
-Kimliği: 152  
+Numarasını 152  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, belirli parmak izine sahip bir kimlik sertifikası bulunamadı gösterir. Olay, işlem kimliği ve işlem adını listeler.  
+ Bu olay, belirli bir parmak izine sahip bir kimlik sertifikasının bulunamadığını gösterir. Olayda işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

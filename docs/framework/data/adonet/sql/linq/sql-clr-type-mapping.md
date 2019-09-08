@@ -2,17 +2,17 @@
 title: SQL-CLR Tür Eşlemesi
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 0ac2c62388e554dad31beb54966fa2a4d5ffea2e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b209283f5d4e87d1faab06184bda3f79bf1adaed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945024"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792527"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR Tür Eşlemesi
 LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz programlama dilinde ifade edilen bir nesne modeliyle eşlenir. Uygulama çalıştığında, LINQ to SQL nesne modelindeki dil ile tümleşik sorguları SQL 'e çevirir ve yürütmek üzere veritabanına gönderir. Veritabanı sonuçları döndürdüğünde, LINQ to SQL sonuçları kendi programlama dilinizde birlikte çalışleyebileceğiniz nesnelere geri çevirir.  
   
- Nesne modeli ve veritabanı arasında veri çevirmek için, bir *tür eşlemesinin* tanımlanması gerekir. LINQ to SQL, her bir ortak dil çalışma zamanı (CLR) türünü belirli bir SQL Server türü ile eşleştirmek için bir tür eşlemesi kullanır. Öznitelik tabanlı eşleme ile nesne modeli içinde, tür eşlemelerini ve veritabanı yapısı ve tablo ilişkileri gibi diğer eşleme bilgilerini tanımlayabilirsiniz. Alternatif olarak, eşleme bilgilerini bir dış eşleme dosyası ile nesne modeli dışında belirtebilirsiniz. Daha fazla bilgi için bkz. [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) ve [dış eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+ Nesne modeli ve veritabanı arasında veri çevirmek için, bir *tür eşlemesinin* tanımlanması gerekir. LINQ to SQL, her bir ortak dil çalışma zamanı (CLR) türünü belirli bir SQL Server türü ile eşleştirmek için bir tür eşlemesi kullanır. Öznitelik tabanlı eşleme ile nesne modeli içinde, tür eşlemelerini ve veritabanı yapısı ve tablo ilişkileri gibi diğer eşleme bilgilerini tanımlayabilirsiniz. Alternatif olarak, eşleme bilgilerini bir dış eşleme dosyası ile nesne modeli dışında belirtebilirsiniz. Daha fazla bilgi için bkz. [öznitelik tabanlı eşleme](attribute-based-mapping.md) ve [dış eşleme](external-mapping.md).  
   
  Bu konuda aşağıdaki noktaları ele alınmaktadır:  
   
@@ -36,9 +36,9 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
   
 <a name="DefaultTypeMapping"></a>   
 ## <a name="default-type-mapping"></a>Varsayılan tür eşleme  
- Nesne modeli veya dış eşleme dosyasını Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) veya SQLMetal komut satırı aracı ile otomatik olarak oluşturabilirsiniz. Bu araçların varsayılan tür eşlemeleri, SQL Server veritabanı içindeki sütunlara eşlemek için hangi CLR türlerinin seçili olduğunu tanımlar. Bu araçları kullanma hakkında daha fazla bilgi için bkz. [nesne modeli oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md).  
+ Nesne modeli veya dış eşleme dosyasını Nesne İlişkisel Tasarımcısı (O/R Tasarımcısı) veya SQLMetal komut satırı aracı ile otomatik olarak oluşturabilirsiniz. Bu araçların varsayılan tür eşlemeleri, SQL Server veritabanı içindeki sütunlara eşlemek için hangi CLR türlerinin seçili olduğunu tanımlar. Bu araçları kullanma hakkında daha fazla bilgi için bkz. [nesne modeli oluşturma](creating-the-object-model.md).  
   
- <xref:System.Data.Linq.DataContext.CreateDatabase%2A> Yöntemi, nesne modelindeki veya dış eşleme dosyasındaki eşleme bilgilerine göre SQL Server veritabanı oluşturmak için de kullanabilirsiniz. <xref:System.Data.Linq.DataContext.CreateDatabase%2A> Yöntemi için varsayılan tür eşlemeleri, nesne modelindeki clr türleriyle eşlemek için hangi SQL Server sütun türlerinin oluşturulacağını tanımlar. Daha fazla bilgi için [nasıl yapılır: Dinamik olarak bir veritabanı](../../../../../../docs/framework/data/adonet/sql/linq/how-to-dynamically-create-a-database.md)oluşturun.  
+ <xref:System.Data.Linq.DataContext.CreateDatabase%2A> Yöntemi, nesne modelindeki veya dış eşleme dosyasındaki eşleme bilgilerine göre SQL Server veritabanı oluşturmak için de kullanabilirsiniz. <xref:System.Data.Linq.DataContext.CreateDatabase%2A> Yöntemi için varsayılan tür eşlemeleri, nesne modelindeki clr türleriyle eşlemek için hangi SQL Server sütun türlerinin oluşturulacağını tanımlar. Daha fazla bilgi için [nasıl yapılır: Dinamik olarak bir veritabanı](how-to-dynamically-create-a-database.md)oluşturun.  
   
 <a name="BehaviorMatrix"></a>   
 ## <a name="type-mapping-run-time-behavior-matrix"></a>Tür eşleme çalışma zamanı davranış matrisi  
@@ -50,7 +50,7 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 > Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir.  
   
 ### <a name="custom-type-mapping"></a>Özel tür eşleme  
- LINQ to SQL ile, O/R Tasarımcısı, SqlMetal ve <xref:System.Data.Linq.DataContext.CreateDatabase%2A> yöntemi tarafından kullanılan varsayılan tür eşlemelerle sınırlı değildir. Özel tür eşlemelerini, açıkça bir DBML dosyasında belirterek oluşturabilirsiniz. Ardından, nesne modeli kodu ve eşleme dosyası oluşturmak için bu DBML dosyasını kullanabilirsiniz. Daha fazla bilgi için bkz. [SQL-CLR özel tür eşlemeleri](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ LINQ to SQL ile, O/R Tasarımcısı, SqlMetal ve <xref:System.Data.Linq.DataContext.CreateDatabase%2A> yöntemi tarafından kullanılan varsayılan tür eşlemelerle sınırlı değildir. Özel tür eşlemelerini, açıkça bir DBML dosyasında belirterek oluşturabilirsiniz. Ardından, nesne modeli kodu ve eşleme dosyası oluşturmak için bu DBML dosyasını kullanabilirsiniz. Daha fazla bilgi için bkz. [SQL-CLR özel tür eşlemeleri](sql-clr-custom-type-mappings.md).  
   
 <a name="BehaviorDiffs"></a>   
 ## <a name="behavior-differences-between-clr-and-sql-execution"></a>CLR ve SQL yürütme arasındaki davranış farklılıkları  
@@ -79,9 +79,9 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 > [!NOTE]
 > SQL metin türlerini bir clr <xref:System.Enum?displayProperty=nameWithType>ile eşlerken, yalnızca eşlenmiş SQL sütunundaki <xref:System.Enum> üyelerin adlarını ekleyin. Diğer değerler, <xref:System.Enum>eşlenmiş SQL sütununda desteklenmez.  
   
- O/R Tasarımcısı ve SQLMetal komut satırı aracı bir SQL türünü otomatik olarak bir clr <xref:System.Enum> sınıfına eşleyemezsiniz. Bir DBML dosyasını O/R Tasarımcısı ve SQLMetal tarafından kullanılmak üzere özelleştirerek bu eşlemeyi açıkça yapılandırmanız gerekir. Özel tür eşlemesi hakkında daha fazla bilgi için bkz. [SQL-CLR özel tür eşlemeleri](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-custom-type-mappings.md).  
+ O/R Tasarımcısı ve SQLMetal komut satırı aracı bir SQL türünü otomatik olarak bir clr <xref:System.Enum> sınıfına eşleyemezsiniz. Bir DBML dosyasını O/R Tasarımcısı ve SQLMetal tarafından kullanılmak üzere özelleştirerek bu eşlemeyi açıkça yapılandırmanız gerekir. Özel tür eşlemesi hakkında daha fazla bilgi için bkz. [SQL-CLR özel tür eşlemeleri](sql-clr-custom-type-mappings.md).  
   
- Sabit listesi için tasarlanan bir SQL sütunu diğer sayısal ve metin sütunlarıyla aynı türde olacaktır; Bu araçlar, aşağıdaki [sayısal eşleme](#NumericMapping) ve [metin ve XML eşleme](#TextMapping) bölümlerinde açıklandığı gibi, ' nin amacını ve varsayılan olarak eşleştirilmesini tanımaz. DBML dosyası ile kod üretme hakkında daha fazla bilgi için bkz. [LINQ to SQL kod oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
+ Sabit listesi için tasarlanan bir SQL sütunu diğer sayısal ve metin sütunlarıyla aynı türde olacaktır; Bu araçlar, aşağıdaki [sayısal eşleme](#NumericMapping) ve [metin ve XML eşleme](#TextMapping) bölümlerinde açıklandığı gibi, ' nin amacını ve varsayılan olarak eşleştirilmesini tanımaz. DBML dosyası ile kod üretme hakkında daha fazla bilgi için bkz. [LINQ to SQL kod oluşturma](code-generation-in-linq-to-sql.md).  
   
  Yöntemi bir clr <xref:System.Enum?displayProperty=nameWithType> türünü eşlemek için sayısal türde bir SQL sütunu oluşturur. <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>  
   
@@ -199,10 +199,10 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
 ### <a name="systemdatetime"></a>System. DateTime  
  CLR <xref:System.DateTime?displayProperty=nameWithType> türünün aralığı ve duyarlığı, <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> Yöntem için varsayılan tür eşleme olan SQL Server `DATETIME` türünün aralığından ve duyarlığından daha büyüktür. `DATETIME` Kullanım`DATETIME2`aralığı dışındaki tarihlerle ilgili özel durumların önlenmesine yardımcı olmak için, Microsoft SQL Server 2008 ' den başlayarak kullanılabilir. `DATETIME2`CLR <xref:System.DateTime?displayProperty=nameWithType>'nin aralığıyla ve duyarlığına göre eşleşir.  
   
- SQL Server tarihleri <xref:System.TimeZone>, clr 'de zengin olarak desteklenen bir özellik olan kavramı değildir. <xref:System.TimeZone>değerler, özgün <xref:System.DateTimeKind> bilgilerden bağımsız olarak, dönüştürme yapılmadan <xref:System.TimeZone> veritabanına olarak kaydedilir. Değerler veritabanından alındığında, ' <xref:System.DateTime> <xref:System.DateTimeKind> nin<xref:System.DateTimeKind.Unspecified>değeri ' a ' olan olarak yüklenir. <xref:System.DateTime> Desteklenen <xref:System.DateTime?displayProperty=nameWithType> yöntemler hakkında daha fazla bilgi için bkz. [System. DateTime yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
+ SQL Server tarihleri <xref:System.TimeZone>, clr 'de zengin olarak desteklenen bir özellik olan kavramı değildir. <xref:System.TimeZone>değerler, özgün <xref:System.DateTimeKind> bilgilerden bağımsız olarak, dönüştürme yapılmadan <xref:System.TimeZone> veritabanına olarak kaydedilir. Değerler veritabanından alındığında, ' <xref:System.DateTime> <xref:System.DateTimeKind> nin<xref:System.DateTimeKind.Unspecified>değeri ' a ' olan olarak yüklenir. <xref:System.DateTime> Desteklenen <xref:System.DateTime?displayProperty=nameWithType> yöntemler hakkında daha fazla bilgi için bkz. [System. DateTime yöntemleri](system-datetime-methods.md).  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
- Microsoft SQL Server 2008 ve .NET Framework 3,5 SP1, clr <xref:System.TimeSpan?displayProperty=nameWithType> türünü SQL Server `TIME` türüyle eşlemenizi sağlar. Ancak, clr <xref:System.TimeSpan?displayProperty=nameWithType> 'nin desteklediği Aralık ve SQL Server `TIME` türünün desteklediği büyük bir fark vardır. Değer 0 ' dan küçük veya 23:59 ' dan daha büyük bir değere eşleniyor: `TIME` 59.9999999 saat, taşma özel durumlarına neden olur. Daha fazla bilgi için bkz. [System. TimeSpan yöntemleri](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
+ Microsoft SQL Server 2008 ve .NET Framework 3,5 SP1, clr <xref:System.TimeSpan?displayProperty=nameWithType> türünü SQL Server `TIME` türüyle eşlemenizi sağlar. Ancak, clr <xref:System.TimeSpan?displayProperty=nameWithType> 'nin desteklediği Aralık ve SQL Server `TIME` türünün desteklediği büyük bir fark vardır. Değer 0 ' dan küçük veya 23:59 ' dan daha büyük bir değere eşleniyor: `TIME` 59.9999999 saat, taşma özel durumlarına neden olur. Daha fazla bilgi için bkz. [System. TimeSpan yöntemleri](system-timespan-methods.md).  
   
  Microsoft SQL Server 2000 ve SQL Server 2005 ' de, veritabanı alanlarını ile <xref:System.TimeSpan>eşleyemezsiniz. Ancak, değerler çıkarma <xref:System.TimeSpan> işleminden <xref:System.DateTime> döndürülebilecek <xref:System.TimeSpan> veya bir ifadenin bir sabit değer ya da bağlı değişken olarak tanıtıldığı için üzerinde işlemler desteklenir.  
   
@@ -258,7 +258,7 @@ LINQ to SQL, ilişkisel bir veritabanının veri modeli, tercih ettiğiniz progr
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öznitelik Tabanlı Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Dış Eşleme](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
-- [SQL-CLR Tür Uyumsuzlukları](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)
+- [Öznitelik Tabanlı Eşleme](attribute-based-mapping.md)
+- [Dış Eşleme](external-mapping.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)
+- [SQL-CLR Tür Uyumsuzlukları](sql-clr-type-mismatches.md)

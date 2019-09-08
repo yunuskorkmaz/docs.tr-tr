@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7121ace6777e7cf947fcc6ff30b1ea314851feff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636712"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798999"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall İşlevi
 
-Bir ortak/özel anahtar çifti bir kapsayıcının içine aktarır.
+Bir kapsayıcıya ortak/özel anahtar çifti aktarır.
 
-Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamekeyınstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) yöntemi yerine.
+Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameKeyInstall](../hosting/iclrstrongname-strongnamekeyinstall-method.md) metodunu kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -42,33 +42,33 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parametreler
 
 `wszKeyContainer`\
-[in] Anahtar kapsayıcısının adı. `wszKeyContainer` boş olmayan bir dize olmalıdır.
+'ndaki Anahtar kapsayıcısının adı. `wszKeyContainer`boş olmayan bir dize olmalıdır.
 
 `pbKeyBlob`\
-[in] İkili bir anahtar çifti.
+'ndaki İkili anahtar çifti.
 
 `cbKeyBlob`\
-[in] Bayt cinsinden boyutu, `pbKeyBlob`.
+'ndaki Bayt cinsinden boyutu `pbKeyBlob`.
 
 ## <a name="return-value"></a>Dönüş Değeri
 
-`true` başarıyla tamamlandığında; Aksi takdirde, `false`.
+`true`başarıyla tamamlandığında; Aksi takdirde `false`,.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kullanım [StrongNameKeyDelete](strongnamekeydelete-function.md) işlevi anahtar kapsayıcısı silinemedi.
+Anahtar kapsayıcısını silmek için [StrongNameKeyDelete](strongnamekeydelete-function.md) işlevini kullanın.
 
-Varsa `StrongNameKeyInstall` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.
+İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameKeyInstall`
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** StrongName.h
+**Üst bilgi** StrongName. h
 
-**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil
+**Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

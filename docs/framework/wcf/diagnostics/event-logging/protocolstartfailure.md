@@ -2,24 +2,24 @@
 title: ProtocolStartFailure
 ms.date: 03/30/2017
 ms.assetid: b722d1d5-bfef-4dc9-bfa3-85178b6d2ae3
-ms.openlocfilehash: 4e7aa1305d6998577ec92896ace357b8eceae18a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fe3e34fddf36bbdc5ff09a1d114545d1518dbba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999056"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797623"
 ---
 # <a name="protocolstartfailure"></a>ProtocolStartFailure
-Kimliği: 143  
+Numarasını 143  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WS-Atomic işlem Protokolü hizmetini başlatmak başarısız olduğunu gösterir. Sonuç olarak, WS-Atomic işlem işlevselliğini devre dışı bırakıldı. Olay Protokolü kimliği, protokol adı, özel durum, işlem adı ve işlem kimliği listeler biçimindeki telefon numarasıdır.  
+ Bu olay, WS Atomik Işlem Protokolü hizmetinin başlayamadığını gösterir. Sonuç olarak, WS Atomik Işlem işlevselliği devre dışıdır. Olayda protokol KIMLIĞI, protokol adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir. biçimindeki telefon numarasıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

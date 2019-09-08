@@ -2,41 +2,41 @@
 title: entity type
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: dd1e8a7605c29b3dacaa7ccf9156af2a9b65d5b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: efd3ea0972148e885d4b22b49040640539bb28cd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599609"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795123"
 ---
 # <a name="entity-type"></a>entity type
-*Varlık türü* varlık veri modeli (EDM) ile verilerin yapısını tanımlamak için temel yapı taşı. Kavramsal bir modeli içinde bir varlık türü müşteriler veya siparişler gibi üst düzey kavramlar yapısını temsil eder. Bir varlık türünün varlık türü örnekleri için bir şablondur. Her şablon, aşağıdaki bilgileri içerir:  
+*Varlık türü* , VARLıK VERI MODELI (EDM) ile veri yapısını açıklamak için temel yapı taşdır. Kavramsal modelde, varlık türü, müşteriler veya siparişler gibi üst düzey kavramların yapısını temsil eder. Varlık türü, varlık türü örnekleri için bir şablondur. Her şablon aşağıdaki bilgileri içerir:  
   
-- Benzersiz bir ad. (Gerekli)  
+- Benzersiz bir ad. (Gerekli.)  
   
-- Bir [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) bir veya daha fazla özellikleri tarafından tanımlanan. (Gerekli)  
+- Bir veya daha fazla özellik tarafından tanımlanan bir [varlık anahtarı](entity-key.md) . (Gerekli.)  
   
-- Veri biçiminde [özellikleri](../../../../docs/framework/data/adonet/property.md). (İsteğe bağlı.)  
+- [Özellikler](property.md)biçimindeki veriler. (İsteğe bağlı.)  
   
-- [Gezinti özellikleri](../../../../docs/framework/data/adonet/navigation-property.md) tanıyan bir gezinti için [son](../../../../docs/framework/data/adonet/association-end.md) , bir [ilişkilendirme](../../../../docs/framework/data/adonet/association-type.md) diğer ucuna. (İsteğe bağlı)  
+- Bir [ilişkinin](association-type.md) bir [sonundan](association-end.md) diğer uçtan gezintiye izin veren [Gezinti özellikleri](navigation-property.md) . (İsteğe bağlı)  
   
- Bir uygulamada (örneğin, belirli müşteri veya sipariş) belirli bir nesnesi bir varlık türünün bir örneği temsil eder. Bir varlık türünün her örneğinin benzersiz olmalıdır [Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) içinde bir [varlık kümesi](../../../../docs/framework/data/adonet/entity-set.md).  
+ Bir uygulamada, varlık türünün bir örneği belirli bir nesneyi (örneğin, belirli bir müşteri veya sipariş) temsil eder. Bir varlık türünün her örneğinin bir [varlık kümesi](entity-set.md)içinde benzersiz bir [varlık anahtarı](entity-key.md) olmalıdır.  
   
- İki varlık türü örnekleri yalnızca aynı türde oldukları ve bunların varlık anahtarları aynı değerleri eşit olarak kabul edilir.  
+ İki varlık türü örneği, yalnızca aynı türde olmaları durumunda ve varlık anahtarlarının değerleri aynı ise eşit olarak değerlendirilir.  
   
 ## <a name="example"></a>Örnek  
- Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`:  
+ Aşağıdaki diyagramda üç varlık türü olan bir kavramsal model gösterilmektedir: `Book`, `Publisher`ve `Author`:  
   
- ![Üç varlık türleri ile örnek modeli](./media/entity-type/example-model-three-entity-types.gif)  
+ ![Üç varlık türüne sahip örnek model](./media/entity-type/example-model-three-entity-types.gif)  
   
- Her varlık türünün varlık anahtarıyla olun özellikleri "(anahtar)" ile belirtilir unutmayın.  
+ Varlık anahtarını oluşturan her varlık türünün özelliklerinin "(Key)" ile birlikte gösterilir.  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Aşağıdaki CSDL tanımlar `Book` Yukarıdaki diyagramda gösterilen varlık türü:  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](./ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki csdl, Yukarıdaki diyagramda `Book` gösterilen varlık türünü tanımlar:  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [facet](../../../../docs/framework/data/adonet/facet.md)
+- [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](entity-data-model.md)
+- [facet](facet.md)

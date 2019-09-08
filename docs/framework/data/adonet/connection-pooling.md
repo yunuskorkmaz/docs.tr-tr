@@ -2,24 +2,24 @@
 title: Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: 4cba53993489f51ed39ac52bff4fa252beb9aafd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c431011cf57fd9ef79c2f0a099ab1080116c571f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880028"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786717"
 ---
 # <a name="connection-pooling"></a>Bağlantı Havuzu
-Bir veri kaynağına bağlanırken zaman alıcı olabilir. ADO.NET bağlantı açmayı maliyetini en aza indirmek için adı verilen bir iyileştirme teknik kullanır *bağlantı havuzu*, tekrar tekrar açarak ve bağlantıları kapatmayı maliyetini azaltır. Bağlantı havuzu .NET Framework veri sağlayıcıları için farklı şekilde ele alınır.  
+Bir veri kaynağına bağlanmak zaman alıcı olabilir. ADO.NET bağlantıları açma maliyetini en aza indirmek için, *bağlantı havuzu*adlı bir iyileştirme tekniği kullanır, bu da bağlantıları tekrar tekrar açan ve kapatan maliyeti azaltır. Bağlantı havuzu .NET Framework veri sağlayıcıları için farklı şekilde işlenir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server Bağlantı Havuzu (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- Bağlantı havuzu genel bir bakış sağlar ve SQL Server bağlantı havuzu nasıl çalıştığını açıklar.  
+ [SQL Server Bağlantı Havuzu (ADO.NET)](sql-server-connection-pooling.md)  
+ Bağlantı havuza genel bir bakış sağlar ve bağlantı havuzunun SQL Server nasıl çalıştığını açıklar.  
   
- [OLE DB, ODBC ve Oracle Bağlantı Havuzu](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- OLE DB için .NET Framework veri sağlayıcısı, ODBC için .NET Framework veri sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı için bağlantı havuzu açıklar.  
+ [OLE DB, ODBC ve Oracle Bağlantı Havuzu](ole-db-odbc-and-oracle-connection-pooling.md)  
+ OLE DB için .NET Framework Veri Sağlayıcısı, ODBC için .NET Framework Veri Sağlayıcısı ve Oracle için .NET Framework veri sağlayıcısı için bağlantı havuzu oluşturmayı açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

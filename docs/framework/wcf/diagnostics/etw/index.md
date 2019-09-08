@@ -6,30 +6,30 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd745730ca186b9489c547f790c546e95bf96372
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962051"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798081"
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW ile Çözümleme İzleme
-Windows Communication Foundation (WCF) analitik izleme bir WCF Hizmeti yürütülmesi sırasında tanılama bilgileri toplamak için bir yol sunar. WCF analiz izleme olaylar, WCF hizmetleri bir üretim ortamında giderme izin vermek için WCF yığınında önemli anlarda gönderilir. Çözümleme izleme WCF hizmetleri için bir ürün sunucusunun performansını en az etki barındıran sahip [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] WCF hizmetleri gibi bu olaylar için bir olay izleme için Windows (ETW) oturumu çok verimli bir şekilde gönderilir.  
+Windows Communication Foundation (WCF) analitik izleme, bir WCF hizmetinin yürütülmesi sırasında tanılama bilgilerini yakalamak için bir yol sunar. WCF analitik izleme olayları, bir üretim ortamında WCF hizmetleri sorunlarını gidermeye olanak tanımak için WCF yığınındaki anahtar noktalarında dağıtılır. WCF Hizmetleri için analitik izleme, bu olaylar Windows için olay izleme (ETW) oturumuna çok [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] verimli bir şekilde yayıldığından, WCF hizmetlerini barındıran bir ürün sunucusunun performansı üzerinde en az etkisi vardır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Analitik İzlemeye Genel Bakış](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- WCF analiz izleme işleyişi anlatılmaktadır [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)].  
+ [Analitik İzlemeye Genel Bakış](analytic-tracing-overview.md)  
+ WCF analitik izlemenin ' de [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]nasıl çalıştığını açıklar.  
   
- [Analitik İzlemeyi Dinamik Olarak Etkinleştirme](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
- Etkinleştirmek veya devre dışı kullanılarak dinamik olarak ETW İzleme anlatılmaktadır.  
+ [Analitik İzlemeyi Dinamik Olarak Etkinleştirme](dynamically-enabling-analytic-tracing.md)  
+ ETW kullanarak izlemenin dinamik olarak nasıl etkinleştirileceğini veya devre dışı bırakılacağını açıklar.  
   
- [İleti Akışı İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
- İleti akışı izlemeyi yapılandırma açıklar.  
+ [İleti Akışı İzlemeyi Yapılandırma](configuring-message-flow-tracing.md)  
+ İleti akışı izlemenin nasıl yapılandırılacağını açıklar.  
   
- [Analitik İzleme Etkinliği Başvurusu](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
- Olay kimliklerini olay düzeyleri, olay iletileri ve anahtar sözcükler, bir tablo gösterir.  
+ [Analitik İzleme Etkinliği Başvurusu](analytic-trace-event-reference.md)  
+ Olay düzeyleri, olay iletileri ve anahtar kelimeleri ile olay kimliklerinin bir tablosunu gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Hizmetleri ve Windows için Olay İzleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
-- [Windows'da Olay İzleme ile Olayları İzleme](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)
+- [WCF Hizmetleri ve Windows için Olay İzleme](../../samples/wcf-services-and-event-tracing-for-windows.md)
+- [Windows'da Olay İzleme ile Olayları İzleme](../../../windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

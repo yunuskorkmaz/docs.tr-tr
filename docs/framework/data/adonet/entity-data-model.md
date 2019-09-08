@@ -2,67 +2,67 @@
 title: Varlık Veri Modeli
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1742b04d0e3d8387e990d40d832e355dd15c4311
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667151"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783952"
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
-Varlık veri modeli (EDM) depolanan hâli ne olursa olsun, veri yapısını açıklayan kavramları kümesidir. EDM varlık ilişkisi içinde 1976 Peter Chen tarafından açıklanan modelinden taşır, ancak ayrıca varlık ilişkisi modeli üzerinde oluşturur ve geleneksel kullanımları genişletir.  
+Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapısını tanımlayan bir kavram kümesidir. Varlık ilişkisi modelinden 1976 ' de Peter Chen tarafından tanımlanan EDM bulunamadığında, ancak aynı zamanda varlık ilişkisi modelinde oluşturulup geleneksel kullanımları genişletiyor.  
   
- EDM birçok formlarında depolanan verileri kalmamasını ortaya çıkan sorunları giderir. Örneğin, ilişkisel veritabanları, metin dosyaları, XML dosyaları, elektronik tablolar ve raporlar veri depolayan bir iş göz önünde bulundurun. Bu veri modelleme, uygulama tasarımı ve veri erişimi önemli zorluklar teşkil etmektedir. Veri odaklı bir uygulama tasarlarken, verimli veri erişimi, depolama ve ölçeklenebilirlik ödün vermeden verimli ve sürdürülebilir kod yazma zorluktur. Veri ilişkisel bir yapısı varsa, veri erişimi, depolama ve ölçeklenebilirlik çok verimli, ancak verimli ve sürdürülebilir kod yazmaya daha zor hale gelir. Nesne yapısını veri sahip olduğunda stillerden alınır: Verimli ve sürdürülebilir kod yazma, verimli veri erişimi, depolama ve ölçeklenebilirlik karşılığında sunulur. Bu stillerden arasındaki doğru dengeyi bulunabilir olsa bile, yeni zorluklar verileri başka bir biçimden diğerine taşındığında ortaya çıkar. Varlık veri modeli, varlıklar ve ilişkiler herhangi bir depolama şema bağımsız açısından verilerin yapısını açıklayan tarafından bu sorunlarını ele alır. Bu veri depolanmış formu ilgisiz uygulama tasarımı ve geliştirme sağlar. Ayrıca, bir uygulamada (değil, depolanmış formu) kullanıldığı gibi varlıklar ve ilişkiler verilerin yapısını tanımlamak için uygulamanın geliştikçe bunlar geliştirebilirsiniz.  
+ EDM, verilerin birçok biçimde depolanmasından kaynaklanan zorlukları ele alır. Örneğin, verileri ilişkisel veritabanlarında, metin dosyalarında, XML dosyalarında, elektronik tablolarda ve raporlarda depolayan bir işletmeyi düşünün. Bu, veri modellemesi, uygulama tasarımı ve veri erişimi konularında önemli zorluk gösterir. Veri odaklı bir uygulama tasarlarken, sınama, verimli veri erişimi, depolama ve ölçeklenebilirlik olmadan verimli ve sürdürülebilir kodlar yazmak olacaktır. Veriler ilişkisel bir yapıya sahip olduğunda, veri erişimi, depolama ve ölçeklenebilirlik oldukça etkilidir, ancak verimli ve sürdürülebilir kod yazmak daha zor hale gelir. Verilerin bir nesne yapısına sahip olduğu durumlarda, denge ters çevrilir: Verimli ve sürdürülebilir kod yazma, verimli veri erişimi, depolama ve ölçeklenebilirlik maliyetlerine göre sunulur. Bu denge arasındaki doğru denge bulunabildiğinden bile, veriler bir formdan diğerine taşındığında yeni sorunlar oluşur. Varlık Veri Modeli, verilerin yapısını herhangi bir depolama şemadan bağımsız olan varlıklar ve ilişkiler bakımından açıklayarak bu zorlukları ele alır. Bu, depolanmış veri formunu uygulama tasarımı ve geliştirmeyle ilgisiz hale getirir. Ayrıca, varlıklar ve ilişkiler bir uygulamada (saklı form değil) kullanılan verilerin yapısını açıkladığı için, bir uygulama geliştikçe gelişir.  
   
- A `conceptual model` belirli bir gösterimiyse veri yapısı, varlıklar ve ilişkiler olarak ve genellikle, EDM kavramlarını uygulayan bir etki alanına özgü dil (DSL) tanımlanır. [Kavramsal şema tanım dili (CSDL)](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md) böyle bir etki alanına özgü dil örneğidir. Varlıklar ve ilişkiler kavramsal modelde tanımlanan, nesneleri ve ilişkileri bir uygulamada özetlerini olarak düşünülebilir. Bu hizmet sayesinde geliştiriciler depolama şema kaygısı olmadan kavramsal model odaklanmak için ve verimliliği ve unutmayın yaşatılabilirlik kod yazmanızı sağlar. Bu arada depolama şema tasarımcıları verimliliğini veri erişimi, depolama ve ölçeklenebilirlik üzerinde odaklanabilirsiniz.  
+ `conceptual model` , Verilerin yapısının varlık ve ilişkiler olarak belirli bir gösterimidir ve genellikle EDM kavramlarını uygulayan, etki alanına özgü bir dilde (DSL) tanımlanır. [Kavramsal şema tanım dili (csdl)](./ef/language-reference/csdl-specification.md) , bu tür bir etki alanına özgü dilin bir örneğidir. Kavramsal modelde tanımlanan varlıklar ve ilişkiler, bir uygulamadaki nesne ve ilişkilerin soyutlamalarını olarak düşünülebilir. Bu, geliştiricilerin depolama şemasına gerek kalmadan kavramsal modele odaklanmasını sağlar ve verimlilik ve bakımsız kod yazmasına izin verir. Bu arada, depolama şeması tasarımcıları veri erişimi, depolama ve ölçeklenebilirlik verimliliğine odaklanabilir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- Bu bölümdeki konular, varlık veri modeli kavramlarını açıklar. EDM uygulayan herhangi bir DSL burada açıklanan kavramlar içermelidir. Unutmayın [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) CSDL kavramsal modeller tanımlamak için kullanır. Daha fazla bilgi için [CSDL belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md).  
+ Bu bölümdeki konular Varlık Veri Modeli kavramlarını anlatmaktadır. EDM 'yi uygulayan herhangi bir DSL, burada açıklanan kavramları içermelidir. [ADO.NET Entity Framework](./ef/index.md) 'nin, kavramsal modelleri tanımlamak için csdl kullandığını unutmayın. Daha fazla bilgi için bkz. [csdl belirtimi](./ef/language-reference/csdl-specification.md).  
   
- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)  
   
- [Varlık veri modeli: Ad alanları](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Varlık Veri Modeli: Öznitelikleri](entity-data-model-namespaces.md)  
   
- [Varlık veri modeli: Basit veri türleri](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Varlık Veri Modeli: İlkel veri türleri](entity-data-model-primitive-data-types.md)  
   
- [Varlık veri modeli: Devralma](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Varlık Veri Modeli: Devralmayı](entity-data-model-inheritance.md)  
   
- [association end](../../../../docs/framework/data/adonet/association-end.md)  
+ [association end](association-end.md)  
   
- [association end multiplicity](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [association end multiplicity](association-end-multiplicity.md)  
   
- [association set](../../../../docs/framework/data/adonet/association-set.md)  
+ [association set](association-set.md)  
   
- [association set end](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [association set end](association-set-end.md)  
   
- [association type](../../../../docs/framework/data/adonet/association-type.md)  
+ [association type](association-type.md)  
   
- [complex type](../../../../docs/framework/data/adonet/complex-type.md)  
+ [complex type](complex-type.md)  
   
- [entity container](../../../../docs/framework/data/adonet/entity-container.md)  
+ [entity container](entity-container.md)  
   
- [entity key](../../../../docs/framework/data/adonet/entity-key.md)  
+ [entity key](entity-key.md)  
   
- [entity set](../../../../docs/framework/data/adonet/entity-set.md)  
+ [entity set](entity-set.md)  
   
- [entity type](../../../../docs/framework/data/adonet/entity-type.md)  
+ [entity type](entity-type.md)  
   
- [facet](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](facet.md)  
   
- [foreign key property](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [foreign key property](foreign-key-property.md)  
   
- [model-declared function](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [model-declared function](model-declared-function.md)  
   
- [model-defined function](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [model-defined function](model-defined-function.md)  
   
- [navigation property](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [navigation property](navigation-property.md)  
   
- [property](../../../../docs/framework/data/adonet/property.md)  
+ [property](property.md)  
   
- [referential integrity constraint](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
+ [referential integrity constraint](referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [.edmx dosyasını genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [CSDL Belirtimi](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+- [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [CSDL Belirtimi](./ef/language-reference/csdl-specification.md)

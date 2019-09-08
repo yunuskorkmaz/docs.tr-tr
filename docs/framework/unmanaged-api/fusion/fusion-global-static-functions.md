@@ -8,70 +8,70 @@ helpviewer_keywords:
 ms.assetid: 229b2188-9168-4b44-a987-e1f515494688
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86cb59c0935c193a9865d5ace5fe11c96226d9e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8f15bc862c0486311960f7567c49424859846e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795320"
 ---
 # <a name="fusion-global-static-functions"></a>Fusion Genel Statik İşlevleri
-Bu bölümde API fusion kullandığı yönetilmeyen genel statik işlevler açıklanmaktadır.  
+Bu bölümde Fusion API 'sinin kullandığı yönetilmeyen genel statik işlevler açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ClearDownloadCache İşlevi](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
- İndirilen derleme genel derleme önbelleğini temizler.  
+ [ClearDownloadCache İşlevi](cleardownloadcache-function.md)  
+ İndirilen derlemelerin genel derleme önbelleğini temizler.  
   
- [CompareAssemblyIdentity İşlevi](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
- Eşdeğer olup olmadığını belirlemek için iki derleme kimlikleri karşılaştırır.  
+ [CompareAssemblyIdentity İşlevi](compareassemblyidentity-function.md)  
+ , Eşdeğer olup olmadıklarını anlamak için iki derleme kimliğini karşılaştırır.  
   
- [CreateApplicationContext İşlevi](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
- Sadece dahili. (Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
+ [CreateApplicationContext İşlevi](createapplicationcontext-function.md)  
+ Yalnızca dahili. (Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.)  
   
- [CreateAssemblyCache İşlevi](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
- Yeni bir işaretçi alır [Iassemblycache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) genel derleme önbelleğini temsil eden örneği.  
+ [CreateAssemblyCache İşlevi](createassemblycache-function.md)  
+ Genel derleme önbelleğini temsil eden yeni bir [IAssemblyCache](iassemblycache-interface.md) örneğine yönelik bir işaretçi alır.  
   
- [CreateAssemblyEnum İşlevi](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
- Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) belirtilen bütünleştirilmiş kodda mevcut nesnelerin listesini temsil eden örneği.  
+ [CreateAssemblyEnum İşlevi](createassemblyenum-function.md)  
+ Belirtilen derlemede bulunan nesnelerin listesini temsil eden bir [IAssemblyEnum](iassemblyenum-interface.md) örneğine yönelik bir işaretçi alır.  
   
- [CreateAssemblyNameObject İşlevi](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- Bir işaretçi alır bir [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) belirtilen ada sahip derlemeyi benzersiz kimliğini temsil eden örneği.  
+ [CreateAssemblyNameObject İşlevi](createassemblynameobject-function.md)  
+ Belirtilen ada sahip derlemenin benzersiz kimliğini temsil eden bir [IAssemblyName](iassemblyname-interface.md) örneğine yönelik bir işaretçi alır.  
   
- [CreateHistoryReader İşlevi](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- Belirtilen dosya için geçmiş okuyucu oluşturur.  
+ [CreateHistoryReader İşlevi](createhistoryreader-function.md)  
+ Belirtilen dosya için bir geçmiş okuyucu oluşturur.  
   
- [CreateInstallReferenceEnum İşlevi](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
- Bir işaretçi alır bir [Iınstallreferenceenum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) uygulamanın belirtilen bütünleştirilmiş kod başvuruları listesini temsil eden örneği.  
+ [CreateInstallReferenceEnum İşlevi](createinstallreferenceenum-function.md)  
+ Belirtilen derlemeye ait başvuruların bir listesini temsil eden bir [IInstallReferenceEnum](iinstallreferenceenum-interface.md) örneği için bir işaretçi alır.  
   
- [GetAppIdAuthority İşlevi](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
- Bir işaretçi alır bir [Iappıdauthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) uygulama kimlikleri ve başvurular için anahtarları yöneten bir örneği.  
+ [GetAppIdAuthority İşlevi](getappidauthority-function.md)  
+ Uygulama kimlikleri ve başvuruları için anahtarları yöneten bir [ıappidaduthority](iappidauthority-interface.md) örneğine yönelik bir işaretçi alır.  
   
- [GetAssemblyIdentityFromFile İşlevi](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
- Bir işaretçi alır bir `IUnknown` belirtilen nesnesiyle `IID` belirtilen dosya yolunda derlemedeki.  
+ [GetAssemblyIdentityFromFile İşlevi](getassemblyidentityfromfile-function.md)  
+ Belirtilen dosya yolundaki derlemede belirtilen `IUnknown` `IID` bir nesneye yönelik bir işaretçi alır.  
   
- [GetCachePath İşlevi](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- Belirtilen bayraklar kullanarak önbelleğe alınmış derleme yolunu alır.  
+ [GetCachePath İşlevi](getcachepath-function.md)  
+ Belirtilen bayrakları kullanarak önbelleğe alınmış derlemenin yolunu alır.  
   
- [GetHistoryFileDirectory İşlevi](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
+ [GetHistoryFileDirectory İşlevi](gethistoryfiledirectory-function.md)  
  Uygulama geçmişi dizininin yolunu alır.  
   
- [GetIdentityAuthority İşlevi](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
- Bir işaretçi alır bir [Iıdentityauthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) kod nesneleri tuşları yöneten bir örneği.  
+ [GetIdentityAuthority İşlevi](getidentityauthority-function.md)  
+ Kod nesneleri için anahtarları yöneten bir [IIdentityAuthority](iidentityauthority-interface.md) örneğine yönelik bir işaretçi alır.  
   
- [IsFrameworkAssembly İşlevi](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
- Belirtilen derleme yönetilip yönetilmediğini belirten bir değer alır.  
+ [IsFrameworkAssembly İşlevi](isframeworkassembly-function.md)  
+ Belirtilen derlemenin yönetilip yönetilmediğini gösteren bir değer alır.  
   
- [NukeDownloadedCache İşlevi](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
+ [NukeDownloadedCache İşlevi](nukedownloadedcache-function.md)  
  Ortak dil çalışma zamanı indirme önbelleğini siler.  
   
- [PreBindAssemblyEx İşlevi](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
- Derleme sonrası ilke görünen adını alır.  
+ [PreBindAssemblyEx İşlevi](prebindassemblyex-function.md)  
+ Bir derlemenin ilke sonrası görünen adını alır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion Arabirimleri](fusion-interfaces.md)  
   
- [Fusion Sabit Listeleri](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)  
+ [Fusion Sabit Listeleri](fusion-enumerations.md)  
   
- [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
+ [Fusion Yapıları](fusion-structures.md)  
   
- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+ [Genel Derleme Önbelleği](../../app-domains/gac.md)

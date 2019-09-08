@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
-ms.openlocfilehash: 16091f90d700dd62df0870eaf74ad46c716785d3
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 17fab6e4c178eee6b5135045fb953267db810898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504627"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794461"
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>DataView’da DataRowView Koleksiyonunu Sorgulama
-<xref:System.Data.DataView> Numaralandırılabilir bir topluluğu gösterir <xref:System.Data.DataRowView> nesneleri. <xref:System.Data.DataRowView> özelleştirilmiş bir görünümünü temsil eden bir <xref:System.Data.DataRow> ve, belirli bir sürümünü görüntüler <xref:System.Data.DataRow> denetiminde. Yalnızca bir sürümü bir <xref:System.Data.DataRow> gibi bir denetim aracılığıyla görüntülenebilir bir <xref:System.Windows.Forms.DataGridView>. Erişebildiğiniz <xref:System.Data.DataRow> tarafından sunulan <xref:System.Data.DataRowView> aracılığıyla <xref:System.Data.DataRowView.Row%2A> özelliği <xref:System.Data.DataRowView>. Görüntülediğinizde değerleri kullanarak bir <xref:System.Data.DataRowView>, <xref:System.Data.DataView.RowStateFilter%2A> özelliği temel alınan hangi satır sürümünü belirler <xref:System.Data.DataRow> sunulur. Farklı satır sürümlerini kullanarak erişme hakkında bilgi için bir <xref:System.Data.DataRow>, bkz: [satır durumları ve satır sürümleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Çünkü koleksiyonunu <xref:System.Data.DataRowView> nesneler tarafından kullanıma sunulan <xref:System.Data.DataView> olan numaralandırılabilir, LINQ to DataSet sorguya üzerine kullanabilirsiniz.  
+, <xref:System.Data.DataView> <xref:System.Data.DataRowView> Nesnelerin sıralanabilir koleksiyonunu ortaya koyar. <xref:System.Data.DataRowView>, öğesinin özelleştirilmiş bir <xref:System.Data.DataRow> görünümünü temsil eder ve bir denetimdeki belirli bir sürümünü <xref:System.Data.DataRow> görüntüler. Yalnızca bir sürümü bir denetim <xref:System.Data.DataRow> aracılığıyla görüntülenebilir (örneğin, <xref:System.Windows.Forms.DataGridView>). <xref:System.Data.DataRow> <xref:System.Data.DataRowView> Öğesinin özelliğiaracılığıyla<xref:System.Data.DataRowView.Row%2A>tarafından açığa çıkarılan öğesine erişebilirsiniz <xref:System.Data.DataRowView>. Kullanarak <xref:System.Data.DataRowView>değerleri görüntülediğinizde <xref:System.Data.DataView.RowStateFilter%2A> , özelliği temel alınan <xref:System.Data.DataRow> satır sürümünün sunulma durumunu belirler. Kullanarak <xref:System.Data.DataRow>farklı satır sürümlerine erişme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](./dataset-datatable-dataview/row-states-and-row-versions.md). Tarafından kullanıma sunulan <xref:System.Data.DataRowView>nesnekoleksiyonu numaralandırılacağından,üzerindesorgulamayapmakiçinLINQtoDataSetkullanabilirsiniz.<xref:System.Data.DataView>  
   
- Aşağıdaki örnek sorgularda `Product` kırmızı renkli ürünleri için tablo ve bu sorgudan bir tablo oluşturur. A <xref:System.Data.DataView> tablodan oluşturulur ve <xref:System.Data.DataView.RowStateFilter%2A> özelliği, silinen ve değiştirilen satırlar üzerinde filtrelemek için ayarlanır. <xref:System.Data.DataView> Bir LINQ Sorgu kaynağı olarak kullanılır ve <xref:System.Data.DataRowView> değiştirilen ve Silinen nesneler için ilişkili bir <xref:System.Windows.Forms.DataGridView> denetimi.  
+ Aşağıdaki örnek, `Product` tabloyu kırmızı renkli ürünler için sorgular ve bu sorgudan bir tablo oluşturur. , Tablosundan oluşturulur <xref:System.Data.DataView.RowStateFilter%2A> ve özellik silinen ve değiştirilen satırları filtrele olarak ayarlanır. <xref:System.Data.DataView> Daha sonra bir LINQ sorgusunda kaynak olarak kullanılır <xref:System.Data.DataRowView> ve değiştirilmiş ve silinmiş nesneler bir <xref:System.Windows.Forms.DataGridView> denetime bağlanır. <xref:System.Data.DataView>  
   
  [!code-csharp[DP DataView Samples#QueryDataView2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#querydataview2)]
  [!code-vb[DP DataView Samples#QueryDataView2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#querydataview2)]  
   
- Aşağıdaki örnek, bir görünümden bağlı Ürünler tablosu oluşturur. bir <xref:System.Windows.Forms.DataGridView> denetimi. <xref:System.Data.DataView> Kırmızı renkli ürün ve sipariş edilen için sorgulanır sonuçları için ilişkili bir <xref:System.Windows.Forms.DataGridView> denetimi.  
+ Aşağıdaki örnek, bir <xref:System.Windows.Forms.DataGridView> denetime bağlanan bir görünümden bir ürün tablosu oluşturur. , <xref:System.Data.DataView> Kırmızı renkli ürünler için sorgulanır ve sıralı sonuçlar bir <xref:System.Windows.Forms.DataGridView> denetime bağlanır.  
   
  [!code-csharp[DP DataView Samples#QueryDataView1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#querydataview1)]
  [!code-vb[DP DataView Samples#QueryDataView1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#querydataview1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
+- [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)

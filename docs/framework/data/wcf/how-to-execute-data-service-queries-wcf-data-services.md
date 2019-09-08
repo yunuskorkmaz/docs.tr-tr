@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Veri Hizmeti sorguları (WCF Veri Hizmetleri) yürütme'
+title: 'Nasıl yapılır: Veri hizmeti sorgularını yürütme (WCF Veri Hizmetleri)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,44 +9,44 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: 47943392ec6628b6d5a67ac333dd6793f35857b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 984bba9f31ddaee68c6997ba6da09a511e42b4ce
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645680"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780068"
 ---
-# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Veri Hizmeti sorguları (WCF Veri Hizmetleri) yürütme
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] oluşturulan istemci veri hizmeti sınıfları kullanarak bir .NET Framework tabanlı istemci uygulamadan bir veri hizmetini sorgulama olanak tanır. Aşağıdaki yöntemlerden birini kullanarak sorgu yürütebilirsiniz:  
+# <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Nasıl yapılır: Veri hizmeti sorgularını yürütme (WCF Veri Hizmetleri)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]oluşturulan istemci veri hizmeti sınıflarını kullanarak bir veri hizmetini .NET Framework tabanlı bir istemci uygulamasından sorgulamanızı sağlar. Aşağıdaki yöntemlerden birini kullanarak sorguları yürütebilirsiniz:  
   
-- Adlandırılmış bir LINQ Sorgu yürütülürken <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
+- Aracın oluşturduğu adlandırılmış ada <xref:System.Data.Services.Client.DataServiceQuery%601> <xref:System.Data.Services.Client.DataServiceContext> karşı bir LINQ sorgusu yürütme. `Add Data Service Reference`  
   
-- Adlandırılmış numaralandırma tarafından dolaylı olarak <xref:System.Data.Services.Client.DataServiceQuery%601> , elde <xref:System.Data.Services.Client.DataServiceContext> , `Add Data Service Reference` aracı oluşturur.  
+- Araç tarafından, aracın oluşturduğu, <xref:System.Data.Services.Client.DataServiceQuery%601> <xref:System.Data.Services.Client.DataServiceContext> aldığınız adlandırılmış adı silerek örtülü olarak. `Add Data Service Reference`  
   
-- Çağırarak açıkça <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> metodunda <xref:System.Data.Services.Client.DataServiceQuery%601>, veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> zaman uyumsuz yürütme için yöntemi.  
+- Açıkça, <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> yöntemi <xref:System.Data.Services.Client.DataServiceQuery%601>veya <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> zaman uyumsuz yürütme yöntemi aracılığıyla çağırarak.  
   
- Daha fazla bilgi için [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+ Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
- Bu konudaki örnek Northwind örnek veri hizmeti ve otomatik olarak oluşturulan istemci veri hizmeti sınıfları kullanır. Bu hizmet ve istemci veri sınıfları tamamladığınızda oluşturulur [WCF Veri Hizmetleri Hızlı Başlangıç](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl tanımlanacağını ve tüm döndüren bir LINQ Sorgu yürütme gösterir `Customers` karşı Northwind verileri hizmeti.  
+ Aşağıdaki örnek, Northwind veri hizmetine karşı tümünü `Customers` döndüren bir LINQ sorgusunun nasıl tanımlanacağını ve yürütüleceğini gösterir.  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomerslinq)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomerslinq)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bağlam işlemi gösterilir, `Add Data Service Reference` aracının oluşturduğu tüm döndüren bir sorgu örtük olarak yürütülecek `Customers` karşı Northwind verileri hizmeti. İstenen URI'sini `Customers` varlık kümesi bağlam tarafından otomatik olarak belirlenir. Sabit olduğunda sorguyu örtük olarak yürütülür.  
+ Aşağıdaki örnek, tüm `Add Data Service Reference` `Customers` Northwind Data Service 'e karşı bir sorgu dolaylı olarak yürütmek üzere aracın oluşturduğu bağlamın nasıl kullanılacağını gösterir. İstenen `Customers` varlık kümesinin URI 'si bağlam tarafından otomatik olarak belirlenir. Numaralandırma gerçekleştiğinde sorgu örtük olarak yürütülür.  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomers)]
  [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomers)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek nasıl kullanılacağını gösterir <xref:System.Data.Services.Client.DataServiceContext> açıkça tüm döndüren bir sorgu yürütmek için `Customers` karşı Northwind verileri hizmeti.  
+ Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceContext> Northwind veri hizmetine karşı tümünü `Customers` döndüren bir sorguyu açık olarak yürütmek için nasıl kullanılacağını gösterir.  
   
  [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
  [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir veri hizmeti sorgusuna sorgu seçenekleri ekleme](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)
+- [Nasıl yapılır: Veri hizmeti sorgusuna sorgu seçenekleri ekleme](how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)

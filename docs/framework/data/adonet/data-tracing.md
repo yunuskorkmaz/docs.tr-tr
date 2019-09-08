@@ -2,46 +2,46 @@
 title: ADO.NET’te Veri İzleme
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1b2ee679ce4b0d39b993b9081f428fe585ef7d92
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489526"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784893"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET’te Veri İzleme
 
-ADO.NET .NET veri sağlayıcıları tarafından desteklenen SQL Server, Oracle, OLE DB ve ODBC yanı için ADO.NET yerleşik veri izleme işlevselliği özellikleri <xref:System.Data.DataSet>ve SQL Server ağ protokolleri.
+ADO.net, SQL Server, Oracle, OLE DB ve ODBC için .NET veri sağlayıcılarının yanı sıra ADO.net <xref:System.Data.DataSet>ve SQL Server ağ protokollerini destekleyen yerleşik veri izleme işlevselliğine sahiptir.
 
-Veri izleme erişim API çağrıları aşağıdaki sorunları tanılamanıza yardımcı olabilir:
+Veri erişimi API 'SI çağrılarını izlemek, aşağıdaki sorunları tanılamanıza yardımcı olabilir:
 
-- İstemci programı ve veritabanı arasındaki şeması uyuşmazlığı.
+- İstemci programı ile veritabanı arasında şema uyumsuzluğu.
 
-- Veritabanı kullanım dışı kalması veya ağ kitaplığı sorunları.
+- Veritabanı kullanım dışı veya ağ kitaplığı sorunları.
 
-- Hatalı SQL sabit kodlanmış ya da bir uygulama tarafından üretilen.
+- Bir uygulama tarafından sabit olarak kodlanmış veya üretilen hatalı SQL.
 
-- Hatalı programlama mantığı.
+- Yanlış programlama mantığı.
 
-- ADO.NET ve kendi bileşenler arasındaki etkileşimi veya birden çok ADO.NET bileşenleri arasında kaynaklanan sorunları.
+- Birden çok ADO.NET bileşeni veya ADO.NET ile kendi bileşenleriniz arasındaki etkileşimden kaynaklanan sorunlar.
 
-Bir geliştirici herhangi bir düzeyde uygulama yığınının bir sorunu izlemek için farklı izleme teknolojilerini desteklemek için izleme genişletilebilir. İzleme, bir yalnızca ADO.NET özelliği olmamasına karşın, Microsoft sağlayıcıları genelleştirilmiş izleme ve ölçümlü izleme API'leri yararlanın.
+Farklı izleme teknolojilerini desteklemek için, izleme Genişletilebilir olduğundan, geliştirici bir sorunu uygulama yığınının herhangi bir düzeyinde izleyebilir. İzleme yalnızca ADO.NET özelliği olmamasına karşın, Microsoft sağlayıcıları Genelleştirilmiş izleme ve araç API 'Lerinden yararlanır.
 
-Ayarlama ve ADO.NET yönetilen izlemeyi yapılandırma hakkında daha fazla bilgi için bkz. [izleme veri erişimi](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).
+ADO.NET ' de yönetilen izlemeyi ayarlama ve yapılandırma hakkında daha fazla bilgi için bkz. [veri erişimini izleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10)).
 
-## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Genişletilmiş olaylar günlüğünde tanılama bilgilerine erişme
+## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Genişletilmiş olaylar günlüğündeki tanılama bilgilerine erişme
 
-SQL Server için .NET Framework veri sağlayıcısı veri erişim izleme ([veri erişimini izlemeye](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) daha kolay gelen bağlantı hataları gibi tanılama bilgileri ile istemci olayları ilişkilendirmek daha kolay hale getirmek için güncelleştirildi sunucunun bağlantı halka arabelleği ve uygulama performans bilgilerini genişletilmiş olaylar günlüğünde. Genişletilmiş olay günlüğünü okuma hakkında daha fazla bilgi için bkz: [görünümü olay oturumu verileri](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
+SQL Server için .NET Framework Veri Sağlayıcısı, veri erişimi izleme ([veri erişimi izleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))), istemci olaylarının bağlantı hatalarıyla, sunucu bağlantısının bağlantısının daha kolay bir şekilde ilişkilendirilmesi daha kolay hale getirmek için güncelleştirilmiştir. genişletilmiş olaylar günlüğündeki halka arabelleği ve uygulama performansı bilgileri. Genişletilmiş olaylar günlüğünü okuma hakkında daha fazla bilgi için bkz. [olay oturumu verilerini görüntüleme](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
-Bağlantı işlemleri için bir istemci ADO.NET gönderir bağlantı kimliği. Bağlantı başarısız olursa bağlantı halka arabelleği erişebilirsiniz ([bağlantı halka arabelleği ile SQL Server 2008'deki bağlantı sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=207752)) ve bulma `ClientConnectionID` alan ve tanı bilgilerini almak bağlantı hatası. İstemci bağlantı kimlikleri, bir hata oluşursa halka arabelleği günlüğe kaydedilir. (Oturum açma öncesi paket göndermeden önce bir bağlantı başarısız olursa, istemci bağlantı kimliği üretilmez.) İstemci bağlantı kimliği 16 baytlık bir GUID'dir. İstemci bağlantısı da bulabilirsiniz genişletilmiş olaylar hedef çıkışında kimliği `client_connection_id` eylemi için olayları bir genişletilmiş olaylar oturumunda eklenir. Veri erişim izlemeyi etkinleştirebilir ve bağlantı komutu yeniden çalıştırın ve gözlemleyin `ClientConnectionID` daha fazla istemci sürücü tanılama yardıma ihtiyacınız varsa veri erişimi izleme alan.
+Bağlantı işlemleri için, ADO.NET bir istemci bağlantı KIMLIĞI gönderir. Bağlantı başarısız olursa, bağlantı halkası arabelleğine (bağlantı[sorunlarını SQL Server 2008 ' de bağlantı sorunlarını giderme](https://go.microsoft.com/fwlink/?LinkId=207752)) erişebilir ve bu `ClientConnectionID` alanı bulabilir ve bağlantı hatası hakkında tanılama bilgileri edinebilirsiniz. İstemci bağlantı kimlikleri, yalnızca bir hata oluşursa halka arabelleğine kaydedilir. (Ön oturum açma paketini göndermeden önce bir bağlantı başarısız olursa, bir istemci bağlantı KIMLIĞI oluşturulmaz.) İstemci bağlantı KIMLIĞI, 16 baytlık bir GUID 'dir. Ayrıca, bir genişletilmiş olaylar oturumunda olaylara eklenirse, `client_connection_id` istemci bağlantı kimliğini genişletilmiş olaylar hedef çıktısında bulabilirsiniz. Veri erişimi izlemeyi etkinleştirebilir ve bağlantı komutunu yeniden çalıştırabilir ve daha fazla istemci sürücü `ClientConnectionID` tanılama yardımına ihtiyacınız varsa veri erişim izleme içindeki alanı gözlemleyebilirsiniz.
 
-İstemci alabilir kullanarak program aracılığıyla bağlantı kimliği `SqlConnection.ClientConnectionID` özelliği.
+`SqlConnection.ClientConnectionID` Özelliğini kullanarak istemci bağlantı kimliğini programlı bir şekilde alabilirsiniz.
 
-`ClientConnectionID` İçin kullanılabilir bir <xref:System.Data.SqlClient.SqlConnection> nesnesini başarıyla bir bağlantı kurar. Bağlantı denemesi başarısız olursa `ClientConnectionID` aracılığıyla kullanılabilir olan `SqlException.ToString`.
+, `ClientConnectionID` Başarıyla bağlantı kuran bir <xref:System.Data.SqlClient.SqlConnection> nesne için kullanılabilir. Bir bağlantı girişimi başarısız olursa, `ClientConnectionID` aracılığıyla `SqlException.ToString`bulunabilir.
 
-ADO.NET bir iş parçacığına özgü etkinlik kimliğini de gönderir. TRACK_CAUSALITY seçeneği etkin oturumları başlattıysanız, etkinlik kimliği genişletilmiş olaylar oturumunda yakalanır. Etkin bir bağlantı ile performans sorunlarını için istemcinin veri erişim izlemesinden etkinlik kimliği alabilirsiniz (`ActivityID` alan) ve etkinlik kimliği genişletilmiş olaylar çıktısında bulun. Genişletilmiş olaylar etkinlik Kimliğini dört bayt sıralı numara ekli bir 16 baytlık (değil GUID istemci bağlantı kimliği aynı) GUID'dir. Sıra numarası, bir isteğin bir iş parçacığından sırayı temsil eder ve toplu işlem ve iş parçacığı için RPC deyimleri göreli sıralamasını belirtir. `ActivityID` SQL toplu deyimleri ve RPC istekleri için veri erişimini izlemeye etkinleştirilir ve yapılandırma word izleme veri erişimi 18 bit açık olduğunda şu anda isteğe bağlı olarak gönderilir.
+ADO.NET ayrıca iş parçacığına özgü etkinlik KIMLIĞI gönderir. Oturumlar TRACK_CAUSALITY seçeneği etkin olarak başlatılırsa, etkinlik KIMLIĞI genişletilmiş olaylar oturumlarında yakalanır. Etkin bir bağlantıyla ilgili performans sorunları için, etkinliğin kimliğini istemcinin veri erişimi izleme (`ActivityID` alan) ' dan alabilir ve sonra genişletilmiş olaylar çıkışında etkinlik kimliğini bulabilirsiniz. Genişletilmiş olaylardaki etkinlik KIMLIĞI, dört baytlık bir sıra numarasıyla birlikte bir 16 baytlık GUID 'dir (istemci bağlantı KIMLIĞI GUID 'SI ile aynı değildir). Sıra numarası bir iş parçacığı içindeki bir isteğin sırasını temsil eder ve iş parçacığı için Batch ve RPC deyimlerinin göreli sıralamasını gösterir. Şu `ActivityID` anda, veri erişimi izleme etkinleştirildiğinde SQL Batch deyimleri ve RPC istekleri için isteğe bağlı olarak gönderilir ve veri erişimi izleme yapılandırma sözcüğünün 18 biti açıktır.
 
-Bir halka arabelleği içinde depolanır ve RPC ve toplu işlemler bir istemciye gönderilen etkinlik kimliği kaydedilecek bir genişletilmiş olaylar oturumu başlatmak için Transact-SQL kullanan bir örnek verilmiştir.
+Aşağıda, bir halka arabelleğinde depolanacak bir genişletilmiş olaylar oturumu başlatmak için Transact-SQL kullanan bir örnek verilmiştir ve bir istemciden RPC ve Batch işlemlerinde gönderilen etkinlik KIMLIĞI kaydedilir.
 
 ```sql
 create event session MySession on server
@@ -55,6 +55,6 @@ add target ring_buffer with (track_causality=on)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework'te Ağ İzleme](../../../../docs/framework/network-programming/network-tracing.md)
-- [İzleme ve İşaretleme Uygulamaları](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [.NET Framework'te Ağ İzleme](../../network-programming/network-tracing.md)
+- [İzleme ve İşaretleme Uygulamaları](../../debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d47f5b7eaf6b5f6a3174982e6b4cf43859c031a5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032428"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794145"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Dosyadan Görüntü Ekleme
-İkili büyük nesne (BLOB), bir veritabanına veri kaynağınızın alanına türüne bağlı olarak ikili veya karakter verileri olarak yazabilirsiniz. Blobudur başvurduğu genel bir terim `text`, `ntext`, ve `image` genellikle belgeler ve resimler içeren veri türleri.  
+Veri kaynağınızdaki alanın türüne bağlı olarak, bir veritabanına ikili veya karakter verisi olarak bir ikili büyük nesne (BLOB) yazabilirsiniz. BLOB, genellikle belge ve resim içeren `text`, `ntext`, ve `image` veri türlerine başvuran genel bir terimdir.  
   
- Veritabanınız için bir BLOB değeri yazmak için uygun INSERT nebo UPDATE deyimi yayımlayın ve giriş parametresi olarak BLOB değeri geçirin (bkz [yapılandırma parametreleri ve parametre veri türlerini](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). SQL Server gibi bir metin olarak BLOBUNUZA depolanıyorsa `text` alan, bir dize parametresi BLOB iletebilir. SQL Server gibi ikili biçimde BLOB depolanıyorsa `image` alan, bir dizi türü iletebilir `byte` ikili bir parametre olarak.  
+ Veritabanınıza bir BLOB değeri yazmak için, uygun INSERT veya UPDATE ifadesini verin ve BLOB değerini bir giriş parametresi olarak geçirin (bkz. [parametreleri ve parametre veri türlerini yapılandırma](../configuring-parameters-and-parameter-data-types.md)). Blobu bir SQL Server `text` alanı gibi metin olarak depolanıyorsa, blobu dize parametresi olarak geçirebilirsiniz. BLOB, bir SQL Server `image` alanı gibi ikili biçimde depolanıyorsa, türü `byte` bir diziyi ikili parametre olarak geçirebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, Northwind veritabanındaki çalışanların tablosuna çalışan bilgilerini ekler. Çalışan bir fotoğraf bir dosyadan okunan ve bir görüntü alanı tablo fotoğraf alanına eklenir.  
+ Aşağıdaki kod örneği, çalışan bilgilerini Northwind veritabanındaki Çalışanlar tablosuna ekler. Çalışan fotoğrafı bir dosyadan okunmalıdır ve tablodaki fotoğraf alanına eklenir. Bu bir görüntü alanıdır.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -132,8 +132,8 @@ public static byte[] GetPhoto(string filePath)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Verileri Değiştirmek için Komutları Kullanma](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [İkili Verileri Alma](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
-- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verileri Değiştirmek için Komutları Kullanma](../using-commands-to-modify-data.md)
+- [İkili Verileri Alma](../retrieving-binary-data.md)
+- [SQL Server İkili ve Büyük Değerli Veriler](sql-server-binary-and-large-value-data.md)
+- [SQL Server Veri Türü Eşlemeleri](../sql-server-data-type-mappings.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: 8daf025212e34c5d37d09ae5108d186d13b99eca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ca12274358ed6de475b0c2b8b47dd5cb52e941e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951818"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797038"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Nasıl yapılır: Özel Güvenlik Belirteci Sağlayıcı Oluşturma
 Bu konuda, özel bir güvenlik belirteci sağlayıcısıyla yeni belirteç türleri oluşturma ve sağlayıcıyı özel bir güvenlik belirteci yöneticisiyle tümleştirme gösterilmektedir.  
@@ -22,7 +22,7 @@ Bu konuda, özel bir güvenlik belirteci sağlayıcısıyla yeni belirteç türl
   
  Güvenlik belirteci sağlayıcısı, istemci veya hizmet kimlik bilgileriyle ilgili bilgileri temel alarak bir güvenlik belirteci temsili oluşturur. Windows Communication Foundation (WCF) güvenlik sürümünde özel güvenlik belirteci sağlayıcısını kullanmak için özel kimlik bilgileri ve güvenlik belirteci Yöneticisi uygulamaları oluşturmanız gerekir.  
   
- Özel kimlik bilgileri ve güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için [bkz. İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)oluşturuluyor.  
+ Özel kimlik bilgileri ve güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için [bkz. İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri](walkthrough-creating-custom-client-and-service-credentials.md)oluşturuluyor.  
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Özel bir güvenlik belirteci sağlayıcısı oluşturmak için  
   
@@ -39,7 +39,7 @@ Bu konuda, özel bir güvenlik belirteci sağlayıcısıyla yeni belirteç türl
   
 2. Önceden geçersiz kılınmamışsa yöntemi geçersiz kılın. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>  
   
-     Yöntemi, WCF güvenlik çerçevesi tarafından metoduna geçirilen <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametreye uygun <xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir sınıf örneğini döndürmekten sorumludur. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Yöntemi uygun bir güvenlik belirteci parametresiyle çağrıldığında özel güvenlik belirteci sağlayıcısı uygulamasını (önceki yordamda oluşturulan) döndürmek için yöntemini değiştirin. Güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz [. İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)oluşturuluyor.  
+     Yöntemi, WCF güvenlik çerçevesi tarafından metoduna geçirilen <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametreye uygun <xref:System.IdentityModel.Selectors.SecurityTokenProvider> bir sınıf örneğini döndürmekten sorumludur. <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Yöntemi uygun bir güvenlik belirteci parametresiyle çağrıldığında özel güvenlik belirteci sağlayıcısı uygulamasını (önceki yordamda oluşturulan) döndürmek için yöntemini değiştirin. Güvenlik belirteci Yöneticisi hakkında daha fazla bilgi için bkz [. İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri](walkthrough-creating-custom-client-and-service-credentials.md)oluşturuluyor.  
   
 3. Metoda göre <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> özel güvenlik belirteci sağlayıcınızı döndürmesini sağlamak için yöntemine özel mantık ekleyin. Aşağıdaki örnek, belirteç gereksinimleri karşılanıyorsa özel güvenlik belirteci sağlayıcısını döndürür. Gereksinimler bir X. 509.440 güvenlik belirteci ve ileti yönü (belirtecin ileti çıktısı için kullanıldığı) içerir. Diğer tüm durumlarda, kod, diğer güvenlik belirteci gereksinimleri için sistem tarafından sağlanmış davranışı sürdürmek üzere temel sınıfı çağırır.  
   
@@ -58,5 +58,5 @@ Bu konuda, özel bir güvenlik belirteci sağlayıcısıyla yeni belirteç türl
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.X509SecurityToken>
-- [İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri oluşturma](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [İzlenecek yol: Özel Istemci ve hizmet kimlik bilgileri oluşturma](walkthrough-creating-custom-client-and-service-credentials.md)
+- [Nasıl yapılır: Özel güvenlik belirteci kimlik doğrulayıcısı oluşturma](how-to-create-a-custom-security-token-authenticator.md)

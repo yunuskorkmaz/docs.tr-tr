@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e2459b4f91e7e189990b65fa4d7ca860ff73c51
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b4d720480e4c8b21b3aa56ce81634a26ac9c75de
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741318"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776679"
 ---
-# <a name="axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken işlevi
-Tanımlayıcı ad ortak anahtar belirteci, bir CSP PUBLICKEYBLOB biçiminden hesaplar.  
+# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken Işlevi
+Bir CSP PUBLICKEYBLOB biçiminden tanımlayıcı ad ortak anahtar belirtecini hesaplar.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -31,14 +31,14 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
   
 ## <a name="parameters"></a>Parametreler  
  `pCspPublicKeyBlob`  
- [in] CSP ortak anahtar blob'u.  
+ 'ndaki CSP ortak anahtar blobu.  
   
  `ppwszPublicKeyHash`  
- [out] WCHAR işaretçisi * onaltılık kodlanmış ortak anahtar karması almak için.  
+ dışı Onaltılık kodlanmış ortak anahtar karmasını almak için bir WCHAR * işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `S_OK` işlev başarılı olursa; Aksi takdirde `S_FALSE`.  
+ `S_OK`işlev başarılı olursa; Aksi `S_FALSE`takdirde.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

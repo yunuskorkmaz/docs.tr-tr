@@ -1,6 +1,6 @@
 ---
-title: PutInstanceWmi işlevi (yönetilmeyen API Başvurusu)
-description: PutInstanceWmi işlevi oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir.
+title: Putınstancewmi işlevi (yönetilmeyen API Başvurusu)
+description: Putınstancewmi işlevi, var olan bir sınıfın örneğini oluşturur veya güncelleştirir.
 ms.date: 11/06/2017
 api_name:
 - PutInstanceWmi
@@ -16,16 +16,16 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9774656d010a3e52dd2392094ba6b529a573f3e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 37810ecab2e02d4ec250dd2a4b2657c3b898f714
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636561"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798377"
 ---
-# <a name="putinstancewmi-function"></a>PutInstanceWmi işlevi
+# <a name="putinstancewmi-function"></a>Putınstancewmi işlevi
 
-Oluşturur veya mevcut bir sınıfın bir örneğini güncelleştirir. Örneği, WMI deposuna yazılır.
+Var olan bir sınıfın örneğini oluşturur veya güncelleştirir. Örnek, WMI deposuna yazılır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -43,66 +43,66 @@ HRESULT PutInstanceWmi (
 ## <a name="parameters"></a>Parametreler
 
 `pInst`\
-[in] Yazılacak örneğine bir işaretçi.
+'ndaki Yazılacak örneğe yönelik bir işaretçi.
 
 `lFlags`\
-[in] Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+'ndaki Bu işlevin davranışını etkileyen bayrakların birleşimi. Aşağıdaki değerler *Wbemcli. h* üstbilgi dosyasında tanımlanmıştır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlanırsa, WMI ile ilgili tüm niteleyicileri depolamaz, **Amended** çeşidi. <br> Aksi durumda kümesi, bu nesne yerelleştirilmez ve bu örneği ile depolanan tüm niteleyicileri varsayılır. |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Olmayan mevcut veya zaten varsa üzerine örneği oluşturun. |
-| `WBEM_FLAG_UPDATE_ONLY` | 1. | Örnek güncelleştirin. Örnek çağrı başarılı olması mevcut olması gerekir. |
-| `WBEM_FLAG_CREATE_ONLY` | 2 | Örneği oluşturun. Örneği zaten varsa başarısız olur. |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrağı yarı zaman uyumsuz bir çağrı neden olur. |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | Ayarlanırsa **, WMI değişiklik yapılan Flavor ile** hiçbir niteleyicileri depolamaz. <br> Ayarlanmamışsa, bu nesnenin yerelleştirilmemiş olduğu varsayılır ve tüm niteleyiciler bu örnekle birlikte depolanır. |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | Yoksa örneği oluşturun veya zaten varsa üzerine yazın. |
+| `WBEM_FLAG_UPDATE_ONLY` | 1\. | Örneği güncelleştirin. Çağrının başarılı olması için örneğin mevcut olması gerekir. |
+| `WBEM_FLAG_CREATE_ONLY` | 2 | Örneği oluşturun. Örnek zaten mevcutsa çağrı başarısız olur. |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | Bayrak, yarı zaman uyumlu bir çağrıya neden olur. |
 
 `pCtx`\
-[in] Genellikle, bu değer, `null`. Aksi takdirde, bir işaretçi olduğu bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) istenen sınıfları sağlayan sağlayıcı tarafından kullanılan bir örnek.
+'ndaki Genellikle, bu değer `null`. Aksi takdirde, istenen sınıfları sağlayan sağlayıcı tarafından kullanılabilen bir [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) örneğine yönelik bir işaretçidir.
 
 `ppCallResult`\
-[out] Varsa `null`, bu parametre kullanılmaz. Varsa `lFlags` içeren `WBEM_FLAG_RETURN_IMMEDIATELY`, işlev ile hemen döndürür. `WBEM_S_NO_ERROR`. `ppCallResult` Parametre bir işaretçi yeni bir alan [IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) nesne.
+dışı Varsa `null`, bu parametre kullanılmaz. İçeriyorsa, işlev hemen ile `WBEM_S_NO_ERROR`döner. `WBEM_FLAG_RETURN_IMMEDIATELY` `lFlags` Parametresi `ppCallResult` , yeni bir [ıwbemcallresult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult) nesnesine bir işaretçi alır.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcının belirtilen sınıfın bir örneği güncelleştirme izni yok. |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | Kullanıcının belirtilen sınıfın bir örneğini güncelleştirme izni yok. |
 | `WBEM_E_FAILED` | 0x80041001 | Belirtilmeyen bir hata oluştu. |
-| `WBEM_E_INVALID_CLASS` | 0x80041010 | Bu örneğinin destekleyen sınıf geçerli değil. |
-| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | bir `null` edilemeyecek bir özelliği için belirtilen `null`, tarafından işaretlenen bir gibi bir **sıralı** veya **Not_Null** niteleyicisi. |
-| `WBEM_E_INVALID_OBJECT` | 0x8004100f | Belirtilen örnek geçerli değil. (Örneğin, çağırma `PutInstanceWmi` bir sınıf ile bu değeri döndürür.) |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir parametre geçerli değil. |
-| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Bayrağı belirtildi, ancak örnek zaten mevcut. |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` Belirtilen `lFlags`, ancak örneği yok. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak yeterli bellek yok. |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durdu ve yeniden başlatılıyor. Çağrı [ConnectServerWmi](connectserverwmi.md) yeniden. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem WMI arasındaki uzak yordam çağrısı (RPC) bağlantı başarısız oldu. |
+| `WBEM_E_INVALID_CLASS` | 0x80041010 | Bu örneği destekleyen sınıf geçerli değil. |
+| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | bir `null` **dizinli** veya **Not_Null** niteleyicisi tarafından işaretlenen bir özellik `null`için bir belirtildi. |
+| `WBEM_E_INVALID_OBJECT` | 0x8004100f | Belirtilen örnek geçerli değil. (Örneğin, bir sınıfla `PutInstanceWmi` çağırmak bu değeri döndürür.) |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametre geçerli değil. |
+| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` Bayrak belirtildi, ancak örnek zaten var. |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`' de `lFlags`belirtildi, ancak örnek yok. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI, büyük olasılıkla durmuş ve yeniden başlatılıyor. [Connectserverwmi](connectserverwmi.md) ' i yeniden çağırın. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Geçerli işlem ve WMI arasındaki uzak yordam çağrısı (RPC) bağlantısı başarısız oldu. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu. |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) yöntemi.
+Bu işlev, [IWbemServices::P Utınstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance) yöntemine bir çağrı kaydırır.
 
-`PutInstanceWmi` İşlev örnekleri oluşturma ve güncelleştirme yalnızca mevcut sınıfların örneklerini destekler.  Bağlı olarak nasıl `pCtx` parametresi olarak ayarlanmışsa, bazı veya tüm özelliklerini örneğinin güncelleştirilir.
+`PutInstanceWmi` İşlevi örnek oluşturmayı ve yalnızca varolan sınıfların örneklerini güncelleştirmeyi destekler.  `pCtx` Parametresinin nasıl ayarlandığına bağlı olarak, örneğin özelliklerinin bazıları veya tümü güncellenir.
 
-Ne zaman örneği tarafından işaret edilen `pInst` bir alt sınıfı için Windows Yönetim alt sınıfın türetildiği sınıfların için sorumlu tüm sağlayıcıları çağrıları ait. Tüm bu sağlayıcıları için özgün başarılı olması gerektiği `PutInstanceWmi` başarılı olması için istek. Hiyerarşideki en üst sınıf destekleyen sağlayıcı önce çağrılır. Arama sırası üstteki sınıfının alt ile devam eder ve sağlayıcı işaret ettiği örneğine sahip olan sınıf için Windows Yönetim ulaşana kadar üstten alta geçer `pInst`.
-Windows yönetimi sağlayıcıları herhangi bir alt sınıfı örneğinin çağırmaz.
+Tarafından `pInst` işaret edilen örnek bir alt sınıfa ait olduğunda, Windows yönetimi, alt sınıfın türetildiği sınıflardan sorumlu tüm sağlayıcıları çağırır. Özgün `PutInstanceWmi` isteğin başarılı olması için bu sağlayıcıların tümünün başarılı olması gerekir. Hiyerarşide en üstteki sınıfı destekleyen sağlayıcı ilk olarak çağırılır. Çağırma sırası en üstteki sınıfın alt sınıfıyla devam eder ve Windows yönetimi, tarafından `pInst`işaret edilen örneğe sahip olan sınıfa ait sağlayıcıya ulaşana kadar üstten alta doğru ilerler.
+Windows yönetimi, bir örneğin alt sınıflarının herhangi biri için sağlayıcıları çağırmaz.
 
-Bir sınıf hiyerarşisine ait bir örnek uygulamanın güncelleştirmeniz gerektiğinde `pInst` parametresi değiştirilecek özellikleri içeren örneğine işaret etmelidir. Diğer bir deyişle, ait bir hedef örneği göz önünde bulundurun **Sınıfb**. **Sınıfb** örneği türetilir **Türetilme**, ve **Türetilme** özelliği tanımlar **PropA**. Bir uygulama değerinde bir değişiklik isteyip istemediği **PropA** içinde **Sınıfb** örneği, onu ayarlamanız gerekir `pInst` örneği yerine bu örneği **Türetilme** .
+Bir uygulamanın bir sınıf hiyerarşisine ait bir örneği güncelleştirmesi gerektiğinde, `pInst` parametresinin değiştirilecek özellikleri içeren örneğe işaret olması gerekir. Diğer bir deyişle, **ClassB**'ye ait bir hedef örneği göz önünde bulundurun. **ClassB** örneği **ClassA**'Dan türetilir ve **ClassA** , **Propa**özelliğini tanımlar. Bir uygulama **ClassB** örneğinde **Propa** değerinde bir değişiklik yapmak istiyorsa, bu örnek bir **ClassA**örneği yerine bu örneğe ayarlanmalıdır `pInst` .
 
-Çağırma `PutInstanceWmi` soyut bir sınıf örneği üzerinde izin verilmiyor.
+Soyut `PutInstanceWmi` sınıfın bir örneğine çağrı yapılmasına izin verilmez.
 
-İşlev çağrısı başarısız olursa, ek hata bilgileri çağırarak elde edebileceğiniz [Geterrorınfo](geterrorinfo.md) işlevi.
+İşlev çağrısı başarısız olursa, [GetErrorInfo](geterrorinfo.md) işlevini çağırarak ek hata bilgileri alabilirsiniz.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** WMINet_Utils.idl
+**Üst bilgi** WMINet_Utils. IDL
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

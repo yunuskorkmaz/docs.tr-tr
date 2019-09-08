@@ -2,24 +2,24 @@
 title: FailedToInitializeTraceSource
 ms.date: 03/30/2017
 ms.assetid: ce6fea55-292c-4fb9-908e-3713fcd4cf8f
-ms.openlocfilehash: 84fa33050e6479fb4a3eca154d7e28d1875a3666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bda061bb77b8bde44592c61c44bcfa6bef320dfa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774926"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797946"
 ---
 # <a name="failedtoinitializetracesource"></a>FailedToInitializeTraceSource
-Kimliği: 101  
+Numarasını 101  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: İzleme  
+ Alan İzleme  
   
 ## <a name="description"></a>Açıklama  
- İzleme kaynağı başlatılmadı. İzleme devre dışı bırakıldı. Özel durum, işlem adı ve işlem kimliği, olay listeler  
+ İzleme kaynağı başlatılmadı. İzleme devre dışı bırakıldı. Olayda özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

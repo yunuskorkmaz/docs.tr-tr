@@ -2,31 +2,31 @@
 title: ADO.NET’te SQL Server Veri İşlemleri
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2c6477630e5f4b5f25fcbbdd8ffb76109ff507b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876323"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791667"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET’te SQL Server Veri İşlemleri
-Bu bölümde, SQL Server özellikleri ve SQL Server için .NET Framework veri sağlayıcısı özel işlevler açıklanmaktadır (<xref:System.Data.SqlClient>).  
+Bu bölümde, SQL Server (<xref:System.Data.SqlClient>) için .NET Framework veri sağlayıcısı özgü özellikleri ve işlevleri SQL Server açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server’da Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- Toplu kopyalama işlevi için SQL Server için .NET veri sağlayıcısı açıklar.  
+ [SQL Server’da Toplu Kopyalama İşlemleri](bulk-copy-operations-in-sql-server.md)  
+ SQL Server için .NET Veri Sağlayıcısı toplu kopyalama işlevini açıklar.  
   
- [Birden Çok Etkin Sonuç Kümesi (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- Birden fazla açıklar <xref:System.Data.SqlClient.SqlDataReader> açık bir bağlantı, her bir örneği <xref:System.Data.SqlClient.SqlDataReader> ayrı bir komut başlatılır.  
+ [Birden Çok Etkin Sonuç Kümesi (MARS)](multiple-active-result-sets-mars.md)  
+ Her bir <xref:System.Data.SqlClient.SqlDataReader> <xref:System.Data.SqlClient.SqlDataReader> örneği ayrı bir komuttan başlatıldığında bir bağlantı üzerinde birden fazla açma işlemini açıklar.  
   
- [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- .NET Framework tarafından kullanılan zaman uyumsuz model modellenmiştir bir API kullanarak zaman uyumsuz bir veritabanı işlemleri açıklar.  
+ [Zaman Uyumsuz İşlemler](asynchronous-operations.md)  
+ .NET Framework tarafından kullanılan zaman uyumsuz modelden sonra Modellenen bir API kullanarak zaman uyumsuz veritabanı işlemlerinin nasıl gerçekleştirileceğini açıklar.  
   
- [Tablo Değerli Parametreler](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
- SQL Server 2008'de tanıtılan tablo değerli parametreleri ile nasıl çalışılacağını açıklar.  
+ [Tablo Değerli Parametreler](table-valued-parameters.md)  
+ SQL Server 2008 ' de tanıtılan tablo değerli parametrelerle nasıl çalışabileceğinizi açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

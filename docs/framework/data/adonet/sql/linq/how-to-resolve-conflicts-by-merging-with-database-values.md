@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: ccd2e37457e686bc5faed6d8979c2b266d05c829
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 18a7eceeec63d9caadefab8d98942f10d82c99ca
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943433"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793357"
 ---
 # <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Nasıl yapılır: Veritabanı Değerleri ile Birleştirerek Çakışmaları Çözümleme
-Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, veritabanı değerlerini geçerli istemci <xref:System.Data.Linq.RefreshMode.KeepChanges> üye değerleriyle birleştirmek için kullanabilirsiniz. Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)bakış.  
+Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek veritabanı değerleri arasındaki farkları mutabık kılmak için, veritabanı değerlerini geçerli istemci <xref:System.Data.Linq.RefreshMode.KeepChanges> üye değerleriyle birleştirmek için kullanabilirsiniz. Daha fazla bilgi için bkz [. iyimser eşzamanlılık: Genel](optimistic-concurrency-overview.md)bakış.  
   
 > [!NOTE]
 > Her durumda, istemcideki kayıt, veritabanındaki güncelleştirilmiş verileri alarak yenilenir. Bu eylem, sonraki güncelleştirme denemasının aynı eşzamanlılık denetimlerinde başarısız olmasına neden olur.  
@@ -42,6 +42,6 @@ Değişikliklerinizi yeniden göndermeye çalışmadan önce beklenen ve gerçek
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Veritabanı değerlerinin üzerine yazarak çakışmaları çözün](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Nasıl yapılır: Veritabanı değerlerini koruyarak Çakışmaları Çöz](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
-- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [Nasıl yapılır: Veritabanı değerlerinin üzerine yazarak çakışmaları çözün](how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Nasıl yapılır: Veritabanı değerlerini koruyarak Çakışmaları Çöz](how-to-resolve-conflicts-by-retaining-database-values.md)
+- [Nasıl yapılır: Değişiklik çakışmalarını yönetme](how-to-manage-change-conflicts.md)

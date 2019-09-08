@@ -2,44 +2,44 @@
 title: Analitik İzlemeyi Dinamik Olarak Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: bea64ac9a9312d17b7f47e72a46d876552e20a12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592102"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798103"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Analitik İzlemeyi Dinamik Olarak Etkinleştirme
-Windows işletim sistemiyle birlikte sevk araçlarını kullanarak etkinleştirebilir veya dinamik olarak olay izleme için Windows (ETW) kullanarak izlemeyi devre dışı. Tüm [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) Hizmetleri, çözümleme izleme uygulamanın Web.config dosyasında etkin ve devre dışı olmadan dinamik olarak değiştirme veya hizmeti yeniden başlatılıyor olabilir. Bu izleme olaylarının bozulmadan kalmasını yayan uygulama sağlar.  
+Windows işletim sistemiyle birlikte gelen araçları kullanarak izlemeyi Windows için olay Izleme (ETW) kullanarak dinamik olarak etkinleştirebilir veya devre dışı bırakabilirsiniz. Tüm [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] Windows Communication Foundation (WCF) hizmetlerinde analiz izleme, uygulamanın Web. config dosyasını değiştirmeden veya hizmeti yeniden başlatmadan dinamik olarak etkinleştirilebilir ve devre dışı bırakılabilir. Bu, izleme olaylarını gösteren uygulamanın olumsuz şekilde kalmasını sağlar.  
   
- WCF izleme seçenekleri benzer şekilde yapılandırılabilir. Örneğin, önem derecesi düzeyden değiştirebilirsiniz **hata** için **bilgi** uygulama bozmadan olmadan. Bu yapılabilir aşağıdaki araçları kullanarak:  
+ WCF izleme seçenekleri benzer bir şekilde yapılandırılabilir. Örneğin, uygulamayı etkilemeden önem düzeyini **hata** durumundan **bilgi** olarak değiştirebilirsiniz. Bu, aşağıdaki araçlar kullanılarak yapılabilir:  
   
-- **Logman** – yapılandırma, denetleme ve izleme verileri sorgulama için bir komut satırı aracı. Daha fazla bilgi için [Logman oluşturma izleme](https://go.microsoft.com/fwlink/?LinkId=165426) ve [Logman güncelleştirme izleme](https://go.microsoft.com/fwlink/?LinkId=165427).  
+- **Logman** : izleme verileri yapılandırmak, denetlemek ve sorgulamak için bir komut satırı aracı. Daha fazla bilgi için bkz. [Logman create trace](https://go.microsoft.com/fwlink/?LinkId=165426) ve [Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427).  
   
-- **Görüntüleyicide** -izleme sonuçlarını görüntülemek için Windows grafik yönetim aracıdır. Daha fazla bilgi için [WCF hizmetleri ve olay izleme için Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md) ve [Olay Görüntüleyicisi'ni](https://go.microsoft.com/fwlink/?LinkId=165428).  
+- **Eventviewer** -izlemenin sonuçlarını görüntülemek için Windows grafik yönetim aracı. Daha fazla bilgi için bkz. [Windows Için WCF Hizmetleri ve olay izleme](../../samples/wcf-services-and-event-tracing-for-windows.md) ve [Olay Görüntüleyicisi](https://go.microsoft.com/fwlink/?LinkId=165428).  
   
-- **Perfmon** – performans sayaçları İzleyici izleme sayaçları ve izleme etkilerini kullanan bir Windows grafik yönetim aracıdır. Daha fazla bilgi için [bir veri toplayıcı kümesi el ile oluşturmanız](https://go.microsoft.com/fwlink/?LinkId=165429).  
+- **Perfmon** – izleme sayaçlarını izlemek için sayaçları kullanan Windows grafik yönetim aracı ve performans üzerindeki izlemenin etkileri. Daha fazla bilgi için bkz. [veri toplayıcı kümesi oluşturma el ile](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
 ### <a name="keywords"></a>anahtar sözcükler  
- Kullanırken <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> sınıfı, .NET Framework izleme iletilerini genellikle önem derecesini (örneğin, hata, uyarı ve bilgi) tarafından filtrelenir. ETW, önem derecesi düzeyi kavramını destekler, ancak anahtar sözcüklerini kullanarak yeni ve esnek filtre mekanizması sunar. İzleme olayları olay ne anlama geldiği hakkında ek bağlam sağlamak olanak tanıyan rastgele metin değerleri anahtar sözcüklerdir.  
+ <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> Sınıfı kullanılırken, .NET Framework izleme iletileri genellikle önem düzeyine (örneğin, hata, uyarı ve bilgi) göre filtrelenir. ETW önem düzeyi kavramını destekler, ancak anahtar sözcükler kullanarak yeni ve esnek bir filtre mekanizması sunar. Anahtar sözcükler, izleme olaylarının, olayın anlamı hakkında ek bağlam sağlamasına izin veren rastgele metinsel değerlerdir.  
   
- WCF analiz izleme için her bir izleme olayı anahtar sözcükleri iki tür vardır. İlk olarak, her olay, bir veya daha fazla senaryo anahtar sözcük yok. Bu anahtar sözcükler senaryoları göstermek, bu olay desteklemek üzere tasarlanmıştır. Üç senaryo anahtar sözcükler, her aşağıdaki tabloda gösterildiği gibi belirli bir amaç için tasarlanmıştır. Anahtar sözcükler kullanılarak filtreleme, dinamik olarak WCF Hizmeti etkilemeden değiştirilebilir. Dinamik olarak geçerli izleme senaryonuza ve izleme bilgileri Topladığınızdan miktarını değiştirebilirsiniz, anlamına gelir. Örneğin, değiştirebileceğiniz `HealthMonitoring` için `Troubleshooting` ve olay izleme ayrıntı düzeyi artırın.  
-  
-|Anahtar sözcüğü|Açıklama|  
-|-------------|-----------------|  
-|`HealthMonitoring`|Basit, minimum, izleme hizmetinizin etkinlikleri izlemenize olanak tanır.|  
-|`EndToEndMonitoring`|İleti akışı izlemeyi desteklemek için kullanılan olayları.|  
-|`Troubleshooting`|Daha ayrıntılı olay WCF genişletilebilirlik noktaları etrafında.|  
-  
- İkinci grup anahtar sözcüklerin olay .NET Framework'ün bileşeni yayılan tanımlayın.  
+ WCF analitik izleme için, her izleme olayının iki tür anahtar sözcüğü vardır. İlk olarak, her olayda bir veya daha fazla senaryo anahtar sözcüğü vardır. Bu anahtar sözcükler, bu olayın desteklemeye yönelik senaryolar olduğunu gösterir. Her biri aşağıdaki tabloda gösterildiği gibi, belirli bir amaç için tasarlanan üç senaryo anahtar sözcüğü vardır. Anahtar sözcükleri kullanarak filtreleme, WCF hizmetini bozmadan dinamik olarak değiştirilebilir. Yani, geçerli izleme senaryonuzu ve topladığınız izleme bilgilerini dinamik olarak değiştirebileceðiniz anlamına gelir. Örneğin, öğesini değiştirebilir `HealthMonitoring` `Troubleshooting` ve olay ayrıntı düzeyini izlemeyi artırabilirsiniz.  
   
 |Anahtar sözcüğü|Açıklama|  
 |-------------|-----------------|  
-|`UserEvents`|Kullanıcı kodu ve .NET Framework tarafından oluşturulan olaylar.|  
-|`ServiceModel`|WCF çalışma zamanı tarafından oluşturulan olaylar.|  
-|`ServiceHost`|Hizmet ana bilgisayarı tarafından oluşturulan olaylar.|  
+|`HealthMonitoring`|Hizmetinizin etkinliklerini izlemenize olanak tanıyan çok hafif ve en az izleme.|  
+|`EndToEndMonitoring`|İleti akışı izlemeyi desteklemek için kullanılan olaylar.|  
+|`Troubleshooting`|WCF genişletilebilirlik noktaları etrafında daha ayrıntılı olaylar.|  
+  
+ İkinci anahtar sözcük grubu, .NET Framework hangi bileşenin olayı yayındığını tanımlar.  
+  
+|Anahtar sözcüğü|Açıklama|  
+|-------------|-----------------|  
+|`UserEvents`|.NET Framework değil, Kullanıcı kodu tarafından yayılan olaylar.|  
+|`ServiceModel`|WCF çalışma zamanı tarafından yayılan olaylar.|  
+|`ServiceHost`|Hizmet ana bilgisayarı tarafından yayılan olaylar.|  
 |`WCFMessageLogging`|WCF ileti günlüğe kaydetme olayları.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Hizmetleri ve Windows için Olay İzleme](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
+- [WCF Hizmetleri ve Windows için Olay İzleme](../../samples/wcf-services-and-event-tracing-for-windows.md)

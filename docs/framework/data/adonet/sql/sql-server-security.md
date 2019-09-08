@@ -2,44 +2,44 @@
 title: SQL Server Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-ms.openlocfilehash: 4aa4feadb6305f8a0ea6f99c2add780d6fca95cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5fd9cc82a3b1e4ffa217d65c542376fe067db06
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927607"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791626"
 ---
 # <a name="sql-server-security"></a>SQL Server Güvenliği
-SQL Server güvenli veritabanı uygulamaları oluşturma desteği çok sayıda özelliğe sahiptir.  
+SQL Server, güvenli veritabanı uygulamaları oluşturmayı destekleyen birçok özelliğe sahiptir.  
   
- Veri hırsızlığına veya vandalism, gibi genel güvenlik değerlendirmeleri, kullanmakta olduğunuz SQL Server sürümünden bağımsız olarak geçerlidir. Veri bütünlüğü da bir güvenlik sorunu kabul edilmelidir. Veri korumalı değilse, geçici veri işleme izin verilir ve verilerin yanlışlıkla işe yaramaz hale gelebilir veya kötü amaçlı olarak hatalı değerler ile değiştirilmiş veya tamamen silinmiş olduğunu mümkündür. Ayrıca, genellikle, için gizli bilgilerin doğru depolama gibi bağlı yasal gereksinimi vardır. Bazı tür kişisel veri depolama tamamen, belirli bir yargılama alanında yasalara bağlı olarak proscribed.  
+ Veri hırsızlığı veya vandalroni gibi yaygın güvenlik konuları, kullandığınız SQL Server sürümünden bağımsız olarak uygulanır. Veri bütünlüğü Ayrıca bir güvenlik sorunu olarak ele alınmalıdır. Veriler korunmuşsa, geçici veri işlemeye izin verildiğinde ve veriler yanlışlıkla veya kötü amaçlı olarak yanlış değerlerle değiştirilmişse veya tamamen siliniyorsa, daha az olabilme olasılığı vardır. Bunlara ek olarak, gizli bilgilerin doğru depolanması gibi genellikle, ' ye uymak gereken yasal gereksinimler vardır. Belirli bir vergi dairesine uygulanan kanunlarına bağlı olarak, bazı kişisel veri türlerinin depolanması tamamen tamamen yapılır.  
   
- Windows, her sürümü ile öncekileri Gelişmiş işlevlere sonraki sürümlerinde olduğu gibi SQL Server'ın her sürümünü farklı güvenlik özellikleri vardır. Güvenlik özellikleri tek başına güvenli bir veritabanında uygulama garanti edemez anlamak önemlidir. Her bir veritabanı uygulama, gereksinimleri, yürütme ortamı, dağıtım modeli, fiziksel konuma ve kullanıcı kitlesiyle benzersizdir. Diğer yerel uygulamaları veya Internet üzerinden dağıtılan uygulamaları katı güvenlik önlemleri ve devam eden izleme ve değerlendirme gerektirebilir ise yerel kapsamda olan bazı uygulamalar yalnızca en düşük güvenlik gerekebilir.  
+ Her bir SQL Server sürümünde, Windows 'un her sürümü, daha sonraki sürümlerde daha önce gelişmiş işlevlere sahip olduğu gibi farklı güvenlik özellikleri vardır. Güvenlik özelliklerinin tek başına güvenli bir veritabanı uygulamasını garanti edemediği anlamak önemlidir. Her veritabanı uygulaması gereksinimler, yürütme ortamı, dağıtım modeli, fiziksel konum ve Kullanıcı popülasyonu içinde benzersizdir. Kapsamda yerel olan bazı uygulamalar yalnızca en az güvenlik gerektirebilir, ancak Internet üzerinden dağıtılan diğer yerel uygulamalar veya uygulamalar sıkı güvenlik ölçüleri ve sürekli izleme ve değerlendirme gerektirebilir.  
   
- Bir SQL Server veritabanı uygulaması, güvenlik gereksinimlerini akla olarak değil, tasarım zamanında kabul edilmelidir. Geliştirme döngüsünün başlarında tehditleri değerlendirme bir güvenlik açığı algılanan her yerde durumdaki potansiyel hasarı azaltmak olanağı sağlar.  
+ Bir SQL Server veritabanı uygulamasının güvenlik gereksinimleri, daha sonra değil, tasarım zamanında göz önünde bulundurulmalıdır. Geliştirme döngüsünün başlarında tehditleri değerlendirmek, bir güvenlik açığının algılanmasından bağımsız olarak olası zararları azaltma fırsatı sağlar.  
   
- İlk tasarımın bir uygulamanın ses olsa bile sistem geliştikçe yeni tehditleri ortaya çıkan. Birden çok savunma veritabanınızı geçici satırlarını oluşturarak, bir güvenlik ihlali tarafından şiddet hasarı en aza indirebilirsiniz. İlk savunma hattınızdır saldırı yüzeyi alan tarafından hiçbir zaman gerekli olan daha fazla izin vermeye azaltmaktır.  
+ Uygulamanın ilk tasarımı ses olsa bile, sistem geliştikçe yeni tehditler ortaya çıkabilir. Veritabanınızda daha fazla savunma satırı oluşturarak, bir güvenlik ihlalinin verdiği hasar olasılığını en aza indirgeyin. İlk savunma hattınız, kesinlikle gerekli olandan daha fazla izin vermeden saldırı yüzeyi alanını azaltmaktır.  
   
- Bu bölümdeki konular, SQL Server Books Online'ı ve daha ayrıntılı kapsamı sağlayan diğer kaynakların ilgili konulara bağlantılar sahip olan geliştiriciler için uygun olan SQL Server güvenlik özellikleri kısaca açıklayın.  
+ Bu bölümdeki konular, SQL Server Books Online 'daki ilgili konuların ve daha ayrıntılı tedarik sağlayan diğer kaynakların bağlantılarıyla ilgili SQL Server, geliştiriciler için uygun olan güvenlik özelliklerini kısaca anlatmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
- SQL Server'ın mimarisi ve güvenlik özelliklerini açıklar.  
+ [SQL Server Güvenliğine Genel Bakış](overview-of-sql-server-security.md)  
+ SQL Server mimarisini ve güvenlik özelliklerini açıklar.  
   
- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- ADO.NET ve SQL Server uygulamaları için çeşitli uygulama güvenliği senaryoları açıklayan konulara içerir.  
+ [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)  
+ ADO.NET ve SQL Server uygulamalarına yönelik çeşitli uygulama güvenliği senaryolarına yönelik konular içerir.  
   
- [SQL Server Express Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
- SQL Server Express için güvenlik konuları açıklanmaktadır.  
+ [SQL Server Express Güvenliği](sql-server-express-security.md)  
+ SQL Server Express yönelik güvenlik konularını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
 [SQL Server veritabanı altyapısı ve Azure SQL veritabanı için Güvenlik Merkezi](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
-SQL Server ve Azure SQL veritabanı için güvenlik konuları açıklanmaktadır.
+SQL Server ve Azure SQL veritabanı için güvenlik konularını açıklar.
 
-[Bir SQL Server yüklemesi için güvenlik konuları](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
-SQL Server'ı yüklemeden önce dikkate alınması gereken güvenlik konuları açıklanmaktadır.
+[SQL Server yüklemesine yönelik güvenlik konuları](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+SQL Server yüklemeden önce dikkate alınması gereken güvenlik konularını açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server ve ADO.NET](index.md)

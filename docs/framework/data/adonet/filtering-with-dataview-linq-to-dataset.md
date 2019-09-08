@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: aaa9ac0514f3e79f101bbcd9cbab60929f91d4fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cbd3d52c0e751097a937fa8781171c8c2a0058f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959126"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795048"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView ile filtreleme (LINQ to DataSet)
 Belirli ölçütlere göre verileri filtreleyebilme ve sonra verileri bir kullanıcı arabirimi denetimi aracılığıyla bir istemciye sunma özelliği, veri bağlamanın önemli bir yönüdür. <xref:System.Data.DataView>Verileri filtrelemeye ve belirli filtre ölçütlerine uyan veri satırlarının alt kümelerini döndürmeye yönelik çeşitli yollar sağlar. Dize tabanlı filtreleme özelliklerine <xref:System.Data.DataView> ek olarak, filtreleme ölçütlerine yönelik ifadeler kullanma [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] olanağı da sağlar. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]ifadeler, dize tabanlı filtrelemeden çok daha karmaşık ve güçlü filtreleme işlemlerine izin verir.  
@@ -59,7 +59,7 @@ Belirli ölçütlere göre verileri filtreleyebilme ve sonra verileri bir kullan
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>RowFilter özelliğini kullanma  
- Mevcut dize tabanlı filtreleme işlevselliği <xref:System.Data.DataView> LINQ to DataSet bağlamda hala işe yarar. Dize tabanlı <xref:System.Data.DataView.RowFilter%2A> filtreleme hakkında daha fazla bilgi için bkz. [verileri sıralama ve filtreleme](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Mevcut dize tabanlı filtreleme işlevselliği <xref:System.Data.DataView> LINQ to DataSet bağlamda hala işe yarar. Dize tabanlı <xref:System.Data.DataView.RowFilter%2A> filtreleme hakkında daha fazla bilgi için bkz. [verileri sıralama ve filtreleme](./dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
  Aşağıdaki örnek, kişi tablosundan <xref:System.Data.DataView> bir oluşturur ve sonra <xref:System.Data.DataView.RowFilter%2A> özelliği, kişinin en son adının "Zhu" olduğu satırları döndürecek şekilde ayarlar:  
   
@@ -71,7 +71,7 @@ Belirli ölçütlere göre verileri filtreleyebilme ve sonra verileri bir kullan
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  
   
- Verilerin bir alt kümesinin dinamik görünümünü sağlamanın aksine, veriler üzerinde belirli bir sorgunun sonuçlarını döndürmek <xref:System.Data.DataView.Find%2A> istiyorsanız, <xref:System.Data.DataView.RowFilter%2A> özelliği ayarlamak yerine, veya <xref:System.Data.DataView.FindRows%2A> yöntemlerini <xref:System.Data.DataView>kullanabilirsiniz. Özelliği <xref:System.Data.DataView.RowFilter%2A> , bir bağlantılı denetimin filtrelenmiş sonuçları görüntülediği veriye dayalı bir uygulamada en iyi şekilde kullanılır. <xref:System.Data.DataView.RowFilter%2A> Özelliği ayarlamak, verilerin dizinini yeniden oluşturur, uygulamanıza ek yük ekler ve performansı azaltır. Ve <xref:System.Data.DataView.Find%2A> yöntemleri <xref:System.Data.DataView.FindRows%2A> , dizinin yeniden oluşturulmasını gerektirmeden geçerli dizini kullanır. Yalnızca bir kez çağrıyorsa <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView>, var olanı kullanmanız gerekir. <xref:System.Data.DataView.FindRows%2A> Arayacağım <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez arıyorsanız, arama <xref:System.Data.DataView.Find%2A> yapmak istediğiniz sütunda dizini yeniden oluşturmak <xref:System.Data.DataView> için yeni bir oluşturmanız ve ardından veya <xref:System.Data.DataView.FindRows%2A> yöntemlerini çağırmanız gerekir. <xref:System.Data.DataView.Find%2A> Ve<xref:System.Data.DataView.FindRows%2A> yöntemleri hakkında daha fazla bilgi için bkz. [satırları bulma](../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md) ve [DataView performansı](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ Verilerin bir alt kümesinin dinamik görünümünü sağlamanın aksine, veriler üzerinde belirli bir sorgunun sonuçlarını döndürmek <xref:System.Data.DataView.Find%2A> istiyorsanız, <xref:System.Data.DataView.RowFilter%2A> özelliği ayarlamak yerine, veya <xref:System.Data.DataView.FindRows%2A> yöntemlerini <xref:System.Data.DataView>kullanabilirsiniz. Özelliği <xref:System.Data.DataView.RowFilter%2A> , bir bağlantılı denetimin filtrelenmiş sonuçları görüntülediği veriye dayalı bir uygulamada en iyi şekilde kullanılır. <xref:System.Data.DataView.RowFilter%2A> Özelliği ayarlamak, verilerin dizinini yeniden oluşturur, uygulamanıza ek yük ekler ve performansı azaltır. Ve <xref:System.Data.DataView.Find%2A> yöntemleri <xref:System.Data.DataView.FindRows%2A> , dizinin yeniden oluşturulmasını gerektirmeden geçerli dizini kullanır. Yalnızca bir kez çağrıyorsa <xref:System.Data.DataView.Find%2A> <xref:System.Data.DataView>, var olanı kullanmanız gerekir. <xref:System.Data.DataView.FindRows%2A> Arayacağım <xref:System.Data.DataView.Find%2A> veya <xref:System.Data.DataView.FindRows%2A> birden çok kez arıyorsanız, arama <xref:System.Data.DataView.Find%2A> yapmak istediğiniz sütunda dizini yeniden oluşturmak <xref:System.Data.DataView> için yeni bir oluşturmanız ve ardından veya <xref:System.Data.DataView.FindRows%2A> yöntemlerini çağırmanız gerekir. <xref:System.Data.DataView.Find%2A> Ve<xref:System.Data.DataView.FindRows%2A> yöntemleri hakkında daha fazla bilgi için bkz. [satırları bulma](./dataset-datatable-dataview/finding-rows.md) ve [DataView performansı](dataview-performance.md).  
   
 ## <a name="clearing-the-filter"></a>Filtre temizleniyor  
  Filtre, <xref:System.Data.DataView.RowFilter%2A> özelliği kullanılarak filtrelemeden sonra temizlenir. <xref:System.Data.DataView> Bir <xref:System.Data.DataView> üzerinde filtre iki farklı şekilde temizlenebilir:  
@@ -94,5 +94,5 @@ Belirli ölçütlere göre verileri filtreleyebilme ve sonra verileri bir kullan
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [DataView ile Sıralama](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)
+- [DataView ile Sıralama](sorting-with-dataview-linq-to-dataset.md)

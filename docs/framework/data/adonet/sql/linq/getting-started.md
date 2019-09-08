@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 6f9592ecebdaaac7cdec60ce12e99b910275d553
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: bd82b7e83149aaa53cf1b240cb79f8747bccba47
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490060"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793919"
 ---
 # <a name="getting-started"></a>Başlarken
-Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], kullanabileceğiniz [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] SQL'e erişmek için teknoloji veritabanları bir bellek içi koleksiyonu erişim.  
+Kullanarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], bir bellek içi koleksiyona erişirken [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] olduğu gibi SQL veritabanlarına erişmek için de teknolojiyi kullanabilirsiniz.  
   
- Örneğin, `nw` temsil etmek için aşağıdaki kodda nesnesi oluşturulur `Northwind` veritabanı `Customers` için filtrelenen satır, tablo hedeflediği `Customers` gelen `London`ve bir dize `CompanyName` seçili alma işlemi.  
+ Örneğin, `nw` aşağıdaki koddaki nesne `London` `Customers` `Northwind` veritabanını temsil etmek için oluşturulmuştur, tablo hedeflenir, satırlar `Customers` kaynağından filtrelenir ve için `CompanyName` bir dize seçilir alma için.  
   
- Döngü yürütüldükten ne zaman, koleksiyonu `CompanyName` değerleri alınır.  
+ Döngü yürütüldüğünde, `CompanyName` değerler koleksiyonu alınır.  
   
  [!code-csharp[DLinqGettingStarted#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqGettingStarted/cs/Program.cs#1)]
  [!code-vb[DLinqGettingStarted#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqGettingStarted/vb/Module1.vb#1)]  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Ekleme ve güncelleştirme de dahil olmak üzere bazı ek örnekler için bkz [ne, olabilir misiniz ile LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/what-you-can-do-with-linq-to-sql.md).  
+ Ekleme ve güncelleştirme gibi bazı ek örnekler için, [LINQ to SQL Ile neler yapabileceğinizi](what-you-can-do-with-linq-to-sql.md)görün.  
   
- Ardından, bazı Kılavuzlar ve öğreticiler kullanmanın bir uygulamalı deneyim sağlamak için deneyin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Bkz: [izlenecek yollarla öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
+ Daha sonra, kullanma [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]konusunda uygulamalı bir deneyim sunmak için bazı izlenecek yollar ve öğreticiler deneyin. Bkz. [Gözden Geçirdiklerinizi öğrenme](learning-by-walkthroughs.md).  
   
- Son olarak, kendi kendinize kullanmaya nasıl başlayacağınızı öğrenin [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] okuyarak proje [kullanarak LINQ to SQL için tipik adımları](../../../../../../docs/framework/data/adonet/sql/linq/typical-steps-for-using-linq-to-sql.md).  
+ Son olarak, [LINQ to SQL kullanmak için tipik adımları](typical-steps-for-using-linq-to-sql.md)okuyarak kendi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projenize nasıl başlaleyeceğinizi öğrenin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [Lınq'ye giriş (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Lınq'ye giriş (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
+- [LINQ to SQL](index.md)
+- [LINQ (C#) uygulamasına giriş](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ 'e giriş (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ to SQL Nesne Modeli](the-linq-to-sql-object-model.md)

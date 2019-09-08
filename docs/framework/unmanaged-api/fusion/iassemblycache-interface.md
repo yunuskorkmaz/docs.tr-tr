@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fc5f3a3d5bc5699a596bcc648a7153190c130f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697686"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796774"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache Arabirimi
-Genel Derleme Önbelleği kullanmak için fusion teknolojisiyle temsil eder.  
+Fusion teknolojisinin kullanması için genel derleme önbelleğini temsil eder.  
   
 ## <a name="methods"></a>Yöntemler  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Yeni bir başvuru alır [Iassemblycacheıtem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
-|[CreateAssemblyScavenger Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Fusion teknoloji tarafından iç kullanım için ayrılmıştır.|  
-|[InstallAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğine yükler.|  
-|[QueryAssemblyInfo Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Belirtilen derleme hakkında istenen verileri alır.|  
-|[UninstallAssembly Yöntemi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|  
+|[CreateAssemblyCacheItem Yöntemi](iassemblycache-createassemblycacheitem-method.md)|Yeni bir [IAssemblyCacheItem](iassemblycacheitem-interface.md)öğesine bir başvuru alır.|  
+|[CreateAssemblyScavenger Yöntemi](iassemblycache-createassemblyscavenger-method.md)|Fusion teknolojisinin iç kullanımı için ayrılmıştır.|  
+|[InstallAssembly Yöntemi](iassemblycache-installassembly-method.md)|Belirtilen derlemeyi genel derleme önbelleğine yüklenir.|  
+|[QueryAssemblyInfo Yöntemi](iassemblycache-queryassemblyinfo-method.md)|Belirtilen derleme hakkında istenen verileri alır.|  
+|[UninstallAssembly Yöntemi](iassemblycache-uninstallassembly-method.md)|Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırır.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Arabirimleri](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+- [Fusion Arabirimleri](fusion-interfaces.md)
+- [Genel Derleme Önbelleği](../../app-domains/gac.md)

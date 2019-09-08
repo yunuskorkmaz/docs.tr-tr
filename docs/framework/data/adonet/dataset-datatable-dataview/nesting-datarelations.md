@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 08149de9222c34928078c0ca9d88096f7a4a88d1
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 971a1bddc40521dc7381ecb2e39709c0fed282ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203263"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785991"
 ---
 # <a name="nesting-datarelations"></a>DataRelations’ı İç İçe Yerleştirme
 Verilerin ilişkisel bir gösteriminde, tek tek tablolar bir sütun veya sütun kümesi kullanılarak birbirleriyle ilişkili satırları içerir. ADO.net <xref:System.Data.DataSet>, tablolar arasındaki ilişki bir <xref:System.Data.DataRelation>kullanılarak uygulanır. Bir **DataRelation**oluşturduğunuzda, sütunların üst-alt ilişkileri yalnızca ilişki üzerinden yönetilir. Tablolar ve sütunlar ayrı varlıklardır. XML 'in sağladığı verilerin hiyerarşik gösteriminde, üst-alt ilişkileri iç içe geçmiş alt öğeler içeren üst öğeler tarafından temsil edilir.  
   
- Bir **veri kümesi** , **WriteXml**kullanılarak XML verileriyle eşitlendiğinde <xref:System.Xml.XmlDataDocument> veya yazılmış olduğunda alt nesnelerin iç içe koyulmasını kolaylaştırmak için, bir **iç içe geçmiş** özelliği gösterir. Bir **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlamak, ilişkinin alt satırlarının XML verisi olarak yazıldığında veya bir **XmlDataDocument**ile eşitlendiğinde üst sütun içinde iç içe olmasına neden olur. **DataRelation** 'ın **Nested** özelliği varsayılan olarak **false 'tur**.  
+ Bir **veri kümesi** , <xref:System.Xml.XmlDataDocument> **WriteXml**kullanılarak XML verileriyle eşitlendiğinde veya yazılmış olduğunda alt nesnelerin iç içe koyulmasını kolaylaştırmak için, bir **iç içe geçmiş** **özelliği gösterir.** Bir **DataRelation** 'ın **Nested** özelliğini **true** olarak ayarlamak, ilişkinin alt satırlarının XML verisi olarak yazıldığında veya bir **XmlDataDocument**ile eşitlendiğinde üst sütun içinde iç içe olmasına neden olur. **DataRelation** 'ın **Nested** özelliği varsayılan olarak **false 'tur**.  
   
  Örneğin, aşağıdaki **veri kümesini**göz önünde bulundurun.  
   
@@ -136,4 +136,4 @@ customerOrders.Nested = true;
 - [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)
 - [DataRelations Ekleme](adding-datarelations.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

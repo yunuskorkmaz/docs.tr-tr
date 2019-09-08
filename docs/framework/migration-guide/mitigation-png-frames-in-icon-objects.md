@@ -1,33 +1,33 @@
 ---
-title: 'Azaltma: Simge nesneleri PNG çerçeveleri'
+title: Mayı Simge nesnelerinde PNG çerçeveleri
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 575d77524e567ba55f7cd9222d690fcee25d3f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85a76681cf6efd649fe366a68d956246334975fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871364"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789980"
 ---
-# <a name="mitigation-png-frames-in-icon-objects"></a>Azaltma: Simge nesneleri PNG çerçeveleri
-.NET Framework 4.6 ile başlayan <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> yöntemi başarıyla PNG çerçevelere simgelerle dönüştürür <xref:System.Drawing.Bitmap> nesneleri.  
+# <a name="mitigation-png-frames-in-icon-objects"></a>Mayı Simge nesnelerinde PNG çerçeveleri
+<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> Yöntem, .NET Framework 4,6 ' den başlayarak png <xref:System.Drawing.Bitmap> çerçevelerinden simgeleri nesnelere başarıyla dönüştürür.  
   
- .NET Framework 4.5.2 ve önceki sürümleri hedefleyen uygulamalarda <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> yöntem bir <xref:System.ArgumentOutOfRangeException> özel durum, <xref:System.Drawing.Icon> nesnenin PNG çerçeve vardır.  
+ .NET Framework 4.5.2 ve önceki sürümlerini hedefleyen uygulamalarda, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> <xref:System.Drawing.Icon> nesne png çerçevelerdeyse Yöntem bir <xref:System.ArgumentOutOfRangeException> özel durum oluşturur.  
   
 ## <a name="impact"></a>Etki  
- Bu değişiklik, .NET Framework 4.6 hedefleyecek şekilde derlenir ve özel işlem uygulamak uygulamaları etkiler. <xref:System.ArgumentOutOfRangeException> , harekete ne zaman bir <xref:System.Drawing.Icon> nesnenin PNG çerçeve vardır. .NET Framework 4. 6'altında çalışırken, dönüştürme başarılı bir <xref:System.ArgumentOutOfRangeException> Hayır artık oluşturulur ve bu nedenle özel durum işleyicisi artık çağrılır.  
+ Bu değişiklik, .NET Framework 4,6 ' i hedefleyecek ve bir <xref:System.ArgumentOutOfRangeException> <xref:System.Drawing.Icon> nesne png çerçevelerindeyken oluşturulan için özel işleme uygulayan uygulamaları etkiler. .NET Framework 4,6 altında çalışırken, dönüştürme başarılı olur, <xref:System.ArgumentOutOfRangeException> artık oluşturulmaz ve bu nedenle özel durum işleyicisi artık çağrılmayacaktır.  
   
 ### <a name="mitigation"></a>Azaltma  
- Bu davranış, istenmeyen ise, önceki davranışı şu öğeye ekleyerek koruyabilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) app.config dosyanıza bölümünü:  
+ Bu davranış istenmez ise, App. config dosyanızın [ \<Runtime >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki öğeyi ekleyerek önceki davranışı koruyabilirsiniz:  
   
 ```xml  
 <AppContextSwitchOverrides   
       value="Switch.System.Drawing.DontSupportPngFramesInIcons=true" />  
 ```  
   
- App.config dosyasını zaten varsa `AppContextSwitchOverrides` öğenin yeni değeri yükleneceğini ile `value` özniteliği şöyle:  
+ App. config dosyası zaten `AppContextSwitchOverrides` öğesini içeriyorsa, yeni değer aşağıdaki gibi `value` özniteliğiyle birleştirilmelidir:  
   
 ```xml  
 <AppContextSwitchOverrides   
@@ -36,4 +36,4 @@ ms.locfileid: "61871364"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6.md)

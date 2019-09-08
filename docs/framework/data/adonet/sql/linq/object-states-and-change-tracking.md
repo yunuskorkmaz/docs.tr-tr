@@ -2,12 +2,12 @@
 title: Nesne Durumları ve Değişiklik İzleme
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043514"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781282"
 ---
 # <a name="object-states-and-change-tracking"></a>Nesne Durumları ve Değişiklik İzleme
 
@@ -21,7 +21,7 @@ Aşağıdaki tabloda nesneler için [!INCLUDE[vbtecdlinq](../../../../../../incl
 |-----------|-----------------|
 |`Untracked`|Tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenmeyen bir nesne. Örnekler şunlardır:<br /><br /> -Geçerli <xref:System.Data.Linq.DataContext> bir nesne (yeni oluşturulan nesne gibi) aracılığıyla sorgulanmadı.<br />-Serisini kaldırma ile oluşturulan nesne<br />-Farklı <xref:System.Data.Linq.DataContext>bir ile sorgulanan bir nesne.|
 |`Unchanged`|Geçerli <xref:System.Data.Linq.DataContext> ve oluşturulduktan sonra değiştirilmiş olarak bilinen bir nesne.|
-|`PossiblyModified`|Öğesine<xref:System.Data.Linq.DataContext> *bağlı* bir nesne. Daha fazla bilgi için, bkz. [N katmanlı uygulamalarda veri alma ve CUD işlemleri (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Öğesine<xref:System.Data.Linq.DataContext> *bağlı* bir nesne. Daha fazla bilgi için, bkz. [N katmanlı uygulamalarda veri alma ve CUD işlemleri (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Geçerli <xref:System.Data.Linq.DataContext>bir nesne kullanılarak alınmadı. Bu, sırasında <xref:System.Data.Linq.DataContext.SubmitChanges%2A>bir `INSERT` veritabanının oluşmasına neden olur.|
 |`ToBeUpdated`|Bir nesne alındıktan sonra değiştirilmiş olarak bilinen bir nesne. Bu, sırasında <xref:System.Data.Linq.DataContext.SubmitChanges%2A>bir `UPDATE` veritabanının oluşmasına neden olur.|
 |`ToBeDeleted`|Silinmek üzere işaretlenen bir nesne, sırasında `DELETE` <xref:System.Data.Linq.DataContext.SubmitChanges%2A>bir veritabanına neden olur.|
@@ -31,7 +31,7 @@ Aşağıdaki tabloda nesneler için [!INCLUDE[vbtecdlinq](../../../../../../incl
 
 `Inserts` Kullanarak<xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>açıkça istek yapabilirsiniz. Alternatif olarak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , güncellenmesi `Inserts` gereken bilinen nesnelerden birine bağlı nesneleri bularak çıkarsanamıyor. Örneğin, bir nesnesine bir nesnesi eklerseniz `Untracked` `Untracked` <xref:System.Data.Linq.EntitySet%601> veya nesnesine bir <xref:System.Data.Linq.EntityRef%601> nesnesi ayarlarsanız, `Untracked` nesneyi grafikteki izlenen nesneler yoluyla erişilebilir hale getirebilirsiniz. İşlem <xref:System.Data.Linq.DataContext.SubmitChanges%2A>sırasında izlenen [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesneleri gezirken, izlenmeyen kalıcı nesneleri tespit edin. Bu tür nesneler veritabanına ekleme adaylarıdır.
 
-Bir devralma hiyerarşisindeki sınıflar için, ( <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>`o`), nesne `o`türüyle eşleşecek şekilde *ayrıştırıcı* olarak atanan üyenin değerini de ayarlar. Varsayılan Ayrıştırıcı değeriyle eşleşen bir tür söz konusu olduğunda, bu eylem ayrıştırıcı değerinin varsayılan değer ile üzerine yazılmasına neden olur. Daha fazla bilgi için bkz. [Devralma desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).
+Bir devralma hiyerarşisindeki sınıflar için, ( <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>`o`), nesne `o`türüyle eşleşecek şekilde *ayrıştırıcı* olarak atanan üyenin değerini de ayarlar. Varsayılan Ayrıştırıcı değeriyle eşleşen bir tür söz konusu olduğunda, bu eylem ayrıştırıcı değerinin varsayılan değer ile üzerine yazılmasına neden olur. Daha fazla bilgi için bkz. [Devralma desteği](inheritance-support.md).
 
 > [!IMPORTANT]
 > Öğesine `Table` eklenen bir nesne, kimlik önbelleğinde değil. Kimlik önbelleği yalnızca veritabanından alınan verileri yansıtır. Bir çağrısından <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>sonra, eklenen varlık başarıyla tamamlanana kadar <xref:System.Data.Linq.DataContext.SubmitChanges%2A> veritabanına yönelik sorgularda görünmez.
@@ -69,5 +69,5 @@ Hem gerekli başvuruyu hem de karşılık gelen yabancı anahtarı güncelleşti
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Insert, Update ve Delete İşlemleri](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [Insert, Update ve Delete İşlemleri](insert-update-and-delete-operations.md)

@@ -4,58 +4,58 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 48e6177e7098f8131d2a0fd62bda9c505fa8bcc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91277e1a4d0a1d001d62d677dbd087bec5d875f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662810"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797170"
 ---
 # <a name="extending-clients"></a>İstemcileri Genişletme
-Bir arama uygulamasında hizmet modeli katmanını içine giden iletiler için yöntem çağrılarına uygulama kodunda çevirme, bunları temel alınan kanallara gönderme, geri dönüş değerlerine dönüştürür ve out Parametreleri sonuçları çevirme sorumludur uygulama kodu ve sonuçları çağırana geri döndürülüyor. Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve istemci veya dağıtıcı işlevi, özel davranışlar, ileti ve parametre durdurma ve diğer genişletilebilirlik işlevlerini içeren özellikler uygular.  
+Çağıran bir uygulamada, hizmet modeli katmanı, uygulama kodundaki Yöntem çağrılarını giden iletilere çevirmekten, bunları temeldeki kanallara ileterek, sonuçları döndürülen değerlere ve çıkış parametrelerine geri çevirmeye sorumludur. uygulama kodu ve sonuçları çağırana geri döndürülüyor. Hizmet modeli uzantıları, istemci veya dağıtıcı işlevselliği, özel davranışlar, ileti ve parametre yakaalımı ve diğer genişletilebilirlik işlevleriyle ilgili yürütme veya iletişim davranışlarını ve özellikleri değiştirir veya uygular.  
   
- Bu konu nasıl kullanılacağını açıklar <xref:System.ServiceModel.Dispatcher.ClientRuntime> ve <xref:System.ServiceModel.Dispatcher.ClientOperation> bir WCF istemcisi veya ıntercept veya iletileri, parametreleri değiştirmek için varsayılan yürütme davranışını değiştirmek veya dönüş değerleri için bir Windows Communication Foundation (WCF) istemci uygulamasında sınıfları için önceki veya sonraki gönderme veya bunları kanal katmandan alınıyor. Hizmet çalışma zamanı genişletme hakkında daha fazla bilgi için bkz. [dağıtıcıları genişletme](../../../../docs/framework/wcf/extending/extending-dispatchers.md). Değiştiren ve istemci çalışma zamanına özelleştirme nesneleri eklemek davranışları hakkında daha fazla bilgi için bkz. [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Bu konu, <xref:System.ServiceModel.Dispatcher.ClientRuntime> bir WCF istemcisinin varsayılan yürütme <xref:System.ServiceModel.Dispatcher.ClientOperation> davranışını değiştirmek veya iletileri, parametreleri ya da dönüş değerlerini kesme ya da değiştirme için bir Windows Communication Foundation (WCF) istemci uygulamasında ve sınıflarının nasıl kullanılacağını açıklar veya daha sonra kanal katmanından gönderilmeden önce. Hizmet çalışma zamanını genişletme hakkında daha fazla bilgi için bkz. [dispatchers 'ı genişletme](extending-dispatchers.md). Özelleştirme nesnelerini istemci çalışma zamanına değiştirme ve ekleme davranışları hakkında daha fazla bilgi için, bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="clients"></a>İstemciler  
- Bir istemcide bir WCF istemcisi nesne veya istemci kanalını yöntem çağrıları giden iletileri ve gelen iletileri arama uygulamaya döndürülen İşlem sonuçlarını dönüştürür. (İstemci türleri hakkında daha fazla bilgi için bkz. [WCF istemci mimarisi](../../../../docs/framework/wcf/feature-details/client-architecture.md).)  
+ Bir istemcide, WCF istemci nesnesi veya istemci kanalı, Yöntem çağrılarını giden iletilere ve gelen iletileri çağıran uygulamaya döndürülen işlem sonuçlarına dönüştürür. (İstemci türleri hakkında daha fazla bilgi için bkz. [WCF Istemci mimarisi](../feature-details/client-architecture.md).)  
   
- WCF istemci türlerini, bu uç nokta ve işlem düzeyi işlevselliğine çalışma zamanı türleri vardır. Bir uygulama, bir işlem çağırdığında <xref:System.ServiceModel.Dispatcher.ClientOperation> giden nesneleri bir iletiye dönüştürür, dinleyicileri işler, giden çağrı için hedef sözleşmesi uyan ve giden iletinin uygulamalı onaylar <xref:System.ServiceModel.Dispatcher.ClientRuntime>, olduğu sorumlu oluşturmak ve giden kanallar (ve gelen kanalları çift yönlü hizmetler söz konusu olduğunda), (üst bilgi değiştirme gibi) işleme ek giden ileti işleme yönetmek için gelen ileti dinleyicileri her iki yönde işleme ve yönlendirme uygun istemci tarafı çift yönlü çağrıları <xref:System.ServiceModel.Dispatcher.DispatchRuntime> nesne. Hem <xref:System.ServiceModel.Dispatcher.ClientOperation> ve <xref:System.ServiceModel.Dispatcher.ClientRuntime> istemciye ileti (hatalar dahil olmak üzere) döndürüldüğünde benzer hizmetleri sağlar.  
+ WCF istemci türlerinde, bu uç noktayı ve işlem düzeyi işlevselliğini işleyen çalışma zamanı türleri vardır. Bir uygulama bir işlem <xref:System.ServiceModel.Dispatcher.ClientOperation> çağırdığında, giden nesneleri bir iletiye çevirir, bu işlem, dinleyici, giden çağrının hedef sözleşmeye uygun olduğunu onaylar ve giden iletiyi <xref:System.ServiceModel.Dispatcher.ClientRuntime> giden kanalları (ve çift yönlü hizmetler söz konusu olduğunda gelen kanallar) oluşturma ve yönetme, ek giden ileti işlemeyi işleme (başlık değişikliği gibi), her iki yönde de ileti yakalayıcılar işleme ve gelen yönlendirme uygun istemci tarafı <xref:System.ServiceModel.Dispatcher.DispatchRuntime> nesnesine çift yönlü çağrılar. , <xref:System.ServiceModel.Dispatcher.ClientOperation> Ve<xref:System.ServiceModel.Dispatcher.ClientRuntime> iletileri (hatalar dahil) istemciye döndürüldüğünde her ikisi de benzer hizmetleri sağlar.  
   
- Bu iki çalışma zamanı WCF istemci nesneleri ve kanalları işlenmesini özelleştirmek için ana uzantısı sınıflardır. <xref:System.ServiceModel.Dispatcher.ClientRuntime> Sınıfı ıntercept ve sözleşmenin içindeki tüm iletileri arasında istemci yürütme genişletmek kullanıcıların sağlar. <xref:System.ServiceModel.Dispatcher.ClientOperation> Sınıfı ıntercept ve belirli bir işlemde tüm iletiler için istemci yürütme genişletmek kullanıcıların sağlar.  
+ Bu iki çalışma zamanı sınıfı, WCF istemci nesnelerinin ve kanallarının işlenmesini özelleştirmek için ana uzantıdır. Sınıfı <xref:System.ServiceModel.Dispatcher.ClientRuntime> , kullanıcıların sözleşmede bulunan tüm iletilerde istemci yürütmesini kesmesini ve genişletmelerine olanak sağlar. Sınıfı <xref:System.ServiceModel.Dispatcher.ClientOperation> , kullanıcıların belirli bir işlemdeki tüm iletiler için istemci yürütmeyi kesmesini ve genişletmelerine olanak sağlar.  
   
- Özellikleri değiştirme veya özelleştirme ekleyerek sözleşme, uç noktayı ve işlem davranışları kullanarak gerçekleştirilir. İstemci çalışma zamanı özelleştirmeleri gerçekleştirmek için bu tür davranışları kullanma hakkında daha fazla bilgi için bkz. [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Özellikleri değiştirme veya özelleştirmeler ekleme, sözleşme, uç nokta ve işlem davranışları kullanılarak yapılır. İstemci çalışma zamanı özelleştirmelerini gerçekleştirmek üzere bu tür davranışları kullanma hakkında daha fazla bilgi için, bkz. [çalışma zamanını davranışlarla birlikte yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="scenarios"></a>Senaryolar  
- Burada birkaç nedenden istemci sistemini genişletmek için de dahil olmak üzere:  
+ İstemci sistemini genişletmek için aşağıdakiler de dahil olmak üzere birkaç neden vardır:  
   
-- Özel ileti doğrulama. Bir kullanıcı, bir ileti için belirli bir şema geçerli olduğunu zorlamak isteyebilirsiniz. Bu uygulama tarafından yapılabilir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> arabirimi ve uygulaması için atama <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> özelliği. Örnekler için bkz [nasıl yapılır: İstemcide iletileri denetleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md) ve [nasıl yapılır: İstemcide iletileri denetleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+- Özel Ileti doğrulaması. Bir Kullanıcı belirli bir şema için bir iletinin geçerli olduğunu zorlamak isteyebilir. Bu, <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> arabirimi uygulayarak ve uygulamaya uygulama <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> atanarak yapılabilir. Örnekler için bkz [. nasıl yapılır: İstemcideki](how-to-inspect-or-modify-messages-on-the-client.md) iletileri inceleyin veya değiştirin ve [şunları yapın: Istemcideki](how-to-inspect-or-modify-messages-on-the-client.md)Iletileri inceleyin veya değiştirin.  
   
-- Özel ileti günlüğe kaydetme. Bir kullanıcı inceleyin ve bir uç noktası aracılığıyla akış uygulama iletileri bir dizi oturum isteyebilirsiniz. Bu da ileti kesici arabirimleri ile gerçekleştirilebilir.  
+- Özel Ileti günlüğü. Bir Kullanıcı bir uç nokta aracılığıyla akan bazı uygulama iletilerinin bir kümesini incelemek ve günlüğe kaydetmek isteyebilir. Bu, ileti yakalayıcısı arabirimleriyle de gerçekleştirilebilir.  
   
-- Özel ileti dönüşümler. Uygulama kodunu değiştirmek yerine, kullanıcı iletisi (örneğin, sürüm oluşturma) çalışma zamanında belirli dönüştürmeleri uygulamak isteyebilirsiniz. Bu, yeniden ileti kesici arabirimleri ile gerçekleştirilebilir.  
+- Özel Ileti dönüşümleri. Uygulama kodunu değiştirmek yerine, Kullanıcı çalışma zamanındaki iletiye belirli dönüştürmeleri uygulamak isteyebilir (örneğin, sürüm oluşturma için). Bu, ileti yakalayıcısı arabirimleriyle birlikte gerçekleştirilebilir.  
   
-- Özel veri modeli. Bir kullanıcı bir veri veya seri hale getirme modeli varsayılan WCF tarafından desteklenen dışındaki gerekebilir (yani, <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>, ve <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> nesneleri). Bu ileti biçimlendirici arabirimlerini uygulayarak yapılabilir. Daha fazla bilgi için <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> ve <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> özelliği.  
+- Özel veri modeli. Kullanıcı, WCF (yani <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>,, ve <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> nesneler) için varsayılan olarak desteklenenlerden farklı bir veri veya serileştirme modeli olmasını isteyebilir. Bu, ileti biçimlendirici arabirimlerini uygulayarak yapılabilir. Daha fazla bilgi için bkz <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> . <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> ve özelliği.  
   
-- Özel parametre doğrulama. Bir kullanıcı türü belirtilmiş bir parametre (XML aksine) geçerli olduğunu zorlamak isteyebilirsiniz. Bu yapılabilir parametresi denetçisi arabirimleri kullanarak. Bir örnek için bkz [nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md) veya [istemci doğrulama](../../../../docs/framework/wcf/samples/client-validation.md).  
+- Özel parametre doğrulaması. Kullanıcı, yazılan parametrelerin geçerli olduğunu (XML 'nin aksine) zorlamak isteyebilir. Bu işlem, parametre denetçisi arabirimleri kullanılarak yapılabilir. Bir örnek için bkz [. nasıl yapılır: Parametreleri](how-to-inspect-or-modify-parameters.md) veya [istemci doğrulamasını](../samples/client-validation.md)inceleyin veya değiştirin.  
   
 ### <a name="using-the-clientruntime-class"></a>ClientRuntime sınıfını kullanma  
- <xref:System.ServiceModel.Dispatcher.ClientRuntime> Sınıfı, bir genişletilebilirlik noktası için istemci davranışını genişletmek ve müdahale iletileri genişletme nesneleri ekleyebilirsiniz. Durdurma nesneleri belirli bir sözleşme tüm iletileri işler, yalnızca belirli işlemleri için iletileri işlemek, özel kanal başlatma gerçekleştirmek ve diğer özel istemci uygulama davranışı uygulamak.  
+ <xref:System.ServiceModel.Dispatcher.ClientRuntime> Sınıfı, iletileri denetleyen ve istemci davranışını genişleten uzantı nesneleri ekleyebileceğiniz bir genişletilebilirlik noktasıdır. Yakalatma nesneleri belirli bir sözleşmede bulunan tüm iletileri işleyebilir, belirli işlemler için yalnızca iletileri işleyebilir, özel kanal başlatması gerçekleştirebilir ve diğer özel istemci uygulaması davranışını uygulayabilir.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> Özelliği hizmet tarafından başlatılan bir geri çağırma istemcileri için dağıtım çalışma zamanı nesnesi döndürür.  
+- Özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> , hizmet tarafından başlatılan geri arama istemcileri için dağıtım çalışma zamanı nesnesini döndürür.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> Özelliği bir özel işlem Seçici nesnesi kabul eder.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> Özelliği özel bir işlem Seçici nesnesini kabul eder.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> Özelliği inceleyin veya istemci kanal değiştirebilen bir kanal Başlatıcı eklenmesini sağlar.  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> Özelliği, istemci kanalını incelemenize veya değiştirebilmesine izin veren bir kanal başlatıcısı eklenmesini mümkün bir şekilde sunar.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> Özellik koleksiyonunu alır <xref:System.ServiceModel.Dispatcher.ClientOperation> iletileri bu işlem, belirli işlevleri sağlayan özel ileti dinleyiciler eklemek nesneleri.  
+- Özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> , bu işlemin iletilerine özgü <xref:System.ServiceModel.Dispatcher.ClientOperation> işlevselliği sağlayan özel ileti yakalayıcılar ekleyebileceğiniz bir nesne koleksiyonu alır.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> Özelliği, doğrudan adresleme denetlemek için bazı otomatik adres üstbilgileri devre dışı açmak bir uygulama sağlar.  
+- Özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> , bir uygulamanın adresleme 'yi doğrudan denetlemek için bazı otomatik adresleme üstbilgilerini kapatmasına olanak sağlar.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> Özelliği, aracılar ve diğer senaryoları desteklemek için taşıma düzeyinde hedef iletinin değerini ayarlar.  
+- Özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> , aracıları ve diğer senaryoları desteklemek için aktarım düzeyindeki iletinin hedefinin değerini ayarlar.  
   
-- <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> Özellik koleksiyonunu alır <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> nesneleri bir WCF istemcisi üzerinden yolculuk tüm iletiler için özel ileti dinleyicileri ekleme yapabilir.  
+- Özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> , bir WCF istemcisi aracılığıyla <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> seyahat eden tüm iletiler için özel ileti yakalayıcılar ekleyebileceğiniz bir nesne koleksiyonu alır.  
   
- Ayrıca, bir dizi sözleşmesi bilgileri almak diğer özellikleri vardır:  
+ Ayrıca, sözleşme bilgilerini alan bazı diğer özellikler vardır:  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
   
@@ -63,60 +63,60 @@ Bir arama uygulamasında hizmet modeli katmanını içine giden iletiler için y
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
- WCF istemcisini çift yönlü bir WCF istemcisi, aşağıdaki özellikleri WCF istemci bilgileri geri çağırma ayrıca Al:  
+ WCF istemcisi çift yönlü bir WCF istemcise, aşağıdaki özellikler geri çağırma WCF istemci bilgilerini de alır:  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- WCF istemci yürütme tüm bir WCF istemcisi genişletmek için kullanılabilir özelliklerini gözden geçirin. <xref:System.ServiceModel.Dispatcher.ClientRuntime> bir özelliğini değiştirme veya arabirim uygulama ve özellik ekleme dağıtımınızla işlevselliğini oluşturup oluşturmayacağını görmek için sınıf. Uzantınızı oluşturmak için belirli bir uzantıya seçtikten sonra uygun Ekle <xref:System.ServiceModel.Dispatcher.ClientRuntime> erişim sağlayan bir istemci davranışını uygulayarak özelliği <xref:System.ServiceModel.Dispatcher.ClientRuntime> çağrıldığında sınıf.  
+ WCF istemci yürütülmesini tüm WCF istemcisi genelinde genişletmek için, bir özelliğin değiştirilip değiştirilmediğini veya bir <xref:System.ServiceModel.Dispatcher.ClientRuntime> arabirimin uygulanıp uygulanmadığını ve aradığınız işlevselliği oluşturup bir özelliğe eklemeyi görmek için sınıfta bulunan özellikleri gözden geçirin. Oluşturmak için belirli bir uzantıyı seçtikten sonra, çağrıldığında <xref:System.ServiceModel.Dispatcher.ClientRuntime> <xref:System.ServiceModel.Dispatcher.ClientRuntime> sınıfa erişim sağlayan bir istemci davranışı uygulayarak uzantınızı uygun özelliğe ekleyin.  
   
- Özel genişletme nesneleri bir işlem davranışını kullanarak bir koleksiyona ekleyebilirsiniz (uygulayan bir nesne <xref:System.ServiceModel.Description.IOperationBehavior>), bir sözleşme davranış (uygulayan bir nesne <xref:System.ServiceModel.Description.IContractBehavior>), veya bir uç nokta davranışı (uygulayan bir nesne <xref:System.ServiceModel.Description.IEndpointBehavior> ). Yükleme davranışı nesne davranışların ilgili koleksiyona program aracılığıyla, bildirimli olarak (özel bir öznitelik uygulayarak) eklenir veya özel bir uygulama tarafından <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> kullanarak eklenecek davranışı etkinleştirmek üzere nesne bir Uygulama yapılandırma dosyası. Ayrıntılar için bkz [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Bir işlem davranışı (uygulayan <xref:System.ServiceModel.Description.IOperationBehavior>bir nesne), bir anlaşma davranışı (uygulayan <xref:System.ServiceModel.Description.IContractBehavior>bir nesne) veya bir uç nokta davranışı <xref:System.ServiceModel.Description.IEndpointBehavior> (uygulayan bir nesne) kullanarak bir koleksiyona özel uzantı nesneleri ekleyebilirsiniz. ). Yükleme davranışı nesnesi, programlı olarak, bildirimli olarak (özel bir öznitelik uygulayarak) veya bir özel <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> nesne uygulayarak, davranışı uygulama yapılandırma dosyası. Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Bir WCF istemcisi arasında durdurma gösteren örnekler için bkz. [nasıl yapılır: İstemcide iletileri denetleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md).  
+ Bir WCF istemcisi genelinde yakalaşmayı gösteren örnekler için bkz [. nasıl yapılır: Istemcideki](how-to-inspect-or-modify-messages-on-the-client.md)Iletileri inceleyin veya değiştirin.  
   
-### <a name="using-the-clientoperation-class"></a>ClientOperation sınıfını kullanma  
- <xref:System.ServiceModel.Dispatcher.ClientOperation> Sınıfı, konumu istemci çalışma zamanı değişiklikleri ve ekleme kapsamındaki özel uzantıları için yalnızca bir hizmet işlemine noktası. (Bir sözleşme tüm iletiler için istemci çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.Dispatcher.ClientRuntime> sınıfı.)  
+### <a name="using-the-clientoperation-class"></a>Clienentoperation sınıfını kullanma  
+ <xref:System.ServiceModel.Dispatcher.ClientOperation> Sınıfı, istemci çalışma zamanı değişikliklerinin ve yalnızca bir hizmet işlemi kapsamındaki özel uzantılar için ekleme noktasının konumudur. (Bir sözleşmede bulunan tüm iletiler için istemci çalışma zamanı davranışını değiştirmek için <xref:System.ServiceModel.Dispatcher.ClientRuntime> sınıfını kullanın.)  
   
- Kullanım <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> bulmak için özellik <xref:System.ServiceModel.Dispatcher.ClientOperation> belirli hizmet işlemini temsil eden nesne. Aşağıdaki özellikleri WCF istemci sisteme özel nesneleri eklemek etkinleştirin:  
+ Belirli bir hizmet işlemini temsil eden <xref:System.ServiceModel.Dispatcher.ClientOperation> nesneyi bulmak için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> Aşağıdaki özellikler, WCF istemci sistemine özel nesneler ekleme olanağı sağlar:  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> özel eklemek için özellik <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> uygulama için bir işlem veya geçerli biçimlendirici değiştirin.  
+- Bir işlem için özel <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> uygulama eklemek veya geçerli biçimlendirici değiştirmek için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> özel eklemek için özellik <xref:System.ServiceModel.Dispatcher.IParameterInspector> uygulama veya geçerli değiştirilecek.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> Özel<xref:System.ServiceModel.Dispatcher.IParameterInspector> bir uygulama eklemek veya geçerli olanı değiştirmek için özelliğini kullanın.  
   
- Aşağıdaki özellikler, biçimlendirici ve özel parametre denetçiler etkileşimi sistemde değişiklik olanak sağlar:  
+ Aşağıdaki özellikler, biçimlendirici ve özel parametre denetçiler ile etkileşime sahip sistemi değiştirmenize olanak sağlar:  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> giden ileti serileştirmek denetlemek için özellik.  
+- Bir giden iletinin serileştirmesini denetlemek için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> gelen iletinin seri durumundan çıkarma denetlemek için özellik.  
+- Bir gelen iletinin serisini kaldırma özelliğinidenetlemekiçinözelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> istek iletisi WS-Addressing eylemini denetlemek için özellik.  
+- İstek iletisinin ws-Addressing eylemini denetlemek için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> ve <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> hangi WCF istemci yöntemleri bir zaman uyumsuz işlemle ilişkili olduğunu belirtmek için.  
+- Hangi WCF istemci <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A> yöntemlerinin zaman uyumsuz bir işlemle ilişkilendirildiğini belirtmek için vekullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> SOAP içinde görünebilir türler içeren koleksiyonu almak için özelliği ayrıntı türüne hataları.  
+- Ayrıntı türü olarak SOAP hatalarıyla görünebilen türleri içeren bir koleksiyon almak için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> ve <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> oturum olup olmadığını denetlemek için özellikler başlatılır veya aşağı, sırasıyla işlemi çağrılırken bozuk.  
+- İşlem çağrıldığında, <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> bir oturumun başlatılıp başlatılmayacağını veya bozuk olup olmadığını denetlemek için veözelliklerinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> işlemi tek yönlü bir işlem olup olmadığını denetlemek için özellik.  
+- İşlemin tek yönlü bir işlem olup olmadığını denetlemek için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> içeren almak için özellik <xref:System.ServiceModel.Dispatcher.ClientRuntime> nesne.  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> İçeren<xref:System.ServiceModel.Dispatcher.ClientRuntime> nesneyi almak için özelliğini kullanın.  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> işlem adını almak için özellik.  
+- İşlemin adını almak için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A>  
   
-- Kullanım <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> işlemi için hangi yöntemin eşlendi denetlemek için özellik.  
+- Hangi yöntemin işleme eşlendiğini denetlemek için özelliğinikullanın.<xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A>  
   
- WCF istemci yürütme arasında yalnızca bir hizmet işlemi genişletmek için kullanılabilir özelliklerini gözden geçirin. <xref:System.ServiceModel.Dispatcher.ClientOperation> bir özelliğini değiştirme veya arabirim uygulama ve özellik ekleme dağıtımınızla işlevselliğini oluşturup oluşturmayacağını görmek için sınıf. Uzantınızı oluşturmak için belirli bir uzantıya seçtikten sonra uygun Ekle <xref:System.ServiceModel.Dispatcher.ClientOperation> erişim sağlayan bir istemci davranışını uygulayarak özelliği <xref:System.ServiceModel.Dispatcher.ClientOperation> çağrıldığında sınıf. İçinde bu davranış, daha sonra değiştirebilirsiniz <xref:System.ServiceModel.Dispatcher.ClientRuntime> gereksinimlerinizi karşılayacak şekilde özelliği.  
+ WCF istemci yürütülmesini yalnızca bir hizmet işlemi genelinde genişletmek için, bir özelliğin değiştirilip etkinleştirilmeyeceğini veya bir <xref:System.ServiceModel.Dispatcher.ClientOperation> arabirimin uygulanıp yüklenmediğini ve bu özelliği bir özelliğe ekleyerek Aradığınız işlevselliği oluşturduğunu görmek için sınıfta bulunan özellikleri gözden geçirin. Oluşturmak için belirli bir uzantıyı seçtikten sonra, çağrıldığında <xref:System.ServiceModel.Dispatcher.ClientOperation> <xref:System.ServiceModel.Dispatcher.ClientOperation> sınıfa erişim sağlayan bir istemci davranışı uygulayarak uzantınızı uygun özelliğe ekleyin. Bu davranışın içinde, <xref:System.ServiceModel.Dispatcher.ClientRuntime> özelliği gereksinimlerinize uyacak şekilde değiştirebilirsiniz.  
   
- Genellikle, bir işlem davranışı uygulayan (uygulayan bir nesne <xref:System.ServiceModel.Description.IOperationBehavior> arabirimi) soneklerini belirttiniz, ancak aynı zamanda uç nokta davranışları kullanın ve sözleşme bularak aynı şeyi yapmanın davranışları <xref:System.ServiceModel.Description.OperationDescription> belirli bir işlem ve davranışı var. ekleme. Ayrıntılar için bkz [yapılandırma ve çalışma zamanını davranışlarla genişletme](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
+ Genellikle, bir işlem davranışı uygulamak ( <xref:System.ServiceModel.Description.IOperationBehavior> arabirimi uygulayan bir nesne), ancak belirli bir için için öğesini bularak aynı şeyi gerçekleştirmek için uç nokta davranışlarını ve Sözleşme davranışlarını da kullanabilirsiniz. <xref:System.ServiceModel.Description.OperationDescription> işlem ve bu davranışı ekleme. Ayrıntılar için bkz. [çalışma zamanını davranışlar Ile yapılandırma ve genişletme](configuring-and-extending-the-runtime-with-behaviors.md).  
   
- Özel davranışınızı yapılandırmasından kullanmak için özel davranış yapılandırma bölümü işleyicisi kullanarak davranışınızı yükleyin. Özel bir öznitelik oluşturularak davranışınızı de yükleyebilirsiniz.  
+ Yapılandırmadan özel davranışınızı kullanmak için özel bir davranış yapılandırması bölüm işleyicisi kullanarak davranışınızı yüklemelisiniz. Ayrıca, özel bir öznitelik oluşturarak davranışınızı yükleyebilirsiniz.  
   
- Bir WCF istemcisi arasında durdurma gösteren örnekler için bkz. [nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
+ Bir WCF istemcisi genelinde yakalaşmayı gösteren örnekler için bkz [. nasıl yapılır: Parametreleri](how-to-inspect-or-modify-parameters.md)inceleyin veya değiştirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Nasıl yapılır: İstemcide iletileri denetleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Nasıl yapılır: Parametreleri inceleme veya değiştirme](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Nasıl yapılır: Istemcideki Iletileri inceleyin veya değiştirin](how-to-inspect-or-modify-messages-on-the-client.md)
+- [Nasıl yapılır: Parametreleri İnceleme veya değiştirme](how-to-inspect-or-modify-parameters.md)

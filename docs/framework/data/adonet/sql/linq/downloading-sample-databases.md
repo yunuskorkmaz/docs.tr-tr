@@ -1,69 +1,69 @@
 ---
-title: Örnek SQL Server veritabanları için ADO.NET kod örnekleri edinin
-description: SQL Server ve yönetim araçlarının yanı sıra ADO.NET belgeler, kod örnekleri kullanılan örnek SQL Server veritabanları indirme
+title: ADO.NET kod örnekleri için örnek SQL Server veritabanlarını alın
+description: ADO.NET belgelerindeki kod örneklerinde kullanılan örnek SQL Server veritabanlarını ve ayrıca SQL Server ve yönetim araçlarını indirin
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 5580f06f3d28ed6d70f75b619498ac8de7bc3326
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60566041ff4f99e96c9aee052dbcc17b5e5da9e5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037941"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794033"
 ---
-# <a name="get-the-sample-databases-for-adonet-code-samples"></a>Örnek veritabanları için ADO.NET kod örnekleri edinin
+# <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NET kod örnekleri için örnek veritabanlarını al
 
-Örnekler ve izlenecek yollar, bir dizi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek SQL Server veritabanları ve SQL Server Express belgeleri kullanın. Microsoft bu ürünlerin ücretsiz olarak indirebilirsiniz.
+Belgelerde birçok örnek ve İzlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] örnek SQL Server veritabanları ve SQL Server Express kullanır. Bu ürünleri Microsoft 'tan ücretsiz olarak indirebilirsiniz.
 
-## <a name="get-the-northwind-sample-database-for-sql-server"></a>Northwind örnek veritabanını almak için SQL Server
+## <a name="get-the-northwind-sample-database-for-sql-server"></a>SQL Server için Northwind örnek veritabanını alın
 
-Betiği indirin `instnwnd.sql` oluşturmak ve SQL Server için Northwind örnek veritabanını yüklemek için aşağıdaki GitHub deposundan:
+SQL Server için Northwind `instnwnd.sql` örnek veritabanı oluşturmak ve yüklemek üzere aşağıdaki GitHub deposundan betiği indirin:
 
-[Northwind ve pubs örnek veritabanlarını Microsoft SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
+[Microsoft SQL Server için Northwind ve pubs örnek veritabanları](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)
 
-Northwind veritabanı kullanabilmeniz için indirilen çalıştırmak zorunda `instnwnd.sql` komut dosyası kullanarak SQL Server örneği üzerinde veritabanı yeniden [SQL Server Management Studio](#get_ssms) veya benzer bir araç. Depodaki benioku dosyasındaki yönergeleri izleyin.
+Northwind veritabanını kullanabilmeniz için, [SQL Server Management Studio](#get_ssms) veya benzer bir aracı kullanarak veritabanını bir SQL Server `instnwnd.sql` örneğine yeniden oluşturmak üzere indirilen betik dosyasını çalıştırmanız gerekir. Depodaki Benioku dosyasındaki yönergeleri izleyin.
 
 > [!TIP]
-> Microsoft Access için Northwind veritabanı arıyorsanız bkz [Microsoft Access için Northwind örnek veritabanını yüklemek](#northwind_access).
+> Microsoft Access için Northwind veritabanına bakıyorsanız, bkz. [Microsoft Access Için Northwind örnek veritabanını Install](#northwind_access).
 
-## <a name="northwind_access"></a> Microsoft Access için Northwind örnek veritabanıyla kurulan Al
+## <a name="northwind_access"></a>Microsoft Access için Northwind örnek veritabanını alın
 
-Microsoft Access için Northwind örnek veritabanı Microsoft Download Center kullanılabilir değil. Northwind doğrudan erişim içinde yüklemek için şunları yapın:
+Microsoft Access için Northwind örnek veritabanı Microsoft Indirme Merkezi ' nde bulunmamaktadır. Northwind 'yi doğrudan erişim içinden yüklemek için aşağıdaki işlemleri yapın:
 
-1. Erişimi'ni açın.
+1. Açık erişim.
 
-1. ENTER **Northwind** içinde **çevrimiçi şablonlar için arama** kutusuna ve ardından **Enter**.
+1. **Çevrimiçi şablon ara** kutusuna **Northwind** girin ve ardından **ENTER**' u seçin.
 
-1. Sonuçlar ekranda işaretleyin **Northwind**. Northwind veritabanı açıklaması ile yeni bir pencere açılır.
+1. Sonuçlar ekranında **Northwind**' i seçin. Northwind veritabanının açıklamasıyla birlikte yeni bir pencere açılır.
 
-1. Yeni pencerede, **dosya adı** metin kutusunda, Northwind veritabanı kopyası için bir dosya adı sağlayın.
+1. Yeni pencerede, **dosya adı** metin kutusunda, Northwind veritabanının kopyası için bir dosya adı belirtin.
 
-1. **Oluştur**’u seçin. Erişim, Northwind veritabanına yükler ve dosya hazırlar.
+1. **Oluştur**’u seçin. Access, Northwind veritabanını indirir ve dosyayı hazırlar.
 
-1. Bu işlem tamamlandığında veritabanı ile bir Hoş Geldiniz ekranı açılır.
+1. Bu işlem tamamlandığında, veritabanı bir karşılama ekranı ile açılır.
 
-## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>AdventureWorks örnek veritabanını almak için SQL Server
+## <a name="get-the-adventureworks-sample-database-for-sql-server"></a>SQL Server için AdventureWorks örnek veritabanını al
 
-AdventureWorks örnek veritabanını SQL Server aşağıdaki GitHub deposundan indirin:
+Aşağıdaki GitHub deposundan SQL Server için AdventureWorks örnek veritabanını indirin:
 
 [AdventureWorks örnek veritabanları](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
 
-Bir veritabanı yedeğinin indirdikten sonra (\*.bak) dosyaları, SQL Server örneğine SQL Server Management Studio (SSMS) kullanarak yedeklemeyi geri yükleme. Bkz: [alma SQL Server Management Studio'yu](#get_ssms).
+Veritabanı yedekleme (\*. bak) dosyalarından birini indirdikten sonra, SQL Server Management Studio (SSMS) kullanarak SQL Server bir örneğine yedeklemeyi geri yükleyin. Bkz. [Get SQL Server Management Studio](#get_ssms).
 
-## <a name="get_ssms"></a> SQL Server Management Studio'yu edinin
-Görüntülemek veya karşıdan yüklediğiniz bir veritabanı değiştirmek istiyorsanız, SQL Server Management Studio (SSMS) kullanabilirsiniz. SSMS aşağıdaki sayfasından indirin:
+## <a name="get_ssms"></a>SQL Server Management Studio al
+İndirdiğiniz bir veritabanını görüntülemek veya değiştirmek istiyorsanız, SQL Server Management Studio (SSMS) kullanabilirsiniz. SSMS 'yi aşağıdaki sayfadan indirin:
 
-[SQL Server Management Studio'yu (SSMS) indirin](/sql/ssms/download-sql-server-management-studio-ssms) 
+[SQL Server Management Studio indir (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) 
 
-Ayrıca, görüntüleyin ve Visual Studio tümleşik geliştirme ortamı (IDE) veritabanlarında yönetin. İçinde [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), veritabanından bağlanma **SQL Server Nesne Gezgini**, ya da veritabanında veri bağlantısı oluşturma **Sunucu Gezgini**. Bu Gezgini bölmeden açın **görünümü** menüsü.
+Ayrıca, Visual Studio tümleşik geliştirme ortamında (IDE) veritabanlarını görüntüleyebilir ve yönetebilirsiniz. [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)'da **SQL Server Nesne Gezgini**veritabanına bağlanın veya **Sunucu Gezgini**veritabanında veritabanına bir veri bağlantısı oluşturun. **Görünüm** menüsünden bu gezgin bölmelerini açın.
 
-## <a name="get_sql"></a> SQL Server Express edinin
+## <a name="get_sql"></a>SQL Server Express al
 
-SQL Server Express, SQL Server, uygulamaları yeniden dağıtabilirsiniz, ücretsiz, giriş düzeyi bir sürümüdür. SQL Server Express'i aşağıdaki sayfadan indirebilirsiniz:
+SQL Server Express, uygulamalarla yeniden dağıtacağınız SQL Server ücretsiz, giriş düzeyi bir sürümdür. Aşağıdaki sayfadan SQL Server Express indirin:
   
-[SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
+[SQL Server Express sürümü](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-Kullanıyorsanız [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017), SQL Server Express LocalDB Visual Studio'nun Ücretsiz Community edition, ek olarak profesyonel ve üzeri sürümleri dahil edilir.  
+[Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)kullanıyorsanız, SQL Server Express LocalDB, Visual Studio 'Nun ücretsiz topluluk sürümüne, Ayrıca profesyonel ve daha yüksek sürümlere dahil edilmiştir.  
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Başlarken](getting-started.md)

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9acda6631e17031a81ba06d9530739a586fac7ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664291"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794438"
 ---
 # <a name="retrieving-binary-data"></a>İkili Verileri Alma
-Varsayılan olarak, **DataReader** satırın tamamını veri kullanılabilir hemen sonra gelen verileri bir satır olarak yükler. Tek bir satırda bulunan verileri gigabayt içerdiğinden ikili büyük nesne (BLOB) ancak farklı işlenmesi gerekir. **Command.ExecuteReader** has sürecek bir aşırı yükleme yöntemi bir <xref:System.Data.CommandBehavior> varsayılan davranışını değiştirmek için bağımsız değişken **DataReader**. Geçirebilirsiniz <xref:System.Data.CommandBehavior.SequentialAccess> için **ExecuteReader** varsayılan davranışını değiştirmek için yöntem **DataReader** böylece alınan veri satırı yükleme yerine, verileri sıralı olarak yüklenir. Bu, BLOB veya diğer büyük veri yapılarını yüklemek için idealdir. Bu davranış, veri kaynağında değişebilir unutmayın. Örneğin, bir BLOB Microsoft Access'ten döndüren alınan belleğe yerine sıralı olarak yüklenen tüm BLOB yükler.  
+Varsayılan olarak, **DataReader** tüm veri satırları kullanılabilir duruma geldiğinde, gelen verileri bir satır olarak yükler. İkili büyük nesneler (blob 'Lar), tek bir satırda yer alamaz ve gigabayt veri içerebildiğinden, farklı bir işleme ihtiyacı vardır. **Command. ExecuteReader** yönteminde, <xref:System.Data.CommandBehavior> **DataReader**'ın varsayılan davranışını değiştirmek için bağımsız değişken alan bir aşırı yükleme vardır. DataReader 'ın varsayılan <xref:System.Data.CommandBehavior.SequentialAccess> davranışını değiştirmek için **ExecuteReader** yöntemine geçirebilirsiniz, bu sayede veri satırlarını yüklemek yerine verileri, alındıkları sıraya göre yükler. Bu, Blobları veya diğer büyük veri yapılarını yüklemek için idealdir. Bu davranışın veri kaynağınıza bağlı olabileceğini unutmayın. Örneğin, Microsoft Access 'ten bir BLOB döndürmek, yüklenmiş olan tüm BLOBUN, alındığı gibi ardışık olarak değil, belleğe yüklenmesini sağlayacaktır.  
   
- Ayarlarken **DataReader** kullanılacak **SequentialAccess**, döndürülen alanlarla erişim sırası dikkate almak önemlidir. Varsayılan davranışını **DataReader**, kullanılabilir duruma geldiği satırın tamamını yükleyen sonraki satırda okuma kadar herhangi bir sırada döndürülen alanlarına erişmek olanak tanır. Kullanırken **SequentialAccess** tarafından döndürülen alanlarla erişmeniz gerekir ancak **DataReader** sırayla. Örneğin, sorgunuz, üçüncü bir BLOB ise üç sütun döndürürse, üçüncü alanında BLOB verilere erişmeden önce birinci ve ikinci alanların değerlerini döndürmesi gerekir. Önce ilk veya ikinci alanlarını alan erişirseniz, birinci ve ikinci alan değerlerini artık kullanılamaz. Bunun nedeni, **SequentialAccess** değiştirdi **DataReader** veri sırası ve veri döndürmek için kullanılabilir değil sonra **DataReader** okuma izni.  
+ **DataReader** 'ı **SequentialAccess**kullanacak şekilde ayarlarken, döndürülen alanlara erişmek için kullanılan diziyi dikkat etmeniz önemlidir. Varsayılan olarak, tüm satırı kullanılabilir olduğu anda yükleyen **DataReader**'ın varsayılan davranışı, sonraki satır okunana kadar herhangi bir sırada döndürülen alanlara erişmenizi sağlar. Ancak, **SequentialAccess** kullanılırken, **DataReader** tarafından döndürülen alanlara sırayla erişmeniz gerekir. Örneğin, sorgunuz üçüncü bir BLOB olan üç sütun döndürürse, üçüncü alandaki BLOB verilerine erişmeden önce birinci ve ikinci alanların değerlerini döndürmelidir. Üçüncü alana ilk veya ikinci alanlardan önce eriştiğinizde, birinci ve ikinci alan değerleri artık kullanılamaz. Bunun nedeni, **SequentialAccess** **DataReader** 'ı verileri sırayla döndürecek şekilde değiştirmiş ve **DataReader** 'ın ötesinde okurken veri kullanılamadığı için geçerlidir.  
   
- BLOB alandaki verileri erişirken **GetBytes** veya **GetChars** yazılan erişicilerini **DataReader**, verilerle bir dizi doldurun. Ayrıca **GetString** karakter verileri; ancak. Sistem kaynaklarını korumak için BLOB değerin tamamını tek bir dize değişkene yük istemeyebilirsiniz. Bunun yerine döndürülecek veri ve ilk bayt veya karakter, döndürülen verileri okumak için bir başlangıç konumunu belirli bir arabellek boyutunu belirtebilirsiniz. **GetBytes** ve **GetChars** döndüreceği bir `long` döndürülen karakter veya bayt sayısını temsil eden bir değer. Boş bir dize geçirirseniz **GetBytes** veya **GetChars**, uzun değeri döndürdü BLOB karakter veya bayt sayısı olacaktır. İsteğe bağlı olarak, okunan veriler için bir başlangıç konumu olarak dizide dizin belirtebilirsiniz.  
+ BLOB alanındaki verilere erişirken, veri içeren bir diziyi dolduran **DataReader**'ın, **GetBytes** veya **GetChars** türünde erişimcileri kullanın. Ayrıca karakter verileri için **GetString** kullanabilirsiniz; Ancak. sistem kaynaklarını korumak için bir BLOB değerinin tamamını tek bir dize değişkenine yüklemek istemeyebilirsiniz. Bunun yerine, döndürülecek verilerin belirli bir arabellek boyutunu ve döndürülen verilerden okunacak ilk bayt veya karakter için bir başlangıç konumu belirtebilirsiniz. **GetBytes** ve **GetChars** , döndürülen bayt `long` veya karakter sayısını temsil eden bir değer döndürür. **GetBytes** veya **GetChars**'e null bir dizi geçirirseniz, döndürülen uzun değer, blobdaki toplam bayt veya karakter sayısı olacaktır. İsteğe bağlı olarak dizideki bir dizini, okunan verilerin başlangıç konumu olarak belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek bir yayımcı kimliği ve logosu döndürür **pubs** örnek veritabanını Microsoft SQL Server. Yayımcı kimliği (`pub_id`) karakter alan ve bir BLOB da bir görüntü logosudur. Çünkü **logosu** alan bir bit eşlem, ikili verileri kullanarak bir örnek döndürür **GetBytes**. Sıralı olarak alanlarını erişilmesi için yayımcı kimliği geçerli logosu önce veri satırı için erişilebilir dikkat edin.  
+ Aşağıdaki örnek, Microsoft SQL Server içindeki **pubs** örnek VERITABANıNDAN yayımcı kimliğini ve logoyu döndürür. Yayımcı kimliği (`pub_id`) bir karakter alanıdır ve logo bir blob olan görüntüdür. **Logo** alanı bir bit eşlem olduğundan, örnek **GetBytes**kullanarak ikili veri döndürür. Alanlara ardışık olarak erişilmesi gerektiğinden, amblem öncesinde geçerli veri satırı için yayımcı KIMLIĞINE erişildiğine dikkat edin.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -155,5 +155,5 @@ connection.Close();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server İkili ve Büyük Değerli Veriler](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server İkili ve Büyük Değerli Veriler](./sql/sql-server-binary-and-large-value-data.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

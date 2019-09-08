@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 7581031b022c9c53568a616de66584be9ef7229c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2c73bec644a9a76ba05d3299183e8f1643c8e870
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041189"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794323"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server Bağlantı Havuzu (ADO.NET)
 Bir veritabanı sunucusuna bağlanmak genellikle birkaç zaman alan adımdan oluşur. Yuva veya adlandırılmış kanal gibi bir fiziksel kanal oluşturulması gerekir, sunucu ile ilk anlaşma gerçekleşmelidir, bağlantı dizesi bilgileri ayrıştırılmalıdır, bağlantının sunucu tarafından doğrulanması gerekir, çünkü geçerli işlem vb.  
@@ -127,11 +127,11 @@ using (SqlConnection connection = new SqlConnection(
  Bir SQL Server uygulama rolü `sp_setapprole` sistem saklı yordamı çağırarak etkinleştirildikten sonra, bu bağlantının güvenlik bağlamı sıfırlanamaz. Ancak, Havuzlama etkinse bağlantı havuza döndürülür ve havuza alınmış bağlantı yeniden kullanıldığında bir hata oluşur. Daha fazla bilgi için bkz. Bilgi Bankası makalesi, "[OLE DB kaynak havuzlama Ile SQL uygulama rolü hataları](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)".  
   
 ### <a name="application-role-alternatives"></a>Uygulama rolü alternatifleri  
- Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmalarının avantajlarından yararlanmanızı öneririz. Daha fazla bilgi için bkz. [SQL Server uygulama rolleri oluşturma](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
+ Uygulama rolleri yerine kullanabileceğiniz güvenlik mekanizmalarının avantajlarından yararlanmanızı öneririz. Daha fazla bilgi için bkz. [SQL Server uygulama rolleri oluşturma](./sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [SQL Server ve ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Havuzu](connection-pooling.md)
+- [SQL Server ve ADO.NET](./sql/index.md)
+- [Performans Sayaçları](performance-counters.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -2,24 +2,24 @@
 title: LAFailedToListenForApp
 ms.date: 03/30/2017
 ms.assetid: 8ef16d4e-fab7-4ffc-829b-1e3163e72337
-ms.openlocfilehash: 49fd8440baba3752b52cc409fd1f79d2fcd28505
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 091ed8572cf2b4c81bba9e55299fd18771461bc2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969552"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797792"
 ---
 # <a name="lafailedtolistenforapp"></a>LAFailedToListenForApp
-Kimliği: 160  
+Numarasını 160  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: SMSvcHost  
+ Alan SMSvcHost  
   
 ## <a name="description"></a>Açıklama  
- Bu olay bir hata belirtilen Protokolü belirtilen etkinleştirme hizmetinde belirtilen site için dinleme çalışılırken böylece protokolü için site geçici olarak devre dışıdır oluştuğunu belirten... Olay durumu, özel durum, işlem adı ve işlem kimliği URL'yi listeler  
+ Bu olay, belirtilen sitenin belirtilen etkinleştirme hizmetinde bir hata oluştuğunu, belirtilen siteyi dinlemeye çalışırken olduğunu gösterir, bu nedenle protokol site için geçici olarak devre dışı bırakılır. Olay, URL, durum, özel durum, işlem adı ve işlem KIMLIĞINI listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

@@ -2,24 +2,24 @@
 title: WebHostUnhandledException
 ms.date: 03/30/2017
 ms.assetid: 9e8564c6-8fd2-4bc9-85b5-68e0b55438ee
-ms.openlocfilehash: 5d34e1c6eab7bbf81e15f0b68cf5a2b19aee3907
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e7e99c1bc44ebf2e4ab00b63aa9264b4393b381
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944267"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797425"
 ---
 # <a name="webhostunhandledexception"></a>WebHostUnhandledException
-Kimliği: 109  
+Numarasını 109  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: ServiceModel  
+ Alan ServiceModel  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir Web barındırma özel durum işlenmemiş gösterir oluştu. Olay listeleri gönderen bilgileri, özel durum, işlem adı ve işlem kimliği  
+ Bu olay, bir WebHost işlenmemiş özel durumun oluştuğunu gösterir. Olay, gönderen bilgilerini, özel durumu, işlem adını ve işlem KIMLIĞINI listeler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

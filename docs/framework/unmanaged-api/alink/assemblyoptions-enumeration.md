@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742271"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777487"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions Numaralandırması
 Derleme seçeneklerini numaralandırır.  
@@ -58,32 +58,32 @@ typedef enum _AssemblyOptions {
   
 |Alan|Açıklama|  
 |-----------|-----------------|  
-|optAssemTitle|Dize - derleme başlığı temsil eder.|  
-|optAssemDescription|Dize - derleme tanımı içerir.|  
-|optAssemConfig|Dize - derleme yapılandırmasını içerir.|  
-|optAssemOS|Olarak kodlanmış bir dize -: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
-|optAssemProcessor|ULONG|  
-|optAssemLocale|Dize - derleme yerel ayar içerir.|  
-|optAssemVersion|Olarak kodlanmış bir dize -: "Major.Minor.Build.Revision".|  
-|optAssemCompany|Dize - şirket içerir.|  
-|optAssemProduct|Dize - ürün adını içerir.|  
+|optAssemTitle|String-derleme başlığını temsil eder.|  
+|optAssemDescription|Dize-derleme açıklamasını Içerir.|  
+|optAssemConfig|Dize-derleme yapılandırmasını Içerir.|  
+|optAssemOS|Dize kodlamalı as: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
+|optAssemProcessor|'TUR|  
+|optAssemLocale|Dize-derleme yerel ayarını Içerir.|  
+|optAssemVersion|Dize-kodlamalı: "Ana. Ikincil. derleme. düzeltme".|  
+|optAssemCompany|Dize-şirketi Içerir.|  
+|optAssemProduct|Dize-ürün adını Içerir.|  
 |optAssemProductVersion|Dize (InformationalVersion olarak da bilinir).|  
-|optAssemCopyright|Dize - telif hakkı bilgileri içerir.|  
-|optAssemTrademark|Dize - ticari marka bilgileri içerir.|  
-|optAssemKeyFile|String (dosya adı).|  
+|Optassemtelif hakkı|Dize-telif hakkı bilgilerini Içerir.|  
+|Optassemmarka|Dize-ticari marka bilgilerini Içerir.|  
+|optAssemKeyFile|Dize (dosya adı).|  
 |optAssemKeyName|Dize (anahtar adı).|  
-|optAssemAlgID|ULONG|  
-|optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (DelaySign da bilinir).|  
-|optAssemFileVersion|Dize - "Major.Minor.Build.Revision"--ProductVersion aynı olarak kodlanmış.|  
-|optAssemSatelliteVer|Dize - "Major.Minor.Build.Revision" olarak kodlanmış.|  
-|optLastAssemOption|Bir sayacı öğelerin sayısı.|  
+|Optassemalgıd|'TUR|  
+|optAssemFlags|'TUR|  
+|Optassemyarı simgesi|Bool (DelaySign olarak da bilinir).|  
+|optAssemFileVersion|Dize-kodlanmış "ana. Ikincil. derleme. düzeltme"--ProductVersion ile aynı.|  
+|optAssemSatelliteVer|"Ana. Ikincil. derleme. düzeltme" olarak dize kodlamalı.|  
+|optLastAssemOption|Öğe sayısı sayacı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Başlık:** alink.h  
+ **Üstbilgi:** ALink. h  
   
- **Kitaplık**: alink.dll  
+ **Kitaplık**: ALink. dll  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Bütünleştirilmiş Kod Bağlayıcı)](../../tools/al-exe-assembly-linker.md)

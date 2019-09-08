@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773851"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796333"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx İşlevi
-Derleme sonrası ilke görünen adını alır.  
+Bir derlemenin ilke sonrası görünen adını alır.  
   
  Bu işlev .NET Framework altyapısını destekler ve doğrudan kodunuzdan kullanılmaya yönelik değildir.  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Parametreler  
  `pAppCtx`  
- [in] Uygulama bağlamı tanımlar.  
+ 'ndaki Uygulama bağlamını tanımlar.  
   
  `pName`  
- [in] Derleme adını tanımlar.  
+ 'ndaki Derleme adını tanımlar.  
   
  `pAsmParent`  
- [in] Üst derlemeyi tanımlar. Bu parametre yoksayıldı.  
+ 'ndaki Üst derlemeyi tanımlar. Bu parametre yoksayıldı.  
   
  `pwzRuntimeVersion`  
- [in] Çalışma zamanı sürümünü tanımlar.  
+ 'ndaki Çalışma zamanı sürümünü tanımlar.  
   
  `ppNamePostPolicy`  
- [out] İlke sonrası görünen adını içerir.  
+ dışı İlke sonrası görünen adını içerir.  
   
  `pvReserved`  
- [in] Sonra genişletilebilmek için ayrılmış. `pvReserved` null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ppNamePostPolicy` Çıkış parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi takdirde null olur.  
+ `ppNamePostPolicy` Output parametresi yalnızca işlev HRESULT FUSION_E_REF_DEF_MISMATCH döndürürse ayarlanır. Aksi halde, null olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_EndEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: Bir numaralandırma QualifierSet_EndEnumeration işlevi sonlandırır.
+description: QualifierSet_EndEnumeration işlevi bir numaralandırmayı sonlandırır.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_EndEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782590"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798325"
 ---
-# <a name="qualifiersetendenumeration-function"></a>QualifierSet_EndEnumeration işlevi
-Bir çağrı ile başlamış numaralandırma sonlandırır [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevi.  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration işlevi
+[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) işlevine yapılan bir çağrıyla başlatılan numaralandırmayı sonlandırır.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,14 +40,14 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`   
-[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.
+'ndaki Bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği işaretçisi.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üst bilgi dosyası veya tanımlayabilir, bir sabit olarak kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değer *Wbemcli. h* üstbilgi dosyasında tanımlanır veya kodunuzda bir sabit olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
@@ -55,17 +55,17 @@ Bu işlev tarafından döndürülen aşağıdaki değer *WbemCli.h* üst bilgi d
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemi.
+Bu işlev, [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) yöntemine bir çağrı kaydırır.
 
-Bu çağrı önerilir, ancak gerekli değildir. Numaralandırma ile ilişkili kaynakları hemen serbest bırakır.
+Bu çağrı önerilir, ancak gerekli değildir. Numaralandırmada ilişkili kaynakları hemen yayınlar.
 
 ## <a name="requirements"></a>Gereksinimler  
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
-**Üst bilgi:** WMINet_Utils.idl  
+**Üst bilgi** WMINet_Utils. IDL  
   
-**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

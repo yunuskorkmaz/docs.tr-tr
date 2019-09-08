@@ -2,24 +2,24 @@
 title: SslNoAccessiblePrivateKey
 ms.date: 03/30/2017
 ms.assetid: 90cc793e-7ac8-45b2-81b8-2976e2485734
-ms.openlocfilehash: 51661ac6f4540a7547ed33e59c8ecaa90106a495
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee4c7d73d55add300b912bbdff6ffb819349cb9f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944462"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797552"
 ---
 # <a name="sslnoaccessibleprivatekey"></a>SslNoAccessiblePrivateKey
-Kimliği: 155  
+Numarasını 155  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bir kimlik sertifikası parmak izi ve belirli bir konu adı ile erişilebilir bir özel anahtara sahip değil gösterir. Olay işlem kimliği ve işlem adını listeler.  
+ Bu olay, belirli konu adına ve parmak izine sahip bir kimlik sertifikasının erişilebilir bir özel anahtara sahip olmadığını gösterir. Olayda işlem adı ve işlem KIMLIĞI listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

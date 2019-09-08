@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69909878"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794019"
 ---
 # <a name="large-udts"></a>Büyük UDT’ler
 Kullanıcı tanımlı türler (UDTs), bir geliştiricinin ortak dil çalışma zamanı (CLR) nesnelerini bir SQL Server veritabanında depolayarak sunucunun skalar tür sistemini genişletmesine izin verir. UDTs birden çok öğe içerebilir ve tek bir SQL Server sistem veri türünden oluşan geleneksel diğer ad veri türlerinden farklı olarak davranışları olabilir.  
@@ -27,7 +27,7 @@ Kullanıcı tanımlı türler (UDTs), bir geliştiricinin ortak dil çalışma z
 1. [Kullanıcı Tanımlı CLR Türleri](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>GetSchema kullanarak UDT şemaları alma  
- Yöntemi, <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> içindeki veritabanışemasıbilgilerinidöndürür.<xref:System.Data.DataTable> <xref:System.Data.SqlClient.SqlConnection> Daha fazla bilgi için bkz. [SQL Server şema koleksiyonları](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ Yöntemi, <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> içindeki veritabanışemasıbilgilerinidöndürür.<xref:System.Data.DataTable> <xref:System.Data.SqlClient.SqlConnection> Daha fazla bilgi için bkz. [SQL Server şema koleksiyonları](../sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>UDTs için GetSchemaTable sütun değerleri  
  <xref:System.Data.DataTable> Bir <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> öğesininyöntemi,sütunmetaverilerini<xref:System.Data.SqlClient.SqlDataReader> açıklayan bir döndürür. Aşağıdaki tabloda, SQL Server 2005 ve SQL Server 2008 arasındaki büyük UDTs için sütun meta verilerindeki farklar açıklanmaktadır.  
@@ -133,8 +133,8 @@ End Using
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Veritabanı Şema Bilgilerini Alma](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../configuring-parameters-and-parameter-data-types.md)
+- [Veritabanı Şema Bilgilerini Alma](../retrieving-database-schema-information.md)
+- [SQL Server Veri Türü Eşlemeleri](../sql-server-data-type-mappings.md)
+- [SQL Server İkili ve Büyük Değerli Veriler](sql-server-binary-and-large-value-data.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

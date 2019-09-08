@@ -4,50 +4,50 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: c4f73480208fbf900bb8742eb6d7b2e2c0e6a4ff
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c74b93be026007a5593372c938cf73e08fafb15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486619"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797802"
 ---
 # <a name="event-logging-in-wcf"></a>WCF'de Etkinlikleri Günlüğe Kaydetme
-Windows Communication Foundation (WCF) Windows olay günlüğünden ilgili iç olayları izler.  
+Windows Communication Foundation (WCF), Windows olay günlüğündeki iç olayları izler.  
   
 ## <a name="viewing-event-logs"></a>Olay günlüklerini görüntüleme  
- Olay günlüğü varsayılan olarak otomatik olarak etkinleştirilir ve devre dışı bırakmak için bir mekanizma yoktur. WCF tarafından günlüğe kaydedilen olayları, Olay Görüntüleyicisi kullanılarak görüntülenebilir. Bu aracını başlatmak için tıklayın **Başlat**, tıklayın **Denetim Masası**, çift **Yönetimsel Araçlar**ve çift tıklatarak **Olay Görüntüleyicisi'ni**.  
+ Olay günlüğü otomatik olarak varsayılan olarak etkindir ve devre dışı bırakmak için bir mekanizma yoktur. WCF tarafından günlüğe kaydedilen olaylar Olay Görüntüleyicisi kullanılarak görüntülenebilir. Bu aracı başlatmak için **Başlat**' a tıklayın, **Denetim Masası**' na tıklayın, **Yönetimsel Araçlar**' a çift tıklayın ve ardından **Olay Görüntüleyicisi**' ye çift tıklayın.  
   
 ### <a name="application-event-log"></a>Uygulama olay günlüğü  
- **Uygulama olay günlüğüne** WCF tarafından oluşturulan olaylar çoğunu içerir. Girişlerin çoğu belirli bir özellik için uygulama başlatma başarısız olduğunu gösterir. Örnekler:  
+ **Uygulama olay günlüğü** , WCF tarafından oluşturulan olayların çoğunu içerir. Girişlerin çoğu, belirli bir özelliğin bir uygulama için başlayamayacağı anlamına gelebilir. Örnekler:  
   
-- İleti günlüğe kaydetme/izleme: İzleme ve iletileri günlüğe kaydetme başarısız olduğunda WCF olay günlüğüne bir olay yazar. Ancak, her izleme başarısız bir olayı tetikler. Olay günlüğü izlemeleri hatalarla tamamen doldurulmuş önlemek için bu tür bir olay için 10 dakikalık bir Kararma süre WCF uygular. Başka bir deyişle, WCF izleme hatası olay günlüğüne yazar, bu nedenle yeniden en az 10 dakika için yapacağınız değil.  
+- İleti günlüğe kaydetme/izleme: WCF, izleme ve ileti günlüğe kaydetme başarısız olduğunda olay günlüğüne bir olay yazar. Ancak, her izleme hatası bir olayı tetiklemiyor. Olay günlüğünün izleme hatalarıyla tamamen doldurulmasını engellemek için, WCF bu tür bir olay için 10 dakikalık bir kararma süresi uygular. Bu, WCF 'nin olay günlüğüne bir izleme hatası yazıyorsa, en az 10 dakika boyunca bunu yapamayacağı anlamına gelir.  
   
-- Paylaşılan dinleyici: WCF TCP bağlantı noktası paylaşım hizmetini başlatmak başarısız olduğunda bir olayı günlüğe kaydeder.  
+- Paylaşılan dinleyici: WCF TCP bağlantı noktası paylaşım hizmeti, başlayamıyorsa bir olay günlüğe kaydeder.  
   
-- CardSpace: Hizmeti başlatmak başarısız olduğunda olayları kaydeder.  
+- Rağmen Hizmet başlayamıyorsa olayları günlüğe kaydeder.  
   
-- Başlatma hataları veya kilitlenmeleri gibi kritik ve hata olayları  
+- Başlatma hataları veya kilitlenmeler gibi kritik ve hata olayları  
   
-- Günlüğe ileti kaydetme açık: Günlüğe ileti kaydetme açık olduğunda olayları kaydeder. Hassas ve uygulamaya özgü bilgileri ileti üstbilgileri ve gövdeleri kaydedilebilir yöneticiyi bilgilendirmek üzere budur.  
+- İleti günlüğe kaydetme açıldı: İleti günlüğe kaydetme açık olduğunda olayları günlüğe kaydeder. Bu, yöneticiye gizli ve uygulamaya özgü bilgilerin ileti üstbilgilerinde ve gövdelerinde günlüğe kaydedileceğini bildirmek için kullanılır.  
   
-- Bir olay kaydedilir, `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanır. Bu öznitelik makine üzerinde çalışan herhangi bir uygulama bilinen kişisel olarak tanımlanabilen bilgileri (PII) için izinli olup olmadığını belirtir.  
+- Dosyanın öğesindeki `enableLoggingKnownPII` `machineSettings` özniteliği ayarlandığında bir olay günlüğe kaydedilir. `machine.config` Bu öznitelik, makinede çalışan herhangi bir uygulamanın bilinen kişisel olarak tanımlanabilen bilgileri (PII) günlüğe kaydetme izni olup olmadığını belirtir.  
   
-- Varsa `logKnownPii` ya da özniteliğinde `app.config` veya `web.config` dosya kümesine `true` PII günlük özelliğini açmak belirli bir uygulama için ancak `enableLoggingKnownPII` özniteliğini `machineSettings` öğesinin `machine.config` dosya ayarlanmış için `false`, bir olay kaydedilir. Ayrıca, her iki `logKnownPii` ve `enableLoggingKnownPII` ayarlandığından `true`, ve olay günlüğe kaydedilir. Bu yapılandırma ayarları hakkında daha fazla bilgi için bkz: güvenlik bölümünü [iletileri günlüğe kaydetmeyi yapılandırma](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) konu.  
+- `app.config` `enableLoggingKnownPII` `true` Ya dadosyasındaki`machineSettings` özniteliği, PII günlüğünü açmak için belirli bir uygulama için olarak ayarlandıysa, ancak dosyanınöğesindekiözniteliğiayarlanır`machine.config` `logKnownPii` `web.config` için `false`bir olay günlüğe kaydedilir. Ayrıca `logKnownPii` , ve `enableLoggingKnownPII` olarak ayarlanmışsa `true`ve olay günlüğe kaydedilir. Bu yapılandırma ayarları hakkında daha fazla bilgi için, [Ileti günlüğünü yapılandırma](../configuring-message-logging.md) konusunun Güvenlik bölümüne bakın.  
   
 ### <a name="security-event-log"></a>Güvenlik olay günlüğü  
- **Güvenlik olay günlüğü** WCF tarafından günlüğe kaydedilen güvenlik denetim olaylarını içerir.  
+ **Güvenlik olay günlüğü** , WCF tarafından günlüğe kaydedilen güvenlik denetim olaylarını içerir.  
   
 ### <a name="system-event-log"></a>Sistem olay günlüğü  
- WCF değil oturum herhangi bir şey **sistem olay günlüğünü**.  
+ WCF, **sistem olay günlüğündeki**herhangi bir şeyi günlüğe eklemez.  
   
-### <a name="event-log-entries"></a>Olay günlüğü girişleri  
- **Kaynak** olay günlük girişi oluşturur derlemenin adıdır.  
+### <a name="event-log-entries"></a>Olay günlüğü girdileri  
+ Bir olayın **kaynağı** , günlük girişini üreten derlemenin adıdır.  
   
- Bir olay günlüğü girişi türü, bir olayın önem derecesini belirtmek için kullanılır. Her olay, olay rapor zaman uygulama gösteren tek bir türü içeren olması gerekir. Olay Görüntüleyicisi'ni bu tür günlük liste görünümünde hangi simgenin görüntüleneceğini belirlemek için kullanır. Bir olay günlüğü girişi farklı olay türü için bkz: <xref:System.Diagnostics.EventLogEntryType>.  
+ Olay günlüğü girişinin türü, bir olayın önem derecesini belirtmek için kullanılır. Her olay, uygulamanın olayı raporladığında gösterdiği tek bir türde olmalıdır. Olay Görüntüleyicisi, günlüğün liste görünümünde hangi simgenin görüntüleneceğini anlamak için bu türü kullanır. Olay günlüğü girişinin farklı olay türü için bkz <xref:System.Diagnostics.EventLogEntryType>.  
   
- "Daha fazla bilgi" tıkladığınızda bir olay Olay Görüntüleyicisi'nde görüntülendiğinde, Olay Görüntüleyicisi'ni Internet üzerinden bilgi gönderebilir. Daha fazla bilgi için Olay Görüntüleyicisi'ni Yardım'a bakın.  
+ Olay Görüntüleyicisi bir olayı görüntülerken "daha fazla bilgi" ye tıkladığınızda, Olay Görüntüleyicisi Internet üzerinden bilgi gönderebilir. Daha fazla bilgi için Olay Görüntüleyicisi yardımına bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Yönetim ve Tanılama](../index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

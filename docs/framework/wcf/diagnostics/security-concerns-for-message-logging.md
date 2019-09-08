@@ -2,12 +2,12 @@
 title: İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044264"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795937"
 ---
 # <a name="security-concerns-for-message-logging"></a>İleti Günlüğe Kaydetme ile İlgili Güvenlik Konuları
 Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmesini ve ileti günlüğe kaydetme tarafından oluşturulan olayları nasıl koruyabileceğiniz açıklanmaktadır.  
@@ -107,9 +107,9 @@ Bu konu başlığı altında, gizli verilerin ileti günlüklerinde gösterilmes
   
 - Bilinen PII günlüğüne Izin verilmiyor: Bu olay, bilinen PII kaydına izin verilmediği zaman yayınlanır. `enableLoggingKnownPii` `source` `true`Bunun nedeni, App. config veya Web. config dosyasındaki öğesinin `machineSettings` özniteliğiolarakayarlanır,ancakMachine.configdosyasınınöğesindekiözniteliğiolarakayarlanır.`logKnownPii` `false`. Hiçbir özel durum oluşturulmaz.  
   
- Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi aracında görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Bu olaylar, Windows ile birlikte gelen Olay Görüntüleyicisi aracında görüntülenebilir. Bunun hakkında daha fazla bilgi için bkz. [olay günlüğü](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe İleti Kaydetme](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Günlüğe İleti Kaydetme](message-logging.md)
+- [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](./tracing/security-concerns-and-useful-tips-for-tracing.md)
