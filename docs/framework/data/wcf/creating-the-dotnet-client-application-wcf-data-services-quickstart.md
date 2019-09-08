@@ -1,92 +1,92 @@
 ---
-title: .NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)
+title: .NET Framework Istemci uygulaması oluşturma (WCF Veri Hizmetleri hızlı başlangıç)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583614"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790959"
 ---
-# <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a><span data-ttu-id="635a1-102">.NET Framework istemci uygulaması oluşturma (WCF Veri Hizmetleri Hızlı Başlangıç)</span><span class="sxs-lookup"><span data-stu-id="635a1-102">Creating the .NET Framework Client Application (WCF Data Services Quickstart)</span></span>
+# <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a><span data-ttu-id="c48aa-102">.NET Framework Istemci uygulaması oluşturma (WCF Veri Hizmetleri hızlı başlangıç)</span><span class="sxs-lookup"><span data-stu-id="c48aa-102">Creating the .NET Framework Client Application (WCF Data Services Quickstart)</span></span>
 
-<span data-ttu-id="635a1-103">Bu, WCF Veri Hizmetleri Hızlı Başlangıç Son görevdir.</span><span class="sxs-lookup"><span data-stu-id="635a1-103">This is the final task of the WCF Data Services quickstart.</span></span> <span data-ttu-id="635a1-104">Bu görevde, bir konsol uygulaması çözüme ekleyin, bir başvuru ekleyin [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] bu yeni istemci uygulamasına akışı ve OData istemci kitaplıkları ve oluşturulan istemci veri hizmeti sınıfları kullanarak istemci uygulamasından akışına erişim .</span><span class="sxs-lookup"><span data-stu-id="635a1-104">In this task, you will add a console application to the solution, add a reference to the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed into this new client application, and access the OData feed from the client application by using the generated client data service classes and client libraries.</span></span>
+<span data-ttu-id="c48aa-103">Bu, WCF Veri Hizmetleri hızlı başlangıcının son görevidir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-103">This is the final task of the WCF Data Services quickstart.</span></span> <span data-ttu-id="c48aa-104">Bu görevde, çözüme bir konsol uygulaması ekleyecek, bu yeni istemci uygulamasına [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışa bir başvuru ekleyecek ve oluşturulan istemci veri hizmeti sınıflarını ve istemci kitaplıklarını kullanarak istemci uygulamasından OData akışına erişim elde edersiniz. .</span><span class="sxs-lookup"><span data-stu-id="c48aa-104">In this task, you will add a console application to the solution, add a reference to the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed into this new client application, and access the OData feed from the client application by using the generated client data service classes and client libraries.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="635a1-105">.NET Framework tabanlı bir istemci uygulama bir veri akışına erişmek için gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="635a1-105">A .NET Framework-based client application is not required to access a data feed.</span></span> <span data-ttu-id="635a1-106">Veri Hizmeti, bir OData akışına kullanan herhangi bir uygulama bileşeni tarafından erişilebilir.</span><span class="sxs-lookup"><span data-stu-id="635a1-106">The data service can be accessed by any application component that consumes an OData feed.</span></span> <span data-ttu-id="635a1-107">Daha fazla bilgi için [bir istemci uygulamasında veri hizmeti kullanma](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="635a1-107">For more information, see [Using a Data Service in a Client Application](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).</span></span>
+> <span data-ttu-id="c48aa-105">Bir veri akışına erişmek için .NET Framework tabanlı bir istemci uygulaması gerekli değildir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-105">A .NET Framework-based client application is not required to access a data feed.</span></span> <span data-ttu-id="c48aa-106">Veri hizmetine OData akışı kullanan herhangi bir uygulama bileşeni erişebilir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-106">The data service can be accessed by any application component that consumes an OData feed.</span></span> <span data-ttu-id="c48aa-107">Daha fazla bilgi için bkz. [Istemci uygulamasında veri hizmeti kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="c48aa-107">For more information, see [Using a Data Service in a Client Application](using-a-data-service-in-a-client-application-wcf-data-services.md).</span></span>
 
-## <a name="to-create-the-client-application-by-using-visual-studio"></a><span data-ttu-id="635a1-108">Visual Studio kullanarak istemci uygulamasını oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="635a1-108">To create the client application by using Visual Studio</span></span>
+## <a name="to-create-the-client-application-by-using-visual-studio"></a><span data-ttu-id="c48aa-108">Visual Studio 'Yu kullanarak istemci uygulaması oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="c48aa-108">To create the client application by using Visual Studio</span></span>
 
-1. <span data-ttu-id="635a1-109">İçinde **Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle**ve ardından **yeni proje**.</span><span class="sxs-lookup"><span data-stu-id="635a1-109">In **Solution Explorer**, right-click the solution, click **Add**, and then click **New Project**.</span></span>
+1. <span data-ttu-id="c48aa-109">**Çözüm Gezgini**, çözüme sağ tıklayın, **Ekle**' ye tıklayın ve ardından **Yeni proje**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-109">In **Solution Explorer**, right-click the solution, click **Add**, and then click **New Project**.</span></span>
 
-2. <span data-ttu-id="635a1-110">Sol bölmede seçin **yüklü** > [**Visual C#**  veya **Visual Basic**] > **Windows Masaüstü**ve ardından seçin **WPF uygulaması** şablonu.</span><span class="sxs-lookup"><span data-stu-id="635a1-110">In the left pane, select **Installed** > [**Visual C#** or **Visual Basic**] > **Windows Desktop**, and then select the **WPF App** template.</span></span>
+2. <span data-ttu-id="c48aa-110">Sol bölmede, **yüklü** > [ **C# Visual** veya **Visual Basic**] > **Windows Desktop**' ı seçin ve ardından **WPF uygulama** şablonunu seçin.</span><span class="sxs-lookup"><span data-stu-id="c48aa-110">In the left pane, select **Installed** > [**Visual C#** or **Visual Basic**] > **Windows Desktop**, and then select the **WPF App** template.</span></span>
 
-3. <span data-ttu-id="635a1-111">Girin `NorthwindClient` proje adı ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="635a1-111">Enter `NorthwindClient` for the project name, and then click **OK**.</span></span>
+3. <span data-ttu-id="c48aa-111">Proje `NorthwindClient` adı için yazın ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-111">Enter `NorthwindClient` for the project name, and then click **OK**.</span></span>
 
-4. <span data-ttu-id="635a1-112">MainWindow.xaml dosyasını açın ve XAML kodu aşağıdaki kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="635a1-112">Open the file MainWindow.xaml and replace the XAML code with the following code:</span></span>
+4. <span data-ttu-id="c48aa-112">MainWindow. xaml dosyasını açın ve XAML kodunu şu kodla değiştirin:</span><span class="sxs-lookup"><span data-stu-id="c48aa-112">Open the file MainWindow.xaml and replace the XAML code with the following code:</span></span>
 
      [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml#window1xaml)]
 
-## <a name="to-add-a-data-service-reference-to-the-project"></a><span data-ttu-id="635a1-113">Projeye veri hizmeti başvurusu eklemek için</span><span class="sxs-lookup"><span data-stu-id="635a1-113">To add a data service reference to the project</span></span>
+## <a name="to-add-a-data-service-reference-to-the-project"></a><span data-ttu-id="c48aa-113">Projeye veri hizmeti başvurusu eklemek için</span><span class="sxs-lookup"><span data-stu-id="c48aa-113">To add a data service reference to the project</span></span>
 
-1. <span data-ttu-id="635a1-114">İçinde **Çözüm Gezgini**, northwindclient & lt projeye sağ tıklayın, **Ekle** > **hizmet başvurusu**ve ardından **Bul** .</span><span class="sxs-lookup"><span data-stu-id="635a1-114">In **Solution Explorer**, right-click the NorthwindClient project, click **Add** > **Service Reference**, and then click **Discover**.</span></span>
+1. <span data-ttu-id="c48aa-114">**Çözüm Gezgini**, NorthwindClient projesine sağ tıklayın,**hizmet başvurusu** **Ekle** > ' ye tıklayın ve ardından **bul**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-114">In **Solution Explorer**, right-click the NorthwindClient project, click **Add** > **Service Reference**, and then click **Discover**.</span></span>
 
-     <span data-ttu-id="635a1-115">Bu ilk görevde oluşturduğunuz Northwind verileri hizmeti görüntüler.</span><span class="sxs-lookup"><span data-stu-id="635a1-115">This displays the Northwind data service that you created in the first task.</span></span>
+     <span data-ttu-id="c48aa-115">Bu, ilk görevde oluşturduğunuz Northwind veri hizmetini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="c48aa-115">This displays the Northwind data service that you created in the first task.</span></span>
 
-2. <span data-ttu-id="635a1-116">İçinde **Namespace** metin kutusunda, `Northwind`ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="635a1-116">In the **Namespace** text box, type `Northwind`, and then click **OK**.</span></span>
+2. <span data-ttu-id="c48aa-116">**Ad alanı** metin kutusuna yazın `Northwind`ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-116">In the **Namespace** text box, type `Northwind`, and then click **OK**.</span></span>
 
-     <span data-ttu-id="635a1-117">Bu, yeni bir kod dosyası erişmek ve veri hizmeti kaynaklarına nesneler olarak etkileşim için kullanılan veri sınıfları içeren projeyi ekler.</span><span class="sxs-lookup"><span data-stu-id="635a1-117">This adds a new code file to the project, which contains the data classes that are used to access and interact with data service resources as objects.</span></span> <span data-ttu-id="635a1-118">Veri sınıfları ad alanında oluşturulan `NorthwindClient.Northwind`.</span><span class="sxs-lookup"><span data-stu-id="635a1-118">The data classes are created in the namespace `NorthwindClient.Northwind`.</span></span>
+     <span data-ttu-id="c48aa-117">Bu, projeye veri hizmeti kaynaklarına erişmek ve bunlarla etkileşim kurmak için kullanılan veri sınıflarını içeren yeni bir kod dosyası ekler.</span><span class="sxs-lookup"><span data-stu-id="c48aa-117">This adds a new code file to the project, which contains the data classes that are used to access and interact with data service resources as objects.</span></span> <span data-ttu-id="c48aa-118">Veri sınıfları ad alanında `NorthwindClient.Northwind`oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="c48aa-118">The data classes are created in the namespace `NorthwindClient.Northwind`.</span></span>
 
-## <a name="to-access-data-service-data-in-the-wpf-application"></a><span data-ttu-id="635a1-119">WPF uygulamasında veri hizmeti verilere erişmek için</span><span class="sxs-lookup"><span data-stu-id="635a1-119">To access data service data in the WPF application</span></span>
+## <a name="to-access-data-service-data-in-the-wpf-application"></a><span data-ttu-id="c48aa-119">WPF uygulamasındaki veri hizmeti verilerine erişmek için</span><span class="sxs-lookup"><span data-stu-id="c48aa-119">To access data service data in the WPF application</span></span>
 
-1. <span data-ttu-id="635a1-120">İçinde **Çözüm Gezgini** altında **; northwindclient & lt**, projeye sağ tıklayın ve tıklayın **Başvuru Ekle**.</span><span class="sxs-lookup"><span data-stu-id="635a1-120">In **Solution Explorer** under **NorthwindClient**, right-click the project and click **Add Reference**.</span></span>
+1. <span data-ttu-id="c48aa-120">**NorthwindClient**altında **Çözüm Gezgini** , projeye sağ tıklayın ve **Başvuru Ekle**' ye tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-120">In **Solution Explorer** under **NorthwindClient**, right-click the project and click **Add Reference**.</span></span>
 
-2. <span data-ttu-id="635a1-121">İçinde **Başvuru Ekle** iletişim kutusu, tıklayın **.NET** sekmesinde System.Data.Services.Client.dll derlemeyi seçin ve ardından **Tamam**.</span><span class="sxs-lookup"><span data-stu-id="635a1-121">In the **Add Reference** dialog box, click the **.NET** tab, select the System.Data.Services.Client.dll assembly, and then click **OK**.</span></span>
+2. <span data-ttu-id="c48aa-121">**Başvuru Ekle** iletişim kutusunda, **.net** sekmesine tıklayın, System. Data. Services. Client. dll derlemesini seçin ve ardından **Tamam**' a tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-121">In the **Add Reference** dialog box, click the **.NET** tab, select the System.Data.Services.Client.dll assembly, and then click **OK**.</span></span>
 
-3. <span data-ttu-id="635a1-122">İçinde **Çözüm Gezgini** altında **; northwindclient & lt**MainWindow.xaml dosyanın kod sayfasını açın ve aşağıdakini ekleyin `using` deyimi (`Imports` Visual Basic'te).</span><span class="sxs-lookup"><span data-stu-id="635a1-122">In **Solution Explorer** under **NorthwindClient**, open the code page for the MainWindow.xaml file, and add the following `using` statement (`Imports` in Visual Basic).</span></span>
+3. <span data-ttu-id="c48aa-122">**NorthwindClient**altındaki `using` **Çözüm Gezgini** , MainWindow. xaml dosyası için kod sayfasını açın ve aşağıdaki ifadeyi ekleyin (`Imports` Visual Basic).</span><span class="sxs-lookup"><span data-stu-id="c48aa-122">In **Solution Explorer** under **NorthwindClient**, open the code page for the MainWindow.xaml file, and add the following `using` statement (`Imports` in Visual Basic).</span></span>
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]
 
-4. <span data-ttu-id="635a1-123">Bu veri hizmetini sorgular ve sonuca bağlar aşağıdaki kodu bir <xref:System.Data.Services.Client.DataServiceCollection%601> içine `MainWindow` sınıfı:</span><span class="sxs-lookup"><span data-stu-id="635a1-123">Insert the following code that queries that data service and binds the result to a <xref:System.Data.Services.Client.DataServiceCollection%601> into the `MainWindow` class:</span></span>
+4. <span data-ttu-id="c48aa-123">Bu veri hizmetini sorgulayan ve sonucu <xref:System.Data.Services.Client.DataServiceCollection%601> `MainWindow` sınıfına bağlayan aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c48aa-123">Insert the following code that queries that data service and binds the result to a <xref:System.Data.Services.Client.DataServiceCollection%601> into the `MainWindow` class:</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="635a1-124">Ana bilgisayar adını değiştirmelisiniz `localhost:12345` Northwind verileri hizmeti örneğinizi barındırma bağlantı noktası ve sunucu.</span><span class="sxs-lookup"><span data-stu-id="635a1-124">You must replace the host name `localhost:12345` with the server and port that is hosting your instance of the Northwind data service.</span></span>
+    > <span data-ttu-id="c48aa-124">Ana bilgisayar adını `localhost:12345` , Northwind veri hizmeti örneğinizi barındıran sunucu ve bağlantı noktasıyla değiştirmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-124">You must replace the host name `localhost:12345` with the server and port that is hosting your instance of the Northwind data service.</span></span>
 
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#querycode)]
 
-5. <span data-ttu-id="635a1-125">Değişiklikleri kaydeder aşağıdaki kodu ekleyin `MainWindow` sınıfı:</span><span class="sxs-lookup"><span data-stu-id="635a1-125">Insert the following code that saves changes into the `MainWindow` class:</span></span>
+5. <span data-ttu-id="c48aa-125">Değişiklikleri `MainWindow` sınıfa kaydeden aşağıdaki kodu ekleyin:</span><span class="sxs-lookup"><span data-stu-id="c48aa-125">Insert the following code that saves changes into the `MainWindow` class:</span></span>
 
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#savechanges)]
 
-## <a name="to-build-and-run-the-northwindclient-application"></a><span data-ttu-id="635a1-126">Northwindclient & lt uygulaması derleme ve çalıştırma için</span><span class="sxs-lookup"><span data-stu-id="635a1-126">To build and run the NorthwindClient application</span></span>
+## <a name="to-build-and-run-the-northwindclient-application"></a><span data-ttu-id="c48aa-126">NorthwindClient uygulamasını derlemek ve çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="c48aa-126">To build and run the NorthwindClient application</span></span>
 
-1. <span data-ttu-id="635a1-127">İçinde **Çözüm Gezgini**; northwindclient & lt projeye sağ tıklayın ve seçin **başlangıç projesi olarak ayarla**.</span><span class="sxs-lookup"><span data-stu-id="635a1-127">In **Solution Explorer**, right-click the NorthwindClient project and select **Set as startup project**.</span></span>
+1. <span data-ttu-id="c48aa-127">**Çözüm Gezgini**, NorthwindClient projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin.</span><span class="sxs-lookup"><span data-stu-id="c48aa-127">In **Solution Explorer**, right-click the NorthwindClient project and select **Set as startup project**.</span></span>
 
-2. <span data-ttu-id="635a1-128">Tuşuna **F5** uygulamayı başlatmak için.</span><span class="sxs-lookup"><span data-stu-id="635a1-128">Press **F5** to start the application.</span></span>
+2. <span data-ttu-id="c48aa-128">Uygulamayı başlatmak için **F5** tuşuna basın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-128">Press **F5** to start the application.</span></span>
 
-     <span data-ttu-id="635a1-129">Bu çözüm derlenir ve istemci uygulamayı başlatır.</span><span class="sxs-lookup"><span data-stu-id="635a1-129">This builds the solution and starts the client application.</span></span> <span data-ttu-id="635a1-130">Veriler hizmetten istenen ve konsolda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="635a1-130">Data is requested from the service and displayed in the console.</span></span>
+     <span data-ttu-id="c48aa-129">Bu, çözümü oluşturur ve istemci uygulamasını başlatır.</span><span class="sxs-lookup"><span data-stu-id="c48aa-129">This builds the solution and starts the client application.</span></span> <span data-ttu-id="c48aa-130">Veriler hizmetten istenir ve konsolda görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-130">Data is requested from the service and displayed in the console.</span></span>
 
-3. <span data-ttu-id="635a1-131">Bir değeri de düzenlemeniz **miktar** veri kılavuzu ve ardından sütunun **Kaydet**.</span><span class="sxs-lookup"><span data-stu-id="635a1-131">Edit a value in the **Quantity** column of the data grid, and then click **Save**.</span></span>
+3. <span data-ttu-id="c48aa-131">Data Grid 'in **Quantity** sütunundaki bir değeri düzenleyin ve ardından **Kaydet**' e tıklayın.</span><span class="sxs-lookup"><span data-stu-id="c48aa-131">Edit a value in the **Quantity** column of the data grid, and then click **Save**.</span></span>
 
-     <span data-ttu-id="635a1-132">Veri hizmetine değişiklikler kaydedildi.</span><span class="sxs-lookup"><span data-stu-id="635a1-132">Changes are saved to the data service.</span></span>
+     <span data-ttu-id="c48aa-132">Değişiklikler veri hizmetine kaydedilir.</span><span class="sxs-lookup"><span data-stu-id="c48aa-132">Changes are saved to the data service.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="635a1-133">Ekleme ve silme varlıklarının; northwindclient & lt uygulamanın bu sürümü desteklemiyor.</span><span class="sxs-lookup"><span data-stu-id="635a1-133">This version of the NorthwindClient application does not support adding and deleting of entities.</span></span>
+    > <span data-ttu-id="c48aa-133">NorthwindClient uygulamasının bu sürümü varlıkların eklenmesini ve silinmesini desteklemez.</span><span class="sxs-lookup"><span data-stu-id="c48aa-133">This version of the NorthwindClient application does not support adding and deleting of entities.</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="635a1-134">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="635a1-134">Next Steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="c48aa-134">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="c48aa-134">Next Steps</span></span>
 
-<span data-ttu-id="635a1-135">Bulunan örnek Northwind OData akışındaki erişen istemci uygulaması başarıyla oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="635a1-135">You have successfully created the client application that accesses the sample Northwind OData feed.</span></span> <span data-ttu-id="635a1-136">WCF Veri Hizmetleri hızlı başlangıç ayrıca tamamladınız!</span><span class="sxs-lookup"><span data-stu-id="635a1-136">You've also completed the WCF Data Services quickstart!</span></span>
+<span data-ttu-id="c48aa-135">Örnek Northwind OData akışına erişen istemci uygulamasını başarıyla oluşturdunuz.</span><span class="sxs-lookup"><span data-stu-id="c48aa-135">You have successfully created the client application that accesses the sample Northwind OData feed.</span></span> <span data-ttu-id="c48aa-136">Ayrıca WCF Veri Hizmetleri hızlı başlangıcı 'nı tamamladınız!</span><span class="sxs-lookup"><span data-stu-id="c48aa-136">You've also completed the WCF Data Services quickstart!</span></span>
 
-<span data-ttu-id="635a1-137">Bir .NET Framework uygulamasından bir OData erişme hakkında daha fazla bilgi akışı için bkz: [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).</span><span class="sxs-lookup"><span data-stu-id="635a1-137">For more information about accessing an OData feed from a .NET Framework application, see [WCF Data Services Client Library](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).</span></span>
+<span data-ttu-id="c48aa-137">.NET Framework uygulamasından bir OData akışına erişme hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri Istemci kitaplığı](wcf-data-services-client-library.md).</span><span class="sxs-lookup"><span data-stu-id="c48aa-137">For more information about accessing an OData feed from a .NET Framework application, see [WCF Data Services Client Library](wcf-data-services-client-library.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="635a1-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="635a1-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c48aa-138">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c48aa-138">See also</span></span>
 
-- [<span data-ttu-id="635a1-139">Başlarken</span><span class="sxs-lookup"><span data-stu-id="635a1-139">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [<span data-ttu-id="635a1-140">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="635a1-140">Resources</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)
+- [<span data-ttu-id="c48aa-139">Başlarken</span><span class="sxs-lookup"><span data-stu-id="c48aa-139">Getting Started</span></span>](getting-started-with-wcf-data-services.md)
+- [<span data-ttu-id="c48aa-140">Kaynaklar</span><span class="sxs-lookup"><span data-stu-id="c48aa-140">Resources</span></span>](wcf-data-services-resources.md)

@@ -1,31 +1,31 @@
 ---
-title: ADO.NET'te veri kaynağına bağlanma
+title: ADO.NET içinde bir veri kaynağına bağlanma
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879989"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786769"
 ---
-# <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="b23c7-102">ADO.NET'te veri kaynağına bağlanma</span><span class="sxs-lookup"><span data-stu-id="b23c7-102">Connecting to a Data Source in ADO.NET</span></span>
-<span data-ttu-id="b23c7-103">ADO.NET kullandığınız bir **bağlantı** bağlantı dizesinde gerekli kimlik doğrulama bilgileri vererek belirli bir veri kaynağına bağlanmak için nesne.</span><span class="sxs-lookup"><span data-stu-id="b23c7-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="b23c7-104">**Bağlantı** kullandığınız nesne veri kaynağı türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="b23c7-104">The **Connection** object you use depends on the type of data source.</span></span>  
+# <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="1e839-102">ADO.NET içinde bir veri kaynağına bağlanma</span><span class="sxs-lookup"><span data-stu-id="1e839-102">Connecting to a Data Source in ADO.NET</span></span>
+<span data-ttu-id="1e839-103">ADO.NET ' de, bir bağlantı dizesinde gerekli kimlik doğrulama bilgilerini sağlayarak belirli bir veri kaynağına bağlanmak için bir **bağlantı** nesnesi kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="1e839-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="1e839-104">Kullandığınız **bağlantı** nesnesi, veri kaynağının türüne bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="1e839-104">The **Connection** object you use depends on the type of data source.</span></span>  
   
- <span data-ttu-id="b23c7-105">.NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir <xref:System.Data.Common.DbConnection> nesne: OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbConnection> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlConnection> nesnesi. ODBC için NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.Odbc.OdbcConnection> nesne ve Oracle için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleConnection> nesne.</span><span class="sxs-lookup"><span data-stu-id="b23c7-105">Each .NET Framework data provider included with the .NET Framework has a <xref:System.Data.Common.DbConnection> object: the .NET Framework Data Provider for OLE DB includes an <xref:System.Data.OleDb.OleDbConnection> object, the .NET Framework Data Provider for SQL Server includes a <xref:System.Data.SqlClient.SqlConnection> object, the .NET Framework Data Provider for ODBC includes an <xref:System.Data.Odbc.OdbcConnection> object, and the .NET Framework Data Provider for Oracle includes an <xref:System.Data.OracleClient.OracleConnection> object.</span></span>  
+ <span data-ttu-id="1e839-105">.NET Framework eklenen her .NET Framework veri sağlayıcısı bir <xref:System.Data.Common.DbConnection> nesnesine sahiptir: OLE DB için .NET Framework veri sağlayıcısı bir nesne <xref:System.Data.OleDb.OleDbConnection> içeriyorsa, .NET Framework veri sağlayıcısı SQL Server bir <xref:System.Data.SqlClient.SqlConnection> nesnesi içerir. ODBC için net Framework veri sağlayıcısı bir <xref:System.Data.Odbc.OdbcConnection> nesne içerir ve Oracle için .NET Framework veri sağlayıcısı bir <xref:System.Data.OracleClient.OracleConnection> nesnesi içerir.</span><span class="sxs-lookup"><span data-stu-id="1e839-105">Each .NET Framework data provider included with the .NET Framework has a <xref:System.Data.Common.DbConnection> object: the .NET Framework Data Provider for OLE DB includes an <xref:System.Data.OleDb.OleDbConnection> object, the .NET Framework Data Provider for SQL Server includes a <xref:System.Data.SqlClient.SqlConnection> object, the .NET Framework Data Provider for ODBC includes an <xref:System.Data.Odbc.OdbcConnection> object, and the .NET Framework Data Provider for Oracle includes an <xref:System.Data.OracleClient.OracleConnection> object.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b23c7-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="b23c7-106">In This Section</span></span>  
- [<span data-ttu-id="b23c7-107">Bağlantı Kurma</span><span class="sxs-lookup"><span data-stu-id="b23c7-107">Establishing the Connection</span></span>](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- <span data-ttu-id="b23c7-108">Nasıl kullanılacağını açıklayan bir **bağlantı** bir veri kaynağına bağlantı kurmak için nesne.</span><span class="sxs-lookup"><span data-stu-id="b23c7-108">Describes how to use a **Connection** object to establish a connection to a data source.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="1e839-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="1e839-106">In This Section</span></span>  
+ [<span data-ttu-id="1e839-107">Bağlantı Kurma</span><span class="sxs-lookup"><span data-stu-id="1e839-107">Establishing the Connection</span></span>](establishing-the-connection.md)  
+ <span data-ttu-id="1e839-108">Bir veri kaynağıyla bağlantı kurmak için bir **bağlantı** nesnesinin nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="1e839-108">Describes how to use a **Connection** object to establish a connection to a data source.</span></span>  
   
- [<span data-ttu-id="b23c7-109">Bağlantı Olayları </span><span class="sxs-lookup"><span data-stu-id="b23c7-109">Connection Events</span></span>](../../../../docs/framework/data/adonet/connection-events.md)  
- <span data-ttu-id="b23c7-110">Nasıl kullanılacağını açıklayan bir **InfoMessage** bir veri kaynağından bilgi iletilerini almak için olay.</span><span class="sxs-lookup"><span data-stu-id="b23c7-110">Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.</span></span>  
+ [<span data-ttu-id="1e839-109">Bağlantı Olayları </span><span class="sxs-lookup"><span data-stu-id="1e839-109">Connection Events</span></span>](connection-events.md)  
+ <span data-ttu-id="1e839-110">Bir veri kaynağından bilgilendirici iletileri almak için bir **InfoMessage** olayının nasıl kullanılacağını açıklar.</span><span class="sxs-lookup"><span data-stu-id="1e839-110">Describes how to use an **InfoMessage** event to retrieve informational messages from a data source.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b23c7-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b23c7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e839-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e839-111">See also</span></span>
 
-- [<span data-ttu-id="b23c7-112">Bağlantı Dizeleri</span><span class="sxs-lookup"><span data-stu-id="b23c7-112">Connection Strings</span></span>](../../../../docs/framework/data/adonet/connection-strings.md)
-- [<span data-ttu-id="b23c7-113">Bağlantı Havuzu</span><span class="sxs-lookup"><span data-stu-id="b23c7-113">Connection Pooling</span></span>](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [<span data-ttu-id="b23c7-114">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="b23c7-114">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="b23c7-115">DataAdapters ve DataReaders</span><span class="sxs-lookup"><span data-stu-id="b23c7-115">DataAdapters and DataReaders</span></span>](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [<span data-ttu-id="b23c7-116">İşlemler ve Eşzamanlılık</span><span class="sxs-lookup"><span data-stu-id="b23c7-116">Transactions and Concurrency</span></span>](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [<span data-ttu-id="b23c7-117">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="b23c7-117">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="1e839-112">Bağlantı Dizeleri</span><span class="sxs-lookup"><span data-stu-id="1e839-112">Connection Strings</span></span>](connection-strings.md)
+- [<span data-ttu-id="1e839-113">Bağlantı Havuzu</span><span class="sxs-lookup"><span data-stu-id="1e839-113">Connection Pooling</span></span>](connection-pooling.md)
+- [<span data-ttu-id="1e839-114">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="1e839-114">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="1e839-115">DataAdapters ve DataReaders</span><span class="sxs-lookup"><span data-stu-id="1e839-115">DataAdapters and DataReaders</span></span>](dataadapters-and-datareaders.md)
+- [<span data-ttu-id="1e839-116">İşlemler ve Eşzamanlılık</span><span class="sxs-lookup"><span data-stu-id="1e839-116">Transactions and Concurrency</span></span>](transactions-and-concurrency.md)
+- [<span data-ttu-id="1e839-117">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="1e839-117">ADO.NET Overview</span></span>](ado-net-overview.md)

@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751586"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796498"
 ---
-# <a name="identityattributeblob-structure"></a><span data-ttu-id="84257-102">IDENTITY_ATTRIBUTE_BLOB Yapısı</span><span class="sxs-lookup"><span data-stu-id="84257-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
-<span data-ttu-id="84257-103">Tek bir öznitelik bir derlemede hakkında bilgiler içerir ve üç oluşur `DWORD`s.</span><span class="sxs-lookup"><span data-stu-id="84257-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="84257-104">Her `DWORD` bir uzaklık tarafından üretilen bir karakter arabelleğine `CurrentIntoBuffer` yöntemi [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) arabirimi</span><span class="sxs-lookup"><span data-stu-id="84257-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interface</span></span>  
+# <a name="identity_attribute_blob-structure"></a><span data-ttu-id="8c3e3-102">IDENTITY_ATTRIBUTE_BLOB Yapısı</span><span class="sxs-lookup"><span data-stu-id="8c3e3-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
+<span data-ttu-id="8c3e3-103">Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç `DWORD`' dan oluşur.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="8c3e3-104">Her `DWORD` biri, [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin `CurrentIntoBuffer` yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir</span><span class="sxs-lookup"><span data-stu-id="8c3e3-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) interface</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="84257-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="84257-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8c3e3-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8c3e3-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
@@ -38,24 +38,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="84257-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="84257-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8c3e3-106">Üyeler</span><span class="sxs-lookup"><span data-stu-id="8c3e3-106">Members</span></span>  
   
-|<span data-ttu-id="84257-107">Üye</span><span class="sxs-lookup"><span data-stu-id="84257-107">Member</span></span>|<span data-ttu-id="84257-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="84257-108">Description</span></span>|  
+|<span data-ttu-id="8c3e3-107">Üye</span><span class="sxs-lookup"><span data-stu-id="8c3e3-107">Member</span></span>|<span data-ttu-id="8c3e3-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="8c3e3-108">Description</span></span>|  
 |------------|-----------------|  
-|`ofsNamespace`|<span data-ttu-id="84257-109">Karakter arabelleği olan ilk uzaklık.</span><span class="sxs-lookup"><span data-stu-id="84257-109">The first offset into the character buffer.</span></span> <span data-ttu-id="84257-110">Bu uzaklık, öznitelik ad alanı, ancak bir null karakter dizisi tarafından izlenmiyor.</span><span class="sxs-lookup"><span data-stu-id="84257-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="84257-111">Bu nedenle, bu kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="84257-111">Therefore, it is not used.</span></span>|  
-|`ofsName`|<span data-ttu-id="84257-112">Karakter arabelleği olan ikinci uzaklık.</span><span class="sxs-lookup"><span data-stu-id="84257-112">The second offset into the character buffer.</span></span> <span data-ttu-id="84257-113">Bu konum özniteliğin adı başlangıcını işaretler.</span><span class="sxs-lookup"><span data-stu-id="84257-113">This location marks the start of the attribute's name.</span></span>|  
-|`ofsValue`|<span data-ttu-id="84257-114">Karakter arabelleği olan üçüncü uzaklık.</span><span class="sxs-lookup"><span data-stu-id="84257-114">The third offset into the character buffer.</span></span> <span data-ttu-id="84257-115">Bu konum, özniteliğin değeri başlangıcını işaretler.</span><span class="sxs-lookup"><span data-stu-id="84257-115">This location marks the start of the attribute's value.</span></span>|  
+|`ofsNamespace`|<span data-ttu-id="8c3e3-109">Karakter arabelleğinin ilk boşluğu.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-109">The first offset into the character buffer.</span></span> <span data-ttu-id="8c3e3-110">Bu uzaklığa daha sonra özniteliğin ad alanı, ancak bir dizi null karakteri gelmelidir.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="8c3e3-111">Bu nedenle, kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-111">Therefore, it is not used.</span></span>|  
+|`ofsName`|<span data-ttu-id="8c3e3-112">Karakter arabelleğinin ikinci değeri.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-112">The second offset into the character buffer.</span></span> <span data-ttu-id="8c3e3-113">Bu konum, özniteliğin adının başlangıcını belirtir.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-113">This location marks the start of the attribute's name.</span></span>|  
+|`ofsValue`|<span data-ttu-id="8c3e3-114">Karakter arabelleğinin üçüncü boşluğu.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-114">The third offset into the character buffer.</span></span> <span data-ttu-id="8c3e3-115">Bu konum, öznitelik değerinin başlangıcını işaretler.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-115">This location marks the start of the attribute's value.</span></span>|  
   
-## <a name="sample"></a><span data-ttu-id="84257-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="84257-116">Sample</span></span>  
- <span data-ttu-id="84257-117">Aşağıdaki örnekte, sonunda bir doldurulmuş neden birkaç temel adımları gösterilmektedir. `IDENTITY_ATTRIBUTE_BLOB` yapısı:</span><span class="sxs-lookup"><span data-stu-id="84257-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
+## <a name="sample"></a><span data-ttu-id="8c3e3-116">Örnek</span><span class="sxs-lookup"><span data-stu-id="8c3e3-116">Sample</span></span>  
+ <span data-ttu-id="8c3e3-117">Aşağıdaki örnek, sonunda doldurulmuş `IDENTITY_ATTRIBUTE_BLOB` bir yapıya neden olan birkaç temel adımı göstermektedir:</span><span class="sxs-lookup"><span data-stu-id="8c3e3-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
   
-1. <span data-ttu-id="84257-118">Elde bir [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) derleme için.</span><span class="sxs-lookup"><span data-stu-id="84257-118">Obtain an [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) for the assembly.</span></span>  
+1. <span data-ttu-id="8c3e3-118">Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) alın.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-118">Obtain an [IReferenceIdentity](ireferenceidentity-interface.md) for the assembly.</span></span>  
   
-2. <span data-ttu-id="84257-119">Çağrı `IReferenceIdentity::EnumAttributes` yöntemi ve bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span><span class="sxs-lookup"><span data-stu-id="84257-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).</span></span>  
+2. <span data-ttu-id="8c3e3-119">Yöntemini çağırın ve bir IEnumIDENTITY_ATTRIBUTE edinin. [](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`</span><span class="sxs-lookup"><span data-stu-id="8c3e3-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).</span></span>  
   
-3. <span data-ttu-id="84257-120">Bir karakter arabelleği oluşturun ve olarak cast bir `IDENTITY_ATTRIBUTE_BLOB` yapısı.</span><span class="sxs-lookup"><span data-stu-id="84257-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+3. <span data-ttu-id="8c3e3-120">Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` yapı olarak atayın.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-4. <span data-ttu-id="84257-121">Çağrı `CurrentIntoBuffer` yöntemi `IEnumIDENTITY_ATTRIBUTE` arabirimi.</span><span class="sxs-lookup"><span data-stu-id="84257-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="84257-122">Bu yöntem öznitelikleri kopyalar `Namespace`, `Name`, ve `Value` karakter arabelleğine.</span><span class="sxs-lookup"><span data-stu-id="84257-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="84257-123">Bu dizelere üç uzaklık içinde kullanılabilir hale gelecektir `IDENTITY_ATTRIBUTE_BLOB` yapısı.</span><span class="sxs-lookup"><span data-stu-id="84257-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+4. <span data-ttu-id="8c3e3-121">`IEnumIDENTITY_ATTRIBUTE` Arabirimin `CurrentIntoBuffer` yöntemini çağırın.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="8c3e3-122">Bu yöntem, ve `Namespace` `Name` `Value` özniteliklerini karakter arabelleğine kopyalar.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="8c3e3-123">Bu dizelerin üç uzaklıkları `IDENTITY_ATTRIBUTE_BLOB` yapıda kullanılabilir hale gelir.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -221,30 +221,30 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="84257-124">Örnek çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="84257-124">To run the sample</span></span>  
- <span data-ttu-id="84257-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="84257-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="8c3e3-124">Örnek çalıştırmak için</span><span class="sxs-lookup"><span data-stu-id="8c3e3-124">To run the sample</span></span>  
+ <span data-ttu-id="8c3e3-125">C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="8c3e3-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
   
-### <a name="sample-output"></a><span data-ttu-id="84257-126">Örnek çıktı</span><span class="sxs-lookup"><span data-stu-id="84257-126">Sample output</span></span>  
- <span data-ttu-id="84257-127">Culture = neutral</span><span class="sxs-lookup"><span data-stu-id="84257-127">Culture = neutral</span></span>  
+### <a name="sample-output"></a><span data-ttu-id="8c3e3-126">Örnek çıkış</span><span class="sxs-lookup"><span data-stu-id="8c3e3-126">Sample output</span></span>  
+ <span data-ttu-id="8c3e3-127">Kültür = bağımsız</span><span class="sxs-lookup"><span data-stu-id="8c3e3-127">Culture = neutral</span></span>  
   
- <span data-ttu-id="84257-128">adı = System</span><span class="sxs-lookup"><span data-stu-id="84257-128">name = System</span></span>  
+ <span data-ttu-id="8c3e3-128">ad = sistem</span><span class="sxs-lookup"><span data-stu-id="8c3e3-128">name = System</span></span>  
   
- <span data-ttu-id="84257-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="84257-129">processorArchitecture = MSIL</span></span>  
+ <span data-ttu-id="8c3e3-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="8c3e3-129">processorArchitecture = MSIL</span></span>  
   
- <span data-ttu-id="84257-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="84257-130">PublicKeyToken = b77a5c561934e089</span></span>  
+ <span data-ttu-id="8c3e3-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="8c3e3-130">PublicKeyToken = b77a5c561934e089</span></span>  
   
- <span data-ttu-id="84257-131">Sürüm 2.0.0.0 =</span><span class="sxs-lookup"><span data-stu-id="84257-131">Version = 2.0.0.0</span></span>  
+ <span data-ttu-id="8c3e3-131">Sürüm = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="8c3e3-131">Version = 2.0.0.0</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="84257-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="84257-132">Requirements</span></span>  
- <span data-ttu-id="84257-133">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84257-133">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8c3e3-132">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8c3e3-132">Requirements</span></span>  
+ <span data-ttu-id="8c3e3-133">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8c3e3-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="84257-134">**Üst bilgi:** Isolation.h</span><span class="sxs-lookup"><span data-stu-id="84257-134">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="8c3e3-134">**Üst bilgi** Yalıtım. h</span><span class="sxs-lookup"><span data-stu-id="8c3e3-134">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="84257-135">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84257-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8c3e3-135">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c3e3-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84257-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="84257-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8c3e3-136">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8c3e3-136">See also</span></span>
 
-- [<span data-ttu-id="84257-137">IReferenceIdentity Arabirimi</span><span class="sxs-lookup"><span data-stu-id="84257-137">IReferenceIdentity Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [<span data-ttu-id="84257-138">IEnumIDENTITY_ATTRIBUTE Arabirimi</span><span class="sxs-lookup"><span data-stu-id="84257-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [<span data-ttu-id="84257-139">IDENTITY_ATTRIBUTE Yapısı</span><span class="sxs-lookup"><span data-stu-id="84257-139">IDENTITY_ATTRIBUTE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [<span data-ttu-id="84257-140">Fusion Yapıları</span><span class="sxs-lookup"><span data-stu-id="84257-140">Fusion Structures</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [<span data-ttu-id="8c3e3-137">IReferenceIdentity Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c3e3-137">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
+- [<span data-ttu-id="8c3e3-138">IEnumIDENTITY_ATTRIBUTE Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8c3e3-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](ienumidentity-attribute-interface.md)
+- [<span data-ttu-id="8c3e3-139">IDENTITY_ATTRIBUTE Yapısı</span><span class="sxs-lookup"><span data-stu-id="8c3e3-139">IDENTITY_ATTRIBUTE Structure</span></span>](identity-attribute-structure.md)
+- [<span data-ttu-id="8c3e3-140">Fusion Yapıları</span><span class="sxs-lookup"><span data-stu-id="8c3e3-140">Fusion Structures</span></span>](fusion-structures.md)
