@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e478cb89821ce8666f1746e752e06d2caa3ad2bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751586"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796498"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
-Tek bir öznitelik bir derlemede hakkında bilgiler içerir ve üç oluşur `DWORD`s. Her `DWORD` bir uzaklık tarafından üretilen bir karakter arabelleğine `CurrentIntoBuffer` yöntemi [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) arabirimi  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB Yapısı
+Bir derlemedeki tek bir öznitelikle ilgili bilgiler içerir ve üç `DWORD`' dan oluşur. Her `DWORD` biri, [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) arabiriminin `CurrentIntoBuffer` yöntemi tarafından oluşturulan bir karakter arabelleği için bir uzaklığa sahiptir  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,20 +42,20 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`ofsNamespace`|Karakter arabelleği olan ilk uzaklık. Bu uzaklık, öznitelik ad alanı, ancak bir null karakter dizisi tarafından izlenmiyor. Bu nedenle, bu kullanılmaz.|  
-|`ofsName`|Karakter arabelleği olan ikinci uzaklık. Bu konum özniteliğin adı başlangıcını işaretler.|  
-|`ofsValue`|Karakter arabelleği olan üçüncü uzaklık. Bu konum, özniteliğin değeri başlangıcını işaretler.|  
+|`ofsNamespace`|Karakter arabelleğinin ilk boşluğu. Bu uzaklığa daha sonra özniteliğin ad alanı, ancak bir dizi null karakteri gelmelidir. Bu nedenle, kullanılmaz.|  
+|`ofsName`|Karakter arabelleğinin ikinci değeri. Bu konum, özniteliğin adının başlangıcını belirtir.|  
+|`ofsValue`|Karakter arabelleğinin üçüncü boşluğu. Bu konum, öznitelik değerinin başlangıcını işaretler.|  
   
 ## <a name="sample"></a>Örnek  
- Aşağıdaki örnekte, sonunda bir doldurulmuş neden birkaç temel adımları gösterilmektedir. `IDENTITY_ATTRIBUTE_BLOB` yapısı:  
+ Aşağıdaki örnek, sonunda doldurulmuş `IDENTITY_ATTRIBUTE_BLOB` bir yapıya neden olan birkaç temel adımı göstermektedir:  
   
-1. Elde bir [Ireferenceıdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) derleme için.  
+1. Derleme için bir [IReferenceIdentity](ireferenceidentity-interface.md) alın.  
   
-2. Çağrı `IReferenceIdentity::EnumAttributes` yöntemi ve bir [Ienumıdentıty_attrıbute](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Yöntemini çağırın ve bir IEnumIDENTITY_ATTRIBUTE edinin. [](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
   
-3. Bir karakter arabelleği oluşturun ve olarak cast bir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
+3. Bir karakter arabelleği oluşturun ve `IDENTITY_ATTRIBUTE_BLOB` yapı olarak atayın.  
   
-4. Çağrı `CurrentIntoBuffer` yöntemi `IEnumIDENTITY_ATTRIBUTE` arabirimi. Bu yöntem öznitelikleri kopyalar `Namespace`, `Name`, ve `Value` karakter arabelleğine. Bu dizelere üç uzaklık içinde kullanılabilir hale gelecektir `IDENTITY_ATTRIBUTE_BLOB` yapısı.  
+4. `IEnumIDENTITY_ATTRIBUTE` Arabirimin `CurrentIntoBuffer` yöntemini çağırın. Bu yöntem, ve `Namespace` `Name` `Value` özniteliklerini karakter arabelleğine kopyalar. Bu dizelerin üç uzaklıkları `IDENTITY_ATTRIBUTE_BLOB` yapıda kullanılabilir hale gelir.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,29 +222,29 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Örnek çalıştırmak için  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
-### <a name="sample-output"></a>Örnek çıktı  
- Culture = neutral  
+### <a name="sample-output"></a>Örnek çıkış  
+ Kültür = bağımsız  
   
- adı = System  
+ ad = sistem  
   
  processorArchitecture = MSIL  
   
  PublicKeyToken = b77a5c561934e089  
   
- Sürüm 2.0.0.0 =  
+ Sürüm = 2.0.0.0  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Isolation.h  
+ **Üst bilgi** Yalıtım. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IReferenceIdentity Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE Arabirimi](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE Yapısı](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IReferenceIdentity Arabirimi](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE Arabirimi](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE Yapısı](identity-attribute-structure.md)
+- [Fusion Yapıları](fusion-structures.md)

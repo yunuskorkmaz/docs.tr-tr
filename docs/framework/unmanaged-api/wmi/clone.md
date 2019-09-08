@@ -1,6 +1,6 @@
 ---
 title: Clone işlevi (yönetilmeyen API Başvurusu)
-description: Kopyalama işlevi için geçerli bir tam bir kopyası olan yeni bir nesne döndürür.
+description: Clone işlevi, geçerli birinin tamamen kopyası olan yeni bir nesne döndürür.
 ms.date: 11/06/2017
 api_name:
 - Clone
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80faf1a5a6297f5b105fdb609366f6774f8692b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5957f591dca7df30178660eb3fb074567c285715
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798711"
 ---
 # <a name="clone-function"></a>Clone işlevi
-Geçerli nesnenin tam bir kopyası olan yeni bir nesne döndürür.   
+Geçerli nesnenin tamamen kopyası olan yeni bir nesne döndürür.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,37 +41,37 @@ HRESULT Clone (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`  
-[in] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`  
-[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `ppCopy`  
-[out] Tam olan yeni bir nesne, silmenizin `ptr`. Bu bağımsız değişkeni olamaz `null` geçerli nesnenin bir kopyasını alırsa.
+dışı Tamamen tek `ptr`olan yeni bir nesne. Bu bağımsız değişken `null` geçerli nesnenin kopyasını alırsa olamaz.
 
 ## <a name="return-value"></a>Dönüş değeri
 
-Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` bir parametre olarak belirtildi ve bu kullanımı geçerli değil. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesneyi kopyalamak yeterli bellek yok. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`bir parametre olarak belirtildi ve bu kullanımda yasal değil. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Nesneyi kopyalamak için yeterli kullanılabilir bellek yok. |
 | `WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev bir çağrı sarılır [IWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemi.
+Bu işlev, [IWbemClassObject:: Clone](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) yöntemine bir çağrı kaydırır.
 
-Kopyalanan nesne başvuru sayısı 1 olan bir COM nesnesidir.
+Kopyalanmış nesne, başvuru sayısı 1 olan bir COM nesnesidir.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** WMINet_Utils.idl  
+ **Üst bilgi** WMINet_Utils. IDL  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd420f0f166b0b17e5fbaf08d6bedd6651188b1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 95c65e73c118b5358ac0a92dd0a1ca5545558e73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778747"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796796"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly Yöntemi
-Belirtilen derlemeyi genel bütünleştirilmiş kod önbelleğine yükler.  
+Belirtilen derlemeyi genel derleme önbelleğine yüklenir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,25 +39,25 @@ HRESULT InstallAssembly (
   
 ## <a name="parameters"></a>Parametreler  
  `dwFlags`  
- [in] Fusion.idl içinde tanımlanan bayraklar. Aşağıdaki değerleri desteklenir:  
+ 'ndaki Fusion. IDL içinde tanımlanan bayraklar. Aşağıdaki değerler desteklenir:  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0X00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
-- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0X00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pszManifestFilePath`  
- [in] Yüklenecek derlemenin bildirimi yolu.  
+ 'ndaki Yüklenecek derleme için bildirimin yolu.  
   
  `pRefData`  
- [in] A [fusıon_ınstall_reference](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) içeren yüklemesi için veri yapısı.  
+ 'ndaki Yükleme için veri içeren bir [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) yapısı.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyCache Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache Arabirimi](iassemblycache-interface.md)

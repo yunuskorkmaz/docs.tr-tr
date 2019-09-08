@@ -1,37 +1,37 @@
 ---
-title: 'Azaltma: Özel IMessageFilter.PreFilterMessage uygulamaları'
+title: Mayı Özel IMessageFilter. PreFilterMessage uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3ac43b574c4382c4aec5070acde0fa77516727d
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 2af81468c5c4c4caf2f09725d6c7c4723084e35c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251143"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779437"
 ---
-# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Azaltma: Özel IMessageFilter.PreFilterMessage uygulamaları
+# <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>Mayı Özel IMessageFilter. PreFilterMessage uygulamaları
 
-.NET Framework 4.6.1, özel bir başlangıç .NET Framework sürümleri hedefleyen Windows Forms uygulamalarında <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama için güvenli bir şekilde filtre iletileri <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrıldığında, <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama:
+.NET Framework 4.6.1 başlayarak .NET Framework sürümlerini hedefleyen Windows Forms uygulamalarda, <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulama şu şekilde çağrıldığında özel bir uygulama iletileri <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> güvenli bir şekilde filtreleyebilir:
 
-- Birini veya her ikisini aşağıdakileri yapar:
+- Aşağıdakilerden birini veya her ikisini de yapar:
 
-  - İleti filtresini çağırarak ekler <xref:System.Windows.Forms.Application.AddMessageFilter%2A> yöntemi.
+  - <xref:System.Windows.Forms.Application.AddMessageFilter%2A> Yöntemini çağırarak bir ileti filtresi ekler.
 
-  - İleti filtresini çağırarak kaldırır <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> yöntemi. yöntem.
+  - <xref:System.Windows.Forms.Application.RemoveMessageFilter%2A> Yöntemini çağırarak bir ileti filtresini kaldırır. yöntemidir.
 
-- **Ve** pompalara iletileri çağırarak <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> yöntemi.
+- **Ve** <xref:System.Windows.Forms.Application.DoEvents%2A?displayProperty=nameWithType> yöntemini çağırarak pompalara iletileri.
 
 ## <a name="impact"></a>Etki
 
-Bu değişiklik, yalnızca .NET Framework 4.6.1 ile başlayarak .NET Framework sürümleri hedefleyen Windows Forms uygulamaları etkiler.
+Bu değişiklik yalnızca .NET Framework 4.6.1 başlayarak .NET Framework sürümlerini hedefleyen Windows Forms uygulamalarını etkiler.
 
-Bazı durumlarda bu tür uygulamaları .NET Framework'ün önceki sürümlerini hedefleyen Windows Forms uygulamaları için throw bir <xref:System.IndexOutOfRangeException> özel durum olduğunda <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrılır
+.NET Framework önceki sürümlerini hedefleyen Windows Forms uygulamalar için, bazı durumlarda bu gibi uygulamalar, <xref:System.IndexOutOfRangeException> <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> yöntemi çağrıldığında bir özel durum oluşturur
 
 ## <a name="mitigation"></a>Azaltma
 
-Bu değişiklik, istenmeyen ise, .NET Framework 4.6.1 veya sonraki bir sürümünü hedefleyen uygulamalar dışında aşağıdaki yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın yapılandırma dosyası bölümünü:
+Bu değişiklik istenmeyen ise, .NET Framework 4.6.1 veya sonraki bir sürümü hedefleyen uygulamalar, uygulamanın yapılandırma dosyasının [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma ayarını ekleyerek devre dışı bırakabilirsiniz:
 
 ```xml
 <runtime>
@@ -39,7 +39,7 @@ Bu değişiklik, istenmeyen ise, .NET Framework 4.6.1 veya sonraki bir sürümü
 </runtime>
 ```
 
-Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.6.1 veya sonraki bir sürümünü altında çalışan uygulamalar, bu davranış için aşağıdaki yapılandırma ayarı ekleyerek seçebilirsiniz [ \<çalışma zamanı >](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) uygulamanın yapılandırma dosyası bölümünü:
+Ayrıca, .NET Framework önceki sürümlerini hedefleyen, ancak .NET Framework 4.6.1 altında çalışan uygulamalar veya sonraki bir sürüm, aşağıdaki yapılandırma ayarını [ \<çalışma zamanı >](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne ekleyerek bu davranışı kabul edebilir. uygulamanın yapılandırma dosyası:
 
 ```xml
 <runtime>
@@ -49,4 +49,4 @@ Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framewor
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yeniden Hedefleme Değişiklikleri](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Yeniden Hedefleme Değişiklikleri](retargeting-changes-in-the-net-framework-4-6-1.md)

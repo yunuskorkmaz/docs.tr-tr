@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 219a92c0a105cc43e0c2af7d93868cac12f2e4e4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778528"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795492"
 ---
-# <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO Yapısı
-Genel derleme önbelleğinde kayıtlı bir derlemeyle ilgili bilgiler içerir.  
+# <a name="assembly_info-structure"></a>ASSEMBLY_INFO Yapısı
+Genel derleme önbelleğinde kayıtlı olan bir derleme hakkındaki bilgileri içerir.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,20 +42,20 @@ typedef struct _ASSEMBLY_INFO {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`cbAssemblyInfo`|Yapının bayt cinsinden boyutu. Bu alan sonra genişletilebilmek için ayrılmış.|  
-|`dwAssemblyFlags`|Derlemeyle ilgili yükleme ayrıntılarını gösteren bayrak. Aşağıdaki değerleri desteklenir:<br /><br /> -Derleme yüklü olduğunu gösterecek ASSEMBLYINFO_FLAG_INSTALLED değeri. Her zaman geçerli sürümü .NET Framework'ün ayarlar `dwAssemblyFlags` şu değer.<br />-Yerleşik bir yükü derleme gösterir ASSEMBLYINFO_FLAG_PAYLOADRESIDENT değeri. Hiçbir zaman geçerli sürümü .NET Framework'ün ayarlar `dwAssemblyFlags` şu değer.|  
-|`uliAssemblySizeInKB`|İçeren derleme dosyalarının kilobayt cinsinden toplam boyutu.|  
-|`pszCurrentAssemblyPathBuf`|Bildirim dosyası için geçerli yol tutan dize arabellek için işaretçi. Yol, bir null karakterle bitmelidir.|  
-|`cchBuf`|Null sonlandırıcıyı da dahil olmak üzere geniş karakter sayısı, `pszCurrentAssemblyPathBuf` içerir.|  
+|`cbAssemblyInfo`|Yapının bayt cinsinden boyutu. Bu alan gelecekteki genişletilebilirlik için ayrılmıştır.|  
+|`dwAssemblyFlags`|Derlemeyle ilgili yükleme ayrıntılarını gösteren Bayraklar. Aşağıdaki değerler desteklenir:<br /><br /> -Derlemenin yüklendiğini gösteren ASSEMBLYINFO_FLAG_INSTALLED değeri. .NET Framework geçerli sürümü her zaman bu değere ayarlanır `dwAssemblyFlags` .<br />-Derlemenin bir yükün yerleşik olduğunu gösteren ASSEMBLYINFO_FLAG_PAYLOADRESIDENT değeri. .NET Framework geçerli sürümü hiçbir şekilde bu değere ayarlanır `dwAssemblyFlags` .|  
+|`uliAssemblySizeInKB`|Derlemenin içerdiği dosyaların kilobayt cinsinden toplam boyutu.|  
+|`pszCurrentAssemblyPathBuf`|Bildirim dosyasının geçerli yolunu tutan bir dize arabelleği işaretçisi. Yol, null bir karakterle bitmelidir.|  
+|`cchBuf`|`pszCurrentAssemblyPathBuf` İçeren null Sonlandırıcı dahil olmak üzere geniş karakter sayısı.|  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Fusion Yapıları](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Genel Derleme Önbelleği](../../../../docs/framework/app-domains/gac.md)
+- [Fusion Yapıları](fusion-structures.md)
+- [Genel Derleme Önbelleği](../../app-domains/gac.md)

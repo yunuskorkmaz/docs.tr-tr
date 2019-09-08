@@ -2,41 +2,41 @@
 title: SQL Server Express Security
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55f1d141e50ed7afd851d7330cfaf2e3b6380f18
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876791"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791693"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express Güvenliği
-Microsoft SQL Server Express Edition (SQL Server Express), Microsoft SQL Sunucusu'nu temel alır ve Veritabanı Altyapısı'nın özelliklerinin birçoğunu destekler. Önemsiz özellik ve ağ bağlantısı varsayılan olarak kapalı olan şekilde tasarlanmıştır. Bu saldırı kötü niyetli bir kullanıcı tarafından kullanılabilir yüzey alanını azaltır.  
+Microsoft SQL Server Express Edition (SQL Server Express) Microsoft SQL Server tabanlıdır ve veritabanı altyapısının özelliklerinin çoğunu destekler. Bu, varsayılan olarak önemli olmayan özelliklerin ve ağ bağlantılarının kapalı olmasını sağlayacak şekilde tasarlanmıştır. Bu, kötü niyetli bir kullanıcı tarafından saldırı için kullanılabilen yüzey alanını azaltır.  
   
- SQL Server Express, genellikle adlandırılmış bir örneği yüklenir. Örneğin varsayılan addır `SQLExpress`. Adlandırılmış bir örnek, bilgisayarın ağ adı yanı sıra, yükleme sırasında belirttiğiniz örnek adı tarafından tanımlanır.  
+ SQL Server Express genellikle adlandırılmış bir örnek olarak yüklenir. Örneğin varsayılan adı `SQLExpress`. Adlandırılmış bir örnek, bilgisayarın ağ adı ve yükleme sırasında belirttiğiniz örnek adı ile tanımlanır.  
   
 ## <a name="network-access"></a>Ağ erişimi  
- Güvenlik nedenleriyle, varsayılan olarak SQL Server Express ağ protokolleri devre dışı bırakılır. Bu SQL Server Express örneğini barındıran bilgisayarın tehlikeye atabilir dış kullanıcılardan gelen saldırıları engeller. Açıkça ağ bağlantısı etkinleştirmeli ve başka bir bilgisayardan bir SQL Server Express örneğine bağlanmak için SQL Server Browser hizmetini başlatın.  
+ Güvenlik nedenleriyle, ağ protokolleri SQL Server Express varsayılan olarak devre dışıdır. Bu, SQL Server Express örneğini barındıran bilgisayarın güvenliğini tehlikeye atabilecek kullanıcılardan dışarıdan saldırıları engeller. Ağ bağlantısını açıkça etkinleştirmeniz ve başka bir bilgisayardan bir SQL Server Express örneğine bağlanmak için SQL Server Browser hizmeti başlatmanız gerekir.  
   
- Ağ bağlantısı etkinleştirildikten sonra bir SQL Server Express örneği SQL Server'ın başka sürümleri aynı güvenlik gereksinimlerine sahiptir.  
+ Ağ bağlantısı etkinleştirildikten sonra, bir SQL Server Express örneği, diğer SQL Server sürümleriyle aynı güvenlik gereksinimlerine sahiptir.  
   
 ## <a name="user-instances"></a>Kullanıcı örnekleri  
- Bir kullanıcı örneği oluşturulan SQL Server Express veritabanı motoru tarafından bir üst SQL Server Express örneğini ayrı bir örneğidir. Windows sistem yöneticisinin en az ayrıcalıklı kullanıcı hesabı altında çalışan kullanıcılar izin vermek için birincil amacı, bir kullanıcı örneği olduğunu (`sysadmin`), yerel bilgisayardaki SQL Server Express örneği üzerinde ayrıcalıkları. Kullanıcı örnekleri kendi bilgisayarlarındaki sistem yöneticisi olan kullanıcılar için tasarlanmamıştır.  
+ Bir kullanıcı örneği, bir SQL Server Express üst örneği tarafından oluşturulan SQL Server Express veritabanı altyapısının ayrı bir örneğidir. Bir Kullanıcı örneğinin birincil hedefi, en az ayrıcalıklı kullanıcı hesabı altında Windows çalıştıran kullanıcıların, yerel bilgisayarlarındaki SQL Server Express örneğinde Sistem Yöneticisi (`sysadmin`) ayrıcalıklarına sahip olmasını sağlamaktır. Kullanıcı örnekleri, kendi bilgisayarlarında sistem yöneticileri olan kullanıcılara yönelik değildir.  
   
- Birincil bir SQL Server veya SQL Server Express örneğini bir kullanıcı adına bir kullanıcı örneği oluşturulur. Bu işlem bir kullanıcı işlemi kullanıcının, bir hizmet olarak Windows güvenlik bağlamı altında çalışır. SQL Server oturumları izin verilmiyor; yalnızca Windows oturumları desteklenir. Bu kullanıcı, gerçekleştirmek için izne sahip olmayan sistem genelinde değişiklikler yapmasını bir kullanıcı örneği üzerinde yazılım yürütülürken engeller. Bir kullanıcı örneği olarak da bilinen bir alt veya istemci örneği olan ve bazen nedeniyle RANU kısaltması ("normal kullanıcı olarak çalıştır") kullanılarak adlandırılır.  
+ Bir kullanıcı örneği, bir kullanıcı adına SQL Server veya SQL Server Express birincil örneğinden oluşturulur. Bir hizmet olarak değil kullanıcının Windows güvenlik bağlamı altında Kullanıcı işlemi olarak çalışır. SQL Server oturum açma işlemlerine izin verilmiyor; yalnızca Windows oturum açmaları desteklenir. Bu, bir Kullanıcı örneğinde yürütülen yazılımın, kullanıcının yapma iznine sahip olmadığı sistem genelinde değişiklikler yapmasına engel olur. Bir kullanıcı örneği, alt veya istemci örneği olarak da bilinir ve bazen RANU kısaltması ("normal kullanıcı olarak çalıştır") kullanılarak da adlandırılır.  
   
- Her bir kullanıcı örneği, kendi üst örneğini ve aynı bilgisayarda çalışan diğer kullanıcı örneklerden yalıtılır. Kullanıcı örneklerinde yüklü veritabanları yalnızca tek kullanıcı modunda açılan; birden çok kullanıcı kendisine bağlanamıyor. Çoğaltma, dağıtılmış sorgular ve uzak bağlantıları kullanıcı örnekleri için devre dışı bırakıldı. Bir kullanıcı örneğine bağlandığında, kullanıcılar üst SQL Server Express örneği üzerinde özel ayrıcalıklarına sahip.  
+ Her kullanıcı örneği, üst örneğinden ve aynı bilgisayarda çalışan diğer kullanıcı örneklerinden yalıtılmıştır. Kullanıcı örneklerine yüklenen veritabanları yalnızca tek kullanıcılı modda açılır. birden çok Kullanıcı bu dosyalara bağlanamaz. Çoğaltma, dağıtılmış sorgular ve uzak bağlantılar Kullanıcı örnekleri için devre dışıdır. Bir kullanıcı örneğine bağlanıldığında, kullanıcıların üst SQL Server Express örneği üzerinde özel ayrıcalıkları yoktur.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  SQL Server Express hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |||  
 |-|-|  
-|[Microsoft SQL Server 2005 Express Edition çevrimiçi kitaplar](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Edition için kapsamlı belgeler sağlar.|  
-|[Yönetici olmayanlar için kullanıcı örnekleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) SQL Server Çevrimiçi Kitapları'nda|Kullanıcı örnekleri oluşturup dağıtmayı açıklar.|  
-|[SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Bir ADO.NET uygulamasında kullanıcı örneği yeteneklerini açıklar. Bir kullanıcı örneği etkinleştirmek için bir kullanıcı örneği kullanarak bağlanma hakkında bilgi sağlayan bir <xref:System.Data.SqlClient.SqlConnection>, kullanıcı örneği ömrünü ve kullanıcı örneği senaryoları.|  
+|[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|SQL Server 2005 Express Sürüm için tüm belgeler.|  
+|SQL Server Books Online 'da [yönetici olmayanlar Için Kullanıcı örnekleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100))|Kullanıcı örneklerinin nasıl oluşturulacağını ve dağıtılacağını açıklar.|  
+|[SQL Server Express Kullanıcı Örnekleri](sql-server-express-user-instances.md)|Bir ADO.NET uygulamasındaki Kullanıcı örneği yeteneklerini açıklar. Kullanıcı örneğini etkinleştirme, Kullanıcı örneği ömrü ve Kullanıcı örneği senaryoları kullanarak <xref:System.Data.SqlClient.SqlConnection>bir kullanıcı örneğine bağlanma hakkında bilgi sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [SQL Server Express Kullanıcı Örnekleri](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Güvenliği](sql-server-security.md)
+- [SQL Server Express Kullanıcı Örnekleri](sql-server-express-user-instances.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

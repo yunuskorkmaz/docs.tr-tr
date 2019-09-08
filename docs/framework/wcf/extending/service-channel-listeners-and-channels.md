@@ -1,45 +1,45 @@
 ---
-title: 'Hizmet: Kanal dinleyicileri ve kanallar'
+title: 'Hizmet: Kanal dinleyicileri ve kanalları'
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a740f5dcf682c3c140adb9c4c7c9678c4eae132
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771466"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797174"
 ---
-# <a name="service-channel-listeners-and-channels"></a>Hizmet: Kanal dinleyicileri ve kanallar
+# <a name="service-channel-listeners-and-channels"></a>Hizmet: Kanal dinleyicileri ve kanalları
 
-Kanal nesnelerin üç kategoriye ayrılır: kanallar, kanal dinleyicileri ve kanal fabrikaları. Kanallar, uygulama ve kanal yığını arasındaki arabirim olan. Kanal dinleyicileri alma (ya da dinleme) tarafında, genellikle yeni bir gelen iletiyi veya bağlantı yanıttaki kanallar oluşturmak için sorumludur. Kanal fabrikası, bir uç nokta ile iletişim başlatmak için gönderme tarafında kanallar oluşturmak için sorumludur.
+Kanal nesnelerinin üç kategorisi vardır: kanallar, kanal dinleyicileri ve kanal fabrikaları. Kanallar, uygulama ve kanal yığını arasındaki arabirimdir. Kanal dinleyicileri, genellikle yeni bir gelen iletiye veya bağlantıya yanıt olarak alma (veya dinleme) tarafında kanal oluşturmaktan sorumludur. Kanal fabrikaları, bir uç noktayla iletişim başlatmak için gönderme tarafında kanal oluşturmaktan sorumludur.
 
-## <a name="channel-listeners-and-channels"></a>Kanal dinleyicileri ve kanallar
+## <a name="channel-listeners-and-channels"></a>Kanal dinleyicileri ve kanalları
 
-Kanal dinleyicileri oluşturma Kanallar ve alıcı iletileri için katmandan veya ağdan sorumludur. Alınan iletiler, kanal dinleyicisi tarafından oluşturulan bir kanal kullanarak yukarıda bir katmana dağıtılır.
+Kanal dinleyicileri, kanalların oluşturulması ve ağ üzerinden veya ağdan ileti almaktan sorumludur. Alınan iletiler, kanal dinleyicisi tarafından oluşturulan bir kanalı kullanarak yukarıdaki katmana dağıtılır.
 
-Aşağıdaki diyagram, iletileri almak ve bunları üst katmanına teslim işlemini gösterir.
+Aşağıdaki diyagramda ileti alma ve bunları yukarıdaki katmana sunma süreci gösterilmektedir.
 
-![Kanal dinleyicileri ve kanallar](./media/wcfc-wcfchannelsigure1highlevelc.gif "wcfc_WCFChannelsigure1HighLevelc")
+![Kanal dinleyicileri ve kanalları](./media/wcfc-wcfchannelsigure1highlevelc.gif "wcfc_WCFChannelsigure1HighLevelc")
 
-İleti alma ve katmana kanal üzerinden teslim kanal dinleyicisi.
+Kanallar aracılığıyla iletileri alan ve katmana teslim eden bir kanal dinleyicisi.
 
-Ancak uygulama aslında bir kuyruk kullanabilirsiniz değil işlem olarak bir kuyruk her kanal içinde kavramsal olarak modellenebilir. Katmandan alıcı iletileri veya ağ ve bunları sıraya koymak için kanal dinleyicisi sorumludur. Kuyruktan ileti alma ve bunları bir katmana katman bir ileti için örneğin çağırarak sorduğunda yukarıda teslim etme için kanal sorumludur `Receive` kanal üzerinde.
+Bu işlem, uygulama gerçekten bir kuyruk kullanmayabilir ancak her kanaldaki bir sıra olarak kavramsal olarak modellenebilir. Kanal dinleyicisi, aşağıdaki katmandan veya ağdan ileti almaktan ve bunları sıraya yerleştirmekten sorumludur. Kanal, kuyruktan ileti almak ve bu katman bir ileti istediğinde, örneğin kanala çağrı `Receive` yaparak yukarıdaki katmana teslim etmeden sorumludur.
 
-WCF bu işlem için temel sınıfı Yardımcıları sağlar. (Bu makalede ele alınan kanal yardımcı sınıfları diyagramı için bkz: [kanal modeline genel bakış](channel-model-overview.md).)
+WCF bu işlem için temel sınıf yardımcıları sağlar. (Bu makalede ele alınan kanal Yardımcısı sınıflarının bir diyagramı için bkz. [Kanal modeline genel bakış](channel-model-overview.md).)
 
-- <xref:System.ServiceModel.Channels.CommunicationObject> Sınıfının Implements <xref:System.ServiceModel.ICommunicationObject> ve 2. adımda açıklanan Durum makinesi uygular [geliştirme kanalları](developing-channels.md).
+- Sınıfı, [Kanal geliştirme](developing-channels.md)ve adım 2 ' de açıklanan durum makinesini uygular <xref:System.ServiceModel.ICommunicationObject> ve uygular. <xref:System.ServiceModel.Channels.CommunicationObject>
 
-- <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.CommunicationObject> ve birleşik bir temel sınıf için <xref:System.ServiceModel.Channels.ChannelFactoryBase> ve <xref:System.ServiceModel.Channels.ChannelListenerBase>. <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı çalışır birlikte <xref:System.ServiceModel.Channels.ChannelBase>, uygulayan bir temel sınıf olan <xref:System.ServiceModel.Channels.IChannel>.
+- Sınıfı, <xref:System.ServiceModel.Channels.ChannelManagerBase>ve içinBirleşikbir<xref:System.ServiceModel.Channels.ChannelFactoryBase>temel sınıfsağlar.<xref:System.ServiceModel.Channels.ChannelListenerBase> <xref:System.ServiceModel.Channels.CommunicationObject> Sınıfı ile <xref:System.ServiceModel.Channels.ChannelBase>birlikte çalışarak, uygulayan <xref:System.ServiceModel.Channels.IChannel>bir temel sınıf olan. <xref:System.ServiceModel.Channels.ChannelManagerBase>
 
-- <xref:System.ServiceModel.Channels.ChannelFactoryBase> Sınıfının Implements <xref:System.ServiceModel.Channels.ChannelManagerBase> ve <xref:System.ServiceModel.Channels.IChannelFactory> ve birleştirir `CreateChannel` aşırı birine `OnCreateChannel` soyut yöntemi.
+- `CreateChannel` <xref:System.ServiceModel.Channels.ChannelManagerBase> Sınıfı,<xref:System.ServiceModel.Channels.IChannelFactory> ve yüklerini tek bir`OnCreateChannel` soyut yöntemde uygular ve birleştirir. <xref:System.ServiceModel.Channels.ChannelFactoryBase>
 
-- <xref:System.ServiceModel.Channels.ChannelListenerBase> Sınıfının Implements <xref:System.ServiceModel.Channels.IChannelListener>. Bu temel durum yönetimini üstlenir.
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> Sınıfı uygular<xref:System.ServiceModel.Channels.IChannelListener>. Temel durum yönetiminden çok dikkat edin.
 
-Aşağıdaki tartışma temel aldığı [taşıma: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) örnek.
+Aşağıdaki tartışma, [aktarıma dayalıdır: UDP](../samples/transport-udp.md) örneği.
 
-## <a name="creating-a-channel-listener"></a>Bir kanal dinleyicisi oluşturma
+## <a name="creating-a-channel-listener"></a>Kanal dinleyicisi oluşturma
 
-`UdpChannelListener` Örnek uyguladığını türetildiği <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfı. Veri birimleri almak için tek bir UDP yuva kullanır. `OnOpen` Yöntemi zaman uyumsuz bir döngüde UDP yuvayı kullanan veri alır. Veriler daha sonra sistem kodlamasını kullanarak ileti dönüştürülür:
+Örneğin uyguladığı örnek <xref:System.ServiceModel.Channels.ChannelListenerBase> sınıfından türetiliyor. `UdpChannelListener` Veri birimlerini almak için tek bir UDP yuvası kullanır. Yöntemi `OnOpen` , UDP yuvasını zaman uyumsuz bir döngüde kullanarak verileri alır. Veriler daha sonra ileti kodlama sistemi kullanılarak iletilere dönüştürülür:
 
 ```csharp
 message = UdpConstants.MessageEncoder.ReadMessage(
@@ -48,8 +48,8 @@ message = UdpConstants.MessageEncoder.ReadMessage(
 );
 ```
 
-Birçok kaynaktan gelen iletileri aynı veri birimi kanalı temsil ettiğinden `UdpChannelListener` tekil dinleyici. Çoğu bir tane aktif yoktur <xref:System.ServiceModel.Channels.IChannel> aynı anda bu dinleyici ile ilişkili. Tarafından döndürülen bir kanal, başka bir örnek oluşturur <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> yöntemi daha sonra atıldı. Bir ileti alındığında bu singleton kanal içine sıraya olur.
+Aynı veri birimi kanalı, bir dizi kaynaktan `UdpChannelListener` gelen iletileri temsil ettiğinden, tek bir dinleyici olur. Tek seferde bu dinleyiciyle ilişkili <xref:System.ServiceModel.Channels.IChannel> en fazla bir etkin bulunur. Örnek, yalnızca <xref:System.ServiceModel.Channels.ChannelListenerBase%601.AcceptChannel%2A> yöntemi tarafından döndürülen bir kanal daha sonra atıldığı takdirde bir tane oluşturur. Bir ileti alındığında, bu Singleton kanalında sıraya alınır.
 
 ### <a name="udpinputchannel"></a>UdpInputChannel
 
-`UdpInputChannel` Sınıfının Implements <xref:System.ServiceModel.Channels.IInputChannel>. Bir kuyruk tarafından doldurulur gelen iletilerin oluşan `UdpChannelListener`kullanıcının yuva. Bu iletiler tarafından çıkarıldığını <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> yöntemi.
+`UdpInputChannel` Sınıfı uygular<xref:System.ServiceModel.Channels.IInputChannel>. Bu, `UdpChannelListener`kendi yuvası tarafından doldurulan bir gelen ileti kuyruğundan oluşur. Bu iletiler <xref:System.ServiceModel.Channels.IInputChannel.Receive%2A> yöntemi tarafından kaldırılır.

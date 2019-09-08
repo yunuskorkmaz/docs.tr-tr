@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944056"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784871"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable ve DataColumn Eşlemeleri
-Bir **DataAdapter** , **TableMappings** özelliğinde sıfır veya daha <xref:System.Data.Common.DataTableMapping> fazla nesne koleksiyonu içerir. Bir **DataTableMapping** , bir sorgudan veri kaynağına göre döndürülen veriler arasında bir ana eşleme sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı DataTable 'ın **Fill** metoduna **DataTable** adının yerine geçirilebilir. Aşağıdaki örnek, **yazarlar** tablosu Için **authorsmapping** adlı bir **DataTableMapping** oluşturur.  
+Bir **DataAdapter** , **TableMappings** özelliğinde sıfır veya daha <xref:System.Data.Common.DataTableMapping> fazla nesne koleksiyonu içerir. Bir **DataTableMapping** , bir sorgudan veri kaynağına göre döndürülen veriler arasında bir ana eşleme sağlar ve bir <xref:System.Data.DataTable>. **DataTableMapping** adı DataTable 'ın **Fill** metoduna **DataTable** adının yerine **geçirilebilir.** Aşağıdaki örnek, **yazarlar** tablosu Için **authorsmapping** adlı bir **DataTableMapping** oluşturur.  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -51,7 +51,7 @@ adapter.Fill(custDS);
   
  Daha gelişmiş durumlarda, aynı **DataAdapter** 'ın farklı eşlemelere sahip farklı tabloları yüklemeyi desteklemesini tercih edebilirsiniz. Bunu yapmak için, ek **DataTableMapping** nesneleri eklemeniz yeterlidir.  
   
- **Fill** yöntemine bir **veri kümesi** ve bir ölçü adı geçirildiğinde, bu ada sahip bir eşleme varsa kullanılır; Aksi takdirde, bu adı taşıyan bir **DataTable** kullanılır.  
+ **Fill** yöntemine bir **veri kümesi** ve bir ölçü adı geçirildiğinde, bu ada **sahip bir eşleme** varsa kullanılır; Aksi takdirde, bu adı taşıyan bir **DataTable** kullanılır.  
   
  Aşağıdaki örneklerde, **Müşteri** adı ve **BizTalkSchema** **DataTable** adı ile bir **DataTableMapping** oluşturulur. Örnek daha sonra SELECT ifadesinin döndürdüğü satırları **BizTalkSchema** **DataTable**' a eşler.  
   
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

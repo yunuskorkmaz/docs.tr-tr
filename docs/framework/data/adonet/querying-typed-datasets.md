@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-ms.openlocfilehash: d956fd5f07c108146d20623bcf811266380c132c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55714c4dae73cd17a849cc35681797dfa4266e3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651746"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782970"
 ---
-# <a name="query-typed-datasets"></a>Türü belirlenmiş veri kümelerini sorgulayın
+# <a name="query-typed-datasets"></a>Sorgu türü belirtilmiş veri kümeleri
 
-Varsa şemasını <xref:System.Data.DataSet> bilinen uygulama tasarım zamanında bir türü belirtilmiş kullanmanızı öneririz <xref:System.Data.DataSet> LINQ to DataSet kullanarak. Bir türü belirtilmiş <xref:System.Data.DataSet> türetildiği bir sınıf olan bir <xref:System.Data.DataSet>. Bu nedenle, tüm yöntemler, olaylar ve özelliklerini devralır bir <xref:System.Data.DataSet>. Ayrıca, belirlenmiş <xref:System.Data.DataSet> kesin türü belirtilmiş yöntemler, olaylar ve özellikleri sağlar. Bu, tablolar ve sütunlar adıyla koleksiyon tabanlı bir yöntem kullanmak yerine erişebileceği anlamına gelir. Bu sorgular daha basit ve daha okunabilir kolaylaştırır. Daha fazla bilgi için [yazılan veri kümeleri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).
+Şeması <xref:System.Data.DataSet> uygulama tasarım zamanında biliniyorsa, LINQ to DataSet kullanırken bir tür <xref:System.Data.DataSet> kullanmanızı öneririz. Türü <xref:System.Data.DataSet> , bir <xref:System.Data.DataSet>sınıfından türetilen bir sınıftır. Bu nedenle, tüm yöntemleri, olayları ve özelliklerini <xref:System.Data.DataSet>devralır. Ayrıca, türü <xref:System.Data.DataSet> kesin belirlenmiş Yöntemler, olaylar ve özellikler sağlar. Bu, koleksiyon tabanlı yöntemler kullanmak yerine tablolara ve sütunlara ada göre erişebileceğiniz anlamına gelir. Bu, sorguları daha basit ve daha okunaklı hale getirir. Daha fazla bilgi için bkz. [türü belirtilmiş veri kümeleri](./dataset-datatable-dataview/typed-datasets.md).
 
-LINQ to DataSet da destekler yazılmış üzerinde sorgulama <xref:System.Data.DataSet>. İle yazılmış bir <xref:System.Data.DataSet>, genel kullanmak zorunda değil <xref:System.Data.DataRowExtensions.Field%2A> yöntemi veya <xref:System.Data.DataRowExtensions.SetField%2A> sütun verilerine erişmek için yöntemi. Özellik adları kullanılabilir derleme zamanında tür bilgilerini bulunduğundan <xref:System.Data.DataSet>. LINQ to DataSet, sütun değerlere erişim için doğru tür olarak sağlar, böylece yerine çalışma zamanında derlenen kod türü uyuşmazlığı hatalar yakalanır.
+LINQ to DataSet, bir tür <xref:System.Data.DataSet>üzerinde sorgu yapmayı da destekler. Yazılı <xref:System.Data.DataSet>olarak, sütun verilerine erişmek için genel <xref:System.Data.DataRowExtensions.Field%2A> yöntemi veya <xref:System.Data.DataRowExtensions.SetField%2A> yöntemini kullanmanız gerekmez. Özellik adları derleme zamanında kullanılabilir, çünkü tür bilgileri içine <xref:System.Data.DataSet>dahil edilmiştir. LINQ to DataSet, doğru tür olarak sütun değerlerine erişim sağlar. böylece, kod çalışma zamanı yerine kod derlendiğinde tür uyuşmazlığı hataları yakalanır.
 
-Türü belirtilmiş bir sorgulama başlamadan önce <xref:System.Data.DataSet>, kullanarak bir sınıf oluşturmanız gerekir **veri kümesi Tasarımcısı** Visual Studio'da. Daha fazla bilgi için [oluşturun ve veri kümeleri yapılandırma](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
+Bir türü <xref:System.Data.DataSet>sorgulamaya başlayabilmeniz için, Visual Studio 'da **veri kümesi tasarımcısını** kullanarak sınıfı oluşturmanız gerekir. Daha fazla bilgi için bkz. [veri kümeleri oluşturma ve yapılandırma](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio).
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek bir sorgu yazılı gösterir <xref:System.Data.DataSet>:
+Aşağıdaki örnek, yazılı <xref:System.Data.DataSet>bir sorgu gösterir:
 
 ```csharp
 var query = from o in orders
@@ -60,6 +60,6 @@ Next
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [Tablolar Arası Sorgular](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
-- [Tek Tablolu Sorgular](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+- [DataSet’leri Sorgulama](querying-datasets-linq-to-dataset.md)
+- [Tablolar Arası Sorgular](cross-table-queries-linq-to-dataset.md)
+- [Tek Tablolu Sorgular](single-table-queries-linq-to-dataset.md)

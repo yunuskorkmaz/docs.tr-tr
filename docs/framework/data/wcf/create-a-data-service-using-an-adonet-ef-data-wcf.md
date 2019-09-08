@@ -1,80 +1,80 @@
 ---
-title: 'Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma'
+title: 'Nasıl yapılır: Bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: ae4176fd986f870523e44a11eee48850e2dddd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307141"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791081"
 ---
-# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: Bir ADO.NET varlık çerçevesi veri kaynağı (WCF Veri Hizmetleri) kullanarak veri hizmeti oluşturma
+# <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Nasıl yapılır: Bir ADO.NET Entity Framework veri kaynağı kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)
 
-WCF Veri Hizmetleri, varlık verilerini bir veri hizmeti kullanıma sunar. Bu varlık verilerini ADO.NET tarafından sağlanan[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veri kaynağı, ilişkisel bir veritabanı olduğunda. Bu konu nasıl oluşturulacağını gösterir bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-tabanlı veri modeli varolan bir veritabanını temel alan ve yeni bir veri hizmeti oluşturmak için bu veri modeli kullanan bir Visual Studio Web uygulaması.
+WCF Veri Hizmetleri, veri hizmeti olarak varlık verilerini gösterir. Bu varlık verileri, veri kaynağı ilişkisel bir[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] veritabanı olduğunda, ADO.NET tarafından sağlanır. Bu konu başlığı altında, var olan bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]veritabanını temel alan bir Visual Studio Web uygulamasında temel bir veri modeli oluşturma ve bu veri modelini kullanarak yeni bir veri hizmeti oluşturma işlemi gösterilmektedir.
 
-[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Oluşturabilen bir komut satırı aracı da sağlar bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Visual Studio Proje dışındaki model. Daha fazla bilgi için [nasıl yapılır: Model ve eşleme dosyalarını üretmek için Edmgen.exe'yi kullanın](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).
+Ayrıca [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] , Visual Studio projesi dışında bir [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] model oluşturabilen bir komut satırı aracı da sağlar. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın.
 
-## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Mevcut bir Web uygulaması için varolan bir veritabanını temel alan bir Entity Framework modelini eklemek için
+## <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Var olan bir veritabanını varolan bir Web uygulamasına dayalı bir Entity Framework modeli eklemek için
 
-1. Üzerinde **proje** menüsünü tıklatın **Ekle** > **yeni öğe**.
+1. **Proje** menüsünde**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. İçinde **şablonları** bölmesinde tıklayın **veri** kategori tıklayın ve ardından **ADO.NET varlık veri modeli**.
+2. **Şablonlar** bölmesinde, **veri** kategorisine ve sonra **ADO.net varlık veri modeli**' yi seçin.
 
-3. Model adını girin ve ardından **Ekle**.
+3. Model adını girip **Ekle**' ye tıklayın.
 
-     Varlık veri modeli Sihirbazı'nın ilk sayfasında görüntülenir.
+     Varlık Veri Modeli sihirbazının ilk sayfası görüntülenir.
 
-4. İçinde **Choose Model Contents** iletişim kutusunda **veritabanından Oluştur**. Sonra **İleri**'ye tıklayın.
+4. **Model Içeriğini seçin** iletişim kutusunda, **veritabanından oluştur**' u seçin. Sonra **İleri**'ye tıklayın.
 
-5. Tıklayın **yeni bağlantı** düğmesi.
+5. **Yeni bağlantı** düğmesine tıklayın.
 
-6. İçinde **bağlantı özellikleri** iletişim kutusu, sunucunuzun adını yazın, kimlik doğrulama yöntemini seçin, veritabanı adını yazın ve ardından **Tamam**.
+6. **Bağlantı özellikleri** iletişim kutusunda sunucu adınızı yazın, kimlik doğrulama yöntemini seçin, veritabanı adını yazın ve ardından **Tamam**' a tıklayın.
 
-     **Veri bağlantınızı seçin** iletişim kutusunda, veritabanı bağlantı ayarlarınızı ile güncelleştirilir.
+     **Veri bağlantınızı seçin** iletişim kutusu, veritabanı bağlantı ayarlarınızla güncelleştirilir.
 
-7. Emin **varlığı App.Config dosyasındaki bağlantı ayarlarını Kaydet:** onay kutusu işaretli. Sonra **İleri**'ye tıklayın.
+7. **App. config dosyasındaki varlık bağlantısı ayarlarını kaydet:** onay kutusunun işaretli olduğundan emin olun. Sonra **İleri**'ye tıklayın.
 
-8. İçinde **veritabanı nesnelerinizi seçin** veritabanının Tümünü Seç iletişim kutusunda, nesneler veri hizmeti kullanıma sunmak planlama.
+8. **Veritabanı nesnelerinizi seçin** iletişim kutusunda, veri hizmetinde kullanıma sunmayı planladığınız tüm veritabanı nesnelerini seçin.
 
     > [!NOTE]
-    > Veri modelinde bulunan nesneleri, veri hizmeti tarafından otomatik olarak sunulmaz. Hizmet tarafından açıkça sunulmalıdır. Daha fazla bilgi için [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+    > Veri modeline eklenen nesneler veri hizmeti tarafından otomatik olarak gösterilmez. Bunlar, hizmetin kendisi tarafından açıkça gösterilmelidir. Daha fazla bilgi için bkz. [veri hizmetini yapılandırma](configuring-the-data-service-wcf-data-services.md).
 
-9. Tıklayın **son** Sihirbazı tamamlayın.
+9. Sihirbazı tamamladığınızda **son** ' a tıklayın.
 
-     Bu, belirli bir veritabanını temel alan varsayılan bir veri modeli oluşturur. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Veri modelini özelleştirmek için etkinleştirir. Daha fazla bilgi için [varlık veri modeli araçları görevleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
+     Bu, belirli bir veritabanını temel alan varsayılan bir veri modeli oluşturur. , [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Veri modelini özelleştirmesini sağlar. Daha fazla bilgi için bkz. [varlık veri modeli araçları görevleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100)).
 
-## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Yeni veri modelini kullanarak veri hizmeti oluşturmak için
+## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Yeni veri modelini kullanarak veri hizmetini oluşturmak için
 
-1. Visual Studio'da veri modelini temsil eden .edmx dosyasını açın.
+1. Visual Studio 'da, veri modelini temsil eden. edmx dosyasını açın.
 
-2. İçinde **Model tarayıcı**, modelin sağ tıklayın, **özellikleri**ve sonra varlık kapsayıcısının adı not edin.
+2. **Model tarayıcısında**modele sağ tıklayın, **Özellikler**' e tıklayın ve ardından varlık kapsayıcısının adını aklınızda edin.
 
-3. İçinde **Çözüm Gezgini**ASP.NET projenizin adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+3. **Çözüm Gezgini**, ASP.net projenizin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-4. İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti** şablonunda **Web** kategorisi.
+4. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisindeki **WCF veri hizmeti** şablonunu seçin.
 
-   ![Visual Studio 2015'te WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.
+   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.
 
-5. Hizmet için bir ad sağlayın ve ardından **Tamam**.
+5. Hizmet için bir ad sağlayın ve ardından **Tamam**' a tıklayın.
 
-     Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur. Varsayılan olarak, kod düzenleyicisi penceresi açılır.
+     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır.
 
-6. Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` devralınan türüyle veri hizmeti tanımlayan sınıf tanımında <xref:System.Data.Objects.ObjectContext> sınıfı ve bu, 2. adımda belirtilen veri modelinin varlık kapsayıcısı.
+6. Veri Hizmeti kodunda, veri hizmetinin `/* TODO: put your data source class name here */` <xref:System.Data.Objects.ObjectContext> sınıfından devralan ve veri modelinin varlık kapsayıcısı olan ve adım 2 ' de belirtilen tür ile veri hizmetini tanımlayan sınıfın tanımındaki açıklamasını değiştirin.
 
-7. Veri Hizmeti için kodda verileri kullanıma sunan hizmet varlık kümeleri erişmek yetkili istemcilere etkinleştirin. Daha fazla bilgi için [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+7. Veri Hizmeti kodunda, yetkili istemcilerin veri hizmetinin sunduğu varlık kümelerine erişmesine izin vermek için etkinleştirin. Daha fazla bilgi için bkz. [veri hizmeti oluşturma](creating-the-data-service.md).
 
-8. Bir Web tarayıcısı kullanarak Northwind.svc veri hizmeti test etmek için konusundaki yönergeleri izleyin. [bir Web tarayıcısından hizmete erişim](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).
+8. Northwind. svc veri hizmetini bir Web tarayıcısı kullanarak test etmek için [bir Web tarayıcısından hizmete erişme](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)konusundaki yönergeleri izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)
-- [Nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)
+- [WCF Veri Hizmetlerini Tanımlama](defining-wcf-data-services.md)
+- [Veri Hizmetleri Sağlayıcıları](data-services-providers-wcf-data-services.md)
+- [Nasıl yapılır: Yansıma sağlayıcısını kullanarak veri hizmeti oluşturma](create-a-data-service-using-rp-wcf-data-services.md)
+- [Nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma](create-a-data-service-using-linq-to-sql-wcf.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f17e9828f46e6355cdbbddb1b8a83f1188b1a01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958007"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791746"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server'da Anlık Görüntü Yalıtımı
 Anlık görüntü yalıtımı OLTP uygulamaları için eşzamanlılık geliştirir.  
@@ -143,6 +143,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)
 - [İşlem kilitleme ve satır sürümü oluşturma kılavuzu](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

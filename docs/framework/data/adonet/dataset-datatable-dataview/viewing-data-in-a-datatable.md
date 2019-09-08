@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-ms.openlocfilehash: ea92b8a5e46bdaa8e94756cd28a3fbcb2789d7b3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: c13f0b802b2714a17ea4014625a65ebd1b0011f4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204395"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785859"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable’daki Verileri Görüntüleme
 
@@ -87,7 +87,7 @@ else
 }
 ```
 
-**Select** yöntemi, farklı **RowState** değerlerini veya alan değerlerini içeren satırları döndürmek için kullanılabilir. Aşağıdaki örnek, silinmiş tüm satırlara başvuran bir **DataRow** dizisi döndürür ve CustId sütununun 5 ' ten büyük olduğu **CustLName**tarafından sıralanan tüm satırlara başvuran başka bir **DataRow** dizisi döndürür. **Silinen** satırdaki bilgileri görüntüleme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).
+**Select** yöntemi, farklı **RowState** değerlerini veya alan değerlerini içeren satırları döndürmek için kullanılabilir. Aşağıdaki örnek, silinmiş tüm satırlara başvuran bir **DataRow** dizisi döndürür ve **CustId** sütununun 5 ' ten büyük olduğu **CustLName**tarafından sıralanan tüm satırlara başvuran başka bir **DataRow** dizisi döndürür. **Silinen** satırdaki bilgileri görüntüleme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).
 
 ```vb
 ' Retrieve all deleted rows.
@@ -115,4 +115,4 @@ DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");
 - <xref:System.Data.DataViewRowState>
 - [DataTable Verilerini Düzenleme](manipulating-data-in-a-datatable.md)
 - [Satır Durumları ve Satır Sürümleri](row-states-and-row-versions.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

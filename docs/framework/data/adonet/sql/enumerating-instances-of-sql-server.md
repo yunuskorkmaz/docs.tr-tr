@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782381"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server (ADO.NET) Numaralandırma Örnekleri
 SQL Server, uygulamaların geçerli ağ içinde SQL Server örneklerini bulmasına izin verir. Sınıfı, bu bilgileri uygulama geliştiricisi için gösterir ve tüm görünür sunucularla <xref:System.Data.DataTable> ilgili bir bilgi sağlar. <xref:System.Data.Sql.SqlDataSourceEnumerator> Döndürülen bu tablo, bir Kullanıcı yeni bir bağlantı oluşturmayı denediğinde sağlanan listeyle eşleşen ve bağlantı özelliklerindeki tüm kullanılabilir sunucuları içeren açılan listeyi genişleten ağ üzerinde kullanılabilir olan sunucu örneklerinin bir listesini içerir.iletişim kutusu. Görüntülenen sonuçlar her zaman tamamlanmaz.  
@@ -126,5 +126,5 @@ class Program
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

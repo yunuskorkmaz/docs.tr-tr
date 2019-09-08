@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: İlişkilerde Sorgulama (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ebf96bc575ef68e1190c5b9be7111902c0f69fef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946954"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780994"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>İzlenecek yol: İlişkilerde Sorgulama (C#)
 Bu izlenecek yol, veritabanındaki yabancı [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] anahtar ilişkilerini temsil etmek için *ilişkilerin* kullanımını gösterir.  
@@ -17,7 +17,7 @@ Bu izlenecek yol, veritabanındaki yabancı [!INCLUDE[vbtecdlinq](../../../../..
  Bu izlenecek yol, Visual C# Development ayarları kullanılarak yazılmıştır.  
   
 ## <a name="prerequisites"></a>Önkoşullar  
- Gözden geçirmeyi tamamlamış [olmanız gerekir: Basit nesne modeli ve sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Bu izlenecek yol, c:\linqtest5' teki kuzeydoğu. mdf dosyasının varlığı da dahil olmak üzere bunun üzerine oluşturulur.  
+ Gözden geçirmeyi tamamlamış [olmanız gerekir: Basit nesne modeli ve sorgu (C#)](walkthrough-simple-object-model-and-query-csharp.md). Bu izlenecek yol, c:\linqtest5' teki kuzeydoğu. mdf dosyasının varlığı da dahil olmak üzere bunun üzerine oluşturulur.  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu izlenecek yol üç ana görevden oluşur:  
@@ -86,8 +86,8 @@ Bu izlenecek yol, veritabanındaki yabancı [!INCLUDE[vbtecdlinq](../../../../..
 4. Hata ayıklamayı durdurmak için konsol penceresinde ENTER tuşuna basın.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki izlenecek yol ([izlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)), verilerin nasıl değiştirileceğini gösterir. Bu izlenecek yol, zaten tamamladığınız bu serideki iki izlenecek yolu kaydetmenizi gerektirmez.  
+ Sonraki izlenecek yol ([izlenecek yol: Verileri düzenleme (C#)](walkthrough-manipulating-data-csharp.md)), verilerin nasıl değiştirileceğini gösterir. Bu izlenecek yol, zaten tamamladığınız bu serideki iki izlenecek yolu kaydetmenizi gerektirmez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)

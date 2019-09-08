@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d2d5786ee7db334b8b9b0817c2319a6257dc9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 89398c221dcf9d6f89027f15da4062bc7ed67e3f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751752"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798989"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx İşlevi
-Belirtilen bayraklar göre belirtilen derleme için tanımlayıcı ad imzası oluşturur.  
+Belirtilen bayrağa göre belirtilen derleme için bir tanımlayıcı ad imzası üretir.  
   
- Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamesignaturegenerationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) yöntemi yerine.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameSignatureGenerationEx](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md) metodunu kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,61 +44,61 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
 ## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- [in] Tanımlayıcı ad imzası oluşturulacak derleme bildirimi içeren dosyanın yolu.  
+ 'ndaki Tanımlayıcı ad imzasının üretilecektir derlemenin bildirimini içeren dosyanın yolu.  
   
  `wszKeyContainer`  
- [in] Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı.  
+ 'ndaki Ortak/özel anahtar çiftini içeren anahtar kapsayıcısının adı.  
   
- Varsa `pbKeyBlob` boş `wszKeyContainer` şifreleme hizmeti sağlayıcısı (CSP) geçerli bir kapsayıcıda belirtmeniz gerekir. Bu durumda, bir kapsayıcıda depolanan bir anahtar çifti dosyasını imzalamak için kullanılır.  
+ Null ise, `wszKeyContainer` şifreleme hizmet sağlayıcısı (CSP) içinde geçerli bir kapsayıcı belirtmeniz gerekir. `pbKeyBlob` Bu durumda, kapsayıcıda depolanan anahtar çifti dosyayı imzalamak için kullanılır.  
   
- Varsa `pbKeyBlob` anahtar çiftini varsayılır anahtar ikili büyük nesne içinde (BLOB) dahil edilmek üzere null değil.  
+ `pbKeyBlob` Null değilse, anahtar çiftinin anahtar ikili büyük nesne (blob) içinde yer aldığı varsayılır.  
   
  `pbKeyBlob`  
- [in] Ortak/özel anahtar çifti için bir işaretçi. Win32 oluşturulan biçimde bu çiftidir `CryptExportKey` işlevi. Varsa `pbKeyBlob` null, belirtilen anahtar kapsayıcısı olan `wszKeyContainer` anahtar çiftini içerdiği varsayılır.  
+ 'ndaki Ortak/özel anahtar çifti işaretçisi. Bu çift Win32 `CryptExportKey` işlevi tarafından oluşturulan biçimdedir. Null ise, tarafından `wszKeyContainer` belirtilen anahtar kapsayıcının anahtar çiftini içermesi varsayılır. `pbKeyBlob`  
   
  `cbKeyBlob`  
- [in] Bayt cinsinden boyutu, `pbKeyBlob`.  
+ 'ndaki Bayt cinsinden boyutu `pbKeyBlob`.  
   
  `ppbSignatureBlob`  
- [out] Ortak dil çalışma zamanı imza döndüren konumu için bir işaretçi. Varsa `ppbSignatureBlob` olduğundan çalışma zamanı tarafından belirtilen dosyada imza null depolar `wszFilePath`.  
+ dışı Ortak dil çalışma zamanının imzayı döndürdüğü konuma yönelik bir işaretçi. Null ise, çalışma zamanı imzayı tarafından `wszFilePath`belirtilen dosyada depolar. `ppbSignatureBlob`  
   
- Varsa `ppbSignatureBlob` olan null, ortak dil çalışma zamanı imza döndürmek alan ayırır. Çağıranın kullanarak bu alan boşaltmanız gerekir [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) işlevi.  
+ `ppbSignatureBlob` Null değilse, ortak dil çalışma zamanı, imzanın geri döndürüleceği alanı ayırır. Çağıranın, [StrongNameFreeBuffer](strongnamefreebuffer-function.md) işlevini kullanarak bu alanı boşaltmalıdır.  
   
  `pcbSignatureBlob`  
- [out] Baytlarında döndürülen imza boyutu.  
+ dışı Döndürülen imzanın bayt cinsinden boyutu.  
   
  `dwFlags`  
- [in] Bir veya daha fazla aşağıdaki değerlerden biri:  
+ 'ndaki Aşağıdaki değerlerden biri veya daha fazlası:  
   
-- `SN_SIGN_ALL_FILES` (0x00000001) - bağlı olan modüller için tüm karmaları yeniden oynatmanız.  
+- `SN_SIGN_ALL_FILES`(0x00000001)-bağlantılı modüller için tüm karmaların yeniden hesaplanması.  
   
-- `SN_TEST_SIGN` (0x00000002) - derlemeyi test imzalayın.  
+- `SN_TEST_SIGN`(0x00000002)-derlemeyi test-imzala.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
+ `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
   
 ## <a name="remarks"></a>Açıklamalar  
- İçin null belirtin `wszFilePath` imza oluşturmadan imza boyutunu hesaplamak için.  
+ İmza boyutunu imzayı `wszFilePath` oluşturmadan hesaplamak için null değerini belirtin.  
   
- İmza ya da doğrudan dosyasında depolanan veya arayana döndürülür.  
+ İmza doğrudan dosyada depolanabilir veya çağırana geri döndürülebilir.  
   
- Varsa `SN_SIGN_ALL_FILES` belirtildi ancak ortak anahtar dahil değildir (her ikisi de `pbKeyBlob` ve `wszFilePath` null) karmalar bağlı modüller için ancak derleme yeniden imzalı değil.  
+ Belirtilirse, ancak bir ortak anahtar dahil edilmez ( `wszFilePath` hem hem de `pbKeyBlob` null ise), bağlantılı modüllerin karmaları yeniden hesaplanır, ancak derleme yeniden imzalanmamıştır. `SN_SIGN_ALL_FILES`  
   
- Varsa `SN_TEST_SIGN` belirtilirse, derlemenin tanımlayıcı ad ile imzalı olduğunu belirtmek için ortak dil çalışma zamanı üst değiştirilmez.  
+ `SN_TEST_SIGN` Belirtilmişse, derlemenin tanımlayıcı bir adla imzalandığını göstermek için ortak dil çalışma zamanı üst bilgisi değiştirilmez.  
   
- Varsa `StrongNameSignatureGenerationEx` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
+ İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameSignatureGenerationEx`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [StrongNameSignatureGenerationEx Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
-- [StrongNameSignatureGeneration Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameSignatureGenerationEx Yöntemi](../hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
+- [StrongNameSignatureGeneration Yöntemi](../hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

@@ -2,28 +2,28 @@
 title: foreign key property
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2f41c2db9aea26c7954a99ebf3f40b03e8df735
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879092"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795034"
 ---
 # <a name="foreign-key-property"></a>foreign key property
-A *yabancı anahtar özelliği* varlık veri modeli (EDM) basit bir türdür [özelliği](../../../../docs/framework/data/adonet/property.md) (veya basit tür özellikler kümesi) üzerinde bir [varlık türü](../../../../docs/framework/data/adonet/entity-type.md) içeren[Varlık anahtarı](../../../../docs/framework/data/adonet/entity-key.md) başka bir varlık türü.  
+Varlık Veri Modeli (EDM) içindeki bir *yabancı anahtar özelliği* , başka bir varlık türünün [varlık anahtarını](entity-key.md) içeren bir [varlık türünde](entity-type.md) temel bir tür [özelliğidir](property.md) (veya ilkel tür özellikleri kümesi).  
   
- Bir yabancı anahtar özellik, ilişkisel bir veritabanındaki yabancı bir anahtar sütunu benzer. Yabancı anahtar sütunu satır tablolar arasındaki ilişkiler oluşturmak için ilişkisel bir veritabanında kullanılır aynı şekilde, kavramsal modelde yabancı anahtar özelliklerini oluşturmak için kullanılan [ilişkilendirmeleri](../../../../docs/framework/data/adonet/association-type.md) varlık türleri arasında. A [başvuru bütünlüğü kısıtlaması](../../../../docs/framework/data/adonet/referential-integrity-constraint.md) türlerinden birini bir yabancı anahtar özelliğine sahip iki varlık türleri arasındaki ilişkiyi tanımlamak için kullanılır.  
+ Yabancı anahtar özelliği, ilişkisel bir veritabanındaki yabancı anahtar sütunuyla benzerdir. Tablolar arasında bir ilişki oluşturmak için bir ilişkisel veritabanında yabancı anahtar sütunlarının kullanıldığı şekilde, varlık türleri arasında [ilişkilendirmeler](association-type.md) kurmak için kavramsal modeldeki yabancı anahtar özellikleri kullanılır. Türlerden birinde yabancı anahtar özelliği olduğunda iki varlık türü arasındaki ilişkiyi tanımlamak için bir [başvurusal bütünlük kısıtlaması](referential-integrity-constraint.md) kullanılır.  
   
 ## <a name="example"></a>Örnek  
- Varlık üç kavramsal bir modelle Aşağıdaki diyagramda gösterilmektedir: `Book`, `Publisher`, ve `Author`. `Book` Varlık türüne sahip bir özellik `PublisherId`, varlık anahtarı başvuran `Publisher` varlık türü bir başvuru bütünlüğü kısıtlaması tanımlarken `PublishedBy` ilişkilendirme.  
+ Aşağıdaki diyagramda üç varlık türü olan kavramsal model gösterilmektedir: `Book`, `Publisher`, ve `Author`. Varlık türü, `PublishedBy` ilişkide bir başvurusal bütünlük `PublisherId`kısıtlaması tanımlarken `Publisher` varlık türünün varlık anahtarına başvuran bir özelliğine sahiptir. `Book`  
   
- ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "başvuru kısıtlamasını model örneği")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "Başvuru kısıtlama modeli örneği")  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) kavramsal şema tanım dili olarak adlandırılan bir etki alanına özgü dil (DSL) kullanır ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) kavramsal modeller tanımlamak için. Yabancı anahtar özelliği aşağıdaki CSDL kullanan `PublisherId` bir başvuru bütünlüğü kısıtlaması tanımlamak için `PublishedBy` yukarıda gösterilen kavramsal modelde gösterilen bir ilişkilendirme.  
+ [ADO.NET Entity Framework](./ef/index.md) kavramsal model tanımlamak için kavramsal şema tanım dili ([csdl](./ef/language-reference/csdl-specification.md)) adlı bir etki ALANıNA özgü dil (DSL) kullanır. Aşağıdaki csdl, yukarıda gösterilen kavramsal modelde gösterilen `PublisherId` `PublishedBy` ilişkide bir başvurusal bütünlük kısıtlaması tanımlamak için yabancı anahtar özelliğini kullanır.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Varlık Veri Modeli Temel Kavramları](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Varlık Veri Modeli](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Varlık Veri Modeli Temel Kavramları](entity-data-model-key-concepts.md)
+- [Varlık Veri Modeli](entity-data-model.md)

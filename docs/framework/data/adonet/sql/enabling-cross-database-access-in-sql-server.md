@@ -2,29 +2,29 @@
 title: SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 50e2a9149074d2d29ff2e17fa2a339bd7820b984
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f69a405a562bfae3bc283f2b3166812046be868e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794190"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
-Veritabanları arası sahiplik zinciri, başka bir veritabanındaki nesneleri bir yordamda bir veritabanına bağlı olduğunda gerçekleşir. Tüm nesne sahipleri için aynı oturum açma hesabı eşlenmiş bir kesintisiz sahiplik zinciri gerektirir veritabanları arası sahiplik zinciri tek bir veritabanı içinde sahiplik zinciri olarak aynı şekilde çalışır. Kaynak nesne kaynak veritabanında ve hedef nesnelerin hedef veritabanları aynı oturum açma hesabı sahip olur, SQL Server hedef nesneleri izinlerini kontrol etmez.  
+Veritabanları arası sahiplik zinciri, bir veritabanındaki bir yordam başka bir veritabanındaki nesnelere bağımlıysa oluşur. Veritabanları arası sahiplik zinciri, tek bir veritabanı içindeki sahiplik zinciriyle aynı şekilde çalışarak, bozuk bir sahiplik zinciri, tüm nesne sahiplerinin aynı oturum açma hesabıyla eşlenmesini gerektirmesidir. Kaynak veritabanındaki kaynak nesne ve hedef veritabanlarındaki hedef nesneler aynı oturum açma hesabına aitse, SQL Server hedef nesnelerdeki izinleri denetlemez.  
   
 ## <a name="off-by-default"></a>Varsayılan olarak kapalı  
- Veritabanlarında sahiplik zinciri varsayılan olarak kapalıdır. Microsoft, aşağıdaki güvenlik riskleri kullanıma sunduğundan veritabanları arası sahiplik zinciri devre dışı bırakma önerir:  
+ Veritabanları arasında sahiplik zinciri varsayılan olarak kapalıdır. Microsoft, aşağıdaki güvenlik risklerini size gösterdiğinden, veritabanları arası sahiplik zincirlemeyi devre dışı bırakmanızı önerir:  
   
-- Veritabanı sahipleri ve üyeleri `db_ddladmin` veya `db_owners` veritabanı rolleri, diğer kullanıcılar tarafından sahip olunan nesneler oluşturabilir. Bu nesneler, büyük olasılıkla diğer veritabanlarındaki nesneler hedefleyebilirsiniz. Bu veritabanları arası sahiplik zinciri etkinleştirirseniz, bu kullanıcılar tüm veritabanlarındaki verileri ile tam olarak güvenmelidir anlamına gelir.  
+- Veritabanı sahipleri ve `db_ddladmin` `db_owners` veya veritabanı rollerinin üyeleri, diğer kullanıcılara ait nesneler oluşturabilir. Bu nesneler, diğer veritabanlarındaki nesneleri hedefleyebilir. Bu, veritabanları arası sahiplik zincirlemeyi etkinleştirirseniz bu kullanıcılara tüm veritabanlarındaki verilerle tam olarak güvenmeniz gerektiğini gösterir.  
   
-- CREATE DATABASE iznine sahip kullanıcılar yeni veritabanları oluşturabilir ve mevcut veritabanlarını ekleyin. Veritabanları arası sahiplik zinciri etkinse, bu kullanıcıların kendi oluşturduğu yeni oluşturduğunuz veya eklenmiş veritabanlarından bunlar ayrıcalıklara sahip olmayabilir diğer veritabanlarındaki nesnelere erişebilir.  
+- VERITABANı oluştur iznine sahip kullanıcılar yeni veritabanları oluşturabilir ve var olan veritabanlarını ekleyebilir. Veritabanları arası sahiplik zinciri etkinse, bu kullanıcılar, oluşturdukları yeni oluşturulan veya eklenen veritabanlarından ayrıcalıklarına sahip olmadıkları diğer veritabanlarındaki nesnelere erişebilir.  
   
-## <a name="enabling-cross-database-ownership-chaining"></a>Veritabanları arası sahiplik zinciri etkinleştirme  
- Veritabanları arası sahiplik zinciri yalnızca üst düzeyde ayrıcalıklı kullanıcıların tam olarak nerede güvenebileceği ortamlarda etkinleştirilmelidir. Tüm veritabanları için veya seçmeli olarak Transact-SQL komutlarını kullanarak belirli veritabanları için Kurulum sırasında yapılandırılabilir `sp_configure` ve `ALTER DATABASE`.  
+## <a name="enabling-cross-database-ownership-chaining"></a>Veritabanları arası sahiplik zincirlemeyi etkinleştirme  
+ Veritabanları arası sahiplik zinciri yalnızca yüksek ayrıcalıklı kullanıcılara tam güvenebileceğiniz ortamlarda etkinleştirilmelidir. Tüm veritabanları için kurulum sırasında veya Transact-SQL komutları `sp_configure` `ALTER DATABASE`kullanılarak belirli veritabanlarına seçmeli olarak yapılandırılabilir.  
   
- Veritabanları arası sahiplik zinciri seçmeli olarak yapılandırmak için kullanın `sp_configure` sunucu için devre dışı bırakmak. Ardından ALTER DATABASE komutu, yalnızca gerektiren veritabanları için zincirleme veritabanları arası sahiplik yapılandırmak için SET DB_CHAINING ON ile kullanın.  
+ Veritabanları arası sahiplik zincirlemeyi seçmeli olarak yapılandırmak için, `sp_configure` ' yi kullanarak sunucu için devre dışı bırakın. Ardından, tek yapmanız gereken veritabanları için veritabanları arası sahiplik zincirlemesini yapılandırmak üzere SET DB_CHAINING ON ile ALTER DATABASE komutunu kullanın.  
   
- Aşağıdaki örnek, tüm veritabanları için veritabanları arası sahiplik zinciri üzerinde açar:  
+ Aşağıdaki örnek, tüm veritabanları için çapraz veritabanı sahiplik zincirlemesini etkinleştirir:  
   
 ```  
 EXECUTE sp_configure 'show advanced', 1;  
@@ -33,7 +33,7 @@ EXECUTE sp_configure 'cross db ownership chaining', 1;
 RECONFIGURE;  
 ```  
   
- Aşağıdaki örnek, belirli veritabanları için veritabanları arası sahiplik zinciri üzerinde açar:  
+ Aşağıdaki örnek, belirli veritabanları için veritabanları arası sahiplik zincirlemeyi etkinleştirir:  
   
 ```  
 ALTER DATABASE Database1 SET DB_CHAINING ON;  
@@ -41,20 +41,20 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>Dinamik SQL  
- Veritabanları arası sahiplik zinciri, aynı kullanıcı her iki veritabanlarında mevcut değilse, dinamik olarak oluşturulan SQL deyimleri burada yürütülür durumlarda çalışmaz. Başka bir veritabanındaki verilere erişen bir saklı yordam oluşturarak ve yordamı hem veritabanlarınızda var olan bir sertifika imzalama SQL Server'da bu sorunu çalışabilir. Bu kullanıcılar veritabanı erişimi veya izinleri vermeden yordamı tarafından kullanılan veritabanı kaynaklarına erişmenizi sağlar.  
+ Veritabanları arası sahiplik zinciri, aynı kullanıcı her iki veritabanında da mevcut olmadığı takdirde dinamik olarak oluşturulan SQL deyimlerinin yürütüldüğü durumlarda çalışmaz. Başka bir veritabanındaki verilere erişen ve yordamı her iki veritabanında bulunan bir sertifikayla imzalayan bir saklı yordam oluşturarak bu SQL Server geçici bir çözüm bulabilirsiniz. Bu, kullanıcılara veritabanı erişimi veya izinleri vermeden yordam tarafından kullanılan veritabanı kaynaklarına erişim sağlar.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[EXECUTE AS kullanarak veritabanı kimliğe bürünme genişletme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) ve [çapraz seçeneği zincirleme DB sahipliği](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option).|Makaleler veritabanları arası sahiplik zinciri için bir SQL Server örneğini yapılandırmak nasıl açıklar.|  
+|FARKLı ÇALıŞTıR ve [çapraz veritabanı sahiplik zinciri seçeneğini](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option) [kullanarak veritabanı kimliğe bürünme özelliğini genişletme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) .|Makaleler, bir SQL Server örneği için veritabanları arası sahiplik zincirinin nasıl yapılandırılacağını açıklamaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server'da Saklı Yordam İzinlerini Yönetme](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](overview-of-sql-server-security.md)
+- [SQL Server'da Saklı Yordam İzinlerini Yönetme](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server’da Secure Dynamic SQL Yazma](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server'da Saklı Yordam İmzalama](signing-stored-procedures-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

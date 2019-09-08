@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: 17ae74a430df4d4a4670c2390ce7b2ee25b67c7a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f2636d3bb248adbb6b912887012b0b9c246c590
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938707"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793068"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Nasıl yapılır: Parametre Alan Saklı Yordamlar Kullanma
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]çıkış parametrelerini başvuru parametrelerine eşler ve değer türleri için parametreyi null yapılabilir olarak bildirir.  
   
- Bir satır kümesi döndüren sorguda giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz [. nasıl yapılır: Satır kümelerini](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)döndürün.  
+ Bir satır kümesi döndüren sorguda giriş parametresinin nasıl kullanılacağına ilişkin bir örnek için bkz [. nasıl yapılır: Satır kümelerini](how-to-return-rowsets.md)döndürün.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek tek bir giriş parametresi (müşteri KIMLIĞI) alır ve bir out parametresi (bu müşterinin toplam satışları) döndürür.  
@@ -41,7 +41,7 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Saklı Yordamlar](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Saklı Yordamlar](stored-procedures.md)
+- [Örnek Veritabanları İndirme](downloading-sample-databases.md)
 - [Boş Değer Atanabilir Tipleri Kullanma](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Boş Değer Atanabilen Değer Türleri](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

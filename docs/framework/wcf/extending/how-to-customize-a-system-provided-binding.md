@@ -5,47 +5,47 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b92382b4a37168c33f9e97077ad292d27ea5bc3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767123"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797016"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Nasıl yapılır: Sistem Tarafından Sağlanan Bir Bağlamayı Özelleştirme
-Windows Communication Foundation (WCF) bazı temel alınan bağlama öğeleri özelliklerini ancak özelliklerin tümü yapılandırmanıza olanak sağlayan birkaç sistem tarafından sağlanan bağlamalar içerir. Bu konuda, bir özel bağlamayı oluşturmak için bağlama öğelerinin özelliklerini ayarlamak gösterilmiştir.  
+Windows Communication Foundation (WCF), temel bağlama öğelerinin bazı özelliklerini yapılandırmanıza imkan tanıyan, ancak özelliklerin tümünü değil, sistem tarafından sunulan birçok bağlama içerir. Bu konu başlığı altında, bağlama öğelerinde nasıl özel bir bağlama oluşturacağınız özelliklerinin nasıl ayarlanacağı gösterilmektedir.  
   
- Doğrudan oluşturma ve bağlama öğeleri sistem tarafından sağlanan bağlamalar kullanmadan yapılandırma hakkında daha fazla bilgi için bkz. [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Bağlama öğelerinin sistem tarafından sağlanmış bağlamaları kullanılmadan doğrudan oluşturulması ve yapılandırılması hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](custom-bindings.md).  
   
- Oluşturma ve özel bağlamalar genişletme hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+ Özel Bağlamalar Oluşturma ve genişletme hakkında daha fazla bilgi için bkz. [bağlamaları genişletme](extending-bindings.md).  
   
- WCF'de tüm bağlamaları, oluşur *bağlama öğelerinin*. Her bağlama öğesi türetildiği <xref:System.ServiceModel.Channels.BindingElement> sınıfı. Sistem tarafından sağlanan bağlamalar gibi <xref:System.ServiceModel.BasicHttpBinding> oluşturun ve kendi bağlama öğelerini yapılandırın. Bu konuda erişmek ve bunları doğrudan binding üstündeki gösterilmez Bu bağlama öğeleri özelliklerini değiştirmek gösterilmektedir; Özellikle, <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
+ WCF 'de tüm bağlamalar *bağlama öğelerinden*oluşur. Her bağlama öğesi <xref:System.ServiceModel.Channels.BindingElement> sınıfından türetilir. Kendi bağlama öğelerini <xref:System.ServiceModel.BasicHttpBinding> oluşturma ve yapılandırma gibi sistem tarafından sağlanmış bağlamalar. Bu konu başlığı altında, bağlama üzerinde doğrudan gösterilmeyen bu bağlama öğelerinin özelliklerine erişme ve değiştirme işlemlerinin nasıl yapılacağı gösterilmektedir. Özellikle, <xref:System.ServiceModel.BasicHttpBinding> sınıfı.  
   
- Tek tek bağlama öğeleri tarafından temsil edilen bir koleksiyonda bulunan <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve bu sırada eklenir: İşlem akışını, güvenilir oturum, güvenlik, bileşik bir çift yönlü, tek yönlü, Stream güvenlik, ileti kodlama ve taşıma. Listelenen tüm bağlama öğelerini her bağlamanın gerekli olduğunu unutmayın. Kullanıcı tanımlı bağlama öğeleri de bu bağlama öğesi koleksiyonda görünebilir ve daha önce açıklandığı gibi aynı sırada yer almalıdır. Örneğin, bir kullanıcı tarafından tanımlanan aktarım bağlama öğesi koleksiyonun son öğesine olması gerekir.  
+ Bireysel bağlama öğeleri, <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı tarafından temsil edilen bir koleksiyonda bulunur ve bu sırayla eklenir: İşlem akışı, güvenilir oturum, güvenlik, bileşik çift yönlü, tek yönlü, akış güvenliği, Ileti kodlama ve taşıma. Her bağlamada listelenen tüm bağlama öğelerinin gerekli olduğunu unutmayın. Kullanıcı tanımlı bağlama öğeleri, bu bağlama öğesi koleksiyonunda de görünebilir ve daha önce açıklanan sırada görünmelidir. Örneğin, Kullanıcı tanımlı bir taşımanın bağlama öğesi koleksiyonunun son öğesi olması gerekir.  
   
- <xref:System.ServiceModel.BasicHttpBinding> Sınıfı üç bağlama öğeleri içerir:  
+ <xref:System.ServiceModel.BasicHttpBinding> Sınıfı üç bağlama öğesi içerir:  
   
-1. Ya da bağlama öğesi, isteğe bağlı bir güvenlik <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> HTTP taşıma (ileti düzeyi güvenliği) ile kullanılan bir sınıfı veya <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> Aktarım Katmanı Güvenliği de HTTPS aktarımı durumda sağladığında kullanılan sınıfı kullanılır.  
+1. Bir isteğe bağlı güvenlik bağlama öğesi, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> HTTP taşıması (ileti düzeyi güvenliği) <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> veya Aktarım katmanı güvenlik sağlar, bu durumda https aktarımının kullanıldığı durumlarda kullanılan sınıfı.  
   
-2. Ya da bağlama öğesi, gerekli ileti Kodlayıcı <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> veya <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+2. Ya da <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> veya <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>için gerekli bir ileti Kodlayıcısı bağlama öğesi.  
   
-3. Bağlama öğesi, ya da gerekli bir aktarım <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, veya <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
+3. Gerekli bir taşıma bağlama öğesi <xref:System.ServiceModel.Channels.HttpTransportBindingElement> <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>, ya da.  
   
- Bu örnekte biz bağlama öğesinin bir örneğini oluşturur, oluşturun bir *özel bağlama* kendisinden özel bağlamaya ait bağlama öğelerini incelemek ve HTTP bağlama öğesi bulduğunuzda, biz ayarlarız kendi `KeepAliveEnabled` özelliğini`false`. `KeepAliveEnabled` Özelliği doğrudan gösterilmese `BasicHttpBinding`, biz bağlama öğesi aşağı gidin ve bu özelliği ayarlamak için özel bir bağlama oluşturmanız gerekir.  
+ Bu örnekte, bağlamanın bir örneğini oluşturur, bundan *özel bir bağlama* oluşturur, özel bağlamadaki bağlama öğelerini inceler ve http bağlama öğesini bulduğumuz, `KeepAliveEnabled` özelliğini olarak `false`ayarlayacağız. Özelliği doğrudan üzerinde gösterilmez, bu nedenle bağlama öğesine gitmek ve bu özelliği ayarlamak için özel bir bağlama oluşturuyoruz. `BasicHttpBinding` `KeepAliveEnabled`  
   
-### <a name="to-modify-a-system-provided-binding"></a>Sistem tarafından sağlanan bir bağlamayı değiştirmek için  
+### <a name="to-modify-a-system-provided-binding"></a>Sistem tarafından sağlanmış bir bağlamayı değiştirmek için  
   
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.BasicHttpBinding> sınıfı ve ileti düzeyi, güvenlik modunu ayarlama.  
+1. <xref:System.ServiceModel.BasicHttpBinding> Sınıfının bir örneğini oluşturun ve güvenlik modunu ileti düzeyi olarak ayarlayın.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#1)]
      [!code-vb[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#1)]  
   
-2. Özel bağlama bağlamayı oluşturup oluşturmak bir <xref:System.ServiceModel.Channels.BindingElementCollection> özel bağlama özellikleri birinden sınıfı.  
+2. Bağlamadan özel bir bağlama oluşturun ve özel bağlamanın özelliklerinden <xref:System.ServiceModel.Channels.BindingElementCollection> birinden bir sınıf oluşturun.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#2)]
      [!code-vb[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#2)]  
   
-3. Döngü <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı ve ne zaman bulduğunuz <xref:System.ServiceModel.Channels.HttpTransportBindingElement> sınıfı olarak ayarlayın, <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliğini `false`.  
+3. Sınıfından döngü yapın ve <xref:System.ServiceModel.Channels.HttpTransportBindingElement> sınıfını bulduğunuzda <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> özelliğini olarak `false`ayarlayın. <xref:System.ServiceModel.Channels.BindingElementCollection>  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
@@ -55,4 +55,4 @@ Windows Communication Foundation (WCF) bazı temel alınan bağlama öğeleri ö
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Özel Bağlamalar](custom-bindings.md)

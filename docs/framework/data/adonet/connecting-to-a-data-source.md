@@ -1,31 +1,31 @@
 ---
-title: ADO.NET'te veri kaynağına bağlanma
+title: ADO.NET içinde bir veri kaynağına bağlanma
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01e4048fb9c7b53b1b1907d1965f822b9a4644a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879989"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786769"
 ---
-# <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET'te veri kaynağına bağlanma
-ADO.NET kullandığınız bir **bağlantı** bağlantı dizesinde gerekli kimlik doğrulama bilgileri vererek belirli bir veri kaynağına bağlanmak için nesne. **Bağlantı** kullandığınız nesne veri kaynağı türüne bağlıdır.  
+# <a name="connecting-to-a-data-source-in-adonet"></a>ADO.NET içinde bir veri kaynağına bağlanma
+ADO.NET ' de, bir bağlantı dizesinde gerekli kimlik doğrulama bilgilerini sağlayarak belirli bir veri kaynağına bağlanmak için bir **bağlantı** nesnesi kullanırsınız. Kullandığınız **bağlantı** nesnesi, veri kaynağının türüne bağlıdır.  
   
- .NET Framework ile dahil her .NET Framework veri sağlayıcısı sahip bir <xref:System.Data.Common.DbConnection> nesne: OLE DB için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.OleDb.OleDbConnection> nesnesi, SQL Server için .NET Framework veri sağlayıcısı içerir bir <xref:System.Data.SqlClient.SqlConnection> nesnesi. ODBC için NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.Odbc.OdbcConnection> nesne ve Oracle için .NET Framework Veri Sağlayıcısı'nı içeren bir <xref:System.Data.OracleClient.OracleConnection> nesne.  
+ .NET Framework eklenen her .NET Framework veri sağlayıcısı bir <xref:System.Data.Common.DbConnection> nesnesine sahiptir: OLE DB için .NET Framework veri sağlayıcısı bir nesne <xref:System.Data.OleDb.OleDbConnection> içeriyorsa, .NET Framework veri sağlayıcısı SQL Server bir <xref:System.Data.SqlClient.SqlConnection> nesnesi içerir. ODBC için net Framework veri sağlayıcısı bir <xref:System.Data.Odbc.OdbcConnection> nesne içerir ve Oracle için .NET Framework veri sağlayıcısı bir <xref:System.Data.OracleClient.OracleConnection> nesnesi içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bağlantı Kurma](../../../../docs/framework/data/adonet/establishing-the-connection.md)  
- Nasıl kullanılacağını açıklayan bir **bağlantı** bir veri kaynağına bağlantı kurmak için nesne.  
+ [Bağlantı Kurma](establishing-the-connection.md)  
+ Bir veri kaynağıyla bağlantı kurmak için bir **bağlantı** nesnesinin nasıl kullanılacağını açıklar.  
   
- [Bağlantı Olayları ](../../../../docs/framework/data/adonet/connection-events.md)  
- Nasıl kullanılacağını açıklayan bir **InfoMessage** bir veri kaynağından bilgi iletilerini almak için olay.  
+ [Bağlantı Olayları ](connection-events.md)  
+ Bir veri kaynağından bilgilendirici iletileri almak için bir **InfoMessage** olayının nasıl kullanılacağını açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters ve DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Dizeleri](connection-strings.md)
+- [Bağlantı Havuzu](connection-pooling.md)
+- [Komutlar ve Parametreler](commands-and-parameters.md)
+- [DataAdapters ve DataReaders](dataadapters-and-datareaders.md)
+- [İşlemler ve Eşzamanlılık](transactions-and-concurrency.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

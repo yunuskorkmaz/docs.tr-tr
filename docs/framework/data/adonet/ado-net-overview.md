@@ -2,63 +2,62 @@
 title: ADO.NET’e Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877206"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785102"
 ---
 # <a name="adonet-overview"></a>ADO.NET’e Genel Bakış
-ADO.NET veri kaynağına OLE DB ve ODBC kullanıma sunulan ve SQL Server ve XML gibi veri kaynaklarına tutarlı erişimi sağlar. Veri paylaşımı tüketici uygulamaları, ADO.NET, bu veri kaynağına bağlanın ve almak, işlemek ve içerdikleri verileri güncelleştirmek için kullanabilirsiniz.  
+ADO.NET, SQL Server ve XML gibi veri kaynaklarına ve OLE DB ve ODBC aracılığıyla sunulan veri kaynaklarına tutarlı erişim sağlar. Veri paylaşımı tüketici uygulamaları, bu veri kaynaklarına bağlanmak ve içerdikleri verileri almak, işlemek ve güncelleştirmek için ADO.NET kullanabilir.  
   
- ADO.NET veri erişimi veri işleme ayrı olarak veya art arda kullanılan ayrık bileşenlere ayırır. ADO.NET, bir veritabanına bağlanma, komutları çalıştırarak ve sonuçları almak için .NET Framework veri sağlayıcıları içerir. Sonuçları ya da doğrudan bir ADO.NET yerleştirilen işlenir <xref:System.Data.DataSet> kullanıcıya geçici bir biçimde açığa için nesne birden çok kaynaktan alınan verilerle birlikte veya Katmanlar arasında geçirilen. `DataSet` Nesne de uygulamanın yerel verileri yönetmek için bir .NET Framework veri sağlayıcısı bağımsız olarak kullanılabilir veya XML'den kaynaklanan.  
+ ADO.NET veri işlemesini, ayrı ayrı veya art arda kullanılabilecek ayrı bileşenlere ayırır. ADO.NET, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için .NET Framework veri sağlayıcıları içerir. Bu sonuçlar doğrudan işlenirler, bir ADO.net nesnesine yerleştirilmiş, <xref:System.Data.DataSet> birden fazla kaynaktaki verilerle birleştirilmiş veya katmanlar arasında geçilen bir nesnesine yerleştirildi. Bu `DataSet` nesne ayrıca bir .NET Framework veri sağlayıcısından bağımsız olarak, uygulamadaki yerel verileri yönetmek için veya XML 'den kaynaklıdır.  
   
- ADO.NET sınıflarını System.Data.dll içinde bulunur ve System.Xml.dll içinde bulunan XML sınıfları ile tümleştirilir. Örnek kod, bir veritabanına bağlanan verileri buradan alır ve ardından bu verileri bir konsol penceresinde görüntüler için bkz: [ADO.NET kod örnekleri](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ ADO.NET sınıfları System. Data. dll içinde bulunur ve System. xml. dll dosyasında bulunan XML sınıflarıyla tümleşiktir. Veritabanına bağlanan, verileri alan ve ardından bir konsol penceresinde görüntüleyen örnek kod için, bkz. [ADO.net Code Examples](ado-net-code-examples.md).  
   
- ADO.NET, yönetilen kodun yerel Bileşen Nesne Modeli (COM) geliştiricileri için ActiveX Data Objects (ADO) tarafından sağlanan işlevselliği için benzer yazma geliştiriciler için işlevsellik sağlar. ADO.NET, değil ADO .NET uygulamalarınıza veri erişimi için kullanmanızı öneririz.  
+ ADO.NET, yerel bileşen nesne modeli (COM) geliştiricilerine ActiveX Data Objects (ADO) tarafından sağlanan işlevselliğe benzer şekilde yönetilen kod yazan geliştiricilere işlevsellik sağlar. .NET uygulamalarınızda verilere erişmek için ADO değil ADO.NET kullanmanızı öneririz.  
   
- ADO.NET, .NET Framework içindeki veri erişiminin en dolaysız yöntem sağlar. Temel alınan depolama modelinin yerine kavramsal bir modeli karşı çalışmaya uygulamalarına izin veren bir daha yüksek düzeyde soyutlama için bkz. [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
+ ADO.NET, .NET Framework içinde en doğrudan veri erişimi yöntemini sağlar. Uygulamaların temel depolama modeli yerine kavramsal bir modelde çalışmasına izin veren üst düzey bir soyutlama için, bkz. [ADO.NET Entity Framework](./ef/index.md).  
   
- **Gizlilik bildirimi**: Bir kullanıcının arasında System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll'ye ve System.Data.DataSetExtensions.dll derlemeleri ayırt etmez özel veriler ve özel olmayan veri.  Bu derlemeler değil toplamak, depolamak veya herhangi bir kullanıcının özel veri taşıma. Ancak, üçüncü taraf uygulamalar toplamak, depolamak veya bu bütünleştirilmiş kodları kullanan bir kullanıcının özel veri taşıma.  
+ **Gizlilik bildirimi**: System. Data. dll, System. Data. Design. dll, System. Data. OracleClient. dll, System. Data. SqlXml. dll, System. Data. LINQ. dll, System. Data. SqlServerCe. dll ve System. Data. Datasebir User. dll derlemeleri bir kullanıcının özel veriler ve özel olmayan veriler.  Bu derlemeler kullanıcının özel verilerini toplamaz, depolamaz veya taşımıyor. Ancak, üçüncü taraf uygulamalar bu derlemeleri kullanarak bir kullanıcının özel verilerini toplayabilir, saklayabilir veya taşıbilirler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ADO.NET Mimarisi](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
- Mimarisine genel bakış ve ADO.NET bileşenleri sağlar.  
+ [ADO.NET Mimarisi](ado-net-architecture.md)  
+ ADO.NET mimarisi ve bileşenlerine genel bir bakış sağlar.  
   
- [ADO.NET Teknoloji Seçenekleri ve Yönergeleri](../../../../docs/framework/data/adonet/ado-net-technology-options-and-guidelines.md)  
- Varlık Veri Platformu ile dahil teknolojileri ve ürünleri açıklar.  
+ [ADO.NET Teknoloji Seçenekleri ve Yönergeleri](ado-net-technology-options-and-guidelines.md)  
+ Varlık veri platformuna dahil olan ürünleri ve teknolojileri açıklar.  
   
- [LINQ ve ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- ADO.NET dil ile tümleşik sorgu (LINQ) nasıl uygulandığını açıklar ve ilgili konulara bağlantılar sağlar.  
+ [LINQ ve ADO.NET](linq-and-ado-net.md)  
+ Dil ile tümleşik sorgunun (LINQ) ADO.NET 'de nasıl uygulandığını ve ilgili konuların bağlantılarını sağladığını açıklar.  
   
- [.NET Framework Veri Sağlayıcıları](../../../../docs/framework/data/adonet/data-providers.md)  
- .NET Framework veri sağlayıcısı ve ADO.NET ile birlikte .NET Framework veri sağlayıcıları tasarıma genel bir bakış sağlar.  
+ [.NET Framework Veri Sağlayıcıları](data-providers.md)  
+ .NET Framework veri sağlayıcısının tasarımına ve ADO.NET ile birlikte bulunan .NET Framework veri sağlayıcılarına genel bir bakış sağlar.  
   
- [ADO.NET Veri Kümeleri](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
- Genel bir bakış sağlar `DataSet` tasarım ve bileşenleri.  
+ [ADO.NET Veri Kümeleri](ado-net-datasets.md)  
+ `DataSet` Tasarıma ve bileşenlere genel bir bakış sağlar.  
   
- [ADO.NET’te Yan Yana Yürütme](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
- ADO.NET sürümleri ve yan yana yürütme ve uygulama uyumluluk etkileri farklılıkları açıklar.  
+ [ADO.NET’te Yan Yana Yürütme](side-by-side-execution.md)  
+ ADO.NET sürümlerindeki farklılıkları ve yan yana yürütme ve uygulama uyumluluğuna ilişkin etkilerini açıklar.  
   
- [ADO.NET Kod Örnekleri](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
- ADO.NET veri sağlayıcıları kullanarak veri kod örneği sağlanmıştır.  
+ [ADO.NET Kod Örnekleri](ado-net-code-examples.md)  
+ ADO.NET veri sağlayıcılarını kullanarak veri alan kod örnekleri sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [ADO.NET’teki Yenilikler](../../../../docs/framework/data/adonet/whats-new.md)  
- ADO.NET yeni özellikleri tanıtır.  
+ [ADO.NET’teki Yenilikler](whats-new.md)  
+ ADO.NET ' de yeni olan özellikleri tanıtır.  
   
- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- Güvenli kodlama yöntemleri ADO.NET kullanırken açıklar.  
+ [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)  
+ ADO.NET kullanılırken güvenli kodlama uygulamalarını açıklar.  
   
- [ADO.NET’te Veri Türü Eşlemeleri](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- .NET Framework veri türleri ve .NET Framework veri sağlayıcıları arasında veri türü eşlemeleri açıklar.  
+ [ADO.NET’te Veri Türü Eşlemeleri](data-type-mappings-in-ado-net.md)  
+ .NET Framework veri türleri ve .NET Framework veri sağlayıcıları arasındaki veri türü eşlemelerini açıklar.  
   
- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- Bir veri kaynağına bağlanmak, verileri almak ve verileri değiştirme işlemini açıklamaktadır. Bu içerir `DataReaders` ve `DataAdapters`.  
+ [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)  
+ Bir veri kaynağına bağlanmayı, verileri almayı ve verileri değiştirmeyi açıklar. Bu ve `DataReaders` `DataAdapters`içerir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET](../../../../docs/framework/data/adonet/index.md)
+- [ADO.NET](index.md)
 - [Visual Studio'da verilere erişime](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)

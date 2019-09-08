@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970773"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797103"
 ---
 # <a name="how-to-compare-claims"></a>Nasıl yapılır: Talepleri Karşılaştırma
 
-Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, ortak bir görev, yetkilendirme bağlamındaki talepleri, istenen eylemi gerçekleştirmek veya istenen kaynağa erişmek için gereken taleplerle karşılaştırmaktır. Bu konuda, yerleşik ve özel talep türleri dahil olmak üzere taleplerin nasıl karşılaştırılacağı açıklanmaktadır. Kimlik modeli altyapısı hakkında daha fazla bilgi için bkz. [kimlik modeliyle talepleri ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, yetkilendirme denetimi gerçekleştirmek için kullanılır. Bu nedenle, ortak bir görev, yetkilendirme bağlamındaki talepleri, istenen eylemi gerçekleştirmek veya istenen kaynağa erişmek için gereken taleplerle karşılaştırmaktır. Bu konuda, yerleşik ve özel talep türleri dahil olmak üzere taleplerin nasıl karşılaştırılacağı açıklanmaktadır. Kimlik modeli altyapısı hakkında daha fazla bilgi için bkz. [kimlik modeliyle talepleri ve Yetkilendirmeyi Yönetme](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 Talep karşılaştırması, bir talebin (tür, sağ ve kaynak) üç parçasını başka bir talepteki aynı bölümlere göre karşılaştırarak eşit olup olmadığını görmenizi içerir. Aşağıdaki örnekte bakın.
 
@@ -74,5 +74,5 @@ Aşağıdaki örnek, talep kaynağının basit olmayan bir tür olduğu özel ta
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Nasıl yapılır: Özel talep oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Nasıl yapılır: Özel talep oluşturma](how-to-create-a-custom-claim.md)

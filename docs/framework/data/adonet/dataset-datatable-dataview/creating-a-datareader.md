@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: cb39ead1fe15e3bfcf67370e4675dcae3bbf9801
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 79cb2ce7ffae81aeba9aaca557e37ba566a8370c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203902"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784759"
 ---
 # <a name="creating-a-datareader"></a>DataReader Oluşturma
 <xref:System.Data.DataTable> <xref:System.Data.DataTable.CreateDataReader%2A> <xref:System.Data.DataSet> <xref:System.Data.DataSet.Tables%2A> Ve sınıflarının, bir veya daha fazla salt okuma, salt iletme sonuç kümesi olarak nesnenin koleksiyon içeriğini veya içeriğini döndüren bir yöntemi vardır. <xref:System.Data.DataSet> <xref:System.Data.DataTable>  
@@ -35,4 +35,4 @@ ms.locfileid: "70203902"
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
 - [DataTableReaders](datatablereaders.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

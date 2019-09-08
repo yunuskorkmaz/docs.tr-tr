@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6ad11d4295be3a5bfd590d9cef1926f6676f2b1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 0fcb4de714c8a0f1f2c61f3a12815a5a0a3ddc83
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043235"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789814"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>Mayı WCF Hizmetleri ve sertifika kimlik doğrulaması
 
@@ -17,7 +17,7 @@ ms.locfileid: "70043235"
 
 ## <a name="impact"></a>Etki
 
-TLS 1,2, MD5 sertifikası kimlik doğrulamasını desteklemez. Sonuç olarak, bir müşteri karma algoritma için MD5 kullanan bir SSL sertifikası kullanıyorsa, WCF istemcisi WCF hizmetine bağlanamaz. Daha fazla bilgi için bkz [. azaltma: WCF Hizmetleri ve sertifika kimlik](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)doğrulaması.
+TLS 1,2, MD5 sertifikası kimlik doğrulamasını desteklemez. Sonuç olarak, bir müşteri karma algoritma için MD5 kullanan bir SSL sertifikası kullanıyorsa, WCF istemcisi WCF hizmetine bağlanamaz. Daha fazla bilgi için bkz [. azaltma: WCF Hizmetleri ve sertifika kimlik](mitigation-wcf-services-and-certificate-authentication.md)doğrulaması.
 
 ## <a name="mitigation"></a>Azaltma
 
@@ -58,4 +58,4 @@ Bir WCF istemcisinin aşağıdakilerden birini yaparak bir WCF sunucusuna bağla
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Çalışma Zamanı Değişiklikleri](runtime-changes-in-the-net-framework-4-6.md)

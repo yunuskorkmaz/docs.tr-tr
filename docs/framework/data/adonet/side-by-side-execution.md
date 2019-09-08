@@ -2,61 +2,61 @@
 title: ADO.NET’te Yan Yana Yürütme
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0ada258f74338fc7cbc9435fdea8fc896bd2efd6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877090"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782703"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET’te Yan Yana Yürütme
-.NET Framework'te yan yana yürütme bir uygulamayı .NET Framework'ün, yalnızca uygulamayı en iyi duruma derlenen sürümünü kullanarak birden çok sürümü olan bir bilgisayarda yürütme olanağıdır. Yan yana yürütme yapılandırma hakkında ayrıntılı bilgi için bkz: [yan yana yürütme](../../../../docs/framework/deployment/side-by-side-execution.md).  
+.NET Framework yan yana yürütme, uygulamasının birden çok .NET Framework sürümünün yüklü olduğu bir bilgisayarda, özel olarak uygulamanın derlendiği sürümü kullanarak yürütme yeteneğidir. Yan yana yürütmeyi yapılandırma hakkında ayrıntılı bilgi için bkz. yan [yana yürütme](../../deployment/side-by-side-execution.md).  
   
- .NET Framework'ün bir sürümünü kullanarak derlenmiş bir uygulamanın farklı bir .NET Framework sürümünde çalıştırabilirsiniz. Ancak, .NET Framework'ün yüklü her sürüm için uygulamanın bir sürümünü derlemek ve ayrı olarak çalıştırmanız önerilir. Her iki durumda da ileriye dönük ya da geriye dönük uyumluluk, uygulamanızın etkileyebilir sürümler arasında ADO.NET'te değişikliklerin farkında olmalıdır.  
+ .NET Framework bir sürümü kullanılarak derlenen bir uygulama, .NET Framework farklı bir sürümünde çalıştırılabilir. Ancak, .NET Framework yüklü her sürümü için uygulamanın bir sürümünü derlemenize ve bunları ayrı olarak çalıştırmanıza önerilir. Her iki senaryoda da, uygulamanızın ileri uyumluluk veya geriye dönük uyumluluğunu etkileyebilecek yayınlar arasındaki ADO.NET değişiklikleri farkında olmalısınız.  
   
-## <a name="forward-compatibility-and-backward-compatibility"></a>İleriye dönük ve geriye dönük uyumluluk  
- İleriye dönük uyumluluk, bir uygulamanın bir .NET Framework'ün önceki sürümüyle derlenmiş, ancak hala başarılı bir şekilde bir sonraki .NET Framework sürümünde çalışır anlamına gelir. .NET Framework sürüm 1.1 yazılan ADO.NET sonraki sürümler ile ileri doğru uyumlu kodudur.  
+## <a name="forward-compatibility-and-backward-compatibility"></a>İleriye dönük uyumluluk ve geri uyumluluk  
+ İleri uyumluluk, bir uygulamanın .NET Framework önceki bir sürümüyle derlenebilecek, ancak .NET Framework daha sonraki bir sürümünde başarıyla çalışmaya devam edecek anlamına gelir. .NET Framework sürüm 1,1 için yazılan ADO.NET kodu, sonraki sürümlerle ileriye dönük olarak uyumludur.  
   
- Geriye dönük uyumluluk, bir uygulamanın daha yeni bir .NET Framework sürümü için derlenmiş, ancak herhangi bir işlev kaybı olmadan .NET Framework'ün önceki sürümlerinde çalışmaya devam eder anlamına gelir. Elbette, bu durumda yeni bir .NET Framework sürümünde sunulan özellikler için olmayacaktır.  
+ Geriye dönük uyumluluk, bir uygulamanın .NET Framework daha yeni bir sürümü için derlendiği, ancak herhangi bir işlevsellik kaybı olmadan .NET Framework daha önceki sürümlerinde çalışmaya devam edeceğini belirtir. Tabii ki bu, .NET Framework yeni bir sürümünde tanıtılan özellikler için bu durum değildir.  
   
-## <a name="the-net-framework-data-provider-for-odbc"></a>ODBC için .NET Framework veri sağlayıcısı  
- Sürüm 1.1, ODBC için .NET Framework Veri Sağlayıcısı ile başlayan (<xref:System.Data.Odbc>) .NET Framework'ün bir parçası olarak dahil edilir. ODBC veri sağlayıcısı .NET Framework sürüm 1.0 geliştiricileri olarak Web indirilerek kullanılabilir [veri erişimi ve depolama Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=4173). ODBC için indirilen .NET Framework veri sağlayıcısı için ad alanı **Microsoft.Data.Odbc**.  
+## <a name="the-net-framework-data-provider-for-odbc"></a>ODBC için .NET Framework Veri Sağlayıcısı  
+ Sürüm 1,1 ' den başlayarak, ODBC (<xref:System.Data.Odbc>) için .NET Framework veri sağlayıcısı, .NET Framework bir parçası olarak dahil edilmiştir. ODBC veri sağlayıcısı, sürüm 1,0 geliştiricilerinin .NET Framework, [veri erişimi ve depolama Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=4173)'Nden bir Web indirmesi olarak sunulmaktadır. ODBC için indirilen .NET Framework Veri Sağlayıcısı ad alanı **Microsoft. Data. ODBC**' dir.  
   
- .NET Framework sürüm 1.0 ODBC veri sağlayıcısı, veri kaynağına bağlanmak için kullandığı için geliştirilen bir uygulamanın sahip ve bu uygulama .NET Framework sürüm 1.1 veya sonraki bir sürümü üzerinde çalıştırmak istediğiniz, ad alanı için ODBC dat güncelleştirmeniz gerekir sağlayıcıya **System.Data.Odbc**. Ayrıca .NET Framework'ün daha yeni sürümü için ardından derlemeniz gerekir.  
+ Veri kaynağınıza bağlanmak için ODBC veri sağlayıcıyı kullanan .NET Framework sürüm 1,0 için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı, .NET Framework 1,1 veya sonraki bir sürümde çalıştırmak istiyorsanız, ODBC dat için ad alanını güncelleştirmeniz gerekir **System. Data. ODBC**için bir sağlayıcı. Daha sonra .NET Framework yeni sürümü için yeniden derlemeniz gerekir.  
   
- ODBC veri sağlayıcısı, veri kaynağına bağlanmak için kullandığı .NET Framework 2.0 veya sonraki bir sürümü için geliştirilen bir uygulamanın sahip ve bu uygulama .NET Framework sürüm 1.0 çalıştırmak istediğiniz, ODBC veri sağlayıcısı indirmeniz ve yüklemeniz gerekir .NET Framework sürüm 1.0 sistemi. ODBC veri sağlayıcısı için ad alanı ardından değiştirmelisiniz **Microsoft.Data.Odbc**ve .NET Framework sürüm 1.0 için uygulamayı yeniden derleyin.  
+ Veri kaynağınıza bağlanmak için ODBC veri sağlayıcısını kullanan .NET Framework sürüm 2,0 veya üzeri için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı 1,0 .NET Framework sürümünde çalıştırmak istiyorsanız, ODBC veri sağlayıcısını indirmeniz ve kurmanız gerekir .NET Framework sürüm 1,0 sisteminde. Daha sonra ODBC veri sağlayıcısı için ad alanını **Microsoft. Data. ODBC**olarak değiştirmeniz ve uygulamayı .NET Framework sürüm 1,0 için yeniden derlemeniz gerekir.  
   
-## <a name="the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework veri sağlayıcısı  
- Sürüm 1.1, Oracle için .NET Framework Veri Sağlayıcısı ile başlayan (<xref:System.Data.OracleClient>) .NET Framework'ün bir parçası olarak dahil edilir. Veri sağlayıcısı .NET Framework sürüm 1.0 geliştiricileri olarak Web indirilerek kullanılabilir [veri erişimi ve depolama Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=4173).  
+## <a name="the-net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı  
+ Sürüm 1,1 ' den başlayarak, Oracle (<xref:System.Data.OracleClient>) için .NET Framework veri sağlayıcısı, .NET Framework bir parçası olarak dahil edilmiştir. Veri sağlayıcısı, sürüm 1,0 geliştiricilerine [veri erişimi ve depolama Geliştirici Merkezi](https://go.microsoft.com/fwlink/?linkid=4173)'Nden bir Web indirmesi olarak .NET Framework kullanılabilir.  
   
- Veri sağlayıcısı, veri kaynağına bağlanmak için kullandığı .NET Framework 2.0 veya sonraki bir sürümü için geliştirilen bir uygulamanın sahip ve bu uygulama .NET Framework sürüm 1.0 çalıştırmak istediğiniz, veri sağlayıcısı'nı indirin ve .NE üzerinde yüklemeniz gerekir T Framework sürüm 1.0 sistemi.  
+ Veri kaynağınıza bağlanmak için veri sağlayıcıyı kullanan .NET Framework sürüm 2,0 veya üzeri için geliştirilmiş bir uygulamanız varsa ve bu uygulamayı 1,0 .NET Framework sürümünde çalıştırmak istiyorsanız, veri sağlayıcısını indirmeniz ve ' ye yüklemek zorundasınız. T Framework sürüm 1,0 sistemi.  
   
 ## <a name="code-access-security"></a>Kod Erişimi Güvenliği  
- .NET Framework veri sağlayıcıları .NET Framework sürüm 1.0 (<xref:System.Data.SqlClient>, <xref:System.Data.OleDb>) FullTrust iznini ile çalıştırmak için gereklidir. Herhangi bir bölgede FullTrust iznini nedenleri miktarından daha azıyla çalışabilse .NET Framework sürüm 1.0 k .NET Framework veri sağlayıcıları kullanmayı dener bir <xref:System.Security.SecurityException>.  
+ .NET Framework sürüm 1,0 ' deki (<xref:System.Data.SqlClient>, <xref:System.Data.OleDb>) .NET Framework veri sağlayıcılarının FullTrust izniyle çalışması gerekir. .NET Framework k veri sağlayıcılarını, .NET Framework sürüm 1,0 ' den daha az FullTrust iznine sahip bir bölgede kullanma girişimleri bir <xref:System.Security.SecurityException>olur.  
   
- Ancak, .NET Framework sürüm 2.0 ile başlayarak, tüm .NET Framework veri sağlayıcıları kısmen güvenilen bölgelerde kullanılabilir. Ayrıca, .NET Framework sürüm 1.1 .NET Framework veri sağlayıcıları için yeni bir güvenlik özelliği eklendi. Bu özellik, hangi bağlantı dizeleri, belirli güvenlik bölgesinde kullanılabilir sınırlamanıza olanak sağlar. Belirli güvenlik bölgesi için boş parola kullanımını devre dışı bırakabilirsiniz. Daha fazla bilgi için [kod erişimi güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
+ Ancak, .NET Framework sürüm 2,0 ' den itibaren, .NET Framework veri sağlayıcılarının tamamı kısmen güvenilen bölgelerde kullanılabilir. Ayrıca, .NET Framework sürüm 1,1 ' de .NET Framework veri sağlayıcılarına yeni bir güvenlik özelliği eklenmiştir. Bu özellik, belirli bir güvenlik bölgesinde hangi bağlantı dizelerinin kullanılabileceğini kısıtlamanıza olanak sağlar. Ayrıca, belirli bir güvenlik bölgesi için Boş parolaların kullanımını devre dışı bırakabilirsiniz. Daha fazla bilgi için bkz. [kod erişimi güvenliği ve ADO.net](code-access-security.md).  
   
- .NET Framework'ün her yükleme ayrı bir Security.config dosya olduğundan, güvenlik ayarları ile uyumluluk sorunu vardır. Uygulamanızın ADO.NET içinde .NET Framework sürüm 1.1 ve sonraki sürümlerinde ek güvenlik özelliklerine bağlıdır, ancak, bir sürüm 1.0 sistemine dağıtmayı mümkün olmayacaktır.  
+ Her .NET Framework yüklemesinde ayrı bir Security. config dosyası bulunduğundan, güvenlik ayarları ile ilgili uyumluluk sorunları yoktur. Bununla birlikte, uygulamanız .NET Framework sürüm 1,1 ve üzeri sürümlerde bulunan ADO.NET 'in ek güvenlik özelliklerine bağımlıysa, bu dosyayı bir sürüm 1,0 sistemine dağıtamıyorsunuz.  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand yürütme  
- .NET Framework sürüm 1.1 ile biçimini başlatılıyor, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> komutları yürütür veri kaynağı değiştirildi.  
+ .NET Framework sürüm 1,1 ' den başlayarak, veri kaynağındaki komutları <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yürütme yöntemi değişmiştir.  
   
- .NET Framework sürüm 1.0, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> bağlamında tüm komutları yürütülürken **sp_executesql** saklı yordamı. Sonuç olarak, (örneğin, SET NOCOUNT açık), bağlantı durumunu etkileyen komutlar yalnızca geçerli geçerli komutun yürütülmesi. Bağlantı durumu bağlantı açıkken yürütülen tüm komutlar için değiştirilmez.  
+ .NET Framework sürüm 1,0 ' de, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> **sp_executesql** saklı yordamının bağlamındaki tüm komutları yürütüldü. Sonuç olarak, bağlantının durumunu etkileyen komutlar (örneğin, NOCOUNT ON), yalnızca geçerli komutun yürütülmesi için geçerlidir. Bağlantının durumu, bağlantı açıkken yürütülen sonraki komutlar için değiştirilmez.  
   
- .NET Framework sürüm 1.1 ve daha sonra <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> yalnızca bağlamında bir komut yürüttüğünde **sp_executesql** komut parametreleri, bir performans kazancı sağlayan içeriyorsa, saklı yordam. Sonuç olarak, bağlantı durumunu etkileyen bir komut forceseek bir komutta yer alıyorsa bağlantı açıkken yürütülen tüm komutlar için bağlantının durumunu değiştirir.  
+ .NET Framework sürüm 1,1 ve üzeri sürümlerde, <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> komut, bir performans avantajı sağlayan parametreler içeriyorsa, **sp_executesql** saklı yordamının bağlamında yalnızca bir komut yürütür. Sonuç olarak, bağlantının durumunu etkileyen bir komut parametreli olmayan bir komuta dahil edildiğine göre, bağlantı açıkken yürütülen sonraki tüm komutlar için bağlantının durumunu değiştirir.  
   
- Aşağıdaki toplu bir çağrıda yürütülen komutların göz önünde bulundurun <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
+ Bir çağrısında <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>yürütülen aşağıdaki komut toplu işlemini göz önünde bulundurun.  
   
 ```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
   
- .NET Framework sürüm 1.1 ve üzeri, NOCOUNT bağlantı açıkken yürütülen tüm komutlar için açık kalır. .NET Framework sürüm 1.0, NOCOUNT yalnızca geçerli komut yürütme için açıktır.  
+ .NET Framework sürüm 1,1 ve üzeri sürümlerde, bağlantı açıkken yürütülen sonraki komutlar için NOCOUNT açık kalır. .NET Framework sürüm 1,0 ' de, NOCOUNT yalnızca geçerli komutun yürütülmesi için geçerlidir.  
   
- Bu değişiklik davranışını bağımlıysa, uygulamanızın hem bir ileriye ve geriye dönük uyumluluk etkileyebilir <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> ya da .NET Framework sürümü için.  
+ Bu değişiklik, .NET Framework her iki sürümü <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> için davranışına bağlı olmanız durumunda uygulamanızın ileri ve geri uyumluluğunu etkileyebilir.  
   
- .NET Framework'ün önceki ve sonraki sürümlerinde çalışan uygulamalar için davranışı, çalışan sürümünden bağımsız olarak aynı olduğundan emin olmak için kodunuzu yazabilirsiniz. Bir komutu sonraki tüm komutları için bağlantının durumunu değiştiren emin olmak istiyorsanız komutunu kullanarak yürütme öneririz <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Bir komut bağlantı sonraki tüm komutları için değiştirmez emin olmak istiyorsanız, komutunuzu bağlantı durumunu sıfırlamak için komutları içeren öneririz. Örneğin:  
+ .NET Framework önceki ve sonraki sürümlerinde çalışan uygulamalar için, davranışın üzerinde çalıştırdığınız sürümden bağımsız olarak aynı olduğundan emin olmak için kodunuzu yazabilirsiniz. Bir komutun sonraki tüm komutlar için bağlantının durumunu değiştirdiği emin olmak istiyorsanız, komutunu kullanarak <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>uygulamanızı yürütmenizi öneririz. Bir komutun sonraki tüm komutlara yönelik bağlantıyı değiştirmediğinden emin olmak istiyorsanız, komutinizdeki bağlantının durumunu sıfırlamak için komutları eklemeniz önerilir. Örneğin:  
   
 ```sql
 SET NOCOUNT ON;  
@@ -66,6 +66,5 @@ SET NOCOUNT OFF;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)

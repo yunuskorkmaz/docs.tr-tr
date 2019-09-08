@@ -5,41 +5,41 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 1ff6f8b58e01c86ae1c1e2e1533b1997ba2eb6b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf303f9a79fbcab85d33fcb3ebb132d1d3e2041d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781104"
 ---
 # <a name="serialization"></a>Serileştirme
-Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] seri hale getirme özellikleri. İzleyen paragrafları serileştirme kod oluşturma sırasında tasarım zamanı ve çalışma zamanı serileştirme davranışını ekleme hakkında bilgi sağlayan [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfları.  
+Bu konu serileştirme [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yeteneklerini açıklamaktadır. Aşağıdaki paragraflar, tasarım zamanında kod oluşturma sırasında serileştirme ekleme ve [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sınıfların çalışma zamanı serileştirme davranışı ile ilgili bilgiler sağlar.  
   
- Serileştirme kodu aşağıdaki yöntemlerden birini bir tasarım zamanında ekleyebilirsiniz:  
+ Aşağıdaki yöntemlerden biriyle, tasarım zamanında serileştirme kodu ekleyebilirsiniz:  
   
-- Nesne İlişkisel Tasarımcısı'nda değiştirmek **serileştirme modunu** özelliğini **tek yönlü**.  
+- Nesne İlişkisel Tasarımcısı **serileştirme modu** özelliğini **tek yönlü**olarak değiştirin.  
   
-- SQLMetal komut satırında ekleme **/serialization** seçeneği. Daha fazla bilgi için [SqlMetal.exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+- SQLMetal komut satırında **/Serialization** seçeneğini ekleyin. Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Genel Bakış  
- Tarafından oluşturulan kodu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] varsayılan olarak ertelenmiş yükleme özellikleri sağlar. Ertelenen yükleme Orta katmanda çok isteğe bağlı olarak saydam yüklenmesi için uygundur. Ertelenen yükleme veya istenip istenmediğini ertelenmiş yükleniyor seri hale getirici tetikler. ancak, seri hale getirme için sorunlu olmasıdır. Aslında, bir nesne seri olduğunda, tüm giden erteleme yüklenen başvuruları altında geçişli kendi kapatma seri hale getirilir.  
+ Tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] oluşturulan kod, varsayılan olarak ertelenmiş yükleme özellikleri sağlar. Ertelenmiş yükleme, verileri isteğe bağlı olarak şeffaf bir şekilde yüklemek için orta katman üzerinde çok uygundur. Bununla birlikte, serileştirici, ertelenmiş yüklemenin amaçlanıp ertelenmediği ertelenmiş yüklemeyi tetiklediği için serileştirme açısından sorunlu değildir. Aslında, bir nesne serileştirildiğinde, tüm giden erteleme başvuruları altındaki geçişli kapatma serileştirilir.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Seri hale getirme özelliğini öncelikle iki mekanizma bu sorunu giderir:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Serileştirme özelliği, öncelikle iki mekanizmalarla bu sorunu ele alınmaktadır:  
   
-- A <xref:System.Data.Linq.DataContext> geciktirilmiş yüklemeyi kapatma modunu (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>). Daha fazla bilgi için bkz. <xref:System.Data.Linq.DataContext>.  
+- Ertelenmiş <xref:System.Data.Linq.DataContext> yüklemeyi (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>) kapatmak için bir mod. Daha fazla bilgi için bkz. <xref:System.Data.Linq.DataContext>.  
   
-- Oluşturmak için bir kod üretimi anahtar <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> ve <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> oluşturulan varlıkları öznitelikleri. Erteleme yükleme sınıfları serileştirme altında davranışını dahil olmak üzere bu yönü, bu konunun önemli bir konudur.  
+- Oluşturulan varlıklarda ve <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> öznitelikleri oluşturmak için kod oluşturma anahtarı. Bu değer, serileştirme altındaki erteleme sınıflarının davranışı da dahil olmak üzere bu konunun önemli konusudur.  
   
 ### <a name="definitions"></a>Tanımlar  
   
-- *DataContract seri hale getirici*: Varsayılan olarak .NET Framework 3.0 veya sonraki sürümleri, Windows Communication Framework (WCF) bileşeni tarafından kullanılan serileştirici.  
+- *DataContract seri hale getirici*: .NET Framework 3,0 veya sonraki sürümlerin Windows Communication Framework (WCF) bileşeni tarafından kullanılan varsayılan seri hale getirici.  
   
-- *Tek yönlü serileştirme*: (Bir döngü önlemek için) yalnızca bir tek yönlü ilişkilendirme özellik içeren bir sınıf seri hale getirilmiş sürümü. Kural gereği, birincil yabancı anahtar ilişkisi üst tarafındaki özelliği seri hale getirme için işaretlenmiş. Diğer tarafta çift yönlü bir ilişkilendirmeye serileştirilmemiş.  
+- *Tek yönlü serileştirme*: Yalnızca tek yönlü bir ilişkilendirme özelliği içeren bir sınıfın serileştirilmiş sürümü (döngüyü önlemek için). Kurala göre, birincil yabancı anahtar ilişkisinin üst tarafındaki özelliği serileştirme olarak işaretlenir. Çift yönlü ilişkilendirmedeki diğer kenar serileştirilmez.  
   
-     Tek yönlü seri hale getirme serileştirme tarafından desteklenen tek tür [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+     Tek yönlü serileştirme tarafından [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]desteklenen tek seri hale getirme türüdür.  
   
 ## <a name="code-example"></a>Kod Örneği  
- Aşağıdaki kod geleneksel kullanır `Customer` ve `Order` Northwind örnek veritabanından sınıfları ve bu sınıflar serileştirme öznitelikleri ile donatılmış nasıl gösterir.  
+ Aşağıdaki kod, Northwind örnek veritabanındaki `Customer` geleneksel `Order` ve sınıfları kullanır ve bu sınıfların serileştirme öznitelikleriyle nasıl donatılmış olduğunu gösterir.  
   
  [!code-csharp[DLinqSerialization#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#1)]
  [!code-vb[DLinqSerialization#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#1)]  
@@ -50,7 +50,7 @@ Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../.
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- İçin `Order` aşağıdaki örnekte, yalnızca ters ilişkilendirme özelliğine karşılık gelen sınıf `Customer` sınıfı uzatmamak için gösterilir. Sahip olmadığı bir <xref:System.Runtime.Serialization.DataMemberAttribute> bir döngü önlemek için özniteliği.  
+ `Customer` Aşağıdaki örnekteki `Order` sınıfı için, yalnızca sınıfına karşılık gelen ters ilişkilendirme özelliği kısaltma için gösterilir. Döngüden kaçınmak için bir <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği yok.  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -58,22 +58,22 @@ Bu konu başlığı altında açıklanır [!INCLUDE[vbtecdlinq](../../../../../.
  [!code-csharp[DLinqSerialization#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#5)]
  [!code-vb[DLinqSerialization#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#5)]  
   
-### <a name="how-to-serialize-the-entities"></a>Varlıkları seri hale getirmek nasıl  
- Önceki bölümde aşağıdaki şekilde gösterilen kodları varlıklarda serileştirebiliyorsa;  
+### <a name="how-to-serialize-the-entities"></a>Varlıkları seri hale getirme  
+ Önceki bölümde gösterilen kodlardan varlıkları aşağıdaki gibi seri hale getirebilirsiniz.  
   
  [!code-csharp[DLinqSerialization#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/Program.cs#6)]
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
-### <a name="self-recursive-relationships"></a>Kendi kendine yinelenen ilişkileri  
- Kendi kendine yinelenen ilişkileri aynı düzeni uygular. Yabancı anahtara karşılık gelen association özelliğine sahip değil bir <xref:System.Runtime.Serialization.DataMemberAttribute> üst özellik yok ise, öznitelik.  
+### <a name="self-recursive-relationships"></a>Kendinden özyinelemeli Ilişkiler  
+ Kendinden özyinelemeli ilişkiler aynı kalıbı izler. Yabancı anahtara karşılık gelen ilişkilendirme özelliğinin bir <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği yoktur, ancak Parent özelliği bunu yapar.  
   
- İki self-özyinelemeli ilişkilerine aşağıdaki sınıf göz önünde bulundurun: Employee.Manager/Reports ve Employee.Mentor/Mentees.  
+ İki otomatik özyinelemeli ilişki içeren aşağıdaki sınıfı göz önünde bulundurun: Employee. Manager/Reports ve Employee. Mentor/Mentees.  
   
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [SqlMetal.exe (Kod Üretme Aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [Nasıl yapılır: Varlıkları serileştirilebilir yapmak](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [SqlMetal.exe (Kod Üretme Aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md)
+- [Nasıl yapılır: Varlıkları seri hale getirilebilir yap](how-to-make-entities-serializable.md)

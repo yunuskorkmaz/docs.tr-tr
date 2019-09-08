@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 77f25e1c52f10a1724bf81a3fa533739e15085c4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 4c8b26651a1f4050145b6d43e03f9d4cc3d68202
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204719"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785286"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML’den DataSet Yükleme
 Bir ADO.net <xref:System.Data.DataSet> içeriği bir XML akışından veya belgesinden oluşturulabilir. Ayrıca .NET Framework, XML 'den hangi bilgilerin yüklendiği ve şema ya da ilişkisel yapısının nasıl oluşturulduğuna ilişkin büyük bir <xref:System.Data.DataSet> esnekliğe sahip olursunuz.  
@@ -29,7 +29,7 @@ Bir ADO.net <xref:System.Data.DataSet> içeriği bir XML akışından veya belge
 |**Parçada**|Akışın sonuna ulaşılana kadar birden çok XML parçasının okunmasına devam eder. <xref:System.Data.DataSet> Şemayla eşleşen parçalar ilgili tablolara eklenir. <xref:System.Data.DataSet> Şemayla eşleşmeyen parçalar atılır.|  
   
 > [!NOTE]
-> Bir XML belgesine yolunun bir parçası olarak konumlandırılmış bir XmlReader öğesine bir **XmlReader** geçirirseniz, **ReadXml** sonraki öğe düğümüne okur ve bunu yalnızca öğe düğümünün sonuna kadar okuyan kök öğe olarak değerlendirir. **XmlReadMode. Fragment**belirtirseniz bu uygulanmaz.  
+> Bir XML belgesine yolunun bir parçası **olarak konumlandırılmış** bir XmlReader öğesine bir **XmlReader** geçirirseniz, **ReadXml** sonraki öğe düğümüne okur ve bunu yalnızca öğe düğümünün sonuna kadar okuyan kök öğe olarak değerlendirir. **XmlReadMode. Fragment**belirtirseniz bu uygulanmaz.  
   
 ## <a name="dtd-entities"></a>DTD varlıkları  
  XML 'niz bir belge türü tanımı (DTD) şemasında tanımlanan varlıklar içeriyorsa, bir dosya adı, akış veya doğrulama olmayan **XmlReader** öğesini **ReadXml**öğesine geçirerek <xref:System.Data.DataSet> yüklemeyi denerseniz bir özel durum oluşturulur. Bunun yerine, **EntityHandling** 'U **EntityHandling. ExpandEntities**olarak ayarlayıp bir **XmlValidatingReader**oluşturmanız ve **XmlValidatingReader** 'ı **ReadXml**'e geçirmeniz gerekir. **XmlValidatingReader** , tarafından <xref:System.Data.DataSet>okunmadan önce varlıkları genişletir.  
@@ -113,7 +113,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 ## <a name="merging-data-from-xml"></a>XML 'den veri birleştirme  
- Zaten veri içeriyorsa, XML 'deki yeni veriler, <xref:System.Data.DataSet>içinde zaten mevcut olan verilere eklenir. <xref:System.Data.DataSet> **ReadXml** , XML <xref:System.Data.DataSet> 'den eşleşen birincil anahtarlarla satır bilgileriyle birleştirme yapmaz. XML 'deki yeni bilgilerle mevcut satır bilgilerinin üzerine yazmak için, **ReadXml** kullanarak yeni <xref:System.Data.DataSet>bir <xref:System.Data.DataSet> ve <xref:System.Data.DataSet.Merge%2A> <xref:System.Data.DataSet>yeni bir oluşturma yapın. DiffGram bir **XmlReadMode** ile **ReadXml** kullanarak bir DiffGram yüklemenin aynı benzersiz tanımlayıcıya sahip satırları birleştirdiğini unutmayın.  
+ Zaten veri içeriyorsa, XML 'deki yeni veriler, <xref:System.Data.DataSet>içinde zaten mevcut olan verilere eklenir. <xref:System.Data.DataSet> **ReadXml** , XML <xref:System.Data.DataSet> 'den eşleşen birincil anahtarlarla satır bilgileriyle birleştirme yapmaz. XML 'deki yeni bilgilerle mevcut satır bilgilerinin üzerine yazmak için, **ReadXml** kullanarak yeni <xref:System.Data.DataSet>bir <xref:System.Data.DataSet> ve <xref:System.Data.DataSet.Merge%2A> <xref:System.Data.DataSet>yeni bir oluşturma yapın. **DiffGram bir** **XmlReadMode** Ile **ReadXml** kullanarak bir DiffGram yüklemenin aynı benzersiz tanımlayıcıya sahip satırları birleştirdiğini unutmayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -124,4 +124,4 @@ foreach (DataTable dataTable in dataSet.Tables)
 - [XML’den DataSet İlişkisel Yapısını Çıkarma](inferring-dataset-relational-structure-from-xml.md)
 - [XML’den DataSet Schema Bilgilerini Yükleme](loading-dataset-schema-information-from-xml.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

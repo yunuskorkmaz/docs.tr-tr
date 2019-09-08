@@ -2,108 +2,108 @@
 title: Güvenlik Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4960959dfe6f485a96d29a5da43c2b8c6c98fe3a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4aac564e55b24b2499f861938082a32f30247f91
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649598"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794345"
 ---
 # <a name="security-overview"></a>Güvenlik Genel Bakış
-Bir uygulamanın güvenliğini sağlama, devam eden bir işlem bulunmaktadır. Hiçbir zaman bir geliştirici gelecekteki saldırıları yeni teknolojileri tür zekadan yararlanabilmesini tahmin etmek mümkün olduğundan, uygulamanın tüm saldırılara karşı güvenli olduğu garanti edebilir bir noktası olacaktır. Buna karşılık, hiç kimse sahip olduğu bir sistemde henüz bulunan (veya yayımlanmış) güvenlik açıkları gelmez hiçbiri mevcut veya var olabilir. Yanı sıra proje tasarım aşaması sırasında güvenlik için planlama, uygulama ömrü boyunca güvenlik nasıl korunur planlamak gerekir.  
+Uygulamanın güvenliğini sağlamak, devam eden bir işlemdir. Bir geliştiricinin bir uygulamanın tüm saldırılardan güvenli olduğunu garanti edebildiği bir nokta olmaz. Bu, yeni teknolojilerin ne tür gelecekte yeni teknolojiler sunabileceğini tahmin etmek olanaksızdır. Bunun tersine, bir sistemde hiç kimse henüz keşfedilmiş (veya yayımlanmadığı) güvenlik kusuru yok veya var olmadığı anlamına gelmez. Projenin tasarım aşamasında güvenlik planlaması yapmanız ve güvenliğin uygulamanın kullanım ömrü boyunca nasıl bakımının planlanacağını planlamanız gerekir.  
   
-## <a name="design-for-security"></a>Güvenlik için tasarlama  
- Güvenli uygulamalar geliştirme üzerine en büyük sorunlardan biri güvenlik genellikle akla, bir proje kodu tamamlandıktan sonra uygulamak için bir şey olmasıdır. Uygulama güvenli kılan için küçük bir düşünce verilmiş olduğundan güvenlik uygulamaya gizliliğe oluşturma değil, güvenli olmayan uygulamaları yol açar.  
+## <a name="design-for-security"></a>Güvenlik için tasarım  
+ Güvenli uygulamalar geliştirmenin en büyük sorunlarından biri, güvenlik genellikle bir proje kod tamamlandıktan sonra uygulamaya yönelik bir şeydir. Bir uygulamayı güvenli hale getirmeye yönelik olarak düşündüler verilmediği için, bilinemeyebilir 'teki bir uygulamaya güvenlik, güvenli olmayan uygulamalara yönelik olarak oluşturulmamalıdır.  
   
- Son dakika güvenlik uygulama, daha fazla hata için yeni kısıtlamalar altında yazılım sonu olarak müşteri adayları veya beklenmeyen işlevselliği uyum sağlayacak şekilde yazılması gerekir. Her değiştirilen kod satırı, yeni bir hata ile tanışın olasılığını içerir. Böylece dağıtımınızla birlikte yeni özellikler geliştirmeye devam edebilirsiniz, bu nedenle başlarında geliştirme süreci güvenlik düşünmelisiniz.  
+ Son dakikalık güvenlik uygulamasında yazılım, yeni kısıtlamalar kapsamında veya beklenmeyen işlevlere uyum sağlamak için yeniden yazılması gerektiği için daha fazla hataya yol açar. Düzeltilen kodun her satırı, yeni bir hata tanıtma olasılığını içerir. Bu nedenle, yeni özelliklerin geliştirilmesinde ilerlemeniz için geliştirme sürecinin başlarında güvenliği göz önünde bulundurmanız gerekir.  
   
 ### <a name="threat-modeling"></a>Tehdit modelleme  
- İçin sunulan tüm olası saldırıları anlamadan bir sistem saldırılara karşı koruyamaz. Güvenlik tehditlerini değerlendirme işleminin adlı *tehdit modelleme*, olasılığını ve güvenlik ihlallerini ADO.NET uygulamanızdaki etkilerini belirlemek gereklidir.  
+ Kullanıma sunulan tüm olası saldırıları anlamadığınız takdirde bir sistemi saldırılara karşı koruyamazsınız. *Tehdit modelleme*olarak adlandırılan güvenlik tehditlerini değerlendirme işlemi, ADO.net uygulamanızda güvenlik ihlallerinin oluşma olasılığını ve kollerini belirlemede gereklidir.  
   
- Tehdit modelleme, üst düzey üç adımdan oluşur: anlama saldırganın görünümü, sistem güvenliğini characterizing ve tehditleri belirleme.  
+ Tehdit modelleme üç üst düzey adımdan oluşur: duyuru görünümünü anlama, sistemin güvenliğini belirleme ve tehditleri belirleme.  
   
- Tehdit modelleme, çünkü bunlar en hassas verileri ortaya çıkaran, en tehlikeli bulmak için uygulamanızın güvenlik açıkları değerlendirmek için yinelemeli bir yaklaşımdır. Güvenlik açıklarını tanımlamak sonra bunları önem sırasına göre derecelendirmek ve sayacı ile tehditlere karşı önlemler öncelikli bir dizi oluşturun.  
+ Tehdit modellemesi, en önemli verileri kullanıma sunduklarında, uygulamanızdaki güvenlik açıklarını en çok tehlikeli olanları bulmaya yönelik yinelemeli bir yaklaşımdır. Güvenlik açıklarını tanımladıktan sonra, bunları önem derecesine göre derecelendirdikten sonra tehditleri sayaca yönelik öncelikli bir karşı önlem kümesi oluşturursunuz.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Tehdit modelleme](https://go.microsoft.com/fwlink/?LinkId=98353) MSDN güvenlik Geliştirici merkezinde site|Bu sayfadaki kaynaklardan işlem modelleme tehdit anlama ve kendi uygulamalarınızı güvenli hale getirmek için kullanabileceğiniz tehdit modelleri oluşturmanıza yardımcı olur|  
+|MSDN güvenlik Geliştirici Merkezi 'ndeki [tehdit modelleme](https://go.microsoft.com/fwlink/?LinkId=98353) sitesi|Bu sayfadaki kaynaklar, tehdit modelleme sürecini anlamanıza yardımcı olur ve kendi uygulamalarınızı güvenli hale getirmek için kullanabileceğiniz tehdit modellerini derleyebilirsiniz|  
   
-## <a name="the-principle-of-least-privilege"></a>En düşük öncelik ilkesini  
- Tasarlamasına, hazırlamasına ve uygulamanızı dağıtmak, uygulamanız saldırıya olduğunu varsaymalısınız. Genellikle bu saldırıları kodu çalıştıran kullanıcı izinleriyle yürüten kötü amaçlı kod gelir. Diğerleri, saldırgan tarafından kötü amaçlı iyi niyetli kod ile gönderilebilir. Güvenlik planlarken, her zaman iki katına senaryo meydana gelir varsayılır.  
+## <a name="the-principle-of-least-privilege"></a>En az ayrıcalık Ilkesi  
+ Uygulamanızı tasarladığınızda, yapılandırdığınızda ve dağıttığınızda, uygulamanızın saldırıya uğradığını varsaymalısınız. Bu saldırılar genellikle kodu çalıştıran kullanıcının izinleriyle yürütülen kötü amaçlı koddan gelir. Diğerleri, bir saldırgan tarafından yararlanılabilen iyi şekilde kod içerebilir. Güvenliği planlarken, her zaman en kötü durum senaryosunun gerçekleşeceğini kabul eder.  
   
- En az ayrıcalık ile çalıştırarak mümkün olduğunca çok duvarlarının kodunuzu etrafında erect, uygulamalarını bir tamamlayıcı ölçü denemektir. En düşük öncelik ilkesini herhangi bir ayrıcalık kod kısa süre işin tamamlanması için gerekli olan için gerekli az miktarda verilmesi gerektiğini söyler.  
+ Kullanabileceğiniz bir sayaç ölçüsü, en az ayrıcalıkla çalışırken kodunuzun etrafında çok sayıda duvarı kullanmayı denemenize olanak tanır. En az ayrıcalık ilkesi, verilen ayrıcalıkların, işin tamamlanması için gereken en kısa süre için gerekli olan en az kod miktarına verilmesi gerektiğini belirtir.  
   
- Güvenli uygulamalar oluşturmak için en iyi hiçbir izinlerle hiç başlatmak ve sonra gerçekleştirilen belirli görev için en düşük izinleri eklemektir. Bunun aksine, tüm izinleri ile başlayan ve ardından tek olanları reddetme müşteri adayları test edin ve daha fazla izne gerekli kasıtsız olarak verme güvenlik açıkları olabilir çünkü korumak zor olan güvenli uygulamalar için.  
+ Güvenli uygulamalar oluşturmak için en iyi yöntem, hiçbir izin olmadan ve sonra gerçekleştirilen belirli bir görev için en dar izinleri ekleyecek şekilde başlatılır. Buna karşılık, tüm izinlerle başlayıp, her birinin reddedilmesi, güvenli olmayan uygulamalara, gerekenden daha fazla izin verilmesinin istenmeden daha fazla izin verilmesinin mevcut olmasından kaynaklanır.  
   
- Uygulamalarınızın güvenliğini sağlama konusunda daha fazla bilgi için aşağıdaki kaynaklara bakın.  
+ Uygulamalarınızın güvenliğini sağlama hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konulara bağlantılar içerir. Ayrıca, dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve masaüstü uygulamalarının güvenliğini sağlamak için konulara bağlantılar içerir.|  
+|[Uygulamalarının Güvenliğini Sağlama](/visualstudio/ide/securing-applications)|Genel güvenlik konularına bağlantılar içerir. Ayrıca dağıtılmış uygulamalar, Web uygulamaları, mobil uygulamalar ve masaüstü uygulamalarının güvenliğini sağlamaya yönelik konulara bağlantılar içerir.|  
   
 ## <a name="code-access-security-cas"></a>Kod Erişimi Güvenliği (CAS)  
- Kod erişimi güvenliği (CAS) kod korumalı kaynaklara ve işlemlere sahip olan erişimini sınırlamaya yardımcı olan bir mekanizmadır. .NET Framework, CA'ları aşağıdaki işlevleri gerçekleştirir:  
+ Kod erişim güvenliği (CAS), kodun korumalı kaynaklara ve işlemlere erişimi sınırlamaya yardımcı olan bir mekanizmadır. .NET Framework, CAS aşağıdaki işlevleri gerçekleştirir:  
   
-- İzinler ve çeşitli sistem kaynaklarına erişim hakkı temsil eden izin kümeleri tanımlar.  
+- Çeşitli sistem kaynaklarına erişme hakkını temsil eden izinleri ve izin kümelerini tanımlar.  
   
-- İzin kümeleri grupları (kod gruplarını) kod ile ilişkilendirerek güvenlik ilkesini yapılandırmak yöneticilerin sağlar.  
+- Yöneticilerin, izin kümelerini kod gruplarıyla (kod grupları) ilişkilendirerek güvenlik ilkesini yapılandırmasına olanak sağlar.  
   
-- Sahip olmak yararlı olabilecek izinleri yanı sıra gerektirir çalıştırmak için izinleri istemek kod sağlar ve kodu asla olmalıdır hangi izinleri belirtir.  
+- Kodun çalışması için gereken izinleri ve olması gereken izinleri ve kodun hiçbir şekilde sahip olması gereken izinleri belirtmesini sağlar.  
   
-- Kod tarafından istenen izinleri ve güvenlik ilkesi tarafından izin verilen işlemler temel yüklendiğinde, her derleme için izinleri verir.  
+- Kod tarafından istenen izinlere ve güvenlik ilkesi tarafından izin verilen işlemlere göre yüklenen her derleme için izin verir.  
   
-- İsteğe bağlı çağrıda bulunanların belirli izinlere sahip olduğunuzu kodu sağlar.  
+- Kodun çağıranlarının belirli izinlere sahip olduğunu talep etmesini sağlar.  
   
-- Böylece korunan kod çağırmak yalnızca belirli bir kuruluş veya sitesinde arayanlara izin vererek çağıranlarını bir dijital imza sahip isteğe bağlı kod sağlar.  
+- Kod çağıranlarının dijital imzaya sahip olmasını talep etmesini sağlar ve böylece yalnızca belirli bir kuruluştan veya siteden gelen çağıranların korunan kodu aramasını sağlar.  
   
-- Kod üzerindeki kısıtlamalar, verilen izinler, Arayanların olmalıdır izinlerle çağrı yığınında her arayanın karşılaştırarak, çalışma zamanında zorlar.  
+- Çağrı yığınında her çağıranın verilen izinlerini çağıranların sahip olması gereken izinlerle karşılaştırarak çalışma zamanında kod kısıtlamalarını zorlar.  
   
- Saldırının başarılı olursa oluşabilecek zarar miktarını en aza indirmek için yalnızca kendi işlerinizi tamamlandı ve artık gerekli kaynaklara erişim veren kodunuz için bir güvenlik bağlamı'nı seçin.  
+ Bir saldırının başarılı olması durumunda oluşabilecek hasar miktarını en aza indirmek için, kodunuz için yalnızca işlerini yapmak için ihtiyaç duymakta olan kaynaklara erişim veren bir güvenlik bağlamı seçin ve daha fazla bilgi edinebilirsiniz.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kod Erişimi Güvenliği ve ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Kod erişimi güvenliği, rol tabanlı güvenlik ve ADO.NET uygulamanın perspektifinden kısmen güvenilir ortamlar arasındaki etkileşimler açıklanmaktadır.|  
-|[Kod erişimi güvenliği](../../../../docs/framework/misc/code-access-security.md)|.NET Framework'teki CAS açıklayan ek konulara bağlantılar içerir.|  
+|[Kod Erişimi Güvenliği ve ADO.NET](code-access-security.md)|Bir ADO.NET uygulamasının perspektifinden kod erişimi güvenliği, rol tabanlı güvenlik ve kısmen güvenilen ortamlar arasındaki etkileşimleri açıklar.|  
+|[Kod erişim güvenliği](../../misc/code-access-security.md)|.NET Framework CA 'ları açıklayan ek konuların bağlantılarını içerir.|  
   
 ## <a name="database-security"></a>Veritabanı güvenliği  
- En düşük öncelik ilkesini veri kaynağınız için de geçerlidir. Veritabanı güvenliği için bazı genel yönergeleri içerir:  
+ En az ayrıcalık ilkesi de veri kaynağınız için geçerlidir. Veritabanı güvenliği için bazı genel yönergeler şunları içerir:  
   
-- Olası en düşük ayrıcalıkları olan hesapları oluşturun.  
+- Olası en düşük ayrıcalıklara sahip hesaplar oluşturun.  
   
-- Kullanıcılar yalnızca kod çalışma elde etmek için yönetim hesaplarına erişim izin vermez.  
+- Kullanıcıların yalnızca kod çalışmasını sağlamak için yönetim hesaplarına erişmesine izin vermeyin.  
   
-- İstemci uygulamaları için sunucu tarafı hata iletileri gitmez.  
+- İstemci uygulamalarına sunucu tarafı hata iletileri döndürme.  
   
-- Hem istemci hem de sunucu tüm girişleri doğrulayın.  
+- Hem istemcide hem de sunucuda tüm girişleri doğrulayın.  
   
-- Parametreli komutların kullanın ve dinamik SQL deyimleri kaçının.  
+- Parametreli komutları kullanın ve dinamik SQL deyimlerden kaçının.  
   
-- Denetim ve günlük uyarı almanız için herhangi bir güvenlik ihlallerini kullanmakta olduğunuz veritabanı için güvenlik sağlar.  
-  
- Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
-  
-|Kaynak|Açıklama|  
-|--------------|-----------------|  
-|[SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|SQL Server'ı hedefleyen güvenli ADO.NET uygulamalar oluşturmaya yönelik rehberlik uygulama senaryoları ile SQL Server güvenliğine genel bakış sağlar.|  
-|[Veri erişim stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Veri erişimi ve veritabanı işlemleri gerçekleştirmek için öneriler sağlar.|  
-  
-## <a name="security-policy-and-administration"></a>Güvenlik İlkesi ve yönetim  
- Yanlış kod erişimi güvenliği (CAS) ilkesi yönetme, olası güvenlik zayıf oluşturabilirsiniz. Bir uygulama dağıtıldıktan sonra teknikleri, güvenlik izleme için kullanılmalıdır ve yeni tehditleri değerlendirilen riskleri ortaya çıkmaya başladı.  
+- Herhangi bir güvenlik ihlallerine uyarı almak için kullandığınız veritabanı için güvenlik denetimini ve günlük kaydını etkinleştirin.  
   
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Güvenlik İlkesi Yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Oluşturma ve Güvenlik İlkesi'ni yönetme hakkında bilgi sağlar.|  
-|[Güvenlik İlkesi en iyi uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmek nasıl açıklayan bağlantılar sağlar.|  
+|[SQL Server Güvenliği](./sql/sql-server-security.md)|SQL Server hedef alan güvenli ADO.NET uygulamaları oluşturmaya yönelik rehberlik sağlayan uygulama senaryolarında SQL Server güvenliğe genel bir bakış sağlar.|  
+|[Veri erişimi stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Verilere erişmek ve veritabanı işlemlerini gerçekleştirmek için öneriler sağlar.|  
+  
+## <a name="security-policy-and-administration"></a>Güvenlik Ilkesi ve yönetimi  
+ Kod erişimi güvenliği (CAS) ilkesini yanlış yönetmek, güvenlik zayıflığı oluşturabilir. Bir uygulama dağıtıldıktan sonra güvenlik izleme teknikleri kullanılmalıdır ve yeni tehditler ortaya çıktı olarak değerlendirilir.  
+  
+ Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
+  
+|Kaynak|Açıklama|  
+|--------------|-----------------|  
+|[Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Güvenlik ilkesi oluşturma ve yönetme hakkında bilgi sağlar.|  
+|[En Iyi Güvenlik Ilkesi uygulamaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmeyi açıklayan bağlantılar sağlar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [.NET içinde güvenlik](../../../standard/security/index.md)
-- [SQL Server Güvenliği](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
+- [.NET 'te güvenlik](../../../standard/security/index.md)
+- [SQL Server Güvenliği](./sql/sql-server-security.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

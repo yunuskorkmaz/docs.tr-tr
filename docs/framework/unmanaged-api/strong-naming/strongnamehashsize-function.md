@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8093a702069e4ecd4dad761ad0a431abe81d6141
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53384a5aa7f8d11f868057f892f7b60aac2e9f02
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780422"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799031"
 ---
 # <a name="strongnamehashsize-function"></a>StrongNameHashSize İşlevi
-Belirtilen karma algoritması kullanarak bir karma için gerekli arabellek boyutunu alır.  
+Belirtilen karma algoritmasını kullanarak bir karma için gereken arabellek boyutunu alır.  
   
- Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamehashsize](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md) yöntemi yerine.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameHashSize](../hosting/iclrstrongname-strongnamehashsize-method.md) metodunu kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,27 +39,27 @@ BOOLEAN StrongNameHashSize (
   
 ## <a name="parameters"></a>Parametreler  
  `ulHashAlg`  
- [in] Arabellek boyutunu hesaplamak için kullanılan karma algoritması.  
+ 'ndaki Arabellek boyutunu hesaplamak için kullanılan karma algoritması.  
   
  `pcbSize`  
- [out] Döndürülen arabellek bayt cinsinden boyutu.  
+ dışı Bayt cinsinden döndürülen arabellek boyutu.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
+ `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsa `StrongNameHashSize` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
+ İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameHashSize`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [StrongNameHashSize Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamehashsize-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameHashSize Yöntemi](../hosting/iclrstrongname-strongnamehashsize-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

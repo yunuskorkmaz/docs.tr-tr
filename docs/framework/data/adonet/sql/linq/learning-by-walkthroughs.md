@@ -2,12 +2,12 @@
 title: İzlenecek Yollarla Öğrenme
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: f1061842343d7a700d3af5da5fdc6aec2f79396d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4beb9944a13fd2f76d7305b4d84230fcc33483be
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929221"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781322"
 ---
 # <a name="learning-by-walkthroughs"></a>İzlenecek Yollarla Öğrenme
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Belgeler birkaç izlenecek yol sağlar. Bu konu başlığı altında, bazı genel izlenecek yol sorunları ele alınmaktadır (sorun giderme dahil) ve hakkında [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]bilgi almak için çeşitli giriş düzeyi talimatlarına bağlantılar sağlar.  
@@ -22,22 +22,22 @@ ms.locfileid: "69929221"
   
 |Hedefi|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit nesne modeli ve sorgu (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit nesne modeli ve sorgu (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
-|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki izlenecek yolun tamamlanmasını gerektirir).|[İzlenecek yol: Ilişkiler genelinde sorgulama (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: Ilişkiler arasında sorgulama (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
-|Veritabanına öğe ekleyin, değiştirin ve silin.|[İzlenecek yol: Verileri düzenleme (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri düzenleme (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca saklı yordamları kullanma (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Yalnızca saklı yordamları kullanma (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Bir varlık sınıfı oluşturun ve basit bir sorgu yürütün.|[İzlenecek yol: Basit nesne modeli ve sorgu (Visual Basic)](walkthrough-simple-object-model-and-query-visual-basic.md)|[İzlenecek yol: Basit nesne modeli ve sorgu (C#)](walkthrough-simple-object-model-and-query-csharp.md)|  
+|İkinci bir sınıf ekleyin ve daha karmaşık bir sorgu yürütün.<br /><br /> (Önceki izlenecek yolun tamamlanmasını gerektirir).|[İzlenecek yol: Ilişkiler genelinde sorgulama (Visual Basic)](walkthrough-querying-across-relationships-visual-basic.md)|[İzlenecek yol: Ilişkiler arasında sorgulama (C#)](walkthrough-querying-across-relationships-csharp.md)|  
+|Veritabanına öğe ekleyin, değiştirin ve silin.|[İzlenecek yol: Verileri düzenleme (Visual Basic)](walkthrough-manipulating-data-visual-basic.md)|[İzlenecek yol: Verileri düzenleme (C#)](walkthrough-manipulating-data-csharp.md)|  
+|Saklı yordamları kullanın.|[İzlenecek yol: Yalnızca saklı yordamları kullanma (Visual Basic)](walkthrough-using-only-stored-procedures-visual-basic.md)|[İzlenecek yol: Yalnızca saklı yordamları kullanma (C#)](walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Genel  
  Aşağıdaki bilgiler genel olarak bu talimatlara aittir:  
   
 - Ortamınızın Her [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] izlenecek yol tümleşik geliştirme ortamı (IDE) olarak Visual Studio 'yu kullanır.  
   
-- SQL motorları: Bu izlenecek yollar SQL Server Express kullanılarak uygulanacak şekilde yazılmıştır. SQL Server Express yoksa ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- SQL motorları: Bu izlenecek yollar SQL Server Express kullanılarak uygulanacak şekilde yazılmıştır. SQL Server Express yoksa ücretsiz olarak indirebilirsiniz. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md).  
   
     > [!NOTE]
-    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar bir dosya adını bağlantı dizesi olarak kullanır. Yalnızca bir dosya adı belirtmenin SQL Server Express kullanıcılara [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sağladığı bir kolaylık vardır. Her zaman güvenlik sorunlarına dikkat edin. Daha fazla bilgi için bkz. [LINQ to SQL güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    > [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar bir dosya adını bağlantı dizesi olarak kullanır. Yalnızca bir dosya adı belirtmenin SQL Server Express kullanıcılara [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sağladığı bir kolaylık vardır. Her zaman güvenlik sorunlarına dikkat edin. Daha fazla bilgi için bkz. [LINQ to SQL güvenlik](security-in-linq-to-sql.md).  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar genellikle Northwind örnek veritabanı gerektirir. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]izlenecek yollar genellikle Northwind örnek veritabanı gerektirir. Daha fazla bilgi için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md).  
   
 - İzlenecek yollarda gördüğünüz iletişim kutuları ve menü komutları, etkin ayarlarınıza veya Visual Studio sürümüne bağlı olarak yardım bölümünde açıklananlardan farklılık gösterebilir. Ayarlarınızı değiştirmek için **Araçlar** menüsünden **Içeri ve dışarı aktarma ayarları** ' na tıklayın. Daha fazla bilgi için bkz. [Visual STUDIO IDE 'Yi kişiselleştirme](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
@@ -89,4 +89,4 @@ ms.locfileid: "69929221"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Başlarken](getting-started.md)

@@ -2,24 +2,24 @@
 title: ProtocolRecoveryCompleteFailure
 ms.date: 03/30/2017
 ms.assetid: 369aac88-e66d-48cc-a432-c5f2073b7a1b
-ms.openlocfilehash: 586cf4a795173e6d1ff46c6ac6881e682392218d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f829efd248f763752eda2dc7a2ebf5399d89a9f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999043"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796167"
 ---
 # <a name="protocolrecoverycompletefailure"></a>ProtocolRecoveryCompleteFailure
-Kimliği: 145  
+Numarasını 145  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: TransactionBridge  
+ Alan Işlem Köprüsü  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, WS-Atomic işlem Protokolü hizmetini başlatma ve kurtarmayı tamamlamak başarısız olduğunu gösterir. Sonuç olarak, WS-Atomic işlem işlevselliğini devre dışı bırakıldı. Olay Protokolü kimliği, protokol adı, özel durum, işlem adı ve işlem kimliği listeler  
+ Bu olay, WS Atomik Işlem Protokolü hizmetinin başlatma ve kurtarmayı tamamlayamadığını gösterir. Sonuç olarak, WS Atomik Işlem işlevselliği devre dışıdır. Olayda protokol KIMLIĞI, protokol adı, özel durum, işlem adı ve işlem KIMLIĞI listelenmektedir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

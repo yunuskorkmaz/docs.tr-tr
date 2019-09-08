@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 19d0c78221f35bd36edce85a60a4a7a2f985bc38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34f0a61329667a42aa42693e93169a5b6fb0aa5e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947017"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792046"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET İçinde Büyük Değerli (Maks) Verileri Değiştirme
 Büyük nesne (LOB) veri türleri, 8 kilobayt (KB) olan en büyük satır boyutunu aşacak olanlardır. SQL Server,, `max` ve `nvarchar` `varchar` veri`varbinary` türleri için, 2 ^ 32 bayt kadar büyük değerler depolamaya izin vermek için bir tanımlayıcı sağlar. Tablo sütunları ve Transact-SQL değişkenleri, `varchar(max)` `nvarchar(max)`veya `varbinary(max)` veri türlerini belirtebilir. ADO.net `max` ' de, veri türleri bir tarafından getirilebilir ve özel `DataReader`bir işleme olmadan hem giriş hem de çıkış parametre değerleri olarak belirtilebilir. Büyük `varchar` veri türleri için veriler artımlı olarak alınabilir ve güncelleştirilir.  
@@ -251,7 +251,7 @@ WHERE   DocumentID=@DocumentID
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server İkili ve Büyük Değerli Veriler](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
-- [SQL Server Veri Türü Eşlemeleri](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server İkili ve Büyük Değerli Veriler](sql-server-binary-and-large-value-data.md)
+- [SQL Server Veri Türü Eşlemeleri](../sql-server-data-type-mappings.md)
+- [ADO.NET’te SQL Server Veri İşlemleri](sql-server-data-operations.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

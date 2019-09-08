@@ -6,34 +6,34 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 037182a3cb105f544e15a05f955c142ba57f62f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795543"
 ---
 # <a name="extending-wcf"></a>WCF'yi Genişletme
-Windows Communication Foundation (WCF) değiştirmek, tam olarak denetlemek için çalışma zamanı bileşenleri'ni genişletin ve hizmet tabanlı uygulamaları genişletmenizi sağlar. Bu bölümdeki konular, derinlemesine genişletilebilirlik mimarisi hakkında gidin. Temel programlama hakkında daha fazla bilgi için bkz. [temel WCF programlama](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF), hizmet tabanlı uygulamaları tam olarak denetlemek ve genişletmek için çalışma zamanı bileşenlerini değiştirmenize ve genişletmenize olanak tanır. Bu bölümdeki konular, genişletilebilirlik mimarisi hakkında ayrıntılı bilgi ile ilgilidir. Temel programlama hakkında daha fazla bilgi için bkz. [Temel WCF programlama](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [ServiceHost ve Hizmet Modeli Katmanını Genişletme](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
- Hizmet modeli katmanını çağırana geri göndererek arka plandaki kanal gelen iletileri çekerek ve bunları yöntem çağrıları uygulama kodunda içine çevirme sorumludur.  Hizmet modeli uzantıları değiştirebilir veya yürütme veya iletişim davranışı ve dağıtıcı işlevi, özel davranışlar, ileti ve parametre durdurma ve diğer genişletilebilirlik işlevlerini içeren özellikler uygular.  
+ [ServiceHost ve Hizmet Modeli Katmanını Genişletme](extending-servicehost-and-the-service-model-layer.md)  
+ Hizmet modeli katmanı, temel alınan kanallara ait gelen iletileri çekmekten, bunları uygulama kodundaki Yöntem etkinleştirmeleri içine çevirerek ve sonuçları çağırana geri göndererek sorumludur.  Hizmet modeli uzantıları; dağıtıcı işlevselliği, özel davranışlar, ileti ve parametre yakaalımı ve diğer genişletilebilirlik işlevleri ile ilgili yürütme veya iletişim davranışlarını ve özellikleri değiştirir veya uygular.  
   
- [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- Bağlamaları bir uç noktaya bağlanmak için gereken iletişim ayrıntılarını açıklayan nesneleridir. Bağlama uzantıları veya özel bağlamalar uygulama özellikleri desteklemek için gereken özel iletişim işlevselliğini uygular.  
+ [Bağlamaları Genişletme](extending-bindings.md)  
+ Bağlamalar, bir uç noktaya bağlanmak için gereken iletişim ayrıntılarını tanımlayan nesnelerdir. Bağlama uzantıları veya özel bağlamalar, uygulama özelliklerini desteklemek için gereken özel iletişim işlevlerini uygular.  
   
- [Kanal Katmanını Genişletme](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
- Kanal katmanını hizmet modeli katmanını altında yer alan ve istemciler ve hizmetler arasında ileti alışverişi sorumludur. Kanal uzantıları güvenlik gibi yeni Protokolü işlevi uygulayabilirsiniz. Kanal uzantıları SOAP iletilerini gerçekleştirmek için yeni bir ağ aktarımı uygulama gibi işlevler de taşıma.  
+ [Kanal Katmanını Genişletme](extending-the-channel-layer.md)  
+ Kanal katmanı, hizmet modeli katmanının altında bulunur ve istemciler ve hizmetler arasındaki ileti alışverişinin sorumluluğundadır. Kanal uzantıları, güvenlik gibi yeni protokol işlevleri uygulayabilir. Kanal uzantıları Ayrıca, SOAP iletilerini taşımak için yeni bir ağ taşıması uygulama gibi aktarım işlevlerini de sağlar.  
   
- [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
- Wcf'de güvenlik aktarımını oluşur (bütünlüğü, gizlilik ve kimlik doğrulaması) güvenlik erişim denetimi (yetkilendirme) ve denetimi. Bulunan sınıflar `IdentityModel` ad alanı, erişim denetimi için WCF tarafından kullanılır. Güvenlik mimarisini anlama, özel erişim denetimi sistemlerine uyum sağlamak için özel talep türleri oluşturmanıza olanak sağlar.  
+ [Güvenliği Genişletme](extending-security.md)  
+ WCF 'de güvenlik, aktarım güvenliği (bütünlük, gizlilik ve kimlik doğrulaması), erişim denetimi (yetkilendirme) ve denetim bilgisinden oluşur. `IdentityModel` Ad alanında bulunan sınıflar, erişim denetimi için WCF tarafından kullanılır. Güvenlik mimarisini anlamak, özel erişim denetimi sistemlerine uyum sağlamak için özel talep türleri oluşturmanıza olanak sağlar.  
   
- [Meta Veri Sistemini Genişletme](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- WCF Meta veri sistemini sınıfları ve arabirimleri hizmet tabanlı uygulamaları uygulamak için gereken meta verileri temsil eden bir grubudur. Değiştirin veya sınıflarını genişletmek veya uygulama ve Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel bir WS-PolicyAttachments onaylar gibi özel meta verileri içeri ve dışarı aktarmak arabirimler yapılandırın.  
+ [Meta Veri Sistemini Genişletme](extending-the-metadata-system.md)  
+ WCF meta veri sistemi, hizmet tabanlı uygulamaları uygulamak için gereken meta verileri temsil eden bir sınıf ve arabirim grubudur. Sınıfları değiştirin veya genişletin ya da Web Hizmetleri Açıklama Dili (WSDL) uzantıları veya özel WS-PolicyAttachments onayları gibi özel meta verileri dışarı ve içeri aktarmak için arabirimleri uygulayın ve yapılandırın.  
   
- [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
- Kodlayıcılar ve seri hale getiricileri genişletme verileri bir biçimden diğerine çevir. Bu bölümdeki konular, özel gereksinimleri karşılamak için sağlanan sınıflarını genişletmek nasıl ele almaktadır.  
+ [Kodlayıcılar ve Seri Hale Getiricileri Genişletme](extending-encoders-and-serializers.md)  
+ Kodlayıcılar ve serileştiriciler verileri bir formdan diğerine çevirir. Bu bölümdeki konularda, özel gereksinimleri karşılamak için sağlanan sınıfların nasıl genişletileceği ele alınmaktadır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel>  
@@ -51,8 +51,8 @@ Windows Communication Foundation (WCF) değiştirmek, tam olarak denetlemek içi
  <xref:System.IdentityModel.Tokens>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Temel WCF Programlama](../basic-wcf-programming.md)  
   
- [WCF Özellik Ayrıntıları](../../../../docs/framework/wcf/feature-details/index.md)  
+ [WCF Özellik Ayrıntıları](../feature-details/index.md)  
   
- [Yönergeler ve En İyi Yöntemler](../../../../docs/framework/wcf/guidelines-and-best-practices.md)
+ [Yönergeler ve En İyi Yöntemler](../guidelines-and-best-practices.md)

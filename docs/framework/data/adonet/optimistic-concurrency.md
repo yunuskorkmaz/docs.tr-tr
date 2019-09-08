@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929234"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794685"
 ---
 # <a name="optimistic-concurrency"></a>İyimser Eşzamanlılık
 Çok kullanıcılı bir ortamda, veritabanındaki verileri güncelleştirmek için iki model vardır: iyimser eşzamanlılık ve Kötümser eşzamanlılık. <xref:System.Data.DataSet> Nesnesi, verileri uzaktan kullanma ve verilerle etkileşim kurma gibi uzun süre çalışan etkinlikler için iyimser eşzamanlılık kullanımını teşvik etmek üzere tasarlanmıştır.  
@@ -42,7 +42,7 @@ ms.locfileid: "69929234"
   
  Kullanıcı2, 1:01:00 ' da aynı satırı okur.  
   
- Kullanıcı2 1:03, "Bob" Iken "Robert" olarak değiştirilir ve veritabanını günceller.  
+ Kullanıcı2 1:03, "Bob" **iken "** Robert" olarak değiştirilir ve veritabanını günceller.  
   
 |Sütun adı|Özgün değer|Geçerli değer|Veritabanındaki değer|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  İyimser eşzamanlılık modeli kullanırken daha az kısıtlayıcı ölçütler uygulamayı da tercih edebilirsiniz. Örneğin, WHERE yan tümcesindeki birincil anahtar sütunlarının kullanılması, diğer sütunların son sorgudan bu yana güncelleştirilip güncelleştirilmediğini ne olursa olsun verilerin üzerine yazılmasına neden olur. Yalnızca belirli sütunlara bir WHERE yan tümcesi uygulayabilirsiniz ve belirli alanlar son sorgulandıktan sonra güncellenmemişse verilerin üzerine yazılmasına neden olur.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter. RowUpdated olayı  
- <xref:System.Data.Common.DataAdapter> Nesnenin **RowUpdated** olayı, daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir recordsamısson özelliği döndürür. <xref:System.Data.Common.RowUpdatedEventArgs> Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ <xref:System.Data.Common.DataAdapter> Nesnenin **RowUpdated** olayı, daha önce açıklanan tekniklerle birlikte kullanılarak iyimser eşzamanlılık ihlallerinin uygulamanıza yönelik bildirim sağlar. **RowUpdated** , bir **veri kümesinden** **değiştirilen** bir satırı güncelleştirme denemesinden sonra oluşur. Bu, bir özel durum oluştuğunda işleme, özel hata bilgileri ekleme, yeniden deneme mantığı ekleme vb. gibi özel işleme kodu eklemenizi sağlar. Nesnesi, bir tablodaki değiştirilmiş bir satır için belirli bir Update komutundan etkilenen satır sayısını içeren bir recordsamısson özelliği döndürür. <xref:System.Data.Common.RowUpdatedEventArgs> Güncelleştirme komutunu iyimser eşzamanlılık için test edecek şekilde ayarlayarak, **Recordsaetkilenmeyen** özelliği, bir sonuç olarak bir iyimser eşzamanlılık ihlali meydana geldiğinde 0 değerini döndürür, çünkü hiçbir kayıt güncelleştirilmemiş. Bu durumda, bir özel durum oluşturulur. **RowUpdated** olayı, bu oluşumu idare etmenizi ve **UpdateStatus. SkipCurrentRow**gibi uygun bir **RowUpdatedEventArgs. Status** değeri ayarlayarak özel durumu önlemenize olanak sağlar. **RowUpdated** olayı hakkında daha fazla bilgi için bkz. [DataAdapter olaylarını işleme](handling-dataadapter-events.md).  
   
- İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam** updateıse 'yi **true**olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ İsteğe bağlı olarak, **Güncelleştir**' i çağırmadan önce **DataAdapter. devam updateıse** 'yi **true**olarak ayarlayabilir ve **güncelleştirme** tamamlandığında belirli bir satırın **RowError** özelliğinde depolanan hata bilgilerine yanıt verebilirsiniz. Daha fazla bilgi için bkz. [satır hata bilgileri](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>İyimser eşzamanlılık örneği  
  Aşağıda, bir **DataAdapter** 'ın **UpdateCommand** öğesini iyimser eşzamanlılık için test etmek üzere ayarlayan ve ardından iyimser eşzamanlılık Ihlallerini test etmek için **RowUpdated** olayını kullanan basit bir örnek verilmiştir. İyimser eşzamanlılık ihlaliyle karşılaşıldığında, uygulama güncelleştirmenin verildiği satırın **RowError hatasını** bir iyimser eşzamanlılık ihlalini yansıtacak şekilde ayarlar.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Satır Hatası Bilgileri](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [İşlemler ve Eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
+- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](updating-data-sources-with-dataadapters.md)
+- [Satır Hatası Bilgileri](./dataset-datatable-dataview/row-error-information.md)
+- [İşlemler ve Eşzamanlılık](transactions-and-concurrency.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: OLE DB, ODBC ve Oracle Bağlantı Havuzu
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b83b53550964b3149f3bc711eaf119e749d1834b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929248"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794699"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB, ODBC ve Oracle Bağlantı Havuzu
 Havuzlama bağlantıları, uygulamanızın performansını ve ölçeklenebilirliğini önemli ölçüde geliştirebilir. Bu bölümde, OLE DB, ODBC ve Oracle .NET Framework veri sağlayıcıları için bağlantı havuzu ele alınmaktadır.  
@@ -70,6 +70,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlantı Havuzu](../../../../docs/framework/data/adonet/connection-pooling.md)
-- [Performans Sayaçları](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Bağlantı Havuzu](connection-pooling.md)
+- [Performans Sayaçları](performance-counters.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

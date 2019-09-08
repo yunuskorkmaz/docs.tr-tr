@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203874"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785520"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView’dan DataTable Oluşturma
 Veri kaynağından veri aldıktan ve verilerle doldurduktan sonra, döndürülen verileri yeniden almadan sıralamak <xref:System.Data.DataTable> , filtrelemek veya başka bir şekilde sınırlamak isteyebilirsiniz. <xref:System.Data.DataView> Sınıfı bunu mümkün hale getirir. Ayrıca, <xref:System.Data.DataTable> <xref:System.Data.DataTable>öğesinden yeni bir oluşturmanız gerekiyorsa, tüm satır ve sütunları ya da verilerin bir alt <xref:System.Data.DataView.ToTable%2A> kümesini yeni bir olarak kopyalamak için yöntemini kullanabilirsiniz. <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A> Yöntemi için aşırı yükleme sağlar:  
@@ -209,4 +209,4 @@ Console.WriteLine();
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [DataViews](dataviews.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

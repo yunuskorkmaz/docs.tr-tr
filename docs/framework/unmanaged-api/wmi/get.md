@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037947"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798599"
 ---
 # <a name="get-function"></a>Get işlevi
 
@@ -94,7 +94,7 @@ Bağımsız değişkenine, niteleyicinin ve com [variantinit](https://docs.micro
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
  **Üst bilgi** WMINet_Utils. IDL
 

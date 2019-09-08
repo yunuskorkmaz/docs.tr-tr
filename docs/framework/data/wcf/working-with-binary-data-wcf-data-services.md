@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043892"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779625"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Ikili verilerle çalışma (WCF Veri Hizmetleri)
 
@@ -23,7 +23,7 @@ ms.locfileid: "70043892"
 
 - Ayrı bir ikili kaynak akışı olarak. Bu, bir fotoğrafı, videoyu veya herhangi bir tür ikili kodlu veriyi temsil eden ikili büyük nesne (BLOB) verilerine erişmek ve bunları değiştirmek için önerilen yöntemdir.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]içinde tanımlanan http kullanarak ikili verilerin akışını uygular. Bu mekanizmaya, ikili veriler, ancak medya bağlantı girişi olarak adlandırılan bir varlıkla ilişkili olan bir medya kaynağı olarak değerlendirilir. Daha fazla bilgi için bkz. [Akış sağlayıcısı](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]içinde tanımlanan http kullanarak ikili verilerin akışını uygular. Bu mekanizmaya, ikili veriler, ancak medya bağlantı girişi olarak adlandırılan bir varlıkla ilişkili olan bir medya kaynağı olarak değerlendirilir. Daha fazla bilgi için bkz. [Akış sağlayıcısı](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
 > Fotoğrafları depolayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] hizmetten ikili görüntü dosyalarını yükleyen Windows Presentation Foundation (WPF) istemci uygulamasının nasıl oluşturulacağı hakkında adım adım bir örnek için bkz. Post [Data Services akış sağlayıcısı Serisi-Bölüm 2: Istemciden](https://go.microsoft.com/fwlink/?LinkId=201637)bir medya kaynak akışına erişme. Blog postasında sunulan Stream Photo Data Service için örnek kodu indirmek için MSDN kod galerisinde [akış fotoğrafı veri hizmeti örneğine](https://go.microsoft.com/fwlink/?LinkId=198988) bakın.
@@ -74,5 +74,5 @@ Bu örnekte, <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)
+- [Veriyi Denetimlere Bağlama](binding-data-to-controls-wcf-data-services.md)

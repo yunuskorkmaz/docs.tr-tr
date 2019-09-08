@@ -2,46 +2,46 @@
 title: SQL Server Güvenliğine Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 52e6f69c006353fcafcbf8f567675a7c14830f76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adc1ce661d49c468de09552ea36a2cd58d6343f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582809"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780943"
 ---
 # <a name="overview-of-sql-server-security"></a>SQL Server Güvenliğine Genel Bakış
-Güvenlik katmanları örtüşen derinlemesine savunma stratejisi, sayaç güvenlik tehditleri için en iyi yoludur. SQL Server veritabanı yöneticilerinin ve geliştiricilerin güvenli veritabanı uygulamaları ve sayaç tehditleri oluşturmak izin vermek için tasarlanmış bir güvenlik mimarisi sağlar. Her SQL Server sürümü, SQL Server'ın önceki sürümlerinde yeni özellikleri ve işlevleri tanıtımıyla geliştirdi. Ancak, güvenlik kutuya gelmez. Her uygulama, güvenlik gereksinimleri açısından benzersizdir. Geliştiriciler hangi özellik bileşimi anlamak gerekir ve işlevselliği için en uygun sayaç bilinen tehditlere ve gelecekte oluşabilecek tehditleri beklenir.  
+Çakışan güvenlik katmanlarında derinlemesine savunma stratejisi, güvenlik tehditlerini sayaca yönelik en iyi yoldur. SQL Server, veritabanı yöneticilerinin ve geliştiricilerin güvenli veritabanı uygulamaları ve sayaç tehditleri oluşturmalarına olanak tanımak için tasarlanan bir güvenlik mimarisi sağlar. SQL Server her sürümü, yeni özellikler ve işlevlerin kullanıma sunulmasıyla önceki SQL Server sürümlerinde geliştirilmiştir. Ancak, güvenlik kutuya teslim edilmez. Her uygulama güvenlik gereksinimlerinde benzersizdir. Geliştiricilerin, bilinen tehditler ve gelecekte ortaya çıkabilecek tehditleri tahmin etmek için hangi özellik ve işlevsellik bileşiminin en uygun olduğunu anlaması gerekir.  
   
- Bir SQL Server örneği ile sunucu başlangıç varlıkların hiyerarşik bir koleksiyonunu içerir. Her sunucu birden çok veritabanını, ve her veritabanı güvenliği sağlanabilir nesnelerin bir koleksiyonunu içerir. Güvenli kılınabilir her SQL Server ilişkili *izinleri* için verilebilir bir *asıl*, tek tek, bir grup olduğu veya SQL Server'a erişim verilen işlem. SQL Server güvenlik çerçevesi güvenli kılınabilir varlıklara erişimi yöneten *kimlik doğrulaması* ve *yetkilendirme*.  
+ Bir SQL Server örnek, sunucudan itibaren hiyerarşik bir varlık koleksiyonu içerir. Her bir sunucu birden çok veritabanı içerir ve her veritabanı güvenli kılınabilir nesnelerin bir koleksiyonunu içerir. Her SQL Server güvenli hale getirilebilen, bir bireyin, Grup veya işlem SQL Server erişim izni verilen bir *sorumlu*için verilebilecek ilişkili *izinleri* vardır. SQL Server güvenlik çerçevesi, *kimlik doğrulama* ve *Yetkilendirme*aracılığıyla güvenli kılınabilir varlıklara erişimi yönetir.  
   
-- Kimlik doğrulaması, SQL Server'ın kullandığı bir asıl sunucu değerlendiren kimlik bilgileri göndererek erişim isteğinde oturum açmadan işlemidir. Kimlik doğrulaması, kullanıcı veya kimlik doğrulaması gerçekleştirilen işlem kimliğini oluşturur.  
+- Kimlik doğrulaması, bir sorumlunun sunucu tarafından değerlendirilen kimlik bilgilerini göndererek erişim isteği yaptığı SQL Server oturum açma işlemidir. Kimlik doğrulaması, kimliği doğrulanmış kullanıcının veya işlemin kimliğini belirler.  
   
-- Yetkilendirme bir sorumluya erişmek güvenli kılınabilir kaynakları ve işlemleri için bu kaynakları izin belirleme işlemidir.  
+- Yetkilendirme, bir sorumlu tarafından hangi güvenli kılınabilir kaynakların erişebileceğini ve bu kaynaklar için hangi işlemlere izin verileceğini belirleme işlemidir.  
   
- Bu bölümdeki konular, SQL Server güvenlik temelleri, SQL Server Books Online'nın ilgili sürümünde kapsamlı belgeler bağlantıları sağlayan kapsar.  
+ Bu bölümdeki konularda, SQL Server Books Online 'ın ilgili sürümündeki tüm belgelere bağlantılar sağlayan SQL Server güvenlik temelleri ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- Oturum açma bilgileri ve SQL Server kimlik doğrulamasını açıklar ve ek kaynaklara bağlantılar sağlanmaktadır.  
+ [SQL Server’da Kimlik Doğrulaması](authentication-in-sql-server.md)  
+ SQL Server oturum açma ve kimlik doğrulamasını açıklar ve ek kaynaklara bağlantılar sağlar.  
   
- [SQL Server’da Sunucu ve Veritabanı Rolleri](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- Sabit sunucu ve veritabanı rolleri, özel veritabanı rolleri ve yerleşik hesaplar açıklar ve ek kaynaklara bağlantılar sağlanmaktadır.  
+ [SQL Server’da Sunucu ve Veritabanı Rolleri](server-and-database-roles-in-sql-server.md)  
+ Sabit sunucu ve veritabanı rollerini, özel veritabanı rollerini ve yerleşik hesapları açıklar ve ek kaynaklara bağlantılar sağlar.  
   
- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- Nesne sahipliği ve kullanıcı şeması ayrımı açıklar ve ek kaynaklara bağlantılar sağlanmaktadır.  
+ [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](ownership-and-user-schema-separation-in-sql-server.md)  
+ Nesne sahipliğini ve Kullanıcı şeması ayırmayı açıklar ve ek kaynaklara bağlantılar sağlar.  
   
- [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- En düşük öncelik ilkesini kullanarak izinleri açıklar ve ek kaynaklara bağlantılar sağlanmaktadır.  
+ [SQL Server’da Yetkilendirme ve İzinler](authorization-and-permissions-in-sql-server.md)  
+ En az ayrıcalık ilkesini kullanarak izin vermeyi açıklar ve ek kaynaklara bağlantılar sağlar.  
   
- [SQL Server’da Veri Şifreleme](../../../../../docs/framework/data/adonet/sql/data-encryption-in-sql-server.md)  
- SQL Server'da veri şifreleme seçenekleri açıklar ve ek kaynaklara bağlantılar sağlanmaktadır.  
+ [SQL Server’da Veri Şifreleme](data-encryption-in-sql-server.md)  
+ SQL Server 'daki veri şifreleme seçeneklerini açıklar ve ek kaynaklara bağlantılar sağlar.  
   
- [SQL Server’da CLR Tümleştirme Güvenliği](../../../../../docs/framework/data/adonet/sql/clr-integration-security-in-sql-server.md)  
- CLR tümleştirme güvenliği kaynaklarına bağlantılar sağlar.  
+ [SQL Server’da CLR Tümleştirme Güvenliği](clr-integration-security-in-sql-server.md)  
+ CLR tümleştirme güvenlik kaynaklarına bağlantılar sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliği](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server Güvenliği](sql-server-security.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: DataTable Verilerini Düzenleme
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 83b1a4b6c0e477ac918a2bb4e454718fc58ece0b
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 421680a4f39dd68c09dfe20e62f2eec86259b9f0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203497"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786159"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>DataTable Verilerini Düzenleme
 <xref:System.Data.DataTable> Bir<xref:System.Data.DataSet>içinde bir oluşturduktan sonra, veritabanında bir tablo kullanırken yaptığınız aynı etkinlikleri gerçekleştirebilirsiniz. Tablodaki verileri ekleyebilir, görüntüleyebilir, düzenleyebilir ve silebilirsiniz; hataları ve olayları izleyebilirsiniz; ve tablodaki verileri sorgulayabilirsiniz. **DataTable**'daki verileri değiştirirken, değişikliklerin doğru olup olmadığını da doğrulayabilirsiniz ve değişiklikleri programlı olarak kabul edip reddetmeyeceğinizi belirleyebilirsiniz.  
@@ -41,4 +41,4 @@ ms.locfileid: "70203497"
 
 - [DataTables](datatables.md)
 - [DataTable Olaylarını İşleme](handling-datatable-events.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

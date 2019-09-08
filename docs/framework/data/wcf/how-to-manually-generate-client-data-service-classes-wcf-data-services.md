@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: 2a827e4909b18d9cca74fc20a2d83d2730ea0cd9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 106f1cedb33c0c1b333df0b9f2b8c2a70d458a0d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952291"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790430"
 ---
 # <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Nasıl yapılır: Istemci veri hizmeti sınıflarını el ile oluştur (WCF Veri Hizmetleri)
-WCF Veri Hizmetleri, Visual Studio projesindeki bir veri hizmetine bir başvuru eklemek için **hizmet başvurusu Ekle** iletişim kutusunu kullandığınızda istemci veri hizmeti sınıflarını otomatik olarak oluşturmanıza olanak tanımak üzere Visual Studio ile tümleşir. Daha fazla bilgi için [nasıl yapılır: Veri hizmeti başvurusu](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)ekleyin. Ayrıca, `DataSvcUtil.exe`kod oluşturma aracını kullanarak aynı istemci veri hizmeti sınıflarını el ile oluşturabilirsiniz. WCF Veri Hizmetleri ile birlikte bulunan bu araç, veri hizmeti tanımından .NET Framework sınıfları oluşturur. Ayrıca, kavramsal model (. csdl) dosyasından ve Visual Studio projesindeki bir Entity Framework modeli temsil eden. edmx dosyasından veri hizmeti sınıfları oluşturmak için de kullanılabilir.
+WCF Veri Hizmetleri, Visual Studio projesindeki bir veri hizmetine bir başvuru eklemek için **hizmet başvurusu Ekle** iletişim kutusunu kullandığınızda istemci veri hizmeti sınıflarını otomatik olarak oluşturmanıza olanak tanımak üzere Visual Studio ile tümleşir. Daha fazla bilgi için [nasıl yapılır: Veri hizmeti başvurusu](how-to-add-a-data-service-reference-wcf-data-services.md)ekleyin. Ayrıca, `DataSvcUtil.exe`kod oluşturma aracını kullanarak aynı istemci veri hizmeti sınıflarını el ile oluşturabilirsiniz. WCF Veri Hizmetleri ile birlikte bulunan bu araç, veri hizmeti tanımından .NET Framework sınıfları oluşturur. Ayrıca, kavramsal model (. csdl) dosyasından ve Visual Studio projesindeki bir Entity Framework modeli temsil eden. edmx dosyasından veri hizmeti sınıfları oluşturmak için de kullanılabilir.
 
- Bu konudaki örnek, Northwind örnek veri hizmeti temel alınarak istemci veri hizmeti sınıfları oluşturur. Bu hizmet, [WCF veri hizmetleri hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. Bu konudaki bazı örneklerde, Northwind modeli için kavramsal model dosyası gereklidir. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın. Bu konudaki bazı örnekler, Northwind modeli için. edmx dosyasını gerektirir. Daha fazla bilgi için bkz [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
+ Bu konudaki örnek, Northwind örnek veri hizmeti temel alınarak istemci veri hizmeti sınıfları oluşturur. Bu hizmet, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur. Bu konudaki bazı örneklerde, Northwind modeli için kavramsal model dosyası gereklidir. Daha fazla bilgi için [nasıl yapılır: Modeli ve eşleme dosyalarını](../adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)oluşturmak Için EdmGen. exe ' yi kullanın. Bu konudaki bazı örnekler, Northwind modeli için. edmx dosyasını gerektirir. Daha fazla bilgi için bkz [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Veri bağlamayı C# destekleyen sınıflar oluşturmak için
 
@@ -95,6 +95,6 @@ WCF Veri Hizmetleri, Visual Studio projesindeki bir veri hizmetine bir başvuru 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)
-- [Nasıl yapılır: Veri hizmeti başvurusu ekleme](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
-- [WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)
+- [Veri Hizmeti İstemci Kitaplığı Oluşturma](generating-the-data-service-client-library-wcf-data-services.md)
+- [Nasıl yapılır: Veri hizmeti başvurusu ekleme](how-to-add-a-data-service-reference-wcf-data-services.md)
+- [WCF Veri Hizmeti İstemci Yardımcı Programı (DataSvcUtil.exe)](wcf-data-service-client-utility-datasvcutil-exe.md)

@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038460"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793840"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Sayısal Dizideki En Küçük Değeri Bulma
-Kullanım <xref:System.Linq.Enumerable.Min%2A> en düşük değer dizisini sayısal değerler döndürülecek işleci.  
+Bir sayısal değer dizisinden en küçük değeri döndürmek için işlecinikullanın.<xref:System.Linq.Enumerable.Min%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, en düşük birim fiyatı üründeki bulur.  
+ Aşağıdaki örnek, herhangi bir ürünün en düşük birim fiyatını bulur.  
   
- Bu sorgu, Northwind örnek veritabanıyla çalıştırırsanız, çıktı şu şekildedir: `2.5000`.  
+ Bu sorguyu Northwind örnek veritabanında çalıştırırsanız, çıkış şu şekilde olur: `2.5000`.  
   
  [!code-csharp[DLinqQueryExamples#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#9)]
  [!code-vb[DLinqQueryExamples#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#9)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek herhangi bir sırada için en düşük freight miktarını bulur.  
+ Aşağıdaki örnek herhangi bir sipariş için en düşük navlun miktarını bulur.  
   
- Bu sorgu, Northwind örnek veritabanıyla çalıştırırsanız, çıktı şu şekildedir: `0.0200`.  
+ Bu sorguyu Northwind örnek veritabanında çalıştırırsanız, çıkış şu şekilde olur: `0.0200`.  
   
  [!code-csharp[DLinqQueryExamples#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#10)]
  [!code-vb[DLinqQueryExamples#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#10)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek Min bulmak için kullanır. `Products` her kategoride en düşük birim fiyatı vardır. Kategoriye göre düzenlenmiş çıktı.  
+ Aşağıdaki örnek, `Products` her kategoride en düşük birim fiyatına sahip olan öğesini bulmak için min kullanır. Çıktı kategoriye göre düzenlenir.  
   
  [!code-csharp[DLinqQueryExamples#11](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#11)]
  [!code-vb[DLinqQueryExamples#11](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#11)]  
   
- Northwind örnek veritabanıyla önceki sorguyu çalıştırırsanız, sonuçlar şuna benzer:  
+ Önceki sorguyu Northwind örnek veritabanında çalıştırırsanız, sonuçlarınız aşağıdakine benzeyecektir:  
   
  `1`  
   
@@ -73,5 +73,5 @@ Kullanım <xref:System.Linq.Enumerable.Min%2A> en düşük değer dizisini sayı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Toplu Sorgular](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Örnek Veritabanları İndirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Toplu Sorgular](aggregate-queries.md)
+- [Örnek Veritabanları İndirme](downloading-sample-databases.md)

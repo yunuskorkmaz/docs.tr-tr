@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 8ae8c8e020a3d8ada5bdcd5037187e6f3abd33a4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c4e0b368a8eb154207382ae70b9767f5a5fe64d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203840"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785440"
 ---
 # <a name="creating-expression-columns"></a>İfade Sütunları Oluşturma
 Bir sütun için bir ifade tanımlayabilir, bu değerin aynı satırdaki diğer sütun değerlerinden veya tablodaki birden çok satırın sütun değerlerinden hesaplanan bir değer içermesini sağlayabilirsiniz. Değerlendirilecek ifadeyi tanımlamak için, hedef sütunun <xref:System.Data.DataColumn.Expression%2A> özelliğini kullanın ve ifadedeki diğer sütunlara başvurmak için <xref:System.Data.DataColumn.ColumnName%2A> özelliğini kullanın. İfade <xref:System.Data.DataColumn.DataType%2A> sütunu için, ifadenin döndürdüğü değer için uygun olmalıdır.  
@@ -45,4 +45,4 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
 - <xref:System.Data.DataTable>
 - [DataTable Şema Tanımı](datatable-schema-definition.md)
 - [DataTables](datatables.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

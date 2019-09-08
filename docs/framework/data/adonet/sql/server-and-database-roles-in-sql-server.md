@@ -2,12 +2,12 @@
 title: SQL Server’da Sunucu ve Veritabanı Rolleri
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e31aa67bfbaa541d8d1eb5b8b61dfd28182c72
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961094"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791785"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server’da Sunucu ve Veritabanı Rolleri
 Tüm SQL Server sürümleri rol tabanlı güvenliği kullanır ve bu sayede, bireysel kullanıcılar yerine bir role veya kullanıcı grubuna izinler atayabilirsiniz. Sabit sunucu ve sabit veritabanı rollerinin, bunlara atanmış sabit bir izin kümesi vardır.  
@@ -42,7 +42,7 @@ Tüm SQL Server sürümleri rol tabanlı güvenliği kullanır ve bu sayede, bir
  `dbo`Veya veritabanı sahibi, veritabanındaki tüm etkinlikleri gerçekleştirmek için izinleri kapsanan bir kullanıcı hesabıdır. Sabit sunucu rolünün üyeleri otomatik olarak öğesine `dbo`eşlenir. `sysadmin`  
   
 > [!NOTE]
-> `dbo`Ayrıca, SQL Server ' de [sahiplik ve Kullanıcı şeması ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)bölümünde açıklandığı gibi bir şemanın adıdır.  
+> `dbo`Ayrıca, SQL Server ' de [sahiplik ve Kullanıcı şeması ayrımı](ownership-and-user-schema-separation-in-sql-server.md)bölümünde açıklandığı gibi bir şemanın adıdır.  
   
  Kullanıcı hesabı, `db_owner` sabit veritabanı rolüyle genellikle karıştırılır. `dbo` Kapsamı `db_owner` bir veritabanıdır; `sysadmin` kapsamı tüm sunucu olur. Roldeki üyelik `dbo` kullanıcı ayrıcalıklarını karşılamıyor. `db_owner`  
   
@@ -63,9 +63,9 @@ Tüm SQL Server sürümleri rol tabanlı güvenliği kullanır ve bu sayede, bir
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server’da Kimlik Doğrulaması](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server’da Yetkilendirme ve İzinler](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [SQL Server’da Kimlik Doğrulaması](authentication-in-sql-server.md)
+- [SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı](ownership-and-user-schema-separation-in-sql-server.md)
+- [SQL Server’da Yetkilendirme ve İzinler](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -2,12 +2,12 @@
 title: SQL Server’da Uygulama Rolleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 212bda6f64829792e965dd6714428a05b30c995b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961173"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794282"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server’da Uygulama Rolleri Oluşturma
 Uygulama rolleri, bir veritabanı rolü veya Kullanıcı yerine bir uygulamaya izin atamak için bir yol sağlar. Kullanıcılar veritabanına bağlanabilir, uygulama rolünü etkinleştirebilir ve uygulamaya verilen izinleri varsayabilir. Uygulama rolüne verilen izinler bağlantı süresine zorlanır.  
@@ -47,9 +47,9 @@ Uygulama rolleri, bir veritabanı rolü veya Kullanıcı yerine bir uygulamaya i
   
  Aşağıdaki alternatifleri düşünmek isteyebilirsiniz.  
   
-- EXECUTE AS WITH WITH using WITH WITH COOKIE yan tümceleri ile bağlam geçişini kullanın. Bir oturum açma ile eşlenmeyen bir veritabanında bir kullanıcı hesabı oluşturabilirsiniz. Daha sonra bu hesaba izinler atarsınız. FARKLı ÇALıŞTıR kullanımı, parola tabanlı değil, izin tabanlı olduğundan daha güvenlidir. Daha fazla bilgi için bkz. [SQL Server Içindeki kimliğe bürünme Ile Izinleri özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- EXECUTE AS WITH WITH using WITH WITH COOKIE yan tümceleri ile bağlam geçişini kullanın. Bir oturum açma ile eşlenmeyen bir veritabanında bir kullanıcı hesabı oluşturabilirsiniz. Daha sonra bu hesaba izinler atarsınız. FARKLı ÇALıŞTıR kullanımı, parola tabanlı değil, izin tabanlı olduğundan daha güvenlidir. Daha fazla bilgi için bkz. [SQL Server Içindeki kimliğe bürünme Ile Izinleri özelleştirme](customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Saklı yordamları sertifikalarla imzalama ve yalnızca yordamları yürütmek için izin verme. Daha fazla bilgi için bkz. [SQL Server saklı yordamları imzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Saklı yordamları sertifikalarla imzalama ve yalnızca yordamları yürütmek için izin verme. Daha fazla bilgi için bkz. [SQL Server saklı yordamları imzalama](signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
@@ -60,7 +60,7 @@ Uygulama rolleri, bir veritabanı rolü veya Kullanıcı yerine bir uygulamaya i
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](overview-of-sql-server-security.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

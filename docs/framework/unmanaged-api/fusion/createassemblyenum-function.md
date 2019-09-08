@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c56b0168df6e4aee69b5d3e5fbbe027ca2c8974a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1db72c44b53b5abff9aee35094abc1e0e577fad4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778448"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795378"
 ---
 # <a name="createassemblyenum-function"></a>CreateAssemblyEnum İşlevi
-Bir işaretçi alır bir [Iassemblyenum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) nesneleri ile belirtilen derlemedeki numaralandırabilirsiniz örneği [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
+Derlemedeki nesneleri belirtilen [IAssemblyName](iassemblyname-interface.md)ile numaralandıracak bir [IAssemblyEnum](iassemblyenum-interface.md) örneğine yönelik bir işaretçi alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,34 +42,34 @@ HRESULT CreateAssemblyEnum (
   
 ## <a name="parameters"></a>Parametreler  
  `pEnum`  
- [out] İstenen içeren bir bellek konumuna işaretçi `IAssemblyEnum` işaretçi.  
+ dışı İstenen `IAssemblyEnum` işaretçiyi içeren bir bellek konumu işaretçisi.  
   
  `pUnkReserved`  
- [in] Sonra genişletilebilmek için ayrılmış. `pUnkReserved` null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pUnkReserved`null bir başvuru olmalıdır.  
   
  `pName`  
- [in] `IAssemblyName` İstenen derleme. Bu ad, numaralandırma filtrelemek için kullanılır. Genel derleme önbelleğini tüm derlemeleri numaralandırmak için null olabilir.  
+ 'ndaki `IAssemblyName` İstenen derlemenin ' i. Bu ad, numaralandırmayı filtrelemek için kullanılır. Genel derleme önbelleğindeki tüm derlemeleri listelemek için null olabilir.  
   
  `dwFlags`  
- [in] Numaralandırıcının davranışını değiştirmek için kullanılan bayraklar. Bu parametre içeren tam bir bit [ASM_CACHE_FLAGS](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) sabit listesi.  
+ 'ndaki Numaralandırıcının davranışını değiştirme bayrakları. Bu parametre [asm_cache_flags](asm-cache-flags-enumeration.md) numaralandırmasından tam olarak bir bit içerir.  
   
  `pvReserved`  
- [in] Sonra genişletilebilmek için ayrılmış. `pvReserved` null bir başvuru olmalıdır.  
+ 'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır. `pvReserved`null bir başvuru olmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `dwFlags` Parametre içeren tam bir bit `ASM_CACHE_FLAGS` sabit listesi.  
+ `dwFlags` Parametresi `ASM_CACHE_FLAGS` Numaralandırmadaki tam olarak bir bit içeriyor.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** Fusion.h  
+ **Üst bilgi** Fusion. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IAssemblyEnum Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
-- [IAssemblyName Arabirimi](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion Genel Statik İşlevleri](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [IAssemblyEnum Arabirimi](iassemblyenum-interface.md)
+- [IAssemblyName Arabirimi](iassemblyname-interface.md)
+- [Fusion Genel Statik İşlevleri](fusion-global-static-functions.md)

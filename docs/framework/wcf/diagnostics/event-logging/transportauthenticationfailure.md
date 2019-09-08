@@ -2,24 +2,24 @@
 title: TransportAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: adbdbda0-de52-448c-a938-cc9f5db2980e
-ms.openlocfilehash: 99fd90dc4b2da0d1a0452a0e27ec45b6b8641ea6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97483e26132d2620ff99dbab6a3396f324bd3f48
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944384"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797470"
 ---
 # <a name="transportauthenticationfailure"></a>TransportAuthenticationFailure
-Kimliği: 174  
+Numarasını 174  
   
- Önem derecesi: Hata  
+ İnin Hata  
   
- Kategori: SecurityAudit  
+ Alan Securityauıdıt  
   
 ## <a name="description"></a>Açıklama  
- Bu olay, bu aktarım kimlik doğrulaması istemci kimliğini ve etkinlik kimliğini listeleme başarısız oldu gösterir.  
+ Bu olay, taşıma kimlik doğrulamasının başarısız olduğunu, istemci kimliğini listelemeyi ve etkinlik KIMLIĞINI gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Günlüğe Olay Kaydetme](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [Etkinlik Genel Başvurusu](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [Günlüğe Olay Kaydetme](index.md)
+- [Etkinlik Genel Başvurusu](events-general-reference.md)

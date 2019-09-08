@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
-ms.openlocfilehash: f60ef817773b6234b19856bfc0727eedb67e113e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: d8a7762c4ec5d650295ca0626180285723549051
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205168"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786520"
 ---
 # <a name="copying-dataset-contents"></a>DataSet İçeriklerini Kopyalama
 Özgün verileri etkilemeden verilerle çalışabilmeniz veya bir <xref:System.Data.DataSet> veri **kümesindeki**verilerin bir alt kümesiyle çalışmanız için bir kopyasını oluşturabilirsiniz. Bir **veri kümesini**kopyalarken şunları yapabilirsiniz:  
@@ -31,7 +31,7 @@ Dim copyDataSet As DataSet = customerDataSet.Copy()
 DataSet copyDataSet = customerDataSet.Copy();  
 ```  
   
- Şemayı ve yalnızca **eklenen**, **değiştirilen**veya **silinen** satırları temsil eden verileri içeren bir <xref:System.Data.DataSet.GetChanges%2A> **veri kümesinin** kopyasını oluşturmak için, **veri kümesinin**yöntemini kullanın. GetChanges 'ı çağırırken yalnızca belirtilen satır durumundaki satırları döndürmek için **GetChanges** 'ı da kullanabilirsiniz. Aşağıdaki kod örneği, **GetChanges**çağrılırken **DataRowState** 'in nasıl geçirileceğini gösterir.  
+ Şemayı ve yalnızca **eklenen**, **değiştirilen**veya **silinen** satırları temsil eden verileri içeren bir <xref:System.Data.DataSet.GetChanges%2A> **veri kümesinin** kopyasını oluşturmak için, **veri kümesinin**yöntemini kullanın. **GetChanges 'ı çağırırken yalnızca**belirtilen satır durumundaki satırları döndürmek için **GetChanges** 'ı da kullanabilirsiniz. Aşağıdaki kod örneği, **GetChanges**çağrılırken **DataRowState** 'in nasıl geçirileceğini gösterir.  
   
 ```vb  
 ' Copy all changes.  
@@ -99,4 +99,4 @@ foreach (DataRow copyRow in copyRows)
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

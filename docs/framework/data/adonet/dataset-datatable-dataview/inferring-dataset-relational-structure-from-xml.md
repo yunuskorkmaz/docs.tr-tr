@@ -2,12 +2,12 @@
 title: XML’den DataSet İlişkisel Yapısını Çıkarma
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 9b1932807058777a532457c99efc49f3ddfdf4ae
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1c8325d7ed52fea7397a7b5aa8744bdfa90b2c6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204810"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785324"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>XML’den DataSet İlişkisel Yapısını Çıkarma
 Öğesinin <xref:System.Data.DataSet> ilişkisel yapısı veya şeması tablo, sütun, kısıtlama ve ilişkilerinden oluşur. XML <xref:System.Data.DataSet> 'den yükleme yaparken, şema önceden tanımlanmış olabilir veya yüklenen XML 'den açık ya da çıkarım aracılığıyla oluşturulabilir. XML 'den bir <xref:System.Data.DataSet> öğesinin şemasını ve içeriğini yükleme hakkında daha fazla bilgi için, bkz. xml 'den [veri kümesi yükleme](loading-a-dataset-from-xml.md) ve [XML 'den veri kümesi şema bilgilerini yükleme](loading-dataset-schema-information-from-xml.md).  
@@ -49,4 +49,4 @@ ms.locfileid: "70204810"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

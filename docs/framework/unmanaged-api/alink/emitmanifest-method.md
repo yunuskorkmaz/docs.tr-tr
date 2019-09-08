@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91dc4cb7d64d49d1e95c0c8eb79a29736559d842
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742091"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777344"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest Yöntemi
-Son bildirim yayar. Diğer tüm dosyalar ve tüm ayarları sonra bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmanız gerekmez.  
+Son bildirimi yayar. Diğer tüm dosyaları içeri aktardıktan sonra ve tüm seçenekleri ayarlayarak bu yöntemi çağırın. İlişkisiz modüller için bu yöntemi çağırmayın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -39,22 +39,22 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parametreler  
  `AssemblyID`  
- Derleme kimliği.  
+ Derlemenin KIMLIĞI.  
   
  `pdwReserveSize`  
- Alınan derleme dosyasında ayrılacak boyutu alır [StrongNameSignatureSize işlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md).  
+ [Strongnametabeturesize işlevinden](../strong-naming/strongnamesignaturesize-function.md)alınan derleme dosyasında ayrılacak boyutu alır.  
   
  `ptkManifest`  
- İsteğe bağlı olarak, derleme bildirimi belirteci alır.  
+ İsteğe bağlı olarak, derleme bildirimi belirtecini alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

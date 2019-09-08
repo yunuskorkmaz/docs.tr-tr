@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: fc338b176ee0b20800b83febe05ed2fe695cecb0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3891cae272d93c2bb1ba8929a40fbdb8c332765c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949821"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785643"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
 Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için kullanılır. Bu sonuçlar doğrudan işlenirler, gerektiğinde kullanıcıya sunulmak <xref:System.Data.DataSet> üzere, birden fazla kaynaktaki verilerle birlikte veya katmanlar arasında uzaktan bir şekilde yerleştirilir. .NET Framework veri sağlayıcıları hafif, veri kaynağı ve kod arasında en az bir katman oluşturarak, işlevselliği ödün vermeden performansı artırır.  
@@ -54,12 +54,12 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
 > [!NOTE]
 > ODBC için .NET Framework Veri Sağlayıcısı, OLE DB için .NET Framework Veri Sağlayıcısı benzer bir mimariye sahiptir; Örneğin, bir ODBC hizmet bileşenine çağrı yapılır.  
   
- ![Veri sağlayıcıları](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
+ ![Veri sağlayıcıları](./media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 SQL Server için .NET Framework Veri Sağlayıcısı ve Veri Sağlayıcısı için .NET Framework OLE DB karşılaştırması  
   
  SQL Server sınıfları için .NET Framework veri sağlayıcısı <xref:System.Data.SqlClient> ad alanında bulunur.  
   
- SQL Server için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework SQL Server Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden veya <xref:System.Transactions>işlem ayrıntılarını alır. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ SQL Server için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework SQL Server Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden veya <xref:System.Transactions>işlem ayrıntılarını alır. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Aşağıdaki kod örneği, uygulamalarınıza nasıl `System.Data.SqlClient` ad alanı ekleneceğini gösterir.  
   
@@ -72,7 +72,7 @@ using System.Data.SqlClient;
 ```  
   
 ## <a name="net-framework-data-provider-for-ole-db"></a>OLE DB için .NET Framework Veri Sağlayıcısı  
- OLE DB (OleDb) için .NET Framework Veri Sağlayıcısı, veri erişimini etkinleştirmek için COM birlikte çalışma aracılığıyla yerel OLE DB kullanır. OLE DB için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework OLE DB Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ OLE DB (OleDb) için .NET Framework Veri Sağlayıcısı, veri erişimini etkinleştirmek için COM birlikte çalışma aracılığıyla yerel OLE DB kullanır. OLE DB için .NET Framework Veri Sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için .NET Framework OLE DB Veri Sağlayıcısı, varsayılan olarak bir işlemde otomatik olarak aşağı listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Aşağıdaki tabloda, ADO.NET ile test edilmiş sağlayıcılar gösterilmektedir.  
   
@@ -100,7 +100,7 @@ using System.Data.OleDb;
 ```  
   
 ## <a name="net-framework-data-provider-for-odbc"></a>ODBC için .NET Framework Veri Sağlayıcısı  
- ODBC için .NET Framework Veri Sağlayıcısı (ODBC), veri erişimini etkinleştirmek için yerel ODBC Sürücü Yöneticisi 'Ni (DM) kullanır. ODBC veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için, varsayılan olarak, ODBC veri sağlayıcısı bir işlem içinde otomatik olarak listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ ODBC için .NET Framework Veri Sağlayıcısı (ODBC), veri erişimini etkinleştirmek için yerel ODBC Sürücü Yöneticisi 'Ni (DM) kullanır. ODBC veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Dağıtılmış işlemler için, varsayılan olarak, ODBC veri sağlayıcısı bir işlem içinde otomatik olarak listeler ve Windows Bileşen hizmetlerinden işlem ayrıntılarını edinir. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Aşağıdaki tabloda, ADO.NET ile sınanan ODBC sürücüleri gösterilmektedir.  
   
@@ -126,7 +126,7 @@ using System.Data.Odbc;
 > ODBC için .NET Framework Veri Sağlayıcısı, MDAC 2,6 veya sonraki bir sürümü gerektirir ve MDAC 2,8 SP1 önerilir. MDAC 2,8 SP1 'i [veri erişimi ve depolama Geliştirici Merkezi '](https://go.microsoft.com/fwlink/?linkid=4173)nden indirebilirsiniz.  
   
 ## <a name="net-framework-data-provider-for-oracle"></a>Oracle için .NET Framework Veri Sağlayıcısı  
- Oracle (OracleClient) için .NET Framework Veri Sağlayıcısı Oracle istemci bağlantı yazılımı aracılığıyla Oracle veri kaynaklarına veri erişimi sağlar. Veri sağlayıcısı, Oracle istemci yazılımı sürümü 8.1.7 veya sonraki bir sürümü destekler. Veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
+ Oracle (OracleClient) için .NET Framework Veri Sağlayıcısı Oracle istemci bağlantı yazılımı aracılığıyla Oracle veri kaynaklarına veri erişimi sağlar. Veri sağlayıcısı, Oracle istemci yazılımı sürümü 8.1.7 veya sonraki bir sürümü destekler. Veri sağlayıcısı hem yerel hem de dağıtılmış işlemleri destekler. Daha fazla bilgi için bkz. [işlemler ve eşzamanlılık](transactions-and-concurrency.md).  
   
  Oracle için .NET Framework Veri Sağlayıcısı, bir Oracle veri kaynağına bağlanabilmeniz için sistemde Oracle istemci yazılımı (sürüm 8.1.7 veya sonraki bir sürüm) gerektirir.  
   
@@ -159,6 +159,5 @@ using System.Data.OracleClient;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET’e Genel Bakış](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET’te Veri Alma ve Değiştirme](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)
+- [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)

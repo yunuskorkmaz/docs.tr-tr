@@ -2,32 +2,32 @@
 title: Kullanıcı Tanımlı İşlevler
 ms.date: 03/30/2017
 ms.assetid: 3304c9b2-5c7a-4a95-9d45-4f260dcb606e
-ms.openlocfilehash: 54faca27e3f70283144f902e531e2a08e45bae3b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40697da4fe678668f8f7ecda86abebf40da7b973
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742706"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792297"
 ---
 # <a name="user-defined-functions"></a>Kullanıcı Tanımlı İşlevler
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yöntemleri, kullanıcı tanımlı işlevleri temsil etmek için nesne modelinde kullanır. Uygulayarak işlevleri belirlediğiniz yöntemleri <xref:System.Data.Linq.Mapping.FunctionAttribute> özniteliği ve gerekli olduğu durumlarda <xref:System.Data.Linq.Mapping.ParameterAttribute> özniteliği. Daha fazla bilgi için [LINQ to SQL nesne modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Kullanıcı tanımlı işlevleri göstermek için nesne modelinizdeki yöntemleri kullanır. <xref:System.Data.Linq.Mapping.FunctionAttribute> Özniteliği ve gereken <xref:System.Data.Linq.Mapping.ParameterAttribute> yerlerde özniteliği uygulayarak yöntemleri işlev olarak belirlersiniz. Daha fazla bilgi için bkz. [LINQ to SQL nesne modeli](the-linq-to-sql-object-model.md).  
   
- Önlemek için bir <xref:System.InvalidOperationException>, kullanıcı tanımlı içindeki işlevler [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aşağıdaki biçimlerden birinde olmalıdır:  
+ <xref:System.InvalidOperationException>' I önlemek için, içindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Kullanıcı tanımlı işlevlerin aşağıdaki biçimlerden birinde olması gerekir:  
   
-- Doğru eşleme özniteliklere sahip bir yöntem çağrısının sarmalanmış işlev. Daha fazla bilgi için [öznitelik tabanlı eşleme](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+- Doğru eşleme özniteliklerine sahip bir yöntem çağrısı olarak Sarmalanan bir işlev. Daha fazla bilgi için bkz. [öznitelik tabanlı eşleme](attribute-based-mapping.md).  
   
-- Özel bir statik SQL yöntemi [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
+- Öğesine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]özgü statik bir SQL yöntemi.  
   
 - .NET Framework yöntemi tarafından desteklenen bir işlev.  
   
- Bu bölümdeki konular, form ve kendinize kod yazma, uygulamanız bu yöntemleri çağırmak nasıl gösterir. Visual Studio kullanan geliştiricilerin genellikle kullanıcı tanımlı işlevleri eşlemek için Nesne İlişkisel Tasarımcısı'nı kullanırsınız.  
+ Bu bölümdeki konularda, kodu kendiniz yazarsanız uygulamanızda bu yöntemlerin nasıl ayarlanacağı ve çağrılacağını gösterilmektedir. Visual Studio kullanan geliştiriciler genellikle Kullanıcı tanımlı işlevleri eşlemek için Nesne İlişkisel Tasarımcısı kullanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Skaler değerli kullanıcı tanımlı işlevler kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-scalar-valued-user-defined-functions.md)  
- Skaler değerler döndüren bir işlev uygulanacağını açıklar.  
+ [Nasıl yapılır: Skalar değerli Kullanıcı tanımlı Işlevler kullanma](how-to-use-scalar-valued-user-defined-functions.md)  
+ Skaler değerler döndüren bir işlevin nasıl uygulanacağını açıklar.  
   
- [Nasıl yapılır: Tablo değerli kullanıcı tanımlı işlevler kullanma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-table-valued-user-defined-functions.md)  
- Tablo değerleri döndüren bir işlev uygulamak açıklar.  
+ [Nasıl yapılır: Tablo değerli Kullanıcı tanımlı Işlevleri kullanma](how-to-use-table-valued-user-defined-functions.md)  
+ Tablo değerlerini döndüren bir işlevin nasıl uygulanacağını açıklar.  
   
- [Nasıl yapılır: Kullanıcı tanımlı satır içi işlevleri çağırma](../../../../../../docs/framework/data/adonet/sql/linq/how-to-call-user-defined-functions-inline.md)  
- Satır içi çağrısı yapıldığında, İşlevler ve yürütme farklılıkları satır içi çağrı yapmak açıklar.
+ [Nasıl yapılır: Kullanıcı tanımlı Işlevleri satır Içi çağırın](how-to-call-user-defined-functions-inline.md)  
+ İşlev için satır içi çağrıların ve çağrının satır içi yapıldığında yürütme farklılıklarının nasıl yapılacağını açıklar.
