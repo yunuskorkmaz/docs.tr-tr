@@ -2,24 +2,24 @@
 title: SQL Server'da XML Verileri
 ms.date: 03/30/2017
 ms.assetid: 9849d319-f518-4e3d-a7cd-f8fdcaaa1d4d
-ms.openlocfilehash: 75e5f24b0532a1d0da2cfcd4bdc39658db3cee35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f2a7035806e89fdb9df3039cd4d09ff842c1221
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758015"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780642"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server'da XML Verileri
-SQL Server, .NET Framework içinde SQLXML işlevini gösterir. Geliştiriciler, bir SQL Server örneğinden XML verilerine erişim, verilerini işleme .NET Framework ortamına verileri toplayın ve güncelleştirmeleri SQL Server'a geri göndermek uygulamalar yazabilirsiniz. XML verilerini çeşitli şekillerde veri depolama da dahil olmak üzere SQL Server ve parametre değerlerini olarak veri almak için kullanılabilir. **SqlXml** .NET Framework sınıf bir XML sütununda SQL Server içinde depolanan verilerle çalışmak için istemci tarafı desteği sağlar. Daha fazla bilgi için "SQLXML yönetilen sınıflar" SQL Server Books Online'a bakın.  
+SQL Server, .NET Framework içindeki SQLXML işlevlerini gösterir. Geliştiriciler bir SQL Server örneğinden XML verilerine erişen uygulamalar yazabilir, verileri .NET Framework ortama getirebilir, verileri işleyebilir ve güncelleştirmeleri SQL Server geri gönderebilir. XML verileri, veri depolama ve veri alma için parametre değerleri dahil olmak üzere SQL Server çeşitli şekillerde kullanılabilir. .NET Framework **sqlxml** sınıfı, SQL Server IÇINDEKI bir XML sütununda depolanan verilerle çalışmaya yönelik istemci tarafı desteği sağlar. Daha fazla bilgi için SQL Server Books Online 'da "SQLXML yönetilen sınıflar" bölümüne bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SQL XML Sütun Değerleri](../../../../../docs/framework/data/adonet/sql/sql-xml-column-values.md)  
- Alma ve SQL Server'dan alınan XML verileriyle çalışma gösterir.  
+ [SQL XML Sütun Değerleri](sql-xml-column-values.md)  
+ SQL Server alınan XML verilerinin nasıl alınacağını ve bunlarla nasıl çalışılacağını gösterir.  
   
- [Parametre Olarak XML Değerleri Belirtme](../../../../../docs/framework/data/adonet/sql/specifying-xml-values-as-parameters.md)  
- Bir komuta bir parametre olarak XML veri geçirilecek gösterilmiştir.  
+ [Parametre Olarak XML Değerleri Belirtme](specifying-xml-values-as-parameters.md)  
+ XML verilerinin bir komuta parametre olarak nasıl geçirileceğini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server ve ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server ve ADO.NET](index.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

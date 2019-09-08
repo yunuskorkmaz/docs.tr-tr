@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e66196e2bd2cb326ca3f5badc67bcf8d81e5fc3c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774590"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799167"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob Yapısı
-, İkili biçimde bir ortak/özel anahtar çifti ortak anahtarını temsil eder.  
+Ortak/özel anahtar çiftinin ortak anahtarını ikili biçimde temsil eder.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -41,24 +41,24 @@ typedef struct {
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|`SigAlgId`|İmza algoritması için olan tanımlayıcıyla (tür `ALG_ID`, WinCrypt.h içinde tanımlandığı şekilde) ortak anahtarın.|  
-|`HashAlgId`|Karma algoritması için olan tanımlayıcıyla (tür `ALG_ID`, WinCrypt.h içinde tanımlandığı şekilde) ortak anahtarın.|  
+|`SigAlgId`|Ortak anahtarın imza algoritması için tanımlayıcı ( `ALG_ID`Örneğin, Wincrypt. h içinde tanımlanmıştır).|  
+|`HashAlgId`|Ortak anahtarın karma algoritmasının (Wincrypt. h `ALG_ID`içinde tanımlanan türü) tanımlayıcı.|  
 |`cbPublicKey`|Anahtarın bayt cinsinden uzunluğu.|  
-|`PublicKey`|CryptoAPI tarafından verilen biçim anahtar değerini içeren bir değişken uzunluklu bayt dizisi.|  
+|`PublicKey`|CryptoAPI tarafından döndürülen biçimdeki anahtar değerini içeren değişken uzunlukta bir bayt dizisi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- `PublicKeyBlob` Yapısı tarafından kullanılan [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md), bir ortak/özel anahtar çifti ortak anahtarını temsil etmek için İşlevler ve diğerleri tanımlayıcı ad.  
+ Yapı, [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)ve ortak/özel anahtar çiftinin ortak anahtarını temsil eden diğer tanımlayıcı ad işlevleri tarafından kullanılır. `PublicKeyBlob`  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [StrongNameGetPublicKey İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [StrongNameSignatureGeneration İşlevi](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+- [StrongNameGetPublicKey İşlevi](strongnamegetpublickey-function.md)
+- [StrongNameSignatureGeneration İşlevi](strongnamesignaturegeneration-function.md)

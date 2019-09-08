@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7be346f1c92c877932957787b0747515c144752
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76d341aca7c96e5932a1fc155ccaee17ce6585da
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741541"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777006"
 ---
 # <a name="setassemblyfile-method"></a>SetAssemblyFile Yöntemi
-Oluşturulacak derlemenin adını atar. İlişkisiz modülleri üretirken amaçla kullanılamaz.  
+Oluşturulacak derlemenin adını atar. İlişkisiz modüller üretilirken kullanılamaz.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,22 +42,22 @@ HRESULT SetAssemblyFile(
  Bildirim dosyasının tam adı.  
   
  `pEmitter`  
- İşaretçi [Imetadataemit arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) arabirimi.  
+ [Imetadatayayma arabirim](../metadata/imetadataemit-interface.md) arabirimine yönelik işaretçi.  
   
  `afFlags`  
- Bayrakları sınıfında tanımlandığı gibi [AssemblyFlags numaralandırması](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).  
+ [AssemblyFlags numaralandırmasında](../metadata/assemblyflags-enumeration.md)tanımlanan bayraklar.  
   
  `pAssemblyID`  
- Oluşturulan derleme kimliği için işaretçi.  
+ Elde edilen derlemenin KIMLIĞI işaretçisi.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir.  
+ ALink. h gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

@@ -2,27 +2,27 @@
 title: 'Nasıl yapılır: Veritabanı Adları Belirtme'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0daf754edf624410e0ea725acd6c266ccb7828dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037576"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781582"
 ---
 # <a name="how-to-specify-database-names"></a>Nasıl yapılır: Veritabanı Adları Belirtme
-Kullanım <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliği bir <xref:System.Data.Linq.Mapping.DatabaseAttribute> bir ad tarafından bağlantı sağlanamadığında bir veritabanının adını belirtmek için özniteliği.  
+Bağlantı tarafından bir ad sağlanmadığında bir veritabanının adını belirtmek için bir <xref:System.Data.Linq.Mapping.DatabaseAttribute> öznitelik üzerinde özelliğinikullanın.<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>  
   
- Kod örnekleri için bkz. <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
+ Kod örnekleri için bkz <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.  
   
 ### <a name="to-specify-the-name-of-the-database"></a>Veritabanının adını belirtmek için  
   
-1. Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute> sınıf bildiriminin veritabanı için özniteliği.  
+1. <xref:System.Data.Linq.Mapping.DatabaseAttribute> Özniteliğini veritabanına yönelik sınıf bildirimine ekleyin.  
   
-2. Ekleme <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özelliğini <xref:System.Data.Linq.Mapping.DatabaseAttribute> özniteliği.  
+2. <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> Özelliği<xref:System.Data.Linq.Mapping.DatabaseAttribute> özniteliğine ekleyin.  
   
-3. Ayarlama <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> özellik değeri, belirtmek istediğiniz adı.  
+3. <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> Özellik değerini, belirtmek istediğiniz ad olarak ayarlayın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ to SQL Nesne Modeli](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Nasıl yapılır: Kod Düzenleyicisi'ni kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [LINQ to SQL Nesne Modeli](the-linq-to-sql-object-model.md)
+- [Nasıl yapılır: Kod düzenleyicisini kullanarak varlık sınıflarını özelleştirme](how-to-customize-entity-classes-by-using-the-code-editor.md)

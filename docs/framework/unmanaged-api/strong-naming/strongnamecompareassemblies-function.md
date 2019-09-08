@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778728"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799157"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies İşlevi
-İki derlemenin yalnızca tanımlayıcı ad imzaları tarafından farklı olup olmadığını belirler.  
+İki derlemenin yalnızca kendi tanımlayıcı ad imzalarına göre farklı olup olmadığını belirler.  
   
- Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::strongnamecompareassemblies](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md) yöntemi yerine.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: StrongNameCompareAssemblies](../hosting/iclrstrongname-strongnamecompareassemblies-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -40,38 +40,38 @@ BOOLEAN StrongNameCompareAssemblies (
   
 ## <a name="parameters"></a>Parametreler  
  `wszAssembly1`  
- [in] İlk bütünleştirilmiş kod yolu.  
+ 'ndaki İlk derlemenin yolu.  
   
  `wszAssembly2`  
- [in] İkinci bütünleştirilmiş kod yolu.  
+ 'ndaki İkinci derlemenin yolu.  
   
  `pdwResult`  
- [out] Aşağıdaki değerlerden biri:  
+ dışı Aşağıdaki değerlerden biri:  
   
-- `SN_CMP_DIFFERENT` (0) - derlemeleri farklı veri içerdiğini belirtir.  
+- `SN_CMP_DIFFERENT`(0)-derlemelerin farklı veriler içerdiğini belirtir.  
   
-- `SN_CMP_IDENTICAL` (1) - derlemeleri tam olarak aynı kendi imzaları ve sağlama toplamı dahil olmak üzere olduğunu belirtir.  
+- `SN_CMP_IDENTICAL`(1)-derlemelerin imzaları ve sağlama toplamı dahil olmak üzere tam olarak aynı olduğunu belirtir.  
   
-- `SN_CMP_SIGONLY` (2) - derlemeler yalnızca imza ve sağlama toplamı farklı olduğunu belirtir.  
+- `SN_CMP_SIGONLY`(2)-derlemelerin yalnızca imzaya ve sağlama toplamına göre farklı olduğunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- `true` başarıyla tamamlandığında; Aksi takdirde, `false`.  
+ `true`başarıyla tamamlandığında; Aksi takdirde `false`,.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirteci oluşur.  
+ Bir derlemenin tanımlayıcı ad imzası, derlemenin metin adı, sürüm, kültür ve ortak anahtar belirtecinden oluşur.  
   
- Varsa `StrongNameCompareAssemblies` işlevi değil başarıyla tamamlanması, çağrı [Strongnameerrorınfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) oluşturulan son hatayı alması için işlevi.  
+ İşlev başarıyla tamamlanmazsa, en son oluşturulan hatayı almak için [StrongNameErrorInfo işlevini çağırın.](strongnameerrorinfo-function.md) `StrongNameCompareAssemblies`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [StrongNameCompareAssemblies Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameCompareAssemblies Yöntemi](../hosting/iclrstrongname-strongnamecompareassemblies-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

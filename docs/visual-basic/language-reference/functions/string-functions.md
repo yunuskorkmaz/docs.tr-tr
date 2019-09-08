@@ -4,15 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 4f6203fd6ae69315e7efaaa3c17bb4132bd175d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930854"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799328"
 ---
 # <a name="string-functions-visual-basic"></a>Dize İşlevleri (Visual Basic)
-Aşağıdaki tabloda dizeleri aramak ve işlemek için Visual Basic sağladığı işlevler listelenmektedir.  
+
+Aşağıdaki tablo, dizeleri aramak ve işlemek için <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> sınıfında Visual Basic sağladığı işlevleri listeler. Visual Basic iç işlevler olarak kabul edilebilir. diğer bir deyişle, örneklerin gösterdiği gibi, bunları bir sınıfın açık üyeleri olarak çağırmanız gerekmez. Ek yöntemler ve bazı durumlarda tamamlayıcı Yöntemler <xref:System.String?displayProperty=nameWithType> sınıfında kullanılabilir. 
   
 |.NET Framework yöntemi|Açıklama|  
 |---------------------------|-----------------|  
@@ -48,33 +49,38 @@ Aşağıdaki tabloda dizeleri aramak ve işlemek için Visual Basic sağladığ�
   
  Dizelerin, sisteminizin yerel ayarında (`Text`) veya karakterlerin`Binary`iç ikili gösterimlerine () göre belirlenen büyük/küçük harf duyarsız metin sıralama düzeni kullanılarak karşılaştırıldığını ayarlamak için [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) ifadesini kullanabilirsiniz. Varsayılan metin karşılaştırma yöntemi `Binary`.  
   
-## <a name="example"></a>Örnek  
- Bu örnek, `UCase` bir dizenin büyük bir sürümünü döndürmek için işlevini kullanır.  
+## <a name="example-ucase"></a>Örnek: UCase
+
+Bu örnek, `UCase` bir dizenin büyük bir sürümünü döndürmek için işlevini kullanır.  
+[!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
- [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
+## <a name="example-ltrim"></a>Örnek: LTrim
+
+Bu örnek, `LTrim` bir dize değişkeninden sondaki boşlukları park etmek için `RTrim` öndeki boşlukları ve işlevi eklemek için işlevini kullanır. Her iki boşluk `Trim` türünü de atmak için işlevini kullanır.  
   
-## <a name="example"></a>Örnek  
- Bu örnek, `LTrim` bir dize değişkeninden sondaki boşlukları park etmek için `RTrim` öndeki boşlukları ve işlevi eklemek için işlevini kullanır. Her iki boşluk `Trim` türünü de atmak için işlevini kullanır.  
+[!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
- [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
+## <a name="example-mid"></a>Örnek: Orta
+
+Bu örnek, `Mid` bir dizeden belirtilen sayıda karakteri döndürmek için işlevini kullanır.  
+
+[!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+
+## <a name="example-len"></a>Örnek: Tepe
+
+Bu örnek, `Len` bir dizedeki karakter sayısını döndürmek için kullanır.  
   
-## <a name="example"></a>Örnek  
- Bu örnek, `Mid` bir dizeden belirtilen sayıda karakteri döndürmek için işlevini kullanır.  
+[!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
- [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
+## <a name="example-instr"></a>Örnek: InStr
+
+Bu örnek, `InStr` bir dizenin diğeri içindeki ilk oluşumunun konumunu döndürmek için işlevini kullanır.  
   
-## <a name="example"></a>Örnek  
- Bu örnek, `Len` bir dizedeki karakter sayısını döndürmek için kullanır.  
+[!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
- [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
-  
-## <a name="example"></a>Örnek  
- Bu örnek, `InStr` bir dizenin diğeri içindeki ilk oluşumunun konumunu döndürmek için işlevini kullanır.  
-  
- [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
-  
-## <a name="example"></a>Örnek  
- Bu örnek, `Format` her iki `String` biçimi ve Kullanıcı tanımlı biçimleri kullanarak değerleri biçimlendirmek için işlevinin çeşitli kullanımlarını gösterir. Tarih ayırıcısı (`/`), zaman ayırıcısı (`:`) ve ı/PM göstergeleri (`t` ve `tt`) için, sisteminiz tarafından görünen gerçek biçimli çıktı, kodun kullandığı yerel ayar ayarlarına bağlıdır. Geliştirme ortamında saat ve tarihler görüntülendiğinde, kod yerel ayarının kısa saat biçimi ve kısa tarih biçimi kullanılır.  
+## <a name="example-format"></a>Örnek: Biçimi
+
+Bu örnek, `Format` her iki `String` biçimi ve Kullanıcı tanımlı biçimleri kullanarak değerleri biçimlendirmek için işlevinin çeşitli kullanımlarını gösterir. Tarih ayırıcısı (`/`), zaman ayırıcısı (`:`) ve ı/PM göstergeleri (`t` ve `tt`) için, sisteminiz tarafından görünen gerçek biçimli çıktı, kodun kullandığı yerel ayar ayarlarına bağlıdır. Geliştirme ortamında saat ve tarihler görüntülendiğinde, kod yerel ayarının kısa saat biçimi ve kısa tarih biçimi kullanılır.  
   
 > [!NOTE]
 > 24 saatlik bir saat kullanan yerel ayarlarda, ı/PM göstergeleri (`t` ve `tt`) hiçbir şey görüntülemez.  
@@ -86,3 +92,4 @@ Aşağıdaki tabloda dizeleri aramak ve işlemek için Visual Basic sağladığ�
 - [Anahtar Sözcükler](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic Çalışma Süresi Kitaplık Üyeleri](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Dize Düzenleme Özeti](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [System. String sınıf yöntemleri]<xref:System.String#methods?displayProperty=nameWithType>

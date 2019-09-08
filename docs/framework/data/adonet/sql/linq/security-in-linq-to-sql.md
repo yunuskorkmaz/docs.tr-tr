@@ -2,38 +2,38 @@
 title: LINQ to SQL’de Güvenlik
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-ms.openlocfilehash: c07d8c6a22326397a21219ddd660a44f9282ece0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f1ebf2f72fbfe3b27b9fbfd41f0dd65c70103620
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616122"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781191"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL’de Güvenlik
-Bir veritabanına bağlanırken her zaman güvenlik riskleri bulunur. LINQ to SQL SQL Server'daki verilerle çalışmak için bazı yeni yollar içerebilir ancak herhangi bir ek güvenlik mekanizması sağlamaz.  
+Bir veritabanına bağlandığınızda güvenlik riskleri her zaman vardır. LINQ to SQL SQL Server verilerle çalışmanın bazı yeni yollarını içerebilse de, hiçbir ek güvenlik mekanizması sağlamaz.  
   
-## <a name="access-control-and-authentication"></a>Erişim denetimi ve kimlik doğrulaması  
- LINQ to SQL kendi kullanıcı modeli veya kimlik doğrulama mekanizmaları yok. SQL Server güvenliği, veritabanı, veritabanı tablolarını, görünümlerini ve, nesne modeli için eşlenmiş saklı yordamlar erişimi denetlemek için kullanın. Kullanıcılar için gereken en düşük erişim ve güçlü parolalar için kullanıcı kimlik doğrulaması gerektirir.  
+## <a name="access-control-and-authentication"></a>Access Control ve kimlik doğrulaması  
+ LINQ to SQL kendi Kullanıcı modeline veya kimlik doğrulama mekanizmalarına sahip değildir. Nesne modelinize eşlenen veritabanı, veritabanı tabloları, görünümler ve saklı yordamlara erişimi denetlemek için SQL Server güvenliği kullanın. Kullanıcılara en düşük düzeyde gerekli erişimi verin ve Kullanıcı kimlik doğrulaması için güçlü parolalar gerektirir.  
   
 ## <a name="mapping-and-schema-information"></a>Eşleme ve şema bilgileri  
- Nesne modeli veya dış eşleme dosyasında SQL-CLR tür eşlemesi ve veritabanı şema bilgileri dosya sistemindeki tüm bu dosyalara erişimi için kullanılabilir. Şema bilgileri nesne modeli veya dış eşleme dosyası erişebilen tüm kullanılabilir olacağını varsayalım. Şema bilgileri daha yaygın erişimi engellemek için kaynak dosyaları ve eşleme dosyalarını korumak için dosya güvenlik mekanizmaları kullanın.  
+ Nesne modelinizdeki veya dış eşleme dosyanızdaki SQL-CLR türü eşleme ve veritabanı şeması bilgileri, dosya sistemindeki dosyalara tüm erişim için kullanılabilir. Şema bilgilerinin, nesne modeline veya dış eşleme dosyasına erişebilen tüm kullanıcılar için kullanılabilir olacağını varsayın. Şema bilgilerine daha geniş kapsamlı erişimi engellemek için, kaynak dosyaları ve eşleme dosyalarını güvenli hale getirmek için dosya güvenliği mekanizmalarını kullanın.  
   
 ## <a name="connection-strings"></a>Bağlantı Dizeleri  
- Bağlantı dizelerini parolaları kullanmanızı mümkün olduğunca kaçınılmalıdır. Yalnızca bir bağlantı dizesi kendi güvenlik riski oluşturur, ancak bağlantı dizesini de düz metin olarak nesne modeli ya da dış eşleme dosyası Nesne İlişkisel Tasarımcısı veya SQLMetal komut satırı aracını kullanırken eklenebilir. (Bu bağlantı dizesinde yer alıyorsa) nesne modeli veya dış eşleme dosyası dosya sistemi üzerinden erişimi olan herkes bağlantı parola görebilirsiniz.  
+ Bağlantı dizelerinde parolaların kullanılması mümkün olduğunda kaçınılmalıdır. Yalnızca bir bağlantı dizesi olan bir güvenlik riski yoktur, ancak Nesne İlişkisel Tasarımcısı veya SQLMetal komut satırı aracı kullanılırken bağlantı dizesi nesne modeline veya dış eşleme dosyasına şifresiz metin olarak da eklenebilir. Dosya sistemi aracılığıyla nesne modeline veya dış eşleme dosyasına erişimi olan herkes bağlantı parolasını görebilir (bağlantı dizesinde yer alıyorsa).  
   
- Bu riskleri azaltmak için tümleşik güvenlik SQL Server ile güvenilir bir bağlantı kurmak için kullanın. Bu yaklaşımı kullanarak bağlantı dizesinde parola depolamak gerekmez. Daha fazla bilgi için [SQL Server güvenliği](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ Bu riskleri en aza indirmek için tümleşik güvenlik ' i kullanarak SQL Server güvenilir bir bağlantı oluşturun. Bu yaklaşımı kullanarak bağlantı dizesinde bir parola depolamanız gerekmez. Daha fazla bilgi için bkz. [SQL Server Security](../sql-server-security.md).  
   
- Bağlantı dizesinde tümleşik güvenlik olmaması durumunda, bir düz metin parola gerekli olacaktır. Artan düzende risk, bağlantı dizenizi güvenli hale getirmek için en iyi yolu aşağıdaki gibidir:  
+ Tümleşik güvenlik yokluğunda, bağlantı dizesinde şifresiz metin bir parola gerekecektir. Bağlantı dizenizi daha yüksek bir şekilde korumak için en iyi yol, risk sırasına göre aşağıdaki gibidir:  
   
-- Tümleşik Güvenlik'i kullanın.  
+- Tümleşik güvenlik kullanın.  
   
-- Bağlantı dizeleri parolalarla güvenliğini sağlama ve bağlantı dizeleri etrafında geçirme en aza indirmek.  
+- Bağlantı dizelerini parolalarla güvenli hale getirin ve bağlantı dizeleri etrafında geçiş yapın.  
   
-- Kullanım bir <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> süresi maruz kalma riskinizi sınırlar bu yana bir bağlantı dizesi yerine sınıfı. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> sınıfı kullanarak oluşturulabilir bir <xref:System.Data.SqlClient.SqlConnection>.  
+- Etkilenme süresini <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> sınırladığından bağlantı dizesi yerine bir sınıf kullanın. LINQ to SQL <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> sınıfı, <xref:System.Data.SqlClient.SqlConnection>kullanılarak oluşturulabilir.  
   
-- Yaşam süreleri en aza indirmek ve noktaya tüm bağlantı dizeleri için dokunun.  
+- Tüm bağlantı dizeleri için yaşam sürelerini ve dokunma noktalarını en aza indirin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Sık Sorulan Sorular](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Arka Plan Bilgileri](background-information.md)
+- [Sık Sorulan Sorular](frequently-asked-questions.md)

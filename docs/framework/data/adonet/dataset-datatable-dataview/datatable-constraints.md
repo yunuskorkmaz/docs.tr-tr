@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
-ms.openlocfilehash: 68b99e834428261d59c5fb27277b24eb0f6e77e4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 3f3055b11f0e682ae5a9578289e30dc2716343fe
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205053"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785395"
 ---
 # <a name="datatable-constraints"></a>DataTable Kısıtlamaları
 Verilerin bütünlüğünü sağlamak için, bir <xref:System.Data.DataTable>içindeki veriler üzerinde kısıtlama zorlamak üzere kısıtlamaları kullanabilirsiniz. Kısıtlama bir sütuna veya ilgili sütunlara uygulanan bir otomatik kuraldır ve bir satırın değeri bir değer değiştiğinde eylem kursu belirler. `System.Data.DataSet.EnforceConstraints` Özelliği true<xref:System.Data.DataSet> olduğunda kısıtlamalar uygulanır. `EnforceConstraints` Özelliği ayarlamayı gösteren bir kod örneği için <xref:System.Data.DataSet.EnforceConstraints%2A> bkz. başvuru konusu.  
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [DataTable Şema Tanımı](datatable-schema-definition.md)
 - [DataSets, DataTables ve DataViews](index.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

@@ -1,81 +1,81 @@
 ---
-title: Bir Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri Hızlı Başlangıç)
+title: Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başlangıç)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb7f1c97722b45a93c310fb8bcbdb42beece2553
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793477"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780534"
 ---
-# <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Bir Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri Hızlı Başlangıç)
+# <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başlangıç)
 
-Bu, WCF Veri Hizmetleri hızlı başlangıç ikinci görevdir. Bu görevde, Visual Studio'da WCF veri hizmetlerini başlatın ve isteğe bağlı olarak Web tarayıcısında akış okuma devre dışı bırakın. Ardından hizmet tanımı belgesi almak yanı sıra HTTP GET isteklerini sunulan kaynakları için bir Web tarayıcısı üzerinden göndererek veri hizmeti kaynaklarına erişim.
+Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu görevde, Visual Studio 'dan WCF Veri Hizmetleri başlatır ve isteğe bağlı olarak Web tarayıcısında akış okumayı devre dışı bırakabilirsiniz. Daha sonra, sunulan kaynaklara bir Web tarayıcısı aracılığıyla HTTP GET istekleri göndererek hizmet tanımı belgesini alır ve veri hizmeti kaynaklarına erişebilirsiniz.
 
 > [!NOTE]
-> Varsayılan olarak, Visual Studio otomatik-için bir bağlantı noktası numarası atar `localhost` bilgisayarınızda URI. Bu görev, bağlantı noktası numarası kullanır `12345` URI örneklerde. Visual Studio projenize bir özel bağlantı noktası numarasını ayarlama hakkında daha fazla bilgi için bkz. [veri hizmeti oluşturma](../../../../docs/framework/data/wcf/creating-the-data-service.md).
+> Varsayılan olarak, Visual Studio otomatik olarak bilgisayarınızdaki `localhost` URI 'ye bir bağlantı noktası numarası atar. Bu görev, URI örneklerde bağlantı `12345` noktası numarasını kullanır. Visual Studio projenizde belirli bir bağlantı noktası numarasının nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [veri hizmeti oluşturma](creating-the-data-service.md).
 
-## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer'ı kullanarak varsayılan hizmet belgesi istemek için
+## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer 'ı kullanarak varsayılan hizmet belgesini istemek için
 
-1. Internet Explorer'da gelen **Araçları** menüsünde **Internet Seçenekleri**, tıklayın **içerik** sekmesinde **ayarları**, temizleyin **Akış görüntülenirken kapatma**.
+1. Internet Explorer 'da, **Araçlar** menüsünde **Internet seçenekleri**' ni seçin, **içerik** sekmesine tıklayın, **Ayarlar**' a tıklayın ve **akış görüntülemeyi aç**' ı temizleyin.
 
-     Bu, okuma akışı devre dışı bırakıldığından emin sağlar. Bu işlev devre dışı bırakabilirim, Web tarayıcısı akışı ham XML verileri yerine XML olarak döndürülen AtomPub kodlanmış belge değerlendirir.
+     Bu, akış okuma 'nın devre dışı olduğundan emin olmanızı sağlar. Bu işlevi devre dışı bırakmayın, Web tarayıcısı ham XML verilerini görüntülemek yerine döndürülen AtomPub kodlu belgeyi bir XML akışı olarak değerlendirir.
 
     > [!NOTE]
-    > Ham XML verileri olarak akışa tarayıcınızın görüntüleyemiyorsanız yine de sayfası için kaynak kodu olarak akış görüntüleyebilir olmalıdır.
+    > Tarayıcınız akışı ham XML verileri olarak görüntüleyemediği takdirde sayfanın kaynak kodu olarak akışı yine de görüntüleyebilmelisiniz.
 
-2. Visual Studio'da **F5** anahtar uygulamada hata ayıklamaya başlayın.
+2. Visual Studio 'da uygulamada hata ayıklamayı başlatmak için **F5** tuşuna basın.
 
-3. Yerel bilgisayarda Web tarayıcısını açın. Adres çubuğunda, aşağıdaki URI girin:
+3. Yerel bilgisayarda bir Web tarayıcısı açın. Adres çubuğuna aşağıdaki URI 'yi girin:
 
     ```
     http://localhost:12345/northwind.svc
     ```
 
-     Bu, bu veri hizmeti tarafından kullanıma sunulan varlık kümeleri listesini içeren varsayılan hizmet belgesini döndürür.
+     Bu, bu veri hizmetinin açığa çıkarılan varlık kümelerinin bir listesini içeren varsayılan hizmet belgesini döndürür.
 
-## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Varlık erişmek için bir Web tarayıcısından kaynakları ayarlayın
+## <a name="to-access-entity-set-resources-from-a-web-browser"></a>Bir Web tarayıcısından varlık kümesi kaynaklarına erişmek için
 
-1. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+1. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers
     ```
 
-     Bu, Northwind örnek veritabanındaki tüm müşteriler bir dizi döndürür.
+     Bu, Northwind örnek veritabanındaki tüm müşterilerin bir kümesini döndürür.
 
-2. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+2. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
     ```
 
-     Belirli bir müşteri için bu varlık örneğini döndürür `ALFKI`.
+     Bu, `ALFKI`belirli müşteri için bir varlık örneği döndürür.
 
-3. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+3. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
     ```
 
-     Bu müşteriler ve siparişler bir dizi belirli bir müşteri için tüm siparişleri döndürmek için arasındaki ilişkiyi erişir `ALFKI`.
+     Bu, müşteriler ve siparişler arasındaki ilişkiyi, belirli bir müşteri `ALFKI`için tüm siparişlerin bir kümesini döndürecek şekilde inceler.
 
-4. Web tarayıcınızın adres çubuğuna aşağıdaki URI girin:
+4. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
     ```
 
-     Bu belirli bir müşteriye ait siparişler filtreler `ALFKI` böylece belirli bir sırada sağlanan üzerinde göre döndürülen `OrderID` değeri.
+     Bu, belirtilen `OrderID` değere göre yalnızca belirli bir sipariş `ALFKI` döndürüldüğünden, belirli müşteriye ait olan siparişleri filtreler.
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
-WCF Veri Hizmetleri, tarayıcı veren HTTP GET istekleri için belirtilen kaynaklara ile bir Web tarayıcısından başarıyla eriştiğiniz. Bir Web tarayıcısı, isteği adresleme söz dizimi ile denemeler yapın ve sonuçları görüntülemek için kolay bir yol sağlar. Ancak, bir üretim veri hizmeti, bu yöntem tarafından genellikle erişilmez. Genellikle, uygulamaların veri hizmeti uygulaması aracılığıyla etkileşim kodu veya komut dosyası dili. Ardından, ortak dil çalışma zamanı (CLR) nesneleri değilmiş gibi veri hizmeti kaynaklarına erişmek için istemci kitaplıkları kullanan bir istemci uygulaması oluşturacak:
+Bir Web tarayıcısından, belirtilen kaynaklara HTTP GET istekleri veren tarayıcıyla WCF Veri Hizmetleri başarıyla eriştiyseniz. Web tarayıcısı, isteklerin adreslenmesi ve sonuçları görüntülemek için kolay bir yol sağlar. Ancak, bu yöntem tarafından genel olarak bir üretim veri hizmetine erişilmez. Uygulamalar genellikle uygulama kodu veya komut dosyası dilleri aracılığıyla veri hizmetiyle etkileşime geçer. Daha sonra, veri hizmeti kaynaklarına erişmek için, ortak dil çalışma zamanı (CLR) nesneleri gibi istemci kitaplıklarını kullanan bir istemci uygulaması oluşturacaksınız:
 
 > [!div class="nextstepaction"]
-> [.NET Framework İstemci Uygulaması Oluşturma](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
+> [.NET Framework İstemci Uygulaması Oluşturma](creating-the-dotnet-client-application-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmeti Kaynaklarına Erişme](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
+- [Veri Hizmeti Kaynaklarına Erişme](accessing-data-service-resources-wcf-data-services.md)

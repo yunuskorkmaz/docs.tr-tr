@@ -2,17 +2,17 @@
 title: SQL-CLR Özel Tür Eşlemeleri
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 5aff9a78349cbf9443c5b663a41d7c13a109e625
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8901998533ec14e733ea072dd1a69b465e596328
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945054"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781078"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR Özel Tür Eşlemeleri
 SQL Server ile ortak dil çalışma zamanı (CLR) arasında tür eşlemesi Nesne İlişkisel Tasarımcısı, SQLMetal komut satırı aracını (O/R Designer) kullandığınızda otomatik olarak belirtilir.  
   
- Özelleştirilmiş eşleme gerçekleştirilmeyen bu araçlar, [SQL-CLR türü eşlemesinde](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)açıklandığı gibi varsayılan tür eşlemelerini atar. Eşlemeleri bu varsayılandan farklı şekilde yazmak istiyorsanız, tür eşlemelerini özelleştirme yapmanız gerekir.  
+ Özelleştirilmiş eşleme gerçekleştirilmeyen bu araçlar, [SQL-CLR türü eşlemesinde](sql-clr-type-mapping.md)açıklandığı gibi varsayılan tür eşlemelerini atar. Eşlemeleri bu varsayılandan farklı şekilde yazmak istiyorsanız, tür eşlemelerini özelleştirme yapmanız gerekir.  
   
  Tür eşlemelerini özelleştirirken, bir ara DBML dosyasında değişiklik yapmak önerilen yaklaşım olur. Daha sonra, kod oluşturduğunuzda ve dosyaları SQLMetal veya O/R Tasarımcısı ile eşleştirdikten sonra özelleştirilmiş DBML dosyanız kullanılmalıdır.  
   
@@ -24,7 +24,7 @@ SQL Server ile ortak dil çalışma zamanı (CLR) arasında tür eşlemesi Nesne
  Tür eşlemelerini SQLMetal veya O/R Tasarımcısı ile özelleştirmek için önce bir DBML dosyası oluşturun. Ardından, kod dosyası veya eşleme dosyası oluşturmadan önce, istenen tür eşlemelerini belirlemek için DBML dosyasını değiştirin. SqlMetal ile, tür eşleme özelleştirmelerinizi yapmak için DBML `DbType` dosyasındaki `Type` ve özniteliklerini el ile değiştirmeniz gerekir. O/R Tasarımcısı ile değişikliklerinizi tasarımcı içinde yapabilirsiniz. O/R tasarımcısını kullanma hakkında daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 > [!NOTE]
-> Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir. Herhangi bir özelleştirme yapmadan önce [SQL-CLR tür eşlemesindeki](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) tür eşleme çalışma zamanı davranış matrisini dikkatle gözden geçirin.  
+> Bazı tür eşlemelerde veya veritabanına çevrilirken taşma veya veri kaybı özel durumları oluşabilir. Herhangi bir özelleştirme yapmadan önce [SQL-CLR tür eşlemesindeki](sql-clr-type-mapping.md) tür eşleme çalışma zamanı davranış matrisini dikkatle gözden geçirin.  
   
  Tür eşleme özelleştirmelerinizin SQLMetal veya O/R Tasarımcısı tarafından tanınması için, kod dosyanızı veya dış eşleme dosyanızı oluştururken özel DBML dosyanızın yoluyla bu araçların sağlandığından emin olmanız gerekir. Tür eşleme özelleştirmesi için gerekli olmasa da, kod dosyanızdaki tür eşleme bilgilerinizi her zaman ayırmanız ve ek dış tür eşleme dosyasını oluşturmanız önerilir. Bunun yapılması, kod dosyasının yeniden derlenmesi gerekmeden bazı esneklikten ayrılacaktır.  
   
@@ -33,5 +33,5 @@ SQL Server ile ortak dil çalışma zamanı (CLR) arasında tür eşlemesi Nesne
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL-CLR Tür Eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [LINQ to SQL’de Kod Oluşturma](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+- [SQL-CLR Tür Eşlemesi](sql-clr-type-mapping.md)
+- [LINQ to SQL’de Kod Oluşturma](code-generation-in-linq-to-sql.md)

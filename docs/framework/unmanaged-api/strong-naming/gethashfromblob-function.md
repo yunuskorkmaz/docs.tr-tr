@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636859"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799236"
 ---
 # <a name="gethashfromblob-function"></a>GetHashFromBlob İşlevi
 
-Derleme karması belirtilen karma algoritması kullanılarak belirtilen bellek adresinde alır.
+Belirtilen karma algoritmasını kullanarak, belirtilen bellek adresindeki derlemenin karmasını alır.
 
-Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::gethashfromblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) yöntemi yerine.
+Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) yöntemini kullanın.
 
 ## <a name="syntax"></a>Sözdizimi
 
@@ -45,32 +45,32 @@ HRESULT GetHashFromBlob (
 ## <a name="parameters"></a>Parametreler
 
 `pbBlob`\
-[in] Adres karma hale getirilecek bellek bloğu için bir işaretçi.
+'ndaki Karma hale getirilen bellek bloğunun adresine yönelik bir işaretçi.
 
 `cchBlob`\
-[in] Uzunluğu, bayt cinsinden bellek bloğu.
+'ndaki Bellek bloğunun bayt cinsinden uzunluğu.
 
 `piHashAlg`\
-[out içinde] Sabit karma algoritmasını belirtir. Sıfır varsayılan algoritma için kullanın.
+[in, out] Karma algoritmayı belirten bir sabit. Varsayılan algoritma için sıfır kullanın.
 
 `pbHash`\
-[out] Döndürülen karma arabellek.
+dışı Döndürülen karma arabelleği.
 
 `cchHash`\
-[in] İstenen en büyük boyutunu `pbHash`.
+'ndaki İstenen en büyük boyut `pbHash`.
 
 `pchHash`\
-[out] Döndürülen bayt cinsinden boyutu `pbHash`.
+dışı Döndürülen `pbHash`bayt cinsinden boyutu.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).
+**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
-**Üst bilgi:** StrongName.h
+**Üst bilgi** StrongName. h
 
-**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil
+**Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir
 
-**.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

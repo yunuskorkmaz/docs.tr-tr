@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 59c6732dacf225097e22957ebe6536308a2798d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 316ccb19ca9e384be97a83e992af46934702aa0c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938442"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780682"
 ---
 # <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
 Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satırını, verilerin işlenmesine yönelik birden çok gidiş dönüş veya özel sunucu tarafı mantığı gerekmeden SQL Server için kolay bir yol sağlar. Bir istemci uygulamasındaki veri satırlarını kapsüllemek ve verileri sunucuya tek parametreli bir komutta göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları, daha sonra Transact-SQL kullanılarak üzerinde çalışabilecek bir tablo değişkeninde depolanır.  
@@ -274,8 +274,8 @@ insertCommand.ExecuteNonQuery()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [Komutlar ve Parametreler](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter Parametreleri](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
-- [ADO.NET’te SQL Server Veri İşlemleri](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Parametreleri ve Parametre Veri Türlerini Yapılandırma](../configuring-parameters-and-parameter-data-types.md)
+- [Komutlar ve Parametreler](../commands-and-parameters.md)
+- [DataAdapter Parametreleri](../dataadapter-parameters.md)
+- [ADO.NET’te SQL Server Veri İşlemleri](sql-server-data-operations.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

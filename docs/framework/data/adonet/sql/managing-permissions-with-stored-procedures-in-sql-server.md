@@ -2,67 +2,67 @@
 title: SQL Server'da Saklı Yordam İzinlerini Yönetme
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 1a057ed88c792dfdeb89227d6cf1957f74b6d7a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623420"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780959"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>SQL Server'da Saklı Yordam İzinlerini Yönetme
-Bir yöntem çok satırlı defense veritabanınızı geçici olarak oluşturma, saklı yordamları ve kullanıcı tanımlı işlevleri kullanarak tüm veri erişim uygulamaktır. Tablolar gibi temel nesneler için tüm izinleri reddetme ve saklı yordamları yürütme izinlerini iptal etme. Bu, geçici verileri ve veritabanı nesnelerinizi bir güvenlik çevresi etkili bir şekilde oluşturur.  
+Veritabanınızda birden çok savunma hattı oluşturmanın bir yöntemi, saklı yordamları veya Kullanıcı tanımlı işlevleri kullanarak tüm veri erişimini uygulamaktır. Tablolar gibi temeldeki nesneler için tüm izinleri iptal eder veya reddeder ve saklı yordamlarda yürütme izinleri verir. Bu, veri ve veritabanı nesneleriniz etrafında etkin bir güvenlik çevresi oluşturur.  
   
 ## <a name="stored-procedure-benefits"></a>Saklı yordam avantajları  
  Saklı yordamlar aşağıdaki avantajlara sahiptir:  
   
-- Kullanıcı verileri ve nesneleri geliştiricileri ve Veritabanı yöneticileri amaçladığınız şekilde erişebilmesi için veri mantığını ve iş kuralları kapsüllenmiş.  
+- Veri mantığı ve iş kuralları, kullanıcıların veri ve nesnelere yalnızca geliştiricilerin ve veritabanı yöneticilerinin tarafından istenen şekilde erişebilmeleri için kapsüllenebilir.  
   
-- Tüm kullanıcı girişini doğrulama parametreli saklı yordamları, SQL ekleme saldırılarına karşı korunmanıza kullanılabilir. Dinamik SQL kullanırsanız, Komutlarınızın Parametreleştirme emin olun ve hiçbir zaman doğrudan bir sorgu dizesi parametresi değerleri içerir.  
+- Tüm Kullanıcı girişlerini doğrulayan parametreli saklı yordamlar, SQL ekleme saldırılarını sağlamak için kullanılabilir. Dinamik SQL kullanıyorsanız, komutlarınızı parametreleştirilediğinizden ve parametre değerlerini hiçbir şekilde doğrudan bir sorgu dizesine eklemeyin.  
   
-- Geçici sorgular ve veri değişiklikleri izin verilmiyor. Bu, kullanıcıların kötü amaçlı olarak veya yanlışlıkla veri yok etme veya sunucu veya ağ performansı bozacak sorgular yürütme engeller.  
+- Geçici sorgulara ve veri değişikliklerine izin verilmez. Bu, kullanıcıların kötü amaçlı veya istenmeden veri yok etmesini ya da sunucu veya ağ üzerindeki performansa zarar veren sorguları yürütmesini engeller.  
   
-- Yordam kodunda hataları doğrudan istemci uygulamaları için geçirilen olmadan işlenebilir. Bu, hata iletileri algılama saldırısında yardımcı döndürülmesini önler. Hataları günlüğe kaydetmek ve bunları sunucuda işlemesi.  
+- Hatalar, doğrudan istemci uygulamalarına geçirilmeden yordam kodunda işlenebilir. Bu, bir yoklama saldırısında yardımcı olabilecek hata iletilerinin döndürülmesini önler. Hataları günlüğe kaydedin ve sunucuda işleyin.  
   
-- Saklı yordamlar kez yazılmış ve birçok uygulama tarafından erişilebilir.  
+- Saklı yordamlar bir kez yazılabilir ve birçok uygulama tarafından erişilebilir.  
   
-- İstemci uygulamaları, temel alınan veri yapıları hakkında bir şey bilmek gerekmez. Saklı yordam kodu değişiklikleri parametre listeleri etkilemez sürece, istemci uygulamalarında bir değişikliğe gerek kalmadan değiştirilebilir ya da veri türleri döndürdü.  
+- İstemci uygulamaların, temel alınan veri yapıları hakkında herhangi bir şeyi bilmeleri gerekmez. Saklı yordam kodu, değişiklikler parametre listelerini veya döndürülen veri türlerini etkilemediği sürece istemci uygulamalarında değişiklik gerektirmeden değiştirilebilir.  
   
-- Saklı yordamlar, bir yordam çağrısı birden fazla işlemi birleştirerek ağ trafiğini azaltabilir.  
+- Saklı yordamlar, birden çok işlemi tek bir yordam çağrısında birleştirerek ağ trafiğini azaltabilir.  
   
 ## <a name="stored-procedure-execution"></a>Saklı yordam yürütme  
- Yordamları faydalanın-kullanıcılar, veritabanı nesneleri erişmek için açık izniniz gerekmez. böylece veri erişim sağlamak için zincirleme sahipliği depolanır. Birbirine sıralı olarak erişen nesneler aynı kullanıcı tarafından sahip olunan bir sahiplik zinciri bulunmaktadır. Örneğin, diğer saklı yordamlara bir saklı yordam çağırabilir veya bir saklı yordam birden çok tablo erişebilirsiniz. Yürütme zincirindeki tüm nesnelerin aynı bir sahip ve ardından SQL Server yalnızca arayan için yürütme izni denetler, arayanın izinlerin diğer nesneler üzerinde değil. Bu nedenle saklı yordamlar yalnızca yürütme izinleri vermeniz gerekir; iptal etmek ya da temel alınan tablolar üzerindeki tüm izinleri reddetme.  
+ Saklı yordamlar, kullanıcıların veritabanına erişim sağlamak için sahiplik zincirinden yararlanır ve böylece kullanıcılar veritabanı nesnelerine erişim için açık izne sahip olmaları gerekmez. Bir sahiplik zinciri birbirlerine her ardışık olarak erişen nesneler aynı kullanıcıya ait olduğunda oluşur. Örneğin, saklı yordam diğer saklı yordamları çağırabilir veya saklı yordam birden fazla tabloya erişebilir. Yürütme zincirindeki tüm nesneler aynı sahibe sahip ise SQL Server, yalnızca arayan için yürütme iznini denetler, çağıranın diğer nesneler üzerindeki izinleri değildir. Bu nedenle, yalnızca saklı yordamlarda yürütme izinleri vermeniz gerekir; temel alınan tablolardaki tüm izinleri iptal edebilir veya reddedebilirsiniz.  
   
 ## <a name="best-practices"></a>En İyi Yöntemler  
- Saklı yordamlar yalnızca yazma yeterince uygulamanızın güvenliğini sağlamak için yeterli değildir. Ayrıca, aşağıdaki olası güvenlik açıkları düşünmeniz gerekir.  
+ Saklı yordamları yazmak, uygulamanızı yeterince güvenli hale getirmek için yeterli değildir. Ayrıca, aşağıdaki olası güvenlik boşluklarını de göz önünde bulundurmanız gerekir.  
   
-- Veritabanı rolleri verilerine erişebilir olmasını istediğiniz için saklı yordamları ÇALIŞTIRMA izinlerini verin.  
+- Verilere erişebilmek istediğiniz veritabanı rollerinin saklı yordamları üzerinde yürütme izinleri verin.  
   
-- İptal etmek ya da temel alınan tablolar için tüm roller ve kullanıcılar veritabanındaki tüm izinleri reddetme dahil olmak üzere `public` rol. Tüm kullanıcılar, gelen genel izinleri devralır. Bu nedenle izinleri reddetme `public` anlamına gelir, yalnızca sahipleri ve `sysadmin` üye erişimi vardır; diğer tüm kullanıcıların izinleri, diğer rol üyelikleri devralınacak mümkün olmayacaktır.  
+- `public` Rol dahil olmak üzere veritabanındaki tüm roller ve kullanıcılar için temel alınan tabloların tüm izinlerini iptal edin veya reddedin. Tüm kullanıcılar izinleri herkese devralınır. Bu nedenle, izinleri `public` reddetme, yalnızca sahiplerin ve `sysadmin` üyelerin erişimi olduğu anlamına gelir; diğer tüm kullanıcılar diğer rollerdeki üyelikle izinleri almayacaktır.  
   
-- Kullanıcıların rollerini veya eklemeyin `sysadmin` veya `db_owner` rolleri. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelere erişebilir.  
+- `sysadmin` Veya`db_owner` rollerine Kullanıcı veya rol eklemeyin. Sistem yöneticileri ve veritabanı sahipleri, tüm veritabanı nesnelerine erişebilir.  
   
-- Devre dışı `guest` hesabı. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Konuk hesabı yeni veritabanları varsayılan olarak devre dışıdır.  
+- `guest` Hesabı devre dışı bırakın. Bu, anonim kullanıcıların veritabanına bağlanmasını engeller. Yeni veritabanlarında Konuk hesabı varsayılan olarak devre dışıdır.  
   
-- Hata işleme ve günlük hatalar uygulayın.  
+- Hata işleme ve günlük hatalarını uygulayın.  
   
-- Tüm kullanıcı girişini doğrulama parametreli saklı yordamlar oluşturun. Tüm kullanıcı girişi, güvenilmeyen olarak kabul eder.  
+- Tüm Kullanıcı girişlerini doğrulayan parametreli saklı yordamlar oluşturun. Tüm Kullanıcı girişlerini güvenilir değil olarak değerlendirin.  
   
-- Dinamik SQL yapmaktan kaçının kesinlikle gerekli. Bir dize değeri sınırlandırmak ve sınırlayıcı giriş dizesindeki tüm oluşumlarıyla kaçış için Transact-SQL QUOTENAME() işlevini kullanın.  
+- Mutlak gerekmedikçe dinamik SQL kullanmaktan kaçının. Transact-SQL QUOTENAME () işlevini kullanarak bir dize değerini sınırlandırın ve giriş dizesindeki sınırlandırıcının herhangi bir oluşumunu kaçış.  
   
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Saklı yordamları](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](https://go.microsoft.com/fwlink/?LinkId=98234) SQL Server Çevrimiçi Kitapları'nda|Konular, saklı yordamlar oluşturma ve SQL ekleme nasıl çalıştığını açıklar.|  
+|SQL Server Books Online 'da [saklı yordamlar](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) ve [SQL ekleme](https://go.microsoft.com/fwlink/?LinkId=98234)|Konular, saklı yordamların nasıl oluşturulduğunu ve SQL ekleme 'nin nasıl çalıştığını açıklamaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Güvenliğine Genel Bakış](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server'da Uygulama Güvenliği Senaryoları](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server’da Secure Dynamic SQL Yazma](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [SQL Server'da Saklı Yordam İmzalama](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)
-- [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [Saklı Yordamlarla Verileri Değiştirme](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Uygulamalarının Güvenliğini Sağlama](../securing-ado-net-applications.md)
+- [SQL Server Güvenliğine Genel Bakış](overview-of-sql-server-security.md)
+- [SQL Server'da Uygulama Güvenliği Senaryoları](application-security-scenarios-in-sql-server.md)
+- [SQL Server’da Secure Dynamic SQL Yazma](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server'da Saklı Yordam İmzalama](signing-stored-procedures-in-sql-server.md)
+- [SQL Server'da Kimliğe Bürünme İzinlerini Özelleştirme](customizing-permissions-with-impersonation-in-sql-server.md)
+- [Saklı Yordamlarla Verileri Değiştirme](../modifying-data-with-stored-procedures.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

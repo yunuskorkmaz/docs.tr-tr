@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 5b0a27eae744fb22c87634aaf6a0274a9825d981
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892087"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776467"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Ortak Veri Türleri (Yönetilmeyen API Başvurusu)
 Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework için yönetilmeyen API 'ler tarafından kullanılan basit veri türlerini listeler. Bu veri türleri genellikle C/C++ ilkel veri türleri için diğer adlardır. Genellikle, bu veri türlerinin değerleri opaktır; diğer bir deyişle, bunlar belirli bir işlev veya yöntem tarafından, değişiklik yapılmadan diğer işlevlere veya yöntemlere geçirilebilmeleri için döndürülür.  
@@ -38,9 +38,9 @@ Bu konu, C/C++ `typedef` deyimleri tarafından tanımlanan .NET Framework için 
 |ProcessID|`typedef UINT_PTR ProcessID;`|CorProf. h|Yönetilen bir işlemin tanımlayıcısı.|  
 |ReJitId|`typedef UINT_PTR ReJITID;`|CorProf. h|Bir jderlenen işlevinin tanımlayıcısı.|  
 |SIZE_T|`typedef ULONG_PTR SIZE_T;`|CorSym. h|64 bitlik bir bellek adresine yönelik bir işaretçi.|
-|TASKID|`typedef UINT64 TASKID;`|CorDebug. h, mscoree. h|[ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) örneğinin tanımlayıcısı.|  
+|TASKID|`typedef UINT64 TASKID;`|CorDebug. h, mscoree. h|[ICLRTask](./hosting/iclrtask-interface.md) örneğinin tanımlayıcısı.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|CorProf. h|Yönetilen bir iş parçacığının tanımlayıcısı.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönetilmeyen API Başvurusu](../../../docs/framework/unmanaged-api/index.md)
+- [Yönetilmeyen API Başvurusu](index.md)

@@ -2,46 +2,46 @@
 title: Programlama Kılavuzu (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: d454448771e14b1a540b5a066683bd4c747991ec
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: c971f0a92829df40a14631aaff353a268f277f11
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504782"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783197"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>Programlama Kılavuzu (LINQ to DataSet)
-Bu bölümde kavramsal bilgiler ve örnekler için LINQ ile programlama için veri kümesi sağlar.  
+Bu bölümde LINQ to DataSet programlamaya yönelik kavramsal bilgiler ve örnekler sağlanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [LINQ to DataSet Sorguları](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
- DataSet sorgularında LINQ yazma hakkında bilgi sağlar.  
+ [LINQ to DataSet Sorguları](queries-in-linq-to-dataset.md)  
+ LINQ to DataSet sorgularının nasıl yazılacağı hakkında bilgi sağlar.  
   
- [DataSet’leri Sorgulama](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- Açıklayan nasıl sorgu <xref:System.Data.DataSet> nesneleri.  
+ [DataSet’leri Sorgulama](querying-datasets-linq-to-dataset.md)  
+ Nesnelerin nasıl sorgulanılacağını <xref:System.Data.DataSet> açıklar.  
   
- [DataRow Karşılaştırma](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
- Nasıl kullanılacağını açıklar <xref:System.Data.DataRowComparer> veri satırları Karşılaştırılacak nesne.  
+ [DataRow Karşılaştırma](comparing-datarows-linq-to-dataset.md)  
+ Veri satırlarını karşılaştırmak için <xref:System.Data.DataRowComparer> nesnesinin nasıl kullanılacağını açıklar.  
   
- [Sorgudan DataTable Oluşturma](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- Oluşturma hakkında bilgi sağlayan bir <xref:System.Data.DataTable> bir LINQ to DataSet sorgu kullanarak gelen <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> yöntemi.  
+ [Sorgudan DataTable Oluşturma](creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ Yöntemini kullanarak bir LINQ to DataSet sorgusundan <xref:System.Data.DataTable> oluşturma hakkında bilgi sağlar. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>  
   
- [Nasıl yapılır: CopyToDataTable uygulamak\<T > Burada T genel türünün DataRow olmadığı](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
- Özel bir uygulamayı açıklar `CopyToDataTable<T>` yöntemi burada genel parametre T türünde değil <xref:System.Data.DataRow>.  
+ [Nasıl yapılır: Genel tür t 'in\<bir DataRow olmadığı > CopyToDataTable T ' i uygulayın](implement-copytodatatable-where-type-not-a-datarow.md)  
+ Genel parametre T türünde `CopyToDataTable<T>` <xref:System.Data.DataRow>olmayan bir özel yöntemin nasıl uygulanacağını açıklar.  
   
- [Genel Alan ve SetField Yöntemleri](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
- Genel hakkında bilgi sağlar <xref:System.Data.DataRowExtensions.Field%2A> ve <xref:System.Data.DataRowExtensions.SetField%2A> yöntemleri.  
+ [Genel Alan ve SetField Yöntemleri](generic-field-and-setfield-methods-linq-to-dataset.md)  
+ Genel <xref:System.Data.DataRowExtensions.Field%2A> ve<xref:System.Data.DataRowExtensions.SetField%2A> yöntemler hakkında bilgi sağlar.  
   
- [Veri Bağlama ve LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
- Veri bağlamasını kullanma açıklanmaktadır <xref:System.Data.DataView> nesne.  
+ [Veri Bağlama ve LINQ to DataSet](data-binding-and-linq-to-dataset.md)  
+ <xref:System.Data.DataView> Nesnesini kullanarak veri bağlamayı açıklar.  
   
- [LINQ to DataSet Sorgularında Hata Ayıklama](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
- Hata ayıklama ve LINQ sorguları DataSet sorun giderme hakkında bilgi sağlar.  
+ [LINQ to DataSet Sorgularında Hata Ayıklama](debugging-linq-to-dataset-queries.md)  
+ Hata ayıklama ve sorgu sorunlarını giderme hakkında bilgi sağlar LINQ to DataSet.  
   
- [Güvenlik](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
- LINQ to DataSet güvenlik konularını açıklar.  
+ [Güvenlik](security-linq-to-dataset.md)  
+ LINQ to DataSet güvenlik sorunlarını açıklar.  
   
- [LINQ to DataSet Örnekleri](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- Kullanan bir sorgu örnekleri sağlar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] işleçleri.  
+ [LINQ to DataSet Örnekleri](linq-to-dataset-examples.md)  
+ [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] İşleçlerini kullanan sorgu örnekleri sağlar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Data.DataRowComparer>  

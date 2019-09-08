@@ -5,48 +5,48 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
-ms.openlocfilehash: a25186f6283f01ef56b1c684c4a43b9a60fb6d64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a21d5bbffdb1a78d3062929a1ca384a750af59a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619675"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781161"
 ---
 # <a name="remote-vs-local-execution"></a>Uzak ve Yerel Yürütme Karşılaştırması
-Sorgularınızın ya da uzaktan yürütün karar verebilirsiniz (diğer bir deyişle, veritabanı altyapısı veritabanı sorgusu çalıştırır) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yerel önbelleğe karşı sorgu yürütülür).  
+Sorgularınızı uzaktan yürütmeye karar verebilirsiniz (yani, veritabanı altyapısı sorguyu veritabanına karşı yürütür) veya yerel olarak ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorguyu yerel bir önbellekte yürütür).  
   
 ## <a name="remote-execution"></a>Uzaktan Yürütme  
- Şu sorguyu inceleyin:  
+ Aşağıdaki sorguyu göz önünde bulundurun:  
   
  [!code-csharp[DLinqQueryConcepts#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#7)]
  [!code-vb[DLinqQueryConcepts#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#7)]  
   
- Veritabanınızı gösteren binlerce satır siparişler varsa, bunların tüm küçük bir alt işleme alınması istemezsiniz. İçinde [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Data.Linq.EntitySet%601> sınıfının Implements <xref:System.Linq.IQueryable> arabirimi. Bu yaklaşım sorgularını uzaktan yürütüldüğünden emin olur. Bu teknik akıştan iki önemli avantajları:  
+ Veritabanınızda binlerce sipariş satırı varsa, küçük bir alt kümeyi işlemeye kadar tümünü almak istemezsiniz. ' De [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], <xref:System.Linq.IQueryable> sınıfı arabirimini uygular. <xref:System.Data.Linq.EntitySet%601> Bu yaklaşım, bu tür sorguların uzaktan yürütülmesini sağlar. Bu teknikten iki önemli avantaj akışı:  
   
-- Gereksiz verileri alınamadı.  
+- Gereksiz veriler alınmadı.  
   
-- Veritabanı altyapısı tarafından çalıştırılan bir sorgu genellikle büyük verimli veritabanı dizinleri nedeniyle.  
+- Veritabanı altyapısı tarafından yürütülen bir sorgu, veritabanı dizinleri nedeniyle genellikle daha etkilidir.  
   
 ## <a name="local-execution"></a>Yerel Yürütme Karşılaştırması  
- Diğer durumlarda, ilişkili varlık kümesinin tamamını yerel önbellek üzerinde olmasını isteyebilirsiniz. Bu amaçla <xref:System.Data.Linq.EntitySet%601> sağlar <xref:System.Data.Linq.EntitySet%601.Load%2A> tüm üyelerini açıkça yüklemek için gereken yöntemini <xref:System.Data.Linq.EntitySet%601>.  
+ Diğer durumlarda, yerel önbellekte ilgili varlıkların tamamen kümesine sahip olmak isteyebilirsiniz. Bu amaçla <xref:System.Data.Linq.EntitySet%601> , tümüyelerini<xref:System.Data.Linq.EntitySet%601.Load%2A> açıkça yüklemek için yöntemini sağlar. <xref:System.Data.Linq.EntitySet%601>  
   
- Varsa bir <xref:System.Data.Linq.EntitySet%601> zaten yüklendiğinde sonraki sorgular yerel olarak çalıştırılır. Bu yaklaşım, iki şekilde yardımcı olur:  
+ <xref:System.Data.Linq.EntitySet%601> Zaten yüklüyse, sonraki sorgular yerel olarak yürütülür. Bu yaklaşım iki şekilde yardımcı olur:  
   
-- Tam bir set yerel olarak kullanılması gerekir ya da birden çok kez uzak sorguları ve ilişkili gecikme süreleri önleyebilirsiniz.  
+- Tamamlanma kümesinin yerel olarak veya birden çok kez kullanılması gerekiyorsa, uzak sorgulardan ve ilişkili gecikmelerin önüne kurtulabilirsiniz.  
   
-- Varlık eksiksiz bir varlık seri hale getirilebilir.  
+- Varlık, bir bütün varlık olarak seri hale getirilebilir.  
   
- Aşağıdaki kod parçası yerel yürütme gösterilmektedir elde edilebilir:  
+ Aşağıdaki kod parçası, yerel yürütmenin nasıl elde edilebilir olduğunu gösterir:  
   
  [!code-csharp[DLinqQueryConcepts#8](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#8)]
  [!code-vb[DLinqQueryConcepts#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#8)]  
   
 ## <a name="comparison"></a>Karşılaştırma  
- Bu iki özellik güçlü bir birleşim seçenekleri sağlar: büyük ve küçük koleksiyonlar için veya tam koleksiyon gerekmesi halinde yerel yürütme için uzaktan yürütme. Uzaktan yürütme aracılığıyla uygulama <xref:System.Linq.IQueryable>ve bellek içi karşı yerel yürütme <xref:System.Collections.Generic.IEnumerable%601> koleksiyonu. Yerel yürütme zorlamak için (diğer bir deyişle, <xref:System.Collections.Generic.IEnumerable%601>), bkz: [türü genel IEnumerable öğesine dönüştürme](../../../../../../docs/framework/data/adonet/sql/linq/convert-a-type-to-a-generic-ienumerable.md).  
+ Bu iki özellik, seçeneklerin güçlü bir birleşimini sağlar: büyük koleksiyonlar için uzaktan yürütme ve küçük koleksiyonlar için yerel yürütme ve tüm koleksiyonun gerekli olduğu durumlar. Uzaktan yürütmeyi, bellek <xref:System.Linq.IQueryable> <xref:System.Collections.Generic.IEnumerable%601> içi bir koleksiyon ile ve yerel yürütme aracılığıyla uyguırın. Yerel yürütmeyi zorlamak için (yani, <xref:System.Collections.Generic.IEnumerable%601>) bkz. [bir türü genel IEnumerable 'a dönüştürme](convert-a-type-to-a-generic-ienumerable.md).  
   
-### <a name="queries-against-unordered-sets"></a>Sırasız kümeleri sorguları  
- Uygulayan bir yerel koleksiyonu arasındaki önemli fark Not <xref:System.Collections.Generic.List%601> ve uzak sorguları karşı yürütülen sağlayan koleksiyonu *kümeleri sıralanmamış* ilişkisel bir veritabanındaki. <xref:System.Collections.Generic.List%601> Dizin değerlerinin kullananlar gibi yöntemler, genellikle bir sıralanmamış karşı uzak sorgu alınamıyor listesi semantiğini gerektirir. Bu nedenle, bu tür yöntemler dolaylı olarak yük <xref:System.Data.Linq.EntitySet%601> yerel yürütmeye olanak tanımak için.  
+### <a name="queries-against-unordered-sets"></a>Sırasız kümeler için sorgular  
+ ' İ uygulayan <xref:System.Collections.Generic.List%601> bir yerel koleksiyon ve ilişkisel bir veritabanındaki *sırasız kümeler* için yürütülen uzak sorgular sağlayan bir koleksiyon arasındaki önemli farkı unutmayın. <xref:System.Collections.Generic.List%601>Dizin değerlerini kullanan Yöntemler, genellikle sıralanmamış bir küme için uzak bir sorgu üzerinden elde edilemez liste semantiğini gerektirir. Bu nedenle, bu tür yöntemler yerel yürütmeye izin <xref:System.Data.Linq.EntitySet%601> vermek için öğesini örtülü olarak yükler.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Kavramları](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [Sorgu Kavramları](query-concepts.md)

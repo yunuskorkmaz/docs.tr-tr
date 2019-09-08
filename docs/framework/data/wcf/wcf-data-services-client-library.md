@@ -6,52 +6,52 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 545442b0086361c8ce8c0482801afc10b1fee96e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875205"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779676"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
-Herhangi bir uygulama ile etkileşim kurabilir bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-bir HTTP isteği ve işlem gönderirseniz, veri hizmeti tabanlı [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akış, bir veri hizmeti döndürür. Bu bir birlikte çalışabilirlik erişmenizi sağlayan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-tabanlı bir çok çeşitli Web özellikli uygulamalardan hizmetler. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kullandığınız zaman, daha zengin bir programlama deneyimi sağlayan istemci kütüphaneleri içerir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .NET Framework veya Silverlight tabanlı uygulamalardan akışları.  
+Herhangi bir uygulama, bir http [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]isteği gönderebileceği ve bir veri hizmetinin döndürdüğü [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı işlebiliyorsanız, tabanlı bir veri hizmetiyle etkileşime geçebilir. Bu birlikte çalışabilirlik, çok çeşitli [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]web özellikli uygulamalardan erişim tabanlı hizmetlere erişmenizi sağlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].NET Framework veya Silverlight tabanlı uygulamalardan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları kullanırken daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir.  
   
- İstemci Kitaplığı'nın iki ana sınıflardır <xref:System.Data.Services.Client.DataServiceContext> sınıfı ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfı. <xref:System.Data.Services.Client.DataServiceContext> Sınıfı belirtilen veri hizmeti karşı desteklenen işlemler kapsüller. Ancak [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Hizmetleri durum bilgisiz, içeriği değil. Bu nedenle, kullanabileceğiniz <xref:System.Data.Services.Client.DataServiceContext> değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşim arasında istemci durumunu korumak üzere sınıfı. Bu sınıf ayrıca kimlikleri yöneten ve değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceQuery%601> Sınıf özel varlık kümesinde bir sorgu temsil eder.  
+ İstemci kitaplığının <xref:System.Data.Services.Client.DataServiceContext> iki ana sınıfı sınıfı <xref:System.Data.Services.Client.DataServiceQuery%601> ve sınıfıdır. Sınıfı <xref:System.Data.Services.Client.DataServiceContext> , belirtilen bir veri hizmetine göre desteklenen işlemleri kapsüller. Hizmetler [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] durum bilgisiz olsa da bağlam değildir. Bu nedenle, değişiklik yönetimi gibi <xref:System.Data.Services.Client.DataServiceContext> özellikleri desteklemek için veri hizmeti ile etkileşimler arasında istemcideki durumu korumak için sınıfını kullanabilirsiniz. Bu sınıf Ayrıca kimlikleri yönetir ve değişiklikleri izler. Sınıfı <xref:System.Data.Services.Client.DataServiceQuery%601> , belirli bir varlık kümesine karşı bir sorguyu temsil eder.  
   
- Bu bölümde, erişim ve bir .NET Framework istemci uygulamasından verileri değiştirmek için istemci kitaplıkları kullanmayı açıklar. Nasıl kullanılacağı hakkında daha fazla bilgi için [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Silverlight tabanlı bir uygulama ile istemci Kitaplığı'na bakın [WCF Veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Diğer istemci kitaplıkları vardır ve kullanmasını sağlayan bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] diğer türde uygulamalar akış. Daha fazla bilgi için [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Bu bölümde, istemci kitaplıklarının bir .NET Framework istemci uygulamasına erişmek ve verileri değiştirmek için nasıl kullanılacağı açıklanmaktadır. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığını Silverlight tabanlı bir uygulamayla kullanma hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Diğer istemci kitaplıkları, bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışı diğer türlerde uygulamalarda kullanmanıza olanak sağlayan kullanılabilir. Daha fazla bilgi için bkz. [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri Hizmeti İstemci Kitaplığı Oluşturma](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- Bir istemci kitaplığı ve temel alan istemci veri hizmeti sınıfları oluşturma adımları anlatılmaktadır [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışları.  
+ [Veri Hizmeti İstemci Kitaplığı Oluşturma](generating-the-data-service-client-library-wcf-data-services.md)  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Akışlara dayalı istemci kitaplığı ve istemci veri hizmeti sınıflarının nasıl oluşturulacağını açıklar.  
   
- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
- .NET Framework tabanlı bir uygulamadan veri hizmeti istemci kitaplıklarını kullanarak sorgu açıklar.  
+ [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)  
+ İstemci kitaplıklarını kullanarak bir veri hizmetinin .NET Framework tabanlı bir uygulamadan nasıl sorgulanılacağını açıklar.  
   
- [Ertelenmiş İçerik Yükleme](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- İlk sorgu yanıtına dahil edilmeyen ek içerik yükleme işlemini açıklar.  
+ [Ertelenmiş İçerik Yükleme](loading-deferred-content-wcf-data-services.md)  
+ İlk sorgu yanıtında bulunmayan ek içeriğin nasıl yükleneceğini açıklar.  
   
- [Veri Hizmetini Güncelleştirme](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
- Oluşturabilir, değiştirebilir ve istemci kitaplıklarını kullanarak varlıkları ve ilişkileri silme işlemini açıklamaktadır.  
+ [Veri Hizmetini Güncelleştirme](updating-the-data-service-wcf-data-services.md)  
+ İstemci kitaplıklarını kullanarak varlıkları ve ilişkileri oluşturma, değiştirme ve silme işlemlerinin nasıl yapılacağını açıklar.  
   
- [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
- Zaman uyumsuz olarak bir veri hizmeti ile çalışmak için istemci kitaplıkları tarafından sağlanan özellikleri açıklar.  
+ [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)  
+ Zaman uyumsuz bir şekilde veri hizmetiyle çalışmak için istemci kitaplıkları tarafından sunulan tesislerin açıklar.  
   
- [Toplu İşlemler](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
- İstemci kitaplıkları kullanarak veri hizmetine tek bir toplu işlemde birden çok istek göndermek nasıl açıklar.  
+ [Toplu İşlemler](batching-operations-wcf-data-services.md)  
+ İstemci kitaplıklarını kullanarak tek bir toplu işte veri hizmetine birden çok isteğin nasıl gönderileceğini açıklar.  
   
- [Veriyi Denetimlere Bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
- Denetimlere bağlayabilirsiniz açıklar bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] veri hizmeti tarafından döndürülen akış.  
+ [Veriyi Denetimlere Bağlama](binding-data-to-controls-wcf-data-services.md)  
+ Denetimlerin bir veri hizmeti tarafından döndürülen bir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa nasıl bağlanacağını açıklar.  
   
- [Hizmet İşlemleri Çağırma](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
- Hizmet işlemlerini aramak üzere istemci kitaplığını kullanmayı açıklar.  
+ [Hizmet İşlemleri Çağırma](calling-service-operations-wcf-data-services.md)  
+ Hizmet işlemlerini çağırmak için istemci kitaplığının nasıl kullanılacağını açıklar.  
   
- [Veri Hizmeti Bağlamını Yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
- İstemci Kitaplığı'nın davranışının yönetimi için seçenekleri açıklar.  
+ [Veri Hizmeti Bağlamını Yönetme](managing-the-data-service-context-wcf-data-services.md)  
+ İstemci kitaplığı davranışlarını yönetme seçeneklerini açıklar.  
   
- [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
- Erişim ve veri akışı olarak veri hizmeti tarafından döndürülen ikili veri değişim açıklar.  
+ [İkili Verilerle Çalışma](working-with-binary-data-wcf-data-services.md)  
+ Veri hizmeti tarafından veri akışı olarak döndürülen ikili verilerin nasıl erişebileceğini ve değiştirileceği açıklanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetlerini Tanımlama](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [Başlarken](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [WCF Veri Hizmetlerini Tanımlama](defining-wcf-data-services.md)
+- [Başlarken](getting-started-with-wcf-data-services.md)

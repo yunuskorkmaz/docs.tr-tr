@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09ccf731f0494b6eda49f6a15d04970a723c473b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742061"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777353"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes Yöntemi
-Derleme düzeyi özel öznitelikleri alır.  
+Derleme düzeyi özel özniteliklerini alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -44,25 +44,25 @@ HRESULT EnumCustomAttributes(
  Numaralandırıcı tanıtıcısı.  
   
  `tkType`  
- Numaralandırılacak özniteliklerin türü. Kullanım `mdTokenNill` tüm öznitelikler için.  
+ Numaralandırılacak özniteliklerin türü. Tüm `mdTokenNill` öznitelikler için kullanın.  
   
  `rCustomValues`  
- Özel öznitelikler belirteçlerini alır.  
+ Özel öznitelik belirteçleri alır.  
   
  `cMax`  
- Boyutunu belirtir `rCustomValues` dizisi.  
+ `rCustomValues` Dizinin boyutunu belirtir.  
   
  `pcCustomValues`  
- İsteğe bağlı olarak belirteç değerlerin sayısını alır.  
+ İsteğe bağlı olarak belirteç değerleri sayısını alır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
  Yöntem başarılı olursa S_OK döndürür.  
   
 ## <a name="requirements"></a>Gereksinimler  
- ALink.h gerektirir  
+ ALink. h gerektirir  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [IALink Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 Arabirimi](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink Arabirimi](ialink-interface.md)
+- [IALink2 Arabirimi](ialink2-interface.md)
+- [ALink API](index.md)

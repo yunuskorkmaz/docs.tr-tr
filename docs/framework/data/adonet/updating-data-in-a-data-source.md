@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934127"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780619"
 ---
 # <a name="updating-data-in-a-data-source"></a>Bir Veri Kaynağındaki Verileri Güncelleştirme
-(Örneğin, INSERT, UPDATE veya DELETE) verileri değiştirme SQL deyimleri, satır döndürmeyen. Benzer şekilde, birçok saklı yordamlar, bir eylem gerçekleştirin ancak satır döndürmeyen. Satır döndürmeyen komutları yürütmek için oluşturun bir **komut** uygun SQL komut nesnesiyle ve **bağlantı**, gerekli dahil olmak üzere **parametreleri**. Komutu ile yürütme **ExecuteNonQuery** yöntemi **komut** nesne.  
+Verileri değiştiren SQL deyimleri (INSERT, UPDATE veya DELETE gibi) satır döndürmez. Benzer şekilde, birçok saklı yordam bir eylem yapar ancak satır döndürmez. Satırları döndürmeyen komutları yürütmek için, gerekli **Parametreler**dahil olmak üzere uygun SQL komutuyla ve bir **bağlantıyla**birlikte bir **komut** nesnesi oluşturun. **Komut nesnesinin** **ExecuteNonQuery** yöntemiyle komutunu yürütün.  
   
- **ExecuteNonQuery** yöntemi deyimi veya yürütülmesi saklı yordam tarafından etkilenen satır sayısını temsil eden bir tamsayı döndürür. Birden çok deyim yürütülür, döndürülen değer tüm yürütülen deyimleri tarafından etkilenen kayıtların toplamıdır.  
+ **ExecuteNonQuery** yöntemi, yürütülen deyimin veya saklı yordamın etkilediği satır sayısını temsil eden bir tamsayı döndürür. Birden çok deyim yürütülürse, döndürülen değer yürütülen tüm deyimlerden etkilenen kayıtların toplamıdır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneğinde bir veritabanı kullanarak bir kayıt eklemek için INSERT deyimi yürütür **ExecuteNonQuery**.  
+ Aşağıdaki kod örneği, **ExecuteNonQuery**kullanarak bir veritabanına kayıt eklemek IÇIN bir INSERT ifadesini yürütür.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- Aşağıdaki kod örneği örnek koda oluşturan saklı yordamı yürütür [katalog işlemleri gerçekleştirme](../../../../docs/framework/data/adonet/performing-catalog-operations.md). Hiçbir satır saklı yordam tarafından döndürülen şekilde **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordam giriş parametresi alır ve bir output parametresi ve dönüş değeri döndürür.  
+ Aşağıdaki kod örneği, [Katalog Işlemlerini gerçekleştirirken](performing-catalog-operations.md)örnek kod tarafından oluşturulan saklı yordamı yürütür. Saklı yordam tarafından hiçbir satır döndürüldüğünden, **ExecuteNonQuery** yöntemi kullanılır, ancak saklı yordam bir giriş parametresi alır ve bir çıkış parametresi ve bir dönüş değeri döndürür.  
   
- İçin <xref:System.Data.OleDb.OleDbCommand> nesnesi **ReturnValue** parametre eklenmelidir **parametreleri** koleksiyon ilk.  
+ Nesnesi için, önce **parametre koleksiyonuna** ReturnValue parametresi eklenmelidir. <xref:System.Data.OleDb.OleDbCommand>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -93,7 +93,7 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Verileri Değiştirmek için Komutları Kullanma](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Komutlar ve Parametreler](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Verileri Değiştirmek için Komutları Kullanma](using-commands-to-modify-data.md)
+- [Veri Kaynaklarını DataAdapters ile Güncelleştirme](updating-data-sources-with-dataadapters.md)
+- [Komutlar ve Parametreler](commands-and-parameters.md)
+- [ADO.NET’e Genel Bakış](ado-net-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 07c705b9daeeb043ef36f1e3272a3bf259a3c23e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 05e3cf25352e731d320061001f08a835cd520b15
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043888"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780922"
 ---
 # <a name="single-bulk-copy-operations"></a>Tekil Toplu Kopyalama İşlemleri
 
@@ -19,7 +19,7 @@ SQL Server toplu kopyalama işlemi gerçekleştirmeye yönelik en basit yaklaş�
 > [!NOTE]
 > Bir hata oluştuğunda toplu kopyalama işleminin tamamını veya bir kısmını geri almanız gerekiyorsa, yönetilen bir <xref:System.Data.SqlClient.SqlBulkCopy>işlem kullanabilir ya da mevcut bir işlem içinde toplu kopyalama işlemini gerçekleştirebilirsiniz. Ayrıca, bağlantı kayıtlı (örtük <xref:System.Transactions> veya açık) bir **System. Transactions** hareketiyle birlikte, **SqlBulkCopy** ile de çalışacaksınız.
 >
-> Daha fazla bilgi için bkz. [işlem ve toplu kopyalama işlemleri](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md).
+> Daha fazla bilgi için bkz. [işlem ve toplu kopyalama işlemleri](transaction-and-bulk-copy-operations.md).
 
 Toplu kopyalama işlemi gerçekleştirmeye yönelik genel adımlar şunlardır:
 
@@ -45,7 +45,7 @@ Toplu kopyalama işlemi gerçekleştirmeye yönelik genel adımlar şunlardır:
 Aşağıdaki konsol uygulaması, <xref:System.Data.SqlClient.SqlBulkCopy> sınıfını kullanarak nasıl veri yükleneceğini gösterir. Bu örnekte, <xref:System.Data.SqlClient.SqlDataReader> SQL Server **AdventureWorks** veritabanındaki **Production. Product** tablosundan aynı veritabanındaki benzer bir tabloya veri kopyalamak için kullanılır.
 
 > [!IMPORTANT]
-> Bu örnek, [toplu kopyalama örnek kurulumu](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)bölümünde açıklandığı gibi iş tablolarını oluşturmadığınız sürece çalıştırılmaz. Bu kod, yalnızca **SqlBulkCopy** kullanma sözdizimini göstermek için verilmiştir. Kaynak ve hedef tablolar aynı SQL Server örneğinde yer alıyorsa, verileri kopyalamak için Transact-SQL `INSERT … SELECT` ifadesinin kullanılması daha kolay ve hızlıdır.
+> Bu örnek, [toplu kopyalama örnek kurulumu](bulk-copy-example-setup.md)bölümünde açıklandığı gibi iş tablolarını oluşturmadığınız sürece çalıştırılmaz. Bu kod, yalnızca **SqlBulkCopy** kullanma sözdizimini göstermek için verilmiştir. Kaynak ve hedef tablolar aynı SQL Server örneğinde yer alıyorsa, verileri kopyalamak için Transact-SQL `INSERT … SELECT` ifadesinin kullanılması daha kolay ve hızlıdır.
 
 [!code-csharp[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/CS/source.cs#1)]
 [!code-vb[DataWorks BulkCopy.Single#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks BulkCopy.Single/VB/source.vb#1)]
@@ -84,5 +84,5 @@ command.ExecuteNonQuery();
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server’da Toplu Kopyalama İşlemleri](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server’da Toplu Kopyalama İşlemleri](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

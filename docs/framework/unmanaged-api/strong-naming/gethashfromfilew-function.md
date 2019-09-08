@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77b164cdec0dd224042e4de3265d14a4991d60ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd96b5acb22f63b6e06c981119186680d6593a79
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771894"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799190"
 ---
 # <a name="gethashfromfilew-function"></a>GetHashFromFileW İşlevi
-Unicode dizesi tarafından belirtilen dosyanın içeriğini üzerinden bir karma oluşturur.  
+Unicode dizesi tarafından belirtilen dosyanın içeriği üzerinde bir karma oluşturur.  
   
- Bu işlev kullanım dışı bırakıldı. Kullanım [Iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md) yöntemi yerine.  
+ Bu işlev kullanım dışı bırakıldı. Bunun yerine [ICLRStrongName:: GetHashFromFileW](../hosting/iclrstrongname-gethashfromfilew-method.md) yöntemini kullanın.  
   
 ## <a name="syntax"></a>Sözdizimi  
   
@@ -42,34 +42,34 @@ HRESULT GetHashFromFileW (
   
 ## <a name="parameters"></a>Parametreler  
  `wszFilePath`  
- [in] Karma dosyayı Unicode adı.  
+ 'ndaki Karma olacak dosyanın Unicode adı.  
   
  `piHashAlg`  
- [out içinde] Karma oluşturulurken kullanılacak algoritma. Geçerli algoritmaları Win32 CryptoAPI tarafından tanımlanmış izinlerdir. Varsa `piHashAlg` CALG_SHA 1 kullanılan varsayılan algoritma 0 olarak ayarlanır.  
+ [in, out] Karma oluşturulurken kullanılacak algoritma. Geçerli algoritmalar Win32 CryptoAPI tarafından tanımlı olanlardır. `piHashAlg` 0 olarak ayarlanırsa, varsayılan algoritma CALG_SHA-1 kullanılır.  
   
  `pbHash`  
- [out] Oluşturulan karma içeren bir bayt dizisi.  
+ dışı Oluşturulan karmayı içeren bir bayt dizisi.  
   
  `cchHash`  
- [in] En büyük arabellek boyutunu tarafından işaret edilen `pbHash`.  
+ 'ndaki Tarafından `pbHash`işaret edilen arabelleğin en büyük boyutu.  
   
  `pchHash`  
- [out] Bayt cinsinden boyutu, `pbHash`.  
+ dışı Bayt cinsinden boyutu `pbHash`.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu işlev aynı şekilde, [GetHashFromFile](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md), dosya adı belirtimi yerine ANSI Unicode olması dışında.  
+ Bu işlev, [GetHashFromFile](gethashfromfile-function.md)ile aynıdır, ancak dosya adı belirtimi ANSI yerine Unicode olur.  
   
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üst bilgi:** StrongName.h  
+ **Üst bilgi** StrongName. h  
   
- **Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil  
+ **Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir  
   
- **.NET framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework sürümleri:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [GetHashFromFileW Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [GetHashFromFile Yöntemi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)
-- [ICLRStrongName Arabirimi](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFileW Yöntemi](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [GetHashFromFile Yöntemi](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [ICLRStrongName Arabirimi](../hosting/iclrstrongname-interface.md)

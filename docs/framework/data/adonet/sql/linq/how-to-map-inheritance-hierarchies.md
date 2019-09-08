@@ -5,12 +5,12 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 618abc8e681a6f43a1054d0ca2cec2fbdec853f5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1366e8f5f79a8e695e52c405e20a894861453ae7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943570"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781774"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Nasıl yapılır: Devralma Hiyerarşilerini Eşleme
 ' De [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]devralma eşlemesini uygulamak için aşağıdaki adımlarda açıklandığı gibi devralma hiyerarşisinin kök sınıfında öznitelikleri ve öznitelik özelliklerini belirtmeniz gerekir. Visual Studio kullanan geliştiriciler, devralma hiyerarşilerini eşlemek için Nesne İlişkisel Tasarımcısı kullanabilir. Bkz [. nasıl yapılır: O/R tasarımcısını](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer)kullanarak devralmayı yapılandırın.  
@@ -52,5 +52,5 @@ ms.locfileid: "69943570"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Devralma Desteği](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
-- [Nasıl yapılır: Kod düzenleyicisini kullanarak varlık sınıflarını özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [Devralma Desteği](inheritance-support.md)
+- [Nasıl yapılır: Kod düzenleyicisini kullanarak varlık sınıflarını özelleştirme](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 714ec7bda4f6c79b789d6c3029b68a04cef1342b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ed9149eb5b88d648c02863e0fb0101e5503e1c73
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041236"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782149"
 ---
 # <a name="frequently-asked-questions"></a>Sıkça Sorulan Sorular
 
 Aşağıdaki bölümlerde, uyguladığınızda [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]karşılaşabileceğiniz bazı yaygın sorunlar yanıtlanır.
 
-[Sorun gidermede](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)ek sorunlar ele alınır.
+[Sorun gidermede](troubleshooting.md)ek sorunlar ele alınır.
 
 ## <a name="cannot-connect"></a>Bağlanamıyor
 
 S. Veritabanıma bağlanamıyorum.
 
-A. Bağlantı dizeniz doğru olduğundan ve SQL Server örneğinizin çalıştığından emin olun. Ayrıca adlandırılmış kanallar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] protokolünün etkinleştirilmesini gerektirir. Daha fazla bilgi için bkz. [Izlenecek yollara göre öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+A. Bağlantı dizeniz doğru olduğundan ve SQL Server örneğinizin çalıştığından emin olun. Ayrıca adlandırılmış kanallar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] protokolünün etkinleştirilmesini gerektirir. Daha fazla bilgi için bkz. [Izlenecek yollara göre öğrenme](learning-by-walkthroughs.md).
 
 ## <a name="changes-to-database-lost"></a>Veritabanında yapılan değişiklikler kayboldu
 
@@ -40,7 +40,7 @@ Bağlantı kullanımının tam ayrıntıları aşağıdakilere bağlıdır:
 
 - Bir bağlantı nesnesi ile <xref:System.Data.Linq.DataContext> oluşturulursa bağlantı durumu.
 
-- Bağlantı dizesi ayarları (örneğin, birden çok etkin sonuç kümesi (MARS) etkinleştiriliyor. Daha fazla bilgi için bkz. [birden çok etkin sonuç kümesi (mars)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md).
+- Bağlantı dizesi ayarları (örneğin, birden çok etkin sonuç kümesi (MARS) etkinleştiriliyor. Daha fazla bilgi için bkz. [birden çok etkin sonuç kümesi (mars)](../multiple-active-result-sets-mars.md).
 
 ## <a name="updating-without-querying"></a>Sorgulanmadan güncelleştirme
 
@@ -56,7 +56,7 @@ A. , [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Küme t
 
 S. Sorgum beklenmeyen sonuçlar döndürüyor. Ne olduğunu nasıl giderebilirim?
 
-A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oluşturduğu SQL kodunu incelemek için çeşitli araçlar sağlar. En önemlileri <xref:System.Data.Linq.DataContext.Log%2A>bunlardan biridir. Daha fazla bilgi için bkz. [hata ayıklama desteği](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).
+A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]oluşturduğu SQL kodunu incelemek için çeşitli araçlar sağlar. En önemlileri <xref:System.Data.Linq.DataContext.Log%2A>bunlardan biridir. Daha fazla bilgi için bkz. [hata ayıklama desteği](debugging-support.md).
 
 ## <a name="unexpected-stored-procedure-results"></a>Beklenmeyen saklı yordam sonuçları
 
@@ -110,13 +110,13 @@ select nax(i) AS MaxResult from t where name like 'hello'
 end
 ```
 
-Daha fazla bilgi için bkz. [saklı yordamları kullanarak Işlemleri özelleştirme](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md).
+Daha fazla bilgi için bkz. [saklı yordamları kullanarak Işlemleri özelleştirme](customizing-operations-by-using-stored-procedures.md).
 
 ## <a name="serialization-errors"></a>Serileştirme hataları
 
 S. Seri hale getirme yapmayı denediğimde aşağıdaki hatayı alıyorum: "' System. Data. LINQ. ChangeTracker + StandardChangeTracker ' yazın... seri hale getirilebilir olarak işaretlenmemiş. "
 
-A. İçindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod üretimi serileştirme <xref:System.Runtime.Serialization.DataContractSerializer> destekler. <xref:System.Xml.Serialization.XmlSerializer> Veya<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>desteklemez. Daha fazla bilgi için bkz. [serileştirme](../../../../../../docs/framework/data/adonet/sql/linq/serialization.md).
+A. İçindeki [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kod üretimi serileştirme <xref:System.Runtime.Serialization.DataContractSerializer> destekler. <xref:System.Xml.Serialization.XmlSerializer> Veya<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>desteklemez. Daha fazla bilgi için bkz. [serileştirme](serialization.md).
 
 ## <a name="multiple-dbml-files"></a>Birden çok DBML dosyası
 
@@ -210,13 +210,13 @@ S. <xref:System.Data.Linq.DataContext> Havuzda yardımcı olabilecek bir yapı v
 
 A. Örneklerini yeniden kullanmayı denemeyin <xref:System.Data.Linq.DataContext>. Her <xref:System.Data.Linq.DataContext> biri belirli bir düzenleme/sorgu oturumu için durumu (kimlik önbelleği dahil) korur. Veritabanının geçerli durumuna göre yeni örnekler almak için yeni <xref:System.Data.Linq.DataContext>bir kullanın.
 
-Temel ADO.NET bağlantı havuzunu kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
+Temel ADO.NET bağlantı havuzunu kullanmaya devam edebilirsiniz. Daha fazla bilgi için bkz. [SQL Server bağlantı havuzu (ADO.net)](../../sql-server-connection-pooling.md).
 
 ## <a name="second-datacontext-is-not-updated"></a>İkinci DataContext güncelleştirilmedi
 
 S. Değerlerini veritabanında depolamak <xref:System.Data.Linq.DataContext> için bir örneğini kullandım. Ancak, aynı veritabanında <xref:System.Data.Linq.DataContext> ikinci bir saniye güncelleştirilmiş değerleri yansıtmamaktadır. İkinci <xref:System.Data.Linq.DataContext> örnek, önbelleğe alınmış değerleri döndürüyor gibi görünüyor.
 
-A. Bu davranış tasarıma göre yapılır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]İlk örnekte gördüğünüz örneklerin/değerlerin aynısını döndürmeye devam eder. Güncelleştirmeler yaptığınızda iyimser eşzamanlılık kullanırsınız. Özgün veriler, gerçekten de değişmeden olduğunu doğrulamak üzere geçerli veritabanı durumunu denetlemek için kullanılır. Değiştirildiyse, bir çakışma oluşur ve uygulamanız bunu çözmelidir. Uygulamanızın bir seçeneği, özgün durumu geçerli veritabanı durumuna sıfırlamadır ve güncelleştirmeyi yeniden dener. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)yönetin.
+A. Bu davranış tasarıma göre yapılır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]İlk örnekte gördüğünüz örneklerin/değerlerin aynısını döndürmeye devam eder. Güncelleştirmeler yaptığınızda iyimser eşzamanlılık kullanırsınız. Özgün veriler, gerçekten de değişmeden olduğunu doğrulamak üzere geçerli veritabanı durumunu denetlemek için kullanılır. Değiştirildiyse, bir çakışma oluşur ve uygulamanız bunu çözmelidir. Uygulamanızın bir seçeneği, özgün durumu geçerli veritabanı durumuna sıfırlamadır ve güncelleştirmeyi yeniden dener. Daha fazla bilgi için [nasıl yapılır: Değişiklik çakışmalarını](how-to-manage-change-conflicts.md)yönetin.
 
 Ayrıca, önbelleğe alma <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> ve değişiklik izlemeyi kapatan yanlış olarak ayarlayabilirsiniz. Daha sonra, her sorgumanızda en son değerleri alabilirsiniz.
 
@@ -228,6 +228,6 @@ A. Salt okuma modu, içeriğin değişiklikleri izleme özelliğini devre dış�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başvuru](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [Sorun giderme](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
-- [LINQ to SQL’de Güvenlik](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)
+- [Başvuru](reference.md)
+- [Sorun giderme](troubleshooting.md)
+- [LINQ to SQL’de Güvenlik](security-in-linq-to-sql.md)

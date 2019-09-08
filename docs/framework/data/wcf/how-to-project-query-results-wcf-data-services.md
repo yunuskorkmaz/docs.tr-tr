@@ -10,17 +10,17 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
-ms.openlocfilehash: b53da9c1ecfcc5061fe551c4e180774319beaf5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 758bb01764fcfe195d4f940705316e7579be95ff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952220"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780013"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Nasıl yapılır: Proje sorgu sonuçları (WCF Veri Hizmetleri)
-Projeksiyon, bir varlığın yalnızca belirli özelliklerinin yanıt olarak döndürüldüğünü belirterek, bir sorgu tarafından döndürülen veri miktarını azaltmak için bir mekanizma sağlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sorgu seçeneğini `$select` kullanarak ya da bir LINQ sorgusunda [Select](../../../csharp/language-reference/keywords/select-clause.md) yan tümcesini (Visual Basic içinde[seçin](../../../visual-basic/language-reference/queries/select-clause.md) ) kullanarak bir sorgunun sonuçlarında projeksiyonlar yapabilirsiniz. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Projeksiyon, bir varlığın yalnızca belirli özelliklerinin yanıt olarak döndürüldüğünü belirterek, bir sorgu tarafından döndürülen veri miktarını azaltmak için bir mekanizma sağlar. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Sorgu seçeneğini `$select` kullanarak ya da bir LINQ sorgusunda [Select](../../../csharp/language-reference/keywords/select-clause.md) yan tümcesini (Visual Basic içinde[seçin](../../../visual-basic/language-reference/queries/select-clause.md) ) kullanarak bir sorgunun sonuçlarında projeksiyonlar yapabilirsiniz. Daha fazla bilgi için bkz. [veri hizmetini sorgulama](querying-the-data-service-wcf-data-services.md).  
   
- Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
+ Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, müşterilerin varlıklarını, yalnızca adrese özgü özellikler ve kimlik özelliği içeren yeni bir CustomerAddress türüne uygulayan bir LINQ sorgusu gösterir. Bu `CustomerAddress` sınıf, istemci üzerinde tanımlanmıştır ve istemci kitaplığının onu bir varlık türü olarak tanıyabilmesi için öznitelikli.  

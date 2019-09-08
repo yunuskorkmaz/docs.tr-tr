@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 1efb30581642faba3e839357ef9d6f8d6c8869e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f4aade2bdcbccf99c0b7259e8e2dc3a750855ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780165"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780676"
 ---
 # <a name="windows-applications-using-callbacks"></a>Geri Çağırma Kullanan Windows Uygulamaları
-Çoğu zaman uyumsuz işleme senaryoda, bir veritabanı işlemi başlatmak ve veritabanı işlemin tamamlanmasını beklemenize gerek kalmadan çalışan diğer işlemlerin devam etmek istersiniz. Ancak, veritabanı işlemi sona erdikten sonra şeyi yapmanın birçok senaryo gerektirir. Örneğin, bir Windows uygulamasında kullanıcı arabirimi iş parçacığı yanıt verebilir durumda kalmasını sağlarken uzun süre çalışan işlemi bir arka plan iş parçacığı için temsilci seçmek isteyebilirsiniz. Ancak, veritabanı işlemi tamamlandığında, sonuçları formun doldurulması için kullanmak istediğiniz. Bu tür bir senaryo, bir geri çağırma ile en iyi şekilde uygulanır.  
+Çoğu zaman uyumsuz işleme senaryolarında bir veritabanı işlemi başlatmak ve veritabanı işleminin tamamlanmasını beklemeden diğer işlemleri çalıştırmaya devam etmek istersiniz. Ancak, çoğu senaryo, veritabanı işlemi sona erdikten sonra bir işlem yapılmasını gerektirir. Örneğin, bir Windows uygulamasında, uzun süre çalışan işlemi bir arka plan iş parçacığına devretmek isteyebilirsiniz, bu arada Kullanıcı arayüzü iş parçacığının yanıt verme sırasında kalmasına izin vermiş olursunuz. Ancak, veritabanı işlemi tamamlandığında formu doldurmak için sonuçları kullanmak istersiniz. Bu tür bir senaryo en iyi şekilde bir geri çağırma ile uygulanır.  
   
- Belirterek bir geri çağırma tanımladığınız bir <xref:System.AsyncCallback> içindeki temsilci <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>, veya <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> yöntemi. İşlem tamamlandığında, bir temsilci çağrılır. Temsilci bir başvuru geçirebilirsiniz <xref:System.Data.SqlClient.SqlCommand> erişimi kolaylaştıran kendisini <xref:System.Data.SqlClient.SqlCommand> nesne ve uygun çağrı `End` genel değişken kullanmak zorunda kalmadan yöntemi.  
+ <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:System.AsyncCallback> Veya<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>yönteminde bir temsilci belirterek geri çağırma tanımlarsınız. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> İşlem tamamlandığında temsilci çağırılır. Temsilciyi <xref:System.Data.SqlClient.SqlCommand> kendisine bir başvuru olarak geçirebilirsiniz, böylece <xref:System.Data.SqlClient.SqlCommand> nesneye erişmeyi kolaylaştırır ve genel bir değişken kullanmak zorunda kalmadan uygun `End` yöntemi çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki Windows uygulama kullanımını gösteren <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> yöntemi, birkaç saniye (bir uzun süre çalışan komut öykünen) bir gecikme içeren bir Transact-SQL deyimi yürütülüyor.  
+ Aşağıdaki Windows uygulaması, birkaç saniyelik bir gecikme ( <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> uzun süre çalışan bir komuta öykünmesi) içeren bir Transact-SQL ifadesini yürüten yönteminin kullanımını gösterir.  
   
- Bu örnek, bir dizi ayrı bir iş parçacığından formla etkileşime giren bir yöntemi çağırmak dahil olmak üzere önemli teknikleri gösterir. Ayrıca, bu örnek aynı anda birden çok kez komut yürütme kullanıcıların nasıl engellemelisiniz gösterir ve nasıl formun önce geri çağırma yordamı kapatmaz emin olmanız gerekir çağrılır.  
+ Bu örnek, ayrı bir iş parçacığından formla etkileşim kuran bir yöntemi çağırmak da dahil olmak üzere çeşitli önemli teknikleri gösterir. Ayrıca, bu örnek, kullanıcıların aynı anda bir komutu birden çok kez yürütmesini ve geri çağırma yordamı çağrılmadan önce formun kapanmadığından emin olmanızı nasıl engelleyeceğinizi gösterir.  
   
- Bu örnekte ayarlamak için yeni bir Windows uygulaması oluşturun. Bir yerde bir <xref:System.Windows.Forms.Button> denetimi ve iki <xref:System.Windows.Forms.Label> (her denetim için varsayılan adı kabul etme) form üzerinde denetimleri. Ortamınız için gerektiği gibi bağlantı dizesini değiştirerek formun sınıfına aşağıdaki kodu ekleyin.  
+ Bu örneği ayarlamak için yeni bir Windows uygulaması oluşturun. Form üzerinde <xref:System.Windows.Forms.Button> bir denetim ve <xref:System.Windows.Forms.Label> iki denetim yerleştirin (her denetim için varsayılan adı kabul edin). Aşağıdaki kodu formun sınıfına ekleyin ve ortamınız için gerektiği şekilde bağlantı dizesini değiştirme.  
   
 ```vb  
 ' Add these to the top of the class:  
@@ -377,5 +377,5 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumsuz İşlemler](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Zaman Uyumsuz İşlemler](asynchronous-operations.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

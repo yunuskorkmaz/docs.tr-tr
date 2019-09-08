@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: dd4bca48c35b9b636a96fe5d4a724272abc4f71d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bde442e344ae8aa710d75c61d0957bff9264bf01
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934396"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783539"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory Alma
 Alma <xref:System.Data.Common.DbProviderFactory> işlemi, <xref:System.Data.Common.DbProviderFactories> sınıfına bir veri sağlayıcısı hakkında bilgi geçirmeyi içerir. Bu bilgilere bağlı olarak, <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi türü kesin belirlenmiş bir sağlayıcı fabrikası oluşturur. Örneğin, oluşturmak <xref:System.Data.SqlClient.SqlClientFactory>için, sağlayıcı adı "System. `GetFactory` Data. SqlClient" olarak belirtilen bir dize geçirebilirsiniz. Diğer aşırı yüklemesi `GetFactory` bir <xref:System.Data.DataRow>alır. Sağlayıcı fabrikasını oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Uygulamasının `SqlClientFactory` bazı yöntemleri, <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A> <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>ve içerir.<xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>  
@@ -79,7 +79,7 @@ Alma <xref:System.Data.Common.DbProviderFactory> işlemi, <xref:System.Data.Comm
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Sağlayıcı adına göre bir bağlantı dizesi alınıyor  
- Bir sağlayıcı fabrikası oluşturmak için, sağlayıcı adının yanı sıra bir bağlantı dizesi sağlamanız gerekir. Bu örnek, sağlayıcı adını "*System. Data. ProviderName*" sabit biçiminde geçirerek bir uygulama yapılandırma dosyasından bağlantı dizesinin nasıl alınacağını gösterir. Kod üzerinden <xref:System.Configuration.ConnectionStringSettingsCollection>yinelenir. Başarı <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> durumunda döndürür; Aksi takdirde `null` (`Nothing` Visual Basic). Bir sağlayıcı için birden çok giriş varsa, bulunan ilk değer döndürülür. Yapılandırma dosyalarından bağlantı dizelerini alma hakkında daha fazla bilgi ve örnek için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Bir sağlayıcı fabrikası oluşturmak için, sağlayıcı adının yanı sıra bir bağlantı dizesi sağlamanız gerekir. Bu örnek, sağlayıcı adını "*System. Data. ProviderName*" sabit biçiminde geçirerek bir uygulama yapılandırma dosyasından bağlantı dizesinin nasıl alınacağını gösterir. Kod üzerinden <xref:System.Configuration.ConnectionStringSettingsCollection>yinelenir. Başarı <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> durumunda döndürür; Aksi takdirde `null` (`Nothing` Visual Basic). Bir sağlayıcı için birden çok giriş varsa, bulunan ilk değer döndürülür. Yapılandırma dosyalarından bağlantı dizelerini alma hakkında daha fazla bilgi ve örnek için bkz. [bağlantı dizeleri ve yapılandırma dosyaları](connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 > Kodun çalışması için `System.Configuration.dll` bir başvuru gereklidir.  
@@ -97,7 +97,7 @@ Alma <xref:System.Data.Common.DbProviderFactory> işlemi, <xref:System.Data.Comm
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Bağlantı Dizeleri](../../../../docs/framework/data/adonet/connection-strings.md)
+- [DbProviderFactories](dbproviderfactories.md)
+- [Bağlantı Dizeleri](connection-strings.md)
 - [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

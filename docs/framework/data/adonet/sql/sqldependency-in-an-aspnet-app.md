@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f3e28adc2cf7c24cee9ee344eb78404f01b79793
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938463"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780724"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Bir ASP.NET Uygulamasında SqlDependency
 Bu bölümdeki örnek, ASP.net <xref:System.Data.SqlClient.SqlDependency> <xref:System.Web.Caching.SqlCacheDependency> nesnesinden yararlanarak dolaylı olarak nasıl kullanılacağını gösterir. Nesnesi bildirimleri dinlemek ve <xref:System.Data.SqlClient.SqlDependency> önbelleği doğru şekilde güncelleştirmek için bir kullanır. <xref:System.Web.Caching.SqlCacheDependency>  
   
 > [!NOTE]
-> Örnek kod, [sorgu bildirimlerini etkinleştirme](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)bölümünde betikleri yürüterek sorgu bildirimlerini etkinleştirdiğinizi varsayar.  
+> Örnek kod, [sorgu bildirimlerini etkinleştirme](enabling-query-notifications.md)bölümünde betikleri yürüterek sorgu bildirimlerini etkinleştirdiğinizi varsayar.  
   
 ## <a name="about-the-sample-application"></a>Örnek uygulama hakkında  
  Örnek uygulama, bir <xref:System.Web.UI.WebControls.GridView> denetimdeki **AdventureWorks** SQL Server veritabanından ürün bilgilerini göstermek için tek bir ASP.NET Web sayfası kullanır. Sayfa yüklendiğinde, kod geçerli saati bir <xref:System.Web.UI.WebControls.Label> denetime yazar. Daha sonra bir <xref:System.Web.Caching.SqlCacheDependency> nesnesi tanımlar ve <xref:System.Web.Caching.Cache> nesne üzerindeki özellikleri, en fazla üç dakikalık önbellek verilerini depolayacak şekilde ayarlar. Kod daha sonra veritabanına bağlanır ve verileri alır. Sayfa yüklendiğinde ve uygulama çalışırken ASP.NET, sayfadaki sürenin değişmediğinden emin olarak doğrulayabilmeniz için önbellekteki verileri alır. İzlenen veriler değişirse, ASP.NET önbelleği geçersiz kılar ve denetimi yeni verilerle yeniden, `GridView` `Label` denetimde görüntülenen zamanı güncelleyen şekilde yeniden doldurmak.  
@@ -59,5 +59,5 @@ Bu bölümdeki örnek, ASP.net <xref:System.Data.SqlClient.SqlDependency> <xref:
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server'da Sorgu Bildirimleri](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET yönetilen sağlayıcılar ve veri kümesi Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server'da Sorgu Bildirimleri](query-notifications-in-sql-server.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

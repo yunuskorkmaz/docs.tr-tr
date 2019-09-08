@@ -1,106 +1,106 @@
 ---
-title: Visual Studio'da WCF veri hizmeti oluşturma
+title: Visual Studio 'da WCF veri hizmeti oluşturma
 ms.date: 08/24/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: e04f64338eaa87755510a84e7c84773c7fede807
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3c80fb48635199f45acb1e72bf756bbc65d2e14
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634674"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780416"
 ---
 # <a name="create-the-data-service"></a>Veri hizmetini oluşturma
 
-Bu konu başlığında, WCF Veri Hizmetleri kullanıma sunmak için kullandığı örnek veri hizmeti oluşturma bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind örnek veritabanını temel alan bir akış. Görev aşağıdaki temel adımları içerir:
+Bu konu başlığında, Northwind örnek veritabanına dayalı bir [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı kullanıma sunmak için WCF veri Hizmetleri kullanan bir örnek veri hizmeti oluşturursunuz. Görev aşağıdaki temel adımları içerir:
 
 1. Bir ASP.NET Web uygulaması oluşturun.
 
-2. Veri modeli varlık veri modeli araçları kullanarak tanımlayın.
+2. Varlık Veri Modeli araçlarını kullanarak veri modelini tanımlayın.
 
-3. Veri Hizmeti Web uygulamasına ekleyin.
+3. Veri hizmetini Web uygulamasına ekleyin.
 
 4. Veri hizmetine erişimi etkinleştirin.
 
-## <a name="create-the-aspnet-web-app"></a>ASP.NET web uygulaması oluşturma
+## <a name="create-the-aspnet-web-app"></a>ASP.NET Web uygulaması oluşturma
 
-1. Visual Studio'da üzerinde **dosya** menüsünde **yeni** > **proje**.
+1. Visual Studio 'da, **Dosya** menüsünde **Yeni** > **Proje**' yi seçin.
 
-1. İçinde **yeni proje** altında Visual Basic veya Visual C# Seç iletişim kutusu **Web** kategori tıklayın ve ardından **ASP.NET Web uygulaması**.
+1. **Yeni proje** iletişim kutusunda, Visual Basic veya görsel C# altında **web** kategorisini seçin ve ardından **ASP.NET Web uygulaması**' nı seçin.
 
-1. Girin `NorthwindService` seçin ve proje adı olarak **Tamam**.
+1. Projenin `NorthwindService` adı olarak girin ve **Tamam**' ı seçin.
 
-1. İçinde **yeni ASP.NET Web uygulaması** iletişim kutusunda **boş** seçip **Tamam**.
+1. **Yeni ASP.NET Web uygulaması** Iletişim kutusunda **boş** ' ı seçin ve ardından **Tamam**' ı seçin.
 
-1. (İsteğe bağlı) Web uygulamanız için belirli bağlantı noktası numarası belirtin. Not: bağlantı noktası numarası `12345` Bu hızlı başlangıç konuları dizisinde kullanılır.
+1. Seçim Web uygulamanız için belirli bir bağlantı noktası numarası belirtin. Note: bağlantı noktası numarası `12345` , bu hızlı başlangıç konuları serisinde kullanılır.
 
-    1. İçinde **Çözüm Gezgini**, yeni oluşturduğunuz ASP.NET projeye sağ tıklayın ve ardından **özellikleri**.
+    1. **Çözüm Gezgini**, az önce oluşturduğunuz ASP.NET projesine sağ tıklayın ve ardından **Özellikler**' i seçin.
 
-    2. Seçin **Web** sekmesini ve değerini ayarlama **belirli bağlantı noktası** metin kutusuna `12345`.
+    2. **Web** sekmesini seçin ve **belirli bir bağlantı noktası** metin kutusunun değerini olarak `12345`ayarlayın.
 
 ## <a name="define-the-data-model"></a>Veri modelini tanımlama
 
-1. İçinde **Çözüm Gezgini**ASP.NET proje adına sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, ASP.net projesinin adına sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' ye tıklayın.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **veri** kategori tıklayın ve ardından **ADO.NET varlık veri modeli**.
+2. **Yeni öğe Ekle** Iletişim kutusunda **veri** kategorisini seçin ve ardından **ADO.net varlık veri modeli**öğesini seçin.
 
-3. Veri modeli için adını `Northwind.edmx`.
+3. Veri modeli adı için girin `Northwind.edmx`.
 
-4. İçinde **varlık veri modeli Sihirbazı**seçin **EF veritabanı Tasarımcısından**ve ardından **sonraki**.
+4. **Varlık veri modeli sihirbazında**, **veritabanından EF Designer**' ı seçin ve ardından **İleri**' ye tıklayın.
 
-5. Aşağıdakilerden birini yaparak veri modeli veritabanına bağlanmak ve ardından **sonraki**:
+5. Aşağıdaki adımlardan birini gerçekleştirerek veri modelini veritabanına bağlayın ve ardından **İleri**' ye tıklayın:
 
-    - Önceden yapılandırılmış bir veritabanı bağlantısı yoksa, tıklayın **yeni bağlantı** ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına bağlantı oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Bu SQL Server örneği, Northwind örnek veritabanına ekli olması gerekir.
+    - Zaten yapılandırılmış bir veritabanı bağlantınız yoksa **Yeni bağlantı** ' ya tıklayın ve yeni bir bağlantı oluşturun. Daha fazla bilgi için [nasıl yapılır: SQL Server veritabanlarına](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))bağlantı oluşturun. Bu SQL Server örneğine Northwind örnek veritabanının eklenmiş olması gerekir.
 
          \- veya -
 
-    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantısı varsa, bu bağlantı bağlantılar listesinden seçin.
+    - Northwind veritabanına bağlanmak için zaten yapılandırılmış bir veritabanı bağlantınız varsa, bağlantı listesinden bu bağlantıyı seçin.
 
-6. Sihirbazın son sayfasında, veritabanında tüm tabloların onay kutularını işaretleyin ve görünümler ve saklı yordamlar için onay kutularını temizleyin.
+6. Sihirbazın son sayfasında, veritabanındaki tüm tablolar için onay kutularını seçin ve görünümler ve saklı yordamlar onay kutularını temizleyin.
 
-7. Tıklayın **son** sihirbazı kapatın.
+7. Sihirbazı kapatmak için **son** ' a tıklayın.
 
-## <a name="create-the-wcf-data-service"></a>WCF veri hizmeti oluşturma
+## <a name="create-the-wcf-data-service"></a>WCF veri hizmetini oluşturma
 
-1. İçinde **Çözüm Gezgini**, ASP.NET proje üzerinde sağ tıklayın ve ardından **Ekle** > **yeni öğe**.
+1. **Çözüm Gezgini**, ASP.NET projesine sağ tıklayın ve ardından**Yeni öğe** **Ekle** > ' yi seçin.
 
-2. İçinde **Yeni Öğe Ekle** iletişim kutusunda **WCF veri hizmeti** öğesi şablonundan **Web** kategorisi.
+2. **Yeni öğe Ekle** iletişim kutusunda, **Web** kategorisinden **WCF veri hizmeti** öğe şablonunu seçin.
 
-   ![Visual Studio 2015'te WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
+   ![Visual Studio 2015 ' de WCF veri hizmeti öğe şablonu](media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > **WCF veri hizmeti** şablonu kullanılabilir Visual Studio 2015, ancak Visual Studio 2017 içinde değil.
+   > **WCF veri hizmeti** şablonu visual Studio 2015 'de kullanılabilir, ancak visual Studio 2017 ' de kullanılamaz.
 
-3. Hizmet adını yazın `Northwind`.
+3. Hizmetin adı için, yazın `Northwind`.
 
-     Visual Studio, yeni hizmet için XML işaretleme ve kod dosyalarını oluşturur. Varsayılan olarak, kod düzenleyicisi penceresi açılır. İçinde **Çözüm Gezgini**, uzantıyı adıyla Northwind hizmette olduğunu *. svc.cs* veya *. svc.vb*.
+     Visual Studio, yeni hizmet için XML işaretlemesini ve kod dosyalarını oluşturur. Varsayılan olarak, kod Düzenleyicisi penceresi açılır. **Çözüm Gezgini**, hizmet Northwind adına *. svc.cs* veya *. svc. vb*uzantısına sahiptir.
 
-4. Veri Hizmeti için kod içinde açıklamayı değiştirin `/* TODO: put your data source class name here */` veri modelinin varlık kapsayıcı türü olan veri hizmeti tanımlayan sınıf tanımında, bu durumda olduğu `NorthwindEntities`. Sınıf tanımını aşağıdaki görünmesi gerekir:
+4. Veri Hizmeti kodunda, veri hizmetini tanımlayan sınıfın tanımındaki, bu `/* TODO: put your data source class name here */` örnekte olduğu `NorthwindEntities`gibi veri modelinin varlık kapsayıcısı olan türde olan açıklamayı değiştirin. Sınıf tanımı aşağıdaki gibi görünmelidir:
 
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="enable-access-to-data-service-resources"></a>Veri Hizmeti kaynaklarına erişimi etkinleştirme
+## <a name="enable-access-to-data-service-resources"></a>Veri hizmeti kaynaklarına erişimi etkinleştir
 
-1. Veri Hizmeti için kodda yer tutucusunu değiştirin `InitializeService` işlevi aşağıdaki:
+1. Veri Hizmeti kodunda, `InitializeService` işlevdeki yer tutucu kodunu aşağıdaki gibi değiştirin:
 
      [!code-csharp[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#allreadconfig)]
      [!code-vb[Astoria Quickstart Service#AllReadConfig](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#allreadconfig)]
 
-     Bu yetkili istemcilerin okuma ve yazma erişimi için belirtilen varlık kümesi kaynakları sağlar.
+     Bu, yetkili istemcilerin belirtilen varlık kümelerine yönelik kaynaklara okuma ve yazma erişimi olmasını sağlar.
 
     > [!NOTE]
-    > ASP.NET uygulamaya erişebilmesi için herhangi bir istemci veri hizmeti tarafından kullanıma sunulan kaynakları da erişebilirsiniz. Bir üretim veri hizmeti kaynaklarına yetkisiz erişimi önlemek için Ayrıca uygulama güvenli hale getirmelisiniz. Daha fazla bilgi için [WCF Veri Hizmetleri güvenli hale getirme](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).
+    > ASP.NET uygulamasına erişebilen tüm istemciler de veri hizmeti tarafından sunulan kaynaklara erişebilir. Bir üretim verileri hizmetinde, kaynaklara yetkisiz erişimi engellemek için uygulamanın kendisi de güvence altına alınmalıdır. Daha fazla bilgi için bkz. [güvenliği WCF veri Hizmetleri](securing-wcf-data-services.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Northwind örnek veritabanını temel alan bir OData akışına sunan yeni bir veri hizmeti başarıyla oluşturdunuz ve ASP.NET Web uygulamasında izinlere sahip istemciler için erişim etkinleştirmesi gerekir. Ardından, Visual Studio'dan veri hizmeti başlatın ve OData akışına bir Web tarayıcısı üzerinden HTTP GET isteği göndererek erişim:
+Northwind örnek veritabanına dayalı bir OData akışını kullanıma sunan yeni bir veri hizmetini başarıyla oluşturdunuz ve ASP.NET Web uygulamasında izinleri olan istemciler için akışa erişimi etkinleştirdiniz. Ardından, Visual Studio 'dan veri hizmetini başlatacak ve bir Web tarayıcısı aracılığıyla HTTP GET istekleri göndererek OData akışına erişebileceksiniz:
 
 > [!div class="nextstepaction"]
-> [Bir web tarayıcısından hizmete erişme](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
+> [Hizmete bir Web tarayıcısından erişin](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

@@ -5,69 +5,69 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 27708f4bb8e191156f578132602570bc4a6337b0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582726"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781204"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR Tür Uyumsuzlukları
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nesne modeli ve SQL Server arasındaki çeviriyi çoğunu otomatikleştirir. Bununla birlikte, bazı durumlarda, tam çeviri engelleyin. Aşağıdaki bölümlerde bu anahtar uyuşmazlıklarını ortak dil çalışma zamanı (CLR) türleri ve SQL Server veritabanı türleri özetlenir. Özel tür eşlemeleri ve işlev çeviri sırasında hakkında daha fazla ayrıntı bulabilirsiniz [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) ve [veri türleri ve işlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nesne modeli ve SQL Server arasındaki çevirinin çoğunu otomatik hale getirir. Bununla birlikte, bazı durumlar tam çeviriyi önler. Bu anahtar, ortak dil çalışma zamanı (CLR) türleri ve SQL Server veritabanı türleri arasındaki uyuşmazlıkları aşağıdaki bölümlerde özetlenmektedir. [SQL-CLR türü eşlemesinde](sql-clr-type-mapping.md) ve [veri türlerinde ve işlevlerde](data-types-and-functions.md)belirli tür eşlemeleri ve işlev çevirisi hakkında daha fazla ayrıntı bulabilirsiniz.
 
 ## <a name="data-types"></a>Veri Türleri
 
-Çeviri CLR ve SQL Server arasındaki bir sorgu için veritabanı gönderildiğinde ve sonuçları, nesne modeline geri gönderildiğinde gerçekleşir. Örneğin, aşağıdaki Transact-SQL sorgusunu iki değer dönüştürmeleri gerektirir:
+CLR ve SQL Server arasında çeviri, bir sorgu veritabanına gönderilirken ve sonuçlar nesne modelinize geri gönderildiğinde oluşur. Örneğin, aşağıdaki Transact-SQL sorgusu iki değer dönüştürmesi gerektirir:
 
 ```sql
 Select DateOfBirth From Customer Where CustomerId = @id
 ```
 
-SQL Server'da sorgu yürütülmeden önce Transact-SQL parametresi için değer belirtilmelidir. Bu örnekte, `id` parametre değeri bir CLR önce çevrilmelidir <xref:System.Int32?displayProperty=nameWithType> türü bir SQL Server'a `INT` veritabanı değeri ne olduğunu anlayabilmeniz yazın. Sonuçları, SQL Server'ı almak için `DateOfBirth` SQL Server'dan sütunun çevrilmiş `DATETIME` bir CLR türüne <xref:System.DateTime?displayProperty=nameWithType> türü için nesne modeli kullanın. Bu örnekte, SQL Server veritabanı ve CLR nesne modeli türlerinde doğal eşlemelere sahip. Ancak bu her zaman böyle değildir.
+Sorgu SQL Server üzerinde yürütülmeden önce Transact-SQL parametresinin değeri belirtilmelidir. Bu örnekte, `id` veritabanının değerin ne olduğunu anlayabilmesi için önce parametre değeri bir <xref:System.Int32?displayProperty=nameWithType> CLR türünden SQL Server `INT` türüne çevrilmelidir. Ardından sonuçları almak için SQL Server `DateOfBirth` sütunu, nesne modelinde kullanılmak üzere bir SQL Server `DATETIME` türünden clr <xref:System.DateTime?displayProperty=nameWithType> türüne çevrilmelidir. Bu örnekte, CLR nesne modeli ve SQL Server veritabanındaki türler doğal eşlemelere sahiptir. Ancak, bu her zaman durum değildir.
 
-### <a name="missing-counterparts"></a>Ortaklarınıza eksik
+### <a name="missing-counterparts"></a>Eksik karşılıkları
 
-Aşağıdaki türleri makul ortaklarınıza yok.
+Aşağıdaki türlerin makul karşılıkları yoktur.
 
-- CLR içinde eşleşmiyor <xref:System> ad alanı:
+- CLR <xref:System> ad alanındaki uyuşmazlıklar:
 
-  - **İşaretsiz tamsayılar**. Bu türler, genellikle taşması önlemek için imzalı karşılıkları daha büyük boyutta için eşlenir. Değişmez değerler, imzalı bir sayısal değere göre aynı veya daha küçük boyutta dönüştürülebilir.
+  - **İşaretsiz tamsayılar**. Bu türler genellikle, taşmamak için daha büyük boyuttaki imzalı karşılıklarına eşlenir. Değişmez değerler, değere göre aynı veya daha küçük olan işaretli bir sayısal değere dönüştürülebilir.
 
-  - **Boole**. Bu tür bir bit veya daha büyük sayısal ya da dize olarak eşlenebilir. Aynı değer için değerlendirilen bir ifade bir sabit değer eşlenebilir (örneğin, `1=1` için SQL'de `True` CLS içinde).
+  - **Boole değeri**. Bu türler, bir bit veya daha büyük sayısal ya da dizeye eşlenebilir. Değişmez değer aynı değere değerlendirilen bir ifadeye eşleştirilebilir (örneğin, SQL 'de, `1=1` CLS içinde için `True` ).
 
-  - **TimeSpan**. Bu tür iki arasındaki farkı temsil eder `DateTime` değerleri ve gelmiyor `timestamp` SQL Server. CLR <xref:System.TimeSpan?displayProperty=nameWithType> SQL Server'a da eşleyebilir `TIME` bazı durumlarda türü. SQL Server `TIME` türü 24 saatten az pozitif değerleri temsil etmek için yalnızca tasarlanmıştır. CLR <xref:System.TimeSpan> kadar büyük aralığı yok.
+  - **TimeSpan**. Bu tür, iki `DateTime` değer arasındaki farkı temsil eder ve SQL Server karşılık `timestamp` gelmez. CLR <xref:System.TimeSpan?displayProperty=nameWithType> , bazı durumlarda SQL Server `TIME` türü ile de eşleşmeyebilir. SQL Server `TIME` türü yalnızca 24 saatten daha az pozitif değerler temsil etmek üzere tasarlanmıştır. CLR <xref:System.TimeSpan> 'de çok daha büyük bir Aralık vardır.
 
   > [!NOTE]
-  > SQL Server'a özgü .NET Framework türleri içinde <xref:System.Data.SqlTypes> bu Karşılaştırmada dahil edilmez.
+  > İçindeki <xref:System.Data.SqlTypes> SQL Server özel .NET Framework türleri bu karşılaştırmaya dahil değildir.
 
-- SQL Server'da uyuşmazlığı:
+- SQL Server uyuşmazlıkları:
 
-  - **Karakter türleri uzunluğu sabit**. Transact-SQL Unicode ve Unicode olmayan kategorilere ayırır ve her kategoride üç ayrı türü vardır: uzunluğu sabit `nchar` / `char`, değişken uzunluğu `nvarchar` / `varchar`, ve daha büyük boyutlu `ntext` / `text`. Sabit uzunluk karakter türleri için CLR eşleştirilebilir <xref:System.Char?displayProperty=nameWithType> almak için tür karakter, ancak bunlar gerçekten aynı türe dönüştürme ve davranışı karşılık gelmez.
+  - **Sabit uzunlukta karakter türleri**. Transact-SQL, Unicode ve Unicode olmayan kategoriler arasında ayrım yapar ve her kategoride üç farklı türe sahiptir: sabit uzunluk `nchar` `varchar` / `char`, değişken uzunluğu `nvarchar`ve / daha büyük boyutlu `ntext`. / `text` Sabit uzunluklu karakter türleri, karakterleri almak için clr <xref:System.Char?displayProperty=nameWithType> türü ile eşleştirilebilir, ancak dönüştürmelerde ve davranıştaki aynı türe karşılık gelmiyor.
 
-  - **Bit**. Ancak `bit` etki alanına sahip değer olarak aynı sayıda `Nullable<Boolean>`, iki farklı tür aşağıda verilmiştir. `Bit` değerleri alır `1` ve `0` yerine `true` / `false`, Boolean ifadeler için eşdeğer olarak kullanılamaz.
+  - **Bit**. Etki alanı aynı sayıda `Nullable<Boolean>`değere sahip olsa da, ikisi farklı türlerdir. `bit` `Bit`değerlerini `1` alır ve `0` yerine `true`Boolean ifadelerineeşdeğerolarakkullanılamaz./ `false`
 
-  - **Zaman damgası**. CLR aksine <xref:System.TimeSpan?displayProperty=nameWithType> türü, SQL Server `TIMESTAMP` türünü temsil eden arasındaki fark temel almaz ve her güncelleştirme için benzersiz olan veritabanı tarafından oluşturulan bir 8-bayt sayısı <xref:System.DateTime> değerleri.
+  - **Zaman damgası**. CLR <xref:System.TimeSpan?displayProperty=nameWithType> türünden farklı olarak SQL Server `TIMESTAMP` türü, her bir güncelleştirme için benzersiz olan veritabanı tarafından oluşturulan 8 baytlık bir sayıyı temsil eder ve değerler arasındaki <xref:System.DateTime> farka göre değildir.
 
-  - **Para** ve **küçük para**. Bu tür eşlenebilir <xref:System.Decimal> ancak temelde farklı türleri ve bu nedenle, sunucu tabanlı işlevleri ve dönüştürmeler tarafından kabul edilir.
+  - **Para** ve küçük **para**. Bu türler, ile <xref:System.Decimal> eşleştirilir ancak temelde farklı türlerdir ve sunucu tabanlı işlevlere ve Dönüştürmelere göre değerlendirilir.
 
-### <a name="multiple-mappings"></a>Birden çok eşlemeleri
+### <a name="multiple-mappings"></a>Birden çok eşleme
 
-Bir veya daha fazla CLR veri türleri eşleyebilirsiniz birçok SQL Server veri türleri vardır. Bir veya daha fazla SQL Server türlerini eşleyebilirsiniz birçok CLR türü vardır. LINQ to SQL ile bir eşleme desteklenmiyor olabilir ancak CLR ve SQL Server arasında eşlenen iki tür kusursuz kesinliği, aralık ve semantiği olduğunu gelmez. Bazı eşlemeleri, tüm bu boyutlara farklılıkları içerebilir. Çeşitli eşleme olasılıklara olası farklar hakkındaki ayrıntıları bulabilirsiniz [SQL-CLR tür eşlemesi](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).
+Bir veya daha fazla CLR veri türüyle eşleyebileceğiniz pek çok SQL Server veri türü vardır. Bir veya daha fazla SQL Server türüne eşleyebileceğiniz birçok CLR türü de vardır. Bir eşlemenin LINQ to SQL tarafından desteklenmesine rağmen, CLR ve SQL Server arasında eşlenen iki türün duyarlık, Aralık ve semantiklerde kusursuz bir eşleşme olduğu anlamına gelmez. Bazı eşlemeler bu boyutların herhangi birinde veya tümünde farkları içerebilir. [SQL-CLR tür eşlemesinde](sql-clr-type-mapping.md)çeşitli eşleme olanakları için bu olası farklılıklar hakkındaki ayrıntıları bulabilirsiniz.
 
 ### <a name="user-defined-types"></a>Kullanıcı tanımlı türler
 
-Kullanıcı tanımlı CLR türleri, tür sistem boşluğu yardımcı olmak için tasarlanmıştır. Yine de bunlar türü sürüm oluşturma hakkında ilginç sorunları ortaya çıkarır. İstemci sürümünde değişikliğe veritabanı sunucusunda depolanan tür değişikliği eşlenmesi değil. Herhangi bir değişiklik burada türü anlamları eşleşmeyebilir ve sürüm aralığı görünür hale gelmiş büyük olasılıkla başka bir tür uyuşmazlığı neden olur. Devralma hiyerarşilerini birbirini izleyen sürümlerde yeniden düzenlenen gibi diğer zorluklar oluşur.
+Kullanıcı tanımlı CLR türleri, tür sistem boşluğunu köprülemek için tasarlanmıştır. Bununla birlikte, tür sürümü oluşturma hakkında ilginç sorunlar ortaya alırlar. İstemcideki sürümde bir değişiklik, veritabanı sunucusunda depolanan türdeki bir değişiklik ile eşleşmeyebilir. Böyle bir değişiklik, tür semantiğinin eşleşmediği ve sürüm boşluğunun görünür olma olasılığı olan başka tür uyuşmazlığına neden olur. Devralma hiyerarşileri birbirini izleyen sürümlerde yeniden düzenlenmiş, daha karmaşıklıklar oluşur.
 
-## <a name="expression-semantics"></a>İfade semantiği
+## <a name="expression-semantics"></a>İfade semantikleri
 
-CLR ve veritabanı türler arasında ikili uyuşmazlığı yanı sıra ifadeler için uyuşmazlık karmaşıklık ekleyin. İşleci semantik, işlev semantiği, örtük tür dönüştürme ve öncelik kuralları uyuşmazlıkları dikkate alınmalıdır.
+CLR ve veritabanı türleri arasında ikili uyumsuzluğa ek olarak, ifadeler uyuşmazlığa karmaşıklık ekler. İşleç semantiğinin, işlev semantiğinin, örtük tür dönüştürmenin ve öncelik kurallarının uyuşmazlıkları göz önünde bulundurulmalıdır.
 
-Aşağıdaki alt bölümleri görünüşe göre benzer ifadeler arasındaki uyumsuzluk göstermektedir. Verilen bir CLR ifade için anlamsal olarak eşdeğer SQL deyimlerini oluşturmak mümkün olabilir. Ancak, bu görünüşe göre benzer ifadeler anlam farklarını CLR kullanıcı için yetkisiz değiştirmeye karşı korumalı olup ve bu nedenle anlam denklik için gerekli olan değişiklikleri veya yöneliktir açık değil. Bir dizi için bir ifade değerlendirildiğinde bu özellikle önemli bir sorundur. Fark görünürlüğünü bağımlı veri - ve kodlama ve hata ayıklama sırasında belirlemek zor olabilir.
+Aşağıdaki alt bölümlerde benzer ifadeler arasındaki uyuşmazlık gösterilmektedir. Belirli bir CLR ifadesine anlamsal olarak eşdeğer olan SQL ifadeleri oluşturmak mümkün olabilir. Ancak, benzer ifadeler arasındaki anlam farklılıklarının bir CLR kullanıcısına açık olup olmadığını ve bu nedenle anlamsal denklik için gereken değişikliklerin amaçlanıp düşünülmeyeceğini net değildir. Bir ifade bir değer kümesi için değerlendirildiğinde bu özellikle kritik bir sorundur. Farkın görünürlüğü verilere bağlı olabilir ve kodlama ve hata ayıklama sırasında belirlenmesi zor olabilir.
 
 ### <a name="null-semantics"></a>Null Semantikler
 
-SQL deyimleri, Boolean ifadeler için üç değerli mantığı sağlar. Sonucu true, false veya null olabilir. Bunun aksine, CLR iki değerli Boolean sonucu null değerler içeren karşılaştırmaları için belirtir. Aşağıdaki kodu göz önünde bulundurun:
+SQL ifadeleri, Boole ifadeleri için üç değerli mantığı sağlar. Sonuç doğru, yanlış veya null olabilir. Buna karşılık, CLR null değerleri içeren karşılaştırmalar için iki değerli Boole sonucu belirtir. Aşağıdaki kodu göz önünde bulundurun:
 
 [!code-csharp[DLinqMismatch#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#2)]
 [!code-vb[DLinqMismatch#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#2)]
@@ -91,7 +91,7 @@ or (col1 is null and col2 is null)
 -- (Visual Basic 'Nothing'.)
 ```
 
-İki değerli sonuçlarıyla ilgili varsayım benzer bir sorun oluşur.
+İki değerli sonuçların varsayımıyla ilgili benzer bir sorun oluşur.
 
 [!code-csharp[DLinqMismatch#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#3)]
 [!code-vb[DLinqMismatch#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#3)]
@@ -112,29 +112,29 @@ or col1 != col2
 --   evaluate to true.
 ```
 
-Önceki örnekte SQL oluşturma, eşdeğer bir davranış elde edebilirsiniz, ancak çevirisi amacınız doğru yansıtmayabilir.
+Önceki durumda, SQL oluşturma ile eşdeğer bir davranış edinebilirsiniz, ancak çeviri amacınız doğru şekilde yansıtmayabilir.
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] değil uygulamaktadır C# `null` veya Visual Basic `nothing` SQL karşılaştırma semantiği. Karşılaştırma işleçleri sözdizimsel olarak SQL eşdeğerlerine dönüştürülür. Sunucu veya bağlantı ayarları tarafından tanımlandığı şekilde, semantiği SQL semantiği yansıtır. (Semantiği değiştirmek için ayarları değiştirebilirsiniz ancak) iki null değerler varsayılan SQL Server Ayarları altında eşit olarak kabul edilir. Ne olursa olsun, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sorgu çevirisi sunucu ayarlarını dikkate almaz.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL üzerinde karşılaştırma C# `null` semantiğini `nothing` uygulamaz veya Visual Basic. Karşılaştırma işleçleri, sözdizimsel olarak SQL eşdeğerlerine çevrilir. Semantik, sunucu veya bağlantı ayarları tarafından tanımlanan SQL semantiğini yansıtır. İki null değer, varsayılan SQL Server ayarları altında eşit olarak değerlendirilir (ancak semantiğini değiştirmek için ayarları değiştirebilirsiniz). Ne olursa [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] olsun, sorgu çevirisi 'nde sunucu ayarlarını dikkate almaz.
 
-Değişmez değer ile bir karşılaştırması `null` (`nothing`) en uygun SQL sürümüne çevrilir (`is null` veya `is not null`).
+Değişmez değer `null` (`nothing`) ile karşılaştırma uygun SQL sürümüne (`is null` veya `is not null`) çevrilir.
 
-Değerini `null` (`nothing`) harmanlamasında SQL Server tarafından tanımlanır. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] harmanlama değiştirmez.
+Harmanlama içindeki `null` (`nothing`) değeri SQL Server tarafından tanımlanır; [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] harmanlamayı değiştirmez.
 
 ### <a name="type-conversion-and-promotion"></a>Tür dönüştürme ve yükseltme
 
-SQL ifadelerinde zengin örtülü dönüştürmeleri destekler. Benzer ifadelerinde C# açık bir tür dönüştürme gerektirir. Örneğin:
+SQL, İfadelerdeki zengin bir örtük dönüştürme kümesini destekler. İçindeki C# benzer ifadeler açık bir tür dönüştürme gerektirir. Örneğin:
 
-- `Nvarchar` ve `DateTime` türleri karşılaştırılabilir SQL'de açık tüm atamaları; C# açık dönüştürme gerektirir.
+- `Nvarchar`ve `DateTime` türleri herhangi bir açık yayını olmadan SQL 'de karşılaştırılabilir; C# açık dönüştürme gerektirir.
 
-- `Decimal` örtük olarak dönüştürülür `DateTime` SQL. C#bir örtük dönüştürmelerine izin vermiyor.
+- `Decimal`örtük olarak SQL 'e `DateTime` dönüştürülür. C#örtük dönüştürmeye izin vermez.
 
-Benzer şekilde, Transact-SQL türü önceliği türü önceliği farklıdır C# temel türleri kümesini farklı olduğu için. Aslında, öncelik listeler arasında NET alt/üst ilişkisi yoktur. Örneğin, karşılaştırma bir `nvarchar` ile bir `varchar` örtük dönüştürülmesi neden `varchar` ifadesine `nvarchar`. CLR hiçbir eşdeğer yükseltme sağlar.
+Benzer şekilde, temel alınan türler farklı olduğundan Transact-SQL içindeki tür C# önceliği, içindeki tür önceliğine göre farklılık gösterir. Aslında, öncelik listeleri arasında şifresiz bir alt küme/üst küme ilişkisi yoktur. Örneğin `nvarchar` , bir `varchar` ile karşılaştırmak `varchar` ifadenin örtük `nvarchar`dönüştürmesine neden olur. CLR eşdeğer bir yükseltme sağlamaz.
 
-Basit durumda, bu farklılıkları CLR ifadeler için karşılık gelen bir SQL ifadesi yedekli olacak şekilde yayınları neden. Daha da önemlisi, Ara sonuçlar bir SQL ifadesi örtük olarak hiçbir doğru karşılığı yoktur, bir tür yükseltilmesi C#ve bunun tersi de geçerlidir. Genel olarak, test etme, hata ayıklama ve doğrulama gibi ifadelerin ekler önemli yük kullanıcı.
+Basit durumlarda bu farklılıklar, CLR deyimlerinin karşılık gelen bir SQL ifadesi için gereksiz olmasına neden olur. Daha da önemlisi, bir SQL ifadesinin ara sonuçları örtük olarak ' ın içinde C#karşılığı olmayan bir türe yükseltilebilir ve tam tersi olabilir. Genel, test, hata ayıklama ve bu ifadelerin doğrulanması kullanıcıya önemli bir yük ekler.
 
 ### <a name="collation"></a>Harmanlama
 
-Transact-SQL açık harmanlamaları karakter dize türleri için ek açıklamaları olarak destekler. Bu harmanlamaları belirli karşılaştırmalar geçerliliğini belirler. Örneğin, iki sütun farklı açık harmanlamaları ile karşılaştıran bir hatadır. Basitleştirilmiş çok CTS dize türü kullanımı gibi hataları neden olmaz. Aşağıdaki örnek göz önünde bulundurun:
+Transact-SQL, karakter dize türlerine ek açıklama olarak açık harmanlamaları destekler. Bu harmanlamalar, bazı karşılaştırmaların geçerliliğini tespit edilir. Örneğin, iki sütunu farklı açık harmanlamalarla karşılaştırmak bir hatadır. Çok Basitleştirilmiş CTS dize türü kullanımı bu tür hatalara neden olmaz. Aşağıdaki örnek göz önünde bulundurun:
 
 ```sql
 create table T2 (
@@ -153,32 +153,32 @@ Where Col1 = Col2
 -- Error, collation conflict.
 ```
 
-Aslında, harmanlama tümce oluşturur bir *kısıtlı türü* değiştirilebilir değildir.
+Aslında, harmanlama alt yan tümcesi Substitutable olmayan bir *kısıtlanmış tür* oluşturur.
 
-Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı olabilir. Bu farkın, sonuçlarını sıralama etkiler. <xref:System.Guid> tüm 16 bayt sözlük sırasına göre sıralanabilir (`IComparable()`) T-SQL GUID'leri şu sırayla karşılaştırır bilgileriyse: node(10-15) clock-seq(8-9), time-high(6-7) time-mid(4-5), time-low(0-3). Bu sıralama, NT tarafından oluşturulan GUID sekizli böyle bir siparişin başlattıklarında SQL 7. 0'yapıldı. Yaklaşım GUID'leri aynı düğüm kümesi oluşturulan sıralı zaman damgasına göre gelen olmasını sağladı. Yaklaşım (haline ekler yerine rastgele IOs ekler) dizin oluşturma için kullanışlıdır. Daha sonra Windows içinde sırasını Gizlilik sorunları nedeniyle karıştırılmış, ancak SQL uyumluluğu sürdürmeniz gerekir. Geçici bir çözüm kullanmaktır <xref:System.Data.SqlTypes.SqlGuid> yerine <xref:System.Guid>.
+Benzer şekilde, sıralama düzeni tür sistemleri genelinde önemli ölçüde farklı olabilir. Bu fark sonuçların sıralanmasını etkiler. <xref:System.Guid>lexicographic Order (`IComparable()`) tarafından tüm 16 baytlara göre sıralanır, ancak T-SQL GUID 'leri şu sırayla karşılaştırır: düğüm (10-15), saat-SEQ (8-9), zaman-yüksek (6-7), zaman-Orta (4-5), saat-düşük (0-3). Bu sıralama SQL 7,0 ' de, NT tarafından üretilen GUID 'lerde bu tür bir Sekizli sıra olduğunda yapılır. Aynı düğüm kümesinde oluşturulan GUID 'Ler, zaman damgasına göre sıralı sırayla birlikte sağlanır. Yaklaşım ayrıca dizinler oluşturmak için de yararlıdır (rastgele IOs yerine ekleme ekler). Bu sipariş gizlilik sorunları nedeniyle Windows 'da daha sonra karıştırılırsa, ancak SQL 'in uyumluluk koruması gerekir. Bunun yerine bir geçici çözüm kullanılır. <xref:System.Guid> <xref:System.Data.SqlTypes.SqlGuid>
 
-### <a name="operator-and-function-differences"></a>İşleç ve işlev farklılıkları
+### <a name="operator-and-function-differences"></a>İşleç ve Işlev farklılıkları
 
-İşleçler ve temelde benzer işlevler farenizin farklı semantiklere sahip. Örneğin:
+Esas olarak karşılaştırılabilir operatörler ve işlevler, daha az farklı semantiklere sahiptir. Örneğin:
 
-- C#kısa devre semantiği için mantıksal işleçler işlenenlerin sözcük düzenine dayanan belirtir `&&` ve `||`. SQL, diğer taraftan kümesi tabanlı sorgular için hedeflenen ve bu nedenle iyileştirici yürütme sırası karar özgürlüğü sağlar. Bazı uygulamaları şunlardır:
+- C#mantıksal işleçler `&&` ve `||`için işlenen nesnelerin sözlü sırası temelinde kısa devre semantiğini belirtir. Diğer taraftan SQL, küme tabanlı sorgulara yöneliktir ve bu nedenle, yürütme sırasına karar vermek için iyileştiricinin daha fazla özgürlüğü sağlar. Bazı etkileri şunlardır:
 
-  - Anlamsal olarak eşdeğer çeviri gerektirir "`CASE` ... `WHEN` … `THEN`"yeniden sıralama işlenen yürütülmesini önlemek için SQL'de oluşturun.
+  - Anlamsal olarak eşdeğer çeviri şunları gerektirir`CASE` "... `WHEN` … `THEN`"işleneni yürütmenin yeniden sıralanmasını önlemek için SQL 'de oluşturun.
 
-  - Gevşek bir çeviri `AND` / `OR` işleçleri, beklenmeyen hatalar neden C# ifade değerlendirme birinci işlenenin sonucuna göre ikinci işlenenin değerlendirmeye kullanır.
+  - İfade, birinci işlenenin `AND` değerlendirmesi sonucuna bağlı olarak ikinci işleneni değerlendirmede kullanıyorsa, `OR` işleçlere gevşek çeviri / beklenmeyen hatalara neden olabilir. C#
 
-- `Round()` işlev, T-SQL ve .NET Framework'te farklı semantiğe sahip.
+- `Round()`işlevin .NET Framework ve T-SQL içinde farklı anlamları vardır.
 
-- Dizeler için başlangıç dizini 1'de SQL CLR içinde 0 nesnesidir. Bu nedenle, dizin olan herhangi bir işlev dizin çeviri gerekir.
+- Dizeler için başlangıç dizini, CLR 'de 0, SQL 'de 1 ' dir. Bu nedenle, dizini olan herhangi bir işlev Dizin çevirisine ihtiyaç duyuyor.
 
-- CLR, kayan noktalı sayıları ('%') modulus işleci destekler, ancak SQL yoktur.
+- CLR, kayan noktalı sayılar için mod ('% ') işlecini destekler, ancak SQL desteklemez.
 
-- `Like` İşleci etkili bir şekilde otomatik aşırı örtük dönüştürmeleri temel alır. Ancak `Like` işleci karakter dize türleri, sayısal türleri arasında örtük dönüşüm üzerinde çalışılacak tanımlanır veya `DateTime` türleri ile kullanılmak üzere bu dize olmayan türlerde sağlar `Like` ekleyebiliyorsa. CTS içinde karşılaştırılabilir örtük dönüştürmelerin yok. Bu nedenle, aşırı ek gereklidir.
+- `Like` İşleci örtük dönüştürmeleri temel alarak otomatik aşırı yüklemeleri etkin bir şekilde alır. İşleci karakter dize türleri üzerinde çalışmak üzere tanımlansa da, sayısal türlerden veya `DateTime` türlerden örtük dönüştürme, bu dize olmayan `Like` türlerin de aynı zamanda kullanılmasını sağlar. `Like` CTS 'de, karşılaştırılabilir örtük dönüştürmeler yok. Bu nedenle, ek aşırı yüklemeler gereklidir.
 
     > [!NOTE]
-    > Bu `Like` işleci davranışı uygular C# yalnızca; Visual Basic `Like` anahtar sözcüğü, değişmez.
+    > Bu `Like` işleç davranışı yalnızca için C# geçerlidir; Visual Basic `Like` anahtar sözcüğü değiştirilmez.
 
-- Taşma her zaman SQL ile işaretli, ancak açıkça belirtilmesi gerekir C# (içinde olmayan adresle önlemek için VisualBasic). Tamsayı sütunlarını C1, C2 ve C3, C1 + C2 C3 içinde depolanıyorsa, verilen (güncelleştirme T ayarlamak C3 = C1 + C2).
+- Taşma her zaman SQL 'de işaretlendi, ancak wraparound kaçınmak için (Visual Basic değil C# ) içinde açıkça belirtilmesi gerekiyor. C1 ve C2, C3 (güncelleştirme T kümesi C3 = C1 + C2) içinde depolanıyorsa, C1, C2 ve C3 tamsayı sütunları veriliyor.
 
     ```sql
     create table T3 (
@@ -194,9 +194,9 @@ Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı ola
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- .NET Framework banker yuvarlaması kullanırken SQL simetrik aritmetik yuvarlama işlemi gerçekleştirir. Bilgi Bankası makalesi 196652 ek ayrıntılar için bkz.
+- SQL, .NET Framework Banker yuvarlama kullandığından, simetrik aritmetik yuvarlama gerçekleştirir. Daha fazla ayrıntı için bkz. Bilgi Bankası makalesi 196652.
 
-- Ortak yerel ayarlar için varsayılan SQL karakter dize karşılaştırmaları duyarsızdır. Visual Basic hem de C#, bunlar büyük küçük harfe duyarlıdır. Örneğin, `s == "Food"` (`s = "Food"` Visual Basic'te) ve `s == "Food"` ise farklı sonuçlar verecek `s` olduğu `food`.
+- Varsayılan olarak, ortak yerel ayarlarda karakter dizesi karşılaştırmaları SQL 'de büyük/küçük harfe duyarlıdır. Visual Basic ve içinde C#, büyük/küçük harfe duyarlıdır. Örneğin `s == "Food"` , (`s = "Food"` Visual Basic) ve `s == "Food"` `s` ise`food`farklı sonuçlar verebilir.
 
     ```sql
     -- Assume default US-English locale (case insensitive).
@@ -212,7 +212,7 @@ Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı ola
 [!code-csharp[DLinqMismatch#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#6)]
 [!code-vb[DLinqMismatch#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#6)]
 
-- İşleçler / SQL sabit uzunluk karakter tür bağımsız değişkenleri için uygulanan işlevleri aynı işleçler/CLR ile uygulanan işlevleri daha önemli ölçüde farklı semantiğe sahip <xref:System.String?displayProperty=nameWithType>. Bu da bir uzantısı türleri hakkında bölümünde ele alınan eksik karşılığı sorunu olarak görüntülenmesine.
+- SQL 'deki sabit uzunluklu karakter türü bağımsız değişkenlerine uygulanan operatörler/işlevler, CLR <xref:System.String?displayProperty=nameWithType>'ye uygulanmış aynı işleçlere/işlevlere göre önemli ölçüde farklı semantiklerdir. Bu, türler hakkında bölümünde ele alınan eksik karşılığı sorununun bir uzantısı olarak da görüntülenebilir.
 
     ```sql
     create table T4 (
@@ -240,13 +240,13 @@ Benzer şekilde, sıralama türü sistem arasında önemli ölçüde farklı ola
     -- Returns concatenation of padded strings "a   b   " and not "ab".
     ```
 
-Özet olarak, bir karışık çeviri CLR ifadeler için gerekli olabilir ve ek işleçler/işlevler SQL işlevselliği göstermek gerekli olabilir.
+Özet bölümünde, bir genişletilmiş çeviri CLR ifadeleri için gerekli olabilir ve SQL işlevselliğini göstermek için ek işleçler/işlevler gerekebilir.
 
 ### <a name="type-casting"></a>Tür atama
 
-İçinde C# ve SQL'de kullanıcılar ifade varsayılan semantikleri açık tür atamaları kullanarak değiştirebilirsiniz (`Cast` ve `Convert`). Ancak, bu özellik türü sistem sınırından ifşa eden bir ikilemle doğurur. İstenen semantiği sağlar bir SQL atama ilgili bir kolayca çevrilemez C# cast. Öte yandan, bir C# atama doğrudan çevrilemez dönüştürme türü uyuşmazlığı, eksik ortaklarınıza ve farklı tür öncelik hiyerarşileri nedeniyle eşdeğer olan bir SQL oturum. Tür sistemi uyuşmazlığı gösterme ve ifadenin önemli güç kaybı arasında bir ilişki yoktur.
+C# Ve SQL 'de, kullanıcılar açık tür yayınları (`Cast` ve `Convert`) kullanarak ifadelerin varsayılan semantiğini geçersiz kılabilir. Ancak, bu özelliği sistem sınırları genelinde göstermek bir dilimon ma oluşturur. İstenen semantiğini sağlayan bir SQL cast, bunlara karşılık gelen C# bir tür dönüştürmeye kolayca çevrilemez. Öte yandan, tür uyuşmazlıkları C# , eksik karşılıkları ve farklı tür önceliği hiyerarşileri nedeniyle, bir dönüştürme doğrudan eşdeğer bir SQL türüne çevrilemez. Sistem uyuşmazlığını ortaya çıkaran ve ifadenin önemli kuvvetinin kaybolması arasında bir denge vardır.
 
-Diğer durumlarda, tür atama ya da etki alanındaki bir ifadenin doğrulama için gerekli olmayan ancak varsayılan olmayan eşleme ifade doğru uygulandığından emin olmak için gerekli olabilir.
+Diğer durumlarda, bir ifadenin doğrulanması için her iki etki alanında tür atama gerekmeyebilir ve varsayılan olmayan bir eşlemenin ifadeye doğru bir şekilde uygulandığından emin olmak için gerekli olabilir.
 
 ```sql
 -- Example from "Non-default Mapping" section extended
@@ -269,13 +269,13 @@ Where Col1 + Col2 > 4
 
 ## <a name="performance-issues"></a>Performans sorunları
 
-Bazı SQL Server CLR için hesap türü farkları performans türü sistemleri CLR ve SQL Server arasında geçen zaman neden olabilir. Performansı etkileyen senaryolarına örnekler şunlardır:
+Bazı SQL Server CLR tür farklılıkları için hesaplama, CLR ve SQL Server tür sistemleri arasında geçiş yaparken performansın düşmesine neden olabilir. Performansı etkileyen senaryolara örnek olarak şunlar verilebilir:
 
-- İçin değerlendirme sırası zorlandı mantıksal ve/veya işleçler
+- Mantıksal ve/veya işleçler için zorlanan değerlendirme sıralaması
 
-- Koşul değerlendirme sırası zorlamak için SQL oluşturma, SQL iyileştirici'nin yeteneğini kısıtlar.
+- Koşul değerlendirmesi sırasını zorlamak için SQL oluşturmak, SQL iyileştiricinin yeteneğini kısıtlar.
 
-- Tür dönüştürmeleri, nesne ilişkisel sorgu uygulamaya veya bir CLR derleyici tarafından sunulan olmadığını dizin kullanım curtail.
+- Tür dönüştürmeleri, bir CLR derleyicisi tarafından veya nesne Ilişkisel bir sorgu uygulamasıyla tanıtılıp, dizin kullanımını etkileyebilir.
 
      Örneğin,
 
@@ -289,7 +289,7 @@ Bazı SQL Server CLR için hesap türü farkları performans türü sistemleri C
      [!code-csharp[DLinqMismatch#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#9)]
      [!code-vb[DLinqMismatch#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#9)]
 
-     İfade çevirisini göz önünde bulundurun `(s = SOME_STRING_CONSTANT)`.
+     İfadenin `(s = SOME_STRING_CONSTANT)`çevirisini göz önünde bulundurun.
 
     ```sql
     -- Corresponding part of SQL where clause
@@ -303,8 +303,8 @@ Bazı SQL Server CLR için hesap türü farkları performans türü sistemleri C
     -- Cannot use the index for column Col1 for some implementations.
     ```
 
-Anlam farklılıklara ek olarak, CLR türü sistemleri ve SQL Server arasında geçen zaman performans etkilerini dikkate almak önemlidir. Büyük veri kümeleri için bu tür performans sorunlarını, uygulama dağıtılabilir olup olmadığını belirleyebilirsiniz.
+Anlamsal farklılıklara ek olarak, SQL Server ile CLR tür sistemleri arasında geçiş yaparken performansı etkilerini göz önünde bulundurmanız önemlidir. Büyük veri kümeleri için, bu performans sorunları bir uygulamanın dağıtılabilir olup olmadığını belirleyebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Arka Plan Bilgileri](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Arka Plan Bilgileri](background-information.md)

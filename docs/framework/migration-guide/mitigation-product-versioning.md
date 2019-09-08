@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f6016fc43700fda36c6d94408019d25f89bb36b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 91db9d8c6fccf75bc9025a9487517e8c55d016cc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044204"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779215"
 ---
 # <a name="mitigation-product-versioning"></a>Mayı Ürün sürümü oluşturma
 
@@ -31,7 +31,7 @@ Ayrıntılı değişiklikler aşağıda verilmiştir:
 
 Genel olarak, uygulamalar .NET Framework çalışma zamanı sürümü ve yükleme dizini gibi şeyleri tespit etmek için önerilen tekniklerin üzerine bağımlıdır:
 
-- .NET Framework çalışma zamanı sürümünü algılamak için bkz [. nasıl yapılır: Hangi .NET Framework sürümlerinin yükleneceğini](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)saptayın.
+- .NET Framework çalışma zamanı sürümünü algılamak için bkz [. nasıl yapılır: Hangi .NET Framework sürümlerinin yükleneceğini](how-to-determine-which-versions-are-installed.md)saptayın.
 
 - .NET Framework için yükleme yolunu öğrenmek için, `InstallPath` `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` anahtardaki girdinin değerini kullanın.
 
@@ -44,4 +44,4 @@ Genel olarak, uygulamalar .NET Framework çalışma zamanı sürümü ve yüklem
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çalışma Zamanı Değişiklikleri](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [Çalışma Zamanı Değişiklikleri](runtime-changes-in-the-net-framework-4-6.md)

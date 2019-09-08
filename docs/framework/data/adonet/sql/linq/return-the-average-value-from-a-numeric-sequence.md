@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 56fe777a3bca1e2b54b61d1586f78a2df4fb475f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963817"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781398"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>Sayısal Diziden Ortalama Değer Döndürme
 <xref:System.Linq.Enumerable.Average%2A> İşleci bir sayısal değer dizisinin ortalamasını hesaplar.  
@@ -116,4 +116,4 @@ ms.locfileid: "69963817"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Toplu Sorgular](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [Toplu Sorgular](aggregate-queries.md)

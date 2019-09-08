@@ -1,5 +1,5 @@
 ---
-title: Akış sağlayıcısı (WCF Data Services)
+title: Akış sağlayıcısı (WCF Veri Hizmetleri)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,135 +10,135 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3660194a93a0528c4e5b466fb63801a8b1e12d2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877587"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779786"
 ---
-# <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Data Services)
+# <a name="streaming-provider-wcf-data-services"></a>Akış sağlayıcısı (WCF Veri Hizmetleri)
 
-Bir veri hizmeti, büyük nesne ikili verilerini açığa çıkarabilir. Bu ikili veriler, video ve ses akışları, görüntüleri, belge dosyaları ya da diğer ikili medya türleri temsil edebilir. Bir varlık veri Modeli'nde bir veya daha fazla ikili özellikleri içerdiğinde, bu ikili veri akışı yanıt giriş içinde base 64 olarak kodlanmış veri hizmeti döndürür. Yükleme ve bu şekilde büyük ikili verileri seri hale getirme, performansı etkileyebilir çünkü [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] ait olduğu varlığı bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu işlem, ikili veri varlıktan bir veya daha fazla veri akışlarını ayrılarak gerçekleştirilir.
+Veri hizmeti, büyük nesne ikili verilerini açığa çıkarır. Bu ikili veriler video ve ses akışlarını, görüntüleri, belge dosyalarını veya diğer ikili medya türlerini temsil edebilir. Veri modelindeki bir varlık bir veya daha fazla ikili özellik içerdiğinde, veri hizmeti yanıt akışındaki girdinin içinde Base-64 olarak kodlanmış bu ikili verileri döndürür. Büyük ikili verilerin bu şekilde yüklenmesi ve serileştirilmesi performansı [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] etkileyebileceğinden, ait olduğu varlıktan bağımsız ikili verileri almak için bir mekanizma tanımlar. Bu, ikili verileri varlıktaki bir veya daha fazla veri akışlarına ayırarak gerçekleştirilir.
 
-- Medya kaynağı - video, ses, görüntü veya diğer türdeki bir medya kaynak akışı gibi bir varlığa ait ikili veriler.
+- Medya kaynağı-video, ses, görüntü veya başka türde medya kaynağı akışı gibi bir varlığa ait ikili veriler.
 
-- Medya bağlantı giriş - ilgili medya kaynak akışı başvurusu olan bir varlık.
+- Medya bağlantı girişi-ilgili medya kaynağı akışına başvuran bir varlık.
 
-İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bir akış veri sağlayıcısı uygulayarak bir ikili kaynak akışı tanımlayın. Akış sağlayıcısı uygulaması belirli bir varlıkla ilişkili medya kaynak akışı ile veri hizmeti sağlayan bir <xref:System.IO.Stream> nesne. Bu uygulama kabul edin ve ortam kaynakları belirtilen MIME türünün ikili veri akışları olarak HTTP üzerinden döndürmek veri hizmeti sağlar.
+İle [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], bir akış veri sağlayıcısı uygulayarak bir ikili kaynak akışı tanımlarsınız. Akış sağlayıcısı uygulamasında, bir <xref:System.IO.Stream> nesne olarak belirli bir varlıkla ilişkili medya kaynak akışı ile veri hizmeti sağlanır. Bu uygulama, veri hizmetinin, belirtilen bir MIME türünün ikili veri akışları olarak HTTP üzerinden medya kaynaklarını kabul etmesini ve döndürmesini sağlar.
 
-İkili verilerden akış desteklemek için bir veri hizmeti yapılandırma aşağıdakileri gerektirir:
+Bir veri hizmetini ikili verilerin akışını destekleyecek şekilde yapılandırmak için aşağıdaki adımlar gereklidir:
 
-1. Bir medya bağlantısı olarak giriş veri modeli'ndeki varlıkları bir veya daha fazla öznitelik. Bu varlıklar, ikili veri akışını içermemelidir. Bir varlığın herhangi bir ikili özelliği her zaman giriş base-64 kodlu ikili döndürülür.
+1. Veri modelindeki bir veya daha fazla varlığı bir medya bağlantı girişi olarak özniteliği. Bu varlıklar, akışa eklenecek ikili verileri içermemelidir. Bir varlığın herhangi bir ikili özelliği, her zaman girişte Base-64 kodlu ikili olarak döndürülür.
 
-2. T:System.Data.Services.Providers.IDataServiceStreamProvider arabirim uygular.
+2. T:System.Data.Services.Providers.IDataServiceStreamProvider arabirimini uygulayın.
 
-3. Uygulayan bir veri hizmeti tanımlayan <xref:System.IServiceProvider> arabirimi. Veri hizmeti kullanan <xref:System.IServiceProvider.GetService%2A> akış veri sağlayıcı uygulaması erişmek için uygulama. Bu yöntem, uygun Akış sağlayıcısı uygulamasını döndürür.
+3. <xref:System.IServiceProvider> Arabirimini uygulayan bir veri hizmeti tanımlayın. Veri hizmeti, akış veri <xref:System.IServiceProvider.GetService%2A> sağlayıcısı uygulamasına erişmek için uygulamasını kullanır. Bu yöntem, uygun akış sağlayıcısı uygulamasını döndürür.
 
-4. Büyük ileti akışları Web uygulama yapılandırmasında etkinleştirin.
+4. Web uygulaması yapılandırmasında büyük ileti akışlarını etkinleştirin.
 
-5. Sunucuda veya bir veri kaynağındaki ikili kaynaklara erişimini etkinleştirir.
+5. Sunucuda veya bir veri kaynağında ikili kaynaklara erişimi etkinleştirin.
 
-Bu konudaki örnekleri akış derinlemesine gönderisinde açıklanan fotoğraf hizmeti, bir örneği temel alarak [Veri Hizmetleri Akış sağlayıcısı serisi: Bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989). Bu örnek hizmeti için kaynak kodu kullanılabilir [akış fotoğraf veri hizmeti örnek sayfası](https://go.microsoft.com/fwlink/?LinkID=198988) MSDN Kod Galerisi'nde.
+Bu konudaki örnekler, [veri hizmetleri akış sağlayıcısı serisinde derinlemesine bir şekilde açıklanan örnek bir akış fotoğrafı hizmetini temel alır: Akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989). Bu örnek hizmetin kaynak kodu, MSDN kod galerisindeki [akış fotoğrafı veri hizmeti örnek sayfasında](https://go.microsoft.com/fwlink/?LinkID=198988) bulunur.
 
-## <a name="defining-a-media-link-entry-in-the-data-model"></a>Veri modelinde bir medya bağlantısı girişinin tanımlama
+## <a name="defining-a-media-link-entry-in-the-data-model"></a>Veri modelinde medya bağlantısı girişi tanımlama
 
-Veri kaynağı sağlayıcı bir varlık veri modeli bir medya bağlantı giriş olarak tanımlandığı şekilde belirler.
+Veri kaynağı sağlayıcısı, bir varlığın veri modelinde medya bağlantı girişi olarak nasıl tanımlandığını belirler.
 
 **Entity Framework Sağlayıcısı**
 
-Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme `HasStream` aşağıdaki örnekteki gibi kavramsal modelin varlık tür tanımında öznitelik:
+Bir varlığın medya bağlantı girişi olduğunu belirtmek için, aşağıdaki örnekte olduğu gibi `HasStream` , kavramsal modeldeki varlık türü tanımına özniteliği ekleyin:
 
 [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]
 
-Ad alanı da eklemelisiniz `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` veya varlık veri modelini tanımlar .edmx veya .csdl dosyasının kök.
+Ayrıca, ad alanını `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` varlığa ya da veri modelini tanımlayan. edmx veya. csdl dosyasının köküne eklemeniz gerekir.
 
-Veri hizmetinin kullanan bir örnek [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] sağlayıcısı ve ortaya çıkaran bir medya kaynağı gönderiye bakın [Veri Hizmetleri Akış sağlayıcısı serisi: Bir Akış sağlayıcısı (Bölüm 1) uygulama](https://go.microsoft.com/fwlink/?LinkID=198989).
+[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Sağlayıcıyı kullanan ve bir medya kaynağı sunan bir veri hizmetine örnek olarak bkz. Post [Data Services akış sağlayıcısı serisi: Akış sağlayıcısı uygulama (1. bölüm)](https://go.microsoft.com/fwlink/?LinkID=198989).
 
 **Yansıma Sağlayıcısı**
 
-Bir varlığa bir medya bağlantısı girişinin olduğunu belirtmek için ekleme <xref:System.Data.Services.Common.HasStreamAttribute> yansıma sağlayıcısı varlık türü tanımlayan sınıf.
+Bir varlığın medya bağlantı girişi olduğunu göstermek için, ' yi yansıma sağlayıcısında <xref:System.Data.Services.Common.HasStreamAttribute> varlık türünü tanımlayan sınıfına ekleyin.
 
 **Özel veri hizmeti sağlayıcısı**
 
-Özel hizmet sağlayıcıları kullanırken, uygulamanız <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> veri hizmetinizi için meta verileri tanımlamak için arabirim. Daha fazla bilgi için [özel veri hizmeti sağlayıcılarını](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Bir ikili kaynak akışı ait olduğunu belirten bir <xref:System.Data.Services.Providers.ResourceType> ayarlayarak <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> özelliğini `true` üzerinde <xref:System.Data.Services.Providers.ResourceType> medya bağlantısı girişinin varlık türünü temsil eder.
+Özel hizmet sağlayıcıları kullanırken, veri hizmetiniz için meta <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> verileri tanımlamak üzere arabirimini uygulayın. Daha fazla bilgi için bkz. [özel veri hizmeti sağlayıcıları](custom-data-service-providers-wcf-data-services.md). Bir ikili kaynak akışının öğesine, bir medya bağlantı girişi <xref:System.Data.Services.Providers.ResourceType> olan varlık türünü <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> temsil <xref:System.Data.Services.Providers.ResourceType> eden `true` öğesine özelliği ayarlanarak ait olduğunu belirtirsiniz.
 
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>IDataServiceStreamProvider arabirimini uygulama
 
-İkili veri akışlarını destekleyen bir veri hizmeti oluşturmak için uygulamanız gereken <xref:System.Data.Services.Providers.IDataServiceStreamProvider> arabirimi. Bu uygulama, ikili veri akışı olarak istemciye döndürür ve istemciden gönderilen bir akış olarak ikili verileri kullanmak veri hizmeti sağlar. Veri Hizmeti, ikili veri akışı olarak erişim gerektiğinde bu arabirim örneği oluşturur. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> Arabirimi aşağıdaki üyeleri belirtir:
+İkili veri akışlarını destekleyen bir veri hizmeti oluşturmak için, <xref:System.Data.Services.Providers.IDataServiceStreamProvider> arabirimini uygulamanız gerekir. Bu uygulama, veri hizmetinin ikili verileri istemciye bir akış olarak döndürmesini ve ikili verileri istemciden gönderilen akış olarak kullanmasını sağlar. Veri hizmeti, ikili verilere akış olarak erişmesi gerektiğinde bu arabirimin bir örneğini oluşturur. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> Arabirim aşağıdaki üyeleri belirtir:
 
 |Üye adı|Açıklama|
 |-----------------|-----------------|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Bu yöntem, medya bağlantısı girişinin silindiğinde karşılık gelen medya kaynağı silmek için veri hizmeti tarafından çağrılır. Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, bu yöntem, sağlanan media link entry ile ilişkili medya kaynağı siler kodu içerir.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Bu yöntem, bir akış olarak bir medya kaynağı döndürmek için veri hizmeti tarafından çağrılır. Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, bu yöntem veri hizmeti tarafından sağlanan media link entry ile ilişkili olan dönüş medya kaynağı için kullanılan bir akış sağladığı kodunu içerir.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A>|Bu yöntem, medya kaynağı için media link entry istemek için kullanılan URI döndürmek için veri hizmeti tarafından çağrılır. Bu değer oluşturmak için kullanılan `src` media link entry ve içerik öğesindeki özniteliği veri akışını istemek için kullanılır. Bu yöntem döndürdüğünde `null`, veri hizmeti otomatik olarak URI belirler. Akış sağlayıcısı kullanmadan istemciler ikili verilere doğrudan erişime olanak sağlamak, ihtiyacınız olduğunda bu yöntemi kullanın.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|Bu yöntem, belirtilen media link entry ile ilişkili medya kaynağı Content-Type değerini döndürmek için veri hizmeti tarafından çağrılır.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|Bu yöntem, belirtilen varlık ile ilişkili veri akışının eTag döndürmek için veri hizmeti tarafından çağrılır. İkili veriler için eşzamanlılık yönettiğinizde, bu yöntem kullanılır. Bu yöntem null değeri döndürür, veri hizmeti eşzamanlılık izlemez.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|Bu yöntem, akış alma istemciden gönderilirken kullanılan akış almak için veri hizmeti tarafından çağrılır. Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, veri hizmeti yazma alınan akış verilerini yazılabilir bir akış döndürmelidir.|
-|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|Veri Hizmeti çalışma zamanı eklenmekte medya kaynağı için veri akışı ile ilişkili olan media link entry oluşturmalıdır türünü temsil eden bir ad alanıyla nitelenen tür adı döndürür.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>|Bu yöntem, medya bağlantısı girişi silindiğinde ilgili medya kaynağını silmek için veri hizmeti tarafından çağrılır. Uygulamasını uyguladığınızda, bu yöntem sağlanan medya bağlantısı girdisiyle ilişkili medya kaynağını silen kodu içerir. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>|Bu yöntem, bir medya kaynağını akış olarak döndürmek için veri hizmeti tarafından çağrılır. Uygulamasını uyguladığınızda, bu yöntem, veri hizmeti tarafından sağlanan medya bağlantı girdisiyle ilişkili döndürülen medya kaynağına kullanılan bir akış sağlayan kodu içerir. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStreamUri%2A>|Bu yöntem, medya bağlantısı girişinin medya kaynağını istemek için kullanılan URI 'yi döndürmek için veri hizmeti tarafından çağrılır. Bu değer, ortam bağlantı girişinin içerik `src` öğesinde özniteliği oluşturmak için kullanılır ve veri akışını istemek için kullanılır. Bu yöntem döndüğünde `null`, veri hizmeti URI 'yi otomatik olarak belirler. İstemcilere, Steme sağlayıcısını kullanmadan ikili verilere doğrudan erişim sağlamanız gerektiğinde bu yöntemi kullanın.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamContentType%2A>|Bu yöntem, belirtilen medya bağlantısı girdisiyle ilişkili Medya kaynağının Içerik türü değerini döndürmek için veri hizmeti tarafından çağrılır.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetStreamETag%2A>|Bu yöntem, belirtilen varlıkla ilişkili veri akışının eTag 'i döndürmek için veri hizmeti tarafından çağrılır. Bu yöntem, ikili veriler için eşzamanlılık yönetirken kullanılır. Bu yöntem null döndürdüğünde veri hizmeti eşzamanlılık izlemez.|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>|Bu yöntem, istemciden gönderilen akış alınırken kullanılan akışı almak için veri hizmeti tarafından çağrılır. Uygulamasını uyguladığınızda, veri hizmetinin alınan akış verilerini yazdığı yazılabilir bir akış döndürmelidir. <xref:System.Data.Services.Providers.IDataServiceStreamProvider>|
+|<xref:System.Data.Services.Providers.IDataServiceStreamProvider.ResolveType%2A>|Eklenmekte olan medya kaynağı için veri akışıyla ilişkili medya bağlantı girişi için veri hizmeti çalışma zamanının oluşturulması gereken türü temsil eden bir ad alanı nitelenmiş tür adı döndürür.|
 
-## <a name="creating-the-streaming-data-service"></a>Akış veri hizmeti oluşturma
+## <a name="creating-the-streaming-data-service"></a>Akış veri hizmeti oluşturuluyor
 
-Sağlamak üzere [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] erişimi olan çalışma zamanı <xref:System.Data.Services.Providers.IDataServiceStreamProvider> uygulama, oluşturduğunuz veri hizmeti uygulanmalı ayrıca <xref:System.IServiceProvider> arabirimi. Aşağıdaki örnek nasıl uygulayacağınızı gösteren <xref:System.IServiceProvider.GetService%2A> örneği döndürülecek yöntemi `PhotoServiceStreamProvider` uygulayan sınıf <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Çalışma zamanının <xref:System.Data.Services.Providers.IDataServiceStreamProvider> uygulamaya erişimi sağlamak için, <xref:System.IServiceProvider> oluşturduğunuz veri hizmetinin de arabirimi uygulaması gerekir. Aşağıdaki örnek, uygulayan <xref:System.IServiceProvider.GetService%2A> `PhotoServiceStreamProvider` <xref:System.Data.Services.Providers.IDataServiceStreamProvider>sınıfının bir örneğini döndürmek için yönteminin nasıl uygulanacağını gösterir.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
 
-Bir veri hizmeti oluşturma hakkında genel bilgi için bkz. [veri hizmeti yapılandırma](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
+Veri hizmeti oluşturma hakkında genel bilgi için bkz. [veri hizmetini yapılandırma](configuring-the-data-service-wcf-data-services.md).
 
-## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Büyük ikili akışlar barındırma ortamında etkinleştirme
+## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Barındırma ortamında büyük Ikili akışları etkinleştirme
 
-Bir ASP.NET Web uygulamasında veri hizmeti oluşturduğunuzda, Windows Communication Foundation (WCF) HTTP protokolü uygulamasını sağlamak için kullanılır. Varsayılan olarak, WCF HTTP iletileri yalnızca 65 K bayt boyutunu sınırlar. Büyük ikili veri akışı için ve veri hizmetinden kullanabilmek için Web uygulaması büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak için yapılandırmanız gerekir. Bunu yapmak için aşağıdaki ekleyin `<configuration />` uygulamanın Web.config dosyasının öğe:
+Bir ASP.NET Web uygulamasında bir veri hizmeti oluşturduğunuzda, HTTP protokol uygulamasını sağlamak için Windows Communication Foundation (WCF) kullanılır. Varsayılan olarak, WCF HTTP iletilerinin boyutunu yalnızca 65K bayt olarak sınırlandırır. Veri hizmetinden büyük ikili veri akışı oluşturabilmek için, büyük ikili dosyaları etkinleştirmek ve aktarım için akışları kullanmak üzere Web uygulamasını da yapılandırmanız gerekir. Bunu yapmak için, uygulamanın Web. config dosyasının `<configuration />` öğesine aşağıdakini ekleyin:
 
 > [!NOTE]
-> Kullanmanız gereken bir <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> istek ve yanıt iletilerindeki ikili veri akışı ve WCF tarafından arabelleğe değil emin olmak için aktarım modu.
+> Hem istek hem de <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> yanıt iletilerindeki ikili verilerin aynı şekilde ve WCF tarafından arabelleğe alınmadığından emin olmak için bir aktarım modu kullanmanız gerekir.
 
-Daha fazla bilgi için [ileti aktarma akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) ve [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).
+Daha fazla bilgi için bkz. [akış Ileti aktarımı](../../wcf/feature-details/streaming-message-transfer.md) ve [Aktarım kotaları](../../wcf/feature-details/transport-quotas.md).
 
-Varsayılan olarak, Internet Information Services (IIS) istekleri 4 MB boyutunu da sınırlar. Veri hizmetinizi IIS üzerinde çalışan akışlar 4 MB'tan büyük alma etkinleştirmek için de ayarlamalısınız `maxRequestLength` özniteliği [httpRuntime öğesi (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) içinde `<system.web />` yapılandırma bölümü olarak Aşağıdaki örnekte gösterilen:
+Varsayılan olarak, Internet Information Services (IIS) isteklerin boyutunu 4MB olarak sınırlandırır. Veri hizmetinizin IIS üzerinde çalışırken 4 MB 'tan büyük akışları almasını sağlamak için, aşağıdaki şekilde gösterildiği gibi, `maxRequestLength` `<system.web />` yapılandırma bölümündeki [httpRuntime öğesinin (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) özniteliğini de ayarlamanız gerekir örneğinde
 
-## <a name="using-data-streams-in-a-client-application"></a>Bir istemci uygulamasında veri akışlarını kullanma
+## <a name="using-data-streams-in-a-client-application"></a>Istemci uygulamasında veri akışlarını kullanma
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci Kitaplığı hem alma hem de istemcide ikili akış olarak sunulan bu kaynakları güncelleştirme olanak sağlar. Daha fazla bilgi için [ikili verilerle çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] İstemci kitaplığı, bu kullanıma sunulan kaynakları istemcide ikili akışlar olarak hem alıp hem de güncelleştirmenizi sağlar. Daha fazla bilgi için bkz. [Ikili verilerle çalışma](working-with-binary-data-wcf-data-services.md).
 
-## <a name="considerations-for-working-with-a-streaming-provider"></a>Bir akış sağlayıcı ile çalışma konuları
+## <a name="considerations-for-working-with-a-streaming-provider"></a>Bir akış sağlayıcısıyla çalışmaya yönelik konular
 
-Akış sağlayıcısı uyguladığınızda ve ortam kaynaklarına eriştiğinizde veri hizmetinden göz önünde bulundurulması gerekenler şunlardır:
+Aşağıda, bir akış sağlayıcısı uyguladığınızda ve bir veri hizmetinden medya kaynaklarına eriştiğinizde dikkate alınması gereken noktalar verilmiştir.
 
-- Birleştirme isteklerini medya kaynakları için desteklenmez. Bir PUT İsteği, var olan bir varlığın medya kaynağı değiştirmek için kullanın.
+- Medya kaynakları için BIRLEŞTIRME istekleri desteklenmez. Var olan bir varlığın medya kaynağını değiştirmek için bir PUT isteği kullanın.
 
-- Bir POST isteği yeni bir medya bağlantısı girişinin oluşturmak için kullanılamaz. Bunun yerine, yeni bir medya kaynağı oluşturmak için bir POST isteği yayımlamanız gerekir ve veri hizmeti yeni bir medya bağlantısı girişinin varsayılan değerlerle oluşturur. Bu yeni bir varlık, bir sonraki birleştirme veya PUT isteği tarafından güncelleştirilebilir. Ayrıca, varlık önbelleğe almayı düşünün ve POST isteğinde başlık üstbilgisi değerini özellik değerini ayarlamak gibi disposer güncelleştirmeleri yapmanız.
+- POST isteği yeni bir medya bağlantı girişi oluşturmak için kullanılamaz. Bunun yerine, yeni bir medya kaynağı oluşturmak için bir POST isteği oluşturmanız gerekir ve veri hizmeti varsayılan değerlerle yeni bir medya bağlantısı girişi oluşturur. Bu yeni varlık, sonraki bir BIRLEŞTIRME veya PUT isteği tarafından güncelleştirilemeyebilir. Ayrıca, varlık önbelleğini de göz önünde bulundurmanız ve özellik değerini POST isteğindeki başlık üst bilgisinin değerine ayarlamak gibi bir ilke oluşturmanız da gerekebilir.
 
-- Bir POST isteği alındığında çağrıları veri hizmeti <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> kendisinden önce medya kaynağı oluşturmak için çağırdığı <xref:System.Data.Services.IUpdatable.SaveChanges%2A> medya bağlantısı girişinin oluşturma.
+- Bir post isteği alındığında, veri hizmeti medya bağlantısı girişi oluşturmak <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> için çağırmadan <xref:System.Data.Services.IUpdatable.SaveChanges%2A> önce medya kaynağını oluşturmak için çağırır.
 
-- Uygulanışı <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> değil döndürmelidir bir <xref:System.IO.MemoryStream> nesne. Bu tür bir akışı kullandığınızda, hizmet çok büyük veri akışlarını aldığında bellek kaynağı sorunları ortaya çıkar.
+- Uygulamasının bir<xref:System.IO.MemoryStream> nesnesi döndürmemelidir. <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> Bu tür bir akış kullandığınızda, hizmet çok büyük veri akışları aldığında bellek kaynağı sorunları oluşur.
 
-- Ortam kaynakları bir veritabanında saklarken göz önünde bulundurulması gerekenler şunlardır:
+- Aşağıda, medya kaynaklarını bir veritabanında depolarken göz önünde bulundurmanız gereken noktalar verilmiştir:
 
-  - Veri modelinde bir medya kaynağı olan bir ikili özellik eklenmemelidir. Bir veri modeli kullanıma sunulan tüm özellikler, Giriş akışı bir yanıt döndürülür.
+  - Medya kaynağı olan bir ikili özelliğin veri modeline dahil edilmemelidir. Bir veri modelinde kullanıma sunulan tüm özellikler bir yanıt akışındaki girişte döndürülür.
 
-  - Büyük ikili akışı performansı artırmak için veritabanında ikili verileri depolamak için bir özel akış sınıf oluşturmanızı öneririz. Bu sınıf tarafından döndürülen, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulama ve ikili veri öbekleri veritabanına gönderir. Bir SQL Server veritabanı için ikili verileri 1 MB'den büyük olduğunda bir FILESTREAM veri akışı veritabanına kullanmanızı öneririz.
+  - Büyük bir ikili akış ile performansı artırmak için, ikili verileri veritabanında depolamak üzere özel bir akış sınıfı oluşturmanızı öneririz. Bu sınıf, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> uygulamanız tarafından döndürülür ve ikili verileri öbeklerdeki veritabanına gönderir. Bir SQL Server veritabanı için, ikili veriler 1 MB 'tan büyükse veritabanına veri akışı için bir FıLESTREAM kullanmanızı öneririz.
 
-  - Veritabanınızı, veri hizmeti tarafından alınabilmesi için olan büyük ikili akışlar depolamak için tasarlandığından emin olun.
+  - Veritabanınızın, veri hizmetiniz tarafından alınacak ikili büyük akışları depolamak için tasarlandığından emin olun.
 
-  - Bir istemci bir medya bağlantı Giriş bir medya kaynağı ile tek bir istekte eklemek için bir POST isteği gönderdiğinde <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> veri hizmeti veritabanına yeni bir varlık ekler önce akışa almak için çağrılır. Bir akış sağlayıcı uygulaması bu verileri hizmet davranışı işleyebilir olması gerekir. İkili verileri veya varlık sonra kadar bir dosyadaki veri akışını veritabanına eklenmiş deposu depolamak için ayrı veri tablosu kullanmayı düşünün.
+  - İstemci tek bir istekte medya kaynağı içeren bir medya bağlantısı girişi eklemek üzere bir post isteği gönderdiğinde, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> veri hizmeti yeni varlığı veritabanına eklemeden önce akışı almak için çağırılır. Bir akış sağlayıcısı uygulamasının bu veri hizmeti davranışını işleyebilmesi gerekir. İkili verileri depolamak için ayrı bir veri tablosu kullanmayı düşünün veya veri akışını varlık veritabanına eklenene kadar bir dosyada depolayın.
 
-- Uyguladığınızda <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, veya <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> yöntemlerini kullanmanız gerekir eTag ve sağlanan içerik türü değerleri yöntem parametreleri. ETag veya Content-Type üst bilgilerinde ayarlı değil, <xref:System.Data.Services.Providers.IDataServiceStreamProvider> sağlayıcısı uygulaması.
+- <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A> ,<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, Veya<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> yöntemlerini uyguladığınızda, yöntem parametreleri olarak sağlanan ETag ve içerik türü değerlerini kullanmanız gerekir. <xref:System.Data.Services.Providers.IDataServiceStreamProvider> Sağlayıcı uygulamanızda ETag veya Content-Type üst bilgilerini ayarlamayın.
 
-- Varsayılan olarak, istemci bir öbekli HTTP Transfer-Encoding kullanarak büyük ikili akışlar gönderir. ASP.NET geliştirme sunucusu bu tür kodlamayı desteklemediği için büyük ikili akışlar kabul etmesi gereken bir akış veri hizmeti barındırmak için bu Web sunucusu kullanamazsınız. ASP.NET Geliştirme Sunucusu hakkında daha fazla bilgi için bkz. [ASP.NET Web projeleri için Visual Studio'daki Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- Varsayılan olarak, istemci, öbekli bir HTTP aktarım kodlaması kullanarak büyük ikili akışlar gönderir. ASP.NET Development Server bu tür kodlamayı desteklemediğinden, büyük ikili akışları kabul etmesi gereken bir akış veri hizmetini barındırmak için bu Web sunucusunu kullanamazsınız. ASP.NET Development Server hakkında daha fazla bilgi için bkz. [Visual Studio 'Da Web sunucuları for ASP.NET Web Projects](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 
-## <a name="versioning-requirements"></a>Sürüm gereksinimleri
+## <a name="versioning-requirements"></a>Sürüm oluşturma gereksinimleri
 
-Aşağıdaki Akış sağlayıcısı olan [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Protokolü sürüm gereksinimleri:
+Akış sağlayıcısı aşağıdaki [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokol sürümü oluşturma gereksinimlerine sahiptir:
 
-- Akış sağlayıcısı, veri hizmeti 2.0 sürümünü desteklemesini gerektirir [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokol ve sonraki sürümler.
+- Akış sağlayıcısı, veri hizmetinin [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokol ve sonraki sürümlerin sürüm 2,0 ' i desteklemesini gerektirir.
 
-Daha fazla bilgi için [veri hizmeti sürümü oluşturma](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).
+Daha fazla bilgi için bkz. [veri hizmeti sürümü oluşturma](data-service-versioning-wcf-data-services.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Hizmetleri Sağlayıcıları](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
-- [Özel Veri Hizmeti Sağlayıcıları](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
-- [İkili Verilerle Çalışma](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+- [Veri Hizmetleri Sağlayıcıları](data-services-providers-wcf-data-services.md)
+- [Özel Veri Hizmeti Sağlayıcıları](custom-data-service-providers-wcf-data-services.md)
+- [İkili Verilerle Çalışma](working-with-binary-data-wcf-data-services.md)

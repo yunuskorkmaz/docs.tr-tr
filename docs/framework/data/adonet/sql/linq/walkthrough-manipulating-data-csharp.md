@@ -2,12 +2,12 @@
 title: 'İzlenecek yol: Verileri Düzenleme (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8941ac30a67406346e5448ca5af4af8512d168a8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946968"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781007"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>İzlenecek yol: Verileri Düzenleme (C#)
 Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ve silmek için temel uçtan uca bir senaryo sağlar. Müşteri eklemek, bir müşterinin adını değiştirmek ve bir siparişi silmek için örnek Northwind veritabanının bir kopyasını kullanacaksınız.  
@@ -23,7 +23,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 - Northwind örnek veritabanı.  
   
-     Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Veritabanını indirdikten sonra, Kuzey WND. mdf dosyasını c:\linqtest6 klasörüne kopyalayın.  
+     Geliştirme bilgisayarınızda bu veritabanı yoksa, Microsoft Download sitesinden indirebilirsiniz. Yönergeler için bkz. [örnek veritabanlarını indirme](downloading-sample-databases.md). Veritabanını indirdikten sonra, Kuzey WND. mdf dosyasını c:\linqtest6 klasörüne kopyalayın.  
   
 - Northwind C# veritabanından oluşturulan bir kod dosyası.  
   
@@ -31,7 +31,7 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
-     Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Genel Bakış  
  Bu izlenecek yol altı ana görevden oluşur:  
@@ -163,4 +163,4 @@ Bu izlenecek yol, bir veritabanındaki verileri eklemek, değiştirmek [!INCLUDE
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlenecek Yollarla Öğrenme](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)

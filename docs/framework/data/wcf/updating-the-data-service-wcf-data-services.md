@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: f65e3775c260eedc1d76f209d5cb76524d61b939
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5cf7a6e563069e35a4ac0fe729a616dc1c56bdb5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953207"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779748"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Veri hizmeti güncelleştiriliyor (WCF Veri Hizmetleri)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Bir[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] akışı kullanmak için istemci kitaplığını kullandığınızda, kitaplık akıştaki girdileri, istemci veri hizmeti sınıflarının örneklerine çevirir. Bu veri hizmeti sınıfları, <xref:System.Data.Services.Client.DataServiceContext> <xref:System.Data.Services.Client.DataServiceQuery%601> ait olduğu ile izlenir. İstemci, üzerinde <xref:System.Data.Services.Client.DataServiceContext>yöntemler kullanarak rapor ettiğiniz varlıklara yapılan değişiklikleri izler. Bu yöntemler, istemcinin eklenen ve silinen varlıkları ve ayrıca özellik değerlerinde yaptığınız değişiklikleri ve varlık örnekleri arasındaki ilişkileri izlemesini sağlar. Bu izlenen değişiklikler, <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> yöntemini çağırdığınızda REST tabanlı işlemler olarak veri hizmetine geri gönderilir.  
   
 > [!NOTE]
-> Denetimlerine veri bağlamak <xref:System.Data.Services.Client.DataServiceCollection%601> için bir örneğini kullandığınızda, bağlı denetimdeki verilerde yapılan değişiklikler otomatik olarak <xref:System.Data.Services.Client.DataServiceContext>öğesine bildirilir. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
+> Denetimlerine veri bağlamak <xref:System.Data.Services.Client.DataServiceCollection%601> için bir örneğini kullandığınızda, bağlı denetimdeki verilerde yapılan değişiklikler otomatik olarak <xref:System.Data.Services.Client.DataServiceContext>öğesine bildirilir. Daha fazla bilgi için bkz. [verileri denetimlere bağlama](binding-data-to-controls-wcf-data-services.md).  
   
 ## <a name="adding-modifying-and-changing-entities"></a>Varlıkları ekleme, değiştirme ve değiştirme  
  Bir[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] akışa başvuru eklemek için Visual Studio 'da hizmet başvurusu Ekle iletişim kutusunu kullandığınızda, sonuçta elde edilen istemci veri hizmeti sınıflarının her biri null yapılamayan varlık özelliği için bir parametre alan statik bir *oluşturma* yöntemine sahiptir . Aşağıdaki örnekte olduğu gibi, varlık türü sınıflarının örneklerini oluşturmak için bu yöntemi kullanabilirsiniz:  
@@ -44,7 +44,7 @@ ms.locfileid: "69953207"
  [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
  [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
- Daha fazla bilgi için [nasıl yapılır: Varlık](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md)ekleyin, değiştirin ve silin.  
+ Daha fazla bilgi için [nasıl yapılır: Varlık](how-to-add-modify-and-delete-entities-wcf-data-services.md)ekleyin, değiştirin ve silin.  
   
 ## <a name="attaching-entities"></a>Varlıkları iliştirme  
  İstemci kitaplığı, varlığı yüklemek <xref:System.Data.Services.Client.DataServiceContext>için önce bir sorgu yürütmeden bir varlığa yaptığınız güncelleştirmeleri kaydetmenizi sağlar. İçindeki belirli bir varlık kümesine varolan bir nesneyi iliştirmek için <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A> yöntemini kullanın <xref:System.Data.Services.Client.DataServiceContext>. Daha sonra nesneyi değiştirebilir ve değişiklikleri veri hizmetine kaydedebilirsiniz. Aşağıdaki örnekte, bir adlı bir müşteri nesnesi bağlamına iliştirilir ve daha sonra <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> eklenmiş <xref:System.Data.Services.Client.EntityStates.Modified> nesneyi çağrılmadan önce <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> işaretlemek için çağırılır:  
@@ -62,7 +62,7 @@ ms.locfileid: "69953207"
   
 - <xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> Bir`etag` parametre alan aşırı yükleme, bir ETag değeriyle birlikte alınan bir varlık nesnesini iliştirirken kullanılır. Bu eTag değeri, eklenen nesnede değişiklik yapıldığında eşzamanlılık denetlemek için kullanılır.  
   
- Daha fazla bilgi için [nasıl yapılır: DataServiceContext](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)'e mevcut bir varlık ekleyin.  
+ Daha fazla bilgi için [nasıl yapılır: DataServiceContext](attach-an-existing-entity-to-dc-wcf-data.md)'e mevcut bir varlık ekleyin.  
   
 ## <a name="creating-and-modifying-relationship-links"></a>Ilişki bağlantıları oluşturma ve değiştirme  
  <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> **Hizmet başvurusu Ekle** iletişim kutusunun oluşturduğu <xref:System.Data.Services.Client.DataServiceContext> sınıfın yöntemini veya uygun *AddTo* yöntemini kullanarak yeni bir varlık eklediğinizde, yeni varlık ve ilgili varlıklar arasındaki ilişkiler otomatik olarak tanımlanmadı.  
@@ -88,16 +88,16 @@ ms.locfileid: "69953207"
  [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
  [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
- Daha fazla bilgi için [nasıl yapılır: Varlık Ilişkilerini](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md)tanımlayın.  
+ Daha fazla bilgi için [nasıl yapılır: Varlık Ilişkilerini](how-to-define-entity-relationships-wcf-data-services.md)tanımlayın.  
   
 ## <a name="saving-changes"></a>Değişiklikler kaydediliyor  
- Değişiklikler <xref:System.Data.Services.Client.DataServiceContext> örnekte izlenir, ancak anında sunucuya gönderilmez. Belirtilen bir etkinlik için gerekli değişikliklerle işiniz bittiğinde, tüm değişiklikleri veri hizmetine göndermek <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> için çağırın. Daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Ayrıca, <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> ve <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> yöntemlerini kullanarak değişiklikleri zaman uyumsuz olarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
+ Değişiklikler <xref:System.Data.Services.Client.DataServiceContext> örnekte izlenir, ancak anında sunucuya gönderilmez. Belirtilen bir etkinlik için gerekli değişikliklerle işiniz bittiğinde, tüm değişiklikleri veri hizmetine göndermek <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> için çağırın. Daha fazla bilgi için bkz. [veri hizmeti bağlamını yönetme](managing-the-data-service-context-wcf-data-services.md). Ayrıca, <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> ve <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> yöntemlerini kullanarak değişiklikleri zaman uyumsuz olarak kaydedebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Veri Hizmetleri İstemci Kitaplığı](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Veri Hizmetini Sorgulama](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
-- [Zaman Uyumsuz İşlemler](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
-- [Toplu İşlemler](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
-- [Nesne Gerçekleştirme](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)
-- [Veri Hizmeti Bağlamını Yönetme](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+- [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)
+- [Veri Hizmetini Sorgulama](querying-the-data-service-wcf-data-services.md)
+- [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)
+- [Toplu İşlemler](batching-operations-wcf-data-services.md)
+- [Nesne Gerçekleştirme](object-materialization-wcf-data-services.md)
+- [Veri Hizmeti Bağlamını Yönetme](managing-the-data-service-context-wcf-data-services.md)

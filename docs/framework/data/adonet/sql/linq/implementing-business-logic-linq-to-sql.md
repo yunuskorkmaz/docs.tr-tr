@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-ms.openlocfilehash: 31a5aa0f147d43e94ce885c541f11b9aec4ae6d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5261aab1ef6641651f856b8ebb024f64ad32ee59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938648"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781434"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Iş mantığını uygulama (LINQ to SQL)
 Bu konudaki "iş mantığı" terimi, verileri eklenmeden, yapılandırmadan veya veritabanından silinmeden önce, veri için uyguladığınız özel kurallara veya doğrulama testlerine başvurur. İş mantığı bazen "iş kuralları" veya "etki alanı mantığı" olarak da adlandırılır. N katmanlı uygulamalarda, genellikle, sunu katmanından veya veri erişim katmanından bağımsız olarak değiştirilebilecek şekilde mantıksal katman olarak tasarlanmıştır. İş mantığı, veritabanındaki verilerin güncelleştirilmesi, eklenmesi veya silinmesinden önce veya sonra veri erişim katmanı tarafından çağrılabilir.  
@@ -188,4 +188,4 @@ partial class Customer
 - [Parçalı Sınıflar ve Yöntemler](../../../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)
 - [Kısmi Yöntemler](../../../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
 - [Visual Studio'daki LINQ to SQL Araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)
-- [SqlMetal.exe (Kod Üretme Aracı)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (Kod Üretme Aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md)

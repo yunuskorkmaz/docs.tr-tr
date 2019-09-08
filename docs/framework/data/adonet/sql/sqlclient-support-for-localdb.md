@@ -2,41 +2,41 @@
 title: Yerel Veritabanı için SqlClient Desteği
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 23fe0d19ad31c0b09e1a12b5ea25e45a973a14f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 200db3b1014278e711062bcbdff81be8d27c3351
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645836"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780784"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Yerel Veritabanı için SqlClient Desteği
-SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir sürümü kullanıma sunulacaktır. Bu konuda, bir LocalDB veritabanına bağlanmak nasıl ele alınmaktadır.  
+SQL Server kod adından itibaren, LocalDB adlı bir SQL Server basit sürümü kullanıma sunulacaktır. Bu konuda, bir LocalDB veritabanına nasıl bağlanabileceği açıklanmaktadır.  
   
 ## <a name="remarks"></a>Açıklamalar  
- LocalDB yükleme ve uygulamanızı LocalDB örneğini yapılandırmak da dahil olmak üzere LocalDB hakkında daha fazla bilgi için SQL Server Books Online'a bakın.  
+ LocalDB 'yi yüklemek ve LocalDB örneğinizi yapılandırmak dahil olmak üzere LocalDB hakkında daha fazla bilgi için bkz. Books Online SQL Server.  
   
  LocalDB ile neler yapabileceğinizi özetlemek için:  
   
-- Oluşturup LocalDB örnekleri sqllocaldb.exe veya app.config dosyanız ile başlatın.  
+- SqlLocalDB. exe veya App. config dosyanız ile LocalDB örnekleri oluşturun ve başlatın.  
   
-- SqlCmd.exe eklemek ve bir LocalDB örneğini veritabanlarında değiştirmek için kullanın. Örneğin: `sqlcmd -S (localdb)\myinst`  
+- LocalDB örneğindeki veritabanlarını eklemek ve değiştirmek için sqlcmd. exe ' yi kullanın. Örneğin: `sqlcmd -S (localdb)\myinst`.  
   
-- Kullanım `AttachDBFilename` LocalDB Örneğiniz için bir veritabanı eklemek için bağlantı dizesi anahtar sözcüğü. Kullanırken `AttachDBFilename`, veritabanı adı belirtmezseniz, `Database` bağlantı dizesi anahtar sözcüğü, bir veritabanı uygulama kapandığında LocalDB örneğinden kaldırılacak.  
+- LocalDB örneğiniz için bir veritabanı eklemek üzere bağlantıdizesianahtarsözcüğünükullanın.`AttachDBFilename` Kullanırken `AttachDBFilename`, `Database` bağlantı dizesi anahtar sözcüğü ile veritabanının adını belirtmezseniz, uygulama kapandığında veritabanı LocalDB örneğinden kaldırılır.  
   
-- LocalDB örneğini bağlantı dizenizi belirtin. Örneğin, örnek adınızdır `myInstance`, bağlantı dizesini içerir:  
+- Bağlantı dizeniz için bir LocalDB örneği belirtin. Örneğin, örnek adınız `myInstance`, bağlantı dizesinde şunları içerir:  
   
     ```  
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True` bir LocalDB veritabanına bağlanırken izin verilmez.  
+ `User Instance=True`bir LocalDB veritabanına bağlanılırken izin verilmez.  
   
- Localdb'den indirebileceğiniz [Microsoft SQL Server 2012 Feature Pack'in](https://www.microsoft.com/download/en/details.aspx?id=29065). Sqlcmd.exe LocalDB Örneğinizde verileri değiştirmek için kullanacaksanız, SQL Server 2012 özellik Paketi'nden da edinebilirsiniz SQL Server 2012'den sqlcmd gerekir.  
+ LocalDB 'yi [Microsoft SQL Server 2012 özellik paketinden](https://www.microsoft.com/download/en/details.aspx?id=29065)indirebilirsiniz. LocalDB örneğinizdeki verileri değiştirmek için sqlcmd. exe ' yi kullanacaksanız, SQL Server 2012 özellik paketinden de alabileceğiniz SQL Server 2012 ' dan sqlcmd gerekir.  
   
-## <a name="programmatically-create-a-named-instance"></a>Adlandırılmış bir örnek program aracılığıyla oluşturma  
- Bir uygulama, adlandırılmış bir örnek oluşturursanız ve bir veritabanı gibi belirtin:  
+## <a name="programmatically-create-a-named-instance"></a>Program aracılığıyla adlandırılmış bir örnek oluşturma  
+ Bir uygulama, adlandırılmış bir örnek oluşturabilir ve aşağıdaki gibi bir veritabanı belirtebilir:  
   
-- App.config dosyasında gibi oluşturmak üzere LocalDB örneklerini belirtin.  Örnek uygulamanın sürüm sayısını LocalDB yüklemenizin sürüm numarası aynı olmalıdır.  
+- App. config dosyasında oluşturulacak LocalDB örneklerini aşağıda gösterildiği gibi belirtin.  Örneğin sürüm numarası, LocalDB yüklemenizin sürüm numarasıyla aynı olmalıdır.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,11 +54,11 @@ SQL Server kod adı Denali başlayarak adlı LocalDB, SQL Server'ın basit bir s
     </configuration>  
     ```  
   
-- Kullanarak örnek adını belirtin `server` bağlantı dizesi anahtar sözcüğü.  Belirtilen örnek adı `server` bağlantı dizesi anahtar kelimesi, app.config dosyasında belirtilen adı eşleşmelidir.  
+- `server` Bağlantı dizesi anahtar sözcüğünü kullanarak örneğin adını belirtin.  `server` Bağlantı dizesi anahtar sözcüğü içinde belirtilen örnek adı, App. config dosyasında belirtilen ad ile aynı olmalıdır.  
   
-- Kullanım `AttachDBFilename` belirtmek için bağlantı dizesi anahtar sözcüğü. MDF dosyası.  
+- Öğesini belirtmek için bağlantı dizesi anahtar sözcüğünü kullanın. `AttachDBFilename` MDF dosyası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [SQL Server Özellikleri ve ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [SQL Server Özellikleri ve ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)

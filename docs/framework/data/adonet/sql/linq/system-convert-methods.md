@@ -2,20 +2,20 @@
 title: System.Convert Yöntemleri
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: 9836820f2c084a80fcc0a4856f20597716344dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0aa0b11223e23b874471962d727d8e16e152ceb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877038"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781052"
 ---
 # <a name="systemconvert-methods"></a>System.Convert Yöntemleri
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] şunları desteklemez <xref:System.Convert> yöntemleri.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Aşağıdaki <xref:System.Convert> yöntemleri desteklemez.
 
-- Sürümleriyle bir <xref:System.IFormatProvider> parametresi.
+- Bir <xref:System.IFormatProvider> parametre içeren sürümler.
 
-- Karakter dizileri veya bayt dizileri içeren yöntemler:
+- Char dizilerini veya bayt dizilerini içeren Yöntemler:
 
   - <xref:System.Convert.FromBase64CharArray%2A>
 
@@ -25,11 +25,11 @@ ms.locfileid: "61877038"
 
   - <xref:System.Convert.ToBase64String%2A>
 
-- Aşağıdaki yöntemleri:
+- Aşağıdaki Yöntemler:
 
-  - `public static <Type2> To<Type2>(<Type1> value);` Burada
+  - `public static <Type2> To<Type2>(<Type1> value);`olmadığı
 
-    `Type1` ve `Type2` her biri için olan `sbyte`, `uint`, `ulong`, veya `ushort`.
+    `Type1``Type2` her biri`uint` ,,`ushort`veya. `sbyte` `ulong`
 
   - C#:
 
@@ -51,4 +51,4 @@ ms.locfileid: "61877038"
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Türleri ve İşlevleri](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [Veri Türleri ve İşlevleri](data-types-and-functions.md)
