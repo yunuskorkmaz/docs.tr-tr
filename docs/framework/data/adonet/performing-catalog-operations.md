@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878234"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783249"
 ---
-# <a name="performing-catalog-operations"></a><span data-ttu-id="83de3-102">Katalog İşlemleri Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="83de3-102">Performing Catalog Operations</span></span>
-<span data-ttu-id="83de3-103">Bir veritabanı veya katalog, CREATE TABLE veya CREATE PROCEDURE deyimi gibi değiştirmek için bir komut çalıştırmak için oluşturma bir **komut** uygun SQL deyimlerini kullanarak nesne ve **bağlantı** nesne.</span><span class="sxs-lookup"><span data-stu-id="83de3-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="83de3-104">Komutu ile yürütme **ExecuteNonQuery** yöntemi **komut** nesne.</span><span class="sxs-lookup"><span data-stu-id="83de3-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
+# <a name="performing-catalog-operations"></a><span data-ttu-id="7d7db-102">Katalog İşlemleri Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="7d7db-102">Performing Catalog Operations</span></span>
+<span data-ttu-id="7d7db-103">CREATE TABLE veya yordam oluşturma deyimi gibi bir veritabanını veya kataloğu değiştirmek üzere bir komut yürütmek için, uygun SQL deyimlerini ve bir **bağlantı** nesnesini kullanarak bir **komut** nesnesi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="7d7db-103">To execute a command to modify a database or catalog, such as the CREATE TABLE or CREATE PROCEDURE statement, create a **Command** object using the appropriate SQL statements and a **Connection** object.</span></span> <span data-ttu-id="7d7db-104">**Komut nesnesinin** **ExecuteNonQuery** yöntemiyle komutunu yürütün.</span><span class="sxs-lookup"><span data-stu-id="7d7db-104">Execute the command with the **ExecuteNonQuery** method of the **Command** object.</span></span>  
   
- <span data-ttu-id="83de3-105">Aşağıdaki kod örneği, bir Microsoft SQL Server veritabanında bir saklı yordam oluşturur.</span><span class="sxs-lookup"><span data-stu-id="83de3-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
+ <span data-ttu-id="7d7db-105">Aşağıdaki kod örneği Microsoft SQL Server veritabanında bir saklı yordam oluşturur.</span><span class="sxs-lookup"><span data-stu-id="7d7db-105">The following code example creates a stored procedure in a Microsoft SQL Server database.</span></span>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -45,8 +45,8 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="83de3-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="83de3-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7d7db-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7d7db-106">See also</span></span>
 
-- [<span data-ttu-id="83de3-107">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="83de3-107">Using Commands to Modify Data</span></span>](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [<span data-ttu-id="83de3-108">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="83de3-108">Commands and Parameters</span></span>](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [<span data-ttu-id="83de3-109">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="83de3-109">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="7d7db-107">Verileri Değiştirmek için Komutları Kullanma</span><span class="sxs-lookup"><span data-stu-id="7d7db-107">Using Commands to Modify Data</span></span>](using-commands-to-modify-data.md)
+- [<span data-ttu-id="7d7db-108">Komutlar ve Parametreler</span><span class="sxs-lookup"><span data-stu-id="7d7db-108">Commands and Parameters</span></span>](commands-and-parameters.md)
+- [<span data-ttu-id="7d7db-109">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="7d7db-109">ADO.NET Overview</span></span>](ado-net-overview.md)

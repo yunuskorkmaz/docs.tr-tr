@@ -1,6 +1,6 @@
 ---
 title: NextMethod işlevi (yönetilmeyen API Başvurusu)
-description: Bir numaralandırma sonraki yöntem NextMethod işlevi alır.
+description: NextMethod işlevi bir Numaralandırmadaki sonraki yöntemi alır.
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee743a4499824bea723043d5a2c7d57d7cbd7106
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746481"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798427"
 ---
-# <a name="nextmethod-function"></a><span data-ttu-id="36622-103">NextMethod işlevi</span><span class="sxs-lookup"><span data-stu-id="36622-103">NextMethod function</span></span>
-<span data-ttu-id="36622-104">Sonraki yöntem çağrısı ile başlayan bir numaralandırma alır [BeginMethodEnumeration](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="36622-104">Retrieves the next method in an enumeration that begins with a call to [BeginMethodEnumeration](beginmethodenumeration.md).</span></span>  
+# <a name="nextmethod-function"></a><span data-ttu-id="13826-103">NextMethod işlevi</span><span class="sxs-lookup"><span data-stu-id="13826-103">NextMethod function</span></span>
+<span data-ttu-id="13826-104">Bir sonraki yöntemi [Beginmethodenumeration](beginmethodenumeration.md)çağrısıyla başlayan bir Numaralandırmadaki alır.</span><span class="sxs-lookup"><span data-stu-id="13826-104">Retrieves the next method in an enumeration that begins with a call to [BeginMethodEnumeration](beginmethodenumeration.md).</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="36622-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="36622-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13826-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13826-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT NextMethod (
@@ -41,53 +41,53 @@ HRESULT NextMethod (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="36622-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="36622-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="13826-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13826-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="36622-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="36622-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="13826-107">'ndaki Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="13826-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="36622-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="36622-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="13826-108">'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13826-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lFlags`  
-<span data-ttu-id="36622-109">[in] Ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="36622-109">[in] Reserved.</span></span> <span data-ttu-id="36622-110">Bu parametre 0 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="36622-110">This parameter must be 0.</span></span>
+<span data-ttu-id="13826-109">'ndaki Ayrılamadı.</span><span class="sxs-lookup"><span data-stu-id="13826-109">[in] Reserved.</span></span> <span data-ttu-id="13826-110">Bu parametre 0 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="13826-110">This parameter must be 0.</span></span>
 
 `pName`  
-<span data-ttu-id="36622-111">[out] İşaret eden bir işaretçi `null` çağrıdan önce.</span><span class="sxs-lookup"><span data-stu-id="36622-111">[out] A pointer that points to `null` prior to the call.</span></span> <span data-ttu-id="36622-112">İşlevi döndüğünde, yeni bir adres `BSTR` içeren yöntem adı.</span><span class="sxs-lookup"><span data-stu-id="36622-112">When the function returns, the address of a new `BSTR` that contains the method name.</span></span> 
+<span data-ttu-id="13826-111">dışı Çağrıdan `null` önce işaret eden bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13826-111">[out] A pointer that points to `null` prior to the call.</span></span> <span data-ttu-id="13826-112">İşlev döndüğünde, yöntem adını içeren yeni `BSTR` bir adresi.</span><span class="sxs-lookup"><span data-stu-id="13826-112">When the function returns, the address of a new `BSTR` that contains the method name.</span></span> 
 
 `ppSignatureIn`  
-<span data-ttu-id="36622-113">[out] Bir işaretçi alır bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) içeren `in` yönteminin parametreleri.</span><span class="sxs-lookup"><span data-stu-id="36622-113">[out] A pointer that receives a pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) that contains the `in` parameters for the method.</span></span> 
+<span data-ttu-id="13826-113">dışı Yöntemi için `in` parametreleri içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) öğesine işaretçi alan bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13826-113">[out] A pointer that receives a pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) that contains the `in` parameters for the method.</span></span> 
 
 `ppSignatureOut`  
-<span data-ttu-id="36622-114">[out] Bir işaretçi alır bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) içeren `out` yönteminin parametreleri.</span><span class="sxs-lookup"><span data-stu-id="36622-114">[out] A pointer that receives a pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) that contains the `out` parameters for the method.</span></span> 
+<span data-ttu-id="13826-114">dışı Yöntemi için `out` parametreleri içeren bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) öğesine işaretçi alan bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="13826-114">[out] A pointer that receives a pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) that contains the `out` parameters for the method.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="36622-115">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="36622-115">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="13826-115">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="13826-115">Return value</span></span>
 
-<span data-ttu-id="36622-116">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="36622-116">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="13826-116">Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="13826-116">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="36622-117">Sabit</span><span class="sxs-lookup"><span data-stu-id="36622-117">Constant</span></span>  |<span data-ttu-id="36622-118">Değer</span><span class="sxs-lookup"><span data-stu-id="36622-118">Value</span></span>  |<span data-ttu-id="36622-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="36622-119">Description</span></span>  |
+|<span data-ttu-id="13826-117">Sabit</span><span class="sxs-lookup"><span data-stu-id="13826-117">Constant</span></span>  |<span data-ttu-id="13826-118">Değer</span><span class="sxs-lookup"><span data-stu-id="13826-118">Value</span></span>  |<span data-ttu-id="13826-119">Açıklama</span><span class="sxs-lookup"><span data-stu-id="13826-119">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | <span data-ttu-id="36622-120">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="36622-120">0x8004101d</span></span> | <span data-ttu-id="36622-121">Hiçbir çağrı oluştu [ `BeginEnumeration` ](beginenumeration.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="36622-121">There was no call to the [`BeginEnumeration`](beginenumeration.md) function.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="36622-122">0</span><span class="sxs-lookup"><span data-stu-id="36622-122">0</span></span> | <span data-ttu-id="36622-123">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="36622-123">The function call was successful.</span></span>  |
-| `WBEM_S_NO_MORE_DATA` | <span data-ttu-id="36622-124">0x40005</span><span class="sxs-lookup"><span data-stu-id="36622-124">0x40005</span></span> | <span data-ttu-id="36622-125">Sabit listede daha fazla özellik vardır.</span><span class="sxs-lookup"><span data-stu-id="36622-125">There are no more properties in the enumeration.</span></span> |
+| `WBEM_E_UNEXPECTED` | <span data-ttu-id="13826-120">0x8004101D</span><span class="sxs-lookup"><span data-stu-id="13826-120">0x8004101d</span></span> | <span data-ttu-id="13826-121">[`BeginEnumeration`](beginenumeration.md) İşleve bir çağrı yoktu.</span><span class="sxs-lookup"><span data-stu-id="13826-121">There was no call to the [`BeginEnumeration`](beginenumeration.md) function.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="13826-122">0</span><span class="sxs-lookup"><span data-stu-id="13826-122">0</span></span> | <span data-ttu-id="13826-123">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="13826-123">The function call was successful.</span></span>  |
+| `WBEM_S_NO_MORE_DATA` | <span data-ttu-id="13826-124">0x40005</span><span class="sxs-lookup"><span data-stu-id="13826-124">0x40005</span></span> | <span data-ttu-id="13826-125">Numaralandırmada daha fazla özellik yok.</span><span class="sxs-lookup"><span data-stu-id="13826-125">There are no more properties in the enumeration.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="36622-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="36622-126">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="13826-126">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13826-126">Remarks</span></span>
 
-<span data-ttu-id="36622-127">Bu işlev bir çağrı sarılır [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="36622-127">This function wraps a call to the [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) method.</span></span>
+<span data-ttu-id="13826-127">Bu işlev, [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemine bir çağrı kaydırır.</span><span class="sxs-lookup"><span data-stu-id="13826-127">This function wraps a call to the [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) method.</span></span>
 
-<span data-ttu-id="36622-128">Çağıranın çağırarak sabit listesi sırası başlar [BeginMethodEnumeration](beginmethodenumeration.md) işlev ve işlev dönene kadar sonra [NextMethod] işlevini çağırır `WBEM_S_NO_MORE_DATA`.</span><span class="sxs-lookup"><span data-stu-id="36622-128">The caller begins the enumeration sequence by calling the [BeginMethodEnumeration](beginmethodenumeration.md) function, and then calls the [NextMethod] function until the function returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="36622-129">İsteğe bağlı olarak, çağıran çağırarak sırası tamamlandıktan [EndMethodEnumeration](endmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="36622-129">Optionally, the caller finishes the sequence by calling [EndMethodEnumeration](endmethodenumeration.md).</span></span> <span data-ttu-id="36622-130">Çağıranın numaralandırma erken çağırarak sonlandırabilir [EndMethodEnumeration](endmethodenumeration.md) dilediğiniz zaman.</span><span class="sxs-lookup"><span data-stu-id="36622-130">The caller may terminate the enumeration early by calling [EndMethodEnumeration](endmethodenumeration.md) at any time.</span></span>
+<span data-ttu-id="13826-128">Çağıran, [Beginmethodenumeration](beginmethodenumeration.md) işlevini çağırarak numaralandırma dizisini başlatır ve ardından işlev dönene `WBEM_S_NO_MORE_DATA`kadar [NextMethod] işlevini çağırır.</span><span class="sxs-lookup"><span data-stu-id="13826-128">The caller begins the enumeration sequence by calling the [BeginMethodEnumeration](beginmethodenumeration.md) function, and then calls the [NextMethod] function until the function returns `WBEM_S_NO_MORE_DATA`.</span></span> <span data-ttu-id="13826-129">İsteğe bağlı olarak, çağıran, [Endmethodenumeration](endmethodenumeration.md)' ı çağırarak sırayı sonlandırır.</span><span class="sxs-lookup"><span data-stu-id="13826-129">Optionally, the caller finishes the sequence by calling [EndMethodEnumeration](endmethodenumeration.md).</span></span> <span data-ttu-id="13826-130">Çağıran, her zaman [Endmethodenumeration](endmethodenumeration.md) ' ı çağırarak numaralandırmayı erken sonlandıramayabilir.</span><span class="sxs-lookup"><span data-stu-id="13826-130">The caller may terminate the enumeration early by calling [EndMethodEnumeration](endmethodenumeration.md) at any time.</span></span>
 
-## <a name="example"></a><span data-ttu-id="36622-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="36622-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="13826-131">Örnek</span><span class="sxs-lookup"><span data-stu-id="13826-131">Example</span></span>
 
-<span data-ttu-id="36622-132">C++ örnek için bkz: [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="36622-132">For a C++ example, see the [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) method.</span></span>
+<span data-ttu-id="13826-132">Bir C++ örnek için, bkz. [IWbemClassObject:: NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="13826-132">For a C++ example, see the [IWbemClassObject::NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="36622-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="36622-133">Requirements</span></span>  
- <span data-ttu-id="36622-134">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="36622-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13826-133">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13826-133">Requirements</span></span>  
+ <span data-ttu-id="13826-134">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13826-134">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="36622-135">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="36622-135">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="13826-135">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="13826-135">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="36622-136">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="36622-136">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="13826-136">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="13826-136">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36622-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="36622-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13826-137">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13826-137">See also</span></span>
 
-- [<span data-ttu-id="36622-138">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="36622-138">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="13826-138">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="13826-138">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

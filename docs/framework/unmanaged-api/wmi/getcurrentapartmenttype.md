@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68eb4ba653098d847022da45e610cb4fa5496a8c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ff64be47802a46979818ab54cc3efb4112dd05e0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037959"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798620"
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="cd494-103">GetCurrentApartmentType işlevi</span><span class="sxs-lookup"><span data-stu-id="cd494-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="cd494-104">Çağıranın yürütüldüğü grup türünü alır.</span><span class="sxs-lookup"><span data-stu-id="cd494-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="f40ca-103">GetCurrentApartmentType işlevi</span><span class="sxs-lookup"><span data-stu-id="f40ca-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="f40ca-104">Çağıranın yürütüldüğü grup türünü alır.</span><span class="sxs-lookup"><span data-stu-id="f40ca-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="cd494-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cd494-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f40ca-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f40ca-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentApartmentType (
@@ -38,35 +38,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="cd494-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cd494-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f40ca-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f40ca-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="cd494-107">'ndaki Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="cd494-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="f40ca-107">'ndaki Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="f40ca-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="cd494-108">'ndaki [Iomthreadingınfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) örneğine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cd494-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
+<span data-ttu-id="f40ca-108">'ndaki [Iomthreadingınfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) örneğine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="f40ca-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="cd494-109">dışı Arayanın Apartmanı belirten bir [Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) numaralandırma değeri işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="cd494-109">[out] A pointer to an [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="f40ca-109">dışı Arayanın Apartmanı belirten bir [Apttype](/windows/win32/api/objidlbase/ne-objidlbase-apttype) numaralandırma değeri işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="f40ca-109">[out] A pointer to an [APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="cd494-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="cd494-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="f40ca-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="f40ca-110">Return value</span></span>
 
-|<span data-ttu-id="cd494-111">Sabit</span><span class="sxs-lookup"><span data-stu-id="cd494-111">Constant</span></span>  |<span data-ttu-id="cd494-112">Değer</span><span class="sxs-lookup"><span data-stu-id="cd494-112">Value</span></span>  |<span data-ttu-id="cd494-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="cd494-113">Description</span></span>  |
+|<span data-ttu-id="f40ca-111">Sabit</span><span class="sxs-lookup"><span data-stu-id="f40ca-111">Constant</span></span>  |<span data-ttu-id="f40ca-112">Değer</span><span class="sxs-lookup"><span data-stu-id="f40ca-112">Value</span></span>  |<span data-ttu-id="f40ca-113">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f40ca-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="cd494-114">0</span><span class="sxs-lookup"><span data-stu-id="cd494-114">0</span></span> | <span data-ttu-id="cd494-115">İşlev başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="cd494-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="cd494-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="cd494-116">0x80000008</span></span> | <span data-ttu-id="cd494-117">Arayan bir grupta yürütülmüyor.</span><span class="sxs-lookup"><span data-stu-id="cd494-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="f40ca-114">0</span><span class="sxs-lookup"><span data-stu-id="f40ca-114">0</span></span> | <span data-ttu-id="f40ca-115">İşlev başarıyla tamamlandı.</span><span class="sxs-lookup"><span data-stu-id="f40ca-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="f40ca-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="f40ca-116">0x80000008</span></span> | <span data-ttu-id="f40ca-117">Arayan bir grupta yürütülmüyor.</span><span class="sxs-lookup"><span data-stu-id="f40ca-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="cd494-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="cd494-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f40ca-118">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="f40ca-118">Remarks</span></span>
 
-<span data-ttu-id="cd494-119">Bu işlev, [ICommandText Threadingınfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metoduna bir çağrıyı sarmalanmış.</span><span class="sxs-lookup"><span data-stu-id="cd494-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="f40ca-119">Bu işlev, [ICommandText Threadingınfo:: GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) metoduna bir çağrıyı sarmalanmış.</span><span class="sxs-lookup"><span data-stu-id="f40ca-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="cd494-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cd494-120">Requirements</span></span>  
- <span data-ttu-id="cd494-121">**Platform** Bkz. [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cd494-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f40ca-120">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="f40ca-120">Requirements</span></span>  
+ <span data-ttu-id="f40ca-121">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f40ca-121">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cd494-122">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="cd494-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="f40ca-122">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="f40ca-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="cd494-123">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="cd494-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="f40ca-123">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f40ca-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cd494-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cd494-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f40ca-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f40ca-124">See also</span></span>
 
-- [<span data-ttu-id="cd494-125">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="cd494-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="f40ca-125">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f40ca-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741847"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777215"
 ---
-# <a name="getscope-method"></a><span data-ttu-id="3334f-102">GetScope Metodu</span><span class="sxs-lookup"><span data-stu-id="3334f-102">GetScope Method</span></span>
-<span data-ttu-id="3334f-103">Bir içeri aktarma kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="3334f-103">Gets an import scope.</span></span>  
+# <a name="getscope-method"></a><span data-ttu-id="97c5a-102">GetScope Metodu</span><span class="sxs-lookup"><span data-stu-id="97c5a-102">GetScope Method</span></span>
+<span data-ttu-id="97c5a-103">İçeri aktarma kapsamı alır.</span><span class="sxs-lookup"><span data-stu-id="97c5a-103">Gets an import scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3334f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="3334f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97c5a-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="97c5a-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetScope(  
@@ -37,27 +37,27 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3334f-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="3334f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97c5a-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="97c5a-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="3334f-106">Derleme için alınacak benzersiz kimliği.</span><span class="sxs-lookup"><span data-stu-id="3334f-106">Unique ID of assembly to import to.</span></span>  
+ <span data-ttu-id="97c5a-106">İçeri aktarılacak derlemenin benzersiz KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="97c5a-106">Unique ID of assembly to import to.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="3334f-107">Alınacak benzersiz kimliği dosyanın.</span><span class="sxs-lookup"><span data-stu-id="3334f-107">Unique ID of the file to import from.</span></span>  
+ <span data-ttu-id="97c5a-107">İçeri aktarılacak dosyanın benzersiz KIMLIĞI.</span><span class="sxs-lookup"><span data-stu-id="97c5a-107">Unique ID of the file to import from.</span></span>  
   
  `dwScope`  
- <span data-ttu-id="3334f-108">İçeri aktarmak için sıfır tabanlı kapsam.</span><span class="sxs-lookup"><span data-stu-id="3334f-108">Zero-based scope to import.</span></span>  
+ <span data-ttu-id="97c5a-108">İçeri aktarılacak sıfır tabanlı kapsam.</span><span class="sxs-lookup"><span data-stu-id="97c5a-108">Zero-based scope to import.</span></span>  
   
  `ppImportScope`  
- <span data-ttu-id="3334f-109">Alan [Imetadataımport arabirimi](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) kapsam için arabirim.</span><span class="sxs-lookup"><span data-stu-id="3334f-109">Receives [IMetaDataImport Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
+ <span data-ttu-id="97c5a-109">Kapsam için [IMetaDataImport arabirimi](../metadata/imetadataimport-interface.md) arabirimini alır.</span><span class="sxs-lookup"><span data-stu-id="97c5a-109">Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3334f-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="3334f-110">Return Value</span></span>  
- <span data-ttu-id="3334f-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="3334f-111">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="97c5a-110">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="97c5a-110">Return Value</span></span>  
+ <span data-ttu-id="97c5a-111">Yöntem başarılı olursa S_OK döndürür.</span><span class="sxs-lookup"><span data-stu-id="97c5a-111">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3334f-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="3334f-112">Requirements</span></span>  
- <span data-ttu-id="3334f-113">ALink.h gerektirir</span><span class="sxs-lookup"><span data-stu-id="3334f-113">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97c5a-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="97c5a-112">Requirements</span></span>  
+ <span data-ttu-id="97c5a-113">ALink. h gerektirir</span><span class="sxs-lookup"><span data-stu-id="97c5a-113">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3334f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3334f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97c5a-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="97c5a-114">See also</span></span>
 
-- [<span data-ttu-id="3334f-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3334f-115">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="3334f-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="3334f-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="3334f-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="3334f-117">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [<span data-ttu-id="97c5a-115">IALink Arabirimi</span><span class="sxs-lookup"><span data-stu-id="97c5a-115">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="97c5a-116">IALink2 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="97c5a-116">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="97c5a-117">ALink API</span><span class="sxs-lookup"><span data-stu-id="97c5a-117">ALink API</span></span>](index.md)

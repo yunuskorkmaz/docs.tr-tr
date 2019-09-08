@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_Delete işlevi (yönetilmeyen API Başvurusu)
-description: QualifierSet_Delete işlev adına göre bir niteleyici siler.
+description: QualifierSet_Delete işlevi bir niteleyiciyi ada göre siler.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956abe8ddf8075b7b8f8c057db0aa7187982e1d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782605"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798330"
 ---
-# <a name="qualifiersetdelete-function"></a><span data-ttu-id="1b0da-103">QualifierSet_Delete işlevi</span><span class="sxs-lookup"><span data-stu-id="1b0da-103">QualifierSet_Delete function</span></span>
-<span data-ttu-id="1b0da-104">Belirtilen bir niteleyici adıyla siler.</span><span class="sxs-lookup"><span data-stu-id="1b0da-104">Deletes a specified qualifier by name.</span></span>  
+# <a name="qualifierset_delete-function"></a><span data-ttu-id="13c02-103">QualifierSet_Delete işlevi</span><span class="sxs-lookup"><span data-stu-id="13c02-103">QualifierSet_Delete function</span></span>
+<span data-ttu-id="13c02-104">Belirtilen niteleyiciyi ada göre siler.</span><span class="sxs-lookup"><span data-stu-id="13c02-104">Deletes a specified qualifier by name.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="1b0da-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1b0da-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13c02-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="13c02-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT QualifierSet_Delete (
@@ -38,42 +38,42 @@ HRESULT QualifierSet_Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="1b0da-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1b0da-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="13c02-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="13c02-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="1b0da-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="1b0da-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="13c02-107">'ndaki Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="13c02-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="1b0da-108">[in] Bir işaretçi bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği.</span><span class="sxs-lookup"><span data-stu-id="1b0da-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="13c02-108">'ndaki Bir [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) örneği işaretçisi.</span><span class="sxs-lookup"><span data-stu-id="13c02-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
 `wszName`   
-<span data-ttu-id="1b0da-109">[in] Silinecek niteleyicisi adı.</span><span class="sxs-lookup"><span data-stu-id="1b0da-109">[in] The name of the qualifier to delete.</span></span>
+<span data-ttu-id="13c02-109">'ndaki Silinecek niteleyicinin adı.</span><span class="sxs-lookup"><span data-stu-id="13c02-109">[in] The name of the qualifier to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="1b0da-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="1b0da-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="13c02-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="13c02-110">Return value</span></span>
 
-<span data-ttu-id="1b0da-111">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="1b0da-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="13c02-111">Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="13c02-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="1b0da-112">Sabit</span><span class="sxs-lookup"><span data-stu-id="1b0da-112">Constant</span></span>  |<span data-ttu-id="1b0da-113">Değer</span><span class="sxs-lookup"><span data-stu-id="1b0da-113">Value</span></span>  |<span data-ttu-id="1b0da-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="1b0da-114">Description</span></span>  |
+|<span data-ttu-id="13c02-112">Sabit</span><span class="sxs-lookup"><span data-stu-id="13c02-112">Constant</span></span>  |<span data-ttu-id="13c02-113">Değer</span><span class="sxs-lookup"><span data-stu-id="13c02-113">Value</span></span>  |<span data-ttu-id="13c02-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="13c02-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="1b0da-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="1b0da-115">0x80041008</span></span> | <span data-ttu-id="1b0da-116">`wszName` Parametresi geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="1b0da-116">The `wszName` parameter is not valid.</span></span> |
-|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="1b0da-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="1b0da-117">0x80041016</span></span> | <span data-ttu-id="1b0da-118">Bu niteleyici silme geçersizdir.</span><span class="sxs-lookup"><span data-stu-id="1b0da-118">Deleting this qualifier is illegal.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="1b0da-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="1b0da-119">0x80041002</span></span> | <span data-ttu-id="1b0da-120">Belirtilen niteleyicisi nebyl nalezen.</span><span class="sxs-lookup"><span data-stu-id="1b0da-120">The specified qualifier was not found.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="1b0da-121">0</span><span class="sxs-lookup"><span data-stu-id="1b0da-121">0</span></span> | <span data-ttu-id="1b0da-122">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="1b0da-122">The function call was successful.</span></span>  |
-| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="1b0da-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="1b0da-123">0x40002</span></span> | <span data-ttu-id="1b0da-124">Yerel geçersiz kılma silindi ve özgün niteleyici üst nesneden kapsam devam ediyor.</span><span class="sxs-lookup"><span data-stu-id="1b0da-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="13c02-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="13c02-115">0x80041008</span></span> | <span data-ttu-id="13c02-116">`wszName` Parametre geçerli değil.</span><span class="sxs-lookup"><span data-stu-id="13c02-116">The `wszName` parameter is not valid.</span></span> |
+|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="13c02-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="13c02-117">0x80041016</span></span> | <span data-ttu-id="13c02-118">Bu niteleyiciyi silme geçersizdir.</span><span class="sxs-lookup"><span data-stu-id="13c02-118">Deleting this qualifier is illegal.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="13c02-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="13c02-119">0x80041002</span></span> | <span data-ttu-id="13c02-120">Belirtilen niteleyici bulunamadı.</span><span class="sxs-lookup"><span data-stu-id="13c02-120">The specified qualifier was not found.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="13c02-121">0</span><span class="sxs-lookup"><span data-stu-id="13c02-121">0</span></span> | <span data-ttu-id="13c02-122">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="13c02-122">The function call was successful.</span></span>  |
+| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="13c02-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="13c02-123">0x40002</span></span> | <span data-ttu-id="13c02-124">Yerel geçersiz kılma silindi ve üst nesneden gelen özgün niteleyici kapsamı sürdürüyor.</span><span class="sxs-lookup"><span data-stu-id="13c02-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="1b0da-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1b0da-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="13c02-125">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="13c02-125">Remarks</span></span>
 
-<span data-ttu-id="1b0da-126">Bu işlev bir çağrı sarılır [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="1b0da-126">This function wraps a call to the [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) method.</span></span>
+<span data-ttu-id="13c02-126">Bu işlev, [IWbemQualifierSet::D Sil](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) yöntemine bir çağrı kaydırır.</span><span class="sxs-lookup"><span data-stu-id="13c02-126">This function wraps a call to the [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) method.</span></span>
 
-<span data-ttu-id="1b0da-127">Niteleyici yayma kuralları nedeniyle, belirli bir niteleyici alınan başka bir nesneden ve yalnızca geçerli sınıf veya örnek içinde geçersiz kılındı.</span><span class="sxs-lookup"><span data-stu-id="1b0da-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="1b0da-128">Bu durumda, `QualifierSet_Delete` yöntemi niteleyici özgün devralınan değerine sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="1b0da-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="1b0da-129">İşlev bu durumda, durum kodu döndürür `WBEM_S_RESET_TO_DEFAULT`.</span><span class="sxs-lookup"><span data-stu-id="1b0da-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
+<span data-ttu-id="13c02-127">Niteleyici yayma kuralları nedeniyle, belirli bir niteleyici başka bir nesneden devralınmış olabilir ve yalnızca geçerli sınıfta veya örnekte geçersiz kılınır.</span><span class="sxs-lookup"><span data-stu-id="13c02-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="13c02-128">Bu durumda, `QualifierSet_Delete` yöntemi niteleyiciyi özgün devralınmış değerine sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="13c02-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="13c02-129">Bu durumda işlev durum kodunu `WBEM_S_RESET_TO_DEFAULT`döndürür.</span><span class="sxs-lookup"><span data-stu-id="13c02-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1b0da-130">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1b0da-130">Requirements</span></span>  
- <span data-ttu-id="1b0da-131">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1b0da-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13c02-130">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="13c02-130">Requirements</span></span>  
+ <span data-ttu-id="13c02-131">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13c02-131">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b0da-132">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="1b0da-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="13c02-132">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="13c02-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="1b0da-133">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="1b0da-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="13c02-133">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="13c02-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b0da-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1b0da-134">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13c02-134">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="13c02-134">See also</span></span>
 
-- [<span data-ttu-id="1b0da-135">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="1b0da-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="13c02-135">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="13c02-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

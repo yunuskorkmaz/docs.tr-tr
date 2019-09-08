@@ -18,32 +18,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7424c80d05c3ff538cb530b24276868680af1c3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fb752822cd406585f7f4a257ea4c51dab7b1f16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778503"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795455"
 ---
-# <a name="cleardownloadcache-function"></a><span data-ttu-id="2ba8f-102">ClearDownloadCache İşlevi</span><span class="sxs-lookup"><span data-stu-id="2ba8f-102">ClearDownloadCache Function</span></span>
-<span data-ttu-id="2ba8f-103">İndirilen derleme genel derleme önbelleğini temizler.</span><span class="sxs-lookup"><span data-stu-id="2ba8f-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
+# <a name="cleardownloadcache-function"></a><span data-ttu-id="87f90-102">ClearDownloadCache İşlevi</span><span class="sxs-lookup"><span data-stu-id="87f90-102">ClearDownloadCache Function</span></span>
+<span data-ttu-id="87f90-103">İndirilen derlemelerin genel derleme önbelleğini temizler.</span><span class="sxs-lookup"><span data-stu-id="87f90-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2ba8f-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2ba8f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87f90-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="87f90-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="2ba8f-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="2ba8f-105">Requirements</span></span>  
- <span data-ttu-id="2ba8f-106">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ba8f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87f90-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="87f90-105">Requirements</span></span>  
+ <span data-ttu-id="87f90-106">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87f90-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2ba8f-107">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="2ba8f-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="87f90-107">**Üst bilgi** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="87f90-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="2ba8f-108">**Kitaplığı:** Fusion.dll ve kullanımda olan mscorwks.dll'ye.</span><span class="sxs-lookup"><span data-stu-id="2ba8f-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="2ba8f-109">Fusion.dll yerine Mscorwks.dll doğru .NET Framework sürümünü hedefleyen emin olmak için kullanın.</span><span class="sxs-lookup"><span data-stu-id="2ba8f-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="87f90-108">**Kitaplığı** Fusion. dll ve mscorwks. dll.</span><span class="sxs-lookup"><span data-stu-id="87f90-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="87f90-109">.NET Framework doğru sürümünü hedefliyorsanız emin olmak için mscorwks. dll yerine Fusion. dll kullanın.</span><span class="sxs-lookup"><span data-stu-id="87f90-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- <span data-ttu-id="2ba8f-110">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ba8f-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="87f90-110">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87f90-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ba8f-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2ba8f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87f90-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="87f90-111">See also</span></span>
 
-- [<span data-ttu-id="2ba8f-112">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="2ba8f-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="2ba8f-113">Genel Derleme Önbelleği</span><span class="sxs-lookup"><span data-stu-id="2ba8f-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="87f90-112">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="87f90-112">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
+- [<span data-ttu-id="87f90-113">Genel Derleme Önbelleği</span><span class="sxs-lookup"><span data-stu-id="87f90-113">Global Assembly Cache</span></span>](../../app-domains/gac.md)

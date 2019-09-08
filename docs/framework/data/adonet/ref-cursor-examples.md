@@ -2,29 +2,29 @@
 title: REF CURSOR Örnekleri
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: dfad86c6d5c99d7a1b99d7cfbde165d5ec39f5f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24830452e6d1ab11605ffa88a925fbc55c80b9bf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651681"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794713"
 ---
-# <a name="ref-cursor-examples"></a><span data-ttu-id="54e56-102">REF CURSOR Örnekleri</span><span class="sxs-lookup"><span data-stu-id="54e56-102">REF CURSOR Examples</span></span>
-<span data-ttu-id="54e56-103">REF CURSOR örnekleri REF CURSOR kullanımını gösteren aşağıdaki üç Microsoft Visual Basic örnekleri oluşur.</span><span class="sxs-lookup"><span data-stu-id="54e56-103">The REF CURSOR examples are comprised of the following three Microsoft Visual Basic examples that demonstrate using REF CURSORs.</span></span>  
+# <a name="ref-cursor-examples"></a><span data-ttu-id="ed873-102">REF CURSOR Örnekleri</span><span class="sxs-lookup"><span data-stu-id="ed873-102">REF CURSOR Examples</span></span>
+<span data-ttu-id="ed873-103">REF CURSOR örnekleri, REF IMLEÇLER kullanmayı gösteren aşağıdaki üç Microsoft Visual Basic örneklerinden oluşur.</span><span class="sxs-lookup"><span data-stu-id="ed873-103">The REF CURSOR examples are comprised of the following three Microsoft Visual Basic examples that demonstrate using REF CURSORs.</span></span>  
   
-|<span data-ttu-id="54e56-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="54e56-104">Sample</span></span>|<span data-ttu-id="54e56-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="54e56-105">Description</span></span>|  
+|<span data-ttu-id="ed873-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="ed873-104">Sample</span></span>|<span data-ttu-id="ed873-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed873-105">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="54e56-106">OracleDataReader’da REF CURSOR Parametreleri</span><span class="sxs-lookup"><span data-stu-id="54e56-106">REF CURSOR Parameters in an OracleDataReader</span></span>](../../../../docs/framework/data/adonet/ref-cursor-parameters-in-an-oracledatareader.md)|<span data-ttu-id="54e56-107">Bu örnekte REF CURSOR parametresiyle döndürür ve değeri olarak okuyan bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.OracleClient.OracleDataReader>.</span><span class="sxs-lookup"><span data-stu-id="54e56-107">This example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>|  
-|[<span data-ttu-id="54e56-108">OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma</span><span class="sxs-lookup"><span data-stu-id="54e56-108">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)|<span data-ttu-id="54e56-109">Bu örnek iki REF CURSOR parametreleri döndürür ve kullanarak değerlerini okur PL/SQL saklı yordamı yürüten bir **OracleDataReader**.</span><span class="sxs-lookup"><span data-stu-id="54e56-109">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an **OracleDataReader**.</span></span>|  
-|[<span data-ttu-id="54e56-110">Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma</span><span class="sxs-lookup"><span data-stu-id="54e56-110">Filling a DataSet Using One or More REF CURSORs</span></span>](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)|<span data-ttu-id="54e56-111">Bu örnek iki REF CURSOR parametreleri döndürür ve dolduran bir PL/SQL saklı yordamı yürüten bir <xref:System.Data.DataSet> satırlarla döndürülür.</span><span class="sxs-lookup"><span data-stu-id="54e56-111">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>|  
+|[<span data-ttu-id="ed873-106">OracleDataReader’da REF CURSOR Parametreleri</span><span class="sxs-lookup"><span data-stu-id="ed873-106">REF CURSOR Parameters in an OracleDataReader</span></span>](ref-cursor-parameters-in-an-oracledatareader.md)|<span data-ttu-id="ed873-107">Bu örnek, bir REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve değeri olarak <xref:System.Data.OracleClient.OracleDataReader>okur.</span><span class="sxs-lookup"><span data-stu-id="ed873-107">This example executes a PL/SQL stored procedure that returns a REF CURSOR parameter, and reads the value as an <xref:System.Data.OracleClient.OracleDataReader>.</span></span>|  
+|[<span data-ttu-id="ed873-108">OracleDataReader Kullanarak Birden Çok REF CURSOR’dan Veri Alma</span><span class="sxs-lookup"><span data-stu-id="ed873-108">Retrieving Data from Multiple REF CURSORs Using an OracleDataReader</span></span>](retrieving-data-from-multiple-ref-cursors.md)|<span data-ttu-id="ed873-109">Bu örnek, iki REF CURSOR parametresi döndüren bir PL/SQL saklı yordamını yürütür ve bir **OracleDataReader**kullanarak değerleri okur.</span><span class="sxs-lookup"><span data-stu-id="ed873-109">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and reads the values using an **OracleDataReader**.</span></span>|  
+|[<span data-ttu-id="ed873-110">Bir veya daha fazla REF CURSOR Kullanarak DataSet Doldurma</span><span class="sxs-lookup"><span data-stu-id="ed873-110">Filling a DataSet Using One or More REF CURSORs</span></span>](filling-a-dataset-using-one-or-more-ref-cursors.md)|<span data-ttu-id="ed873-111">Bu örnek, iki ref cursor parametresi döndüren bir PL/SQL saklı yordamını yürütür ve döndürülen satırlarla birlikte <xref:System.Data.DataSet> bir doldurur.</span><span class="sxs-lookup"><span data-stu-id="ed873-111">This example executes a PL/SQL stored procedure that returns two REF CURSOR parameters, and fills a <xref:System.Data.DataSet> with the rows that are returned.</span></span>|  
   
- <span data-ttu-id="54e56-112">PL/SQL paketi ve paket gövdesi oluşturmanız gerekir ve bu örnekleri kullanmak için Oracle tablolar oluşturmak gerekebilir.</span><span class="sxs-lookup"><span data-stu-id="54e56-112">To use these examples, you may need to create the Oracle tables, and you must create a PL/SQL package and package body.</span></span>  
+ <span data-ttu-id="ed873-112">Bu örnekleri kullanmak için Oracle tabloları oluşturmanız gerekebilir ve bir PL/SQL paketi ve paket gövdesi oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="ed873-112">To use these examples, you may need to create the Oracle tables, and you must create a PL/SQL package and package body.</span></span>  
   
-## <a name="creating-the-oracle-tables"></a><span data-ttu-id="54e56-113">Oracle tablo oluşturma</span><span class="sxs-lookup"><span data-stu-id="54e56-113">Creating the Oracle Tables</span></span>  
- <span data-ttu-id="54e56-114">Bu örnekler, Oracle Scott/Tiger şemasında tanımlanan tabloları kullanın.</span><span class="sxs-lookup"><span data-stu-id="54e56-114">These examples use tables that are defined in the Oracle Scott/Tiger schema.</span></span> <span data-ttu-id="54e56-115">Oracle Scott/Tiger şema çoğu Oracle yüklemeleri ile birlikte gelir.</span><span class="sxs-lookup"><span data-stu-id="54e56-115">The Oracle Scott/Tiger schema is included with most Oracle installations.</span></span> <span data-ttu-id="54e56-116">Bu şema mevcut değilse SQL komutları dosyasında {OracleHome}\rdbms\admin\scott.sql. Bu örnek tarafından kullanılan dizinlerin ve tabloları oluşturmak için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="54e56-116">If this schema does not exist, you can use the SQL commands file in {OracleHome}\rdbms\admin\scott.sql to create the tables and indexes used by these examples.</span></span>  
+## <a name="creating-the-oracle-tables"></a><span data-ttu-id="ed873-113">Oracle tabloları oluşturma</span><span class="sxs-lookup"><span data-stu-id="ed873-113">Creating the Oracle Tables</span></span>  
+ <span data-ttu-id="ed873-114">Bu örnekler, Oracle Scott/Tiger şemasında tanımlanan tabloları kullanır.</span><span class="sxs-lookup"><span data-stu-id="ed873-114">These examples use tables that are defined in the Oracle Scott/Tiger schema.</span></span> <span data-ttu-id="ed873-115">Oracle Scott/Tiger şeması, çoğu Oracle yüklemelerine dahildir.</span><span class="sxs-lookup"><span data-stu-id="ed873-115">The Oracle Scott/Tiger schema is included with most Oracle installations.</span></span> <span data-ttu-id="ed873-116">Bu şema yoksa, bu örneklerde kullanılan tabloları ve dizinleri oluşturmak için {OracleHome} \rdbms\admin\scott.SQL içindeki SQL komut dosyasını kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed873-116">If this schema does not exist, you can use the SQL commands file in {OracleHome}\rdbms\admin\scott.sql to create the tables and indexes used by these examples.</span></span>  
   
-## <a name="creating-the-oracle-package-and-package-body"></a><span data-ttu-id="54e56-117">Paket gövdesi ve Oracle paket oluşturma</span><span class="sxs-lookup"><span data-stu-id="54e56-117">Creating the Oracle Package and Package Body</span></span>  
- <span data-ttu-id="54e56-118">Bu örnekler, aşağıdaki PL/SQL paketi ve paket gövdesi sunucunuzdaki gerektirir.</span><span class="sxs-lookup"><span data-stu-id="54e56-118">These examples require the following PL/SQL package and package body on your server.</span></span> <span data-ttu-id="54e56-119">Oracle sunucu üzerinde aşağıdaki Oracle paketini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="54e56-119">Create the following Oracle package on the Oracle server.</span></span>  
+## <a name="creating-the-oracle-package-and-package-body"></a><span data-ttu-id="ed873-117">Oracle paketi ve paket gövdesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="ed873-117">Creating the Oracle Package and Package Body</span></span>  
+ <span data-ttu-id="ed873-118">Bu örnekler, sunucunuzda aşağıdaki PL/SQL paketini ve paket gövdesini gerektirir.</span><span class="sxs-lookup"><span data-stu-id="ed873-118">These examples require the following PL/SQL package and package body on your server.</span></span> <span data-ttu-id="ed873-119">Oracle sunucusunda aşağıdaki Oracle paketini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ed873-119">Create the following Oracle package on the Oracle server.</span></span>  
   
 ```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
@@ -37,7 +37,7 @@ END CURSPKG;
 /   
 ```  
   
- <span data-ttu-id="54e56-120">Aşağıdaki Oracle paket gövdesi, Oracle sunucusunda oluşturun.</span><span class="sxs-lookup"><span data-stu-id="54e56-120">Create the following Oracle package body on the Oracle server.</span></span>  
+ <span data-ttu-id="ed873-120">Oracle sunucusunda aşağıdaki Oracle paket gövdesini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ed873-120">Create the following Oracle package body on the Oracle server.</span></span>  
   
 ```sql
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
@@ -79,7 +79,7 @@ END CURSPKG;
 /  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="54e56-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="54e56-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed873-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed873-121">See also</span></span>
 
-- [<span data-ttu-id="54e56-122">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="54e56-122">Oracle REF CURSORs</span></span>](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [<span data-ttu-id="54e56-123">ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi</span><span class="sxs-lookup"><span data-stu-id="54e56-123">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="ed873-122">Oracle REF CURSOR</span><span class="sxs-lookup"><span data-stu-id="ed873-122">Oracle REF CURSORs</span></span>](oracle-ref-cursors.md)
+- [<span data-ttu-id="ed873-123">ADO.NET’e Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ed873-123">ADO.NET Overview</span></span>](ado-net-overview.md)

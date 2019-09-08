@@ -1,5 +1,5 @@
 ---
-title: 'Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği'
+title: Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9264d8eb7923663061f9bccfffe5b8f5254549f0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66379895"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779232"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="7b3d6-102">Azaltma: İşaretçi tabanlı dokunmatik ve Kalem desteği</span><span class="sxs-lookup"><span data-stu-id="7b3d6-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a><span data-ttu-id="3909a-102">Mayı İşaretçi tabanlı dokunmatik ve Stilus desteği</span><span class="sxs-lookup"><span data-stu-id="3909a-102">Mitigation: Pointer-based Touch and Stylus Support</span></span>
 
-<span data-ttu-id="7b3d6-103">.NET Framework 4.7 hedefleyen ve Windows 10 Creators güncelleştirmesi ile başlayarak Windows sistemleri üzerinde çalışan WPF uygulamalarını isteğe bağlı olarak etkinleştirebilir `WM_POINTER`-WPF dokunma/ekran kalemi yığın tabanlı.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-103">WPF applications that target the .NET Framework 4.7 and are running on Windows Systems starting with Windows 10 Creators Update can enable an optional `WM_POINTER`-based WPF touch/stylus stack.</span></span>
+<span data-ttu-id="3909a-103">Windows 10 Creators Update ile başlayan .NET Framework 4,7 ve Windows sistemlerinde çalışan WPF uygulamaları, isteğe bağlı `WM_POINTER`tabanlı bir WPF dokunmatik/Stilus yığınını etkinleştirebilir.</span><span class="sxs-lookup"><span data-stu-id="3909a-103">WPF applications that target the .NET Framework 4.7 and are running on Windows Systems starting with Windows 10 Creators Update can enable an optional `WM_POINTER`-based WPF touch/stylus stack.</span></span>
 
-## <a name="impact"></a><span data-ttu-id="7b3d6-104">Etki</span><span class="sxs-lookup"><span data-stu-id="7b3d6-104">Impact</span></span>
+## <a name="impact"></a><span data-ttu-id="3909a-104">Etki</span><span class="sxs-lookup"><span data-stu-id="3909a-104">Impact</span></span>
 
-<span data-ttu-id="7b3d6-105">Geliştiriciler, işaretçi temelli dokunma/kalemi destek açıkça etkinleştirmeyin WPF dokunma/ekran kalemi davranışında değişiklik görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-105">Developers who do not explicitly enable pointer-based touch/stylus support should see no change in WPF touch/stylus behavior.</span></span>
+<span data-ttu-id="3909a-105">İşaretçi tabanlı dokunmatik/ekran kalemi desteğinin açıkça etkinleştirilmedikleri geliştiriciler WPF dokunma/ekran kalemi davranışında değişiklik görmez.</span><span class="sxs-lookup"><span data-stu-id="3909a-105">Developers who do not explicitly enable pointer-based touch/stylus support should see no change in WPF touch/stylus behavior.</span></span>
 
-<span data-ttu-id="7b3d6-106">İsteğe bağlı bilinen geçerli sorunlar aşağıda verilmiştir `WM_POINTER`-dokunma/ekran kalemi yığın tabanlı:</span><span class="sxs-lookup"><span data-stu-id="7b3d6-106">The following are current known issues with the optional `WM_POINTER`-based touch/stylus stack:</span></span>
+<span data-ttu-id="3909a-106">İsteğe bağlı `WM_POINTER`tabanlı dokunmatik/Stilus Stack ile ilgili olarak bilinen geçerli sorunlar şunlardır:</span><span class="sxs-lookup"><span data-stu-id="3909a-106">The following are current known issues with the optional `WM_POINTER`-based touch/stylus stack:</span></span>
 
-- <span data-ttu-id="7b3d6-107">Gerçek zamanlı mürekkep desteği yoktur.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-107">No support for real-time inking.</span></span>
+- <span data-ttu-id="3909a-107">Gerçek zamanlı mürekkep oluşturma desteği yoktur.</span><span class="sxs-lookup"><span data-stu-id="3909a-107">No support for real-time inking.</span></span>
 
-   <span data-ttu-id="7b3d6-108">Mürekkep ve ekran kalemi eklenti hala çalışırken, düşük performansa neden olabilecek UI iş parçacığı üzerinde işlenir.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-108">While inking and stylus plugins still work, they are processed on the UI thread, which can lead to poor performance.</span></span>
+   <span data-ttu-id="3909a-108">Mürekkep oluşturma ve ekran kalemi eklentileri çalışmaya devam ederken, Kullanıcı arabirimi iş parçacığında işlenir ve bu da kötü performansa yol açabilir.</span><span class="sxs-lookup"><span data-stu-id="3909a-108">While inking and stylus plugins still work, they are processed on the UI thread, which can lead to poor performance.</span></span>
 
-- <span data-ttu-id="7b3d6-109">Davranış değişiklikleri nedeniyle değişiklikler, dokunma/ekran kalemi olaylardan yükseltmede fare olayları.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-109">Behavioral changes due to changes in promotion from touch/stylus events to mouse events.</span></span>
+- <span data-ttu-id="3909a-109">Dokunmatik/ekran kalemi olaylarından fare olaylarına yükseltme yapılan değişiklikler nedeniyle davranış değişiklikleri.</span><span class="sxs-lookup"><span data-stu-id="3909a-109">Behavioral changes due to changes in promotion from touch/stylus events to mouse events.</span></span>
 
-  - <span data-ttu-id="7b3d6-110">İşleme farklı şekilde davranabilir.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-110">Manipulation may behave differently.</span></span>
+  - <span data-ttu-id="3909a-110">Düzenleme farklı davranabilirler.</span><span class="sxs-lookup"><span data-stu-id="3909a-110">Manipulation may behave differently.</span></span>
 
-  - <span data-ttu-id="7b3d6-111">Sürükle ve bırak, dokunma girişini ilgili geri bildirim göstermez.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-111">Drag/Drop will not show appropriate feedback for touch input.</span></span> <span data-ttu-id="7b3d6-112">(Bu iğne girişi etkilemez.)</span><span class="sxs-lookup"><span data-stu-id="7b3d6-112">(This does not affect stylus input.)</span></span>
+  - <span data-ttu-id="3909a-111">Sürükle/bırak, dokunma girişi için uygun geri bildirimi göstermez.</span><span class="sxs-lookup"><span data-stu-id="3909a-111">Drag/Drop will not show appropriate feedback for touch input.</span></span> <span data-ttu-id="3909a-112">(Bu, Stilus girişini etkilemez.)</span><span class="sxs-lookup"><span data-stu-id="3909a-112">(This does not affect stylus input.)</span></span>
 
-  - <span data-ttu-id="7b3d6-113">Sürükle ve bırak, dokunma/ekran kalemi olayları artık başlatılabilir.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-113">Drag/Drop can no longer be initiated on touch/stylus events.</span></span>
+  - <span data-ttu-id="3909a-113">Sürükle/bırak, artık dokunmatik/ekran kalemi olaylarında başlatılamaz.</span><span class="sxs-lookup"><span data-stu-id="3909a-113">Drag/Drop can no longer be initiated on touch/stylus events.</span></span>
 
-      <span data-ttu-id="7b3d6-114">Bu durum uygulama fare girişi algılandığında kadar yanıt veremez duruma gelmesine neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-114">This can potentially cause the application to become unresponsive until mouse input is detected.</span></span> <span data-ttu-id="7b3d6-115">Bunun yerine, geliştiriciler, sürükle başlatmak ve fare olayları bırakın.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-115">Instead, developers should initiate drag and drop from mouse events.</span></span>
+      <span data-ttu-id="3909a-114">Bu, fare girişi algılanana kadar uygulamanın yanıt vermemesine neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="3909a-114">This can potentially cause the application to become unresponsive until mouse input is detected.</span></span> <span data-ttu-id="3909a-115">Bunun yerine, geliştiriciler fare olaylarından sürükle ve bırak işlemini başlatmalıdır.</span><span class="sxs-lookup"><span data-stu-id="3909a-115">Instead, developers should initiate drag and drop from mouse events.</span></span>
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a><span data-ttu-id="7b3d6-116">Dokunma/kalemi WM_POINTER tabanlı desteklemek için seçim</span><span class="sxs-lookup"><span data-stu-id="7b3d6-116">Opting in to WM_POINTER-based touch/stylus support</span></span>
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a><span data-ttu-id="3909a-116">WM_POINTER tabanlı dokunmatik/ekran kalemi desteğiyle opzip</span><span class="sxs-lookup"><span data-stu-id="3909a-116">Opting in to WM_POINTER-based touch/stylus support</span></span>
 
-<span data-ttu-id="7b3d6-117">Bu yığın etkinleştirmek isteyen geliştiricilerin aşağıdakileri, uygulamanın app.config dosyasına ekleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7b3d6-117">Developers who wish to enable this stack can add the following to their application's app.config file:</span></span>
+<span data-ttu-id="3909a-117">Bu yığını etkinleştirmek isteyen geliştiriciler aşağıdakini uygulamanın App. config dosyasına ekleyebilir:</span><span class="sxs-lookup"><span data-stu-id="3909a-117">Developers who wish to enable this stack can add the following to their application's app.config file:</span></span>
 
 ```xml
 <configuration>
@@ -52,8 +52,8 @@ ms.locfileid: "66379895"
 </configuration>
 ```
 
-<span data-ttu-id="7b3d6-118">Bu girişi kaldırılıyor veya ve değerini `false` isteğe bağlı Bu yığın kapatır.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-118">Removing this entry or setting its value to `false` turns this optional stack off.</span></span>
+<span data-ttu-id="3909a-118">Bu giriş kaldırılıyor veya değeri, bu isteğe `false` bağlı yığını devre dışı olarak ayarlanıyor.</span><span class="sxs-lookup"><span data-stu-id="3909a-118">Removing this entry or setting its value to `false` turns this optional stack off.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7b3d6-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="7b3d6-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3909a-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="3909a-119">See also</span></span>
 
-- [<span data-ttu-id="7b3d6-120">.NET Framework 4.7 yeniden hedefleme değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="7b3d6-120">Retargeting Changes in the .NET Framework 4.7</span></span>](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [<span data-ttu-id="3909a-120">.NET Framework 4,7 'de yeniden hedefleme değişiklikleri</span><span class="sxs-lookup"><span data-stu-id="3909a-120">Retargeting Changes in the .NET Framework 4.7</span></span>](retargeting-changes-in-the-net-framework-4-7.md)

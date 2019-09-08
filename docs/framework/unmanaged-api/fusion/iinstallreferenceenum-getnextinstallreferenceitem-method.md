@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0dd96b10b5ee2880e0f9ee18048ec8ba2ee0b5ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779054"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796449"
 ---
-# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="8a11b-102">IInstallReferenceEnum::GetNextInstallReferenceItem Metodu</span><span class="sxs-lookup"><span data-stu-id="8a11b-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
-<span data-ttu-id="8a11b-103">Sonraki bir işaretçi alır [Iınstallreferenceıtem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) bu konuda yer alan nesne [Iınstallreferenceenum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) nesne.</span><span class="sxs-lookup"><span data-stu-id="8a11b-103">Gets a pointer to the next [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) object.</span></span>  
+# <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a><span data-ttu-id="cfba6-102">IInstallReferenceEnum::GetNextInstallReferenceItem Metodu</span><span class="sxs-lookup"><span data-stu-id="cfba6-102">IInstallReferenceEnum::GetNextInstallReferenceItem Method</span></span>
+<span data-ttu-id="cfba6-103">Bu [IInstallReferenceEnum](iinstallreferenceenum-interface.md) nesnesinde bulunan Next [IInstallReferenceItem](iinstallreferenceitem-interface.md) nesnesine bir işaretçi alır.</span><span class="sxs-lookup"><span data-stu-id="cfba6-103">Gets a pointer to the next [IInstallReferenceItem](iinstallreferenceitem-interface.md) object contained in this [IInstallReferenceEnum](iinstallreferenceenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a11b-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="8a11b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfba6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="cfba6-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNextInstallReferenceItem (  
@@ -37,24 +37,24 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8a11b-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="8a11b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfba6-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="cfba6-105">Parameters</span></span>  
  `ppRefItem`  
- <span data-ttu-id="8a11b-106">[out] Döndürülen `IInstallReferenceItem` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="8a11b-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
+ <span data-ttu-id="cfba6-106">dışı Döndürülen `IInstallReferenceItem` işaretçi.</span><span class="sxs-lookup"><span data-stu-id="cfba6-106">[out] The returned `IInstallReferenceItem` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="8a11b-107">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="8a11b-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="8a11b-108">`dwFlags` 0 (sıfır) olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8a11b-108">`dwFlags` must be 0 (zero).</span></span>  
+ <span data-ttu-id="cfba6-107">'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="cfba6-107">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="cfba6-108">`dwFlags`0 (sıfır) olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cfba6-108">`dwFlags` must be 0 (zero).</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="8a11b-109">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="8a11b-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="8a11b-110">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="8a11b-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="cfba6-109">'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="cfba6-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="cfba6-110">`pvReserved`null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cfba6-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8a11b-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="8a11b-111">Requirements</span></span>  
- <span data-ttu-id="8a11b-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a11b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfba6-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="cfba6-111">Requirements</span></span>  
+ <span data-ttu-id="cfba6-112">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfba6-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a11b-113">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="8a11b-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="cfba6-113">**Üst bilgi** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="cfba6-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="8a11b-114">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a11b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cfba6-114">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfba6-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a11b-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8a11b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfba6-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="cfba6-115">See also</span></span>
 
-- [<span data-ttu-id="8a11b-116">IInstallReferenceItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a11b-116">IInstallReferenceItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [<span data-ttu-id="8a11b-117">IInstallReferenceEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="8a11b-117">IInstallReferenceEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [<span data-ttu-id="cfba6-116">IInstallReferenceItem Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cfba6-116">IInstallReferenceItem Interface</span></span>](iinstallreferenceitem-interface.md)
+- [<span data-ttu-id="cfba6-117">IInstallReferenceEnum Arabirimi</span><span class="sxs-lookup"><span data-stu-id="cfba6-117">IInstallReferenceEnum Interface</span></span>](iinstallreferenceenum-interface.md)

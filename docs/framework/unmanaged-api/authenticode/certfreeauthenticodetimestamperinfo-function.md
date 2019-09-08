@@ -10,17 +10,17 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 680d9c959c57620ff38f8e785c670b451e5805b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8ecada29528b065ddad0abc80a850ee0f347f6b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741224"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786997"
 ---
-# <a name="certfreeauthenticodetimestamperinfo-function"></a><span data-ttu-id="684ce-102">CertFreeAuthenticodeTimestamperInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="684ce-102">CertFreeAuthenticodeTimestamperInfo Function</span></span>
-<span data-ttu-id="684ce-103">İçin ayrılan kaynakları serbest bırakan [axl_authentıcode_tımestamper_ınfo](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) yapısı.</span><span class="sxs-lookup"><span data-stu-id="684ce-103">Frees resources allocated for the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
+# <a name="certfreeauthenticodetimestamperinfo-function"></a><span data-ttu-id="2f6be-102">CertFreeAuthenticodeTimestamperInfo İşlevi</span><span class="sxs-lookup"><span data-stu-id="2f6be-102">CertFreeAuthenticodeTimestamperInfo Function</span></span>
+<span data-ttu-id="2f6be-103">[AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) yapısı için ayrılan kaynakları boşaltır.</span><span class="sxs-lookup"><span data-stu-id="2f6be-103">Frees resources allocated for the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="684ce-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="684ce-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2f6be-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="2f6be-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CertFreeAuthenticodeTimestamperInfo (  
@@ -28,13 +28,13 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="684ce-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="684ce-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2f6be-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="2f6be-105">Parameters</span></span>  
  `pTimestamperInfo`  
- <span data-ttu-id="684ce-106">[out içinde] Serbest bırakılacak zamanı stamper bilgiler.</span><span class="sxs-lookup"><span data-stu-id="684ce-106">[in, out] The time stamper information to be released.</span></span> <span data-ttu-id="684ce-107">Bkz: [axl_authentıcode_tımestamper_ınfo](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) yapısı.</span><span class="sxs-lookup"><span data-stu-id="684ce-107">See the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
+ <span data-ttu-id="2f6be-106">[in, out] Yayımlanacak zaman bilgileri.</span><span class="sxs-lookup"><span data-stu-id="2f6be-106">[in, out] The time stamper information to be released.</span></span> <span data-ttu-id="2f6be-107">Bkz. [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) yapısı.</span><span class="sxs-lookup"><span data-stu-id="2f6be-107">See the [AXL_AUTHENTICODE_TIMESTAMPER_INFO](axl-authenticode-timestamper-info-structure.md) structure.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="684ce-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="684ce-108">Return Value</span></span>  
- <span data-ttu-id="684ce-109">`S_OK` işlev başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="684ce-109">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="684ce-110">Aksi takdirde bir hata kodu döndürür.</span><span class="sxs-lookup"><span data-stu-id="684ce-110">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2f6be-108">Dönüş Değeri</span><span class="sxs-lookup"><span data-stu-id="2f6be-108">Return Value</span></span>  
+ <span data-ttu-id="2f6be-109">`S_OK`işlev başarılı olursa.</span><span class="sxs-lookup"><span data-stu-id="2f6be-109">`S_OK` if the function succeeds.</span></span> <span data-ttu-id="2f6be-110">Aksi takdirde, bir hata kodu döndürür.</span><span class="sxs-lookup"><span data-stu-id="2f6be-110">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="684ce-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="684ce-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2f6be-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="2f6be-111">See also</span></span>
 
-- [<span data-ttu-id="684ce-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="684ce-112">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="2f6be-112">Authenticode</span><span class="sxs-lookup"><span data-stu-id="2f6be-112">Authenticode</span></span>](index.md)
