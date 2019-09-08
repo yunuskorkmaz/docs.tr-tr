@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742271"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777487"
 ---
-# <a name="assemblyoptions-enumeration"></a><span data-ttu-id="875c6-102">AssemblyOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="875c6-102">AssemblyOptions Enumeration</span></span>
-<span data-ttu-id="875c6-103">Derleme seçeneklerini numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="875c6-103">Enumerates the assembly options.</span></span>  
+# <a name="assemblyoptions-enumeration"></a><span data-ttu-id="19e22-102">AssemblyOptions Numaralandırması</span><span class="sxs-lookup"><span data-stu-id="19e22-102">AssemblyOptions Enumeration</span></span>
+<span data-ttu-id="19e22-103">Derleme seçeneklerini numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="19e22-103">Enumerates the assembly options.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="875c6-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="875c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19e22-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="19e22-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum _AssemblyOptions {  
@@ -54,36 +54,36 @@ typedef enum _AssemblyOptions {
 }   AssemblyOptions;  
 ```  
   
-## <a name="fields"></a><span data-ttu-id="875c6-105">Alanlar</span><span class="sxs-lookup"><span data-stu-id="875c6-105">Fields</span></span>  
+## <a name="fields"></a><span data-ttu-id="19e22-105">Alanlar</span><span class="sxs-lookup"><span data-stu-id="19e22-105">Fields</span></span>  
   
-|<span data-ttu-id="875c6-106">Alan</span><span class="sxs-lookup"><span data-stu-id="875c6-106">Field</span></span>|<span data-ttu-id="875c6-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="875c6-107">Description</span></span>|  
+|<span data-ttu-id="19e22-106">Alan</span><span class="sxs-lookup"><span data-stu-id="19e22-106">Field</span></span>|<span data-ttu-id="19e22-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="19e22-107">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="875c6-108">optAssemTitle</span><span class="sxs-lookup"><span data-stu-id="875c6-108">optAssemTitle</span></span>|<span data-ttu-id="875c6-109">Dize - derleme başlığı temsil eder.</span><span class="sxs-lookup"><span data-stu-id="875c6-109">String - Represents the assembly title.</span></span>|  
-|<span data-ttu-id="875c6-110">optAssemDescription</span><span class="sxs-lookup"><span data-stu-id="875c6-110">optAssemDescription</span></span>|<span data-ttu-id="875c6-111">Dize - derleme tanımı içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-111">String - Contains the assembly description.</span></span>|  
-|<span data-ttu-id="875c6-112">optAssemConfig</span><span class="sxs-lookup"><span data-stu-id="875c6-112">optAssemConfig</span></span>|<span data-ttu-id="875c6-113">Dize - derleme yapılandırmasını içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-113">String - Contains the assembly configuration.</span></span>|  
-|<span data-ttu-id="875c6-114">optAssemOS</span><span class="sxs-lookup"><span data-stu-id="875c6-114">optAssemOS</span></span>|<span data-ttu-id="875c6-115">Olarak kodlanmış bir dize -: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".</span><span class="sxs-lookup"><span data-stu-id="875c6-115">String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".</span></span>|  
-|<span data-ttu-id="875c6-116">optAssemProcessor</span><span class="sxs-lookup"><span data-stu-id="875c6-116">optAssemProcessor</span></span>|<span data-ttu-id="875c6-117">ULONG</span><span class="sxs-lookup"><span data-stu-id="875c6-117">ULONG</span></span>|  
-|<span data-ttu-id="875c6-118">optAssemLocale</span><span class="sxs-lookup"><span data-stu-id="875c6-118">optAssemLocale</span></span>|<span data-ttu-id="875c6-119">Dize - derleme yerel ayar içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-119">String - Contains the assembly locale.</span></span>|  
-|<span data-ttu-id="875c6-120">optAssemVersion</span><span class="sxs-lookup"><span data-stu-id="875c6-120">optAssemVersion</span></span>|<span data-ttu-id="875c6-121">Olarak kodlanmış bir dize -: "Major.Minor.Build.Revision".</span><span class="sxs-lookup"><span data-stu-id="875c6-121">String - Encoded as: "Major.Minor.Build.Revision".</span></span>|  
-|<span data-ttu-id="875c6-122">optAssemCompany</span><span class="sxs-lookup"><span data-stu-id="875c6-122">optAssemCompany</span></span>|<span data-ttu-id="875c6-123">Dize - şirket içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-123">String - Contains the company.</span></span>|  
-|<span data-ttu-id="875c6-124">optAssemProduct</span><span class="sxs-lookup"><span data-stu-id="875c6-124">optAssemProduct</span></span>|<span data-ttu-id="875c6-125">Dize - ürün adını içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-125">String - Contains the product name.</span></span>|  
-|<span data-ttu-id="875c6-126">optAssemProductVersion</span><span class="sxs-lookup"><span data-stu-id="875c6-126">optAssemProductVersion</span></span>|<span data-ttu-id="875c6-127">Dize (InformationalVersion olarak da bilinir).</span><span class="sxs-lookup"><span data-stu-id="875c6-127">String (also known as InformationalVersion).</span></span>|  
-|<span data-ttu-id="875c6-128">optAssemCopyright</span><span class="sxs-lookup"><span data-stu-id="875c6-128">optAssemCopyright</span></span>|<span data-ttu-id="875c6-129">Dize - telif hakkı bilgileri içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-129">String - Contains the copyright information.</span></span>|  
-|<span data-ttu-id="875c6-130">optAssemTrademark</span><span class="sxs-lookup"><span data-stu-id="875c6-130">optAssemTrademark</span></span>|<span data-ttu-id="875c6-131">Dize - ticari marka bilgileri içerir.</span><span class="sxs-lookup"><span data-stu-id="875c6-131">String - Contains the trademark information.</span></span>|  
-|<span data-ttu-id="875c6-132">optAssemKeyFile</span><span class="sxs-lookup"><span data-stu-id="875c6-132">optAssemKeyFile</span></span>|<span data-ttu-id="875c6-133">String (dosya adı).</span><span class="sxs-lookup"><span data-stu-id="875c6-133">String (file name).</span></span>|  
-|<span data-ttu-id="875c6-134">optAssemKeyName</span><span class="sxs-lookup"><span data-stu-id="875c6-134">optAssemKeyName</span></span>|<span data-ttu-id="875c6-135">Dize (anahtar adı).</span><span class="sxs-lookup"><span data-stu-id="875c6-135">String (The key name).</span></span>|  
-|<span data-ttu-id="875c6-136">optAssemAlgID</span><span class="sxs-lookup"><span data-stu-id="875c6-136">optAssemAlgID</span></span>|<span data-ttu-id="875c6-137">ULONG</span><span class="sxs-lookup"><span data-stu-id="875c6-137">ULONG</span></span>|  
-|<span data-ttu-id="875c6-138">optAssemFlags</span><span class="sxs-lookup"><span data-stu-id="875c6-138">optAssemFlags</span></span>|<span data-ttu-id="875c6-139">ULONG</span><span class="sxs-lookup"><span data-stu-id="875c6-139">ULONG</span></span>|  
-|<span data-ttu-id="875c6-140">optAssemHalfSign</span><span class="sxs-lookup"><span data-stu-id="875c6-140">optAssemHalfSign</span></span>|<span data-ttu-id="875c6-141">Bool (DelaySign da bilinir).</span><span class="sxs-lookup"><span data-stu-id="875c6-141">Bool (Also known as DelaySign).</span></span>|  
-|<span data-ttu-id="875c6-142">optAssemFileVersion</span><span class="sxs-lookup"><span data-stu-id="875c6-142">optAssemFileVersion</span></span>|<span data-ttu-id="875c6-143">Dize - "Major.Minor.Build.Revision"--ProductVersion aynı olarak kodlanmış.</span><span class="sxs-lookup"><span data-stu-id="875c6-143">String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.</span></span>|  
-|<span data-ttu-id="875c6-144">optAssemSatelliteVer</span><span class="sxs-lookup"><span data-stu-id="875c6-144">optAssemSatelliteVer</span></span>|<span data-ttu-id="875c6-145">Dize - "Major.Minor.Build.Revision" olarak kodlanmış.</span><span class="sxs-lookup"><span data-stu-id="875c6-145">String - Encoded as "Major.Minor.Build.Revision".</span></span>|  
-|<span data-ttu-id="875c6-146">optLastAssemOption</span><span class="sxs-lookup"><span data-stu-id="875c6-146">optLastAssemOption</span></span>|<span data-ttu-id="875c6-147">Bir sayacı öğelerin sayısı.</span><span class="sxs-lookup"><span data-stu-id="875c6-147">A counter of the number of elements.</span></span>|  
+|<span data-ttu-id="19e22-108">optAssemTitle</span><span class="sxs-lookup"><span data-stu-id="19e22-108">optAssemTitle</span></span>|<span data-ttu-id="19e22-109">String-derleme başlığını temsil eder.</span><span class="sxs-lookup"><span data-stu-id="19e22-109">String - Represents the assembly title.</span></span>|  
+|<span data-ttu-id="19e22-110">optAssemDescription</span><span class="sxs-lookup"><span data-stu-id="19e22-110">optAssemDescription</span></span>|<span data-ttu-id="19e22-111">Dize-derleme açıklamasını Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-111">String - Contains the assembly description.</span></span>|  
+|<span data-ttu-id="19e22-112">optAssemConfig</span><span class="sxs-lookup"><span data-stu-id="19e22-112">optAssemConfig</span></span>|<span data-ttu-id="19e22-113">Dize-derleme yapılandırmasını Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-113">String - Contains the assembly configuration.</span></span>|  
+|<span data-ttu-id="19e22-114">optAssemOS</span><span class="sxs-lookup"><span data-stu-id="19e22-114">optAssemOS</span></span>|<span data-ttu-id="19e22-115">Dize kodlamalı as: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".</span><span class="sxs-lookup"><span data-stu-id="19e22-115">String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".</span></span>|  
+|<span data-ttu-id="19e22-116">optAssemProcessor</span><span class="sxs-lookup"><span data-stu-id="19e22-116">optAssemProcessor</span></span>|<span data-ttu-id="19e22-117">'TUR</span><span class="sxs-lookup"><span data-stu-id="19e22-117">ULONG</span></span>|  
+|<span data-ttu-id="19e22-118">optAssemLocale</span><span class="sxs-lookup"><span data-stu-id="19e22-118">optAssemLocale</span></span>|<span data-ttu-id="19e22-119">Dize-derleme yerel ayarını Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-119">String - Contains the assembly locale.</span></span>|  
+|<span data-ttu-id="19e22-120">optAssemVersion</span><span class="sxs-lookup"><span data-stu-id="19e22-120">optAssemVersion</span></span>|<span data-ttu-id="19e22-121">Dize-kodlamalı: "Ana. Ikincil. derleme. düzeltme".</span><span class="sxs-lookup"><span data-stu-id="19e22-121">String - Encoded as: "Major.Minor.Build.Revision".</span></span>|  
+|<span data-ttu-id="19e22-122">optAssemCompany</span><span class="sxs-lookup"><span data-stu-id="19e22-122">optAssemCompany</span></span>|<span data-ttu-id="19e22-123">Dize-şirketi Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-123">String - Contains the company.</span></span>|  
+|<span data-ttu-id="19e22-124">optAssemProduct</span><span class="sxs-lookup"><span data-stu-id="19e22-124">optAssemProduct</span></span>|<span data-ttu-id="19e22-125">Dize-ürün adını Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-125">String - Contains the product name.</span></span>|  
+|<span data-ttu-id="19e22-126">optAssemProductVersion</span><span class="sxs-lookup"><span data-stu-id="19e22-126">optAssemProductVersion</span></span>|<span data-ttu-id="19e22-127">Dize (InformationalVersion olarak da bilinir).</span><span class="sxs-lookup"><span data-stu-id="19e22-127">String (also known as InformationalVersion).</span></span>|  
+|<span data-ttu-id="19e22-128">Optassemtelif hakkı</span><span class="sxs-lookup"><span data-stu-id="19e22-128">optAssemCopyright</span></span>|<span data-ttu-id="19e22-129">Dize-telif hakkı bilgilerini Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-129">String - Contains the copyright information.</span></span>|  
+|<span data-ttu-id="19e22-130">Optassemmarka</span><span class="sxs-lookup"><span data-stu-id="19e22-130">optAssemTrademark</span></span>|<span data-ttu-id="19e22-131">Dize-ticari marka bilgilerini Içerir.</span><span class="sxs-lookup"><span data-stu-id="19e22-131">String - Contains the trademark information.</span></span>|  
+|<span data-ttu-id="19e22-132">optAssemKeyFile</span><span class="sxs-lookup"><span data-stu-id="19e22-132">optAssemKeyFile</span></span>|<span data-ttu-id="19e22-133">Dize (dosya adı).</span><span class="sxs-lookup"><span data-stu-id="19e22-133">String (file name).</span></span>|  
+|<span data-ttu-id="19e22-134">optAssemKeyName</span><span class="sxs-lookup"><span data-stu-id="19e22-134">optAssemKeyName</span></span>|<span data-ttu-id="19e22-135">Dize (anahtar adı).</span><span class="sxs-lookup"><span data-stu-id="19e22-135">String (The key name).</span></span>|  
+|<span data-ttu-id="19e22-136">Optassemalgıd</span><span class="sxs-lookup"><span data-stu-id="19e22-136">optAssemAlgID</span></span>|<span data-ttu-id="19e22-137">'TUR</span><span class="sxs-lookup"><span data-stu-id="19e22-137">ULONG</span></span>|  
+|<span data-ttu-id="19e22-138">optAssemFlags</span><span class="sxs-lookup"><span data-stu-id="19e22-138">optAssemFlags</span></span>|<span data-ttu-id="19e22-139">'TUR</span><span class="sxs-lookup"><span data-stu-id="19e22-139">ULONG</span></span>|  
+|<span data-ttu-id="19e22-140">Optassemyarı simgesi</span><span class="sxs-lookup"><span data-stu-id="19e22-140">optAssemHalfSign</span></span>|<span data-ttu-id="19e22-141">Bool (DelaySign olarak da bilinir).</span><span class="sxs-lookup"><span data-stu-id="19e22-141">Bool (Also known as DelaySign).</span></span>|  
+|<span data-ttu-id="19e22-142">optAssemFileVersion</span><span class="sxs-lookup"><span data-stu-id="19e22-142">optAssemFileVersion</span></span>|<span data-ttu-id="19e22-143">Dize-kodlanmış "ana. Ikincil. derleme. düzeltme"--ProductVersion ile aynı.</span><span class="sxs-lookup"><span data-stu-id="19e22-143">String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.</span></span>|  
+|<span data-ttu-id="19e22-144">optAssemSatelliteVer</span><span class="sxs-lookup"><span data-stu-id="19e22-144">optAssemSatelliteVer</span></span>|<span data-ttu-id="19e22-145">"Ana. Ikincil. derleme. düzeltme" olarak dize kodlamalı.</span><span class="sxs-lookup"><span data-stu-id="19e22-145">String - Encoded as "Major.Minor.Build.Revision".</span></span>|  
+|<span data-ttu-id="19e22-146">optLastAssemOption</span><span class="sxs-lookup"><span data-stu-id="19e22-146">optLastAssemOption</span></span>|<span data-ttu-id="19e22-147">Öğe sayısı sayacı.</span><span class="sxs-lookup"><span data-stu-id="19e22-147">A counter of the number of elements.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="875c6-148">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="875c6-148">Requirements</span></span>  
- <span data-ttu-id="875c6-149">**Başlık:** alink.h</span><span class="sxs-lookup"><span data-stu-id="875c6-149">**Header:** alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19e22-148">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="19e22-148">Requirements</span></span>  
+ <span data-ttu-id="19e22-149">**Üstbilgi:** ALink. h</span><span class="sxs-lookup"><span data-stu-id="19e22-149">**Header:** alink.h</span></span>  
   
- <span data-ttu-id="875c6-150">**Kitaplık**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="875c6-150">**Library**: alink.dll</span></span>  
+ <span data-ttu-id="19e22-150">**Kitaplık**: ALink. dll</span><span class="sxs-lookup"><span data-stu-id="19e22-150">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="875c6-151">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="875c6-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19e22-151">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="19e22-151">See also</span></span>
 
-- [<span data-ttu-id="875c6-152">Al.exe (Bütünleştirilmiş Kod Bağlayıcı)</span><span class="sxs-lookup"><span data-stu-id="875c6-152">Al.exe (Assembly Linker)</span></span>](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="19e22-152">Al.exe (Bütünleştirilmiş Kod Bağlayıcı)</span><span class="sxs-lookup"><span data-stu-id="19e22-152">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)

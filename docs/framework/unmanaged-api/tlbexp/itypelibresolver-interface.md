@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa3135465673bedea1c6827da622903279d1bcf1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964638"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798883"
 ---
-# <a name="itypelibresolver-interface"></a><span data-ttu-id="71a37-102">ITypeLibResolver Arabirimi</span><span class="sxs-lookup"><span data-stu-id="71a37-102">ITypeLibResolver Interface</span></span>
-<span data-ttu-id="71a37-103">Sağlar [ResolveTypeLib yöntemi](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), bir tür kitaplığı dosyasının yolu çözümler.</span><span class="sxs-lookup"><span data-stu-id="71a37-103">Provides the [ResolveTypeLib method](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
+# <a name="itypelibresolver-interface"></a><span data-ttu-id="e172b-102">ITypeLibResolver Arabirimi</span><span class="sxs-lookup"><span data-stu-id="e172b-102">ITypeLibResolver Interface</span></span>
+<span data-ttu-id="e172b-103">Bir tür kitaplığının dosya yolunu çözen [Resolvettypeınfo lib yöntemini](resolvetypelib-method.md)sağlar.</span><span class="sxs-lookup"><span data-stu-id="e172b-103">Provides the [ResolveTypeLib method](resolvetypelib-method.md), which resolves the file path of a type library.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="71a37-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="71a37-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="e172b-104">Yöntemler</span><span class="sxs-lookup"><span data-stu-id="e172b-104">Methods</span></span>  
   
-|<span data-ttu-id="71a37-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="71a37-105">Method</span></span>|<span data-ttu-id="71a37-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="71a37-106">Description</span></span>|  
+|<span data-ttu-id="e172b-105">Yöntem</span><span class="sxs-lookup"><span data-stu-id="e172b-105">Method</span></span>|<span data-ttu-id="e172b-106">Açıklama</span><span class="sxs-lookup"><span data-stu-id="e172b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="71a37-107">ResolveTypeLib Yöntemi</span><span class="sxs-lookup"><span data-stu-id="71a37-107">ResolveTypeLib Method</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md)|<span data-ttu-id="71a37-108">Basit bir tür kitaplığı adı, tam nitelenmiş bir yol döndürerek çözümler.</span><span class="sxs-lookup"><span data-stu-id="71a37-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
+|[<span data-ttu-id="e172b-107">ResolveTypeLib Yöntemi</span><span class="sxs-lookup"><span data-stu-id="e172b-107">ResolveTypeLib Method</span></span>](resolvetypelib-method.md)|<span data-ttu-id="e172b-108">Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.</span><span class="sxs-lookup"><span data-stu-id="e172b-108">Resolves the simple name of a type library by returning its fully qualified path.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="71a37-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="71a37-109">Requirements</span></span>  
- <span data-ttu-id="71a37-110">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="71a37-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e172b-109">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e172b-109">Requirements</span></span>  
+ <span data-ttu-id="e172b-110">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e172b-110">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="71a37-111">**Üst bilgi:** TlbRef.idl, TlbRef.h</span><span class="sxs-lookup"><span data-stu-id="71a37-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
+ <span data-ttu-id="e172b-111">**Üst bilgi** TlbRef. IDL, TlbRef. h</span><span class="sxs-lookup"><span data-stu-id="e172b-111">**Header:** TlbRef.idl, TlbRef.h</span></span>  
   
- <span data-ttu-id="71a37-112">**Kitaplığı:** TlbRef.lib</span><span class="sxs-lookup"><span data-stu-id="71a37-112">**Library:** TlbRef.lib</span></span>  
+ <span data-ttu-id="e172b-112">**Kitaplığı** TlbRef. lib</span><span class="sxs-lookup"><span data-stu-id="e172b-112">**Library:** TlbRef.lib</span></span>  
   
- <span data-ttu-id="71a37-113">**.NET framework sürümü:** 4, 3.5, 3.0, 2.0</span><span class="sxs-lookup"><span data-stu-id="71a37-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
+ <span data-ttu-id="e172b-113">**.NET Framework sürümü:** 4, 3,5, 3,0, 2,0</span><span class="sxs-lookup"><span data-stu-id="e172b-113">**.NET Framework Version:** 4, 3.5, 3.0, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71a37-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="71a37-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e172b-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e172b-114">See also</span></span>
 
-- [<span data-ttu-id="71a37-115">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="71a37-115">Tlbexp Helper Functions</span></span>](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
-- [<span data-ttu-id="71a37-116">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="71a37-116">LoadTypeLibEx function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [<span data-ttu-id="e172b-115">Tlbexp Yardımcı İşlevleri</span><span class="sxs-lookup"><span data-stu-id="e172b-115">Tlbexp Helper Functions</span></span>](index.md)
+- [<span data-ttu-id="e172b-116">LoadTypeLibEx işlevi</span><span class="sxs-lookup"><span data-stu-id="e172b-116">LoadTypeLibEx function</span></span>](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

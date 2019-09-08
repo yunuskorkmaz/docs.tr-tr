@@ -1,6 +1,6 @@
 ---
 title: BeginEnumeration işlevi (yönetilmeyen API Başvurusu)
-description: BeginEnumeration işlevi Numaralayıcı sabit başlangıcına sıfırlar.
+description: BeginEnumeration işlevi bir Numaralandırıcı numaralandırmanın başlangıcına sıfırlanır
 ms.date: 11/06/2017
 api_name:
 - BeginEnumeration
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ccf39c019094d896ca20534fccbbccf38ab1dd3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761806"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798785"
 ---
-# <a name="beginenumeration-function"></a><span data-ttu-id="c0f9a-103">BeginEnumeration işlevi</span><span class="sxs-lookup"><span data-stu-id="c0f9a-103">BeginEnumeration function</span></span>
-<span data-ttu-id="c0f9a-104">Bir numaralandırıcı geri numaralandırma başlangıç durumuna sıfırlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-104">Resets an enumerator back to the beginning of the enumeration.</span></span>  
+# <a name="beginenumeration-function"></a><span data-ttu-id="ed005-103">BeginEnumeration işlevi</span><span class="sxs-lookup"><span data-stu-id="ed005-103">BeginEnumeration function</span></span>
+<span data-ttu-id="ed005-104">Bir numaralandırıcıyı numaralandırmanın başına geri döndürür.</span><span class="sxs-lookup"><span data-stu-id="ed005-104">Resets an enumerator back to the beginning of the enumeration.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="c0f9a-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="c0f9a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed005-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ed005-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT BeginEnumeration (
@@ -38,72 +38,72 @@ HRESULT BeginEnumeration (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="c0f9a-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="c0f9a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ed005-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ed005-106">Parameters</span></span>
 
 `vFunc`\
-<span data-ttu-id="c0f9a-107">[in] Bu parametre kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="ed005-107">'ndaki Bu parametre kullanılmıyor.</span><span class="sxs-lookup"><span data-stu-id="ed005-107">[in] This parameter is unused.</span></span>
 
 `ptr`\
-<span data-ttu-id="c0f9a-108">[in] Bir işaretçi bir [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneği.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="ed005-108">'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="ed005-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `lEnumFlags`\
-<span data-ttu-id="c0f9a-109">[in] Bayrakları veya açıklanan değerler Bitsel bir birleşimi [açıklamalar](#remarks) numaralandırmada özellikleri denetleyen bölümü.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-109">[in] A bitwise combination of the flags or values described in the [Remarks](#remarks) section that controls the properties included in the enumeration.</span></span>
+<span data-ttu-id="ed005-109">'ndaki Numaralandırmada içerilen özellikleri denetleyen [açıklamalar](#remarks) bölümünde açıklanan bayrakların veya değerlerin bit düzeyinde birleşimi.</span><span class="sxs-lookup"><span data-stu-id="ed005-109">[in] A bitwise combination of the flags or values described in the [Remarks](#remarks) section that controls the properties included in the enumeration.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="c0f9a-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="c0f9a-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ed005-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="ed005-110">Return value</span></span>
 
-<span data-ttu-id="c0f9a-111">Bu işlev tarafından döndürülen aşağıdaki değerleri tanımlanan *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda:</span><span class="sxs-lookup"><span data-stu-id="c0f9a-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ed005-111">Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="ed005-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="c0f9a-112">Sabit</span><span class="sxs-lookup"><span data-stu-id="c0f9a-112">Constant</span></span>  |<span data-ttu-id="c0f9a-113">Değer</span><span class="sxs-lookup"><span data-stu-id="c0f9a-113">Value</span></span>  |<span data-ttu-id="c0f9a-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0f9a-114">Description</span></span>  |
+|<span data-ttu-id="ed005-112">Sabit</span><span class="sxs-lookup"><span data-stu-id="ed005-112">Constant</span></span>  |<span data-ttu-id="ed005-113">Değer</span><span class="sxs-lookup"><span data-stu-id="ed005-113">Value</span></span>  |<span data-ttu-id="ed005-114">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed005-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="c0f9a-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="c0f9a-115">0x80041008</span></span> | <span data-ttu-id="c0f9a-116">Bayrakları birleşimi `lEnumFlags` geçersiz veya geçersiz bir bağımsız değişken belirtildi.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-116">The combination of flags in `lEnumFlags` is invalid, or an invalid argument was specified.</span></span> |
-|`WBEM_E_UNEXPECTED` | <span data-ttu-id="c0f9a-117">0x8004101d</span><span class="sxs-lookup"><span data-stu-id="c0f9a-117">0x8004101d</span></span> | <span data-ttu-id="c0f9a-118">İkinci çağrı `BeginEnumeration` bir çağrı göndermelisiniz olmadan yapılan [ `EndEnumeration` ](endenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="c0f9a-118">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="c0f9a-119">0x80041006</span><span class="sxs-lookup"><span data-stu-id="c0f9a-119">0x80041006</span></span> | <span data-ttu-id="c0f9a-120">Yeni bir numaralandırma başlatmak yeterli bellek yok.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-120">Not enough memory is available to begin a new enumeration.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="c0f9a-121">0</span><span class="sxs-lookup"><span data-stu-id="c0f9a-121">0</span></span> | <span data-ttu-id="c0f9a-122">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-122">The function call was successful.</span></span>  |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ed005-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="ed005-115">0x80041008</span></span> | <span data-ttu-id="ed005-116">İçindeki `lEnumFlags` bayrakların birleşimi geçersiz ya da geçersiz bir bağımsız değişken belirtildi.</span><span class="sxs-lookup"><span data-stu-id="ed005-116">The combination of flags in `lEnumFlags` is invalid, or an invalid argument was specified.</span></span> |
+|`WBEM_E_UNEXPECTED` | <span data-ttu-id="ed005-117">0x8004101D</span><span class="sxs-lookup"><span data-stu-id="ed005-117">0x8004101d</span></span> | <span data-ttu-id="ed005-118">İçin bir araya giren `BeginEnumeration` [`EndEnumeration`](endenumeration.md)çağrı yapılmadan ikinci bir çağrı yapıldı.</span><span class="sxs-lookup"><span data-stu-id="ed005-118">A second call to `BeginEnumeration` was made without an intervening call to [`EndEnumeration`](endenumeration.md).</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="ed005-119">0x80041006</span><span class="sxs-lookup"><span data-stu-id="ed005-119">0x80041006</span></span> | <span data-ttu-id="ed005-120">Yeni bir sabit listesi başlatmak için yeterli kullanılabilir bellek yok.</span><span class="sxs-lookup"><span data-stu-id="ed005-120">Not enough memory is available to begin a new enumeration.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="ed005-121">0</span><span class="sxs-lookup"><span data-stu-id="ed005-121">0</span></span> | <span data-ttu-id="ed005-122">İşlev çağrısı başarılı oldu.</span><span class="sxs-lookup"><span data-stu-id="ed005-122">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="c0f9a-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="c0f9a-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ed005-123">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="ed005-123">Remarks</span></span>
 
-<span data-ttu-id="c0f9a-124">Bu işlev bir çağrı sarılır [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemi.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-124">This function wraps a call to the [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
+<span data-ttu-id="ed005-124">Bu işlev, [IWbemClassObject:: BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) yöntemine bir çağrı kaydırır.</span><span class="sxs-lookup"><span data-stu-id="ed005-124">This function wraps a call to the [IWbemClassObject::BeginEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) method.</span></span>
 
-<span data-ttu-id="c0f9a-125">Olarak geçirilen bayraklar `lEnumFlags` bağımsız değişken tanımlanmış *WbemCli.h* üst bilgi dosyası veya tanımlayabilirsiniz bunları sabitleri kodunuzda.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-125">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span>  <span data-ttu-id="c0f9a-126">Herhangi diğer bir grup bayrağı ile her bir gruptan bir bayrak birleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-126">You can combine one flag from each group with any flag from any other group.</span></span> <span data-ttu-id="c0f9a-127">Ancak, aynı grup bayrakları birbirini dışlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-127">However, flags from the same group are mutually exclusive.</span></span> 
+<span data-ttu-id="ed005-125">`lEnumFlags` Bağımsız değişken olarak geçirilebilecek bayraklar, *wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed005-125">The flags that can be passed as the `lEnumFlags` argument are defined in the *WbemCli.h* header file, or you can define them as constants in your code.</span></span>  <span data-ttu-id="ed005-126">Her bir grup için herhangi bir bayrak ile bir bayrak birleştirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="ed005-126">You can combine one flag from each group with any flag from any other group.</span></span> <span data-ttu-id="ed005-127">Ancak, aynı gruptaki Bayraklar birbirini dışlıyor.</span><span class="sxs-lookup"><span data-stu-id="ed005-127">However, flags from the same group are mutually exclusive.</span></span> 
 
-<span data-ttu-id="c0f9a-128">**Grup 1**</span><span class="sxs-lookup"><span data-stu-id="c0f9a-128">**Group 1**</span></span>
+<span data-ttu-id="ed005-128">**1. Grup**</span><span class="sxs-lookup"><span data-stu-id="ed005-128">**Group 1**</span></span>
 
-|<span data-ttu-id="c0f9a-129">Sabit</span><span class="sxs-lookup"><span data-stu-id="c0f9a-129">Constant</span></span>  |<span data-ttu-id="c0f9a-130">Değer</span><span class="sxs-lookup"><span data-stu-id="c0f9a-130">Value</span></span>  |<span data-ttu-id="c0f9a-131">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0f9a-131">Description</span></span>  |
+|<span data-ttu-id="ed005-129">Sabit</span><span class="sxs-lookup"><span data-stu-id="ed005-129">Constant</span></span>  |<span data-ttu-id="ed005-130">Değer</span><span class="sxs-lookup"><span data-stu-id="ed005-130">Value</span></span>  |<span data-ttu-id="ed005-131">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed005-131">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | <span data-ttu-id="c0f9a-132">0x4</span><span class="sxs-lookup"><span data-stu-id="c0f9a-132">0x4</span></span> | <span data-ttu-id="c0f9a-133">Yalnızca anahtar oluşturan özellikleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-133">Include properties that constitute the key only.</span></span> |
-|`WBEM_FLAG_REFS_ONLY` | <span data-ttu-id="c0f9a-134">0x8</span><span class="sxs-lookup"><span data-stu-id="c0f9a-134">0x8</span></span> | <span data-ttu-id="c0f9a-135">Nesne başvuruları yalnızca özellikleri içerir.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-135">Include properties that are object references only.</span></span> |
+|`WBEM_FLAG_KEYS_ONLY` | <span data-ttu-id="ed005-132">0x4</span><span class="sxs-lookup"><span data-stu-id="ed005-132">0x4</span></span> | <span data-ttu-id="ed005-133">Yalnızca anahtarı oluşturan özellikleri ekleyin.</span><span class="sxs-lookup"><span data-stu-id="ed005-133">Include properties that constitute the key only.</span></span> |
+|`WBEM_FLAG_REFS_ONLY` | <span data-ttu-id="ed005-134">0x8</span><span class="sxs-lookup"><span data-stu-id="ed005-134">0x8</span></span> | <span data-ttu-id="ed005-135">Yalnızca nesne başvuruları olan özellikleri ekleyin.</span><span class="sxs-lookup"><span data-stu-id="ed005-135">Include properties that are object references only.</span></span> |
 
-<span data-ttu-id="c0f9a-136">**Grup 2**</span><span class="sxs-lookup"><span data-stu-id="c0f9a-136">**Group 2**</span></span>
+<span data-ttu-id="ed005-136">**Grup 2**</span><span class="sxs-lookup"><span data-stu-id="ed005-136">**Group 2**</span></span>
 
-<span data-ttu-id="c0f9a-137">Sabit</span><span class="sxs-lookup"><span data-stu-id="c0f9a-137">Constant</span></span>  |<span data-ttu-id="c0f9a-138">Değer</span><span class="sxs-lookup"><span data-stu-id="c0f9a-138">Value</span></span>  |<span data-ttu-id="c0f9a-139">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0f9a-139">Description</span></span>  |
+<span data-ttu-id="ed005-137">Sabit</span><span class="sxs-lookup"><span data-stu-id="ed005-137">Constant</span></span>  |<span data-ttu-id="ed005-138">Değer</span><span class="sxs-lookup"><span data-stu-id="ed005-138">Value</span></span>  |<span data-ttu-id="ed005-139">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed005-139">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_SYSTEM_ONLY` | <span data-ttu-id="c0f9a-140">0x30</span><span class="sxs-lookup"><span data-stu-id="c0f9a-140">0x30</span></span> | <span data-ttu-id="c0f9a-141">Sistem özellikleri yalnızca numaralandırma sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-141">Limit the enumeration to system properties only.</span></span> |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | <span data-ttu-id="c0f9a-142">0x40</span><span class="sxs-lookup"><span data-stu-id="c0f9a-142">0x40</span></span> | <span data-ttu-id="c0f9a-143">Yerel ve yayılan özellikleri içerir, ancak Sistem özellikleri sabit listesinden alınmış hariç.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-143">Include local and propagated properties but exclude system properties from the enumeration.</span></span> |
+|`WBEM_FLAG_SYSTEM_ONLY` | <span data-ttu-id="ed005-140">0x30</span><span class="sxs-lookup"><span data-stu-id="ed005-140">0x30</span></span> | <span data-ttu-id="ed005-141">Numaralandırmayı yalnızca sistem özellikleriyle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-141">Limit the enumeration to system properties only.</span></span> |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | <span data-ttu-id="ed005-142">0x40</span><span class="sxs-lookup"><span data-stu-id="ed005-142">0x40</span></span> | <span data-ttu-id="ed005-143">Yerel ve yayılmış özellikleri ekleyin, ancak Numaralandırmadaki sistem özelliklerini dışlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-143">Include local and propagated properties but exclude system properties from the enumeration.</span></span> |
 
-<span data-ttu-id="c0f9a-144">Sınıflar için:</span><span class="sxs-lookup"><span data-stu-id="c0f9a-144">For classes:</span></span>
+<span data-ttu-id="ed005-144">Sınıflar için:</span><span class="sxs-lookup"><span data-stu-id="ed005-144">For classes:</span></span>
 
-<span data-ttu-id="c0f9a-145">Sabit</span><span class="sxs-lookup"><span data-stu-id="c0f9a-145">Constant</span></span>  |<span data-ttu-id="c0f9a-146">Değer</span><span class="sxs-lookup"><span data-stu-id="c0f9a-146">Value</span></span>  |<span data-ttu-id="c0f9a-147">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0f9a-147">Description</span></span>  |
+<span data-ttu-id="ed005-145">Sabit</span><span class="sxs-lookup"><span data-stu-id="ed005-145">Constant</span></span>  |<span data-ttu-id="ed005-146">Değer</span><span class="sxs-lookup"><span data-stu-id="ed005-146">Value</span></span>  |<span data-ttu-id="ed005-147">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed005-147">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | <span data-ttu-id="c0f9a-148">0x100</span><span class="sxs-lookup"><span data-stu-id="c0f9a-148">0x100</span></span> | <span data-ttu-id="c0f9a-149">Sınıf tanımında geçersiz kılınan özellikleri için sabit sınırlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-149">Limit the enumeration to properties overridden in the class definition.</span></span> |
-|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | <span data-ttu-id="c0f9a-150">0x100</span><span class="sxs-lookup"><span data-stu-id="c0f9a-150">0x100</span></span> | <span data-ttu-id="c0f9a-151">Geçerli sınıf tanımında geçersiz kılınan özellikleri ve yeni özellikleri sınıfta tanımlanan sabit sınırlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-151">Limit the enumeration to properties overridden in the current class definition and to new properties defined in the class.</span></span> |
-| `WBEM_MASK_CLASS_CONDITION` | <span data-ttu-id="c0f9a-152">0x300</span><span class="sxs-lookup"><span data-stu-id="c0f9a-152">0x300</span></span> | <span data-ttu-id="c0f9a-153">Karşı uygulamak için bir maske (yerine bir bayrak) bir `lEnumFlags` ya da denetlenecek değer `WBEM_FLAG_CLASS_OVERRIDES_ONLY` veya `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` ayarlanır.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-153">A mask (rather than a flag) to apply against a `lEnumFlags` value to check if either `WBEM_FLAG_CLASS_OVERRIDES_ONLY` or `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` is set.</span></span> |
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="c0f9a-154">0x10</span><span class="sxs-lookup"><span data-stu-id="c0f9a-154">0x10</span></span> | <span data-ttu-id="c0f9a-155">Sabit listesi sınıfı, değiştiren veya tanımlanan özelliklere sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-155">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="c0f9a-156">0x20</span><span class="sxs-lookup"><span data-stu-id="c0f9a-156">0x20</span></span> | <span data-ttu-id="c0f9a-157">Temel sınıftan devralınan özellikler için sabit sınırlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-157">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+|`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | <span data-ttu-id="ed005-148">0x100</span><span class="sxs-lookup"><span data-stu-id="ed005-148">0x100</span></span> | <span data-ttu-id="ed005-149">Sabit listesini, sınıf tanımında geçersiz kılınan özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-149">Limit the enumeration to properties overridden in the class definition.</span></span> |
+|`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | <span data-ttu-id="ed005-150">0x100</span><span class="sxs-lookup"><span data-stu-id="ed005-150">0x100</span></span> | <span data-ttu-id="ed005-151">Sabit listesini geçerli sınıf tanımında geçersiz kılınan özelliklerle ve sınıfta tanımlanan yeni özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-151">Limit the enumeration to properties overridden in the current class definition and to new properties defined in the class.</span></span> |
+| `WBEM_MASK_CLASS_CONDITION` | <span data-ttu-id="ed005-152">0x300</span><span class="sxs-lookup"><span data-stu-id="ed005-152">0x300</span></span> | <span data-ttu-id="ed005-153">Ya `lEnumFlags` da`WBEM_FLAG_CLASS_OVERRIDES_ONLY` ayarlanmış olup olmadığını denetlemek için bir değere karşı uygulanacak bir maske (bayrak yerine). `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`</span><span class="sxs-lookup"><span data-stu-id="ed005-153">A mask (rather than a flag) to apply against a `lEnumFlags` value to check if either `WBEM_FLAG_CLASS_OVERRIDES_ONLY` or `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` is set.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="ed005-154">0x10</span><span class="sxs-lookup"><span data-stu-id="ed005-154">0x10</span></span> | <span data-ttu-id="ed005-155">Sabit listesini, sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-155">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="ed005-156">0x20</span><span class="sxs-lookup"><span data-stu-id="ed005-156">0x20</span></span> | <span data-ttu-id="ed005-157">Sabit listesini temel sınıflardan devralınan özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-157">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-<span data-ttu-id="c0f9a-158">İçin örnek:</span><span class="sxs-lookup"><span data-stu-id="c0f9a-158">For instances:</span></span>
+<span data-ttu-id="ed005-158">Örnekler için:</span><span class="sxs-lookup"><span data-stu-id="ed005-158">For instances:</span></span>
 
-<span data-ttu-id="c0f9a-159">Sabit</span><span class="sxs-lookup"><span data-stu-id="c0f9a-159">Constant</span></span>  |<span data-ttu-id="c0f9a-160">Değer</span><span class="sxs-lookup"><span data-stu-id="c0f9a-160">Value</span></span>  |<span data-ttu-id="c0f9a-161">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c0f9a-161">Description</span></span>  |
+<span data-ttu-id="ed005-159">Sabit</span><span class="sxs-lookup"><span data-stu-id="ed005-159">Constant</span></span>  |<span data-ttu-id="ed005-160">Değer</span><span class="sxs-lookup"><span data-stu-id="ed005-160">Value</span></span>  |<span data-ttu-id="ed005-161">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ed005-161">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="c0f9a-162">0x10</span><span class="sxs-lookup"><span data-stu-id="c0f9a-162">0x10</span></span> | <span data-ttu-id="c0f9a-163">Sabit listesi sınıfı, değiştiren veya tanımlanan özelliklere sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-163">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="c0f9a-164">0x20</span><span class="sxs-lookup"><span data-stu-id="c0f9a-164">0x20</span></span> | <span data-ttu-id="c0f9a-165">Temel sınıftan devralınan özellikler için sabit sınırlar.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-165">Limit the enumeration to properties that are inherited from base classes.</span></span> |
+| `WBEM_FLAG_LOCAL_ONLY` | <span data-ttu-id="ed005-162">0x10</span><span class="sxs-lookup"><span data-stu-id="ed005-162">0x10</span></span> | <span data-ttu-id="ed005-163">Sabit listesini, sınıfın kendisinde tanımlanan veya değiştirilen özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-163">Limit the enumeration to properties that are defined or modified in the class itself.</span></span> |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  <span data-ttu-id="ed005-164">0x20</span><span class="sxs-lookup"><span data-stu-id="ed005-164">0x20</span></span> | <span data-ttu-id="ed005-165">Sabit listesini temel sınıflardan devralınan özelliklerle sınırlayın.</span><span class="sxs-lookup"><span data-stu-id="ed005-165">Limit the enumeration to properties that are inherited from base classes.</span></span> |
 
-## <a name="requirements"></a><span data-ttu-id="c0f9a-166">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="c0f9a-166">Requirements</span></span>  
- <span data-ttu-id="c0f9a-167">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c0f9a-167">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed005-166">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ed005-166">Requirements</span></span>  
+ <span data-ttu-id="ed005-167">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed005-167">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c0f9a-168">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c0f9a-168">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ed005-168">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="ed005-168">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="c0f9a-169">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c0f9a-169">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ed005-169">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ed005-169">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0f9a-170">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c0f9a-170">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed005-170">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ed005-170">See also</span></span>
 
-- [<span data-ttu-id="c0f9a-171">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="c0f9a-171">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="ed005-171">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="ed005-171">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

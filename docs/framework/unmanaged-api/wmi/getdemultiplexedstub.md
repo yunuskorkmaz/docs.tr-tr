@@ -1,6 +1,6 @@
 ---
 title: GetDemultiplexedStub işlevi (yönetilmeyen API Başvurusu)
-description: Bir istemcinin Windows Yönetimi'nden zaman uyumsuz bir çağrı alma yardımcı olmak için nesne ileticisi havuzu GetDemultiplexedStub işlevi oluşturur.
+description: GetDemultiplexedStub işlevi, bir istemcinin Windows yönetiminden zaman uyumsuz çağrılar almasına yardımcı olmak için bir nesne iletici havuzu oluşturur.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b519ea4062682a56b5b4e277de22b14799f65d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a2d3885a4a9e54950909053ba18de5b1891e7edf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798602"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="879f0-103">GetDemultiplexedStub işlevi</span><span class="sxs-lookup"><span data-stu-id="879f0-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="879f0-104">Bir istemcinin Windows Yönetimi'nden zaman uyumsuz bir çağrı alma yardımcı olmak için nesne ileticisi havuzu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="879f0-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="d1084-103">GetDemultiplexedStub işlevi</span><span class="sxs-lookup"><span data-stu-id="d1084-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="d1084-104">Bir istemciye Windows yönetiminden zaman uyumsuz çağrılar alma konusunda yardımcı olmak için bir nesne iletici havuzu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d1084-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="879f0-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="879f0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1084-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="d1084-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetDemultiplexedStub (
@@ -38,30 +38,30 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="879f0-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="879f0-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d1084-106">Parametreler</span><span class="sxs-lookup"><span data-stu-id="d1084-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="879f0-107">[in] İstemci işlem içi uygulaması için bir işaretçi [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="879f0-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
+<span data-ttu-id="d1084-107">'ndaki İstemcinin işlem içi [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)uygulamasına yönelik bir işaretçi.</span><span class="sxs-lookup"><span data-stu-id="d1084-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="879f0-108">[in] Olay yerel olup olmadığını belirten bir bayrak (`true`); Aksi takdirde `false`.</span><span class="sxs-lookup"><span data-stu-id="879f0-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="d1084-108">'ndaki Olayın yerel (`true`) olup olmadığını belirten bayrak; Aksi takdirde, `false`.</span><span class="sxs-lookup"><span data-stu-id="d1084-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="879f0-109">[out] Bir istemcinin Windows Yönetimi'nden zaman uyumsuz bir çağrı alma yardımcı olmak için bir nesne ileticisi havuzu.</span><span class="sxs-lookup"><span data-stu-id="879f0-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="d1084-109">dışı Windows yönetiminden zaman uyumsuz çağrılar alırken bir istemciye yardımcı olmak için bir nesne ileticisi Havuzu.</span><span class="sxs-lookup"><span data-stu-id="d1084-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="879f0-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="879f0-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="d1084-110">Dönüş değeri</span><span class="sxs-lookup"><span data-stu-id="d1084-110">Return value</span></span>
 
-<span data-ttu-id="879f0-111">İşlev başarılı olursa, dönüş değeri olduğu `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="879f0-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="d1084-111">İşlev başarılı olursa, dönüş değeri (0) `S_OK` olur.</span><span class="sxs-lookup"><span data-stu-id="d1084-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="879f0-112">İşlev başarısız olursa, dönüş değeri sıfır olmayan hata kodudur.</span><span class="sxs-lookup"><span data-stu-id="879f0-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="879f0-113">Genişletilmiş hata bilgilerini almak için arama [Geterrorınfo](geterrorinfo.md) işlevi.</span><span class="sxs-lookup"><span data-stu-id="879f0-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="d1084-112">İşlev başarısız olursa, dönüş değeri sıfır olmayan bir hata kodudur.</span><span class="sxs-lookup"><span data-stu-id="d1084-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="d1084-113">Genişletilmiş hata bilgilerini almak için [GetErrorInfo](geterrorinfo.md) işlevini çağırın.</span><span class="sxs-lookup"><span data-stu-id="d1084-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="879f0-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="879f0-114">Requirements</span></span>  
- <span data-ttu-id="879f0-115">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="879f0-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1084-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d1084-114">Requirements</span></span>  
+ <span data-ttu-id="d1084-115">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1084-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="879f0-116">**Üst bilgi:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="879f0-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="d1084-116">**Üst bilgi** WMINet_Utils. IDL</span><span class="sxs-lookup"><span data-stu-id="d1084-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="879f0-117">**.NET framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="879f0-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="d1084-117">**.NET Framework sürümleri:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d1084-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="879f0-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="879f0-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d1084-118">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d1084-118">See also</span></span>
 
-- [<span data-ttu-id="879f0-119">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="879f0-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="d1084-119">WMI ve performans sayaçları (yönetilmeyen API Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="d1084-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

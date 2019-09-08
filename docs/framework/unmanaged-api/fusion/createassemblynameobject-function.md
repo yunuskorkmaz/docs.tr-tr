@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed26df6580aeaf2936bd50c9f1855a08ac68b90b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778430"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795360"
 ---
-# <a name="createassemblynameobject-function"></a><span data-ttu-id="b4184-102">CreateAssemblyNameObject İşlevi</span><span class="sxs-lookup"><span data-stu-id="b4184-102">CreateAssemblyNameObject Function</span></span>
-<span data-ttu-id="b4184-103">Bir arabirim işaretçisi alır bir [Iassemblyname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) belirtilen ada sahip derlemeyi benzersiz kimliğini temsil eden örneği.</span><span class="sxs-lookup"><span data-stu-id="b4184-103">Gets an interface pointer to an [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) instance that represents the unique identity of the assembly with the specified name.</span></span>  
+# <a name="createassemblynameobject-function"></a><span data-ttu-id="ba5b5-102">CreateAssemblyNameObject İşlevi</span><span class="sxs-lookup"><span data-stu-id="ba5b5-102">CreateAssemblyNameObject Function</span></span>
+<span data-ttu-id="ba5b5-103">Belirtilen ada sahip derlemenin benzersiz kimliğini temsil eden bir [IAssemblyName](iassemblyname-interface.md) örneğine yönelik bir arabirim işaretçisi alır.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-103">Gets an interface pointer to an [IAssemblyName](iassemblyname-interface.md) instance that represents the unique identity of the assembly with the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b4184-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="b4184-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ba5b5-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="ba5b5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateAssemblyNameObject (  
@@ -39,29 +39,29 @@ HRESULT CreateAssemblyNameObject (
  );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b4184-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="b4184-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ba5b5-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="ba5b5-105">Parameters</span></span>  
  `ppAssemblyNameObj`  
- <span data-ttu-id="b4184-106">[out] Döndürülen `IAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="b4184-106">[out] The returned `IAssemblyName`.</span></span>  
+ <span data-ttu-id="ba5b5-106">dışı Döndürülen `IAssemblyName`.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-106">[out] The returned `IAssemblyName`.</span></span>  
   
  `szAssemblyName`  
- <span data-ttu-id="b4184-107">[in] Derlemenin oluşturulacağı yeni adı `IAssemblyName` örneği.</span><span class="sxs-lookup"><span data-stu-id="b4184-107">[in] The name of the assembly for which to create the new `IAssemblyName` instance.</span></span>  
+ <span data-ttu-id="ba5b5-107">'ndaki Yeni `IAssemblyName` örneğin oluşturulacağı derlemenin adı.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-107">[in] The name of the assembly for which to create the new `IAssemblyName` instance.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="b4184-108">[in] Nesne oluşturucuya geçirilecek bayraklar.</span><span class="sxs-lookup"><span data-stu-id="b4184-108">[in] Flags to pass to the object constructor.</span></span>  
+ <span data-ttu-id="ba5b5-108">'ndaki Nesne oluşturucusuna geçirilecek bayraklar.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-108">[in] Flags to pass to the object constructor.</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="b4184-109">[in] Sonra genişletilebilmek için ayrılmış.</span><span class="sxs-lookup"><span data-stu-id="b4184-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="b4184-110">`pvReserved` null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b4184-110">`pvReserved` must be a null reference.</span></span>  
+ <span data-ttu-id="ba5b5-109">'ndaki Gelecekteki genişletilebilirlik için ayrılmıştır.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="ba5b5-110">`pvReserved`null bir başvuru olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-110">`pvReserved` must be a null reference.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b4184-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b4184-111">Requirements</span></span>  
- <span data-ttu-id="b4184-112">**Platformlar:** Bkz: [sistem gereksinimleri](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4184-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ba5b5-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="ba5b5-111">Requirements</span></span>  
+ <span data-ttu-id="ba5b5-112">**Platform** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ba5b5-112">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b4184-113">**Üst bilgi:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="b4184-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="ba5b5-113">**Üst bilgi** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="ba5b5-113">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="b4184-114">**Kitaplığı:** Bir kaynak olarak MsCorEE.dll dahil</span><span class="sxs-lookup"><span data-stu-id="b4184-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ba5b5-114">**Kitaplığı** MsCorEE. dll dosyasına bir kaynak olarak dahildir</span><span class="sxs-lookup"><span data-stu-id="ba5b5-114">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b4184-115">**.NET framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4184-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="ba5b5-115">**.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ba5b5-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b4184-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b4184-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ba5b5-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ba5b5-116">See also</span></span>
 
-- [<span data-ttu-id="b4184-117">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="b4184-117">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="b4184-118">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="b4184-118">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="ba5b5-117">IAssemblyName Arabirimi</span><span class="sxs-lookup"><span data-stu-id="ba5b5-117">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="ba5b5-118">Fusion Genel Statik İşlevleri</span><span class="sxs-lookup"><span data-stu-id="ba5b5-118">Fusion Global Static Functions</span></span>](fusion-global-static-functions.md)
