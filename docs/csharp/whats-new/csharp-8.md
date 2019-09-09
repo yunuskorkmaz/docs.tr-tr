@@ -117,7 +117,9 @@ public enum Rainbow
 }
 ```
 
-Uygulamanız; `R`, `G` ve `B` bileşenlerinden oluşturulmuş bir `RGBColor` türü tanımladıysa bir `Rainbow` değerini, switch ifadesi içeren aşağıdaki yöntemi kullanarak RGB değerlerine dönüştürebilirsiniz:
+
+Uygulamanız; `R`, `G` ve `B` bileşenlerinden oluşturulmuş bir `RGBColor` türü tanımladıysa bir Rainbow değerini, switch ifadesi içeren aşağıdaki yöntemi kullanarak RGB değerlerine dönüştürebilirsiniz:	
+
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
