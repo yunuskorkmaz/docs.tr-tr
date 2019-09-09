@@ -2,17 +2,17 @@
 title: CLR Tetikleyicileri
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-ms.openlocfilehash: 70ba8e072761df561f94c7343fa75c0398f1b5e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4d203968207885f7dddc423d68adb445a5a0943
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878232"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794309"
 ---
 # <a name="clr-triggers"></a>CLR Tetikleyicileri
-Bir tetikleyici, dil olay yürütüldüğünde, otomatik olarak çalıştırılan bir saklı yordam özel bir türdür. .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme nedeniyle, herhangi bir .NET Framework dil CLR Tetikleyicileri oluşturmak için kullanabilirsiniz.  
+Tetikleyici, bir dil olayı yürütüldüğünde otomatik olarak çalıştırılan özel bir tür saklı yordamdır. .NET Framework ortak dil çalışma zamanı (CLR) ile Microsoft SQL Server Tümleştirme nedeniyle, CLR Tetikleyicileri oluşturmak için herhangi bir .NET Framework dili kullanabilirsiniz.  
   
- Daha ayrıntılı bilgi için bkz. [SQL Server belgeleri](/sql) kullanmakta olduğunuz SQL Server sürümü için.
+ Daha ayrıntılı bilgi için, kullanmakta olduğunuz SQL Server sürümünün [SQL Server belgelerine](/sql) bakın.
   
  **SQL Server belgeleri**
   
@@ -20,4 +20,4 @@ Bir tetikleyici, dil olay yürütüldüğünde, otomatik olarak çalıştırıla
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET yönetilen sağlayıcıları ve DataSet Geliştirici Merkezi](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET’e Genel Bakış](../ado-net-overview.md)
